@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<img src="https://images.code.org/b913995388f4882d6a8e257edc1fc2e0-image-1733872466523.14.22 PM.png" alt="A student sits in a classroom surrounded by other students." style="border-radius:40px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/b913995388f4882d6a8e257edc1fc2e0-image-1733872466523.14.22 PM.png" alt="A student sits in a classroom surrounded by other students." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
 
 # What's Next?
 

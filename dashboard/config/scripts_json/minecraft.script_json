@@ -66,7 +66,7 @@
     },
     "new_name": null,
     "family_name": "minecraft",
-    "serialized_at": "2024-11-19 01:19:05 UTC",
+    "serialized_at": "2025-01-07 19:57:29 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -129,7 +129,8 @@
       "key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff",
@@ -156,7 +157,8 @@
       "key": "2ccc0a90-872b-424b-ae39-d7f92ceb8c06",
       "position": 4,
       "properties": {
-        "name": "Assessment (2 minutes)"
+        "duration": 2,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "2ccc0a90-872b-424b-ae39-d7f92ceb8c06",

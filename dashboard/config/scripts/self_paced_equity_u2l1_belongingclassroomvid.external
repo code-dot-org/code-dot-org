@@ -1,0 +1,23 @@
+name 'self-paced-equity-U2L1-belongingclassroomvid'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Video: Building a Belonging Classroom
+
+#### The following Edutopia video provides some examples of what belonging looks like in different classrooms. While you watch, consider the following:
+
+* #### How might you apply the strategies highlighted in this video in a computer science setting? 
+* #### How might they look similar or different?
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://www.youtube.com/watch?v=Q6niuYToam4" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/94e3510faa5fbb62f4638debe4825499-image-1736202570049.29.27 PM.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+<br>
+
+#### Prefer to read? Check out the <a href="https://www.edutopia.org/video/building-belonging-classroom/" rel="noopener noreferrer" target="blank">full transcript</a> at Edutopia's website instead.
+MARKDOWN

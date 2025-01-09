@@ -1,21 +1,23 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-12-12T00:40:08.000Z",
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "PL_Equity_in_CS_Education",
+    "video_key": "PL_equitymod_implicitbias",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 28731,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "#### The following video provides more information about Code.org's stance toward equity in computer science education. While you watch, consider the following:\r\n\r\n* #### How would you rate your district, school, and/or classroom regarding the 3 components of **access**, **inclusion**, and **diversity**? "
+    "long_instructions": "#### The following video will give you a primer for implicit bias, which we'll cover in the first part of this lesson. While you watch the video, consider the following question:\r\n\r\n* #### What do you think of when you hear the word **bias**?"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-12-12T00:40:08.189+00:00\",\"changed\":[\"cloned from \\\"self-paced-equity-U2L1-belongingvideo\\\"\"],\"cloned_from\":\"self-paced-equity-U2L1-belongingvideo\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-12T00:40:08.189+00:00\",\"changed\":[\"cloned from \\\"self-paced-equity-U2L1-belongingvideo\\\"\"],\"cloned_from\":\"self-paced-equity-U2L1-belongingvideo\"},{\"changed_at\":\"2025-01-06 00:12:37 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-01-06 00:12:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-01-06 04:15:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>
