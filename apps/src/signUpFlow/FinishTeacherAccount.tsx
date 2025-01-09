@@ -5,6 +5,7 @@ import React, {useState, useEffect, useMemo} from 'react';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
@@ -20,7 +21,7 @@ import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+import {UserTypes, EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 
 import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
 import {navigateToHref} from '../utils';
@@ -38,6 +39,22 @@ import {
 
 import style from './signUpFlowStyles.module.scss';
 
+const roleItemGroups = [
+  {
+    label: '',
+    groupItems: [{value: '', text: locale.select_a_role()}],
+  },
+  ...Object.entries(
+    EducatorRoles.reduce((groups, {category, value, label}) => {
+      if (!groups[category]) {
+        groups[category] = [];
+      }
+      groups[category].push({value, text: label});
+      return groups;
+    }, {} as Record<string, {value: string; text: string}[]>)
+  ).map(([label, groupItems]) => ({label, groupItems})),
+];
+
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
   countryCode: string;
@@ -45,6 +62,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const schoolInfo = useSchoolInfo({usIp});
   const [name, setName] = useState('');
   const [nameErrorMessage, setNameErrorMessage] = useState(null);
+  const [educatorRole, setEducatorRole] = useState('');
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
@@ -147,6 +165,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         email_preference_opt_in: emailOptInChecked,
         school_info_attributes: {...schoolInfo},
         country_code: countryCode,
+        educator_role: educatorRole || null,
       },
     };
     const authToken = await getAuthenticityToken();
@@ -220,7 +239,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
               name="displayName"
               id="uitest-display-name"
               label={locale.what_do_you_want_to_be_called()}
-              className={style.nameInput}
               value={name}
               placeholder={locale.msCoder()}
               onChange={onNameChange}
@@ -233,6 +251,19 @@ const FinishTeacherAccount: React.FunctionComponent<{
                 {nameErrorMessage}
               </BodyThreeText>
             )}
+          </div>
+          <div>
+            <SimpleDropdown
+              className={style.dropdownContainer}
+              labelText={locale.what_is_your_role()}
+              name="educator_role"
+              selectedValue={educatorRole}
+              onChange={e => {
+                setEducatorRole(e.target.value);
+              }}
+              itemGroups={roleItemGroups}
+              dropdownTextThickness="thin"
+            />
           </div>
           <SchoolDataInputs
             {...schoolInfo}
