@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Welcome!
 
-## Module 2, Lesson 1: Strategies to Promote Equity in Computer Science
+## Module 2, Lesson 2: Strategies to Promote Equity in Computer Science
 
 <div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
     <div style="width: 70%;">
