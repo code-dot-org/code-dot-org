@@ -1,0 +1,229 @@
+@import '@/common/styles/mixins';
+@import '@/common/styles/colors.css';
+@import '@/common/styles/primitiveColors.css';
+@import '@/typography/typography.module';
+
+// TextField common styles
+.textField {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+  min-width: 18.75rem;
+  margin: 0;
+
+  input {
+    margin-bottom: 0;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    border-style: solid;
+    caret-color: var(--borders-brand-teal-primary);
+    box-sizing: border-box;
+    height: unset;
+
+    &:disabled,
+    &:read-only {
+      cursor: not-allowed;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--borders-brand-teal-primary);
+      outline-offset: 2px;
+      box-shadow: none;
+    }
+  }
+
+  .textFieldHelperSection {
+    display: flex;
+    align-items: baseline;
+    align-self: stretch;
+  }
+}
+
+// TextField colors
+.textField.textField-black,
+.textField.textField-gray {
+  .textFieldLabel {
+    color: var(--text-neutral-primary);
+  }
+
+  input {
+    border-color: var(--borders-neutral-solid);
+    background: var(--background-neutral-primary);
+
+    &.hasError {
+      border-color: var(--borders-error-primary);
+    }
+
+    &::placeholder {
+      color: var(--text-neutral-placeholder);
+    }
+
+    &:focus-visible {
+      border-color: var(--borders-neutral-solid);
+    }
+  }
+
+  .textFieldHelperSection {
+    color: var(--text-neutral-primary);
+  }
+
+  .textFieldErrorSection {
+    color: var(--text-error-primary);
+  }
+
+  // Disabled styles
+  &:has(input:disabled) {
+    .textFieldLabel {
+      color: var(--text-neutral-disabled);
+    }
+
+    input {
+      border-color: var(--borders-neutral-disabled);
+      color: var(--text-neutral-disabled);
+    }
+
+    .textFieldHelperSection,
+    .textFieldErrorSection {
+      color: var(--text-neutral-disabled);
+    }
+  }
+
+  // Read Only styles
+  &:has(input:read-only) {
+    input {
+      border-color: var(--borders-neutral-disabled);
+      background-color: var(--background-neutral-secondary);
+    }
+  }
+}
+
+.textField.textField-gray {
+  input {
+    border-color: var(--borders-neutral-strong);
+
+    &.hasError {
+      border-color: var(--borders-error-primary);
+    }
+
+    &:focus-visible {
+      border-color: var(--borders-neutral-strong);
+    }
+  }
+}
+
+.textField.textField-white {
+  .textFieldLabel {
+    color: var(--text-neutral-inverse);
+  }
+
+  input {
+    border-color: var(--neutral-base-white);
+    background: var(--background-neutral-primary-inverse);
+    color: var(--text-neutral-inverse);
+
+    &::placeholder {
+      color: var(--text-neutral-placeholder);
+    }
+
+    &:focus-visible {
+      border-color: var(--neutral-base-white);
+    }
+  }
+
+  .textFieldHelperSection,
+  .textFieldErrorSection {
+    color: var(--text-neutral-inverse);
+  }
+
+  // Disabled styles
+  &:has(input:disabled) {
+    .textFieldLabel {
+      color: var(--text-neutral-tertiary);
+    }
+
+    input {
+      border-color: var(--neutral-gray-80);
+      color: var(--text-neutral-tertiary);
+    }
+
+    .textFieldHelperSection,
+    .textFieldErrorSection {
+      color: var(--text-neutral-tertiary);
+    }
+  }
+
+  // Read Only styles
+  &:has(input:read-only) {
+    input {
+      border-color: var(--neutral-gray-70);
+      background-color: var(--neutral-gray-90);
+    }
+  }
+}
+
+// TextField sizes
+.textField-l {
+  .textFieldLabel {
+    @include label-one;
+    margin-bottom: 0;
+  }
+
+  input {
+    @include body-one;
+    padding: 0.625rem 0.875rem;
+    margin-bottom: 0;
+  }
+
+  .textFieldHelperSection {
+    @include body-two;
+    margin-bottom: 0;
+    gap: 0.375rem;
+  }
+}
+
+.textField-m {
+  .textFieldLabel {
+    @include label-two;
+    margin-bottom: 0;
+  }
+
+  input {
+    @include body-two;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0;
+
+    &::placeholder {
+      color: var(--text-neutral-placeholder);
+    }
+  }
+
+  .textFieldHelperSection {
+    @include body-three;
+    margin-bottom: 0;
+    gap: 0.375rem;
+  }
+}
+
+.textField-s {
+  .textFieldLabel {
+    @include label-three;
+    margin-bottom: 0;
+  }
+
+  input {
+    @include body-three;
+    padding: 0.3125rem 0.625rem;
+    margin-bottom: 0;
+
+    &::placeholder {
+      color: var(--text-neutral-placeholder);
+    }
+  }
+
+  .textFieldHelperSection {
+    @include body-four;
+    margin-bottom: 0;
+    gap: 0.25rem;
+  }
+}

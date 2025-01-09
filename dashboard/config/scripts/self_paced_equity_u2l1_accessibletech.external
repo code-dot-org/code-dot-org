@@ -5,6 +5,8 @@ description 'description here'
 markdown <<MARKDOWN
 # Making Curriculum Accessible
 
+<img src="https://images.code.org/53df156bec9daf72d26843b7e4383867-image-1736277993148.25.45 AM.png" alt="A high schooler smiles radiantly." style="border-radius:20px; float: right; height: 200px; clear: both; margin: 20px 20px 0px 20px;">
+
 ## Accommodations
 
 #### While implementing our curriculum, you may find that your students need accommodations to make learning accessible to them. Check out the following list of help articles that may assist in this process.
@@ -16,6 +18,21 @@ markdown <<MARKDOWN
 * #### <a href="https://support.code.org/hc/en-us/articles/15187409884429-Customizing-Color-Themes-for-Accessibility" target="blank" rel="noopener noreferrer">Customizing Color Themes for Accessibility</a>
 * #### <a href="https://support.code.org/hc/en-us/articles/15802163272717-Finding-Accessible-Activities-for-the-Hour-of-Code" target="blank" rel="noopener noreferrer">Finding Accessible Activities for House of Code</a>
 * #### <a href="https://support.code.org/hc/en-us/articles/360000522711-How-can-I-change-the-presented-language-on-Code-org" target="blank" rel="noopener noreferrer">Changing the Presented Language on Coding Puzzles</a>
+
+<div style="display: flex; align-items: left; margin: 30px 0px 20px 0px">
+
+<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" style="width: auto; height: 100px;"  alt="An illuminated light bulb with a brain inside of it.">
+
+<div style="background-color: #B8E0E5; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 10px; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Extension Activity</b></p>
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">We recognize this is a pretty long list of accommodations for your students. Try implementing just <b>one</b> of these acommodations for your students in your next class period. You can always come back to this page or <a href="https://support.code.org/hc/en-us" target="blank" rel="noopener noreferrer">search our archive of help articles</a> to look for more accommodations!</p>
+
+</div>
+</div>
+
+
 
 ## Curriculum Alternatives
 

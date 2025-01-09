@@ -1,57 +1,61 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
+import Button from '@cdo/apps/componentLibrary/button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-export default class RedirectDialog extends React.Component {
-  static propTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    details: PropTypes.string.isRequired,
-    handleClose: PropTypes.func.isRequired,
-    redirectUrl: PropTypes.string.isRequired,
-    redirectButtonText: PropTypes.string.isRequired,
+const RedirectDialog = ({
+  isOpen,
+  details,
+  handleClose,
+  redirectUrl,
+  redirectButtonText,
+}) => {
+  const redirect = () => {
+    navigateToHref(redirectUrl);
   };
 
-  redirect = () => {
-    navigateToHref(this.props.redirectUrl);
-  };
+  return (
+    <BaseDialog
+      useUpdatedStyles
+      isOpen={isOpen}
+      style={styles.dialog}
+      handleClose={handleClose}
+    >
+      <div>
+        <h2 style={styles.dialogHeader}>{i18n.notInRightPlace()}</h2>
+        {details}
+      </div>
+      <DialogFooter>
+        <Button
+          text={i18n.stayHere()}
+          onClick={handleClose}
+          type="secondary"
+          color="gray"
+          size="s"
+        />
+        <Button
+          text={redirectButtonText}
+          onClick={redirect}
+          type="primary"
+          color="purple"
+          size="s"
+        />
+      </DialogFooter>
+    </BaseDialog>
+  );
+};
 
-  render() {
-    const {isOpen, details, handleClose, redirectButtonText} = this.props;
-
-    return (
-      <BaseDialog
-        useUpdatedStyles
-        isOpen={isOpen}
-        style={styles.dialog}
-        handleClose={handleClose}
-      >
-        <div>
-          <h2 style={styles.dialogHeader}>{i18n.notInRightPlace()}</h2>
-          {details}
-        </div>
-        <DialogFooter>
-          <Button
-            __useDeprecatedTag
-            text={i18n.stayHere()}
-            onClick={handleClose}
-            color={Button.ButtonColor.gray}
-          />
-          <Button
-            __useDeprecatedTag
-            text={redirectButtonText}
-            onClick={this.redirect}
-            color={Button.ButtonColor.brandSecondaryDefault}
-          />
-        </DialogFooter>
-      </BaseDialog>
-    );
-  }
-}
+RedirectDialog.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  details: PropTypes.string.isRequired,
+  handleClose: PropTypes.func.isRequired,
+  redirectUrl: PropTypes.string.isRequired,
+  redirectButtonText: PropTypes.string.isRequired,
+};
 
 const styles = {
   dialog: {
@@ -61,3 +65,5 @@ const styles = {
     marginTop: 0,
   },
 };
+
+export default RedirectDialog;

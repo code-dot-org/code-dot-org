@@ -188,15 +188,13 @@ export default class WorkspaceSvgFrame extends SvgFrame {
  * @param {Blockly.Events.Abstract} event - The Blockly event object.
  */
 function onWorkspaceChange(event: GoogleBlockly.Events.Abstract) {
-  if (
-    [
-      Blockly.Events.DELETE,
-      Blockly.Events.MOVE,
-      Blockly.Events.THEME_CHANGE,
-      Blockly.Events.VIEWPORT_CHANGE,
-    ].includes(event.type) &&
-    event.workspaceId
-  ) {
+  const expectedEventTypes: string[] = [
+    Blockly.Events.BLOCK_DELETE,
+    Blockly.Events.BLOCK_MOVE,
+    Blockly.Events.THEME_CHANGE,
+    Blockly.Events.VIEWPORT_CHANGE,
+  ];
+  if (expectedEventTypes.includes(event.type) && event.workspaceId) {
     const workspace = Blockly.common.getWorkspaceById(event.workspaceId);
     const svgFrame = (workspace as EditorWorkspaceSvg).svgFrame_;
     svgFrame.render();

@@ -52,6 +52,7 @@ export default class ProjectCard extends React.Component {
             <img
               src={getProjectCardImageUrl(projectData.thumbnailUrl, type)}
               alt={i18n.projectThumbnail()}
+              className={style.image}
             />
           </div>
 

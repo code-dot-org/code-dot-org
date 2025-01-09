@@ -37,7 +37,6 @@ class Pythonlab < Level
     enable_micro_bit
     mini_app
     serialized_maze
-    start_direction
   )
 
   validate :has_correct_multiple_choice_answer?
@@ -51,10 +50,6 @@ class Pythonlab < Level
         level_num: 'custom',
       )
     )
-  end
-
-  def self.start_directions
-    [['None', nil], ['North', 0], ['East', 1], ['South', 2], ['West', 3]]
   end
 
   def self.mini_apps
@@ -124,7 +119,6 @@ class Pythonlab < Level
   def clean_up_mini_app_settings
     if mini_app != 'neighborhood'
       properties.delete('serialized_maze')
-      properties.delete('start_direction')
     end
   end
 
