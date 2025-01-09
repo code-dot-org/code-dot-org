@@ -51,8 +51,6 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [gender, setGender] = useState('');
 
   // Field errors
-  //const [showNameError, setShowNameError] = useState(false);
-  //const [showNameTooLongError, setShowNameTooLongError] = useState(false);
   const [nameErrorMessage, setNameErrorMessage] = useState<string | null>(null);
   const [showParentEmailError, setShowParentEmailError] = useState(false);
   const [showAgeError, setShowAgeError] = useState(false);
