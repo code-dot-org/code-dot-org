@@ -63,7 +63,7 @@
     },
     "new_name": null,
     "family_name": "mc",
-    "serialized_at": "2024-11-19 01:18:59 UTC",
+    "serialized_at": "2025-01-07 19:56:56 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -126,7 +126,8 @@
       "key": "301e5420-a6e3-46c3-a76f-c2e042652974",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 30,
+        "name": "Activity "
       },
       "seeding_key": {
         "lesson_activity.key": "301e5420-a6e3-46c3-a76f-c2e042652974",
@@ -139,7 +140,8 @@
       "key": "3664c675-1dd2-468f-b854-a7daa9b0dc38",
       "position": 3,
       "properties": {
-        "name": "Assessment (2 minutes)"
+        "duration": 5,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "3664c675-1dd2-468f-b854-a7daa9b0dc38",
@@ -152,7 +154,8 @@
       "key": "efd4f483-32c2-4810-96fd-186649c2efe2",
       "position": 4,
       "properties": {
-        "name": "Wrap Up (5 minutes)"
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "efd4f483-32c2-4810-96fd-186649c2efe2",

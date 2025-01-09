@@ -64,11 +64,26 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
   }
 
   /**
-   * Override of createTextArrow_ to fix the arrow position on Safari.
-   * We need to add dominant-baseline="central" to the arrow element in order to
-   * center it on Safari.
+   * We override createTextArrow_ to skip creating the arrow for uneditable blocks.
+   *
+   * Additionally, we need fix the arrow position on Safari, but only until
+   * upgrading to Blockly v11. After this, we should be able to just call
+   * super.createTextArrow_() after the early return.
    *  @override */
   createTextArrow_() {
+    /**
+     * Begin CDO customization
+     */
+    if (
+      Blockly.disableVariableEditing ||
+      !this.getSourceBlock()?.isEditable()
+    ) {
+      return;
+    }
+    /**
+     * End CDO customization
+     */
+
     const arrow = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.TSPAN,
       {},
@@ -98,6 +113,19 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
     // this.arrow is private in the parent.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (this as any).arrow = arrow;
+  }
+
+  /**
+   * Create a dropdown menu under the text.
+   *
+   * @param e Optional mouse event that triggered the field to open, or
+   *     undefined if triggered programmatically.
+   * @override Prevent editing if variable editing is disabled (Play Lab)
+   */
+  showEditor_(e?: MouseEvent) {
+    if (!Blockly.disableVariableEditing) {
+      super.showEditor_(e);
+    }
   }
 
   menuGenerator_ = function (
