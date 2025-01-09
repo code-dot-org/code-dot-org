@@ -1,0 +1,40 @@
+name 'self-paced-equity-U1L3-dangerofasinglestory'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Video: The Danger of a Single Story
+
+#### This video builds on what we've covered regarding identity so far. Chimamanda Ngozi Adichie, the Nigerian-born author of <ins>Americanah</ins> and <ins>We Should All Be Feminists</ins>, speaks of the danger of a "single story" when it comes to understanding others.
+
+#### Watch the following TED Talk video from <b>8:27 - 13:24 minutes</b>. While you watch, consider the following: 
+
+### Imagine a teacher told themselves a "single story" about you as a student. 
+* #### What might that story tell about you? 
+* #### What does it leave out?
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://youtu.be/D9Ihs241zeg?si=wkpW4JUtdIOFnwtT&t=507" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/05a85df4a9eaf5c49e43af3d1ebd1318-image-1736201723841.15.18 PM.png" 
+         alt="YouTube Video Thumbnail for The Danger of a Single Story" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+### Prefer to read? Check out the <a href="https://jamesclear.com/great-speeches/the-danger-of-a-single-story-by-chimamanda-ngozi-adichie" target="blank" rel="noopener noreferrer">full transcript</a> instead.
+
+___
+
+<div style="display: flex; align-items: left;">
+
+<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" style="width: auto; height: 100px;"  alt="An illuminated light bulb with a brain inside of it.">
+
+<div style="background-color: #B8E0E5; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Extension Activity</b></p>
+
+<p style="color: black; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">We love this video, and we think you will too! If you have time, consider watching all 18 minutes of the video. We think it's well worth it.</p>
+
+</div>
+</div>
+MARKDOWN

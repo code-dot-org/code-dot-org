@@ -1,11 +1,15 @@
-@import "color.scss";
-@import "font.scss";
+@import 'color.scss';
+@import 'font.scss';
 
 .card {
   border: 1px solid $border_gray;
   border-radius: 2px;
   width: 214px;
   background-color: $neutral-light;
+
+  a.link {
+    text-decoration: none;
+  }
 }
 
 .lastEdit {
@@ -42,4 +46,33 @@
 
 .bold {
   @include main-font-semi-bold;
+}
+
+.title {
+  @include main-font-semi-bold;
+  padding: 18px 10px 5px 15px;
+  font-size: 16px;
+  color: $neutral-dark;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 18px;
+  box-sizing: content-box;
+}
+
+.thumbnail {
+  width: 214px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fullThumbnail {
+  height: 214px;
+}
+
+.noTime {
+  padding-bottom: 10px;
 }

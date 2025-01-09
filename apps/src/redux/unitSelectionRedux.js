@@ -44,7 +44,9 @@ const getSelectedUnit = state => {
 };
 
 export const getSelectedScriptName = state => {
-  return getSelectedUnit(state) ? getSelectedUnit(state).key : null;
+  return getSelectedUnit(state)
+    ? getSelectedUnit(state).key
+    : null || state.unitSelection.unitName;
 };
 
 /* Get the user friendly name of a script(the unit or course name) */

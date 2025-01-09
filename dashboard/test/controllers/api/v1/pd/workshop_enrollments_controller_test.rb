@@ -538,7 +538,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     {
       country: 'US',
       school_name: 'A Seattle school',
-      school_zip: '98102'
+      zip: '98102'
     }
   end
 end
