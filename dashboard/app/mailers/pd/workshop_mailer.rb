@@ -92,10 +92,11 @@ class Pd::WorkshopMailer < ApplicationMailer
 
   def organizer_should_close_reminder(workshop)
     @workshop = workshop
+    workshop_title = @workshop.name.presence || @workshop.course
 
     mail content_type: 'text/html',
       from: from_no_reply,
-      subject: "Your #{@workshop.course} workshop is still open, please close it",
+      subject: "Your #{workshop_title} workshop is still open, please close it",
       to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
@@ -249,6 +250,7 @@ class Pd::WorkshopMailer < ApplicationMailer
   # @param enrollment [Pd::Enrollment]
   def exit_survey(enrollment)
     @workshop = enrollment.workshop
+    workshop_title = @workshop.name.presence || @workshop.course
     @teacher = enrollment.user
     @enrollment = enrollment
     @survey_url = enrollment.exit_survey_url
@@ -261,7 +263,7 @@ class Pd::WorkshopMailer < ApplicationMailer
 
     mail content_type: content_type,
       from: from_survey,
-      subject: "Help us improve Code.org #{@workshop.course} workshops!",
+      subject: "Help us improve Code.org #{workshop_title} workshops!",
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
 

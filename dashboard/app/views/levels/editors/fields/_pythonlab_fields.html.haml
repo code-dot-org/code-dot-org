@@ -8,10 +8,6 @@
 
   #neighborhood{class: ('collapse' if @level.mini_app != 'neighborhood')}
     .field
-      = f.label :start_direction
-      = f.select :start_direction, options_for_select(@level.class.start_directions, @level.start_direction)
-
-    .field
       = f.label :serialized_maze
       - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
       = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
