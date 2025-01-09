@@ -56,8 +56,6 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
     // and the css is handled by WorkspaceAndOutput.
     if (isVertical) {
       $('#visualization').css({
-        'max-width': '400px',
-        'max-height': '400px',
         height: '400px',
         width: '400px',
       });

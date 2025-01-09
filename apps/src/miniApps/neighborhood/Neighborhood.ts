@@ -16,8 +16,8 @@ const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
 const SIGNAL_CHECK_TIME = 200;
 
 // We are relying on old maze skins here, which are not typed.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type SkinType = Record<string, any>;
+
+type SkinType = Record<string, unknown>;
 
 export default class Neighborhood {
   private controller: typeof MazeController | null;

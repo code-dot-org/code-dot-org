@@ -15,6 +15,9 @@ import moduleStyles from './workspace.module.scss';
 // The top Y coordinate of the panel. This includes the top header and the header
 // of the workspace, which is absolutely positioned.
 const PANEL_TOP_COORDINATE = 80;
+const MINIMUM_EDITOR_HEIGHT = 200;
+// 120px fits 4 lines of text.
+const MINIMUM_OUTPUT_HEIGHT = 120;
 
 // A component that combines the Workspace and Console component into a single component,
 // with a horizontal resizer between them.
@@ -58,9 +61,8 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
     desiredOutputHeight: number,
     miniAppName: string | undefined
   ) => {
-    // Minimum height fits 4 lines of text.
-    const outputHeightMin = 120;
-    const outputHeightMax = window.innerHeight - 200;
+    const outputHeightMin = MINIMUM_OUTPUT_HEIGHT;
+    const outputHeightMax = window.innerHeight - MINIMUM_EDITOR_HEIGHT;
     const newOutputHeight = Math.max(
       outputHeightMin,
       Math.min(desiredOutputHeight, outputHeightMax)
@@ -98,8 +100,6 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
 
       // Scale the visualization div
       $('#visualization').css({
-        'max-width': availableWidth,
-        'max-height': newVisualizationWidth,
         height: newVisualizationWidth,
         'margin-left': (availableWidth - newVisualizationWidth) / 2,
       });

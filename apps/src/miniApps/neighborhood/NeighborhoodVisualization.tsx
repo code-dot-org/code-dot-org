@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React from 'react';
 
 import MazeVisualization from '@cdo/apps/maze/Visualization';
 
@@ -18,33 +18,13 @@ const NeighborhoodVisualization: React.FunctionComponent<
     ? ICON_PATH + 'icons_white.png'
     : ICON_PATH + 'icons.png';
 
-  // In lab2 labs we often want to be able to unmount components, so we
-  // have the option to not use the ProtectedVisualizationDiv that MazeVisualization uses.
-  const visualizationComponent = useMemo(() => {
-    if (useProtectedDiv) {
-      return <MazeVisualization />;
-    } else {
-      return (
-        <div id="visualization">
-          <svg version="1.1" id="svgMaze">
-            <g id="look">
-              <path d="M 0,-15 a 15 15 0 0 1 15 15" />
-              <path d="M 0,-35 a 35 35 0 0 1 35 35" />
-              <path d="M 0,-55 a 55 55 0 0 1 55 55" />
-            </g>
-          </svg>
-        </div>
-      );
-    }
-  }, [useProtectedDiv]);
-
   return (
     <div className={className}>
       <div
         className={moduleStyles.neighborhoodPreviewBackground}
         style={styles.neighborhoodBackground}
       >
-        {visualizationComponent}
+        <MazeVisualization useProtectedDiv={useProtectedDiv} />
       </div>
       <svg
         id="slider"
