@@ -40,12 +40,6 @@ export const useSource = (defaultSources: ProjectSources) => {
     templateStartSource,
     parsedDefaultSources,
   } = useInitialSources(defaultSources);
-  console.log({
-    initialSources,
-    levelStartSource,
-    templateStartSource,
-    parsedDefaultSources,
-  });
   const previousLevelIdRef = useRef<number | null>(null);
   const previousInitialSources = useRef<ProjectSources | null>(null);
   const validationFile = useAppSelector(
