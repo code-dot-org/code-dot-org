@@ -14,3 +14,23 @@
   fill: #eee;
 }
 
+// Style the counter used by neighborhood
+.karel-counter-text {
+  text-anchor: end;
+  font-size: 16px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  fill: white;
+  stroke: black;
+  stroke-width: 1;
+  cursor: default;
+
+  html[dir="RTL"] & {
+    text-anchor: start;
+  }
+}
+
+.karel-counter-text.paint {
+  font-size: 33px;
+  stroke-width: 2;
+}
