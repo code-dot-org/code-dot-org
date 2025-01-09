@@ -21,7 +21,8 @@
     box-sizing: border-box;
     height: unset;
 
-    &:disabled, &:read-only {
+    &:disabled,
+    &:read-only {
       cursor: not-allowed;
     }
 
