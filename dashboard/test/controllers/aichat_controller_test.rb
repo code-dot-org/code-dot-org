@@ -126,7 +126,7 @@ class AichatControllerTest < ActionController::TestCase
     assert_equal request.project_id, @project_id
     assert_equal request.model_customizations, @default_model_customizations
     assert_equal request.stored_messages, []
-    assert_equal request.new_message, @valid_params_chat_completion[:newMessage]
+    assert_equal request.new_message, @valid_params_chat_completion[:newMessage].stringify_keys
     assert_equal request.execution_status, SharedConstants::AI_REQUEST_EXECUTION_STATUS[:NOT_STARTED]
   end
 
