@@ -220,6 +220,8 @@ class User < ApplicationRecord
   validates_presence_of :user_type
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
+  validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
+
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests
 

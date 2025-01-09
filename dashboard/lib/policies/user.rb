@@ -1,10 +1,5 @@
 class Policies::User
-  ALLOWED_EDUCATOR_ROLES = Set[
-    "teacher".freeze,
-    "school_admin".freeze,
-    "district_admin".freeze,
-    "librarian".freeze,
-  ].freeze
+  ALLOWED_EDUCATOR_ROLES = SharedConstants::EDUCATOR_ROLES.pluck(:value)
 
   # Returns the user.attributes along with the attributes of select
   # associations.
