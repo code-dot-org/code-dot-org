@@ -36,6 +36,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const levelSource = useAppSelector(
     state => state.lab.levelProperties?.startSources
   );
+  console.log({levelSource});
   const templateSource = useAppSelector(
     state => state.lab.levelProperties?.templateSources
   );
@@ -57,12 +58,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
       // If we have a serialized maze, we need to add it to the project sources so
       // it is accessible when running/sharing/remixing the code. We save it as a
       // system support file.
-      console.log(
-        'in generateProjectSourceFromStartSource, startCode:',
-        startCode
-      );
       if (serializedMaze) {
-        console.log('adding serialized maze to project sources');
         const mazeFileId = getNextFileId(Object.values(startCode.files));
         const mazeFile = {
           id: mazeFileId,
@@ -72,7 +68,13 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
           language: 'txt',
           folderId: DEFAULT_FOLDER_ID,
         };
-        startCode.files[mazeFileId] = mazeFile;
+        startCode = {
+          ...startCode,
+          files: {
+            ...startCode.files,
+            [mazeFileId]: mazeFile,
+          },
+        };
       }
 
       const source = isStartMode
@@ -94,6 +96,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
         : undefined,
     [levelSource, generateProjectSourceFromStartSource]
   );
+  console.log({levelStartSource: JSON.stringify(levelStartSource)});
 
   const templateStartSource: ProjectSources | undefined = useMemo(
     () =>
