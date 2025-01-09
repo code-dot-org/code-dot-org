@@ -1,0 +1,64 @@
+name 'self-paced-equity-U2L2-keytermspt2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Implicit Bias and Stereotype Threat
+
+## Talking About Implicit Bias
+
+<img src="https://images.code.org/60bece94ea278dca78baa82b3ecb47fc-image-1736278480024.34.05 AM.png" alt="Two teachers are engaged in conversation and laughing with each other." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+
+#### Talking about implicit bias may trigger your defenses. You may even feel hesitant to continue this course. This is a normal reaction! No one wants to believe that their world view may include negative assumptions about others. **Denying this fact does not make bias go away.**
+
+#### In previous lessons, we spoke about how having their defenses up can preclude students from learning, and the same is true for you. It's important not to shy away from this topic though - **your students are counting on you to interrogate your implicit biases to make your computer science classroom a more welcoming space to be in**.
+
+####  Let's take a moment to actively prepare to engage with this topic with an open mind. Here are some strategies to manage anxiety around implicit bias:
+
+<details style="background-color: #ececec; padding: 10px; margin-top:20px;margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Remember that our implicit biases don’t necessarily reveal our intention.</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">You may immediately connect a person to a stereotype. That just means you live in a society that perpetuates stereotypes, and your brain is surfacing them after years of reinforcement. It's what you <i>do</i> with this connection that can be positive or negative. Recognizing this is the first step (and often the hardest!) toward unraveling your socialization.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Take a deep breath.</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">Defensiveness is normal, and so is discomfort. Undoing harmful learning is hard. Give yourself a break by taking some deep, cleansing breaths.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Take a curious stance.</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">Question your socialization instead of punishing yourself. Why might a particular bias exist or be showing up? Are there experiences you’ve gone through or media you’ve consumed that reinforce your bias?
+</p></div>
+</details>
+
+<div style="display: flex; align-items: left; margin: 30px 0px 20px 0px">
+
+<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" style="width: auto; height: 100px;"  alt="An illuminated light bulb with a brain inside of it.">
+
+<div style="background-color: #B8E0E5; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Extension Activity</b></p>
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">Guess what? Having a brain means you have bias. In fact, it's probably helped you survive in the past. Check out this short article for more: <a href="https://neuroleadership.com/your-brain-at-work/unconscious-bias-in-brain" target="blank" rel="noopener noreferrer">"Here's Why Having a Brain Means You have Bias" by NeuroLeadership Institute</a>.
+</p>
+
+</div>
+</div>
+
+___
+
+##### **Sources for Definitions:**
+
+* ##### <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a" target="blank" rel="noopener noreferrer">Guide to Inclusive Computer Science Education</a>
+* ##### <a href="https://www.colorado.edu/center/teaching-learning/inclusivity/stereotype-threat'" target="blank" rel="noopener noreferrer">University of Colorado, Boulder Center for Teaching and Learning</a>
+
+![]()
+MARKDOWN
