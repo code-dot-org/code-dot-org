@@ -120,6 +120,4 @@ export const blocks = {
   getColourDropdownField(colours) {
     return new Blockly.FieldColourDropdown(colours, 45, 35);
   },
-  // Custom generator is already provided by CDO Blockly.
-  overrideForLoopGenerator() {},
 };
