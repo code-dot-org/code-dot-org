@@ -1,4 +1,4 @@
-const AWS = require("aws-sdk");
+const { RDSClient } = require("@aws-sdk/client-rds");
 const mysqlPromise = require("promise-mysql");
 const sinon = require("sinon");
 
@@ -19,96 +19,78 @@ const DESCRIBE_SNAPSHOT_RESULTS = {
       SnapshotCreateTime: new Date("2019-06-14T00:00:00.000Z"),
       Status: "available",
       SnapshotType: "manual",
-      EngineVersion: "5.7.12"
+      EngineVersion: "8.0.mysql_aurora.3.08.0"
     },
     {
       DBClusterSnapshotIdentifier: "production-automatic-snapshot",
       SnapshotCreateTime: new Date("2019-06-15T00:00:00.000Z"),
       Status: "available",
       SnapshotType: "automated",
-      EngineVersion: "5.7.12"
+      EngineVersion: "8.0.mysql_aurora.3.08.0"
     },
     {
       DBClusterSnapshotIdentifier: "production-eligible-snapshot-2",
       SnapshotCreateTime: new Date("2019-06-16T00:00:00.000Z"),
       Status: "available",
       SnapshotType: "manual",
-      EngineVersion: "5.7.12"
+      EngineVersion: "8.0.mysql_aurora.3.08.0"
     },
     {
       DBClusterSnapshotIdentifier: "production-incomplete-snapshot",
       SnapshotCreateTime: new Date("2019-06-17T00:00:00.000Z"),
       Status: "creating",
       SnapshotType: "manual",
-      EngineVersion: "5.7.12"
+      EngineVersion: "8.0.mysql_aurora.3.08.0"
     }
   ]
 };
-
-/*
-    var credentials = new AWS.SharedIniFileCredentials({profile: 'dev'});
-    AWS.config.credentials = credentials;
-    const rds = new AWS.RDS({region: 'us-east-1'});
-    */
 
 describe("#restoreLatestSnapshot()", function() {
   it("should restore latest snapshot", async function() {
     const expectedLatestSnapshotName = "production-eligible-snapshot-2";
 
-    const rds = new AWS.RDS();
-    const describeStub = sinon.stub(rds, "describeDBClusterSnapshots");
-    describeStub.withArgs({}).returns({
-      promise: () => {
-        return DESCRIBE_SNAPSHOT_RESULTS;
-      }
+    const rdsClient = new RDSClient({});
+    const sendStub = sinon.stub(rdsClient, "send");
+
+    // Stub for describeDBClusterSnapshots
+    sendStub.onFirstCall().resolves(DESCRIBE_SNAPSHOT_RESULTS);
+
+    // Stub for restoreDBClusterFromSnapshot
+    sendStub.onSecondCall().resolves({});
+
+    // Stub for createDBInstance
+    sendStub.onThirdCall().resolves({});
+
+    // Stubs for describeDBInstances (instance availability check)
+    sendStub.onCall(3).resolves({
+      DBInstances: [{ DBInstanceStatus: 'available' }]
     });
 
-    const restoreDBClusterStub = sinon.stub(
-      rds,
-      "restoreDBClusterFromSnapshot"
-    );
-    restoreDBClusterStub
-      .withArgs({
-        DBClusterIdentifier: CLUSTER_ID,
-        SnapshotIdentifier: expectedLatestSnapshotName,
-        Engine: restoreAndVerify.DB_ENGINE,
-        EngineVersion: "5.7.12",
-        DBSubnetGroupName: DB_SUBNET_GROUP_NAME
-      })
-      .returns({
-        promise: () => {
-          return {};
-        }
-      });
+    await restoreAndVerify.restoreLatestSnapshot(rdsClient, CLUSTER_ID, INSTANCE_ID);
 
-    const createDBInstanceStub = sinon.stub(rds, "createDBInstance");
-    createDBInstanceStub
-      .withArgs({
-        DBInstanceClass: restoreAndVerify.DB_INSTANCE_CLASS,
-        DBClusterIdentifier: CLUSTER_ID,
-        DBInstanceIdentifier: INSTANCE_ID,
-        Engine: restoreAndVerify.DB_ENGINE,
-        EngineVersion: "5.7.12"
-      })
-      .returns({
-        promise: () => {
-          return {};
-        }
-      });
+    // Verify the commands were called with correct parameters
+    const calls = sendStub.getCalls();
 
-    const waitForStub = sinon.stub(rds, "waitFor");
-    waitForStub.returns({
-      promise: () => {
-        return {};
-      }
+    // Verify describe snapshots call
+    sinon.assert.match(calls[0].args[0].input, {});
+
+    // Verify restore cluster call
+    sinon.assert.match(calls[1].args[0].input, {
+      DBClusterIdentifier: CLUSTER_ID,
+      SnapshotIdentifier: expectedLatestSnapshotName,
+      Engine: restoreAndVerify.DB_ENGINE,
+      EngineVersion: "8.0.mysql_aurora.3.08.0",
+      DBSubnetGroupName: DB_SUBNET_GROUP_NAME
     });
 
-    await restoreAndVerify.restoreLatestSnapshot(rds, CLUSTER_ID, INSTANCE_ID);
-
-    sinon.assert.calledOnce(describeStub);
-    sinon.assert.calledOnce(restoreDBClusterStub);
-    sinon.assert.calledOnce(createDBInstanceStub);
-    sinon.assert.calledOnce(waitForStub);
+    // Verify create instance call
+    sinon.assert.match(calls[2].args[0].input, {
+      DBInstanceClass: restoreAndVerify.DB_INSTANCE_CLASS,
+      DBClusterIdentifier: CLUSTER_ID,
+      DBInstanceIdentifier: INSTANCE_ID,
+      Engine: restoreAndVerify.DB_ENGINE,
+      EngineVersion: "8.0.mysql_aurora.3.08.0"
+    });
   });
 });
 
@@ -116,23 +98,21 @@ describe("#changePassword()", function() {
   it("should call RDS to change the cluster password", async function() {
     const newPassword = "myNewPassword";
 
-    const rds = new AWS.RDS();
-    const modifyDBClusterStub = sinon.stub(rds, "modifyDBCluster");
-    modifyDBClusterStub
-      .withArgs({
-        DBClusterIdentifier: CLUSTER_ID,
-        MasterUserPassword: newPassword,
-        ApplyImmediately: true
-      })
-      .returns({
-        promise: () => {
-          return {};
-        }
-      });
+    const rdsClient = new RDSClient({});
+    const sendStub = sinon.stub(rdsClient, "send");
 
-    await restoreAndVerify.changePassword(rds, CLUSTER_ID, newPassword);
+    // Stub for modifyDBCluster
+    sendStub.resolves({});
 
-    sinon.assert.calledOnce(modifyDBClusterStub);
+    await restoreAndVerify.changePassword(rdsClient, CLUSTER_ID, newPassword);
+
+    // Verify the command was called with correct parameters
+    const call = sendStub.getCall(0);
+    sinon.assert.match(call.args[0].input, {
+      DBClusterIdentifier: CLUSTER_ID,
+      MasterUserPassword: newPassword,
+      ApplyImmediately: true
+    });
   });
 });
 
@@ -154,18 +134,10 @@ describe("#verifyDb()", function() {
 
   it("should connect using the cluster master username, endpoint, and the provided password", async function() {
     const password = "myPassword";
-    const rds = new AWS.RDS();
+    const rdsClient = new RDSClient({});
 
-    const describeDBInstancesStub = sinon.stub(rds, "describeDBInstances");
-    describeDBInstancesStub
-      .withArgs({
-        DBInstanceIdentifier: INSTANCE_ID
-      })
-      .returns({
-        promise: () => {
-          return DESCRIBE_DB_INSTANCE_RESULT;
-        }
-      });
+    const sendStub = sinon.stub(rdsClient, "send");
+    sendStub.resolves(DESCRIBE_DB_INSTANCE_RESULT);
 
     const queryFake = sinon.fake.returns(
       Promise.resolve([
@@ -186,8 +158,15 @@ describe("#verifyDb()", function() {
       sinon.fake.returns(Promise.resolve(connection))
     );
 
-    await restoreAndVerify.verifyDb(rds, INSTANCE_ID, password);
+    await restoreAndVerify.verifyDb(rdsClient, INSTANCE_ID, password);
 
+    // Verify describe instances call
+    const call = sendStub.getCall(0);
+    sinon.assert.match(call.args[0].input, {
+      DBInstanceIdentifier: INSTANCE_ID
+    });
+
+    // Verify MySQL connection parameters
     sinon.assert.calledWith(mysqlPromise.createConnection, {
       database: restoreAndVerify.DB_NAME,
       host: "myAuroraEndpointAddress",
@@ -201,35 +180,27 @@ describe("#verifyDb()", function() {
 
 describe("#deleteCluster()", function() {
   it("should delete the instance, and then the cluster", async function() {
-    const rds = new AWS.RDS();
+    const rdsClient = new RDSClient({});
+    const sendStub = sinon.stub(rdsClient, "send");
 
-    const deleteDBInstanceStub = sinon.stub(rds, "deleteDBInstance");
-    deleteDBInstanceStub
-      .withArgs({
-        DBInstanceIdentifier: INSTANCE_ID,
-        SkipFinalSnapshot: true
-      })
-      .returns({
-        promise: () => {
-          return {};
-        }
-      });
+    // Stubs for deleteDBInstance and deleteDBCluster
+    sendStub.onFirstCall().resolves({});  // deleteDBInstance
+    sendStub.onSecondCall().resolves({}); // deleteDBCluster
 
-    const deleteDBClusterStub = sinon.stub(rds, "deleteDBCluster");
-    deleteDBClusterStub
-      .withArgs({
-        DBClusterIdentifier: CLUSTER_ID,
-        SkipFinalSnapshot: true
-      })
-      .returns({
-        promise: () => {
-          return {};
-        }
-      });
+    await restoreAndVerify.deleteCluster(rdsClient, CLUSTER_ID, INSTANCE_ID);
 
-    await restoreAndVerify.deleteCluster(rds, CLUSTER_ID, INSTANCE_ID);
+    const calls = sendStub.getCalls();
 
-    sinon.assert.calledOnce(deleteDBInstanceStub);
-    sinon.assert.calledOnce(deleteDBClusterStub);
+    // Verify delete instance call
+    sinon.assert.match(calls[0].args[0].input, {
+      DBInstanceIdentifier: INSTANCE_ID,
+      SkipFinalSnapshot: true
+    });
+
+    // Verify delete cluster call
+    sinon.assert.match(calls[1].args[0].input, {
+      DBClusterIdentifier: CLUSTER_ID,
+      SkipFinalSnapshot: true
+    });
   });
 });
