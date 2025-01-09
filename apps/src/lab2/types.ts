@@ -52,6 +52,7 @@ export interface ProjectAndSources {
   // When projects are loaded for the first time, sources may not be present
   sources?: ProjectSources;
   channel: Channel;
+  abuseScore?: number;
 }
 
 /// ------ SOURCES ------ ///
