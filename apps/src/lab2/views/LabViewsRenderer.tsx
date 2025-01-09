@@ -72,6 +72,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     );
   };
 
+  // Do not render lab view if project is blocked and user is not a project validator.
   if (isBlocked && !isProjectValidator) {
     return null;
   }
