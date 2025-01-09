@@ -76,6 +76,36 @@ class Services::User::MultiAuthMigratorTest < ActiveSupport::TestCase
       end
     end
 
+    context 'when Microsoft' do
+      let(:user) {build(:user, :microsoft_v2_sso_provider)}
+
+      it 'migrates the user' do
+        migrate
+        _(user.migrated?).must_equal true
+      end
+
+      it 'creates the correct auth option' do
+        migrate
+        _(user.authentication_options.first.credential_type).must_equal AuthenticationOption::MICROSOFT
+        _(user.authentication_options.first.data).wont_be_nil
+      end
+    end
+
+    context 'when Facebook' do
+      let(:user) {build(:user, :facebook_sso_provider)}
+
+      it 'migrates the user' do
+        migrate
+        _(user.migrated?).must_equal true
+      end
+
+      it 'creates the correct auth option' do
+        migrate
+        _(user.authentication_options.first.credential_type).must_equal AuthenticationOption::FACEBOOK
+        _(user.authentication_options.first.data).wont_be_nil
+      end
+    end
+
     context 'when provider is not supported' do
       let(:provider) {'foo_provider'}
 
