@@ -184,6 +184,6 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal 'Environment', metric[:dimensions][0][:name]
     assert_equal @test_env, metric[:dimensions][0][:value]
     assert_equal 'ModelId', metric[:dimensions][1][:name]
-    assert_equal @metrics_model_id, metric[:dimensions][1][:value] # FAILING
+    assert_equal @metrics_model_id, metric[:dimensions][1][:value]
   end
 end
