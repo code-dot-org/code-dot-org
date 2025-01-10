@@ -78,6 +78,18 @@ const FinishTeacherAccount: React.FunctionComponent<{
     false
   );
 
+  const showEducatorRole = statsigReporter.getIsInExperiment(
+    'educator_role',
+    'showEducatorRole',
+    false
+  );
+
+  const requireEducatorRole = statsigReporter.getIsInExperiment(
+    'educator_role',
+    'requireEducatorRole',
+    false
+  );
+
   // Remove oauth user_type cookie if it exists
   cookies.remove(NEW_SIGN_UP_USER_TYPE);
 
@@ -130,6 +142,24 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const gdprValid = useMemo(() => {
     return isGdprLoaded && ((showGDPR && gdprChecked) || !showGDPR);
   }, [showGDPR, gdprChecked, isGdprLoaded]);
+
+  const formDisabled = useMemo(
+    () =>
+      name?.trim() === '' ||
+      name?.length > MAX_DISPLAY_NAME_LENGTH ||
+      !gdprValid ||
+      (isInSchoolRequiredExperiment && schoolInfoInvalid(schoolInfo)) ||
+      (requireEducatorRole && !educatorRole),
+
+    [
+      gdprValid,
+      isInSchoolRequiredExperiment,
+      name,
+      schoolInfo,
+      requireEducatorRole,
+      educatorRole,
+    ]
+  );
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
@@ -252,19 +282,23 @@ const FinishTeacherAccount: React.FunctionComponent<{
               </BodyThreeText>
             )}
           </div>
-          <div>
-            <SimpleDropdown
-              className={style.dropdownContainer}
-              labelText={locale.what_is_your_role()}
-              name="educator_role"
-              selectedValue={educatorRole}
-              onChange={e => {
-                setEducatorRole(e.target.value);
-              }}
-              itemGroups={roleItemGroups}
-              dropdownTextThickness="thin"
-            />
-          </div>
+          {showEducatorRole && (
+            <div>
+              <SimpleDropdown
+                className={style.dropdownContainer}
+                labelText={`${locale.what_is_your_role()}${
+                  requireEducatorRole ? '*' : ''
+                }`}
+                name="educator_role"
+                selectedValue={educatorRole}
+                onChange={e => {
+                  setEducatorRole(e.target.value);
+                }}
+                itemGroups={roleItemGroups}
+                dropdownTextThickness="thin"
+              />
+            </div>
+          )}
           <SchoolDataInputs
             {...schoolInfo}
             includeHeaders={false}
@@ -325,12 +359,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
               iconStyle: 'solid',
               title: 'arrow-right',
             }}
-            disabled={
-              name?.trim() === '' ||
-              name?.length > MAX_DISPLAY_NAME_LENGTH ||
-              !gdprValid ||
-              (isInSchoolRequiredExperiment && schoolInfoInvalid(schoolInfo))
-            }
+            disabled={formDisabled}
             isPending={isSubmitting}
           />
         </div>
