@@ -8,12 +8,14 @@
       "curriculum_umbrella": "CSF Self Paced PL",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2023"
+      "version_year": "2023",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "k5-onlinepd",
-    "serialized_at": "2024-11-19 01:18:56 UTC",
+    "serialized_at": "2025-01-09 16:37:11 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",

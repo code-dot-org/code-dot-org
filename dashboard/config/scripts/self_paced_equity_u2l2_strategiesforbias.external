@@ -1,0 +1,136 @@
+name 'self-paced-equity-U2L2-strategiesforbias'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Reducing Implicit Bias
+
+#### Recognizing your implicit biases is a good first step toward becoming a more equity-minded computer science teacher. But you also need to work to reduce the impact of your current biases and fight against new ones!
+
+___
+
+<div style="display: flex; justify-content: space-between; gap: 10px; margin-top: 20px; margin-bottom: 20px; ">
+    <img src="https://images.code.org/bb9d7b4ce8d6221cd4849964add48557-image-1736121016199.50.13 PM.png" alt="A student and adult look at the same laptop. The adult points at the screen." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/77fa297852883957b9bab3d33a158094-image-1736121395178.56.33 PM.png" alt="A teacher and student look at the same desktop computer and smile. Other students work in the background." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/669aab6d5e8768d279f1793db3f3ff28-image-1736121453948.57.29 PM.png" alt="An adult leans on a table while looking down at two students working on a tablet. One student looks back up at the adult and smiles." style="width: 23%; height: auto; border-radius: 10px;">
+    <img src="https://images.code.org/d1e70271d4894979c8f715cd795f43b6-image-1736121524336.58.40 PM.png" alt="A teacher sits on their desk and looks out at their classroom while speaking." style="width: 23%; height: auto; border-radius: 10px;">
+</div>
+
+___
+
+## Strategies to Fight Bias
+
+#### <a href="https://womensplace.osu.edu/resources/implicit-bias-resources" target="blank" rel="noopener noreferrer">The Women's Place from Ohio State University</a> has curated a robust set of resources to fight implicit bias, including actions you can take to reduce implicit bias. We've included them below and added suggestions for connecting these strategies to computer science.
+
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
+<p style="font-size: 18px; line-height: 1.2;">
+  <img src="https://images.code.org/c04fff982abdcc7794636315a6e15789-image-1736211221255.png" alt="A megaphone" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
+<b>Raise awareness of implicit bias.</b></p>
+<p style="font-size: 18px; line-height: 1.2;">Awareness of implicit bias is a crucial starting point that may prompt individuals to seek out and implement further strategies. In our experience, most people find that becoming aware of their implicit biases helps them avoid those biases in decision making.
+</p>
+
+___
+
+#### **CS Connection:** Help students understand their biases around computer science by pointing out the stereotypical depiction of a programmer (like you saw in <a href="https://studio.code.org/s/self-paced-pl-equitymodule-unit2/lessons/1/levels/5" target="blank" rel="noopener noreferrer">this level</a>) when it surfaces. Remind students (and yourself!) that these biases don't dictate who can and can't participate in computer science.
+</div>
+
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
+<p style="font-size: 18px; line-height: 1.2;">
+  <img src="https://images.code.org/fb21dbf70a9a411c5ff27efeed609191-image-1736211386074.png" alt="Three people in a circle icon" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
+<b>Seek to identify and consciously acknowledge real group and individual differences.</b></p>
+<p style="font-size: 18px; line-height: 1.2;">Cultivate greater awareness of and sensitivity to group and individual differences. Attend and offer training seminars, events, and opportunities to share information that acknowledge and promote an appreciation of group differences and multi-cultural viewpoints.
+</p>
+
+___
+
+#### **CS Connection:** There's a wealth of computer science-related learning opportunities! We recommend you start with the <a href="https://csteachers.org/pd-opportunities/" target="blank" rel="noopener noreferrer">Computer Science Teacher Association's Professional Development Opportunities</a> page to look for additional learning resources on this and other equity-related topics.
+</div>
+
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
+<p style="font-size: 18px; line-height: 1.2;">
+  <img src="https://images.code.org/198b3a9bff01f1258308d31ae8a5c46c-image-1736211625174.png" alt="A thought bubble" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
+<b>Routinely check thought processes and decisions for possible bias: Practice mindfulness.</b></p>
+<p style="font-size: 18px; line-height: 1.2;">Actively engage in more thoughtful, deliberative information processing and be mindful of your decision-making processes. Mindfulness training helps facilitate these efforts. When sufficient effort is exerted to limit the effects of implicit biases on judgment, attempts to consciously control implicit bias can be successful.
+</p>
+
+___
+
+#### **CS Connection:** This course is a great start for noticing and interrupting your biases. Continue to practice that strategies that you learn here (and in any other trainings) to check for bias in your computer science curricular materials and instructional practices.
+</div>
+
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
+<p style="font-size: 18px; line-height: 1.2;">
+  <img src="https://images.code.org/1f2556814a89903e0a0d22192795c2db-image-1736211704237.png" alt="Two faces smiling and laughing" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
+<b>Increase exposure to minority group members and counter-stereotypes.</b></p>
+<p style="font-size: 18px; line-height: 1.2;">Distribute stories and pictures widely that portray stereotype-busting images: posters, newsletters, annual reports, speaker series, and podcasts are examples of media you can use to distribute this message. Increased contact with counter-stereotypes—specifically, increased exposure to underrepresented group members that contradict the social stereotype—can help individuals “unlearn” the associations that underlie implicit bias.
+</p>
+
+___
+
+<div style="display: flex; align-items: left;">
+
+<img src="https://images.code.org/86fb480e433c7feca6d9e6df4a73a062-image-1731961341605.png" style="width: auto; height: 100px;"  alt="Two interconnected links.">
+
+<div style="background-color: #F7F8FA; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Curriculum Connection</b></p>
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">Code.org has a host of materials that help expose teachers and students to a diverse set of people in computer science. Take a look at our <a href="https://code.org/educate/resources/videos" target="blank" rel="noopener noreferrer">library of instructional videos</a> (also embedded in our curricula) and <a href="https://code.org/educate/resources/posters" target="blank" rel="noopener noreferrer">classroom posters</a> for resources.
+
+</p>
+
+</div>
+</div>
+</div>
+
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
+<p style="font-size: 18px; line-height: 1.2;">
+  <img src="https://images.code.org/d68888e97cac928b9acc5547212b114b-image-1736211843103.png" alt="An arrow going down" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
+<b>Reduce exposure to stereotypes.</b></p>
+<p style="font-size: 18px; line-height: 1.2;">Identify and discard or change environmental cues such as images and language in any signage, pamphlets, brochures, instructional manuals, background music, or any other verbal or visual communications that trigger stereotype activation and implicit bias.
+</p>
+
+___
+
+#### **CS Connection:** Code.org's curricular materials are intentional in presenting role models who break stereotypes. If you choose to utilize other curricula, be mindful of what sorts of biases may be present, and modify or avoid them.
+
+</div>
+
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
+<p style="font-size: 18px; line-height: 1.2;">
+  <img src="https://images.code.org/bdb43a095ae8c943c0bac57d08bc9c30-image-1736211912778.png" alt="Binoculars" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
+<b>Take a first-person perspective of a member of a stereotyped group.</b></p>
+<p style="font-size: 18px; line-height: 1.2;">Perspective taking increases psychological closeness to “other” groups, which ameliorates automatic group-based evaluations.
+</p>
+
+___
+
+<div style="display: flex; align-items: left;">
+
+<img src="https://images.code.org/86fb480e433c7feca6d9e6df4a73a062-image-1731961341605.png" style="width: auto; height: 100px;"  alt="Two interconnected links.">
+
+<div style="background-color: #F7F8FA; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Curriculum Connection</b></p>
+
+<p style="color: black; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 16px">Code.org's curricular materials often invite students to take on the perspective of and empathize with a user to complete a project. For example, in CS Discoveries Unit 4 - The Design Process (for sixth through tenth graders), students <a href="https://studio.code.org/s/csd4-2024/lessons/1" target="blank" rel="noopener noreferrer">learn about designing with empathy</a> as a part of human-centered design. As a teacher, you can also employ these strategies to design learning experiences based on your students' unique needs.
+
+</p>
+
+</div>
+</div>
+</div>
+
+<div style="border: 1px solid black; border-radius: 20px; padding: 20px; margin: 20px 0px 20px 0px">
+<p style="font-size: 18px; line-height: 1.2;">
+  <img src="https://images.code.org/79dc16e78e4f530b0a04184661c2abd1-image-1736212326584.png" alt="A person" style="float: left; margin-right: 10px; width: 48px; height: 48px;">
+<b>Practice individuation: Obtain and help others obtain specific information about people as individuals rather than as group members.</b></p>
+<p style="font-size: 18px; line-height: 1.2;">Help prevent stereotypic inferences by encouraging people to evaluate members of a group based on individual, rather than group-based, attributes. Regularly remind yourself and others that majority group members aren’t characterized by the actions of a few, unlike minority group members.
+</p>
+
+___
+
+#### **CS Connection:** Get to know your students in your computer science classroom! Take the time to learn about their backgrounds and home lives to see them as individuals rather than as part of a group.
+
+</div>
+MARKDOWN

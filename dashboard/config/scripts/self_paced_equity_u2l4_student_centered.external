@@ -1,0 +1,47 @@
+name 'self-paced-equity-U2L4-student-centered'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Student-Centered Teaching
+
+#### At the core of Code.org's many curriculum offerings is **student-centered teaching**. We aim to influence students’ attitudes and perceptions towards computer science by increasing engagement, confidence, and sense of belonging with student-centered strategies that ensure equitable learning opportunities and outcomes.
+
+<div style="display: flex; justify-content: center; gap: -40px; padding: 20px;">
+  <img src="https://images.code.org/bd09034cea4d5ac5ce165ea07e01f1cc-image-1736451863730.44.20 AM.png" alt="Two younger students look at the camera and smile while sitting in front of laptops." style="width: 200px; height: 200px; object-fit: cover; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); transform: rotate(-10deg); border-radius: 10px;">
+  <img src="https://images.code.org/0172060d48db6adac01de63d9e941162-image-1736451966528.45.57 AM.png" alt="Two middle school students look at the same laptop. One is smiling and the other is looking intently." style="width: 200px; height: 200px; object-fit: cover; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); transform: rotate(5deg); border-radius: 10px;">
+  <img src="https://images.code.org/cdded8bcd5a8ce972da66054ff92a733-image-1736452023959.47.00 AM.png" alt="A high school student works on a laptop alone." style="width: 200px; height: 200px; object-fit: cover; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); transform: rotate(-5deg); border-radius: 10px;">
+<img src="https://images.code.org/f4d8a372523528928dccbc70efa9999a-image-1736452273108.51.10 AM.png" alt="Two middle school students work on the same computer. One is speaking and gesturing while the other listens." style="width: 200px; height: 200px; object-fit: cover; border-radius: 10px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); transform: rotate(5deg);">
+</div>
+
+#### In particular, the Code.org curriculum aims to positively impact equity by designing content and activities that support teachers in providing students with multiple avenues to learn and understand computer science concepts so that all students can be successful. At Code.org, we work to identify and eliminate barriers that have prevented the inclusion and full participation of underrepresented groups in computer science.
+
+## What is Student-Centered Teaching?
+
+#### Our approach to implementing culturally responsive pedagogy and addressing equity consists of four main threads:
+
+<table style="width: 100%; margin: auto;">
+  <tr style="border-bottom: 1px solid black;">
+    <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/03707b4dbece73d7970dfefd10fc43cd-image-1736454374683.png" alt="Three people bunched together under a heart" style="width: 80px; height: 80px;"></td>
+    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">Identity and Culture</td>
+    <td style="font-size: 18px; padding: 20px 0;">Affirm the identity and culture of students to create a sense of belonging.</td>
+  </tr>
+  <tr style="border-bottom: 1px solid black;">
+    <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/985e8511f3ff59863698c4eca63e7e29-image-1736454372720.png" alt="Four puzzle pieces fitting together" style="width: 80px; height: 80px;"></td>
+    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">Personally Relevant Practice</td>
+    <td style="font-size: 18px; padding: 20px 0;">Provide opportunities for students to practice what they are learning in a meaningful way.</td>
+  </tr>
+  <tr style="border-bottom: 1px solid black;">
+    <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/56ec5f8bdeccf4e9a0ffb986ce283449-image-1736454514965.png" alt="An illuminated light bulb with a yellow brain in place of the glass." style="width: 80px; height: 80px;"></td>
+    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">Processing and Meaning-Making</td>
+    <td style="font-size: 18px; padding: 20px 0;">Ensure students interact with content and process new information in a way that works best for them.</td>
+  </tr>
+  <tr>
+    <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/60e46998f659c5791728b71310db942b-image-1736454577157.png" alt="A globe with people at various points around it." style="width: 80px; height: 80px;"></td>
+    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">Realizing Possibilities of Computer Science</td>
+    <td style="font-size: 18px; padding: 20px 0;">Expose students to fundamental computer science knowledge and skills to provide a critical lens for interpreting the world around them.</td>
+  </tr>
+</table>
+
+#### In the next few levels, we'll go over examples of **each** of these threads in the Code.org curriculum so you can see what they look like in practice. Each thread will have relevant elementary, middle, and high school examples.
+MARKDOWN

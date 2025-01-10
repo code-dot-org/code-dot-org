@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-11-27T16:40:52.000Z",
   "level_num": "custom",
@@ -8,28 +9,27 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "#### Complete the Song\r\nNow it's your turn. Write your own verse to complete the song. \r\n\r\n- Add sounds to the [verse](#clickable=id:verse_workspace) function. \r\n\r\n\r\n",
+    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-sparkles\"></i> Create a function!\r\nNow it's your turn.  \r\n\r\n1. Drag [my function](#clickable=flyout-fourth-block) into your workspace.\r\n2. Add sounds into the function.\r\n3. Name the function.\r\n4. Call the function by dragging it from the toolbox to under [when run](#clickable=when-run-block).\r\n\r\n\r\n\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
         "key": "music-ai-skill-function-verse_fc9881f2-7571-49f1-8971-dcab68a657a9",
-        "message": "Great work! You're organizing your code with functions!",
+        "message": "Great work! ",
         "next": true,
         "conditions": [
           {
-            "name": "played_sound_in_function",
-            "value": "verse_workspace"
+            "name": "played_anything_in_same_function",
+            "value": 1
           }
         ]
       },
       {
-        "key": "music-ai-skill-function-verse_03ed3be5-172e-4df5-97cb-075d4032388f",
-        "message": "That chorus sounds great! Now, add sounds into the [verse](#clickable=id:verse_workspace) function. ",
+        "key": "music-coding-intro-functions-beat_7ba758cc-a909-4178-aff5-d93e51b3a7ab",
+        "message": "Not quite. Try reading the instructions again. ",
         "next": false,
         "conditions": [
           {
-            "name": "played_sound_in_function",
-            "value": "chorus_workspace"
+            "name": "played_sound_in_any_function"
           }
         ]
       },
@@ -43,9 +43,9 @@
       }
     ],
     "level_data": {
-      "validationTimeout": 1,
+      "validationTimeout": 3,
       "library": "launch2024",
-      "packId": "alessia_cara_scars_to_your_beautiful",
+      "packId": "default",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -53,162 +53,18 @@
             {
               "type": "when_run_simple2",
               "id": "when_run_simple2",
-              "x": 34,
-              "y": 34,
-              "deletable": false,
-              "movable": false,
-              "next": {
-                "block": {
-                  "type": "procedures_callnoreturn",
-                  "id": "verse-call",
-                  "deletable": false,
-                  "movable": false,
-                  "extraState": {
-                    "name": "verse"
-                  },
-                  "next": {
-                    "block": {
-                      "type": "procedures_callnoreturn",
-                      "id": "chorus-call",
-                      "deletable": false,
-                      "movable": false,
-                      "extraState": {
-                        "name": "chorus"
-                      },
-                      "next": {
-                        "block": {
-                          "type": "procedures_callnoreturn",
-                          "deletable": false,
-                          "movable": false,
-                          "extraState": {
-                            "name": "verse"
-                          },
-                          "next": {
-                            "block": {
-                              "type": "procedures_callnoreturn",
-                              "deletable": false,
-                              "movable": false,
-                              "extraState": {
-                                "name": "chorus"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "type": "procedures_defnoreturn",
-              "id": "verse_workspace",
-              "x": 290,
+              "x": 30,
               "y": 30,
-              "deletable": false,
-              "editable": false,
-              "extraState": {
-                "procedureId": "verse_workspace",
-                "initialDeleteConfig": false,
-                "initialEditConfig": false,
-                "initialMoveConfig": true
-              },
-              "fields": {
-                "NAME": "verse"
-              }
-            },
-            {
-              "type": "procedures_defnoreturn",
-              "id": "!^sDFN@95hnMYj/jj2LP",
-              "x": 530,
-              "y": 30,
-              "deletable": false,
-              "editable": false,
-              "extraState": {
-                "procedureId": "chorus_workspace",
-                "initialDeleteConfig": false,
-                "initialEditConfig": false,
-                "initialMoveConfig": true
-              },
-              "fields": {
-                "NAME": "chorus"
-              },
-              "inputs": {
-                "STACK": {
-                  "block": {
-                    "type": "play_sounds_together",
-                    "id": "play_sounds_together",
-                    "deletable": false,
-                    "movable": false,
-                    "inputs": {
-                      "code": {
-                        "block": {
-                          "type": "play_sound_at_current_location_simple2",
-                          "id": "0-JPz7RK9_!sIfIViS%f",
-                          "deletable": false,
-                          "movable": false,
-                          "fields": {
-                            "sound": "alessia_cara_scars_to_your_beautiful/vocals_chorus_1"
-                          },
-                          "next": {
-                            "block": {
-                              "type": "play_sound_at_current_location_simple2",
-                              "id": "play_sound_at_current_location_simple2",
-                              "deletable": false,
-                              "movable": false,
-                              "fields": {
-                                "sound": "alessia_cara_scars_to_your_beautiful/drums_chorus"
-                              },
-                              "next": {
-                                "block": {
-                                  "type": "play_sound_at_current_location_simple2",
-                                  "id": "9~,aH;QtMpKTF~o,[0Qt",
-                                  "deletable": false,
-                                  "movable": false,
-                                  "fields": {
-                                    "sound": "alessia_cara_scars_to_your_beautiful/piano_chorus"
-                                  },
-                                  "next": {
-                                    "block": {
-                                      "type": "play_sound_at_current_location_simple2",
-                                      "id": "5*x6r$;SAu-dqF[k9Cvc",
-                                      "deletable": false,
-                                      "movable": false,
-                                      "fields": {
-                                        "sound": "alessia_cara_scars_to_your_beautiful/bass_chorus"
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "deletable": false
             }
           ]
-        },
-        "procedures": [
-          {
-            "id": "verse_workspace",
-            "name": "verse",
-            "returnTypes": null
-          },
-          {
-            "id": "chorus_workspace",
-            "name": "chorus",
-            "returnTypes": null
-          }
-        ]
+        }
       },
       "toolbox": {
         "blocks": {
           "Control": [
-            "play_sounds_together"
+            "play_sounds_together",
+            "repeat_simple2"
           ],
           "Play": [
             "play_sound_at_current_location_simple2"
@@ -218,132 +74,35 @@
           ]
         },
         "type": "flyout",
-        "addFunctionCalls": false
+        "addFunctionCalls": true,
+        "addFunctionDefinition": true
       },
       "sounds": {
-        "sabrina_carpenter_espresso": [
-          "drums_intro",
-          "drums_main_beat",
-          "drums_hats",
-          "drums_fill",
-          "drums_percussion_1",
-          "drums_percussion_2",
-          "bass_intro",
-          "bass_main",
-          "keys_intro",
-          "keys_chorus_1",
-          "keys_chorus_2",
-          "keys_prechorus",
-          "synth",
-          "guitar_intro",
-          "guitar_1",
-          "guitar_2",
-          "crash",
-          "wow",
-          "mmm",
-          "breaths",
-          "reverse_vocal",
-          "vocals_now_hes",
-          "vocals_verse_1",
-          "vocals_verse_2",
-          "vocals_prechorus_1",
-          "vocals_prechorus_2",
-          "vocals_chorus_1",
-          "vocals_chorus_2",
-          "vocals_chorus_backgrounds",
-          "vocals_adlib_i_know",
-          "vocals_adlib_espresso",
-          "vocals_adlib"
-        ],
-        "carly_rae_jepsen_call_me_maybe": [
-          "hey_i_just_met_you",
-          "i_threw_a_wish_in_a_well",
-          "id_trade_my_soul_for_a_wish",
-          "your_stare_was_holdin",
-          "hey_i_just_met_you_no_harm",
-          "its_hard_to_look_right",
-          "and_all_the_other_boys",
-          "before_you_came_into_my_life",
-          "so_call_me_maybe",
-          "chorus_instruments",
-          "strings_big",
-          "strings_small",
-          "muted_guitar",
-          "bass",
-          "drums_full",
-          "drums_intro",
-          "drums_prechorus",
-          "drums_steady",
-          "sweep",
-          "strings_flourish",
-          "strings_slowdown"
-        ],
-        "lady_gaga_born_this_way": [
-          "vocals_spoken_intro_1",
-          "vocals_spoken_intro_2",
-          "vocals_verse_1",
-          "vocals_verse_2",
-          "vocals_verse_3",
-          "vocals_verse_4",
-          "vocals_chorus_1",
-          "vocals_chorus_2",
-          "vocals_chorus_tag",
-          "vocals_postchorus_1",
-          "vocals_postchorus_2",
-          "drums_chorus",
-          "drums_clap_beat",
-          "drums_clap_breakdown",
-          "drums_intro",
-          "drums_prechorus",
-          "drums_small",
-          "drums_glitch_fill",
-          "drums_triplet_fill",
-          "drums_long_fill",
-          "bass_sub",
-          "bass_trashed",
-          "synth_distorted",
-          "synth_main_chorus",
-          "synth_main_intro",
-          "synth_main_small",
-          "synth_saw",
-          "synth_big_chorus",
-          "synth_blocks",
-          "synth_choir",
-          "synth_delay",
-          "synth_plink",
-          "synth_bounce",
-          "organ",
-          "piano",
-          "strings",
-          "strings_low",
-          "strings_end",
-          "crash",
-          "bell",
-          "riser",
-          "sweep",
-          "digital_toms"
-        ],
-        "alessia_cara_scars_to_your_beautiful": [
-          "drums_verse",
-          "drums_chorus",
-          "bass_verse",
-          "bass_chorus",
-          "piano_verse",
-          "piano_chorus",
-          "vocals_verse_1",
-          "vocals_verse_2",
-          "vocals_chorus_1",
-          "vocals_chorus_2"
+        "groove": [
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "bass_sub_saunter",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "guitar_rainbow",
+          "guitar_high_riff",
+          "guitar_thread",
+          "organ_walker",
+          "crash_reverse",
+          "laser"
         ]
       }
     },
     "name_suffix": "_final",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
+    "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-11-27T16:40:52.148+00:00\",\"changed\":[\"cloned from \\\"music-jam-functions-verse\\\"\"],\"cloned_from\":\"music-jam-functions-verse\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-27T16:40:52.148+00:00\",\"changed\":[\"cloned from \\\"music-jam-functions-verse\\\"\"],\"cloned_from\":\"music-jam-functions-verse\"},{\"changed_at\":\"2024-12-04 21:23:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:24:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:26:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:34:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:36:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:38:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:43:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 20:13:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 22:05:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:01:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 18:22:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 18:55:02 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 18:58:45 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 19:00:42 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 19:01:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 19:02:52 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-19 16:52:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

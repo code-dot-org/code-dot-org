@@ -254,6 +254,20 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           }
         />
       </div>
+      <div className={moduleStyles.fieldRow}>
+        <Checkbox
+          checked={!!panel.fadeInOverPrevious}
+          name="fadeInOverPrevious"
+          label="Fade in over previous"
+          size="s"
+          onChange={event =>
+            updatePanel({
+              ...panel,
+              fadeInOverPrevious: event.target.checked,
+            })
+          }
+        />
+      </div>
       {last && (
         <div className={moduleStyles.fieldRow}>
           <label htmlFor={panel.nextUrl}>

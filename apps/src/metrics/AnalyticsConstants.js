@@ -24,6 +24,7 @@ const EVENTS = {
     'Curriculum Free Dialog Button Clicked',
   LMS_INFORMATION_BUTTON_CLICKED: 'LMS Information Button Clicked',
   PARENT_OR_GUARDIAN_SIGN_UP_CLICKED: 'Parent or Guardian Sign Up Clicked',
+  FINISH_ACCOUNT_PAGE_LOADED: 'Finish Account Page Loaded',
 
   // School Association
   // Update School Info Dialog
@@ -495,6 +496,9 @@ const EVENTS = {
   // Lab2
   SKIP_TO_PROJECT: 'User Skipped To Project From Tutorial Level',
 
+  // Global Edition - Region Reset Button
+  GLOBAL_EDITION_REGION_RESET_BUTTON_CLICKED:
+    'Global Edition Return to Full Site Clicked',
   // Global Edition - Region Switch Confirm events
   GLOBAL_EDITION_REGION_SWITCH_CONFIRM_SHOWN:
     'Global Edition Region Switch Confirm Shown',

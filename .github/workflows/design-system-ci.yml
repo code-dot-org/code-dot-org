@@ -1,0 +1,54 @@
+name: Design System CI and QA
+
+on:
+    workflow_dispatch:
+    pull_request:
+        branches:
+            - staging
+            - staging-next
+        paths:
+            - 'frontend/**'
+
+jobs:
+    build:
+        runs-on: ubuntu-24.04
+
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                sparse-checkout: 'frontend'
+            
+            - name: Enable Corepack before setting up Node
+              run: corepack enable
+              
+            - uses: actions/setup-node@v4
+              with:
+                node-version-file: "frontend/.nvmrc"
+                cache: "yarn"
+                cache-dependency-path: 'frontend/yarn.lock'
+
+            - name: Install dependencies
+              run: yarn install
+              working-directory: ./frontend
+
+            - name: Install Playwright for Design System Storybook
+              run: npx playwright install --with-deps
+              working-directory: ./frontend/apps/design-system-storybook
+
+            - name: Lint
+              run: yarn lint --filter @code-dot-org/dsco --filter @code-dot-org/design-system-storybook
+              working-directory: ./frontend
+
+            - name: Build
+              run: yarn build --filter @code-dot-org/dsco --filter @code-dot-org/design-system-storybook
+              working-directory: ./frontend
+
+            - name: Unit Tests
+              run: yarn test --filter @code-dot-org/dsco --filter @code-dot-org/design-system-storybook
+              working-directory: ./frontend
+
+            - name: UI Tests
+              run: yarn test:ui:ci --filter @code-dot-org/dsco --filter @code-dot-org/design-system-storybook
+              working-directory: ./frontend
+
+            

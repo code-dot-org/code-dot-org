@@ -97,6 +97,7 @@ class Level < ApplicationRecord
     ai_tutor_available
     offer_browser_tts
     use_secondary_finish_button
+    skip_url
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -781,6 +782,14 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_properties
+    return properties unless should_localize?
+
+    properties.each_with_object({}) do |(key, value), i18n|
+      i18n[key] = try(:localized_property, key) || get_localized_property(key) || value
+    end
+  end
+
   # There's a bit of trickery here. We consider a level to be
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
@@ -849,6 +858,7 @@ class Level < ApplicationRecord
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
     properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user) if script_level
+    properties_camelized[:baseAssetUrl] = Blockly.base_url
 
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)

@@ -43,39 +43,6 @@ module OmniauthCallbacksControllerTests
       created_user&.destroy!
     end
 
-    test "student sign-up" do
-      auth_hash = mock_oauth
-
-      get '/users/sign_up'
-      sign_in_through_facebook
-      assert_template 'omniauth/redirect'
-
-      omniauth_redirect
-
-      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
-      assert_redirected_to '/'
-      follow_redirect!
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
-
-      created_user = User.find signed_in_user_id
-      assert_valid_student created_user, expected_email: auth_hash.info.email
-      assert_credentials auth_hash, created_user
-
-      assert_sign_up_tracking(
-        SignUpTracking::CONTROL_GROUP,
-        %w(
-          load-sign-up-page
-          facebook-callback
-          facebook-sign-up-error
-          facebook-load-finish-sign-up-page
-          facebook-sign-up-success
-        )
-      )
-    ensure
-      created_user&.destroy!
-    end
-
     test "teacher sign up for newest sign up flow" do
       auth_hash = mock_oauth
 
@@ -94,45 +61,6 @@ module OmniauthCallbacksControllerTests
       assert_sign_up_tracking(
         SignUpTracking::NOT_IN_STUDY_GROUP,
         %w(
-          facebook-callback
-          facebook-sign-up-error
-          facebook-load-finish-sign-up-page
-          facebook-sign-up-success
-        )
-      )
-    ensure
-      created_user&.destroy!
-    end
-
-    test "teacher sign-up" do
-      auth_hash = mock_oauth
-
-      get '/users/sign_up'
-      sign_in_through_facebook
-
-      assert_template 'omniauth/redirect'
-
-      # Simulate the equivalent of omniauth/redirect
-      post '/users/finish_sign_up', params: {
-        user: {
-          email: 'test@code.org'
-        }
-      }
-
-      assert_template partial: '_finish_sign_up'
-
-      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
-
-      created_user = User.find signed_in_user_id
-      assert_valid_teacher created_user, expected_email: auth_hash.info.email
-      assert_credentials auth_hash, created_user
-
-      assert_sign_up_tracking(
-        SignUpTracking::CONTROL_GROUP,
-        %w(
-          load-sign-up-page
           facebook-callback
           facebook-sign-up-error
           facebook-load-finish-sign-up-page

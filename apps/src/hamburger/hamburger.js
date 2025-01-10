@@ -1,4 +1,3 @@
-import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {
   getChannelIdFromUrl,
   userAlreadyReportedAbuse,
@@ -6,19 +5,6 @@ import {
 
 export const initHamburger = function () {
   $(document).ready(function () {
-    const isInSignupExperiment = statsigReporter.getIsInExperiment(
-      'new_sign_up_v2',
-      'showNewFlow',
-      false
-    );
-    const signupLinks = document.querySelectorAll('#create_account_button');
-
-    if (isInSignupExperiment) {
-      signupLinks.forEach(link => {
-        link.href = 'https://studio.code.org/users/new_sign_up/account_type';
-      });
-    }
-
     $('#hamburger-icon').click(function (e) {
       $(this).toggleClass('active');
       $('#hamburger').removeClass('user-is-tabbing');

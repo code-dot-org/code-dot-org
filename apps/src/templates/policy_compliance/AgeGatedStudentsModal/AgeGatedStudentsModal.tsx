@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import {connect, useSelector} from 'react-redux';
 
 import Link from '@cdo/apps/componentLibrary/link';
 import Typography from '@cdo/apps/componentLibrary/typography';
@@ -10,7 +9,7 @@ import {
   convertStudentDataToArray,
   selectAtRiskAgeGatedDate,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import {RootState} from '@cdo/apps/types/redux';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -20,33 +19,27 @@ import AgeGatedStudentsTable from './AgeGatedStudentsTable';
 
 import styles from '@cdo/apps/templates/policy_compliance/AgeGatedStudentsModal/age-gated-students-modal.module.scss';
 
-interface ReduxState {
-  manageStudents: {
-    isLoadingStudents?: boolean;
-    studentData?: object;
-  };
-}
 interface Props {
   onClose: () => void;
   isOpen: boolean;
-  isLoadingStudents: boolean;
-  atRiskAgeGatedDate?: Date;
   ageGatedStudentsCount?: number;
   ageGatedStudentsUsState?: string;
 }
 
 const AgeGatedStudentsModal: React.FC<Props> = ({
-  isLoadingStudents,
   isOpen,
   onClose,
-  atRiskAgeGatedDate,
   ageGatedStudentsCount = 0,
   ageGatedStudentsUsState,
 }) => {
-  const currentUser = useSelector((state: RootState) => state.currentUser);
+  const currentUser = useAppSelector(state => state.currentUser);
   const reportEvent = (eventName: string, payload: object = {}) => {
     analyticsReporter.sendEvent(eventName, payload);
   };
+
+  const isLoadingStudents = useAppSelector(
+    state => state.manageStudents.isLoadingStudents
+  );
 
   const helpDocsUrl = CapLinks.PARENTAL_CONSENT_GUIDE_URL;
 
@@ -75,6 +68,11 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
     });
   }, [currentUser.userId, ageGatedStudentsCount, ageGatedStudentsUsState]);
 
+  const atRiskAgeGatedDate = useAppSelector(state =>
+    selectAtRiskAgeGatedDate(
+      convertStudentDataToArray(state.manageStudents.studentData)
+    )
+  );
   const startDate = atRiskAgeGatedDate;
   const dateOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric',
@@ -134,9 +132,4 @@ const AgeGatedStudentsModal: React.FC<Props> = ({
   );
 };
 
-export default connect((state: ReduxState) => ({
-  isLoadingStudents: state.manageStudents.isLoadingStudents || false,
-  atRiskAgeGatedDate: selectAtRiskAgeGatedDate(
-    convertStudentDataToArray(state.manageStudents.studentData)
-  ),
-}))(AgeGatedStudentsModal);
+export default AgeGatedStudentsModal;

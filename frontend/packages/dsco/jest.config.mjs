@@ -6,6 +6,10 @@ export default {
       '@swc/jest',
       {
         jsc: {
+          baseUrl: '.',
+          paths: {
+            '@/*': ['./src/*'],
+          },
           transform: {
             react: {
               runtime: 'automatic',
@@ -14,6 +18,9 @@ export default {
         },
       },
     ],
+  },
+  moduleNameMapper: {
+    '\\.(css|scss|sass)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
 };

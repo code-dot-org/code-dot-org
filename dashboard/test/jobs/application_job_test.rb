@@ -11,6 +11,40 @@ class ApplicationJobTest < ActiveJob::TestCase
     end
   end
 
+  def populate_jobs_table(t, job_class)
+    job_class = "job_class: #{job_class}"
+    job_rows = [
+      {handler: "Failed Job, #{job_class}", run_at: t, created_at: t, updated_at: t, failed_at: t, last_error: 'Failed job error', locked_at: nil, locked_by: nil},
+      {handler: "Running job, #{job_class}", run_at: t, created_at: t, updated_at: t, locked_at: t, locked_by: 'delayed_job.1', failed_at: nil, last_error: nil},
+      {handler: "Waiting to start job, #{job_class}", run_at: t, created_at: t, updated_at: t, failed_at: nil, last_error: nil, locked_at: nil, locked_by: nil},
+      {handler: "Distant future scheduled job, #{job_class}", run_at: t + 1.month, created_at: t, updated_at: t, failed_at: nil, last_error: nil, locked_at: nil, locked_by: nil},
+    ]
+    Delayed::Job.insert_all(job_rows)
+  end
+
+  setup do
+    Delayed::Job.delete_all
+
+    @t = Time.now.utc + 1.day
+    populate_jobs_table(@t, 'ApplicationJobTest::TestableJob')
+    populate_jobs_table(@t, 'Some::OtherJob')
+
+    @t_offset = 10.seconds
+
+    # Time starts 10 seconds after creating our test jobs
+    ActiveJobMetrics.stubs(:_now_utc).returns(@t + @t_offset)
+
+    @expected_my_failed_count = 1
+    @expected_my_waiting_to_start_count = 1
+    @expected_my_pending_count = 2
+    @expected_my_queued_count = 3
+
+    @expected_failed_count = @expected_my_failed_count * 2
+    @expected_waiting_to_start_count = @expected_my_waiting_to_start_count * 2
+    @expected_pending_count = @expected_my_pending_count * 2
+    @expected_queued_count = @expected_my_queued_count * 2
+  end
+
   test 'includes ActiveJobMetrics' do
     assert_includes ApplicationJob.ancestors, ActiveJobMetrics
   end
@@ -19,47 +53,70 @@ class ApplicationJobTest < ActiveJob::TestCase
     assert_includes ApplicationJob.ancestors, ActiveJobReporting
   end
 
+  test 'oldest_pending_job_age_s' do
+    assert_in_delta 10.0, ActiveJobMetrics.oldest_pending_job_age_s, 0.01
+    assert_in_delta 10.0, ApplicationJob.new.oldest_pending_job_age_s, 0.01
+  end
+
+  test 'oldest_waiting_to_start_job_age_s' do
+    assert_in_delta 10.0, ActiveJobMetrics.oldest_waiting_to_start_job_age_s, 0.01
+    assert_in_delta 10.0, ApplicationJob.new.oldest_waiting_to_start_job_age_s, 0.01
+  end
+
+  test 'queued_jobs.count returns the number of queued jobs' do
+    assert_equal @expected_queued_count, ActiveJobMetrics.queued_jobs.count
+    assert_equal @expected_my_queued_count, ApplicationJob.new.queued_jobs.count
+  end
+
+  test 'pending_jobs.count returns the number of pending jobs' do
+    assert_equal @expected_pending_count, ActiveJobMetrics.pending_jobs.count
+    assert_equal @expected_my_pending_count, ApplicationJob.new.pending_jobs.count
+  end
+
+  test 'failed_jobs.count returns the number of failed jobs' do
+    assert_equal @expected_failed_count, ActiveJobMetrics.failed_jobs.count
+    assert_equal @expected_my_failed_count, ApplicationJob.new.failed_jobs.count
+  end
+
+  test 'waiting_to_start_jobs.count returns the number of jobs waiting to start' do
+    assert_equal @expected_waiting_to_start_count, ActiveJobMetrics.waiting_to_start_jobs.count
+    assert_equal @expected_my_waiting_to_start_count, ApplicationJob.new.waiting_to_start_jobs.count
+  end
+
   test 'enqueued jobs log several metrics' do
-    expected_failed_count = 6
-    expected_pending_count = 4
-    expected_workable_count = 2
-    expected_my_failed_count = 5
-    expected_my_pending_count = 3
-    expected_my_workable_count = 1
-
-    # Mock these helper methods because mocking the Delayed::Job calls is impossible/complex
-    ApplicationJob.any_instance.stubs(:get_failed_job_count).returns(expected_failed_count)
-    ApplicationJob.any_instance.stubs(:get_pending_job_count).returns(expected_pending_count)
-    ApplicationJob.any_instance.stubs(:get_workable_job_count).returns(expected_workable_count)
-    ApplicationJob.any_instance.stubs(:get_my_failed_job_count).returns(expected_my_failed_count)
-    ApplicationJob.any_instance.stubs(:get_my_pending_job_count).returns(expected_my_pending_count)
-    ApplicationJob.any_instance.stubs(:get_my_workable_job_count).returns(expected_my_workable_count)
-
     # Splitting this into two assertions because 'includes_metrics' can't match multiple metrics with the same name.
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
         includes_metrics(
-          FailedJobCount: expected_failed_count,
-          PendingJobCount: expected_pending_count,
-          WorkableJobCount: expected_workable_count
+          QueuedJobCount: @expected_queued_count,
+          FailedJobCount: @expected_failed_count,
+          PendingJobCount: @expected_pending_count,
+          WaitingToStartJobCount: @expected_waiting_to_start_count,
         ),
+        includes_dimensions(:QueuedJobCount, Environment: CDO.rack_env),
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env),
         includes_dimensions(:PendingJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:WorkableJobCount, Environment: CDO.rack_env)
+        includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env),
+        includes_dimensions(:OldestPendingJobAge, Environment: CDO.rack_env),
+        includes_dimensions(:OldestWaitingToStartJobAge, Environment: CDO.rack_env),
       )
     )
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
         includes_metrics(
-          FailedJobCount: expected_my_failed_count,
-          PendingJobCount: expected_my_pending_count,
-          WorkableJobCount: expected_my_workable_count
+          QueuedJobCount: @expected_my_queued_count,
+          FailedJobCount: @expected_my_failed_count,
+          PendingJobCount: @expected_my_pending_count,
+          WaitingToStartJobCount: @expected_my_waiting_to_start_count,
         ),
+        includes_dimensions(:QueuedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
         includes_dimensions(:PendingJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
-        includes_dimensions(:WorkableJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob')
+        includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
+        includes_dimensions(:OldestPendingJobAge, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
+        includes_dimensions(:OldestWaitingToStartJobAge, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
       )
     )
 
@@ -164,31 +221,5 @@ class ApplicationJobTest < ActiveJob::TestCase
     rescue => exception
       raise exception, 'Expected error to be squashed'
     end
-  end
-
-  test 'get_pending_job_count returns the number of pending jobs' do
-    Delayed::Job.expects(:where).with(failed_at: nil).returns(stub(count: 42))
-    assert_equal 42, ApplicationJob.new.get_pending_job_count
-  end
-
-  test 'get_failed_job_count returns the number of failed jobs' do
-    failed_jobs_mock = mock('failed_jobs')
-    where_mock = mock('where')
-
-    Delayed::Job.expects(:where).returns(where_mock)
-    where_mock.expects(:not).with(failed_at: nil).returns(failed_jobs_mock)
-    failed_jobs_mock.expects(:count).returns(42)
-
-    assert_equal 42, ApplicationJob.new.get_failed_job_count
-  end
-
-  test 'get_workable_job_count returns the number of workable jobs' do
-    workable_mock = mock('workable_jobs')
-    pending_mock = mock('pending_jobs')
-    Delayed::Job.expects(:where).with(failed_at: nil, locked_at: nil).returns(pending_mock)
-    pending_mock.expects(:where).with('run_at <= ?', anything).returns(workable_mock)
-    workable_mock.expects(:count).returns(42)
-
-    assert_equal 42, ApplicationJob.new.get_workable_job_count
   end
 end

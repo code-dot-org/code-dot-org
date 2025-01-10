@@ -1,4 +1,4 @@
-@import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import 'font';
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
@@ -70,7 +70,7 @@ $m-tail-length: 12px;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  background-color: $light_white;
+  background-color: var(--neutral-base-white);
   box-shadow: 0 0 16px 0 rgba(0 0 0 / 0.19);
 
   .informationalSection {
@@ -84,7 +84,7 @@ $m-tail-length: 12px;
     }
 
     .iconSection {
-      color: $light_secondary_500;
+      color: var(--brand-purple-50);
       text-align: center;
       font-size: 2rem;
       line-height: 125%;
@@ -171,7 +171,7 @@ $m-tail-length: 12px;
     inset-block-start: 100%;
     inset-inline-start: 50%;
     border-style: solid;
-    border-color: $light_white transparent transparent transparent;
+    border-color: var(--neutral-base-white) transparent transparent transparent;
   }
 }
 
@@ -181,10 +181,10 @@ $m-tail-length: 12px;
     position: absolute;
     inset-inline-end: 100%;
     border-style: solid;
-    border-color: transparent $light_white transparent transparent;
+    border-color: transparent var(--neutral-base-white) transparent transparent;
 
     html[dir='rtl'] & {
-      border-color: transparent transparent transparent $light_white;
+      border-color: transparent transparent transparent var(--neutral-base-white);
     }
   }
 }
@@ -196,7 +196,7 @@ $m-tail-length: 12px;
     inset-block-end: 100%;
     inset-inline-start: 50%;
     border-style: solid;
-    border-color: transparent transparent $light_white transparent;
+    border-color: transparent transparent var(--neutral-base-white) transparent;
   }
 }
 
@@ -206,10 +206,10 @@ $m-tail-length: 12px;
     position: absolute;
     inset-inline-start: 100%;
     border-style: solid;
-    border-color: transparent transparent transparent $light_white;
+    border-color: transparent transparent transparent var(--neutral-base-white);
 
     html[dir='rtl'] & {
-      border-color: transparent $light_white transparent transparent;
+      border-color: transparent var(--neutral-base-white) transparent transparent;
     }
   }
 }

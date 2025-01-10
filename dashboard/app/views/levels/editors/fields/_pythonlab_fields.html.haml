@@ -1,1 +1,23 @@
-%h1 Python Lab Fields
+%h1.control-legend{data: {toggle: "collapse", target: "#python_lab_fields"}}
+  Python Lab Fields
+
+#python_lab_fields.in.collapse
+  .field
+    = f.label :mini_app, 'Mini App'
+    = f.select :mini_app, options_for_select(@level.class.mini_apps, @level.mini_app), {}, onchange: 'toggleFields(this.value);'
+
+  #neighborhood{class: ('collapse' if @level.mini_app != 'neighborhood')}
+    .field
+      = f.label :serialized_maze
+      - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
+      = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
+
+:javascript
+  function toggleFields(val) {
+    const neighborhoodFields = document.getElementById('neighborhood');
+    if (val.toLowerCase() === 'neighborhood') {
+      neighborhoodFields.classList.remove('collapse');
+    } else {
+      neighborhoodFields.classList.add('collapse');
+    }
+  }

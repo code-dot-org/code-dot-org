@@ -320,6 +320,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
 
   private def workshop_params(can_update_regional_partner = true)
     allowed_params = [
+      :name,
       :location_name,
       :location_address,
       :capacity,
@@ -337,6 +338,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       :third_party_provider,
       {sessions_attributes: [:id, :start, :end, :_destroy]},
       :module,
+      :participant_group_type
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner

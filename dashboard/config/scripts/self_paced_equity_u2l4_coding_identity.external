@@ -1,0 +1,33 @@
+name 'self-paced-equity-U2L4-coding-identity'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Thread 2: Personally Relevant Practice
+
+## What is it?
+
+#### Students need to know why the concepts they are learning matter and how they will be used in the real world. Practice problems should allow students to apply new knowledge in a way that supports their growth while also providing relevance for the work they are doing. As noted in <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a" target="blank" rel="noopener noreferrer">Microsoft's Guide to Inclusive Computer Science Education</a>, activities should "build on the cultural assets, prior knowledge and interests of students to feature CS in contexts that are interesting for students". Practice problems that are meaningful and relevant to students in this way build confidence and interest in learning computer science.
+
+## What does it look like?
+
+#### Meaningful practice is different for each student, so it is important to provide multiple means of engagement to meet the needs of various learning preferences and personal interests that are present in the CS classroom. We believe that providing choices in achieving lesson and unit objectives helps students feel more self-confident and connected to their learning<sup>1</sup>.
+
+#### Practice that is differentiated by skills or topics helps students build their confidence as they experience success on problems that are at their personal skill levels and increase their personal connection to the content as they use programming to explore their interests.
+
+#### Additionally, we want students to make connections between the work they are doing in the classroom and the technology they use every day to help them see the authenticity and relevance of the concepts they are learning. The Universal Design for Learning Guidelines notes that students are more engaged when activities are relevant and valuable to their personal interests<sup>2</sup>. We believe practice should give students opportunities to explore how computer science can be used in various aspects related to their personal interests.
+
+
+## Examples in Code.org Curricula
+
+### **Elementary Example**
+
+### **Middle School Example**
+
+### **High School Example**
+
+___
+
+##### <sup>1</sup> CAST, The UDL Guidelines, <a href="https://udlguidelines.cast.org/engagement/recruiting-interest/choice-autonomy" target="blank" rel="noopener noreferrer">Optimize individual choice and autonomy</a>
+##### <sup>2</sup> CAST, The UDL Guidelines, <a href="https://udlguidelines.cast.org/engagement/recruiting-interest/relevance-value-authenticity" target="blank" rel="noopener noreferrer">Optimize relevance, value, and authenticity</a>
+MARKDOWN

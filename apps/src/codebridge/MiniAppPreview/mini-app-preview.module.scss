@@ -1,0 +1,19 @@
+@import 'color.scss';
+.previewContainerHorizontal {
+  width: 400px;
+  min-width: 400px;
+  border-right: 5px solid $light_gray_800;
+  background-color: $light_black;
+}
+
+.previewContainerVertical {
+  // 500px to account for 40px header and 60px slider
+  height: 500px;
+  min-height: 500px;
+  background-color: $light_black;
+}
+
+.previewHeader {
+  height: 40px;
+  min-height: 40px;
+}

@@ -1,4 +1,5 @@
-@import 'color', 'font';
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
+@import 'font';
 
 // Typography - Label styles
 @mixin label-common {
@@ -116,37 +117,37 @@
 }
 
 @mixin field-helper-section-black {
-  color: $light_black;
+  color: var(--neutral-base-black);
 }
 
 @mixin field-helper-section-black-disabled {
-  color: $light_gray_200;
+  color: var(--neutral-gray-20);
 }
 
 @mixin field-helper-section-white {
-  color: $light_white;
+  color: var(--neutral-base-white);
 }
 
 @mixin field-helper-section-white-disabled {
-  color: $light_gray_700;
+  color: var(--neutral-gray-70);
 }
 
 @mixin field-error-section-black {
-  color: $light_negative_500;
+  color: var(--sentiment-error-50);
 }
 
 @mixin field-error-section-white {
-  color: $light_white;
+  color: var(--neutral-base-white);
 }
 
 @mixin field-read-only-black-colors {
-  color: $light_black;
-  border-color: $light_gray_200;
-  background-color: $light_gray_50;
+  color: var(--neutral-base-black);
+  border-color: var(--neutral-gray-20);
+  background-color: var(--neutral-gray-5);
 }
 
 @mixin field-read-only-white-colors {
-  color: $light_white;
-  border-color: $light_gray_700;
-  background-color: $light_gray_900;
+  color: var(--neutral-base-white);
+  border-color: var(--neutral-gray-70);
+  background-color: var(--neutral-gray-90);
 }

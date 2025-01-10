@@ -15,6 +15,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {ModalTypes} from '../constants';
+import aichatI18n from '../locale';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
@@ -108,11 +109,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     {
       value: 'viewStudentChatHistory',
       text:
-        `${selectedStudentName}'s chat history` +
-        (selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
-          ? ' (view only)'
-          : ''),
-
+        selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+          ? aichatI18n.viewOnlyTabLabel({
+              fieldLabel: aichatI18n.viewStudentChatHistory({
+                selectedStudentName: selectedStudentName ?? '',
+              }),
+            })
+          : aichatI18n.viewStudentChatHistory({
+              selectedStudentName: selectedStudentName ?? '',
+            }),
       tabContent: (
         <ChatEventsList events={studentChatHistory} isTeacherView={true} />
       ),
@@ -120,7 +125,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     },
     {
       value: 'testStudentModel',
-      text: 'Test student model',
+      text: aichatI18n.testStudentModel(),
       tabContent: <ChatEventsList events={visibleItems} />,
     },
   ];
@@ -184,7 +189,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         )}
         <div className={moduleStyles.buttonRow}>
           <Button
-            text="Clear chat"
+            text={aichatI18n.clearChatButtonText()}
             disabled={!canChatWithModel}
             iconLeft={eraserIcon}
             size="s"

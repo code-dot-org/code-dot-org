@@ -590,6 +590,17 @@ html, body {
       @include main-font-semi-bold;
     }
   }
+  #localeForm {
+    max-width: fit-content;
+
+    select {
+      min-width: 8.43rem;
+    }
+  }
+  #global-edition-region-reset-button-container {
+    width: max-content;
+    margin: 0.5rem 0;
+  }
   .dim {
     display: inline-block;
     opacity: 0.8;
@@ -2396,6 +2407,18 @@ a.download-video {
 
 #hoc_download {
   color: $charcoal;
+  #deprecation-warning-banner {
+    margin: 1em 0;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    #warning-icon {
+      font-size: 3em;
+    }
+  }
   .capsule {
     background-color: $lightest_gray;
     border-radius: 10px;

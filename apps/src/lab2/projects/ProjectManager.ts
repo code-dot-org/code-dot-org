@@ -91,7 +91,8 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
-    return {sources, channel};
+    const abuseScore = await this.channelsStore.getAbuseScore(channel);
+    return {sources, channel, abuseScore};
   }
 
   // Restore the given version of the project. This will call restore on the sources store
