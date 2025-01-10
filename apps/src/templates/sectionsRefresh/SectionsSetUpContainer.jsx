@@ -61,7 +61,7 @@ const useSections = section => {
             ttsAutoplayEnabled: false,
             lessonExtras: true,
             aiTutorEnabled: false,
-            course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
+            course: {hasTextToSpeech: false, hasLessonExtras: false},
           },
         ]
   );
@@ -274,8 +274,8 @@ export default function SectionsSetUpContainer({
         courseOfferingId: sections[0].courseOfferingId,
         versionId: sections[0].courseVersionId,
         unitId: sections[0].unitId,
-        lessonExtrasAvailable: sections[0].lessonExtras,
-        textToSpeechEnabled: sections[0].ttsAutoplayEnabled,
+        hasLessonExtras: sections[0].lessonExtras,
+        hasTextToSpeech: sections[0].ttsAutoplayEnabled,
         displayName: sections[0].courseDisplayName,
       };
     } else {
@@ -347,7 +347,7 @@ export default function SectionsSetUpContainer({
   };
 
   const renderAdvancedSettings = () => {
-    // TODO: this will probably eventually be a setting on the course similar to textToSpeechEnabled
+    // TODO: this will probably eventually be a setting on the course similar to hasTextToSpeech
     // currently we're working towards piloting in Javalab in CSA only.
     const aiTutorAvailable =
       canEnableAITutor &&
@@ -360,6 +360,8 @@ export default function SectionsSetUpContainer({
         <AdvancedSettingToggles
           updateSection={(key, val) => updateSection(0, key, val)}
           section={sections[0]}
+          hasLessonExtras={sections[0].course.hasLessonExtras}
+          hasTextToSpeech={sections[0].course.hasTextToSpeech}
           aiTutorAvailable={aiTutorAvailable}
           label={i18n.pairProgramming()}
         />
