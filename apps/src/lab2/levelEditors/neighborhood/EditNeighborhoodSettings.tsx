@@ -48,11 +48,11 @@ const EditNeighborhoodSettings: React.FunctionComponent<
             <ol>
               <li>
                 Select a grid size and click Generate Empty Grid to create an
-                empty grid with the given dimensions
+                empty grid with the given dimensions.
               </li>
               <li>
                 Click "Edit existing grid" to modify the grid specified in the
-                text area above
+                text area above.
               </li>
             </ol>
           </p>
@@ -86,7 +86,7 @@ const EditNeighborhoodSettings: React.FunctionComponent<
         {showGridGenerator && (
           <NeighborhoodGridGenerator
             setMaze={setMaze}
-            gridSize={sendMazeToGrid ? gridSize : undefined}
+            gridSize={sendMazeToGrid ? undefined : gridSize}
             initialGrid={sendMazeToGrid ? maze : undefined}
           />
         )}
