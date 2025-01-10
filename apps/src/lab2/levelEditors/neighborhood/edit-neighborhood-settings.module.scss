@@ -2,7 +2,8 @@
   width: 100%;
 }
 
-.gridGeneratorControls {
+.gridSizeControl {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
 }

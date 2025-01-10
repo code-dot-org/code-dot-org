@@ -57,32 +57,30 @@ const EditNeighborhoodSettings: React.FunctionComponent<
             </ol>
           </p>
         </div>
-        <div className={moduleStyles.gridGeneratorControls}>
-          <div>
-            Grid Size
-            <Slider
-              name="gridSize"
-              value={gridSize}
-              onChange={e => setGridSize(parseInt(e.target.value))}
-              minValue={8}
-              maxValue={32}
-            />
-            <Button
-              onClick={generateEmptyGrid}
-              text="Generate Empty Grid"
-              type={'secondary'}
-              color={'black'}
-              size={'s'}
-            />
-          </div>
+        <div className={moduleStyles.gridSizeControl}>
           <Button
-            onClick={editExistingGrid}
-            text="Edit existing grid"
+            onClick={generateEmptyGrid}
+            text="Generate Empty Grid"
             type={'secondary'}
             color={'black'}
             size={'s'}
           />
+          <Slider
+            name="gridSize"
+            value={gridSize}
+            onChange={e => setGridSize(parseInt(e.target.value))}
+            minValue={8}
+            maxValue={32}
+            label="Grid Size"
+          />
         </div>
+        <Button
+          onClick={editExistingGrid}
+          text="Edit existing grid"
+          type={'secondary'}
+          color={'black'}
+          size={'s'}
+        />
         {showGridGenerator && (
           <NeighborhoodGridGenerator
             setMaze={setMaze}
