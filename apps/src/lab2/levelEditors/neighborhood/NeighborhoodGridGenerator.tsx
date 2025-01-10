@@ -49,7 +49,13 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
   const cellSize = 400 / gridDimension;
 
   return (
-    <div>
+    <div
+      className={moduleStyles.gridContainer}
+      style={{
+        gridTemplateColumns: `repeat(${gridDimension}, 1fr)`,
+        gridTemplateRows: `repeat(${gridDimension}, 1fr)`,
+      }}
+    >
       {grid.map((row, rowIndex) =>
         row.map((cell, cellIndex) => {
           return (
@@ -59,7 +65,6 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
               width={cellSize}
               height={cellSize}
               className={moduleStyles.gridCell}
-              style={{top: rowIndex * cellSize, left: cellIndex * cellSize}}
             />
           );
         })

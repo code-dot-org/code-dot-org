@@ -1,3 +1,10 @@
+.gridContainer {
+  display: grid;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(66, 68, 75);
+}
+
 .gridCell {
-  position: absolute;
+ // position: static;
 }
