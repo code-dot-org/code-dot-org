@@ -19,11 +19,13 @@ const EditNeighborhoodSettings: React.FunctionComponent<
 > = ({initialMaze}) => {
   const [maze, setMaze] = React.useState(JSON.stringify(initialMaze));
   const [gridSize, setGridSize] = React.useState(8);
+  const [gridSizeToSend, setGridSizeToSend] = React.useState(8);
   const [showGridGenerator, setShowGridGenerator] = React.useState(false);
   const [sendMazeToGrid, setSendMazeToGrid] = React.useState(false);
 
   const generateEmptyGrid = () => {
     setSendMazeToGrid(false);
+    setGridSizeToSend(gridSize);
     setShowGridGenerator(true);
   };
 
@@ -84,7 +86,7 @@ const EditNeighborhoodSettings: React.FunctionComponent<
         {showGridGenerator && (
           <NeighborhoodGridGenerator
             setMaze={setMaze}
-            gridSize={sendMazeToGrid ? undefined : gridSize}
+            gridSize={sendMazeToGrid ? undefined : gridSizeToSend}
             initialGrid={sendMazeToGrid ? maze : undefined}
           />
         )}

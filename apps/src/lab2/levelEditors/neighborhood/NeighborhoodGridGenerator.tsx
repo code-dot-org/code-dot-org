@@ -2,6 +2,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import {MazeCell} from '../../types';
 
@@ -83,11 +84,27 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
         })
       );
       setGrid(newGrid);
+      setMaze(JSON.stringify(newGrid));
     }
   };
 
+  // TODO: show paint amount somewhere
+  // TODO: decide if we want auto-update or not. if we do, when we start with an empty grid we should save it.
   return (
-    <div>
+    <div className={moduleStyles.gridGeneratorContainer}>
+      <CollapsibleSection headerContent="How to Use">
+        <p>
+          <ol>
+            <li>Click the tile you want to update.</li>
+            <li>
+              Select the category of asset you want to place on that tile.
+            </li>
+            <li>Click the asset you want to place on the selected tile.</li>
+          </ol>
+          The serialized maze will automatically update with the changes you
+          have made.
+        </p>
+      </CollapsibleSection>
       <div className={moduleStyles.gridGenerator}>
         <div
           className={moduleStyles.gridContainer}
@@ -140,12 +157,6 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
           </div>
         </div>
       </div>
-      <Button
-        onClick={() => setMaze(JSON.stringify(grid))}
-        text="Save grid to serialized maze"
-        className={moduleStyles.saveButton}
-        type={'secondary'}
-      />
     </div>
   );
 };
