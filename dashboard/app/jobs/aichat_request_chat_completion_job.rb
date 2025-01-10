@@ -34,7 +34,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     Honeybadger.notify(
       "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}",
       context: {
-        request: request
+        request: request.to_json
       }
     )
 
