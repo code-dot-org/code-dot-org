@@ -2609,9 +2609,10 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(dropdown2, 'SPRITENAME');
       this.appendDummyInput();
       this.appendValueInput('GROUPMEMBER')
+        // setInline is a no-op function in Google Blockly.
         .setInline(true)
         .appendField(msg.set());
-      this.appendEndRowInput().setInline(true).appendField(endLabel);
+      this.appendDummyInput().setInline(true).appendField(endLabel);
 
       this.setPreviousStatement(false);
       this.setNextStatement(true);
