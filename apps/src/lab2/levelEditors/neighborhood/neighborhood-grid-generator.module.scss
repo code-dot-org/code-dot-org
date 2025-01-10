@@ -5,6 +5,13 @@
   background-color: rgb(66, 68, 75);
 }
 
+.categoryTiles {
+  display: grid;
+  column-gap: 4px;
+  row-gap: 4px;
+}
+
+
 .selectedCell {
   border: 1px solid white;
   box-sizing: border-box;
@@ -14,4 +21,8 @@
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+}
+
+.saveButton {
+  margin-top: 5px;
 }
