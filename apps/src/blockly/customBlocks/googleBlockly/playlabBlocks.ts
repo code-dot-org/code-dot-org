@@ -12,15 +12,14 @@ import {
 
 export const blocks = {
   overrideForLoopGenerator() {
+    // For loop. This code is copied and modified from Core Blockly:
+    // https://github.com/google/blockly/blob/2c29c01b14fd9cec9f7fde82f6c80b6f4f7b7c30/generators/javascript/loops.ts#L85-L178
     // A custom generator for a "for loop" where variable names should be part
     // of the Globals namespace (e.g. Globals.counter).
     Blockly.JavaScript.forBlock.controls_for = function (
       block: GoogleBlockly.Block,
       generator: JavascriptGeneratorType
     ) {
-      // For loop. This code is copied and modified from Core Blockly:
-      // https://github.com/google/blockly/blob/2c29c01b14fd9cec9f7fde82f6c80b6f4f7b7c30/generators/javascript/loops.ts#L85-L178
-
       // Customization: use translateVarName instead of getVariableName
       const variable0 = (
         generator as unknown as ExtendedCodeGenerator
@@ -128,6 +127,8 @@ export const blocks = {
     };
   },
   overrideProceduresGenerators() {
+    // Function definition. This code is copied and modified Core Blockly:
+    // https://github.com/google/blockly/blob/a42c2d15082d3261a643f205bae1c7860ba48416/generators/javascript/procedures.ts#L104-L116
     // A custom generator for function call where function names should be part
     // of the Globals namespace (e.g. Globals.jump()).
     Blockly.JavaScript.forBlock.procedures_callnoreturn = function (
@@ -141,10 +142,16 @@ export const blocks = {
         block,
         generator
       ) as [string, Order];
+      // Customization: Add Globals namespace if needed.
       const code = (Blockly.varsInGlobals ? 'Globals.' : '') + tuple[0];
+      // End customization
       return code + ';\n';
     };
 
+    // Function definition. This code is copied and modified from Core Blockly:
+    // https://github.com/google/blockly/blob/a42c2d15082d3261a643f205bae1c7860ba48416/generators/javascript/procedures.ts#L18-L83
+    // Code Blockly uses the same generator for procedures_defreturn and procedures_defnoreturn.
+    // We never used returns, so we are just directly modifying the former generator.
     // A custom generator for function call where function names should be part
     // of the Globals namespace (e.g. Globals.jump = function()).
     Blockly.JavaScript.forBlock.procedures_defnoreturn = function (
