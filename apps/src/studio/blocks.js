@@ -2604,14 +2604,14 @@ exports.install = function (blockly, blockInstallOptions) {
             msg.toTouchedSpriteName({spriteName: stripQuotes(value)})
           )
       );
-      this.appendDummyInput()
+      this.appendEndRowInput()
         .appendField(dropdown1, 'SPRITE')
         .appendField(dropdown2, 'SPRITENAME');
       this.appendDummyInput();
       this.appendValueInput('GROUPMEMBER')
         .setInline(true)
         .appendField(msg.set());
-      this.appendDummyInput().setInline(true).appendField(endLabel);
+      this.appendEndRowInput().setInline(true).appendField(endLabel);
 
       this.setPreviousStatement(false);
       this.setNextStatement(true);
