@@ -16,7 +16,6 @@ export interface Section {
   anyStudentHasProgress?: boolean;
   code: string;
   codeReviewExpiresAt?: number | null;
-  course?: Course | null;
   courseDisplayName: string | null;
   courseId?: number | null;
   courseOfferingId?: number | null;
@@ -45,14 +44,6 @@ export interface Section {
   unitId?: number | null;
   unitName: string | null;
 }
-
-type Course = {
-  courseOfferingId: number | null;
-  versionId: number | null;
-  unitId: number | null;
-  lessonExtrasAvailable: boolean;
-  textToSpeechEnabled: boolean;
-};
 
 export interface UserEditableSection {
   aiTutorEnabled?: boolean;

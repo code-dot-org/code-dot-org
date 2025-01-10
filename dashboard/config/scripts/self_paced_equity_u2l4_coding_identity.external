@@ -3,34 +3,31 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Welcome!
+# Thread 2: Personally Relevant Practice
 
-## Module 2, Lesson 2: Bias and Stereotype Threat
+## What is it?
 
-<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
-    <div style="width: 70%;">
-        <p style="line-height: 1.5; font-size: 18px;">
-            In this lesson, you will:
-        </p>
-        <ul style="margin-left: 20px; line-height: 1.6;">
-            <li style="line-height: 1.5;font-size: 16px;">
-                Use a shared definition of unconscious bias and stereotype threat.
-            </li>
-            <li style="line-height: 1.5;font-size: 16px;">
-                Identify and address your own implicit biases and assumptions about students. 
-            </li>
-            <li style="line-height: 1.5;font-size: 16px;">
-                Describe the impact of bias and stereotypes on student learning and engagement.
-            </li>
-        </ul>
-        <p style="font-size: 16px; color: black;">
-        <br>
-        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>update</mark> minutes
-        </p>
-    </div>
-    
-    <!-- Image on the right -->
-    <img src="https://images.code.org/46d3d805d26a73542b42f55cb255486e-image-1736119661753.27.39 PM.png" alt="Two students look on at the same laptop, while another looks intently at their laptop in the background." style="width: 30%; height: auto; border-radius: 10px;">
-</div>
-<br>
+#### Students need to know why the concepts they are learning matter and how they will be used in the real world. Practice problems should allow students to apply new knowledge in a way that supports their growth while also providing relevance for the work they are doing. As noted in <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a" target="blank" rel="noopener noreferrer">Microsoft's Guide to Inclusive Computer Science Education</a>, activities should "build on the cultural assets, prior knowledge and interests of students to feature CS in contexts that are interesting for students". Practice problems that are meaningful and relevant to students in this way build confidence and interest in learning computer science.
+
+## What does it look like?
+
+#### Meaningful practice is different for each student, so it is important to provide multiple means of engagement to meet the needs of various learning preferences and personal interests that are present in the CS classroom. We believe that providing choices in achieving lesson and unit objectives helps students feel more self-confident and connected to their learning<sup>1</sup>.
+
+#### Practice that is differentiated by skills or topics helps students build their confidence as they experience success on problems that are at their personal skill levels and increase their personal connection to the content as they use programming to explore their interests.
+
+#### Additionally, we want students to make connections between the work they are doing in the classroom and the technology they use every day to help them see the authenticity and relevance of the concepts they are learning. The Universal Design for Learning Guidelines notes that students are more engaged when activities are relevant and valuable to their personal interests<sup>2</sup>. We believe practice should give students opportunities to explore how computer science can be used in various aspects related to their personal interests.
+
+
+## Examples in Code.org Curricula
+
+### **Elementary Example**
+
+### **Middle School Example**
+
+### **High School Example**
+
+___
+
+##### <sup>1</sup> CAST, The UDL Guidelines, <a href="https://udlguidelines.cast.org/engagement/recruiting-interest/choice-autonomy" target="blank" rel="noopener noreferrer">Optimize individual choice and autonomy</a>
+##### <sup>2</sup> CAST, The UDL Guidelines, <a href="https://udlguidelines.cast.org/engagement/recruiting-interest/relevance-value-authenticity" target="blank" rel="noopener noreferrer">Optimize relevance, value, and authenticity</a>
 MARKDOWN

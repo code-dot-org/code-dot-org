@@ -51,7 +51,8 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
     // is the editor panel, we are actually storing the size of the output below it.
     // That way, if the window resizes, the output stays the same height while the editor
     // changes in height.
-    const desiredOutputHeight = columnHeight - desiredHeight;
+    const desiredOutputHeight =
+      columnHeight - desiredHeight + globalStyleConstants['resize-bar-width'];
     normalizeOutputHeight(desiredOutputHeight, miniApp);
   };
 

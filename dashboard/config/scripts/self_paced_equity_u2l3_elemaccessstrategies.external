@@ -3,9 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Curriculum Spotlight: CS Connections
+# Elementary Curriculum Spotlight: CS Connections
 
-#### Pressed for time? Unsure how to start teaching computer science? Code.org's cross-subject curriculum, CS Connections is a great place to start!
+<img src="https://images.code.org/fae3e057bee266b6e45ecc8a9080d86c-image-1736367701916.21.40 PM.png" alt="A young student sits at a table in front of a laptop and smiles." style="border-radius:20px; float: right; padding-right: 10px; height: 180px; clear: both; margin: 0px 20px 20px 20px;">
+
+#### Pressed for time? Unsure how to start teaching computer science? Code.org's cross-subject curriculum, <a href="https://code.org/curriculum/csc" target="blank" rel="noopener noreferrer">CS Connections</a>, is a great place to start! CS Connections is mapped to the Common Core State Standards (CCSS) for ELA and Math, the Next Generation Science Standards (NGSS), and the Computer Science Teacher Association Standards (CSTA).
 
 ## What is CS Connections?
 
@@ -19,19 +21,17 @@ markdown <<MARKDOWN
 * #### Contain open-ended projects for more personalized learning
 * #### Are easy for any teacher with any background
 
-___
-
 <div style="flex: 1 1 calc(50% - 20px); background-color: rgba(0, 119, 134, .1); border-radius: 10px; padding: 20px; display: flex; align-items: center; margin: 20px 0px 20px 0px">
     <p style="font-size: 18px; line-height: 1.2; margin: 0;">
     	"I greatly appreciate how thorough and well paced the lessons are. I am not familiar with computer science, but with the lessons you provide I feel confident in helping my students grasp the concepts and tie them into our curriculum."<br><strong>- Tara Vodopich, CS Connections Teacher</strong>
 	</p>
 </div>
 
-___
-
 ## Explore CS Connections
 
 #### Explore the CS Connections modules below:
+
+<div style="background-color: #F7F8FA; border-radius: 20px; padding: 15px; margin: 10px;">
 
 ### **English Language Arts**
 
@@ -62,6 +62,9 @@ ___
 </p>
 </div>
 </div>
+</div>
+
+<div style="background-color: #F7F8FA; border-radius: 20px; padding: 15px; margin: 10px;">
 
 ### **Math**
 
@@ -78,6 +81,9 @@ ___
 </p>
 </div>
 </div>
+</div>
+
+<div style="background-color: #F7F8FA; border-radius: 20px; padding: 15px; margin: 10px;">
 
 ### **Science**
 
@@ -95,23 +101,87 @@ ___
 </div>
 </div>
 
-* #### Modeling Animal Adaptations
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+<img src="https://images.code.org/0e78b1409223571fe939f549caeca541-image-1736366817611.06.56 PM.png" alt="The life cycle of a frog." style="width: 100px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
+
+### <a href="https://studio.code.org/s/csc-ecosystems?viewAs=Instructor" target="blank" rel="noopener noreferrer">**Modeling Animal Adaptations**</a>
+</p>
+<p>
+
+#### Use code to model animal adaptations, deepening your understanding of how different species have evolved to survive in their environments.
+</p>
+</div>
+</div>
+</div>
+
+<div style="background-color: #F7F8FA; border-radius: 20px; padding: 15px; margin: 10px;">
 
 ### **Social Studies**
 
-* #### Coding a Time Capsule
-* #### Coding Interactive Maps
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+<img src="https://images.code.org/e18c5205f5df91b5fe0d5d02f7d40e16-image-1736366872120.07.50 PM.png" alt="A time capsule." style="width: 100px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
 
-### Hour-Long Lessons:
+### <a href="https://studio.code.org/s/csc-ecosystems?viewAs=Instructor" target="blank" rel="noopener noreferrer">**Coding a Time Capsule**</a>
+</p>
+<p>
 
-* #### Poem Art
-* #### Hello World
+#### Create a digital time capsule to capture and preserve memories for the future.
+</p>
+</div>
+</div>
 
-## Alternative Curriculum
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+<img src="https://images.code.org/95409284437109dffa1e128788e47234-image-1736366922219.08.40 PM.png" alt="A map with pins dropped on it." style="width: 100px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
 
-![]()
+### <a href="https://studio.code.org/s/csc-ecosystems?viewAs=Instructor" target="blank" rel="noopener noreferrer">**Coding Interactive Maps**</a>
+</p>
+<p>
 
-![])
+#### Use coding to develop a map that tells a story, allowing you to explore geographic information in an engaging and interactive way.
+</p>
+</div>
+</div>
+</div>
 
-![]()
+___
+
+
+<div style="background-color: #F7F8FA; border-radius: 20px; padding: 15px; margin: 10px;">
+
+### **Hour-Long Lessons**:
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+<img src="https://images.code.org/b055b584d1a8b05588bdedc87f1c6437-image-1736367010786.09.56 PM.png" alt="A pink octopus with a microphone writing on a page." style="width: 100px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
+
+### <a href="https://studio.code.org/s/csc-ecosystems?viewAs=Instructor" target="blank" rel="noopener noreferrer">**Poem Art**</a>
+</p>
+<p>
+
+#### In this hour-long version of our Coding with Poetry module, students will explore the intersection of coding and language arts by creating interactive poems, illustrating the mood and tone with code.
+</p>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+<img src="https://images.code.org/0da67c601078cbaae57653c63090fafc-image-1736367002784.10.01 PM.png" alt="A globe with various emojis around it." style="width: 100px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
+
+### <a href="https://studio.code.org/s/csc-ecosystems?viewAs=Instructor" target="blank" rel="noopener noreferrer">**Hello World**</a>
+</p>
+<p>
+
+#### Students embark on their coding journey with this Hello World lesson, designed specifically for beginners! Explore Sprite Lab, an intuitive block-based programming interface, and master foundational skills for future coding projects in the K-5 curriculum.
+</p>
+</div>
+</div>
+</div>
 MARKDOWN
