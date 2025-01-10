@@ -1,3 +1,22 @@
+type TileDefinition = number[] | {min: number; max: number};
+
+export const categories: Record<string, TileDefinition> = {
+  Benches: {min: 53, max: 60},
+  'Blue House': {min: 219, max: 278},
+  Bodega: {min: 99, max: 158},
+  'Food Truck': {min: 12, max: 43},
+  Landscape: [48, 61, 91, 92, 93, 94, 95, 96, 97, 98],
+  'Other Objects': [46, 47, 303],
+  Painter: {min: 287, max: 290},
+  'Red House': {min: 159, max: 218},
+  Sidewalk: [49, 50, 51, 52, 279, 280, 281, 282, 283, 284, 285, 286],
+  Taxi: [
+    47, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 291, 292, 293, 294, 295, 296, 297,
+    298, 299, 300, 301,
+  ],
+  Wall: {min: 62, max: 90},
+};
+
 export const imageTiles = [
   'https://images.code.org/306af44a63cacdc47292475c186372c0-image-1618605886924.png' /*0-street*/,
   'https://images.code.org/8ff6eb2a55a083df97b8f539ca4e0cd1-image-1617321949719.png' /*1-Ntaxi2*/,

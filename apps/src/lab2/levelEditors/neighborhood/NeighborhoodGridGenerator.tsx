@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
 
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+
 import {MazeCell} from '../../types';
 
-import {imageTiles} from './constants';
+import {categories, imageTiles} from './constants';
 
 import moduleStyles from './neighborhood-grid-generator.module.scss';
 
@@ -16,6 +18,10 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
   NeighborhoodGridGeneratorProps
 > = ({setMaze, gridSize, initialGrid}) => {
   const [grid, setGrid] = useState<MazeCell[][] | undefined>();
+  const [selectedCell, setSelectedCell] = useState<
+    [number, number] | undefined
+  >(undefined);
+  const [selectedCategory, setSelectedCategory] = useState<string>('Benches');
 
   useEffect(() => {
     if (gridSize) {
@@ -38,37 +44,50 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
     );
   }
 
-  console.log({grid});
-  grid.map(row => {
-    row.map(cell => {
-      console.log(cell);
-    });
-  });
-
   const gridDimension = grid.length;
   const cellSize = 400 / gridDimension;
+  const categoryOptions = Object.keys(categories).map(category => ({
+    value: category,
+    text: category,
+  }));
 
   return (
-    <div
-      className={moduleStyles.gridContainer}
-      style={{
-        gridTemplateColumns: `repeat(${gridDimension}, 1fr)`,
-        gridTemplateRows: `repeat(${gridDimension}, 1fr)`,
-      }}
-    >
-      {grid.map((row, rowIndex) =>
-        row.map((cell, cellIndex) => {
-          return (
-            <img
-              src={imageTiles[cell.assetId]}
-              alt="neighborhood cell"
-              width={cellSize}
-              height={cellSize}
-              className={moduleStyles.gridCell}
-            />
-          );
-        })
-      )}
+    <div className={moduleStyles.gridGenerator}>
+      <div
+        className={moduleStyles.gridContainer}
+        style={{
+          gridTemplateColumns: `repeat(${gridDimension}, 1fr)`,
+          gridTemplateRows: `repeat(${gridDimension}, 1fr)`,
+        }}
+      >
+        {grid.map((row, rowIndex) =>
+          row.map((cell, columnIndex) => {
+            const isSelected =
+              (selectedCell &&
+                selectedCell[0] === rowIndex &&
+                selectedCell[1] === columnIndex) ||
+              false;
+            return (
+              <img
+                src={imageTiles[cell.assetId]}
+                alt="neighborhood cell"
+                width={cellSize}
+                height={cellSize}
+                className={isSelected ? moduleStyles.selectedCell : undefined}
+                onClick={() => setSelectedCell([rowIndex, columnIndex])}
+              />
+            );
+          })
+        )}
+      </div>
+      <div>
+        <SimpleDropdown
+          items={categoryOptions}
+          onChange={e => setSelectedCategory(e.target.value)}
+          labelText={'Category'}
+          name={'category'}
+        />
+      </div>
     </div>
   );
 };

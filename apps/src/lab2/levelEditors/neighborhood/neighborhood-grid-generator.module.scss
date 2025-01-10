@@ -5,6 +5,13 @@
   background-color: rgb(66, 68, 75);
 }
 
-.gridCell {
- // position: static;
+.selectedCell {
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+.gridGenerator {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
