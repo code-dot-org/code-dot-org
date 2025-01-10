@@ -6,17 +6,9 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     @student = create :student
     @model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}
     @new_message = {chatMessageText: 'hello', role: 'user', status: 'unknown', timestamp: Time.now.to_i}
-    @toxic_response = {
-      text: 'toxic',
-      blocked_by: 'comprehend',
-      details: {
-        flagged_segment: 'toxic',
-        max_category: {
-          score: 0.7,
-          name: 'INSULT'
-        }
-      }
-    }
+    @toxic_response = {text: 'profane text', blocked_by: 'openai', details: {evaluation: 'INAPPROPRIATE'}}
+    # When response is flagged as toxic, the hash is stored in the 'response' text field so is stringified in the table.
+    @stored_toxic_response = "{:text=>\"profane text\", :blocked_by=>\"openai\", :details=>{:evaluation=>\"INAPPROPRIATE\"}}"
     @test_env = 'unit-test-env'
     @metrics_model_id = 'metrics-test-model-id'
     CDO.stubs(:rack_env).returns(@test_env)
@@ -40,7 +32,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     end
 
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], request.reload.execution_status
-    assert_equal @toxic_response.stringify_keys, request.response
+    assert_equal @stored_toxic_response, request.response
   end
 
   test "execution status is set to MODEL_PROFANITY if toxicity detected in model output" do
@@ -55,7 +47,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     end
 
     assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], request.reload.execution_status
-    assert_equal @toxic_response.stringify_keys, request.response
+    assert_equal @stored_toxic_response, request.response
   end
 
   test 'execution status is set to SUCCESS if no profanity is detected' do
