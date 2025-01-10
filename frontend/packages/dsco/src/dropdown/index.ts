@@ -2,6 +2,7 @@ import ActionDropdown, {
   ActionDropdownProps,
 } from './actionDropdown/ActionDropdown';
 import CheckboxDropdown, {CheckboxDropdownProps} from './checkboxDropdown';
+import IconDropdown, {IconDropdownProps} from './iconDropdown';
 import SimpleDropdown, {SimpleDropdownProps} from './simpleDropdown';
 
 export {dropdownColors} from '@/common/constants';
@@ -11,6 +12,8 @@ export {
   ActionDropdownProps,
   CheckboxDropdown,
   CheckboxDropdownProps,
+  IconDropdown,
+  IconDropdownProps,
   SimpleDropdown,
   SimpleDropdownProps,
 };
