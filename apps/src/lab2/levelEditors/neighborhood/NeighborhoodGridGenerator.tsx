@@ -2,6 +2,10 @@ import React, {useEffect, useState} from 'react';
 
 import {MazeCell} from '../../types';
 
+import {imageTiles} from './constants';
+
+import moduleStyles from './neighborhood-grid-generator.module.scss';
+
 interface NeighborhoodGridGeneratorProps {
   setMaze: (maze: string) => void;
   gridSize?: number;
@@ -25,7 +29,7 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
     }
   }, [gridSize, initialGrid]);
 
-  if (!gridSize && !initialGrid) {
+  if (!grid) {
     return (
       <div>
         You must either specify a grid size and generate an empty grid or have
@@ -35,8 +39,33 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
   }
 
   console.log({grid});
+  grid.map(row => {
+    row.map(cell => {
+      console.log(cell);
+    });
+  });
 
-  return <div />;
+  const gridDimension = grid.length;
+  const cellSize = 400 / gridDimension;
+
+  return (
+    <div>
+      {grid.map((row, rowIndex) =>
+        row.map((cell, cellIndex) => {
+          return (
+            <img
+              src={imageTiles[cell.assetId]}
+              alt="neighborhood cell"
+              width={cellSize}
+              height={cellSize}
+              className={moduleStyles.gridCell}
+              style={{top: rowIndex * cellSize, left: cellIndex * cellSize}}
+            />
+          );
+        })
+      )}
+    </div>
+  );
 };
 
 export default NeighborhoodGridGenerator;
