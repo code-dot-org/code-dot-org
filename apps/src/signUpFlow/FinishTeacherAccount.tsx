@@ -285,10 +285,10 @@ const FinishTeacherAccount: React.FunctionComponent<{
           {showEducatorRole && (
             <div>
               <SimpleDropdown
-                className={style.dropdownContainer}
-                labelText={`${locale.what_is_your_role()}${
-                  requireEducatorRole ? '*' : ''
-                }`}
+                className={classNames(style.dropdownContainer, {
+                  [style.requiredLabel]: requireEducatorRole,
+                })}
+                labelText={locale.what_is_your_role()}
                 name="educator_role"
                 selectedValue={educatorRole}
                 onChange={e => {
