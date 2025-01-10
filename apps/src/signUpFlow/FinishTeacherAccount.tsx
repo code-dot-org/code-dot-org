@@ -295,7 +295,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
               title: 'arrow-right',
             }}
             disabled={
-              name.trim() === '' ||
+              name?.trim() === '' ||
               name?.length > MAX_DISPLAY_NAME_LENGTH ||
               !gdprValid ||
               (isInSchoolRequiredExperiment && schoolInfoInvalid(schoolInfo))
