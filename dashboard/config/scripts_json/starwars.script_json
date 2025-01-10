@@ -8,6 +8,7 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "ca-ES",
@@ -50,11 +51,12 @@
         "zh-CN",
         "zh-TW"
       ],
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "starwars",
-    "serialized_at": "2025-01-07 19:54:58 UTC",
+    "serialized_at": "2025-01-09 18:08:05 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

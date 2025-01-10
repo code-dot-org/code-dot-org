@@ -3,34 +3,49 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Welcome!
+# Thread 1: Identity and Culture
 
-## Module 2, Lesson 2: Bias and Stereotype Threat
+## What is it?
 
-<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
-    <div style="width: 70%;">
-        <p style="line-height: 1.5; font-size: 18px;">
-            In this lesson, you will:
-        </p>
-        <ul style="margin-left: 20px; line-height: 1.6;">
-            <li style="line-height: 1.5;font-size: 16px;">
-                Use a shared definition of unconscious bias and stereotype threat.
-            </li>
-            <li style="line-height: 1.5;font-size: 16px;">
-                Identify and address your own implicit biases and assumptions about students. 
-            </li>
-            <li style="line-height: 1.5;font-size: 16px;">
-                Describe the impact of bias and stereotypes on student learning and engagement.
-            </li>
-        </ul>
-        <p style="font-size: 16px; color: black;">
-        <br>
-        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>update</mark> minutes
-        </p>
-    </div>
-    
-    <!-- Image on the right -->
-    <img src="https://images.code.org/46d3d805d26a73542b42f55cb255486e-image-1736119661753.27.39 PM.png" alt="Two students look on at the same laptop, while another looks intently at their laptop in the background." style="width: 30%; height: auto; border-radius: 10px;">
+#### We believe that when students feel a strong sense of belonging in the CS classroom, they experience greater success. Affirming personal and cultural identity builds trust, which in turn helps transition students from dependent learners to independent learners as they grow in the four dimensions of an academic mindset:
+
+<div style="background-color: #B8E0E5; color: #000; padding: 20px; border-radius: 10px; width: 80%; margin: 20px auto; text-align: center;  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-top: 5px solid #4A90E2; border-bottom: 5px solid #4A90E2;">
+<p style="font-size: 24px; margin-bottom: 20px;"><b>Beliefs of Students with an Academic Mindset<sup>1</sup></b></p>
+    <p style="margin-bottom: 15px; font-size: 18px; line-height: 1.6;">
+        <strong>📚 I belong to this academic community.</strong> A strong sense of academic belonging where students see themselves as members of not only a social community, but an intellectual community.
+    </p>
+    <p style="margin-bottom: 15px; font-size: 18px; line-height: 1.6;">
+        <strong>🏆 I can succeed at this.</strong> The degree to which students believe they are "good" at a particular kind of task or field of study is strongly associated with academic perseverance.
+    </p>
+    <p style="margin-bottom: 15px; font-size: 18px; line-height: 1.6;">
+        <strong>🌱 My ability and competence grow with my effort.</strong> The degree to which students have a growth mindset means they are more likely to interpret academic challenges or mistakes as opportunities to learn and develop their brains.
+    </p>
+    <p style="margin-bottom: 15px; font-size: 18px; line-height: 1.6;">
+        <strong>💡 This work has value for me.</strong> The intrinsic value placed on academic tasks and topics that connect in some way to students' lives, future educational pursuits, or current interests.
+    </p>
 </div>
-<br>
+
+
+#### As students become independent learners and develop an academic mindset, they then feel supported to put forth effort, share their perspectives, ask questions, and take risks to expand their knowledge and skills.
+
+## What does it look like?
+
+<img src="https://images.code.org/bfc983fe6ea794003f89fd20dc521083-image-1736464360709.12.37 PM.png" alt="A student with a head covering smiles in a classroom." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0px 20px 20px 20px;">
+
+#### Our curriculum incorporates strategies and activities to support teachers in connecting with and validating students from diverse backgrounds. We help teachers make authentic connections with their students as they learn about their personal interests and strengths and support their growth.
+
+#### Through our curriculum, students see representations of themselves in the CS industry to help them see what is possible. Our curriculum gives students the time and space to work through problems and explore new concepts and focuses on developing their skills in the problem-solving process to encourage persistence, effort, and engagement.
+
+## Examples in Code.org Curricula
+
+### **Elementary Example**
+
+### **Middle School Example**
+
+### **High School Example**
+
+___
+
+##### <sup>1</sup> Zaretta Hammond, <i>Culturally Responsive Teaching & the Brain.</i> (California: Corwin, 2015), p.75-118
+
 MARKDOWN

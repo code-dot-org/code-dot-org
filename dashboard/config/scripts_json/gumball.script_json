@@ -20,15 +20,17 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "es-MX",
         "es-ES"
       ],
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "gumball",
-    "serialized_at": "2025-01-07 19:58:39 UTC",
+    "serialized_at": "2025-01-09 18:07:12 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

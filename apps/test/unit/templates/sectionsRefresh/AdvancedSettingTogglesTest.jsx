@@ -33,8 +33,8 @@ describe('AdvancedSettingToggles', () => {
         updateSection={() => {}}
         section={{
           lessonExtras: true,
-          course: {lessonExtrasAvailable: true},
         }}
+        hasLessonExtras={true}
       />
     );
     const lessonExtrasToggle = screen.getByLabelText(
@@ -49,8 +49,8 @@ describe('AdvancedSettingToggles', () => {
         updateSection={() => {}}
         section={{
           ttsAutoplayEnabled: false,
-          course: {textToSpeechEnabled: true},
         }}
+        hasTextToSpeech={true}
       />
     );
     const ttsToggle = screen.getByLabelText(i18n.enableTtsAutoplayToggle());
