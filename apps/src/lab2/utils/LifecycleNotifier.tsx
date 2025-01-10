@@ -16,6 +16,7 @@ type CallbackArgs = {
     levelProperties: LevelProperties,
     channel: Channel | undefined,
     initialSources: ProjectSources | undefined,
+    abuseScore: number | undefined,
     isReadOnly: boolean | undefined
   ];
 };
