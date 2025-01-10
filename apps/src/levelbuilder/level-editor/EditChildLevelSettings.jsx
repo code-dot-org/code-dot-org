@@ -1,7 +1,6 @@
-//Create a boilerplate for the EditChildLevelSettings component
-//This component will be used to edit the settings of any child levels
-//The component will take in the following props:
-//Child levels: an array of objects representing the child levels
+// This component will be used to edit the settings of any child levels
+// The component will take in the following props:
+// Child levels: an array of objects representing the child levels
 import PropTypes from 'prop-types';
 import React, {useState, useCallback} from 'react';
 
@@ -74,9 +73,6 @@ const EditChildLevelSettings = ({initialChildLevelSettings}) => {
   async function handleSave(index) {
     event.preventDefault();
     const childLevel = childLevelSettings[index];
-    // Here you would typically make an API call to save the changes for the specific child level
-    console.log(`Saving changes for child level ${index}:`, childLevel);
-    // Example API call (uncomment and replace with actual API endpoint)
     const url = `/levels/${childLevel.id}/update_bubble_choice_settings`;
     fetch(url, {
       method: 'PATCH',

@@ -25,7 +25,7 @@ const BubbleChoiceDescriptionEditor = ({
       });
       isInitialized.current = true;
     } else {
-      console.error(`Element with ID ${elementId} not found.`);
+      throw new Error(`Element with ID ${elementId} not found.`);
     }
   }, [index, handleDescriptionChange]);
 
@@ -35,7 +35,6 @@ const BubbleChoiceDescriptionEditor = ({
       <textarea
         id={`bubble_choice_description_${index}`}
         defaultValue={description}
-        //onChange={e => handleDescriptionChange(index, e.target.value)}
         className={styles.bubbleChoiceSublevelMarkdown}
       />
       <div
