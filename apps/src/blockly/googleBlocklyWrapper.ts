@@ -548,6 +548,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return this;
   };
 
+  // This is intentionally a no-op. Called by PlayLab.
+  // Google Blockly's implementation uses end row inputs instead.
   extendedInput.setInline = function (inline) {
     return this;
   };
