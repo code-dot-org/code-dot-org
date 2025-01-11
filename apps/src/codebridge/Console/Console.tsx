@@ -139,7 +139,11 @@ const Console: React.FunctionComponent = () => {
       leftHeaderContent={!hasMiniApp && <ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >
-      <div ref={terminalRef} className={moduleStyles.consoleV2} />
+      <div
+        ref={terminalRef}
+        className={moduleStyles.consoleV2}
+        id="uitest-codebridge-console"
+      />
     </PanelContainer>
   );
 };
