@@ -46,7 +46,7 @@ const EditNeighborhoodSettings: React.FunctionComponent<
       />
       <CollapsibleSection headerContent="Grid Generator">
         <div>
-          <p>
+          <div>
             There are two options for creating a grid:
             <ol>
               <li>
@@ -58,7 +58,7 @@ const EditNeighborhoodSettings: React.FunctionComponent<
                 text area above.
               </li>
             </ol>
-          </p>
+          </div>
         </div>
         <div className={moduleStyles.gridSizeControl}>
           <Button

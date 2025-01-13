@@ -2,9 +2,8 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {MazeCell} from '@cdo/apps/lab2/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
-
-import {MazeCell} from '../../types';
 
 import {categories, imageTiles} from './constants';
 
@@ -27,6 +26,9 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
     undefined
   );
   const [selectedCategory, setSelectedCategory] = useState<string>('Benches');
+  const [selectedPaintAmount, setSelectedPaintAmount] = useState<
+    number | undefined
+  >(undefined);
 
   const categoryTiles = useMemo(() => {
     const tileDefinitions = categories[selectedCategory];
@@ -75,9 +77,13 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
     setSelectedCell([row, column]);
     if (selectedAsset !== undefined) {
       let value = 0;
+      // Paint bucket asset id is 303
       if (selectedAsset === 303) {
         const promptResult = prompt('How much paint?');
         value = promptResult ? parseInt(promptResult) : 0;
+        setSelectedPaintAmount(value);
+      } else {
+        setSelectedPaintAmount(undefined);
       }
       const newGrid = grid.map((rowDefinition, rowIndex) =>
         rowDefinition.map((cell, columnIndex) => {
@@ -88,13 +94,25 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
         })
       );
       setGrid(newGrid);
+    } else {
+      // If we are currently on a bucket, show the current amount of paint.
+      if (grid[row][column].assetId === 303) {
+        setSelectedPaintAmount(grid[row][column].value);
+      } else {
+        setSelectedPaintAmount(undefined);
+      }
     }
+  };
+
+  const updateCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedCategory(e.target.value);
+    setSelectedAsset(undefined);
   };
 
   return (
     <div className={moduleStyles.gridGeneratorContainer}>
       <CollapsibleSection headerContent="How to Use">
-        <p>
+        <div>
           <ol>
             <li>Select the category of asset you want to place on the grid.</li>
             <li>Click the asset you want to place on the grid.</li>
@@ -102,7 +120,8 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
             <li>
               If you want to put the same asset on multiple cells, you just need
               to click the asset once, then click the different cells to place
-              it.
+              it. If you want to have no asset selected, click the Unselect
+              Asset button.
             </li>
             <li>
               When you are done, click Save Grid to save your updated grid to
@@ -110,7 +129,7 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
               click save!
             </li>
           </ol>
-        </p>
+        </div>
       </CollapsibleSection>
       <div className={moduleStyles.gridGenerator}>
         <div
@@ -135,6 +154,7 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
                   height={cellSize}
                   className={isSelected ? moduleStyles.selectedCell : undefined}
                   onClick={() => updateCell(rowIndex, columnIndex)}
+                  key={`cell-${rowIndex}-${columnIndex}`}
                 />
               );
             })
@@ -143,9 +163,10 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
         <div>
           <SimpleDropdown
             items={categoryOptions}
-            onChange={e => setSelectedCategory(e.target.value)}
+            onChange={updateCategory}
             labelText={'Category'}
             name={'category'}
+            className={moduleStyles.categoryDropdown}
           />
           <div
             className={moduleStyles.categoryTiles}
@@ -162,11 +183,24 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
                 className={
                   selectedAsset === tile ? moduleStyles.selectedTile : undefined
                 }
+                key={`tile-${index}`}
               />
             ))}
           </div>
+          <Button
+            text="Unselect Asset"
+            onClick={() => setSelectedAsset(undefined)}
+            type={'secondary'}
+            color={'black'}
+            className={moduleStyles.unselectButton}
+            size={'xs'}
+            disabled={selectedAsset === undefined}
+          />
         </div>
       </div>
+      {selectedPaintAmount !== undefined && (
+        <p>Selected paint can amount: {selectedPaintAmount}</p>
+      )}
       <Button
         text="Save Grid"
         onClick={() => setMaze(JSON.stringify(grid))}
