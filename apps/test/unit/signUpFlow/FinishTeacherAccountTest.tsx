@@ -36,8 +36,22 @@ const navigateToHrefMock = navigateToHref as jest.Mock;
 const getAuthenticityTokenMock = getAuthenticityToken as jest.Mock;
 
 describe('FinishTeacherAccount', () => {
-  afterEach(() => {
+  let fetchStub: sinon.SinonStub;
+
+  beforeEach(() => {
     sessionStorage.clear();
+
+    // Stub fetch to return a default mock response
+    fetchStub = sinon.stub(window, 'fetch').resolves({
+      ok: true,
+      status: 200,
+      json: () => Promise.resolve({gdpr: false, force_in_eu: false}),
+    } as Response);
+  });
+
+  afterEach(() => {
+    // Restore the original fetch
+    fetchStub.restore();
   });
 
   function renderDefault(
@@ -218,7 +232,7 @@ describe('FinishTeacherAccount', () => {
   });
 
   it('GDPR has expected behavior if api call returns true', async () => {
-    const fetchStub = sinon.stub(window, 'fetch').resolves({
+    fetchStub.resolves({
       ok: true,
       status: 200,
       json: () => Promise.resolve({gdpr: true, force_in_eu: false}),
@@ -238,13 +252,9 @@ describe('FinishTeacherAccount', () => {
     expect(finishSignUpButton).toBeDisabled();
     fireEvent.click(screen.getAllByRole('checkbox')[0]);
     expect(finishSignUpButton).not.toBeDisabled();
-
-    // Restore the original fetch implementation
-    fetchStub.restore();
   });
 
   it('clicking finish sign up button triggers fetch call and shows error if backend error', async () => {
-    const fetchStub = sinon.stub(window, 'fetch');
     fetchStub.callsFake(() =>
       Promise.resolve({
         ok: false,
@@ -317,12 +327,9 @@ describe('FinishTeacherAccount', () => {
       // SafeMarkdown tag, so the email itself is checked to know if the message shows.
       screen.getByText('support@code.org');
     });
-
-    fetchStub.restore();
   });
 
   it('clicking finish sign up button triggers fetch call and redirects user to home page', async () => {
-    const fetchStub = sinon.stub(window, 'fetch');
     fetchStub.callsFake(url => {
       if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
         return Promise.resolve({
@@ -398,12 +405,9 @@ describe('FinishTeacherAccount', () => {
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith('/home');
     });
-
-    fetchStub.restore();
   });
 
   it('setting redirect url in sessionStorage then clicking finish sign up button triggers fetch call and redirects user to redirect page', async () => {
-    const fetchStub = sinon.stub(window, 'fetch');
     fetchStub.callsFake(url => {
       if (typeof url === 'string' && url.includes('/users/gdpr_check')) {
         return Promise.resolve({
@@ -483,7 +487,8 @@ describe('FinishTeacherAccount', () => {
       // Verify the user is redirected to the finish sign up page
       expect(navigateToHrefMock).toHaveBeenCalledWith(userReturnToUrl);
     });
+  });
 
-    fetchStub.restore();
+  // TODO: when experiment ends, move relevant tests above and remove this describe block
   });
 });
