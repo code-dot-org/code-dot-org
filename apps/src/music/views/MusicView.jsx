@@ -156,7 +156,6 @@ class UnconnectedMusicView extends React.Component {
     }
 
     this.state = {
-      loadedLibrary: false,
       hasLoadedInitialSounds: false,
     };
 
@@ -174,34 +173,51 @@ class UnconnectedMusicView extends React.Component {
     }
     this.player.setUpdateLoadProgress(this.props.updateLoadProgress);
 
-    // When changing levels, stop playback and reset the initial sounds loaded flag
-    // since a new set of sounds will be loaded on the next level.  Also clear the
-    // callout that might be showing, and dispose of the Blockly workspace so that
-    // any lingering UI is removed.
     Lab2Registry.getInstance()
       .getLifecycleNotifier()
-      .addListener(LifecycleEvent.LevelChangeRequested, () => {
-        if (this.props.levelProperties?.appName === 'music') {
-          this.stopSong();
-          this.setState({
-            hasLoadedInitialSounds: false,
-          });
-          this.props.clearCallout();
-          this.musicBlocklyWorkspace.dispose();
-
-          // Clear any coypright information in the footer.
-          setExtraCopyrightContent(undefined);
-        }
-      })
       .addListener(
+        LifecycleEvent.LevelChangeRequested,
+        this.levelChangeRequested
+      )
+      .addListener(LifecycleEvent.LevelLoadCompleted, this.levelLoadCompleted);
+  }
+
+  componentWillUnmount() {
+    Lab2Registry.getInstance()
+      .getLifecycleNotifier()
+      .removeListener(
+        LifecycleEvent.LevelChangeRequested,
+        this.levelChangeRequested
+      )
+      .removeListener(
         LifecycleEvent.LevelLoadCompleted,
-        ({appName, levelData}, _channel, initialSources) => {
-          if (appName === 'music') {
-            this.onLevelLoad(levelData, initialSources);
-          }
-        }
+        this.levelLoadCompleted
       );
   }
+
+  levelLoadCompleted = ({appName, levelData}, _channel, initialSources) => {
+    if (appName === 'music') {
+      this.onLevelLoad(levelData, initialSources);
+    }
+  };
+
+  // When changing levels, stop playback and reset the initial sounds loaded flag
+  // since a new set of sounds will be loaded on the next level.  Also clear the
+  // callout that might be showing, and dispose of the Blockly workspace so that
+  // any lingering UI is removed.
+  levelChangeRequested = () => {
+    if (this.props.levelProperties?.appName === 'music') {
+      this.stopSong();
+      this.setState({
+        hasLoadedInitialSounds: false,
+      });
+      this.props.clearCallout();
+      this.musicBlocklyWorkspace.dispose();
+
+      // Clear any coypright information in the footer.
+      setExtraCopyrightContent(undefined);
+    }
+  };
 
   async componentDidUpdate(prevProps) {
     this.musicBlocklyWorkspace.resizeBlockly();

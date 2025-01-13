@@ -21,7 +21,7 @@ import RightButtons from './RightButtons';
 import moduleStyles from './console.module.scss';
 
 // An xterm.js console component.
-const ConsoleV2: React.FunctionComponent = () => {
+const Console: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
@@ -139,9 +139,13 @@ const ConsoleV2: React.FunctionComponent = () => {
       leftHeaderContent={!hasMiniApp && <ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}
     >
-      <div ref={terminalRef} className={moduleStyles.consoleV2} />
+      <div
+        ref={terminalRef}
+        className={moduleStyles.consoleV2}
+        id="uitest-codebridge-console"
+      />
     </PanelContainer>
   );
 };
 
-export default ConsoleV2;
+export default Console;
