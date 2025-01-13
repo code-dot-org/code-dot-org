@@ -835,6 +835,12 @@ class UserTest < ActiveSupport::TestCase
     refute_nil user.errors[:educator_role]
   end
 
+  test "teachers with a valid educator_role can change user_type to student" do
+    user = create :teacher, :with_educator_role
+    user.set_user_type(User::TYPE_STUDENT)
+    assert user.valid?
+  end
+
   test "LTI users with school_info_id should have a user_school_info entry" do
     lti_integration = create :lti_integration
     auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"

@@ -222,7 +222,7 @@ class User < ApplicationRecord
 
   validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
 
-  validate :educator_role_allowed_for_teacher
+  validate :educator_role_allowed_for_teacher, on: :create
 
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests
