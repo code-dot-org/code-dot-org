@@ -373,7 +373,6 @@ en:
         personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
-    skip_to_main_content: "Skip to main content"
     header:
       finished_hoc: "I finished!"
       sign_in_to_save: 'Sign in to save progress'
