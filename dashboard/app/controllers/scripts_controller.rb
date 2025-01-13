@@ -18,6 +18,8 @@ class ScriptsController < ApplicationController
   def show
     if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
       if request.query_parameters.include? "user_id"
+        redirect_query_string = request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")
+        puts redirect_query_string
         redirect_to "#{script_path(@script)}?#{request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")}"
         return
       end
