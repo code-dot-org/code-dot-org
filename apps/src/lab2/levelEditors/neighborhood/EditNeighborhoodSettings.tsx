@@ -42,6 +42,7 @@ const EditNeighborhoodSettings: React.FunctionComponent<
         onChange={e => setMaze(e.target.value)}
         rows={20}
         className={moduleStyles.mazeTextArea}
+        name="level[serialized_maze]"
       />
       <CollapsibleSection headerContent="Grid Generator">
         <div>

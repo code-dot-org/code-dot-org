@@ -23,6 +23,9 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
   const [selectedCell, setSelectedCell] = useState<
     [number, number] | undefined
   >(undefined);
+  const [selectedAsset, setSelectedAsset] = useState<number | undefined>(
+    undefined
+  );
   const [selectedCategory, setSelectedCategory] = useState<string>('Benches');
 
   const categoryTiles = useMemo(() => {
@@ -68,41 +71,45 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
   const categoryColumns = 8;
   const categoryRows = Math.ceil(categoryTiles.length / categoryColumns);
 
-  const selectTile = (tile: number) => {
-    if (selectedCell) {
+  const updateCell = (row: number, column: number) => {
+    setSelectedCell([row, column]);
+    if (selectedAsset !== undefined) {
       let value = 0;
-      if (tile === 303) {
+      if (selectedAsset === 303) {
         const promptResult = prompt('How much paint?');
         value = promptResult ? parseInt(promptResult) : 0;
       }
-      const newGrid = grid.map((row, rowIndex) =>
-        row.map((cell, columnIndex) => {
-          if (rowIndex === selectedCell[0] && columnIndex === selectedCell[1]) {
-            return {...cell, assetId: tile, value};
+      const newGrid = grid.map((rowDefinition, rowIndex) =>
+        rowDefinition.map((cell, columnIndex) => {
+          if (rowIndex === row && columnIndex === column) {
+            return {...cell, assetId: selectedAsset, value};
           }
           return cell;
         })
       );
       setGrid(newGrid);
-      setMaze(JSON.stringify(newGrid));
     }
   };
 
-  // TODO: show paint amount somewhere
-  // TODO: decide if we want auto-update or not. if we do, when we start with an empty grid we should save it.
   return (
     <div className={moduleStyles.gridGeneratorContainer}>
       <CollapsibleSection headerContent="How to Use">
         <p>
           <ol>
-            <li>Click the tile you want to update.</li>
+            <li>Select the category of asset you want to place on the grid.</li>
+            <li>Click the asset you want to place on the grid.</li>
+            <li>Click the cell you want to place the asset on.</li>
             <li>
-              Select the category of asset you want to place on that tile.
+              If you want to put the same asset on multiple cells, you just need
+              to click the asset once, then click the different cells to place
+              it.
             </li>
-            <li>Click the asset you want to place on the selected tile.</li>
+            <li>
+              When you are done, click Save Grid to save your updated grid to
+              the serialized maze field. The field will not update until you
+              click save!
+            </li>
           </ol>
-          The serialized maze will automatically update with the changes you
-          have made.
         </p>
       </CollapsibleSection>
       <div className={moduleStyles.gridGenerator}>
@@ -127,7 +134,7 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
                   width={cellSize}
                   height={cellSize}
                   className={isSelected ? moduleStyles.selectedCell : undefined}
-                  onClick={() => setSelectedCell([rowIndex, columnIndex])}
+                  onClick={() => updateCell(rowIndex, columnIndex)}
                 />
               );
             })
@@ -151,12 +158,20 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
               <img
                 src={imageTiles[tile]}
                 alt="neighborhood tile"
-                onClick={() => selectTile(tile)}
+                onClick={() => setSelectedAsset(tile)}
+                className={
+                  selectedAsset === tile ? moduleStyles.selectedTile : undefined
+                }
               />
             ))}
           </div>
         </div>
       </div>
+      <Button
+        text="Save Grid"
+        onClick={() => setMaze(JSON.stringify(grid))}
+        className={moduleStyles.saveButton}
+      />
     </div>
   );
 };
