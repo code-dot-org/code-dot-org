@@ -239,6 +239,23 @@ module AWS
       object_keys
     end
 
+    # Back up an S3 Object by copying it. Preserve the source Object key while prefixing it with a destination (backup)
+    # folder name. For example, use this method to back up:
+    #  user-content-bucket://my/path/to/object_name.ext --> backup-bucket://backups/user-content/my/path/to/object_name.ext
+    # @params source_bucket [String] The source S3 bucket name.
+    # @params source_object_key [String] The object key to copy.
+    # @params destination_bucket [String] The destination bucket.
+    # @params destination_object_prefix [String] The destination (backup) directory name, NOT including trailing slash.
+    def self.backup_object(source_bucket, source_object_key, destination_bucket, destination_object_prefix)
+      create_client.copy_object(
+        {
+          bucket: destination_bucket,
+          copy_source: "/#{source_bucket}/#{source_object_key}",
+          key: "#{destination_object_prefix}/#{source_object_key}"
+        }
+      )
+    end
+
     # Renames an object by copying it and then deleting the old copy (S3 objects are immutable)
     # @params bucket [String] The S3 bucket name.
     # @params object_key [String] The object key to rename.
