@@ -28,24 +28,61 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const eventsString = JSON.stringify(events);
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  const events2 = [
+    {
+      timestamp: 1627584000000,
+      chatMessageText: 'Hello',
+      role: 'user',
+      status: 'ok',
+      requestId: 1,
+    },
+    {
+      timestamp: 1627584000001,
+      chatMessageText:
+        '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
+      role: 'assistant',
+      status: 'ok',
+      requestId: 2,
+    },
+    {
+      timestamp: 1627584000003,
+      chatMessageText: 'Hello',
+      role: 'user',
+      status: 'ok',
+      requestId: 3,
+    },
+    {
+      timestamp: 1627584000004,
+      chatMessageText:
+        '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
+      role: 'assistant',
+      status: 'ok',
+      requestId: 4,
+    },
+  ];
+
+  const scrollToBottom = () => {
     if (conversationContainerRef.current) {
       conversationContainerRef.current.scrollTo({
         top: conversationContainerRef.current.scrollHeight,
         behavior: 'smooth',
       });
     }
-  }, [eventsString, isWaitingForChatResponse]);
+  };
+
+  useEffect(scrollToBottom, [eventsString, isWaitingForChatResponse]);
 
   return (
     <div
       id="chat-workspace-conversation"
       className={moduleStyles.conversationArea}
-      ref={conversationContainerRef}
     >
       <div style={{position: 'relative', width: '100%', height: '100%'}}>
-        <div style={{height: '100%', width: '100%', overflowY: 'auto'}}>
-          {events.map(event => (
+        <div
+          style={{height: '100%', width: '100%', overflowY: 'auto'}}
+          ref={conversationContainerRef}
+        >
+          {events2.map(event => (
             <ChatEventView
               event={event}
               key={event.timestamp}
@@ -54,7 +91,10 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           ))}
           <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
         </div>
-        <button style={{position: 'absolute', bottom: 0, right: 0}}>
+        <button
+          style={{position: 'absolute', bottom: 0, right: 0}}
+          onClick={scrollToBottom}
+        >
           Hello
         </button>
       </div>
