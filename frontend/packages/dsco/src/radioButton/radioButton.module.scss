@@ -1,3 +1,5 @@
+@import '@/common/styles/colors.css';
+
 .radioButton {
   display: flex;
   gap: 10px;
@@ -17,13 +19,13 @@
     margin: 2px;
     font-size: unset;
     line-height: unset;
-    border: 2px solid #292f36;
+    border: 2px solid var(--borders-neutral-solid);
     border-radius: 50%;
-    background: #ffffff;
+    background: var(--background-neutral-primary);
 
     &::after {
       content: '';
-      background: #0093a4;
+      background: var(--background-brand-teal-primary);
       position: absolute;
       border-radius: 50%;
       top: 50%;
@@ -35,7 +37,7 @@
   }
 
   input[type='radio']:checked + .radioIcon {
-    border-color: #0093a4;
+    border-color: var(--borders-brand-teal-primary);
 
     &::after {
       opacity: 1;
@@ -51,21 +53,21 @@
   // Hover styles
   &:hover input[type='radio']:not(:disabled) {
     + .radioIcon {
-      background: #bfe4e8;
+      background: var(--background-brand-teal-extra-light);
     }
     &:checked + .radioIcon {
-      border-color: #007785;
-      background: #ffffff;
+      border-color: var(--borders-brand-teal-strong);
+      background: var(--background-neutral-primary);
 
       &::after {
-        background: #007785;
+        background: var(--background-brand-teal-strong);
       }
     }
   }
 
   // Focus styles
   input[type='radio']:focus-visible + .radioIcon {
-    outline: 2px solid #0093a4;
+    outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: 2px;
   }
 
@@ -73,16 +75,16 @@
   &:active:has(input[type='radio']:not(:disabled)),
   &:has(input[type='radio']:active:not(:disabled)) {
     .radioIcon {
-      background: #bfe4e8;
-      border-color: #0093a4;
+      background: var(--background-brand-teal-extra-light);
+      border-color: var(--borders-brand-teal-primary);
     }
     &:has(input[type='radio']:checked) {
       .radioIcon {
-        background: #bfe4e8;
-        border-color: #007785;
+        background: var(--background-brand-teal-extra-light);
+        border-color: var(--borders-brand-teal-strong);
 
         &::after {
-          background: #007785;
+          background: var(--background-brand-teal-strong);
         }
       }
     }
@@ -93,15 +95,15 @@
     cursor: not-allowed;
 
     .radioIcon {
-      border-color: #d1d4d8;
+      border-color: var(--borders-neutral-disabled);
 
       &::after {
-        background: #d1d4d8;
+        background: var(--background-neutral-disabled);
       }
     }
 
     .radioButtonLabel {
-      color: #d1d4d8;
+      color: var(--text-neutral-disabled);
     }
   }
 }
