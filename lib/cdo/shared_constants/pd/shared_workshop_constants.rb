@@ -290,5 +290,14 @@ module Pd
       'CSP',
       'CSA'
     ]
+
+    PARTICIPANT_GROUP_TYPES = [
+      'District',
+      'Multi-district',
+      'Regional',
+      'National',
+      'Facilitator',
+      'Train the trainer'
+    ].freeze
   end
 end

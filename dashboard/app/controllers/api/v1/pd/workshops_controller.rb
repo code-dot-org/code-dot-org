@@ -338,6 +338,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       :third_party_provider,
       {sessions_attributes: [:id, :start, :end, :_destroy]},
       :module,
+      :participant_group_type
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner

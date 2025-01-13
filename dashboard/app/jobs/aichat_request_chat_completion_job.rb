@@ -46,9 +46,9 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   def perform(request:, locale:)
-    model_customizations = JSON.parse(request.model_customizations, {symbolize_names: true})
-    stored_messages = JSON.parse(request.stored_messages, {symbolize_names: true})
-    new_message = JSON.parse(request.new_message, {symbolize_names: true})
+    model_customizations = request.model_customizations
+    stored_messages = request.stored_messages
+    new_message = request.new_message
     level_id = request.level_id
     status, response = get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
     request.update!(response: response, execution_status: status)
@@ -56,10 +56,10 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, level_id, locale)
     # Moderate user input for toxicity.
-    user_toxicity = AichatSafetyHelper.find_toxicity('user', new_message[:chatMessageText], locale)
+    user_toxicity = AichatSafetyHelper.find_toxicity('user', new_message['chatMessageText'], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PROFANITY], user_toxicity.to_json] if user_toxicity
 
-    user_pii = find_pii(new_message[:chatMessageText], locale)
+    user_pii = find_pii(new_message['chatMessageText'], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
     # Make the request.
@@ -90,7 +90,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
   end
 
   private def get_model_id(request)
-    JSON.parse(request.model_customizations, {symbolize_names: true})[:selectedModelId]
+    request.model_customizations['selectedModelId']
   end
 
   private def report_job_start(request)

@@ -21,12 +21,12 @@ class AiModelProcessors::MistralProcessor
     # Add user and assistant messages including most recent user message.
     all_messages = [*stored_messages, new_message]
     all_messages.each do |msg|
-      if msg[:role] == ROLE[:USER]
-        inputs << wrap_as_instructions(msg[:chatMessageText])
-      elsif msg[:role] == ROLE[:ASSISTANT]
+      if msg['role'] == ROLE[:USER]
+        inputs << wrap_as_instructions(msg['chatMessageText'])
+      elsif msg['role'] == ROLE[:ASSISTANT]
         # Note that each assistant message in the conversation history is followed by
         # the end-of-sentence token but a begin-of-sentence token is not required.
-        inputs << (msg[:chatMessageText] + MISTRAL[:SENTENCE_END_TOKEN])
+        inputs << (msg['chatMessageText'] + MISTRAL[:SENTENCE_END_TOKEN])
       end
     end
     inputs

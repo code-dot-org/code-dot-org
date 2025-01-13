@@ -13,6 +13,7 @@ type PopUpButtonProps = {
   className?: string;
   alignment?: 'left' | 'right';
   id?: string;
+  disabled?: boolean;
 };
 
 const TOP_PADDING = 5;
@@ -23,6 +24,7 @@ export const PopUpButton = ({
   className,
   alignment = 'left',
   id,
+  disabled,
 }: PopUpButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [buttonRef, setButtonRef] = useState<HTMLElement | null>(null);
@@ -111,6 +113,7 @@ export const PopUpButton = ({
         onClick={clickHandler}
         type={'tertiary'}
         id={id}
+        disabled={disabled}
       />
       {isOpen &&
         // We use a portal so the dropdown can appear above all other elements.

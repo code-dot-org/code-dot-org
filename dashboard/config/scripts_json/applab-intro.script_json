@@ -8,17 +8,19 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "student_detail_progress_view": true,
       "supported_locales": [
         "es-MX",
         "es-ES"
       ],
       "tts": true,
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "applab-intro",
-    "serialized_at": "2025-01-07 20:03:34 UTC",
+    "serialized_at": "2025-01-09 18:09:34 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

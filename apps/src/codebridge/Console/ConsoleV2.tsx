@@ -41,11 +41,19 @@ const ConsoleV2: React.FunctionComponent = () => {
   const hasMiniApp = useAppSelector(
     state => !!state.lab.levelProperties?.miniApp
   );
+
   // Clear console when we change levels. Don't send an analytics event
   // as the user did not initiate this action.
-  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () =>
-    clearOutput(false)
-  );
+  // We clear on level load start so that logs don't get replayed
+  // onto the new console. We clear on complete to ensure that no new logs
+  // (for example a "program stopped" message, which occurs if the program was in
+  // progress during the level change) get shown on the new console.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    clearOutput(false);
+  });
+  useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
+    clearOutput(false);
+  });
 
   const onData = (data: string) => {
     const terminal = CodebridgeRegistry.getInstance()
