@@ -252,9 +252,10 @@ const FinishTeacherAccount: React.FunctionComponent<{
                 iconName={'circle-xmark'}
                 className={style.xIcon}
               />
-              <BodyThreeText className={style.errorMessageText}>
-                <SafeMarkdown markdown={locale.error_signing_up_message()} />
-              </BodyThreeText>
+              <SafeMarkdown
+                markdown={locale.error_signing_up_message()}
+                className={style.errorMessageText}
+              />
             </div>
             <CloseButton
               onClick={() => showErrorCreatingAccountMessage(false)}
