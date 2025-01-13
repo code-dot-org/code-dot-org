@@ -535,7 +535,6 @@ component/entity. All of that Changelogs will be combined into one in this file 
 
 - Initial release
 
-
 ## `componentLibrary/tags`
 
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/62996)
