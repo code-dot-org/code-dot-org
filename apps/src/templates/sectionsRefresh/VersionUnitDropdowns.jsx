@@ -55,8 +55,8 @@ export default function VersionUnitDropdowns({
       updateCourse({
         ...sectionCourse,
         unitId: unitId,
-        hasLessonExtras: selectedUnit.lesson_extras_available,
-        hasTextToSpeech: selectedUnit.text_to_speech_enabled,
+        lessonExtrasAvailable: selectedUnit.lesson_extras_available,
+        textToSpeechEnabled: selectedUnit.text_to_speech_enabled,
       });
     }
   };

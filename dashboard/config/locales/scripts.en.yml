@@ -9525,7 +9525,7 @@ en:
               name: Use Arrays to Get Random Responses
           lesson_groups: {}
           name: csa-magpie-lab
-          title: AP CSA Magpie Lab
+          title: CSA Magpie Lab
           description_audience: ''
           description_short: The Magpie Lab explores the basics of natural language processing as students create a chatbot program. Students work with a variety of methods of the String class and practice using if statements to evaluate user input to determine an appropriate response.
           description: |-
@@ -9570,7 +9570,7 @@ en:
               name: Open-Ended Activity
           lesson_groups: {}
           name: csa-consumer-review-lab
-          title: AP CSA Consumer Review Lab
+          title: CSA Consumer Review Lab
           description_audience: ''
           description_short: The Consumer Review lab explores how reviews for products and services are evaluated and sometimes manipulated. Students work with methods in the String class and practice using conditionals and iteration to design and implement algorithms to process text files containing reviews.
           description: |-
@@ -9596,7 +9596,7 @@ en:
               name: Open-Ended Activity
           lesson_groups: {}
           name: csa-data-lab
-          title: AP CSA Data Lab
+          title: CSA Data Lab
           description_audience: ''
           description_short: The Data Lab explores data retrieval and analysis techniques. Students practice developing questions, identifying appropriate data sources, and then writing code to read and process data to answer their questions.
           description: |-
@@ -18262,7 +18262,9 @@ en:
           description: ''
           student_description: ''
         gen-ai-staging:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Panel Levels
           lesson_groups:
             lessonGroup-2:
               display_name: Foundations of Gen AI
@@ -18272,6 +18274,8 @@ en:
               display_name: User-Centered Design
             lessonGroup-5:
               display_name: Flexible Implementation Lessons
+            lessonGroup-6:
+              display_name: Globalization
           name: gen-ai-staging
           title: ''
           description_audience: ''
@@ -19659,7 +19663,7 @@ en:
 
             ___
 
-            ##### ⏰ Suggested total time for this module: <mark>update</mark>
+            ##### ⏰ Suggested total time for this module: 140 minutes
           student_description: |-
             ##### **Module 2: Strategies to Promote Equity in Computer Science** gets concrete about strategies educators can use in their classrooms to promote equity in computer science. This unit is oriented toward resources educators can use to bridge professional learning to the classroom.
 
@@ -19672,7 +19676,7 @@ en:
 
             ___
 
-            ##### ⏰ Suggested total time for this module: <mark>update</mark>
+            ##### ⏰ Suggested total time for this module: 140 minutes
         sandbox-teaching-getting-started:
           lessons:
             lesson-5:
@@ -19693,7 +19697,9 @@ en:
           lessons: {}
           lesson_groups: {}
         sandbox-pl-teaching-k5-music-lab:
-          lessons: {}
+          lessons:
+            lesson-4:
+              name: 'Welcome to Music Lab! '
           lesson_groups: {}
           name: sandbox-pl-teaching-k5-music-lab
           title: Teaching K-5 Music Lab (Sandbox)

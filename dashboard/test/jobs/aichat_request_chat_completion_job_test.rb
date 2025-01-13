@@ -6,17 +6,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     @student = create :student
     @model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}
     @new_message = {chatMessageText: 'hello', role: 'user', status: 'unknown', timestamp: Time.now.to_i}
-    @toxic_response = {
-      text: 'toxic',
-      blocked_by: 'comprehend',
-      details: {
-        flagged_segment: 'toxic',
-        max_category: {
-          score: 0.7,
-          name: 'INSULT'
-        }
-      }
-    }
+    @toxic_response = {text: 'profane text', blocked_by: 'openai', details: {evaluation: 'INAPPROPRIATE'}}
     @test_env = 'unit-test-env'
     @metrics_model_id = 'metrics-test-model-id'
     CDO.stubs(:rack_env).returns(@test_env)
@@ -32,7 +22,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
 
   test "execution status is set to USER_PROFANITY if toxicity detected in user input" do
     request = create :aichat_request
-    user_message = JSON.parse(request.new_message, symbolize_names: true)[:chatMessageText]
+    user_message = request.new_message['chatMessageText']
     AichatSafetyHelper.expects(:find_toxicity).with('user', user_message, @locale).returns(@toxic_response)
 
     perform_enqueued_jobs do
@@ -104,7 +94,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   end
 
   test 'reports metrics for successful job' do
-    customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}.to_json
+    customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}
     request = create :aichat_request, model_customizations: customizations
 
     reported_metrics = []
@@ -155,7 +145,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   end
 
   test 'reports metrics for failed job' do
-    customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}.to_json
+    customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: @metrics_model_id}
     request = create :aichat_request, model_customizations: customizations
 
     reported_metrics = []

@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2025-01-10T20:26:16.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "music_lab_promo_long",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28494,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "\r\n## What is Music Lab? \r\n\r\n\r\n#### Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards.\r\n\r\n## Who is Music Lab for? \r\n#### Music Lab is designed for students with diverse interests and abilities, including those who may not connect with traditional programming activities. It’s ideal for teachers seeking flexible, inclusive resources to introduce computer science in an engaging, creative format.\r\n\r\n## Why Teach Music Lab? \r\n* #### Engaging Intro Course: Teaches sequencing, loops, and programming through music, making coding fun and creative.\r\n* ####  Accessible for All: Designed for students with sight disabilities, offering better usability than Sprite Lab or maze puzzles.\r\n* ####  Modular and Flexible: Only a 3-lesson commitment and pairs well with modules like game design, AI/Data, or CSC topics.\r\n* #### Teacher-Friendly: Built for educators new to CS or music, with no prior experience required. Music teachers can explore tangents if desired.\r\n\r\n<br>\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-01-10T20:26:16.923+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-PLVid_2023_K5CSConcepts\\\"\"],\"cloned_from\":\"OPD-K5-PLVid_2023_K5CSConcepts\"},{\"changed_at\":\"2025-01-10 20:32:59 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-10 21:48:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
