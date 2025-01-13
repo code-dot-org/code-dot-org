@@ -1,7 +1,7 @@
 import {render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import WorkshopTableLoader from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_table_loader';
+import WorkshopTableLoader from '@cdo/apps/code-studio/pd/workshop_dashboard/components/WorkshopTableLoader';
 
 describe('WorkshopTableLoader', () => {
   const getFakeWorkshopsData = () => {
