@@ -184,7 +184,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           size="s"
           id="ui-test-lessons-in-assigned-unit-dropdown"
         />
-        {lessonMaterials?.unitNumber && (
+        {lessonMaterials && (
           <UnitResourcesDropdown
             hasNumberedUnits={hasNumberedUnits}
             unitNumber={lessonMaterials.unitNumber}

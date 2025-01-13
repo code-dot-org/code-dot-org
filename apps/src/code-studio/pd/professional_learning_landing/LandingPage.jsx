@@ -29,7 +29,6 @@ import {hiddenPlSectionIds} from '@cdo/apps/templates/teacherDashboard/teacherSe
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
-import {queryParams, updateQueryParam} from '../../utils';
 import {
   COURSE_CSF,
   COURSE_CSD,
@@ -86,23 +85,26 @@ const getAvailableTabs = permissions => {
   return tabs;
 };
 
-const getEnrollSucessWorkshopName = () => {
-  // If sent here from successfully enrolling in a workshop, log WORKSHOP_ENROLLMENT_COMPLETED_EVENT.
-  const urlParams = queryParams();
-  if (urlParams && Object.keys(urlParams).includes('wsCourse')) {
-    const workshopCourseName = urlParams['wsCourse'];
+const getEnrollSucessWorkshopTitle = () => {
+  // If a user was sent here after successfully enrolling in a workshop, the one field guaranteed to have
+  // been set in sessionStorage is 'workshopCourse' (since a workshop must have a course) so we can use
+  // its presence to determine whether to log the WORKSHOP_ENROLLMENT_COMPLETED_EVENT event or not.
+  const workshopCourse = sessionStorage.getItem('workshopCourse', null);
+  if (!workshopCourse) {
+    return '';
+  } else {
+    const workshopName = sessionStorage.getItem('workshopName', null);
 
     analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
-      'regional partner': urlParams['rpName'],
-      'workshop course': workshopCourseName,
-      'workshop subject': urlParams['wsSubject'],
+      'regional partner': sessionStorage.getItem('rpName', null),
+      'workshop course': workshopCourse,
+      'workshop subject': sessionStorage.getItem('workshopSubject', null),
     });
+    ['workshopCourse', 'workshopSubject', 'workshopName', 'rpName'].forEach(
+      sessionKey => sessionStorage.removeItem(sessionKey)
+    );
 
-    updateQueryParam('rpName', undefined, false);
-    updateQueryParam('wsCourse', undefined, false);
-    updateQueryParam('wsSubject', undefined, false);
-
-    return workshopCourseName;
+    return !!workshopName ? workshopName : workshopCourse;
   }
 };
 
@@ -121,8 +123,11 @@ function LandingPage({
   hiddenPlSectionIds,
 }) {
   const availableTabs = getAvailableTabs(userPermissions);
-  const [enrollSuccessWorkshopName, setEnrollSuccessWorkshopName] = useState(
-    getEnrollSucessWorkshopName()
+  // The success message will state the title of the workshop the user just enrolled in:
+  // - In the case of Build Your Own workshops, it will state the workshop's name.
+  // - In the case of any other type of workshop, it will state the workshop's course.
+  const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] = useState(
+    getEnrollSucessWorkshopTitle()
   );
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
 
@@ -498,10 +503,10 @@ function LandingPage({
   const RenderMyPlTab = () => {
     return (
       <>
-        {enrollSuccessWorkshopName && (
+        {enrollSuccessWorkshopTitle && (
           <WorkshopEnrollmentCelebrationDialog
-            workshopName={enrollSuccessWorkshopName}
-            onClose={() => setEnrollSuccessWorkshopName(null)}
+            workshopTitle={enrollSuccessWorkshopTitle}
+            onClose={() => setEnrollSuccessWorkshopTitle('')}
           />
         )}
         {RenderBanner()}
