@@ -8,10 +8,10 @@ import classNames from 'classnames';
 import React, {Suspense, useContext, useEffect, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import fetchIsProjectValidator from '@cdo/apps/lab2/utils/fetchIsProjectValidator';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
+import {PERMISSIONS} from '../constants';
 import ProgressContainer from '../progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '../projects/utils';
 import {AppName, Lab2EntryPoint, OptionsToAvoid} from '../types';
@@ -34,12 +34,10 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     state => state.lab.levelProperties?.exemplarSources
   );
   const isBlocked = useAppSelector(state => state.lab.isBlocked);
-  const [isProjectValidator, setIsProjectValidator] = useState(false);
-  useEffect(() => {
-    fetchIsProjectValidator().then(data => {
-      setIsProjectValidator(data);
-    });
-  }, []);
+  const permissions = useAppSelector(state => state.lab.permissions);
+  const isProjectValidator = permissions?.includes(
+    PERMISSIONS.PROJECT_VALIDATOR
+  );
 
   const isViewingExemplar = getAppOptionsViewingExemplar();
 
