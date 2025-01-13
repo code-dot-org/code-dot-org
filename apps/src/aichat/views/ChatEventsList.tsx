@@ -75,36 +75,36 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   return (
     <div
       id="chat-workspace-conversation"
+      style={{position: 'relative', width: '100%', height: '100%'}}
       className={moduleStyles.conversationArea}
     >
-      <div style={{position: 'relative', width: '100%', height: '100%'}}>
-        <div
-          style={{
-            height: '100%',
-            width: '100%',
-            overflowY: 'auto',
-            boxSizing: 'border-box',
-            padding: 16,
-          }}
-          className={moduleStyles.messageArea}
-          ref={conversationContainerRef}
-        >
-          {events2.map(event => (
-            <ChatEventView
-              event={event}
-              key={event.timestamp}
-              isTeacherView={isTeacherView}
-            />
-          ))}
-          <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
-        </div>
-        <button
-          style={{position: 'absolute', bottom: 0, right: 0}}
-          onClick={scrollToBottom}
-        >
-          Hello
-        </button>
+      <div
+        style={{
+          height: '100%',
+          width: '100%',
+          overflowY: 'auto',
+          boxSizing: 'border-box',
+          padding: 16,
+        }}
+        className={moduleStyles.messageArea}
+        ref={conversationContainerRef}
+      >
+        {events2.map(event => (
+          <ChatEventView
+            event={event}
+            key={event.timestamp}
+            isTeacherView={isTeacherView}
+          />
+        ))}
+        <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
       </div>
+      <button
+        type="button"
+        style={{position: 'absolute', bottom: 0, right: 0}}
+        onClick={scrollToBottom}
+      >
+        Hello
+      </button>
     </div>
   );
 };
