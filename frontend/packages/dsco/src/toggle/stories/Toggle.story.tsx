@@ -1,5 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react';
 
+import {useState} from 'react';
+
 import Toggle, {ToggleProps} from '../index';
 
 export default {
@@ -21,13 +23,38 @@ export default {
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
 const SingleTemplate: StoryFn<ToggleProps> = args => <Toggle {...args} />;
 
-const MultipleTemplate: StoryFn<{components: ToggleProps[]}> = args => (
-  <>
-    {args.components?.map(componentArg => (
-      <Toggle key={componentArg.name} {...componentArg} />
-    ))}
-  </>
-);
+const MultipleTemplate: StoryFn<{components: ToggleProps[]}> = args => {
+  const [toggleStates, setToggleStates] = useState<Record<string, boolean>>(
+    Object.fromEntries(
+      args.components?.map(component => [
+        component.name,
+        !!component.checked,
+      ]) ?? [],
+    ),
+  );
+
+  const handleToggleChange = (name: string, checked: boolean) => {
+    setToggleStates(prevStates => ({
+      ...prevStates,
+      [name]: checked,
+    }));
+  };
+
+  return (
+    <>
+      {args.components?.map(componentArg => (
+        <Toggle
+          key={componentArg.name}
+          {...componentArg}
+          checked={toggleStates[componentArg.name]}
+          onChange={e =>
+            handleToggleChange(componentArg.name, e.target.checked)
+          }
+        />
+      ))}
+    </>
+  );
+};
 
 export const DefaultToggle = SingleTemplate.bind({});
 DefaultToggle.args = {
