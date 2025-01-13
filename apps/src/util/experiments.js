@@ -61,7 +61,6 @@ experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 // Shows 'check my code' button in App Lab for validation via AI
 experiments.CSP_VALIDATION_VIA_AI = 'csp_validation_via_ai';
-experiments.PYTHONLAB_XTERM = 'xterm_console';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
