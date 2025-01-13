@@ -19,8 +19,11 @@ class ScriptsController < ApplicationController
     if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
       if request.query_parameters.include? "user_id"
         redirect_query_string = request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")
-        puts redirect_query_string
-        redirect_to "#{script_path(@script)}?#{request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")}"
+        if redirect_query_string.empty?
+          redirect_to script_path(@script)
+        else
+          redirect_to "#{script_path(@script)}?#{redirect_query_string}"
+        end
         return
       end
       if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}
