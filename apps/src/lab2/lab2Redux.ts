@@ -86,7 +86,7 @@ export interface LabState {
   // If this lab is blocked because abuse score >= 15.
   isBlocked: boolean | undefined;
   overrideValidations: Validation[] | undefined;
-  permissions: string[] | undefined;
+  permissions: string[];
 }
 
 const initialState: LabState = {
@@ -100,7 +100,7 @@ const initialState: LabState = {
   isShareView: undefined,
   isBlocked: undefined,
   overrideValidations: undefined,
-  permissions: undefined,
+  permissions: [],
 };
 
 // Thunks
@@ -417,7 +417,7 @@ const labSlice = createSlice({
     ) {
       state.overrideValidations = action.payload;
     },
-    setPermissions(state, action: PayloadAction<string[] | undefined>) {
+    setPermissions(state, action: PayloadAction<string[]>) {
       state.permissions = action.payload;
     },
   },
