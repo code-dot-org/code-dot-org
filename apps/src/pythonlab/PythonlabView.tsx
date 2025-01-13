@@ -109,7 +109,7 @@ const PythonlabView: React.FunctionComponent = () => {
   const {
     source,
     setProject,
-    startSource,
+    startSources,
     projectVersion,
     validationFile,
     labConfig,
@@ -186,7 +186,7 @@ const PythonlabView: React.FunctionComponent = () => {
           config={config}
           setProject={setProject}
           setConfig={setConfig}
-          startSource={startSource}
+          startSource={startSources}
           onRun={onRun}
           onStop={stopPythonCode}
           projectVersion={projectVersion}

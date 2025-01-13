@@ -88,7 +88,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   );
 
   // We memoize these objects so that they don't cause an unexpected re-render.
-  const levelStartSource: ProjectSources | undefined = useMemo(
+  const levelStartSources: ProjectSources | undefined = useMemo(
     () =>
       levelSource
         ? generateProjectSourceFromStartSource(levelSource)
@@ -96,7 +96,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     [levelSource, generateProjectSourceFromStartSource]
   );
 
-  const templateStartSource: ProjectSources | undefined = useMemo(
+  const templateStartSources: ProjectSources | undefined = useMemo(
     () =>
       templateSource
         ? generateProjectSourceFromStartSource(templateSource)
@@ -116,8 +116,8 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const isViewingExemplar = getAppOptionsViewingExemplar();
 
   const initialSources = useMemo(() => {
-    const startSources = levelStartSource || parsedDefaultSources;
-    const templateSources = templateStartSource;
+    const startSources = levelStartSources || parsedDefaultSources;
+    const templateSources = templateStartSources;
 
     if (isStartMode) {
       return startSources;
@@ -134,9 +134,9 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     const projectSources = labInitialSources;
     return projectSources || templateSources || startSources;
   }, [
-    levelStartSource,
+    levelStartSources,
     parsedDefaultSources,
-    templateStartSource,
+    templateStartSources,
     isStartMode,
     isEditingExemplar,
     isViewingExemplar,
@@ -146,8 +146,8 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
 
   return {
     initialSources,
-    levelStartSource,
-    templateStartSource,
+    levelStartSources,
+    templateStartSources,
     parsedDefaultSources,
   };
 };

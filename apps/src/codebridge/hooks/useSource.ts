@@ -36,8 +36,8 @@ export const useSource = (defaultSources: ProjectSources) => {
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const {
     initialSources,
-    levelStartSource,
-    templateStartSource,
+    levelStartSources,
+    templateStartSources,
     parsedDefaultSources,
   } = useInitialSources(defaultSources);
   const previousLevelIdRef = useRef<number | null>(null);
@@ -110,16 +110,16 @@ export const useSource = (defaultSources: ProjectSources) => {
     [setSourceHelper, checkForFirstEdit]
   );
 
-  const startSource = useMemo(() => {
+  const startSources = useMemo(() => {
     return (
-      (!isStartMode && templateStartSource) ||
-      levelStartSource ||
+      (!isStartMode && templateStartSources) ||
+      levelStartSources ||
       parsedDefaultSources
     );
   }, [
     isStartMode,
-    templateStartSource,
-    levelStartSource,
+    templateStartSources,
+    levelStartSources,
     parsedDefaultSources,
   ]);
 
@@ -174,7 +174,7 @@ export const useSource = (defaultSources: ProjectSources) => {
   return {
     source,
     setProject,
-    startSource,
+    startSources,
     projectVersion,
     validationFile,
     labConfig: projectSource?.labConfig,
