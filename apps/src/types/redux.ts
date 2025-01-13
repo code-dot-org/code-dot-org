@@ -1,4 +1,3 @@
-import {CodebridgeConsoleState} from '@codebridge/redux/consoleRedux';
 import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
 import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
@@ -37,7 +36,6 @@ export interface RootState {
   aichat: AichatState;
   blockly: BlocklyState;
   calendar: CalendarState;
-  codebridgeConsole: CodebridgeConsoleState;
   codebridgeWorkspace: CodebridgeWorkspaceState;
   currentUser: CurrentUserState;
   header: HeaderReduxState;

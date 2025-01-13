@@ -283,6 +283,10 @@ class Section < ApplicationRecord
     self.followers_attributes = follower_params
   end
 
+  def student_joining_teacher_course?(user)
+    return participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher && user.student?
+  end
+
   # Checks if a user can join a section as a participant by
   # checking if they meet the participant_type for the section
   def can_join_section_as_participant?(user)
