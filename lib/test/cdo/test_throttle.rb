@@ -34,4 +34,26 @@ class ThrottleTest < Minitest::Test
     Timecop.travel(Time.now.utc + 0.5)
     assert Cdo::Throttle.throttle("my_key", 2, 2) # 3/2 reqs per 2s - throttled again
   end
+
+  def test_throttle_expiration
+    Timecop.freeze
+    start = Time.now.utc
+    throttle_id = 'my_key'
+    period = 2
+    throttle_time = 3
+    cache_id = Cdo::Throttle::CACHE_PREFIX + throttle_id
+
+    Cdo::Throttle.throttle(throttle_id, 1, period, throttle_time)
+    assert CDO.shared_cache.read(cache_id)
+
+    # Throttle data will be preserved for a little while,
+    Timecop.travel(start + 1)
+    assert CDO.shared_cache.read(cache_id)
+    Timecop.travel(start + period + throttle_time - 1)
+    assert CDO.shared_cache.read(cache_id)
+
+    # but will expire eventually.
+    Timecop.travel(start + period + throttle_time)
+    refute CDO.shared_cache.read(cache_id)
+  end
 end

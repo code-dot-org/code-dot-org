@@ -27,7 +27,11 @@ module Cdo
         value[:throttled_until] = now + throttle_for if should_throttle
       end
 
-      CDO.shared_cache.write(full_key, value)
+      # The maximum time (in seconds) for which any information contained in
+      # this entry could possibly be relevant.
+      max_data_relevancy = throttle_for + period
+
+      CDO.shared_cache.write(full_key, value, expires_in: max_data_relevancy)
       should_throttle
     end
 

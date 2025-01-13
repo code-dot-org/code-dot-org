@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Welcome!
 
-## Module 2, Lesson 3: Expanding Access to Computer Science
+## Module 2, Lesson 1: Expanding Access to Computer Science
 
 <div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
     <div style="width: 70%;">
@@ -22,7 +22,7 @@ markdown <<MARKDOWN
         </ul>
         <p style="font-size: 16px; color: black;">
         <br>
-        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>update</mark> minutes
+        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> 20 minutes
         </p>
     </div>
     

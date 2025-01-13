@@ -252,7 +252,7 @@ module UsersHelper
   end
 
   def usa?(country_code)
-    %w[US RD].include?(country_code.to_s.upcase)
+    Policies::User.in_usa?(country_code)
   end
 
   def cap_user_info_required?(user, country_code)
