@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import StatsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
 import {
@@ -282,6 +283,7 @@ describe('FinishTeacherAccount', () => {
           usIp: true,
         },
         country_code: 'US',
+        educator_role: null,
       },
     };
     sessionStorage.setItem('email', email);
@@ -365,6 +367,7 @@ describe('FinishTeacherAccount', () => {
           usIp: true,
         },
         country_code: 'US',
+        educator_role: null,
       },
     };
     sessionStorage.setItem('email', email);
@@ -444,6 +447,7 @@ describe('FinishTeacherAccount', () => {
           usIp: true,
         },
         country_code: 'US',
+        educator_role: null,
       },
     };
     sessionStorage.setItem('email', email);
@@ -490,5 +494,97 @@ describe('FinishTeacherAccount', () => {
   });
 
   // TODO: when experiment ends, move relevant tests above and remove this describe block
+  describe('Educator role experiment', () => {
+    let getIsInExperimentSpy: jest.SpyInstance;
+
+    beforeEach(() => {
+      getIsInExperimentSpy = jest
+        .spyOn(StatsigReporter, 'getIsInExperiment')
+        .mockReturnValue(false);
+    });
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
+    it('hides educator_role dropdown if not in experiment', async () => {
+      await waitFor(renderDefault);
+
+      const roleDropdown = screen.queryByLabelText(locale.what_is_your_role());
+      expect(roleDropdown).not.toBeInTheDocument();
+    });
+
+    it('renders educator_role dropdown if in experiment', async () => {
+      getIsInExperimentSpy.mockImplementation((experiment, param) => {
+        if (experiment === 'educator_role' && param === 'showEducatorRole') {
+          return true;
+        }
+        return false;
+      });
+      await waitFor(renderDefault);
+
+      const roleDropdown = screen.queryByLabelText(locale.what_is_your_role());
+      expect(roleDropdown).toBeInTheDocument();
+    });
+
+    it('does not require educator_role if not in experiment', async () => {
+      getIsInExperimentSpy.mockImplementation((experiment, param) => {
+        if (experiment === 'educator_role') {
+          if (param === 'showEducatorRole') {
+            return true;
+          }
+          if (param === 'requireEducatorRole') {
+            return false;
+          }
+        }
+        return false;
+      });
+      await waitFor(renderDefault);
+
+      const roleDropdown = screen.queryByLabelText(locale.what_is_your_role());
+      expect(roleDropdown).toBeInTheDocument();
+
+      const displayNameInput = screen.getAllByRole('textbox')[0];
+      fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+
+      const finishSignUpButton = screen.getByRole('button', {
+        name: locale.go_to_my_account(),
+      });
+      expect(finishSignUpButton).toBeEnabled();
+    });
+
+    it('requires educator_role if in experiment', async () => {
+      getIsInExperimentSpy.mockImplementation((experiment, param) => {
+        if (experiment === 'educator_role') {
+          if (param === 'showEducatorRole') {
+            return true;
+          }
+          if (param === 'requireEducatorRole') {
+            return true;
+          }
+        }
+        return false;
+      });
+      await waitFor(renderDefault);
+
+      const roleDropdown = screen.getByLabelText(locale.what_is_your_role());
+      expect(roleDropdown).toBeInTheDocument();
+
+      const displayNameInput = screen.getAllByRole('textbox')[0];
+      fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+
+      let finishSignUpButton = screen.getByRole('button', {
+        name: locale.go_to_my_account(),
+      });
+      expect(finishSignUpButton).toBeDisabled();
+
+      fireEvent.change(roleDropdown, {target: {value: 'classroom_teacher'}});
+
+      finishSignUpButton = screen.getByRole('button', {
+        name: locale.go_to_my_account(),
+      });
+
+      expect(finishSignUpButton).toBeEnabled();
+    });
   });
 });
