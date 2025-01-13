@@ -107,7 +107,7 @@ class Blockly < Level
     ]
   end
 
-  def self.aplaylab_skins
+  def self.playlab_skins
     [
       # To be merged with migrated_skins after DCDO check is removed.
       "studio", "infinity", "iceage", "gumball"
