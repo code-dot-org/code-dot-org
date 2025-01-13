@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 import {RESOURCE_ICONS} from './ResourceIconType';
 
 type UnitResourcesDropdownProps = {
-  unitNumber?: number;
+  unitNumber?: number | null;
   hasNumberedUnits?: boolean;
   scriptOverviewPdfUrl: string;
   scriptResourcesPdfUrl: string;

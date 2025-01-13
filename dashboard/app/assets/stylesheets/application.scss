@@ -2407,6 +2407,18 @@ a.download-video {
 
 #hoc_download {
   color: $charcoal;
+  #deprecation-warning-banner {
+    margin: 1em 0;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    #warning-icon {
+      font-size: 3em;
+    }
+  }
   .capsule {
     background-color: $lightest_gray;
     border-radius: 10px;
