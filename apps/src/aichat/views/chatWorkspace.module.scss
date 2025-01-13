@@ -15,20 +15,23 @@ $tabs-default-spacing: 4px;
 
 %conversation-area,
 .conversationArea {
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
-  gap: $default-spacing;
   box-sizing: border-box;
   overflow-y: auto;
-  padding: $default-spacing;
+}
+
+.messageArea {
+  display: flex;
+  flex-direction: column;
+  gap: $default-spacing;
 }
 
 .tabsContainer {
   background-color: #eaebeb;
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
+
   ul {
-    li > button[role="tab"] {
+    li>button[role="tab"] {
       max-width: 300px;
     }
   }
@@ -36,11 +39,13 @@ $tabs-default-spacing: 4px;
 
 .tabPanelsContainer {
   @extend %conversation-area;
-  > div {
+
+  >div {
     display: flex;
     height: 100%;
   }
-  > div[hidden] {
+
+  >div[hidden] {
     display: none;
   }
 }

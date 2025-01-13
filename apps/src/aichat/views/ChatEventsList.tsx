@@ -79,7 +79,14 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     >
       <div style={{position: 'relative', width: '100%', height: '100%'}}>
         <div
-          style={{height: '100%', width: '100%', overflowY: 'auto'}}
+          style={{
+            height: '100%',
+            width: '100%',
+            overflowY: 'auto',
+            boxSizing: 'border-box',
+            padding: 16,
+          }}
+          className={moduleStyles.messageArea}
           ref={conversationContainerRef}
         >
           {events2.map(event => (
