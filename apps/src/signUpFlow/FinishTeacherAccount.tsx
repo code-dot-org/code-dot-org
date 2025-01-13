@@ -46,9 +46,7 @@ const roleItemGroups = [
   },
   ...Object.entries(
     EducatorRoles.reduce((groups, {category, value, label}) => {
-      if (!groups[category]) {
-        groups[category] = [];
-      }
+      groups[category] = groups[category] ?? [];
       groups[category].push({value, text: label});
       return groups;
     }, {} as Record<string, {value: string; text: string}[]>)
