@@ -43,14 +43,21 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       className={moduleStyles.conversationArea}
       ref={conversationContainerRef}
     >
-      {events.map(event => (
-        <ChatEventView
-          event={event}
-          key={event.timestamp}
-          isTeacherView={isTeacherView}
-        />
-      ))}
-      <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+      <div style={{position: 'relative', width: '100%', height: '100%'}}>
+        <div style={{height: '100%', width: '100%', overflowY: 'auto'}}>
+          {events.map(event => (
+            <ChatEventView
+              event={event}
+              key={event.timestamp}
+              isTeacherView={isTeacherView}
+            />
+          ))}
+          <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+        </div>
+        <button style={{position: 'absolute', bottom: 0, right: 0}}>
+          Hello
+        </button>
+      </div>
     </div>
   );
 };
