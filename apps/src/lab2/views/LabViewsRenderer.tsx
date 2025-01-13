@@ -34,9 +34,8 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     state => state.lab.levelProperties?.exemplarSources
   );
   const isBlocked = useAppSelector(state => state.lab.isBlocked);
-  const permissions = useAppSelector(state => state.lab.permissions);
-  const isProjectValidator = permissions?.includes(
-    PERMISSIONS.PROJECT_VALIDATOR
+  const isProjectValidator = useAppSelector(state =>
+    state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
   );
 
   const isViewingExemplar = getAppOptionsViewingExemplar();

@@ -7,7 +7,7 @@
 // while to load; and a sad bee when things go wrong.
 
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
@@ -43,12 +43,13 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading);
   const isPageError: boolean = useSelector(hasPageError);
   const isBlocked = useAppSelector(state => state.lab.isBlocked);
-  const [isProjectValidator, setIsProjectValidator] = useState(false);
   const dispatch = useAppDispatch();
+  const isProjectValidator = useAppSelector(state =>
+    state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
+  );
   useEffect(() => {
     fetchPermissions().then(data => {
       dispatch(setPermissions(data));
-      setIsProjectValidator(data.includes(PERMISSIONS.PROJECT_VALIDATOR));
     });
   }, [dispatch]);
   const errorMessage: string | undefined = useSelector(
