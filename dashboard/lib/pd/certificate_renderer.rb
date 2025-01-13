@@ -13,8 +13,14 @@ module Pd
     # @param [Pd::Enrollment] a teacher's workshop enrollment
     def self.render_workshop_certificate(enrollment)
       workshop = enrollment.workshop
-      # We assume the workshop name does not end in "Workshop" so it's appended here.
-      workshop_title = workshop.name.present? ? workshop.name + ' Workshop' : workshop.course_name
+
+      # For Build Your Own workshops, display the workshop's name (and append 'Workshop' if not already present).
+      # For other workshops, display the workshop's course name instead.
+      has_name = workshop.name.present?
+      workshop_title = has_name ? workshop.name : workshop.course_name
+      if has_name && !workshop_title.downcase.end_with?('workshop')
+        workshop_title += ' Workshop'
+      end
 
       CertificateImage.create_workshop_certificate_image(
         dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_generic.png'),
