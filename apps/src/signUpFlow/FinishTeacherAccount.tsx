@@ -150,7 +150,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
       !gdprValid ||
       (isInSchoolRequiredExperiment && schoolInfoInvalid(schoolInfo)) ||
       (requireEducatorRole && !educatorRole),
-
     [
       gdprValid,
       isInSchoolRequiredExperiment,
@@ -283,21 +282,19 @@ const FinishTeacherAccount: React.FunctionComponent<{
             )}
           </div>
           {showEducatorRole && (
-            <div>
-              <SimpleDropdown
-                className={classNames(style.dropdownContainer, {
-                  [style.requiredLabel]: requireEducatorRole,
-                })}
-                labelText={locale.what_is_your_role()}
-                name="educator_role"
-                selectedValue={educatorRole}
-                onChange={e => {
-                  setEducatorRole(e.target.value);
-                }}
-                itemGroups={roleItemGroups}
-                dropdownTextThickness="thin"
-              />
-            </div>
+            <SimpleDropdown
+              className={classNames(style.dropdownContainer, {
+                [style.requiredLabel]: requireEducatorRole,
+              })}
+              labelText={locale.what_is_your_role()}
+              name="educator_role"
+              selectedValue={educatorRole}
+              onChange={e => {
+                setEducatorRole(e.target.value);
+              }}
+              itemGroups={roleItemGroups}
+              dropdownTextThickness="thin"
+            />
           )}
           <SchoolDataInputs
             {...schoolInfo}
