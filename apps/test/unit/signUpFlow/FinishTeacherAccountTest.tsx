@@ -74,8 +74,8 @@ describe('FinishTeacherAccount', () => {
     );
   });
 
-  it('renders finish teacher account page with school zip when usIp is true', () => {
-    renderDefault(true);
+  it('renders finish teacher account page with school zip when usIp is true', async () => {
+    await waitFor(renderDefault);
 
     // Renders page title
     screen.getByText(locale.finish_creating_teacher_account());
@@ -98,8 +98,10 @@ describe('FinishTeacherAccount', () => {
     screen.getByText(locale.go_to_my_account());
   });
 
-  it('renders finish teacher account page with school name when usIp is false', () => {
-    renderDefault(false);
+  it('renders finish teacher account page with school name when usIp is false', async () => {
+    await waitFor(() => {
+      renderDefault(false);
+    });
 
     // Renders page title
     screen.getByText(locale.finish_creating_teacher_account());
@@ -118,8 +120,9 @@ describe('FinishTeacherAccount', () => {
     screen.getByText(locale.go_to_my_account());
   });
 
-  it('school info is tracked in sessionStorage', () => {
-    renderDefault();
+  it('school info is tracked in sessionStorage', async () => {
+    await waitFor(renderDefault);
+
     const zipCode = '98122';
     const schoolName = 'Seattle Academy';
 
@@ -141,8 +144,8 @@ describe('FinishTeacherAccount', () => {
     expect(sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY)).toBe(schoolName);
   });
 
-  it('finish teacher signup button starts disabled', () => {
-    renderDefault();
+  it('finish teacher signup button starts disabled', async () => {
+    await waitFor(renderDefault);
 
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
@@ -150,8 +153,8 @@ describe('FinishTeacherAccount', () => {
     expect(finishSignUpButton).toBeDisabled();
   });
 
-  it('leaving the displayName field empty shows error message', () => {
-    renderDefault();
+  it('leaving the displayName field empty shows error message', async () => {
+    await waitFor(renderDefault);
     const displayNameInput = screen.getAllByDisplayValue('')[0];
 
     // Error message doesn't show and button is disabled by default
@@ -170,8 +173,8 @@ describe('FinishTeacherAccount', () => {
     screen.getByText(locale.display_name_error_message());
   });
 
-  it('only whitespace in the displayName field shows error message', () => {
-    renderDefault();
+  it('only whitespace in the displayName field shows error message', async () => {
+    await waitFor(renderDefault);
     const displayNameInput = screen.getAllByDisplayValue('')[0];
 
     // Error message doesn't show and button is disabled by default
@@ -189,8 +192,8 @@ describe('FinishTeacherAccount', () => {
     expect(finishSignUpButton).toBeDisabled();
   });
 
-  it('adding a long display name shows error message', () => {
-    renderDefault();
+  it('adding a long display name shows error message', async () => {
+    await waitFor(renderDefault);
     const displayNameInput = screen.getAllByDisplayValue('')[0];
 
     // Error message doesn't show and button is disabled by default
@@ -221,7 +224,7 @@ describe('FinishTeacherAccount', () => {
       json: () => Promise.resolve({gdpr: true, force_in_eu: false}),
     } as Response);
 
-    renderDefault();
+    await waitFor(renderDefault);
 
     // Check that GDPR message is displayed
     await screen.findByText(locale.data_transfer_notice());
@@ -359,9 +362,7 @@ describe('FinishTeacherAccount', () => {
     };
     sessionStorage.setItem('email', email);
 
-    await waitFor(() => {
-      renderDefault();
-    });
+    await waitFor(renderDefault);
 
     // Set up finish sign up button onClick jest function
     const finishSignUpButton = screen.getByRole('button', {
