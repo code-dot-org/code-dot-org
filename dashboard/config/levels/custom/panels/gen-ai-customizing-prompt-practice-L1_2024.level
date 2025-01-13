@@ -32,8 +32,8 @@
       }
     ],
     "name_suffix": "_2024",
-    "offer_browser_tts": "false"
+    "offer_browser_tts": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:53:24.086+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L1\"},{\"changed_at\":\"2024-09-11 17:50:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-09-13 13:36:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-09-13 13:37:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-10-27 17:59:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:53:24.086+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L1\"},{\"changed_at\":\"2024-09-11 17:50:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-09-13 13:36:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-09-13 13:37:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-10-27 17:59:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-01-10 21:36:54 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>
