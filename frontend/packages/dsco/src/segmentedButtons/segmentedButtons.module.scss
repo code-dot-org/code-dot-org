@@ -36,6 +36,7 @@
     // Hover styles
     &:hover {
       box-shadow: none;
+      cursor: pointer;
     }
 
     // Focus styles
@@ -57,6 +58,7 @@
       border-color: var(--borders-neutral-disabled);
       background-color: transparent;
       color: var(--text-neutral-disabled);
+      cursor: not-allowed;
     }
   }
 
