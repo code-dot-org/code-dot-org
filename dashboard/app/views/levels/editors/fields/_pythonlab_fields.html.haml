@@ -8,10 +8,6 @@
 
   #neighborhood{class: ('collapse' if @level.mini_app != 'neighborhood')}
     = render partial: 'levels/editors/fields/neighborhood_settings', locals: {f: f}
-    -# .field
-    -#   = f.label :serialized_maze
-    -#   - maze_value = @level.serialized_maze ? JSON.pretty_generate(@level.serialized_maze) : ''
-    -#   = f.text_area :serialized_maze, value: maze_value, rows: 20, class: 'input-block-level'
 
 :javascript
   function toggleFields(val) {
