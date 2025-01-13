@@ -51,16 +51,20 @@
   }
 
   // Hover styles
-  &:hover input[type='radio']:not(:disabled) {
-    + .radioIcon {
-      background: var(--background-brand-teal-extra-light);
-    }
-    &:checked + .radioIcon {
-      border-color: var(--borders-brand-teal-strong);
-      background: var(--background-neutral-primary);
+  &:hover {
+    cursor: pointer;
 
-      &::after {
-        background: var(--background-brand-teal-strong);
+    input[type='radio']:not(:disabled) {
+      + .radioIcon {
+        background: var(--background-brand-teal-extra-light);
+      }
+      &:checked + .radioIcon {
+        border-color: var(--borders-brand-teal-strong);
+        background: var(--background-neutral-primary);
+
+        &::after {
+          background: var(--background-brand-teal-strong);
+        }
       }
     }
   }
