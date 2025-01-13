@@ -38,3 +38,5 @@ export const US_COUNTRY_CODE = 'US';
 export const ZIP_REGEX = new RegExp(/(^(?!00000)\d{5}$)/);
 export const SELECT_COUNTRY = 'selectCountry';
 export const SCHOOL_ZIP_SEARCH_URL = '/dashboardapi/v1/schoolzipsearch/';
+
+export const MAX_DISPLAY_NAME_LENGTH = 70;

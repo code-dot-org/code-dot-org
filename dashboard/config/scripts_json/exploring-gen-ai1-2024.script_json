@@ -15,11 +15,12 @@
         "ai"
       ],
       "tts": true,
+      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:17:30 UTC",
+    "serialized_at": "2025-01-09 22:46:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -50,6 +51,18 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "key": "7980dfff-3651-44ff-8cbd-c7757cec4793",
+            "notice": "Generative AI Professional Development!",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/courses/self-paced-exploring-gen-ai-2024",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": true,
+            "buttonText": "Learn More"
+          }
+        ],
         "overview": "\nThis lesson introduces the learning goals focused on artificial intelligence (AI), transitioning into generative AI. It begins with a discussion on the impact of past technological innovations on society. Students then explore the concept of generative AI through the lens of someone familiar only with its hype, aiming to foster understanding and responsible engagement with AI technology. A key part of the lesson is the introduction of the Input, Storage, Processing, Output (ISPO) framework, essential for understanding generative AI's workings. The lesson concludes with students receiving a graphic organizer for the unit and sharing their anticipations about learning more on generative AI.",
         "preparation": "- Print copies of the graphic organizer for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Explore some of the key themes from this unit, like how we being informed about Artificial Intelligence can help us make better decisions on when and how to use it."
@@ -229,6 +242,18 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "announcements": [
+          {
+            "key": "9b2a2caf-3194-4f99-b8d2-070797e38600",
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
         "overview": "In this lesson, students create their project for the unit. In the project, students read several generative AI opinion articles that contain misrepresentations or exaggerations of what generative AI is capable of and how it works. Using their newfound knowledge from this unit, students draft a rebuttal and create an artifact to help visualize or conceptualize an aspect of their argument. This project acts as a summative assessment for the content of this unit.",
         "preparation": "- Print copies of the project guide for each student\n- Print multiple copies of the four Generative AI Opinion Articles for students to review\n- Decide how students will submit their work for the project\n- Decide which options for student artifacts you would like to emphasize for students\n- Decide how to break up the multi-day lesson with your class schedule\n- Run through the slide deck and videos ahead of time",
         "student_overview": "Learn how to apply knowledge about generative AI to help educate and inform people who may have misconceptions"
@@ -242,10 +267,22 @@
   ],
   "lesson_activities": [
     {
-      "key": "c00b0c77-8ec2-45e0-9b05-1abe4f4d9fa7",
+      "key": "22d3d188-f273-4371-aca7-b18aa6a4ad14",
       "position": 1,
       "properties": {
-        "name": "Pre-Survey"
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22d3d188-f273-4371-aca7-b18aa6a4ad14",
+        "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "",
+        "script.name": "exploring-gen-ai1-2024"
+      }
+    },
+    {
+      "key": "c00b0c77-8ec2-45e0-9b05-1abe4f4d9fa7",
+      "position": 2,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "c00b0c77-8ec2-45e0-9b05-1abe4f4d9fa7",
@@ -256,7 +293,7 @@
     },
     {
       "key": "2d705aed-8e3d-4e3f-9e6a-1b5d893dc0be",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Student Levels"
       },
@@ -269,7 +306,7 @@
     },
     {
       "key": "36ce8b57-c558-4d79-8337-fd65c80748e7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -283,7 +320,7 @@
     },
     {
       "key": "8f9252a0-18a4-4977-b796-c8f09398a202",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -297,7 +334,7 @@
     },
     {
       "key": "f866b543-9734-490e-9d89-35f78982e4c7",
-      "position": 5,
+      "position": 6,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -837,7 +874,7 @@
       "key": "1a6048ca-1891-4a49-82e4-c7a1f179f6d5",
       "position": 4,
       "properties": {
-        "name": "Student Post-Unit Survey"
+        "name": "End of the Unit"
       },
       "seeding_key": {
         "lesson_activity.key": "1a6048ca-1891-4a49-82e4-c7a1f179f6d5",
@@ -848,6 +885,18 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "21eda043-35e9-42bc-b199-7b49de86d0c9",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNd_dCseOMzvPpnRJsUYD4fv) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Professional Development:** We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024) before starting the unit. The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "21eda043-35e9-42bc-b199-7b49de86d0c9",
+        "lesson_activity.key": "22d3d188-f273-4371-aca7-b18aa6a4ad14"
+      }
+    },
     {
       "key": "40d2e7b7-b074-4300-a4b8-cb41e443cc30",
       "position": 1,
@@ -870,6 +919,18 @@
       },
       "seeding_key": {
         "activity_section.key": "2143cb5c-54d5-40c8-9552-c3c4ab889a55",
+        "lesson_activity.key": "c00b0c77-8ec2-45e0-9b05-1abe4f4d9fa7"
+      }
+    },
+    {
+      "key": "620113df-6c9d-43f7-bda1-695ef047e51e",
+      "position": 3,
+      "properties": {
+        "description": "**LEADERS Framework**: Throughout this unit, there are opportunities for students to discuss the impacts of generative AI on society, both the intended and unintended consequences. Navigating these conversations so they elevate and honor the experiences of your students, while also keeping the conversation grounded and connected to the lesson content, requires careful consideration and intentionality as the discussions are happening.\n\nTo help prepare for these moments, we recommend reviewing the [LEADERS Framework](https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit) for facilitating lessons and discussions involving the societal effects of AI, including bias and ethical considerations. Not all of the tenets are applicable to every lesson, but many of the teaching tips and discussion goals in this lesson follow the principles outlined in this framework.",
+        "name": "Preparing to Lead Discussions"
+      },
+      "seeding_key": {
+        "activity_section.key": "620113df-6c9d-43f7-bda1-695ef047e51e",
         "lesson_activity.key": "c00b0c77-8ec2-45e0-9b05-1abe4f4d9fa7"
       }
     },
@@ -2592,6 +2653,7 @@
       "position": 1,
       "properties": {
         "description": "Please have students take the post-survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Student End-Of-Unit Survey",
         "progression_name": "Student Post-Survey"
       },
       "seeding_key": {
@@ -2603,7 +2665,8 @@
       "key": "825a165c-0793-4bfb-bba0-7ef15ac00155",
       "position": 2,
       "properties": {
-        "description": "While students take their survey, please [complete this post-survey for teachers as well](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data[unit_number]=unit_1). Your feedback is valued and appreciated!"
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "825a165c-0793-4bfb-bba0-7ef15ac00155",
@@ -3915,6 +3978,18 @@
     {
       "name": "LEADERS Framework",
       "url": "https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit",
+      "key": "leaders_framework",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "leaders_framework"
+      }
+    },
+    {
+      "name": "LEADERS Framework",
+      "url": "https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit",
       "key": "leaders_framework_1",
       "properties": {
         "audience": "Teacher",
@@ -4339,6 +4414,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Generative AI",
         "resource.key": "introduction_to_large_language_models_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "resource.key": "leaders_framework"
       }
     },
     {

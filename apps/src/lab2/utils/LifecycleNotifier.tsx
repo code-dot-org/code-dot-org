@@ -50,6 +50,7 @@ class LifecycleNotifier {
         this.listeners[event].splice(index, 1);
       }
     }
+    return this;
   }
 
   notify<T extends LifecycleEvent>(event: T, ...args: CallbackArgs[T]) {

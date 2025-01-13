@@ -444,6 +444,129 @@ component/entity. All of that Changelogs will be combined into one in this file 
 - created component's skeleton
 - Initial commit
 
+## `componentLibrary/modal`
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/62655)
+
+- implemented component
+- added tests
+- added storybook
+- component is now `Ready for Dev`
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/62196)
+
+- created component's skeleton
+- Initial commit
+
+## `componentLibrary/popover`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/63073)
+
+- updated `Popover` props to support native HTML Div element attributes
+
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/62920)
+
+- updated color variables to use `primitiveColors.css`
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/62746)
+
+- rewritten `PopoverTest`, `WithPopoverTest` in typescript
+- refactored/optimized `PopoverTest.tsx`, `WithPopoverTest.tsx`
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/59328)
+
+- implemented component
+- added tests
+- added storybook
+- component is now `Ready for Dev`
+
+## `componentLibrary/radioButton`
+
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62925)
+
+- rewritten `RadioButtonTest`, `RadioButtonGroupTest` in typescript
+- refactored/optimized `RadioButtonTest.tsx`, `RadioButtonGroupTest.tsx`
+- minor Changelog formatting update
+
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/61173)
+
+- set `position: relative;` for `RadioButton` wrapping `label` element to fix the issue when invisible input is
+  positioned far from actual `RadioButton`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/60787)
+
+- added support of custom `className` for `RadioButton`
+- added support of common custom className (`commonClassName`) for `RadioButtonGroup`
+- added support of custom RadioButton content (added `children` prop to `RadioButton`)
+
+## [0.2.3](https://github.com/code-dot-org/code-dot-org/pull/59444)
+
+- removed label fixed height
+- fixed radio button icon shrinking when the label is very long
+
+## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/)
+
+- focus-styles update - display focus outline only on keyboard (not mouse) navigation
+
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/53580)
+
+- added tests for RadioButton, RadioButtonGroup components
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/52754)
+
+- added CHANGELOG.md
+- updated README.md
+- added Documentation of props and components, storybook documentation
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/52335)
+
+- Initial release
+
+## `componentLibrary/segmentedButtons`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/62807)
+
+- rewritten `SegmentedButtonsTest` in typescript
+- refactored/optimized `SegmentedButtonsTest.tsx`
+- removed old todo
+- added changelog and docs for 0.2.1 version update
+
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/60816)
+
+- added support of `id` prop for `_SegmentedButton` component
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/61719)
+
+- `SegmentedButtons` now use `DSCO Variables` for colors.
+- `SegmentedButtons` now support `Light` and `Dark` themes.
+- added `color` prop, possible values: `primary`, `strong`.
+
+## [0.1.1](https://github.com/code-dot-org/code-dot-org/pull/57439)
+
+- fix SegmentedButtons inner text vertical alignment
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/52357)
+
+- Initial release
+
+## `componentLibrary/tags`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/62996)
+
+- refactored `Tags` tp use DSCO `Tooltip` instead of react-bootstrap `Tooltip`
+- removed unneeded styles
+- updated color variables to use `primitiveColors.css`
+- rewritten `TagsTest` in typescript
+- refactored/optimized and added more tests to `TagsTest.tsx`
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/58130)
+
+- Added `tabIndex={0}` to ensure tooltip shows up during tab navigation. See PR for more discussion.
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/55420)
+
+- Initial release
+
 ## `componentLibrary/textField`
 
 ## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62723)
@@ -480,6 +603,36 @@ component/entity. All of that Changelogs will be combined into one in this file 
 ## [0.0.1](https://github.com/code-dot-org/code-dot-org/pull/58494)
 
 - Create skeleton for TextField component
+
+## `componentLibrary/toggle`
+
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/63073)
+
+- updated `Toggle` props to support native HTML Div element attributes
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/62744)
+
+- rewritten `ToggleTest` in typescript
+- refactored/optimized `ToggleTest.tsx`
+
+## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/)
+
+- focus-styles update - display focus outline only on keyboard(not mouse) navigation
+
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/53581)
+
+- added tests for Toggle component
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/52755)
+
+- add CHANGELOG.md
+- updated README.md
+- add Documentation of props and component, storybook documentation
+- add React.memo usage
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/52283)
+
+- Initial release
 
 ## `componentLibrary/tooltip`
 

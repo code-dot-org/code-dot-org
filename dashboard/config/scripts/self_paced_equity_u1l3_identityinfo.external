@@ -1,0 +1,24 @@
+name 'self-paced-equity-U1L3-identityinfo'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Your Identity as an Educator
+
+#### This lesson will cover your identity as an educator. You are made up of many different identities, experiences, beliefs, and cultures which you bring into the classroom. This is a good thing! To help you become a better, more equity-minded educator, we'll facilitate a deep dive into who you are.
+
+#### Our goal is to help you build a **reflexive practice** - that is, one that allows you to reflect on your actions and beliefs - that will inform your work toward diversity, access, and inclusion.
+
+## Why Identity?
+
+### Consider the following quote:
+
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.2; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"><i>One aspect of the role of any person charged with supporting change and growth in others and with addressing and supporting folks across difference, is getting comfortable talking about identity.  Identity and our own experience and interpretation of our identities is deeply personal. Comfort in our own identities allows us to be humble, make room for the learning of others, and listen intently with care.</i>
+<br><br>- The Equity Collaborative
+</p></div>
+<br>
+
+#### What does it mean to have comfort in your own identities? Of course, this means that you can celebrate what makes you unique and how it manifests in your teaching practices. But it also means that you can recognize privilege inherent to historically-favored classes of identity, as well as how certain identities have been oppressed through racism, ableism, sexism, homophobia, and so on. 
+
+#### Your experiences, privileges, and challenges may influence the way you engage with your students, your teaching methods, and the relationships you build in your computer science classroom. Being aware of your own identity allows you to approach your teaching with greater empathy and openness.
+MARKDOWN

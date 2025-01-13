@@ -1,9 +1,15 @@
-import {OptionsToAvoid, Lab2EntryPoint, Theme} from '@cdo/apps/lab2/types';
-import MusicView from '@cdo/apps/music/views/MusicView'; // avoid hardcoding imports like this in an entrypoint.tsx
+import {lazy} from 'react';
+
+import {Lab2EntryPoint, Theme} from '@cdo/apps/lab2/types';
 
 export const MusicEntryPoint: Lab2EntryPoint = {
-  backgroundMode: true,
+  backgroundMode: false,
   theme: Theme.DARK,
-  view: OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
-  hardcodedView: MusicView,
+  view: lazy(() =>
+    import(/* webpackChunkName: "music" */ './index.js').then(
+      ({MusicView}) => ({
+        default: MusicView,
+      })
+    )
+  ),
 };

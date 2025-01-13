@@ -62,6 +62,7 @@
   "female": "Female",
   "parentEmailPlaceholder": "parentemail@email.com",
   "display_name_error_message": "Please enter your display name",
+  "display_name_too_long_error_message": "Display name is too long. Max is {maxLength} characters.",
   "email_error_message": "Please enter a valid email",
   "age_error_message": "Please select an age",
   "state_error_message": "Please select a state",
