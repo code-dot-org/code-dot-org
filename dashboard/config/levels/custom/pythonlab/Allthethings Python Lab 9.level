@@ -13,7 +13,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "from neighborhood import Painter\n\np = Painter()\nprint(p.get_x())\np.turn_left()\np.paint('Blue')\np.scrape_paint()\np.move()\np.set_paint(10)\nprint(p.get_my_paint())",
+          "contents": "from neighborhood import Painter\n\np = Painter()\nprint(p.get_x())\nprint(p.turn_left())\nprint(p.paint('Blue'))\nprint(p.scrape_paint())\nprint(p.move())\np.set_paint(10)\nprint(p.get_my_paint())\n",
           "folderId": "0",
           "active": false,
           "open": true,
@@ -130,8 +130,8 @@
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 20,
+          "assetId": 303
         }
       ],
       [
@@ -391,6 +391,6 @@
     "mini_app": "neighborhood"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T14:14:11.864+00:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2025-01-07 14:21:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-07 23:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-07 23:43:45 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T14:14:11.864+00:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2025-01-07 14:21:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-07 23:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-07 23:43:45 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-10 17:29:27 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-10 17:31:14 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-10 17:34:05 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 15:31:31 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 15:32:44 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 15:48:40 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 15:51:15 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 17:02:39 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 17:03:42 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 20:54:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
