@@ -1,5 +1,5 @@
-from neighborhood_runtime_exception import NeighborhoodRuntimeException
-from exception_keys import ExceptionKeys
+from .neighborhood_runtime_exception import NeighborhoodRuntimeException
+from .exception_keys import ExceptionKeys
 
 class Grid:
     def __init__(self, squares):
