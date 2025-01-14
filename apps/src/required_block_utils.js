@@ -268,17 +268,18 @@ function attributesEquivalent(expected, given) {
  * Checks whether the children of two different elements are equivalent
  */
 function childrenEquivalent(expected, given, ignoreChildBlocks) {
-  var filterFn = function (node) {
+  const filterFn = function (node) {
     // CDO Blockly returns tag names in all caps
-    var tagName = node.tagName && node.tagName.toLowerCase();
-    return (
-      // Google Blockly sometimes adds a mutation where CDO Blockly would not.
-      tagName === 'mutation' ||
-      (ignoreChildBlocks && tagName !== 'next' && tagName !== 'statement')
-    );
+    const tagName = node.tagName && node.tagName.toLowerCase();
+    // Google Blockly sometimes adds a mutation where CDO Blockly would not.
+    const isMutation = tagName === 'mutation';
+    const isIgnorableChild =
+      ignoreChildBlocks && (tagName === 'next' || tagName === 'statement');
+
+    return !isMutation && !isIgnorableChild;
   };
-  var children1 = Array.prototype.filter.call(expected.childNodes, filterFn);
-  var children2 = Array.prototype.filter.call(given.childNodes, filterFn);
+  const children1 = Array.prototype.filter.call(expected.childNodes, filterFn);
+  const children2 = Array.prototype.filter.call(given.childNodes, filterFn);
 
   if (expected.getAttribute('inputcount') === '???') {
     // If required block ignores inputcount, allow arbitrary children
