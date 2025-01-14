@@ -29,7 +29,9 @@ class NeighborhoodSignalMessage:
         """
         @return: A string representing the neighborhood signal message
         """
-        formatted_message = f'[{self.type.value}] {self.value} {json.dumps(self.detail) if self.detail else ""}'
+        formatted_message = f'[{self.type.value}] {self.value}'
+        if self.detail:
+            formatted_message += f' {json.dumps(self.detail)}'
         return formatted_message
 
     def to_json(self) -> str:

@@ -6,7 +6,7 @@ def test_initialize_painter():
   assert painter.get_y() == 0
   assert painter.get_direction() == "East"
   assert painter.get_my_paint() == 0
-  assert painter.turn_left() == '[PAINTER] TURN_LEFT '
+  assert painter.turn_left() == '[PAINTER] TURN_LEFT'
   assert painter.paint('red') == '[PAINTER] PAINT {"color": "red"}'
 
 def test_set_paint():
