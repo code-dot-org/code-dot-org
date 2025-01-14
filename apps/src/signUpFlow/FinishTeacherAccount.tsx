@@ -132,11 +132,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
     };
     fetchGdprData();
 
-    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY) || redirectUrl;
+    const userReturnToHref =
+      sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY) || redirectUrl;
     if (userReturnToHref) {
       setUserReturnTo(userReturnToHref);
     }
-  }, [countryCode, usIp]);
+  }, [countryCode, usIp, redirectUrl]);
 
   // GDPR is valid if
   // 1. The fetch call has completed AND

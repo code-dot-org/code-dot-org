@@ -1,9 +1,8 @@
 import classNames from 'classnames';
-import React, {useContext, useRef, useState} from 'react';
+import React, {useContext, useState} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
@@ -15,8 +14,11 @@ import {
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import {ACCOUNT_TYPE_SESSION_KEY, EMAIL_SESSION_KEY} from '../../../../../../signUpFlow/signUpFlowConstants';
 
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+} from '../../../../../../signUpFlow/signUpFlowConstants';
 import {LtiProviderContext} from '../../context';
 
 import styles from '../../../../../link-account.module.scss';
