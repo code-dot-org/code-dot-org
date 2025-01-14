@@ -5,7 +5,7 @@
 groups = ["default", "dev"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:ba5a2d2bfd75ec2bbf8beece7ed05c9bb6c4dec04b2084a0e176135e1108d159"
+content_hash = "sha256:d1e3bb62304bfdc106c17bf1e82aee7409f72ff20c8ebe08050f5327ee45f302"
 
 [[metadata.targets]]
 requires_python = "==3.12.*"
@@ -454,7 +454,7 @@ requires_python = "==3.12.*"
 editable = true
 path = "./python/pythonlab/neighborhood"
 summary = ""
-groups = ["dev"]
+groups = ["default", "dev"]
 
 [[package]]
 name = "numpy"

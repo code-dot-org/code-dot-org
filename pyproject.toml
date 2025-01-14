@@ -4,6 +4,7 @@ requires-python = "==3.12.*"
 dependencies = [
     # Register local python packages from /python here, and in dev-dependencies below:
     "pycdo @ file:///${PROJECT_ROOT}/python/pycdo",
+    "neighborhood @ file:///${PROJECT_ROOT}/python/pythonlab/neighborhood",
     "pythonlab_setup @ file:///${PROJECT_ROOT}/python/pythonlab/pythonlab_setup",
     "unittest_runner @ file:///${PROJECT_ROOT}/python/pythonlab/unittest_runner",
 
