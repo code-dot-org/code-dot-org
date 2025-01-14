@@ -1,5 +1,4 @@
 import json
-from typing import Dict, Optional
 from .signal_message_type import SignalMessageType
 
 class NeighborhoodSignalMessage:
@@ -8,11 +7,11 @@ class NeighborhoodSignalMessage:
         {
             "type": <SignalMessageType>,
             "value": <"message data">,
-            "detail": <"message details">
+            "detail": <dict>
         }
     """
 
-    def __init__(self, type: SignalMessageType, value: str, detail: Optional[str] = None):
+    def __init__(self, type: SignalMessageType, value: str, detail: dict = None):
         self.type = type
         self.value = value
         self.detail = detail
@@ -23,14 +22,14 @@ class NeighborhoodSignalMessage:
     def get_value(self) -> str:
         return self.value
 
-    def get_detail(self) -> Optional[str]:
+    def get_detail(self) -> dict | None:
         return self.detail
 
     def get_formatted_message(self) -> str:
         """
         @return: A string representing the neighborhood signal message
         """
-        formatted_message = f'[{self.type.value}] {self.value}{": " + self.detail if self.detail else ""}'
+        formatted_message = f'[{self.type.value}] {self.value} {json.dumps(self.detail) if self.detail else ""}'
         return formatted_message
 
     def to_json(self) -> str:
@@ -39,7 +38,7 @@ class NeighborhoodSignalMessage:
         """
         return json.dumps(self.as_dict())
 
-    def as_dict(self) -> Dict[str, Optional[str]]:
+    def as_dict(self) -> dict[str, str | dict | None]:
         """
         Returns the NeighborhoodSignalMessage as a dictionary.
         """

@@ -39,7 +39,7 @@ class Painter:
     Args:
       color (str): The color to paint the square.
     """
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.PAINT.value, color)
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.PAINT.value, {'color': color})
     return signal_message.get_formatted_message()
 
   def scrape_paint(self):
