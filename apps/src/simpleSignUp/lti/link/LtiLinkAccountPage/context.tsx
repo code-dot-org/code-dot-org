@@ -10,7 +10,7 @@ export interface LtiProviderContextProps {
   existingAccountUrl: URL;
   emailAddress: string;
   newCtaType: 'continue' | 'new';
-  userType?: string;
+  userType: string;
 }
 
 export const LtiProviderContext = createContext<

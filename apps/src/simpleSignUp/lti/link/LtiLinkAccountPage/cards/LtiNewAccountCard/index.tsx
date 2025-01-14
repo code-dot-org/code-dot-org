@@ -13,7 +13,9 @@ import {
   CardHeader,
 } from '@cdo/apps/sharedComponents/card';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+import {ACCOUNT_TYPE_SESSION_KEY, EMAIL_SESSION_KEY} from '../../../../../../signUpFlow/signUpFlowConstants';
 
 import {LtiProviderContext} from '../../context';
 
@@ -22,7 +24,6 @@ import styles from '../../../../../link-account.module.scss';
 const LtiNewAccountCard = () => {
   const {ltiProviderName, newAccountUrl, emailAddress, userType} =
     useContext(LtiProviderContext)!;
-  const finishSignupFormRef = useRef<HTMLFormElement>(null);
 
   const [isSaving, setIsSaving] = useState(false);
 
@@ -37,12 +38,15 @@ const LtiNewAccountCard = () => {
       PLATFORMS.BOTH
     );
     analyticsReporter.sendEvent(
-      'lti_new_account_click',
+      EVENTS.LTI_NEW_ACCOUNT_CLICK,
       eventPayload,
       PLATFORMS.STATSIG
     );
 
-    finishSignupFormRef.current?.submit();
+    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType);
+    sessionStorage.setItem(EMAIL_SESSION_KEY, emailAddress);
+
+    navigateToHref(newAccountUrl);
   };
 
   const handleNewAccountSubmit = async () => {
@@ -77,18 +81,6 @@ const LtiNewAccountCard = () => {
         {i18n.ltiLinkAccountNewAccountCardContent({
           providerName: ltiProviderName,
         })}
-
-        <form
-          // eslint-disable-next-line react/forbid-dom-props
-          data-testid={'new-account-form'}
-          action={newAccountUrl}
-          ref={finishSignupFormRef}
-          method="post"
-          className={styles.newAccountForm}
-        >
-          <RailsAuthenticityToken />
-          <input type="hidden" value={emailAddress} name={'user[email]'} />
-        </form>
       </CardContent>
       <CardActions>
         <Button

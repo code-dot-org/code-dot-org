@@ -60,7 +60,8 @@ const roleItemGroups = [
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
   countryCode: string;
-}> = ({usIp, countryCode}) => {
+  redirectUrl?: string;
+}> = ({usIp, countryCode, redirectUrl}) => {
   const schoolInfo = useSchoolInfo({usIp});
   const [name, setName] = useState('');
   const [nameErrorMessage, setNameErrorMessage] = useState(null);
@@ -131,7 +132,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
     };
     fetchGdprData();
 
-    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY);
+    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY) || redirectUrl;
     if (userReturnToHref) {
       setUserReturnTo(userReturnToHref);
     }

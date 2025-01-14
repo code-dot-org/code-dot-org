@@ -17,6 +17,7 @@ const DEFAULT_CONTEXT: LtiProviderContextProps = {
   emailAddress: 'test@code.org',
   newCtaType: 'new',
   continueAccountUrl: '/continue',
+  userType: 'teacher',
 };
 
 jest.mock('@cdo/apps/utils', () => ({

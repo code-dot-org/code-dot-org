@@ -18,6 +18,7 @@ const getContext = (ltiProvider: LtiProvider): LtiProviderContextProps => {
     emailAddress: 'test@code.org',
     newCtaType: 'new',
     continueAccountUrl: '/continue',
+    userType: 'teacher',
   };
 };
 
