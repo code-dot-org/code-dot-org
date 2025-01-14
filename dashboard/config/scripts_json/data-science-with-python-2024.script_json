@@ -5,18 +5,19 @@
     "login_required": false,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS",
+      "curriculum_umbrella": "Foundations of CS and AI",
       "is_migrated": true,
       "pilot_experiment": "data-science-pilot-2024",
       "show_calendar": true,
       "topic_tags": [
         "data_science"
       ],
+      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-08 21:41:25 UTC",
+    "serialized_at": "2025-01-13 18:41:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -4,7 +4,7 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import {Stub} from '../';
 
-describe('Stub Component', () => {
+describe('Stub Component Tests', () => {
   test('renders with correct label', () => {
     render(<Stub backgroundColor="black" label="Test Label" />);
     expect(screen.getByText('Test Label')).toBeInTheDocument();

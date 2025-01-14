@@ -287,6 +287,162 @@ component/entity. All of that Changelogs will be combined into one in this file 
 - created component's skeleton
 - Initial commit
 
+## `componentLibrary/dropdown/actionDropdown`
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/62927)
+
+- rewritten `ActionDropdownTest` in typescript
+- refactored/optimized `ActionDropdownTest.tsx`
+- minor Changelog formatting update
+
+## [0.1.2](https://github.com/code-dot-org/code-dot-org/pull/62917)
+
+- updated color variables to use `primitiveColors.css`
+
+## [0.1.1](https://github.com/code-dot-org/code-dot-org/pull/60025)
+
+- minor menu items width update
+- minor option type refactor
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/59886)
+
+- Created `ActionDropdown` component
+- created stories for `ActionDropdown` component
+- created tests for `ActionDropdown` component
+- created documentation for `ActionDropdown` component
+- Initial commit
+
+## `componentLibrary/dropdown/checkboxDropdown`
+
+## [0.8.0](https://github.com/code-dot-org/code-dot-org/pull/62659)
+
+- add optional hideControls prop to hide "Select all" and "Clear all" buttons
+- require translated "Select all" and "Clear all" button text as props unless buttons are hidden
+
+## [0.7.0](https://github.com/code-dot-org/code-dot-org/pull/62910)
+
+- made `size` prop optional since we have default value for this prop
+- rewritten `CheckboxDropdownTest` in typescript
+- refactored/optimized `CheckboxDropdownTest.tsx`
+
+## [0.6.1](https://github.com/code-dot-org/code-dot-org/pull/62917)
+
+- updated color variables to use `primitiveColors.css`
+
+## [0.6.0](https://github.com/code-dot-org/code-dot-org/pull/62023)
+
+- added `readOnly` state
+- added `styleAsFormField` support
+- added `helperMessage`, `helperIcon`, `errorMessage` support
+
+## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/60369)
+
+- used Design System `Button` component instead of Legacy Buttons for bottom buttons menu section
+
+## [0.4.2](https://github.com/code-dot-org/code-dot-org/pull/60269)
+
+- used `div` instead of `form` html tag for menu container element
+
+## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/60025)
+
+- minor menu items width update
+- minor option type refactor
+
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/58637)
+
+- added `gray` color to `CheckboxDropdown`
+- fixed `thin` `white` dropdown text color
+
+## [0.3.2](https://github.com/code-dot-org/code-dot-org/pull/58469)
+
+- added support of all `aria-` attributes by `CheckboxDropdown` component
+
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/58209)
+
+- minor styles updates for consistency
+- fixed and updated documentation
+- added `className` prop
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/57827)
+
+- added `thick` and `thin` label style types (`labelType` prop)
+- added black and white background color fill
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/56683)
+
+- moved `CheckboxDropdown` to -> `dropdown/checkboxDropdown`
+- reworked `CheckboxDropdown` to use `_CustomDropdown` component
+
+## [0.1.1](https://github.com/code-dot-org/code-dot-org/pull/56543)
+
+- update stories to display all the props in props control area
+- move dropdownColors to separate type & key-value object map
+- rename DropdownProvider to DropdownProviderWrapper
+- change keyCode to key
+- minor improvements
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/56283)
+
+- Created `CheckboxDropdown` component
+- created stories for `CheckboxDropdown` component
+- created tests for `CheckboxDropdown` component
+- created documentation for `CheckboxDropdown` component
+- Initial commit
+
+## `componentLibrary/dropdown/iconDropdown`
+
+## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/62926)
+
+- made `size` prop optional since we have default value for this prop
+- rewritten `IconDropdownTest` in typescript
+- refactored/optimized `IconDropdownTest.tsx`
+
+## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/62917)
+
+- updated color variables to use `primitiveColors.css`
+
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62023)
+
+- added `readOnly` state
+- added `styleAsFormField` support
+- added `helperMessage`, `helperIcon`, `errorMessage` support
+
+## [0.3.2](https://github.com/code-dot-org/code-dot-org/pull/60269)
+
+- used `div` instead of `form` html tag for menu container element
+
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/60025)
+
+- minor menu items width update
+- minor option type refactor
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/58637)
+
+- added `gray` color to `IconDropdown`
+- fixed `thin` `white` dropdown text color
+
+## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/58469)
+
+- added support of all `aria-` attributes by `IconDropdown` component
+
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/58209)
+
+- minor styles and stories updates for consistency
+- added `className` prop
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/57827)
+
+- added `thick` and `thin` label style types (`labelType` prop)
+- added black and white background color fill
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/56683)
+
+- Created `IconDropdown` component
+- created stories for `IconDropdown` component
+- created tests for `IconDropdown` component
+- created documentation for `IconDropdown` component
+- Initial commit
+
 ## `componentLibrary/dropdown/simpleDropdown`
 
 ## [0.8.1](https://github.com/code-dot-org/code-dot-org/pull/62917)
@@ -444,6 +600,20 @@ component/entity. All of that Changelogs will be combined into one in this file 
 - created component's skeleton
 - Initial commit
 
+## `componentLibrary/modal`
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/62655)
+
+- implemented component
+- added tests
+- added storybook
+- component is now `Ready for Dev`
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/62196)
+
+- created component's skeleton
+- Initial commit
+
 ## `componentLibrary/popover`
 
 ## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/63073)
@@ -465,6 +635,48 @@ component/entity. All of that Changelogs will be combined into one in this file 
 - added tests
 - added storybook
 - component is now `Ready for Dev`
+
+## `componentLibrary/radioButton`
+
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62925)
+
+- rewritten `RadioButtonTest`, `RadioButtonGroupTest` in typescript
+- refactored/optimized `RadioButtonTest.tsx`, `RadioButtonGroupTest.tsx`
+- minor Changelog formatting update
+
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/61173)
+
+- set `position: relative;` for `RadioButton` wrapping `label` element to fix the issue when invisible input is
+  positioned far from actual `RadioButton`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/60787)
+
+- added support of custom `className` for `RadioButton`
+- added support of common custom className (`commonClassName`) for `RadioButtonGroup`
+- added support of custom RadioButton content (added `children` prop to `RadioButton`)
+
+## [0.2.3](https://github.com/code-dot-org/code-dot-org/pull/59444)
+
+- removed label fixed height
+- fixed radio button icon shrinking when the label is very long
+
+## [0.2.2](https://github.com/code-dot-org/code-dot-org/pull/)
+
+- focus-styles update - display focus outline only on keyboard (not mouse) navigation
+
+## [0.2.1](https://github.com/code-dot-org/code-dot-org/pull/53580)
+
+- added tests for RadioButton, RadioButtonGroup components
+
+## [0.2.0](https://github.com/code-dot-org/code-dot-org/pull/52754)
+
+- added CHANGELOG.md
+- updated README.md
+- added Documentation of props and components, storybook documentation
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/52335)
+
+- Initial release
 
 ## `componentLibrary/segmentedButtons`
 

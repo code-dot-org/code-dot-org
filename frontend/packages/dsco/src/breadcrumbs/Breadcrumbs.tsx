@@ -45,7 +45,7 @@ const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
         className,
       )}
       // TODO [Design2-197] - Create a visual test for this case instead of checking for class name
-      // eslint-disable-next-line react/forbid-dom-props
+
       data-testid={`breadcrumbs-${name}`}
     >
       {breadcrumbs.map(({text, href, ...rest}, i) => (
