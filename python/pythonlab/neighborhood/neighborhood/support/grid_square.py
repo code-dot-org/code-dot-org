@@ -84,4 +84,3 @@ class GridSquare:
         else:
             self.square_type = GridSquare.SquareType.UNKNOWN
             self.passable = False
-
