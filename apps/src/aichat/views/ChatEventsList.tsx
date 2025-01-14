@@ -1,5 +1,6 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
+import Button from '@cdo/apps/componentLibrary/button';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../locale';
@@ -21,6 +22,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
 }) => {
+  const [atBottomOfContent, setAtBottomofContent] = useState(true);
   const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
 
   // Compare the chat events  as a string since the object reference will change on every update.
@@ -70,6 +72,29 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     }
   };
 
+  useEffect(() => {
+    const container = conversationContainerRef.current;
+
+    const handleScroll = () => {
+      if (container) {
+        console.log(`scrollTop: ${container.scrollTop}`);
+        console.log(`clientHeight: ${container.clientHeight}`);
+        console.log(`scrollHeight: ${container.scrollHeight}`);
+        const isAtBottom =
+          container.scrollTop + container.clientHeight + 1 >=
+          container.scrollHeight;
+
+        setAtBottomofContent(isAtBottom);
+      }
+    };
+
+    container?.addEventListener('scroll', handleScroll);
+
+    return () => {
+      container?.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   useEffect(scrollToBottom, [eventsString, isWaitingForChatResponse]);
 
   return (
@@ -98,13 +123,21 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         ))}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
       </div>
-      <button
-        type="button"
-        style={{position: 'absolute', bottom: 0, right: 0}}
-        onClick={scrollToBottom}
-      >
-        Hello
-      </button>
+      {!atBottomOfContent && (
+        <div
+          style={{display: 'flex', justifyContent: 'center', width: '100%'}}
+          className={moduleStyles.floatingScrollToBottomButton}
+        >
+          <Button
+            isIconOnly
+            icon={{iconName: 'arrow-down'}}
+            size="s"
+            color="black"
+            type="secondary"
+            onClick={scrollToBottom}
+          />
+        </div>
+      )}
     </div>
   );
 };

@@ -26,6 +26,11 @@ $tabs-default-spacing: 4px;
   gap: $default-spacing;
 }
 
+.floatingScrollToBottomButton {
+  position: absolute;
+  bottom: 5px;
+}
+
 .tabsContainer {
   background-color: #eaebeb;
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
