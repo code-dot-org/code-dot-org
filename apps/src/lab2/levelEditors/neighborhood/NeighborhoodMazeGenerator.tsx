@@ -8,18 +8,18 @@ import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import {categories, imageTiles} from './constants';
 
-import moduleStyles from './neighborhood-grid-generator.module.scss';
+import moduleStyles from './neighborhood-maze-generator.module.scss';
 
-interface NeighborhoodGridGeneratorProps {
-  setMaze: (maze: string) => void;
-  gridSize?: number;
-  initialGrid?: string;
+interface NeighborhoodMazeGeneratorProps {
+  saveMaze: (maze: string) => void;
+  mazeSize?: number;
+  initialMaze?: string;
 }
 
-const NeighborhoodGridGenerator: React.FunctionComponent<
-  NeighborhoodGridGeneratorProps
-> = ({setMaze, gridSize, initialGrid}) => {
-  const [grid, setGrid] = useState<MazeCell[][] | undefined>();
+const NeighborhoodMazeGenerator: React.FunctionComponent<
+  NeighborhoodMazeGeneratorProps
+> = ({saveMaze, mazeSize, initialMaze}) => {
+  const [maze, setMaze] = useState<MazeCell[][] | undefined>();
   const [selectedCell, setSelectedCell] = useState<
     [number, number] | undefined
   >(undefined);
@@ -46,28 +46,28 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
   }, [selectedCategory]);
 
   useEffect(() => {
-    if (gridSize) {
-      setGrid(
-        Array(gridSize).fill(
-          Array(gridSize).fill({tileType: 1, value: 0, assetId: 0})
+    if (mazeSize) {
+      setMaze(
+        Array(mazeSize).fill(
+          Array(mazeSize).fill({tileType: 1, value: 0, assetId: 0})
         )
       );
-    } else if (initialGrid) {
-      setGrid(JSON.parse(initialGrid!));
+    } else if (initialMaze) {
+      setMaze(JSON.parse(initialMaze!));
     }
-  }, [gridSize, initialGrid]);
+  }, [mazeSize, initialMaze]);
 
-  if (!grid) {
+  if (!maze) {
     return (
       <div>
-        You must either specify a grid size and generate an empty grid or have
-        an existing grid to edit and click edit existing grid.
+        You must either specify a maze size and generate an empty maze or have
+        an existing maze to edit and click edit existing maze.
       </div>
     );
   }
 
-  const gridDimension = grid.length;
-  const cellSize = 400 / gridDimension;
+  const mazeDimension = maze.length;
+  const cellSize = 400 / mazeDimension;
   const categoryOptions = Object.keys(categories).map(category => ({
     value: category,
     text: category,
@@ -87,7 +87,7 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
       } else {
         setSelectedPaintAmount(undefined);
       }
-      const newGrid = grid.map((rowDefinition, rowIndex) =>
+      const newMaze = maze.map((rowDefinition, rowIndex) =>
         rowDefinition.map((cell, columnIndex) => {
           if (rowIndex === row && columnIndex === column) {
             return {...cell, assetId: selectedAsset, value};
@@ -96,11 +96,11 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
         })
       );
       setShowSaveConfirmation(false);
-      setGrid(newGrid);
+      setMaze(newMaze);
     } else {
       // If we are currently on a bucket, show the current amount of paint.
-      if (grid[row][column].assetId === 303) {
-        setSelectedPaintAmount(grid[row][column].value);
+      if (maze[row][column].assetId === 303) {
+        setSelectedPaintAmount(maze[row][column].value);
       } else {
         setSelectedPaintAmount(undefined);
       }
@@ -113,41 +113,41 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
   };
 
   const save = () => {
-    setMaze(JSON.stringify(grid));
+    saveMaze(JSON.stringify(maze));
     setShowSaveConfirmation(true);
   };
 
   return (
-    <div className={moduleStyles.gridGeneratorContainer}>
+    <div className={moduleStyles.mazeGeneratorContainer}>
       <CollapsibleSection headerContent="How to Use">
         <div>
           <ol>
-            <li>Select the category of asset you want to place on the grid.</li>
-            <li>Click the asset you want to place on the grid.</li>
+            <li>Select the category of asset you want to place on the maze.</li>
+            <li>Click the asset you want to place on the maze.</li>
             <li>Click the cell you want to place the asset on.</li>
             <li>
               If you want to put the same asset on multiple cells, you just need
               to click the asset once, then click the different cells to place
-              it. If you want to have no asset selected, click the Unselect
-              Asset button.
+              it. If you want to have no asset selected, click the "Unselect
+              Asset" button.
             </li>
             <li>
-              When you are done, click "Save Grid" to save your updated grid to
+              When you are done, click "Save Maze" to save your updated maze to
               the serialized maze field. The field will not update until you
               click save!
             </li>
           </ol>
         </div>
       </CollapsibleSection>
-      <div className={moduleStyles.gridGenerator}>
+      <div className={moduleStyles.mazeGenerator}>
         <div
-          className={moduleStyles.gridContainer}
+          className={moduleStyles.mazeContainer}
           style={{
-            gridTemplateColumns: `repeat(${gridDimension}, 1fr)`,
-            gridTemplateRows: `repeat(${gridDimension}, 1fr)`,
+            gridTemplateColumns: `repeat(${mazeDimension}, 1fr)`,
+            gridTemplateRows: `repeat(${mazeDimension}, 1fr)`,
           }}
         >
-          {grid.map((row, rowIndex) =>
+          {maze.map((row, rowIndex) =>
             row.map((cell, columnIndex) => {
               const isSelected =
                 (selectedCell &&
@@ -210,7 +210,7 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
         <p>Selected paint can amount: {selectedPaintAmount}</p>
       )}
       <div className={moduleStyles.saveButtonContainer}>
-        <Button text="Save Grid" onClick={save} />
+        <Button text="Save Maze" onClick={save} />
         {showSaveConfirmation && (
           <div className={moduleStyles.saveConfirmation}>
             <FontAwesomeV6Icon
@@ -225,4 +225,4 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
   );
 };
 
-export default NeighborhoodGridGenerator;
+export default NeighborhoodMazeGenerator;

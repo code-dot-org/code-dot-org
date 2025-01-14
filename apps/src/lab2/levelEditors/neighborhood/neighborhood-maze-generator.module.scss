@@ -1,5 +1,5 @@
 @import 'color.scss';
-.gridContainer {
+.mazeContainer {
   display: grid;
   height: 400px;
   width: 400px;
@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 
-.gridGenerator {
+.mazeGenerator {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
@@ -31,7 +31,7 @@
   font-size: 16px;
 }
 
-.gridGeneratorContainer {
+.mazeGeneratorContainer {
   margin-top: 20px;
 }
 .selectedTile {

@@ -6,7 +6,7 @@ import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {MazeCell} from '@cdo/apps/lab2/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
-import NeighborhoodGridGenerator from './NeighborhoodGridGenerator';
+import NeighborhoodMazeGenerator from './NeighborhoodMazeGenerator';
 
 import moduleStyles from './edit-neighborhood-settings.module.scss';
 
@@ -18,20 +18,20 @@ const EditNeighborhoodSettings: React.FunctionComponent<
   EditNeighborhoodSettingsProps
 > = ({initialMaze}) => {
   const [maze, setMaze] = React.useState(JSON.stringify(initialMaze));
-  const [gridSize, setGridSize] = React.useState(8);
-  const [gridSizeToSend, setGridSizeToSend] = React.useState(8);
-  const [showGridGenerator, setShowGridGenerator] = React.useState(false);
-  const [sendMazeToGrid, setSendMazeToGrid] = React.useState(false);
+  const [mazeSize, setMazeSize] = React.useState(8);
+  const [mazeSizeToSend, setMazeSizeToSend] = React.useState(8);
+  const [showMazeGenerator, setShowMazeGenerator] = React.useState(false);
+  const [sendMaze, setSendMaze] = React.useState(false);
 
-  const generateEmptyGrid = () => {
-    setSendMazeToGrid(false);
-    setGridSizeToSend(gridSize);
-    setShowGridGenerator(true);
+  const generateEmptyMaze = () => {
+    setSendMaze(false);
+    setMazeSizeToSend(mazeSize);
+    setShowMazeGenerator(true);
   };
 
-  const editExistingGrid = () => {
-    setSendMazeToGrid(true);
-    setShowGridGenerator(true);
+  const editExistingMaze = () => {
+    setSendMaze(true);
+    setShowMazeGenerator(true);
   };
 
   return (
@@ -44,51 +44,51 @@ const EditNeighborhoodSettings: React.FunctionComponent<
         className={moduleStyles.mazeTextArea}
         name="level[serialized_maze]"
       />
-      <CollapsibleSection headerContent="Grid Generator">
+      <CollapsibleSection headerContent="Maze Generator">
         <div>
           <div>
-            There are two options for creating a grid:
+            There are two options for creating a maze:
             <ol>
               <li>
-                Select a grid size and click "Generate empty grid" to create an
-                empty grid with the given dimensions.
+                Select a maze size and click "Generate empty maze" to create an
+                empty maze with the given dimensions.
               </li>
               <li>
-                Click "Edit existing grid" to modify the grid specified in the
+                Click "Edit existing maze" to modify the maze specified in the
                 text area above.
               </li>
             </ol>
           </div>
         </div>
-        <div className={moduleStyles.gridSizeControl}>
+        <div className={moduleStyles.mazeSizeControl}>
           <Button
-            onClick={generateEmptyGrid}
-            text="Generate empty grid"
+            onClick={generateEmptyMaze}
+            text="Generate empty maze"
             type={'secondary'}
             color={'black'}
             size={'s'}
           />
           <Slider
-            name="gridSize"
-            value={gridSize}
-            onChange={e => setGridSize(parseInt(e.target.value))}
+            name="mazeSize"
+            value={mazeSize}
+            onChange={e => setMazeSize(parseInt(e.target.value))}
             minValue={8}
             maxValue={32}
-            label="Grid Size"
+            label="Maze Size"
           />
         </div>
         <Button
-          onClick={editExistingGrid}
-          text="Edit existing grid"
+          onClick={editExistingMaze}
+          text="Edit existing maze"
           type={'secondary'}
           color={'black'}
           size={'s'}
         />
-        {showGridGenerator && (
-          <NeighborhoodGridGenerator
-            setMaze={setMaze}
-            gridSize={sendMazeToGrid ? undefined : gridSizeToSend}
-            initialGrid={sendMazeToGrid ? maze : undefined}
+        {showMazeGenerator && (
+          <NeighborhoodMazeGenerator
+            saveMaze={setMaze}
+            mazeSize={sendMaze ? undefined : mazeSizeToSend}
+            initialMaze={sendMaze ? maze : undefined}
           />
         )}
       </CollapsibleSection>
