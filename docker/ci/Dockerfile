@@ -194,7 +194,7 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
 #
 # By default uv's install.sh will install to the user's homedir and modify the user's PATH.
 # Instead we wish to install uv to /usr/local/bin, which is already in the PATH.
-RUN curl -LsSf https://astral.sh/uv/install.sh | XDG_BIN_HOME=/usr/local/bin UV_NO_MODIFY_PATH=1 sh
+RUN curl -LsSf https://astral.sh/uv/0.5.18/install.sh | XDG_BIN_HOME=/usr/local/bin UV_NO_MODIFY_PATH=1 sh
 
 # install sc, the sauce connect proxy for running UI tests
 RUN mkdir sauce_connect && \
