@@ -33,6 +33,7 @@ import {
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
   NEW_SIGN_UP_USER_TYPE,
+  MAX_DISPLAY_NAME_LENGTH,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -43,7 +44,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
 }> = ({usIp, countryCode}) => {
   const schoolInfo = useSchoolInfo({usIp});
   const [name, setName] = useState('');
-  const [showNameError, setShowNameError] = useState(false);
+  const [nameErrorMessage, setNameErrorMessage] = useState(null);
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
   const [gdprChecked, setGdprChecked] = useState(false);
   const [showGDPR, setShowGDPR] = useState(false);
@@ -116,10 +117,16 @@ const FinishTeacherAccount: React.FunctionComponent<{
     const newName = e.target.value;
     setName(newName);
 
-    if (newName === '') {
-      setShowNameError(true);
+    if (newName.trim() === '') {
+      setNameErrorMessage(locale.display_name_error_message());
+    } else if (newName.length > MAX_DISPLAY_NAME_LENGTH) {
+      setNameErrorMessage(
+        locale.display_name_too_long_error_message({
+          maxLength: MAX_DISPLAY_NAME_LENGTH,
+        })
+      );
     } else {
-      setShowNameError(false);
+      setNameErrorMessage(null);
     }
   };
 
@@ -176,7 +183,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         'user type': 'teacher',
         'has school': hasSchool,
         'has marketing value selected': true,
-        'has display name': !showNameError,
+        'has display name': !nameErrorMessage,
         country: countryCode,
       },
       PLATFORMS.BOTH
@@ -221,9 +228,9 @@ const FinishTeacherAccount: React.FunctionComponent<{
             <BodyThreeText className={style.displayNameSubtext}>
               {locale.this_is_what_your_students_will_see()}
             </BodyThreeText>
-            {showNameError && (
+            {nameErrorMessage && (
               <BodyThreeText className={style.errorMessage}>
-                {locale.display_name_error_message()}
+                {nameErrorMessage}
               </BodyThreeText>
             )}
           </div>
@@ -288,7 +295,8 @@ const FinishTeacherAccount: React.FunctionComponent<{
               title: 'arrow-right',
             }}
             disabled={
-              name === '' ||
+              name?.trim() === '' ||
+              name?.length > MAX_DISPLAY_NAME_LENGTH ||
               !gdprValid ||
               (isInSchoolRequiredExperiment && schoolInfoInvalid(schoolInfo))
             }

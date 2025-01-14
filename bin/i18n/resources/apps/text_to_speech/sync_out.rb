@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require 'csv'
 require 'json'
 
 require_relative '../../../../../dashboard/config/environment'
@@ -16,116 +17,44 @@ module I18n
           METRIC_CONTEXT = 'update_i18n_static_messages'.freeze
           TTS_LOCALES = ::TextToSpeech::VOICES.keys.freeze
 
-          # TODO: (elijah) formalize a process for flagging these strings somewhere in apps code,
-          # rather than maintaining this ugly manual Hash
-          LABS_FEEDBACK_MESSAGE_KEYS = {
-            common: %w[
-              emptyBlocksErrorMsg
-              emptyFunctionBlocksErrorMsg
-              errorEmptyFunctionBlockModal
-              errorGenericLintError
-              errorIncompleteBlockInFunction
-              errorParamInputUnattached
-              errorQuestionMarksInNumberField
-              errorUnusedFunction
-              errorUnusedParam
-              extraTopBlocks
-              hintPromptInline
-              keepPlaying
-              levelIncompleteError
-              missingRecommendedBlocksErrorMsg
-              missingRequiredBlocksErrorMsg
-              nestedForSameVariable
-              nextPuzzle
-              recommendedBlockContextualHintTitle
-              shareFailure
-              tooMuchWork
-              tryAgain
-              tryBlocksBelowFeedback
-            ],
-            craft: %w[
-              generatedCodeDescription
-              reinfFeedbackMsg
-            ],
-            dance: %w[
-              danceFeedbackNeedNewDancer
-              danceFeedbackNoDancers
-              danceFeedbackNoBackground
-              danceFeedbackTooManyDancers
-              danceFeedbackUseSetSize
-              danceFeedbackUseSetTint
-              danceFeedbackUseStartMapping
-              danceFeedbackStartNewMove
-              danceFeedbackNeedDifferentDance
-              danceFeedbackNeedEveryTwoMeasures
-              danceFeedbackNeedMakeANewDancer
-              danceFeedbackKeyEvent
-              danceFeedbackDidntPress
-              danceFeedbackPressedKey
-              danceFeedbackNeedTwoDancers
-              danceFeedbackOnlyOneDancerMoved
-              danceFeedbackNeedLead
-              danceFeedbackNeedBackup
-              danceFeedbackSetSize
-            ],
-            jigsaw: %w[
-              reinfFeedbackMsg
-            ],
-            maze: %w[
-              collectorCollectedNothing
-              collectorCollectedTooMany
-              didNotCollectEverything
-              didNotPlantEverywhere
-              flowerEmptyError
-              honeycombFullError
-              insufficientHoney
-              insufficientNectar
-              notAtFlowerError
-              notAtHoneycombError
-              plantInNonSoilError
-              uncheckedCloudError
-              uncheckedPurpleError
-            ],
-            studio: %w[
-              hoc2015_shareGame
-              shareGame
-            ],
-            turtle: %w[
-              lengthFeedback
-              reinfFeedbackMsg
-              shareDrawing
-            ],
-          }.freeze
-
           def perform
             progress_bar.start
 
-            progress_bar.total = TTS_LOCALES.size * LABS_FEEDBACK_MESSAGE_KEYS.size
-            I18nScriptUtils.process_in_threads(TTS_LOCALES) do |locale|
-              js_locale = I18nScriptUtils.to_js_locale(locale)
+            progress_bar.total = tts_key_files.size * TTS_LOCALES.size
 
-              LABS_FEEDBACK_MESSAGE_KEYS.each do |lab, message_keys|
-                lab_i18n_file_path = CDO.dir("apps/i18n/#{lab}/#{js_locale}.json")
-                next unless File.exist?(lab_i18n_file_path)
+            tts_key_files.each do |tts_keys_file|
+              lab_name = File.basename(tts_keys_file, '.csv')
+              tts_keys = CSV.read(tts_keys_file, strip: true).flatten
+              next if tts_keys.empty?
 
-                localized_messages = JSON.load_file(lab_i18n_file_path)
-                next if localized_messages.empty?
+              TTS_LOCALES.each do |locale|
+                js_locale = I18nScriptUtils.to_js_locale(locale)
 
-                message_keys.each do |message_key|
-                  localized_message = localized_messages[message_key]
-                  next unless localized_message
+                i18n_file = CDO.dir('apps/i18n', lab_name, "#{js_locale}.json")
+                next unless File.exist?(i18n_file)
 
-                  tts_message_l10n = mutex.synchronize {::TextToSpeech.sanitize(localized_message)}
-                  tts_file_path = ::TextToSpeech.tts_path(localized_message, localized_message, locale: locale)
+                i18n_data = JSON.load_file(i18n_file)
+                next if i18n_data.empty?
 
-                  ::TextToSpeech.tts_upload_to_s3(tts_message_l10n, 'message', tts_file_path, METRIC_CONTEXT, locale: locale)
+                I18nScriptUtils.process_in_threads(tts_keys) do |tts_key|
+                  i18n_val = i18n_data[tts_key]
+                  next unless i18n_val
+
+                  tts_val = mutex.synchronize {::TextToSpeech.sanitize(i18n_val)}
+                  tts_file = ::TextToSpeech.tts_path(i18n_val, i18n_val, locale: locale)
+
+                  ::TextToSpeech.tts_upload_to_s3(tts_val, 'message', tts_file, METRIC_CONTEXT, locale: locale)
                 end
               ensure
-                mutex.synchronize {progress_bar.increment}
+                progress_bar.increment
               end
             end
 
             progress_bar.finish
+          end
+
+          private def tts_key_files
+            @tts_key_files ||= Dir[CDO.dir('apps/i18n/tts_keys/*.csv')]
           end
         end
       end

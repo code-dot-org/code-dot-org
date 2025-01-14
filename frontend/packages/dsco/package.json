@@ -1,6 +1,6 @@
 {
   "name": "@code-dot-org/dsco",
-  "version": "0.0.0-alpha.0",
+  "version": "0.1.0-alpha.0",
   "keywords": [
     "design-system",
     "code.org"
@@ -59,6 +59,7 @@
     "@code-dot-org/lint-config": "workspace:*",
     "@contentful/experiences-sdk-react": "^1.24.0",
     "@eslint/js": "^9.15.0",
+    "@monoweave/cli": "^1.11.1",
     "@swc/core": "^1.9.3",
     "@swc/jest": "^0.2.37",
     "@testing-library/dom": "^10.4.0",
@@ -71,6 +72,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "clean-package": "^2.2.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
     "esbuild-sass-plugin": "^3.3.1",
     "eslint": "^9.15.0",
     "eslint-plugin-jest": "^28.9.0",

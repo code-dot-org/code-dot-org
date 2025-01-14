@@ -211,7 +211,7 @@ end
 
 And /^I've initialized the workspace with a manually\-positioned playlab puzzle$/ do
   clear_main_block_space
-  blocks_xml = '<xml><block type="studio_whenArrow" x="20"><title name="VALUE">up</title><next><block type="studio_move"><title name="DIR">1</title></block></next></block><block type="studio_whenArrow" y="20"><title name="VALUE">down</title><next><block type="studio_move"><title name="DIR">2</title></block></next></block><block type="studio_whenArrow" x="20" y="20"><title name="VALUE">left</title><next><block type="studio_move"><title name="DIR">4</title></block></next></block><block type="studio_whenArrow"><title name="VALUE">right</title><next><block type="studio_move"><title name="DIR">8</title></block></next></block></xml>'
+  blocks_xml = '<xml><block type="studio_whenArrow" x="20" id="whenUp"><title name="VALUE">up</title><next><block type="studio_move"><title name="DIR">1</title></block></next></block><block type="studio_whenArrow" y="20" id="whenDown"><title name="VALUE">down</title><next><block type="studio_move"><title name="DIR">2</title></block></next></block><block type="studio_whenArrow" x="20" y="20" id="whenLeft"><title name="VALUE">left</title><next><block type="studio_move"><title name="DIR">4</title></block></next></block><block type="studio_whenArrow" id="whenRight"><title name="VALUE">right</title><next><block type="studio_move"><title name="DIR">8</title></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
@@ -404,6 +404,33 @@ When /^I move block "([^"]*)" to (top|left|bottom|right) edge of workspace$/ do 
     block.moveTo(new Blockly.utils.Coordinate(x, y));
   JS
   @browser.execute_script(script)
+end
+
+When(/^I show the editor of field "([^"]*)" of block "([^"]*)"$/) do |field, block|
+  block_id = get_block_id(block)
+  script = <<-JS
+    var workspace = Blockly.getMainWorkspace();
+    workspace.hideChaff();
+    var selectedBlock = workspace.getBlockById('#{block_id}');
+    Blockly.common.setSelected(selectedBlock);
+    selectedBlock.getField('#{field}').showEditor();
+  JS
+  @browser.execute_script(script)
+end
+When(/^I change the field "([^"]*)" editor value to "(\d*)"$/) do |field, val|
+  @browser.execute_script("Blockly.selected.getField('#{field}').setEditorValue_(#{val})")
+end
+
+When(/^I change the field "([^"]*)" dropdown to "(\d*)"$/) do |field, val|
+  @browser.execute_script("Blockly.selected.getField('#{field}').setValue('#{val}')")
+  # Refresh the dropdown
+  @browser.execute_script("Blockly.selected.getField('#{field}').showEditor()")
+end
+
+When(/^I update the field "([^"]*)" dropdown to "(\d*)"$/) do |field, val|
+  @browser.execute_script("Blockly.selected.getField('#{field}').setValue('#{val}')")
+  # Refresh the dropdown
+  @browser.execute_script("Blockly.selected.workspace.hideChaff()")
 end
 
 def clear_main_block_space

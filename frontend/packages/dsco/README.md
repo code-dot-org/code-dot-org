@@ -6,7 +6,6 @@ Welcome to the DSCO Design System! This repository contains the design system us
 
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
-- [Installation](#installation)
 - [Testing](#testing)
 
 ## Introduction

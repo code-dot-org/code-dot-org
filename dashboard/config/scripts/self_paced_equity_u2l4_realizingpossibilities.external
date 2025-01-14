@@ -1,0 +1,86 @@
+name 'self-paced-equity-U2L4-realizingpossibilities'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Thread 4: Realizing Possibilities of Computer Science
+
+## What is it?
+
+####  We believe all students can succeed in computer science, and exposure to computer science is vital in helping students make sense of their world. In our curricula, students take on **the role of computer scientists** and develop **computational thinking skills** to create solutions to meaningful and personally relevant problems. Learning computer science helps students become better equipped for active and informed participation in an increasingly digital society.
+
+<div style="width: 100%; max-width: 90%; box-sizing: border-box; border: 2px solid #009EB0; padding: 10px; border-radius: 10px; margin: 30px 20px 20px 30px;">
+  <div style="width: 100%; max-width: 100%; box-sizing: border-box; margin-bottom: 5px; padding: 20px 10px 10px 10px; background-color: #F7F8FA; border-radius: 10px; text-align: center;">
+    <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">What is Computational Thinking?</p><br>
+    <p style="font-size: 14pt; margin-bottom: 15px;">Computational thinking is an interrelated set of skills and practices for solving complex problems.<sup>6</sup></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 10px; margin-bottom: 5px; width: 100%; max-width: 100%; box-sizing: border-box;">
+    <!-- Decomposition -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/199f369578811ff11f8dc88b6d40f3f5-image-1736535589828.png" alt="A flowchart showing a central item being broken down into three." style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Decomposition</p>
+      <p style="font-size: 14pt; margin: 0;">Breaking down a complex problem or system into smaller, more manageable parts.<sup>7</sup></p>
+    </div>
+    <!-- Pattern Recognition -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/bcb4304d866a4ec46e036423fc0d79b0-image-1736535593030.png" alt="A magnifying glass showing three repeating items." style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Pattern Recognition</p>
+      <p style="font-size: 14pt; margin: 0;">Looking for similarities among and within problems.<sup>7</sup</p>
+    </div>
+    <!-- Abstraction -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/53e922f8a75ee840f0e7989d9cfdfd35-image-1736535595178.png" alt="A highlighter marking up a piece of paper" style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Abstraction</p>
+      <p style="font-size: 14pt; margin: 0;">Focusing on the important information only, ignoring irrelevant detail.<sup>7</sup</p>
+    </div>
+    <!-- Algorithms -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/c41c2a800a5ad39838d6d7d37325f288-image-1736535608844.png" alt="A flowchart showing multiple steps" style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Algorithms</p>
+      <p style="font-size: 14pt; margin: 0;">Developing a step-by-step solution to the problem, or the rules to follow to solve the problem.<sup>7</sup</p>
+    </div>
+  </div>
+</div>
+
+#### We believe students need opportunities to develop computational thinking and literacy skills, as these are valuable for all citizens today and in the future, regardless of whether students choose to pursue careers in computer science. Helping students understand and communicate ways to harness the power of computing improves the knowledge, sense, and attitudes of computing that they have and gives them the tools to solve problems that are important to them.
+
+## What does it look like?
+
+<img src="https://images.code.org/63b68613d753c62d1006e478297588b5-image-1736535919203.05.16 AM.png" alt="Two students sit at adesk while a teacher hovers over their shoulder." style="border-radius:20px; float: right; height: 200px; clear: both; margin: 0px 10px 10px 10px;">
+
+#### We highlight a variety of applications, industries, and roles to help students make connections between their personal skills and characteristics and those of computer scientists and to inspire students to consider the possibilities about what they could create with computer science. 
+
+#### Throughout our curricula, students participate in activities that expose them to the ways in which technology is used for personal self-expression, to solve challenges, and to allow them to explore the impact computing has had on many aspects of our society. These activities aim to help students realize possibilities by providing opportunities to use computer science and computational thinking skills for creation, whether that is creation of art, games, or programs to solve problems. We focus on generating excitement about the possibilities of computer science by providing opportunities for self-expression, developing solutions to real-world problems, and exploring applications of computer science in and beyond software engineering.
+
+## Examples in Code.org Curricula
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Elementary Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Middle School Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">High School Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+</p></div>
+</details>
+
+___
+
+##### <sup>6</sup>“What Is Computational Thinking?” Digital Promise, 13 May 2022, <a href="https://digitalpromise.org/initiative/computational-thinking/computational-thinking-for-next-generation-science/what-is-computational-thinking/" target="blank" rel="noopener noreferrer">https://digitalpromise.org/initiative/computational-thinking/computational-thinking-for-next-generation-science/what-is-computational-thinking/</a>. 
+##### <sup>7</sup>“What Is Computational Thinking? - Introduction to Computational Thinking.” BBC Bitesize, BBC, 5 Sept. 2023, <a href="www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1" target="blank" rel="noopener noreferrer">www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1</a>. 
+MARKDOWN

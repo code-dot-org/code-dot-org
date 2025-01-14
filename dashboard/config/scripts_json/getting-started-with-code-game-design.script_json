@@ -5,16 +5,17 @@
     "login_required": true,
     "properties": {
       "content_area": "self_paced_pl_k_5",
-      "curriculum_umbrella": "K-5 Special topics curriculum selfpaced pl",
+      "curriculum_umbrella": "Self-paced PL - K-5 special topics",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "tts": true
+      "tts": true,
+      "version_year": "2024"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:18:43 UTC",
+    "serialized_at": "2025-01-13 23:51:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -24,4 +24,8 @@ class Policies::User
     is_google_email = google_ao.email.end_with?('@gmail.com', '@googlemail.com', '@google.com')
     !is_google_email
   end
+
+  def self.in_usa?(country_code)
+    %w[US RD].include?(country_code)
+  end
 end

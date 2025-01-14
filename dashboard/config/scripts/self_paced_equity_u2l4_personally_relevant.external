@@ -3,34 +3,59 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Welcome!
+# Thread 3: Processing and Meaning-Making
 
-## Module 2, Lesson 2: Bias and Stereotype Threat
+## What is it?
 
-<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
-    <div style="width: 70%;">
-        <p style="line-height: 1.5; font-size: 18px;">
-            In this lesson, you will:
-        </p>
-        <ul style="margin-left: 20px; line-height: 1.6;">
-            <li style="line-height: 1.5;font-size: 16px;">
-                Use a shared definition of unconscious bias and stereotype threat.
-            </li>
-            <li style="line-height: 1.5;font-size: 16px;">
-                Identify and address your own implicit biases and assumptions about students. 
-            </li>
-            <li style="line-height: 1.5;font-size: 16px;">
-                Describe the impact of bias and stereotypes on student learning and engagement.
-            </li>
-        </ul>
-        <p style="font-size: 16px; color: black;">
-        <br>
-        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>update</mark> minutes
-        </p>
-    </div>
-    
-    <!-- Image on the right -->
-    <img src="https://images.code.org/46d3d805d26a73542b42f55cb255486e-image-1736119661753.27.39 PM.png" alt="Two students look on at the same laptop, while another looks intently at their laptop in the background." style="width: 30%; height: auto; border-radius: 10px;">
+#### Students have different ways and preferences for processing and meaning-making of new information. Students need opportunities to process and reflect to make these connections through investigation, synthesis and reflection, and meaning-making phases for the new information to become part of working memory. These meaning-making opportunities are important to<sup>4</sup>:
+
+* #### Orient learners to the lesson purpose and success criteria
+* #### Activate prior knowledge and cultural references
+* #### Pose a provocation for collaboration and productive struggle
+* #### Introduce new material, while explicitly teaching skills and strategies
+
+#### During each lesson and throughout a unit, students need opportunities to interact with new content and process new information in a way that uses their prior experience and frames of reference.
+
+## What does it look like?
+
+<div style="float: right; width: auto; margin: 10px; text-align: center;">
+  <img src="https://images.code.org/ec60d43beda6a055d23a7ce6939b60d3-image-1736531451755.50.47 AM.png" alt="A circle demonstrating a process with multiple steps - Investigate, Create, Make Meaning, and Share & Reflect. Inside is the phrase Synthesize & Reflect" style="width: 300px; border-radius: 10px;">
+  <p style="font-size: 10pt; margin-top: 5px;">"An Introduction to the Learning Cycle" by reDesign</p>
 </div>
-<br>
+
+#### We believe it is important for students to have opportunities to interact with content and process new information in a way that works best for them. It is difficult for students to engage with new content if it is presented in a way that does not meet their individual needs or connect with them. We incorporate varied examples and use different formats to provide multiple opportunities to interact with new content. 
+
+#### Additionally, we focus on eliminating barriers to learning to help students interact with and process new information to meet the needs of students who need these additional supports while encouraging productive struggle in the problem-solving and learning process.
+
+
+## Examples in Code.org Curricula
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Elementary Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Middle School Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">High School Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+</p></div>
+</details>
+
+___
+
+##### <sup>4</sup>CAST, The UDL Guidelines, <a href="https://udlguidelines.cast.org/representation/comprehension/processing-visualization" target="blank" rel="noopener noreferrer">Guide information processing and visualization</a>
+##### <sup>5</sup>reDesign. “Creating Engagement and Connectedness through Making Meaning.” reDesign, 23 Mar. 2023, <a href="www.redesignu.org/creating-engagement-and-connectedness-through-making-meaning/" target="blank" rel="noopener noreferrer">www.redesignu.org/creating-engagement-and-connectedness-through-making-meaning/</a>. 
 MARKDOWN

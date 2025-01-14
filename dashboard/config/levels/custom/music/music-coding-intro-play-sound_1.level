@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-01-07T23:36:59.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "#### <i class=\"fa-solid fa-music-note\"></i> Start with a sound\r\n1. Drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). \r\n- Then press [Run](#clickable=run-button).",
+    "long_instructions": "<p style = \"font-size: 18px;\">\r\n\r\n<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<b>Background and Players</b> <br> A <b>sprite</b> is a digital character or object that can move and do things in a computer program. In this module, players will control sprites. <br> Using a <b>background</b> is a way to enhance the stage of your program. Backgrounds can be adjusted based on events to enhance your game. \r\n\r\n</p>\r\n</div>\r\n\r\n\r\n#### <i class=\"fa-solid fa-music-note\"></i> Start with a sound\r\n1. Drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). \r\n- Then press [Run](#clickable=run-button).",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -74,8 +75,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.383+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-play-sound\\\"\"],\"cloned_from\":\"music-coding-intro-play-sound\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.383+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-play-sound\\\"\"],\"cloned_from\":\"music-coding-intro-play-sound\"},{\"changed_at\":\"2025-01-10 16:57:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-10 16:59:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-10 17:30:34 +0000\",\"changed\":[],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
