@@ -40,7 +40,7 @@ export function buildSchoolData({
     };
   }
 
-  if (country && country !== SELECT_COUNTRY) {
+  if (country && country !== SELECT_COUNTRY && schoolName) {
     return {
       country,
       school_name: schoolName,

@@ -76,6 +76,17 @@ describe('buildSchoolData', () => {
         zip: '54321',
       });
     });
+
+    it('should return undefined when country and zip is provided but no school name', () => {
+      const result = buildSchoolData({
+        schoolId: '',
+        country: 'US',
+        schoolName: '',
+        schoolZip: '12345',
+      });
+
+      expect(result).toBeUndefined();
+    });
   });
 
   describe('country is not US', () => {
@@ -115,6 +126,17 @@ describe('buildSchoolData', () => {
     const result = buildSchoolData({
       schoolId: '',
       country: '',
+      schoolName: '',
+      schoolZip: '',
+    });
+
+    expect(result).toBeUndefined();
+  });
+
+  it('should return undefined when country is provided but no school name', () => {
+    const result = buildSchoolData({
+      schoolId: '',
+      country: 'UK',
       schoolName: '',
       schoolZip: '',
     });
