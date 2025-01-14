@@ -86,6 +86,7 @@ export interface LabState {
   // If this lab is blocked because abuse score >= 15.
   isBlocked: boolean | undefined;
   overrideValidations: Validation[] | undefined;
+  permissions: string[];
 }
 
 const initialState: LabState = {
@@ -99,6 +100,7 @@ const initialState: LabState = {
   isShareView: undefined,
   isBlocked: undefined,
   overrideValidations: undefined,
+  permissions: [],
 };
 
 // Thunks
@@ -415,6 +417,9 @@ const labSlice = createSlice({
     ) {
       state.overrideValidations = action.payload;
     },
+    setPermissions(state, action: PayloadAction<string[]>) {
+      state.permissions = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -634,6 +639,7 @@ export const {
   setIsShareView,
   setOverrideValidations,
   onLevelChange,
+  setPermissions,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

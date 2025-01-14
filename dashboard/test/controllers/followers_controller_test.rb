@@ -353,6 +353,15 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal(expected, flash[:alert])
   end
 
+  test 'student_register renders students_cannot_join page when a student tries to join a teacher section' do
+    sign_in @student
+    section = create(:section, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, grades: ["pl"])
+
+    get :student_register, params: {section_code: section.code}
+
+    assert_template 'followers/students_cannot_join'
+  end
+
   test 'student_register redirects admins to admin_directory' do
     sign_in @admin
     assert_does_not_create(User, Follower) do

@@ -17,6 +17,18 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "07c03698-a4fe-40f5-9a15-0cedbfeb6b02",
+        "notice": "Help us improve coding resources for students!",
+        "details": "We've created a quick survey to better understand how students use different resources (instructions, tests, and TODO comments) when writing code. Please share this survey with your students—it only takes a few minutes to complete, and their input will make a big difference!",
+        "link": "https://usabi.li/do/643e1513cd1/ba68",
+        "type": "bullhorn",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "Student Survey"
+      }
+    ],
     "family_name": "csa",
     "has_numbered_units": true,
     "has_verified_resources": true,

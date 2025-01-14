@@ -496,7 +496,6 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
-  # BROKEN
   test 'concise_summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')

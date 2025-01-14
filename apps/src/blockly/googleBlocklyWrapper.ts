@@ -502,6 +502,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
   };
 
+  const originalSetInputsInline =
+    blocklyWrapper.Block.prototype.setInputsInline;
+  // Replace the original setInputsInline with a version that forces a
+  // two-row Play Lab block to always use inline inputs..
+  extendedBlockSvg.setInputsInline = function (inline) {
+    originalSetInputsInline.call(this, inline);
+    if (
+      this.type === 'studio_whenSpriteAndGroupCollide' &&
+      !this.getInputsInline()
+    ) {
+      this.setInputsInline(true);
+    }
+  };
+
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
   const extendedConnection = blocklyWrapper.Connection
     .prototype as ExtendedConnection;
@@ -531,6 +545,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       fieldHelper,
       options
     );
+    return this;
+  };
+
+  // This is intentionally a no-op. Called by PlayLab.
+  // Google Blockly's implementation uses end row inputs instead.
+  extendedInput.setInline = function (inline) {
     return this;
   };
 

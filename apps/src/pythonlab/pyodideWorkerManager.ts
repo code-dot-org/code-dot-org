@@ -1,14 +1,7 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
-import {
-  appendOutputImage,
-  appendSystemMessage,
-  appendSystemOutMessage,
-  appendErrorMessage,
-  appendSystemError,
-} from '@codebridge/redux/consoleRedux';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getStore} from '@cdo/apps/redux';
@@ -39,28 +32,23 @@ const setUpPyodideWorker = () => {
           // This is a matplotlib image, so we need to append it to the output
           const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
           consoleManager?.writeImage(image);
-          getStore().dispatch(appendOutputImage(image));
           break;
         }
         consoleManager?.writeConsoleMessage(message);
-        getStore().dispatch(appendSystemOutMessage(message));
         break;
       case 'run_complete':
         consoleManager?.writeSystemMessage('Program completed.', appName);
-        getStore().dispatch(appendSystemMessage('Program completed.'));
         delete callbacks[id];
         onSuccess(event.data);
         break;
       case 'updated_source':
-        getStore().dispatch(setAndSaveProjectSource({source: message}));
+        getStore().dispatch(setAndSaveSource(message));
         break;
       case 'error':
         consoleManager?.writeErrorMessage(parseErrorMessage(message));
-        getStore().dispatch(appendErrorMessage(parseErrorMessage(message)));
         break;
       case 'system_error':
         consoleManager?.writeSystemError(message, appName);
-        getStore().dispatch(appendSystemError(message));
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logError('Python Lab System Code Error', undefined, {message});
@@ -124,7 +112,6 @@ const restartPyodideIfProgramIsRunning = () => {
     pyodideWorker = setUpPyodideWorker();
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     consoleManager?.writeSystemMessage('Program stopped.', appName);
-    getStore().dispatch(appendSystemMessage('Program stopped.'));
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');
