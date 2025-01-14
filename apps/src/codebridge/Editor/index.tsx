@@ -17,9 +17,9 @@ interface EditorProps {
 }
 
 export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
-  const {project, saveFile} = useCodebridgeContext();
+  const {source, saveFile} = useCodebridgeContext();
 
-  const file = getActiveFileForProject(project);
+  const file = getActiveFileForProject(source);
 
   const onChange = useCallback(
     (value: string) => {

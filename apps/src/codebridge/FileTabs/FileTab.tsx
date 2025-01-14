@@ -16,8 +16,8 @@ type FileTabProps = {
 };
 
 const FileTab = ({file}: FileTabProps) => {
-  const {project, closeFile, setActiveFile} = useCodebridgeContext();
-  const activeFile = getActiveFileForProject(project);
+  const {source, closeFile, setActiveFile} = useCodebridgeContext();
+  const activeFile = getActiveFileForProject(source);
   const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
   const iconClassName = isBrand ? 'fa-brands' : undefined;
   const isActive = file.active || file === activeFile;
