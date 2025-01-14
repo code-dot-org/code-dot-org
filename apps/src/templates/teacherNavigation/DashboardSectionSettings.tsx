@@ -3,6 +3,7 @@ import {useBlocker} from 'react-router-dom';
 
 import Modal from '@cdo/apps/componentLibrary/modal/Modal';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import i18n from '@cdo/locale';
 
 import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
@@ -49,17 +50,17 @@ const DashboardSectionSettings: React.FunctionComponent<
       />
       {blocker.state === 'blocked' && (
         <Modal
-          title="Are you sure you want to leave?"
-          description="Changes to your section may not have been saved"
+          title={i18n.saveBlockerModalTitle()}
+          description={i18n.saveBlockerModalDescription()}
           onClose={() => blocker.reset()}
           primaryButtonProps={{
-            text: 'Continue',
+            text: i18n.continue(),
             onClick: () => {
               blocker.proceed();
             },
           }}
           secondaryButtonProps={{
-            text: 'Cancel',
+            text: i18n.dialogCancel(),
             onClick: () => blocker.reset(),
           }}
         />

@@ -2528,6 +2528,8 @@
   "saveAndShare": "Save and share",
   "saveAndViewUrl": "Save and view URL",
   "savedToGallery": "Saved",
+  "saveBlockerModalTitle": "Are you sure you want to leave?",
+  "saveBlockerModalDescription": "Changes to your section may not have been saved",
   "saving": "Saving...",
   "scanQRCode": "Scan this code with your phone camera:",
   "scatterPlot": "Scatter Plot",
