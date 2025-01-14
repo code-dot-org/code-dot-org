@@ -11,7 +11,7 @@ Scenario: Using a studio dropdown
   And I show the editor of field "SPRITE" of block "actorSay"
   Then there's an element with an image "studio/cat_thumb.png"
   Then there's an element with an image "studio/dog_thumb.png"
-  And I update the field "SPRITE" dropdown to "1"
+  And I change the field "SPRITE" dropdown to "1"
   And I drag block "actorSay" to block "actorSay" plus offset 0, 10
   Then I press "runButton"
   And element "#resetButton" is visible
