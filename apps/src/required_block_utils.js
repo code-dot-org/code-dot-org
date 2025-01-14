@@ -226,6 +226,7 @@ var ignoredAttributes = [
   'uservisible',
   'usercreated',
   'id',
+  'inline',
 ];
 
 /**
@@ -270,7 +271,11 @@ function childrenEquivalent(expected, given, ignoreChildBlocks) {
   var filterFn = function (node) {
     // CDO Blockly returns tag names in all caps
     var tagName = node.tagName && node.tagName.toLowerCase();
-    return ignoreChildBlocks && tagName !== 'next' && tagName !== 'statement';
+    return (
+      // Google Blockly sometimes adds a mutation where CDO Blockly would not.
+      tagName === 'mutation' ||
+      (ignoreChildBlocks && tagName !== 'next' && tagName !== 'statement')
+    );
   };
   var children1 = Array.prototype.filter.call(expected.childNodes, filterFn);
   var children2 = Array.prototype.filter.call(given.childNodes, filterFn);
