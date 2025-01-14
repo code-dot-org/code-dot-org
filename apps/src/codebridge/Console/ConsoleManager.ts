@@ -46,7 +46,7 @@ export default class ConsoleManager {
     lines.forEach(l => this.appendTerminalLine(l));
   }
 
-  public writeSystemMessage(message: string, appName: string) {
+  public writeSystemMessage(message: string, appName?: string) {
     this.writeConsoleMessage(this.getSystemMessage(message, appName));
   }
 
@@ -74,7 +74,7 @@ export default class ConsoleManager {
     this.terminal.focus();
   }
 
-  private getSystemMessage(message: string, appName: string) {
+  private getSystemMessage(message: string, appName?: string) {
     const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
     return `${systemMessagePrefix}${message}`;
   }

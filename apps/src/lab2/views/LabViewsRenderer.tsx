@@ -11,6 +11,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
+import {PERMISSIONS} from '../constants';
 import ProgressContainer from '../progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '../projects/utils';
 import {AppName, Lab2EntryPoint, OptionsToAvoid} from '../types';
@@ -32,6 +33,11 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const exemplarSources = useAppSelector(
     state => state.lab.levelProperties?.exemplarSources
   );
+  const isBlocked = useAppSelector(state => state.lab.isBlocked);
+  const isProjectValidator = useAppSelector(state =>
+    state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
+  );
+
   const isViewingExemplar = getAppOptionsViewingExemplar();
 
   const [appsToRender, setAppsToRender] = useState<AppName[]>([]);
@@ -63,6 +69,10 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     );
   };
 
+  // Do not render lab view if project is blocked and user is not a project validator.
+  if (isBlocked && !isProjectValidator) {
+    return null;
+  }
   // Iterate through appsToRender and render Lab views for each. If
   // backgroundMode is true, the Lab view will always be rendered, but
   // visibility will be toggled based on whether the app is active. If

@@ -12,7 +12,7 @@ $(document).ready(() => {
 
   document
     .getElementById('create_and_register')
-    .addEventListener('click', () => {
+    ?.addEventListener('click', () => {
       analyticsReporter.sendEvent(
         EVENTS.SIGN_UP_FINISHED_EVENT,
         {

@@ -464,6 +464,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: How to lead a discussion on equity in a Code.org PD
+          lessons: {}
+          name: equity-pd
         science-PD2:
           title: Computer Science in Science PD Phase 2b
           description: Phase 2 Online Blended Summer Study
@@ -1176,6 +1178,8 @@ en:
           description: ''
           lesson_groups: {}
           student_description: ''
+          lessons: {}
+          name: k5concepts
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Algebra through Functional Programming
@@ -3914,6 +3918,7 @@ en:
               display_name: Next Steps
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           name: k5-onlinepd-2019
+          lessons: {}
         dance-extras-2019:
           title: Keep On Dancing
           description: Go beyond the first hour with extended project ideas.
@@ -4565,6 +4570,7 @@ en:
               display_name: Next Steps
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           name: k5-onlinepd-2020
+          lessons: {}
         dani-test-2020:
           lesson_groups:
             lesson group:
@@ -5666,6 +5672,7 @@ en:
             Implementing and Teaching CS:
               display_name: 'Part I:  Teaching and Implementing Computer Science'
           name: k5-onlinepd-2021
+          lessons: {}
         haikubot-pilot:
           lesson_groups:
             haiku bot:
@@ -7962,6 +7969,7 @@ en:
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           name: k5-onlinepd-2022
+          lessons: {}
         vpl-csd1-ci-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9525,7 +9533,7 @@ en:
               name: Use Arrays to Get Random Responses
           lesson_groups: {}
           name: csa-magpie-lab
-          title: AP CSA Magpie Lab
+          title: CSA Magpie Lab
           description_audience: ''
           description_short: The Magpie Lab explores the basics of natural language processing as students create a chatbot program. Students work with a variety of methods of the String class and practice using if statements to evaluate user input to determine an appropriate response.
           description: |-
@@ -9570,7 +9578,7 @@ en:
               name: Open-Ended Activity
           lesson_groups: {}
           name: csa-consumer-review-lab
-          title: AP CSA Consumer Review Lab
+          title: CSA Consumer Review Lab
           description_audience: ''
           description_short: The Consumer Review lab explores how reviews for products and services are evaluated and sometimes manipulated. Students work with methods in the String class and practice using conditionals and iteration to design and implement algorithms to process text files containing reviews.
           description: |-
@@ -9596,7 +9604,7 @@ en:
               name: Open-Ended Activity
           lesson_groups: {}
           name: csa-data-lab
-          title: AP CSA Data Lab
+          title: CSA Data Lab
           description_audience: ''
           description_short: The Data Lab explores data retrieval and analysis techniques. Students practice developing questions, identifying appropriate data sources, and then writing code to read and process data to answer their questions.
           description: |-
@@ -16451,6 +16459,8 @@ en:
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          lessons: {}
+          name: k5-onlinepd-2024
         computer-vision-pilot:
           lessons:
             lesson-1:
@@ -18262,7 +18272,9 @@ en:
           description: ''
           student_description: ''
         gen-ai-staging:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Panel Levels
           lesson_groups:
             lessonGroup-2:
               display_name: Foundations of Gen AI
@@ -18272,6 +18284,8 @@ en:
               display_name: User-Centered Design
             lessonGroup-5:
               display_name: Flexible Implementation Lessons
+            lessonGroup-6:
+              display_name: Globalization
           name: gen-ai-staging
           title: ''
           description_audience: ''
@@ -19659,7 +19673,7 @@ en:
 
             ___
 
-            ##### ⏰ Suggested total time for this module: <mark>update</mark>
+            ##### ⏰ Suggested total time for this module: 140 minutes
           student_description: |-
             ##### **Module 2: Strategies to Promote Equity in Computer Science** gets concrete about strategies educators can use in their classrooms to promote equity in computer science. This unit is oriented toward resources educators can use to bridge professional learning to the classroom.
 
@@ -19672,7 +19686,7 @@ en:
 
             ___
 
-            ##### ⏰ Suggested total time for this module: <mark>update</mark>
+            ##### ⏰ Suggested total time for this module: 140 minutes
         sandbox-teaching-getting-started:
           lessons:
             lesson-5:
@@ -19693,7 +19707,11 @@ en:
           lessons: {}
           lesson_groups: {}
         sandbox-pl-teaching-k5-music-lab:
-          lessons: {}
+          lessons:
+            lesson-4:
+              name: 'Welcome to Music Lab! '
+            lesson-5:
+              name: Next Steps
           lesson_groups: {}
           name: sandbox-pl-teaching-k5-music-lab
           title: Teaching K-5 Music Lab (Sandbox)

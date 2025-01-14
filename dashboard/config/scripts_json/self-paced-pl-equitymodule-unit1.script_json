@@ -5,13 +5,13 @@
     "login_required": true,
     "properties": {
       "content_area": "skills_focused_self_paced_pl",
-      "curriculum_umbrella": "Pedagogy special topics selfpaced pl",
+      "curriculum_umbrella": "Self-paced PL - Pedagogy special topics",
       "is_migrated": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-06 22:18:52 UTC",
+    "serialized_at": "2025-01-13 23:55:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -91,6 +91,7 @@
       "key": "495adbba-18f2-4e91-8fde-bcd4863d26fb",
       "position": 1,
       "properties": {
+        "duration": 25
       },
       "seeding_key": {
         "lesson_activity.key": "495adbba-18f2-4e91-8fde-bcd4863d26fb",
@@ -103,6 +104,7 @@
       "key": "1bc4712f-8c8a-4387-b3e2-1cc59fb48289",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "1bc4712f-8c8a-4387-b3e2-1cc59fb48289",
@@ -115,6 +117,7 @@
       "key": "90e2dc76-4c93-4cd4-ba2e-bb2a3e005dd9",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "90e2dc76-4c93-4cd4-ba2e-bb2a3e005dd9",
@@ -271,6 +274,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-equity-U1L1-certificate"
+        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -769,6 +775,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "self-paced-equity-U1L3-identityinfo"
+        ],
+        "progression": "Identity Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-equity-U1L3-identityinfo"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1",
+        "activity_section.key": "2aa01d53-fc25-446b-9500-5338b6168354"
+      },
+      "level_keys": [
+        "self-paced-equity-U1L3-identityinfo"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "self-paced-equity-U1L3-identitycircles"
         ],
         "progression": "Identity Reflection"
@@ -788,11 +819,14 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-equity-U1L3-dangerofasinglestory"
+        ],
         "progression": "Identity Reflection"
       },
       "bonus": false,
@@ -810,9 +844,9 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -835,9 +869,31 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 5,
+      "chapter": 27,
+      "position": 6,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Your Students' Identities"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-equity-U1L3-read-reflect"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1",
+        "activity_section.key": "e5cc2118-b6ab-48ee-8f06-8951ef3aa834"
+      },
+      "level_keys": [
+        "self-paced-equity-U1L3-read-reflect"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -860,9 +916,9 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 6,
-      "activity_section_position": 2,
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -885,9 +941,9 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 7,
-      "activity_section_position": 3,
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1177,6 +1233,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "self-paced-equity-U1L3-identityinfo",
+        "script_level.level_keys": [
+          "self-paced-equity-U1L3-identityinfo"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1",
+        "activity_section.key": "2aa01d53-fc25-446b-9500-5338b6168354"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "self-paced-equity-U1L3-identitycircles",
         "script_level.level_keys": [
           "self-paced-equity-U1L3-identitycircles"
@@ -1209,6 +1277,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-equitymodule-unit1",
         "activity_section.key": "2aa01d53-fc25-446b-9500-5338b6168354"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-equity-U1L3-read-reflect",
+        "script_level.level_keys": [
+          "self-paced-equity-U1L3-read-reflect"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-equitymodule-unit1",
+        "activity_section.key": "e5cc2118-b6ab-48ee-8f06-8951ef3aa834"
       }
     },
     {

@@ -1844,32 +1844,7 @@ levels.full_sandbox = {
                         </block>'
       ) +
       createCategory(msg.catVariables(), '', 'VARIABLE') +
-      createCategory(msg.catProcedures(), '', 'PROCEDURE') +
-      createCategory(
-        'Functional',
-        blockOfType('functional_string') +
-          blockOfType('functional_background_string_picker') +
-          blockOfType('functional_math_number') +
-          '<block type="functional_math_number_dropdown">' +
-          '<title name="NUM" config="2,3,4,5,6,7,8,9,10,11,12">???</title>' +
-          '</block>'
-      ) +
-      createCategory(
-        'Functional Start',
-        blockOfType('functional_start_setSpeeds') +
-          blockOfType('functional_start_setBackgroundAndSpeeds')
-      ) +
-      createCategory(
-        'Functional Logic',
-        blockOfType('functional_greater_than') +
-          blockOfType('functional_less_than') +
-          blockOfType('functional_number_equals') +
-          blockOfType('functional_string_equals') +
-          blockOfType('functional_logical_and') +
-          blockOfType('functional_logical_or') +
-          blockOfType('functional_logical_not') +
-          blockOfType('functional_boolean')
-      )
+      createCategory(msg.catProcedures(), '', 'PROCEDURE')
   ),
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>',

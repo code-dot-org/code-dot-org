@@ -47,8 +47,13 @@ class FollowersController < ApplicationController
           if is_existing_follower
             redirect_to root_path, notice: I18n.t('follower.already_exists', section_name: @section.name)
           elsif !@section.can_join_section_as_participant?(@user)
-            redirect_to root_path, alert: I18n.t('follower.error.not_participant_type', section_code: params[:section_code])
-          # Check if section is restricted, and redirect with restricted error if true
+            # check if student is joining a teacher section
+            if @section.student_joining_teacher_course?(@user)
+              render :students_cannot_join, locals: {section_code: params[:section_code]}
+            else
+              redirect_to root_path, alert: I18n.t('follower.error.not_participant_type', section_code: params[:section_code])
+            end
+            # Check if section is restricted, and redirect with restricted error if true
           elsif @section.restricted?
             redirect_to root_path, alert: I18n.t('follower.error.restricted_section', section_code: params[:section_code])
           # Check if the section is already at capacity

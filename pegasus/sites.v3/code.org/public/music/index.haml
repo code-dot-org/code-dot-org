@@ -13,8 +13,11 @@ theme: responsive_full_width
         =hoc_s("music_lab.jam_session.name")
       %p.body-one.white
         =hoc_s("music_lab.jam_session.banner.desc_01")
-      %a.link-button.white{href: CDO.studio_url("/s/music-jam-2024/reset")}
-        =hoc_s("music_lab.jam_session.button.start")
+      .button-wrapper{style: "column-gap: 1rem; row-gap: 0"}
+        %a.link-button.white{href: CDO.studio_url("/s/music-jam-2024/reset")}
+          =hoc_s("music_lab.jam_session.button.start")
+        %a.link-button.secondary.white{href: CDO.studio_url("/projects/music/new")}
+          =hoc_s("music_lab.jam_session.button.create_new_project")
 
       .afe.flex-container.align-items-baseline.wrap
         %p.add-margin-top.no-margin-bottom.white

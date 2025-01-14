@@ -11,8 +11,8 @@ markdown <<MARKDOWN
 
 <div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px; margin: 20px 0px 20px 0px"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
-* #### **Implicit bias:** Stereotypes, prejudices, or preferences that cause us to favor a person, thing, or group in a way that is deemed unfair. They are implicit attitudes, behaviors, words, or actions that we exhibit in our personal lives and in the workplace.
-* #### **Stereotype threat:** The risk of confirming negative stereotypes about an individual’s racial, ethnic, gender, or cultural group which can create high cognitive load and reduce academic focus and performance.</p></div>
+* #### **Implicit bias:** Stereotypes, prejudices, or preferences that cause us to favor a person, thing, or group in a way that is deemed unfair. They are implicit attitudes, behaviors, words, or actions that we exhibit in our personal lives and in the workplace.<sup>1</sup>
+* #### **Stereotype threat:** The risk of confirming negative stereotypes about an individual’s racial, ethnic, gender, or cultural group which can create high cognitive load and reduce academic focus and performance.<sup>2</sup></p></div>
 
 #### We'll cover **implicit bias** in the first part of this lesson, and **stereotype threat** in the second part. Both of these concepts will add to your understanding of building an inclusive computer science classroom.
 
@@ -30,8 +30,6 @@ markdown <<MARKDOWN
 
 ___
 
-##### **Sources for Definitions:**
-
-* ##### <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a" target="blank" rel="noopener noreferrer">Guide to Inclusive Computer Science Education</a>
-* ##### <a href="https://www.colorado.edu/center/teaching-learning/inclusivity/stereotype-threat'" target="blank" rel="noopener noreferrer">University of Colorado, Boulder Center for Teaching and Learning</a>
+##### <sup>1</sup>Microsoft. Guide to Inclusive Computer Science Education, 2023, https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a. 
+##### <sup>2</sup>“Stereotype Threat.” Center for Teaching & Learning, www.colorado.edu/center/teaching-learning/inclusivity/stereotype-threat. 
 MARKDOWN

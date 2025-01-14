@@ -5,13 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Going Deeper
 
-#### It's important to make the distinction between equality, equity, and justice when tackling topics of education. Take a look at the following image, created by Tony Ruth (@lunchbreath on Twitter/X):
+#### It's important to make the distinction between equality, equity, and justice when tackling topics of education. Take a look at the following image, created by Tony Ruth<sup>4</sup>:
 <br>
 
 <a href="https://docs.google.com/presentation/d/1EnQ8lf1l2FVqU0AVvwODPcwW9ERlD8vle2ELAyqKIjA/edit?usp=sharing" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/1deaadb47c55ad112dd414bdf93b93f1-image-1732573038355.17.14 PM.png" alt="Four panels show a Giving Tree analogy for inequality, equality, equity, and justice."></a>
 ##### **Note**: Click the image to access a larger version.
-
-___
 
 ## Examples
 
@@ -69,4 +67,7 @@ ___
         <p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">For the purposes of this course, we will be focusing on effecting change with regards to equity, as educators typically have the most influence in their school and district. If you are interested in enacting justice by influencing education systems on a larger scale, consider advocating for a complete K-12 computer science pathway at your district and state.  <span style="background-color: LightCyan;"><a href="https://csforca.org/csequityguide/" target="blank" rel="noopener noreferrer">The CA for CS Equity Guide</a></span> is a good resource to start with.</p>
 	</div>
 </div>
+
+___
+##### <sup>4</sup>Created by <a href="https://x.com/lunchbreath?lang=en" target="blank" rel="noopener noreferrer">@lunchbreath</a> based on Shel Silverstein's <ins>The Giving Tree</ins> for <a href="https://designintech.report/wp-content/uploads/2019/03/dit2019_v00.pdf" target="blank" rel="noopener noreferrer">John Maeda's 2019 Design in Tech Report</a>.
 MARKDOWN

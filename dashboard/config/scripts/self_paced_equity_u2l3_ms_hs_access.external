@@ -9,11 +9,11 @@ markdown <<MARKDOWN
 
 #### Expanding access to computer science in middle and high schools involves two essential components: **ensuring students can access CS classes** and **promoting representative participation within those classes**. 
 
-#### Consider this definition from <a href="https://ncwit.org/wp-content/uploads/2023/08/Guide-to-Inclusive-Computer-Science-Education.pdf" target="blank" rel="noopener noreferrer">Microsoft's Guide to Inclusive Computer Science Education</a> for diversity in CS classrooms:
+#### Consider this definition from diversity in CS classrooms:
 
 <div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px; margin: 20px 0px 20px 0px"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
-#### **Diversity:** Having CS courses or programs whose student enrollment rates reflect the demographics of the larger school or community population, particularly in terms of race, ethnicity, gender, and disability status.</p></div>
+#### **Diversity:** Having CS courses or programs whose student enrollment rates reflect the demographics of the larger school or community population, particularly in terms of race, ethnicity, gender, and disability status.<sup>3</sup></p></div>
 
 <img src="https://images.code.org/9538c04617ff6baf8d54795cf565abb4-image-1736371948781.32.24 PM.png" alt="Two older students look on at the same laptop and smile." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0px 20px 20px 20px;">
 
@@ -37,4 +37,8 @@ markdown <<MARKDOWN
 
 * #### Use Microsoft’s <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51nNH" target="blank" rel="noopener noreferrer">CS is for Everyone Recruitment Toolkit</a> and <a href="https://www.csteachingtips.org/tips-recruitment-hs" target="blank" rel="noopener noreferrer">CSTeachingTips’ Tips for Recruitment in High School Resource</a> to recruit female students and students from underrepresented groups to your computer science class
 * #### For AP Courses, use the <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-principles/recruitment-toolkit" target="blank" rel="noopener noreferrer">AP CS Principles</a> and <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/course/recruitment-toolkit" target="blank" rel="noopener noreferrer">AP CSA Recruitment Toolkits</a>
+
+___
+
+##### <sup>3</sup>Microsoft. Guide to Inclusive Computer Science Education, 2023, https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a. 
 MARKDOWN

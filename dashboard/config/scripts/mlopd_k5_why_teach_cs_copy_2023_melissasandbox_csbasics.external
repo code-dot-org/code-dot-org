@@ -1,0 +1,18 @@
+name 'MLOPD-K5 Why teach CS_copy_2023_MelissaSandbox_CSBasics'
+skip_dialog true
+markdown <<MARKDOWN
+# Navigating Music Lab
+
+#### Bold words are call outs (blue arrows are a visual hint) 
+
+#### Feedback after running the code 
+
+#### give you a hint if there's no code 
+
+
+
+ Here are some helpful tips for <b>navigating the Music Lab interface</b>
+<br>
+
+![](https://images.code.org/4f0383a54899ddc6aeffdd3be0ca25b2-image-1736797714964.48.31 AM.png)
+MARKDOWN
