@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
@@ -77,9 +78,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 
     const handleScroll = () => {
       if (container) {
-        console.log(`scrollTop: ${container.scrollTop}`);
-        console.log(`clientHeight: ${container.clientHeight}`);
-        console.log(`scrollHeight: ${container.scrollHeight}`);
         const isAtBottom =
           container.scrollTop + container.clientHeight + 1 >=
           container.scrollHeight;
@@ -100,20 +98,12 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   return (
     <div
       id="chat-workspace-conversation"
-      style={{position: 'relative', width: '100%', height: '100%'}}
-      className={moduleStyles.conversationArea}
+      className={classNames(
+        moduleStyles.conversationArea,
+        moduleStyles.scrollToBottomContainer
+      )}
     >
-      <div
-        style={{
-          height: '100%',
-          width: '100%',
-          overflowY: 'auto',
-          boxSizing: 'border-box',
-          padding: 16,
-        }}
-        className={moduleStyles.messageArea}
-        ref={conversationContainerRef}
-      >
+      <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
         {events2.map(event => (
           <ChatEventView
             event={event}
@@ -124,10 +114,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
       </div>
       {!atBottomOfContent && (
-        <div
-          style={{display: 'flex', justifyContent: 'center', width: '100%'}}
-          className={moduleStyles.floatingScrollToBottomButton}
-        >
+        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
           <Button
             isIconOnly
             icon={{iconName: 'arrow-down'}}
