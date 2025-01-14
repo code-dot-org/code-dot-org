@@ -1,6 +1,6 @@
-from color_helpers import is_color
-from neighborhood_runtime_exception import NeighborhoodRuntimeException
-from exception_keys import ExceptionKeys
+from .color_helpers import is_color
+from .neighborhood_runtime_exception import NeighborhoodRuntimeException
+from .exception_keys import ExceptionKeys
 from enum import Enum
 
 
@@ -21,11 +21,13 @@ class GridSquare:
         self.color = None
 
     def set_color(self, color):
+        print("hi from set color")
         if not is_color(color):
             raise NeighborhoodRuntimeException(ExceptionKeys.INVALID_COLOR)
         if self.contains_paint():
             raise NeighborhoodRuntimeException(ExceptionKeys.INVALID_PAINT_LOCATION)
         if self.passable and self.paint_count == 0:
+            print("setting color!")
             self.color = color
 
     def is_passable(self):
