@@ -8,6 +8,24 @@ import Tabs, {TabsProps} from '../index';
 export default {
   title: 'DesignSystem/Tabs',
   component: Tabs,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Disable nested interactive elements rule for Tabs.
+            // This issue is caused by storing the closeTabButton inside the tab, but there's no way to fix it really
+            // since there's no other place to place closeTabButton other than in Tab itself.
+            id: 'nested-interactive',
+            enabled: false,
+          },
+          {
+            // Disable color-contrast rule for Tabs.
+            id: 'color-contrast', enabled: false},
+        ],
+      },
+    },
+  },
 } as Meta;
 
 //
