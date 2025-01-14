@@ -14,13 +14,13 @@ class GridSquare:
         STARTANDFINISH = "STARTANDFINISH"
         UNKNOWN = "UNKNOWN"
 
-    def __init__(self, tile_type, asset_id, value=0):
+    def __init__(self, tile_type: int, asset_id: int, value: int | None =0):
         self.set_tile_type(tile_type)
         self.asset_id = asset_id
         self.paint_count = value
         self.color = None
 
-    def set_color(self, color):
+    def set_color(self, color: str):
         print("hi from set color")
         if not is_color(color):
             raise NeighborhoodRuntimeException(ExceptionKeys.INVALID_COLOR)
@@ -30,7 +30,7 @@ class GridSquare:
             print("setting color!")
             self.color = color
 
-    def is_passable(self):
+    def is_passable(self) -> bool:
         return self.passable
 
     def collect_paint(self):
@@ -48,7 +48,7 @@ class GridSquare:
     def contains_paint(self):
         return self.paint_count > 0
 
-    def get_printable_description(self):
+    def get_printable_description(self) -> str:
         if not self.passable:
             return "x"
         elif self.color is not None:
@@ -56,13 +56,13 @@ class GridSquare:
         else:
             return str(self.paint_count)
 
-    def has_color(self):
+    def has_color(self) -> bool:
         return self.color is not None
 
-    def get_color(self):
+    def get_color(self) -> str:
         return self.color
 
-    def set_tile_type(self, tile_type):
+    def set_tile_type(self, tile_type: int):
         if tile_type == 0:
             self.square_type = GridSquare.SquareType.WALL
             self.passable = False

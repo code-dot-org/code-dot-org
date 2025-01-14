@@ -1,6 +1,9 @@
+from .neighborhood_signal_key import NeighborhoodSignalKey
+
+
 class NeighborhoodRuntimeException(Exception):
-    def __init__(self, key):
-        super().__init__(key)
+    def __init__(self, key: NeighborhoodSignalKey):
+        super().__init__(key.value)
         self.key = key
 
     def __str__(self):

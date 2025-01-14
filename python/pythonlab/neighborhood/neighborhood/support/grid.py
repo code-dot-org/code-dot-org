@@ -1,8 +1,9 @@
 from .neighborhood_runtime_exception import NeighborhoodRuntimeException
 from .exception_keys import ExceptionKeys
+from .grid_square import GridSquare
 
 class Grid:
-    def __init__(self, squares):
+    def __init__(self, squares: list[list[GridSquare]]):
         self.grid = squares
         self.height = len(squares)
         self.width = len(squares[0])
@@ -12,16 +13,16 @@ class Grid:
             squares = [self.grid[x][y].get_printable_description() for x in range(self.width)]
             print(",".join(squares))
 
-    def valid_location(self, x, y):
+    def valid_location(self, x: int, y: int) -> bool:
         # A coordinate cannot be moved into if it is out of range or if the tile is not passable
         return 0 <= x < self.width and 0 <= y < self.height and self.grid[x][y].is_passable()
 
-    def get_square(self, x, y):
+    def get_square(self, x: int, y: int) -> GridSquare:
         if self.valid_location(x, y):
             return self.grid[x][y]
         else:
             raise NeighborhoodRuntimeException(ExceptionKeys.GET_SQUARE_FAILED)
 
-    def get_size(self):
+    def get_size(self) -> int:
         # The grid should always be a square, so the width and height should be the same
         return self.height
