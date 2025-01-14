@@ -516,7 +516,10 @@ describe('FinishTeacherAccount', () => {
 
     it('renders educator_role dropdown if in experiment', async () => {
       getIsInExperimentSpy.mockImplementation((experiment, param) => {
-        if (experiment === 'educator_role' && param === 'showEducatorRole') {
+        if (experiment !== 'educator_role') {
+          return false;
+        }
+        if (param === 'showEducatorRole') {
           return true;
         }
         return false;
@@ -529,13 +532,14 @@ describe('FinishTeacherAccount', () => {
 
     it('does not require educator_role if not in experiment', async () => {
       getIsInExperimentSpy.mockImplementation((experiment, param) => {
-        if (experiment === 'educator_role') {
-          if (param === 'showEducatorRole') {
-            return true;
-          }
-          if (param === 'requireEducatorRole') {
-            return false;
-          }
+        if (experiment !== 'educator_role') {
+          return false;
+        }
+        if (param === 'showEducatorRole') {
+          return true;
+        }
+        if (param === 'requireEducatorRole') {
+          return false;
         }
         return false;
       });
@@ -555,13 +559,14 @@ describe('FinishTeacherAccount', () => {
 
     it('requires educator_role if in experiment', async () => {
       getIsInExperimentSpy.mockImplementation((experiment, param) => {
-        if (experiment === 'educator_role') {
-          if (param === 'showEducatorRole') {
-            return true;
-          }
-          if (param === 'requireEducatorRole') {
-            return true;
-          }
+        if (experiment !== 'educator_role') {
+          return false;
+        }
+        if (param === 'showEducatorRole') {
+          return true;
+        }
+        if (param === 'requireEducatorRole') {
+          return true;
         }
         return false;
       });
