@@ -2,6 +2,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {MazeCell} from '@cdo/apps/lab2/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
@@ -29,6 +30,7 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
   const [selectedPaintAmount, setSelectedPaintAmount] = useState<
     number | undefined
   >(undefined);
+  const [showSaveConfirmation, setShowSaveConfirmation] = useState(false);
 
   const categoryTiles = useMemo(() => {
     const tileDefinitions = categories[selectedCategory];
@@ -93,6 +95,7 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
           return cell;
         })
       );
+      setShowSaveConfirmation(false);
       setGrid(newGrid);
     } else {
       // If we are currently on a bucket, show the current amount of paint.
@@ -107,6 +110,11 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
   const updateCategory = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedCategory(e.target.value);
     setSelectedAsset(undefined);
+  };
+
+  const save = () => {
+    setMaze(JSON.stringify(grid));
+    setShowSaveConfirmation(true);
   };
 
   return (
@@ -124,7 +132,7 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
               Asset button.
             </li>
             <li>
-              When you are done, click Save Grid to save your updated grid to
+              When you are done, click "Save Grid" to save your updated grid to
               the serialized maze field. The field will not update until you
               click save!
             </li>
@@ -201,11 +209,18 @@ const NeighborhoodGridGenerator: React.FunctionComponent<
       {selectedPaintAmount !== undefined && (
         <p>Selected paint can amount: {selectedPaintAmount}</p>
       )}
-      <Button
-        text="Save Grid"
-        onClick={() => setMaze(JSON.stringify(grid))}
-        className={moduleStyles.saveButton}
-      />
+      <div className={moduleStyles.saveButtonContainer}>
+        <Button text="Save Grid" onClick={save} />
+        {showSaveConfirmation && (
+          <div className={moduleStyles.saveConfirmation}>
+            <FontAwesomeV6Icon
+              iconName={'circle-check'}
+              className={moduleStyles.greenCheck}
+            />{' '}
+            Saved!
+          </div>
+        )}
+      </div>
     </div>
   );
 };

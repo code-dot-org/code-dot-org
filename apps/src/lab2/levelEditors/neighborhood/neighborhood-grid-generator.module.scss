@@ -1,8 +1,9 @@
+@import 'color.scss';
 .gridContainer {
   display: grid;
   height: 400px;
   width: 400px;
-  background-color: rgb(66, 68, 75);
+  background-color: #42444b;
 }
 
 .categoryTiles {
@@ -23,8 +24,11 @@
   justify-content: space-between;
 }
 
-.saveButton {
-  margin-top: 5px;
+.saveButtonContainer {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
 }
 
 .gridGeneratorContainer {
@@ -35,14 +39,18 @@
   box-sizing: border-box;
 }
 
-.saveButton {
-  margin-top: 10px;
-}
-
 .categoryDropdown {
   margin-bottom: 10px;
 }
 
 .unselectButton {
   margin-top: 10px;
+}
+
+.saveConfirmation {
+  margin: auto 5px;
+}
+
+.greenCheck {
+  color: $light_affirmative_500;
 }

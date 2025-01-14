@@ -50,7 +50,7 @@ const EditNeighborhoodSettings: React.FunctionComponent<
             There are two options for creating a grid:
             <ol>
               <li>
-                Select a grid size and click Generate Empty Grid to create an
+                Select a grid size and click "Generate empty grid" to create an
                 empty grid with the given dimensions.
               </li>
               <li>
@@ -63,7 +63,7 @@ const EditNeighborhoodSettings: React.FunctionComponent<
         <div className={moduleStyles.gridSizeControl}>
           <Button
             onClick={generateEmptyGrid}
-            text="Generate Empty Grid"
+            text="Generate empty grid"
             type={'secondary'}
             color={'black'}
             size={'s'}
