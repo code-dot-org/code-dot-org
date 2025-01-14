@@ -103,3 +103,4 @@ npm-debug.log
 
 # python venv:
 .venv
+.pdm-python
