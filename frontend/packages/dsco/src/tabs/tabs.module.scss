@@ -1,5 +1,7 @@
 @import '@/common/styles/font';
 @import '@/common/styles/mixins';
+@import '@/common/styles/primitiveColors.css';
+@import '@/common/styles/colors.css';
 
 .tabs {
   ul {
@@ -18,7 +20,7 @@
       right: 0;
       height: 1px;
       z-index: -1;
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid var(--borders-neutral-primary);
     }
 
     li {
@@ -60,37 +62,37 @@
 
   &.tabs-light {
     ul::after {
-      border-color: #d1d4d8;
+      border-color: var(--borders-neutral-primary);
     }
 
     li button[role='tab'] {
-      color: #5f6872;
+      color: var(--text-neutral-tertiary);
 
       &:hover {
-        color: #0093a4;
+        color: var(--text-brand-teal-primary);
         border: none;
-        border-bottom: 2px solid #0093a4;
+        border-bottom: 2px solid var(--borders-brand-teal-primary);
       }
 
       &:focus-visible {
-        color: #0093a4;
-        outline: 2px solid #0093a4;
+        color: var(--text-brand-teal-primary);
+        outline: 2px solid var(--borders-brand-teal-primary);
       }
 
       &:active:not(:disabled) {
-        color: #292f36;
+        color: var(--text-neutral-primary);
         border: none !important;
-        border-bottom: 2px solid #0093a4 !important;
+        border-bottom: 2px solid var(--borders-brand-teal-primary) !important;
       }
 
       &.selectedTab {
-        color: #292f36;
-        border-bottom: 2px solid #0093a4;
+        color: var(--text-neutral-primary);
+        border-bottom: 2px solid var(--borders-brand-teal-primary);
       }
 
       &:disabled {
         cursor: not-allowed;
-        color: #d1d4d8;
+        color: var(--text-neutral-disabled);
         border: none !important;
       }
     }
@@ -98,37 +100,37 @@
 
   &.tabs-dark {
     ul::after {
-      border-color: #5f6872;
+      border-color: var(--borders-neutral-primary);
     }
 
     li button[role='tab'] {
-      color: #d1d4d8;
+      color: var(--neutral-gray-20);
 
       &:hover {
-        color: #ffffff;
+        color: var(--text-neutral-inverse);
         border: none;
-        border-bottom: 2px solid #0093a4;
+        border-bottom: 2px solid var(--borders-brand-teal-primary);
       }
 
       &:focus-visible {
-        color: #ffffff;
-        outline: 2px solid #0093a4;
+        color: var(--text-neutral-inverse);
+        outline: 2px solid var(--borders-brand-teal-primary);
       }
 
       &:active:not(:disabled) {
-        color: #ffffff;
+        color: var(--text-neutral-inverse);
         border: none !important;
-        border-bottom: 2px solid #0093a4 !important;
+        border-bottom: 2px solid var(--borders-brand-teal-primary) !important;
       }
 
       &.selectedTab {
-        color: #ffffff;
-        border-bottom: 2px solid #0093a4;
+        color: var(--text-neutral-inverse);
+        border-bottom: 2px solid var(--borders-brand-teal-primary);
       }
 
       &:disabled {
         cursor: not-allowed;
-        color: #5f6872;
+        color: var(--neutral-gray-80);
         border: none !important;
       }
     }
@@ -143,108 +145,108 @@
 
   &.tabs-light {
     ul::after {
-      border-color: #d1d4d8;
+      border-color: var(--borders-neutral-primary);
     }
 
     li button[role='tab'] {
-      color: #5f6872;
-      background-color: #f7f8fa;
-      border: 1px solid #d1d4d8;
+      color: var(--text-neutral-tertiary);
+      background-color: var(--background-neutral-secondary);
+      border: 1px solid var(--background-neutral-secondary);
 
       &:hover {
-        color: #292f36;
-        background-color: #eaecef;
-        border: 1px solid #d1d4d8;
+        color: var(--text-neutral-primary);
+        background-color: var(--background-neutral-tertiary);
+        border: 1px solid var(--borders-neutral-primary);
       }
 
       &:focus-visible {
-        color: #ffffff;
-        background-color: #0093a4;
+        color: var(--text-neutral-white-fixed);
+        background-color: var(--background-brand-teal-primary);
         border-color: transparent;
         border-left: none;
         border-right: none;
-        border-bottom-color: #d1d4d8;
-        outline: 2px solid #0093a4;
+        border-bottom-color: var(--borders-neutral-primary);
+        outline: 2px solid var(--borders-brand-teal-primary);
         outline-offset: 2px;
 
         &:not(.selectedTab, :active) button {
-          color: #ffffff;
+          color: var(--text-neutral-white-fixed);
         }
       }
 
       &:active:not(:disabled) {
-        color: #0093a4;
-        background-color: #ffffff;
-        border: 1px solid #d1d4d8 !important;
+        color: var(--text-brand-teal-primary);
+        background-color: var(--background-neutral-primary);
+        border: 1px solid var(--borders-neutral-primary) !important;
         border-bottom-color: transparent !important;
       }
 
       &.selectedTab {
-        color: #0093a4;
-        background-color: #ffffff;
-        border: 1px solid #d1d4d8;
+        color: var(--text-brand-teal-primary);
+        background-color: var(--background-neutral-primary);
+        border: 1px solid var(--borders-neutral-primary);
         border-bottom-color: transparent;
       }
 
       &:disabled {
         cursor: not-allowed;
-        color: #ffffff;
-        background-color: #f7f8fa;
-        border: 1px solid #d1d4d8;
+        color: var(--text-neutral-disabled);
+        background-color: var(--background-neutral-secondary);
+        border: 1px solid var(--borders-neutral-disabled);
       }
     }
   }
 
   &.tabs-dark {
     ul::after {
-      border-color: #5f6872;
+      border-color: var(--neutral-gray-80);
     }
 
     li button[role='tab'] {
-      color: #d1d4d8;
-      background-color: #394450;
-      border: 1px solid #5f6872;
+      color: var(--neutral-gray-20);
+      background-color: var(--neutral-gray-95);
+      border: 1px solid var(--neutral-gray-80);
 
       &:hover {
-        color: #ffffff;
-        background-color: #4c5661;
-        border: 1px solid #5f6872;
+        color: var(--text-neutral-white-fixed);
+        background-color: var(--neutral-gray-90);
+        border: 1px solid var(--neutral-gray-80);
       }
 
       &:focus-visible {
-        color: #ffffff;
-        background-color: #0093a4;
+        color: var(--text-neutral-white-fixed);
+        background-color: var(--background-brand-teal-primary);
         border-color: transparent;
         border-left: none;
         border-right: none;
-        border-bottom-color: #5f6872;
-        outline: 2px solid #0093a4;
+        border-bottom-color: var(--borders-neutral-primary);
+        outline: 2px solid var(--borders-brand-teal-primary);
         outline-offset: 2px;
 
         &:not(.selectedTab) button {
-          color: #ffffff;
+          color: var(--text-neutral-white-fixed);
         }
       }
 
       &:active:not(:disabled) {
-        color: #ffffff;
-        background-color: #292f36;
-        border: 1px solid #5f6872 !important;
+        color: var(--text-neutral-white-fixed);
+        background-color: var(--background-neutral-primary-inverse);
+        border: 1px solid var(--neutral-gray-80) !important;
         border-bottom-color: transparent !important;
       }
 
       &.selectedTab {
-        color: #ffffff;
-        background-color: #292f36;
-        border: 1px solid #5f6872;
+        color: var(--text-neutral-white-fixed);
+        background-color: var(--background-neutral-primary-inverse);
+        border: 1px solid var(--neutral-gray-80);
         border-bottom-color: transparent;
       }
 
       &:disabled {
         cursor: not-allowed;
-        color: #5f6872;
-        background-color: #394450;
-        border: 1px solid #5f6872;
+        color: var(--neutral-gray-80);
+        background-color: var(--neutral-gray-95);
+        border: 1px solid var(--neutral-gray-80);
       }
     }
   }
