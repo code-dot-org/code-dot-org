@@ -20,21 +20,32 @@ const DashboardSectionSettings: React.FunctionComponent<
   DashboardSectionSettingsProps
 > = ({redirectUrl}) => {
   const selectedSection = useAppSelector(selectedSectionSelector);
+  const [isEditInProgress, setIsEditInProgress] = React.useState(false);
 
   const blocker = useBlocker(
     ({currentLocation, nextLocation}) =>
-      // value !== '' &&
-      currentLocation.pathname !== nextLocation.pathname
+      isEditInProgress && currentLocation.pathname !== nextLocation.pathname
   );
 
-  addEventListener('beforeunload', preventNavigationUnloadListener);
+  React.useEffect(() => {
+    if (isEditInProgress) {
+      addEventListener('beforeunload', preventNavigationUnloadListener);
+    } else {
+      removeEventListener('beforeunload', preventNavigationUnloadListener);
+    }
+    return () => {
+      removeEventListener('beforeunload', preventNavigationUnloadListener);
+    };
+  }, [isEditInProgress]);
 
+  // TODO(lfm): i18n
   return (
     <div>
       <SectionsSetUpContainer
         isUsersFirstSection={false}
         sectionToBeEdited={selectedSection}
         defaultRedirectUrl={redirectUrl}
+        setIsEditInProgress={setIsEditInProgress}
       />
       {blocker.state === 'blocked' && (
         <Modal
@@ -45,10 +56,6 @@ const DashboardSectionSettings: React.FunctionComponent<
             text: 'Continue',
             onClick: () => {
               blocker.proceed();
-              removeEventListener(
-                'beforeunload',
-                preventNavigationUnloadListener
-              );
             },
           }}
           secondaryButtonProps={{

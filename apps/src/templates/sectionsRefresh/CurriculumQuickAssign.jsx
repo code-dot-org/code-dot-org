@@ -31,6 +31,7 @@ export default function CurriculumQuickAssign({
   sectionCourse,
   initialParticipantType,
   courseFilters,
+  setIsEditInProgress = () => {},
 }) {
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [filteredCourseOfferings, setFilteredCourseOfferings] = useState(null);
@@ -243,6 +244,7 @@ export default function CurriculumQuickAssign({
       setDecideLater(!decideLater);
     }
 
+    setIsEditInProgress(true);
     updateCourse({});
     setSelectedCourseOffering(null);
   };
@@ -294,7 +296,10 @@ export default function CurriculumQuickAssign({
             setDecideLater(false);
             setSelectedCourseOffering(offering);
           }}
-          updateCourse={updateCourse}
+          updateCourse={value => {
+            updateCourse(value);
+            setIsEditInProgress(true);
+          }}
           sectionCourse={sectionCourse}
           isNewSection={isNewSection}
         />
@@ -302,7 +307,10 @@ export default function CurriculumQuickAssign({
       {marketingAudience && (
         <VersionUnitDropdowns
           courseOffering={selectedCourseOffering}
-          updateCourse={updateCourse}
+          updateCourse={value => {
+            updateCourse(value);
+            setIsEditInProgress(true);
+          }}
           sectionCourse={sectionCourse}
           isNewSection={isNewSection}
         />
@@ -317,4 +325,5 @@ CurriculumQuickAssign.propTypes = {
   isNewSection: PropTypes.bool,
   initialParticipantType: PropTypes.string,
   courseFilters: PropTypes.object,
+  setIsEditInProgress: PropTypes.func,
 };
