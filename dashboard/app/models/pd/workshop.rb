@@ -154,7 +154,13 @@ class Pd::Workshop < ApplicationRecord
     user_id_where_clause = base_query.where(pd_enrollments: {user_id: teacher.id})
     email_where_clause = base_query.where(pd_enrollments: {email: teacher.email})
 
-    user_id_where_clause.or(email_where_clause).distinct
+    alternate_email = teacher.alternate_email
+    if alternate_email.present?
+      alternate_email_where_clause = base_query.where(pd_enrollments: {email: alternate_email})
+      user_id_where_clause.or(email_where_clause).or(alternate_email_where_clause).distinct
+    else
+      user_id_where_clause.or(email_where_clause).distinct
+    end
   end
 
   def self.exclude_summer

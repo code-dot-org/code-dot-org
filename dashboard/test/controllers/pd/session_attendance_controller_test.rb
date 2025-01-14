@@ -91,6 +91,18 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
     assert_equal @teacher, enrollment.reload.user
   end
 
+  test 'attend with a matching enrollment by alternate email updates the enrollment.user' do
+    create :pd_teacher_application, user: @teacher, status: 'accepted'
+    enrollment = create :pd_enrollment, workshop: @workshop, user: nil, email: @teacher.alternate_email
+    sign_in @teacher
+
+    assert_creates Pd::Attendance do
+      get :attend, params: {session_code: @session.code}
+    end
+
+    assert_equal @teacher, enrollment.reload.user
+  end
+
   test_redirect_to_sign_in_for :select_enrollment, method: :post, params: -> {{session_code: @session.code}}
 
   test 'select_enrollment updates enrollment and creates attendance for selection' do

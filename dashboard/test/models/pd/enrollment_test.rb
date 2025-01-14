@@ -22,6 +22,16 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)
   end
 
+  test 'enrollment.for_user using user alternate email' do
+    user = create :teacher
+    create :pd_teacher_application, user: user, status: 'accepted'
+
+    enrollment = create :pd_enrollment, user_id: nil, email: user.alternate_email, workshop: (create :workshop, course: COURSE_CSD)
+
+    enrollments_for_user = Pd::Enrollment.for_user(user).to_a
+    assert_equal enrollments_for_user.first, enrollment
+  end
+
   test 'find by code' do
     enrollment = create :pd_enrollment
 

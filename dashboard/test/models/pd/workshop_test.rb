@@ -84,6 +84,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # Both email and user id. Should still find workshop exactly once
     enrollment.update!(email: teacher.email, user: teacher)
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # Alternate email match only
+    create :pd_teacher_application, user: teacher, status: 'accepted'
+    enrollment.update!(email: teacher.alternate_email, user: nil)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
   end
 
   test 'exclude_summer scope' do
