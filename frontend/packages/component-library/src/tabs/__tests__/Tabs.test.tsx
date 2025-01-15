@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import {useState} from 'react';
 
-import Tabs, {TabsProps} from './../index';
+import Tabs, {TabsProps} from '../index';
 
 describe('Design System - Tabs', () => {
   const valuesMap: Record<string, string> = {};
