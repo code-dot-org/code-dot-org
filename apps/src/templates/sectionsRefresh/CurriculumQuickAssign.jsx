@@ -26,22 +26,26 @@ export const MARKETING_AUDIENCE = {
   PL: 'pl',
 };
 const CURRICULUM_TYPES_FOR_AUDIENCE = {
-  // [MARKETING_AUDIENCE.HIGH]: [
-  //   curriculumTypes.course,
-  //   curriculumTypes.standalone_unit,
-  //   curriculumTypes.module,
-  // ],
-  // [MARKETING_AUDIENCE.MIDDLE]: [
-  //   curriculumTypes.course,
-  //   curriculumTypes.standalone_unit,
-  //   curriculumTypes.module,
-  // ],
+  [MARKETING_AUDIENCE.HIGH]: [
+    curriculumTypes.course,
+    curriculumTypes.standalone_unit,
+    curriculumTypes.module,
+  ],
+  [MARKETING_AUDIENCE.MIDDLE]: [
+    curriculumTypes.course,
+    curriculumTypes.standalone_unit,
+    curriculumTypes.module,
+  ],
   [MARKETING_AUDIENCE.ELEMENTARY]: [
     curriculumTypes.course,
     curriculumTypes.module,
   ],
-  // [MARKETING_AUDIENCE.HOC]: null,
-  // [MARKETING_AUDIENCE.PL]: null,
+  [MARKETING_AUDIENCE.HOC]: null,
+  [MARKETING_AUDIENCE.PL]: null,
+};
+
+const selectedSectionFromGroup = (courseGroup, selectedCourseId) => {
+  return _.find(courseGroup, course => selectedCourseId === course.id);
 };
 
 export default function CurriculumQuickAssign({
@@ -138,15 +142,8 @@ export default function CurriculumQuickAssign({
     setFilteredCourseOfferings(filterOfferings(courseOfferings));
   }, [courseOfferings, courseFilters?.language]);
 
-  const getSelectedCourseOffering = useCallback(() => {
-    const selectedSectionFromGroup = courseGroup => {
-      return _.find(
-        courseGroup,
-        course => sectionCourse?.courseOfferingId === course.id
-      );
-    };
-
-    const selectedSectionFromCurriculumType = (audience, curriculumType) => {
+  const selectedSectionFromCurriculumType = useCallback(
+    (audience, curriculumType) => {
       if (!filteredCourseOfferings[audience][curriculumType]) {
         return null;
       }
@@ -154,23 +151,28 @@ export default function CurriculumQuickAssign({
       for (const courseGroup of Object.values(
         filteredCourseOfferings[audience][curriculumType]
       )) {
-        const course = selectedSectionFromGroup(courseGroup);
+        const course = selectedSectionFromGroup(
+          courseGroup,
+          sectionCourse?.courseOfferingId
+        );
 
-        console.log('lfm 3', course);
         if (course) {
-          console.log('lfm 4', course);
           return course;
         }
       }
       return null;
-    };
+    },
+    [filteredCourseOfferings, sectionCourse]
+  );
 
-    const selectedSectionFromAudience = audience => {
+  const selectedSectionFromAudience = useCallback(
+    audience => {
       const curriculumTypes = CURRICULUM_TYPES_FOR_AUDIENCE[audience];
 
       if (!curriculumTypes) {
         const course = selectedSectionFromGroup(
-          filteredCourseOfferings[audience]
+          filteredCourseOfferings[audience],
+          sectionCourse?.courseOfferingId
         );
         return course ? {course, audience} : null;
       }
@@ -179,16 +181,17 @@ export default function CurriculumQuickAssign({
           audience,
           curriculumType
         );
-        console.log('lfm 2', course);
         if (course) {
-          console.log('lfm 1', course);
           return {course, audience};
         }
       }
 
       return null;
-    };
+    },
+    [filteredCourseOfferings, sectionCourse, selectedSectionFromCurriculumType]
+  );
 
+  const getSelectedCourseOffering = useCallback(() => {
     for (const audience of Object.keys(filteredCourseOfferings)) {
       const result = selectedSectionFromAudience(audience);
       if (result) {
@@ -197,7 +200,7 @@ export default function CurriculumQuickAssign({
     }
 
     return null;
-  }, [filteredCourseOfferings, sectionCourse]);
+  }, [filteredCourseOfferings, selectedSectionFromAudience]);
 
   useEffect(() => {
     if (!filteredCourseOfferings) return;
@@ -205,7 +208,6 @@ export default function CurriculumQuickAssign({
       const determineSelectedCourseOffering = () => {
         const selection = getSelectedCourseOffering(filteredCourseOfferings);
 
-        console.log('lfm 0', selection);
         if (selection) {
           setSelectedCourseOffering(selection.course);
           updateSectionCourseForExistingSections(selection.course);
