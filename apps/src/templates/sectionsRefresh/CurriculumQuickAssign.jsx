@@ -138,60 +138,45 @@ export default function CurriculumQuickAssign({
     setFilteredCourseOfferings(filterOfferings(courseOfferings));
   }, [courseOfferings, courseFilters?.language]);
 
-  const selectedSectionFromCurriculumType = useCallback(
-    (audience, curriculumType) => {
-      if (!filteredCourseOfferings[audience][curriculumType]) {
-        return null;
-      }
-
-      for (const courseGroup of Object.values(
-        filteredCourseOfferings[audience][curriculumType]
-      )) {
-        const selectedCourse = _.find(
-          courseGroup,
-          course => sectionCourse?.courseOfferingId === course.id
-        );
-
-        if (selectedCourse) {
-          return selectedCourse;
-        }
-      }
-      return null;
-    },
-    [filteredCourseOfferings, sectionCourse]
-  );
-
-  const selectedSectionFromAudience = useCallback(
+  const getCoursesForAudience = useCallback(
     audience => {
       const curriculumTypes = CURRICULUM_TYPES_FOR_AUDIENCE[audience];
 
       if (!curriculumTypes) {
-        const selectedCourse = _.find(
-          filteredCourseOfferings[audience],
-          course => sectionCourse?.courseOfferingId === course.id
-        );
-        return selectedCourse ? {selectedCourse, audience} : null;
-      }
-      for (const curriculumType of curriculumTypes) {
-        const selectedCourse = selectedSectionFromCurriculumType(
-          audience,
-          curriculumType
-        );
-        if (selectedCourse) {
-          return {selectedCourse, audience};
-        }
+        // hoc and pl have no curriculum types and just have a list of curriculum in filteredCourseOfferings
+        return filteredCourseOfferings[audience];
       }
 
-      return null;
+      // return a flattened array of all courses for the given audience
+      return _.flatten(
+        curriculumTypes.flatMap(curriculumType => {
+          if (filteredCourseOfferings[audience][curriculumType]) {
+            return Object.values(
+              filteredCourseOfferings[audience][curriculumType]
+            );
+          }
+          return [];
+        })
+      );
     },
-    [filteredCourseOfferings, sectionCourse, selectedSectionFromCurriculumType]
+    [filteredCourseOfferings]
+  );
+
+  const selectedSectionFromAudience = useCallback(
+    audience => {
+      return _.find(
+        getCoursesForAudience(audience),
+        course => sectionCourse?.courseOfferingId === course.id
+      );
+    },
+    [sectionCourse, getCoursesForAudience]
   );
 
   const getSelectedCourseOffering = useCallback(() => {
     for (const audience of Object.keys(filteredCourseOfferings)) {
-      const result = selectedSectionFromAudience(audience);
-      if (result) {
-        return result;
+      const selectedCourse = selectedSectionFromAudience(audience);
+      if (selectedCourse) {
+        return {course: selectedCourse, audience};
       }
     }
 
