@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-01-13T22:27:21.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Decomposition Bot\r\n\r\nUse or customize the existing system prompt for this project to interact with the chatbot. The chatbot will only respond after you send an initial message. Try starting with a greeting, such as \"Hello\".",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 1,
+        "systemPrompt": "Your job is to help people brainstorm and clarify tasks they will need to accomplish in order to host a specific kind of event. Respond only to questions about planning the event. \n\nStep 1: After the user's first message, ask what type of event the student is planning.\n\nFinally: Provide 3 possible subtasks based on the answer to the questions above.\n",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "Brainstorm Bot",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "levelSystemPrompt": ""
+    },
+    "name_suffix": "_2024",
+    "display_name": "Troubleshooting Bot",
+    "bubble_choice_description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-13T22:27:21.686+00:00\",\"changed\":[\"cloned from \\\"emma-test-ai-chatbot-computersystems-1\\\"\"],\"cloned_from\":\"emma-test-ai-chatbot-computersystems-1\"},{\"changed_at\":\"2025-01-13 22:27:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 21:34:32 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:21:31 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:22:31 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:23:03 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:23:20 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:25:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:26:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

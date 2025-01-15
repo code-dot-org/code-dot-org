@@ -18151,7 +18151,9 @@ en:
           description: ''
           student_description: ''
         computer-systems-nondevice-playground:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: 'Lesson 3: Hardware'
           lesson_groups: {}
           name: computer-systems-nondevice-playground
           title: "[PLAYGROUND] Computer Systems and Devices (non-device)"
@@ -18552,3 +18554,6 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        none-none:
+          lessons: {}
+          lesson_groups: {}

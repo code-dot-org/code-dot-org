@@ -1,7 +1,7 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getStore} from '@cdo/apps/redux';
@@ -42,7 +42,7 @@ const setUpPyodideWorker = () => {
         onSuccess(event.data);
         break;
       case 'updated_source':
-        getStore().dispatch(setAndSaveProjectSource({source: message}));
+        getStore().dispatch(setAndSaveSource(message));
         break;
       case 'error':
         consoleManager?.writeErrorMessage(parseErrorMessage(message));

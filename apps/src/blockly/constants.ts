@@ -205,6 +205,7 @@ export const READ_ONLY_PROPERTIES = [
   'Input',
   'inputs',
   'INPUT_VALUE',
+  'isDraggable',
   'js',
   'MenuItem',
   'MetricsManager',

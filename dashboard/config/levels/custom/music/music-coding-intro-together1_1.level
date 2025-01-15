@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-01-07T23:36:59.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "####<i class=\"fa-solid fa-layer-group\"></i> Layer the sounds\r\n\r\n1. Add another [sound](#clickable=play-sound-block) into the [play together](#clickable=id-up-left:play_sounds_together) block.\r\n\r\n\r\n",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\nIn the previous level, you may have noticed that the sounds were played one after the other. To play sounds simultaneously, use the \"play together\" block.\r\n\r\n<b>Teacher Tip: </b> This is a common bug that students may overlook if are not careful. If students mention that their code is not working, ask them how they want the code to work, and then check to see if the \"play together\" block is used correctly. \r\n</p>\r\n</div>\r\n\r\n\r\n####<i class=\"fa-solid fa-layer-group\"></i> Layer the sounds\r\n\r\n1. Add another [sound](#clickable=play-sound-block) into the [play together](#clickable=id-up-left:play_sounds_together) block.\r\n\r\n\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -156,8 +157,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.967+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-together1\\\"\"],\"cloned_from\":\"music-coding-intro-together1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.967+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-together1\\\"\"],\"cloned_from\":\"music-coding-intro-together1\"},{\"changed_at\":\"2025-01-14 23:06:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

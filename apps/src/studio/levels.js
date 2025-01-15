@@ -294,11 +294,13 @@ levels.dog_and_cat_hello = {
   timeoutFailureTick: 200,
   toolbox: tb('<block type="studio_saySprite" id="actorSay"></block>'),
   startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>',
+    '<block type="when_run" deletable="false" movable="false" x="20" y="20" id="whenRun"></block>',
 };
 levels.k1_2 = extend(levels.dog_and_cat_hello, {
   isK1: true,
-  toolbox: tb(blockOfType('studio_saySprite')),
+  toolbox: tb(
+    blockOfType('studio_saySprite', undefined, undefined, 'actorSay')
+  ),
 });
 levels.c2_2 = extend(levels.dog_and_cat_hello, {});
 levels.c3_story_2 = extend(levels.dog_and_cat_hello, {});
