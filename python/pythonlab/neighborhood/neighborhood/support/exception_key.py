@@ -1,6 +1,6 @@
 from enum import Enum
 
-class ExceptionKeys(Enum):
+class ExceptionKey(Enum):
   INVALID_GRID = "INVALID_GRID"
   INVALID_DIRECTION = "INVALID_DIRECTION"
   GET_SQUARE_FAILED = "GET_SQUARE_FAILED"

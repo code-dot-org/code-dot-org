@@ -1,10 +1,12 @@
-from .neighborhood_signal_key import NeighborhoodSignalKey
+from .exception_key import ExceptionKey
 
 
 class NeighborhoodRuntimeException(Exception):
-    def __init__(self, key: NeighborhoodSignalKey):
-        super().__init__(key.value)
+    def __init__(self, key: ExceptionKey, message: str | None = None):
+        super().__init__(message if message else key.value)
         self.key = key
+        self.message = message
 
     def __str__(self):
-        return f"NeighborhoodRuntimeException: {self.key.value}"
+        message_str = f": {self.message}" if self.message else ""
+        return f"NeighborhoodRuntimeException: {self.key.value}{message_str}"

@@ -1,5 +1,6 @@
 from neighborhood.support.grid import Grid
 from neighborhood.support.grid_square import GridSquare
+from neighborhood.support.neighborhood_runtime_exception import NeighborhoodRuntimeException
 
 passable_grid_square = GridSquare(1, 0)
 bucket_grid_square = GridSquare(1, 0, 3)
@@ -22,3 +23,10 @@ def test_valid_location():
     # out of range
     assert not grid.valid_location(2, 0)
     assert not grid.valid_location(1, 2)
+
+def test_cannot_create_invalid_grid():
+    try:
+        Grid([[wall_grid_square, passable_grid_square], [obstacle_grid_square]])
+        assert False
+    except NeighborhoodRuntimeException as e:
+        assert str(e) == "NeighborhoodRuntimeException: INVALID_GRID: Grid is not a square"
