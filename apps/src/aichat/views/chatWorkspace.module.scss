@@ -38,7 +38,7 @@ $tabs-default-spacing: 4px;
 }
 
 .floatingScrollToBottomButtonContainer {
-  position: absolute;
+  position: relative;
   bottom: 5px;
   display: flex;
   justify-content: center;
@@ -50,7 +50,7 @@ $tabs-default-spacing: 4px;
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
 
   ul {
-    li>button[role="tab"] {
+    li > button[role="tab"] {
       max-width: 300px;
     }
   }
@@ -59,12 +59,12 @@ $tabs-default-spacing: 4px;
 .tabPanelsContainer {
   @extend %conversation-area;
 
-  >div {
+  > div {
     display: flex;
     height: 100%;
   }
 
-  >div[hidden] {
+  > div[hidden] {
     display: none;
   }
 }
