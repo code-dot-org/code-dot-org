@@ -70,11 +70,6 @@ export interface ChatCompletionApiResponse {
   flagged_content?: string;
 }
 
-export interface ChatEventApiResponse {
-  chat_event_id: number;
-  chat_event: ChatMessage;
-}
-
 export type AichatContext = {
   currentLevelId: number | null;
   scriptId: number | null;
