@@ -7,30 +7,28 @@ from neighborhood.support.square_type import SquareType
 sample_maze = '[[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":1,"assetId":0}],[{"tileType":0,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}]]'
 
 def test_cannot_create_invalid_grid_from_string():
-  grid_factory = GridFactory()
   # non-square grid
   try:
-    grid_factory.create_grid_from_string('[[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}], [{"tileType":1,"value":0,"assetId":0}]]')
+    GridFactory.create_grid_from_string('[[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}], [{"tileType":1,"value":0,"assetId":0}]]')
     assert False
   except NeighborhoodRuntimeException as e:
     assert str(e) == "NeighborhoodRuntimeException: INVALID_GRID: Grid is not a square"
   # empty grid
   try:
-    grid_factory.create_grid_from_string('[]')
+    GridFactory.create_grid_from_string('[]')
     assert False
   except NeighborhoodRuntimeException as e: 
     assert str(e) == "NeighborhoodRuntimeException: INVALID_GRID: Grid is empty"
   # invalid configuration, missing a tile type
   invalid_grid = '[[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}]]'
   try:
-    grid_factory.create_grid_from_string(invalid_grid)
+    GridFactory.create_grid_from_string(invalid_grid)
     assert False
   except NeighborhoodRuntimeException as e:
     assert str(e) == "NeighborhoodRuntimeException: INVALID_GRID"
 
 def test_can_create_valid_grid_from_string():
-  grid_factory = GridFactory()
-  grid = grid_factory.create_grid_from_string(sample_maze)
+  grid = GridFactory.create_grid_from_string(sample_maze)
   assert grid.get_size() == 2
   assert grid.valid_location(0, 0)
   assert grid.grid[0][0].asset_id == 0
@@ -41,9 +39,8 @@ def test_can_create_valid_grid_from_string():
   assert grid.grid[0][0].is_passable()
 
 def test_can_create_grid_from_json():
-  grid_factory = GridFactory()
   test_file_path = os.path.join(os.path.dirname(__file__), 'serialized_maze.txt')
-  grid = grid_factory.create_grid_from_file(test_file_path)
+  grid = GridFactory.create_grid_from_file(test_file_path)
   assert grid.get_size() == 2
   assert grid.valid_location(0, 0)
   assert grid.grid[0][0].asset_id == 0
@@ -54,8 +51,7 @@ def test_can_create_grid_from_json():
   assert grid.grid[0][0].is_passable()
 
 def test_can_create_empty_grid():
-  grid_factory = GridFactory()
-  grid = grid_factory.create_empty_grid(4)
+  grid = GridFactory.create_empty_grid(4)
   assert grid.get_size() == 4
   assert grid.valid_location(0, 0)
   assert grid.valid_location(3, 3)

@@ -1,6 +1,7 @@
 from .support.neighborhood_signal_key import NeighborhoodSignalKey
 from .support.signal_message_type import SignalMessageType
 from .support.neighborhood_signal_message import NeighborhoodSignalMessage
+from .support.world import World
 
 class Painter:
   def __init__(self, x=0, y=0, direction="East", paint=0):
