@@ -226,9 +226,15 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   const sendFinishEvent = (): void => {
-    const hasSchool = !!document.querySelector(
-      'select[name="user[school_info_attributes][school_id]"]'
-    );
+    const schoolData = buildSchoolData({
+      schoolId: schoolInfo.schoolId,
+      country: schoolInfo.country,
+      schoolName: schoolInfo.schoolName,
+      schoolZip: schoolInfo.schoolZip,
+    });
+    // schoolData would be undefined if not valid, and the only
+    // school_type sent is 'noSchoolSetting', which is not a school
+    const hasSchool = schoolData && !schoolData.school_type;
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
