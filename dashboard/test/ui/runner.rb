@@ -448,9 +448,13 @@ def report_tests_finished(start_time, run_results)
   + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
   + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
-  unless failures.empty?
-    status_page_link = status_page_url ? "(<a href=\"#{status_page_url}\">STATUS PAGE</a>)" : ''
-    ChatClient.log "*FAILED DASHBOARD #{test_type.upcase} TESTS #{status_page_link}:*", color: 'purple'
+  a_status_page = status_page_url ? "<a href=\"#{status_page_url}\">" : ''
+  end_a = status_page_url ? "</a>" : ''
+
+  if failures.empty?
+    ChatClient.log "*#{a_status_page}SUMMARY, #{suite_success_count} DASHBOARD #{test_type.upcase} TESTS PASSED#{end_a}*", color: 'purple'
+  else
+    ChatClient.log "*#{a_status_page}SUMMARY, #{failures.count} DASHBOARD #{test_type.upcase} TESTS FAILED#{end_a}:*", color: 'purple'
     failures.each do |failure|
       ChatClient.log "\t• #{failure}", color: 'purple'
     end
