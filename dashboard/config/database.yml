@@ -8,7 +8,6 @@ require 'dynamic_config/dcdo'
 
 writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
 reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
-reporting_reader = URI.parse(CDO.dashboard_reporting_db_reader) if CDO.dashboard_reporting_db_reader
 %>
 
 mysql_defaults: &mysql_defaults
@@ -67,16 +66,18 @@ environment_defaults: &environment_defaults
     port: <%= reader.port || 3306 %>
     username: <%= reader.user %>
   <% end %>
-  <% if reporting_reader %>
+  # Always provision a reporting replica database connection pool, even in environments that do not have an Aurora
+  # cluster with a "reporting" RDS Proxy, such as local development environments and continuous integration
+  # builds. In those non-AWS environments, CDO.db_endpoint_proxy_reporting is set to the same servername as the writer
+  # (typically 'localhost').
   primary_reporting:
     replica: true
     <<: *mysql_defaults
-    database: <%= reporting_reader.path.sub(%r{^/},"") %>
-    host: <%= reporting_reader.host %>
-    password: <%= reporting_reader.password %>
-    port: <%= reporting_reader.port || 3306 %>
-    username: <%= reporting_reader.user %>
-  <% end %>
+    host: <%= CDO.db_endpoint_proxy_reporting %>
+    port: <%= CDO.db_endpoint_proxy_reporting_port %>
+    username: <%= CDO.db_credential_reader['username'] %>
+    password: <%= CDO.db_credential_reader['password'] %>
+    database: <%= CDO.dashboard_db_name %>
 
 development:
   <<: *environment_defaults
