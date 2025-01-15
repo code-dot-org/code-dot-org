@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-01-14T18:52:45.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Jordan",
+        "imageUrl": "https://images.code.org/f5f591ba1d50614e4edc8dd24a5aaf03-Screenshot 2025-01-14 105358.png",
+        "key": "undefined-1d5d3a7f-7f89-4eb3-853c-7aa5a400395f",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "## \"Precision is everything!\"",
+        "imageUrl": "https://images.code.org/fee27871b2942221068a3de3f0f86b42-Screenshot 2025-01-14 105521.png",
+        "key": "undefined-ccb0bb2c-6711-4a94-9328-d9d683897239",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## \"Finding bugs is like solving a mystery—one detail at a time.\"",
+        "imageUrl": "https://images.code.org/7020a028e1e360e304d75cd1969722d3-1_AvTKrai2EGkiXqv4F4G_6w.png",
+        "key": "undefined-a682ce3e-40a5-47ab-95f0-10b7b145ee49",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "## \"Nothing beats a quiet space to focus and get things done.\"",
+        "imageUrl": "https://images.code.org/aca95eb7817bfa8261437fa22e5b6505-Screenshot 2025-01-14 110217.png",
+        "key": "undefined-1737e582-c669-4266-b428-837a44bdade4"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-14T18:52:45.615+00:00\",\"changed\":[\"cloned from \\\"IPP-careerPersonas\\\"\"],\"cloned_from\":\"IPP-careerPersonas\"},{\"changed_at\":\"2025-01-14 19:02:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 19:19:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

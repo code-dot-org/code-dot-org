@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-01-07T23:36:59.000Z",
   "level_num": "custom",
@@ -9,6 +10,20 @@
     "offer_browser_tts": "false",
     "panels": [
       {
+        "text": "#Teacher Tip: Background Knowledge\n Before diving into the lesson, ask students what they know about making and producing music.",
+        "imageUrl": "https://images.code.org/47d8743206663e4c56b7377f2e671285-shakira creativity.jpg",
+        "key": "music-coding-intro-career1-panel_1-a8b1c2db-7e77-4292-bdab-37d2b26a4d9a",
+        "layout": "text-top-left",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "#Lesson Warm Up: \nRead the lesson plan for warm up ideas like \"Making a bowl of cereal\" and \"Sequence Shuffle\" ",
+        "imageUrl": "",
+        "key": "music-coding-intro-career1-panel_1-aeafa538-b521-4dfb-83dc-5aaece5e03ef",
+        "fadeInOverPrevious": true
+      },
+      {
         "text": "#Placeholder for a hype video about songwriters using technology to help them express their creativity.",
         "imageUrl": "https://images.code.org/47d8743206663e4c56b7377f2e671285-shakira creativity.jpg",
         "key": "music-coding-intro-career1-panel-6cc616ef-9579-45db-9546-552ccf158a67"
@@ -16,7 +31,6 @@
     ],
     "name_suffix": "_1"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.189+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-career1-panel\\\"\"],\"cloned_from\":\"music-coding-intro-career1-panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.189+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-career1-panel\\\"\"],\"cloned_from\":\"music-coding-intro-career1-panel\"},{\"changed_at\":\"2025-01-14 18:55:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-14 21:34:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
 </Panels>

@@ -126,6 +126,9 @@ FactoryBot.define do
         password {nil}
         after(:create) {|user| user.update(admin: true)}
       end
+      trait :with_educator_role do
+        educator_role {SharedConstants::EDUCATOR_ROLES.first[:value]}
+      end
       trait :with_school_info do
         school_info
       end
