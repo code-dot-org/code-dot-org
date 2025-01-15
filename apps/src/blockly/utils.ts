@@ -2,6 +2,7 @@ import * as GoogleBlockly from 'blockly/core';
 import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -152,6 +153,20 @@ export function handleCodeGenerationFailure(
       event: eventName,
       errorMessage: error.message,
       stackTrace: error.stack,
+    });
+  }
+}
+/**
+ * Handle a failure to get workspace code by either CDO or Google Blockly
+ * by updating the redux store and logging the error.
+ * We only want to log the error once per failure since getWorkspaceCode
+ * gets called many times and the error will be the same every time.
+ * @param {MetricEvent} eventName Event name to log
+ */
+export function reportCdoBlocklyUsage(eventName: MetricEvent) {
+  if (DCDO.get('cdo-blockly-usage', false)) {
+    MetricsReporter.logInfo({
+      event: eventName,
     });
   }
 }
