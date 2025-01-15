@@ -24,7 +24,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   isTeacherView,
 }) => {
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
-  const [atBottomOfContent, setAtBottomofContent] = useState(true);
+  const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
 
   // Compare the chat events  as a string since the object reference will change on every update.
@@ -34,20 +34,23 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 
   const scrollToBottom = () => {
     if (conversationContainerRef.current) {
-      setInProgrammaticScroll(true);
-      conversationContainerRef.current.scrollTo({
-        top: conversationContainerRef.current.scrollHeight,
-        behavior: 'smooth',
-      });
+      setShowScrollToBottom(false);
 
-      const intervalId = setInterval(() => {
-        const atBottom = isAtBottom();
-        if (atBottom) {
-          setInProgrammaticScroll(false);
-          setAtBottomofContent(true);
-          clearInterval(intervalId);
-        }
-      }, 100);
+      // On clear chat, we don't want to scroll to the bottom.
+      if (eventsString !== '[]') {
+        setInProgrammaticScroll(true);
+        conversationContainerRef.current.scrollTo({
+          top: conversationContainerRef.current.scrollHeight,
+          behavior: 'smooth',
+        });
+
+        const intervalId = setInterval(() => {
+          if (isAtBottom()) {
+            setInProgrammaticScroll(false);
+            clearInterval(intervalId);
+          }
+        }, 100);
+      }
     }
   };
 
@@ -58,6 +61,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       return false;
     }
 
+    // Add a pixel of buffer to account for rounding errors.
     return (
       container.scrollTop + container.clientHeight + 1 >= container.scrollHeight
     );
@@ -68,7 +72,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 
     const handleScroll = () => {
       if (container && !inProgrammaticScroll) {
-        setAtBottomofContent(isAtBottom());
+        setShowScrollToBottom(!isAtBottom());
       }
     };
 
@@ -99,7 +103,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
         ))}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
       </div>
-      {!atBottomOfContent && (
+      {showScrollToBottom && (
         <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
           <Button
             isIconOnly
