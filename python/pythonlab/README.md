@@ -22,12 +22,12 @@ This tests adds some customization to the output of unit tests, and has a functi
 (more customized) or student tests (less customized).
 
 ## Building a package
-From the package folder containing `pyproject.toml`, run `pdm install`, and then `pdm build`. The generated `.whl` file will be in the `dist` folder.
-The generated `.whl` file can then be copied to [apps/lib/pyodide](../../apps/lib/pyodide/).
+From the package folder containing `pyproject.toml`, run `uv build`. The generated `.whl` file will be in the `code-dot-org/dist` folder.
+The generated `.whl` file can then be copied to [apps/lib/pyiodide](../../apps/lib/pyodide/).
 
 ### TODO
 
-From CI run `pdm build` automatically when folder content changes, and copy the resulting `.whl` to apps/lib/pyodide.
+From CI run `uv build` automatically when folder content changes, and copy the resulting `.whl` to apps/lib/pyodide.
 
 ## Run tests
-From the folder containing code and tests, run `pdm run pytest`. This will look for tests in all files that start with `test` in the `tests/` sub-directory.
+From the folder containing code and tests, run `uv run pytest`. This will look for tests in all files that start with `test` in the `tests/` sub-directory.

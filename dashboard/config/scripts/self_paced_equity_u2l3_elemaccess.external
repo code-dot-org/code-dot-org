@@ -11,8 +11,8 @@ markdown <<MARKDOWN
 
 #### Efforts to increase access and participation in computer science often focus on middle and high schools. This may be due to the fact that some believe that compuster science isn't appropriate for younger students. But this isn't true!
 
-* #### Students as young as five have shown the capacity for engaging in computer science concepts and learning programming. (<a href="https://doi.org/10.1016/j.compedu.2012.11.016" target="_blank" rel="noopener noreferrer">Fessakis, et al., 2013</a>)
-* #### Additionally, short, weekly exposure to computer science concepts significantly increases students' interest in the subject. (<a href="https://dl.acm.org/doi/10.5555/1409873.1409896" target="_blank" rel="noopener noreferrer">Lambert & Guiffre, 2009</a>).
+* #### Students as young as five have shown the capacity for engaging in computer science concepts and learning programming.<sup>1</sup>
+* #### Additionally, short, weekly exposure to computer science concepts significantly increases students' interest in the subject.<sup>2</sup>
 
 #### Providing computer science exposure to elementary school students is important to facilitate crucial **exposure** to fundamental computer science topics for younger students. Due to increasing usage and adoption of technology, today’s elementary school students are poised to participate in computer science better than ever.
 
@@ -29,4 +29,9 @@ markdown <<MARKDOWN
 * #### If you can't incorporate CS during the school day, apply to start an after-school club with Code.org curriculum or groups like <a href="https://girlswhocode.com/programs/clubs-program" target="blank" rel="noopener noreferrer">Girls Who Code</a>.
 * #### Provide <a href="https://drive.google.com/file/d/1grIR8CU-S17z74dw86NCc28Tu6pMJnj6/view?usp=drive_link" target="blank" rel="noopener noreferrer">informational materials</a> about computer science to administrators and parents.
 * #### If computer science is a hard sell, consider integrating it into core subjects using <a href="https://code.org/curriculum/csc" target="blank" rel="noopener noreferrer">**Computer Science Connections**</a>.
+
+___
+
+##### <sup>1</sup>Fessakis, G., et al. “Problem solving by 5–6 years old kindergarten children in a computer programming environment: A case study.” Computers & Education, vol. 63, Apr. 2013, pp. 87–97, https://doi.org/10.1016/j.compedu.2012.11.016. 
+##### <sup>2</sup>Lambert, Lynn, and Heather Guiffre. “Computer science outreach in an elementary school.” Journal of Computing Sciences in Colleges, vol. 24, no. 3, 1 Jan. 2009, pp. 118–124, https://dl.acm.org/doi/10.5555/1409873.1409896.
 MARKDOWN

@@ -134,6 +134,29 @@ em strong {
   @include main-font-bold-italic;
 }
 
+a.skip_link {
+  background: $white;
+  color: $black;
+  padding: 8px;
+  z-index: 10;
+  text-decoration: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  transform: translateX(var(--skip-link-transform, -100%));
+  transition: all 0.2s ease-in;
+  opacity: 0;
+
+  html[dir="rtl"] & {
+    --skip-link-transform: 100%;
+  }
+
+  &:focus {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 a.video_link {
   /* IE9 CSS hack */
   max-width: 100%\9;
