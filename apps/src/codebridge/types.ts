@@ -54,9 +54,6 @@ export type ConfigType = {
   validMimeTypes?: string[];
 };
 
-//export type ProjectType = MultiFileSource;
-//export type SourceType = ProjectSources;
-
 export type SetProjectFunction = (project: ProjectSources) => void;
 export type SetConfigFunction = (project: ConfigType) => void;
 export type ResetProjectFunction = () => void;

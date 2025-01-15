@@ -4,7 +4,7 @@ import {shouldShowFile} from './fileUtils';
 import {sortFilesByName} from './sortFilesByName';
 
 /**
- * Retrieves an array of open file objects from a source, filtering based on the `shouldShowFile` function.
+ * Retrieves an array of open file objects from the source, filtering based on the `shouldShowFile` function.
  *
  * If the source has a defined `openFiles` property, the function returns an array containing open files that
    pass the `shouldShowFile` check. The check is performed on the corresponding file object obtained from the
@@ -33,7 +33,8 @@ export const getOpenFiles = (source: MultiFileSource) => {
 /**
  * Extracts an array of open file IDs from a source.
  *
- * This function relies on `getOpenFiles` to retrieve the actual open file objects. It then iterates over those files and extracts their `id` properties, returning an array of file IDs.
+ * This function relies on `getOpenFiles` to retrieve the actual open file objects. It then iterates over those files and
+ * extracts their `id` properties, returning an array of file IDs.
  *
  * @param source - The source object.
  * @returns An array containing the IDs of the open files in the source.
