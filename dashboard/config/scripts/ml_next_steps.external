@@ -1,0 +1,15 @@
+name 'ML-next-steps'
+skip_dialog true
+markdown <<MARKDOWN
+# Next Steps 
+
+##Prepare to Teach 
+
+#### (Insert link to the slide deck here.)Make a copy of the slide deck. Look through the slides and ask yourself: 
+#### 1. What slides would work well in my classroom? 
+#### 2. What slides would need revisions in order to work in my classroom? 
+#### 3. What additional information would be helpful to add into the slides? 
+
+#### Take some time to update the slide deck so that you are ready to teach. 
+
+MARKDOWN

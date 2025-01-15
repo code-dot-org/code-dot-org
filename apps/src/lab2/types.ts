@@ -62,9 +62,11 @@ export interface ProjectSources {
   // Source code can either be a string or a nested JSON object (for multi-file).
   source: string | MultiFileSource;
   // Optional lab-specific configuration for this project
-  labConfig?: {[key: string]: {[key: string]: string}};
+  labConfig?: LabConfig;
   // Add other properties (animations, html, etc) as needed.
 }
+
+export type LabConfig = {[key: string]: {[key: string]: string}};
 
 // We will eventually make this a union type to include other source types.
 export type Source = BlocklySource | MultiFileSource;
@@ -132,11 +134,23 @@ export interface ProjectFile {
   type?: ProjectFileType;
 }
 
+/**
+ * Project file types are as follows:
+ * Starter: Files that come from level start code that are editable by the user.
+ * Support: Files that come from level start code that are hidden and not editable by the user.
+ * Validation: The file that contain the level's validation code, which is a code file that will be
+ * run by the lab. This file is hidden from users.
+ * Locked Starter: Files that come from level start code that are editable by the user, but cannot be
+ *  deleted or renamed.
+ * System Support: Files that are used for running code and for share/remix, but are hidden from the user.
+ *  For example, the serialized maze for a neighborhood level.
+ */
 export enum ProjectFileType {
   STARTER = 'starter',
   SUPPORT = 'support',
   VALIDATION = 'validation',
   LOCKED_STARTER = 'locked_starter',
+  SYSTEM_SUPPORT = 'system_support',
 }
 
 export interface ProjectFolder {

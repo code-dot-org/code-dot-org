@@ -12,11 +12,7 @@ markdown <<MARKDOWN
 <div style="width: 100%; max-width: 90%; box-sizing: border-box; border: 2px solid #009EB0; padding: 10px; border-radius: 10px; margin: 30px 20px 20px 30px;">
   <div style="width: 100%; max-width: 100%; box-sizing: border-box; margin-bottom: 5px; padding: 20px 10px 10px 10px; background-color: #F7F8FA; border-radius: 10px; text-align: center;">
     <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">What is Computational Thinking?</p><br>
-    <p style="font-size: 14pt; margin-bottom: 15px;">Computational thinking is an interrelated set of skills and practices for solving complex problems.</p>
-    <p style="font-size: 10pt; font-style: italic; color: #555;">
-      <a href="https://digitalpromise.org/initiative/computational-thinking/computational-thinking-for-next-generation-science/what-is-computational-thinking/" 
-         target="_blank" style="text-decoration: none; color: #0066cc;">Digital Promise, "What is Computational Thinking?"</a>
-    </p>
+    <p style="font-size: 14pt; margin-bottom: 15px;">Computational thinking is an interrelated set of skills and practices for solving complex problems.<sup>6</sup></p>
   </div>
 
   <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 10px; margin-bottom: 5px; width: 100%; max-width: 100%; box-sizing: border-box;">
@@ -24,32 +20,26 @@ markdown <<MARKDOWN
     <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
       <img src="https://images.code.org/199f369578811ff11f8dc88b6d40f3f5-image-1736535589828.png" alt="A flowchart showing a central item being broken down into three." style="width: 40px; height: 40px; margin-bottom: 10px;">
       <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Decomposition</p>
-      <p style="font-size: 14pt; margin: 0;">Breaking down a complex problem or system into smaller, more manageable parts.</p>
+      <p style="font-size: 14pt; margin: 0;">Breaking down a complex problem or system into smaller, more manageable parts.<sup>7</sup></p>
     </div>
     <!-- Pattern Recognition -->
     <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
       <img src="https://images.code.org/bcb4304d866a4ec46e036423fc0d79b0-image-1736535593030.png" alt="A magnifying glass showing three repeating items." style="width: 40px; height: 40px; margin-bottom: 10px;">
       <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Pattern Recognition</p>
-      <p style="font-size: 14pt; margin: 0;">Looking for similarities among and within problems.</p>
+      <p style="font-size: 14pt; margin: 0;">Looking for similarities among and within problems.<sup>7</sup</p>
     </div>
     <!-- Abstraction -->
     <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
       <img src="https://images.code.org/53e922f8a75ee840f0e7989d9cfdfd35-image-1736535595178.png" alt="A highlighter marking up a piece of paper" style="width: 40px; height: 40px; margin-bottom: 10px;">
       <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Abstraction</p>
-      <p style="font-size: 14pt; margin: 0;">Focusing on the important information only, ignoring irrelevant detail.</p>
+      <p style="font-size: 14pt; margin: 0;">Focusing on the important information only, ignoring irrelevant detail.<sup>7</sup</p>
     </div>
     <!-- Algorithms -->
     <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
       <img src="https://images.code.org/c41c2a800a5ad39838d6d7d37325f288-image-1736535608844.png" alt="A flowchart showing multiple steps" style="width: 40px; height: 40px; margin-bottom: 10px;">
       <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Algorithms</p>
-      <p style="font-size: 14pt; margin: 0;">Developing a step-by-step solution to the problem, or the rules to follow to solve the problem.</p>
+      <p style="font-size: 14pt; margin: 0;">Developing a step-by-step solution to the problem, or the rules to follow to solve the problem.<sup>7</sup</p>
     </div>
-  </div>
-
-  <div style="width: 100%; max-width: 100%; box-sizing: border-box; padding: 15px; background-color: #F7F8FA; border-radius: 10px;">
-    <p style="font-size: 10pt; font-style: italic; color: #555; margin: 0;">
-      <a href="https://www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1" target="_blank" style="text-decoration: none; color: #0066cc;">BBC Bitesize, "Introduction to Computational Thinking"</a>
-    </p>
   </div>
 </div>
 
@@ -91,5 +81,6 @@ markdown <<MARKDOWN
 
 ___
 
-##### <sup>1</sup> Tucker et al. (2003) <i>A Model Curriculum for K-12 Computer Science: Final Report of the ACM K-12 Task Force Curriculum Committee.</i>
+##### <sup>6</sup>“What Is Computational Thinking?” Digital Promise, 13 May 2022, <a href="https://digitalpromise.org/initiative/computational-thinking/computational-thinking-for-next-generation-science/what-is-computational-thinking/" target="blank" rel="noopener noreferrer">https://digitalpromise.org/initiative/computational-thinking/computational-thinking-for-next-generation-science/what-is-computational-thinking/</a>. 
+##### <sup>7</sup>“What Is Computational Thinking? - Introduction to Computational Thinking.” BBC Bitesize, BBC, 5 Sept. 2023, <a href="www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1" target="blank" rel="noopener noreferrer">www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1</a>. 
 MARKDOWN

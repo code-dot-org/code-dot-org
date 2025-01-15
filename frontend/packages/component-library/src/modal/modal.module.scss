@@ -1,0 +1,131 @@
+@import '@/common/styles/primitiveColors.css';
+
+// Common Modal styles
+.modal {
+  position: relative;
+  display: flex;
+  min-width: 600px;
+  max-width: 800px;
+  padding: 1.5rem 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 18px 0 rgb(0 0 0 / 0.3);
+  overflow: auto;
+
+  hr {
+    width: 100%;
+    margin: 0;
+    border: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0.0625rem;
+    flex-shrink: 0;
+    background: var(--neutral-gray-20);
+  }
+}
+
+.modalTitleSection {
+  align-self: stretch;
+  gap: 1.5rem;
+
+  h3 {
+    margin-bottom: 0;
+    color: var(--neutral-base-black);
+  }
+}
+
+.modalContentSection {
+  overflow: auto;
+
+  max-height: 168px;
+
+  &.modalContentSection-top-imagePlacement {
+    max-height: 424px;
+  }
+
+  &.modalContentSection-inline-imagePlacement {
+    max-height: 240px;
+  }
+
+  p {
+    margin: 0;
+    color: var(--neutral-base-black);
+  }
+}
+
+.modalContentSection-top-imagePlacement {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  img {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    align-self: center;
+
+    border-radius: 0.25rem;
+    background: var(--neutral-gray-20);
+  }
+}
+
+.modalContentSection-inline-imagePlacement {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  align-self: stretch;
+
+  img {
+    display: flex;
+    width: 240px;
+    height: 240px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+
+    border-radius: 0.25rem;
+    background: var(--neutral-gray-20);
+  }
+
+  .modalDescription {
+    max-height: 240px;
+    overflow: auto;
+  }
+}
+
+.modalActionsSection {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+}
+
+.modalCloseButton {
+  position: absolute;
+  inset-block-start: 8px;
+  inset-inline-end: 8px;
+}
+
+// Modal colors
+.modal-light {
+  background-color: var(--neutral-base-white);
+}
+
+.modal-dark {
+  background-color: var(--neutral-gray-90);
+
+  .modalTitleSection h3,
+  .modalContentSection p {
+    color: var(--neutral-base-white);
+  }
+}

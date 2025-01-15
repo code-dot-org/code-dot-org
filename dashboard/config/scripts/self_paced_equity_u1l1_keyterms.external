@@ -24,12 +24,12 @@ markdown <<MARKDOWN
 
 ## Key Terms
 
-* #### **Equity**: Ensuring that access, resources, and opportunities are provided for all to succeed and grow, and remove barriers especially for those who have been historically excluded.
-* #### **Access**: The right and opportunity for all students to learn and experience computer science.
-* #### **Diversity**: The variation in students' backgrounds, experiences, attitudes, and aspirations, particularly in relation to race/ethnicity, which leads to a diverse student body that enhances learning outcomes and promotes interactions with peers from different backgrounds.
-* #### **Inclusion**: Creating learning environments that are accessible and welcoming of students’ identities, backgrounds, differences and perspectives without barriers or judgment. This means actively attending to gender, race, ethnicity, ability, or socioeconomic status.
-* #### **Belonging**: Belonging is the feeling of security and support when there is a sense of acceptance, inclusion, and identity for a member of a certain group.
-* #### **Computer Science**: the study of computers and algorithmic processes, including their principles, their hardware and software designs, their [implementation], and their impact on society.
+* #### **Equity**: Ensuring that access, resources, and opportunities are provided for all to succeed and grow, and remove barriers especially for those who have been historically excluded.<sup>3</sup>
+* #### **Access**: The right and opportunity for all students to learn and experience computer science.<sup>3</sup>
+* #### **Diversity**: The variation in students' backgrounds, experiences, attitudes, and aspirations, particularly in relation to race/ethnicity, which leads to a diverse student body that enhances learning outcomes and promotes interactions with peers from different backgrounds.<sup>2</sup>
+* #### **Inclusion**: Creating learning environments that are accessible and welcoming of students’ identities, backgrounds, differences and perspectives without barriers or judgment. This means actively attending to gender, race, ethnicity, ability, or socioeconomic status.<sup>3</sup>
+* #### **Belonging**: Belonging is the feeling of security and support when there is a sense of acceptance, inclusion, and identity for a member of a certain group.<sup>3</sup>
+* #### **Computer Science**: the study of computers and algorithmic processes, including their principles, their hardware and software designs, their [implementation], and their impact on society.<sup>1</sup>
 <br>
 
 
@@ -47,9 +47,7 @@ markdown <<MARKDOWN
 <br>
 
 ___
-
-##### **Sources for Definitions:**
-* ##### <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a" target="blank" rel="noopener noreferrer">Microsoft's Guide to Inclusive Computer Science Education</a>
-* ##### <a href="https://www.sciencedirect.com/topics/social-sciences/educational-diversity" target="blank" rel="noopener noreferrer">Educational Diversity - an Overview</a>
-* ##### <a href="https://k12cs.org/defining-computer-science/" target="blank" rel="noopener noreferrer">K12CS - Defining CS</a>
+##### <sup>1</sup>“Defining Computer Science.” K12cs.Org, k12cs.org/defining-computer-science/. 
+##### <sup>2</sup>“Educational Diversity.” Educational Diversity - An Overview | ScienceDirect Topics, <a href="www.sciencedirect.com/topics/social-sciences/educational-diversity" target="blank" rel="noopener noreferrer">www.sciencedirect.com/topics/social-sciences/educational-diversity</a> 
+##### <sup>3</sup>Microsoft. Guide to Inclusive Computer Science Education, 2023, <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a" target="blank" rel="noopener noreferrer">https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a.</a>
 MARKDOWN

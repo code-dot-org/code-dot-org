@@ -62,6 +62,7 @@ module Services
           :email,
           :hashed_email,
           :name,
+          :educator_role,
           :email_preference_opt_in_required,
           :email_preference_opt_in,
           :email_preference_request_ip,

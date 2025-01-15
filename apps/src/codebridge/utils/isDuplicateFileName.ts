@@ -47,7 +47,8 @@ export const isDuplicateFileName = ({
     if (existingFile) {
       if (
         existingFile.type === ProjectFileType.SUPPORT ||
-        existingFile.type === ProjectFileType.VALIDATION
+        existingFile.type === ProjectFileType.VALIDATION ||
+        existingFile.type === ProjectFileType.SYSTEM_SUPPORT
       ) {
         return DuplicateFileError.DUPLICATE_SUPPORT_FILE;
       } else {
