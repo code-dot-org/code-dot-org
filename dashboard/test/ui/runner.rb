@@ -775,10 +775,11 @@ def run_feature(browser, feature, options)
   while !cucumber_succeeded && (reruns < max_reruns)
     reruns += 1
 
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
-    ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{flakiness_for_test(test_run_string) || '?'})..."
+    message = "#{test_run_string} failed once, retrying (#{reruns}/#{max_reruns}, flakiness: #{flakiness_for_test(test_run_string) || '?'})"
+    message += "<br/>first selenium error: #{first_selenium_error(html_log)}" if options.html
+    ChatClient.log message
     $lock.synchronize do
       log_error prefix_string(Time.now, log_prefix)
       log_error prefix_string(browser.to_yaml, log_prefix)
@@ -839,10 +840,10 @@ def run_feature(browser, feature, options)
     # Don't log individual successes because we hit ChatClient rate limits
     # ChatClient.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
     message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})#{log_link}"
+    message += "<br/>first selenium error: #{first_selenium_error(html_log)}" if options.html
     message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}"
     ChatClient.log message, color: 'red'
   end
