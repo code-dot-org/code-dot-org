@@ -449,13 +449,11 @@ def report_tests_finished(start_time, run_results)
   + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
   unless failures.empty?
-    message = "Failed tests:"
-    message += "<ul>"
+    status_page_link = status_page_url ? "(<a href=\"#{status_page_url}\">STATUS PAGE</a>)" : ''
+    ChatClient.log "*FAILED DASHBOARD #{test_type.upcase} TESTS #{status_page_link}:*", color: 'purple'
     failures.each do |failure|
-      message += "\t<li>#{failure}</li>\n"
+      ChatClient.log "\t• #{failure}", color: 'purple'
     end
-    message += "</ul>"
-    ChatClient.log "Failed tests: \n #{failures.map {|s| "\t• #{s}"}.join("\n")}"
   end
 end
 
@@ -858,7 +856,7 @@ def run_feature(browser, feature, options)
     message = "*FAILED: #{test_run_string}* #{log_link}"
     message += "\n(#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})"
     message += "\nrerun: `bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}`"
-    ChatClient.log message, color: 'purple'
+    ChatClient.log message, color: 'red'
   end
   result_string =
     if scenario_count == 0
