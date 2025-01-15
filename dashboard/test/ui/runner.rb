@@ -854,10 +854,10 @@ def run_feature(browser, feature, options)
   else
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
-    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})"
-    message += "#{log_link}, first selenium error: <i>#{first_selenium_error(html_log)}</i>" if options.html
-    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}"
-    ChatClient.log message, color: 'red'
+    message = "*FAILED: #{test_run_string}* #{log_link}"
+    message += "\n(#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})"
+    message += "\nrerun: `bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}`"
+    ChatClient.log message, color: 'purple'
   end
   result_string =
     if scenario_count == 0
