@@ -2,6 +2,7 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 import type {
   AiInteractionStatus,
   AiChatModelIds,
+  AiChatTeacherFeedback,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {Role} from '../aiComponentLibrary/chatMessage/types';
@@ -23,19 +24,13 @@ export interface ChatEvent {
   descriptionKey?: ChatEventDescriptionKey;
 }
 
-export enum TeacherFeedback {
-  CLEAN_DISAGREE = 'clean_disagree', // Flagged a clean message as inappropriate
-  PROFANITY_AGREE = 'profanity_agree', // Thumbs-upped profane message
-  PROFANITY_DISAGREE = 'profanity_disagree', // Thumbs-downed profane message
-}
-
 export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
   requestId?: number;
   // If undefined, the teacher took no action or undid their action.
-  teacherFeedback?: TeacherFeedback;
+  teacherFeedback?: ValueOf<typeof AiChatTeacherFeedback>;
 }
 
 export interface ModelUpdate extends ChatEvent {

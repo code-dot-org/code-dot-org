@@ -1,5 +1,6 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
+  AiChatTeacherFeedback,
   AiInteractionStatus,
   AiRequestExecutionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -15,7 +16,6 @@ import {
   ChatEvent,
   ChatMessage,
   DetectToxicityResponse,
-  TeacherFeedback,
 } from './types';
 import {extractFieldsToCheckForToxicity} from './utils';
 
@@ -75,7 +75,7 @@ export async function postAichatCompletionMessage(
  */
 export async function postSubmitTeacherFeedback(
   eventId: number,
-  feedback: TeacherFeedback
+  feedback: ValueOf<typeof AiChatTeacherFeedback>
 ) {
   const payload = {
     eventId,

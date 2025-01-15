@@ -34,10 +34,6 @@ class AichatController < ApplicationController
 
     # Create the request object
     begin
-      # JIRA LABS-1294: These `to_json`s on the json fields (model_customizations, stored_messages, and new_message)
-      # are json stringifying the ruby hashes (objects) before storing them, so they are stored as escaped strings.
-      # We should remove these and either handle both cases (parse the json if it's a string when we read) or do
-      # a one-time migration to parse all the strings and rewrite them.
       request = AichatRequest.create!(
         user_id: current_user.id,
         model_customizations: params[:aichatModelCustomizations],
@@ -134,6 +130,8 @@ class AichatController < ApplicationController
 
     chat_event_id = params[:eventId]
     feedback = params[:feedback]
+
+    return render status: :bad_request, json: {} if feedback && !SharedConstants::AI_CHAT_TEACHER_FEEDBACK.value?(feedback)
 
     begin
       chat_event = AichatEvent.find(chat_event_id)

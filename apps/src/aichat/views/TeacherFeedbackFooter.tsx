@@ -5,10 +5,11 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {EmText} from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import aichatI18n from '../locale';
 import {submitTeacherFeedback} from '../redux/aichatRedux';
-import {ChatMessage, TeacherFeedback} from '../types';
+import {ChatMessage} from '../types';
 
 import moduleStyles from './teacher-feedback-footer.module.scss';
 
