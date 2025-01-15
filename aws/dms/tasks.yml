@@ -58,6 +58,9 @@ cron-pii:
 - dashboard.learning_goal_teacher_evaluations
 - dashboard.learning_goal_ai_evaluation_feedbacks
 - dashboard.ai_tutor_interactions
+- dashboard.aichat_requests
+- dashboard.aichat_events
+- dashboard.lti_deployments_user_identities
 
 # All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
 # sensitive data to this schema.

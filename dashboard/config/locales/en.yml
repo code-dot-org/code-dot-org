@@ -1458,6 +1458,7 @@ en:
       backend_error: "Oops! We encountered an error while trying to link your account. Please try launching Code.org again from your LMS."
       go_back: "Go back"
       invalid_credentials: "Invalid credentials"
+      launch_from_lms: "Please launch from your LMS to link your account."
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
       sign_in_and_connect: "Sign in and connect"

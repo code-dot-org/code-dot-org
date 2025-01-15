@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "intro-to-programming-playground",
-    "serialized_at": "2025-01-13 20:44:54 UTC",
+    "serialized_at": "2025-01-14 22:51:51 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -21,21 +21,34 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-3",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "New Neighborhood (w Panels + Chatbot Levels)"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Old Progression"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground"
       }
     }
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Level Progression Example 1 - Variables",
+      "key": "lesson-6",
+      "name": "L1: Placeholder!",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -43,14 +56,14 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "intro-to-programming-playground"
       }
     },
     {
-      "key": "lesson-2",
-      "name": "Level Progression Example 2 - Conditionals",
+      "key": "lesson-3",
+      "name": "L2",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -58,13 +71,124 @@
       "properties": {
       },
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "L3",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "L4",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Level Progression Example 1 - Variables",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-programming-playground"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Level Progression Example 2 - Conditionals",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground"
       }
     }
   ],
   "lesson_activities": [
+    {
+      "key": "4881feb4-769a-49be-a2e7-32f306e9d768",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4881feb4-769a-49be-a2e7-32f306e9d768",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground"
+      }
+    },
+    {
+      "key": "249ecf02-249e-48ac-95e3-640e05f173fc",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "249ecf02-249e-48ac-95e3-640e05f173fc",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground"
+      }
+    },
+    {
+      "key": "b9836e19-263d-49ed-8cc9-b8ad54b5bca5",
+      "position": 2,
+      "properties": {
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b9836e19-263d-49ed-8cc9-b8ad54b5bca5",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground"
+      }
+    },
+    {
+      "key": "66bba678-2284-4520-a629-f23627730699",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "66bba678-2284-4520-a629-f23627730699",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground"
+      }
+    },
     {
       "key": "c7f79411-e090-46e6-bb60-9b02cd6e5c52",
       "position": 1,
@@ -73,12 +197,76 @@
       "seeding_key": {
         "lesson_activity.key": "c7f79411-e090-46e6-bb60-9b02cd6e5c52",
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground"
       }
     }
   ],
   "activity_sections": [
+    {
+      "key": "3a0cbcb2-a1c5-4f72-8213-d7a2fa1f7beb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Persona Choice Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a0cbcb2-a1c5-4f72-8213-d7a2fa1f7beb",
+        "lesson_activity.key": "4881feb4-769a-49be-a2e7-32f306e9d768"
+      }
+    },
+    {
+      "key": "1b9bff48-f1d6-4f02-8186-2e47fb7e7df0",
+      "position": 2,
+      "properties": {
+        "progression_name": "AI Career Chat Buddy"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b9bff48-f1d6-4f02-8186-2e47fb7e7df0",
+        "lesson_activity.key": "4881feb4-769a-49be-a2e7-32f306e9d768"
+      }
+    },
+    {
+      "key": "84f2ccb1-8888-49ba-9422-a4166d5b1ef7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "84f2ccb1-8888-49ba-9422-a4166d5b1ef7",
+        "lesson_activity.key": "249ecf02-249e-48ac-95e3-640e05f173fc"
+      }
+    },
+    {
+      "key": "bba01ddc-b3ee-4472-866a-993a7b0b6348",
+      "position": 1,
+      "properties": {
+        "progression_name": "Decomposition Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "bba01ddc-b3ee-4472-866a-993a7b0b6348",
+        "lesson_activity.key": "b9836e19-263d-49ed-8cc9-b8ad54b5bca5"
+      }
+    },
+    {
+      "key": "0ee701a6-12d1-47f1-8a6a-93a1f3077c10",
+      "position": 2,
+      "properties": {
+        "progression_name": "Abstraction Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ee701a6-12d1-47f1-8a6a-93a1f3077c10",
+        "lesson_activity.key": "b9836e19-263d-49ed-8cc9-b8ad54b5bca5"
+      }
+    },
+    {
+      "key": "b8a25e4e-1d76-4f2a-b7ff-79e360419ac9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b8a25e4e-1d76-4f2a-b7ff-79e360419ac9",
+        "lesson_activity.key": "66bba678-2284-4520-a629-f23627730699"
+      }
+    },
     {
       "key": "1e09095e-4dac-4f66-b958-4b42169b1cbe",
       "position": 1,
@@ -155,6 +343,94 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Persona Choice Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "IPP-careerPersonaChoices"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "3a0cbcb2-a1c5-4f72-8213-d7a2fa1f7beb"
+      },
+      "level_keys": [
+        "IPP-careerPersonaChoices"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Career Chat Buddy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "IPP-CareerChatBuddy1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "1b9bff48-f1d6-4f02-8186-2e47fb7e7df0"
+      },
+      "level_keys": [
+        "IPP-CareerChatBuddy1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Decomposition Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-python-1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "bba01ddc-b3ee-4472-866a-993a7b0b6348"
+      },
+      "level_keys": [
+        "emma-test-ai-chatbot-python-1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Abstraction Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-python-2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "0ee701a6-12d1-47f1-8a6a-93a1f3077c10"
+      },
+      "level_keys": [
+        "emma-test-ai-chatbot-python-2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "IPP_SampleProgression_UMC_1"
         ],
@@ -166,7 +442,7 @@
           "IPP_SampleProgression_UMC_1"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       },
@@ -175,7 +451,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -191,7 +467,7 @@
           "IPP_SampleProgression_UMC_2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       },
@@ -200,7 +476,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -216,7 +492,7 @@
           "IPP_SampleProgression_UMC_3"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       },
@@ -225,7 +501,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -241,7 +517,7 @@
           "IPP_SampleProgression_UMC_4"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       },
@@ -250,7 +526,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 9,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -266,7 +542,7 @@
           "IPP_SampleProgression_UMC_5"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       },
@@ -275,7 +551,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 10,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -291,7 +567,7 @@
           "IPP_SampleProgression_UMC_6"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       },
@@ -300,7 +576,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 11,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -316,7 +592,7 @@
           "IPP_SampleProgression_UMC_7"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       },
@@ -325,7 +601,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 12,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -341,7 +617,7 @@
           "IPP_SampleProgression_UMC_8"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "93671e98-f54a-4b9a-9822-68d495738b90"
       },
@@ -350,7 +626,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 13,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -366,7 +642,7 @@
           "IPP_SampleProgression_UMC_9"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "93671e98-f54a-4b9a-9822-68d495738b90"
       },
@@ -375,7 +651,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 14,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -391,7 +667,7 @@
           "IPP_SampleProgression_UMC_10"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "93671e98-f54a-4b9a-9822-68d495738b90"
       },
@@ -400,7 +676,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 15,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -416,7 +692,7 @@
           "IPP_SampleProgression_UMC_11"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "93671e98-f54a-4b9a-9822-68d495738b90"
       },
@@ -425,7 +701,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 16,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -441,7 +717,7 @@
           "IPP_SampleProgression_UMC_assessment"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "e49df398-5a31-4e9a-9563-148a60593d81"
       },
@@ -450,7 +726,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 17,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -466,7 +742,7 @@
           "IPP_SampleProgression_UMC_Practice"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "811333f2-60cf-4aeb-b886-e47032728424"
       },
@@ -475,7 +751,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 18,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -491,7 +767,7 @@
           "IPP_SampleProgression_UMC_Inspiration"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "c35a5186-3275-4594-b293-6d73c6784962"
       },
@@ -500,7 +776,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 19,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -516,7 +792,7 @@
           "IPP_SampleProgression_UMC_Debugging"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "52622510-3f7a-4d36-b889-e588e55339ac"
       },
@@ -528,12 +804,60 @@
   "levels_script_levels": [
     {
       "seeding_key": {
+        "level.key": "IPP-careerPersonaChoices",
+        "script_level.level_keys": [
+          "IPP-careerPersonaChoices"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "3a0cbcb2-a1c5-4f72-8213-d7a2fa1f7beb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "IPP-CareerChatBuddy1",
+        "script_level.level_keys": [
+          "IPP-CareerChatBuddy1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "1b9bff48-f1d6-4f02-8186-2e47fb7e7df0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-ai-chatbot-python-1",
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-python-1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "bba01ddc-b3ee-4472-866a-993a7b0b6348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-ai-chatbot-python-2",
+        "script_level.level_keys": [
+          "emma-test-ai-chatbot-python-2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "0ee701a6-12d1-47f1-8a6a-93a1f3077c10"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "IPP_SampleProgression_UMC_1",
         "script_level.level_keys": [
           "IPP_SampleProgression_UMC_1"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       }
@@ -545,7 +869,7 @@
           "IPP_SampleProgression_UMC_2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       }
@@ -557,7 +881,7 @@
           "IPP_SampleProgression_UMC_3"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       }
@@ -569,7 +893,7 @@
           "IPP_SampleProgression_UMC_4"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       }
@@ -581,7 +905,7 @@
           "IPP_SampleProgression_UMC_5"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       }
@@ -593,7 +917,7 @@
           "IPP_SampleProgression_UMC_6"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       }
@@ -605,7 +929,7 @@
           "IPP_SampleProgression_UMC_7"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "1e09095e-4dac-4f66-b958-4b42169b1cbe"
       }
@@ -617,7 +941,7 @@
           "IPP_SampleProgression_UMC_8"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "93671e98-f54a-4b9a-9822-68d495738b90"
       }
@@ -629,7 +953,7 @@
           "IPP_SampleProgression_UMC_9"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "93671e98-f54a-4b9a-9822-68d495738b90"
       }
@@ -641,7 +965,7 @@
           "IPP_SampleProgression_UMC_10"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "93671e98-f54a-4b9a-9822-68d495738b90"
       }
@@ -653,7 +977,7 @@
           "IPP_SampleProgression_UMC_11"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "93671e98-f54a-4b9a-9822-68d495738b90"
       }
@@ -665,7 +989,7 @@
           "IPP_SampleProgression_UMC_assessment"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "e49df398-5a31-4e9a-9563-148a60593d81"
       }
@@ -677,7 +1001,7 @@
           "IPP_SampleProgression_UMC_Practice"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "811333f2-60cf-4aeb-b886-e47032728424"
       }
@@ -689,7 +1013,7 @@
           "IPP_SampleProgression_UMC_Inspiration"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "c35a5186-3275-4594-b293-6d73c6784962"
       }
@@ -701,7 +1025,7 @@
           "IPP_SampleProgression_UMC_Debugging"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "52622510-3f7a-4d36-b889-e588e55339ac"
       }
