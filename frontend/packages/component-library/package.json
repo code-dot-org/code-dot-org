@@ -1,18 +1,18 @@
 {
-  "name": "@code-dot-org/dsco",
+  "name": "@code-dot-org/component-library",
   "version": "0.1.0-alpha.0",
   "keywords": [
     "design-system",
     "code.org"
   ],
-  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/dsco/#readme",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/component-library/#readme",
   "bugs": {
     "url": "https://github.com/code-dot-org/code-dot-org/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
-    "directory": "frontend/packages/dsco"
+    "directory": "frontend/packages/component-library"
   },
   "license": "SEE LICENSE IN LICENSE",
   "sideEffects": false,

@@ -3,6 +3,8 @@ skip_dialog true
 markdown <<MARKDOWN
 # Navigating Music Lab
 
+#### Interface of Music Lab is different from Sprite Lab. 
+#### After running code, there are feedback messages. 
 #### Bold words are call outs (blue arrows are a visual hint) 
 
 #### Feedback after running the code 
@@ -15,4 +17,7 @@ markdown <<MARKDOWN
 <br>
 
 ![](https://images.code.org/4f0383a54899ddc6aeffdd3be0ca25b2-image-1736797714964.48.31 AM.png)
+
+
+#### If you are new to coding and want more support, check out our <a href="https://studio.code.org/courses/self-paced-pl-k5-2024" target="_blank">Computer Science Basics </a> self-paced professional learning module.
 MARKDOWN

@@ -19306,7 +19306,19 @@ en:
               name: Level Progression Example 1
             lesson-2:
               name: Level Progression Example 2 - Conditionals
-          lesson_groups: {}
+            lesson-3:
+              name: L2
+            lesson-4:
+              name: L3
+            lesson-5:
+              name: L4
+            lesson-6:
+              name: 'L1: Placeholder!'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: New Neighborhood (w Panels + Chatbot Levels)
+            lessonGroup-2:
+              display_name: Old Progression
           name: intro-to-programming-playground
           title: "[PLAYGROUND] Introduction to Programming with Python"
           description_audience: ''

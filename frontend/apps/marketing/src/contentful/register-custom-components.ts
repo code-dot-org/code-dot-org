@@ -11,7 +11,7 @@ import {Stub, StubContentfulComponentDefinition} from '@code-dot-org/dsco/stub';
 import {
   StubSection,
   StubSectionContentfulComponentDefinition,
-} from '@code-dot-org/dsco/stub-section';
+} from '@code-dot-org/component-library/stub-section';
 
 defineComponents(
   [
