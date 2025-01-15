@@ -238,13 +238,14 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
   end
 
   test 'sends cancel enrollment email to both the users email and alternate summer email if available and for a summer workshop' do
-    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).returns(stub(:deliver_now)).times(2)
-    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).returns(stub(:deliver_now))
-
     @teacher = create :teacher
     workshop = create :summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
     application = create :pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: @teacher, status: 'accepted'
     enrollment = create :pd_enrollment, application_id: application.id, user: @teacher, workshop: workshop
+
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).with(enrollment).returns(stub(:deliver_now))
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).with(enrollment, @teacher.alternate_email).returns(stub(:deliver_now))
+    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).returns(stub(:deliver_now))
 
     assert_destroys Pd::Enrollment do
       delete :cancel, params: {enrollment_code: enrollment.code}

@@ -798,9 +798,10 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     teacher = create :teacher
     workshop = create :csa_academic_year_workshop, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, virtual: 'true', funding_type: nil
     application = create :pd_teacher_application, course: 'csa', application_year: workshop.school_year, user: teacher, status: 'accepted'
-    create :pd_enrollment, application_id: application.id, user: teacher, workshop: workshop
+    enrollment = create :pd_enrollment, application_id: application.id, user: teacher, workshop: workshop
 
-    Pd::WorkshopMailer.expects(:detail_change_notification).returns(mock_mail).times(2)
+    Pd::WorkshopMailer.expects(:detail_change_notification).with(enrollment).returns(mock_mail)
+    Pd::WorkshopMailer.expects(:detail_change_notification).with(enrollment, to_email: teacher.alternate_email).returns(mock_mail)
 
     params = workshop_params.merge(course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, virtual: true, funding_type: nil)
 
