@@ -12,6 +12,13 @@ class GridFactory:
   GRID_SQUARE_ASSET_ID_FIELD = 'assetId'
   GRID_SQUARE_VALUE_FIELD = 'value'
 
+  def create_grid_from_file(self) -> Grid:
+    try:
+        with open(self.GRID_FILE_NAME, 'r') as file:
+          return self.create_grid_from_string(file.read())
+    except FileNotFoundError:
+        raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID)
+
   # Creates a grid from a string, assuming that the string is a 2d array of JSON objects,
   # with each JSON object containing an integer tileType and optionally an integer value
   # corresponding with the paintCount for that tile.
@@ -54,3 +61,7 @@ class GridFactory:
       
       except json.JSONDecodeError:
           raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID)
+      
+  def createEmptyGrid(self, size: int) -> Grid:
+    grid = [[GridSquare(1, 0) for i in range(size)] for j in range(size)]
+    return Grid(grid)

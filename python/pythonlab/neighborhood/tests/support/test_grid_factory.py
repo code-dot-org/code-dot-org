@@ -39,3 +39,14 @@ def test_can_create_valid_grid_from_string():
   assert not grid.grid[0][1].is_passable()
   assert grid.grid[0][0].is_passable()
 
+def test_can_create_grid_from_json():
+  grid_factory = GridFactory()
+  grid = grid_factory.create_grid_from_file()
+  assert grid.get_size() == 2
+  assert grid.valid_location(0, 0)
+  assert grid.grid[0][0].asset_id == 0
+  assert grid.grid[1][0].paint_count == 1
+  assert grid.grid[0][0].paint_count == 0
+  assert grid.grid[0][0].square_type == SquareType.OPEN
+  assert not grid.grid[0][1].is_passable()
+  assert grid.grid[0][0].is_passable()
