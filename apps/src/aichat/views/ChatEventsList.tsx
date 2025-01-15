@@ -23,6 +23,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
 }) => {
+  const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [atBottomOfContent, setAtBottomofContent] = useState(true);
   const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
 
@@ -31,58 +32,43 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   const eventsString = JSON.stringify(events);
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
-  const events2 = [
-    {
-      timestamp: 1627584000000,
-      chatMessageText: 'Hello',
-      role: 'user',
-      status: 'ok',
-      requestId: 1,
-    },
-    {
-      timestamp: 1627584000001,
-      chatMessageText:
-        '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-      role: 'assistant',
-      status: 'ok',
-      requestId: 2,
-    },
-    {
-      timestamp: 1627584000003,
-      chatMessageText: 'Hello',
-      role: 'user',
-      status: 'ok',
-      requestId: 3,
-    },
-    {
-      timestamp: 1627584000004,
-      chatMessageText:
-        '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"',
-      role: 'assistant',
-      status: 'ok',
-      requestId: 4,
-    },
-  ];
-
   const scrollToBottom = () => {
     if (conversationContainerRef.current) {
+      setInProgrammaticScroll(true);
       conversationContainerRef.current.scrollTo({
         top: conversationContainerRef.current.scrollHeight,
         behavior: 'smooth',
       });
+
+      const intervalId = setInterval(() => {
+        const atBottom = isAtBottom();
+        if (atBottom) {
+          setInProgrammaticScroll(false);
+          setAtBottomofContent(true);
+          clearInterval(intervalId);
+        }
+      }, 100);
     }
+  };
+
+  const isAtBottom = () => {
+    const container = conversationContainerRef.current;
+
+    if (!container) {
+      return false;
+    }
+
+    return (
+      container.scrollTop + container.clientHeight + 1 >= container.scrollHeight
+    );
   };
 
   useEffect(() => {
     const container = conversationContainerRef.current;
 
     const handleScroll = () => {
-      if (container) {
-        const isAtBottom =
-          container.scrollTop + container.clientHeight + 1 >=
-          container.scrollHeight;
-
-        setAtBottomofContent(isAtBottom);
+      if (container && !inProgrammaticScroll) {
+        setAtBottomofContent(isAtBottom());
       }
     };
 
@@ -91,7 +77,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     return () => {
       container?.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [inProgrammaticScroll]);
 
   useEffect(scrollToBottom, [eventsString, isWaitingForChatResponse]);
 
@@ -104,7 +90,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       )}
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
-        {events2.map(event => (
+        {events.map(event => (
           <ChatEventView
             event={event}
             key={event.timestamp}
