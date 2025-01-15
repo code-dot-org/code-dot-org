@@ -7,14 +7,15 @@ from .grid_square import GridSquare
 from .neighborhood_runtime_exception import NeighborhoodRuntimeException
 
 class GridFactory:
-  GRID_FILE_NAME = 'serialized_maze.txt'
+  DEFAULT_GRID_FILE_NAME = 'serialized_maze.txt'
   GRID_SQUARE_TYPE_FIELD = 'tileType'
   GRID_SQUARE_ASSET_ID_FIELD = 'assetId'
   GRID_SQUARE_VALUE_FIELD = 'value'
 
-  def create_grid_from_file(self) -> Grid:
+  def create_grid_from_file(self, filename: str | None) -> Grid:
     try:
-        with open(self.GRID_FILE_NAME, 'r') as file:
+        file_to_open = filename if filename else self.DEFAULT_GRID_FILE_NAME
+        with open(file_to_open, 'r') as file:
           return self.create_grid_from_string(file.read())
     except FileNotFoundError:
         raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID)
@@ -62,6 +63,6 @@ class GridFactory:
       except json.JSONDecodeError:
           raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID)
       
-  def createEmptyGrid(self, size: int) -> Grid:
+  def create_empty_grid(self, size: int) -> Grid:
     grid = [[GridSquare(1, 0) for i in range(size)] for j in range(size)]
     return Grid(grid)
