@@ -2604,11 +2604,12 @@ exports.install = function (blockly, blockInstallOptions) {
             msg.toTouchedSpriteName({spriteName: stripQuotes(value)})
           )
       );
-      this.appendDummyInput()
+      this.appendEndRowInput()
         .appendField(dropdown1, 'SPRITE')
         .appendField(dropdown2, 'SPRITENAME');
       this.appendDummyInput();
       this.appendValueInput('GROUPMEMBER')
+        // setInline is a no-op function in Google Blockly.
         .setInline(true)
         .appendField(msg.set());
       this.appendDummyInput().setInline(true).appendField(endLabel);
@@ -3499,7 +3500,6 @@ exports.install = function (blockly, blockInstallOptions) {
     const code = Blockly.JavaScript.translateVarName(this.getFieldValue('VAR'));
     return [code, Blockly.JavaScript.ORDER_ATOMIC];
   };
-
   // Overrides the standard generator from Core Blockly.
   // Variable labels in Playlab include the Globals namespace.
   blockGeneratorFunctionDictionary.variables_set = function () {
@@ -3515,6 +3515,11 @@ exports.install = function (blockly, blockInstallOptions) {
     );
     return varName + ' = ' + argument0 + ';\n';
   };
+
+  // Overrides the standard generators from Core Blockly.
+  // Variable and function names in Playlab include the Globals namespace.
+  Blockly.customBlocks.overrideForLoopGenerator();
+  Blockly.customBlocks.overrideProceduresGenerators();
 
   blockGeneratorFunctionDictionary.studio_ask = function () {
     var blockId = `block_id_${this.id}`;

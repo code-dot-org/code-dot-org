@@ -36,19 +36,19 @@ jobs:
               working-directory: ./frontend/apps/design-system-storybook
 
             - name: Lint
-              run: yarn lint --filter @code-dot-org/dsco --filter @code-dot-org/design-system-storybook
+              run: yarn lint --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
               working-directory: ./frontend
 
             - name: Build
-              run: yarn build --filter @code-dot-org/dsco --filter @code-dot-org/design-system-storybook
+              run: yarn build --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
               working-directory: ./frontend
 
             - name: Unit Tests
-              run: yarn test --filter @code-dot-org/dsco --filter @code-dot-org/design-system-storybook
+              run: yarn test --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
               working-directory: ./frontend
 
             - name: UI Tests
-              run: yarn test:ui:ci --filter @code-dot-org/dsco --filter @code-dot-org/design-system-storybook
+              run: yarn test:ui:ci --filter @code-dot-org/component-library --filter @code-dot-org/design-system-storybook
               working-directory: ./frontend
 
             

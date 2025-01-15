@@ -417,6 +417,9 @@ const EVENTS = {
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',
 
+  // Student Homepage
+  STUDENT_HOMEPAGE_VISITED: 'Student Homepage Visited',
+
   // Aichat
   UPDATE_CHATBOT: 'Student updates their aichat bot',
   AICHAT_VALIDATION: 'Student passes/fails validation on an aichat level',

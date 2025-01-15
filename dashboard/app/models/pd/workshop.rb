@@ -2,29 +2,30 @@
 #
 # Table name: pd_workshops
 #
-#  id                  :integer          not null, primary key
-#  organizer_id        :integer          not null
-#  location_name       :string(255)
-#  location_address    :string(255)
-#  processed_location  :text(65535)
-#  course              :string(255)      not null
-#  subject             :string(255)
-#  capacity            :integer          not null
-#  notes               :text(65535)
-#  section_id          :integer
-#  started_at          :datetime
-#  ended_at            :datetime
-#  created_at          :datetime
-#  updated_at          :datetime
-#  processed_at        :datetime
-#  deleted_at          :datetime
-#  regional_partner_id :integer
-#  on_map              :boolean
-#  funded              :boolean
-#  funding_type        :string(255)
-#  properties          :text(65535)
-#  module              :string(255)
-#  name                :string(255)
+#  id                     :integer          not null, primary key
+#  organizer_id           :integer          not null
+#  location_name          :string(255)
+#  location_address       :string(255)
+#  processed_location     :text(65535)
+#  course                 :string(255)      not null
+#  subject                :string(255)
+#  capacity               :integer          not null
+#  notes                  :text(65535)
+#  section_id             :integer
+#  started_at             :datetime
+#  ended_at               :datetime
+#  created_at             :datetime
+#  updated_at             :datetime
+#  processed_at           :datetime
+#  deleted_at             :datetime
+#  regional_partner_id    :integer
+#  on_map                 :boolean
+#  funded                 :boolean
+#  funding_type           :string(255)
+#  properties             :text(65535)
+#  module                 :string(255)
+#  name                   :string(255)
+#  participant_group_type :string(255)
 #
 # Indexes
 #
@@ -151,9 +152,15 @@ class Pd::Workshop < ApplicationRecord
   def self.enrolled_in_by(teacher)
     base_query = joins(:enrollments)
     user_id_where_clause = base_query.where(pd_enrollments: {user_id: teacher.id})
-    email_where_clause = base_query.where(pd_enrollments: {email: teacher.email_for_enrollments})
+    email_where_clause = base_query.where(pd_enrollments: {email: teacher.email})
 
-    user_id_where_clause.or(email_where_clause).distinct
+    alternate_email = teacher.alternate_email
+    if alternate_email.present?
+      alternate_email_where_clause = base_query.where(pd_enrollments: {email: alternate_email})
+      user_id_where_clause.or(email_where_clause).or(alternate_email_where_clause).distinct
+    else
+      user_id_where_clause.or(email_where_clause).distinct
+    end
   end
 
   def self.exclude_summer

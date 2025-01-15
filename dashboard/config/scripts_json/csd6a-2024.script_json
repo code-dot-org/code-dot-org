@@ -17,12 +17,12 @@
         "maker"
       ],
       "tts": true,
-      "version_year": "2023",
+      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2024-11-19 01:16:21 UTC",
+    "serialized_at": "2025-01-08 21:47:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10964,7 +10964,7 @@
     },
     {
       "name": "All Code",
-      "url": "/s/csd6a-2023/code",
+      "url": "/s/csd6a-2024/code",
       "key": "all_code_3",
       "properties": {
         "is_rollup": true
@@ -10975,7 +10975,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd6a-2023/resources",
+      "url": "/s/csd6a-2024/resources",
       "key": "all_resources_5",
       "properties": {
         "is_rollup": true
@@ -10986,7 +10986,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd6a-2023/standards",
+      "url": "/s/csd6a-2024/standards",
       "key": "all_standards_5",
       "properties": {
         "is_rollup": true
@@ -10997,7 +10997,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd6a-2023/vocab",
+      "url": "/s/csd6a-2024/vocab",
       "key": "all_vocabulary_5",
       "properties": {
         "is_rollup": true

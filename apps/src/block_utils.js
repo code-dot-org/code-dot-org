@@ -66,8 +66,9 @@ exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
  * @param {string} values.type Type of the value input
  * @param {string} values.titleName Name of the title block
  * @param {string} values.titleValue Input value
+ * @param {string} id Block Id, primarily for tests
  */
-exports.blockOfType = function (type, titles, values) {
+exports.blockOfType = function (type, titles, values, id) {
   let inputText = '';
   if (titles) {
     for (let key in titles) {
@@ -83,7 +84,8 @@ exports.blockOfType = function (type, titles, values) {
       </value>`;
     }
   }
-  return `<block type="${type}">${inputText}</block>`;
+  const blockIdAttr = id ? ` id="${id}"` : '';
+  return `<block type="${type}"${blockIdAttr}>${inputText}</block>`;
 };
 
 /*

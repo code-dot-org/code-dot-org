@@ -7,10 +7,6 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
 import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {
-  setWindowLocation,
-  resetWindowLocation,
-} from '@cdo/apps/code-studio/utils';
-import {
   getStore,
   registerReducers,
   stubRedux,
@@ -421,21 +417,36 @@ describe('LandingPage', () => {
   it('page does not show success dialog when not redirected here from successful enrollment', () => {
     renderDefault();
 
-    expect(
-      screen.queryByText(
-        i18n.enrollmentCelebrationBody({workshopName: 'a new workshop'})
-      )
-    ).toBeNull();
+    expect(screen.queryByText(i18n.enrollmentCelebrationTitle())).toBeNull();
   });
 
-  it('page shows success dialog when redirected here from successful enrollment', () => {
-    const workshopCourseName = 'TEST COURSE';
-    setWindowLocation({search: `?wsCourse=${workshopCourseName}`});
+  it('page shows success dialog stating workshop course when redirected here from successful non-BYOW enrollment', () => {
+    const workshopCourse = 'TEST COURSE';
+    sessionStorage.setItem('workshopCourse', workshopCourse);
+
     renderDefault();
 
+    screen.getByText(i18n.enrollmentCelebrationTitle());
     screen.getByText(
-      i18n.enrollmentCelebrationBody({workshopName: workshopCourseName})
+      i18n.enrollmentCelebrationBody({workshopName: workshopCourse})
     );
-    resetWindowLocation();
+
+    sessionStorage.clear();
+  });
+
+  it('page shows success dialog stating workshop name when redirected here from successful BYOW enrollment', () => {
+    const workshopCourse = 'TEST COURSE';
+    const workshopName = 'TEST NAME';
+    sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem('workshopName', workshopName);
+
+    renderDefault();
+
+    screen.getByText(i18n.enrollmentCelebrationTitle());
+    screen.getByText(
+      i18n.enrollmentCelebrationBody({workshopName: workshopName})
+    );
+
+    sessionStorage.clear();
   });
 });

@@ -15,11 +15,12 @@
         "ai"
       ],
       "tts": true,
+      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:17:30 UTC",
+    "serialized_at": "2025-01-14 18:22:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -50,6 +51,18 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "key": "7980dfff-3651-44ff-8cbd-c7757cec4793",
+            "notice": "Generative AI Professional Development!",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/courses/self-paced-exploring-gen-ai-2024",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": true,
+            "buttonText": "Learn More"
+          }
+        ],
         "overview": "\nThis lesson introduces the learning goals focused on artificial intelligence (AI), transitioning into generative AI. It begins with a discussion on the impact of past technological innovations on society. Students then explore the concept of generative AI through the lens of someone familiar only with its hype, aiming to foster understanding and responsible engagement with AI technology. A key part of the lesson is the introduction of the Input, Storage, Processing, Output (ISPO) framework, essential for understanding generative AI's workings. The lesson concludes with students receiving a graphic organizer for the unit and sharing their anticipations about learning more on generative AI.",
         "preparation": "- Print copies of the graphic organizer for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Explore some of the key themes from this unit, like how we being informed about Artificial Intelligence can help us make better decisions on when and how to use it."
@@ -229,6 +242,18 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "announcements": [
+          {
+            "key": "9b2a2caf-3194-4f99-b8d2-070797e38600",
+            "notice": "End of Unit Survey",
+            "details": "Students have the opportunity to leave feedback on the unit at the end of this lesson, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went. We appreciate your time letting us know how this unit went with you and your students!",
+            "link": "https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1",
+            "type": "feedback",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Teacher Survey"
+          }
+        ],
         "overview": "In this lesson, students create their project for the unit. In the project, students read several generative AI opinion articles that contain misrepresentations or exaggerations of what generative AI is capable of and how it works. Using their newfound knowledge from this unit, students draft a rebuttal and create an artifact to help visualize or conceptualize an aspect of their argument. This project acts as a summative assessment for the content of this unit.",
         "preparation": "- Print copies of the project guide for each student\n- Print multiple copies of the four Generative AI Opinion Articles for students to review\n- Decide how students will submit their work for the project\n- Decide which options for student artifacts you would like to emphasize for students\n- Decide how to break up the multi-day lesson with your class schedule\n- Run through the slide deck and videos ahead of time",
         "student_overview": "Learn how to apply knowledge about generative AI to help educate and inform people who may have misconceptions"
@@ -242,10 +267,22 @@
   ],
   "lesson_activities": [
     {
-      "key": "c00b0c77-8ec2-45e0-9b05-1abe4f4d9fa7",
+      "key": "22d3d188-f273-4371-aca7-b18aa6a4ad14",
       "position": 1,
       "properties": {
-        "name": "Pre-Survey"
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22d3d188-f273-4371-aca7-b18aa6a4ad14",
+        "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "",
+        "script.name": "exploring-gen-ai1-2024"
+      }
+    },
+    {
+      "key": "c00b0c77-8ec2-45e0-9b05-1abe4f4d9fa7",
+      "position": 2,
+      "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "c00b0c77-8ec2-45e0-9b05-1abe4f4d9fa7",
@@ -256,7 +293,7 @@
     },
     {
       "key": "2d705aed-8e3d-4e3f-9e6a-1b5d893dc0be",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Student Levels"
       },
@@ -269,7 +306,7 @@
     },
     {
       "key": "36ce8b57-c558-4d79-8337-fd65c80748e7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -283,7 +320,7 @@
     },
     {
       "key": "8f9252a0-18a4-4977-b796-c8f09398a202",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -297,7 +334,7 @@
     },
     {
       "key": "f866b543-9734-490e-9d89-35f78982e4c7",
-      "position": 5,
+      "position": 6,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -310,8 +347,21 @@
       }
     },
     {
-      "key": "7dd9e516-62a1-402c-b01c-60876645fc0a",
+      "key": "a4a7fe5c-d7d1-436a-aa3d-268b8246fa39",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a4a7fe5c-d7d1-436a-aa3d-268b8246fa39",
+        "lesson.key": "Input & Training Data",
+        "lesson_group.key": "",
+        "script.name": "exploring-gen-ai1-2024"
+      }
+    },
+    {
+      "key": "7dd9e516-62a1-402c-b01c-60876645fc0a",
+      "position": 2,
       "properties": {
         "name": "Student Levels"
       },
@@ -324,7 +374,7 @@
     },
     {
       "key": "45cf054f-0224-43cb-80b8-4a707fc114ae",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -338,7 +388,7 @@
     },
     {
       "key": "8080906d-db2c-4ffa-9c0f-0dafa653b5fc",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -352,7 +402,7 @@
     },
     {
       "key": "b5323bca-50e6-476e-a5f9-3213b88023d2",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -420,8 +470,21 @@
       }
     },
     {
-      "key": "3662cade-e00a-45f8-82b1-43a6c63c81b2",
+      "key": "2904edd2-2681-4ba2-b4b0-ac55661b72e5",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2904edd2-2681-4ba2-b4b0-ac55661b72e5",
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "",
+        "script.name": "exploring-gen-ai1-2024"
+      }
+    },
+    {
+      "key": "3662cade-e00a-45f8-82b1-43a6c63c81b2",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -435,7 +498,7 @@
     },
     {
       "key": "4d6bba17-a435-4bde-9d20-a3d8c6db1f85",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -449,7 +512,7 @@
     },
     {
       "key": "133bccd3-aad6-4f58-832f-1fa65e5e1c61",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -462,8 +525,21 @@
       }
     },
     {
-      "key": "557e8656-31d0-445c-9f40-1d7476a3ae2d",
+      "key": "f4f62712-2bb8-44c2-b2ee-f7cf6b9c2302",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f4f62712-2bb8-44c2-b2ee-f7cf6b9c2302",
+        "lesson.key": "Embeddings: How They're Created",
+        "lesson_group.key": "",
+        "script.name": "exploring-gen-ai1-2024"
+      }
+    },
+    {
+      "key": "557e8656-31d0-445c-9f40-1d7476a3ae2d",
+      "position": 2,
       "properties": {
         "name": "Student Levels"
       },
@@ -476,7 +552,7 @@
     },
     {
       "key": "9b041ab0-1d69-4b5a-8f95-f94fa81ca940",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -490,7 +566,7 @@
     },
     {
       "key": "ca9777c1-841b-499b-8ba5-5129b4b42a57",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -504,7 +580,7 @@
     },
     {
       "key": "178ba0c2-4fc4-4251-b38f-00c90275912d",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -517,8 +593,21 @@
       }
     },
     {
-      "key": "5e0632f1-016b-4271-8016-4217901f54a8",
+      "key": "dad74bb5-4ace-4b95-ab0a-aae33cf98b09",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dad74bb5-4ace-4b95-ab0a-aae33cf98b09",
+        "lesson.key": "Understanding Neural Networks",
+        "lesson_group.key": "",
+        "script.name": "exploring-gen-ai1-2024"
+      }
+    },
+    {
+      "key": "5e0632f1-016b-4271-8016-4217901f54a8",
+      "position": 2,
       "properties": {
         "name": "Student Levels"
       },
@@ -531,7 +620,7 @@
     },
     {
       "key": "74f357a2-fcf9-41ab-b237-eacc78bb419b",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -545,7 +634,7 @@
     },
     {
       "key": "fba4ddb5-99ec-41c8-925b-74263109fc12",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -559,7 +648,7 @@
     },
     {
       "key": "41cec141-8fcb-4a90-a543-63c3fc17e6af",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -572,8 +661,21 @@
       }
     },
     {
-      "key": "d9def614-e59f-4a19-a2e5-5f2a047f2a7b",
+      "key": "9b2fa4d4-57cd-4884-9612-b942069a8adb",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9b2fa4d4-57cd-4884-9612-b942069a8adb",
+        "lesson.key": "Neural Networks: How They're Trained",
+        "lesson_group.key": "",
+        "script.name": "exploring-gen-ai1-2024"
+      }
+    },
+    {
+      "key": "d9def614-e59f-4a19-a2e5-5f2a047f2a7b",
+      "position": 2,
       "properties": {
         "name": "Student Levels"
       },
@@ -586,7 +688,7 @@
     },
     {
       "key": "0e30c9ab-c311-470b-948c-0316de59a160",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -600,7 +702,7 @@
     },
     {
       "key": "cdd1324d-a6b3-4384-b7df-4d36adf3145f",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -614,7 +716,7 @@
     },
     {
       "key": "5a6588f7-05cd-44ba-be5a-8209bd874527",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -627,8 +729,21 @@
       }
     },
     {
-      "key": "d1f5c420-0be3-463e-810c-12e460373cf1",
+      "key": "24928ccb-182a-4ab4-a22d-0949c1ca4160",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24928ccb-182a-4ab4-a22d-0949c1ca4160",
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "",
+        "script.name": "exploring-gen-ai1-2024"
+      }
+    },
+    {
+      "key": "d1f5c420-0be3-463e-810c-12e460373cf1",
+      "position": 2,
       "properties": {
         "name": "Student Levels"
       },
@@ -641,7 +756,7 @@
     },
     {
       "key": "6635518e-92d6-4510-86d4-f37a187fa536",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -655,7 +770,7 @@
     },
     {
       "key": "621506cf-7dce-407f-90cc-9a279ec56cf2",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -669,7 +784,7 @@
     },
     {
       "key": "12b83d51-20e4-4a56-a707-e073e3a0af8e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -682,8 +797,21 @@
       }
     },
     {
-      "key": "61acb818-3a35-42e9-b47d-a137bdf6a02e",
+      "key": "ee845e97-2817-4249-aef6-459864327dcb",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee845e97-2817-4249-aef6-459864327dcb",
+        "lesson.key": "Outputs & Probabilities",
+        "lesson_group.key": "",
+        "script.name": "exploring-gen-ai1-2024"
+      }
+    },
+    {
+      "key": "61acb818-3a35-42e9-b47d-a137bdf6a02e",
+      "position": 2,
       "properties": {
         "name": "Student Levels"
       },
@@ -696,7 +824,7 @@
     },
     {
       "key": "e3d0e9a5-5975-4abf-ae64-a204e7bf29eb",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -710,7 +838,7 @@
     },
     {
       "key": "92ed9800-6c34-49ea-9c92-a816e6722182",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -724,7 +852,7 @@
     },
     {
       "key": "db5b57e5-6186-46fd-83b9-6c84b69056e6",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -837,7 +965,7 @@
       "key": "1a6048ca-1891-4a49-82e4-c7a1f179f6d5",
       "position": 4,
       "properties": {
-        "name": "Student Post-Unit Survey"
+        "name": "End of the Unit"
       },
       "seeding_key": {
         "lesson_activity.key": "1a6048ca-1891-4a49-82e4-c7a1f179f6d5",
@@ -848,6 +976,18 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "21eda043-35e9-42bc-b199-7b49de86d0c9",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNd_dCseOMzvPpnRJsUYD4fv) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Professional Development:** We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024) before starting the unit. The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "21eda043-35e9-42bc-b199-7b49de86d0c9",
+        "lesson_activity.key": "22d3d188-f273-4371-aca7-b18aa6a4ad14"
+      }
+    },
     {
       "key": "40d2e7b7-b074-4300-a4b8-cb41e443cc30",
       "position": 1,
@@ -870,6 +1010,18 @@
       },
       "seeding_key": {
         "activity_section.key": "2143cb5c-54d5-40c8-9552-c3c4ab889a55",
+        "lesson_activity.key": "c00b0c77-8ec2-45e0-9b05-1abe4f4d9fa7"
+      }
+    },
+    {
+      "key": "620113df-6c9d-43f7-bda1-695ef047e51e",
+      "position": 3,
+      "properties": {
+        "description": "**LEADERS Framework**: Throughout this unit, there are opportunities for students to discuss the impacts of generative AI on society, both the intended and unintended consequences. Navigating these conversations so they elevate and honor the experiences of your students, while also keeping the conversation grounded and connected to the lesson content, requires careful consideration and intentionality as the discussions are happening.\n\nTo help prepare for these moments, we recommend reviewing the [LEADERS Framework](https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit) for facilitating lessons and discussions involving the societal effects of AI, including bias and ethical considerations. Not all of the tenets are applicable to every lesson, but many of the teaching tips and discussion goals in this lesson follow the principles outlined in this framework.",
+        "name": "Preparing to Lead Discussions"
+      },
+      "seeding_key": {
+        "activity_section.key": "620113df-6c9d-43f7-bda1-695ef047e51e",
         "lesson_activity.key": "c00b0c77-8ec2-45e0-9b05-1abe4f4d9fa7"
       }
     },
@@ -1017,6 +1169,17 @@
       "seeding_key": {
         "activity_section.key": "62e5101a-8278-4bc6-b7cf-7b15e878f293",
         "lesson_activity.key": "f866b543-9734-490e-9d89-35f78982e4c7"
+      }
+    },
+    {
+      "key": "81bd57a1-61fd-4142-af8f-4839c7053175",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/ff80e0c8462091cc2392d3955b1e3d03-Foundations of Generative AI - Lesson 02 - Inputs & Training Data.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided at the end of the lesson that explains and summarizes the key learning from the lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=JO9MgO1Zp3E\" target=\"_blank\">Input & Pretraining concept video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>    "
+      },
+      "seeding_key": {
+        "activity_section.key": "81bd57a1-61fd-4142-af8f-4839c7053175",
+        "lesson_activity.key": "a4a7fe5c-d7d1-436a-aa3d-268b8246fa39"
       }
     },
     {
@@ -1325,6 +1488,17 @@
       }
     },
     {
+      "key": "cde68f60-62f1-42c0-bec3-e1cde558d871",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2346fc6b24af2fbe54417a3bc2b8d358-Foundations of Generative AI - Lesson 04 - Understanding Embeddings.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided at the end of the lesson that explains and summarizes the key learning from the lesson.\n<br />\n<br />\n<strong>Activity Overview:</strong> Consider reviewing the <a href= \"https://www.youtube.com/watch?v=QjtYSpgiKXY\" target=_\"blank\">Activity Overview video</a> ahead of the lesson, which gives a teacher-facing overview of the student activity in today's lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=s1fhxAVpYx8\" target=\"_blank\">Storage & Embeddings concept video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>    "
+      },
+      "seeding_key": {
+        "activity_section.key": "cde68f60-62f1-42c0-bec3-e1cde558d871",
+        "lesson_activity.key": "2904edd2-2681-4ba2-b4b0-ac55661b72e5"
+      }
+    },
+    {
       "key": "37ff75a5-69bc-433b-9a5b-6f03cb357f32",
       "position": 1,
       "properties": {
@@ -1534,6 +1708,17 @@
       }
     },
     {
+      "key": "097c554b-2c7f-489d-8f23-98bd0a0bbbd1",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c40ec6fcebdce15668ae3c932dc32438-Foundations of Generative AI - Lesson 05 - Embeddings_ How They're Made.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts.\n<br />\n<br />\n<strong>Activity Overview:</strong> Consider reviewing the <a href= \"https://www.youtube.com/watch?v=DDnETR6vPcs\" target=_\"blank\">Activity Overview video</a> ahead of the lesson, which gives a teacher-facing overview of the student activity in today's lesson.\n    </td>\n  </tr>\n\n</table>    "
+      },
+      "seeding_key": {
+        "activity_section.key": "097c554b-2c7f-489d-8f23-98bd0a0bbbd1",
+        "lesson_activity.key": "f4f62712-2bb8-44c2-b2ee-f7cf6b9c2302"
+      }
+    },
+    {
       "key": "f9bbdc83-ed9f-44a7-aa76-75e53eb53758",
       "position": 1,
       "properties": {
@@ -1683,6 +1868,17 @@
       "seeding_key": {
         "activity_section.key": "32b653df-f18c-4c1d-987b-ca8de533ce4b",
         "lesson_activity.key": "178ba0c2-4fc4-4251-b38f-00c90275912d"
+      }
+    },
+    {
+      "key": "3f229650-bff5-499c-8ba9-ba72b276abe8",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/07d79c5f60634bb69b03e676082187b2-Foundations of Generative AI - Lesson 06 - Understanding Neural Networks.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided at the end of the lesson that explains and summarizes the key learning from the lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=Z7Mes_Ej69Y\" target=\"_blank\">Processing & Neural Networks concept video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>   "
+      },
+      "seeding_key": {
+        "activity_section.key": "3f229650-bff5-499c-8ba9-ba72b276abe8",
+        "lesson_activity.key": "dad74bb5-4ace-4b95-ab0a-aae33cf98b09"
       }
     },
     {
@@ -1857,6 +2053,17 @@
       "seeding_key": {
         "activity_section.key": "164f4688-96be-4e3c-a4ab-a7b0e7957167",
         "lesson_activity.key": "41cec141-8fcb-4a90-a543-63c3fc17e6af"
+      }
+    },
+    {
+      "key": "951eb1a4-e276-4fd7-825e-d783e7713fdc",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/af1537034d0a16fc7156cdb131859eed-Foundations of Generative AI - Lesson 07 - Neural Networks_ How They're Made.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided at the end of the lesson that explains and summarizes the key learning from the lesson.\n<br />\n<br />\n<strong>Activity Overview:</strong> Consider reviewing the <a href= \"https://www.youtube.com/watch?v=yN2-ll6ZVJ8\" target=_\"blank\">Activity Overview video</a> ahead of the lesson, which gives a teacher-facing overview of the student activity in today's lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=JrXazCEACVo\" target=\"_blank\">Neural Networks concept video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>    "
+      },
+      "seeding_key": {
+        "activity_section.key": "951eb1a4-e276-4fd7-825e-d783e7713fdc",
+        "lesson_activity.key": "9b2fa4d4-57cd-4884-9612-b942069a8adb"
       }
     },
     {
@@ -2093,6 +2300,17 @@
       }
     },
     {
+      "key": "3f871c3d-0d60-43be-ae25-de9262018d16",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/280b2f268ed55bd6ad64cabde768a708-Foundations of Generative AI - Lesson 08 - Attention is All You Need.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided at the end of the lesson that explains and summarizes the key learning from the lesson.\n<br />\n<br />\n<strong>Activity Overview:</strong> Consider reviewing the <a href= \"https://www.youtube.com/watch?v=6A2GHAE3iHg\" target=_\"blank\">Activity Overview video</a> ahead of the lesson, which gives a teacher-facing overview of the student activity in today's lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=2RdK6k45koY\" target=\"_blank\">Attention concept video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>    "
+      },
+      "seeding_key": {
+        "activity_section.key": "3f871c3d-0d60-43be-ae25-de9262018d16",
+        "lesson_activity.key": "24928ccb-182a-4ab4-a22d-0949c1ca4160"
+      }
+    },
+    {
       "key": "5923ba33-8619-4576-a5e4-108ae9cd6bc8",
       "position": 1,
       "properties": {
@@ -2231,6 +2449,17 @@
       "seeding_key": {
         "activity_section.key": "2e5d99ba-4edf-46c5-8f67-a21d796da392",
         "lesson_activity.key": "12b83d51-20e4-4a56-a707-e073e3a0af8e"
+      }
+    },
+    {
+      "key": "a02d9e8d-c8b8-488c-bc7c-29c4961f5813",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/cc229ece6415c12d330f7d7888b683e4-Foundations of Generative AI - Lesson 09 - Outputs & Probabilities.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided at the end of the lesson that explains and summarizes the key learning from the lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=gGK7b7j4BiQ\" target=\"_blank\">Output & Probabilities concept video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>    "
+      },
+      "seeding_key": {
+        "activity_section.key": "a02d9e8d-c8b8-488c-bc7c-29c4961f5813",
+        "lesson_activity.key": "ee845e97-2817-4249-aef6-459864327dcb"
       }
     },
     {
@@ -2592,6 +2821,7 @@
       "position": 1,
       "properties": {
         "description": "Please have students take the post-survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Student End-Of-Unit Survey",
         "progression_name": "Student Post-Survey"
       },
       "seeding_key": {
@@ -2603,7 +2833,8 @@
       "key": "825a165c-0793-4bfb-bba0-7ef15ac00155",
       "position": 2,
       "properties": {
-        "description": "While students take their survey, please [complete this post-survey for teachers as well](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data[unit_number]=unit_1). Your feedback is valued and appreciated!"
+        "description": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, [please complete this end of unit survey for teachers](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) as well. Your feedback is valued and appreciated!",
+        "name": "Teacher End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "825a165c-0793-4bfb-bba0-7ef15ac00155",
@@ -3915,6 +4146,18 @@
     {
       "name": "LEADERS Framework",
       "url": "https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit",
+      "key": "leaders_framework",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "leaders_framework"
+      }
+    },
+    {
+      "name": "LEADERS Framework",
+      "url": "https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit",
       "key": "leaders_framework_1",
       "properties": {
         "audience": "Teacher",
@@ -4339,6 +4582,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Generative AI",
         "resource.key": "introduction_to_large_language_models_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "resource.key": "leaders_framework"
       }
     },
     {

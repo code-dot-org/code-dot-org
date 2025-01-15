@@ -915,19 +915,19 @@ class Unit < ApplicationRecord
   end
 
   def csf?
-    under_curriculum_umbrella?('CSF')
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
   end
 
   def csd?
-    under_curriculum_umbrella?('CSD')
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
   end
 
   def csp?
-    under_curriculum_umbrella?('CSP')
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
   end
 
   def csa?
-    under_curriculum_umbrella?('CSA')
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
   end
 
   def csc?
@@ -935,11 +935,11 @@ class Unit < ApplicationRecord
   end
 
   def foundations_of_cs?
-    under_curriculum_umbrella?('Foundations of CS')
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_cs)
   end
 
   def foundations_of_programming?
-    under_curriculum_umbrella?('Foundations of Programming')
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_programming)
   end
 
   # TODO: (Dani) Update to use new course types framework.

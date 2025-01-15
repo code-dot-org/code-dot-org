@@ -144,7 +144,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
   overrideFields: (
-    overrides: [string, string, Pick<typeof GoogleBlockly.Field, 'prototype'>][]
+    overrides: [string, string, GoogleBlockly.fieldRegistry.RegistrableField][]
   ) => void;
   setInfiniteLoopTrap: () => void;
   clearInfiniteLoopTrap: () => void;
@@ -225,6 +225,7 @@ export interface ExtendedInput extends GoogleBlockly.Input {
   // Blockly explicitly uses any for this type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getFieldRow: () => GoogleBlockly.Field<any>[];
+  setInline: (inline: boolean) => ExtendedInput;
 }
 export interface ExtendedConnection extends GoogleBlockly.Connection {
   getFieldHelperOptions: (fieldHelper: string) => FieldHelperOptions;

@@ -202,6 +202,11 @@ Resources:
             Action:
               - 'comprehend:DetectToxicContent'
             Resource: '*'
+          # PII detection for stanford data share
+          - Effect: Allow
+            Action:
+              - 'comprehend:DetectPiiEntities'
+            Resource: '*'
           # TODO: Move to dedicated policy for AI TA
           # AI TA Bedrock access
           - Effect: Allow
