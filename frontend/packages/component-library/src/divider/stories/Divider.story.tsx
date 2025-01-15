@@ -51,6 +51,7 @@ GroupOfDividers.args = {
 export const GroupOfDividersWithMargin = MultipleTemplate.bind({});
 GroupOfDividersWithMargin.args = {
   components: [
+    {color: 'primary', margin: 'none'},
     {color: 'primary', margin: 'xs'},
     {color: 'primary', margin: 's'},
     {color: 'primary', margin: 'm'},
