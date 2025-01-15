@@ -1,9 +1,13 @@
 from .grid_factory import GridFactory
 
-# A singleton class that represents the world of the neighborhood.
-# The first time it is created it will load the neighborhood grid from a file,
-# and all subsequent references will return the same instance.
 class World(object):
+  """
+  A singleton class that represents the world of the neighborhood.
+  The first time it is created it will set the grid to None. Users of the world
+  should check if the grid is None, and set it appropriately if it is.
+  All subsequent references will reuse the same grid, so multiple painters can operate
+  on the same grid.
+  """
   _instance = None
 
   def __new__(cls):

@@ -2,7 +2,7 @@ import json
 
 from .exception_key import ExceptionKey
 from .grid import Grid
-from .grid_helpers import is_square_2d_array
+from .grid_helpers import GridHelpers
 from .grid_square import GridSquare
 from .neighborhood_runtime_exception import NeighborhoodRuntimeException
 
@@ -14,6 +14,9 @@ GRID_SQUARE_VALUE_FIELD = 'value'
 class GridFactory:
     @staticmethod
     def create_grid_from_file(filename: str | None = None) -> Grid:
+        """
+        Creates a grid from a file. If a filename is not provided, the default file will be used.
+        """
         try:
             file_to_open = filename if filename else DEFAULT_GRID_FILE_NAME
             with open(file_to_open, 'r') as file:
@@ -21,18 +24,20 @@ class GridFactory:
         except FileNotFoundError:
             raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID)
 
-    # Creates a grid from a string, assuming that the string is a 2d array of JSON objects,
-    # with each JSON object containing an integer tileType and optionally an integer value
-    # corresponding with the paintCount for that tile.
     @staticmethod
     def create_grid_from_string(description: str) -> Grid:
+        """
+        Creates a grid from a string, assuming that the string is a 2d array of JSON objects,
+        with each JSON object containing an integer tileType and optionally an integer value
+        corresponding with the paintCount for that tile.
+        """
         try:
             grid_squares = json.loads(description)
             size = len(grid_squares)
             if size == 0:
                 raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID, "Grid is empty")
             
-            if not is_square_2d_array(grid_squares):
+            if not GridHelpers.is_square_2d_array(grid_squares):
                 raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID, "Grid is not a square")
             
             grid = [[None for i in range(size)] for j in range(size)]
@@ -64,10 +69,3 @@ class GridFactory:
         
         except json.JSONDecodeError:
             raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID)
-        
-    # Create a grid of a given size with empty grid squares.
-    # Used for testing.
-    @staticmethod
-    def create_empty_grid(size: int) -> Grid:
-        grid = [[GridSquare(1, 0) for i in range(size)] for j in range(size)]
-        return Grid(grid)

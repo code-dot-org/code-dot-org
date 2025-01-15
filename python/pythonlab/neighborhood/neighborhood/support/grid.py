@@ -1,7 +1,7 @@
 from .neighborhood_runtime_exception import NeighborhoodRuntimeException
 from .exception_key import ExceptionKey
 from .grid_square import GridSquare
-from .grid_helpers import is_square_2d_array
+from .grid_helpers import GridHelpers
 
 class Grid:
     def __init__(self, squares: list[list[GridSquare]]):
@@ -10,7 +10,7 @@ class Grid:
         if len(squares) == 0:
             raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID, "Grid is empty")
         # The grid should always be a square.
-        if not is_square_2d_array(squares):
+        if not GridHelpers.is_square_2d_array(squares):
             raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID, "Grid is not a square")
         self.size = len(squares)
         
