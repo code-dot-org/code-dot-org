@@ -14,6 +14,7 @@ const DB_CLUSTER_ID = process.env.DB_CLUSTER_ID;
 const DB_INSTANCE_ID = process.env.DB_INSTANCE_ID;
 const DB_SNAPSHOT_IDENTIFIER_PREFIX = process.env.DB_SNAPSHOT_IDENTIFIER_PREFIX;
 const DB_SUBNET_GROUP_NAME = process.env.DB_SUBNET_GROUP_NAME;
+const DB_SECURITY_GROUP_ID = process.env.DB_SECURITY_GROUP_ID;
 const REGION = process.env.REGION;
 
 const DB_INSTANCE_CLASS = "db.t3.medium";
@@ -56,7 +57,8 @@ const restoreLatestSnapshot = async (rdsClient, clusterId, instanceId) => {
     SnapshotIdentifier: mostRecentSnapshot.DBClusterSnapshotIdentifier,
     Engine: DB_ENGINE,
     EngineVersion: mostRecentSnapshot.EngineVersion,
-    DBSubnetGroupName: DB_SUBNET_GROUP_NAME
+    DBSubnetGroupName: DB_SUBNET_GROUP_NAME,
+    VpcSecurityGroupIds: [DB_SECURITY_GROUP_ID]
   });
 
   await rdsClient.send(restoreClusterCommand);
