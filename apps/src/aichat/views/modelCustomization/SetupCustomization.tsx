@@ -72,11 +72,11 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
 
-  const allFieldsDisabled =
-    (isDisabled(temperature) &&
-      isDisabled(systemPrompt) &&
-      isDisabled(selectedModelId)) ||
-    readOnlyWorkspace;
+  const anyFieldEditable =
+    (isEditable(temperature) ||
+      isEditable(systemPrompt) ||
+      isEditable(selectedModelId)) &&
+    !readOnlyWorkspace;
 
   const renderChooseAndCompareModels = () => {
     return (
@@ -209,9 +209,9 @@ const SetupCustomization: React.FunctionComponent = () => {
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <UpdateButton isDisabledDefault={allFieldsDisabled} />
+        <UpdateButton isDisabledDefault={!anyFieldEditable} />
       </div>
-      <SaveChangesAlerts isReadOnly={allFieldsDisabled} />
+      <SaveChangesAlerts isReadOnly={!anyFieldEditable} />
     </div>
   );
 };
