@@ -359,17 +359,17 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
       .sliderWrapper {
         input[type='range']::-webkit-slider-thumb {
           background-color: var(--background-neutral-primary);
-          border-color: var(--borders-neutral-solid);
+          border-color: var(--borders-neutral-disabled);
         }
 
         input[type='range']::-moz-range-thumb {
           background-color: var(--background-neutral-primary);
-          border-color: var(--borders-neutral-solid);
+          border-color: var(--borders-neutral-disabled);
         }
 
         input[type='range']::-ms-thumb {
           background-color: var(--background-neutral-primary);
-          border-color: var(--borders-neutral-solid);
+          border-color: var(--borders-neutral-disabled);
         }
       }
     }
