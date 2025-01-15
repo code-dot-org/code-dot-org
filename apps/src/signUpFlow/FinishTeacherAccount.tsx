@@ -45,9 +45,11 @@ const roleItemGroups = [
     groupItems: [{value: '', text: locale.select_a_role()}],
   },
   ...Object.entries(
-    EducatorRoles.reduce((groups, {category, value, label}) => {
-      groups[category] = groups[category] ?? [];
-      groups[category].push({value, text: label});
+    EducatorRoles.reduce((groups, {category, value}) => {
+      const label = locale[value]();
+      const categoryLabel = locale[category]();
+      groups[categoryLabel] = groups[categoryLabel] ?? [];
+      groups[categoryLabel].push({value, text: label});
       return groups;
     }, {} as Record<string, {value: string; text: string}[]>)
   ).map(([label, groupItems]) => ({label, groupItems})),
