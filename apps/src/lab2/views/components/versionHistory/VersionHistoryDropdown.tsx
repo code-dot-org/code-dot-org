@@ -17,7 +17,7 @@ import {
   resetToCurrentVersion,
   setViewingOldVersion,
   setRestoredOldVersion,
-  previewStartSource,
+  previewStartSources,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -225,7 +225,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         );
       }
       if (viewingInitialVersion) {
-        dispatch(previewStartSource({startSources}));
+        dispatch(previewStartSources({startSources}));
       } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {

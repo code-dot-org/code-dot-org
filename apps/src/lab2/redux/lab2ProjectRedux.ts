@@ -79,8 +79,8 @@ export const loadVersion = createAsyncThunk(
   }
 );
 
-export const previewStartSource = createAsyncThunk(
-  'lab2Project/previewStartSource',
+export const previewStartSources = createAsyncThunk(
+  'lab2Project/previewStartSources',
   async (payload: {startSources: ProjectSources}, thunkAPI) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (projectManager) {

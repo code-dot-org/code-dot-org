@@ -118,12 +118,12 @@ export function getFileByName(
 
 /**
  * Given a map of {fileId: ProjectFile}, return the first non-hidden, active file.
- * @param project - The folders and files for a given project.
+ * @param source - The MultiFileSource for a given project.
  * @returns The first non-hidden, active file, the first open file if no files are active,
  * or undefined if no files are open.
  */
-export function getActiveFileForProject(project: MultiFileSource) {
-  const files = Object.values(project.files);
+export function getActiveFileForSource(source: MultiFileSource) {
+  const files = Object.values(source.files);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   // Only system support files are hidden in start mode. In non-start mode, only show starter files
   // (or files without a type, which default to starter files).

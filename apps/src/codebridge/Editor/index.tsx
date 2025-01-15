@@ -4,7 +4,7 @@ import React, {useCallback, useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {BodyOneText} from '@cdo/apps/componentLibrary/typography';
-import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
+import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
 import {editableFileType, viewableImageFileType} from '../utils';
@@ -19,7 +19,7 @@ interface EditorProps {
 export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   const {source, saveFile} = useCodebridgeContext();
 
-  const file = getActiveFileForProject(source);
+  const file = getActiveFileForSource(source);
 
   const onChange = useCallback(
     (value: string) => {
