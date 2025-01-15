@@ -23,14 +23,14 @@ class Painter:
     Turn the painter one compass direction left (i.e. North -> West).
     """
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.TURN_LEFT.value)
-    return signal_message.get_formatted_message()
+    print(signal_message.get_formatted_message())
 
   def move(self):
     """
     Move the painter one square forward in the direction it is facing.
     """
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.MOVE.value)
-    return signal_message.get_formatted_message()
+    print(signal_message.get_formatted_message())
 
   def paint(self, color):
     """
@@ -40,14 +40,14 @@ class Painter:
       color (str): The color to paint the square.
     """
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.PAINT.value, {'color': color})
-    return signal_message.get_formatted_message()
+    print(signal_message.get_formatted_message())
 
   def scrape_paint(self):
     """
     Removes all the paint off the square the painter is on.
     """
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.REMOVE_PAINT.value)
-    return signal_message.get_formatted_message()
+    print(signal_message.get_formatted_message())
 
   def get_my_paint(self):
     """
@@ -60,14 +60,14 @@ class Painter:
     Hides the painter on the screen.
     """
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.HIDE_PAINTER.value)
-    return signal_message.get_formatted_message()
+    print(signal_message.get_formatted_message())
 
   def show_painter(self):
     """
     Shows the painter on the screen.
     """
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.SHOW_PAINTER.value)
-    return signal_message.get_formatted_message()
+    print(signal_message.get_formatted_message())
 
   def take_paint(self):
     """
@@ -75,7 +75,7 @@ class Painter:
     the screen goes down. If the painter is not standing on a paint bucket, nothing happens.
     """
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.TAKE_PAINT.value)
-    return signal_message.get_formatted_message()
+    print(signal_message.get_formatted_message())
 
   def is_on_paint(self):
     """
@@ -166,14 +166,14 @@ class Painter:
     Show all the paint buckets on the screen.
     """
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.SHOW_BUCKETS.value)
-    return signal_message.get_formatted_message()
+    print(signal_message.get_formatted_message())
 
   def hide_buckets():
     """
     Hide all the paint buckets on the screen.
     """
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.HIDE_BUCKETS.value)
-    return signal_message.get_formatted_message()
+    print(signal_message.get_formatted_message())
 
   def set_paint(self, paint):
     """
