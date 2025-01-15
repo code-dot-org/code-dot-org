@@ -21,7 +21,14 @@ export default {
           },
           {
             // Disable color-contrast rule for Tabs.
-            id: 'color-contrast', enabled: false},
+            // We decided to ignore this rule for now since one issue is about teal,
+            // and the other seems to be white tabs failing bc they are on a white background,
+            // but that variant will only be used on a dark background so should be fine.
+            // Since that is one of the variants that will eventually go away for theming,
+            // we're not too worried about them.
+            id: 'color-contrast',
+            enabled: false,
+          },
         ],
       },
     },
