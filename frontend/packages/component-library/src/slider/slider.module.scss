@@ -75,6 +75,7 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
       appearance: none;
       background-image: unset;
       cursor: pointer;
+      margin: 0;
 
       &:focus-visible {
         outline: none;
