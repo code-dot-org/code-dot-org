@@ -20,7 +20,7 @@ export const categories: Record<string, TileDefinition> = {
   Wall: {min: 62, max: 90},
 };
 
-// Map of asset ids to tile types for all assets that are not obstacles (tile type 0).
+// Map of asset ids to tile types for all assets that are not "walls" (tile type 0).
 export const customTileTypes: Record<number, number> = {
   // Painter is a "start" tile. Painter assets are 287-291.
   287: 2,

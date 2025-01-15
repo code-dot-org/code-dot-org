@@ -90,6 +90,7 @@ const NeighborhoodMazeGenerator: React.FunctionComponent<
       const newMaze = maze.map((rowDefinition, rowIndex) =>
         rowDefinition.map((cell, columnIndex) => {
           if (rowIndex === row && columnIndex === column) {
+            // Most assets should be designated as tileType 0 (wall), but a few have different tile types.
             const tileType = customTileTypes[selectedAsset] || 0;
             return {...cell, tileType, assetId: selectedAsset, value};
           }
