@@ -151,7 +151,7 @@
     li button[role='tab'] {
       color: var(--text-neutral-tertiary);
       background-color: var(--background-neutral-secondary);
-      border: 1px solid var(--background-neutral-secondary);
+      border: 1px solid var(--borders-neutral-primary);
 
       &:hover {
         color: var(--text-neutral-primary);
