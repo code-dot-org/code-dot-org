@@ -44,10 +44,6 @@ const CURRICULUM_TYPES_FOR_AUDIENCE = {
   [MARKETING_AUDIENCE.PL]: null,
 };
 
-const selectedSectionFromGroup = (courseGroup, selectedCourseId) => {
-  return _.find(courseGroup, course => selectedCourseId === course.id);
-};
-
 export default function CurriculumQuickAssign({
   isNewSection,
   updateSection,
@@ -151,13 +147,13 @@ export default function CurriculumQuickAssign({
       for (const courseGroup of Object.values(
         filteredCourseOfferings[audience][curriculumType]
       )) {
-        const course = selectedSectionFromGroup(
+        const selectedCourse = _.find(
           courseGroup,
-          sectionCourse?.courseOfferingId
+          course => sectionCourse?.courseOfferingId === course.id
         );
 
-        if (course) {
-          return course;
+        if (selectedCourse) {
+          return selectedCourse;
         }
       }
       return null;
@@ -170,19 +166,19 @@ export default function CurriculumQuickAssign({
       const curriculumTypes = CURRICULUM_TYPES_FOR_AUDIENCE[audience];
 
       if (!curriculumTypes) {
-        const course = selectedSectionFromGroup(
+        const selectedCourse = _.find(
           filteredCourseOfferings[audience],
-          sectionCourse?.courseOfferingId
+          course => sectionCourse?.courseOfferingId === course.id
         );
-        return course ? {course, audience} : null;
+        return selectedCourse ? {selectedCourse, audience} : null;
       }
       for (const curriculumType of curriculumTypes) {
-        const course = selectedSectionFromCurriculumType(
+        const selectedCourse = selectedSectionFromCurriculumType(
           audience,
           curriculumType
         );
-        if (course) {
-          return {course, audience};
+        if (selectedCourse) {
+          return {selectedCourse, audience};
         }
       }
 
