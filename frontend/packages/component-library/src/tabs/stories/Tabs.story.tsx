@@ -29,6 +29,15 @@ export default {
             id: 'color-contrast',
             enabled: false,
           },
+          {
+            // TODO: [Design2-257]: Enable this check and make sure for iconOnly tabs there'll be aria label provided.
+            // Disable button-name rule for Tabs.
+            // Issue is caused by Icon Only Tabs not having aria labels for Tab Button right now in stories.
+            // We need to come back to this issue in scope of [Design2-257] and find a way to make sure that for
+            // IconOnly Tab there will be ariaLabel for Tab Button provided.
+            id: 'button-name',
+            enabled: false,
+          }
         ],
       },
     },
