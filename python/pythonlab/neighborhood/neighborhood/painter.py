@@ -18,6 +18,10 @@ class Painter:
     self.y = y
     self.direction = direction
     self.remaining_paint = paint
+    self.world = World()
+    # If we haven't set up the grid yet, do so now from the default file.
+    if (self.world.grid is None):
+      self.world.set_grid_from_file()
 
   def turn_left(self):
     """
