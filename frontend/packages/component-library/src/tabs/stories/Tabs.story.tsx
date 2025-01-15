@@ -37,7 +37,7 @@ export default {
             // IconOnly Tab there will be ariaLabel for Tab Button provided.
             id: 'button-name',
             enabled: false,
-          }
+          },
         ],
       },
     },
