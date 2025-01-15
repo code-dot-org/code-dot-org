@@ -186,6 +186,8 @@ export default function SectionsSetUpContainer({
   };
 
   const saveSection = (section, createAnotherSection, coteachersToAdd) => {
+    setIsEditInProgress(false);
+
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
@@ -247,7 +249,6 @@ export default function SectionsSetUpContainer({
       })
       .then(data => {
         recordSectionSetupEvent(section);
-        setIsEditInProgress(false);
         coteachersToAdd.forEach(() => {
           analyticsReporter.sendEvent(
             EVENTS.COTEACHER_INVITE_SENT,
@@ -270,6 +271,7 @@ export default function SectionsSetUpContainer({
       })
       .catch(err => {
         setIsSaveInProgress(false);
+        setIsEditInProgress(true);
         console.error(err);
       });
   };

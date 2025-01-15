@@ -39,7 +39,6 @@ const DashboardSectionSettings: React.FunctionComponent<
     };
   }, [isEditInProgress]);
 
-  // TODO(lfm): i18n
   return (
     <div>
       <SectionsSetUpContainer
