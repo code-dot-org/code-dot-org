@@ -18,43 +18,39 @@ class GridFactory:
   def create_grid_from_string(self, description: str) -> Grid:
       try:
           grid_squares = json.loads(description)
-          height = len(grid_squares)
-          if height == 0:
+          size = len(grid_squares)
+          if size == 0:
               raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID, "Grid is empty")
           
-          if not is_square_2d_array(grid_squares)
+          if not is_square_2d_array(grid_squares):
               raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID, "Grid is not a square")
           
-          # # Initialize the grid array (list of lists in Python)
-          # grid = [[None] * height for _ in range(width)]
+          grid = [[None for i in range(size)] for j in range(size)]
           
-          # # Iterate over each line and column to populate the grid
-          # for current_y in range(height):
-          #     line = grid_squares[current_y]
-          #     if len(line) != width:
-          #         raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID)
+          # Populate the grid with the parsed values
+          for current_y in range(size):
+              row = grid_squares[current_y]
               
-          #     for current_x in range(len(line)):
-          #         descriptor = line[current_x]
-          #         try:
-          #             # Parse the tile type and asset ID
-          #             tile_type = int(descriptor[self.GRID_SQUARE_TYPE_FIELD])
-          #             asset_id = 0
-          #             if self.GRID_SQUARE_ASSET_ID_FIELD in descriptor:
-          #                 asset_id = int(descriptor[self.GRID_SQUARE_ASSET_ID_FIELD])
-                      
-          #             # Parse the value if it exists
-          #             if self.GRID_SQUARE_VALUE_FIELD in descriptor:
-          #                 value = int(descriptor[self.GRID_SQUARE_VALUE_FIELD])
-          #                 grid[current_x][current_y] = GridSquare(tile_type, asset_id, value)
-          #             else:
-          #                 grid[current_x][current_y] = GridSquare(tile_type, asset_id)
+              for current_x in range(len(row)):
+                  square_descriptor = row[current_x]
+                  try:
+                      # Parse the tile type and asset ID
+                      tile_type = int(square_descriptor[self.GRID_SQUARE_TYPE_FIELD])
+                      asset_id = 0
+                      if self.GRID_SQUARE_ASSET_ID_FIELD in square_descriptor:
+                          asset_id = int(square_descriptor[self.GRID_SQUARE_ASSET_ID_FIELD])
+
+                      value = None
+                      # Parse the value if it exists
+                      if self.GRID_SQUARE_VALUE_FIELD in square_descriptor:
+                          value = int(square_descriptor[self.GRID_SQUARE_VALUE_FIELD])
+
+                      grid[current_x][current_y] = GridSquare(tile_type, asset_id, value)
                   
-          #         except (ValueError, KeyError) as e:
-          #             raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID) from e
+                  except (ValueError, KeyError):
+                      raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID)
           
-          # Return the grid as a Grid object
-          # return Grid(grid)
+          return Grid(grid)
       
       except json.JSONDecodeError:
           raise NeighborhoodRuntimeException(ExceptionKey.INVALID_GRID)
