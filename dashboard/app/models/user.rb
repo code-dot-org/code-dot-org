@@ -117,6 +117,7 @@ class User < ApplicationRecord
   #     brute-force password attempts
   #   roster_synced: Indicates if the user was created during a roster sync operation from an LMS. Implies that the user
   #     is a school-managed account.
+  #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -168,6 +169,7 @@ class User < ApplicationRecord
     has_seen_ai_assessments_announcement
     seen_ta_scores_map
     roster_synced
+    educator_role
   )
 
   attr_accessor(
@@ -217,6 +219,10 @@ class User < ApplicationRecord
 
   validates_presence_of :user_type
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
+
+  validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
+
+  validate :educator_role_allowed_for_teacher, on: :create
 
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests
@@ -2766,6 +2772,14 @@ class User < ApplicationRecord
         errors.add(:us_state,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow'))
       end
       errors.add(:age,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow')) if birthday_changed?
+    end
+  end
+
+  private def educator_role_allowed_for_teacher
+    return if educator_role.blank?
+
+    unless teacher?
+      errors.add(:educator_role, "can only be assigned to teachers")
     end
   end
 

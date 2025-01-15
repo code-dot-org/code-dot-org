@@ -115,6 +115,7 @@ def main
       NON_SCHOOL_OPTIONS
       US_STATES
       PROJECT_SUBMISSION_STATUS
+      EDUCATOR_ROLES
     ),
     file_type: 'ts'
   )

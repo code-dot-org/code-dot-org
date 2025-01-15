@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS",
+      "curriculum_umbrella": "Foundations of CS and AI",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -17,11 +17,12 @@
         "maker"
       ],
       "tts": true,
+      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:17:44 UTC",
+    "serialized_at": "2025-01-13 18:42:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

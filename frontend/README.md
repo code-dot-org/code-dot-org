@@ -22,6 +22,12 @@ This directory uses [Turborepo](https://turbo.build/) to manage the monorepo and
 
 ### Getting Started
 
+Ensure that [corepack](https://nodejs.org/api/corepack.html) is enabled.
+
+```bash
+corepack enable
+```
+
 Initialize the frontend package:
 
 ```bash

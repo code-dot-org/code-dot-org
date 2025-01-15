@@ -56,10 +56,6 @@ p,pre,span {
   @include selectable;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   -webkit-tap-highlight-color: transparent;
   padding: 0;

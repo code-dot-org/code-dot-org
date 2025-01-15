@@ -464,6 +464,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: How to lead a discussion on equity in a Code.org PD
+          lessons: {}
+          name: equity-pd
         science-PD2:
           title: Computer Science in Science PD Phase 2b
           description: Phase 2 Online Blended Summer Study
@@ -1176,6 +1178,8 @@ en:
           description: ''
           lesson_groups: {}
           student_description: ''
+          lessons: {}
+          name: k5concepts
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Algebra through Functional Programming
@@ -3914,6 +3918,7 @@ en:
               display_name: Next Steps
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           name: k5-onlinepd-2019
+          lessons: {}
         dance-extras-2019:
           title: Keep On Dancing
           description: Go beyond the first hour with extended project ideas.
@@ -4565,6 +4570,7 @@ en:
               display_name: Next Steps
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           name: k5-onlinepd-2020
+          lessons: {}
         dani-test-2020:
           lesson_groups:
             lesson group:
@@ -5666,6 +5672,7 @@ en:
             Implementing and Teaching CS:
               display_name: 'Part I:  Teaching and Implementing Computer Science'
           name: k5-onlinepd-2021
+          lessons: {}
         haikubot-pilot:
           lesson_groups:
             haiku bot:
@@ -7962,6 +7969,7 @@ en:
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           name: k5-onlinepd-2022
+          lessons: {}
         vpl-csd1-ci-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -16451,6 +16459,8 @@ en:
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          lessons: {}
+          name: k5-onlinepd-2024
         computer-vision-pilot:
           lessons:
             lesson-1:
@@ -19296,7 +19306,19 @@ en:
               name: Level Progression Example 1
             lesson-2:
               name: Level Progression Example 2 - Conditionals
-          lesson_groups: {}
+            lesson-3:
+              name: L2
+            lesson-4:
+              name: L3
+            lesson-5:
+              name: L4
+            lesson-6:
+              name: 'L1: Placeholder!'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: New Neighborhood (w Panels + Chatbot Levels)
+            lessonGroup-2:
+              display_name: Old Progression
           name: intro-to-programming-playground
           title: "[PLAYGROUND] Introduction to Programming with Python"
           description_audience: ''
@@ -19700,6 +19722,8 @@ en:
           lessons:
             lesson-4:
               name: 'Welcome to Music Lab! '
+            lesson-5:
+              name: Next Steps
           lesson_groups: {}
           name: sandbox-pl-teaching-k5-music-lab
           title: Teaching K-5 Music Lab (Sandbox)
