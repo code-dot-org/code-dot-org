@@ -46,10 +46,10 @@ const roleItemGroups = [
   },
   ...Object.entries(
     EducatorRoles.reduce((groups, {category, value}) => {
-      const label = locale[value]();
-      const categoryLabel = locale[category]();
+      const text = locale[value]?.() ?? '';
+      const categoryLabel = locale[category]?.() ?? '';
       groups[categoryLabel] = groups[categoryLabel] ?? [];
-      groups[categoryLabel].push({value, text: label});
+      groups[categoryLabel].push({value, text});
       return groups;
     }, {} as Record<string, {value: string; text: string}[]>)
   ).map(([label, groupItems]) => ({label, groupItems})),
