@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-01-07T23:36:59.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-list-check\"></i> Build a sequence\r\n\r\n1. Drag two or more [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block).\r\n2. Choose two different sounds.\r\n2. Press [Run](#clickable=run-button).",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<b>Hint:</b> Click directly on the \"Drum Beat Cowbell\" box to select a sound from the dropdown.  \r\n\r\n![](https://images.code.org/217c652db98518a453b25b9b21e23910-image-1736895022343.50.19 PM.png)\r\n</p>\r\n</div>\r\n\r\n\r\n###<i class=\"fa-duotone fa-solid fa-list-check\"></i> Build a sequence\r\n\r\n1. Drag two or more [play](#clickable=play-sound-block) blocks under [when run](#clickable=when-run-block).\r\n2. Choose two different sounds.\r\n2. Press [Run](#clickable=run-button).\r\n\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -227,8 +228,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.592+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-play-two\\\"\"],\"cloned_from\":\"music-coding-intro-play-two\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:36:59.592+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-play-two\\\"\"],\"cloned_from\":\"music-coding-intro-play-two\"},{\"changed_at\":\"2025-01-14 22:50:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-14 22:53:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit';
 import {AnyAction} from 'redux';
 
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
 
 import Lab2Registry from '../Lab2Registry';
@@ -37,6 +37,22 @@ export const setAndSaveProjectSource = (
   return dispatch => {
     dispatch(projectSlice.actions.setProjectSource(projectSource));
     if (Lab2Registry.getInstance().getProjectManager()) {
+      Lab2Registry.getInstance()
+        .getProjectManager()
+        ?.save(projectSource, forceSave, forceNewVersion);
+    }
+  };
+};
+
+export const setAndSaveSource = (
+  source: MultiFileSource,
+  forceSave: boolean = false,
+  forceNewVersion: boolean = false
+): ThunkAction<void, RootState, undefined, AnyAction> => {
+  return (dispatch, getState) => {
+    dispatch(setSource(source));
+    const projectSource = getState().lab2Project.projectSource;
+    if (Lab2Registry.getInstance().getProjectManager() && projectSource) {
       Lab2Registry.getInstance()
         .getProjectManager()
         ?.save(projectSource, forceSave, forceNewVersion);
@@ -96,6 +112,12 @@ const projectSlice = createSlice({
     setProjectSource(state, action: PayloadAction<ProjectSources | undefined>) {
       state.projectSource = action.payload;
     },
+    setSource(state, action: PayloadAction<MultiFileSource>) {
+      state.projectSource = {
+        ...state.projectSource,
+        source: action.payload,
+      };
+    },
     setPreviousVersionSource(
       state,
       action: PayloadAction<ProjectSources | undefined>
@@ -129,6 +151,7 @@ export const {
   setRestoredOldVersion,
   resetProjectMetadata,
   setHasEdited,
+  setSource,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

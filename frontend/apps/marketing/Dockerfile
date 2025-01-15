@@ -38,7 +38,7 @@ COPY . .
  
 # Generate a partial monorepo with a pruned lockfile for a target workspace.
 # See: https://turbo.build/repo/docs/reference/prune
-RUN yarn turbo prune @code-dot-org/marketing --docker
+RUN yarn dlx turbo prune @code-dot-org/marketing --docker
 
 ##############################################################################
 # Builder Layer                                                              #

@@ -125,11 +125,11 @@ export function getFileByName(
 export function getActiveFileForProject(project: MultiFileSource) {
   const files = Object.values(project.files);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  // No files are hidden in start mode. In non-start mode, only show starter files
+  // Only system support files are hidden in start mode. In non-start mode, only show starter files
   // (or files without a type, which default to starter files).
   const visibleFiles = files.filter(
     f =>
-      isStartMode ||
+      (isStartMode && f.type !== ProjectFileType.SYSTEM_SUPPORT) ||
       !f.type ||
       f.type === ProjectFileType.STARTER ||
       f.type === ProjectFileType.LOCKED_STARTER

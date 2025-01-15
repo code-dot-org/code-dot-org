@@ -8,6 +8,7 @@ import locale from '@cdo/apps/signUpFlow/locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  MAX_DISPLAY_NAME_LENGTH,
   USER_RETURN_TO_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -189,6 +190,50 @@ describe('FinishStudentAccount', () => {
 
     // Error shows and button is disabled with empty display name
     screen.getByText(locale.display_name_error_message());
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('only whitespace in the displayName field shows error message', () => {
+    renderDefault();
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {target: {value: ' '}});
+
+    // Error shows with whitespace display name
+    screen.getByText(locale.display_name_error_message());
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('adding a long display name shows error message', () => {
+    renderDefault();
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {
+      target: {value: 'a'.repeat(MAX_DISPLAY_NAME_LENGTH + 1)},
+    });
+
+    // Error shows with long display name
+    screen.getByText(
+      locale.display_name_too_long_error_message({
+        maxLength: MAX_DISPLAY_NAME_LENGTH,
+      })
+    );
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
     expect(finishSignUpButton).toBeDisabled();
   });
 

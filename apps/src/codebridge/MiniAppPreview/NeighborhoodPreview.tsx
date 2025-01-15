@@ -1,6 +1,5 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {MiniApps} from '@codebridge/constants';
-import {appendSystemOutMessage} from '@codebridge/redux/consoleRedux';
 import React, {useEffect, useMemo} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
@@ -8,6 +7,8 @@ import skins from '@cdo/apps/maze/skins';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import CodebridgeRegistry from '../CodebridgeRegistry';
 
 // Preview panel for the neighborhood mini app.
 const NeighborhoodPreview: React.FunctionComponent = () => {
@@ -31,8 +32,14 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
       return;
     }
     const neighborhood = new Neighborhood(
-      message => dispatch(appendSystemOutMessage(message)),
-      () => dispatch(appendSystemOutMessage('')),
+      message =>
+        CodebridgeRegistry.getInstance()
+          .getConsoleManager()
+          ?.writeConsoleMessage(message),
+      () =>
+        CodebridgeRegistry.getInstance()
+          .getConsoleManager()
+          ?.writeConsoleMessage(''),
       isRunning => dispatch(setIsRunning(isRunning)),
       '[PYTHON LAB]'
     );

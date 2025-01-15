@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import WorkshopStudentEnrollPage from '@cdo/apps/simpleSignUp/workshop/WorkshopStudentEnrollPage';
+import StudentUserTypeChangePrompt from '@cdo/apps/accounts/StudentUserTypeChangePrompt';
 
 document.addEventListener('DOMContentLoaded', function () {
   ReactDOM.render(
-    <WorkshopStudentEnrollPage />,
+    <StudentUserTypeChangePrompt />,
     document.getElementById('workshop-enroll-students-cannot-enroll')
   );
 });

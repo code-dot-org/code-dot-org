@@ -85,7 +85,7 @@ module TestRunUtils
     ChatClient.wrap('python tests') do
       # Run pytest on every sub-dir in python/ that has a pyproject.toml
       Dir.glob('python/**/pyproject.toml').map {|file| File.dirname(file)}.each do |dir|
-        PythonVenv.run 'pytest', dir
+        PythonVenv.pytest dir
       end
     end
   end

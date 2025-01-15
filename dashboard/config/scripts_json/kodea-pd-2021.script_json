@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "self_paced_pl_k_5",
-      "curriculum_umbrella": "CSF Self Paced PL",
+      "curriculum_umbrella": "Self-paced PL - CSF",
       "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "csf-online-pd-kodea",
@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "kodea-pd-2021",
-    "serialized_at": "2024-11-19 01:18:59 UTC",
+    "serialized_at": "2025-01-13 23:41:17 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

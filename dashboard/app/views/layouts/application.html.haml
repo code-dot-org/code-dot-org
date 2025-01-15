@@ -96,6 +96,7 @@
     = render_shared_haml('global_edition/region_switch_confirm')
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
+      %a.skip_link{href: "#main_content"}=t('nav.skip_to_main_content')
       - unless view_options[:no_header]
         = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, lesson: @lesson, full_width: view_options[:full_width]}
       - if view_options[:code_studio_logo]
@@ -105,17 +106,18 @@
 
       - page = yield
 
-      - if view_options[:full_width]
-        - if view_options[:responsive_content]
-          .responsive_full_container{style: ('padding: 0' if view_options[:no_padding_container])}
-            = page
+      %main#main_content
+        - if view_options[:full_width]
+          - if view_options[:responsive_content]
+            .responsive_full_container{style: ('padding: 0' if view_options[:no_padding_container])}
+              = page
+          - else
+            .full_container{style: ('padding: 0' if view_options[:no_padding_container])}
+              = page
         - else
-          .full_container{style: ('padding: 0' if view_options[:no_padding_container])}
+          .container.main
+            = show_flashes.html_safe
             = page
-      - else
-        .container.main
-          = show_flashes.html_safe
-          = page
 
       - if view_options[:responsive_content]
         .responsive-content-desktop-footer
