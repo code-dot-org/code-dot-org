@@ -1,4 +1,5 @@
 import classnames from 'classnames';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
@@ -23,6 +24,24 @@ export const MARKETING_AUDIENCE = {
   HIGH: 'high',
   HOC: 'hoc',
   PL: 'pl',
+};
+const CURRICULUM_TYPES_FOR_AUDIENCE = {
+  // [MARKETING_AUDIENCE.HIGH]: [
+  //   curriculumTypes.course,
+  //   curriculumTypes.standalone_unit,
+  //   curriculumTypes.module,
+  // ],
+  // [MARKETING_AUDIENCE.MIDDLE]: [
+  //   curriculumTypes.course,
+  //   curriculumTypes.standalone_unit,
+  //   curriculumTypes.module,
+  // ],
+  [MARKETING_AUDIENCE.ELEMENTARY]: [
+    curriculumTypes.course,
+    curriculumTypes.module,
+  ],
+  // [MARKETING_AUDIENCE.HOC]: null,
+  // [MARKETING_AUDIENCE.PL]: null,
 };
 
 export default function CurriculumQuickAssign({
@@ -119,67 +138,84 @@ export default function CurriculumQuickAssign({
     setFilteredCourseOfferings(filterOfferings(courseOfferings));
   }, [courseOfferings, courseFilters?.language]);
 
+  const getSelectedCourseOffering = useCallback(() => {
+    const selectedSectionFromGroup = courseGroup => {
+      return _.find(
+        courseGroup,
+        course => sectionCourse?.courseOfferingId === course.id
+      );
+    };
+
+    const selectedSectionFromCurriculumType = (audience, curriculumType) => {
+      if (!filteredCourseOfferings[audience][curriculumType]) {
+        return null;
+      }
+
+      for (const courseGroup of Object.values(
+        filteredCourseOfferings[audience][curriculumType]
+      )) {
+        const course = selectedSectionFromGroup(courseGroup);
+
+        console.log('lfm 3', course);
+        if (course) {
+          console.log('lfm 4', course);
+          return course;
+        }
+      }
+      return null;
+    };
+
+    const selectedSectionFromAudience = audience => {
+      const curriculumTypes = CURRICULUM_TYPES_FOR_AUDIENCE[audience];
+
+      if (!curriculumTypes) {
+        const course = selectedSectionFromGroup(
+          filteredCourseOfferings[audience]
+        );
+        return course ? {course, audience} : null;
+      }
+      for (const curriculumType of curriculumTypes) {
+        const course = selectedSectionFromCurriculumType(
+          audience,
+          curriculumType
+        );
+        console.log('lfm 2', course);
+        if (course) {
+          console.log('lfm 1', course);
+          return {course, audience};
+        }
+      }
+
+      return null;
+    };
+
+    for (const audience of Object.keys(filteredCourseOfferings)) {
+      const result = selectedSectionFromAudience(audience);
+      if (result) {
+        return result;
+      }
+    }
+
+    return null;
+  }, [filteredCourseOfferings, sectionCourse]);
+
   useEffect(() => {
     if (!filteredCourseOfferings) return;
     if (!isNewSection) {
-      //  TO DO: refactor for efficiency.  Consider using a flatten-like function (maybe in a helper file?)
-      const highData = {
-        ...filteredCourseOfferings[MARKETING_AUDIENCE.HIGH][
-          curriculumTypes.course
-        ],
-        ...filteredCourseOfferings[MARKETING_AUDIENCE.HIGH][
-          curriculumTypes.standalone_unit
-        ],
-        ...filteredCourseOfferings[MARKETING_AUDIENCE.HIGH][
-          curriculumTypes.module
-        ],
-      };
-      const middleData = {
-        ...filteredCourseOfferings[MARKETING_AUDIENCE.MIDDLE][
-          curriculumTypes.course
-        ],
-        ...filteredCourseOfferings[MARKETING_AUDIENCE.MIDDLE][
-          curriculumTypes.standalone_unit
-        ],
-        ...filteredCourseOfferings[MARKETING_AUDIENCE.MIDDLE][
-          curriculumTypes.module
-        ],
-      };
-      const elementaryData = {
-        ...filteredCourseOfferings[MARKETING_AUDIENCE.ELEMENTARY][
-          curriculumTypes.course
-        ],
-        ...filteredCourseOfferings[MARKETING_AUDIENCE.ELEMENTARY][
-          curriculumTypes.module
-        ],
-      };
-      const hocData = {...filteredCourseOfferings[MARKETING_AUDIENCE.HOC]};
-      const plData = {...filteredCourseOfferings[MARKETING_AUDIENCE.PL]};
+      const determineSelectedCourseOffering = () => {
+        const selection = getSelectedCourseOffering(filteredCourseOfferings);
 
-      const determineSelectedCourseOffering = (startingData, audience) => {
-        const headers = Object.keys(startingData);
-
-        headers.forEach(header => {
-          const courseDataByHeaderValues = Object.values(startingData[header]);
-          courseDataByHeaderValues.forEach(course => {
-            if (sectionCourse?.courseOfferingId === course.id) {
-              setSelectedCourseOffering(course);
-              updateSectionCourseForExistingSections(course);
-              setMarketingAudience(audience);
-            }
-          });
-        });
+        console.log('lfm 0', selection);
+        if (selection) {
+          setSelectedCourseOffering(selection.course);
+          updateSectionCourseForExistingSections(selection.course);
+          setMarketingAudience(selection.audience);
+          return;
+        }
       };
 
       if (!selectedCourseOffering) {
-        determineSelectedCourseOffering(highData, MARKETING_AUDIENCE.HIGH);
-        determineSelectedCourseOffering(middleData, MARKETING_AUDIENCE.MIDDLE);
-        determineSelectedCourseOffering(
-          elementaryData,
-          MARKETING_AUDIENCE.ELEMENTARY
-        );
-        determineSelectedCourseOffering(hocData, MARKETING_AUDIENCE.HOC);
-        determineSelectedCourseOffering(plData, MARKETING_AUDIENCE.PL);
+        determineSelectedCourseOffering(filteredCourseOfferings);
       }
     }
     // added all these dependencies given the eslint warning
@@ -190,6 +226,7 @@ export default function CurriculumQuickAssign({
     selectedCourseOffering,
     updateSection,
     updateSectionCourseForExistingSections,
+    getSelectedCourseOffering,
   ]);
 
   const updateSectionCourseForExistingSections = useCallback(
