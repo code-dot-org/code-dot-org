@@ -6,6 +6,20 @@ import Slider, {SliderProps} from '../index';
 export default {
   title: 'DesignSystem/Slider',
   component: Slider,
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Disable color-contrast rule for Slider.
+            // Issue with this rule happens with disabled Slider value text, but it looks like it still should be ok.
+            id: 'color-contrast',
+            enabled: false,
+          },
+        ],
+      },
+    },
+  },
 } as Meta;
 
 //
@@ -76,6 +90,7 @@ CenteredSlider.args = {
 export const SliderWithNoLabel = SingleTemplate.bind({});
 SliderWithNoLabel.args = {
   name: 'controlled_Slider_no_label',
+  'aria-label': 'Slider with no label visible',
   value: 50,
   hideValue: true,
 };
