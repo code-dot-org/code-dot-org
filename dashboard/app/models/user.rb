@@ -450,16 +450,9 @@ class User < ApplicationRecord
     primary_contact_info.try(:hashed_email) || ''
   end
 
-  # Email used for the user's enrollments:
-  # Returns the 'alternateEmail' field from the user's latest accepted teacher application if it exists to
-  # help ensure the enrollment emails are delivered. Otherwise, returns the user's email.
-  def email_for_enrollments
-    latest_accepted_app = Pd::Application::TeacherApplication.where(
-      user: self,
-      status: 'accepted'
-    ).order(application_year: :desc).first&.form_data_hash
-    alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : ''
-    alternate_email.presence || email
+  def alternate_email
+    latest_accepted_app = Pd::Application::TeacherApplication.where(user: self, status: 'accepted').order(application_year: :desc).first
+    latest_accepted_app&.sanitized_form_data_hash&.dig(:alternate_email)
   end
 
   # assign a course to a facilitator that is qualified to teach it
@@ -2502,6 +2495,12 @@ class User < ApplicationRecord
     if teacher?
       Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
         enrollment.update(user: self)
+      end
+
+      if alternate_email.present?
+        Pd::Enrollment.where(email: alternate_email, user: nil).each do |enrollment|
+          enrollment.update(user: self)
+        end
       end
     end
   end

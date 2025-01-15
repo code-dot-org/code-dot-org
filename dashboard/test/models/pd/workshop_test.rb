@@ -57,7 +57,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'query by enrolled teacher' do
     # Teachers enroll in a workshop as a whole
     teacher = create :teacher
-    create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email_for_enrollments
+    create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email
 
     # create a workshop with a different teacher enrollment, which should not be returned below
     other_workshop = create(:workshop)
@@ -74,7 +74,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_empty Pd::Workshop.enrolled_in_by(teacher)
 
     # Email match only
-    enrollment.update!(email: teacher.email_for_enrollments)
+    enrollment.update!(email: teacher.email)
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
 
     # UserId only
@@ -82,7 +82,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
 
     # Both email and user id. Should still find workshop exactly once
-    enrollment.update!(email: teacher.email_for_enrollments, user: teacher)
+    enrollment.update!(email: teacher.email, user: teacher)
+    assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
+
+    # Alternate email match only
+    create :pd_teacher_application, user: teacher, status: 'accepted'
+    enrollment.update!(email: teacher.alternate_email, user: nil)
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
   end
 

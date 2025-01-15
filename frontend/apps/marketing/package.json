@@ -26,10 +26,10 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
-    "@code-dot-org/dsco": "workspace:*",
+    "@code-dot-org/component-library": "workspace:*",
     "@contentful/experiences-sdk-react": "^1.24.0",
     "contentful": "^11.2.5",
-    "next": "^15.0.3",
+    "next": "^15.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
