@@ -34,14 +34,9 @@ import useUpdateAnalytics from './hooks/useUpdateAnalytics';
 import useUpdatePlayer from './hooks/useUpdatePlayer';
 import MusicPlayView from './MusicPlayView';
 import PackDialog from './PackDialog';
-import PackDialog2 from './PackDialog2';
 import Timeline from './Timeline';
 
 import moduleStyles from './music-view.module.scss';
-
-// Default to using PackDialog2, unless a URL parameter forces the use of
-// the older PackDialog.
-const usePackDialog = AppConfig.getValue('pack-dialog-1') === 'true';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -276,11 +271,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     return <MusicPlayView setPlaying={setPlaying} />;
   }
 
-  const CurrentPackDialog = usePackDialog ? PackDialog : PackDialog2;
-
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>
-      {allowPackSelection && <CurrentPackDialog player={player} />}
+      {allowPackSelection && <PackDialog player={player} />}
 
       {showInstructions &&
         instructionsPosition === InstructionsPosition.TOP &&

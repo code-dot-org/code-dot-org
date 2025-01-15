@@ -4,6 +4,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {matchPath, useLocation} from 'react-router-dom';
 
 import {Heading1} from '@cdo/apps/componentLibrary/typography';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,
@@ -64,13 +65,21 @@ const PageHeader: React.FC = () => {
     [location]
   );
 
-  const sectionName = selectedSection ? selectedSection.name : '';
+  const sectionNameText = selectedSection ? selectedSection.name : '';
+
+  const sectionName = (
+    <Typography
+      semanticTag={'h2'}
+      visualAppearance={'overline-two'}
+      className={styles.headerSectionName}
+    >
+      {sectionNameText}
+    </Typography>
+  );
 
   return (
     <div className={styles.header}>
-      <span className={styles.headerSectionName}>
-        {isLoadingSectionData ? skeletonSectionName : sectionName}
-      </span>
+      {isLoadingSectionData ? skeletonSectionName : sectionName}
       <Heading1>{pathName}</Heading1>
       {showAgeGatedStudentsBanner && (
         <AgeGatedStudentsBanner

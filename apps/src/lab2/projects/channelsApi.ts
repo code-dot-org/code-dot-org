@@ -38,3 +38,10 @@ export async function publish(channel: Channel): Promise<Response> {
 export async function unpublish(channel: Channel): Promise<Response> {
   return HttpClient.post(`${rootUrl}/${channel.id}/unpublish`, '', false);
 }
+
+export async function fetchAbuseScore(channelId: string): Promise<number> {
+  const {value} = await HttpClient.fetchJson<{abuse_score: number}>(
+    `${rootUrl}/${channelId}/abuse`
+  );
+  return value.abuse_score;
+}

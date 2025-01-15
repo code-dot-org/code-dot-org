@@ -16,13 +16,24 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
-    if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}} && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false))
-      if !params[:section_id] && current_user&.last_section_id
-        redirect_to "/teacher_dashboard/sections/#{current_user.last_section_id}/unit/#{@script.name}"
+    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
+      if request.query_parameters.include? "user_id"
+        redirect_query_string = request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")
+        if redirect_query_string.empty?
+          redirect_to script_path(@script)
+        else
+          redirect_to "#{script_path(@script)}?#{redirect_query_string}"
+        end
         return
-      elsif params[:section_id]
-        redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/unit/#{@script.name}"
-        return
+      end
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}
+        if !params[:section_id] && current_user&.last_section_id
+          redirect_to "/teacher_dashboard/sections/#{current_user.last_section_id}/unit/#{@script.name}"
+          return
+        elsif params[:section_id]
+          redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/unit/#{@script.name}"
+          return
+        end
       end
     end
 

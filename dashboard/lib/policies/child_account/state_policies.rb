@@ -19,8 +19,8 @@ module Policies::ChildAccount::StatePolicies
         name: 'DPDPA',
         max_age: 12,
         grace_period_duration: 14.days.seconds,
-        lockout_date: DateTime.parse('2025-01-01T00:00:00-05:00'),
-        start_date: DateTime.parse('2025-01-01T00:00:00-05:00'),
+        lockout_date: DateTime.parse('2025-01-06T00:00:00-05:00'),
+        start_date: DateTime.parse('2025-01-06T00:00:00-05:00'),
       },
     }
 

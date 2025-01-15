@@ -125,8 +125,10 @@ export default function EvidenceLevelsForTeachersV2({
               type="button"
               key={evidenceLevel.id}
               onClick={() => radioButtonCallback(evidenceLevel.understanding)}
+              onFocus={() => handleMouseOver(evidenceLevel.understanding)}
+              onBlur={handleMouseOut}
               onMouseOver={() => handleMouseOver(evidenceLevel.understanding)}
-              onMouseOut={() => handleMouseOut()}
+              onMouseOut={handleMouseOut}
               className={classnames(
                 style.evidenceLevel,
                 [

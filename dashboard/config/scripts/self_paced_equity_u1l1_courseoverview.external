@@ -7,7 +7,9 @@ markdown <<MARKDOWN
 
 ## Who should take this course?
 
-#### In short, anyone who wants to take this course should! That said, there are a few audiences that we had in mind when creating this professional learning experience:
+#### In short, anyone who wants to take this course should! We think this will be a valuable learning experience for anyone looking to grow their skills in K-12 computer science education.
+
+#### That said, there are a few audiences that we had in mind when creating this professional learning experience:
 
 <div style="margin-top: 20px; background-color: rgba(0, 119, 134, .2); border-radius:10px; padding: 20px 20px 10px 20px">
 <div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
@@ -31,7 +33,9 @@ markdown <<MARKDOWN
 
 ## Through-Course Features
 
-#### This course has several features are woven throughout. Look for the following icons to signal each feature:
+#### This course has several features are woven throughout. Engage with the ones that are relevant to you and your learning.
+
+### Look for the following icons to signal each feature:
 
 <div style="margin-top: 20px; border-radius:10px; padding: 20px 20px 10px 20px">
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
@@ -46,7 +50,7 @@ markdown <<MARKDOWN
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
 	<div style="width: 90%;">
 	<p style="font-size: 18px; line-height: 1.5;">
-    <strong><a href="code.org" target="blank" rel="noopener noreferrer">Activity Guide</a></strong> - A central document with digital or physical versions of activities in this course. The Activity Guide provides an artifact of learning by the end of the course. 
+    <strong><a href="code.org" target="blank" rel="noopener noreferrer"><mark>Activity Guide</mark></a></strong> - A central document with digital or physical versions of activities in this course. The Activity Guide provides an artifact of learning by the end of the course. 
 	</p>
 	</div>
 	<img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" alt="Activity Guide Icon" style="width: 7%;">

@@ -475,6 +475,12 @@ span {
     }
   }
 
+  .requiredLabel {
+    span::after {
+      content: '*';
+    }
+  }
+
   .dropdownContainer div {
     width: 100%;
   }

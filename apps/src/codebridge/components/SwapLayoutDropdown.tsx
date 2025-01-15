@@ -21,6 +21,10 @@ import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 const SwapLayoutDropdown: React.FunctionComponent = () => {
   const {config, setConfig} = useCodebridgeContext();
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  // Disable toggling while the program is running, as it could cause data loss.
+  const isRunningOrValidating = useAppSelector(
+    state => state.lab2System.isRunning || state.lab2System.isValidating
+  );
 
   const onLayoutChange = useCallback(() => {
     const newLayout =
@@ -46,7 +50,11 @@ const SwapLayoutDropdown: React.FunctionComponent = () => {
       : codebridgeI18n.defaultLayout();
 
   return (
-    <PopUpButton iconName="ellipsis-v" alignment="right">
+    <PopUpButton
+      iconName="ellipsis-v"
+      alignment="right"
+      disabled={isRunningOrValidating}
+    >
       <div onClick={onLayoutChange} className={darkModeStyles.dropdownItem}>
         <FontAwesomeV6Icon iconName={iconName} iconStyle={'solid'} />
         <div>{layoutLabel}</div>

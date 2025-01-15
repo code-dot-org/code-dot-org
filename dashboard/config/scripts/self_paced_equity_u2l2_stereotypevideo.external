@@ -1,0 +1,21 @@
+name 'self-paced-equity-U2L2-stereotypevideo'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Video: Stereotypes
+
+#### The following video covers stereotypes, which are important to understand to conceptualize **stereotype threat**. Note that these are two different, but interconnected, phenomena.
+
+#### While you watch the video, consider the following question: 
+
+* #### What sorts of stereotypes do you think your students have been exposed to about computer science? 
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://www.youtube.com/watch?v=r_Uer9LgITc&t" target="blank">
+    <img src="https://images.code.org/b14be826898e935b927d65f921dd380c-image-1736280254396.04.11 PM.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+MARKDOWN

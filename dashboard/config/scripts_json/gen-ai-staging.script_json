@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-11-19 01:18:42 UTC",
+    "serialized_at": "2025-01-10 21:23:50 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -70,6 +70,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "gen-ai-staging"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Globalization"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "gen-ai-staging"
       }
     }
@@ -540,6 +552,21 @@
       "seeding_key": {
         "lesson.key": "(Optional) Foundations in a Day",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "gen-ai-staging"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Panel Levels",
+      "absolute_position": 28,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 28,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "gen-ai-staging"
       }
     }
@@ -1880,6 +1907,18 @@
         "lesson_activity.key": "1fa8996a-0420-4855-90c4-13fe56dd6205",
         "lesson.key": "(Optional) Foundations in a Day",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "gen-ai-staging"
+      }
+    },
+    {
+      "key": "1983cbf7-39b8-41ae-963a-b93a98545674",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1983cbf7-39b8-41ae-963a-b93a98545674",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "gen-ai-staging"
       }
     }
@@ -5846,6 +5885,18 @@
         "activity_section.key": "f90db6c3-4c0d-4da0-9410-ba03a68a720f",
         "lesson_activity.key": "1fa8996a-0420-4855-90c4-13fe56dd6205"
       }
+    },
+    {
+      "key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e",
+      "position": 1,
+      "properties": {
+        "name": "Panel Levels",
+        "progression_name": "For Panel Screenshots"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e",
+        "lesson_activity.key": "1983cbf7-39b8-41ae-963a-b93a98545674"
+      }
     }
   ],
   "script_levels": [
@@ -8673,6 +8724,204 @@
       "level_keys": [
         "gen-ai-customizing-studentsurvey-postmodule"
       ]
+    },
+    {
+      "chapter": 114,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "For Panel Screenshots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-screenshots-prompt-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      },
+      "level_keys": [
+        "gen-ai-screenshots-prompt-overview"
+      ]
+    },
+    {
+      "chapter": 115,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "For Panel Screenshots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-screenshots-prompt-audience-delivery"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      },
+      "level_keys": [
+        "gen-ai-screenshots-prompt-audience-delivery"
+      ]
+    },
+    {
+      "chapter": 116,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "For Panel Screenshots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-screenshots-prompt-role-tone"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      },
+      "level_keys": [
+        "gen-ai-screenshots-prompt-role-tone"
+      ]
+    },
+    {
+      "chapter": 117,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "For Panel Screenshots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-screenshots-prompt-chain-reasoning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      },
+      "level_keys": [
+        "gen-ai-screenshots-prompt-chain-reasoning"
+      ]
+    },
+    {
+      "chapter": 118,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "For Panel Screenshots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-screenshots-prompt-examples"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      },
+      "level_keys": [
+        "gen-ai-screenshots-prompt-examples"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "For Panel Screenshots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-screenshots-retrieval-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      },
+      "level_keys": [
+        "gen-ai-screenshots-retrieval-overview"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "For Panel Screenshots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-screenshots-retrieval-current"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      },
+      "level_keys": [
+        "gen-ai-screenshots-retrieval-current"
+      ]
+    },
+    {
+      "chapter": 121,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "For Panel Screenshots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-screenshots-fine-tune"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      },
+      "level_keys": [
+        "gen-ai-screenshots-fine-tune"
+      ]
+    },
+    {
+      "chapter": 122,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "For Panel Screenshots"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-screenshots-model-cards-publish"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      },
+      "level_keys": [
+        "gen-ai-screenshots-model-cards-publish"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -10030,6 +10279,114 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "gen-ai-staging",
         "activity_section.key": "a93bda7b-80ef-4d47-8e9f-bb55ae6c7bc4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-screenshots-prompt-overview",
+        "script_level.level_keys": [
+          "gen-ai-screenshots-prompt-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-screenshots-prompt-audience-delivery",
+        "script_level.level_keys": [
+          "gen-ai-screenshots-prompt-audience-delivery"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-screenshots-prompt-role-tone",
+        "script_level.level_keys": [
+          "gen-ai-screenshots-prompt-role-tone"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-screenshots-prompt-chain-reasoning",
+        "script_level.level_keys": [
+          "gen-ai-screenshots-prompt-chain-reasoning"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-screenshots-prompt-examples",
+        "script_level.level_keys": [
+          "gen-ai-screenshots-prompt-examples"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-screenshots-retrieval-overview",
+        "script_level.level_keys": [
+          "gen-ai-screenshots-retrieval-overview"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-screenshots-retrieval-current",
+        "script_level.level_keys": [
+          "gen-ai-screenshots-retrieval-current"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-screenshots-fine-tune",
+        "script_level.level_keys": [
+          "gen-ai-screenshots-fine-tune"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-screenshots-model-cards-publish",
+        "script_level.level_keys": [
+          "gen-ai-screenshots-model-cards-publish"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
       }
     }
   ],

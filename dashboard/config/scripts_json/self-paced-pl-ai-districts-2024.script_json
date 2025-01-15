@@ -5,7 +5,7 @@
     "login_required": false,
     "properties": {
       "content_area": "skills_focused_self_paced_pl",
-      "curriculum_umbrella": "AI for teachers selfpaced pl",
+      "curriculum_umbrella": "Self-paced PL - AI for teachers",
       "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-ai-districts",
-    "serialized_at": "2024-11-04 18:33:46 UTC",
+    "serialized_at": "2025-01-13 23:52:21 UTC",
     "published_state": "stable",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",

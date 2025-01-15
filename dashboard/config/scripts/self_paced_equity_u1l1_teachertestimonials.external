@@ -1,0 +1,43 @@
+name 'self-paced-equity-U1L1-teachertestimonials'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teacher Testimonials
+
+#### Check out these teacher testimonials to see how learning about equity can positively impact you and your students.
+
+## K-5 Teacher Testimonials
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+	<div style="flex: 1 1 calc(50% - 20px); background-color: rgba(0, 119, 134, .1); border-radius: 10px; padding: 20px; display: flex; align-items: center;">
+    <img src="https://via.placeholder.com/100" alt="K-5 Teacher 1" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
+    <p style="font-size: 16px; line-height: 1.5; margin: 0;">
+    	"This course transformed how I think about equity in computer science. My young learners now feel excited and included in every lesson!"<br><strong>- Mrs. Smith, 3rd Grade Teacher</strong>
+	</p>
+	</div>
+	<div style="flex: 1 1 calc(50% - 20px); background-color: rgba(0, 119, 134, .1); border-radius: 10px; padding: 20px; display: flex; align-items: center;">
+    <img src="https://via.placeholder.com/100" alt="K-5 Teacher 2" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
+    <p style="font-size: 16px; line-height: 1.5; margin: 0;">
+    	"I’ve seen such growth in my students’ engagement and confidence. This training made such a difference for my classroom!"<br><strong>- Mr. Johnson, 5th Grade Teacher</strong>
+	</p>
+    </div>
+</div>
+
+## 6-12  Teacher Testimonials
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+	<div style="flex: 1 1 calc(50% - 20px); background-color: rgba(0, 119, 134, .1); border-radius: 10px; padding: 20px; display: flex; align-items: center;">
+    <img src="https://via.placeholder.com/100" alt="K-5 Teacher 1" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
+    <p style="font-size: 16px; line-height: 1.5; margin: 0;">
+    	"This course transformed how I think about equity in computer science. My young learners now feel excited and included in every lesson!"<br><strong>- Mrs. Smith, 3rd Grade Teacher</strong>
+	</p>
+	</div>
+	<div style="flex: 1 1 calc(50% - 20px); background-color: rgba(0, 119, 134, .1); border-radius: 10px; padding: 20px; display: flex; align-items: center;">
+    <img src="https://via.placeholder.com/100" alt="K-5 Teacher 2" style="width: 100px; height: 100px; border-radius: 50%; margin-right: 20px;">
+    <p style="font-size: 16px; line-height: 1.5; margin: 0;">
+    	"I’ve seen such growth in my students’ engagement and confidence. This training made such a difference for my classroom!"<br><strong>- Mr. Johnson, 5th Grade Teacher</strong>
+	</p>
+    </div>
+</div>
+MARKDOWN
