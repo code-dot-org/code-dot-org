@@ -44,6 +44,8 @@ export default class SignInCalloutWrapper extends React.Component {
     cookies.set(HideSignInCallout, 'true', {expires: 1, path: '/'});
     sessionStorage.setItem(HideSignInCallout, 'true');
     event.preventDefault();
+    // Needed to prevent triggering the Create Account Button Clicked analytics event firing
+    event.stopPropagation();
     this.signInElement &&
       this.signInElement.classList.remove('z_index_above_modal');
   }
