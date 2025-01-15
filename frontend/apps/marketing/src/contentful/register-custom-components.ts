@@ -7,7 +7,10 @@ import {
   defineComponents,
   CONTENTFUL_COMPONENTS,
 } from '@contentful/experiences-sdk-react';
-import {Stub, StubContentfulComponentDefinition} from '@code-dot-org/dsco/stub';
+import {
+  Stub,
+  StubContentfulComponentDefinition,
+} from '@code-dot-org/component-library/stub';
 import {
   StubSection,
   StubSectionContentfulComponentDefinition,
