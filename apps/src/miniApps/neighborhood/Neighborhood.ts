@@ -1,9 +1,9 @@
 import {tiles, MazeController} from '@code-dot-org/maze';
 
-import javalabMsg from '@cdo/apps/javalab/locale';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
 import Slider from '@cdo/apps/slider';
+import msg from '@cdo/locale';
 
 import {NeighborhoodSignalType} from './constants';
 import {NeighborhoodSignal} from './types';
@@ -108,7 +108,7 @@ export default class Neighborhood {
     if (!this.seenFirstSignal) {
       this.seenFirstSignal = true;
       this.onOutputMessage(
-        `${this.statusMessagePrefix} ${javalabMsg.startingPainter()}`
+        `${this.statusMessagePrefix} ${msg.startingPainter()}`
       );
       this.onNewlineMessage();
     }
@@ -117,6 +117,8 @@ export default class Neighborhood {
   // Process avaiable signals recursively. We process recursively to ensure
   // the commands appear sequential to the user and all commands stay in sync.
   processSignals() {
+    console.log('processSignals');
+    console.log('this.signals.length', this.signals.length);
     // if there is at least one signal we have not processed, process it
     if (this.signals.length > this.nextSignalIndex) {
       const signal = this.signals[this.nextSignalIndex];

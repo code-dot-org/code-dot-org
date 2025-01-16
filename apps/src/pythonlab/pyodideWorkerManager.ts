@@ -6,6 +6,8 @@ import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 
+import {NeighborhoodSignal} from '../miniApps/neighborhood/types';
+
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MessageTag} from './pythonHelpers/patches';
 import {PyodideMessage} from './types';
@@ -36,6 +38,14 @@ const setUpPyodideWorker = () => {
         }
         if (message.startsWith(MessageTag.NEIGHBORHOOD_SIGNAL)) {
           console.log('message', message);
+          const neighborhood =
+            CodebridgeRegistry.getInstance().getNeighborhood();
+          if (neighborhood) {
+            // Parse message string to NeighborhoodSignal.
+            const data = parseMessageToNeighborhoodSignal(message);
+            console.log('data', data);
+            neighborhood.handleSignal(data as NeighborhoodSignal);
+          }
           break;
         }
         consoleManager?.writeConsoleMessage(message);
@@ -121,5 +131,34 @@ const restartPyodideIfProgramIsRunning = () => {
       .incrementCounter('PythonLab.PyodideRestarted');
   }
 };
+
+// This function parses the message string (example: '[PAINTER] PAINT {"color": "Blue"}') to a NeighborhoodSignal.
+const parseMessageToNeighborhoodSignal = (
+  message: string
+): NeighborhoodSignal => {
+  const regex = /^\[(\w+)]\s+([^\s]+)(?:\s+(\{.*\}))?$/;
+
+  const match = message.match(regex);
+  if (!match) {
+    throw new Error('Invalid input format');
+  }
+  const [, , value, detail] = match;
+
+  const signal = {
+    value,
+  } as NeighborhoodSignal;
+
+  if (detail) {
+    signal.detail = JSON.parse(detail); // Parse the detail as JSON
+  }
+  return signal;
+};
+
+// const findEnumKey(str: string): NeighborhoodSignalType | undefined => {
+//   if (str in NeighborhoodSignalType) {
+//     return NeighborhoodSignalType[str as keyof typeof NeighborhoodSignalType];
+//   }
+//   return undefined;
+// };
 
 export {asyncRun, restartPyodideIfProgramIsRunning};
