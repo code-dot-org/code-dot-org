@@ -24,6 +24,7 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {UserTypes, EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 
 import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
+import {buildSchoolData} from '../schoolInfo/utils/buildSchoolData';
 import {navigateToHref} from '../utils';
 
 import locale from './locale';
@@ -45,9 +46,11 @@ const roleItemGroups = [
     groupItems: [{value: '', text: locale.select_a_role()}],
   },
   ...Object.entries(
-    EducatorRoles.reduce((groups, {category, value, label}) => {
-      groups[category] = groups[category] ?? [];
-      groups[category].push({value, text: label});
+    EducatorRoles.reduce((groups, {category, value}) => {
+      const text = locale[value]?.() ?? '';
+      const categoryLabel = locale[category]?.() ?? '';
+      groups[categoryLabel] = groups[categoryLabel] ?? [];
+      groups[categoryLabel].push({value, text});
       return groups;
     }, {} as Record<string, {value: string; text: string}[]>)
   ).map(([label, groupItems]) => ({label, groupItems})),
@@ -190,7 +193,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
         email: sessionStorage.getItem(EMAIL_SESSION_KEY),
         name: name,
         email_preference_opt_in: emailOptInChecked,
-        school_info_attributes: {...schoolInfo},
+        school_info_attributes: buildSchoolData({
+          schoolId: schoolInfo.schoolId,
+          country: schoolInfo.country,
+          schoolName: schoolInfo.schoolName,
+          schoolZip: schoolInfo.schoolZip,
+        }),
         country_code: countryCode,
         educator_role: educatorRole || null,
       },
@@ -220,9 +228,15 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   const sendFinishEvent = (): void => {
-    const hasSchool = !!document.querySelector(
-      'select[name="user[school_info_attributes][school_id]"]'
-    );
+    const schoolData = buildSchoolData({
+      schoolId: schoolInfo.schoolId,
+      country: schoolInfo.country,
+      schoolName: schoolInfo.schoolName,
+      schoolZip: schoolInfo.schoolZip,
+    });
+    // schoolData would be undefined if not valid, and the only
+    // school_type sent is 'noSchoolSetting', which is not a school
+    const hasSchool = schoolData && !schoolData.school_type;
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {

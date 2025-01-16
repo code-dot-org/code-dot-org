@@ -1,0 +1,50 @@
+name 'ML-Functions-Matching'
+title 'Defining and Calling Functions: Matching'
+
+height '75'
+
+question '![](https://images.code.org/cde3d34a4f581355e8e06df92d3868b7-image-1736971931280.12.06 PM.png)'
+answer '![](https://images.code.org/1c0d700a2a16c0c1cf6042b697c2d6d9-image-1736972553121.22.29 PM.png)'
+question 'Wash Dishes'
+answer '  1. Rinse off debris.  2. Apply soap and scrub.  3. Rinse again.  4. Dry the dishes or place them on a rack.'
+question 'Chunk of data and its metadata, used to route and reassemble information on the Internet.'
+answer 'Packet'
+question 'The way in which information travels on the Internet, not as a single piece but in chunks.'
+answer 'Datastream'
+question 'Sends all packets without checking whether they were received or ordered properly'
+answer 'User Datagram Protocol (UDP)'
+
+
+markdown <<MARKDOWN
+## What is a Function?
+#### A function is like a **reusable block of instructions**. You define the instructions once, and you can "call" them whenever you need them.
+
+
+## Defining a Function
+#### Defining a function means you're **writing the set of instructions** (steps) that the function will perform. Think of it like creating a recipe that tells you what to do.
+
+## Calling a Function
+#### Calling a function means you’re telling the computer, "Hey, do the steps I defined in this function!" It’s like opening your recipe book and saying, "Time to make this dish!"
+
+## Why Use Functions?
+#### Reusability: You can write the code once and use it multiple times.
+#### Organization: It makes your code cleaner and easier to understand.
+
+
+# Match the definiton to the correct function:
+
+
+
+
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

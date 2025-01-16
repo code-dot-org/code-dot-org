@@ -418,12 +418,6 @@ Style/RegexpLiteral:
 Style/RescueStandardError:
   Enabled: false
 
-# Offense count: 15
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: AllowedMethods, AllowedPatterns.
-Style/ReturnNilInPredicateMethodDefinition:
-  Enabled: false
-
 # Offense count: 408
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: Mode.

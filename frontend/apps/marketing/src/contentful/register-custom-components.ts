@@ -3,7 +3,10 @@
  *
  * Note: This file must be imported both server-side and client-side to ensure Contentful is able to map on both rendering modes.
  */
-import {defineComponents} from '@contentful/experiences-sdk-react';
+import {
+  defineComponents,
+  CONTENTFUL_COMPONENTS,
+} from '@contentful/experiences-sdk-react';
 import {
   Stub,
   StubContentfulComponentDefinition,
@@ -13,13 +16,21 @@ import {
   StubSectionContentfulComponentDefinition,
 } from '@code-dot-org/component-library/stub-section';
 
-defineComponents([
+defineComponents(
+  [
+    {
+      component: Stub,
+      definition: StubContentfulComponentDefinition,
+    },
+    {
+      component: StubSection,
+      definition: StubSectionContentfulComponentDefinition,
+    },
+  ],
   {
-    component: Stub,
-    definition: StubContentfulComponentDefinition,
+    enabledBuiltInComponents: [
+      CONTENTFUL_COMPONENTS.heading.id, // Remove this once Heading component is implemented
+      CONTENTFUL_COMPONENTS.image.id,
+    ],
   },
-  {
-    component: StubSection,
-    definition: StubSectionContentfulComponentDefinition,
-  },
-]);
+);

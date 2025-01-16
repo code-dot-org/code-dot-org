@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 const CALLOUT_COLOR = '#454545';
@@ -10,8 +12,8 @@ const CALLOUT_Z_INDEX = 1040;
 const CALLOUT_TOP = 30;
 
 /*
- * This is a callout attached to the sign-in button that's used on CSF level
- * pages to remind the user to sign-in.  Note that the sign-in button is
+ * This is a callout attached to the sign-in button that's used on CSF and CSC
+ * levels pages to remind the user to sign-in.  Note that the sign-in button is
  * defined in shared/haml/user_header.haml and is not a React component.
  * This component is injected into the page by src/code-studio/header.js.
  */
@@ -24,6 +26,10 @@ export default class SignInCallout extends React.Component {
     super(props);
 
     this.renderContent = this.renderContent.bind(this);
+  }
+
+  componentDidMount() {
+    analyticsReporter.sendEvent(EVENTS.LEVEL_SIGN_IN_CALLOUT_SHOWN);
   }
 
   renderContent() {
