@@ -6,3 +6,51 @@
     key: 'XJXXkBlsAbHVD',
     rememberLanguage: true,
   });
+
+  // Add a custom function to Localize:
+  Localize.realSetLanguage = Localize.setLanguage;
+  Localize.cdoSetLanguage = (language) => {
+    const lang = language.split("-")[0];
+
+    // Our internal language codes do not always match LocalizeJS
+    const mapping = {
+      "fa-IR": "fa",
+    };
+
+    // Call LocalizeJS's setLanguage function (which we have renamed to override it)
+    Localize.realSetLanguage(mapping[language] || language);
+    document.querySelector("html").setAttribute("dir", ["fa"].includes(lang) ? "rtl" : "ltr");
+
+    // Craft the inverse map so we can get our internal language code from LocalizeJS's code
+    const inverseMapping = {};
+    for (const key in mapping) {
+      if (Object.hasOwnProperty.call(mapping, key)) {
+        inverseMapping[mapping[key]] = key;
+      }
+    }
+    const cdoLanguage = inverseMapping[language] || language;
+
+    // This function ensures that the dropdowns show the requested language
+    const ensureSelector = (cdoLanguage) => {
+      const localeSelect = document.querySelector("#locale");
+      if (localeSelect) {
+        localeSelect.selectedIndex = localeSelect.querySelector("option[value='" + cdoLanguage + "']").index;
+      }
+    };
+
+    // When the site loads, ensure the language selector has the correct value
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log(cdoLanguage);
+      console.log("looking for select");
+      ensureSelector(cdoLanguage);
+    });
+    ensureSelector(cdoLanguage);
+  };
+
+  // Just in case... any other calls to the Localize setLanguage will also hit
+  // our custom code which also ensures the site dropdowns match
+  Localize.setLanguage = Localize.cdoSetLanguage;
+
+  // Ensure we are setting the correct direction on our <html> tag
+  console.log("localizejs: current language:", Localize.getLanguage());
+  Localize.cdoSetLanguage(Localize.getLanguage());

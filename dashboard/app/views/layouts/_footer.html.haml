@@ -36,7 +36,7 @@
         -# user input or to persist data without also updating it to enforce UTF-8
         - if DCDO.get("use_localizejs", false)
           - options = options_for_select(locale_options, locale)
-          = select_tag :locale, options, { onchange: 'const lang = this.selectedOptions[0].value; Localize.setLanguage(lang); document.body.parentNode.setAttribute("dir", ["fa-IR"].includes(lang) ? "rtl" : "ltr")', 'aria-label': t('footer.locale_select', default: 'Select language') }
+          = select_tag :locale, options, { notranslate: "", onchange: 'Localize.cdoSetLanguage(this.selectedOptions[0].value)', 'aria-label': t('footer.locale_select', default: 'Select language') }
         - else
           = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
             = hidden_field_tag :user_return_to, request.url
