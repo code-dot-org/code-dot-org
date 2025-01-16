@@ -37,13 +37,11 @@ const setUpPyodideWorker = () => {
           break;
         }
         if (message.startsWith(MessageTag.NEIGHBORHOOD_SIGNAL)) {
-          console.log('message', message);
           const neighborhood =
             CodebridgeRegistry.getInstance().getNeighborhood();
           if (neighborhood) {
             // Parse message string to NeighborhoodSignal.
             const data = parseMessageToNeighborhoodSignal(message);
-            console.log('data', data);
             neighborhood.handleSignal(data as NeighborhoodSignal);
           }
           break;
@@ -149,16 +147,9 @@ const parseMessageToNeighborhoodSignal = (
   } as NeighborhoodSignal;
 
   if (detail) {
-    signal.detail = JSON.parse(detail); // Parse the detail as JSON
+    signal.detail = JSON.parse(detail);
   }
   return signal;
 };
-
-// const findEnumKey(str: string): NeighborhoodSignalType | undefined => {
-//   if (str in NeighborhoodSignalType) {
-//     return NeighborhoodSignalType[str as keyof typeof NeighborhoodSignalType];
-//   }
-//   return undefined;
-// };
 
 export {asyncRun, restartPyodideIfProgramIsRunning};
