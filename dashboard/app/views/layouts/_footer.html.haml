@@ -34,10 +34,14 @@
       .span3{style: 'float: right;' + (full_width ? 'width: 140px; margin-left: 0px' : '')}
         -# NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
         -# user input or to persist data without also updating it to enforce UTF-8
-        = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
-          = hidden_field_tag :user_return_to, request.url
+        - if DCDO.get("use_localizejs", false)
           - options = options_for_select(locale_options, locale)
-          = select_tag :locale, options, { onchange: 'this.form.submit();', 'aria-label':  t('footer.locale_select', default: 'Select language') }
+          = select_tag :locale, options, { onchange: 'const lang = this.selectedOptions[0].value; Localize.setLanguage(lang); document.body.parentNode.setAttribute("dir", ["fa-IR"].includes(lang) ? "rtl" : "ltr")', 'aria-label': t('footer.locale_select', default: 'Select language') }
+        - else
+          = form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
+            = hidden_field_tag :user_return_to, request.url
+            - options = options_for_select(locale_options, locale)
+            = select_tag :locale, options, { onchange: 'this.form.submit();', 'aria-label': t('footer.locale_select', default: 'Select language') }
         - if request.ge_region
           = render_shared_haml('global_edition/region_reset_button')
         %small.dim
