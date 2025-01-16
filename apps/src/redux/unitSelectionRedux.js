@@ -74,10 +74,6 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
   const selectedSection =
     state.teacherSections.sections[state.teacherSections.selectedSectionId];
 
-  console.log('lfm', {
-    selectedSection,
-    loadedSectionId: state.unitSelection.loadedSectionId,
-  });
   if (
     state.unitSelection.isLoadingCoursesWithProgress ||
     !selectedSection ||
@@ -113,10 +109,6 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
       dispatch(setCoursesWithProgress(reorderedCourses));
       dispatch(finishedLoadingCoursesWithProgress());
       dispatch(setLoadedSectionId(selectedSection.id));
-      console.log('lfm1', {
-        selectedSection,
-        loadedSectionId: state.loadedSectionId,
-      });
     })
     .catch(err => {
       console.error(err.message);
@@ -177,7 +169,6 @@ export default function unitSelection(state = initialState, action) {
   }
 
   if (action.type === SET_LOADED_SECTION_ID) {
-    console.log('lfm2', action);
     return {
       ...state,
       loadedSectionId: action.loadedSectionId,
