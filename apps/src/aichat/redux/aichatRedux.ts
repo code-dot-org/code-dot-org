@@ -414,21 +414,22 @@ export const submitTeacherFeedback = createAsyncThunk(
         chatMessage.teacherFeedback!
       );
       const dispatch = thunkAPI.dispatch as AppDispatch;
-      // dispatch(
-      //   sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
-      //     levelPath: window.location.pathname,
-      //     userMessage: newUserMessageText,
-      //   })
-      // );
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_TEACHER_FEEDBACK, {
+          levelPath: window.location.pathname,
+          feedback: chatMessage.teacherFeedback,
+        })
+      );
       dispatch(updateChatMessage(chatMessage));
     } catch (error) {
-      // await handleChatCompletionError(error as Error, newUserMessage, dispatch);
-      console.log('Error submitting teacher feedback:', error);
-      console.log('Chat message:', chatMessage);
+      // Only send log report if not a 403 error.
+      if (!(error instanceof NetworkError && error.response.status === 403)) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error submitting teacher feedback', error as Error);
+      }
       return;
     }
-    // todo: handle errors from submitTeacherFeedback?
-    // todo: log analytics?
   }
 );
 
