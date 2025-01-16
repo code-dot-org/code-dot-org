@@ -86,6 +86,7 @@ export const GroupOfDividersWithMargin: StoryObj<{
   ...MultipleTemplate,
   args: {
     components: [
+      {color: 'primary', margin: 'none'},
       {color: 'primary', margin: 'xs'},
       {color: 'primary', margin: 's'},
       {color: 'primary', margin: 'm'},
@@ -102,7 +103,9 @@ export const GroupOfDividersWithMargin: StoryObj<{
       // applies the primary color class by default
       expect(divider).toHaveStyle(`border-top-color: ${expectedColor};`);
       // applies a margin
-      expect(divider).not.toHaveStyle('margin: 0');
+      if (dividers.indexOf(divider) !== 0) {
+        expect(divider).not.toHaveStyle('margin: 0');
+      }
     });
   },
 };
