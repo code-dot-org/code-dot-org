@@ -511,6 +511,9 @@ const EVENTS = {
     'Global Edition Region Switch Confirm Accepted',
   GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED:
     'Global Edition Region Switch Confirm Rejected',
+
+  // Sign in callout on CSF and CSC levels
+  LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
 };
 
 const EVENT_GROUP_NAMES = {
