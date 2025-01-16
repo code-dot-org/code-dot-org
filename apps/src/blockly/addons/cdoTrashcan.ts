@@ -1,10 +1,6 @@
 import * as GoogleBlockly from 'blockly/core';
 
-import {DARK_THEME_SUFFIX} from '../constants';
-
-function isDark(theme: GoogleBlockly.Theme | undefined) {
-  return theme?.name.includes(DARK_THEME_SUFFIX);
-}
+import {isDarkTheme} from '../utils';
 
 export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
   private workspace: GoogleBlockly.WorkspaceSvg;
@@ -36,7 +32,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
      * Current state of lid opening (0.0 = closed, 1.0 = open).
      */
     this.lidOpen_ = 0;
-    this.trashUrl = isDark(workspace.getTheme())
+    this.trashUrl = isDarkTheme(workspace.getTheme())
       ? this.LIGHT_TRASH_URL
       : this.TRASH_URL;
   }
