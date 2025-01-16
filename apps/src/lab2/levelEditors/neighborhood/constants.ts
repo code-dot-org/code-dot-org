@@ -22,11 +22,11 @@ export const categories: Record<string, TileDefinition> = {
 
 // Map of asset ids to tile types for all assets that are not "walls" (tile type 0).
 export const customTileTypes: Record<number, number> = {
-  // Painter is a "start" tile. Painter assets are 287-291.
+  // Painter is a "start" tile. Painter assets are 287-290.
   287: 2,
   288: 2,
+  289: 2,
   290: 2,
-  291: 2,
   // Paint bucket is an open tile.
   303: 1,
   // Street tile is an open tile.
