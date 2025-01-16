@@ -580,6 +580,9 @@ function createWebpackConfig({
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
         DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0,
+        'process.env.STATSIG_LOCAL_MODE_OFF': JSON.stringify(
+          envConstants.STATSIG_LOCAL_MODE_OFF ?? ''
+        ),
       }),
       ...(process.env.ANALYZE_BUNDLE
         ? [
