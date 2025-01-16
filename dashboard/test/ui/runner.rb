@@ -859,7 +859,6 @@ def run_feature(browser, feature, options)
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
     message = "*FAILED: #{test_run_string}* #{log_link}"
     message += "\n(#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})"
-    message += "\nrerun: `bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}`"
     ChatClient.log message, color: 'red'
   end
   result_string =
