@@ -10,6 +10,7 @@
 #  updated_at     :datetime
 #  deleted_at     :datetime
 #  code           :string(255)
+#  format         :integer
 #
 # Indexes
 #
@@ -20,6 +21,8 @@
 require 'cdo/code_generation'
 
 class Pd::Session < ApplicationRecord
+  enum format: {in_person: 0, virtual: 1}
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: 'pd_workshop_id', optional: true
