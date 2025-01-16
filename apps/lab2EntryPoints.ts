@@ -16,7 +16,7 @@ import {PythonlabEntryPoint} from '@cdo/apps/pythonlab/entrypoint';
 import {StandaloneVideoEntryPoint} from '@cdo/apps/standaloneVideo/entrypoint';
 import {Weblab2EntryPoint} from '@cdo/apps/weblab2/entrypoint';
 
-export const lab2EntryPoints: Record<string, Lab2EntryPoint> = {
+export const lab2EntryPoints = {
   aichat: AIChatEntryPoint,
   dance: DanceEntryPoint,
   music: MusicEntryPoint,
@@ -24,4 +24,6 @@ export const lab2EntryPoints: Record<string, Lab2EntryPoint> = {
   pythonlab: PythonlabEntryPoint,
   standalone_video: StandaloneVideoEntryPoint,
   weblab2: Weblab2EntryPoint,
-};
+} as const satisfies {[key: string]: Lab2EntryPoint};
+// ^ as const makes it so we can use typeof keyof lab2EntryPoints to get the union of all keys,
+// while the satisfies ensures that all values are of type Lab2EntryPoint
