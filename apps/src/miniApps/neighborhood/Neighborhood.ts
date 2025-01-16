@@ -117,8 +117,6 @@ export default class Neighborhood {
   // Process avaiable signals recursively. We process recursively to ensure
   // the commands appear sequential to the user and all commands stay in sync.
   processSignals() {
-    console.log('processSignals');
-    console.log('this.signals.length', this.signals.length);
     // if there is at least one signal we have not processed, process it
     if (this.signals.length > this.nextSignalIndex) {
       const signal = this.signals[this.nextSignalIndex];
