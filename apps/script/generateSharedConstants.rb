@@ -117,6 +117,7 @@ def main
       US_STATES
       PROJECT_SUBMISSION_STATUS
       EDUCATOR_ROLES
+      PD_SESSION_FORMATS
     ),
     file_type: 'ts'
   )
