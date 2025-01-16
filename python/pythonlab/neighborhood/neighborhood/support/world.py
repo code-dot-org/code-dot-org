@@ -7,6 +7,7 @@ class World(object):
   should check if the grid is None, and set it appropriately if it is.
   All subsequent references will reuse the same grid, so multiple painters can operate
   on the same grid.
+  The grid can be removed by calling remove_grid.
   """
   _instance = None
 
@@ -21,3 +22,6 @@ class World(object):
 
   def set_grid_from_string(self, description: str):
     self.grid = GridFactory.create_grid_from_string(description)
+
+  def remove_grid(self):
+    self.grid = None

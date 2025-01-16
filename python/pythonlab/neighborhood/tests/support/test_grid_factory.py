@@ -29,21 +29,21 @@ def test_can_create_valid_grid_from_string():
   grid = GridFactory.create_grid_from_string(SAMPLE_MAZE)
   assert grid.get_size() == 2
   assert grid.valid_location(0, 0)
-  assert grid.grid[0][0].asset_id == 0
-  assert grid.grid[1][0].paint_count == 1
-  assert grid.grid[0][0].paint_count == 0
-  assert grid.grid[0][0].square_type == SquareType.OPEN
-  assert not grid.grid[0][1].is_passable()
-  assert grid.grid[0][0].is_passable()
+  assert grid.grid_squares[0][0].asset_id == 0
+  assert grid.grid_squares[1][0].paint_count == 1
+  assert grid.grid_squares[0][0].paint_count == 0
+  assert grid.grid_squares[0][0].square_type == SquareType.OPEN
+  assert not grid.grid_squares[0][1].is_passable()
+  assert grid.grid_squares[0][0].is_passable()
 
 def test_can_create_grid_from_json():
   test_file_path = os.path.join(os.path.dirname(__file__), 'serialized_maze.txt')
   grid = GridFactory.create_grid_from_file(test_file_path)
   assert grid.get_size() == 2
   assert grid.valid_location(0, 0)
-  assert grid.grid[0][0].asset_id == 0
-  assert grid.grid[1][0].paint_count == 1
-  assert grid.grid[0][0].paint_count == 0
-  assert grid.grid[0][0].square_type == SquareType.OPEN
-  assert not grid.grid[0][1].is_passable()
-  assert grid.grid[0][0].is_passable()
+  assert grid.grid_squares[0][0].asset_id == 0
+  assert grid.grid_squares[1][0].paint_count == 1
+  assert grid.grid_squares[0][0].paint_count == 0
+  assert grid.grid_squares[0][0].square_type == SquareType.OPEN
+  assert not grid.grid_squares[0][1].is_passable()
+  assert grid.grid_squares[0][0].is_passable()

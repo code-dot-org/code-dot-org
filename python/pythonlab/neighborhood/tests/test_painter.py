@@ -1,10 +1,4 @@
 from neighborhood.painter import Painter
-from neighborhood.support.world import World
-
-# Set up the world to be from a string rather than trying to load a file.
-def setUp():
-  world = World()
-  world.set_grid_from_string('[[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":1,"assetId":0}],[{"tileType":0,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}]]')
 
 def test_initialize_painter():
   painter = Painter()

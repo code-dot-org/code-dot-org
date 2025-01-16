@@ -1,7 +1,6 @@
 from .support.neighborhood_signal_key import NeighborhoodSignalKey
 from .support.signal_message_type import SignalMessageType
 from .support.neighborhood_signal_message import NeighborhoodSignalMessage
-from .support.world import World
 
 class Painter:
   def __init__(self, x=0, y=0, direction="East", paint=0):
@@ -18,10 +17,6 @@ class Painter:
     self.y = y
     self.direction = direction
     self.remaining_paint = paint
-    self.world = World()
-    # If we haven't set up the grid yet, do so now from the default file.
-    if (self.world.grid is None):
-      self.world.set_grid_from_file()
 
   def turn_left(self):
     """
