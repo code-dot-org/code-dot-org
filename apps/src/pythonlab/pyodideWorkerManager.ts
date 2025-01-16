@@ -8,7 +8,10 @@ import {getStore} from '@cdo/apps/redux';
 
 import {NeighborhoodSignal} from '../miniApps/neighborhood/types';
 
-import {parseErrorMessage} from './pythonHelpers/messageHelpers';
+import {
+  parseMessageToNeighborhoodSignal,
+  parseErrorMessage,
+} from './pythonHelpers/messageHelpers';
 import {MessageTag} from './pythonHelpers/patches';
 import {PyodideMessage} from './types';
 
@@ -128,28 +131,6 @@ const restartPyodideIfProgramIsRunning = () => {
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');
   }
-};
-
-// This function parses the message string (example: '[PAINTER] PAINT {"color": "Blue"}') to a NeighborhoodSignal.
-const parseMessageToNeighborhoodSignal = (
-  message: string
-): NeighborhoodSignal => {
-  const regex = /^\[(\w+)]\s+([^\s]+)(?:\s+(\{.*\}))?$/;
-
-  const match = message.match(regex);
-  if (!match) {
-    throw new Error('Invalid input format');
-  }
-  const [, , value, detail] = match;
-
-  const signal = {
-    value,
-  } as NeighborhoodSignal;
-
-  if (detail) {
-    signal.detail = JSON.parse(detail);
-  }
-  return signal;
 };
 
 export {asyncRun, restartPyodideIfProgramIsRunning};
