@@ -649,8 +649,8 @@ active_job_queues:
 active_job_queue_adapter: :delayed_job
 
 # Number of workers to start when running `rake build:start_active_job_workers`:
-active_job_backend_n_workers_to_start: 2
-active_job_backend_rolling_restart_in_n_batches: 1
+active_job_backend_n_workers_to_start: 10
+active_job_backend_rolling_restart_in_n_batches: 2
 
 # aiproxy credentials
 aiproxy_api_key: !Secret
