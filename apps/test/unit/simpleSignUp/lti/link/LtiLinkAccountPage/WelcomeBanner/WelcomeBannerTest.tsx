@@ -13,7 +13,8 @@ const getContext = (ltiProvider: LtiProvider): LtiProviderContextProps => {
   return {
     ltiProvider,
     ltiProviderName: 'LMS',
-    newAccountUrl: '/new-account',
+    newAccountUrl: new URL('https://test.com/new-account'),
+    finishSignUpUrl: '/finish',
     existingAccountUrl: new URL('https://test.com/existing-account'),
     emailAddress: 'test@code.org',
     newCtaType: 'new',

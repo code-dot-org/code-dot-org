@@ -24,8 +24,13 @@ import {LtiProviderContext} from '../../context';
 import styles from '../../../../../link-account.module.scss';
 
 const LtiNewAccountCard = () => {
-  const {ltiProviderName, newAccountUrl, emailAddress, userType} =
-    useContext(LtiProviderContext)!;
+  const {
+    ltiProviderName,
+    finishSignUpUrl,
+    emailAddress,
+    userType,
+    newAccountUrl,
+  } = useContext(LtiProviderContext)!;
 
   const [isSaving, setIsSaving] = useState(false);
 
@@ -47,14 +52,12 @@ const LtiNewAccountCard = () => {
 
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType);
     sessionStorage.setItem(EMAIL_SESSION_KEY, emailAddress);
-
-    navigateToHref(newAccountUrl);
+    navigateToHref(finishSignUpUrl);
   };
 
   const handleNewAccountSubmit = async () => {
     setIsSaving(true);
-
-    fetch('/lti/v1/account_linking/new_account', {
+    fetch(newAccountUrl.href, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
