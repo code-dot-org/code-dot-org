@@ -216,9 +216,11 @@ class Pd::Enrollment < ApplicationRecord
 
     # Also send to the user's alternate summer email if they entered it in their application and
     # it's for a summer workshop.
-    alt_summer_email = user&.alternate_email
-    if alt_summer_email.present? && workshop.subject == SUBJECT_SUMMER_WORKSHOP
-      Pd::WorkshopMailer.exit_survey(self, alt_summer_email).deliver_now
+    if workshop.subject == SUBJECT_SUMMER_WORKSHOP
+      alt_summer_email = user&.alternate_email
+      if alt_summer_email.present?
+        Pd::WorkshopMailer.exit_survey(self, alt_summer_email).deliver_now
+      end
     end
 
     update!(survey_sent_at: Time.zone.now)

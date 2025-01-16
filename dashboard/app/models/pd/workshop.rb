@@ -469,9 +469,11 @@ class Pd::Workshop < ApplicationRecord
         email.deliver_now
 
         # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
-        alt_summer_email = enrollment.user&.alternate_email
-        if alt_summer_email.present? && enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
-          Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days}, to_email: alt_summer_email).deliver_now
+        if enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
+          alt_summer_email = enrollment.user&.alternate_email
+          if alt_summer_email.present?
+            Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days}, to_email: alt_summer_email).deliver_now
+          end
         end
       rescue => exception
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
