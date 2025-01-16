@@ -36,8 +36,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     if (conversationContainerRef.current) {
       setShowScrollToBottom(false);
 
-      // On clear chat, we don't want to scroll to the bottom.
-      if (eventsString !== '[]') {
+      if (!isAtBottom()) {
         setInProgrammaticScroll(true);
         conversationContainerRef.current.scrollTo({
           top: conversationContainerRef.current.scrollHeight,
@@ -70,16 +69,24 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   useEffect(() => {
     const container = conversationContainerRef.current;
 
+    if (!container) {
+      return;
+    }
+
     const handleScroll = () => {
-      if (container && !inProgrammaticScroll) {
+      if (!inProgrammaticScroll) {
         setShowScrollToBottom(!isAtBottom());
       }
     };
 
-    container?.addEventListener('scroll', handleScroll);
+    container.addEventListener('scroll', handleScroll);
+
+    const resizeObserver = new ResizeObserver(handleScroll);
+    resizeObserver.observe(container);
 
     return () => {
       container?.removeEventListener('scroll', handleScroll);
+      resizeObserver?.disconnect();
     };
   }, [inProgrammaticScroll]);
 
@@ -112,6 +119,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
             color="black"
             type="secondary"
             onClick={scrollToBottom}
+            className={moduleStyles.scrollToBottomButton}
           />
         </div>
       )}

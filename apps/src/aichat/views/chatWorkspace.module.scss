@@ -26,6 +26,10 @@ $tabs-default-spacing: 4px;
   height: 100%;
 }
 
+.scrollToBottomButton {
+  border-radius: 50%;
+}
+
 .messageArea {
   display: flex;
   flex-direction: column;
