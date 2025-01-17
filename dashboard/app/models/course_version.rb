@@ -33,9 +33,9 @@ class CourseVersion < ApplicationRecord
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
-  validates_format_of :key,
-    with: KEY_RE,
-    message: "must contain only digits, letters, or dashes; got \"%{value}\"."
+  validates :key,
+    format: {with: KEY_RE,
+    message: "must contain only digits, letters, or dashes; got \"%{value}\"."}
 
   # Placeholder key for curriculum that will not be updated but want the
   # features that come with a course version (resources, vocab, etc)
@@ -179,8 +179,15 @@ class CourseVersion < ApplicationRecord
   # CSD has multiple headers in the list with the units for that year under it.
   # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
   # the resulting data looks like
-  def self.courses_for_unit_selector(unit_ids)
+  def self.courses_for_unit_selector(unit_ids, units)
+    # offerings = units.joins {course_offering}.where {course_offering.course_versions.content_root_id.in(unit_ids)}.map {|co| co.summarize_for_unit_selector(unit_ids)}.uniq
+    offerings = Unit.joins(:course_version).where(id: unit_ids).map {|u| u.course_version.course_offering&.summarize_for_unit_selector(unit_ids)}.uniq
+    offerings_old = CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids)
+    versions = []
+    versions_old = CourseVersion.unit_group_course_versions_with_units_info(unit_ids)
+    puts 'lfm', offerings.length, offerings_old.length
     CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids)).sort_by {|c| c[:display_name]}
+    {offerings: offerings, offerings1: offerings_old, versions: versions, versions_old: versions_old}
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
@@ -204,6 +211,7 @@ class CourseVersion < ApplicationRecord
   end
 
   def self.unit_group_course_versions_with_units(unit_ids)
+    # Checks if unit groups contain any of the units
     CourseVersion.where(content_root_type: 'UnitGroup').all.select {|cv| cv.included_in_units?(unit_ids)}
   end
 

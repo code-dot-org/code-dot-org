@@ -43,9 +43,9 @@ class CourseOffering < ApplicationRecord
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
-  validates_format_of :key,
-    with: KEY_RE,
-    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."
+  validates :key,
+    format: {with: KEY_RE,
+    message: "must contain only lowercase alphabetic characters, numbers, and dashes; got \"%{value}\"."}
 
   ELEMENTARY_SCHOOL_GRADES = %w[K 1 2 3 4 5].freeze
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
@@ -426,6 +426,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.single_unit_course_offerings_containing_units(unit_ids)
+    # Checks if course offering is a UNIT and that unit has id in unit_ids
     CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
   end
 

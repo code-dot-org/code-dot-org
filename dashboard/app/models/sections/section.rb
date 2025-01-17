@@ -70,6 +70,8 @@ class Section < ApplicationRecord
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
   has_one :lti_section
   has_one :lti_course, through: :lti_section
+  before_validation :strip_emoji_from_name
+  before_create :assign_code
   after_destroy :soft_delete_lti_section
 
   has_many :followers, dependent: :destroy
@@ -103,8 +105,6 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
-
-  before_validation :strip_emoji_from_name
 
   scope :visible, -> {where(hidden: false)}
 
@@ -173,7 +173,7 @@ class Section < ApplicationRecord
   TYPES = [
     # Insert non-workshop section types here.
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
-  validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+  validates :section_type, inclusion: {in: TYPES, allow_nil: true}
 
   VALID_GRADES = [
     SharedConstants::STUDENT_GRADE_LEVELS,
@@ -231,13 +231,12 @@ class Section < ApplicationRecord
     [LOGIN_TYPE_EMAIL, LOGIN_TYPE_PICTURE, LOGIN_TYPE_WORD].exclude? login_type
   end
 
-  validates_presence_of :user, unless: -> {deleted?}
+  validates :user, presence: {unless: -> {deleted?}}
   def user_must_be_teacher
     errors.add(:user_id, 'must be a teacher') unless user.try(:teacher?)
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
-  before_create :assign_code
   def assign_code
     self.code = unused_random_code unless code
   end
@@ -604,13 +603,17 @@ class Section < ApplicationRecord
     end
   end
 
+  def participant_units
+    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}
+  end
+
   # Returns the ids of all units which any participant in this section has ever
   # been assigned to or made progress on if the instructor of the section can
   # be an instructor for that unit
   def participant_unit_ids
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
-    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
+    participant_units.pluck(:id)
   end
 
   def code_review_enabled?
