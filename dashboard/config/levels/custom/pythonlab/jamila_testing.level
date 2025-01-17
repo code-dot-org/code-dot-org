@@ -1,20 +1,51 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2024-08-22T17:28:53.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "some test instructions",
+    "long_instructions": "Write a program that plays a sequence of three songs in order. The program should display the current song title and ask the user:\r\n\r\n- Do you want to listen to this song? (yes/no)\r\n- If the user types \"no\", the program plays the next song in the sequence.\r\n- If the user types \"yes\", the program stops and displays \"Enjoy your song!\"\r\n- If the user skips all three songs, the program stops and says \"No more songs available.\"",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "predict_settings": {
       "isPredictLevel": false
-    }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This is a list of songs\nsongs = [\"Starman by David Bowie\", \"Just Dance by Prince\", \"Family Affair by Sly and the Family Stone\"]\n\n# Simulated inputs (used for testing)\ntest_inputs = iter([\"yes\", \"no\", \"invalid\"])\n\ndef main(input_provider=None):\n    # Use test_inputs if input_provider is not provided\n    input_provider = input_provider or (lambda prompt: next(test_inputs, \"no\"))\n    \n    for song in songs:\n        print(f\"Now playing: {song}\")\n        user_input = input_provider(\"Do you want to listen to this song? (yes or no): \").strip().lower()\n\n        # Check if user input \"yes\" or \"no\"\n        if user_input == \"yes\":\n            print(\"Enjoy your song!\")\n            break\n        elif user_input == \"no\":\n            print(\"Skipping to the next song...\")\n        else:\n            print(\"Invalid input. Please type 'yes' or 'no'.\")\n    else:\n        # This else runs if there are no more songs available.\n        print(\"No more songs available.\")\n\nif __name__ == \"__main__\":\n    main()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "enable_micro_bit": "false",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nfrom io import StringIO\nfrom unittest.mock import patch\nimport main  # Ensure this imports your main.py file\n\nclass TestSongSelector(unittest.TestCase):\n\n    def setUp(self):\n        # Redirect stdout to capture print outputs for validation\n        self.captured_output = StringIO()\n        self.patcher = patch('sys.stdout', new=self.captured_output)\n        self.patcher.start()\n\n    def tearDown(self):\n        # Stop capturing output and reset\n        self.patcher.stop()\n        self.captured_output.close()\n\n    def test_yes_input(self):\n        \"\"\"Test if 'yes' input correctly outputs 'Enjoy your song!'.\"\"\"\n        inputs = iter([\"yes\"])\n        main.main(input_provider=lambda _: next(inputs))\n\n        output = self.captured_output.getvalue()\n        self.assertIn(\"Enjoy your song!\", output, \"The program should output 'Enjoy your song!' when the user types 'yes'.\")\n\n    def test_no_input(self):\n        \"\"\"Test if 'no' input correctly outputs 'Skipping to the next song...'.\"\"\"\n        inputs = iter([\"no\", \"no\", \"no\"])\n        main.main(input_provider=lambda _: next(inputs))\n\n        output = self.captured_output.getvalue()\n        self.assertIn(\"Skipping to the next song...\", output, \"The program should output 'Skipping to the next song...' when the user types 'no'.\")\n        self.assertIn(\"No more songs available.\", output, \"The program should output 'No more songs available.' when all songs are skipped.\")\n\n    def test_invalid_input(self):\n        \"\"\"Test if 'invalid' input correctly outputs 'Invalid input. Please type 'yes' or 'no'.\"\"\"\n        inputs = iter([\"invalid\", \"yes\"])\n        main.main(input_provider=lambda _: next(inputs))\n\n        output = self.captured_output.getvalue()\n        self.assertIn(\"Invalid input. Please type 'yes' or 'no'.\", output, \"The program should output an error message for invalid input.\")\n        self.assertIn(\"Enjoy your song!\", output, \"The program should continue correctly after invalid input and play the song when the user types 'yes'.\")\n\n    def test_mixed_inputs(self):\n        \"\"\"Test a sequence of inputs including 'yes', 'no', and 'invalid'.\"\"\"\n        inputs = iter([\"no\", \"invalid\", \"yes\"])\n        main.main(input_provider=lambda _: next(inputs))\n\n        output = self.captured_output.getvalue()\n        self.assertIn(\"Skipping to the next song...\", output, \"The program should skip the song when 'no' is typed.\")\n        self.assertIn(\"Invalid input. Please type 'yes' or 'no'.\", output, \"The program should handle invalid input gracefully.\")\n        self.assertIn(\"Enjoy your song!\", output, \"The program should play the song when 'yes' is typed.\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFWVmnvTtZt0hc86OHiY5vszHWzegGt9tp8ppR2sK\nKU1cuKbnGxNCTo6XuoPX/8CLHkkleE7O19pcPNOFw72saViG7Rz8KxaK4nEB\nOPcaO2VL2V0vKUwbVyBb9sY2dpmgMpHwYuG0x7VuFI9G25Q0NY8MTIjVyAiT\nfaDkrryamVWKOTtwqGodeNy6T1CANL0t5HddP5Vp3Kz2IOksPBpq8ikkMIBN\nXEIoOu3oyFAH8mevETZNlu/gfWeMQndsl736I2yqzcdEOCpSFz+8LmQ3qux3\nGPPU0d5u7uA5eMB4102tR2ZY8+BqmZKTMVZrmLVc8miQvf+yd+O8agKCsKhd\ngASMc0Lo8D3lhP7WqHDcH7zT12mjQ2hinkR6qsHxcDub6Ow9FzpMqUG3dCv3\nLui+FCCL77z7tFRIkjTjNaKFEeD3O53H42ZWfwy3EpgqXK/nU4LTvsNM9+A+\nM/xoX4P/3jdzDqzeC9zCuZZIK6iUg7IfkiQSHXDOURlTe0/bxVseyeWvGe27\nWB09Hx7ZmLwle2LY9G90tOnncixA4/1XkToW4dwfemTWirxG2KedNQj0Mmj5\n9sdK0atwZZ4qzJt7VhvEovTeseBh7FqkyalKX1PHL4P0g6hQX1RmLqQgglVM\nMVIkg16kSJTACFHM3DyqBYZOCr9NNk5J07IqZyWDhQUhsdJO03F4S1NEjAwx\nFftq9PpUIzOIqu2iKMdBBLfl6KRPXax+SqO0Pc0CCl/+49EiayN1SKaNtXM/\nJ2XzoxsgIKGkUlDESZqb2Kj/AlZKPcVPWpf4sjvTUnlpMUadSuaGeKnBh27E\na2UzUzoK3fchRdYlwdX5m1eMC1reKQr629VghIqF0sxZaLu8MqZxoUYc2Dzg\nzoYK6m6nELZFRryOKE/3hc4eegpceW0vytk5NH+gTVdIOlJ8DfBrW7mV0nYj\n8d71eaLax61gFDxU2/dl8SSi6yUNm9elJTwL/LYMO+FdvdcewhwXfXkda4LO\nYs5cOxQVGqjYpNpIhD98CXpSHtrkd00J3iSPkk4SXnhDpojcVG9WMgymovbk\nGuUMyc3cwT1JZ+ACqoh671tWxEVz/lzZwe+tfnXr3um+3FZVCOjNxVw4gkPH\nksay+IEQ+Qjmt5hu6CIfppvk4L2Sgj1688ATEtRZL3te5dU7hZ3RCeY=\n"
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-22 17:29:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-08-28 17:11:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-22 17:29:05 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-08-28 17:11:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-01-16 13:32:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-01-16 16:28:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 16:47:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:00:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:01:19 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:04:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:16:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:18:32 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:22:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:22:45 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:30:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:31:33 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:34:17 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:37:13 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:47:10 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-16 17:49:29 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Pythonlab>

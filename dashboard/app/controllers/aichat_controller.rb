@@ -103,18 +103,53 @@ class AichatController < ApplicationController
         script_id: context[:scriptId],
         project_id: project_id,
         request_id: event[:requestId], # Only present if ChatEvent is a ChatMessage, otherwise nil
-        aichat_event: event.to_json
+        aichat_event: event
       )
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
     end
 
     response_body = {
-      chat_event_id: logged_event.id,
-      chat_event: logged_event.aichat_event
+      id: logged_event.id,
+      **logged_event.aichat_event
     }
 
     render(status: :ok, json: response_body)
+  end
+
+  # params are eventId: number, feedback?: 'clean_disagree' | 'profanity_agree' | 'profanity_disagree'
+  # POST /aichat/submit_teacher_feedback
+  # Update a given chat message with teacher feedback. If feedback is nil, remove any existing feedback.
+  # Also has the side effect of fixing up any chat events that were stored as strings.
+  def submit_teacher_feedback
+    begin
+      params.require([:eventId])
+    rescue ActionController::ParameterMissing
+      return render status: :bad_request, json: {}
+    end
+
+    chat_event_id = params[:eventId]
+    feedback = params[:feedback]
+
+    return render status: :bad_request, json: {} if feedback && !SharedConstants::AI_CHAT_TEACHER_FEEDBACK.value?(feedback)
+
+    begin
+      chat_event = AichatEvent.find(chat_event_id)
+      unless can_view_student_chat_history?(chat_event.user_id, chat_event.level_id, chat_event.script_id)
+        return render(status: :forbidden, json: {error: "Access denied for submitting teacher feedback."})
+      end
+
+      # Parse aichat_event if it's stored as a string
+      chat_event.aichat_event = JSON.parse(chat_event.aichat_event) if chat_event.aichat_event.is_a?(String)
+    rescue ActiveRecord::RecordNotFound
+      return render status: :not_found, json: {}
+    end
+
+    chat_event.aichat_event.delete('teacherFeedback') if chat_event.aichat_event['teacherFeedback']
+    chat_event.aichat_event['teacherFeedback'] = feedback if feedback
+    chat_event.save!
+
+    render status: :ok, json: {}
   end
 
   # params are studentUserId: number, levelId: number, scriptId: number, (optional) scriptLevelId: number
@@ -127,30 +162,19 @@ class AichatController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
-    # If a script level ID is provided, ensure it matches the level ID or that
-    # the level is a sublevel of the script level.
     script_id = params[:scriptId]
     level_id = params[:levelId]
-    level = Level.find(level_id)
-    script_level_id = params[:scriptLevelId]
-    if script_level_id
-      script_level = ScriptLevel.cache_find(script_level_id.to_i)
-      same_level = script_level.oldest_active_level.id == level_id
-      is_sublevel = ParentLevelsChildLevel.exists?(child_level_id: level_id, parent_level_id: script_level.oldest_active_level.id)
-      return render(status: :forbidden, json: {error: "Access denied."}) unless same_level || is_sublevel
-    else
-      script_level = level.script_levels.find_by_script_id(script_id)
-    end
-
-    # Ensure that we have permission to view student's chat events, i.e., student is in teacher section.
     student_user_id = params[:studentUserId]
-    user = User.find(student_user_id)
-    unless can?(:view_as_user, script_level, user)
+    unless can_view_student_chat_history?(student_user_id, level_id, script_id, params[:scriptLevelId])
       return render(status: :forbidden, json: {error: "Access denied for student chat history."})
     end
 
-    aichat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(:created_at).pluck(:aichat_event).map do |event|
-      JSON.parse(event)
+    aichat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(:created_at).map do |event|
+      chat_event = event[:aichat_event].is_a?(String) ? JSON.parse(event[:aichat_event]) : event[:aichat_event]
+      {
+        id: event.id,
+        **chat_event
+      }
     end
     render json: aichat_events
   end
@@ -211,5 +235,27 @@ class AichatController < ApplicationController
     id = current_user&.id || session.id
     limit = DCDO.get('aichat_request_limit_per_min', DEFAULT_REQUEST_LIMIT_PER_MIN)
     Cdo::Throttle.throttle(AICHAT_PREFIX + id.to_s, limit, 60)
+  end
+
+  private def can_view_student_chat_history?(student_user_id, level_id, script_id, script_level_id = nil)
+    # If a script level ID is provided, ensure it matches the level ID or that
+    # the level is a sublevel of the script level.
+    level = Level.find(level_id)
+    if script_level_id
+      script_level = ScriptLevel.cache_find(script_level_id.to_i)
+      same_level = script_level.oldest_active_level.id == level_id
+      is_sublevel = ParentLevelsChildLevel.exists?(child_level_id: level_id, parent_level_id: script_level.oldest_active_level.id)
+      return false unless same_level || is_sublevel
+    else
+      script_level = level.script_levels.find_by_script_id(script_id)
+    end
+
+    # Ensure that we have permission to view and provide feedback on student's chat events,
+    # i.e., student is in teacher section.
+    user = User.find(student_user_id)
+    unless can?(:view_as_user, script_level, user)
+      return false
+    end
+    true
   end
 end

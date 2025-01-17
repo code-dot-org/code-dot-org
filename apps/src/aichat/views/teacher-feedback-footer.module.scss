@@ -1,0 +1,46 @@
+@import 'color.scss';
+@import 'font.scss';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
+
+.hiddenTilHover {
+  visibility: hidden;
+  transition: visibility 0.2s ease;
+}
+
+.teacherFeedbackContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-end;
+
+  // I can't get the text to show up when tab-focused. Not sure why.
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    .hiddenTilHover {
+      visibility: visible;
+    }
+  }
+
+  .showAlways {
+    visibility: visible;
+  }
+
+  .button-xxs {
+    padding: 0.125rem 0.1rem;
+
+    i {
+      font-size: 0.75rem;
+    }
+  }
+
+  .flagButtonColorOverride {
+    &:not(:hover, :active) {
+      color: $light_black_opacity-30;
+    }
+  }
+}
+
+.assistanctFeedbackContainerOverride {
+  flex-direction: row-reverse;
+}

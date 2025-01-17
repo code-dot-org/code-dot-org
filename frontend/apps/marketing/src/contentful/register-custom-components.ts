@@ -15,6 +15,10 @@ import {
   StubSection,
   StubSectionContentfulComponentDefinition,
 } from '@code-dot-org/component-library/stub-section';
+import {
+  Divider,
+  DividerContentfulComponentDefinition,
+} from '@code-dot-org/component-library/divider';
 
 defineComponents(
   [
@@ -25,6 +29,13 @@ defineComponents(
     {
       component: StubSection,
       definition: StubSectionContentfulComponentDefinition,
+    },
+    {
+      component: Divider,
+      definition: DividerContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
   ],
   {

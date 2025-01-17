@@ -1,6 +1,5 @@
 <Panels>
   <config><![CDATA[{
-  "published": true,
   "game_id": 73,
   "created_at": "2025-01-14T18:52:45.000Z",
   "level_num": "custom",
@@ -13,7 +12,7 @@
         "text": "# Jordan",
         "imageUrl": "https://images.code.org/f5f591ba1d50614e4edc8dd24a5aaf03-Screenshot 2025-01-14 105358.png",
         "key": "undefined-1d5d3a7f-7f89-4eb3-853c-7aa5a400395f",
-        "layout": "text-top-left"
+        "layout": "text-bottom-right"
       },
       {
         "text": "## \"Precision is everything!\"",
@@ -32,8 +31,12 @@
         "imageUrl": "https://images.code.org/aca95eb7817bfa8261437fa22e5b6505-Screenshot 2025-01-14 110217.png",
         "key": "undefined-1737e582-c669-4266-b428-837a44bdade4"
       }
-    ]
+    ],
+    "thumbnail_url": "https://images.code.org/f5f591ba1d50614e4edc8dd24a5aaf03-Screenshot 2025-01-14 105358.png",
+    "display_name": "Jordan",
+    "bubble_choice_description": "Check out Jordan's recent posts. \n\nWhat type of career would be best for him?"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-14T18:52:45.615+00:00\",\"changed\":[\"cloned from \\\"IPP-careerPersonas\\\"\"],\"cloned_from\":\"IPP-careerPersonas\"},{\"changed_at\":\"2025-01-14 19:02:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 19:19:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-14T18:52:45.615+00:00\",\"changed\":[\"cloned from \\\"IPP-careerPersonas\\\"\"],\"cloned_from\":\"IPP-careerPersonas\"},{\"changed_at\":\"2025-01-14 19:02:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 19:19:38 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:15:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:16:16 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:16:20 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:17:24 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

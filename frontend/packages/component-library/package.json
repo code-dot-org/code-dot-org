@@ -28,6 +28,11 @@
       "types": "./dist/stub/index.d.ts",
       "import": "./dist/stub/index.js",
       "require": "./dist/stub/index.cjs"
+    },
+    "./divider": {
+      "types": "./dist/divider/index.d.ts",
+      "import": "./dist/divider/index.js",
+      "require": "./dist/divider/index.cjs"
     }
   },
   "main": "components/index.ts",

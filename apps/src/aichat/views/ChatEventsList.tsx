@@ -23,19 +23,17 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 }) => {
   const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
 
-  // Compare the chat events  as a string since the object reference will change on every update.
-  // This way we will only scroll when the contents of the events have changed.
-  const eventsString = JSON.stringify(events);
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Auto scroll to the bottom of the conversation when new events are added
     if (conversationContainerRef.current) {
       conversationContainerRef.current.scrollTo({
         top: conversationContainerRef.current.scrollHeight,
         behavior: 'smooth',
       });
     }
-  }, [eventsString, isWaitingForChatResponse]);
+  }, [events.length, isWaitingForChatResponse]);
 
   return (
     <div

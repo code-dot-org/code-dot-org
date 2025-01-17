@@ -1,6 +1,5 @@
 <Panels>
   <config><![CDATA[{
-  "published": true,
   "game_id": 73,
   "created_at": "2025-01-14T19:19:48.000Z",
   "level_num": "custom",
@@ -13,28 +12,32 @@
         "text": "# Alex",
         "imageUrl": "https://images.code.org/aaaa878f143dcb4360d3383493a68ca3-Screenshot 2025-01-14 112316.png",
         "key": "undefined-1d5d3a7f-7f89-4eb3-853c-7aa5a400395f",
-        "layout": "text-top-left"
+        "layout": "text-bottom-right"
       },
       {
-        "text": "## \"Teamwork makes the dream work!\"",
+        "text": "Leading the charge and bringing the team together! Let’s make this history project legendary. 💡💪 #TeamLeader #MakingHistory #GroupGoals",
         "imageUrl": "https://images.code.org/7b6f144e779366d31ddb08aeb84e70f9-Screenshot 2025-01-14 114600.png",
         "key": "undefined-ccb0bb2c-6711-4a94-9328-d9d683897239",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## \"Helping people understand new ideas is the best part of my day.\"",
+        "text": "Kindness in action. 💕 Helping each other through tough moments makes all the difference. ✨ #SupportiveFriend #TeamworkWins #KindnessMatters",
         "imageUrl": "https://images.code.org/e4b3b259e3184903a62363a8cac27411-Screenshot 2025-01-14 115830.png",
         "key": "undefined-a682ce3e-40a5-47ab-95f0-10b7b145ee49",
         "layout": "text-bottom-right"
       },
       {
-        "text": "## \"Collaboration sparks the best ideas!\"",
+        "text": "High fives all around! 🎉 Crushing group presentations one slide at a time. 👏 #TeamworkSuccess #PresentationPros #CelebrationMode",
         "imageUrl": "https://images.code.org/1eb1e1af2462a57d98e8f64536cf8d0a-Screenshot 2025-01-14 120110.png",
         "key": "undefined-1737e582-c669-4266-b428-837a44bdade4",
         "layout": "text-bottom-left"
       }
-    ]
+    ],
+    "bubble_choice_description": "Check out Alex's recent posts. \n\nWhat type of career would be best for her?",
+    "display_name": "Alex",
+    "thumbnail_url": "https://images.code.org/aaaa878f143dcb4360d3383493a68ca3-Screenshot 2025-01-14 112316.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-14T19:19:48.870+00:00\",\"changed\":[\"cloned from \\\"IPP-careerPersonas2\\\"\"],\"cloned_from\":\"IPP-careerPersonas2\"},{\"changed_at\":\"2025-01-14 20:01:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-14T19:19:48.870+00:00\",\"changed\":[\"cloned from \\\"IPP-careerPersonas2\\\"\"],\"cloned_from\":\"IPP-careerPersonas2\"},{\"changed_at\":\"2025-01-14 20:01:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:18:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:18:21 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:18:23 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:18:49 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:23:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:24:12 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:24:16 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
