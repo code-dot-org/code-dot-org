@@ -603,17 +603,13 @@ class Section < ApplicationRecord
     end
   end
 
-  def participant_units
-    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}
-  end
-
   # Returns the ids of all units which any participant in this section has ever
   # been assigned to or made progress on if the instructor of the section can
   # be an instructor for that unit
   def participant_unit_ids
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
-    participant_units.pluck(:id)
+    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
   end
 
   def code_review_enabled?

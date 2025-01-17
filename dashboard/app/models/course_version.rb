@@ -179,13 +179,13 @@ class CourseVersion < ApplicationRecord
   # CSD has multiple headers in the list with the units for that year under it.
   # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
   # the resulting data looks like
-  def self.courses_for_unit_selector(unit_ids, units)
+  def self.courses_for_unit_selector(unit_ids)
     # offerings = units.joins {course_offering}.where {course_offering.course_versions.content_root_id.in(unit_ids)}.map {|co| co.summarize_for_unit_selector(unit_ids)}.uniq
     offerings = Unit.joins(:course_version).where(id: unit_ids).map {|u| u.course_version.course_offering&.summarize_for_unit_selector(unit_ids)}.uniq
     offerings_old = CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids)
     versions = []
     versions_old = CourseVersion.unit_group_course_versions_with_units_info(unit_ids)
-    puts 'lfm', offerings.length, offerings_old.length
+    puts 'lfm', offerings.length, offerings_old.length, unit_ids
     CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids)).sort_by {|c| c[:display_name]}
     {offerings: offerings, offerings1: offerings_old, versions: versions, versions_old: versions_old}
   end
