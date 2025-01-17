@@ -300,9 +300,9 @@ module Pd
       'Train the trainer'
     ].freeze
 
-    PD_SESSION_FORMATS = {
-      in_person: 0,
-      virtual: 1,
-    }.freeze
+    PD_SESSION_FORMATS = [
+      {value: 'in_person', label: 'In-Person', enum_value: 0},
+      {value: 'virtual', label: 'Digital', enum_value: 1}
+    ].freeze
   end
 end

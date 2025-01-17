@@ -21,7 +21,8 @@
 require 'cdo/code_generation'
 
 class Pd::Session < ApplicationRecord
-  enum format: SharedWorkshopConstants::PD_SESSION_FORMATS
+  # creates a hash like {in_person: 0, virtual: 1}
+  enum format: Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.to_h {|format| [format[:value], format[:enum_value]]}
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
