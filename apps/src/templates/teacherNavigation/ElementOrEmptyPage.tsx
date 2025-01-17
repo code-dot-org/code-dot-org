@@ -96,12 +96,12 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
   } else {
     return (
       <div className={dashboardStyles.emptyClassroomDiv}>
-        <div className={dashboardStyles.emptyClassroomDiv}>
+        <div className={dashboardStyles.emptyClassroomImage}>
           {displayedImage()}
-          <Heading3 className={styles.topPadding}>{heading}</Heading3>
-          <BodyTwoText>{textDescription()}</BodyTwoText>
-          {link()}
         </div>
+        <Heading3 className={styles.topPadding}>{heading}</Heading3>
+        <BodyTwoText>{textDescription()}</BodyTwoText>
+        {link()}
       </div>
     );
   }

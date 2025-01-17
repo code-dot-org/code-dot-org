@@ -1,10 +1,10 @@
-import {ProjectType, ReducerAction, FileId, FolderId} from '@codebridge/types';
+import {ReducerAction, FileId, FolderId} from '@codebridge/types';
 import {sortFilesByName, getOpenFileIds} from '@codebridge/utils';
 
-import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
-import {ProjectFileType} from '@cdo/apps/lab2/types';
+import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
-import {PROJECT_REDUCER_ACTIONS} from './constants';
+import {SOURCE_REDUCER_ACTIONS} from './constants';
 import {
   findFiles,
   findSubFolders,
@@ -19,18 +19,18 @@ type DefaultFolderPayload = {
   folderId: FolderId;
 };
 
-export const projectReducer = (
-  project: ProjectType,
+export const sourceReducer = (
+  source: MultiFileSource,
   action: ReducerAction
-): ProjectType => {
+): MultiFileSource => {
   switch (action.type) {
-    case PROJECT_REDUCER_ACTIONS.REPLACE_PROJECT: {
-      const {project: newProject} = action.payload as {
-        project: ProjectType;
+    case SOURCE_REDUCER_ACTIONS.REPLACE_SOURCE: {
+      const {source: newSource} = action.payload as {
+        source: MultiFileSource;
       };
-      return newProject;
+      return newSource;
     }
-    case PROJECT_REDUCER_ACTIONS.NEW_FILE: {
+    case SOURCE_REDUCER_ACTIONS.NEW_FILE: {
       const {fileName, folderId, contents = '', validationFileId} = <
         DefaultFilePayload & {
           fileName: string;
@@ -41,15 +41,15 @@ export const projectReducer = (
       >action.payload;
 
       const fileId = getNextFileId(
-        Object.values(project.files),
+        Object.values(source.files),
         validationFileId
       );
 
-      const newProject = {...project, files: {...project.files}};
+      const newSource = {...source, files: {...source.files}};
 
       const [, extension] = fileName.split('.');
 
-      newProject.files[fileId] = {
+      newSource.files[fileId] = {
         id: fileId,
         name: fileName,
         language: extension || 'html',
@@ -58,104 +58,104 @@ export const projectReducer = (
         folderId,
       };
 
-      return projectReducer(newProject, {
-        type: PROJECT_REDUCER_ACTIONS.ACTIVATE_FILE,
+      return sourceReducer(newSource, {
+        type: SOURCE_REDUCER_ACTIONS.ACTIVATE_FILE,
         payload: {fileId},
       });
     }
 
-    case PROJECT_REDUCER_ACTIONS.RENAME_FILE: {
+    case SOURCE_REDUCER_ACTIONS.RENAME_FILE: {
       const {fileId, newName} = <DefaultFilePayload & {newName: string}>(
         action.payload
       );
       return {
-        ...project,
+        ...source,
         files: {
-          ...project.files,
-          [fileId]: {...project.files[fileId], name: newName},
+          ...source.files,
+          [fileId]: {...source.files[fileId], name: newName},
         },
       };
     }
 
-    case PROJECT_REDUCER_ACTIONS.SAVE_FILE: {
+    case SOURCE_REDUCER_ACTIONS.SAVE_FILE: {
       const {fileId, contents} = <DefaultFilePayload & {contents: string}>(
         action.payload
       );
 
-      if (project.files[fileId].contents === contents) {
-        return project;
+      if (source.files[fileId].contents === contents) {
+        return source;
       }
 
       return {
-        ...project,
+        ...source,
         files: {
-          ...project.files,
-          [fileId]: {...project.files[fileId], contents},
+          ...source.files,
+          [fileId]: {...source.files[fileId], contents},
         },
       };
     }
 
-    case PROJECT_REDUCER_ACTIONS.SET_FILE_TYPE: {
+    case SOURCE_REDUCER_ACTIONS.SET_FILE_TYPE: {
       const {fileId, type} = <DefaultFilePayload & {type: ProjectFileType}>(
         action.payload
       );
 
       return {
-        ...project,
+        ...source,
         files: {
-          ...project.files,
-          [fileId]: {...project.files[fileId], type},
+          ...source.files,
+          [fileId]: {...source.files[fileId], type},
         },
       };
     }
 
     // OPEN_FILE does exactly the same thing as ACTIVATE_FILE, at least for now.
-    case PROJECT_REDUCER_ACTIONS.OPEN_FILE:
-    case PROJECT_REDUCER_ACTIONS.ACTIVATE_FILE: {
+    case SOURCE_REDUCER_ACTIONS.OPEN_FILE:
+    case SOURCE_REDUCER_ACTIONS.ACTIVATE_FILE: {
       const {fileId} = <DefaultFilePayload>action.payload;
-      const activeFile = getActiveFileForProject(project);
+      const activeFile = getActiveFileForSource(source);
 
       // if this file is already active, then no change.
       if (activeFile?.id === fileId && activeFile.active) {
-        return project;
+        return source;
       }
 
-      const newOpenFileIds = getOpenFileIds(project);
+      const newOpenFileIds = getOpenFileIds(source);
       if (!newOpenFileIds.find(openFileId => openFileId === fileId)) {
         newOpenFileIds.push(fileId);
       }
 
-      const newProject = {
-        ...project,
+      const newSource = {
+        ...source,
         files: {
-          ...project.files,
-          [fileId]: {...project.files[fileId], active: true, open: true},
+          ...source.files,
+          [fileId]: {...source.files[fileId], active: true, open: true},
         },
         openFiles: newOpenFileIds,
       };
 
       if (activeFile) {
-        newProject.files[activeFile.id] = {
-          ...newProject.files[activeFile.id],
+        newSource.files[activeFile.id] = {
+          ...newSource.files[activeFile.id],
           active: false,
         };
       }
 
-      return newProject;
+      return newSource;
     }
 
-    case PROJECT_REDUCER_ACTIONS.CLOSE_FILE: {
+    case SOURCE_REDUCER_ACTIONS.CLOSE_FILE: {
       const {fileId} = <DefaultFilePayload>action.payload;
 
-      const file = project.files[fileId];
+      const file = source.files[fileId];
 
-      const newProject = {
-        ...project,
+      const newSource = {
+        ...source,
         files: {
-          ...project.files,
-          [fileId]: {...project.files[fileId], open: false, active: false},
+          ...source.files,
+          [fileId]: {...source.files[fileId], open: false, active: false},
         },
-        openFiles: project.openFiles?.filter(
+        openFiles: source.openFiles?.filter(
           openFileId => openFileId !== fileId
         ),
       };
@@ -164,7 +164,7 @@ export const projectReducer = (
       // choose the recent file before hand if possible, and otherwise after. Alphabetically sorted.
       if (file.active) {
         // so we look to our list of open files before we closed.
-        const oldSortedFiles = sortFilesByName(project.files, {
+        const oldSortedFiles = sortFilesByName(source.files, {
           mustBeOpen: true,
         });
         // and find our index.
@@ -183,71 +183,71 @@ export const projectReducer = (
         }
 
         if (newActiveFileId) {
-          newProject.files[newActiveFileId] = {
-            ...newProject.files[newActiveFileId],
+          newSource.files[newActiveFileId] = {
+            ...newSource.files[newActiveFileId],
             active: true,
           };
         }
       }
 
-      return newProject;
+      return newSource;
     }
 
-    case PROJECT_REDUCER_ACTIONS.DELETE_FILE: {
+    case SOURCE_REDUCER_ACTIONS.DELETE_FILE: {
       const {fileId} = <DefaultFilePayload>action.payload;
 
-      const openFileIds = getOpenFileIds(project);
+      const openFileIds = getOpenFileIds(source);
       const newOpenFileIds = openFileIds.find(
         openFileId => openFileId === fileId
       )
         ? openFileIds.filter(openFileId => openFileId !== fileId)
         : openFileIds;
 
-      const newProject = {
-        ...project,
+      const newSource = {
+        ...source,
         files: {
-          ...project.files,
+          ...source.files,
         },
         openFiles: newOpenFileIds,
       };
 
-      delete newProject.files[fileId];
+      delete newSource.files[fileId];
 
-      return newProject;
+      return newSource;
     }
 
-    case PROJECT_REDUCER_ACTIONS.MOVE_FILE: {
+    case SOURCE_REDUCER_ACTIONS.MOVE_FILE: {
       const {fileId, folderId} = <DefaultFilePayload & {folderId: FolderId}>(
         action.payload
       );
       return {
-        ...project,
+        ...source,
         files: {
-          ...project.files,
-          [fileId]: {...project.files[fileId], folderId},
+          ...source.files,
+          [fileId]: {...source.files[fileId], folderId},
         },
       };
     }
 
-    case PROJECT_REDUCER_ACTIONS.MOVE_FOLDER: {
+    case SOURCE_REDUCER_ACTIONS.MOVE_FOLDER: {
       const {folderId, parentId} = <
         DefaultFolderPayload & {parentId: FolderId}
       >action.payload;
 
       if (folderId === parentId) {
-        return project;
+        return source;
       }
 
       return {
-        ...project,
+        ...source,
         folders: {
-          ...project.folders,
-          [folderId]: {...project.folders[folderId], parentId},
+          ...source.folders,
+          [folderId]: {...source.folders[folderId], parentId},
         },
       };
     }
 
-    case PROJECT_REDUCER_ACTIONS.NEW_FOLDER: {
+    case SOURCE_REDUCER_ACTIONS.NEW_FOLDER: {
       const {folderName, parentId} = <
         DefaultFolderPayload & {
           folderName: string;
@@ -255,99 +255,99 @@ export const projectReducer = (
         }
       >action.payload;
 
-      const folderId = getNextFolderId(Object.values(project.folders));
+      const folderId = getNextFolderId(Object.values(source.folders));
 
-      const newProject = {...project, folders: {...project.folders}};
+      const newSource = {...source, folders: {...source.folders}};
 
-      newProject.folders[folderId] = {
+      newSource.folders[folderId] = {
         id: folderId,
         name: folderName,
         parentId,
       };
 
-      return newProject;
+      return newSource;
     }
 
-    case PROJECT_REDUCER_ACTIONS.TOGGLE_OPEN_FOLDER: {
+    case SOURCE_REDUCER_ACTIONS.TOGGLE_OPEN_FOLDER: {
       const {folderId} = <DefaultFolderPayload>action.payload;
       return {
-        ...project,
+        ...source,
         folders: {
-          ...project.folders,
+          ...source.folders,
           [folderId]: {
-            ...project.folders[folderId],
-            open: !project.folders[folderId].open,
+            ...source.folders[folderId],
+            open: !source.folders[folderId].open,
           },
         },
       };
     }
-    case PROJECT_REDUCER_ACTIONS.DELETE_FOLDER: {
+    case SOURCE_REDUCER_ACTIONS.DELETE_FOLDER: {
       const {folderId} = <DefaultFolderPayload>action.payload;
-      const newProject = {
-        ...project,
+      const newSource = {
+        ...source,
         folders: {
-          ...project.folders,
+          ...source.folders,
         },
       };
 
       const subFolders = new Set(
-        findSubFolders(folderId, Object.values(project.folders))
+        findSubFolders(folderId, Object.values(source.folders))
       );
       const files = new Set(
         findFiles(
           folderId,
-          Object.values(project.files),
-          Object.values(project.folders)
+          Object.values(source.files),
+          Object.values(source.folders)
         )
       );
 
       // delete the folder
-      delete newProject.folders[folderId];
+      delete newSource.folders[folderId];
 
       // delete all its child folders
-      Object.values(newProject.folders)
+      Object.values(newSource.folders)
         .filter(f => subFolders.has(f.id))
-        .forEach(f => delete newProject.folders[f.id]);
+        .forEach(f => delete newSource.folders[f.id]);
 
       // and delete all files housed within this or any child folder
       if (files.size) {
-        newProject.files = {...newProject.files};
-        Object.values(newProject.files)
+        newSource.files = {...newSource.files};
+        Object.values(newSource.files)
           .filter(f => files.has(f.id))
-          .forEach(f => delete newProject.files[f.id]);
-        if (newProject.openFiles) {
+          .forEach(f => delete newSource.files[f.id]);
+        if (newSource.openFiles) {
           // Delete files from the list of open files.
-          newProject.openFiles = newProject.openFiles.filter(
+          newSource.openFiles = newSource.openFiles.filter(
             fileId => !files.has(fileId)
           );
         }
       }
 
-      return newProject;
+      return newSource;
     }
 
-    case PROJECT_REDUCER_ACTIONS.RENAME_FOLDER: {
+    case SOURCE_REDUCER_ACTIONS.RENAME_FOLDER: {
       const {folderId, newName} = <DefaultFolderPayload & {newName: string}>(
         action.payload
       );
       return {
-        ...project,
+        ...source,
         folders: {
-          ...project.folders,
-          [folderId]: {...project.folders[folderId], name: newName},
+          ...source.folders,
+          [folderId]: {...source.folders[folderId], name: newName},
         },
       };
     }
 
-    case PROJECT_REDUCER_ACTIONS.REARRANGE_FILES: {
+    case SOURCE_REDUCER_ACTIONS.REARRANGE_FILES: {
       const {fileIds} = <{fileIds: FileId[]}>action.payload;
       return {
-        ...project,
+        ...source,
         openFiles: fileIds,
       };
     }
 
     default:
-      return project;
+      return source;
   }
 };

@@ -237,6 +237,22 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     end
   end
 
+  test 'sends cancel enrollment email to both the users email and alternate summer email if available and for a summer workshop' do
+    @teacher = create :teacher
+    workshop = create :summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    application = create :pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: @teacher, status: 'accepted'
+    enrollment = create :pd_enrollment, application_id: application.id, user: @teacher, workshop: workshop
+
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).with(enrollment).returns(stub(:deliver_now))
+    Pd::WorkshopMailer.expects(:teacher_cancel_receipt).with(enrollment, @teacher.alternate_email).returns(stub(:deliver_now))
+    Pd::WorkshopMailer.expects(:organizer_cancel_receipt).returns(stub(:deliver_now))
+
+    assert_destroys Pd::Enrollment do
+      delete :cancel, params: {enrollment_code: enrollment.code}
+      assert_response :success
+    end
+  end
+
   test 'enrollments can be created' do
     @teacher = create :teacher
     assert_creates(Pd::Enrollment) do
@@ -283,6 +299,38 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     assert_response :success
     assert_equal RESPONSE_MESSAGES[:SUCCESS], JSON.parse(@response.body)["workshop_enrollment_status"]
     refute_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
+  end
+
+  test 'sends enrollment receipt email to both the users email and alternate summer email if available and for a summer workshop' do
+    Pd::WorkshopMailer.expects(:teacher_enrollment_receipt).returns(stub(:deliver_now)).times(2)
+
+    @teacher = create :teacher
+    sign_in @teacher
+    workshop = create :summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    create :pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: @teacher, status: 'accepted'
+
+    post :create, params: {
+      user_id: @teacher.id,
+      workshop_id: workshop.id,
+      first_name: "Janine",
+      last_name: "Teagues",
+      email: "janine@test.xx",
+      school_info: {school_id: School.first.id},
+      role: "Counselor",
+      grades_teaching: ["Kindergarten", "Grade 1", "Grade 2"],
+      attended_csf_intro_workshop: "No",
+      csf_course_experience: {'Course A': "none", 'Course B': "a few lessons", 'Course E': "most lessons"},
+      csf_courses_planned: ["Course E", "Course F"],
+      csf_intro_intent: "No",
+      years_teaching: "30",
+      years_teaching_cs: "10",
+      previous_courses: "I don’t have experience teaching any of these courses",
+      csf_intro_other_factors: "I want to learn computer science concepts.",
+      taught_ap_before: "Yes, AP CS Principles or AP CS A",
+      planning_to_teach_ap: "Yes"
+    }
+
+    assert_response :success
   end
 
   test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do

@@ -289,6 +289,15 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   private def notify
     @workshop.enrollments.each do |enrollment|
       Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
+
+      # Also send to the user's alternate summer email if they entered it in their application and it's
+      # for a summer workshop.
+      if enrollment.workshop&.subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+        alt_summer_email = enrollment.user&.alternate_email
+        if alt_summer_email.present?
+          Pd::WorkshopMailer.detail_change_notification(enrollment, to_email: alt_summer_email).deliver_now
+        end
+      end
     end
     @workshop.facilitators.each do |facilitator|
       Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, @workshop).deliver_now

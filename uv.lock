@@ -526,7 +526,7 @@ wheels = [
 
 [[package]]
 name = "neighborhood"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "python/pythonlab/neighborhood" }
 
 [package.dev-dependencies]
@@ -840,10 +840,11 @@ wheels = [
 
 [[package]]
 name = "pythonlab-setup"
-version = "0.1.0"
+version = "0.2.0"
 source = { editable = "python/pythonlab/pythonlab_setup" }
 dependencies = [
     { name = "matplotlib" },
+    { name = "neighborhood" },
     { name = "requests" },
 ]
 
@@ -855,6 +856,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "matplotlib", specifier = ">=3" },
+    { name = "neighborhood", editable = "python/pythonlab/neighborhood" },
     { name = "requests", specifier = ">=2" },
 ]
 

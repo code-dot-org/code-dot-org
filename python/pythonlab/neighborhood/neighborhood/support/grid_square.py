@@ -5,7 +5,7 @@ from .square_type import SquareType
 
 class GridSquare:
 
-    def __init__(self, tile_type: int, asset_id: int, value: int | None =0):
+    def __init__(self, tile_type: int, asset_id: int, value: int | None = 0):
         self.set_tile_type(tile_type)
         self.asset_id = asset_id
         self.paint_count = value

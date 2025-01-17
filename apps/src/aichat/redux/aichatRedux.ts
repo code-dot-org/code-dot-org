@@ -26,6 +26,7 @@ import {
   detectToxicityInCustomizations,
   getStudentChatHistory,
   postAichatCompletionMessage,
+  postSubmitTeacherFeedback,
 } from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes, saveTypeToAnalyticsEvent} from '../constants';
@@ -45,6 +46,7 @@ import {
   isChatMessage,
   FlaggedField,
   DetectToxicityResponse,
+  ChatCompletionApiResponse,
 } from '../types';
 import {extractFieldsToCheckForToxicity} from '../utils';
 import {
@@ -402,6 +404,35 @@ export const addChatEvent =
     }
   };
 
+// This thunk's callback function submits teacher feedback on a chat message.
+export const submitTeacherFeedback = createAsyncThunk(
+  'aichat/submitTeacherFeedback',
+  async (chatMessage: ChatMessage, thunkAPI) => {
+    try {
+      await postSubmitTeacherFeedback(
+        chatMessage.id!,
+        chatMessage.teacherFeedback!
+      );
+      const dispatch = thunkAPI.dispatch as AppDispatch;
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_TEACHER_FEEDBACK, {
+          levelPath: window.location.pathname,
+          feedback: chatMessage.teacherFeedback,
+        })
+      );
+      dispatch(updateChatMessage(chatMessage));
+    } catch (error) {
+      // Only send log report if not a 403 error.
+      if (!(error instanceof NetworkError && error.response.status === 403)) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error submitting teacher feedback', error as Error);
+      }
+      return;
+    }
+  }
+);
+
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
@@ -430,7 +461,7 @@ export const submitChatContents = createAsyncThunk(
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
 
-    let chatApiResponse;
+    let chatApiResponse: ChatCompletionApiResponse;
     try {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -634,6 +665,11 @@ const aichatSlice = createSlice({
 
       const {index, messageListKey} = modelUpdateMessageInfo;
       state[messageListKey].splice(index, 1);
+    },
+    updateChatMessage: (state, action: PayloadAction<ChatMessage>) => {
+      state.studentChatHistory = state.studentChatHistory.map(message =>
+        message.id === action.payload.id ? action.payload : message
+      );
     },
     clearChatMessages: state => {
       state.chatEventsPast = [];
@@ -854,6 +890,7 @@ export const {
   clearChatMessages,
   endSave,
   removeUpdateMessage,
+  updateChatMessage,
   resetToDefaultAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,

@@ -202,7 +202,7 @@ class CourseOverview extends Component {
           versions={versions}
           teacherResources={teacherResources}
           studentResources={studentResources}
-          isInstructor={true}
+          isInstructor={viewAs === ViewType.Instructor}
           viewAs={viewAs}
           showAssignButton={showAssignButton}
           title={title}

@@ -1,4 +1,11 @@
 from neighborhood.painter import Painter
+from neighborhood.support.world import World
+from support.constants import SAMPLE_MAZE
+
+def setUp():
+  world = World()
+  # Set up the world to be from a string rather than trying to load a file.
+  world.set_grid_from_string(SAMPLE_MAZE)
 
 def test_initialize_painter():
   painter = Painter()
