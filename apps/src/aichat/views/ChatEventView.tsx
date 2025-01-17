@@ -1,6 +1,5 @@
 import React from 'react';
 
-import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -18,6 +17,7 @@ import {
   ChatEventDescriptionKey,
 } from '../types';
 
+import ChatMessageView from './ChatMessageView';
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
@@ -72,7 +72,10 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
 
   if (isChatMessage(event)) {
     return (
-      <ChatMessage {...event} showProfaneUserMessageToggle={isTeacherView} />
+      <ChatMessageView
+        chatMessage={event}
+        isChatHistoryView={isTeacherView || false}
+      />
     );
   }
 

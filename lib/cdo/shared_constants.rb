@@ -797,6 +797,15 @@ module SharedConstants
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
+  AI_CHAT_TEACHER_FEEDBACK = {
+    # The teacher flagged a message that our system did not flag as inappropriate.
+    CLEAN_DISAGREE: 'clean_disagree',
+    # The teacher agreed with our system's flagging of a message as inappropriate.
+    PROFANITY_AGREE: 'profanity_agree',
+    # The teacher disagreed with our system's flagging of a message as inappropriate.
+    PROFANITY_DISAGREE: 'profanity_disagree',
+  }
+
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 
   PROJECT_SUBMISSION_STATUS = {

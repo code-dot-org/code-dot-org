@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Abstraction Bot\r\n\r\nUse or customize the existing system prompt for this project to interact with the chatbot. The chatbot will only respond after you send an initial message. Try starting with a greeting, such as \"Hello\".",
+    "long_instructions": "# Abstraction Chatbot\r\n\r\nInteract with the AI chatbot to help you determine the most important details for planning your event.\r\n\r\n## Do This:\r\n- Tell the AI chatbot what event you're planning.\r\n- Ask it to help you narrow down the task list to just the most important tasks, see example below.\r\n\r\n**Example Prompt:**\r\n- **Refine:** I'm planning a **school spirit week**. The tasks I need to complete are **picking a theme for every day, advertising the event, and organizing a pep rally at the end of the week**. Are there any key tasks I'm missing or should take off my list?",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -35,7 +35,7 @@
       "visibilities": {
         "selectedModelId": "hidden",
         "temperature": "hidden",
-        "systemPrompt": "editable",
+        "systemPrompt": "hidden",
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
@@ -49,6 +49,6 @@
     "display_name": "Troubleshooting Bot",
     "bubble_choice_description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected."
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-13T22:28:32.991+00:00\",\"changed\":[\"cloned from \\\"emma-test-ai-chatbot-computersystems-1\\\"\"],\"cloned_from\":\"emma-test-ai-chatbot-computersystems-1\"},{\"changed_at\":\"2025-01-13 22:28:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:28:43 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:32:35 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-13T22:28:32.991+00:00\",\"changed\":[\"cloned from \\\"emma-test-ai-chatbot-computersystems-1\\\"\"],\"cloned_from\":\"emma-test-ai-chatbot-computersystems-1\"},{\"changed_at\":\"2025-01-13 22:28:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:28:43 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:32:35 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-16 18:48:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-16 18:49:51 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-16 18:50:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
