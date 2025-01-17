@@ -6,7 +6,9 @@ import React, {useEffect, useMemo} from 'react';
 import globalStyleConstants from '@cdo/apps/styleConstants';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import color from '@cdo/apps/util/color';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {useCodebridgeContext} from '../codebridgeContext';
+import {MiniApps} from '../constants';
 
 import Output from './Output';
 
@@ -31,7 +33,8 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
   // Default console height is 400px.
   const [outputHeight, setOutputHeight] = React.useState(400);
   const [columnHeight, setColumnHeight] = React.useState(800);
-  const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
+  const {labConfig} = useCodebridgeContext();
+  const miniApp = labConfig?.miniApp?.name;
 
   useEffect(() => {
     const handleColumnResize = () => {
@@ -77,7 +80,7 @@ const WorkspaceAndOutput: React.FunctionComponent = () => {
       ?.fit();
 
     // If this is a neighborhood level, also resize the visualization.
-    if (miniAppName === 'neighborhood') {
+    if (miniAppName === MiniApps.Neighborhood) {
       const sliderHeight = 60;
       // The original visualization is rendered at 800x800.
       const originalVisualizationWidth = 800;

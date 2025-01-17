@@ -1,18 +1,26 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import {MiniApps} from '@codebridge/constants';
+import {
+  DEFAULT_FOLDER_ID,
+  MAZE_FILE_NAME,
+  MiniApps,
+} from '@codebridge/constants';
 import React, {useEffect, useMemo} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
+import {MazeCell} from '@cdo/apps/lab2/types';
 import skins from '@cdo/apps/maze/skins';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
+import {findFile} from '../utils';
 
 // Preview panel for the neighborhood mini app.
 const NeighborhoodPreview: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
+  const {source} = useCodebridgeContext();
+  const serializedMaze = findFile(source, MAZE_FILE_NAME, DEFAULT_FOLDER_ID);
   const dispatch = useAppDispatch();
   const {config} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
@@ -28,9 +36,15 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
   }, [levelProperties]);
 
   useEffect(() => {
-    if (!levelProperties || !neighborhoodSkin) {
+    if (!levelProperties || !neighborhoodSkin || !serializedMaze) {
       return;
     }
+    const mazeContents = serializedMaze?.contents
+      ? (JSON.parse(serializedMaze.contents) as MazeCell[][])
+      : undefined;
+    const parsedLevelProperties = mazeContents
+      ? {...levelProperties, serializedMaze: mazeContents}
+      : levelProperties;
     const neighborhood = new Neighborhood(
       message =>
         CodebridgeRegistry.getInstance()
@@ -46,11 +60,11 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhood);
 
     neighborhood.afterInject(
-      levelProperties,
+      parsedLevelProperties,
       neighborhoodSkin,
       {
         skinId: MiniApps.Neighborhood,
-        level: levelProperties,
+        level: parsedLevelProperties,
         skin: neighborhoodSkin,
       },
       () => {},
@@ -74,7 +88,7 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
         position: 'absolute',
       });
     }
-  }, [dispatch, levelProperties, isVertical, neighborhoodSkin]);
+  }, [dispatch, levelProperties, isVertical, neighborhoodSkin, serializedMaze]);
 
   return (
     <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />

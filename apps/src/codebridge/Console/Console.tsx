@@ -14,6 +14,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import '@xterm/xterm/css/xterm.css';
 
+import {useCodebridgeContext} from '../codebridgeContext';
+
 import ConsoleManager from './ConsoleManager';
 import ControlButtons from './ControlButtons';
 import RightButtons from './RightButtons';
@@ -25,6 +27,8 @@ const Console: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const {labConfig} = useCodebridgeContext();
+  const hasMiniApp = !!labConfig?.miniApp?.name;
 
   const clearOutput = useCallback(
     (sendAnalytics: boolean) => {
@@ -36,10 +40,6 @@ const Console: React.FunctionComponent = () => {
       }
     },
     [appName]
-  );
-
-  const hasMiniApp = useAppSelector(
-    state => !!state.lab.levelProperties?.miniApp
   );
 
   // Clear console when we change levels. Don't send an analytics event
