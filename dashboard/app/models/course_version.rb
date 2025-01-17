@@ -207,15 +207,6 @@ class CourseVersion < ApplicationRecord
     ]
   end
 
-  def self.unit_group_course_versions_with_units(unit_ids)
-    # Checks if unit groups contain any of the units
-    CourseVersion.where(content_root_type: 'UnitGroup').all.select {|cv| cv.included_in_units?(unit_ids)}
-  end
-
-  def self.unit_group_course_versions_with_units_info(unit_ids)
-    unit_group_course_versions_with_units(unit_ids).map(&:summarize_for_unit_selector)
-  end
-
   def summarize_for_unit_selector
     {
       id: id,
