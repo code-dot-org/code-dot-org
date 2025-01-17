@@ -1,4 +1,6 @@
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {NeighborhoodSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
 import {NeighborhoodSignal} from '@cdo/apps/miniApps/neighborhood/types';
 
 import {HOME_FOLDER} from './constants';
@@ -48,7 +50,7 @@ export function parseErrorMessage(errorMessage: string) {
 // This function parses the message string (example: '[PAINTER] PAINT {"color": "Blue"}') to a NeighborhoodSignal.
 export function parseMessageToNeighborhoodSignal(
   message: string
-): NeighborhoodSignal {
+): NeighborhoodSignal | null {
   /*
     \[(\w+)]\ captures the signal type inside square brackets, e.g., PAINTER
     \s+ matches one or more spaces
@@ -59,14 +61,19 @@ export function parseMessageToNeighborhoodSignal(
 
   const match = message.match(regex);
   if (!match) {
-    throw new Error('Invalid input format');
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError(
+        `Error in parseMessageToNeighborhoodSignal. message: ${message}`
+      );
+    return null;
   }
 
   const [, , value, detail] = match;
 
-  const signal = {
-    value,
-  } as NeighborhoodSignal;
+  const signal: NeighborhoodSignal = {
+    value: value as NeighborhoodSignalType,
+  };
 
   if (detail) {
     signal.detail = JSON.parse(detail);

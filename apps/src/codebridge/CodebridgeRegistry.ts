@@ -38,10 +38,6 @@ export default class CodebridgeRegistry {
   }
 
   public getNeighborhood() {
-    if (this.neighborhood) {
-      return this.neighborhood;
-    } else {
-      return null;
-    }
+    return this.neighborhood;
   }
 }

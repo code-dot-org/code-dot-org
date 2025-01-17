@@ -6,8 +6,6 @@ import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 
-import {NeighborhoodSignal} from '../miniApps/neighborhood/types';
-
 import {
   parseMessageToNeighborhoodSignal,
   parseErrorMessage,
@@ -45,7 +43,7 @@ const setUpPyodideWorker = () => {
           if (neighborhood) {
             // Parse message string to NeighborhoodSignal.
             const data = parseMessageToNeighborhoodSignal(message);
-            neighborhood.handleSignal(data as NeighborhoodSignal);
+            neighborhood.handleSignal(data);
           }
           break;
         }

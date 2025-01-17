@@ -16,4 +16,7 @@ describe('parseMessageToNeighborhoodSignal', function () {
       },
     });
   });
+  it('returns null if message string has invalid format', async function () {
+    expect(parseMessageToNeighborhoodSignal('Invalid')).toEqual(null);
+  });
 });
