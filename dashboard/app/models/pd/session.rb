@@ -10,7 +10,7 @@
 #  updated_at     :datetime
 #  deleted_at     :datetime
 #  code           :string(255)
-#  format         :integer
+#  session_format :integer
 #
 # Indexes
 #
@@ -22,7 +22,7 @@ require 'cdo/code_generation'
 
 class Pd::Session < ApplicationRecord
   # creates a hash like {in_person: 0, virtual: 1}
-  enum format: Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.to_h {|format| [format[:value], format[:enum_value]]}
+  enum session_format: Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.to_h {|f| [f[:value], f[:enum_value]]}
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 

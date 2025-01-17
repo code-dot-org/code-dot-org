@@ -1415,7 +1415,7 @@ ActiveRecord::Schema.define(version: 2025_01_16_214434) do
     t.datetime "updated_at"
     t.datetime "deleted_at"
     t.string "code"
-    t.integer "format"
+    t.integer "session_format"
     t.index ["code"], name: "index_pd_sessions_on_code", unique: true
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id"
   end
