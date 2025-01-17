@@ -134,9 +134,13 @@ export const blocks = {
       // Add to a variable in place.
       const argument0 =
         generator.valueToCode(block, 'DELTA', Order.ADDITION) || '0';
+
+      // Customization: use translateVarName instead of getVariableName
       const varName = (
         generator as unknown as ExtendedCodeGenerator
       ).translateVarName(block.getFieldValue('VAR'));
+      // End customization
+
       return (
         varName +
         ' = (typeof ' +
