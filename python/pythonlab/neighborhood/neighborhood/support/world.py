@@ -1,4 +1,4 @@
-from .grid_factory import GridFactory
+import neighborhood.support.grid_factory as grid_factory
 
 class World(object):
   """
@@ -18,10 +18,10 @@ class World(object):
     return cls._instance
   
   def set_grid_from_file(self, filename: str | None = None):
-    self.grid = GridFactory.create_grid_from_file(filename)
+    self.grid = grid_factory.create_grid_from_file(filename)
 
   def set_grid_from_string(self, description: str):
-    self.grid = GridFactory.create_grid_from_string(description)
+    self.grid = grid_factory.create_grid_from_string(description)
 
   def remove_grid(self):
     self.grid = None
