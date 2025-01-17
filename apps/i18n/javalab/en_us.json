@@ -137,6 +137,7 @@
   "saveToBackpack": "Save to Backpack",
   "saving": "Saving...",
   "sendingVideo": "Sending video. Total length: {totalTime} seconds.",
+  "startingPainter": "Starting painter.",
   "startReview": "Start Review",
   "startSourcesTemplateWarning": "WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.",
   "submit": "Submit",
