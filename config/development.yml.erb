@@ -78,3 +78,7 @@ use_geolocation_override: true
 # ActiveJob Queue Adapter, default to async which doesn't require manually
 # starting the worker processes. See locals.yml.default for more discussion.
 active_job_queue_adapter: :async
+
+# Number of workers to start when running `rake build:start_active_job_workers`:
+active_job_backend_n_workers_to_start: 2
+active_job_backend_rolling_restart_in_n_batches: 1

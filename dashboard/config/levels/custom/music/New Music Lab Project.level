@@ -12,21 +12,6 @@
     "level_data": {
       "library": "launch2024",
       "showSoundFilters": true,
-      "startSources": {
-        "blocks": {
-          "languageVersion": 0,
-          "blocks": [
-            {
-              "id": "when-run-block",
-              "type": "when_run_simple2",
-              "deletable": false,
-              "movable": false,
-              "x": 34,
-              "y": 34
-            }
-          ]
-        }
-      },
       "toolbox": {
         "includeAi": true
       },
@@ -38,7 +23,7 @@
     "use_secondary_finish_button": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-06-21T11:38:42.105-07:00\",\"changed\":[\"cloned from \\\"Music Level 1\\\"\"],\"cloned_from\":\"Music Level 1\"},{\"changed_at\":\"2023-06-21 11:39:44 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-06-21 13:06:06 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-06-21 13:32:21 -0700\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-11-12 09:48:30 -0500\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-06-21T11:38:42.105-07:00\",\"changed\":[\"cloned from \\\"Music Level 1\\\"\"],\"cloned_from\":\"Music Level 1\"},{\"changed_at\":\"2023-06-21 11:39:44 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-06-21 13:06:06 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-06-21 13:32:21 -0700\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-11-12 09:48:30 -0500\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2025-01-15 14:05:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-01-15 14:13:21 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-01-15 14:15:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

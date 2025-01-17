@@ -1201,6 +1201,7 @@ Dashboard::Application.routes.draw do
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
+    post '/aichat/submit_teacher_feedback', to: 'aichat#submit_teacher_feedback'
     get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
     post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
     get '/aichat/chat_request/:id', to: 'aichat#chat_request'

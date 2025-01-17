@@ -12,12 +12,12 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   setProjectSource,
-  setAndSaveProjectSource,
+  setAndSaveProjectSources,
   loadVersion,
   resetToCurrentVersion,
   setViewingOldVersion,
   setRestoredOldVersion,
-  previewStartSource,
+  previewStartSources,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -32,7 +32,7 @@ import moduleStyles from './version-history.module.scss';
 interface VersionHistoryDropdownProps {
   versionList: ProjectVersion[];
   updatedSourceCallback?: (source: ProjectSources) => void;
-  startSource: ProjectSources;
+  startSources: ProjectSources;
   closeDropdown: () => void;
   isOpen: boolean;
 }
@@ -49,7 +49,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
 > = ({
   versionList,
   updatedSourceCallback,
-  startSource,
+  startSources,
   closeDropdown,
   isOpen,
 }) => {
@@ -131,15 +131,15 @@ const VersionHistoryDropdown: React.FunctionComponent<
     // We force a new version on start over so the user doesn't lose their recent edits.
     // We also force the save to occur immediately to avoid confusion.
     dispatch(
-      setAndSaveProjectSource(
-        startSource,
+      setAndSaveProjectSources(
+        startSources,
         /* forceSave */ true,
         /* forceNewVersion */ true
       )
     );
-    successfulRestoreCleanUp(startSource);
+    successfulRestoreCleanUp(startSources);
     closeDropdown();
-  }, [dispatch, startSource, successfulRestoreCleanUp, closeDropdown]);
+  }, [dispatch, startSources, successfulRestoreCleanUp, closeDropdown]);
 
   const confirmStartOver = useCallback(() => {
     dialogControl?.showDialog({
@@ -225,14 +225,14 @@ const VersionHistoryDropdown: React.FunctionComponent<
         );
       }
       if (viewingInitialVersion) {
-        dispatch(previewStartSource({startSource}));
+        dispatch(previewStartSources({startSources}));
       } else if (isLatest) {
         dispatch(resetToCurrentVersion());
       } else {
-        dispatch(loadVersion({versionId: e.target.value, startSource}));
+        dispatch(loadVersion({versionId: e.target.value, startSources}));
       }
     },
-    [appName, dispatch, isLatestVersion, startSource]
+    [appName, dispatch, isLatestVersion, startSources]
   );
 
   // Function called when clicking 'cancel'. This will reset the project to the current version

@@ -1,0 +1,39 @@
+@import '@/common/styles/colors.css';
+
+// Divider common styles
+.divider {
+  border: 0;
+  border-top: 1px solid;
+  margin: 0;
+  width: 100%;
+}
+
+// Divider Colors
+.divider {
+  &-primary {
+    border-top-color: var(--background-neutral-quaternary);
+  }
+
+  &-strong {
+    border-top-color: var(--background-neutral-senary);
+  }
+}
+
+// Divider Spacing
+.divider {
+  &-xs {
+    margin: 0.5rem 0;
+  }
+
+  &-s {
+    margin: 1rem 0;
+  }
+
+  &-m {
+    margin: 2rem 0;
+  }
+
+  &-l {
+    margin: 4rem 0;
+  }
+}

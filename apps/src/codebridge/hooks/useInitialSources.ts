@@ -40,7 +40,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     state => state.lab.levelProperties?.templateSources
   );
 
-  const exemplarSources = useAppSelector(
+  const exemplarSource = useAppSelector(
     state => state.lab.levelProperties?.exemplarSources
   );
   const validationFile = useAppSelector(
@@ -126,8 +126,8 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
       // If we are viewing exemplars sources and have no exemplar, we show a fallback
       // page from LabViewsRenderer. We fall back to template sources, if they exist,
       // or the level's start sources for editing.
-      return exemplarSources
-        ? {source: exemplarSources}
+      return exemplarSource
+        ? {source: exemplarSource}
         : templateSources || startSources;
     }
 
@@ -141,7 +141,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     isEditingExemplar,
     isViewingExemplar,
     labInitialSources,
-    exemplarSources,
+    exemplarSource,
   ]);
 
   return {

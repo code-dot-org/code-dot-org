@@ -19752,8 +19752,20 @@ en:
           lessons: {}
           lesson_groups: {}
         6-12-intro-to-programming-python:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Working with Objects
+            lesson-2:
+              name: Functions and Parameters
+            lesson-3:
+              name: Debugging Strategies
+            lesson-4:
+              name: Introduction to Loops
+            lesson-5:
+              name: Conditional Statements
+          lesson_groups:
+            lessonGroup-2:
+              display_name: console-only levels
           name: 6-12-intro-to-programming-python
           title: 6-12 Intro to Programming (Python) Playground
           description_audience: ''

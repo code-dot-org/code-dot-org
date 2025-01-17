@@ -255,7 +255,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    assert_nil user.urm
+    refute user.urm
     assert_nil user.races
   end
 

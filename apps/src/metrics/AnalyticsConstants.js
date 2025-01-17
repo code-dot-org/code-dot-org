@@ -430,6 +430,7 @@ const EVENTS = {
   SUBMIT_AICHAT_REQUEST_SUCCESS: 'User submits aichat request successfully',
   SUBMIT_AICHAT_REQUEST_UNAUTHORIZED:
     'Unauthorized user attempts to submit aichat request or model customizations and fails',
+  SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',
@@ -511,6 +512,9 @@ const EVENTS = {
     'Global Edition Region Switch Confirm Accepted',
   GLOBAL_EDITION_REGION_SWITCH_CONFIRM_REJECTED:
     'Global Edition Region Switch Confirm Rejected',
+
+  // Sign in callout on CSF and CSC levels
+  LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
 };
 
 const EVENT_GROUP_NAMES = {

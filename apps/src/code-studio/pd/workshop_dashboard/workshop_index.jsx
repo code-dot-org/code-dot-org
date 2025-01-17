@@ -13,7 +13,7 @@ import {
   DATE_ORDER_DESC,
 } from '@cdo/apps/code-studio/pd/constants';
 
-import ServerSortWorkshopTable from './components/server_sort_workshop_table';
+import ServerSortWorkshopTable from './components/ServerSortWorkshopTable';
 import {
   PermissionPropType,
   WorkshopAdmin,

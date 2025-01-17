@@ -222,6 +222,21 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_nil enrollment.reload.survey_sent_at
   end
 
+  test 'send_exit_survey sends email to both the users email and alternate email if available and for a summer workshop' do
+    mock_mail = stub(deliver_now: nil)
+
+    teacher = create :teacher
+    workshop = create :summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    application = create :pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: teacher, status: 'accepted'
+    enrollment = create :pd_enrollment, application_id: application.id, user: teacher, workshop: workshop
+
+    Pd::WorkshopMailer.expects(:exit_survey).with(enrollment).returns(mock_mail)
+    Pd::WorkshopMailer.expects(:exit_survey).with(enrollment, teacher.alternate_email).returns(mock_mail)
+
+    enrollment.send_exit_survey
+    refute_nil enrollment.reload.survey_sent_at
+  end
+
   test 'name is deprecated and calls through to full_name' do
     enrollment = create :pd_enrollment
     enrollment.expects(:full_name)
