@@ -180,16 +180,11 @@ class CourseVersion < ApplicationRecord
   # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
   # the resulting data looks like
   def self.courses_for_unit_selector(unit_ids)
-    # offerings = units.joins {course_offering}.where {course_offering.course_versions.content_root_id.in(unit_ids)}.map {|co| co.summarize_for_unit_selector(unit_ids)}.uniq
+    standalone_units = Unit.joins(:course_version).where(id: unit_ids).map {|u| u.course_version.course_offering&.summarize_for_unit_selector(unit_ids)}.uniq
 
-    # TODO(lfm): we could also get the units in this and decrease the number of queries? maybe not if its a select on units
-    offerings = Unit.joins(:course_version).where(id: unit_ids).map {|u| u.course_version.course_offering&.summarize_for_unit_selector(unit_ids)}.uniq
-    offerings_old = CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids)
-    versions =  Unit.joins(unit_groups: :course_version).where(id: unit_ids).where(course_version: {content_root_type: 'UnitGroup'}).flat_map {|u| u.unit_groups.map(&:course_version)}.map(&:summarize_for_unit_selector).uniq
-    versions_old = CourseVersion.unit_group_course_versions_with_units_info(unit_ids)
-    puts 'lfm', offerings.length, offerings_old.length, unit_ids
-    # CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids)).sort_by {|c| c[:display_name]}
-    {offerings: offerings, offerings1: offerings_old, versions: versions, versions_old: versions_old}
+    unit_groups =  Unit.joins(unit_groups: :course_version).where(id: unit_ids).where(course_version: {content_root_type: 'UnitGroup'}).flat_map {|u| u.unit_groups.map(&:course_version)}.map(&:summarize_for_unit_selector).uniq
+
+    standalone_units.concat(unit_groups).sort_by {|c| c[:display_name]}
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
