@@ -19,13 +19,14 @@ import React, {useEffect, useReducer, useRef} from 'react';
 
 import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import './styles/small-footer-dark-overrides.scss';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {LabConfig, ProjectSources} from '@cdo/apps/lab2/types';
 
 import Workspace from './Workspace';
 import Output from './Workspace/Output';
 import WorkspaceAndOutput from './Workspace/WorkspaceAndOutput';
 
 import moduleStyles from './styles/cdoIDE.module.scss';
+import './styles/codebridge.scss';
 
 type CodebridgeProps = {
   project: ProjectType;
@@ -36,6 +37,7 @@ type CodebridgeProps = {
   onRun?: OnRunFunction;
   onStop?: () => void;
   projectVersion: number;
+  labConfig?: LabConfig;
 };
 
 export const Codebridge = React.memo(
@@ -48,10 +50,11 @@ export const Codebridge = React.memo(
     onRun,
     onStop,
     projectVersion,
+    labConfig,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       projectReducer,
-      setProject,
+      (source: ProjectType) => setProject({source, labConfig}),
       new Set(PROJECT_REDUCER_ACTIONS.REPLACE_PROJECT)
     );
     const [internalProject, dispatch] = useReducer(
@@ -118,6 +121,7 @@ export const Codebridge = React.memo(
           onRun,
           onStop,
           ...projectUtilities,
+          labConfig,
         }}
       >
         <div

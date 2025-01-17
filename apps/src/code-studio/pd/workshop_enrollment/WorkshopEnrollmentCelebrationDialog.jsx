@@ -11,7 +11,7 @@ import style from '@cdo/apps/code-studio/pd/professional_learning_landing/landin
 const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
 
 export default function WorkshopEnrollmentCelebrationDialog({
-  workshopName = 'a new workshop',
+  workshopTitle,
   onClose,
 }) {
   const [isOpen, setIsOpen] = useState(true);
@@ -34,7 +34,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
           <div className={style.containerMargin}>
             <Heading2>{i18n.enrollmentCelebrationTitle()}</Heading2>
             <BodyTwoText>
-              {i18n.enrollmentCelebrationBody({workshopName})}
+              {i18n.enrollmentCelebrationBody({workshopName: workshopTitle})}
             </BodyTwoText>
           </div>
           <Button
@@ -48,6 +48,6 @@ export default function WorkshopEnrollmentCelebrationDialog({
 }
 
 WorkshopEnrollmentCelebrationDialog.propTypes = {
-  workshopName: PropTypes.string,
+  workshopTitle: PropTypes.string,
   onClose: PropTypes.func,
 };

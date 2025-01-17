@@ -464,6 +464,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: How to lead a discussion on equity in a Code.org PD
+          lessons: {}
+          name: equity-pd
         science-PD2:
           title: Computer Science in Science PD Phase 2b
           description: Phase 2 Online Blended Summer Study
@@ -1176,6 +1178,8 @@ en:
           description: ''
           lesson_groups: {}
           student_description: ''
+          lessons: {}
+          name: k5concepts
         algebrapdnext:
           title: Computer Science in Algebra PD Phase 2
           description: Teach Algebra through Functional Programming
@@ -3914,6 +3918,7 @@ en:
               display_name: Next Steps
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           name: k5-onlinepd-2019
+          lessons: {}
         dance-extras-2019:
           title: Keep On Dancing
           description: Go beyond the first hour with extended project ideas.
@@ -4565,6 +4570,7 @@ en:
               display_name: Next Steps
           student_description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
           name: k5-onlinepd-2020
+          lessons: {}
         dani-test-2020:
           lesson_groups:
             lesson group:
@@ -5666,6 +5672,7 @@ en:
             Implementing and Teaching CS:
               display_name: 'Part I:  Teaching and Implementing Computer Science'
           name: k5-onlinepd-2021
+          lessons: {}
         haikubot-pilot:
           lesson_groups:
             haiku bot:
@@ -7962,6 +7969,7 @@ en:
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           name: k5-onlinepd-2022
+          lessons: {}
         vpl-csd1-ci-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -9525,7 +9533,7 @@ en:
               name: Use Arrays to Get Random Responses
           lesson_groups: {}
           name: csa-magpie-lab
-          title: AP CSA Magpie Lab
+          title: CSA Magpie Lab
           description_audience: ''
           description_short: The Magpie Lab explores the basics of natural language processing as students create a chatbot program. Students work with a variety of methods of the String class and practice using if statements to evaluate user input to determine an appropriate response.
           description: |-
@@ -9570,7 +9578,7 @@ en:
               name: Open-Ended Activity
           lesson_groups: {}
           name: csa-consumer-review-lab
-          title: AP CSA Consumer Review Lab
+          title: CSA Consumer Review Lab
           description_audience: ''
           description_short: The Consumer Review lab explores how reviews for products and services are evaluated and sometimes manipulated. Students work with methods in the String class and practice using conditionals and iteration to design and implement algorithms to process text files containing reviews.
           description: |-
@@ -9596,7 +9604,7 @@ en:
               name: Open-Ended Activity
           lesson_groups: {}
           name: csa-data-lab
-          title: AP CSA Data Lab
+          title: CSA Data Lab
           description_audience: ''
           description_short: The Data Lab explores data retrieval and analysis techniques. Students practice developing questions, identifying appropriate data sources, and then writing code to read and process data to answer their questions.
           description: |-
@@ -16451,6 +16459,8 @@ en:
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          lessons: {}
+          name: k5-onlinepd-2024
         computer-vision-pilot:
           lessons:
             lesson-1:
@@ -18262,7 +18272,9 @@ en:
           description: ''
           student_description: ''
         gen-ai-staging:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Panel Levels
           lesson_groups:
             lessonGroup-2:
               display_name: Foundations of Gen AI
@@ -18272,6 +18284,8 @@ en:
               display_name: User-Centered Design
             lessonGroup-5:
               display_name: Flexible Implementation Lessons
+            lessonGroup-6:
+              display_name: Globalization
           name: gen-ai-staging
           title: ''
           description_audience: ''
@@ -18993,7 +19007,17 @@ en:
           title: Foundations of Generative AI
           description_audience: ''
           description_short: Builds a foundational understanding of text-based generative AI models
-          description: This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+          description: |-
+            This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+
+            ##Just Starting this Unit?
+
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+
+            We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) to let the Code.org curriculum team know how the unit went.
           student_description: Learn how chatbots and large-language models work behind the scenes!
         customizing-llms-2024:
           lessons: {}
@@ -19008,7 +19032,17 @@ en:
           title: Customizing Language Models
           description_audience: ''
           description_short: Learn to customize chatbots using AI Chat Lab
-          description: This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards. Students explore how to customize AI chatbots to fit specific use-cases, then create their own chatbot to address a problem they care about.
+          description: |-
+            This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards. Students explore how to customize AI chatbots to fit specific use-cases, then create their own chatbot to address a problem they care about.
+
+            ##Just Starting this Unit?
+
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+
+            We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_2) to let the Code.org curriculum team know how the unit went.
           student_description: Learn to customize chatbots using AI Chat Lab
         exploring-gen-ai1-2024:
           lessons: {}
@@ -19017,7 +19051,17 @@ en:
           title: Foundations of Generative AI
           description_audience: ''
           description_short: Builds a foundational understanding of text-based generative AI models
-          description: This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+          description: |-
+            This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+
+            ##Just Starting this Unit?
+
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+
+            We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) to let the Code.org curriculum team know how the unit went.
           student_description: Learn how chatbots and large-language models work behind the scenes!
         exploring-gen-ai2-2024:
           lessons: {}
@@ -19032,7 +19076,17 @@ en:
           title: Customizing Language Models
           description_audience: ''
           description_short: Learn to customize chatbots using AI Chat Lab
-          description: This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards. Students explore how to customize AI chatbots to fit specific use-cases, then create their own chatbot to address a problem they care about.
+          description: |-
+            This unit focuses on practical skills for tailoring AI models using techniques like prompt engineering and retrieval, while promoting transparency through model cards. Students explore how to customize AI chatbots to fit specific use-cases, then create their own chatbot to address a problem they care about.
+
+            ##Just Starting this Unit?
+
+            We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
+
+            We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_2) to let the Code.org curriculum team know how the unit went.
           student_description: Learn to customize chatbots using AI Chat Lab
         csd-summer-pr-day1:
           lessons: {}
@@ -19227,7 +19281,9 @@ en:
           description: ''
           student_description: ''
         computer-systems-nondevice-playground:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: 'Lesson 3: Hardware'
           lesson_groups: {}
           name: computer-systems-nondevice-playground
           title: "[PLAYGROUND] Computer Systems and Devices (non-device)"
@@ -19250,7 +19306,19 @@ en:
               name: Level Progression Example 1
             lesson-2:
               name: Level Progression Example 2 - Conditionals
-          lesson_groups: {}
+            lesson-3:
+              name: L2
+            lesson-4:
+              name: L3
+            lesson-5:
+              name: L4
+            lesson-6:
+              name: 'L1: Placeholder!'
+          lesson_groups:
+            lessonGroup-3:
+              display_name: New Neighborhood (w Panels + Chatbot Levels)
+            lessonGroup-2:
+              display_name: Old Progression
           name: intro-to-programming-playground
           title: "[PLAYGROUND] Introduction to Programming with Python"
           description_audience: ''
@@ -19610,27 +19678,27 @@ en:
 
             ##### There are four lessons in Module 2:
 
+            * ##### Expanding Access to Computer Science
             * ##### Cultivating an Inclusive Classroom Culture
             * ##### Bias and Stereotype Threat
-            * ##### Expanding Access to Computer Science
             * ##### Equity in Code.org’s Curriculum
 
             ___
 
-            ##### ⏰ Suggested total time for this module: <mark>update</mark>
+            ##### ⏰ Suggested total time for this module: 140 minutes
           student_description: |-
             ##### **Module 2: Strategies to Promote Equity in Computer Science** gets concrete about strategies educators can use in their classrooms to promote equity in computer science. This unit is oriented toward resources educators can use to bridge professional learning to the classroom.
 
             ##### There are four lessons in Module 2:
 
+            * ##### Expanding Access to Computer Science
             * ##### Cultivating an Inclusive Classroom Culture
             * ##### Bias and Stereotype Threat
-            * ##### Expanding Access to Computer Science
             * ##### Equity in Code.org’s Curriculum
 
             ___
 
-            ##### ⏰ Suggested total time for this module: <mark>update</mark>
+            ##### ⏰ Suggested total time for this module: 140 minutes
         sandbox-teaching-getting-started:
           lessons:
             lesson-5:
@@ -19651,7 +19719,11 @@ en:
           lessons: {}
           lesson_groups: {}
         sandbox-pl-teaching-k5-music-lab:
-          lessons: {}
+          lessons:
+            lesson-4:
+              name: 'Welcome to Music Lab! '
+            lesson-5:
+              name: Next Steps
           lesson_groups: {}
           name: sandbox-pl-teaching-k5-music-lab
           title: Teaching K-5 Music Lab (Sandbox)
@@ -19672,6 +19744,64 @@ en:
               display_name: Net Sim Levels
           name: net-int
           title: Networks & Internet Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        none-none:
+          lessons: {}
+          lesson_groups: {}
+        6-12-intro-to-programming-python:
+          lessons: {}
+          lesson_groups: {}
+          name: 6-12-intro-to-programming-python
+          title: 6-12 Intro to Programming (Python) Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        6-12-computer-systems-and-devices:
+          lessons:
+            lesson-1:
+              name: 'Lesson 1: Introduction'
+            lesson-2:
+              name: 'Lesson 2: Career Pathways and Computing Concepts'
+            lesson-3:
+              name: 'Lesson 3: Hardware'
+            lesson-4:
+              name: 'Lesson 4: Troubleshooting and Optimizing Hardware'
+            lesson-5:
+              name: 'Lesson 5: Software and Operating Systems'
+            lesson-6:
+              name: 'Lesson 6: Troubleshooting and Optimizing Software'
+            lesson-7:
+              name: 'Lesson 7: Build a Computer System'
+            lesson-8:
+              name: Data in Computer Science
+            lesson-9:
+              name: Processing Data in a System
+            lesson-10:
+              name: How AI uses Data
+            lesson-11:
+              name: IoT and Emerging Technologies
+            lesson-12:
+              name: User Testing
+            lesson-13:
+              name: Just because we can, should we?
+            lesson-14:
+              name: Nobel in AI Project
+          lesson_groups: {}
+          name: 6-12-computer-systems-and-devices
+          title: 6-12 Computer Systems and Devices Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        6-12-networks-and-the-internet:
+          lessons: {}
+          lesson_groups: {}
+          name: 6-12-networks-and-the-internet
+          title: 6-12 Networks and the Internet Playground
           description_audience: ''
           description_short: ''
           description: ''

@@ -19,7 +19,6 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
-import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
@@ -48,7 +47,7 @@ import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
-import {overrideHandleTouchMove} from './addons/cdoGesture';
+import {gestureOverrides} from './addons/cdoGesture';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -276,7 +275,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // These are exclusively provided via the FieldColour plugin as of Blockly v11.
   installFieldColourBlocks({javascript: javascriptGenerator});
 
-  type registrableFieldType = Pick<typeof GoogleBlockly.Field, 'prototype'>;
+  type registrableFieldType = GoogleBlockly.fieldRegistry.RegistrableField;
   // elements in this list should be structured as follows:
   // [field registry name for field, class name of field being overridden, class to use as override]
   const fieldOverrides: [string, string, registrableFieldType][] = [
@@ -503,6 +502,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
   };
 
+  const originalSetInputsInline =
+    blocklyWrapper.Block.prototype.setInputsInline;
+  // Replace the original setInputsInline with a version that forces a
+  // two-row Play Lab block to always use inline inputs..
+  extendedBlockSvg.setInputsInline = function (inline) {
+    originalSetInputsInline.call(this, inline);
+    if (
+      this.type === 'studio_whenSpriteAndGroupCollide' &&
+      !this.getInputsInline()
+    ) {
+      this.setInputsInline(true);
+    }
+  };
+
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
   const extendedConnection = blocklyWrapper.Connection
     .prototype as ExtendedConnection;
@@ -532,6 +545,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       fieldHelper,
       options
     );
+    return this;
+  };
+
+  // This is intentionally a no-op. Called by PlayLab.
+  // Google Blockly's implementation uses end row inputs instead.
+  extendedInput.setInline = function (inline) {
     return this;
   };
 
@@ -636,9 +655,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     variableList.forEach(varName => this.createVariable(varName));
   };
 
-  if (DCDO.get('blockly-move', true)) {
-    overrideHandleTouchMove(blocklyWrapper);
-  }
+  gestureOverrides(blocklyWrapper);
 
   // Used for spritelab behavior blocks.
   // We can remove this once we are ready to no longer support sprite lab on CDO Blockly.
@@ -825,6 +842,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         container as HTMLElement
       ).style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
+    blocklyWrapper.disableVariableEditing =
+      !!optOptionsExtended.disableVariableEditing;
+    blocklyWrapper.varsInGlobals = !!optOptionsExtended.varsInGlobals;
     blocklyWrapper.isStartMode = !!optOptionsExtended.editBlocks;
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';

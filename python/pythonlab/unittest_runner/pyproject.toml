@@ -1,24 +1,17 @@
 [project]
-name = "unittest_runner"
-version = "0.1.0"
-requires-python = "==3.12.*"
-
+name = 'unittest_runner'
+version = '0.1.0'
+requires-python = '>=3.12'
 dependencies = []
 
-[tool.pdm.dev-dependencies]
+[dependency-groups]
 dev = [
-    "coverage",
-    "ipython",
-    "pytest >=8",
-    "pytest-mock",
-    "ruff",
+  'pytest >=8',
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-
-[tool.pdm]
+testpaths = ['tests']
 
 [build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
+requires = ['hatchling']
+build-backend = 'hatchling.build'

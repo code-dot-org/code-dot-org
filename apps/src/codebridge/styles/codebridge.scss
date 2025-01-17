@@ -1,0 +1,37 @@
+// These styles are copied from common.scss, which lab2 does not use.
+// Style the speed slider used by neighborhood
+.sliderTrack {
+  stroke: #aaa;
+  stroke-width: 6px;
+  stroke-linecap: round;
+}
+.sliderKnob {
+  fill: #ddd;
+  stroke: #bbc;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
+.sliderKnob:hover {
+  fill: #eee;
+}
+
+// Style the counter used by neighborhood
+.karel-counter-text {
+  text-anchor: end;
+  font-size: 16px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+  fill: white;
+  stroke: black;
+  stroke-width: 1;
+  cursor: default;
+
+  html[dir="RTL"] & {
+    text-anchor: start;
+  }
+}
+
+.karel-counter-text.paint {
+  font-size: 33px;
+  stroke-width: 2;
+}

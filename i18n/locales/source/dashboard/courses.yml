@@ -946,6 +946,12 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        melissa-cloning-sandbox-2025:
+          title: melissa-cloning-sandbox-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
     resources:
       curriculum/csd/2017:
         name: Curriculum

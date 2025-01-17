@@ -299,6 +299,16 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_script.name}"
   end
 
+  test "show: should remove user_id url param from non-dashboard unit overview when teacher local nav v2 experiment enabled" do
+    experiment_teacher = create :teacher
+    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
+
+    sign_in experiment_teacher
+
+    get :show, params: {id: @coursez_2019.name, user_id: 1}
+    assert_redirected_to "/s/#{@coursez_2019.name}"
+  end
+
   test "should not get edit on production" do
     CDO.stubs(:rack_env).returns(:production)
     Rails.application.config.stubs(:levelbuilder_mode).returns false

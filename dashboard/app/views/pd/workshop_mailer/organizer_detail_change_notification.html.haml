@@ -14,8 +14,11 @@
 
 %p
   Some details about your upcoming
-  = @workshop.course_name
-  = @workshop.subject
+  - if @workshop.course == Pd::Workshop::COURSE_BUILD_YOUR_OWN
+    = @workshop.name.presence || Pd::Workshop::COURSE_BUILD_YOUR_OWN
+  - else
+    = @workshop.course_name
+    = @workshop.subject
   workshop have changed.
 
 -if Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course

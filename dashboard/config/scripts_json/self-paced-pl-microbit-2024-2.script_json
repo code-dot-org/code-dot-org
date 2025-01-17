@@ -5,21 +5,22 @@
     "login_required": true,
     "properties": {
       "content_area": "self_paced_pl_6_8",
-      "curriculum_umbrella": "CSD Self Paced PL",
+      "curriculum_umbrella": "Self-paced PL - CSD",
       "is_migrated": true,
       "student_detail_progress_view": true,
       "topic_tags": [
         "maker"
       ],
-      "tts": true
+      "tts": true,
+      "version_year": "2024"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:19:37 UTC",
+    "serialized_at": "2025-01-13 21:44:21 UTC",
     "published_state": null,
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-microbit-2024-2"
     }

@@ -83,7 +83,10 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
+  // If this lab is blocked because abuse score >= 15.
+  isBlocked: boolean | undefined;
   overrideValidations: Validation[] | undefined;
+  permissions: string[];
 }
 
 const initialState: LabState = {
@@ -95,7 +98,9 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
+  isBlocked: undefined,
   overrideValidations: undefined,
+  permissions: [],
 };
 
 // Thunks
@@ -240,12 +245,12 @@ export const setUpWithLevel = createAsyncThunk<
 
     Lab2Registry.getInstance().setProjectManager(projectManager);
     // Load channel and source.
-    const {sources, channel} = await setUpAndLoadProject(
+    const {sources, channel, abuseScore} = await setUpAndLoadProject(
       projectManager,
       thunkAPI.dispatch
     );
     setProjectAndLevelData(
-      {initialSources: sources, channel, levelProperties},
+      {initialSources: sources, channel, levelProperties, abuseScore},
       thunkAPI.signal.aborted,
       thunkAPI.dispatch,
       thunkAPI.getState
@@ -393,11 +398,15 @@ const labSlice = createSlice({
         channel?: Channel;
         levelProperties: LevelProperties;
         initialSources?: ProjectSources;
+        abuseScore?: number;
       }>
     ) {
       state.channel = action.payload.channel;
       state.levelProperties = action.payload.levelProperties;
       state.initialSources = action.payload.initialSources;
+      if (typeof action.payload.abuseScore === 'number') {
+        state.isBlocked = action.payload.abuseScore >= 15 ? true : false;
+      }
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
@@ -407,6 +416,9 @@ const labSlice = createSlice({
       action: PayloadAction<Validation[] | undefined>
     ) {
       state.overrideValidations = action.payload;
+    },
+    setPermissions(state, action: PayloadAction<string[]>) {
+      state.permissions = action.payload;
     },
   },
   extraReducers: builder => {
@@ -535,6 +547,7 @@ function setProjectAndLevelData(
     levelProperties: LevelProperties;
     channel?: Channel;
     initialSources?: ProjectSources;
+    abuseScore?: number;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
@@ -554,6 +567,7 @@ function setProjectAndLevelData(
       data.levelProperties,
       data.channel,
       data.initialSources,
+      data.abuseScore,
       isReadOnlyWorkspace(getState())
     );
 }
@@ -625,6 +639,7 @@ export const {
   setIsShareView,
   setOverrideValidations,
   onLevelChange,
+  setPermissions,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

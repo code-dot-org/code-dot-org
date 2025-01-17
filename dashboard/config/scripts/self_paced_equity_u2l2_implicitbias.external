@@ -5,7 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Understanding Bias
 
-<img src="https://images.code.org/f594dacfac54123c40862bd1e687dc7b-image-1736137548868.25.46 PM.png" alt="A row of green school lockers." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 20px 20px 20px 20px;">
+<img src="https://images.code.org/f594dacfac54123c40862bd1e687dc7b-image-1736137548868.25.46 PM.png" alt="A row of green school lockers." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0px 20px 20px 20px;">
+
+#### Educators engaged in equity work often ask themselves how they can become aware of their bias and interrupt those patterns of thinking. A team at Harvard attempted to answer that question with the Implicit Association Test.
 
 ## The Harvard Implicit Association Test
 
@@ -19,11 +21,11 @@ markdown <<MARKDOWN
 
 #### The test has been used in learning experiences such as this one for years to help people understand their implicit bias. To complete the test, users use a keyboard or touchscreen to associate words, phrases, or images with categories of identities (based on religion, race, gender, etc.) and reveal implicit biases.
 
-#### While the IAT may be useful, <a href="https://www.vox.com/identities/2017/3/7/14637626/implicit-association-test-racism" target="blank" rel="noopener noreferrer">a 2017 article from Vox</a> suggests that its utility is limited:
+#### While the IAT may be useful, <a href="https://www.vox.com/identities/2017/3/7/14637626/implicit-association-test-racism" target="blank" rel="noopener noreferrer">a 2017 article from Vox</a> suggests that its utility may be limited if you take it just once:
 
 <div style="background-color: #F7F8FA; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
-#### It turns out the IAT might not tell individuals much about their individual bias. According to a growing body of research and the researchers who created the test and maintain it at the Project Implicit website, the IAT is not good for predicting individual biases based on just one test. <b>It requires a collection — an aggregate — of tests before it can really make any sort of conclusions.</b>
+#### According to a growing body of research and the researchers who created the test and maintain it at the Project Implicit website, the IAT is not good for predicting individual biases based on just one test. <b>It requires a collection — an aggregate — of tests before it can really make any sort of conclusions.</b>
  
 ####  “It can predict things in the aggregate, but it cannot predict behavior at the level of an individual” who took the test once, Calvin Lai, a postdoctoral fellow at Harvard University and director of research at Project Implicit, told [the author of the article].
 
@@ -32,7 +34,7 @@ markdown <<MARKDOWN
 
 ## So What?
 
-#### As part of this course, we want to make the test available to you, but only not without providing you with an understanding that the test has its limitations. It may be helpful for you to take a version of the test if only to reflect on your associations with different categories. This is an **optional** activity in this course. 
+#### As part of this course, we want to make the test available to you, but not without providing adequate context for the test itself. It may be helpful for you to take a version of the test (once or multiple times) if only to reflect on your associations with different categories. This is an **optional** activity in this course. 
 
 <div style="display: flex; align-items: left; margin: 30px 0px 20px 0px">
 
@@ -53,5 +55,7 @@ markdown <<MARKDOWN
 </div>
 </div>
 
-#### Regardless of whether or not you take the IAT, we'll provide you with strategies to become aware of and combat your implicit biases in the next level.
+## Now What?
+
+#### Surfacing your biases is just part of the process of interrupting them. Regardless of whether or not you take the IAT, we'll provide you with strategies to become aware of and combat your implicit biases in the next level.
 MARKDOWN

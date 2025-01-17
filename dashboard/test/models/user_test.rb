@@ -330,28 +330,28 @@ class UserTest < ActiveSupport::TestCase
     assert_equal hashed_email, teacher.read_attribute(:hashed_email)
   end
 
-  test 'email_for_enrollments returns user.email if user has no latest accepted application' do
+  test 'alternate_email returns nil if user has no latest accepted application' do
     user = create :teacher
-    assert_equal user.email_for_enrollments, user.email
+    assert user.alternate_email.blank?
   end
 
-  test 'email_for_enrollments returns user.email if users latest accepted application has no alternate email' do
+  test 'alternate_email returns nil if users latest accepted application has no alternate email' do
     user = create :teacher
-    application = create :pd_teacher_application, user: user
+    application = create :pd_teacher_application, user: user, status: 'accepted'
     application_form_data = application.form_data_hash
-    application_form_data['alternateEmail'] = nil
+    application_form_data['alternateEmail'] = ''
     application.update!(form_data_hash: application_form_data)
 
     assert application.form_data_hash['alternateEmail'].blank?
-    assert_equal user.email_for_enrollments, user.email
+    assert user.alternate_email.blank?
   end
 
-  test 'email_for_enrollments returns app alternate email if users latest accepted application has alternate email' do
+  test 'alternate_email returns app alternate email if users latest accepted application has alternate email' do
     user = create :teacher
     application = create :pd_teacher_application, user: user, status: 'accepted'
     app_alternate_email = application.form_data_hash['alternateEmail']
 
-    assert_equal user.email_for_enrollments, app_alternate_email
+    assert_equal user.alternate_email, app_alternate_email
   end
 
   test "log in with password with pepper" do
@@ -814,6 +814,31 @@ class UserTest < ActiveSupport::TestCase
       )
     end
     refute_nil user.errors[:email]
+  end
+
+  test "can create teacher user with a valid educator_role" do
+    user = create :teacher, :with_educator_role
+    assert user.valid?
+    assert_empty user.errors[:educator_role]
+  end
+
+  test "cannot create teacher user with an invalid educator_role" do
+    user = build(:teacher, educator_role: "fake_role")
+    refute user.save
+    assert_includes user.errors[:educator_role], "is not included in the list"
+  end
+
+  test "cannot create student user with an educator_role" do
+    user = assert_does_not_create(User) do
+      User.create(@good_data.merge({educator_role: SharedConstants::EDUCATOR_ROLES.first[:value]}))
+    end
+    refute_nil user.errors[:educator_role]
+  end
+
+  test "teachers with a valid educator_role can change user_type to student" do
+    user = create :teacher, :with_educator_role
+    user.set_user_type(User::TYPE_STUDENT)
+    assert user.valid?
   end
 
   test "LTI users with school_info_id should have a user_school_info entry" do

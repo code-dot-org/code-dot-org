@@ -15,25 +15,16 @@ interface ExtraLinksProps {
   levelId: number;
 }
 
-interface PermissionResponse {
-  permissions: string[];
-}
-
 interface ExtraLinksData {
   levelLinkData?: ExtraLinksLevelData;
   projectLinkData?: ExtraLinksProjectData;
 }
 
 async function fetchExtraLinksData(
+  permissions: string[],
   levelId: number,
   channelId?: string
 ): Promise<ExtraLinksData> {
-  // Fetch permissions.
-  const permissionsResponse = await HttpClient.fetchJson<PermissionResponse>(
-    '/api/v1/users/current/permissions'
-  );
-  const {permissions} = permissionsResponse.value;
-
   // Fetch level link data.
   let levelLinkData: ExtraLinksLevelData | undefined;
   if (
@@ -79,13 +70,15 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
     state => state.lab.channel && state.lab.channel.id
   );
 
+  const permissions = useAppSelector(state => state.lab.permissions);
+
   useEffect(() => {
     setIsLoading(true);
-    fetchExtraLinksData(levelId, channelId).then(data => {
+    fetchExtraLinksData(permissions, levelId, channelId).then(data => {
       setExtraLinksData(data);
       setIsLoading(false);
     });
-  }, [levelId, channelId]);
+  }, [permissions, levelId, channelId]);
   const {levelLinkData, projectLinkData} = extraLinksData || {};
 
   if (isLoading || (!levelLinkData && !projectLinkData)) {
