@@ -4,6 +4,7 @@ from .support.neighborhood_signal_message import NeighborhoodSignalMessage
 from .support.world import World
 
 class Painter:
+  last_id = 0
   def __init__(self, x=0, y=0, direction="East", paint=0):
     """
     Initialize the painter with the given x, y, direction, and paint.
@@ -23,7 +24,9 @@ class Painter:
     # If the grid is not set, set it from the default file
     if (self.world.grid is None):
       self.world.set_grid_from_file()
-
+    Painter.last_id += 1
+    self.id = f"painter-{Painter.last_id}"
+    self.send_initialization_message()
 
   def turn_left(self):
     """
@@ -168,14 +171,14 @@ class Painter:
     """
     return self.direction
   
-  def show_buckets():
+  def show_buckets(self):
     """
     Show all the paint buckets on the screen.
     """
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.SHOW_BUCKETS.value)
     print(signal_message.get_formatted_message())
 
-  def hide_buckets():
+  def hide_buckets(self):
     """
     Hide all the paint buckets on the screen.
     """
@@ -190,3 +193,19 @@ class Painter:
       paint (int): The amount of paint that should be in the painter's bucket.
     """
     self.remaining_paint = paint
+
+  def get_initialization_message(self):
+    detail = {
+                'id': self.id,
+                'direction': self.direction,
+                'x': self.x,
+                'y': self.y,
+                'paint': self.remaining_paint,
+              }
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.INITIALIZE_PAINTER.value, detail)
+    return signal_message
+  
+  def send_initialization_message(self):
+    signal_message = self.get_initialization_message()
+    print(signal_message.get_formatted_message())
+
