@@ -33,7 +33,7 @@ class Painter:
     """
     Turn the painter one compass direction left (i.e. North -> West).
     """
-    self.direction.turn_left
+    self.direction.turn_left()
     detail = {'id': self.id, 'direction': self.direction.value}
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.TURN_LEFT.value, detail)
     print(signal_message.get_formatted_message())
@@ -136,28 +136,28 @@ class Painter:
     Returns:
       True if the painter is facing North
     """
-    return False
+    return self.direction == 'north'
   
   def is_facing_east(self):
     """
     Returns:
       True if the painter is facing East
     """
-    return False
+    return self.direction == 'east'
   
   def is_facing_south(self):
     """
     Returns:
       True if the painter is facing South
     """
-    return False
+    return self.direction == 'south'
   
   def is_facing_west(self):
     """
     Returns:
       True if the painter is facing West
     """
-    return False
+    return self.direction == 'west'
   
   def get_x(self):
     """

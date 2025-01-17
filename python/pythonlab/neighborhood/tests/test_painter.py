@@ -24,3 +24,9 @@ def test_get_initialization_message():
   painter = Painter()
   initialization_message = painter.get_initialization_message()
   assert initialization_message.get_formatted_message() == '[PAINTER] INITIALIZE_PAINTER {"id": "painter-3", "direction": "east", "x": 0, "y": 0, "paint": 0}'
+
+def test_turn_left():
+  painter = Painter()
+  assert painter.direction.value == 'east'
+  painter.turn_left()
+  assert painter.direction.value == 'north'
