@@ -182,6 +182,7 @@ export function makeWhenRunUndeletable(blockElement: Element) {
     return;
   }
   blockElement.setAttribute('deletable', 'false');
+  blockElement.setAttribute('movable', 'false');
 }
 
 /**
