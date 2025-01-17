@@ -1,5 +1,6 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
+  AiChatTeacherFeedback,
   AiInteractionStatus,
   AiRequestExecutionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -15,7 +16,6 @@ import {
   ChatEvent,
   ChatMessage,
   DetectToxicityResponse,
-  LogChatEventApiResponse,
 } from './types';
 import {extractFieldsToCheckForToxicity} from './utils';
 
@@ -28,6 +28,7 @@ const paths = {
   STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
   USER_HAS_AICHAT_ACCESS_URL: `${ROOT_URL}/user_has_access`,
   FIND_TOXICITY_URL: `${ROOT_URL}/find_toxicity`,
+  SUBMIT_TEACHER_FEEDBACK_URL: `${ROOT_URL}/submit_teacher_feedback`,
 };
 
 const MAX_POLLING_TIME_MS = 45000;
@@ -66,6 +67,29 @@ export async function postAichatCompletionMessage(
     maxPollingTimeMs
   );
 }
+/**
+ * @param eventId
+ * @param feedback
+ *
+ * Sends a POST request to the aichat submit teacher feedback backend controller.
+ */
+export async function postSubmitTeacherFeedback(
+  eventId: number,
+  feedback: ValueOf<typeof AiChatTeacherFeedback>
+) {
+  const payload = {
+    eventId,
+    feedback,
+  };
+  await HttpClient.post(
+    `${paths.SUBMIT_TEACHER_FEEDBACK_URL}`,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+}
 
 /**
  * This function sends a POST request to the aichat log event backend controller, then returns
@@ -74,7 +98,7 @@ export async function postAichatCompletionMessage(
 export async function postLogChatEvent(
   newChatEvent: ChatEvent,
   aichatContext: AichatContext
-): Promise<LogChatEventApiResponse> {
+): Promise<ChatEvent> {
   const payload = {
     newChatEvent,
     aichatContext,
@@ -112,6 +136,7 @@ export async function getStudentChatHistory(
   const response = await HttpClient.fetchJson<ChatEvent[]>(
     paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );
+
   return response.value;
 }
 

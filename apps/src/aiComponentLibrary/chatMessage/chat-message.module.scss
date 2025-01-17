@@ -104,7 +104,6 @@ $assistant-color: $brand_primary_light;
 
 .userProfaneMessageButton {
   width: 120px;
-  margin-top: -10px;
 }
 
 .botIconContainer {
@@ -137,7 +136,7 @@ $assistant-color: $brand_primary_light;
 }
 
 .botOverlay {
-  position:absolute;
+  position: absolute;
   top: 0;
   right: 0;
   display: flex;

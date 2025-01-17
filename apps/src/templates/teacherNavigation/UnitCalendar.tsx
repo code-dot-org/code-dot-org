@@ -127,32 +127,34 @@ const UnitCalendar: React.FC = () => {
   }
 
   return (
-    <div className={styles.calendarContentContainer}>
+    <div>
       {!isLoading && <CalendarEmptyState />}
-      {!isLoading && hasCalendar && (
-        <div>
-          <div className={styles.minutesPerWeekWrapper}>
-            <div className={styles.minutesPerWeekDescription}>
-              {i18n.instructionalMinutesPerWeek()}
+      <div className={styles.calendarContentContainer}>
+        {!isLoading && hasCalendar && (
+          <div>
+            <div className={styles.minutesPerWeekWrapper}>
+              <div className={styles.minutesPerWeekDescription}>
+                {i18n.instructionalMinutesPerWeek()}
+              </div>
+              <SimpleDropdown
+                name="minutesPerWeek"
+                onChange={event => handleDropdownChange(event.target.value)}
+                items={weeklyMinutesOptions}
+                selectedValue={weeklyInstructionalMinutes}
+                size="s"
+                dropdownTextThickness="thin"
+                labelText="minutes per week dropdown"
+                isLabelVisible={false}
+              />
             </div>
-            <SimpleDropdown
-              name="minutesPerWeek"
-              onChange={event => handleDropdownChange(event.target.value)}
-              items={weeklyMinutesOptions}
-              selectedValue={weeklyInstructionalMinutes}
-              size="s"
-              dropdownTextThickness="thin"
-              labelText="minutes per week dropdown"
-              isLabelVisible={false}
+            <UnitCalendarGrid
+              lessons={calendarLessons}
+              weeklyInstructionalMinutes={parseInt(weeklyInstructionalMinutes)}
+              weekWidth={WEEK_WIDTH}
             />
           </div>
-          <UnitCalendarGrid
-            lessons={calendarLessons}
-            weeklyInstructionalMinutes={parseInt(weeklyInstructionalMinutes)}
-            weekWidth={WEEK_WIDTH}
-          />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-14 18:22:41 UTC",
+    "serialized_at": "2025-01-15 20:43:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -415,8 +415,21 @@
       }
     },
     {
-      "key": "072e59e7-6834-4240-b33d-0544495b0c0c",
+      "key": "dffada44-2706-4a29-9a3d-85e21bc66796",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dffada44-2706-4a29-9a3d-85e21bc66796",
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "",
+        "script.name": "exploring-gen-ai1-2024"
+      }
+    },
+    {
+      "key": "072e59e7-6834-4240-b33d-0544495b0c0c",
+      "position": 2,
       "properties": {
         "name": "Student Levels"
       },
@@ -429,7 +442,7 @@
     },
     {
       "key": "b220d306-1e58-45bd-86bd-10c84604aaab",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -443,7 +456,7 @@
     },
     {
       "key": "df448687-75c3-4603-aa41-cd18b553221e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -457,7 +470,7 @@
     },
     {
       "key": "d41f5ca1-e4c6-4fd8-affe-0bc9869a9b7a",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1352,6 +1365,17 @@
       }
     },
     {
+      "key": "bbe9b4ff-0be4-4d6f-9dc9-b6e694621a4c",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3a98483a354ce5c0ba0e5f5e70910c61-Foundations of Generative AI - Lesson 03 - Bias in the Machine.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before the Lesson:</strong> This activity uses a pedagogy rooted in discovery learning, where students first complete an activity and reflect on their process, which illuminates the underlying AI concepts. A video is provided partway through the lesson that explains and summarizes the key learning from the lesson.\n\t\t<br />\n\t\t<br /><strong>Concept Video:</strong> Consider reviewing the <a href=\"https://www.youtube.com/watch?v=fzn-6jftYNw\" target=\"_blank\">Algorithmic Bias with Deborah Raji video</a>, which the class watches at the end of the lesson after the student activity. The activity aligns with the concepts introduced in the video, and watching it ahead of time can help anticipate key moments in the lesson that align with the video.\n    </td>\n  </tr>\n\n</table>    "
+      },
+      "seeding_key": {
+        "activity_section.key": "bbe9b4ff-0be4-4d6f-9dc9-b6e694621a4c",
+        "lesson_activity.key": "dffada44-2706-4a29-9a3d-85e21bc66796"
+      }
+    },
+    {
       "key": "8f9989d3-756a-47f3-bc48-e12e86634292",
       "position": 1,
       "properties": {
@@ -1429,7 +1453,7 @@
       "key": "8ae721fb-31c3-4838-b1af-af1bb6fe4555",
       "position": 3,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a6aa3d7c90bac0a490329b975def7e54-Slide12.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> These patterns in our data collection are an example of bias, which is when a model favors certain information over others. For example, the front page of most search engines tend to have a recency bias where they favor new or recent articles over older ones. Biased data means that our language model will give biased answers. This means we have to be extra careful with the data we plan to use in our language model to try and reduce bias as much as possible.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d0a4157e58638cd7e3599296bc2f2e65-Foundations of Generative AI - Lesson 03 - Bias in the Machine.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> These patterns in our data collection are an example of bias, which is when a model favors certain information over others. For example, the front page of most search engines tend to have a recency bias where they favor new or recent articles over older ones. Biased data means that our language model will give biased answers. Let's hear a little more about Bias from Dr Deborah Raji\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=fzn-6jftYNw\" target=\"_blank\">Algorithmic Bias with Dr Deborah Raji</a> video\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is an example of Bias Dr Raji discusses?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Use this as an opportunity to check-in on how well students understood the video. A key connection is how the curation and selection of data can contribute to bias, which is what has happened so far in this activity. Consider letting students respond more freely and open-endedly to the video as they reflect on the role of bias in machine learning, as well as Dr Raji's personal story about experiencing bias in a project she worked on.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    ",
         "tips": [
           {
             "type": "ethicsOpportunity",
@@ -2697,7 +2721,7 @@
       "key": "ea5603ac-1603-4a43-86cd-2938311b5658",
       "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c06e381d93da16d5f2d9aecf31461a4e-Slide19.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the first scenario as a class. This is also on the activity guide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Your school is designing a chatbot to help students sign up for classes each year. Students can chat with the chatbot about their interests and future career plans, and the chatbot will recommend different core classes or electives to take. The school wants to make sure the chatbot provides information that keeps students on-track for graduation, and doesn’t implicitly steer students away from certain courses.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/392fd40c3c767dc6dd52d7a3d58b1d79-Slide20.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students work through Scenario 2 in small groups:\n\t\t<br />\n\t\t<br />1) First write down your thoughts on your own\n\t\t<br />2) Talk as a small group and discuss different responses\n\t\t<br />3) Revise your answers based on the discussion\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Listen in on students as they complete this task. Help facilitate discussion amongst groups as needed so students can discuss this scenario openly with their peers.\n\t\t<br />\n\t\t<br />Formative Assessment\n\t\t<br />While circulating, you can listen in to groups to get a pulse on how the class is thinking about this scenario. If most groups seem stuck in the discussion, consider regrouping as a full class and repeating the same structure as Scenario #1. If groups seem able to discuss in small groups, be sure to collect the activity guide after class to review how well students were able to articulate these AI auditing practices.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/0967f495f133fa06dd5ea9ae1de04bab-Slide21.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) Invite groups to share out from their conversations if they wish.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6ed454b35e9f16ca848a85a343fc1cc4-Slide22.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As we saw in the headlines, the impact of biased models can be profound and deeply affect users and certain communities. Luckily, there are folks working in the field to help discover these flaws in models and advocate for change to improve them. This is a career known as AI Auditing - let’s look at someone actively working in this field to improve AI technologies. This is Dr Deborah Raji describing some of her work auditing facial recognition systems.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c06e381d93da16d5f2d9aecf31461a4e-Slide19.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the first scenario as a class. This is also on the activity guide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Your school is designing a chatbot to help students sign up for classes each year. Students can chat with the chatbot about their interests and future career plans, and the chatbot will recommend different core classes or electives to take. The school wants to make sure the chatbot provides information that keeps students on-track for graduation, and doesn’t implicitly steer students away from certain courses.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/392fd40c3c767dc6dd52d7a3d58b1d79-Slide20.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students work through Scenario 2 in small groups:\n\t\t<br />\n\t\t<br />1) First write down your thoughts on your own\n\t\t<br />2) Talk as a small group and discuss different responses\n\t\t<br />3) Revise your answers based on the discussion\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Listen in on students as they complete this task. Help facilitate discussion amongst groups as needed so students can discuss this scenario openly with their peers.\n\t\t<br />\n\t\t<br />Formative Assessment\n\t\t<br />While circulating, you can listen in to groups to get a pulse on how the class is thinking about this scenario. If most groups seem stuck in the discussion, consider regrouping as a full class and repeating the same structure as Scenario #1. If groups seem able to discuss in small groups, be sure to collect the activity guide after class to review how well students were able to articulate these AI auditing practices.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/0967f495f133fa06dd5ea9ae1de04bab-Slide21.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) Invite groups to share out from their conversations if they wish.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/860d3357830477e5ed852dd2907bfdca-Foundations of Generative AI - Lesson 10 - Hallucinations and Fabrications.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> As we saw in the headlines, the impact of biased models can be profound and deeply affect users and certain communities. Luckily, there are folks working in the field to help discover these flaws in models and advocate for change to improve them. This is a career known as AI Auditing - let’s look at someone actively working in this field to improve AI technologies. This is Dr Deborah Raji describing some of her work auditing facial recognition systems.\n<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=fmmboPQAQeY\" target=\"_blank\">AI Auditing with Deborah Raji</a> video\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    \n\n"
       },
       "seeding_key": {
         "activity_section.key": "ea5603ac-1603-4a43-86cd-2938311b5658",
@@ -3797,6 +3821,19 @@
       }
     },
     {
+      "name": "AI Auditing with Dr Deborah Raji",
+      "url": "https://youtu.be/fmmboPQAQeY",
+      "key": "ai_auditing_with_dr_deborah_raji",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/ai-auditing-with-deborah-raji-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai_auditing_with_dr_deborah_raji"
+      }
+    },
+    {
       "name": "AI Auditors",
       "url": "https://docs.google.com/document/d/1Gxnivw4GVgPYpaeZYHtEhd8YkjlL8YdAs3nADr5MUv4/edit",
       "key": "ai_auditors",
@@ -3807,6 +3844,19 @@
       },
       "seeding_key": {
         "resource.key": "ai_auditors"
+      }
+    },
+    {
+      "name": "Algorithmic Bias with Dr Deborah Raji",
+      "url": "https://www.youtube.com/watch?v=fzn-6jftYNw",
+      "key": "algorithmic_bias_with_dr_deborah_raji",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/algorithmic-bias-with-deborah-raji-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "algorithmic_bias_with_dr_deborah_raji"
       }
     },
     {
@@ -4455,6 +4505,12 @@
     {
       "seeding_key": {
         "lesson.key": "Bias in the Machine",
+        "resource.key": "algorithmic_bias_with_dr_deborah_raji"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Bias in the Machine",
         "resource.key": "bias_in_the_machine"
       }
     },
@@ -4516,6 +4572,12 @@
       "seeding_key": {
         "lesson.key": "Hallucinations and Fabrications",
         "resource.key": "_exemplar_ai_auditors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hallucinations and Fabrications",
+        "resource.key": "ai_auditing_with_dr_deborah_raji"
       }
     },
     {

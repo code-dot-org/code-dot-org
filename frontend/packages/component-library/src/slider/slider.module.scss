@@ -1,0 +1,555 @@
+@import '@/common/styles/primitiveColors.css';
+@import '@/common/styles/colors.css';
+@import '@/common/styles/mixins';
+
+//Slider colors for use in JSX/TSX
+$slider-black-track-fill-color: var(--background-neutral-primary-inverse);
+$slider-black-track-empty-color: var(--background-neutral-quinary);
+$slider-black-track-disabled-color: var(--background-neutral-disabled);
+$slider-brand-track-fill-color: var(--background-brand-teal-primary);
+$slider-brand-track-empty-color: var(--background-neutral-quinary);
+$slider-brand-track-disabled-color: var(--background-neutral-disabled);
+$slider-white-track-fill-color: var(--background-neutral-primary);
+$slider-white-track-empty-color: var(--neutral-gray-60);
+$slider-white-track-disabled-color: var(--neutral-gray-80);
+$slider-aqua-track-fill-color: var(--background-brand-aqua-primary);
+$slider-aqua-track-empty-color: var(--background-neutral-quinary);
+$slider-aqua-track-disabled-color: var(--background-neutral-disabled);
+
+:export {
+  sliderBlackTrackFillColor: $slider-black-track-fill-color;
+  sliderBlackTrackEmptyColor: $slider-black-track-empty-color;
+  sliderBlackTrackDisabledColor: $slider-black-track-disabled-color;
+
+  sliderBrandTrackFillColor: $slider-brand-track-fill-color;
+  sliderBrandTrackEmptyColor: $slider-brand-track-empty-color;
+  sliderBrandTrackDisabledColor: $slider-brand-track-disabled-color;
+
+  sliderWhiteTrackFillColor: $slider-white-track-fill-color;
+  sliderWhiteTrackEmptyColor: $slider-white-track-empty-color;
+  sliderWhiteTrackDisabledColor: $slider-white-track-disabled-color;
+
+  sliderAquaTrackFillColor: $slider-aqua-track-fill-color;
+  sliderAquaTrackEmptyColor: $slider-aqua-track-empty-color;
+  sliderAquaTrackDisabledColor: $slider-aqua-track-disabled-color;
+}
+
+// Slider common styles
+.slider {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.sliderLabelSection {
+  display: flex;
+  height: 22px;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+
+  .sliderLabel {
+    @include label-two;
+    flex: 1;
+    margin-bottom: 0;
+  }
+}
+
+.sliderMainContainer {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  align-self: stretch;
+
+  .sliderWrapper {
+    position: relative;
+    width: 100%;
+    font-size: 0;
+
+    input {
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+      appearance: none;
+      background-image: unset;
+      cursor: pointer;
+      margin: 0;
+
+      &:focus-visible {
+        outline: none;
+      }
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 8px;
+      background: transparent;
+      border-radius: 5px;
+    }
+
+    input[type='range']::-moz-range-track {
+      width: 100%;
+      height: 8px;
+      background: transparent;
+      border-radius: 5px;
+    }
+
+    input[type='range']::-ms-track {
+      width: 100%;
+      height: 8px;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+    input[type='range']::-moz-range-progress {
+      background: transparent;
+      height: 8px;
+      border-radius: 5px;
+    }
+
+    input[type='range']::-ms-fill-lower {
+      background: transparent;
+      border-radius: 10px;
+    }
+
+    input[type='range']::-ms-fill-upper {
+      background: transparent;
+      border-radius: 10px;
+    }
+
+    /* Special styling for WebKit/Blink */
+    input[type='range']::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      box-sizing: border-box;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background-color: transparent;
+      margin-top: -3px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    }
+
+    /* All the same stuff for Firefox */
+    input[type='range']::-moz-range-thumb {
+      -webkit-appearance: none;
+      box-sizing: border-box;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background-color: transparent;
+      margin-top: -3px;
+    }
+
+    /* All the same stuff for IE */
+    input[type='range']::-ms-thumb {
+      -webkit-appearance: none;
+      box-sizing: border-box;
+      height: 14px;
+      width: 14px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background-color: transparent;
+    }
+
+    // Focus Styles
+    input[type='range']:focus-visible {
+      outline: none;
+
+      &::-webkit-slider-thumb {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+      }
+
+      &::-moz-range-thumb {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+      }
+
+      &::-ms-thumb {
+        outline: 2px solid var(--borders-brand-teal-primary);
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  .centerMark {
+    position: absolute;
+    bottom: 3.5px;
+    width: 2px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 2px;
+  }
+
+  // TODO: Uncomment when working on adding steps support
+  //.stepMark {
+  //  position: absolute;
+  //  height: 10px;
+  //  width: 2px;
+  //  background-color: black;
+  //  bottom: -2px; /* Adjust as needed */
+  //}
+}
+
+// Slider Colors
+.slider-black {
+  .sliderLabelSection {
+    color: var(--text-neutral-primary);
+  }
+
+  .sliderMainContainer {
+    .sliderWrapper {
+      input[type='range']::-webkit-slider-thumb {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--borders-neutral-solid);
+      }
+
+      input[type='range']::-moz-range-thumb {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--borders-neutral-solid);
+      }
+
+      input[type='range']::-ms-thumb {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--borders-neutral-solid);
+      }
+
+      // Hover Styles
+      input[type='range']:hover {
+        &::-webkit-slider-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-moz-range-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-ms-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+      }
+
+      // Focus Styles
+      input[type='range']:focus-visible {
+        outline: none;
+
+        &::-webkit-slider-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-moz-range-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-ms-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+      }
+
+      .centerMark {
+        border-color: var(--background-neutral-primary-inverse);
+      }
+    }
+  }
+
+  // Disabled Styles
+  &.isDisabled {
+    // Using .isDisabled here because :has(input[type='range']:disabled) is not working here
+    .sliderLabelSection {
+      color: var(--text-neutral-disabled);
+    }
+
+    .sliderMainContainer {
+      .sliderWrapper {
+        input[type='range']::-webkit-slider-thumb {
+          background-color: var(--background-neutral-primary);
+          border-color: var(--borders-neutral-disabled);
+        }
+
+        input[type='range']::-moz-range-thumb {
+          background-color: var(--background-neutral-primary);
+          border-color: var(--borders-neutral-disabled);
+        }
+
+        input[type='range']::-ms-thumb {
+          background-color: var(--background-neutral-primary);
+          border-color: var(--borders-neutral-disabled);
+        }
+      }
+    }
+  }
+}
+
+.slider-brand {
+  .sliderLabelSection {
+    color: var(--text-neutral-primary);
+  }
+
+  .sliderMainContainer {
+    .sliderWrapper {
+      input[type='range']::-webkit-slider-thumb {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--borders-neutral-solid);
+      }
+
+      input[type='range']::-moz-range-thumb {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--borders-neutral-solid);
+      }
+
+      input[type='range']::-ms-thumb {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--borders-neutral-solid);
+      }
+
+      // Hover Styles
+      input[type='range']:hover {
+        &::-webkit-slider-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-moz-range-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-ms-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+      }
+
+      // Focus Styles
+      input[type='range']:focus-visible {
+        outline: none;
+
+        &::-webkit-slider-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-moz-range-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-ms-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+      }
+
+      .centerMark {
+        border-color: var(--background-neutral-primary-inverse);
+      }
+    }
+  }
+
+  // Disabled Styles
+  &.isDisabled {
+    // Using .isDisabled here because :has(input[type='range']:disabled) is not working here
+    .sliderLabelSection {
+      color: var(--text-neutral-disabled);
+    }
+
+    .sliderMainContainer {
+      .sliderWrapper {
+        input[type='range']::-webkit-slider-thumb {
+          background-color: var(--background-neutral-primary);
+          border-color: var(--borders-neutral-disabled);
+        }
+
+        input[type='range']::-moz-range-thumb {
+          background-color: var(--background-neutral-primary);
+          border-color: var(--borders-neutral-disabled);
+        }
+
+        input[type='range']::-ms-thumb {
+          background-color: var(--background-neutral-primary);
+          border-color: var(--borders-neutral-disabled);
+        }
+      }
+    }
+  }
+}
+
+.slider-white {
+  .sliderLabelSection {
+    color: var(--text-neutral-inverse);
+  }
+
+  .sliderMainContainer {
+    .sliderWrapper {
+      input[type='range']::-webkit-slider-thumb {
+        background-color: var(--background-neutral-primary-inverse);
+        border-color: var(--background-neutral-primary);
+      }
+
+      input[type='range']::-moz-range-thumb {
+        background-color: var(--background-neutral-primary-inverse);
+        border-color: var(--background-neutral-primary);
+      }
+
+      input[type='range']::-ms-thumb {
+        background-color: var(--background-neutral-primary-inverse);
+        border-color: var(--background-neutral-primary);
+      }
+
+      // Hover Styles
+      input[type='range']:hover {
+        &::-webkit-slider-thumb {
+          background-color: var(--neutral-gray-80);
+        }
+
+        &::-moz-range-thumb {
+          background-color: var(--neutral-gray-80);
+        }
+
+        &::-ms-thumb {
+          background-color: var(--neutral-gray-80);
+        }
+      }
+
+      // Focus Styles
+      input[type='range']:focus-visible {
+        outline: none;
+
+        &::-webkit-slider-thumb {
+          background-color: var(--neutral-gray-80);
+        }
+
+        &::-moz-range-thumb {
+          background-color: var(--neutral-gray-80);
+        }
+
+        &::-ms-thumb {
+          background-color: var(--neutral-gray-80);
+        }
+      }
+
+      .centerMark {
+        border-color: var(--background-neutral-primary);
+      }
+    }
+  }
+
+  // Disabled Styles
+  &.isDisabled {
+    // Using .isDisabled here because :has(input[type='range']:disabled) is not working here
+    .sliderLabelSection {
+      color: var(--neutral-gray-80);
+    }
+
+    .sliderMainContainer {
+      .sliderWrapper {
+        input[type='range']::-webkit-slider-thumb {
+          background-color: var(--background-neutral-primary-inverse);
+          border-color: var(--neutral-gray-80);
+        }
+
+        input[type='range']::-moz-range-thumb {
+          background-color: var(--background-neutral-primary-inverse);
+          border-color: var(--neutral-gray-80);
+        }
+
+        input[type='range']::-ms-thumb {
+          background-color: var(--background-neutral-primary-inverse);
+          border-color: var(--neutral-gray-80);
+        }
+      }
+    }
+  }
+}
+
+.slider-aqua {
+  .sliderLabelSection {
+    color: var(--text-neutral-primary);
+  }
+
+  .sliderMainContainer {
+    .sliderWrapper {
+      input[type='range']::-webkit-slider-thumb {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--borders-neutral-solid);
+      }
+
+      input[type='range']::-moz-range-thumb {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--borders-neutral-solid);
+      }
+
+      input[type='range']::-ms-thumb {
+        background-color: var(--background-neutral-primary);
+        border-color: var(--borders-neutral-solid);
+      }
+
+      // Hover Styles
+      input[type='range']:hover {
+        &::-webkit-slider-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-moz-range-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-ms-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+      }
+
+      // Focus Styles
+      input[type='range']:focus-visible {
+        outline: none;
+
+        &::-webkit-slider-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-moz-range-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+
+        &::-ms-thumb {
+          background-color: var(--background-brand-teal-extra-light);
+        }
+      }
+
+      .centerMark {
+        border-color: var(--background-neutral-primary-inverse);
+      }
+    }
+  }
+
+  // Disabled Styles
+  &.isDisabled {
+    // Using .isDisabled here because :has(input[type='range']:disabled) is not working here
+    .sliderLabelSection {
+      color: var(--text-neutral-disabled);
+    }
+
+    .sliderMainContainer {
+      .sliderWrapper {
+        input[type='range']::-webkit-slider-thumb {
+          background-color: var(--background-neutral-primary);
+          border-color: var(--borders-neutral-disabled);
+        }
+
+        input[type='range']::-moz-range-thumb {
+          background-color: var(--background-neutral-primary);
+          border-color: var(--borders-neutral-disabled);
+        }
+
+        input[type='range']::-ms-thumb {
+          background-color: var(--background-neutral-primary);
+          border-color: var(--borders-neutral-disabled);
+        }
+      }
+    }
+  }
+}

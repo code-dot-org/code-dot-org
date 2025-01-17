@@ -14,7 +14,7 @@ import {
 } from '@cdo/apps/code-studio/pd/constants';
 
 import WorkshopTable from './workshop_table';
-import WorkshopTableLoader from './workshop_table_loader';
+import WorkshopTableLoader from './WorkshopTableLoader';
 
 export default class ServerSortWorkshopTable extends React.Component {
   static propTypes = {

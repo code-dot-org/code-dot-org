@@ -30,7 +30,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const {onRun, onStop} = useCodebridgeContext();
 
   const source = useAppSelector(
-    state => state.lab2Project.projectSource?.source
+    state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const hasPredictResponse = useAppSelector(
     state => !!state.predictLevel.response
