@@ -383,7 +383,9 @@ export function addMutationToTextJoinBlock(blockElement: Element) {
 
   // We need to keep track of the expected number of inputs in order to create them all.
   // Google Blockly expects this kind of extra state to be in a mutator.
-  const inputCount = blockElement.getAttribute('inputcount');
+  const inputCount =
+    mutationElement.getAttribute('items') ||
+    blockElement.getAttribute('inputcount');
   mutationElement.setAttribute('items', `${inputCount}`);
 }
 
