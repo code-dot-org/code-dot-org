@@ -33,9 +33,9 @@ class CourseVersion < ApplicationRecord
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
-  validates :key,
-    format: {with: KEY_RE,
-    message: "must contain only digits, letters, or dashes; got \"%{value}\"."}
+  validates_format_of :key,
+    with: KEY_RE,
+    message: "must contain only digits, letters, or dashes; got \"%{value}\"."
 
   # Placeholder key for curriculum that will not be updated but want the
   # features that come with a course version (resources, vocab, etc)
