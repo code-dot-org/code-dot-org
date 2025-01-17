@@ -68,12 +68,6 @@ export default function WorkshopTableLoader({
   }, [childElement]);
 
   const handleDelete = workshopId => {
-    /*$.ajax({
-      method: 'DELETE',
-      url: '/api/v1/pd/workshops/' + workshopId,
-    }).done(() => {
-      load();
-    });*/
     fetch(`/api/v1/pd/workshops/${workshopId}`, {
       method: 'DELETE',
       headers: {

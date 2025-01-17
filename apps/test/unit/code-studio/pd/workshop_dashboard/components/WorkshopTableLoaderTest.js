@@ -41,13 +41,6 @@ describe('WorkshopTableLoader', () => {
       });
     });
 
-    /*const Child = jest.fn().mockImplementation(props => {
-      return (
-        <div>
-          Child Component with workshops {JSON.stringify(props.workshops)}
-        </div>
-      );
-    });*/
     const Child = jest.fn().mockImplementation(() => null);
 
     render(
