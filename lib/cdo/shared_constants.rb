@@ -829,9 +829,4 @@ module SharedConstants
     {value: "parent", category: 'other'},
     {value: "other", category: 'other'}
   ].freeze
-
-  PD_SESSION_FORMATS = {
-    in_person: 0,
-    virtual: 1,
-  }.freeze
 end

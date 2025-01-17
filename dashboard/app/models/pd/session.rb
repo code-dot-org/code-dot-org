@@ -21,7 +21,7 @@
 require 'cdo/code_generation'
 
 class Pd::Session < ApplicationRecord
-  enum format: SharedConstants::PD_SESSION_FORMATS
+  enum format: SharedWorkshopConstants::PD_SESSION_FORMATS
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
