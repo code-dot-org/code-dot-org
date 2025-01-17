@@ -11,7 +11,7 @@ def test_initialize_painter():
   painter = Painter()
   assert painter.get_x() == 0
   assert painter.get_y() == 0
-  assert painter.get_direction() == "East"
+  assert painter.get_direction() == "east"
   assert painter.get_my_paint() == 0
 
 def test_set_paint():
@@ -23,4 +23,4 @@ def test_set_paint():
 def test_get_initialization_message():
   painter = Painter()
   initialization_message = painter.get_initialization_message()
-  assert initialization_message.get_formatted_message() == '[PAINTER] INITIALIZE_PAINTER {"id": "painter-3", "direction": "East", "x": 0, "y": 0, "paint": 0}'
+  assert initialization_message.get_formatted_message() == '[PAINTER] INITIALIZE_PAINTER {"id": "painter-3", "direction": "east", "x": 0, "y": 0, "paint": 0}'

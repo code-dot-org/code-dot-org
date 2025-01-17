@@ -2,10 +2,11 @@ from .support.neighborhood_signal_key import NeighborhoodSignalKey
 from .support.signal_message_type import SignalMessageType
 from .support.neighborhood_signal_message import NeighborhoodSignalMessage
 from .support.world import World
+from .support.direction import Direction
 
 class Painter:
   last_id = 0
-  def __init__(self, x=0, y=0, direction="East", paint=0):
+  def __init__(self, x=0, y=0, direction=Direction('east'), paint=0):
     """
     Initialize the painter with the given x, y, direction, and paint.
 
@@ -32,14 +33,17 @@ class Painter:
     """
     Turn the painter one compass direction left (i.e. North -> West).
     """
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.TURN_LEFT.value)
+    self.direction.turn_left
+    detail = {'id': self.id, 'direction': self.direction.value}
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.TURN_LEFT.value, detail)
     print(signal_message.get_formatted_message())
 
   def move(self):
     """
     Move the painter one square forward in the direction it is facing.
     """
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.MOVE.value)
+    detail = {'id': self.id, 'direction': self.direction.value}
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.MOVE.value, detail)
     print(signal_message.get_formatted_message())
 
   def paint(self, color):
@@ -49,14 +53,16 @@ class Painter:
     Args:
       color (str): The color to paint the square.
     """
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.PAINT.value, {'color': color})
+    detail = {'id': self.id, 'color': color}
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.PAINT.value, detail)
     print(signal_message.get_formatted_message())
 
   def scrape_paint(self):
     """
     Removes all the paint off the square the painter is on.
     """
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.REMOVE_PAINT.value)
+    detail = {'id': self.id}
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.REMOVE_PAINT.value, detail)
     print(signal_message.get_formatted_message())
 
   def get_my_paint(self):
@@ -69,14 +75,16 @@ class Painter:
     """
     Hides the painter on the screen.
     """
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.HIDE_PAINTER.value)
+    detail = {'id': self.id}
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.HIDE_PAINTER.value, detail)
     print(signal_message.get_formatted_message())
 
   def show_painter(self):
     """
     Shows the painter on the screen.
     """
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.SHOW_PAINTER.value)
+    detail = {'id': self.id}
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.SHOW_PAINTER.value, detail)
     print(signal_message.get_formatted_message())
 
   def take_paint(self):
@@ -84,7 +92,8 @@ class Painter:
     The Painter adds a single unit of paint to their personal bucket. The counter on the bucket on
     the screen goes down. If the painter is not standing on a paint bucket, nothing happens.
     """
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.TAKE_PAINT.value)
+    detail = {'id': self.id}
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.TAKE_PAINT.value, detail)
     print(signal_message.get_formatted_message())
 
   def is_on_paint(self):
@@ -169,7 +178,7 @@ class Painter:
     Returns:
       The direction the painter is facing
     """
-    return self.direction
+    return self.direction.value
   
   def show_buckets(self):
     """
@@ -197,7 +206,7 @@ class Painter:
   def get_initialization_message(self):
     detail = {
                 'id': self.id,
-                'direction': self.direction,
+                'direction': self.direction.value,
                 'x': self.x,
                 'y': self.y,
                 'paint': self.remaining_paint,
