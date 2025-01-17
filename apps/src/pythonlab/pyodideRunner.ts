@@ -52,6 +52,8 @@ export async function runPythonCode(
   validationFile?: ProjectFile
 ) {
   try {
+    CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
     return await asyncRun(mainFile, source, validationFile);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
@@ -62,6 +64,7 @@ export async function runPythonCode(
 }
 
 export function stopPythonCode() {
+  CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
 }

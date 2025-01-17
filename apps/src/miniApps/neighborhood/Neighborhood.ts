@@ -222,6 +222,14 @@ export default class Neighborhood {
   }
 
   onCompile() {
+    this.setProcessSignals();
+  }
+
+  onRun() {
+    this.setProcessSignals();
+  }
+
+  setProcessSignals() {
     this.controller.hideDefaultPegman();
     // start checking for signals after the specified wait time
     timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
