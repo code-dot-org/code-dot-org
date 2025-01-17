@@ -70,8 +70,6 @@ class Section < ApplicationRecord
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
   has_one :lti_section
   has_one :lti_course, through: :lti_section
-  before_validation :strip_emoji_from_name
-  before_create :assign_code
   after_destroy :soft_delete_lti_section
 
   has_many :followers, dependent: :destroy
@@ -105,6 +103,8 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
+
+  before_validation :strip_emoji_from_name
 
   scope :visible, -> {where(hidden: false)}
 
@@ -173,7 +173,7 @@ class Section < ApplicationRecord
   TYPES = [
     # Insert non-workshop section types here.
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
-  validates :section_type, inclusion: {in: TYPES, allow_nil: true}
+  validates_inclusion_of :section_type, in: TYPES, allow_nil: true
 
   VALID_GRADES = [
     SharedConstants::STUDENT_GRADE_LEVELS,
@@ -231,12 +231,13 @@ class Section < ApplicationRecord
     [LOGIN_TYPE_EMAIL, LOGIN_TYPE_PICTURE, LOGIN_TYPE_WORD].exclude? login_type
   end
 
-  validates :user, presence: {unless: -> {deleted?}}
+  validates_presence_of :user, unless: -> {deleted?}
   def user_must_be_teacher
     errors.add(:user_id, 'must be a teacher') unless user.try(:teacher?)
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
+  before_create :assign_code
   def assign_code
     self.code = unused_random_code unless code
   end
