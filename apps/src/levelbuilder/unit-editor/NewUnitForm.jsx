@@ -5,44 +5,9 @@ import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
-import NewCourseFields from '../NewCourseFields';
-
 export default function NewUnitForm(props) {
   const [isCourse, setIsCourse] = useState('');
-  const [familyName, setFamilyName] = useState('');
-  const [versionYear, setVersionYear] = useState('');
-  const [instructorAudience, setInstructorAudience] = useState('');
-  const [participantAudience, setParticipantAudience] = useState('');
-  const [instructionType, setInstructionType] = useState('');
   const [submitDialogOpen, setSubmitDialogOpen] = useState(false);
-
-  const getScriptName = () => {
-    const name =
-      versionYear !== 'unversioned'
-        ? familyName + '-' + versionYear
-        : familyName;
-    return name;
-  };
-
-  const setFamilyAndCourseType = familyName => {
-    if (familyName === '') {
-      setParticipantAudience('');
-      setInstructorAudience('');
-      setInstructionType('');
-    } else {
-      setParticipantAudience(
-        props.familiesCourseTypes[familyName].participant_audience
-      );
-      setInstructorAudience(
-        props.familiesCourseTypes[familyName].instructor_audience
-      );
-      setInstructionType(
-        props.familiesCourseTypes[familyName].instruction_type
-      );
-    }
-
-    setFamilyName(familyName);
-  };
 
   const savingDetailsAndButton = React.useCallback(
     () => (
@@ -130,75 +95,12 @@ export default function NewUnitForm(props) {
       </label>
       {isCourse === 'true' && (
         <div>
-          <NewCourseFields
-            families={props.families}
-            versionYearOptions={props.versionYearOptions}
-            familyName={familyName}
-            setFamilyAndCourseType={setFamilyAndCourseType}
-            setFamilyName={setFamilyName}
-            versionYear={versionYear}
-            setVersionYear={setVersionYear}
-            instructionType={instructionType}
-            instructorAudience={instructorAudience}
-            participantAudience={participantAudience}
-          />
-          {familyName !== '' && versionYear !== '' && (
-            <div>
-              <h2>Unit Slug</h2>
-              <label>
-                The Unit Slug for this course will be:
-                <HelpTip>
-                  <p>
-                    The unit slug is used to create the link to the unit. It is
-                    in the format of studio.code.org/s/unit-slug-here. A unit
-                    slug can only contain lowercase letters, numbers and dashes.
-                    Once you set the slug it can not be updated.
-                  </p>
-                </HelpTip>
-                {/* Need both of these inputs because if the hidden one with name=
-                  is also disabled it will not save properly*/}
-                <input
-                  className="newUnitSlug"
-                  value={getScriptName()}
-                  disabled={true}
-                />
-                <input
-                  name="script[name]"
-                  value={getScriptName()}
-                  type="hidden"
-                />
-              </label>
-              <input name="family_name" value={familyName} type="hidden" />
-              <input name="version_year" value={versionYear} type="hidden" />
-              {instructionType !== '' && (
-                <input
-                  name="instruction_type"
-                  value={instructionType}
-                  type="hidden"
-                />
-              )}
-              {instructorAudience !== '' && (
-                <input
-                  name="instructor_audience"
-                  value={instructorAudience}
-                  type="hidden"
-                />
-              )}
-              {participantAudience !== '' && (
-                <input
-                  name="participant_audience"
-                  value={participantAudience}
-                  type="hidden"
-                />
-              )}
-              <input
-                name="is_course"
-                value={isCourse === 'true'}
-                type="hidden"
-              />
-              {savingDetailsAndButton()}
-            </div>
-          )}
+          <p>
+            To create a standalone unit, please{' '}
+            <a href="/courses/new">create a new course</a> first. Then, come
+            back to this page and create a unit that is "Part of a Course" which
+            has the same name (url slug) as the course.
+          </p>
         </div>
       )}
       {isCourse === 'false' && (
