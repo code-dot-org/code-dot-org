@@ -157,10 +157,8 @@ export function handleCodeGenerationFailure(
   }
 }
 /**
- * Handle a failure to get workspace code by either CDO or Google Blockly
- * by updating the redux store and logging the error.
- * We only want to log the error once per failure since getWorkspaceCode
- * gets called many times and the error will be the same every time.
+ * Report usage of CDO Blockly, once all Blockly labs are purported to
+ * on mainline Google Blockly.
  * @param {MetricEvent} eventName Event name to log
  */
 export function reportCdoBlocklyUsage(eventName: MetricEvent) {
