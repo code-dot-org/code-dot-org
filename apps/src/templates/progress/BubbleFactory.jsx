@@ -222,9 +222,10 @@ export function getBubbleUrl(
   // exist.
   delete current_loc_query_params.version;
 
-  const level_url_query_params = levelUrl.split('?').length > 1 
-    ? queryString.parse(levelUrl.split('?')[1])
-    : {};
+  const level_url_query_params =
+    levelUrl.split('?').length > 1
+      ? queryString.parse(levelUrl.split('?')[1])
+      : {};
   const params = {...current_loc_query_params, ...level_url_query_params};
 
   if (sectionId) {
