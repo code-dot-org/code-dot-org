@@ -27,7 +27,7 @@ class Painter:
       self.world.set_grid_from_file()
     Painter.last_id += 1
     self.id = f"painter-{Painter.last_id}"
-    self.send_initialization_message()
+    self.send_initialization_message(x, y, direction, paint)
 
   def _send_signal(self, key, detail=None):
       """
@@ -101,16 +101,16 @@ class Painter:
     """
     self._send_signal(NeighborhoodSignalKey.HIDE_BUCKETS.value)
 
-  def send_initialization_message(self):
-    print(self._get_initialization_message().get_formatted_message())
+  def send_initialization_message(self, x, y, direction, paint):
+    print(self._get_initialization_message(x, y, direction, paint).get_formatted_message())
 
-  def _get_initialization_message(self):
+  def _get_initialization_message(self, x, y, direction, paint):
     detail = {
-                'id': self.id,
-                'direction': self.direction.value,
-                'x': self.x,
-                'y': self.y,
-                'paint': self.remaining_paint,
+                'id': f"painter-{Painter.last_id}",
+                'direction': direction,
+                'x': x,
+                'y': y,
+                'paint': paint,
               }
     signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.INITIALIZE_PAINTER.value, detail)
     return signal_message

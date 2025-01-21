@@ -30,7 +30,7 @@ def test_set_paint():
 
 def test_get_initialization_message():
   painter4 = Painter()
-  initialization_message = painter4._get_initialization_message()
+  initialization_message = painter4._get_initialization_message(0,0,'east',0)
   assert initialization_message.get_formatted_message() == '[PAINTER] INITIALIZE_PAINTER {"id": "painter-4", "direction": "east", "x": 0, "y": 0, "paint": 0}'
 
 def test_turn_left():

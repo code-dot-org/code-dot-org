@@ -43,6 +43,7 @@ export async function handleRunClick(
     }
     consoleManager?.writeSystemMessage('Running program...', appName);
     await runPythonCode(code, source);
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
   }
 }
 
