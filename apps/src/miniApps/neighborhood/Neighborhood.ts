@@ -16,7 +16,7 @@ const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
 const SIGNAL_CHECK_TIME = 200;
 
 // We are relying on old maze skins here, which are not typed.
-type SkinType = Record<string, unknown>;
+export type SkinType = Record<string, unknown>;
 
 export default class Neighborhood {
   private controller: typeof MazeController | null;
@@ -64,6 +64,7 @@ export default class Neighborhood {
     if (!level.serializedMaze) {
       return;
     }
+    console.log({level});
     this.controller = new MazeController(level, skin, config, {
       // TODO: Either get rid of these methods or support audio in Neighborhood.
       // https://codedotorg.atlassian.net/browse/CT-942

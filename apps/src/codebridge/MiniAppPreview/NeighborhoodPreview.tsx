@@ -4,7 +4,7 @@ import {
   MAZE_FILE_NAME,
   MiniApps,
 } from '@codebridge/constants';
-import React, {useEffect, useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MazeCell} from '@cdo/apps/lab2/types';
@@ -24,6 +24,7 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {config} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
+  const [waitingToLoad, setWaitingToLoad] = useState(true);
 
   const neighborhoodSkin = useMemo(() => {
     if (!levelProperties) {
@@ -39,12 +40,16 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
     if (!levelProperties || !neighborhoodSkin || !serializedMaze) {
       return;
     }
+    setWaitingToLoad(true);
     const mazeContents = serializedMaze?.contents
       ? (JSON.parse(serializedMaze.contents) as MazeCell[][])
       : undefined;
+    console.log({mazeContents});
     const parsedLevelProperties = mazeContents
       ? {...levelProperties, serializedMaze: mazeContents}
       : levelProperties;
+
+    setWaitingToLoad(false);
     const neighborhood = new Neighborhood(
       message =>
         CodebridgeRegistry.getInstance()
@@ -59,38 +64,40 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhood);
 
-    neighborhood.afterInject(
-      parsedLevelProperties,
-      neighborhoodSkin,
-      {
-        skinId: MiniApps.Neighborhood,
-        level: parsedLevelProperties,
-        skin: neighborhoodSkin,
-      },
-      () => {},
-      () => {},
-      () => {},
-      () => {}
-    );
+    setTimeout(() => {
+      neighborhood.afterInject(
+        parsedLevelProperties,
+        neighborhoodSkin,
+        {
+          skinId: MiniApps.Neighborhood,
+          level: parsedLevelProperties,
+          skin: neighborhoodSkin,
+        },
+        () => {},
+        () => {},
+        () => {},
+        () => {}
+      );
 
-    // The vertical version of the mini app is a static size for now,
-    // so we can hard-code the css. The horizontal version is resizable,
-    // and the css is handled by WorkspaceAndOutput.
-    if (isVertical) {
-      $('#visualization').css({
-        height: '400px',
-        width: '400px',
-      });
+      // The vertical version of the mini app is a static size for now,
+      // so we can hard-code the css. The horizontal version is resizable,
+      // and the css is handled by WorkspaceAndOutput.
+      if (isVertical) {
+        $('#visualization').css({
+          height: '400px',
+          width: '400px',
+        });
 
-      $('#svgMaze').css({
-        transform: 'scale(0.5)',
-        'transform-origin': '0 0',
-        position: 'absolute',
-      });
-    }
+        $('#svgMaze').css({
+          transform: 'scale(0.5)',
+          'transform-origin': '0 0',
+          position: 'absolute',
+        });
+      }
+    }, 100);
   }, [dispatch, levelProperties, isVertical, neighborhoodSkin, serializedMaze]);
 
-  return (
+  return waitingToLoad ? null : (
     <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
   );
 };
