@@ -38,7 +38,6 @@ const setUpPyodideWorker = () => {
           break;
         }
         if (message.startsWith(MessageTag.NEIGHBORHOOD_SIGNAL)) {
-          console.log('message', message);
           const neighborhood =
             CodebridgeRegistry.getInstance().getNeighborhood();
           if (neighborhood) {

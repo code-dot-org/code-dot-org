@@ -52,8 +52,11 @@ export async function runPythonCode(
   validationFile?: ProjectFile
 ) {
   try {
-    CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+    if (neighborhood) {
+      neighborhood.reset();
+      neighborhood.onRun();
+    }
     return await asyncRun(mainFile, source, validationFile);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
