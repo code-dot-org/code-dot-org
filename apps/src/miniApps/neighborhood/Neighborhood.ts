@@ -28,6 +28,7 @@ export default class Neighborhood {
   private speedSlider: Slider | null;
   private signals: NeighborhoodSignal[];
   private nextSignalIndex: number;
+  private hasInitialized: boolean;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -44,6 +45,7 @@ export default class Neighborhood {
     this.speedSlider = null;
     this.signals = [];
     this.nextSignalIndex = -1;
+    this.hasInitialized = false;
   }
 
   afterInject(
@@ -64,6 +66,13 @@ export default class Neighborhood {
     if (!level.serializedMaze) {
       return;
     }
+    // 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
+    // reference the maze visualization area. It is initially set up in maze's Visualization.jsx
+    const svg = document.getElementById('svgMaze');
+    if (this.hasInitialized) {
+      this.controller.resetMaze(svg, level.serializedMaze, ['look']);
+      return;
+    }
     console.log({level});
     this.controller = new MazeController(level, skin, config, {
       // TODO: Either get rid of these methods or support audio in Neighborhood.
@@ -75,9 +84,8 @@ export default class Neighborhood {
         getTestResults,
       },
     });
-    // 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
-    // reference the maze visualization area. It is initially set up in maze's Visualization.jsx
-    const svg = document.getElementById('svgMaze');
+
+    console.log({svgChildrenLength: svg?.children?.length});
     this.controller.subtype.initStartFinish();
     this.controller.subtype.createDrawer(svg);
     this.controller.subtype.initWallMap();
@@ -100,6 +108,7 @@ export default class Neighborhood {
         this.speedSlider!.setValue(value);
       };
     }
+    this.hasInitialized = true;
   }
 
   handleSignal(signal: NeighborhoodSignal | null) {

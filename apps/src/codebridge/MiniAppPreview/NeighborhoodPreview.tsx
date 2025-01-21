@@ -4,7 +4,7 @@ import {
   MAZE_FILE_NAME,
   MiniApps,
 } from '@codebridge/constants';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useEffect, useMemo} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MazeCell} from '@cdo/apps/lab2/types';
@@ -24,7 +24,23 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {config} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
-  const [waitingToLoad, setWaitingToLoad] = useState(true);
+
+  const neighborhood = useMemo(() => {
+    const neighborhoodRef = new Neighborhood(
+      message =>
+        CodebridgeRegistry.getInstance()
+          .getConsoleManager()
+          ?.writeConsoleMessage(message),
+      () =>
+        CodebridgeRegistry.getInstance()
+          .getConsoleManager()
+          ?.writeConsoleMessage(''),
+      isRunning => dispatch(setIsRunning(isRunning)),
+      '[PYTHON LAB]'
+    );
+    CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
+    return neighborhoodRef;
+  }, [dispatch]);
 
   const neighborhoodSkin = useMemo(() => {
     if (!levelProperties) {
@@ -40,7 +56,17 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
     if (!levelProperties || !neighborhoodSkin || !serializedMaze) {
       return;
     }
-    setWaitingToLoad(true);
+
+    // const svg = document.getElementById('svgMaze');
+    // if (svg?.children && svg?.children.length > 1) {
+    //   const mazeTiles = svg?.children;
+    //   for (let i = 0; i < mazeTiles.length; i++) {
+    //     const tile = mazeTiles[i];
+    //     if (tile.id !== 'look') {
+    //       svg.removeChild(tile);
+    //     }
+    //   }
+    // }
     const mazeContents = serializedMaze?.contents
       ? (JSON.parse(serializedMaze.contents) as MazeCell[][])
       : undefined;
@@ -49,55 +75,45 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
       ? {...levelProperties, serializedMaze: mazeContents}
       : levelProperties;
 
-    setWaitingToLoad(false);
-    const neighborhood = new Neighborhood(
-      message =>
-        CodebridgeRegistry.getInstance()
-          .getConsoleManager()
-          ?.writeConsoleMessage(message),
-      () =>
-        CodebridgeRegistry.getInstance()
-          .getConsoleManager()
-          ?.writeConsoleMessage(''),
-      isRunning => dispatch(setIsRunning(isRunning)),
-      '[PYTHON LAB]'
+    neighborhood.afterInject(
+      parsedLevelProperties,
+      neighborhoodSkin,
+      {
+        skinId: MiniApps.Neighborhood,
+        level: parsedLevelProperties,
+        skin: neighborhoodSkin,
+      },
+      () => {},
+      () => {},
+      () => {},
+      () => {}
     );
-    CodebridgeRegistry.getInstance().setNeighborhood(neighborhood);
 
-    setTimeout(() => {
-      neighborhood.afterInject(
-        parsedLevelProperties,
-        neighborhoodSkin,
-        {
-          skinId: MiniApps.Neighborhood,
-          level: parsedLevelProperties,
-          skin: neighborhoodSkin,
-        },
-        () => {},
-        () => {},
-        () => {},
-        () => {}
-      );
+    // The vertical version of the mini app is a static size for now,
+    // so we can hard-code the css. The horizontal version is resizable,
+    // and the css is handled by WorkspaceAndOutput.
+    if (isVertical) {
+      $('#visualization').css({
+        height: '400px',
+        width: '400px',
+      });
 
-      // The vertical version of the mini app is a static size for now,
-      // so we can hard-code the css. The horizontal version is resizable,
-      // and the css is handled by WorkspaceAndOutput.
-      if (isVertical) {
-        $('#visualization').css({
-          height: '400px',
-          width: '400px',
-        });
+      $('#svgMaze').css({
+        transform: 'scale(0.5)',
+        'transform-origin': '0 0',
+        position: 'absolute',
+      });
+    }
+  }, [
+    dispatch,
+    levelProperties,
+    isVertical,
+    neighborhoodSkin,
+    serializedMaze,
+    neighborhood,
+  ]);
 
-        $('#svgMaze').css({
-          transform: 'scale(0.5)',
-          'transform-origin': '0 0',
-          position: 'absolute',
-        });
-      }
-    }, 100);
-  }, [dispatch, levelProperties, isVertical, neighborhoodSkin, serializedMaze]);
-
-  return waitingToLoad ? null : (
+  return (
     <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
   );
 };
