@@ -57,16 +57,7 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
       return;
     }
 
-    // const svg = document.getElementById('svgMaze');
-    // if (svg?.children && svg?.children.length > 1) {
-    //   const mazeTiles = svg?.children;
-    //   for (let i = 0; i < mazeTiles.length; i++) {
-    //     const tile = mazeTiles[i];
-    //     if (tile.id !== 'look') {
-    //       svg.removeChild(tile);
-    //     }
-    //   }
-    // }
+    neighborhood.prepareForNewMaze();
     const mazeContents = serializedMaze?.contents
       ? (JSON.parse(serializedMaze.contents) as MazeCell[][])
       : undefined;

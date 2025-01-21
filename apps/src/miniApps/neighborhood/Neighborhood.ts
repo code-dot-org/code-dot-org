@@ -66,14 +66,6 @@ export default class Neighborhood {
     if (!level.serializedMaze) {
       return;
     }
-    // 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
-    // reference the maze visualization area. It is initially set up in maze's Visualization.jsx
-    const svg = document.getElementById('svgMaze');
-    if (this.hasInitialized) {
-      this.controller.resetMaze(svg, level.serializedMaze, ['look']);
-      return;
-    }
-    console.log({level});
     this.controller = new MazeController(level, skin, config, {
       // TODO: Either get rid of these methods or support audio in Neighborhood.
       // https://codedotorg.atlassian.net/browse/CT-942
@@ -85,6 +77,9 @@ export default class Neighborhood {
       },
     });
 
+    // 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
+    // reference the maze visualization area. It is initially set up in maze's Visualization.jsx
+    const svg = document.getElementById('svgMaze');
     console.log({svgChildrenLength: svg?.children?.length});
     this.controller.subtype.initStartFinish();
     this.controller.subtype.createDrawer(svg);
@@ -266,5 +261,10 @@ export default class Neighborhood {
     // The slider goes from 0 to 1. We scale the speed slider value to be between
     // 2 (slowest) and 0 (fastest).
     return -2 * this.speedSlider!.getValue() + 2;
+  }
+
+  prepareForNewMaze() {
+    const svg = document.getElementById('svgMaze');
+    this.controller?.removeMap(svg, ['look']);
   }
 }
