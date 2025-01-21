@@ -18,7 +18,7 @@ import i18n from '@cdo/locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
-} from '../../../../../../signUpFlow/signUpFlowConstants';
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {LtiProviderContext} from '../../context';
 
 import styles from '../../../../../link-account.module.scss';
