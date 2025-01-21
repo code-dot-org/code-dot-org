@@ -180,7 +180,7 @@ class CourseVersion < ApplicationRecord
   # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
   # the resulting data looks like
   def self.courses_for_unit_selector(unit_ids)
-    standalone_units = Unit.joins(:course_version).where(id: unit_ids).map {|u| u.course_version.course_offering&.summarize_for_unit_selector(unit_ids)}.uniq
+    standalone_units = Unit.joins(:course_version).where(id: unit_ids).map {|u| u.course_version.course_offering&.summarize_for_unit_selector(unit_ids)}.compact.uniq
 
     unit_groups =  Unit.joins(unit_groups: :course_version).where(id: unit_ids).where(course_version: {content_root_type: 'UnitGroup'}).flat_map {|u| u.unit_groups.map(&:course_version)}.map(&:summarize_for_unit_selector).uniq
 
