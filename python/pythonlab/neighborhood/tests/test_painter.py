@@ -8,15 +8,18 @@ def setUp():
   world.set_grid_from_string(SAMPLE_MAZE)
 
 def test_initialize_painter():
-  painter = Painter()
-  assert painter.get_x() == 0
-  assert painter.get_y() == 0
-  assert painter.get_direction() == "east"
-  assert painter.get_my_paint() == 0
-  painter2 = Painter(1, 2, "west", 10)
+  painter1 = Painter()
+  assert painter1.get_x() == 0
+  assert painter1.get_y() == 0
+  assert painter1.get_my_paint() == 0
+  assert painter1.get_direction() == "east"
+  painter1.turn_left()
+  assert painter1.get_direction() == "north"
+  painter2 = Painter(1, 2, "south", 10)
   assert painter2.get_x() == 1
   assert painter2.get_y() == 2
-  assert painter2.get_direction() == "west"
+  assert painter2.get_direction() == "south"
+  assert painter1.get_direction() == "north"
   assert painter2.get_my_paint() == 10
 
 def test_set_paint():
@@ -27,7 +30,7 @@ def test_set_paint():
 
 def test_get_initialization_message():
   painter4 = Painter()
-  initialization_message = painter4.get_initialization_message()
+  initialization_message = painter4._get_initialization_message()
   assert initialization_message.get_formatted_message() == '[PAINTER] INITIALIZE_PAINTER {"id": "painter-4", "direction": "east", "x": 0, "y": 0, "paint": 0}'
 
 def test_turn_left():

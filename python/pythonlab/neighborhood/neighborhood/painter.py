@@ -29,22 +29,30 @@ class Painter:
     self.id = f"painter-{Painter.last_id}"
     self.send_initialization_message()
 
+  def _send_signal(self, key, detail=None):
+      """
+      Helper method to create and print a signal message.
+
+      Args:
+        key (str): The key for the signal message (e.g., NeighborhoodSignalKey).
+        detail (dict): Optional additional details for the signal message.
+      """
+      detail = detail or {}
+      signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, key, detail)
+      print(signal_message.get_formatted_message())
+      
   def turn_left(self):
     """
     Turn the painter one compass direction left (i.e. North -> West).
     """
     self.direction.turn_left()
-    detail = {'id': self.id, 'direction': self.direction.value}
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.TURN_LEFT.value, detail)
-    print(signal_message.get_formatted_message())
+    self._send_signal(NeighborhoodSignalKey.TURN_LEFT.value, {'id': self.id, 'direction': self.direction.value})
 
   def move(self):
     """
     Move the painter one square forward in the direction it is facing.
     """
-    detail = {'id': self.id, 'direction': self.direction.value}
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.MOVE.value, detail)
-    print(signal_message.get_formatted_message())
+    self._send_signal(NeighborhoodSignalKey.MOVE.value, {'id': self.id, 'direction': self.direction.value})
 
   def paint(self, color):
     """
@@ -53,48 +61,65 @@ class Painter:
     Args:
       color (str): The color to paint the square.
     """
-    detail = {'id': self.id, 'color': color}
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.PAINT.value, detail)
-    print(signal_message.get_formatted_message())
+    self._send_signal(NeighborhoodSignalKey.PAINT.value, {'id': self.id, 'color': color})
 
   def scrape_paint(self):
     """
     Removes all the paint off the square the painter is on.
     """
-    detail = {'id': self.id}
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.REMOVE_PAINT.value, detail)
-    print(signal_message.get_formatted_message())
+    self._send_signal(NeighborhoodSignalKey.REMOVE_PAINT.value, {'id': self.id})
+
+  def hide_painter(self):
+    """
+    Hides the painter on the screen.
+    """
+    self._send_signal(NeighborhoodSignalKey.HIDE_PAINTER.value, {'id': self.id})
+
+  def show_painter(self):
+    """
+    Shows the painter on the screen.
+    """
+    self._send_signal(NeighborhoodSignalKey.SHOW_PAINTER.value, {'id': self.id})
+
+  def take_paint(self):
+    """
+    The Painter adds a single unit of paint to their personal bucket.
+    The counter on the bucket on the screen goes down.
+    If the painter is not standing on a paint bucket, nothing happens.
+    """
+    self._send_signal(NeighborhoodSignalKey.TAKE_PAINT.value, {'id': self.id})
+
+  def show_buckets(self):
+    """
+    Show all the paint buckets on the screen.
+    """
+    self._send_signal(NeighborhoodSignalKey.SHOW_BUCKETS.value)
+
+  def hide_buckets(self):
+    """
+    Hide all the paint buckets on the screen.
+    """
+    self._send_signal(NeighborhoodSignalKey.HIDE_BUCKETS.value)
+
+  def send_initialization_message(self):
+    print(self._get_initialization_message().get_formatted_message())
+
+  def _get_initialization_message(self):
+    detail = {
+                'id': self.id,
+                'direction': self.direction.value,
+                'x': self.x,
+                'y': self.y,
+                'paint': self.remaining_paint,
+              }
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.INITIALIZE_PAINTER.value, detail)
+    return signal_message
 
   def get_my_paint(self):
     """
     Returns the amount of paint the painter has.
     """
     return self.remaining_paint
-  
-  def hide_painter(self):
-    """
-    Hides the painter on the screen.
-    """
-    detail = {'id': self.id}
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.HIDE_PAINTER.value, detail)
-    print(signal_message.get_formatted_message())
-
-  def show_painter(self):
-    """
-    Shows the painter on the screen.
-    """
-    detail = {'id': self.id}
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.SHOW_PAINTER.value, detail)
-    print(signal_message.get_formatted_message())
-
-  def take_paint(self):
-    """
-    The Painter adds a single unit of paint to their personal bucket. The counter on the bucket on
-    the screen goes down. If the painter is not standing on a paint bucket, nothing happens.
-    """
-    detail = {'id': self.id}
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.TAKE_PAINT.value, detail)
-    print(signal_message.get_formatted_message())
 
   def is_on_paint(self):
     """
@@ -136,28 +161,28 @@ class Painter:
     Returns:
       True if the painter is facing North
     """
-    return self.direction == 'north'
+    return self.direction.value == 'north'
   
   def is_facing_east(self):
     """
     Returns:
       True if the painter is facing East
     """
-    return self.direction == 'east'
+    return self.direction.value == 'east'
   
   def is_facing_south(self):
     """
     Returns:
       True if the painter is facing South
     """
-    return self.direction == 'south'
+    return self.direction.value == 'south'
   
   def is_facing_west(self):
     """
     Returns:
       True if the painter is facing West
     """
-    return self.direction == 'west'
+    return self.direction.value == 'west'
   
   def get_x(self):
     """
@@ -180,20 +205,6 @@ class Painter:
     """
     return self.direction.value
   
-  def show_buckets(self):
-    """
-    Show all the paint buckets on the screen.
-    """
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.SHOW_BUCKETS.value)
-    print(signal_message.get_formatted_message())
-
-  def hide_buckets(self):
-    """
-    Hide all the paint buckets on the screen.
-    """
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.HIDE_BUCKETS.value)
-    print(signal_message.get_formatted_message())
-
   def set_paint(self, paint):
     """
     Set the amount of paint in the painter's bucket. Does nothing if paint is negative.
@@ -202,19 +213,3 @@ class Painter:
       paint (int): The amount of paint that should be in the painter's bucket.
     """
     self.remaining_paint = paint
-
-  def get_initialization_message(self):
-    detail = {
-                'id': self.id,
-                'direction': self.direction.value,
-                'x': self.x,
-                'y': self.y,
-                'paint': self.remaining_paint,
-              }
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.INITIALIZE_PAINTER.value, detail)
-    return signal_message
-  
-  def send_initialization_message(self):
-    signal_message = self.get_initialization_message()
-    print(signal_message.get_formatted_message())
-
