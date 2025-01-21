@@ -197,6 +197,8 @@ export default class SessionFormPart extends React.Component {
               name="format"
               value={this.props.session.format}
               onChange={this.handleFormatChange}
+              disabled={this.props.readOnly}
+              style={this.props.readOnly ? styles.readOnlyInput : undefined}
             >
               {PdSessionFormats.map(({value, label}) => (
                 <option key={value} value={value}>
@@ -214,3 +216,11 @@ export default class SessionFormPart extends React.Component {
     );
   }
 }
+
+const styles = {
+  readOnlyInput: {
+    backgroundColor: 'inherit',
+    cursor: 'default',
+    border: 'none',
+  },
+};
