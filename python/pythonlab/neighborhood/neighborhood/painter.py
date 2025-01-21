@@ -6,7 +6,7 @@ from .support.direction import Direction
 
 class Painter:
   last_id = 0
-  def __init__(self, x=0, y=0, direction=Direction('east'), paint=0):
+  def __init__(self, x=0, y=0, direction='east', paint=0):
     """
     Initialize the painter with the given x, y, direction, and paint.
 
@@ -18,7 +18,7 @@ class Painter:
     """
     self.x = x
     self.y = y
-    self.direction = direction
+    self.direction = Direction(direction)
     self.remaining_paint = paint
     # Create a reference to the world singleton
     self.world = World()
