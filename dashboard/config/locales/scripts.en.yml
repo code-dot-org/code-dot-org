@@ -19818,3 +19818,23 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        tess-modularity-test-unit-1:
+          lessons: {}
+          lesson_groups: {}
+          name: tess-modularity-test-unit-1
+          title: Modularity yay
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        jamila-sandbox:
+          lessons:
+            lesson-1:
+              name: python lab stuff
+          lesson_groups: {}
+          name: jamila-sandbox
+          title: jamila's stuff go away
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

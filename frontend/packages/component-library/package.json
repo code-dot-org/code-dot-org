@@ -19,16 +19,6 @@
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
-    "./stub-section": {
-      "types": "./dist/stub-section/index.d.ts",
-      "import": "./dist/stub-section/index.js",
-      "require": "./dist/stub-section/index.cjs"
-    },
-    "./stub": {
-      "types": "./dist/stub/index.d.ts",
-      "import": "./dist/stub/index.js",
-      "require": "./dist/stub/index.cjs"
-    },
     "./divider": {
       "types": "./dist/divider/index.d.ts",
       "import": "./dist/divider/index.js",
@@ -43,7 +33,8 @@
     "build": "NODE_OPTIONS='--max-old-space-size=8192' tsup --dts",
     "build:fast": "tsup",
     "clean": "rimraf dist .turbo",
-    "dev": "yarn build:fast --watch",
+    "dev": "yarn build --watch",
+    "dev:fast": "yarn build:fast --watch",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prepack": "clean-package",

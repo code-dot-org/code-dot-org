@@ -10,7 +10,7 @@
     "offer_browser_tts": "true",
     "panels": [
       {
-        "text": "# Maya",
+        "text": "# Maya\n**Age:** 16\n\n**Hobbies:** Solving puzzles\n\n**Favorite Subject:** Science\n\n**Favorite Movie:** Hidden Figures (inspired by data's role in solving big problems).",
         "imageUrl": "https://images.code.org/223c7eaa64967213fbcbc72aecbda624-Screenshot 2025-01-14 104724.png",
         "key": "undefined-1d5d3a7f-7f89-4eb3-853c-7aa5a400395f",
         "layout": "text-bottom-right"
@@ -19,48 +19,25 @@
         "text": "**✨ Escaped with SECONDS to spare! 🔓💡 Cracking codes is my jam, but the real win? Teamwork. 👊 Who’s up for the next challenge?** #PuzzleMaster #EscapeRoomChampion #Teamwork",
         "imageUrl": "https://images.code.org/8d37e3b0595f672376cea0232d1993c4-Screenshot 2025-01-14 104025.png",
         "key": "IPP-careerPersonas-2c4164c6-d454-463c-8f56-a0c9eb04889c",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-right"
       },
       {
-        "text": "Piece by piece, the big picture comes to life. 🧩✨ Ready to tackle the next challenge? 🌟 #BigThinker #PuzzleLife #MindsetMatters",
-        "imageUrl": "",
+        "text": "**Piece by piece, the big picture comes to life.**  🧩✨ #BigThinker #PuzzleLife #MindsetMatters",
+        "imageUrl": "https://images.code.org/52ae9948c3dddf7799a514f6950e0f00-a83c0fc5-8fdb-469c-8630-697b4d2adced.jpg",
         "key": "IPP-careerPersonas-08ed7eb5-0cc6-44c4-b533-d1aec83455c2",
-        "layout": "text-bottom-center"
+        "layout": "text-bottom-right"
       },
       {
-        "text": "When big ideas collide, magic happens. 💡🚀 Brainstorming sessions with this crew = my happy place. Big challenges, bigger solutions. 🌟 #IdeasInAction #TeamBrainstorm #BigDreamEnergy",
+        "text": "**When big ideas collide, magic happens. 💡🚀 Brainstorming sessions with this crew = my happy place.** 🌟 #IdeasInAction #TeamBrainstorm #BigDreamEnergy",
         "imageUrl": "https://images.code.org/da9113fd8b538173da8e09469c12c656-Screenshot 2025-01-14 105133.png",
         "key": "IPP-careerPersonas-515c9265-7186-4902-ae4e-967269f78611",
-        "layout": "text-bottom-center"
-      },
-      {
-        "text": "Detective Maya on the case 🕵️‍♀️🔎 Clue #1: Always have fun while solving mysteries. Clue #2: Bring snacks for the squad. Case closed. 😂✨ #PuzzlePro #DetectiveVibes #MysterySolved #SquadGoals",
-        "imageUrl": "",
-        "key": "IPP-careerPersonas-4e1bb314-ecdb-461c-8cba-a0187df74303",
-        "layout": "text-bottom-center"
-      },
-      {
-        "text": "## \"Big ideas inspire me!\"",
-        "imageUrl": "https://images.code.org/223c7eaa64967213fbcbc72aecbda624-Screenshot 2025-01-14 104724.png",
-        "key": "undefined-a682ce3e-40a5-47ab-95f0-10b7b145ee49",
-        "layout": "text-bottom-left"
-      },
-      {
-        "text": "## \"I love working with others to solve big challenges!\"",
-        "imageUrl": "https://images.code.org/da9113fd8b538173da8e09469c12c656-Screenshot 2025-01-14 105133.png",
-        "key": "undefined-1737e582-c669-4266-b428-837a44bdade4"
-      },
-      {
-        "text": "## \"I love escape room puzzles!\"",
-        "imageUrl": "https://images.code.org/8d37e3b0595f672376cea0232d1993c4-Screenshot 2025-01-14 104025.png",
-        "key": "undefined-ccb0bb2c-6711-4a94-9328-d9d683897239",
         "layout": "text-bottom-right"
       }
     ],
-    "bubble_choice_description": "Check out Maya's recent posts. \n\nWhat type of career would be best for her?",
+    "bubble_choice_description": "**Age:** 16\n\n**Hobbies:** Solving puzzles\n\n**Favorite Subject:** Science\n\n**Favorite Movie:** Hidden Figures (inspired by data's role in solving big problems).",
     "display_name": "Maya",
     "thumbnail_url": "https://images.code.org/223c7eaa64967213fbcbc72aecbda624-Screenshot 2025-01-14 104724.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-14 18:27:54 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 18:51:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 19:24:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-16 20:31:27 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-16 20:31:46 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-17 00:55:17 +0000\",\"changed\":[\"offer_browser_tts\",\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 00:56:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 00:57:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:05:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:07:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:09:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:09:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:13:57 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:14:36 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:14:41 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:15:16 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:31:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-14 18:27:54 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 18:51:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 19:24:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-16 20:31:27 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-16 20:31:46 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-17 00:55:17 +0000\",\"changed\":[\"offer_browser_tts\",\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 00:56:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 00:57:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:05:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:07:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:09:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:09:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:13:57 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:14:36 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:14:41 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:15:16 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 01:31:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 16:36:18 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 16:39:49 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 16:48:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 16:48:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 18:48:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 18:50:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 22:28:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 22:28:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

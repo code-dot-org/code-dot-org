@@ -11,12 +11,18 @@ export const START_LOADING_COURSES = 'unitSelection/START_LOADING_COURSES';
 export const FINISHED_LOADING_COURSES =
   'unitSelection/FINISHED_LOADING_COURSES';
 
+const SET_LOADED_SECTION_ID = 'unitSelection/SET_LOADED_SECTION_ID';
+
 // Action creators
 export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
 export const setUnitName = unitName => ({type: SET_UNIT_NAME, unitName});
 export const setCoursesWithProgress = coursesWithProgress => ({
   type: SET_COURSES,
   coursesWithProgress,
+});
+export const setLoadedSectionId = loadedSectionId => ({
+  type: SET_LOADED_SECTION_ID,
+  loadedSectionId,
 });
 
 export const startLoadingCoursesWithProgress = () => ({
@@ -68,10 +74,13 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
   const selectedSection =
     state.teacherSections.sections[state.teacherSections.selectedSectionId];
 
-  if (state.unitSelection.isLoadingCoursesWithProgress || !selectedSection) {
+  if (
+    state.unitSelection.isLoadingCoursesWithProgress ||
+    !selectedSection ||
+    state.unitSelection.loadedSectionId === selectedSection.id
+  ) {
     return;
   }
-
   dispatch(startLoadingCoursesWithProgress());
 
   fetch(`/dashboardapi/section_courses/${selectedSection.id}`, {
@@ -99,6 +108,7 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
       ].reverse();
       dispatch(setCoursesWithProgress(reorderedCourses));
       dispatch(finishedLoadingCoursesWithProgress());
+      dispatch(setLoadedSectionId(selectedSection.id));
     })
     .catch(err => {
       console.error(err.message);
@@ -112,6 +122,7 @@ const initialState = {
   unitName: null,
   coursesWithProgress: [],
   isLoadingCoursesWithProgress: false,
+  loadedSectionId: null,
 };
 
 export default function unitSelection(state = initialState, action) {
@@ -154,6 +165,13 @@ export default function unitSelection(state = initialState, action) {
     return {
       ...state,
       isLoadingCoursesWithProgress: false,
+    };
+  }
+
+  if (action.type === SET_LOADED_SECTION_ID) {
+    return {
+      ...state,
+      loadedSectionId: action.loadedSectionId,
     };
   }
 
