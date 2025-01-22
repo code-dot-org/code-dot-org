@@ -156,13 +156,13 @@ def main
 
   puts "Looking up channel ids..."
   start_time = Time.now
-  # not parallelizing this step yet because we are limited to 5 connections to active record.
-  results = results.map do |row|
+  db_threads = 5
+  results = Parallel.map(results, in_threads: db_threads) do |row|
     channel_id = get_project_channel_id(row['user_id'], row['level_id'], row['script_id'])
     row[:channel_id] = channel_id
     row
   end
-  puts "Channel id lookups completed in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count}"
+  puts "Channel id lookups completed in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count} threads: #{db_threads}"
 
   puts "Processing source..."
   start_time = Time.now
