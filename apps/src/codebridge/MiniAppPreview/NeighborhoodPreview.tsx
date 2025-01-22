@@ -61,7 +61,6 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
     const mazeContents = serializedMaze?.contents
       ? (JSON.parse(serializedMaze.contents) as MazeCell[][])
       : undefined;
-    console.log({mazeContents});
     const parsedLevelProperties = mazeContents
       ? {...levelProperties, serializedMaze: mazeContents}
       : levelProperties;
