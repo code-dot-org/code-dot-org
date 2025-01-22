@@ -67,6 +67,7 @@ DefaultTags.args = {
       tooltipId: 'english-science',
       tooltipContent: 'English, Science',
     },
+    {label: 'No tooltip'},
   ],
   size: 'm',
   className: 'test',
