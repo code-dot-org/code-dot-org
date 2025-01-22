@@ -6,6 +6,11 @@ export const DividerContentfulComponentDefinition: ComponentDefinition = {
   name: 'Divider',
   category: 'Custom Components',
   builtInStyles: 'cfMargin',
+  // thumbnailUrl: 'https://code.org/images/logo.svg',
+  tooltip: {
+    description: 'A horizontal line to separate content',
+    // imageUrl: 'https://code.org/images/logo.svg',
+  },
   variables: {
     color: {
       displayName: 'Color',
