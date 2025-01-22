@@ -1,9 +1,11 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {
   DEFAULT_FOLDER_ID,
   MAZE_FILE_NAME,
   MiniApps,
 } from '@codebridge/constants';
+import {findFile} from '@codebridge/utils';
 import React, {useEffect, useMemo} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
@@ -12,9 +14,6 @@ import skins from '@cdo/apps/maze/skins';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import CodebridgeRegistry from '../CodebridgeRegistry';
-import {findFile} from '../utils';
 
 // Preview panel for the neighborhood mini app.
 const NeighborhoodPreview: React.FunctionComponent = () => {

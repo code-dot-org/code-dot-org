@@ -1,4 +1,6 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {MiniApps} from '@codebridge/constants';
 import Workspace from '@codebridge/Workspace';
 import {debounce} from 'lodash';
 import React, {useEffect, useMemo} from 'react';
@@ -6,9 +8,6 @@ import React, {useEffect, useMemo} from 'react';
 import globalStyleConstants from '@cdo/apps/styleConstants';
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 import color from '@cdo/apps/util/color';
-
-import {useCodebridgeContext} from '../codebridgeContext';
-import {MiniApps} from '../constants';
 
 import Output from './Output';
 
