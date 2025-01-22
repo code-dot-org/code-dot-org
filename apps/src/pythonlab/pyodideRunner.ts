@@ -45,10 +45,7 @@ export async function handleRunClick(
     }
     consoleManager?.writeSystemMessage('Running program...', appName);
     await runPythonCode(code, source);
-    if (
-      getStore().getState().lab.levelProperties?.miniApp ===
-      MiniApps.Neighborhood
-    ) {
+    if (isNeighborhoodLevel()) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
     }
   }
@@ -60,10 +57,7 @@ export async function runPythonCode(
   validationFile?: ProjectFile
 ) {
   try {
-    if (
-      getStore().getState().lab.levelProperties?.miniApp ===
-      MiniApps.Neighborhood
-    ) {
+    if (isNeighborhoodLevel()) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
       CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
     }
@@ -77,9 +71,7 @@ export async function runPythonCode(
 }
 
 export function stopPythonCode() {
-  if (
-    getStore().getState().lab.levelProperties?.miniApp === MiniApps.Neighborhood
-  ) {
+  if (isNeighborhoodLevel()) {
     CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
   }
   // This will terminate the worker and create a new one if there is a running program.
@@ -126,4 +118,10 @@ export async function runAllTests(
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.
     await runPythonCode(runStudentTests(), source);
   }
+}
+
+function isNeighborhoodLevel() {
+  return (
+    getStore().getState().lab.levelProperties?.miniApp === MiniApps.Neighborhood
+  );
 }
