@@ -9,5 +9,3 @@ def test_initialize_neighborhood_signal_message():
   # With detail field
   paint_signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.PAINT.value, {'color': 'blue'})
   assert paint_signal_message.get_formatted_message() == '[PAINTER] PAINT {"color": "blue"}'
-
-

@@ -175,6 +175,11 @@ export function getBaseName(themeName: Themes) {
     return themeName.replace(DARK_THEME_SUFFIX, '');
   }
 }
+
+export function isDarkTheme(theme: GoogleBlockly.Theme | undefined) {
+  return theme?.name.includes(DARK_THEME_SUFFIX);
+}
+
 export const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 

@@ -33,7 +33,7 @@ export default class CodebridgeRegistry {
     return this.consoleManager;
   }
 
-  public setNeighborhood(neighborhood: Neighborhood) {
+  public setNeighborhood(neighborhood: Neighborhood | null) {
     this.neighborhood = neighborhood;
   }
 

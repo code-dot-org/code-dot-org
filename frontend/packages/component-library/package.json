@@ -20,244 +20,245 @@
     "./package.json": "./package.json",
     "./alert": {
       "types": {
-        "import": "./dist/alert/index.d.mts",
-        "require": "./dist/alert/index.d.ts"
+        "import": "./dist/esm/alert/index.d.mts",
+        "require": "./dist/cjs/alert/index.d.ts"
       },
-      "import": "./dist/alert/index.mjs",
-      "require": "./dist/alert/index.js"
+      "import": "./dist/esm/alert/index.mjs",
+      "require": "./dist/cjs/alert/index.js"
     },
     "./breadcrumbs": {
       "types": {
-        "import": "./dist/breadcrumbs/index.d.mts",
-        "require": "./dist/breadcrumbs/index.d.ts"
+        "import": "./dist/esm/breadcrumbs/index.d.mts",
+        "require": "./dist/cjs/breadcrumbs/index.d.ts"
       },
-      "import": "./dist/breadcrumbs/index.mjs",
-      "require": "./dist/breadcrumbs/index.js"
+      "import": "./dist/esm/breadcrumbs/index.mjs",
+      "require": "./dist/cjs/breadcrumbs/index.js"
     },
     "./button": {
       "types": {
-        "import": "./dist/button/index.d.mts",
-        "require": "./dist/button/index.d.ts"
+        "import": "./dist/esm/button/index.d.mts",
+        "require": "./dist/cjs/button/index.d.ts"
       },
-      "import": "./dist/button/index.mjs",
-      "require": "./dist/button/index.js"
+      "import": "./dist/esm/button/index.mjs",
+      "require": "./dist/cjs/button/index.js"
     },
+    "./button/index.css": "./dist/esm/button/index.css",
     "./checkbox": {
       "types": {
-        "import": "./dist/checkbox/index.d.mts",
-        "require": "./dist/checkbox/index.d.ts"
+        "import": "./dist/esm/checkbox/index.d.mts",
+        "require": "./dist/cjs/checkbox/index.d.ts"
       },
-      "import": "./dist/checkbox/index.mjs",
-      "require": "./dist/checkbox/index.js"
+      "import": "./dist/esm/checkbox/index.mjs",
+      "require": "./dist/cjs/checkbox/index.js"
     },
     "./chips": {
       "types": {
-        "import": "./dist/chips/index.d.mts",
-        "require": "./dist/chips/index.d.ts"
+        "import": "./dist/esm/chips/index.d.mts",
+        "require": "./dist/cjs/chips/index.d.ts"
       },
-      "import": "./dist/chips/index.mjs",
-      "require": "./dist/chips/index.js"
+      "import": "./dist/esm/chips/index.mjs",
+      "require": "./dist/cjs/chips/index.js"
     },
     "./closeButton": {
       "types": {
-        "import": "./dist/closeButton/index.d.mts",
-        "require": "./dist/closeButton/index.d.ts"
+        "import": "./dist/esm/closeButton/index.d.mts",
+        "require": "./dist/cjs/closeButton/index.d.ts"
       },
-      "import": "./dist/closeButton/index.mjs",
-      "require": "./dist/closeButton/index.js"
+      "import": "./dist/esm/closeButton/index.mjs",
+      "require": "./dist/cjs/closeButton/index.js"
     },
     "./common": {
       "types": {
-        "import": "./dist/common/index.d.mts",
-        "require": "./dist/common/index.d.ts"
+        "import": "./dist/esm/common/index.d.mts",
+        "require": "./dist/cjs/common/index.d.ts"
       },
-      "import": "./dist/common/index.mjs",
-      "require": "./dist/common/index.js"
+      "import": "./dist/esm/common/index.mjs",
+      "require": "./dist/cjs/common/index.js"
     },
     "./common/contexts": {
       "types": {
-        "import": "./dist/common/contexts/index.d.mts",
-        "require": "./dist/common/contexts/index.d.ts"
+        "import": "./dist/esm/common/contexts/index.d.mts",
+        "require": "./dist/cjs/common/contexts/index.d.ts"
       },
-      "import": "./dist/common/contexts/index.mjs",
-      "require": "./dist/common/contexts/index.js"
+      "import": "./dist/esm/common/contexts/index.mjs",
+      "require": "./dist/cjs/common/contexts/index.js"
     },
     "./common/hooks": {
       "types": {
-        "import": "./dist/common/hooks/index.d.mts",
-        "require": "./dist/common/hooks/index.d.ts"
+        "import": "./dist/esm/common/hooks/index.d.mts",
+        "require": "./dist/cjs/common/hooks/index.d.ts"
       },
-      "import": "./dist/common/hooks/index.mjs",
-      "require": "./dist/common/hooks/index.js"
+      "import": "./dist/esm/common/hooks/index.mjs",
+      "require": "./dist/cjs/common/hooks/index.js"
     },
     "./common/styles": {
       "types": {
-        "import": "./dist/common/styles/index.d.mts",
-        "require": "./dist/common/styles/index.d.ts"
+        "import": "./dist/esm/common/styles/index.d.mts",
+        "require": "./dist/cjs/common/styles/index.d.ts"
       },
-      "import": "./dist/common/styles/index.mjs",
-      "require": "./dist/common/styles/index.js"
+      "import": "./dist/esm/common/styles/index.mjs",
+      "require": "./dist/cjs/common/styles/index.js"
     },
     "./dialog": {
       "types": {
-        "import": "./dist/dialog/index.d.mts",
-        "require": "./dist/dialog/index.d.ts"
+        "import": "./dist/esm/dialog/index.d.mts",
+        "require": "./dist/cjs/dialog/index.d.ts"
       },
-      "import": "./dist/dialog/index.mjs",
-      "require": "./dist/dialog/index.js"
+      "import": "./dist/esm/dialog/index.mjs",
+      "require": "./dist/cjs/dialog/index.js"
     },
     "./divider": {
       "types": {
-        "import": "./dist/divider/index.d.mts",
-        "require": "./dist/divider/index.d.ts"
+        "import": "./dist/esm/divider/index.d.mts",
+        "require": "./dist/cjs/divider/index.d.ts"
       },
-      "import": "./dist/divider/index.mjs",
-      "require": "./dist/divider/index.js"
+      "import": "./dist/esm/divider/index.mjs",
+      "require": "./dist/cjs/divider/index.js"
     },
-    "./divider/index.css": "./dist/divider/index.css",
+    "./divider/index.css": "./dist/esm/divider/index.css",
     "./dropdown": {
       "types": {
-        "import": "./dist/dropdown/index.d.mts",
-        "require": "./dist/dropdown/index.d.ts"
+        "import": "./dist/esm/dropdown/index.d.mts",
+        "require": "./dist/cjs/dropdown/index.d.ts"
       },
-      "import": "./dist/dropdown/index.mjs",
-      "require": "./dist/dropdown/index.js"
+      "import": "./dist/esm/dropdown/index.mjs",
+      "require": "./dist/cjs/dropdown/index.js"
     },
     "./dropdown/actionDropdown": {
       "types": {
-        "import": "./dist/dropdown/actionDropdown/index.d.mts",
-        "require": "./dist/dropdown/actionDropdown/index.d.ts"
+        "import": "./dist/esm/dropdown/actionDropdown/index.d.mts",
+        "require": "./dist/cjs/dropdown/actionDropdown/index.d.ts"
       },
-      "import": "./dist/dropdown/actionDropdown/index.mjs",
-      "require": "./dist/dropdown/actionDropdown/index.js"
+      "import": "./dist/esm/dropdown/actionDropdown/index.mjs",
+      "require": "./dist/cjs/dropdown/actionDropdown/index.js"
     },
     "./dropdown/checkboxDropdown": {
       "types": {
-        "import": "./dist/dropdown/checkboxDropdown/index.d.mts",
-        "require": "./dist/dropdown/checkboxDropdown/index.d.ts"
+        "import": "./dist/esm/dropdown/checkboxDropdown/index.d.mts",
+        "require": "./dist/cjs/dropdown/checkboxDropdown/index.d.ts"
       },
-      "import": "./dist/dropdown/checkboxDropdown/index.mjs",
-      "require": "./dist/dropdown/checkboxDropdown/index.js"
+      "import": "./dist/esm/dropdown/checkboxDropdown/index.mjs",
+      "require": "./dist/cjs/dropdown/checkboxDropdown/index.js"
     },
     "./dropdown/iconDropdown": {
       "types": {
-        "import": "./dist/dropdown/iconDropdown/index.d.mts",
-        "require": "./dist/dropdown/iconDropdown/index.d.ts"
+        "import": "./dist/esm/dropdown/iconDropdown/index.d.mts",
+        "require": "./dist/cjs/dropdown/iconDropdown/index.d.ts"
       },
-      "import": "./dist/dropdown/iconDropdown/index.mjs",
-      "require": "./dist/dropdown/iconDropdown/index.js"
+      "import": "./dist/esm/dropdown/iconDropdown/index.mjs",
+      "require": "./dist/cjs/dropdown/iconDropdown/index.js"
     },
     "./dropdown/simpleDropdown": {
       "types": {
-        "import": "./dist/dropdown/simpleDropdown/index.d.mts",
-        "require": "./dist/dropdown/simpleDropdown/index.d.ts"
+        "import": "./dist/esm/dropdown/simpleDropdown/index.d.mts",
+        "require": "./dist/cjs/dropdown/simpleDropdown/index.d.ts"
       },
-      "import": "./dist/dropdown/simpleDropdown/index.mjs",
-      "require": "./dist/dropdown/simpleDropdown/index.js"
+      "import": "./dist/esm/dropdown/simpleDropdown/index.mjs",
+      "require": "./dist/cjs/dropdown/simpleDropdown/index.js"
     },
     "./fontAwesomeV6Icon": {
       "types": {
-        "import": "./dist/fontAwesomeV6Icon/index.d.mts",
-        "require": "./dist/fontAwesomeV6Icon/index.d.ts"
+        "import": "./dist/esm/fontAwesomeV6Icon/index.d.mts",
+        "require": "./dist/cjs/fontAwesomeV6Icon/index.d.ts"
       },
-      "import": "./dist/fontAwesomeV6Icon/index.mjs",
-      "require": "./dist/fontAwesomeV6Icon/index.js"
+      "import": "./dist/esm/fontAwesomeV6Icon/index.mjs",
+      "require": "./dist/cjs/fontAwesomeV6Icon/index.js"
     },
     "./link": {
       "types": {
-        "import": "./dist/link/index.d.mts",
-        "require": "./dist/link/index.d.ts"
+        "import": "./dist/esm/link/index.d.mts",
+        "require": "./dist/cjs/link/index.d.ts"
       },
-      "import": "./dist/link/index.mjs",
-      "require": "./dist/link/index.js"
+      "import": "./dist/esm/link/index.mjs",
+      "require": "./dist/cjs/link/index.js"
     },
     "./modal": {
       "types": {
-        "import": "./dist/modal/index.d.mts",
-        "require": "./dist/modal/index.d.ts"
+        "import": "./dist/esm/modal/index.d.mts",
+        "require": "./dist/cjs/modal/index.d.ts"
       },
-      "import": "./dist/modal/index.mjs",
-      "require": "./dist/modal/index.js"
+      "import": "./dist/esm/modal/index.mjs",
+      "require": "./dist/cjs/modal/index.js"
     },
     "./popover": {
       "types": {
-        "import": "./dist/popover/index.d.mts",
-        "require": "./dist/popover/index.d.ts"
+        "import": "./dist/esm/popover/index.d.mts",
+        "require": "./dist/cjs/popover/index.d.ts"
       },
-      "import": "./dist/popover/index.mjs",
-      "require": "./dist/popover/index.js"
+      "import": "./dist/esm/popover/index.mjs",
+      "require": "./dist/cjs/popover/index.js"
     },
     "./radioButton": {
       "types": {
-        "import": "./dist/radioButton/index.d.mts",
-        "require": "./dist/radioButton/index.d.ts"
+        "import": "./dist/esm/radioButton/index.d.mts",
+        "require": "./dist/cjs/radioButton/index.d.ts"
       },
-      "import": "./dist/radioButton/index.mjs",
-      "require": "./dist/radioButton/index.js"
+      "import": "./dist/esm/radioButton/index.mjs",
+      "require": "./dist/cjs/radioButton/index.js"
     },
     "./segmentedButtons": {
       "types": {
-        "import": "./dist/segmentedButtons/index.d.mts",
-        "require": "./dist/segmentedButtons/index.d.ts"
+        "import": "./dist/esm/segmentedButtons/index.d.mts",
+        "require": "./dist/cjs/segmentedButtons/index.d.ts"
       },
-      "import": "./dist/segmentedButtons/index.mjs",
-      "require": "./dist/segmentedButtons/index.js"
+      "import": "./dist/esm/segmentedButtons/index.mjs",
+      "require": "./dist/cjs/segmentedButtons/index.js"
     },
     "./slider": {
       "types": {
-        "import": "./dist/slider/index.d.mts",
-        "require": "./dist/slider/index.d.ts"
+        "import": "./dist/esm/slider/index.d.mts",
+        "require": "./dist/cjs/slider/index.d.ts"
       },
-      "import": "./dist/slider/index.mjs",
-      "require": "./dist/slider/index.js"
+      "import": "./dist/esm/slider/index.mjs",
+      "require": "./dist/cjs/slider/index.js"
     },
     "./tabs": {
       "types": {
-        "import": "./dist/tabs/index.d.mts",
-        "require": "./dist/tabs/index.d.ts"
+        "import": "./dist/esm/tabs/index.d.mts",
+        "require": "./dist/cjs/tabs/index.d.ts"
       },
-      "import": "./dist/tabs/index.mjs",
-      "require": "./dist/tabs/index.js"
+      "import": "./dist/esm/tabs/index.mjs",
+      "require": "./dist/cjs/tabs/index.js"
     },
     "./tags": {
       "types": {
-        "import": "./dist/tags/index.d.mts",
-        "require": "./dist/tags/index.d.ts"
+        "import": "./dist/esm/tags/index.d.mts",
+        "require": "./dist/cjs/tags/index.d.ts"
       },
-      "import": "./dist/tags/index.mjs",
-      "require": "./dist/tags/index.js"
+      "import": "./dist/esm/tags/index.mjs",
+      "require": "./dist/cjs/tags/index.js"
     },
     "./textField": {
       "types": {
-        "import": "./dist/textField/index.d.mts",
-        "require": "./dist/textField/index.d.ts"
+        "import": "./dist/esm/textField/index.d.mts",
+        "require": "./dist/cjs/textField/index.d.ts"
       },
-      "import": "./dist/textField/index.mjs",
-      "require": "./dist/textField/index.js"
+      "import": "./dist/esm/textField/index.mjs",
+      "require": "./dist/cjs/textField/index.js"
     },
     "./toggle": {
       "types": {
-        "import": "./dist/toggle/index.d.mts",
-        "require": "./dist/toggle/index.d.ts"
+        "import": "./dist/esm/toggle/index.d.mts",
+        "require": "./dist/cjs/toggle/index.d.ts"
       },
-      "import": "./dist/toggle/index.mjs",
-      "require": "./dist/toggle/index.js"
+      "import": "./dist/esm/toggle/index.mjs",
+      "require": "./dist/cjs/toggle/index.js"
     },
     "./tooltip": {
       "types": {
-        "import": "./dist/tooltip/index.d.mts",
-        "require": "./dist/tooltip/index.d.ts"
+        "import": "./dist/esm/tooltip/index.d.mts",
+        "require": "./dist/cjs/tooltip/index.d.ts"
       },
-      "import": "./dist/tooltip/index.mjs",
-      "require": "./dist/tooltip/index.js"
+      "import": "./dist/esm/tooltip/index.mjs",
+      "require": "./dist/cjs/tooltip/index.js"
     },
     "./typography": {
       "types": {
-        "import": "./dist/typography/index.d.mts",
-        "require": "./dist/typography/index.d.ts"
+        "import": "./dist/esm/typography/index.d.mts",
+        "require": "./dist/cjs/typography/index.d.ts"
       },
-      "import": "./dist/typography/index.mjs",
-      "require": "./dist/typography/index.js"
+      "import": "./dist/esm/typography/index.mjs",
+      "require": "./dist/cjs/typography/index.js"
     }
   },
   "main": "components/index.ts",
@@ -282,8 +283,7 @@
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
     "classnames": "^2.5.1",
-    "lodash": "^4.17.21",
-    "react-bootstrap": "^2.10.5"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "@code-dot-org/legacy-css": "workspace:*",
