@@ -9,108 +9,126 @@ import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/s
 
 import aichatI18n from '../locale';
 import {submitTeacherFeedback} from '../redux/aichatRedux';
-import {ChatMessage} from '../types';
+import {FeedbackValue} from '../types';
 
 import moduleStyles from './teacher-feedback-footer.module.scss';
 
 interface Props {
   isProfanityViolation: boolean;
-  chatMessage: ChatMessage;
+  id: number;
+  teacherFeedback?: FeedbackValue;
+  role: Role;
 }
 
-const TeacherFeedbackFooter: React.FC<Props> = ({
-  isProfanityViolation,
-  chatMessage,
-}) => {
+const TeacherFeedbackFooter: React.FC<Props> = props => {
+  const Footer = props.isProfanityViolation ? ProfanityFooter : CleanFooter;
+  return <Footer {...props} />;
+};
+
+const CleanFooter: React.FC<Props> = ({id, teacherFeedback, role}) => {
   const dispatch = useAppDispatch();
-  const [thumbsUp, setThumbsUp] = useState(
-    chatMessage.teacherFeedback === TeacherFeedback.PROFANITY_AGREE
-  );
-  const [thumbsDown, setThumbsDown] = useState(
-    chatMessage.teacherFeedback === TeacherFeedback.PROFANITY_DISAGREE
-  );
-  const handleThumbClick = (thumbsUp: boolean, thumbsDown: boolean) => {
-    setThumbsUp(thumbsUp);
-    setThumbsDown(thumbsDown);
-    const teacherFeedback = thumbsUp
-      ? TeacherFeedback.PROFANITY_AGREE
-      : thumbsDown
-      ? TeacherFeedback.PROFANITY_DISAGREE
-      : undefined;
-    dispatch(submitTeacherFeedback({...chatMessage, teacherFeedback}));
+  const handleFlagClick = () => {
+    const toggled = !flaggedAsInappropriate;
+    setFlaggedAsInappropriate(toggled);
+    dispatch(
+      submitTeacherFeedback({
+        id,
+        feedback: toggled ? TeacherFeedback.CLEAN_DISAGREE : undefined,
+      })
+    );
   };
 
   const [flaggedAsInappropriate, setFlaggedAsInappropriate] = useState(
-    chatMessage.teacherFeedback === TeacherFeedback.CLEAN_DISAGREE
+    teacherFeedback === TeacherFeedback.CLEAN_DISAGREE
   );
-  const handleFlagClick = (toggle: boolean) => {
-    setFlaggedAsInappropriate(toggle);
-    const teacherFeedback = toggle ? TeacherFeedback.CLEAN_DISAGREE : undefined;
-    dispatch(submitTeacherFeedback({...chatMessage, teacherFeedback}));
+
+  return (
+    <div
+      className={classNames(
+        moduleStyles.teacherFeedbackContainer,
+        role === Role.ASSISTANT && moduleStyles.assistantFeedback
+      )}
+    >
+      <EmText
+        className={classNames(
+          moduleStyles.hiddenTilHover,
+          flaggedAsInappropriate && moduleStyles.showAlways
+        )}
+      >
+        {flaggedAsInappropriate
+          ? aichatI18n.chatMessage_hasBeenFlagged()
+          : aichatI18n.chatMessage_flagAsInappropriate()}
+      </EmText>
+      <Button
+        color={buttonColors.black}
+        icon={{iconName: 'flag-pennant', iconStyle: 'solid'}}
+        isIconOnly={true}
+        onClick={handleFlagClick}
+        size="xs"
+        type={flaggedAsInappropriate ? 'primary' : 'tertiary'}
+        className={classNames(
+          moduleStyles['button-xxs'],
+          !flaggedAsInappropriate && moduleStyles.flagButtonColorOverride
+        )}
+        ariaLabel={flaggedAsInappropriate ? 'unflag' : 'flag'}
+      />
+    </div>
+  );
+};
+
+const ProfanityFooter: React.FC<Props> = ({id, teacherFeedback}) => {
+  const dispatch = useAppDispatch();
+  const [currentFeedback, setCurrentFeedback] = useState(teacherFeedback);
+
+  const handleThumbClick = (type: 'up' | 'down') => {
+    let feedback: FeedbackValue | undefined;
+    // If the user clicks the same thumb again, we should clear the feedback.
+    if (type === 'up') {
+      feedback =
+        currentFeedback === TeacherFeedback.PROFANITY_AGREE
+          ? undefined
+          : TeacherFeedback.PROFANITY_AGREE;
+    } else {
+      feedback =
+        currentFeedback === TeacherFeedback.PROFANITY_DISAGREE
+          ? undefined
+          : TeacherFeedback.PROFANITY_DISAGREE;
+    }
+
+    setCurrentFeedback(feedback);
+    dispatch(submitTeacherFeedback({id, feedback}));
   };
 
   return (
-    <>
-      {isProfanityViolation && (
-        <div className={moduleStyles.teacherFeedbackContainer}>
-          <EmText>{aichatI18n.chatMessage_wasContentFlaggedCorrectly()}</EmText>
-          <Button
-            color={buttonColors.black}
-            disabled={false}
-            icon={{iconName: 'thumbs-up', iconStyle: 'solid'}}
-            isIconOnly={true}
-            onClick={() => handleThumbClick(!thumbsUp, false)}
-            size="xs"
-            type={thumbsUp ? 'primary' : 'tertiary'}
-            ariaLabel="thumbs up"
-          />
-          <Button
-            color={buttonColors.black}
-            disabled={false}
-            icon={{iconName: 'thumbs-down', iconStyle: 'solid'}}
-            isIconOnly={true}
-            onClick={() => handleThumbClick(false, !thumbsDown)}
-            size="xs"
-            type={thumbsDown ? 'primary' : 'tertiary'}
-            ariaLabel="thumbs down"
-          />
-        </div>
-      )}
-      {!isProfanityViolation && (
-        <div
-          className={classNames(
-            moduleStyles.teacherFeedbackContainer,
-            chatMessage.role === Role.ASSISTANT &&
-              moduleStyles.assistanctFeedbackContainerOverride
-          )}
-        >
-          <EmText
-            className={classNames(
-              moduleStyles.hiddenTilHover,
-              flaggedAsInappropriate && moduleStyles.showAlways
-            )}
-          >
-            {flaggedAsInappropriate
-              ? aichatI18n.chatMessage_hasBeenFlagged()
-              : aichatI18n.chatMessage_flagAsInappropriate()}
-          </EmText>
-          <Button
-            color={buttonColors.black}
-            disabled={false}
-            icon={{iconName: 'flag-pennant', iconStyle: 'solid'}}
-            isIconOnly={true}
-            onClick={() => handleFlagClick(!flaggedAsInappropriate)}
-            size="xs"
-            type={flaggedAsInappropriate ? 'primary' : 'tertiary'}
-            className={classNames(
-              moduleStyles['button-xxs'],
-              !flaggedAsInappropriate && moduleStyles.flagButtonColorOverride
-            )}
-            ariaLabel={flaggedAsInappropriate ? 'unflag' : 'flag'}
-          />
-        </div>
-      )}
-    </>
+    <div className={moduleStyles.teacherFeedbackContainer}>
+      <EmText>{aichatI18n.chatMessage_wasContentFlaggedCorrectly()}</EmText>
+      <Button
+        color={buttonColors.black}
+        icon={{iconName: 'thumbs-up', iconStyle: 'solid'}}
+        isIconOnly={true}
+        onClick={() => handleThumbClick('up')}
+        size="xs"
+        type={
+          currentFeedback === TeacherFeedback.PROFANITY_AGREE
+            ? 'primary'
+            : 'tertiary'
+        }
+        ariaLabel="thumbs up"
+      />
+      <Button
+        color={buttonColors.black}
+        icon={{iconName: 'thumbs-down', iconStyle: 'solid'}}
+        isIconOnly={true}
+        onClick={() => handleThumbClick('down')}
+        size="xs"
+        type={
+          currentFeedback === TeacherFeedback.PROFANITY_DISAGREE
+            ? 'primary'
+            : 'tertiary'
+        }
+        ariaLabel="thumbs down"
+      />
+    </div>
   );
 };
 

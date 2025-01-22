@@ -24,13 +24,16 @@ export interface ChatEvent {
   descriptionKey?: ChatEventDescriptionKey;
 }
 
+// Convenience type for the values of AiChatTeacherFeedback
+export type FeedbackValue = ValueOf<typeof AiChatTeacherFeedback>;
+
 export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
   requestId?: number;
   // If undefined, the teacher took no action or undid their action.
-  teacherFeedback?: ValueOf<typeof AiChatTeacherFeedback>;
+  teacherFeedback?: FeedbackValue;
 }
 
 export interface ModelUpdate extends ChatEvent {
