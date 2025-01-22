@@ -25,7 +25,6 @@ end.parse!
 
 require_relative '../../deployment'
 require_relative '../../lib/cdo/redshift' if rack_env?(:production)
-require 'active_record'
 
 start_time = Time.now
 puts "Loading Rails environment..."
@@ -37,20 +36,6 @@ $comprehend = Aws::Comprehend::Client.new
 $pii_threshold = 0.7
 
 $max_threads = 100
-
-# @param [Integer] new_pool_size
-def set_pool_size(new_pool_size)
-  return unless new_pool_size > 5
-
-  # Backup the current configuration
-  original_config = ActiveRecord::Base.connection_pool.db_config.configuration_hash
-
-  # Modify the pool size
-  new_config = original_config.merge(pool: new_pool_size)
-
-  # Establish a new connection with the updated pool size
-  ActiveRecord::Base.establish_connection(new_config)
-end
 
 def fetch_progress
   if Rails.env.production?
@@ -171,8 +156,7 @@ def main
 
   puts "Looking up channel ids..."
   start_time = Time.now
-  db_threads = 20
-  set_pool_size(db_threads)
+  db_threads = 5
   results = Parallel.map(results, in_threads: db_threads) do |row|
     channel_id = get_project_channel_id(row['user_id'], row['level_id'], row['script_id'])
     row[:channel_id] = channel_id
