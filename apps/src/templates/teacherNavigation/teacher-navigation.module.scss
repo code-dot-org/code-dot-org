@@ -48,13 +48,15 @@
 .sidebarNewTags{
   margin-inline-start: 10px;
 
-  div {
-    background-color: $light_primary_500 !important;
+}
 
-    span {
-      color: $white !important;
-    }
-  }
+.sidebarSectionHeader .sidebarNewTags div {
+  background-color: $light_primary_500;
+
+}
+
+.sidebarSectionHeader .sidebarNewTags div span {
+  color: $white
 }
 
 .sectionDropdown {

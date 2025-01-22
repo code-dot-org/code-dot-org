@@ -32,7 +32,6 @@ export interface TagProps {
    *  Icon object consists of icon(icon name/style, title for screenReader,
    *  and the placement of the icon (left or right))*/
   icon?: TagIconProps;
-  // color?: TagColor;
 }
 
 const Tag: React.FunctionComponent<TagProps> = ({
