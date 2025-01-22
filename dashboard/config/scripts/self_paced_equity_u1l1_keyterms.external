@@ -24,14 +24,76 @@ markdown <<MARKDOWN
 
 ## Key Terms
 
-* #### **Equity**: Ensuring that access, resources, and opportunities are provided for all to succeed and grow, and remove barriers especially for those who have been historically excluded.<sup>3</sup>
-* #### **Access**: The right and opportunity for all students to learn and experience computer science.<sup>3</sup>
-* #### **Diversity**: The variation in students' backgrounds, experiences, attitudes, and aspirations, particularly in relation to race/ethnicity, which leads to a diverse student body that enhances learning outcomes and promotes interactions with peers from different backgrounds.<sup>2</sup>
-* #### **Inclusion**: Creating learning environments that are accessible and welcoming of students’ identities, backgrounds, differences and perspectives without barriers or judgment. This means actively attending to gender, race, ethnicity, ability, or socioeconomic status.<sup>3</sup>
-* #### **Belonging**: Belonging is the feeling of security and support when there is a sense of acceptance, inclusion, and identity for a member of a certain group.<sup>3</sup>
-* #### **Computer Science**: the study of computers and algorithmic processes, including their principles, their hardware and software designs, their [implementation], and their impact on society.<sup>1</sup>
-<br>
+#### For each of the key terms below, take a moment to consider its meaning to you. Then, open each drop-down box and review our definition.
 
+##### Click on the arrows below to expand each section.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Equity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### Ensuring that access, resources, and opportunities are provided for all to succeed and grow, and remove barriers especially for those who have been historically excluded.<sup>3</sup>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Access</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### The right and opportunity for all students to learn and experience computer science.<sup>3</sup>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Diversity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### The variation in students' backgrounds, experiences, attitudes, and aspirations, particularly in relation to race/ethnicity, which leads to a diverse student body that enhances learning outcomes and promotes interactions with peers from different backgrounds.<sup>2</sup>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Inclusion</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### Creating learning environments that are accessible and welcoming of students’ identities, backgrounds, differences and perspectives without barriers or judgment. This means actively attending to gender, race, ethnicity, ability, or socioeconomic status.<sup>3</sup>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Belonging</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### The feeling of security and support when there is a sense of acceptance, inclusion, and identity for a member of a certain group.<sup>3</sup>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Computer Science</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### The study of computers and algorithmic processes, including their principles, their hardware and software designs, their [implementation], and their impact on society.<sup>1</sup>
+
+</p></div>
+</details>
+<br>
 
 <div style="display: flex; align-items: left;">
 	<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" style="width: auto; height: 100px;"  alt="An illuminated light bulb with a brain inside of it.">

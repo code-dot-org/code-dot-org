@@ -250,11 +250,12 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
                   customStyles={style}
                   key={id}
                   isTA={true}
-                >
-                  {item.role === Role.ASSISTANT && (
-                    <AiDiffBotMessageFooter message={item} />
-                  )}
-                </ChatMessage>
+                  footer={
+                    item.role === Role.ASSISTANT && (
+                      <AiDiffBotMessageFooter message={item} />
+                    )
+                  }
+                />
               )
             )}
             <img

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "pilot-elem-music-lab",
-    "serialized_at": "2025-01-18 00:07:03 UTC",
+    "serialized_at": "2025-01-22 02:09:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -59,6 +59,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "background": "dark",
         "overview": "In this lesson, students will be exploring the foundational concepts of sequencing and loops in programming as they step into the role of a songwriter using Music Lab. They will learn that computers only follow the instructions given to them in the order specified, emphasizing the importance of clear and logical step-by-step directions. Students will discover how to identify repeating patterns in their code and use loops to make it more efficient. By layering musical sounds and breaking down complex tasks, students will develop problem-solving skills while also gaining insight into how technology is used in music careers to bring creative ideas to life."
       },
       "seeding_key": {
@@ -75,6 +76,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "background": "dark",
         "overview": "In this lesson, students will act as music producers, refining remixes in Music Lab while learning how functions can simplify and organize their code. They will learn how to make a new function and then call it into the main program. This lesson demonstrates how producers combine technology and creativity with a song's structure to create polished tracks."
       },
       "seeding_key": {
@@ -91,6 +93,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "background": "dark",
         "overview": "In this lesson, students will become sound designers, using Music Lab to create an interactive soundtracks for a stories or games. They will learn how to use events to trigger actions, adding interactivity to their code, and explore effects to shape the mood of their music. This lesson highlights how sound designers enhance storytelling and player engagement through music and sound."
       },
       "seeding_key": {
@@ -107,6 +110,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -122,6 +126,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -137,6 +142,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -152,6 +158,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -167,6 +174,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -182,6 +190,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -376,6 +385,30 @@
       "seeding_key": {
         "lesson_activity.key": "359248fc-b72d-4861-a024-1a076c0864ad",
         "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pilot-elem-music-lab"
+      }
+    },
+    {
+      "key": "a32717b9-5b4d-42b1-8031-5c75baad74e2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a32717b9-5b4d-42b1-8031-5c75baad74e2",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pilot-elem-music-lab"
+      }
+    },
+    {
+      "key": "bc5c1e9c-3ef2-4479-9e6d-786d69704015",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bc5c1e9c-3ef2-4479-9e6d-786d69704015",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pilot-elem-music-lab"
       }
@@ -713,6 +746,26 @@
       }
     },
     {
+      "key": "99cd52ae-5c8f-4e01-9cee-f916b4bd430e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "99cd52ae-5c8f-4e01-9cee-f916b4bd430e",
+        "lesson_activity.key": "a32717b9-5b4d-42b1-8031-5c75baad74e2"
+      }
+    },
+    {
+      "key": "cbc1da42-455a-4abc-8dc4-55659e35daf4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cbc1da42-455a-4abc-8dc4-55659e35daf4",
+        "lesson_activity.key": "bc5c1e9c-3ef2-4479-9e6d-786d69704015"
+      }
+    },
+    {
       "key": "883ed86e-f696-453a-9740-00c248903cc3",
       "position": 1,
       "properties": {
@@ -730,6 +783,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-career1-panel"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -752,6 +808,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-sound"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -774,6 +833,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-two"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -796,6 +858,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-panel"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -818,6 +883,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-together1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -840,6 +908,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-ingro-loop1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -862,6 +933,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-5sounds"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -884,6 +958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-panel-rests"
+        ],
         "progression": "Music Integration Video"
       },
       "bonus": false,
@@ -956,6 +1033,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-drop-panel"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -978,6 +1058,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-drop2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1000,6 +1083,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-drop3"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1022,6 +1108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-make"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
