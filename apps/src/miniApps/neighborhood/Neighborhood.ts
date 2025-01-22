@@ -20,7 +20,7 @@ const SIGNAL_CHECK_TIME = 200;
 const SVG_ID = 'svgMaze';
 
 // We are relying on old maze skins here, which are not typed.
-export type SkinType = Record<string, unknown>;
+type SkinType = Record<string, unknown>;
 
 export default class Neighborhood {
   private controller: typeof MazeController | null;
@@ -32,7 +32,6 @@ export default class Neighborhood {
   private speedSlider: Slider | null;
   private signals: NeighborhoodSignal[];
   private nextSignalIndex: number;
-  private hasInitialized: boolean;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -49,7 +48,6 @@ export default class Neighborhood {
     this.speedSlider = null;
     this.signals = [];
     this.nextSignalIndex = -1;
-    this.hasInitialized = false;
   }
 
   afterInject(
@@ -70,9 +68,8 @@ export default class Neighborhood {
     if (!level.serializedMaze) {
       return;
     }
-    if (this.controller) {
-      this.prepareForNewMaze();
-    }
+    this.prepareForNewMaze();
+
     this.controller = new MazeController(level, skin, config, {
       // TODO: Either get rid of these methods or support audio in Neighborhood.
       // https://codedotorg.atlassian.net/browse/CT-942
@@ -107,7 +104,6 @@ export default class Neighborhood {
         this.speedSlider!.setValue(value);
       };
     }
-    this.hasInitialized = true;
   }
 
   handleSignal(signal: NeighborhoodSignal | null) {
@@ -267,6 +263,10 @@ export default class Neighborhood {
     return -2 * this.speedSlider!.getValue() + 2;
   }
 
+  // Ensure the svg maze is empty except for the 'look' tile.
+  // We will reuse the same svg for a new maze if the user changes their version
+  // and had a different maze in a previous version.
+  // We want to make sure it's empty to avoid confusing rendering bugs due to overlapping tiles.
   prepareForNewMaze() {
     const svg = document.getElementById(SVG_ID);
     // Visualization.jsx includes a 'look' tile that we want to keep inside svgMaze.

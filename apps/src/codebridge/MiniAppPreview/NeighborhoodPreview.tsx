@@ -19,10 +19,9 @@ import {findFile} from '../utils';
 // Preview panel for the neighborhood mini app.
 const NeighborhoodPreview: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
-  const {source} = useCodebridgeContext();
+  const {source, config} = useCodebridgeContext();
   const serializedMaze = findFile(source, MAZE_FILE_NAME, DEFAULT_FOLDER_ID);
   const dispatch = useAppDispatch();
-  const {config} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
 
   const neighborhood = useMemo(() => {
@@ -60,6 +59,8 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
     const mazeContents = serializedMaze?.contents
       ? (JSON.parse(serializedMaze.contents) as MazeCell[][])
       : undefined;
+
+    // Combine the serialized maze from the project with the level properties.
     const parsedLevelProperties = mazeContents
       ? {...levelProperties, serializedMaze: mazeContents}
       : levelProperties;

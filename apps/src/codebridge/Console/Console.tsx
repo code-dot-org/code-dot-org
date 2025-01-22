@@ -1,3 +1,4 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {FitAddon} from '@xterm/addon-fit';
@@ -13,8 +14,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import '@xterm/xterm/css/xterm.css';
-
-import {useCodebridgeContext} from '../codebridgeContext';
 
 import ConsoleManager from './ConsoleManager';
 import ControlButtons from './ControlButtons';

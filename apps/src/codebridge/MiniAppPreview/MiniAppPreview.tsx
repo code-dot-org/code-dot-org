@@ -11,10 +11,9 @@ import NeighborhoodPreview from './NeighborhoodPreview';
 import moduleStyles from './mini-app-preview.module.scss';
 
 const MiniAppPreview: React.FunctionComponent = () => {
-  const {config} = useCodebridgeContext();
+  const {config, labConfig} = useCodebridgeContext();
   const isHorizontal = config.activeGridLayout === 'horizontal';
 
-  const {labConfig} = useCodebridgeContext();
   const miniApp = labConfig?.miniApp?.name;
 
   const miniAppComponent =
