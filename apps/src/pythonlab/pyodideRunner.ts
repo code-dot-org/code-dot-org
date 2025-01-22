@@ -1,10 +1,12 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {MiniApps} from '@codebridge/constants';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {getStore} from '@cdo/apps/redux';
 
 import {getValidationFromSource} from '../codebridge';
 
@@ -43,7 +45,12 @@ export async function handleRunClick(
     }
     consoleManager?.writeSystemMessage('Running program...', appName);
     await runPythonCode(code, source);
-    CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+    if (
+      getStore().getState().lab.levelProperties?.miniApp ===
+      MiniApps.Neighborhood
+    ) {
+      CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+    }
   }
 }
 
@@ -53,10 +60,12 @@ export async function runPythonCode(
   validationFile?: ProjectFile
 ) {
   try {
-    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
-    if (neighborhood) {
-      neighborhood.reset();
-      neighborhood.onRun();
+    if (
+      getStore().getState().lab.levelProperties?.miniApp ===
+      MiniApps.Neighborhood
+    ) {
+      CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+      CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
     }
     return await asyncRun(mainFile, source, validationFile);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
