@@ -141,12 +141,23 @@ Resources:
             Name: DB_SUBNET_GROUP_NAME
             Value: !ImportValue VPC-DBSubnetGroup
           -
+            Name: DB_SECURITY_GROUP_ID
+            Value: !ImportValue VPC-DBSecurityGroup
+          -
             Name: REGION
             Value: !Ref AWS::Region
           -
+            Name: DB_INSTANCE_CLASS
+            Value: db.t3.medium
+          -
+            Name: DB_ENGINE
+            Value: aurora-mysql
+          -
+            Name: DB_NAME
+            Value: dashboard_production
+          -
             Name: HONEYBADGER_API_KEY
             Value: !Ref HoneybadgerApiKey
-
   CloudwatchLogsGroup:
     Type: AWS::Logs::LogGroup
     Properties:

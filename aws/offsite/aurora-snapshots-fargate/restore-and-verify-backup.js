@@ -9,6 +9,18 @@ const { RDSClient,
 } = require("@aws-sdk/client-rds");
 const mysqlPromise = require("promise-mysql");
 const Honeybadger = require("honeybadger");
+const crypto = require('crypto');
+
+function generateSimplePassword(length = 16) {
+  const chars = 'abcdefghijklmnopqrstuvwxyz';
+  let password = '';
+
+  for (let i = 0; i < length; i++) {
+    password += chars[crypto.randomInt(chars.length)];
+  }
+
+  return password;
+}
 
 const DB_CLUSTER_ID = process.env.DB_CLUSTER_ID;
 const DB_INSTANCE_ID = process.env.DB_INSTANCE_ID;
@@ -16,11 +28,10 @@ const DB_SNAPSHOT_IDENTIFIER_PREFIX = process.env.DB_SNAPSHOT_IDENTIFIER_PREFIX;
 const DB_SUBNET_GROUP_NAME = process.env.DB_SUBNET_GROUP_NAME;
 const DB_SECURITY_GROUP_ID = process.env.DB_SECURITY_GROUP_ID;
 const REGION = process.env.REGION;
-
-const DB_INSTANCE_CLASS = "db.t3.medium";
-const DB_ENGINE = "aurora-mysql";
-const DB_NAME = "dashboard_production";
-const NEW_PASSWORD = "asdfasdf";
+const DB_INSTANCE_CLASS = process.env.DB_INSTANCE_CLASS;
+const DB_ENGINE = process.env.DB_ENGINE;
+const DB_NAME = process.env.DB_NAME;
+const NEW_PASSWORD = generateSimplePassword(32);
 
 const restoreLatestSnapshot = async (rdsClient, clusterId, instanceId) => {
   // Ignore snapshots with "retain" in the name or any automated snapshots
@@ -134,17 +145,23 @@ const verifyDb = async (rdsClient, instanceId, password) => {
   });
 
   try {
+    // Get the last (most recent) row from the `users` table.
     const rows = await mysqlConnection.query(
-      "SELECT count(*) AS number_of_users, max(updated_at) AS last_updated_at FROM users"
+      "SELECT id, updated_at FROM users ORDER BY id DESC LIMIT 1"
     );
 
-    const statusMessage =
-      "Successfully queried offsite backup of database.  " +
-      "Number of Users = " +
-      rows[0].number_of_users +
-      ", Last Updated = " +
-      rows[0].last_updated_at;
+    const updatedAt = new Date(rows[0].updated_at);
+    const oneDayAgo = new Date();
+    oneDayAgo.setDate(oneDayAgo.getDate() - 1);
+
+    const statusMessage = `Queried offsite backup of database.
+      The most recently created User in the restored database has ID ${rows[0].id} and was Updated At ${updatedAt}.`;
     console.log(statusMessage);
+
+    if (updatedAt < oneDayAgo) {
+      throw new Error(`Latest user updated date/time (${updatedAt.toISOString()}) from the most recent offsite database
+       backup is more than 24 hours old. Recent database backups are not available/restorable in the offsite account.`);
+    }
   } finally {
     mysqlConnection.end();
   }

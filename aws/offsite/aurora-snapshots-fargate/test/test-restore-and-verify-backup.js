@@ -132,7 +132,7 @@ describe("#verifyDb()", function() {
     sinon.restore();
   });
 
-  it("should connect using the cluster master username, endpoint, and the provided password", async function() {
+  it("should connect using the cluster admin SQL username, endpoint, and the provided password", async function() {
     const password = "myPassword";
     const rdsClient = new RDSClient({});
 
@@ -142,8 +142,8 @@ describe("#verifyDb()", function() {
     const queryFake = sinon.fake.returns(
       Promise.resolve([
         {
-          number_of_users: 1,
-          last_updated_at: "now"
+          id: 1,
+          updated_at: new Date()
         }
       ])
     );
