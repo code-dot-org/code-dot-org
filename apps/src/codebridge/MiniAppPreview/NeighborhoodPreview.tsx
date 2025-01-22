@@ -13,6 +13,7 @@ import CodebridgeRegistry from '../CodebridgeRegistry';
 // Preview panel for the neighborhood mini app.
 const NeighborhoodPreview: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const dispatch = useAppDispatch();
   const {config} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
@@ -74,7 +75,7 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
         position: 'absolute',
       });
     }
-  }, [dispatch, levelProperties, isVertical, neighborhoodSkin]);
+  }, [dispatch, levelProperties, isVertical, neighborhoodSkin, currentLevelId]);
 
   return (
     <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
