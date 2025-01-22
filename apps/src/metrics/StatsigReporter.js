@@ -189,10 +189,14 @@ class StatsigReporter {
    */
   async runAutoCapture() {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      const client = new StatsigAutoCapturePlugin(
+      const optionsWithPlugins = {
+        ...this.options,
+        plugins: [new StatsigAutoCapturePlugin()],
+      };
+      const client = new StatsigClient(
         this.api_key,
         this.user,
-        this.options
+        optionsWithPlugins
       );
       runStatsigAutoCapture(client);
       await client.initializeAsync();
