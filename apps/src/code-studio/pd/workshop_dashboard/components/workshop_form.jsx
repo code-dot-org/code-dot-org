@@ -950,7 +950,7 @@ export class WorkshopForm extends React.Component {
         }
       })
       .fail(data => {
-        if (data.responseJSON.errors) {
+        if (data.responseJSON?.errors) {
           this.setState({
             errors: data.responseJSON.errors,
             showSaveConfirmation: false,
