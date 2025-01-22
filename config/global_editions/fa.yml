@@ -43,7 +43,7 @@ header:
         domain: studio.code.org
         id: header-student-home
       - title: course_catalog
-        url: /global/fa/students
+        url: /global/fa/catalog
         domain: studio.code.org
         id: header-student-courses
 
@@ -65,8 +65,8 @@ header:
   hamburger:
     student:
       - title: learn
-        domain: code.org
-        url: /global/fa/students
+        domain: studio.code.org
+        url: /global/fa/catalog
         id: learn
       - title: legal
         type: expander
@@ -84,8 +84,8 @@ header:
 
     teacher:
       - title: learn
-        domain: code.org
-        url: /global/fa/students
+        domain: studio.code.org
+        url: /global/fa/catalog
         id: learn
       - title: legal
         type: expander
