@@ -17,7 +17,7 @@ import {
 } from '../utils';
 
 // A flag that can be toggled to send events regardless of environment
-const ALWAYS_SEND = true;
+const ALWAYS_SEND = false;
 const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
 const STABLE_ID_KEY = 'statsig_stable_id';
 
