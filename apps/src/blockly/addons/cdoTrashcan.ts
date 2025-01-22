@@ -13,7 +13,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
   private svgLid_: SVGImageElement | undefined;
   private notAllowed_: SVGElement | undefined;
   public readonly TRASH_URL = '/blockly/media/trash.png';
-  public readonly LIGHT_TRASH_URL = '/blockly/media/light_trash.png';
+  public readonly TRASH_URL_DARK = '/blockly/media/trash_dark.png';
 
   constructor(workspace: GoogleBlockly.WorkspaceSvg) {
     super();
@@ -33,7 +33,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
      */
     this.lidOpen_ = 0;
     this.trashUrl = isDarkTheme(workspace.getTheme())
-      ? this.LIGHT_TRASH_URL
+      ? this.TRASH_URL_DARK
       : this.TRASH_URL;
   }
 
@@ -452,12 +452,12 @@ const ANIMATION_FRAMES = 4;
 /**
  * The minimum (resting) opacity of the trashcan and lid.
  */
-const OPACITY_MIN = 0.4;
+const OPACITY_MIN = 0.8;
 
 /**
  * The maximum (hovered) opacity of the trashcan and lid.
  */
-const OPACITY_MAX = 0.8;
+const OPACITY_MAX = 1.0;
 
 /**
  * The maximum angle the trashcan lid can opens to. At the end of the open
