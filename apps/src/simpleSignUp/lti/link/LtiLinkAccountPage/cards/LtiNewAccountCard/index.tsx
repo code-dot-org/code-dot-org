@@ -11,14 +11,14 @@ import {
   CardContent,
   CardHeader,
 } from '@cdo/apps/sharedComponents/card';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import {navigateToHref} from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
-
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {navigateToHref} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
 import {LtiProviderContext} from '../../context';
 
 import styles from '../../../../../link-account.module.scss';
