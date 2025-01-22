@@ -190,7 +190,7 @@ class Painter:
 
   def _get_initialization_message(self, x, y, direction, paint):
     detail = {
-                'id': f"painter-{Painter.last_id}",
+                'id': self.id,
                 'direction': direction,
                 'x': x,
                 'y': y,

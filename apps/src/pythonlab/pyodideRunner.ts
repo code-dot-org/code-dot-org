@@ -77,7 +77,11 @@ export async function runPythonCode(
 }
 
 export function stopPythonCode() {
-  CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  if (
+    getStore().getState().lab.levelProperties?.miniApp === MiniApps.Neighborhood
+  ) {
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
 }
