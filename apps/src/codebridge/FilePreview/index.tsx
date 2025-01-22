@@ -35,7 +35,7 @@ const getPreviewComponent = (
 
 export const FilePreview = () => {
   const {
-    project: {files},
+    source: {files},
     config: {previewFileTypes, PreviewComponents},
   } = useCodebridgeContext();
   const [previewFile, setPreviewFile] = useState<ProjectFile | undefined>(

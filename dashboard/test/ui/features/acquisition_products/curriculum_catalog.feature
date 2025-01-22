@@ -88,6 +88,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is selected
     And the "Section 2" checkbox is not selected
     And I click selector "button:contains(Confirm section assignments)"
+    And I wait until element "p:contains(You have successfully assigned)" is visible
 
     # Assign a course
     Then I wait until element "h4:contains(Computer Science Principles)" is visible
@@ -101,7 +102,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click selector "button:contains(Confirm section assignments)"
-    And element "p:contains(You have successfully assigned)" is visible
+    And I wait until element "p:contains(You have successfully assigned)" is visible
 
     # Confirm assignment
     Then I am on "http://studio.code.org"
@@ -259,7 +260,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click selector "button:contains(Confirm section assignments)"
-    And element "p:contains(You have successfully assigned)" is visible
+    And I wait until element "p:contains(You have successfully assigned)" is visible
 
     # Confirm assignment
     Then I am on "http://studio.code.org"

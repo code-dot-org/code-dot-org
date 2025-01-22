@@ -16,10 +16,6 @@ export default defineConfig({
     '/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf',
     '/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf',
   ],
-  banner: {
-    // Automatically load CSS on entrypoint injection
-    js: `import './index.css';`,
-  },
   esbuildPlugins: [
     sassPlugin({
       type: 'css',

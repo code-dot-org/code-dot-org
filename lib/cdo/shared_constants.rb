@@ -797,6 +797,15 @@ module SharedConstants
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
+  AI_CHAT_TEACHER_FEEDBACK = {
+    # The teacher flagged a message that our system did not flag as inappropriate.
+    CLEAN_DISAGREE: 'clean_disagree',
+    # The teacher agreed with our system's flagging of a message as inappropriate.
+    PROFANITY_AGREE: 'profanity_agree',
+    # The teacher disagreed with our system's flagging of a message as inappropriate.
+    PROFANITY_DISAGREE: 'profanity_disagree',
+  }
+
   US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
 
   PROJECT_SUBMISSION_STATUS = {
@@ -810,14 +819,14 @@ module SharedConstants
   }
 
   EDUCATOR_ROLES = [
-    {value: "classroom_teacher", label: "Classroom Teacher", category: 'Educator'},
-    {value: "stem_tech_teacher", label: "STEM/Technology Teacher", category: 'Educator'},
-    {value: "subject_area_teacher", label: "Subject Area Teacher", category: 'Educator'},
-    {value: "librarian_media_specialist", label: "Librarian/School Media Specialist", category: 'Educator'},
-    {value: "homeschool_teacher", label: "Homeschool Teacher", category: 'Educator'},
-    {value: "school_admin", label: "School Administrator", category: "Administrator"},
-    {value: "district_admin", label: "District Administrator", category: "Administrator"},
-    {value: "parent", label: "Parent", category: 'Other'},
-    {value: "other", label: "Other", category: 'Other'}
+    {value: "classroom_teacher", category: 'educator'},
+    {value: "stem_tech_teacher", category: 'educator'},
+    {value: "subject_area_teacher", category: 'educator'},
+    {value: "librarian_media_specialist", category: 'educator'},
+    {value: "homeschool_teacher", category: 'educator'},
+    {value: "school_admin", category: "admin"},
+    {value: "district_admin", category: "admin"},
+    {value: "parent", category: 'other'},
+    {value: "other", category: 'other'}
   ].freeze
 end

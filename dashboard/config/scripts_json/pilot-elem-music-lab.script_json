@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "pilot-elem-music-lab",
-    "serialized_at": "2025-01-10 23:30:21 UTC",
+    "serialized_at": "2025-01-22 02:09:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -59,6 +59,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "background": "dark",
         "overview": "In this lesson, students will be exploring the foundational concepts of sequencing and loops in programming as they step into the role of a songwriter using Music Lab. They will learn that computers only follow the instructions given to them in the order specified, emphasizing the importance of clear and logical step-by-step directions. Students will discover how to identify repeating patterns in their code and use loops to make it more efficient. By layering musical sounds and breaking down complex tasks, students will develop problem-solving skills while also gaining insight into how technology is used in music careers to bring creative ideas to life."
       },
       "seeding_key": {
@@ -75,6 +76,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "background": "dark",
         "overview": "In this lesson, students will act as music producers, refining remixes in Music Lab while learning how functions can simplify and organize their code. They will learn how to make a new function and then call it into the main program. This lesson demonstrates how producers combine technology and creativity with a song's structure to create polished tracks."
       },
       "seeding_key": {
@@ -91,6 +93,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "background": "dark",
         "overview": "In this lesson, students will become sound designers, using Music Lab to create an interactive soundtracks for a stories or games. They will learn how to use events to trigger actions, adding interactivity to their code, and explore effects to shape the mood of their music. This lesson highlights how sound designers enhance storytelling and player engagement through music and sound."
       },
       "seeding_key": {
@@ -107,6 +110,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -122,6 +126,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -137,6 +142,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -152,6 +158,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -167,6 +174,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -182,6 +190,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -381,6 +390,30 @@
       }
     },
     {
+      "key": "a32717b9-5b4d-42b1-8031-5c75baad74e2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a32717b9-5b4d-42b1-8031-5c75baad74e2",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pilot-elem-music-lab"
+      }
+    },
+    {
+      "key": "bc5c1e9c-3ef2-4479-9e6d-786d69704015",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bc5c1e9c-3ef2-4479-9e6d-786d69704015",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pilot-elem-music-lab"
+      }
+    },
+    {
       "key": "06641e55-c95a-49f6-8f54-24e73e0ba028",
       "position": 1,
       "properties": {
@@ -398,7 +431,7 @@
       "key": "efc0d2df-ffc6-4000-974d-81e436326d6f",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_0\"></td>\n    <td style=\"width: 75%\">\n      \n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_5\"></td>\n    <td style=\"width: 75%\">\n      \n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_11\"></td>\n    <td style=\"width: 75%\">\n      15 mins\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31437c77914_0_90\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Reveal one vocabulary term & definition at a time. Briefly introduce each term as a preview of what students will learn in this lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_23\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Why do you think it’s important to give computers instructions in the right order? What do you think would happen if we gave instructions out of order?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question encourages students to think about how computers can’t think for themselves—they only follow each step exactly as written. It helps them realize that, unlike humans, computers can't guess or adjust if instructions are mixed up.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_19\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the objectives of this lesson. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’re going to make music using code! Just like a song needs the right notes in the right order to sound great, a computer needs to be able to read a program with the right steps in the right order to work. You’ll be choosing the steps and creating a sequence that makes your music play just how you want.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_14\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce students to the activity, The Sequence Shuffle, and remind them of the definition of sequence – the order of steps in a program or task.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this activity you will start with an example of a task that can be done in three distinct steps. The task is only successful if the steps are done in a specific order. Click to reveal each step and then the picture of a successfully prepared bowl of cereal.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g315a9df97f0_0_20\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Now, have the class consider what would happen if those same steps were done in a different order. Then click to reveal one step at a time and then picture of a milky mess. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the difference when the order of these steps changes. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will start to understand the importance of carefully sequencing steps for a task and will later apply that to sequencing their code.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g315a9df97f0_0_31\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students get into small groups of 2-3.  \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now it’s your turn to write the steps for one of these tasks! Look at the three pictures here and choose which task you will write steps for. Then, work together to write three steps someone would need to do to be successful. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Support students in writing simple steps. The priority of this activity is in reflecting on the order of the steps more than writing the steps at this time. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great! You have three simple steps that if done in order, will complete the task. But what if you did the same steps in a different order? Draw a picture (or discuss) what the outcome would look like if the steps were done out of sequence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31fbcde91da_0_3\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students get into small groups of 2-3.  \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now it’s your turn to write the steps for one of these tasks! Look at the three pictures here and choose which task you will write steps for. Then, work together to write three steps someone would need to do to be successful. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Support students in writing simple steps. The priority of this activity is in reflecting on the order of the steps more than writing the steps at this time. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great! You have three simple steps that if done in order, will complete the task. But what if you did the same steps in a different order? Draw a picture (or discuss) what the outcome would look like if the steps were done out of sequence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g315a9df97f0_0_40\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Finish the warm up activity with an explanation of how computers follow instructions in order. They will be practicing sequencing code in the next activity in Music Lab.\n    </td>\n  </tr>\n</table>    \n    "
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/388e61eb8f93328264e5712d19da7a2e-Slide4.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Reveal one vocabulary term & definition at a time. Briefly introduce each term as a preview of what students will learn in this lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2b983aef81f17b04498c6374366009eb-Slide5.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Why do you think it’s important to give computers instructions in the right order? What do you think would happen if we gave instructions out of order?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This question encourages students to think about how computers can’t think for themselves—they only follow each step exactly as written. It helps them realize that, unlike humans, computers can't guess or adjust if instructions are mixed up.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/418af6b287184f85646c69d63ebab957-Slide6.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the objectives of this lesson. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’re going to make music using code! Just like a song needs the right notes in the right order to sound great, a computer needs to be able to read a program with the right steps in the right order to work. You’ll be choosing the steps and creating a sequence that makes your music play just how you want.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/70ba3d25ea5722e97b3f80cd340ad9b0-Slide7.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce students to the activity, The Sequence Shuffle, and remind them of the definition of sequence – the order of steps in a program or task.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this activity you will start with an example of a task that can be done in three distinct steps. The task is only successful if the steps are done in a specific order. Click to reveal each step and then the picture of a successfully prepared bowl of cereal.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8cb85abffe5bf34cf68f668e64eb8f93-Slide8.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Now, have the class consider what would happen if those same steps were done in a different order. Then click to reveal one step at a time and then picture of a milky mess. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is the difference when the order of these steps changes. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will start to understand the importance of carefully sequencing steps for a task and will later apply that to sequencing their code.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8cb85abffe5bf34cf68f668e64eb8f93-Slide8.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students get into small groups of 2-3.  \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now it’s your turn to write the steps for one of these tasks! Look at the three pictures here and choose which task you will write steps for. Then, work together to write three steps someone would need to do to be successful. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Support students in writing simple steps. The priority of this activity is in reflecting on the order of the steps more than writing the steps at this time. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great! You have three simple steps that if done in order, will complete the task. But what if you did the same steps in a different order? Draw a picture (or discuss) what the outcome would look like if the steps were done out of sequence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/5db31512533048cb32571af2a7709bd7-Slide9.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students get into small groups of 2-3.  \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now it’s your turn to write the steps for one of these tasks! Look at the three pictures here and choose which task you will write steps for. Then, work together to write three steps someone would need to do to be successful. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Support students in writing simple steps. The priority of this activity is in reflecting on the order of the steps more than writing the steps at this time. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Great! You have three simple steps that if done in order, will complete the task. But what if you did the same steps in a different order? Draw a picture (or discuss) what the outcome would look like if the steps were done out of sequence.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/df9513ebea8b6a083754518bbfc31fea-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i>  <strong>Say:</strong> Do any of your instructions happen more than once? How could we explain that some steps need to be repeated a certain amount of times? \n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f11b4770e3ef2b0aa939c017498b0f28-Slide11.PNG\"></td>\n    <td style=\"width: 75%\">\n            <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Finish the warm up activity with an explanation of how computers follow instructions in order. They will be practicing sequencing code in the next activity in Music Lab.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "efc0d2df-ffc6-4000-974d-81e436326d6f",
@@ -406,9 +439,44 @@
       }
     },
     {
-      "key": "c3d88520-c67b-4816-89b0-e53e266516fc",
+      "key": "a40d11d8-b17b-491d-9141-3238fdf41168",
       "position": 1,
       "properties": {
+        "name": "Programming Levels:",
+        "progression_name": "Intro Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "a40d11d8-b17b-491d-9141-3238fdf41168",
+        "lesson_activity.key": "fdcc2c0a-463a-4eab-bbb7-f5ceecbf77c7"
+      }
+    },
+    {
+      "key": "7add81ff-e859-4e11-b54d-bdeb607eabd5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5",
+        "lesson_activity.key": "fdcc2c0a-463a-4eab-bbb7-f5ceecbf77c7"
+      }
+    },
+    {
+      "key": "9e5d312f-3669-4529-852a-801dd7f0a018",
+      "position": 3,
+      "properties": {
+        "progression_name": "Music Integration Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e5d312f-3669-4529-852a-801dd7f0a018",
+        "lesson_activity.key": "fdcc2c0a-463a-4eab-bbb7-f5ceecbf77c7"
+      }
+    },
+    {
+      "key": "c3d88520-c67b-4816-89b0-e53e266516fc",
+      "position": 4,
+      "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc",
@@ -416,10 +484,22 @@
       }
     },
     {
-      "key": "c326e6d8-cc26-4cb2-8bf1-bfc838c81dbc",
-      "position": 2,
+      "key": "bb312bcf-dbf5-49e0-9560-8b1fdbcd5436",
+      "position": 5,
       "properties": {
-        "description": "\n<table>\n\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_27\"></td>\n    <td style=\"width: 75%\">\n      25 mins\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_30\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on level 1 together as a class. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) What were the four jobs this video highlighted? Which of the four jobs sounds interesting to you? Are any of these jobs new to you? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Briefly introduce students to careers in the music industry connected to computer science and technology.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_127\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Give students an introduction to the lab on this level. Point out where the instructions will be, and where the Run button is to start the program. Try it out and call on a few students to compare what they heard to their predictions made in the last panel of the previous level. Show students how to click on the blocks to change sounds and move blocks around as a quick demonstration. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students transition to continuing the lesson on their own devices. They will work on levels 4-10 independently.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_163\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Following the video, on level 2 you will demonstrate how to use panel levels. Read the text and point out the text to speech feature. Then carefully examine the image. Click the Next button on the bottom right to advance to the next panel. The third panel prompts students to look at the picture of the code and make predictions about what will happen. Call on a few students to share their predictions. Press the Continue button to advance to the next level. \n\t\t<br />\n\t\t<br />Teaching Tip\n\t\t<br />This is a good opportunity to model how to use panels so that students can use them as learning tools independently through the remainder of the module.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a057cd68_0_17\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students transition to continuing the lesson on their own devices. They will work on levels 5 - 7 independently. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Encourage students to read the instructions on each level and click on the bolded words for hint.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a057cd68_0_34\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> When most students reach level 8 pause the class and watch the video on level 8 together. It’s okay if some students aren’t at level 8 yet and some have passed it.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a057cd68_0_50\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a measure? What’s the difference between the `play together` and the `play sequential` blocks? What is a rest?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Review and reinforce the main points from the video. This gives your class a chance to make a strong connection to how songwriters would use a tool like Music Lab in their careers and also introduce them to musical terms used in the lab in the following levels.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a057cd68_0_68\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students resume the lesson on their own devices. They will work on levels 9-14 independently. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Encourage students to read the instructions on each level and click on the bolded words for hints working at their own pace. The final level is a freeplay level where students can spend as much time as they’d like to create their own music.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "progression_name": "Freeplay"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb312bcf-dbf5-49e0-9560-8b1fdbcd5436",
+        "lesson_activity.key": "fdcc2c0a-463a-4eab-bbb7-f5ceecbf77c7"
+      }
+    },
+    {
+      "key": "c326e6d8-cc26-4cb2-8bf1-bfc838c81dbc",
+      "position": 6,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/0e887f5cbbe08609951ea8c9820da56c-Slide13.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on level 1 together as a class. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) What were the four jobs this video highlighted? Which of the four jobs sounds interesting to you? Are any of these jobs new to you? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Briefly introduce students to careers in the music industry connected to computer science and technology.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/aa20d34b6f3115afc587b4438da0c723-Slide14.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Give students an introduction to the lab on this level. Point out where the instructions will be, and where the Run button is to start the program. Try it out and call on a few students to compare what they heard to their predictions made in the last panel of the previous level. Show students how to click on the blocks to change sounds and move blocks around as a quick demonstration. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students transition to continuing the lesson on their own devices. They will work on levels 4-10 independently.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/29e9a3696cf5e7083979e56a9da15093-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Following the video, on level 2 you will demonstrate how to use panel levels. Read the text and point out the text to speech feature. Then carefully examine the image. Click the Next button on the bottom right to advance to the next panel. The third panel prompts students to look at the picture of the code and make predictions about what will happen. Call on a few students to share their predictions. Press the Continue button to advance to the next level. \n\t\t<br />\n\t\t<br />Teaching Tip\n\t\t<br />This is a good opportunity to model how to use panels so that students can use them as learning tools independently through the remainder of the module.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4869bcdb9eafa83e8c06787a2c627e53-Slide16.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students transition to continuing the lesson on their own devices. They will work on levels 5 - 7 independently. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Encourage students to read the instructions on each level and click on the bolded words for hint.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8462e56895d70a062625d9d58edaf3bc-Slide17.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> When most students reach level 8 pause the class and watch the video on level 8 together. It’s okay if some students aren’t at level 8 yet and some have passed it.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/e76f5f3ded777a49240ab471ce7f2980-Slide18.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What is a measure? What’s the difference between the `play together` and the `play sequential` blocks? What is a rest?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Review and reinforce the main points from the video. This gives your class a chance to make a strong connection to how songwriters would use a tool like Music Lab in their careers and also introduce them to musical terms used in the lab in the following levels.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c57dd1484ee905a815f1972473722523-Slide19.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students resume the lesson on their own devices. They will work on levels 9-14 independently. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Encourage students to read the instructions on each level and click on the bolded words for hints working at their own pace. The final level is a freeplay level where students can spend as much time as they’d like to create their own music.\n    </td>\n  </tr>\n\n\n</table>    \n    ",
+        "name": "Lesson Plan:"
       },
       "seeding_key": {
         "activity_section.key": "c326e6d8-cc26-4cb2-8bf1-bfc838c81dbc",
@@ -430,7 +510,7 @@
       "key": "a4f90985-e25d-4c87-bdb5-dd51ce531030",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_35\"></td>\n    <td style=\"width: 75%\">\n      10 mins\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_38\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Did you make music with coding blocks? (pause for students to respond with a thumbs up/down/sideways)\u000b\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Did you change the order of the code blocks to change the music? (pause for students to respond with a thumbs up/down/sideways)\u000b\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong>Did you complete the levels step by step? (pause for students to respond with a thumbs up/down/sideways)\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_46\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Mystery Melody activity where students will listen to a melody and guess what it is. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What did you notice when the notes were out of order?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This helps students articulate why sequencing matters and reinforces how things feel “off” without the right order.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31437c77914_0_65\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Try another round of Mystery Melody. First play the sounds out of sequence, have students guess. Then play the recording of the sounds in order.  \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How would our music sound if we just randomly added notes instead of planning the sequence?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This prompt highlights the value of planning in coding and sequencing, showing how a little forethought can create something cohesive and enjoyable.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31437c77914_0_71\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students set up for a quick Turn & Talk to reexamine the Question of the Day. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Take turns listening and answering the Question of the Day. Give me a thumbs up after you both have shared your answers.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_51\"></td>\n    <td style=\"width: 75%\">\n      \n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d90309cbab6c38e5405179f33b58a16b-Slide20.PNG\"></td>\n    <td style=\"width: 75%\">\n      10 mins\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6d3a76e227237f110565897aa76c8300-Slide21.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Did you make music with coding blocks? (pause for students to respond with a thumbs up/down/sideways)\u000b\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Did you change the order of the code blocks to change the music? (pause for students to respond with a thumbs up/down/sideways)\u000b\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong>Did you complete the levels step by step? (pause for students to respond with a thumbs up/down/sideways)\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a9a7e5a12f7e9fc19360c128faf6b08a-Slide22.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Mystery Melody activity where students will listen to a melody and guess what it is. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What did you notice when the notes were out of order?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This helps students articulate why sequencing matters and reinforces how things feel “off” without the right order.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d076065c2b44190515aefa889d4ddf1b-Slide23.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Try another round of Mystery Melody. First play the sounds out of sequence, have students guess. Then play the recording of the sounds in order.  \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How would our music sound if we just randomly added notes instead of planning the sequence?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This prompt highlights the value of planning in coding and sequencing, showing how a little forethought can create something cohesive and enjoyable.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/eb5017ed60575b387e885484395b7906-Slide24.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students set up for a quick Turn & Talk to reexamine the Question of the Day. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Take turns listening and answering the Question of the Day. Give me a thumbs up after you both have shared your answers.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "a4f90985-e25d-4c87-bdb5-dd51ce531030",
@@ -666,6 +746,26 @@
       }
     },
     {
+      "key": "99cd52ae-5c8f-4e01-9cee-f916b4bd430e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "99cd52ae-5c8f-4e01-9cee-f916b4bd430e",
+        "lesson_activity.key": "a32717b9-5b4d-42b1-8031-5c75baad74e2"
+      }
+    },
+    {
+      "key": "cbc1da42-455a-4abc-8dc4-55659e35daf4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cbc1da42-455a-4abc-8dc4-55659e35daf4",
+        "lesson_activity.key": "bc5c1e9c-3ef2-4479-9e6d-786d69704015"
+      }
+    },
+    {
       "key": "883ed86e-f696-453a-9740-00c248903cc3",
       "position": 1,
       "properties": {
@@ -685,7 +785,8 @@
       "properties": {
         "level_keys": [
           "music-coding-intro-career1-panel"
-        ]
+        ],
+        "progression": "Intro Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -695,7 +796,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "a40d11d8-b17b-491d-9141-3238fdf41168"
       },
       "level_keys": [
         "music-coding-intro-career1-panel"
@@ -704,12 +805,13 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-play-sound"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -719,7 +821,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       },
       "level_keys": [
         "music-coding-intro-play-sound"
@@ -728,12 +830,13 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-play-two"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -743,7 +846,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       },
       "level_keys": [
         "music-coding-intro-play-two"
@@ -752,12 +855,13 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-seq-panel"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -767,7 +871,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       },
       "level_keys": [
         "music-coding-intro-seq-panel"
@@ -776,12 +880,13 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-together1"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -791,7 +896,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       },
       "level_keys": [
         "music-coding-intro-together1"
@@ -800,12 +905,13 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-ingro-loop1"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -815,7 +921,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       },
       "level_keys": [
         "music-coding-ingro-loop1"
@@ -824,12 +930,13 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-5sounds"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -839,7 +946,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       },
       "level_keys": [
         "music-coding-intro-5sounds"
@@ -848,12 +955,13 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-seq-panel-rests"
-        ]
+        ],
+        "progression": "Music Integration Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -863,7 +971,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "9e5d312f-3669-4529-852a-801dd7f0a018"
       },
       "level_keys": [
         "music-coding-intro-seq-panel-rests"
@@ -872,12 +980,13 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-loop-beat"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -896,12 +1005,13 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-layer"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -920,12 +1030,13 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": 11,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-drop-panel"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -944,12 +1055,13 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": 12,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-drop2"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -968,12 +1080,13 @@
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": 13,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-drop3"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -992,12 +1105,13 @@
     {
       "chapter": 14,
       "position": 14,
-      "activity_section_position": 14,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-make"
-        ]
+        ],
+        "progression": "Freeplay"
       },
       "bonus": false,
       "seeding_key": {
@@ -1007,7 +1121,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "bb312bcf-dbf5-49e0-9560-8b1fdbcd5436"
       },
       "level_keys": [
         "music-coding-intro-make"
@@ -2475,7 +2589,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "a40d11d8-b17b-491d-9141-3238fdf41168"
       }
     },
     {
@@ -2487,7 +2601,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       }
     },
     {
@@ -2499,7 +2613,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       }
     },
     {
@@ -2511,7 +2625,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       }
     },
     {
@@ -2523,7 +2637,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       }
     },
     {
@@ -2535,7 +2649,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       }
     },
     {
@@ -2547,7 +2661,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "7add81ff-e859-4e11-b54d-bdeb607eabd5"
       }
     },
     {
@@ -2559,7 +2673,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "9e5d312f-3669-4529-852a-801dd7f0a018"
       }
     },
     {
@@ -2631,7 +2745,7 @@
         "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "c3d88520-c67b-4816-89b0-e53e266516fc"
+        "activity_section.key": "bb312bcf-dbf5-49e0-9560-8b1fdbcd5436"
       }
     },
     {

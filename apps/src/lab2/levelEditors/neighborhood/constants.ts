@@ -20,6 +20,19 @@ export const categories: Record<string, TileDefinition> = {
   Wall: {min: 62, max: 90},
 };
 
+// Map of asset ids to tile types for all assets that are not "walls" (tile type 0).
+export const customTileTypes: Record<number, number> = {
+  // Painter is a "start" tile. Painter assets are 287-290.
+  287: 2,
+  288: 2,
+  289: 2,
+  290: 2,
+  // Paint bucket is an open tile.
+  303: 1,
+  // Street tile is an open tile.
+  0: 1,
+};
+
 export const imageTiles = [
   'https://images.code.org/306af44a63cacdc47292475c186372c0-image-1618605886924.png' /*0-street*/,
   'https://images.code.org/8ff6eb2a55a083df97b8f539ca4e0cd1-image-1617321949719.png' /*1-Ntaxi2*/,

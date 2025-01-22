@@ -1,20 +1,17 @@
-import {
-  ProjectType,
-  ProjectFile,
-  ProjectFolder,
-  ReducerAction,
-} from '@codebridge/types';
+import {ProjectFile, ProjectFolder, ReducerAction} from '@codebridge/types';
 import {useMemo} from 'react';
 
 // disabling locales and falling back on the hardwired default due to apparent circular dep
 // import codebridgeI18n from '@cdo/apps/codebridge/locale';
 const DEFAULT_NEW_FILE_CONTENTS = 'Add your changes to ${fileName}';
 
+import {MultiFileSource} from '@cdo/apps/lab2/types';
+
 import {DEFAULT_FOLDER_ID} from '../constants';
 
-import {PROJECT_REDUCER_ACTIONS} from './constants';
+import {SOURCE_REDUCER_ACTIONS} from './constants';
 import {
-  ReplaceProjectFunction,
+  ReplaceSourceFunction,
   SaveFileFunction,
   NewFileFunction,
   RenameFileFunction,
@@ -68,15 +65,13 @@ export const findFiles = (
   }, <string[]>[]);
 };
 
-export const useProjectUtilities = (
-  dispatch: React.Dispatch<ReducerAction>
-) => {
+export const useSourceUtilities = (dispatch: React.Dispatch<ReducerAction>) => {
   return useMemo(() => {
     const utils = {
-      replaceProject: <ReplaceProjectFunction>((project: ProjectType) => {
+      replaceSource: <ReplaceSourceFunction>((source: MultiFileSource) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.REPLACE_PROJECT,
-          payload: {project},
+          type: SOURCE_REDUCER_ACTIONS.REPLACE_SOURCE,
+          payload: {source},
         });
       }),
       newFile: <NewFileFunction>(({
@@ -87,7 +82,7 @@ export const useProjectUtilities = (
         contents = DEFAULT_NEW_FILE_CONTENTS,
       }) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.NEW_FILE,
+          type: SOURCE_REDUCER_ACTIONS.NEW_FILE,
           payload: {
             fileName,
             folderId,
@@ -97,56 +92,56 @@ export const useProjectUtilities = (
       }),
       renameFile: <RenameFileFunction>((fileId, newName) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.RENAME_FILE,
+          type: SOURCE_REDUCER_ACTIONS.RENAME_FILE,
           payload: {fileId, newName},
         });
       }),
       saveFile: <SaveFileFunction>((fileId, contents) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.SAVE_FILE,
+          type: SOURCE_REDUCER_ACTIONS.SAVE_FILE,
           payload: {fileId, contents},
         });
       }),
       openFile: <OpenFileFunction>(fileId => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.OPEN_FILE,
+          type: SOURCE_REDUCER_ACTIONS.OPEN_FILE,
           payload: {fileId},
         });
       }),
       closeFile: <CloseFileFunction>(fileId => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.CLOSE_FILE,
+          type: SOURCE_REDUCER_ACTIONS.CLOSE_FILE,
           payload: {fileId},
         });
       }),
       deleteFile: <DeleteFileFunction>(fileId => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.DELETE_FILE,
+          type: SOURCE_REDUCER_ACTIONS.DELETE_FILE,
           payload: {fileId},
         });
       }),
       setActiveFile: <SetActiveFileFunction>(fileId => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.ACTIVATE_FILE,
+          type: SOURCE_REDUCER_ACTIONS.ACTIVATE_FILE,
           payload: {fileId},
         });
       }),
       moveFile: <MoveFileFunction>((fileId, folderId) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.MOVE_FILE,
+          type: SOURCE_REDUCER_ACTIONS.MOVE_FILE,
           payload: {fileId, folderId},
         });
       }),
       moveFolder: <MoveFolderFunction>((folderId, parentId) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.MOVE_FOLDER,
+          type: SOURCE_REDUCER_ACTIONS.MOVE_FOLDER,
           payload: {folderId, parentId},
         });
       }),
 
       setFileType: <SetFileTypeFunction>((fileId, type) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.SET_FILE_TYPE,
+          type: SOURCE_REDUCER_ACTIONS.SET_FILE_TYPE,
           payload: {fileId, type},
         });
       }),
@@ -156,31 +151,31 @@ export const useProjectUtilities = (
         parentId = DEFAULT_FOLDER_ID,
       }) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.NEW_FOLDER,
+          type: SOURCE_REDUCER_ACTIONS.NEW_FOLDER,
           payload: {folderName, parentId},
         });
       }),
       renameFolder: <RenameFolderFunction>((folderId, newName) => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.RENAME_FOLDER,
+          type: SOURCE_REDUCER_ACTIONS.RENAME_FOLDER,
           payload: {folderId, newName},
         });
       }),
       toggleOpenFolder: <ToggleOpenFolderFunction>(folderId => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.TOGGLE_OPEN_FOLDER,
+          type: SOURCE_REDUCER_ACTIONS.TOGGLE_OPEN_FOLDER,
           payload: {folderId},
         });
       }),
       deleteFolder: <DeleteFolderFunction>(folderId => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.DELETE_FOLDER,
+          type: SOURCE_REDUCER_ACTIONS.DELETE_FOLDER,
           payload: {folderId},
         });
       }),
       rearrangeFiles: <RearrangeFilesFunction>(fileIds => {
         dispatch({
-          type: PROJECT_REDUCER_ACTIONS.REARRANGE_FILES,
+          type: SOURCE_REDUCER_ACTIONS.REARRANGE_FILES,
           payload: {fileIds},
         });
       }),

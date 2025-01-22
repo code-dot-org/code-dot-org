@@ -19,7 +19,7 @@ import moduleStyles from './version-history.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface VersionHistoryProps {
-  startSource: ProjectSources;
+  startSources: ProjectSources;
   updatedSourceCallback?: (source: ProjectSources) => void;
 }
 
@@ -27,7 +27,7 @@ interface VersionHistoryProps {
  * Button that opens a dropdown with a list of versions for the current project.
  */
 const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
-  startSource,
+  startSources,
   updatedSourceCallback,
 }) => {
   const [isVersionHistoryOpen, setIsVersionHistoryOpen] = useState(false);
@@ -137,7 +137,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
       <VersionHistoryDropdown
         versionList={versionList}
         updatedSourceCallback={updatedSourceCallback}
-        startSource={startSource}
+        startSources={startSources}
         closeDropdown={() => setIsVersionHistoryOpen(false)}
         isOpen={isVersionHistoryOpen}
       />

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-01-07T23:37:15.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "#### <i class=\"fa-duotone fa-regular fa-file-music\"></i> Create the chorus\r\n\r\n\r\nAdd sounds to the [chorus](#clickable=id-up-left:chorus_workspace) function. \r\n \r\n *Hint: Don't forget the [play together](#clickable=id-up-left:play_sounds_together) block if you want to layer the sounds*.\r\n\r\n\r\n",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<b>Teacher Tip:</b> Remind students that they are defining the function by adding code into the <code>chorus</code> block. \r\n</p>\r\n</div>\r\n\r\n\r\n#### <i class=\"fa-duotone fa-regular fa-file-music\"></i> Create the chorus\r\n\r\n\r\nAdd sounds to the [chorus](#clickable=id-up-left:chorus_workspace) function. \r\n \r\n *Hint: Don't forget the [play together](#clickable=id-up-left:play_sounds_together) block if you want to layer the sounds*.\r\n\r\n\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -296,8 +297,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:15.990+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-define\\\"\"],\"cloned_from\":\"music-coding-intro-functions-define\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:15.990+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-define\\\"\"],\"cloned_from\":\"music-coding-intro-functions-define\"},{\"changed_at\":\"2025-01-16 21:52:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

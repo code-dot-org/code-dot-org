@@ -3,8 +3,10 @@ import markdownToTxt from 'markdown-to-txt';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import Typist from 'react-typist';
 
+import {capitalizeFirstLetter} from '@cdo/apps/blockly/utils';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+import {LessonBackground} from '@cdo/apps/types/progressTypes';
 
 import {queryParams} from '../code-studio/utils';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
@@ -30,6 +32,7 @@ const childrenAreaHeight = 70;
 
 interface PanelsProps {
   panels: Panel[];
+  background: LessonBackground;
   onContinue: (nextUrl?: string) => void;
   onSkip?: () => void;
   targetWidth: number;
@@ -54,6 +57,7 @@ interface PanelsProps {
  */
 const PanelsView: React.FunctionComponent<PanelsProps> = ({
   panels,
+  background,
   onContinue,
   onSkip,
   targetWidth,
@@ -162,6 +166,8 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   if (!panel) {
     return null;
   }
+
+  const backgroundSuffix = capitalizeFirstLetter(background || 'dark');
 
   const previousPanel =
     panel.fadeInOverPrevious &&
@@ -284,8 +290,8 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
                     'icon',
                     styles.bubble,
                     index === currentPanelIndex
-                      ? styles.bubbleCurrent
-                      : styles.bubbleNotCurrent
+                      ? styles[`bubbleCurrent${backgroundSuffix}`]
+                      : styles[`bubbleNotCurrent${backgroundSuffix}`]
                   )}
                   title={undefined}
                   icon="circle"

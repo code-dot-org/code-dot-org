@@ -38,11 +38,16 @@ markdown <<MARKDOWN
 
 ## Examples in Code.org Curricula
 
+##### Click on the arrows below to expand each section.
+
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 18px; font-weight: bold;">Elementary Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### In <a href="https://studio.code.org/s/coursef-2024/lessons/2" target="blank" rel="noopener noreferrer">Course F, Lesson 2: Introducing Sprite Lab</a>, the lesson opens with a couple of questions about students' preferences for apps: <i>"What is your favorite game or app? What choices do you get to make while using it?"</i> The teacher then writes the apps and reasons for liking them on a whiteboard or anchor chart. This is a great way to connect with students and affirm that their opinions are valuable.
+
 </p></div>
 </details>
 
@@ -51,6 +56,13 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">Middle School Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### Students are introduced to debugging - the process of finding and removing errors in code - in <a href="https://studio.code.org/s/csd2-2024/lessons/3" target="blank" rel="noopener noreferrer">Unit 2 - Web Development, Lesson 3 - Headings and Lists</a>. Student watch a <a href="https://www.youtube.com/watch?v=auv10y-dN4s" target="blank" rel="noopener noreferrer">"How to Debug" video</a> and are encouraged to refer to the <a href="https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit?tab=t.0#" target="blank" rel="noopener noreferrer">Student Guide to Debugging</a>. In the lesson, teachers receive the following guidance to help students with debugging:
+
+#### <i>**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. To counter this, we recommend **normalizing bugs and mistakes as something that happens to everyone** - it’s just part of the process. </i>
+
+#### By encouraging students when they make a mistake, teachers can help them adopt the mindset that they can be successful at computer science.
+
 </p></div>
 </details>
 
@@ -59,6 +71,11 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">High School Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### In CS Principles Unit 7 - Parameters, Return, and Libraries, the end-of-unit project, <a href="https://studio.code.org/s/csp7-2024/lessons/8" target="blank" rel="noopener noreferrer">Make a Library</a>, prompts students to curate a library of **functions** that they can use in their own code. Functions are a named group of programming instructions. 
+
+#### Once students make their libraries, they can publish them to a class repository of student libraries. From there, other students can download their libraries of code, use them to code, and give feedback. Students are able to see their contributions as useful to other students and become an active member of the learning community.
+
 </p></div>
 </details>
 

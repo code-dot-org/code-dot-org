@@ -16,12 +16,12 @@ markdown <<MARKDOWN
 
 #### During each lesson and throughout a unit, students need opportunities to interact with new content and process new information in a way that uses their prior experience and frames of reference.
 
-## What does it look like?
-
 <div style="float: right; width: auto; margin: 10px; text-align: center;">
   <img src="https://images.code.org/ec60d43beda6a055d23a7ce6939b60d3-image-1736531451755.50.47 AM.png" alt="A circle demonstrating a process with multiple steps - Investigate, Create, Make Meaning, and Share & Reflect. Inside is the phrase Synthesize & Reflect" style="width: 300px; border-radius: 10px;">
   <p style="font-size: 10pt; margin-top: 5px;">"An Introduction to the Learning Cycle" by reDesign</p>
 </div>
+
+## What does it look like?
 
 #### We believe it is important for students to have opportunities to interact with content and process new information in a way that works best for them. It is difficult for students to engage with new content if it is presented in a way that does not meet their individual needs or connect with them. We incorporate varied examples and use different formats to provide multiple opportunities to interact with new content. 
 
@@ -30,11 +30,16 @@ markdown <<MARKDOWN
 
 ## Examples in Code.org Curricula
 
+##### Click on the arrows below to expand each section.
+
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 18px; font-weight: bold;">Elementary Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### Code.org's elementary school curricula provide ample opportunities for students to discuss predictions or connect to prior knowledge before the direct instruction portion of a lesson. In <a href="https://studio.code.org/s/csc-adaptations-2023/lessons/2" target="blank" rel="noopener noreferrer">lesson 2</a> of the <a href="https://studio.code.org/s/csc-adaptations-2023" target="blank" rel="noopener noreferrer">Modeling Animal Adaptions module</a> of CS Connections, students turn and talk to discuss why they think fish swim in schools. This gives students time to think about animal adaptations before they start coding.
+
 </p></div>
 </details>
 
@@ -43,6 +48,9 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">Middle School Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### All <a href="https://studio.code.org/courses/csd-2024" target="blank" rel="noopener noreferrer">CS Discoveries lessons</a> start with a Question of the Day that prime students to think about the lesson content. At the end of the lesson, students and teachers often revisit this question to wrap up their learning and reflect on what they've practiced.
+
 </p></div>
 </details>
 
@@ -51,6 +59,13 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">High School Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### CSA gives students ample ways to reflect and process their learning. In <a href="https://studio.code.org/s/csa1-2024/lessons/2" target="blank" rel="noopener noreferrer">lesson 2</a> of Unit 1 - Object-Oriented Programming, students wrap up their learning by answering the Three Ws:
+
+* #### What did we learn today?
+* #### So what?
+* #### Now what?
+
 </p></div>
 </details>
 

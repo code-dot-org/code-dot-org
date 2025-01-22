@@ -43,6 +43,7 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
       isRunning => dispatch(setIsRunning(isRunning)),
       '[PYTHON LAB]'
     );
+    CodebridgeRegistry.getInstance().setNeighborhood(neighborhood);
 
     neighborhood.afterInject(
       levelProperties,

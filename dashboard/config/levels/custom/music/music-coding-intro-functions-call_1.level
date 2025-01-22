@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-01-07T23:37:15.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "###<i class=\"fa-duotone fa-solid fa-bullhorn\"></i> Call a Function\r\nA chorus function has already been defined!\r\n1. To call the [chorus](#clickable=flyout-first-block) function add it under [when run](#clickable=when-run-block). \r\n- Press [Run](#clickable=run-button) to see how it works. ",
+    "long_instructions": "##### <b>Teacher Tip:</b> Students often confuse defining functions with calling them. Remind them that defining a function does not automatically execute the code. To run the function, they need to call it by connecting the <code>chorus</code> block to the <code>when run</code> block.\r\n\r\n_________\r\n\r\n\r\n\r\n\r\n\r\n###<i class=\"fa-duotone fa-solid fa-bullhorn\"></i> Call a Function\r\nA chorus function has already been defined!\r\n1. To call the [chorus](#clickable=flyout-first-block) function add it under [when run](#clickable=when-run-block). \r\n- Press [Run](#clickable=run-button) to see how it works. ",
     "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
@@ -323,8 +324,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:15.765+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-call\\\"\"],\"cloned_from\":\"music-coding-intro-functions-call\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:15.765+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-call\\\"\"],\"cloned_from\":\"music-coding-intro-functions-call\"},{\"changed_at\":\"2025-01-16 21:46:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:26:53 +0000\",\"changed\":[],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:30:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:33:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:35:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:37:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:37:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:41:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:43:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:46:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:47:42 +0000\",\"changed\":[],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-21 20:47:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-13 18:41:47 UTC",
+    "serialized_at": "2025-01-22 02:14:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -73,6 +73,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "background": "dark",
         "overview": "Students complete a multiple-choice pre-assessment that covers the unit topics.",
         "preparation": "- Preview the assessment questions\n- Unlock the assessment questions as indicated on the Unlocking Assessments resource",
         "student_overview": "Students complete a multiple-choice pre-assessment that covers the unit topics."
@@ -91,6 +92,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "background": "dark",
         "overview": "**How can I create an ethical plan to collect data for my data question?**\n\nIn this lesson, students kick off their Data Science for Community Impact Project by identifying the communities they belong to and brainstorming relevant problems within these communities. They work collaboratively to turn their observations into well-defined data questions, create a data collection plan, and ensure their plans are specific, actionable, and ethically sound.\n\n",
         "student_overview": "**How can I create an ethical plan to collect data for my data question?**\n\nToday, you start your Data Science for Community Impact Project by identifying the communities you are part of, brainstorming problems within these communities, and developing a plan to collect data to address these problems.\n\n\n"
       },
@@ -108,6 +110,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "background": "dark",
         "overview": "**What can I do with Python?**\n\nIn this lesson students will be exposed to some of the uses of the Python programming language, focusing on its strong appeal for data science applications. Utilizing a modified PRIMM methodology, students will be introduced to some of the basic Python syntax that will be necessary to begin manipulating and visualizing data in the lessons to come.\n\n",
         "preparation": "- Provide copies of the Unit 2 Guided Notes for each student\n- Print copies of the Python anticipation guide (one for each student)",
         "student_overview": "**What can I do with Python?**\n\nIn this lesson, you will learn about many of the interesting and varied uses of the Python programming language, including its use as a premiere tool for data science. You will learn many of the basic Python commands necessary to begin your journey as a data scientist.\n\n"
@@ -126,6 +129,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "background": "dark",
         "overview": "**What tools and techniques does pandas offer to help us explore and analyze the structure of a dataset?**\n\nIn this lesson, students are introduced to the pandas library and learn how to read CSV files into DataFrames. They explore key functions such as `len()`, `shape`, `head()`, and `tail()` to understand the structure and size of datasets. The lesson emphasizes the practical application of pandas for efficient data manipulation and analysis, preparing students for more advanced data science tasks.\n\n\n",
         "preparation": "- Print copies of the US Gas Prices Dataset handout (one for each student)\n",
         "student_overview": "**What tools and techniques does pandas offer to help us explore and analyze the structure of a dataset?**\n\nLearn how to use pandas to read and explore data from CSV files. Discover how to quickly understand a dataset's structure and size using simple, powerful functions.\n\n\n"
@@ -144,6 +148,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "background": "dark",
         "overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nIn this lesson, students discover the need for a library with functions that create data visualizations in Python. Students explore the syntax and functionality of matplotlib – learning how to create line and bar charts, editing these charts' appearance, title and axis labels.\n\n",
         "student_overview": "**How do we use the Matplotlib library to create informative data visualizations?**\n\nCreate and modify data visualizations using matplotlib, a library professional Data Scientists use.\n\n\n"
       },
@@ -161,6 +166,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "background": "dark",
         "overview": "**How does the data type impact how the data is interpreted?**\n\nStudents learn the names and uses of four main data types in pandas: int64 (integers), float64 (decimals), object (mixed strings), and datetime (dates with days, months, and years). Students practice converting columns of data from one type to another. Additionally, they use the `info()` and `describe()` functions to understand more about data as a whole.\n\n",
         "preparation": "- Have enough blank sheets of paper available for each student to write a question on.\n",
         "student_overview": "**How does the data type impact how the data is interpreted?**\n\nLearn how pandas labels the data that you upload and what implications that has for any data analysis that you do. Additionally, learn how to use two helpful functions to summarize useful information about your imported data.\n\n"
@@ -179,6 +185,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "background": "dark",
         "overview": "**What insights can we uncover by grouping and aggregating data?**\n\nStudents learn the basics of using the indexing operator, iloc, and the groupby() functions to create subgroups of data. They have the opportunity to analyze and draw insight from their groupings that will help to answer a data question.\n\n",
         "preparation": "- Print copies of the Stars Data Roundtable activity guide (one per group of students)\n",
         "student_overview": "**What insights can we uncover by grouping and aggregating data?**\n\nSometimes, we must filter data into subgroups to best answer our data question. This can provide insight where none may have existed before. Learn to use tools within Python to create these subgroups and to practice our analysis skills.\n\n\n"
@@ -197,6 +204,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "background": "dark",
         "overview": "**What are the best practices for cleaning data to ensure its integrity and usability?**\n\nIn this lesson, students learn the importance of data cleaning and the key functions used to identify and handle data quality issues, including `isnull()`, `isnull().sum()`, `dropna()`, `fillna()`, and `value_counts()`. Through a series of investigate and modify levels, they explore how to evaluate datasets, identify missing, invalid, and inconsistent data, and apply techniques to clean the data. \n\n",
         "preparation": "- Print copies of the Occupations Dataset handout (one for each student)\n- Print and prepare the Quiz, Quiz, Trade cards for the wrap up activity.\n",
         "student_overview": "**What are the best practices for cleaning data to ensure its integrity and usability?**\n\nIn this lesson, you learn how to identify and fix data quality issues using some new pandas functions. Practice cleaning datasets to ensure they are accurate and ready for analysis.\n\n"
@@ -215,6 +223,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "background": "dark",
         "overview": "**How do we create and choose data visualizations that help find insights to data questions?**\n\nStudents explore the creation and interpretation of stacked bar charts and pie charts using Matplotlib. They learn how different visualizations can be applied to answer specific data questions, compare the effectiveness of each chart type, and refine their data visualization skills by working with various datasets.\n\n",
         "preparation": "- Print copies of the Mythical Creatures Dataset handout (one for each student)\n",
         "student_overview": "**How do we create and choose data visualizations that help find insights to data questions?**\n\nLearn how to create and interpret stacked bar charts and pie charts to answer specific data questions. Practice using these visualizations to explore different datasets and refine their data visualization skills.\n\n"
@@ -233,6 +242,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "background": "dark",
         "overview": "**How can we use pandas to find insights about data?**\n\nIn this lesson, students practice using key pandas functions such as `min()`, `max()`, `agg()`, and `sum()` to perform exploratory data analysis on sea level anomaly data from New York's East River. They analyze and visualize the data to identify trends, patterns, and significant moments, building their skills in data science techniques.\n\n",
         "preparation": "- Print copies of the Sea Level Anomalies handout (one for each student)\n",
         "student_overview": "**How can we use pandas to find insights about data?**\n\nExplore sea level anomaly data from New York's East River using data science techniques. Learn how to use pandas functions to analyze and visualize the data, helping you spot trends and key moments.\n\n"
@@ -251,6 +261,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "background": "dark",
         "overview": "**How can advanced data filtering techniques reveal further insights within datasets?**\n\nIn this lesson, students learn to filter data attributes to exclude entries that contain null values. Additionally, they learn how to filter by examining the value of string data within an entry. Last, they combine many of the previous filtering techniques that they have learned throughout the unit and combine them with the use of multiple logical operators in order to create focused and precise subsets of data.\n\n",
         "student_overview": "**How can advanced data filtering techniques reveal further insights within datasets?**\n\nIn this lesson, you learn how to filter data entries within attributes that are null (empty) or which contain certain string values. Additionally, you learn how to employ logical operators when filtering in order to create focused and precise subsets of data.\n\n\n"
       },
@@ -268,6 +279,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "background": "dark",
         "overview": "**How can I use data to answer a meaningful question, uncover patterns and insights, and effectively communicate my findings to others?**\n\nIn this project, students use the data they have collected to explore and answer a specific data question. They start by cleaning and organizing their data, then create and analyze visualizations to uncover patterns, trends, and insights. Throughout the project, students document their process, refine their visualizations, and develop a narrative that clearly communicates their findings. The project culminates in a gallery walk where they present their hypothesis, conclusions, and visual evidence.\n",
         "preparation": "- Print copies of the Community Impact project guide",
         "student_overview": "**How can I use data to answer a meaningful question, uncover patterns and insights, and effectively communicate my findings to others?**\n\nIn this project, you use the data you collected to explore and answer a specific question. You start by cleaning and organizing your data, then create visualizations to find patterns and insights. As you work, you document your process and improve your visualizations. The project ends with a gallery walk where you share your question, conclusions, and visual evidence with others.\n"
@@ -287,6 +299,7 @@
       "relative_position": 13,
       "properties": {
         "assessment": true,
+        "background": "dark",
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
         "preparation": "- Preview the assessment questions\n- Unlock the assessment questions as indicated on the Unlocking Assessments resource",
         "student_overview": "Students complete a multiple-choice assessment that covers the unit topics."

@@ -13,7 +13,7 @@ import {
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {
-  setAndSaveProjectSource,
+  setAndSaveProjectSources,
   setHasEdited,
   setProjectSource,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -29,7 +29,7 @@ import {useInitialSources} from './useInitialSources';
 export const useSource = (defaultSources: ProjectSources) => {
   const dispatch = useAppDispatch();
   const projectSource = useAppSelector(
-    state => state.lab2Project.projectSource
+    state => state.lab2Project.projectSources
   );
   const source = projectSource?.source as MultiFileSource;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -62,7 +62,7 @@ export const useSource = (defaultSources: ProjectSources) => {
     () => (newProjectSource: ProjectSources) => {
       const saveFunction = isReadOnly
         ? setProjectSource
-        : setAndSaveProjectSource;
+        : setAndSaveProjectSources;
       dispatch(saveFunction(newProjectSource));
     },
     [dispatch, isReadOnly]

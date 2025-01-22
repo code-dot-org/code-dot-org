@@ -1,10 +1,11 @@
 [project]
 name = 'pythonlab_setup'
-version = '0.1.0'
+version = '0.2.0'
 requires-python = '>=3.12'
 dependencies = [
   'matplotlib >=3',
   'requests >=2',
+  'neighborhood'
 ]
 
 [dependency-groups]

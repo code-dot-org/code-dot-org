@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-09 17:34:10 UTC",
+    "serialized_at": "2025-01-17 21:18:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -320,9 +320,23 @@
       "key": "2a32d5a8-252a-42d7-ae55-a8b7ab541618",
       "position": 1,
       "properties": {
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "2a32d5a8-252a-42d7-ae55-a8b7ab541618",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "cd6e0f15-9e91-43de-b2da-61ef3a13c869",
+      "position": 2,
+      "properties": {
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd6e0f15-9e91-43de-b2da-61ef3a13c869",
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices"
@@ -356,6 +370,7 @@
       "key": "21d9d2a0-4d74-4122-88be-7f55fee8a340",
       "position": 1,
       "properties": {
+        "progression_name": "Some Test Level Jamila Made"
       },
       "seeding_key": {
         "activity_section.key": "21d9d2a0-4d74-4122-88be-7f55fee8a340",
@@ -406,10 +421,33 @@
       "key": "9feb3386-2cb3-448d-8fc9-51dffac1fd41",
       "position": 1,
       "properties": {
+        "progression_name": "Computer Build User Profiles"
       },
       "seeding_key": {
         "activity_section.key": "9feb3386-2cb3-448d-8fc9-51dffac1fd41",
         "lesson_activity.key": "2a32d5a8-252a-42d7-ae55-a8b7ab541618"
+      }
+    },
+    {
+      "key": "a2514144-6689-44d6-8a82-45bd65d1c950",
+      "position": 2,
+      "properties": {
+        "progression_name": "Computer Build AI Assistant"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2514144-6689-44d6-8a82-45bd65d1c950",
+        "lesson_activity.key": "2a32d5a8-252a-42d7-ae55-a8b7ab541618"
+      }
+    },
+    {
+      "key": "f6f5a47c-5ea0-4647-8d70-117622261d32",
+      "position": 1,
+      "properties": {
+        "progression_name": "Write a News Headline"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6f5a47c-5ea0-4647-8d70-117622261d32",
+        "lesson_activity.key": "cd6e0f15-9e91-43de-b2da-61ef3a13c869"
       }
     },
     {
@@ -430,6 +468,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Some Test Level Jamila Made"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-jamila-multi-level-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "21d9d2a0-4d74-4122-88be-7f55fee8a340"
+      },
+      "level_keys": [
+        "test-jamila-multi-level-2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson3-level1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -446,11 +509,14 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson3-matching"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -465,9 +531,96 @@
       "level_keys": [
         "test-computer-systems-lesson3-matching"
       ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computing-systems-lesson7-level1"
+        ],
+        "progression": "Computer Build User Profiles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "9feb3386-2cb3-448d-8fc9-51dffac1fd41"
+      },
+      "level_keys": [
+        "test-computing-systems-lesson7-level1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computing-systems-lesson7-level2"
+        ],
+        "progression": "Computer Build AI Assistant"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "a2514144-6689-44d6-8a82-45bd65d1c950"
+      },
+      "level_keys": [
+        "test-computing-systems-lesson7-level2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-computing-systems-lesson7-level3"
+        ],
+        "progression": "Write a News Headline"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "f6f5a47c-5ea0-4647-8d70-117622261d32"
+      },
+      "level_keys": [
+        "test-computing-systems-lesson7-level3"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "test-jamila-multi-level-2025",
+        "script_level.level_keys": [
+          "test-jamila-multi-level-2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "21d9d2a0-4d74-4122-88be-7f55fee8a340"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "test-computer-systems-lesson3-level1",
@@ -490,6 +643,42 @@
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices",
         "activity_section.key": "8e036283-c4b7-4ad3-87c4-fc2c8165be62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computing-systems-lesson7-level1",
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "9feb3386-2cb3-448d-8fc9-51dffac1fd41"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computing-systems-lesson7-level2",
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "a2514144-6689-44d6-8a82-45bd65d1c950"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-computing-systems-lesson7-level3",
+        "script_level.level_keys": [
+          "test-computing-systems-lesson7-level3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "f6f5a47c-5ea0-4647-8d70-117622261d32"
       }
     }
   ],

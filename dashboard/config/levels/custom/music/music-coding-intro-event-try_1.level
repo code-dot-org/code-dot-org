@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-01-07T23:37:28.000Z",
   "level_num": "custom",
@@ -182,7 +183,7 @@
         }
       }
     },
-    "long_instructions": "###<i class=\"fa-solid fa-play\"></i> Try it out!\r\n\r\n1. Press [Run](#clickable=run-button) to start the background music. \r\n2. Press the triggers [1](#clickable=trigger-button-1), 2, or 3.\r\n3. What do you notice? ",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<b>Teacher Tip:</b> Students can use the keypad or click on the numbers underneath the \"Run\" button to trigger the events. \r\n</p>\r\n</div>\r\n\r\n\r\n###<i class=\"fa-solid fa-play\"></i> Try it out!\r\n\r\n1. Press [Run](#clickable=run-button) to start the background music. \r\n2. Press the triggers [1](#clickable=trigger-button-1), 2, or 3.\r\n3. What do you notice? ",
     "validations": [
       {
         "key": "music-coding-intro-event-try_4819c55f-caa5-40b0-b2bc-0b2ee4635777",
@@ -231,8 +232,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:28.813+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-try\\\"\"],\"cloned_from\":\"music-coding-intro-event-try\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:28.813+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-try\\\"\"],\"cloned_from\":\"music-coding-intro-event-try\"},{\"changed_at\":\"2025-01-21 19:30:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

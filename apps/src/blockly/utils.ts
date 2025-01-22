@@ -2,6 +2,7 @@ import * as GoogleBlockly from 'blockly/core';
 import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -152,6 +153,18 @@ export function handleCodeGenerationFailure(
       event: eventName,
       errorMessage: error.message,
       stackTrace: error.stack,
+    });
+  }
+}
+/**
+ * Report usage of CDO Blockly, once all Blockly labs are purported to
+ * on mainline Google Blockly.
+ * @param {MetricEvent} eventName Event name to log
+ */
+export function reportCdoBlocklyUsage(eventName: MetricEvent) {
+  if (DCDO.get('cdo-blockly-usage', false)) {
+    MetricsReporter.logInfo({
+      event: eventName,
     });
   }
 }

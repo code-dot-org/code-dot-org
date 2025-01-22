@@ -6,8 +6,11 @@ import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 
-import {parseErrorMessage} from './pythonHelpers/messageHelpers';
-import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
+import {
+  parseMessageToNeighborhoodSignal,
+  parseErrorMessage,
+} from './pythonHelpers/messageHelpers';
+import {MessageTag} from './pythonHelpers/patches';
 import {PyodideMessage} from './types';
 
 let callbacks: {[key: number]: (event: PyodideMessage) => void} = {};
@@ -28,10 +31,20 @@ const setUpPyodideWorker = () => {
       case 'syserr':
         // We currently treat sysout and syserr the same, but we may want to
         // change this in the future. Test output goes to syserr by default.
-        if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
+        if (message.startsWith(MessageTag.MATPLOTLIB_IMG)) {
           // This is a matplotlib image, so we need to append it to the output
-          const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
+          const image = message.slice(MessageTag.MATPLOTLIB_IMG.length + 1);
           consoleManager?.writeImage(image);
+          break;
+        }
+        if (message.startsWith(MessageTag.NEIGHBORHOOD_SIGNAL)) {
+          const neighborhood =
+            CodebridgeRegistry.getInstance().getNeighborhood();
+          if (neighborhood) {
+            // Parse message string to NeighborhoodSignal.
+            const data = parseMessageToNeighborhoodSignal(message);
+            neighborhood.handleSignal(data);
+          }
           break;
         }
         consoleManager?.writeConsoleMessage(message);

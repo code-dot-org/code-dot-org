@@ -19314,6 +19314,12 @@ en:
               name: L4
             lesson-6:
               name: 'L1: Placeholder!'
+            lesson-7:
+              name: L5
+            lesson-8:
+              name: L6
+            lesson-9:
+              name: L7
           lesson_groups:
             lessonGroup-3:
               display_name: New Neighborhood (w Panels + Chatbot Levels)
@@ -19752,8 +19758,50 @@ en:
           lessons: {}
           lesson_groups: {}
         6-12-intro-to-programming-python:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Working with Objects
+            lesson-2:
+              name: Functions and Parameters
+            lesson-3:
+              name: Debugging Strategies
+            lesson-4:
+              name: Introduction to Loops
+            lesson-5:
+              name: Conditional Statements
+            lesson-6:
+              name: 'Lesson 1: pre-assessment'
+            lesson-7:
+              name: 'Lesson 2: Computing Careers'
+            lesson-8:
+              name: 'Lesson 3: Computational Thinking'
+            lesson-9:
+              name: 'Leeson 4: Designing Algorithms'
+            lesson-10:
+              name: 'Lesson 5: Variables & Data Flow'
+            lesson-11:
+              name: 'Lesson 6: Working with Objects'
+            lesson-12:
+              name: 'Lesson 7: Functions and Parameters'
+            lesson-13:
+              name: 'Lesson 8: Debugging Strategies'
+            lesson-14:
+              name: 'Lesson 9: Intro to Loops'
+            lesson-15:
+              name: 'Lesson 10: Conditionals'
+            lesson-16:
+              name: 'Lesson 11: Algorithms in Apps'
+            lesson-17:
+              name: 'Lesson 12: Decomping a Pixel Image'
+            lesson-18:
+              name: 'Lesson 13: Two-Way & Nested Selection'
+            lesson-19:
+              name: 'Lesson 14: Pixels of Me Project'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: console-only levels
+            lessonGroup-3:
+              display_name: Regular Lessons/Levels
           name: 6-12-intro-to-programming-python
           title: 6-12 Intro to Programming (Python) Playground
           description_audience: ''
@@ -19802,6 +19850,26 @@ en:
           lesson_groups: {}
           name: 6-12-networks-and-the-internet
           title: 6-12 Networks and the Internet Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        tess-modularity-test-unit-1:
+          lessons: {}
+          lesson_groups: {}
+          name: tess-modularity-test-unit-1
+          title: Modularity yay
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        jamila-sandbox:
+          lessons:
+            lesson-1:
+              name: python lab stuff
+          lesson_groups: {}
+          name: jamila-sandbox
+          title: jamila's stuff go away
           description_audience: ''
           description_short: ''
           description: ''
