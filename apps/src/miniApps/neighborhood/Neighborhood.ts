@@ -15,6 +15,10 @@ const ANIMATED_STEP_SPEED = 500;
 const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
 const SIGNAL_CHECK_TIME = 200;
 
+// 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
+// reference the maze visualization area. It is initially set up in maze's Visualization.jsx
+const SVG_ID = 'svgMaze';
+
 // We are relying on old maze skins here, which are not typed.
 export type SkinType = Record<string, unknown>;
 
@@ -66,6 +70,9 @@ export default class Neighborhood {
     if (!level.serializedMaze) {
       return;
     }
+    if (this.controller) {
+      this.prepareForNewMaze();
+    }
     this.controller = new MazeController(level, skin, config, {
       // TODO: Either get rid of these methods or support audio in Neighborhood.
       // https://codedotorg.atlassian.net/browse/CT-942
@@ -77,10 +84,7 @@ export default class Neighborhood {
       },
     });
 
-    // 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
-    // reference the maze visualization area. It is initially set up in maze's Visualization.jsx
-    const svg = document.getElementById('svgMaze');
-    console.log({svgChildrenLength: svg?.children?.length});
+    const svg = document.getElementById(SVG_ID);
     this.controller.subtype.initStartFinish();
     this.controller.subtype.createDrawer(svg);
     this.controller.subtype.initWallMap();
@@ -264,7 +268,17 @@ export default class Neighborhood {
   }
 
   prepareForNewMaze() {
-    const svg = document.getElementById('svgMaze');
-    this.controller?.removeMap(svg, ['look']);
+    const svg = document.getElementById(SVG_ID);
+    // Visualization.jsx includes a 'look' tile that we want to keep inside svgMaze.
+    const idToIgnore = 'look';
+    if (svg && svg.children && svg.children.length > 1) {
+      const mazeTiles = Array.from(svg.children);
+      for (let i = 0; i < mazeTiles.length; i++) {
+        const tile = mazeTiles[i];
+        if (tile.id !== idToIgnore) {
+          svg.removeChild(tile);
+        }
+      }
+    }
   }
 }

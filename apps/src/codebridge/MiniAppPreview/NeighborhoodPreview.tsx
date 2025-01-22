@@ -57,7 +57,6 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
       return;
     }
 
-    neighborhood.prepareForNewMaze();
     const mazeContents = serializedMaze?.contents
       ? (JSON.parse(serializedMaze.contents) as MazeCell[][])
       : undefined;

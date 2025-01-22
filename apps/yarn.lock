@@ -3803,11 +3803,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/maze@portal:/Volumes/source/GitHub/maze::locator=blockly-mooc%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@code-dot-org/maze@portal:/Volumes/source/GitHub/maze::locator=blockly-mooc%40workspace%3A."
+"@code-dot-org/maze@npm:2.16.0":
+  version: 2.16.0
+  resolution: "@code-dot-org/maze@npm:2.16.0"
+  checksum: 395ea9a22edd3018dd5de302426f4a762e48f9bba6ce7846f0e665ef109a0c3cfb1eaf60f0c0cf000c17c57d647fb773c4c39819219565fb75fb1ec67f8ced27
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "@code-dot-org/ml-activities@npm:0.0.29":
   version: 0.0.29
