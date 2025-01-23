@@ -501,6 +501,20 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
+  test 'family_unit_versions returns values sorted by version year' do
+    # create units out of order
+    second = create :script, family_name: 'fake-family', version_year: '2017'
+    third = create :script, family_name: 'fake-family', version_year: '2018'
+    first = create :script, family_name: 'fake-family', version_year: '2016'
+    assert_equal [first, second, third], Unit.family_unit_versions('fake-family')
+  end
+
+  test 'family_unit_versions handles nil version year' do
+    actual_version = create :script, family_name: 'fake-family', version_year: '2017'
+    missing_version = create :script, family_name: 'fake-family'
+    assert_equal [actual_version, missing_version], Unit.family_unit_versions('fake-family')
+  end
+
   test 'self.latest_stable_version is nil if no unit versions in family are stable in locale' do
     create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
     create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
@@ -525,6 +539,14 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'self.latest_stable_version returns correct unit version in family if version_year is supplied' do
     unit_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+
+    assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
+  end
+
+  test 'self.lastest_stable_version supports some family members having nil version_years' do
+    unit_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: nil, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
 
     assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
