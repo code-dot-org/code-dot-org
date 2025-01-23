@@ -7,7 +7,7 @@ export const DividerContentfulComponentDefinition: ComponentDefinition = {
   category: 'Custom Components',
   builtInStyles: 'cfMargin',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/2szIrFB6A7UrWF4wQLW2zV/0531f1a17546c6a92ccbc07a87231f85/component_divider_thumbnail.png',
+    'https://images.ctfassets.net/90t6bu6vlf76/6UpajalIAQ0bHw17sZky2Y/6c93c9859576d981676325338e844075/component_divider_thumbnail.png',
   tooltip: {
     description:
       'Use a divider to visually separate content sections. It spans the full width and helps improve readability and layout structure.',
