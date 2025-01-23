@@ -4557,6 +4557,14 @@ columns:
   - *31
   - *28
   - *91
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: session_format
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   pd_survey_questions:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -13953,7 +13961,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250113204313
+version: 20250116214434
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

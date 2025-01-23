@@ -24,7 +24,7 @@ describe('NewUnitFormTest', () => {
     };
   });
 
-  it('can create a new standalone unit', () => {
+  it('can not create a new standalone unit', () => {
     const wrapper = mount(<NewUnitForm {...defaultProps} />);
     expect(wrapper.find('button').length).toBe(0);
     expect(wrapper.find('NewCourseFields').length).toBe(0);
@@ -34,93 +34,8 @@ describe('NewUnitFormTest', () => {
       .find('.isCourseSelector')
       .simulate('change', {target: {value: 'true'}});
 
-    let fields = wrapper.find('NewCourseFields');
-    expect(fields.length).toBe(1);
-
-    expect(fields.find('.familyNameSelector').length).toBe(1);
-
-    expect(fields.find('isVersionedSelector').length).toBe(0);
-    fields
-      .find('.familyNameSelector')
-      .simulate('change', {target: {value: 'family-1'}});
-
-    // need to get updated fields
-    fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.isVersionedSelector').length).toBe(1);
-    expect(wrapper.find('button').length).toBe(1);
-
-    fields
-      .find('.isVersionedSelector')
-      .simulate('change', {target: {value: 'yes'}});
-
-    // need to get updated fields
-    fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.versionYearSelector').length).toBe(1);
-    expect(fields.find('.versionYearSelector').props().disabled).toBe(false);
-    expect(wrapper.find('button').length).toBe(1);
-
-    fields
-      .find('.versionYearSelector')
-      .simulate('change', {target: {value: '1991'}});
-
-    // need to get updated fields
-    fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.versionYearSelector').props().value).toBe('1991');
-
-    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(1);
-    expect(wrapper.find('[name="script[name]"]').length).toBe(1);
-  });
-
-  it('course type settings are updated when family name is selected', () => {
-    const wrapper = mount(<NewUnitForm {...defaultProps} />);
-    expect(wrapper.find('button').length).toBe(0);
-    expect(wrapper.find('NewCourseFields').length).toBe(0);
-    expect(wrapper.find('.isCourseSelector').length).toBe(1);
-
-    wrapper
-      .find('.isCourseSelector')
-      .simulate('change', {target: {value: 'true'}});
-
-    let fields = wrapper.find('NewCourseFields');
-    expect(fields.length).toBe(1);
-
-    expect(fields.find('.familyNameSelector').length).toBe(1);
-
-    expect(fields.find('isVersionedSelector').length).toBe(0);
-    fields
-      .find('.familyNameSelector')
-      .simulate('change', {target: {value: 'family-1'}});
-
-    // need to get updated fields
-    fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.isVersionedSelector').length).toBe(1);
-    expect(fields.find('CourseTypeEditor').length).toBe(1);
-    expect(fields.find('CourseTypeEditor').props().instructorAudience).toBe(
-      'teacher'
-    );
-    expect(fields.find('CourseTypeEditor').props().participantAudience).toBe(
-      'student'
-    );
-    expect(fields.find('CourseTypeEditor').props().instructionType).toBe(
-      'teacher_led'
-    );
-
-    fields
-      .find('.familyNameSelector')
-      .simulate('change', {target: {value: 'family-2'}});
-
-    // need to get updated fields
-    fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.isVersionedSelector').length).toBe(1);
-    expect(fields.find('CourseTypeEditor').length).toBe(1);
-    expect(fields.find('CourseTypeEditor').props().instructorAudience).toBe(
-      'universal_instructor'
-    );
-    expect(fields.find('CourseTypeEditor').props().participantAudience).toBe(
-      'teacher'
-    );
-    expect(fields.find('CourseTypeEditor').props().instructionType).toBe(
-      'self_paced'
+    expect(wrapper.text()).toContain(
+      'To create a standalone unit, please create a new course first.'
     );
   });
 
@@ -139,7 +54,7 @@ describe('NewUnitFormTest', () => {
     expect(wrapper.find('[name="script[name]"]').length).toBe(1);
   });
 
-  it('resetting isCourseSelector hides NewCourseFields', () => {
+  it('resetting isCourseSelector hides standalone unit instruction text', () => {
     const wrapper = shallow(<NewUnitForm {...defaultProps} />);
     expect(wrapper.find('div.savingDetailsAndButton').length).toBe(0);
     expect(wrapper.find('NewCourseFields').length).toBe(0);
@@ -149,15 +64,15 @@ describe('NewUnitFormTest', () => {
       .find('.isCourseSelector')
       .simulate('change', {target: {value: 'true'}});
 
-    expect(wrapper.find('NewCourseFields').length).toBe(1);
-    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(0);
-    expect(wrapper.find('[name="script[name]"]').length).toBe(0);
+    expect(wrapper.text()).toContain(
+      'To create a standalone unit, please create a new course first.'
+    );
 
     wrapper.find('.isCourseSelector').simulate('change', {target: {value: ''}});
 
-    expect(wrapper.find('NewCourseFields').length).toBe(0);
-    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(0);
-    expect(wrapper.find('[name="script[name]"]').length).toBe(0);
+    expect(wrapper.text()).not.toContain(
+      'To create a standalone unit, please create a new course first.'
+    );
   });
 
   it('resetting isCourseSelector hides save button', () => {

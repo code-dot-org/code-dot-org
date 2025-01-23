@@ -4,12 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "version_year": "2024"
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-10 22:43:03 UTC",
+    "serialized_at": "2025-01-22 19:00:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

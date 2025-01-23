@@ -55,11 +55,16 @@ markdown <<MARKDOWN
 
 ## Examples in Code.org Curricula
 
+##### Click on the arrows below to expand each section.
+
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 18px; font-weight: bold;">Elementary Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### <a href="https://code.org/curriculum/csc" target="blank" rel="noopener noreferrer">CS Connections</a> is filled with engaging videos featuring professionals in industries relevant to what they are learning about in class. These professionals share with students the exciting parts of their careers and how they relate to coding. Check out the <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNebLH2lPdtR7K2PwjnjE-8S" target="blank" rel="noopener noreferrer">CSC video playlist</a>!
+
 </p></div>
 </details>
 
@@ -68,6 +73,9 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">Middle School Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### In CS Discoveries <a href="https://studio.code.org/s/csd4-2024" target="blank" rel="noopener noreferrer">Unit 4 - The Design Process</a>, students learn how human-centered design can be used to build personally relevant products for their users. The unit culminates with students designing and coding an app based on a topic of personal and social importance which can be used to solve a problem in their community.
+
 </p></div>
 </details>
 
@@ -76,6 +84,9 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">High School Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### In CS Principles <a href="https://studio.code.org/s/csp8-2024" target="blank" rel="noopener noreferrer">Unit 4 - Cybersecurity and Global Impacts</a>, students learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. This helps make the social impacts of computing more relevant for students.
+
 </p></div>
 </details>
 

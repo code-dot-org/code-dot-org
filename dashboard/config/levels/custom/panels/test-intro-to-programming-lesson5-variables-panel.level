@@ -1,0 +1,52 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-01-22T17:21:39.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "# Instructions Panel\nFirst, read the instructions in the top left corner of the screen.",
+        "imageUrl": "https://images.code.org/8326c0d9ee66d0ceb05d96554aebd4a0-Screenshot 2025-01-22 at 3.07.55 PM.png",
+        "key": "undefined-1d5d3a7f-7f89-4eb3-853c-7aa5a400395f",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "# Workspace\nYou'll find the start code in the Workspace. Simply click into the Workspace to start adding your own code.\n",
+        "imageUrl": "https://images.code.org/856c8d36e7e96df5f83d811e23dcbb43-Screenshot 2025-01-22 at 3.08.22 PM.png",
+        "key": "IPP-careerPersonas-2c4164c6-d454-463c-8f56-a0c9eb04889c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Reset Version History\nTo reset the level to its original start code:\n- Click **Version History** and select **Initial version** \n- Then **Restore** and **Start Over**",
+        "imageUrl": "https://images.code.org/05c21411ddda53db4ee180c7270e0aed-newversionhistory.gif",
+        "key": "IPP-careerPersonas-08ed7eb5-0cc6-44c4-b533-d1aec83455c2",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Run Your Code\nWhen you're ready to try out your program, click Run in the center of the screen.",
+        "imageUrl": "https://images.code.org/5fbefe6354ca8434597e0a584b6d77d2-Screenshot 2025-01-22 at 3.20.56 PM.png",
+        "key": "IPP-careerPersonas-515c9265-7186-4902-ae4e-967269f78611",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "# Console\nFind the output of your print statements in the console. Any error messages will appear here as well.",
+        "imageUrl": "https://images.code.org/f9ffe864b11d3adb0afb9e335837ca82-Screenshot 2025-01-22 at 3.12.28 PM.png",
+        "key": "test-intro-to-programming-lesson5-variables-panel-e75adc89-e249-4d58-ba88-bcb334b45b44",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "bubble_choice_description": "**Age:** 16\n\n**Hobbies:** Solving puzzles\n\n**Favorite Subject:** Science\n\n**Favorite Movie:** Hidden Figures (inspired by data's role in solving big problems).",
+    "display_name": "Maya",
+    "thumbnail_url": "https://images.code.org/223c7eaa64967213fbcbc72aecbda624-Screenshot 2025-01-14 104724.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-22T17:21:39.952+00:00\",\"changed\":[\"cloned from \\\"IPP-careerPersonas\\\"\"],\"cloned_from\":\"IPP-careerPersonas\"},{\"changed_at\":\"2025-01-22 17:21:54 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:26:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:34:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:36:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:36:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:37:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:37:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:41:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:49:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:58:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:02:21 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:03:27 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:08:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:14:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:16:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:16:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:17:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:18:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:19:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:21:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

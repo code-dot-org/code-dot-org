@@ -3,33 +3,16 @@
  *
  * Note: This file must be imported both server-side and client-side to ensure Contentful is able to map on both rendering modes.
  */
+import Divider, {
+  DividerContentfulComponentDefinition,
+} from '@/components/divider';
 import {
   defineComponents,
   CONTENTFUL_COMPONENTS,
 } from '@contentful/experiences-sdk-react';
-import {
-  Stub,
-  StubContentfulComponentDefinition,
-} from '@code-dot-org/component-library/stub';
-import {
-  StubSection,
-  StubSectionContentfulComponentDefinition,
-} from '@code-dot-org/component-library/stub-section';
-import {
-  Divider,
-  DividerContentfulComponentDefinition,
-} from '@code-dot-org/component-library/divider';
 
 defineComponents(
   [
-    {
-      component: Stub,
-      definition: StubContentfulComponentDefinition,
-    },
-    {
-      component: StubSection,
-      definition: StubSectionContentfulComponentDefinition,
-    },
     {
       component: Divider,
       definition: DividerContentfulComponentDefinition,

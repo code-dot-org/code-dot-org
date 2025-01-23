@@ -1,21 +1,44 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import {MiniApps} from '@codebridge/constants';
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {
+  DEFAULT_FOLDER_ID,
+  MAZE_FILE_NAME,
+  MiniApps,
+} from '@codebridge/constants';
+import {findFile} from '@codebridge/utils';
 import React, {useEffect, useMemo} from 'react';
 
 import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
+import {MazeCell} from '@cdo/apps/lab2/types';
 import skins from '@cdo/apps/maze/skins';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import NeighborhoodVisualization from '@cdo/apps/miniApps/neighborhood/NeighborhoodVisualization';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import CodebridgeRegistry from '../CodebridgeRegistry';
-
 // Preview panel for the neighborhood mini app.
 const NeighborhoodPreview: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
+  const {source, config} = useCodebridgeContext();
+  const serializedMaze = findFile(source, MAZE_FILE_NAME, DEFAULT_FOLDER_ID);
   const dispatch = useAppDispatch();
-  const {config} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
+
+  const neighborhood = useMemo(() => {
+    const neighborhoodRef = new Neighborhood(
+      message =>
+        CodebridgeRegistry.getInstance()
+          .getConsoleManager()
+          ?.writeConsoleMessage(message),
+      () =>
+        CodebridgeRegistry.getInstance()
+          .getConsoleManager()
+          ?.writeConsoleMessage(''),
+      isRunning => dispatch(setIsRunning(isRunning)),
+      '[PYTHON LAB]'
+    );
+    CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
+    return neighborhoodRef;
+  }, [dispatch]);
 
   const neighborhoodSkin = useMemo(() => {
     if (!levelProperties) {
@@ -28,28 +51,25 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
   }, [levelProperties]);
 
   useEffect(() => {
-    if (!levelProperties || !neighborhoodSkin) {
+    if (!levelProperties || !neighborhoodSkin || !serializedMaze) {
       return;
     }
-    const neighborhood = new Neighborhood(
-      message =>
-        CodebridgeRegistry.getInstance()
-          .getConsoleManager()
-          ?.writeConsoleMessage(message),
-      () =>
-        CodebridgeRegistry.getInstance()
-          .getConsoleManager()
-          ?.writeConsoleMessage(''),
-      isRunning => dispatch(setIsRunning(isRunning)),
-      '[PYTHON LAB]'
-    );
+
+    const mazeContents = serializedMaze?.contents
+      ? (JSON.parse(serializedMaze.contents) as MazeCell[][])
+      : undefined;
+
+    // Combine the serialized maze from the project with the level properties.
+    const parsedLevelProperties = mazeContents
+      ? {...levelProperties, serializedMaze: mazeContents}
+      : levelProperties;
 
     neighborhood.afterInject(
-      levelProperties,
+      parsedLevelProperties,
       neighborhoodSkin,
       {
         skinId: MiniApps.Neighborhood,
-        level: levelProperties,
+        level: parsedLevelProperties,
         skin: neighborhoodSkin,
       },
       () => {},
@@ -73,7 +93,14 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
         position: 'absolute',
       });
     }
-  }, [dispatch, levelProperties, isVertical, neighborhoodSkin]);
+  }, [
+    dispatch,
+    levelProperties,
+    isVertical,
+    neighborhoodSkin,
+    serializedMaze,
+    neighborhood,
+  ]);
 
   return (
     <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />

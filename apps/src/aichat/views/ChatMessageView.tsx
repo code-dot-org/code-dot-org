@@ -11,7 +11,7 @@ import {ChatMessage as ChatMessageType} from '../types';
 
 import TeacherFeedbackFooter from './TeacherFeedbackFooter';
 
-import moduleStyles from '@cdo/apps/aiComponentLibrary/chatMessage/chat-message.module.scss';
+import moduleStyles from './chat-message-view.module.scss';
 
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
@@ -33,48 +33,64 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     );
   }, [chatMessage, showProfaneUserMessage]);
 
+  const ShowHideMessageButton = () => (
+    <Button
+      onClick={() => {
+        setShowProfaneUserMessage(!showProfaneUserMessage);
+      }}
+      text={
+        showProfaneUserMessage
+          ? aichatI18n.chatMessage_hideMessage()
+          : aichatI18n.chatMessage_showMessage()
+      }
+      size="xs"
+      type="tertiary"
+      className={moduleStyles.userProfaneMessageButton}
+    />
+  );
+
+  // TODO: Clean up this logic; ideally these should just be inverses of each other.
+
+  const noProfanityViolation =
+    displayText === chatMessage.chatMessageText &&
+    chatMessage.status !== Status.PROFANITY_VIOLATION;
+  const hasProfanityViolation =
+    chatMessage.role === Role.USER &&
+    chatMessage.status === Status.PROFANITY_VIOLATION;
+
+  const NoProfanityFooter = () => (
+    <TeacherFeedbackFooter
+      isProfanityViolation={false}
+      chatMessage={chatMessage}
+    />
+  );
+
+  const ProfanityFooter = () => (
+    <>
+      {showProfaneUserMessage && (
+        <TeacherFeedbackFooter
+          isProfanityViolation={true}
+          chatMessage={chatMessage}
+        />
+      )}
+      <div className={moduleStyles.showHideMessageButtonContainer}>
+        <ShowHideMessageButton />
+      </div>
+    </>
+  );
+
+  const footer = noProfanityViolation ? (
+    <NoProfanityFooter />
+  ) : hasProfanityViolation ? (
+    <ProfanityFooter />
+  ) : null;
+
   return (
     <ChatMessage
       {...chatMessage}
       showProfaneUserMessage={showProfaneUserMessage}
-    >
-      {isChatHistoryView &&
-        displayText === chatMessage.chatMessageText &&
-        chatMessage.status !== Status.PROFANITY_VIOLATION && (
-          <TeacherFeedbackFooter
-            isProfanityViolation={false}
-            chatMessage={chatMessage}
-          />
-        )}
-
-      {isChatHistoryView &&
-        chatMessage.role === Role.USER &&
-        chatMessage.status === Status.PROFANITY_VIOLATION && (
-          <>
-            {showProfaneUserMessage && (
-              <TeacherFeedbackFooter
-                isProfanityViolation={true}
-                chatMessage={chatMessage}
-              />
-            )}
-            <div className={moduleStyles[`container-user`]}>
-              <Button
-                onClick={() => {
-                  setShowProfaneUserMessage(!showProfaneUserMessage);
-                }}
-                text={
-                  showProfaneUserMessage
-                    ? aichatI18n.chatMessage_hideMessage()
-                    : aichatI18n.chatMessage_showMessage()
-                }
-                size="xs"
-                type="tertiary"
-                className={moduleStyles.userProfaneMessageButton}
-              />
-            </div>
-          </>
-        )}
-    </ChatMessage>
+      footer={isChatHistoryView && footer}
+    />
   );
 };
 

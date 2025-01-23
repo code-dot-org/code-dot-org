@@ -21,6 +21,7 @@ import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes, EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 
 import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
@@ -228,6 +229,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   const sendFinishEvent = (): void => {
+    // Log to Statsig and Amplitude
     const schoolData = buildSchoolData({
       schoolId: schoolInfo.schoolId,
       country: schoolInfo.country,
@@ -248,6 +250,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
       },
       PLATFORMS.BOTH
     );
+
+    // Log to Google Analytics
+    trackEvent('sign_up', 'sign_up_success', {
+      value: 'teacher',
+    });
   };
 
   return (

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_01_13_204313) do
+ActiveRecord::Schema.define(version: 2025_01_16_214434) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1415,6 +1415,7 @@ ActiveRecord::Schema.define(version: 2025_01_13_204313) do
     t.datetime "updated_at"
     t.datetime "deleted_at"
     t.string "code"
+    t.integer "session_format"
     t.index ["code"], name: "index_pd_sessions_on_code", unique: true
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id"
   end

@@ -178,6 +178,7 @@ def main
         NOT_FUNDED_SUBJECTS
         CSD_CUSTOM_WORKSHOP_MODULES
         PARTICIPANT_GROUP_TYPES
+        PD_SESSION_FORMATS
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false

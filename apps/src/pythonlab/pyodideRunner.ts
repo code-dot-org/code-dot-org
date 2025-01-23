@@ -1,10 +1,12 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {MiniApps} from '@codebridge/constants';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {getStore} from '@cdo/apps/redux';
 
 import {getValidationFromSource} from '../codebridge';
 
@@ -43,6 +45,9 @@ export async function handleRunClick(
     }
     consoleManager?.writeSystemMessage('Running program...', appName);
     await runPythonCode(code, source);
+    if (isNeighborhoodLevel()) {
+      CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+    }
   }
 }
 
@@ -52,6 +57,10 @@ export async function runPythonCode(
   validationFile?: ProjectFile
 ) {
   try {
+    if (isNeighborhoodLevel()) {
+      CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+      CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    }
     return await asyncRun(mainFile, source, validationFile);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
@@ -62,6 +71,9 @@ export async function runPythonCode(
 }
 
 export function stopPythonCode() {
+  if (isNeighborhoodLevel()) {
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
 }
@@ -106,4 +118,10 @@ export async function runAllTests(
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.
     await runPythonCode(runStudentTests(), source);
   }
+}
+
+function isNeighborhoodLevel() {
+  return (
+    getStore().getState().lab.levelProperties?.miniApp === MiniApps.Neighborhood
+  );
 }

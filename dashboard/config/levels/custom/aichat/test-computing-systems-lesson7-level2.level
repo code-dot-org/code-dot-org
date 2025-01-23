@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# AI Computer Build Assistant\r\n\r\n## Do This:\r\n- Interact with the Computer Build Assistant to help you figure out what considerations you should make to select the perfect computer components for your selected user. \r\n\r\n**Example Prompts:**\r\n- How much RAM would you need in order to \r\n\r\n   ",
+    "long_instructions": "# Computer Build AI Assistant\r\n\r\n## Do This:\r\n- *Describe the User*: Share details about who the PC is for— their job or hobbies, and how they plan to use the computer (gaming, content creation, etc.)\r\n- *Set the Budget*: Let the assistant know roughly how much the user can spend\r\n- *Ask for Component Details*: Tell me if you need advice on CPU, GPU, motherboard, RAM, storage, power supply, or peripherals (like monitors, keyboards)\r\n- *Consider Compatibility*: Keep in mind parts should match each other’s requirements (for example, choosing the right motherboard for your CPU)\r\n- *Request Explanations*: If you’re not sure why certain specs matter, ask for a simple explanation.\r\n- *Keep Learning*: Feel free to ask “why” or “how” questions for a deeper understanding of each component.\r\n\r\n\r\n**Example Prompts:**\r\n- I’m building a computer for a graphic design student—what specs are most important?\r\n- Teach me the basics of how motherboard chipsets affect compatibility\r\n- What’s the difference between Intel and AMD processors for gaming?\r\n- Can you suggest a motherboard that pairs well with a Ryzen 5 5600X?\r\n- Why does clock speed matter for a CPU, and how many cores does my user really need?\r\n- I have a $1,500 budget for a content-creation PC—what are my best CPU and GPU options?\r\n- How much RAM should I get for everyday tasks and light gaming?\r\n- What wattage do I need for my power supply if I’m using a mid-range GPU?\r\n- Is it worth spending more on a Gold-rated PSU instead of Bronze?\r\n\r\n   ",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gen-ai-mistral-7b-inst-v01",
@@ -17,13 +17,15 @@
 
         ],
         "modelCardInfo": {
-          "botName": "",
-          "description": "",
-          "intendedUse": "",
-          "limitationsAndWarnings": "",
-          "testingAndEvaluation": "",
+          "botName": "Computer Build AI Assistant",
+          "description": "This AI tool is here to guide you through choosing parts for a fictional computer build. It asks about things like budget, purpose (gaming, content creation, etc.), and personal preferences, then recommends specific components. Along the way, it also explains important details—like why certain hardware specs matter—so you can learn the basics of PC building.",
+          "intendedUse": "Who It’s For: Students or newcomers who want to learn about computer hardware.\n\nWhat It Does: \n* Asks about your needs and preferences. \n* Suggests specific CPUs, GPUs, motherboards, RAM, storage, power supplies, and peripherals. \n* Explains complex hardware terms in a clear, beginner-friendly way.",
+          "limitationsAndWarnings": "* Prices Can Change: The AI’s knowledge of hardware prices might not be up to date. Always double-check current pricing.\n\n* Verify Compatibility: Although the tool aims for accurate suggestions, real-world product lines and availability can change. Confirm any recommended parts with a trusted retailer or resource.\n\n* Budget Updates: The AI may not track shifting market prices, so keep an eye on how much your build might cost overall.",
+          "testingAndEvaluation": "Accuracy: Correct specs and part compatibility.\n\nClarity: Simple, understandable language for beginners.\n\nRelevance: Does the AI’s suggestion match your specific needs?",
           "exampleTopics": [
-
+            "I want a PC for gaming on a $700 budget. What do I need?",
+            "How can I build a workstation for 3D rendering?",
+            "Explain in simple terms why NVMe SSDs are faster than SATA SSDs"
           ],
           "isPublished": false
         }
@@ -35,13 +37,13 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "System Prompt Here....",
-      "hidePresentationPanel": true,
+      "levelSystemPrompt": "Role: You are an AI Assistant designed to guide students through the process of selecting components for a fictional computer build. Your job is to discover the user's (i.e., the person for whom the computer is being built) needs—such as their job/hobby, the computer's primary purpose, budget, and personal preferences—and then propose a well-rounded list of hardware components and peripherals. You will also explain why these components are suitable, giving simple, clear explanations of key specifications and their importance.\n\nGoals:\nElicit User Information: Begin by asking the student to describe the user’s background and needs, including:\n\nJob/Hobby\nPurpose (e.g., gaming, content creation, office work, etc.)\nBudget\nPreferences (e.g., aesthetic preferences, brand loyalties, upgradability)\nRecommend Components: Based on the user’s information, recommend specific computer components, such as:\n\nCPU (Processor)\nGPU (Graphics Card)\nMotherboard\nRAM (Memory)\nStorage (HDDs or SSDs)\nPower Supply Unit (PSU)\nPeripherals (monitor, keyboard, mouse, etc.)\nProvide Brand/Model and Pricing Details: Suggest at least one or two specific product options (including approximate current pricing in USD or another relevant currency) for each component.\n\nEducate and Explain: Offer easy-to-understand explanations of the most important specs (e.g., clock speed, core count, GPU VRAM, RAM speed, storage form factors). Emphasize their relevance to performance or user experience in a simplified manner.\n\nRespect the Budget: Keep in mind the user’s financial constraints. Offer budget-friendly vs. higher-end alternatives if needed.\n\nStay Consistent and Helpful: Provide factual, neutral, and comprehensible information. Only recommend components that generally meet the described needs.\n\nOffer feedback: If students present a build, suggest alterations or modifications that they can make based on the user profile and needs.",
+      "hidePresentationPanel": false,
       "availableModelIds": [
         "gen-ai-mistral-7b-inst-v01"
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-15T20:16:20.610+00:00\",\"changed\":[\"cloned from \\\"IPP-CareerChatBuddy1\\\"\"],\"cloned_from\":\"IPP-CareerChatBuddy1\"},{\"changed_at\":\"2025-01-15 20:18:21 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-16 19:15:40 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-15T20:16:20.610+00:00\",\"changed\":[\"cloned from \\\"IPP-CareerChatBuddy1\\\"\"],\"cloned_from\":\"IPP-CareerChatBuddy1\"},{\"changed_at\":\"2025-01-15 20:18:21 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-16 19:15:40 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 18:18:39 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 18:24:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 18:25:10 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -186,7 +186,9 @@ class ScriptLevelsController < ApplicationController
       end
     end
 
-    @body_classes = @level.properties['background']
+    # The lesson might contain a background that should be applied to all levels.
+    lesson_background = @script_level.lesson.properties['background'] if @script_level.lesson
+    @body_classes = lesson_background ? "background-#{lesson_background}" : @level.properties['background']
 
     @rubric = @script_level.lesson.rubric
     ai_rubrics_enabled_for_user = @view_as_user&.verified_teacher? || @view_as_user&.teachers&.any?(&:verified_teacher?)
