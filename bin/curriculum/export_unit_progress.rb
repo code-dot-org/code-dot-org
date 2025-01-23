@@ -44,7 +44,10 @@ def fetch_progress
     filename = File.expand_path('csd3_including_contained_levels_for_stanford.sql', __dir__)
     query = File.read(filename)
     client = RedshiftClient.instance
-    execute_redshift_query(client, query)
+    start_time = Time.now
+    results = execute_redshift_query(client, query)
+    puts "Redshift progress query executed in: #{(Time.now - start_time).round(2)} seconds"
+    results
   elsif Rails.env.development?
     # fetch the data from the local db instead of redshift when running in
     # development. this allows us to test the codepaths for project fetch
@@ -62,10 +65,7 @@ def fetch_progress
 end
 
 def execute_redshift_query(client, query)
-  start_time = Time.now
-  result = client.exec(query)
-  puts "Redshift query executed in: #{(Time.now - start_time).round(2)} seconds"
-  result
+  client.exec(query)
 rescue => exception
   puts "Error executing Redshift query: #{exception.message}\n#{exception.backtrace.join("\n")}"
   raise
@@ -83,6 +83,29 @@ def get_project_channel_id(user_id, level_id, script_id)
   return unless channel_token
 
   channel_token.channel
+end
+
+def get_redshift_channel_query
+  <<~SQL
+    SELECT ct.storage_app_id as project_id, ct.storage_id, ct.level_id, ct.script_id, us.user_id from dashboard_production.channel_tokens ct
+    LEFT JOIN dashboard_production.scripts s ON  ct.script_id = s.id
+    LEFT JOIN dashboard_production.user_project_storage_ids us ON ct.storage_id = us.id
+    WHERE s.name = 'csd3-2023'
+    AND ct.level_id = 38819;
+  SQL
+end
+
+# create a map from user_id to channel_id
+def get_channel_map(_unit_id = nil, _level_id = nil)
+  channel_query = get_redshift_channel_query
+  channel_rows = execute_redshift_query(RedshiftClient.instance, channel_query)
+  channel_rows.map do |row|
+    user_id = row['user_id']
+    project_id = row['project_id']
+    storage_id = row['storage_id']
+    channel_id = storage_encrypt_channel_id(storage_id, project_id)
+    [user_id, channel_id]
+  end.to_h
 end
 
 def get_project_source(channel_id)
@@ -156,13 +179,13 @@ def main
 
   puts "Looking up channel ids..."
   start_time = Time.now
-  db_threads = 5
-  results = Parallel.map(results, in_threads: db_threads) do |row|
-    channel_id = get_project_channel_id(row['user_id'], row['level_id'], row['script_id'])
-    row[:channel_id] = channel_id
+  channel_map = get_channel_map
+  # TODO: optimize via Parallel.map?
+  results = results.map do |row|
+    row[:channel_id] = channel_map[row['user_id']]
     row
   end
-  puts "Channel id lookups completed in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count} threads: #{db_threads}"
+  puts "Channel id lookups completed in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count}"
 
   puts "Processing source..."
   start_time = Time.now
