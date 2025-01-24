@@ -50,3 +50,5 @@ theme: responsive_full_width
         .content-footer
           %a.link-button{href: "/student/middle-high"}
             =hoc_s(:call_to_action_explore_learning_ages_11_plus)
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::STUDENTS_PAGE_VISITED_EVENT
