@@ -1,8 +1,5 @@
 import {StatsigClient} from '@statsig/js-client';
-import {
-  StatsigAutoCapturePlugin,
-  runStatsigAutoCapture,
-} from '@statsig/web-analytics';
+import {runStatsigAutoCapture} from '@statsig/web-analytics';
 import cookies from 'js-cookie';
 
 import logToCloud from '@cdo/apps/logToCloud';
@@ -189,15 +186,7 @@ class StatsigReporter {
    */
   async runAutoCapture() {
     if (this.shouldPutRecord(ALWAYS_SEND)) {
-      const optionsWithPlugins = {
-        ...this.options,
-        plugins: [new StatsigAutoCapturePlugin()],
-      };
-      const client = new StatsigClient(
-        this.api_key,
-        this.user,
-        optionsWithPlugins
-      );
+      const client = new StatsigClient(this.api_key, this.user, this.options);
       runStatsigAutoCapture(client);
       await client.initializeAsync();
     }
