@@ -353,14 +353,14 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "# Do This:\r\n1. Add code to create a function for turning right:\r\n   - *Use the steps you explored in the warm up and the structure of the `move_fast()` function as a guide.*\r\n   - *Use the `#` to add a comment above your function defintion to explain what it does.*\r\n2. Test your `turn_right()` function by adding a call on line 17.\r\n3. Discuss with your partner:\r\n   - *What happens when you call the `move_fast()` and `turn_right()` functions multiple times in sequence?*\r\n   - *How does defining your own function make your code easier to reuse?*\r\n",
+    "long_instructions": "# Do This:\r\n1. 🖥️ Add a `turn_right()` function.\r\n   - 💡 **Hint:** Refer to the `move_fast()` function as a guide.\r\n   - 🗨️ **Discuss:** How do you add a comment about this function and what should it say?\r\n2. 🖥️ Test your code.\r\n   - 🗨️ **Discuss:** Where should you call your `turn_right()` function?\r\n   - 🗨️ **Discuss:** Can you call the `move_fast()` and `turn_right()` functions multiple times in sequence?\r\n3. 🗨️ How does defining your own function make your code easier to reuse?\r\n",
     "start_sources": {
       "files": {
         "0": {
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "from neighborhood import Painter\n\nbob = Painter()\n\n# This function makes the Painter move forward 3 squares\ndef move_fast():\n  bob.move()\n  bob.move()\n  bob.move()\n\n# Add function defintion here\n\n\nmove_fast()\nbob.paint('blue')\n# Add function call here\n\nmove_fast()\n",
+          "contents": "from neighborhood import Painter\n\nbob = Painter()\n\n# This function makes the Painter move forward 3 squares\ndef move_fast():\n  bob.move()\n  bob.move()\n  bob.move()\n\n# Add function defintion here\n\n\nmove_fast()\nbob.paint('blue')\nmove_fast()\n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -370,6 +370,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22T04:59:48.532+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson7-level1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson7-level1\"},{\"changed_at\":\"2025-01-22 05:00:36 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 05:03:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 05:08:55 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 05:11:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 05:14:04 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-22T04:59:48.532+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson7-level1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson7-level1\"},{\"changed_at\":\"2025-01-22 05:00:36 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 05:03:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 05:08:55 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 05:11:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 05:14:04 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:48:28 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:49:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:35:44 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

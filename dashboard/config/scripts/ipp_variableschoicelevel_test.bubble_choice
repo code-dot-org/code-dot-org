@@ -1,0 +1,11 @@
+name 'IPP-variablesChoiceLevel-test'
+display_name 'Variables Choice Level'
+description 'Pick one of the levels below. Use variables to store data and update their value. Then print out the result.'
+
+sublevels
+level 'test-intro-to-programming-lesson5-variables-5a'
+level 'test-intro-to-programming-lesson5-variables-5b'
+level 'test-intro-to-programming-lesson5-variables-5c'
+
+
+

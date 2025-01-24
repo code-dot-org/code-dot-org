@@ -1,5 +1,5 @@
 import {getNextFileId} from '@codebridge/codebridgeContext';
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
 import {combineStartSourcesAndValidation} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
 
@@ -61,7 +61,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
         const mazeFileId = getNextFileId(Object.values(startCode.files));
         const mazeFile = {
           id: mazeFileId,
-          name: 'serialized_maze.txt',
+          name: MAZE_FILE_NAME,
           contents: JSON.stringify(serializedMaze),
           type: ProjectFileType.SYSTEM_SUPPORT,
           language: 'txt',

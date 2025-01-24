@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "intro-to-programming-playground",
-    "serialized_at": "2025-01-21 15:31:14 UTC",
+    "serialized_at": "2025-01-22 17:22:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -325,13 +325,68 @@
       }
     },
     {
-      "key": "07f73a7e-b406-4c00-bbaa-0049de5a4543",
+      "key": "53d3cb42-2ad5-46b2-8e9e-08d140881bb2",
       "position": 1,
+      "properties": {
+        "progression_name": "Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "53d3cb42-2ad5-46b2-8e9e-08d140881bb2",
+        "lesson_activity.key": "5fa6deda-8672-427e-94ba-42da44f927c9"
+      }
+    },
+    {
+      "key": "07f73a7e-b406-4c00-bbaa-0049de5a4543",
+      "position": 2,
       "properties": {
         "progression_name": "Variables 1"
       },
       "seeding_key": {
         "activity_section.key": "07f73a7e-b406-4c00-bbaa-0049de5a4543",
+        "lesson_activity.key": "5fa6deda-8672-427e-94ba-42da44f927c9"
+      }
+    },
+    {
+      "key": "b3937574-a739-4d0f-81e6-1163e1ee47e1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Variables 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3937574-a739-4d0f-81e6-1163e1ee47e1",
+        "lesson_activity.key": "5fa6deda-8672-427e-94ba-42da44f927c9"
+      }
+    },
+    {
+      "key": "6a11c629-b0d5-4daa-9f99-37d6b0cbc300",
+      "position": 4,
+      "properties": {
+        "progression_name": "Variables 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a11c629-b0d5-4daa-9f99-37d6b0cbc300",
+        "lesson_activity.key": "5fa6deda-8672-427e-94ba-42da44f927c9"
+      }
+    },
+    {
+      "key": "e533e77c-ecd0-44b4-9c54-a95c4572f081",
+      "position": 5,
+      "properties": {
+        "progression_name": "Matching"
+      },
+      "seeding_key": {
+        "activity_section.key": "e533e77c-ecd0-44b4-9c54-a95c4572f081",
+        "lesson_activity.key": "5fa6deda-8672-427e-94ba-42da44f927c9"
+      }
+    },
+    {
+      "key": "6344ef2c-16bf-4dc8-942a-959a3105843c",
+      "position": 6,
+      "properties": {
+        "progression_name": "Choice Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "6344ef2c-16bf-4dc8-942a-959a3105843c",
         "lesson_activity.key": "5fa6deda-8672-427e-94ba-42da44f927c9"
       }
     },
@@ -511,6 +566,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Panel"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-intro-to-programming-lesson5-variables-panel"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "53d3cb42-2ad5-46b2-8e9e-08d140881bb2"
+      },
+      "level_keys": [
+        "test-intro-to-programming-lesson5-variables-panel"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson5-variables-1"
+        ],
         "progression": "Variables 1"
       },
       "bonus": false,
@@ -528,7 +608,95 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-intro-to-programming-lesson5-variables-2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "b3937574-a739-4d0f-81e6-1163e1ee47e1"
+      },
+      "level_keys": [
+        "test-intro-to-programming-lesson5-variables-2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-intro-to-programming-lesson5-variables-3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "6a11c629-b0d5-4daa-9f99-37d6b0cbc300"
+      },
+      "level_keys": [
+        "test-intro-to-programming-lesson5-variables-3"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Matching"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-intro-to-programming-lesson5-variables-CFU"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "e533e77c-ecd0-44b4-9c54-a95c4572f081"
+      },
+      "level_keys": [
+        "test-intro-to-programming-lesson5-variables-CFU"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Choice Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "IPP-variablesChoiceLevel-test"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "6344ef2c-16bf-4dc8-942a-959a3105843c"
+      },
+      "level_keys": [
+        "IPP-variablesChoiceLevel-test"
+      ]
+    },
+    {
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -553,7 +721,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -578,7 +746,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -603,7 +771,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -628,7 +796,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -653,7 +821,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -678,7 +846,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -703,7 +871,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -728,7 +896,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -753,7 +921,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 20,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -778,7 +946,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 21,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -803,7 +971,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 22,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -828,7 +996,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 23,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -853,7 +1021,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 24,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -878,7 +1046,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 25,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -954,6 +1122,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "test-intro-to-programming-lesson5-variables-panel",
+        "script_level.level_keys": [
+          "test-intro-to-programming-lesson5-variables-panel"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "53d3cb42-2ad5-46b2-8e9e-08d140881bb2"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-intro-to-programming-lesson5-variables-1",
         "script_level.level_keys": [
           "test-intro-to-programming-lesson5-variables-1"
@@ -962,6 +1142,54 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "intro-to-programming-playground",
         "activity_section.key": "07f73a7e-b406-4c00-bbaa-0049de5a4543"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-intro-to-programming-lesson5-variables-2",
+        "script_level.level_keys": [
+          "test-intro-to-programming-lesson5-variables-2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "b3937574-a739-4d0f-81e6-1163e1ee47e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-intro-to-programming-lesson5-variables-3",
+        "script_level.level_keys": [
+          "test-intro-to-programming-lesson5-variables-3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "6a11c629-b0d5-4daa-9f99-37d6b0cbc300"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-intro-to-programming-lesson5-variables-CFU",
+        "script_level.level_keys": [
+          "test-intro-to-programming-lesson5-variables-CFU"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "e533e77c-ecd0-44b4-9c54-a95c4572f081"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "IPP-variablesChoiceLevel-test",
+        "script_level.level_keys": [
+          "IPP-variablesChoiceLevel-test"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "intro-to-programming-playground",
+        "activity_section.key": "6344ef2c-16bf-4dc8-942a-959a3105843c"
       }
     },
     {

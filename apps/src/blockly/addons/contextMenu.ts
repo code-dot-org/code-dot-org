@@ -19,7 +19,7 @@ import {
   DARK_THEME_SUFFIX,
 } from '../constants';
 import {ExtendedBlockSvg} from '../types';
-import {getBaseName} from '../utils';
+import {getBaseName, isDarkTheme} from '../utils';
 
 // Some options are only available to levelbuilders via start mode.
 // Literal strings are used for display text instead of translatable strings
@@ -492,10 +492,6 @@ function isCurrentTheme(
   return (
     getBaseName(workspace?.getTheme().name as Themes) === getBaseName(theme)
   );
-}
-
-function isDarkTheme(theme: GoogleBlockly.Theme | undefined) {
-  return theme?.name.includes(DARK_THEME_SUFFIX);
 }
 
 function setAllWorkspacesTheme(

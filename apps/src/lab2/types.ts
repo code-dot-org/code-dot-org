@@ -241,45 +241,14 @@ export interface MazeCell {
   assetId: number;
 }
 
-export enum OptionsToAvoid {
-  /**
-   * @deprecated: using this option will result in hardcoding this lab into the
-   * downloaded bundle for ALL other lab2 labs, slowing down their loading and
-   * consuming excessive school internet bandwidth.
-   *
-   * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
-   *
-   * Please only use this option if there's a good reason you can't lazy load
-   * your lab. With this option set, you must also specify `hardcodedEntryPoint`.
-   */
-  UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
-}
-
 // Configuration for how a Lab should be rendered
 export interface Lab2EntryPoint {
-  /**
-   * Whether this lab should remain rendered in the background once mounted.
-   * If true, the lab will always be present in the tree, but will be hidden
-   * via visibility: hidden when not active. If false, the lab will only
-   * be rendered in the tree when active.
-   */
-  backgroundMode: boolean;
   /**
    * A lazy loaded view for the lab. This should be a lazy-loaded react
    * component using a dynamic import. See `pythonlab/entrypoint.tsx` for an
    * example.
    */
-  view: LazyExoticComponent<ComponentType> | OptionsToAvoid;
-  /**
-   * Using this option will result in hardcoding this lab into the downloaded
-   * bundle for ALL other lab2 labs, slowing down their loading and consuming
-   * excessive school internet bandwidth. Please use `view` instead,
-   * which lazy loads you lab on demand, unless you have a really good reason
-   * you can't lazy load.
-   *
-   * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
-   */
-  hardcodedView?: ComponentType;
+  view: LazyExoticComponent<ComponentType>;
   /**
    * Display theme for this lab. This will likely be configured by user
    * preferences eventually, but for now this is fixed for each lab. Defaults
