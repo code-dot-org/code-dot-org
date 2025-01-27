@@ -4,10 +4,10 @@ import classNames from 'classnames';
 import moduleStyles from './video.module.scss';
 import LinkButton from '../button/LinkButton';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
-import {BodyTwoText, BodyThreeText, Figcaption} from '@/typography';
+import {BodyTwoText, BodyThreeText, Figcaption, StrongText} from '@/typography';
 
 export interface VideoProps extends HTMLAttributes<HTMLElement> {
-  /** Video Title */
+  /** Video title */
   videoTitle?: string;
   /** Video YouTube ID */
   youTubeId?: string;
@@ -15,6 +15,12 @@ export interface VideoProps extends HTMLAttributes<HTMLElement> {
   videoFallback?: string;
   /** Show caption */
   showCaption?: boolean;
+  /** Label for Download button */
+  downloadLabel?: string;
+  /** Error title for error placeholder  */
+  errorTitle?: string;
+  /** Error body for error placeholder */
+  errorBody?: string;
   /** Video custom className */
   className?: string;
 }
@@ -37,6 +43,9 @@ export const Video: React.FC<VideoProps> = ({
   videoTitle,
   videoFallback,
   showCaption,
+  downloadLabel,
+  errorTitle,
+  errorBody,
   className,
 }: VideoProps) => {
   const [isYouTubeBlocked, setIsYouTubeBlocked] = useState(false);
@@ -83,19 +92,18 @@ export const Video: React.FC<VideoProps> = ({
               <source src={videoFallback} type="video/mp4" />
             </video>
           ) : (
-            <div className={classNames(moduleStyles.blockedPlaceholder)}>
-              <div className={classNames(moduleStyles.wrapper)}>
-                <FontAwesomeV6Icon
-                  iconName="exclamation-circle"
-                  iconStyle="solid"
-                />
-                <BodyTwoText visualAppearance="strong">
-                  Video unavailable
-                </BodyTwoText>
-                <BodyThreeText>
-                  This video is blocked on your network, learn more here.
-                </BodyThreeText>
-              </div>
+            <div className={classNames(moduleStyles.errorPlaceholder)}>
+              <FontAwesomeV6Icon
+                iconName="exclamation-circle"
+                iconStyle="solid"
+              />
+              <BodyTwoText>
+                <StrongText>{errorTitle || 'Video unavailable'}</StrongText>
+              </BodyTwoText>
+              <BodyThreeText>
+                {errorBody ||
+                  'This video is blocked on your network, learn more here.'}
+              </BodyThreeText>
             </div>
           )
         ) : (
@@ -121,7 +129,7 @@ export const Video: React.FC<VideoProps> = ({
               iconStyle: 'solid',
             }}
             size="xs"
-            text="Download"
+            text={downloadLabel || 'Download'}
             type="secondary"
           />
         )}
