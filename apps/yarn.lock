@@ -5909,6 +5909,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rrweb/types@npm:^2.0.0-alpha.14":
+  version: 2.0.0-alpha.18
+  resolution: "@rrweb/types@npm:2.0.0-alpha.18"
+  checksum: 330adfcc1162131e250d024b070011c7e04edf0cf2da87456aa2f837db1cd969077a772c3db1f92197356e2d00c6e052e681fe103dabcfe652bcaea0cb7267f9
+  languageName: node
+  linkType: hard
+
 "@selectize/selectize@npm:^0.15.2":
   version: 0.15.2
   resolution: "@selectize/selectize@npm:0.15.2"
@@ -6114,29 +6121,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@statsig/client-core@npm:3.2.0":
-  version: 3.2.0
-  resolution: "@statsig/client-core@npm:3.2.0"
-  checksum: 8c4b9b8f680b2cc413bad369871785d98b13c5caf781a594219154424794aa2143cfa4d95904231609d137f80f74a6fdd5b2d08edcdd53f7f8ab3b47b09f96bd
+"@statsig/client-core@npm:3.10.0":
+  version: 3.10.0
+  resolution: "@statsig/client-core@npm:3.10.0"
+  checksum: fa438a33ac83b1443194e5690e9696a24df9560298168307708e9eeaacc771fa74c552df40362451e871e5d650c55d8369415665b873b4c7052d7555b1fe5fd6
   languageName: node
   linkType: hard
 
-"@statsig/js-client@npm:3.2.0":
-  version: 3.2.0
-  resolution: "@statsig/js-client@npm:3.2.0"
+"@statsig/js-client@npm:3.10.0, @statsig/js-client@npm:^3.10.0":
+  version: 3.10.0
+  resolution: "@statsig/js-client@npm:3.10.0"
   dependencies:
-    "@statsig/client-core": 3.2.0
-  checksum: 2c361fb0676ef459627be40b20e546f491f233e674302e36489f3d8e5725459d0b47d0caa60ab3a8c61426acf163bb23669f9889ae7f161209e3609439e7722a
+    "@statsig/client-core": 3.10.0
+  checksum: 6d68843a9f3ccbe4a9aa3d094806d9179eeb17c47a439dffb020c99bddfd592874bfb2c0967474d8a597403753e148db3d347b7e511fd5ddb8381b9eaea1edb0
   languageName: node
   linkType: hard
 
-"@statsig/web-analytics@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "@statsig/web-analytics@npm:3.2.0"
+"@statsig/session-replay@npm:^3.10.0":
+  version: 3.10.0
+  resolution: "@statsig/session-replay@npm:3.10.0"
   dependencies:
-    "@statsig/client-core": 3.2.0
-    "@statsig/js-client": 3.2.0
-  checksum: e34edb9e30a8018565e0977fd31be409639a057c4955a8f35951949bdb1212953bb2cfd53453371d34b4a2f26642e4e976b73080dda0fdde01a251d025cdcc59
+    "@statsig/client-core": 3.10.0
+    rrweb: 2.0.0-alpha.14
+  checksum: 3f5787c4d989afb871fac555835fd08ea6df2d4eb3c91f4a1bcb561f60298eaeb51062f8a6861c0f72c11949d1e7f8504c495f151a250f1fcac8d83b7f4cac56
+  languageName: node
+  linkType: hard
+
+"@statsig/web-analytics@npm:^3.10.0":
+  version: 3.10.0
+  resolution: "@statsig/web-analytics@npm:3.10.0"
+  dependencies:
+    "@statsig/client-core": 3.10.0
+    "@statsig/js-client": 3.10.0
+  checksum: 4f7fbf6078b1f6ebff3c26220c306fab7f6b3fea3d58f9ce36f98680aac6bc8faaa0dabbd77129ba896ff7ff5b96eb13c0d3da5c4aa41bb29f353b96c5a7367e
   languageName: node
   linkType: hard
 
@@ -7281,6 +7298,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: b4172927cd1387cf037c3ade785ef46c87537b7bc2803d7f6663b4904d0c5d6f726415d1adb2fee4fecb21746738f11336076449265d46be4ce110cc3a8c8436
+  languageName: node
+  linkType: hard
+
+"@types/css-font-loading-module@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@types/css-font-loading-module@npm:0.0.7"
+  checksum: a074d3b824b2232160f2353daf1cc62937e4a24154d13607f14f93feaaac6abcf069c8ae02c1396840950fa02c1b3f19ce0f119321f9735905bfb3cd4b9b2021
   languageName: node
   linkType: hard
 
@@ -8698,6 +8722,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xstate/fsm@npm:^1.4.0":
+  version: 1.6.5
+  resolution: "@xstate/fsm@npm:1.6.5"
+  checksum: da24fa4f40479223da34714640cea64ec894bbfeb2281a0a870af68882ae1d6fb6d724d6e5c0d4e6929728c699b92858f7389ef7d6a5d00ac66ba8cde3934eed
+  languageName: node
+  linkType: hard
+
 "@xterm/addon-fit@npm:^0.10.0":
   version: 0.10.0
   resolution: "@xterm/addon-fit@npm:0.10.0"
@@ -9961,6 +9992,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"base64-arraybuffer@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "base64-arraybuffer@npm:1.0.2"
+  checksum: 15e6400d2d028bf18be4ed97702b11418f8f8779fb8c743251c863b726638d52f69571d4cc1843224da7838abef0949c670bde46936663c45ad078e89fee5c62
+  languageName: node
+  linkType: hard
+
 "base64-js@npm:^1.0.2":
   version: 1.2.0
   resolution: "base64-js@npm:1.2.0"
@@ -10123,7 +10161,9 @@ __metadata:
     "@react-pdf/renderer": 3.4.4
     "@reduxjs/toolkit": ^1.9.3
     "@selectize/selectize": ^0.15.2
-    "@statsig/web-analytics": ^3.2.0
+    "@statsig/js-client": ^3.10.0
+    "@statsig/session-replay": ^3.10.0
+    "@statsig/web-analytics": ^3.10.0
     "@storybook/addon-a11y": ~8.1.11
     "@storybook/addon-essentials": ~8.1.11
     "@storybook/addon-webpack5-compiler-babel": ^3.0.0
@@ -10343,7 +10383,6 @@ __metadata:
     sortabular: ^1.6.0
     source-map-loader: ^4.0.1
     sprintf-js: ^1.0.3
-    statsig-js: ^4.50.0
     storybook: ~8.1.11
     storybook-addon-rtl: ^1.0.0
     stream-browserify: ^3.0.0
@@ -14930,6 +14969,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"fflate@npm:^0.4.4":
+  version: 0.4.8
+  resolution: "fflate@npm:0.4.8"
+  checksum: 29d8cbe44d5e7f53e7f5a160ac7f9cc025480c7b3bfd85c5f898cbe20dfa2dad4732daa534982664bf30b35896a90af44ea33ede5d94c5ffd1b8b0c0a0a56ca2
+  languageName: node
+  linkType: hard
+
 "fft.js@npm:^4.0.3":
   version: 4.0.4
   resolution: "fft.js@npm:4.0.4"
@@ -19054,13 +19100,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"js-sha256@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "js-sha256@npm:0.11.0"
-  checksum: 742d34a0c6eb15247309f1c74889b5a51df01a96e4307375b420fbe973f2f25585012b4d3c8fa52a1b18546153d12587e6463bb725dc1bc58686da03e892c334
-  languageName: node
-  linkType: hard
-
 "js-tokens@npm:^3.0.0 || ^4.0.0, js-tokens@npm:^4.0.0":
   version: 4.0.0
   resolution: "js-tokens@npm:4.0.0"
@@ -20740,6 +20779,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"mitt@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "mitt@npm:3.0.1"
+  checksum: b55a489ac9c2949ab166b7f060601d3b6d893a852515ae9eca4e11df01c013876df777ea109317622b5c1c60e8aae252558e33c8c94e14124db38f64a39614b1
+  languageName: node
+  linkType: hard
+
 "mkdirp-classic@npm:^0.5.2, mkdirp-classic@npm:^0.5.3":
   version: 0.5.3
   resolution: "mkdirp-classic@npm:0.5.3"
@@ -20955,6 +21001,15 @@ es6-shim@latest:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: d36c427e530713e4ac6567d488b489a36582ef89da1d6d4e3b87eded11eb10d7042a877958c6f104929809b2ab0bafa17652b076cdf84324aa75b30b722204f2
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^3.3.8":
+  version: 3.3.8
+  resolution: "nanoid@npm:3.3.8"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: dfe0adbc0c77e9655b550c333075f51bb28cfc7568afbf3237249904f9c86c9aaaed1f113f0fddddba75673ee31c758c30c43d4414f014a52a7a626efc5958c9
   languageName: node
   linkType: hard
 
@@ -22431,7 +22486,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.1.0":
+"picocolors@npm:^1.1.0, picocolors@npm:^1.1.1":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
   checksum: e1cf46bf84886c79055fdfa9dcb3e4711ad259949e3565154b004b260cd356c5d54b31a1437ce9782624bf766272fe6b0154f5f0c744fb7af5d454d2b60db045
@@ -22745,6 +22800,17 @@ es6-shim@latest:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: cf3c3124d3912a507603f6d9a49b3783f741075e9aa73eb592a6dd9194f9edab9d20a8875d16d137d4f779fe7b6fbd1f5727e39bfd1c3003724980ee4995e1da
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.38":
+  version: 8.5.1
+  resolution: "postcss@npm:8.5.1"
+  dependencies:
+    nanoid: ^3.3.8
+    picocolors: ^1.1.1
+    source-map-js: ^1.2.1
+  checksum: cfdcfcd019fca78160341080ba8986cf80cd6e9ca327ba61b86c03e95043e9bce56ad2e018851858039fd7264781797360bfba718dd216b17b3cd803a5134f2f
   languageName: node
   linkType: hard
 
@@ -25472,10 +25538,44 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"rrdom@npm:^2.0.0-alpha.14":
+  version: 2.0.0-alpha.18
+  resolution: "rrdom@npm:2.0.0-alpha.18"
+  dependencies:
+    rrweb-snapshot: ^2.0.0-alpha.18
+  checksum: 1e98e655e730d9da878a2af1632d105a706ea012d158f72a5da1ea37e02288e08e1634281cfdc5f0c5fe5017c9d866d22fb159559c04b340466d0cc485b90e3a
+  languageName: node
+  linkType: hard
+
 "rrweb-cssom@npm:^0.6.0":
   version: 0.6.0
   resolution: "rrweb-cssom@npm:0.6.0"
   checksum: 182312f6e4f41d18230ccc34f14263bc8e8a6b9d30ee3ec0d2d8e643c6f27964cd7a8d638d4a00e988d93e8dc55369f4ab5a473ccfeff7a8bab95b36d2b5499c
+  languageName: node
+  linkType: hard
+
+"rrweb-snapshot@npm:^2.0.0-alpha.14, rrweb-snapshot@npm:^2.0.0-alpha.18":
+  version: 2.0.0-alpha.18
+  resolution: "rrweb-snapshot@npm:2.0.0-alpha.18"
+  dependencies:
+    postcss: ^8.4.38
+  checksum: 3e9ac045f22c174791a56c31698f13168942a087f3dfd241c10e9bc81ff4597c11ea95cbe1069aa1f91404dda2d87803bcbcb0c6a4fbe7b7224cdf90506a3a29
+  languageName: node
+  linkType: hard
+
+"rrweb@npm:2.0.0-alpha.14":
+  version: 2.0.0-alpha.14
+  resolution: "rrweb@npm:2.0.0-alpha.14"
+  dependencies:
+    "@rrweb/types": ^2.0.0-alpha.14
+    "@types/css-font-loading-module": 0.0.7
+    "@xstate/fsm": ^1.4.0
+    base64-arraybuffer: ^1.0.1
+    fflate: ^0.4.4
+    mitt: ^3.0.0
+    rrdom: ^2.0.0-alpha.14
+    rrweb-snapshot: ^2.0.0-alpha.14
+  checksum: 1d7f2afe30a27628d8b737bd49b809dda54c0cdfca11eb998dc0d4181da83dd39428cb8eaed10e86e73c61e8d5b42d3504f4f499792ecd360e1dd866844ef599
   languageName: node
   linkType: hard
 
@@ -26387,6 +26487,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"source-map-js@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "source-map-js@npm:1.2.1"
+  checksum: 4eb0cd997cdf228bc253bcaff9340afeb706176e64868ecd20efbe6efea931465f43955612346d6b7318789e5265bdc419bc7669c1cebe3db0eb255f57efa76b
+  languageName: node
+  linkType: hard
+
 "source-map-loader@npm:^4.0.1":
   version: 4.0.1
   resolution: "source-map-loader@npm:4.0.1"
@@ -26650,16 +26757,6 @@ es6-shim@latest:
     static-eval: ~0.2.0
     through2: ~0.4.1
   checksum: 9ca53ad2ed5c28eae92d63720aae117a02210f0b9d1a8eb79a52a724a2df094f22ce051c9249cf8f1424de5639cf9d6e8a2b25c81af4b61100012ac0cba045e5
-  languageName: node
-  linkType: hard
-
-"statsig-js@npm:^4.50.0":
-  version: 4.50.0
-  resolution: "statsig-js@npm:4.50.0"
-  dependencies:
-    js-sha256: ^0.11.0
-    uuid: ^8.3.2
-  checksum: 9573f34d29fd105b713862711faa966b0988a6a1fa984dc61a593521b6a9424e534efea14dfe76fb4f9eafaeced7855ee2efaccb461ca9569f7ca5d5607d5a5b
   languageName: node
   linkType: hard
 
