@@ -20,7 +20,7 @@ export interface VideoProps extends HTMLAttributes<HTMLElement> {
   /** Label for Download button */
   downloadLabel?: string;
   /** Error title for error placeholder  */
-  errorTitle?: string;
+  errorHeading?: string;
   /** Error body for error placeholder */
   errorBody?: string;
   /** Video custom className */
@@ -49,7 +49,7 @@ export const Video: React.FC<VideoProps> = ({
   videoFallback,
   showCaption,
   downloadLabel,
-  errorTitle,
+  errorHeading,
   errorBody,
   className,
   ...HTMLAttributes
@@ -96,7 +96,7 @@ export const Video: React.FC<VideoProps> = ({
                 iconStyle="solid"
               />
               <BodyTwoText>
-                <StrongText>{errorTitle || 'Video unavailable'}</StrongText>
+                <StrongText>{errorHeading || 'Video unavailable'}</StrongText>
               </BodyTwoText>
               <BodyThreeText>
                 {errorBody ||
