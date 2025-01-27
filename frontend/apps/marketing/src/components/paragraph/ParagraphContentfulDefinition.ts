@@ -13,10 +13,10 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
       group: 'style',
       validations: {
         in: [
-          {value: 'body-one', displayName: 'Body One'},
-          {value: 'body-two', displayName: 'Body Two'},
-          {value: 'body-three', displayName: 'Body Three'},
-          {value: 'body-four', displayName: 'Body Four'},
+          {value: 'body-one', displayName: 'Body L'},
+          {value: 'body-two', displayName: 'Body M'},
+          {value: 'body-three', displayName: 'Body S'},
+          {value: 'body-four', displayName: 'Body XS'},
         ],
       },
     },
@@ -28,7 +28,7 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
       description: 'The text or other elements to display inside the paragraph',
     },
     isStrong: {
-      displayName: 'Is Strong Paragraph',
+      displayName: 'Make this paragraph bold',
       type: 'Boolean',
       defaultValue: false,
       group: 'style',
