@@ -41,7 +41,7 @@ Feature: Using the V2 teacher dashboard local navigation
 
   Scenario: Single-unit course overview
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to course "test-single-unit-course" and unit "test-single-unit" with teacher "Teacher_Sally"
+    Given I am assigned to course "ui-test-single-unit-course" and unit "ui-test-single-unit" with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
@@ -51,6 +51,6 @@ Feature: Using the V2 teacher dashboard local navigation
     Then I wait until element "#ui-test-teacher-sidebar" is visible
 
     Given I click selector "#ui-test-teacher-sidebar a:contains('Course')" once I see it
-    Then check that the URL contains "/unit/test-single-unit"
-    And I wait until element "h1:contains('test-single-unit')" is visible
+    Then check that the URL contains "/unit/ui-test-single-unit"
+    And I wait until element "h1:contains('ui-test-single-unit')" is visible
     And I wait until I don't see selector ".unit-breadcrumb"

@@ -100,6 +100,6 @@ Feature: Unit overview page
     And I wait until current URL contains "s/allthemigratedthings/lessons/1/student"
 
   Scenario: Unit overview for unit in single-unit course
-    Given I am on "http://studio.code.org/s/test-single-unit"
+    Given I am on "http://studio.code.org/s/ui-test-single-unit"
     And I wait to see ".uitest-summary-progress-table"
     And I wait until I don't see selector ".unit-breadcrumb"
