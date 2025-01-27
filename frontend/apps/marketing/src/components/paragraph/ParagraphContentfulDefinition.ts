@@ -1,19 +1,19 @@
 // Creates a definition for the Paragraph component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
-import {paragraphEnabledBuiltInContentfulStyles} from "@/components/paragraph/Paragraph";
+import {paragraphEnabledBuiltInContentfulStyles} from '@/components/paragraph/Paragraph';
 
 export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
   id: 'paragraph',
   name: 'Paragraph',
   category: 'Typography',
   thumbnailUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/5hP7jqXdP90BtLxMi6FSWm/09a555420c3313133d16e87a84e22826/component_paragraph_thumbnail.png',
+    'https://images.ctfassets.net/90t6bu6vlf76/5hP7jqXdP90BtLxMi6FSWm/09a555420c3313133d16e87a84e22826/component_paragraph_thumbnail.png',
   tooltip: {
     description:
-        'Use a paragraph for body text and longer descriptions. Supports rich text formatting for emphasis, links, and structure.',
+      'Use a paragraph for body text and longer descriptions. Supports rich text formatting for emphasis, links, and structure.',
     imageUrl:
-        'https://images.ctfassets.net/90t6bu6vlf76/5qoQl0G7ZKxKCI8VYBaCzl/19a21cd2fbb6b037c397fcbc417f70b1/component_paragraph_tooltip.png',
+      'https://images.ctfassets.net/90t6bu6vlf76/5qoQl0G7ZKxKCI8VYBaCzl/19a21cd2fbb6b037c397fcbc417f70b1/component_paragraph_tooltip.png',
   },
   builtInStyles: paragraphEnabledBuiltInContentfulStyles,
   variables: {

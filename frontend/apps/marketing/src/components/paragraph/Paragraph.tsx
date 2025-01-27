@@ -32,50 +32,33 @@ type ParagraphProps = {
   isStrong: boolean;
 };
 
+export const paragraphEnabledBuiltInContentfulStyles = [
+  'cfTextAlign',
+  'cfTextUnderline',
+];
+
+const paragraphBuiltInStylesClassNames =
+  paragraphEnabledBuiltInContentfulStyles.join(' ');
+
 const Paragraph: React.FunctionComponent<ParagraphProps> = ({
   visualAppearance,
   isStrong,
   children,
 }) => {
   return isStrong ? (
-    <Typography semanticTag="p" visualAppearance={visualAppearance}>
+    <Typography
+      className={paragraphBuiltInStylesClassNames}
+      semanticTag="p"
+      visualAppearance={visualAppearance}
+    >
       <StrongText>{children}</StrongText>
     </Typography>
   ) : (
-    <Typography className={[
-        'cfVisibility',
-      'cfHorizontalAlignment',
-      'cfVerticalAlignment',
-      'cfMargin',
-      'cfPadding',
-      'cfBackgroundColor',
-      'cfWidth',
-      'cfMaxWidth',
-      'cfHeight',
-      'cfImageAsset',
-      'cfImageOptions',
-      'cfBackgroundImageUrl',
-      'cfBackgroundImageOptions',
-      'cfFlexDirection',
-      'cfFlexWrap',
-      'cfFlexReverse',
-      'cfBorder',
-      'cfBorderRadius',
-      'cfGap',
-      'cfFontSize',
-      'cfFontWeight',
-      'cfLineHeight',
-      'cfLetterSpacing',
-      'cfTextColor',
-      'cfTextAlign',
-      'cfTextTransform',
-      'cfTextBold',
-      'cfTextItalic',
-      'cfTextUnderline',
-      'cfBackgroundImageScaling',
-      'cfBackgroundImageAlignment',
-      'cfBackgroundImageAlignmentVertical',
-      'cfBackgroundImageAlignmentHorizontal',].join(' ')} semanticTag="p" visualAppearance={visualAppearance}>
+    <Typography
+      className={paragraphBuiltInStylesClassNames}
+      semanticTag="p"
+      visualAppearance={visualAppearance}
+    >
       {children}
     </Typography>
   );
