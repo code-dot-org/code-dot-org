@@ -35,7 +35,10 @@ export interface VideoProps extends HTMLAttributes<HTMLElement> {
  *
  * ###  Status: ```WIP```
  *
- * Design System: Video Component. This component is used to display a video from YouTube with a fallback HTML video player, and the option to download it, if an externally hosted fallback is provided. The video can also be displayed with a caption and works with responsive screen sizes.
+ * Design System: Video Component.
+ * This component is used to display a video from YouTube with a fallback HTML video player,
+ * and the option to download it, if an externally hosted fallback is provided.
+ * The video can also be displayed with a caption and works with responsive screen sizes.
  */
 
 export const Video: React.FC<VideoProps> = ({
