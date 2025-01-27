@@ -64,31 +64,19 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
     # Make the request.
     begin
-      if model_customizations['selectedModelId'] == 'gpt-4o-mini'
-        level_system_prompt = Level.find_by(id: level_id)&.properties&.dig('aichat_settings', 'levelSystemPrompt') || ""
-
-        instructions = ""
-        instructions = level_system_prompt + " " unless level_system_prompt.empty?
-        instructions << (model_customizations['systemPrompt'] + " ") unless model_customizations['systemPrompt'].empty?
-        instructions << model_customizations['retrievalContexts'].join(" ") if model_customizations['retrievalContexts']
-
-        messages = [
-          {
-            role: "system",
-            content: instructions
-          },
-          *stored_messages.map {|message| {role: message['role'], content: message['chatMessageText']}},
-          {role: 'user', content: new_message['chatMessageText']}
-        ]
-        response_obj = OpenaiChatHelper.request_chat_completion(
-          messages,
-          model_customizations['temperature'],
-          SharedConstants::AICHAT_MODEL_VERSION
+      response = model_customizations['selectedModelId'] == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] ?
+        AichatOpenaiHelper.get_openai_assistant_response(
+          model_customizations,
+          stored_messages,
+          new_message,
+          level_id
+        ) :
+        AichatSagemakerHelper.get_sagemaker_assistant_response(
+          model_customizations,
+          stored_messages,
+          new_message,
+          level_id
         )
-        response = JSON.parse(response_obj)['choices'][0]['message']['content']
-      else
-        response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
-      end
     rescue Aws::SageMakerRuntime::Errors::ModelError => exception
       # If the user input was too large, return a USER_INPUT_TOO_LARGE status code. Otherwise, re-raise the exception.
       if exception.message.include?("must have less than 3000 tokens") || exception.message.include?("must be <= 4096")

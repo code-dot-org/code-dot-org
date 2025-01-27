@@ -22,14 +22,13 @@ module OpenaiChatHelper
       messages: messages
     }
 
-    response = HTTParty.post(
+    HTTParty.post(
       OPEN_AI_URL,
       headers: headers,
       body: data.to_json,
       open_timeout: DCDO.get('openai_http_open_timeout', 5),
       read_timeout: DCDO.get('openai_http_read_timeout', 30)
     )
-    response.body
   end
 
   # Used to check safety content given text with the given moderation system prompt.
