@@ -42,7 +42,40 @@ const Paragraph: React.FunctionComponent<ParagraphProps> = ({
       <StrongText>{children}</StrongText>
     </Typography>
   ) : (
-    <Typography semanticTag="p" visualAppearance={visualAppearance}>
+    <Typography className={[
+        'cfVisibility',
+      'cfHorizontalAlignment',
+      'cfVerticalAlignment',
+      'cfMargin',
+      'cfPadding',
+      'cfBackgroundColor',
+      'cfWidth',
+      'cfMaxWidth',
+      'cfHeight',
+      'cfImageAsset',
+      'cfImageOptions',
+      'cfBackgroundImageUrl',
+      'cfBackgroundImageOptions',
+      'cfFlexDirection',
+      'cfFlexWrap',
+      'cfFlexReverse',
+      'cfBorder',
+      'cfBorderRadius',
+      'cfGap',
+      'cfFontSize',
+      'cfFontWeight',
+      'cfLineHeight',
+      'cfLetterSpacing',
+      'cfTextColor',
+      'cfTextAlign',
+      'cfTextTransform',
+      'cfTextBold',
+      'cfTextItalic',
+      'cfTextUnderline',
+      'cfBackgroundImageScaling',
+      'cfBackgroundImageAlignment',
+      'cfBackgroundImageAlignmentVertical',
+      'cfBackgroundImageAlignmentHorizontal',].join(' ')} semanticTag="p" visualAppearance={visualAppearance}>
       {children}
     </Typography>
   );
