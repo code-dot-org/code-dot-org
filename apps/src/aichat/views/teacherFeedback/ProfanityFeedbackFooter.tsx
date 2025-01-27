@@ -68,7 +68,11 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
         onClick={() => handleThumbClick(type)}
         size="xs"
         type={'tertiary'}
-        ariaLabel={`thumbs ${type}`}
+        ariaLabel={
+          type === 'up'
+            ? aichatI18n.aria_thumbsUp()
+            : aichatI18n.aria_thumbsDown()
+        }
         className={
           selected
             ? moduleStyles[
@@ -111,7 +115,11 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
           onClick={toggleProfaneMessageVisibility}
           size="xs"
           type={'tertiary'}
-          ariaLabel={profaneMessageVisible ? 'hide message' : 'show message'}
+          ariaLabel={
+            profaneMessageVisible
+              ? aichatI18n.aria_hideMessage()
+              : aichatI18n.aria_showMessage()
+          }
           className={moduleStyles.button}
         />
       </WithTooltip>

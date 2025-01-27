@@ -70,7 +70,9 @@ const CleanFeedbackFooter: React.FC<Props> = ({id, teacherFeedback, role}) => {
           className={
             teacherFlagged ? moduleStyles.buttonNegative : moduleStyles.button
           }
-          ariaLabel={teacherFlagged ? 'unflag' : 'flag'}
+          ariaLabel={
+            teacherFlagged ? aichatI18n.aria_flag() : aichatI18n.aria_unflag()
+          }
         />
       </WithTooltip>
     </div>
