@@ -70,7 +70,6 @@ export default function UnitCalendarGrid({
 
   const renderWeek = React.useCallback(
     (week, weekNumber) => {
-      console.log('lfm', {width: weekWidth});
       const minuteWidth = weekWidth / weeklyInstructionalMinutes;
       return week.map((lessonChunk, index) => (
         <UnitCalendarLessonChunk
