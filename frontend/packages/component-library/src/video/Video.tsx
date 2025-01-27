@@ -52,6 +52,7 @@ export const Video: React.FC<VideoProps> = ({
   errorTitle,
   errorBody,
   className,
+  ...HTMLAttributes
 }: VideoProps) => {
   const [isYouTubeBlocked, setIsYouTubeBlocked] = useState(false);
   const posterThumbnail = `//i.ytimg.com/vi/${youTubeId}/mqdefault.jpg`;
@@ -84,6 +85,7 @@ export const Video: React.FC<VideoProps> = ({
               className={classNames(className)}
               controls
               poster={posterThumbnail}
+              {...HTMLAttributes}
             >
               <source src={videoFallback} type="video/mp4" />
             </video>
@@ -108,6 +110,7 @@ export const Video: React.FC<VideoProps> = ({
             src={`https://www.youtube-nocookie.com/embed/${youTubeId}`}
             title={videoTitle}
             allowFullScreen
+            {...HTMLAttributes}
           />
         )}
       </div>
