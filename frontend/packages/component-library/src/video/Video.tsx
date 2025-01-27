@@ -75,7 +75,7 @@ export const Video: React.FC<VideoProps> = ({
   }, []);
 
   return (
-    <figure className={moduleStyles.video}>
+    <figure className={moduleStyles.videoComponentContainer}>
       <div className={moduleStyles.videoWrapper}>
         {isYouTubeBlocked ? (
           videoFallback ? (
