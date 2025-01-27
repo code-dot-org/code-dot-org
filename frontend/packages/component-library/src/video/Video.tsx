@@ -6,6 +6,8 @@ import LinkButton from '../button/LinkButton';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {BodyTwoText, BodyThreeText, Figcaption, StrongText} from '@/typography';
 
+import {checkIfURLIsBlocked} from '@/common/helpers';
+
 export interface VideoProps extends HTMLAttributes<HTMLElement> {
   /** Video title */
   videoTitle?: string;
@@ -57,20 +59,11 @@ export const Video: React.FC<VideoProps> = ({
   // Check to see if YouTube is blocked.
   // If it is, we'll use the fallback video player.
   useEffect(() => {
-    const checkIfYouTubeIsBlocked = (url: string): Promise<boolean> => {
-      return new Promise(resolve => {
-        const img = new Image();
-        img.onload = () => resolve(false);
-        img.onerror = () => resolve(true);
-        img.src = `${url}?_=${Math.random()}`;
-      });
-    };
-
     const checkYouTubeUrls = async () => {
-      const isYouTubeBlocked = await checkIfYouTubeIsBlocked(
+      const isYouTubeBlocked = await checkIfURLIsBlocked(
         'https://www.youtube.com/favicon.ico',
       );
-      const isYouTubeNoCookieBlocked = await checkIfYouTubeIsBlocked(
+      const isYouTubeNoCookieBlocked = await checkIfURLIsBlocked(
         'https://www.youtube-nocookie.com/favicon.ico',
       );
 

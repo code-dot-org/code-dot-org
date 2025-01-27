@@ -140,3 +140,13 @@ export const updatePositionedElementStyles = ({
     }),
   );
 };
+
+// Check to see if a URL is blocked.
+export const checkIfURLIsBlocked = (url: string): Promise<boolean> => {
+  return new Promise(resolve => {
+    const img = new Image();
+    img.onload = () => resolve(false);
+    img.onerror = () => resolve(true);
+    img.src = `${url}?_=${Math.random()}`;
+  });
+};
