@@ -1936,6 +1936,7 @@
   "needsFeedback": "Needs feedback",
   "needsReview": "Needs review",
   "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops.",
+  "new": "New",
   "newExclame": "New!",
   "newAnimation": "new animation",
   "newBackground": "New Background",

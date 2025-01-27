@@ -52,11 +52,12 @@
 
 .sidebarSectionHeader .sidebarNewTags div {
   background-color: $light_primary_500;
-
+  margin-bottom: -3px;
 }
 
 .sidebarSectionHeader .sidebarNewTags div span {
-  color: $white
+  color: $white;
+  font-size: 13px;
 }
 
 .sectionDropdown {

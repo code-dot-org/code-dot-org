@@ -85,7 +85,11 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       title: coursecontentSectionTitle,
       keys: courseContentKeys,
       sectionTag: (
-        <Tags tagsList={[{label: 'New'}]} className={styles.sidebarNewTags} />
+        <Tags
+          tagsList={[{label: i18n.new()}]}
+          size="s"
+          className={styles.sidebarNewTags}
+        />
       ),
     },
     {
