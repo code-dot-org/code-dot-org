@@ -75,7 +75,18 @@ class ToneJSPlayer {
   }
 
   jumpToPosition(position: number) {
-    Transport.position = this.playbackTimeToTransportTime(position);
+    const transportPosition = this.playbackTimeToTransportTime(position);
+    const currentMeasure = (Transport.position as BarsBeatsSixteenths)
+      .split(':')
+      .map(Number)[0];
+    const jumpTime = `${currentMeasure + 1}:0:0`;
+    console.log(
+      `attempting to jump at position: ${jumpTime}. Current position: ${Transport.position}. Target position: ${transportPosition}`
+    );
+    Transport.scheduleOnce(time => {
+      console.log('hi jumping!!' + time);
+      Transport.position = transportPosition;
+    }, jumpTime);
   }
 
   setLoopEnabled(enabled: boolean) {

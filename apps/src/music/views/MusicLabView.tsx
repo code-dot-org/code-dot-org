@@ -167,6 +167,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     progressManager,
   ]);
 
+  const loopEnd = useAppSelector(state => state.music.loopEnd);
+  const loopEnabled = useAppSelector(state => state.music.loopEnabled);
   // Stop the song if the playhead is past the desired end.
   useEffect(() => {
     if (!isPlaying) {
@@ -180,7 +182,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     // We are done playing once the playhead reaches the end of the last scheduled sound.
     // But if the starting playhead position has been set beyond that point, we'll use that
     // instead, so that at least a bit of playback can be shown.
-    const stopMeasure = Math.max(startingPlayheadPosition, lastMeasure);
+    let stopMeasure = Math.max(startingPlayheadPosition, lastMeasure);
+    if (loopEnabled) {
+      stopMeasure = Math.max(stopMeasure, loopEnd);
+    }
 
     // Show a little extra playback.  If there are any triggers, then play for longer in case
     // the user wants to trigger another sound.
@@ -196,6 +201,8 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     lastMeasure,
     setPlaying,
     startingPlayheadPosition,
+    loopEnd,
+    loopEnabled,
   ]);
 
   const resetValidation = useCallback(

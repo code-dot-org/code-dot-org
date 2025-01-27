@@ -61,7 +61,7 @@ export default function useUpdatePlayer(player: MusicPlayer) {
 
   useEffect(() => {
     if (isPlaying) {
-      player.jumpToPosition(startingPlayheadPosition);
+      // player.jumpToPosition(startingPlayheadPosition);
     }
   }, [player, startingPlayheadPosition, isPlaying]);
 }

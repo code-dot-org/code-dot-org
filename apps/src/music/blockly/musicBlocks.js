@@ -6,6 +6,12 @@ import {
 } from './blocks/advanced';
 import {forLoop} from './blocks/control';
 import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
+import {
+  jumpToMeasure,
+  setLoop,
+  setLoopAt,
+  triggerAction,
+} from './blocks/interactions';
 import {valueSample} from './blocks/samples';
 import {
   playSoundAtCurrentLocation,
@@ -67,6 +73,10 @@ const blockList = [
   playSoundInTrack,
   restInTrack,
   valueSample,
+  setLoop,
+  setLoopAt,
+  jumpToMeasure,
+  triggerAction,
 ];
 
 const MUSIC_BLOCKS = {};

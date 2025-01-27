@@ -38,6 +38,10 @@ export enum BlockTypes {
   IF_ELSE = 'controls_if',
   FUNCTION_DEFINITION = 'procedures_defnoreturn',
   FUNCTION_DEFINITION_RETURN = 'procedures_defreturn',
+  SET_LOOP = 'set_loop',
+  SET_LOOP_AT = 'set_loop_at',
+  JUMP_TO_MEASURE = 'jump_to_measure',
+  TRIGGER_ACTION = 'trigger_action',
 }
 
 export const FunctionDefinitionBlockTypes: string[] = [

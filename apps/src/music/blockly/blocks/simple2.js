@@ -76,6 +76,7 @@ export const triggeredAtSimple2 = {
             musicI18n.blockly_fieldTriggerStartNextMeasure(),
             TriggerStart.NEXT_MEASURE,
           ],
+          ['at loop start', TriggerStart.LOOP_START],
         ],
       },
     ],

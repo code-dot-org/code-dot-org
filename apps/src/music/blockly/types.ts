@@ -29,4 +29,9 @@ export interface BlockJson {
 export interface FieldJson {
   type: string;
   name: string;
+  options?: string[][];
+  check?: string;
+  value?: string | number;
+  min?: number;
+  max?: number;
 }

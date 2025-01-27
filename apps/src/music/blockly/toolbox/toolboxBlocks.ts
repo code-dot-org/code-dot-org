@@ -137,6 +137,26 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
       [FIELD_REST_DURATION_NAME]: '1',
     },
   },
+  [BlockTypes.SET_LOOP]: {
+    levelbuilderText: 'Set Loop',
+    kind: 'block',
+    type: BlockTypes.SET_LOOP,
+  },
+  [BlockTypes.SET_LOOP_AT]: {
+    levelbuilderText: 'Set Loop At',
+    kind: 'block',
+    type: BlockTypes.SET_LOOP_AT,
+  },
+  [BlockTypes.JUMP_TO_MEASURE]: {
+    levelbuilderText: 'Jump To Measure',
+    kind: 'block',
+    type: BlockTypes.JUMP_TO_MEASURE,
+  },
+  [BlockTypes.TRIGGER_ACTION]: {
+    levelbuilderText: 'Trigger Action',
+    kind: 'block',
+    type: BlockTypes.TRIGGER_ACTION,
+  },
   [BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2]: {
     levelbuilderText: 'Set Volume',
     kind: 'block',

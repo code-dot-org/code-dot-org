@@ -55,6 +55,10 @@ export const defaultMaps: {
       BlockTypes.PLAY_SOUNDS_SEQUENTIAL,
       BlockTypes.PLAY_SOUNDS_RANDOM,
       BlockTypes.REPEAT_SIMPLE2,
+      BlockTypes.SET_LOOP,
+      BlockTypes.SET_LOOP_AT,
+      BlockTypes.JUMP_TO_MEASURE,
+      BlockTypes.TRIGGER_ACTION,
     ],
     Effects: [
       BlockTypes.SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2,

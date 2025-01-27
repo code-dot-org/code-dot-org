@@ -62,6 +62,7 @@ export const TriggerStart = {
   IMMEDIATELY: 'immediately',
   NEXT_BEAT: 'next_beat',
   NEXT_MEASURE: 'next_measure',
+  LOOP_START: 'loop_start',
 };
 
 export const FIELD_EFFECT_NAME_OPTIONS = [

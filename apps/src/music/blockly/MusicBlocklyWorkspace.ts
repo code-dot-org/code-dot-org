@@ -217,7 +217,8 @@ export default class MusicBlocklyWorkspace {
       topBlocks.forEach(block => {
         if (
           block.type === BlockTypes.WHEN_RUN_SIMPLE2 ||
-          block.type === BlockTypes.TRIGGERED_AT_SIMPLE2
+          block.type === BlockTypes.TRIGGERED_AT_SIMPLE2 ||
+          block.type === BlockTypes.TRIGGER_ACTION
         ) {
           (block as ExtendedBlock).skipNextBlockGeneration = true;
         }
@@ -259,6 +260,14 @@ export default class MusicBlocklyWorkspace {
         }
         this.compiledEvents.tracks.code +=
           Blockly.JavaScript.blockToCode(block);
+      }
+
+      if (block.type === BlockTypes.TRIGGER_ACTION) {
+        const id = block.getFieldValue(TRIGGER_FIELD);
+        const code = `var __context = "triggerAction-${id}";\n`;
+        this.compiledEvents[`triggerAction-${id}`] = {
+          code: code + Blockly.JavaScript.workspaceToCode(workspace),
+        };
       }
 
       if (
@@ -378,6 +387,13 @@ export default class MusicBlocklyWorkspace {
     });
   }
 
+  executeTriggerAction(id: string) {
+    const hook = this.codeHooks[`triggerAction-${id}`];
+    if (hook) {
+      this.callUserGeneratedCode(hook);
+    }
+  }
+
   hasTrigger(id: string) {
     return !!this.codeHooks[triggerIdToEvent(id)];
   }
@@ -390,7 +406,11 @@ export default class MusicBlocklyWorkspace {
    * Given the exact current playback position, get the start position of the trigger,
    * adjusted based on when the trigger should play (immediately, next beat, or next measure).
    */
-  getTriggerStartPosition(id: string, currentPosition: number) {
+  getTriggerStartPosition(
+    id: string,
+    currentPosition: number,
+    loopStart: number
+  ) {
     const triggerStart = this.triggerIdToStartType[triggerIdToEvent(id)];
 
     if (!triggerStart) {
@@ -405,6 +425,8 @@ export default class MusicBlocklyWorkspace {
         return Math.ceil(currentPosition * 4) / 4;
       case TriggerStart.NEXT_MEASURE:
         return Math.ceil(currentPosition);
+      case TriggerStart.LOOP_START:
+        return loopStart;
     }
   }
 

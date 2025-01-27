@@ -59,6 +59,9 @@ import {
   setSelectedTriggerId,
   clearSelectedTriggerId,
   getBlockMode,
+  setLoopStart,
+  setLoopEnd,
+  setLoopEnabled,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
@@ -110,6 +113,10 @@ class UnconnectedMusicView extends React.Component {
     initialSources: PropTypes.object,
     levelProperties: PropTypes.object,
     longInstructions: PropTypes.string,
+    setLoopStart: PropTypes.func,
+    setLoopEnd: PropTypes.func,
+    setLoopEnabled: PropTypes.func,
+    loopStart: PropTypes.number,
 
     isProjectLevel: PropTypes.bool,
     isReadOnlyWorkspace: PropTypes.bool,
@@ -570,7 +577,8 @@ class UnconnectedMusicView extends React.Component {
     const triggerStartPosition =
       this.musicBlocklyWorkspace.getTriggerStartPosition(
         id,
-        this.player.getCurrentPlayheadPosition()
+        this.player.getCurrentPlayheadPosition(),
+        this.props.loopStart
       );
     if (!triggerStartPosition) {
       return;
@@ -578,6 +586,7 @@ class UnconnectedMusicView extends React.Component {
 
     this.sequencer.clear(this.getPlaybackEvents().length);
     this.musicBlocklyWorkspace.executeTrigger(id, triggerStartPosition);
+    this.musicBlocklyWorkspace.executeTriggerAction(id);
     const playbackEvents = this.sequencer.getPlaybackEvents();
     this.props.addPlaybackEvents({
       events: playbackEvents,
@@ -596,10 +605,18 @@ class UnconnectedMusicView extends React.Component {
   };
 
   compileSong = () => {
+    this.props.setLoopEnabled(false);
+    const transport = {
+      setLoopStart: position => this.props.setLoopStart(position),
+      setLoopEnd: position => this.props.setLoopEnd(position),
+      setLoopEnabled: enabled => this.props.setLoopEnabled(enabled),
+      jumpToPosition: position => this.player.jumpToPosition(position),
+    };
     return this.musicBlocklyWorkspace.compileSong(
       {
         getTriggerCount: () => this.playingTriggers.length,
         Sequencer: this.sequencer,
+        Transport: transport,
       },
       this.props.blockMode
     );
@@ -813,6 +830,7 @@ const MusicView = connect(
     isPlayView: state.lab.isShareView,
     playbackEvents: state.music.playbackEvents,
     validationState: state.lab.validationState,
+    loopStart: state.music.loopStart,
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),
@@ -840,6 +858,9 @@ const MusicView = connect(
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
     clearCallout: id => dispatch(clearCallout()),
+    setLoopStart: position => dispatch(setLoopStart(position)),
+    setLoopEnd: position => dispatch(setLoopEnd(position)),
+    setLoopEnabled: enabled => dispatch(setLoopEnabled(enabled)),
   })
 )(UnconnectedMusicView);
 
