@@ -19,9 +19,9 @@ export interface VideoProps extends HTMLAttributes<HTMLElement> {
   showCaption?: boolean;
   /** Label for Download button */
   downloadLabel?: string;
-  /** Error title for error placeholder  */
+  /** Error heading for placeholder  */
   errorHeading?: string;
-  /** Error body for error placeholder */
+  /** Error body for placeholder */
   errorBody?: string;
   /** Video custom className */
   className?: string;
