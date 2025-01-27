@@ -95,6 +95,7 @@ class User < ApplicationRecord
   include UserMultiAuthHelper
   include UserPermissionGrantee
   include PartialRegistration
+  # include UserTypes
   include Rails.application.routes.url_helpers
 
   # Notes:
