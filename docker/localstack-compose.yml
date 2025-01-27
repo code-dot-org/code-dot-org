@@ -1,0 +1,58 @@
+# A simple docker compose script for creating a local service which emulates
+# any services and configuration in AWS that are required for local
+# development.
+#
+# Usage:
+# - Run the container with `docker compose -f docker/localstack-compose.yml up`
+# - Configure your local AWS client with `endpoint: "http://localhost:4566"`
+#
+# Based on:
+# - https://github.com/localstack/localstack/blob/master/docker-compose.yml
+# - https://medium.com/@muthomititus/a-guide-to-localstack-with-docker-compose-e1487e3a776f
+# - https://refactorfirst.com/localstack-with-docker-compose
+# - https://whattodevnow.medium.com/using-localstack-with-docker-compose-to-mock-aws-services-bb25a5b01d4b
+version: "3.8"
+
+services:
+
+  # This container hosts the actual LocalStack services we'll be interacting
+  # with as though they were AWS.
+  localstack:
+    container_name: "${LOCALSTACK_DOCKER_NAME:-localstack-main}"
+    image: localstack/localstack:latest
+    ports:
+      - "4566:4566"
+    environment:
+      - DEBUG=${DEBUG:-0}
+      - DEFAULT_REGION=us-east-1
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - "${LOCALSTACK_VOLUME_DIR:-/tmp/localstack-volume}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+  # This container provides a space in which to run some AWS CLI commands which
+  # initialize and configure the necessary components in LocalStack
+  aws-cli:
+    image: amazon/aws-cli
+    depends_on:
+      - localstack
+    environment:
+      - AWS_ACCESS_KEY_ID=local-development
+      - AWS_SECRET_ACCESS_KEY=local-development
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_ENDPOINT_URL=http://localstack:4566
+    entrypoint: /bin/sh -c
+    command: |-
+      "
+        aws s3api create-bucket --bucket cdo-animation-library;
+        aws s3api put-bucket-versioning --bucket cdo-animation-library --versioning-configuration Status=Enabled;
+        aws s3api create-bucket --bucket cdo-v3-animations --object-lock-enabled-for-bucket;
+        aws s3api create-bucket --bucket cdo-v3-assets --object-lock-enabled-for-bucket;
+        aws s3api create-bucket --bucket cdo-v3-files --object-lock-enabled-for-bucket;
+        aws s3api create-bucket --bucket cdo-v3-libraries --object-lock-enabled-for-bucket;
+        aws s3api create-bucket --bucket cdo-v3-sources --object-lock-enabled-for-bucket;
+        aws s3api create-bucket --bucket videos.code.org;
+        aws secretsmanager create-secret --name \"development/cdo/firebase_secret\" --secret-string \"placeholder-firebase-secret\"
+        aws secretsmanager create-secret --name \"development/cdo/firebase_shared_secret\" --secret-string \"placeholder-firebase-shared-secret\"
+        aws secretsmanager create-secret --name \"development/cdo/slack_bot_token\" --secret-string \"placeholder-slack-token\"
+      "
