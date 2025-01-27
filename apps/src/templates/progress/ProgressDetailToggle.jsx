@@ -96,7 +96,7 @@ class ProgressDetailToggle extends React.Component {
           <img
             src={isSummaryView ? images.summaryActive : images.summaryInactive}
             style={styles.icon}
-            alt={i18n.summaryView()}
+            alt={i18n.summaryView() + (isSummaryView ? i18n.selected() : '')}
           />
         </button>
         <button
@@ -112,7 +112,7 @@ class ProgressDetailToggle extends React.Component {
           <img
             src={isSummaryView ? images.detailInactive : images.detailActive}
             style={styles.icon}
-            alt={i18n.detailView()}
+            alt={i18n.detailView() + (!isSummaryView ? i18n.selected() : '')}
           />
         </button>
       </ToggleGroup>
