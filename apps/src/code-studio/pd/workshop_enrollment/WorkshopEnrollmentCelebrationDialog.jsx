@@ -22,8 +22,8 @@ export const buildGoogleCalendarLink = (
   workshopLocation
 ) => {
   const date = `${session.year}${session.month}${session.day}`;
-  const startTime = `${date}T${session.start_hour}${session.start_min}00Z`;
-  const endTime = `${date}T${session.end_hour}${session.end_min}00Z`;
+  const startTime = `${date}T${session.start_hour}${session.start_min}00`;
+  const endTime = `${date}T${session.end_hour}${session.end_min}00`;
 
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
     workshopTitle
@@ -38,8 +38,8 @@ export const buildOutlookCalendarLink = (
   workshopLocation
 ) => {
   const date = `${session.year}-${session.month}-${session.day}`;
-  const startTime = `${date}T${session.start_hour}:${session.start_min}:00Z`;
-  const endTime = `${date}T${session.end_hour}:${session.end_min}:00Z`;
+  const startTime = `${date}T${session.start_hour}:${session.start_min}:00`;
+  const endTime = `${date}T${session.end_hour}:${session.end_min}:00`;
 
   return `https://outlook.live.com/calendar/action/compose?rru=addevent&subject=${encodeURIComponent(
     workshopTitle
