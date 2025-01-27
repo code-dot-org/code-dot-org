@@ -5,14 +5,14 @@
 // Video common styles
 .videoComponentContainer {
   width: 100%;
-  margin: unset;
+  margin: 0;
 
-  & > .videoWrapper {
+  .videoWrapper {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 56.25%;
-    border: 1px solid #EAEBEB;
+    padding-top: 56.25%; // This maintains a 16:9 aspect ratio
+    border: 1px solid var(--background-neutral-tertiary);
     border-radius: $regular-border-radius;
     box-sizing: content-box;
     display: block;
@@ -67,6 +67,8 @@
   align-items: start;
   gap: 1rem;
 
+  // This will be updated in DESIGN2-266 to use
+  // new styles and can be deleted afterwards.
   .caption {
     font-weight: 600;
   }
