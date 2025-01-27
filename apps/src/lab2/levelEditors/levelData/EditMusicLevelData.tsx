@@ -278,7 +278,6 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                   ? true
                   : levelData.toolbox?.addFunctionCalls,
               },
-              toolboxDefinition: undefined,
             });
           }}
           onAddFunctionCallsChange={(addFunctionCalls: boolean) => {
@@ -292,7 +291,6 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                   : levelData.toolbox?.addFunctionDefinition,
                 addFunctionCalls,
               },
-              toolboxDefinition: undefined,
             });
           }}
         />
