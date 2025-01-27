@@ -89,7 +89,7 @@ describe('ProjectAppTypeArea', () => {
           isDetailView={true}
         />
       );
-      const projectCards = screen.getAllByText(/Published Project \d+/);
+      const projectCards = screen.getAllByRole('listitem');
       expect(projectCards).toHaveLength(12);
 
       const viewMoreButton = screen.getByText(i18n.viewMore());
@@ -112,8 +112,6 @@ describe('ProjectAppTypeArea', () => {
         />
       );
       const viewMoreLinkElement = screen.getByText(viewMoreLink);
-      expect(viewMoreLinkElement).toBeInTheDocument();
-
       fireEvent.click(viewMoreLinkElement);
       expect(stubNavigate).toHaveBeenCalled();
     });
@@ -136,7 +134,7 @@ describe('ProjectAppTypeArea', () => {
           />
         </Provider>
       );
-      const getAllCards = () => screen.getAllByText(/Published Project \d+/);
+      const getAllCards = () => screen.getAllByRole('listitem');
       const viewMoreButton = screen.getByText(i18n.viewMore());
 
       // 12 projects are displayed initially.
@@ -171,7 +169,7 @@ describe('ProjectAppTypeArea', () => {
           />
         </Provider>
       );
-      const getAllCards = () => screen.getAllByText(/Published Project \d+/);
+      const getAllCards = () => screen.getAllByRole('listitem');
       const viewMoreButton = screen.getByText(i18n.viewMore());
 
       expect(getAllCards()).toHaveLength(10);
