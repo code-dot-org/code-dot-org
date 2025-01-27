@@ -4,7 +4,11 @@ import {loadPyodide, PyodideInterface, version} from 'pyodide';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 import {HOME_FOLDER} from './pythonHelpers/constants';
-import {SETUP_CODE} from './pythonHelpers/patches';
+import {
+  patchInputCode,
+  pythonlabInputModule,
+  SETUP_CODE,
+} from './pythonHelpers/patches';
 import {
   getCleanupCode,
   getUpdatedSourceAndDeleteFiles,
@@ -27,6 +31,7 @@ async function loadPyodideAndPackages() {
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
   pyodide.setStderr(getStreamHandlerOptions('syserr'));
+  pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
 
   // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
   // matplotlib, which pythonlab_setup depends on, and numpy,
@@ -90,6 +95,7 @@ onmessage = async event => {
   try {
     writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
     await importPackagesFromFiles(sourceToWrite, pyodide);
+    await patchInputIfAvailable(id);
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
@@ -145,4 +151,11 @@ function getStreamHandlerOptions(type: MessageType) {
       postMessage({type: type, message: msg, id: 'none'});
     },
   };
+}
+
+async function patchInputIfAvailable(id: number) {
+  // TODO: pass a flag to the worker to determine if we should patch input.
+  // The check on service worker in navigator doesn't work in a web worker.
+  console.log('patching input');
+  await runInternalCode(patchInputCode(id), id);
 }

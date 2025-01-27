@@ -6,3 +6,7 @@ export const HIDDEN_FOLDERS = ['.matplotlib'];
 // The folder that user files are written to in the pyodide
 // virtual file system.
 export const HOME_FOLDER = 'Files';
+
+export const AWAITING_INPUT = 'AWAITING_INPUT';
+export const SENDING_INPUT = 'SENDING_INPUT';
+export const SERVICE_WORKER_PATH = '/pythonlab-input-sw/';
