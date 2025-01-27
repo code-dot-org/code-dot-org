@@ -5,6 +5,12 @@ self.class.include VPC
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: VPC layer including all Subnets, NAT Gateway and Security Groups for Code.org infrastructure.
+Parameters:
+  # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/LocationsOfEdgeServers.html#managed-prefix-list
+  CloudFrontManagedPrefixList:
+    Type: String
+    Default: pl-3b927c52 # us-east-1
+    Description: CloudFront Managed Prefix List for the current Region.
 Resources:
   VPC:
     Type: AWS::EC2::VPC
@@ -110,6 +116,39 @@ Resources:
     Properties:
       GroupDescription: Enable SSH access to frontends from daemon.
       VpcId: {Ref: VPC}
+  # To be used by Application Load Balancers that only serve traffic forwarded to it by CloudFront.
+  ALBSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Inbound HTTP[S] from the public Internet, outbound HTTP[S] downstream
+      VpcId: {Ref: VPC}
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          SourcePrefixListId: !Ref CloudFrontManagedPrefixList
+      SecurityGroupEgress:
+        # Forward HTTP requests to nginx on Web Application Server ("Front End") EC2 Instances.
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        # Forward HTTP requests to nginx on Web Application Server ("Front End") EC2 Instances.
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+        # Forward HTTP requests directly to Dashboard Puma on Web Application Server ("Front End") EC2 Instances.
+        - IpProtocol: tcp
+          FromPort: 9000
+          ToPort: 9000
+          CidrIp: 0.0.0.0/0
+        # Forward HTTP requests directly to Pegasus Puma on Web Application Server ("Front End") EC2 Instances.
+        - IpProtocol: tcp
+          FromPort: 9001
+          ToPort: 9001
+          CidrIp: 0.0.0.0/0
+  # Used by legacy Load Balancers that only serve traffic directly from the public internet (codeprojects.org).
   ELBSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -312,8 +351,12 @@ Outputs:
     Description: Security group for Gateway bastion server
     Value: {'Fn::GetAtt': [GatewaySecurityGroup, GroupId]}
     Export: {Name: !Sub "${AWS::StackName}-GatewaySecurityGroup"}
+  ALBSecurityGroup:
+    Description: Security Group for Application Load Balancers that only serve traffic forwarded to it by CloudFront.
+    Value: {'Fn::GetAtt': [ALBSecurityGroup, GroupId]}
+    Export: {Name: !Sub "${AWS::StackName}-ALBSecurityGroup"}
   ELBSecurityGroup:
-    Description: Security group for Load Balancer
+    Description: Security group for legacy Load Balancers that serve traffic directly from the public internet (such as codeprojects.org).
     Value: {'Fn::GetAtt': [ELBSecurityGroup, GroupId]}
     Export: {Name: !Sub "${AWS::StackName}-ELBSecurityGroup"}
   FrontendSecurityGroup:

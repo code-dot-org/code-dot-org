@@ -421,6 +421,7 @@ const EVENTS = {
   LTI_UNLINK_CLICK: 'lti_unlink_click',
   LTI_UNLINK_CANCEL: 'lti_unlink_cancel',
   LTI_DYNAMIC_REGISTRATION_COMPLETED: 'lti_dynamic_registration_completed',
+  LTI_NEW_ACCOUNT_CLICK: 'lti_new_account_click',
 
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',

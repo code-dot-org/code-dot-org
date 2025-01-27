@@ -3756,6 +3756,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@code-dot-org/component-library@portal:../frontend/packages/component-library/::locator=blockly-mooc%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/component-library@portal:../frontend/packages/component-library/::locator=blockly-mooc%40workspace%3A."
+  dependencies:
+    lodash: ^4.17.21
+  peerDependencies:
+    classnames: ^2.5.1
+    react: ">=16"
+    react-dom: ">=16"
+  languageName: node
+  linkType: soft
+
 "@code-dot-org/craft@npm:0.2.2":
   version: 0.2.2
   resolution: "@code-dot-org/craft@npm:0.2.2"
@@ -10072,6 +10084,7 @@ __metadata:
     "@cdo/interpreted": "link:../dashboard/config/libraries"
     "@code-dot-org/artist": 0.2.1
     "@code-dot-org/blockly": 4.0.14
+    "@code-dot-org/component-library": "portal:../frontend/packages/component-library/"
     "@code-dot-org/craft": 0.2.2
     "@code-dot-org/dance-party": 2.0.0
     "@code-dot-org/johnny-five": 2.1.0-cdo.3

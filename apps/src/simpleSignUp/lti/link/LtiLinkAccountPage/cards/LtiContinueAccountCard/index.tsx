@@ -20,7 +20,7 @@ import {LtiProviderContext} from '../../context';
 import styles from '../../../../../link-account.module.scss';
 
 const LtiContinueAccountCard = () => {
-  const {ltiProviderName, continueAccountUrl, userType} =
+  const {ltiProviderName, continueAccountUrl, userType, newAccountUrl} =
     useContext(LtiProviderContext)!;
   const [isSaving, setIsSaving] = useState(false);
 
@@ -40,7 +40,7 @@ const LtiContinueAccountCard = () => {
   const handleSubmit = async () => {
     setIsSaving(true);
 
-    fetch('/lti/v1/account_linking/new_account', {
+    fetch(newAccountUrl.href, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
