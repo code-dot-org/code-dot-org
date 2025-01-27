@@ -16,6 +16,7 @@ export default class WorkshopEnroll extends React.Component {
   static propTypes = {
     user_id: PropTypes.number.isRequired,
     workshop: WorkshopPropType,
+    workshop_location_for_calendar: PropTypes.string,
     session_dates: PropTypes.arrayOf(PropTypes.string),
     session_time_info: PropTypes.arrayOf(PropTypes.object),
     enrollment: PropTypes.shape({
@@ -140,7 +141,7 @@ export default class WorkshopEnroll extends React.Component {
     sessionStorage.setItem('workshopName', this.props.workshop.name || '');
     sessionStorage.setItem(
       'workshopLocation',
-      this.props.workshop.location || ''
+      this.props.workshop_location_for_calendar || ''
     );
     sessionStorage.setItem(
       'sessionTimeInfo',
