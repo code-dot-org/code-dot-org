@@ -26,7 +26,7 @@
   position: relative;
   width: 70px;
   height: 70px;
-  background-color: green;
+  background-color: $neutral_dark40;
   border-radius: 9999px;
 
   .rotater {
@@ -39,7 +39,7 @@
       left: 50%;
       width: 2%;
       height: 50%;
-      background-color: yellow;
+      background-color: white;
     }
   }
 }

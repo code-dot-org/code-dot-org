@@ -61,7 +61,7 @@ const Dials: React.FunctionComponent = () => {
                 setInputValue(panelElement.id, +event.target.value);
               }}
               hideValue={false}
-              color="aqua"
+              color="white"
               className={moduleStyles.slider}
             />
           </div>
@@ -99,8 +99,12 @@ const Dials: React.FunctionComponent = () => {
             </KnobHeadless>
           </div>
         ) : panelElement.type === 'sticker' ? (
-          <div className={moduleStyles.elementContainer}>
-            <img alt="" src={stickerImages[panelElement.id]} />
+          <div>
+            <img
+              alt=""
+              src={stickerImages[panelElement.id]}
+              style={{rotate: `${getInputValue(panelElement.id)}deg`}}
+            />
           </div>
         ) : undefined
       )}

@@ -15,9 +15,10 @@ export default class Dials {
     this.setPanelElements = setPanelElements;
 
     this.createOutput('points', 0, 0);
+    this.createSticker('banner-outline', 4, 0, 23);
     this.createInput('slide1', 'slider', 1, 0);
     this.createInput('slide2', 'knob', 2, 0);
-    this.createSticker('dancers', 338, 4, 0);
+    this.createSticker('dancers', 4, 0, 354);
   }
 
   //createInput("intensity-slider", "slider", 2, 0);
@@ -94,7 +95,7 @@ export default class Dials {
       type: 'sticker',
       row,
       col,
-      currentValue: 0,
+      currentValue: angle,
     });
     this.setPanelElements(panelElementsCopy);
   }
