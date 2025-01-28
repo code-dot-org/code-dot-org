@@ -32,7 +32,6 @@ export const pythonlabInputModule = {
   getInput: (id: string, prompt: string) => {
     const request = new XMLHttpRequest();
     // Synchronous request to be intercepted by service worker
-    console.log('opening request');
     request.open(
       'GET',
       `${SERVICE_WORKER_PATH}?id=${id}&prompt=${encodeURIComponent(prompt)}`,

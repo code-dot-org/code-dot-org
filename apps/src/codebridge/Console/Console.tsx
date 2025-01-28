@@ -80,7 +80,6 @@ const Console: React.FunctionComponent = () => {
         consoleManager.backspaceInputBuffer();
       } else {
         terminal.write(data);
-        console.log(`should append to buffer: ${data}`);
         consoleManager.appendToInputBuffer(data);
       }
     },
