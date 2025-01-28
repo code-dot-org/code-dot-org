@@ -156,6 +156,5 @@ function getStreamHandlerOptions(type: MessageType) {
 }
 
 async function patchInput(id: number) {
-  console.log('patching input');
   await runInternalCode(patchInputCode(id), id);
 }

@@ -6,6 +6,8 @@ import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 
+import experiments from '../util/experiments';
+
 import {AWAITING_INPUT, SENDING_INPUT} from './pythonHelpers/constants';
 import {
   parseMessageToNeighborhoodSignal,
@@ -96,9 +98,17 @@ const setUpPyodideWorker = () => {
 
   return worker;
 };
+
+const canSupportInput = () => {
+  return (
+    'serviceWorker' in navigator &&
+    experiments.isEnabled(experiments.PYTHON_INPUT)
+  );
+};
+
 const registerServiceWorker = async () => {
   // No-op if service workers are not supported.
-  if ('serviceWorker' in navigator) {
+  if (canSupportInput()) {
     try {
       const url = new URL(
         './inputServiceWorker.js',
@@ -107,17 +117,14 @@ const registerServiceWorker = async () => {
       );
       const registration = await navigator.serviceWorker.register(url);
       if (registration.active) {
-        console.debug('Service worker active');
         inputServiceWorker = registration.active;
       }
 
       registration.addEventListener('updatefound', () => {
         const installingWorker = registration.installing;
         if (installingWorker) {
-          console.debug('Installing new service worker');
           installingWorker.addEventListener('statechange', () => {
             if (installingWorker.state === 'installed') {
-              console.debug('New service worker installed');
               inputServiceWorker = installingWorker;
             }
           });
@@ -128,9 +135,7 @@ const registerServiceWorker = async () => {
     }
 
     navigator.serviceWorker.onmessage = event => {
-      console.log(`got message in main thread with type ${event.data.type}`);
       if (event.data.type === AWAITING_INPUT) {
-        console.log('got input request in main thread');
         if (event.source instanceof ServiceWorker) {
           // Update the service worker reference, in case the service worker is different to the one we registered
           inputServiceWorker = event.source;
@@ -163,7 +168,6 @@ const asyncRun = (() => {
   ) => {
     // the id could be generated more carefully
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
-    const canSupportInput = 'serviceWorker' in navigator;
 
     // Make sure async setup is done
     await initializeServiceWorker();
@@ -174,7 +178,7 @@ const asyncRun = (() => {
         id,
         source,
         validationFile,
-        canSupportInput,
+        canSupportInput: canSupportInput(),
       };
       pyodideWorker.postMessage(messageData);
     });
@@ -196,7 +200,9 @@ const restartPyodideIfProgramIsRunning = () => {
 };
 
 const sendInput = (value: string): void => {
-  console.log('sending input?');
+  if (!canSupportInput()) {
+    return;
+  }
   if (lastInputId < 0) {
     console.error('Worker not awaiting input');
     return;
