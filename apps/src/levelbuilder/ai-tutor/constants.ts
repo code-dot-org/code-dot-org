@@ -32,10 +32,9 @@ const genAIEndpoints = [
     id: AiChatModelIds.PIRATE,
     name: 'Mistral Pirate + Webpurify',
   },
-  // should this be here?
   {
     id: AiChatModelIds.CHATGPT,
-    name: 'ChatGPT + ...',
+    name: 'ChatGPT + Webpurify',
   },
 ];
 
