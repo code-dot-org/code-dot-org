@@ -79,7 +79,7 @@ initializePyodide();
 onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
-  const {id, python, source, validationFile} = event.data;
+  const {id, python, source, validationFile, canSupportInput} = event.data;
   let results = undefined;
   let sourceToWrite = source;
   // Add the validation file to the source if it exists.
@@ -95,7 +95,9 @@ onmessage = async event => {
   try {
     writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
     await importPackagesFromFiles(sourceToWrite, pyodide);
-    await patchInputIfAvailable(id);
+    if (canSupportInput) {
+      await patchInput(id);
+    }
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
@@ -153,9 +155,7 @@ function getStreamHandlerOptions(type: MessageType) {
   };
 }
 
-async function patchInputIfAvailable(id: number) {
-  // TODO: pass a flag to the worker to determine if we should patch input.
-  // The check on service worker in navigator doesn't work in a web worker.
+async function patchInput(id: number) {
   console.log('patching input');
   await runInternalCode(patchInputCode(id), id);
 }

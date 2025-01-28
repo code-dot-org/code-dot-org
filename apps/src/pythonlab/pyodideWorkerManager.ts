@@ -163,6 +163,7 @@ const asyncRun = (() => {
   ) => {
     // the id could be generated more carefully
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
+    const canSupportInput = 'serviceWorker' in navigator;
 
     // Make sure async setup is done
     await initializeServiceWorker();
@@ -173,6 +174,7 @@ const asyncRun = (() => {
         id,
         source,
         validationFile,
+        canSupportInput,
       };
       pyodideWorker.postMessage(messageData);
     });
