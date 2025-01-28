@@ -11,10 +11,11 @@ namespace :infra do
   # Synchronize the Chef cookbooks to the Chef repo for this environment using Berkshelf.
   timed_task_with_logging :chef_update do
     # Ensure Chef Client is using an up to date TLS/SSL root certificate store from a trusted source (Mozilla via curl.se)
-    Dir.chdir(cookbooks_dir) do
-      ROOT_CERTIFICATE_URL = "https://raw.githubusercontent.com/code-dot-org/code-dot-org/#{GitUtils.current_branch}/cookbooks/cacert.pem"
-      RakeUtils.sudo "curl --fail --output /opt/chef/embedded/ssl/certs/cacert.pem #{ROOT_CERTIFICATE_URL}"
-    end
+    # TODO: change this to not pull from GitHub. Commenting out for now. Expected to become outdated in the near future.
+    # Dir.chdir(cookbooks_dir) do
+    #   ROOT_CERTIFICATE_URL = "https://raw.githubusercontent.com/code-dot-org/code-dot-org/#{GitUtils.current_branch}/cookbooks/cacert.pem"
+    #   RakeUtils.sudo "curl -o /opt/chef/embedded/ssl/certs/cacert.pem #{ROOT_CERTIFICATE_URL}"
+    # end
     if CDO.chef_local_mode
       # Update local cookbooks from repository in local mode.
       ChatClient.log 'Updating local <b>chef</b> cookbooks...'
