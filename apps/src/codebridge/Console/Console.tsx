@@ -26,7 +26,7 @@ const Console: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const {labConfig} = useCodebridgeContext();
+  const {labConfig, sendConsoleInput} = useCodebridgeContext();
   const hasMiniApp = !!labConfig?.miniApp?.name;
 
   const clearOutput = useCallback(
@@ -54,32 +54,38 @@ const Console: React.FunctionComponent = () => {
     clearOutput(false);
   });
 
-  const onData = useCallback((data: string) => {
-    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-    const terminal = consoleManager?.getTerminal();
-    if (!terminal || !consoleManager) {
-      return;
-    }
-    const charCode = data.charCodeAt(0);
-    if (charCode === 13) {
-      // new line
-      terminal.writeln('');
-      // send input
-      console.log(`sending input: ${consoleManager.getInputBuffer()}`);
-      // reset buffer
-      consoleManager.clearInputBuffer();
-    } else if (charCode < 32) {
-      // control characters, do nothing
-    } else if (charCode === 127) {
-      // backspace
-      terminal.write('\b \b');
-      consoleManager.backspaceInputBuffer();
-    } else {
-      terminal.write(data);
-      console.log(`should append to buffer: ${data}`);
-      consoleManager.appendToInputBuffer(data);
-    }
-  }, []);
+  const onData = useCallback(
+    (data: string) => {
+      const consoleManager =
+        CodebridgeRegistry.getInstance().getConsoleManager();
+      const terminal = consoleManager?.getTerminal();
+      if (!terminal || !consoleManager) {
+        return;
+      }
+      const charCode = data.charCodeAt(0);
+      if (charCode === 13) {
+        // new line
+        terminal.writeln('');
+        // send input
+        if (sendConsoleInput) {
+          sendConsoleInput(consoleManager.getInputBuffer());
+        }
+        // reset buffer
+        consoleManager.clearInputBuffer();
+      } else if (charCode < 32) {
+        // control characters, do nothing
+      } else if (charCode === 127) {
+        // backspace
+        terminal.write('\b \b');
+        consoleManager.backspaceInputBuffer();
+      } else {
+        terminal.write(data);
+        console.log(`should append to buffer: ${data}`);
+        consoleManager.appendToInputBuffer(data);
+      }
+    },
+    [sendConsoleInput]
+  );
 
   const ignoreEscapeAndTab = (e: KeyboardEvent) => {
     if (e.key === 'Tab' || e.key === 'Escape') {
