@@ -1,5 +1,5 @@
-@import '@/common/styles/primitiveColors.css';
-@import '@/common/styles/font.scss';
+@import 'primitiveColors.scss';
+@import 'font.scss';
 
 // Typography - Label styles
 @mixin label-common {

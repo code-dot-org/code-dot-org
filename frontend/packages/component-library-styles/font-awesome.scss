@@ -2,7 +2,7 @@
    This file is a copy of `shared/css` and is meant for temporary usage to add Font Awesome Pro support.
    This file will be replaced by the long term font solution: https://codedotorg.atlassian.net/browse/ACQ-2799
  */
-@import "~@code-dot-org/legacy-css/font.scss";
+@import "font.scss";
 @import url($font-awesome-core-url);
 @import url($font-awesome-brands-url);
 @import url($font-awesome-solid-url);

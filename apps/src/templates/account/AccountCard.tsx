@@ -47,6 +47,7 @@ const AccountCard: React.FunctionComponent<{
           <FontAwesomeV6Icon
             className={classNames(styles.cardIcon, 'fa-2x')}
             iconName={icon}
+            aria-hidden
           />
         }
       />
@@ -59,6 +60,7 @@ const AccountCard: React.FunctionComponent<{
                 <FontAwesomeV6Icon
                   className={styles.icon}
                   iconName="check-circle"
+                  aria-hidden
                 />
                 {item}
               </li>

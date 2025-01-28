@@ -1,0 +1,40 @@
+@import 'color.scss';
+@import 'font.scss';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
+
+.teacherFeedbackContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: flex-end;
+
+  .button i {
+    color: $light-gray-600;
+  }
+
+  .buttonAffirmative i {
+    color: $light_affirmative_500;
+  }
+
+  .buttonNegative i {
+    color: $light_negative_500;
+  }
+}
+
+.assistantFeedback {
+  flex-direction: row-reverse;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tooltip {
+  animation: fade-in 0.3s;
+}
+
