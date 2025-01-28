@@ -34,8 +34,6 @@ class UnitTest < ActiveSupport::TestCase
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
 
-    @csc_unit = create :csc_script, name: 'csc1', is_course: true, family_name: 'csc-test-unit', version_year: 'unversioned'
-
     @hoc_unit = create :hoc_script, name: 'hoc1', is_course: true, family_name: 'hoc-test-unit', version_year: 'unversioned'
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
@@ -1982,10 +1980,6 @@ class UnitTest < ActiveSupport::TestCase
       [@csa_unit.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     )
-    assert_equal(
-      [@csc_unit.name],
-      Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
-    )
     assert_includes(Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC), @hoc_unit.name)
   end
 
@@ -1998,8 +1992,6 @@ class UnitTest < ActiveSupport::TestCase
     assert @csp_unit.csp?
     assert @csa_unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     assert @csa_unit.csa?
-    assert @csc_unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
-    assert @csc_unit.csc?
     assert @hoc_unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     assert @hoc_unit.hoc?
     refute @csf_unit.hoc?
@@ -2014,7 +2006,6 @@ class UnitTest < ActiveSupport::TestCase
     assert @foundations_of_programming_unit.middle_high?
 
     refute @csf_unit.middle_high?
-    refute @csc_unit.middle_high?
     refute @hoc_unit.middle_high?
   end
 

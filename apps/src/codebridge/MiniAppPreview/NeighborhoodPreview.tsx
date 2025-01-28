@@ -19,7 +19,11 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 const NeighborhoodPreview: React.FunctionComponent = () => {
   const levelProperties = useAppSelector(state => state.lab.levelProperties);
   const {source, config} = useCodebridgeContext();
-  const serializedMaze = findFile(source, MAZE_FILE_NAME, DEFAULT_FOLDER_ID);
+  const serializedMaze = findFile(
+    source,
+    MAZE_FILE_NAME,
+    DEFAULT_FOLDER_ID
+  )?.contents;
   const dispatch = useAppDispatch();
   const isVertical = config.activeGridLayout === 'vertical';
 
@@ -55,8 +59,8 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
       return;
     }
 
-    const mazeContents = serializedMaze?.contents
-      ? (JSON.parse(serializedMaze.contents) as MazeCell[][])
+    const mazeContents = serializedMaze
+      ? (JSON.parse(serializedMaze) as MazeCell[][])
       : undefined;
 
     // Combine the serialized maze from the project with the level properties.

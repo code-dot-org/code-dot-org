@@ -38,6 +38,27 @@
   padding-bottom: 16px;
 }
 
+.sidebarSectionHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  margin-bottom: 2px;
+}
+
+.sidebarNewTags{
+  margin-inline-start: 10px;
+
+}
+
+.sidebarSectionHeader .sidebarNewTags div {
+  background-color: $light_primary_500;
+
+}
+
+.sidebarSectionHeader .sidebarNewTags div span {
+  color: $white
+}
+
 .sectionDropdown {
   padding-left: 16px;
   width: 210px;
@@ -90,7 +111,7 @@
 
 .sectionHeader {
   margin-top: 0;
-  margin-bottom: 2px;
+  margin-bottom: 0;
   padding-left: 16px;
   padding-top: 20px;
   color: var(--text-neutral-quaternary);

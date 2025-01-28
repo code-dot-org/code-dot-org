@@ -365,6 +365,7 @@ module.exports = function (grunt) {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
     generateRegionConfigurations:
       'bundle exec ./script/generateRegionConfigurations.rb',
+    buildFrontendDependencies: './script/build-frontend-dependencies.sh',
   };
 
   grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
@@ -549,6 +550,7 @@ module.exports = function (grunt) {
     'locales',
     'ejs',
     'detect-production-webpack-chunks',
+    'exec:buildFrontendDependencies',
   ]);
 
   grunt.registerTask('check-entry-points', function () {

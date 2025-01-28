@@ -1,0 +1,13 @@
+name 'computer-systems-computing-careers-choice'
+display_name 'Computing Careers'
+description '#### Computing professionals play essential roles in creating and improving technology. Learn about different careers to see how their skills and tools make innovation possible.'
+
+sublevels
+level 'computer-systems-computing-careers-choice-A'
+level 'computer-systems-computing-careers-choice-B'
+level 'computer-systems-computing-careers-choice-C'
+
+markdown <<MARKDOWN
+###Computing professionals play essential roles in creating and improving technology. Learn about different careers to see how their skills and tools make innovation possible.
+
+MARKDOWN
