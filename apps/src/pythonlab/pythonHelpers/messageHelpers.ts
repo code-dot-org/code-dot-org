@@ -71,7 +71,7 @@ export function parseErrorMessage(errorMessage: string): string {
  * This method returns the user-friendly message mapped to a Neighborhood exception type key.
  * @param exceptionType
  */
-function getNeighborhoodExceptionMessage(exceptionType: string) {
+export function getNeighborhoodExceptionMessage(exceptionType: string) {
   if (exceptionType in NeighborhoodExceptionType) {
     // Return the user-friendly error message mapped to the NeighborhoodExceptionType.
     const message =
@@ -86,7 +86,7 @@ function getNeighborhoodExceptionMessage(exceptionType: string) {
  * We look for "NeighborhoodRuntimeException" and then return the neighborhood exception type.
  * @param tracebackMessage - the traceback message from pyodide
  **/
-function extractNeighborhoodExceptionType(
+export function extractNeighborhoodExceptionType(
   tracebackMessage: string
 ): string | null {
   /*
