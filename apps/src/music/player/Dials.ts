@@ -17,6 +17,7 @@ export default class Dials {
     this.createOutput('points', 0, 0);
     this.createInput('slide1', 'slider', 1, 0);
     this.createInput('slide2', 'knob', 2, 0);
+    this.createSticker('dancers', 338, 4, 0);
   }
 
   //createInput("intensity-slider", "slider", 2, 0);

@@ -7,9 +7,15 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {PanelElement, setPanelElements} from '../redux/musicRedux';
 
 import moduleStyles from './dials.module.scss';
-interface DialsProps {}
 
-const Dials: React.FunctionComponent<DialsProps> = () => {
+const stickerImages: {[key: string]: string} = {
+  'afe-outline': require(`@cdo/static/music/stickers/afe-outline.png`),
+  'banner-outline': require(`@cdo/static/music/stickers/banner-outline.png`),
+  banner: require(`@cdo/static/music/stickers/banner.png`),
+  dancers: require(`@cdo/static/music/stickers/dancers.png`),
+};
+
+const Dials: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const panelElements = useAppSelector(state => state.music.panelElements);
@@ -35,11 +41,16 @@ const Dials: React.FunctionComponent<DialsProps> = () => {
     <div id="dials" className={moduleStyles.dialsContainer}>
       {panelElements?.map(panelElement =>
         panelElement.type === 'output' ? (
-          <div>{`${panelElement.id}: ${panelElement.currentValue}`}</div>
+          <div className={moduleStyles.elementContainer}>
+            <div className={moduleStyles.elementLabel}>{panelElement.id}</div>
+            <div className={moduleStyles.outputValue}>
+              {panelElement.currentValue}
+            </div>
+          </div>
         ) : panelElement.type === 'input' &&
           panelElement.variant === 'slider' ? (
-          <div>
-            {panelElement.id}:
+          <div className={moduleStyles.elementContainer}>
+            <div className={moduleStyles.elementLabel}>{panelElement.id}</div>
             <Slider
               name="slider"
               minValue={0}
@@ -55,8 +66,8 @@ const Dials: React.FunctionComponent<DialsProps> = () => {
             />
           </div>
         ) : panelElement.type === 'input' && panelElement.variant === 'knob' ? (
-          <div>
-            {panelElement.id}:
+          <div className={moduleStyles.elementContainer}>
+            <div className={moduleStyles.elementLabel}>{panelElement.id}</div>
             <KnobHeadless
               aria-label="A Knob"
               valueRaw={getInputValue(panelElement.id)}
@@ -75,7 +86,9 @@ const Dials: React.FunctionComponent<DialsProps> = () => {
             >
               <div>
                 <div
-                  style={{rotate: `${getInputValue(panelElement.id) * 180}deg`}}
+                  style={{
+                    rotate: `${getInputValue(panelElement.id) * 180}deg`,
+                  }}
                   className={moduleStyles.knob}
                 >
                   <div className={moduleStyles.rotater}>
@@ -84,6 +97,10 @@ const Dials: React.FunctionComponent<DialsProps> = () => {
                 </div>
               </div>
             </KnobHeadless>
+          </div>
+        ) : panelElement.type === 'sticker' ? (
+          <div className={moduleStyles.elementContainer}>
+            <img alt="" src={stickerImages[panelElement.id]} />
           </div>
         ) : undefined
       )}

@@ -15,6 +15,7 @@
   width: 300px;
   box-sizing: border-box;
   color: $neutral_light;
+  gap: 10px;
 }
 
 .slider {
@@ -41,6 +42,23 @@
       background-color: yellow;
     }
   }
+}
+
+.elementContainer {
+  background-color: $neutral_dark;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.elementLabel {
+  font-size: 12px;
+  align-self: flex-end;
+}
+
+.outputValue {
+  font-size: 24px;
 }
 
 .section {
