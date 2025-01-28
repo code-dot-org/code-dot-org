@@ -30,16 +30,10 @@ defineComponents(
     {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
-      options: {
-        wrapComponent: false,
-      },
     },
     {
       component: Paragraph,
       definition: ParagraphContentfulComponentDefinition,
-      options: {
-        wrapComponent: false,
-      },
     },
   ],
   {
