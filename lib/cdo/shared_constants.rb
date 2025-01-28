@@ -820,4 +820,11 @@ module SharedConstants
     {value: "parent", label: "Parent", category: 'Other'},
     {value: "other", label: "Other", category: 'Other'}
   ].freeze
+
+  AI_DIFF_CONTEXT = {
+    LESSON: "lesson",
+    UNIT: "unit",
+    COURSE: "course",
+    GENERAL: "general"
+  }.freeze
 end
