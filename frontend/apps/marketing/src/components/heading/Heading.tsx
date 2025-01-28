@@ -44,6 +44,14 @@ const headingVisualAppearanceToSemanticTagMap: Record<
   'heading-xs': 'h6',
 };
 
+export const headingEnabledBuiltInContentfulStyles = [
+  'cfTextAlign',
+  'cfTextUnderline',
+];
+
+const headingBuiltInStylesClassNames =
+  headingEnabledBuiltInContentfulStyles.join(' ');
+
 const Heading: React.FunctionComponent<HeadingProps> = ({
   visualAppearance,
   children,
@@ -51,6 +59,7 @@ const Heading: React.FunctionComponent<HeadingProps> = ({
   return (
     <Typography
       semanticTag={headingVisualAppearanceToSemanticTagMap[visualAppearance]}
+      className={headingBuiltInStylesClassNames}
       visualAppearance={visualAppearance}
     >
       {children}
