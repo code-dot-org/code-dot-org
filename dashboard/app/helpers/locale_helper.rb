@@ -25,6 +25,10 @@ module LocaleHelper
     Cdo::I18n.js_locale(locale_code)
   end
 
+  def region_options
+    Cdo::GlobalEdition.region_options
+  end
+
   def locale_options
     request.ge_region ? Cdo::GlobalEdition.region_locale_options(request.ge_region) : Cdo::I18n.locale_options
   end

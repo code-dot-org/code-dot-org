@@ -1,6 +1,7 @@
 # This is the configuration for the main code.org/ root
 
 locales: [en-US]
+name: "Main Site"
 
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)

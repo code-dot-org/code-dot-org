@@ -2,6 +2,7 @@
 # (which is mirroring the main site at the moment)
 
 locales: [en-US]
+hidden: true
 
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)

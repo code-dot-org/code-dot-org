@@ -616,8 +616,15 @@ html, body {
       @include main-font-semi-bold;
     }
   }
-  #localeForm {
+  #localeForm, #regionForm {
     max-width: fit-content;
+    white-space: nowrap;
+
+    /* Icon (language / globe) */
+    i {
+      min-width: 1.25rem;
+      text-align: center;
+    }
 
     select {
       min-width: 8.43rem;
@@ -945,7 +952,7 @@ body.background-dark, body.music-black {
   z-index: 1000;
 }
 
-#locale {
+#locale, #ge_region {
   font-family: sans-serif;
   height: 24px;
   @media screen and (max-width: 1024px) {

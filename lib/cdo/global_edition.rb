@@ -110,6 +110,16 @@ module Cdo
       countries_regions[country]
     end
 
+    def self.region_options
+      # TODO: make 'root' the top option and otherwise sort by name
+      @region_options ||= REGIONS.map do |region|
+        # Hide any regions that have 'hidden' set
+        return nil if configuration_for(region).fetch(:hidden, false)
+        # Then return the name of the region along with the region key
+        [configuration_for(region).fetch(:name, region), region == 'root' ? '' : region]
+      end.compact
+    end
+
     def self.region_locale_options(region)
       locale_options = Cdo::I18n.locale_options
       return locale_options unless region_available?(region)

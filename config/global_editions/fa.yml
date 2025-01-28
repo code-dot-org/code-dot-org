@@ -10,6 +10,7 @@
 locales: [fa-IR, en-US]
 locale_lock: true
 countries: [IR]
+name: "فارسی"
 
 # The top bar on the site consisting of dropdown menus and navigation links
 header:
