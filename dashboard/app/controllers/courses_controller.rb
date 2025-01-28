@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
 
   def show
     if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.course_id == @unit_group.id} && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false))
-      section_id = params[:section_id] || current_user&.last_section_id
+      section_id = params[:section_id] || current_user&.sections_instructed.select {|s| s.course_id == @unit_group.id}.last
       if section_id
         if @unit_group.single_unit_course?
           redirect_to "/teacher_dashboard/sections/#{section_id}/unit/#{@unit_group.default_units.first.name}"

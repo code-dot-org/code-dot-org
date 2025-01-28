@@ -1,0 +1,149 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-23T23:12:23.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "level_data": {
+      "validationTimeout": 6,
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "fields": {
+                    "times": 10
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "play_sounds_together",
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "fields": {
+                                "sound": "curriculum/drum_long_3"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "W!@jP1!L.m+`|jzn~H|u",
+                                  "fields": {
+                                    "sound": "curriculum/bass_long_3"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "}J:Kw[Qbr?^/T[AkB!X$",
+              "x": 30,
+              "y": 230,
+              "deletable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              }
+            }
+          ]
+        }
+      },
+      "library": "curriculum2024",
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "sounds": {
+        "curriculum": [
+          "drum_short_1",
+          "drum_short_2",
+          "drum_short_3",
+          "drum_long_1",
+          "drum_long_2",
+          "drum_long_3",
+          "bass_short_1",
+          "bass_short_2",
+          "bass_short_3",
+          "bass_long_1",
+          "bass_long_2",
+          "bass_long_3",
+          "lead_short_1",
+          "lead_short_2",
+          "lead_short_3",
+          "lead_long_1",
+          "lead_long_2",
+          "lead_long_3",
+          "fx_short_1",
+          "fx_short_2",
+          "fx_short_3",
+          "fx_long_1",
+          "fx_long_2",
+          "fx_long_3"
+        ]
+      }
+    },
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-volume\"></i> Trigger a sound!\r\n1. Connect a [sound](#clickable=play-sound-block) block to the trigger event.\r\n2. Choose a sound effect.\r\n2. Press [Run](#clickable=run-button) to start the background music.\r\n3. Then press the [1](#clickable=trigger-button-1) trigger to play the sound effect.",
+    "validations": [
+      {
+        "key": "music-coding-intro-event-sound_1f86fd90-3a5e-4101-a29a-1a64d1e53962",
+        "message": "Nice work. You made your own trigger event and it sounds great! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_triggered_multiple_times",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-event-sound_81619822-48d9-4a38-82cd-c5fee9b71d3e",
+        "message": "You haven't triggered any sounds yet. Read the instructions and build your own trigger. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_different_sounds_together_multiple_times",
+            "value": 3
+          }
+        ]
+      }
+    ],
+    "name_suffix": "_january",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:23.839+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-sound\\\"\"],\"cloned_from\":\"music-coding-intro-event-sound\"}]"
+}]]></config>
+  <blocks/>
+</Music>

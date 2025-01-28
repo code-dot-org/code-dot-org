@@ -16,19 +16,7 @@ answer '1. Measure coffee grounds. 2. Add water to the coffee maker. 3. Brew. 4.
 
 
 markdown <<MARKDOWN
-## What is a Function?
-#### A function is like a **reusable block of instructions**. You define the instructions once, and you can "call" them whenever you need them.
 
-
-## Defining a Function
-#### Defining a function means you're **writing the set of instructions** (steps) that the function will perform. Think of it like creating a recipe that tells you what to do.
-
-## Calling a Function
-#### Calling a function means you’re telling the computer, "Hey, do the steps I defined in this function!" It’s like opening your recipe book and saying, "Time to make this dish!"
-
-## Why Use Functions?
-#### Reusability: You can write the code once and use it multiple times.
-#### Organization: It makes your code cleaner and easier to understand.
 
 
 # Match the definition to the correct function:

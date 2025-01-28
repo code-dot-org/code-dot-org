@@ -1,13 +1,15 @@
 require 'test_helper'
 
 class AichatRequestsControllerTest < ActionController::TestCase
+  self.use_transactional_test_case = true
+
   setup_all do
     @authorized_teacher1 = create :authorized_teacher
     unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
     section = create :section, user: @authorized_teacher1, unit_group: unit_group
     @authorized_student1 = create(:follower, section: section).student_user
 
-    @level = create(:level, name: 'level1')
+    @level = create(:level)
     @script = create(:script)
 
     @default_model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys

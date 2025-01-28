@@ -373,6 +373,7 @@ en:
         personal_login_created_email: 'You created a personal login successfully. You can now sign into your account with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now sign into your account with your username (%{username}) and password'
   nav:
+    skip_to_main_content: "Skip to main content"
     header:
       finished_hoc: "I finished!"
       sign_in_to_save: 'Sign in to save progress'
@@ -1095,6 +1096,7 @@ en:
     title: 'Hour of Code downloads'
     capsule_title: 'Do you have Internet?'
     capsule_desc: 'Use the online, web-based [%{app_name}](%{url}).'
+    deprecation: 'The following material is no longer supported by Code.org. You may encounter technical issues if you decide to use the material.'
     instructions_headline: 'No Internet?'
     instructions: 'Instructions for teachers: if you have poor Internet service, these Hour of Code tutorials are available to download and install for offline use. Choose your language and platform, download and install it on all the computers in your classroom. You may want to use a USB drive to download once and install on all computers. Note: students will not be able to log into Code Studio, save progress, or print certificates. Teachers may print certificates ahead of time [here](%{url}).'
     minecraft_name: 'Minecraft Hour Of Code'
@@ -1456,6 +1458,7 @@ en:
       backend_error: "Oops! We encountered an error while trying to link your account. Please try launching Code.org again from your LMS."
       go_back: "Go back"
       invalid_credentials: "Invalid credentials"
+      launch_from_lms: "Please launch from your LMS to link your account."
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
       sign_in_and_connect: "Sign in and connect"

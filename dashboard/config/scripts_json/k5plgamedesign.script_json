@@ -10,12 +10,11 @@
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "tts": true,
-      "version_year": "2024"
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-13 23:33:52 UTC",
+    "serialized_at": "2025-01-22 19:00:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

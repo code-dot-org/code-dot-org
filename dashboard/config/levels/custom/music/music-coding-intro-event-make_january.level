@@ -1,0 +1,52 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-23T23:12:25.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "curriculum2024",
+      "sounds": {
+        "curriculum": [
+          "drum_short_1",
+          "drum_short_2",
+          "drum_short_3",
+          "drum_long_1",
+          "drum_long_2",
+          "drum_long_3",
+          "bass_short_1",
+          "bass_short_2",
+          "bass_short_3",
+          "bass_long_1",
+          "bass_long_2",
+          "bass_long_3",
+          "lead_short_1",
+          "lead_short_2",
+          "lead_short_3",
+          "lead_long_1",
+          "lead_long_2",
+          "lead_long_3",
+          "fx_short_1",
+          "fx_short_2",
+          "fx_short_3",
+          "fx_long_1",
+          "fx_long_2",
+          "fx_long_3"
+        ]
+      }
+    },
+    "name_suffix": "_january",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:25.117+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-make\\\"\"],\"cloned_from\":\"music-coding-intro-event-make\"}]"
+}]]></config>
+  <blocks/>
+</Music>

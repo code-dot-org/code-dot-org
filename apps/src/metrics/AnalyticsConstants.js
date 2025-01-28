@@ -87,8 +87,16 @@ const EVENTS = {
   // Course/Unit info
   COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
     'Course Overview Page Visited By Teacher',
+  COURSE_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT:
+    'Course Overview Page Visited By Student',
+  COURSE_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT:
+    'Course Overview Page Visited By Signed Out User',
   UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT:
     'Unit Overview Page Visited By Teacher',
+  UNIT_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT:
+    'Unit Overview Page Visited By Student',
+  UNIT_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT:
+    'Unit Overview Page Visited By Signed Out User',
   TRY_NOW_BUTTON_CLICK_EVENT: 'Try Now Button Clicked',
 
   // Lesson info
@@ -413,6 +421,7 @@ const EVENTS = {
   LTI_UNLINK_CLICK: 'lti_unlink_click',
   LTI_UNLINK_CANCEL: 'lti_unlink_cancel',
   LTI_DYNAMIC_REGISTRATION_COMPLETED: 'lti_dynamic_registration_completed',
+  LTI_NEW_ACCOUNT_CLICK: 'lti_new_account_click',
 
   // Teacher Homepage
   TEACHER_HOMEPAGE_VISITED: 'Teacher Homepage Visited',

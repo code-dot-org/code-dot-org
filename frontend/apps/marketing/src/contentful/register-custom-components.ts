@@ -3,7 +3,9 @@
  *
  * Note: This file must be imported both server-side and client-side to ensure Contentful is able to map on both rendering modes.
  */
-import Divider, {DividerContentfulComponentDefinition} from '@/components/divider';
+import Divider, {
+  DividerContentfulComponentDefinition,
+} from '@/components/divider';
 import {
   defineComponents,
   CONTENTFUL_COMPONENTS,

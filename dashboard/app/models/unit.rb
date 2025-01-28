@@ -585,6 +585,17 @@ class Unit < ApplicationRecord
     end
   end
 
+  # Returns all units within a family ordered by version year
+  # @param family_name [String] Family name for the desired units.
+  # @return [Array<Unit>] Scripts within the specified family, ordered by
+  #   version year
+  def self.family_unit_versions(family_name)
+    # We usually expect version_year to be a string but it can be nil. To
+    # prevent sort_by from blowing up in that case, normalize all values to
+    # strings.
+    Unit.get_family_from_cache(family_name).sort_by {|u| u.version_year.to_s}
+  end
+
   def self.remove_from_cache(unit_name)
     script_cache&.delete(unit_name)
   end
@@ -592,7 +603,7 @@ class Unit < ApplicationRecord
   def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
-    family_units = Unit.get_family_from_cache(family_name).sort_by(&:version_year).reverse
+    family_units = family_unit_versions(family_name).reverse
 
     return nil unless family_units&.last&.can_be_instructor?(user) || family_units&.last&.can_be_participant?(user)
 
@@ -734,8 +745,7 @@ class Unit < ApplicationRecord
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil if family_name.blank?
 
-    unit_versions = Unit.get_family_from_cache(family_name).
-      sort_by(&:version_year).reverse
+    unit_versions = family_unit_versions(family_name).reverse
 
     # Only select stable, supported units (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
@@ -777,13 +787,12 @@ class Unit < ApplicationRecord
   def self.latest_version_with_progress(family_name, user)
     return nil unless family_name && user
 
-    family_unit_versions = Unit.get_family_from_cache(family_name).
-      sort_by(&:version_year).freeze
-    family_unit_names = family_unit_versions.map(&:name)
+    family_units = family_unit_versions(family_name).freeze
+    family_unit_names = family_units.map(&:name)
     progress = UserScript.lookup_hash(user, family_unit_names)
 
     latest_version_with_progress = nil
-    family_unit_versions.each do |version|
+    family_units.each do |version|
       latest_version_with_progress = version if progress[version.name]
     end
     latest_version_with_progress
