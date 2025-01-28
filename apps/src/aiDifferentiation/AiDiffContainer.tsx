@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
+import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
 import AiDiffChat from './AiDiffChat';
+import AiDiffWelcome from './AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
 
@@ -32,6 +34,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_Y, 0)) || 0
   );
 
+  const hasCompletedAiDifferentiationWelcome = useAppSelector(
+    state => state.currentUser.hasCompletedAiDifferentiationWelcome
+  );
+
   useEffect(() => {
     trySetSessionStorage(AI_DIFF_POSITION_X, String(positionX));
   }, [positionX]);
@@ -58,12 +64,16 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         className={style.aiDiffContainer}
         style={open ? undefined : {display: 'none'}}
       >
-        <AiDiffChat
-          closeTutor={closeTutor}
-          lessonId={lessonId}
-          lessonName={lessonName}
-          unitDisplayName={unitDisplayName}
-        />
+        {hasCompletedAiDifferentiationWelcome ? (
+          <AiDiffWelcome />
+        ) : (
+          <AiDiffChat
+            closeTutor={closeTutor}
+            lessonId={lessonId}
+            lessonName={lessonName}
+            unitDisplayName={unitDisplayName}
+          />
+        )}
       </div>
     </Draggable>
   );
