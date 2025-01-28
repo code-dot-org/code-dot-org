@@ -22,17 +22,19 @@ import style from './ai-differentiation.module.scss';
 
 interface AiDiffContainerProps {
   closeTutor?: () => void;
+  context: string;
   open: boolean;
-  lessonId: number;
-  lessonName: string;
+  scriptId: number;
+  scriptName: string;
   unitDisplayName: string;
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
+  context,
   open,
-  lessonId,
-  lessonName,
+  scriptId,
+  scriptName,
   unitDisplayName,
 }) => {
   // TODO: Update to support i18n
@@ -43,8 +45,9 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const aiDiffChatMessageEndpoint = '/ai_diff/chat_completion';
 
   const reportingData = {
-    lessonId: lessonId,
-    lessonName: lessonName,
+    chatContext: context,
+    scriptId: scriptId,
+    scriptName: scriptName,
     unitName: unitDisplayName,
   };
 
@@ -151,8 +154,9 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     }
 
     const body = JSON.stringify({
+      context: context,
       inputText: prompt,
-      lessonId: lessonId,
+      contextId: scriptId,
       unitDisplayName: unitDisplayName,
       sessionId: sessionId,
       isPreset: isPreset,
