@@ -10,6 +10,7 @@ class World(object):
   All subsequent references will reuse the same grid, so multiple painters can operate
   on the same grid.
   The grid can be removed by calling remove_grid.
+  The world also tracks the context type of the neighborhood, which is RUN by default.
   """
   _instance = None
 
