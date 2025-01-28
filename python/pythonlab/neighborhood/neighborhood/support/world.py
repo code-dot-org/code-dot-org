@@ -1,4 +1,6 @@
 import neighborhood.support.grid_factory as grid_factory
+from .neighborhood_context_type import NeighborhoodContextType
+
 
 class World(object):
   """
@@ -15,6 +17,7 @@ class World(object):
     if cls._instance is None:
       cls._instance = super(World, cls).__new__(cls)
       cls._instance.grid = None
+      cls._instance.context_type = NeighborhoodContextType.RUN
     return cls._instance
   
   def set_grid_from_file(self, filename: str | None = None):
@@ -25,3 +28,6 @@ class World(object):
 
   def remove_grid(self):
     self.grid = None
+
+  def set_context_type(self, context_type: NeighborhoodContextType):
+    self.context_type = context_type
