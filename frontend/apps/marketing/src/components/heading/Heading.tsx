@@ -6,19 +6,14 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React, {ReactNode} from 'react';
 
-type HeadingVisualAppearance = Exclude<
+type HeadingVisualAppearance = Extract<
   VisualAppearance,
-  | 'body-one'
-  | 'body-two'
-  | 'body-three'
-  | 'body-four'
-  | 'overline-one'
-  | 'overline-two'
-  | 'overline-three'
-  | 'strong'
-  | 'extra-strong'
-  | 'em'
-  | 'figcaption'
+  | 'heading-xxl'
+  | 'heading-xl'
+  | 'heading-lg'
+  | 'heading-md'
+  | 'heading-sm'
+  | 'heading-xs'
 >;
 type HeadingSemanticTag = Exclude<
   SemanticTag,

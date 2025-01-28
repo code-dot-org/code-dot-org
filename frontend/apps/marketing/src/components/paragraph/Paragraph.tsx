@@ -6,21 +6,9 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React, {ReactNode} from 'react';
 
-type ParagraphVisualAppearance = Exclude<
+type ParagraphVisualAppearance = Extract<
   VisualAppearance,
-  | 'heading-xxl'
-  | 'heading-xl'
-  | 'heading-lg'
-  | 'heading-md'
-  | 'heading-sm'
-  | 'heading-xs'
-  | 'overline-one'
-  | 'overline-two'
-  | 'overline-three'
-  | 'strong'
-  | 'extra-strong'
-  | 'em'
-  | 'figcaption'
+  'body-one' | 'body-two' | 'body-three' | 'body-four'
 >;
 
 type ParagraphProps = {
@@ -40,21 +28,13 @@ const Paragraph: React.FunctionComponent<ParagraphProps> = ({
   children,
   className,
 }) => {
-  return isStrong ? (
+  return (
     <Typography
       className={className}
       semanticTag="p"
       visualAppearance={visualAppearance}
     >
-      <StrongText>{children}</StrongText>
-    </Typography>
-  ) : (
-    <Typography
-      className={className}
-      semanticTag="p"
-      visualAppearance={visualAppearance}
-    >
-      {children}
+      {isStrong ? <StrongText>{children}</StrongText> : children}
     </Typography>
   );
 };
