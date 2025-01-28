@@ -35,6 +35,7 @@ type ParagraphProps = {
 export const paragraphEnabledBuiltInContentfulStyles = [
   'cfTextAlign',
   'cfTextUnderline',
+  'cfWidth',
 ];
 
 const paragraphBuiltInStylesClassNames =

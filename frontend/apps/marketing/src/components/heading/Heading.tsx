@@ -47,6 +47,7 @@ const headingVisualAppearanceToSemanticTagMap: Record<
 export const headingEnabledBuiltInContentfulStyles = [
   'cfTextAlign',
   'cfTextUnderline',
+  'cfWidth',
 ];
 
 const headingBuiltInStylesClassNames =
