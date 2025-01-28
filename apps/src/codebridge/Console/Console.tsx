@@ -54,26 +54,32 @@ const Console: React.FunctionComponent = () => {
     clearOutput(false);
   });
 
-  const onData = (data: string) => {
-    const terminal = CodebridgeRegistry.getInstance()
-      .getConsoleManager()
-      ?.getTerminal();
-    if (!terminal) {
+  const onData = useCallback((data: string) => {
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    const terminal = consoleManager?.getTerminal();
+    if (!terminal || !consoleManager) {
       return;
     }
     const charCode = data.charCodeAt(0);
     if (charCode === 13) {
       // new line
       terminal.writeln('');
+      // send input
+      console.log(`sending input: ${consoleManager.getInputBuffer()}`);
+      // reset buffer
+      consoleManager.clearInputBuffer();
     } else if (charCode < 32) {
       // control characters, do nothing
     } else if (charCode === 127) {
       // backspace
       terminal.write('\b \b');
+      consoleManager.backspaceInputBuffer();
     } else {
       terminal.write(data);
+      console.log(`should append to buffer: ${data}`);
+      consoleManager.appendToInputBuffer(data);
     }
-  };
+  }, []);
 
   const ignoreEscapeAndTab = (e: KeyboardEvent) => {
     if (e.key === 'Tab' || e.key === 'Escape') {
@@ -125,7 +131,7 @@ const Console: React.FunctionComponent = () => {
     terminal.attachCustomKeyEventHandler(ignoreEscapeAndTab);
 
     setDidInit(true);
-  }, [didInit, terminalRef]);
+  }, [didInit, terminalRef, onData]);
 
   return (
     <PanelContainer

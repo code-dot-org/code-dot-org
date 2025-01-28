@@ -6,6 +6,7 @@ export default class ConsoleManager {
   private terminal: Terminal;
   private terminalFitAddon: FitAddon;
   private terminalLines: string[];
+  private inputBuffer: string;
 
   private IMAGE_WIDTH = 400;
   private IMAGE_HEIGHT = 400;
@@ -14,6 +15,7 @@ export default class ConsoleManager {
     this.terminal = terminal;
     this.terminalFitAddon = terminalFitAddon;
     this.terminalLines = [];
+    this.inputBuffer = '';
   }
 
   public getTerminal() {
@@ -65,6 +67,22 @@ export default class ConsoleManager {
     // See documentation here: https://iterm2.com/documentation-images.html
     const imageString = `\x1b]1337;File=inline=1;size=${dataSize};width=${this.IMAGE_WIDTH}px;height=${this.IMAGE_HEIGHT}px:${base64Image}\x1b\\`;
     this.appendTerminalLine(imageString);
+  }
+
+  public appendToInputBuffer(data: string) {
+    this.inputBuffer += data;
+  }
+
+  public backspaceInputBuffer() {
+    this.inputBuffer = this.inputBuffer.slice(0, -1);
+  }
+
+  public getInputBuffer() {
+    return this.inputBuffer;
+  }
+
+  public clearInputBuffer() {
+    this.inputBuffer = '';
   }
 
   private appendTerminalLine(line: string) {
