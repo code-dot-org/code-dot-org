@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-01-24T05:09:17.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Optimization Helper\r\n\r\nThis chatbot is meant to help you understand and pick from the options presented on your [Optimization Activity Guide](https://docs.google.com/document/d/1wNPHGsg1n4aIP995AduJqGVIQh7x16d2aPPynlppo84/edit?usp=sharing)\r\n\r\n::: details [**Prompts to Try on This Level**]\r\n- What does [specific action] mean, and how could it impact the system in this situation?\r\n- Would [specific action] help in this scenario, or could it create other problems?\r\n- What are the potential trade-offs or downsides of [specific action]?\r\n- Why might [specific action] work better than other actions in this scenario?\r\n- How does [specific action] relate to optimizing performance for the task described?\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "editable"
+      },
+      "levelSystemPrompt": "You are a knowledgeable and approachable assistant designed to help students evaluate potential actions to optimize a computer system’s performance. Students are working on an activity where they are presented with a specific system performance scenario (e.g., gaming lag, slow software, battery drain) and a list of possible actions. Your role is to:\n\t1.\tClarify Actions: Provide clear and concise explanations of the actions on their list. Break down technical concepts into simple, beginner-friendly terms without oversimplifying.\n\t•\tExample: ‘Increase virtual memory’ means allocating more space on the hard drive for temporary memory when physical RAM is full.\n\t2.\tEncourage Critical Thinking: Help students reason through their choices by providing context and asking guiding questions. Avoid giving direct answers unless explicitly asked.\n\t•\tExample: ‘How might reducing screen brightness affect battery usage?’\n\t•\tExample: ‘Why do you think disabling auto-save might help in a memory-intensive situation?’\n\t3.\tHighlight Trade-Offs: When appropriate, explain how an action might have benefits and drawbacks depending on the scenario.\n\t•\tExample: ‘Closing background apps frees up system resources, but be careful not to close essential applications.’\n\t4.\tProvide Nuanced Guidance: Help students narrow down their options by discussing the specific scenario they’re working on. Offer insight into which actions might help, have no effect, or make the problem worse without explicitly identifying the correct answers.\n\t•\tExample: ‘Clearing the cache might improve performance in some cases, but it won’t resolve issues related to insufficient RAM.’\n\t5.\tRemain Scenario-Specific: Tailor your responses to the scenario they describe, focusing on the context and what would realistically optimize performance in that situation.\n\t6.\tStay Encouraging and Neutral: Support students’ learning by reinforcing the importance of exploration and discovery. If they make a mistake, frame it as a natural part of the learning process.\n\nRemember, your goal is not to provide direct solutions but to guide students in understanding and evaluating actions so they can make informed decisions.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-24 05:14:47 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-24 05:17:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-24 05:19:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<b>Teacher Tip:</b> Looking for ways to integrate coding into other areas? Use Music Lab to give students opprotunities to code music for other projects in the classroom. \r\n</p>\r\n</div>\r\n\r\n####<i class=\"fa-solid fa-sparkles\"></i> Drop it your way!\r\n- Layer some sounds together and experiment with timing to compose your own song! ",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:** \r\n##### This level allows students to create using what they have learned, and is the final step in the Use-Modify-Create pedagogical practice. \r\n\r\n##### Looking for ways to integrate coding into other areas? Use Music Lab to give students opportunities to code music for other projects in the classroom.\r\n\r\n___\r\n\r\n\r\n\r\n####<i class=\"fa-solid fa-sparkles\"></i> Drop it your way!\r\n- Layer some sounds together and experiment with timing to compose your own song! ",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
@@ -33,7 +33,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:01.965+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-make\\\"\"],\"cloned_from\":\"music-coding-intro-make\"},{\"changed_at\":\"2025-01-15 19:29:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:01.965+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-make\\\"\"],\"cloned_from\":\"music-coding-intro-make\"},{\"changed_at\":\"2025-01-15 19:29:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-23 23:29:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -6,6 +6,7 @@ import {resolve} from 'node:path';
 
 const entryPoints = glob.sync('./src/**/index.ts', {
   posix: true,
+  ignore: './src/common/index.ts',
 });
 
 /**

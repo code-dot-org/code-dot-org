@@ -75,6 +75,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   useUpdatePlayer(player);
   useUpdateAnalytics(analyticsReporter);
   const dispatch = useAppDispatch();
+  const isPlaying = useAppSelector(state => state.music.isPlaying);
   const showInstructions = useAppSelector(
     state => state.music.showInstructions
   );
@@ -92,6 +93,13 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const validationStateCallout = useAppSelector(
     state => state.lab.validationState.callout
   );
+  const currentPlayheadPosition = useAppSelector(
+    state => state.music.currentPlayheadPosition
+  );
+  const startingPlayheadPosition = useAppSelector(
+    state => state.music.startingPlayheadPosition
+  );
+  const lastMeasure = useAppSelector(state => state.music.lastMeasure);
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -157,6 +165,37 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     getCurrentPlayheadPosition,
     updateHighlightedBlocks,
     progressManager,
+  ]);
+
+  // Stop the song if the playhead is past the desired end.
+  useEffect(() => {
+    if (!isPlaying) {
+      return;
+    }
+
+    if (lastMeasure === undefined) {
+      return;
+    }
+
+    // We are done playing once the playhead reaches the end of the last scheduled sound.
+    // But if the starting playhead position has been set beyond that point, we'll use that
+    // instead, so that at least a bit of playback can be shown.
+    const stopMeasure = Math.max(startingPlayheadPosition, lastMeasure);
+
+    // Show a little extra playback.  If there are any triggers, then play for longer in case
+    // the user wants to trigger another sound.
+    const extraMeasures = blocklyWorkspace.hasAnyTriggers() ? 4 : 1;
+
+    if (currentPlayheadPosition >= stopMeasure + extraMeasures) {
+      setPlaying(false);
+    }
+  }, [
+    blocklyWorkspace,
+    currentPlayheadPosition,
+    isPlaying,
+    lastMeasure,
+    setPlaying,
+    startingPlayheadPosition,
   ]);
 
   const resetValidation = useCallback(

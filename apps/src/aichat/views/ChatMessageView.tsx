@@ -61,7 +61,12 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   const NoProfanityFooter = () => (
     <TeacherFeedbackFooter
       isProfanityViolation={false}
-      chatMessage={chatMessage}
+      {...chatMessage}
+      // Note: ID should always be defined when viewing chat history,
+      // but is currently marked optional because the ChatEvent type
+      // is used for both chat history and live chat.
+      // TODO: Clean up types to separate server and client IDs.
+      id={chatMessage.id!}
     />
   );
 
@@ -70,7 +75,8 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       {showProfaneUserMessage && (
         <TeacherFeedbackFooter
           isProfanityViolation={true}
-          chatMessage={chatMessage}
+          {...chatMessage}
+          id={chatMessage.id!}
         />
       )}
       <div className={moduleStyles.showHideMessageButtonContainer}>
