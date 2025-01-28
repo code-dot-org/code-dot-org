@@ -1,17 +1,18 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {Button} from '../componentLibrary/button';
-import FontAwesomeV6Icon from '../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {Button} from '../../componentLibrary/button';
+import FontAwesomeV6Icon from '../../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {
   BodyThreeText,
   BodyTwoText,
   Heading3,
   Heading6,
   StrongText,
-} from '../componentLibrary/typography';
+} from '../../componentLibrary/typography';
 
-import style from './ai-differentiation.module.scss';
+import style from './ai-diff-welcome.module.scss';
+import aiDiffStyle from '../ai-differentiation.module.scss';
 
 type WelcomeState = 'select_option' | 'practice' | 'end_page' | 'finished';
 
@@ -129,7 +130,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     }
   }, [currentWelcomeState, selectAnOptionPage]);
 
-  return <div className={style.fabBackground}>{currentWelcomePage}</div>;
+  return <div className={aiDiffStyle.fabBackground}>{currentWelcomePage}</div>;
 };
 
 export default AiDiffWelcome;
