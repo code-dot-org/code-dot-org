@@ -14,7 +14,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "from neighborhood import Painter\n\np = Painter()\nprint(p.get_x())\np.turn_left()\np.paint('Blue')\np.scrape_paint()\np.move()\np.set_paint(10)\nprint(p.get_my_paint())",
+          "contents": "from neighborhood import Painter\n\np = Painter()\np.move()\np.take_paint()\np.take_paint()\nprint('my paint: ' + str(p.get_my_paint()))\np.move()\np.paint('Red')\np.move()\np.paint('Blue')\np.turn_left()\np.turn_left()\np.turn_left()\np.scrape_paint()\np.move()\nprint(str(p.get_x()) + ' ' + str(p.get_y()))\nprint(p.can_move('east'))\nprint(p.can_move('west'))\np.scrape_paint()",
           "folderId": "0",
           "active": false,
           "open": true,
@@ -59,8 +59,8 @@
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 5,
+          "assetId": 303
         },
         {
           "tileType": 1,
@@ -133,85 +133,6 @@
           "tileType": 1,
           "value": 0,
           "assetId": 0
-        }
-      ],
-      [
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        }
-      ],
-      [
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 2,
-          "value": 0,
-          "assetId": 287
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
         },
         {
           "tileType": 1,
@@ -289,8 +210,92 @@
         },
         {
           "tileType": 1,
-          "value": 4,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
@@ -391,6 +396,7 @@
     "enable_micro_bit": "false",
     "mini_app": "neighborhood"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-07T14:14:11.864+00:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2025-01-07 14:21:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-07 23:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-07 23:43:45 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-13 13:18:05 -0800\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-13 13:22:57 -0800\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-13 13:25:53 -0800\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-13 13:26:33 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-13 15:06:54 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 13:46:39 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 14:06:45 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 13:58:25 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-07T14:14:11.864+00:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2025-01-07 14:21:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-07 23:43:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-07 23:43:45 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-13 13:18:05 -0800\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-13 13:22:57 -0800\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-13 13:25:53 -0800\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-13 13:26:33 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-13 15:06:54 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 13:46:39 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 14:06:45 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 13:58:25 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 15:26:31 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 15:54:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 15:55:02 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

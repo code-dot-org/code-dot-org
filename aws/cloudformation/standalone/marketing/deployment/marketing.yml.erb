@@ -1,0 +1,515 @@
+# Marketing App Resources
+# This template is manually deployed to create/update the Marketing App's AWS resources.
+
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Marketing App AWS resources
+
+Parameters:
+  Environment:
+    Type: String
+    Default: "test"
+    Description: "Environment being deployed to (production or test)"
+  ContainerImageHashDigest:
+    Type: String
+    Description: "The sha256sum of the marketing container image."
+
+Resources:
+  # Route 53 root hosted zone for marketing.dev-code.org
+  RootHostedZone:
+    Type: AWS::Route53::HostedZone
+    Properties:
+      Name: marketing.dev-code.org.
+
+  # TLS Cert for the ECS ALB
+  TLSCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: dev.marketing.dev-code.org
+      DomainValidationOptions:
+        - DomainName: dev.marketing.dev-code.org
+          HostedZoneId:
+            Ref: RootHostedZone
+      ValidationMethod: DNS
+
+  ###########################
+  # Start AWS VPC Resources #
+  ###########################
+  
+  # VPC for ECS and ALB
+  Vpc:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.0.0.0/16
+      EnableDnsHostnames: true
+      EnableDnsSupport: true
+      InstanceTenancy: default
+
+  VpcPublicSubnet0:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: us-west-2a
+      CidrBlock: 10.0.0.0/18
+      MapPublicIpOnLaunch: true
+      VpcId:
+        Ref: Vpc
+
+  VpcPublicSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: us-west-2b
+      CidrBlock: 10.0.64.0/18
+      MapPublicIpOnLaunch: true
+      VpcId:
+        Ref: Vpc
+
+  VpcPrivateSubnet0:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: us-west-2a
+      CidrBlock: 10.0.128.0/18
+      MapPublicIpOnLaunch: false
+      VpcId:
+        Ref: Vpc
+
+  VpcPrivateSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      AvailabilityZone: us-west-2b
+      CidrBlock: 10.0.192.0/18
+      MapPublicIpOnLaunch: false
+      VpcId:
+        Ref: Vpc
+
+<% Config::AVAILABILITY_ZONES.each_with_index do |region, index| %>
+  # Route Table for Public Subnet <%= region %>
+  VpcPublicSubnet<%= index %>RouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:
+        Ref: Vpc
+
+  VpcPublicSubnet<%= index %>RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: VpcPublicSubnet<%= index %>RouteTable
+      SubnetId:
+        Ref: VpcPublicSubnet<%= index %>
+
+  VpcPublicSubnet<%= index %>DefaultRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId:
+        Ref: VpcIGW
+      RouteTableId:
+        Ref: VpcPublicSubnet<%= index %>RouteTable
+    DependsOn:
+      - VpcVPCGW
+
+  # Elastic IP
+  VpcPublicSubnet<%= index %>EIP:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain: vpc
+
+  VpcPublicSubnet<%= index %>NATGateway:
+    Type: AWS::EC2::NatGateway
+    Properties:
+      AllocationId:
+        Fn::GetAtt:
+          - VpcPublicSubnet<%= index %>EIP
+          - AllocationId
+      SubnetId:
+        Ref: VpcPublicSubnet<%= index %>
+    DependsOn:
+      - VpcPublicSubnet<%= index %>DefaultRoute
+      - VpcPublicSubnet<%= index %>RouteTableAssociation
+
+  VpcPrivateSubnet<%= index %>RouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId:
+        Ref: Vpc
+
+  VpcPrivateSubnet<%= index %>RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId:
+        Ref: VpcPrivateSubnet<%= index %>RouteTable
+      SubnetId:
+        Ref: VpcPrivateSubnet<%= index %>
+
+  VpcPrivateSubnet<%= index %>DefaultRoute:
+    Type: AWS::EC2::Route
+    Properties:
+      DestinationCidrBlock: 0.0.0.0/0
+      NatGatewayId:
+        Ref: VpcPublicSubnet<%= index %>NATGateway
+      RouteTableId:
+        Ref: VpcPrivateSubnet<%= index %>RouteTable
+<% end %>
+
+  VpcIGW:
+    Type: AWS::EC2::InternetGateway
+
+  VpcVPCGW:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId:
+        Ref: VpcIGW
+      VpcId:
+        Ref: Vpc
+
+  ###########################
+  # End AWS VPC Resources   #
+  ###########################
+
+  ###########################
+  # Start AWS ECS Resources #
+  ###########################
+  EcsCluster:
+    Type: AWS::ECS::Cluster
+
+  FargateServiceLB:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      LoadBalancerAttributes:
+        # Delete the load balancer if the CloudFormation stack is deleted
+        - Key: deletion_protection.enabled
+          Value: "false"
+      Scheme: internet-facing
+      SecurityGroups:
+        - Fn::GetAtt:
+            - FargateServiceLBSecurityGroup
+            - GroupId
+      Subnets:
+        - Ref: VpcPublicSubnet0
+        - Ref: VpcPublicSubnet1
+      Type: application
+    DependsOn:
+      - VpcPublicSubnet0DefaultRoute
+      - VpcPublicSubnet0RouteTableAssociation
+      - VpcPublicSubnet1DefaultRoute
+      - VpcPublicSubnet1RouteTableAssociation
+
+  FargateServiceLBSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security Group for ELB MarketingStackStagingFargateService
+      SecurityGroupIngress:
+        - CidrIp: 0.0.0.0/0
+          Description: Allow from anyone on port 443
+          FromPort: 443
+          IpProtocol: tcp
+          ToPort: 443
+      VpcId:
+        Ref: Vpc
+
+  FargateServiceLBSecurityGrouptoMarketingStackStagingFargateServiceSecurityGroup:
+    Type: AWS::EC2::SecurityGroupEgress
+    Properties:
+      Description: Load balancer to target
+      DestinationSecurityGroupId:
+        Fn::GetAtt:
+          - FargateServiceSecurityGroup
+          - GroupId
+      FromPort: 3000
+      GroupId:
+        Fn::GetAtt:
+          - FargateServiceLBSecurityGroup
+          - GroupId
+      IpProtocol: tcp
+      ToPort: 3000
+
+  FargateServiceLBPublicListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      Certificates:
+        - CertificateArn:
+            Ref: TLSCertificate
+      DefaultActions:
+        - TargetGroupArn:
+            Ref: FargateServiceLBPublicListenerECSGroup
+          Type: forward
+      LoadBalancerArn:
+        Ref: FargateServiceLB
+      Port: 443
+      Protocol: HTTPS
+
+  FargateServiceLBPublicListenerECSGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Port: 80
+      Protocol: HTTP
+      TargetGroupAttributes:
+        - Key: stickiness.enabled
+          Value: "false"
+      TargetType: ip
+      VpcId:
+        Ref: Vpc
+
+  FargateServiceDNS:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      AliasTarget:
+        DNSName:
+          Fn::Join:
+            - ""
+            - - dualstack.
+              - Fn::GetAtt:
+                  - FargateServiceLB
+                  - DNSName
+        HostedZoneId:
+          Fn::GetAtt:
+            - FargateServiceLB
+            - CanonicalHostedZoneID
+      HostedZoneId:
+        Ref: RootHostedZone
+      Name: dev.marketing.dev-code.org.
+      Type: A
+
+  FargateServiceTaskDefTaskRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+        Version: "2012-10-17"
+
+  FargateServiceTaskDef:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      ContainerDefinitions:
+        - Environment:
+            - Name: CONTENTFUL_SPACE_ID
+              Value: 90t6bu6vlf76
+            - Name: CONTENTFUL_ENV_ID
+              Value: master
+            - Name: CONTENTFUL_API_HOST
+              Value: cdn.contentful.com
+            - Name: CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID
+              Value: experience
+          Essential: true
+          Image:
+            Fn::Join:
+              - ""
+              - - ghcr.io/code-dot-org/marketing@
+                - Ref: ContainerImageHashDigest
+          Name: web
+          PortMappings:
+            - ContainerPort: 3000
+              Protocol: tcp
+          Secrets:
+            - Name: CONTENTFUL_TOKEN
+              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_TOKEN::'
+      Cpu: "256"
+      ExecutionRoleArn:
+        Fn::GetAtt:
+          - FargateServiceTaskDefExecutionRole
+          - Arn
+      Family: MarketingStackStagingFargateServiceTaskDef
+      Memory: "512"
+      NetworkMode: awsvpc
+      RequiresCompatibilities:
+        - FARGATE
+      TaskRoleArn:
+        Fn::GetAtt:
+          - FargateServiceTaskDefTaskRole
+          - Arn
+
+  FargateServiceTaskDefExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: sts:AssumeRole
+            Effect: Allow
+            Principal:
+              Service: ecs-tasks.amazonaws.com
+        Version: "2012-10-17"
+
+  FargateServiceTaskDefExecutionRoleDefaultPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Action:
+              - secretsmanager:DescribeSecret
+              - secretsmanager:GetSecretValue
+            Effect: Allow
+            Resource: arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371
+        Version: "2012-10-17"
+      PolicyName: FargateServiceTaskDefExecutionRoleDefaultPolicy
+      Roles:
+        - Ref: FargateServiceTaskDefExecutionRole
+
+  FargateService:
+    Type: AWS::ECS::Service
+    Properties:
+      Cluster:
+        Ref: EcsCluster
+      DeploymentConfiguration:
+        MaximumPercent: 200
+        MinimumHealthyPercent: 50
+      EnableECSManagedTags: false
+      HealthCheckGracePeriodSeconds: 60
+      LaunchType: FARGATE
+      LoadBalancers:
+        - ContainerName: web
+          ContainerPort: 3000
+          TargetGroupArn:
+            Ref: FargateServiceLBPublicListenerECSGroup
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: DISABLED
+          SecurityGroups:
+            - Fn::GetAtt:
+                - FargateServiceSecurityGroup
+                - GroupId
+          Subnets:
+            - Ref: VpcPrivateSubnet0
+            - Ref: VpcPrivateSubnet1
+      TaskDefinition:
+        Ref: FargateServiceTaskDef
+    DependsOn:
+      - FargateServiceLBPublicListenerECSGroup
+      - FargateServiceLBPublicListener
+      - FargateServiceTaskDefTaskRole
+
+  FargateServiceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: MarketingStack-Staging/FargateService/Service/SecurityGroup
+      SecurityGroupEgress:
+        - CidrIp: 0.0.0.0/0
+          Description: Allow all outbound traffic by default
+          IpProtocol: "-1"
+      VpcId:
+        Ref: Vpc
+    DependsOn:
+      - FargateServiceTaskDefTaskRole
+
+  FargateServiceSecurityGroupfromMarketingStackStagingFargateServiceLBSecurityGroup:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      Description: Load balancer to target
+      FromPort: 3000
+      GroupId:
+        Fn::GetAtt:
+          - FargateServiceSecurityGroup
+          - GroupId
+      IpProtocol: tcp
+      SourceSecurityGroupId:
+        Fn::GetAtt:
+          - FargateServiceLBSecurityGroup
+          - GroupId
+      ToPort: 3000
+    DependsOn:
+      - FargateServiceTaskDefTaskRole
+
+  ###########################
+  # End AWS VPC Resources   #
+  ###########################
+
+  ###########################
+  # Start AWS ECS Resources #
+  ###########################
+
+  MarketingGithubDeployerUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: marketing-github-deployer-development-cfn
+
+  MarketingGithubDeployerUserPolicy:
+    Type: 'AWS::IAM::Policy'
+    Version: '2012-10-17'
+    Properties:
+      PolicyName: MarketingGithubDeployerUserIamUserPolicy
+      Users:
+        - Ref: MarketingGithubDeployerUser
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'cloudformation:CreateStack'
+              - 'cloudformation:DescribeStacks'
+              - 'cloudformation:CreateChangeSet'
+              - 'cloudformation:DescribeChangeSet'
+              - 'cloudformation:DeleteChangeSet'
+              - 'cloudformation:ExecuteChangeSet'
+            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
+          - Effect: Allow
+            Action:
+              - 'iam:GetRole'
+              - 'iam:PassRole'
+            Resource:
+              Fn::GetAtt:
+                - FargateServiceTaskDefExecutionRole
+                - Arn
+          - Effect: Allow
+            Action:
+              - 'iam:GetRole'
+              - 'iam:PassRole'
+            Resource:
+              Fn::GetAtt:
+                - FargateServiceTaskDefTaskRole
+                - Arn
+          - Effect: Allow
+            Action:
+              - 'ecs:RegisterTaskDefinition'
+            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/MarketingStackStagingFargateServiceTaskDef:*"
+          - Effect: Allow
+            Action:
+              - 'ecs:DeregisterTaskDefinition'
+              - 'ecs:DescribeTaskDefinition'
+              - 'elasticloadbalancing:DescribeLoadBalancers'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'ec2:DescribeSecurityGroups'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'ecs:DescribeServices'
+              - 'ecs:UpdateService'
+            Resource: !Ref FargateService
+
+  MarketingGithubDeployerAccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName:
+        Ref: MarketingGithubDeployerUser
+
+  MarketingGithubDeployerAccessKeySecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      SecretString:
+        Fn::Join:
+          - ""
+          - - '{"accessKeyId":"'
+            - Ref: MarketingGithubDeployerAccessKey
+            - '","secretAccessKey":"'
+            - Fn::GetAtt:
+                - MarketingGithubDeployerAccessKey
+                - SecretAccessKey
+            - '"}'
+    UpdateReplacePolicy: Delete
+    DeletionPolicy: Delete
+
+Outputs:
+  FargateServiceLoadBalancerDNS:
+    Value:
+      Fn::GetAtt:
+        - FargateServiceLB
+        - DNSName
+  FargateServiceServiceURL:
+    Value:
+      Fn::Join:
+        - ""
+        - - https://
+          - Ref: FargateServiceDNS

@@ -1,5 +1,5 @@
 name 'emma-test-computational-thinking-python-CFU'
-title 'Computational Thinking'
+title 'Check for Understanding'
 
 wrong 'abstraction, decomposition'
 right 'decomposition, abstraction'

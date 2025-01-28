@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "pl-team-design-guide",
-    "serialized_at": "2024-11-19 01:19:19 UTC",
+    "serialized_at": "2025-01-24 23:40:25 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -36,12 +36,117 @@
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "General Online Learning Design",
+      "key": "lesson-5",
+      "name": " READ ME",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Color",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Text",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Content",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Images",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Citations",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Component Library",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "General Online Learning Design",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -53,10 +158,10 @@
     {
       "key": "lesson-2",
       "name": "Designing Visuals",
-      "absolute_position": 2,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 2,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -68,10 +173,10 @@
     {
       "key": "lesson-3",
       "name": "Designing Text",
-      "absolute_position": 3,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -83,10 +188,10 @@
     {
       "key": "lesson-4",
       "name": "Level Types",
-      "absolute_position": 4,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -97,6 +202,18 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "bd945d92-4529-4ff4-b3b1-f46b2bcd238e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd945d92-4529-4ff4-b3b1-f46b2bcd238e",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide"
+      }
+    },
     {
       "key": "f3a34f15-f6e0-42bf-8476-f7f1ffe1b6ca",
       "position": 1,
@@ -147,6 +264,17 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "bcc24fbd-efb1-45f8-ace4-3b41dd766135",
+      "position": 1,
+      "properties": {
+        "progression_name": "How to Use This Guide"
+      },
+      "seeding_key": {
+        "activity_section.key": "bcc24fbd-efb1-45f8-ace4-3b41dd766135",
+        "lesson_activity.key": "bd945d92-4529-4ff4-b3b1-f46b2bcd238e"
+      }
+    },
     {
       "key": "3902e12a-769b-4328-9c41-34b1998b3fe3",
       "position": 1,
@@ -264,6 +392,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "How to Use This Guide"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLGuide_L1_ReadMe"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "bcc24fbd-efb1-45f8-ace4-3b41dd766135"
+      },
+      "level_keys": [
+        "PLGuide_L1_ReadMe"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "PLGuide_L1_ReferenceMaterials"
         ],
@@ -284,7 +434,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -309,7 +459,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -334,7 +484,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -359,7 +509,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -384,7 +534,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -409,7 +559,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -434,7 +584,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -459,7 +609,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -484,7 +634,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -509,7 +659,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -534,7 +684,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -559,7 +709,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -584,7 +734,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -609,7 +759,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -634,7 +784,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -659,7 +809,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -684,7 +834,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -709,7 +859,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -734,7 +884,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -759,7 +909,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -784,7 +934,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -809,7 +959,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -834,7 +984,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -858,7 +1008,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -883,6 +1033,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PLGuide_L1_ReadMe",
+        "script_level.level_keys": [
+          "PLGuide_L1_ReadMe"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "bcc24fbd-efb1-45f8-ace4-3b41dd766135"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "PLGuide_L1_ReferenceMaterials",

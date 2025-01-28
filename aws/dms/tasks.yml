@@ -84,6 +84,8 @@ cron:
     remove_column: [feedback]
 - dashboard.learning_goal_ai_evaluation_feedbacks:
     remove_column: [other_content]
+- dashboard.rubrics
+- dashboard.rubric_ai_evaluations
 - dashboard.level_sources_multi_types
 - dashboard.paired_user_levels
 - dashboard.parental_permission_requests:
