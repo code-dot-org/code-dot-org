@@ -1,4 +1,4 @@
-import codebridgeI18n from '@e';
+import codebridgeI18n from '@codebridge/locale';
 
 export enum NeighborhoodSignalType {
   // Move the painter
@@ -52,5 +52,5 @@ export const NeighborhoodExceptionMessage: Record<
   [NeighborhoodExceptionType.INVALID_MOVE]:
     codebridgeI18n.errorNeighborhoodInvalidMove(),
   [NeighborhoodExceptionType.INVALID_PAINT_LOCATION]:
-    codebridge.errorNeighborhoodInvalidPaintLocation(),
+    codebridgeI18n.errorNeighborhoodInvalidPaintLocation(),
 };
