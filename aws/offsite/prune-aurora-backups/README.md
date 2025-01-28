@@ -27,22 +27,38 @@ sam local invoke PruneAuroraBackupsFunction --event event.json --profile <aws cl
 
 ## Deployment
 
+1. **Configure AWS Client** - ensure local AWS API calls authenticate with credentials that can deploy to the offsite AWS account.
+    1. **Create Offsite Profile** - Add an entry to `.aws/config` named `codeorg-offsite` such as
+      ```
+        [profile codeorg-offsite]
+        region = my-region-2
+      ```
+   2. **Configure Credentials** - Add an entry to `.aws/credentials` with API keys provisioned with appropriate Role/Policies
+     ```
+       [codeorg-offsite]
+        aws_access_key_id = MYKEYID
+        aws_secret_access_key = mysecretkey
+     ```
+   3. **Switch to Offsite Profile** - Configure the AWS client to default to the offsite profile
+    ``` bash
+      export AWS_PROFILE=codeorg-offsite
+    ```
+2. **Package the serverless function** - 
 Run the following command to package the Lambda function to S3 and generate the deployment CloudFormation template:
-
+`.`
 ```bash
 sam package \
-    --profile <aws cli profile name> \
-    --output-template-file packaged.yaml \
-    --s3-bucket REPLACE_THIS_WITH_YOUR_S3_BUCKET_NAME
+    --profile codeorg-offsite \
+    --output-template-file prune-aurora-backups.packaged.yaml \
+    --s3-bucket my-cloudformation-template-bucket
 ```
 
-Next, the following command will create a Cloudformation Stack and deploy your SAM resources. Specify parameters via --parameter-overrides only if required. For updating existing stacks, if a parameter isn't specified, it'll use the existing value.
+3. **Deploy/Update the Serverless Function**
 
 ```bash
 sam deploy \
-    --profile <aws cli profile name> \
-    --template-file packaged.yaml \
+    --profile codeorg-offsite \
+    --template-file prune-aurora-backups.packaged.yaml \
     --stack-name prune-aurora-backups \
-    --capabilities CAPABILITY_NAMED_IAM \
-    --parameter-overrides <parameter name 1>=<parameter value1> ...
+    --capabilities CAPABILITY_NAMED_IAM
 ```
