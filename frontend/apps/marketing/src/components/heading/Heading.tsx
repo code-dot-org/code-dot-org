@@ -30,6 +30,8 @@ type HeadingProps = {
   children: ReactNode;
   /** Heading visual appearance */
   visualAppearance: HeadingVisualAppearance;
+  /** ClassName passed by contentful to apply styles that are set through contentful native editor*/
+  className?: string;
 };
 
 const headingVisualAppearanceToSemanticTagMap: Record<
@@ -44,26 +46,18 @@ const headingVisualAppearanceToSemanticTagMap: Record<
   'heading-xs': 'h6',
 };
 
-export const headingEnabledBuiltInContentfulStyles = [
-  'cfTextAlign',
-  'cfTextUnderline',
-  'cfWidth',
-];
-
-const headingBuiltInStylesClassNames =
-  headingEnabledBuiltInContentfulStyles.join(' ');
-
 const Heading: React.FunctionComponent<HeadingProps> = ({
   visualAppearance,
   children,
+  className,
 }) => {
   return (
     <Typography
       semanticTag={headingVisualAppearanceToSemanticTagMap[visualAppearance]}
-      className={headingBuiltInStylesClassNames}
+      className={className}
       visualAppearance={visualAppearance}
     >
-      {children}
+      123hello {children}
     </Typography>
   );
 };

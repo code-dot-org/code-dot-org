@@ -1,6 +1,5 @@
 // Creates a definition for the Typography component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
-import {headingEnabledBuiltInContentfulStyles} from './Heading';
 
 export const HeadingContentfulComponentDefinition: ComponentDefinition = {
   id: 'heading',
@@ -14,7 +13,7 @@ export const HeadingContentfulComponentDefinition: ComponentDefinition = {
     imageUrl:
       'https://images.ctfassets.net/90t6bu6vlf76/3kSwyMuHssbpZtr0hUAKyf/1f4d22b8e8bf3037bda3ff58d03ce293/component_heading_tooltip.png',
   },
-  builtInStyles: headingEnabledBuiltInContentfulStyles,
+  builtInStyles: ['cfTextAlign', 'cfTextUnderline', 'cfWidth'],
   variables: {
     visualAppearance: {
       displayName: 'Visual Appearance',

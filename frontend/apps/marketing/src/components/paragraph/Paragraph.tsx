@@ -30,25 +30,19 @@ type ParagraphProps = {
   visualAppearance: ParagraphVisualAppearance;
   /** Whether the paragraph text is strong */
   isStrong: boolean;
+  /** ClassName passed by contentful to apply styles that are set through contentful native editor*/
+  className?: string;
 };
-
-export const paragraphEnabledBuiltInContentfulStyles = [
-  'cfTextAlign',
-  'cfTextUnderline',
-  'cfWidth',
-];
-
-const paragraphBuiltInStylesClassNames =
-  paragraphEnabledBuiltInContentfulStyles.join(' ');
 
 const Paragraph: React.FunctionComponent<ParagraphProps> = ({
   visualAppearance,
   isStrong,
   children,
+  className,
 }) => {
   return isStrong ? (
     <Typography
-      className={paragraphBuiltInStylesClassNames}
+      className={className}
       semanticTag="p"
       visualAppearance={visualAppearance}
     >
@@ -56,7 +50,7 @@ const Paragraph: React.FunctionComponent<ParagraphProps> = ({
     </Typography>
   ) : (
     <Typography
-      className={paragraphBuiltInStylesClassNames}
+      className={className}
       semanticTag="p"
       visualAppearance={visualAppearance}
     >
