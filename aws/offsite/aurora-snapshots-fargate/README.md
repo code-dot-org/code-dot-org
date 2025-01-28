@@ -39,4 +39,5 @@ aws ecr get-login-password --region [AWS Region] | docker login --username AWS -
 docker push [AWS Account ID].dkr.ecr.[AWS Region].amazonaws.com/aurora-verify-backups --all-tags
 ```
 
-4. **Deploy Cloudformation Stack** -  using template `aurora-verify-backups-stack.yml` either via the command line or the AWS console
+4. **VPC Stack** - Ensure a VPC and various subnets, securitygroups, etc. [have already been provisioned](https://github.com/code-dot-org/code-dot-org/blob/staging/aws/cloudformation/vpc.yml.erb) in the offsite account:
+5. **Deploy Cloudformation Stack** -  using template `aurora-verify-backups-stack.yml` either via the command line or the AWS console
