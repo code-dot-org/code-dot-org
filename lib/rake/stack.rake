@@ -54,9 +54,7 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
   end
 
   # Managed resource stacks other than the Code.org application.
-  simple_stacks = %I(lambda alerting)
-  rack_stacks = %I(ami data)
-  other_stacks = %I(vpc iam)
+  rack_stacks = %I(data)
   (other_stacks + rack_stacks + simple_stacks).each do |stack|
     namespace stack do
       timed_task_with_logging :environment do
