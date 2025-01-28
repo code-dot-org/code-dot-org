@@ -57,7 +57,7 @@ const Heading: React.FunctionComponent<HeadingProps> = ({
       className={className}
       visualAppearance={visualAppearance}
     >
-      123hello {children}
+      {children}
     </Typography>
   );
 };
