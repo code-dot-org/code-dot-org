@@ -6,6 +6,26 @@ import {
 } from '@cdo/apps/pythonlab/pythonHelpers/messageHelpers';
 
 describe('messageHelpers', function () {
+  let tracebackLine: string;
+  let neighborhoodExceptionLine: string;
+  let neighborhoodExceptionMessageLine: string;
+  let baseErrorLine: string;
+  let mainErrorLine: string;
+  let neighborhoodErrorLine: string;
+  let detailsErrorLine: string;
+  beforeEach(() => {
+    tracebackLine = 'Traceback (most recent call last): ';
+    neighborhoodExceptionLine =
+      'raise NeighborhoodRuntimeException(ExceptionKey.INVALID_MOVE\n neighborhood.support.neighborhood_runtime_exception.NeighborhoodRuntimeException: NeighborhoodRuntimeException: INVALID_MOVE';
+    neighborhoodExceptionMessageLine =
+      '[EXCEPTION] Painter tried to move off the grid or into an obstacle.';
+    baseErrorLine =
+      'File "/lib/python311.zip/_pyodide/_base.py", line 573, in eval_code_async await CodeRunner';
+    mainErrorLine = 'File "/Files/main.py", line 4, in <module>';
+    neighborhoodErrorLine = 'p.can_move("invalid")';
+    detailsErrorLine =
+      'File "/lib/python3.11/site-packages/neighborhood/painter.py", line 164, in can_move';
+  });
   describe('parseMessageToNeighborhoodSignal', function () {
     it('can successfully parse a message string with no detail', async function () {
       expect(parseMessageToNeighborhoodSignal('[PAINTER] MOVE')).toEqual({
@@ -28,53 +48,44 @@ describe('messageHelpers', function () {
   });
   describe('extractNeighborhoodExceptionType', function () {
     it('can successfully extract a Neighborhood exception type given a traceback error message', async function () {
-      const tracebackMessage =
-        "Traceback (most recent call last): \nFile '/lib/python311.zip/_pyodide/_base.py', line 573, in eval_code_async await CodeRunner(\nFile '/Files/main.py', line 4, in <module> p.can_move('invalid')\nraise NeighborhoodRuntimeException(ExceptionKey.INVALID_MOVE\n neighborhood.support.neighborhood_runtime_exception.NeighborhoodRuntimeException: NeighborhoodRuntimeException: INVALID_MOVE";
+      const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${mainErrorLine}\n${neighborhoodErrorLine}\n${neighborhoodExceptionLine}`;
       expect(extractNeighborhoodExceptionType(tracebackMessage)).toEqual(
         'INVALID_MOVE'
       );
     });
-    it('returns null if there is no Neighborhood excpetion within a traceback error message', async function () {
-      const tracebackMessage =
-        "Traceback (most recent call last):\n AttributeError: File '/Files/main.py', line 3, in <module> p.turnleft()\n 'Painter' object has no attribute 'turnleft'";
+    it('returns null if there is no Neighborhood exception within a traceback error message', async function () {
+      const tracebackMessage = `${tracebackLine}\n AttributeError: File '/Files/main.py', line 3, in <module>\n p.turnleft()\n 'Painter' object has no attribute 'turnleft'`;
       expect(extractNeighborhoodExceptionType(tracebackMessage)).toEqual(null);
     });
   });
   describe('getNeighborhoodExceptionMessage', function () {
     it('can successfully return a Neighborhood exception given an exception type', async function () {
       expect(getNeighborhoodExceptionMessage('INVALID_MOVE')).toEqual(
-        '[EXCEPTION] Painter tried to move off the grid or into an obstacle.'
+        neighborhoodExceptionMessageLine
       );
     });
   });
   describe('parseErrorMessage', function () {
     it('returns the entire error message if main.py error is not found', async function () {
-      const tracebackMessage =
-        "Traceback (most recent call last): \nFile '/lib/python311.zip/_pyodide/_base.py', line 573, in eval_code_async await CodeRunner";
+      const tracebackMessage = `${tracebackLine}\n${baseErrorLine}`;
       expect(parseErrorMessage(tracebackMessage)).toEqual(tracebackMessage);
     });
     it('returns the Neighborhood exception message only if main.py error is not found', async function () {
-      const tracebackMessage =
-        "Traceback (most recent call last): \nFile '/lib/python311.zip/_pyodide/_base.py', line 573, in eval_code_async await CodeRunner\nraise NeighborhoodRuntimeException(ExceptionKey.INVALID_MOVE\n neighborhood.support.neighborhood_runtime_exception.NeighborhoodRuntimeException: NeighborhoodRuntimeException: INVALID_MOVE";
+      const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${neighborhoodExceptionLine}`;
       expect(parseErrorMessage(tracebackMessage)).toEqual(
-        '[EXCEPTION] Painter tried to move off the grid or into an obstacle.'
+        neighborhoodExceptionMessageLine
       );
     });
     it('successfully returns the parsed exception message', async function () {
-      const tracebackMessage =
-        'Traceback (most recent call last): \nFile "/lib/python311.zip/_pyodide/_base.py", line 573, in eval_code_async await CodeRunner(\nFile "/Files/main.py", line 4, in <module>\n p.can_move("invalid")\n File "/lib/python3.11/site-packages/neighborhood/painter.py", line 164, in can_move';
-      const expectedErrorMessage =
-        'File "/Files/main.py", line 4, in <module>\n p.can_move("invalid")\n File "/lib/python3.11/site-packages/neighborhood/painter.py", line 164, in can_move';
+      const tracebackMessage = `${tracebackLine}\n${baseErrorLine}\n${mainErrorLine}\n${neighborhoodErrorLine}\n${detailsErrorLine}`;
+      const expectedErrorMessage = `${mainErrorLine}\n${neighborhoodErrorLine}\n${detailsErrorLine}`;
       expect(parseErrorMessage(tracebackMessage)).toEqual(expectedErrorMessage);
     });
     it('successfully returns the Neighborhood exception with parsed, scoped exception message', async function () {
-      const tracebackMessage =
-        'Traceback (most recent call last): \nFile "/lib/python311.zip/_pyodide/_base.py", line 573, in eval_code_async await CodeRunner(\nFile "/Files/main.py", line 4, in <module>\n p.can_move("invalid")\n File "/lib/python3.11/site-packages/neighborhood/painter.py", line 164, in can_move\nraise NeighborhoodRuntimeException(ExceptionKey.INVALID_MOVE\n neighborhood.support.neighborhood_runtime_exception.NeighborhoodRuntimeException: NeighborhoodRuntimeException: INVALID_MOVE';
-      const expectedErrorMessage =
-        'File "/Files/main.py", line 4, in <module>\n p.can_move("invalid")';
+      const tracebackMessage = `${tracebackLine}: \n${baseErrorLine}\n${mainErrorLine}\n${neighborhoodErrorLine}\n${detailsErrorLine}${neighborhoodExceptionLine}`;
+      const expectedErrorMessage = `${mainErrorLine}\n${neighborhoodErrorLine}`;
       expect(parseErrorMessage(tracebackMessage)).toEqual(
-        '[EXCEPTION] Painter tried to move off the grid or into an obstacle.\n' +
-          expectedErrorMessage
+        `${neighborhoodExceptionMessageLine}\n${expectedErrorMessage}`
       );
     });
   });
