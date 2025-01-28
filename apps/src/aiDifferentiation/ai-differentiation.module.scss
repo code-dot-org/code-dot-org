@@ -249,3 +249,43 @@
 .waitingForResponse {
   width: 50px;
 }
+
+// Welcome page styles
+
+.selectOption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.selectOptionPage {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-top: 48px;
+}
+
+.selectOptionSubtitle {
+  color: $light_gray_800
+}
+
+.skipButton {
+  flex-grow: 1;
+  margin-inline-start: 20px;
+}
+
+.continueButton {
+  flex-grow: 4;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+}
+
+.bottomButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

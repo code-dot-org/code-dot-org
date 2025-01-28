@@ -32,6 +32,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   lessonName,
   unitDisplayName,
 }) => {
+  const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+
   const [positionX, setPositionX] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
   );
@@ -93,7 +95,9 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           </div>
         </div>
 
-        <AiDiffWelcome />
+        {showWelcomeExperience && (
+          <AiDiffWelcome setShowWelcomeExperience={setShowWelcomeExperience} />
+        )}
         {/* DO NOT LET THIS MERGE
         
         <AiDiffChat
