@@ -207,7 +207,8 @@ def apps_build_trigger_paths
   [
     apps_dir,
     shared_constants_file,
-    shared_constants_dir
+    shared_constants_dir,
+    frontend_dir
   ]
 end
 

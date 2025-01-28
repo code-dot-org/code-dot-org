@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "<img src=\"https://images.code.org/e6b2cae69f0b4665cb5124325fe2abe2-playlist.png\" style=\"float:right; width:100px; margin: 10px;\">\r\n\r\n## Do This:\r\nImagine you’re creating a playlist. \r\n\r\nWhat steps would you follow to organize songs by genre or mood?",
+    "long_instructions": "<img src=\"https://images.code.org/e6b2cae69f0b4665cb5124325fe2abe2-playlist.png\" style=\"float:right; width:100px; margin: 10px;\">\r\n\r\n## Do This:\r\nImagine you are creating playlists for different events (studying, driving, working out, hanging out with friends, etc). \r\n\r\nWhat steps would you follow to organize your songs according to your playlists?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -16,7 +16,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-24 00:34:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-24 00:36:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-01-24 00:34:01 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-24 00:36:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-24 16:31:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-24 16:32:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

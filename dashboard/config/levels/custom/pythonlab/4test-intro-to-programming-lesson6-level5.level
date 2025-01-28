@@ -353,7 +353,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "#Do This\r\n\r\n1. <i class=\"fa-solid fa-pen-to-square\"></i> Reference your pseudocode in the Activity Guide\r\n#\r\n-  <i class=\"fa-duotone fa-solid fa-desktop\"></i> Add a painter object with `painter = Painter()`\r\n#\r\n- <i class=\"fa-duotone fa-solid fa-desktop\"></i> Paint a line to the cone\r\n\t- <i class=\"fa-duotone fa-solid fa-lightbulb\"></i> **Hint:** This is the same as route A →  C\r\n    #\r\n\r\n#\r\n<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> **Hint:** Use these methods to move the painter object:    \r\n\r\n`painter.move()`\r\n\r\n`painter.turn_left()`  \r\n\r\n`painter.paint(\"red\")`",
+    "long_instructions": "#Do This\r\n\r\n1. <i class=\"fa-solid fa-pen-to-square\"></i> Reference your pseudocode in the Activity Guide\r\n#\r\n- <i class=\"fa-duotone fa-solid fa-desktop\"></i> Paint a line to the cone\r\n\t- <i class=\"fa-duotone fa-solid fa-lightbulb\"></i> **Hint:** Use your pseudocode for task 1: A to C\r\n#\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px; color: black;\">\r\n<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> <strong>Methods</strong> \r\n<br>\r\n<br>\r\n\r\nUse these methods to move the painter object:    \r\n\r\n<br>\r\n\r\n`painter.move()`\r\n\r\n`painter.turn_left()`  \r\n\r\n`painter.paint()`",
     "start_sources": {
       "files": {
         "0": {
@@ -370,6 +370,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22T23:39:18.002+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-level3\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-level3\"},{\"changed_at\":\"2025-01-22 23:44:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 23:45:30 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-22T23:39:18.002+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-level3\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-level3\"},{\"changed_at\":\"2025-01-22 23:44:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 23:45:30 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:33:02 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

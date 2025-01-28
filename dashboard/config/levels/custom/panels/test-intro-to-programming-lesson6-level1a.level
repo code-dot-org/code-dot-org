@@ -13,9 +13,24 @@
         "text": "#Welcome to the Neighborhood!\n\n- There is a **Painter object** that can move and paint.\n\n- This **grid** is 8 spaces wide and 8 spaces tall.\n\n- There are **obstacles** like the traffic cone, the wall, and the sidewalk that the Painter can't move on or through.",
         "imageUrl": "https://images.code.org/3287670f37e9fbb6922f10590c9b6c92-Neighborhood.jpg",
         "key": "test-intro-to-programming-lesson6-level1a-e5d1dd23-d8d1-43e7-bc7b-56f197587f67"
+      },
+      {
+        "text": "#Add the Painter\n- painter  = (Painter)\n\n**You can name the painter anything you choose.**\n- bob = (Painter)\n- juanita = (Painter)\n\nAll of the examples do the same thing. They add a painter object to your neighborhood! ",
+        "imageUrl": "",
+        "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380"
+      },
+      {
+        "text": "#Methods the Painter can do include:\n\n- move()\n- turn_left()\n- paint()",
+        "imageUrl": "",
+        "key": "test-intro-to-programming-lesson6-level1a-21e28908-745a-4f0a-a496-0467aef4bb96"
+      },
+      {
+        "text": "#Attributes of the Painter include:\n- xposition\n- yposition\n- direction",
+        "imageUrl": "",
+        "key": "test-intro-to-programming-lesson6-level1a-ad3c826c-5ace-4c82-b5b8-f60855fec0ea"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22 21:10:39 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 23:56:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-22 21:10:39 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 23:56:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:35:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:36:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:41:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:42:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:43:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:44:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

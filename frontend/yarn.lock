@@ -969,6 +969,7 @@ __metadata:
     tsup: "npm:^8.3.5"
     typescript-eslint: "npm:^8.15.0"
   peerDependencies:
+    classnames: ^2.5.1
     react: ">=16"
     react-dom: ">=16"
   languageName: unknown
