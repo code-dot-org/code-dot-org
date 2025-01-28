@@ -1,4 +1,4 @@
-import commonI18n from '@cdo/locale';
+import codebridgeI18n from '@e';
 
 export enum NeighborhoodSignalType {
   // Move the painter
@@ -40,17 +40,17 @@ export const NeighborhoodExceptionMessage: Record<
   string
 > = {
   [NeighborhoodExceptionType.INVALID_GRID]:
-    commonI18n.errorNeighborhoodInvalidGrid(),
+    codebridgeI18n.errorNeighborhoodInvalidGrid(),
   [NeighborhoodExceptionType.INVALID_DIRECTION]:
-    commonI18n.errorNeighborhoodInvalidDirection(),
+    codebridgeI18n.errorNeighborhoodInvalidDirection(),
   [NeighborhoodExceptionType.GET_SQUARE_FAILED]:
-    commonI18n.errorNeighborhoodGetSquareFailed(),
+    codebridgeI18n.errorNeighborhoodGetSquareFailed(),
   [NeighborhoodExceptionType.INVALID_COLOR]:
-    commonI18n.errorNeighborhoodInvalidColor(),
+    codebridgeI18n.errorNeighborhoodInvalidColor(),
   [NeighborhoodExceptionType.INVALID_LOCATION]:
-    commonI18n.errorNeighborhoodInvalidLocation(),
+    codebridgeI18n.errorNeighborhoodInvalidLocation(),
   [NeighborhoodExceptionType.INVALID_MOVE]:
-    commonI18n.errorNeighborhoodInvalidMove(),
+    codebridgeI18n.errorNeighborhoodInvalidMove(),
   [NeighborhoodExceptionType.INVALID_PAINT_LOCATION]:
-    commonI18n.errorNeighborhoodInvalidPaintLocation(),
+    codebridge.errorNeighborhoodInvalidPaintLocation(),
 };
