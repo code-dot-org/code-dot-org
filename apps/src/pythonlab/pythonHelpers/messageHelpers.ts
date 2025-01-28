@@ -23,7 +23,7 @@ import {HOME_FOLDER} from './constants';
  * If the error message is a ModuleNotFoundError relating to a module
  * that is supported by pyodide but is not installed, we change it to say that the module is not supported in Python Lab.
  * This is because any uninstalled module is purposefully not supported.
- * If the error message includes a Neighborhood exception, we change it to a user-friendly message.
+ * If the error message includes a Neighborhood exception, we prepend a user-friendly message to the adjust error message.
  * @param errorMessage - the error message from pyodide
  **/
 export function parseErrorMessage(errorMessage: string): string {
@@ -57,16 +57,17 @@ export function parseErrorMessage(errorMessage: string): string {
   }
   if (mainErrorLine >= errorLines.length) {
     // If we never find the main.py error, return the entire message.
-    return neighborhoodExceptionMessage || errorMessage;
+    return neighborhoodExceptionMessage
+      ? `${neighborhoodExceptionMessage}\n${errorMessage}`
+      : errorMessage;
   }
-  if (neighborhoodExceptionMessage) {
-    // Include the line number and call in main.py that resulted in Neighborhood exception.
-    return `${neighborhoodExceptionMessage}\n${errorLines
-      .slice(mainErrorLine, mainErrorLine + 2)
-      .join('\n')}`;
-  }
-  const adjustedErrorLines = errorLines.slice(mainErrorLine, errorLines.length);
-  return adjustedErrorLines.join('\n');
+  const adjustedErrorLines = errorLines
+    .slice(mainErrorLine, errorLines.length)
+    .join('\n');
+
+  return neighborhoodExceptionMessage
+    ? `${neighborhoodExceptionMessage}\n${adjustedErrorLines}`
+    : adjustedErrorLines;
 }
 
 /**
