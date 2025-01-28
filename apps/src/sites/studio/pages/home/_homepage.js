@@ -13,14 +13,12 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
-import TeacherHomepageV2 from '@cdo/apps/templates/studioHomepages/TeacherHomepageV2';
 import {
   pageTypes,
   setAuthProviders,
   setPageType,
   beginCreatingSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 $(document).ready(showHomepage);
@@ -91,71 +89,37 @@ function showHomepage() {
     <Provider store={store}>
       <div>
         {isTeacher ? (
-          experiments.isEnabled('teacher-homepage-v2') ? (
-            <TeacherHomepageV2
-              announcement={announcement}
-              hocLaunch={homepageData.hocLaunch}
-              courses={homepageData.courses}
-              plCourses={homepageData.plCourses}
-              joinedStudentSections={homepageData.joined_student_sections}
-              joinedPlSections={homepageData.joined_pl_sections}
-              topCourse={homepageData.topCourse}
-              topPlCourse={homepageData.topPlCourse}
-              queryStringOpen={query['open']}
-              canViewAdvancedTools={homepageData.canViewAdvancedTools}
-              existingSchoolInfo={homepageData.existingSchoolInfo}
-              censusQuestion={homepageData.censusQuestion}
-              showCensusBanner={homepageData.showCensusBanner}
-              showNpsSurvey={homepageData.showNpsSurvey}
-              showFinishTeacherApplication={
-                homepageData.showFinishTeacherApplication
-              }
-              showReturnToReopenedTeacherApplication={
-                homepageData.showReturnToReopenedTeacherApplication
-              }
-              afeEligible={homepageData.afeEligible}
-              teacherName={homepageData.teacherName}
-              teacherId={homepageData.teacherId}
-              teacherEmail={homepageData.teacherEmail}
-              schoolYear={homepageData.currentSchoolYear}
-              specialAnnouncement={specialAnnouncement}
-              hasFeedback={homepageData.hasFeedback}
-              showIncubatorBanner={homepageData.showIncubatorBanner}
-              currentUserId={homepageData.currentUserId}
-            />
-          ) : (
-            <TeacherHomepage
-              announcement={announcement}
-              hocLaunch={homepageData.hocLaunch}
-              courses={homepageData.courses}
-              plCourses={homepageData.plCourses}
-              joinedStudentSections={homepageData.joined_student_sections}
-              joinedPlSections={homepageData.joined_pl_sections}
-              topCourse={homepageData.topCourse}
-              topPlCourse={homepageData.topPlCourse}
-              queryStringOpen={query['open']}
-              canViewAdvancedTools={homepageData.canViewAdvancedTools}
-              existingSchoolInfo={homepageData.existingSchoolInfo}
-              censusQuestion={homepageData.censusQuestion}
-              showCensusBanner={homepageData.showCensusBanner}
-              showNpsSurvey={homepageData.showNpsSurvey}
-              showFinishTeacherApplication={
-                homepageData.showFinishTeacherApplication
-              }
-              showReturnToReopenedTeacherApplication={
-                homepageData.showReturnToReopenedTeacherApplication
-              }
-              afeEligible={homepageData.afeEligible}
-              teacherName={homepageData.teacherName}
-              teacherId={homepageData.teacherId}
-              teacherEmail={homepageData.teacherEmail}
-              schoolYear={homepageData.currentSchoolYear}
-              specialAnnouncement={specialAnnouncement}
-              hasFeedback={homepageData.hasFeedback}
-              showIncubatorBanner={homepageData.showIncubatorBanner}
-              currentUserId={homepageData.currentUserId}
-            />
-          )
+          <TeacherHomepage
+            announcement={announcement}
+            hocLaunch={homepageData.hocLaunch}
+            courses={homepageData.courses}
+            plCourses={homepageData.plCourses}
+            joinedStudentSections={homepageData.joined_student_sections}
+            joinedPlSections={homepageData.joined_pl_sections}
+            topCourse={homepageData.topCourse}
+            topPlCourse={homepageData.topPlCourse}
+            queryStringOpen={query['open']}
+            canViewAdvancedTools={homepageData.canViewAdvancedTools}
+            existingSchoolInfo={homepageData.existingSchoolInfo}
+            censusQuestion={homepageData.censusQuestion}
+            showCensusBanner={homepageData.showCensusBanner}
+            showNpsSurvey={homepageData.showNpsSurvey}
+            showFinishTeacherApplication={
+              homepageData.showFinishTeacherApplication
+            }
+            showReturnToReopenedTeacherApplication={
+              homepageData.showReturnToReopenedTeacherApplication
+            }
+            afeEligible={homepageData.afeEligible}
+            teacherName={homepageData.teacherName}
+            teacherId={homepageData.teacherId}
+            teacherEmail={homepageData.teacherEmail}
+            schoolYear={homepageData.currentSchoolYear}
+            specialAnnouncement={specialAnnouncement}
+            hasFeedback={homepageData.hasFeedback}
+            showIncubatorBanner={homepageData.showIncubatorBanner}
+            currentUserId={homepageData.currentUserId}
+          />
         ) : (
           <StudentHomepage
             courses={homepageData.courses}

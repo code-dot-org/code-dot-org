@@ -1,17 +1,22 @@
 import $ from 'jquery';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
 
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
-import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import hiddenLesson, {
+  initializeHiddenScripts,
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progressRedux from '@cdo/apps/code-studio/progressRedux';
+import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo,
@@ -32,11 +37,16 @@ import teacherSections, {
   setRosterProviderName,
   setSections,
   setStudentsForCurrentSection,
+  setAuthProviders,
+  pageTypes,
+  setPageType,
+  beginCreatingSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
+import experiments from '@cdo/apps/util/experiments';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -66,6 +76,7 @@ $(document).ready(function () {
     announcementReducer,
     progressRedux,
     isRtl,
+    mapbox: mapboxReducer,
   });
 
   const store = getStore();
@@ -111,6 +122,69 @@ $(document).ready(function () {
     if (defaultScriptId) {
       store.dispatch(setScriptId(defaultScriptId));
     }
+
+    if (experiments.isEnabled('teacher-homepage-v2')) {
+      const script = document.querySelector('script[data-homepage]');
+      console.log(script);
+      const homepageData = JSON.parse(script.dataset.homepage);
+      // const isTeacher = homepageData.isTeacher;
+      // const isEnglish = homepageData.isEnglish;
+      // const announcementOverride = homepageData.announcement;
+      // const specialAnnouncement = homepageData.specialAnnouncement;
+      // const studentSpecialAnnouncement =
+      //   homepageData.studentSpecialAnnouncement;
+      const query = queryString.parse(window.location.search);
+      store.dispatch(setAuthProviders(homepageData.providers));
+      store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
+      store.dispatch(setPageType(pageTypes.homepage));
+      store.dispatch(setLocaleCode(homepageData.localeCode));
+      if (homepageData.mapboxAccessToken) {
+        store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
+      }
+      // remove courseOfferingId, courseVersionId, and unitId params so that if we
+      // navigate back we don't get the create section dialog again
+      let courseOfferingId;
+      let courseVersionId;
+      let unitId;
+      let participantType;
+      if (query.courseOfferingId) {
+        courseOfferingId = parseInt(query.courseOfferingId, 10);
+        updateQueryParam('courseOfferingId', undefined, true);
+      }
+      if (query.courseVersionId) {
+        courseVersionId = parseInt(query.courseVersionId, 10);
+        updateQueryParam('courseVersionId', undefined, true);
+      }
+      if (query.unitId) {
+        unitId = parseInt(query.unitId, 10);
+        updateQueryParam('unitId', undefined, true);
+      }
+      if (query.participantType) {
+        participantType = queryParams('participantType');
+        updateQueryParam('participantType', undefined, true);
+      }
+      if ((courseOfferingId && courseVersionId) || query.openAddSectionDialog) {
+        updateQueryParam('openAddSectionDialog', undefined, true);
+        store.dispatch(
+          beginCreatingSection(
+            courseOfferingId,
+            courseVersionId,
+            unitId,
+            participantType
+          )
+        );
+      }
+
+      // const announcement = getTeacherAnnouncement(announcementOverride);
+      // const parentalPermissionBanner =
+      //   homepageData.parentalPermissionBanner && (
+      //     <ParentalPermissionBanner
+      //       key="parental-permission-banner"
+      //       {...homepageData.parentalPermissionBanner}
+      //     />
+      //   );
+    }
+
     return (
       <BrowserRouter basename={baseUrl}>
         <TeacherDashboard
