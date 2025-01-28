@@ -98,6 +98,10 @@ export default class AdvancedSequencer extends Sequencer {
     this.playbackEvents.push(event);
   }
 
+  logValue(value: string) {
+    console.log(value);
+  }
+
   setEffect(type: keyof Effects, value: EffectValue) {
     this.effects[type] = value;
   }

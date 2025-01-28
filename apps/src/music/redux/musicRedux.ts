@@ -28,6 +28,18 @@ export enum InstructionsPosition {
   RIGHT = 'RIGHT',
 }
 
+export type PanelElementType = 'input' | 'output' | 'sticker';
+export type PanelElementVariant = 'slider' | 'knob';
+
+export interface PanelElement {
+  type: PanelElementType;
+  variant?: PanelElementVariant;
+  id: string;
+  row: number;
+  col: number;
+  currentValue: number;
+}
+
 export interface MusicState {
   /** Current pack ID, if a specific restricted pack from the current music library is selected */
   packId: string | null;
@@ -77,6 +89,9 @@ export interface MusicState {
   loopEnd: number;
   key: Key;
   bpm: number;
+
+  // Used by advanced panel.
+  panelElements: PanelElement[];
 }
 
 const initialState: MusicState = {
@@ -109,6 +124,7 @@ const initialState: MusicState = {
   loopEnd: 5,
   key: DEFAULT_KEY,
   bpm: DEFAULT_BPM,
+  panelElements: [],
 };
 
 const musicSlice = createSlice({
@@ -265,6 +281,21 @@ const musicSlice = createSlice({
 
       state.bpm = bpm;
     },
+    setPanelElements: (state, action: PayloadAction<PanelElement[]>) => {
+      state.panelElements = action.payload;
+    },
+    addPanelElement: (state, action: PayloadAction<PanelElement>) => {
+      const panelElement = action.payload;
+      state.panelElements.push(panelElement);
+    },
+    updatePanelElement: (state, action: PayloadAction<PanelElement>) => {
+      const updatedElement = action.payload;
+      state.panelElements.map(existingElement =>
+        existingElement.id === updatedElement.id
+          ? updatedElement
+          : existingElement
+      );
+    },
   },
 });
 
@@ -343,4 +374,5 @@ export const {
   setLoopEnd,
   setKey,
   setBpm,
+  setPanelElements,
 } = musicSlice.actions;

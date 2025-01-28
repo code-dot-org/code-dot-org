@@ -4207,6 +4207,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dsp-ts/math@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@dsp-ts/math@npm:0.1.0"
+  checksum: 323c2cbef70a8d06d85157986ac9214d831dabec9ef5606d624c54092598c225547c01e5ec605b918a72692c44efe451d109af6219c8d60545dae2243533439c
+  languageName: node
+  linkType: hard
+
 "@emotion/use-insertion-effect-with-fallbacks@npm:^1.0.1":
   version: 1.0.1
   resolution: "@emotion/use-insertion-effect-with-fallbacks@npm:1.0.1"
@@ -8373,6 +8380,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@use-gesture/core@npm:10.3.1":
+  version: 10.3.1
+  resolution: "@use-gesture/core@npm:10.3.1"
+  checksum: 6d1a00dcb39a28fb6aeb816e0bbf94a5cf8e466b912f4f6f35c2658f9b27a00ee7f0f488d736e6a54675deb8073bccdc3cb12a08b72a490a37a9f48fc4d86b2e
+  languageName: node
+  linkType: hard
+
+"@use-gesture/react@npm:^10.3.0":
+  version: 10.3.1
+  resolution: "@use-gesture/react@npm:10.3.1"
+  dependencies:
+    "@use-gesture/core": 10.3.1
+  peerDependencies:
+    react: ">= 16.8.0"
+  checksum: 763ef5fe5e91715a20beac0d430b0ffd815f1ab761ffdd8a0c8352fa680411123b3855815a77b4e2d1018878ba515424f9daa863ea797c3dd089032fb539ec22
+  languageName: node
+  linkType: hard
+
 "@videojs/http-streaming@npm:1.10.6":
   version: 1.10.6
   resolution: "@videojs/http-streaming@npm:1.10.6"
@@ -10294,6 +10319,7 @@ __metadata:
     react-google-charts: 2
     react-idle-timer: ^4.2.7
     react-inspector: 2.3.1
+    react-knob-headless: ^0.3.0
     react-lazy-load: ~3.0.13
     react-loading-skeleton: ^3.1.0
     react-motion: ^0.5.2
@@ -20359,6 +20385,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"merge-props@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "merge-props@npm:6.0.0"
+  checksum: ed035b24328d824deebcc07d067175fdcc1d7e13b8d8a2ac0bee229b65122cb109e919682da2ad4ec8681996909ba554a8d237c2d6b22cdfc81813f8b6b148f7
+  languageName: node
+  linkType: hard
+
 "merge-stream@npm:^2.0.0":
   version: 2.0.0
   resolution: "merge-stream@npm:2.0.0"
@@ -23817,6 +23850,27 @@ es6-shim@latest:
   version: 18.2.0
   resolution: "react-is@npm:18.2.0"
   checksum: e72d0ba81b5922759e4aff17e0252bd29988f9642ed817f56b25a3e217e13eea8a7f2322af99a06edb779da12d5d636e9fda473d620df9a3da0df2a74141d53e
+  languageName: node
+  linkType: hard
+
+"react-knob-headless@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "react-knob-headless@npm:0.3.0"
+  dependencies:
+    "@dsp-ts/math": ^0.1.0
+    "@use-gesture/react": ^10.3.0
+    merge-props: ^6.0.0
+  peerDependencies:
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    react: ^16.8 || ^17.0 || ^18.0
+    react-dom: ^16.8 || ^17.0 || ^18.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    "@types/react-dom":
+      optional: true
+  checksum: 7a9638c91526c33789d50f1bb76b9cb15126c76c4af353c1a7f5a95115dc470abf5aa03e2de5e93dd5e7088ce30cf59101c906d2fa0511d91cd5a59779ceab09
   languageName: node
   linkType: hard
 

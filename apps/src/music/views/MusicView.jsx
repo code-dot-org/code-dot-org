@@ -33,6 +33,7 @@ import {
 } from '../constants';
 import {AnalyticsContext} from '../context';
 import MusicRegistry from '../MusicRegistry';
+import Dials from '../player/Dials';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
@@ -59,6 +60,9 @@ import {
   setSelectedTriggerId,
   clearSelectedTriggerId,
   getBlockMode,
+  setPanelElements,
+  addPanelElement,
+  updatePanelElement,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
@@ -120,6 +124,9 @@ class UnconnectedMusicView extends React.Component {
     blockMode: PropTypes.string,
     playbackEvents: PropTypes.array,
     validationState: PropTypes.object,
+
+    panelElements: PropTypes.array,
+    setPanelElements: PropTypes.func,
   };
 
   constructor(props) {
@@ -284,6 +291,14 @@ class UnconnectedMusicView extends React.Component {
       this.sequencer = new Simple2Sequencer();
     } else if (this.props.blockMode === BlockMode.ADVANCED) {
       this.sequencer = new AdvancedSequencer();
+      this.dials = new Dials(
+        () => {
+          return this.props.panelElements;
+        },
+        panelElements => {
+          this.props.setPanelElements(panelElements);
+        }
+      );
     } else {
       this.sequencer = new MusicPlayerStubSequencer();
     }
@@ -600,6 +615,7 @@ class UnconnectedMusicView extends React.Component {
       {
         getTriggerCount: () => this.playingTriggers.length,
         Sequencer: this.sequencer,
+        Dials: this.dials,
       },
       this.props.blockMode
     );
@@ -813,6 +829,7 @@ const MusicView = connect(
     isPlayView: state.lab.isShareView,
     playbackEvents: state.music.playbackEvents,
     validationState: state.lab.validationState,
+    panelElements: state.music.panelElements,
   }),
   dispatch => ({
     setPackId: packId => dispatch(setPackId(packId)),
@@ -840,6 +857,11 @@ const MusicView = connect(
     updateLoadProgress: value => dispatch(setSoundLoadingProgress(value)),
     setUndoStatus: value => dispatch(setUndoStatus(value)),
     clearCallout: id => dispatch(clearCallout()),
+    addPanelElement: panelElement => dispatch(addPanelElement(panelElement)),
+    updatePanelElement: panelElement =>
+      dispatch(updatePanelElement(panelElement)),
+    setPanelElements: panelElements =>
+      dispatch(setPanelElements(panelElements)),
   })
 )(UnconnectedMusicView);
 

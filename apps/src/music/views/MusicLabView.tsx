@@ -28,6 +28,7 @@ import {
 
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
+import Dials from './Dials';
 import HeaderButtons from './HeaderButtons';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import useUpdateAnalytics from './hooks/useUpdateAnalytics';
@@ -254,6 +255,20 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [hideHeaders, onInstructionsTextClick]
   );
 
+  const renderDials = useCallback(() => {
+    return (
+      <div id="dials-area" className={classNames(moduleStyles.dialsArea)}>
+        <PanelContainer
+          id="instructions-panel"
+          headerContent={'Dials'}
+          hideHeaders={hideHeaders}
+        >
+          <Dials />
+        </PanelContainer>
+      </div>
+    );
+  }, [hideHeaders]);
+
   const renderPlayArea = useCallback(
     (timelineAtTop: boolean) => {
       return (
@@ -360,9 +375,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           </PanelContainer>
         </div>
 
-        {showInstructions &&
-          instructionsPosition === InstructionsPosition.RIGHT &&
-          renderInstructions(InstructionsPosition.RIGHT)}
+        {true && renderDials()}
       </div>
 
       {!timelineAtTop && renderPlayArea(false)}

@@ -32,6 +32,36 @@ const toolboxBlocks: {[blockType in BlockTypes | string]: BlockInfoWithText} = {
       },
     },
   },
+  [BlockTypes.LOG_VALUE]: {
+    levelbuilderText: 'Log value',
+    kind: 'block',
+    type: BlockTypes.LOG_VALUE,
+  },
+  [BlockTypes.GET_OUTPUT_VALUE]: {
+    levelbuilderText: 'Log value',
+    kind: 'block',
+    type: BlockTypes.GET_OUTPUT_VALUE,
+  },
+  [BlockTypes.SET_OUTPUT_VALUE]: {
+    levelbuilderText: 'Log value',
+    kind: 'block',
+    type: BlockTypes.SET_OUTPUT_VALUE,
+    /*inputs: {
+      id: {
+        shadow: {
+          type: 'math_number',
+          fields: {
+            NUM: 1,
+          },
+        },
+      },
+    },*/
+  },
+  [BlockTypes.GET_INPUT_VALUE]: {
+    levelbuilderText: 'Log value',
+    kind: 'block',
+    type: BlockTypes.GET_INPUT_VALUE,
+  },
   [BlockTypes.PLAY_PATTERN_AT_MEASURE]: {
     levelbuilderText: 'Play Pattern at Measure',
     kind: 'block',
