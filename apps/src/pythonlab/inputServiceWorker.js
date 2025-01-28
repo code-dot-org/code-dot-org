@@ -6,8 +6,8 @@ addEventListener('install', () => {
   self.skipWaiting();
 });
 
-addEventListener('activate', () => {
-  self.clients.claim();
+addEventListener('activate', event => {
+  event.waitUntil(self.clients.claim());
 });
 
 const resolvers = new Map();

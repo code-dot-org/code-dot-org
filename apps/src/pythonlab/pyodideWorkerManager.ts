@@ -53,6 +53,11 @@ const setUpPyodideWorker = () => {
           }
           break;
         }
+        if (message.includes(MessageTag.INPUT_PROMPT)) {
+          const prompt = message.replace(MessageTag.INPUT_PROMPT, '');
+          consoleManager?.writePartialLine(prompt);
+          break;
+        }
         consoleManager?.writeConsoleMessage(message);
         break;
       case 'run_complete':
@@ -141,8 +146,6 @@ const registerServiceWorker = async () => {
           inputServiceWorker = event.source;
         }
         lastInputId = event.data.id;
-        // TODO: do we need to support waiting for multiple inputs at once?? Do we want to be smarter
-        // about only accepting input when we are awaiting a response?
       }
     };
   }

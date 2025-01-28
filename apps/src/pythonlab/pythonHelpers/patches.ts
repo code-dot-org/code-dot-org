@@ -3,6 +3,7 @@ import {HOME_FOLDER, SERVICE_WORKER_PATH} from './constants';
 export enum MessageTag {
   MATPLOTLIB_IMG = 'MATPLOTLIB_SHOW_IMG',
   NEIGHBORHOOD_SIGNAL = '[PAINTER]',
+  INPUT_PROMPT = '[INPUT_PROMPT]',
 }
 
 export const TEARDOWN_CODE = `from pythonlab_setup import teardown_pythonlab
@@ -20,9 +21,8 @@ __prompt_str__ = ""
 def get_input(prompt=""):
     global __prompt_str__
     __prompt_str__ = prompt
-    print(prompt)
+    print(f'${MessageTag.INPUT_PROMPT}{prompt}')
     s = pythonlab_input.getInput("${id}", prompt)
-    print()
     return s
 builtins.input = get_input
 sys.stdin.readline = lambda: pythonlab_input.getInput("${id}", __prompt_str__)

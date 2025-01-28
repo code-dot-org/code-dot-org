@@ -48,6 +48,13 @@ export default class ConsoleManager {
     lines.forEach(l => this.appendTerminalLine(l));
   }
 
+  public writePartialLine(message: string) {
+    this.terminalLines.push(message);
+    this.terminal.write(message);
+    this.terminal.scrollToBottom();
+    this.terminal.focus();
+  }
+
   public writeSystemMessage(message: string, appName?: string) {
     this.writeConsoleMessage(this.getSystemMessage(message, appName));
   }
