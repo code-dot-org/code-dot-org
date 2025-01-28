@@ -12,6 +12,7 @@ import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import MarketingSidebar from '@cdo/apps/templates/teacherDashboard/MarketingSidebar';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -161,128 +162,131 @@ export const UnconnectedTeacherHomepage = ({
   }
 
   return (
-    <div>
-      <HeaderBanner
-        headingText={i18n.homepageHeading()}
-        backgroundUrl={backgroundUrl}
-        backgroundImageStyling={{backgroundPosition: '90% 30%'}}
-      />
-      <div className={'container main'}>
-        <ProtectedStatefulDiv ref={flashes} />
-        <ProtectedStatefulDiv ref={teacherReminders} />
-        {showNpsSurvey && <NpsSurveyBlock />}
-        {specialAnnouncement && (
-          <GlobalEditionWrapper
-            component={MarketingAnnouncementBanner}
-            componentId="MarketingAnnouncementBanner"
-            props={{
-              announcement: specialAnnouncement,
-              marginBottom: '30px',
-            }}
-          />
-        )}
-        {announcement && showAnnouncement && (
-          <div>
-            <Notification
-              type={announcement.type || 'bullhorn'}
-              notice={announcement.heading}
-              details={announcement.description}
-              dismissible={true}
-              buttonText={announcement.buttonText}
-              buttonLink={announcement.link}
-              newWindow={true}
+    <div style={{display: 'flex'}}>
+      <div>
+        <HeaderBanner
+          headingText={i18n.homepageHeading()}
+          backgroundUrl={backgroundUrl}
+          backgroundImageStyling={{backgroundPosition: '90% 30%'}}
+        />
+        <div className={'container main'}>
+          <ProtectedStatefulDiv ref={flashes} />
+          <ProtectedStatefulDiv ref={teacherReminders} />
+          {showNpsSurvey && <NpsSurveyBlock />}
+          {specialAnnouncement && (
+            <GlobalEditionWrapper
+              component={MarketingAnnouncementBanner}
+              componentId="MarketingAnnouncementBanner"
+              props={{
+                announcement: specialAnnouncement,
+                marginBottom: '30px',
+              }}
             />
-            <div style={styles.clear} />
-          </div>
-        )}
-        {!showAnnouncement && <br />}
-        {showFinishTeacherApplication && (
-          <BorderedCallToAction
-            headingText="Return to Your Application"
-            descriptionText="Finish applying for our Professional Learning Program"
-            buttonText="Finish Application"
-            buttonUrl="/pd/application/teacher"
-            solidBorder={true}
-          />
-        )}
-        {showPLBanner && <ProfessionalLearningSkinnyBanner />}
-        {showReturnToReopenedTeacherApplication && (
-          <BorderedCallToAction
-            headingText="Return to Your Application"
-            descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
-            buttonText="Return to Application"
-            buttonUrl="/pd/application/teacher"
-            solidBorder={true}
-          />
-        )}
-        {displayCensusBanner && (
-          <div>
-            <CensusTeacherBanner
-              schoolYear={schoolYear}
-              existingSchoolInfo={existingSchoolInfo}
-              question={censusQuestion}
-              teaches={censusBannerTeachesSelection}
-              inClass={censusBannerInClassSelection}
-              teacherId={teacherId}
-              teacherName={teacherName}
-              teacherEmail={teacherEmail}
-              onSubmitSuccess={() => dismissCensusBanner(null, null)}
-              onDismiss={() => dismissAndHideCensusBanner()}
-              onPostpone={() => postponeCensusBanner()}
-              onTeachesChange={event =>
-                setCensusBannerTeachesSelection(
-                  event.target.id === 'teachesYes'
-                )
-              }
-              onInClassChange={event =>
-                setCensusBannerInClassSelection(event.target.id === 'inClass')
-              }
+          )}
+          {announcement && showAnnouncement && (
+            <div>
+              <Notification
+                type={announcement.type || 'bullhorn'}
+                notice={announcement.heading}
+                details={announcement.description}
+                dismissible={true}
+                buttonText={announcement.buttonText}
+                buttonLink={announcement.link}
+                newWindow={true}
+              />
+              <div style={styles.clear} />
+            </div>
+          )}
+          {!showAnnouncement && <br />}
+          {showFinishTeacherApplication && (
+            <BorderedCallToAction
+              headingText="Return to Your Application"
+              descriptionText="Finish applying for our Professional Learning Program"
+              buttonText="Finish Application"
+              buttonUrl="/pd/application/teacher"
+              solidBorder={true}
             />
-            <br />
-          </div>
-        )}
-        {showAFEBanner && (
-          <div>
-            <DonorTeacherBanner source="teacher_home" />
-            <div style={styles.clear} />
-          </div>
-        )}
-        <TeacherSections />
-        <RecentCourses
-          courses={courses}
-          topCourse={topCourse}
-          showAllCoursesLink={true}
-          isTeacher={true}
-          hasFeedback={false}
-        />
-        {hasFeedback && (plCourses?.length > 0 || topPlCourse) && (
-          <ParticipantFeedbackNotification
-            studentId={teacherId}
-            isProfessionalLearningCourse={true}
-          />
-        )}
-        <GlobalEditionWrapper
-          component={TeacherResources}
-          componentId="TeacherResources"
-        />
-        {showIncubatorBanner && (
-          <GlobalEditionWrapper
-            component={IncubatorBanner}
-            componentId="IncubatorBanner"
-          />
-        )}
-        <ProjectWidgetWithData
-          canViewFullList={true}
-          canViewAdvancedTools={canViewAdvancedTools}
-        />
-        <section>
-          <JoinSectionArea
-            initialJoinedStudentSections={joinedStudentSections}
-            initialJoinedPlSections={joinedPlSections}
+          )}
+          {showPLBanner && <ProfessionalLearningSkinnyBanner />}
+          {showReturnToReopenedTeacherApplication && (
+            <BorderedCallToAction
+              headingText="Return to Your Application"
+              descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
+              buttonText="Return to Application"
+              buttonUrl="/pd/application/teacher"
+              solidBorder={true}
+            />
+          )}
+          {displayCensusBanner && (
+            <div>
+              <CensusTeacherBanner
+                schoolYear={schoolYear}
+                existingSchoolInfo={existingSchoolInfo}
+                question={censusQuestion}
+                teaches={censusBannerTeachesSelection}
+                inClass={censusBannerInClassSelection}
+                teacherId={teacherId}
+                teacherName={teacherName}
+                teacherEmail={teacherEmail}
+                onSubmitSuccess={() => dismissCensusBanner(null, null)}
+                onDismiss={() => dismissAndHideCensusBanner()}
+                onPostpone={() => postponeCensusBanner()}
+                onTeachesChange={event =>
+                  setCensusBannerTeachesSelection(
+                    event.target.id === 'teachesYes'
+                  )
+                }
+                onInClassChange={event =>
+                  setCensusBannerInClassSelection(event.target.id === 'inClass')
+                }
+              />
+              <br />
+            </div>
+          )}
+          {showAFEBanner && (
+            <div>
+              <DonorTeacherBanner source="teacher_home" />
+              <div style={styles.clear} />
+            </div>
+          )}
+          <TeacherSections />
+          <RecentCourses
+            courses={courses}
+            topCourse={topCourse}
+            showAllCoursesLink={true}
             isTeacher={true}
+            hasFeedback={false}
           />
-        </section>
+          {hasFeedback && (plCourses?.length > 0 || topPlCourse) && (
+            <ParticipantFeedbackNotification
+              studentId={teacherId}
+              isProfessionalLearningCourse={true}
+            />
+          )}
+          <GlobalEditionWrapper
+            component={TeacherResources}
+            componentId="TeacherResources"
+          />
+          {showIncubatorBanner && (
+            <GlobalEditionWrapper
+              component={IncubatorBanner}
+              componentId="IncubatorBanner"
+            />
+          )}
+          <ProjectWidgetWithData
+            canViewFullList={true}
+            canViewAdvancedTools={canViewAdvancedTools}
+          />
+          <section>
+            <JoinSectionArea
+              initialJoinedStudentSections={joinedStudentSections}
+              initialJoinedPlSections={joinedPlSections}
+              isTeacher={true}
+            />
+          </section>
+        </div>
       </div>
+      <MarketingSidebar />
     </div>
   );
 };

@@ -366,3 +366,5 @@ gem "json-schema", "~> 4.3"
 gem "csv"
 
 gem "async", "~> 1.32"
+
+gem 'contentful'
