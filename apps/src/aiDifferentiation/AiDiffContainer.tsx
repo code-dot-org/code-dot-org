@@ -7,8 +7,7 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
-// import AiDiffChat from './AiDiffChat';
-import AiDiffWelcome from './AiDiffWelcome';
+import AiDiffChat from './AiDiffChat';
 
 import style from './ai-differentiation.module.scss';
 
@@ -32,8 +31,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   lessonName,
   unitDisplayName,
 }) => {
-  const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
-
   const [positionX, setPositionX] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
   );
@@ -94,18 +91,12 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             />
           </div>
         </div>
-
-        {showWelcomeExperience && (
-          <AiDiffWelcome setShowWelcomeExperience={setShowWelcomeExperience} />
-        )}
-        {/* DO NOT LET THIS MERGE
-        
         <AiDiffChat
           closeTutor={closeTutor}
           lessonId={lessonId}
           lessonName={lessonName}
           unitDisplayName={unitDisplayName}
-        /> */}
+        />
       </div>
     </Draggable>
   );

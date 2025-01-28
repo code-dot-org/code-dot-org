@@ -1,7 +1,15 @@
+import classNames from 'classnames';
 import React from 'react';
 
 import {Button} from '../componentLibrary/button';
-import {Heading3, Heading6} from '../componentLibrary/typography';
+import FontAwesomeV6Icon from '../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {
+  BodyThreeText,
+  BodyTwoText,
+  Heading3,
+  Heading6,
+  StrongText,
+} from '../componentLibrary/typography';
 
 import style from './ai-differentiation.module.scss';
 
@@ -30,6 +38,43 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     }
   }, [currentWelcomeState, setShowWelcomeExperience]);
 
+  const [selectedOption, setSelectedOption] = React.useState<
+    'plan' | 'create' | null
+  >(null);
+
+  const optionButton = React.useCallback(
+    (
+      selectionKey: 'plan' | 'create' | null,
+      iconName: string,
+      title: string,
+      description: string
+    ) => {
+      return (
+        <button
+          className={classNames(
+            style.optionRow,
+            selectionKey === selectedOption && style.selectedOption
+          )}
+          onClick={() => setSelectedOption(selectionKey)}
+          type="button"
+        >
+          <FontAwesomeV6Icon
+            iconName={iconName}
+            iconFamily="duotone"
+            className={style.optionIcon}
+          />
+          <div className={style.optionText}>
+            <BodyTwoText>
+              <StrongText>{title}</StrongText>
+            </BodyTwoText>
+            <BodyThreeText>{description}</BodyThreeText>
+          </div>
+        </button>
+      );
+    },
+    [selectedOption]
+  );
+
   const selectAnOptionPage = React.useCallback(() => {
     return (
       <div className={style.selectOption}>
@@ -38,8 +83,18 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
           <Heading6 className={style.selectOptionSubtitle}>
             Using AI in multiple ways increases productivity.
           </Heading6>
-          <span>Plan</span>
-          <span>Create</span>
+          {optionButton(
+            'plan',
+            'folder-tree',
+            'Plan',
+            'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
+          )}
+          {optionButton(
+            'create',
+            'file-pen',
+            'Create',
+            'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
+          )}
         </div>
         <div className={style.bottomButtons}>
           <Button
@@ -53,11 +108,12 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             onClick={() => setCurrentWelcomeState(WelcomeStates.practice)}
             text="Continue"
             className={style.continueButton}
+            disabled={!selectedOption}
           />
         </div>
       </div>
     );
-  }, []);
+  }, [optionButton, selectedOption]);
 
   const currentWelcomePage = React.useMemo(() => {
     switch (currentWelcomeState) {
