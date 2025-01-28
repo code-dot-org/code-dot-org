@@ -16,6 +16,8 @@
   box-sizing: border-box;
   color: $neutral_light;
   gap: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .slider {
@@ -45,6 +47,7 @@
 }
 
 .elementContainer {
+  position: relative;
   background-color: $neutral_dark;
   border-radius: 5px;
   padding: 10px;
@@ -52,9 +55,21 @@
   gap: 20px;
 }
 
+.stickerContainer {
+  margin: 20px 0;
+}
+
 .elementLabel {
   font-size: 12px;
   align-self: flex-end;
+}
+
+.elementTypeLabel {
+  position: absolute;
+  top: 3px;
+  right: 8px;
+  opacity: 0.6;
+  font-size: 10px;
 }
 
 .outputValue {

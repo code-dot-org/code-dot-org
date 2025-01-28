@@ -46,6 +46,7 @@ const Dials: React.FunctionComponent = () => {
             <div className={moduleStyles.outputValue}>
               {panelElement.currentValue}
             </div>
+            <div className={moduleStyles.elementTypeLabel}>output</div>
           </div>
         ) : panelElement.type === 'input' &&
           panelElement.variant === 'slider' ? (
@@ -64,6 +65,7 @@ const Dials: React.FunctionComponent = () => {
               color="white"
               className={moduleStyles.slider}
             />
+            <div className={moduleStyles.elementTypeLabel}>input</div>
           </div>
         ) : panelElement.type === 'input' && panelElement.variant === 'knob' ? (
           <div className={moduleStyles.elementContainer}>
@@ -82,7 +84,6 @@ const Dials: React.FunctionComponent = () => {
                 console.log(newValueRaw);
                 setInputValue(panelElement.id, newValueRaw);
               }}
-              className="relative w-16 h-16 outline-none"
             >
               <div>
                 <div
@@ -97,9 +98,10 @@ const Dials: React.FunctionComponent = () => {
                 </div>
               </div>
             </KnobHeadless>
+            <div className={moduleStyles.elementTypeLabel}>input</div>
           </div>
         ) : panelElement.type === 'sticker' ? (
-          <div>
+          <div className={moduleStyles.stickerContainer}>
             <img
               alt=""
               src={stickerImages[panelElement.id]}
