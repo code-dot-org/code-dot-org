@@ -114,51 +114,57 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     [selectedOption]
   );
 
-  const continueAndSkipButtons = React.useCallback(() => {
-    return (
-      <div className={style.bottomButtons}>
-        <Button
-          onClick={() => setCurrentWelcomeState(WelcomeStates.finished)}
-          text="Skip"
-          className={style.skipButton}
-          color="gray"
-          type="secondary"
-        />
-        <Button
-          onClick={() => setCurrentWelcomeState(WelcomeStates.practice)}
-          text="Continue"
-          className={style.continueButton}
-          disabled={!selectedOption}
-        />
-      </div>
-    );
-  }, [selectedOption]);
-
-  const selectAnOptionPage = React.useCallback(() => {
-    return (
-      <div className={style.selectOption}>
-        <div className={style.selectOptionPage}>
-          <Heading3>Pick a skill to practice</Heading3>
-          <Heading6 className={style.selectOptionSubtitle}>
-            Using AI in multiple ways increases productivity.
-          </Heading6>
-          {optionButton(
-            'plan',
-            'folder-tree',
-            'Plan',
-            'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
-          )}
-          {optionButton(
-            'create',
-            'file-pen',
-            'Create',
-            'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
-          )}
+  const continueAndSkipButtons = React.useCallback(
+    (nextState: WelcomeState) => {
+      return (
+        <div className={style.bottomButtons}>
+          <Button
+            onClick={() => setCurrentWelcomeState(WelcomeStates.finished)}
+            text="Skip"
+            className={style.skipButton}
+            color="gray"
+            type="secondary"
+          />
+          <Button
+            onClick={() => setCurrentWelcomeState(nextState)}
+            text="Continue"
+            className={style.continueButton}
+            disabled={!selectedOption}
+          />
         </div>
-        {continueAndSkipButtons()}
-      </div>
-    );
-  }, [optionButton, continueAndSkipButtons]);
+      );
+    },
+    [selectedOption]
+  );
+
+  const selectAnOptionPage = React.useCallback(
+    (nextState: WelcomeState) => {
+      return (
+        <div className={style.selectOption}>
+          <div className={style.selectOptionPage}>
+            <Heading3>Pick a skill to practice</Heading3>
+            <Heading6 className={style.selectOptionSubtitle}>
+              Using AI in multiple ways increases productivity.
+            </Heading6>
+            {optionButton(
+              'plan',
+              'folder-tree',
+              'Plan',
+              'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
+            )}
+            {optionButton(
+              'create',
+              'file-pen',
+              'Create',
+              'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
+            )}
+          </div>
+          {continueAndSkipButtons(nextState)}
+        </div>
+      );
+    },
+    [optionButton, continueAndSkipButtons]
+  );
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
@@ -177,7 +183,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
           suggestedPrompts={suggestedPrompts}
           disableEndButtons={true}
         />
-        {continueAndSkipButtons()}
+        {continueAndSkipButtons(WelcomeStates.end_page)}
       </div>
     );
   }, [
@@ -191,7 +197,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const currentWelcomePage = React.useMemo(() => {
     switch (currentWelcomeState) {
       case WelcomeStates.select_option:
-        return selectAnOptionPage();
+        return selectAnOptionPage(WelcomeStates.practice);
       case WelcomeStates.practice:
         return practicePage();
       case WelcomeStates.end_page:
