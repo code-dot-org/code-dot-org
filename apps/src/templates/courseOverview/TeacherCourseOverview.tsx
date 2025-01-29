@@ -145,7 +145,7 @@ const TeacherCourseOverview: React.FC = () => {
       return;
     }
 
-    if (!params.courseVersionName) {
+    if (selectedSection.courseVersionName !== params.courseVersionName) {
       navigate(
         generatePath('../' + TEACHER_NAVIGATION_PATHS.courseOverview, {
           courseVersionName: selectedSection.courseVersionName,
@@ -155,7 +155,7 @@ const TeacherCourseOverview: React.FC = () => {
       return;
     }
 
-    courseSummaryCachedLoader(params.courseVersionName)
+    courseSummaryCachedLoader(selectedSection.courseVersionName)
       .then(response => {
         if (response) {
           setCourseSummary(response.course_summary as CourseSummary);
