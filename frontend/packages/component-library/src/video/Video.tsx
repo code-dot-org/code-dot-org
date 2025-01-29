@@ -83,12 +83,12 @@ export const Video: React.FC<VideoProps> = ({
             // eslint-disable-next-line jsx-a11y/media-has-caption
             <video
               className={classNames(className)}
-              controls
+              title={videoTitle}
               poster={posterThumbnail}
+              src={videoFallback}
+              controls
               {...HTMLAttributes}
-            >
-              <source src={videoFallback} type="video/mp4" />
-            </video>
+            />
           ) : (
             <div className={classNames(moduleStyles.errorPlaceholder)}>
               <FontAwesomeV6Icon
