@@ -3,6 +3,7 @@ import React, {memo, useMemo, useState} from 'react';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatMessageDisplayText} from '@cdo/apps/aiComponentLibrary/chatMessage/utils';
+import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {ChatMessage as ChatMessageType} from '../types';
@@ -45,7 +46,8 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   // is used for both chat history and live chat.
   // TODO: Clean up types to separate server and client IDs.
   const commonProps = {...chatMessage, id: chatMessage.id!};
-  const footer = messageVisible ? (
+
+  const chatHistoryFooter = messageVisible ? (
     <CleanFeedbackFooter {...commonProps} />
   ) : userMessageProfanity ? (
     <ProfanityFeedbackFooter
@@ -56,12 +58,16 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       profaneMessageVisible={showProfaneUserMessage}
     />
   ) : null;
+  const defaultFooter =
+    messageVisible && chatMessage.role === Role.ASSISTANT ? (
+      <CopyButton copyText={chatMessage.chatMessageText} />
+    ) : null;
 
   return (
     <ChatMessage
       {...chatMessage}
       showProfaneUserMessage={showProfaneUserMessage}
-      footer={isChatHistoryView && footer}
+      footer={isChatHistoryView ? chatHistoryFooter : defaultFooter}
     />
   );
 };

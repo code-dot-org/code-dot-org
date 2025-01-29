@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, {memo} from 'react';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {EmText} from '@cdo/apps/componentLibrary/typography';
@@ -16,6 +17,7 @@ import moduleStyles from './teacher-feedback-footer.module.scss';
 
 interface Props {
   id: number;
+  chatMessageText: string;
   teacherFeedback?: FeedbackValue;
   role: Role;
 }
@@ -23,7 +25,12 @@ interface Props {
 /**
  * Teacher feedback footer displayed for messages without any profanity violations or errors.
  */
-const CleanFeedbackFooter: React.FC<Props> = ({id, teacherFeedback, role}) => {
+const CleanFeedbackFooter: React.FC<Props> = ({
+  id,
+  chatMessageText,
+  teacherFeedback,
+  role,
+}) => {
   const teacherFlagged = teacherFeedback === TeacherFeedback.CLEAN_DISAGREE;
   const dispatch = useAppDispatch();
   const handleFlagClick = () => {
@@ -75,6 +82,7 @@ const CleanFeedbackFooter: React.FC<Props> = ({id, teacherFeedback, role}) => {
           }
         />
       </WithTooltip>
+      {role === Role.ASSISTANT && <CopyButton copyText={chatMessageText} />}
     </div>
   );
 };
