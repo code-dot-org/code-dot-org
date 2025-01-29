@@ -17,7 +17,9 @@
     box-sizing: content-box;
     display: block;
 
-    iframe, video, .errorPlaceholder {
+    iframe,
+    video,
+    .errorPlaceholder {
       position: absolute;
       top: 0;
       left: 0;
