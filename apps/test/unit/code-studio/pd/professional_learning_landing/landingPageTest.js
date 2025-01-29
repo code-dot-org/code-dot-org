@@ -9,6 +9,7 @@ import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/pr
 import {
   buildGoogleCalendarLink,
   buildOutlookCalendarLink,
+  buildAppleCalendarLink,
 } from '@cdo/apps/code-studio/pd/workshop_enrollment/WorkshopEnrollmentCelebrationDialog';
 import {
   getStore,
@@ -480,6 +481,8 @@ describe('LandingPage', () => {
   });
 
   it('enroll success dialog shows buttons with links to add session to calendar for workshops with one session', () => {
+    window.URL.createObjectURL = () => 'testCreateObjectURL';
+
     const workshopCourse = 'TEST COURSE';
     const workshopLocation = 'Seattle, WA';
     const workshopSession = TEST_WORKSHOP_SESSIONS[0];
@@ -497,6 +500,22 @@ describe('LandingPage', () => {
       i18n.enrollmentCelebrationBody({workshopName: workshopCourse})
     );
     screen.getByText(i18n.addToYourCalendar());
+
+    // Add to Apple calendar button has expected download .ics file link
+    const expectedAppleCalendarDownload = buildAppleCalendarLink(
+      workshopSession,
+      workshopCourse,
+      workshopLocation
+    );
+    expect(
+      screen
+        .getByLabelText(
+          i18n.addToCalendarType({
+            calendar_type: 'Apple',
+          })
+        )
+        .getAttribute('href')
+    ).toBe(expectedAppleCalendarDownload);
 
     // Add to Google calendar button has expected link to add event to calendar
     const expectedGoogleCalendarLink = buildGoogleCalendarLink(
@@ -539,6 +558,8 @@ describe('LandingPage', () => {
   });
 
   it('enroll success dialog shows buttons that open dialog to add multiple sessions to calendar for workshops with multiple sessions', () => {
+    window.URL.createObjectURL = () => 'testCreateObjectURL';
+
     const workshopCourse = 'TEST COURSE';
     const workshopLocation = 'Seattle, WA';
     sessionStorage.setItem('workshopCourse', workshopCourse);
@@ -557,11 +578,45 @@ describe('LandingPage', () => {
     screen.getByText(i18n.addToYourCalendar());
 
     // Calendar buttons are not links
+    expect(screen.queryByRole('link', {name: 'Apple'})).toBe(null);
     expect(screen.queryByRole('link', {name: 'Google'})).toBe(null);
     expect(screen.queryByRole('link', {name: 'Outlook'})).toBe(null);
 
-    // Can open dialog to add multiple sessions to Google calendar
+    // Can open dialog to add multiple sessions to Apple calendar
+    fireEvent.click(screen.getByRole('button', {name: 'Apple'}));
+
+    screen.getByText(i18n.enrollmentCelebrationAddToCalendarTitle());
+    const appleCalendarDownloadLinks = screen
+      .getAllByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Apple',
+        })
+      )
+      .map(button => {
+        return button.getAttribute('href');
+      });
+
+    const expectedAppleCalendarDownloadLinks = TEST_WORKSHOP_SESSIONS.map(
+      session => {
+        return buildAppleCalendarLink(
+          session,
+          workshopCourse,
+          workshopLocation
+        );
+      }
+    );
+    expect(appleCalendarDownloadLinks).toStrictEqual(
+      expectedAppleCalendarDownloadLinks
+    );
+
+    // Can close the Apple calendar dialog with the 'Change calendar' button and open the Google calendar dialog
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: i18n.enrollmentCelebrationChangeCalendarButton(),
+      })
+    );
     fireEvent.click(screen.getByRole('button', {name: 'Google'}));
+
     screen.getByText(i18n.enrollmentCelebrationAddToCalendarTitle());
     const googleCalendarButtonLinks = screen
       .getAllByLabelText(
