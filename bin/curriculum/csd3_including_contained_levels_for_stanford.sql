@@ -199,7 +199,7 @@ from activity_level_details  cs
          left join dashboard_production_pii.users u on ul.user_id = u.id
 where
     ul.attempts > 0
-    and cs.level_name = 'CSD U3 Conditionals Apple 2_2023'
+--  and cs.level_name = 'CSD U3 Conditionals Apple 2_2023'
     and cs.script_name = 'csd3-2023'
 --  and ul.submitted = 1
 --  and sy.school_year in ('2023-24')
