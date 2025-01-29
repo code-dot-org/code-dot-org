@@ -675,6 +675,14 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    namespace :marketing do
+      namespace :v1 do
+        controller :marketing do
+          get 'teacher-dashboard', action: :teacher_dashboard
+        end
+      end
+    end
+
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
 
