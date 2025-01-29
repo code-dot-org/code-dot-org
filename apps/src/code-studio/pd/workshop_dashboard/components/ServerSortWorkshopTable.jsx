@@ -13,8 +13,8 @@ import {
   DATE_ORDER_DESC,
 } from '@cdo/apps/code-studio/pd/constants';
 
-import WorkshopTable from './workshop_table';
 import WorkshopTableLoader from './workshop_table_loader';
+import WorkshopTable from './WorkshopTable';
 
 export default class ServerSortWorkshopTable extends React.Component {
   static propTypes = {
