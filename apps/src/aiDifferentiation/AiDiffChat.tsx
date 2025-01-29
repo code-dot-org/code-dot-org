@@ -17,27 +17,35 @@ import style from './ai-differentiation.module.scss';
 
 const INITIAL_CHAT_MESSAGE = `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`;
 
+export const EXPLAIN_CONCEPT_PROMPT = {
+  label: 'Explain a concept',
+  prompt:
+    'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
+};
+
+export const EXAMPLE_PROMPT = {
+  label: 'Give an example to use with my class',
+  prompt:
+    'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
+};
+
+export const FINISH_EARLY_PROMPT = {
+  label: 'Write an extension activity for students who finish early',
+  prompt:
+    'Write an extension activity for this lesson for students who finish early',
+};
+
+export const EXTRA_PRACTICE_PROMPT = {
+  label: 'Write an extension activity for students who need extra practice',
+  prompt:
+    'Write an extension activity for this lesson for students who need extra practice',
+};
+
 const SUGGESTED_PROMPTS = [
-  {
-    label: 'Explain a concept',
-    prompt:
-      'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
-  },
-  {
-    label: 'Give an example to use with my class',
-    prompt:
-      'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
-  },
-  {
-    label: 'Write an extension activity for students who finish early',
-    prompt:
-      'Write an extension activity for this lesson for students who finish early',
-  },
-  {
-    label: 'Write an extension activity for students who need extra practice',
-    prompt:
-      'Write an extension activity for this lesson for students who need extra practice',
-  },
+  EXPLAIN_CONCEPT_PROMPT,
+  EXAMPLE_PROMPT,
+  FINISH_EARLY_PROMPT,
+  EXTRA_PRACTICE_PROMPT,
 ];
 
 interface AiDiffChatProps {

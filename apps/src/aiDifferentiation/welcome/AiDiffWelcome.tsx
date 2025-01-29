@@ -10,7 +10,12 @@ import {
   Heading6,
   StrongText,
 } from '../../componentLibrary/typography';
-import AiDiffChat from '../AiDiffChat';
+import AiDiffChat, {
+  EXAMPLE_PROMPT,
+  EXPLAIN_CONCEPT_PROMPT,
+  EXTRA_PRACTICE_PROMPT,
+  FINISH_EARLY_PROMPT,
+} from '../AiDiffChat';
 import {ChatPrompt} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
@@ -35,30 +40,14 @@ const SUGGESTED_PROMPTS_FOR_SELECTION: {
   [selection: string]: {initialMessage: string; suggestedPrompts: ChatPrompt[]};
 } = {
   plan: {
-    initialMessage: 'PLANNING',
-    suggestedPrompts: [
-      {
-        label: 'prompt 1 planning',
-        prompt: '',
-      },
-      {
-        label: 'prompt 2 planning',
-        prompt: '',
-      },
-    ],
+    initialMessage:
+      'Lets iterate together! What would you like to change? Below are some of the tasks I can help you with.',
+    suggestedPrompts: [EXPLAIN_CONCEPT_PROMPT, EXAMPLE_PROMPT],
   },
   create: {
-    initialMessage: 'CREATING',
-    suggestedPrompts: [
-      {
-        label: 'prompt 1 creating',
-        prompt: '',
-      },
-      {
-        label: 'prompt 2 creating',
-        prompt: '',
-      },
-    ],
+    initialMessage:
+      'Lets work together to create resources for your classroom! What would you like help creating? Below are some of the tasks I can help you with.',
+    suggestedPrompts: [FINISH_EARLY_PROMPT, EXTRA_PRACTICE_PROMPT],
   },
 };
 
