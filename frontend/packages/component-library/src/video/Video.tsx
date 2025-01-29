@@ -2,7 +2,7 @@ import {useState, useEffect, HTMLAttributes} from 'react';
 import classNames from 'classnames';
 
 import moduleStyles from './video.module.scss';
-import LinkButton from '../button/LinkButton';
+import {LinkButton} from '@/button';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {BodyTwoText, BodyThreeText, Figcaption, StrongText} from '@/typography';
 
@@ -29,13 +29,13 @@ export interface VideoProps extends HTMLAttributes<HTMLElement> {
 
 /**
  * ### Production-ready Checklist:
- * * (✘) implementation of component approved by design team;
- * * (✘) has storybook, covered with stories and documentation;
- * * (✘) has tests: test every prop, every state and every interaction that's js related;
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see ./__tests__/Video.test.tsx)
- * * (✘) passes accessibility checks;
+ * * (✔) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Video Component.
  * This component is used to display a video from YouTube with a fallback HTML video player,
@@ -61,12 +61,10 @@ export const Video: React.FC<VideoProps> = ({
   // If it is, we'll use the fallback video player.
   useEffect(() => {
     const checkYouTubeUrls = async () => {
-      const isYouTubeBlocked = await checkIfURLIsBlocked(
-        'https://www.youtube.com/favicon.ico',
-      );
-      const isYouTubeNoCookieBlocked = await checkIfURLIsBlocked(
-        'https://www.youtube-nocookie.com/favicon.ico',
-      );
+      const [isYouTubeBlocked, isYouTubeNoCookieBlocked] = await Promise.all([
+        checkIfURLIsBlocked('https://www.youtube.com/favicon.ico'),
+        checkIfURLIsBlocked('https://www.youtube-nocookie.com/favicon.ico'),
+      ]);
 
       setIsYouTubeBlocked(isYouTubeBlocked || isYouTubeNoCookieBlocked);
     };
