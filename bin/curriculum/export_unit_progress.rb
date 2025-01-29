@@ -82,6 +82,26 @@ rescue => exception
   raise
 end
 
+def add_channel_ids(results, unit_id, level_id)
+  puts "Looking up channel ids..."
+  start_time = Time.now
+  if Rails.env.production?
+    channel_map = get_channel_map(unit_id, level_id)
+    results = results.map do |row|
+      row[:channel_id] = channel_map[row['user_id']]
+      row
+    end
+  else
+    # can't use redshift in development because it won't match our local db
+    results = results.map do |row|
+      row[:channel_id] = get_project_channel_id(row['user_id'], row['level_id'], row['script_id'])
+      row
+    end
+  end
+  puts "Channel id lookups completed in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count}"
+  results
+end
+
 def get_project_channel_id(user_id, level_id, script_id)
   user_storage_id = storage_id_for_user_id(user_id)
   return unless user_storage_id
@@ -201,15 +221,7 @@ def main
 
   results = fetch_progress(unit_id: unit_id, level_id: level_id, limit: limit)
 
-  puts "Looking up channel ids..."
-  start_time = Time.now
-  channel_map = get_channel_map(unit_id, level_id)
-  # TODO: optimize via Parallel.map?
-  results = results.map do |row|
-    row[:channel_id] = channel_map[row['user_id']]
-    row
-  end
-  puts "Channel id lookups completed in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count}"
+  results = add_channel_ids(results, unit_id, level_id)
 
   puts "Processing source..."
   start_time = Time.now
