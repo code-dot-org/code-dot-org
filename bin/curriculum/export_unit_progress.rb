@@ -35,7 +35,7 @@ puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 $comprehend = Aws::Comprehend::Client.new
 $pii_threshold = 0.7
 
-$max_threads = 100
+$max_processes = 100
 
 def fetch_progress
   if Rails.env.production?
@@ -193,7 +193,7 @@ def main
     mutex = Mutex.new
 
     # parallelize network requests to projects API and AWS Comprehend
-    Parallel.each(results, in_threads: $max_threads) do |row|
+    Parallel.each(results, in_processes: $max_processes) do |row|
       row[:source] = get_project_source(row[:channel_id])
 
       process_row_pii(row)
@@ -206,7 +206,7 @@ def main
       end
     end
   end
-  puts "Processed source in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count} threads: #{$max_threads}"
+  puts "Processed source in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count} processes: #{$max_processes}"
 end
 
 main
