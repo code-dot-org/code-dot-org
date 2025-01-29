@@ -21,7 +21,6 @@ let callbacks: {[key: string]: (event: PyodideMessage) => void} = {};
 const appName = 'pythonlab';
 let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
-console.log('just reset last input id');
 let setupPromise: Promise<void> | undefined;
 
 const setUpPyodideWorker = () => {
@@ -122,18 +121,9 @@ const registerServiceWorker = async () => {
         // @ts-expect-error because TypeScript does not like this syntax.
         import.meta.url
       );
-      navigator.serviceWorker.getRegistrations().then(registrations => {
-        for (const registration of registrations) {
-          if (registration.active?.scriptURL === url.href) {
-            registration.unregister();
-          }
-        }
-      });
-      console.log({url});
       const registration = await navigator.serviceWorker.register(url);
       if (registration.active) {
         inputServiceWorker = registration.active;
-        console.log({inputServiceWorker});
       }
 
       registration.addEventListener('updatefound', () => {
@@ -152,7 +142,6 @@ const registerServiceWorker = async () => {
 
     navigator.serviceWorker.onmessage = event => {
       if (event.data.type === AWAITING_INPUT) {
-        console.log(`received input request, id is ${event.data.id}`);
         if (event.source instanceof ServiceWorker) {
           // Update the service worker reference, in case the service worker is different to the one we registered
           inputServiceWorker = event.source;
@@ -215,12 +204,10 @@ const restartPyodideIfProgramIsRunning = () => {
 };
 
 const sendInput = (value: string): void => {
-  console.log(`sending input ${value}, last input id is ${lastInputId}`);
   if (!canSupportInput()) {
     return;
   }
   if (lastInputId === '') {
-    console.log('last input id was empty');
     console.error('Worker not awaiting input');
     return;
   }
