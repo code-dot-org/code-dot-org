@@ -99,8 +99,7 @@ export const Video: React.FC<VideoProps> = ({
                 <StrongText>{errorHeading || 'Video unavailable'}</StrongText>
               </BodyTwoText>
               <BodyThreeText>
-                {errorBody ||
-                  'This video is blocked on your network, learn more here.'}
+                {errorBody || 'This video is blocked on your network.'}
               </BodyThreeText>
             </div>
           )
