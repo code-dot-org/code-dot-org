@@ -1,5 +1,4 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 import {generatePath} from 'react-router-dom';
 
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
@@ -25,15 +24,11 @@ interface LessonMaterialsEmptyStateProps {
 export const LessonMaterialsEmptyState: React.FC<
   LessonMaterialsEmptyStateProps
 > = ({isLegacyScript, hasNoLessonsWithLessonPlans}) => {
-  const unitName = useSelector(
-    (state: {unitSelection: {unitName: string}}) => state.unitSelection.unitName
-  );
-
   const selectedSection = useAppSelector(selectedSectionSelector);
   const showNoCurriculumAssigned = !selectedSection.courseOfferingId;
   const emptyStateDetails = generateLessonMaterialsEmptyState(
     showNoCurriculumAssigned,
-    unitName,
+    selectedSection.unitName,
     selectedSection,
     isLegacyScript,
     hasNoLessonsWithLessonPlans
