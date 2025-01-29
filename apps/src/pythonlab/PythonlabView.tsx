@@ -182,11 +182,11 @@ const PythonlabView: React.FunctionComponent = () => {
     <div className={moduleStyles.pythonlab}>
       {source && (
         <Codebridge
-          project={source}
+          source={source}
           config={config}
           setProject={setProject}
           setConfig={setConfig}
-          startSource={startSources}
+          startSources={startSources}
           onRun={onRun}
           onStop={stopPythonCode}
           projectVersion={projectVersion}

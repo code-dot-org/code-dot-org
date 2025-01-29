@@ -26,6 +26,7 @@ import {
   detectToxicityInCustomizations,
   getStudentChatHistory,
   postAichatCompletionMessage,
+  postSubmitTeacherFeedback,
 } from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes, saveTypeToAnalyticsEvent} from '../constants';
@@ -45,6 +46,8 @@ import {
   isChatMessage,
   FlaggedField,
   DetectToxicityResponse,
+  ChatCompletionApiResponse,
+  FeedbackValue,
 } from '../types';
 import {extractFieldsToCheckForToxicity} from '../utils';
 import {
@@ -402,6 +405,32 @@ export const addChatEvent =
     }
   };
 
+// This thunk's callback function submits teacher feedback on a chat message.
+export const submitTeacherFeedback = createAsyncThunk<
+  void,
+  {id: number; feedback: FeedbackValue | undefined},
+  {dispatch: AppDispatch}
+>('aichat/submitTeacherFeedback', async ({id, feedback}, {dispatch}) => {
+  try {
+    await postSubmitTeacherFeedback(id, feedback);
+    dispatch(
+      sendAnalytics(EVENTS.SUBMIT_AICHAT_TEACHER_FEEDBACK, {
+        levelPath: window.location.pathname,
+        feedback: feedback,
+      })
+    );
+    dispatch(updateChatMessageFeedback({id, feedback}));
+  } catch (error) {
+    // Only send log report if not a 403 error.
+    if (!(error instanceof NetworkError && error.response.status === 403)) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error submitting teacher feedback', error as Error);
+    }
+    return;
+  }
+});
+
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
@@ -430,7 +459,7 @@ export const submitChatContents = createAsyncThunk(
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
 
-    let chatApiResponse;
+    let chatApiResponse: ChatCompletionApiResponse;
     try {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -634,6 +663,18 @@ const aichatSlice = createSlice({
 
       const {index, messageListKey} = modelUpdateMessageInfo;
       state[messageListKey].splice(index, 1);
+    },
+    updateChatMessageFeedback: (
+      state,
+      action: PayloadAction<{id: number; feedback: FeedbackValue | undefined}>
+    ) => {
+      const messageToUpdate = state.studentChatHistory.find(
+        message => message.id === action.payload.id
+      );
+
+      if (messageToUpdate && isChatMessage(messageToUpdate)) {
+        messageToUpdate.teacherFeedback = action.payload.feedback;
+      }
     },
     clearChatMessages: state => {
       state.chatEventsPast = [];
@@ -847,6 +888,7 @@ const {
   setChatMessagePending,
   clearChatMessagePending,
   setSavedAiCustomizations,
+  updateChatMessageFeedback,
 } = aichatSlice.actions;
 
 registerReducers({aichat: aichatSlice.reducer});

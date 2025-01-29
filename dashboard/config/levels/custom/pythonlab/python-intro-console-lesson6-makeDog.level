@@ -1,0 +1,61 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-22T17:35:14.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Make a pet\r\n\r\n\r\n\r\n✅ **TO DO #1:** Create a pet object by adding <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"pet = Pet()\"</code> to you code. \r\n\r\n✅ **TO DO #2:** What kind of animal is your pet? Change the animal <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"sloth\"</code> to a something else.\r\n\r\n✅ **TO DO #3:** Give your pet a new name. Change the name <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Buddy\"</code> to a different name.\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Import the support file\nfrom support import Pet\n\n# Create the Pet object\n# Add your code here\n\n# Change the pet type\npet.set_pet_type(\"sloth\")\n\n# Name the pet\npet.set_name(\"Buddy\")\n\n# Describe the pet\npet.describe()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "support.py",
+          "language": "py",
+          "contents": "class Pet:\n    def __init__(self, pet_type=\"dog\", name=\"Buddy\"):\n        self.pet_type = pet_type\n        self.name = name\n\n    def set_pet_type(self, pet_type):\n        self.pet_type = pet_type\n        print(f\"You now have a {self.pet_type}.\")\n\n    def set_name(self, name):\n        self.name = name\n        print(f\"Your {self.pet_type}'s name is now {self.name}.\")\n\n    def describe(self):\n        print(f\"This is {self.name}, your {self.pet_type}.\")",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "validation_file": {
+      "id": "2",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\nimport io\nfrom contextlib import redirect_stdout\nfrom support import Pet\n\n\nclass TestMain(unittest.TestCase):\n\n    def test_pet_object_created(self):\n        \"\"\"Check if the pet object was created.\"\"\"\n        exec_globals = {}\n        exec(open(\"main.py\").read(), exec_globals)\n\n        # Ensure the 'pet' object exists\n        self.assertIn(\"pet\", exec_globals, \"The 'pet' object was not created in main.py.\")\n        pet = exec_globals[\"pet\"]\n        self.assertIsInstance(pet, Pet, \"The 'pet' object is not an instance of the Pet class.\")\n\n    def test_pet_type_changed(self):\n        \"\"\"Check if the pet type was changed to something other than 'sloth'.\"\"\"\n        exec_globals = {}\n        exec(open(\"main.py\").read(), exec_globals)\n\n        pet = exec_globals[\"pet\"]\n        self.assertNotEqual(pet.pet_type, \"sloth\", \"The pet type should be changed to something other than 'sloth'.\")\n        self.assertNotEqual(pet.pet_type, \"\", \"The pet type should not be an empty string.\")\n\n    def test_pet_name_changed(self):\n        \"\"\"Check if the pet name was changed to something other than 'Buddy'.\"\"\"\n        exec_globals = {}\n        exec(open(\"main.py\").read(), exec_globals)\n\n        pet = exec_globals[\"pet\"]\n        self.assertNotEqual(pet.name, \"Buddy\", \"The pet's name should be changed to something other than 'Buddy'.\")\n        self.assertNotEqual(pet.name, \"\", \"The pet's name should not be an empty string.\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFSi4aaBiEaakp8IBSnq60mXm1w1Rj4e2pq0O0PCF\ng8UNBLB/C7qioiEoHQhKPj2l1P8axn0aNoejw5N6Wb00FQ7yZjWUkPRNE5Ef\neM3uKz7jkSLRv/WKPMZmCfy9K1ut8P7N3T0yWba2tZoHvFjp2kRap/MtKAMc\nz+pQeeEvkTVpnOZ5uXYrVphWXUTJ8ZDteJdZYsMHtVJx3E3Pue1sQVf8iu+W\n+gJGDnxI32izMFHmguyb+BzoabELiK0+SIzAqIj74rd6GauOEy8FAvuWEKbh\nGidfUFpEy6H2XTsaBQn3UK7sA0B8ha0ievROKCdZgMxwNSGChDBnj9bhKRsS\ngItpdXDiAXU6EcoRHVJ/yDNu6MxC0MF+MqAISCQx6b+a26iny+Yt2St0B918\nqJFBVda52HsLeVAL8JnSTf6RHQk8sftsqHBIdxxMxwwDKuRVAdawqfRpAF+1\nHCzoplRhl7OMf+1UhNaZyJ/pcr80C55OuK0N0FxPQ8imwkf2C9Sv/oeypU+F\nuY7KdybtXkPpbKAScC8NKxOL6vhZPYThuMpu9iFJOj6LhbO70XaP/huxmofb\n8NEGypE93NhRE5qqpwV2cjO0yIWxdfLxbeD9V2h+HN3E60CEsoklj0REebUC\nr2LacLHE8TdlLZkGyehcq6pWLecug4+BkbMiXtOsAVwEAS6a4R9P3wGso70S\nWApYKOP+Bk6QkgarWB7xutccxFFWXx3f2PvYyUPplB7Wb+pMlDOrvNr3abRC\nF0Rb2xvd0XCMr8ZWZtrkAWdubrjzMF+vxE3899WHVMI0ThF4bqVarF2tZOzC\nY6Z6FSwl3LWnRFCTQetNdtPvEODnmOVG3oCnT5qG5AfSSlYQZb/U5bPHbYbX\na/LGnwZUZl5Zqsg4qEKcDQVKQ66fgOVfCZbQr+N8Vh1kbQF0fSQXPmq4OfdQ\n7uGeCYLLX7P4FSEox4SgBMdACd3PMutAUYLwU+INdH66eMYQ4hG8DarsaLVL\nd7DuwB5aQONy1l2U1qPIC/V9BtSIMoX1WlCVkx5kgd0oF07vInNIaB3t7tkR\nf9S/O68jco4tE1sKZMxoPwVdkZJcyfacN+H3+I2kdgk7Sed5quCs4GtQuZ6w\n/1hTsF/N1yJn+QOfmcgFEoX34c4BAA5zywlHoPLdX6g5PYkWvlEshtA=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-22T17:35:14.815+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson6-dogTricks\\\"\"],\"cloned_from\":\"python-intro-console-lesson6-dogTricks\"},{\"changed_at\":\"2025-01-22 17:44:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 17:47:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 17:53:22 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 17:54:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 17:56:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

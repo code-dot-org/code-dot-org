@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-01-07T23:37:29.000Z",
   "level_num": "custom",
@@ -196,7 +197,7 @@
         ]
       }
     },
-    "long_instructions": "### <i class=\"fa-solid fa-bolt\"></i> Trigger the music for a power up! \r\n1. Add the [powerUp](#clickable=flyout-first-block) function under the [trigger](#clickable=id:trigger_1). \r\n2. Press [Run](#clickable=run-button) to start the background music.\r\n3. Press the [1](#clickable=trigger-button-1) trigger to start the Power Up music!",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\n##### This level provides an opportunity to revisit a key concept: functions. Remind students that defining a function alone is not enough—it must be called for it to execute.\r\n\r\n\r\n### <i class=\"fa-solid fa-bolt\"></i> Trigger the music for a power up! \r\n1. Add the [powerUp](#clickable=flyout-first-block) function under the [trigger](#clickable=id:trigger_1). \r\n2. Press [Run](#clickable=run-button) to start the background music.\r\n3. Press the [1](#clickable=trigger-button-1) trigger to start the Power Up music!",
     "validations": [
       {
         "key": "music-coding-intro-event-function_6ac8d0df-d8f7-489a-9f29-b79b2e8fd1bc",
@@ -224,8 +225,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:29.536+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function\\\"\"],\"cloned_from\":\"music-coding-intro-event-function\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:29.536+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function\\\"\"],\"cloned_from\":\"music-coding-intro-event-function\"},{\"changed_at\":\"2025-01-23 23:58:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

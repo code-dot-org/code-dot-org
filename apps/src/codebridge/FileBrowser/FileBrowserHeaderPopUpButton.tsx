@@ -16,11 +16,11 @@ import {
 export const FileBrowserHeaderPopUpButton = () => {
   const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
   const {
-    project,
+    source,
     config: {validMimeTypes},
   } = useCodebridgeContext();
   const uploadErrorCallback = useFileUploadErrorCallback();
-  const handleFileUpload = useHandleFileUpload(project.files);
+  const handleFileUpload = useHandleFileUpload(source.files);
 
   const {startFileUpload, FileUploaderComponent} = useFileUploader({
     callback: handleFileUpload,

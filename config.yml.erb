@@ -357,7 +357,7 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net https://*.lausd.iap.allhere.co'
+allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net'
 
 skip_locales:
 secret_pictures_csv:
@@ -610,7 +610,14 @@ cdo_amplitude_api_key:
 ddconf_api_key: !Secret
 
 # JSON Web Key Set and private key data
-jwks_data: <%=File.read("#{File.expand_path(File.dirname(__FILE__))}/dashboard/public/oauth/jwks.json")%>
+jwks_data:
+  keys:
+    - kty: "RSA"
+      n: "o-pwMF3Hf7iy_Rev-XEf4aPxCYxYiOevIXZVrQuQPVU8JE80XcNlrq8az8c3afp4G79nAVRWDxWTsYQXTNnr-HEBBklO_w5M-h6wIgMCnA9VDJtATgIlqNJ5hIQ37U_1Mmw3oLYJVXaKhkjD-GNFTF0r6rKjeAOp4sWoKTn83r2Tyi8ZGM2l3IQ9NYsurFrAT7DALu01V5EsM_sdBezc6r-LkGyTkIQqS4qDV7qesJE9cUe2FVXfnedWLeYBCsq-tIh50XVMB1FMFa97kN3UfS3rigQYAq-LkDc3e7rHB0DqduHJNZKiHBoYOra484N4nmDYj-cSoBkDzhyu84ni4w"
+      e: "AQAB"
+      use: "sig"
+      alg: "RS256"
+      kid: "yNt3MOdUenNV_bn6IKboK2d8iJBL2hDJ_RoMhUtO33Q"
 jwk_private_key_data: !Secret
 
 # Credentials for OpenAI API
@@ -649,8 +656,8 @@ active_job_queues:
 active_job_queue_adapter: :delayed_job
 
 # Number of workers to start when running `rake build:start_active_job_workers`:
-active_job_backend_n_workers_to_start: 2
-active_job_backend_rolling_restart_in_n_batches: 1
+active_job_backend_n_workers_to_start: 10
+active_job_backend_rolling_restart_in_n_batches: 2
 
 # aiproxy credentials
 aiproxy_api_key: !Secret

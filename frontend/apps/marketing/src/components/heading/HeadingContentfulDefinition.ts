@@ -1,0 +1,42 @@
+// Creates a definition for the Typography component to be used in Contentful Studio
+import {ComponentDefinition} from '@contentful/experiences-sdk-react';
+
+export const HeadingContentfulComponentDefinition: ComponentDefinition = {
+  id: 'heading',
+  name: 'Heading',
+  category: 'Typography',
+  thumbnailUrl:
+    'https://images.ctfassets.net/90t6bu6vlf76/LHRmOBd4IWYZuWScbJG3i/4fb4414e967bbca7aedd303d9409f03e/component_heading_thumbnail.png',
+  tooltip: {
+    description:
+      'Use a heading to introduce a section or key content. Choose from different levels to maintain a clear content hierarchy.',
+    imageUrl:
+      'https://images.ctfassets.net/90t6bu6vlf76/3kSwyMuHssbpZtr0hUAKyf/1f4d22b8e8bf3037bda3ff58d03ce293/component_heading_tooltip.png',
+  },
+  builtInStyles: ['cfTextAlign', 'cfTextUnderline', 'cfWidth'],
+  variables: {
+    visualAppearance: {
+      displayName: 'Visual Appearance',
+      type: 'Text',
+      defaultValue: 'heading-xxl',
+      group: 'style',
+      validations: {
+        in: [
+          {value: 'heading-xxl', displayName: 'Heading 1'},
+          {value: 'heading-xl', displayName: 'Heading 2'},
+          {value: 'heading-lg', displayName: 'Heading 3'},
+          {value: 'heading-md', displayName: 'Heading 4'},
+          {value: 'heading-sm', displayName: 'Heading 5'},
+          {value: 'heading-xs', displayName: 'Heading 6'},
+        ],
+      },
+    },
+    children: {
+      displayName: 'Content',
+      type: 'Text',
+      defaultValue: 'Heading',
+      group: 'content',
+      required: true,
+    },
+  },
+};

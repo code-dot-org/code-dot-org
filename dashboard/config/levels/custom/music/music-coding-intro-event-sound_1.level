@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-01-07T23:37:29.000Z",
   "level_num": "custom",
@@ -114,7 +115,7 @@
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
-    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-volume\"></i> Trigger a sound!\r\n1. Connect a [sound](#clickable=play-sound-block) block to the trigger event.\r\n2. Choose a sound effect.\r\n2. Press [Run](#clickable=run-button) to start the background music.\r\n3. Then press the [1](#clickable=trigger-button-1) trigger to play the sound effect.",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\n##### Students often think their code isn't working even after adding a [sound](#clickable=play-sound-block) block to the [1](#clickable=trigger-button-1) trigger. To clarify, use a remote control as an example: pressing a button triggers an action, like changing the channel. Similarly, in coding, an event (like clicking a button) triggers specific code to run, and the action can vary depending on the context, just as a remote button's function depends on the mode. Remind students that they need to press the button for the code to execute.\r\n____\r\n\r\n####<i class=\"fa-duotone fa-solid fa-volume\"></i> Trigger a sound!\r\n1. Connect a [sound](#clickable=play-sound-block) block to the trigger event.\r\n2. Choose a sound effect.\r\n2. Press [Run](#clickable=run-button) to start the background music.\r\n3. Then press the [1](#clickable=trigger-button-1) trigger to play the sound effect.",
     "validations": [
       {
         "key": "music-coding-intro-event-sound_1f86fd90-3a5e-4101-a29a-1a64d1e53962",
@@ -142,8 +143,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:29.328+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-sound\\\"\"],\"cloned_from\":\"music-coding-intro-event-sound\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:29.328+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-sound\\\"\"],\"cloned_from\":\"music-coding-intro-event-sound\"},{\"changed_at\":\"2025-01-23 23:55:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

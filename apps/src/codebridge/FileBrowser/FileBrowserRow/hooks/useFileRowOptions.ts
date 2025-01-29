@@ -44,7 +44,7 @@ export const useFileRowOptions = (
   hasValidationFile: boolean
 ) => {
   const {
-    project: {files: projectFiles, folders: projectFolders},
+    source: {files: projectFiles, folders: projectFolders},
     config: {editableFileTypes},
   } = useCodebridgeContext();
 

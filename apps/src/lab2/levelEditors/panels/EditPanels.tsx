@@ -119,6 +119,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
         <div className={moduleStyles.fullSizeContainer}>
           <PanelsView
             panels={panels}
+            background={'light'}
             onContinue={onContinue}
             targetWidth={1920}
             targetHeight={1080}
