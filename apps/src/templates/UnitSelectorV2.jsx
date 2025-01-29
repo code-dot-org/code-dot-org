@@ -33,6 +33,7 @@ const recordEvent = (eventName, sectionId, dataJson = {}) => {
 };
 
 function UnitSelectorV2({
+  filterToSelectedCourse = false,
   sectionId,
   scriptId,
   coursesWithProgress,
@@ -41,6 +42,7 @@ function UnitSelectorV2({
   asyncLoadCoursesWithProgress,
   isLoadingCourses,
   isLoadingSectionData,
+  selectedSectionCourse,
 }) {
   // Reload courses with progress when selected section changes.
   React.useEffect(() => {
@@ -70,13 +72,17 @@ function UnitSelectorV2({
     [unitId, setScriptId, sectionId]
   );
 
-  const itemGroups = coursesWithProgress.map(version => ({
-    label: version.display_name,
-    groupItems: version.units.map(unit => ({
-      value: unit.id,
-      text: unit.name,
-    })),
-  }));
+  const itemGroups = coursesWithProgress
+    .filter(
+      version => !filterToSelectedCourse || version.id === selectedSectionCourse
+    )
+    .map(version => ({
+      label: version.display_name,
+      groupItems: version.units.map(unit => ({
+        value: unit.id,
+        text: unit.name,
+      })),
+    }));
 
   const loadingDropdown = () => (
     <div
@@ -109,6 +115,7 @@ function UnitSelectorV2({
 }
 
 UnitSelectorV2.propTypes = {
+  filterToSelectedCourse: PropTypes.bool,
   scriptId: PropTypes.number,
   sectionId: PropTypes.number,
   coursesWithProgress: PropTypes.array.isRequired,
@@ -117,6 +124,7 @@ UnitSelectorV2.propTypes = {
   asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
   isLoadingCourses: PropTypes.bool,
   isLoadingSectionData: PropTypes.bool.isRequired,
+  selectedSectionCourse: PropTypes.any,
 };
 
 export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
@@ -128,6 +136,9 @@ export default connect(
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,
     isLoadingSectionData: state.teacherSections.isLoadingSectionData,
+    selectedSectionCourse:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+        ?.courseVersionId,
   }),
   dispatch => ({
     setScriptId(scriptId) {

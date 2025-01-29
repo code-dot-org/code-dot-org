@@ -2,6 +2,8 @@
 // Tab specific reducers can import actions from this file
 // if they need to respond to a script changing.
 
+import HttpClient from '../util/HttpClient';
+
 // Action type constants
 export const SET_SCRIPT = 'unitSelection/SET_SCRIPT';
 export const SET_UNIT_NAME = 'unitSelection/SET_UNIT_NAME';
@@ -15,7 +17,6 @@ const SET_LOADED_SECTION_ID = 'unitSelection/SET_LOADED_SECTION_ID';
 
 // Action creators
 export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
-export const setUnitName = unitName => ({type: SET_UNIT_NAME, unitName});
 export const setCoursesWithProgress = coursesWithProgress => ({
   type: SET_COURSES,
   coursesWithProgress,
@@ -49,10 +50,8 @@ const getSelectedUnit = state => {
   return unit;
 };
 
-export const getSelectedScriptName = state => {
-  return getSelectedUnit(state)
-    ? getSelectedUnit(state).key
-    : null || state.unitSelection.unitName;
+export const getSelectedUnitName = state => {
+  return getSelectedUnit(state) ? getSelectedUnit(state).key : null;
 };
 
 /* Get the user friendly name of a script(the unit or course name) */
@@ -83,19 +82,8 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
   }
   dispatch(startLoadingCoursesWithProgress());
 
-  fetch(`/dashboardapi/section_courses/${selectedSection.id}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8',
-    },
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Error(${response.status}: ${response.statusText})`);
-      }
-
-      return response.json();
-    })
+  HttpClient.fetchJson(`/dashboardapi/section_courses/${selectedSection.id}`)
+    .then(response => response?.value)
     .then(coursesWithProgress => {
       // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
       const reorderedCourses = [
@@ -119,7 +107,6 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
 // Initial state of unitSelectionRedux
 const initialState = {
   scriptId: null,
-  unitName: null,
   coursesWithProgress: [],
   isLoadingCoursesWithProgress: false,
   loadedSectionId: null,
@@ -134,6 +121,8 @@ export default function unitSelection(state = initialState, action) {
     return {
       ...state,
       coursesWithProgress: action.coursesWithProgress,
+      // This automatically selects the first unit of the first course
+      // unless a scriptId is already set
       scriptId: state.scriptId === null ? firstUnit?.id : state.scriptId,
     };
   }
@@ -142,15 +131,6 @@ export default function unitSelection(state = initialState, action) {
     return {
       ...state,
       scriptId: action.scriptId,
-    };
-  }
-
-  // TODO: instead of setting unit name here, we should be updating the sections list based on the selected section
-  // And adding the script information to the section object.
-  if (action.type === SET_UNIT_NAME) {
-    return {
-      ...state,
-      unitName: action.unitName,
     };
   }
 
