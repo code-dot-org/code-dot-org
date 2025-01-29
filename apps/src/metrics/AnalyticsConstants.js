@@ -20,6 +20,8 @@ const EVENTS = {
   ACCOUNT_SETTINGS_PAGE_VISITED: 'Account Settings Page Visited',
   LOGIN_PAGE_VISITED: 'Login Page Visited',
   LOGIN_PAGE_CREATE_ACCOUNT_CLICKED: 'Login Page Create Account Button Clicked',
+  LOGIN_PAGE_SIGN_IN_CLICKED: 'Login Page Sign In Button Clicked',
+  LOGIN_PAGE_OAUTH_CLICKED: 'Login Page OAuth Button Clicked',
   CURRICULUM_FREE_DIALOG_BUTTON_CLICKED:
     'Curriculum Free Dialog Button Clicked',
   LMS_INFORMATION_BUTTON_CLICKED: 'LMS Information Button Clicked',
