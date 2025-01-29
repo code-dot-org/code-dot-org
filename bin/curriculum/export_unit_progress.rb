@@ -9,12 +9,19 @@
 
 require 'optparse'
 require 'parallel'
+require 'erb'
 
 $options = {}
 OptionParser.new do |opts|
   opts.banner = "Usage: export_unit_progress.rb [options]"
-  opts.on("-u", "--unit UNIT", "Unit name") do |unit|
-    $options[:unit] = unit
+  opts.on("-u", "--unit-name UNIT", "Unit name") do |unit_name|
+    $options[:unit_name] = unit_name
+  end
+  opts.on("--level-id LEVEL", "Level id") do |level_id|
+    $options[:level_id] = level_id
+  end
+  opts.on("-l", "--limit LIMIT") do |limit|
+    $options[:limit] = limit
   end
 end.parse!
 
@@ -37,15 +44,21 @@ $pii_threshold = 0.7
 
 $max_processes = 100
 
-def fetch_progress
+def fetch_progress(unit_id:, level_id:, limit:)
   if Rails.env.production?
     # fetch the data from redshift in production, because it relies on an unindexed query on
     # user_levels as well as views that are only available in redshift.
-    filename = File.expand_path('csd3_including_contained_levels_for_stanford.sql', __dir__)
-    query = File.read(filename)
+    filename = File.expand_path('csd3_including_contained_levels_for_stanford.sql.erb', __dir__)
+    query_template = File.read(filename)
+    params = {
+      unit_id: unit_id,
+      level_id: level_id,
+      limit: limit
+    }
+    query = ERB.new(query_template).result_with_hash(params)
     client = RedshiftClient.instance
     start_time = Time.now
-    puts "Querying redshift progress..."
+    puts "Querying redshift progress with params #{params}..."
     results = execute_redshift_query(client, query)
     puts "Redshift progress query executed in: #{(Time.now - start_time).round(2)} seconds"
     results
@@ -53,10 +66,7 @@ def fetch_progress
     # fetch the data from the local db instead of redshift when running in
     # development. this allows us to test the codepaths for project fetch
     # and pii detection without needing to run the script in production.
-    unit_name = $options[:unit].presence || 'csd3-2024'
-    unit = Unit.find_by_name(unit_name)
-    raise "Unit not found: #{unit_name}" unless unit
-    unit_progress = UserLevel.where(script_id: unit.id).pluck(:user_id, :level_id, :script_id)
+    unit_progress = UserLevel.where(script_id: unit_id).pluck(:user_id, :level_id, :script_id)
     keys = [:user_id, :level_id, :script_id]
     unit_progress.map! {|row| keys.zip(row).to_h.with_indifferent_access}
     unit_progress
@@ -86,19 +96,20 @@ def get_project_channel_id(user_id, level_id, script_id)
   channel_token.channel
 end
 
-def get_redshift_channel_query
+def get_redshift_channel_query(unit_name, level_id)
   <<~SQL
     SELECT ct.storage_app_id as project_id, ct.storage_id, ct.level_id, ct.script_id, us.user_id from dashboard_production.channel_tokens ct
     LEFT JOIN dashboard_production.scripts s ON  ct.script_id = s.id
     LEFT JOIN dashboard_production.user_project_storage_ids us ON ct.storage_id = us.id
-    WHERE s.name = 'csd3-2023'
-    AND ct.level_id = 38819;
+    WHERE s.name = #{unit_name}
+    #{level_id ? "AND ct.level_id = #{level_id}" : ''}
+    ;
   SQL
 end
 
 # create a map from user_id to channel_id
-def get_channel_map(_unit_id = nil, _level_id = nil)
-  channel_query = get_redshift_channel_query
+def get_channel_map(unit_id, level_id)
+  channel_query = get_redshift_channel_query(unit_id, level_id)
   channel_rows = execute_redshift_query(RedshiftClient.instance, channel_query)
   channel_rows.map do |row|
     user_id = row['user_id']
@@ -179,11 +190,20 @@ def hashed_user_id(user_id)
 end
 
 def main
-  results = fetch_progress
+  unit_name = $options[:unit].presence || 'csd3-2023'
+  unit = Unit.find_by!(name: unit_name)
+  unit_id = unit.id
+
+  level_id = $options[:level_id].presence
+  Level.find(level_id) if level_id
+
+  limit = $options[:limit].presence
+
+  results = fetch_progress(unit_id: unit_id, level_id: level_id, limit: limit)
 
   puts "Looking up channel ids..."
   start_time = Time.now
-  channel_map = get_channel_map
+  channel_map = get_channel_map(unit_id, level_id)
   # TODO: optimize via Parallel.map?
   results = results.map do |row|
     row[:channel_id] = channel_map[row['user_id']]
