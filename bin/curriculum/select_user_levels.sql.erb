@@ -5,4 +5,5 @@ WHERE attempts > 0
   <%= level_id && "AND level_id = #{level_id}" %>
 <%= order && "ORDER BY id" %>
 <%= limit && "LIMIT #{limit}" %>
+<%= offset && "OFFSET #{offset}" %>
 ;

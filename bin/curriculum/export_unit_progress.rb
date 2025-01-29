@@ -14,20 +14,23 @@ require 'erb'
 $options = {}
 OptionParser.new do |opts|
   opts.banner = "Usage: export_unit_progress.rb [options]"
+  opts.on("-s", "--use-simple-query", "Use simplified query to speed up testing") do
+    $options[:simple] = true
+  end
   opts.on("-u", "--unit-name UNIT", "Unit name") do |unit_name|
     $options[:unit_name] = unit_name
   end
   opts.on("-z", "--level-id LEVEL", "Level id") do |level_id|
     $options[:level_id] = level_id
   end
+  opts.on("-o", "--order", "Order by user_level.id") do
+    $options[:order] = true
+  end
   opts.on("-l", "--limit LIMIT") do |limit|
     $options[:limit] = limit
   end
-  opts.on("-s", "--use-simple-query", "Use simplified query to speed up testing") do
-    $options[:simple] = true
-  end
-  opts.on("-o", "--order", "Order by user_level.id") do
-    $options[:order] = true
+  opts.on('-f', "--offset OFFSET") do |offset|
+    $options[:offset] = offset
   end
 
   opts.on("-h", "--help", "Prints this help") do
@@ -55,7 +58,7 @@ $pii_threshold = 0.7
 
 $max_processes = 100
 
-def fetch_progress(unit_id:, level_id:, limit:, order:)
+def fetch_progress(unit_id:, level_id:, order:, limit:, offset:)
   if Rails.env.production?
     # fetch the data from redshift in production, because it relies on an unindexed query on
     # user_levels as well as views that are only available in redshift.
@@ -68,8 +71,9 @@ def fetch_progress(unit_id:, level_id:, limit:, order:)
     params = {
       unit_id: unit_id,
       level_id: level_id,
+      order: order,
       limit: limit,
-      order: order
+      offset: offset,
     }
     query = ERB.new(query_template).result_with_hash(params)
     client = RedshiftClient.instance
@@ -233,14 +237,16 @@ def main
   level_id = $options[:level_id].presence
   Level.find(level_id) if level_id
 
-  limit = $options[:limit].presence
   order = $options[:order].presence
+  limit = $options[:limit].presence
+  offset = $options[:offset].presence
 
   results = fetch_progress(
     unit_id: unit_id,
     level_id: level_id,
     limit: limit,
     order: order,
+    offset: offset,
   )
 
   results = add_channel_ids(results, unit_id, level_id)
