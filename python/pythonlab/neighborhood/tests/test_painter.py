@@ -113,5 +113,7 @@ def test_can_move():
   assert painter.can_move("south") is True
   assert painter.can_move("east") is True
   assert painter.can_move("west") is False
+  # Without a parameter, can_move checks if the painter can move in the direction it is facing.
+  assert painter.can_move() is True
   painter.move() # Now painter is on 1,0.
   assert painter.can_move("east") is False

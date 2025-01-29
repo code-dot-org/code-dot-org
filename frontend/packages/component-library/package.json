@@ -267,7 +267,8 @@
       },
       "import": "./dist/esm/typography/index.mjs",
       "require": "./dist/cjs/typography/index.js"
-    }
+    },
+    "./typography/index.css": "./dist/esm/typography/index.css"
   },
   "main": "components/index.ts",
   "files": [
