@@ -78,9 +78,6 @@ class ScriptsController < ApplicationController
       @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
     end
 
-    # Check to see if this unit is part of a single-unit course
-    is_single_unit_course = @script.unit_group && UnitGroup.find(@script.unit_group&.id).single_unit_course?
-
     additional_script_data = {
       course_name: @script.unit_group&.name,
       course_id: @script.unit_group&.id,
@@ -96,7 +93,7 @@ class ScriptsController < ApplicationController
       locale_code: request.locale,
       course_link: @script.course_link(params[:section_id]),
       course_title: @script.course_title || I18n.t('view_all_units'),
-      is_single_unit_course: is_single_unit_course,
+      is_single_unit_course: @script.unit_group&.single_unit_course?,
       sections: @sections
     }
 
