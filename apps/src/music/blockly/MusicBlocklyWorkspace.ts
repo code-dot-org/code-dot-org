@@ -31,6 +31,7 @@ import {
   getNewStaticCategory,
   getNewDynamicCategory,
   isValidCategory,
+  DEFAULT_CATEGORY_NAME,
 } from './toolbox';
 import {Category, ToolboxData} from './toolbox/types';
 
@@ -535,7 +536,10 @@ export default class MusicBlocklyWorkspace {
     });
 
     // Finalize the toolbox.
-    if (!fullToolbox.contents.length && currentCategory.name === 'DEFAULT') {
+    if (
+      !fullToolbox.contents.length &&
+      currentCategory.name === DEFAULT_CATEGORY_NAME
+    ) {
       // If no categories have been used, create a flyout toolbox.
       fullToolbox.kind = 'flyoutToolbox';
       fullToolbox.contents = flyoutItems;

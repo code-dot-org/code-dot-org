@@ -19,6 +19,8 @@ const baseCategoryCssConfig = {
   label: moduleStyles.toolboxLabel,
 };
 
+export const DEFAULT_CATEGORY_NAME = 'DEFAULT';
+
 export const dynamicCategoryLabels: {
   [key in Category]?: string;
 } = {
@@ -234,7 +236,7 @@ export function addToolboxBlocksToWorkspace(
  * @returns JSON representation of a new static category.
  */
 export function getNewStaticCategory(
-  name: string = 'DEFAULT'
+  name: string = DEFAULT_CATEGORY_NAME
 ): GoogleBlockly.utils.toolbox.StaticCategoryInfo {
   return {
     kind: 'category',
@@ -282,5 +284,7 @@ export function getNewDynamicCategory(
 export function isValidCategory(
   category: GoogleBlockly.utils.toolbox.StaticCategoryInfo
 ): boolean {
-  return !!(category.contents.length || category.name !== 'DEFAULT');
+  return !!(
+    category.contents.length || category.name !== DEFAULT_CATEGORY_NAME
+  );
 }

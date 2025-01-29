@@ -1,8 +1,6 @@
 import {BlockTypes} from '../blockTypes';
-import {categoryTypeToLocalizedName} from '../toolbox';
+import {categoryTypeToLocalizedName, dynamicCategories} from '../toolbox';
 import {Category} from '../toolbox/types';
-
-const dynamicCategories = [Category.Functions, Category.Variables];
 
 const staticCategories = Object.values(Category).filter(
   category => !dynamicCategories.includes(category)
