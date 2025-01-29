@@ -238,6 +238,16 @@ def main
   limit = $options[:limit].presence
   offset = $options[:offset].presence
 
+  output_filename = [
+    "exported-",
+    (simple ? "simple" : "full"),
+    "unit-#{unit_name}",
+    ("level-#{level_id}" if level_id),
+    ("limit-#{limit}" if limit),
+    ("offset-#{offset}" if offset),
+    'datetime-' + Time.now.strftime("%Y%m%d-%H%M%S"),
+  ].compact.join('-')
+
   results = fetch_progress(
     simple: simple,
     unit_id: unit_id,
@@ -250,16 +260,6 @@ def main
 
   puts "Processing source..."
   start_time = Time.now
-
-  output_filename = [
-    "exported-",
-    (simple ? "simple" : "full"),
-    "unit-#{unit_name}",
-    ("level-#{level_id}" if level_id),
-    ("limit-#{limit}" if limit),
-    ("offset-#{offset}" if offset),
-    'datetime-' + Time.now.strftime("%Y%m%d-%H%M%S"),
-  ].compact.join('-')
 
   File.open(output_filename, 'w') do |file|
     # parallelize network requests to projects API and AWS Comprehend
