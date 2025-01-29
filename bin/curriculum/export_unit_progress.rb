@@ -45,6 +45,7 @@ def fetch_progress
     query = File.read(filename)
     client = RedshiftClient.instance
     start_time = Time.now
+    puts "Querying redshift progress..."
     results = execute_redshift_query(client, query)
     puts "Redshift progress query executed in: #{(Time.now - start_time).round(2)} seconds"
     results
@@ -157,6 +158,9 @@ def check_source_pii(source)
   max_score = response.entities.map(&:score).max || 0
 
   [max_score, response.entities]
+rescue => exception
+  puts "Error checking source for PII: #{exception.message}"
+  [1, []]
 end
 
 def hashed_user_id(user_id)
@@ -190,8 +194,6 @@ def main
   puts "Processing source..."
   start_time = Time.now
   File.open('output.jsonl', 'w') do |file|
-    mutex = Mutex.new
-
     # parallelize network requests to projects API and AWS Comprehend
     Parallel.each(results, in_processes: $max_processes) do |row|
       row[:source] = get_project_source(row[:channel_id])
@@ -201,9 +203,11 @@ def main
       row[:hashed_user_id] = hashed_user_id(row['user_id'])
       row.delete('user_id')
 
-      mutex.synchronize do
-        file.puts row.to_json
-      end
+      file.flock(File::LOCK_EX)
+      file.puts row.to_json
+      file.flock(File::LOCK_UN)
+    rescue => exception
+      puts "Error processing source for channel #{row[:channel_id]}: #{exception.message}"
     end
   end
   puts "Processed source in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count} processes: #{$max_processes}"
