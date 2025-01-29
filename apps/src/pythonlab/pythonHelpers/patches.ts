@@ -14,6 +14,11 @@ export const SETUP_CODE = `from pythonlab_setup import setup_pythonlab
 setup_pythonlab('${MessageTag.MATPLOTLIB_IMG}')
 `;
 
+// The two functions below are used to patch the input function in Python.
+// When the user calls input() in Python, we intercept the call and send a
+// get request to our service worker, which in turn sends a message to the main
+// thread that we are awaiting input. The main thread then sends a message back to
+// the service worker, which becomes the result of the get request.
 export const patchInputCode = (id: number) => `
 import sys, builtins
 import pythonlab_input
