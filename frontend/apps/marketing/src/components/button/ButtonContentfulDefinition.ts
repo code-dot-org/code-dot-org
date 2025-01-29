@@ -4,7 +4,14 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
   id: 'button',
   name: 'Button',
   category: 'Custom Components',
-  builtInStyles: 'cfMargin',
+  thumbnailUrl:
+    'https://images.ctfassets.net/90t6bu6vlf76/4fJ5H4ztpxsps2n46akVPd/5389a912640503795e2dd51cd3d92061/component_button_thumbnail.png',
+  tooltip: {
+    description:
+      'Use a button to create clear calls to action. Supports different styles, sizes, and links to guide users to key actions.',
+    imageUrl:
+      'https://images.ctfassets.net/90t6bu6vlf76/6pLvzcnn5QJLPq1s4SLtVC/27cefc6049496000bcc797df11d81d03/component_button_tooltip.png',
+  },
   variables: {
     color: {
       displayName: 'Color',
@@ -16,17 +23,6 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
           {value: 'purple', displayName: 'Purple'},
           {value: 'black', displayName: 'Black'},
           {value: 'white', displayName: 'White'},
-        ],
-      },
-    },
-    size: {
-      displayName: 'Size',
-      type: 'Text',
-      defaultValue: 'm',
-      group: 'style',
-      validations: {
-        in: [
-          {value: 'm', displayName: 'Medium'},
         ],
       },
     },
@@ -51,7 +47,7 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
     iconLeft: {
       displayName: 'Left Icon',
       type: 'Object',
-      group: 'content',
+      group: 'style',
       fields: {
         iconName: {type: 'Text', displayName: 'Icon Name'},
         iconStyle: {type: 'Text', displayName: 'Icon Style'},
@@ -61,76 +57,46 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
     iconRight: {
       displayName: 'Right Icon',
       type: 'Object',
-      group: 'content',
+      group: 'style',
       fields: {
         iconName: {type: 'Text', displayName: 'Icon Name'},
         iconStyle: {type: 'Text', displayName: 'Icon Style'},
         title: {type: 'Text', displayName: 'Title'},
       },
     },
-    useAsLink: {
-      displayName: 'Use as Link',
-      type: 'Boolean',
-      defaultValue: true,
-      group: 'behavior',
-    },
     href: {
       displayName: 'Link URL',
       type: 'Text',
       defaultValue: 'code.org',
       group: 'content',
-      visibility: 'useAsLink',
     },
     target: {
       displayName: 'Link Target',
       type: 'Text',
       defaultValue: '_self',
-      group: 'behavior',
-      visibility: 'useAsLink',
+      group: 'content',
     },
     download: {
       displayName: 'Download',
       type: 'Text',
-      group: 'behavior',
-      visibility: 'useAsLink',
+      group: 'content',
     },
     disabled: {
       displayName: 'Disabled',
       type: 'Boolean',
       defaultValue: false,
-      group: 'behavior',
+      group: 'style',
     },
     isPending: {
       displayName: 'Pending State',
       type: 'Boolean',
       defaultValue: false,
-      group: 'behavior',
-    },
-    ariaLabel: {
-      displayName: 'ARIA Label',
-      type: 'Text',
-      group: 'accessibility',
-    },
-    name: {
-      displayName: 'Name',
-      type: 'Text',
-      group: 'behavior',
-    },
-    value: {
-      displayName: 'Value',
-      type: 'Text',
-      group: 'behavior',
+      group: 'style',
     },
     title: {
       displayName: 'Title',
       type: 'Text',
       group: 'content',
-      visibility: 'useAsLink',
-    },
-    className: {
-      displayName: 'Custom Class Name',
-      type: 'Text',
-      group: 'style',
-    },
+    }
   },
 };
