@@ -239,7 +239,6 @@ def main
   offset = $options[:offset].presence
 
   output_filename = [
-    "exported-",
     (simple ? "simple" : "full"),
     "unit-#{unit_name}",
     ("level-#{level_id}" if level_id),
