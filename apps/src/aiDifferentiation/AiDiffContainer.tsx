@@ -7,7 +7,7 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
-import AiDiffWelcome from './welcome/AiDiffWelcome';
+import AiDiffChat from './AiDiffChat';
 
 import style from './ai-differentiation.module.scss';
 
@@ -93,17 +93,11 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           </div>
         </div>
         <div className={style.fabBackground}>
-          <AiDiffWelcome
-            setShowWelcomeExperience={() => {}}
+          <AiDiffChat
             lessonId={lessonId}
             lessonName={lessonName}
             unitDisplayName={unitDisplayName}
           />
-          {/* <AiDiffChat
-            lessonId={lessonId}
-            lessonName={lessonName}
-            unitDisplayName={unitDisplayName}
-          /> */}
         </div>
       </div>
     </Draggable>
