@@ -60,9 +60,17 @@ const registerMovable = function (weight: number) {
         ? 'Make Immovable to Users'
         : 'Make Movable to Users';
     },
-    preconditionFn: function () {
+    preconditionFn: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
       if (Blockly.isStartMode) {
         return MenuOptionStates.ENABLED;
+      }
+      if (Blockly.isToolboxMode) {
+        // Only child blocks should be immovable.
+        if (scope.block !== scope.block?.getRootBlock()) {
+          return MenuOptionStates.ENABLED;
+        } else {
+          return MenuOptionStates.DISABLED;
+        }
       }
       return MenuOptionStates.HIDDEN;
     },
