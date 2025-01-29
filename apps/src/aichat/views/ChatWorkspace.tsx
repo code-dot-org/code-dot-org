@@ -50,28 +50,26 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     state => state.aichat
   );
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
-  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const visibleItems = useSelector(selectAllVisibleMessages);
-
-  const students = useAppSelector(
-    state => state.teacherSections.selectedStudents
-  );
+  const selectedStudent = useAppSelector(({teacherSections, progress}) => {
+    const students = teacherSections.selectedStudents;
+    if (progress.viewAsUserId && progress.currentLevelId) {
+      return Object.values(students).find(
+        student => student.id === progress.viewAsUserId
+      );
+    }
+  });
 
   const dispatch = useAppDispatch();
 
-  const selectedStudentName = useMemo(() => {
-    if (viewAsUserId && currentLevelId) {
-      const selectedStudent = Object.values(students).find(
-        student => student.id === viewAsUserId
-      );
-      if (selectedStudent) {
-        dispatch(fetchStudentChatHistory(selectedStudent.id));
-        return getShortName(selectedStudent.name);
-      }
+  useEffect(() => {
+    if (selectedStudent) {
+      dispatch(fetchStudentChatHistory(selectedStudent.id));
     }
-    return null;
-  }, [viewAsUserId, students, dispatch, currentLevelId]);
+  }, [selectedStudent, dispatch]);
+
+  const selectedStudentName =
+    selectedStudent && getShortName(selectedStudent.name);
 
   // Teacher user is able to interact with chatbot.
   const canChatWithModel = useMemo(
@@ -93,12 +91,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
-    if (viewAsUserId && !selectedTab) {
+    if (selectedStudent && !selectedTab) {
       setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
-    } else if (!viewAsUserId) {
+    } else if (!selectedStudent) {
       setSelectedTab(null);
     }
-  }, [viewAsUserId, selectedTab]);
+  }, [selectedStudent, selectedTab]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
@@ -175,7 +173,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {ChatModal && <ChatModal onClose={onCloseModal} />}
-      {viewAsUserId ? (
+      {selectedStudent ? (
         <Tabs {...tabArgs} />
       ) : (
         <ChatEventsList events={visibleItems} />
