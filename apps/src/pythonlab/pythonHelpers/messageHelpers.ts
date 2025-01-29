@@ -1,5 +1,3 @@
-import codebridgeI18n from '@codebridge/locale';
-
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
@@ -8,6 +6,7 @@ import {
   NeighborhoodExceptionMessage,
 } from '@cdo/apps/miniApps/neighborhood/constants';
 import {NeighborhoodSignal} from '@cdo/apps/miniApps/neighborhood/types';
+import commonI18n from '@cdo/locale';
 
 import {HOME_FOLDER} from './constants';
 
@@ -79,7 +78,7 @@ export function getNeighborhoodExceptionMessage(exceptionType: string) {
     // Return the user-friendly error message mapped to the NeighborhoodExceptionType.
     const message =
       NeighborhoodExceptionMessage[exceptionType as NeighborhoodExceptionType];
-    return `${codebridgeI18n.exceptionTag()} ${message}`;
+    return `${commonI18n.exceptionTag()} ${message}`;
   } else {
     return `[EXCEPTION] Unknown Neighborhood exception: ${exceptionType}`;
   }
