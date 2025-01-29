@@ -1253,6 +1253,7 @@
   "errorNeighborhoodInvalidLocation": "The location specified isn't on the grid.",
   "errorNeighborhoodInvalidMove": "Painter tried to move off the grid or into an obstacle.",
   "errorNeighborhoodInvalidPaintLocation": "Painter tried to paint off the grid or over an obstacle.",
+  "errorNeighborhoodUnknown": "Unknown Neighborhood exception",
   "exceptionTag": "[EXCEPTION]",
   "errorOccurredTitle": "An Error Occurred",
   "errorParamInputUnattached": "Remember to attach a block to each parameter input on the function block in your workspace.",

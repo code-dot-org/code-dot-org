@@ -80,7 +80,7 @@ export function getNeighborhoodExceptionMessage(exceptionType: string) {
       NeighborhoodExceptionMessage[exceptionType as NeighborhoodExceptionType];
     return `${commonI18n.exceptionTag()} ${message}`;
   } else {
-    return `[EXCEPTION] Unknown Neighborhood exception: ${exceptionType}`;
+    return `${commonI18n.exceptionTag()} ${commonI18n.errorNeighborhoodUnknown()} ${exceptionType}`;
   }
 }
 /**
