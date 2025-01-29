@@ -1,8 +1,8 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
-import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Link from '@cdo/apps/componentLibrary/link/Link';

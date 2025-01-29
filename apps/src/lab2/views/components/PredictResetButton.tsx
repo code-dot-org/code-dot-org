@@ -1,6 +1,6 @@
+import Alert from '@code-dot-org/component-library/alert';
 import React from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {resetPredictProgress} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';

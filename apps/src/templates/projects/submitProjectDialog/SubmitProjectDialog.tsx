@@ -1,6 +1,6 @@
+import Alert from '@code-dot-org/component-library/alert';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';

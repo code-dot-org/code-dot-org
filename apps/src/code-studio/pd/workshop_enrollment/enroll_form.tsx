@@ -1,10 +1,10 @@
 /*
  * Form to create a workshop enrollment
  */
+import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React, {Fragment, ReactNode, useMemo, useState} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
