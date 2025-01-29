@@ -1,3 +1,8 @@
+# Prepares the input (user/level system prompt, context, existing chat history)
+# from AI Chat lab to be sent to the OpenAI API, and sends the request to the API.
+#
+# This module is structured very similarly to the AichatSagemakerHelper module,
+# which manages AI Chat lab's interaction with models that use AWS Sagemaker.
 module AichatOpenaiHelper
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id)
     messages = format_messages(
