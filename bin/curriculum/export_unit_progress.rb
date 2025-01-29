@@ -58,12 +58,12 @@ $pii_threshold = 0.7
 
 $max_processes = 100
 
-def fetch_progress(unit_id:, level_id:, order:, limit:, offset:)
+def fetch_progress(simple:, unit_id:, level_id:, order:, limit:, offset:)
   if Rails.env.production?
     # fetch the data from redshift in production, because it relies on an unindexed query on
     # user_levels as well as views that are only available in redshift.
     filename =
-      $options[:simple] ?
+      simple ?
         'select_user_levels.sql.erb' :
         'csd3_including_contained_levels_for_stanford.sql.erb'
     pathname = File.expand_path(filename, __dir__)
@@ -230,6 +230,8 @@ def hashed_user_id(user_id)
 end
 
 def main
+  simple = $options[:simple]
+
   unit_name = $options[:unit].presence || 'csd3-2023'
   unit = Unit.find_by!(name: unit_name)
   unit_id = unit.id
@@ -242,6 +244,7 @@ def main
   offset = $options[:offset].presence
 
   results = fetch_progress(
+    simple: simple,
     unit_id: unit_id,
     level_id: level_id,
     limit: limit,
@@ -253,7 +256,18 @@ def main
 
   puts "Processing source..."
   start_time = Time.now
-  File.open('output.jsonl', 'w') do |file|
+
+  output_filename = [
+    "exported-",
+    (simple ? "simple" : "full"),
+    "unit-#{unit_name}",
+    ("level-#{level_id}" if level_id),
+    ("limit-#{limit}" if limit),
+    ("offset-#{offset}" if offset),
+    'datetime-' + Time.now.strftime("%Y%m%d-%H%M%S"),
+  ].compact.join('-')
+
+  File.open(output_filename, 'w') do |file|
     # parallelize network requests to projects API and AWS Comprehend
     Parallel.each(results, in_processes: $max_processes) do |row|
       row[:source] = get_project_source(row[:channel_id])
