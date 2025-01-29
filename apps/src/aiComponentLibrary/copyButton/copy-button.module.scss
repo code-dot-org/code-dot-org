@@ -1,0 +1,10 @@
+@import 'color';
+
+.messageFeedback {
+  &Button i {
+    color: $light-gray-600;
+  }
+  &Confirm i {
+    color: $light_affirmative_500;
+  }
+}
