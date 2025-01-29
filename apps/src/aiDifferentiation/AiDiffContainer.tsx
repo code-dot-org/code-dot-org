@@ -11,14 +11,13 @@ import style from './ai-differentiation.module.scss';
 const AI_DIFF_POSITION_X = 'aiDiffPositionX';
 const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 
-const DISABLE_WELCOME = true;
-
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   open: boolean;
   lessonId: number;
   lessonName: string;
   unitDisplayName: string;
+  disableWelcome?: boolean;
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
@@ -27,6 +26,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   lessonId,
   lessonName,
   unitDisplayName,
+  // TODO(lfm): remove this when welcome is ready to be shown.
+  disableWelcome = true,
 }) => {
   const [positionX, setPositionX] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
@@ -38,6 +39,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const hasCompletedAiDifferentiationWelcome = useAppSelector(
     state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
+  console.log('lfm1', hasCompletedAiDifferentiationWelcome);
 
   useEffect(() => {
     trySetSessionStorage(AI_DIFF_POSITION_X, String(positionX));
@@ -65,7 +67,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         className={style.aiDiffContainer}
         style={open ? undefined : {display: 'none'}}
       >
-        {!DISABLE_WELCOME && !hasCompletedAiDifferentiationWelcome ? (
+        {!disableWelcome && !hasCompletedAiDifferentiationWelcome ? (
           <div>This is the welcome experience for AI differentiation</div>
         ) : (
           <AiDiffChat
