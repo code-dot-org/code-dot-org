@@ -223,16 +223,13 @@ export const fieldPatternsValidator = function () {
     const kitNotes = MusicLibrary.getInstance()
       .kits.find(kit => kit.id === newValue.instrument)
       .sounds.map(sound => sound.note);
-    const validatedEvents = newValue.events.filter(
+    newValue.events = newValue.events.filter(
       event =>
         // Remove events with notes that not part of the current kit's sounds. (Ex. 1...8)
         kitNotes.includes(event.note) &&
         // Remove event with ticks that are outside the expected tick range.
         event.tick <= newValue.length * TICKS_PER_MEASURE
     );
-    return {
-      ...newValue,
-      events: validatedEvents,
-    };
+    return newValue;
   });
 };
