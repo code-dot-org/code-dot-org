@@ -305,6 +305,11 @@ class UnconnectedMusicView extends React.Component {
     this.library.setAllowedSounds(levelData?.sounds);
 
     let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
+
+    // Prevent "Select a track" dialog from showing in Toolbox Mode.
+    if (isToolboxMode) {
+      packId = packId || DEFAULT_PACK;
+    }
     this.library.setCurrentPackId(packId);
     this.props.setPackId(packId);
 
