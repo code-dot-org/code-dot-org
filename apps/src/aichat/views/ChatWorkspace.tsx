@@ -19,7 +19,7 @@ import aichatI18n from '../locale';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
-import CopyButton from './CopyButton';
+import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
@@ -197,7 +197,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             color="gray"
             onClick={onClear}
           />
-          <CopyButton isDisabled={!canChatWithModel} />
+          <CopyChatHistoryButton isDisabled={!canChatWithModel} />
         </div>
       </div>
     </div>

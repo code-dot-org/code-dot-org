@@ -23,7 +23,7 @@ import {
 
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
-const CopyButton: React.FunctionComponent<{isDisabled: boolean}> = ({
+const CopyChatHistoryButton: React.FunctionComponent<{isDisabled: boolean}> = ({
   isDisabled,
 }) => {
   const messages = useSelector(selectAllVisibleMessages);
@@ -91,4 +91,4 @@ function chatEventToFormattedString(chatEvent: ChatEvent) {
   }
 }
 
-export default CopyButton;
+export default CopyChatHistoryButton;
