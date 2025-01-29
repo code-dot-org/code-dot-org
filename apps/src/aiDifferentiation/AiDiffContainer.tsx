@@ -5,7 +5,6 @@ import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
 import AiDiffChat from './AiDiffChat';
-import AiDiffWelcome from './AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
 
@@ -67,7 +66,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         style={open ? undefined : {display: 'none'}}
       >
         {!DISABLE_WELCOME && !hasCompletedAiDifferentiationWelcome ? (
-          <AiDiffWelcome />
+          <div>This is the welcome experience for AI differentiation</div>
         ) : (
           <AiDiffChat
             closeTutor={closeTutor}
