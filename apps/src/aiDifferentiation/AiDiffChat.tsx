@@ -15,6 +15,8 @@ import {ChatItem, ChatPrompt} from './types';
 
 import style from './ai-differentiation.module.scss';
 
+const INITIAL_CHAT_MESSAGE = `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`;
+
 const SUGGESTED_PROMPTS = [
   {
     label: 'Explain a concept',
@@ -39,20 +41,22 @@ const SUGGESTED_PROMPTS = [
 ];
 
 interface AiDiffChatProps {
-  closeTutor?: () => void;
   lessonId: number;
   lessonName: string;
   unitDisplayName: string;
+  initialChatMessage?: string;
+  suggestedPrompts?: ChatPrompt[];
+  disableEndButtons?: boolean;
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
-  closeTutor,
   lessonId,
   lessonName,
   unitDisplayName,
+  initialChatMessage = INITIAL_CHAT_MESSAGE,
+  suggestedPrompts = SUGGESTED_PROMPTS,
+  disableEndButtons = false,
 }) => {
-  // TODO: Update to support i18n
-
   const aiDiffChatMessageEndpoint = '/ai_diff/chat_completion';
 
   const reportingData = {
@@ -68,10 +72,10 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
     {
       role: Role.ASSISTANT,
-      chatMessageText: `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`,
+      chatMessageText: initialChatMessage,
       status: Status.OK,
     },
-    SUGGESTED_PROMPTS,
+    suggestedPrompts,
   ]);
 
   const onMessageSend = (message: string) => {
@@ -90,7 +94,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   };
 
   const onSuggestPrompts = () => {
-    setMessageHistory(prevMessages => [...prevMessages, SUGGESTED_PROMPTS]);
+    setMessageHistory(prevMessages => [...prevMessages, suggestedPrompts]);
   };
 
   const sendChatEvent = (
@@ -164,9 +168,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   useEffect(() => {
     chatWindowRef.current?.lastElementChild?.scrollIntoView();
   }, [messageHistory]);
-
   return (
-    <div className={style.fabBackground}>
+    <div className={style.chatContainer}>
       <div className={style.chatContent} ref={chatWindowRef}>
         {messageHistory.map((item: ChatItem, id: number) =>
           Array.isArray(item) ? (
@@ -205,6 +208,7 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
         onSuggestPrompts={onSuggestPrompts}
         messages={messageHistory}
         waiting={isWaitingForResponse}
+        disableEndButtons={disableEndButtons}
       />
     </div>
   );

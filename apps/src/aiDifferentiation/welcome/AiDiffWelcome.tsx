@@ -10,9 +10,10 @@ import {
   Heading6,
   StrongText,
 } from '../../componentLibrary/typography';
+import AiDiffChat from '../AiDiffChat';
+import {ChatPrompt} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
-import aiDiffStyle from '../ai-differentiation.module.scss';
 
 type WelcomeState = 'select_option' | 'practice' | 'end_page' | 'finished';
 
@@ -25,10 +26,47 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
+  lessonId: number;
+  lessonName: string;
+  unitDisplayName: string;
 }
+
+const SUGGESTED_PROMPTS_FOR_SELECTION: {
+  [selection: string]: {initialMessage: string; suggestedPrompts: ChatPrompt[]};
+} = {
+  plan: {
+    initialMessage: 'PLANNING',
+    suggestedPrompts: [
+      {
+        label: 'prompt 1 planning',
+        prompt: '',
+      },
+      {
+        label: 'prompt 2 planning',
+        prompt: '',
+      },
+    ],
+  },
+  create: {
+    initialMessage: 'CREATING',
+    suggestedPrompts: [
+      {
+        label: 'prompt 1 creating',
+        prompt: '',
+      },
+      {
+        label: 'prompt 2 creating',
+        prompt: '',
+      },
+    ],
+  },
+};
 
 const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
+  lessonId,
+  lessonName,
+  unitDisplayName,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>('select_option');
@@ -76,6 +114,26 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     [selectedOption]
   );
 
+  const continueAndSkipButtons = React.useCallback(() => {
+    return (
+      <div className={style.bottomButtons}>
+        <Button
+          onClick={() => setCurrentWelcomeState(WelcomeStates.finished)}
+          text="Skip"
+          className={style.skipButton}
+          color="gray"
+          type="secondary"
+        />
+        <Button
+          onClick={() => setCurrentWelcomeState(WelcomeStates.practice)}
+          text="Continue"
+          className={style.continueButton}
+          disabled={!selectedOption}
+        />
+      </div>
+    );
+  }, [selectedOption]);
+
   const selectAnOptionPage = React.useCallback(() => {
     return (
       <div className={style.selectOption}>
@@ -97,40 +155,54 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
           )}
         </div>
-        <div className={style.bottomButtons}>
-          <Button
-            onClick={() => setCurrentWelcomeState(WelcomeStates.finished)}
-            text="Skip"
-            className={style.skipButton}
-            color="gray"
-            type="secondary"
-          />
-          <Button
-            onClick={() => setCurrentWelcomeState(WelcomeStates.practice)}
-            text="Continue"
-            className={style.continueButton}
-            disabled={!selectedOption}
-          />
-        </div>
+        {continueAndSkipButtons()}
       </div>
     );
-  }, [optionButton, selectedOption]);
+  }, [optionButton, continueAndSkipButtons]);
+
+  const practicePage = React.useCallback(() => {
+    if (!selectedOption) {
+      return null;
+    }
+    const {initialMessage, suggestedPrompts} =
+      SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
+
+    return (
+      <div className={style.practicePage}>
+        <AiDiffChat
+          lessonId={lessonId}
+          lessonName={lessonName}
+          unitDisplayName={unitDisplayName}
+          initialChatMessage={initialMessage}
+          suggestedPrompts={suggestedPrompts}
+          disableEndButtons={true}
+        />
+        {continueAndSkipButtons()}
+      </div>
+    );
+  }, [
+    selectedOption,
+    lessonId,
+    lessonName,
+    unitDisplayName,
+    continueAndSkipButtons,
+  ]);
 
   const currentWelcomePage = React.useMemo(() => {
     switch (currentWelcomeState) {
       case WelcomeStates.select_option:
         return selectAnOptionPage();
       case WelcomeStates.practice:
-        return <div>Practice</div>;
+        return practicePage();
       case WelcomeStates.end_page:
         return <div>End Page</div>;
       case WelcomeStates.finished:
       default:
         return <div>Finished</div>;
     }
-  }, [currentWelcomeState, selectAnOptionPage]);
+  }, [currentWelcomeState, selectAnOptionPage, practicePage]);
 
-  return <div className={aiDiffStyle.fabBackground}>{currentWelcomePage}</div>;
+  return currentWelcomePage;
 };
 
 export default AiDiffWelcome;

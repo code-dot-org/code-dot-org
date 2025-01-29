@@ -7,13 +7,14 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
-import AiDiffChat from './AiDiffChat';
+import AiDiffWelcome from './welcome/AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
 
 const AI_DIFF_POSITION_X = 'aiDiffPositionX';
 const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 
+// TODO: Update to support i18n
 const AI_DIFF_HEADER_TEXT = 'AI Teaching Assistant';
 
 interface AiDiffContainerProps {
@@ -91,12 +92,19 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             />
           </div>
         </div>
-        <AiDiffChat
-          closeTutor={closeTutor}
-          lessonId={lessonId}
-          lessonName={lessonName}
-          unitDisplayName={unitDisplayName}
-        />
+        <div className={style.fabBackground}>
+          <AiDiffWelcome
+            setShowWelcomeExperience={() => {}}
+            lessonId={lessonId}
+            lessonName={lessonName}
+            unitDisplayName={unitDisplayName}
+          />
+          {/* <AiDiffChat
+            lessonId={lessonId}
+            lessonName={lessonName}
+            unitDisplayName={unitDisplayName}
+          /> */}
+        </div>
       </div>
     </Draggable>
   );
