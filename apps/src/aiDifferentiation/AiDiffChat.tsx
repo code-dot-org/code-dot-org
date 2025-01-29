@@ -1,9 +1,9 @@
+import Button from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import Button from '@cdo/apps/componentLibrary/button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 

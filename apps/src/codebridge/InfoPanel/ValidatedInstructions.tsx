@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
@@ -12,7 +13,6 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {

@@ -1,7 +1,7 @@
+import Button from '@code-dot-org/component-library/button';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button';
 import HintPrompt from '@cdo/apps/templates/instructions/HintPrompt';
 import InlineFeedback from '@cdo/apps/templates/instructions/InlineFeedback';
 import InlineHint from '@cdo/apps/templates/instructions/InlineHint';

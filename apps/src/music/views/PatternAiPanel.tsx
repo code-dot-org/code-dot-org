@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {
   ChangeEvent,
@@ -22,7 +23,6 @@ const aiBotGeneratingImages = [
 
 const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
 
-import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Slider from '@cdo/apps/componentLibrary/slider/Slider';

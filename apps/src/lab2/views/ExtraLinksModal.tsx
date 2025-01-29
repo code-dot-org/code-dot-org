@@ -1,6 +1,6 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
