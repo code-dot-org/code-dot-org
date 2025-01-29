@@ -1,7 +1,7 @@
-@import '@/common/styles/primitiveColors.css';
-@import '@/common/styles/font.scss';
-@import '@/common/styles/mixins';
-@import '@/typography/typography.module';
+@import '@code-dot-org/component-library-styles/primitiveColors.scss';
+@import '@code-dot-org/component-library-styles/font.scss';
+@import '@code-dot-org/component-library-styles/mixins.scss';
+@import '@code-dot-org/component-library-styles/typography.module.scss';
 
 // Chips common styles
 .chips {

@@ -9,7 +9,7 @@ import {connect} from 'react-redux';
 import './small-footer-music-overrides.scss';
 
 import DCDO from '@cdo/apps/dcdo';
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {
   isReadOnlyWorkspace,
   setIsLoading,
@@ -23,8 +23,14 @@ import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/Copyri
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import AppConfig from '../appConfig';
+import {validateBlockCategories} from '../blockly/blockUtils';
 import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
+import {
+  addToolboxBlocksToWorkspace,
+  getToolbox,
+  localizeCategoryNames,
+} from '../blockly/toolbox';
 import {
   BlockMode,
   LEGACY_DEFAULT_LIBRARY,
@@ -276,7 +282,15 @@ class UnconnectedMusicView extends React.Component {
 
     // In start mode, we always show the full toolbox for the given block mode.
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    const toolboxData = isStartMode ? undefined : levelData?.toolbox;
+    const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+
+    // Music Lab supports two types of toolbox configuration in levels:
+    // The toolbox property is a simple list of block types and categories.
+    const toolboxAllowList = isStartMode ? undefined : levelData?.toolbox;
+    // The toolboxDefinition property is a full toolbox that Blockly can load.
+    const localizedToolboxDefinition =
+      levelData?.toolboxDefinition &&
+      localizeCategoryNames(levelData.toolboxDefinition);
 
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
@@ -291,6 +305,11 @@ class UnconnectedMusicView extends React.Component {
     this.library.setAllowedSounds(levelData?.sounds);
 
     let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
+
+    // Prevent "Select a track" dialog from showing in Toolbox Mode.
+    if (isToolboxMode) {
+      packId = packId || DEFAULT_PACK;
+    }
     this.library.setCurrentPackId(packId);
     this.props.setPackId(packId);
 
@@ -300,9 +319,10 @@ class UnconnectedMusicView extends React.Component {
           document.getElementById(BLOCKLY_DIV_ID),
           this.onBlockSpaceChange,
           this.props.isReadOnlyWorkspace,
-          toolboxData,
+          toolboxAllowList,
           this.props.isRtl,
-          this.props.blockMode
+          this.props.blockMode,
+          localizedToolboxDefinition
         );
 
     this.props.setShowInstructions(
@@ -311,7 +331,17 @@ class UnconnectedMusicView extends React.Component {
 
     // Check if the user has already made changes to the code on the project level.
     let codeChangedOnProjectLevel = false;
-    if (this.getStartSources() || initialSources) {
+    if (isToolboxMode) {
+      const blockMode = this.props.blockMode;
+      const levelData = this.props.levelProperties?.levelData;
+      const levelToolbox = levelData?.toolbox;
+      const levelToolboxDefinition = levelData?.toolboxDefinition;
+      this.musicBlocklyWorkspace.initializeToolboxMode(
+        blockMode,
+        levelToolbox,
+        levelToolboxDefinition
+      );
+    } else if (this.getStartSources() || initialSources) {
       const startSources = this.getStartSources();
       let codeToLoad = startSources;
       if (initialSources?.source) {
@@ -445,10 +475,21 @@ class UnconnectedMusicView extends React.Component {
 
     // Check if we are in start mode, and if so, load sources from the default JSON.
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
     if (isStartMode) {
       const startSourcesFilename = 'startSources' + this.props.blockMode;
       const defaultSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
       this.loadCode(defaultSources);
+    } else if (isToolboxMode) {
+      const toolbox = getToolbox(
+        this.props.blockMode,
+        this.props.levelProperties?.levelData?.toolbox
+      );
+      addToolboxBlocksToWorkspace(
+        toolbox.contents,
+        this.musicBlocklyWorkspace.workspace
+      );
+      validateBlockCategories(this.musicBlocklyWorkspace.workspace);
     } else {
       // Otherwise, use getStartSources which handles levelData and fallback logic.
       this.loadCode(this.getStartSources());
@@ -477,6 +518,11 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
+    // Toolbox mode isn't intended to have a fully functional workspace,
+    // so we can skip the remaining logic for this event.
+    if (Blockly.isToolboxMode) {
+      return;
+    }
     // Prevent a rapid cycle of workspace resizing from occurring when
     // dragging a block near the bottom of the workspace.
     if (e.type === Blockly.Events.VIEWPORT_CHANGE) {

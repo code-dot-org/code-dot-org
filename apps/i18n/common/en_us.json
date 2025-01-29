@@ -1587,6 +1587,7 @@
   "lesson": "Lesson",
   "lessonDuration": "0-1.5 hours",
   "lessons": "Lessons",
+  "lessonsFor": "Lessons for",
   "lessonContainsNoLevels": "This lesson contains no levels.",
   "lessonExtras": "Lesson Extras are turned off for the selected section",
   "lessonExtrasButton": "Go to Teacher Dashboard",
