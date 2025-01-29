@@ -38,8 +38,8 @@ async function loadPyodideAndPackages() {
     // These are custom packages that we have built. They are defined in this repo:
     // https://github.com/code-dot-org/pythonlab-packages
     `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
-    `/blockly/js/pyodide/${version}/pythonlab_setup-0.1.0-py3-none-any.whl`,
-    `/blockly/js/pyodide/${version}/neighborhood-0.1.0-py3-none-any.whl`,
+    `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
+    `/blockly/js/pyodide/${version}/neighborhood-0.2.0-py3-none-any.whl`,
   ]);
   // Warm up the pyodide environment by running setup code.
   await runInternalCode(SETUP_CODE, -1);

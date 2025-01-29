@@ -3519,6 +3519,7 @@ exports.install = function (blockly, blockInstallOptions) {
   // Overrides the standard generators from Core Blockly.
   // Variable and function names in Playlab include the Globals namespace.
   Blockly.customBlocks.overrideForLoopGenerator();
+  Blockly.customBlocks.overrideMathChangeGenerator();
   Blockly.customBlocks.overrideProceduresGenerators();
 
   blockGeneratorFunctionDictionary.studio_ask = function () {

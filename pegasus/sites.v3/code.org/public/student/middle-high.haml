@@ -192,3 +192,5 @@ theme: responsive_full_width
         .content-footer
           %a.link-button{href: "https://code.org/csa", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:middle_high_page_cs_link_3)
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::MIDDLE_HIGH_STUDENT_PAGE_VISITED_EVENT

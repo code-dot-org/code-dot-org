@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-22T17:12:28.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "#Create a new variable for each: string, integer, Boolean, and float\n\n\n#Modify the print statements to print out your variables\nprint(\"My string variable is \" + )\nprint(\"My integer variable is \" + )\nprint(\"My boolean variable is \" + )\nprint(\"My float variable is \" + )",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Practice with Strings",
+    "thumbnail_url": "https://images.code.org/84ff284dbac4ef451d4e984f46eb7c50-Screenshot 2025-01-22 at 1.17.15 PM.png",
+    "long_instructions": "# Do This:\r\n1. Add 4 new variables, one for each type: string, integer, Boolean, and float.\r\n#\r\n2. Modify the `print` statements so that they print out each variable.\r\n\t- *Hint: What do you need to add to your code when printing out a string?*\r\n3. **Discuss**: What will the output look like when you include all these variables in the program?\r\n#\r\n4. Run the code and observe the output.",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzic+E7mRKs0LkFnmdjwFLWa0N/+vkuCG\nOhW0Vf+cmWfNK/WaJE/j1jcRW2JKrt7VEgx7l5cybgEsoGpPtQpHSI8OCGIe\n400tvoI6mnw6OP8bepoivIzWAGKK1nrClFfeP9E7TEQQPIr+DGM5xUVCzQJG\nf6EytFLJXOfTRkEipc3Ckyupdj8/muahRG+4UQQLiAvn0VExskDN0o0HDCzC\nlEu2envzdwZdslAgoOy4S1JKptZZM1ePQ80VSjThIny68lah64ZJGEm+3GK+\nsB8BS7BMfCt04fnu32JkLbC70ePui6q1gi2MUgZnKaelwt2w0J6E5ALj4Jca\n/fN97F0t7/OM49fwxkN0iA9bumGTabdRemN91Iz/p5AbqQa1IJooh2PVMYN+\nsO3ApapBj9NVghtB9oVgAM5AxK08hwBUtV1q/FPx35EX+CnGJOS5yRZnRAXk\nLKNnezk9hwSDRcAY62CCRf2xyhZVO57ILKYMEOsvA8X1Mk9SKTxAu42hhP2h\nVDmS5PmgChpvG1at5nMRQtO0t7TV0gzBl7v68wHO/cJ71vW72VfFDaz4NQsq\npEIgZe+7BrAFJt+2BZIOZzVGnGcIRReodSzmtPpNyE6mtUyQ\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-22T17:12:28.058+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson5-variables-3\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson5-variables-3\"},{\"changed_at\":\"2025-01-22 17:12:31 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:07:30 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:14:33 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:20:07 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:27:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:31:52 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:34:30 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:57:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:57:11 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:57:21 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

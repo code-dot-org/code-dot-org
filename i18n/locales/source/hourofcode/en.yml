@@ -2604,6 +2604,7 @@
         explore: "Explore Music Lab: Jam Session"
         explore_short: "Explore Music Lab"
         start: "Start Music Lab: Jam Session"
+        create_new_project: "Create new project"
       banner:
         desc_01: "Learn to code as you remix your favorite artists' tracks and use AI to generate your own beats!"
         desc_02: "Make music and learn to code in our new Music Lab activity for Hour of Code! In this self-guided, one-hour activity, students remix tracks from artists like %{artist_list}, and %{artist_name} while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation."

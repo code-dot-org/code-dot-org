@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": "customizing-llms",
-    "serialized_at": "2025-01-09 22:43:35 UTC",
+    "serialized_at": "2025-01-22 02:20:56 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -89,6 +89,7 @@
             "buttonText": "Learn More"
           }
         ],
+        "background": "light",
         "overview": "This lesson introduces the learning goals focused on artificial intelligence (AI), transitioning into generative AI. It begins with a discussion on the impact of past technological innovations on society. Students then explore the concept of generative AI through the lens of someone familiar only with its hype, aiming to foster understanding and responsible engagement with AI technology. A key part of the lesson is the introduction of the Input, Storage, Processing, Output (ISPO) framework, essential for understanding generative AI's workings.",
         "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Explore some of the key themes from this unit, like how we being informed about Artificial Intelligence can help us make better decisions on when and how to use it."
@@ -119,6 +120,7 @@
             "buttonText": "Learn More"
           }
         ],
+        "background": "light",
         "overview": "In this lesson, students are presented an overview of the unit and explore the chatbot lab for the first time. Students begin by exploring a chatbot, using a model card to guide their understanding of its capabilities and limitations. Next they learn about the temperature setting in chatbots and how it influences the creativity and reliability of responses. Through hands-on experimentation, students will adjust the temperature to see its effect on the chatbot's answers. Finally, students explore how chatbots can hallucinate to produce incorrect or misleading information. Throughout the unit, students will monitor and document these instances, enhancing their critical awareness of AI's limitations.",
         "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -136,6 +138,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "background": "light",
         "overview": "This **Explore** lesson introduces the system prompt and guides students through an investigation on how it impacts a chatbot's behavior. Students start by predicting and discussing how a system prompt can impact a chatbot’s behavior, and then investigate and modify existing chatbots to confirm or expand their initial guesses. Through guided activities, they will learn how the design of a prompt can direct and limit chatbot interactions. Students will practice crafting prompts to elicit specific responses from the AI and engage in activities that incorporate personal experiences to see the effect of their prompt design on how the chatbot functions.\n",
         "preparation": "- Run through the slide deck and videos ahead of time\n- Review the Level Guide Exemplar\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -153,6 +156,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "background": "light",
         "overview": "This **Practice** lesson builds fluency in designing and applying system prompts, expanding the knowledge students developed in the previous lesson. Through examples and guided practice, students learn to craft prompts that guide not only the content but also the style and appropriateness of AI responses based on different audiences and situations. Students apply these skills through practice scenarios simulating real-life use cases and user-stories, emphasizing how problem-solving with system prompts can be applied to address real-world issues.",
         "preparation": "- Run through the slide deck and videos ahead of time\n- Review the Level Guide Exemplar\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -170,6 +174,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "background": "light",
         "overview": "This **Synthesis** lesson expands on the prompting techniques students have learned in the previous two lessons, and invites them to revisit and reflect on how their skills have grown. Students explore two advanced prompting techniques: (1) chain of reasoning, which helps chatbots deliver more precise and relevant responses by giving explicit steps, and (2) providing examples, which enhances the chatbot's accuracy and context appropriateness. After practicing these skills in specific contexts, students revisit and refine earlier lesson activities using the knowledge they’ve accumulated so far.",
         "preparation": "- Run through the slide deck and videos ahead of time\n- Review the Level Guide Exemplar\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -187,6 +192,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "background": "light",
         "overview": "This **Explore** lesson introduces the concept of retrieval and guides students through an investigation on how it impacts a chatbot's behavior. Students start by predicting and discussing how retrieval can impact a chatbot’s behavior, and then investigate and modify existing chatbots to confirm or expand their initial guesses. Through guided activities, they will learn how adding specific information to a chatbot’s knowledge base can significantly improve the accuracy and relevance of its responses. Students will practice adding retrieval information to elicit specific responses from the AI and engage in activities that incorporate personal experiences to see the effect of their retrieval on how the chatbot functions.",
         "preparation": "- Run through the slide deck and videos ahead of time\n- Review the Level Guide Exemplar\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -204,6 +210,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "background": "light",
         "overview": "This **Practice** lesson builds fluency in designing and applying retrieval statements, expanding the knowledge students developed in the previous lesson. Through examples and guided practice, students explore how retrieval can be used to provide current, specialized, and accurate information, helping to reduce the occurrence of AI hallucinations. Students apply these skills through practice scenarios simulating real-life use cases and user-stories, emphasizing the use of trusted real-world data sources (ie: copy-and-pasting accurate sentences) is an effective strategy to address real-world issues.",
         "preparation": "- Run through the slide deck and videos ahead of time\n- Review the Level Guide Exemplar\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -221,6 +228,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "background": "light",
         "overview": "This **Synthesis** lesson focuses on applying retrieval and system prompting to two complex user scenarios. Students begin by brainstorming and planning how to use these strategies to achieve user goals effectively. They will also explore methods for testing and evaluating chatbots to prevent potential harms. After planning, students will design chatbots tailored to each scenario, deciding strategically between using system prompts or retrieval. The lesson concludes with a reflection on the appropriate use of retrieval versus system prompting and revisits previous tasks, allowing students to apply their new insights to enhance their earlier work.",
         "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -238,6 +246,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "background": "light",
         "overview": "In this lesson, students are introduced to Model Cards and Foresight in AI charts as tools used to plan for how AI products are used. Students begin by reflecting on what materials are provided to users when we buy a new product, then explore how a Model Card serves a similar purpose for chatbots to clarify and caution how a particular chatbot product should and shouldn’t be used. Then, students explore an example of a Library chatbot and use a Foresight in AI table to examine the intended and unintended users and use-cases for this chatbot. After this example, students create their own model card for a fictitious chatbot, and then analyze each other’s model cards with a Foresight in AI chart.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -255,6 +264,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "background": "light",
         "overview": "In this lesson, students explore how to create model cards as they develop their chatbots. Students start by helping a friend design a chatbot to give more specific recommendations using a series of multiple-choice focus questions. Once these decisions are made, students document these decisions on the model card for the chatbot, emphasizing how a model card can also serve as documentation as you make decisions during chatbot development. After doing an example as a class, students choose a new scenario and repeat this process.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -272,6 +282,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "background": "light",
         "overview": "In this lesson, students create their project for the unit. In the project, students create a chatbot that represents their personality and is an expert on a specific interest they care about. Using their newfound knowledge from this unit, students apply techniques to adjust the temperature, system prompt, and retrieval settings of a chatbot. After testing their chatbot, they create a model card and “publish” it so other users can interact with it.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -289,6 +300,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "background": "light",
         "overview": "In this lesson, students explore a design thinking strategy to help identify core issues in their community and brainstorm ways generative AI can help solve them. Students start with an initial observation of a problem in their community, then use the 5 Why’s strategy to identify the larger core issue that could be addressed. Students then use model cards to brainstorm possible solutions, then discuss four possible solutions provided by other students. These activities act as a “practice run” for skills and processes students will do for their project later in the unit.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -306,6 +318,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "background": "light",
         "overview": "This lesson has two central parts - first students explore how to act as user testers for a chatbot app, then students help decide what the next-steps should be for a chatbot based on the testing data. This lesson builds to the project students will complete at the end of the unit, where they will user-test each other’s apps using the same structure in this lesson. Students also wrestle with the responsible use of AI and help decide whether or not a chatbot should be launched publicly even when some flaws are uncovered, emphasizing how humans remain decision-makers for how AI products impact society.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- Review the LEADERS framework\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -323,6 +336,7 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "background": "light",
         "overview": "In this lesson, students are introduced to the process of fine-tuning as a process for altering the core behavior of a language model. The lesson starts with students reflecting on how inside jokes or slang expressions create connections that are difficult to explain to folks outside the group - they must be experienced to be understood. This idea ties into the lesson as we explore a new chatbot that has been specifically designed to act as a medical expert. Students observe how speaking to the medical expert chatbot is different from the typical chatbot due to how the both has been fine-tuned on additional medical data. Students learn about the fine-tuning process, then explore additional models on the Hugging Face website to see additional fine-tuned examples.",
         "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -340,6 +354,7 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "background": "light",
         "overview": "Students explore the impact of generative AI by participating in a collaborative game. Students take on a persona of someone impacted by generative AI to read a few articles and react in-character. Then, students form groups and are given a scenario involving their persona and generative AI. Working together, they come up with guidelines for how generative AI should be implemented in this scenario that includes the voices and perspectives of all stakeholders. Finally, students share their results with the class and reflect on this process.",
         "preparation": "- Run through the slide deck and videos ahead of time\n- Check any external links to make sure they are not blocked\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -369,6 +384,7 @@
             "buttonText": "Teacher Survey"
           }
         ],
+        "background": "light",
         "overview": "In this lesson, students create their project for the unit. In the project, students create a chatbot that addresses a personally relevant issue or an issue in their community. Students rely on the user-centered design strategies they’ve seen throughout the unit to create issue statements, design a chatbot, perform user testing, and reflect on the results. Optionally, students can design a presentation on their project and the problem it was designed to address.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -3092,7 +3108,13 @@
       "key": "23beaeef-420c-4604-afc9-e41c2e250448",
       "position": 3,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/209fa3a9a4fc8a168deb119bc7f3eb98-Slide11.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 11 Level 2.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Prompt Engineering & Temperature. Students will be setting the system prompt and temperature and testing the chatbot, recording their data on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/73e046f61bd16ba0f1f8a54f4f1fe556-Slide12.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 11 Level 3.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 3: Retrieval. Students will be adding their retrieval and testing the chatbot, recording their data on the project guide.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/209fa3a9a4fc8a168deb119bc7f3eb98-Slide11.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 11 Level 2.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Prompt Engineering & Temperature. Students will be setting the system prompt and temperature and testing the chatbot, recording their data on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/73e046f61bd16ba0f1f8a54f4f1fe556-Slide12.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 11 Level 3.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 3: Retrieval. Students will be adding their retrieval and testing the chatbot, recording their data on the project guide.\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Providing the Rubric:** Consider providing the [Rubric - Create a Personal Chatbot](https://docs.google.com/document/d/1UlxG0Tc7WfNWy4XpS2jwnLpRScxAycI763TV7mtzwqg/edit?tab=t.0) to students at the end of this day. This allows students to compare their chatbot so far with the final criteria they will be evaluated with and adapt their work if needed to align with the project expectations."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "23beaeef-420c-4604-afc9-e41c2e250448",
@@ -3114,7 +3136,13 @@
       "key": "31e1f08b-a1f2-4f15-8d5e-76b17cc372ac",
       "position": 2,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7bca2098b5ee72ae398357e1e00d5dc2-Slide13.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 4: Testing\n\t\t<br />\n\t\t<br />Students will be testing their chatbot to and determining if it accurately reflects their interest and personality accurately.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/04cfedddf5a8cd133e8b3d60c0647e5c-Slide14.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 11 Level 4.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 5: Model Card & Publish. Students will be adding their model card information to their chatbot and then “publishing”\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/19b08d726c1ec5a1861ec6d5cfd669f1-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> (Optional) Gallery Walk. Have students place their chatbots in “User View” where others can interact. Have students interact with their peers work and leave post-it notes with positive feedback starting with “I Like…” or “I Wish…”\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7bca2098b5ee72ae398357e1e00d5dc2-Slide13.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 4: Testing\n\t\t<br />\n\t\t<br />Students will be testing their chatbot to and determining if it accurately reflects their interest and personality accurately.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/04cfedddf5a8cd133e8b3d60c0647e5c-Slide14.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 11 Level 4.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 5: Model Card & Publish. Students will be adding their model card information to their chatbot and then “publishing”\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/19b08d726c1ec5a1861ec6d5cfd669f1-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> (Optional) Gallery Walk. Have students place their chatbots in “User View” where others can interact. Have students interact with their peers work and leave post-it notes with positive feedback starting with “I Like…” or “I Wish…”\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Summative Assessment: Project Rubric** - you can use the provided [Rubric - Create a Personal Chatbot](https://docs.google.com/document/d/1UlxG0Tc7WfNWy4XpS2jwnLpRScxAycI763TV7mtzwqg/edit?tab=t.0) to assess this project and the key learnings from the unit so far."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "31e1f08b-a1f2-4f15-8d5e-76b17cc372ac",
@@ -3673,7 +3701,7 @@
       "key": "42da5138-f3c5-4ab0-8810-1a6792b43ddd",
       "position": 4,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d4f9880620704be909602307cae0e3d9-Slide7.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1dM1g3ZPt1Q43I8iq-7oxxmm0acqGAiOubaeBdFHRofU/edit\" target=\"_blank\">Project Guide - Solving Community Problems</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/79765c85162fc1006ab1b99abe08da14-Slide8.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview of the project. Students can read individually, or you can read the overview as a class.\n\t\t<br />\n\t\t<br />Students will be creating a chatbot that can be used to solve a problem or accomplish a task relevant to their community.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/ac5bd71c1ef9f814ea3b0a0b0adceba9-Slide9.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 16 Level 1.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Choose one project to explore. These are examples from students who completed this project in other classes!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c82d966327a5a452cb8d0707f6c599cf-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 1: Choose an Issue Statement\n\t\t<br />\n\t\t<br />Students will need to write an issue statement that describes an issue we’ve observed and how it is affecting people in our community. Students can use the <a href=\"https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit\" target=\"_blank\"><a href=\"https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit\" target=\"_blank\">5 Why’s Worksheet</a></a> to help develop an issue statement.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> (Optional) <strong>Distribute:</strong> Distribute copies of the 5 Why’s Worksheet to students to help develop their Issue Statement\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give ample time for students to draft an issue statement. Having a broad but impactful issue statement can make the rest of the project easier to complete since it is anchored in this initial statement.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/cac190349fde9ec7950e65b46d4b84a1-Slide11.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Planning a Solution\n\t\t<br />\n\t\t<br />Students will Brainstorm two different types of chatbot that could help with this issue. Each chatbot should have a specific purpose and an ideal user who the chatbot is designed for.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with chatbot ideas to address their issue statement, similar to the examples in the Issue Statements lesson earlier in the unit. Encourage students to come up with at least 2 ideas so that if something happens with their first choice, they have a backup. Give students ample time to brainstorm and then make a decision and fill in the written responses on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a26070ef330573d45c78ef7ae89f57dd-Slide12.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1a2cGqEck2s97XZoPhUalPNUKWcg0IKQOcFAxLWWyMXc/edit\" target=\"_blank\">Resource - Chatbot Planning Guide</a>\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d4f9880620704be909602307cae0e3d9-Slide7.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1dM1g3ZPt1Q43I8iq-7oxxmm0acqGAiOubaeBdFHRofU/edit\" target=\"_blank\">Project Guide - Solving Community Problems</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/79765c85162fc1006ab1b99abe08da14-Slide8.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview of the project. Students can read individually, or you can read the overview as a class.\n\t\t<br />\n\t\t<br />Students will be creating a chatbot that can be used to solve a problem or accomplish a task relevant to their community.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/ac5bd71c1ef9f814ea3b0a0b0adceba9-Slide9.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 16 Level 1.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Choose one project to explore. These are examples from students who completed this project in other classes!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/c82d966327a5a452cb8d0707f6c599cf-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 1: Choose an Issue Statement\n\t\t<br />\n\t\t<br />Students will need to write an issue statement that describes an issue we’ve observed and how it is affecting people in our community. Students can use the <a href=\"https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit\" target=\"_blank\"><a href=\"https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit\" target=\"_blank\">5 Why’s Worksheet</a></a> to help develop an issue statement.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> (Optional) <strong>Distribute:</strong> Distribute copies of the 5 Why’s Worksheet to students to help develop their Issue Statement\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give ample time for students to draft an issue statement. Having a broad but impactful issue statement can make the rest of the project easier to complete since it is anchored in this initial statement.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/cac190349fde9ec7950e65b46d4b84a1-Slide11.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Planning a Solution\n\t\t<br />\n\t\t<br />Students will Brainstorm two different types of chatbot that could help with this issue. Each chatbot should have a specific purpose and an ideal user who the chatbot is designed for.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with chatbot ideas to address their issue statement, similar to the examples in the Issue Statements lesson earlier in the unit. Encourage students to come up with at least 2 ideas so that if something happens with their first choice, they have a backup. Give students ample time to brainstorm and then make a decision and fill in the written responses on the project guide.\n    </td>\n  </tr>\n\n\n</table>    \n    ",
         "name": "Teaching Guide",
         "tips": [
           {
@@ -3691,11 +3719,11 @@
       "key": "10d7cf9a-134d-42cc-90e1-cb7539bd6acf",
       "position": 5,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f63f475790ce139489ed6e7fb437b77d-Slide13.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Planning a Solution\n\t\t<br />\n\t\t<br />Students will Brainstorm two different types of chatbot that could help with this issue. Each chatbot should have a specific purpose and an ideal user who the chatbot is designed for.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with chatbot ideas to address their issue statement, similar to the examples in the Issue Statements lesson earlier in the unit. Encourage students to come up with at least 2 ideas so that if something happens with their first choice, they have a backup. Give students ample time to brainstorm and then make a decision and fill in the written responses on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8d88e9e1146cbdc0222d01accf8d4701-Slide14.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 16 Level 2.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 4: Make your Chatbot. Students will be setting the system prompt, temperature, and retrieval. They should also test their chatbot and ensure it responds as expected.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/368d3f0bb13e8b2b5c35d5ec8208c3c8-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 16 Level 3.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 5: Make the Model Card.  Students will be adding their model card information to their chatbot and then “publishing”.\n\t\t<br />\n\t\t<br />Optionally, students can complete a physical or digital model card using this <a href=\"https://docs.google.com/presentation/d/1KXIwPhbXIumnp4enyOcAvhGucqZmlm7_pDYkZPCQNeE/edit\" target=\"_blank\">Model Card Template</a>\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f63f475790ce139489ed6e7fb437b77d-Slide13.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 3: Planning your Chatbot\n\t\t<br />\n\t\t<br />Students will plan out how they will use system prompting and retrieval with their chatbot. Brainstorm two different types of chatbot that could help with this issue.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students plan for how they will implement their chatbot. These skills are similar to the previous Chatbot project.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8d88e9e1146cbdc0222d01accf8d4701-Slide14.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 16 Level 2.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 4: Make your Chatbot. Students will be setting the system prompt, temperature, and retrieval. They should also test their chatbot and ensure it responds as expected.\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Teaching Tip: Displaying Student Work** - Creating a paper version of a model card can be redundant since students will do it in the chatbot as well, but having a physical or digital version of the model card also acts as an artifact that you or students can share with broader members of the community. For example, physical model cards can be hung on bulletin boards or digital model cards can be put on a website. These can be tangible ways for students to share their work outside of the chatbot levels themselves."
+            "markdown": "**Providing the Rubric:** Consider providing the [Rubric - Solving Community Problems](https://docs.google.com/document/d/1JnCsw08k305rLPW0iw1H9UkzmDstlO1fd-zetK2W0Sw/edit) to students at the end of this day. This allows students to compare their chatbot so far with the final criteria they will be evaluated with and adapt their work if needed to align with the project expectations."
           }
         ]
       },
@@ -3705,8 +3733,25 @@
       }
     },
     {
-      "key": "2210fd42-4826-4acf-b268-1a332317e181",
+      "key": "8b6d97a8-8640-43e3-807a-9ddade09dff7",
       "position": 6,
+      "properties": {
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/368d3f0bb13e8b2b5c35d5ec8208c3c8-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 16 Level 3.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 5: Make the Model Card.  Students will be adding their model card information to their chatbot and then “publishing”.\n\t\t<br />\n\t\t<br />Optionally, students can complete a physical or digital model card using this <a href=\"https://docs.google.com/presentation/d/1KXIwPhbXIumnp4enyOcAvhGucqZmlm7_pDYkZPCQNeE/edit\" target=\"_blank\">Model Card Template</a>\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Displaying Student Work** - Creating a paper version of a model card can be redundant since students will do it in the chatbot as well, but having a physical or digital version of the model card also acts as an artifact that you or students can share with broader members of the community. For example, physical model cards can be hung on bulletin boards or digital model cards can be put on a website. These can be tangible ways for students to share their work outside of the chatbot levels themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8b6d97a8-8640-43e3-807a-9ddade09dff7",
+        "lesson_activity.key": "b41230a7-96ae-4d8e-af12-f47758e3a060"
+      }
+    },
+    {
+      "key": "2210fd42-4826-4acf-b268-1a332317e181",
+      "position": 7,
       "properties": {
         "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/ac620d39af4551100524772a7ff14cc0-Slide16.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out two copies of <a href=\"https://docs.google.com/document/d/1SqWCKewyia6WXiWacVnlD-TWj8AcEAP0apg9yE0X58c/edit\" target=\"_blank\">Activity Guide - Chatbot User Testing</a> to each student\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
@@ -3723,7 +3768,7 @@
     },
     {
       "key": "57dbd739-8def-4fde-8770-33a604399dce",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/07e52275a8e251333b6f735e85aa81f9-Slide17.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 6: User Testing\n\t\t<br />\n\t\t<br />Students will use the Chatbot User Testing Activity Guide to have other users test your chatbot. Try to have at least two other students test your chatbot. Once you’ve had at least two other people test your chatbot, complete the table in the project guide\n\t\t<br />\n\t\t<br />Students will need time to fill out the User Testing Activity guide with 3 prompts of their own, then trade their testing guides with other students to test each others chatbots. Once they’re done, students should review the feedback and decide on how to update their chatbots.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
@@ -3740,9 +3785,15 @@
     },
     {
       "key": "0d9be6c3-64f7-41a3-89d8-e6b7f2f143b5",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8eea15368cdae1d907575862ae186862-Slide18.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> (Optional) Finalize and Present. Have students prepare a short presentation of their chatbot to share with their peers.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8eea15368cdae1d907575862ae186862-Slide18.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> (Optional) Finalize and Present. Have students prepare a short presentation of their chatbot to share with their peers.\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Summative Assessment: Project Rubric** - you can use the provided [Rubric - Solving Community Problems](https://docs.google.com/document/d/1JnCsw08k305rLPW0iw1H9UkzmDstlO1fd-zetK2W0Sw/edit) to assess this project and the key learnings from the unit so far."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0d9be6c3-64f7-41a3-89d8-e6b7f2f143b5",
@@ -7462,19 +7513,6 @@
       }
     },
     {
-      "name": "Chatbot Planning Guide",
-      "url": "https://docs.google.com/document/d/1a2cGqEck2s97XZoPhUalPNUKWcg0IKQOcFAxLWWyMXc/edit",
-      "key": "chatbot_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "chatbot_planning_guide"
-      }
-    },
-    {
       "name": "Chatbot User Testing",
       "url": "https://docs.google.com/document/d/1SqWCKewyia6WXiWacVnlD-TWj8AcEAP0apg9yE0X58c/edit",
       "key": "chatbot_user_testing",
@@ -7607,6 +7645,18 @@
       },
       "seeding_key": {
         "resource.key": "leaders_framework_1"
+      }
+    },
+    {
+      "name": "Learning Framework",
+      "url": "https://docs.google.com/spreadsheets/d/18JCfzIn8XbAHgjcSqY_TkzUC0fNCmJoj-_ql8M8H1S4/edit",
+      "key": "learning_framework",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "learning_framework"
       }
     },
     {
@@ -7794,6 +7844,30 @@
       },
       "seeding_key": {
         "resource.key": "retrieval_-_synthesis"
+      }
+    },
+    {
+      "name": "Rubric - Create a Personal Chatbot",
+      "url": "https://docs.google.com/document/d/1UlxG0Tc7WfNWy4XpS2jwnLpRScxAycI763TV7mtzwqg/edit",
+      "key": "rubric_-_create_a_personal_chatbot",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "rubric_-_create_a_personal_chatbot"
+      }
+    },
+    {
+      "name": "Rubric - Solving Community Problems",
+      "url": "https://docs.google.com/document/d/1JnCsw08k305rLPW0iw1H9UkzmDstlO1fd-zetK2W0Sw/edit?tab=t.0",
+      "key": "rubric_-_solving_community_problems",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "rubric_-_solving_community_problems"
       }
     },
     {
@@ -8084,6 +8158,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "resource.key": "rubric_-_create_a_personal_chatbot"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project: Solving Community Problems with Chatbots",
         "resource.key": "_template_5_why_s"
       }
@@ -8097,12 +8177,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project: Solving Community Problems with Chatbots",
-        "resource.key": "chatbot_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Solving Community Problems with Chatbots",
         "resource.key": "chatbot_user_testing"
       }
     },
@@ -8110,6 +8184,12 @@
       "seeding_key": {
         "lesson.key": "Project: Solving Community Problems with Chatbots",
         "resource.key": "project_solving_community_problems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Solving Community Problems with Chatbots",
+        "resource.key": "rubric_-_solving_community_problems"
       }
     },
     {
@@ -8231,6 +8311,12 @@
     {
       "seeding_key": {
         "resource.key": "leaders_framework_1",
+        "script.name": "customizing-llms-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "learning_framework",
         "script.name": "customizing-llms-2024"
       }
     },

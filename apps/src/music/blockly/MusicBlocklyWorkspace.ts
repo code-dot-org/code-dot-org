@@ -4,6 +4,7 @@ import {BLOCK_TYPES, Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import {ProcedureBlock, ExtendedBlock} from '@cdo/apps/blockly/types';
 import {disableOrphanBlocks} from '@cdo/apps/blockly/utils';
+import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -16,14 +17,23 @@ import {BlockMode, Triggers} from '../constants';
 import musicI18n from '../locale';
 
 import {BlockTypes} from './blockTypes';
+import {validateBlockCategories} from './blockUtils';
 import {
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
 import {setUpBlocklyForMusicLab} from './setup';
-import {getToolbox} from './toolbox';
-import {ToolboxData} from './toolbox/types';
+import {
+  getToolbox,
+  addToolboxBlocksToWorkspace,
+  toolboxModeCategory,
+  getNewStaticCategory,
+  getNewDynamicCategory,
+  isValidCategory,
+  DEFAULT_CATEGORY_NAME,
+} from './toolbox';
+import {Category, ToolboxData} from './toolbox/types';
 
 const experiments = require('@cdo/apps/util/experiments');
 
@@ -65,6 +75,7 @@ export default class MusicBlocklyWorkspace {
   private headlessMode: boolean;
   private toolbox?: ToolboxData;
   private blockMode?: ValueOf<typeof BlockMode>;
+  private toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo;
 
   constructor(
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
@@ -85,27 +96,45 @@ export default class MusicBlocklyWorkspace {
    * @param container HTML element to inject the workspace into
    * @param onBlockSpaceChange callback fired when any block space change events occur
    * @param isReadOnlyWorkspace is the workspace readonly
-   * @param toolbox information about the toolbox
+   * @param isRtl should the workspace use RTL
+   * @param blockMode current block mode (e.g. simple2, advanced)
+   * @param toolboxAllowList information about the toolbox
+   * @param toolboxDefinition Blockly toolbox definition
    *
    */
   init(
     container: HTMLElement,
     onBlockSpaceChange: (e: GoogleBlockly.Events.Abstract) => void,
     isReadOnlyWorkspace: boolean,
-    toolbox: ToolboxData | undefined,
+    toolboxAllowList: ToolboxData | undefined,
     isRtl: boolean,
-    blockMode: ValueOf<typeof BlockMode>
+    blockMode: ValueOf<typeof BlockMode>,
+    toolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo
   ) {
+    const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+
     if (this.workspace) {
       this.workspace.dispose();
     }
 
     this.container = container;
 
-    this.toolbox = toolbox;
+    this.toolbox = toolboxAllowList;
+    this.toolboxDefinition = toolboxDefinition;
     this.blockMode = blockMode;
 
-    const toolboxBlocks = getToolbox(blockMode, toolbox);
+    // The default toolbox consists of all blocks supported by the
+    // current block mode.
+    let toolboxBlocks = getToolbox(blockMode);
+
+    if (isToolboxMode) {
+      // Toolbox uses the full toolbox with an additional block for managing categories.
+      toolboxBlocks.contents.unshift(toolboxModeCategory);
+    } else if (toolboxDefinition || toolboxAllowList) {
+      toolboxBlocks =
+        // Use whichever toolbox configuration is available from the level configuration.
+        toolboxDefinition || getToolbox(blockMode, toolboxAllowList);
+    }
 
     // This dialog is used for naming variables, which are only present in advanced mode.
     const customSimpleDialog = function (options: {
@@ -160,6 +189,30 @@ export default class MusicBlocklyWorkspace {
     }
     this.workspace = new GoogleBlockly.Workspace();
     this.headlessMode = true;
+  }
+
+  /**
+   * Set up the Blockly workspace for toolbox mode (levelbuilder).
+   * Adds blocks to the workspace based on the level's toolbox configuration.
+   * Automatically cleans up the workspace as blocks move.
+   */
+  initializeToolboxMode(
+    blockMode: ValueOf<typeof BlockMode>,
+    levelToolbox?: ToolboxData,
+    levelToolboxDefinition?: GoogleBlockly.utils.toolbox.ToolboxInfo
+  ) {
+    const toolbox =
+      levelToolboxDefinition || getToolbox(blockMode, levelToolbox);
+
+    const workspace = this.workspace as GoogleBlockly.WorkspaceSvg;
+    addToolboxBlocksToWorkspace(toolbox.contents, workspace);
+
+    validateBlockCategories(workspace);
+    workspace.addChangeListener(e => {
+      if (e.type === Blockly.Events.BLOCK_MOVE) {
+        validateBlockCategories(workspace);
+      }
+    });
   }
 
   resizeBlockly() {
@@ -382,6 +435,10 @@ export default class MusicBlocklyWorkspace {
     return !!this.codeHooks[triggerIdToEvent(id)];
   }
 
+  hasAnyTriggers() {
+    return Triggers.some(({id}) => this.hasTrigger(id));
+  }
+
   /**
    * Given the exact current playback position, get the start position of the trigger,
    * adjusted based on when the trigger should play (immediately, next beat, or next measure).
@@ -412,6 +469,85 @@ export default class MusicBlocklyWorkspace {
       return {};
     }
     return Blockly.serialization.workspaces.save(this.workspace);
+  }
+
+  /**
+   * Serialize the top blocks of the workspace as a toolbox.
+   * @returns a toolbox definition that can be handled directly by Blockly.
+   */
+  workspaceToToolboxDefinition() {
+    if (!this.workspace) {
+      this.metricsReporter.logWarning(
+        'workspaceToToolboxDefinition called before workspace initialized.'
+      );
+      return {};
+    }
+    const topBlocks = this.workspace.getTopBlocks(true);
+
+    // This will be the final toolbox returned by this function, either a
+    // flyout toolbox or a category toolbox.
+    const fullToolbox: GoogleBlockly.utils.toolbox.ToolboxInfo = {
+      contents: [],
+    };
+    // Temporary storage for blocks that will be added to the next category,
+    // if categories exist, or the final flyout toolbox.
+    let flyoutItems: GoogleBlockly.utils.toolbox.FlyoutItemInfo[] = [];
+
+    // Temporary storage for a category, containing a name, type, list of contents.
+    let currentCategory = getNewStaticCategory();
+
+    topBlocks.forEach(block => {
+      if (block.type === BlockTypes.CATEGORY) {
+        fullToolbox.kind = 'categoryToolbox';
+        if (isValidCategory(currentCategory)) {
+          // Add the previous category to toolbox.
+          fullToolbox.contents.push({...currentCategory});
+        }
+
+        // Begin a new category for the blocks that follow.
+        currentCategory = getNewStaticCategory(
+          block.getFieldValue('CATEGORY') as Category
+        );
+        flyoutItems = [];
+      } else if (block.type === BlockTypes.CUSTOM_CATEGORY) {
+        fullToolbox.kind = 'categoryToolbox';
+        if (isValidCategory(currentCategory)) {
+          // Add previous category to toolbox
+          fullToolbox.contents.push({...currentCategory});
+        }
+        // Create and immediately add a new dynamic category to the toolbox,
+        // because dynamic categories cannot include other static blocks.
+        fullToolbox.contents.push(
+          getNewDynamicCategory(block.getFieldValue('CUSTOM'))
+        );
+
+        // Begin a new "DEFAULT" category in case any non-category block follows.
+        currentCategory = getNewStaticCategory();
+        flyoutItems = [];
+      } else {
+        // Add the current block to the flyout and category.
+        flyoutItems.push({
+          kind: 'block',
+          ...Blockly.serialization.blocks.save(block, {saveIds: false}),
+          enabled: true,
+        });
+        currentCategory.contents = flyoutItems;
+      }
+    });
+
+    // Finalize the toolbox.
+    if (
+      !fullToolbox.contents.length &&
+      currentCategory.name === DEFAULT_CATEGORY_NAME
+    ) {
+      // If no categories have been used, create a flyout toolbox.
+      fullToolbox.kind = 'flyoutToolbox';
+      fullToolbox.contents = flyoutItems;
+    } else if (isValidCategory(currentCategory)) {
+      // Add the final category to the toolbox.
+      fullToolbox.contents.push({...currentCategory});
+    }
+    return fullToolbox;
   }
 
   getAllBlocks() {
@@ -516,7 +652,7 @@ export default class MusicBlocklyWorkspace {
   }
 
   // For each function body in the current workspace, add a function call
-  // block to the toolbox. Also add a function defintion block, if required.
+  // block to the toolbox. Also add a function definition block, if required.
   generateFunctionBlocks() {
     const blockList: GoogleBlockly.utils.toolbox.ToolboxItemInfo[] = [];
 
@@ -571,10 +707,26 @@ export default class MusicBlocklyWorkspace {
     });
 
     if (this.blockMode) {
-      const existingToolbox = getToolbox(this.blockMode, this.toolbox);
-      existingToolbox.contents = existingToolbox.contents.concat(blockList);
+      const existingToolbox =
+        this.toolboxDefinition || getToolbox(this.blockMode, this.toolbox);
+      // Perform a copy of the toolbox contents to avoid modifying the original
+      // this.toolboxDefinition object.
+      const updatedToolbox = {
+        ...existingToolbox,
+        contents: [...existingToolbox.contents, ...blockList],
+      };
       const workspace = this.workspace as GoogleBlockly.WorkspaceSvg;
-      workspace.updateToolbox(existingToolbox);
+      // Remove any existing function call blocks before updating the toolbox.
+      // This is necessary to prevent the blocks from being deleted twice.
+      // (When a definition block is deleted, any matching call block is also deleted.)
+      workspace
+        .getFlyout()
+        ?.getWorkspace()
+        .getBlocksByType(BLOCK_TYPES.procedureCall)
+        .forEach(block => {
+          block.dispose();
+        });
+      workspace.updateToolbox(updatedToolbox);
 
       if (workspace.RTL) {
         // When the flyout is dynamically populated, the flyout width can increase,

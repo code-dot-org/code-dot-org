@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 
+import Button from '@cdo/apps/componentLibrary/button';
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
@@ -138,21 +138,23 @@ export default function SchoolInfoInterstitial({
         </div>
         <div style={styles.bottom}>
           <Button
-            onClick={dismissSchoolInfoForm}
-            style={styles.button}
-            color="gray"
-            size="large"
             text={i18n.dismiss()}
+            onClick={dismissSchoolInfoForm}
+            size="m"
+            type="secondary"
             id="dismiss-button"
+            color="gray"
+            style={styles.button}
           />
           <Button
-            onClick={handleSchoolInfoSubmit}
-            style={styles.button}
-            size="large"
             text={i18n.save()}
-            color={Button.ButtonColor.brandSecondaryDefault}
+            onClick={handleSchoolInfoSubmit}
+            size="m"
+            type="primary"
             id="save-button"
+            color="purple"
             disabled={saveDisabled}
+            style={styles.button}
           />
         </div>
       </div>
@@ -207,6 +209,7 @@ const styles = {
     color: color.red,
   },
   button: {
+    width: '6.25em',
     marginLeft: 7,
     marginRight: 7,
     marginTop: 15,

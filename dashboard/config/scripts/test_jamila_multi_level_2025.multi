@@ -1,0 +1,11 @@
+name 'test-jamila-multi-level-2025'
+title 'test multiple choice level yayy'
+description 'answer the question'
+question 'what is 2+2'
+wrong 'wrong answer'
+right 'right answer'
+wrong 'wrong answer'
+wrong 'wrong answer'
+wrong 'wrong answer'
+wrong 'wrong answer'
+allow_multiple_attempts true

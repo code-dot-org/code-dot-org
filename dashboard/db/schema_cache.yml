@@ -2844,7 +2844,7 @@ columns:
     'null': true
     default: 
     default_function: 
-    collation: utf8mb3_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment: 
   learning_goal_evidence_levels:
   - *10
@@ -4557,6 +4557,14 @@ columns:
   - *31
   - *28
   - *91
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: session_format
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   pd_survey_questions:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -13953,7 +13961,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20241216152219
+version: 20250116214434
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

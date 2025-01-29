@@ -1,5 +1,7 @@
-import React, {useEffect, useRef} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useRef, useState} from 'react';
 
+import Button from '@cdo/apps/componentLibrary/button';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../locale';
@@ -21,36 +23,103 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   isTeacherView,
 }) => {
+  const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
+  const [showScrollToBottom, setShowScrollToBottom] = useState(true);
   const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
 
-  // Compare the chat events  as a string since the object reference will change on every update.
-  // This way we will only scroll when the contents of the events have changed.
-  const eventsString = JSON.stringify(events);
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  const scrollToBottom = () => {
     if (conversationContainerRef.current) {
-      conversationContainerRef.current.scrollTo({
-        top: conversationContainerRef.current.scrollHeight,
-        behavior: 'smooth',
-      });
+      setShowScrollToBottom(false);
+
+      if (!isAtBottom()) {
+        setInProgrammaticScroll(true);
+        conversationContainerRef.current.scrollTo({
+          top: conversationContainerRef.current.scrollHeight,
+          behavior: 'smooth',
+        });
+
+        const intervalId = setInterval(() => {
+          if (isAtBottom()) {
+            setInProgrammaticScroll(false);
+            clearInterval(intervalId);
+          }
+        }, 100);
+      }
     }
-  }, [eventsString, isWaitingForChatResponse]);
+  };
+
+  const isAtBottom = () => {
+    const container = conversationContainerRef.current;
+
+    if (!container) {
+      return false;
+    }
+
+    // Add a pixel of buffer to account for rounding errors.
+    return (
+      container.scrollTop + container.clientHeight + 1 >= container.scrollHeight
+    );
+  };
+
+  useEffect(() => {
+    const container = conversationContainerRef.current;
+
+    if (!container) {
+      return;
+    }
+
+    const handleScroll = () => {
+      if (!inProgrammaticScroll) {
+        setShowScrollToBottom(!isAtBottom());
+      }
+    };
+
+    container.addEventListener('scroll', handleScroll);
+
+    const resizeObserver = new ResizeObserver(handleScroll);
+    resizeObserver.observe(container);
+
+    return () => {
+      container?.removeEventListener('scroll', handleScroll);
+      resizeObserver?.disconnect();
+    };
+  }, [inProgrammaticScroll]);
+
+  useEffect(scrollToBottom, [events.length, isWaitingForChatResponse]);
 
   return (
     <div
       id="chat-workspace-conversation"
-      className={moduleStyles.conversationArea}
-      ref={conversationContainerRef}
+      className={classNames(
+        moduleStyles.conversationArea,
+        moduleStyles.scrollToBottomContainer
+      )}
     >
-      {events.map(event => (
-        <ChatEventView
-          event={event}
-          key={event.timestamp}
-          isTeacherView={isTeacherView}
-        />
-      ))}
-      <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+      <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
+        {events.map(event => (
+          <ChatEventView
+            event={event}
+            key={event.timestamp}
+            isTeacherView={isTeacherView}
+          />
+        ))}
+        <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+      </div>
+      {showScrollToBottom && (
+        <div className={moduleStyles.floatingScrollToBottomButtonContainer}>
+          <Button
+            isIconOnly
+            icon={{iconName: 'arrow-down'}}
+            size="s"
+            color="black"
+            type="secondary"
+            onClick={scrollToBottom}
+            className={moduleStyles.scrollToBottomButton}
+          />
+        </div>
+      )}
     </div>
   );
 };

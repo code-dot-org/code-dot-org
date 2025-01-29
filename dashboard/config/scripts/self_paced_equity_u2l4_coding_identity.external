@@ -22,11 +22,16 @@ markdown <<MARKDOWN
 
 ## Examples in Code.org Curricula
 
+##### Click on the arrows below to expand each section.
+
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 
 <summary style="font-size: 18px; font-weight: bold;">Elementary Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### The CS Connections Module <a href="https://studio.code.org/s/csc-bookcovers-2023" target="blank" rel="noopener noreferrer">Coding Book Covers</a> guides students through coding an interactive book cover for their favorite book to recommend to others, including characters, a setting, and a summary. <a href="https://studio.code.org/s/csc-bookcovers-2023/lessons/2" target="blank" rel="noopener noreferrer">Lesson 2</a> of the module opens a discussion where students name their favorite book they've read this year to connect to joyful experiences students have with reading.
+
 </p></div>
 </details>
 
@@ -35,6 +40,15 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">Middle School Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### CS Discoveries provides ample opportunities for students to direct their own learning by including choice practice levels. Students are able to choose which levels they would like to participate in to practice the skills they learned during the direct instruction portion of a lesson. See page 3 of the <a href="https://docs.google.com/document/d/1fwXnkosoiHTJJuc2CGF9zEwl0NsUa20Z7THRk8cuZwg/edit?usp=sharing" target="blank" rel="noopener noreferrer">CS Discoveries Guide to Programming Levels</a> for more about our approach to these levels.
+
+#### Here are some examples of choice levels:
+
+* #### In a <a href="https://studio.code.org/s/csd2-2024/lessons/12/levels/6" target="blank" rel="noopener noreferrer">Unit 2 - Web Development lesson</a>, students can choose how they practice structure a web page or debug code.
+* #### In a <a href="https://studio.code.org/s/csd3-2024/lessons/8/levels/9" target="blank" rel="noopener noreferrer">Unit 3 - Interactive Animations and Games lesson</a>, students can decide how they would like to practice adding sprites to a scene.
+* #### In a <a href="https://studio.code.org/s/csd6a-2024/lessons/5/levels/6" target="blank" rel="noopener noreferrer">Unit 6 - Creating Apps with Devices lesson</a>, students can practice coding different elements of a physical device.
+
 </p></div>
 </details>
 
@@ -43,6 +57,8 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">High School Example</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 <p style="font-size: 18px;">
+
+#### In <a href="https://studio.code.org/s/csa-postap-se-and-computer-vision-2024" target="blank" rel="noopener noreferrer">a post-AP test module of CSA</a>, high schoolers learn about professional software development tools, including GitHub and GitHub Copilot, which helps them build real-world industry-standard skills. Each lesson centers around a relevant question that students might ask about being a programmer like, "How might tools like ChatGPT or GitHub Copilot impact my role as a software engineer?" in <a href="https://studio.code.org/s/csa-postap-se-and-computer-vision-2024/lessons/3" target="blank" rel="noopener noreferrer">lesson 2</a>.
 </p></div>
 </details>
 

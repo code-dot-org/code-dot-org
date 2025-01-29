@@ -330,28 +330,28 @@ class UserTest < ActiveSupport::TestCase
     assert_equal hashed_email, teacher.read_attribute(:hashed_email)
   end
 
-  test 'email_for_enrollments returns user.email if user has no latest accepted application' do
+  test 'alternate_email returns nil if user has no latest accepted application' do
     user = create :teacher
-    assert_equal user.email_for_enrollments, user.email
+    assert user.alternate_email.blank?
   end
 
-  test 'email_for_enrollments returns user.email if users latest accepted application has no alternate email' do
+  test 'alternate_email returns nil if users latest accepted application has no alternate email' do
     user = create :teacher
-    application = create :pd_teacher_application, user: user
+    application = create :pd_teacher_application, user: user, status: 'accepted'
     application_form_data = application.form_data_hash
-    application_form_data['alternateEmail'] = nil
+    application_form_data['alternateEmail'] = ''
     application.update!(form_data_hash: application_form_data)
 
     assert application.form_data_hash['alternateEmail'].blank?
-    assert_equal user.email_for_enrollments, user.email
+    assert user.alternate_email.blank?
   end
 
-  test 'email_for_enrollments returns app alternate email if users latest accepted application has alternate email' do
+  test 'alternate_email returns app alternate email if users latest accepted application has alternate email' do
     user = create :teacher
     application = create :pd_teacher_application, user: user, status: 'accepted'
     app_alternate_email = application.form_data_hash['alternateEmail']
 
-    assert_equal user.email_for_enrollments, app_alternate_email
+    assert_equal user.alternate_email, app_alternate_email
   end
 
   test "log in with password with pepper" do
@@ -1644,7 +1644,7 @@ class UserTest < ActiveSupport::TestCase
     @student.update!(races: 'white,closed_dialog')
     @student.reload
     assert_equal 'closed_dialog', @student.races
-    assert_nil @student.urm
+    refute @student.urm
   end
 
   test 'sanitize_race_data sanitizes too many races' do
@@ -1653,7 +1653,7 @@ class UserTest < ActiveSupport::TestCase
     student.update!(races: 'american_indian,asian,black,hawaiian,hispanic,white')
     student.reload
     assert_equal 'nonsense', student.races
-    assert_nil student.urm
+    refute student.urm
   end
 
   test 'sanitize_race_data sanitizes non-races' do
