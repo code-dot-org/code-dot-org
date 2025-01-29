@@ -16,6 +16,37 @@ import style from '@cdo/apps/code-studio/pd/professional_learning_landing/landin
 
 const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
 
+export const buildAppleCalendarLink = (
+  session,
+  workshopTitle,
+  workshopLocation
+) => {
+  const date = `${session.year}${session.month}${session.day}`;
+  const startTime = `${date}T${session.start_hour}${session.start_min}00`;
+  const endTime = `${date}T${session.end_hour}${session.end_min}00`;
+
+  const icsFileContent = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'CALSCALE:GREGORIAN',
+    `PRODID:${workshopTitle}${startTime}/ics`,
+    'BEGIN:VEVENT',
+    `DTSTAMP:${startTime}`,
+    `UID:${workshopTitle}${startTime}`,
+    `DTSTART:${startTime}`,
+    `DTEND:${endTime}`,
+    `SUMMARY:${workshopTitle}`,
+    `LOCATION:${workshopLocation}`,
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\n');
+
+  const blob = new Blob([icsFileContent], {
+    type: 'text/calendar;charset=utf-8',
+  });
+  return URL.createObjectURL(blob);
+};
+
 export const buildGoogleCalendarLink = (
   session,
   workshopTitle,
@@ -77,6 +108,8 @@ export default function WorkshopEnrollmentCelebrationDialog({
       return buildGoogleCalendarLink(session, workshopTitle, workshopLocation);
     } else if (calendarType === 'Outlook') {
       return buildOutlookCalendarLink(session, workshopTitle, workshopLocation);
+    } else if (calendarType === 'Apple') {
+      return buildAppleCalendarLink(session, workshopTitle, workshopLocation);
     }
   };
 
@@ -180,6 +213,16 @@ export default function WorkshopEnrollmentCelebrationDialog({
                     {hasMultipleSessions ? (
                       <>
                         <Button
+                          text={'Apple'}
+                          type={'secondary'}
+                          color={'black'}
+                          iconLeft={{
+                            iconName: 'brands fa-apple',
+                            iconStyle: 'light',
+                          }}
+                          onClick={() => setMultipleSessionDialogType('Apple')}
+                        />
+                        <Button
                           text={'Google'}
                           type={'secondary'}
                           color={'black'}
@@ -204,6 +247,23 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       </>
                     ) : (
                       <>
+                        <LinkButton
+                          text={'Apple'}
+                          ariaLabel={i18n.addToCalendarType({
+                            calendar_type: 'Apple',
+                          })}
+                          type={'secondary'}
+                          color={'black'}
+                          iconLeft={{
+                            iconName: 'brands fa-apple',
+                            iconStyle: 'light',
+                          }}
+                          target="_blank"
+                          href={getCalendarLink(
+                            workshopSessionInfo[0],
+                            'Apple'
+                          )}
+                        />
                         <LinkButton
                           text={'Google'}
                           ariaLabel={i18n.addToCalendarType({
