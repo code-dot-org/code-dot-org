@@ -144,12 +144,18 @@ const TeacherCourseOverview: React.FC = () => {
       );
       return;
     }
-    let courseVersionName = selectedSection.courseVersionName;
-    if (selectedSection.courseVersionName !== params.courseVersionName) {
-      courseVersionName = params.courseVersionName;
+
+    if (!params.courseVersionName) {
+      navigate(
+        generatePath('../' + TEACHER_NAVIGATION_PATHS.courseOverview, {
+          courseVersionName: selectedSection.courseVersionName,
+        }),
+        {replace: true}
+      );
+      return;
     }
 
-    courseSummaryCachedLoader(courseVersionName)
+    courseSummaryCachedLoader(params.courseVersionName)
       .then(response => {
         if (response) {
           setCourseSummary(response.course_summary as CourseSummary);
