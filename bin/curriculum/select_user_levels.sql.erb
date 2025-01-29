@@ -3,7 +3,7 @@ FROM dashboard_production.user_levels
 WHERE attempts > 0
   AND script_id = <%= unit_id %>
   <%= level_id && "AND level_id = #{level_id}" %>
-<%= order && "ORDER BY id" %>
+ORDER BY id
 <%= limit && "LIMIT #{limit}" %>
 <%= offset && "OFFSET #{offset}" %>
 ;

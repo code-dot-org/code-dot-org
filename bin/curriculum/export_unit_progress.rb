@@ -23,9 +23,6 @@ OptionParser.new do |opts|
   opts.on("-z", "--level-id LEVEL", "Level id") do |level_id|
     $options[:level_id] = level_id
   end
-  opts.on("-o", "--order", "Order by user_level.id") do
-    $options[:order] = true
-  end
   opts.on("-l", "--limit LIMIT") do |limit|
     $options[:limit] = limit
   end
@@ -58,7 +55,7 @@ $pii_threshold = 0.7
 
 $max_processes = 100
 
-def fetch_progress(simple:, unit_id:, level_id:, order:, limit:, offset:)
+def fetch_progress(simple:, unit_id:, level_id:, limit:, offset:)
   if Rails.env.production?
     # fetch the data from redshift in production, because it relies on an unindexed query on
     # user_levels as well as views that are only available in redshift.
@@ -71,7 +68,6 @@ def fetch_progress(simple:, unit_id:, level_id:, order:, limit:, offset:)
     params = {
       unit_id: unit_id,
       level_id: level_id,
-      order: order,
       limit: limit,
       offset: offset,
     }
@@ -239,7 +235,6 @@ def main
   level_id = $options[:level_id].presence
   Level.find(level_id) if level_id
 
-  order = $options[:order].presence
   limit = $options[:limit].presence
   offset = $options[:offset].presence
 
@@ -248,7 +243,6 @@ def main
     unit_id: unit_id,
     level_id: level_id,
     limit: limit,
-    order: order,
     offset: offset,
   )
 
