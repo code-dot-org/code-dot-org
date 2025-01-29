@@ -19,7 +19,8 @@ export const DefaultVideo: Story = {
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const video = canvas.getByRole('figure');
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    const video = await canvas.findByTitle("What Most Schools Don't Teach");
 
     // check if video is visible
     expect(video).toBeVisible();
@@ -34,10 +35,15 @@ export const VideoWithCaption: Story = {
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const video = canvas.getByRole('figure');
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    const video = await canvas.findByTitle("What Most Schools Don't Teach");
+    const caption = canvas.getByText("What Most Schools Don't Teach");
 
     // check if video is visible
     expect(video).toBeVisible();
+
+    // check if caption is visible
+    expect(caption).toBeVisible();
   },
 };
 
@@ -59,7 +65,8 @@ export const VideoWithFallback: Story = {
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const video = canvas.getByRole('figure');
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    const video = await canvas.findByTitle("What Most Schools Don't Teach");
     const download = canvas.getByRole('link');
 
     // check if video is visible
@@ -80,11 +87,16 @@ export const VideoWithCaptionAndFallback: Story = {
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
-    const video = canvas.getByRole('figure');
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    const video = await canvas.findByTitle("What Most Schools Don't Teach");
+    const caption = canvas.getByText("What Most Schools Don't Teach");
     const download = canvas.getByRole('link');
 
     // check if video is visible
     expect(video).toBeVisible();
+
+    // check if caption is visible
+    expect(caption).toBeVisible();
 
     // check if download button is visible
     expect(download).toBeVisible();
