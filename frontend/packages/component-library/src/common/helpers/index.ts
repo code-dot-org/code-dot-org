@@ -147,6 +147,7 @@ export const checkIfURLIsBlocked = (url: string): Promise<boolean> => {
     const img = new Image();
     img.onload = () => resolve(false);
     img.onerror = () => resolve(true);
+    // This prevents the browser from caching the image.
     img.src = `${url}?_=${Math.random()}`;
   });
 };
