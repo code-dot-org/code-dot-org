@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
@@ -18,8 +17,8 @@ import moduleStyles from './teacher-feedback-footer.module.scss';
 interface Props {
   id: number;
   chatMessageText: string;
+  isAssistant: boolean;
   teacherFeedback?: FeedbackValue;
-  role: Role;
 }
 
 /**
@@ -28,8 +27,8 @@ interface Props {
 const CleanFeedbackFooter: React.FC<Props> = ({
   id,
   chatMessageText,
+  isAssistant,
   teacherFeedback,
-  role,
 }) => {
   const teacherFlagged = teacherFeedback === TeacherFeedback.CLEAN_DISAGREE;
   const dispatch = useAppDispatch();
@@ -46,7 +45,7 @@ const CleanFeedbackFooter: React.FC<Props> = ({
     <div
       className={classNames(
         moduleStyles.teacherFeedbackContainer,
-        role === Role.ASSISTANT && moduleStyles.assistantFeedback
+        isAssistant && moduleStyles.assistantFeedback
       )}
     >
       {teacherFlagged && (
@@ -56,7 +55,7 @@ const CleanFeedbackFooter: React.FC<Props> = ({
         key={`flag-tooltip-${teacherFlagged}`}
         tooltipProps={{
           tooltipId: 'flag-tooltip',
-          direction: role === Role.ASSISTANT ? 'onRight' : 'onLeft',
+          direction: isAssistant ? 'onRight' : 'onLeft',
           size: 'xs',
           text: teacherFlagged
             ? aichatI18n.chatMessage_unflagAsInappropriate()
@@ -82,7 +81,7 @@ const CleanFeedbackFooter: React.FC<Props> = ({
           }
         />
       </WithTooltip>
-      {role === Role.ASSISTANT && <CopyButton copyText={chatMessageText} />}
+      {isAssistant && <CopyButton copyText={chatMessageText} />}
     </div>
   );
 };

@@ -45,10 +45,16 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   // but is currently marked optional because the ChatEvent type
   // is used for both chat history and live chat.
   // TODO: Clean up types to separate server and client IDs.
-  const commonProps = {...chatMessage, id: chatMessage.id!};
+  const commonProps = {
+    id: chatMessage.id!,
+    chatMessageText: chatMessage.chatMessageText,
+    teacherFeedback: chatMessage?.teacherFeedback,
+  };
+
+  const isAssistant = chatMessage.role === Role.ASSISTANT;
 
   const chatHistoryFooter = messageVisible ? (
-    <CleanFeedbackFooter {...commonProps} />
+    <CleanFeedbackFooter {...commonProps} isAssistant={isAssistant} />
   ) : userMessageProfanity ? (
     <ProfanityFeedbackFooter
       {...commonProps}
@@ -59,7 +65,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     />
   ) : null;
   const defaultFooter =
-    messageVisible && chatMessage.role === Role.ASSISTANT ? (
+    messageVisible && isAssistant ? (
       <CopyButton copyText={chatMessage.chatMessageText} />
     ) : null;
 
