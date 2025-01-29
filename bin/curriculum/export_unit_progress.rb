@@ -17,11 +17,22 @@ OptionParser.new do |opts|
   opts.on("-u", "--unit-name UNIT", "Unit name") do |unit_name|
     $options[:unit_name] = unit_name
   end
-  opts.on("--level-id LEVEL", "Level id") do |level_id|
+  opts.on("-z", "--level-id LEVEL", "Level id") do |level_id|
     $options[:level_id] = level_id
   end
   opts.on("-l", "--limit LIMIT") do |limit|
     $options[:limit] = limit
+  end
+  opts.on("-s", "--use-simple-query", "Use simplified query to speed up testing") do
+    $options[:simple] = true
+  end
+  opts.on("-o", "--order", "Order by user_level.id") do
+    $options[:order] = true
+  end
+
+  opts.on("-h", "--help", "Prints this help") do
+    puts opts
+    exit
   end
 end.parse!
 
@@ -44,21 +55,26 @@ $pii_threshold = 0.7
 
 $max_processes = 100
 
-def fetch_progress(unit_id:, level_id:, limit:)
+def fetch_progress(unit_id:, level_id:, limit:, order:)
   if Rails.env.production?
     # fetch the data from redshift in production, because it relies on an unindexed query on
     # user_levels as well as views that are only available in redshift.
-    filename = File.expand_path('csd3_including_contained_levels_for_stanford.sql.erb', __dir__)
-    query_template = File.read(filename)
+    filename =
+      $options[:simple] ?
+        'select_user_levels.sql.erb' :
+        'csd3_including_contained_levels_for_stanford.sql.erb'
+    pathname = File.expand_path(filename, __dir__)
+    query_template = File.read(pathname)
     params = {
       unit_id: unit_id,
       level_id: level_id,
-      limit: limit
+      limit: limit,
+      order: order
     }
     query = ERB.new(query_template).result_with_hash(params)
     client = RedshiftClient.instance
     start_time = Time.now
-    puts "Querying redshift progress with params #{params}..."
+    puts "Querying redshift using #{filename} with #{params}..."
     results = execute_redshift_query(client, query)
     puts "Redshift progress query executed in: #{(Time.now - start_time).round(2)} seconds"
     results
@@ -218,8 +234,14 @@ def main
   Level.find(level_id) if level_id
 
   limit = $options[:limit].presence
+  order = $options[:order].presence
 
-  results = fetch_progress(unit_id: unit_id, level_id: level_id, limit: limit)
+  results = fetch_progress(
+    unit_id: unit_id,
+    level_id: level_id,
+    limit: limit,
+    order: order,
+  )
 
   results = add_channel_ids(results, unit_id, level_id)
 
