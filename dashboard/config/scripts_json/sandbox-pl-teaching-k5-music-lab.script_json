@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-23 00:39:44 UTC",
+    "serialized_at": "2025-01-23 23:42:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -852,6 +852,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MusicLab-functions-info"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1162,54 +1165,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "music-coding-intro-effects-panel_1"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-coding-intro-effects-panel_1"
-        ],
-        "lesson.key": "Sound Designer's Studio",
-        "lesson_group.key": "",
-        "script.name": "sandbox-pl-teaching-k5-music-lab",
-        "activity_section.key": "8ae1705d-0649-4666-b6fe-7073b9b4103f"
-      },
-      "level_keys": [
-        "music-coding-intro-effects-panel_1"
-      ]
-    },
-    {
-      "chapter": 41,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "music-coding-intro-effects_1"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-coding-intro-effects_1"
-        ],
-        "lesson.key": "Sound Designer's Studio",
-        "lesson_group.key": "",
-        "script.name": "sandbox-pl-teaching-k5-music-lab",
-        "activity_section.key": "8ae1705d-0649-4666-b6fe-7073b9b4103f"
-      },
-      "level_keys": [
-        "music-coding-intro-effects_1"
-      ]
-    },
-    {
-      "chapter": 42,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "music-coding-intro-review-panel_1"
         ]
       },
@@ -1228,31 +1183,7 @@
       ]
     },
     {
-      "chapter": 43,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "music-coding-intro-event-make_1"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-coding-intro-event-make_1"
-        ],
-        "lesson.key": "Sound Designer's Studio",
-        "lesson_group.key": "",
-        "script.name": "sandbox-pl-teaching-k5-music-lab",
-        "activity_section.key": "8ae1705d-0649-4666-b6fe-7073b9b4103f"
-      },
-      "level_keys": [
-        "music-coding-intro-event-make_1"
-      ]
-    },
-    {
-      "chapter": 44,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1747,45 +1678,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-effects-panel_1",
-        "script_level.level_keys": [
-          "music-coding-intro-effects-panel_1"
-        ],
-        "lesson.key": "Sound Designer's Studio",
-        "lesson_group.key": "",
-        "script.name": "sandbox-pl-teaching-k5-music-lab",
-        "activity_section.key": "8ae1705d-0649-4666-b6fe-7073b9b4103f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "music-coding-intro-effects_1",
-        "script_level.level_keys": [
-          "music-coding-intro-effects_1"
-        ],
-        "lesson.key": "Sound Designer's Studio",
-        "lesson_group.key": "",
-        "script.name": "sandbox-pl-teaching-k5-music-lab",
-        "activity_section.key": "8ae1705d-0649-4666-b6fe-7073b9b4103f"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "music-coding-intro-review-panel_1",
         "script_level.level_keys": [
           "music-coding-intro-review-panel_1"
-        ],
-        "lesson.key": "Sound Designer's Studio",
-        "lesson_group.key": "",
-        "script.name": "sandbox-pl-teaching-k5-music-lab",
-        "activity_section.key": "8ae1705d-0649-4666-b6fe-7073b9b4103f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "music-coding-intro-event-make_1",
-        "script_level.level_keys": [
-          "music-coding-intro-event-make_1"
         ],
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",

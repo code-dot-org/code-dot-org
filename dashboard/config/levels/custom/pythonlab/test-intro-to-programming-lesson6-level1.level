@@ -23,38 +23,6 @@
           "assetId": 0
         },
         {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 285
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        }
-      ],
-      [
-        {
           "tileType": 1,
           "value": 0,
           "assetId": 0
@@ -65,125 +33,9 @@
           "assetId": 0
         },
         {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 285
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 222
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 223
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 224
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 226
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        }
-      ],
-      [
-        {
           "tileType": 1,
           "value": 0,
           "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 285
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 230
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 231
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 233
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 234
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        }
-      ],
-      [
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 285
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 238
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 239
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 240
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 242
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
-        }
-      ],
-      [
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 46
         },
         {
           "tileType": 0,
@@ -199,21 +51,43 @@
           "tileType": 0,
           "value": 0,
           "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
+          "assetId": 46
         },
         {
           "tileType": 0,
           "value": 0,
-          "assetId": 48
-        },
-        {
-          "tileType": 0,
-          "value": 0,
-          "assetId": 48
+          "assetId": 285
         },
         {
           "tileType": 0,
@@ -222,6 +96,26 @@
         }
       ],
       [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
         {
           "tileType": 0,
           "value": 0,
@@ -241,6 +135,28 @@
           "tileType": 0,
           "value": 0,
           "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 246
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 247
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 248
         },
         {
           "tileType": 0,
@@ -272,6 +188,26 @@
         {
           "tileType": 0,
           "value": 0,
+          "assetId": 252
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 253
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 262
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
           "assetId": 48
         },
         {
@@ -283,6 +219,70 @@
           "tileType": 0,
           "value": 0,
           "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 260
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 269
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 270
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 276
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 277
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 278
         },
         {
           "tileType": 0,
@@ -353,7 +353,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "#Do This: \r\n1. <i class=\"fa-duotone fa-solid fa-desktop\"></i> Add `painter = Painter()` to create a Painter object\r\n    - <i class=\"fa-duotone fa-solid fa-comment\"></i> *Discuss: On which line do we add this code?*\r\n    - <i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Hint: Look at the the code comments\r\n    - <i class=\"fa-solid fa-square-caret-right\"></i> **Press Run to test your code**\r\n    - <i class=\"fa-duotone fa-solid fa-comment\"></i> *Did the painter object appear where you expected it to?*\r\n#\r\n-  <i class=\"fa-duotone fa-solid fa-desktop\"></i> Add `painter.move()` to make the painter move forward\r\n    - <i class=\"fa-duotone fa-solid fa-comment\"></i> *Which direction do you expect the painter to move?*\r\n    - <i class=\"fa-solid fa-square-caret-right\"></i> **Press Run to test your code**\r\n#\r\n-  <i class=\"fa-duotone fa-solid fa-desktop\"></i> Add more `painter.move()` methods to move the painter to the cone.\r\n\t- <i class=\"fa-solid fa-square-caret-right\"></i> **Press Run**",
+    "long_instructions": "#Do This: \r\n1. <i class=\"fa-duotone fa-solid fa-desktop\"></i> Add `painter = Painter()` to create a Painter object\r\n    - <i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Hint: Look at the the code comments\r\n    - <i class=\"fa-solid fa-square-caret-right\"></i> Press Run to test your code\r\n    - <i class=\"fa-duotone fa-solid fa-comment\"></i> *Discuss: Did the painter object appear where you expected it to?*\r\n#\r\n-  <i class=\"fa-duotone fa-solid fa-desktop\"></i> Add `painter.move()` to make the painter move forward\r\n    - <i class=\"fa-duotone fa-solid fa-comment\"></i> *Discuss: Which direction do you expect the painter to move?*\r\n    - <i class=\"fa-solid fa-square-caret-right\"></i> Press Run to test your code\r\n#\r\n-  <i class=\"fa-duotone fa-solid fa-desktop\"></i> Add more `painter.move()` methods to move the painter to the cone.\r\n\t- <i class=\"fa-solid fa-square-caret-right\"></i> Press Run",
     "start_sources": {
       "files": {
         "0": {
@@ -370,6 +370,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22T18:37:15.800+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson7-level1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson7-level1\"},{\"changed_at\":\"2025-01-22 18:51:24 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 18:58:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:01:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:07:46 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:14:06 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:33:00 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:28:26 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:31:30 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:34:07 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:35:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:36:17 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:45:25 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:52:18 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-22T18:37:15.800+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson7-level1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson7-level1\"},{\"changed_at\":\"2025-01-22 18:51:24 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 18:58:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:01:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:07:46 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:14:06 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:33:00 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:28:26 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:31:30 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:34:07 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:35:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:36:17 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:45:25 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:52:18 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:11:07 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:47:20 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

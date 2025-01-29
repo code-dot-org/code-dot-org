@@ -47,6 +47,7 @@ import {
   FlaggedField,
   DetectToxicityResponse,
   ChatCompletionApiResponse,
+  FeedbackValue,
 } from '../types';
 import {extractFieldsToCheckForToxicity} from '../utils';
 import {
@@ -405,33 +406,30 @@ export const addChatEvent =
   };
 
 // This thunk's callback function submits teacher feedback on a chat message.
-export const submitTeacherFeedback = createAsyncThunk(
-  'aichat/submitTeacherFeedback',
-  async (chatMessage: ChatMessage, thunkAPI) => {
-    try {
-      await postSubmitTeacherFeedback(
-        chatMessage.id!,
-        chatMessage.teacherFeedback!
-      );
-      const dispatch = thunkAPI.dispatch as AppDispatch;
-      dispatch(
-        sendAnalytics(EVENTS.SUBMIT_AICHAT_TEACHER_FEEDBACK, {
-          levelPath: window.location.pathname,
-          feedback: chatMessage.teacherFeedback,
-        })
-      );
-      dispatch(updateChatMessage(chatMessage));
-    } catch (error) {
-      // Only send log report if not a 403 error.
-      if (!(error instanceof NetworkError && error.response.status === 403)) {
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError('Error submitting teacher feedback', error as Error);
-      }
-      return;
+export const submitTeacherFeedback = createAsyncThunk<
+  void,
+  {id: number; feedback: FeedbackValue | undefined},
+  {dispatch: AppDispatch}
+>('aichat/submitTeacherFeedback', async ({id, feedback}, {dispatch}) => {
+  try {
+    await postSubmitTeacherFeedback(id, feedback);
+    dispatch(
+      sendAnalytics(EVENTS.SUBMIT_AICHAT_TEACHER_FEEDBACK, {
+        levelPath: window.location.pathname,
+        feedback: feedback,
+      })
+    );
+    dispatch(updateChatMessageFeedback({id, feedback}));
+  } catch (error) {
+    // Only send log report if not a 403 error.
+    if (!(error instanceof NetworkError && error.response.status === 403)) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error submitting teacher feedback', error as Error);
     }
+    return;
   }
-);
+});
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -666,10 +664,17 @@ const aichatSlice = createSlice({
       const {index, messageListKey} = modelUpdateMessageInfo;
       state[messageListKey].splice(index, 1);
     },
-    updateChatMessage: (state, action: PayloadAction<ChatMessage>) => {
-      state.studentChatHistory = state.studentChatHistory.map(message =>
-        message.id === action.payload.id ? action.payload : message
+    updateChatMessageFeedback: (
+      state,
+      action: PayloadAction<{id: number; feedback: FeedbackValue | undefined}>
+    ) => {
+      const messageToUpdate = state.studentChatHistory.find(
+        message => message.id === action.payload.id
       );
+
+      if (messageToUpdate && isChatMessage(messageToUpdate)) {
+        messageToUpdate.teacherFeedback = action.payload.feedback;
+      }
     },
     clearChatMessages: state => {
       state.chatEventsPast = [];
@@ -883,6 +888,7 @@ const {
   setChatMessagePending,
   clearChatMessagePending,
   setSavedAiCustomizations,
+  updateChatMessageFeedback,
 } = aichatSlice.actions;
 
 registerReducers({aichat: aichatSlice.reducer});
@@ -890,7 +896,6 @@ export const {
   clearChatMessages,
   endSave,
   removeUpdateMessage,
-  updateChatMessage,
   resetToDefaultAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,

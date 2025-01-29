@@ -111,6 +111,7 @@ class RegistrationsController < Devise::RegistrationsController
     @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
       {value: code, text: name}
     end
+    @redirect_url = session[:user_return_to] || home_path
 
     render 'finish_student_account'
   end
@@ -122,6 +123,8 @@ class RegistrationsController < Devise::RegistrationsController
     location = Geocoder.search(request.ip).try(:first)
     @country_code = location&.country_code.to_s.upcase
     @us_ip = ['US', 'RD'].include?(@country_code)
+    @redirect_url = session[:user_return_to] || home_path
+
     render 'finish_teacher_account'
   end
 

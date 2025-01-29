@@ -1,3 +1,4 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {FitAddon} from '@xterm/addon-fit';
@@ -25,6 +26,8 @@ const Console: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const {labConfig} = useCodebridgeContext();
+  const hasMiniApp = !!labConfig?.miniApp?.name;
 
   const clearOutput = useCallback(
     (sendAnalytics: boolean) => {
@@ -36,10 +39,6 @@ const Console: React.FunctionComponent = () => {
       }
     },
     [appName]
-  );
-
-  const hasMiniApp = useAppSelector(
-    state => !!state.lab.levelProperties?.miniApp
   );
 
   // Clear console when we change levels. Don't send an analytics event
