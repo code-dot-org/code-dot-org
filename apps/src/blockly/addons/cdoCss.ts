@@ -3,6 +3,8 @@ import color from '@cdo/apps/util/color';
 
 import {BlocklyWrapperType} from '../types';
 export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
+  console.log('initializeCss');
+
   blocklyWrapper.Css.register(
     `.fieldGridDropDownContainer.blocklyMenu .blocklyMenuItem {
       padding: 0px;

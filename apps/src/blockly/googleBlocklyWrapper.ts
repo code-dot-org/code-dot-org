@@ -3,7 +3,6 @@ import {
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
-import {KeyboardNavigation} from '@blockly/keyboard-experiment';
 import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
@@ -201,6 +200,7 @@ const BlocklyWrapper = function (
  * If this needs to be called multiple times (for example, in tests), call
  * Blockly.navigationController.dispose() before calling this function again.
  */
+let isCssInjected = false;
 function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
@@ -869,7 +869,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     if (blocklyWrapper.cdoUtils.isMusicKeyboardExperiment()) {
       console.log('trying new navigation controller');
       blocklyWrapper.navigationController.dispose();
-      new KeyboardNavigation(workspace);
+      this.blockly_.registry.unregister(
+        Blockly.registry.Type.CURSOR,
+        'flyoutcursor'
+      );
+      import('@blockly/keyboard-experiment').then(({KeyboardNavigation}) => {
+        new KeyboardNavigation(workspace);
+        isCssInjected = true;
+      });
     }
 
     blocklyWrapper.grayOutUndeletableBlocks =
@@ -1055,7 +1062,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   initializeGenerator(blocklyWrapper);
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
-  initializeCss(blocklyWrapper);
+
+  if (!isCssInjected) {
+    initializeCss(blocklyWrapper);
+    isCssInjected = true;
+  }
 
   blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
   blocklyWrapper.JavaScript.forBlock.unknown = () => '/* unknown block */\n';
