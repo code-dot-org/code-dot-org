@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 
-import EmptySectionV1 from '@cdo/apps/templates/teacherDashboard/EmptySectionV1';
+import {UnconnectedEmptySectionV1 as EmptySectionV1} from '@cdo/apps/templates/teacherDashboard/EmptySectionV1';
 import i18n from '@cdo/locale';
 
 const TEST_ELEMENT_TEXT = 'Test Element';
