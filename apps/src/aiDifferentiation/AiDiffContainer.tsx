@@ -12,6 +12,8 @@ import style from './ai-differentiation.module.scss';
 const AI_DIFF_POSITION_X = 'aiDiffPositionX';
 const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 
+const DISABLE_WELCOME = true;
+
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   open: boolean;
@@ -64,7 +66,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         className={style.aiDiffContainer}
         style={open ? undefined : {display: 'none'}}
       >
-        {hasCompletedAiDifferentiationWelcome ? (
+        {!DISABLE_WELCOME && !hasCompletedAiDifferentiationWelcome ? (
           <AiDiffWelcome />
         ) : (
           <AiDiffChat
