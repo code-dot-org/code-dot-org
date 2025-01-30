@@ -32,6 +32,10 @@ const genAIEndpoints = [
     id: AiChatModelIds.PIRATE,
     name: 'Mistral Pirate + Webpurify',
   },
+  {
+    id: AiChatModelIds.CHATGPT,
+    name: 'ChatGPT + Webpurify',
+  },
 ];
 
 export const genAIEndpointIds = genAIEndpoints.map(endpoint => endpoint.id);
