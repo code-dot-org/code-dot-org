@@ -142,16 +142,6 @@ export default class FunctionEditor {
     functionEditorTrashcan.init();
     // Set primary workspace to be active (until a function is shown).
     Blockly.common.setMainWorkspace(this.primaryWorkspace);
-    if (this.primaryWorkspace.keyboardAccessibilityMode) {
-      this.primaryWorkspace
-        .getMarkerManager()
-        .setCursor(
-          Blockly.getNewCursor(Blockly.navigationController.cursorType)
-        );
-      Blockly.navigationController.navigation.focusWorkspace(
-        this.primaryWorkspace
-      );
-    }
   }
 
   hide() {
@@ -317,11 +307,6 @@ export default class FunctionEditor {
       Blockly.navigationController.disable(this.primaryWorkspace);
       Blockly.navigationController.enable(this.editorWorkspace);
 
-      this.editorWorkspace
-        .getMarkerManager()
-        .setCursor(
-          Blockly.getNewCursor(Blockly.navigationController.cursorType)
-        );
       // If this editor was already open (e.g. changing from one function to another)
       // we need to re-focus so the cursor highlights the correct block.
       Blockly.navigationController.navigation.focusWorkspace(

@@ -85,8 +85,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;
-  getNewCursor: (type: string) => GoogleBlockly.Cursor;
-  LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
   mainWorkspace: GoogleBlockly.WorkspaceSvg | undefined;

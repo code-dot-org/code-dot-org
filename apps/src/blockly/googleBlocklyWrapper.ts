@@ -871,18 +871,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
     new KeyboardNavigation(workspace);
 
-    blocklyWrapper.getNewCursor = function (type) {
-      switch (type) {
-        case 'basic':
-          return new blocklyWrapper.BasicCursor();
-        case 'line':
-          return new blocklyWrapper.LineCursor();
-        case 'default':
-        default:
-          return new blocklyWrapper.Cursor();
-      }
-    };
-
     // Typically, we need to handle disabling blocks that are not connected to an
     // appropriate top block. A few exceptions exist.
     if (
