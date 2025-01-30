@@ -680,6 +680,10 @@ class UnitGroup < ApplicationRecord
   end
   # rubocop:enable Naming/PredicateName
 
+  def single_unit_course?
+    default_units.one?
+  end
+
   def has_migrated_unit?
     !!default_units[0]&.is_migrated?
   end
