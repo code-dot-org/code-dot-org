@@ -30,8 +30,8 @@ class Pd::SessionTest < ActiveSupport::TestCase
   test 'formatted_date_with_start_and_end_times' do
     session = create(
       :pd_session,
-      start: DateTime.new(2016, 3, 1, 9).in_time_zone,
-      end: DateTime.new(2016, 3, 1, 17).in_time_zone
+      start: Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 9),
+      end: Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 17)
     )
 
     assert_equal '2016-03-01, 9:00am-5:00pm MST', session.formatted_date_with_start_and_end_times
@@ -90,12 +90,12 @@ class Pd::SessionTest < ActiveSupport::TestCase
     assert session_not_started.too_soon_for_attendance?
     refute session_not_started.too_late_for_attendance?
 
-    session_future = create :pd_session, workshop: workshop_started, start: Time.now + 1.day
+    session_future = create :pd_session, workshop: workshop_started, start: Time.current.in_time_zone('America/Denver') + 1.day
     refute session_future.open_for_attendance?
     assert session_future.too_soon_for_attendance?
     refute session_future.too_late_for_attendance?
 
-    session_past = create :pd_session, workshop: workshop_started, start: Time.now - 1.day, end: Time.now - 23.hours
+    session_past = create :pd_session, workshop: workshop_started, start: Time.current.in_time_zone('America/Denver') - 1.day, end: Time.current.in_time_zone('America/Denver') - 23.hours
     refute session_past.open_for_attendance?
     refute session_past.too_soon_for_attendance?
     assert session_past.too_late_for_attendance?

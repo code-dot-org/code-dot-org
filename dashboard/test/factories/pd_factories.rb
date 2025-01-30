@@ -59,7 +59,8 @@ FactoryBot.define do
       duration_hours {6}
     end
     association :workshop, factory: :workshop
-    start {Time.zone.today + 9.hours}
+    time_zone {'America/Denver'}
+    start {Time.current.in_time_zone(time_zone).change(hour: 9)}
     self.end {start + duration_hours.hours}
     session_format {Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.first[:value]}
 
