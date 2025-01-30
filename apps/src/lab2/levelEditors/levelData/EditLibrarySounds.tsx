@@ -1,7 +1,7 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import React, {useCallback} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   BodyFourText,
   BodyTwoText,

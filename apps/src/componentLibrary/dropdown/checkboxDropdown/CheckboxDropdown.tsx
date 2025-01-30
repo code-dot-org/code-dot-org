@@ -1,7 +1,7 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import React, {AriaAttributes, memo} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {
