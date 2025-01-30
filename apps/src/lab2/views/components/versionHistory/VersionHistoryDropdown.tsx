@@ -1,9 +1,9 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {RadioButton} from '@cdo/apps/componentLibrary/radioButton';
 import Tags from '@cdo/apps/componentLibrary/tags';

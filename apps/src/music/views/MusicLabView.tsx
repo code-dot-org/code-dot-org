@@ -3,7 +3,11 @@ import React, {useCallback, useContext, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import header from '@cdo/apps/code-studio/header';
-import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
+import {
+  START_SOURCES,
+  TOOLBOX_BLOCKS,
+  WARNING_BANNER_MESSAGES,
+} from '@cdo/apps/lab2/constants';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -104,6 +108,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const progressManager = useContext(ProgressManagerContext);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
 
@@ -123,8 +128,16 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         };
         return {level_data: updatedLevelData};
       });
+    } else if (isToolboxMode) {
+      header.showLevelBuilderSaveButton(() => {
+        const updatedLevelData = {
+          ...levelData,
+          toolboxDefinition: blocklyWorkspace.workspaceToToolboxDefinition(),
+        };
+        return {level_data: updatedLevelData};
+      }, 'Levelbuilder: Edit toolbox blocks');
     }
-  }, [blocklyWorkspace, isStartMode, levelData]);
+  }, [blocklyWorkspace, isStartMode, isToolboxMode, levelData]);
 
   // Use the Lab2 generic prompt for Blockly prompt dialogs.
   const showGenericPrompt = useCallback(
@@ -318,9 +331,15 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         instructionsPosition === InstructionsPosition.TOP &&
         renderInstructions(InstructionsPosition.TOP)}
 
-      {timelineAtTop && renderPlayArea(true)}
+      {timelineAtTop && !isToolboxMode && renderPlayArea(true)}
 
-      <div id="work-area" className={moduleStyles.workArea}>
+      <div
+        id="work-area"
+        className={classNames(moduleStyles.workArea, {
+          // Allow full height when the play area is hidden.
+          [moduleStyles.toolboxMode]: isToolboxMode,
+        })}
+      >
         {showInstructions &&
           instructionsPosition === InstructionsPosition.LEFT &&
           renderInstructions(InstructionsPosition.LEFT)}
@@ -351,6 +370,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   : WARNING_BANNER_MESSAGES.STANDARD}
               </div>
             )}
+            {isToolboxMode && (
+              <div
+                id="toolboxModeWarningBanner"
+                className={moduleStyles.warningBanner}
+              >
+                {WARNING_BANNER_MESSAGES.TOOLBOX_MODE}
+              </div>
+            )}
             <div id={blocklyDivId} />
             {showAdvancedControls && (
               <div className={moduleStyles.advancedControlsContainer}>
@@ -365,7 +392,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           renderInstructions(InstructionsPosition.RIGHT)}
       </div>
 
-      {!timelineAtTop && renderPlayArea(false)}
+      {!timelineAtTop && !isToolboxMode && renderPlayArea(false)}
     </div>
   );
 };

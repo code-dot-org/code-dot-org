@@ -7,10 +7,6 @@ import {
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
-import {
-  getCurrentScriptLevelId,
-  getCurrentLevel,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -613,18 +609,11 @@ export const fetchStudentChatHistory = createAsyncThunk(
   async (studentUserId: number, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
     // Post teacher's student's user id to backend and retrieve student's chat history.
-    const currentLevel = getCurrentLevel(state);
-    // The scriptLevelId is sent to the backend if the current level is a sublevel so that we can
-    // correctly check if the teacher has permission to view the student's chat history.
-    const scriptLevelId = currentLevel.parentLevelId
-      ? getCurrentScriptLevelId(state)
-      : undefined;
     try {
       const studentChatHistoryApiResponse = await getStudentChatHistory(
         studentUserId,
         parseInt(state.progress.currentLevelId || ''),
-        state.progress.scriptId,
-        scriptLevelId
+        state.progress.scriptId
       );
       thunkAPI.dispatch(setStudentChatHistory(studentChatHistoryApiResponse));
     } catch (error) {

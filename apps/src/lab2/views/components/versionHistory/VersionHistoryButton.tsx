@@ -1,8 +1,8 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert';
 import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
 import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
