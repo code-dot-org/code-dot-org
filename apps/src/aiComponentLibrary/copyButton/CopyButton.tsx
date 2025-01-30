@@ -1,6 +1,5 @@
+import Button from '@code-dot-org/component-library/button';
 import React, {useState} from 'react';
-
-import Button from '@cdo/apps/componentLibrary/button/Button';
 
 import style from './copy-button.module.scss';
 

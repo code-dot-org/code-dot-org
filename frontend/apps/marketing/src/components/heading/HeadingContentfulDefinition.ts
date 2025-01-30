@@ -6,7 +6,7 @@ export const HeadingContentfulComponentDefinition: ComponentDefinition = {
   name: 'Heading',
   category: 'Typography',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/LHRmOBd4IWYZuWScbJG3i/4fb4414e967bbca7aedd303d9409f03e/component_heading_thumbnail.png',
+    'https://images.ctfassets.net/90t6bu6vlf76/LHRmOBd4IWYZuWScbJG3i/0442e38966e91c0e2aca88fdb2b217ad/component_divider_thumbnail.png',
   tooltip: {
     description:
       'Use a heading to introduce a section or key content. Choose from different levels to maintain a clear content hierarchy.',

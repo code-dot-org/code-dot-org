@@ -1,0 +1,37 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-01-28T17:25:46.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Do This: \r\nThere is a bug in this code. \r\n- **Investigate**: Run the program and observe the output. Use the debug print statements to identify what is missing or incorrect.\r\n- **Modify**: Fix the function call by ensuring it provides both required parameters (name and age).\r\n- **Document Results**: Explain how the debug print statements helped you identify the issue.\r\n\r\nHints: \r\n- Check the number of arguments provided in the function call.\r\n- Ensure all required parameters are included.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def greet_user(name, age):\n    print(\"DEBUG: name = \" + name)  # Add a debug print statement\n    print(\"DEBUG: age = \" + age)   # Add a debug print statement\n    print(\"Hello, \" + name + \"! You are \" + age + \" years old.\")\n\n# Call the function\ngreet_user(\"Alice\")",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzjSPccg/Cql5XlRzbmlgI7zR5YHJ1XEz\nA54H86HpkyPzRADyuJOVHD+dhxgEfmqwSFuOC5t3v6NaTc9qI9foE1+00iud\nJHKNDJ0htXMkvhA9+zVbztIhZENbFnc6IhdiVNdpHOHuYbYts0EtPjmxBHSQ\nhT72QNLVWZcq4Q8mCzJUnjLRCDGEu+bNHfsbD2SdiN94JMCeImK82weRu+P/\nX4nZyVMw93Fjc+t/OB+uSKGcQDsQVxwCiTre8QhgN0eoak4I7gh/xZzUltdA\nnQP4f1v8dDR50V4j/8lZuVHveIq4NL9tWAWVjbsUd8MrO37z9iOa6hnYROSm\nqH9986L7reokyVHxh8QXu2wiOt2fno2mo5o/1uw44QUnBO0XSVBXTw==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-28T17:25:46.165+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson8-sytaxError\\\"\"],\"cloned_from\":\"python-intro-console-lesson8-sytaxError\"},{\"changed_at\":\"2025-01-28 17:26:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 17:27:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 17:27:17 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>
