@@ -241,7 +241,7 @@ FactoryBot.define do
       sessions_from do
         Date.new(
           Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR.split('-').first.to_i, 7, 4
-        )
+        ).in_time_zone('America/Denver')
       end
 
       trait :csp do
