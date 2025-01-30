@@ -1,5 +1,4 @@
-from unittest_runner.stdout_tracker import StdoutTracker
-
+from unittest_runner.stdout.stdout_tracker import StdoutTracker
 
 def test_captures_stdout():
   stdout_tracker = StdoutTracker()

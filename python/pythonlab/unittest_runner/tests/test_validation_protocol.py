@@ -1,5 +1,5 @@
 import os
-from unittest_runner.validation_procotol import ValidationProtocol
+from unittest_runner.validation_protocol import ValidationProtocol
 from neighborhood import World, NeighborhoodContextType
 
 def test_invoke_main_resets_context():

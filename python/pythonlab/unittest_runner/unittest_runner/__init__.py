@@ -1,3 +1,3 @@
 from .run_tests import run_student_tests as run_student_tests
 from .run_tests import run_validation_tests as run_validation_tests
-from .stdout_test_runner import run_and_get_stdout as run_and_get_stdout
+from unittest_runner.stdout.stdout_test_runner import run_and_get_stdout as run_and_get_stdout

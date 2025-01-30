@@ -1,5 +1,5 @@
 from neighborhood import World, NeighborhoodContextType
-from .stdout_tracker import StdoutTracker
+from .stdout.stdout_tracker import StdoutTracker
 
 class ValidationProtocol(object):
 
@@ -15,10 +15,8 @@ class ValidationProtocol(object):
     try:
       with open(file_path) as main_file:
         exec(main_file.read())
-    except FileNotFoundError:
-      print('No main file found')
-    except Exception as e:
-      print('Error executing main file: ', e)
+    except Exception:
+      pass
 
     world.set_context_type(NeighborhoodContextType.RUN)
     self.stdout_tracker.stop_tracking()
