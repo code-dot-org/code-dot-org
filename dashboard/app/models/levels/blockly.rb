@@ -90,6 +90,10 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
+  def uses_google_blockly?
+    true
+  end
+
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)
     level_properties = super
     level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
