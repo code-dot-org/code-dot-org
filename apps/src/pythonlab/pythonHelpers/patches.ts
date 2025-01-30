@@ -22,15 +22,11 @@ setup_pythonlab('${MessageTag.MATPLOTLIB_IMG}')
 export const patchInputCode = (id: number) => `
 import sys, builtins
 import pythonlab_input
-__prompt_str__ = ""
 def get_input(prompt=""):
-    global __prompt_str__
-    __prompt_str__ = prompt
     print(f'${MessageTag.INPUT_PROMPT}{prompt}')
-    s = pythonlab_input.getInput("${id}", prompt)
-    return s
+    return pythonlab_input.getInput("${id}", prompt)
 builtins.input = get_input
-sys.stdin.readline = lambda: pythonlab_input.getInput("${id}", __prompt_str__)
+sys.stdin.readline = lambda: pythonlab_input.getInput("${id}", "")
 `;
 
 export const pythonlabInputModule = {
