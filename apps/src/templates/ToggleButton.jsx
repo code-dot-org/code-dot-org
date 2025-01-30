@@ -24,8 +24,6 @@ class ToggleButton extends Component {
     return (
       <button
         type="button"
-        role="tab"
-        aria-selected={String(this.props.active)}
         id={this.props.id}
         style={this.getStyle()}
         className={'no-outline ' + (this.props.className || '')}
