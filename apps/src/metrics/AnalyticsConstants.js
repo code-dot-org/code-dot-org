@@ -107,6 +107,8 @@ const EVENTS = {
 
   // Workshop enrollment
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
+  WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
+    'Workshop Add Session to Calendar Clicked',
 
   // PD Application flow
   TEACHER_APP_VISITED_EVENT: '6-12 Teacher Application Visited',

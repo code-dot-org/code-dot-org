@@ -9,6 +9,8 @@ import Typography, {
   Heading6,
   BodyTwoText,
 } from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
@@ -113,6 +115,20 @@ export default function WorkshopEnrollmentCelebrationDialog({
     }
   };
 
+  const onClickAddToCalendar = (session, calendarType) => {
+    analyticsReporter.sendEvent(
+      EVENTS.WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT,
+      {'calendar type': calendarType}
+    );
+
+    window.open(
+      getCalendarLink(session, calendarType),
+      '_blank',
+      'noopener',
+      'noreferrer'
+    );
+  };
+
   const RenderCalendarSessionDialog = () => {
     return (
       <AccessibleDialog
@@ -158,7 +174,10 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       iconLeft={{iconName: 'fa-solid fa-plus'}}
                       className={style.addSessionToCalendarButton}
                       target="_blank"
-                      href={getCalendarLink(session, multipleSessionDialogType)}
+                      onClick={onClickAddToCalendar(
+                        session,
+                        multipleSessionDialogType
+                      )}
                     />
                   </td>
                 </tr>
@@ -259,7 +278,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                             iconStyle: 'light',
                           }}
                           target="_blank"
-                          href={getCalendarLink(
+                          onClick={onClickAddToCalendar(
                             workshopSessionInfo[0],
                             'Apple'
                           )}
@@ -276,7 +295,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                             iconStyle: 'light',
                           }}
                           target="_blank"
-                          href={getCalendarLink(
+                          onClick={onClickAddToCalendar(
                             workshopSessionInfo[0],
                             'Google'
                           )}
@@ -293,7 +312,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                             iconStyle: 'light',
                           }}
                           target="_blank"
-                          href={getCalendarLink(
+                          onClick={onClickAddToCalendar(
                             workshopSessionInfo[0],
                             'Outlook'
                           )}
