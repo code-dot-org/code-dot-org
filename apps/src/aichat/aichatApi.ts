@@ -123,17 +123,13 @@ export async function postLogChatEvent(
 export async function getStudentChatHistory(
   studentUserId: number,
   levelId: number,
-  scriptId: number | null,
-  scriptLevelId: number | undefined
+  scriptId: number | null
 ): Promise<ChatEvent[]> {
   const params: Record<string, string> = {
     studentUserId: studentUserId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
   };
-  if (scriptLevelId) {
-    params.scriptLevelId = scriptLevelId.toString();
-  }
   const response = await HttpClient.fetchJson<ChatEvent[]>(
     paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );

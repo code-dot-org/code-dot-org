@@ -1,7 +1,8 @@
 # Currently, only the `marketing` app has a Dockerfile. This workflow is intended to be expanded upon in the future to include other apps that have Dockerfiles.
 # Future iterations of this workflow will include a matrix strategy to build and publish Docker images for all apps that have Dockerfiles.
 
-name: Build, Push, and Deploy Marketing App
+# The name does not use spaces due to https://github.com/integrations/slack/issues/1790
+name: Marketing-App-CICD
 
 # Configures this workflow to run every time a change is pushed to `frontend`
 on:

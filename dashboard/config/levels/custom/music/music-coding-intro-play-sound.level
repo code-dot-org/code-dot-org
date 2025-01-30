@@ -35,8 +35,8 @@
       }
     ],
     "level_data": {
-      "library": "launch2024",
-      "packId": "default",
+      "library": "curriculum2024",
+      "packId": "twinkle_twinkle",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -51,14 +51,6 @@
             }
           ]
         }
-      },
-      "sounds": {
-        "electro": [
-          "drum_beat_cowbell",
-          "drum_beat_edm",
-          "drum_beat_club",
-          "drum_beat_noise"
-        ]
       },
       "toolbox": {
         "blocks": {
@@ -75,7 +67,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-11-21T19:23:58.733+00:00\",\"changed\":[\"cloned from \\\"music-jam-sound\\\"\"],\"cloned_from\":\"music-jam-sound\"},{\"changed_at\":\"2024-11-26 17:00:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:08:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 17:49:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-21T19:23:58.733+00:00\",\"changed\":[\"cloned from \\\"music-jam-sound\\\"\"],\"cloned_from\":\"music-jam-sound\"},{\"changed_at\":\"2024-11-26 17:00:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-02 18:08:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 17:49:32 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-29 23:37:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
