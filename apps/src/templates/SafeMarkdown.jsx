@@ -15,8 +15,6 @@ import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
 import unified from 'unified';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
-
 import externalLinks from './plugins/externalLinks';
 
 /**
@@ -30,10 +28,12 @@ class SafeMarkdown extends React.Component {
     openExternalLinksInNewTab: PropTypes.bool,
     className: PropTypes.string,
     id: PropTypes.string,
-    typographyProps: PropTypes.shape({
-      semanticTag: PropTypes.string,
-      visualAppearance: PropTypes.string,
-    }),
+    wrapperComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+    wrapperProps: PropTypes.object,
+  };
+
+  static defaultProps = {
+    wrapperProps: {},
   };
 
   render() {
@@ -45,13 +45,11 @@ class SafeMarkdown extends React.Component {
       ? markdownToReactExternalLinks
       : markdownToReact;
 
-    const isTypography = this.props.typographyProps ? true : false;
-
-    const WrapperElement = isTypography ? Typography : 'div';
+    const WrapperElement = this.props.wrapperComponent || 'div';
 
     const rendered = Object(processor.processSync(this.props.markdown).result);
 
-    const markdownProps = {};
+    const markdownProps = {...this.props.wrapperProps};
     if (this.props.className) {
       markdownProps.className = this.props.className;
     }
@@ -59,18 +57,13 @@ class SafeMarkdown extends React.Component {
       markdownProps.id = this.props.id;
     }
 
-    if (isTypography) {
-      markdownProps.semanticTag = this.props.typographyProps.semanticTag;
-      markdownProps.visualAppearance =
-        this.props.typographyProps.visualAppearance;
-    }
     // rehype-react will only wrap the compiled markdown in a <div> tag
     // if it needs to (ie, if there would otherwise be multiple elements
     // returned) or we're assigning props. Wrap everything in the specified
     // wrapper element
     if (rendered && rendered.type === WrapperElement) {
       return rendered;
-    } else if (isTypography) {
+    } else if (this.props.wrapperComponent) {
       return (
         <WrapperElement {...markdownProps}>
           {rendered.props.children}

@@ -1,6 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
+import {Heading1} from '@cdo/apps/componentLibrary/typography';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 describe('SafeMarkdown', () => {
@@ -60,17 +61,83 @@ describe('SafeMarkdown', () => {
     ).toBe(true);
   });
 
+  it('will render markdown wrapped in an element', () => {
+    const paragraphWrapper = shallow(
+      <SafeMarkdown
+        markdown="**some** _basic_ [inline](markdown)"
+        wrapperComponent="p"
+      />
+    );
+
+    expect(
+      paragraphWrapper.equals(
+        <p>
+          <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
+        </p>
+      )
+    ).toBe(true);
+
+    const headingWrapper = shallow(
+      <SafeMarkdown
+        markdown="**some** _basic_ [inline](markdown)"
+        wrapperComponent="h1"
+      />
+    );
+
+    expect(
+      headingWrapper.equals(
+        <h1>
+          <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
+        </h1>
+      )
+    ).toBe(true);
+  });
+
+  it('will render html wrapped in an element', () => {
+    const paragraphWrapper = shallow(
+      <SafeMarkdown
+        markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>'
+        wrapperComponent="p"
+      />
+    );
+
+    expect(
+      paragraphWrapper.equals(
+        <p>
+          <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
+        </p>
+      )
+    ).toBe(true);
+
+    // Make sure we don't add an extra div
+    const divWrapper = shallow(
+      <SafeMarkdown
+        markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>'
+        wrapperComponent="div"
+      />
+    );
+
+    expect(
+      divWrapper.equals(
+        <div>
+          <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
+        </div>
+      )
+    ).toBe(true);
+  });
+
   it('will render markdown wrapped in an Typography element', () => {
     const typographyWrapper = shallow(
       <SafeMarkdown
         markdown="**some** _basic_ [inline](markdown)"
-        typographyProps={{semanticTag: 'p', visualAppearance: 'body-two'}}
+        wrapperComponent={Heading1}
+        wrapperProps={{style: {color: 'red'}}}
       />
     );
 
     const renderedHtml = typographyWrapper.html();
     expect(renderedHtml).toBe(
-      '<p class="body-two"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></p>'
+      '<h1 class="heading-xxl" style="color:red"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></h1>'
     );
   });
 
