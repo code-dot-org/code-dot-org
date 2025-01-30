@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {memo} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
@@ -73,13 +74,12 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
             ? aichatI18n.aria_thumbsUp()
             : aichatI18n.aria_thumbsDown()
         }
-        className={
-          selected
-            ? moduleStyles[
-                `button${type === 'up' ? 'Affirmative' : 'Negative'}`
-              ]
-            : moduleStyles.button
-        }
+        className={classNames(
+          moduleStyles[
+            `icon-button-${type === 'up' ? 'affirmative' : 'negative'}`
+          ],
+          selected && moduleStyles.selected
+        )}
       />
     );
   };

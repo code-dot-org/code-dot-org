@@ -2,22 +2,36 @@
 @import 'font.scss';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
+@mixin icon-button($background, $selected, $active) {
+  i {
+    color: $light-gray-700;
+  }
+
+  &.selected i, &:hover i {
+    color: $selected;
+  }
+
+  &:hover {
+    background-color: $background;
+  }
+
+  &:active i {
+    color: $active;
+  }
+}
+
 .teacherFeedbackContainer {
   display: flex;
   align-items: center;
   gap: 4px;
   justify-content: flex-end;
-
-  .button i {
-    color: $light-gray-600;
+  
+  .icon-button-affirmative {
+    @include icon-button($light_affirmative_100, $light_affirmative_500, $light_affirmative_700);
   }
 
-  .buttonAffirmative i {
-    color: $light_affirmative_500;
-  }
-
-  .buttonNegative i {
-    color: $light_negative_500;
+  .icon-button-negative {
+    @include icon-button($light_negative_100, $light_negative_500, $light_negative_700);
   }
 }
 
