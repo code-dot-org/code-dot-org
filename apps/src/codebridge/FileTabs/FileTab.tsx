@@ -1,3 +1,4 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {ProjectFile} from '@codebridge/types';
 import {getFileIconNameAndStyle} from '@codebridge/utils';
@@ -5,7 +6,6 @@ import classNames from 'classnames';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 

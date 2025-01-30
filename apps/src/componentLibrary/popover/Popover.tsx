@@ -1,7 +1,7 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import classnames from 'classnames';
 import React, {HTMLAttributes, ReactNode} from 'react';
 
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {
   ComponentPlacementDirection,
   ComponentSizeXSToL,

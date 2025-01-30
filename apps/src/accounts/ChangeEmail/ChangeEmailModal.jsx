@@ -1,9 +1,9 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 

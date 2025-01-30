@@ -1,3 +1,4 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -7,7 +8,6 @@ import React, {
   MutableRefObject,
 } from 'react';
 
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
