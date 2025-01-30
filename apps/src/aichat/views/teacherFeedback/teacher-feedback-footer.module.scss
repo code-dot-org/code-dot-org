@@ -20,6 +20,10 @@
   }
 }
 
+.leftAlign {
+  justify-content: flex-start;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

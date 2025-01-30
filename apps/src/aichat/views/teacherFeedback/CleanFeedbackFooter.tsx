@@ -84,7 +84,12 @@ const CleanFeedbackFooter: React.FC<Props> = ({
     : [flaggedText, flagButton];
 
   return (
-    <div className={classNames(moduleStyles.teacherFeedbackContainer)}>
+    <div
+      className={classNames(
+        moduleStyles.teacherFeedbackContainer,
+        isAssistant && moduleStyles.leftAlign
+      )}
+    >
       {footerElements}
     </div>
   );
