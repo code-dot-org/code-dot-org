@@ -216,15 +216,20 @@ module AWS
       params.filter_map do |key, properties|
         value = CDO[key.underscore] || ENV.fetch(key.underscore.upcase, nil)
         param = {parameter_key: key}
+        # TEMPORARY: Logging where our stack parameters are coming from.
         if value
+          log.info "Using parameter #{key} from CDO (#{CDO[key.underscore]}) or Environment (#{ENV.fetch(key.underscore.upcase, nil)})"
           param[:parameter_value] = value
         elsif stack_exists? && @stack_resource&.parameters&.any? {|p| p.parameter_key == key}
           param[:use_previous_value] = true
+          log.info "Using parameter #{key} from existing stack"
         elsif properties['Default']
+          log.info "Using parameter #{key} from default value in template"
           next # use default param
         else
           # Required parameter value not found in environment, existing stack or default.
           # Ask for input directly.
+          log.info "Parameter #{key} is required, asking the user"
           param[:parameter_value] = stack.dry_run ?
             '!Required' :
             HighLine.new.ask("Enter value for Parameter #{key}:", String)
