@@ -5,13 +5,7 @@ class StudioTest < ActiveSupport::TestCase
     @studio = Studio.new
   end
 
-  test 'uses_google_blockly? returns true when DCDO flag is true' do
-    DCDO.stubs(:get).with('playlab_google_blockly', true).returns(true)
+  test 'uses_google_blockly? returns true' do
     assert @studio.uses_google_blockly?
-  end
-
-  test 'uses_google_blockly? returns false when DCDO flag is false' do
-    DCDO.stubs(:get).with('playlab_google_blockly', true).returns(false)
-    refute @studio.uses_google_blockly?
   end
 end
