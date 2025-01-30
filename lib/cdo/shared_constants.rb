@@ -44,7 +44,11 @@ module SharedConstants
 
   USER_LEVEL_INTERACTIONS = OpenStruct.new(
     {
+      click_continue: "click_continue",
+      click_finish: "click_finish",
       click_help_and_tips: "click_help_and_tips",
+      click_keep_working: "click_keep_working",
+      click_run: "click_run",
     }
   ).freeze
 
