@@ -39,8 +39,7 @@ class CoursesController < ApplicationController
         return
       end
     end
-
-    if !params[:section_id] && current_user&.last_section_id
+    if (!params[:section_id] && current_user&.last_section_id) && !(Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false))
       redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
       return
     end
