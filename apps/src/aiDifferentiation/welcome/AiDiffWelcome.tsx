@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
+
 import {Button} from '../../componentLibrary/button';
 import FontAwesomeV6Icon from '../../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {
@@ -155,6 +157,24 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     [optionButton, continueAndSkipButtons]
   );
 
+  const endPage = React.useCallback(() => {
+    return (
+      <div>
+        <img
+          src={aiBotConfetti}
+          className={style.botConfetti}
+          alt={'Congratulations!'}
+        />
+        <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
+        <Heading6>Continue your learning journey</Heading6>
+        <BodyTwoText>Practice another skill</BodyTwoText>
+        <BodyTwoText>
+          Take Code.org’s self-paced AI 101 professional learning course
+        </BodyTwoText>
+      </div>
+    );
+  }, []);
+
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
       return null;
@@ -190,12 +210,12 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       case WelcomeStates.practice:
         return practicePage();
       case WelcomeStates.end_page:
-        return <div>End Page</div>;
+        return endPage();
       case WelcomeStates.finished:
       default:
-        return <div>Finished</div>;
+        return null;
     }
-  }, [currentWelcomeState, selectAnOptionPage, practicePage]);
+  }, [currentWelcomeState, selectAnOptionPage, practicePage, endPage]);
 
   return currentWelcomePage;
 };
