@@ -266,7 +266,6 @@ export default function currentUser(state = initialState, action) {
       is_verified_instructor,
       experiments.getEnabledExperiments()
     );
-    console.log('lfm', has_completed_ai_differentiation_welcome);
     return {
       ...state,
       userId: id,
