@@ -256,10 +256,15 @@ module ScriptConstants
   ].freeze
 
   ADDITIONAL_I18N_UNITS = [
+    ALLTHETHINGS = 'allthethings'.freeze,
     APPLAB_1HOUR = 'applab-1hour'.freeze,
     APPLAB_2HOUR = 'applab-2hour'.freeze,
+    COMPUTER_VISION = 'computer-vision'.freeze,
+    CSD2_2024 = 'csd2-2024'.freeze,
     CSD_POST_SURVEY = 'csd-post-survey'.freeze,
     DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
+    EXPLORING_GEN_AI = 'exploring-gen-ai2-2024'.freeze,
+    FOUNDATIONS_GEN_AI = 'foundations-gen-ai-2024'.freeze,
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
     HELLO_WORLD_FOOD = 'hello-world-food'.freeze,
@@ -267,6 +272,7 @@ module ScriptConstants
     HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze,
     HELLO_WORLD_RETRO = 'hello-world-retro'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
+    K5_UNPLUGGED = 'k5-unplugged'.freeze,
     MUSIC_INTRO_2024 = 'music-intro-2024'.freeze,
     MUSIC_ONBOARD = 'music-onboard'.freeze,
     MUSIC_TUTORIAL_2024 = 'music-tutorial-2024'.freeze,
@@ -276,12 +282,7 @@ module ScriptConstants
     PIXELATION = 'pixelation'.freeze,
     POEM_ART = 'poem-art'.freeze,
     POETRY_HOC3 = 'poetry-hoc3'.freeze,
-    VIGENERE = 'vigenere'.freeze,
-    ALLTHETHINGS = 'allthethings'.freeze,
-    COMPUTER_VISION = 'computer-vision'.freeze,
-    FOUNDATIONS_GEN_AI = 'foundations-gen-ai-2024'.freeze,
-    CSD2_2024 = 'csd2-2024'.freeze,
-    K5_UNPLUGGED = 'k5-unplugged'.freeze
+    VIGENERE = 'vigenere'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'

@@ -27,8 +27,9 @@ class ScriptsController < ApplicationController
         return
       end
       if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}
-        if !params[:section_id] && current_user&.last_section_id
-          redirect_to "/teacher_dashboard/sections/#{current_user.last_section_id}/unit/#{@script.name}"
+        most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}.last
+        if !params[:section_id]
+          redirect_to "/teacher_dashboard/sections/#{most_recent_section.id}/unit/#{@script.name}"
           return
         elsif params[:section_id]
           redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/unit/#{@script.name}"

@@ -25,6 +25,10 @@ dashboard_devise_pepper: not a pepper!
 dashboard_secret_key_base: not a secret
 google_maps_api_key: boguskey
 db_writer: 'mysql://root@localhost/'
+
+# Number of workers to start when running `rake build:start_active_job_workers`:
+active_job_backend_n_workers_to_start: 2
+active_job_backend_rolling_restart_in_n_batches: 1
 <% end -%>
 
 netsim_enable_metrics: true
@@ -68,9 +72,3 @@ use_cookie_dcdo: true
 
 # Allows Geolocation to be altered via cookies.
 use_geolocation_override: true
-
-# Number of workers to start when running `rake build:start_active_job_workers`:
-<% if test_system? && chef_managed %>
-active_job_backend_n_workers_to_start: 10
-active_job_backend_rolling_restart_in_n_batches: 2
-<% end -%>

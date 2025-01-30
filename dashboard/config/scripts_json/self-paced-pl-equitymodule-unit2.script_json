@@ -4,12 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "version_year": "2024"
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-10 22:43:03 UTC",
+    "serialized_at": "2025-01-27 20:29:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -171,7 +170,7 @@
       "key": "56411594-6050-4961-afbf-20b83c6ea83b",
       "position": 2,
       "properties": {
-        "progression_name": "Expanding Access for Students"
+        "progression_name": "Expanding Access in Elementary School"
       },
       "seeding_key": {
         "activity_section.key": "56411594-6050-4961-afbf-20b83c6ea83b",
@@ -179,8 +178,19 @@
       }
     },
     {
-      "key": "9b82425f-d0f3-408d-93e3-36a79470914f",
+      "key": "9ddeffcd-c52f-4846-8e84-821eaa743d8e",
       "position": 3,
+      "properties": {
+        "progression_name": "Expanding Access in Middle & High School"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ddeffcd-c52f-4846-8e84-821eaa743d8e",
+        "lesson_activity.key": "fd83d697-c2b9-4af1-8c84-864ece568a54"
+      }
+    },
+    {
+      "key": "9b82425f-d0f3-408d-93e3-36a79470914f",
+      "position": 4,
       "properties": {
         "progression_name": "Closing"
       },
@@ -338,7 +348,7 @@
         "level_keys": [
           "self-paced-equity-U2L3-elemaccess"
         ],
-        "progression": "Expanding Access for Students"
+        "progression": "Expanding Access in Elementary School"
       },
       "bonus": false,
       "seeding_key": {
@@ -363,7 +373,7 @@
         "level_keys": [
           "self-paced-equity-U2L3-elemaccessstrategies"
         ],
-        "progression": "Expanding Access for Students"
+        "progression": "Expanding Access in Elementary School"
       },
       "bonus": false,
       "seeding_key": {
@@ -382,13 +392,10 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-equity-U2L3-ms-hs-access"
-        ],
-        "progression": "Expanding Access for Students"
+        "progression": "Expanding Access in Middle & High School"
       },
       "bonus": false,
       "seeding_key": {
@@ -398,7 +405,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-equitymodule-unit2",
-        "activity_section.key": "56411594-6050-4961-afbf-20b83c6ea83b"
+        "activity_section.key": "9ddeffcd-c52f-4846-8e84-821eaa743d8e"
       },
       "level_keys": [
         "self-paced-equity-U2L3-ms-hs-access"
@@ -407,13 +414,10 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-equity-U2L3-CSD-highlight"
-        ],
-        "progression": "Expanding Access for Students"
+        "progression": "Expanding Access in Middle & High School"
       },
       "bonus": false,
       "seeding_key": {
@@ -423,7 +427,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-equitymodule-unit2",
-        "activity_section.key": "56411594-6050-4961-afbf-20b83c6ea83b"
+        "activity_section.key": "9ddeffcd-c52f-4846-8e84-821eaa743d8e"
       },
       "level_keys": [
         "self-paced-equity-U2L3-CSD-highlight"
@@ -1413,7 +1417,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-equitymodule-unit2",
-        "activity_section.key": "56411594-6050-4961-afbf-20b83c6ea83b"
+        "activity_section.key": "9ddeffcd-c52f-4846-8e84-821eaa743d8e"
       }
     },
     {
@@ -1425,7 +1429,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "self-paced-pl-equitymodule-unit2",
-        "activity_section.key": "56411594-6050-4961-afbf-20b83c6ea83b"
+        "activity_section.key": "9ddeffcd-c52f-4846-8e84-821eaa743d8e"
       }
     },
     {

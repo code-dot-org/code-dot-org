@@ -64,7 +64,19 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
     # Make the request.
     begin
-      response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message, level_id)
+      response = model_customizations['selectedModelId'] == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] ?
+        AichatOpenaiHelper.get_openai_assistant_response(
+          model_customizations,
+          stored_messages,
+          new_message,
+          level_id
+        ) :
+        AichatSagemakerHelper.get_sagemaker_assistant_response(
+          model_customizations,
+          stored_messages,
+          new_message,
+          level_id
+        )
     rescue Aws::SageMakerRuntime::Errors::ModelError => exception
       # If the user input was too large, return a USER_INPUT_TOO_LARGE status code. Otherwise, re-raise the exception.
       if exception.message.include?("must have less than 3000 tokens") || exception.message.include?("must be <= 4096")

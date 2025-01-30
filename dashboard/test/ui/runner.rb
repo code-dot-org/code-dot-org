@@ -448,8 +448,16 @@ def report_tests_finished(start_time, run_results)
   + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
   + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
-  unless failures.empty?
-    ChatClient.log "Failed tests: \n #{failures.join("\n")}"
+  a_status_page = status_page_url ? "<a href=\"#{status_page_url}\">" : ''
+  end_a = status_page_url ? "</a>" : ''
+
+  if failures.empty?
+    ChatClient.log "*#{a_status_page}SUMMARY, #{suite_success_count} DASHBOARD #{test_type.upcase} TESTS PASSED#{end_a}*", color: 'purple'
+  else
+    ChatClient.log "*#{a_status_page}SUMMARY, #{failures.count} DASHBOARD #{test_type.upcase} TESTS FAILED#{end_a}:*", color: 'purple'
+    failures.each do |failure|
+      ChatClient.log "\t• #{failure}", color: 'purple'
+    end
   end
 end
 
@@ -711,6 +719,12 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
   arguments
 end
 
+def to_percent(number, n_sig_digits)
+  percent = number * 100.0
+  return 0 if percent.zero?
+  "#{percent.round(-(Math.log10(percent).ceil - n_sig_digits))}%"
+end
+
 def run_feature(browser, feature, options)
   browser_name = browser_name_or_unknown(browser)
   test_run_string = test_run_identifier(browser, feature)
@@ -774,11 +788,13 @@ def run_feature(browser, feature, options)
   # only retry cucumber/selenium errors, not eyes mismatches.
   while !cucumber_succeeded && (reruns < max_reruns)
     reruns += 1
+    retry_again_msg = reruns < max_reruns ? " once, will retry" : ", not going to retry"
 
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
-    ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{flakiness_for_test(test_run_string) || '?'})..."
+    message = "#{test_run_string} failed#{retry_again_msg} (retry #{reruns} of #{max_reruns}, flakiness: #{to_percent(flakiness_for_test(test_run_string), 3) || '?'})"
+    message += "#{log_link}, first selenium error: <i>#{first_selenium_error(html_log)}</i>" if options.html
+    ChatClient.log message
     $lock.synchronize do
       log_error prefix_string(Time.now, log_prefix)
       log_error prefix_string(browser.to_yaml, log_prefix)
@@ -839,11 +855,10 @@ def run_feature(browser, feature, options)
     # Don't log individual successes because we hit ChatClient rate limits
     # ChatClient.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
-    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})#{log_link}"
-    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}"
+    message = "*FAILED: #{test_run_string}* #{log_link}"
+    message += "\n(#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})"
     ChatClient.log message, color: 'red'
   end
   result_string =

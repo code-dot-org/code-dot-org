@@ -89,6 +89,22 @@ class UnitOverview extends React.Component {
         },
         PLATFORMS.BOTH
       );
+    } else if (props.userType === 'student') {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT,
+        {
+          'unit name': props.scriptName,
+        },
+        PLATFORMS.BOTH
+      );
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,
+        {
+          'unit name': props.scriptName,
+        },
+        PLATFORMS.BOTH
+      );
     }
   }
 

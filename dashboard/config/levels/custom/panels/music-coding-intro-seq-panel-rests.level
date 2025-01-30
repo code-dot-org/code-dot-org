@@ -16,29 +16,32 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "In music, we use measures to keep track of time. Sounds can be short or long—some last for just a beat, and others play for one or more measures. Songwriters use these measures to carefully time each sound in their song.",
+        "text": "In music, we use **measures** to keep track of time. \n\nSongwriters use these measures to carefully time each sound in their song.",
         "imageUrl": "https://images.code.org/db7684ad84de1056c8f5ff11f3c03c61-measures.jpg",
         "key": "music-coding-intro-seq-panel-d41fd16c-480c-4da2-a69c-6eee3f56814f",
         "layout": "text-top-right",
-        "fadeInOverPrevious": true
+        "fadeInOverPrevious": true,
+        "typing": true
       },
       {
-        "text": "Some sounds play together to build harmony, while others follow a sequence to guide the song's flow and tell its story.",
-        "imageUrl": "https://images.code.org/725367fdc34517f8d5eb0795cb8765d9-Untitled 5.jpg",
+        "text": "Some sounds play together to build harmony.\n\nWhile others follow a sequence to guide the song's flow and tell its story.",
+        "imageUrl": "https://images.code.org/e691084d8cc9f96ccca7962b6408794a-Untitled 4.jpg",
         "key": "music-coding-intro-seq-panel-rests-658f4077-7762-4a9b-be1e-f7f0a49e4cab",
         "layout": "text-top-right",
-        "fadeInOverPrevious": true
+        "fadeInOverPrevious": true,
+        "typing": true
       },
       {
         "text": "To create space or rhythm, songwriters might add pauses called rests. A rest is a moment of silence that keeps the music balanced.",
-        "imageUrl": "https://images.code.org/49bbe702588ef19463646f0360fde8d1-rest.jpg",
+        "imageUrl": "https://images.code.org/0212e0c832ca9bc2e841aba2aefd29be-Untitled 5.jpg",
         "key": "music-coding-intro-seq-panel-62188d64-289a-4399-a6bb-3ec3ac3ef864",
         "layout": "text-top-right",
-        "fadeInOverPrevious": true
+        "fadeInOverPrevious": true,
+        "typing": true
       }
     ],
     "offer_browser_tts": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2024-12-17T16:01:26.636+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-seq-panel\\\"\"],\"cloned_from\":\"music-coding-intro-seq-panel\"},{\"changed_at\":\"2024-12-17 16:03:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:13:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:16:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 17:20:12 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:13:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:14:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:33:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:58:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 20:02:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-17T16:01:26.636+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-seq-panel\\\"\"],\"cloned_from\":\"music-coding-intro-seq-panel\"},{\"changed_at\":\"2024-12-17 16:03:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:13:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 16:16:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 17:20:12 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:13:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:14:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:33:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 19:58:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 20:02:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 18:41:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 18:42:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 19:58:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 19:59:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 20:02:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 20:06:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 20:08:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 20:11:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 20:15:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -1,6 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import React, {useState, useCallback} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
 

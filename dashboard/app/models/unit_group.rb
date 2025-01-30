@@ -217,7 +217,7 @@ class UnitGroup < ApplicationRecord
     new_units = new_units.reject(&:empty?)
     new_units_objects = new_units.map {|s| Unit.find_by_name!(s)}
     # we want to delete existing unit group units that aren't in our new list
-    units_to_remove = default_unit_group_units.map(&:script) - new_units_objects
+    units_to_remove = default_unit_group_units.map(&:script) + alternate_unit_group_units.map(&:script) - new_units_objects
     units_to_remove -= alternate_units.map {|hash| Unit.find_by_name!(hash['alternate_script'])}
 
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
@@ -539,7 +539,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user has progress in this course.
   def has_progress?(user)
-    return nil unless user
+    return false unless user
     user_unit_ids = user.user_scripts.pluck(:script_id)
     default_unit_group_units.any? {|ugu| user_unit_ids.include?(ugu.script_id)}
   end
@@ -547,7 +547,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this course.
   def has_older_version_progress?(user)
-    return nil unless user && family_name && version_year
+    return false unless user && family_name && version_year
     user_unit_ids = user.user_scripts.pluck(:script_id)
 
     UnitGroup.all_courses.any? do |course|
@@ -560,7 +560,7 @@ class UnitGroup < ApplicationRecord
 
   # returns whether a unit in this course has version_warning_dismissed.
   def has_dismissed_version_warning?(user)
-    return nil unless user
+    return false unless user
     unit_ids = default_units.pluck(:id)
     user.
       user_scripts.

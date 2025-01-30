@@ -3,13 +3,13 @@
 import './styles/Weblab2View.css';
 
 import {Codebridge} from '@codebridge/Codebridge';
-import {ConfigType, ProjectType} from '@codebridge/types';
+import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useState} from 'react';
 
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
 
@@ -73,7 +73,7 @@ const defaultConfig: ConfigType = {
   showFileBrowser: true,
 };
 
-const defaultSource: ProjectType = {
+const defaultSource: MultiFileSource = {
   // folders: {},
   folders: {
     '1': {id: '1', name: 'foo', parentId: '0'},
@@ -180,11 +180,11 @@ const Weblab2View = () => {
       <div className="app-ide">
         {source && (
           <Codebridge
-            project={source}
+            source={source}
             config={config}
             setProject={setProject}
             setConfig={setConfig}
-            startSource={startSources}
+            startSources={startSources}
             projectVersion={projectVersion}
           />
         )}
@@ -194,10 +194,10 @@ const Weblab2View = () => {
             config={configKey[showConfig]}
             setConfig={(
               configName: string,
-              newConfig: ProjectType | ConfigType | string
+              newConfig: MultiFileSource | ConfigType | string
             ) => {
               if (configName === 'project') {
-                setProject({source: newConfig as ProjectType});
+                setProject({source: newConfig as MultiFileSource});
               } else if (configName === 'config' || configName === 'layout') {
                 setConfig(newConfig as ConfigType);
               }

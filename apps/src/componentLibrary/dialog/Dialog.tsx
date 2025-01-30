@@ -1,7 +1,7 @@
+import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
 import React, {HTMLAttributes, ReactNode} from 'react';
 
-import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
 import CustomDialog from '@cdo/apps/componentLibrary/dialog/CustomDialog';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,

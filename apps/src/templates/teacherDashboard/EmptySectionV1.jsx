@@ -1,8 +1,8 @@
+import {LinkButton} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {
   Heading3,
   BodyTwoText,

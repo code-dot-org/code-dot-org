@@ -37,6 +37,7 @@ import {
   NotFundedSubjects,
   MustSuppressEmailSubjects,
   ParticipantGroupTypes,
+  PdSessionFormats,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
@@ -71,6 +72,7 @@ const placeholderSession = {
   date: moment().format(DATE_FORMAT),
   startTime: '9:00am',
   endTime: '5:00pm',
+  format: PdSessionFormats[0].value,
 };
 
 let ALL_PL_TOPICS = {};
@@ -257,6 +259,7 @@ export class WorkshopForm extends React.Component {
     return sessions.map(session => {
       return {
         id: session.id,
+        format: session.session_format,
         date: moment.utc(session.start).format(DATE_FORMAT),
         startTime: moment.utc(session.start).format(TIME_FORMAT),
         endTime: moment.utc(session.end).format(TIME_FORMAT),
@@ -270,6 +273,7 @@ export class WorkshopForm extends React.Component {
       .map(session => {
         return {
           id: session.id,
+          session_format: session.format,
           start: moment
             .utc(session.date + ' ' + session.startTime, DATETIME_FORMAT)
             .format(),
@@ -946,7 +950,7 @@ export class WorkshopForm extends React.Component {
         }
       })
       .fail(data => {
-        if (data.responseJSON.errors) {
+        if (data.responseJSON?.errors) {
           this.setState({
             errors: data.responseJSON.errors,
             showSaveConfirmation: false,

@@ -1,11 +1,13 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {ProjectFolder, ProjectType} from '@codebridge/types';
+import {ProjectFolder} from '@codebridge/types';
+
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {validateFolderName} from './validateFolderName';
 
 type GetPossibleDestinationFoldersForFolderArgs = {
   folder: ProjectFolder;
-  projectFolders: ProjectType['folders'];
+  projectFolders: MultiFileSource['folders'];
 };
 
 /**

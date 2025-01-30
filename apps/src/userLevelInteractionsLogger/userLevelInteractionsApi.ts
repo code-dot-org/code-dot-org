@@ -16,8 +16,10 @@ export async function logUserLevelInteraction(
       },
       body: JSON.stringify(interactionData),
     });
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+    if (response.status === 400) {
+      console.log('Bad request: likely the script is not CSP 2024+');
+    } else if (!response.ok) {
+      throw new Error('Failed to save User Level interaction');
     }
     const data = await response.json();
     return data;

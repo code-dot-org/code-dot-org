@@ -30,6 +30,20 @@ const App = () => (
 export default App;
 ```
 
+## Development
+
+To run the code in development mode (build + watch):
+
+```bash
+yarn run dev
+```
+
+This mode also generates the typescript declaration files, which generally take upwards of 20 seconds but is necessary for cross-project development. To skip typescript declaration generation (for example, when locally developing components without the need to cross-reference):
+
+```bash
+yarn run dev:fast
+```
+
 ## Testing
 
 You can run the tests using the following commands:
