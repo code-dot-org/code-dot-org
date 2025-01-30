@@ -34,7 +34,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
       end: DateTime.new(2016, 3, 1, 17).in_time_zone
     )
 
-    assert_equal '2016-03-01, 9:00am-5:00pm', session.formatted_date_with_start_and_end_times
+    assert_equal '2016-03-01, 9:00am-5:00pm MST', session.formatted_date_with_start_and_end_times
   end
 
   test 'soft delete' do

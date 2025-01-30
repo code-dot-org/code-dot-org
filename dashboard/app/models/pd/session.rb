@@ -63,14 +63,19 @@ class Pd::Session < ApplicationRecord
   end
 
   def formatted_date
-    start.to_date.iso8601
+    start_time.to_date.iso8601
+  end
+
+  def tz_abbreviation
+    return '' if time_zone.blank?
+    ActiveSupport::TimeZone[time_zone || 'UTC'].tzinfo.current_period.abbreviation.to_s
   end
 
   def formatted_date_with_start_and_end_times
-    start_time = start.strftime('%l:%M%P').strip
-    end_time = self.end.strftime('%l:%M%P').strip
+    formatted_start = start_time.strftime('%l:%M%P').strip
+    formatted_end = end_time.strftime('%l:%M%P').strip
 
-    "#{formatted_date}, #{start_time}-#{end_time}"
+    "#{formatted_date}, #{formatted_start}-#{formatted_end} #{tz_abbreviation}".strip
   end
 
   def session_info_for_calendar
@@ -82,14 +87,14 @@ class Pd::Session < ApplicationRecord
   end
 
   def start_date_us_format
-    start.strftime('%b %d %Y').strip
+    start_time.strftime('%b %d %Y').strip
   end
 
   def start_date_with_start_and_end_times_us_format
-    start_time = start.strftime('%l:%M%P').strip
-    end_time = self.end.strftime('%l:%M%P').strip
+    formatted_start = start_time.strftime('%l:%M%P').strip
+    formatted_end = end_time.strftime('%l:%M%P').strip
 
-    "#{start_date_us_format}, #{start_time} - #{end_time}"
+    "#{start_date_us_format}, #{formatted_start} - #{formatted_end} #{tz_abbreviation}".strip
   end
 
   def hours
