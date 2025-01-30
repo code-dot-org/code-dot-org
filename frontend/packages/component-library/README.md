@@ -59,3 +59,9 @@ You can run the tests using the following commands:
    ```bash
    yarn lint
    ```
+   
+## Linking (making changes to component-library and seeing them in another project)
+
+To link the component library to another project, run the following command from `./frontend` directory`:
+
+```yarn workspace @code-dot-org/component-library dev```
