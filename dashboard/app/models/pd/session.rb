@@ -63,6 +63,7 @@ class Pd::Session < ApplicationRecord
     end_time = self.end.strftime('%l:%M%p').strip
 
     {
+      id: id,
       year: start.strftime('%Y').strip,
       month: start.strftime('%m').strip,
       day: start.strftime('%d').strip,
