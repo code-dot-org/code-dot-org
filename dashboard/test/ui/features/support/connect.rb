@@ -16,6 +16,20 @@ def single_session?
   $browser_config['mobile'] || $single_session
 end
 
+def selenium_browser(url, capabilities = nil)
+  capabilities ||= Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
+  very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
+
+  $http_client = SeleniumBrowser::Client.new(read_timeout: 2.minutes)
+  with_read_timeout(5.minutes) do
+    Selenium::WebDriver.for(:remote,
+      url: url,
+      capabilities: capabilities,
+      http_client: $http_client
+    )
+  end
+end
+
 def saucelabs_browser(test_run_name)
   raise "Please define CDO.saucelabs_username" if CDO.saucelabs_username.blank?
   raise "Please define CDO.saucelabs_authkey"  if CDO.saucelabs_authkey.blank?
@@ -37,16 +51,7 @@ def saucelabs_browser(test_run_name)
   capabilities["sauce:options"] ||= {}
   capabilities["sauce:options"].merge!(sauce_options)
 
-  very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
-
-  $http_client = SeleniumBrowser::Client.new(read_timeout: 2.minutes)
-  with_read_timeout(5.minutes) do
-    Selenium::WebDriver.for(:remote,
-      url: "https://ondemand.us-west-1.saucelabs.com/wd/hub",
-      capabilities: capabilities,
-      http_client: $http_client
-    )
-  end
+  selenium_browser("https://ondemand.us-west-1.saucelabs.com/wd/hub", capabilities)
 end
 
 # Set HTTP read timeout to the specified value during the block.
@@ -58,7 +63,11 @@ end
 
 def get_browser(test_run_name)
   browser = nil
-  if ENV['TEST_LOCAL'] == 'true'
+  if true
+    browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
+      selenium_browser('http://selenium-chrome:4444')
+    end
+  elsif ENV['TEST_LOCAL'] == 'true'
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   else

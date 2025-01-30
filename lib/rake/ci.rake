@@ -100,9 +100,9 @@ namespace :ci do
     end
     ui_test_browsers = browsers_to_run
     use_saucelabs = !ui_test_browsers.empty?
-    if use_saucelabs || test_eyes?
-      Cdo::SauceConnect.start_sauce_connect(daemonize: true)
-    end
+    #if use_saucelabs || test_eyes?
+    #  Cdo::SauceConnect.start_sauce_connect(daemonize: true)
+    #end
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
@@ -135,7 +135,7 @@ namespace :ci do
             "--html"
       end
     end
-    close_sauce_connect if use_saucelabs || test_eyes?
+    #close_sauce_connect if use_saucelabs || test_eyes?
     RakeUtils.system_stream_output 'sleep 10'
 
     check_for_new_file_changes
