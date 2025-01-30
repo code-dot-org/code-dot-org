@@ -30,6 +30,8 @@ class Pd::Session < ApplicationRecord
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: 'pd_workshop_id', optional: true
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: 'pd_session_id', dependent: :destroy
 
+  before_validation :set_default_time_zone
+
   validates_presence_of :start, :end
   validate :starts_and_ends_on_the_same_day
   validate :starts_before_ends
@@ -46,6 +48,10 @@ class Pd::Session < ApplicationRecord
     unless start < self.end
       errors.add(:end, 'must occur after the start.')
     end
+  end
+
+  def set_default_time_zone
+    self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : 'UTC'
   end
 
   def formatted_date
