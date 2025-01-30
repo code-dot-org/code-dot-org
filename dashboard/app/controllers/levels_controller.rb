@@ -603,8 +603,7 @@ class LevelsController < ApplicationController
     end
     # TODO: Not present here, but present in original extra links. Some of these can be handled on the client side.
     # Anything project-specific should be handled via a separate API, as this controller has no context for projects.
-    # Gamelab show animation json, list contained levels, Blockly start/toolbox/etc, Blockly helpers, are not included yet
-    # as they are not needed yet.
+    # Gamelab show animation json, list contained levels, Blockly helpers, are not included yet as they are not needed yet.
 
     render json: {
       links: links,
