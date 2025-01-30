@@ -435,27 +435,18 @@ class Section < ApplicationRecord
         login_type_name = Policies::Lti.issuer_name(issuer)
       end
 
-      if unit_group&.single_unit_course?
-        single_unit = unit_group.default_units.first
-        script_info = {
-          id: single_unit.id,
-          name: single_unit.name,
-          project_sharing: single_unit.project_sharing
-        }
-      else
-        script_info = {
-          id: script_id,
-          name: script.try(:name),
-          project_sharing: script.try(:project_sharing)
-        }
-      end
+      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
 
       {
         id: id,
         name: name,
         students: students.distinct(&:id).map(&:summarize),
         login_type_name: login_type_name,
-        script: script_info,
+        script: {
+          id: selected_unit&.id,
+          name: selected_unit&.name,
+          project_sharing: selected_unit&.project_sharing
+        },
         course: {
           course_offering_id: course_offering_id,
           version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,

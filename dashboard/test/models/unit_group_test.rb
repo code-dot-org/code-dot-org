@@ -1201,9 +1201,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test 'single_unit_course' do
-    single_unit_course = create :unit_group, name: 'single-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    single_unit = create :script, name: 'single-unit'
-    create :unit_group_unit, unit_group: single_unit_course, script: single_unit, position: 1
+    single_unit_course = create :single_unit_course
 
     multi_unit_course = create :unit_group, name: 'multi-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     multi_unit1 = create :script, name: 'multi-unit1'

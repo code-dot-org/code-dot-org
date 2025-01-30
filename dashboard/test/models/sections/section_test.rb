@@ -770,11 +770,9 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'selected_section_summarize: section with a single-unit course assigned' do
-    single_unit_course = create :unit_group, name: 'single-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    single_unit = create :script, name: 'single-unit'
-    create :unit_group_unit, unit_group: single_unit_course, script: single_unit, position: 1
+    single_unit_course = create :single_unit_course
+    single_unit = single_unit_course.default_units.first
     section = create :section, unit_group: single_unit_course
-
     CourseOffering.add_course_offering(single_unit_course)
 
     summarized_section = section.selected_section_summarize

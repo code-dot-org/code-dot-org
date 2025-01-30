@@ -56,6 +56,15 @@ FactoryBot.define do
     instruction_type {"teacher_led"}
     participant_audience {"student"}
     instructor_audience {"teacher"}
+
+    factory :single_unit_course do
+      transient do
+        unit {nil}
+      end
+      after(:create) do |unit_group, evaluator|
+        create :unit_group_unit, unit_group: unit_group, script: (evaluator.unit || create(:unit)), position: 1
+      end
+    end
   end
 
   factory :experiment do

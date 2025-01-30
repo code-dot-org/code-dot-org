@@ -44,7 +44,6 @@ Feature: Using the V2 teacher dashboard local navigation
     Given I am assigned to course "ui-test-single-unit-course" and unit "ui-test-single-unit" with teacher "Teacher_Sally"
 
     Given I sign in as "Teacher_Sally" and go home
-    And I get levelbuilder access
 
     When I click selector "a:contains(New Section)" once I see it to load a new page
 

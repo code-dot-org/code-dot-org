@@ -365,13 +365,11 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to unit for single-unit course" do
-    single_unit_course = create :unit_group, name: 'single-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    single_unit = create :script, name: 'single-unit'
-    create :unit_group_unit, unit_group: single_unit_course, script: single_unit, position: 1
+    single_unit_course = create :single_unit_course
 
     sign_in create(:teacher)
     get :show, params: {course_name: single_unit_course.name}
-    assert_redirected_to "/s/#{single_unit.name}/"
+    assert_redirected_to script_path(single_unit_course.default_units.first)
   end
 
   test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do
@@ -387,18 +385,15 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard unit overview if single-unit course is in a section" do
-    experiment_course = create :unit_group, name: 'experiment-single-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    experiment_single_unit = create :script, name: 'experiment-single-unit'
-    create :unit_group_unit, unit_group: experiment_course, script: experiment_single_unit, position: 1
-
+    experiment_single_unit_course = create :single_unit_course
     experiment_teacher = create :teacher
-    experiment_section = create :section, user: experiment_teacher, unit_group: experiment_course
+    experiment_section = create :section, user: experiment_teacher, unit_group: experiment_single_unit_course
     SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
 
     sign_in experiment_teacher
 
-    get :show, params: {course_name: experiment_course.name}
-    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_single_unit.name}"
+    get :show, params: {course_name: experiment_single_unit_course.name}
+    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_single_unit_course.default_units.first.name}"
   end
 
   no_access_msg = "You don&#39;t have access to this course."

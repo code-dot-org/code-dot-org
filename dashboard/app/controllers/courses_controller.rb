@@ -57,7 +57,7 @@ class CoursesController < ApplicationController
 
     # If this is a single-unit course, redirect to the unit overview
     if @unit_group.single_unit_course?
-      redirect_to "/s/#{@unit_group.default_units.first.name}/"
+      redirect_to script_path(@unit_group.default_units.first)
       return
     end
 
