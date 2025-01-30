@@ -260,9 +260,9 @@ export class WorkshopForm extends React.Component {
       return {
         id: session.id,
         format: session.session_format,
-        date: moment.utc(session.start).format(DATE_FORMAT),
-        startTime: moment.utc(session.start).format(TIME_FORMAT),
-        endTime: moment.utc(session.end).format(TIME_FORMAT),
+        date: moment.utc(session.start).local().format(DATE_FORMAT),
+        startTime: moment.utc(session.start).local().format(TIME_FORMAT),
+        endTime: moment.utc(session.end).local().format(TIME_FORMAT),
       };
     });
   }
