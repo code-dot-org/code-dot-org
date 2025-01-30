@@ -38,7 +38,7 @@ class Pd::Session < ApplicationRecord
 
   def starts_and_ends_on_the_same_day
     return unless start && self.end
-    unless start.to_datetime.to_date == self.end.to_datetime.to_date
+    unless start_time.to_date == end_time.to_date
       errors.add(:end, 'must occur on the same day as the start.')
     end
   end
