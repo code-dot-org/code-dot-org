@@ -54,6 +54,14 @@ class Pd::Session < ApplicationRecord
     self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : 'UTC'
   end
 
+  def start_time
+    start.in_time_zone(time_zone || 'UTC')
+  end
+
+  def end_time
+    self.end.in_time_zone(time_zone || 'UTC')
+  end
+
   def formatted_date
     start.to_date.iso8601
   end
