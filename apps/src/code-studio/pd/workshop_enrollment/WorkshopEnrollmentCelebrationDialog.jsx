@@ -67,7 +67,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
     setIsOpen(false);
   };
 
-  const onCloseSessionCalendarDialog = () => {
+  const onCloseBothDialogs = () => {
     setMultipleSessionDialogType('');
     onCloseCelebrationDialog();
   };
@@ -106,8 +106,8 @@ export default function WorkshopEnrollmentCelebrationDialog({
               </tr>
             </thead>
             <tbody>
-              {workshopSessionInfo.map((session, index) => (
-                <tr key={`session-${index}`}>
+              {workshopSessionInfo.map(session => (
+                <tr key={`session-${session.id}`}>
                   <td>
                     <BodyTwoText>{session.date_text}</BodyTwoText>
                   </td>
@@ -144,7 +144,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
             <Button
               text={i18n.enrollmentCelebrationCallToAction()}
               type={'primary'}
-              onClick={onCloseSessionCalendarDialog}
+              onClick={onCloseBothDialogs}
             />
           </div>
         </div>
