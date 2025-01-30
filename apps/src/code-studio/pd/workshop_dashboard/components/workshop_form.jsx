@@ -274,12 +274,13 @@ export class WorkshopForm extends React.Component {
         return {
           id: session.id,
           session_format: session.format,
-          start: moment
-            .utc(session.date + ' ' + session.startTime, DATETIME_FORMAT)
-            .format(),
-          end: moment
-            .utc(session.date + ' ' + session.endTime, DATETIME_FORMAT)
-            .format(),
+          start: moment(`${session.date} ${session.startTime}`, DATETIME_FORMAT)
+            .toDate()
+            .toISOString(),
+          end: moment(`${session.date} ${session.endTime}`, DATETIME_FORMAT)
+            .toDate()
+            .toISOString(),
+          time_zone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         };
       })
       .concat(
