@@ -56,10 +56,6 @@ class Pd::Workshop < ApplicationRecord
   serialized_attrs [
     'fee',
 
-    # Indicates that this workshop will be conducted virtually, which triggers
-    # a different, virtual-specific post-workshop survey.
-    'virtual',
-
     # Allows a workshop to be associated with a third party
     # organization.
     # Only current allowed values are "friday_institute" and nil.
@@ -131,6 +127,10 @@ class Pd::Workshop < ApplicationRecord
     if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
       errors.add :properties, "Workshops with the subject #{subject} must be virtual"
     end
+  end
+
+  def virtual?
+    sessions.any? {|session| session.session_format == "virtual"}
   end
 
   # Whether enrollment in this workshop requires an application
