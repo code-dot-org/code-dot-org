@@ -322,7 +322,7 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
         isIconOnly={true}
         color={'black'}
         onClick={onStartOver}
-        ariaLabel={'Start Over'}
+        ariaLabel={aichatI18n.aria_startOver()}
         size={'xs'}
         type="tertiary"
         className={moduleStyles.startOverButton}

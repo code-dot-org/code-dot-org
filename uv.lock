@@ -981,6 +981,9 @@ wheels = [
 name = "unittest-runner"
 version = "0.1.0"
 source = { editable = "python/pythonlab/unittest_runner" }
+dependencies = [
+    { name = "neighborhood" },
+]
 
 [package.dev-dependencies]
 dev = [
@@ -988,6 +991,7 @@ dev = [
 ]
 
 [package.metadata]
+requires-dist = [{ name = "neighborhood", editable = "python/pythonlab/neighborhood" }]
 
 [package.metadata.requires-dev]
 dev = [{ name = "pytest", specifier = ">=8" }]
