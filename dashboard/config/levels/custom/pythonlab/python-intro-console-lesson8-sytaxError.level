@@ -1,0 +1,37 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-01-28T17:19:49.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Do This: \r\nThere is a bug in this code. \r\n- Identify the syntax errors.\r\n- Fix the code so it runs properly.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def greet_user()\n    name = input(\"What is your name? \")\n    print(\"Hello, \" + name + \"!)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzln2SJhX982ZVySlKsEMqaYOZk+wXngX\nVV4LWL4cyCyAYS4yoAizJ7ipHF0YHipVzMG7FA6sCpewQ15xwTbZjecCPej+\nkUl1V9jLIiDv7KuHhw2kx7VSM1wQgUqXdVnldmrf0MEPEVJf48FEvig6++uq\n94qXWMarwp8U0JKlIpmUBbMJg9uVWhJoaMfOVu1I4ju/PGQoqiJ+0QHdQGJj\nQ4SVe/xUHXRGAyAes+iftyHo\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-28T17:19:49.299+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson8-createMessage\\\"\"],\"cloned_from\":\"python-intro-console-lesson8-createMessage\"},{\"changed_at\":\"2025-01-28 17:20:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 17:20:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 17:21:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

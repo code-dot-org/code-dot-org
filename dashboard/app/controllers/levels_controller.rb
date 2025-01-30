@@ -548,6 +548,9 @@ class LevelsController < ApplicationController
           if @level.class != Music
             links[@level.name] << {text: "e[x]emplar", url: edit_exemplar_level_path(@level), access_key: 'x'}
           end
+          if [Music].include?(@level.class)
+            links[@level.name] << {text: "[t]oolbox", url: edit_blocks_level_path(@level, :toolbox_blocks), access_key: 't'}
+          end
         end
       else
         links[@level.name] << {text: '(Cannot edit)', url: ''}

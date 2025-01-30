@@ -154,15 +154,16 @@ class Painter:
       return True
     return self.remaining_paint > 0
   
-  def can_move(self, direction):
+  def can_move(self, direction=None):
     """
     Returns:
       True if the painter can move in the given direction
     Args:
       direction (str): The direction of movement that is being checked
     """
-    can_move_result = self._is_valid_movement(Direction(direction))
-    return can_move_result
+    if direction is None:
+      return self._is_valid_movement(self.direction)
+    return self._is_valid_movement(Direction(direction))
   
   def get_color(self):
     """

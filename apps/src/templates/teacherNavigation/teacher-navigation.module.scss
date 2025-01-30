@@ -172,18 +172,23 @@
   width: fit-content;
 }
 
-.minutesPerWeekWrapper {
+.calendarDropdowns {
   display: flex;
+  flex-direction: row;
+  gap: 24px;
   margin-bottom: 10px;
-  align-items: center;
 }
 
-.minutesPerWeekDescription {
-  font-weight: bold;
-  margin-right: 10px;
+.calendarUnitDropdown {
+  max-width: 240px;
 }
 
 .calendarDropdown {
-  width: fit-content;
-  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.calendarDropdownDescription {
+  font-weight: bold;
+  margin-right: 10px;
 }
