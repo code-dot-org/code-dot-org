@@ -171,7 +171,6 @@ const asyncRun = (() => {
     source: MultiFileSource,
     validationFile?: ProjectFile
   ) => {
-    // the id could be generated more carefully
     id = createUuid();
 
     // Make sure async setup is done
@@ -218,6 +217,7 @@ const sendInput = (value: string): void => {
     return;
   }
 
+  // Send a message to the service worker with the input value.
   inputServiceWorker.postMessage({
     type: SENDING_INPUT,
     value,

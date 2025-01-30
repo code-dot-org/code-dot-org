@@ -54,6 +54,8 @@ const Console: React.FunctionComponent = () => {
     clearOutput(false);
   });
 
+  // Handler for terminal input. This manages storing input into a buffer
+  // and sending it to the console manager when the user presses enter.
   const onData = useCallback(
     (data: string) => {
       const consoleManager =
