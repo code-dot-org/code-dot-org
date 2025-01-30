@@ -151,3 +151,13 @@ export const checkIfURLIsBlocked = (url: string): Promise<boolean> => {
     img.src = `${url}?_=${Math.random()}`;
   });
 };
+
+// Check to see if YouTube is blocked using the checkIfURLIsBlocked function.
+export const checkIfYouTubeIsBlocked = async () => {
+  const [isYouTubeBlocked, isYouTubeNoCookieBlocked] = await Promise.all([
+    checkIfURLIsBlocked('https://www.youtube.com/favicon.ico'),
+    checkIfURLIsBlocked('https://www.youtube-nocookie.com/favicon.ico'),
+  ]);
+
+  return isYouTubeBlocked || isYouTubeNoCookieBlocked;
+};
