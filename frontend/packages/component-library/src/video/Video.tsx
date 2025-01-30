@@ -42,8 +42,7 @@ export interface VideoProps extends HTMLAttributes<HTMLElement> {
  * and the option to download it, if an externally hosted fallback is provided.
  * The video can also be displayed with a caption and works with responsive screen sizes.
  */
-
-export const Video: React.FC<VideoProps> = ({
+const Video: React.FC<VideoProps> = ({
   youTubeId,
   videoTitle,
   videoFallback,
@@ -133,3 +132,5 @@ export const Video: React.FC<VideoProps> = ({
     </figure>
   );
 };
+
+export default Video;
