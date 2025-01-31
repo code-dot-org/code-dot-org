@@ -3,6 +3,7 @@
 %html{dir: locale_dir}
   %head
     = render partial: 'i18n/crowdin_in_context_tool'
+    = render partial: 'i18n/localizejs'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true, domain: 'code.org'}
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - managed_test_server = "#{CDO.running_web_application? && CDO.test_system?}"
