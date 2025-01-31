@@ -13,6 +13,7 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/sections/teacher_dashboard/first_section/*location to the teacher's most recent section
   # on teacher dashboard, where *location is one of the following: courses, calendar, progress, or materials.
   get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
+  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
 
   # Redirect enable and disable experiments to most recent section
   get '/teacher_dashboard/sections/enable_experiments', to: "teacher_dashboard#enable_experiments"
