@@ -139,6 +139,12 @@ const registerServiceWorker = async () => {
       });
     } catch (error) {
       console.error(`Registration failed with ${error}`);
+      // Log that we failed to register the service worker.
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Failed to register input service worker', undefined, {
+          error,
+        });
     }
 
     navigator.serviceWorker.onmessage = event => {
@@ -150,6 +156,10 @@ const registerServiceWorker = async () => {
         lastInputId = event.data.id;
       }
     };
+  } else if (!('serviceWorker' in navigator)) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logWarning('Service worker unavailable');
   }
 };
 
