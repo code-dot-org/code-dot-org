@@ -93,6 +93,9 @@ export default class ConsoleManager {
     return this.inputBuffer;
   }
 
+  // Store the current input buffer in the terminal and clear the input buffer.
+  // We always store the input buffer as a line with a newlne, because we clear it when
+  // the user presses enter.
   public saveAndClearInputBuffer() {
     this.updateTerminalLines(this.inputBuffer);
     this.lastLineIsPartial = false;
