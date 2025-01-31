@@ -165,10 +165,6 @@ services:
       - "5910" # The selenium direct VNC port
       - "4444" # The selenium router port
       - "7910" # The selenium NoVNC service port
-    ports:
-      - "5910:5910" # The selenium direct VNC port
-      - "4444:4444" # The selenium router port
-      - "7910:7910" # The selenium NoVNC service port
 
 steps:
   - name: bin/drone/shell
