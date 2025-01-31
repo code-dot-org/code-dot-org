@@ -55,7 +55,6 @@ def download_google_file(url:, path:, metadata:, barrier:)
         # Some documents do not have public download permissions; skip these.
         if exception.respond_to?(:io)
           status_code = exception.io.status[0]
-          puts "Status = #{status_code}"
           next if status_code == '401'
         end
 
