@@ -63,81 +63,73 @@ describe('SafeMarkdown', () => {
 
   it('will render markdown wrapped in an element', () => {
     const paragraphWrapper = shallow(
-      <SafeMarkdown
-        markdown="**some** _basic_ [inline](markdown)"
-        wrapperComponent="p"
-      />
+      <p id="test-markdown">
+        <SafeMarkdown
+          unwrapped
+          markdown={'**some** _basic_ [inline](markdown)'}
+        />
+      </p>
     );
 
-    expect(
-      paragraphWrapper.equals(
-        <p>
-          <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
-        </p>
-      )
-    ).toBe(true);
+    expect(paragraphWrapper.html()).toBe(
+      '<p id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></p>'
+    );
 
     const headingWrapper = shallow(
-      <SafeMarkdown
-        markdown="**some** _basic_ [inline](markdown)"
-        wrapperComponent="h1"
-      />
+      <h1 id="test-markdown">
+        <SafeMarkdown
+          unwrapped
+          markdown={'**some** _basic_ [inline](markdown)'}
+        />
+      </h1>
     );
 
-    expect(
-      headingWrapper.equals(
-        <h1>
-          <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
-        </h1>
-      )
-    ).toBe(true);
+    expect(headingWrapper.html()).toBe(
+      '<h1 id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></h1>'
+    );
   });
 
   it('will render html wrapped in an element', () => {
     const paragraphWrapper = shallow(
-      <SafeMarkdown
-        markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>'
-        wrapperComponent="p"
-      />
+      <p id="test-markdown">
+        <SafeMarkdown
+          unwrapped
+          markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>'
+        />
+      </p>
     );
-
-    expect(
-      paragraphWrapper.equals(
-        <p>
-          <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
-        </p>
-      )
-    ).toBe(true);
+    expect(paragraphWrapper.html()).toBe(
+      '<p id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></p>'
+    );
 
     // Make sure we don't add an extra div
     const divWrapper = shallow(
-      <SafeMarkdown
-        markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>'
-        wrapperComponent="div"
-      />
+      <div id="test-markdown">
+        <SafeMarkdown
+          unwrapped
+          markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>'
+        />
+      </div>
     );
 
-    expect(
-      divWrapper.equals(
-        <div>
-          <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
-        </div>
-      )
-    ).toBe(true);
+    expect(divWrapper.html()).toBe(
+      '<div id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></div>'
+    );
   });
 
   it('will render markdown wrapped in an Typography element', () => {
     const typographyWrapper = shallow(
-      <SafeMarkdown
-        markdown="**some** _basic_ [inline](markdown)"
-        wrapperComponent={Heading1}
-        wrapperProps={{style: {color: 'red'}}}
-      />
+      <Heading1 id="test-markdown">
+        <SafeMarkdown
+          unwrapped
+          markdown="**some** _basic_ [inline](markdown)"
+        />
+      </Heading1>
     );
 
     const renderedHtml = typographyWrapper.html();
     expect(renderedHtml).toBe(
-      '<h1 class="heading-xxl" style="color:red"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></h1>'
+      '<h1 id="test-markdown" class="heading-xxl"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></h1>'
     );
   });
 

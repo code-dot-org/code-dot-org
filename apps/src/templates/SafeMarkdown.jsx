@@ -26,14 +26,9 @@ class SafeMarkdown extends React.Component {
   static propTypes = {
     markdown: PropTypes.string.isRequired,
     openExternalLinksInNewTab: PropTypes.bool,
+    unwrapped: PropTypes.bool,
     className: PropTypes.string,
     id: PropTypes.string,
-    wrapperComponent: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-    wrapperProps: PropTypes.object,
-  };
-
-  static defaultProps = {
-    wrapperProps: {},
   };
 
   render() {
@@ -47,7 +42,7 @@ class SafeMarkdown extends React.Component {
 
     const rendered = Object(processor.processSync(this.props.markdown).result);
 
-    const markdownProps = {...this.props.wrapperProps};
+    const markdownProps = {};
     if (this.props.className) {
       markdownProps.className = this.props.className;
     }
@@ -55,15 +50,9 @@ class SafeMarkdown extends React.Component {
       markdownProps.id = this.props.id;
     }
 
-    if (this.props.wrapperComponent) {
-      const WrapperComponent = this.props.wrapperComponent;
-      return (
-        <WrapperComponent {...markdownProps}>
-          {rendered.props.children}
-        </WrapperComponent>
-      );
+    if (this.props.unwrapped) {
+      return rendered.props.children;
     }
-
     // rehype-react will only wrap the compiled markdown in a <div> tag
     // if it needs to (ie, if there would otherwise be multiple elements
     // returned) or we're assigning props. We prefer consistency over flexibility,
