@@ -117,15 +117,23 @@ const registerServiceWorker = async () => {
   // No-op if service workers are not supported.
   if (canSupportInput()) {
     try {
-      const url = new URL(
-        './inputServiceWorker.js',
-        // @ts-expect-error because TypeScript does not like this syntax.
-        import.meta.url
+      const registration = await navigator.serviceWorker.register(
+        new URL(
+          './inputServiceWorker.js',
+          // @ts-expect-error because TypeScript does not like this syntax.
+          import.meta.url
+        )
       );
-      const registration = await navigator.serviceWorker.register(url);
-      if (registration.active) {
-        inputServiceWorker = registration.active;
-      }
+      // const url = new URL(
+      //   './inputServiceWorker.js',
+      //   // @ts-expect-error because TypeScript does not like this syntax.
+      //   import.meta.url
+      // );
+      // console.log({url});
+      // const registration = await navigator.serviceWorker.register(url);
+      // if (registration.active) {
+      //   inputServiceWorker = registration.active;
+      // }
 
       registration.addEventListener('updatefound', () => {
         const installingWorker = registration.installing;
