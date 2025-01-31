@@ -464,7 +464,7 @@ describe('LandingPage', () => {
         expect(findFacilitatorCenterTab()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideMyFacilitatorCenterTab is true', () => {
         beforeEach(() => {
           props['hideMyFacilitatorCenterTab'] = true;
         });
@@ -489,7 +489,7 @@ describe('LandingPage', () => {
         expect(findInstructorCenterTab()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideInstructorCenterTab is true', () => {
         beforeEach(() => {
           props['hideInstructorCenterTab'] = true;
         });
@@ -514,7 +514,7 @@ describe('LandingPage', () => {
         expect(findRPCenterTab()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideRPCenterTab is true', () => {
         beforeEach(() => {
           props['hideRPCenterTab'] = true;
         });
@@ -539,7 +539,7 @@ describe('LandingPage', () => {
         expect(findWorkshopOrganizerCenterTab()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideWorkshopOrganizerCenterTab is true', () => {
         beforeEach(() => {
           props['hideWorkshopOrganizerCenterTab'] = true;
         });
@@ -572,7 +572,7 @@ describe('LandingPage', () => {
         expect(findWorkshopEnrollmentCelebrationDialog()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideMyPLWorkshopEnrollmentCelebrationDialog is true', () => {
         beforeEach(() => {
           props['hideMyPLWorkshopEnrollmentCelebrationDialog'] = true;
         });
@@ -603,7 +603,7 @@ describe('LandingPage', () => {
         expect(findMyPLBanner()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideMyPLBanner is true', () => {
         beforeEach(() => {
           props['hideMyPLBanner'] = true;
         });
@@ -628,7 +628,7 @@ describe('LandingPage', () => {
         expect(findSelfPacedPLCourses()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideMyPLSelfPacedPL is true', () => {
         beforeEach(() => {
           props['hideMyPLSelfPacedPL'] = true;
         });
@@ -653,7 +653,7 @@ describe('LandingPage', () => {
         expect(findMyPLBanner()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideMyPLJoinSectionArea is true', () => {
         beforeEach(() => {
           props['hideMyPLJoinSectionArea'] = true;
         });
@@ -696,7 +696,7 @@ describe('LandingPage', () => {
         });
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideMyPLLandingPageWorkshopsTable is true', () => {
         beforeEach(() => {
           props['hideMyPLLandingPageWorkshopsTable'] = true;
         });
@@ -724,7 +724,7 @@ describe('LandingPage', () => {
         expect(findStaticRecommendedPL()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideMyPLStaticRecommendedPL is true', () => {
         beforeEach(() => {
           props['hideMyPLStaticRecommendedPL'] = true;
         });
@@ -749,7 +749,7 @@ describe('LandingPage', () => {
         expect(findMidHighBlock()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideMyPLStaticRecommendedPLMidHighBlock is true', () => {
         beforeEach(() => {
           props['hideMyPLStaticRecommendedPLMidHighBlock'] = true;
         });
@@ -774,7 +774,7 @@ describe('LandingPage', () => {
         expect(findSelfPacedBlock()).toBeInTheDocument();
       });
 
-      describe('when the prop is true', () => {
+      describe('when hideMyPLStaticRecommendedPLSelfPacedBlock is true', () => {
         beforeEach(() => {
           props['hideMyPLStaticRecommendedPLSelfPacedBlock'] = true;
         });
@@ -802,7 +802,7 @@ describe('LandingPage', () => {
         );
       });
 
-      describe('when the prop is assigned a custom value', () => {
+      describe('when myPLStaticRecommendedPLSelfPacedBlockButtonUrl is assigned a custom value', () => {
         const buttonUrl = '/test/url';
 
         beforeEach(() => {
