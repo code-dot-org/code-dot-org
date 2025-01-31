@@ -151,6 +151,24 @@ services:
     image: redis
     ports:
       - 6379
+  - name: selenium-chrome
+    hostname: selenium-chrome
+    image: selenium/standalone-chrome:132.0
+    environment:
+      SE_VNC_PORT: 5910
+      SE_NO_VNC_PORT: 7910
+      DISPLAY_NUM: 100
+      DISPLAY: ':100.0'
+      JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
+    shm_size: '2gb'
+    expose:
+      - "5910" # The selenium direct VNC port
+      - "4444" # The selenium router port
+      - "7910" # The selenium NoVNC service port
+    ports:
+      - "5910:5910" # The selenium direct VNC port
+      - "4444:4444" # The selenium router port
+      - "7910:7910" # The selenium NoVNC service port
 
 steps:
   - name: bin/drone/shell
