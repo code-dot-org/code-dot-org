@@ -124,16 +124,6 @@ const registerServiceWorker = async () => {
           import.meta.url
         )
       );
-      // const url = new URL(
-      //   './inputServiceWorker.js',
-      //   // @ts-expect-error because TypeScript does not like this syntax.
-      //   import.meta.url
-      // );
-      // console.log({url});
-      // const registration = await navigator.serviceWorker.register(url);
-      // if (registration.active) {
-      //   inputServiceWorker = registration.active;
-      // }
 
       registration.addEventListener('updatefound', () => {
         const installingWorker = registration.installing;
