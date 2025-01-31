@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-29 04:41:17 UTC",
+    "serialized_at": "2025-01-30 23:58:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -547,6 +547,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-intro-to-programming-python"
       }
+    },
+    {
+      "key": "aad1f3b5-3723-47d9-ab4b-309b6d9b6cbe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aad1f3b5-3723-47d9-ab4b-309b6d9b6cbe",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python"
+      }
     }
   ],
   "activity_sections": [
@@ -1072,6 +1084,39 @@
         "activity_section.key": "c141cce6-0900-41f7-b7d8-0150fe48f9ce",
         "lesson_activity.key": "f4af809d-7fb5-4088-bb4d-6ffac41088bf"
       }
+    },
+    {
+      "key": "2d56a11e-fb66-4682-bec3-06255072fe57",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d56a11e-fb66-4682-bec3-06255072fe57",
+        "lesson_activity.key": "aad1f3b5-3723-47d9-ab4b-309b6d9b6cbe"
+      }
+    },
+    {
+      "key": "0125f7c5-0a6a-4d91-b872-cc0ded1c8f2e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using elif and getting user input"
+      },
+      "seeding_key": {
+        "activity_section.key": "0125f7c5-0a6a-4d91-b872-cc0ded1c8f2e",
+        "lesson_activity.key": "aad1f3b5-3723-47d9-ab4b-309b6d9b6cbe"
+      }
+    },
+    {
+      "key": "529efccb-b1f6-4547-ac80-b20e85429ca8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check for understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "529efccb-b1f6-4547-ac80-b20e85429ca8",
+        "lesson_activity.key": "aad1f3b5-3723-47d9-ab4b-309b6d9b6cbe"
+      }
     }
   ],
   "script_levels": [
@@ -1305,6 +1350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson4-level2a"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -1327,6 +1375,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson4-level2b"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -1349,6 +1400,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson4-level2c"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -1371,6 +1425,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson4-level2d"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -1393,6 +1450,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson4-level2e"
+        ],
         "progression": "Scenario Choices"
       },
       "bonus": false,
@@ -1415,6 +1475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson4-level3"
+        ],
         "progression": "Check for Understanding Reflection"
       },
       "bonus": false,
@@ -1437,6 +1500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson5-variables-predict-1"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -1459,6 +1525,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson5-variables-predict-2"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -1681,9 +1750,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-intro-to-programming-lesson6-level2"
-        ],
         "progression": "Investigate & Modify"
       },
       "bonus": false,
@@ -1706,15 +1772,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "4test-intro-to-programming-lesson6-level4"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "4test-intro-to-programming-lesson6-level4"
+          "test-intro-to-programming-lesson6-practice1"
         ],
         "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-3",
@@ -1722,7 +1785,7 @@
         "activity_section.key": "da5e0295-f3ee-48f5-a790-0eee833edb84"
       },
       "level_keys": [
-        "4test-intro-to-programming-lesson6-level4"
+        "test-intro-to-programming-lesson6-practice1"
       ]
     },
     {
@@ -1731,15 +1794,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "4test-intro-to-programming-lesson6-level5"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "4test-intro-to-programming-lesson6-level5"
+          "test-intro-to-programming-lesson6-practice2"
         ],
         "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-3",
@@ -1747,61 +1807,11 @@
         "activity_section.key": "da5e0295-f3ee-48f5-a790-0eee833edb84"
       },
       "level_keys": [
-        "4test-intro-to-programming-lesson6-level5"
+        "test-intro-to-programming-lesson6-practice2"
       ]
     },
     {
       "chapter": 29,
-      "position": 6,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "4test-intro-to-programming-lesson6-level6"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "4test-intro-to-programming-lesson6-level6"
-        ],
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "6-12-intro-to-programming-python",
-        "activity_section.key": "da5e0295-f3ee-48f5-a790-0eee833edb84"
-      },
-      "level_keys": [
-        "4test-intro-to-programming-lesson6-level6"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 7,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "test-intro-to-programming-lesson6-level3"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-intro-to-programming-lesson6-level3"
-        ],
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "6-12-intro-to-programming-python",
-        "activity_section.key": "da5e0295-f3ee-48f5-a790-0eee833edb84"
-      },
-      "level_keys": [
-        "test-intro-to-programming-lesson6-level3"
-      ]
-    },
-    {
-      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1826,7 +1836,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1851,7 +1861,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1876,7 +1886,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1901,7 +1911,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -1926,7 +1936,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1951,7 +1961,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -1976,11 +1986,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-level1"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -1998,11 +2011,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-level3"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2020,11 +2036,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-level2"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2042,11 +2061,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-level4"
+        ],
         "progression": "AI Chatbot"
       },
       "bonus": false,
@@ -2064,11 +2086,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-debugging-strategies-CFU"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2086,11 +2111,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson8-level6choice"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2108,11 +2136,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson9-predict-level"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -2130,11 +2161,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson9-level2"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2152,7 +2186,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2174,11 +2208,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson9-level4"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2196,11 +2233,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "IPP-loopsChoiceLevel-test"
+        ],
         "progression": "Choice Level"
       },
       "bonus": false,
@@ -2218,11 +2258,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson10-level1"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2240,11 +2283,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson10-level2"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2262,11 +2308,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson10-level3"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2284,11 +2333,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson10-level4"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2306,11 +2358,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson10-level5"
+        ],
         "progression": "Check for Understanding: Matching"
       },
       "bonus": false,
@@ -2328,11 +2383,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson10-level6"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2350,7 +2408,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2375,7 +2433,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2400,7 +2458,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2425,7 +2483,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2450,7 +2508,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2475,7 +2533,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2500,7 +2558,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2525,7 +2583,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 60,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -2550,7 +2608,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 61,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -2575,7 +2633,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 62,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -2600,7 +2658,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 63,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -2625,11 +2683,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson8-debugParam"
+        ],
         "progression": "Debugging Practice "
       },
       "bonus": false,
@@ -2647,11 +2708,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson8-intro"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -2669,11 +2733,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson8-predictGreeting"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -2691,11 +2758,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson8-addVariable"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -2713,11 +2783,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 68,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson8-createMessage"
+        ],
         "progression": "Using input()"
       },
       "bonus": false,
@@ -2735,11 +2808,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 69,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson8-sytaxError"
+        ],
         "progression": "More debugging practice"
       },
       "bonus": false,
@@ -2757,11 +2833,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 70,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson8-paramError"
+        ],
         "progression": "More debugging practice"
       },
       "bonus": false,
@@ -2779,11 +2858,14 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 71,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson8-inputError"
+        ],
         "progression": "More debugging practice"
       },
       "bonus": false,
@@ -2801,11 +2883,14 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 72,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson8-predictReturn"
+        ],
         "progression": "Extension: Return"
       },
       "bonus": false,
@@ -2823,11 +2908,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 73,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson8-slides-return"
+        ],
         "progression": "Extension: Return"
       },
       "bonus": false,
@@ -2845,11 +2933,14 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson9-slidesOperators"
+        ],
         "progression": "Comparison Operators "
       },
       "bonus": false,
@@ -2867,11 +2958,14 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson9-practiceOperands"
+        ],
         "progression": "Comparison Operators "
       },
       "bonus": false,
@@ -2889,11 +2983,14 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson9-predictLoop"
+        ],
         "progression": "Introduction to while loops"
       },
       "bonus": false,
@@ -2911,11 +3008,14 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson9-loopPanels"
+        ],
         "progression": "Introduction to while loops"
       },
       "bonus": false,
@@ -2933,11 +3033,14 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson9-diceLoop"
+        ],
         "progression": "Practicing loops"
       },
       "bonus": false,
@@ -2955,11 +3058,14 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 79,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson9-gatheringLoop"
+        ],
         "progression": "Practicing loops"
       },
       "bonus": false,
@@ -2977,11 +3083,14 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 80,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson9-potionsLoop"
+        ],
         "progression": "Practicing loops"
       },
       "bonus": false,
@@ -2999,11 +3108,14 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 81,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson9-healingLoop"
+        ],
         "progression": "Practicing loops"
       },
       "bonus": false,
@@ -3021,11 +3133,14 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 82,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson9-diceIngredientsLoop"
+        ],
         "progression": "Dynamic game play "
       },
       "bonus": false,
@@ -3043,11 +3158,14 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 83,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "python-intro-console-lesson9-diceHealingLoop"
+        ],
         "progression": "Dynamic game play "
       },
       "bonus": false,
@@ -3062,6 +3180,182 @@
       },
       "level_keys": [
         "python-intro-console-lesson9-diceHealingLoop"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-conditionalSlides"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "2d56a11e-fb66-4682-bec3-06255072fe57"
+      },
+      "level_keys": [
+        "python-intro-console-lesson10-conditionalSlides"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-predict"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "2d56a11e-fb66-4682-bec3-06255072fe57"
+      },
+      "level_keys": [
+        "python-intro-console-lesson10-predict"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to conditionals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-modify"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "2d56a11e-fb66-4682-bec3-06255072fe57"
+      },
+      "level_keys": [
+        "python-intro-console-lesson10-modify"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using elif and getting user input"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-elifIntro"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "0125f7c5-0a6a-4d91-b872-cc0ded1c8f2e"
+      },
+      "level_keys": [
+        "python-intro-console-lesson10-elifIntro"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using elif and getting user input"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-elifBattle"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "0125f7c5-0a6a-4d91-b872-cc0ded1c8f2e"
+      },
+      "level_keys": [
+        "python-intro-console-lesson10-elifBattle"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Using elif and getting user input"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-userInput"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "0125f7c5-0a6a-4d91-b872-cc0ded1c8f2e"
+      },
+      "level_keys": [
+        "python-intro-console-lesson10-userInput"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-python-console-lesson10-cfu"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "529efccb-b1f6-4547-ac80-b20e85429ca8"
+      },
+      "level_keys": [
+        "test-python-console-lesson10-cfu"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-choice-parent"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "529efccb-b1f6-4547-ac80-b20e85429ca8"
+      },
+      "level_keys": [
+        "python-intro-console-lesson10-choice-parent"
       ]
     }
   ],
@@ -3380,9 +3674,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "4test-intro-to-programming-lesson6-level4",
+        "level.key": "test-intro-to-programming-lesson6-practice1",
         "script_level.level_keys": [
-          "4test-intro-to-programming-lesson6-level4"
+          "test-intro-to-programming-lesson6-practice1"
         ],
         "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-3",
@@ -3392,33 +3686,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "4test-intro-to-programming-lesson6-level5",
+        "level.key": "test-intro-to-programming-lesson6-practice2",
         "script_level.level_keys": [
-          "4test-intro-to-programming-lesson6-level5"
-        ],
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "6-12-intro-to-programming-python",
-        "activity_section.key": "da5e0295-f3ee-48f5-a790-0eee833edb84"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "4test-intro-to-programming-lesson6-level6",
-        "script_level.level_keys": [
-          "4test-intro-to-programming-lesson6-level6"
-        ],
-        "lesson.key": "lesson-11",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "6-12-intro-to-programming-python",
-        "activity_section.key": "da5e0295-f3ee-48f5-a790-0eee833edb84"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-intro-to-programming-lesson6-level3",
-        "script_level.level_keys": [
-          "test-intro-to-programming-lesson6-level3"
+          "test-intro-to-programming-lesson6-practice2"
         ],
         "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-3",
@@ -4084,6 +4354,102 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-intro-to-programming-python",
         "activity_section.key": "c141cce6-0900-41f7-b7d8-0150fe48f9ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "python-intro-console-lesson10-conditionalSlides",
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-conditionalSlides"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "2d56a11e-fb66-4682-bec3-06255072fe57"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "python-intro-console-lesson10-predict",
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-predict"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "2d56a11e-fb66-4682-bec3-06255072fe57"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "python-intro-console-lesson10-modify",
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-modify"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "2d56a11e-fb66-4682-bec3-06255072fe57"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "python-intro-console-lesson10-elifIntro",
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-elifIntro"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "0125f7c5-0a6a-4d91-b872-cc0ded1c8f2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "python-intro-console-lesson10-elifBattle",
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-elifBattle"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "0125f7c5-0a6a-4d91-b872-cc0ded1c8f2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "python-intro-console-lesson10-userInput",
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-userInput"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "0125f7c5-0a6a-4d91-b872-cc0ded1c8f2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-python-console-lesson10-cfu",
+        "script_level.level_keys": [
+          "test-python-console-lesson10-cfu"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "529efccb-b1f6-4547-ac80-b20e85429ca8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "python-intro-console-lesson10-choice-parent",
+        "script_level.level_keys": [
+          "python-intro-console-lesson10-choice-parent"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "529efccb-b1f6-4547-ac80-b20e85429ca8"
       }
     }
   ],

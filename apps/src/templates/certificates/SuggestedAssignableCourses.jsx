@@ -1,7 +1,7 @@
+import Alert from '@code-dot-org/component-library/alert';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import i18n from '@cdo/locale';

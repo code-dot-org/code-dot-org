@@ -3,16 +3,34 @@ title 'Product Designer'
 description 'Discover how designers create technology that is user-friendly and visually appealing.'
 
 markdown <<MARKDOWN
-## Product Designer
+# Product Designer
 
-Discover how designers create technology that is user-friendly and visually appealing.
+<br/> 
+<p style="font-size:16px">Discover how designers create technology that is user-friendly and visually appealing.</p>
+<br/>
+<p style="font-size:16px">As you watch, answer the following questions in your activity guide:</p>
 
-As you watch, answer the following questions in your activity guide:
+<ul style="font-size:16px">
+  <li>What does this person do in their role?</li>
+  <li>What skills or tools do they use?</li>
+  <li>What challenges do you think they might face?</li>
+</ul>
 
-- What does this person do in their role?
-- What skills or tools do they use?
-- What challenges do you think they might face?
+<br>
 
+<p style="font-size:16px"><strong>Note</strong>: This video opens in a new tab ⧉.</p>
+
+<br>
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://www.youtube.com/watch?v=1wS2I0dCdc4" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/ebd6fd9c61d45f59750f04fc6468fddc-Pasted Graphic 5.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+
+<br/><br/>
 
 
 MARKDOWN

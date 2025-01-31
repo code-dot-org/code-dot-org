@@ -1,7 +1,7 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useContext, useState} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
