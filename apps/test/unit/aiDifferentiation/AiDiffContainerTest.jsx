@@ -83,8 +83,6 @@ describe('AiDiffContainer', () => {
 
   it('Shows the welcome experience when user property is false', () => {
     renderDefault({disableWelcome: false}, false);
-    expect(
-      screen.getByText('This is the welcome experience for AI differentiation')
-    ).toBeVisible();
+    expect(screen.getByText('Pick a skill to practice')).toBeVisible();
   });
 });
