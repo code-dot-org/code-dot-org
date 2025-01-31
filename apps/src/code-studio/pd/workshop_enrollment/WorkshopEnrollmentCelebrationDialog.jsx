@@ -106,13 +106,33 @@ export default function WorkshopEnrollmentCelebrationDialog({
   };
 
   const getCalendarLink = (session, calendarType) => {
-    if (calendarType === 'Google') {
-      return buildGoogleCalendarLink(session, workshopTitle, workshopLocation);
-    } else if (calendarType === 'Outlook') {
-      return buildOutlookCalendarLink(session, workshopTitle, workshopLocation);
-    } else if (calendarType === 'Apple') {
-      return buildAppleCalendarLink(session, workshopTitle, workshopLocation);
+    let calendarLink = '';
+
+    switch (calendarType) {
+      case 'Google':
+        calendarLink = buildGoogleCalendarLink(
+          session,
+          workshopTitle,
+          workshopLocation
+        );
+        break;
+      case 'Outlook':
+        calendarLink = buildOutlookCalendarLink(
+          session,
+          workshopTitle,
+          workshopLocation
+        );
+        break;
+      case 'Apple':
+        calendarLink = buildAppleCalendarLink(
+          session,
+          workshopTitle,
+          workshopLocation
+        );
+        break;
     }
+
+    return calendarLink;
   };
 
   const RenderCalendarSessionDialog = () => {
