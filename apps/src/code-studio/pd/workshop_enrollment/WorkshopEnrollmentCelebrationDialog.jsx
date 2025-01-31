@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
-import LinkButton from '@cdo/apps/componentLibrary/button/LinkButton';
 import Typography, {
   Heading2,
   Heading3,
@@ -164,7 +163,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                     <BodyTwoText>{session.time_text}</BodyTwoText>
                   </td>
                   <td>
-                    <LinkButton
+                    <Button
                       text={i18n.enrollmentCelebrationAddToCalendarButton()}
                       ariaLabel={i18n.addToCalendarType({
                         calendar_type: multipleSessionDialogType,
@@ -174,10 +173,9 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       iconLeft={{iconName: 'fa-solid fa-plus'}}
                       className={style.addSessionToCalendarButton}
                       target="_blank"
-                      onClick={onClickAddToCalendar(
-                        session,
-                        multipleSessionDialogType
-                      )}
+                      onClick={() =>
+                        onClickAddToCalendar(session, multipleSessionDialogType)
+                      }
                     />
                   </td>
                 </tr>
@@ -266,7 +264,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       </>
                     ) : (
                       <>
-                        <LinkButton
+                        <Button
                           text={'Apple'}
                           ariaLabel={i18n.addToCalendarType({
                             calendar_type: 'Apple',
@@ -278,12 +276,14 @@ export default function WorkshopEnrollmentCelebrationDialog({
                             iconStyle: 'light',
                           }}
                           target="_blank"
-                          onClick={onClickAddToCalendar(
-                            workshopSessionInfo[0],
-                            'Apple'
-                          )}
+                          onClick={() =>
+                            onClickAddToCalendar(
+                              workshopSessionInfo[0],
+                              'Apple'
+                            )
+                          }
                         />
-                        <LinkButton
+                        <Button
                           text={'Google'}
                           ariaLabel={i18n.addToCalendarType({
                             calendar_type: 'Google',
@@ -295,12 +295,14 @@ export default function WorkshopEnrollmentCelebrationDialog({
                             iconStyle: 'light',
                           }}
                           target="_blank"
-                          onClick={onClickAddToCalendar(
-                            workshopSessionInfo[0],
-                            'Google'
-                          )}
+                          onClick={() =>
+                            onClickAddToCalendar(
+                              workshopSessionInfo[0],
+                              'Google'
+                            )
+                          }
                         />
-                        <LinkButton
+                        <Button
                           text={'Outlook'}
                           ariaLabel={i18n.addToCalendarType({
                             calendar_type: 'Outlook',
@@ -312,10 +314,12 @@ export default function WorkshopEnrollmentCelebrationDialog({
                             iconStyle: 'light',
                           }}
                           target="_blank"
-                          onClick={onClickAddToCalendar(
-                            workshopSessionInfo[0],
-                            'Outlook'
-                          )}
+                          onClick={() =>
+                            onClickAddToCalendar(
+                              workshopSessionInfo[0],
+                              'Outlook'
+                            )
+                          }
                         />
                       </>
                     )}
