@@ -20,7 +20,6 @@ class TeacherDashboardController < ApplicationController
   end
 
   def redirect_to_newest_section
-    puts params
     if current_user.sections_instructed.empty?
       if params[:location] == "progress"
         redirect_to "https://support.code.org/hc/en-us/articles/25195525766669-Getting-Started-New-Progress-View"
