@@ -137,10 +137,14 @@ function LandingPage({
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
 
+  // Load successful enrollment dialog info if user was redirected here after successfully enrolling
+  useEffect(() => {
+    setUpWorkshopEnrollSuccessContent();
+  });
+
   // Load PL section into redux and fetch applicable workshop info
   const dispatch = useDispatch();
   useEffect(() => {
-    setUpWorkshopEnrollSuccessContent();
     dispatch(asyncLoadSectionData());
     dispatch(asyncLoadCoteacherInvite());
 
@@ -262,32 +266,32 @@ function LandingPage({
     const workshopCourse = sessionStorage.getItem('workshopCourse', null);
     if (!workshopCourse) {
       return '';
-    } else {
-      const workshopName = sessionStorage.getItem('workshopName', null);
-      setEnrollSuccessWorkshopLocation(
-        sessionStorage.getItem('workshopLocation', null)
-      );
-      setEnrollSuccessWorkshopSessionInfo(
-        JSON.parse(sessionStorage.getItem('sessionTimeInfo', null))
-      );
-
-      analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
-        'regional partner': sessionStorage.getItem('rpName', null),
-        'workshop course': workshopCourse,
-        'workshop subject': sessionStorage.getItem('workshopSubject', null),
-      });
-      [
-        'workshopCourse',
-        'workshopSubject',
-        'workshopName',
-        'sessionTimeInfo',
-        'rpName',
-      ].forEach(sessionKey => sessionStorage.removeItem(sessionKey));
-
-      setEnrollSuccessWorkshopTitle(
-        !!workshopName ? workshopName : workshopCourse
-      );
     }
+
+    const workshopName = sessionStorage.getItem('workshopName', null);
+    setEnrollSuccessWorkshopLocation(
+      sessionStorage.getItem('workshopLocation', null)
+    );
+    setEnrollSuccessWorkshopSessionInfo(
+      JSON.parse(sessionStorage.getItem('sessionTimeInfo', null))
+    );
+
+    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+      'regional partner': sessionStorage.getItem('rpName', null),
+      'workshop course': workshopCourse,
+      'workshop subject': sessionStorage.getItem('workshopSubject', null),
+    });
+    [
+      'workshopCourse',
+      'workshopSubject',
+      'workshopName',
+      'sessionTimeInfo',
+      'rpName',
+    ].forEach(sessionKey => sessionStorage.removeItem(sessionKey));
+
+    setEnrollSuccessWorkshopTitle(
+      !!workshopName ? workshopName : workshopCourse
+    );
   };
 
   const RenderLastWorkshopSurveyBanner = () => (

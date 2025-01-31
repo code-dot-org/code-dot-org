@@ -2,7 +2,6 @@ import Button from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import LinkButton from '@cdo/apps/componentLibrary/button/LinkButton';
 import Typography, {
   Heading2,
@@ -30,7 +29,7 @@ export const buildGoogleCalendarLink = (
     workshopTitle
   )}&location=${encodeURIComponent(
     workshopLocation
-  )}&dates=${startTime}/${endTime}`;
+  )}&dates=${encodeURIComponent(startTime)}/${encodeURIComponent(endTime)}`;
 };
 
 export const buildOutlookCalendarLink = (
@@ -46,7 +45,9 @@ export const buildOutlookCalendarLink = (
     workshopTitle
   )}&location=${encodeURIComponent(
     workshopLocation
-  )}&startdt=${startTime}&enddt=${endTime}`;
+  )}&startdt=${encodeURIComponent(startTime)}&enddt=${encodeURIComponent(
+    endTime
+  )}`;
 };
 
 export default function WorkshopEnrollmentCelebrationDialog({
@@ -97,10 +98,10 @@ export default function WorkshopEnrollmentCelebrationDialog({
           <table>
             <thead>
               <tr>
-                <th>
+                <th className={style.calendarTableHeaderCell}>
                   <Heading6>{i18n.date()}</Heading6>
                 </th>
-                <th>
+                <th className={style.calendarTableHeaderCell}>
                   <Heading6>{i18n.time()}</Heading6>
                 </th>
                 <th />
