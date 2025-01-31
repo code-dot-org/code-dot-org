@@ -66,8 +66,8 @@ class SafeMarkdown extends React.Component {
 
     // rehype-react will only wrap the compiled markdown in a <div> tag
     // if it needs to (ie, if there would otherwise be multiple elements
-    // returned) or we're assigning props. Wrap everything in the specified
-    // wrapper element
+    // returned) or we're assigning props. We prefer consistency over flexibility,
+    // so here we wrap the result in a div if it wasn't already
     else if (
       rendered &&
       rendered.type === 'div' &&
