@@ -7,10 +7,6 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
 import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {
-  setWindowLocation,
-  resetWindowLocation,
-} from '@cdo/apps/code-studio/utils';
-import {
   getStore,
   registerReducers,
   stubRedux,
@@ -90,8 +86,6 @@ describe('LandingPage', () => {
     });
     screen.getByText(i18n.plLandingGettingStartedHeading());
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
     expect(
       screen.queryByText(i18n.plLandingSelfPacedProgressHeading())
     ).toBeFalsy();
@@ -104,8 +98,6 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     screen.getByText(i18n.plLandingStartSurvey());
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
@@ -116,13 +108,16 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     screen.getByText(i18n.plLandingStartSurvey());
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
-  it('page shows upcoming workshops, self-paced courses, and plc enrollments but no survey banner if no pending survey exists', () => {
+  it('page shows upcoming workshops, self-paced courses, and plc enrollments but no survey banner if no pending survey exists', async () => {
+    const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve([TEST_WORKSHOP]),
+    });
+
     renderDefault({
       lastWorkshopSurveyUrl: null,
       lastWorkshopSurveyCourse: null,
@@ -131,10 +126,14 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
-    screen.getByText(i18n.plLandingSelfPacedProgressHeading());
-    screen.getByText(i18n.plLandingStaticPLMidHighHeading());
+    await waitFor(() => {
+      screen.getByText(i18n.myWorkshops());
+      screen.getByText(TEST_WORKSHOP.location_address);
+      screen.getByText(i18n.plLandingSelfPacedProgressHeading());
+      screen.getByText(i18n.plLandingStaticPLMidHighHeading());
+    });
+
+    fetchStub.mockRestore();
   });
 
   it('page shows self-paced progress table if enrolled in self-paced courses', () => {
@@ -157,11 +156,22 @@ describe('LandingPage', () => {
     screen.getByText(i18n.joinedProfessionalLearningSectionsHomepageTitle());
   });
 
-  it('page shows enrolled workshops table', () => {
+  it('page shows enrolled workshops table', async () => {
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockResolvedValue({
+        ok: true,
+        json: () => Promise.resolve([TEST_WORKSHOP]),
+      });
+
     renderDefault();
 
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
+    await waitFor(() => {
+      screen.getByText(i18n.myWorkshops());
+      screen.getByText(TEST_WORKSHOP.location_address);
+    });
+    fetchStub.mockRestore();
   });
 
   it('page shows no tabs for teacher with no relevant permissions', () => {
@@ -263,10 +273,17 @@ describe('LandingPage', () => {
     const fetchStub = jest
       .spyOn(window, 'fetch')
       .mockClear()
-      .mockResolvedValue({
-        ok: true,
-        json: () =>
-          Promise.resolve({workshops_as_facilitator: [TEST_WORKSHOP]}),
+      .mockImplementation(args => {
+        if (args.includes('workshops_user_enrolled_in')) {
+          return Promise.resolve({ok: true, json: () => []});
+        } else if (args.includes('workshops_as_facilitator_for_pl_page')) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {workshops_as_facilitator: [TEST_WORKSHOP]};
+            },
+          });
+        }
       });
 
     await waitFor(() => {
@@ -329,10 +346,17 @@ describe('LandingPage', () => {
     const fetchStub = jest
       .spyOn(window, 'fetch')
       .mockClear()
-      .mockResolvedValue({
-        ok: true,
-        json: () =>
-          Promise.resolve({workshops_as_program_manager: [TEST_WORKSHOP]}),
+      .mockImplementation(args => {
+        if (args.includes('workshops_user_enrolled_in')) {
+          return Promise.resolve({ok: true, json: () => []});
+        } else if (args.includes('workshops_as_program_manager_for_pl_page')) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {workshops_as_program_manager: [TEST_WORKSHOP]};
+            },
+          });
+        }
       });
 
     await waitFor(() => {
@@ -357,25 +381,35 @@ describe('LandingPage', () => {
     const fetchStub = jest
       .spyOn(window, 'fetch')
       .mockClear()
-      .mockResolvedValue({
-        ok: true,
-        json: () => Promise.resolve({workshops_as_organizer: [TEST_WORKSHOP]}),
+      .mockImplementation(args => {
+        if (args.includes('workshops_user_enrolled_in')) {
+          return Promise.resolve({ok: true, json: () => []});
+        } else if (args.includes('workshops_as_organizer_for_pl_page')) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {workshops_as_organizer: [TEST_WORKSHOP]};
+            },
+          });
+        }
       });
-
+    renderDefault({
+      userPermissions: ['workshop_organizer'],
+    });
     await waitFor(() => {
-      renderDefault({
-        userPermissions: ['workshop_organizer'],
-      });
+      screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter());
     });
     fireEvent.click(
-      screen.getAllByText(i18n.plLandingTabWorkshopOrganizerCenter())[0]
+      screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter())
     );
 
     // Workshop Organizer Resources
     screen.getByText(i18n.plSectionsWorkshopResources());
 
-    // Workshop Organizer workshop table
-    screen.getByText(i18n.inProgressAndUpcomingWorkshops());
+    await waitFor(() => {
+      // Workshop Organizer workshop table
+      screen.getByText(i18n.inProgressAndUpcomingWorkshops());
+    });
 
     fetchStub.mockRestore();
   });
@@ -383,21 +417,36 @@ describe('LandingPage', () => {
   it('page does not show success dialog when not redirected here from successful enrollment', () => {
     renderDefault();
 
-    expect(
-      screen.queryByText(
-        i18n.enrollmentCelebrationBody({workshopName: 'a new workshop'})
-      )
-    ).toBeNull();
+    expect(screen.queryByText(i18n.enrollmentCelebrationTitle())).toBeNull();
   });
 
-  it('page shows success dialog when redirected here from successful enrollment', () => {
-    const workshopCourseName = 'TEST COURSE';
-    setWindowLocation({search: `?wsCourse=${workshopCourseName}`});
+  it('page shows success dialog stating workshop course when redirected here from successful non-BYOW enrollment', () => {
+    const workshopCourse = 'TEST COURSE';
+    sessionStorage.setItem('workshopCourse', workshopCourse);
+
     renderDefault();
 
+    screen.getByText(i18n.enrollmentCelebrationTitle());
     screen.getByText(
-      i18n.enrollmentCelebrationBody({workshopName: workshopCourseName})
+      i18n.enrollmentCelebrationBody({workshopName: workshopCourse})
     );
-    resetWindowLocation();
+
+    sessionStorage.clear();
+  });
+
+  it('page shows success dialog stating workshop name when redirected here from successful BYOW enrollment', () => {
+    const workshopCourse = 'TEST COURSE';
+    const workshopName = 'TEST NAME';
+    sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem('workshopName', workshopName);
+
+    renderDefault();
+
+    screen.getByText(i18n.enrollmentCelebrationTitle());
+    screen.getByText(
+      i18n.enrollmentCelebrationBody({workshopName: workshopName})
+    );
+
+    sessionStorage.clear();
   });
 });

@@ -47,8 +47,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       @enrollment.full_name = current_user.name
-      @enrollment.email = current_user.email_for_enrollments
-      @enrollment.email_confirmation = current_user.email_for_enrollments
+      @enrollment.email = current_user.email
+      @enrollment.email_confirmation = current_user.email
 
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
 
@@ -187,11 +187,20 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   # Gets the workshop enrollment associated with the current user id or email used for
   # enrollments if one exists. Otherwise returns a new enrollment for that user.
   private def get_workshop_user_enrollment
-    @workshop.enrollments.where(user_id: current_user.id).or(@workshop.enrollments.where(email: current_user.email_for_enrollments)).first || Pd::Enrollment.new(
+    enrollment_by_user_id = @workshop.enrollments.where(user_id: current_user.id).first
+    return enrollment_by_user_id if enrollment_by_user_id.present?
+
+    enrollment_by_email = @workshop.enrollments.where(email: current_user.email).first
+    return enrollment_by_email if enrollment_by_email.present?
+
+    enrollment_by_alternate_email = @workshop.enrollments.where(email: current_user.alternate_email).first
+    return enrollment_by_alternate_email if enrollment_by_alternate_email.present?
+
+    Pd::Enrollment.new(
       pd_workshop_id: @workshop.id,
       user_id: current_user.id,
       full_name: current_user.name,
-      email: current_user.email_for_enrollments
+      email: current_user.email
     )
   end
 

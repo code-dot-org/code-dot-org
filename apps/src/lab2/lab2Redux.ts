@@ -36,7 +36,6 @@ import {RootState} from '../types/redux';
 import HttpClient, {NetworkError} from '../util/HttpClient';
 import {AppDispatch} from '../util/reduxHooks';
 
-import {START_SOURCES} from './constants';
 import Lab2Registry from './Lab2Registry';
 import {
   getInitialValidationState,
@@ -83,7 +82,10 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
+  // If this lab is blocked because abuse score >= 15.
+  isBlocked: boolean | undefined;
   overrideValidations: Validation[] | undefined;
+  permissions: string[];
 }
 
 const initialState: LabState = {
@@ -95,7 +97,9 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
+  isBlocked: undefined,
   overrideValidations: undefined,
+  permissions: [],
 };
 
 // Thunks
@@ -171,11 +175,11 @@ export const setUpWithLevel = createAsyncThunk<
       return;
     }
 
-    // If we are in start mode or are editing or viewing exemplars,
+    // If we are in a block edit mode or are editing or viewing exemplars,
     // we don't use a channel id.
     // We can skip creating a project manager and just set the level data.
-    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    if (isStartMode || isViewingExemplar || isEditingExemplar) {
+    const isEditMode = !!getAppOptionsEditBlocks();
+    if (isEditMode || isViewingExemplar || isEditingExemplar) {
       setProjectAndLevelData(
         {levelProperties},
         thunkAPI.signal.aborted,
@@ -240,12 +244,12 @@ export const setUpWithLevel = createAsyncThunk<
 
     Lab2Registry.getInstance().setProjectManager(projectManager);
     // Load channel and source.
-    const {sources, channel} = await setUpAndLoadProject(
+    const {sources, channel, abuseScore} = await setUpAndLoadProject(
       projectManager,
       thunkAPI.dispatch
     );
     setProjectAndLevelData(
-      {initialSources: sources, channel, levelProperties},
+      {initialSources: sources, channel, levelProperties, abuseScore},
       thunkAPI.signal.aborted,
       thunkAPI.dispatch,
       thunkAPI.getState
@@ -311,12 +315,11 @@ export const isLabLoading = (state: {lab: LabState}) =>
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isEditMode = !!getAppOptionsEditBlocks();
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
 
-  // We are always in edit mode if we are in start or editing exemplar mode.
-  // Both of these modes have no channel.
-  if (isStartMode || isEditingExemplarMode) {
+  // Exemplar and block edit modes do not have a channel.
+  if (isEditMode || isEditingExemplarMode) {
     return false;
   }
 
@@ -393,11 +396,15 @@ const labSlice = createSlice({
         channel?: Channel;
         levelProperties: LevelProperties;
         initialSources?: ProjectSources;
+        abuseScore?: number;
       }>
     ) {
       state.channel = action.payload.channel;
       state.levelProperties = action.payload.levelProperties;
       state.initialSources = action.payload.initialSources;
+      if (typeof action.payload.abuseScore === 'number') {
+        state.isBlocked = action.payload.abuseScore >= 15 ? true : false;
+      }
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
@@ -407,6 +414,9 @@ const labSlice = createSlice({
       action: PayloadAction<Validation[] | undefined>
     ) {
       state.overrideValidations = action.payload;
+    },
+    setPermissions(state, action: PayloadAction<string[]>) {
+      state.permissions = action.payload;
     },
   },
   extraReducers: builder => {
@@ -535,6 +545,7 @@ function setProjectAndLevelData(
     levelProperties: LevelProperties;
     channel?: Channel;
     initialSources?: ProjectSources;
+    abuseScore?: number;
   },
   aborted: boolean,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
@@ -554,6 +565,7 @@ function setProjectAndLevelData(
       data.levelProperties,
       data.channel,
       data.initialSources,
+      data.abuseScore,
       isReadOnlyWorkspace(getState())
     );
 }
@@ -625,6 +637,7 @@ export const {
   setIsShareView,
   setOverrideValidations,
   onLevelChange,
+  setPermissions,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

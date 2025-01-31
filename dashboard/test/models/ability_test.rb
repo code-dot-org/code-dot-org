@@ -961,33 +961,39 @@ class AbilityTest < ActiveSupport::TestCase
   test 'teacher meeting AI Chat access requirements can perform AI Chat actions' do
     teacher = create :teacher
     teacher.stubs(:teacher_can_access_ai_chat?).returns(true)
-    [:log_chat_event, :start_chat_completion, :chat_request, :student_chat_history].each do |action|
-      assert Ability.new(teacher).can? action, :aichat
+    [:start_chat_completion, :chat_request].each do |action|
+      assert Ability.new(teacher).can? action, :aichat_request
     end
+    assert Ability.new(teacher).can? :log_chat_event, :aichat
+    assert Ability.new(teacher).can? :student_chat_history, :aichat
   end
 
   test 'teacher not meeting AI Chat access requirements cannot perform AI Chat actions' do
     teacher = create :teacher
     teacher.stubs(:teacher_can_access_ai_chat?).returns(false)
-    [:log_chat_event, :start_chat_completion, :chat_request, :student_chat_history].each do |action|
-      refute Ability.new(teacher).can? action, :aichat
+    [:start_chat_completion, :chat_request].each do |action|
+      refute Ability.new(teacher).can? action, :aichat_request
     end
+    refute Ability.new(teacher).can? :log_chat_event, :aichat
+    refute Ability.new(teacher).can? :student_chat_history, :aichat
   end
 
   test 'student meeting AI Chat access requirements can perform AI Chat actions' do
     student = create :student
     student.stubs(:student_can_access_ai_chat?).returns(true)
-    [:log_chat_event, :start_chat_completion, :chat_request].each do |action|
-      assert Ability.new(student).can? action, :aichat
+    [:start_chat_completion, :chat_request].each do |action|
+      assert Ability.new(student).can? action, :aichat_request
     end
+    assert Ability.new(student).can? :log_chat_event, :aichat
   end
 
   test 'student not meeting AI Chat access requirements cannot perform AI Chat actions' do
     student = create :student
     student.stubs(:student_can_access_ai_chat?).returns(false)
-    [:log_chat_event, :start_chat_completion, :chat_request].each do |action|
-      refute Ability.new(student).can? action, :aichat
+    [:start_chat_completion, :chat_request].each do |action|
+      refute Ability.new(student).can? action, :aichat_request
     end
+    refute Ability.new(student).can? :log_chat_event, :aichat
   end
 
   private def put_students_in_section_and_code_review_group(students, section)

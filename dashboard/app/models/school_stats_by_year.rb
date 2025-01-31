@@ -117,7 +117,7 @@ class SchoolStatsByYear < ApplicationRecord
   # Is this a rural school?
   # Returns nil if there is no data. Otherwise returns true or false.
   def rural_school?
-    return nil unless community_type
+    return false unless community_type
 
     # The Rural Education Achievement Program (REAP) accepts the following NCES locale codes
     # as "rural": town (distant and remote subcategories)
@@ -132,8 +132,8 @@ class SchoolStatsByYear < ApplicationRecord
   # See description under TITLEISTAT here:
   # https://nces.ed.gov/ccd/Data/txt/sc131alay.txt
   def title_i_eligible?
-    return nil unless title_i_status
-    return nil if title_i_status == 'M'
+    return false unless title_i_status
+    return false if title_i_status == 'M'
 
     %w(1 2 3 4 5).include? title_i_status
   end

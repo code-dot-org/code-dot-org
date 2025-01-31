@@ -278,12 +278,12 @@ a.button-tertiary {
     color: var(--neutral-base-white);
 
     &:hover {
-      background-color: var(--neutral-gray-80);
+      background-color: var(--neutral-white-alpha-30);
       color: var(--neutral-base-white);
     }
 
     &:active {
-      background-color: var(--neutral-gray-80);
+      background-color: var(--neutral-white-alpha-30);
       color: var(--neutral-gray-20);
     }
 

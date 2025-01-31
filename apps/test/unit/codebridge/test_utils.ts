@@ -44,7 +44,7 @@ export const getAnalyticsMock = (): [AnalyticsDataType, AnalyticsMockType] => {
 
 export const getDefaultCodebridgeContext = () => {
   const context: CodebridgeContextType = {
-    project: smallProject,
+    source: smallProject,
     config: {
       activeLeftNav: '',
       sideBar: [],
@@ -90,7 +90,7 @@ export const getDefaultCodebridgeContext = () => {
     renameFolder: (folderId: string, newName: string) => {},
     setFileType: (fileId: FileId, type: ProjectFileType) => {},
     rearrangeFiles: (fileIds: FileId[]) => {},
-    startSource: {source: smallProject},
+    startSources: {source: smallProject},
   };
   return context;
 };

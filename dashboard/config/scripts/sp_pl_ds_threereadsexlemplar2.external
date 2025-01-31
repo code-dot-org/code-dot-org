@@ -14,39 +14,42 @@ markdown <<MARKDOWN
 <br> <br>
 
 
-<table style="border-collapse: collapse; width: 100%;">
-    <tr>
-        <td style="font-size: 20px; font-weight: bold; color: #0093A4; width: 50%; text-align: center;">Read 2: Quantities</td>
-        <td style="font-size: 20px; font-weight: bold; color: #0093A4; width: 50%;text-align: center;">Read 3: Questions</td>
-    </tr>
-        <tr>
-    <td>   &nbsp;                   </td>
-    <td>   &nbsp;                   </td>
-    </tr>
-    <tr >
-        <td style="font-size: 18px; width: 50%; text-align: center;"><b>What quantities do you notice?</b></td>
-        <td style="font-size: 18px; width: 50%;text-align: center;"><b>What question could I answer?</b></td>
-    </tr>
-    <tr>
-        <td style="font-size: 18px; text-align: center;"><i>Sample Response:</i></td>
-        <td style="font-size: 18px; text-align: center;"><i>Sample Response:</i></td>
-    </tr>
-    <tr>
-    <td>   &nbsp;                   </td>
-    <td>   &nbsp;                   </td>
-    </tr>
-    <tr>
-    	<td style="font-size: 18px; width: 50%; padding-right: 25px;">This dataset contains a total of 516 cases, with a sample size of 10 visible here. The three attributes included are: index, number of slices, and favorite type of pizza.<br> The number of pizza slices ranges from 0 to 12. </td>
-        <td style="font-size: 18px ; width: 50%;"> With this data, I could answer:<br>
-1. What is the most popular type of pizza?<br>
-2. What is the average number of slices eaten? <br>
-3. How many people prefer certain types of pizza over others?       </td>
-    </tr>
-</table>
+<div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+    <!-- First Column -->
+    <div style="background-color: #ffffff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 10px; width: 45%; text-align: center;">
+        <h2 style="font-size: 20px; font-weight: bold; color: #0093A4;">Read 2: Quantities</h2>
+        <p style="font-size: 18px;"><b>What quantities do you notice?</b></p>
+        <details style="margin-top: 10px;">
+            <summary style="font-size: 18px; font-style: italic;">Sample Response</summary>
+            <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 5px;">
+                <p style="font-size: 18px; text-align: left;">
+                    This dataset contains a total of 516 cases, with a sample size of 10 visible here. The three attributes included are: index, number of slices, and favorite type of pizza. The number of pizza slices ranges from 0 to 12.
+                </p>
+            </div>
+        </details>
+    </div>
+ 
+    <div style="background-color: #ffffff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 10px; width: 45%; text-align: center;">
+        <h2 style="font-size: 20px; font-weight: bold; color: #0093A4;">Read 3: Questions</h2>
+        <p style="font-size: 18px;"><b>What question could I answer?</b></p>
+        <details style="margin-top: 10px;">
+            <summary style="font-size: 18px; font-style: italic;">Sample Response</summary>
+            <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 5px;">
+                <p style="font-size: 18px; text-align: left;">
+                    With this data, I could answer:<br>
+                    1. What is the most popular type of pizza?<br>
+                    2. What is the average number of slices eaten?<br>
+                    3. How many people prefer certain types of pizza over others?
+                </p>
+            </div>
+        </details>
+    </div>
+</div>
+<br>
 
 ## Debriefing the Activity 
 
-#### Students will work in pairs to assess if their questions are **Relevant, Specific, Actionable, Investigative, and Respectful.** 
+#### Students will work in pairs to assess if their questions are effective.
 
 #### The process is made for students to learn to take time to analyze data for deeper understanding and can be used as a **formative assessment** of their understanding and ability to create effective questions based on the criteria.
 MARKDOWN

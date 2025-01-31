@@ -11,6 +11,7 @@ module Cdo
   # Lazily loads global configurations for regional pages
   module GlobalEdition
     REGION_KEY = 'ge_region'
+    ROOT_PATH = '/global'
 
     # Retrieves a list a global region names.
     REGIONS = Dir.glob('*.yml', base: CDO.dir('config', 'global_editions')).map {|f| File.basename(f, '.yml')}.freeze
@@ -120,6 +121,10 @@ module Cdo
         locale_options = locale_options.select {|_name, value| region_locales.include?(value)} if region_locales
         locale_options
       end
+    end
+
+    def self.path(region, *paths)
+      ::File.join(ROOT_PATH, region, *paths)
     end
   end
 end

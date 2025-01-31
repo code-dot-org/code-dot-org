@@ -34,20 +34,38 @@ describe('Design System - Checkbox Dropdown Component', () => {
       setSelectedValues([]);
     };
 
-    return (
-      <CheckboxDropdown
-        name="test-dropdown"
-        allOptions={allOptions}
-        checkedOptions={selectedValues}
-        onChange={e =>
-          onCheckboxDropdownChange(e.target.value, e.target.checked)
-        }
-        onSelectAll={handleSelectAll}
-        onClearAll={handleClearAll}
-        labelText="Dropdown label"
-        {...props}
-      />
-    );
+    if (!props.hideControls) {
+      return (
+        <CheckboxDropdown
+          name="test-dropdown"
+          allOptions={allOptions}
+          checkedOptions={selectedValues}
+          onChange={e =>
+            onCheckboxDropdownChange(e.target.value, e.target.checked)
+          }
+          onSelectAll={handleSelectAll}
+          onClearAll={handleClearAll}
+          selectAllText="Select all"
+          clearAllText="Clear all"
+          labelText="Dropdown label"
+          {...props}
+        />
+      );
+    } else {
+      return (
+        <CheckboxDropdown
+          name="test-dropdown"
+          hideControls
+          allOptions={allOptions}
+          checkedOptions={selectedValues}
+          onChange={e =>
+            onCheckboxDropdownChange(e.target.value, e.target.checked)
+          }
+          labelText="Dropdown label"
+          {...props}
+        />
+      );
+    }
   };
 
   it('renders with correct text and options', () => {
@@ -122,5 +140,23 @@ describe('Design System - Checkbox Dropdown Component', () => {
     expect(option1.checked).toBe(false);
     expect(option2.checked).toBe(false);
     expect(option3.checked).toBe(false);
+  });
+
+  it('Checkbox Dropdown - renders with no Select all and Clear all controls', async () => {
+    render(<TestCheckboxDropdown hideControls />);
+
+    const label = screen.getByText('Dropdown label');
+    const option1 = screen.getByDisplayValue('option-1');
+    const option2 = screen.getByDisplayValue('option-2');
+    const option3 = screen.getByDisplayValue('option-3');
+    const selectAll = screen.queryByText('Select all');
+    const clearAll = screen.queryByText('Clear all');
+
+    expect(label).toBeDefined();
+    expect(option1).toBeDefined();
+    expect(option2).toBeDefined();
+    expect(option3).toBeDefined();
+    expect(selectAll).toBeNull();
+    expect(clearAll).toBeNull();
   });
 });

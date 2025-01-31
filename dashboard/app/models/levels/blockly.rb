@@ -101,13 +101,28 @@ class Blockly < Level
       # Spelling Bee
       "letters",
       # Artist
-      "artist", "artist_zombie", "elsa", "anna"
+      "artist", "artist_zombie", "elsa", "anna",
+      # Jigsaw
+      "jigsaw"
+    ]
+  end
+
+  def self.playlab_skins
+    [
+      # To be merged with migrated_skins after DCDO check is removed.
+      "studio", "infinity", "iceage", "gumball"
     ]
   end
 
   def uses_google_blockly?
     skin = properties['skin']
-    self.class.migrated_skins.include?(skin)
+    if self.class.migrated_skins.include?(skin)
+      true
+    elsif self.class.playlab_skins.include?(skin)
+      DCDO.get('playlab_google_blockly', true)
+    else
+      false
+    end
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)

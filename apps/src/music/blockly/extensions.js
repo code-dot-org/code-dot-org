@@ -123,6 +123,23 @@ export const playMultiMutator = {
 };
 
 /*
+ * Mutator for blocks that support disabling the next connection.
+ */
+export const nextConnectionMutator = {
+  saveExtraState: function () {
+    return {
+      disableNextConnection: !this.nextConnection,
+    };
+  },
+  loadExtraState: function (state) {
+    if (state.disableNextConnection) {
+      this.setNextStatement(false);
+    }
+  },
+  canSerializeNextConnection: true,
+};
+
+/*
  * Extension for the effects field, which replaces the input_dummy in the block
  * with a dynamic field_dropdown and updates the effect value dropdown
  * based on the selected effect name.
@@ -206,13 +223,16 @@ export const fieldPatternsValidator = function () {
     const kitNotes = MusicLibrary.getInstance()
       .kits.find(kit => kit.id === newValue.instrument)
       .sounds.map(sound => sound.note);
-    newValue.events = newValue.events.filter(
+    const validatedEvents = newValue.events.filter(
       event =>
         // Remove events with notes that not part of the current kit's sounds. (Ex. 1...8)
         kitNotes.includes(event.note) &&
         // Remove event with ticks that are outside the expected tick range.
         event.tick <= newValue.length * TICKS_PER_MEASURE
     );
-    return newValue;
+    return {
+      ...newValue,
+      events: validatedEvents,
+    };
   });
 };

@@ -1,8 +1,7 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
-  "created_at": "2024-12-11T05:37:32.000Z",
+  "created_at": "2024-12-18T09:35:39.000Z",
   "level_num": "custom",
   "user_id": 2,
   "properties": {
@@ -15,7 +14,6 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "start_direction": "1",
     "serialized_maze": [
       [
         {
@@ -354,8 +352,24 @@
         }
       ]
     ],
-    "mini_app": "neighborhood"
+    "mini_app": "neighborhood",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n\np = Painter()\nprint(p.getX())\np.turnLeft()\np.paint('Blue')\np.scrapePaint()\np.move()\np.setPaint(10)\nprint(p.getMyPaint())",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-12-10 15:42:27 -0800\",\"changed\":[\"serialized_maze\",\"mini_app\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-10 15:42:56 -0800\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-12-10 15:42:27 -0800\",\"changed\":[\"serialized_maze\",\"mini_app\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-10 15:42:56 -0800\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-20 18:28:26 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-12-20 18:28:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-12-20 18:48:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -212,7 +212,7 @@ export function getBubbleUrl(
   if (!levelUrl) {
     return null;
   }
-  const params = preserveQueryParams
+  const current_loc_query_params = preserveQueryParams
     ? queryString.parse(currentLocation().search)
     : {};
 
@@ -220,7 +220,13 @@ export function getBubbleUrl(
   // between levels backed by different projects or between a project level and
   // a non-project level puts the user in an error state since the version id doesn't
   // exist.
-  delete params.version;
+  delete current_loc_query_params.version;
+
+  const level_url_query_params =
+    levelUrl.split('?').length > 1
+      ? queryString.parse(levelUrl.split('?')[1])
+      : {};
+  const params = {...current_loc_query_params, ...level_url_query_params};
 
   if (sectionId) {
     params.section_id = sectionId;
@@ -228,8 +234,9 @@ export function getBubbleUrl(
   if (studentId) {
     params.user_id = studentId;
   }
+
   if (Object.keys(params).length) {
-    return `${levelUrl}?${queryString.stringify(params)}`;
+    return `${levelUrl.split('?')[0]}?${queryString.stringify(params)}`;
   }
   return levelUrl;
 }

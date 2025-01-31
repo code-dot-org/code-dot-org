@@ -12,31 +12,24 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     refute_equal enrollment1.code, enrollment2.code
   end
 
-  test 'enrollment.for_user using application alternate email' do
+  test 'enrollment.for_user using user email' do
     user = create :teacher
 
-    workshop = create :workshop, course: COURSE_CSD
-
-    application = create :pd_teacher_application, user: user, pd_workshop_id: workshop.id, course: 'csd', status: 'accepted'
-    assert_equal user.email_for_enrollments, application.form_data_hash['alternateEmail']
-
-    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email_for_enrollments, workshop: workshop, application_id: application.id
+    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email, workshop: (create :workshop, course: COURSE_CSD)
     enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :workshop, course: COURSE_CSF)
 
     enrollments = Pd::Enrollment.for_user(user).to_a
     assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)
   end
 
-  test 'enrollment.for_user using user email instead of application alternate email' do
+  test 'enrollment.for_user using user alternate email' do
     user = create :teacher
+    create :pd_teacher_application, user: user, status: 'accepted'
 
-    assert_equal user.email_for_enrollments, user.email
+    enrollment = create :pd_enrollment, user_id: nil, email: user.alternate_email, workshop: (create :workshop, course: COURSE_CSD)
 
-    enrollment1 = create :pd_enrollment, user_id: nil, email: user.email_for_enrollments, workshop: (create :workshop, course: COURSE_CSD)
-    enrollment2 = create :pd_enrollment, user_id: user.id, email: 'someoneelse@example.com', workshop: (create :workshop, course: COURSE_CSF)
-
-    enrollments = Pd::Enrollment.for_user(user).to_a
-    assert_equal Set.new([enrollment1, enrollment2]), Set.new(enrollments)
+    enrollments_for_user = Pd::Enrollment.for_user(user).to_a
+    assert_equal enrollments_for_user.first, enrollment
   end
 
   test 'find by code' do
@@ -63,22 +56,11 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'resolve_user returns user using user email' do
     teacher = create :teacher
-    enrollment_with_email = build :pd_enrollment, email: teacher.email_for_enrollments
+    enrollment_with_email = build :pd_enrollment, email: teacher.email
 
     assert_equal enrollment_with_email.email, teacher.email
     assert_nil enrollment_with_email.user
     assert_equal teacher, enrollment_with_email.resolve_user
-  end
-
-  test 'resolve_user returns user using application alternate email' do
-    teacher = create :teacher
-    workshop = create :workshop, course: COURSE_CSD
-    application = create :pd_teacher_application, user: teacher, pd_workshop_id: workshop.id, course: 'csd', status: 'accepted'
-    enrollment_with_alt_email = build :pd_enrollment, email: teacher.email_for_enrollments, application_id: application.id
-
-    assert_equal enrollment_with_alt_email.email, application.form_data_hash['alternateEmail']
-    assert_nil enrollment_with_alt_email.user
-    assert_equal teacher, enrollment_with_alt_email.resolve_user
   end
 
   test 'autoupdate_user_field called on validation' do
@@ -238,6 +220,21 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     enrollment.send_exit_survey
     assert_nil enrollment.reload.survey_sent_at
+  end
+
+  test 'send_exit_survey sends email to both the users email and alternate email if available and for a summer workshop' do
+    mock_mail = stub(deliver_now: nil)
+
+    teacher = create :teacher
+    workshop = create :summer_workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    application = create :pd_teacher_application, course: 'csd', application_year: workshop.school_year, user: teacher, status: 'accepted'
+    enrollment = create :pd_enrollment, application_id: application.id, user: teacher, workshop: workshop
+
+    Pd::WorkshopMailer.expects(:exit_survey).with(enrollment).returns(mock_mail)
+    Pd::WorkshopMailer.expects(:exit_survey).with(enrollment, teacher.alternate_email).returns(mock_mail)
+
+    enrollment.send_exit_survey
+    refute_nil enrollment.reload.survey_sent_at
   end
 
   test 'name is deprecated and calls through to full_name' do

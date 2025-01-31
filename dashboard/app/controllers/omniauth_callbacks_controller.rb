@@ -513,7 +513,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # Is this user able to link new providers?
   private def account_linking_locked?
     user = current_user || find_user_by_credential
-    return unless user
+    return false unless user
 
     account_linking_lock_reason(user)
   end

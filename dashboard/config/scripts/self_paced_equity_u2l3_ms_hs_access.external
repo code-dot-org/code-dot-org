@@ -1,0 +1,44 @@
+name 'self-paced-equity-U2L3-ms-hs-access'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Expanding Computer Science Access in Middle and High Schools
+
+## Expanding Access *and* Participation
+
+#### Expanding access to computer science in middle and high schools involves two essential components: **ensuring students can access CS classes** and **promoting representative participation within those classes**. 
+
+#### Consider this definition from diversity in CS classrooms:
+
+<div style="background-color: #C6E3E7; border-radius: 20px; color: #000000; width: 95%; padding: 10px 10px 10px 10px; margin: 20px 0px 20px 0px"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+#### **Diversity:** Having CS courses or programs whose student enrollment rates reflect the demographics of the larger school or community population, particularly in terms of race, ethnicity, gender, and disability status.<sup>3</sup></p></div>
+
+<img src="https://images.code.org/9538c04617ff6baf8d54795cf565abb4-image-1736371948781.32.24 PM.png" alt="Two older students look on at the same laptop and smile." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0px 20px 20px 20px;">
+
+#### While access — having courses available to all students — is the first step, it doesn’t automatically translate to equitable participation. Historically, students from underrepresented groups, including girls, students of color, and those with disabilities, have faced barriers that discourage them from enrolling in or continuing CS education.
+
+#### As a computer science educator, you play a critical role in addressing these challenges. Ensuring that your school offers sufficient sections of computer science, with minimal or no prerequisites, is an important step toward equitable access. The ultimate goal? **A classroom demographic that mirrors the diversity of your school community, where all students feel empowered to participate and succeed.**
+
+## Strategies for Increasing Access
+
+#### Building an inclusive computer science program takes intention, persistence, and collaboration. Here are some steps to get started:
+
+* #### Consider asking your administrator(s) to participate in <a href="https://code.org/districts" target="blank" rel="noopener noferrer">Code.org's District Program</a> to help build your computer science program from the ground up. Share this website with them to learn more.
+* #### Start small: Host an <a href="https://hourofcode.com/us/events" target="blank" rel="noopener noreferrer">Hour of Code event</a> at your school
+* #### Apply to start an after-school club with <a href="https://girlswhocode.com/programs/clubs-program" target="blank" rel="noopener noreferrer">Girls Who Code</a> or <a href="https://codeclub.org/en/" target="blank" rel="noopener noreferrer">Code Club</a>
+* #### Consider engaging with <a href="https://www.microsoft.com/en-us/teals" target="blank" rel="noopener noreferrer">Microsoft’s TEALS Program</a> to bring in industry professionals to support instruction
+* #### Use the <a href="https://advocacy.code.org/stateofcs/" target="blank" rel="noopener noreferrer">State of Computer Science Education Report</a> to advocate for computer science with your administration.
+
+## Strategies for Increasing Participation
+
+#### Even with expanded access, ensuring that students enroll in and persist in computer science courses requires targeted recruitment and retention strategies, particularly for underrepresented groups.
+
+* #### Use Microsoft’s <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE51nNH" target="blank" rel="noopener noreferrer">CS is for Everyone Recruitment Toolkit</a> and <a href="https://www.csteachingtips.org/tips-recruitment-hs" target="blank" rel="noopener noreferrer">CSTeachingTips’ Tips for Recruitment in High School Resource</a> to recruit female students and students from underrepresented groups to your computer science class
+* #### For AP Courses, use the <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-principles/recruitment-toolkit" target="blank" rel="noopener noreferrer">AP CS Principles</a> and <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/course/recruitment-toolkit" target="blank" rel="noopener noreferrer">AP CSA Recruitment Toolkits</a>
+
+___
+
+##### <sup>3</sup>Microsoft. Guide to Inclusive Computer Science Education, 2023, https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a. 
+MARKDOWN

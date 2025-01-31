@@ -1,9 +1,9 @@
+import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
 
 import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
 import Slider, {SliderProps} from '@cdo/apps/componentLibrary/slider/Slider';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
@@ -72,11 +72,11 @@ const SetupCustomization: React.FunctionComponent = () => {
 
   const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
 
-  const allFieldsDisabled =
-    (isDisabled(temperature) &&
-      isDisabled(systemPrompt) &&
-      isDisabled(selectedModelId)) ||
-    readOnlyWorkspace;
+  const anyFieldEditable =
+    (isEditable(temperature) ||
+      isEditable(systemPrompt) ||
+      isEditable(selectedModelId)) &&
+    !readOnlyWorkspace;
 
   const renderChooseAndCompareModels = () => {
     return (
@@ -209,9 +209,9 @@ const SetupCustomization: React.FunctionComponent = () => {
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <UpdateButton isDisabledDefault={allFieldsDisabled} />
+        <UpdateButton isDisabledDefault={!anyFieldEditable} />
       </div>
-      <SaveChangesAlerts isReadOnly={allFieldsDisabled} />
+      <SaveChangesAlerts isReadOnly={!anyFieldEditable} />
     </div>
   );
 };

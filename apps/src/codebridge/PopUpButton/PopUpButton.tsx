@@ -1,8 +1,7 @@
+import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useState, useCallback, useRef, useEffect} from 'react';
 import {createPortal} from 'react-dom';
-
-import Button from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './PopUpButton.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
@@ -13,6 +12,7 @@ type PopUpButtonProps = {
   className?: string;
   alignment?: 'left' | 'right';
   id?: string;
+  disabled?: boolean;
 };
 
 const TOP_PADDING = 5;
@@ -23,6 +23,7 @@ export const PopUpButton = ({
   className,
   alignment = 'left',
   id,
+  disabled,
 }: PopUpButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [buttonRef, setButtonRef] = useState<HTMLElement | null>(null);
@@ -111,6 +112,7 @@ export const PopUpButton = ({
         onClick={clickHandler}
         type={'tertiary'}
         id={id}
+        disabled={disabled}
       />
       {isOpen &&
         // We use a portal so the dropdown can appear above all other elements.

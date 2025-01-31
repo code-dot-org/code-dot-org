@@ -1,0 +1,57 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-12-04T19:48:06.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Troubleshooting Bot\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 1,
+        "systemPrompt": "Your job is to help people troubleshoot their hardware device. The topic is that they are having trouble with their device not working as expected. Make sure to always be kind and respectful to the user. Ask them questions about what they have already tried to get idea of what they should do next. Respond only to questions about fixing their device. If the user says something off topic respond with \"I don't know\". \n\n1. Only ask the user only one question at a time.\n2. Do not respond to off topic questions such as i like waffles or something.\n3. Make sure to start by asking them what device they need help troubleshooting. Then ask them what issue they are encountering with this device.\n4. Make sure to suggest steps that someone with limited technological skills could perform.\n",
+        "retrievalContexts": [
+          "Power off/on: Make sure the user has tried turning the device off and back on.",
+          "System update: Make sure the device is updated with the most recent system update.",
+          "Damage to the device: Ask the user if the device has sustained any water damage, falls, or has in any way sustained damage.",
+          ""
+        ],
+        "modelCardInfo": {
+          "botName": "Troubleshooting Bot",
+          "description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected.",
+          "intendedUse": "This chatbot is meant to be used to help people troubleshoot their device.",
+          "limitationsAndWarnings": "If this chatbot is used for anything else you will be temporarily banned from the chatbot of one day. You can only use the chatbot for a maximum of 2 hours.",
+          "testingAndEvaluation": "I tested the chatbot by first making sure it wouldn't respond to off topic questions such as I like waffles. Then I asked it how should I start my day.",
+          "exampleTopics": [
+            "My Ring doorbell video camera stopped working."
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "readonly",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "readonly",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ],
+      "levelSystemPrompt": ""
+    },
+    "name_suffix": "_2024",
+    "display_name": "Troubleshooting Bot",
+    "bubble_choice_description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-04T19:48:06.276+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L0A_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L0A_2024\"},{\"changed_at\":\"2024-12-04 19:48:08 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:00:12 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:01:59 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:03:48 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:05:16 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:08:02 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:13:45 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:18:45 +0000\",\"changed\":[\"aichat_settings\",\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

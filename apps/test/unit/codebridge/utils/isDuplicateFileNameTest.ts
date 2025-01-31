@@ -1,9 +1,9 @@
 import {isDuplicateFileName, DuplicateFileError} from '@codebridge/utils';
 
-import {supportFile, validationFile, testProject} from '../test-files';
+import {validationFile, testProject} from '../test-files';
 
-describe('isDuplicateFolderName', function () {
-  it('can determine isDuplicateFolderName not startMode, no validationFile', function () {
+describe('isDuplicateFileName', function () {
+  it('can determine isDuplicateFileName not startMode, no validationFile', function () {
     expect(
       isDuplicateFileName({
         fileName: 'testFile1.txt',
@@ -32,7 +32,7 @@ describe('isDuplicateFolderName', function () {
     ).toBe(false);
   });
 
-  it('can determine isDuplicateFolderName startMode, no validationFile', function () {
+  it('can determine isDuplicateFileName startMode, no validationFile', function () {
     expect(
       isDuplicateFileName({
         fileName: 'testFile1.txt',
@@ -61,7 +61,7 @@ describe('isDuplicateFolderName', function () {
     ).toBe(false);
   });
 
-  it('can determine isDuplicateFolderName not startMode, w/validationFile', function () {
+  it('can determine isDuplicateFileName not startMode, w/validationFile', function () {
     expect(
       isDuplicateFileName({
         fileName: 'validation_file.vld',
@@ -93,7 +93,7 @@ describe('isDuplicateFolderName', function () {
     ).toBe(false);
   });
 
-  it('can determine isDuplicateFolderName startMode, w/validationFile', function () {
+  it('can determine isDuplicateFileName startMode, w/validationFile', function () {
     expect(
       isDuplicateFileName({
         fileName: 'validation_file.vld',
@@ -125,14 +125,13 @@ describe('isDuplicateFolderName', function () {
     ).toBe(false);
   });
 
-  it('can determine isDuplicateFolderName not startMode, w/supportFile', function () {
+  it('can determine isDuplicateFileName not startMode, w/supportFile', function () {
     expect(
       isDuplicateFileName({
         fileName: 'support_file.vld',
         folderId: '0',
         projectFiles: testProject.files,
         isStartMode: false,
-        validationFile: supportFile,
       })
     ).toBe(DuplicateFileError.DUPLICATE_SUPPORT_FILE);
 
@@ -141,10 +140,9 @@ describe('isDuplicateFolderName', function () {
         fileName: 'support_file.vld',
         folderId: '1',
         projectFiles: testProject.files,
-        isStartMode: false,
-        validationFile: supportFile,
+        isStartMode: true,
       })
-    ).toBe(DuplicateFileError.DUPLICATE_SUPPORT_FILE);
+    ).toBe(false);
 
     expect(
       isDuplicateFileName({
@@ -152,19 +150,17 @@ describe('isDuplicateFolderName', function () {
         folderId: '0',
         projectFiles: testProject.files,
         isStartMode: false,
-        validationFile: supportFile,
       })
     ).toBe(false);
   });
 
-  it('can determine isDuplicateFolderName startMode, w/supportFile', function () {
+  it('can determine isDuplicateFileName startMode, w/supportFile', function () {
     expect(
       isDuplicateFileName({
         fileName: 'support_file.vld',
         folderId: '0',
         projectFiles: testProject.files,
         isStartMode: true,
-        validationFile: supportFile,
       })
     ).toBe(DuplicateFileError.DUPLICATE_SUPPORT_FILE);
 
@@ -174,7 +170,6 @@ describe('isDuplicateFolderName', function () {
         folderId: '1',
         projectFiles: testProject.files,
         isStartMode: true,
-        validationFile: supportFile,
       })
     ).toBe(false);
 
@@ -184,7 +179,65 @@ describe('isDuplicateFolderName', function () {
         folderId: '0',
         projectFiles: testProject.files,
         isStartMode: true,
-        validationFile: supportFile,
+      })
+    ).toBe(false);
+  });
+
+  it('can determine isDuplicateFileName not startMode, w/ system support file', function () {
+    console.log(testProject.files);
+    expect(
+      isDuplicateFileName({
+        fileName: 'system_support_file.vld',
+        folderId: '0',
+        projectFiles: testProject.files,
+        isStartMode: false,
+      })
+    ).toBe(DuplicateFileError.DUPLICATE_SUPPORT_FILE);
+
+    expect(
+      isDuplicateFileName({
+        fileName: 'system_support_file.vld',
+        folderId: '1',
+        projectFiles: testProject.files,
+        isStartMode: false,
+      })
+    ).toBe(false);
+
+    expect(
+      isDuplicateFileName({
+        fileName: 'newFile.txt',
+        folderId: '0',
+        projectFiles: testProject.files,
+        isStartMode: false,
+      })
+    ).toBe(false);
+  });
+
+  it('can determine isDuplicateFileName startMode, w/ system support file', function () {
+    expect(
+      isDuplicateFileName({
+        fileName: 'system_support_file.vld',
+        folderId: '0',
+        projectFiles: testProject.files,
+        isStartMode: true,
+      })
+    ).toBe(DuplicateFileError.DUPLICATE_SUPPORT_FILE);
+
+    expect(
+      isDuplicateFileName({
+        fileName: 'system_support_file.vld',
+        folderId: '1',
+        projectFiles: testProject.files,
+        isStartMode: true,
+      })
+    ).toBe(false);
+
+    expect(
+      isDuplicateFileName({
+        fileName: 'newFile.txt',
+        folderId: '0',
+        projectFiles: testProject.files,
+        isStartMode: true,
       })
     ).toBe(false);
   });

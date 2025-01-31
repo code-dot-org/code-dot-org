@@ -54,6 +54,64 @@ DefaultTags.args = {
         placement: 'left',
       },
       tooltipId: 'science-english',
+      tooltipContent: 'Science, English',
+    },
+    {
+      label: '+1',
+      icon: {
+        iconName: 'check',
+        iconStyle: 'solid',
+        title: 'check',
+        placement: 'right',
+      },
+      tooltipId: 'english-science',
+      tooltipContent: 'English, Science',
+    },
+  ],
+  size: 'm',
+  className: 'test',
+};
+
+export const NoTooltipTags = SingleTemplate.bind({});
+NoTooltipTags.args = {
+  tagsList: [
+    {label: 'Math'},
+    {
+      label: '+1',
+      icon: {
+        iconName: 'check',
+        iconStyle: 'solid',
+        title: 'check',
+        placement: 'left',
+      },
+    },
+    {
+      label: '+1',
+      icon: {
+        iconName: 'check',
+        iconStyle: 'solid',
+        title: 'check',
+        placement: 'right',
+      },
+    },
+  ],
+  size: 'm',
+  className: 'test',
+};
+
+export const TagsWithHTMLTooltipContent = SingleTemplate.bind({});
+TagsWithHTMLTooltipContent.args = {
+  tagsList: [
+    {tooltipId: 'math', label: 'Math', tooltipContent: <>Math</>},
+    {
+      label: '+1',
+      icon: {
+        iconName: 'check',
+        iconStyle: 'solid',
+        title: 'check',
+        placement: 'left',
+      },
+      tooltipId: 'science-english',
       tooltipContent: (
         <>
           <p>Science,</p> <p>English</p>
@@ -69,7 +127,7 @@ DefaultTags.args = {
         placement: 'right',
       },
       tooltipId: 'english-science',
-      tooltipContent: 'English, Science',
+      tooltipContent: <>English, Science</>,
     },
   ],
   size: 'm',
@@ -91,11 +149,7 @@ GroupOfSizesOfTags.args = {
             title: 'check',
             placement: 'left',
           },
-          tooltipContent: (
-            <>
-              <p>Science S,</p> <p>English S</p>
-            </>
-          ),
+          tooltipContent: 'Science S, English S',
         },
         {
           tooltipId: 'englishS',
@@ -123,11 +177,7 @@ GroupOfSizesOfTags.args = {
             title: 'check',
             placement: 'left',
           },
-          tooltipContent: (
-            <>
-              <p>Science M,</p> <p>English M</p>
-            </>
-          ),
+          tooltipContent: 'Science M, English M',
         },
         {
           tooltipId: 'englishM',
@@ -155,11 +205,7 @@ GroupOfSizesOfTags.args = {
             title: 'check',
             placement: 'left',
           },
-          tooltipContent: (
-            <>
-              <p>Science L,</p> <p>English L</p>
-            </>
-          ),
+          tooltipContent: 'Science L, English L',
         },
         {
           tooltipId: 'englishL',

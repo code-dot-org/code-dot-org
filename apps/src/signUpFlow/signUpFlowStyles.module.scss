@@ -175,17 +175,12 @@ span {
 
       button {
         width: 100%;
-        font-weight: 600;
-        font-size: 1rem;
-        padding-block: 0.75rem;
-        transition: all 0.2s ease-in-out;
-        border: unset;
         margin: 0 0 .5rem 0;
       }
-    }
 
-    i {
-      margin-right: .5rem;
+      i {
+        margin-bottom: .25rem;
+      }
     }
 
     .ssoSignUpTypes {
@@ -254,12 +249,6 @@ span {
     .cleverButton {
       background-color: $clever_brand_color;
       color: $white;
-
-      img {
-        height: 20px;
-        width: 20px;
-        opacity: inherit;
-      }
 
       &:hover {
         background-color: darken($clever_brand_color, 10%);
@@ -483,6 +472,12 @@ span {
 
     .displayNameInput {
       margin: 0.375rem 0 !important;
+    }
+  }
+
+  .requiredLabel {
+    span::after {
+      content: '*';
     }
   }
 

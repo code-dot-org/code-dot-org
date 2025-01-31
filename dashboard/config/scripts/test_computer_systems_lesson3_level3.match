@@ -1,0 +1,20 @@
+name 'test-computer-systems-lesson3-level3'
+title 'Hardware Functionality'
+description 'Match the category with the correct image.'
+height '250'
+question 'Processing'
+answer '![](https://images.code.org/9516f58b410e0a14c66c8b628aad23d0-image-1736378108999.15.06 PM.png)'
+question 'Memory'
+answer '![](https://images.code.org/a92ba95b6891db76c09581cd0da91b01-image-1736379917602.45.15 PM.png)'
+question 'Storage'
+answer '![](https://images.code.org/a1df573fa291bc48016f35fb711e9400-image-1736379835362.43.53 PM.png)'
+question 'Power'
+answer '![](https://images.code.org/48c0c66b37e4705b8283e60e58546e81-image-1736379973161.46.08 PM.png)'
+
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

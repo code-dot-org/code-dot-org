@@ -15,6 +15,11 @@
   height: 100%
 }
 
+.consoleV2 {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
 .errorLine {
   color: $lightest_red;
 }

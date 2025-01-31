@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
-require 'cdo/chat_client'
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
 
 # We want to avoid storing student chat messages any longer than
 # is necessary for analysis to prevent storing excess student PII. This deletes

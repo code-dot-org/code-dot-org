@@ -25,11 +25,12 @@ markdown <<MARKDOWN
         </ul>
         <p style="font-size: 16px; color: black;">
         <br>
-        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>UPDATE</mark>
+        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> 25 minutes
         </p>
     </div>
     
     <!-- Image on the right -->
     <img src="https://images.code.org/4cbb267089510a7a5b3d35ac3aba2899-image-1732315294356.jpeg" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 30%; height: auto; border-radius: 10px;">
 </div>
+<br>
 MARKDOWN

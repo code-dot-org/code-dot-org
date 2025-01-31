@@ -6,21 +6,33 @@ import moduleStyles from './neighborhood.module.scss';
 
 interface NeighborhoodVisualizationProps {
   className?: string;
-  fullIconPath: string;
+  isDarkMode: boolean;
+  useProtectedDiv?: boolean;
 }
+const ICON_PATH = '/blockly/media/turtle/';
 
 const NeighborhoodVisualization: React.FunctionComponent<
   NeighborhoodVisualizationProps
-> = ({className, fullIconPath}) => {
+> = ({className, isDarkMode, useProtectedDiv = true}) => {
+  const fullIconPath = isDarkMode
+    ? ICON_PATH + 'icons_white.png'
+    : ICON_PATH + 'icons.png';
+
   return (
     <div className={className}>
       <div
         className={moduleStyles.neighborhoodPreviewBackground}
         style={styles.neighborhoodBackground}
       >
-        <MazeVisualization />
+        <MazeVisualization useProtectedDiv={useProtectedDiv} />
       </div>
-      <svg id="slider" version="1.1" width="150" height="50">
+      <svg
+        id="slider"
+        version="1.1"
+        width="150"
+        height="50"
+        className={moduleStyles.slider}
+      >
         {/* Slow icon. */}
         <clipPath id="slowClipPath">
           <rect width="26" height="12" x="5" y="14" />

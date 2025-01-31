@@ -1,0 +1,22 @@
+{
+  "name": "data-science-beta",
+  "script_names": [
+    "intro-to-data-science-beta",
+    "data-science-with-python-beta"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "data-science-beta",
+    "has_numbered_units": true,
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
