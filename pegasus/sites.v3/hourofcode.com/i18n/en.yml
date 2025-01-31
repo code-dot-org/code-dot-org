@@ -1389,6 +1389,14 @@
     prerequisites: "Verified teacher account or SSO-login needed to access AI Chat Lab"
     aria_label: "Start the Teaching Exploring Generative AI professional learning course"
 
+  exploring_gen_ai:
+    banner:
+      overline: "Explore our new"
+      title: "Generative AI curriculum"
+      desc: "Designed to inspire and equip the next generation of creators, thinkers, and innovators."
+      in_partnership_with: "In partnership with"
+      button: "Explore course"
+
   ai_integrations:
     heading: "AI Integrations"
     desc: "We are working on some exciting new technologies to empower students and teachers in the classroom."
