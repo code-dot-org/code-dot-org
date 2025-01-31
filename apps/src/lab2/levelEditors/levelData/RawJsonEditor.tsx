@@ -1,7 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
-
-import {Button} from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './edit-music-level-data.module.scss';
 

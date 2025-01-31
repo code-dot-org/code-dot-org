@@ -1,12 +1,12 @@
-import classNames from 'classnames';
-import React from 'react';
-
 import {
   ButtonType,
   Button,
   LinkButton,
   buttonColors,
-} from '@cdo/apps/componentLibrary/button';
+} from '@code-dot-org/component-library/button';
+import classNames from 'classnames';
+import React from 'react';
+
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {
   Card,

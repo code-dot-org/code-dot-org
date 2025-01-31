@@ -1,8 +1,8 @@
+import Button from '@code-dot-org/component-library/button';
 import {PDFDownloadLink} from '@react-pdf/renderer';
 import React from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
-import Button from '@cdo/apps/componentLibrary/button';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import AiDiffPdf from './AiDiffPdf';

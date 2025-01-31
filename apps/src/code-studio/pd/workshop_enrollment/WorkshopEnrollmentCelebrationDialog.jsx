@@ -1,7 +1,7 @@
+import Button from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';

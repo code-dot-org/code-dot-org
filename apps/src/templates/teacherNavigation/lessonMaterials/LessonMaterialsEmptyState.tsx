@@ -1,7 +1,7 @@
+import {LinkButton} from '@code-dot-org/component-library/button';
 import React from 'react';
 import {generatePath} from 'react-router-dom';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import NoLessonMaterialsAvailable from '@cdo/apps/templates/teacherNavigation/images/NoLessonMaterialsAvailable.png';
 import NoLessonMaterialsForLegacyCourses from '@cdo/apps/templates/teacherNavigation/images/NoLessonMaterialsForLegacyCourses.png';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';

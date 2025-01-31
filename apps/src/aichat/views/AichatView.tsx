@@ -1,8 +1,8 @@
 /** @file Top-level view for AI Chat Lab */
 
+import Button from '@code-dot-org/component-library/button';
 import React, {useCallback, useEffect} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import ActionDropdown from '@cdo/apps/componentLibrary/dropdown/actionDropdown/ActionDropdown';
 import SegmentedButtons, {
   SegmentedButtonsProps,
