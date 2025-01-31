@@ -1,11 +1,8 @@
   <%
-    # TODO: Eliminate these references to CDO properties
-    
-    redirected_domains = ["www.#{subdomain}"]
-    # As CDO properties can vary between workstations, using them here is generally unsafe
-    # Since this line is restricted to only run in production, we are comfortable using it.
-    redirected_domains << "www.#{CDO.pegasus_hostname}" if rack_env?(:production)
-    
+    # TODO: Eliminate references to CDO properties
+    # TODO: Eliminate references to functions/options that could be stack Parameters
+    # - subdomain: lib/cdo/cloud_formation/cdo_app.rb
+    # - domain: i think from options: lib/rake/stack.rake and lib/cdo/cloud_formation/cdo_app.rb
     www_redirect_hosted_zone_id = CDO.hostedzone_id(domain)
   -%>
 
@@ -14,8 +11,13 @@
     Properties:
       HostedZoneId: <%=www_redirect_hosted_zone_id%>
       RecordSets:
-        <%- redirected_domains.each do |record_set_name| -%>
-        - Name: <%=record_set_name%>
+        - Name: <%="www.#{subdomain}"%>
+          Type: A
+          AliasTarget:
+            DNSName: !GetAtt [<%=app%>RedirectDistribution, DomainName]
+            HostedZoneId: Z2FDTNDATAQYW2 # static ID for CloudFront aliases
+        <%- if rack_env?(:production) -%>
+        - Name: !Sub www.${PegasusHostname}
           Type: A
           AliasTarget:
             DNSName: !GetAtt [<%=app%>RedirectDistribution, DomainName]
@@ -29,7 +31,11 @@
         Enabled: true
         Comment: Redirect www to root domain
         PriceClass: PriceClass_All
-        Aliases: <%= redirected_domains.to_json %>
+        Aliases:
+          - <%= "www.#{subdomain}" %>
+          <%- if rack_env?(:production) -%>
+          - !Sub www.${PegasusHostname}
+          <%- end -%>
         Origins:
           # An origin is required, but will never receive traffic
           - Id: PrimaryOrigin
