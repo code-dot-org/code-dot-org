@@ -29,6 +29,7 @@ class Resource
 end
 
 BASE_DIR = Dir.home + "/embeddings/"
+FileUtils.mkdir_p BASE_DIR
 MAX_ATTEMPTS = 3
 
 EMBEDDINGS_BUCKET = 'cdo-ai-diff-production'
@@ -42,19 +43,19 @@ def download_google_file(url:, path:, metadata:, barrier:)
   barrier.async do
     print '>'
 
-    full_local_path = BASE_DIR + path
-    full_aws_path = 'live/' + path
+    full_path = BASE_DIR + path
     existing_file = $downloaded_files[url]
     if existing_file.present?
-      FileUtils.cp(existing_file, full_local_path)
+      FileUtils.cp(existing_file, full_path)
     else
       begin
         attempts ||= 1
         handle = URI.parse(url).open
       rescue => exception
         # Some documents do not have public download permissions; skip these.
-        if exception&.io&.status.present?
+        if exception.respond_to?(:io)
           status_code = exception.io.status[0]
+          puts "Status = #{status_code}"
           next if status_code == '401'
         end
 
@@ -70,168 +71,163 @@ def download_google_file(url:, path:, metadata:, barrier:)
       end
 
       # TODO: Write these files to the S3 bucket instead of / in addition to local filesystem
-      FileUtils.cp(handle.path, full_local_path)
-      $downloaded_files[url] = full_local_path
+      FileUtils.cp(handle.path, full_path)
+      $downloaded_files[url] = full_path
     end
 
     full_metadata = {
       metadataAttributes: metadata
     }
     File.write("#{full_path}.metadata.json", full_metadata.to_json)
-    AWS::S3.upload_to_bucket(
-      EMBEDDINGS_BUCKET,
-      "#{full_aws_path}.metadata.json",
-      full_metadata.to_json,
-      no_random: true
-    )
 
     print '<'
   end
 end
 
-# Async do
-#   # Export resources from courses
-#   UnitGroup.all.each do |course|
-#     puts "Course #{course.name}"
-#     course_metadata = {
-#       course: course.name
-#     }
+Async do
+  # Export resources from courses
+  stable_courses = UnitGroup.all.filter {|unit_group| unit_group.published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+  stable_courses.each do |course|
+    puts "Course #{course.name}"
+    course_metadata = {
+      course: course.name
+    }
 
-#     # Course-level resources: request them all concurrently and wait for the
-#     # slowest before moving on
-#     barrier = Async::Barrier.new
-#     course.resources.filter(&:google_docs?).each_with_index do |resource, i|
-#       download_google_file(
-#         url: resource.google_pdf_download_url,
-#         path: "#{course.name}-#{i}.pdf",
-#         metadata: course_metadata.merge(
-#           {
-#             unit_fullname: 'all',
-#             unit: 'all',
-#             lesson: 'all',
-#             url: resource.url,
-#             verified_teacher: resource.audience == 'Verified Teacher'
-#           }
-#         ),
-#         barrier: barrier
-#       )
-#     end
-#     barrier.wait
-#     puts ''
+    # Course-level resources: request them all concurrently and wait for the
+    # slowest before moving on
+    barrier = Async::Barrier.new
+    course.resources.filter(&:google_docs?).each_with_index do |resource, i|
+      download_google_file(
+        url: resource.google_pdf_download_url,
+        path: "#{course.name}-#{i}.pdf",
+        metadata: course_metadata.merge(
+          {
+            unit_fullname: 'all',
+            unit: 'all',
+            lesson: 'all',
+            url: resource.url,
+            verified_teacher: resource.audience == 'Verified Teacher'
+          }
+        ),
+        barrier: barrier
+      )
+    end
+    barrier.wait
+    puts ''
 
-#     course.default_units.each do |unit|
-#       unit_metadata = course_metadata.merge(
-#         {
-#           unit_fullname: unit.name,
-#           unit: format("U%02d", unit.unit_number)
-#         }
-#       )
-#       puts "U#{unit.unit_number}: #{unit.name}"
-#       prefix = "#{course.name}-U#{unit.unit_number}"
+    course.default_units.each do |unit|
+      unit_metadata = course_metadata.merge(
+        {
+          unit_fullname: unit.name,
+          unit: format("U%02d", unit.unit_number)
+        }
+      )
+      puts "U#{unit.unit_number}: #{unit.name}"
+      prefix = "#{course.name}-U#{unit.unit_number}"
 
-#       # Unit-level resources: request them all concurrently and wait for the
-#       # slowest before moving on
-#       barrier = Async::Barrier.new
-#       unit.resources.filter(&:google_docs?).each_with_index do |resource, i|
-#         download_google_file(
-#           url: resource.google_pdf_download_url,
-#           path: "#{prefix}-#{i}.pdf",
-#           metadata: unit_metadata.merge(
-#             {
-#               lesson: 'all',
-#               url: resource.url,
-#               verified_teacher: resource.audience == 'Verified Teacher'
-#             }
-#           ),
-#           barrier: barrier
-#         )
-#       end
-#       barrier.wait
-#       puts ''
+      # Unit-level resources: request them all concurrently and wait for the
+      # slowest before moving on
+      barrier = Async::Barrier.new
+      unit.resources.filter(&:google_docs?).each_with_index do |resource, i|
+        download_google_file(
+          url: resource.google_pdf_download_url,
+          path: "#{prefix}-#{i}.pdf",
+          metadata: unit_metadata.merge(
+            {
+              lesson: 'all',
+              url: resource.url,
+              verified_teacher: resource.audience == 'Verified Teacher'
+            }
+          ),
+          barrier: barrier
+        )
+      end
+      barrier.wait
+      puts ''
 
-#       unit.lessons.each do |lesson|
-#         lesson_metadata = unit_metadata.merge({lesson: format("L%02d", lesson.absolute_position)})
-#         puts "U#{unit.unit_number}L#{lesson.absolute_position} - #{lesson.name}"
-#         prefix = "#{course.name}-U#{unit.unit_number}-L#{lesson.absolute_position}"
+      unit.lessons.each do |lesson|
+        lesson_metadata = unit_metadata.merge({lesson: format("L%02d", lesson.absolute_position)})
+        puts "U#{unit.unit_number}L#{lesson.absolute_position} - #{lesson.name}"
+        prefix = "#{course.name}-U#{unit.unit_number}-L#{lesson.absolute_position}"
 
-#         # Lesson-level resources: request them all concurrently and wait for the
-#         # slowest before moving on
-#         barrier = Async::Barrier.new
-#         lesson.resources.filter(&:google_docs?).each_with_index do |resource, i|
-#           download_google_file(
-#             url: resource.google_pdf_download_url,
-#             path: "#{prefix}-#{i}.pdf",
-#             metadata: lesson_metadata.merge(
-#               {
-#                 url: resource.url,
-#                 verified_teacher: resource.audience == 'Verified Teacher'
-#               }
-#             ),
-#             barrier: barrier
-#           )
-#         end
-#         barrier.wait
-#         puts ''
-#       end
-#     end
-#   end
+        # Lesson-level resources: request them all concurrently and wait for the
+        # slowest before moving on
+        barrier = Async::Barrier.new
+        lesson.resources.filter(&:google_docs?).each_with_index do |resource, i|
+          download_google_file(
+            url: resource.google_pdf_download_url,
+            path: "#{prefix}-#{i}.pdf",
+            metadata: lesson_metadata.merge(
+              {
+                url: resource.url,
+                verified_teacher: resource.audience == 'Verified Teacher'
+              }
+            ),
+            barrier: barrier
+          )
+        end
+        barrier.wait
+        puts ''
+      end
+    end
+  end
 
-#   # Export resources from standalone units
-#   Unit.all.filter(&:is_course?).each do |unit|
-#     unit_metadata = {
-#       course: unit.name,
-#       unit_fullname: unit.name,
-#       unit: unit.name
-#     }
-#     puts "standalone unit: #{unit.name}"
-#     prefix = "standalone-#{unit.name}"
+  # Export resources from standalone units
+  Unit.all.filter(&:is_course?).filter(&:stable?).each do |unit|
+    unit_metadata = {
+      course: unit.name,
+      unit_fullname: unit.name,
+      unit: 'U01'
+    }
+    puts "standalone unit: #{unit.name}"
+    prefix = "standalone-#{unit.name}"
 
-#     # Unit-level resources: request them all concurrently and wait for the
-#     # slowest before moving on
-#     barrier = Async::Barrier.new
-#     unit.resources.filter(&:google_docs?).each_with_index do |resource, i|
-#       download_google_file(
-#         url: resource.google_pdf_download_url,
-#         path: "#{prefix}-#{i}.pdf",
-#         metadata: unit_metadata.merge(
-#           {
-#             lesson: 'all',
-#             url: resource.url,
-#             verified_teacher: resource.audience == 'Verified Teacher'
-#           }
-#         ),
-#         barrier: barrier
-#       )
-#     end
-#     barrier.wait
-#     puts ''
+    # Unit-level resources: request them all concurrently and wait for the
+    # slowest before moving on
+    barrier = Async::Barrier.new
+    unit.resources.filter(&:google_docs?).each_with_index do |resource, i|
+      download_google_file(
+        url: resource.google_pdf_download_url,
+        path: "#{prefix}-#{i}.pdf",
+        metadata: unit_metadata.merge(
+          {
+            lesson: 'all',
+            url: resource.url,
+            verified_teacher: resource.audience == 'Verified Teacher'
+          }
+        ),
+        barrier: barrier
+      )
+    end
+    barrier.wait
+    puts ''
 
-#     unit.lessons.each do |lesson|
-#       lesson_metadata = unit_metadata.merge({lesson: format("L%02d", lesson.absolute_position)})
-#       puts "L#{lesson.absolute_position} - #{lesson.name}"
-#       prefix = "standalone-#{unit.name}-L#{lesson.absolute_position}"
+    unit.lessons.each do |lesson|
+      lesson_metadata = unit_metadata.merge({lesson: format("L%02d", lesson.absolute_position)})
+      puts "L#{lesson.absolute_position} - #{lesson.name}"
+      prefix = "standalone-#{unit.name}-L#{lesson.absolute_position}"
 
-#       # Lesson-level resources: request them all concurrently and wait for the
-#       # slowest before moving on
-#       barrier = Async::Barrier.new
-#       lesson.resources.filter(&:google_docs?).each_with_index do |resource, i|
-#         download_google_file(
-#           url: resource.google_pdf_download_url,
-#           path: "#{prefix}-#{i}.pdf",
-#           metadata: lesson_metadata.merge(
-#             {
-#               url: resource.url,
-#               verified_teacher: resource.audience == 'Verified Teacher'
-#             }
-#           ),
-#           barrier: barrier
-#         )
-#       end
-#       barrier.wait
-#       puts ''
-#     end
-#   end
-# end
+      # Lesson-level resources: request them all concurrently and wait for the
+      # slowest before moving on
+      barrier = Async::Barrier.new
+      lesson.resources.filter(&:google_docs?).each_with_index do |resource, i|
+        download_google_file(
+          url: resource.google_pdf_download_url,
+          path: "#{prefix}-#{i}.pdf",
+          metadata: lesson_metadata.merge(
+            {
+              url: resource.url,
+              verified_teacher: resource.audience == 'Verified Teacher'
+            }
+          ),
+          barrier: barrier
+        )
+      end
+      barrier.wait
+      puts ''
+    end
+  end
+end
 
 # Uploading to S3 in the Async seems not to work. We'll do it here.
 paths = Dir["#{BASE_DIR}/*"]
