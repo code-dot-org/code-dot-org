@@ -99,9 +99,9 @@ section {
       border-radius: 0.25rem;
       border-color: color.$light_gray_200;
 
-      th {
-        padding-top: 0.5rem !important;
-        padding-bottom: 0.5rem !important;
+      .calendarTableHeaderCell {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         background-color: color.$light_gray_50;
         border: none;
 

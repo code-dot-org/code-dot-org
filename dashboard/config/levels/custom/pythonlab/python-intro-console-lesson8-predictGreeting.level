@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-27T23:03:19.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### Do This: \r\n\r\n- Look at the code and predict what will happen when you press run. \r\n- After running, explain why the program works the way it does. ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "This is a function called greet_user(). It will ask the user \"What is your name?\" and then store their answer into the variable called \"name.\" Then, it will print \"Hello, (user name)!\" because the string is concatenated with the string in the variable. ",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": true,
+      "placeholderText": "",
+      "freeResponseHeight": 100,
+      "codeEditableAfterSubmit": true
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def greet_user():\n    name = input(\"What is your name? \")\n    print(\"Hello, \" + name + \"!\")\n    \ngreet_user()",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-27 23:05:35 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-27 23:05:54 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 23:16:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

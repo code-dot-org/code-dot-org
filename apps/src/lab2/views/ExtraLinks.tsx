@@ -1,6 +1,6 @@
+import Button from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button';
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '@cdo/apps/lab2/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';

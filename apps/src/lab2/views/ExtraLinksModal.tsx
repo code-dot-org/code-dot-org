@@ -1,6 +1,6 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
@@ -8,7 +8,12 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import * as utils from '@cdo/apps/utils';
 import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
+import {
+  ExtraLinksLevelData,
+  ExtraLinksProjectData,
+  ParentLevelPathLink,
+  ScriptLevelPathLink,
+} from '../types';
 
 import moduleStyles from './extra-links.module.scss';
 
@@ -191,6 +196,9 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
       />
       <ScriptLevelPathLinks
         scriptLevelPathLinks={levelLinkData.script_level_path_links}
+      />
+      <ParentLevelPathLinks
+        parentLevelPathLinks={levelLinkData.parent_level_path_links}
       />
       <ProjectLinkData
         isStandaloneProject={isStandaloneProject}
@@ -436,10 +444,7 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
 };
 
 interface ScriptLevelPathLinksProps {
-  scriptLevelPathLinks?: {
-    script: string;
-    path: string;
-  }[];
+  scriptLevelPathLinks?: ScriptLevelPathLink[];
 }
 
 const ScriptLevelPathLinks: React.FunctionComponent<
@@ -458,6 +463,34 @@ const ScriptLevelPathLinks: React.FunctionComponent<
           <li key={link.path}>
             <a href={'/s/' + link.script}>{link.script}</a> as{' '}
             <a href={link.path}>{link.path}</a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};
+
+interface ParentLevelPathLinksProps {
+  parentLevelPathLinks?: ParentLevelPathLink[];
+}
+
+const ParentLevelPathLinks: React.FunctionComponent<
+  ParentLevelPathLinksProps
+> = ({parentLevelPathLinks}) => {
+  if (!parentLevelPathLinks) {
+    return null;
+  }
+  return (
+    <>
+      <StrongText>
+        This level is in {Object.entries(parentLevelPathLinks).length} other
+        levels:
+      </StrongText>
+      <ul>
+        {parentLevelPathLinks.map(link => (
+          <li key={link.path}>
+            {link.kind} in <a href={link.path}>{link.level_name}</a> (position{' '}
+            {link.position})
           </li>
         ))}
       </ul>

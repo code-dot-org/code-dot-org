@@ -1,11 +1,8 @@
-import classnames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import Button from '@cdo/apps/componentLibrary/button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
@@ -55,7 +52,6 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   unitDisplayName,
 }) => {
   // TODO: Update to support i18n
-  const aiDiffHeaderText = 'AI Teaching Assistant';
 
   const aiDiffChatMessageEndpoint = '/ai_diff/chat_completion';
 
@@ -170,75 +166,47 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   }, [messageHistory]);
 
   return (
-    <>
-      <div className={classnames(style.aiDiffHeader, 'ai_diff_handle')}>
-        <div className={style.aiDiffHeaderLeftSide}>
-          <div className={style.aiBotHeader}>
-            <img
-              src={aiBotOutlineIcon}
-              className={style.aiBotOutlineIcon}
-              alt={aiDiffHeaderText}
+    <div className={style.fabBackground}>
+      <div className={style.chatContent} ref={chatWindowRef}>
+        {messageHistory.map((item: ChatItem, id: number) =>
+          Array.isArray(item) ? (
+            <AiDiffSuggestedPrompts
+              suggestedPrompts={item}
+              isLatest={id === messageHistory.length - 1}
+              onSubmit={onPromptSelect}
+              key={id}
             />
-            <div className={style.taOverlayHeader}>
-              <span>{'TA'}</span>
-            </div>
-          </div>
-          <span className={style.aiDiffHeaderText}>{aiDiffHeaderText}</span>
-        </div>
-        <div className={style.aiDiffHeaderRightSide}>
-          <Button
-            color="white"
-            icon={{iconName: 'times', iconStyle: 'solid'}}
-            type="tertiary"
-            isIconOnly={true}
-            onClick={closeTutor}
-            size="s"
-          />
-        </div>
-      </div>
-
-      <div className={style.fabBackground}>
-        <div className={style.chatContent} ref={chatWindowRef}>
-          {messageHistory.map((item: ChatItem, id: number) =>
-            Array.isArray(item) ? (
-              <AiDiffSuggestedPrompts
-                suggestedPrompts={item}
-                isLatest={id === messageHistory.length - 1}
-                onSubmit={onPromptSelect}
-                key={id}
-              />
-            ) : (
-              <ChatMessage
-                {...item}
-                customStyles={style}
-                key={id}
-                isTA={true}
-                footer={
-                  item.role === Role.ASSISTANT && (
-                    <AiDiffBotMessageFooter message={item} />
-                  )
-                }
-              />
-            )
-          )}
-          <img
-            src="/blockly/media/aichat/typing-animation.gif"
-            alt={'Waiting for response'}
-            className={
-              isWaitingForResponse
-                ? style.waitingForResponse
-                : style.hideWaitingForResponse
-            }
-          />
-        </div>
-        <AiDiffChatFooter
-          onSubmit={onMessageSend}
-          onSuggestPrompts={onSuggestPrompts}
-          messages={messageHistory}
-          waiting={isWaitingForResponse}
+          ) : (
+            <ChatMessage
+              {...item}
+              customStyles={style}
+              key={id}
+              isTA={true}
+              footer={
+                item.role === Role.ASSISTANT && (
+                  <AiDiffBotMessageFooter message={item} />
+                )
+              }
+            />
+          )
+        )}
+        <img
+          src="/blockly/media/aichat/typing-animation.gif"
+          alt={'Waiting for response'}
+          className={
+            isWaitingForResponse
+              ? style.waitingForResponse
+              : style.hideWaitingForResponse
+          }
         />
       </div>
-    </>
+      <AiDiffChatFooter
+        onSubmit={onMessageSend}
+        onSuggestPrompts={onSuggestPrompts}
+        messages={messageHistory}
+        waiting={isWaitingForResponse}
+      />
+    </div>
   );
 };
 

@@ -1,7 +1,7 @@
+import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
