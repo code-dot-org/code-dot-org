@@ -84,12 +84,16 @@
               "text": "Better understand Artificial Intelligence"
             },
             {
-              "value": "learn_basics_ai",
-              "text": "Learn the basics of using Artificial Intelligence as an educator"
+              "value": "learn_how_ai_impact_education",
+              "text": "Learn how Artificial Intelligence is impacting education"
+            },
+            {
+              "value": "learn_how_use_ai_education",
+              "text": "Learn how to use Artificial Intelligence effectively to support educational tasks"
             },
             {
               "value": "learn_ai_teaching_strategies",
-              "text": "Learn best strategies for teaching with and/or about Artificial Intelligence"
+              "text": "Learn best practices for teaching with and/or about Artificial Intelligence"
             },
             {
               "value": "other",

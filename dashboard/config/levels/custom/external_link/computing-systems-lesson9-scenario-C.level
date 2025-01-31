@@ -1,0 +1,19 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2025-01-23T19:48:37.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Scenario C\r\n\r\n### The librarian is planning themed displays for different reading interests.\r\n\r\n\r\n\r\n---\r\n<br/>\r\n\r\n#### **Do This:**\r\n#### • Use the library books dataset linked below.\r\n#### • Complete the flowchart and Madlib template in your Processing Library Data Activity Guide.\r\n\r\n<br/>\r\n",
+    "link_title": "Library Books Dataset",
+    "url": "https://docs.google.com/spreadsheets/d/1ArYkmUcYwbXz-hQkyIon2t87WZbLEOFfUaOFj5jZdE4",
+    "display_name": "Scenario C",
+    "bubble_choice_description": "The librarian is planning themed displays for different reading interests.",
+    "thumbnail_url": "https://images.code.org/e7322f03e2f04434d2a7c0b09272d047-27a768c9be4aa3b57785dc670f8c53aa-updateSign.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-23T19:48:37.172+00:00\",\"changed\":[\"cloned from \\\"Computing Systems - Library Books Dataset Scenario B\\\"\"],\"cloned_from\":\"Computing Systems - Library Books Dataset Scenario B\"},{\"changed_at\":\"2025-01-23 20:05:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:49:30 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</ExternalLink>

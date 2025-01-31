@@ -1,7 +1,7 @@
-@import '@/common/styles/primitiveColors.css';
-@import '@/common/styles/variables';
-@import '@/common/styles/mixins';
-@import '@/typography/typography.module';
+@import '@code-dot-org/component-library-styles/primitiveColors.scss';
+@import '@code-dot-org/component-library-styles/variables.scss';
+@import '@code-dot-org/component-library-styles/mixins.scss';
+@import '@code-dot-org/component-library-styles/typography.module.scss';
 
 // Dropdown common styles
 .dropdownContainer {

@@ -39,7 +39,7 @@ import RegionalPartnerDropdown, {
 import {SelectStyleProps, DATE_ORDER_ASC, DATE_ORDER_DESC} from '../constants';
 
 import DatePicker from './components/date_picker';
-import ServerSortWorkshopTable from './components/ServerSortWorkshopTable';
+import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {PermissionPropType, WorkshopAdmin} from './permission';
 import {DATE_FORMAT} from './workshopConstants';
 

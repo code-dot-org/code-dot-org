@@ -1,5 +1,4 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
 
 import CalendarNotAvailable from '@cdo/apps/templates/teacherNavigation/images/CalendarNotAvailable.svg';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -15,10 +14,6 @@ import {
 } from './EmptyStateUtils';
 
 export const CalendarEmptyState: React.FC = () => {
-  const unitName = useSelector(
-    (state: {unitSelection: {unitName: string}}) => state.unitSelection.unitName
-  );
-
   const selectedSection = useAppSelector(selectedSectionSelector);
   const versionYear = useAppSelector(state => state.calendar?.versionYear);
   const isLegacyScript = versionYear ? versionYear < 2021 : false;
@@ -26,7 +21,7 @@ export const CalendarEmptyState: React.FC = () => {
   const showNoCurriculumAssigned = !selectedSection.courseOfferingId;
   const emptyStateDetails = generateCalendarEmptyState(
     showNoCurriculumAssigned,
-    unitName,
+    selectedSection.unitName,
     selectedSection,
     isLegacyScript,
     hasCalendar

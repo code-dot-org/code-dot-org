@@ -9,6 +9,7 @@ import {
   SetConfigFunction,
   OnRunFunction,
   OnStopFunction,
+  SendConsoleInputFunction,
 } from '../types';
 
 import {
@@ -52,6 +53,7 @@ export type CodebridgeContextType = {
   rearrangeFiles: RearrangeFilesFunction;
   startSources: ProjectSources;
   labConfig?: LabConfig;
+  sendConsoleInput?: SendConsoleInputFunction;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

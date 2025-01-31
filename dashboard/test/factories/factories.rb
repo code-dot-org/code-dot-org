@@ -1071,15 +1071,6 @@ FactoryBot.define do
       end
     end
 
-    factory :csc_script do
-      after(:create) do |csc_script|
-        csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
-        csc_script.save!
-        course_offering = CourseOffering.add_course_offering(csc_script)
-        course_offering.update!(marketing_initiative: 'CSC')
-      end
-    end
-
     factory :hoc_script do
       is_course {true}
       sequence(:version_year) {|n| "bogus-hoc-version-year-#{n}"}

@@ -22,17 +22,7 @@ class UnitGroupUnit < ApplicationRecord
   belongs_to :unit_group, foreign_key: 'course_id', optional: true
   belongs_to :script, class_name: 'Unit', optional: true
 
-  # The script will replace the default_script when the user has
-  # the experiment_name enabled.
-  belongs_to :default_script, class_name: 'Unit', optional: true
-
   after_destroy_commit :update_course_json
-
-  def self.experiments
-    Rails.cache.fetch("course_script_experiments") do
-      UnitGroupUnit.where.not(experiment_name: nil).map(&:experiment_name)
-    end
-  end
 
   def update_course_json
     UnitGroup.find_by(id: course_id)&.write_serialization

@@ -1,0 +1,238 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-23T23:12:23.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "curriculum2024",
+      "toolbox": {
+        "type": "category",
+        "blocks": {
+        }
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "fields": {
+                    "times": 10
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "set_effect_at_current_location_simple2",
+                        "id": "2K_n3s!x;QQ0^:H3)qEn",
+                        "fields": {
+                          "effects_name": "<field name=\"effects_name\">volume</field>",
+                          "effects_value": "<field name=\"effects_value\">low</field>"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_together",
+                            "id": "play_sounds_together",
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "play_sound_at_current_location_simple2",
+                                  "fields": {
+                                    "sound": "curriculum/drum_long_1"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "],}V720pg|A*e|tHH4;=",
+                                      "fields": {
+                                        "sound": "curriculum/bass_short_1"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "(:.Y-]e7[Oj{j,jIsj_:",
+                                          "fields": {
+                                            "sound": "curriculum/lead_long_2"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sounds_together",
+                                "id": "^U4KB}Jd-`G-]$Rs3~`;",
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "I^HU*UA_.mZ}x;{8c:o#",
+                                      "fields": {
+                                        "sound": "curriculum/drum_short_1"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "T#z_`p)G4{FL[wwi+AXx",
+                                          "fields": {
+                                            "sound": "curriculum/bass_short_1"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "svtnV$Y5Xp[b6eK)V|Xo",
+                                              "fields": {
+                                                "sound": "curriculum/lead_short_3"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "4^{E3l-~rNh$K:70#B4)",
+              "x": 310,
+              "y": 30,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "c3AAL,0@oITcyL,bX%4p",
+                  "fields": {
+                    "sound": "curriculum/fx_short_1"
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "vOYkhHJ9!))q1i*=/=Vw",
+              "x": 310,
+              "y": 170,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger2</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "|/r-URS/NTDASKm=vdus",
+                  "fields": {
+                    "sound": "curriculum/fx_short_2"
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "ZJ+:^BSJ%a^;tKx6K=xS",
+              "x": 310,
+              "y": 290,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger3</field>",
+                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "mGvj;IUn5GQ$C4VWt=CW",
+                  "fields": {
+                    "sound": "curriculum/fx_short_3"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "long_instructions": "###<i class=\"fa-solid fa-play\"></i> Try it out!\r\n\r\n1. Press [Run](#clickable=run-button) to start the background music. \r\n2. Press the triggers [1](#clickable=trigger-button-1), 2, or 3.\r\n3. What do you notice? ",
+    "validations": [
+      {
+        "key": "music-coding-intro-event-try_4819c55f-caa5-40b0-b2bc-0b2ee4635777",
+        "message": "Nice! You triggered all three sound effects. ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_triggered_multiple_times",
+            "value": 3
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-event-try_c7fdc4c5-9325-4baa-97ef-8a2e507de0db",
+        "message": "You triggered two different sound effects. Now try to trigger the final sound. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_triggered_multiple_times",
+            "value": 2
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-event-try_9686e2c3-43e7-41a4-b7aa-59b90e9763b2",
+        "message": "You triggered one sound. Now use the numbers 1, 2, and 3 to trigger the other sound effects. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_triggered_multiple_times",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-event-try_e25bac1b-aaba-435f-b04e-6efba42da93c",
+        "message": "Press the number 1, 2, or 3 to trigger a sound effect. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_triggered"
+          }
+        ]
+      }
+    ],
+    "name_suffix": "_january",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:23.462+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-try\\\"\"],\"cloned_from\":\"music-coding-intro-event-try\"}]"
+}]]></config>
+  <blocks/>
+</Music>

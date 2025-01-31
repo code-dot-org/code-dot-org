@@ -688,7 +688,7 @@ en:
             #### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href="http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot" target="blank" rel="noopener noreferrer">Click here to enroll in the pilot</a> </strong>
           version_title: ''
         foundations-of-cs-beta-2024:
-          title: Foundations of Computer Science BETA
+          title: Foundations of Computer Science BETA (now called CS and AI Foundations BETA)
           description_short: ''
           description_student: |-
             Welcome to Foundations of Computer Science! This exciting course is your gateway to the powerful world of computer science. Whether you're curious about how apps work or want to know more about the impact of technology on society, this course has something for you. Over the semester, you'll learn the basics of programming, dive into how the Internet functions, and even create your own projects that could solve real-world problems.
@@ -1209,6 +1209,27 @@ en:
           version_title: ''
         tess-modularity-2025:
           title: tess-modularity-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        music-pilot-gj-2025:
+          title: music-pilot-gj-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        data-science-beta:
+          title: "[BETA] Data Science"
+          description_short: ''
+          description_student: ''
+          description_teacher: |-
+            **for external preview**
+
+            Data Science builds a strong foundation in data analysis and visualization for students, using programming tools such as CODAP in Unit 1 and Python in Unit 2 to deepen their analytical skills. Through structured lessons and projects, students will learn how to use data science tools to transform raw data into meaningful visualizations. The units emphasize ethical considerations, guiding students through discussions and activities focused on data privacy, bias, and the societal impacts of data-driven decisions. By the end of each unit, students will be prepared to investigate and solve real-world problems using a comprehensive data-driven approach, culminating in a project that showcases their ability to craft compelling data stories.
+          version_title: ''
+        data-science-with-python-pilot-2024:
+          title: "[PILOT] Data Science with Python"
           description_short: ''
           description_student: ''
           description_teacher: ''

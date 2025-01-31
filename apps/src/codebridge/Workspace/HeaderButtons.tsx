@@ -1,8 +1,8 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
