@@ -31,8 +31,9 @@ class CoursesController < ApplicationController
 
   def show
     if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.course_id == @unit_group.id} && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false))
-      if !params[:section_id] && current_user&.last_section_id
-        redirect_to "/teacher_dashboard/sections/#{current_user.last_section_id}/courses/#{@unit_group.name}"
+      most_recent_section = current_user.sections_instructed.select {|s| s.course_id == @unit_group.id}.last
+      if !params[:section_id]
+        redirect_to "/teacher_dashboard/sections/#{most_recent_section.id}/courses/#{@unit_group.name}"
         return
       elsif params[:section_id]
         redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/courses/#{@unit_group.name}"
@@ -78,7 +79,7 @@ class CoursesController < ApplicationController
   end
 
   def update
-    @unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
+    @unit_group.persist_strings_and_units_changes(params[:scripts], i18n_params)
     @unit_group.update(course_params)
     CourseOffering.add_course_offering(@unit_group)
     @unit_group.reload

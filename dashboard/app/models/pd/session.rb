@@ -11,6 +11,7 @@
 #  deleted_at     :datetime
 #  code           :string(255)
 #  session_format :integer
+#  time_zone      :string(255)
 #
 # Indexes
 #

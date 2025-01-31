@@ -845,7 +845,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.disableVariableEditing =
       !!optOptionsExtended.disableVariableEditing;
     blocklyWrapper.varsInGlobals = !!optOptionsExtended.varsInGlobals;
-    blocklyWrapper.isStartMode = !!optOptionsExtended.editBlocks;
+    blocklyWrapper.isStartMode =
+      optOptionsExtended.editBlocks === 'start_sources';
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.analyticsData = optOptionsExtended.analyticsData;

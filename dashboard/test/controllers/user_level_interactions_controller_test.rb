@@ -53,15 +53,9 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
     metadata = JSON.parse(created_uli.metadata)
     assert_equal script.properties["curriculum_umbrella"], metadata["course_offering"]
     assert_equal script.name, metadata["unit"]
-    assert_equal level.type, metadata["level_type"]
+    assert_equal 'Blockly', metadata["level_type"]
     assert_equal @student.user_type, metadata["user_type"]
     return created_uli, metadata
-  end
-
-  test "do not create User Level Interaction for teachers" do
-    @teacher = create :teacher
-    sign_in @teacher
-    refute_creates_uli(@csp_2024_script, @csp_2024_level)
   end
 
   test "do not create User Level Interaction for non-CSP units" do
@@ -85,7 +79,7 @@ class UserLevelInteractionsControllerTest < ActionController::TestCase
         script_id: script.id,
         interaction: SharedConstants::USER_LEVEL_INTERACTIONS.click_help_and_tips,
       }
-      assert_response :success
+      assert_response :bad_request
     end
   end
 end

@@ -1,0 +1,49 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-01-31T05:13:40.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Dr. Maria Gonzalez",
+    "long_instructions": "## Samuel Ndlovu, Local Guide 🏞️\r\n\r\n<br/>\r\n\r\n<p style=\"font-size:16px\"><strong>📍 Location:</strong> Kruger National Park, South Africa </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🛶 Workplace:</strong> Kruger Safari Tours </p><br/>\r\n\r\n<p style=\"font-size:16px\">💼<strong> Expertise:</strong> Ecotourism, wildlife safety, first aid </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🔍 How I Use AI:</strong> \"Tourists often panic when they encounter a snake on safari. The AI Snake Identification App allows me to quickly identify the species, reassure my guests, and determine if medical intervention is needed. This technology enhances safety for both visitors and wildlife, ensuring that non-venomous snakes are not harmed unnecessarily.\" </p>\r\n\r\n---\r\n\r\n\r\n## Do This:\r\n\r\n<ol style=\"font-size:16px\">\r\n<li>Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:</li>\r\n\t<ul style=\"font-size:16px\">\r\n    \t<li>Key roles and responsibilities</li>\r\n\t\t<li>Key challenges</li>\r\n\t\t<li>How computing supports their work</li>\r\n\t\t<li>How your chosen innovation helps their job</li>\r\n    </ul>\r\n<br/>\r\n<li>Summarize key insights in your activity guide.</li>\r\n</ol>\r\n",
+    "bubble_choice_description": "Meet Dr. Maria Gonzalez, an emergency room doctor working in a hospital where snakebite cases are common.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are Samuel Ndlovu, a local safari guide based in Kruger National Park, South Africa, working with Kruger Safari Tours. You lead tourists through wildlife-rich areas, ensuring their safety while promoting respect for nature.\n\nYou use the AI Snake Identification App to:\n\nQuickly identify snakes during safaris, helping to determine if they are venomous or harmless.\nReassure tourists and provide accurate information to prevent panic.\nEnsure snake conservation, preventing unnecessary harm to non-venomous species.\nAssist with medical emergencies, advising on first aid and determining if immediate treatment is needed.\nWhen asked, explain how AI improves your work by:\n\nMaking wildlife tours safer by allowing instant snake identification.\nReducing fear and misinformation about snakes among visitors.\nHelping local rangers and medics respond quickly in case of snakebite emergencies.\nYou may also discuss challenges, such as:\n\nEnsuring tourists trust the AI app’s identification.\nAccessing reliable internet in remote safari locations.\nEducating visitors on responsible wildlife interactions.\nStay in character, share real-world examples, and keep your responses engaging and easy for high school students to understand.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:13:40.471+00:00\",\"changed\":[\"cloned from \\\"computer-systems-wildlife-sudan-aichat\\\"\"],\"cloned_from\":\"computer-systems-wildlife-sudan-aichat\"},{\"changed_at\":\"2025-01-31 05:15:13 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 05:17:33 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -1,6 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useCallback} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   BodyFourText,

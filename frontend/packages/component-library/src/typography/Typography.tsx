@@ -3,7 +3,7 @@ import {memo, ReactNode, CSSProperties} from 'react';
 
 import {SemanticTag, VisualAppearance} from './types';
 
-import moduleStyles from './typography.module.scss';
+import moduleStyles from '@code-dot-org/component-library-styles/typography.module.scss';
 
 export interface TypographyProps {
   /** Html tag to use for the typography element */
