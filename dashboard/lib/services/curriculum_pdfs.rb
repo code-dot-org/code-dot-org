@@ -122,6 +122,37 @@ module Services
       end
     end
 
+    # Intended to be run to get all lesson plans from all stable units to the AI S3 bucket
+    def self.generate_lesson_plan_pdfs_for_all_stable_units
+      Unit.all.select(&:stable?).each do |unit|
+        generate_lesson_plan_pdfs_for_ai(unit)
+      end
+    end
+
+    def self.generate_lesson_plan_pdfs_for_ai(script)
+      Dir.mktmpdir("pdf_generation") do |dir|
+        script.lessons.select(&:has_lesson_plan).each do |lesson|
+          puts "Generating Lesson PDFs for #{lesson.key} (from #{script.name})"
+          # generate PDF and get the pathname to the generated PDF
+          pdf_pathname = generate_lesson_pdf(lesson, dir)
+
+          # Generate matadata
+          course_name = script.unit_group ? script.unit_group.name : script.name
+          metadata ={
+            course: course_name,
+            unit_fullname: script.name,
+            unit: script.unit_number ? format("U%02d", script.unit_number) : "U01",
+            lesson: format("L%02d", lesson.absolute_position),
+            url: "https://studio.code.org" + lesson.lesson_plan_html_url,
+            verified_teacher: false,
+          }
+          file_path = "/tmp/#{script.name}-#{lesson.absolute_position}.metadata.json"
+          add_metadata_to_ai_s3(file_path, metadata)
+          add_pdf_to_ai_s3(pdf_pathname)
+        end
+      end
+    end
+
     def self.regenerate_pdfs(scripts)
       scripts.each do |script|
         Dir.mktmpdir("pdf_generation") do |dir|
