@@ -17,16 +17,28 @@ def single_session?
 end
 
 def selenium_browser(url, capabilities = nil)
-  capabilities ||= Selenium::WebDriver::Remote::Capabilities.new($browser_config.except('name'))
   very_verbose "DEBUG: Capabilities: #{CGI.escapeHTML capabilities.inspect}"
-
   $http_client = SeleniumBrowser::Client.new(read_timeout: 2.minutes)
+
+  #TODO fix
+  args = {
+    url: url,
+    http_client: $http_client
+  }
+  if capabilities.nil?
+    args[:options] = Selenium::WebDriver::Chrome::Options.new
+    args[:options].add_argument('window-size=1280,1024')
+  else
+    args[:capabilities] = capabilities
+  end
+
   with_read_timeout(5.minutes) do
-    Selenium::WebDriver.for(:remote,
-      url: url,
-      capabilities: capabilities,
-      http_client: $http_client
-    )
+    Selenium::WebDriver.for(:remote, args)
+    #Selenium::WebDriver.for(:remote,
+    #  url: url,
+    #  capabilities: capabilities,
+    #  http_client: $http_client
+    #)
   end
 end
 
