@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\n<code>play together</code> blocks can be nested in <code>repeat</code> blocks and vice versa.\r\n</p>\r\n</div>\r\n\r\n####<i class=\"fa-solid fa-repeat\"></i> Repeat layers\r\n\r\n1. Change the number of [times](#clickable=repeat-block-field-workspace) the layered sounds repeat.\r\n2. Then press [Run](#clickable=run-button).",
+    "long_instructions": "#### <i class=\"fa-solid fa-circle-info\"></i> **Hint:**\r\n\r\n[Play together](#clickable=id-up-left:play_sounds_together) blocks can be nested in [repeat loop](#clickable=id-up-left:repeat_simple2) blocks and vice versa.\r\n___\r\n\r\n####<i class=\"fa-solid fa-repeat\"></i> Repeat layers\r\n\r\n1. Change the number of [times](#clickable=repeat-block-field-workspace) the layered sounds repeat.\r\n2. Then press [Run](#clickable=run-button).",
     "level_data": {
       "validationTimeout": 6,
       "startSources": {
@@ -236,7 +236,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:00.558+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-5sounds\\\"\"],\"cloned_from\":\"music-coding-intro-5sounds\"},{\"changed_at\":\"2025-01-15 19:02:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:00.558+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-5sounds\\\"\"],\"cloned_from\":\"music-coding-intro-5sounds\"},{\"changed_at\":\"2025-01-15 19:02:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-23 22:31:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-23 22:32:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

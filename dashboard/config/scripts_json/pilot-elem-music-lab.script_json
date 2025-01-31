@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "pilot-elem-music-lab",
-    "serialized_at": "2025-01-22 02:09:05 UTC",
+    "serialized_at": "2025-01-23 23:12:31 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -246,7 +246,7 @@
       "key": "bbe2b7db-7dc3-4788-866f-9a3364bc8f82",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 15,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -274,7 +274,7 @@
       "key": "ba23569b-784b-4fbb-a519-de515787e709",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap-Up"
       },
       "seeding_key": {
@@ -521,6 +521,7 @@
       "key": "f9cac7ba-2e3f-43f3-b9bf-85717c834a42",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/ac3d5d744975ee355a92b77b55ed37c0-Slide29.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Reveal one vocabulary term & definition at a time. Briefly introduce each term as a preview of what students will learn in this lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/e2ce27c30228425469740920f31f0aca-Slide30.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are the benefits of efficient code? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Using the definition of efficient as a guide, students might start to guess that efficient code is shorter code. \n\t\t<br />\n\t\t<br />Teaching Tip\n\t\t<br />It is okay if there are not many ideas or connections at this point in the lesson. They will be learning all about functions and efficient code throughout the lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/1046c1c0833e38737642cd0bd899c9e1-Slide31.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the objectives of this lesson. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we will get to experiment with a very powerful code in our programs! We will learn how to save a list of actions and reuse them without reprogramming them using something called a function. The shorter our programs are, the easier it is for the computer to read them, plus they’re easier for us to change if we need to.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a5c05178c30cc678b76923bb38e8f352-Slide32.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Dance routines are very similar to functions in computer science! \n\t\t<br />\u000b<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Click the slide to trigger the animation and show the dance function being named and defined. \u000b<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> First, the routine is named and the dance steps are defined. Once they learn the routine, the dancer remembers the steps and the order to do them whenever they hear the​​ name of the dance. \n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Click the slide to trigger the animation to show the Macarena function being used (called). \n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It is much easier to tell the dancer to do the dance using just one word: Macarena!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/34a8c48edea6391f96c071e238a0bbfc-Slide33.PNG\"></td>\n    <td style=\"width: 75%\">\n      <strong>Do This:</strong> Explain the warm up activity and allow students to work independently or in pairs. They will make a new dance using the dance moves in the chart. \n\t\t<br />\n\t\t<br />Teacher Tip \n\t\t<br />In this activity the 3 part dance in equivalent to a computer program. The dance moves are like functions and the steps are like individual coding blocks.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a38e29e439c10bcac61758f3bb470153-Slide34.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Finish the warm up activity with an explanation of how functions can be used to make code more efficient and easier to use. They will be practicing customizing and creating functions in code in the next activity in Music Lab.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "f9cac7ba-2e3f-43f3-b9bf-85717c834a42",
@@ -528,9 +529,21 @@
       }
     },
     {
-      "key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec",
+      "key": "db0b2d45-3aea-4969-ab85-5c77c6540325",
       "position": 1,
       "properties": {
+        "progression_name": "Video Intro"
+      },
+      "seeding_key": {
+        "activity_section.key": "db0b2d45-3aea-4969-ab85-5c77c6540325",
+        "lesson_activity.key": "7a461a72-adf2-483b-af39-98a336fc4b13"
+      }
+    },
+    {
+      "key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec",
@@ -538,9 +551,32 @@
       }
     },
     {
+      "key": "a2af8f17-0324-41b7-a68a-7156de1f2d2a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Remix & Freeplay"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2af8f17-0324-41b7-a68a-7156de1f2d2a",
+        "lesson_activity.key": "7a461a72-adf2-483b-af39-98a336fc4b13"
+      }
+    },
+    {
+      "key": "8f2631fd-a5f5-402f-85d3-44bd23f5db35",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/316cd8cb919274618ef529ae01b6230a-Slide36.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on level 1 together as a class. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) What does a music producer do?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will understand that a producer is someone who puts all of the pieces of the music together. They will  move and work on functions with chunks of music to make it sound great.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/9a6cbeb483fb1aac2bbff69d8dcd6a9a-Slide37.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Run level 2 together as a class. Guide students to notice the repetition of the play together block. Make a connection to the activity in the warm up and encourage students to consider the use of a function in place of the repeated code.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students transition to continuing the lesson on their own devices. They will work on levels 3-10 independently.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/0eab112102f8425ecf5e88ec6f02b52f-Slide38.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Read the instructions for each level and try to complete the code. Press the Run button to try it out. If something is not quite right you will get a hint under the instructions. When you’ve successfully completed the challenge, a new message and a Continue button will appear. Click Continue to move to the next level and move at your speed. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Encourage students to read the instructions and hints on each level as you circulate. Ask guiding questions to support students if they get stuck.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "8f2631fd-a5f5-402f-85d3-44bd23f5db35",
+        "lesson_activity.key": "7a461a72-adf2-483b-af39-98a336fc4b13"
+      }
+    },
+    {
       "key": "bfc1814c-53a6-4d27-9b02-976526ebfb49",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/203e17237687c91827071a89369f675d-Slide40.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2f412e651130ff9d47bf98949cc032d8-Slide41.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students set up for a quick Turn & Talk to reexamine the Question of the Day. Some supportive leading questions might be: Why do we use functions instead of rewwriting out every single line of code? If you were a computer could you read a short paragraph or a long story quicker? What if we want to make a change to the code? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Take turns listening and answering the Question of the Day. Give me a thumbs up after you both have shared your answers.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "bfc1814c-53a6-4d27-9b02-976526ebfb49",
@@ -551,6 +587,7 @@
       "key": "fee30f90-a28e-4e1e-981e-9427eed1e527",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a2ca631a5aa0f2eca0b5bbd322d8d03a-Slide46.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How can we make our programs more interactive and expressive?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Get students thinking about how they can make their programs more fun and creative by adding ways for people to interact with them. Help them imagine how cool it would be if their music changed when someone pressed a key or clicked a button, setting the stage for adding interactivity to their projects.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d98ea715250d811c31e1602823d2f3dc-Slide47.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the objectives of this lesson. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Welcome to our final lesson! Today, you get to experiment with using music to set the scene of a game or a movie. We will be making our music programs more interactive by adding events.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6d656718bd75d075207f05cc5a25a651-Slide48.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Set students up to play Simon Says [Sounds Edition] using the instructions and example commands on the slide. Rotate the leader, Simon, for as long as time allows. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This game works similarly to events in computer programming. We were always waiting for the “trigger (Simon Says)” to signify we should do an action. If the trigger wasn’t there, we didn’t do anything.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/d20320811f4b35188f6244d469ab011a-Slide49.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Finish the warm up activity with an explanation of how events can be used to make code more interactive and respond to user inputs. They will be practicing customizing and creating events in code in the next activity in Music Lab.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "fee30f90-a28e-4e1e-981e-9427eed1e527",
@@ -558,9 +595,21 @@
       }
     },
     {
-      "key": "cb3e61c4-4b7b-4cd0-9da7-475ec9ab491c",
+      "key": "58281569-1161-4fc2-bbef-2552bd8d9a74",
       "position": 1,
       "properties": {
+        "progression_name": "Intro Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "58281569-1161-4fc2-bbef-2552bd8d9a74",
+        "lesson_activity.key": "e4780e1f-8d60-495b-8bfd-ded274017668"
+      }
+    },
+    {
+      "key": "cb3e61c4-4b7b-4cd0-9da7-475ec9ab491c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "cb3e61c4-4b7b-4cd0-9da7-475ec9ab491c",
@@ -568,9 +617,32 @@
       }
     },
     {
+      "key": "1cadc135-8589-4e1d-a183-cda2bbac0cd7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Freeplay"
+      },
+      "seeding_key": {
+        "activity_section.key": "1cadc135-8589-4e1d-a183-cda2bbac0cd7",
+        "lesson_activity.key": "e4780e1f-8d60-495b-8bfd-ded274017668"
+      }
+    },
+    {
+      "key": "9f1057f3-b6c0-4e7a-9663-0d326fccb178",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2e07bf6590faf19fe7b3605fb8515827-Slide51.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on level 1 together as a class. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> (Optional) What does a music producer do?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will understand that a producer is someone who puts all of the pieces of the music together. They move and work on chunks of music to make it sound great.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/adbacac7f8e541add81e9b74bfdd914d-Slide52.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Run level 2 together as a class. Guide students to notice the green event triggers. They stand alone and do not connecto the main program. The sounds connected only play when the button (on the keyboard or on screen left of Run) is pressed. Make a connection to the activity in the warm up and encourage students to consider the use of a event to make the program interactive and fun.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students transition to continuing the lesson on their own devices. They will work on levels 3-10 independently.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/e2cc3caed13f589fa1017cb1b77c9bf1-Slide53.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Read the instructions for each level and try to complete the code. Press the Run button to try it out. If something is not quite right you will get a hint under the instructions. When you’ve successfully completed the challenge, a new message and a Continue button will appear. Click Continue to move to the next level and move at your speed. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Encourage students to read the instructions and hints on each level as you circulate. Ask guiding questions to support students if they get stuck.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "9f1057f3-b6c0-4e7a-9663-0d326fccb178",
+        "lesson_activity.key": "e4780e1f-8d60-495b-8bfd-ded274017668"
+      }
+    },
+    {
       "key": "b5780576-23c2-44cc-8a65-2f30bf89913f",
       "position": 1,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7d8f5de836f75e68c644aa3880b84b96-Slide55.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/eaa758bf61e79e1709d4afa58ac2b8e3-Slide56.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the question of the day.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How did we make our programs more interactive and expressive?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Encourage students to reflect on how they made their programs more fun and creative by adding ways for people to interact with them. Have them share examples of the sounds and events they used and why.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/74f756e3f7281ec7125c75820f92aee4-Slide57.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Give students time to write their reflections on paper or any avenue you prefer. If time allows have them share at least one reflection with a partner and and then submit the reflection to you.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "b5780576-23c2-44cc-8a65-2f30bf89913f",
@@ -1133,33 +1205,32 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-career2-panel"
-        ]
+        "progression": "Video Intro"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music-coding-intro-career2-panel"
+          "music-coding-intro-functions-video-hold"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec"
+        "activity_section.key": "db0b2d45-3aea-4969-ab85-5c77c6540325"
       },
       "level_keys": [
-        "music-coding-intro-career2-panel"
+        "music-coding-intro-functions-video-hold"
       ]
     },
     {
       "chapter": 16,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-functions-need"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1178,12 +1249,13 @@
     {
       "chapter": 17,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-functions-panel"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1202,12 +1274,13 @@
     {
       "chapter": 18,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-functions-call"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1226,12 +1299,13 @@
     {
       "chapter": 19,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-functions-define"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1250,12 +1324,13 @@
     {
       "chapter": 20,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-functions-use"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1274,12 +1349,13 @@
     {
       "chapter": 21,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-functions-chorus"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1298,12 +1374,13 @@
     {
       "chapter": 22,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-functions-chorus2"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1322,12 +1399,10 @@
     {
       "chapter": 23,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-panel2"
-        ]
+        "progression": "Remix & Freeplay"
       },
       "bonus": false,
       "seeding_key": {
@@ -1337,7 +1412,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec"
+        "activity_section.key": "a2af8f17-0324-41b7-a68a-7156de1f2d2a"
       },
       "level_keys": [
         "music-coding-intro-functions-panel2"
@@ -1346,12 +1421,10 @@
     {
       "chapter": 24,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-beat"
-        ]
+        "progression": "Remix & Freeplay"
       },
       "bonus": false,
       "seeding_key": {
@@ -1361,7 +1434,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec"
+        "activity_section.key": "a2af8f17-0324-41b7-a68a-7156de1f2d2a"
       },
       "level_keys": [
         "music-coding-intro-functions-beat"
@@ -1370,12 +1443,10 @@
     {
       "chapter": 25,
       "position": 11,
-      "activity_section_position": 11,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-layer"
-        ]
+        "progression": "Remix & Freeplay"
       },
       "bonus": false,
       "seeding_key": {
@@ -1385,7 +1456,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec"
+        "activity_section.key": "a2af8f17-0324-41b7-a68a-7156de1f2d2a"
       },
       "level_keys": [
         "music-coding-intro-functions-layer"
@@ -1397,33 +1468,32 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-career3-pamel"
-        ]
+        "progression": "Intro Video"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music-coding-intro-career3-pamel"
+          "music-coding-intro-functions-video-hold3"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "cb3e61c4-4b7b-4cd0-9da7-475ec9ab491c"
+        "activity_section.key": "58281569-1161-4fc2-bbef-2552bd8d9a74"
       },
       "level_keys": [
-        "music-coding-intro-career3-pamel"
+        "music-coding-intro-functions-video-hold3"
       ]
     },
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-event-try"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1442,12 +1512,13 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-scenes-panel"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1466,12 +1537,13 @@
     {
       "chapter": 29,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-event-sound"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1490,12 +1562,13 @@
     {
       "chapter": 30,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-event-function"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1514,12 +1587,13 @@
     {
       "chapter": 31,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-event-functions"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1538,12 +1612,13 @@
     {
       "chapter": 32,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-effects-panel"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1562,12 +1637,13 @@
     {
       "chapter": 33,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-effects"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1586,12 +1662,10 @@
     {
       "chapter": 34,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-review-panel"
-        ]
+        "progression": "Freeplay"
       },
       "bonus": false,
       "seeding_key": {
@@ -1601,7 +1675,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "cb3e61c4-4b7b-4cd0-9da7-475ec9ab491c"
+        "activity_section.key": "1cadc135-8589-4e1d-a183-cda2bbac0cd7"
       },
       "level_keys": [
         "music-coding-intro-review-panel"
@@ -1610,12 +1684,10 @@
     {
       "chapter": 35,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-event-make"
-        ]
+        "progression": "Freeplay"
       },
       "bonus": false,
       "seeding_key": {
@@ -1625,7 +1697,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "cb3e61c4-4b7b-4cd0-9da7-475ec9ab491c"
+        "activity_section.key": "1cadc135-8589-4e1d-a183-cda2bbac0cd7"
       },
       "level_keys": [
         "music-coding-intro-event-make"
@@ -2750,14 +2822,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-career2-panel",
+        "level.key": "music-coding-intro-functions-video-hold",
         "script_level.level_keys": [
-          "music-coding-intro-career2-panel"
+          "music-coding-intro-functions-video-hold"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec"
+        "activity_section.key": "db0b2d45-3aea-4969-ab85-5c77c6540325"
       }
     },
     {
@@ -2853,7 +2925,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec"
+        "activity_section.key": "a2af8f17-0324-41b7-a68a-7156de1f2d2a"
       }
     },
     {
@@ -2865,7 +2937,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec"
+        "activity_section.key": "a2af8f17-0324-41b7-a68a-7156de1f2d2a"
       }
     },
     {
@@ -2877,19 +2949,19 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "1bd79fea-a189-4cac-9cdf-a6adbef5f3ec"
+        "activity_section.key": "a2af8f17-0324-41b7-a68a-7156de1f2d2a"
       }
     },
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-career3-pamel",
+        "level.key": "music-coding-intro-functions-video-hold3",
         "script_level.level_keys": [
-          "music-coding-intro-career3-pamel"
+          "music-coding-intro-functions-video-hold3"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "cb3e61c4-4b7b-4cd0-9da7-475ec9ab491c"
+        "activity_section.key": "58281569-1161-4fc2-bbef-2552bd8d9a74"
       }
     },
     {
@@ -2985,7 +3057,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "cb3e61c4-4b7b-4cd0-9da7-475ec9ab491c"
+        "activity_section.key": "1cadc135-8589-4e1d-a183-cda2bbac0cd7"
       }
     },
     {
@@ -2997,7 +3069,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "pilot-elem-music-lab",
-        "activity_section.key": "cb3e61c4-4b7b-4cd0-9da7-475ec9ab491c"
+        "activity_section.key": "1cadc135-8589-4e1d-a183-cda2bbac0cd7"
       }
     },
     {

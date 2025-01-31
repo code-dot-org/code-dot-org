@@ -1,7 +1,7 @@
-@import '@/common/styles/font';
-@import '@/common/styles/mixins';
-@import '@/common/styles/primitiveColors.css';
-@import '@/common/styles/colors.css';
+@import '@code-dot-org/component-library-styles/font.scss';
+@import '@code-dot-org/component-library-styles/mixins.scss';
+@import '@code-dot-org/component-library-styles/primitiveColors.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 .tabs {
   ul {

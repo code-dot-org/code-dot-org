@@ -1,0 +1,47 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-01-23T23:12:11.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "You just practiced using functions. Now you’re ready to make your own!",
+        "imageUrl": "https://images.code.org/f2f927bbadf095ec28e7f1d6643632a2-Lesson 3 Level 9.png",
+        "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "First, drag `my function` into your workspace.",
+        "imageUrl": "https://images.code.org/715ccc6273f7942204425adfa800da9e-Lesson 2 Level 8a.png",
+        "key": "music-coding-intro-functions-panel-4e9d978e-62cf-45c0-a123-21e2c48cc3db",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "Next, add sounds into the function.",
+        "imageUrl": "https://images.code.org/925505c7351e5904d7ffc07e5d390886-Lesson 2 Level 8b.png",
+        "key": "music-coding-intro-functions-panel-b11022f2-164f-4e79-b32c-96ed53cf9381",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "Give your function a name that describes the sounds.",
+        "imageUrl": "https://images.code.org/6c9d50a6001a43b3ba1dacc312f55ae7-Lesson 2 Level 8c.png",
+        "key": "music-coding-intro-functions-panel-13c54ec6-1d0b-4bdf-89aa-880a117202f8",
+        "layout": "text-top-center"
+      },
+      {
+        "text": "Then, call the function in your program.\n\nPress Run to try it out!",
+        "imageUrl": "https://images.code.org/fc259e32d4a5250d1142164b5414c264-Lesson 2 Level 8d.png",
+        "key": "music-coding-intro-functions-panel2-1feec9a4-14ee-4b05-95eb-f9149395aa2f",
+        "layout": "text-top-center"
+      }
+    ],
+    "name_suffix": "_january"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:11.717+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel2\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel2\"}]"
+}]]></config>
+</Panels>

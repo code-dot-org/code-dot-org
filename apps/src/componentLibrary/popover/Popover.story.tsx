@@ -1,7 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {Meta, StoryFn} from '@storybook/react';
 import React, {useState} from 'react';
-
-import {Button} from '@cdo/apps/componentLibrary/button';
 
 import Popover, {PopoverProps, WithPopover} from './index';
 

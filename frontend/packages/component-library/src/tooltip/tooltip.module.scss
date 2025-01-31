@@ -1,5 +1,5 @@
-@import '@/common/styles/colors.css';
-@import '@/typography/typography.module';
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/typography.module.scss';
 
 $tooltip-background-color: var(--background-neutral-primary-inverse);
 $tail-offset: 4px;

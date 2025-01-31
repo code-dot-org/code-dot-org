@@ -115,6 +115,10 @@ class Studio < Grid
     %w(studio infinity hoc2015 iceage gumball)
   end
 
+  def uses_google_blockly?
+    DCDO.get('playlab_google_blockly', true)
+  end
+
   def self.default_success_condition
     <<-JS.strip_heredoc.chomp
         function () {

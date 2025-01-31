@@ -1,7 +1,7 @@
+import Button from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button';
 import fontConstants from '@cdo/apps/fontConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';

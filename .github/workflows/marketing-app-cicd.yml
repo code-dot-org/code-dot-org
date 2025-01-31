@@ -1,0 +1,121 @@
+# Currently, only the `marketing` app has a Dockerfile. This workflow is intended to be expanded upon in the future to include other apps that have Dockerfiles.
+# Future iterations of this workflow will include a matrix strategy to build and publish Docker images for all apps that have Dockerfiles.
+
+# The name does not use spaces due to https://github.com/integrations/slack/issues/1790
+name: Marketing-App-CICD
+
+# Configures this workflow to run every time a change is pushed to `frontend`
+on:
+  workflow_dispatch:
+  push:
+    branches:
+        - staging
+        - staging-next
+    paths:
+        - 'frontend/**'
+
+# Defines two custom environment variables for the workflow. These are used for the Container registry domain, and a name for the Docker image that this workflow builds.
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: code-dot-org/marketing
+
+# There is a single job in this workflow. It's configured to run on the latest available version of Ubuntu.
+jobs:
+  # Job: build-and-push-image
+  # This job builds a docker image for the frontend repository and pushes the docker image to Github Packages.
+  # More information: https://docs.github.com/en/actions/use-cases-and-examples/publishing-packages/publishing-docker-images
+  build-and-push-image:
+    runs-on: ubuntu-24.04
+
+    # Sets the permissions granted to the `GITHUB_TOKEN` for the actions in this job.
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+
+    # Expose the docker image and tag that this job produces
+    outputs:
+      fullImageUri: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}@${{ steps.push.outputs.digest }}
+      digest: ${{ steps.push.outputs.digest }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: 'frontend'
+
+      # Uses the `docker/login-action` action to log in to the Container registry registry using the account and password that will publish the packages. Once published, the packages are scoped to the account defined here.
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3.3.0
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # This step uses [docker/metadata-action](https://github.com/docker/metadata-action#about) to extract tags and labels that will be applied to the specified image. The `id` "meta" allows the output of this step to be referenced in a subsequent step. The `images` value provides the base name for the tags and labels.
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5.6.1
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      # This step uses the `docker/build-push-action` action to build the image, based on your repository's `Dockerfile`. If the build succeeds, it pushes the image to GitHub Packages.
+      # It uses the `context` parameter to define the build's context as the set of files located in the specified path. For more information, see "[Usage](https://github.com/docker/build-push-action#usage)" in the README of the `docker/build-push-action` repository.
+      # It uses the `tags` and `labels` parameters to tag and label the image with the output from the "meta" step.
+      - name: Build and push Docker image
+        id: push
+        uses: docker/build-push-action@v6.10.0
+        with:
+          context: frontend
+          file: frontend/apps/marketing/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+      
+      # This step generates an artifact attestation for the image, which is an unforgeable statement about where and how it was built. It increases supply chain security for people who consume the image. For more information, see "[AUTOTITLE](/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds)." 
+      - name: Generate artifact attestation
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
+          subject-digest: ${{ steps.push.outputs.digest }}
+          push-to-registry: true
+
+  # Job: deploy-to-marketing-test
+  # This job pulls the task definition for the current task running in the cluster and updates the docker image tag with the one built in the previous job
+  # Then, the task definition is deployed to the ECS service
+  # See: https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-to-amazon-elastic-container-service
+  deploy-to-marketing-test:
+    runs-on: ubuntu-24.04
+    environment: marketing-test
+    needs: build-and-push-image
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        sparse-checkout: |
+          aws
+
+    - uses: ruby/setup-ruby@v1
+
+    # Warning: Use minimal permissions for the deployer
+    # See: https://github.com/aws-actions/amazon-ecs-deploy-task-definition?tab=readme-ov-file#permissions
+    - name: Configure ECS/Github Deployer AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4.0.2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ vars.AWS_REGION }}
+
+    # This must be converted to a rake task before deploy to non-dev environments
+    - name: Synthesize Cloudformation Template
+      working-directory: ./aws/cloudformation/standalone/marketing/deployment
+      run: |
+        ruby ./deploy.rb
+
+    - name: "[Staging] Deploy Marketing App to AWS"
+      uses: aws-actions/aws-cloudformation-github-deploy@v1
+      with:
+        name: ${{ vars.MARKETING_CLOUDFORMATION_STACK_NAME }}
+        template: ./aws/cloudformation/standalone/marketing/deployment/marketing.yml
+        parameter-overrides: "ContainerImageHashDigest=${{ needs.build-and-push-image.outputs.digest }}"
+        capabilities: CAPABILITY_IAM, CAPABILITY_NAMED_IAM

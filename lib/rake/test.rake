@@ -294,6 +294,11 @@ namespace :test do
     TestRunUtils.run_bin_tests
   end
 
+  desc 'Runs frontend tests.'
+  timed_task_with_logging :frontend do
+    TestRunUtils.run_frontend_tests
+  end
+
   namespace :changed do
     desc 'Runs apps tests if apps might have changed from staging.'
     timed_task_with_logging :apps do
@@ -304,6 +309,7 @@ namespace :test do
           'dashboard/config/libraries/*.interpreted.js',
           'shared/js/**/*',
           'shared/css/**/*',
+          'frontend/**/*',
         ]
       ) do
         TestRunUtils.run_apps_tests
@@ -423,6 +429,7 @@ namespace :test do
     end
 
     all_tasks = [
+      :frontend,
       :apps,
       # currently disabled because these tests take too long to run on CI
       # :interpreter,
@@ -442,7 +449,7 @@ namespace :test do
 
   timed_task_with_logging changed: ['changed:all']
 
-  timed_task_with_logging all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin]
+  timed_task_with_logging all: [:frontend, :apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin]
 end
 timed_task_with_logging test: ['test:changed']
 

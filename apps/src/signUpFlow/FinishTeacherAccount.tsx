@@ -1,8 +1,8 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
@@ -60,7 +60,8 @@ const roleItemGroups = [
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
   countryCode: string;
-}> = ({usIp, countryCode}) => {
+  redirectUrl?: string;
+}> = ({usIp, countryCode, redirectUrl}) => {
   const schoolInfo = useSchoolInfo({usIp});
   const [name, setName] = useState('');
   const [nameErrorMessage, setNameErrorMessage] = useState(null);
@@ -131,11 +132,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
     };
     fetchGdprData();
 
-    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY);
+    const userReturnToHref =
+      sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY) || redirectUrl;
     if (userReturnToHref) {
       setUserReturnTo(userReturnToHref);
     }
-  }, [countryCode, usIp]);
+  }, [countryCode, usIp, redirectUrl]);
 
   // GDPR is valid if
   // 1. The fetch call has completed AND

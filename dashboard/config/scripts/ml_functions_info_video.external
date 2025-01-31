@@ -1,0 +1,13 @@
+name 'ML-Functions-info-video'
+skip_dialog true
+markdown <<MARKDOWN
+# Common Student Misconceptions: Calling and Defining Functions
+
+<a href="https://www.kapwing.com/videos/679813967b815380d716f99f" target="_blank">Kapwing Screen record example</a> 
+
+## Teacher Tip: 
+#### If students' code are not functioning as they expect, have them check to ensure they have defined AND called the function. 
+
+
+
+MARKDOWN
