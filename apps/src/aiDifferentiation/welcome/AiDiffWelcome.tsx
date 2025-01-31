@@ -23,13 +23,12 @@ import {ChatPrompt} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
 
-type WelcomeState = 'select_option' | 'practice' | 'end_page' | 'finished';
+type WelcomeState = 'select_option' | 'practice' | 'end_page';
 
 const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
   select_option: 'select_option',
   practice: 'practice',
   end_page: 'end_page',
-  finished: 'finished',
 };
 
 interface AiDiffWelcomeProps {
@@ -99,12 +98,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>('select_option');
 
-  React.useEffect(() => {
-    if (currentWelcomeState === WelcomeStates.finished) {
-      setShowWelcomeExperience(false);
-    }
-  }, [currentWelcomeState, setShowWelcomeExperience]);
-
   const [selectedOption, setSelectedOption] = React.useState<
     'plan' | 'create' | null
   >(null);
@@ -114,7 +107,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       return (
         <div className={style.bottomButtons}>
           <Button
-            onClick={() => setCurrentWelcomeState(WelcomeStates.finished)}
+            onClick={() => setShowWelcomeExperience(false)}
             text="Skip"
             className={style.skipButton}
             color="gray"
@@ -129,7 +122,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         </div>
       );
     },
-    [selectedOption]
+    [selectedOption, setShowWelcomeExperience]
   );
 
   const selectAnOptionPage = React.useCallback(
@@ -207,13 +200,10 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             />
           </a>
         </div>
-        <Button
-          onClick={() => setCurrentWelcomeState(WelcomeStates.finished)}
-          text="Finish"
-        />
+        <Button onClick={() => setShowWelcomeExperience(false)} text="Finish" />
       </div>
     );
-  }, []);
+  }, [setShowWelcomeExperience]);
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
@@ -251,7 +241,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         return practicePage();
       case WelcomeStates.end_page:
         return endPage();
-      case WelcomeStates.finished:
       default:
         return null;
     }

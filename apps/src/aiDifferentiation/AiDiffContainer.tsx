@@ -24,6 +24,7 @@ interface AiDiffContainerProps {
   lessonId: number;
   lessonName: string;
   unitDisplayName: string;
+  disableWelcome?: boolean;
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
@@ -32,6 +33,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   lessonId,
   lessonName,
   unitDisplayName,
+  disableWelcome = true,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
 
@@ -96,8 +98,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           </div>
         </div>
         <div className={style.fabBackground}>
-          {/* DON'T LET THIS MERGE AS IS */}
-          {showWelcomeExperience ? (
+          {!disableWelcome && showWelcomeExperience ? (
             <AiDiffWelcome
               setShowWelcomeExperience={setShowWelcomeExperience}
               lessonId={lessonId}
