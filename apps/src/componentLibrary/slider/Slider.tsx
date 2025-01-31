@@ -1,3 +1,4 @@
+import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
 import React, {
   ChangeEvent,
@@ -6,8 +7,6 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-
-import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
 
 import moduleStyles from './slider.module.scss';
 

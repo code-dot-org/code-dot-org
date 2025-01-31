@@ -9,6 +9,18 @@ module AichatSagemakerHelper
       Aws::SageMakerRuntime::Client.new
   end
 
+  def self.get_sagemaker_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id)
+    inputs = format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message, level_id)
+    selected_model_id = aichat_model_customizations['selectedModelId']
+
+    sagemaker_response = request_sagemaker_chat_completion(inputs, selected_model_id)
+    parsed_response = JSON.parse(sagemaker_response.body.string)
+    generated_text = parsed_response[0]["generated_text"]
+
+    model_processor = get_model_processor(selected_model_id)
+    model_processor.format_model_output(generated_text)
+  end
+
   def self.get_instructions(system_prompt, level_system_prompt, retrieval_contexts)
     instructions = ""
     instructions = level_system_prompt + " " unless level_system_prompt.empty?
@@ -57,16 +69,6 @@ module AichatSagemakerHelper
       body: inputs.to_json, # required
       content_type: "application/json"
     )
-  end
-
-  def self.get_sagemaker_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id)
-    inputs = format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message, level_id)
-    selected_model_id = aichat_model_customizations['selectedModelId']
-    sagemaker_response = request_sagemaker_chat_completion(inputs, selected_model_id)
-    parsed_response = JSON.parse(sagemaker_response.body.string)
-    generated_text = parsed_response[0]["generated_text"]
-    model_processor = get_model_processor(selected_model_id)
-    model_processor.format_model_output(generated_text)
   end
 
   def self.can_request_aichat_chat_completion?

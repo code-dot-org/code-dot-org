@@ -133,8 +133,18 @@ module Cdo
       site_url('code.org', path, scheme, ge_region: ge_region)
     end
 
-    def hourofcode_url(path = '', scheme = '')
+    def hourofcode_url(path = '', scheme = '', locale: nil)
+      if locale
+        language = Cdo::I18n.available_languages_by_locale[locale.to_s]
+        hoc_locale = language[:unique_language_s] if language && language[:supported_hoc_b] == 'TRUE'
+        path = File.join('/', hoc_locale, path) if hoc_locale
+      end
+
       site_url('hourofcode.com', path, scheme)
+    end
+
+    def video_url(path)
+      File.join('//videos.code.org', path)
     end
 
     def javabuilder_url(path = '', scheme = '')

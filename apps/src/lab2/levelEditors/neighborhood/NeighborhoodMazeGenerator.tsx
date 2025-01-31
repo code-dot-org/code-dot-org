@@ -1,6 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {MazeCell} from '@cdo/apps/lab2/types';

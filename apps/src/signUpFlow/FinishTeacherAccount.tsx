@@ -1,8 +1,8 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
