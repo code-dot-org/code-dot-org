@@ -218,7 +218,7 @@ module AWS
         param = {parameter_key: key}
         # TEMPORARY: Logging where our stack parameters are coming from.
         if value
-          log.info "Using parameter #{key} from CDO (#{CDO[key.underscore]}) or Environment (#{ENV.fetch(key.underscore.upcase, nil)})"
+          log.info "Using parameter #{key} from #{CDO[key.underscore] ? 'CDO' : 'ENV'}"
           param[:parameter_value] = value
         elsif stack_exists? && @stack_resource&.parameters&.any? {|p| p.parameter_key == key}
           param[:use_previous_value] = true
