@@ -93,7 +93,9 @@ export default class ConsoleManager {
     return this.inputBuffer;
   }
 
-  public clearInputBuffer() {
+  public saveAndClearInputBuffer() {
+    this.updateTerminalLines(this.inputBuffer);
+    this.lastLineIsPartial = false;
     this.inputBuffer = '';
   }
 
