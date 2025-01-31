@@ -1,3 +1,4 @@
+import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -8,7 +9,6 @@ import React, {
   KeyboardEvent,
 } from 'react';
 
-import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
