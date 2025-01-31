@@ -140,7 +140,7 @@ function LandingPage({
   // Load successful enrollment dialog info if user was redirected here after successfully enrolling
   useEffect(() => {
     setUpWorkshopEnrollSuccessContent();
-  });
+  }, []);
 
   // Load PL section into redux and fetch applicable workshop info
   const dispatch = useDispatch();
