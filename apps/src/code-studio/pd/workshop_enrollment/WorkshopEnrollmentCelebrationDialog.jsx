@@ -21,15 +21,23 @@ export const buildGoogleCalendarLink = (
   workshopTitle,
   workshopLocation
 ) => {
-  const date = `${session.year}${session.month}${session.day}`;
-  const startTime = `${date}T${session.start_hour}${session.start_min}00`;
-  const endTime = `${date}T${session.end_hour}${session.end_min}00`;
+  console.log(session);
 
-  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-    workshopTitle
-  )}&location=${encodeURIComponent(
-    workshopLocation
-  )}&dates=${encodeURIComponent(startTime)}/${encodeURIComponent(endTime)}`;
+  const start = new Date(session.start);
+  const end = new Date(session.end);
+
+  console.log(start);
+  console.log(end);
+  // const date = `${session.year}${session.month}${session.day}`;
+  // const startTime = `${date}T${session.start_hour}${session.start_min}00`;
+  // const endTime = `${date}T${session.end_hour}${session.end_min}00`;
+
+  // return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+  //   workshopTitle
+  // )}&location=${encodeURIComponent(
+  //   workshopLocation
+  // )}&dates=${encodeURIComponent(startTime)}/${encodeURIComponent(endTime)}`;
+  return '';
 };
 
 export const buildOutlookCalendarLink = (
@@ -37,17 +45,18 @@ export const buildOutlookCalendarLink = (
   workshopTitle,
   workshopLocation
 ) => {
-  const date = `${session.year}-${session.month}-${session.day}`;
-  const startTime = `${date}T${session.start_hour}:${session.start_min}:00`;
-  const endTime = `${date}T${session.end_hour}:${session.end_min}:00`;
+  // const date = `${session.year}-${session.month}-${session.day}`;
+  // const startTime = `${date}T${session.start_hour}:${session.start_min}:00`;
+  // const endTime = `${date}T${session.end_hour}:${session.end_min}:00`;
 
-  return `https://outlook.live.com/calendar/action/compose?rru=addevent&subject=${encodeURIComponent(
-    workshopTitle
-  )}&location=${encodeURIComponent(
-    workshopLocation
-  )}&startdt=${encodeURIComponent(startTime)}&enddt=${encodeURIComponent(
-    endTime
-  )}`;
+  // return `https://outlook.live.com/calendar/action/compose?rru=addevent&subject=${encodeURIComponent(
+  //   workshopTitle
+  // )}&location=${encodeURIComponent(
+  //   workshopLocation
+  // )}&startdt=${encodeURIComponent(startTime)}&enddt=${encodeURIComponent(
+  //   endTime
+  // )}`;
+  return '';
 };
 
 export default function WorkshopEnrollmentCelebrationDialog({

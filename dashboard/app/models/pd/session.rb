@@ -59,21 +59,11 @@ class Pd::Session < ApplicationRecord
     "#{formatted_date}, #{start_time}-#{end_time}"
   end
 
-  def session_time_info
-    start_time = start.strftime('%l:%M%p').strip
-    end_time = self.end.strftime('%l:%M%p').strip
-
+  def session_info_for_calendar
     {
       id: id,
-      year: start.strftime('%Y').strip,
-      month: start.strftime('%m').strip,
-      day: start.strftime('%d').strip,
-      start_hour: start.strftime('%H').strip,
-      start_min: start.strftime('%M').strip,
-      end_hour: self.end.strftime('%H').strip,
-      end_min: self.end.strftime('%M').strip,
-      date_text: start.strftime('%B %-d, %Y').strip,
-      time_text: "#{start_time} - #{end_time}"
+      start: start,
+      end: self.end
     }
   end
 
