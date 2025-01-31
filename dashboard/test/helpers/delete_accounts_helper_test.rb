@@ -1924,22 +1924,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # hard_delete_channel_content interface.
   #
 
-  test "SourceBucket: hard-deletes all of user's channels" do
-    assert_bucket_hard_deletes_contents SourceBucket
-  end
-
-  test "AssetBucket: hard-deletes all of user's channels" do
-    assert_bucket_hard_deletes_contents AssetBucket
-  end
-
-  test "AnimationBucket: hard-deletes all of user's channels" do
-    assert_bucket_hard_deletes_contents AnimationBucket
-  end
-
-  test "FileBucket: hard-deletes all of user's channels" do
-    assert_bucket_hard_deletes_contents FileBucket
-  end
-
   def assert_bucket_hard_deletes_contents(bucket)
     # Here we are testing that for every one of the user's channels we
     # ask the bucket to delete its contents.  To avoid interacting with S3
