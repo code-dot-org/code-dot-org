@@ -1,5 +1,9 @@
+import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
+
+import Button from '@cdo/apps/componentLibrary/button';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
@@ -9,6 +13,8 @@ import style from './ai-differentiation.module.scss';
 
 const AI_DIFF_POSITION_X = 'aiDiffPositionX';
 const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
+
+const AI_DIFF_HEADER_TEXT = 'AI Teaching Assistant';
 
 interface AiDiffContainerProps {
   closeTutor?: () => void;
@@ -58,6 +64,33 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         className={style.aiDiffContainer}
         style={open ? undefined : {display: 'none'}}
       >
+        <div className={classNames(style.aiDiffHeader, 'ai_diff_handle')}>
+          <div className={style.aiDiffHeaderLeftSide}>
+            <div className={style.aiBotHeader}>
+              <img
+                src={aiBotOutlineIcon}
+                className={style.aiBotOutlineIcon}
+                alt={AI_DIFF_HEADER_TEXT}
+              />
+              <div className={style.taOverlayHeader}>
+                <span>{'TA'}</span>
+              </div>
+            </div>
+            <span className={style.aiDiffHeaderText}>
+              {AI_DIFF_HEADER_TEXT}
+            </span>
+          </div>
+          <div className={style.aiDiffHeaderRightSide}>
+            <Button
+              color="white"
+              icon={{iconName: 'times', iconStyle: 'solid'}}
+              type="tertiary"
+              isIconOnly={true}
+              onClick={closeTutor}
+              size="s"
+            />
+          </div>
+        </div>
         <AiDiffChat
           closeTutor={closeTutor}
           lessonId={lessonId}
