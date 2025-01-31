@@ -109,7 +109,7 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
           color={buttonColors.black}
           icon={{
             iconName: profaneMessageVisible ? 'eye-slash' : 'eye',
-            iconStyle: 'regular',
+            iconStyle: profaneMessageVisible ? 'solid' : 'regular',
           }}
           isIconOnly={true}
           onClick={toggleProfaneMessageVisibility}
@@ -120,7 +120,10 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
               ? aichatI18n.aria_hideMessage()
               : aichatI18n.aria_showMessage()
           }
-          className={moduleStyles.button}
+          className={classNames(
+            moduleStyles[`icon-button-gray`],
+            profaneMessageVisible && moduleStyles.selected
+          )}
         />
       </WithTooltip>
     </div>
