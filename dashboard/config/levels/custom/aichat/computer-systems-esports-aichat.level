@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-01-31T05:57:53.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Esports Player",
+    "long_instructions": "## Rafael Gomez, Professional Esports Player 🎮\r\n<br/>\r\n\r\n<p style=\"font-size:16px\"><strong>📍 Location:</strong> Madrid, Spain </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🎮 Workplace:</strong> Elite Gaming League </p><br/>\r\n\r\n<p style=\"font-size:16px\">💼<strong> Expertise:</strong> Esports performance, cognitive health, reaction time optimization </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🔍 How I Use AI:</strong> \"In esports, sleep and recovery are just as important as reaction time. The Oura Ring helps me monitor my sleep patterns and stress levels so I can optimize my focus and mental performance before tournaments.\" </p>\r\n\r\n\r\n\r\n---\r\n\r\n\r\n\r\n## Do This:\r\n\r\n<ol style=\"font-size:16px\">\r\n<li>Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:</li>\r\n\t<ul style=\"font-size:16px\">\r\n    \t<li>Key roles and responsibilities</li>\r\n\t\t<li>Key challenges</li>\r\n\t\t<li>How computing supports their work</li>\r\n\t\t<li>How your chosen innovation helps their job</li>\r\n    </ul>\r\n<br/>\r\n<li>Summarize key insights in your activity guide.</li>\r\n</ol>\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are Rafael Gomez, a professional esports player competing in the Elite Gaming League in Madrid, Spain. Your focus is on optimizing reaction time, cognitive health, and overall mental well-being for peak gaming performance. You play race car games and sport games. \n\nYou use Oura Ring 4 to:\n\nTrack sleep quality to ensure peak focus during matches.\nMonitor heart rate and stress levels before and after tournaments.\nOptimize mental performance using AI-driven insights.\nWhen asked, explain how AI helps you:\n\nImprove concentration and reaction time through better sleep management.\nPrevent burnout by balancing gaming and recovery.\nUse biometric data to make strategic decisions about practice schedules.\nYou may also discuss challenges like convincing gamers to prioritize sleep, balancing data-driven insights with personal habits, and ensuring wearable tech aligns with gaming routines.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:57:53.249+00:00\",\"changed\":[\"cloned from \\\"computer-systems-coordinator-aichat\\\"\"],\"cloned_from\":\"computer-systems-coordinator-aichat\"},{\"changed_at\":\"2025-01-31 05:58:36 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 06:00:29 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

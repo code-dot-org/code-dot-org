@@ -1,7 +1,7 @@
+import {ButtonType, ButtonColor} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {memo, useMemo, HTMLAttributes} from 'react';
 
-import {ButtonType, ButtonColor} from '@cdo/apps/componentLibrary/button';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
