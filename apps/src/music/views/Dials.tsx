@@ -39,9 +39,9 @@ const Dials: React.FunctionComponent = () => {
 
   return (
     <div id="dials" className={moduleStyles.dialsContainer}>
-      {panelElements?.map(panelElement =>
+      {panelElements?.map((panelElement, index) =>
         panelElement.type === 'output' ? (
-          <div className={moduleStyles.elementContainer}>
+          <div key={index} className={moduleStyles.elementContainer}>
             <div className={moduleStyles.elementLabel}>{panelElement.id}</div>
             <div className={moduleStyles.outputValue}>
               {panelElement.currentValue}
@@ -50,7 +50,7 @@ const Dials: React.FunctionComponent = () => {
           </div>
         ) : panelElement.type === 'input' &&
           panelElement.variant === 'slider' ? (
-          <div className={moduleStyles.elementContainer}>
+          <div key={index} className={moduleStyles.elementContainer}>
             <div className={moduleStyles.elementLabel}>{panelElement.id}</div>
             <Slider
               name="slider"
@@ -68,7 +68,7 @@ const Dials: React.FunctionComponent = () => {
             <div className={moduleStyles.elementTypeLabel}>input</div>
           </div>
         ) : panelElement.type === 'input' && panelElement.variant === 'knob' ? (
-          <div className={moduleStyles.elementContainer}>
+          <div key={index} className={moduleStyles.elementContainer}>
             <div className={moduleStyles.elementLabel}>{panelElement.id}</div>
             <KnobHeadless
               aria-label="A Knob"
@@ -101,7 +101,7 @@ const Dials: React.FunctionComponent = () => {
             <div className={moduleStyles.elementTypeLabel}>input</div>
           </div>
         ) : panelElement.type === 'sticker' ? (
-          <div className={moduleStyles.stickerContainer}>
+          <div key={index} className={moduleStyles.stickerContainer}>
             <img
               alt=""
               src={stickerImages[panelElement.id]}
