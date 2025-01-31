@@ -19,12 +19,17 @@ class TeacherDashboardController < ApplicationController
     view_options(full_width: true, no_padding_container: true)
   end
 
-  def redirect_to_newest_section_progress
+  def redirect_to_newest_section
+    puts params
     if current_user.sections_instructed.empty?
-      redirect_to "https://support.code.org/hc/en-us/articles/25195525766669-Getting-Started-New-Progress-View"
+      if params[:location] == "progress"
+        redirect_to "https://support.code.org/hc/en-us/articles/25195525766669-Getting-Started-New-Progress-View"
+      else
+        redirect_to "/home"
+      end
     else
       section_id = current_user.sections_instructed.order(created_at: :desc).first.id
-      redirect_to "/teacher_dashboard/sections/#{section_id}/progress?view=v2"
+      redirect_to "/teacher_dashboard/sections/#{section_id}/#{params[:location]}"
     end
   end
 
