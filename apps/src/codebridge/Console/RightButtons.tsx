@@ -1,8 +1,8 @@
+import Button from '@code-dot-org/component-library/button';
 import SwapLayoutDropdown from '@codebridge/components/SwapLayoutDropdown';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import Button from '@cdo/apps/componentLibrary/button';
 import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 import moduleStyles from './right-buttons.module.scss';

@@ -4,7 +4,11 @@ import {loadPyodide, PyodideInterface, version} from 'pyodide';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 import {HOME_FOLDER} from './pythonHelpers/constants';
-import {SETUP_CODE} from './pythonHelpers/patches';
+import {
+  patchInputCode,
+  pythonlabInputModule,
+  SETUP_CODE,
+} from './pythonHelpers/patches';
 import {
   getCleanupCode,
   getUpdatedSourceAndDeleteFiles,
@@ -27,6 +31,7 @@ async function loadPyodideAndPackages() {
   });
   pyodide.setStdout(getStreamHandlerOptions('sysout'));
   pyodide.setStderr(getStreamHandlerOptions('syserr'));
+  pyodide.registerJsModule('pythonlab_input', pythonlabInputModule);
 
   // Pre-load our custom packages (unittest_runner and pythonlab_setup), as well as
   // matplotlib, which pythonlab_setup depends on, and numpy,
@@ -74,7 +79,7 @@ initializePyodide();
 onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
-  const {id, python, source, validationFile} = event.data;
+  const {id, python, source, validationFile, canSupportInput} = event.data;
   let results = undefined;
   let sourceToWrite = source;
   // Add the validation file to the source if it exists.
@@ -90,6 +95,9 @@ onmessage = async event => {
   try {
     writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
     await importPackagesFromFiles(sourceToWrite, pyodide);
+    if (canSupportInput) {
+      await patchInput(id);
+    }
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
@@ -145,4 +153,8 @@ function getStreamHandlerOptions(type: MessageType) {
       postMessage({type: type, message: msg, id: 'none'});
     },
   };
+}
+
+async function patchInput(id: number) {
+  await runInternalCode(patchInputCode(id), id);
 }

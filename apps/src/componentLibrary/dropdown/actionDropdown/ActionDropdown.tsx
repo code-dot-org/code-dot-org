@@ -1,7 +1,7 @@
+import {ButtonProps} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useCallback, memo, AriaAttributes} from 'react';
 
-import {ButtonProps} from '@cdo/apps/componentLibrary/button';
 import {
   DropdownProviderWrapper,
   useDropdownContext,

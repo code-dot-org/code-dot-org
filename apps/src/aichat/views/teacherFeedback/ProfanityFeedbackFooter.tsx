@@ -1,6 +1,6 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import React, {memo} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {EmText} from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
