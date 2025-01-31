@@ -1,7 +1,7 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -17,20 +17,8 @@ export default class ConfirmCancelFooter extends React.Component {
     onCancel: PropTypes.func.isRequired,
     confirmText: PropTypes.string,
     cancelText: PropTypes.string,
-    confirmColor: PropTypes.oneOf([
-      'purple',
-      'black',
-      'gray',
-      'white',
-      'destructive',
-    ]).isRequired,
-    cancelColor: PropTypes.oneOf([
-      'purple',
-      'black',
-      'gray',
-      'white',
-      'destructive',
-    ]).isRequired,
+    confirmColor: PropTypes.oneOf(buttonColors).isRequired,
+    cancelColor: PropTypes.oneOf(buttonColors).isRequired,
     disableConfirm: PropTypes.bool,
     disableCancel: PropTypes.bool,
     children: PropTypes.any,

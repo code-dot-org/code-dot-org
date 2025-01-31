@@ -1,8 +1,8 @@
+import LinkButton, {buttonColors} from '@code-dot-org/component-library/button';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import LinkButton from '@cdo/apps/componentLibrary/button';
 import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
   RELEASE_OR_DELETE_RECORDS_EXPLANATION,
@@ -94,7 +94,7 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
           )}
           <ConfirmCancelFooter
             confirmText={i18n.removeStudent()}
-            confirmColor="destructive"
+            confirmColor={buttonColors.destructive}
             onConfirm={onConfirm}
             onCancel={onCancel}
             disableConfirm={!!disabled}
