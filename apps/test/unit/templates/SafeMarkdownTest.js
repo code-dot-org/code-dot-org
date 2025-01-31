@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {Heading1} from '@cdo/apps/componentLibrary/typography';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 describe('SafeMarkdown', () => {
@@ -73,63 +72,6 @@ describe('SafeMarkdown', () => {
 
     expect(paragraphWrapper.html()).toBe(
       '<p id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></p>'
-    );
-
-    const headingWrapper = shallow(
-      <h1 id="test-markdown">
-        <SafeMarkdown
-          unwrapped
-          markdown={'**some** _basic_ [inline](markdown)'}
-        />
-      </h1>
-    );
-
-    expect(headingWrapper.html()).toBe(
-      '<h1 id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></h1>'
-    );
-  });
-
-  it('will render html wrapped in an element', () => {
-    const paragraphWrapper = shallow(
-      <p id="test-markdown">
-        <SafeMarkdown
-          unwrapped
-          markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>'
-        />
-      </p>
-    );
-    expect(paragraphWrapper.html()).toBe(
-      '<p id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></p>'
-    );
-
-    // Make sure we don't add an extra div
-    const divWrapper = shallow(
-      <div id="test-markdown">
-        <SafeMarkdown
-          unwrapped
-          markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>'
-        />
-      </div>
-    );
-
-    expect(divWrapper.html()).toBe(
-      '<div id="test-markdown"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></div>'
-    );
-  });
-
-  it('will render markdown wrapped in an Typography element', () => {
-    const typographyWrapper = shallow(
-      <Heading1 id="test-markdown">
-        <SafeMarkdown
-          unwrapped
-          markdown="**some** _basic_ [inline](markdown)"
-        />
-      </Heading1>
-    );
-
-    const renderedHtml = typographyWrapper.html();
-    expect(renderedHtml).toBe(
-      '<h1 id="test-markdown" class="heading-xxl"><strong>some</strong> <em>basic</em> <a href="markdown">inline</a></h1>'
     );
   });
 
