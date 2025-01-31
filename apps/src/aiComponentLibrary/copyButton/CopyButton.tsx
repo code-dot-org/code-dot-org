@@ -15,7 +15,7 @@ const copyToClipboard = (text: string) => {
 
 const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
   const CONFIRM_TIMEOUT_MS = 1500;
-  const [copyTimeout, setCopyTimeout] = useState(false);
+  const [showCopyConfirmation, setShowCopyConfirmation] = useState(false);
 
   return (
     <Button
@@ -25,19 +25,21 @@ const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
         } else {
           copyToClipboard(copyText);
         }
-        setCopyTimeout(true);
-        setTimeout(() => setCopyTimeout(false), CONFIRM_TIMEOUT_MS);
+        setShowCopyConfirmation(true);
+        setTimeout(() => setShowCopyConfirmation(false), CONFIRM_TIMEOUT_MS);
       }}
       color="white"
       size="xs"
       isIconOnly
       icon={{
         iconStyle: 'regular',
-        iconName: copyTimeout ? 'check' : 'copy',
+        iconName: showCopyConfirmation ? 'check' : 'copy',
       }}
       type="primary"
       className={
-        copyTimeout ? style.messageFeedbackConfirm : style.messageFeedbackButton
+        showCopyConfirmation
+          ? style.messageFeedbackConfirm
+          : style.messageFeedbackButton
       }
     />
   );
