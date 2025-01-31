@@ -86,6 +86,7 @@ const DEFAULT_PROPS = {
 
 describe('LandingPage', () => {
   let store;
+  const defaultCreateObjectURL = window.URL.createObjectURL;
 
   beforeEach(() => {
     stubRedux();
@@ -95,6 +96,7 @@ describe('LandingPage', () => {
 
   afterEach(() => {
     restoreRedux();
+    window.URL.createObjectURL = defaultCreateObjectURL;
   });
 
   function renderDefault(propOverrides = {}) {
