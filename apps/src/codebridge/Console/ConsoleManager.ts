@@ -7,6 +7,8 @@ export default class ConsoleManager {
   private terminalFitAddon: FitAddon;
   private terminalLines: string[];
   private inputBuffer: string;
+  // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
+  private lastLineIsPartial: boolean;
 
   private IMAGE_WIDTH = 400;
   private IMAGE_HEIGHT = 400;
@@ -16,6 +18,7 @@ export default class ConsoleManager {
     this.terminalFitAddon = terminalFitAddon;
     this.terminalLines = [];
     this.inputBuffer = '';
+    this.lastLineIsPartial = false;
   }
 
   public getTerminal() {
@@ -37,6 +40,7 @@ export default class ConsoleManager {
   public clearTerminalLines() {
     this.terminalLines = [];
     this.terminal.clear();
+    this.lastLineIsPartial = false;
   }
 
   public getTerminalLines() {
@@ -49,7 +53,8 @@ export default class ConsoleManager {
   }
 
   public writePartialLine(message: string) {
-    this.terminalLines.push(message);
+    this.updateTerminalLines(message);
+    this.lastLineIsPartial = true;
     this.terminal.write(message);
     this.terminal.scrollToBottom();
     this.terminal.focus();
@@ -93,7 +98,8 @@ export default class ConsoleManager {
   }
 
   private appendTerminalLine(line: string) {
-    this.terminalLines.push(line);
+    this.updateTerminalLines(line);
+    this.lastLineIsPartial = false;
     this.terminal.writeln(line);
     this.terminal.scrollToBottom();
     this.terminal.focus();
@@ -102,5 +108,13 @@ export default class ConsoleManager {
   private getSystemMessage(message: string, appName?: string) {
     const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
     return `${systemMessagePrefix}${message}`;
+  }
+
+  private updateTerminalLines(message: string) {
+    if (this.lastLineIsPartial && this.terminalLines.length > 0) {
+      this.terminalLines[this.terminalLines.length - 1] += message;
+    } else {
+      this.terminalLines.push(message);
+    }
   }
 }
