@@ -22,11 +22,23 @@ Parameters:
   DashboardSubdomainName:
     Type: String
     Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
-    Description: Subdomain name for learning platform ("Dashboard").
+    Description: Subdomain name for learning platform ("studio" in Prod, otherwise the stack name plus "-studio").
   PegasusSubdomainName:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
-    Description: Subdomain name for corporate web site ("Pegasus").
+    Description: Subdomain name for corporate web site ("" in Prod, otherwise the stack name).
+  PegasusHostname:
+    Type: String
+    Default: <%= CDO.pegasus_hostname %>
+    Description: Hostname for corporate web site ("code.org", "test.code.org", "localhost.code.org", etc).
+  CodeprojectsHostname:
+    Type: String
+    Default: <%= CDO.codeprojects_hostname %>
+    Description: Hostname for codeprojects infrastructure ("codeprojects.org", "test.codeprojects.org", etc)
+  CodeprojectsHostedZoneId:
+    Type: String
+    Default: <%= CDO.codeprojects_hostedzone_id %>
+    Description: Route 53 Hosted Zone ID for CodeprojectsHostname domain.
   HourOfCodeBaseDomainName:
     Type: String
     Default: hourofcode.com
@@ -46,6 +58,15 @@ Parameters:
   Branch:
     Type: String
     Default: <%=branch%>
+  DCDO_Table_Name:
+    Type: String
+    Default: <%=CDO.dcdo_table_name%>
+  Gatekeeper_Table_Name:
+    Type: String
+    Default: <%=CDO.gatekeeper_table_name%>
+  DBClusterId:
+    Type: String
+    Default: <%=CDO.db_cluster_id%>
 <% if database -%>
   DatabaseUsername:
     Type: String
@@ -164,8 +185,8 @@ Resources:
               - 'dynamodb:PutItem'
               - 'dynamodb:Scan'
             Resource:
-              - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/<%=CDO.dcdo_table_name%>"
-              - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/<%=CDO.gatekeeper_table_name%>"
+              - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${DCDO_Table_Name}"
+              - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${Gatekeeper_Table_Name}"
           # Write to our Firehose streams
           # TODO: Import resources into stack.
           - Effect: Allow
@@ -548,7 +569,7 @@ Resources:
                 Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:snapshot:rds:production-*"
               - Effect: Allow
                 Action: rds:CopyDBClusterSnapshot
-                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:<%=CDO.db_cluster_id%>*"
+                Resource: !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-snapshot:rds:${DBClusterId}*"
               - Effect: Allow
                 Action:
                   - rds:ModifyDBClusterSnapshotAttribute

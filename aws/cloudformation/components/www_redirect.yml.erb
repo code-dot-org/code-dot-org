@@ -1,4 +1,6 @@
   <%
+    # TODO: Eliminate these references to CDO properties
+    
     redirected_domains = ["www.#{subdomain}"]
     # As CDO properties can vary between workstations, using them here is generally unsafe
     # Since this line is restricted to only run in production, we are comfortable using it.
@@ -31,7 +33,7 @@
         Origins:
           # An origin is required, but will never receive traffic
           - Id: PrimaryOrigin
-            DomainName: <%= CDO.pegasus_hostname %>
+            DomainName: !Ref PegasusHostname
             CustomOriginConfig:
               OriginProtocolPolicy: match-viewer
         DefaultCacheBehavior:
@@ -54,14 +56,14 @@
       DomainName: www.<%= subdomain %>
       <%- if rack_env?(:production) -%>
       SubjectAlternativeNames:
-        - www.<%=CDO.pegasus_hostname%>
+        - !Sub www.${PegasusHostname}
       <%- end -%>
       ValidationMethod: DNS
       DomainValidationOptions:
         - DomainName: www.<%= subdomain %>
           HostedZoneId: <%= www_redirect_hosted_zone_id %>
         <%- if rack_env?(:production) -%>
-        - DomainName: www.<%=CDO.pegasus_hostname%>
+        - DomainName: !Sub www.${PegasusHostname}
           HostedZoneId: <%= www_redirect_hosted_zone_id %>
         <%- end -%>
 
@@ -92,9 +94,9 @@
         Comment: Redirects a subdomain to the root domain
         Runtime: cloudfront-js-1.0
       AutoPublish: true
-      FunctionCode: |
+      FunctionCode: !Sub |
         function handler(event) {
-          var newUrl = 'https://<%=CDO.pegasus_hostname%>';
+          var newUrl = 'https://${PegasusHostname}';
 
           // Append path
           newUrl += event.request.uri;
