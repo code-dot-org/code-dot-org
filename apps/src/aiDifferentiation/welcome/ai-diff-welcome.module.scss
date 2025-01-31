@@ -41,7 +41,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 16px 12px 0 12px;
+  padding: 0;
   border-radius: 4px;
   border: 2px solid $light_gray_200;
   margin: 16px 0 0 0;
@@ -52,9 +52,22 @@
   }
 }
 
+.optionRowWithPic {
+  flex-direction: column;
+}
+
+.ai101Thumbnail {
+  margin: 0 12px 12px 12px;
+  border-radius: 4px;
+}
+
 .optionIcon {
   font-size: 24px;
-  margin-top: 4px;
+  margin-top: 10px;
+  width: 54px;
+  min-width: 54px;
+  display: flex;
+  justify-content: center;
 
   --fa-primary-color: var(--light-aqua-70, #19BBB5);
   --fa-secondary-color: var(--light-aqua-700, #30CCC6);
@@ -63,8 +76,28 @@
 .optionText {
   display: flex;
   flex-direction: column;
-  margin-inline-start: 20px;
   text-align: left;
+  width: 100%;
+  margin-top: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  gap: 8px;
+}
+
+.optionWithPicTop {
+  width: 100%;
+  margin-top: 12px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  display: flex;
+}
+
+.optionTitle {
+  margin-bottom: 0;
+}
+
+.optionDescription {
+  margin-bottom: 0;
 }
 
 .selectedOption {
@@ -82,4 +115,31 @@
   display: flex;
   flex-direction: column;
   align-content: stretch;
+}
+
+.endPage {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 32px 20px 20px 20px;
+}
+
+.endPageTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 36px 36px 36px;
+}
+
+.endPageSubTitle {
+  margin-top: 16px;
+  color: $neutral_dark80;
+}
+
+.botConfetti {
+  width: 132px;
+}
+
+.endPage a {
+  text-decoration: none !important;
 }

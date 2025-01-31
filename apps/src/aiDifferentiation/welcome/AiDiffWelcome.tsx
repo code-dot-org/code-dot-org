@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
 
 import {Button} from '../../componentLibrary/button';
@@ -53,6 +54,42 @@ const SUGGESTED_PROMPTS_FOR_SELECTION: {
   },
 };
 
+const optionButton = (
+  isSelected = false,
+  onClick: () => void,
+  iconName: string,
+  title: string,
+  description: string | null
+) => {
+  return (
+    <button
+      className={classNames(
+        style.optionRow,
+        isSelected && style.selectedOption
+      )}
+      onClick={onClick}
+      type="button"
+    >
+      <FontAwesomeV6Icon
+        iconName={iconName}
+        iconFamily="duotone"
+        className={style.optionIcon}
+      />
+      <div className={style.optionText}>
+        <BodyTwoText className={style.optionTitle}>
+          <StrongText>{title}</StrongText>
+        </BodyTwoText>
+
+        {description && (
+          <BodyThreeText className={style.optionDescription}>
+            {description}
+          </BodyThreeText>
+        )}
+      </div>
+    </button>
+  );
+};
+
 const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   lessonId,
@@ -71,39 +108,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const [selectedOption, setSelectedOption] = React.useState<
     'plan' | 'create' | null
   >(null);
-
-  const optionButton = React.useCallback(
-    (
-      selectionKey: 'plan' | 'create' | null,
-      iconName: string,
-      title: string,
-      description: string
-    ) => {
-      return (
-        <button
-          className={classNames(
-            style.optionRow,
-            selectionKey === selectedOption && style.selectedOption
-          )}
-          onClick={() => setSelectedOption(selectionKey)}
-          type="button"
-        >
-          <FontAwesomeV6Icon
-            iconName={iconName}
-            iconFamily="duotone"
-            className={style.optionIcon}
-          />
-          <div className={style.optionText}>
-            <BodyTwoText>
-              <StrongText>{title}</StrongText>
-            </BodyTwoText>
-            <BodyThreeText>{description}</BodyThreeText>
-          </div>
-        </button>
-      );
-    },
-    [selectedOption]
-  );
 
   const continueAndSkipButtons = React.useCallback(
     (nextState: WelcomeState) => {
@@ -138,13 +142,15 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               Using AI in multiple ways increases productivity.
             </Heading6>
             {optionButton(
-              'plan',
+              selectedOption === 'plan',
+              () => setSelectedOption('plan'),
               'folder-tree',
               'Plan',
               'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
             )}
             {optionButton(
-              'create',
+              selectedOption === 'create',
+              () => setSelectedOption('create'),
               'file-pen',
               'Create',
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
@@ -154,23 +160,57 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         </div>
       );
     },
-    [optionButton, continueAndSkipButtons]
+    [continueAndSkipButtons, selectedOption]
   );
 
   const endPage = React.useCallback(() => {
     return (
-      <div>
-        <img
-          src={aiBotConfetti}
-          className={style.botConfetti}
-          alt={'Congratulations!'}
+      <div className={style.endPage}>
+        <div className={style.endPageTop}>
+          <img
+            src={aiBotConfetti}
+            className={style.botConfetti}
+            alt={'Congratulations!'}
+          />
+          <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
+          <Heading6 className={style.endPageSubTitle}>
+            Continue your learning journey
+          </Heading6>
+          {optionButton(
+            false,
+            () => setCurrentWelcomeState(WelcomeStates.select_option),
+            'dumbbell',
+            'Practice another skill',
+            null
+          )}
+
+          <a
+            className={classNames(style.optionRow, style.optionRowWithPic)}
+            href="https://code.org/ai/pl/101"
+          >
+            <div className={style.optionWithPicTop}>
+              <FontAwesomeV6Icon
+                iconName="head-side-brain"
+                iconFamily="duotone"
+                className={style.optionIcon}
+              />
+              <BodyTwoText className={style.optionTitle}>
+                <StrongText>
+                  Take Code.org’s self-paced AI 101 professional learning course
+                </StrongText>
+              </BodyTwoText>
+            </div>
+            <img
+              src={ai101Thumnail}
+              className={style.ai101Thumbnail}
+              alt={'AI 101 professional learning course'}
+            />
+          </a>
+        </div>
+        <Button
+          onClick={() => setCurrentWelcomeState(WelcomeStates.finished)}
+          text="Finish"
         />
-        <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
-        <Heading6>Continue your learning journey</Heading6>
-        <BodyTwoText>Practice another skill</BodyTwoText>
-        <BodyTwoText>
-          Take Code.org’s self-paced AI 101 professional learning course
-        </BodyTwoText>
       </div>
     );
   }, []);
