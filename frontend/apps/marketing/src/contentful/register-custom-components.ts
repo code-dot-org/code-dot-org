@@ -39,7 +39,9 @@ defineComponents(
     {
       component: Video,
       definition: VideoContentfulComponentDefinition,
-      options: {wrapContainerWidth: '100%'},
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
   ],
   {
