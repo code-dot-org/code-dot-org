@@ -13,6 +13,8 @@ export const VideoContentfulComponentDefinition: ComponentDefinition = {
     imageUrl:
       'https://images.ctfassets.net/90t6bu6vlf76/7I4Hd4Mf5rwUWgm8QfM1nu/1bdbedc97c9e2960a5444d23e0aabc20/component_video_tooltip.png',
   },
+  // Adding an empty array here so no default style options show in the Design tab.
+  builtInStyles: [],
   variables: {
     videoTitle: {
       displayName: 'Video title',
