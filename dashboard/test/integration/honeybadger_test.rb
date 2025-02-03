@@ -13,29 +13,29 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
       get 'raise_error' => 'honeybadger_error#raise_error'
     end
 
+    # Stop the service
+    Honeybadger.stop
+
+    # Re-configure
     Honeybadger.configure do |config|
       @original_backend = config.backend
       config.backend = 'test'
       @original_api_key = config.api_key
       config.api_key = 'test_key'
     end
-
-    # Once we have reconfigured, we have to restart the honeybadger worker
-    Honeybadger.stop
-    Honeybadger.init_worker
   end
 
   teardown do
     Rails.application.reload_routes!
 
+    # Stop the service
+    Honeybadger.stop
+
+    # Re-configure
     Honeybadger.configure do |config|
       config.backend = @original_backend
       config.api_key = @original_api_key
     end
-
-    # Once we have reconfigured, we have to restart the honeybadger worker
-    Honeybadger.stop
-    Honeybadger.init_worker
   end
 
   # The value Honeybadger will set a filtered value to.
