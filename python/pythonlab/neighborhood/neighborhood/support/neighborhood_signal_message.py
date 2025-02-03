@@ -28,6 +28,8 @@ class NeighborhoodSignalMessage:
         return formatted_message
 
     def send(self, world_context_type, neighborhood_tracker, is_boolean_message):
+        # Passing neighborhood_tracker here because importing NeighborhoodTracker results
+        # in a circular reference error.
         if world_context_type == NeighborhoodContextType.RUN and not is_boolean_message:
             print (self._get_formatted_message())
         elif world_context_type == NeighborhoodContextType.VALIDATE:  

@@ -1,11 +1,7 @@
 from .position import Position
 from .neighborhood_signal_message import NeighborhoodSignalMessage
 from .neighborhood_signal_key import NeighborhoodSignalKey
-
-NORTH = 'north'
-EAST = 'east'
-SOUTH = 'south'
-WEST = 'west'
+from .constants import NORTH, SOUTH, EAST, WEST
 
 class PainterTracker:
     def __init__(self, painter_id: str, position: Position, direction: str, paint_count: int):
