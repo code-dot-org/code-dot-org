@@ -17,8 +17,8 @@ export default class ConfirmCancelFooter extends React.Component {
     onCancel: PropTypes.func.isRequired,
     confirmText: PropTypes.string,
     cancelText: PropTypes.string,
-    confirmColor: PropTypes.oneOf(buttonColors).isRequired,
-    cancelColor: PropTypes.oneOf(buttonColors).isRequired,
+    confirmColor: PropTypes.oneOf(Object.values(buttonColors)).isRequired,
+    cancelColor: PropTypes.oneOf(Object.values(buttonColors)).isRequired,
     disableConfirm: PropTypes.bool,
     disableCancel: PropTypes.bool,
     children: PropTypes.any,
@@ -27,8 +27,8 @@ export default class ConfirmCancelFooter extends React.Component {
   static defaultProps = {
     confirmText: i18n.dialogOK(),
     cancelText: i18n.cancel(),
-    confirmColor: 'purple',
-    cancelColor: 'black',
+    confirmColor: buttonColors.purple,
+    cancelColor: buttonColors.black,
   };
 
   render() {
