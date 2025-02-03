@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-01-28T19:22:33.000Z",
   "level_num": "custom",
@@ -91,8 +90,8 @@
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 1,
+          "assetId": 303
         }
       ],
       [
@@ -155,8 +154,8 @@
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 2,
+          "assetId": 303
         },
         {
           "tileType": 0,
@@ -175,8 +174,8 @@
         },
         {
           "tileType": 1,
-          "value": 3,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
         }
       ],
       [
@@ -197,8 +196,8 @@
         },
         {
           "tileType": 1,
-          "value": 5,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 0,
@@ -333,6 +332,11 @@
         },
         {
           "tileType": 1,
+          "value": 2,
+          "assetId": 303
+        },
+        {
+          "tileType": 1,
           "value": 0,
           "assetId": 0
         },
@@ -340,11 +344,6 @@
           "tileType": 1,
           "value": 6,
           "assetId": 303
-        },
-        {
-          "tileType": 1,
-          "value": 0,
-          "assetId": 0
         }
       ]
     ],
@@ -353,7 +352,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "# Do This\r\n1. Create a function called `navigate_path` that moves the Painter forward until it can no longer move.\r\n    - Hint: Use the`while painter.can_move()` method to set a direction for the Painter.\r\n2. Use the `navigate_path()` function inside a loop to navigate through the Neighborhood.\r\n    - Hint: Remember to use the `turn_left()` and `turn_right()` functions as needed.\r\n3. Run your code and observe how the Painter collects paint and moves forward.\r\n",
+    "long_instructions": "# Do This\r\n1. Create a function called `navigate_path` that moves the Painter forward until it can no longer move.\r\n    - Hint: Use a `while` loop and a `can_move()` method to set a direction for the Painter.\r\n2. Use the `navigate_path()` function inside a loop to navigate through the Neighborhood.\r\n    - Hint: Remember to use the `turn_left()` Painter method and `turn_right()` function as needed.\r\n3. Run your code and observe how the Painter collects paint and moves forward.\r\n",
     "start_sources": {
       "files": {
         "0": {
@@ -370,8 +369,10 @@
       }
     },
     "display_name": "Navigate a Path with Obstacles",
-    "thumbnail_url": "https://images.code.org/6e32ecbff7f255db987a4ec2f74f226f-Screenshot 2025-01-28 at 4.03.18 PM.png"
+    "thumbnail_url": "https://images.code.org/412b516650f95499da892363405438eb-Screenshot 2025-01-31 at 10.56.01 AM.png",
+    "encrypted_exemplar_sources": "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\nBfUMkrs+mHM0Wg==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-28T19:22:33.555+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson9-level5b\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson9-level5b\"},{\"changed_at\":\"2025-01-28 19:22:42 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-28 23:01:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-28 23:04:47 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 02:08:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 02:08:44 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 02:25:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 02:25:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 17:11:00 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 17:57:22 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-28T19:22:33.555+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson9-level5b\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson9-level5b\"},{\"changed_at\":\"2025-01-28 19:22:42 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-28 23:01:57 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-28 23:04:47 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 02:08:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 02:08:44 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 02:25:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 02:25:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 17:11:00 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 17:57:22 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-30 23:38:37 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 04:16:09 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 04:16:31 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 04:19:06 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 18:00:53 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

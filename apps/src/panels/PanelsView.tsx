@@ -1,10 +1,10 @@
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import markdownToTxt from 'markdown-to-txt';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import Typist from 'react-typist';
 
 import {capitalizeFirstLetter} from '@cdo/apps/blockly/utils';
-import {Button} from '@cdo/apps/componentLibrary/button';
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
 import {LessonBackground} from '@cdo/apps/types/progressTypes';
 

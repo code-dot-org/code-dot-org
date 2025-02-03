@@ -5,9 +5,11 @@ import Draggable, {DraggableEventHandler} from 'react-draggable';
 import Button from '@cdo/apps/componentLibrary/button';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
+import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
 import AiDiffChat from './AiDiffChat';
+import AiDiffWelcome from './welcome/AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
 
@@ -23,6 +25,7 @@ interface AiDiffContainerProps {
   lessonId: number;
   lessonName: string;
   unitDisplayName: string;
+  disableWelcome?: boolean;
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
@@ -31,12 +34,18 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   lessonId,
   lessonName,
   unitDisplayName,
+  // TODO(lfm): remove this when welcome is ready to be shown.
+  disableWelcome = true,
 }) => {
   const [positionX, setPositionX] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
   );
   const [positionY, setPositionY] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_Y, 0)) || 0
+  );
+
+  const hasCompletedAiDifferentiationWelcome = useAppSelector(
+    state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
 
   useEffect(() => {
@@ -92,12 +101,22 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             />
           </div>
         </div>
+
         <div className={style.fabBackground}>
-          <AiDiffChat
-            lessonId={lessonId}
-            lessonName={lessonName}
-            unitDisplayName={unitDisplayName}
-          />
+          {!disableWelcome && !hasCompletedAiDifferentiationWelcome ? (
+            <AiDiffWelcome
+              setShowWelcomeExperience={() => {}}
+              lessonId={lessonId}
+              lessonName={lessonName}
+              unitDisplayName={unitDisplayName}
+            />
+          ) : (
+            <AiDiffChat
+              lessonId={lessonId}
+              lessonName={lessonName}
+              unitDisplayName={unitDisplayName}
+            />
+          )}
         </div>
       </div>
     </Draggable>

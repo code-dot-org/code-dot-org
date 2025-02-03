@@ -27,7 +27,7 @@ export interface DividerProps extends HTMLAttributes<HTMLElement> {
  * Used to render a section divider line. Can be used to break up the page or section content.
  */
 
-export const Divider: React.FC<DividerProps> = ({
+const Divider: React.FC<DividerProps> = ({
   color = 'primary',
   margin = 'none',
   className,
@@ -41,3 +41,5 @@ export const Divider: React.FC<DividerProps> = ({
     )}
   />
 );
+
+export default Divider;

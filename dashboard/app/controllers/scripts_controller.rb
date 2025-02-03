@@ -93,6 +93,7 @@ class ScriptsController < ApplicationController
       locale_code: request.locale,
       course_link: @script.course_link(params[:section_id]),
       course_title: @script.course_title || I18n.t('view_all_units'),
+      is_single_unit_course: @script.unit_group&.single_unit_course?,
       sections: @sections
     }
 

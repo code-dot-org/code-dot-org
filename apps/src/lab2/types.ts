@@ -327,10 +327,8 @@ export interface ExtraLinksLevelData {
   can_clone: boolean;
   can_delete: boolean;
   level_name: string;
-  script_level_path_links: {
-    script: string;
-    path: string;
-  }[];
+  script_level_path_links: ScriptLevelPathLink[];
+  parent_level_path_links: ParentLevelPathLink[];
   is_standalone_project: boolean;
 }
 export interface ExtraLinksProjectData {
@@ -351,4 +349,16 @@ export interface ProjectVersion {
   versionId: string;
   lastModified: string;
   isLatest: boolean;
+}
+
+export interface ScriptLevelPathLink {
+  script: string;
+  path: string;
+}
+
+export interface ParentLevelPathLink {
+  level_name: string;
+  path: string;
+  kind: string;
+  position: string;
 }

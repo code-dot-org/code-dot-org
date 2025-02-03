@@ -14224,13 +14224,27 @@ en:
               name: Designing Text
             lesson-4:
               name: Level Types
+            lesson-5:
+              name: " READ ME"
+            lesson-6:
+              name: Color
+            lesson-7:
+              name: Text
+            lesson-8:
+              name: Content
+            lesson-9:
+              name: Images
+            lesson-10:
+              name: Citations
+            lesson-11:
+              name: Component Library
           lesson_groups: {}
           name: pl-team-design-guide
-          title: Professional Learning Design Guide
+          title: Professional Learning Team Style Guide
           description_audience: ''
           description_short: ''
-          description: "## Welcome!\n\n##### This guide is written and maintained by the Code.org Professional Learning team. It houses norms, best practices, and examples for creating a self-paced, asynchronous learning experience. **Please do not revise this script without permission from the team**, but please feel free to look at the code for individual levels for inspiration and guidance.\n\n<!-- Despite our guidance stating that body text should be H4 size, this overview text is H5 size to be visually consistent with the curriculum. -->"
-          student_description: "## Welcome!\n\n##### This guide is written and maintained by the Code.org Professional Learning team. It houses norms, best practices, and examples for creating a self-paced, asynchronous learning experience. **Please do not revise this script without permission from the team**, but please feel free to look at the code for individual levels for inspiration and guidance.\n\n<!-- Despite our guidance stating that body text should be H4 size, this overview text is H5 size to be visually consistent with the curriculum. -->"
+          description: "## Welcome!\n\n#### This **internal guide** is written and maintained by the Code.org Professional Learning team. It was created to unify the look and feel of our professional learning offerings and ensure we publish accessible content.\n\n#### This guide houses norms, best practices, and examples for creating self-paced, asynchronous learning experiences. Please do not revise this script without permission from the team, but feel free to look at the code for individual levels for inspiration and guidance."
+          student_description: "## Welcome!\n\n#### This **internal** guide is written and maintained by the Code.org Professional Learning team. It was created to unify the look and feel of our professional learning offerings and ensure we publish accessible content.\n\n#### This guide houses norms, best practices, and examples for creating a self-paced, asynchronous learning experience. **Please do not revise this script without permission from the team**, but please feel free to look at the code for individual levels for inspiration and guidance."
         self-paced-pl-microbit-2024-1:
           lessons:
             lesson-1:
@@ -18198,6 +18212,12 @@ en:
               name: L4
             lesson-6:
               name: 'L1: Placeholder!'
+            lesson-7:
+              name: L5
+            lesson-8:
+              name: L6
+            lesson-9:
+              name: L7
           lesson_groups:
             lessonGroup-3:
               display_name: New Neighborhood (w Panels + Chatbot Levels)
@@ -18599,9 +18619,39 @@ en:
               name: Introduction to Loops
             lesson-5:
               name: Conditional Statements
+            lesson-6:
+              name: 'Lesson 1: pre-assessment'
+            lesson-7:
+              name: 'Lesson 2: Computing Careers'
+            lesson-8:
+              name: 'Lesson 3: Computational Thinking'
+            lesson-9:
+              name: 'Leeson 4: Designing Algorithms'
+            lesson-10:
+              name: 'Lesson 5: Variables & Data Flow'
+            lesson-11:
+              name: 'Lesson 6: Working with Objects'
+            lesson-12:
+              name: 'Lesson 7: Functions and Parameters'
+            lesson-13:
+              name: 'Lesson 8: Debugging Strategies'
+            lesson-14:
+              name: 'Lesson 9: Intro to Loops'
+            lesson-15:
+              name: 'Lesson 10: Conditionals'
+            lesson-16:
+              name: 'Lesson 11: Algorithms in Apps'
+            lesson-17:
+              name: 'Lesson 12: Decomping a Pixel Image'
+            lesson-18:
+              name: 'Lesson 13: Two-Way & Nested Selection'
+            lesson-19:
+              name: 'Lesson 14: Pixels of Me Project'
           lesson_groups:
             lessonGroup-2:
               display_name: console-only levels
+            lessonGroup-3:
+              display_name: Regular Lessons/Levels
           name: 6-12-intro-to-programming-python
           title: 6-12 Intro to Programming (Python) Playground
           description_audience: ''
@@ -18674,3 +18724,53 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        music-early-pilot-gj:
+          lessons:
+            lesson-1:
+              name: Lesson1
+          lesson_groups: {}
+          name: music-early-pilot-gj
+          title: music-early-pilot-gj
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        intro-to-data-science-beta:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Getting Started
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          title: Introduction to Data Science
+          description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use CODAP for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n  <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n   <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n  <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n-   Understand the foundations of data science and its interdisciplinary nature. \n-   Create and refine data questions to guide investigations. \n-   Analyze data using CODAP and apply various analysis techniques. \n-   Develop visualizations to help answer data questions. \n-   Use analysis results to tell a compelling data story. \n-   Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n    </div> \n    </details>"
+          student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using CODAP to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n<p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n-   Understand the foundations of data science and its interdisciplinary nature. \n-   Create and refine data questions to guide investigations. \n-   Analyze data using CODAP and apply various analysis techniques. \n-   Develop visualizations to help answer data questions. \n-   Use analysis results to tell a compelling data story. \n-   Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n    </div> \n    </details>"
+          description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
+          description_audience: ''
+        data-science-with-python-beta:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Getting Started
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          title: Data Science with Python
+          description: "In this unit, students dive into data analysis using the Python programming language. They start by learning the basics of Python syntax and then progress to using data science libraries such as Pandas and Matplotlib to explore, manipulate, and visualize complex datasets. Students develop skills in data cleaning, filtering, and statistical analysis, using these tools to answer data-driven questions. The unit includes a strong emphasis on creating custom visualizations and communicating insights effectively. By the end of this unit, students will have experience in using Python to transform raw data into actionable insights, culminating in a project that addresses a community or school-based issue through a data-driven approach.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n-   Formulate data questions and create data collection plans. \n-   Write and run simple Python programs focusing on data science applications. \n-   Explore, manipulate, and analyze data using Pandas. \n-   Create and customize data visualizations with Matplotlib. \n-   Clean and filter datasets to ensure data integrity and uncover insights. \n-   Perform statistical analysis using key Pandas functions and interpret the results. \n-   Use advanced filtering techniques in Pandas to refine and analyze data. \n    </div> \n    </details>"
+          student_description: "This unit focuses on using Python to analyze and interpret real-world data sets. You learn how to use libraries like Pandas and Matplotlib to explore, manipulate, and visualize data, creating custom visualizations such as stacked bar charts and pie charts. Throughout the unit, you refine your programming and analytical skills to uncover insights from complex datasets. The unit ends with a project that allows you to apply your learning to a community or school-based issue, presenting your findings through a combination of data visualizations and Python code.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n-   Formulate data questions and create data collection plans. \n-   Write and run simple Python programs focusing on data science applications. \n-   Explore, manipulate, and analyze data using Pandas. \n-   Create and customize data visualizations with Matplotlib. \n-   Clean and filter datasets to ensure data integrity and uncover insights. \n-   Perform statistical analysis using key Pandas functions and interpret the results. \n-   Use advanced filtering techniques in Pandas to refine and analyze data. \n    </div> \n    </details>"
+          description_short: Students learn to leverage Python and popular data science libraries for data analysis, enhancing their data interpretation skills through programming.
+          description_audience: ''
+        data-science-with-python-pilot-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Getting Started
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          title: Data Science with Python
+          description: "In this unit, students dive into data analysis using the Python programming language. They start by learning the basics of Python syntax and then progress to using data science libraries such as Pandas and Matplotlib to explore, manipulate, and visualize complex datasets. Students develop skills in data cleaning, filtering, and statistical analysis, using these tools to answer data-driven questions. The unit includes a strong emphasis on creating custom visualizations and communicating insights effectively. By the end of this unit, students will have experience in using Python to transform raw data into actionable insights, culminating in a project that addresses a community or school-based issue through a data-driven approach.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n-   Formulate data questions and create data collection plans. \n-   Write and run simple Python programs focusing on data science applications. \n-   Explore, manipulate, and analyze data using Pandas. \n-   Create and customize data visualizations with Matplotlib. \n-   Clean and filter datasets to ensure data integrity and uncover insights. \n-   Perform statistical analysis using key Pandas functions and interpret the results. \n-   Use advanced filtering techniques in Pandas to refine and analyze data. \n    </div> \n    </details>"
+          student_description: "This unit focuses on using Python to analyze and interpret real-world data sets. You learn how to use libraries like Pandas and Matplotlib to explore, manipulate, and visualize data, creating custom visualizations such as stacked bar charts and pie charts. Throughout the unit, you refine your programming and analytical skills to uncover insights from complex datasets. The unit ends with a project that allows you to apply your learning to a community or school-based issue, presenting your findings through a combination of data visualizations and Python code.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n-   Formulate data questions and create data collection plans. \n-   Write and run simple Python programs focusing on data science applications. \n-   Explore, manipulate, and analyze data using Pandas. \n-   Create and customize data visualizations with Matplotlib. \n-   Clean and filter datasets to ensure data integrity and uncover insights. \n-   Perform statistical analysis using key Pandas functions and interpret the results. \n-   Use advanced filtering techniques in Pandas to refine and analyze data. \n    </div> \n    </details>"
+          description_short: Students learn to leverage Python and popular data science libraries for data analysis, enhancing their data interpretation skills through programming.
+          description_audience: ''
