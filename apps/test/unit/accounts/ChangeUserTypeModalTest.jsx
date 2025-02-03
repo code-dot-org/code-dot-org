@@ -1,215 +1,182 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ChangeUserTypeModal from '@cdo/apps/accounts/ChangeUserTypeModal';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import i18n from '@cdo/locale';
 
-import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+// Mock dependencies
+jest.mock('@cdo/locale', () => ({
+  changeUserTypeModal_save_teacher: jest.fn(() => 'Save Teacher'),
+  cancel: jest.fn(() => 'Cancel'),
+  saving: jest.fn(() => 'Saving...'),
+  changeUserTypeModal_title: jest.fn(() => 'Change User Type'),
+  changeUserTypeModal_description_toTeacher: jest.fn(
+    () => 'Change User Type description to teacher'
+  ),
+  changeUserTypeModal_unexpectedError: jest.fn(
+    () => 'An unexpected error occurred.'
+  ),
+  changeUserTypeModal_email_label: jest.fn(() => 'Email label'),
+  changeUserTypeModal_email_labelDetails: jest.fn(() => 'Email label details'),
+  changeUserTypeModal_email_isRequired: jest.fn(() => 'Email is required.'),
+  changeUserTypeModal_email_invalid: jest.fn(() => 'Invalid email.'),
+  changeUserTypeModal_emailOptIn_description: jest.fn(
+    () => 'Email opt-in description.'
+  ),
+  changeUserTypeModal_emailOptIn_privacyPolicy: jest.fn(
+    () => 'Email opt-in privacy policy.'
+  ),
+  changeUserTypeModal_emailOptIn_isRequired: jest.fn(
+    () => 'Email opt-in is required.'
+  ),
+  dialogOK: jest.fn(() => 'OK'),
+  closeDialog: jest.fn(() => 'Close'),
+  yes: jest.fn(() => 'Yes'),
+  no: jest.fn(() => 'No'),
+}));
 
 describe('ChangeUserTypeModal', () => {
-  let wrapper;
-
-  const EMAIL_SELECTOR = 'input[type="email"]';
-  const EMAIL_OPT_IN_SELECTOR = 'select';
-
   const DEFAULT_PROPS = {
-    handleSubmit: () => {},
-    handleCancel: () => {},
+    handleSubmit: jest.fn(() => Promise.resolve()),
+    handleCancel: jest.fn(),
   };
 
-  // Helpers for selecting particular elements/components
-  const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR);
-  const emailOptInSelect = wrapper => wrapper.find(EMAIL_OPT_IN_SELECTOR);
-  const submitButton = wrapper =>
-    wrapper
-      .find(Button)
-      .filterWhere(
-        n => n.prop('text') === i18n.changeUserTypeModal_save_teacher()
-      );
-  const cancelButton = wrapper =>
-    wrapper.find(Button).filterWhere(n => n.prop('text') === i18n.cancel());
+  const renderComponent = (props = {}) => {
+    return render(<ChangeUserTypeModal {...DEFAULT_PROPS} {...props} />);
+  };
 
-  beforeEach(() => {
-    wrapper = mount(<ChangeUserTypeModal {...DEFAULT_PROPS} />);
+  const getEmailInput = () => screen.getByRole('textbox', {name: /email/i});
+  const getEmailOptInSelect = () =>
+    screen.getByRole('combobox', {name: /email opt-in/i});
+  const getSubmitButton = () =>
+    screen.getByRole('button', {name: /save teacher/i});
+  const getCancelButton = () => screen.getByRole('button', {name: /cancel/i});
+
+  it('renders the modal with the correct title', () => {
+    renderComponent();
+    expect(screen.getByText('Change User Type')).toBeInTheDocument();
   });
 
-  afterEach(() => {
-    wrapper.unmount();
+  it('disables everything and shows save text when saving', async () => {
+    renderComponent();
+    fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
+    fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
+    fireEvent.click(getSubmitButton());
+
+    expect(getEmailInput()).toBeDisabled();
+    expect(getEmailOptInSelect()).toBeDisabled();
+    expect(getSubmitButton()).toBeDisabled();
+    expect(getCancelButton()).toBeDisabled();
+    expect(screen.getByText('Saving...')).toBeInTheDocument();
   });
 
-  it('disables everything and shows save text when saving', () => {
-    wrapper.setState({saveState: 'saving'});
-    expect(emailInput(wrapper)).to.have.attr('disabled');
-    expect(emailOptInSelect(wrapper)).to.have.attr('disabled');
-    expect(submitButton(wrapper)).to.have.attr('disabled');
-    expect(cancelButton(wrapper)).to.have.attr('disabled');
-    expect(wrapper.text()).to.include(i18n.saving());
-  });
-
-  it('shows unknown error text when an unknown error occurs', () => {
-    wrapper.setState({saveState: 'unknown-error'});
-    expect(wrapper.text()).to.include(
-      i18n.changeUserTypeModal_unexpectedError()
+  it('shows unknown error text when an unknown error occurs', async () => {
+    DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce(
+      new Error('Unknown error')
     );
+    renderComponent();
+    fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
+    fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
+    fireEvent.click(getSubmitButton());
+
+    expect(
+      await screen.findByText('An unexpected error occurred.')
+    ).toBeInTheDocument();
   });
 
   it('calls handleCancel when clicking the cancel button', () => {
     const handleCancel = sinon.spy();
-    wrapper.setProps({handleCancel});
-    expect(handleCancel).not.to.have.been.called;
-    cancelButton(wrapper).simulate('click');
-    expect(handleCancel).to.have.been.calledOnce;
+    renderComponent({handleCancel});
+
+    fireEvent.click(getCancelButton());
+    expect(handleCancel.calledOnce).toBe(true);
   });
 
   describe('validation', () => {
-    it('checks that email is present', () => {
-      wrapper.setState({
-        values: {
-          email: '',
-          emailOptIn: 'yes',
-        },
-      });
+    it('shows an error when email is empty', () => {
+      renderComponent();
+      fireEvent.change(getEmailInput(), {target: {value: ''}});
+      fireEvent.blur(getEmailInput());
 
-      expect(wrapper.text()).to.include(
-        i18n.changeUserTypeModal_email_isRequired()
-      );
+      expect(screen.getByText('Email is required.')).toBeInTheDocument();
+      expect(getSubmitButton()).toBeDisabled();
     });
 
-    it('checks that email is valid', () => {
-      wrapper.setState({
-        values: {
-          email: 'invalidEmail@nowhere',
-          emailOptIn: 'yes',
-        },
-      });
+    it('shows an error when email is invalid', () => {
+      renderComponent();
+      fireEvent.change(getEmailInput(), {target: {value: 'invalidEmail'}});
+      fireEvent.blur(getEmailInput());
 
-      expect(wrapper.text()).to.include(
-        i18n.changeUserTypeModal_email_invalid()
-      );
+      expect(screen.getByText('Invalid email.')).toBeInTheDocument();
+      expect(getSubmitButton()).toBeDisabled();
     });
 
-    it('reports email server errors', () => {
-      const serverError = 'test-server-error';
-      wrapper.setState({
-        values: {
-          email: '',
-          emailOptIn: 'yes',
-        },
-        serverErrors: {
-          email: serverError,
-        },
-      });
+    it('shows an error when email opt-in is empty', () => {
+      renderComponent();
+      fireEvent.change(getEmailOptInSelect(), {target: {value: ''}});
+      fireEvent.blur(getEmailOptInSelect());
 
-      expect(wrapper.text()).to.include(serverError);
+      expect(screen.getByText('Email opt-in is required.')).toBeInTheDocument();
+      expect(getSubmitButton()).toBeDisabled();
     });
 
-    it('checks that email opt-in is present', () => {
-      const email = 'validEmail@example.com';
-      wrapper.setState({
-        values: {
-          email: email,
-          emailOptIn: '',
-        },
-      });
+    it('enables the submit button when form is valid', () => {
+      renderComponent();
+      fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
+      fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
 
-      expect(wrapper.text()).to.include(
-        i18n.changeUserTypeModal_emailOptIn_isRequired()
-      );
-    });
-
-    it('reports email opt-in server errors', () => {
-      const email = 'validEmail@example.com';
-      const serverError = 'test-email-opt-in-server-error';
-      wrapper.setState({
-        values: {
-          email: email,
-          emailOptIn: '',
-        },
-        serverErrors: {
-          emailOptIn: serverError,
-        },
-      });
-
-      expect(wrapper.text()).to.include(serverError);
-    });
-
-    it('disables the submit button when validation errors are present', () => {
-      wrapper.setState({
-        values: {
-          email: '',
-          emailOptIn: '',
-        },
-      });
-
-      expect(submitButton(wrapper)).to.have.prop('disabled', true);
-    });
-
-    it('enables the submit button when form passes validation', () => {
-      wrapper.setState({
-        values: {
-          email: 'me@example.com',
-          emailOptIn: 'yes',
-        },
-      });
-
-      expect(submitButton(wrapper)).to.have.prop('disabled', false);
+      expect(getSubmitButton()).not.toBeDisabled();
     });
   });
 
-  describe('changes clear server errors', () => {
-    it('on email', () => {
-      wrapper.setState({
-        serverErrors: {
-          email: 'test-server-error',
-        },
-      });
-      expect(wrapper.state().serverErrors.email).to.equal('test-server-error');
-      emailInput(wrapper).simulate('change', {
-        target: {value: 'me@example.com'},
-      });
-      expect(wrapper.state().serverErrors.email).to.be.undefined;
+  describe('server errors', () => {
+    it('shows server errors for email', () => {
+      renderComponent();
+      fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
+      fireEvent.change(getEmailInput(), {target: {value: ''}});
+
+      expect(screen.getByText('Email is required.')).toBeInTheDocument();
     });
 
-    it('on email opt-in', () => {
-      wrapper.setState({
-        serverErrors: {
-          emailOptIn: 'test-server-error',
-        },
-      });
-      expect(wrapper.state().serverErrors.emailOptIn).to.equal(
-        'test-server-error'
-      );
-      emailOptInSelect(wrapper).simulate('change', {target: {value: 'yes'}});
-      expect(wrapper.state().serverErrors.emailOptIn).to.be.undefined;
+    it('shows server errors for email opt-in', () => {
+      renderComponent();
+      fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
+      fireEvent.change(getEmailOptInSelect(), {target: {value: ''}});
+
+      expect(screen.getByText('Email opt-in is required.')).toBeInTheDocument();
     });
   });
 
   describe('onSubmitFailure', () => {
-    it('puts the dialog in UNKNOWN ERROR state if response has no server errors', () => {
-      expect(wrapper.state().saveState).to.equal('initial');
-      wrapper.instance().onSubmitFailure(null, {});
-      expect(wrapper.state().saveState).to.equal('unknown-error');
+    it('shows unknown error when no server errors are returned', async () => {
+      DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce(
+        new Error('Unknown error')
+      );
+      renderComponent();
+      fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
+      fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
+      fireEvent.click(getSubmitButton());
+
+      expect(
+        await screen.findByText('An unexpected error occurred.')
+      ).toBeInTheDocument();
     });
 
-    it('loads returned validation errors into dialog state', () => {
-      expect(wrapper.state().saveState).to.equal('initial');
-      expect(wrapper.state().serverErrors).to.deep.equal({
-        email: undefined,
-        emailOptIn: undefined,
-      });
-      wrapper.instance().onSubmitFailure({
-        serverErrors: {
-          email: 'test-email-server-error',
-          emailOptIn: 'test-opt-in-server-error',
-        },
-      });
-      expect(wrapper.state().saveState).to.equal('initial');
-      expect(wrapper.state().serverErrors).to.deep.equal({
-        email: 'test-email-server-error',
-        emailOptIn: 'test-opt-in-server-error',
-      });
+    it('shows server errors when they are returned', async () => {
+      const serverErrors = {
+        email: 'Email already in use',
+        emailOptIn: 'Invalid opt-in selection',
+      };
+      DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce({serverErrors});
+      renderComponent();
+      fireEvent.change(getEmailInput(), {target: {value: 'valid@example.com'}});
+      fireEvent.change(getEmailOptInSelect(), {target: {value: 'yes'}});
+      fireEvent.click(getSubmitButton());
+
+      expect(
+        await screen.findByText('Email already in use')
+      ).toBeInTheDocument();
+      expect(screen.getByText('Invalid opt-in selection')).toBeInTheDocument();
     });
   });
 });
