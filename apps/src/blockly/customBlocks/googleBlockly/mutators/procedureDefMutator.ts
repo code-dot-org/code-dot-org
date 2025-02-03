@@ -136,9 +136,10 @@ export const procedureDefMutator = {
 
   /**
    * Accepts a JSON serializable state value and applies it to the block.
+   * Overridden to support initial block states for the modal function editor,
+   * and legacy state for user-created functions and invisible blocks.
    * @param state The state to apply to this block (see saveExtraState above).
    */
-  // TODO: define a better type for state.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   loadExtraState: function (this: ProcedureBlock, state: Record<string, any>) {
     const map = this.workspace.getProcedureMap();
@@ -169,14 +170,21 @@ export const procedureDefMutator = {
       );
     }
 
+    // Customization: Sets the description field of the block.
     setBlockDescription(this, state['description']);
+
     this.doProcedureUpdate();
+
+    // Customization: Sets the initial delete/edit/move configuration of the block.
     if (!Blockly.useModalFunctionEditor) {
       this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
       this.setEditable(state['initialEditConfig'] === false ? false : true);
       this.setMovable(state['initialMoveConfig'] === false ? false : true);
     }
+
     this.setStatements_(state['hasStatements'] === false ? false : true);
+
+    // Customization: Handles the legacy state for user-created functions and invisible blocks.
     this.userCreated = state['userCreated'];
     this.invisible = state['invisible'];
   },
