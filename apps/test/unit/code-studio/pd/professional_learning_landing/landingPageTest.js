@@ -45,26 +45,14 @@ const TEST_WORKSHOP = {
 
 const TEST_WORKSHOP_SESSIONS = [
   {
-    year: '2030',
-    month: '02',
-    day: '03',
-    start_hour: '09',
-    start_min: '30',
-    end_hour: '14',
-    end_min: '00',
-    time_text: '9:30AM - 2:00PM',
-    date_text: 'February 3, 2025',
+    id: 1,
+    start: '2025-01-23 09:00:00',
+    end: '2025-01-23 14:00:00',
   },
   {
-    year: '2030',
-    month: '02',
-    day: '04',
-    start_hour: '09',
-    start_min: '30',
-    end_hour: '14',
-    end_min: '00',
-    time_text: '9:30AM - 2:00PM',
-    date_text: 'February 4, 2025',
+    id: 2,
+    start: '2025-01-24 09:00:00',
+    end: '2025-01-24 14:00:00',
   },
 ];
 

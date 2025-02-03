@@ -31,6 +31,12 @@ const MonthNames = [
   'December',
 ];
 
+// Ensures the given value is two digits long (padded with a '0' if necessary)
+// so that time intervals are always two digits long.
+const zeroPad = value => {
+  return value.toString().padStart(2, '0');
+};
+
 const generateDateText = session => {
   const date = new Date(session.start);
   return `${
@@ -69,16 +75,15 @@ export const buildGoogleCalendarLink = (
   const end = new Date(session.end);
   // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
   // as January, so the month needs to be offset by 1.
-  const date = `${start.getFullYear()}${(start.getMonth() + 1).padStart(
-    2,
-    '0'
-  )}${start.getDate().padStart(2, '0')}`;
-  const startTime = `${date}T${start.getHours().padStart(2, '0')}${start
-    .getMinutes()
-    .padStart(2, '0')}00`;
-  const endTime = `${date}T${end.getHours().padStart(2, '0')}${end
-    .getMinutes()
-    .padStart(2, '0')}00`;
+  const date = `${start.getFullYear()}${zeroPad(start.getMonth() + 1)}${zeroPad(
+    start.getDate()
+  )}`;
+  const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
+    start.getMinutes()
+  )}00`;
+  const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
+    end.getMinutes()
+  )}00`;
 
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
     workshopTitle
@@ -96,16 +101,15 @@ export const buildOutlookCalendarLink = (
   const end = new Date(session.end);
   // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
   // as January, so the month needs to be offset by 1.
-  const date = `${start.getFullYear()}-${(start.getMonth() + 1).padStart(
-    2,
-    '0'
-  )}-${start.getDate().padStart(2, '0')}`;
-  const startTime = `${date}T${start.getHours().padStart(2, '0')}:${start
-    .getMinutes()
-    .padStart(2, '0')}:00`;
-  const endTime = `${date}T${end.getHours().padStart(2, '0')}:${end
-    .getMinutes()
-    .padStart(2, '0')}:00`;
+  const date = `${start.getFullYear()}-${zeroPad(
+    start.getMonth() + 1
+  )}-${zeroPad(start.getDate())}`;
+  const startTime = `${date}T${zeroPad(start.getHours())}:${zeroPad(
+    start.getMinutes()
+  )}:00`;
+  const endTime = `${date}T${zeroPad(end.getHours())}:${zeroPad(
+    end.getMinutes()
+  )}:00`;
 
   return `https://outlook.live.com/calendar/action/compose?rru=addevent&subject=${encodeURIComponent(
     workshopTitle
