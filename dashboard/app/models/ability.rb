@@ -498,13 +498,13 @@ class Ability
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
 
-      can [:log_chat_event], AichatEvent do
+      can :log_chat_event, :aichat_event do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
 
       # Additional logic that confirms that a given teacher should have access
       # to a given student's chat history is in aichat_controller.
-      can [:student_chat_history, :submit_teacher_feedback], AichatEvent do
+      can [:student_chat_history, :submit_teacher_feedback], :aichat_event do
         user.teacher_can_access_ai_chat?
       end
 

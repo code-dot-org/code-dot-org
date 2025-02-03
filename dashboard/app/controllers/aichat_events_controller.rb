@@ -1,5 +1,5 @@
 class AichatEventsController < ApplicationController
-  authorize_resource
+  authorize_resource class: false
 
   # params are newChatEvent: ChatEvent, aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat_events/log_chat_event
