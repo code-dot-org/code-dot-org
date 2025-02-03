@@ -74,10 +74,10 @@ describe('AddParentEmailModal', () => {
   it('disables everything and shows save text when saving', async () => {
     renderComponent();
     fireEvent.change(getParentEmailInput(), {
-      target: {value: 'new@example.com'}
+      target: {value: 'new@example.com'},
     });
     fireEvent.change(getConfirmedParentEmailInput(), {
-      target: {value: 'new@example.com'}
+      target: {value: 'new@example.com'},
     });
     fireEvent.click(getSubmitButton());
 
@@ -96,10 +96,10 @@ describe('AddParentEmailModal', () => {
     );
     renderComponent();
     fireEvent.change(getParentEmailInput(), {
-      target: {value: 'new@example.com'}
+      target: {value: 'new@example.com'},
     });
     fireEvent.change(getConfirmedParentEmailInput(), {
-      target: {value: 'new@example.com'}
+      target: {value: 'new@example.com'},
     });
     fireEvent.click(getSubmitButton());
 
@@ -129,7 +129,7 @@ describe('AddParentEmailModal', () => {
     it('shows an error when parent email is invalid', () => {
       renderComponent();
       fireEvent.change(getParentEmailInput(), {
-        target: {value: 'invalidEmail'}
+        target: {value: 'invalidEmail'},
       });
       fireEvent.blur(getParentEmailInput());
 
@@ -139,7 +139,9 @@ describe('AddParentEmailModal', () => {
 
     it('shows an error when parent email is the same as the current one', () => {
       renderComponent();
-      fireEvent.change(getParentEmailInput(), {target: {value: 'old@example.com'}});
+      fireEvent.change(getParentEmailInput(), {
+        target: {value: 'old@example.com'},
+      });
       fireEvent.blur(getParentEmailInput());
 
       expect(
@@ -151,10 +153,10 @@ describe('AddParentEmailModal', () => {
     it('shows an error when confirmed email does not match parent email', () => {
       renderComponent();
       fireEvent.change(getParentEmailInput(), {
-        target: {value: 'new@example.com'}
+        target: {value: 'new@example.com'},
       });
       fireEvent.change(getConfirmedParentEmailInput(), {
-        target: {value: 'different@example.com'}
+        target: {value: 'different@example.com'},
       });
       fireEvent.blur(getConfirmedParentEmailInput());
 
@@ -167,10 +169,10 @@ describe('AddParentEmailModal', () => {
     it('enables the submit button when form is valid', () => {
       renderComponent();
       fireEvent.change(getParentEmailInput(), {
-        target: {value: 'new@example.com'}
+        target: {value: 'new@example.com'},
       });
       fireEvent.change(getConfirmedParentEmailInput(), {
-        target: {value: 'new@example.com'}
+        target: {value: 'new@example.com'},
       });
       fireEvent.click(getEmailOptInYes());
 
@@ -182,15 +184,15 @@ describe('AddParentEmailModal', () => {
     it('shows server errors for parent email', async () => {
       const serverError = 'Email already in use';
       DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce({
-        serverErrors: {parentEmail: serverError}
+        serverErrors: {parentEmail: serverError},
       });
       renderComponent();
       fireEvent.change(getParentEmailInput(), {
-        target: {value: 'new@example.com'}}
-      );
+        target: {value: 'new@example.com'},
+      });
       fireEvent.change(getConfirmedParentEmailInput(), {
-        target: {value: 'new@example.com'}}
-      );
+        target: {value: 'new@example.com'},
+      });
       fireEvent.click(getSubmitButton());
 
       expect(await screen.findByText(serverError)).toBeInTheDocument();
@@ -204,11 +206,11 @@ describe('AddParentEmailModal', () => {
       );
       renderComponent();
       fireEvent.change(getParentEmailInput(), {
-        target: {value: 'new@example.com'}}
-      );
+        target: {value: 'new@example.com'},
+      });
       fireEvent.change(getConfirmedParentEmailInput(), {
-        target: {value: 'new@example.com'}}
-      );
+        target: {value: 'new@example.com'},
+      });
       fireEvent.click(getSubmitButton());
 
       expect(
@@ -223,10 +225,10 @@ describe('AddParentEmailModal', () => {
       DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce({serverErrors});
       renderComponent();
       fireEvent.change(getParentEmailInput(), {
-        target: {value: 'new@example.com'}
+        target: {value: 'new@example.com'},
       });
       fireEvent.change(getConfirmedParentEmailInput(), {
-        target: {value: 'new@example.com'}
+        target: {value: 'new@example.com'},
       });
       fireEvent.click(getSubmitButton());
 
