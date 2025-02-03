@@ -1,10 +1,9 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ChangeUserTypeModal from '@cdo/apps/accounts/ChangeUserTypeModal';
 
-// Mock dependencies
+// Mock i18n strings used in the components
 jest.mock('@cdo/locale', () => ({
   changeUserTypeModal_save_teacher: jest.fn(() => 'Save Teacher'),
   cancel: jest.fn(() => 'Cancel'),
@@ -85,11 +84,11 @@ describe('ChangeUserTypeModal', () => {
   });
 
   it('calls handleCancel when clicking the cancel button', () => {
-    const handleCancel = sinon.spy();
+    const handleCancel = jest.fn();
     renderComponent({handleCancel});
 
     fireEvent.click(getCancelButton());
-    expect(handleCancel.calledOnce).toBe(true);
+    expect(handleCancel).toHaveBeenCalled();
   });
 
   describe('validation', () => {
