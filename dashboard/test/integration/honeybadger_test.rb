@@ -19,6 +19,10 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
       @original_api_key = config.api_key
       config.api_key = 'test_key'
     end
+
+    # Once we have reconfigured, we have to restart the honeybadger worker
+    Honeybadger.stop
+    Honeybadger.init_worker
   end
 
   teardown do
@@ -28,13 +32,16 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
       config.backend = @original_backend
       config.api_key = @original_api_key
     end
+
+    # Once we have reconfigured, we have to restart the honeybadger worker
+    Honeybadger.stop
+    Honeybadger.init_worker
   end
 
   # The value Honeybadger will set a filtered value to.
   FILTERED = "[FILTERED]"
 
   test "does NOT log encrypted data" do
-    skip 'races the reconfiguration and errors if it contacts real honeybadger server'
     student = create :student
     sign_in student
 
