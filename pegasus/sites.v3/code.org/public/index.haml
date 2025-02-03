@@ -25,9 +25,6 @@ style_min: true
 -# Apply this stylesheet when 'curriculum-launch-2024' is set to 'true'
 - if !!DCDO.get('curriculum-launch-2024', false)
   =inline_css '/generated/banners-curriculum-launch.css'
--# Remove this after Exploring Gen AI launch
-- if !!DCDO.get('exploring-gen-ai-launch', false)
-  =inline_css "/generated/exploring-gen-ai-hero-banner.css"
 
 - cookie_key = environment_specific_cookie_name '_user_type'
 - user_type = request.cookies[cookie_key]
