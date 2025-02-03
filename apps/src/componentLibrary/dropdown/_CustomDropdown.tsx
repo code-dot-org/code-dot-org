@@ -1,4 +1,7 @@
 import {Button, ButtonProps} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -16,9 +19,6 @@ import {
   ComponentSizeXSToL,
   DropdownColor,
 } from '@cdo/apps/componentLibrary/common/types';
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './customDropdown.module.scss';
 
