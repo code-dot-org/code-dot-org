@@ -716,16 +716,6 @@ export default class MusicBlocklyWorkspace {
         contents: [...existingToolbox.contents, ...blockList],
       };
       const workspace = this.workspace as GoogleBlockly.WorkspaceSvg;
-      // Remove any existing function call blocks before updating the toolbox.
-      // This is necessary to prevent the blocks from being deleted twice.
-      // (When a definition block is deleted, any matching call block is also deleted.)
-      workspace
-        .getFlyout()
-        ?.getWorkspace()
-        .getBlocksByType(BLOCK_TYPES.procedureCall)
-        .forEach(block => {
-          block.dispose();
-        });
       workspace.updateToolbox(updatedToolbox);
 
       if (workspace.RTL) {
