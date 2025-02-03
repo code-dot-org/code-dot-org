@@ -1,3 +1,4 @@
+import Tags from '@code-dot-org/component-library/tags';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
 import {
@@ -9,7 +10,6 @@ import {
 } from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import Tags from '@cdo/apps/componentLibrary/tags/Tags';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
