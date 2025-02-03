@@ -4,7 +4,6 @@ import React, {memo} from 'react';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
-import {EmText} from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
@@ -42,9 +41,6 @@ const CleanFeedbackFooter: React.FC<Props> = ({id, teacherFeedback, role}) => {
         role === Role.ASSISTANT && moduleStyles.assistantFeedback
       )}
     >
-      {teacherFlagged && (
-        <EmText>{aichatI18n.chatMessage_hasBeenFlagged()}</EmText>
-      )}
       <WithTooltip
         key={`flag-tooltip-${teacherFlagged}`}
         tooltipProps={{
@@ -52,9 +48,10 @@ const CleanFeedbackFooter: React.FC<Props> = ({id, teacherFeedback, role}) => {
           direction: role === Role.ASSISTANT ? 'onRight' : 'onLeft',
           size: 'xs',
           text: teacherFlagged
-            ? aichatI18n.chatMessage_unflagAsInappropriate()
+            ? aichatI18n.chatMessage_flaggedAsInappropriate()
             : aichatI18n.chatMessage_flagAsInappropriate(),
           className: moduleStyles.tooltip,
+          iconLeft: teacherFlagged ? {iconName: 'check'} : undefined,
         }}
       >
         <Button
