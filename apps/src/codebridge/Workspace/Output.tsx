@@ -7,13 +7,17 @@ import Console from '@cdo/apps/codebridge/Console/Console';
 
 import moduleStyles from './output.module.scss';
 
-const Output: React.FunctionComponent = () => {
+interface OutputProps {
+  style?: React.CSSProperties;
+}
+
+const Output: React.FunctionComponent<OutputProps> = ({style}) => {
   const {config, labConfig} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
   const miniApp = labConfig?.miniApp?.name;
   if (!miniApp) {
     return (
-      <div className={moduleStyles.outputContainer}>
+      <div className={moduleStyles.outputContainer} style={style}>
         <Console />
       </div>
     );
@@ -25,6 +29,7 @@ const Output: React.FunctionComponent = () => {
         moduleStyles.outputContainer,
         isVertical ? moduleStyles.vertical : moduleStyles.horizontal
       )}
+      style={style}
     >
       <MiniAppPreview />
       <Console />

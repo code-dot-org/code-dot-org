@@ -45,7 +45,11 @@ const panelHeaderNames = {
   [Panels.ForTeachersOnly]: codebridgeI18n.forTeachersOnlyHeader(),
 };
 
-export const InfoPanel = React.memo(() => {
+interface InfoPanelProps {
+  style?: React.CSSProperties;
+}
+
+export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({style}) => {
   const mapReference = useAppSelector(
     state => state.lab.levelProperties?.mapReference
   );
@@ -130,32 +134,34 @@ export const InfoPanel = React.memo(() => {
   const CurrentPanelView = panelMap[currentPanel];
 
   return (
-    <PanelContainer
-      id="codebridge-info-panel"
-      headerContent={currentPanelHeader}
-      rightHeaderContent={renderHeaderButton()}
-      className={moduleStyles.infoPanel}
-      headerClassName={moduleStyles.infoPanelHeader}
-    >
-      {isDropdownOpen && (
-        <form className={moduleStyles.dropdownContainer}>
-          <ul>
-            {panelOptions.map(panel => (
-              <li key={panel}>
-                <Button
-                  color={'black'}
-                  onClick={() => changePanel(panel)}
-                  ariaLabel={panel}
-                  size={'xs'}
-                  text={panel}
-                  className={moduleStyles.dropdownItem}
-                />
-              </li>
-            ))}
-          </ul>
-        </form>
-      )}
-      <CurrentPanelView {...panelProps[currentPanel]} />
-    </PanelContainer>
+    <div style={style}>
+      <PanelContainer
+        id="codebridge-info-panel"
+        headerContent={currentPanelHeader}
+        rightHeaderContent={renderHeaderButton()}
+        className={moduleStyles.infoPanel}
+        headerClassName={moduleStyles.infoPanelHeader}
+      >
+        {isDropdownOpen && (
+          <form className={moduleStyles.dropdownContainer}>
+            <ul>
+              {panelOptions.map(panel => (
+                <li key={panel}>
+                  <Button
+                    color={'black'}
+                    onClick={() => changePanel(panel)}
+                    ariaLabel={panel}
+                    size={'xs'}
+                    text={panel}
+                    className={moduleStyles.dropdownItem}
+                  />
+                </li>
+              ))}
+            </ul>
+          </form>
+        )}
+        <CurrentPanelView {...panelProps[currentPanel]} />
+      </PanelContainer>
+    </div>
   );
-});
+};

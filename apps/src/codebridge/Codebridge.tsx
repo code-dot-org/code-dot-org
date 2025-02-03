@@ -38,6 +38,7 @@ type CodebridgeProps = {
   projectVersion: number;
   labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
+  children?: React.ReactNode;
 };
 
 export const Codebridge = React.memo(
@@ -52,6 +53,7 @@ export const Codebridge = React.memo(
     projectVersion,
     labConfig,
     sendConsoleInput,
+    children,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -123,23 +125,27 @@ export const Codebridge = React.memo(
           sendConsoleInput,
         }}
       >
-        <div
-          className={moduleStyles['cdoide-container']}
-          style={{
-            gridTemplateAreas: gridLayout,
-            gridTemplateRows: gridLayoutRows,
-            gridTemplateColumns: gridLayoutColumns,
-          }}
-        >
-          {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
-            .filter(key => gridLayoutKeys.includes(key))
-            .map(key => {
-              const Component = ComponentMap[key];
-              return <Component key={key} />;
-            })}
+        {children ? (
+          children
+        ) : (
+          <div
+            className={moduleStyles['cdoide-container']}
+            style={{
+              gridTemplateAreas: gridLayout,
+              gridTemplateRows: gridLayoutRows,
+              gridTemplateColumns: gridLayoutColumns,
+            }}
+          >
+            {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
+              .filter(key => gridLayoutKeys.includes(key))
+              .map(key => {
+                const Component = ComponentMap[key];
+                return <Component key={key} />;
+              })}
 
-          {/*<Search />*/}
-        </div>
+            {/*<Search />*/}
+          </div>
+        )}
       </CodebridgeContextProvider>
     );
   }

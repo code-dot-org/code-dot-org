@@ -1,0 +1,10 @@
+.layoutContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.workspaceAndOutput {
+  display: flex;
+  flex-direction: column;
+}

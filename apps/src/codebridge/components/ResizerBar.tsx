@@ -8,13 +8,16 @@ interface ResizeBarProps {
   isVertical: boolean;
 }
 
-const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({isVertical}) => {
+const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
+  isVertical,
+  ...props
+}) => {
   const className = isVertical
     ? moduleStyles.verticalBar
     : moduleStyles.horizontalBar;
   return (
-    <div className={classNames(moduleStyles.resizeBar, className)}>
-      <FontAwesomeV6Icon iconName={'ellipsis'} />
+    <div className={classNames(moduleStyles.resizeBar, className)} {...props}>
+      <FontAwesomeV6Icon iconName={isVertical ? 'ellipsis-v' : 'ellipsis'} />
     </div>
   );
 };

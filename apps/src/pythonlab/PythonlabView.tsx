@@ -23,6 +23,7 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import HorizontalLayout from './HorizontalLayout';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
@@ -195,7 +196,9 @@ const PythonlabView: React.FunctionComponent = () => {
           projectVersion={projectVersion}
           labConfig={labConfig}
           sendConsoleInput={sendInput}
-        />
+        >
+          <HorizontalLayout />
+        </Codebridge>
       )}
     </div>
   );
