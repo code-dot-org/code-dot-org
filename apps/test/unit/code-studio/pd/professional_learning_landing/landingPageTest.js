@@ -452,6 +452,10 @@ describe('LandingPage', () => {
   it('page shows success dialog stating workshop course when redirected here from successful non-BYOW enrollment', () => {
     const workshopCourse = 'TEST COURSE';
     sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify([TEST_WORKSHOP_SESSIONS[0]])
+    );
 
     renderDefault();
 
@@ -468,6 +472,10 @@ describe('LandingPage', () => {
     const workshopName = 'TEST NAME';
     sessionStorage.setItem('workshopCourse', workshopCourse);
     sessionStorage.setItem('workshopName', workshopName);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify([TEST_WORKSHOP_SESSIONS[0]])
+    );
 
     renderDefault();
 
