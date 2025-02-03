@@ -1,11 +1,11 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import Tags from '@code-dot-org/component-library/tags';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {RadioButton} from '@cdo/apps/componentLibrary/radioButton';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';

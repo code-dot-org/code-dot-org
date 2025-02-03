@@ -1,3 +1,4 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -10,7 +11,6 @@ import React, {
   MutableRefObject,
 } from 'react';
 
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
