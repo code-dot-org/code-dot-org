@@ -92,6 +92,7 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
       aria-label={folder.name}
       tabIndex={0}
       role="tab"
+      aria-selected={isSelected}
     >
       <div className={styles.folderRowLeft}>
         {imageSrc && (
@@ -180,7 +181,8 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
       ref={isSelected ? currentSoundRefCallback : null}
       aria-label={sound.name}
       tabIndex={0}
-      role="button"
+      role="tabpanel"
+      aria-labelledby={sound.type}
     >
       <div className={styles.soundRowLeft}>
         <FontAwesomeV6Icon
@@ -357,6 +359,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
             <div
               id="sounds-panel-left"
               role="tablist"
+              aria-orientation="vertical"
               className={styles.leftColumn}
             >
               {folders.map((folder, folderIndex) => {
