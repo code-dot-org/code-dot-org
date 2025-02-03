@@ -84,7 +84,7 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-                    color="purple"
+                    color={buttonColors.purple}
                     size="m"
                     style={styles.sendHomeInstructionsButton}
                   />
