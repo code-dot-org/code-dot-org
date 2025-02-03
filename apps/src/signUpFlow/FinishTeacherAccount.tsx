@@ -1,10 +1,10 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';

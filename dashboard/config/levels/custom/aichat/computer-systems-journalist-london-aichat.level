@@ -41,8 +41,9 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ]
-    }
+    },
+    "thumbnail_url": "https://images.code.org/4b09fb03fb993bdf6064f1b6670e88b5-Pasted Graphic 32.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T05:39:16.271+00:00\",\"changed\":[\"cloned from \\\"computer-systems-ecom-london-aichat\\\"\"],\"cloned_from\":\"computer-systems-ecom-london-aichat\"},{\"changed_at\":\"2025-01-31 05:40:25 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:39:16.271+00:00\",\"changed\":[\"cloned from \\\"computer-systems-ecom-london-aichat\\\"\"],\"cloned_from\":\"computer-systems-ecom-london-aichat\"},{\"changed_at\":\"2025-01-31 05:40:25 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 15:41:38 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

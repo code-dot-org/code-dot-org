@@ -1557,11 +1557,22 @@ class User < ApplicationRecord
 
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
 
-  # Teachers
+  def ai_tutor_permission?
+    permission?(UserPermission::AI_TUTOR_ACCESS)
+  end
+
+  def can_use_ai_iteration_tools?
+    ai_tutor_permission? && levelbuilder?
+  end
+
   def can_enable_ai_tutor?
-    !DCDO.get('ai-tutor-disabled', false) && (
-    permission?(UserPermission::AI_TUTOR_ACCESS) ||
+    !DCDO.get('ai-tutor-disabled', false) && (ai_tutor_permission? ||
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
+  end
+
+  def has_ai_tutor_access?
+    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
+    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
   end
 
   def can_view_student_ai_chat_messages?
@@ -1580,12 +1591,6 @@ class User < ApplicationRecord
 
   def has_aichat_access?
     teacher_can_access_ai_chat? || student_can_access_ai_chat?
-  end
-
-  # Students
-  def has_ai_tutor_access?
-    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
   end
 
   def student_of_verified_instructor?
