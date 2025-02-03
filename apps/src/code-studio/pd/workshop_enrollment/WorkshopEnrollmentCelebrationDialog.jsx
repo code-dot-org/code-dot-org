@@ -31,6 +31,12 @@ const MonthNames = [
   'December',
 ];
 
+// Ensures the given value is two digits long (padded with a '0' if necessary)
+// so that time intervals are always two digits long.
+const zeroPad = value => {
+  return value.toString().padStart(2, '0');
+};
+
 const generateDateText = session => {
   const date = new Date(session.start);
   return `${
@@ -58,10 +64,6 @@ const generateTimeText = session => {
     .replaceAll(' ', '');
 
   return `${startTimeText} - ${endTimeText}`;
-};
-
-const zeroPad = number => {
-  return number.toString().length === 1 ? `0${number}` : `${number}`;
 };
 
 export const buildAppleCalendarLink = (

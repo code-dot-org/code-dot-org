@@ -18,7 +18,13 @@ export default class WorkshopEnroll extends React.Component {
     workshop: WorkshopPropType,
     workshop_location_for_calendar: PropTypes.string,
     session_dates: PropTypes.arrayOf(PropTypes.string),
-    session_info_for_calendar: PropTypes.arrayOf(PropTypes.object),
+    session_info_for_calendar: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        start: PropTypes.string.isRequired,
+        end: PropTypes.string.isRequired,
+      })
+    ),
     enrollment: PropTypes.shape({
       email: PropTypes.string,
       first_name: PropTypes.string,
