@@ -42,8 +42,8 @@ async function loadPyodideAndPackages() {
     [
       'numpy',
       'matplotlib',
-      // These are custom packages that we have built. They are defined in this repo:
-      // https://github.com/code-dot-org/pythonlab-packages
+      // These are custom packages that we have built. They are defined in the
+      // python/pythonlab/ folder in the codebase.
       `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/neighborhood-0.2.0-py3-none-any.whl`,
