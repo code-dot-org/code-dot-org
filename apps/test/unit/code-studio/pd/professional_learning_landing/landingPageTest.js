@@ -441,6 +441,8 @@ describe('LandingPage', () => {
   });
 
   it('page shows success dialog stating workshop course when redirected here from successful non-BYOW enrollment', () => {
+    window.URL.createObjectURL = () => 'testCreateObjectURL';
+
     const workshopCourse = 'TEST COURSE';
     sessionStorage.setItem('workshopCourse', workshopCourse);
     sessionStorage.setItem(
@@ -459,6 +461,8 @@ describe('LandingPage', () => {
   });
 
   it('page shows success dialog stating workshop name when redirected here from successful BYOW enrollment', () => {
+    window.URL.createObjectURL = () => 'testCreateObjectURL';
+
     const workshopCourse = 'TEST COURSE';
     const workshopName = 'TEST NAME';
     sessionStorage.setItem('workshopCourse', workshopCourse);
@@ -508,7 +512,7 @@ describe('LandingPage', () => {
       )
       .getAttribute('href');
     const expectedAppleCalendarDownloadLink = buildAppleCalendarLink(
-      workshopSession,
+      [workshopSession],
       workshopCourse,
       workshopLocation
     );
