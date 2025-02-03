@@ -8,7 +8,7 @@ SOUTH = 'south'
 WEST = 'west'
 
 class PainterTracker:
-    def __init__(self, painter_id: int, position: Position, direction: str, paint_count: int):
+    def __init__(self, painter_id: str, position: Position, direction: str, paint_count: int):
         self.painter_id = painter_id
         self.starting_position = position
         self.current_position = position
@@ -22,7 +22,7 @@ class PainterTracker:
     def track_signal(self, signal: NeighborhoodSignalMessage):
         self.signals.append(signal)
         if signal.key == NeighborhoodSignalKey.MOVE:
-            direction = signal.detail["direction"]
+            direction = signal.detail["direction"].lower()
             self.current_direction = direction
             current_position = self.current_position
             if direction == NORTH:                
@@ -39,4 +39,5 @@ class PainterTracker:
             self.current_paint_count += 1
 
     def get_painter_log(self):
-        return None
+        # TODO: Implement when PainterLog is added.
+        return "painter_log"
