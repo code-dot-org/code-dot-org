@@ -17,12 +17,6 @@
   scrollbar-color: $light_gray_500 $light_gray_950;
 }
 
-.fileBrowserContents::-webkit-scrollbar {
-  background: $light_gray_950;
-  width: 10px;
-  height: 10px;
-}
-
 .file-browser ul {
   list-style: none;
   margin: 0;
