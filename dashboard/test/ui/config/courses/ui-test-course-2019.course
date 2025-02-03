@@ -1,7 +1,8 @@
 {
   "name": "ui-test-course-2019",
   "script_names": [
-    "ui-test-script-in-course-2019"
+    "ui-test-script-in-course-2019",
+    "ui-test-script-2-in-course-2019"
   ],
   "published_state": "stable",
   "instruction_type": "teacher_led",

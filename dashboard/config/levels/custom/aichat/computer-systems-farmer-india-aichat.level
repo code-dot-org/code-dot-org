@@ -41,8 +41,9 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ]
-    }
+    },
+    "thumbnail_url": "https://images.code.org/be273c6eb1e1e7cc0f7b1a6b74bb0271-Pasted Graphic 21.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T05:43:43.421+00:00\",\"changed\":[\"cloned from \\\"computer-systems-journalist-london-aichat\\\"\"],\"cloned_from\":\"computer-systems-journalist-london-aichat\"},{\"changed_at\":\"2025-01-31 05:46:08 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:43:43.421+00:00\",\"changed\":[\"cloned from \\\"computer-systems-journalist-london-aichat\\\"\"],\"cloned_from\":\"computer-systems-journalist-london-aichat\"},{\"changed_at\":\"2025-01-31 05:46:08 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 15:01:23 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

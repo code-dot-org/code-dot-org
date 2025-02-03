@@ -31,3 +31,7 @@ Feature: CourseOverview
     And I wait to see ".uitest-CourseScript"
 
     # Viewing course overview as a teacher with sections is covered in teacher_homepage.feature
+
+  Scenario: Viewing course overview for a single-unit course
+    Given I am on "http://studio.code.org/courses/ui-test-single-unit-course"
+    And I get redirected to "/s/ui-test-single-unit" via "dashboard"

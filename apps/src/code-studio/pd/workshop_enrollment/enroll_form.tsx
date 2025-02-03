@@ -3,12 +3,12 @@
  */
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {Fragment, ReactNode, useMemo, useState} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import RadioButtonsGroup from '@cdo/apps/componentLibrary/radioButton/RadioButtonsGroup';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
