@@ -799,7 +799,7 @@ en:
           description_teacher: ''
           version_title: '2024'
         self-paced-pl-csa-2024:
-          title: self-paced-pl-csa-2024
+          title: Teaching AP Computer Science A
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -1009,7 +1009,7 @@ en:
             - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
           version_title: "'24-'25"
         self-paced-foundations-cs-2024:
-          title: Teaching Foundations of Computer Science
+          title: Teaching CS and AI Foundations
           description_short: ''
           description_student: |
             ## Welcome!

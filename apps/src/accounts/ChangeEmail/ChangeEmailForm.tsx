@@ -1,6 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useState} from 'react';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';

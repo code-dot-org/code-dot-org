@@ -1,8 +1,8 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';

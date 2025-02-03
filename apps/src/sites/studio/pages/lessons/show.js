@@ -151,11 +151,13 @@ function displayDifferentiationChat() {
 
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
     ReactDOM.render(
-      <AiDiffFloatingActionButton
-        lessonId={lessonId}
-        lessonName={lessonName}
-        unitDisplayName={lessonData['unit']['displayName']}
-      />,
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          lessonId={lessonId}
+          lessonName={lessonName}
+          unitDisplayName={lessonData['unit']['displayName']}
+        />
+      </Provider>,
       aiDiffFabMountPoint
     );
   }
