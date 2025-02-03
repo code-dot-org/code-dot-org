@@ -16,14 +16,71 @@ import style from '@cdo/apps/code-studio/pd/professional_learning_landing/landin
 
 const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
 
+const MonthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+const generateDateText = session => {
+  const date = new Date(session.start);
+  return `${
+    MonthNames[date.getMonth()]
+  } ${date.getDate()}, ${date.getFullYear()}`;
+};
+
+const generateTimeText = session => {
+  const start = new Date(session.start);
+  const end = new Date(session.end);
+
+  const startTimeText = start
+    .toLocaleString('utc', {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+    })
+    .replaceAll(' ', '');
+  const endTimeText = end
+    .toLocaleString('utc', {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+    })
+    .replaceAll(' ', '');
+
+  return `${startTimeText} - ${endTimeText}`;
+};
+
+const zeroPad = number => {
+  return number.toString().length === 1 ? `0${number}` : `${number}`;
+};
+
 export const buildAppleCalendarLink = (
   session,
   workshopTitle,
   workshopLocation
 ) => {
-  const date = `${session.year}${session.month}${session.day}`;
-  const startTime = `${date}T${session.start_hour}${session.start_min}00`;
-  const endTime = `${date}T${session.end_hour}${session.end_min}00`;
+  const start = new Date(session.start);
+  const end = new Date(session.end);
+
+  const date = `${start.getFullYear()}${zeroPad(start.getMonth() + 1)}${zeroPad(
+    start.getDate()
+  )}`;
+  const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
+    start.getMinutes()
+  )}00`;
+  const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
+    end.getMinutes()
+  )}00`;
 
   const icsFileContent = [
     'BEGIN:VCALENDAR',
@@ -52,9 +109,19 @@ export const buildGoogleCalendarLink = (
   workshopTitle,
   workshopLocation
 ) => {
-  const date = `${session.year}${session.month}${session.day}`;
-  const startTime = `${date}T${session.start_hour}${session.start_min}00`;
-  const endTime = `${date}T${session.end_hour}${session.end_min}00`;
+  const start = new Date(session.start);
+  const end = new Date(session.end);
+  // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
+  // as January, so the month needs to be offset by 1.
+  const date = `${start.getFullYear()}${zeroPad(start.getMonth() + 1)}${zeroPad(
+    start.getDate()
+  )}`;
+  const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
+    start.getMinutes()
+  )}00`;
+  const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
+    end.getMinutes()
+  )}00`;
 
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
     workshopTitle
@@ -68,9 +135,19 @@ export const buildOutlookCalendarLink = (
   workshopTitle,
   workshopLocation
 ) => {
-  const date = `${session.year}-${session.month}-${session.day}`;
-  const startTime = `${date}T${session.start_hour}:${session.start_min}:00`;
-  const endTime = `${date}T${session.end_hour}:${session.end_min}:00`;
+  const start = new Date(session.start);
+  const end = new Date(session.end);
+  // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
+  // as January, so the month needs to be offset by 1.
+  const date = `${start.getFullYear()}-${zeroPad(
+    start.getMonth() + 1
+  )}-${zeroPad(start.getDate())}`;
+  const startTime = `${date}T${zeroPad(start.getHours())}:${zeroPad(
+    start.getMinutes()
+  )}:00`;
+  const endTime = `${date}T${zeroPad(end.getHours())}:${zeroPad(
+    end.getMinutes()
+  )}:00`;
 
   return `https://outlook.live.com/calendar/action/compose?rru=addevent&subject=${encodeURIComponent(
     workshopTitle
@@ -164,10 +241,10 @@ export default function WorkshopEnrollmentCelebrationDialog({
               {workshopSessionInfo.map(session => (
                 <tr key={`session-${session.id}`}>
                   <td>
-                    <BodyTwoText>{session.date_text}</BodyTwoText>
+                    <BodyTwoText>{generateDateText(session)}</BodyTwoText>
                   </td>
                   <td>
-                    <BodyTwoText>{session.time_text}</BodyTwoText>
+                    <BodyTwoText>{generateTimeText(session)}</BodyTwoText>
                   </td>
                   <td>
                     <LinkButton
