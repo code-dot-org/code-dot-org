@@ -1,3 +1,4 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import React, {useCallback, useState} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
@@ -17,7 +18,6 @@ import {
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   BodyFourText,
   BodyThreeText,

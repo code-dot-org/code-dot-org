@@ -73,7 +73,7 @@ const Console: React.FunctionComponent = () => {
           sendConsoleInput(consoleManager.getInputBuffer());
         }
         // reset buffer
-        consoleManager.clearInputBuffer();
+        consoleManager.saveAndClearInputBuffer();
       } else if (charCode < 32) {
         // control characters, do nothing
       } else if (charCode === 127) {

@@ -41,8 +41,9 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ]
-    }
+    },
+    "thumbnail_url": "https://images.code.org/5f58b32f1d4f28693f57358cc6f4a243-Pasted Graphic 37.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T06:08:57.577+00:00\",\"changed\":[\"cloned from \\\"computer-systems-contentcreator-jacket-aichat\\\"\"],\"cloned_from\":\"computer-systems-contentcreator-jacket-aichat\"},{\"changed_at\":\"2025-01-31 06:09:47 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-31T06:08:57.577+00:00\",\"changed\":[\"cloned from \\\"computer-systems-contentcreator-jacket-aichat\\\"\"],\"cloned_from\":\"computer-systems-contentcreator-jacket-aichat\"},{\"changed_at\":\"2025-01-31 06:09:47 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 15:54:18 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

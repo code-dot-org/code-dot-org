@@ -1,7 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useMemo} from 'react';
 
 import {ComponentPlacementDirection} from '@cdo/apps/componentLibrary/common/types';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import commonI18n from '@cdo/locale';
 

@@ -41,8 +41,9 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ]
-    }
+    },
+    "thumbnail_url": "https://images.code.org/2e0177c692da4e7dc054178d8b52de69-Pasted Graphic 18.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T05:54:26.187+00:00\",\"changed\":[\"cloned from \\\"computer-systems-sleepspecialist-advisor-aichat\\\"\"],\"cloned_from\":\"computer-systems-sleepspecialist-advisor-aichat\"},{\"changed_at\":\"2025-01-31 05:55:04 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:54:26.187+00:00\",\"changed\":[\"cloned from \\\"computer-systems-sleepspecialist-advisor-aichat\\\"\"],\"cloned_from\":\"computer-systems-sleepspecialist-advisor-aichat\"},{\"changed_at\":\"2025-01-31 05:55:04 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 14:52:10 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

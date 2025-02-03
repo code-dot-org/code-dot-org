@@ -19811,6 +19811,8 @@ en:
               name: 'Lesson 13: Two-Way & Nested Selection'
             lesson-19:
               name: 'Lesson 14: Pixels of Me Project'
+            lesson-20:
+              name: 'Two-Way and Nested Selection (Lesson 13) '
           lesson_groups:
             lessonGroup-2:
               display_name: console-only levels
@@ -19860,8 +19862,40 @@ en:
           description: ''
           student_description: ''
         6-12-networks-and-the-internet:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: Introduction to the Internet
+            lesson-3:
+              name: Sending Bits
+            lesson-4:
+              name: IP Addresses
+            lesson-5:
+              name: Routers and Redundancy
+            lesson-6:
+              name: Packets
+            lesson-7:
+              name: HTTP and DNS
+            lesson-8:
+              name: The Digital Devide & Net Neutrality
+            lesson-9:
+              name: Internet Access Advocacy Campaign Project
+            lesson-10:
+              name: Network Security
+            lesson-11:
+              name: Emerging Technologies
+            lesson-12:
+              name: Network Security Risk Assessment Project
+            lesson-13:
+              name: Template Levels
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Level Templates for Cloning
           name: 6-12-networks-and-the-internet
           title: 6-12 Networks and the Internet Playground
           description_audience: ''
