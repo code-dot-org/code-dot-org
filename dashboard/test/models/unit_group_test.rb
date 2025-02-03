@@ -1131,4 +1131,17 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     assert_equal ['en-US', 'it-IT', 'zh-TW'], csx.supported_locale_codes
   end
+
+  test 'single_unit_course' do
+    single_unit_course = create :single_unit_course
+
+    multi_unit_course = create :unit_group, name: 'multi-unit-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    multi_unit1 = create :script, name: 'multi-unit1'
+    multi_unit2 = create :script, name: 'multi-unit2'
+    create :unit_group_unit, unit_group: multi_unit_course, script: multi_unit1, position: 1
+    create :unit_group_unit, unit_group: multi_unit_course, script: multi_unit2, position: 2
+
+    assert single_unit_course.single_unit_course?
+    refute multi_unit_course.single_unit_course?
+  end
 end

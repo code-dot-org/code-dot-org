@@ -82,7 +82,8 @@ Dashboard::Application.routes.draw do
 
     resources :images, only: [:new]
 
-    get "/ai_tutor/tester", to: "ai_tutor#tester"
+    get "/ai_iteration/tools", to: "ai_iteration#tools"
+    get "/student_code_sample/:num_samples/:script_id/:level_id", to: "student_code_sample#fetch_student_code_samples"
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'

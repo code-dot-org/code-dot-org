@@ -1,1 +1,2 @@
-# sample empty main for testing
+# sample main for testing
+print("Hello world")

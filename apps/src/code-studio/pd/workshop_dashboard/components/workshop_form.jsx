@@ -1,6 +1,7 @@
 /**
  * Form for creating / editing workshop details.
  */
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import $ from 'jquery';
 import _ from 'lodash';
 import moment from 'moment';
@@ -25,7 +26,6 @@ import {
 import {connect} from 'react-redux';
 import Select from 'react-select';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   ActiveCourseWorkshops,
   Subjects,

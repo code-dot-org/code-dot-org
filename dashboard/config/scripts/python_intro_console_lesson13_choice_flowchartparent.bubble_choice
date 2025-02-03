@@ -1,0 +1,11 @@
+name 'python-intro-console-lesson13-choice-flowchartParent'
+display_name 'Debugging Conditionals Choice Level'
+description 'Pick one of the levels below to keep practicing conditionals.'
+
+sublevels
+level 'python-intro-console-lesson10-flowchartA'
+level 'python-intro-console-lesson10-flowchartB'
+level 'python-intro-console-lesson10-flowchartC'
+
+
+
