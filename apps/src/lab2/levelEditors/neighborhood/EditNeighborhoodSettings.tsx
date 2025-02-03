@@ -1,6 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
 import React from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
 import Slider from '@cdo/apps/componentLibrary/slider';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {MazeCell} from '@cdo/apps/lab2/types';

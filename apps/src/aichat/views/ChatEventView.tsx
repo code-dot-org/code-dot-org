@@ -1,6 +1,6 @@
-import React from 'react';
+import Alert from '@code-dot-org/component-library/alert';
+import React, {memo} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -135,4 +135,4 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   return null;
 };
 
-export default ChatEventView;
+export default memo(ChatEventView);

@@ -20,10 +20,11 @@ export interface TagProps {
   /** Tag label */
   label: string;
   /** Tag tooltip content. Can be a simple string or ReactNode (some jsx/html markup/view).
-   *  For example - check Tags.story.tsx*/
-  tooltipContent: string | React.ReactNode;
+   *  For example - check Tags.story.tsx
+   *  Can be null to disable the tooltip */
+  tooltipContent?: string | React.ReactNode;
   /** Tag tooltip id (required for better accessibility, see ) */
-  tooltipId: string;
+  tooltipId?: string;
   /** aria-label for the tag.
    *  Used to allow screen reader to read tag as ariaLabel content instead of the label content */
   ariaLabel?: string;
@@ -39,7 +40,7 @@ const Tag: React.FunctionComponent<TagProps> = ({
   tooltipId,
   icon,
 }) => {
-  return (
+  return tooltipContent && tooltipId ? (
     <WithTooltip
       tooltipProps={{
         direction: 'onTop',
@@ -57,6 +58,12 @@ const Tag: React.FunctionComponent<TagProps> = ({
         {icon && icon.placement === 'right' && <TagIcon {...icon} />}
       </div>
     </WithTooltip>
+  ) : (
+    <div className={moduleStyles.tag}>
+      {icon && icon.placement === 'left' && <TagIcon {...icon} />}
+      <span>{label}</span>
+      {icon && icon.placement === 'right' && <TagIcon {...icon} />}
+    </div>
   );
 };
 

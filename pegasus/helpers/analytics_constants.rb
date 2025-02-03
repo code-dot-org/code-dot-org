@@ -46,5 +46,8 @@ module AnalyticsConstants
     HELLOWORLD_PAGE_VISITED_EVENT = 'Hello World Page Visited'.freeze,
     HOC_LANDING_PAGE_VISITED = 'Code.org Hour of Code Landing Page Visited'.freeze,
     HOC_ACTIVITIES_PAGE_VISITED = 'Hour of Code Activities Page Visited'.freeze,
+    STUDENTS_PAGE_VISITED_EVENT = 'Students Page Visited'.freeze,
+    ELEMENTARY_STUDENT_PAGE_VISITED_EVENT = 'Elementary Student Page Visited'.freeze,
+    MIDDLE_HIGH_STUDENT_PAGE_VISITED_EVENT = 'Middle and High School Student Page Visited'.freeze,
   ].freeze
 end

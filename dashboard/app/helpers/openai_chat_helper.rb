@@ -6,9 +6,9 @@ module OpenaiChatHelper
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   GPT_MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERISON
-  AICHAT_SAFETY_GPT_MODEL = SharedConstants::AICHAT_SAFETY_MODEL_VERSION
+  AICHAT_GPT_MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
-  def self.request_chat_completion(messages)
+  def self.request_chat_completion(messages, temperature = TEMPERATURE, model = GPT_MODEL)
     # Set up the API endpoint URL and request headers
     headers = {
       "Content-Type" => "application/json",
@@ -17,8 +17,8 @@ module OpenaiChatHelper
     headers["OpenAI-Organization"] = CDO.openai_chat_completion_org_id if CDO.openai_chat_completion_org_id
 
     data = {
-      model: GPT_MODEL,
-      temperature: TEMPERATURE,
+      model: model,
+      temperature: temperature,
       messages: messages
     }
 
@@ -50,7 +50,7 @@ module OpenaiChatHelper
       }
     ]
     data = {
-      model: AICHAT_SAFETY_GPT_MODEL,
+      model: AICHAT_GPT_MODEL,
       messages: messages
     }
 

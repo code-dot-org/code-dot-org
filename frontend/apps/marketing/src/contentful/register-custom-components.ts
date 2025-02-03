@@ -3,14 +3,20 @@
  *
  * Note: This file must be imported both server-side and client-side to ensure Contentful is able to map on both rendering modes.
  */
+import Divider, {
+  DividerContentfulComponentDefinition,
+} from '@/components/divider';
+import Heading, {
+  HeadingContentfulComponentDefinition,
+} from '@/components/heading';
+import Paragraph, {
+  ParagraphContentfulComponentDefinition,
+} from '@/components/paragraph';
+
 import {
   defineComponents,
   CONTENTFUL_COMPONENTS,
 } from '@contentful/experiences-sdk-react';
-import {
-  Divider,
-  DividerContentfulComponentDefinition,
-} from '@code-dot-org/component-library/divider';
 
 defineComponents(
   [
@@ -20,6 +26,14 @@ defineComponents(
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: Heading,
+      definition: HeadingContentfulComponentDefinition,
+    },
+    {
+      component: Paragraph,
+      definition: ParagraphContentfulComponentDefinition,
     },
   ],
   {

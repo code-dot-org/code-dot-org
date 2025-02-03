@@ -187,7 +187,7 @@ class ScriptLevelsController < ApplicationController
     end
 
     # The lesson might contain a background that should be applied to all levels.
-    lesson_background = @script_level.lesson.properties['background'] if @script_level.lesson
+    lesson_background = @script_level.lesson.properties['background'] if @script_level.level.uses_lab2? && @script_level.lesson
     @body_classes = lesson_background ? "background-#{lesson_background}" : @level.properties['background']
 
     @rubric = @script_level.lesson.rubric

@@ -1,0 +1,31 @@
+name 'PLGuide_L1_ReadMe'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# How to Use This Guide
+
+## What is this guide for?
+
+#### This guide is meant for professional learning content developers to read and reference. While this guide is not exhaustive, it will give you many of the tools you need to create an accessible and user-friendly self-paced experience, both in terms of content and design.
+
+#### That said, this guide is:
+
+* #### A set of suggestions for placing elements like color, images, and text on a page.
+* #### Based on best practices for adult learning and human-computer interaction.
+* #### A starting point for professional learning content developers to riff from.
+
+#### However, this guide is not:
+
+* #### A script to copy-paste to make your next self-paced course.
+* #### An exhaustive repository of everything you'll need to create a self-paced course.
+* #### A finalized, complete resource. We reserve the right to update and add information as necessary.
+
+## How can I amend this guide?
+
+#### Any changes to this guide should be made known to the PL team to approve. Please do not change or modify the content without permission.
+
+<div style="text-align: center; margin: 20px 20px 20px 20px">
+    <img src="https://images.code.org/7a618a431f6911159192af5219fa912a-image-1737760990703.jpg" alt="The PL Team at CSTA 2024 in Las Vegas." style="width: 50%; border-radius: 10px">
+  </div>
+MARKDOWN

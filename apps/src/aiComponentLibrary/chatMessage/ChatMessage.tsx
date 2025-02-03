@@ -17,7 +17,7 @@ interface ChatMessageProps {
   status: string;
   showProfaneUserMessage?: boolean;
   customStyles?: {[label: string]: string};
-  children?: React.ReactNode;
+  footer?: React.ReactNode;
   isTA?: boolean;
 }
 
@@ -27,7 +27,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   status,
   showProfaneUserMessage,
   customStyles,
-  children,
+  footer,
   isTA,
 }) => {
   const hasDangerStyle =
@@ -47,50 +47,54 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   }, [chatMessageText, role, status, showProfaneUserMessage]);
 
   return (
-    <>
-      <div className={moduleStyles[`message-container-${role}`]}>
-        <div className={moduleStyles.messageWithChildren}>
-          <div className={moduleStyles[`container-${role}`]}>
-            {role === Role.ASSISTANT && (
-              <div
-                className={classNames(
-                  isTA && moduleStyles.botIconContainerWithOverlay
-                )}
-              >
-                <div className={classNames(moduleStyles.botIconContainer)}>
-                  <img
-                    src={aiBotOutlineIcon}
-                    alt={commonI18n.aiChatBotIconAlt()}
-                    className={moduleStyles.botIcon}
-                  />
-                </div>
-                {isTA && (
-                  <div className={moduleStyles.botOverlay}>
-                    <span>{'TA'}</span>
-                  </div>
-                )}
-              </div>
-            )}
+    <div className={moduleStyles[`message-container-${role}`]}>
+      <div className={moduleStyles.messageWithChildren}>
+        <div className={moduleStyles[`container-${role}`]}>
+          {role === Role.ASSISTANT && (
             <div
               className={classNames(
-                moduleStyles[`message-${role}`],
-                customStyles && customStyles[`message-${role}`],
-                hasDangerStyle && moduleStyles.danger,
-                hasWarningStyle && moduleStyles.warning
+                isTA && moduleStyles.botIconContainerWithOverlay
               )}
-              aria-label={
-                role === Role.ASSISTANT
-                  ? commonI18n.aiChatMessageBot()
-                  : commonI18n.aiChatMessageUser()
-              }
             >
-              <SafeMarkdown markdown={getDisplayText} />
+              <div className={classNames(moduleStyles.botIconContainer)}>
+                <img
+                  src={aiBotOutlineIcon}
+                  alt={commonI18n.aiChatBotIconAlt()}
+                  className={moduleStyles.botIcon}
+                />
+              </div>
+              {isTA && (
+                <div className={moduleStyles.botOverlay}>
+                  <span>{'TA'}</span>
+                </div>
+              )}
             </div>
+          )}
+          <div
+            className={classNames(
+              moduleStyles[`message-${role}`],
+              customStyles && customStyles[`message-${role}`],
+              hasDangerStyle && moduleStyles.danger,
+              hasWarningStyle && moduleStyles.warning
+            )}
+            aria-label={
+              role === Role.ASSISTANT
+                ? commonI18n.aiChatMessageBot()
+                : commonI18n.aiChatMessageUser()
+            }
+          >
+            <SafeMarkdown markdown={getDisplayText} />
           </div>
-          <div className={moduleStyles.childContainer}>{children}</div>
+        </div>
+        <div
+          className={
+            isTA ? moduleStyles.footerWithOverlay : moduleStyles.footer
+          }
+        >
+          {footer}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

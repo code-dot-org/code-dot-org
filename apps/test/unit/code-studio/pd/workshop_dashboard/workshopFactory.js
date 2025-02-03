@@ -1,6 +1,9 @@
 import {Factory} from 'rosie';
 
-import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  States,
+  PdSessionFormats,
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 /**
  * Factory for the workshop object passed around by workshop dashboard components,
@@ -112,6 +115,7 @@ Factory.define('session')
   .attr('start', middleOfYearFakeToday.toISOString())
   .attr('end', middleOfYearFakeToday.toISOString())
   .attr('attendance_count', 0)
+  .attr('session_format', PdSessionFormats[0].value)
   .attr('show_link?', false);
 
 Factory.define('session starting within month of middleOfYearFakeToday')

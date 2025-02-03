@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import ToggleFileBrowserButton from '@codebridge/components/ToggleFileBrowserButton';
 import {Editor} from '@codebridge/Editor';
@@ -7,7 +8,6 @@ import classnames from 'classnames';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {START_SOURCES, WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';

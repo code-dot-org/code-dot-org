@@ -34,8 +34,6 @@ class UnitTest < ActiveSupport::TestCase
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
 
-    @csc_unit = create :csc_script, name: 'csc1', is_course: true, family_name: 'csc-test-unit', version_year: 'unversioned'
-
     @hoc_unit = create :hoc_script, name: 'hoc1', is_course: true, family_name: 'hoc-test-unit', version_year: 'unversioned'
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
@@ -501,6 +499,20 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
+  test 'family_unit_versions returns values sorted by version year' do
+    # create units out of order
+    second = create :script, family_name: 'fake-family', version_year: '2017'
+    third = create :script, family_name: 'fake-family', version_year: '2018'
+    first = create :script, family_name: 'fake-family', version_year: '2016'
+    assert_equal [first, second, third], Unit.family_unit_versions('fake-family')
+  end
+
+  test 'family_unit_versions handles nil version year' do
+    actual_version = create :script, family_name: 'fake-family', version_year: '2017'
+    missing_version = create :script, family_name: 'fake-family'
+    assert_equal [missing_version, actual_version], Unit.family_unit_versions('fake-family')
+  end
+
   test 'self.latest_stable_version is nil if no unit versions in family are stable in locale' do
     create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
     create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
@@ -525,6 +537,14 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'self.latest_stable_version returns correct unit version in family if version_year is supplied' do
     unit_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+
+    assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
+  end
+
+  test 'self.lastest_stable_version supports some family members having nil version_years' do
+    unit_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 's-unknown', family_name: 'fake-family', version_year: nil, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
 
     assert_equal unit_2017, Unit.latest_stable_version('fake-family', version_year: '2017')
@@ -1960,10 +1980,6 @@ class UnitTest < ActiveSupport::TestCase
       [@csa_unit.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     )
-    assert_equal(
-      [@csc_unit.name],
-      Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
-    )
     assert_includes(Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC), @hoc_unit.name)
   end
 
@@ -1976,8 +1992,6 @@ class UnitTest < ActiveSupport::TestCase
     assert @csp_unit.csp?
     assert @csa_unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
     assert @csa_unit.csa?
-    assert @csc_unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
-    assert @csc_unit.csc?
     assert @hoc_unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     assert @hoc_unit.hoc?
     refute @csf_unit.hoc?
@@ -1992,7 +2006,6 @@ class UnitTest < ActiveSupport::TestCase
     assert @foundations_of_programming_unit.middle_high?
 
     refute @csf_unit.middle_high?
-    refute @csc_unit.middle_high?
     refute @hoc_unit.middle_high?
   end
 

@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :cached_page_auth_redirect, :post_show_progress_table_v2, :post_ai_rubrics_disabled, :post_has_seen_ai_assessments_announcement, :post_date_progress_table_invitation_last_delayed, :post_has_seen_progress_table_v2_invitation, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access, :set_seen_ta_scores]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :cached_page_auth_redirect, :post_show_progress_table_v2, :post_ai_rubrics_disabled, :post_has_seen_ai_assessments_announcement, :post_date_progress_table_invitation_last_delayed, :post_has_seen_progress_table_v2_invitation, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access, :set_seen_ta_scores, :post_has_completed_ai_differentiation_welcome]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
@@ -44,6 +44,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         in_section: current_user.student? ? current_user.sections_as_student.present? : nil,
         created_at: current_user.created_at,
         has_seen_ai_assessments_announcement: current_user.has_seen_ai_assessments_announcement?,
+        has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
       }
     else
       render json: {
@@ -280,6 +281,15 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
     target_user.ai_tutor_access_denied = !to_bool(params[:ai_tutor_access])
     target_user.save
+
+    head :no_content
+  end
+
+  # POST /api/v1/users/has_completed_ai_differentiation_welcome
+  def post_has_completed_ai_differentiation_welcome
+    return head :unauthorized unless current_user
+
+    current_user.update!(has_completed_ai_differentiation_welcome: true)
 
     head :no_content
   end

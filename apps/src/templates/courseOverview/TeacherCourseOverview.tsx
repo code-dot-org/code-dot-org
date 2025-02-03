@@ -135,7 +135,10 @@ const TeacherCourseOverview: React.FC = () => {
     ) {
       return;
     }
-    if (!selectedSection.courseId && selectedSection.unitName) {
+    if (
+      selectedSection.unitName &&
+      (!selectedSection.courseId || selectedSection.isAssignedSingleUnitCourse)
+    ) {
       navigate(
         generatePath('../' + TEACHER_NAVIGATION_PATHS.unitOverview, {
           unitName: selectedSection.unitName,

@@ -9,6 +9,7 @@ import {SELECT_COUNTRY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {SchoolDataInputsContainer} from '@cdo/apps/templates/SchoolDataInputsContainer';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 const TEACHER_ONLY_FIELDS = [
@@ -90,6 +91,8 @@ $(document).ready(() => {
       }
     }
     const sourceString = isLTI ? 'LTI' : '';
+
+    // Log to Statsig and Amplitude
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
@@ -101,6 +104,11 @@ $(document).ready(() => {
       },
       PLATFORMS.BOTH
     );
+
+    // Log to Google Analytics
+    trackEvent('sign_up', 'sign_up_success', {
+      value: user_type,
+    });
   });
 
   function cleanSchoolInfo() {

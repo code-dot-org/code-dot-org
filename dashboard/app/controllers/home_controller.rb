@@ -188,7 +188,6 @@ class HomeController < ApplicationController
       end
 
       @homepage_data[:isTeacher] = true
-      @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
       @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
       @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)

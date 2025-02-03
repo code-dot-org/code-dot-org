@@ -1,0 +1,21 @@
+{
+  "name": "data-science-with-python-pilot-2024",
+  "script_names": [
+    "data-science-with-python-pilot-2024"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "data-science-with-python-pilot",
+    "pilot_experiment": "data-science-with-python-pilot-2024",
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
