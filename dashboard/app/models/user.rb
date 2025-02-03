@@ -170,6 +170,7 @@ class User < ApplicationRecord
     seen_ta_scores_map
     roster_synced
     educator_role
+    has_completed_ai_differentiation_welcome
   )
 
   attr_accessor(

@@ -32,4 +32,5 @@ export interface CurrentUserState {
   usStateCode: string | null;
   uuid: string;
   isLti: boolean;
+  hasCompletedAiDifferentiationWelcome: boolean;
 }

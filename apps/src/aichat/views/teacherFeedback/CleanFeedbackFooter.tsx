@@ -67,9 +67,10 @@ const CleanFeedbackFooter: React.FC<Props> = ({id, teacherFeedback, role}) => {
           onClick={handleFlagClick}
           size="xs"
           type={'tertiary'}
-          className={
-            teacherFlagged ? moduleStyles.buttonNegative : moduleStyles.button
-          }
+          className={classNames(
+            moduleStyles[`icon-button-negative`],
+            teacherFlagged && moduleStyles.selected
+          )}
           ariaLabel={
             teacherFlagged ? aichatI18n.aria_flag() : aichatI18n.aria_unflag()
           }
