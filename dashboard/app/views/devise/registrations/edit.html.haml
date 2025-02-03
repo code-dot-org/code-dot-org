@@ -164,7 +164,7 @@
       %span#change-user-type-status
       %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
 
-- unless DCDO.get('disable-expire-other-sessions', false) # TODO: remove flag once feature is stable
+- if DCDO.get('enable-expire-other-sessions', false) # TODO: remove flag once feature is stable
   %div#expire-other-sessions
     %hr
     %h2= t('user.expire_other_sessions')
