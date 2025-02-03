@@ -1,0 +1,15 @@
+@import 'color.scss';
+
+.resizeBar {
+  background-color: $light_gray_950;
+}
+
+.verticalBar {
+  width: 10px;
+  height: 100%
+}
+
+.horizontalBar {
+  width: 100%;
+  height: 10px;
+}
