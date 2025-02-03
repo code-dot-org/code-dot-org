@@ -5,7 +5,6 @@ import ConfirmRemoveStudentDialog, {
   MINIMUM_TEST_PROPS,
 } from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
 
-// Mock dependencies
 jest.mock('@cdo/locale', () => ({
   removeStudentAndRecordsHeader: jest.fn(
     ({studentName}) => `Remove ${studentName} and their records`

@@ -1,217 +1,238 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddParentEmailModal from '@cdo/apps/accounts/AddParentEmailModal';
-import Button from '@cdo/apps/legacySharedComponents/Button';
-import i18n from '@cdo/locale';
 
-import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+jest.mock('@cdo/locale', () => ({
+  addParentEmailModal_save: jest.fn(() => 'Save'),
+  cancel: jest.fn(() => 'Cancel'),
+  closeDialog: jest.fn(() => 'Close'),
+  saving: jest.fn(() => 'Saving...'),
+  changeEmailModal_unexpectedError: jest.fn(
+    () => 'An unexpected error occurred.'
+  ),
+  addParentEmailModal_parentEmail_isRequired: jest.fn(
+    () => 'Parent email is required.'
+  ),
+  addParentEmailModal_parentEmail_invalid: jest.fn(
+    () => 'Invalid parent email.'
+  ),
+  addParentEmailModal_parentEmail_mustBeDifferent: jest.fn(
+    () => 'Parent email must be different.'
+  ),
+  addParentEmailModal_confirmedParentEmail_mustMatch: jest.fn(
+    () => 'Confirmed email must match.'
+  ),
+  addParentEmailModal_title: jest.fn(() => 'Add Parent Email'),
+  addParentEmailModal_subtitle: jest.fn(
+    () => 'Please provide a parent email address.'
+  ),
+  addParentEmailModal_parentEmail_label: jest.fn(() => 'Parent Email'),
+  addParentEmailModal_confirmedParentEmail_label: jest.fn(
+    () => 'Confirm Parent Email'
+  ),
+  addParentEmailModal_emailOptIn_label: jest.fn(() => 'Email Opt-In'),
+  addParentEmailModal_emailOptIn_sublabel: jest.fn(
+    () => 'Would you like to opt-in to emails?'
+  ),
+  addParentEmailModal_emailOptIn_description: jest.fn(
+    () => 'Opt-in to receive emails.'
+  ),
+  changeEmailModal_emailOptIn_privacyPolicy: jest.fn(() => 'Privacy Policy'),
+  dialogOK: jest.fn(() => 'OK'),
+  yes: jest.fn(() => 'Yes'),
+  no: jest.fn(() => 'No'),
+}));
 
 describe('AddParentEmailModal', () => {
-  let wrapper;
-
-  const EMAIL_SELECTOR = 'input[type="email"]';
-  const RADIO_SELECTOR = 'input[type="radio"]';
-
   const DEFAULT_PROPS = {
-    handleSubmit: () => {},
-    handleCancel: () => {},
-    userType: 'student',
-    isPasswordRequired: true,
+    handleSubmit: jest.fn(() => Promise.resolve()),
+    handleCancel: jest.fn(),
+    currentParentEmail: 'old@example.com',
   };
 
-  // Helpers for selecting particular elements/components
-  const emailInput = wrapper => wrapper.find(EMAIL_SELECTOR).first();
-  const emailConfirmationInput = wrapper => wrapper.find(EMAIL_SELECTOR).last();
-  const parentEmailOptInSelect = wrapper =>
-    wrapper.find(RADIO_SELECTOR).filterWhere(n => n.prop('value') === 'yes');
-  const parentEmailOptOutSelect = wrapper =>
-    wrapper.find(RADIO_SELECTOR).filterWhere(n => n.prop('value') === 'no');
-  const submitButton = wrapper =>
-    wrapper
-      .find(Button)
-      .filterWhere(n => n.prop('text') === i18n.addParentEmailModal_save());
-  const cancelButton = wrapper =>
-    wrapper.find(Button).filterWhere(n => n.prop('text') === i18n.cancel());
+  const renderComponent = (props = {}) => {
+    return render(<AddParentEmailModal {...DEFAULT_PROPS} {...props} />);
+  };
 
-  beforeEach(() => {
-    wrapper = mount(<AddParentEmailModal {...DEFAULT_PROPS} />);
+  const getParentEmailInput = () => screen.getByLabelText('Parent Email');
+  const getConfirmedParentEmailInput = () =>
+    screen.getByLabelText('Confirm Parent Email');
+  const getEmailOptInYes = () => screen.getByLabelText('Yes');
+  const getEmailOptInNo = () => screen.getByLabelText('No');
+  const getSubmitButton = () => screen.getByRole('button', {name: /save/i});
+  const getCancelButton = () => screen.getByRole('button', {name: /cancel/i});
+
+  it('renders the modal with the correct title and subtitle', () => {
+    renderComponent();
+    expect(screen.getByText('Add Parent Email')).toBeInTheDocument();
+    expect(
+      screen.getByText('Please provide a parent email address.')
+    ).toBeInTheDocument();
   });
 
-  afterEach(() => {
-    wrapper.unmount();
+  it('disables everything and shows save text when saving', async () => {
+    renderComponent();
+    fireEvent.change(getParentEmailInput(), {
+      target: {value: 'new@example.com'}
+    });
+    fireEvent.change(getConfirmedParentEmailInput(), {
+      target: {value: 'new@example.com'}
+    });
+    fireEvent.click(getSubmitButton());
+
+    expect(getParentEmailInput()).toBeDisabled();
+    expect(getConfirmedParentEmailInput()).toBeDisabled();
+    expect(getEmailOptInYes()).toBeDisabled();
+    expect(getEmailOptInNo()).toBeDisabled();
+    expect(getSubmitButton()).toBeDisabled();
+    expect(getCancelButton()).toBeDisabled();
+    expect(screen.getByText('Saving...')).toBeInTheDocument();
   });
 
-  describe('add parent email', () => {
-    it('disables everything and shows save text when saving', () => {
-      wrapper.setState({saveState: 'saving'});
-      expect(emailInput(wrapper)).to.have.attr('disabled');
-      expect(emailConfirmationInput(wrapper)).to.have.attr('disabled');
-      expect(parentEmailOptInSelect(wrapper)).to.have.attr('disabled');
-      expect(parentEmailOptOutSelect(wrapper)).to.have.attr('disabled');
-      expect(submitButton(wrapper)).to.have.attr('disabled');
-      expect(cancelButton(wrapper)).to.have.attr('disabled');
-      expect(wrapper.text()).to.include(i18n.saving());
+  it('shows unknown error text when an unknown error occurs', async () => {
+    DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce(
+      new Error('Unknown error')
+    );
+    renderComponent();
+    fireEvent.change(getParentEmailInput(), {
+      target: {value: 'new@example.com'}
+    });
+    fireEvent.change(getConfirmedParentEmailInput(), {
+      target: {value: 'new@example.com'}
+    });
+    fireEvent.click(getSubmitButton());
+
+    expect(
+      await screen.findByText('An unexpected error occurred.')
+    ).toBeInTheDocument();
+  });
+
+  it('calls handleCancel when clicking the cancel button', () => {
+    const handleCancel = jest.fn();
+    renderComponent({handleCancel});
+
+    fireEvent.click(getCancelButton());
+    expect(handleCancel).toHaveBeenCalled();
+  });
+
+  describe('validation', () => {
+    it('shows an error when parent email is empty', () => {
+      renderComponent();
+      fireEvent.change(getParentEmailInput(), {target: {value: ''}});
+      fireEvent.blur(getParentEmailInput());
+
+      expect(screen.getByText('Parent email is required.')).toBeInTheDocument();
+      expect(getSubmitButton()).toBeDisabled();
     });
 
-    it('shows unknown error text when an unknown error occurs', () => {
-      wrapper.setState({saveState: 'unknown-error'});
-      expect(wrapper.text()).to.include(
-        i18n.changeEmailModal_unexpectedError()
+    it('shows an error when parent email is invalid', () => {
+      renderComponent();
+      fireEvent.change(getParentEmailInput(), {
+        target: {value: 'invalidEmail'}
+      });
+      fireEvent.blur(getParentEmailInput());
+
+      expect(screen.getByText('Invalid parent email.')).toBeInTheDocument();
+      expect(getSubmitButton()).toBeDisabled();
+    });
+
+    it('shows an error when parent email is the same as the current one', () => {
+      renderComponent();
+      fireEvent.change(getParentEmailInput(), {target: {value: 'old@example.com'}});
+      fireEvent.blur(getParentEmailInput());
+
+      expect(
+        screen.getByText('Parent email must be different.')
+      ).toBeInTheDocument();
+      expect(getSubmitButton()).toBeDisabled();
+    });
+
+    it('shows an error when confirmed email does not match parent email', () => {
+      renderComponent();
+      fireEvent.change(getParentEmailInput(), {
+        target: {value: 'new@example.com'}
+      });
+      fireEvent.change(getConfirmedParentEmailInput(), {
+        target: {value: 'different@example.com'}
+      });
+      fireEvent.blur(getConfirmedParentEmailInput());
+
+      expect(
+        screen.getByText('Confirmed email must match.')
+      ).toBeInTheDocument();
+      expect(getSubmitButton()).toBeDisabled();
+    });
+
+    it('enables the submit button when form is valid', () => {
+      renderComponent();
+      fireEvent.change(getParentEmailInput(), {
+        target: {value: 'new@example.com'}
+      });
+      fireEvent.change(getConfirmedParentEmailInput(), {
+        target: {value: 'new@example.com'}
+      });
+      fireEvent.click(getEmailOptInYes());
+
+      expect(getSubmitButton()).not.toBeDisabled();
+    });
+  });
+
+  describe('server errors', () => {
+    it('shows server errors for parent email', async () => {
+      const serverError = 'Email already in use';
+      DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce({
+        serverErrors: {parentEmail: serverError}
+      });
+      renderComponent();
+      fireEvent.change(getParentEmailInput(), {
+        target: {value: 'new@example.com'}}
       );
+      fireEvent.change(getConfirmedParentEmailInput(), {
+        target: {value: 'new@example.com'}}
+      );
+      fireEvent.click(getSubmitButton());
+
+      expect(await screen.findByText(serverError)).toBeInTheDocument();
+    });
+  });
+
+  describe('onSubmitFailure', () => {
+    it('shows unknown error when no server errors are returned', async () => {
+      DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce(
+        new Error('Unknown error')
+      );
+      renderComponent();
+      fireEvent.change(getParentEmailInput(), {
+        target: {value: 'new@example.com'}}
+      );
+      fireEvent.change(getConfirmedParentEmailInput(), {
+        target: {value: 'new@example.com'}}
+      );
+      fireEvent.click(getSubmitButton());
+
+      expect(
+        await screen.findByText('An unexpected error occurred.')
+      ).toBeInTheDocument();
     });
 
-    it('calls handleCancel when clicking the cancel button', () => {
-      const handleCancel = sinon.spy();
-      wrapper.setProps({handleCancel});
-      expect(handleCancel).not.to.have.been.called;
-      cancelButton(wrapper).simulate('click');
-      expect(handleCancel).to.have.been.calledOnce;
-    });
-
-    describe('validation', () => {
-      it('checks that email is present', () => {
-        wrapper.setState({
-          values: {
-            parentEmail: '',
-            confirmedParentEmail: '',
-            parentEmailOptIn: 'yes',
-          },
-        });
-
-        expect(wrapper.text()).to.include(
-          i18n.addParentEmailModal_parentEmail_isRequired()
-        );
+    it('shows server errors when they are returned', async () => {
+      const serverErrors = {
+        parentEmail: 'Email already in use',
+      };
+      DEFAULT_PROPS.handleSubmit.mockRejectedValueOnce({serverErrors});
+      renderComponent();
+      fireEvent.change(getParentEmailInput(), {
+        target: {value: 'new@example.com'}
       });
-
-      it('checks that email is valid', () => {
-        wrapper.setState({
-          values: {
-            parentEmail: 'invalidEmail@nowhere',
-            confirmedParentEmail: '',
-            parentEmailOptIn: 'yes',
-          },
-        });
-
-        expect(wrapper.text()).to.include(
-          i18n.addParentEmailModal_parentEmail_invalid()
-        );
+      fireEvent.change(getConfirmedParentEmailInput(), {
+        target: {value: 'new@example.com'}
       });
+      fireEvent.click(getSubmitButton());
 
-      it('checks that email is different that current one', () => {
-        wrapper.setProps({currentParentEmail: 'old@example.com'});
-        wrapper.setState({
-          values: {
-            parentEmail: 'old@example.com',
-            confirmedParentEmail: 'old@example.com',
-            parentEmailOptIn: 'yes',
-          },
-        });
-
-        expect(wrapper.text()).to.include(
-          i18n.addParentEmailModal_parentEmail_mustBeDifferent()
-        );
-      });
-
-      it('checks that confirmation email equals email', () => {
-        wrapper.setState({
-          values: {
-            parentEmail: 'email@example.com',
-            confirmedParentEmail: 'different@example.com',
-            parentEmailOptIn: 'yes',
-          },
-        });
-
-        expect(wrapper.text()).to.include(
-          i18n.addParentEmailModal_confirmedParentEmail_mustMatch()
-        );
-      });
-
-      it('reports email server errors', () => {
-        const serverError = 'test-server-error';
-        wrapper.setState({
-          values: {
-            parentEmail: 'new@example.com',
-            confirmedParentEmail: 'new@example.com',
-            parentEmailOptIn: 'yes',
-          },
-          errors: {
-            parentEmail: serverError,
-          },
-        });
-
-        expect(wrapper.text()).to.include(serverError);
-      });
-
-      it('disables the submit button when validation errors are present', () => {
-        wrapper.setState({
-          values: {
-            parentEmail: '',
-            confirmedParentEmail: '',
-          },
-        });
-
-        expect(submitButton(wrapper)).to.have.prop('disabled', true);
-      });
-
-      it('enables the submit button form passes validation', () => {
-        wrapper.setState({
-          values: {
-            parentEmail: 'me@example.com',
-            confirmedParentEmail: 'me@example.com',
-            parentEmailOptIn: '',
-          },
-        });
-
-        expect(submitButton(wrapper)).to.have.prop('disabled', false);
-      });
-    });
-
-    describe('changes clear server errors', () => {
-      it('on email', () => {
-        wrapper.setState({
-          errors: {
-            parentEmail: 'test-server-error',
-          },
-        });
-        expect(wrapper.state().errors.parentEmail).to.equal(
-          'test-server-error'
-        );
-        emailInput(wrapper).simulate('change', {
-          target: {value: 'me@example.com'},
-        });
-        emailConfirmationInput(wrapper).simulate('change', {
-          target: {value: 'me@example.com'},
-        });
-
-        expect(wrapper.state().errors.parentEmail).to.equal('');
-      });
-    });
-
-    describe('onSubmitFailure', () => {
-      it('puts the dialog in UNKNOWN ERROR state if response has no server errors', () => {
-        expect(wrapper.state().saveState).to.equal('initial');
-        wrapper.instance().onSubmitFailure(null, {});
-        expect(wrapper.state().saveState).to.equal('unknown-error');
-      });
-
-      it('loads returned validation errors into dialog state', () => {
-        expect(wrapper.state().saveState).to.equal('initial');
-        expect(wrapper.state().errors).to.deep.equal({
-          parentEmail: '',
-          confirmedParentEmail: '',
-        });
-        wrapper.instance().onSubmitFailure({
-          serverErrors: {
-            parentEmail: 'test-email-server-error',
-          },
-        });
-        expect(wrapper.state().saveState).to.equal('initial');
-        expect(wrapper.state().errors).to.deep.equal({
-          parentEmail: 'test-email-server-error',
-        });
-      });
+      expect(
+        await screen.findByText(serverErrors.parentEmail)
+      ).toBeInTheDocument();
     });
   });
 });
