@@ -1,10 +1,10 @@
+import {Chips} from '@code-dot-org/component-library/chips';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import {Chips} from '@cdo/apps/componentLibrary/chips';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {
   InstructionType,

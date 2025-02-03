@@ -14,8 +14,8 @@
       [
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 15,
+          "assetId": 303
         },
         {
           "tileType": 1,
@@ -782,6 +782,6 @@
     "bubble_choice_description": "Write a program to paint a diagonal line.",
     "thumbnail_url": "https://images.code.org/ba55a63c300ee519f966a56805c33b07-Screenshot 2025-01-22 142943.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22T22:17:42.982+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson7-level7b\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson7-level7b\"},{\"changed_at\":\"2025-01-22 22:27:20 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:27:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:30:41 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-22T22:17:42.982+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson7-level7b\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson7-level7b\"},{\"changed_at\":\"2025-01-22 22:27:20 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:27:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:30:41 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 22:57:10 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

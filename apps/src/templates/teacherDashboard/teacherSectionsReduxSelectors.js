@@ -148,8 +148,11 @@ export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
   courseVersionName: serverSection.courseVersionName,
-  unitName: serverSection.unitName,
+  unitName: serverSection.is_assigned_single_unit_course
+    ? serverSection.script.name
+    : serverSection.unitName,
   isAssignedStandaloneCourse: serverSection.isAssignedStandaloneCourse,
+  isAssignedSingleUnitCourse: serverSection.is_assigned_single_unit_course,
   createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   loginTypeName: serverSection.login_type_name,
@@ -173,7 +176,9 @@ export const sectionFromServerSection = serverSection => ({
         textToSpeechEnabled: serverSection.course.text_to_speech_enabled,
       }
     : null,
-  unitId: serverSection.unit_id,
+  unitId: serverSection.is_assigned_single_unit_course
+    ? serverSection.script.id
+    : serverSection.unit_id,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
   restrictSection: serverSection.restrict_section,

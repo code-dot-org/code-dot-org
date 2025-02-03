@@ -1,0 +1,80 @@
+@import 'color';
+
+.selectOption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.selectOptionPage {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  margin-left: 56px;
+  margin-right: 56px;
+  align-items: center;
+}
+
+.selectOptionSubtitle {
+  color: $light_gray_800
+}
+
+.skipButton {
+  flex-grow: 1;
+  margin-inline-start: 20px;
+}
+
+.continueButton {
+  flex-grow: 4;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+}
+
+.bottomButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.optionRow {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 16px 12px 0 12px;
+  border-radius: 4px;
+  border: 2px solid $light_gray_200;
+  margin: 16px 0 0 0;
+  background-color: inherit;
+
+  &:active {
+    border: 2px solid $light_gray_200 !important;
+  }
+}
+
+.optionIcon {
+  font-size: 24px;
+  margin-top: 4px;
+
+  --fa-primary-color: var(--light-aqua-70, #19BBB5);
+  --fa-secondary-color: var(--light-aqua-700, #30CCC6);
+}
+
+.optionText {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: 20px;
+  text-align: left;
+}
+
+.selectedOption {
+  border: 4px solid #3CFFF7;
+  width: calc(100% + 8px);
+
+  &:active {
+    border: 4px solid #3CFFF7 !important;
+  }
+}

@@ -688,7 +688,7 @@ en:
             #### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href="http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot" target="blank" rel="noopener noreferrer">Click here to enroll in the pilot</a> </strong>
           version_title: ''
         foundations-of-cs-beta-2024:
-          title: Foundations of Computer Science BETA
+          title: Foundations of Computer Science BETA (now called CS and AI Foundations BETA)
           description_short: ''
           description_student: |-
             Welcome to Foundations of Computer Science! This exciting course is your gateway to the powerful world of computer science. Whether you're curious about how apps work or want to know more about the impact of technology on society, this course has something for you. Over the semester, you'll learn the basics of programming, dive into how the Internet functions, and even create your own projects that could solve real-world problems.
@@ -799,7 +799,7 @@ en:
           description_teacher: ''
           version_title: '2024'
         self-paced-pl-csa-2024:
-          title: self-paced-pl-csa-2024
+          title: Teaching AP Computer Science A
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -1009,7 +1009,7 @@ en:
             - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
           version_title: "'24-'25"
         self-paced-foundations-cs-2024:
-          title: Teaching Foundations of Computer Science
+          title: Teaching CS and AI Foundations
           description_short: ''
           description_student: |
             ## Welcome!
