@@ -22,7 +22,6 @@ module I18n
           end
 
           private def distribute_localization(locale, file_path)
-            puts file_path
             crowdin_translations = I18nScriptUtils.parse_file(file_path)
 
             i18n_data = I18nScriptUtils.to_dashboard_i18n_data(locale, BLOCKS_TYPE, crowdin_translations)
