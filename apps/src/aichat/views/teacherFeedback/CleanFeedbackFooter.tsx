@@ -49,9 +49,10 @@ const CleanFeedbackFooter: React.FC<Props> = ({
         direction: isAssistant ? 'onRight' : 'onLeft',
         size: 'xs',
         text: teacherFlagged
-          ? aichatI18n.chatMessage_unflagAsInappropriate()
+          ? aichatI18n.chatMessage_flaggedAsInappropriate()
           : aichatI18n.chatMessage_flagAsInappropriate(),
         className: moduleStyles.tooltip,
+        iconLeft: teacherFlagged ? {iconName: 'check'} : undefined,
       }}
     >
       <Button
@@ -74,14 +75,9 @@ const CleanFeedbackFooter: React.FC<Props> = ({
       />
     </WithTooltip>
   );
-  const flaggedText = teacherFlagged && (
-    <EmText>{aichatI18n.chatMessage_hasBeenFlagged()}</EmText>
-  );
 
   // Place elements in the correct semantic order.
-  const footerElements = isAssistant
-    ? [copyButton, flagButton, flaggedText]
-    : [flaggedText, flagButton];
+  const footerElements = isAssistant ? [copyButton, flagButton] : [flagButton];
 
   return (
     <div
