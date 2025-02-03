@@ -396,6 +396,12 @@ export default function WorkshopEnrollmentCelebrationDialog({
 WorkshopEnrollmentCelebrationDialog.propTypes = {
   workshopTitle: PropTypes.string,
   workshopLocation: PropTypes.string,
-  workshopSessionInfo: PropTypes.arrayOf(PropTypes.object),
+  workshopSessionInfo: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      start: PropTypes.string.isRequired,
+      end: PropTypes.string.isRequired,
+    })
+  ),
   onClose: PropTypes.func,
 };
