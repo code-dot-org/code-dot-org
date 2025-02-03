@@ -1,11 +1,11 @@
+import Alert from '@code-dot-org/component-library/alert';
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {ActionDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';

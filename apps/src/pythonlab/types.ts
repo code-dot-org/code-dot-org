@@ -11,7 +11,7 @@ export interface PyodideMessage {
   // string message. The return value could be any object.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   message: any;
-  id: number;
+  id: string;
 }
 
 export type MessageType =

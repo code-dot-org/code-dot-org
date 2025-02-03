@@ -26,7 +26,10 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
-import {restartPyodideIfProgramIsRunning} from './pyodideWorkerManager';
+import {
+  restartPyodideIfProgramIsRunning,
+  sendInput,
+} from './pyodideWorkerManager';
 
 import moduleStyles from './pythonlab-view.module.scss';
 
@@ -191,6 +194,7 @@ const PythonlabView: React.FunctionComponent = () => {
           onStop={stopPythonCode}
           projectVersion={projectVersion}
           labConfig={labConfig}
+          sendConsoleInput={sendInput}
         />
       )}
     </div>

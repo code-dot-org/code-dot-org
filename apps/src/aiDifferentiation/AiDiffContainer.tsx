@@ -5,6 +5,7 @@ import Draggable, {DraggableEventHandler} from 'react-draggable';
 import Button from '@cdo/apps/componentLibrary/button';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
+import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
 import AiDiffChat from './AiDiffChat';
@@ -33,6 +34,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   lessonId,
   lessonName,
   unitDisplayName,
+  // TODO(lfm): remove this when welcome is ready to be shown.
   disableWelcome = true,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
@@ -42,6 +44,10 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   );
   const [positionY, setPositionY] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_Y, 0)) || 0
+  );
+
+  const hasCompletedAiDifferentiationWelcome = useAppSelector(
+    state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
 
   useEffect(() => {
@@ -97,8 +103,11 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             />
           </div>
         </div>
+
         <div className={style.fabBackground}>
-          {!disableWelcome && showWelcomeExperience ? (
+          {!disableWelcome &&
+          !hasCompletedAiDifferentiationWelcome &&
+          showWelcomeExperience ? (
             <AiDiffWelcome
               setShowWelcomeExperience={setShowWelcomeExperience}
               lessonId={lessonId}

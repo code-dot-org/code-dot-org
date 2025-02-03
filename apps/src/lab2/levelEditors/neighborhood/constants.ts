@@ -10,7 +10,6 @@ export const categories: Record<string, TileDefinition> = {
   'Food Truck West': {min: 28, max: 35},
   Landscape: [48, 61, 91, 92, 93, 94, 95, 96, 97, 98],
   'Other Objects': [46, 0, 303],
-  Painter: {min: 287, max: 290},
   'Red House': {min: 159, max: 218},
   Sidewalk: [49, 50, 51, 52, 279, 280, 281, 282, 283, 284, 285, 286],
   'Taxi North': [47, 1, 2, 3, 4, 5],
@@ -22,11 +21,6 @@ export const categories: Record<string, TileDefinition> = {
 
 // Map of asset ids to tile types for all assets that are not "walls" (tile type 0).
 export const customTileTypes: Record<number, number> = {
-  // Painter is a "start" tile. Painter assets are 287-290.
-  287: 2,
-  288: 2,
-  289: 2,
-  290: 2,
   // Paint bucket is an open tile.
   303: 1,
   // Street tile is an open tile.
