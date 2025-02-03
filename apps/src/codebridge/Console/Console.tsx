@@ -26,7 +26,7 @@ const Console: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const {labConfig} = useCodebridgeContext();
+  const {labConfig, sendConsoleInput} = useCodebridgeContext();
   const hasMiniApp = !!labConfig?.miniApp?.name;
 
   const clearOutput = useCallback(
@@ -54,26 +54,39 @@ const Console: React.FunctionComponent = () => {
     clearOutput(false);
   });
 
-  const onData = (data: string) => {
-    const terminal = CodebridgeRegistry.getInstance()
-      .getConsoleManager()
-      ?.getTerminal();
-    if (!terminal) {
-      return;
-    }
-    const charCode = data.charCodeAt(0);
-    if (charCode === 13) {
-      // new line
-      terminal.writeln('');
-    } else if (charCode < 32) {
-      // control characters, do nothing
-    } else if (charCode === 127) {
-      // backspace
-      terminal.write('\b \b');
-    } else {
-      terminal.write(data);
-    }
-  };
+  // Handler for terminal input. This manages storing input into a buffer
+  // and sending it to the console manager when the user presses enter.
+  const onData = useCallback(
+    (data: string) => {
+      const consoleManager =
+        CodebridgeRegistry.getInstance().getConsoleManager();
+      const terminal = consoleManager?.getTerminal();
+      if (!terminal || !consoleManager) {
+        return;
+      }
+      const charCode = data.charCodeAt(0);
+      if (charCode === 13) {
+        // new line
+        terminal.writeln('');
+        // send input
+        if (sendConsoleInput) {
+          sendConsoleInput(consoleManager.getInputBuffer());
+        }
+        // reset buffer
+        consoleManager.saveAndClearInputBuffer();
+      } else if (charCode < 32) {
+        // control characters, do nothing
+      } else if (charCode === 127) {
+        // backspace
+        terminal.write('\b \b');
+        consoleManager.backspaceInputBuffer();
+      } else {
+        terminal.write(data);
+        consoleManager.appendToInputBuffer(data);
+      }
+    },
+    [sendConsoleInput]
+  );
 
   const ignoreEscapeAndTab = (e: KeyboardEvent) => {
     if (e.key === 'Tab' || e.key === 'Escape') {
@@ -110,6 +123,7 @@ const Console: React.FunctionComponent = () => {
     terminal.open(terminalRef.current);
     terminal.onData(onData);
     fitAddon.fit();
+    window.addEventListener('resize', () => fitAddon.fit());
 
     // Right now we are tracking lines from the previous console so we can replay them here.
     // We may be able to avoid this after
@@ -125,7 +139,7 @@ const Console: React.FunctionComponent = () => {
     terminal.attachCustomKeyEventHandler(ignoreEscapeAndTab);
 
     setDidInit(true);
-  }, [didInit, terminalRef]);
+  }, [didInit, terminalRef, onData]);
 
   return (
     <PanelContainer

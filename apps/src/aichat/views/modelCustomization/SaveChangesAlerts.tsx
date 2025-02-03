@@ -1,3 +1,4 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import React from 'react';
 
 import {
@@ -5,7 +6,6 @@ import {
   selectHavePropertiesChanged,
   selectSavedCustomizationsMatchInitial,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../../locale';

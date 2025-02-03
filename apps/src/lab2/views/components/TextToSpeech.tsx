@@ -1,8 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import DCDO from '@cdo/apps/dcdo';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
 import currentLocale from '@cdo/apps/util/currentLocale';
