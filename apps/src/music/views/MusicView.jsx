@@ -561,6 +561,16 @@ class UnconnectedMusicView extends React.Component {
       }
     }
 
+    // Remove any procedures that do not have definitions.
+    // This prevents extra call blocks from showing in the toolbox.
+    if (e.type === Blockly.Events.FINISHED_LOADING) {
+      const workspace = this.musicBlocklyWorkspace.workspace;
+      const procedureMap = workspace.getProcedureMap();
+      procedureMap
+        .getProcedures()
+        .filter(p => !Blockly.Procedures.getDefinition(p.getName(), workspace))
+        .forEach(p => procedureMap.delete(p.id));
+    }
     // Update undo status when blocks change.
     this.props.setUndoStatus({
       canUndo: this.musicBlocklyWorkspace.canUndo(),
