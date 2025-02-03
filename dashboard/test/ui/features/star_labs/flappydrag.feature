@@ -6,6 +6,6 @@ Scenario: Connect two blocks from toolbox
   And I dismiss the login reminder
   And I wait to see ".blocklySvg"
   And I drag block "flap" to block "whenClick"
-  And I drag block "playSound" to block "flap"
+  And I drag block "playSound" to block "flap" plus offset 0, 35
   And I wait for 1 seconds
   Then block "playSound" is child of block "flap"
