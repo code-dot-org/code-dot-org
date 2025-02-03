@@ -178,7 +178,8 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
             />
           ) : (
             <ChatMessage
-              {...item}
+              text={item.chatMessageText}
+              role={item.role}
               customStyles={style}
               key={id}
               isTA={true}
