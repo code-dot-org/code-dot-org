@@ -91,7 +91,7 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
       ref={isSelected ? currentFolderRefCallback : null}
       aria-label={folder.name}
       tabIndex={0}
-      role="button"
+      role="tab"
     >
       <div className={styles.folderRowLeft}>
         {imageSrc && (
@@ -354,7 +354,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         )}
         <div id="sounds-panel-body" className={styles.soundsPanelBody}>
           {mode === 'packs' && (
-            <div id="sounds-panel-left" className={styles.leftColumn}>
+            <div
+              id="sounds-panel-left"
+              role="tablist"
+              className={styles.leftColumn}
+            >
               {folders.map((folder, folderIndex) => {
                 return (
                   <FolderPanelRow
