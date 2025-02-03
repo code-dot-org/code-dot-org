@@ -1,25 +1,17 @@
-.hero-banner-basic {
+.exploring-gen-ai-hero-banner {
+  padding: 4rem 2rem;
   position: relative;
   overflow: hidden;
 
   & > .grid-container {
-    @media (min-width: 640px) {
-      grid-template-columns: repeat(2, 1fr);
+    display: grid;
 
-      &.wider-text {
-        grid-template-columns: 1.5fr 1fr;
-      }
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 1rem;
     }
   }
-
-  .text-wrapper {
-    position: relative;
-    z-index: 1;
-  }
-}
-
-section.hero-banner-basic {
-  padding: 4rem 1rem;
 
   &.overlay {
     position: relative;
@@ -59,18 +51,12 @@ section.hero-banner-basic {
     margin: 0 auto;
     max-width: 1020px;
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     z-index: 10;
-
-    @media screen and (max-width: 640px) {
-      gap: 2rem;
-    }
   }
 
   .text-wrapper {
+    position: relative;
+    z-index: 1;
 
     .overline-one {
       color: #3CFFF7;

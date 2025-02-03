@@ -1,6 +1,6 @@
 %section.exploring-gen-ai-hero-banner.hero-banner-basic.overlay
-  .wrapper
-    .text-wrapper.col-50
+  .wrapper.grid-container
+    .text-wrapper
       %p.overline-one
         =hoc_s("exploring_gen_ai.banner.overline")
       %h1.white
@@ -13,6 +13,6 @@
         %img{src: "/images/avatars/amazon_white.png", alt: "Amazon"}
       %a.link-button.white{href: CDO.studio_url("/courses/exploring-gen-ai-2024?viewAs=Instructor")}
         =hoc_s(:call_to_action_explore_course)
-    %figure.col-40
+    %figure
       %img{src: "/images/banners/banner-bg-gen-ai-bot-wizard.png", alt: ""}
-  .clear
+.clear
