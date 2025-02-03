@@ -2,6 +2,7 @@ import React, {memo, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
@@ -44,9 +45,16 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   // but is currently marked optional because the ChatEvent type
   // is used for both chat history and live chat.
   // TODO: Clean up types to separate server and client IDs.
-  const commonProps = {...chatMessage, id: chatMessage.id!};
-  const footer = messageVisible ? (
-    <CleanFeedbackFooter {...commonProps} />
+  const commonProps = {
+    id: chatMessage.id!,
+    chatMessageText: chatMessage.chatMessageText,
+    teacherFeedback: chatMessage?.teacherFeedback,
+  };
+
+  const isAssistant = chatMessage.role === Role.ASSISTANT;
+
+  const chatHistoryFooter = messageVisible ? (
+    <CleanFeedbackFooter {...commonProps} isAssistant={isAssistant} />
   ) : userMessageProfanity ? (
     <ProfanityFeedbackFooter
       {...commonProps}
@@ -56,13 +64,17 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       profaneMessageVisible={showProfaneUserMessage}
     />
   ) : null;
+  const defaultFooter =
+    messageVisible && isAssistant ? (
+      <CopyButton copyText={chatMessage.chatMessageText} />
+    ) : null;
 
   return (
     <ChatMessage
       text={displayText}
       role={role}
       messageStyle={getMessageStyle(status, role)}
-      footer={isChatHistoryView && footer}
+      footer={isChatHistoryView ? chatHistoryFooter : defaultFooter}
     />
   );
 };
