@@ -65,40 +65,48 @@ const zeroPad = number => {
 };
 
 export const buildAppleCalendarLink = (
-  session,
+  workshopSessions,
   workshopTitle,
   workshopLocation
 ) => {
-  const start = new Date(session.start);
-  const end = new Date(session.end);
-
-  const date = `${start.getFullYear()}${zeroPad(start.getMonth() + 1)}${zeroPad(
-    start.getDate()
-  )}`;
-  const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
-    start.getMinutes()
-  )}00`;
-  const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
-    end.getMinutes()
-  )}00`;
-
-  const icsFileContent = [
+  let icsFileContent = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'CALSCALE:GREGORIAN',
-    `PRODID:${workshopTitle}${startTime}/ics`,
-    'BEGIN:VEVENT',
-    `DTSTAMP:${startTime}`,
-    `UID:${workshopTitle}${startTime}`,
-    `DTSTART:${startTime}`,
-    `DTEND:${endTime}`,
-    `SUMMARY:${workshopTitle}`,
-    `LOCATION:${workshopLocation}`,
-    'END:VEVENT',
-    'END:VCALENDAR',
-  ].join('\n');
+    `PRODID:${workshopTitle}${workshopSessions[0].start}/ics`,
+  ];
 
-  const blob = new Blob([icsFileContent], {
+  workshopSessions.forEach(session => {
+    const start = new Date(session.start);
+    const end = new Date(session.end);
+    // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
+    // as January, so the month needs to be offset by 1.
+    const date = `${start.getFullYear()}${zeroPad(
+      start.getMonth() + 1
+    )}${zeroPad(start.getDate())}`;
+    const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
+      start.getMinutes()
+    )}00`;
+    const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
+      end.getMinutes()
+    )}00`;
+
+    icsFileContent.push(
+      'BEGIN:VEVENT',
+      `DTSTAMP:${startTime}`,
+      `UID:${workshopTitle}${startTime}`,
+      `DTSTART:${startTime}`,
+      `DTEND:${endTime}`,
+      `SUMMARY:${workshopTitle}`,
+      `LOCATION:${workshopLocation}`,
+      'END:VEVENT'
+    );
+  });
+
+  icsFileContent.push('END:VCALENDAR');
+  const icsFileAsString = icsFileContent.join('\n');
+
+  const blob = new Blob([icsFileAsString], {
     type: 'text/calendar;charset=utf-8',
   });
   return URL.createObjectURL(blob);
@@ -183,33 +191,11 @@ export default function WorkshopEnrollmentCelebrationDialog({
   };
 
   const getCalendarLink = (session, calendarType) => {
-    let calendarLink = '';
-
-    switch (calendarType) {
-      case 'Google':
-        calendarLink = buildGoogleCalendarLink(
-          session,
-          workshopTitle,
-          workshopLocation
-        );
-        break;
-      case 'Outlook':
-        calendarLink = buildOutlookCalendarLink(
-          session,
-          workshopTitle,
-          workshopLocation
-        );
-        break;
-      case 'Apple':
-        calendarLink = buildAppleCalendarLink(
-          session,
-          workshopTitle,
-          workshopLocation
-        );
-        break;
+    if (calendarType === 'Google') {
+      return buildGoogleCalendarLink(session, workshopTitle, workshopLocation);
+    } else if (calendarType === 'Outlook') {
+      return buildOutlookCalendarLink(session, workshopTitle, workshopLocation);
     }
-
-    return calendarLink;
   };
 
   const RenderCalendarSessionDialog = () => {
@@ -309,18 +295,26 @@ export default function WorkshopEnrollmentCelebrationDialog({
                     {i18n.addToYourCalendar()}
                   </Typography>
                   <div className={style.calendarButtons}>
+                    <LinkButton
+                      text={'Apple'}
+                      ariaLabel={i18n.addToCalendarType({
+                        calendar_type: 'Apple',
+                      })}
+                      type={'secondary'}
+                      color={'black'}
+                      iconLeft={{
+                        iconName: 'brands fa-apple',
+                        iconStyle: 'light',
+                      }}
+                      target="_blank"
+                      href={buildAppleCalendarLink(
+                        workshopSessionInfo,
+                        workshopTitle,
+                        workshopLocation
+                      )}
+                    />
                     {hasMultipleSessions ? (
                       <>
-                        <Button
-                          text={'Apple'}
-                          type={'secondary'}
-                          color={'black'}
-                          iconLeft={{
-                            iconName: 'brands fa-apple',
-                            iconStyle: 'light',
-                          }}
-                          onClick={() => setMultipleSessionDialogType('Apple')}
-                        />
                         <Button
                           text={'Google'}
                           type={'secondary'}
@@ -346,23 +340,6 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       </>
                     ) : (
                       <>
-                        <LinkButton
-                          text={'Apple'}
-                          ariaLabel={i18n.addToCalendarType({
-                            calendar_type: 'Apple',
-                          })}
-                          type={'secondary'}
-                          color={'black'}
-                          iconLeft={{
-                            iconName: 'brands fa-apple',
-                            iconStyle: 'light',
-                          }}
-                          target="_blank"
-                          href={getCalendarLink(
-                            workshopSessionInfo[0],
-                            'Apple'
-                          )}
-                        />
                         <LinkButton
                           text={'Google'}
                           ariaLabel={i18n.addToCalendarType({
