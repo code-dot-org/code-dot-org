@@ -64,7 +64,6 @@ export default class PersonalLoginDialog extends React.Component {
             confirmText={i18n.personalLoginDialog_button()}
             onConfirm={onConfirm}
             onCancel={onCancel}
-            tabIndex="1"
           />
         </div>
       </BaseDialog>
