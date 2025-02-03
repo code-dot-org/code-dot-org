@@ -143,27 +143,30 @@ export const procedureDefMutator = {
   loadExtraState: function (this: ProcedureBlock, state: Record<string, any>) {
     const map = this.workspace.getProcedureMap();
     const procedureId = state['procedureId'];
-    const procedureFromMap = map.get(procedureId);
-    if (
-      procedureId &&
-      procedureId !== this.model_.getId() &&
-      procedureFromMap &&
-      (this.isInsertionMarker() || this.noBlockHasClaimedModel_(procedureId))
-    ) {
+    if (map.has(procedureId) && !state['fullSerialization']) {
       if (map.has(this.model_.getId())) {
         map.delete(this.model_.getId());
       }
-      this.model_ = procedureFromMap;
+      this.model_ = map.get(procedureId)!;
     }
 
-    if (state['params'] && !this.getProcedureModel().getParameters().length) {
-      for (let i = 0; i < state['params'].length; i++) {
-        const {name, id, paramId} = state['params'][i];
-        this.getProcedureModel().insertParameter(
-          new ObservableParameterModel(this.workspace, name, paramId, id),
-          i
-        );
+    const model = this.getProcedureModel();
+    const newParams: {name: string; id: string}[] = state['params'] ?? [];
+    const newIds = new Set(newParams.map(p => p.id));
+    const currParams = model.getParameters();
+    if (state['fullSerialization']) {
+      for (let i = currParams.length - 1; i >= 0; i--) {
+        if (!newIds.has(currParams[i].getId())) {
+          model.deleteParameter(i);
+        }
       }
+    }
+    for (let i = 0; i < newParams.length; i++) {
+      const {name, id, paramId} = state['params'][i];
+      this.getProcedureModel().insertParameter(
+        new ObservableParameterModel(this.workspace, name, paramId, id),
+        i
+      );
     }
 
     setBlockDescription(this, state['description']);
