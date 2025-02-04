@@ -15,6 +15,7 @@ interface AiDiffChatFooterProps {
   onSuggestPrompts: () => void;
   messages: ChatItem[];
   waiting: boolean;
+  disableEndButtons: boolean;
 }
 
 const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
@@ -22,6 +23,7 @@ const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
   onSuggestPrompts,
   messages,
   waiting,
+  disableEndButtons,
 }) => {
   return (
     <div className={style.chatFooter}>
@@ -30,29 +32,31 @@ const AiDiffChatFooter: React.FC<AiDiffChatFooterProps> = ({
         disabled={waiting}
         customPlaceholder={commonI18n.aiDifferentiation_write_message()}
       />
-      <div className={style.chatFooterButtons}>
-        <Button
-          color="black"
-          size="s"
-          type="secondary"
-          iconLeft={{iconName: 'sparkles'}}
-          onClick={onSuggestPrompts}
-          text={commonI18n.aiDifferentiation_suggest_prompt()}
-        />
-        <PDFDownloadLink
-          document={<AiDiffPdf messages={messages} />}
-          fileName="ai_differentiation_chat.pdf"
-        >
+      {!disableEndButtons && (
+        <div className={style.chatFooterButtons}>
           <Button
             color="black"
             size="s"
             type="secondary"
-            iconLeft={{iconName: 'download'}}
-            onClick={() => {}}
-            text={commonI18n.aiDifferentiation_download_pdf()}
+            iconLeft={{iconName: 'sparkles'}}
+            onClick={onSuggestPrompts}
+            text={commonI18n.aiDifferentiation_suggest_prompt()}
           />
-        </PDFDownloadLink>
-      </div>
+          <PDFDownloadLink
+            document={<AiDiffPdf messages={messages} />}
+            fileName="ai_differentiation_chat.pdf"
+          >
+            <Button
+              color="black"
+              size="s"
+              type="secondary"
+              iconLeft={{iconName: 'download'}}
+              onClick={() => {}}
+              text={commonI18n.aiDifferentiation_download_pdf()}
+            />
+          </PDFDownloadLink>
+        </div>
+      )}
     </div>
   );
 };

@@ -85,29 +85,6 @@ const getAvailableTabs = permissions => {
   return tabs;
 };
 
-const getEnrollSucessWorkshopTitle = () => {
-  // If a user was sent here after successfully enrolling in a workshop, the one field guaranteed to have
-  // been set in sessionStorage is 'workshopCourse' (since a workshop must have a course) so we can use
-  // its presence to determine whether to log the WORKSHOP_ENROLLMENT_COMPLETED_EVENT event or not.
-  const workshopCourse = sessionStorage.getItem('workshopCourse', null);
-  if (!workshopCourse) {
-    return '';
-  } else {
-    const workshopName = sessionStorage.getItem('workshopName', null);
-
-    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
-      'regional partner': sessionStorage.getItem('rpName', null),
-      'workshop course': workshopCourse,
-      'workshop subject': sessionStorage.getItem('workshopSubject', null),
-    });
-    ['workshopCourse', 'workshopSubject', 'workshopName', 'rpName'].forEach(
-      sessionKey => sessionStorage.removeItem(sessionKey)
-    );
-
-    return !!workshopName ? workshopName : workshopCourse;
-  }
-};
-
 function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
@@ -126,9 +103,14 @@ function LandingPage({
   // The success message will state the title of the workshop the user just enrolled in:
   // - In the case of Build Your Own workshops, it will state the workshop's name.
   // - In the case of any other type of workshop, it will state the workshop's course.
-  const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] = useState(
-    getEnrollSucessWorkshopTitle()
-  );
+  const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] =
+    useState('');
+  const [enrollSuccessWorkshopLocation, setEnrollSuccessWorkshopLocation] =
+    useState('');
+  const [
+    enrollSuccessWorkshopSessionInfo,
+    setEnrollSuccessWorkshopSessionInfo,
+  ] = useState([]);
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
 
   const [workshopsAsParticipant, setWorkshopsAsParticipant] = useState([]);
@@ -154,6 +136,11 @@ function LandingPage({
       : style.headerWithoutTabsContainer;
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
+
+  // Load successful enrollment dialog info if user was redirected here after successfully enrolling
+  useEffect(() => {
+    setUpWorkshopEnrollSuccessContent();
+  }, []);
 
   // Load PL section into redux and fetch applicable workshop info
   const dispatch = useDispatch();
@@ -271,6 +258,41 @@ function LandingPage({
       fetchProgramManagerWorkshops();
     }
   }, [dispatch, userPermissions]);
+
+  const setUpWorkshopEnrollSuccessContent = () => {
+    // If a user was sent here after successfully enrolling in a workshop, the one field guaranteed to have
+    // been set in sessionStorage is 'workshopCourse' (since a workshop must have a course) so we can use
+    // its presence to determine whether to log the WORKSHOP_ENROLLMENT_COMPLETED_EVENT event or not.
+    const workshopCourse = sessionStorage.getItem('workshopCourse', null);
+    if (!workshopCourse) {
+      return '';
+    }
+
+    const workshopName = sessionStorage.getItem('workshopName', null);
+    setEnrollSuccessWorkshopLocation(
+      sessionStorage.getItem('workshopLocation', null)
+    );
+    setEnrollSuccessWorkshopSessionInfo(
+      JSON.parse(sessionStorage.getItem('sessionTimeInfo', null)) ?? []
+    );
+
+    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+      'regional partner': sessionStorage.getItem('rpName', null),
+      'workshop course': workshopCourse,
+      'workshop subject': sessionStorage.getItem('workshopSubject', null),
+    });
+    [
+      'workshopCourse',
+      'workshopSubject',
+      'workshopName',
+      'sessionTimeInfo',
+      'rpName',
+    ].forEach(sessionKey => sessionStorage.removeItem(sessionKey));
+
+    setEnrollSuccessWorkshopTitle(
+      !!workshopName ? workshopName : workshopCourse
+    );
+  };
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
@@ -506,6 +528,8 @@ function LandingPage({
         {enrollSuccessWorkshopTitle && (
           <WorkshopEnrollmentCelebrationDialog
             workshopTitle={enrollSuccessWorkshopTitle}
+            workshopLocation={enrollSuccessWorkshopLocation}
+            workshopSessionInfo={enrollSuccessWorkshopSessionInfo}
             onClose={() => setEnrollSuccessWorkshopTitle('')}
           />
         )}
