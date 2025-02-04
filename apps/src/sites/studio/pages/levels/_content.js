@@ -16,6 +16,7 @@ $(document).ready(() => {
   Blockly.cdoUtils.injectCss(document);
   // Install the common Blockly blocks
   commonBlocks.install(window.Blockly, {});
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
   if (hasScriptData('script[data-associatedBlocks]')) {
     const associatedBlocks = getScriptData('associatedblocks');
     try {
