@@ -6,6 +6,22 @@ import {
 } from '@code-dot-org/component-library/button';
 import React from 'react';
 
+type IconStyleType = 'solid' | 'regular' | 'light' | 'thin';
+type IconFamilyType = 'brands' | 'duotone' | 'kit';
+
+export const iconStyles: IconStyleType[] = [
+  'solid',
+  'regular',
+  'light',
+  'thin',
+];
+export const iconFamilies: (IconFamilyType | '')[] = [
+  'brands',
+  'duotone',
+  'kit',
+  '',
+];
+
 type ButtonProps = {
   /** Button text */
   text?: string;
@@ -25,13 +41,21 @@ type ButtonProps = {
   isPending?: boolean;
   /** Button link title */
   title?: string;
+  /** Button left icon name */
+  iconLeftName?: string;
+  /** Button left icon group */
+  iconLeftStyle?: IconStyleType;
+  /** Button left icon family */
+  iconLeftFamily?: IconFamilyType;
+  /** Button right icon name */
+  iconRightName?: string;
+  /** Button right icon group */
+  iconRightStyle?: IconStyleType;
+  /** Button right icon family */
+  iconRightFamily?: IconFamilyType;
 };
 
 // TODO:
-// - add iconLeftName
-// - add iconLeftGroup
-// - add iconRightName
-// - add iconRightGroup
 // - add target prop validations
 // -
 
@@ -44,6 +68,12 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   download,
   disabled,
   isPending,
+  iconLeftName,
+  iconLeftStyle = 'solid',
+  iconLeftFamily,
+  iconRightName,
+  iconRightStyle = 'solid',
+  iconRightFamily,
 }) => {
   return (
     <LinkButton
@@ -56,6 +86,24 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       download={download}
       disabled={disabled}
       isPending={isPending}
+      iconLeft={
+        iconLeftName
+          ? {
+              iconName: iconLeftName,
+              iconStyle: iconLeftStyle,
+              iconFamily: iconLeftFamily,
+            }
+          : undefined
+      }
+      iconRight={
+        iconRightName
+          ? {
+              iconName: iconRightName,
+              iconStyle: iconRightStyle,
+              iconFamily: iconRightFamily,
+            }
+          : undefined
+      }
     />
   );
 };
