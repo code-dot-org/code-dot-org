@@ -17,10 +17,11 @@ And /^match level (\d+) contains (\d+) empty slots$/ do |index, expected_count|
 end
 
 And /^I drag match level (\d+) unplaced answer (\d+) to empty slot (\d+)$/ do |level, answer, slot|
-  level_selector = ".match:nth(#{level})"
-  answer_selector = "#{level_selector} .match_answers .answer:nth(#{answer})"
-  slot_selector = "#{level_selector} .match_slots .emptyslot:nth(#{slot})"
-  code = generate_selector_drag_code(answer_selector, slot_selector, 0, 0)
+  level_selector = "document.querySelectorAll('.match')[#{level}]"
+  answer = "#{level_selector}.querySelector('.match_answers .answer:nth-child(#{answer + 1})')"
+  slot = "#{level_selector}.querySelector('.match_slots .emptyslot:nth-child(#{slot + 1})')"
+
+  code = generate_match_drag_code(answer, slot)
   @browser.execute_script code
 end
 
