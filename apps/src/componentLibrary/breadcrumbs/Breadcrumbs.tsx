@@ -1,9 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link, {LinkWithText} from '@code-dot-org/component-library/link';
 import classNames from 'classnames';
 import React from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import Link, {LinkWithText} from '@cdo/apps/componentLibrary/link';
 
 import moduleStyles from './breadcrumbs.module.scss';
 

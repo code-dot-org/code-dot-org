@@ -1,12 +1,12 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import Tags from '@code-dot-org/component-library/tags';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
 import {RadioButton} from '@cdo/apps/componentLibrary/radioButton';
-import Tags from '@cdo/apps/componentLibrary/tags';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
