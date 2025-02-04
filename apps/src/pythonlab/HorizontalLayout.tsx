@@ -9,28 +9,35 @@ import Output from '../codebridge/Workspace/Output';
 import moduleStyles from './horizontal-layout.module.scss';
 
 const HorizontalLayout: React.FunctionComponent = () => {
+  const layoutContainerRef = React.useRef<HTMLDivElement>(null);
+  const workspaceAndOutputContainerRef = React.useRef<HTMLDivElement>(null);
   const {position: infoPanelWidth, separatorProps: infoPanelSeparatorProps} =
     useResizable({
       axis: 'x',
       initial: 400,
       min: 0,
+      containerRef: layoutContainerRef,
     });
   const {position: outputHeight, separatorProps: outputSeparatorProps} =
     useResizable({
       axis: 'y',
       initial: 300,
-      min: 100,
+      min: 0,
       reverse: true,
+      containerRef: workspaceAndOutputContainerRef,
     });
 
   return (
-    <div className={moduleStyles.layoutContainer}>
+    <div className={moduleStyles.layoutContainer} ref={layoutContainerRef}>
       <InfoPanel style={{width: infoPanelWidth}} />
       {/* <div className={moduleStyles.infoPanel} style={{width: infoPanelWidth}}>
         Info Panel
       </div> */}
       <ResizeBar isVertical={true} {...infoPanelSeparatorProps} />
-      <div className={moduleStyles.workspaceAndOutput}>
+      <div
+        className={moduleStyles.workspaceAndOutput}
+        ref={workspaceAndOutputContainerRef}
+      >
         {/* <div className={moduleStyles.workspace}>Workspace</div> */}
         <Workspace className={moduleStyles.workspace} />
         <ResizeBar isVertical={false} {...outputSeparatorProps} />

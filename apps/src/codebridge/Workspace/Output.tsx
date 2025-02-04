@@ -18,7 +18,10 @@ const Output: React.FunctionComponent<OutputProps> = ({style, className}) => {
   const miniApp = labConfig?.miniApp?.name;
   if (!miniApp) {
     return (
-      <div className={moduleStyles.outputContainer} style={style}>
+      <div
+        className={classNames(moduleStyles.outputContainer, className)}
+        style={style}
+      >
         <Console />
       </div>
     );

@@ -2,21 +2,14 @@
 
 .consoleContainer {
   color: $white;
-  overflow: hidden;
-  height: 100%;
+  //overflow: hidden;
+  //height: 100%;
   white-space: pre;
   background-color: $black;
 }
 
-.console {
-  font-family:'Courier New', Courier, monospace;
-  overflow-y: scroll;
-  user-select: text;
-  height: 100%
-}
-
 .consoleV2 {
-  flex-grow: 1;
+  //flex-grow: 1;
   overflow: hidden;
 }
 
