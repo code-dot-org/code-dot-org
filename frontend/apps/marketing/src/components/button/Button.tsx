@@ -6,22 +6,6 @@ import {
 } from '@code-dot-org/component-library/button';
 import React from 'react';
 
-type IconStyleType = 'solid' | 'regular' | 'light' | 'thin';
-type IconFamilyType = 'brands' | 'duotone' | 'kit';
-
-export const iconStyles: IconStyleType[] = [
-  'solid',
-  'regular',
-  'light',
-  'thin',
-];
-export const iconFamilies: (IconFamilyType | '')[] = [
-  'brands',
-  'duotone',
-  'kit',
-  '',
-];
-
 type ButtonProps = {
   /** Button text */
   text?: string;
@@ -43,21 +27,13 @@ type ButtonProps = {
   title?: string;
   /** Button left icon name */
   iconLeftName?: string;
-  /** Button left icon group */
-  iconLeftStyle?: IconStyleType;
-  /** Button left icon family */
-  iconLeftFamily?: IconFamilyType;
+  /** Button left icon is brand icon */
+  isLeftIconBrand?: boolean;
   /** Button right icon name */
   iconRightName?: string;
-  /** Button right icon group */
-  iconRightStyle?: IconStyleType;
-  /** Button right icon family */
-  iconRightFamily?: IconFamilyType;
+  /** Button right icon is brand icon */
+  isRightIconBrand?: boolean;
 };
-
-// TODO:
-// - add target prop validations
-// -
 
 const Button: React.FunctionComponent<ButtonProps> = ({
   text,
@@ -69,11 +45,9 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   disabled,
   isPending,
   iconLeftName,
-  iconLeftStyle = 'solid',
-  iconLeftFamily,
+  isLeftIconBrand,
   iconRightName,
-  iconRightStyle = 'solid',
-  iconRightFamily,
+  isRightIconBrand,
 }) => {
   return (
     <LinkButton
@@ -90,8 +64,8 @@ const Button: React.FunctionComponent<ButtonProps> = ({
         iconLeftName
           ? {
               iconName: iconLeftName,
-              iconStyle: iconLeftStyle,
-              iconFamily: iconLeftFamily,
+              iconStyle: 'solid',
+              iconFamily: isLeftIconBrand ? 'brands' : undefined,
             }
           : undefined
       }
@@ -99,8 +73,8 @@ const Button: React.FunctionComponent<ButtonProps> = ({
         iconRightName
           ? {
               iconName: iconRightName,
-              iconStyle: iconRightStyle,
-              iconFamily: iconRightFamily,
+              iconStyle: 'solid',
+              iconFamily: isRightIconBrand ? 'brands' : undefined,
             }
           : undefined
       }

@@ -1,27 +1,16 @@
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
-import {iconStyles, iconFamilies} from '@/components/button/Button';
-import {capitalize} from '@/components/common/helpers';
-
-const iconStylesOptions = iconStyles.map(style => ({
-  value: style,
-  displayName: capitalize(style),
-}));
-const iconFamiliesOptions = iconFamilies.map(family => ({
-  value: family,
-  displayName: capitalize(family),
-}));
 
 export const ButtonContentfulComponentDefinition: ComponentDefinition = {
   id: 'button',
   name: 'Button',
   category: 'Custom Components',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/4fJ5H4ztpxsps2n46akVPd/5389a912640503795e2dd51cd3d92061/component_button_thumbnail.png',
+    'https://images.ctfassets.net/90t6bu6vlf76/6fRMP55wwDZF2C4ubzygTO/bad1643a5db519e1e3f6886f0f7bc7cd/component_button_thumbnail.png',
   tooltip: {
     description:
       'Use a button to create clear calls to action. Supports different styles, sizes, and links to guide users to key actions.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/6pLvzcnn5QJLPq1s4SLtVC/27cefc6049496000bcc797df11d81d03/component_button_tooltip.png',
+      'https://images.ctfassets.net/90t6bu6vlf76/6B9UVqsphQR9MUnNf4tYHU/94e6f32fcb793401f02399ceb0069722/component_button_tooltip.png',
   },
   variables: {
     color: {
@@ -58,14 +47,20 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
     href: {
       displayName: 'Link URL',
       type: 'Text',
-      defaultValue: 'code.org',
+      defaultValue: 'https://code.org',
       group: 'content',
     },
     target: {
-      displayName: 'Link Target',
+      displayName: 'Open link in (Link target)',
       type: 'Text',
       defaultValue: '_self',
-      group: 'content',
+      group: 'style',
+      validations: {
+        in: [
+            {value: '_self', displayName: 'Same tab'},
+            {value: '_blank', displayName: 'New tab'},
+        ],
+      },
     },
     download: {
       displayName: 'Download',
@@ -95,24 +90,11 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       group: 'style',
       defaultValue: '',
     },
-    iconLeftStyle: {
-      displayName: 'Left Icon Style',
-      type: 'Text',
+    isLeftIconBrand: {
+      displayName: 'Is left icon a brand icon?',
+      type: 'Boolean',
       group: 'style',
-      defaultValue: 'solid',
-      validations: {
-        in: iconStylesOptions,
-      },
-    },
-    iconLeftFamily: {
-      displayName: 'Left Icon Family',
-      type: 'Text',
-      group: 'style',
-      defaultValue: undefined,
-      validations: {
-        // Adding an empty option to allow also not to select family
-        in: iconFamiliesOptions,
-      },
+      defaultValue: false,
     },
     iconRightName: {
       displayName: 'Right Icon Name',
@@ -120,24 +102,11 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       group: 'style',
       defaultValue: '',
     },
-    iconRightStyle: {
-      displayName: 'Right Icon Style',
-      type: 'Text',
+    isRightIconBrand: {
+      displayName: 'Is right icon a brand icon?',
+      type: 'Boolean',
       group: 'style',
-      defaultValue: 'solid',
-      validations: {
-        in: iconStylesOptions,
-      },
-    },
-    iconRightFamily: {
-      displayName: 'Right Icon Family',
-      type: 'Text',
-      group: 'style',
-      defaultValue: undefined,
-      validations: {
-        // Adding an empty option to allow also not to select family
-        in: iconFamiliesOptions,
-      },
+      defaultValue: false,
     },
   },
 };
