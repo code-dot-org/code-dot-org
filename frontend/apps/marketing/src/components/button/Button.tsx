@@ -17,14 +17,10 @@ type ButtonProps = {
   href?: string;
   /** Button link target (where to open link) */
   target?: string;
-  /** Button allows to download file via provided href, allows to set downloaded filename*/
-  download?: string;
   /** Is Button disabled */
   disabled?: boolean;
   /** Is Button pending */
   isPending?: boolean;
-  /** Button link title */
-  title?: string;
   /** Button left icon name */
   iconLeftName?: string;
   /** Button left icon is brand icon */
@@ -41,7 +37,6 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   type,
   href,
   target,
-  download,
   disabled,
   isPending,
   iconLeftName,
@@ -57,7 +52,6 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       target={target}
       type={type}
       color={color}
-      download={download}
       disabled={disabled}
       isPending={isPending}
       iconLeft={

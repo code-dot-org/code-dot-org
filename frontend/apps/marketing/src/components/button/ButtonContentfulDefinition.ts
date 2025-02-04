@@ -62,11 +62,6 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
-    download: {
-      displayName: 'Download',
-      type: 'Text',
-      group: 'content',
-    },
     disabled: {
       displayName: 'Disabled',
       type: 'Boolean',
@@ -78,11 +73,6 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       type: 'Boolean',
       defaultValue: false,
       group: 'style',
-    },
-    title: {
-      displayName: 'Title',
-      type: 'Text',
-      group: 'content',
     },
     iconLeftName: {
       displayName: 'Left Icon Name',
