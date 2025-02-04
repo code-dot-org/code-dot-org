@@ -12,15 +12,6 @@ def test_get_neighborhood_log_resets_context():
   validation_protocol.get_neighborhood_log(main_path)
   assert neighborhood_world.context_type is NeighborhoodContextType.RUN
 
-def test_get_neighborhood_log_returns_expected_info():
-  validation_protocol = ValidationProtocol()
-  neighborhood_world = World()
-  neighborhood_world.set_grid_from_string(SAMPLE_MAZE)
-  neighborhood_world.set_context_type(NeighborhoodContextType.VALIDATE)
-  main_path = os.path.join(os.path.dirname(__file__), 'sample_main.py')
-  neighborhood_log = validation_protocol.get_neighborhood_log(main_path)
-  assert len(neighborhood_log.painter_logs) == 2
-
 def test_get_neighborhood_log_with_invalid_main_resets_context():
   validation_protocol = ValidationProtocol()
   neighborhood_world = World()

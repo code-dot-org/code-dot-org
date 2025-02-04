@@ -27,7 +27,7 @@ class ValidationProtocol(object):
     self._invoke_main(file_path)
 
     World().set_context_type(NeighborhoodContextType.RUN)
-    neighborhood_log = NeighborhoodTracker._instance.get_neighborhood_log()
+    neighborhood_log = self.neighborhood_tracker.get_neighborhood_log()
     self.neighborhood_tracker.reset()
     return neighborhood_log
 
