@@ -16,10 +16,10 @@ And /^match level (\d+) contains (\d+) empty slots$/ do |index, expected_count|
   expect(actual_count).to eq(expected_count.to_i)
 end
 
-And /^I drag match level (\d+) unplaced answer (\d+) to empty slot (\d+)$/ do |level, answer, slot|
+And /^I drag match level (\d+) unplaced answer to empty slot$/ do |level|
   level_selector = "document.querySelectorAll('.match')[#{level}]"
-  answer = "#{level_selector}.querySelector('.match_answers .answer:nth-child(#{answer + 1})')"
-  slot = "#{level_selector}.querySelector('.match_slots .emptyslot:nth-child(#{slot + 1})')"
+  answer = "#{level_selector}.querySelector('.match_answers .answer')"
+  slot = "#{level_selector}.querySelector('.match_slots .emptyslot')"
 
   code = generate_match_drag_code(answer, slot)
   @browser.execute_script code

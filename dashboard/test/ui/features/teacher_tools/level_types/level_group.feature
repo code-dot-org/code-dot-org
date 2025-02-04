@@ -45,8 +45,8 @@ Scenario: Match levels within level group
   And match level 1 contains 5 unplaced answers
   And match level 1 contains 5 empty slots
 
-  When I drag match level 0 unplaced answer 0 to empty slot 0
-  And I drag match level 1 unplaced answer 0 to empty slot 0
+  When I drag match level 0 unplaced answer to empty slot
+  And I drag match level 1 unplaced answer to empty slot
 
   Then match level 0 contains 3 unplaced answers
   And match level 0 contains 3 empty slots
@@ -108,18 +108,18 @@ Scenario: Submit all answers, including match levels
   # Select answers to both match levels.
 
   And I scroll the ".level-group-content:nth(3)" element into view
-  And I drag match level 0 unplaced answer 0 to empty slot 0
-  And I drag match level 0 unplaced answer 0 to empty slot 0
-  And I drag match level 0 unplaced answer 0 to empty slot 0
-  And I drag match level 0 unplaced answer 0 to empty slot 0
+  And I drag match level 0 unplaced answer to empty slot
+  And I drag match level 0 unplaced answer to empty slot
+  And I drag match level 0 unplaced answer to empty slot
+  And I drag match level 0 unplaced answer to empty slot
   And match level 0 contains 0 empty slots
 
   And I scroll the ".level-group-content:nth(4)" element into view
-  And I drag match level 1 unplaced answer 0 to empty slot 0
-  And I drag match level 1 unplaced answer 0 to empty slot 0
-  And I drag match level 1 unplaced answer 0 to empty slot 0
-  And I drag match level 1 unplaced answer 0 to empty slot 0
-  And I drag match level 1 unplaced answer 0 to empty slot 0
+  And I drag match level 1 unplaced answer to empty slot
+  And I drag match level 1 unplaced answer to empty slot
+  And I drag match level 1 unplaced answer to empty slot
+  And I drag match level 1 unplaced answer to empty slot
+  And I drag match level 1 unplaced answer to empty slot
   And match level 1 contains 0 empty slots
 
   Given I press ".submitButton:first" using jQuery
