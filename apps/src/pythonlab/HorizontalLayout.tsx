@@ -59,10 +59,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
           {...outputSeparatorProps}
           isDragging={outputDragging}
         />
-        <Output
-          className={moduleStyles.output}
-          style={{height: outputHeight}}
-        />
+        <Output className={moduleStyles.output} height={outputHeight} />
       </div>
     </div>
   );

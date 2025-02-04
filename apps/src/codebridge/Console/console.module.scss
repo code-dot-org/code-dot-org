@@ -2,14 +2,14 @@
 
 .consoleContainer {
   color: $white;
-  //overflow: hidden;
-  //height: 100%;
+  overflow: hidden;
+  height: 100%;
   white-space: pre;
   background-color: $black;
 }
 
 .consoleV2 {
-  //flex-grow: 1;
+  flex-grow: 1;
   overflow: hidden;
 }
 
