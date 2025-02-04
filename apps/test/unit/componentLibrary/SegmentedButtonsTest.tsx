@@ -1,11 +1,10 @@
+import SegmentedButtons, {
+  SegmentedButtonsProps,
+} from '@code-dot-org/component-library/segmentedButtons';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React, {useState} from 'react';
-
-import SegmentedButtons, {
-  SegmentedButtonsProps,
-} from '@cdo/apps/componentLibrary/segmentedButtons';
 
 describe('Design System - Segmented Buttons', () => {
   const renderSegmentedButtons = (props: Partial<SegmentedButtonsProps>) => {

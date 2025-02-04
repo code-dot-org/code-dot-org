@@ -1,9 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import FocusLock from 'react-focus-lock';
 
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import {getBaseAssetUrl} from '../appConfig';
