@@ -182,7 +182,6 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
       aria-label={sound.name}
       tabIndex={0}
       role="tabpanel"
-      aria-labelledby={sound.type}
     >
       <div className={styles.soundRowLeft}>
         <FontAwesomeV6Icon
