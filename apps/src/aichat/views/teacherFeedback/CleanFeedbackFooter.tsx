@@ -2,9 +2,8 @@ import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
-import {EmText} from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
@@ -16,14 +15,20 @@ import moduleStyles from './teacher-feedback-footer.module.scss';
 
 interface Props {
   id: number;
+  chatMessageText: string;
+  isAssistant: boolean;
   teacherFeedback?: FeedbackValue;
-  role: Role;
 }
 
 /**
  * Teacher feedback footer displayed for messages without any profanity violations or errors.
  */
-const CleanFeedbackFooter: React.FC<Props> = ({id, teacherFeedback, role}) => {
+const CleanFeedbackFooter: React.FC<Props> = ({
+  id,
+  chatMessageText,
+  isAssistant,
+  teacherFeedback,
+}) => {
   const teacherFlagged = teacherFeedback === TeacherFeedback.CLEAN_DISAGREE;
   const dispatch = useAppDispatch();
   const handleFlagClick = () => {
@@ -35,46 +40,53 @@ const CleanFeedbackFooter: React.FC<Props> = ({id, teacherFeedback, role}) => {
     );
   };
 
+  const copyButton = <CopyButton copyText={chatMessageText} />;
+  const flagButton = (
+    <WithTooltip
+      key={`flag-tooltip-${teacherFlagged}`}
+      tooltipProps={{
+        tooltipId: 'flag-tooltip',
+        direction: isAssistant ? 'onRight' : 'onLeft',
+        size: 'xs',
+        text: teacherFlagged
+          ? aichatI18n.chatMessage_flaggedAsInappropriate()
+          : aichatI18n.chatMessage_flagAsInappropriate(),
+        className: moduleStyles.tooltip,
+        iconLeft: teacherFlagged ? {iconName: 'check'} : undefined,
+      }}
+    >
+      <Button
+        color={buttonColors.black}
+        icon={{
+          iconName: 'flag-pennant',
+          iconStyle: teacherFlagged ? 'solid' : 'regular',
+        }}
+        isIconOnly={true}
+        onClick={handleFlagClick}
+        size="xs"
+        type={'tertiary'}
+        className={classNames(
+          moduleStyles[`icon-button-negative`],
+          teacherFlagged && moduleStyles.selected
+        )}
+        ariaLabel={
+          teacherFlagged ? aichatI18n.aria_flag() : aichatI18n.aria_unflag()
+        }
+      />
+    </WithTooltip>
+  );
+
+  // Place elements in the correct semantic order.
+  const footerElements = isAssistant ? [copyButton, flagButton] : [flagButton];
+
   return (
     <div
       className={classNames(
         moduleStyles.teacherFeedbackContainer,
-        role === Role.ASSISTANT && moduleStyles.assistantFeedback
+        isAssistant && moduleStyles.leftAlign
       )}
     >
-      {teacherFlagged && (
-        <EmText>{aichatI18n.chatMessage_hasBeenFlagged()}</EmText>
-      )}
-      <WithTooltip
-        key={`flag-tooltip-${teacherFlagged}`}
-        tooltipProps={{
-          tooltipId: 'flag-tooltip',
-          direction: role === Role.ASSISTANT ? 'onRight' : 'onLeft',
-          size: 'xs',
-          text: teacherFlagged
-            ? aichatI18n.chatMessage_unflagAsInappropriate()
-            : aichatI18n.chatMessage_flagAsInappropriate(),
-          className: moduleStyles.tooltip,
-        }}
-      >
-        <Button
-          color={buttonColors.black}
-          icon={{
-            iconName: 'flag-pennant',
-            iconStyle: teacherFlagged ? 'solid' : 'regular',
-          }}
-          isIconOnly={true}
-          onClick={handleFlagClick}
-          size="xs"
-          type={'tertiary'}
-          className={
-            teacherFlagged ? moduleStyles.buttonNegative : moduleStyles.button
-          }
-          ariaLabel={
-            teacherFlagged ? aichatI18n.aria_flag() : aichatI18n.aria_unflag()
-          }
-        />
-      </WithTooltip>
+      {footerElements}
     </div>
   );
 };
