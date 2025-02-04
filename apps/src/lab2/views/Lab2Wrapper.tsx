@@ -7,12 +7,12 @@
 // while to load; and a sad bee when things go wrong.
 
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+import fetchPermissions from '@cdo/apps/lab2/utils/fetchPermissions';
 import {useBrowserTextToSpeech} from '@cdo/apps/sharedComponents/BrowserTextToSpeechWrapper';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {PERMISSIONS} from '../constants';
@@ -23,6 +23,7 @@ import {
   isLabLoading,
   hasPageError,
   setIsShareView,
+  setPermissions,
 } from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
 import {getAppOptionsLevelId, getIsShareView} from '../projects/utils';
@@ -38,25 +39,19 @@ export interface Lab2WrapperProps {
   children: React.ReactNode;
 }
 
-async function fetchIsProjectValidator(): Promise<boolean> {
-  const permissionsResponse = await HttpClient.fetchJson<{
-    permissions: string[];
-  }>('/api/v1/users/current/permissions');
-  const {permissions} = permissionsResponse.value;
-
-  return permissions.includes(PERMISSIONS.PROJECT_VALIDATOR) ? true : false;
-}
-
 const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const isLoading: boolean = useSelector(isLabLoading);
   const isPageError: boolean = useSelector(hasPageError);
   const isBlocked = useAppSelector(state => state.lab.isBlocked);
-  const [isProjectValidator, setIsProjectValidator] = useState(false);
+  const dispatch = useAppDispatch();
+  const isProjectValidator = useAppSelector(state =>
+    state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
+  );
   useEffect(() => {
-    fetchIsProjectValidator().then(data => {
-      setIsProjectValidator(data);
+    fetchPermissions().then(data => {
+      dispatch(setPermissions(data));
     });
-  }, []);
+  }, [dispatch]);
   const errorMessage: string | undefined = useSelector(
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
@@ -64,8 +59,6 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
   const {cancel} = useBrowserTextToSpeech();
 
   // Store some server-provided data in redux.
-
-  const dispatch = useAppDispatch();
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   // Store the level ID provided by App Options in redux if necessary.

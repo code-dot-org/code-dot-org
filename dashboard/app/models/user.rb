@@ -117,6 +117,7 @@ class User < ApplicationRecord
   #     brute-force password attempts
   #   roster_synced: Indicates if the user was created during a roster sync operation from an LMS. Implies that the user
   #     is a school-managed account.
+  #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -168,6 +169,8 @@ class User < ApplicationRecord
     has_seen_ai_assessments_announcement
     seen_ta_scores_map
     roster_synced
+    educator_role
+    has_completed_ai_differentiation_welcome
   )
 
   attr_accessor(
@@ -189,10 +192,15 @@ class User < ApplicationRecord
     :child_users,
   )
 
-  # Include default devise modules. Others available are:
+  # Include default Devise modules. Others available are:
   # :token_authenticatable, :confirmable, :timeoutable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable, :lockable
+
+  # Make sure to include this Concern after we include the default Devise
+  # modules, since it's trying to extend some methods added by those modules
+  # that would be overridden by them if we included it before.
+  include Devise::Models::ManualSessionExpiration
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -217,6 +225,10 @@ class User < ApplicationRecord
 
   validates_presence_of :user_type
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
+
+  validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
+
+  validate :educator_role_allowed_for_teacher, on: :create
 
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests
@@ -444,16 +456,9 @@ class User < ApplicationRecord
     primary_contact_info.try(:hashed_email) || ''
   end
 
-  # Email used for the user's enrollments:
-  # Returns the 'alternateEmail' field from the user's latest accepted teacher application if it exists to
-  # help ensure the enrollment emails are delivered. Otherwise, returns the user's email.
-  def email_for_enrollments
-    latest_accepted_app = Pd::Application::TeacherApplication.where(
-      user: self,
-      status: 'accepted'
-    ).order(application_year: :desc).first&.form_data_hash
-    alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : ''
-    alternate_email.presence || email
+  def alternate_email
+    latest_accepted_app = Pd::Application::TeacherApplication.where(user: self, status: 'accepted').order(application_year: :desc).first
+    latest_accepted_app&.sanitized_form_data_hash&.dig(:alternate_email)
   end
 
   # assign a course to a facilitator that is qualified to teach it
@@ -1558,11 +1563,22 @@ class User < ApplicationRecord
 
   AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
 
-  # Teachers
+  def ai_tutor_permission?
+    permission?(UserPermission::AI_TUTOR_ACCESS)
+  end
+
+  def can_use_ai_iteration_tools?
+    ai_tutor_permission? && levelbuilder?
+  end
+
   def can_enable_ai_tutor?
-    !DCDO.get('ai-tutor-disabled', false) && (
-    permission?(UserPermission::AI_TUTOR_ACCESS) ||
+    !DCDO.get('ai-tutor-disabled', false) && (ai_tutor_permission? ||
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
+  end
+
+  def has_ai_tutor_access?
+    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
+    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
   end
 
   def can_view_student_ai_chat_messages?
@@ -1581,12 +1597,6 @@ class User < ApplicationRecord
 
   def has_aichat_access?
     teacher_can_access_ai_chat? || student_can_access_ai_chat?
-  end
-
-  # Students
-  def has_ai_tutor_access?
-    return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
-    permission_for_ai_tutor? || in_ai_tutor_experiment_with_enabled_section?
   end
 
   def student_of_verified_instructor?
@@ -2497,6 +2507,12 @@ class User < ApplicationRecord
       Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
         enrollment.update(user: self)
       end
+
+      if alternate_email.present?
+        Pd::Enrollment.where(email: alternate_email, user: nil).each do |enrollment|
+          enrollment.update(user: self)
+        end
+      end
     end
   end
 
@@ -2766,6 +2782,14 @@ class User < ApplicationRecord
         errors.add(:us_state,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow'))
       end
       errors.add(:age,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow')) if birthday_changed?
+    end
+  end
+
+  private def educator_role_allowed_for_teacher
+    return if educator_role.blank?
+
+    unless teacher?
+      errors.add(:educator_role, "can only be assigned to teachers")
     end
   end
 

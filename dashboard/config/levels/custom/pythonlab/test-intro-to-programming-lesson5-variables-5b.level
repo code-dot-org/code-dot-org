@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-22T17:12:37.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "name = \"Manda\"\nnum_skateboards = 3\ncan_ollie =  True\nhelmet_price = 15.99\n\n#Add print statements to print out each variable\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Let's Print it Out",
+    "thumbnail_url": "https://images.code.org/8f4771a8a6c30a877d01c04a330c68c5-printer.jpg",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzq1WWswnDfHaVEJk1PuBz9gB9me/slI+\nOFprgSPPScTHiKvJr+BWmi7XYo7vgpxXG0RDjBs0AJkel6BQFa0/01OT5y8h\nS7hO3fm2QDZW5vGeR99QMH79wTFfPMs/eoGRG2T48s5N7xUNXfBRpRVB0Whv\n+wEQ9s7tQMILGvMgysm3s7DlTOVWJKaYy4HhhC1caTReUj3RwEG6LkNVzFpX\njfXQms4F8t/umCe64Q2qP5OmB6rV2GyNc/FvaykBxmoMdZ47KgqDS5Sv9g1g\nHJv5svm9giE7hmwr7T8PBtHtZTB09itEdi4H3K5WhpcjgokWhxwCOtZfwpbf\nufTo7q50c2M0XQtw93mtvJY5aaYHv4b+UWCCgRvO1aZrUc5h0QEOMzhDKyHK\n1om/zfbUx8qSd4A6/4cUsTHAnxUdaWT35nORJj0vwa1xPlSCXfkIxVrLGRSA\nIZ2XQpn02hJKzbrb8pbqwahj4MFuvMEdAlCDIbST5sk5y+yCPrGvMizc15SZ\nlA==\n",
+    "long_instructions": "# Do This:\r\n1. Add print statements to print out each variable.\r\n    - *Hint: What do you need to do to combine non-string variables (like `num_skateboards`) with strings in a `print()` statement?*\r\n2. Run the code and observe the output.\r\n#\r\n3. Manda just got a new skateboard! Update the `num_skateboards` variable using an arithmetic operator (+, -, x, ÷) and print out the updated total."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-22T17:12:37.375+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson5-variables-5a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson5-variables-5a\"},{\"changed_at\":\"2025-01-22 17:12:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:07:10 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:13:49 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:38:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:38:55 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:40:22 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 20:40:54 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 21:01:20 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -54,10 +54,7 @@ export type ConfigType = {
   validMimeTypes?: string[];
 };
 
-export type ProjectType = MultiFileSource;
-export type SourceType = ProjectSources;
-
-export type SetProjectFunction = (project: ProjectType) => void;
+export type SetProjectFunction = (project: ProjectSources) => void;
 export type SetConfigFunction = (project: ConfigType) => void;
 export type ResetProjectFunction = () => void;
 export type OnRunFunction = (
@@ -66,6 +63,7 @@ export type OnRunFunction = (
   source: MultiFileSource | undefined
 ) => Promise<void>;
 export type OnStopFunction = () => void;
+export type SendConsoleInputFunction = (input: string) => void;
 
 export type ReducerAction = {
   type: string;

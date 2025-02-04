@@ -10,6 +10,8 @@
 #  updated_at     :datetime
 #  deleted_at     :datetime
 #  code           :string(255)
+#  session_format :integer
+#  time_zone      :string(255)
 #
 # Indexes
 #
@@ -20,6 +22,9 @@
 require 'cdo/code_generation'
 
 class Pd::Session < ApplicationRecord
+  # creates a hash like {in_person: 0, virtual: 1}
+  enum session_format: Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.to_h {|f| [f[:value], f[:enum_value]]}
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: 'pd_workshop_id', optional: true
@@ -52,6 +57,14 @@ class Pd::Session < ApplicationRecord
     end_time = self.end.strftime('%l:%M%P').strip
 
     "#{formatted_date}, #{start_time}-#{end_time}"
+  end
+
+  def session_info_for_calendar
+    {
+      id: id,
+      start: start,
+      end: self.end
+    }
   end
 
   def start_date_us_format

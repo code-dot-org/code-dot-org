@@ -36,7 +36,6 @@ import {RootState} from '../types/redux';
 import HttpClient, {NetworkError} from '../util/HttpClient';
 import {AppDispatch} from '../util/reduxHooks';
 
-import {START_SOURCES} from './constants';
 import Lab2Registry from './Lab2Registry';
 import {
   getInitialValidationState,
@@ -86,6 +85,7 @@ export interface LabState {
   // If this lab is blocked because abuse score >= 15.
   isBlocked: boolean | undefined;
   overrideValidations: Validation[] | undefined;
+  permissions: string[];
 }
 
 const initialState: LabState = {
@@ -99,6 +99,7 @@ const initialState: LabState = {
   isShareView: undefined,
   isBlocked: undefined,
   overrideValidations: undefined,
+  permissions: [],
 };
 
 // Thunks
@@ -174,11 +175,11 @@ export const setUpWithLevel = createAsyncThunk<
       return;
     }
 
-    // If we are in start mode or are editing or viewing exemplars,
+    // If we are in a block edit mode or are editing or viewing exemplars,
     // we don't use a channel id.
     // We can skip creating a project manager and just set the level data.
-    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    if (isStartMode || isViewingExemplar || isEditingExemplar) {
+    const isEditMode = !!getAppOptionsEditBlocks();
+    if (isEditMode || isViewingExemplar || isEditingExemplar) {
       setProjectAndLevelData(
         {levelProperties},
         thunkAPI.signal.aborted,
@@ -314,12 +315,11 @@ export const isLabLoading = (state: {lab: LabState}) =>
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isEditMode = !!getAppOptionsEditBlocks();
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
 
-  // We are always in edit mode if we are in start or editing exemplar mode.
-  // Both of these modes have no channel.
-  if (isStartMode || isEditingExemplarMode) {
+  // Exemplar and block edit modes do not have a channel.
+  if (isEditMode || isEditingExemplarMode) {
     return false;
   }
 
@@ -414,6 +414,9 @@ const labSlice = createSlice({
       action: PayloadAction<Validation[] | undefined>
     ) {
       state.overrideValidations = action.payload;
+    },
+    setPermissions(state, action: PayloadAction<string[]>) {
+      state.permissions = action.payload;
     },
   },
   extraReducers: builder => {
@@ -634,6 +637,7 @@ export const {
   setIsShareView,
   setOverrideValidations,
   onLevelChange,
+  setPermissions,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

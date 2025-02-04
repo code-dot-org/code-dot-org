@@ -1,25 +1,24 @@
 import {
   CodebridgeContextProvider,
-  projectReducer,
-  PROJECT_REDUCER_ACTIONS,
-  useProjectUtilities,
+  sourceReducer,
+  SOURCE_REDUCER_ACTIONS,
+  useSourceUtilities,
 } from '@codebridge/codebridgeContext';
 import {FileBrowser} from '@codebridge/FileBrowser';
 import {useReducerWithCallback} from '@codebridge/hooks';
 import {InfoPanel} from '@codebridge/InfoPanel';
 import {SideBar} from '@codebridge/SideBar';
 import {
-  ProjectType,
   ConfigType,
   SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
+  SendConsoleInputFunction,
 } from '@codebridge/types';
 import React, {useEffect, useReducer, useRef} from 'react';
 
 import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
-import './styles/small-footer-dark-overrides.scss';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import Workspace from './Workspace';
 import Output from './Workspace/Output';
@@ -29,46 +28,47 @@ import moduleStyles from './styles/cdoIDE.module.scss';
 import './styles/codebridge.scss';
 
 type CodebridgeProps = {
-  project: ProjectType;
+  source: MultiFileSource;
   config: ConfigType;
   setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
-  startSource: ProjectSources;
+  startSources: ProjectSources;
   onRun?: OnRunFunction;
   onStop?: () => void;
   projectVersion: number;
+  labConfig?: LabConfig;
+  sendConsoleInput?: SendConsoleInputFunction;
 };
 
 export const Codebridge = React.memo(
   ({
-    project,
+    source,
     config,
     setProject,
     setConfig,
-    startSource,
+    startSources,
     onRun,
     onStop,
     projectVersion,
+    labConfig,
+    sendConsoleInput,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
-      projectReducer,
-      setProject,
-      new Set(PROJECT_REDUCER_ACTIONS.REPLACE_PROJECT)
+      sourceReducer,
+      (source: MultiFileSource) => setProject({source, labConfig}),
+      new Set(SOURCE_REDUCER_ACTIONS.REPLACE_SOURCE)
     );
-    const [internalProject, dispatch] = useReducer(
-      reducerWithCallback,
-      project
-    );
+    const [internalSource, dispatch] = useReducer(reducerWithCallback, source);
 
-    const projectUtilities = useProjectUtilities(dispatch);
+    const sourceUtilities = useSourceUtilities(dispatch);
 
     const currentProjectVersion = useRef(projectVersion);
     useEffect(() => {
       if (projectVersion !== currentProjectVersion.current) {
-        projectUtilities.replaceProject(project);
+        sourceUtilities.replaceSource(source);
         currentProjectVersion.current = projectVersion;
       }
-    }, [currentProjectVersion, project, projectUtilities, projectVersion]);
+    }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
     const ComponentMap = {
       'file-browser': FileBrowser,
@@ -111,14 +111,16 @@ export const Codebridge = React.memo(
     return (
       <CodebridgeContextProvider
         value={{
-          project: internalProject,
+          source: internalSource,
           config,
           setProject,
           setConfig,
-          startSource,
+          startSources,
           onRun,
           onStop,
-          ...projectUtilities,
+          ...sourceUtilities,
+          labConfig,
+          sendConsoleInput,
         }}
       >
         <div

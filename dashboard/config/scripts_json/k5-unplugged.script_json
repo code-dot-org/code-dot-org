@@ -5,7 +5,7 @@
     "login_required": false,
     "properties": {
       "content_area": "self_paced_pl_k_5",
-      "curriculum_umbrella": "CSF Self Paced PL",
+      "curriculum_umbrella": "Self-paced PL - CSF",
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "k5-unplugged",
-    "serialized_at": "2025-01-09 16:03:45 UTC",
+    "serialized_at": "2025-01-13 23:48:21 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

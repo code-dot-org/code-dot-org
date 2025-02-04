@@ -1,0 +1,914 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-28T20:34:53.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 93
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 94
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 93
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 94
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 281
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 283
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 283
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 282
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 50
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 46
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 49
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 50
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 49
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 280
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 52
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 283
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 51
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 279
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 280
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 49
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 50
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 279
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 280
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 284
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 285
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 279
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 286
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 280
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "enable_micro_bit": "false",
+    "mini_app": "neighborhood",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "# Do This:\r\n1. Write a program to get the Painter to the traffic cone based on the direction it can move:\r\n\t- Define one function to have the Painter move east while it can move and to turn right when it is able to move south.\r\n    - Define a second function to have the Painter move north while it can move and to turn right when it is able to move east.\r\n\r\n<details style=\"background-color: #e0d1ec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold; color: black;\">Need help with your algorithms?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n    \t<p style=\"color: black;\">Here is one approach to solving this problem.</p>\r\n        <pre style=\"background-color: #333333; color: white;\">\r\n#first function\r\nwhile the Painter can move east\r\n   move\r\n   if the Painter can move south\r\n      turn right\r\n#second function\r\nwhile the Painter can move north\r\n   if the Painter can move east\r\n      turn right\r\n   move\r\n\t  </pre>\r\n    </div>\r\n</details>",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "from neighborhood import Painter\n\n# Create Painter object\ntrinity = Painter()\n\n# Function definition for turn right\ndef turn_right():\n  trinity.turn_left()\n  trinity.turn_left()\n  trinity.turn_left()\n\n# Function defintion for turn around\ndef turn_around():\n  trinity.turn_left()\n  trinity.turn_left()\n\n# Function definition to move while painter can move\ndef move_while_can():\n  while trinity.can_move():\n    trinity.move()\n\n# ADD TWO NEW FUNCTION DEFINTIONS HERE\ndef move_east_then_turn_if_south():\n  while trinity.can_move('east'):\n    trinity.move()\n    if trinity.can_move('south'):\n      turn_right()\n\ndef move_north_turn_if_east():\n  while trinity.can_move('north'):\n    if trinity.can_move('east'):\n      turn_right()\n    trinity.move()\n\n# ADD FUNCTION CALLS TO GET THE PAINTER TO THE TRAFFIC CONE\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "display_name": "Navigate to the Cone",
+    "bubble_choice_description": "Combine if statements with while loops and user-defined functions to get the Painter to the cone based on the direction it can move!",
+    "thumbnail_url": "https://images.code.org/b972adf3d9cf1350c6e6ca682678dcd1-L10L5b.gif"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-28T20:34:53.868+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson10-level4\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson10-level4\"},{\"changed_at\":\"2025-01-28 20:44:16 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-28 23:38:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-28 23:39:35 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-03 19:06:57 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-03 19:08:04 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-03 19:24:33 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-03 19:27:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-03 19:28:01 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-03 19:32:23 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-03 22:24:26 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

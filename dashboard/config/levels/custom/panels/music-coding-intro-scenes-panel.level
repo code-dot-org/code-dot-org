@@ -7,39 +7,44 @@
   "user_id": 18605,
   "properties": {
     "encrypted": "false",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "panels": [
       {
         "text": "**Music can help tell the story we see** in movies and games. ",
         "imageUrl": "https://images.code.org/34d4ab3bf23aaed8f0697b5f86f64ffd-video games.jpg",
         "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
-        "layout": "text-top-center"
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "Music makes the exciting moments feel more thrilling!",
         "imageUrl": "https://images.code.org/5cea3ed7c012d8f01a9c5c119f3fc417-Lesson 3 Level 2b.png",
         "key": "music-coding-intro-functions-panel-4e9d978e-62cf-45c0-a123-21e2c48cc3db",
-        "layout": "text-top-center"
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "And the battles feel more intense!",
-        "imageUrl": "https://images.code.org/18e2dbd7bc5883ca75a511dc2f08687f-Lesson 3 Level 2c.png",
+        "imageUrl": "https://images.code.org/73cb4d948323765f00928349e118cdf9-Lesson 3 Level 2c.png",
         "key": "music-coding-intro-functions-panel-b11022f2-164f-4e79-b32c-96ed53cf9381",
-        "layout": "text-top-center"
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
       },
       {
-        "text": "In Music Lab we can use **event triggers** to bring actions to life, like the clink of coins, or the excitement of a power up. ",
-        "imageUrl": "",
+        "text": "To bring actions to life, like the clink of coins, or the excitement of a power up we can use **Triggers**.",
+        "imageUrl": "https://images.code.org/ba2a3b0ff599803c4cfe56b32d0e1766-Lesson 3 Level 2d.png",
         "key": "music-coding-intro-scenes-panel-fde75681-ff53-4a6e-ac6e-b0230e64ec02",
-        "layout": "text-top-center"
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
       },
       {
         "text": "**Trigger Events** are separate from when run. \n\nThey tell a sound to play *only* when the trigger is pressed. ",
-        "imageUrl": "",
-        "key": "music-coding-intro-scenes-panel-f643f3af-e924-4583-8057-b3ced60cfae8"
+        "imageUrl": "https://images.code.org/93f034b31da8d2d483427cf70b31a3b7-Untitled 6.jpg",
+        "key": "music-coding-intro-scenes-panel-f643f3af-e924-4583-8057-b3ced60cfae8",
+        "fadeInOverPrevious": true
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-12-05T17:45:22.886+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel\"},{\"changed_at\":\"2024-12-05 17:58:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 18:01:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:43:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 02:16:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 22:27:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 22:59:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 23:00:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 17:49:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 20:01:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 20:03:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-05T17:45:22.886+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel\"},{\"changed_at\":\"2024-12-05 17:58:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 18:01:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:43:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 02:16:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 22:27:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 22:59:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 23:00:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 17:49:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 20:01:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 20:03:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 19:00:06 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 20:19:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 20:21:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 20:24:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 20:26:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

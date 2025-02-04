@@ -82,7 +82,7 @@ steps:
   - name: unit-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.11.1
+    image: codedotorg/code-dot-org:1.14
     pull: always
     volumes:
       - name: rbenv
@@ -215,7 +215,7 @@ steps:
   - name: ui-tests
     # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.11.1
+    image: codedotorg/code-dot-org:1.14
     pull: always
     volumes:
       - name: rbenv
@@ -316,6 +316,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 38a0cef75d2449a37668b441e20c4d71ab55a1809191b792fc7b2e6297f57ddb
+hmac: 438911a0c59ad180adae90c55e5bf3f15713df10458caf0f44347f7fff00eb4c
 
 ...

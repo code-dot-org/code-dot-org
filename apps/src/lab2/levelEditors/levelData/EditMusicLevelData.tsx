@@ -1,8 +1,8 @@
+import Alert from '@code-dot-org/component-library/alert';
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
@@ -236,13 +236,19 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
         </div>
       </CollapsibleSection>
       <hr />
+      <div>
+        {'You can also edit toolbox blocks using Blockly using Extra Links.'}
+      </div>
       <CollapsibleSection headerContent="Toolbox">
         <EditMusicToolbox
           toolbox={levelData.toolbox}
           blockMode={levelData.blockMode || BlockMode.SIMPLE2}
           addFunctionDefinition={levelData.toolbox?.addFunctionDefinition}
           addFunctionCalls={levelData.toolbox?.addFunctionCalls}
-          onChange={toolbox => setLevelData({...levelData, toolbox})}
+          onChange={toolbox =>
+            // Reset toolbox mode configuration when changing toolbox settings
+            setLevelData({...levelData, toolbox, toolboxDefinition: undefined})
+          }
           onBlockModeChange={blockMode => {
             const startSourcesFilename = `startSources${blockMode}`;
             const startSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
@@ -258,6 +264,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
                 addFunctionDefinition: undefined,
                 addFunctionCalls: undefined,
               },
+              toolboxDefinition: undefined,
             });
           }}
           onAddFunctionDefinitionChange={(addFunctionDefinition: boolean) => {

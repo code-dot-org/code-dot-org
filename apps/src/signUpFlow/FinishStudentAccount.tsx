@@ -1,12 +1,12 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   Heading2,
@@ -18,6 +18,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {navigateToHref} from '../utils';
@@ -30,6 +31,7 @@ import {
   USER_RETURN_TO_SESSION_KEY,
   clearSignUpSessionStorage,
   NEW_SIGN_UP_USER_TYPE,
+  MAX_DISPLAY_NAME_LENGTH,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
@@ -50,7 +52,7 @@ const FinishStudentAccount: React.FunctionComponent<{
   const [gender, setGender] = useState('');
 
   // Field errors
-  const [showNameError, setShowNameError] = useState(false);
+  const [nameErrorMessage, setNameErrorMessage] = useState<string | null>(null);
   const [showParentEmailError, setShowParentEmailError] = useState(false);
   const [showAgeError, setShowAgeError] = useState(false);
   const [showStateError, setShowStateError] = useState(false);
@@ -154,10 +156,16 @@ const FinishStudentAccount: React.FunctionComponent<{
     const newName = e.target.value;
     setName(newName);
 
-    if (newName === '') {
-      setShowNameError(true);
+    if (newName.trim() === '') {
+      setNameErrorMessage(locale.display_name_error_message());
+    } else if (newName.length > MAX_DISPLAY_NAME_LENGTH) {
+      setNameErrorMessage(
+        locale.display_name_too_long_error_message({
+          maxLength: MAX_DISPLAY_NAME_LENGTH,
+        })
+      );
     } else {
-      setShowNameError(false);
+      setNameErrorMessage(null);
     }
   };
 
@@ -184,16 +192,22 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const sendFinishEvent = (): void => {
+    // Log to Statsig and Amplitude
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
         'user type': 'student',
         'has school': false,
         'has marketing value selected': true,
-        'has display name': !showNameError,
+        'has display name': !nameErrorMessage,
       },
       PLATFORMS.BOTH
     );
+
+    // Log to Google Analytics
+    trackEvent('sign_up', 'sign_up_success', {
+      value: 'student',
+    });
   };
 
   const submitStudentAccount = async () => {
@@ -310,9 +324,9 @@ const FinishStudentAccount: React.FunctionComponent<{
               placeholder={locale.coder()}
               onChange={onNameChange}
             />
-            {showNameError && (
+            {nameErrorMessage && (
               <BodyThreeText className={style.errorMessage}>
-                {locale.display_name_error_message()}
+                {nameErrorMessage}
               </BodyThreeText>
             )}
           </div>
@@ -398,7 +412,8 @@ const FinishStudentAccount: React.FunctionComponent<{
               title: 'arrow-right',
             }}
             disabled={
-              name === '' ||
+              name?.trim() === '' ||
+              name?.length > MAX_DISPLAY_NAME_LENGTH ||
               age === '' ||
               (usIp && state === '') ||
               (isParent && (parentEmail === '' || showParentEmailError)) ||

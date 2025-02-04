@@ -126,7 +126,7 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
-  'ai_tutor/tester': './src/sites/studio/pages/ai_tutor/tester.js',
+  'ai_iteration/tools': './src/sites/studio/pages/ai_iteration/tools.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
   'course_offerings/edit': './src/sites/studio/pages/course_offerings/edit.js',
@@ -152,6 +152,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_droplet': './src/sites/studio/pages/levels/editors/fields/_droplet.js',
   'levels/editors/fields/_grid': './src/sites/studio/pages/levels/editors/fields/_grid.js',
   'levels/editors/fields/_music_level_data': './src/sites/studio/pages/levels/editors/fields/_music_level_data.js',
+  'levels/editors/fields/_neighborhood_settings': './src/sites/studio/pages/levels/editors/fields/_neighborhood_settings.js',
   'levels/editors/fields/_panels': './src/sites/studio/pages/levels/editors/fields/_panels.js',
   'levels/editors/fields/_poetry_fields': './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
   'levels/editors/fields/_predict_settings': './src/sites/studio/pages/levels/editors/fields/_predict_settings.js',

@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-22T17:11:30.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "name = \"Rylee\"\nfavorite_food =  \"pizza\"\n\n#print(name + \" loves pizza: \" + loves_pizza)\n#print(name + \" loves pizza: \" + str(loves_pizza))",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "# Do This:\r\n1. Add a variable called `loves_pizza` that stores a boolean value.\r\n#\r\n2. Uncomment the **first `print()` line**. \r\n\t- *What do you think will happen when you click \"Run\"?*\r\n3. Run the code and observe the error message.\r\n    - *What is causing this error?*\r\n4. Comment out the **first `print()` line**. Then, uncomment the **second `print()` line**.\r\n#\r\n5. Run the code and discuss:\r\n    - *How did adding `str()` fix the error?* \r\n    - *What does it do to the Boolean variable?*"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-22T17:11:30.778+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson5-variables-1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson5-variables-1\"},{\"changed_at\":\"2025-01-22 17:11:41 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 17:29:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 17:51:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:16:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:16:39 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:20:41 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:23:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:24:33 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:25:50 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:26:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 19:27:19 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

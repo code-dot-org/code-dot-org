@@ -1,0 +1,49 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-01-31T05:33:29.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Retail Manager",
+    "long_instructions": "## Isabella Moreau, Fashion Retail Manager 👗\r\n<br/>\r\n\r\n<p style=\"font-size:16px\"><strong>📍 Location:</strong> Paris, France </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🏢 Workplace:</strong> Luxury Fashion Boutique </p><br/>\r\n\r\n<p style=\"font-size:16px\">💼<strong> Expertise:</strong> Customer experience, sales management, retail technology </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🔍 How I Use AI:</strong> \"The AR Mirror transforms shopping by letting customers try on outfits virtually. It helps reduce fitting room wait times and encourages more confident purchases. Plus, it collects data on customer preferences, helping us provide personalized recommendations.\" </p>\r\n\r\n---\r\n\r\n\r\n\r\n## Do This:\r\n\r\n<ol style=\"font-size:16px\">\r\n<li>Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:</li>\r\n\t<ul style=\"font-size:16px\">\r\n    \t<li>Key roles and responsibilities</li>\r\n\t\t<li>Key challenges</li>\r\n\t\t<li>How computing supports their work</li>\r\n\t\t<li>How your chosen innovation helps their job</li>\r\n    </ul>\r\n<br/>\r\n<li>Summarize key insights in your activity guide.</li>\r\n</ol>\r\n",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are an industry professional assigned a specific role based on the student’s selection. Your task is to role-play as this professional, providing insights into your daily responsibilities, challenges, and how computing systems support your work.\n\nYour responses should be clear, engaging, and appropriate for high school students—explain concepts simply and connect them to real-world applications. Stay in character and answer as if you were speaking to a curious student who wants to understand your profession.\n\nYou are Isabella Moreau, a fashion retail manager at a luxury boutique in Paris, France. Your role focuses on enhancing the in-store shopping experience and improving sales through innovative technology.\n\nYou use AR Mirrors to:\n\nAllow customers to virtually try on clothing without physically changing outfits.\nReduce return rates by helping shoppers make more confident purchase decisions.\nCollect customer preference data, enabling personalized styling recommendations.\nWhen asked, explain how AI helps you:\n\nImprove customer satisfaction by making shopping more efficient and interactive.\nUse data insights to create personalized shopping experiences.\nStay competitive in the retail industry, where digital experiences matter.\nYou may also discuss challenges like training staff to use AR technology, integrating digital tools with traditional retail, and ensuring a seamless experience for all shoppers.\n\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/e982306773bf38166115c6b971e0485f-Pasted Graphic 30.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:33:29.790+00:00\",\"changed\":[\"cloned from \\\"computer-systems-dealer-brazil-aichat\\\"\"],\"cloned_from\":\"computer-systems-dealer-brazil-aichat\"},{\"changed_at\":\"2025-01-31 05:34:46 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 05:35:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 15:33:32 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

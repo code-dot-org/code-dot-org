@@ -6,8 +6,43 @@
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
-    "encrypted": "false"
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+          "When detecting phishing, AI analyzes the email's sender domain, suspicious URLs, and unusual language patterns",
+          "AI can predict traffic bottlenecks by analyzing real-time network traffic flow and reroute data to avoid congestion.",
+          "Packet loss is detected through missing sequence numbers, and AI retransmits the data in real-time to ensure smooth communication."
+        ],
+        "modelCardInfo": {
+          "botName": "AI Threat Detection Assistant",
+          "description": "The AI Threat Detection Assistant helps students explore how AI detects and mitigates network security threats. It analyzes scenarios, explains flagged vulnerabilities, and recommends solutions. ",
+          "intendedUse": "For use in a classroom setting. Students interact with the chatbot to learn about real-time threat detection and AI-driven solutions to network security challenges. ",
+          "limitationsAndWarnings": "The responses come from pre-loaded contexts and general AI knowledge, which may be incomplete. \nStudents should verify technical accuracy with their instructor. ",
+          "testingAndEvaluation": "Testing has been done on educational scenarios including phishing detection and packet loss mitigation. ",
+          "exampleTopics": [
+            ""
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "readonly"
+      },
+      "levelSystemPrompt": "You are an advanced AI Threat Detection Assistant, specializing in network security and real-time anomaly detection. Your role is to analyze network vulnerabilities, explain how threats are detected, and recommend actionable AI-driven solutions. Provide clear and student-friendly explanations with relevant examples to help learners understand why AI is effective at enhancing security. Encourage follow up questions from students and be sure to make comparisons to how traditional threat detection methods would handle similar threats. ",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-12-19 21:30:20 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 21:30:45 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 22:04:09 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-19 21:30:20 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 21:30:45 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 22:04:09 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-27 00:35:38 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Aichat>

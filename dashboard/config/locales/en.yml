@@ -539,6 +539,9 @@ en:
     new_email_hint: '(make sure you can receive emails to this email address)'
     new_password_hint: "(leave blank if you don't want to change it)"
     current_password_hint: '(we need your current password to confirm your changes)'
+    expire_other_sessions: 'Manage Other Sessions'
+    expire_other_sessions_description: 'Click the button below to sign out of any other browsers and devices where you might be signed in.'
+    expire_other_sessions_button: 'Sign Out All Other Sessions'
     delete: 'Delete Account'
     delete_text: "Deleting your account will erase all information and progress connected to this account."
     delete_text_teacher_managed_note: "You do not have permission to delete this account because it is managed by your teacher. Your teacher(s) will need to remove you from their sections before you can delete your account."
@@ -1458,6 +1461,7 @@ en:
       backend_error: "Oops! We encountered an error while trying to link your account. Please try launching Code.org again from your LMS."
       go_back: "Go back"
       invalid_credentials: "Invalid credentials"
+      launch_from_lms: "Please launch from your LMS to link your account."
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
       sign_in_and_connect: "Sign in and connect"

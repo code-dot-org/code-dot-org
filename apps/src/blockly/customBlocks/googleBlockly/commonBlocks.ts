@@ -9,9 +9,7 @@ import {Order} from 'blockly/javascript';
 
 import {
   BlocklyWrapperType,
-  ExtendedCodeGenerator,
   ExtendedJavascriptGenerator,
-  JavascriptGeneratorType,
 } from '@cdo/apps/blockly/types';
 import i18n from '@cdo/locale';
 
@@ -165,122 +163,5 @@ export const blocks = {
       configOptions,
       isK1
     );
-  },
-
-  overrideForLoopGenerator() {
-    // A custom generator for a "for loop" in labs where variable names should be part of the
-    // of the Globals namespace (e.g. Globals.counter). Used for Play Lab aka Studio
-    Blockly.JavaScript.forBlock.controls_for = function (
-      block: GoogleBlockly.Block,
-      generator: JavascriptGeneratorType
-    ) {
-      // For loop. This code is copied and modified from Core Blockly:
-      // https://github.com/google/blockly/blob/2c29c01b14fd9cec9f7fde82f6c80b6f4f7b7c30/generators/javascript/loops.ts#L85-L178
-
-      // Customization: use translateVarName instead of getVariableName
-      const variable0 = (
-        generator as unknown as ExtendedCodeGenerator
-      ).translateVarName(block.getFieldValue('VAR'));
-      // End customation.
-
-      const argument0 =
-        generator.valueToCode(block, 'FROM', Order.ASSIGNMENT) || '0';
-      const argument1 =
-        generator.valueToCode(block, 'TO', Order.ASSIGNMENT) || '0';
-      const increment =
-        generator.valueToCode(block, 'BY', Order.ASSIGNMENT) || '1';
-      let branch = generator.statementToCode(block, 'DO');
-      branch = generator.addLoopTrap(branch, block);
-      let code;
-      if (
-        Blockly.utils.string.isNumber(argument0) &&
-        Blockly.utils.string.isNumber(argument1) &&
-        Blockly.utils.string.isNumber(increment)
-      ) {
-        // All arguments are simple numbers.
-        const up = Number(argument0) <= Number(argument1);
-        code =
-          'for (' +
-          variable0 +
-          ' = ' +
-          argument0 +
-          '; ' +
-          variable0 +
-          (up ? ' <= ' : ' >= ') +
-          argument1 +
-          '; ' +
-          variable0;
-        const step = Math.abs(Number(increment));
-        if (step === 1) {
-          code += up ? '++' : '--';
-        } else {
-          code += (up ? ' += ' : ' -= ') + step;
-        }
-        code += ') {\n' + branch + '}\n';
-      } else {
-        code = '';
-        // Cache non-trivial values to variables to prevent repeated look-ups.
-        let startVar = argument0;
-        if (
-          !argument0.match(/^\w+$/) &&
-          !Blockly.utils.string.isNumber(argument0)
-        ) {
-          startVar = generator.nameDB_!.getDistinctName(
-            variable0 + '_start',
-            Blockly.Names.NameType.VARIABLE
-          );
-          code += 'var ' + startVar + ' = ' + argument0 + ';\n';
-        }
-        let endVar = argument1;
-        if (
-          !argument1.match(/^\w+$/) &&
-          !Blockly.utils.string.isNumber(argument1)
-        ) {
-          endVar = generator.nameDB_!.getDistinctName(
-            variable0 + '_end',
-            Blockly.Names.NameType.VARIABLE
-          );
-          code += 'var ' + endVar + ' = ' + argument1 + ';\n';
-        }
-        // Determine loop direction at start, in case one of the bounds
-        // changes during loop execution.
-        const incVar = generator.nameDB_!.getDistinctName(
-          variable0 + '_inc',
-          Blockly.Names.NameType.VARIABLE
-        );
-        code += 'var ' + incVar + ' = ';
-        if (Blockly.utils.string.isNumber(increment)) {
-          code += Math.abs(Number(increment)) + ';\n';
-        } else {
-          code += 'Math.abs(' + increment + ');\n';
-        }
-        code += 'if (' + startVar + ' > ' + endVar + ') {\n';
-        code += generator.INDENT + incVar + ' = -' + incVar + ';\n';
-        code += '}\n';
-        code +=
-          'for (' +
-          variable0 +
-          ' = ' +
-          startVar +
-          '; ' +
-          incVar +
-          ' >= 0 ? ' +
-          variable0 +
-          ' <= ' +
-          endVar +
-          ' : ' +
-          variable0 +
-          ' >= ' +
-          endVar +
-          '; ' +
-          variable0 +
-          ' += ' +
-          incVar +
-          ') {\n' +
-          branch +
-          '}\n';
-      }
-      return code;
-    };
   },
 };

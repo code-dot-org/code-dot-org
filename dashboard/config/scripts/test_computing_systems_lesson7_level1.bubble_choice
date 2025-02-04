@@ -1,0 +1,11 @@
+name 'test-computing-systems-lesson7-level1'
+display_name 'Sample User Profiles'
+description 'Below are several sample users that are seeking to build a computer system for a variety of different purposes.'
+
+sublevels
+level 'test-computing-systems-lesson7-level1-a'
+level 'test-computing-systems-lesson7-level1-b'
+level 'test-computing-systems-lesson7-level1-c'
+level 'test-computing-systems-lesson7-level1-d'
+level 'test-computing-systems-lesson7-level1-e'
+level 'test-computing-systems-lesson7-level1-f'
