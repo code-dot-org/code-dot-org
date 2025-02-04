@@ -4,14 +4,17 @@
   background-color: $light_gray_950;
   color: $light-white;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .verticalBar {
   width: 20px;
-  height: 100%
+  height: 100%;
+  cursor: col-resize;
 }
 
 .horizontalBar {
   width: 100%;
   height: 20px;
+  cursor: row-resize;
 }

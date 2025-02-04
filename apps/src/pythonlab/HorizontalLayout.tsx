@@ -26,11 +26,21 @@ const HorizontalLayout: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.layoutContainer}>
       <InfoPanel style={{width: infoPanelWidth}} />
+      {/* <div className={moduleStyles.infoPanel} style={{width: infoPanelWidth}}>
+        Info Panel
+      </div> */}
       <ResizeBar isVertical={true} {...infoPanelSeparatorProps} />
       <div className={moduleStyles.workspaceAndOutput}>
-        <Workspace />
+        {/* <div className={moduleStyles.workspace}>Workspace</div> */}
+        <Workspace className={moduleStyles.workspace} />
         <ResizeBar isVertical={false} {...outputSeparatorProps} />
-        <Output style={{height: outputHeight}} />
+        {/* <div className={moduleStyles.output} style={{height: outputHeight}}>
+          Output
+        </div> */}
+        <Output
+          className={moduleStyles.output}
+          style={{height: outputHeight}}
+        />
       </div>
     </div>
   );

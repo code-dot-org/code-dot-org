@@ -9,9 +9,10 @@ import moduleStyles from './output.module.scss';
 
 interface OutputProps {
   style?: React.CSSProperties;
+  className?: string;
 }
 
-const Output: React.FunctionComponent<OutputProps> = ({style}) => {
+const Output: React.FunctionComponent<OutputProps> = ({style, className}) => {
   const {config, labConfig} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
   const miniApp = labConfig?.miniApp?.name;
@@ -27,7 +28,8 @@ const Output: React.FunctionComponent<OutputProps> = ({style}) => {
     <div
       className={classNames(
         moduleStyles.outputContainer,
-        isVertical ? moduleStyles.vertical : moduleStyles.horizontal
+        isVertical ? moduleStyles.vertical : moduleStyles.horizontal,
+        className
       )}
       style={style}
     >

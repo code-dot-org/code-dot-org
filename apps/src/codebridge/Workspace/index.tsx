@@ -21,7 +21,11 @@ import HeaderButtons from './HeaderButtons';
 
 import moduleStyles from './workspace.module.scss';
 
-const Workspace = () => {
+interface WorkspaceProps {
+  className?: string;
+}
+
+const Workspace: React.FunctionComponent<WorkspaceProps> = ({className}) => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
@@ -54,7 +58,7 @@ const Workspace = () => {
       id="editor-workspace"
       headerContent={headerContent}
       rightHeaderContent={<HeaderButtons />}
-      className={moduleStyles.workspace}
+      className={classnames(className, moduleStyles.workspace)}
       headerClassName={moduleStyles.workspaceHeader}
     >
       <div
