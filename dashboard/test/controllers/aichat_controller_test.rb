@@ -53,7 +53,7 @@ class AichatControllerTest < ActionController::TestCase
 
   [:student, :teacher].each do |user|
     test_user_gets_response_for :find_toxicity,
-      name: "#{user}_no_access_#{action}_test",
+      name: "#{user}_no_access_find_toxicity_test",
       user: user,
       method: :post,
       response: :forbidden
