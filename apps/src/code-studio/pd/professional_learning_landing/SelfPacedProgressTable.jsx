@@ -1,8 +1,8 @@
 import {LinkButton} from '@code-dot-org/component-library/button';
+import Link from '@code-dot-org/component-library/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Link from '@cdo/apps/componentLibrary/link';
 import {
   BodyThreeText,
   BodyFourText,
