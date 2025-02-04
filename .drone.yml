@@ -267,6 +267,8 @@ steps:
           - localhost.code.org
           - localhost.hourofcode.com
           - localhost.codeprojects.org
+    expose:
+      - "3000"
 
   - name: update-cache
     image: plugins/s3-cache
