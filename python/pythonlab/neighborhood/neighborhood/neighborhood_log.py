@@ -33,16 +33,21 @@ class NeighborhoodLog:
             if len(expected_row) != len(actual_row):
                 return False
             for j in range(len(expected_row)):
-                if expected_row[j] != actual_row[j]:
+                expected_val = expected_row[j]
+                actual_val = actual_row[j]
+                # If both values are strings - convert to lowercase and then compare.
+                if isinstance(expected_val, str) and isinstance(actual_val, str):
+                    if expected_val.lower() != actual_val.lower():
+                        return False
+                elif expected_val != actual_val:  # Direct comparison for None or mismatched types
                     return False
         return True
 
     def final_output_contains_paint(self, expected_output: list[list[bool]]) -> bool:
         """
-        Return True if for every cell in expected_output, if there is paint of any color
-        in the cell (assigned True), there is paint in corresponding cell of final_output
-        and if there is no paint in the expected_output cell (assigned False), there is
-        no paint in the corresponding cell of final_output. Returns False otherwise.
+        Return True if for every cell in expected_output:
+        - If expected_output[i][j] is True, final_output[i][j] must have a non-None value.
+        - If expected_output[i][j] is False, final_output[i][j] must be None.
         """
         if len(expected_output) != len(self.final_output):
             return False        
@@ -52,7 +57,7 @@ class NeighborhoodLog:
             if len(expected_row) != len(actual_row):
                 return False
             for j in range(len(expected_row)):
-                cell_has_paint = self.final_output[j] is not None
+                cell_has_paint = actual_row[j] is not None
                 if expected_row[j] != cell_has_paint:
                     return False
         return True

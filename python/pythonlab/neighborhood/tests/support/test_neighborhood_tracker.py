@@ -6,7 +6,7 @@ from neighborhood.support.signal_message_type import SignalMessageType
 from neighborhood.support.neighborhood_signal_key import NeighborhoodSignalKey
 from constants import SAMPLE_MAZE
 
-def test_initialize_neighborhood_tracker():
+def test_initialize_neighborhood_tracker_get_log_info():
     neighborhood_world = World()
     neighborhood_world.set_grid_from_string(SAMPLE_MAZE)
     neighborhood_world.set_context_type(NeighborhoodContextType.VALIDATE)

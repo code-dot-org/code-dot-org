@@ -26,7 +26,7 @@ class PainterLog:
 
     def did_action_once(self, neighborhood_signal_message_value: str) -> bool:
         """Returns True if the painter did the action exactly once."""
-        return self.sent_signal_exactly(neighborhood_signal_message_value, 1)
+        return self.did_action_exactly(neighborhood_signal_message_value, 1)
 
     def did_action_exactly(self, neighborhood_signal_message_value: str, times: int) -> bool:
         """Returns True if the painter did the action exactly 'times' times."""
