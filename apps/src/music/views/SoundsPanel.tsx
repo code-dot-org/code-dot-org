@@ -179,7 +179,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         }
       }}
       ref={isSelected ? currentSoundRefCallback : null}
-      aria-label={sound.name}
+      aria-label={sound.name + sound.length}
       tabIndex={0}
       role="tabpanel"
     >
