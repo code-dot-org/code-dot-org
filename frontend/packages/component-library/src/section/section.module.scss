@@ -1,0 +1,58 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+
+.section {
+  display: block;
+  box-sizing: border-box;
+  padding-inline: 1.5rem;
+  width: 100%;
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+// Section Background Color
+.section {
+  &-primary {
+    background-color: var(--background-neutral-primary);
+  }
+
+  &-secondary {
+    background-color: var(--background-neutral-secondary);
+  }
+
+  &-dark {
+    background-color: var(--background-neutral-black-fixed);
+  }
+
+  &-brand-light-primary {
+    background-color: var(--background-brand-teal-extra-light);
+  }
+
+  &-brand-light-secondary {
+    background-color: var(--background-brand-purple-extra-light);
+  }
+}
+
+// Section Spacing
+.section {
+  &-m {
+    padding-block: 2.5rem;
+  }
+
+  &-l {
+    padding-block: 4rem;
+  }
+}
+
+// Section Alignment
+.section {
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+}
