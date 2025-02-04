@@ -73,7 +73,7 @@ const Console: React.FunctionComponent = () => {
           sendConsoleInput(consoleManager.getInputBuffer());
         }
         // reset buffer
-        consoleManager.clearInputBuffer();
+        consoleManager.saveAndClearInputBuffer();
       } else if (charCode < 32) {
         // control characters, do nothing
       } else if (charCode === 127) {
@@ -123,6 +123,7 @@ const Console: React.FunctionComponent = () => {
     terminal.open(terminalRef.current);
     terminal.onData(onData);
     fitAddon.fit();
+    window.addEventListener('resize', () => fitAddon.fit());
 
     // Right now we are tracking lines from the previous console so we can replay them here.
     // We may be able to avoid this after

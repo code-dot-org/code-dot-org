@@ -1,6 +1,6 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {memo} from 'react';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 import moduleStyles from './tags.module.scss';

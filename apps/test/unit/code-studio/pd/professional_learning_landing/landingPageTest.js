@@ -654,7 +654,6 @@ describe('LandingPage', () => {
     fireEvent.click(
       screen.getAllByText(i18n.enrollmentCelebrationCallToAction())[0]
     );
-
     expect(screen.queryByText(i18n.enrollmentCelebrationTitle())).toBe(null);
     expect(
       screen.queryByText(i18n.enrollmentCelebrationAddToCalendarTitle())

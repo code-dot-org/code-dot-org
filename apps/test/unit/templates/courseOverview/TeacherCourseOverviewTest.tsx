@@ -115,6 +115,19 @@ const sections = [
     courseVersionName: 'csd-2024',
     scriptId: null,
   },
+  {
+    id: 14,
+    name: 'Period 4',
+    course_id: 155,
+    unitName: 'ui-test-single-unit',
+    courseVersionName: 'ui-test-single-unit-course',
+    scriptId: null,
+    is_assigned_single_unit_course: true,
+    script: {
+      name: 'ui-test-single-unit',
+      id: 1,
+    },
+  },
 ];
 
 describe('TeacherCourseOverview', () => {
@@ -208,6 +221,17 @@ describe('TeacherCourseOverview', () => {
     renderDefault('/sections/11/courses/csd-2024');
 
     expect(navigate).toHaveBeenCalledWith('../unit/coursea-2024', {
+      replace: true,
+    });
+    expect(fetchSpy).not.toHaveBeenCalled();
+  });
+
+  it('redirects to unit if single-unit course', async () => {
+    getStore().dispatch(selectSection(14));
+
+    renderDefault('/sections/14/courses/csd-2024');
+
+    expect(navigate).toHaveBeenCalledWith('../unit/ui-test-single-unit', {
       replace: true,
     });
     expect(fetchSpy).not.toHaveBeenCalled();

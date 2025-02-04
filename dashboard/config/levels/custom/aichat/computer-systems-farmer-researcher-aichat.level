@@ -41,8 +41,9 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ]
-    }
+    },
+    "thumbnail_url": "https://images.code.org/96aff066d9da1e54de2c6ec276b08b99-Pasted Graphic 24.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T05:46:51.063+00:00\",\"changed\":[\"cloned from \\\"computer-systems-farmer-india-aichat\\\"\"],\"cloned_from\":\"computer-systems-farmer-india-aichat\"},{\"changed_at\":\"2025-01-31 05:47:51 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:46:51.063+00:00\",\"changed\":[\"cloned from \\\"computer-systems-farmer-india-aichat\\\"\"],\"cloned_from\":\"computer-systems-farmer-india-aichat\"},{\"changed_at\":\"2025-01-31 05:47:51 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 15:05:02 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 15:06:04 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

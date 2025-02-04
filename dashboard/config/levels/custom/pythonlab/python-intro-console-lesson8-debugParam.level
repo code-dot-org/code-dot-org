@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-01-27T23:24:23.000Z",
   "level_num": "custom",
@@ -28,9 +27,23 @@
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test_main.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestGreetUser(unittest.TestCase):\n\n    def test_function_call_has_argument(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Parse the file into an AST (Abstract Syntax Tree)\n            tree = ast.parse(content)\n\n            # Look for a function call to `greet_user`\n            for node in ast.walk(tree):\n                if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == \"greet_user\":\n                    # Check if the function call has at least one argument\n                    if len(node.args) == 0:\n                        self.fail(\n                            \"The function `greet_user()` was called without an argument. \"\n                            \"Please pass a name as a parameter when calling the function.\"\n                        )\n                    return  # Test passes if argument is found\n\n            self.fail(\"The function `greet_user()` was not called in the file. Please ensure it is used correctly.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-27T23:24:23.848+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson8-addVariable\\\"\"],\"cloned_from\":\"python-intro-console-lesson8-addVariable\"},{\"changed_at\":\"2025-01-27 23:26:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-27 23:27:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-27 23:27:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-27T23:24:23.848+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson8-addVariable\\\"\"],\"cloned_from\":\"python-intro-console-lesson8-addVariable\"},{\"changed_at\":\"2025-01-27 23:26:52 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-27 23:27:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-27 23:27:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-31 21:24:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-31 21:24:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Pythonlab>

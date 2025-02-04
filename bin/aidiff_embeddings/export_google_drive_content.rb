@@ -29,7 +29,10 @@ class Resource
 end
 
 BASE_DIR = Dir.home + "/embeddings/"
+FileUtils.mkdir_p BASE_DIR
 MAX_ATTEMPTS = 3
+
+EMBEDDINGS_BUCKET = 'cdo-ai-diff-production'
 
 # Mapping of download URLs to existing file paths. Many resources are referred
 # to from multiple units or lessons. This avoids downloading them multiple times.
@@ -50,7 +53,7 @@ def download_google_file(url:, path:, metadata:, barrier:)
         handle = URI.parse(url).open
       rescue => exception
         # Some documents do not have public download permissions; skip these.
-        if exception&.io&.status.present?
+        if exception.respond_to?(:io)
           status_code = exception.io.status[0]
           next if status_code == '401'
         end
@@ -82,7 +85,8 @@ end
 
 Async do
   # Export resources from courses
-  UnitGroup.all.each do |course|
+  stable_courses = UnitGroup.all.filter {|unit_group| unit_group.published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable}
+  stable_courses.each do |course|
     puts "Course #{course.name}"
     course_metadata = {
       course: course.name
@@ -168,11 +172,11 @@ Async do
   end
 
   # Export resources from standalone units
-  Unit.all.filter(&:is_course?).each do |unit|
+  Unit.all.filter(&:is_course?).filter(&:stable?).each do |unit|
     unit_metadata = {
       course: unit.name,
       unit_fullname: unit.name,
-      unit: unit.name
+      unit: 'U01'
     }
     puts "standalone unit: #{unit.name}"
     prefix = "standalone-#{unit.name}"
@@ -222,4 +226,20 @@ Async do
       puts ''
     end
   end
+end
+
+# Uploading to S3 in the Async seems not to work. We'll do it here.
+paths = Dir["#{BASE_DIR}/*"]
+paths.each do |path|
+  puts "Reading #{path}"
+  file = File.open(path)
+  data = file.read
+  puts "Uploading #{path}"
+  AWS::S3.upload_to_bucket(
+    EMBEDDINGS_BUCKET,
+    "live/google_#{File.basename(path)}",
+    data,
+    no_random: true
+  )
+  file.close
 end
