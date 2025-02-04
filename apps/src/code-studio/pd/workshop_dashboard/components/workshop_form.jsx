@@ -312,9 +312,13 @@ export class WorkshopForm extends React.Component {
   }
 
   get workshopTimezone() {
-    const sessionTz =
-      this.state.sessions?.[0]?.timeZone ??
-      Intl.DateTimeFormat().resolvedOptions().timeZone;
+    // a new session is created using the user's local timezone
+    let sessionTz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+    const editing = Boolean(this.props.workshop);
+    if (editing) {
+      // handle legacy sessions stored without timezone offset
+      sessionTz = this.props.workshop.sessions?.[0]?.time_zone || 'UTC';
+    }
     return moment.tz(sessionTz).format('z');
   }
 
