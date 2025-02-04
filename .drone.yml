@@ -263,10 +263,10 @@ steps:
     networks:
       default:
         aliases:
-          - test-studio.code.org
-          - test.code.org
-          - test.hourofcode.com
-          - test.codeprojects.org
+          - localhost-studio.code.org
+          - localhost.code.org
+          - localhost.hourofcode.com
+          - localhost.codeprojects.org
 
   - name: update-cache
     image: plugins/s3-cache
