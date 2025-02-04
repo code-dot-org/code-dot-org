@@ -11,47 +11,54 @@ import moduleStyles from './horizontal-layout.module.scss';
 const HorizontalLayout: React.FunctionComponent = () => {
   const layoutContainerRef = React.useRef<HTMLDivElement>(null);
   const workspaceAndOutputContainerRef = React.useRef<HTMLDivElement>(null);
-  const {position: infoPanelWidth, separatorProps: infoPanelSeparatorProps} =
-    useResizable({
-      axis: 'x',
-      initial: 300,
-      min: 0,
-      containerRef: layoutContainerRef,
-    });
+  const {
+    position: infoPanelWidth,
+    separatorProps: infoPanelSeparatorProps,
+    isDragging: infoPanelDragging,
+  } = useResizable({
+    axis: 'x',
+    initial: 300,
+    min: 0,
+    containerRef: layoutContainerRef,
+  });
   const [rightPanelWidth, setRightPanelWidth] = React.useState<
     number | undefined
   >(undefined);
-  const {position: outputHeight, separatorProps: outputSeparatorProps} =
-    useResizable({
-      axis: 'y',
-      initial: 300,
-      min: 0,
-      reverse: true,
-      containerRef: workspaceAndOutputContainerRef,
-    });
+  const {
+    position: outputHeight,
+    separatorProps: outputSeparatorProps,
+    isDragging: outputDragging,
+  } = useResizable({
+    axis: 'y',
+    initial: 300,
+    min: 0,
+    reverse: true,
+    containerRef: workspaceAndOutputContainerRef,
+  });
 
   useEffect(() => {
-    setRightPanelWidth(Math.max(window.innerWidth - infoPanelWidth - 20, 200));
+    setRightPanelWidth(Math.max(window.innerWidth - infoPanelWidth - 20, 400));
   }, [infoPanelWidth]);
 
   return (
     <div className={moduleStyles.layoutContainer} ref={layoutContainerRef}>
       <InfoPanel style={{width: infoPanelWidth}} />
-      {/* <div className={moduleStyles.infoPanel} style={{width: infoPanelWidth}}>
-        Info Panel
-      </div> */}
-      <ResizeBar isVertical={true} {...infoPanelSeparatorProps} />
+      <ResizeBar
+        isVertical={true}
+        {...infoPanelSeparatorProps}
+        isDragging={infoPanelDragging}
+      />
       <div
         className={moduleStyles.workspaceAndOutput}
         ref={workspaceAndOutputContainerRef}
         style={{width: rightPanelWidth}}
       >
-        {/* <div className={moduleStyles.workspace}>Workspace</div> */}
         <Workspace className={moduleStyles.workspace} />
-        <ResizeBar isVertical={false} {...outputSeparatorProps} />
-        {/* <div className={moduleStyles.output} style={{height: outputHeight}}>
-          Output
-        </div> */}
+        <ResizeBar
+          isVertical={false}
+          {...outputSeparatorProps}
+          isDragging={outputDragging}
+        />
         <Output
           className={moduleStyles.output}
           style={{height: outputHeight}}
