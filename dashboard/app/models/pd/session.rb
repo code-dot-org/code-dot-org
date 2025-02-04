@@ -76,7 +76,7 @@ class Pd::Session < ApplicationRecord
 
   def tz_abbreviation
     return '' if time_zone.blank?
-    ActiveSupport::TimeZone[time_zone || 'UTC'].tzinfo.current_period.abbreviation.to_s
+    ActiveSupport::TimeZone[time_zone].tzinfo.current_period.abbreviation.to_s
   end
 
   def formatted_date_with_start_and_end_times

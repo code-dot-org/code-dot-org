@@ -51,6 +51,22 @@ class Pd::SessionTest < ActiveSupport::TestCase
     assert_equal '2016-03-01, 9:00am-5:00pm MST', session.formatted_date_with_start_and_end_times
   end
 
+  test 'formatted_date_with_start_and_end_times no time_zone' do
+    session = create(
+      :pd_session,
+      start: Time.current.in_time_zone('UTC').change(year: 2016, month: 3, day: 1, hour: 9).utc.iso8601,
+      end: Time.current.in_time_zone('UTC').change(year: 2016, month: 3, day: 1, hour: 17).utc.iso8601
+    )
+
+    assert_equal 'UTC', session.time_zone
+
+    # override validation on create that defaults new sessions to UTC timezone if not provided
+    # to reproduce a legacy session with no time_zone
+    session.time_zone = nil
+
+    assert_equal '2016-03-01, 9:00am-5:00pm', session.formatted_date_with_start_and_end_times
+  end
+
   test 'soft delete' do
     session = create :pd_session
     attendance = create :pd_attendance, session: session
