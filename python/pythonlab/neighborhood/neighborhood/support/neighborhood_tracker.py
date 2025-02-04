@@ -1,6 +1,6 @@
 from .neighborhood_signal_key import NeighborhoodSignalKey
 from .signal_message_type import SignalMessageType
-from .neighorhood_log import NeighborhoodLog
+from ..neighborhood_log import NeighborhoodLog
 from .painter_tracker import PainterTracker
 from .position import Position
 
@@ -16,8 +16,12 @@ class NeighborhoodTracker:
         cls._instance.neighborhood_state = None
         return cls._instance
 
-    def get_neighborhood_log(self):
-        painter_logs = [painter_tracker.get_painter_log() for painter_tracker in self.painter_trackers]
+    def get_neighborhood_log(self) -> NeighborhoodLog | None:
+        if not self.painter_trackers:
+            return None
+        painter_logs = []
+        for painter_tracker in self.painter_trackers.values():
+            painter_logs.append(painter_tracker.get_painter_log())
         return NeighborhoodLog(painter_logs, self.neighborhood_state)
 
     def track_signal(self, signal):

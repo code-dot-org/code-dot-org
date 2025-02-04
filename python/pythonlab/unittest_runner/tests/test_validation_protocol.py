@@ -19,7 +19,7 @@ def test_get_neighborhood_log_returns_expected_info():
   neighborhood_world.set_context_type(NeighborhoodContextType.VALIDATE)
   main_path = os.path.join(os.path.dirname(__file__), 'sample_main.py')
   neighborhood_log = validation_protocol.get_neighborhood_log(main_path)
-  assert neighborhood_log == 'neighborhood_log'
+  assert len(neighborhood_log.painter_logs) == 2
 
 def test_get_neighborhood_log_with_invalid_main_resets_context():
   validation_protocol = ValidationProtocol()

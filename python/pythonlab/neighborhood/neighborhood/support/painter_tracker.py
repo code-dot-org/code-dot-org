@@ -1,7 +1,7 @@
 from .position import Position
 from .neighborhood_signal_message import NeighborhoodSignalMessage
 from .neighborhood_signal_key import NeighborhoodSignalKey
-from .painter_log import PainterLog
+from ..painter_log import PainterLog
 from .constants import NORTH, SOUTH, EAST, WEST
 
 class PainterTracker:
