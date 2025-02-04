@@ -262,15 +262,15 @@ export class WorkshopForm extends React.Component {
         format: session.session_format,
         date: moment
           .utc(session.start)
-          .tz(session.time_zone)
+          .tz(session.time_zone || 'UTC')
           .format(DATE_FORMAT),
         startTime: moment
           .utc(session.start)
-          .tz(session.time_zone)
+          .tz(session.time_zone || 'UTC')
           .format(TIME_FORMAT),
         endTime: moment
           .utc(session.end)
-          .tz(session.time_zone)
+          .tz(session.time_zone || 'UTC')
           .format(TIME_FORMAT),
         timeZone: session.time_zone,
       };
