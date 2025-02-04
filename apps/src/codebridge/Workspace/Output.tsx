@@ -31,7 +31,11 @@ const Output: React.FunctionComponent<OutputProps> = ({
   };
 
   const handleResize = useCallback(
-    (desiredHeight: number, miniAppName: string | undefined) => {
+    (
+      desiredHeight: number | undefined,
+      desiredWidth: number | undefined,
+      miniAppName: string | undefined
+    ) => {
       // Fit the console to the new container.
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
@@ -41,16 +45,16 @@ const Output: React.FunctionComponent<OutputProps> = ({
       // If this is a neighborhood level, also resize the visualization.
       if (
         miniAppName === MiniApps.Neighborhood &&
-        desiredHeight !== undefined
+        (desiredHeight !== undefined || desiredWidth !== undefined)
       ) {
+        const newHeight = desiredHeight !== undefined ? desiredHeight : 400;
+        const newWidth = desiredWidth !== undefined ? desiredWidth : 400;
         const sliderHeight = 60;
         // The original visualization is rendered at 800x800.
         const originalVisualizationWidth = 800;
         const headerSize = 40;
-        const availableHeight = desiredHeight - headerSize - sliderHeight;
-        // For now the width is always 400px.
-        const availableWidth = 400;
-        const newVisualizationWidth = Math.min(availableHeight, availableWidth);
+        const availableHeight = newHeight - headerSize - sliderHeight;
+        const newVisualizationWidth = Math.min(availableHeight, newWidth);
         // Scale the visualization.
         let scale = newVisualizationWidth / originalVisualizationWidth;
         if (scale < 0) {
@@ -67,7 +71,8 @@ const Output: React.FunctionComponent<OutputProps> = ({
         // Scale the visualization div
         $('#visualization').css({
           height: newVisualizationWidth,
-          'margin-left': (availableWidth - newVisualizationWidth) / 2,
+          width: newVisualizationWidth,
+          'margin-left': (newWidth - newVisualizationWidth) / 2,
         });
       }
     },
@@ -80,10 +85,10 @@ const Output: React.FunctionComponent<OutputProps> = ({
   );
 
   useEffect(() => {
-    if (height !== undefined) {
-      throttledResize(height, miniApp);
+    if (height !== undefined || width !== undefined) {
+      throttledResize(height, width, miniApp);
     }
-  }, [height, miniApp, throttledResize]);
+  }, [height, width, miniApp, throttledResize]);
 
   if (!miniApp) {
     return (

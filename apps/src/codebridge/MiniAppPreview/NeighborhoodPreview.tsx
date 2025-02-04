@@ -81,22 +81,6 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
       () => {},
       () => {}
     );
-
-    // The vertical version of the mini app is a static size for now,
-    // so we can hard-code the css. The horizontal version is resizable,
-    // and the css is handled by WorkspaceAndOutput.
-    if (isVertical) {
-      $('#visualization').css({
-        height: '400px',
-        width: '400px',
-      });
-
-      $('#svgMaze').css({
-        transform: 'scale(0.5)',
-        'transform-origin': '0 0',
-        position: 'absolute',
-      });
-    }
   }, [
     dispatch,
     levelProperties,
