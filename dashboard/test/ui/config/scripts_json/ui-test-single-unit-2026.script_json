@@ -1,11 +1,10 @@
 {
   "script": {
-    "name": "ui-test-single-unit",
+    "name": "ui-test-single-unit-2026",
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
@@ -15,7 +14,7 @@
     "instructor_audience": null,
     "participant_audience": null,
     "seeding_key": {
-      "script.name": "ui-test-single-unit"
+      "script.name": "ui-test-single-unit-2026"
     }
   },
   "lesson_groups": [
@@ -27,7 +26,7 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "ui-test-single-unit"
+        "script.name": "ui-test-single-unit-2026"
       }
     }
   ],
