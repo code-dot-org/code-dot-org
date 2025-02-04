@@ -4,14 +4,12 @@ from .neighborhood_signal_key import NeighborhoodSignalKey
 from .constants import NORTH, SOUTH, EAST, WEST
 
 class PainterTracker:
-    def __init__(self, painter_id: str, position: Position, direction: str, paint_count: int):
+    def __init__(self, painter_id: str, position: Position, paint_count: int):
         self.painter_id = painter_id
         self.starting_position = position
         self.current_position = position
         self.starting_paint_count = paint_count
         self.current_paint_count = paint_count
-        self.starting_direction = direction
-        self.current_direction = direction
         self.signals: list[NeighborhoodSignalMessage] = []
     
     # Record the given signal, updating position and paint count if necessary.
@@ -19,20 +17,22 @@ class PainterTracker:
         self.signals.append(signal)
         if signal.key == NeighborhoodSignalKey.MOVE:
             direction = signal.detail["direction"].lower()
-            self.current_direction = direction
             current_position = self.current_position
             if direction == NORTH:                
-                self.current_position = Position(current_position.x, current_position.y - 1)
+                self.current_position = Position(current_position.x, current_position.y - 1, NORTH)
             elif direction == SOUTH:
-                self.current_position = Position(current_position.x, current_position.y + 1)
+                self.current_position = Position(current_position.x, current_position.y + 1, SOUTH)
             elif direction  == EAST:
-                self.current_position = Position(current_position.x + 1, current_position.y)
+                self.current_position = Position(current_position.x + 1, current_position.y, EAST)
             elif direction == WEST:
-                self.current_position = Position(current_position.x - 1, current_position.y)
+                self.current_position = Position(current_position.x - 1, current_position.y, WEST)
+        elif signal.key == NeighborhoodSignalKey.TURN_LEFT:
+            new_direction = signal.detail["direction"].lower()
+            self.current_position = Position(self.current_position.x, self.current_position.y, new_direction)
         elif signal.key == NeighborhoodSignalKey.PAINT:
             self.current_paint_count -= 1
         elif signal.key == NeighborhoodSignalKey.TAKE_PAINT:
-            self.current_paint_count += 1
+            self.current_paint_count += 1        
 
     def get_painter_log(self):
         # TODO: Implement when PainterLog is added.
