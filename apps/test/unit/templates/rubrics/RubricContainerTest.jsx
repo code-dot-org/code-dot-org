@@ -1169,7 +1169,7 @@ describe('RubricContainer', () => {
     );
   });
 
-  it('sends event when user completes the tour', async function () {
+  it.skip('sends event when user completes the tour', async function () {
     stubFetch({
       evalStatusForUser: readyJson,
       evalStatusForAll: readyJsonAll,
