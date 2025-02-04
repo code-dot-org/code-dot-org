@@ -17,11 +17,14 @@ import FreeCurriculumDialog from './FreeCurriculumDialog';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   USER_RETURN_TO_SESSION_KEY,
+  OAUTH_LOGIN_TYPE_SESSION_KEY,
 } from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
 const AccountType: React.FunctionComponent = () => {
+  const [loginTypeAlreadySelected, setLoginTypeAlreadySelected] =
+    useState(false);
   const [isFreeCurriculumDialogOpen, setIsFreeCurriculumDialogOpen] =
     useState(false);
 
@@ -39,6 +42,29 @@ const AccountType: React.FunctionComponent = () => {
       {},
       PLATFORMS.BOTH
     );
+
+    // If sent here from trying to log in with OAuth without an account, log the OAuth type and have this page
+    // send to the final signup page instead of having them pick login type again.
+    let oauthType = sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY);
+    if (oauthType) {
+      setLoginTypeAlreadySelected(true);
+
+      // Convert the name of the OAuth type so it lines up with our existing metrics for logging the login type
+      // selected.
+      if (oauthType === 'google_oauth2') {
+        oauthType = 'google';
+      } else if (oauthType === 'microsoft_v2_auth') {
+        oauthType = 'microsoft';
+      }
+
+      analyticsReporter.sendEvent(
+        EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT,
+        {
+          'user login type': oauthType,
+        },
+        PLATFORMS.BOTH
+      );
+    }
   }, []);
 
   const selectAccountType = (accountType: string) => {
@@ -50,7 +76,20 @@ const AccountType: React.FunctionComponent = () => {
       PLATFORMS.BOTH
     );
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, accountType);
-    navigateToHref(studio('/users/new_sign_up/login_type'));
+
+    // By default, navigate the user to the login type page after selecting their user
+    // type. However, if a user is sent to this page after trying to login through OAuth
+    // without an account, then they'll be sent to the appropriate finish signup page
+    // since they've already selected their login type.
+    if (loginTypeAlreadySelected) {
+      const finishSignupUrl =
+        accountType === 'teacher'
+          ? '/users/new_sign_up/finish_teacher_account'
+          : '/users/new_sign_up/finish_student_account';
+      navigateToHref(studio(finishSignupUrl));
+    } else {
+      navigateToHref(studio('/users/new_sign_up/login_type'));
+    }
   };
 
   const sendCurriculumAnalyticsEvent = () => {
