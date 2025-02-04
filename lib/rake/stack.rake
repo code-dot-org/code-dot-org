@@ -54,20 +54,31 @@ Note: Consumes AWS resources until `adhoc:stop` is called.'
   end
 
   # Managed resource stacks other than the Code.org application.
-  rack_stacks = %I(data)
+
+  simple_stacks = %I(lambda alerting) # just use the file name as the stack name
+  rack_stacks = %I(data) # upcase it and append rack_env
+  other_stacks = %I(vpc iam) # just upcase the template file name
   (other_stacks + rack_stacks + simple_stacks).each do |stack|
     namespace stack do
       timed_task_with_logging :environment do
         stack_name = ENV.fetch('STACK_NAME', nil)
         stack_name ||= stack.to_s if simple_stacks.include?(stack)
-        stack_name ||= "#{stack.upcase}#{"-#{rack_env}" if rack_stacks.include?(stack)}"
+        stack_name ||= stack.upcase.to_s
+        stack_name += "-#{rack_env}" if rack_stacks.include?(stack)
+
+        template_filename = ENV.fetch('TEMPLATE', nil)
+        template_filename ||= "#{stack}.yml.erb"
+
+        # TODO: why should we allow you to call something like `rake stack:iam:start` but also override TEMPLATE and STACK_NAME?
+        # can we just make a different rake task for manual template/name scenarios?
+
 
         Dir.chdir aws_dir('cloudformation')
         require 'cdo/aws/cloud_formation'
         require 'cdo/cloud_formation/stack_template'
         @cfn = AWS::CloudFormation.new(
           stack: Cdo::CloudFormation::StackTemplate.new(
-            filename: ENV['TEMPLATE'] || "#{stack}.yml.erb",
+            filename: template_filename,
             stack_name: stack_name
           ),
           log: CDO.log,
