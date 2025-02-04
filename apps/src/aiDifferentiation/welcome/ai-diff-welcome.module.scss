@@ -61,22 +61,19 @@
   color: $light_gray_800
 }
 
-.skipButton {
-  flex-grow: 1;
-  margin-inline-start: 20px;
-}
-
-.continueButton {
-  flex-grow: 4;
-  margin-inline-start: 20px;
-  margin-inline-end: 20px;
+.skipLink {
+  align-self: end;
+  margin-top: 4px;
+  cursor: pointer;
+  margin-bottom: 8px;
 }
 
 .bottomButtons {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  text-align: end;
+  align-self: center;
 }
 
 .optionRow {

@@ -1,3 +1,4 @@
+import Link from '@code-dot-org/component-library/link';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -147,17 +148,17 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       return (
         <div className={style.bottomButtons}>
           <Button
-            onClick={() => updateShowWelcomeExperience()}
-            text="Skip"
-            className={style.skipButton}
-            color="gray"
-            type="secondary"
-          />
-          <Button
             onClick={() => setCurrentWelcomeState(nextState)}
             text="Continue"
-            className={style.continueButton}
             disabled={continueDisabled}
+          />
+
+          <Link
+            className={style.skipLink}
+            onClick={() => updateShowWelcomeExperience()}
+            text="Skip the tutorial"
+            size="xs"
+            type="secondary"
           />
         </div>
       );
