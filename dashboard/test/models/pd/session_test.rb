@@ -31,8 +31,8 @@ class Pd::SessionTest < ActiveSupport::TestCase
     session = create(
       :pd_session,
       time_zone: 'America/Denver',
-      start: Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 9),
-      end: Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 17)
+      start: Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 9).utc.iso8601,
+      end: Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 17).utc.iso8601
     )
 
     assert_equal '2016-03-01, 9:00am-5:00pm MST', session.formatted_date_with_start_and_end_times
