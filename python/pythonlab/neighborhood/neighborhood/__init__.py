@@ -4,3 +4,4 @@ from .painter import Painter as Painter
 from .support.world import World as World
 # We export NeighborhoodContextType so we can set the context type in unittest_runner
 from .support.neighborhood_context_type import NeighborhoodContextType as NeighborhoodContextType
+from .support.neighborhood_tracker import NeighborhoodTracker as NeighborhoodTracker
