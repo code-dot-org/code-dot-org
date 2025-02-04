@@ -1,6 +1,6 @@
 @chrome
 @no_mobile
-Feature: Global Edition - Farsi - Professional Learning landing page
+Feature: Global Edition - Farsi MVP - Professional Learning landing page
 
   Background:
     Given I am on "http://code.org"
@@ -16,8 +16,8 @@ Feature: Global Edition - Farsi - Professional Learning landing page
     And I wait until element "h1:contains(Professional Learning)" is visible
     Then I see Farsi version of Professional Learning Lending page
 
-    When I open my eyes to test "[Global Edition - Farsi MVP] New teacher Professional Learning page"
-    And I see no difference for "PL Recommended for you section"
+    When I open my eyes to test "[Farsi MVP] New teacher Professional Learning page"
+    And I see no difference for "Full page"
     Then I close my eyes
 
   Scenario: Facilitator does not see Facilitator Center in Farsi MVP
