@@ -19,8 +19,6 @@ type ButtonProps = {
   target?: string;
   /** Is Button disabled */
   disabled?: boolean;
-  /** Is Button pending */
-  isPending?: boolean;
   /** Button left icon name */
   iconLeftName?: string;
   /** Button left icon is brand icon */
@@ -38,7 +36,6 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   href,
   target,
   disabled,
-  isPending,
   iconLeftName,
   isLeftIconBrand,
   iconRightName,
@@ -53,7 +50,6 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       type={type}
       color={color}
       disabled={disabled}
-      isPending={isPending}
       iconLeft={
         iconLeftName
           ? {

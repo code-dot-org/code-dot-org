@@ -68,12 +68,6 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: false,
       group: 'style',
     },
-    isPending: {
-      displayName: 'Pending State',
-      type: 'Boolean',
-      defaultValue: false,
-      group: 'style',
-    },
     iconLeftName: {
       displayName: 'Left Icon Name',
       type: 'Text',
