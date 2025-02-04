@@ -17,8 +17,6 @@ class NeighborhoodTracker:
         return cls._instance
 
     def get_neighborhood_log(self) -> NeighborhoodLog | None:
-        if not self.painter_trackers:
-            return None
         painter_logs = []
         for painter_tracker in self.painter_trackers.values():
             painter_logs.append(painter_tracker.get_painter_log())
