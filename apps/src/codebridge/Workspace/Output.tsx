@@ -1,7 +1,8 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import MiniAppPreview from '@codebridge/MiniAppPreview/MiniAppPreview';
 import classNames from 'classnames';
-import React, {useEffect} from 'react';
+import {throttle} from 'lodash';
+import React, {useCallback, useEffect, useMemo} from 'react';
 
 import Console from '@cdo/apps/codebridge/Console/Console';
 
@@ -20,15 +21,24 @@ const Output: React.FunctionComponent<OutputProps> = ({className, height}) => {
   const isVertical = config.activeGridLayout === 'vertical';
   const miniApp = labConfig?.miniApp?.name;
 
-  useEffect(() => {
-    const normalizeMiniAppSize = () => {
+  const handleResize = useCallback(
+    (desiredHeight: number, miniAppName: string | undefined) => {
+      // Fit the console to the new container.
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.getTerminalFitAddon()
+        ?.fit();
+
       // If this is a neighborhood level, also resize the visualization.
-      if (miniApp === MiniApps.Neighborhood && height !== undefined) {
+      if (
+        miniAppName === MiniApps.Neighborhood &&
+        desiredHeight !== undefined
+      ) {
         const sliderHeight = 60;
         // The original visualization is rendered at 800x800.
         const originalVisualizationWidth = 800;
         const headerSize = 40;
-        const availableHeight = height - headerSize - sliderHeight;
+        const availableHeight = desiredHeight - headerSize - sliderHeight;
         // For now the width is always 400px.
         const availableWidth = 400;
         const newVisualizationWidth = Math.min(availableHeight, availableWidth);
@@ -51,21 +61,20 @@ const Output: React.FunctionComponent<OutputProps> = ({className, height}) => {
           'margin-left': (availableWidth - newVisualizationWidth) / 2,
         });
       }
-    };
+    },
+    []
+  );
+
+  const throttledResize = useMemo(
+    () => throttle(handleResize, 30),
+    [handleResize]
+  );
+
+  useEffect(() => {
     if (height !== undefined) {
-      normalizeMiniAppSize();
-      console.log('fitting?');
-      console.log(
-        CodebridgeRegistry.getInstance()
-          .getConsoleManager()
-          ?.getTerminalFitAddon()
-      );
-      CodebridgeRegistry.getInstance()
-        .getConsoleManager()
-        ?.getTerminalFitAddon()
-        ?.fit();
+      throttledResize(height, miniApp);
     }
-  }, [height, miniApp]);
+  }, [height, miniApp, throttledResize]);
 
   if (!miniApp) {
     return (
