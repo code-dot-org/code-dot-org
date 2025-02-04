@@ -32,6 +32,8 @@ class Pd::Session < ApplicationRecord
 
   before_validation :set_default_time_zone
 
+  before_update :prevent_time_zone_change
+
   validates_presence_of :start, :end
   validate :starts_and_ends_on_the_same_day
   validate :starts_before_ends
@@ -52,6 +54,12 @@ class Pd::Session < ApplicationRecord
 
   def set_default_time_zone
     self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : 'UTC'
+  end
+
+  def prevent_time_zone_change
+    if time_zone_changed?
+      self.time_zone = time_zone_was # Revert to the original time_zone
+    end
   end
 
   def start_time

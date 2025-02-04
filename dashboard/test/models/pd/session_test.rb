@@ -22,6 +22,14 @@ class Pd::SessionTest < ActiveSupport::TestCase
     assert_equal 'End must occur after the start.', session.errors.full_messages[0]
   end
 
+  test 'prevent_time_zone_change' do
+    session = create(:pd_session, time_zone: 'America/Denver')
+    assert_equal 'America/Denver', session.time_zone
+
+    session.update!(time_zone: 'America/New_York')
+    assert_equal 'America/Denver', session.time_zone
+  end
+
   test 'formatted_date' do
     session = build :pd_session, start: DateTime.new(2016, 3, 1, 9).in_time_zone
     assert_equal '2016-03-01', session.formatted_date
