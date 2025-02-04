@@ -1,10 +1,9 @@
+import ResizeBar from '@codebridge/components/ResizerBar';
+import {InfoPanel} from '@codebridge/InfoPanel';
+import Workspace from '@codebridge/Workspace';
+import Output from '@codebridge/Workspace/Output';
 import React, {useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
-
-import ResizeBar from '../codebridge/components/ResizerBar';
-import {InfoPanel} from '../codebridge/InfoPanel';
-import Workspace from '../codebridge/Workspace';
-import Output from '../codebridge/Workspace/Output';
 
 import moduleStyles from './horizontal-layout.module.scss';
 

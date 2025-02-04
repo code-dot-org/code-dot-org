@@ -38,7 +38,9 @@ type CodebridgeProps = {
   projectVersion: number;
   labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
-  children?: React.ReactNode;
+  layout?: {
+    [key: string]: React.ReactNode;
+  };
 };
 
 export const Codebridge = React.memo(
@@ -53,7 +55,7 @@ export const Codebridge = React.memo(
     projectVersion,
     labConfig,
     sendConsoleInput,
-    children,
+    layout,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -125,8 +127,10 @@ export const Codebridge = React.memo(
           sendConsoleInput,
         }}
       >
-        {children ? (
-          children
+        {layout &&
+        config.activeGridLayout &&
+        layout[config.activeGridLayout] ? (
+          layout[config.activeGridLayout]
         ) : (
           <div
             className={moduleStyles['cdoide-container']}

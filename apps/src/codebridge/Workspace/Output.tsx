@@ -14,12 +14,21 @@ import moduleStyles from './output.module.scss';
 interface OutputProps {
   className?: string;
   height?: number;
+  width?: number;
 }
 
-const Output: React.FunctionComponent<OutputProps> = ({className, height}) => {
+const Output: React.FunctionComponent<OutputProps> = ({
+  className,
+  height,
+  width,
+}) => {
   const {config, labConfig} = useCodebridgeContext();
   const isVertical = config.activeGridLayout === 'vertical';
   const miniApp = labConfig?.miniApp?.name;
+  const style = {
+    height,
+    width,
+  };
 
   const handleResize = useCallback(
     (desiredHeight: number, miniAppName: string | undefined) => {
@@ -80,7 +89,7 @@ const Output: React.FunctionComponent<OutputProps> = ({className, height}) => {
     return (
       <div
         className={classNames(moduleStyles.outputContainer, className)}
-        style={{height: height}}
+        style={style}
       >
         <Console />
       </div>
@@ -94,7 +103,7 @@ const Output: React.FunctionComponent<OutputProps> = ({className, height}) => {
         isVertical ? moduleStyles.vertical : moduleStyles.horizontal,
         className
       )}
-      style={{height: height}}
+      style={style}
     >
       <MiniAppPreview />
       <Console />

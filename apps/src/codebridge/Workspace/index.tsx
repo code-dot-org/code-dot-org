@@ -23,6 +23,7 @@ import moduleStyles from './workspace.module.scss';
 
 interface WorkspaceProps {
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const Workspace: React.FunctionComponent<WorkspaceProps> = ({className}) => {
