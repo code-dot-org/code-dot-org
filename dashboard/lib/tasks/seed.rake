@@ -53,10 +53,6 @@ namespace :seed do
     Donor.setup
   end
 
-  timed_task_with_logging donor_schools: :environment do
-    DonorSchool.setup
-  end
-
   timed_task_with_logging foorm_libraries: :environment do
     Foorm::Library.setup(CURRICULUM_CONTENT_DIR)
   end
@@ -74,11 +70,14 @@ namespace :seed do
   SPECIAL_UI_TEST_SCRIPTS = %w(
     ui-test-script-in-course-2017
     ui-test-script-in-course-2019
+    ui-test-script-2-in-course-2017
+    ui-test-script-2-in-course-2019
     ui-test-versioned-script-2017
     ui-test-versioned-script-2019
     ui-test-csa-family-script
     ui-test-teacher-pl-course
     ui-test-facilitator-pl-course
+    ui-test-single-unit
   ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     20-hour
@@ -117,8 +116,6 @@ namespace :seed do
     csp1-2017
     csp2-2017
     csp3-2017
-    csp3-a
-    csp3-research-mxghyt
     csp4-2017
     csp5-2017
     csp-ap
@@ -303,7 +300,7 @@ namespace :seed do
     %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
-    %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
+    %w(ui-test-course-2017 ui-test-course-2019 ui-test-single-unit-course).each do |course_name|
       UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
@@ -577,9 +574,9 @@ namespace :seed do
     files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data, :datablock_storage].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data, :datablock_storage].freeze
-  ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data, :datablock_storage].freeze
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :import_pegasus_data, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
+  ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
 
   desc "seed the data needed for this type of environment by default"
@@ -589,7 +586,7 @@ namespace :seed do
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
-  timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :donors, :donor_schools, :foorms, :import_pegasus_data]
+  timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :donors, :foorms, :import_pegasus_data]
 
   desc "seed only dashboard data required for tests"
   timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms, :import_pegasus_data]

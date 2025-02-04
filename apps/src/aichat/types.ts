@@ -2,6 +2,7 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 import type {
   AiInteractionStatus,
   AiChatModelIds,
+  AiChatTeacherFeedback,
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {Role} from '../aiComponentLibrary/chatMessage/types';
@@ -9,25 +10,30 @@ import type {ValueOf} from '../types/utils';
 
 import {FIELDS_CHECKED_FOR_TOXICITY} from './views/modelCustomization/constants';
 
-export const ChatEventDescriptions = {
-  COPY_CHAT: 'The user copied the chat history.',
-  CLEAR_CHAT: 'The user cleared the chat workspace.',
-  LOAD_LEVEL: 'The user loaded the aichat level.',
-} as const;
+export type ChatEventDescriptionKey = 'COPY_CHAT' | 'CLEAR_CHAT' | 'LOAD_LEVEL';
 
 export interface ChatEvent {
+  // Populated from the db when fetching chat events from the backend
+  id?: number;
   // UTC timestamp in milliseconds
   timestamp: number;
   // This field is optional but when it is defined, it must be set to `true`.
   // This allows the chat event to be visible by default without having to add an extra field.
   hideForParticipants?: true;
-  descriptionKey?: keyof typeof ChatEventDescriptions;
+  /** Optional key used if this event has a localized text description (ex. copy chat, clear chat, load level) */
+  descriptionKey?: ChatEventDescriptionKey;
 }
+
+// Convenience type for the values of AiChatTeacherFeedback
+export type FeedbackValue = ValueOf<typeof AiChatTeacherFeedback>;
 
 export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
   status: ValueOf<typeof AiInteractionStatus>;
+  requestId?: number;
+  // If undefined, the teacher took no action or undid their action.
+  teacherFeedback?: FeedbackValue;
 }
 
 export interface ModelUpdate extends ChatEvent {
@@ -60,11 +66,6 @@ export function isNotification(event: ChatEvent): event is Notification {
 export interface ChatCompletionApiResponse {
   messages: ChatMessage[];
   flagged_content?: string;
-}
-
-export interface LogChatEventApiResponse {
-  chat_event_id: number;
-  chat_event: ChatMessage;
 }
 
 export type AichatContext = {

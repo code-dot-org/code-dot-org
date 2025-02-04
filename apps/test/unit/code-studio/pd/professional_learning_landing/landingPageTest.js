@@ -1,4 +1,5 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -6,9 +7,9 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
 import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {
-  setWindowLocation,
-  resetWindowLocation,
-} from '@cdo/apps/code-studio/utils';
+  buildGoogleCalendarLink,
+  buildOutlookCalendarLink,
+} from '@cdo/apps/code-studio/pd/workshop_enrollment/WorkshopEnrollmentCelebrationDialog';
 import {
   getStore,
   registerReducers,
@@ -17,6 +18,10 @@ import {
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
+
+jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
+  getAuthenticityToken: jest.fn().mockResolvedValue('authToken'),
+}));
 
 const TEST_WORKSHOP = {
   id: 1,
@@ -38,15 +43,25 @@ const TEST_WORKSHOP = {
   status: 'Not Started',
 };
 
+const TEST_WORKSHOP_SESSIONS = [
+  {
+    id: 1,
+    start: '2025-01-23 09:00:00',
+    end: '2025-01-23 14:00:00',
+  },
+  {
+    id: 2,
+    start: '2025-01-24 09:00:00',
+    end: '2025-01-24 14:00:00',
+  },
+];
+
 const DEFAULT_PROPS = {
   lastWorkshopSurveyUrl: 'url',
   lastWorkshopSurveyCourse: 'CS Fundamentals',
-  deeperLearningCourseData: [{data: 'oh yeah'}],
+  showDeeperLearning: true,
   currentYearApplicationId: 2024,
   hasEnrorolledInWorkshop: true,
-  workshopsAsFacilitator: [],
-  workshopsAsOrganizer: [],
-  workshopsAsRegionalPartner: [],
   plCoursesStarted: selfPacedCourseConstants,
   userPermissions: [],
   joinedStudentSections: [],
@@ -88,8 +103,6 @@ describe('LandingPage', () => {
     });
     screen.getByText(i18n.plLandingGettingStartedHeading());
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
     expect(
       screen.queryByText(i18n.plLandingSelfPacedProgressHeading())
     ).toBeFalsy();
@@ -102,8 +115,6 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     screen.getByText(i18n.plLandingStartSurvey());
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
@@ -114,13 +125,16 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     screen.getByText(i18n.plLandingStartSurvey());
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
-  it('page shows upcoming workshops, self-paced courses, and plc enrollments but no survey banner if no pending survey exists', () => {
+  it('page shows upcoming workshops, self-paced courses, and plc enrollments but no survey banner if no pending survey exists', async () => {
+    const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () => Promise.resolve([TEST_WORKSHOP]),
+    });
+
     renderDefault({
       lastWorkshopSurveyUrl: null,
       lastWorkshopSurveyCourse: null,
@@ -129,10 +143,14 @@ describe('LandingPage', () => {
       screen.queryByText(i18n.plLandingGettingStartedHeading())
     ).toBeFalsy();
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
-    screen.getByText(i18n.plLandingSelfPacedProgressHeading());
-    screen.getByText(i18n.plLandingStaticPLMidHighHeading());
+    await waitFor(() => {
+      screen.getByText(i18n.myWorkshops());
+      screen.getByText(TEST_WORKSHOP.location_address);
+      screen.getByText(i18n.plLandingSelfPacedProgressHeading());
+      screen.getByText(i18n.plLandingStaticPLMidHighHeading());
+    });
+
+    fetchStub.mockRestore();
   });
 
   it('page shows self-paced progress table if enrolled in self-paced courses', () => {
@@ -155,11 +173,22 @@ describe('LandingPage', () => {
     screen.getByText(i18n.joinedProfessionalLearningSectionsHomepageTitle());
   });
 
-  it('page shows enrolled workshops table', () => {
+  it('page shows enrolled workshops table', async () => {
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockResolvedValue({
+        ok: true,
+        json: () => Promise.resolve([TEST_WORKSHOP]),
+      });
+
     renderDefault();
 
-    // eslint-disable-next-line no-restricted-properties
-    screen.getByTestId('enrolled-workshops-loader');
+    await waitFor(() => {
+      screen.getByText(i18n.myWorkshops());
+      screen.getByText(TEST_WORKSHOP.location_address);
+    });
+    fetchStub.mockRestore();
   });
 
   it('page shows no tabs for teacher with no relevant permissions', () => {
@@ -257,11 +286,28 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter());
   });
 
-  it('page shows expected sections in Facilitator Center tab', () => {
-    renderDefault({
-      userPermissions: ['facilitator'],
-      workshopsAsFacilitator: [TEST_WORKSHOP],
-      coursesAsFacilitator: ['CS Discoveries', 'Computer Science A'],
+  it('page shows expected sections in Facilitator Center tab', async () => {
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation(args => {
+        if (args.includes('workshops_user_enrolled_in')) {
+          return Promise.resolve({ok: true, json: () => []});
+        } else if (args.includes('workshops_as_facilitator_for_pl_page')) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {workshops_as_facilitator: [TEST_WORKSHOP]};
+            },
+          });
+        }
+      });
+
+    await waitFor(() => {
+      renderDefault({
+        userPermissions: ['facilitator'],
+        coursesAsFacilitator: ['CS Discoveries', 'Computer Science A'],
+      });
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabFacilitatorCenter()));
 
@@ -286,7 +332,9 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsInstructorTitle());
 
     // Facilitated workshop table
-    screen.getByText('In Progress and Upcoming Workshops');
+    screen.getByText(i18n.inProgressAndUpcomingWorkshops());
+
+    fetchStub.mockRestore();
   });
 
   it('page shows expected sections in Instructor Center tab (for universal instructor)', () => {
@@ -311,10 +359,27 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsInstructorTitle());
   });
 
-  it('page shows expected sections in Regional Partner Center tab', () => {
-    renderDefault({
-      userPermissions: ['program_manager'],
-      workshopsAsRegionalPartner: [TEST_WORKSHOP],
+  it('page shows expected sections in Regional Partner Center tab', async () => {
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation(args => {
+        if (args.includes('workshops_user_enrolled_in')) {
+          return Promise.resolve({ok: true, json: () => []});
+        } else if (args.includes('workshops_as_program_manager_for_pl_page')) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {workshops_as_program_manager: [TEST_WORKSHOP]};
+            },
+          });
+        }
+      });
+
+    await waitFor(() => {
+      renderDefault({
+        userPermissions: ['program_manager'],
+      });
     });
     fireEvent.click(screen.getByText(i18n.plLandingTabRPCenter()));
 
@@ -324,43 +389,232 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plSectionsRegionalPartnerPlaybookTitle());
 
     // Regional Partner workshop table
-    screen.getByText('In Progress and Upcoming Workshops');
+    screen.getByText(i18n.inProgressAndUpcomingWorkshops());
+
+    fetchStub.mockRestore();
   });
 
-  it('page shows expected sections in Workshop Organizer Center tab', () => {
+  it('page shows expected sections in Workshop Organizer Center tab', async () => {
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation(args => {
+        if (args.includes('workshops_user_enrolled_in')) {
+          return Promise.resolve({ok: true, json: () => []});
+        } else if (args.includes('workshops_as_organizer_for_pl_page')) {
+          return Promise.resolve({
+            ok: true,
+            json: () => {
+              return {workshops_as_organizer: [TEST_WORKSHOP]};
+            },
+          });
+        }
+      });
     renderDefault({
       userPermissions: ['workshop_organizer'],
-      workshopsAsOrganizer: [TEST_WORKSHOP],
+    });
+    await waitFor(() => {
+      screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter());
     });
     fireEvent.click(
-      screen.getAllByText(i18n.plLandingTabWorkshopOrganizerCenter())[0]
+      screen.getByText(i18n.plLandingTabWorkshopOrganizerCenter())
     );
 
     // Workshop Organizer Resources
     screen.getByText(i18n.plSectionsWorkshopResources());
 
-    // Workshop Organizer workshop table
-    screen.getByText('In Progress and Upcoming Workshops');
+    await waitFor(() => {
+      // Workshop Organizer workshop table
+      screen.getByText(i18n.inProgressAndUpcomingWorkshops());
+    });
+
+    fetchStub.mockRestore();
   });
 
   it('page does not show success dialog when not redirected here from successful enrollment', () => {
     renderDefault();
 
-    expect(
-      screen.queryByText(
-        i18n.enrollmentCelebrationBody({workshopName: 'a new workshop'})
-      )
-    ).toBeNull();
+    expect(screen.queryByText(i18n.enrollmentCelebrationTitle())).toBeNull();
   });
 
-  it('page shows success dialog when redirected here from successful enrollment', () => {
-    const workshopCourseName = 'TEST COURSE';
-    setWindowLocation({search: `?wsCourse=${workshopCourseName}`});
+  it('page shows success dialog stating workshop course when redirected here from successful non-BYOW enrollment', () => {
+    const workshopCourse = 'TEST COURSE';
+    sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify([TEST_WORKSHOP_SESSIONS[0]])
+    );
+
     renderDefault();
 
+    screen.getByText(i18n.enrollmentCelebrationTitle());
     screen.getByText(
-      i18n.enrollmentCelebrationBody({workshopName: workshopCourseName})
+      i18n.enrollmentCelebrationBody({workshopName: workshopCourse})
     );
-    resetWindowLocation();
+
+    sessionStorage.clear();
+  });
+
+  it('page shows success dialog stating workshop name when redirected here from successful BYOW enrollment', () => {
+    const workshopCourse = 'TEST COURSE';
+    const workshopName = 'TEST NAME';
+    sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem('workshopName', workshopName);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify([TEST_WORKSHOP_SESSIONS[0]])
+    );
+
+    renderDefault();
+
+    screen.getByText(i18n.enrollmentCelebrationTitle());
+    screen.getByText(
+      i18n.enrollmentCelebrationBody({workshopName: workshopName})
+    );
+
+    sessionStorage.clear();
+  });
+
+  it('enroll success dialog shows buttons with links to add session to calendar for workshops with one session', () => {
+    const workshopCourse = 'TEST COURSE';
+    const workshopLocation = 'Seattle, WA';
+    const workshopSession = TEST_WORKSHOP_SESSIONS[0];
+    sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem('workshopLocation', workshopLocation);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify([workshopSession])
+    );
+
+    renderDefault();
+
+    screen.getByText(i18n.enrollmentCelebrationTitle());
+    screen.getByText(
+      i18n.enrollmentCelebrationBody({workshopName: workshopCourse})
+    );
+    screen.getByText(i18n.addToYourCalendar());
+
+    // Add to Google calendar button has expected link to add event to calendar
+    const expectedGoogleCalendarLink = buildGoogleCalendarLink(
+      workshopSession,
+      workshopCourse,
+      workshopLocation
+    );
+    expect(
+      screen
+        .getByLabelText(
+          i18n.addToCalendarType({
+            calendar_type: 'Google',
+          })
+        )
+        .getAttribute('href')
+    ).toBe(expectedGoogleCalendarLink);
+
+    // Add to Outlook calendar button has expected link to add event to calendar
+    const expectedOutlookCalendarLink = buildOutlookCalendarLink(
+      workshopSession,
+      workshopCourse,
+      workshopLocation
+    );
+    expect(
+      screen
+        .getByLabelText(
+          i18n.addToCalendarType({
+            calendar_type: 'Outlook',
+          })
+        )
+        .getAttribute('href')
+    ).toBe(expectedOutlookCalendarLink);
+
+    // Does not show the dialog for adding multiple sessions to calendar
+    expect(
+      screen.queryByText(i18n.enrollmentCelebrationAddToCalendarButton())
+    ).toBe(null);
+
+    sessionStorage.clear();
+  });
+
+  it('enroll success dialog shows buttons that open dialog to add multiple sessions to calendar for workshops with multiple sessions', () => {
+    const workshopCourse = 'TEST COURSE';
+    const workshopLocation = 'Seattle, WA';
+    sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem('workshopLocation', workshopLocation);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify(TEST_WORKSHOP_SESSIONS)
+    );
+
+    renderDefault();
+
+    screen.getByText(i18n.enrollmentCelebrationTitle());
+    screen.getByText(
+      i18n.enrollmentCelebrationBody({workshopName: workshopCourse})
+    );
+    screen.getByText(i18n.addToYourCalendar());
+
+    // Calendar buttons are not links
+    expect(screen.queryByRole('link', {name: 'Google'})).toBe(null);
+    expect(screen.queryByRole('link', {name: 'Outlook'})).toBe(null);
+
+    // Can open dialog to add multiple sessions to Google calendar
+    fireEvent.click(screen.getByRole('button', {name: 'Google'}));
+    screen.getByText(i18n.enrollmentCelebrationAddToCalendarTitle());
+    const googleCalendarButtonLinks = screen
+      .getAllByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Google',
+        })
+      )
+      .map(button => {
+        return button.getAttribute('href');
+      });
+
+    const expectedGoogleCalendarLinks = TEST_WORKSHOP_SESSIONS.map(session => {
+      return buildGoogleCalendarLink(session, workshopCourse, workshopLocation);
+    });
+    expect(googleCalendarButtonLinks).toStrictEqual(
+      expectedGoogleCalendarLinks
+    );
+
+    // Can close the Google calendar dialog with the 'Change calendar' button and open the Outlook calendar dialog
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: i18n.enrollmentCelebrationChangeCalendarButton(),
+      })
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Outlook'}));
+
+    screen.getByText(i18n.enrollmentCelebrationAddToCalendarTitle());
+    const outlookCalendarButtonLinks = screen
+      .getAllByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Outlook',
+        })
+      )
+      .map(button => {
+        return button.getAttribute('href');
+      });
+
+    const expectedOutlookCalendarLinks = TEST_WORKSHOP_SESSIONS.map(session => {
+      return buildOutlookCalendarLink(
+        session,
+        workshopCourse,
+        workshopLocation
+      );
+    });
+    expect(outlookCalendarButtonLinks).toStrictEqual(
+      expectedOutlookCalendarLinks
+    );
+
+    // Can close all dialogs with 'Go to my professional learning' dialog
+    fireEvent.click(
+      screen.getAllByText(i18n.enrollmentCelebrationCallToAction())[0]
+    );
+    expect(screen.queryByText(i18n.enrollmentCelebrationTitle())).toBe(null);
+    expect(
+      screen.queryByText(i18n.enrollmentCelebrationAddToCalendarTitle())
+    ).toBe(null);
+
+    sessionStorage.clear();
   });
 });

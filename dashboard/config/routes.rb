@@ -7,7 +7,12 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
-  # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
+  # Redirect old sign up flow to new sign up flow
+  get "/users/sign_up", to: redirect("/users/new_sign_up/account_type")
+
+  # Redirect studio.code.org/sections/teacher_dashboard/first_section/*location to the teacher's most recent section
+  # on teacher dashboard, where *location is one of the following: courses, calendar, progress, or materials.
+  get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
   get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
 
   # Redirect enable and disable experiments to most recent section
@@ -79,7 +84,8 @@ Dashboard::Application.routes.draw do
 
     resources :images, only: [:new]
 
-    get "/ai_tutor/tester", to: "ai_tutor#tester"
+    get "/ai_iteration/tools", to: "ai_iteration#tools"
+    get "/student_code_sample/:num_samples/:script_id/:level_id", to: "student_code_sample#fetch_student_code_samples"
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
@@ -224,6 +230,7 @@ Dashboard::Application.routes.draw do
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
+      delete '/expire_other', to: 'sessions#expire_other'
       get '/users/existing_account', to: 'registrations#existing_account'
       get '/users/edit', to: 'registrations#edit'
     end
@@ -359,6 +366,7 @@ Dashboard::Application.routes.draw do
         post 'update_exemplar_code'
         get 'level_properties'
         get 'extra_links'
+        patch 'update_bubble_choice_settings'
       end
     end
 
@@ -686,7 +694,6 @@ Dashboard::Application.routes.draw do
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
     # Experiments are get requests so that a user can click on a link to join or leave an experiment
-    get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
     get '/experiments/set_single_user_experiment/:experiment_name', to: 'experiments#set_single_user_experiment'
     get '/experiments/disable_single_user_experiment/:experiment_name', to: 'experiments#disable_single_user_experiment'
 
@@ -806,6 +813,9 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
     get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
     get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning_landing#applications_closed'
+    get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_facilitator_for_pl_page'
+    get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_organizer_for_pl_page'
+    get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_program_manager_for_pl_page'
     post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
     post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
@@ -969,6 +979,7 @@ Dashboard::Application.routes.draw do
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
+        post 'users/:user_id/has_completed_ai_differentiation_welcome', to: 'users#post_has_completed_ai_differentiation_welcome'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
@@ -978,7 +989,6 @@ Dashboard::Application.routes.draw do
         get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
-        get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
         get 'users/cached_page_auth_redirect', to: 'users#cached_page_auth_redirect'
@@ -1050,7 +1060,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
     get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
-    get '/dashboardapi/v1/users/:user_id/school_donor_name', to: 'api/v1/users#get_school_donor_name'
     post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
     get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id/afe_high_needs', to: 'api/v1/schools#afe_high_needs', defaults: {format: 'json'}
@@ -1195,10 +1204,12 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
+    post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
+    get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
+
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
+    post '/aichat/submit_teacher_feedback', to: 'aichat#submit_teacher_feedback'
     get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
-    post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
-    get '/aichat/chat_request/:id', to: 'aichat#chat_request'
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 

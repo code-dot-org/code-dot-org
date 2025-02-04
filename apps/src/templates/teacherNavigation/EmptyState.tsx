@@ -19,12 +19,12 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
 }) => {
   return (
     <div className={dashboardStyles.emptyClassroomDiv}>
-      <div className={dashboardStyles.emptyClassroomDiv}>
+      <div className={dashboardStyles.emptyClassroomImage}>
         {imageComponent}
-        <Heading3 className={styles.topPadding}>{headline}</Heading3>
-        <BodyTwoText>{descriptionText}</BodyTwoText>
-        {button}
       </div>
+      <Heading3 className={styles.topPadding}>{headline}</Heading3>
+      <BodyTwoText>{descriptionText}</BodyTwoText>
+      {button}
     </div>
   );
 };

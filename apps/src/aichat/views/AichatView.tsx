@@ -1,12 +1,12 @@
 /** @file Top-level view for AI Chat Lab */
 
-import React, {useCallback, useEffect} from 'react';
-
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import ActionDropdown from '@cdo/apps/componentLibrary/dropdown/actionDropdown/ActionDropdown';
+import Button from '@code-dot-org/component-library/button';
 import SegmentedButtons, {
   SegmentedButtonsProps,
-} from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+} from '@code-dot-org/component-library/segmentedButtons';
+import React, {useCallback, useEffect} from 'react';
+
+import ActionDropdown from '@cdo/apps/componentLibrary/dropdown/actionDropdown/ActionDropdown';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
@@ -49,7 +49,7 @@ import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
   id: getNewMessageId(),
-  text: 'Model customizations and model card information have been reset to default settings.',
+  text: aichatI18n.modelResetNotification(),
   notificationType: 'success',
   timestamp: Date.now(),
   includeInChatHistory: true,
@@ -158,17 +158,21 @@ const AichatView: React.FunctionComponent = () => {
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
       {
-        label: 'Edit',
+        label: aichatI18n.editModeButtonText(),
         value: ViewMode.EDIT,
-        iconLeft: {iconName: 'wrench', iconStyle: 'solid', title: 'Edit Mode'},
+        iconLeft: {
+          iconName: 'wrench',
+          iconStyle: 'solid',
+          title: aichatI18n.aichatView_screenReader_EditModeButton(),
+        },
       },
       {
-        label: 'User View',
+        label: aichatI18n.userViewButtonText(),
         value: ViewMode.PRESENTATION,
         iconLeft: {
           iconName: 'user-group',
           iconStyle: 'solid',
-          title: 'User View Mode',
+          title: aichatI18n.aichatView_screenReader_UserViewModeButton(),
         },
         id: 'uitest-user-view-button',
       },
@@ -260,7 +264,7 @@ const AichatView: React.FunctionComponent = () => {
               <div className={moduleStyles.customizationArea}>
                 <PanelContainer
                   id="aichat-model-customization-panel"
-                  headerContent="Model Customization"
+                  headerContent={aichatI18n.modelCustomizationHeader()}
                   className={moduleStyles.panelContainer}
                   headerClassName={moduleStyles.panelHeader}
                   rightHeaderContent={renderModelCustomizationHeaderRight(
@@ -287,7 +291,7 @@ const AichatView: React.FunctionComponent = () => {
           >
             <PanelContainer
               id="aichat-presentation-panel"
-              headerContent={'Model Card'}
+              headerContent={aichatI18n.modelCardPanelHeader()}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
             >
@@ -318,7 +322,7 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
         isIconOnly={true}
         color={'black'}
         onClick={onStartOver}
-        ariaLabel={'Start Over'}
+        ariaLabel={aichatI18n.aria_startOver()}
         size={'xs'}
         type="tertiary"
         className={moduleStyles.startOverButton}
@@ -334,7 +338,7 @@ const renderInstructionsHeaderRight = (
   return isUserTeacher ? (
     <ActionDropdown
       name="instructionsInfoDropdown"
-      labelText="Instructions Info Dropdown"
+      labelText={aichatI18n.instructionsHeaderRight()}
       size="xs"
       triggerButtonProps={{
         type: 'tertiary',

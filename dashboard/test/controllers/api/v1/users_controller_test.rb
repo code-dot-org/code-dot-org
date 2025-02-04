@@ -305,28 +305,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response 403
   end
 
-  test "get_school_donor_name 403s when not signed in" do
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 403
-  end
-
-  test "get_school_donor_name returns null when no donor is found" do
-    sign_in create :teacher
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 200
-    assert_equal 'null', response.body
-  end
-
-  test "get_school_donor_name returns donor name" do
-    usi = create :user_school_info
-    create :donor_school, name: 'DonorName', nces_id: usi.school_info.school_id
-
-    sign_in usi.user
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 200
-    assert_equal '"DonorName"', response.body
-  end
-
   test "teacher can update ai tutor access for student in section" do
     teacher = create :teacher
     student_in_section = create :student

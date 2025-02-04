@@ -8,6 +8,7 @@ import locale from '@cdo/apps/signUpFlow/locale';
 import {
   ACCOUNT_TYPE_SESSION_KEY,
   EMAIL_SESSION_KEY,
+  MAX_DISPLAY_NAME_LENGTH,
   USER_RETURN_TO_SESSION_KEY,
 } from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
@@ -192,6 +193,50 @@ describe('FinishStudentAccount', () => {
     expect(finishSignUpButton).toBeDisabled();
   });
 
+  it('only whitespace in the displayName field shows error message', () => {
+    renderDefault();
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {target: {value: ' '}});
+
+    // Error shows with whitespace display name
+    screen.getByText(locale.display_name_error_message());
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('adding a long display name shows error message', () => {
+    renderDefault();
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {
+      target: {value: 'a'.repeat(MAX_DISPLAY_NAME_LENGTH + 1)},
+    });
+
+    // Error shows with long display name
+    screen.getByText(
+      locale.display_name_too_long_error_message({
+        maxLength: MAX_DISPLAY_NAME_LENGTH,
+      })
+    );
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton).toBeDisabled();
+  });
+
   it('leaving the age field empty shows error message and disabled submit button until age is entered', async () => {
     renderDefault();
     await waitFor(() => {
@@ -360,6 +405,42 @@ describe('FinishStudentAccount', () => {
     // Error shows and button is disabled with empty email
     screen.getByText(locale.email_error_message());
     expect(finishSignUpButton).toBeDisabled();
+  });
+
+  it('clears parent email if parent checkbox is unchecked, and can submit successfully', async () => {
+    renderDefault();
+    await waitFor(() => {
+      expect(fetchStub.calledOnce).toBe(true);
+    });
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+
+    // Set other required fields
+    const displayNameInput = screen.getAllByDisplayValue('')[1];
+    const stateInput = screen.getAllByRole('combobox')[1];
+    const ageInput = screen.getAllByRole('combobox')[0];
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    fireEvent.change(stateInput, {target: {value: 'WA'}});
+    fireEvent.change(ageInput, {target: {value: '6'}});
+    // Check parent checkbox
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+
+    // Enter parent email
+    const parentEmailInput = screen.getAllByDisplayValue('')[1];
+    fireEvent.change(parentEmailInput, {
+      target: {value: '@invalidparentemail'},
+    });
+
+    // Uncheck parent checkbox
+    fireEvent.click(screen.getAllByRole('checkbox')[0]);
+    // Click finish sign up button
+    fireEvent.click(finishSignUpButton);
+
+    await waitFor(() => {
+      // Verify the user is redirected to the finish sign up page
+      expect(navigateToHrefMock).toHaveBeenCalledWith('/home');
+    });
   });
 
   it('GDPR has expected behavior if api call returns true', async () => {

@@ -107,6 +107,7 @@ def main
       AI_TUTOR_TYPES
       AI_REQUEST_EXECUTION_STATUS
       AI_CHAT_MODEL_IDS
+      AI_CHAT_TEACHER_FEEDBACK
       FEATURED_PROJECT_STATUS
       FEATURED_PROJECT_CONSTANTS
       CAP_LINKS
@@ -115,6 +116,7 @@ def main
       NON_SCHOOL_OPTIONS
       US_STATES
       PROJECT_SUBMISSION_STATUS
+      EDUCATOR_ROLES
     ),
     file_type: 'ts'
   )
@@ -175,6 +177,8 @@ def main
         WORKSHOP_TYPES
         NOT_FUNDED_SUBJECTS
         CSD_CUSTOM_WORKSHOP_MODULES
+        PARTICIPANT_GROUP_TYPES
+        PD_SESSION_FORMATS
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false

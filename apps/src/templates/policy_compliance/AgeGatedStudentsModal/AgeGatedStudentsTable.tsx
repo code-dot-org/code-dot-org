@@ -1,23 +1,17 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import ManageStudentsFamilyNameCell from '../../manageStudents/ManageStudentsFamilyNameCell';
 import {tableLayoutStyles} from '../../tables/tableConstants';
 
 import AgeGatedTableConsentStatusCell from './AgeGatedTableConsentStatusCell';
-
-interface ReduxState {
-  manageStudents: {
-    studentData?: object;
-  };
-}
 
 interface RowData {
   rowData: {
@@ -26,11 +20,7 @@ interface RowData {
   };
 }
 
-interface Props {
-  students?: object[];
-}
-
-const AgeGatedStudentsTable: React.FC<Props> = ({students}) => {
+const AgeGatedStudentsTable: React.FC = () => {
   const getColumns = () => {
     const columns = [
       nameColumn(),
@@ -136,6 +126,11 @@ const AgeGatedStudentsTable: React.FC<Props> = ({students}) => {
   });
 
   const columns = getColumns();
+  const students = useAppSelector(state =>
+    filterAgeGatedStudents(
+      convertStudentDataToArray(state.manageStudents.studentData)
+    )
+  );
   return (
     <div>
       {students && students.length !== 0 && (
@@ -153,11 +148,4 @@ const AgeGatedStudentsTable: React.FC<Props> = ({students}) => {
   );
 };
 
-export default connect(
-  (state: ReduxState) => ({
-    students: filterAgeGatedStudents(
-      convertStudentDataToArray(state.manageStudents.studentData)
-    ),
-  }),
-  {}
-)(AgeGatedStudentsTable);
+export default AgeGatedStudentsTable;

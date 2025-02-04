@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/62996)
+
+- allowed `text` prop to be `string | React.ReactNode`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/62745)
+
+- rewritten `TooltipTest` in typescript
+- refactored/optimized `TooltipTest.tsx`
+
 ## [0.2.3](https://github.com/code-dot-org/code-dot-org/pull/59328)
 
 * minor types update

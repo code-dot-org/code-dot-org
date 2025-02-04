@@ -15,6 +15,7 @@ export default function SchoolNameInput({
 
   return (
     <TextField
+      id="uitest-school-name"
       name={fieldNames.schoolName}
       label={i18n.schoolOrganizationQuestion()}
       onChange={e => handleSchoolNameChange(e.target.value)}

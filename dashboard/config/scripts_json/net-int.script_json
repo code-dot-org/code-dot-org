@@ -1,0 +1,309 @@
+{
+  "script": {
+    "name": "net-int",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "net-int",
+    "serialized_at": "2024-12-20 16:09:31 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "net-int"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "AI Chat Levels"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "net-int"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Net Sim Levels"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "net-int"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "AI Chat Bots",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "net-int"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Net Sims",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "net-int"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "8d240a44-3bba-4b11-8154-b151abffa863",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d240a44-3bba-4b11-8154-b151abffa863",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "net-int"
+      }
+    },
+    {
+      "key": "d246852d-8c0b-47ca-b438-753b83008832",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d246852d-8c0b-47ca-b438-753b83008832",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "net-int"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "81c76fe7-757e-43fa-b845-f71028c87561",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "81c76fe7-757e-43fa-b845-f71028c87561",
+        "lesson_activity.key": "8d240a44-3bba-4b11-8154-b151abffa863"
+      }
+    },
+    {
+      "key": "3fcbd54f-f86f-4656-832a-7ad31cfab15d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3fcbd54f-f86f-4656-832a-7ad31cfab15d",
+        "lesson_activity.key": "d246852d-8c0b-47ca-b438-753b83008832"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AIchat-Test1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AIchat-Test1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "net-int",
+        "activity_section.key": "81c76fe7-757e-43fa-b845-f71028c87561"
+      },
+      "level_keys": [
+        "AIchat-Test1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "AIchat-Test"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AIchat-Test"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "net-int",
+        "activity_section.key": "81c76fe7-757e-43fa-b845-f71028c87561"
+      },
+      "level_keys": [
+        "AIchat-Test"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "N-I Test"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "net-int",
+        "activity_section.key": "3fcbd54f-f86f-4656-832a-7ad31cfab15d"
+      },
+      "level_keys": [
+        "N-I Test"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "N-I Test2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "net-int",
+        "activity_section.key": "3fcbd54f-f86f-4656-832a-7ad31cfab15d"
+      },
+      "level_keys": [
+        "N-I Test2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "AIchat-Test1",
+        "script_level.level_keys": [
+          "AIchat-Test1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "net-int",
+        "activity_section.key": "81c76fe7-757e-43fa-b845-f71028c87561"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AIchat-Test",
+        "script_level.level_keys": [
+          "AIchat-Test"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "net-int",
+        "activity_section.key": "81c76fe7-757e-43fa-b845-f71028c87561"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "N-I Test",
+        "script_level.level_keys": [
+          "N-I Test"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "net-int",
+        "activity_section.key": "3fcbd54f-f86f-4656-832a-7ad31cfab15d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "N-I Test2",
+        "script_level.level_keys": [
+          "N-I Test2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "net-int",
+        "activity_section.key": "3fcbd54f-f86f-4656-832a-7ad31cfab15d"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

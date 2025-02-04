@@ -5,6 +5,7 @@ export * from './isDuplicateFolderName';
 export * from './isValidFileName';
 export * from './isValidFolderName';
 export * from './fileUtils';
+export * from './findFile';
 export * from './findFolder';
 export * from './getEmptyProject';
 export * from './getErrorMessage';

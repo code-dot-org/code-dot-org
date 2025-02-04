@@ -283,6 +283,10 @@ class Section < ApplicationRecord
     self.followers_attributes = follower_params
   end
 
+  def student_joining_teacher_course?(user)
+    return participant_type == Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher && user.student?
+  end
+
   # Checks if a user can join a section as a participant by
   # checking if they meet the participant_type for the section
   def can_join_section_as_participant?(user)
@@ -431,17 +435,27 @@ class Section < ApplicationRecord
         login_type_name = Policies::Lti.issuer_name(issuer)
       end
 
+      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
+
       {
         id: id,
         name: name,
         students: students.distinct(&:id).map(&:summarize),
         login_type_name: login_type_name,
         script: {
-          id: script_id,
-          name: script.try(:name),
-          project_sharing: script.try(:project_sharing),
+          id: selected_unit&.id,
+          name: selected_unit&.name,
+          project_sharing: selected_unit&.project_sharing
         },
-        any_student_has_progress: any_student_has_progress?
+        course: {
+          course_offering_id: course_offering_id,
+          version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+          unit_id: unit_group ? script_id : nil,
+          lesson_extras_available: script.try(:lesson_extras_available),
+          text_to_speech_enabled: script.try(:text_to_speech_enabled?),
+        },
+        any_student_has_progress: any_student_has_progress?,
+        is_assigned_single_unit_course: unit_group&.single_unit_course?
       }
     end
   end

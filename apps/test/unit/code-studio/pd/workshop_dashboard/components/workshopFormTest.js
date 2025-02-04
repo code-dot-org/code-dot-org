@@ -15,7 +15,10 @@ import Permission, {
   ProgramManager,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {COURSE_BUILD_YOUR_OWN} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
-import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  Subjects,
+  PdSessionFormats,
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
 
 // Returns a fake "today" for the stubbed out "getToday" method in workshop_form.jsx.
@@ -131,6 +134,37 @@ describe('WorkshopForm test', () => {
     expect(onPublish).to.have.been.calledOnce;
 
     server.restore();
+  });
+
+  it('new workshops form is shown with a default session', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const sessionFormPart = wrapper
+      .find('SessionListFormPart')
+      .find('SessionFormPart');
+
+    expect(sessionFormPart.exists()).to.be.true;
+    expect(sessionFormPart).to.have.lengthOf(1);
+
+    const timeInputs = sessionFormPart.find('TimeSelect');
+    expect(timeInputs).to.have.lengthOf(2);
+    const datePicker = sessionFormPart.find('DatePicker');
+    expect(datePicker).to.have.lengthOf(2); // nested react DatePicker inside custom DatePicker component
+    const sessionFormatDropdown = sessionFormPart.find('select[name="format"]');
+    expect(sessionFormatDropdown).to.have.lengthOf(1);
+    // defaults to first session format option
+    expect(sessionFormatDropdown.props().value).to.equal(
+      PdSessionFormats[0].value
+    );
   });
 
   it('edits form and can save', () => {
@@ -561,7 +595,7 @@ describe('WorkshopForm test', () => {
     expect(wrapper.find('#suppress_email')).to.have.lengthOf(0);
   });
 
-  it('selecting Build Your Own Workshop shows pl topics', () => {
+  it('selecting Build Your Own Workshop shows and requires name, participant group type, and pl topics', () => {
     const server = sinon.fakeServer.create();
     server.respondWith(
       'GET',
@@ -575,12 +609,20 @@ describe('WorkshopForm test', () => {
         ]),
       ]
     );
+    server.respondWith('POST', '/api/v1/pd/workshops', [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify({}),
+    ]);
+    const onPublish = sinon.spy();
+
     const wrapper = mount(
       <Provider store={store}>
         <MemoryRouter>
           <WorkshopForm
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
+            onSaved={onPublish}
             today={getFakeToday(false)}
             readOnly={false}
           />
@@ -588,17 +630,64 @@ describe('WorkshopForm test', () => {
       </Provider>
     );
     server.respond();
-    // Verify the topics dropdown doesn't show up until Build Your Own is selected
-    expect(wrapper.find('#course_offerings')).to.have.lengthOf(0);
+
+    // Verify the name field, participant group type dropdown, and topics dropdown don't show up until
+    // Build Your Own is selected as the course.
+    expect(wrapper.find('#name').exists()).to.equal(false);
+    expect(wrapper.find('#participant-group-type').exists()).to.equal(false);
+    expect(wrapper.find('#course_offerings').exists()).to.equal(false);
     const courseField = wrapper.find('#course').first();
     courseField.simulate('change', {
       target: {name: 'course', value: COURSE_BUILD_YOUR_OWN},
     });
-    expect(wrapper.find('#course_offerings')).to.have.lengthOf(1);
-    wrapper.find('#dropdownMenuButton').first().simulate('click');
-    // A user can select either the label or checkbox, so we expect 2 for each here
+    assert(wrapper.find('#name').exists());
+    assert(wrapper.find('#participant-group-type').exists());
+    assert(wrapper.find('#course_offerings').exists());
+
+    // Set other fields required to publish any workshop
+    const locationField = wrapper.find('#location_name').first();
+    locationField.simulate('change', {
+      target: {name: 'location_name', value: 'Test location'},
+    });
+
+    const capacityField = wrapper.find('#capacity').first();
+    capacityField.simulate('change', {
+      target: {name: 'capacity', value: 10},
+    });
+
+    // Try (and fail) to publish workshop without filling in name and topics (both required for BYOW)
+    expect(onPublish).not.to.have.been.called;
+    const publishButton = wrapper.find('#workshop-form-save-btn').first();
+    publishButton.simulate('click');
+    server.respond();
+    expect(onPublish).not.to.have.been.called;
+
+    // Fill in name
+    const nameField = wrapper.find('#name').first();
+    nameField.simulate('change', {
+      target: {name: 'capacity', value: 'Fake workshop name'},
+    });
+
+    // Fill in participant group type (user can select either the label or checkbox, so we expect 2 for each here)
+    const participantGroupTypeDropdown = wrapper
+      .find('#participant-group-type')
+      .first();
+    participantGroupTypeDropdown.simulate('change', {
+      target: {name: 'participant-group-type', value: 'Regional'},
+    });
+
+    // Fill in topics
+    const plTopicsDropdown = wrapper.find('#dropdownMenuButton').first();
+    plTopicsDropdown.simulate('click');
     expect(wrapper.find({name: 'myPlTestTopic'})).to.have.lengthOf(2);
     expect(wrapper.find({name: 'mySecondTopic'})).to.have.lengthOf(2);
+
+    // Successfully submit form now that all required fields are filled in
+    publishButton.simulate('click');
+    server.respond();
+    expect(onPublish).to.have.been.calledOnce;
+
+    server.restore();
   });
 
   it('editing form as non-admin does not show organizer field', () => {

@@ -1,5 +1,10 @@
 import React, {useState} from 'react';
-import {generatePath, useNavigate, useParams} from 'react-router-dom';
+import {
+  generatePath,
+  useNavigate,
+  useParams,
+  useSearchParams,
+} from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -31,6 +36,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
   }));
 
   const dispatch = useAppDispatch();
+  const [searchParams] = useSearchParams();
 
   const navigate = useNavigate();
   const {unitName} = useParams();
@@ -116,6 +122,7 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       courseId={selectedSection.courseId}
       courseOfferingId={selectedSection.courseOfferingId}
       courseVersionId={selectedSection.courseVersionId}
+      isSingleUnitCourse={selectedSection.isAssignedSingleUnitCourse}
       courseTitle={unitSummaryResponse.unitData.course_title}
       courseLink={
         unitSummaryResponse.unitData.course_name
@@ -133,8 +140,8 @@ const TeacherUnitOverview: React.FC<TeacherUnitOverviewProps> = () => {
       showScriptVersionWarning={
         unitSummaryResponse.unitData.show_script_version_warning
       }
-      showRedirectWarning={false} // TODO: https://codedotorg.atlassian.net/browse/TEACH-1374
-      redirectScriptUrl={''}
+      showRedirectWarning={searchParams.get('redirect_warning') === 'true'}
+      redirectScriptUrl={unitSummaryResponse.unitData.redirect_unit_url}
       versions={unitSummaryResponse.unitData.course_versions}
       courseName={unitSummaryResponse.unitData.course_name}
       showAssignButton={unitSummaryResponse.unitData.show_assign_button}

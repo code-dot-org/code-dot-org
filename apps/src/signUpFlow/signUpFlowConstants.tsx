@@ -35,6 +35,8 @@ export const NEW_SIGN_UP_USER_TYPE = 'new_sign_up_user_type';
 
 // school association
 export const US_COUNTRY_CODE = 'US';
-export const ZIP_REGEX = new RegExp(/(^\d{5}$)/);
+export const ZIP_REGEX = new RegExp(/(^(?!00000)\d{5}$)/);
 export const SELECT_COUNTRY = 'selectCountry';
 export const SCHOOL_ZIP_SEARCH_URL = '/dashboardapi/v1/schoolzipsearch/';
+
+export const MAX_DISPLAY_NAME_LENGTH = 70;

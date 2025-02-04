@@ -29,7 +29,7 @@ export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
   enableMenu,
 }) => {
   const {
-    project: {files},
+    source: {files},
     config: {validMimeTypes},
   } = useCodebridgeContext();
 

@@ -8,6 +8,7 @@
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "es-ES",
@@ -35,11 +36,12 @@
         "ai",
         "music_lab"
       ],
-      "version_year": "2024"
+      "version_year": "2024",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "music-jam",
-    "serialized_at": "2024-11-25 21:50:04 UTC",
+    "serialized_at": "2025-01-22 02:10:12 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -70,6 +72,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "background": "dark",
         "overview": "In this 45-minute activity, students will use Code.org’s Music Lab to explore how creativity and coding come together to make music. By creating their own songs using coding concepts like sequencing and decomposition, and configuring an AI Beat Block, students will learn foundational computer science concepts. They will also be introduced to careers that intersect with tech and music through inspiring career spotlights from professionals in the industry, including at Amazon Music.\n\nStudents will gain confidence in their creative abilities and begin to see coding as a tool not only for problem-solving but also for artistic expression. The goal is for students to discover careers that combine music and technology, where creativity is key, and to feel a stronger sense of belonging by seeing themselves reflected in the professionals’ stories and backgrounds.",
         "preparation": "- Test out Music Lab to ensure familiarity with the platform.\n- Review the introduction video and practice walking students through the steps for using sound blocks, the AI Beat Block, and functions.\n- Prepare discussion prompts that help students connect coding and music creation.\n- *[Optional]* Find the resources you need to plan, implement, and celebrate the Hour of Code at your school [here](https://hourofcode.com/us/how-to)!",
         "purpose": "This lesson is designed to show students that coding is not just about logic and algorithms—it's about creativity. By using Music Lab, students will create their own music and learn coding basics like sequencing, loops, and functions. They will see how the problem-solving process coders use is similar to the creative process musicians follow. By the end of this lesson, students will feel empowered to explore tech-related careers, knowing that creativity and code can work hand in hand.",
@@ -264,7 +267,7 @@
       "key": "16e21d7e-940f-41a3-a655-77d826b68d89",
       "position": 1,
       "properties": {
-        "description": "Celebrate the students' accomplishments! At the end of the activity, students will have a number of extension opportunities. They can:\n- Share their creation with their friends and family.\n- Keep playing to reflect on what they've learned and practice additional skills.\n- Further explore career paths in music and technology with Amazon Music through a [free virtual field trip](https://www.amazonfutureengineer.com/careertours/careervideos). \n- Receive a [certificate](http://code.org/certificates) for completing the Hour of Code.\n"
+        "description": "Celebrate the students' accomplishments! At the end of the activity, students will have a number of extension opportunities. They can:\n- Share their creation with their friends and family.\n- Keep playing to reflect on what they've learned and practice additional skills.\n- Further explore career paths in music and technology with Amazon Music through a [free virtual field trip](https://www.amazonfutureengineer.com/music?utm_campaign=Code.org&utm_medium=Musiclab&utm_source=US&utm_content=Career%20Tours&utm_term=2024). \n- Receive a [certificate](http://code.org/certificates) for completing the Hour of Code.\n"
       },
       "seeding_key": {
         "activity_section.key": "16e21d7e-940f-41a3-a655-77d826b68d89",
@@ -917,6 +920,17 @@
       "seeding_key": {
         "resource.key": "amazon_music_careers_behind_the_beats"
       }
+    },
+    {
+      "name": "Music Lab Spotify Playlist (all ages)",
+      "url": "https://open.spotify.com/playlist/6hpv1W7OxV4uOuFDdzZB1M?si=xY31T0SbTauGbOY1-iXu7Q",
+      "key": "music_lab_spotify_playlist_all_ages_",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "music_lab_spotify_playlist_all_ages_"
+      }
     }
   ],
   "lessons_resources": [
@@ -924,6 +938,12 @@
       "seeding_key": {
         "lesson.key": "Music Lab: AI Edition for Hour of Code",
         "resource.key": "amazon_music_careers_behind_the_beats"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab: AI Edition for Hour of Code",
+        "resource.key": "music_lab_spotify_playlist_all_ages_"
       }
     }
   ],

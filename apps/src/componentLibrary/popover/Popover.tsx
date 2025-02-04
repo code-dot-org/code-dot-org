@@ -1,19 +1,19 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classnames from 'classnames';
-import React, {ReactNode} from 'react';
+import React, {HTMLAttributes, ReactNode} from 'react';
 
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {
   ComponentPlacementDirection,
   ComponentSizeXSToL,
 } from '@cdo/apps/componentLibrary/common/types';
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {BodyTwoText, Heading5} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './popover.module.scss';
 
-export interface PopoverProps {
+export interface PopoverProps extends HTMLAttributes<HTMLDivElement> {
   /** Popover title */
   title: string;
   /** Popover direction/position relative to connected element */
@@ -43,7 +43,7 @@ export interface PopoverProps {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/PopoverTest.jsx, apps/test/unit/componentLibrary/WithPopoverTest.jsx);
+ * * (see apps/test/unit/componentLibrary/PopoverTest.tsx, apps/test/unit/componentLibrary/WithPopoverTest.tsx);
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready For Dev```
@@ -64,6 +64,7 @@ const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
       className,
       size = 'm',
       style = {},
+      ...HTMLAttributes
     },
     ref
   ) => {
@@ -78,6 +79,7 @@ const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
           className
         )}
         style={style}
+        {...HTMLAttributes}
       >
         <CloseButton
           className={moduleStyles.closeButton}

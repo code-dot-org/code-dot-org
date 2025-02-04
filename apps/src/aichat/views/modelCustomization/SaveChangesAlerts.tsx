@@ -1,3 +1,4 @@
+import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import React from 'react';
 
 import {
@@ -5,8 +6,9 @@ import {
   selectHavePropertiesChanged,
   selectSavedCustomizationsMatchInitial,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import aichatI18n from '../../locale';
 
 import styles from '../model-customization-workspace.module.scss';
 
@@ -21,12 +23,18 @@ const SaveChangesAlerts: React.FunctionComponent<{isReadOnly: boolean}> = ({
   const isSavedDefault = useAppSelector(selectSavedCustomizationsMatchInitial);
 
   const alerts = {
-    reminder: {text: 'Remember to save your changes', type: alertTypes.info},
+    reminder: {
+      text: aichatI18n.saveChangesReminderAlert(),
+      type: alertTypes.info,
+    },
     unsaved: {
-      text: 'You have unsaved changes',
+      text: aichatI18n.saveChangesUnsavedAlert(),
       type: alertTypes.warning,
     },
-    saved: {text: 'Saved', type: alertTypes.success},
+    saved: {
+      text: aichatI18n.saveChangesSucessAlert(),
+      type: alertTypes.success,
+    },
   };
 
   const showReminder = isCurrentDefault && isSavedDefault;

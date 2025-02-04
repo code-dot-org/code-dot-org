@@ -1,5 +1,8 @@
-/* DO NOT IMPORT THIS FILE DIRECTLY. Use colors.css instead,
- which convey semantic and utility colors and also defines themes. */
+/* This is a collection of Primitive Colors.
+ Unlike Semantic colors (color.css) these variables will be equal to the same color value in all themes.
+ Ideally, these colors should be used for components that are not theme dependent.
+ In the future it's possible that we will only need to use these colors in Semantic colors (colors.css).
+ */
 
 /* Colors are taken from DISCO Variables New Figma File - Primitive colors variables collection
  via variables2css plugin that generates css code based on Figma variables values and names.
@@ -103,7 +106,7 @@
     --sentiment-error-20: #ffbfb6;
     --sentiment-error-30: #ff8677;
     --sentiment-error-40: #f95d4a;
-    --sentiment-error-50: #e5311a;
+    --sentiment-error-50: #e02d16;
     --sentiment-error-60: #c12814;
     --sentiment-error-70: #aa2513;
     --sentiment-error-80: #842418;

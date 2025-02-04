@@ -3,6 +3,7 @@
 import * as GoogleBlockly from 'blockly/core';
 
 import {handleWorkspaceResizeOrScroll} from '@cdo/apps/code-studio/callouts';
+import color from '@cdo/apps/util/color';
 
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
 import {BLOCK_TYPES} from './constants';
@@ -116,31 +117,41 @@ export function storeWorkspaceWidth(e: GoogleBlockly.Events.Abstract) {
   }
 }
 
+// Jigsaw only. Sets a fill pattern defines a path in order to show pictures
+// over the blocks.
 export function setPathFill(e: GoogleBlockly.Events.Abstract) {
-  if (e.type === Blockly.Events.FINISHED_LOADING && e.workspaceId) {
+  const expectedEventTypes: string[] = [
+    Blockly.Events.FINISHED_LOADING,
+    Blockly.Events.BLOCK_MOVE,
+  ];
+  if (expectedEventTypes.includes(e.type) && e.workspaceId) {
+    if (!Blockly.isJigsaw) {
+      return;
+    }
     const workspace = Blockly.Workspace.getById(
       `${e.workspaceId}`
     ) as ExtendedWorkspace;
-    let patternBlocks: ExtendedBlock[] = [];
-    patternBlocks = workspace
+    workspace
       .getAllBlocks()
       .map(block => block as ExtendedBlock)
-      .filter(block => block.getFillPattern());
-    patternBlocks.forEach(block => {
-      const pattern = block.getFillPattern();
-      if (pattern && block instanceof GoogleBlockly.BlockSvg) {
-        block.svgPathFill = Blockly.createSvgElement(
-          'path',
-          {class: 'blocklyPath'},
-          block.getSvgRoot()
-        );
-        block.svgPathFill.setAttribute('fill', 'url(#' + pattern + ')');
-        const pathDescription = block.pathObject.svgPath.getAttribute('d');
-        if (pathDescription) {
-          block.svgPathFill.setAttribute('d', pathDescription);
+      .forEach(block => {
+        const pattern = block.getFillPattern();
+        if (block instanceof GoogleBlockly.BlockSvg) {
+          if (!block.svgPathFill) {
+            block.svgPathFill = Blockly.createSvgElement(
+              'path',
+              {class: 'blocklyPath'},
+              block.getSvgRoot()
+            );
+          }
+          const pathDescription = block.pathObject.svgPath.getAttribute('d');
+          if (pattern && pathDescription) {
+            block.svgPathFill.setAttribute('stroke', color.neutral_light);
+            block.svgPathFill.setAttribute('fill', 'url(#' + pattern + ')');
+            block.svgPathFill.setAttribute('d', pathDescription);
+          }
         }
-      }
-    });
+      });
   }
 }
 
@@ -170,15 +181,14 @@ export function bumpRTLBlocks() {
 
 // When blocks on the main workspace are changed, update the block limits indicators.
 export function updateBlockLimits(event: GoogleBlockly.Events.Abstract) {
-  if (
-    ![
-      Blockly.Events.BLOCK_CHANGE,
-      Blockly.Events.BLOCK_MOVE,
-      Blockly.Events.BLOCK_CREATE,
-      // High Contrast theme has a different font size, so we update the indicators.
-      Blockly.Events.THEME_CHANGE,
-    ].includes(event.type)
-  ) {
+  const expectedEventTypes: string[] = [
+    Blockly.Events.BLOCK_CHANGE,
+    Blockly.Events.BLOCK_MOVE,
+    Blockly.Events.BLOCK_CREATE,
+    // High Contrast theme has a different font size, so we update the indicators.
+    Blockly.Events.THEME_CHANGE,
+  ];
+  if (!expectedEventTypes.includes(event.type)) {
     return;
   }
 

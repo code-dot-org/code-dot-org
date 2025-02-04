@@ -19,6 +19,9 @@ export const hasLockableLessons = state =>
 
 export const hasGroups = state => Object.keys(groupedLessons(state)).length > 1;
 
+export const getCurrentLesson = state =>
+  state.progress.lessons?.find(l => l.id === state.progress.currentLessonId);
+
 /**
  * Extract the relevant portions of a particular lesson from the store.
  * Note, that this does not include levels
@@ -127,6 +130,29 @@ export const getLevelPropertiesPath = state => {
   } else if (state.progress.currentLevelId !== null) {
     const levelId = state.progress.currentLevelId;
     return `/levels/${levelId}/level_properties`;
+  } else {
+    return undefined;
+  }
+};
+
+/**
+ * Returns the dashboard URL path to retrieve the user app options for a script level.
+ * If we don't have a current level, this returns undefined.
+ */
+export const getUserAppOptionsPath = state => {
+  if (state.progress.lessons) {
+    const scriptName = state.progress.scriptName;
+
+    const lessonPosition = state.progress.lessons?.find(
+      lesson => lesson.id === state.progress.currentLessonId
+    ).relative_position;
+
+    const currentLevel = getCurrentLevel(state);
+    const levelPosition = currentLevel.levelNumber;
+
+    const levelId = state.progress.currentLevelId;
+
+    return `/api/user_app_options/${scriptName}/${lessonPosition}/${levelPosition}/${levelId}`;
   } else {
     return undefined;
   }

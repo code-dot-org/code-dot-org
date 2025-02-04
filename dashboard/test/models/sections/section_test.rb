@@ -722,6 +722,14 @@ class SectionTest < ActiveSupport::TestCase
         script: {id: nil, name: nil, project_sharing: nil},
         students: [],
         any_student_has_progress: false,
+        is_assigned_single_unit_course: false,
+        course: {
+          course_offering_id: unit_group.course_version.course_offering.id,
+          version_id: unit_group.course_version.id,
+          lesson_extras_available: nil,
+          text_to_speech_enabled: nil,
+          unit_id: section.unit_group ? section.script_id : nil,
+        }
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -745,12 +753,38 @@ class SectionTest < ActiveSupport::TestCase
         script: {id: script.id, name: script.name, project_sharing: nil},
         students: [],
         any_student_has_progress: false,
+        is_assigned_single_unit_course: nil,
+        course: {
+          course_offering_id: script.course_version.course_offering.id,
+          version_id: script.course_version.id,
+          lesson_extras_available: script.lesson_extras_available,
+          text_to_speech_enabled: script.text_to_speech_enabled?,
+          unit_id: section.unit_group ? section.script_id : nil,
+        }
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
       assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
       assert_equal expected, section.selected_section_summarize.except!(:createdAt)
     end
+  end
+
+  test 'selected_section_summarize: section with a single-unit course assigned' do
+    single_unit_course = create :single_unit_course
+    single_unit = single_unit_course.default_units.first
+    section = create :section, unit_group: single_unit_course
+    CourseOffering.add_course_offering(single_unit_course)
+
+    summarized_section = section.selected_section_summarize
+    expected_script_info = {
+      id: single_unit.id,
+      name: single_unit.name,
+      project_sharing: single_unit.project_sharing
+    }
+
+    assert_equal single_unit_course.course_version.course_offering.id, summarized_section[:course][:course_offering_id]
+    assert_equal expected_script_info, summarized_section[:script]
+    assert_equal true, summarized_section[:is_assigned_single_unit_course]
   end
 
   test 'selected_section_summarize: section with students' do

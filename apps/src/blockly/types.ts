@@ -67,6 +67,8 @@ interface AnalyticsData {
 type GoogleBlocklyType = typeof GoogleBlockly;
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  varsInGlobals: boolean;
+  disableVariableEditing: boolean;
   ALIGN_CENTRE: GoogleBlockly.inputs.Align.CENTRE;
   ALIGN_LEFT: GoogleBlockly.inputs.Align.LEFT;
   ALIGN_RIGHT: GoogleBlockly.inputs.Align.RIGHT;
@@ -142,7 +144,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   wrapReadOnlyProperty: (propertyName: string) => void;
   wrapSettableProperty: (propertyName: string) => void;
   overrideFields: (
-    overrides: [string, string, Pick<typeof GoogleBlockly.Field, 'prototype'>][]
+    overrides: [string, string, GoogleBlockly.fieldRegistry.RegistrableField][]
   ) => void;
   setInfiniteLoopTrap: () => void;
   clearInfiniteLoopTrap: () => void;
@@ -190,6 +192,7 @@ export type GoogleBlocklyInstance = typeof GoogleBlockly;
 // types and can cast to them when needed.
 
 export interface ExtendedBlockSvg extends GoogleBlockly.BlockSvg {
+  canSerializeNextConnection?: boolean;
   isVisible: () => boolean;
   isUserVisible: () => boolean;
   shouldBeGrayedOut: () => boolean;
@@ -222,6 +225,7 @@ export interface ExtendedInput extends GoogleBlockly.Input {
   // Blockly explicitly uses any for this type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getFieldRow: () => GoogleBlockly.Field<any>[];
+  setInline: (inline: boolean) => ExtendedInput;
 }
 export interface ExtendedConnection extends GoogleBlockly.Connection {
   getFieldHelperOptions: (fieldHelper: string) => FieldHelperOptions;
@@ -274,6 +278,8 @@ export interface ExtendedVariableMap extends GoogleBlockly.VariableMap {
 }
 
 export interface ExtendedBlocklyOptions extends GoogleBlockly.BlocklyOptions {
+  varsInGlobals: boolean;
+  disableVariableEditing: boolean;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
   levelBlockIds: Set<string>;

@@ -15,12 +15,19 @@ class SectionsController < ApplicationController
       id: params[:id]
     )
 
+    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
+      redirect_to "/teacher_dashboard/sections/#{params[:id]}/settings"
+      return
+    end
+
     @section = existing_section.attributes
 
     @section['course'] = {
       course_offering_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.course_offering&.id : existing_section.script&.course_version&.course_offering&.id,
       version_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.id : existing_section.script&.course_version&.id,
-      unit_id: existing_section.unit_group ? existing_section.script_id : nil
+      unit_id: existing_section.unit_group ? existing_section.script_id : nil,
+      lesson_extras_available: existing_section.script.try(:lesson_extras_available),
+      text_to_speech_enabled: existing_section.script.try(:text_to_speech_enabled?),
     }
 
     @section['sectionInstructors'] = ActiveModelSerializers::SerializableResource.new(existing_section.section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json

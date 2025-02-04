@@ -3,13 +3,13 @@
 import './styles/Weblab2View.css';
 
 import {Codebridge} from '@codebridge/Codebridge';
-import {ConfigType, ProjectType} from '@codebridge/types';
+import {ConfigType} from '@codebridge/types';
 import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useState} from 'react';
 
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
 
@@ -25,7 +25,7 @@ const labeledGridLayouts = {
     gridLayoutRows: '1fr',
     gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
     gridLayout: `
-    "info-panel workspace preview-container"
+    "info-panel workspace file-preview"
     `,
   },
   vertical: {
@@ -33,7 +33,7 @@ const labeledGridLayouts = {
     gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
     gridLayout: `
     "info-panel workspace workspace"
-    "info-panel preview-container preview-container"`,
+    "info-panel file-preview file-preview"`,
   },
 };
 
@@ -73,7 +73,7 @@ const defaultConfig: ConfigType = {
   showFileBrowser: true,
 };
 
-const defaultSource: ProjectType = {
+const defaultSource: MultiFileSource = {
   // folders: {},
   folders: {
     '1': {id: '1', name: 'foo', parentId: '0'},
@@ -152,7 +152,7 @@ const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource, startSource, projectVersion} =
+  const {source, setProject, startSources, projectVersion} =
     useSource(defaultProject);
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
@@ -180,11 +180,11 @@ const Weblab2View = () => {
       <div className="app-ide">
         {source && (
           <Codebridge
-            project={source}
+            source={source}
             config={config}
-            setProject={setSource}
+            setProject={setProject}
             setConfig={setConfig}
-            startSource={startSource}
+            startSources={startSources}
             projectVersion={projectVersion}
           />
         )}
@@ -194,10 +194,10 @@ const Weblab2View = () => {
             config={configKey[showConfig]}
             setConfig={(
               configName: string,
-              newConfig: ProjectType | ConfigType | string
+              newConfig: MultiFileSource | ConfigType | string
             ) => {
               if (configName === 'project') {
-                setSource(newConfig as ProjectType);
+                setProject({source: newConfig as MultiFileSource});
               } else if (configName === 'config' || configName === 'layout') {
                 setConfig(newConfig as ConfigType);
               }

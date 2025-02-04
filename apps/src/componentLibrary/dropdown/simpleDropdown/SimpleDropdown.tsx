@@ -1,3 +1,6 @@
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {HTMLAttributes} from 'react';
 
@@ -5,9 +8,6 @@ import {
   ComponentSizeXSToL,
   DropdownFormFieldRelatedProps,
 } from '@cdo/apps/componentLibrary/common/types';
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './simpleDropdown.module.scss';
 
@@ -53,7 +53,7 @@ export interface SimpleDropdownProps
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/SimpleDropdownTest.jsx)
+ * * (see apps/test/unit/componentLibrary/SimpleDropdownTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

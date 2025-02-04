@@ -1,7 +1,8 @@
+import Button from '@code-dot-org/component-library/button';
 import ValidatedInstructionsView from '@codebridge/InfoPanel/ValidatedInstructions';
 import React, {useEffect, useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -38,6 +39,12 @@ const panelEventNames = {
   [Panels.ForTeachersOnly]: EVENTS.CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE,
 };
 
+const panelHeaderNames = {
+  [Panels.Instructions]: codebridgeI18n.instructionsHeader(),
+  [Panels.HelpAndTips]: codebridgeI18n.helpAndTipsHeader(),
+  [Panels.ForTeachersOnly]: codebridgeI18n.forTeachersOnlyHeader(),
+};
+
 export const InfoPanel = React.memo(() => {
   const mapReference = useAppSelector(
     state => state.lab.levelProperties?.mapReference
@@ -50,6 +57,9 @@ export const InfoPanel = React.memo(() => {
   );
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [currentPanel, setCurrentPanel] = useState(Panels.Instructions);
+  const [currentPanelHeader, setCurrentPanelHeader] = useState(
+    codebridgeI18n.instructionsHeader()
+  );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [panelOptions, setPanelOptions] = useState<Panels[]>([
     Panels.Instructions,
@@ -111,6 +121,7 @@ export const InfoPanel = React.memo(() => {
   const changePanel = (panel: Panels) => {
     if (panel !== currentPanel) {
       setCurrentPanel(panel);
+      setCurrentPanelHeader(panelHeaderNames[panel]);
       sendCodebridgeAnalyticsEvent(panelEventNames[panel], appName);
     }
     setIsDropdownOpen(false);
@@ -121,7 +132,7 @@ export const InfoPanel = React.memo(() => {
   return (
     <PanelContainer
       id="codebridge-info-panel"
-      headerContent={currentPanel}
+      headerContent={currentPanelHeader}
       rightHeaderContent={renderHeaderButton()}
       className={moduleStyles.infoPanel}
       headerClassName={moduleStyles.infoPanelHeader}

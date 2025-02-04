@@ -1,29 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {memo} from 'react';
-import {
-  OverlayTrigger,
-  Tooltip,
-  TooltipProps,
-  OverlayTriggerProps,
-} from 'react-bootstrap-2'; // TODO: Once we have [DSCO] Tooltip component, replace this import with it
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 import moduleStyles from './tags.module.scss';
-
-// Allow the tooltips to display on focus so that the information
-// can be shown via keyboard
-const LabelOverlayTrigger: React.FC<OverlayTriggerProps> = props => (
-  <OverlayTrigger placement="top" trigger={['hover', 'focus']} {...props} />
-);
-
-// The arrowProps passed down in ReactBootstrap use styles that
-// conflict with the custom styles that we want, so they
-// are extracted out here.
-const LabelTooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
-  ({arrowProps, ...props}, ref: React.Ref<HTMLDivElement>) => (
-    <Tooltip ref={ref} {...props} />
-  )
-);
 
 type TagIconProps = {
   iconName: string;
@@ -40,10 +20,11 @@ export interface TagProps {
   /** Tag label */
   label: string;
   /** Tag tooltip content. Can be a simple string or ReactNode (some jsx/html markup/view).
-   *  For example - check Tags.story.tsx*/
-  tooltipContent: string | React.ReactNode;
+   *  For example - check Tags.story.tsx
+   *  Can be null to disable the tooltip */
+  tooltipContent?: string | React.ReactNode;
   /** Tag tooltip id (required for better accessibility, see ) */
-  tooltipId: string;
+  tooltipId?: string;
   /** aria-label for the tag.
    *  Used to allow screen reader to read tag as ariaLabel content instead of the label content */
   ariaLabel?: string;
@@ -59,21 +40,16 @@ const Tag: React.FunctionComponent<TagProps> = ({
   tooltipId,
   icon,
 }) => {
-  return (
-    <LabelOverlayTrigger
-      overlay={(props: TooltipProps) => (
-        <LabelTooltip
-          id={tooltipId}
-          className={moduleStyles.tagTooltip}
-          {...props}
-        >
-          {tooltipContent}
-        </LabelTooltip>
-      )}
+  return tooltipContent && tooltipId ? (
+    <WithTooltip
+      tooltipProps={{
+        direction: 'onTop',
+        text: tooltipContent,
+        tooltipId,
+      }}
     >
       <div
         tabIndex={0} // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
-        role="tooltip"
         aria-describedby={tooltipId}
         className={moduleStyles.tag}
       >
@@ -81,7 +57,13 @@ const Tag: React.FunctionComponent<TagProps> = ({
         <span>{label}</span>
         {icon && icon.placement === 'right' && <TagIcon {...icon} />}
       </div>
-    </LabelOverlayTrigger>
+    </WithTooltip>
+  ) : (
+    <div className={moduleStyles.tag}>
+      {icon && icon.placement === 'left' && <TagIcon {...icon} />}
+      <span>{label}</span>
+      {icon && icon.placement === 'right' && <TagIcon {...icon} />}
+    </div>
   );
 };
 

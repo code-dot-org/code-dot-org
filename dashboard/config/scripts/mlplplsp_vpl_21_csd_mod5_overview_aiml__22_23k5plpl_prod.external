@@ -1,0 +1,29 @@
+name 'MLPLPLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL_prod'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pedagogical Approach: Use-Modify-Create  
+## Music Lab uses the Use-Modify-Create Pedagogical Practice 
+<p align="center">
+  <img src="https://images.code.org/787c345ede31df8f9c792eff29c72f6b-image-1717795118474.png" alt="The three steps in Use/Modify/Create">
+</p>
+
+## What is Use-Modify-Create?
+
+* #### Three progressive stages to help students develop their programming skills
+* #### First, students use existing software.
+* #### Then, they modify this software to explore how changes affect outcomes.
+* #### Last, they create their own projects from scratch, applying their acquired skills to design and implement original software. 
+
+#### This method supports incremental learning, builds confidence, and mirrors real-world programming practices, making it an effective pedagogical strategy for teaching computer science.
+
+##Use-Modify-Create in Music Lab 
+####In the Music Lab module, students begin by <b>using</b> pre-created code.Then, they will practice coding music by <b>modifying</b> and building on existing code.To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to <b>create</b> a unique song. 
+
+
+
+<div style="clear:both"/>
+
+
+MARKDOWN

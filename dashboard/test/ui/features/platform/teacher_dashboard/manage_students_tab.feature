@@ -10,6 +10,7 @@ Feature: Using the manage students tab of the teacher dashboard
     And I navigate to manage students for the section I saved
 
     # Test the US state Bulk Set modal
+    Then I wait until element "#uitest-manage-students-table th:contains(State) i" is visible
     When I click selector "#uitest-manage-students-table th:contains(State) i"
     And I click selector ".pop-up-menu-item:contains(Set state for all students)"
     Then I wait until element "#us-state-column-bulk-set-modal" is visible

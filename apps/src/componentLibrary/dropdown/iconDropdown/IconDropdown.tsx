@@ -1,3 +1,6 @@
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useCallback, memo, AriaAttributes} from 'react';
 
@@ -14,9 +17,6 @@ import {
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
@@ -35,7 +35,7 @@ export interface IconDropdownProps
   /** IconDropdown color */
   color?: DropdownColor;
   /** IconDropdown size */
-  size: ComponentSizeXSToL;
+  size?: ComponentSizeXSToL;
   /** IconDropdown disabled state */
   disabled?: boolean;
   /** IconDropdown readOnly state */
@@ -149,7 +149,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/IconDropdownTest.jsx)
+ * * (see apps/test/unit/componentLibrary/IconDropdownTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

@@ -188,7 +188,6 @@ class HomeController < ApplicationController
       end
 
       @homepage_data[:isTeacher] = true
-      @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
       @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
       @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
@@ -202,19 +201,19 @@ class HomeController < ApplicationController
       @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
       if show_census_banner
-        teachers_school = Queries::SchoolInfo.current_school(current_user)
-        school_stats = SchoolStatsByYear.where(school_id: teachers_school[:school_id]).order(school_year: :desc).first
+        teachers_school = current_user.school_info_school
+        school_stats = SchoolStatsByYear.where(school_id: teachers_school.id).order(school_year: :desc).first
 
         @homepage_data[:censusQuestion] = school_stats.try(:has_high_school_grades?) ? "how_many_20_hours" : "how_many_10_hours"
         @homepage_data[:currentSchoolYear] = current_census_year
         @homepage_data[:existingSchoolInfo] = {
-          id: teachers_school[:school_id],
-          name: teachers_school[:school_name],
+          id: teachers_school.id,
+          name: teachers_school.name,
           country: 'US',
-          zip: teachers_school[:school_zip],
-          type: teachers_school[:school_type],
+          zip: teachers_school.zip,
+          type: teachers_school.school_type,
         }
-        @homepage_data[:ncesSchoolId] = teachers_school[:school_id]
+        @homepage_data[:ncesSchoolId] = teachers_school.id
         @homepage_data[:teacherName] = current_user.name
         @homepage_data[:teacherId] = current_user.id
         @homepage_data[:teacherEmail] = current_user.email

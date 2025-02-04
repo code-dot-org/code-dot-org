@@ -1,6 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {ProjectType, FolderId} from '@codebridge/types';
+import {FolderId} from '@codebridge/types';
 import {shouldShowFile} from '@codebridge/utils';
 import {
   DndContext,
@@ -14,10 +14,11 @@ import {
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {ProjectFileType} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -35,8 +36,8 @@ import {DragType, DragDataType, DropDataType, setFileType} from './types';
 import moduleStyles from './styles/filebrowser.module.scss';
 
 type FilesComponentProps = {
-  files: ProjectType['files'];
-  folders: ProjectType['folders'];
+  files: MultiFileSource['files'];
+  folders: MultiFileSource['folders'];
   parentId?: FolderId;
   setFileType: setFileType;
   appName?: string;
@@ -120,7 +121,7 @@ const InnerFileBrowser = React.memo(
 );
 
 export const FileBrowser = React.memo(() => {
-  const {project, setFileType} = useCodebridgeContext();
+  const {source, setFileType} = useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
@@ -154,39 +155,41 @@ export const FileBrowser = React.memo(() => {
   return (
     <PanelContainer
       id="file-browser"
-      headerContent={'Files'}
+      headerContent={codebridgeI18n.filesHeader()}
       headerClassName={moduleStyles.fileBrowserHeader}
       className={moduleStyles['file-browser']}
       rightHeaderContent={!isReadOnly && <FileBrowserHeaderPopUpButton />}
     >
-      <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
-        <DndDataContextProvider
-          value={{dragData, dropData}}
-          dndMonitor={dndMonitor}
-        >
-          <Droppable
-            data={{id: DEFAULT_FOLDER_ID}}
-            className={classNames(
-              moduleStyles.droppableArea,
-              moduleStyles.expandedDroppableArea,
-              {
-                [moduleStyles.acceptingDrop]:
-                  DEFAULT_FOLDER_ID === dropData?.id,
-              }
-            )}
+      <div className={moduleStyles.fileBrowserContents}>
+        <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
+          <DndDataContextProvider
+            value={{dragData, dropData}}
+            dndMonitor={dndMonitor}
           >
-            <ul id="uitest-files-list">
-              <InnerFileBrowser
-                parentId={DEFAULT_FOLDER_ID}
-                folders={project.folders}
-                files={project.files}
-                setFileType={setFileType}
-                appName={appName}
-              />
-            </ul>
-          </Droppable>
-        </DndDataContextProvider>
-      </DndContext>
+            <Droppable
+              data={{id: DEFAULT_FOLDER_ID}}
+              className={classNames(
+                moduleStyles.droppableArea,
+                moduleStyles.expandedDroppableArea,
+                {
+                  [moduleStyles.acceptingDrop]:
+                    DEFAULT_FOLDER_ID === dropData?.id,
+                }
+              )}
+            >
+              <ul id="uitest-files-list">
+                <InnerFileBrowser
+                  parentId={DEFAULT_FOLDER_ID}
+                  folders={source.folders}
+                  files={source.files}
+                  setFileType={setFileType}
+                  appName={appName}
+                />
+              </ul>
+            </Droppable>
+          </DndDataContextProvider>
+        </DndContext>
+      </div>
     </PanelContainer>
   );
 });

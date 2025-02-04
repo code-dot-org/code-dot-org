@@ -111,6 +111,13 @@ const sections = [
     sharing_disabled: false,
     course_offering_id: 1,
     course_version_id: 1,
+    course: {
+      lesson_extras_available: true,
+      text_to_speech_enabled: false,
+      course_offering_id: 1,
+      unit_id: null,
+      version_id: 2017,
+    },
     unitName: 'coursea-2017',
     unit_id: null,
     isAssignedStandaloneCourse: true,
@@ -425,7 +432,6 @@ describe('teacherSectionsRedux', () => {
       });
     });
   });
-
   describe('beginEditingSection', () => {
     it('populates sectionBeingEdited if no section provided', () => {
       assert.isNull(initialState.sectionBeingEdited);
@@ -477,9 +483,17 @@ describe('teacherSectionsRedux', () => {
         courseOfferingId: 1,
         courseVersionId: 1,
         courseDisplayName: 'Course A',
+        course: {
+          courseOfferingId: 1,
+          unitId: null,
+          versionId: 2017,
+          lessonExtrasAvailable: true,
+          textToSpeechEnabled: false,
+        },
         unitName: 'coursea-2017',
         unitId: null,
         isAssignedStandaloneCourse: true,
+        isAssignedSingleUnitCourse: undefined,
         courseId: undefined,
         createdAt: createdAt,
         studentCount: 1,
@@ -823,7 +837,9 @@ describe('teacherSectionsRedux', () => {
           courseDisplayName: undefined,
           unitName: undefined,
           unitId: undefined,
+          course: null,
           isAssignedStandaloneCourse: undefined,
+          isAssignedSingleUnitCourse: undefined,
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,

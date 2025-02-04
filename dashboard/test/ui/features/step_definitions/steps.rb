@@ -530,20 +530,8 @@ rescue
   @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
 end
 
-When /^I press dropdown button with text "([^"]*)"$/ do |text|
-  @browser.execute_script("$('.goog-flat-menu-button-caption:contains(#{text})').simulate('drag', function(){});")
-end
-
-When /^I press dropdown item with text "([^"]*)"$/ do |text|
-  @browser.execute_script("$('.goog-menuitem:contains(#{text})').last().simulate('drag', function(){});")
-end
-
 When /^I press the edit button on a function call named "([^"]*)"$/ do |text|
   @browser.execute_script("$('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first().simulate('drag', function(){})")
-end
-
-When /^I press dropdown item "([^"]*)"$/ do |index|
-  @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){});")
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
@@ -1022,8 +1010,14 @@ Then /^I wait until I (don't )?see selector "(.*)"$/ do |negation, selector|
   end
 end
 
-Then /^there's a div with a background image "([^"]*)"$/ do |path|
-  exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0")
+Then /^there's an element with an image "([^"]*)"$/ do |path|
+  exists = @browser.execute_script(<<-JS)
+    return $('div').filter(function() {
+      return $(this).css('background-image').indexOf('#{path}') != -1;
+    }).length > 0 || $('img').filter(function() {
+      return $(this).attr('src').indexOf('#{path}') != -1;
+    }).length > 0;
+  JS
   expect(exists).to eq(true)
 end
 
@@ -1123,19 +1117,19 @@ Given(/^I am enrolled in a plc course$/) do
   browser_request(url: '/api/test/enroll_in_plc_course', method: 'POST')
 end
 
-Given(/^I am assigned to unit "([^"]*)"$/) do |script_name|
+Given(/^I am assigned to unit "([^"]*)"(?: with teacher "([^"]*)")?$/) do |script_name, teacher_name|
   browser_request(
     url: '/api/test/assign_script_as_student',
     method: 'POST',
-    body: {script_name: script_name}
+    body: {script_name: script_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
   )
 end
 
-Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"$/) do |course_name, script_name|
+Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"(?: with teacher "([^"]*)")?$/) do |course_name, script_name, teacher_name|
   browser_request(
     url: '/api/test/assign_course_and_unit_as_student',
     method: 'POST',
-    body: {script_name: script_name, course_name: course_name}
+    body: {script_name: script_name, course_name: course_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
   )
 end
 

@@ -1,4 +1,4 @@
-@import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
 @import '@cdo/apps/componentLibrary/common/styles/variables';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 @import '@cdo/apps/componentLibrary/typography/typography.module';
@@ -39,7 +39,7 @@
     background-color: unset;
     border-radius: 0.25rem;
     border: 1px solid;
-    color: $light_black;
+    color: var(--neutral-base-black);
     box-shadow: none;
     gap: 0.5rem;
     margin: 0;
@@ -49,7 +49,7 @@
     appearance: none;
 
     &:focus-visible {
-      outline: 2px solid $light_primary_500;
+      outline: 2px solid var(--brand-teal-50);
       border-radius: 0.25rem;
       outline-offset: 2px;
     }
@@ -118,32 +118,32 @@
           display: flex;
           align-items: center;
           cursor: pointer;
-          color: $light_black;
+          color: var(--neutral-base-black);
 
           &.destructiveDropdownMenuItem {
-            color: $light_negative_500;
+            color: var(--sentiment-error-50);
 
             i {
-              color: $light_negative_500;
+              color: var(--sentiment-error-50);
             }
 
             &:hover {
-              background-color: $light_negative_100;
+              background-color: var(--sentiment-error-10);
             }
 
             &:active {
-              background-color: $light_negative_500;
-              color: $light_white;
+              background-color: var(--sentiment-error-50);
+              color: var(--neutral-base-white);
 
               i::before {
-                background-color: $light_negative_500;
-                color: $light_white;
+                background-color: var(--sentiment-error-50);
+                color: var(--neutral-base-white);
               }
             }
           }
 
           &:focus-visible {
-            outline: 2px solid $light_primary_500;
+            outline: 2px solid var(--brand-teal-50);
             outline-offset: -2px;
           }
 
@@ -159,38 +159,38 @@
         }
 
         &:hover {
-          background-color: $light_gray_100;
+          background-color: var(--neutral-gray-10);
         }
 
         &:active,
         &:has(input[type='checkbox']:checked),
         &:has(.selectedDropdownMenuItem) {
-          background-color: $light_primary_500;
+          background-color: var(--brand-teal-50);
 
           i::before {
-            background-color: $light_white;
-            color: $light_primary_500;
+            background-color: var(--neutral-base-white);
+            color: var(--brand-teal-50);
           }
 
           span {
-            color: $light_white;
+            color: var(--neutral-base-white);
           }
 
           .dropdownMenuItem {
             i::before {
-              background-color: $light_primary_500;
-              color: $light_white;
+              background-color: var(--brand-teal-50);
+              color: var(--neutral-base-white);
             }
 
             span {
-              color: $light_white;
+              color: var(--neutral-base-white);
             }
           }
         }
 
         &:has(input[type='checkbox']:disabled),
         &:has(.disabledDropdownMenuItem) {
-          color: $light_gray_200;
+          color: var(--neutral-gray-20);
           background-color: unset;
           cursor: not-allowed;
 
@@ -199,13 +199,13 @@
 
             i::before {
               background-color: unset;
-              color: $light_gray_200;
+              color: var(--neutral-gray-20);
             }
           }
 
           span,
           .dropdownMenuItem span {
-            color: $light_gray_200;
+            color: var(--neutral-gray-20);
           }
         }
       }
@@ -219,7 +219,7 @@
     padding: 0.25rem;
 
     border-radius: 0 0 0.25rem 0.25rem;
-    border-top: 1px solid $light_gray_300;
+    border-top: 1px solid var(--neutral-gray-30);
   }
 }
 
@@ -246,7 +246,7 @@
 // Dropdown colors
 .dropdownContainer-black {
   .dropdownLabel {
-    color: $light_black;
+    color: var(--neutral-base-black);
   }
 
   .helperSection {
@@ -259,43 +259,43 @@
     }
 
     .dropdownButton {
-      border-color: $light_negative_500;
+      border-color: var(--sentiment-error-50);
     }
   }
 
   .dropdownButton {
-    color: $light_black;
-    border-color: $light_black;
-    background-color: $light_white;
+    color: var(--neutral-base-black);
+    border-color: var(--neutral-base-black);
+    background-color: var(--neutral-base-white);
   }
 
   &:has(.dropdownButton:hover) {
     .dropdownButton:not(:disabled) {
-      color: $light_black;
-      background-color: $light_gray_100;
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-gray-10);
     }
   }
 
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
-      color: $light_black;
-      background-color: $light_white;
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-base-white);
     }
   }
 
   &:has(.dropdownButton:disabled) {
     .dropdownButton {
-      color: $light_gray_200;
-      border-color: $light_gray_200 !important;
+      color: var(--neutral-gray-20);
+      border-color: var(--neutral-gray-20) !important;
       cursor: not-allowed;
 
       .dropdownLabel {
-        color: $light_gray_200;
+        color: var(--neutral-gray-20);
       }
     }
 
     .dropdownLabel {
-      color: $light_gray_200;
+      color: var(--neutral-gray-20);
     }
 
     .helperSection,
@@ -322,7 +322,7 @@
 
 .dropdownContainer-gray {
   .dropdownLabel {
-    color: $light_black;
+    color: var(--neutral-base-black);
   }
 
   .helperSection {
@@ -334,38 +334,38 @@
   }
 
   .dropdownButton {
-    color: $light_black;
-    border-color: $light_gray_400;
-    background-color: $light_white;
+    color: var(--neutral-base-black);
+    border-color: var(--neutral-gray-40);
+    background-color: var(--neutral-base-white);
   }
 
   &:has(.dropdownButton:hover) {
     .dropdownButton:not(:disabled) {
-      color: $light_black;
-      background-color: $light_gray_100;
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-gray-10);
     }
   }
 
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
-      color: $light_black;
-      background-color: $light_white;
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-base-white);
     }
   }
 
   &:has(.dropdownButton:disabled) {
     .dropdownButton {
-      color: $light_gray_200;
-      border-color: $light_gray_200 !important;
+      color: var(--neutral-gray-20);
+      border-color: var(--neutral-gray-20) !important;
       cursor: not-allowed;
 
       .dropdownLabel {
-        color: $light_gray_200;
+        color: var(--neutral-gray-20);
       }
     }
 
     .dropdownLabel {
-      color: $light_gray_200;
+      color: var(--neutral-gray-20);
     }
 
     .helperSection,
@@ -392,7 +392,7 @@
 
 .dropdownContainer-white {
   .dropdownLabel {
-    color: $light_white;
+    color: var(--neutral-base-white);
   }
 
   .helperSection {
@@ -405,41 +405,41 @@
     }
 
     .dropdownButton {
-      border-color: $light_negative_500;
+      border-color: var(--sentiment-error-50);
     }
   }
 
   .dropdownButton {
-    color: $light_white;
-    border-color: $light_white;
-    background-color: $light_black;
+    color: var(--neutral-base-white);
+    border-color: var(--neutral-base-white);
+    background-color: var(--neutral-base-black);
 
     span {
-      color: $light_white;
+      color: var(--neutral-base-white);
     }
   }
 
   &:has(.dropdownButton:hover) {
     .dropdownButton:not(:disabled) {
-      color: $light_white;
-      background-color: $light_gray_900;
+      color: var(--neutral-base-white);
+      background-color: var(--neutral-gray-90);
     }
   }
 
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
-      color: $light_white;
+      color: var(--neutral-base-white);
     }
   }
 
   &:has(.dropdownButton:disabled) {
     .dropdownButton {
-      color: $light_gray_900;
-      border-color: $light_gray_900;
+      color: var(--neutral-gray-90);
+      border-color: var(--neutral-gray-90);
       cursor: not-allowed;
 
       .dropdownLabel {
-        color: $light_gray_900;
+        color: var(--neutral-gray-90);
       }
     }
 

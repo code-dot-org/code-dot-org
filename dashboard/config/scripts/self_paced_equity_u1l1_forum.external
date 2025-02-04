@@ -1,0 +1,34 @@
+name 'self-paced-equity-U1L1-forum'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introduce Yourself!
+
+#### Code.org's Teacher Forum is a great way to get involved in a community of CS teachers nationwide! In addition to finding posts related to this course, you can also find lots of help with our curricula and coding support.
+
+### Please join our forum using the prompt below.
+<br>
+
+<div style="display: flex; align-items: left;">
+
+<a href="https://forum.code.org/t/understanding-equity-in-computer-science-lesson-1-level-11-reflection/40321" target="_blank" rel="noopener noreferrer">
+<img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" style="width: auto; height: 100px;"  alt="A browser with two text boxes, both including an avatar and lines of text."></a>
+
+<div style="background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;">
+
+<p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Post to the Code.org Forum
+
+<p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">Join our online community of teachers! Click on the icon to the left to be directed to our forum post and share the following: 
+
+<ul style="color: white; line-height: 2; font-size: 18px; margin-left: 20px;">
+<li>Your Name</li>
+<li>Your Teaching Context - State and Grade Level(s)</li>
+<li>Your intention for taking this course</li></ul>
+</p>
+
+</div>
+</div>
+<br>
+
+MARKDOWN

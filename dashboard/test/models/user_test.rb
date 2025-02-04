@@ -330,28 +330,28 @@ class UserTest < ActiveSupport::TestCase
     assert_equal hashed_email, teacher.read_attribute(:hashed_email)
   end
 
-  test 'email_for_enrollments returns user.email if user has no latest accepted application' do
+  test 'alternate_email returns nil if user has no latest accepted application' do
     user = create :teacher
-    assert_equal user.email_for_enrollments, user.email
+    assert user.alternate_email.blank?
   end
 
-  test 'email_for_enrollments returns user.email if users latest accepted application has no alternate email' do
+  test 'alternate_email returns nil if users latest accepted application has no alternate email' do
     user = create :teacher
-    application = create :pd_teacher_application, user: user
+    application = create :pd_teacher_application, user: user, status: 'accepted'
     application_form_data = application.form_data_hash
-    application_form_data['alternateEmail'] = nil
+    application_form_data['alternateEmail'] = ''
     application.update!(form_data_hash: application_form_data)
 
     assert application.form_data_hash['alternateEmail'].blank?
-    assert_equal user.email_for_enrollments, user.email
+    assert user.alternate_email.blank?
   end
 
-  test 'email_for_enrollments returns app alternate email if users latest accepted application has alternate email' do
+  test 'alternate_email returns app alternate email if users latest accepted application has alternate email' do
     user = create :teacher
     application = create :pd_teacher_application, user: user, status: 'accepted'
     app_alternate_email = application.form_data_hash['alternateEmail']
 
-    assert_equal user.email_for_enrollments, app_alternate_email
+    assert_equal user.alternate_email, app_alternate_email
   end
 
   test "log in with password with pepper" do
@@ -814,6 +814,44 @@ class UserTest < ActiveSupport::TestCase
       )
     end
     refute_nil user.errors[:email]
+  end
+
+  test "can create teacher user with a valid educator_role" do
+    user = create :teacher, :with_educator_role
+    assert user.valid?
+    assert_empty user.errors[:educator_role]
+  end
+
+  test "cannot create teacher user with an invalid educator_role" do
+    user = build(:teacher, educator_role: "fake_role")
+    refute user.save
+    assert_includes user.errors[:educator_role], "is not included in the list"
+  end
+
+  test "cannot create student user with an educator_role" do
+    user = assert_does_not_create(User) do
+      User.create(@good_data.merge({educator_role: SharedConstants::EDUCATOR_ROLES.first[:value]}))
+    end
+    refute_nil user.errors[:educator_role]
+  end
+
+  test "teachers with a valid educator_role can change user_type to student" do
+    user = create :teacher, :with_educator_role
+    user.set_user_type(User::TYPE_STUDENT)
+    assert user.valid?
+  end
+
+  test "LTI users with school_info_id should have a user_school_info entry" do
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :teacher
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
+    user.school_info = create :school_info
+    user.save
+
+    assert_equal 1, user.user_school_infos.count
+    assert_equal user.id, user.user_school_infos.first.user_id
+    assert_equal user.school_info_id, user.user_school_infos.first.school_info_id
   end
 
   test "LTI users should have a LtiUserIdentity when created" do
@@ -1606,7 +1644,7 @@ class UserTest < ActiveSupport::TestCase
     @student.update!(races: 'white,closed_dialog')
     @student.reload
     assert_equal 'closed_dialog', @student.races
-    assert_nil @student.urm
+    refute @student.urm
   end
 
   test 'sanitize_race_data sanitizes too many races' do
@@ -1615,7 +1653,7 @@ class UserTest < ActiveSupport::TestCase
     student.update!(races: 'american_indian,asian,black,hawaiian,hispanic,white')
     student.reload
     assert_equal 'nonsense', student.races
-    assert_nil student.urm
+    refute student.urm
   end
 
   test 'sanitize_race_data sanitizes non-races' do
@@ -3021,6 +3059,36 @@ class UserTest < ActiveSupport::TestCase
       script_id: script_level.script_id,
       level_id: script_level.level_id
     ).level_source_id
+  end
+
+  test 'track_level_progress stores locale with support flag when provided' do
+    user_level_params = {
+      user_id: @user.id,
+      level_id: @csf_script_level.level_id,
+      script_id: @csf_script_level.script_id,
+    }
+
+    level_progress_params = {
+      **user_level_params,
+      level_source_id: nil,
+      new_result: 100,
+      submitted: false,
+    }
+
+    User.track_level_progress(**level_progress_params)
+    refute_nil user_level = UserLevel.find_by(user_level_params)
+    assert_nil user_level.locale
+    assert_nil user_level.locale_supported
+
+    current_locale = 'uk-UA'
+    User.track_level_progress(**level_progress_params.merge(locale: current_locale))
+    assert_equal current_locale, user_level.reload.locale
+    assert_equal false, user_level.locale_supported
+
+    @csf_script_level.script.update!(supported_locales: [current_locale])
+    User.track_level_progress(**level_progress_params.merge(locale: current_locale))
+    assert_equal current_locale, user_level.reload.locale
+    assert_equal true, user_level.locale_supported
   end
 
   test 'can create user with same name as deleted user' do
@@ -5605,6 +5673,74 @@ class UserTest < ActiveSupport::TestCase
       it 'does not generates secret word' do
         _(user.secret_words).must_be_nil
         _ {user.save!}.wont_change -> {user.secret_words}
+      end
+    end
+  end
+
+  describe '.authenticate_with_section_and_secret_words' do
+    subject(:authenticate_with_section_and_secret_words) do
+      described_class.authenticate_with_section_and_secret_words(section: section, params: params)
+    end
+
+    let!(:student) {create(:student, secret_words: secret_words)}
+    let!(:section) {create(:section, login_type: section_login_type)}
+    let!(:follower) {create(:follower, section: section, student_user: student)}
+
+    let(:section_login_type) {Section::LOGIN_TYPE_WORD}
+    let(:secret_words) {'secret words'}
+    let(:params) {{user_id: student.id, secret_words: secret_words}}
+
+    it 'returns student' do
+      _authenticate_with_section_and_secret_words.must_equal student
+    end
+
+    context 'when :secret_words param is blank' do
+      let(:secret_words) {nil}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_words.must_be_nil
+      end
+    end
+
+    context 'when section login_type in not word' do
+      let(:section_login_type) {Section::LOGIN_TYPE_PICTURE}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_words.must_be_nil
+      end
+    end
+  end
+
+  describe '.authenticate_with_section_and_secret_picture' do
+    subject(:authenticate_with_section_and_secret_picture) do
+      described_class.authenticate_with_section_and_secret_picture(section: section, params: params)
+    end
+
+    let!(:student) {create(:student, secret_picture_id: secret_picture_id)}
+    let!(:section) {create(:section, login_type: section_login_type)}
+    let!(:follower) {create(:follower, section: section, student_user: student)}
+
+    let(:section_login_type) {Section::LOGIN_TYPE_PICTURE}
+    let(:secret_picture_id) {SecretPicture.first.id}
+    let(:params) {{user_id: student.id, secret_picture_id: secret_picture_id}}
+
+    it 'returns student' do
+      _authenticate_with_section_and_secret_picture.must_equal student
+    end
+
+    context 'when :secret_picture_id param is blank' do
+      let(:secret_picture_id) {nil}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_picture.must_be_nil
+      end
+    end
+
+    context 'when section login_type in not picture' do
+      let(:section_login_type) {Section::LOGIN_TYPE_WORD}
+
+      it 'returns nil' do
+        _authenticate_with_section_and_secret_picture.must_be_nil
       end
     end
   end

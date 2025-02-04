@@ -1,3 +1,8 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
 import React, {useContext, useEffect, useMemo, useRef} from 'react';
 import {useSelector} from 'react-redux';
@@ -9,8 +14,6 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
@@ -27,10 +30,6 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
-
-import {useCodebridgeContext} from '../codebridgeContext';
-import {appendSystemMessage} from '../redux/consoleRedux';
-import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
 import ValidationResults from './ValidationResults';
 import ValidationStatusIcon from './ValidationStatusIcon';
@@ -92,7 +91,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     state => state.lab.levelProperties?.submittable
   );
   const source = useAppSelector(
-    state => state.lab2Project.projectSource?.source
+    state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
 
   const appType = useAppSelector(state => state.lab.levelProperties?.appName);
@@ -159,7 +158,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         dispatch(setIsValidating(false))
       );
     } else {
-      dispatch(appendSystemMessage(codebridgeI18n.cannotTest()));
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeSystemMessage(codebridgeI18n.cannotTest(), appType);
     }
   };
 
@@ -168,7 +169,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       onStop();
       dispatch(setIsValidating(false));
     } else {
-      dispatch(appendSystemMessage(codebridgeI18n.cannotStop()));
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeSystemMessage(codebridgeI18n.cannotStop(), appType);
       dispatch(setIsValidating(false));
     }
   };

@@ -35,6 +35,7 @@ shared/images/** filter=lfs diff=lfs merge=lfs -text
 
 # EXCLUDE these files from our Git LFS dirs:
 apps/i18n/**/en_us.json !text !filter !merge !diff
+apps/i18n/tts_keys/** !text !filter !merge !diff
 dashboard/app/assets/javascripts/** !text !filter !merge !diff
 dashboard/app/assets/stylesheets/** !text !filter !merge !diff
 dashboard/config/locales/**/*en.yml !text !filter !merge !diff
