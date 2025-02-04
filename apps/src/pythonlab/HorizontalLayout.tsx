@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import ResizeBar from '../codebridge/components/ResizerBar';
@@ -14,10 +14,13 @@ const HorizontalLayout: React.FunctionComponent = () => {
   const {position: infoPanelWidth, separatorProps: infoPanelSeparatorProps} =
     useResizable({
       axis: 'x',
-      initial: 400,
+      initial: 300,
       min: 0,
       containerRef: layoutContainerRef,
     });
+  const [rightPanelWidth, setRightPanelWidth] = React.useState<
+    number | undefined
+  >(undefined);
   const {position: outputHeight, separatorProps: outputSeparatorProps} =
     useResizable({
       axis: 'y',
@@ -26,6 +29,10 @@ const HorizontalLayout: React.FunctionComponent = () => {
       reverse: true,
       containerRef: workspaceAndOutputContainerRef,
     });
+
+  useEffect(() => {
+    setRightPanelWidth(Math.max(window.innerWidth - infoPanelWidth - 20, 200));
+  }, [infoPanelWidth]);
 
   return (
     <div className={moduleStyles.layoutContainer} ref={layoutContainerRef}>
@@ -37,6 +44,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
       <div
         className={moduleStyles.workspaceAndOutput}
         ref={workspaceAndOutputContainerRef}
+        style={{width: rightPanelWidth}}
       >
         {/* <div className={moduleStyles.workspace}>Workspace</div> */}
         <Workspace className={moduleStyles.workspace} />
