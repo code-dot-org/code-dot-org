@@ -117,15 +117,15 @@ const registerServiceWorker = async () => {
   // No-op if service workers are not supported.
   if (canSupportInput()) {
     try {
-      const url = new URL(
-        './inputServiceWorker.js',
-        // @ts-expect-error because TypeScript does not like this syntax.
-        import.meta.url
+      // Do not move the url into a variable, because webpack needs it to be passed as
+      // a parmaeter to register() directly in order to set up inputServiceWorker as a service worker.
+      const registration = await navigator.serviceWorker.register(
+        new URL(
+          './inputServiceWorker.js',
+          // @ts-expect-error because TypeScript does not like this syntax.
+          import.meta.url
+        )
       );
-      const registration = await navigator.serviceWorker.register(url);
-      if (registration.active) {
-        inputServiceWorker = registration.active;
-      }
 
       registration.addEventListener('updatefound', () => {
         const installingWorker = registration.installing;
@@ -139,6 +139,12 @@ const registerServiceWorker = async () => {
       });
     } catch (error) {
       console.error(`Registration failed with ${error}`);
+      // Log that we failed to register the service worker.
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Failed to register input service worker', undefined, {
+          error,
+        });
     }
 
     navigator.serviceWorker.onmessage = event => {
@@ -150,6 +156,10 @@ const registerServiceWorker = async () => {
         lastInputId = event.data.id;
       }
     };
+  } else if (!('serviceWorker' in navigator)) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logWarning('Service worker unavailable');
   }
 };
 

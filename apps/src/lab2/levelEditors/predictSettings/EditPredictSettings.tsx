@@ -1,6 +1,6 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import React, {useState} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 

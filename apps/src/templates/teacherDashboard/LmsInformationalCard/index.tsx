@@ -1,6 +1,6 @@
+import Link from '@code-dot-org/component-library/link';
 import React from 'react';
 
-import Link from '@cdo/apps/componentLibrary/link';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';

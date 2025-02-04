@@ -39,6 +39,9 @@ export const pythonlabInputModule = {
       false
     );
     request.send(null);
+    if (request.status !== 200) {
+      throw new Error('Failed to read input.');
+    }
     return request.responseText;
   },
 };
