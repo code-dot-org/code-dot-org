@@ -20,7 +20,7 @@ class NeighborhoodLog:
         """Returns True if the action occurred exactly 'times' times."""
         signal_count = 0
         for painter_log in self.painter_logs:
-            signal_count += painter_log.signal_count(neighborhood_signal_message_value)
+            signal_count += painter_log.signal_counts.get(neighborhood_signal_message_value, 0)
         return signal_count == times
 
     def final_output_matches(self, expected_output: list[list[str | None]]) -> bool:
