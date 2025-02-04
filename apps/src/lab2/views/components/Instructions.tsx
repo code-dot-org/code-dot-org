@@ -173,12 +173,34 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   const useMessageIndex = useSecondaryFinishButton ? undefined : messageIndex;
 
   const feedbackRef = useRef<HTMLDivElement>(null);
+  const runButton = document.querySelector('#run-button');
 
   useEffect(() => {
-    if (feedbackRef.current) {
-      feedbackRef.current.focus();
-    }
-  }, [useMessage, canShowNextButton]);
+    const checkRunButton = () => {
+      if (feedbackRef.current && runButton?.textContent === 'Run') {
+        feedbackRef.current.focus();
+        return true;
+      }
+      return false;
+    };
+
+    const observer = new MutationObserver(mutations => {
+      if (checkRunButton()) {
+        // Stop observing once the run button is found and has the text 'Run'
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    // Cleanup observer on component unmount
+    return () => {
+      observer.disconnect();
+    };
+  }, [useMessage, canShowNextButton, runButton?.textContent]);
 
   return (
     <div
