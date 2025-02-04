@@ -1,7 +1,7 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import Link from '@code-dot-org/component-library/link';
 import React from 'react';
 
-import Link from '@cdo/apps/componentLibrary/link/Link';
 import {
   BodyOneText,
   BodyTwoText,
