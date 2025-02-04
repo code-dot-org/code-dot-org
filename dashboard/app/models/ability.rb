@@ -503,7 +503,7 @@ class Ability
       end
 
       # Additional logic that confirms that a given teacher should have access
-      # to a given student's chat history is in aichat_controller.
+      # to a given student's chat history is in aichat_events_controller.
       can [:student_chat_history, :submit_teacher_feedback], :aichat_event do
         user.teacher_can_access_ai_chat?
       end
