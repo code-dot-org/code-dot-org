@@ -1,12 +1,12 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   BodyThreeText,
@@ -21,6 +21,7 @@ import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes, EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 
 import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
@@ -59,7 +60,8 @@ const roleItemGroups = [
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
   countryCode: string;
-}> = ({usIp, countryCode}) => {
+  redirectUrl?: string;
+}> = ({usIp, countryCode, redirectUrl}) => {
   const schoolInfo = useSchoolInfo({usIp});
   const [name, setName] = useState('');
   const [nameErrorMessage, setNameErrorMessage] = useState(null);
@@ -130,11 +132,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
     };
     fetchGdprData();
 
-    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY);
+    const userReturnToHref =
+      sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY) || redirectUrl;
     if (userReturnToHref) {
       setUserReturnTo(userReturnToHref);
     }
-  }, [countryCode, usIp]);
+  }, [countryCode, usIp, redirectUrl]);
 
   // GDPR is valid if
   // 1. The fetch call has completed AND
@@ -228,6 +231,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   const sendFinishEvent = (): void => {
+    // Log to Statsig and Amplitude
     const schoolData = buildSchoolData({
       schoolId: schoolInfo.schoolId,
       country: schoolInfo.country,
@@ -248,6 +252,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
       },
       PLATFORMS.BOTH
     );
+
+    // Log to Google Analytics
+    trackEvent('sign_up', 'sign_up_success', {
+      value: 'teacher',
+    });
   };
 
   return (

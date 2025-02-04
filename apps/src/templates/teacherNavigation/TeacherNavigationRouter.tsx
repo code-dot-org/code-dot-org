@@ -24,7 +24,6 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import {
@@ -33,6 +32,7 @@ import {
 } from '../teacherDashboard/teacherSectionsReduxSelectors';
 import TextResponses from '../textResponses/TextResponses';
 
+import DashboardSectionSettings from './DashboardSectionSettings';
 import ElementOrEmptyPage from './ElementOrEmptyPage';
 import LessonMaterialsContainer from './lessonMaterials/LessonMaterialsContainer';
 import PageLayout from './PageLayout';
@@ -260,10 +260,8 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           <Route
             path={TEACHER_NAVIGATION_PATHS.settings}
             element={
-              <SectionsSetUpContainer
-                isUsersFirstSection={false}
-                sectionToBeEdited={selectedSection}
-                defaultRedirectUrl={
+              <DashboardSectionSettings
+                redirectUrl={
                   '/teacher_dashboard' +
                   generatePath(
                     LABELED_TEACHER_NAVIGATION_PATHS.progress.absoluteUrl,

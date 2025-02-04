@@ -1,9 +1,8 @@
+import Dialog, {DialogProps} from '@code-dot-org/component-library/dialog';
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 
 import '@testing-library/jest-dom';
-
-import Dialog, {DialogProps} from '@cdo/apps/componentLibrary/dialog';
 
 describe('Dialog Component', () => {
   const defaultProps: DialogProps = {

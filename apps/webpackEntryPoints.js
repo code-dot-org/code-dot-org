@@ -126,7 +126,7 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
-  'ai_tutor/tester': './src/sites/studio/pages/ai_tutor/tester.js',
+  'ai_iteration/tools': './src/sites/studio/pages/ai_iteration/tools.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
   'course_offerings/edit': './src/sites/studio/pages/course_offerings/edit.js',

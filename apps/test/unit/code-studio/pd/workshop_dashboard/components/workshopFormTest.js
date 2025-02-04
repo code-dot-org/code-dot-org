@@ -15,7 +15,10 @@ import Permission, {
   ProgramManager,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {COURSE_BUILD_YOUR_OWN} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
-import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  Subjects,
+  PdSessionFormats,
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
 
 // Returns a fake "today" for the stubbed out "getToday" method in workshop_form.jsx.
@@ -131,6 +134,37 @@ describe('WorkshopForm test', () => {
     expect(onPublish).to.have.been.calledOnce;
 
     server.restore();
+  });
+
+  it('new workshops form is shown with a default session', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const sessionFormPart = wrapper
+      .find('SessionListFormPart')
+      .find('SessionFormPart');
+
+    expect(sessionFormPart.exists()).to.be.true;
+    expect(sessionFormPart).to.have.lengthOf(1);
+
+    const timeInputs = sessionFormPart.find('TimeSelect');
+    expect(timeInputs).to.have.lengthOf(2);
+    const datePicker = sessionFormPart.find('DatePicker');
+    expect(datePicker).to.have.lengthOf(2); // nested react DatePicker inside custom DatePicker component
+    const sessionFormatDropdown = sessionFormPart.find('select[name="format"]');
+    expect(sessionFormatDropdown).to.have.lengthOf(1);
+    // defaults to first session format option
+    expect(sessionFormatDropdown.props().value).to.equal(
+      PdSessionFormats[0].value
+    );
   });
 
   it('edits form and can save', () => {

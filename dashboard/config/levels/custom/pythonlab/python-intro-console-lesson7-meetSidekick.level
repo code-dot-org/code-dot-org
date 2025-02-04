@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-01-22T19:17:55.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Create your sidekick\r\n\r\nMake your own function called to introduce a sidekick. \r\n\r\n✅ TO DO #1: Modify the function to create your own sidekick character with a name, health, and special power.\r\n\r\n✅ TO DO #2: Add a `introduce sidekick()` function at the end of your program, then run your code. ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def introduce_sidekick():\n    print(\"Meet Thor\")\n    print(\"Health: \")\n    print(\"Power: \")\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\n\nclass TestSidekickCode(unittest.TestCase):\n\n    def test_change_meet_thor(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            if 'print(\"Meet Thor\")' in content:\n                self.fail(\"You haven't changed the string 'Meet Thor' in the introduce_sidekick() function. Please modify it.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n    def test_change_health(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            if 'print(\"Health: \")' in content:\n                self.fail(\"You haven't changed the string 'Health: ' in the introduce_sidekick() function. Please modify it.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n    def test_change_power(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            if 'print(\"Power: \")' in content:\n                self.fail(\"You haven't changed the string 'Power: ' in the introduce_sidekick() function. Please modify it.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n    def test_call_introduce_sidekick(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Check if the introduce_sidekick function is called as an executable line\n            lines = content.splitlines()\n            function_called = any(line.strip() == 'introduce_sidekick()' for line in lines)\n\n            if not function_called:\n                self.fail(\"You haven't called the introduce_sidekick() function. Please make sure to call it in your program.\")\n\n            print(\"Success! You've called the introduce_sidekick() function.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-22T19:17:55.577+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-meetCharacter\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-meetCharacter\"},{\"changed_at\":\"2025-01-22 19:18:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 19:36:44 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 19:39:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 19:44:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 19:45:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 19:45:33 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 23:41:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 23:44:24 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

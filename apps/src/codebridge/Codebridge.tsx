@@ -13,11 +13,11 @@ import {
   SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
+  SendConsoleInputFunction,
 } from '@codebridge/types';
 import React, {useEffect, useReducer, useRef} from 'react';
 
 import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
-import './styles/small-footer-dark-overrides.scss';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import Workspace from './Workspace';
@@ -37,6 +37,7 @@ type CodebridgeProps = {
   onStop?: () => void;
   projectVersion: number;
   labConfig?: LabConfig;
+  sendConsoleInput?: SendConsoleInputFunction;
 };
 
 export const Codebridge = React.memo(
@@ -50,6 +51,7 @@ export const Codebridge = React.memo(
     onStop,
     projectVersion,
     labConfig,
+    sendConsoleInput,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -118,6 +120,7 @@ export const Codebridge = React.memo(
           onStop,
           ...sourceUtilities,
           labConfig,
+          sendConsoleInput,
         }}
       >
         <div

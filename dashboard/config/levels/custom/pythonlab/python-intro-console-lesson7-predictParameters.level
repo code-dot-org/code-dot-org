@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-01-23T00:15:15.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Functions with Parameters\r\n\r\nParameters can streamline repetitive actions. In this example, the character is planting beanstalks to grow a magical garden. \r\n\r\n- In a game, you can choose a character to perform an action. \r\n- Instead of writing the character's name each time, you can create a function with a parameter called `{character}` that will update every instance of that character's name.\r\n- Read the code and notice where the character's name is updated.\r\n- Modify the character's name and press run to watch the program update. \r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "\n# This function updates every instance of the character's name, so you don't have to change it in each print statement. \n\ndef plant_garden(character):\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n    print(f\"{character} plants beanstalk\")\n    print(f\"{character} moves to the next spot.\")\n\nplant_garden(\"Dash\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzuj4wvKl/PYXtA1u/nVF1aH+PiG+QcWx\nt4Kz0GTg8y/twu2sS6dFQ1BVQk/7yjpNXawheE69p6lm9wvQwA5zXHKKZP9w\nV+BD5qcVvi1FQHP5WbWjMi8SZam9nhLd5Kv4yBGtIuBnkhag5McqmGixoBl7\nxaf7Dl/NBubMRTEAK2alhjl30cApUUbH5V2reqs/ArB7Cne2/IDO8JDZaOEk\nnyr3zwuieuQtx8vwvmymSU2cS1OAzx/7ovz2eqQRP2RVOTZETf4kzfNW96PL\nL0GIzen4Gfucwkl9yOZQiEdI8q8o68F7vccslfWy+Cgku7Z4X9FNA2hWtCSv\ns2u6keem7stnpN1cRlLfxuR/OVVZV2RRh2ozxBLxUfysf358QIqNkbf2JJa3\ngwKZj4EB1YXGyON8SPOb067t3t1z4l4NXWMcpjxuuRmcHiCVh9TAfgud2kzL\nZJwbYtPAzERtcYGX0arms865VdP+coNG0ia5FZ5nJkMDrmMmXTu4cYmTqWnv\noXujsz2FEwQtptICtjguLA8V92QTZph8wsLuL9Rd+GuXxHhDQRFmsYFZxYnu\nlW7D+SYRhYsnSfvhXeJFrx4OinwFATxDOKcUXfaF2rwIeBnPS12PvpL3A7ip\nA5yliDtDHusuaCIQ44NCawBWXrFZZcX2Ag6noJ1/EoJQQHZ2xjNl7/j3zmCl\nRMGMs1+vXFV3QHmb5ulk7+QPsWcQ5lcX/Og=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\n\nclass TestChangeParameter(unittest.TestCase):\n\n    def test_change_dash_parameter(self):\n        try:\n            with open('main.py', 'r') as f:\n                content = f.read()\n\n            # Check if the parameter \"Dash\" in the function call has been changed\n            if 'plant_garden(\"Dash\")' in content or \"plant_garden('Dash')\" in content:\n                self.fail(\"You haven't changed the parameter 'Dash' in the function call. Please modify it to something else.\")\n\n            print(\"Success! You've changed the parameter 'Dash' in the function call.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T00:15:15.282+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-parameters\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-parameters\"},{\"changed_at\":\"2025-01-23 00:19:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-23 00:28:09 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

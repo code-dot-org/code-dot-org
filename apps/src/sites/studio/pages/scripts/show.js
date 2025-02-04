@@ -122,6 +122,7 @@ function initPage() {
         courseVersionId={scriptData.courseVersionId}
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
+        isSingleUnitCourse={scriptData.is_single_unit_course}
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={scriptData.teacher_resources}
         studentResources={scriptData.student_resources || []}

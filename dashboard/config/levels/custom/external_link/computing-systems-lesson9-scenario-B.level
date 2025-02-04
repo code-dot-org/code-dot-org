@@ -1,0 +1,19 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2025-01-23T19:40:02.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Scenario B\r\n\r\n### The library is running out of shelf space and needs to display only new books.\r\n\r\n\r\n\r\n---\r\n<br/>\r\n\r\n#### **Do This:**\r\n#### • Use the library books dataset linked below.\r\n#### • Complete the flowchart and Madlib template in your Processing Library Data Activity Guide.\r\n\r\n<br/>\r\n",
+    "link_title": "Library Books Dataset",
+    "url": "https://docs.google.com/spreadsheets/d/1ArYkmUcYwbXz-hQkyIon2t87WZbLEOFfUaOFj5jZdE4",
+    "display_name": "Scenario B",
+    "bubble_choice_description": "The library is running out of shelf space and needs to display only new books.",
+    "thumbnail_url": "https://images.code.org/e7322f03e2f04434d2a7c0b09272d047-27a768c9be4aa3b57785dc670f8c53aa-updateSign.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-23T19:40:02.083+00:00\",\"changed\":[\"cloned from \\\"Computing Systems - Library Books Dataset Scenario A\\\"\"],\"cloned_from\":\"Computing Systems - Library Books Dataset Scenario A\"},{\"changed_at\":\"2025-01-23 19:46:57 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:49:07 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</ExternalLink>
