@@ -1,6 +1,7 @@
 from .position import Position
 from .neighborhood_signal_message import NeighborhoodSignalMessage
 from .neighborhood_signal_key import NeighborhoodSignalKey
+from .painter_log import PainterLog
 from .constants import NORTH, SOUTH, EAST, WEST
 
 class PainterTracker:
@@ -35,5 +36,11 @@ class PainterTracker:
             self.current_paint_count += 1        
 
     def get_painter_log(self):
-        # TODO: Implement when PainterLog is added.
-        return "painter_log"
+        return PainterLog(
+            self.painter_id,
+            self.starting_position,
+            self.current_position,
+            self.starting_paint_count,
+            self.current_paint_count,
+            self.signals
+        )
