@@ -30,6 +30,11 @@ class Pd::SessionTest < ActiveSupport::TestCase
     assert_equal 'America/Denver', session.time_zone
   end
 
+  test 'bad time_zone value results in UTC' do
+    session = create(:pd_session, time_zone: 'Bad/Zone')
+    assert_equal 'UTC', session.time_zone
+  end
+
   test 'formatted_date' do
     session = build :pd_session, start: DateTime.new(2016, 3, 1, 9).in_time_zone
     assert_equal '2016-03-01', session.formatted_date
