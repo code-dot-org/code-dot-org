@@ -3,11 +3,11 @@ import {
   buttonColors,
   LinkButton,
 } from '@code-dot-org/component-library/button';
+import Link from '@code-dot-org/component-library/link';
 import {TextLink} from '@dsco_/link';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 
-import Link from '@cdo/apps/componentLibrary/link';
 import {
   BodyTwoText,
   Heading3,

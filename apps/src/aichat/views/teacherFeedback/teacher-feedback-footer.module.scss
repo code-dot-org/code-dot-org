@@ -21,7 +21,6 @@
 .teacherFeedbackContainer {
   display: flex;
   align-items: center;
-  gap: 4px;
   justify-content: flex-end;
   
   .icon-button-affirmative {
@@ -37,8 +36,8 @@
   }
 }
 
-.assistantFeedback {
-  flex-direction: row-reverse;
+.leftAlign {
+  justify-content: flex-start;
 }
 
 @keyframes fade-in {

@@ -55,6 +55,8 @@ import {
   setShowInstructions,
   setInstructionsPosition,
   addPlaybackEvents,
+  setLastMeasure,
+  updateLastMeasure,
   addOrderedFunctions,
   clearPlaybackEvents,
   clearOrderedFunctions,
@@ -109,6 +111,8 @@ class UnconnectedMusicView extends React.Component {
     clearPlaybackEvents: PropTypes.func,
     clearOrderedFunctions: PropTypes.func,
     addPlaybackEvents: PropTypes.func,
+    setLastMeasure: PropTypes.func,
+    updateLastMeasure: PropTypes.func,
     addOrderedFunctions: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
     setIsLoading: PropTypes.func,
@@ -561,6 +565,16 @@ class UnconnectedMusicView extends React.Component {
       }
     }
 
+    // Remove any procedures that do not have definitions.
+    // This prevents extra call blocks from showing in the toolbox.
+    if (e.type === Blockly.Events.FINISHED_LOADING) {
+      const workspace = this.musicBlocklyWorkspace.workspace;
+      const procedureMap = workspace.getProcedureMap();
+      procedureMap
+        .getProcedures()
+        .filter(p => !Blockly.Procedures.getDefinition(p.getName(), workspace))
+        .forEach(p => procedureMap.delete(p.id));
+    }
     // Update undo status when blocks change.
     this.props.setUndoStatus({
       canUndo: this.musicBlocklyWorkspace.canUndo(),
@@ -625,10 +639,8 @@ class UnconnectedMusicView extends React.Component {
     this.sequencer.clear(this.getPlaybackEvents().length);
     this.musicBlocklyWorkspace.executeTrigger(id, triggerStartPosition);
     const playbackEvents = this.sequencer.getPlaybackEvents();
-    this.props.addPlaybackEvents({
-      events: playbackEvents,
-      lastMeasure: this.sequencer.getLastMeasure(),
-    });
+    this.props.addPlaybackEvents(playbackEvents);
+    this.props.updateLastMeasure(this.sequencer.getLastMeasure());
     this.props.addOrderedFunctions({
       orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
@@ -663,10 +675,8 @@ class UnconnectedMusicView extends React.Component {
 
     this.sequencer.clear();
     this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);
-    this.props.addPlaybackEvents({
-      events: this.sequencer.getPlaybackEvents(),
-      lastMeasure: this.sequencer.getLastMeasure(),
-    });
+    this.props.addPlaybackEvents(this.sequencer.getPlaybackEvents());
+    this.props.setLastMeasure(this.sequencer.getLastMeasure());
     this.props.addOrderedFunctions({
       orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
@@ -879,6 +889,8 @@ const MusicView = connect(
     clearOrderedFunctions: () => dispatch(clearOrderedFunctions()),
     addPlaybackEvents: playbackEvents =>
       dispatch(addPlaybackEvents(playbackEvents)),
+    setLastMeasure: number => dispatch(setLastMeasure(number)),
+    updateLastMeasure: number => dispatch(updateLastMeasure(number)),
     addOrderedFunctions: orderedFunctions =>
       dispatch(addOrderedFunctions(orderedFunctions)),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),
