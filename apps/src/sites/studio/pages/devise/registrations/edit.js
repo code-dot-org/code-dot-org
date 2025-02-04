@@ -13,6 +13,7 @@ import ManageLinkedAccountsController from '@cdo/apps/accounts/ManageLinkedAccou
 import MigrateToMultiAuth from '@cdo/apps/accounts/MigrateToMultiAuth';
 import RemoveParentEmailController from '@cdo/apps/accounts/RemoveParentEmailController';
 import {SchoolInformation} from '@cdo/apps/accounts/SchoolInformation';
+import TurnOffAiDiff from '@cdo/apps/accounts/TurnOffAiDiff';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
@@ -154,6 +155,12 @@ $(document).ready(() => {
       />,
       lockoutLinkedAccountsMountPoint
     );
+  }
+
+  const turnOffAiDiffMountPoint = document.getElementById('turn-off-ai-diff');
+
+  if (turnOffAiDiffMountPoint) {
+    ReactDOM.render(<TurnOffAiDiff />, turnOffAiDiffMountPoint);
   }
 
   const manageLinkedAccountsMountPoint = document.getElementById(
