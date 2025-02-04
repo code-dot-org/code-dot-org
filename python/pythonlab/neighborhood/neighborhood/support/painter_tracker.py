@@ -31,9 +31,9 @@ class PainterTracker:
             new_direction = signal.detail["direction"].lower()
             self.current_position = Position(self.current_position.x, self.current_position.y, new_direction)
         elif signal.key == NeighborhoodSignalKey.PAINT:
-            self.current_paint_count -= 1
+            self.current_paint_count = (self.current_paint_count or 0) - 1
         elif signal.key == NeighborhoodSignalKey.TAKE_PAINT:
-            self.current_paint_count += 1        
+            self.current_paint_count = (self.current_paint_count or 0) + 1
 
     def get_painter_log(self):
         return PainterLog(
