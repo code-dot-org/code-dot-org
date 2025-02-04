@@ -37,15 +37,30 @@ async function loadPyodideAndPackages() {
   // matplotlib, which pythonlab_setup depends on, and numpy,
   // which will frequently be used. We have seen issues with loading these via
   // loadPyodide, so we load them here to ensure they are available.
-  await pyodide.loadPackage([
-    'numpy',
-    'matplotlib',
-    // These are custom packages that we have built. They are defined in this repo:
-    // https://github.com/code-dot-org/pythonlab-packages
-    `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
-    `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
-    `/blockly/js/pyodide/${version}/neighborhood-0.2.0-py3-none-any.whl`,
-  ]);
+  const loadErrors: string[] = [];
+  await pyodide.loadPackage(
+    [
+      'numpy',
+      'matplotlib',
+      // These are custom packages that we have built. They are defined in the
+      // python/pythonlab/ folder in the codebase.
+      `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/neighborhood-0.2.0-py3-none-any.whl`,
+    ],
+    {
+      errorCallback: (message: string) => {
+        loadErrors.push(message);
+      },
+    }
+  );
+  if (loadErrors.length > 0) {
+    postMessage({
+      type: 'internal_error',
+      message: `Error(s) loading python packages: ${loadErrors.join('\n')}`,
+      id: 'startup',
+    });
+  }
   // Warm up the pyodide environment by running setup code.
   await runInternalCode(SETUP_CODE, -1);
 }

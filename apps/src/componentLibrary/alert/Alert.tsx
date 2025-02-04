@@ -2,11 +2,11 @@ import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link, {LinkProps} from '@code-dot-org/component-library/link';
 import classnames from 'classnames';
 import React, {HTMLAttributes, useMemo} from 'react';
 
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import Link, {LinkProps} from '@cdo/apps/componentLibrary/link';
 
 import moduleStyles from './alert.module.scss';
 

@@ -22,7 +22,7 @@
           "language": "py",
           "contents": "print(\"Hello, world!\")",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
         }
       },
@@ -36,7 +36,7 @@
       "id": "1",
       "name": "test_main.py",
       "language": "py",
-      "contents": "import unittest\n\nclass TestStudentCode(unittest.TestCase):\n\n    def test_hello_world_change(self):\n        try:\n            with open('main.py', 'r') as f:\n                lines = f.readlines()\n\n            # Check if the first line matches the original code exactly\n            original_code = 'print(\"Hello, world!\")\\n'\n            if len(lines) > 0 and lines[0].strip() == 'print(\"Hello, world!\")':\n                self.fail(\"You haven't changed the string! Please modify the 'Hello, world!' message to something else.\")\n            else:\n                print(\"Success! You've changed the string.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
+      "contents": "import unittest\n\nclass TestStudentCode(unittest.TestCase):\n\n    def test_hello_world_change(self):\n        \"\"\"Change the text in the print statement.\"\"\"\n        try:\n            with open('main.py', 'r') as f:\n                lines = f.readlines()\n\n            # Check if the first line matches the original code exactly\n            original_code = 'print(\"Hello, world!\")\\n'\n            if len(lines) > 0 and lines[0].strip() == 'print(\"Hello, world!\")':\n                self.fail(\"You haven't changed the string! Please modify the 'Hello, world!' message to something else.\")\n            else:\n                print(\"Success! You've changed the string.\")\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found. Please make sure it exists in the same directory.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n",
       "folderId": "0",
       "active": false,
       "open": false,
@@ -44,6 +44,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-22T18:44:47.866+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson6-modifyPrint\\\"\"],\"cloned_from\":\"python-intro-console-lesson6-modifyPrint\"},{\"changed_at\":\"2025-01-22 18:44:52 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 23:30:13 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 23:33:03 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-22T18:44:47.866+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson6-modifyPrint\\\"\"],\"cloned_from\":\"python-intro-console-lesson6-modifyPrint\"},{\"changed_at\":\"2025-01-22 18:44:52 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 23:30:13 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 23:33:03 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-03 17:04:24 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-03 17:04:37 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-03 17:07:42 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Pythonlab>

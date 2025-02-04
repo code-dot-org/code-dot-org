@@ -12,8 +12,8 @@
     "url": "https://docs.google.com/spreadsheets/d/1ArYkmUcYwbXz-hQkyIon2t87WZbLEOFfUaOFj5jZdE4",
     "display_name": "Scenario F",
     "bubble_choice_description": "The library wants to compare which genres get the most reader engagement.",
-    "thumbnail_url": "https://images.code.org/e7322f03e2f04434d2a7c0b09272d047-27a768c9be4aa3b57785dc670f8c53aa-updateSign.png"
+    "thumbnail_url": "https://images.code.org/4c086e6bd44b01a5b9fa59cc6e577817-Pasted Graphic 52.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-23T20:20:19.843+00:00\",\"changed\":[\"cloned from \\\"Computing Systems - Library Books Dataset Scenario G\\\"\"],\"cloned_from\":\"Computing Systems - Library Books Dataset Scenario G\"},{\"changed_at\":\"2025-01-23 20:21:00 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:51:32 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:54:21 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-23T20:20:19.843+00:00\",\"changed\":[\"cloned from \\\"Computing Systems - Library Books Dataset Scenario G\\\"\"],\"cloned_from\":\"Computing Systems - Library Books Dataset Scenario G\"},{\"changed_at\":\"2025-01-23 20:21:00 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:51:32 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:54:21 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-03 22:47:14 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </ExternalLink>
