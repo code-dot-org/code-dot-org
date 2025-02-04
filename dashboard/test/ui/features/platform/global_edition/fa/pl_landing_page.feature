@@ -34,7 +34,7 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
 
     And I delete the workshop
 
-  Scenario: Universal Instructor does not see Instructor Center in Farsi MVP
+  Scenario: Universal Instructor sees Instructor Center in Farsi MVP
     Given I create a teacher named "PL Instructor"
     And I sign in as "PL Instructor" and go home
     And I get universal instructor access
@@ -47,7 +47,7 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     And I select the "English" option in dropdown "locale" to load a new page
     And I wait until element "h1:contains(Professional Learning)" is visible
     Then I see Farsi version of Professional Learning Lending page
-    And element "button:contains(Instructor Center)" is not visible
+    And element "button:contains(Instructor Center)" is visible
 
   Scenario: Regional Partner does not see Regional Partner Center in Farsi MVP
     Given I am a program manager with a started course
@@ -79,7 +79,7 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
 
     And I delete the workshop
 
-  Scenario: Teacher with Self-paced PL courses does not see Continue course button in Farsi MVP
+  Scenario: Teacher with Self-paced PL courses sees Continue course button in Farsi MVP
     Given I create a teacher named "Self-paced Teacher"
     And I sign in as "Self-paced Teacher" and go home
     And I start a self-paced PL course
@@ -91,4 +91,4 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     And I select the "English" option in dropdown "locale" to load a new page
     And I wait until element "h1:contains(Professional Learning)" is visible
     Then I see Farsi version of Professional Learning Lending page
-    And element "a:contains(Continue course)" is not visible
+    And element "a:contains(Continue course)" is visible

@@ -172,12 +172,12 @@ pages:
     components:
       LandingPage:
         hideMyFacilitatorCenterTab: true
-        hideInstructorCenterTab: true
+        hideInstructorCenterTab: false
         hideRPCenterTab: true
         hideWorkshopOrganizerCenterTab: true
         hideMyPLWorkshopEnrollmentCelebrationDialog: true
         hideMyPLBanner: true
-        hideMyPLSelfPacedPL: true
+        hideMyPLSelfPacedPL: false
         hideMyPLJoinSectionArea: true
         hideMyPLLandingPageWorkshopsTable: true
         hideMyPLStaticRecommendedPL: false
