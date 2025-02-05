@@ -37,7 +37,6 @@ import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherS
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
-import experiments from '@cdo/apps/util/experiments';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
