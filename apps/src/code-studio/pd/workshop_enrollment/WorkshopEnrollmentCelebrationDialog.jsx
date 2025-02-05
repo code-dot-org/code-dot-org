@@ -1,14 +1,14 @@
 import Button from '@code-dot-org/component-library/button';
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
-
-import LinkButton from '@cdo/apps/componentLibrary/button/LinkButton';
 import Typography, {
   Heading2,
   Heading3,
   Heading6,
   BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import LinkButton from '@cdo/apps/componentLibrary/button/LinkButton';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 

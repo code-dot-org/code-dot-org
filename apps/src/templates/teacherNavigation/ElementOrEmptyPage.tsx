@@ -1,8 +1,11 @@
 import Button, {LinkButton} from '@code-dot-org/component-library/button';
+import {
+  Heading3,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 import {useNavigate, NavLink} from 'react-router-dom';
 
-import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import TeacherDashboardEmptyState from '@cdo/apps/templates/teacherNavigation/images/TeacherDashboardEmptyState.svg';
