@@ -1,3 +1,6 @@
+import CustomDropdown, {
+  _CustomDropdownOption,
+} from '@code-dot-org/component-library/dropdown/_CustomDropdown';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -14,11 +17,8 @@ import {
   DropdownColor,
   DropdownFormFieldRelatedProps,
 } from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown, {
-  _CustomDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
 
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
+import moduleStyles from '@code-dot-org/component-library/dropdown/customDropdown.module.scss';
 
 export interface IconDropdownOption extends _CustomDropdownOption {
   icon: FontAwesomeV6IconProps;

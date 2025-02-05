@@ -1,9 +1,9 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';

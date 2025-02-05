@@ -1,9 +1,9 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import {
   SELECT_COUNTRY,
