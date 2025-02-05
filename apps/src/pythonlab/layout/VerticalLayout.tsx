@@ -9,7 +9,7 @@ import moduleStyles from './layout.module.scss';
 
 const MIN_INFO_PANEL_WIDTH = 200;
 const MIN_OUTPUT_WIDTH = 200;
-const MIN_EDITOR_WIDTH = 400;
+const MIN_EDITOR_WIDTH = 500;
 const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
 const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_OUTPUT_WIDTH = 400;
@@ -61,7 +61,7 @@ const VerticalLayout: React.FunctionComponent = () => {
 
     const spaceForInfoPanel = Math.max(
       window.innerWidth -
-        MIN_OUTPUT_WIDTH -
+        adjustedOutputWidth -
         TWO_RESIZE_BARS -
         adjustedEditorWidth,
       MIN_INFO_PANEL_WIDTH
@@ -77,22 +77,23 @@ const VerticalLayout: React.FunctionComponent = () => {
     <div className={moduleStyles.layoutContainer}>
       <InfoPanel
         style={{width: infoPanelWidth}}
-        className={moduleStyles.flexGrow}
+        className={moduleStyles.flexShrink0}
       />
       <ResizeBar
         isVertical={true}
         {...infoPanelSeparatorProps}
         isDragging={infoPanelDragging}
       />
-      <div style={{width: editorWidth}} className={moduleStyles.flexGrow}>
-        <Workspace />
-      </div>
+      <Workspace
+        style={{width: editorWidth}}
+        className={moduleStyles.flexGrow}
+      />
       <ResizeBar
         isVertical={true}
         {...outputSeparatorProps}
         isDragging={outputDragging}
       />
-      <Output width={outputWidth} className={moduleStyles.flexGrow} />
+      <Output width={outputWidth} className={moduleStyles.flexShrink0} />
     </div>
   );
 };

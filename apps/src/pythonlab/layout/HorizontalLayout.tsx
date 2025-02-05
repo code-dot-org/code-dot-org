@@ -77,9 +77,10 @@ const HorizontalLayout: React.FunctionComponent = () => {
         isDragging={infoPanelDragging}
       />
       <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
-        <div style={{height: workspaceHeight}}>
-          <Workspace className={moduleStyles.flexGrow} />
-        </div>
+        <Workspace
+          style={{height: workspaceHeight}}
+          className={moduleStyles.flexGrow}
+        />
         <ResizeBar
           isVertical={false}
           {...outputSeparatorProps}

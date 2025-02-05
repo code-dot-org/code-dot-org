@@ -26,7 +26,10 @@ interface WorkspaceProps {
   style?: React.CSSProperties;
 }
 
-const Workspace: React.FunctionComponent<WorkspaceProps> = ({className}) => {
+const Workspace: React.FunctionComponent<WorkspaceProps> = ({
+  style,
+  className,
+}) => {
   const {config} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
@@ -55,72 +58,77 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({className}) => {
   };
 
   return (
-    <PanelContainer
-      id="editor-workspace"
-      headerContent={headerContent}
-      rightHeaderContent={<HeaderButtons />}
-      className={classnames(className, moduleStyles.workspace)}
-      headerClassName={moduleStyles.workspaceHeader}
-    >
-      <div
-        className={classnames(moduleStyles.workspaceWorkarea, {
-          [moduleStyles.withFileBrowser]: config.showFileBrowser,
-        })}
+    <div style={style} className={className}>
+      <PanelContainer
+        id="editor-workspace"
+        headerContent={headerContent}
+        rightHeaderContent={<HeaderButtons />}
+        className={moduleStyles.workspace}
+        headerClassName={moduleStyles.workspaceHeader}
       >
         <div
-          className={classnames(moduleStyles.workspaceToggleButtonContainer, {
+          className={classnames(moduleStyles.workspaceWorkarea, {
             [moduleStyles.withFileBrowser]: config.showFileBrowser,
           })}
         >
-          <ToggleFileBrowserButton />
-        </div>
-        <div>
-          <FileTabs />
-        </div>
+          <div
+            className={classnames(moduleStyles.workspaceToggleButtonContainer, {
+              [moduleStyles.withFileBrowser]: config.showFileBrowser,
+            })}
+          >
+            <ToggleFileBrowserButton />
+          </div>
+          <div>
+            <FileTabs />
+          </div>
 
-        {config.showFileBrowser && <FileBrowser />}
+          {config.showFileBrowser && <FileBrowser />}
 
-        <div
-          className={classnames(moduleStyles.workplaceEditorWrapper, {
-            [moduleStyles.withFileBrowser]: config.showFileBrowser,
-          })}
-        >
-          <Editor
-            langMapping={config.languageMapping}
-            editableFileTypes={config.editableFileTypes}
-          />
+          <div
+            className={classnames(moduleStyles.workplaceEditorWrapper, {
+              [moduleStyles.withFileBrowser]: config.showFileBrowser,
+            })}
+          >
+            <Editor
+              langMapping={config.languageMapping}
+              editableFileTypes={config.editableFileTypes}
+            />
+          </div>
+          <div className={moduleStyles.workspaceWarningArea}>
+            {showLockedFilesBanner && (
+              <Alert
+                text={WARNING_BANNER_MESSAGES.LOCK_FILES}
+                type={'info'}
+                className={moduleStyles.lockedFilesBanner}
+              />
+            )}
+            {isStartMode && (
+              <Alert
+                text={
+                  projectTemplateLevel
+                    ? WARNING_BANNER_MESSAGES.TEMPLATE
+                    : WARNING_BANNER_MESSAGES.STANDARD
+                }
+                type={'warning'}
+              />
+            )}
+            {viewingOldVersion && (
+              <Alert
+                text={codebridgeI18n.viewingOldVersion()}
+                type={'warning'}
+              />
+            )}
+            {hasRestoredOldVersion && (
+              <Alert
+                text={codebridgeI18n.restoredOldVersion()}
+                type={'success'}
+                onClose={closeRestoredVersionBanner}
+              />
+            )}
+          </div>
         </div>
-        <div className={moduleStyles.workspaceWarningArea}>
-          {showLockedFilesBanner && (
-            <Alert
-              text={WARNING_BANNER_MESSAGES.LOCK_FILES}
-              type={'info'}
-              className={moduleStyles.lockedFilesBanner}
-            />
-          )}
-          {isStartMode && (
-            <Alert
-              text={
-                projectTemplateLevel
-                  ? WARNING_BANNER_MESSAGES.TEMPLATE
-                  : WARNING_BANNER_MESSAGES.STANDARD
-              }
-              type={'warning'}
-            />
-          )}
-          {viewingOldVersion && (
-            <Alert text={codebridgeI18n.viewingOldVersion()} type={'warning'} />
-          )}
-          {hasRestoredOldVersion && (
-            <Alert
-              text={codebridgeI18n.restoredOldVersion()}
-              type={'success'}
-              onClose={closeRestoredVersionBanner}
-            />
-          )}
-        </div>
-      </div>
-    </PanelContainer>
+      </PanelContainer>
+    </div>
   );
 };
 export default Workspace;
