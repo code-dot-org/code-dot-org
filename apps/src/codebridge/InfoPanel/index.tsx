@@ -5,7 +5,9 @@ import React, {useEffect, useState} from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
@@ -46,6 +48,8 @@ const panelHeaderNames = {
 };
 
 export const InfoPanel = React.memo(() => {
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const scriptId = useAppSelector(state => state.lab.scriptId);
   const mapReference = useAppSelector(
     state => state.lab.levelProperties?.mapReference
   );
@@ -119,6 +123,13 @@ export const InfoPanel = React.memo(() => {
   };
 
   const changePanel = (panel: Panels) => {
+    if (panel === Panels.HelpAndTips) {
+      logUserLevelInteraction({
+        levelId: levelId,
+        scriptId: scriptId,
+        interaction: UserLevelInteractions.click_help_and_tips,
+      });
+    }
     if (panel !== currentPanel) {
       setCurrentPanel(panel);
       setCurrentPanelHeader(panelHeaderNames[panel]);
@@ -128,7 +139,6 @@ export const InfoPanel = React.memo(() => {
   };
 
   const CurrentPanelView = panelMap[currentPanel];
-
   return (
     <PanelContainer
       id="codebridge-info-panel"
