@@ -1,6 +1,5 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
-  AiChatTeacherFeedback,
   AiInteractionStatus,
   AiRequestExecutionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -16,19 +15,21 @@ import {
   ChatEvent,
   ChatMessage,
   DetectToxicityResponse,
+  FeedbackValue,
 } from './types';
 import {extractFieldsToCheckForToxicity} from './utils';
 
-const ROOT_URL = '/aichat';
+const ROOT_GENERAL_URL = '/aichat';
+const ROOT_REQUEST_URL = '/aichat_request';
 const paths = {
-  CHAT_COMPLETION_URL: `${ROOT_URL}/chat_completion`,
-  GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
-  LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
-  START_CHAT_COMPLETION_URL: `${ROOT_URL}/start_chat_completion`,
-  STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
-  USER_HAS_AICHAT_ACCESS_URL: `${ROOT_URL}/user_has_access`,
-  FIND_TOXICITY_URL: `${ROOT_URL}/find_toxicity`,
-  SUBMIT_TEACHER_FEEDBACK_URL: `${ROOT_URL}/submit_teacher_feedback`,
+  START_CHAT_COMPLETION_URL: `${ROOT_REQUEST_URL}/start_chat_completion`,
+  GET_CHAT_REQUEST_URL: `${ROOT_REQUEST_URL}/chat_request`,
+  CHAT_COMPLETION_URL: `${ROOT_GENERAL_URL}/chat_completion`,
+  LOG_CHAT_EVENT_URL: `${ROOT_GENERAL_URL}/log_chat_event`,
+  STUDENT_CHAT_HISTORY_URL: `${ROOT_GENERAL_URL}/student_chat_history`,
+  USER_HAS_AICHAT_ACCESS_URL: `${ROOT_GENERAL_URL}/user_has_access`,
+  FIND_TOXICITY_URL: `${ROOT_GENERAL_URL}/find_toxicity`,
+  SUBMIT_TEACHER_FEEDBACK_URL: `${ROOT_GENERAL_URL}/submit_teacher_feedback`,
 };
 
 const MAX_POLLING_TIME_MS = 45000;
@@ -75,7 +76,7 @@ export async function postAichatCompletionMessage(
  */
 export async function postSubmitTeacherFeedback(
   eventId: number,
-  feedback: ValueOf<typeof AiChatTeacherFeedback>
+  feedback: FeedbackValue | undefined
 ) {
   const payload = {
     eventId,
@@ -122,17 +123,13 @@ export async function postLogChatEvent(
 export async function getStudentChatHistory(
   studentUserId: number,
   levelId: number,
-  scriptId: number | null,
-  scriptLevelId: number | undefined
+  scriptId: number | null
 ): Promise<ChatEvent[]> {
   const params: Record<string, string> = {
     studentUserId: studentUserId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
   };
-  if (scriptLevelId) {
-    params.scriptLevelId = scriptLevelId.toString();
-  }
   const response = await HttpClient.fetchJson<ChatEvent[]>(
     paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );

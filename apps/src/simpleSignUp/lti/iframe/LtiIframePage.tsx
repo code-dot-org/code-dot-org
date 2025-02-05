@@ -1,6 +1,6 @@
+import {Button} from '@code-dot-org/component-library/button';
 import React, {useEffect, useState} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 

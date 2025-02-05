@@ -6,7 +6,17 @@ import _ from 'lodash';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Row, Col, Button, FormGroup, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+// eslint-disable-next-line no-restricted-imports
+import {
+  Row,
+  Col,
+  Button,
+  FormGroup,
+  FormControl,
+  HelpBlock,
+} from 'react-bootstrap';
+
+import {PdSessionFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
 
@@ -22,6 +32,7 @@ export default class SessionFormPart extends React.Component {
       date: PropTypes.string,
       startTime: PropTypes.string,
       endTime: PropTypes.string,
+      format: PropTypes.string,
     }).isRequired,
     onAdd: PropTypes.func,
     onRemove: PropTypes.func,
@@ -40,6 +51,9 @@ export default class SessionFormPart extends React.Component {
   };
   handleEndTimeChange = time => {
     this.handleChange('endTime', time);
+  };
+  handleFormatChange = e => {
+    this.handleChange('format', e.target.value);
   };
   handleChange = (fieldName, value) => {
     const updatedSession = _.set(
@@ -138,7 +152,7 @@ export default class SessionFormPart extends React.Component {
 
     return (
       <Row>
-        <Col sm={4}>
+        <Col sm={3}>
           <FormGroup validationState={style.date}>
             <DatePicker
               date={date}
@@ -149,7 +163,7 @@ export default class SessionFormPart extends React.Component {
             <HelpBlock>{help.date}</HelpBlock>
           </FormGroup>
         </Col>
-        <Col sm={3}>
+        <Col sm={2}>
           <FormGroup validationState={style.startTime}>
             <TimeSelect
               id="startTime-select"
@@ -162,7 +176,7 @@ export default class SessionFormPart extends React.Component {
             <HelpBlock>{help.startTime}</HelpBlock>
           </FormGroup>
         </Col>
-        <Col sm={3}>
+        <Col sm={2}>
           <FormGroup validationState={style.endTime}>
             <TimeSelect
               id="endTime-select"
@@ -175,6 +189,25 @@ export default class SessionFormPart extends React.Component {
             <HelpBlock>{help.endTime}</HelpBlock>
           </FormGroup>
         </Col>
+        <Col sm={3}>
+          <FormGroup>
+            <FormControl
+              componentClass="select"
+              id="format"
+              name="format"
+              value={this.props.session.format}
+              onChange={this.handleFormatChange}
+              disabled={this.props.readOnly}
+              style={this.props.readOnly ? styles.readOnlyInput : undefined}
+            >
+              {PdSessionFormats.map(({value, label}) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </FormControl>
+          </FormGroup>
+        </Col>
         <Col sm={2}>
           {this.renderAddButton()}
           {this.renderRemoveButton()}
@@ -183,3 +216,11 @@ export default class SessionFormPart extends React.Component {
     );
   }
 }
+
+const styles = {
+  readOnlyInput: {
+    backgroundColor: 'inherit',
+    cursor: 'default',
+    border: 'none',
+  },
+};

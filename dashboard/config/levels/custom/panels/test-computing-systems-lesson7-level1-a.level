@@ -11,25 +11,26 @@
     "panels": [
       {
         "text": "Streamer Stacy\n\nJob/Hobby: Lifestyle vlogger and content creator\nPurpose: Video editing, streaming, and managing social media.",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/ff5cb9cf03c58f21f0d51a783d7ac5a2-updateSign.png",
         "key": "undefined-031fe85f-4e54-4fe0-b3a7-24c6bde9c151",
         "fadeInOverPrevious": false
       },
       {
         "text": "Budget: $1,800",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/232a57523a9c584f58e826275e259650-updateSign.png",
         "key": "undefined-14706a7d-89bf-4177-9129-aefdc10f29d6"
       },
       {
         "text": "Important Info: Needs high-speed internet capability and external capture card compatibility.\n\nPreferences:\n* Large SSD for video storage and editing.\n* Dual monitors for managing streams and editing timelines.\n* Aesthetic build with customizable lighting.",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/318599e5d5463295c7f1ae5385bd011a-updateSign.png",
         "key": "undefined-fbda9709-191d-4453-b773-2d163636fe7a",
         "layout": "text-bottom-left"
       }
     ],
     "display_name": "Streamer Stacy",
-    "bubble_choice_description": "Lifestyle vlogger and content creator"
+    "bubble_choice_description": "Lifestyle vlogger and content creator",
+    "thumbnail_url": "https://images.code.org/c39afdca67e6265f741752b9169d714d-updateSign.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-15 19:43:02 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 19:47:46 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-15 19:43:02 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-15 19:47:46 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 15:14:44 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 15:15:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-17 15:16:43 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

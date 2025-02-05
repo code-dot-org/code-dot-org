@@ -1,12 +1,12 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   Heading2,
@@ -18,6 +18,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {navigateToHref} from '../utils';
@@ -191,6 +192,7 @@ const FinishStudentAccount: React.FunctionComponent<{
   };
 
   const sendFinishEvent = (): void => {
+    // Log to Statsig and Amplitude
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
@@ -201,6 +203,11 @@ const FinishStudentAccount: React.FunctionComponent<{
       },
       PLATFORMS.BOTH
     );
+
+    // Log to Google Analytics
+    trackEvent('sign_up', 'sign_up_success', {
+      value: 'student',
+    });
   };
 
   const submitStudentAccount = async () => {

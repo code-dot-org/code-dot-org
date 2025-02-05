@@ -1,0 +1,108 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-01-23T23:12:11.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "instructions_important": "false",
+    "long_instructions": "####<i class=\"fa-duotone fa-solid fa-sparkles\"></i> Create a function!\r\nNow it's your turn.  \r\n\r\n1. Drag [my function](#clickable=flyout-fourth-block) into your workspace.\r\n2. Add sounds into the function.\r\n3. Name the function.\r\n4. Call the function by dragging it from the toolbox to under [when run](#clickable=when-run-block).\r\n\r\n\r\n\r\n",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-function-verse_fc9881f2-7571-49f1-8971-dcab68a657a9",
+        "message": "Great work! ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_anything_in_same_function",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "music-coding-intro-functions-beat_7ba758cc-a909-4178-aff5-d93e51b3a7ab",
+        "message": "Not quite. Try reading the instructions again. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_in_any_function"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
+        "message": "Nothing played yet. ",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "level_data": {
+      "validationTimeout": 3,
+      "library": "launch2024",
+      "packId": "default",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Control": [
+            "play_sounds_together",
+            "repeat_simple2"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ]
+        },
+        "type": "flyout",
+        "addFunctionCalls": true,
+        "addFunctionDefinition": true
+      },
+      "sounds": {
+        "groove": [
+          "drum_beat_machine",
+          "drum_beat_patter",
+          "groovy_beat",
+          "groovy_alternate_beat",
+          "bass_sub_saunter",
+          "boom_bass",
+          "funky_bass",
+          "reggaeton_bass",
+          "guitar_rainbow",
+          "guitar_high_riff",
+          "guitar_thread",
+          "organ_walker",
+          "crash_reverse",
+          "laser"
+        ]
+      }
+    },
+    "name_suffix": "_january",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-23T23:12:11.871+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-beat\\\"\"],\"cloned_from\":\"music-coding-intro-functions-beat\"}]"
+}]]></config>
+  <blocks/>
+</Music>

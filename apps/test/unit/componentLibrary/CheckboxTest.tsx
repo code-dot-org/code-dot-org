@@ -1,9 +1,8 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React, {ChangeEvent, useState} from 'react';
-
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
 describe('Design System - Checkbox', () => {
   const setupCheckbox = (

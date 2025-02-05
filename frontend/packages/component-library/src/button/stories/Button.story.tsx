@@ -261,6 +261,15 @@ GroupOfColorsOfButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'gray tertiary icon only button',
+      color: buttonColors.gray,
+      type: 'tertiary',
+      isIconOnly: true,
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
       ariaLabel: 'destructive tertiary icon only button',
       color: buttonColors.destructive,
       type: 'tertiary',

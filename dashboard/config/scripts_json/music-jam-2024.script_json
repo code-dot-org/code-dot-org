@@ -41,7 +41,7 @@
     },
     "new_name": null,
     "family_name": "music-jam",
-    "serialized_at": "2025-01-09 16:46:49 UTC",
+    "serialized_at": "2025-01-22 02:10:12 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -72,6 +72,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "background": "dark",
         "overview": "In this 45-minute activity, students will use Code.org’s Music Lab to explore how creativity and coding come together to make music. By creating their own songs using coding concepts like sequencing and decomposition, and configuring an AI Beat Block, students will learn foundational computer science concepts. They will also be introduced to careers that intersect with tech and music through inspiring career spotlights from professionals in the industry, including at Amazon Music.\n\nStudents will gain confidence in their creative abilities and begin to see coding as a tool not only for problem-solving but also for artistic expression. The goal is for students to discover careers that combine music and technology, where creativity is key, and to feel a stronger sense of belonging by seeing themselves reflected in the professionals’ stories and backgrounds.",
         "preparation": "- Test out Music Lab to ensure familiarity with the platform.\n- Review the introduction video and practice walking students through the steps for using sound blocks, the AI Beat Block, and functions.\n- Prepare discussion prompts that help students connect coding and music creation.\n- *[Optional]* Find the resources you need to plan, implement, and celebrate the Hour of Code at your school [here](https://hourofcode.com/us/how-to)!",
         "purpose": "This lesson is designed to show students that coding is not just about logic and algorithms—it's about creativity. By using Music Lab, students will create their own music and learn coding basics like sequencing, loops, and functions. They will see how the problem-solving process coders use is similar to the creative process musicians follow. By the end of this lesson, students will feel empowered to explore tech-related careers, knowing that creativity and code can work hand in hand.",

@@ -1,9 +1,8 @@
+import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React, {useState} from 'react';
-
-import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs';
 
 describe('Design System - Tabs', () => {
   const valuesMap: Record<string, string> = {};
