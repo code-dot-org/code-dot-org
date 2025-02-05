@@ -47,9 +47,13 @@ const panelHeaderNames = {
 
 interface InfoPanelProps {
   style?: React.CSSProperties;
+  className?: string;
 }
 
-export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({style}) => {
+export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
+  style,
+  className,
+}) => {
   const mapReference = useAppSelector(
     state => state.lab.levelProperties?.mapReference
   );
@@ -134,7 +138,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({style}) => {
   const CurrentPanelView = panelMap[currentPanel];
 
   return (
-    <div style={style}>
+    <div style={style} className={className}>
       <PanelContainer
         id="codebridge-info-panel"
         headerContent={currentPanelHeader}

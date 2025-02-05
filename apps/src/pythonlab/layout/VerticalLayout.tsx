@@ -79,13 +79,16 @@ const VerticalLayout: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.layoutContainer} ref={layoutContainerRef}>
-      <InfoPanel style={{width: infoPanelWidth}} />
+      <InfoPanel
+        style={{width: infoPanelWidth}}
+        className={moduleStyles.flexGrow}
+      />
       <ResizeBar
         isVertical={true}
         {...infoPanelSeparatorProps}
         isDragging={infoPanelDragging}
       />
-      <div style={{width: editorWidth}}>
+      <div style={{width: editorWidth}} className={moduleStyles.flexGrow}>
         <Workspace />
       </div>
       <ResizeBar
@@ -94,7 +97,7 @@ const VerticalLayout: React.FunctionComponent = () => {
         isDragging={outputDragging}
       />
       <div ref={outputContainerRef}>
-        <Output width={outputWidth} />
+        <Output width={outputWidth} className={moduleStyles.flexGrow} />
       </div>
     </div>
   );
