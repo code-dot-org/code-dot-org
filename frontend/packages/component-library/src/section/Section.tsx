@@ -13,6 +13,10 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
     | 'brand-light-secondary';
   /** Background image */
   backgroundImage?: string;
+  /** Background image repeat */
+  backgroundImageRepeat?: boolean;
+  /** Background size */
+  backgroundSize?: 'contain' | 'cover';
   /** Vertical padding */
   padding?: 'm' | 'l';
   /** Content alignment */
@@ -37,6 +41,8 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
 const Section: React.FC<SectionProps> = ({
   backgroundColor = 'primary',
   backgroundImage,
+  backgroundImageRepeat,
+  backgroundSize,
   padding = 'l',
   alignment = 'left',
   children,
@@ -51,9 +57,15 @@ const Section: React.FC<SectionProps> = ({
         moduleStyles[`section-${padding}`],
         moduleStyles[`section-${alignment}`],
         className,
+        backgroundImage ? moduleStyles.overlay : '',
       )}
       style={{
-        backgroundImage: `url(${backgroundImage})`,
+        ...(backgroundImage && {
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundRepeat: backgroundImageRepeat ? 'repeat' : 'no-repeat',
+          backgroundSize: backgroundSize,
+          backgroundPosition: 'center',
+        }),
       }}
       data-testid="section"
       {...HTMLAttributes}
