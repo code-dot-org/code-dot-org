@@ -17,10 +17,13 @@ const HorizontalLayout: React.FunctionComponent = () => {
   } = useResizable({
     axis: 'x',
     initial: 300,
-    min: 0,
+    min: 100,
     containerRef: layoutContainerRef,
   });
   const [rightPanelWidth, setRightPanelWidth] = React.useState<
+    number | undefined
+  >(undefined);
+  const [workspaceHeight, setWorkspaceHeight] = React.useState<
     number | undefined
   >(undefined);
   const {
@@ -30,14 +33,20 @@ const HorizontalLayout: React.FunctionComponent = () => {
   } = useResizable({
     axis: 'y',
     initial: 300,
-    min: 0,
+    min: 100,
     reverse: true,
     containerRef: workspaceAndOutputContainerRef,
   });
 
   useEffect(() => {
-    setRightPanelWidth(Math.max(window.innerWidth - infoPanelWidth - 20, 400));
+    setRightPanelWidth(Math.max(window.innerWidth - infoPanelWidth - 13, 400));
   }, [infoPanelWidth]);
+
+  useEffect(() => {
+    setWorkspaceHeight(
+      Math.max(window.innerHeight - outputHeight - 13 - 80, 200)
+    );
+  }, [outputHeight]);
 
   return (
     <div className={moduleStyles.layoutContainer} ref={layoutContainerRef}>
@@ -52,7 +61,9 @@ const HorizontalLayout: React.FunctionComponent = () => {
         ref={workspaceAndOutputContainerRef}
         style={{width: rightPanelWidth}}
       >
-        <Workspace className={moduleStyles.workspace} />
+        <div style={{height: workspaceHeight}}>
+          <Workspace className={moduleStyles.workspace} />
+        </div>
         <ResizeBar
           isVertical={false}
           {...outputSeparatorProps}

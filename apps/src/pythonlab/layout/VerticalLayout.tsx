@@ -7,39 +7,63 @@ import {useResizable} from 'react-resizable-layout';
 
 import moduleStyles from './horizontal-layout.module.scss';
 
+const MIN_INFO_PANEL_WIDTH = 100;
+const MIN_CONSOLE_WIDTH = 200;
+const MIN_EDITOR_WIDTH = 400;
+
 const VerticalLayout: React.FunctionComponent = () => {
   const layoutContainerRef = React.useRef<HTMLDivElement>(null);
   const outputContainerRef = React.useRef<HTMLDivElement>(null);
+  const [infoPanelWidth, setInfoPanelWidth] = React.useState<number>(300);
+  const [editorWidth, setEditorWidth] = React.useState<number | undefined>(
+    undefined
+  );
+  const [outputWidth, setOutputWidth] = React.useState<number>(400);
   const {
-    position: infoPanelWidth,
+    position: rawInfoPanelWidth,
     separatorProps: infoPanelSeparatorProps,
     isDragging: infoPanelDragging,
   } = useResizable({
     axis: 'x',
     initial: 300,
-    min: 0,
+    min: MIN_INFO_PANEL_WIDTH,
     containerRef: layoutContainerRef,
   });
-  const [editorWidth, setEditorWidth] = React.useState<number | undefined>(
-    undefined
-  );
+
   const {
-    position: outputWidth,
+    position: rawOutputWidth,
     separatorProps: outputSeparatorProps,
     isDragging: outputDragging,
   } = useResizable({
     axis: 'x',
     initial: 400,
-    min: 0,
+    min: MIN_CONSOLE_WIDTH,
     reverse: true,
     containerRef: outputContainerRef,
   });
 
   useEffect(() => {
-    setEditorWidth(
-      Math.max(window.innerWidth - infoPanelWidth - outputWidth - 30, 400)
+    const adjustedEditorWidth = Math.max(
+      window.innerWidth - rawInfoPanelWidth - rawOutputWidth - 26,
+      MIN_EDITOR_WIDTH
     );
-  }, [infoPanelWidth, outputWidth]);
+    setEditorWidth(adjustedEditorWidth);
+    const spaceForOutput = Math.max(
+      window.innerWidth - rawInfoPanelWidth - 26 - adjustedEditorWidth,
+      MIN_CONSOLE_WIDTH
+    );
+    const adjustedOutputWidth = Math.min(rawOutputWidth, spaceForOutput);
+    setOutputWidth(adjustedOutputWidth);
+    const spaceForInfoPanel = Math.max(
+      window.innerWidth - adjustedOutputWidth - 26 - adjustedEditorWidth,
+      MIN_EDITOR_WIDTH
+    );
+    const adjustedInfoPanelWidth = Math.min(
+      rawInfoPanelWidth,
+      spaceForInfoPanel
+    );
+    setInfoPanelWidth(adjustedInfoPanelWidth);
+  }, [rawInfoPanelWidth, rawOutputWidth]);
 
   return (
     <div className={moduleStyles.layoutContainer} ref={layoutContainerRef}>
