@@ -25,7 +25,7 @@ const NeighborhoodPreview: React.FunctionComponent = () => {
     DEFAULT_FOLDER_ID
   )?.contents;
   const dispatch = useAppDispatch();
-  const isVertical = config.activeGridLayout === 'vertical';
+  const isVertical = config.activeLayout === 'vertical';
 
   const neighborhood = useMemo(() => {
     const neighborhoodRef = new Neighborhood(

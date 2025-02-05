@@ -23,7 +23,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
   width,
 }) => {
   const {config, labConfig} = useCodebridgeContext();
-  const isVertical = config.activeGridLayout === 'vertical';
+  const isVertical = config.activeLayout === 'vertical';
   const miniApp = labConfig?.miniApp?.name;
   const style = {
     height,

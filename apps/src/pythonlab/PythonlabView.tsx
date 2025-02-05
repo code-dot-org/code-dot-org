@@ -104,9 +104,13 @@ const defaultConfig: ConfigType = {
   ],
 
   labeledGridLayouts,
-  activeGridLayout: 'horizontal',
+  activeLayout: 'horizontal',
   showFileBrowser: true,
   validMimeTypes: ['text/'],
+  layoutComponents: {
+    horizontal: <HorizontalLayout />,
+    vertical: <VerticalLayout />,
+  },
 };
 
 const PythonlabView: React.FunctionComponent = () => {
