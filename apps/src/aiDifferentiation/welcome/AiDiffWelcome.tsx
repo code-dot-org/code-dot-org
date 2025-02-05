@@ -1,6 +1,10 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
+import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
+import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
+
 import {Button} from '../../componentLibrary/button';
 import FontAwesomeV6Icon from '../../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {
@@ -20,13 +24,15 @@ import {ChatPrompt} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
 
-type WelcomeState = 'select_option' | 'practice' | 'end_page' | 'finished';
+const HAS_SEEN_WELCOME_URL =
+  '/api/v1/users/has_completed_ai_differentiation_welcome';
+
+type WelcomeState = 'select_option' | 'practice' | 'end_page';
 
 const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
   select_option: 'select_option',
   practice: 'practice',
   end_page: 'end_page',
-  finished: 'finished',
 };
 
 interface AiDiffWelcomeProps {
@@ -51,6 +57,42 @@ const SUGGESTED_PROMPTS_FOR_SELECTION: {
   },
 };
 
+const optionButton = (
+  isSelected = false,
+  onClick: () => void,
+  iconName: string,
+  title: string,
+  description: string | null
+) => {
+  return (
+    <button
+      className={classNames(
+        style.optionRow,
+        isSelected && style.selectedOption
+      )}
+      onClick={onClick}
+      type="button"
+    >
+      <FontAwesomeV6Icon
+        iconName={iconName}
+        iconFamily="duotone"
+        className={style.optionIcon}
+      />
+      <div className={style.optionText}>
+        <BodyTwoText className={style.optionTitle}>
+          <StrongText>{title}</StrongText>
+        </BodyTwoText>
+
+        {description && (
+          <BodyThreeText className={style.optionDescription}>
+            {description}
+          </BodyThreeText>
+        )}
+      </div>
+    </button>
+  );
+};
+
 const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   lessonId,
@@ -60,55 +102,22 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>('select_option');
 
-  React.useEffect(() => {
-    if (currentWelcomeState === WelcomeStates.finished) {
-      setShowWelcomeExperience(false);
-    }
-  }, [currentWelcomeState, setShowWelcomeExperience]);
-
   const [selectedOption, setSelectedOption] = React.useState<
     'plan' | 'create' | null
   >(null);
 
-  const optionButton = React.useCallback(
-    (
-      selectionKey: 'plan' | 'create' | null,
-      iconName: string,
-      title: string,
-      description: string
-    ) => {
-      return (
-        <button
-          className={classNames(
-            style.optionRow,
-            selectionKey === selectedOption && style.selectedOption
-          )}
-          onClick={() => setSelectedOption(selectionKey)}
-          type="button"
-        >
-          <FontAwesomeV6Icon
-            iconName={iconName}
-            iconFamily="duotone"
-            className={style.optionIcon}
-          />
-          <div className={style.optionText}>
-            <BodyTwoText>
-              <StrongText>{title}</StrongText>
-            </BodyTwoText>
-            <BodyThreeText>{description}</BodyThreeText>
-          </div>
-        </button>
-      );
-    },
-    [selectedOption]
-  );
+  const updateShowWelcomeExperience = React.useCallback(() => {
+    HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
+      setShowWelcomeExperience(false);
+    });
+  }, [setShowWelcomeExperience]);
 
   const continueAndSkipButtons = React.useCallback(
     (nextState: WelcomeState) => {
       return (
         <div className={style.bottomButtons}>
           <Button
-            onClick={() => setCurrentWelcomeState(WelcomeStates.finished)}
+            onClick={() => updateShowWelcomeExperience()}
             text="Skip"
             className={style.skipButton}
             color="gray"
@@ -123,7 +132,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         </div>
       );
     },
-    [selectedOption]
+    [selectedOption, updateShowWelcomeExperience]
   );
 
   const selectAnOptionPage = React.useCallback(
@@ -136,13 +145,15 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               Using AI in multiple ways increases productivity.
             </Heading6>
             {optionButton(
-              'plan',
+              selectedOption === 'plan',
+              () => setSelectedOption('plan'),
               'folder-tree',
               'Plan',
               'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
             )}
             {optionButton(
-              'create',
+              selectedOption === 'create',
+              () => setSelectedOption('create'),
               'file-pen',
               'Create',
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
@@ -152,8 +163,57 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         </div>
       );
     },
-    [optionButton, continueAndSkipButtons]
+    [continueAndSkipButtons, selectedOption]
   );
+
+  const endPage = React.useCallback(() => {
+    return (
+      <div className={style.endPage}>
+        <div className={style.endPageTop}>
+          <img
+            src={aiBotConfetti}
+            className={style.botConfetti}
+            alt={'Congratulations!'}
+          />
+          <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
+          <Heading6 className={style.endPageSubTitle}>
+            Continue your learning journey
+          </Heading6>
+          {optionButton(
+            false,
+            () => setCurrentWelcomeState(WelcomeStates.select_option),
+            'dumbbell',
+            'Practice another skill',
+            null
+          )}
+
+          <a
+            className={classNames(style.optionRow, style.optionRowWithPic)}
+            href="https://code.org/ai/pl/101"
+          >
+            <div className={style.optionWithPicTop}>
+              <FontAwesomeV6Icon
+                iconName="head-side-brain"
+                iconFamily="duotone"
+                className={style.optionIcon}
+              />
+              <BodyTwoText className={style.optionTitle}>
+                <StrongText>
+                  Take Code.org’s self-paced AI 101 professional learning course
+                </StrongText>
+              </BodyTwoText>
+            </div>
+            <img
+              src={ai101Thumnail}
+              className={style.ai101Thumbnail}
+              alt={'AI 101 professional learning course'}
+            />
+          </a>
+        </div>
+        <Button onClick={() => updateShowWelcomeExperience()} text="Finish" />
+      </div>
+    );
+  }, [updateShowWelcomeExperience]);
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
@@ -190,12 +250,11 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       case WelcomeStates.practice:
         return practicePage();
       case WelcomeStates.end_page:
-        return <div>End Page</div>;
-      case WelcomeStates.finished:
+        return endPage();
       default:
-        return <div>Finished</div>;
+        return null;
     }
-  }, [currentWelcomeState, selectAnOptionPage, practicePage]);
+  }, [currentWelcomeState, selectAnOptionPage, practicePage, endPage]);
 
   return currentWelcomePage;
 };

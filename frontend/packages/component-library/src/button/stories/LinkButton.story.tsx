@@ -267,6 +267,15 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Gray tertiary icon link button',
+      color: buttonColors.gray,
+      type: 'tertiary',
+      isIconOnly: true,
+      size: 'm',
+      href: 'https://www.google.com',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
       ariaLabel: 'Destructive tertiary icon link button',
       color: buttonColors.destructive,
       type: 'tertiary',

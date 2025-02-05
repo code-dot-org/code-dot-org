@@ -26,13 +26,15 @@ describe('messageHelpers', function () {
   });
   describe('parseMessageToNeighborhoodSignal', function () {
     it('can successfully parse a message string with no detail', async function () {
-      expect(parseMessageToNeighborhoodSignal('[PAINTER] MOVE')).toEqual({
+      expect(parseMessageToNeighborhoodSignal('[NEIGHBORHOOD] MOVE')).toEqual({
         value: 'MOVE',
       });
     });
     it('can successfully parse a message string with detail', async function () {
       expect(
-        parseMessageToNeighborhoodSignal('[PAINTER] PAINT {"color": "Blue"}')
+        parseMessageToNeighborhoodSignal(
+          '[NEIGHBORHOOD] PAINT {"color": "Blue"}'
+        )
       ).toEqual({
         value: 'PAINT',
         detail: {
