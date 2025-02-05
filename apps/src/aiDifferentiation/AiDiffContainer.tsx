@@ -16,6 +16,7 @@ import style from './ai-differentiation.module.scss';
 const AI_DIFF_POSITION_X = 'aiDiffPositionX';
 const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 
+// TODO: Update to support i18n
 const AI_DIFF_HEADER_TEXT = 'AI Teaching Assistant';
 
 interface AiDiffContainerProps {
@@ -36,6 +37,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   // TODO(lfm): remove this when welcome is ready to be shown.
   disableWelcome = true,
 }) => {
+  const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+
   const [positionX, setPositionX] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
   );
@@ -101,16 +104,24 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           </div>
         </div>
 
-        {!disableWelcome && !hasCompletedAiDifferentiationWelcome ? (
-          <AiDiffWelcome setShowWelcomeExperience={() => {}} />
-        ) : (
-          <AiDiffChat
-            closeTutor={closeTutor}
-            lessonId={lessonId}
-            lessonName={lessonName}
-            unitDisplayName={unitDisplayName}
-          />
-        )}
+        <div className={style.fabBackground}>
+          {!disableWelcome &&
+          !hasCompletedAiDifferentiationWelcome &&
+          showWelcomeExperience ? (
+            <AiDiffWelcome
+              setShowWelcomeExperience={setShowWelcomeExperience}
+              lessonId={lessonId}
+              lessonName={lessonName}
+              unitDisplayName={unitDisplayName}
+            />
+          ) : (
+            <AiDiffChat
+              lessonId={lessonId}
+              lessonName={lessonName}
+              unitDisplayName={unitDisplayName}
+            />
+          )}
+        </div>
       </div>
     </Draggable>
   );

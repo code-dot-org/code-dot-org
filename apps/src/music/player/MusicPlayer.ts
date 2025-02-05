@@ -46,6 +46,10 @@ export default class MusicPlayer {
   private readonly audioPlayer: ToneJSPlayer;
   private updateLoadProgress: UpdateLoadProgressCallback | undefined;
 
+  // A set of strings (e.g. "electro/beat-4", which is a hyphen-separated event ID and measure) that are
+  // used to ensure the same sound isn't played more than once at the same time.
+  private uniqueEvents: Set<string>;
+
   private bpm: number = DEFAULT_BPM;
   private key: Key = DEFAULT_KEY;
 
@@ -61,6 +65,7 @@ export default class MusicPlayer {
     this.metricsReporter = metricsReporter;
     this.analyticsReporter = analyticsReporter;
     this.updateConfiguration(bpm, key);
+    this.uniqueEvents = new Set();
   }
 
   updateConfiguration(bpm?: number, key?: Key) {
@@ -270,6 +275,7 @@ export default class MusicPlayer {
   playEvents(events: PlaybackEvent[], replace = false) {
     if (replace) {
       this.audioPlayer.cancelPendingEvents();
+      this.uniqueEvents.clear();
     }
     this.scheduleEvents(events);
   }
@@ -279,6 +285,12 @@ export default class MusicPlayer {
       if (event.skipContext?.skipSound) {
         continue;
       }
+
+      const uniqueEventKey = `${event.id}-${event.when}`;
+      if (this.uniqueEvents.has(uniqueEventKey)) {
+        continue;
+      }
+
       if (isSoundEvent(event)) {
         const reportCallback = (soundId: string) => {
           this.analyticsReporter?.onSoundPlayed(soundId);
@@ -295,6 +307,8 @@ export default class MusicPlayer {
           this.audioPlayer.scheduleSamplerSequence(sequence);
         }
       }
+
+      this.uniqueEvents.add(uniqueEventKey);
     }
   }
 
@@ -303,6 +317,7 @@ export default class MusicPlayer {
    */
   stopSong() {
     this.audioPlayer.stop();
+    this.uniqueEvents.clear();
   }
 
   // Returns the current playhead position, in floating point for an exact position,

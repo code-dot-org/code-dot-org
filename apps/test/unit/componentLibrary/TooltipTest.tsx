@@ -1,9 +1,11 @@
+import {
+  WithTooltip,
+  TooltipProps,
+} from '@code-dot-org/component-library/tooltip';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
-
-import {WithTooltip, TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
 
 describe('Design System - Tooltip', () => {
   const renderWithTooltip = (tooltipProps: Partial<TooltipProps>) => {

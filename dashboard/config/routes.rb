@@ -10,7 +10,9 @@ Dashboard::Application.routes.draw do
   # Redirect old sign up flow to new sign up flow
   get "/users/sign_up", to: redirect("/users/new_sign_up/account_type")
 
-  # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
+  # Redirect studio.code.org/sections/teacher_dashboard/first_section/*location to the teacher's most recent section
+  # on teacher dashboard, where *location is one of the following: courses, calendar, progress, or materials.
+  get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
   get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
 
   # Redirect enable and disable experiments to most recent section
@@ -228,6 +230,7 @@ Dashboard::Application.routes.draw do
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
+      delete '/expire_other', to: 'sessions#expire_other'
       get '/users/existing_account', to: 'registrations#existing_account'
       get '/users/edit', to: 'registrations#edit'
     end
@@ -1204,9 +1207,10 @@ Dashboard::Application.routes.draw do
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 
-    post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
-    post '/aichat/submit_teacher_feedback', to: 'aichat#submit_teacher_feedback'
-    get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
+    post '/aichat_events/log_chat_event', to: 'aichat_events#log_chat_event'
+    post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
+    get '/aichat_events/student_chat_history', to: 'aichat_events#student_chat_history'
+
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 

@@ -160,34 +160,36 @@ export const FileBrowser = React.memo(() => {
       className={moduleStyles['file-browser']}
       rightHeaderContent={!isReadOnly && <FileBrowserHeaderPopUpButton />}
     >
-      <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
-        <DndDataContextProvider
-          value={{dragData, dropData}}
-          dndMonitor={dndMonitor}
-        >
-          <Droppable
-            data={{id: DEFAULT_FOLDER_ID}}
-            className={classNames(
-              moduleStyles.droppableArea,
-              moduleStyles.expandedDroppableArea,
-              {
-                [moduleStyles.acceptingDrop]:
-                  DEFAULT_FOLDER_ID === dropData?.id,
-              }
-            )}
+      <div className={moduleStyles.fileBrowserContents}>
+        <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
+          <DndDataContextProvider
+            value={{dragData, dropData}}
+            dndMonitor={dndMonitor}
           >
-            <ul id="uitest-files-list">
-              <InnerFileBrowser
-                parentId={DEFAULT_FOLDER_ID}
-                folders={source.folders}
-                files={source.files}
-                setFileType={setFileType}
-                appName={appName}
-              />
-            </ul>
-          </Droppable>
-        </DndDataContextProvider>
-      </DndContext>
+            <Droppable
+              data={{id: DEFAULT_FOLDER_ID}}
+              className={classNames(
+                moduleStyles.droppableArea,
+                moduleStyles.expandedDroppableArea,
+                {
+                  [moduleStyles.acceptingDrop]:
+                    DEFAULT_FOLDER_ID === dropData?.id,
+                }
+              )}
+            >
+              <ul id="uitest-files-list">
+                <InnerFileBrowser
+                  parentId={DEFAULT_FOLDER_ID}
+                  folders={source.folders}
+                  files={source.files}
+                  setFileType={setFileType}
+                  appName={appName}
+                />
+              </ul>
+            </Droppable>
+          </DndDataContextProvider>
+        </DndContext>
+      </div>
     </PanelContainer>
   );
 });
