@@ -19,7 +19,7 @@ const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_OUTPUT_HEIGHT = 300;
 // The top Y coordinate of the panel. This includes the top header and the header
 // of the workspace, which is absolutely positioned.
-const PANEL_TOP_COORDINATE = 80;
+const PANEL_TOP_COORDINATE = 50;
 
 const HorizontalLayout: React.FunctionComponent = () => {
   const layoutContainerRef = React.useRef<HTMLDivElement>(null);
