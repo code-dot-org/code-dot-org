@@ -12,6 +12,7 @@ import {
 import classNames from 'classnames';
 import React from 'react';
 
+import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
@@ -158,6 +159,8 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     'plan' | 'create' | null
   >(null);
 
+  const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
+
   const updateShowWelcomeExperience = React.useCallback(() => {
     HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
       setShowWelcomeExperience(false);
@@ -220,10 +223,23 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     [continueAndSkipButtons, selectedOption]
   );
 
+  React.useEffect(() => {
+    if (currentWelcomeState === WelcomeStates.end_page) {
+      setConfettiActive(false);
+      setTimeout(() => {
+        setConfettiActive(true);
+      }, 10);
+    }
+    if (currentWelcomeState === WelcomeStates.practice) {
+      setChatContinueButtonDisabled(true);
+    }
+  }, [currentWelcomeState]);
+
   const endPage = React.useCallback(() => {
     return (
       <div className={style.endPage}>
         <div className={style.endPageTop}>
+          <BackToFrontConfetti active={confettiActive} style={{left: '0'}} />
           <img
             src={aiBotConfetti}
             className={style.botConfetti}
@@ -267,7 +283,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         <Button onClick={() => updateShowWelcomeExperience()} text="Finish" />
       </div>
     );
-  }, [updateShowWelcomeExperience]);
+  }, [updateShowWelcomeExperience, confettiActive]);
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
