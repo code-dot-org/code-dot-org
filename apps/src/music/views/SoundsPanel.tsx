@@ -179,7 +179,7 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         }
       }}
       ref={isSelected ? currentSoundRefCallback : null}
-      aria-label={sound.name + sound.length}
+      aria-label={sound.name + musicI18n.measureLength() + sound.length}
       tabIndex={0}
       role="tabpanel"
     >
@@ -207,7 +207,13 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         </div>
       )}
       <div className={styles.soundRowRight}>
-        <div className={classNames(styles.length, styles.lengthNoMarginRight)}>
+        <div
+          className={classNames(
+            styles.length,
+            styles.lengthNoMarginRight,
+            isSelected && styles.lengthNoMarginRightSelected
+          )}
+        >
           {getLengthRepresentation(sound.length)}
         </div>
       </div>
