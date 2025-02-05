@@ -22,4 +22,5 @@ def test_initialize_neighborhood_tracker_get_log_info():
     assert len(neighborhood_log.painter_logs) == 1
     assert neighborhood_tracker.is_initialized is True
     neighborhood_tracker.reset()
+    neighborhood_world.set_context_type(NeighborhoodContextType.RUN)
     assert neighborhood_tracker.is_initialized is False
