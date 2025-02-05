@@ -1,12 +1,11 @@
+import {
+  RadioButtonsGroup,
+  RadioButtonsGroupProps,
+} from '@code-dot-org/component-library/radioButton';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, {ChangeEvent} from 'react';
 import '@testing-library/jest-dom';
-
-import {
-  RadioButtonsGroup,
-  RadioButtonsGroupProps,
-} from '@cdo/apps/componentLibrary/radioButton';
 
 const radioButtonsData = [
   {

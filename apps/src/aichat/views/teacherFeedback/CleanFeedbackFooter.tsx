@@ -1,9 +1,9 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
-import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
