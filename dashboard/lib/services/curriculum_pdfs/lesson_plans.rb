@@ -53,10 +53,12 @@ module Services
           ChatClient.log "Generating #{pathname.to_s.inspect} from #{url.inspect}" if DEBUG
 
           FileUtils.mkdir_p(File.join(directory, pathname.dirname))
-          PDF.generate_from_url(url, File.join(directory, pathname))
+          pdf_path = File.join(directory, pathname)
+          PDF.generate_from_url(url, pdf_path)
 
           FileUtils.mkdir_p(File.join(directory, fallback_pathname.dirname))
-          FileUtils.cp(File.join(directory, pathname), File.join(directory, fallback_pathname))
+          FileUtils.cp(pdf_path, File.join(directory, fallback_pathname))
+          pdf_path
         end
       end
     end

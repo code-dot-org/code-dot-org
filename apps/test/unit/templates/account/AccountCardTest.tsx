@@ -1,8 +1,8 @@
+import {ButtonType} from '@code-dot-org/component-library/button';
 import {render, screen, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import {ButtonType} from '@cdo/apps/componentLibrary/button';
 import AccountCard from '@cdo/apps/templates/account/AccountCard';
 
 describe('AccountCard', () => {

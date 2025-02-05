@@ -37,15 +37,21 @@ ____
 
 <div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 20px 20px 20px 20px; margin: 30px 0px 30px 0px"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
+#### **Assessing Children's Understanding of the Work of Computer Scientists: The Draw-a-Computer-Scientist Test**
+
 <i> 
+
+<img src="https://images.code.org/a9780f690d72c6267e81b43e140ea9a7-image-1738014530327.45.12 PM.png" alt="The note-taking space in the Activity Guide." style="border:1px solid #000000; float: right; height: 200px; clear: both; margin: 0px 0px 10px 10px; border-radius: 10px">
 
 #### On the pre-assessment, 71% of students drew a male computer scientist, while only 27% drew a female computer scientist. The remaining 3% of student drawings were not coded for gender because the images were unclear (e.g., stick figure drawings and no gender-specific pronoun in the written description.)
 
 #### 90% of students drew computer scientists working alone, in isolation. In one extreme example, a student drew a computer scientist working in an empty computer lab, and wrote, “She is the only one working.” In contrast, only 10% of students drew more than one computer scientist working together.
 
-#### After students completed roughly 12 hours of programming instruction within a block-based environment, they were asked to repeat the same activity: draw a computer science working, and describe what is going on in the picture. Note that the curriculum did not address explicitly who could be a computer scientist or stereotypes.
+#### After students completed roughly 12 hours of programming instruction within a block-based environment, they were asked to repeat the same activity: draw a computer scientist working, and describe what is going on in the picture. Note that the curriculum did not address explicitly who could be a computer scientist or stereotypes.
 
-#### After the computer science instruction, the percentage of drawings featuring a male computer scientist dropped from 71% to 51%, whereas the number featuring females increased from 27% to 31%. One possible explanation for this could be related to the gender of the teacher; a female teacher taught all participating students computer science. 
+<img src="https://images.code.org/1e40ce1a5208ee9206c9cd8b9c261293-image-1738014530323.45.17 PM.png" alt="The note-taking space in the Activity Guide." style="border:1px solid #000000; float: right; height: 200px; clear: both; margin: 0px 0px 10px 10px; border-radius: 10px">
+
+#### After the computer science instruction, the percentage of drawings featuring a male computer scientist dropped from 71% to 51%, whereas the number featuring females increased from 27% to 31%. One possible explanation for this could be related to the gender of the teacher; a female teacher taught all participating students computer science. There was also an increase in the number of drawings that were unclear for gender (3% to 20%). 
 
 #### For some of these drawings, only a computer screen was visible; in others, non gender-specific pronouns were used in the written description, and, thus, were not coded for gender. Seven percent of students changed from an initial drawing with a male to a drawing with a female; all of these students were female. <b>Considering that computer science is a male-dominated profession, this is a promising finding because it indicates that computer science experiences in school can change student perceptions about the field, allowing students to more readily see themselves as computer scientists.</b><sup>6</sup>
 
@@ -64,4 +70,8 @@ ___
 ##### <sup>5</sup>“The Social Network.” IMDb, IMDb.com, <a href="www.imdb.com/title/tt1285016/" target="blank" rel="noopener noreferrer">www.imdb.com/title/tt1285016/.</a>
 ##### <sup>6</sup>Hansen, Alexandria Killian, et al. "What Is a Computer Scientist? Developing the Draw-A-Computer-Scientist-Test for Elementary School Students." AERA Online Paper Repository, 12 Apr. 2016.
 ##### <sup>7</sup>Chambers, David Wade. “Stereotypic images of the scientist: The draw‐a‐scientist test.” Science Education, vol. 67, no. 2, Apr. 1983, pp. 255–265, https://doi.org/10.1002/sce.3730670213. 
+
+![]()
+
+![]()
 MARKDOWN

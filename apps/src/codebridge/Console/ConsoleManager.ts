@@ -6,14 +6,19 @@ export default class ConsoleManager {
   private terminal: Terminal;
   private terminalFitAddon: FitAddon;
   private terminalLines: string[];
+  private inputBuffer: string;
+  // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
+  private lastLineIsPartial: boolean;
 
-  private IMAGE_WIDTH = 400;
-  private IMAGE_HEIGHT = 400;
+  private IMAGE_WIDTH = 600;
+  private IMAGE_HEIGHT = 600;
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;
     this.terminalFitAddon = terminalFitAddon;
     this.terminalLines = [];
+    this.inputBuffer = '';
+    this.lastLineIsPartial = false;
   }
 
   public getTerminal() {
@@ -35,6 +40,7 @@ export default class ConsoleManager {
   public clearTerminalLines() {
     this.terminalLines = [];
     this.terminal.clear();
+    this.lastLineIsPartial = false;
   }
 
   public getTerminalLines() {
@@ -44,6 +50,14 @@ export default class ConsoleManager {
   public writeConsoleMessage(message: string) {
     const lines = message.split('\n');
     lines.forEach(l => this.appendTerminalLine(l));
+  }
+
+  public writePartialLine(message: string) {
+    this.updateTerminalLines(message);
+    this.lastLineIsPartial = true;
+    this.terminal.write(message);
+    this.terminal.scrollToBottom();
+    this.terminal.focus();
   }
 
   public writeSystemMessage(message: string, appName?: string) {
@@ -67,8 +81,30 @@ export default class ConsoleManager {
     this.appendTerminalLine(imageString);
   }
 
+  public appendToInputBuffer(data: string) {
+    this.inputBuffer += data;
+  }
+
+  public backspaceInputBuffer() {
+    this.inputBuffer = this.inputBuffer.slice(0, -1);
+  }
+
+  public getInputBuffer() {
+    return this.inputBuffer;
+  }
+
+  // Store the current input buffer in the terminal and clear the input buffer.
+  // We always store the input buffer as a line with a newlne, because we clear it when
+  // the user presses enter.
+  public saveAndClearInputBuffer() {
+    this.updateTerminalLines(this.inputBuffer);
+    this.lastLineIsPartial = false;
+    this.inputBuffer = '';
+  }
+
   private appendTerminalLine(line: string) {
-    this.terminalLines.push(line);
+    this.updateTerminalLines(line);
+    this.lastLineIsPartial = false;
     this.terminal.writeln(line);
     this.terminal.scrollToBottom();
     this.terminal.focus();
@@ -77,5 +113,13 @@ export default class ConsoleManager {
   private getSystemMessage(message: string, appName?: string) {
     const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
     return `${systemMessagePrefix}${message}`;
+  }
+
+  private updateTerminalLines(message: string) {
+    if (this.lastLineIsPartial && this.terminalLines.length > 0) {
+      this.terminalLines[this.terminalLines.length - 1] += message;
+    } else {
+      this.terminalLines.push(message);
+    }
   }
 }

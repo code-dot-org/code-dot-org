@@ -268,7 +268,16 @@
       "import": "./dist/esm/typography/index.mjs",
       "require": "./dist/cjs/typography/index.js"
     },
-    "./typography/index.css": "./dist/esm/typography/index.css"
+    "./typography/index.css": "./dist/esm/typography/index.css",
+    "./video": {
+      "types": {
+        "import": "./dist/esm/video/index.d.mts",
+        "require": "./dist/cjs/video/index.d.ts"
+      },
+      "import": "./dist/esm/video/index.mjs",
+      "require": "./dist/cjs/video/index.js"
+    },
+    "./video/index.css": "./dist/esm/video/index.css"
   },
   "main": "components/index.ts",
   "files": [

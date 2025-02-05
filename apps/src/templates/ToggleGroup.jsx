@@ -50,9 +50,9 @@ class ToggleGroup extends Component {
       : flex && styles.flexButtons;
 
     return (
-      <div role="tablist" style={spanStyle}>
+      <span role="tablist" style={spanStyle}>
         {this.renderChildren()}
-      </div>
+      </span>
     );
   }
 
