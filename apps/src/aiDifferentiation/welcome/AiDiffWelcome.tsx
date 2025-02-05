@@ -276,15 +276,18 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
 
     return (
       <div className={style.practicePage}>
-        <AiDiffChat
-          lessonId={lessonId}
-          lessonName={lessonName}
-          chatResponseCallback={() => setChatContinueButtonDisabled(false)}
-          unitDisplayName={unitDisplayName}
-          initialChatMessage={initialMessage}
-          suggestedPrompts={suggestedPrompts}
-          disableEndButtons={true}
-        />
+        {progressBarHeader(60, () => setCurrentWelcomeState('select_option'))}
+        <div className={style.practiceContent}>
+          <AiDiffChat
+            lessonId={lessonId}
+            lessonName={lessonName}
+            chatResponseCallback={() => setChatContinueButtonDisabled(false)}
+            unitDisplayName={unitDisplayName}
+            initialChatMessage={initialMessage}
+            suggestedPrompts={suggestedPrompts}
+            disableEndButtons={true}
+          />
+        </div>
         {continueAndSkipButtons(
           WelcomeStates.end_page,
           chatContinueButtonDisabled
