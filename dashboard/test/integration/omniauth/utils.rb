@@ -169,5 +169,10 @@ module OmniauthCallbacksControllerTests
       study_requests = @firehose_requests.select {|e| e[1][:study] == SignUpTracking::STUDY_NAME && e[0] == :analysis}
       assert_empty study_requests
     end
+
+    # Simulates an omniauth redirect which is done in Javascript
+    def omniauth_redirect
+      redirect_to new_sign_up_url
+    end
   end
 end
