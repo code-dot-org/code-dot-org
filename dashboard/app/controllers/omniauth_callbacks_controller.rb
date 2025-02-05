@@ -319,10 +319,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def determine_sign_up_url(user)
     user_type = cookies['new_sign_up_user_type']
     cookies.delete('new_sign_up_user_type')
-    if user_type == 'teacher'
+    if user_type == 'student'
+      return users_new_sign_up_finish_student_account_path
+    elsif user_type == 'teacher'
       return users_new_sign_up_finish_teacher_account_path
     else
-      return users_new_sign_up_finish_student_account_path
+      return users_new_sign_up_account_type_path
     end
   end
 
