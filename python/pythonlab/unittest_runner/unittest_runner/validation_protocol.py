@@ -29,8 +29,6 @@ class ValidationProtocol(object):
     World().set_context_type(NeighborhoodContextType.RUN)
     neighborhood_log = self.neighborhood_tracker.get_neighborhood_log()
     self.neighborhood_tracker.reset()
-    # Currently returns None.
-    # TODO: Actually return neighborhood log
     return neighborhood_log
 
 

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-31 19:24:44 UTC",
+    "serialized_at": "2025-02-04 20:34:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -366,6 +366,30 @@
       }
     },
     {
+      "key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
+      "key": "82d542a1-c7ea-48ad-abac-0f03eb4640db",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "82d542a1-c7ea-48ad-abac-0f03eb4640db",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
+    },
+    {
       "key": "c7428662-603c-4f10-9e06-96780ad9bb10",
       "position": 1,
       "properties": {
@@ -565,6 +589,27 @@
       }
     },
     {
+      "key": "1c384a06-ee3a-4b73-a01c-2b5380ba950f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1c384a06-ee3a-4b73-a01c-2b5380ba950f",
+        "lesson_activity.key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6"
+      }
+    },
+    {
+      "key": "030e4b1d-85f7-4fda-ab4d-a2852cea7c6d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Free Response Question"
+      },
+      "seeding_key": {
+        "activity_section.key": "030e4b1d-85f7-4fda-ab4d-a2852cea7c6d",
+        "lesson_activity.key": "82d542a1-c7ea-48ad-abac-0f03eb4640db"
+      }
+    },
+    {
       "key": "f349ea03-d72e-4b04-999d-19c67ed78849",
       "position": 1,
       "properties": {
@@ -619,6 +664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-farmvibes-agri-professionals"
+        ],
         "progression": "Conduct Industry Interviews"
       },
       "bonus": false,
@@ -641,6 +689,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-solix-agri-professionals"
+        ],
         "progression": "Conduct Industry Interviews"
       },
       "bonus": false,
@@ -663,6 +714,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-armirror-fashion-professionals"
+        ],
         "progression": "Conduct Industry Interviews"
       },
       "bonus": false,
@@ -685,6 +739,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-jacket-fashion-professionals"
+        ],
         "progression": "Conduct Industry Interviews"
       },
       "bonus": false,
@@ -707,6 +764,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-smartboard-edu-professionals"
+        ],
         "progression": "Conduct Industry Interviews"
       },
       "bonus": false,
@@ -729,6 +789,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-scholarlab-edu-professionals"
+        ],
         "progression": "Conduct Industry Interviews"
       },
       "bonus": false,
@@ -751,6 +814,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-snake-medical-professionals"
+        ],
         "progression": "Conduct Industry Interviews"
       },
       "bonus": false,
@@ -773,6 +839,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-oura-medical-professionals"
+        ],
         "progression": "Conduct Industry Interviews"
       },
       "bonus": false,
@@ -795,6 +864,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-computing-careers-choice"
+        ],
         "progression": "Your Role in Innovation"
       },
       "bonus": false,
@@ -817,6 +889,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-interview-technical-roles"
+        ],
         "progression": "Your Role in Innovation"
       },
       "bonus": false,
@@ -839,6 +914,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computing-systems-lesson1-reflection321"
+        ],
         "progression": "3-2-1 Synthesis"
       },
       "bonus": false,
@@ -1209,6 +1287,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Free Response Question"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson10-level1-frq"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "030e4b1d-85f7-4fda-ab4d-a2852cea7c6d"
+      },
+      "level_keys": [
+        "computer-systems-lesson10-level1-frq"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level1-parent-choice"
+        ],
         "progression": "Analyzing User Testing Results"
       },
       "bonus": false,
@@ -1226,11 +1329,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson11-level2a"
+        ],
         "progression": "Analyzing User Testing Results"
       },
       "bonus": false,
@@ -1248,11 +1354,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson11-level3"
+        ],
         "progression": "Next Steps"
       },
       "bonus": false,
@@ -1270,11 +1379,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson11-level4"
+        ],
         "progression": "Next Steps"
       },
       "bonus": false,
@@ -1292,11 +1404,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson11-level5"
+        ],
         "progression": "Next Steps"
       },
       "bonus": false,
@@ -1625,6 +1740,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices",
         "activity_section.key": "33a267d4-6962-4a5a-a6ff-1541977065ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson10-level1-frq",
+        "script_level.level_keys": [
+          "computer-systems-lesson10-level1-frq"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "030e4b1d-85f7-4fda-ab4d-a2852cea7c6d"
       }
     },
     {

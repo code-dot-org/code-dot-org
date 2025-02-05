@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-02 20:07:02 UTC",
+    "serialized_at": "2025-02-05 01:26:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -267,6 +267,18 @@
       }
     },
     {
+      "key": "ca4bbec3-fd13-444a-96b1-7e41a7e77cf8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ca4bbec3-fd13-444a-96b1-7e41a7e77cf8",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet"
+      }
+    },
+    {
       "key": "051b61cb-2205-4d76-9522-28d416a60af0",
       "position": 1,
       "properties": {
@@ -291,19 +303,30 @@
       }
     },
     {
-      "key": "e498dd2a-597f-47ac-bad1-bb49b3b26f9e",
+      "key": "35b801de-d395-4a75-a4b6-d2b8d5c6ef73",
       "position": 1,
       "properties": {
-        "progression_name": "Net Sim Templates"
+        "progression_name": "Internet Simulator & Networks Diagram Analysis "
       },
       "seeding_key": {
-        "activity_section.key": "e498dd2a-597f-47ac-bad1-bb49b3b26f9e",
-        "lesson_activity.key": "051b61cb-2205-4d76-9522-28d416a60af0"
+        "activity_section.key": "35b801de-d395-4a75-a4b6-d2b8d5c6ef73",
+        "lesson_activity.key": "ca4bbec3-fd13-444a-96b1-7e41a7e77cf8"
+      }
+    },
+    {
+      "key": "2280fae4-58d4-46e4-a96c-ca732cdf49be",
+      "position": 2,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "2280fae4-58d4-46e4-a96c-ca732cdf49be",
+        "lesson_activity.key": "ca4bbec3-fd13-444a-96b1-7e41a7e77cf8"
       }
     },
     {
       "key": "1e51de84-67cf-4908-8caa-ecdcd42c1955",
-      "position": 2,
+      "position": 1,
       "properties": {
         "progression_name": "Matching Templates"
       },
@@ -314,7 +337,7 @@
     },
     {
       "key": "55db656f-5aa6-4e6a-b448-9b2a838301d9",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Multiple Choice Templates"
       },
@@ -325,7 +348,7 @@
     },
     {
       "key": "fabb4dd8-9d7f-4110-91c6-54aa7506cdd8",
-      "position": 4,
+      "position": 3,
       "properties": {
         "progression_name": "Free Response Template"
       },
@@ -336,7 +359,7 @@
     },
     {
       "key": "46d3e497-165f-40be-be32-94dc7809f329",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "AI Chatbot Templates"
       },
@@ -347,7 +370,7 @@
     },
     {
       "key": "439310a0-fd51-4267-aaec-0a12a8688d99",
-      "position": 6,
+      "position": 5,
       "properties": {
         "progression_name": "Markdown Templates"
       },
@@ -357,8 +380,74 @@
       }
     },
     {
-      "key": "19d54fdd-eb0e-46ba-a758-0cfa2f9fba22",
+      "key": "e498dd2a-597f-47ac-bad1-bb49b3b26f9e",
+      "position": 6,
+      "properties": {
+        "progression_name": "Net Sim Blank Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "e498dd2a-597f-47ac-bad1-bb49b3b26f9e",
+        "lesson_activity.key": "051b61cb-2205-4d76-9522-28d416a60af0"
+      }
+    },
+    {
+      "key": "7362c1e5-7e65-4886-a3a9-3e1cc9fd2df0",
       "position": 7,
+      "properties": {
+        "progression_name": "Intro Net Sim (cloned from CSP Lesson 1)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7362c1e5-7e65-4886-a3a9-3e1cc9fd2df0",
+        "lesson_activity.key": "051b61cb-2205-4d76-9522-28d416a60af0"
+      }
+    },
+    {
+      "key": "483a0423-0594-4b1c-8b9a-d052f5fa05c0",
+      "position": 8,
+      "properties": {
+        "progression_name": "IP Addresses Net Sim (cloned from CSP Lesson 3)"
+      },
+      "seeding_key": {
+        "activity_section.key": "483a0423-0594-4b1c-8b9a-d052f5fa05c0",
+        "lesson_activity.key": "051b61cb-2205-4d76-9522-28d416a60af0"
+      }
+    },
+    {
+      "key": "313869f5-2e22-47f3-9f00-b350289f0790",
+      "position": 9,
+      "properties": {
+        "progression_name": "Routers Net Sim (cloned from CSP Lesson 4)"
+      },
+      "seeding_key": {
+        "activity_section.key": "313869f5-2e22-47f3-9f00-b350289f0790",
+        "lesson_activity.key": "051b61cb-2205-4d76-9522-28d416a60af0"
+      }
+    },
+    {
+      "key": "e12ef0cf-12eb-4344-895b-51d5a5a988b2",
+      "position": 10,
+      "properties": {
+        "progression_name": "Packets Net Sim (cloned from CSP Lesson 5)"
+      },
+      "seeding_key": {
+        "activity_section.key": "e12ef0cf-12eb-4344-895b-51d5a5a988b2",
+        "lesson_activity.key": "051b61cb-2205-4d76-9522-28d416a60af0"
+      }
+    },
+    {
+      "key": "4b3f4d6e-5f3d-44cb-a78e-c1041fc1c703",
+      "position": 11,
+      "properties": {
+        "progression_name": "DNS Net Sim (cloned from CSP Lesson 6)"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b3f4d6e-5f3d-44cb-a78e-c1041fc1c703",
+        "lesson_activity.key": "051b61cb-2205-4d76-9522-28d416a60af0"
+      }
+    },
+    {
+      "key": "19d54fdd-eb0e-46ba-a758-0cfa2f9fba22",
+      "position": 12,
       "properties": {
         "progression_name": "Level Group Templates"
       },
@@ -369,7 +458,7 @@
     },
     {
       "key": "f039ef99-668b-4062-94b9-193623c527c8",
-      "position": 8,
+      "position": 13,
       "properties": {
         "progression_name": "Markdown w/External Link Tempalte"
       },
@@ -386,6 +475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-lesson2-level1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -407,6 +499,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-lesson2-level2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -428,20 +523,20 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Net Sim Templates"
+        "progression": "Internet Simulator & Networks Diagram Analysis "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-networks-internet-netsim-template1"
+          "test-networks-internet-lesson5-level1"
         ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "6-12-networks-and-the-internet",
-        "activity_section.key": "e498dd2a-597f-47ac-bad1-bb49b3b26f9e"
+        "activity_section.key": "35b801de-d395-4a75-a4b6-d2b8d5c6ef73"
       },
       "level_keys": [
-        "test-networks-internet-netsim-template1"
+        "test-networks-internet-lesson5-level1"
       ]
     },
     {
@@ -450,6 +545,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-lesson5-cfu"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "2280fae4-58d4-46e4-a96c-ca732cdf49be"
+      },
+      "level_keys": [
+        "test-networks-internet-lesson5-cfu"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-networks-internet-matching-template1"
+        ],
         "progression": "Matching Templates"
       },
       "bonus": false,
@@ -467,11 +587,14 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 3,
+      "chapter": 6,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-matching-template2"
+        ],
         "progression": "Matching Templates"
       },
       "bonus": false,
@@ -489,11 +612,14 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 4,
+      "chapter": 7,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-mc-template2"
+        ],
         "progression": "Multiple Choice Templates"
       },
       "bonus": false,
@@ -511,11 +637,14 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 5,
+      "chapter": 8,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-mc-template3"
+        ],
         "progression": "Multiple Choice Templates"
       },
       "bonus": false,
@@ -533,11 +662,14 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 6,
+      "chapter": 9,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-free-response-temaplate2"
+        ],
         "progression": "Free Response Template"
       },
       "bonus": false,
@@ -555,11 +687,14 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 7,
+      "chapter": 10,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-free-response-template1"
+        ],
         "progression": "Free Response Template"
       },
       "bonus": false,
@@ -577,11 +712,14 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 8,
+      "chapter": 11,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-ai-chat-template1"
+        ],
         "progression": "AI Chatbot Templates"
       },
       "bonus": false,
@@ -599,11 +737,14 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 9,
+      "chapter": 12,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-ai-chat-template2"
+        ],
         "progression": "AI Chatbot Templates"
       },
       "bonus": false,
@@ -621,11 +762,14 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 10,
+      "chapter": 13,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-network-internet-markdown-template1"
+        ],
         "progression": "Markdown Templates"
       },
       "bonus": false,
@@ -643,11 +787,149 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-networks-internet-netsim-template1"
+        ],
+        "progression": "Net Sim Blank Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-netsim-template1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "e498dd2a-597f-47ac-bad1-bb49b3b26f9e"
+      },
+      "level_keys": [
+        "test-networks-internet-netsim-template1"
+      ]
+    },
+    {
+      "chapter": 15,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Intro Net Sim (cloned from CSP Lesson 1)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-net-sim-csp-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "7362c1e5-7e65-4886-a3a9-3e1cc9fd2df0"
+      },
+      "level_keys": [
+        "test-networks-internet-net-sim-csp-L1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "IP Addresses Net Sim (cloned from CSP Lesson 3)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-net-sim-csp-L3"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "483a0423-0594-4b1c-8b9a-d052f5fa05c0"
+      },
+      "level_keys": [
+        "test-networks-internet-net-sim-csp-L3"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Routers Net Sim (cloned from CSP Lesson 4)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-net-sim-csp-L4"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "313869f5-2e22-47f3-9f00-b350289f0790"
+      },
+      "level_keys": [
+        "test-networks-internet-net-sim-csp-L4"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Packets Net Sim (cloned from CSP Lesson 5)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-net-sim-csp-L5"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "e12ef0cf-12eb-4344-895b-51d5a5a988b2"
+      },
+      "level_keys": [
+        "test-networks-internet-net-sim-csp-L5"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "DNS Net Sim (cloned from CSP Lesson 6)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-net-sim-csp-L6"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "4b3f4d6e-5f3d-44cb-a78e-c1041fc1c703"
+      },
+      "level_keys": [
+        "test-networks-internet-net-sim-csp-L6"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-networks-internet-mc-mixed-cfu-template1"
+        ],
         "progression": "Level Group Templates"
       },
       "bonus": false,
@@ -665,11 +947,14 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 12,
+      "chapter": 21,
+      "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-level-group-template1"
+        ],
         "progression": "Level Group Templates"
       },
       "bonus": false,
@@ -687,11 +972,14 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 13,
+      "chapter": 22,
+      "position": 18,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-external-template1"
+        ],
         "progression": "Markdown w/External Link Tempalte"
       },
       "bonus": false,
@@ -736,14 +1024,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-networks-internet-netsim-template1",
+        "level.key": "test-networks-internet-lesson5-level1",
         "script_level.level_keys": [
-          "test-networks-internet-netsim-template1"
+          "test-networks-internet-lesson5-level1"
         ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "6-12-networks-and-the-internet",
-        "activity_section.key": "e498dd2a-597f-47ac-bad1-bb49b3b26f9e"
+        "activity_section.key": "35b801de-d395-4a75-a4b6-d2b8d5c6ef73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-lesson5-cfu",
+        "script_level.level_keys": [
+          "test-networks-internet-lesson5-cfu"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "2280fae4-58d4-46e4-a96c-ca732cdf49be"
       }
     },
     {
@@ -852,6 +1152,78 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "6-12-networks-and-the-internet",
         "activity_section.key": "439310a0-fd51-4267-aaec-0a12a8688d99"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-netsim-template1",
+        "script_level.level_keys": [
+          "test-networks-internet-netsim-template1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "e498dd2a-597f-47ac-bad1-bb49b3b26f9e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-net-sim-csp-L1",
+        "script_level.level_keys": [
+          "test-networks-internet-net-sim-csp-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "7362c1e5-7e65-4886-a3a9-3e1cc9fd2df0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-net-sim-csp-L3",
+        "script_level.level_keys": [
+          "test-networks-internet-net-sim-csp-L3"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "483a0423-0594-4b1c-8b9a-d052f5fa05c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-net-sim-csp-L4",
+        "script_level.level_keys": [
+          "test-networks-internet-net-sim-csp-L4"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "313869f5-2e22-47f3-9f00-b350289f0790"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-net-sim-csp-L5",
+        "script_level.level_keys": [
+          "test-networks-internet-net-sim-csp-L5"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "e12ef0cf-12eb-4344-895b-51d5a5a988b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-net-sim-csp-L6",
+        "script_level.level_keys": [
+          "test-networks-internet-net-sim-csp-L6"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "4b3f4d6e-5f3d-44cb-a78e-c1041fc1c703"
       }
     },
     {

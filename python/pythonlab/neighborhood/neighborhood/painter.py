@@ -258,8 +258,7 @@ class Painter:
     detail = detail or {}
     detail['id'] = self.id
     signal_message = NeighborhoodSignalMessage(SignalMessageType.NEIGHBORHOOD, signal_key, detail)
-    neighborhood_tracker = NeighborhoodTracker(self.world)
-    signal_message.send(self.world.context_type, neighborhood_tracker._instance, is_boolean_message)
+    signal_message.send(self.world.context_type, NeighborhoodTracker(self.world), is_boolean_message)
 
   def _send_boolean_message(self, signal_key, result):
     """
