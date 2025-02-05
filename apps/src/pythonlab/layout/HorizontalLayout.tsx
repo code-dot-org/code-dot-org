@@ -17,13 +17,10 @@ const MIN_OUTPUT_HEIGHT = 120;
 const MIN_EDITOR_HEIGHT = 200;
 const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_OUTPUT_HEIGHT = 300;
-// The top Y coordinate of the panel. This includes the top header and the header
-// of the workspace, which is absolutely positioned.
+// The top Y coordinate of the panel. This is the height of the main page header.
 const PANEL_TOP_COORDINATE = 50;
 
 const HorizontalLayout: React.FunctionComponent = () => {
-  const layoutContainerRef = React.useRef<HTMLDivElement>(null);
-  const workspaceAndOutputContainerRef = React.useRef<HTMLDivElement>(null);
   const {
     position: infoPanelWidth,
     separatorProps: infoPanelSeparatorProps,
@@ -32,7 +29,6 @@ const HorizontalLayout: React.FunctionComponent = () => {
     axis: 'x',
     initial: INITIAL_INFO_PANEL_WIDTH,
     min: MIN_LEFT_PANEL_WIDTH,
-    containerRef: layoutContainerRef,
   });
   const [rightPanelWidth, setRightPanelWidth] = React.useState<
     number | undefined
@@ -49,7 +45,6 @@ const HorizontalLayout: React.FunctionComponent = () => {
     initial: INITIAL_OUTPUT_HEIGHT,
     min: MIN_OUTPUT_HEIGHT,
     reverse: true,
-    containerRef: workspaceAndOutputContainerRef,
   });
 
   useEffect(() => {
@@ -74,18 +69,14 @@ const HorizontalLayout: React.FunctionComponent = () => {
   }, [outputHeight]);
 
   return (
-    <div className={moduleStyles.layoutContainer} ref={layoutContainerRef}>
+    <div className={moduleStyles.layoutContainer}>
       <InfoPanel style={{width: infoPanelWidth}} />
       <ResizeBar
         isVertical={true}
         {...infoPanelSeparatorProps}
         isDragging={infoPanelDragging}
       />
-      <div
-        className={moduleStyles.flexColumn}
-        ref={workspaceAndOutputContainerRef}
-        style={{width: rightPanelWidth}}
-      >
+      <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
         <div style={{height: workspaceHeight}}>
           <Workspace className={moduleStyles.flexGrow} />
         </div>

@@ -15,8 +15,6 @@ const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_OUTPUT_WIDTH = 400;
 
 const VerticalLayout: React.FunctionComponent = () => {
-  const layoutContainerRef = React.useRef<HTMLDivElement>(null);
-  const outputContainerRef = React.useRef<HTMLDivElement>(null);
   const [infoPanelWidth, setInfoPanelWidth] = React.useState<number>(300);
   const [editorWidth, setEditorWidth] = React.useState<number | undefined>(
     undefined
@@ -30,7 +28,6 @@ const VerticalLayout: React.FunctionComponent = () => {
     axis: 'x',
     initial: INITIAL_INFO_PANEL_WIDTH,
     min: MIN_INFO_PANEL_WIDTH,
-    containerRef: layoutContainerRef,
   });
 
   const {
@@ -42,7 +39,6 @@ const VerticalLayout: React.FunctionComponent = () => {
     initial: INITIAL_OUTPUT_WIDTH,
     min: MIN_OUTPUT_WIDTH,
     reverse: true,
-    containerRef: outputContainerRef,
   });
 
   useEffect(() => {
@@ -78,7 +74,7 @@ const VerticalLayout: React.FunctionComponent = () => {
   }, [rawInfoPanelWidth, rawOutputWidth]);
 
   return (
-    <div className={moduleStyles.layoutContainer} ref={layoutContainerRef}>
+    <div className={moduleStyles.layoutContainer}>
       <InfoPanel
         style={{width: infoPanelWidth}}
         className={moduleStyles.flexGrow}
@@ -96,9 +92,7 @@ const VerticalLayout: React.FunctionComponent = () => {
         {...outputSeparatorProps}
         isDragging={outputDragging}
       />
-      <div ref={outputContainerRef}>
-        <Output width={outputWidth} className={moduleStyles.flexGrow} />
-      </div>
+      <Output width={outputWidth} className={moduleStyles.flexGrow} />
     </div>
   );
 };
