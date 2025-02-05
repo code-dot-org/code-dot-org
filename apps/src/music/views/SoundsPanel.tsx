@@ -325,6 +325,7 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
         id="sounds-panel"
         className={classNames(styles.soundsPanel)}
         aria-modal
+        role="dialog"
       >
         <div id="hidden-item" tabIndex={0} role="button" />
         {showSoundFilters && (
