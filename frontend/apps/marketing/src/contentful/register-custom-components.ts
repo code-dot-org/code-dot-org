@@ -12,6 +12,9 @@ import Heading, {
 import Paragraph, {
   ParagraphContentfulComponentDefinition,
 } from '@/components/paragraph';
+import Section, {
+  SectionContentfulComponentDefinition,
+} from '@/components/section';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 import {
@@ -35,6 +38,15 @@ defineComponents(
     {
       component: Paragraph,
       definition: ParagraphContentfulComponentDefinition,
+    },
+    {
+      component: Section,
+      definition: SectionContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+        wrapComponent: false,
+        children: true,
+      },
     },
     {
       component: Video,

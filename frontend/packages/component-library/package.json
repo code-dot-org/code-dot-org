@@ -204,6 +204,15 @@
       "import": "./dist/esm/radioButton/index.mjs",
       "require": "./dist/cjs/radioButton/index.js"
     },
+    "./section": {
+      "types": {
+        "import": "./dist/esm/section/index.d.mts",
+        "require": "./dist/cjs/section/index.d.ts"
+      },
+      "import": "./dist/esm/section/index.mjs",
+      "require": "./dist/cjs/section/index.js"
+    },
+    "./section/index.css": "./dist/esm/video/index.css",
     "./segmentedButtons": {
       "types": {
         "import": "./dist/esm/segmentedButtons/index.d.mts",
