@@ -30,6 +30,8 @@ const Output: React.FunctionComponent<OutputProps> = ({
     width,
   };
 
+  // When the width or height of the output is changed, re-fit the console to the
+  // available space and resize the visualization if necessary.
   const handleResize = useCallback(
     (
       desiredHeight: number | undefined,

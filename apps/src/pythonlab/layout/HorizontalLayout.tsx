@@ -21,6 +21,12 @@ const INITIAL_OUTPUT_HEIGHT = 300;
 const PANEL_TOP_COORDINATE = 50;
 
 const HorizontalLayout: React.FunctionComponent = () => {
+  const [rightPanelWidth, setRightPanelWidth] = React.useState<
+    number | undefined
+  >(undefined);
+  const [workspaceHeight, setWorkspaceHeight] = React.useState<
+    number | undefined
+  >(undefined);
   const {
     position: infoPanelWidth,
     separatorProps: infoPanelSeparatorProps,
@@ -30,12 +36,6 @@ const HorizontalLayout: React.FunctionComponent = () => {
     initial: INITIAL_INFO_PANEL_WIDTH,
     min: MIN_LEFT_PANEL_WIDTH,
   });
-  const [rightPanelWidth, setRightPanelWidth] = React.useState<
-    number | undefined
-  >(undefined);
-  const [workspaceHeight, setWorkspaceHeight] = React.useState<
-    number | undefined
-  >(undefined);
   const {
     position: outputHeight,
     separatorProps: outputSeparatorProps,
@@ -73,7 +73,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
       <InfoPanel style={{width: infoPanelWidth}} />
       <ResizeBar
         isVertical={true}
-        {...infoPanelSeparatorProps}
+        separatorProps={infoPanelSeparatorProps}
         isDragging={infoPanelDragging}
       />
       <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
@@ -83,7 +83,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
         />
         <ResizeBar
           isVertical={false}
-          {...outputSeparatorProps}
+          separatorProps={outputSeparatorProps}
           isDragging={outputDragging}
         />
         <Output

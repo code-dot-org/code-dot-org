@@ -38,9 +38,6 @@ type CodebridgeProps = {
   projectVersion: number;
   labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
-  layout?: {
-    [key: string]: React.ReactNode;
-  };
 };
 
 export const Codebridge = React.memo(
@@ -55,7 +52,6 @@ export const Codebridge = React.memo(
     projectVersion,
     labConfig,
     sendConsoleInput,
-    layout,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -80,12 +76,14 @@ export const Codebridge = React.memo(
         currentLayout = 'horizontal';
       }
       if (config.layoutComponents) {
+        // If we were provided layout components, use them directly.
         return {
           children: config.layoutComponents[currentLayout],
           style: undefined,
           className: undefined,
         };
       } else {
+        // Otherwise, get the components from the grid layout.
         const ComponentMap = {
           'file-browser': FileBrowser,
           'side-bar': SideBar,

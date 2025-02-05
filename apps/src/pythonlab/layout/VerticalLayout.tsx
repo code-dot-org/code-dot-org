@@ -20,6 +20,7 @@ const VerticalLayout: React.FunctionComponent = () => {
     undefined
   );
   const [outputWidth, setOutputWidth] = React.useState<number>(400);
+
   const {
     position: rawInfoPanelWidth,
     separatorProps: infoPanelSeparatorProps,
@@ -29,7 +30,6 @@ const VerticalLayout: React.FunctionComponent = () => {
     initial: INITIAL_INFO_PANEL_WIDTH,
     min: MIN_INFO_PANEL_WIDTH,
   });
-
   const {
     position: rawOutputWidth,
     separatorProps: outputSeparatorProps,
@@ -49,6 +49,7 @@ const VerticalLayout: React.FunctionComponent = () => {
     );
     setEditorWidth(adjustedEditorWidth);
 
+    // Second priority is output.
     const spaceForOutput = Math.max(
       window.innerWidth -
         MIN_INFO_PANEL_WIDTH -
@@ -59,6 +60,7 @@ const VerticalLayout: React.FunctionComponent = () => {
     const adjustedOutputWidth = Math.min(rawOutputWidth, spaceForOutput);
     setOutputWidth(adjustedOutputWidth);
 
+    // Info panel takes up remaining space, but won't go below the minimum width.
     const spaceForInfoPanel = Math.max(
       window.innerWidth -
         adjustedOutputWidth -
@@ -81,7 +83,7 @@ const VerticalLayout: React.FunctionComponent = () => {
       />
       <ResizeBar
         isVertical={true}
-        {...infoPanelSeparatorProps}
+        separatorProps={infoPanelSeparatorProps}
         isDragging={infoPanelDragging}
       />
       <Workspace
@@ -90,7 +92,7 @@ const VerticalLayout: React.FunctionComponent = () => {
       />
       <ResizeBar
         isVertical={true}
-        {...outputSeparatorProps}
+        separatorProps={outputSeparatorProps}
         isDragging={outputDragging}
       />
       <Output width={outputWidth} className={moduleStyles.flexShrink0} />

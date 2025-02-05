@@ -170,11 +170,6 @@ const PythonlabView: React.FunctionComponent = () => {
     }
   };
 
-  const layout = {
-    horizontal: <HorizontalLayout />,
-    vertical: <VerticalLayout />,
-  };
-
   return (
     <div className={moduleStyles.pythonlab}>
       {source && (
@@ -189,7 +184,6 @@ const PythonlabView: React.FunctionComponent = () => {
           projectVersion={projectVersion}
           labConfig={labConfig}
           sendConsoleInput={sendInput}
-          layout={layout}
         />
       )}
     </div>
