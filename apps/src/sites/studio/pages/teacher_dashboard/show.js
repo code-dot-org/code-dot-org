@@ -111,7 +111,6 @@ $(document).ready(function () {
     if (defaultScriptId) {
       store.dispatch(setScriptId(defaultScriptId));
     }
-
     return (
       <BrowserRouter basename={baseUrl}>
         <TeacherDashboard
