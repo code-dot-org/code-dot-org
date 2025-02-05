@@ -1,7 +1,4 @@
 import {ButtonProps} from '@code-dot-org/component-library/button';
-import CustomDropdown, {
-  _CustomDropdownOption,
-} from '@code-dot-org/component-library/dropdown/_CustomDropdown';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -14,7 +11,9 @@ import {
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
-import moduleStyles from '@code-dot-org/component-library/dropdown/customDropdown.module.scss';
+import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+
+import moduleStyles from './../customDropdown.module.scss';
 
 export interface ActionDropdownOption extends _CustomDropdownOption {
   onClick: () => void;
