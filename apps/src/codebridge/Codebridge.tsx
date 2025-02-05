@@ -23,7 +23,6 @@ import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import Workspace from './Workspace';
 import Output from './Workspace/Output';
-import WorkspaceAndOutput from './Workspace/WorkspaceAndOutput';
 
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
@@ -94,7 +93,6 @@ export const Codebridge = React.memo(
           'info-panel': config.Instructions || InfoPanel,
           workspace: Workspace,
           output: Output,
-          'workspace-and-output': WorkspaceAndOutput,
         };
         let gridLayout: string;
         let gridLayoutRows: string;

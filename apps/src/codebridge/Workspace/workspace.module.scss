@@ -47,14 +47,6 @@
   grid-template-columns: 156px auto;
 }
 
-.workspaceAndOutput {
-  height: 100%;
-  grid-area: workspace-and-output;
-  background-color: $light_black;
-  color: $white;
-  overflow: hidden;
-}
-
 .workspaceWarningArea {
   grid-column: span 2;
 }
