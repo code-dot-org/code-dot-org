@@ -120,6 +120,12 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               early music lab progressions - consider picking a newer library
               instead!
             </li>
+            <li>
+              The curriculum2024 library is currently just a staging ground for
+              sounds that we want to test out in scripts not intended for full
+              launch. Once those sounds are finalized, they will be put into the
+              launch2024 library in the appropriate form.
+            </li>
           </ul>
           <div>
             <SimpleDropdown
