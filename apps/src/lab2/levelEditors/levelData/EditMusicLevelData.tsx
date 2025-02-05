@@ -112,10 +112,15 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       />
       <CollapsibleSection headerContent="Library & Sounds">
         <div className={moduleStyles.section}>
-          <i>
-            Note that currently, all levels within a lesson must use the same
-            library.
-          </i>
+          <i>Tips for levelbuilders:</i>
+          <ul>
+            <li>Currently, only the launch2024 library supports Share/Remix</li>
+            <li>
+              The intro2024 library is no longer maintained but is still used in
+              early music lab progressions - consider picking a newer library
+              instead!
+            </li>
+          </ul>
           <div>
             <SimpleDropdown
               labelText="Selected Library"
