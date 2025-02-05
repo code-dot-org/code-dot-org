@@ -9,6 +9,8 @@ interface ResizeBarProps {
   isDragging: boolean;
 }
 
+export const RESIZE_BAR_SIZE_PX = 13;
+
 const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
   isVertical,
   isDragging,

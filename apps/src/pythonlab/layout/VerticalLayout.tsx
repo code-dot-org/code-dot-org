@@ -1,4 +1,4 @@
-import ResizeBar from '@codebridge/components/ResizeBar';
+import ResizeBar, {RESIZE_BAR_SIZE_PX} from '@codebridge/components/ResizeBar';
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
 import Output from '@codebridge/Workspace/Output';
@@ -10,6 +10,9 @@ import moduleStyles from './layout.module.scss';
 const MIN_INFO_PANEL_WIDTH = 200;
 const MIN_OUTPUT_WIDTH = 200;
 const MIN_EDITOR_WIDTH = 400;
+const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
+const INITIAL_INFO_PANEL_WIDTH = 300;
+const INITIAL_OUTPUT_WIDTH = 400;
 
 const VerticalLayout: React.FunctionComponent = () => {
   const layoutContainerRef = React.useRef<HTMLDivElement>(null);
@@ -25,7 +28,7 @@ const VerticalLayout: React.FunctionComponent = () => {
     isDragging: infoPanelDragging,
   } = useResizable({
     axis: 'x',
-    initial: 300,
+    initial: INITIAL_INFO_PANEL_WIDTH,
     min: MIN_INFO_PANEL_WIDTH,
     containerRef: layoutContainerRef,
   });
@@ -36,7 +39,7 @@ const VerticalLayout: React.FunctionComponent = () => {
     isDragging: outputDragging,
   } = useResizable({
     axis: 'x',
-    initial: 400,
+    initial: INITIAL_OUTPUT_WIDTH,
     min: MIN_OUTPUT_WIDTH,
     reverse: true,
     containerRef: outputContainerRef,
@@ -45,20 +48,26 @@ const VerticalLayout: React.FunctionComponent = () => {
   useEffect(() => {
     // Editor takes priority in terms of available space.
     const adjustedEditorWidth = Math.max(
-      window.innerWidth - rawInfoPanelWidth - rawOutputWidth - 26,
+      window.innerWidth - rawInfoPanelWidth - rawOutputWidth - TWO_RESIZE_BARS,
       MIN_EDITOR_WIDTH
     );
     setEditorWidth(adjustedEditorWidth);
 
     const spaceForOutput = Math.max(
-      window.innerWidth - MIN_INFO_PANEL_WIDTH - 26 - adjustedEditorWidth,
+      window.innerWidth -
+        MIN_INFO_PANEL_WIDTH -
+        TWO_RESIZE_BARS -
+        adjustedEditorWidth,
       MIN_OUTPUT_WIDTH
     );
     const adjustedOutputWidth = Math.min(rawOutputWidth, spaceForOutput);
     setOutputWidth(adjustedOutputWidth);
 
     const spaceForInfoPanel = Math.max(
-      window.innerWidth - MIN_OUTPUT_WIDTH - 26 - adjustedEditorWidth,
+      window.innerWidth -
+        MIN_OUTPUT_WIDTH -
+        TWO_RESIZE_BARS -
+        adjustedEditorWidth,
       MIN_INFO_PANEL_WIDTH
     );
     const adjustedInfoPanelWidth = Math.min(
