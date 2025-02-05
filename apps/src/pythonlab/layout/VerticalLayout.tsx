@@ -1,14 +1,14 @@
-import ResizeBar from '@codebridge/components/ResizerBar';
+import ResizeBar from '@codebridge/components/ResizeBar';
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
 import Output from '@codebridge/Workspace/Output';
 import React, {useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
-import moduleStyles from './horizontal-layout.module.scss';
+import moduleStyles from './layout.module.scss';
 
-const MIN_INFO_PANEL_WIDTH = 100;
-const MIN_CONSOLE_WIDTH = 200;
+const MIN_INFO_PANEL_WIDTH = 200;
+const MIN_OUTPUT_WIDTH = 200;
 const MIN_EDITOR_WIDTH = 400;
 
 const VerticalLayout: React.FunctionComponent = () => {
@@ -37,26 +37,29 @@ const VerticalLayout: React.FunctionComponent = () => {
   } = useResizable({
     axis: 'x',
     initial: 400,
-    min: MIN_CONSOLE_WIDTH,
+    min: MIN_OUTPUT_WIDTH,
     reverse: true,
     containerRef: outputContainerRef,
   });
 
   useEffect(() => {
+    // Editor takes priority in terms of available space.
     const adjustedEditorWidth = Math.max(
       window.innerWidth - rawInfoPanelWidth - rawOutputWidth - 26,
       MIN_EDITOR_WIDTH
     );
     setEditorWidth(adjustedEditorWidth);
+
     const spaceForOutput = Math.max(
-      window.innerWidth - rawInfoPanelWidth - 26 - adjustedEditorWidth,
-      MIN_CONSOLE_WIDTH
+      window.innerWidth - MIN_INFO_PANEL_WIDTH - 26 - adjustedEditorWidth,
+      MIN_OUTPUT_WIDTH
     );
     const adjustedOutputWidth = Math.min(rawOutputWidth, spaceForOutput);
     setOutputWidth(adjustedOutputWidth);
+
     const spaceForInfoPanel = Math.max(
-      window.innerWidth - adjustedOutputWidth - 26 - adjustedEditorWidth,
-      MIN_EDITOR_WIDTH
+      window.innerWidth - MIN_OUTPUT_WIDTH - 26 - adjustedEditorWidth,
+      MIN_INFO_PANEL_WIDTH
     );
     const adjustedInfoPanelWidth = Math.min(
       rawInfoPanelWidth,
@@ -74,7 +77,7 @@ const VerticalLayout: React.FunctionComponent = () => {
         isDragging={infoPanelDragging}
       />
       <div style={{width: editorWidth}}>
-        <Workspace className={moduleStyles.workspace} />
+        <Workspace />
       </div>
       <ResizeBar
         isVertical={true}
@@ -82,7 +85,7 @@ const VerticalLayout: React.FunctionComponent = () => {
         isDragging={outputDragging}
       />
       <div ref={outputContainerRef}>
-        <Output className={moduleStyles.output} width={outputWidth} />
+        <Output width={outputWidth} />
       </div>
     </div>
   );

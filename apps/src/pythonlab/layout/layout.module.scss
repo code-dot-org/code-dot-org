@@ -5,20 +5,16 @@
   width: 100%;
 }
 
-.workspaceAndOutput {
+.flexColumn {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.infoPanel {
-  flex-shrink: 0;
-}
-
-.workspace {
+.flexGrow {
   flex-grow: 1;
 }
 
-.output {
+.flexShrink0 {
   flex-shrink: 0;
 }

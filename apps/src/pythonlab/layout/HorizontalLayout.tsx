@@ -1,11 +1,12 @@
-import ResizeBar from '@codebridge/components/ResizerBar';
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
 import Output from '@codebridge/Workspace/Output';
 import React, {useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
-import moduleStyles from './horizontal-layout.module.scss';
+import ResizeBar from '@cdo/apps/codebridge/components/ResizeBar';
+
+import moduleStyles from './layout.module.scss';
 
 const HorizontalLayout: React.FunctionComponent = () => {
   const layoutContainerRef = React.useRef<HTMLDivElement>(null);
@@ -57,19 +58,19 @@ const HorizontalLayout: React.FunctionComponent = () => {
         isDragging={infoPanelDragging}
       />
       <div
-        className={moduleStyles.workspaceAndOutput}
+        className={moduleStyles.flexColumn}
         ref={workspaceAndOutputContainerRef}
         style={{width: rightPanelWidth}}
       >
         <div style={{height: workspaceHeight}}>
-          <Workspace className={moduleStyles.workspace} />
+          <Workspace className={moduleStyles.flexGrow} />
         </div>
         <ResizeBar
           isVertical={false}
           {...outputSeparatorProps}
           isDragging={outputDragging}
         />
-        <Output className={moduleStyles.output} height={outputHeight} />
+        <Output className={moduleStyles.flexShrink0} height={outputHeight} />
       </div>
     </div>
   );
