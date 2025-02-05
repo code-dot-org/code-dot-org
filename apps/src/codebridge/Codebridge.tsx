@@ -15,6 +15,7 @@ import {
   OnRunFunction,
   SendConsoleInputFunction,
 } from '@codebridge/types';
+import classNames from 'classnames';
 import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
 import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
@@ -24,7 +25,7 @@ import Workspace from './Workspace';
 import Output from './Workspace/Output';
 import WorkspaceAndOutput from './Workspace/WorkspaceAndOutput';
 
-import moduleStyles from './styles/cdoIDE.module.scss';
+import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
 
 type CodebridgeProps = {
@@ -83,6 +84,7 @@ export const Codebridge = React.memo(
         return {
           children: config.layoutComponents[currentLayout],
           style: undefined,
+          className: undefined,
         };
       } else {
         const ComponentMap = {
@@ -136,6 +138,7 @@ export const Codebridge = React.memo(
             gridTemplateRows: gridLayoutRows,
             gridTemplateColumns: gridLayoutColumns,
           },
+          className: moduleStyles.codebridgeGridContainer,
         };
       }
     }, [
@@ -164,7 +167,10 @@ export const Codebridge = React.memo(
         }}
       >
         <div
-          className={moduleStyles['cdoide-container']}
+          className={classNames(
+            moduleStyles.codebridgeContainer,
+            innerLayout.className
+          )}
           style={innerLayout.style}
         >
           {innerLayout.children}
