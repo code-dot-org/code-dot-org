@@ -1,6 +1,6 @@
 require_relative '../test_helper'
 require 'uri'
-require 'cdo/github'  # Adjust this if needed to correctly require the GitHub module
+require 'cdo/github'
 
 class GitHubTest < Minitest::Test
   TEST_REPO = "my-org/my-repo"
