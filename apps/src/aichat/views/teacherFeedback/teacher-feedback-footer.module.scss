@@ -1,28 +1,43 @@
-@import 'color.scss';
-@import 'font.scss';
-@import '@cdo/apps/componentLibrary/typography/typography.module';
+@import '@cdo/apps/componentLibrary/common/styles/colors.css';
+
+@mixin icon-button($background, $selected, $active) {
+  i {
+    color: var(--text-neutral-tertiary);
+  }
+
+  &.selected i, &:hover i {
+    color: $selected;
+  }
+
+  &:hover {
+    background-color: $background;
+  }
+
+  &:active i {
+    color: $active;
+  }
+}
 
 .teacherFeedbackContainer {
   display: flex;
   align-items: center;
-  gap: 4px;
   justify-content: flex-end;
-
-  .button i {
-    color: $light-gray-600;
+  
+  .icon-button-affirmative {
+    @include icon-button(var(--background-success-light), var(--text-success-primary), var(--text-success-secondary));
   }
 
-  .buttonAffirmative i {
-    color: $light_affirmative_500;
+  .icon-button-negative {
+    @include icon-button(var(--background-error-light), var(--text-error-primary), var(--text-error-secondary));
   }
 
-  .buttonNegative i {
-    color: $light_negative_500;
+  .icon-button-gray {
+    @include icon-button(var(--background-neutral-quaternary), var(--text-neutral-tertiary), var(--text-neutral-secondary));
   }
 }
 
-.assistantFeedback {
-  flex-direction: row-reverse;
+.leftAlign {
+  justify-content: flex-start;
 }
 
 @keyframes fade-in {

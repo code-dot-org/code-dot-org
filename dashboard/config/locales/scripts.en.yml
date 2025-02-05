@@ -19813,6 +19813,8 @@ en:
               name: 'Lesson 14: Pixels of Me Project'
             lesson-20:
               name: 'Two-Way and Nested Selection (Lesson 13) '
+            lesson-21:
+              name: Decomposing Adventure Game (Lesson 12)
           lesson_groups:
             lessonGroup-2:
               display_name: console-only levels

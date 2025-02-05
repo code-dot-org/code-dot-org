@@ -12,8 +12,8 @@
     "url": "https://docs.google.com/spreadsheets/d/1ArYkmUcYwbXz-hQkyIon2t87WZbLEOFfUaOFj5jZdE4",
     "display_name": "Scenario C",
     "bubble_choice_description": "The librarian is planning themed displays for different reading interests.",
-    "thumbnail_url": "https://images.code.org/e7322f03e2f04434d2a7c0b09272d047-27a768c9be4aa3b57785dc670f8c53aa-updateSign.png"
+    "thumbnail_url": "https://images.code.org/2aa25f3b4abc94ae2882effb4d67ba03-Pasted Graphic 50.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-23T19:48:37.172+00:00\",\"changed\":[\"cloned from \\\"Computing Systems - Library Books Dataset Scenario B\\\"\"],\"cloned_from\":\"Computing Systems - Library Books Dataset Scenario B\"},{\"changed_at\":\"2025-01-23 20:05:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:49:30 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-23T19:48:37.172+00:00\",\"changed\":[\"cloned from \\\"Computing Systems - Library Books Dataset Scenario B\\\"\"],\"cloned_from\":\"Computing Systems - Library Books Dataset Scenario B\"},{\"changed_at\":\"2025-01-23 20:05:38 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:49:30 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-03 22:38:50 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </ExternalLink>

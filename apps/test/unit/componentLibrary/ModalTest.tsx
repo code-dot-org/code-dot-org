@@ -1,9 +1,8 @@
+import Modal, {ModalProps} from '@code-dot-org/component-library/modal';
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 
 import '@testing-library/jest-dom';
-
-import Modal, {ModalProps} from '@cdo/apps/componentLibrary/modal';
 
 describe('Modal Component', () => {
   const defaultProps: ModalProps = {
