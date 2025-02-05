@@ -12,7 +12,6 @@ import {
 import classNames from 'classnames';
 import React from 'react';
 
-import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
@@ -223,7 +222,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     return (
       <div className={style.endPage}>
         <div className={style.endPageTop}>
-          <BackToFrontConfetti active={true} className={style.confetti} />
           <img
             src={aiBotConfetti}
             className={style.botConfetti}
