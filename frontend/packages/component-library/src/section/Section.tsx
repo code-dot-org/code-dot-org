@@ -27,13 +27,13 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
 
 /**
  * ## Production-ready Checklist:
- *  * (✘) implementation of component approved by design team;
- *  * (✘) has storybook, covered with stories and documentation;
- *  * (✘) has tests: test every prop, every state and every interaction that's js related;
+ *  * (✔) implementation of component approved by design team;
+ *  * (✔) has storybook, covered with stories and documentation;
+ *  * (✔) has tests: test every prop, every state and every interaction that's js related;
  *  * (see ./__tests__/Section.test.tsx)
- *  * (✘) passes accessibility checks;
+ *  * (✔) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ### Status: ```Ready for dev```
  *
  * Design System: Section Component.
  * Acts as a container for section content in the Contentful CMS.
