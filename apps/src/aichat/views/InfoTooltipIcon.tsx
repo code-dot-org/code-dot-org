@@ -1,8 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  TooltipProps,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React from 'react';
-
-import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 import styles from './info-tooltip-icon.module.scss';
 
