@@ -12,4 +12,6 @@ Creating a function lets you make your own blocks! There are two parts to a func
 * The single green block itself that you use, or call, to run the function you created.  
 
 Prepare to get familiar with functions, learn how to edit them, and create your own!
+
+*Note: This level used to include embedded Blockly blocks, but support for that feature was [deprecated](https://github.com/code-dot-org/code-dot-org/pull/63723) in 2025.* 
 MARKDOWN
