@@ -56,22 +56,6 @@ const defaultProject: ProjectSources = {
   },
 };
 
-const labeledGridLayouts = {
-  horizontal: {
-    gridLayoutRows: '1fr',
-    gridLayoutColumns: '340px minmax(0, 1fr)',
-    gridLayout: `
-  "info-panel workspace-and-output"
-  `,
-  },
-  vertical: {
-    gridLayoutRows: '1fr',
-    gridLayoutColumns: '340px minmax(0, 1fr) 400px',
-    gridLayout: `
-    "info-panel workspace output"
-    `,
-  },
-};
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
   languageMapping: pythonlabLangMapping,
@@ -103,7 +87,6 @@ const defaultConfig: ConfigType = {
     },
   ],
 
-  labeledGridLayouts,
   activeLayout: 'horizontal',
   showFileBrowser: true,
   validMimeTypes: ['text/'],

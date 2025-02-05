@@ -38,7 +38,7 @@ const SwapLayoutDropdown: React.FunctionComponent = () => {
     });
   }, [appName, config, setConfig]);
 
-  if (!config.activeLayout || !config.labeledGridLayouts) {
+  if (!config.activeLayout) {
     return null;
   }
 
