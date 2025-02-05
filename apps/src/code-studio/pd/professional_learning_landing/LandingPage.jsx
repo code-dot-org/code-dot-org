@@ -145,7 +145,6 @@ function LandingPage({
   // Load PL section into redux and fetch applicable workshop info
   const dispatch = useDispatch();
   useEffect(() => {
-    setUpWorkshopEnrollSuccessContent();
     dispatch(asyncLoadSectionData());
     dispatch(asyncLoadCoteacherInvite());
 

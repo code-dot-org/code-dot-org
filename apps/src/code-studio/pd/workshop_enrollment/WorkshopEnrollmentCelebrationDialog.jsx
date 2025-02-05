@@ -2,7 +2,6 @@ import Button from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import LinkButton from '@cdo/apps/componentLibrary/button/LinkButton';
 import Typography, {
   Heading2,
   Heading3,
@@ -253,7 +252,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                     <BodyTwoText>{generateTimeText(session)}</BodyTwoText>
                   </td>
                   <td>
-                    <LinkButton
+                    <Button
                       text={i18n.enrollmentCelebrationAddToCalendarButton()}
                       ariaLabel={i18n.addToCalendarType({
                         calendar_type: multipleSessionDialogType,
@@ -317,18 +316,25 @@ export default function WorkshopEnrollmentCelebrationDialog({
                     {i18n.addToYourCalendar()}
                   </Typography>
                   <div className={style.calendarButtons}>
+                    <Button
+                      text={'Apple'}
+                      ariaLabel={i18n.addToCalendarType({
+                        calendar_type: 'Apple',
+                      })}
+                      type={'secondary'}
+                      color={'black'}
+                      iconLeft={{
+                        iconName: 'brands fa-apple',
+                        iconStyle: 'light',
+                      }}
+                      target="_blank"
+                      onClick={onClickAddToCalendar(
+                        workshopSessionInfo,
+                        'Apple'
+                      )}
+                    />
                     {hasMultipleSessions ? (
                       <>
-                        <Button
-                          text={'Apple'}
-                          type={'secondary'}
-                          color={'black'}
-                          iconLeft={{
-                            iconName: 'brands fa-apple',
-                            iconStyle: 'light',
-                          }}
-                          onClick={() => setMultipleSessionDialogType('Apple')}
-                        />
                         <Button
                           text={'Google'}
                           type={'secondary'}
