@@ -1,5 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
-import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpledropdown';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import Slider, {SliderProps} from '@code-dot-org/component-library/slider';
 import classNames from 'classnames';
 import React, {useState, useMemo} from 'react';
