@@ -361,25 +361,6 @@ export default function WorkshopEnrollmentCelebrationDialog({
                     ) : (
                       <>
                         <Button
-                          text={'Apple'}
-                          ariaLabel={i18n.addToCalendarType({
-                            calendar_type: 'Apple',
-                          })}
-                          type={'secondary'}
-                          color={'black'}
-                          iconLeft={{
-                            iconName: 'brands fa-apple',
-                            iconStyle: 'light',
-                          }}
-                          target="_blank"
-                          onClick={() =>
-                            onClickAddToCalendar(
-                              workshopSessionInfo[0],
-                              'Apple'
-                            )
-                          }
-                        />
-                        <Button
                           text={'Google'}
                           ariaLabel={i18n.addToCalendarType({
                             calendar_type: 'Google',
