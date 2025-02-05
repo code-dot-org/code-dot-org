@@ -1,7 +1,8 @@
+import Button from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
+import LinkButton from '@cdo/apps/componentLibrary/button/LinkButton';
 import Typography, {
   Heading2,
   Heading3,
@@ -17,32 +18,99 @@ import style from '@cdo/apps/code-studio/pd/professional_learning_landing/landin
 
 const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
 
+const MonthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+// Ensures the given value is two digits long (padded with a '0' if necessary)
+// so that time intervals are always two digits long.
+const zeroPad = value => {
+  return value.toString().padStart(2, '0');
+};
+
+const generateDateText = session => {
+  const date = new Date(session.start);
+  return `${
+    MonthNames[date.getMonth()]
+  } ${date.getDate()}, ${date.getFullYear()}`;
+};
+
+const generateTimeText = session => {
+  const start = new Date(session.start);
+  const end = new Date(session.end);
+
+  const startTimeText = start
+    .toLocaleString('utc', {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+    })
+    .replaceAll(' ', '');
+  const endTimeText = end
+    .toLocaleString('utc', {
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+    })
+    .replaceAll(' ', '');
+
+  return `${startTimeText} - ${endTimeText}`;
+};
+
 export const buildAppleCalendarLink = (
-  session,
+  workshopSessions,
   workshopTitle,
   workshopLocation
 ) => {
-  const date = `${session.year}${session.month}${session.day}`;
-  const startTime = `${date}T${session.start_hour}${session.start_min}00`;
-  const endTime = `${date}T${session.end_hour}${session.end_min}00`;
-
-  const icsFileContent = [
+  let icsFileContent = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'CALSCALE:GREGORIAN',
-    `PRODID:${workshopTitle}${startTime}/ics`,
-    'BEGIN:VEVENT',
-    `DTSTAMP:${startTime}`,
-    `UID:${workshopTitle}${startTime}`,
-    `DTSTART:${startTime}`,
-    `DTEND:${endTime}`,
-    `SUMMARY:${workshopTitle}`,
-    `LOCATION:${workshopLocation}`,
-    'END:VEVENT',
-    'END:VCALENDAR',
-  ].join('\n');
+    `PRODID:${workshopTitle}${workshopSessions[0].start}/ics`,
+  ];
 
-  const blob = new Blob([icsFileContent], {
+  workshopSessions.forEach(session => {
+    const start = new Date(session.start);
+    const end = new Date(session.end);
+    // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
+    // as January, so the month needs to be offset by 1.
+    const date = `${start.getFullYear()}${zeroPad(
+      start.getMonth() + 1
+    )}${zeroPad(start.getDate())}`;
+    const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
+      start.getMinutes()
+    )}00`;
+    const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
+      end.getMinutes()
+    )}00`;
+
+    icsFileContent.push(
+      'BEGIN:VEVENT',
+      `DTSTAMP:${startTime}`,
+      `UID:${workshopTitle}${startTime}`,
+      `DTSTART:${startTime}`,
+      `DTEND:${endTime}`,
+      `SUMMARY:${workshopTitle}`,
+      `LOCATION:${workshopLocation}`,
+      'END:VEVENT'
+    );
+  });
+
+  icsFileContent.push('END:VCALENDAR');
+  const icsFileAsString = icsFileContent.join('\n');
+
+  const blob = new Blob([icsFileAsString], {
     type: 'text/calendar;charset=utf-8',
   });
   return URL.createObjectURL(blob);
@@ -53,15 +121,25 @@ export const buildGoogleCalendarLink = (
   workshopTitle,
   workshopLocation
 ) => {
-  const date = `${session.year}${session.month}${session.day}`;
-  const startTime = `${date}T${session.start_hour}${session.start_min}00`;
-  const endTime = `${date}T${session.end_hour}${session.end_min}00`;
+  const start = new Date(session.start);
+  const end = new Date(session.end);
+  // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
+  // as January, so the month needs to be offset by 1.
+  const date = `${start.getFullYear()}${zeroPad(start.getMonth() + 1)}${zeroPad(
+    start.getDate()
+  )}`;
+  const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
+    start.getMinutes()
+  )}00`;
+  const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
+    end.getMinutes()
+  )}00`;
 
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
     workshopTitle
   )}&location=${encodeURIComponent(
     workshopLocation
-  )}&dates=${startTime}/${endTime}`;
+  )}&dates=${encodeURIComponent(startTime)}/${encodeURIComponent(endTime)}`;
 };
 
 export const buildOutlookCalendarLink = (
@@ -69,15 +147,27 @@ export const buildOutlookCalendarLink = (
   workshopTitle,
   workshopLocation
 ) => {
-  const date = `${session.year}-${session.month}-${session.day}`;
-  const startTime = `${date}T${session.start_hour}:${session.start_min}:00`;
-  const endTime = `${date}T${session.end_hour}:${session.end_min}:00`;
+  const start = new Date(session.start);
+  const end = new Date(session.end);
+  // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
+  // as January, so the month needs to be offset by 1.
+  const date = `${start.getFullYear()}-${zeroPad(
+    start.getMonth() + 1
+  )}-${zeroPad(start.getDate())}`;
+  const startTime = `${date}T${zeroPad(start.getHours())}:${zeroPad(
+    start.getMinutes()
+  )}:00`;
+  const endTime = `${date}T${zeroPad(end.getHours())}:${zeroPad(
+    end.getMinutes()
+  )}:00`;
 
   return `https://outlook.live.com/calendar/action/compose?rru=addevent&subject=${encodeURIComponent(
     workshopTitle
   )}&location=${encodeURIComponent(
     workshopLocation
-  )}&startdt=${startTime}&enddt=${endTime}`;
+  )}&startdt=${encodeURIComponent(startTime)}&enddt=${encodeURIComponent(
+    endTime
+  )}`;
 };
 
 export default function WorkshopEnrollmentCelebrationDialog({
@@ -144,10 +234,10 @@ export default function WorkshopEnrollmentCelebrationDialog({
           <table>
             <thead>
               <tr>
-                <th>
+                <th className={style.calendarTableHeaderCell}>
                   <Heading6>{i18n.date()}</Heading6>
                 </th>
-                <th>
+                <th className={style.calendarTableHeaderCell}>
                   <Heading6>{i18n.time()}</Heading6>
                 </th>
                 <th />
@@ -157,13 +247,13 @@ export default function WorkshopEnrollmentCelebrationDialog({
               {workshopSessionInfo.map(session => (
                 <tr key={`session-${session.id}`}>
                   <td>
-                    <BodyTwoText>{session.date_text}</BodyTwoText>
+                    <BodyTwoText>{generateDateText(session)}</BodyTwoText>
                   </td>
                   <td>
-                    <BodyTwoText>{session.time_text}</BodyTwoText>
+                    <BodyTwoText>{generateTimeText(session)}</BodyTwoText>
                   </td>
                   <td>
-                    <Button
+                    <LinkButton
                       text={i18n.enrollmentCelebrationAddToCalendarButton()}
                       ariaLabel={i18n.addToCalendarType({
                         calendar_type: multipleSessionDialogType,
@@ -341,6 +431,12 @@ export default function WorkshopEnrollmentCelebrationDialog({
 WorkshopEnrollmentCelebrationDialog.propTypes = {
   workshopTitle: PropTypes.string,
   workshopLocation: PropTypes.string,
-  workshopSessionInfo: PropTypes.arrayOf(PropTypes.object),
+  workshopSessionInfo: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      start: PropTypes.string.isRequired,
+      end: PropTypes.string.isRequired,
+    })
+  ),
   onClose: PropTypes.func,
 };

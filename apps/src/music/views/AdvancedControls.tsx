@@ -1,7 +1,7 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {Heading5} from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 

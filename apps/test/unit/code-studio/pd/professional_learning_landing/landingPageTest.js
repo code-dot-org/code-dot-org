@@ -46,26 +46,14 @@ const TEST_WORKSHOP = {
 
 const TEST_WORKSHOP_SESSIONS = [
   {
-    year: '2030',
-    month: '02',
-    day: '03',
-    start_hour: '09',
-    start_min: '30',
-    end_hour: '14',
-    end_min: '00',
-    time_text: '9:30AM - 2:00PM',
-    date_text: 'February 3, 2025',
+    id: 1,
+    start: '2025-01-23 09:00:00',
+    end: '2025-01-23 14:00:00',
   },
   {
-    year: '2030',
-    month: '02',
-    day: '04',
-    start_hour: '09',
-    start_min: '30',
-    end_hour: '14',
-    end_min: '00',
-    time_text: '9:30AM - 2:00PM',
-    date_text: 'February 4, 2025',
+    id: 2,
+    start: '2025-01-24 09:00:00',
+    end: '2025-01-24 14:00:00',
   },
 ];
 
@@ -453,8 +441,14 @@ describe('LandingPage', () => {
   });
 
   it('page shows success dialog stating workshop course when redirected here from successful non-BYOW enrollment', () => {
+    window.URL.createObjectURL = () => 'testCreateObjectURL';
+
     const workshopCourse = 'TEST COURSE';
     sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify([TEST_WORKSHOP_SESSIONS[0]])
+    );
 
     renderDefault();
 
@@ -467,10 +461,16 @@ describe('LandingPage', () => {
   });
 
   it('page shows success dialog stating workshop name when redirected here from successful BYOW enrollment', () => {
+    window.URL.createObjectURL = () => 'testCreateObjectURL';
+
     const workshopCourse = 'TEST COURSE';
     const workshopName = 'TEST NAME';
     sessionStorage.setItem('workshopCourse', workshopCourse);
     sessionStorage.setItem('workshopName', workshopName);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify([TEST_WORKSHOP_SESSIONS[0]])
+    );
 
     renderDefault();
 
@@ -504,20 +504,21 @@ describe('LandingPage', () => {
     screen.getByText(i18n.addToYourCalendar());
 
     // Add to Apple calendar button has expected download .ics file link
-    const expectedAppleCalendarDownload = buildAppleCalendarLink(
-      workshopSession,
+    const appleCalendarDownloadLink = screen
+      .getByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Apple',
+        })
+      )
+      .getAttribute('href');
+    const expectedAppleCalendarDownloadLink = buildAppleCalendarLink(
+      [workshopSession],
       workshopCourse,
       workshopLocation
     );
-    expect(
-      screen
-        .getByLabelText(
-          i18n.addToCalendarType({
-            calendar_type: 'Apple',
-          })
-        )
-        .getAttribute('href')
-    ).toBe(expectedAppleCalendarDownload);
+    expect(appleCalendarDownloadLink).toStrictEqual(
+      expectedAppleCalendarDownloadLink
+    );
 
     // Add to Google calendar button has expected link to add event to calendar
     const expectedGoogleCalendarLink = buildGoogleCalendarLink(
@@ -579,43 +580,28 @@ describe('LandingPage', () => {
     );
     screen.getByText(i18n.addToYourCalendar());
 
-    // Calendar buttons are not links
-    expect(screen.queryByRole('link', {name: 'Apple'})).toBe(null);
+    // Google and Outlook Calendar buttons are not links if there are multiple sessions
     expect(screen.queryByRole('link', {name: 'Google'})).toBe(null);
     expect(screen.queryByRole('link', {name: 'Outlook'})).toBe(null);
 
-    // Can open dialog to add multiple sessions to Apple calendar
-    fireEvent.click(screen.getByRole('button', {name: 'Apple'}));
-
-    screen.getByText(i18n.enrollmentCelebrationAddToCalendarTitle());
-    const appleCalendarDownloadLinks = screen
-      .getAllByLabelText(
+    // Apple calendar button is link to download .ics file with multiple sessions
+    const appleCalendarDownloadLink = screen
+      .getByLabelText(
         i18n.addToCalendarType({
           calendar_type: 'Apple',
         })
       )
-      .map(button => {
-        return button.getAttribute('href');
-      });
-    const expectedAppleCalendarDownloadLinks = TEST_WORKSHOP_SESSIONS.map(
-      session => {
-        return buildAppleCalendarLink(
-          session,
-          workshopCourse,
-          workshopLocation
-        );
-      }
+      .getAttribute('href');
+    const expectedAppleCalendarDownloadLink = buildAppleCalendarLink(
+      TEST_WORKSHOP_SESSIONS,
+      workshopCourse,
+      workshopLocation
     );
-    expect(appleCalendarDownloadLinks).toStrictEqual(
-      expectedAppleCalendarDownloadLinks
+    expect(appleCalendarDownloadLink).toStrictEqual(
+      expectedAppleCalendarDownloadLink
     );
 
-    // Can close the Apple calendar dialog with the 'Change calendar' button and open the Google calendar dialog
-    fireEvent.click(
-      screen.getByRole('button', {
-        name: i18n.enrollmentCelebrationChangeCalendarButton(),
-      })
-    );
+    // Can open the Google calendar dialog
     fireEvent.click(screen.getByRole('button', {name: 'Google'}));
 
     screen.getByText(i18n.enrollmentCelebrationAddToCalendarTitle());
@@ -668,7 +654,6 @@ describe('LandingPage', () => {
     fireEvent.click(
       screen.getAllByText(i18n.enrollmentCelebrationCallToAction())[0]
     );
-
     expect(screen.queryByText(i18n.enrollmentCelebrationTitle())).toBe(null);
     expect(
       screen.queryByText(i18n.enrollmentCelebrationAddToCalendarTitle())

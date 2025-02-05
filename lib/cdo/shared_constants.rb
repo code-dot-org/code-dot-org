@@ -44,7 +44,13 @@ module SharedConstants
 
   USER_LEVEL_INTERACTIONS = OpenStruct.new(
     {
+      click_continue: "click_continue",
+      click_finish: "click_finish",
       click_help_and_tips: "click_help_and_tips",
+      click_keep_working: "click_keep_working",
+      click_run: "click_run",
+      click_submit: "click_submit",
+      click_validate: "click_validate",
     }
   ).freeze
 
@@ -731,7 +737,7 @@ module SharedConstants
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
   AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
-  AICHAT_SAFETY_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   # These reflect the 'status' of an AI Interaction,
   # and are used in both AI Tutor and AI Chat.
@@ -792,7 +798,8 @@ module SharedConstants
     BIOMISTRAL: "gen-ai-biomistral-7b",
     MISTRAL: "gen-ai-mistral-7b-inst-v01",
     KAREN: "gen-ai-karen-creative-mistral-7b",
-    PIRATE: "gen-ai-mistral-pirate-7b"
+    PIRATE: "gen-ai-mistral-pirate-7b",
+    CHATGPT: "gpt-4o-mini",
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze

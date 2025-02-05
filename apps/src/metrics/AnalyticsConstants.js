@@ -110,6 +110,9 @@ const EVENTS = {
   WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
     'Workshop Add Session to Calendar Clicked',
 
+  // Workshop session attendance
+  WORKSHOP_ATTENDANCE_MARKED_EVENT: 'Workshop Attendance Marked',
+
   // PD Application flow
   TEACHER_APP_VISITED_EVENT: '6-12 Teacher Application Visited',
   PAGE_CHANGED_EVENT: 'Page Changed',

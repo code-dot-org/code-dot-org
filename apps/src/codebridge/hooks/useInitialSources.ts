@@ -51,6 +51,9 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     state => state.lab.levelProperties?.serializedMaze
   );
   const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
+  );
 
   const generateProjectSourceFromStartSource = useCallback(
     (startCode: MultiFileSource) => {
@@ -122,6 +125,10 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     if (isStartMode) {
       return startSources;
     }
+    if (isPredictLevel) {
+      // Predict levels never use sources loaded from the server, only the start sources.
+      return templateSources || startSources;
+    }
     if (isEditingExemplar || isViewingExemplar) {
       // If we are viewing exemplars sources and have no exemplar, we show a fallback
       // page from LabViewsRenderer. We fall back to template sources, if they exist,
@@ -142,6 +149,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     isViewingExemplar,
     labInitialSources,
     exemplarSource,
+    isPredictLevel,
   ]);
 
   return {

@@ -3530,7 +3530,7 @@ exports.install = function (blockly, blockInstallOptions) {
     );
 
     var nextBlock = this.nextConnection && this.nextConnection.targetBlock();
-    var nextCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+    var nextCode = Blockly.JavaScript.blockToCode(nextBlock);
     nextCode = Blockly.Generator.prefixLines(
       `${varName} = value;\n${nextCode}`,
       '  '

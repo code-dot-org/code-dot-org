@@ -235,7 +235,9 @@ class CoursesControllerTest < ActionController::TestCase
   test "show: redirect to latest stable version in course family and language for student" do
     csp_2017 = create :unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     csp1_2017 = create(:script, name: 'csp1-2017', supported_locales: ['en-US', 'es-MX'])
+    csp2_2017 = create(:script, name: 'csp2-2017', supported_locales: ['en-US', 'es-MX'])
     create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    create :unit_group_unit, unit_group: csp_2017, script: csp2_2017, position: 2
     csp_2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     csp1_2018 = create(:script, name: 'csp1-2018', supported_locales: ['en-US'])
     create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
@@ -362,6 +364,14 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
+  test "show: redirect to unit for single-unit course" do
+    single_unit_course = create :single_unit_course
+
+    sign_in create(:teacher)
+    get :show, params: {course_name: single_unit_course.name}
+    assert_redirected_to script_path(single_unit_course.default_units.first)
+  end
+
   test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard if course is in a section" do
     experiment_course = create :unit_group, name: 'experiment-course', family_name: 'experiment-course', version_year: '2024', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     experiment_teacher = create :teacher
@@ -372,6 +382,18 @@ class CoursesControllerTest < ActionController::TestCase
 
     get :show, params: {course_name: 'experiment-course'}
     assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}"
+  end
+
+  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard unit overview if single-unit course is in a section" do
+    experiment_single_unit_course = create :single_unit_course
+    experiment_teacher = create :teacher
+    experiment_section = create :section, user: experiment_teacher, unit_group: experiment_single_unit_course
+    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
+
+    sign_in experiment_teacher
+
+    get :show, params: {course_name: experiment_single_unit_course.name}
+    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_single_unit_course.default_units.first.name}"
   end
 
   no_access_msg = "You don&#39;t have access to this course."
@@ -583,44 +605,6 @@ class CoursesControllerTest < ActionController::TestCase
     default_unit_group_units = UnitGroup.find_by_name('csp').default_unit_group_units
     assert_equal 2, default_unit_group_units.length
     assert_equal ['unit1', 'unit2'], default_unit_group_units.map(&:script).map(&:name)
-
-    assert_response :success
-  end
-
-  test "update: persists changes to alternate_unit_group_units" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :unit_group, name: 'csp'
-    create :script, name: 'unit1'
-    create :script, name: 'unit2'
-    create :script, name: 'unit2-alt'
-    create :script, name: 'unit3'
-
-    post :update, params: {
-      course_name: 'csp',
-      scripts: ['unit1', 'unit2', 'unit3'],
-      alternate_units: [
-        {
-          experiment_name: 'my_experiment',
-          alternate_script: 'unit2-alt',
-          default_script: 'unit2'
-        }
-      ]
-    }
-    unit_group = UnitGroup.find_by_name('csp')
-    assert_equal 3, unit_group.default_unit_group_units.length
-    assert_equal ['unit1', 'unit2', 'unit3'], unit_group.default_unit_group_units.map(&:script).map(&:name)
-
-    assert_equal 1, unit_group.alternate_unit_group_units.length
-    alternate_unit_group_unit = unit_group.alternate_unit_group_units.first
-    assert_equal 'unit2-alt', alternate_unit_group_unit.script.name
-    assert_equal 'unit2', alternate_unit_group_unit.default_script.name
-    assert_equal 'my_experiment', alternate_unit_group_unit.experiment_name
-
-    default_unit = Unit.find_by(name: 'unit2')
-    expected_position = unit_group.default_unit_group_units.find_by(script: default_unit).position
-    assert_equal expected_position, alternate_unit_group_unit.position,
-      'an alternate unit must have the same position as the default unit it replaces'
 
     assert_response :success
   end

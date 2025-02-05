@@ -5,6 +5,7 @@ from .support.world import World
 from .support.direction import Direction
 from .support.neighborhood_runtime_exception import NeighborhoodRuntimeException
 from .support.exception_key import ExceptionKey
+from .support.neighborhood_tracker import NeighborhoodTracker
 
 class Painter:
   LARGE_GRID_SIZE = 20
@@ -37,7 +38,8 @@ class Painter:
       self.world.set_grid_from_file()
     Painter.last_id += 1
     self.id = f"painter-{Painter.last_id}"
-    self._send_initialization_message(x, y, direction, paint)
+    init_detail = self._get_initialization_message_detail(x, y, direction, paint)
+    self._send_signal(NeighborhoodSignalKey.INITIALIZE_PAINTER, init_detail)      
     self.has_infinite_paint = self.world.grid.get_size() >= Painter.LARGE_GRID_SIZE if could_have_infinite_paint else False
 
   def turn_left(self):
@@ -135,6 +137,7 @@ class Painter:
       True if there is paint in the square where the painter is standing
     """
     is_on_paint = self.world.grid.get_square(self.x, self.y).has_color()
+    self._send_boolean_message(NeighborhoodSignalKey.IS_ON_PAINT, is_on_paint)
     return is_on_paint
   
   def is_on_bucket(self):
@@ -143,6 +146,7 @@ class Painter:
       True if there is a paint bucket in the square where the painter is standing
     """
     is_on_bucket = self.world.grid.get_square(self.x, self.y).contains_paint()
+    self._send_boolean_message(NeighborhoodSignalKey.IS_ON_BUCKET, is_on_bucket)
     return is_on_bucket
   
   def has_paint(self):
@@ -161,9 +165,9 @@ class Painter:
     Args:
       direction (str): The direction of movement that is being checked
     """
-    if direction is None:
-      return self._is_valid_movement(self.direction)
-    return self._is_valid_movement(Direction(direction))
+    can_move = self._is_valid_movement(self.direction if direction is None else Direction(direction))
+    self._send_boolean_message(NeighborhoodSignalKey.CAN_MOVE, can_move)
+    return can_move
   
   def get_color(self):
     """
@@ -235,21 +239,15 @@ class Painter:
     else:
       print("Paint amount must not be a negative number.")
 
-  def _get_initialization_message(self, x, y, direction, paint):
-    detail = {
-                'id': self.id,
-                'direction': direction,
-                'x': x,
-                'y': y,
-                'paint': paint,
-              }
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, NeighborhoodSignalKey.INITIALIZE_PAINTER.value, detail)
-    return signal_message.get_formatted_message()
+  def _get_initialization_message_detail(self, x, y, direction, paint):
+    return {
+              'direction': direction,
+              'x': x,
+              'y': y,
+              'paint': paint,
+            }
 
-  def _send_initialization_message(self, x, y, direction, paint):
-    print(self._get_initialization_message(x, y, direction, paint))
-
-  def _send_signal(self, signal_key, detail=None):
+  def _send_signal(self, signal_key, detail=None, is_boolean_message=False):
     """
     Helper method to create and print a signal message.
 
@@ -259,8 +257,9 @@ class Painter:
     """
     detail = detail or {}
     detail['id'] = self.id
-    signal_message = NeighborhoodSignalMessage(SignalMessageType.PAINTER, signal_key.value, detail)
-    print(signal_message.get_formatted_message())
+    signal_message = NeighborhoodSignalMessage(SignalMessageType.NEIGHBORHOOD, signal_key, detail)
+    neighborhood_tracker = NeighborhoodTracker(self.world)
+    signal_message.send(self.world.context_type, neighborhood_tracker._instance, is_boolean_message)
 
   def _send_boolean_message(self, signal_key, result):
     """
@@ -269,11 +268,10 @@ class Painter:
       signal_key (NeighborhoodSignalKey): The signal key for the message.
       result (bool): The boolean result to include in the message.
     """
-    details = {
-        "id": self.id,
+    detail = {
         "boolean_result": str(result)  # Convert the boolean to a string.
     }
-    self._send_signal(signal_key, details)
+    self._send_signal(signal_key, detail, True)
     
   def _is_valid_movement(self, direction):
     """
