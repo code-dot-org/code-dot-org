@@ -109,6 +109,14 @@ export const SectionWithBackgroundImage: Story = {
       </>
     ),
   },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Show a solid `backgroundImage`. Can be used alone or on top of `backgroundColor` if a transparent png is used. Set `backgroundImageRepeat` to `false` and `backgroundSize` to `cover` for best results.',
+      },
+    },
+  },
   play: createPlayFunction('This is a section with a background image'),
 };
 
