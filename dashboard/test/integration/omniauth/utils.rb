@@ -172,7 +172,10 @@ module OmniauthCallbacksControllerTests
 
     # Simulates an omniauth redirect which is done in Javascript
     def omniauth_redirect
-      redirect_to new_sign_up_url
+      post '/users/finish_sign_up', params: {
+        'user[email]': "test@code.org"
+      }
+      assert_template partial: '_finish_sign_up'
     end
   end
 end

@@ -4,17 +4,17 @@ import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imp
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {ACCOUNT_TYPE_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import color from '@cdo/apps/util/color';
 
 const RETURN_TO = `user_return_to=${pegasus('/afe')}`;
-const SIGN_UP_URL = studio(`/users/new_sign_up/account_type?${RETURN_TO}`);
+const SIGN_UP_URL = studio(
+  `/users/sign_up?user[user_type]=teacher&${RETURN_TO}`
+);
 const SIGN_IN_URL = studio(`/users/sign_in?${RETURN_TO}`);
 
 export default class AmazonFutureEngineerAccountConfirmation extends React.Component {
   signUpButtonPress = () => {
     analyticsReporter.sendEvent(EVENTS.AFE_SIGN_UP_BUTTON_PRESS);
-    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, 'teacher');
     window.location = SIGN_UP_URL;
   };
 
