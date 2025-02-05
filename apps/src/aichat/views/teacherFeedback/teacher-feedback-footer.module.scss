@@ -1,22 +1,5 @@
 @import '@cdo/apps/componentLibrary/common/styles/colors.css';
-
-@mixin icon-button($background, $selected, $active) {
-  i {
-    color: var(--text-neutral-tertiary);
-  }
-
-  &.selected i, &:hover i {
-    color: $selected;
-  }
-
-  &:hover {
-    background-color: $background;
-  }
-
-  &:active i {
-    color: $active;
-  }
-}
+@import '@cdo/apps/componentLibrary/common/styles/mixins.scss';  
 
 .teacherFeedbackContainer {
   display: flex;

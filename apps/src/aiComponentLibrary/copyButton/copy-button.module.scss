@@ -1,10 +1,10 @@
-@import 'color';
+@import '@cdo/apps/componentLibrary/common/styles/colors.css';
+@import '@cdo/apps/componentLibrary/common/styles/mixins.scss';  
 
-.messageFeedback {
-  &Button i {
-    color: $light-gray-600;
-  }
-  &Confirm i {
-    color: $light_affirmative_500;
-  }
+.button {
+  @include icon-button(var(--background_neutral_quaternary), var(--text-neutral-tertiary), var(--text_neutral_secondary));
+}
+
+.tooltip {
+  animation: fade-in 0.3s;
 }
