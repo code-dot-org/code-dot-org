@@ -1,4 +1,4 @@
-from .position import Position
+from ..position import Position
 from .neighborhood_signal_message import NeighborhoodSignalMessage
 from .neighborhood_signal_key import NeighborhoodSignalKey
 from ..painter_log import PainterLog

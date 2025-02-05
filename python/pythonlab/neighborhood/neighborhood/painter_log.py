@@ -1,4 +1,4 @@
-from .support.position import Position
+from .position import Position
 from .support.neighborhood_signal_message import NeighborhoodSignalMessage
 from .painter_event import PainterEvent
 

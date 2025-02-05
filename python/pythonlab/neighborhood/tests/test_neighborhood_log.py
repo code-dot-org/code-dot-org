@@ -1,5 +1,5 @@
 from neighborhood.painter_log import PainterLog
-from neighborhood.support.position import Position
+from neighborhood.position import Position
 from neighborhood.neighborhood_log import NeighborhoodLog
 from neighborhood.support.neighborhood_signal_message import NeighborhoodSignalMessage
 from neighborhood.support.signal_message_type import SignalMessageType

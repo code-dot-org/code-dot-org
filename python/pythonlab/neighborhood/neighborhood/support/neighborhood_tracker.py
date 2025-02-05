@@ -2,7 +2,7 @@ from .neighborhood_signal_key import NeighborhoodSignalKey
 from .signal_message_type import SignalMessageType
 from ..neighborhood_log import NeighborhoodLog
 from .painter_tracker import PainterTracker
-from .position import Position
+from ..position import Position
 
 class NeighborhoodTracker:
     _instance = None
@@ -11,9 +11,9 @@ class NeighborhoodTracker:
         if cls._instance is None:
             cls._instance = super(NeighborhoodTracker, cls).__new__(cls)
             cls._instance.world = world
-        cls._instance.painter_trackers = {}
-        cls._instance.is_initialized = False
-        cls._instance.neighborhood_state = None
+            cls._instance.painter_trackers = {}
+            cls._instance.is_initialized = False
+            cls._instance.neighborhood_state = None
         return cls._instance
 
     def get_neighborhood_log(self) -> NeighborhoodLog | None:
