@@ -1415,6 +1415,9 @@ ActiveRecord::Schema.define(version: 2025_02_13_210703) do
     t.string "code"
     t.integer "session_format"
     t.string "time_zone"
+    t.text "meeting_link"
+    t.string "location_name"
+    t.string "location_address"
     t.index ["code"], name: "index_pd_sessions_on_code", unique: true
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id"
   end
