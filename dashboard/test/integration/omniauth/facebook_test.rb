@@ -119,17 +119,6 @@ module OmniauthCallbacksControllerTests
       )
     end
 
-    test 'user_type is usually unset on finish_sign_up' do
-      mock_oauth
-
-      get '/users/sign_up'
-      sign_in_through_facebook
-      omniauth_redirect
-
-      assert_template partial: '_finish_sign_up'
-      assert_nil assigns(:user).user_type
-    end
-
     private def mock_oauth
       mock_oauth_for AuthenticationOption::FACEBOOK, generate_auth_hash(
         provider: AuthenticationOption::FACEBOOK

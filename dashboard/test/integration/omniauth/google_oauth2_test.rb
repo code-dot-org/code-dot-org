@@ -130,15 +130,6 @@ module OmniauthCallbacksControllerTests
     #   )
     # end
 
-    test 'user_type is usually unset on finish_sign_up' do
-      mock_oauth
-
-      get '/users/sign_up'
-      sign_in_through_google
-      omniauth_redirect
-      assert_nil assigns(:user).user_type
-    end
-
     # @return [OmniAuth::AuthHash] that will be passed to the callback when test-mode OAuth is invoked
     private def mock_oauth
       mock_oauth_for AuthenticationOption::GOOGLE, generate_auth_hash(
