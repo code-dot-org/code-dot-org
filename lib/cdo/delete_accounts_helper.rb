@@ -48,9 +48,6 @@ class DeleteAccountsHelper
 
     project_ids = DASHBOARD_DB[:projects].where(storage_id: user.user_storage_id).map(:id)
     channel_count = project_ids.count
-    project_ids.map do |project_id|
-      storage_encrypt_channel_id user.user_storage_id, project_id
-    end
 
     # Clear potential PII from user's channels
     DASHBOARD_DB[:projects].
