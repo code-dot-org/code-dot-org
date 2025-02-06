@@ -14,8 +14,7 @@ module AichatOpenaiHelper
 
     request_chat_completion(
       messages,
-      aichat_model_customizations['temperature'],
-      SharedConstants::AICHAT_MODEL_VERSION
+      aichat_model_customizations['temperature']
     )
   end
 
@@ -34,12 +33,9 @@ module AichatOpenaiHelper
     ]
   end
 
-  def self.request_chat_completion(messages, temperature, model_version)
-    http_response = OpenaiChatHelper.request_chat_completion(
-      messages,
-      temperature,
-      model_version
-    )
+  def self.request_chat_completion(messages, temperature)
+    openai_client = OpenaiChatHelper.aichat_base_model_client
+    http_response = openai_client.request_chat_completion(messages, temperature)
     JSON.parse(http_response.body)['choices'][0]['message']['content']
   end
 

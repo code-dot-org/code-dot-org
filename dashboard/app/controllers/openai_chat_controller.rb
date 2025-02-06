@@ -24,8 +24,13 @@ class OpenaiChatController < ApplicationController
 
     messages = prepend_system_prompt(system_prompt, params[:messages])
 
-    response = OpenaiChatHelper.request_chat_completion(messages)
-    chat_completion_return_message = OpenaiChatHelper.get_chat_completion_response_message(response)
+    openai_client = OpenaiChatHelper.aitutor_client
+    response = openai_client.request_chat_completion(messages)
+    # Parse the response JSON and return the chat response message and status
+    response_body = JSON.parse(response.body)
+    response_body = response_body['choices'][0]['message'] if response.code == 200
+    chat_completion_return_message =  {status: response.code, json: response_body}
+
     # We currently allow PII flagged content through to OpenAI because false positives were impacting user experience.
     # We send the flagged content along in the request so we can log it for analysis.
     chat_completion_return_message[:json][:safety_status] = filter_result.type if filter_result

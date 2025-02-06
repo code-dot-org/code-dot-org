@@ -42,7 +42,8 @@ module AichatSafetyHelper
       # replying with something other valid expected output.
       attempts = 1
       Retryable.retryable(tries: 2) do
-        openai_response = OpenaiChatHelper.request_safety_check(text, get_safety_system_prompt)
+        openai_client = OpenaiChatHelper.aichat_safety_client
+        openai_response = openai_client.request_safety_check(text, get_safety_system_prompt)
         evaluation = JSON.parse(openai_response)['choices'][0]['message']['content']
         unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
           report_openai_safety_check("InvalidResponse")
