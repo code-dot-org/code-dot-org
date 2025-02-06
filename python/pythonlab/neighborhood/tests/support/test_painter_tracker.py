@@ -2,11 +2,11 @@ from neighborhood.support.painter_tracker import PainterTracker
 from neighborhood.support.neighborhood_signal_message import NeighborhoodSignalMessage
 from neighborhood.support.signal_message_type import SignalMessageType
 from neighborhood.support.neighborhood_signal_key import NeighborhoodSignalKey
-from neighborhood.support.position import Position
+from neighborhood.position import Position
 
 def test_initialize_painter_tracker():
     painter_tracker = PainterTracker("painter-1", Position(0,0,'East'), 2)
-    assert painter_tracker.get_painter_log() == 'painter_log'
+    assert painter_tracker.get_painter_log().painter_id == 'painter-1'
     move_signal_message = NeighborhoodSignalMessage(SignalMessageType.NEIGHBORHOOD, NeighborhoodSignalKey.MOVE, {"direction": "East"})
     assert painter_tracker.current_position.x == 0
     assert painter_tracker.current_position.y == 0

@@ -1,3 +1,4 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
 @import '@code-dot-org/component-library-styles/primitiveColors.scss';
 @import '@code-dot-org/component-library-styles/mixins.scss';
 
@@ -303,6 +304,26 @@ a.button-tertiary {
     &:disabled,
     &[aria-disabled='true'] {
       color: var(--neutral-gray-80);
+      background-color: unset;
+    }
+  }
+
+  &.button-gray {
+    color: var(--text-neutral-quaternary);
+
+    &:hover {
+      background-color: var(--background-neutral-quaternary);
+      color: var(--text-neutral-quaternary);
+    }
+
+    &:active {
+      background-color: var(--background-neutral-quaternary);
+      color: var(--text-neutral-tertiary);
+    }
+
+    &:disabled,
+    &[aria-disabled='true'] {
+      color: var(--text-neutral-disabled);
       background-color: unset;
     }
   }

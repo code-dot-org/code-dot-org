@@ -37,6 +37,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   // TODO(lfm): remove this when welcome is ready to be shown.
   disableWelcome = true,
 }) => {
+  const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+
   const [positionX, setPositionX] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
   );
@@ -103,9 +105,11 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         </div>
 
         <div className={style.fabBackground}>
-          {!disableWelcome && !hasCompletedAiDifferentiationWelcome ? (
+          {!disableWelcome &&
+          !hasCompletedAiDifferentiationWelcome &&
+          showWelcomeExperience ? (
             <AiDiffWelcome
-              setShowWelcomeExperience={() => {}}
+              setShowWelcomeExperience={setShowWelcomeExperience}
               lessonId={lessonId}
               lessonName={lessonName}
               unitDisplayName={unitDisplayName}
