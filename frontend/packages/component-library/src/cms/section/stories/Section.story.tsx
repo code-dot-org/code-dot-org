@@ -25,19 +25,7 @@ const createPlayFunction =
   (headingText: string) =>
   async ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
-    const sections = await canvas.findAllByTestId('section');
-    const containers = await canvas.findAllByTestId('container');
     const headings = canvas.getAllByText(headingText);
-
-    // check if sections are in the document
-    sections.forEach(section => {
-      expect(section).toBeInTheDocument();
-    });
-
-    // check if containers are in the document
-    containers.forEach(container => {
-      expect(container).toBeInTheDocument();
-    });
 
     // check if children content is in the document
     headings.forEach(heading => {
@@ -99,7 +87,7 @@ MultipleSections.args = {
       ),
     },
     {
-      backgroundColor: 'brand-light-primary',
+      backgroundColor: 'brandLightPrimary',
       padding: 'l',
       children: (
         <>

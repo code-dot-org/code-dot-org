@@ -1,18 +1,31 @@
 import classNames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
+import {ComponentSizeXSToL} from '@/common/types';
 import moduleStyles from './section.module.scss';
+
+export type SectionBackgroundColor =
+  | 'primary'
+  | 'secondary'
+  | 'dark'
+  | 'brandLightPrimary'
+  | 'brandLightSecondary';
+
+export const sectionBackgroundColors: {
+  [key in SectionBackgroundColor]: SectionBackgroundColor;
+} = {
+  primary: 'primary',
+  secondary: 'secondary',
+  dark: 'dark',
+  brandLightPrimary: 'brandLightPrimary',
+  brandLightSecondary: 'brandLightSecondary',
+};
 
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   /** Background color */
-  backgroundColor?:
-    | 'primary'
-    | 'secondary'
-    | 'dark'
-    | 'brand-light-primary'
-    | 'brand-light-secondary';
+  backgroundColor?: SectionBackgroundColor;
   /** Vertical padding */
-  padding?: 'm' | 'l';
+  padding?: Exclude<ComponentSizeXSToL, 'xs' | 's'>;
   /** Section content */
   children?: ReactNode;
 }
@@ -45,15 +58,9 @@ const Section: React.FC<SectionProps> = ({
         moduleStyles[`section-${padding}`],
         className,
       )}
-      data-testid="section"
       {...HTMLAttributes}
     >
-      <div
-        className={classNames(moduleStyles.container)}
-        data-testid="container"
-      >
-        {children}
-      </div>
+      <div className={classNames(moduleStyles.container)}>{children}</div>
     </section>
   );
 };
