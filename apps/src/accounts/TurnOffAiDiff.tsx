@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
@@ -53,9 +54,15 @@ const TurnOffAiDiff: React.FC = () => {
         onChange={handleToggle}
         name="aiTeacherDiffToggle"
         position={'left'}
-        label={i18n.aiTeachingAssistantSettingsStatus({
-          status: setEnabled,
-        })}
+        label={
+          <span
+            dangerouslySetInnerHTML={{
+              __html: i18n.aiTeachingAssistantSettingsStatus({
+                status: '<strong>' + setEnabled + '</strong>',
+              }),
+            }}
+          />
+        }
         size={'m'}
       />
     </div>
