@@ -1,240 +1,240 @@
 {
   "ar-SA": {
-    "/dashboard/slides.yml": "9cdffef731787d77cfacb1e5736b359c"
+    "/dashboard/slides.yml": "b14168309af8f175bdcaa07b83bb6b20"
   },
   "az-AZ": {
-    "/dashboard/slides.yml": "85554baccb69e859a19f54fd1f86404a"
+    "/dashboard/slides.yml": "557aff3e92de6b714385da363b6aeb37"
   },
   "bg-BG": {
-    "/dashboard/slides.yml": "c3d5d1114141e522d78a498c3a93cf7f"
+    "/dashboard/slides.yml": "d3c5844137706c70f9b9bbe5737fcb51"
   },
   "bn-BD": {
     "/dashboard/slides.yml": "04673e51606970e37c45c88cf5f858be"
   },
   "bs-BA": {
-    "/dashboard/slides.yml": "ee33c771d3af1b3ff7b70fb41ed257bb"
+    "/dashboard/slides.yml": "914bc77c96ce978658922720d4001e22"
   },
   "ca-ES": {
-    "/dashboard/slides.yml": "137085e30dbdcb59d9e4395dc2575ea3"
+    "/dashboard/slides.yml": "c5c3a20a3e9e08557755141096b1aa17"
   },
   "co-CO": {
     "/dashboard/slides.yml": "431ab4669d6e211aac84037183cc2a85"
   },
   "cs-CZ": {
-    "/dashboard/slides.yml": "c2212cd727105b3aced9b9a3d47cd436"
+    "/dashboard/slides.yml": "ad0553edbe74ac3f79d20b08f608d585"
   },
   "da-DK": {
-    "/dashboard/slides.yml": "7cd3fabf7b8c29c06f4b0be23fb30179"
+    "/dashboard/slides.yml": "5f8fe9179f4c4ef4576c8cc5b9542817"
   },
   "de-DE": {
-    "/dashboard/slides.yml": "a675f1125ae53c08638ec6a51ab4be53"
+    "/dashboard/slides.yml": "84d1696b940394f095aa5a6873473d8d"
   },
   "dv-MV": {
-    "/dashboard/slides.yml": "380655410c85f5dd12c48cfe75636728"
+    "/dashboard/slides.yml": "929f50e6993440347fefbf01189b3441"
   },
   "el-GR": {
-    "/dashboard/slides.yml": "6496e538b48ba040f00bf5ecf31b78ca"
+    "/dashboard/slides.yml": "3a76ebc3b93786b36a36aec185fca6ff"
   },
   "en-GB": {
-    "/dashboard/slides.yml": "afa22097d4588ae7d945285ecd2ced96"
+    "/dashboard/slides.yml": "8baf8ed3b6a215ecb6b181a0495fdca4"
   },
   "es-ES": {
-    "/dashboard/slides.yml": "cd69419ac4414236de9b31e1cba54a6e"
+    "/dashboard/slides.yml": "787ba346a6ae1e34296338ff5b06b594"
   },
   "es-MX": {
-    "/dashboard/slides.yml": "dc73364379d8503a047c3b5698a073b6"
+    "/dashboard/slides.yml": "87f91e7b2c9322f2a04691396d650ca8"
   },
   "et-EE": {
-    "/dashboard/slides.yml": "7436a19cce43ed1b5741595f61c69612"
+    "/dashboard/slides.yml": "01d61b6c5000af97dc1b14f594753f79"
   },
   "eu-ES": {
-    "/dashboard/slides.yml": "55cc562e4b12ab1703c1e34db24287d3"
+    "/dashboard/slides.yml": "fc01cf9f53b05fe5ba8988a4d2504b88"
   },
   "fa-AF": {
     "/dashboard/slides.yml": "758742b68bc18ddb9a526eca91da9555"
   },
   "fa-IR": {
-    "/dashboard/slides.yml": "c562e281aa56c474388ec538e7f0b2ac"
+    "/dashboard/slides.yml": "711beccd268d989e560e3ff26dcc1cfc"
   },
   "fi-FI": {
-    "/dashboard/slides.yml": "d29ae8fb980edd2034588262af53d45c"
+    "/dashboard/slides.yml": "78d5221cdee13a3a65ca3c18ff444207"
   },
   "fil-PH": {
-    "/dashboard/slides.yml": "1d4988104810e9894f8af3303535216f"
+    "/dashboard/slides.yml": "6d4a082c01451edca982f328502e040d"
   },
   "fr-FR": {
-    "/dashboard/slides.yml": "502149d043a30e8273e4a89ccdca83b4"
+    "/dashboard/slides.yml": "8d24140771aaf6ceab48b2b97aadac65"
   },
   "ga-IE": {
-    "/dashboard/slides.yml": "19610411cf0c7ea5993ec5468eb924aa"
+    "/dashboard/slides.yml": "e97be385ed3e8437c3a999d2c6a51662"
   },
   "gl-ES": {
-    "/dashboard/slides.yml": "d643c409dd3477be6fdc1433e2872a54"
+    "/dashboard/slides.yml": "d1aa8205f67ad76e3a7f04330eba6b32"
   },
   "haw-HI": {
-    "/dashboard/slides.yml": "542264a9586afaa1f12af04c1b7d296e"
+    "/dashboard/slides.yml": "ff6e36c82ffdd7e52da186044f60234a"
   },
   "he-IL": {
-    "/dashboard/slides.yml": "8ab3c06fdf3ec5d547645b71b59418ce"
+    "/dashboard/slides.yml": "f35deeaa9f59167ccde1d4f25a000479"
   },
   "hi-IN": {
-    "/dashboard/slides.yml": "3cb6db8610bce7de83f563737f89d9d2"
+    "/dashboard/slides.yml": "37d6807d84b8c1585381f84c11b4f2d7"
   },
   "hr-HR": {
-    "/dashboard/slides.yml": "f60368121bb641c9086b9f097d9f19c8"
+    "/dashboard/slides.yml": "76ad6c5a602b0e0a0d26fed59b8e7b47"
   },
   "hu-HU": {
-    "/dashboard/slides.yml": "ce88f35b52fe4cd77828cdfaede1ae7c"
+    "/dashboard/slides.yml": "4ca3f6cc2ce3f901e764051d1fbd9ab1"
   },
   "hy-AM": {
-    "/dashboard/slides.yml": "7689ae5916c7732844a96ca7fdddb4bd"
+    "/dashboard/slides.yml": "f298260aa0dc60ef41e8d96461d983d7"
   },
   "id-ID": {
-    "/dashboard/slides.yml": "1668286c81ba4d96844512acf29ea2b4"
+    "/dashboard/slides.yml": "972538cc2160b8f01b93085b18f63a48"
   },
   "is-IS": {
-    "/dashboard/slides.yml": "7da68582144af720e4c8a55da773a73b"
+    "/dashboard/slides.yml": "fee3787323005df06dc3a20fcee0d8c0"
   },
   "it-IT": {
-    "/dashboard/slides.yml": "beeb5248319a8a4e3d82a841435cb048"
+    "/dashboard/slides.yml": "2683a3752b3e9af5acb3ef959932509a"
   },
   "ja-JP": {
-    "/dashboard/slides.yml": "766f578d44b671960b12f8332a5de06b"
+    "/dashboard/slides.yml": "5f8fe9179f4c4ef4576c8cc5b9542817"
   },
   "ka-GE": {
-    "/dashboard/slides.yml": "dd3871f2fbf76bbca2c6903e951903bd"
+    "/dashboard/slides.yml": "af6db72152477fdac5d1c578fe3be3c5"
   },
   "kk-KZ": {
-    "/dashboard/slides.yml": "c3a22657917e770b9810fe12b726eb8c"
+    "/dashboard/slides.yml": "d32e6045a3940f5961eb1ce22ffffc10"
   },
   "kn-IN": {
-    "/dashboard/slides.yml": "55823e029c431b543e5e92f7c3fdb24b"
+    "/dashboard/slides.yml": "7ae1f577df0e5f5f10f1791fd97b9865"
   },
   "km-KH": {
-    "/dashboard/slides.yml": "093fa2a3675af39baf33f6fd8e9704ad"
+    "/dashboard/slides.yml": "b372b22c4be501aee0c1c1e98c13e0de"
   },
   "ko-KR": {
-    "/dashboard/slides.yml": "f91b06b943df28856764d8e27a060be0"
+    "/dashboard/slides.yml": "663ad5bedce1c81f81690ce4d619a136"
   },
   "ku-IQ": {
-    "/dashboard/slides.yml": "4bbd6e6df8433a6a4bc4c122bb4258df"
+    "/dashboard/slides.yml": "b472bbd090ce687d5f50dac9b307f236"
   },
   "ky-KG": {
     "/dashboard/slides.yml": "c600a058278ab48652aaf1cf74c6e566"
   },
   "lt-LT": {
-    "/dashboard/slides.yml": "4f4e465478ada6d86b8da510a249b67a"
+    "/dashboard/slides.yml": "03d86558041e1429fe6c743337fcfd66"
   },
   "lv-LV": {
-    "/dashboard/slides.yml": "216c8d50a90329e4b0a10749b0a483ba"
+    "/dashboard/slides.yml": "42fb2474b77cfb0445256c661aded042"
   },
   "mi-NZ": {
-    "/dashboard/slides.yml": "70e64a5256c5f5d11e2112a808a18dd5"
+    "/dashboard/slides.yml": "96cdde7dec63f6ef81fc540cab80a8c0"
   },
   "mk-MK": {
-    "/dashboard/slides.yml": "aa30e1793edcb3a70bb9bf6412a2b4c8"
+    "/dashboard/slides.yml": "8ac06655961e0387ea969b6a81720db0"
   },
   "mn-MN": {
-    "/dashboard/slides.yml": "d7449eb3d17211c9826bb392bdbc086b"
+    "/dashboard/slides.yml": "e3d0abe51bab594ca3265a2825771937"
   },
   "mr-IN": {
-    "/dashboard/slides.yml": "ae0fffd3470a9d7361f233ca96f51b6d"
+    "/dashboard/slides.yml": "cadf45e253d81ca6e9fadad9efa64341"
   },
   "ms-MY": {
-    "/dashboard/slides.yml": "112d14ec69dc3f74bba057cdc745215c"
+    "/dashboard/slides.yml": "214d2ba2736118de76c6411b60293455"
   },
   "mt-MT": {
-    "/dashboard/slides.yml": "86ccf778d4746691f431f4675e9d44e4"
+    "/dashboard/slides.yml": "53a06bcb36919ff1683883b47c86d04c"
   },
   "my-MM": {
-    "/dashboard/slides.yml": "24ca4af539b9e8cf03ea1481e47e61b9"
+    "/dashboard/slides.yml": "bc0f8ae76c145d6d071d132066dfdd72"
   },
   "ne-NP": {
-    "/dashboard/slides.yml": "c343ec697dcf52ec02d18b3aa9ba1c92"
+    "/dashboard/slides.yml": "90530f0a031d45d32a106659f43f025e"
   },
   "nl-NL": {
-    "/dashboard/slides.yml": "d9f9e52cd359fbe6d4cb0f9f920bcc83"
+    "/dashboard/slides.yml": "3ef89ce742da5776f7d6e23c2eeb15d6"
   },
   "nn-NO": {
-    "/dashboard/slides.yml": "1633183da2547935d81046939c35c4ac"
+    "/dashboard/slides.yml": "d7059003ad076050373116eaac8f1425"
   },
   "no-NO": {
-    "/dashboard/slides.yml": "43b43d4692ae52a0e8ca0d9584888ed9"
+    "/dashboard/slides.yml": "ef998fe0680419840389760ace912014"
   },
   "pl-PL": {
-    "/dashboard/slides.yml": "2c17a6033f1a38320b4e124d6c679569"
+    "/dashboard/slides.yml": "7819d1a2e8d89f988bedcafab1cead4d"
   },
   "ps-AF": {
     "/dashboard/slides.yml": "bbad23a18d888478f9970bb77efae3d8"
   },
   "pt-BR": {
-    "/dashboard/slides.yml": "a9bb37b628a8ea7f4f18ef9de545c52c"
+    "/dashboard/slides.yml": "d18f618bd1f59797e2c655850284ef16"
   },
   "pt-PT": {
-    "/dashboard/slides.yml": "a573501b0d4f42e0f6aaf48868bbec78"
+    "/dashboard/slides.yml": "b0e78a3a37cf04935f30f175548dcc1f"
   },
   "ro-RO": {
-    "/dashboard/slides.yml": "f29392a8c90fdde37c27cd551d5e5b9b"
+    "/dashboard/slides.yml": "a67e52c8c1690d7156d75726186384b5"
   },
   "ru-RU": {
-    "/dashboard/slides.yml": "c16efa4d5c5bb895df8b0bf3158a2f55"
+    "/dashboard/slides.yml": "9439d6c191ed380978af8b78da50f053"
   },
   "se-FI": {
-    "/dashboard/slides.yml": "48ecc21134c950eb94565123490fb610"
+    "/dashboard/slides.yml": "9913bd0537ed843bb5e3d859f68320c2"
   },
   "sm-WS": {
-    "/dashboard/slides.yml": "f691b776cca24bf8dd2d0a431272f604"
+    "/dashboard/slides.yml": "8f30e9413b7541ecac96aebb294817d6"
   },
   "si-LK": {
-    "/dashboard/slides.yml": "595a89be9a49d8234aa6ef46074bd207"
+    "/dashboard/slides.yml": "45a29f327aa36b3a05e76b86c07e6819"
   },
   "sk-SK": {
-    "/dashboard/slides.yml": "06d56995c099fc1c2a9e2450bbb31e86"
+    "/dashboard/slides.yml": "01915cb66c568953a831d6c1a24c74d8"
   },
   "sl-SI": {
-    "/dashboard/slides.yml": "5d8c6f1a4b5685384737a2b7ec08d31c"
+    "/dashboard/slides.yml": "155915e8ba06b4b1a2bc4b1375870a61"
   },
   "sq-AL": {
-    "/dashboard/slides.yml": "c18070f08740dbcc62e3db750967a1a8"
+    "/dashboard/slides.yml": "efd13bdfb40c42bbcd67c9abd329a286"
   },
   "sr-SP": {
-    "/dashboard/slides.yml": "9e6b5b6f670b127e6289988b20761aa6"
+    "/dashboard/slides.yml": "0b8ab6b403172a7252240fedbc199b6f"
   },
   "sv-SE": {
-    "/dashboard/slides.yml": "7d4a09ec14c377e076d8e04faeced594"
+    "/dashboard/slides.yml": "6546934b51956366ae0176b02a7977d6"
   },
   "ta-IN": {
-    "/dashboard/slides.yml": "6a114f79fe2fcbd4c7f31100c5275b43"
+    "/dashboard/slides.yml": "2a211b6eb1648249dda0a906065b4084"
   },
   "te-IN": {
-    "/dashboard/slides.yml": "9e5a6136f2f40c5badd2a8e57633a1ce"
+    "/dashboard/slides.yml": "7b8c574cb49b314283b8b60d99a78533"
   },
   "tg-TJ": {
     "/dashboard/slides.yml": "d058669bc9c1e0d990b2c5d84bc8f66a"
   },
   "th-TH": {
-    "/dashboard/slides.yml": "077195011f37d734d70f19da00e7f220"
+    "/dashboard/slides.yml": "2a05800fc73372f8372ac1254f7c8ecf"
   },
   "tr-TR": {
-    "/dashboard/slides.yml": "4f9ae8cd9572a64683ed1b6ff519166e"
+    "/dashboard/slides.yml": "8d56082acc458df17bdecea349c78d13"
   },
   "uk-UA": {
-    "/dashboard/slides.yml": "7206b7e5d6aa7a662410aeed6a8032a1"
+    "/dashboard/slides.yml": "929477b2c20bda96243b8a9adc185c93"
   },
   "ur-PK": {
-    "/dashboard/slides.yml": "1d5e08ecc3b4eec4a96e608275980775"
+    "/dashboard/slides.yml": "ed292c50cfc77dd18f126db831feab0d"
   },
   "uz-UZ": {
-    "/dashboard/slides.yml": "a533b845b457576592013c89db1693f7"
+    "/dashboard/slides.yml": "e5ba5eb9967ad0a6f94a6156a0b9a77d"
   },
   "vi-VN": {
-    "/dashboard/slides.yml": "897fb288b48728a7b404c24c60f9a332"
+    "/dashboard/slides.yml": "7ad9ef60160e559d1537c578a40e74ee"
   },
   "zh-CN": {
-    "/dashboard/slides.yml": "47bdb6b6a90fb970459ebc3ba1360762"
+    "/dashboard/slides.yml": "98abda3d86f386c08b346b9ce545d317"
   },
   "zh-TW": {
-    "/dashboard/slides.yml": "a84bb9c03c8d6fbf1c9a0b8158fa81ed"
+    "/dashboard/slides.yml": "2def80936b68eeef9234f847badd7032"
   },
   "zu-ZA": {
     "/dashboard/slides.yml": "3544ae2f87c0e4208be3fb12b9943eaa"
