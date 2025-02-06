@@ -1,7 +1,10 @@
+import {
+  Heading6,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
-import {Heading6, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';

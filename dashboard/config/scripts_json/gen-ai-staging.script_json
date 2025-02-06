@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2025-01-10 21:23:50 UTC",
+    "serialized_at": "2025-02-05 21:17:17 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5897,6 +5897,17 @@
         "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e",
         "lesson_activity.key": "1983cbf7-39b8-41ae-963a-b93a98545674"
       }
+    },
+    {
+      "key": "ef09042f-6f3f-4302-84df-b6aa25c9566e",
+      "position": 2,
+      "properties": {
+        "progression_name": "4o Mini Testing"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef09042f-6f3f-4302-84df-b6aa25c9566e",
+        "lesson_activity.key": "1983cbf7-39b8-41ae-963a-b93a98545674"
+      }
     }
   ],
   "script_levels": [
@@ -8731,6 +8742,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-screenshots-prompt-overview"
+        ],
         "progression": "For Panel Screenshots"
       },
       "bonus": false,
@@ -8753,6 +8767,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-screenshots-prompt-audience-delivery"
+        ],
         "progression": "For Panel Screenshots"
       },
       "bonus": false,
@@ -8775,6 +8792,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-screenshots-prompt-role-tone"
+        ],
         "progression": "For Panel Screenshots"
       },
       "bonus": false,
@@ -8797,6 +8817,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-screenshots-prompt-chain-reasoning"
+        ],
         "progression": "For Panel Screenshots"
       },
       "bonus": false,
@@ -8819,6 +8842,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-screenshots-prompt-examples"
+        ],
         "progression": "For Panel Screenshots"
       },
       "bonus": false,
@@ -8841,6 +8867,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-screenshots-retrieval-overview"
+        ],
         "progression": "For Panel Screenshots"
       },
       "bonus": false,
@@ -8863,6 +8892,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-screenshots-retrieval-current"
+        ],
         "progression": "For Panel Screenshots"
       },
       "bonus": false,
@@ -8885,6 +8917,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-screenshots-fine-tune"
+        ],
         "progression": "For Panel Screenshots"
       },
       "bonus": false,
@@ -8907,6 +8942,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-screenshots-model-cards-publish"
+        ],
         "progression": "For Panel Screenshots"
       },
       "bonus": false,
@@ -8921,6 +8959,28 @@
       },
       "level_keys": [
         "gen-ai-screenshots-model-cards-publish"
+      ]
+    },
+    {
+      "chapter": 123,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "4o Mini Testing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-4omini-testing"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "ef09042f-6f3f-4302-84df-b6aa25c9566e"
+      },
+      "level_keys": [
+        "gen-ai-4omini-testing"
       ]
     }
   ],
@@ -10387,6 +10447,18 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "gen-ai-staging",
         "activity_section.key": "fc9b4c41-f9bb-471c-a6fd-e543897b898e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-4omini-testing",
+        "script_level.level_keys": [
+          "gen-ai-4omini-testing"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "ef09042f-6f3f-4302-84df-b6aa25c9566e"
       }
     }
   ],

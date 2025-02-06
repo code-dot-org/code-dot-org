@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-04 17:35:22 UTC",
+    "serialized_at": "2025-02-05 22:41:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -41,6 +41,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "AI Tutor Investigation"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "6-12-intro-to-programming-python"
       }
     }
@@ -360,6 +372,21 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-intro-to-programming-python"
       }
+    },
+    {
+      "key": "lesson-22",
+      "name": "Variables with AI Tutor",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-intro-to-programming-python"
+      }
     }
   ],
   "lesson_activities": [
@@ -612,6 +639,18 @@
         "lesson_activity.key": "ef9bd5f8-9f9b-4843-96a0-30bc04f4c996",
         "lesson.key": "lesson-20",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-intro-to-programming-python"
+      }
+    },
+    {
+      "key": "e0fe6095-8506-42e6-ab47-bc65b564511d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0fe6095-8506-42e6-ab47-bc65b564511d",
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "6-12-intro-to-programming-python"
       }
     }
@@ -1238,6 +1277,17 @@
       "seeding_key": {
         "activity_section.key": "8e2981b1-cf30-410c-b828-64cb818f79c2",
         "lesson_activity.key": "ef9bd5f8-9f9b-4843-96a0-30bc04f4c996"
+      }
+    },
+    {
+      "key": "76524ffa-8d81-4558-8170-3fcbd035a089",
+      "position": 1,
+      "properties": {
+        "progression_name": "Variables with AI"
+      },
+      "seeding_key": {
+        "activity_section.key": "76524ffa-8d81-4558-8170-3fcbd035a089",
+        "lesson_activity.key": "e0fe6095-8506-42e6-ab47-bc65b564511d"
       }
     }
   ],
@@ -3715,6 +3765,28 @@
       "level_keys": [
         "python-intro-console-lesson13-choice-flowchartParent"
       ]
+    },
+    {
+      "chapter": 100,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Variables with AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-intro-to-programming-lesson5-variables-5c-withai"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "76524ffa-8d81-4558-8170-3fcbd035a089"
+      },
+      "level_keys": [
+        "test-intro-to-programming-lesson5-variables-5c-withai"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4904,6 +4976,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-intro-to-programming-python",
         "activity_section.key": "8e2981b1-cf30-410c-b828-64cb818f79c2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-intro-to-programming-lesson5-variables-5c-withai",
+        "script_level.level_keys": [
+          "test-intro-to-programming-lesson5-variables-5c-withai"
+        ],
+        "lesson.key": "lesson-22",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "6-12-intro-to-programming-python",
+        "activity_section.key": "76524ffa-8d81-4558-8170-3fcbd035a089"
       }
     }
   ],

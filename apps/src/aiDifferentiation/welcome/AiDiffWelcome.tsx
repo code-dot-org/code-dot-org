@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import HttpClient from '@cdo/apps/util/HttpClient';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
 
@@ -22,6 +23,9 @@ import AiDiffChat, {
 import {ChatPrompt} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
+
+const HAS_SEEN_WELCOME_URL =
+  '/api/v1/users/has_completed_ai_differentiation_welcome';
 
 type WelcomeState = 'select_option' | 'practice' | 'end_page';
 
@@ -102,12 +106,18 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     'plan' | 'create' | null
   >(null);
 
+  const updateShowWelcomeExperience = React.useCallback(() => {
+    HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
+      setShowWelcomeExperience(false);
+    });
+  }, [setShowWelcomeExperience]);
+
   const continueAndSkipButtons = React.useCallback(
     (nextState: WelcomeState) => {
       return (
         <div className={style.bottomButtons}>
           <Button
-            onClick={() => setShowWelcomeExperience(false)}
+            onClick={() => updateShowWelcomeExperience()}
             text="Skip"
             className={style.skipButton}
             color="gray"
@@ -122,7 +132,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         </div>
       );
     },
-    [selectedOption, setShowWelcomeExperience]
+    [selectedOption, updateShowWelcomeExperience]
   );
 
   const selectAnOptionPage = React.useCallback(
@@ -200,10 +210,10 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             />
           </a>
         </div>
-        <Button onClick={() => setShowWelcomeExperience(false)} text="Finish" />
+        <Button onClick={() => updateShowWelcomeExperience()} text="Finish" />
       </div>
     );
-  }, [setShowWelcomeExperience]);
+  }, [updateShowWelcomeExperience]);
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
