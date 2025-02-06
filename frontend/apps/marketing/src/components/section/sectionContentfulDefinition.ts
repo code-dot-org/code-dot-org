@@ -15,6 +15,7 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
   },
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
+  children: true,
   variables: {
     backgroundColor: {
       displayName: 'Background color',
@@ -91,12 +92,6 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
           {value: 'center', displayName: 'Center'},
         ],
       },
-    },
-    children: {
-      displayName: 'Children',
-      type: 'Object',
-      group: 'content',
-      description: 'Nests other components inside the section.',
     },
   },
 };

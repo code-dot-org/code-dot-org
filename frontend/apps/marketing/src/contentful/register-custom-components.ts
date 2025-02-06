@@ -44,8 +44,6 @@ defineComponents(
       definition: SectionContentfulComponentDefinition,
       options: {
         wrapContainerWidth: '100%',
-        wrapComponent: false,
-        children: true,
       },
     },
     {
