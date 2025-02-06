@@ -1998,15 +1998,15 @@ class UnitTest < ActiveSupport::TestCase
     refute @csd_unit.hoc?
   end
 
-  test "middle_high?" do
-    assert @csd_unit.middle_high?
-    assert @csp_unit.middle_high?
-    assert @csa_unit.middle_high?
-    assert @foundations_of_cs_unit.middle_high?
-    assert @foundations_of_programming_unit.middle_high?
+  test "show_unit_overview_between_lessons" do
+    assert @csd_unit.show_unit_overview_between_lessons?
+    assert @csp_unit.show_unit_overview_between_lessons?
+    assert @csa_unit.show_unit_overview_between_lessons?
+    assert @foundations_of_cs_unit.show_unit_overview_between_lessons?
+    assert @foundations_of_programming_unit.show_unit_overview_between_lessons?
 
-    refute @csf_unit.middle_high?
-    refute @hoc_unit.middle_high?
+    refute @csf_unit.show_unit_overview_between_lessons?
+    refute @hoc_unit.show_unit_overview_between_lessons?
   end
 
   test "has_standards_associations?" do
