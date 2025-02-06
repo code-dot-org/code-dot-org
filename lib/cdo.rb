@@ -115,17 +115,22 @@ module Cdo
       site_host('code.org')
     end
 
-    def site_url(domain, path = '', scheme = '')
+    def site_url(domain, path = '', scheme = '', ge_region: nil)
       path = '/' + path unless path.empty? || path[0] == '/'
+
+      if ge_region && Cdo::GlobalEdition.target_host?(canonical_hostname(domain))
+        path = Cdo::GlobalEdition.path(ge_region, path)
+      end
+
       "#{scheme}//#{site_host(domain)}#{path}"
     end
 
     def studio_url(path = '', scheme = '', ge_region: nil)
-      site_url('studio.code.org', path, scheme)
+      site_url('studio.code.org', path, scheme, ge_region: ge_region)
     end
 
     def code_org_url(path = '', scheme = '', ge_region: nil)
-      site_url('code.org', path, scheme)
+      site_url('code.org', path, scheme, ge_region: ge_region)
     end
 
     def hourofcode_url(path = '', scheme = '', locale: nil)

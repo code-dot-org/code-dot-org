@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-29 19:31:10 UTC",
+    "serialized_at": "2025-02-05 22:45:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,7 +34,7 @@
   "lessons": [
     {
       "key": "lesson-4",
-      "name": "Welcome to Music Lab! ",
+      "name": "Welcome to Programming with Music Lab! ",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -300,14 +301,11 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MLOPD-K5 Why teach CS_copy_2023_MelissaSandbox_CSBasics"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "MLOPD-K5 Why teach CS_copy_2023_MelissaSandbox_CSBasics"
+          "PLmusic-coding-intro-seq-panel_1"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -315,7 +313,7 @@
         "activity_section.key": "387886bc-1de9-4e94-8287-f5a5f2ba88d9"
       },
       "level_keys": [
-        "MLOPD-K5 Why teach CS_copy_2023_MelissaSandbox_CSBasics"
+        "PLmusic-coding-intro-seq-panel_1"
       ]
     },
     {
@@ -924,6 +922,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLU2L4 Multiple Choice packets2022_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -945,6 +946,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLfunctionsdebug"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -966,6 +970,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ML-Functions-info-video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1035,6 +1042,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MusicLab-functions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1272,6 +1282,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLpl-k5-2_PLexperiences_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1327,9 +1340,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "MLOPD-K5 Why teach CS_copy_2023_MelissaSandbox_CSBasics",
+        "level.key": "PLmusic-coding-intro-seq-panel_1",
         "script_level.level_keys": [
-          "MLOPD-K5 Why teach CS_copy_2023_MelissaSandbox_CSBasics"
+          "PLmusic-coding-intro-seq-panel_1"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",

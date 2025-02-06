@@ -38,12 +38,12 @@ class CreateHeader
 
   # project info data can be inferred from the key, except when otherwise
   # specified
-  def self.get_project_info(key)
+  def self.get_project_info(key, ge_region: nil)
     info = {
       id: "create_dropdown_#{key}",
       image: "logo_#{key}.png",
       title: key,
-      url: CDO.studio_url("projects/#{key}/new"),
+      url: CDO.studio_url("projects/#{key}/new", ge_region: ge_region),
     }
 
     info.merge(PROJECT_INFO_OVERRIDES[key.to_sym] || {})
@@ -65,6 +65,6 @@ class CreateHeader
       entries.unshift(options[:project_type])
     end
 
-    entries.map {|entry| get_project_info(entry)}
+    entries.map {|entry| get_project_info(entry, ge_region: options[:ge_region])}
   end
 end

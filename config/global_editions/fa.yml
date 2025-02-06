@@ -167,3 +167,20 @@ pages:
       MarketingAnnouncementBanner: false
       TeacherResources: false
       IncubatorBanner: false
+  # Professional Learning
+  - path: /my-professional-learning
+    components:
+      LandingPage:
+        hideMyFacilitatorCenterTab: true
+        hideInstructorCenterTab: false
+        hideRPCenterTab: true
+        hideWorkshopOrganizerCenterTab: true
+        hideMyPLWorkshopEnrollmentCelebrationDialog: true
+        hideMyPLBanner: true
+        hideMyPLSelfPacedPL: false
+        hideMyPLJoinSectionArea: true
+        hideMyPLLandingPageWorkshopsTable: true
+        hideMyPLStaticRecommendedPL: false
+        hideMyPLStaticRecommendedPLMidHighBlock: true
+        hideMyPLStaticRecommendedPLSelfPacedBlock: false
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global/fa/teacher

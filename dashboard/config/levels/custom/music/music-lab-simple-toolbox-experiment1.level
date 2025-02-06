@@ -1,0 +1,124 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-02-05T20:27:32.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "toolbox": {
+        "type": "category"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "sabrina_carpenter_espresso",
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "sabrina_carpenter_espresso/drums_intro"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "sabrina_carpenter_espresso/drums_main_beat"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "sabrina_carpenter_espresso/guitar_intro"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "sabrina_carpenter_espresso/vocals_prechorus_1"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "repeat_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "times": 1
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
+    },
+    "long_instructions": "Toolbox Experiment",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-05T20:27:32.418+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-testlibrary1\\\"\"],\"cloned_from\":\"music-lab-simple-testlibrary1\"},{\"changed_at\":\"2025-02-05 20:29:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 20:31:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 20:33:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 20:34:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 20:40:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-05 20:40:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>
