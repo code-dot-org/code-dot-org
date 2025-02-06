@@ -1,5 +1,4 @@
-import {render} from '@testing-library/react';
-
+import {render, screen} from '@testing-library/react';
 import Section, {SectionProps} from '../Section';
 
 describe('Section Component', () => {
@@ -11,23 +10,31 @@ describe('Section Component', () => {
     );
   };
 
-  it('renders section and container', () => {
-    const {getByTestId} = renderComponent();
-    const section = getByTestId('section');
-    const container = getByTestId('container');
-
-    // check if section is in the document
-    expect(section).toBeInTheDocument();
-
-    // check if container is in the document
-    expect(container).toBeInTheDocument();
-  });
-
   it('renders children content', () => {
-    const {getByTestId} = renderComponent();
-    const content = getByTestId('container');
+    renderComponent();
 
     // check if children content is in the document
-    expect(content).toHaveTextContent('This is content.');
+    expect(screen.getByText('This is content.')).toBeInTheDocument();
+  });
+
+  it('changes background color based on props', () => {
+    const {rerender} = renderComponent({backgroundColor: 'secondary'});
+
+    // check if background color is light gray
+    expect(screen.getByText('This is content.').parentElement).toHaveStyle(
+      'background-color: var(--background-neutral-secondary)',
+    );
+
+    // change background color to light teal
+    rerender(
+      <Section backgroundColor="brand-light-primary">
+        <div>This is content.</div>
+      </Section>,
+    );
+
+    // check if background color is light teal
+    expect(screen.getByText('This is content.').parentElement).toHaveStyle(
+      'background-color: var(--background-brand-light-primary)',
+    );
   });
 });

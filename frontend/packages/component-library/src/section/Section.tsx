@@ -46,15 +46,9 @@ const Section: React.FC<SectionProps> = ({
         moduleStyles[`section-${padding}`],
         className,
       )}
-      data-testid="section"
       {...HTMLAttributes}
     >
-      <div
-        className={classNames(moduleStyles.container)}
-        data-testid="container"
-      >
-        {children}
-      </div>
+      <div className={classNames(moduleStyles.container)}>{children}</div>
     </section>
   );
 };
