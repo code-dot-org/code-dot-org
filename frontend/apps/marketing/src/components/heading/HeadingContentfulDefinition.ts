@@ -13,7 +13,7 @@ export const HeadingContentfulComponentDefinition: ComponentDefinition = {
     imageUrl:
       'https://images.ctfassets.net/90t6bu6vlf76/3kSwyMuHssbpZtr0hUAKyf/1f4d22b8e8bf3037bda3ff58d03ce293/component_heading_tooltip.png',
   },
-  builtInStyles: ['cfTextAlign', 'cfTextUnderline', 'cfWidth'],
+  builtInStyles: ['cfTextAlign'],
   variables: {
     visualAppearance: {
       displayName: 'Visual Appearance',
