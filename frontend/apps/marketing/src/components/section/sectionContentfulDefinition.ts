@@ -4,7 +4,7 @@ import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 export const SectionContentfulComponentDefinition: ComponentDefinition = {
   id: 'section',
   name: 'Section',
-  category: 'Custom Components',
+  category: 'Page Structure',
   thumbnailUrl:
     'https://images.ctfassets.net/90t6bu6vlf76/1DVXtxBlLLunOb1PrjRTqz/6bfd2cae987a5cf2dd0c211e677b5023/component_section_thumbnail.png',
   tooltip: {
@@ -39,33 +39,6 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
-    backgroundImage: {
-      displayName: 'Background image',
-      type: 'Text',
-      group: 'style',
-      description: 'The background image of the section.',
-    },
-    backgroundImageRepeat: {
-      displayName: 'Repeat background image (if image is a pattern).',
-      type: 'Boolean',
-      group: 'style',
-      description: 'Sets whether the background image repeats.',
-      defaultValue: true,
-    },
-    backgroundSize: {
-      displayName: 'Background image size',
-      type: 'Text',
-      group: 'style',
-      description:
-        'Sets whether the background image is contained or covers the section.',
-      defaultValue: 'contain',
-      validations: {
-        in: [
-          {value: 'contain', displayName: 'Contain'},
-          {value: 'cover', displayName: 'Cover'},
-        ],
-      },
-    },
     padding: {
       displayName: 'Padding',
       type: 'Text',
@@ -77,19 +50,6 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
         in: [
           {value: 'm', displayName: 'Medium'},
           {value: 'l', displayName: 'Large'},
-        ],
-      },
-    },
-    alignment: {
-      displayName: 'Content alignment',
-      type: 'Text',
-      group: 'style',
-      description: 'Aligns content to the left or center',
-      defaultValue: 'left',
-      validations: {
-        in: [
-          {value: 'left', displayName: 'Left'},
-          {value: 'center', displayName: 'Center'},
         ],
       },
     },
