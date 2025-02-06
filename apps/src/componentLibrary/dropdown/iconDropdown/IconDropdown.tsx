@@ -1,10 +1,10 @@
+import {dropdownColors} from '@code-dot-org/component-library/common/constants';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useCallback, memo, AriaAttributes} from 'react';
 
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {
   DropdownProviderWrapper,
   useDropdownContext,
