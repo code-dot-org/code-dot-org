@@ -204,15 +204,15 @@
       "import": "./dist/esm/radioButton/index.mjs",
       "require": "./dist/cjs/radioButton/index.js"
     },
-    "./section": {
+    "./cms/section": {
       "types": {
-        "import": "./dist/esm/section/index.d.mts",
-        "require": "./dist/cjs/section/index.d.ts"
+        "import": "./dist/esm/cms/section/index.d.mts",
+        "require": "./dist/cjs/cms/section/index.d.ts"
       },
-      "import": "./dist/esm/section/index.mjs",
-      "require": "./dist/cjs/section/index.js"
+      "import": "./dist/esm/cms/section/index.mjs",
+      "require": "./dist/cjs/cms/section/index.js"
     },
-    "./section/index.css": "./dist/esm/section/index.css",
+    "./cms/section/index.css": "./dist/esm/cms/section/index.css",
     "./segmentedButtons": {
       "types": {
         "import": "./dist/esm/segmentedButtons/index.d.mts",
