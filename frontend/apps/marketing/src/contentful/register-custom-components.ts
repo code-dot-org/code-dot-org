@@ -45,9 +45,6 @@ defineComponents(
     },
   ],
   {
-    enabledBuiltInComponents: [
-      CONTENTFUL_COMPONENTS.heading.id, // Remove this once Heading component is implemented
-      CONTENTFUL_COMPONENTS.image.id,
-    ],
+    enabledBuiltInComponents: [CONTENTFUL_COMPONENTS.image.id],
   },
 );
