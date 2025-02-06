@@ -94,12 +94,12 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     assert_redirected_to "/teacher_dashboard/sections/#{section.id}/calendar"
   end
 
-  test 'redirect_to_newest_section: redirects to newest section lesson material page if sections instructed' do
+  test 'redirect_to_newest_section: redirects to newest section lesson materials page if sections instructed' do
     sign_in @section_owner
     section = create :section, user: @section_owner, created_at: 2.days.from_now
-    get :redirect_to_newest_section, params: {location: "material"}
+    get :redirect_to_newest_section, params: {location: "materials"}
 
-    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/material"
+    assert_redirected_to "/teacher_dashboard/sections/#{section.id}/materials"
   end
 
   test 'enable_experiments: redirects to home if no sections' do

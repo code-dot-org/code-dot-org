@@ -1,0 +1,56 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-02-05T22:34:20.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "#### Here is an overview of the Music Lab platform. ",
+        "imageUrl": "https://images.code.org/5234d8faef5afb0152365043af53a647-Screenshot 2025-02-05 at 3.47.11 PM.png",
+        "key": "music-coding-intro-seq-panel-5c8e1776-1332-425c-8237-86189507ca3c",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "#### Directions are here",
+        "imageUrl": "https://images.code.org/4846ded901431f36e4ce9b42884b20f2-Untitled design.jpg",
+        "key": "music-coding-intro-seq-panel-eef7e23a-96dd-448a-a2c6-7e458e637905",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "#### After running code, feedback messages are shown here. ",
+        "imageUrl": "https://images.code.org/aa58f4579d8d288d3f2146f684d128da-Untitled design (2).jpg",
+        "key": "PLmusic-coding-intro-seq-panel_1-072027bf-4a76-4a83-b71c-b26c84e48317",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Bold words in the instructions are call outs. When clicked, call outs provide a visual hint using a blue arrow. ",
+        "imageUrl": "https://images.code.org/72e14bfc9b4c3e2565797a11b874f053-audio-record-studio-room-2023-11-27-04-58-32-utc.jpg",
+        "key": "music-coding-intro-seq-panel-d44bed52-d4c8-45eb-9e23-4821e9210a2d",
+        "layout": "text-bottom-left",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "If there is no code in the workspace, a hint will be given. ",
+        "imageUrl": "",
+        "key": "PLmusic-coding-intro-seq-panel_1-23eca036-2ed7-4e70-b0e6-e3139acbff7a",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "#### If you are new to coding and want more support, check out our <a href=\"https://studio.code.org/courses/self-paced-pl-k5-2024\" target=\"_blank\">Computer Science Basics </a> self-paced professional learning module.",
+        "imageUrl": "",
+        "key": "PLmusic-coding-intro-seq-panel_1-cdbc86af-7d08-4f5c-952f-df65d975fdb3"
+      }
+    ],
+    "offer_browser_tts": "true",
+    "name_suffix": "_1"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-05T22:34:20.147+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-seq-panel_1\\\"\"],\"cloned_from\":\"music-coding-intro-seq-panel_1\"},{\"changed_at\":\"2025-02-05 22:44:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-05 23:47:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 00:00:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+}]]></config>
+</Panels>
