@@ -16,6 +16,7 @@ class Policies::Ai
     csd-2024
   ]
 
+  # Note this is the one to follow ai_rubircs_disabled is in the user model
   # Whether or not AI rubric features (AI TA) are enabled.
   def self.ai_rubrics_enabled?(user)
     return false if user.nil?
@@ -48,7 +49,7 @@ class Policies::Ai
     return false unless user.teacher?
 
     # An individual opt-out can be supplied here if implemented
-    true
+    user.ai_differentiation_enabled
   end
 
   def self.ai_differentiation_enabled_for_unit?(unit_or_unit_group)

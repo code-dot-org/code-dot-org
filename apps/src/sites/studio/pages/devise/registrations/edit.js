@@ -19,6 +19,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -159,8 +160,14 @@ $(document).ready(() => {
 
   const turnOffAiDiffMountPoint = document.getElementById('turn-off-ai-diff');
 
-  if (turnOffAiDiffMountPoint) {
-    ReactDOM.render(<TurnOffAiDiff />, turnOffAiDiffMountPoint);
+  if (turnOffAiDiffMountPoint && experiments.isEnabled('ai-differentiation')) {
+    const store = getStore();
+    ReactDOM.render(
+      <Provider store={store}>
+        <TurnOffAiDiff />
+      </Provider>,
+      turnOffAiDiffMountPoint
+    );
   }
 
   const manageLinkedAccountsMountPoint = document.getElementById(
