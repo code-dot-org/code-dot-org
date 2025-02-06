@@ -1,9 +1,10 @@
-import Typography, {Heading1} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 import {matchPath, useLocation} from 'react-router-dom';
 
+import {Heading1} from '@cdo/apps/componentLibrary/typography';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,

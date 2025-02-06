@@ -1,8 +1,8 @@
 import {Button} from '@code-dot-org/component-library/button';
 import Slider from '@code-dot-org/component-library/slider';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {MazeCell} from '@cdo/apps/lab2/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 

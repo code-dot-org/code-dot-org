@@ -3,12 +3,10 @@ import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyTwoText,
-  Heading2,
-} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import React, {HTMLAttributes, ReactNode} from 'react';
+
+import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './dialog.module.scss';
 

@@ -1,13 +1,13 @@
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, {useEffect, useState, useRef, useMemo} from 'react';
+
 import {
   BodyThreeText,
   OverlineThreeText,
   Heading5,
   StrongText,
-} from '@code-dot-org/component-library/typography';
-import classnames from 'classnames';
-import PropTypes from 'prop-types';
-import React, {useEffect, useState, useRef, useMemo} from 'react';
-
+} from '@cdo/apps/componentLibrary/typography';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';

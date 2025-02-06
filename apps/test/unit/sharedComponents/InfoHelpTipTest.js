@@ -1,9 +1,9 @@
 /** @file Test InfoHelpTip component */
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 
