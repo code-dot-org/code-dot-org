@@ -2,13 +2,13 @@ import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {dropdownColors} from '@code-dot-org/component-library/common/constants';
 import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
-import React, {AriaAttributes, memo} from 'react';
-
 import {
   ComponentSizeXSToL,
   DropdownColor,
   DropdownFormFieldRelatedProps,
-} from '@cdo/apps/componentLibrary/common/types';
+} from '@code-dot-org/component-library/common/types';
+import React, {AriaAttributes, memo} from 'react';
+
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
