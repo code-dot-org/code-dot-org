@@ -11,6 +11,13 @@ locales: [fa-IR, en-US]
 locale_lock: true
 countries: [IR]
 
+# The list of available project types
+project_types: &project_types
+  - spritelab
+  - artist
+  - applab
+  - gamelab
+
 # The top bar on the site consisting of dropdown menus and navigation links
 header:
   # The topbar (which is collapsed into the hamburger in certain contexts)
@@ -139,8 +146,8 @@ pages:
         # Do not allow switching away from showing ONLY translated courses
         forceTranslated: true
       StartNewProject:
-        # Do not show all project options, just the basic ones
-        canViewFullList: false
+        # Show only available project options
+        availableProjectTypes: *project_types
       CurriculumQuickAssign:
         # For section setup, truncate the 'quick access' course listing to
         # only items that are translated to Farsi
@@ -167,3 +174,20 @@ pages:
       MarketingAnnouncementBanner: false
       TeacherResources: false
       IncubatorBanner: false
+  # Professional Learning
+  - path: /my-professional-learning
+    components:
+      LandingPage:
+        hideMyFacilitatorCenterTab: true
+        hideInstructorCenterTab: false
+        hideRPCenterTab: true
+        hideWorkshopOrganizerCenterTab: true
+        hideMyPLWorkshopEnrollmentCelebrationDialog: true
+        hideMyPLBanner: true
+        hideMyPLSelfPacedPL: false
+        hideMyPLJoinSectionArea: true
+        hideMyPLLandingPageWorkshopsTable: true
+        hideMyPLStaticRecommendedPL: false
+        hideMyPLStaticRecommendedPLMidHighBlock: true
+        hideMyPLStaticRecommendedPLSelfPacedBlock: false
+        myPLStaticRecommendedPLSelfPacedBlockButtonUrl: /global/fa/teacher

@@ -19746,7 +19746,7 @@ en:
               name: Next Steps
           lesson_groups: {}
           name: sandbox-pl-teaching-k5-music-lab
-          title: Teaching K-5 Music Lab (Sandbox)
+          title: Teaching Programming with Music Lab (Sandbox)
           description_audience: ''
           description_short: ''
           description: ''
@@ -19815,11 +19815,15 @@ en:
               name: 'Two-Way and Nested Selection (Lesson 13) '
             lesson-21:
               name: Decomposing Adventure Game (Lesson 12)
+            lesson-22:
+              name: Variables with AI Tutor
           lesson_groups:
             lessonGroup-2:
               display_name: console-only levels
             lessonGroup-3:
               display_name: Regular Lessons/Levels
+            lessonGroup-4:
+              display_name: AI Tutor Investigation
           name: 6-12-intro-to-programming-python
           title: 6-12 Intro to Programming (Python) Playground
           description_audience: ''
@@ -19974,3 +19978,14 @@ en:
           student_description: "This unit focuses on using Python to analyze and interpret real-world data sets. You learn how to use libraries like Pandas and Matplotlib to explore, manipulate, and visualize data, creating custom visualizations such as stacked bar charts and pie charts. Throughout the unit, you refine your programming and analytical skills to uncover insights from complex datasets. The unit ends with a project that allows you to apply your learning to a community or school-based issue, presenting your findings through a combination of data visualizations and Python code.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n* Formulate data questions and create data collection plans. \n* Write and run simple Python programs focusing on data science applications. \n* Explore, manipulate, and analyze data using Pandas. \n* Create and customize data visualizations with Matplotlib. \n* Clean and filter datasets to ensure data integrity and uncover insights. \n* Perform statistical analysis using key Pandas functions and interpret the results. \n* Use advanced filtering techniques in Pandas to refine and analyze data. \n</div> \n</details>"
           description_short: Students learn to leverage Python and popular data science libraries for data analysis, enhancing their data interpretation skills through programming.
           description_audience: ''
+        musiclab-6-12-playground:
+          lessons:
+            lesson-1:
+              name: Templates and Experiments
+          lesson_groups: {}
+          name: musiclab-6-12-playground
+          title: 6-12 Music Lab Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

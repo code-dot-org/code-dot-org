@@ -1,8 +1,8 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React, {useMemo} from 'react';
 
 import {ComponentPlacementDirection} from '@cdo/apps/componentLibrary/common/types';
-import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import commonI18n from '@cdo/locale';
 
 import styles from './project-template-workspace-icon-v2.module.scss';

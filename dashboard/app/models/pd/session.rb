@@ -30,13 +30,17 @@ class Pd::Session < ApplicationRecord
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: 'pd_workshop_id', optional: true
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: 'pd_session_id', dependent: :destroy
 
+  before_validation :set_default_time_zone
+
+  before_update :prevent_time_zone_change
+
   validates_presence_of :start, :end
   validate :starts_and_ends_on_the_same_day
   validate :starts_before_ends
 
   def starts_and_ends_on_the_same_day
     return unless start && self.end
-    unless start.to_datetime.to_date == self.end.to_datetime.to_date
+    unless start_time.to_date == end_time.to_date
       errors.add(:end, 'must occur on the same day as the start.')
     end
   end
@@ -48,15 +52,38 @@ class Pd::Session < ApplicationRecord
     end
   end
 
+  def set_default_time_zone
+    self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : 'UTC'
+  end
+
+  def prevent_time_zone_change
+    if time_zone_changed?
+      self.time_zone = time_zone_was # Revert to the original time_zone
+    end
+  end
+
+  def start_time
+    start.in_time_zone(time_zone || 'UTC')
+  end
+
+  def end_time
+    self.end.in_time_zone(time_zone || 'UTC')
+  end
+
   def formatted_date
-    start.to_date.iso8601
+    start_time.to_date.iso8601
+  end
+
+  def tz_abbreviation
+    return '' if time_zone.blank?
+    ActiveSupport::TimeZone[time_zone].tzinfo.current_period.abbreviation.to_s
   end
 
   def formatted_date_with_start_and_end_times
-    start_time = start.strftime('%l:%M%P').strip
-    end_time = self.end.strftime('%l:%M%P').strip
+    formatted_start = start_time.strftime('%l:%M%P').strip
+    formatted_end = end_time.strftime('%l:%M%P').strip
 
-    "#{formatted_date}, #{start_time}-#{end_time}"
+    "#{formatted_date}, #{formatted_start}-#{formatted_end} #{tz_abbreviation}".strip
   end
 
   def session_info_for_calendar
@@ -68,14 +95,14 @@ class Pd::Session < ApplicationRecord
   end
 
   def start_date_us_format
-    start.strftime('%b %d %Y').strip
+    start_time.strftime('%b %d %Y').strip
   end
 
   def start_date_with_start_and_end_times_us_format
-    start_time = start.strftime('%l:%M%P').strip
-    end_time = self.end.strftime('%l:%M%P').strip
+    formatted_start = start_time.strftime('%l:%M%P').strip
+    formatted_end = end_time.strftime('%l:%M%P').strip
 
-    "#{start_date_us_format}, #{start_time} - #{end_time}"
+    "#{start_date_us_format}, #{formatted_start} - #{formatted_end} #{tz_abbreviation}".strip
   end
 
   def hours
