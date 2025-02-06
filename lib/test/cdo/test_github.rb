@@ -22,13 +22,13 @@ class GitHubTest < Minitest::Test
 
   def test_pr_url_returns_valid_github_url
     url = GitHub.pr_url(123)
-    assert_valid_github_url?(url)
+    assert_valid_github_url(url)
     assert_equal "https://github.com/#{TEST_REPO}/pull/123", url
   end
 
   def test_commit_url_returns_valid_github_url
     url = GitHub.commit_url("abc123")
-    assert_valid_github_url?(url)
+    assert_valid_github_url(url)
     assert_equal "https://github.com/#{TEST_REPO}/commit/abc123", url
   end
 end
