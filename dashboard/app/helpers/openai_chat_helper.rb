@@ -40,41 +40,6 @@ module OpenaiChatHelper
         read_timeout: DCDO.get('openai_http_read_timeout', 30)
       )
     end
-
-    # Used to check safety content given text with the given moderation system prompt.
-    def request_safety_check(text, safety_system_prompt)
-      # Set up the API endpoint URL and request headers
-      headers = {
-        "Content-Type" => "application/json",
-        "Authorization" => "Bearer #{api_key}"
-      }
-
-      # Format messages with text to be checked for safety and moderation system prompt.
-      messages = [
-        {
-          role: "system",
-          content: safety_system_prompt
-        },
-        {
-          role: "user",
-          content: text
-        }
-      ]
-      data = {
-        model: model,
-        messages: messages
-      }
-
-      response = HTTParty.post(
-        OPEN_AI_URL,
-        headers: headers,
-        body: data.to_json,
-        open_timeout: DCDO.get('openai_http_open_timeout', 5),
-        read_timeout: DCDO.get('openai_http_read_timeout', 30)
-      )
-      raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
-      response.body
-    end
   end
 
   def self.aichat_base_model_client

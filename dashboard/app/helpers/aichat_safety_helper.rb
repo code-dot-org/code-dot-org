@@ -34,6 +34,7 @@ module AichatSafetyHelper
       end
     end
 
+    # Used to check safety content given text with the given moderation system prompt.
     private def openai_safety_check(text)
       details = nil
       start_time = Time.now
@@ -42,9 +43,14 @@ module AichatSafetyHelper
       # replying with something other valid expected output.
       attempts = 1
       Retryable.retryable(tries: 2) do
+        messages = safety_check_messages(text)
         openai_client = OpenaiChatHelper.aichat_safety_client
-        openai_response = openai_client.request_safety_check(text, get_safety_system_prompt)
-        evaluation = JSON.parse(openai_response)['choices'][0]['message']['content']
+
+        # temperature wasn't explicitly provided and openai defaults to 1
+        openai_response = openai_client.request_chat_completion(messages, 1)
+        raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
+
+        evaluation = JSON.parse(openai_response.body)['choices'][0]['message']['content']
         unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
           report_openai_safety_check("InvalidResponse")
           attempts += 1
@@ -96,6 +102,20 @@ module AichatSafetyHelper
 
     private def get_safety_system_prompt_version
       'V0'
+    end
+
+    # Format messages with text to be checked for safety and moderation system prompt.
+    private def safety_check_messages(text)
+      [
+        {
+          role: "system",
+          content: get_safety_system_prompt
+        },
+        {
+          role: "user",
+          content: text
+        }
+      ]
     end
 
     private def report_openai_safety_check(metric_name, num_attempts = 1)
