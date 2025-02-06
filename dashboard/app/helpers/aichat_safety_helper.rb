@@ -3,6 +3,9 @@ require 'cdo/aws/metrics'
 # Provides functionality to detect toxicity in user input and model output used in the AI Chat Lab.
 # Uses various services to check for profanity and toxicity based on DCDO settings.
 module AichatSafetyHelper
+  API_KEY = CDO.openai_aichat_safety_api_key
+  MODEL = SharedConstants::AICHAT_MODEL_VERSION
+
   class ToxicityDetector
     DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.3
     DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.5
@@ -44,10 +47,7 @@ module AichatSafetyHelper
       attempts = 1
       Retryable.retryable(tries: 2) do
         messages = safety_check_messages(text)
-        openai_client = OpenaiChatHelper.aichat_safety_client
-
-        # temperature wasn't explicitly provided and openai defaults to 1
-        openai_response = openai_client.request_chat_completion(messages, 1)
+        openai_response = client.request_chat_completion(messages, 1)
         raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
 
         evaluation = JSON.parse(openai_response.body)['choices'][0]['message']['content']
@@ -66,6 +66,10 @@ module AichatSafetyHelper
       latency = Time.now - start_time
       report_openai_safety_latency(latency, attempts)
       details
+    end
+
+    private def client
+      OpenaiChatHelper.new(API_KEY, MODEL)
     end
 
     private def comprehend_enabled?(role)

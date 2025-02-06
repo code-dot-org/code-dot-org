@@ -1,6 +1,8 @@
 class OpenaiChatController < ApplicationController
-  include OpenaiChatHelper
   authorize_resource class: false
+
+  API_KEY = CDO.openai_chat_completion_api_key
+  MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERSION
 
   # POST /openai/chat_completion
   def chat_completion
@@ -24,8 +26,7 @@ class OpenaiChatController < ApplicationController
 
     messages = prepend_system_prompt(system_prompt, params[:messages])
 
-    openai_client = OpenaiChatHelper.aitutor_client
-    response = openai_client.request_chat_completion(messages)
+    response = client.request_chat_completion(messages)
     # Parse the response JSON and return the chat response message and status
     response_body = JSON.parse(response.body)
     response_body = response_body['choices'][0]['message'] if response.code == 200
@@ -40,6 +41,10 @@ class OpenaiChatController < ApplicationController
 
   def has_required_messages_param?
     params[:messages].present?
+  end
+
+  private def client
+    OpenaiChatHelper.new(API_KEY, MODEL)
   end
 
   private def prepend_system_prompt(system_prompt, messages)
