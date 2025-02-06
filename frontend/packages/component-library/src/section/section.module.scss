@@ -13,23 +13,6 @@
     margin: 0 auto;
     z-index: 2;
   }
-
-  // Applies an overlay with a background image
-  &.overlay {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-  }
 }
 
 // Section background color
@@ -63,16 +46,5 @@
 
   &-l {
     padding-block: 4rem;
-  }
-}
-
-// Section Alignment
-.section {
-  &-left {
-    text-align: left;
-  }
-
-  &-center {
-    text-align: center;
   }
 }
