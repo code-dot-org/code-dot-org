@@ -11,7 +11,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../../constants';
 import aichatI18n from '../../locale';
-import {setAiCustomizationProperty} from '../../redux/aichatRedux';
+import {setAiCustomizationProperty} from '../../redux';
 
 import CompareModelsDialog from './CompareModelsDialog';
 import {

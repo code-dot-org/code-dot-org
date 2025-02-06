@@ -1,6 +1,6 @@
 import {CodebridgeWorkspaceState} from '@codebridge/redux/workspaceRedux';
 
-import {AichatState} from '@cdo/apps/aichat/redux/aichatRedux';
+import {AichatState} from '@cdo/apps/aichat/redux';
 import {AITutorState} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';

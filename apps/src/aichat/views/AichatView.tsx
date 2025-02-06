@@ -36,7 +36,7 @@ import {
   setUserHasAichatAccess,
   setViewMode,
   updateAiCustomization,
-} from '../redux/aichatRedux';
+} from '../redux';
 import {getNewMessageId} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
