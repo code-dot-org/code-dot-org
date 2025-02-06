@@ -7,6 +7,7 @@
 #  storage_app_id :integer          not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  app_name       :string(255)
 #
 # Indexes
 #
