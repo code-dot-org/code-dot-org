@@ -135,11 +135,9 @@ $(document).ready(function () {
     if (window.location.pathname === '/teacher_dashboard/home') {
       selectedSectionFromList = sections[0];
       selectedSection = {...selectedSectionFromList, ...section};
-      console.log(selectedSection);
     } else {
       selectedSectionFromList = sections.find(s => s.id === section.id);
       selectedSection = {...selectedSectionFromList, ...section};
-      console.log(selectedSection);
     }
 
     getStore().dispatch(selectSection(selectedSection.id));
