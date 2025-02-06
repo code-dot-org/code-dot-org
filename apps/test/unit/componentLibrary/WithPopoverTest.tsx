@@ -1,8 +1,8 @@
+import * as helpers from '@code-dot-org/component-library/common/helpers';
 import {render, screen, fireEvent} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 
-import * as helpers from '@cdo/apps/componentLibrary/common/helpers';
 import {WithPopover, PopoverProps} from '@cdo/apps/componentLibrary/popover';
 
 describe('Design System - WithPopover Component', () => {
