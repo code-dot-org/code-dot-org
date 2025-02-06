@@ -771,8 +771,14 @@ describe('LandingPage', () => {
           name: "You've been enrolled!",
         });
 
+      const createObjectURL = 'testCreateObjectURL';
+      const workshopCourse = 'TEST COURSE';
+      const sessionTimeInfo = JSON.stringify([TEST_WORKSHOP_SESSIONS[0]]);
+
       beforeEach(() => {
-        sessionStorage.setItem('workshopCourse', 'TEST COURSE');
+        window.URL.createObjectURL = () => createObjectURL;
+        sessionStorage.setItem('workshopCourse', workshopCourse);
+        sessionStorage.setItem('sessionTimeInfo', sessionTimeInfo);
       });
 
       afterEach(() => {
