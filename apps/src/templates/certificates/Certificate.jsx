@@ -1,3 +1,10 @@
+import {
+  BodyTwoText,
+  BodyThreeText,
+  Heading1,
+  Heading2,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
@@ -7,13 +14,6 @@ import {connect} from 'react-redux';
 import {register} from 'swiper/element/bundle';
 
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  Heading1,
-  Heading2,
-  Heading3,
-} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import BackToFrontConfetti from '../BackToFrontConfetti';

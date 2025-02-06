@@ -2,6 +2,7 @@ import Button from '@code-dot-org/component-library/button';
 import {PDFDownloadLink} from '@react-pdf/renderer';
 import React, {useState} from 'react';
 
+import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import AiDiffPdf from './AiDiffPdf';
@@ -9,52 +10,18 @@ import {ChatTextMessage} from './types';
 
 import style from './ai-differentiation.module.scss';
 
-// Fallback method for browsers that do not support navigator.clipboard
-const copyToClipboard = (text: string) => {
-  const textField = document.createElement('textarea');
-  textField.innerText = text;
-  document.body.appendChild(textField);
-  textField.select();
-  document.execCommand('copy');
-  textField.remove();
-};
-
 interface Props {
   message: ChatTextMessage;
 }
 
 const AiDiffBotMessageFooter: React.FC<Props> = ({message}) => {
   const CONFIRM_TIMEOUT_MS = 1500;
-  const [copyTimeout, setCopyTimeout] = useState(false);
   const [pdfTimeout, setPdfTimeout] = useState(false);
 
   return (
     <div className={style.messageFeedbackContainer}>
       <div className={style.messageFeedbackLeft}>
-        <Button
-          onClick={() => {
-            if (navigator.clipboard) {
-              navigator.clipboard.writeText(message.chatMessageText);
-            } else {
-              copyToClipboard(message.chatMessageText);
-            }
-            setCopyTimeout(true);
-            setTimeout(() => setCopyTimeout(false), CONFIRM_TIMEOUT_MS);
-          }}
-          color="white"
-          size="xs"
-          isIconOnly
-          icon={{
-            iconStyle: 'regular',
-            iconName: copyTimeout ? 'check' : 'copy',
-          }}
-          type="primary"
-          className={
-            copyTimeout
-              ? style.messageFeedbackConfirm
-              : style.messageFeedbackButton
-          }
-        />
+        <CopyButton copyText={message.chatMessageText} />
         <PDFDownloadLink
           document={<AiDiffPdf messages={[message]} />}
           fileName="ai_differentiation_message.pdf"

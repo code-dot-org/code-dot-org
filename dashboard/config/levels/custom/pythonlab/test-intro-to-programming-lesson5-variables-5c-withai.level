@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-02-05T22:27:58.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "#Add in the missing variables\n\n\n#Modify the print statements to fix the errors\nprint(\"Hi my name is \" + name + \".\")\nprint(\"I am \" + height_float + \" feet tall, which is \" + height_in_inches + \" inches.\")\nprint(\"I am currently taking \" + num_classes + \" classes.\")\nprint(\"I know how to code: \" + can_code)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Variables Galore!",
+    "thumbnail_url": "https://images.code.org/44e6bcae7f003bc62282e521d6184661-Screenshot 2025-01-22 at 1.24.07 PM.png",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzru9ACR/dod9hs+0Mo2nT8x+SLreTEKG\nIZBKmubkundQuY0T6uBc9Hv8l8ARRmgVcRX4VSJjUuzJtZ7arTkM387xHSdm\nxDK5eVVT6afeOVL2Qx3XMniPS2tefx475lk4JwP7wyK5r+YN8ByExUBG7dX8\npnWuW+tnzyvOkWFo1PsQT6FYwCmNb4RrGRW8Bp4zioPAR/KGwjZms65rxOAH\nrb8oZe1BPIMQKYFaSpK6MQANCVhAhQlIQYVspwqB4VpIIIQbD3BWm7c17mHQ\nsLhAy1inSCUvCM3KbnBee9g+7ALTqMDLIhAKSwgWuicxAPfzlvWfSbcRqcA5\n2nqrnoxoEwLCMJr3i62ACt3Ovwzc7On7wJmeiIeQ2lyEJNeb49ZZbxWMU9lA\nLt9oZJN6MtE6byBJTNFihIFGlWz5Hls+88hPMuwdnETZ4s6DpTXrwg4whIFA\n66dWTs9puYdEESDteLU+nW+xSA6PVNrqctQGOikjyT1GvqaxBX5GMlVhIhmu\nyFYAzkvvvJ4kbusMFk07QMcmTZOsYNgPylJ5j9UdX4UQbF+MoaVZNxb16us6\niH1G3mZDDwhi1UuEPeaydRXwaRReaMS/k0cCWXZxF0+tWIQparq0docAaFj+\nQmU2QLXEc3XPBodqh/91feaLYwiDPGs=\n",
+    "long_instructions": "## Step 1: Identify the Missing Pieces\r\n\r\nBefore running the code, **review the print statements**. What variables are being used that have not been defined?\r\n* Think about **what kind of values** each variable should store.\r\n* If you're unsure, ask the AI Tutor: *\"What types of values should each variable have?\"*\r\n\r\n## Step 2: Define the Variables\r\n\r\nNow, **declare and assign values** to each missing variable in the program.\r\n* If you get stuck, ask the AI Tutor, *\"How do I declare a variable in Python?\"*\r\n\r\n## Step 3: Fix the Print Statements\r\n\r\nLook at the print statements. Are all the variables inside them correctly formatted?\r\n\r\nIf your program gives an error when printing numbers, **what needs to change**?\r\n* Hint: You may need to **convert non-string variables** before printing!\r\n\r\n## Step 4: Predict the Output\r\n\r\nBefore running your code, **take a moment to think**:\r\n* What do you expect the program to print?\r\n* Will the output **make sense** based on how you formatted the print statements?\r\n\r\nIf you're unsure, ask the AI Tutor: *\"Can you help me predict what the output should look like?\"*\r\n\r\n## Step 5: Run and Debug\r\n\r\nRun your program and check if the output matches your expectations.\r\n\r\nIf something looks wrong, ask the AI Tutor: *\"Why is my output different from what I expected?\"*\r\n\r\nRemember, debugging is part of the process! Instead of giving direct answers, the AI Tutor will **guide you with hints and explanations** to help you improve your understanding."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-02-05T22:27:58.097+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson5-variables-5c\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson5-variables-5c\"},{\"changed_at\":\"2025-02-05 22:28:06 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-02-05 23:03:56 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-02-05 23:04:51 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

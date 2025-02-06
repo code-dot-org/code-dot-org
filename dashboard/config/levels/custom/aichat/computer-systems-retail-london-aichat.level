@@ -41,8 +41,9 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ]
-    }
+    },
+    "thumbnail_url": "https://images.code.org/e982306773bf38166115c6b971e0485f-Pasted Graphic 30.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T05:33:29.790+00:00\",\"changed\":[\"cloned from \\\"computer-systems-dealer-brazil-aichat\\\"\"],\"cloned_from\":\"computer-systems-dealer-brazil-aichat\"},{\"changed_at\":\"2025-01-31 05:34:46 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 05:35:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:33:29.790+00:00\",\"changed\":[\"cloned from \\\"computer-systems-dealer-brazil-aichat\\\"\"],\"cloned_from\":\"computer-systems-dealer-brazil-aichat\"},{\"changed_at\":\"2025-01-31 05:34:46 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 05:35:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 15:33:32 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -2,7 +2,7 @@ import {HOME_FOLDER, SERVICE_WORKER_PATH} from './constants';
 
 export enum MessageTag {
   MATPLOTLIB_IMG = 'MATPLOTLIB_SHOW_IMG',
-  NEIGHBORHOOD_SIGNAL = '[PAINTER]',
+  NEIGHBORHOOD_SIGNAL = '[NEIGHBORHOOD]',
   INPUT_PROMPT = '[INPUT_PROMPT]',
 }
 
@@ -39,6 +39,9 @@ export const pythonlabInputModule = {
       false
     );
     request.send(null);
+    if (request.status !== 200) {
+      throw new Error('Failed to read input.');
+    }
     return request.responseText;
   },
 };

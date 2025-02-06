@@ -1,9 +1,8 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
-
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 
 describe('Design System - CloseButton', () => {
   it('renders with default props', () => {

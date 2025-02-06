@@ -1,11 +1,10 @@
-import {render, screen, fireEvent} from '@testing-library/react';
-import React from 'react';
-import '@testing-library/jest-dom';
-
 import {
   CustomDialog,
   CustomDialogProps,
-} from '@cdo/apps/componentLibrary/dialog';
+} from '@code-dot-org/component-library/dialog';
+import {render, screen, fireEvent} from '@testing-library/react';
+import React from 'react';
+import '@testing-library/jest-dom';
 
 describe('CustomDialog Component', () => {
   const defaultProps: CustomDialogProps = {

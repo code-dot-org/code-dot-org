@@ -1,12 +1,14 @@
 import {Button, ButtonProps} from '@code-dot-org/component-library/button';
-import classnames from 'classnames';
-import React, {HTMLAttributes, ReactNode} from 'react';
-
-import CustomDialog from '@cdo/apps/componentLibrary/dialog/CustomDialog';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  BodyTwoText,
+  Heading2,
+} from '@code-dot-org/component-library/typography';
+import classnames from 'classnames';
+import React, {HTMLAttributes, ReactNode} from 'react';
 
 import moduleStyles from './dialog.module.scss';
 

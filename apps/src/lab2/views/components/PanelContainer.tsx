@@ -1,7 +1,6 @@
+import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useContext} from 'react';
-
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
 
 import {ThemeContext} from '../ThemeWrapper';
 

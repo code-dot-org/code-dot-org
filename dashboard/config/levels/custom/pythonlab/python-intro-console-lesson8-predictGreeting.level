@@ -16,10 +16,10 @@
       "isPredictLevel": true,
       "solution": "This is a function called greet_user(). It will ask the user \"What is your name?\" and then store their answer into the variable called \"name.\" Then, it will print \"Hello, (user name)!\" because the string is concatenated with the string in the variable. ",
       "questionType": "freeResponse",
-      "allowMultipleAttempts": true,
+      "allowMultipleAttempts": false,
       "placeholderText": "",
-      "freeResponseHeight": 100,
-      "codeEditableAfterSubmit": true
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
     },
     "start_sources": {
       "files": {
@@ -37,6 +37,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-27 23:05:35 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-27 23:05:54 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 23:16:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-27 23:05:35 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-27 23:05:54 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-28 23:16:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-04 17:00:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-04 17:02:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Pythonlab>
