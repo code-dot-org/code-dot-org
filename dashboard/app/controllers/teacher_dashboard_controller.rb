@@ -18,10 +18,11 @@ class TeacherDashboardController < ApplicationController
   end
 
   def show
-    unless @section.nil?
-      @section_summary = @section.selected_section_summarize
-      @sections = current_user.sections_instructed.map(&:concise_summarize)
+    @sections = current_user.sections_instructed.map(&:concise_summarize)
+    if @section.nil?
+      @section = Section.find(@sections.first[:id])
     end
+    @section_summary = @section.selected_section_summarize
     @locale_code = request.locale
     view_options(full_width: true, no_padding_container: true)
   end

@@ -112,14 +112,11 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           path={TEACHER_NAVIGATION_PATHS.home}
           element={
             <>
-              {/* <PathChangeHandler
+              <PathChangeHandler
                 needsReload={needsReload ? needsReload : false}
-              /> */}
+              />
               <div>
-                <TeacherHomepageV2
-                  headline={'Testing'}
-                  descriptionText={'This is only a test'}
-                />
+                <TeacherHomepageV2 headline={'Testing'} />
               </div>
             </>
           }
