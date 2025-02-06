@@ -1,9 +1,4 @@
 class TeacherDashboardController < ApplicationController
-  include UsersHelper
-  include SurveyResultsHelper
-  include TeacherApplicationHelper
-  include IncubatorHelper
-
   load_and_authorize_resource :section
 
   rescue_from CanCan::AccessDenied do

@@ -130,15 +130,12 @@ $(document).ready(function () {
   };
 
   const getV2TeacherDashboard = () => {
-    let selectedSection;
-    let selectedSectionFromList;
-    if (window.location.pathname === '/teacher_dashboard/home') {
-      selectedSectionFromList = sections[0];
-      selectedSection = {...selectedSectionFromList, ...section};
-    } else {
-      selectedSectionFromList = sections.find(s => s.id === section.id);
-      selectedSection = {...selectedSectionFromList, ...section};
-    }
+    const selectedSectionFromList = window.location.pathname.includes(
+      '/teacher_dashboard/home'
+    )
+      ? sections[0]
+      : sections.find(s => s.id === section.id);
+    const selectedSection = {...selectedSectionFromList, ...section};
 
     getStore().dispatch(selectSection(selectedSection.id));
 
