@@ -212,7 +212,7 @@
       "import": "./dist/esm/section/index.mjs",
       "require": "./dist/cjs/section/index.js"
     },
-    "./section/index.css": "./dist/esm/video/index.css",
+    "./section/index.css": "./dist/esm/section/index.css",
     "./segmentedButtons": {
       "types": {
         "import": "./dist/esm/segmentedButtons/index.d.mts",
