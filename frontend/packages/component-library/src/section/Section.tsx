@@ -11,16 +11,8 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
     | 'dark'
     | 'brand-light-primary'
     | 'brand-light-secondary';
-  /** Background image */
-  backgroundImage?: string;
-  /** Background image repeat */
-  backgroundImageRepeat?: boolean;
-  /** Background size */
-  backgroundSize?: 'contain' | 'cover';
   /** Vertical padding */
   padding?: 'm' | 'l';
-  /** Content alignment */
-  alignment?: 'left' | 'center';
   /** Section content */
   children?: ReactNode;
 }
@@ -40,11 +32,7 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  */
 const Section: React.FC<SectionProps> = ({
   backgroundColor = 'primary',
-  backgroundImage,
-  backgroundImageRepeat,
-  backgroundSize,
   padding = 'l',
-  alignment = 'left',
   children,
   className,
   ...HTMLAttributes
@@ -55,18 +43,8 @@ const Section: React.FC<SectionProps> = ({
         moduleStyles.section,
         moduleStyles[`section-${backgroundColor}`],
         moduleStyles[`section-${padding}`],
-        moduleStyles[`section-${alignment}`],
         className,
-        backgroundImage ? moduleStyles.overlay : '',
       )}
-      style={{
-        ...(backgroundImage && {
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundRepeat: backgroundImageRepeat ? 'repeat' : 'no-repeat',
-          backgroundSize: backgroundSize,
-          backgroundPosition: 'center',
-        }),
-      }}
       data-testid="section"
       {...HTMLAttributes}
     >
