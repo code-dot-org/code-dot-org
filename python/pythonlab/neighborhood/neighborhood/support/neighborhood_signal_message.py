@@ -32,6 +32,6 @@ class NeighborhoodSignalMessage:
         # in a circular reference error.
         if world_context_type == NeighborhoodContextType.RUN and not is_boolean_message:
             print (self._get_formatted_message())
-        elif world_context_type == NeighborhoodContextType.VALIDATE:  
+        elif world_context_type == NeighborhoodContextType.VALIDATE:
             if neighborhood_tracker:
                 neighborhood_tracker.track_signal(self)
