@@ -49,8 +49,11 @@ const Output: React.FunctionComponent<OutputProps> = ({
         miniAppName === MiniApps.Neighborhood &&
         (desiredHeight !== undefined || desiredWidth !== undefined)
       ) {
-        const newHeight = desiredHeight !== undefined ? desiredHeight : 400;
-        const newWidth = desiredWidth !== undefined ? desiredWidth : 400;
+        const defaultSize = 400;
+        const newHeight =
+          desiredHeight !== undefined ? desiredHeight : defaultSize;
+        const newWidth =
+          desiredWidth !== undefined ? desiredWidth : defaultSize;
         const sliderHeight = 60;
         // The original visualization is rendered at 800x800.
         const originalVisualizationWidth = 800;
