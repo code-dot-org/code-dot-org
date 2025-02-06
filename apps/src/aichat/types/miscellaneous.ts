@@ -3,6 +3,9 @@ import {AiChatTeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import {ChatMessage} from './chatEvents';
 
+// Miscellaneous types used through the AI Chat lab.
+// If possible, try to create new types in more specific files.
+
 export interface ChatCompletionApiResponse {
   messages: ChatMessage[];
   flagged_content?: string;

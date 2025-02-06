@@ -3,7 +3,7 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {AiCustomizations} from './customizations';
-import {FeedbackValue} from './shared';
+import {FeedbackValue} from './miscellaneous';
 
 export type ChatEventDescriptionKey = 'COPY_CHAT' | 'CLEAR_CHAT' | 'LOAD_LEVEL';
 
