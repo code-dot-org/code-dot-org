@@ -27,7 +27,7 @@ describe('Section Component', () => {
 
     // change background color to light teal
     rerender(
-      <Section backgroundColor="brand-light-primary">
+      <Section backgroundColor="brandLightPrimary">
         <div>This is content.</div>
       </Section>,
     );

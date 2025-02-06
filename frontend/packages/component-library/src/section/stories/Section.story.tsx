@@ -87,7 +87,7 @@ MultipleSections.args = {
       ),
     },
     {
-      backgroundColor: 'brand-light-primary',
+      backgroundColor: 'brandLightPrimary',
       padding: 'l',
       children: (
         <>

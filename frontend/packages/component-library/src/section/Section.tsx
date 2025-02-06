@@ -4,14 +4,26 @@ import {HTMLAttributes, ReactNode} from 'react';
 import {ComponentSizeXSToL} from '@/common/types';
 import moduleStyles from './section.module.scss';
 
+export type SectionBackgroundColor =
+  | 'primary'
+  | 'secondary'
+  | 'dark'
+  | 'brandLightPrimary'
+  | 'brandLightSecondary';
+
+export const sectionBackgroundColors: {
+  [key in SectionBackgroundColor]: SectionBackgroundColor;
+} = {
+  primary: 'primary',
+  secondary: 'secondary',
+  dark: 'dark',
+  brandLightPrimary: 'brandLightPrimary',
+  brandLightSecondary: 'brandLightSecondary',
+};
+
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   /** Background color */
-  backgroundColor?:
-    | 'primary'
-    | 'secondary'
-    | 'dark'
-    | 'brand-light-primary'
-    | 'brand-light-secondary';
+  backgroundColor?: SectionBackgroundColor;
   /** Vertical padding */
   padding?: Exclude<ComponentSizeXSToL, 'xs' | 's'>;
   /** Section content */
