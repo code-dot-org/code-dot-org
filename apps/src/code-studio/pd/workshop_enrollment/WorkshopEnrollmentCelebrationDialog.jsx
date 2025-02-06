@@ -261,7 +261,6 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       color={'black'}
                       iconLeft={{iconName: 'fa-solid fa-plus'}}
                       className={style.addSessionToCalendarButton}
-                      target="_blank"
                       onClick={() =>
                         onClickAddToCalendar(session, multipleSessionDialogType)
                       }
@@ -327,11 +326,9 @@ export default function WorkshopEnrollmentCelebrationDialog({
                         iconName: 'brands fa-apple',
                         iconStyle: 'light',
                       }}
-                      target="_blank"
-                      onClick={onClickAddToCalendar(
-                        workshopSessionInfo,
-                        'Apple'
-                      )}
+                      onClick={() =>
+                        onClickAddToCalendar(workshopSessionInfo, 'Apple')
+                      }
                     />
                     {hasMultipleSessions ? (
                       <>
@@ -371,7 +368,6 @@ export default function WorkshopEnrollmentCelebrationDialog({
                             iconName: 'brands fa-google',
                             iconStyle: 'light',
                           }}
-                          target="_blank"
                           onClick={() =>
                             onClickAddToCalendar(
                               workshopSessionInfo[0],
@@ -390,7 +386,6 @@ export default function WorkshopEnrollmentCelebrationDialog({
                             iconName: 'brands fa-microsoft',
                             iconStyle: 'light',
                           }}
-                          target="_blank"
                           onClick={() =>
                             onClickAddToCalendar(
                               workshopSessionInfo[0],
