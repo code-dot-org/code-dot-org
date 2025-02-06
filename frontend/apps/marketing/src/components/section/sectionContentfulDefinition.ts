@@ -43,8 +43,7 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Padding',
       type: 'Text',
       group: 'style',
-      description:
-        'Sets whether the background image is contained or covers the section.',
+      description: 'Adds medium or large padding to the section.',
       defaultValue: 'l',
       validations: {
         in: [
