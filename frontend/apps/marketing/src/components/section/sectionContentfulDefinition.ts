@@ -29,11 +29,11 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
           {value: 'secondary', displayName: 'Secondary (light gray)'},
           {value: 'dark', displayName: 'Dark (dark gray)'},
           {
-            value: 'brand-light-primary',
+            value: 'brandLightPrimary',
             displayName: 'Brand Light Primary (light teal)',
           },
           {
-            value: 'brand-light-secondary',
+            value: 'brandLightSecondary',
             displayName: 'Brand Light Secondary (light purple)',
           },
         ],
