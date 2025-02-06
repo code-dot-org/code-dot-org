@@ -11,7 +11,7 @@ Feature: Global Edition - Farsi MVP - Sign In page
     And I open my eyes to test "[Farsi MVP] Sign In page"
 
     # Have an account already? Sign in
-    Given element "h2" contains text matching "دارای حساب کاربری هستید؟ وارد سیستم شوید"
+    Given I wait until element "h2" contains text "دارای حساب کاربری هستید؟ وارد سیستم شوید"
     And element "form[action='/global/fa/join'] button" contains text matching "Go"
     And element "form[action='/global/fa/users/auth/google_oauth2'] button" contains text matching "ورود از طریق حساب گوگل"
     And element "form[action='/global/fa/users/auth/microsoft_v2_auth'] button" contains text matching "ورود از طریق حساب مایکروسافت"
@@ -22,7 +22,7 @@ Feature: Global Edition - Farsi MVP - Sign In page
     And the href of selector "#signin a:contains(یک حساب کاربری ایجاد کنید)" contains "/global/fa/users/new_sign_up/account_type"
 
     # Want to try coding without signing in?
-    Given element "#code_without_signing_in" contains text matching "می‌خواهید برنامه‌نویسی را بدون ثبت نام امتحان کنید؟"
+    Given I wait until element "#code_without_signing_in" contains text "می‌خواهید برنامه‌نویسی را بدون ثبت نام امتحان کنید؟"
     And the href of selector "#code_without_signing_in + .row a:contains(مهمانی رقص)" contains "/dance"
     And the href of selector "#code_without_signing_in + .row a:contains(ماین‌کرفت)" contains "/api/hour/begin/mc"
     And the href of selector "#code_without_signing_in + .row a:contains(فروزن)" contains "/s/frozen/reset"

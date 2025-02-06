@@ -11,22 +11,22 @@ Feature: Global Edition - Farsi MVP - Videos page
     And I open my eyes to test "[Farsi MVP] Videos page"
 
     # Section 1: Educational short videos
-    Given element "section:nth-of-type(1) h1" contains text matching "فیلم های کوتاه آموزشی"
+    Given I wait until element "section:nth-of-type(1) h1" contains text "فیلم های کوتاه آموزشی"
 
     # Section 2: How AI Works
-    Given element "section:nth-of-type(2) h2" contains text matching "هوش مصنوعی چگونه کار می کند"
+    Given I wait until element "section:nth-of-type(2) h2" contains text "هوش مصنوعی چگونه کار می کند"
     And I wait until element "section:nth-of-type(2) .how-ai-works" is visible
 
     # Section 3: How Computers Work
-    Given element "section:nth-of-type(3) h2" contains text matching "چگونه کامپیوتر کار می کند"
+    Given I wait until element "section:nth-of-type(3) h2" contains text "چگونه کامپیوتر کار می کند"
     And I wait until element "section:nth-of-type(3) .how-computers-work" is visible
 
     # Section 4: How the Internet Works
-    Given element "section:nth-of-type(4) h2" contains text matching "اینترنت چگونه کار میکند"
+    Given I wait until element "section:nth-of-type(4) h2" contains text "اینترنت چگونه کار میکند"
     And I wait until element "section:nth-of-type(4) .how-internet-works" is visible
 
     # Section 5: Explore all Code.org videos on YouTube
-    Given element "section:nth-of-type(5) p" contains text matching "دنبال چيز ديگه اي ميگردي؟ ما فیلم های بسیار خوبی در کانال Youtube خود داریم."
+    Given I wait until element "section:nth-of-type(5) p" contains text "دنبال چيز ديگه اي ميگردي؟ ما فیلم های بسیار خوبی در کانال Youtube خود داریم."
     And the link reading "همه ویدیوهای Code.org را در یوتیوب کاوش کنید" within element "section:nth-of-type(5)" goes to "https://www.youtube.com/channel/UCJyEBMU1xVP2be1-AoGS1BA"
 
     When I see no difference for "Main content" within "main"

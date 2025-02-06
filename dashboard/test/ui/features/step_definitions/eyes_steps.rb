@@ -87,8 +87,8 @@ And(/^I see no difference for "([^"]*)" within "([^"]*)"$/) do |identifier, sele
   @eyes.force_full_page_screenshot = false
 
   @eyes.check_region(element, tag: identifier, match_timeout: MATCH_TIMEOUT, stitch_content: true)
-ensure
-  @eyes.force_full_page_screenshot = initial_force_full_page_screenshot if defined? initial_force_full_page_screenshot
+
+  @eyes.force_full_page_screenshot = initial_force_full_page_screenshot
 end
 
 And(/^The header is finished animating$/) do

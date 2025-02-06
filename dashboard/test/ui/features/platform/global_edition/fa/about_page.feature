@@ -11,29 +11,29 @@ Feature: Global Edition - Farsi MVP - About page
     And I open my eyes to test "[Farsi MVP] About page"
 
     # Section 1: Code.org in Farsi
-    Given element "section:nth-of-type(1) h1" contains text matching "Code.org به زبان فارسی"
+    Given I wait until element "section:nth-of-type(1) h1" contains text "Code.org به زبان فارسی"
 
     # Section 2: Follow us on social media
-    Given element "section:nth-of-type(2) h2" contains text matching "شبکه های اجتماعی ما را دنبال کنید"
+    Given I wait until element "section:nth-of-type(2) h2" contains text "شبکه های اجتماعی ما را دنبال کنید"
     And the link reading "فیسبوک" within element "section:nth-of-type(2)" goes to "https://www.facebook.com/profile.php?id=61556998216913"
     And the link reading "توییتر" within element "section:nth-of-type(2)" goes to "https://x.com/codeinfarsi"
     And the link reading "اینستاگرام" within element "section:nth-of-type(2)" goes to "https://www.instagram.com/codeinfarsi/"
 
     # Section 3: Empowering Farsi Speakers
-    Given element "section:nth-of-type(3) h2" contains text matching "توانمندسازی فارسی‌زبانان"
+    Given I wait until element "section:nth-of-type(3) h2" contains text "توانمندسازی فارسی‌زبانان"
 
     # Section 4: The Global Impact of Persians in Education & Technology
-    Given element "section:nth-of-type(4) h2" contains text matching "تأثیر جهانی پارسیان در آموزش و فناوری"
+    Given I wait until element "section:nth-of-type(4) h2" contains text "تأثیر جهانی پارسیان در آموزش و فناوری"
 
     # Section 5: Iranian Americans for CS Education
-    Given element "section:nth-of-type(5) h2" contains text matching "ایرانیان آمریکایی برای آموزش علوم کامپیوتری"
+    Given I wait until element "section:nth-of-type(5) h2" contains text "ایرانیان آمریکایی برای آموزش علوم کامپیوتری"
 
     # Section 6: Our Founders' Story
-    Given element "section:nth-of-type(6) h2" contains text matching "داستان بنیان‌گذاران ما"
+    Given I wait until element "section:nth-of-type(6) h2" contains text "داستان بنیان‌گذاران ما"
     And I wait until element "section:nth-of-type(6) #farsi-carousel swiper-container" is visible
 
     # Section 7: Code.org in Farsi is about children, not politics
-    Given element "section:nth-of-type(7) h2" contains text matching "code.org به فارسی درباره کودکان است، نه سیاست"
+    Given I wait until element "section:nth-of-type(7) h2" contains text "code.org به فارسی درباره کودکان است، نه سیاست"
     # Collapsible 1: What countries is Code.org in?
     When element "section:nth-of-type(7) details:nth-of-type(1) summary" contains text matching "چه کشورهایی در برنامه code.org هستند؟"
     And element "section:nth-of-type(7) details:nth-of-type(1)" is not open
@@ -66,7 +66,7 @@ Feature: Global Edition - Farsi MVP - About page
     And I wait until element "section:nth-of-type(7) details:nth-of-type(6)" is open
 
     # Section 8: Compliance In Support Of Farsi Translations
-    Given element "section:nth-of-type(8) h2" contains text matching "Compliance In Support Of Farsi Translations"
+    Given I wait until element "section:nth-of-type(8) h2" contains text "Compliance In Support Of Farsi Translations"
 
     When I see no difference for "Main content" within "main"
     Then I close my eyes
