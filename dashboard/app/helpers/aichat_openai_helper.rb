@@ -50,6 +50,6 @@ module AichatOpenaiHelper
   end
 
   def self.client
-    OpenaiChatHelper.new(API_KEY, MODEL)
+    OpenaiChatHelper::Client.new(API_KEY, MODEL)
   end
 end

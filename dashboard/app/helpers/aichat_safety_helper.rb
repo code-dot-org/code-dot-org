@@ -47,10 +47,10 @@ module AichatSafetyHelper
       attempts = 1
       Retryable.retryable(tries: 2) do
         messages = safety_check_messages(text)
-        openai_response = client.request_chat_completion(messages, 1)
+        response = client.request_chat_completion(messages, 1)
         raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
 
-        evaluation = JSON.parse(openai_response.body)['choices'][0]['message']['content']
+        evaluation = JSON.parse(response.body)['choices'][0]['message']['content']
         unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
           report_openai_safety_check("InvalidResponse")
           attempts += 1
@@ -69,7 +69,7 @@ module AichatSafetyHelper
     end
 
     private def client
-      OpenaiChatHelper.new(API_KEY, MODEL)
+      OpenaiChatHelper::Client.new(API_KEY, MODEL)
     end
 
     private def comprehend_enabled?(role)

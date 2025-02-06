@@ -44,7 +44,7 @@ class OpenaiChatController < ApplicationController
   end
 
   private def client
-    OpenaiChatHelper.new(API_KEY, MODEL)
+    OpenaiChatHelper::Client.new(API_KEY, MODEL)
   end
 
   private def prepend_system_prompt(system_prompt, messages)
