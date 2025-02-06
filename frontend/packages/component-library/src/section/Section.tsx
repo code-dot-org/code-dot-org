@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
+import {ComponentSizeXSToL} from '@/common/types';
 import moduleStyles from './section.module.scss';
 
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
@@ -12,7 +13,7 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
     | 'brand-light-primary'
     | 'brand-light-secondary';
   /** Vertical padding */
-  padding?: 'm' | 'l';
+  padding?: Exclude<ComponentSizeXSToL, 'xs' | 's'>;
   /** Section content */
   children?: ReactNode;
 }
