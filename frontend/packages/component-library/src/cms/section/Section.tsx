@@ -4,15 +4,15 @@ import {HTMLAttributes, ReactNode} from 'react';
 import {ComponentSizeXSToL} from '@/common/types';
 import moduleStyles from './section.module.scss';
 
-export type SectionBackgroundColor =
+export type SectionBackground =
   | 'primary'
   | 'secondary'
   | 'dark'
   | 'brandLightPrimary'
   | 'brandLightSecondary';
 
-export const sectionBackgroundColors: {
-  [key in SectionBackgroundColor]: SectionBackgroundColor;
+export const sectionBackground: {
+  [key in SectionBackground]: SectionBackground;
 } = {
   primary: 'primary',
   secondary: 'secondary',
@@ -23,7 +23,7 @@ export const sectionBackgroundColors: {
 
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   /** Background color */
-  backgroundColor?: SectionBackgroundColor;
+  backgroundColor?: SectionBackground;
   /** Vertical padding */
   padding?: Exclude<ComponentSizeXSToL, 'xs' | 's'>;
   /** Section content */
