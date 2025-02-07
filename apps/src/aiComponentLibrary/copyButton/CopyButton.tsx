@@ -1,7 +1,7 @@
 import Button from '@code-dot-org/component-library/button';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import React, {useState} from 'react';
 
-import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import i18n from '@cdo/locale';
 
