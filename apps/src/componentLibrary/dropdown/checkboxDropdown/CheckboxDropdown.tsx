@@ -9,11 +9,9 @@ import {
 } from '@code-dot-org/component-library/common/types';
 import React, {AriaAttributes, memo} from 'react';
 
-import CustomDropdown, {
-  _CustomDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
 
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
+import moduleStyles from './../customDropdown.module.scss';
 
 export interface CheckboxDropdownOption extends _CustomDropdownOption {}
 

@@ -14,11 +14,9 @@ import FontAwesomeV6Icon, {
 import classNames from 'classnames';
 import React, {useCallback, memo, AriaAttributes} from 'react';
 
-import CustomDropdown, {
-  _CustomDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
 
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
+import moduleStyles from './../customDropdown.module.scss';
 
 export interface IconDropdownOption extends _CustomDropdownOption {
   icon: FontAwesomeV6IconProps;

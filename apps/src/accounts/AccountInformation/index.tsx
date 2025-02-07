@@ -1,11 +1,11 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import Link from '@code-dot-org/component-library/link';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
