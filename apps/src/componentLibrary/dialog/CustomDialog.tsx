@@ -1,10 +1,11 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {
+  useBodyScrollLock,
+  useEscapeKeyHandler,
+  useFocusTrap,
+} from '@code-dot-org/component-library/common/hooks';
 import classnames from 'classnames';
 import React, {HTMLAttributes, ReactNode, useEffect, useRef} from 'react';
-
-import useBodyScrollLock from '@cdo/apps/componentLibrary/common/hooks/useBodyScrollLock';
-import useEscapeKeyHandler from '@cdo/apps/componentLibrary/common/hooks/useEscapeKeyHandler';
-import useFocusTrap from '@cdo/apps/componentLibrary/common/hooks/useFocusTrap';
 
 import moduleStyles from './customDialog.module.scss';
 

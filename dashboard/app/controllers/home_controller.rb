@@ -78,6 +78,10 @@ class HomeController < ApplicationController
   def home
     authenticate_user!
     init_homepage
+    if current_user.teacher? && Experiment.enabled?(user: current_user, experiment_name: 'teacher-homepage-v2')
+      redirect_to '/teacher_dashboard/home'
+      return
+    end
     render 'home/index'
   end
 
