@@ -1,8 +1,7 @@
 import {createSelector} from '@reduxjs/toolkit';
 
-import {RootState} from '@cdo/apps/types/redux';
+import type {RootState} from '@cdo/apps/types/redux';
 
-import {AichatState} from '../slice';
 import {
   allFieldsHidden,
   anyFieldsChanged,
@@ -32,7 +31,7 @@ export const selectSavedCustomizationsMatchInitial = createSelector(
   anyFieldsChanged
 );
 
-export const selectAllVisibleMessages = (state: {aichat: AichatState}) => {
+export const selectAllVisibleMessages = (state: RootState) => {
   const {chatEventsPast, chatEventsCurrent, chatMessagePending} = state.aichat;
   const messages = [...chatEventsPast, ...chatEventsCurrent];
   if (chatMessagePending) {

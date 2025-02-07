@@ -1,5 +1,3 @@
-// This is the "core" update logic that is shared when a student saves their
-
 import {detectToxicityInCustomizations} from '@cdo/apps/aichat/aichatApi';
 import {
   AiCustomizations,
@@ -17,6 +15,7 @@ import {setModelCardProperty, startSave} from '../../slice';
 import {dispatchSaveFailNotification} from './dispatchSaveFailNotification';
 import {handleToxicityRequestError} from './handleToxicityRequestError';
 
+// This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
 export const saveAiCustomization = async (
   currentAiCustomizations: AiCustomizations,
