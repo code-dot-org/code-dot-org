@@ -1,0 +1,155 @@
+#!/usr/bin/env ruby
+
+# Initialize Rails, which configures CDO.log to stream to syslog. On systems provisioned with Chef
+# CloudWatch Agent streams syslog to a CloudWatch Log.
+require_relative '../../dashboard/config/environment'
+require 'cdo/aws/s3'
+require 'optparse'
+require 'json'
+require 'uri'
+require 'date'
+require 'csv'
+require 'aws-sdk-sts'
+
+# TODO: Convert this to a method in `AWS::S3` with unit tests and provide a rake task to invoke it.
+# This script backs up a folder (prefix) of a source S3 bucket to a destination bucket/prefix, preserving Object keys
+# relative to the destination prefix.
+# USAGE:
+#   bin/oneoff/backup_s3_bucket --source-bucket my-important-bucket --source-prefix important/folder --destination-bucket save-stuff-here --destination-prefix backup-folder/my-important-bucket
+
+options = {}
+options[:actually_backup] = false
+options[:log_filename] = "s3_bucket_backup_log.#{Time.current.to_formatted_s(:number)}.csv"
+# Initialize to empty strings so that if prefix arguments are not provided we use the root of the source/destination buckets.
+options[:source_prefix] = ''
+options[:destination_prefix] = ''
+OptionParser.new do |parser|
+  parser.banner = "Usage: bin/oneoff/backup_s3_bucket [options]"
+  parser.on("-a", "--actually-backup", "Actually copy Objects") do
+    options[:actually_backup] = true
+  end
+  # TODO: add an option to specify that all versions of each Object should be backed up.
+  # TODO: add an option to conditionally upload the backup report to the source bucket source prefix
+  parser.on("-s", "--source-bucket SOURCE-BUCKET", "Source S3 Bucket") do |source_bucket|
+    options[:source_bucket] = source_bucket
+  end
+  parser.on("-p", "--source-prefix SOURCE-PREFIX", "The source S3 prefix, not including leading/trailing slashes.") do |source_prefix|
+    options[:source_prefix] = source_prefix.delete_prefix('/').delete_suffix('/')
+  end
+  parser.on("-d", "--destination-bucket DESTINATION-BUCKET", "Source S3 Bucket") do |destination_bucket|
+    options[:destination_bucket] = destination_bucket
+  end
+  parser.on("-q", "--destination-prefix DESTINATION-PREFIX", "The destination S3 prefix, not including leading/trailing slashes.") do |destination_prefix|
+    puts destination_prefix
+    options[:destination_prefix] = destination_prefix.delete_prefix('/').delete_suffix('/')
+  end
+  parser.on("-l", "--log-filename", "Set the log filename") do |log_filename|
+    options[:log_filename] = log_filename
+  end
+  parser.on("-h", "--help", "Displays this help message") do
+    puts parser
+    exit
+  end
+end.parse!
+
+puts "Called with options: #{options}"
+puts "Script logs are streaming to CloudWatch."
+
+class SkipBackupError < StandardError; end
+
+sts_client = Aws::STS::Client.new
+ACCOUNT_ID = sts_client.get_caller_identity.account
+s3_client = AWS::S3.create_client
+
+continuation_token = nil
+
+BackupStatus = Struct.new(
+  :source_object_uri,                  # S3 URI of source Object (`s3://[bucket-identifier]/[key]`)
+  :source_object_version,              # Version ID of source Object
+  :source_object_last_modified,        # Last modified date/time of source Object
+  :source_object_etag,                 # Source Object etag
+  :destination_object_uri,             # S3 URI of backup Object (`s3://[backup-bucket-identifier]/[backup-key]`)
+  :destination_object_version,         # Version ID of backup Object
+  :destination_object_last_modified,   # Last modified date/time of backup Object
+  :destination_object_etag,            # Backup Object etag
+  :backup_date_time,                   # Date/Time Object backup was attempted.
+  :backup_status,                      # true (successfully backed up) / false (not backed up)
+  :backup_status_reason                # Detailed error if backup failed.
+)
+
+objects_attempted = 0
+objects_backed_up = 0
+objects_failed = 0
+
+# Log each Object that we attempt to backup to a CSV file.
+CSV.open(options[:log_filename], 'a') do |backup_log_csv|
+  backup_log_csv << BackupStatus.members if File.empty?(options[:log_filename])
+  # List all Objects matching source prefix in batches until there are no more to list.
+  loop do
+    list_source_objects_response = s3_client.list_objects_v2(
+      bucket: options[:source_bucket],
+      prefix: options[:source_prefix],
+      continuation_token: continuation_token
+    )
+
+    # Iterate through each S3 Object within the current list request batch.
+    CDO.log.info "[BACKUP S3 OBJECTS] Retrieving #{list_source_objects_response.contents.length} Objects."
+    list_source_objects_response.contents.each do |source_object|
+      objects_attempted += 1
+      backup_status = BackupStatus.new
+      backup_status.source_object_uri = "s3://#{options[:source_bucket]}/#{source_object.key}"
+      backup_status.destination_object_uri = "s3://#{options[:destination_bucket]}/#{options[:destination_prefix]}/#{source_object.key}"
+      backup_status.source_object_last_modified = source_object.last_modified
+      backup_status.source_object_etag = source_object.etag
+      CDO.log.info "[BACKUP S3 BUCKET] Attempting to backup Object: #{backup_status.source_object_uri}"
+      raise SkipBackupError.new('Skipping backup. --actually-backup is set to false.') unless options[:actually_backup]
+      copy_object_output = AWS::S3.backup_object(
+        options[:source_bucket],
+        source_object.key,
+        options[:destination_bucket],
+        options[:destination_prefix]
+      )
+      objects_backed_up += 1
+      backup_status.backup_date_time = Time.now.to_formatted_s(:number)
+      backup_status.source_object_version = copy_object_output.copy_source_version_id
+      backup_status.destination_object_version = copy_object_output.version_id
+      backup_status.destination_object_last_modified = copy_object_output.copy_object_result.last_modified
+      backup_status.destination_object_etag = copy_object_output.copy_object_result.etag
+      backup_status.backup_status = true
+      CDO.log.info "[BACKUP S3 BUCKET] Successfully backed up #{backup_status.source_object_uri} to #{backup_status.destination_object_uri}"
+    rescue Aws::Errors::ServiceError, StandardError => exception
+      objects_failed += 1
+      CDO.log.error "[BACKUP S3 BUCKET] Error backing up: #{backup_status.source_object_uri} / #{exception.message}"
+      backup_status.backup_status = false
+      backup_status.backup_status_reason = exception.message
+    ensure
+      backup_log_csv << backup_status
+      backup_log_csv.flush
+    end
+    break unless list_source_objects_response.is_truncated
+    continuation_token = list_source_objects_response.next_continuation_token
+  end
+end
+
+begin
+  file_contents = File.read(options[:log_filename])
+  # Log what was backed up to source location.
+  AWS::S3.upload_to_bucket(
+    bucket: options[:source_bucket],
+    key: "#{options[:source_prefix]}/#{options[:log_filename]}",
+    body: file_contents
+  )
+  # Log what was backed up to destination location
+  AWS::S3.upload_to_bucket(
+    bucket: options[:destination_bucket],
+    key: "#{options[:destination_prefix]}/#{options[:log_filename]}",
+    body: file_contents
+  )
+rescue Aws::Errors::ServiceError, StandardError => exception
+  CDO.log.error "[BACKUP S3 BUCKET] Error uploading backup CSV log to source/destination buckets: #{exception.message}"
+end
+
+CDO.log.info "[BACKUP S3 BUCKET] Objects Attempted: #{objects_attempted}"
+CDO.log.info "[BACKUP S3 BUCKET] Objects Successfully Backed up: #{objects_backed_up}"
+CDO.log.info "[BACKUP S3 BUCKET] Objects Failed Backup: #{objects_failed}"
+puts "Script execution complete."

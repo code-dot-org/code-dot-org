@@ -246,12 +246,16 @@ module AWS
     # @params source_object_key [String] The object key to copy.
     # @params destination_bucket [String] The destination bucket.
     # @params destination_object_prefix [String] The destination (backup) directory name, NOT including trailing slash.
+    # @return [Aws::S3::Types::CopyObjectOutput]
+    # @raise [Aws::S3::Errors::ServiceError]
     def self.backup_object(source_bucket, source_object_key, destination_bucket, destination_object_prefix)
+      encoded_source_object_key = source_object_key.ascii_only? ? source_object_key : URI.encode_www_form_component(source_object_key)
       create_client.copy_object(
         {
           bucket: destination_bucket,
-          copy_source: "/#{source_bucket}/#{source_object_key}",
-          key: "#{destination_object_prefix}/#{source_object_key}"
+          # `copy_object` uses REST internally, so encode Object keys for safe transport via HTTP/REST.
+          copy_source: "/#{source_bucket}/#{encoded_source_object_key}",
+          key: "#{destination_object_prefix}/#{encoded_source_object_key}"
         }
       )
     end
