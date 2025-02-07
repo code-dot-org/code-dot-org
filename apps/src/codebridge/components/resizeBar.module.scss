@@ -1,37 +1,56 @@
 @import 'color.scss';
 
+$bar-width: 1px;
+$bar-width-hovered: 4px;
+
 .resizeBar {
-  background-color: $light_gray_950;
+  background-color: $light_gray_800;
   color: $light-white;
   text-align: center;
   flex-shrink: 0;
   font-size: 24px;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .verticalBar {
-  width: 13px;
+  width: $bar-width;
   height: 100%;
-  cursor: col-resize;
 }
 
 .horizontalBar {
   width: 100%;
-  height: 13px;
+  height: $bar-width;
+}
+
+.grabbableDiv {
+  position: absolute;
+  background-color: $light_gray_800;
+  opacity: 0;
+  z-index: 3;
+}
+
+.verticalGrabbable {
+  width: 5px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: -2px;
+  right: 2px;
+  cursor: col-resize;
+}
+
+.horizontalGrabbable {
+  height: 5px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: -2px;
+  bottom: 2px;
   cursor: row-resize;
 }
 
-.resizeIcon {
-  line-height: 13px;
-}
-
-.resizeIconVertical {
-  top: 50%;
-  position: absolute;
-  transform: translateY(-50%);
-}
-
-.dragging {
-  background-color: $light_gray_800; 
+.visible {
+  opacity: 1;
 }
