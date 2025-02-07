@@ -1,14 +1,44 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen, fireEvent, waitFor} from '@testing-library/react';
+import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import DeleteAccount, {
   DELETE_VERIFICATION_STRING,
 } from '@cdo/apps/accounts/DeleteAccount';
-import {getCheckboxes} from '@cdo/apps/accounts/DeleteAccountHelpers';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+jest.mock('@cdo/apps/utils', () => {
+  let uuidCounter = 0;
+  return {
+    createUuid: jest.fn(() => `mock-uuid-${uuidCounter++}`),
+    navigateToHref: jest.fn(),
+  };
+});
+
+jest.mock('@cdo/locale', () => {
+  const customStrings = {
+    adminAccountDeletionDialog_header: () => 'Delete Admin Account',
+    deleteAccountDialog_verificationString: () => 'DELETE',
+    deleteAccount: () => 'Delete Account',
+    dialogOK: () => 'OK',
+    cancel: () => 'cancel',
+    learnMore: () => 'Learn more',
+    deleteAccountDialog_button: () => 'Confirm Delete',
+    deleteAccountDialog_currentPassword: () => 'Current Password',
+    deleteAccountDialog_verification: () => 'Type "DELETE" to confirm',
+    personalLoginDialog_body1: ({numStudents}) =>
+      `${numStudents} students depend on you for login.`,
+    deleteAccountDialog_button_studentWarning: () => 'Button Student Warning',
+  };
+  return {
+    __esModule: true,
+    default: new Proxy(customStrings, {
+      get: (target, prop) => {
+        return prop in target ? target[prop] : () => prop;
+      },
+    }),
+  };
+});
 
 const DEFAULT_PROPS = {
   isPasswordRequired: true,
@@ -19,233 +49,238 @@ const DEFAULT_PROPS = {
 };
 
 describe('DeleteAccount', () => {
+  const renderComponent = (props = {}) => {
+    return render(<DeleteAccount {...DEFAULT_PROPS} {...props} />);
+  };
+
+  const openDeleteAccountDialog = () => {
+    fireEvent.click(screen.getByRole('button', {name: /delete account/i}));
+  };
+
+  const getPasswordInput = () => screen.getByLabelText(/current password/i);
+  const getDeleteVerificationInput = () =>
+    screen.getByLabelText(/Type "DELETE" to confirm/i);
+  const getConfirmButton = () =>
+    screen.getByRole('button', {name: /confirm delete/i});
+  const getConfirmWarningButton = () =>
+    screen.getByRole('button', {name: /Button Student Warning/i});
+  const checkAllCheckboxes = () => {
+    screen.getAllByRole('checkbox').forEach(checkbox => {
+      if (!checkbox.checked) {
+        fireEvent.click(checkbox);
+      }
+    });
+  };
+  const clearAllCheckboxes = () => {
+    screen.getAllByRole('checkbox').forEach(checkbox => {
+      if (checkbox.checked) {
+        fireEvent.click(checkbox);
+      }
+    });
+  };
+
   describe('DeleteAccountDialog submission', () => {
     it('is disabled if password is required and not provided', () => {
-      const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
-      wrapper.setState({
-        isDeleteAccountDialogOpen: true,
-        deleteVerification: DELETE_VERIFICATION_STRING,
+      renderComponent();
+      openDeleteAccountDialog();
+      fireEvent.change(getDeleteVerificationInput(), {
+        target: {value: DELETE_VERIFICATION_STRING},
       });
-      const confirmButton = wrapper.find('Button').at(1);
-      expect(confirmButton).to.have.attr('disabled');
+
+      expect(getConfirmButton()).toBeDisabled();
     });
 
     it('is disabled if verification string is not provided', () => {
-      const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
-      wrapper.setState({
-        isDeleteAccountDialogOpen: true,
-        password: 'password',
-      });
-      const confirmButton = wrapper.find('Button').at(1);
-      expect(confirmButton).to.have.attr('disabled');
+      renderComponent();
+      openDeleteAccountDialog();
+      fireEvent.change(getPasswordInput(), {target: {value: 'password'}});
+
+      expect(getConfirmButton()).toBeDisabled();
     });
 
     it('is disabled if verification string is incorrect', () => {
-      const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
-      wrapper.setState({
-        isDeleteAccountDialogOpen: true,
-        password: 'password',
-        deleteVerification: 'some other string',
+      renderComponent();
+      openDeleteAccountDialog();
+      fireEvent.change(getPasswordInput(), {target: {value: 'password'}});
+      fireEvent.change(getDeleteVerificationInput(), {
+        target: {value: 'incorrect'},
       });
-      const confirmButton = wrapper.find('Button').at(1);
-      expect(confirmButton).to.have.attr('disabled');
+
+      expect(getConfirmButton()).toBeDisabled();
     });
 
     describe('for students', () => {
       it('is enabled if password is not required and verification string is correct', () => {
-        const wrapper = mount(
-          <DeleteAccount {...DEFAULT_PROPS} isPasswordRequired={false} />
-        );
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          deleteVerification: DELETE_VERIFICATION_STRING,
+        renderComponent({isPasswordRequired: false});
+        openDeleteAccountDialog();
+        fireEvent.change(getDeleteVerificationInput(), {
+          target: {value: DELETE_VERIFICATION_STRING},
         });
-        const confirmButton = wrapper.find('Button').at(1);
-        expect(confirmButton).to.not.have.attr('disabled');
+
+        expect(getConfirmButton()).not.toBeDisabled();
       });
 
       it('is enabled if password is provided and verification string is correct', () => {
-        const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          password: 'password',
-          deleteVerification: DELETE_VERIFICATION_STRING,
+        renderComponent();
+        openDeleteAccountDialog();
+        fireEvent.change(getPasswordInput(), {target: {value: 'password'}});
+        fireEvent.change(getDeleteVerificationInput(), {
+          target: {value: DELETE_VERIFICATION_STRING},
         });
-        const confirmButton = wrapper.find('Button').at(1);
-        expect(confirmButton).to.not.have.attr('disabled');
+
+        expect(getConfirmButton()).not.toBeDisabled();
       });
     });
 
     describe('for teachers', () => {
       it('displays PersonalLoginDialog with dependent student count if depended upon for login', () => {
-        const wrapper = mount(
-          <DeleteAccount
-            {...DEFAULT_PROPS}
-            isTeacher={true}
-            hasStudents={true}
-          />
-        );
-        const deleteAccountButton = wrapper.find('BootstrapButton').at(0);
-        deleteAccountButton.simulate('click');
-        const personalLoginDialog = wrapper.find('PersonalLoginDialog');
-        expect(personalLoginDialog).to.exist;
+        renderComponent({isTeacher: true, hasStudents: true});
+        fireEvent.click(screen.getByRole('button', {name: /delete account/i}));
+
+        expect(
+          screen.getByText(/3 students depend on you for login/i)
+        ).toBeInTheDocument();
       });
 
       it('is disabled if not all checkboxes are checked', () => {
-        const wrapper = mount(
-          <DeleteAccount
-            {...DEFAULT_PROPS}
-            isTeacher={true}
-            hasStudents={true}
-          />
-        );
-        let checkboxes = getCheckboxes(true, true);
-        checkboxes[1].checked = true;
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          password: 'password',
-          deleteVerification: DELETE_VERIFICATION_STRING,
-          checkboxes,
+        renderComponent({
+          isTeacher: true,
+          hasStudents: true,
         });
-        const confirmButton = wrapper.find('Button').at(1);
-        expect(confirmButton).to.have.attr('disabled');
+        openDeleteAccountDialog();
+        fireEvent.click(screen.getByText('personalLoginDialog_button'));
+        fireEvent.change(getPasswordInput(), {target: {value: 'password'}});
+        fireEvent.change(getDeleteVerificationInput(), {
+          target: {value: DELETE_VERIFICATION_STRING},
+        });
+        clearAllCheckboxes();
+        fireEvent.click(screen.getByText('deleteAccountDialog_checkbox1_1'));
+
+        expect(getConfirmWarningButton()).toBeDisabled();
       });
 
       it('is enabled if checkboxes are checked, verification string is correct, and password not required', () => {
-        const wrapper = mount(
-          <DeleteAccount
-            {...DEFAULT_PROPS}
-            isPasswordRequired={false}
-            isTeacher={true}
-            hasStudents={true}
-          />
-        );
-        let checkboxes = getCheckboxes(false, true);
-        Object.keys(checkboxes).map(id => (checkboxes[id].checked = true));
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          deleteVerification: DELETE_VERIFICATION_STRING,
-          checkboxes,
+        renderComponent({
+          isPasswordRequired: false,
+          isTeacher: true,
+          hasStudents: true,
         });
-        const confirmButton = wrapper.find('Button').at(1);
-        expect(confirmButton).to.not.have.attr('disabled');
+        openDeleteAccountDialog();
+        fireEvent.click(screen.getByText('personalLoginDialog_button'));
+        fireEvent.change(getDeleteVerificationInput(), {
+          target: {value: DELETE_VERIFICATION_STRING},
+        });
+        checkAllCheckboxes();
+
+        expect(getConfirmWarningButton()).not.toBeDisabled();
       });
 
       it('is enabled if checkboxes are checked, verification string is correct, and password provided and required', () => {
-        const wrapper = mount(
-          <DeleteAccount
-            {...DEFAULT_PROPS}
-            isTeacher={true}
-            hasStudents={true}
-          />
-        );
-        let checkboxes = getCheckboxes(true, true);
-        Object.keys(checkboxes).map(id => (checkboxes[id].checked = true));
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          password: 'password',
-          deleteVerification: DELETE_VERIFICATION_STRING,
-          checkboxes,
+        renderComponent({isTeacher: true, hasStudents: true});
+        openDeleteAccountDialog();
+        fireEvent.click(screen.getByText('personalLoginDialog_button'));
+        fireEvent.change(getPasswordInput(), {target: {value: 'password'}});
+        fireEvent.change(getDeleteVerificationInput(), {
+          target: {value: DELETE_VERIFICATION_STRING},
         });
-        const confirmButton = wrapper.find('Button').at(1);
-        expect(confirmButton).to.not.have.attr('disabled');
+        checkAllCheckboxes();
+
+        expect(getConfirmWarningButton()).not.toBeDisabled();
       });
 
       it('is enabled if there are no checkboxes, verification string is correct, and password provided and required', () => {
-        const wrapper = mount(
-          <DeleteAccount
-            {...DEFAULT_PROPS}
-            isTeacher={true}
-            hasStudents={false}
-          />
-        );
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          password: 'password',
-          deleteVerification: DELETE_VERIFICATION_STRING,
+        renderComponent({isTeacher: true, hasStudents: false});
+        openDeleteAccountDialog();
+        fireEvent.change(getPasswordInput(), {target: {value: 'password'}});
+        fireEvent.change(getDeleteVerificationInput(), {
+          target: {value: DELETE_VERIFICATION_STRING},
         });
-        const confirmButton = wrapper.find('Button').at(1);
-        expect(confirmButton).to.not.have.attr('disabled');
+
+        expect(getConfirmButton()).not.toBeDisabled();
       });
     });
   });
 
   describe('deleteUser', () => {
-    let server, wrapper, confirmButton;
-
     beforeEach(() => {
-      wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
-      wrapper.setState({
-        isDeleteAccountDialogOpen: true,
-        password: 'password',
-        deleteVerification: DELETE_VERIFICATION_STRING,
+      jest.spyOn($, 'ajax').mockImplementation(() => {
+        return {
+          done: callback => {
+            callback(); // Simulate success callback
+            return {fail: () => {}}; // Chainable fail method
+          },
+        };
       });
-      confirmButton = wrapper.find('Button').at(1);
-      server = sinon.fakeServer.create();
     });
 
-    afterEach(() => server.restore());
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
 
     describe('on success', () => {
-      beforeEach(() => {
-        sinon.stub(utils, 'navigateToHref');
-        server.respondWith('DELETE', `/users`, [
-          204,
-          {'Content-Type': 'application/json'},
-          '',
-        ]);
-      });
+      it('navigates to root', async () => {
+        renderComponent();
+        openDeleteAccountDialog();
+        fireEvent.change(getPasswordInput(), {target: {value: 'password'}});
+        fireEvent.change(getDeleteVerificationInput(), {
+          target: {value: DELETE_VERIFICATION_STRING},
+        });
+        fireEvent.click(getConfirmButton());
 
-      it('navigates to root', () => {
-        confirmButton.simulate('click');
-        server.respond();
-        expect(utils.navigateToHref).to.have.been.calledOnce.and.calledWith(
-          '/'
-        );
-        utils.navigateToHref.restore();
+        await waitFor(() => {
+          expect(utils.navigateToHref).toHaveBeenCalledWith('/');
+        });
       });
     });
 
     describe('on failure', () => {
-      it('renders a password error if server returns one', () => {
-        server.respondWith('DELETE', `/users`, [
-          400,
-          {'Content-Type': 'application/json'},
-          '{"error": {"current_password": ["Incorrect password!"]}}',
-        ]);
-        confirmButton.simulate('click');
-        server.respond();
-        wrapper.update();
-        expect(wrapper.find('FieldError')).to.have.text('Incorrect password!');
+      it('renders a password error if server returns one', async () => {
+        jest.spyOn($, 'ajax').mockImplementation(() => {
+          const deferred = $.Deferred();
+          return deferred.reject({
+            responseJSON: {error: {current_password: ['Incorrect password!']}},
+          });
+        });
+
+        renderComponent();
+        openDeleteAccountDialog();
+        fireEvent.change(getPasswordInput(), {target: {value: 'password'}});
+        fireEvent.change(getDeleteVerificationInput(), {
+          target: {value: DELETE_VERIFICATION_STRING},
+        });
+        fireEvent.click(getConfirmButton());
+
+        await waitFor(() => {
+          expect(screen.getByText('Incorrect password!')).toBeInTheDocument();
+        });
       });
 
-      it('renders a generic error if server does not return a validation error', () => {
-        server.respondWith('DELETE', `/users`, [
-          400,
-          {'Content-Type': 'application/json'},
-          '',
-        ]);
-        confirmButton.simulate('click');
-        server.respond();
-        expect(wrapper.find('#uitest-delete-error')).to.have.text(
-          'Unexpected error: 400'
-        );
+      it('renders a generic error if server does not return a validation error', async () => {
+        jest.spyOn($, 'ajax').mockImplementation(() => {
+          const deferred = $.Deferred();
+          return deferred.reject({status: 400});
+        });
+
+        renderComponent();
+        openDeleteAccountDialog();
+        fireEvent.change(getPasswordInput(), {target: {value: 'password'}});
+        fireEvent.change(getDeleteVerificationInput(), {
+          target: {value: DELETE_VERIFICATION_STRING},
+        });
+        fireEvent.click(getConfirmButton());
+
+        await waitFor(() => {
+          expect(screen.getByText('Unexpected error: 400')).toBeInTheDocument();
+        });
       });
     });
 
     describe('for admin', () => {
       it('displays AdminAccountDialog if trying to delete admin account', () => {
-        const wrapper = mount(
-          <DeleteAccount {...DEFAULT_PROPS} isAdmin={true} />
-        );
-        const deleteAccountButton = wrapper.find('BootstrapButton').at(0);
-        deleteAccountButton.simulate('click');
-        const adminAccountDialog = wrapper.find('AdminAccountDialog');
-        expect(adminAccountDialog).to.exist;
-        const confirmButton = wrapper.find('Button').at(0);
-        confirmButton.simulate('click');
-        const deleteAccountDialog = wrapper.find('DeleteAccountDialog');
-        expect(deleteAccountDialog).to.exist;
+        renderComponent({isAdmin: true});
+        openDeleteAccountDialog();
+
+        expect(screen.getByText(/Delete admin account/i)).toBeInTheDocument();
       });
     });
   });
