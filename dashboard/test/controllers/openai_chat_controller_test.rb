@@ -4,7 +4,7 @@ require 'test_helper'
 class OpenaiChatControllerTest < ActionController::TestCase
   setup do
     mock_response = stub(
-      body: {choices: [{message: 'model response'}]}.stringify_keys.to_json,
+      body: {choices: [{message: {content: 'model response'}}]}.to_json,
       code: 200
     )
     OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
