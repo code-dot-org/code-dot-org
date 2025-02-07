@@ -4,35 +4,29 @@ import React from 'react';
 import ChangeUserTypeModal from '@cdo/apps/accounts/ChangeUserTypeModal';
 
 // Mock i18n strings used in the components
-jest.mock('@cdo/locale', () => ({
-  changeUserTypeModal_save_teacher: jest.fn(() => 'Save Teacher'),
-  cancel: jest.fn(() => 'Cancel'),
-  saving: jest.fn(() => 'Saving...'),
-  changeUserTypeModal_title: jest.fn(() => 'Change User Type'),
-  changeUserTypeModal_description_toTeacher: jest.fn(
-    () => 'Change User Type description to teacher'
-  ),
-  changeUserTypeModal_unexpectedError: jest.fn(
-    () => 'An unexpected error occurred.'
-  ),
-  changeUserTypeModal_email_label: jest.fn(() => 'Email label'),
-  changeUserTypeModal_email_labelDetails: jest.fn(() => 'Email label details'),
-  changeUserTypeModal_email_isRequired: jest.fn(() => 'Email is required.'),
-  changeUserTypeModal_email_invalid: jest.fn(() => 'Invalid email.'),
-  changeUserTypeModal_emailOptIn_description: jest.fn(
-    () => 'Email opt-in description.'
-  ),
-  changeUserTypeModal_emailOptIn_privacyPolicy: jest.fn(
-    () => 'Email opt-in privacy policy.'
-  ),
-  changeUserTypeModal_emailOptIn_isRequired: jest.fn(
-    () => 'Email opt-in is required.'
-  ),
-  dialogOK: jest.fn(() => 'OK'),
-  closeDialog: jest.fn(() => 'Close'),
-  yes: jest.fn(() => 'Yes'),
-  no: jest.fn(() => 'No'),
-}));
+jest.mock('@cdo/locale', () => {
+  const customStrings = {
+    changeUserTypeModal_save_teacher: () => 'Save Teacher',
+    cancel: () => 'Cancel',
+    saving: () => 'Saving...',
+    changeUserTypeModal_title: () => 'Change User Type',
+    changeUserTypeModal_unexpectedError: () => 'An unexpected error occurred.',
+    changeUserTypeModal_email_isRequired: () => 'Email is required.',
+    changeUserTypeModal_email_invalid: () => 'Invalid email.',
+    changeUserTypeModal_emailOptIn_description: () =>
+      'Email opt-in description.',
+    changeUserTypeModal_emailOptIn_isRequired: () =>
+      'Email opt-in is required.',
+  };
+  return {
+    __esModule: true,
+    default: new Proxy(customStrings, {
+      get: (target, prop) => {
+        return prop in target ? target[prop] : () => prop;
+      },
+    }),
+  };
+});
 
 describe('ChangeUserTypeModal', () => {
   const DEFAULT_PROPS = {

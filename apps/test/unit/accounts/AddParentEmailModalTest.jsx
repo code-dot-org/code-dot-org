@@ -3,46 +3,37 @@ import React from 'react';
 
 import AddParentEmailModal from '@cdo/apps/accounts/AddParentEmailModal';
 
-jest.mock('@cdo/locale', () => ({
-  addParentEmailModal_save: jest.fn(() => 'Save'),
-  cancel: jest.fn(() => 'Cancel'),
-  closeDialog: jest.fn(() => 'Close'),
-  saving: jest.fn(() => 'Saving...'),
-  changeEmailModal_unexpectedError: jest.fn(
-    () => 'An unexpected error occurred.'
-  ),
-  addParentEmailModal_parentEmail_isRequired: jest.fn(
-    () => 'Parent email is required.'
-  ),
-  addParentEmailModal_parentEmail_invalid: jest.fn(
-    () => 'Invalid parent email.'
-  ),
-  addParentEmailModal_parentEmail_mustBeDifferent: jest.fn(
-    () => 'Parent email must be different.'
-  ),
-  addParentEmailModal_confirmedParentEmail_mustMatch: jest.fn(
-    () => 'Confirmed email must match.'
-  ),
-  addParentEmailModal_title: jest.fn(() => 'Add Parent Email'),
-  addParentEmailModal_subtitle: jest.fn(
-    () => 'Please provide a parent email address.'
-  ),
-  addParentEmailModal_parentEmail_label: jest.fn(() => 'Parent Email'),
-  addParentEmailModal_confirmedParentEmail_label: jest.fn(
-    () => 'Confirm Parent Email'
-  ),
-  addParentEmailModal_emailOptIn_label: jest.fn(() => 'Email Opt-In'),
-  addParentEmailModal_emailOptIn_sublabel: jest.fn(
-    () => 'Would you like to opt-in to emails?'
-  ),
-  addParentEmailModal_emailOptIn_description: jest.fn(
-    () => 'Opt-in to receive emails.'
-  ),
-  changeEmailModal_emailOptIn_privacyPolicy: jest.fn(() => 'Privacy Policy'),
-  dialogOK: jest.fn(() => 'OK'),
-  yes: jest.fn(() => 'Yes'),
-  no: jest.fn(() => 'No'),
-}));
+jest.mock('@cdo/locale', () => {
+  const customStrings = {
+    addParentEmailModal_save: () => 'Save',
+    cancel: () => 'Cancel',
+    saving: () => 'Saving...',
+    changeEmailModal_unexpectedError: () => 'An unexpected error occurred.',
+    addParentEmailModal_parentEmail_isRequired: () =>
+      'Parent email is required.',
+    addParentEmailModal_parentEmail_invalid: () => 'Invalid parent email.',
+    addParentEmailModal_parentEmail_mustBeDifferent: () =>
+      'Parent email must be different.',
+    addParentEmailModal_confirmedParentEmail_mustMatch: () =>
+      'Confirmed email must match.',
+    addParentEmailModal_title: () => 'Add Parent Email',
+    addParentEmailModal_subtitle: () =>
+      'Please provide a parent email address.',
+    addParentEmailModal_parentEmail_label: () => 'Parent Email',
+    addParentEmailModal_confirmedParentEmail_label: () =>
+      'Confirm Parent Email',
+    yes: () => 'Yes',
+    no: () => 'No',
+  };
+  return {
+    __esModule: true,
+    default: new Proxy(customStrings, {
+      get: (target, prop) => {
+        return prop in target ? target[prop] : () => prop;
+      },
+    }),
+  };
+});
 
 describe('AddParentEmailModal', () => {
   const DEFAULT_PROPS = {
