@@ -139,10 +139,14 @@ def parse_options
       end
       opts.on("-l", "--local", "Use local domains. Also use local webdriver (not Saucelabs) unless -c is specified.") do
         options.local = 'true'
-        options.pegasus_domain = 'localhost.code.org:3000'
-        options.dashboard_domain = 'localhost-studio.code.org:3000'
-        options.hourofcode_domain = 'localhost.hourofcode.com:3000'
-        options.csedweek_domain = 'localhost.csedweek.org:3000'
+        options.pegasus_domain = 'ui-tests:3000'
+        options.dashboard_domain = 'ui-tests:3000'
+        options.hourofcode_domain = 'ui-tests:3000'
+        options.csedweek_domain = 'ui-tests:3000'
+        #options.pegasus_domain = 'localhost.code.org:3000'
+        #options.dashboard_domain = 'localhost-studio.code.org:3000'
+        #options.hourofcode_domain = 'localhost.hourofcode.com:3000'
+        #options.csedweek_domain = 'localhost.csedweek.org:3000'
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
