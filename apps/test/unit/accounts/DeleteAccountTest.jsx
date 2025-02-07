@@ -204,12 +204,9 @@ describe('DeleteAccount', () => {
   describe('deleteUser', () => {
     beforeEach(() => {
       jest.spyOn($, 'ajax').mockImplementation(() => {
-        return {
-          done: callback => {
-            callback(); // Simulate success callback
-            return {fail: () => {}}; // Chainable fail method
-          },
-        };
+        const deferred = $.Deferred();
+        deferred.resolve();
+        return deferred;
       });
     });
 
