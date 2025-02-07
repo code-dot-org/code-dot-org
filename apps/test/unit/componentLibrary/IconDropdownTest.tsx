@@ -1,12 +1,11 @@
+import IconDropdown, {
+  IconDropdownProps,
+  IconDropdownOption,
+} from '@code-dot-org/component-library/dropdown/iconDropdown';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, {useState} from 'react';
 import '@testing-library/jest-dom';
-
-import IconDropdown, {
-  IconDropdownProps,
-  IconDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/iconDropdown';
 
 const allOptions: IconDropdownOption[] = [
   {

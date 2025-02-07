@@ -10,11 +10,10 @@ import {
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown, {
-  _CustomDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
 
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
+import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+
+import moduleStyles from './../customDropdown.module.scss';
 
 export interface ActionDropdownOption extends _CustomDropdownOption {
   onClick: () => void;
