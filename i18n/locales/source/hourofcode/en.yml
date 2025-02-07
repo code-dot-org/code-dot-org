@@ -11,12 +11,12 @@
   hoc_stat_hours_served: "Over 100M students have tried an Hour of Code"
   hoc_stat_females: "Female students make up 50% of Hour of Code participants"
 
-  campaign_date_start_short: "Dec. 9"
-  campaign_date_start_long: "December 9"
-  campaign_date_short: "Dec. 9-15"
-  campaign_date_full: "December 9-15"
-  campaign_date_year: "2024"
-  campaign_date_full_year: "December 9-15, 2024"
+  campaign_date_start_short: "Dec. 8"
+  campaign_date_start_long: "December 8"
+  campaign_date_short: "Dec. 8-14"
+  campaign_date_full: "December 8-14"
+  campaign_date_year: "2025"
+  campaign_date_full_year: "December 8-14, 2025"
 
   nonus_campaign_date_start_short: "Sept. 5"
   nonus_campaign_date_start_long: "September 5"
@@ -2604,6 +2604,7 @@
         explore: "Explore Music Lab: Jam Session"
         explore_short: "Explore Music Lab"
         start: "Start Music Lab: Jam Session"
+        create_new_project: "Create new project"
       banner:
         desc_01: "Learn to code as you remix your favorite artists' tracks and use AI to generate your own beats!"
         desc_02: "Make music and learn to code in our new Music Lab activity for Hour of Code! In this self-guided, one-hour activity, students remix tracks from artists like %{artist_list}, and %{artist_name} while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation."

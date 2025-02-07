@@ -126,6 +126,9 @@ FactoryBot.define do
         password {nil}
         after(:create) {|user| user.update(admin: true)}
       end
+      trait :with_educator_role do
+        educator_role {SharedConstants::EDUCATOR_ROLES.first[:value]}
+      end
       trait :with_school_info do
         school_info
       end
@@ -1065,15 +1068,6 @@ FactoryBot.define do
       after(:create) do |csa_script|
         csa_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
         csa_script.save!
-      end
-    end
-
-    factory :csc_script do
-      after(:create) do |csc_script|
-        csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
-        csc_script.save!
-        course_offering = CourseOffering.add_course_offering(csc_script)
-        course_offering.update!(marketing_initiative: 'CSC')
       end
     end
 

@@ -1,7 +1,6 @@
-import React from 'react';
+import Alert from '@code-dot-org/component-library/alert';
+import React, {memo} from 'react';
 
-import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -11,16 +10,23 @@ import {removeUpdateMessage} from '../redux/aichatRedux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
   ChatEvent,
-  ChatEventDescriptions,
   ModelUpdate,
   isChatMessage,
   isNotification,
   isModelUpdate,
+  ChatEventDescriptionKey,
 } from '../types';
 
+import ChatMessageView from './ChatMessageView';
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
+
+const ChatEventDescriptions = {
+  COPY_CHAT: aichatI18n.chatEventDescriptions_copyChat(),
+  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChat(),
+  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
+} as const satisfies {[key in ChatEventDescriptionKey]: string};
 
 interface ChatEventViewProps {
   event: ChatEvent;
@@ -66,7 +72,10 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
 
   if (isChatMessage(event)) {
     return (
-      <ChatMessage {...event} showProfaneUserMessageToggle={isTeacherView} />
+      <ChatMessageView
+        chatMessage={event}
+        isChatHistoryView={isTeacherView || false}
+      />
     );
   }
 
@@ -126,4 +135,4 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   return null;
 };
 
-export default ChatEventView;
+export default memo(ChatEventView);

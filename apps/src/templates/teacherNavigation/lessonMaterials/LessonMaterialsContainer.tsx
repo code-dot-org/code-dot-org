@@ -80,6 +80,10 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const selectedSection = useAppSelector(selectedSectionSelector);
 
+  const needsReload = useAppSelector(
+    state => state.teacherSections.needsReload
+  );
+
   React.useEffect(() => {
     const fetchLessonMaterials = async () => {
       const state = getStore().getState().teacherSections;
@@ -141,12 +145,6 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     }
   }, [lessons]);
 
-  React.useEffect(() => {
-    analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
-      unitName: lessonMaterials?.unitName,
-    });
-  }, [lessonMaterials?.unitName]);
-
   const onDropdownChange = (value: string) => {
     setSelectedLesson(getLessonFromId(Number(value)));
 
@@ -186,7 +184,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
           size="s"
           id="ui-test-lessons-in-assigned-unit-dropdown"
         />
-        {lessonMaterials?.unitNumber && (
+        {lessonMaterials && (
           <UnitResourcesDropdown
             hasNumberedUnits={hasNumberedUnits}
             unitNumber={lessonMaterials.unitNumber}
@@ -232,7 +230,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   };
 
-  if (isLoading) {
+  if (isLoading || needsReload) {
     return <Spinner size={'large'} />;
   }
 

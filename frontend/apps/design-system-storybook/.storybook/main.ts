@@ -10,7 +10,9 @@ function getAbsolutePath(value: string) {
 }
 
 const config: StorybookConfig = {
-  stories: ['../../../packages/dsco/src/**/stories/*.story.@(ts|tsx)'],
+  stories: [
+    '../../../packages/component-library/src/**/stories/*.story.@(ts|tsx)',
+  ],
   addons: [
     getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@storybook/addon-essentials'),
@@ -70,7 +72,7 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@': resolve(__dirname, '../../../packages/dsco/src'),
+        '@': resolve(__dirname, '../../../packages/component-library/src'),
       };
     }
 

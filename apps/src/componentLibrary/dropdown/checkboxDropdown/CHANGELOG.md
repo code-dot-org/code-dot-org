@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.8.0] (https://github.com/code-dot-org/code-dot-org/pull/62659)
+- add optional hideControls prop to hide "Select all" and "Clear all" buttons
+- require translated "Select all" and "Clear all" button text as props unless buttons are hidden
+
 ## [0.7.0](https://github.com/code-dot-org/code-dot-org/pull/62910)
 
 - made `size` prop optional since we have default value for this prop

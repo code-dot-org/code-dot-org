@@ -3,84 +3,136 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Course Details
+# Asset-Based Pedagogy - Curriculum Examples
 
-## Who should take this course?
+#### Each of the following examples from our curriculum provide an opportunity for you to recognize students' contributions to your classroom. Read examples that relate best to your role, and consider how you might adjust the curriculum for your own teaching context.
 
-#### In short, anyone who wants to take this course should! We think this will be a valuable learning experience for anyone looking to grow their skills in K-12 computer science education.
+## **Elementary Example**
 
-#### That said, there are a few audiences that we had in mind when creating this professional learning experience:
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+<img src="https://images.code.org/5bec1e07490906d30a6f85e1ae225c7f-image-1734733801364.28.53 PM.png" alt="A time capsule." style="width: 150px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
 
-<div style="margin-top: 20px; background-color: rgba(0, 119, 134, .2); border-radius:10px; padding: 20px 20px 10px 20px">
-<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<img src="https://images.code.org/727ed9a8ffd8dc0629063f0765a1c4cd-image-1732325087776.24.42 PM.png" alt="A teacher crosses their arms and smiles at the camera." style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
-    <p style="font-size: 18px; line-height: 1.5;">I am a <b>new-to-computer science teacher</b> looking to learn instructional practices that are CS-specific and join a community of educators interested in improving belonging, inclusion, and representation of students in CS classrooms.
-	</p>
-</div>
+### **Computer Science Connections: Coding a Time Capsule**
+</p>
+<p>
 
-<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<img src="https://images.code.org/618d413476692f58b5b4dacf834672fb-image-1732325518952.31.41 PM.png" alt="A teacher smiles at the camera." style="width:80px; height: 80px; border-radius: 50%; margin-right: 20px;">
-    <p style="font-size: 18px; line-height: 1.5;">I am a <b>veteran computer science teacher</b> looking to extend my practice and join an online community of educators interested in improving belonging, inclusion and representation of students in CS classrooms.
-	</p>
-</div>
-
-<div style="display: flex; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<img src="https://images.code.org/1c2d93d804416e25b5b9760889c267bb-image-1732325518954.31.24 PM.png" alt="An administrator smiles at the camera." style="width: 80px; height: 80px; border-radius: 50%; margin-right: 20px;">
-    <p style="font-size: 18px; line-height: 1.5;">I am a <b>school- or district-level leader</b> looking to find resources and activities for professional learning communities of educators.
-	</p>
+#### <a href="https://studio.code.org/s/csc-timecapsule-2023/lessons/1" target="blank" rel="noopener noreferrer">**Coding a Time Capsule**</a> is a four-lesson module designed for students in third through eighth grades. In this module, students build a visual poem designed to tell people in the future about their current lives. This allows students to be the experts of their own stories and share their lived experiences.
+</p>
 </div>
 </div>
 
-## Through-Course Features
+## **Middle School Example**
 
-#### This course has several features are woven throughout. Engage with the ones that are relevant to you and your learning.
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+<img src="https://images.code.org/dda474d1c247d6cd6d57290ac17655b7-image-1734734522696.42.00 PM.png" alt="The problem-solving process with four steps: Define, Prepare, Reflect, and Try." style="width: 150px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
 
-### Look for the following icons to signal each feature:
+### **Computer Science Discoveries: Unit 1, Problem Solving and Computing**
 
-<div style="margin-top: 20px; border-radius:10px; padding: 20px 20px 10px 20px">
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-		<strong>Code.org Forum</strong> - Provides a discussion board to post ideas and learn from other educators. Engagement in the forum is optional, but highly encouraged!
-		</p>
-	</div>
-	<img src="https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png" alt="Code.org Forum Icon" style="width: 7%;">
-</div>
-
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-	<p style="font-size: 18px; line-height: 1.5;">
-    <strong><a href="code.org" target="blank" rel="noopener noreferrer"><mark>Activity Guide</mark></a></strong> - A central document with digital or physical versions of activities in this course. The Activity Guide provides an artifact of learning by the end of the course. 
-	</p>
-	</div>
-	<img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" alt="Activity Guide Icon" style="width: 7%;">
-</div>
-
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-			<strong>Extension Activities</strong> - Provide reflections or activities for interested newbies or teachers who are experienced in equity to extend their learning.
-		</p>
-	</div>
-	<img src="https://images.code.org/dd51b2d288841f86773ca05520f6104c-image-1731961166553.png" alt="Extension Activities Icon" style="width: 7%;">
-</div>
-
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-			<strong>Resource Suggestions</strong> - These are key resources that participants can optionally research on their own to further guide their equity journey.
-		</p>
-	</div>
-	<img src="https://images.code.org/08d8da1158d67fd1ed7535c90b2b91bc-image-1731961007471.png" alt="Resource Suggestions Icon" style="width: 7%;">
-</div>
-
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background-color: transparent;">
-	<div style="width: 90%;">
-		<p style="font-size: 18px; line-height: 1.5;">
-			<strong>Curriculum Connection</strong> - When applicable, we will make a link to Code.org's curriculum to highlight equitable practices in CS.
-		</p>
-	</div>
-	<img src="https://images.code.org/86fb480e433c7feca6d9e6df4a73a062-image-1731961341605.png" alt="Curriculum Connection Icon" style="width: 7%;">
+#### CS Discoveries is year-long course designed for sixth through tenth graders. **<a href="https://studio.code.org/s/csd1-2024/lessons/2" target="blank" rel="noopener noreferrer">Unit 1, Lesson 2</a>** allows students to brainstorm ways in which they problem solve in their daily lives, which are seen as valuable contributions to the discussion. These are used to note commonalities and differences between students and lead to a common process.
+</p>
 </div>
 </div>
+
+## **High School Example**
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+<img src="https://images.code.org/0c254babc3838d198c74a69c0e1def51-image-1734734803245.46.39 PM.png" alt="A painter stands next to the letters APCSA." style="width: 150px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
+
+### **Computer Science A: Unit 1, Object-Oriented Programming**
+
+#### **<a href="https://studio.code.org/s/csa1-2024/lessons/1" target="blank" rel="noopener noreferrer">In the opening lesson of CSA</a>**, students are encouraged to take on a software engineer persona by listing characteristics of software engineers and listing times when they’ve shown them. This helps students seem themselves as software engineers given their existing skills and talents.
+
+</p>
+
+</div>
+</div>
+
+## High-Interest Projects
+
+#### The following examples are all highly-engaging and easy to connect to students' interests. These tutorials appeal to a broad grade range and can be completed in one class session.
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0; flex-direction: row-reverse;">
+<img src="https://images.code.org/ec14d0393f387f5eccc06b8b9733a74a-image-1734735421669.56.59 PM.png" alt="AI Bot is in the ocean scanning fish." style="width: 150px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
+
+### <b><a href="https://studio.code.org/s/oceans" target="blank" rel="noopener noreferrer">AI for Oceans</a></b>
+
+#### In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. First, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+
+</p>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0; flex-direction: row-reverse;">
+<img src="https://images.code.org/201b118a16cca28f984d3385f917864b-image-1734735665221.00.59 PM.png" alt="A basketball court" style="width: 150px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
+
+### <b><a href="https://studio.code.org/s/basketball" target="blank" rel="noopener noreferrer">Choose Your Team and Make a Basketball Game</a></b>
+
+#### In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
+
+</p>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0; flex-direction: row-reverse;">
+<img src="https://images.code.org/69d279235c7ea74fab96fc0cc5bc53fd-image-1734735761659.02.37 PM.png" alt="AI Bot with a dancing bear" style="width: 150px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
+
+### <b><a href="https://studio.code.org/s/dance-ai-2023" target="blank" rel="noopener noreferrer">Dance Party: AI Edition</a></b>
+
+#### In this activity, learners of all ages get an introductory experience with coding and artificial intelligence in a safe and creative environment. This lesson has been designed for learners of all ages but does require reading. This activity requires students to play sound, as the tutorial was built to respond to music.
+
+</p>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0; flex-direction: row-reverse;">
+<img src="https://images.code.org/333aff38dfca967eb4dabd52e2b2c086-image-1734735901864.05.00 PM.png" alt="Two Minecraft characters" style="width: 150px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
+
+### <b><a href="https://studio.code.org/s/mc" target="blank" rel="noopener noreferrer">Minecraft Adventurer</a></b>
+
+#### In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+
+</p>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0; flex-direction: row-reverse;">
+<img src="https://images.code.org/5897a1cccd3f6f066c84ae0923888150-image-1734735962843.06.00 PM.png" alt="Multi-colored music notes" style="width: 150px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
+
+### <b><a href="https://studio.code.org/s/music-jam-2024" target="blank" rel="noopener noreferrer">Music Lab: Jam Session</a></b>
+
+#### Bring music and coding together with our Music Lab: Jam Session tutorial! In this fun, self-guided activity, students remix tracks from popular artists like Sabrina Carpenter, Lady Gaga, and Shakira, learning coding basics like sequencing and functions while exploring AI-powered beat creation. Perfect for sparking creativity and confidence!
+
+</p>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 20px; margin: 20px 0; flex-direction: row-reverse;">
+<img src="https://images.code.org/e91ea56ffba6e31e43731e568c1358c2-image-1734736052429.07.30 PM.png" alt="A pink poet octopus with various instruments in their tentacles." style="width: 150px; height: auto; object-fit: cover; border-radius:20px;">
+<div style="font-size: 18px; line-height: 1.5;">
+<p>
+
+### <b><a href="https://studio.code.org/s/poem-art-2021" target="blank" rel="noopener noreferrer">Poem Art</a></b>
+
+#### In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem.
+
+</p>
+</div>
+</div>
+
 MARKDOWN

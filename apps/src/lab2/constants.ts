@@ -2,18 +2,7 @@ import {AppName} from './types';
 
 export const SOURCE_FILE = 'main.json';
 
-export const BLOCKLY_LABS: AppName[] = [
-  'dance',
-  'flappy',
-  'music',
-  'thebadguys',
-  'turtle',
-  'craft',
-  'studio',
-  'bounce',
-  'poetry',
-  'spritelab',
-];
+export const BLOCKLY_LABS: AppName[] = ['dance', 'music'];
 
 export const LABS_WITH_JSON_SOURCES: AppName[] = ['aichat'];
 
@@ -26,6 +15,7 @@ export enum PERMISSIONS {
 }
 
 export const START_SOURCES = 'start_sources';
+export const TOOLBOX_BLOCKS = 'toolbox_blocks';
 
 export const LABS_USING_NEW_SHARE_DIALOG = ['music', 'pythonlab'];
 
@@ -37,6 +27,7 @@ export enum WARNING_BANNER_MESSAGES {
   STANDARD = 'You are editing start sources.',
   TEMPLATE = 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.',
   LOCK_FILES = 'Reminder: lock all start files your validation file references.',
+  TOOLBOX_MODE = 'You are editing toolbox blocks.',
 }
 
 // Default height of the predict question free response text area.

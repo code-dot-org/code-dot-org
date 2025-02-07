@@ -11,11 +11,13 @@
   = @enrollment.first_name + ','
 
 %p
-  Thank you for attending a Code.org
-  - if @workshop.course == Pd::Workshop::COURSE_CSF
-    = @workshop.course + ' ' + @workshop.subject + ' workshop'
+  Thank you for attending
+  - if @workshop.name.present?
+    = 'the Code.org ' + @workshop.name
+  - elsif @workshop.course == Pd::Workshop::COURSE_CSF
+    = 'a Code.org ' + @workshop.course + ' ' + @workshop.subject + ' workshop'
   - else
-    = @workshop.course + ' workshop'
+    = 'a Code.org ' + @workshop.course + ' workshop'
   on
   = @workshop.sessions.first.start_date_us_format + '.'
 

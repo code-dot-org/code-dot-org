@@ -1,8 +1,12 @@
+import Button from '@code-dot-org/component-library/button';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
+import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import Button from '@cdo/apps/componentLibrary/button';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -16,11 +20,6 @@ import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {useCodebridgeContext} from '../codebridgeContext';
-import WithConditionalTooltip from '../components/WithConditionalTooltip';
-import {appendSystemMessage} from '../redux/consoleRedux';
-import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
-
 import moduleStyles from './console.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
@@ -31,7 +30,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const {onRun, onStop} = useCodebridgeContext();
 
   const source = useAppSelector(
-    state => state.lab2Project.projectSource?.source
+    state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const hasPredictResponse = useAppSelector(
     state => !!state.predictLevel.response
@@ -68,7 +67,9 @@ const ControlButtons: React.FunctionComponent = () => {
       );
       dispatch(setHasRun(true));
     } else {
-      dispatch(appendSystemMessage("We don't know how to run your code."));
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeSystemMessage("We don't know how to run your code.", appName);
     }
   };
 
@@ -77,7 +78,9 @@ const ControlButtons: React.FunctionComponent = () => {
       onStop();
       dispatch(setIsRunning(false));
     } else {
-      dispatch(appendSystemMessage("We don't know how to stop your code."));
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeSystemMessage("We don't know how to stop your code.", appName);
       dispatch(setIsRunning(false));
     }
   };

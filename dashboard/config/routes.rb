@@ -7,6 +7,9 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
+  # Redirect old sign up flow to new sign up flow
+  get "/users/sign_up", to: redirect("/users/new_sign_up/account_type")
+
   # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
   get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
 
@@ -359,6 +362,7 @@ Dashboard::Application.routes.draw do
         post 'update_exemplar_code'
         get 'level_properties'
         get 'extra_links'
+        patch 'update_bubble_choice_settings'
       end
     end
 
@@ -1196,10 +1200,12 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
+    post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
+    get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
+
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
+    post '/aichat/submit_teacher_feedback', to: 'aichat#submit_teacher_feedback'
     get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
-    post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
-    get '/aichat/chat_request/:id', to: 'aichat#chat_request'
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 

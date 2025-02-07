@@ -8,6 +8,11 @@ import React from 'react';
 import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {
+  DATE_ORDER_ASC,
+  DATE_ORDER_DESC,
+} from '@cdo/apps/code-studio/pd/constants';
+
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {
   PermissionPropType,
@@ -21,7 +26,6 @@ import SubmissionsDownloadForm from './reports/foorm/submissions_download_form';
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
 const defaultFilters = {
-  date_order: 'desc',
   limit: 5,
 };
 const filterParams = {
@@ -139,6 +143,7 @@ export class WorkshopIndex extends React.Component {
           tableId="inProgressWorkshopsTable"
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('In Progress')}
+          initialOrderBy={DATE_ORDER_DESC}
         />
         <h2>Not Started</h2>
         <ServerSortWorkshopTable
@@ -149,6 +154,7 @@ export class WorkshopIndex extends React.Component {
           showSignupUrl
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('Not Started')}
+          initialOrderBy={DATE_ORDER_ASC}
         />
         <h2>Past</h2>
         <ServerSortWorkshopTable
@@ -157,6 +163,7 @@ export class WorkshopIndex extends React.Component {
           tableId="endedWorkshopsTable"
           showOrganizer={showOrganizer}
           moreUrl={this.generateFilterUrl('Ended')}
+          initialOrderBy={DATE_ORDER_DESC}
         />
       </div>
     );

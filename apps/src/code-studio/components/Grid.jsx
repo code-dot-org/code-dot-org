@@ -176,6 +176,12 @@ class Cell extends React.Component {
           this.props.row,
           this.props.col
         )}
+        /* 
+          This functionality would be complex to implement via keyboard action, is only used by levelbuilders, 
+          and is only used on for level editing of old level types,
+          so disabling the rule here for now in order to re-enable this linting rule more broadly.
+        */
+        /* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */
         onMouseOver={this.props.onMouseOver.bind(
           null,
           this.props.row,

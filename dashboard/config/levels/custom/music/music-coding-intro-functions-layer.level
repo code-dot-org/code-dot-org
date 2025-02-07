@@ -9,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "####You’re the producer! \r\n\r\nChoose the artist whose sounds you want to use and build up a new song using functions!\r\n\r\n- Get creative and experiment with different layers of sound!\r\n",
+    "long_instructions": "####You’re the producer! \r\n\r\nSelect a trackt whose sounds you want to use and build up a new song using functions!\r\n\r\n- Get creative and experiment with different layers of sound!\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -87,7 +87,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-11-27T16:41:02.674+00:00\",\"changed\":[\"cloned from \\\"music-jam-functions-verse\\\"\"],\"cloned_from\":\"music-jam-functions-verse\"},{\"changed_at\":\"2024-12-04 21:47:19 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:02:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:02:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:04:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:14:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:22:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 16:43:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-11-27T16:41:02.674+00:00\",\"changed\":[\"cloned from \\\"music-jam-functions-verse\\\"\"],\"cloned_from\":\"music-jam-functions-verse\"},{\"changed_at\":\"2024-12-04 21:47:19 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:02:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:02:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:04:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:14:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 22:22:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 16:43:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 16:54:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

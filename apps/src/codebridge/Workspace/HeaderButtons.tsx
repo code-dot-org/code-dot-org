@@ -1,8 +1,8 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -19,7 +19,7 @@ import moduleStyles from './workspace.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
-  const {startSource} = useCodebridgeContext();
+  const {startSources} = useCodebridgeContext();
 
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const enableMicroBit = useAppSelector(
@@ -28,7 +28,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
   const dialogControl = useDialogControl();
   const source = useAppSelector(
-    state => state.lab2Project.projectSource?.source
+    state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const files = source?.files || {};
 
@@ -90,7 +90,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           className={darkModeStyles.tertiaryButton}
         />
       )}
-      <VersionHistoryButton startSource={startSource} />
+      <VersionHistoryButton startSources={startSources} />
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
           <Button

@@ -1,7 +1,7 @@
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import {setScriptId, setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {
@@ -18,12 +18,16 @@ import {
   updateSelectedSection,
 } from '../teacherDashboard/teacherSectionsRedux';
 
-export const asyncLoadSelectedSection = async (sectionId: string) => {
+export const asyncLoadSelectedSection = async (
+  sectionId: string,
+  forceReload?: boolean
+) => {
   const state = getStore().getState().teacherSections;
 
   if (
-    state.selectedSectionId === parseInt(sectionId) ||
-    state.isLoadingSectionData
+    (state.selectedSectionId === parseInt(sectionId) ||
+      state.isLoadingSectionData) &&
+    !forceReload
   ) {
     return;
   }
@@ -66,7 +70,6 @@ export const setSelectedSectionData = (sectionData: any) => {
     getStore().dispatch(setShowSharingColumn(true));
   }
 
-  getStore().dispatch(setUnitName(sectionData.script.name));
   getStore().dispatch(setLoginType(sectionData.login_type));
   getStore().dispatch(setRosterProvider(sectionData.login_type));
   getStore().dispatch(setRosterProviderName(sectionData.login_type_name));

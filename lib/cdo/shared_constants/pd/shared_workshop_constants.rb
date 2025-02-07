@@ -290,5 +290,19 @@ module Pd
       'CSP',
       'CSA'
     ]
+
+    PARTICIPANT_GROUP_TYPES = [
+      'District',
+      'Multi-district',
+      'Regional',
+      'National',
+      'Facilitator',
+      'Train the trainer'
+    ].freeze
+
+    PD_SESSION_FORMATS = [
+      {value: 'in_person', label: 'In-Person', enum_value: 0},
+      {value: 'virtual', label: 'Digital', enum_value: 1}
+    ].freeze
   end
 end

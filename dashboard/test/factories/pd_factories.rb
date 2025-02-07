@@ -61,6 +61,7 @@ FactoryBot.define do
     association :workshop, factory: :workshop
     start {Time.zone.today + 9.hours}
     self.end {start + duration_hours.hours}
+    session_format {Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.first[:value]}
 
     trait :with_assigned_code do
       after :build, &:assign_code

@@ -43,7 +43,7 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     @section_2 = @sections_2.first
     sign_in @section_owner_2
     section = create :section, user: @section_owner
-    get :show, params: {section_id: section.id, course_version_name: 'csd-2024'}
+    get :show, params: {section_id: section.id, path: 'courses/csd-2024'}
     assert_response :redirect
     assert_redirected_to "http://test.host/courses/csd-2024"
   end

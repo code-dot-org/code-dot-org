@@ -13,7 +13,7 @@ import moduleStyles from './tooltip.module.scss';
 
 export interface TooltipProps {
   /** Tooltip text */
-  text: string;
+  text: string | React.ReactNode;
   /**
    * Tooltip id. Required to connect the element using the tooltip.
    * Also, you need to pass this id to that element as aria-describedBy html attribute
