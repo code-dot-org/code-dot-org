@@ -5,6 +5,7 @@ import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import {BodyTwoText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {setAiDifferentiationEnabled} from '@cdo/apps/templates/currentUserRedux';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -55,12 +56,10 @@ const TurnOffAiDiff: React.FC = () => {
         name="aiTeacherDiffToggle"
         position={'left'}
         label={
-          <span
-            dangerouslySetInnerHTML={{
-              __html: i18n.aiTeachingAssistantSettingsStatus({
-                status: '<strong>' + setEnabled + '</strong>',
-              }),
-            }}
+          <SafeMarkdown
+            markdown={i18n.aiTeachingAssistantSettingsStatus({
+              status: setEnabled,
+            })}
           />
         }
         size={'m'}
