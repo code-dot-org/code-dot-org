@@ -1,7 +1,7 @@
 import {Button} from '@code-dot-org/component-library/button';
-import Typography from '@code-dot-org/component-library/typography';
 import React, {useEffect, useState} from 'react';
 
+import Typography from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import styles from './styles.module.scss';

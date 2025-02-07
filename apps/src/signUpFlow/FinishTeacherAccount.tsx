@@ -3,17 +3,17 @@ import Checkbox from '@code-dot-org/component-library/checkbox';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {
-  BodyThreeText,
-  BodyFourText,
-  BodyTwoText,
-  Heading2,
-} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {
+  BodyThreeText,
+  BodyFourText,
+  BodyTwoText,
+  Heading2,
+} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/metrics/StatsigReporter';

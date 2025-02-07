@@ -1,7 +1,7 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {StrongText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import styles from './multi-category-select.module.scss';

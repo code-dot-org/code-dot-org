@@ -21,6 +21,18 @@ module Cdo
       CDO.pegasus_hostname,
     ].freeze
 
+    # @example Matches paths like `/global/fa/home`, capturing:
+    # - ge_prefix: "/global/fa"
+    # - ge_region: "fa"
+    # - main_path: "/home"
+    PATH_PATTERN = Regexp.new <<~REGEXP.gsub(/\s+/, '')
+      ^(?<ge_prefix>
+        #{ROOT_PATH}/
+        (?<ge_region>#{REGIONS.join('|')})
+      )
+      (?<main_path>/.*|$)
+    REGEXP
+
     # @see +Rack::GlobalEdition::RouteHandler#response+
     def self.current_region
       RequestStore.store[REGION_KEY]
@@ -60,6 +72,12 @@ module Cdo
 
     def self.region_locales(region)
       configuration_for(region)&.dig(:locales)
+    end
+
+    # @return [NilClass, Array<String>] List of project types available in the given region.
+    # @note +nil+ means all projects are available.
+    def self.region_project_types(region)
+      configuration_for(region)&.dig(:project_types)
     end
 
     def self.main_region_locale(region)
@@ -124,7 +142,9 @@ module Cdo
     end
 
     def self.path(region, *paths)
-      ::File.join(ROOT_PATH, region, *paths)
+      path = ::File.join('/', *paths)
+      path = Cdo::GlobalEdition::PATH_PATTERN.match(path)[:main_path] if Cdo::GlobalEdition::PATH_PATTERN.match?(path)
+      ::File.join(ROOT_PATH, region, path)
     end
   end
 end

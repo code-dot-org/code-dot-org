@@ -1,8 +1,3 @@
-import {
-  BodyThreeText,
-  BodyFourText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {
@@ -13,6 +8,11 @@ import React, {
   useRef,
 } from 'react';
 
+import {
+  BodyThreeText,
+  BodyFourText,
+  StrongText,
+} from '@cdo/apps/componentLibrary/typography';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
