@@ -1,4 +1,3 @@
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import debounce from 'lodash/debounce';
 import React, {
   useCallback,
@@ -9,6 +8,7 @@ import React, {
 } from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {Theme, ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 
 import {useDialogControl} from './DialogControlContext';

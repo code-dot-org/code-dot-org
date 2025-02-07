@@ -6,12 +6,10 @@ import {
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyTwoText,
-  Heading5,
-} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import React, {HTMLAttributes, ReactNode} from 'react';
+
+import {BodyTwoText, Heading5} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './popover.module.scss';
 

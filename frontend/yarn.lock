@@ -1050,7 +1050,7 @@ __metadata:
   resolution: "@code-dot-org/marketing@workspace:apps/marketing"
   dependencies:
     "@code-dot-org/component-library": "workspace:*"
-    "@contentful/experiences-sdk-react": "npm:^1.24.0"
+    "@contentful/experiences-sdk-react": "npm:^1.30.3"
     "@next/eslint-plugin-next": "npm:^15.0.3"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
@@ -1091,6 +1091,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@contentful/experiences-components-react@npm:1.30.3":
+  version: 1.30.3
+  resolution: "@contentful/experiences-components-react@npm:1.30.3"
+  dependencies:
+    "@contentful/experiences-core": "npm:1.30.3"
+    "@contentful/rich-text-react-renderer": "npm:^16.0.1"
+    postcss-import: "npm:^16.0.1"
+    style-inject: "npm:^0.3.0"
+  peerDependencies:
+    react: ">=17.0.0"
+    react-dom: ">=17.0.0"
+  checksum: 10c0/d4527f6d8782d0b09dbab4b2529f23eaf99c4a550635e394387ae0a7e148cc150e8a176369945566a3f26a7093ce4517e390d7c3e2c880b876d5658c151dc61f
+  languageName: node
+  linkType: hard
+
 "@contentful/experiences-core@npm:1.24.0":
   version: 1.24.0
   resolution: "@contentful/experiences-core@npm:1.24.0"
@@ -1100,6 +1115,18 @@ __metadata:
   peerDependencies:
     contentful: ">=10.6.0"
   checksum: 10c0/9cf3b3846b742d3121799ddf90938bfa24598aea4e257bfce2be4478f38316f5d726b55838e5bf8f44aeb4e147686ba801194db1334aa01ec14c959663ac5666
+  languageName: node
+  linkType: hard
+
+"@contentful/experiences-core@npm:1.30.3":
+  version: 1.30.3
+  resolution: "@contentful/experiences-core@npm:1.30.3"
+  dependencies:
+    "@contentful/experiences-validators": "npm:1.30.3"
+    "@contentful/rich-text-types": "npm:^17.0.0"
+  peerDependencies:
+    contentful: ">=10.6.0"
+  checksum: 10c0/d45b784691d2bcf29540b03960ab2fe5221329d45d4accfd2c4d546390b69eaddcf7f50fceecf0186a1acd5c60cfded64a4654ebee37623508a323335dbda8d7
   languageName: node
   linkType: hard
 
@@ -1127,12 +1154,44 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@contentful/experiences-sdk-react@npm:^1.30.3":
+  version: 1.30.3
+  resolution: "@contentful/experiences-sdk-react@npm:1.30.3"
+  dependencies:
+    "@contentful/experiences-components-react": "npm:1.30.3"
+    "@contentful/experiences-core": "npm:1.30.3"
+    "@contentful/experiences-validators": "npm:1.30.3"
+    "@contentful/experiences-visual-editor-react": "npm:1.30.3"
+    "@contentful/rich-text-types": "npm:^17.0.0"
+    classnames: "npm:^2.3.2"
+    csstype: "npm:^3.1.2"
+    immer: "npm:^10.0.3"
+    lodash-es: "npm:^4.17.21"
+    md5: "npm:^2.3.0"
+    style-inject: "npm:^0.3.0"
+  peerDependencies:
+    contentful: ">=10.6.0"
+    react: ">=16.0.0"
+    react-dom: ">=16.0.0"
+  checksum: 10c0/d07114d176f7236a3ee09a68e7954b1c14f0262f7f4274e601cb55adc9da3f49f35d8f5fb5c8fd181ee37b9416c0d1d2fe9219b3e113faeb38f17fa2678ee23e
+  languageName: node
+  linkType: hard
+
 "@contentful/experiences-validators@npm:1.24.0":
   version: 1.24.0
   resolution: "@contentful/experiences-validators@npm:1.24.0"
   dependencies:
     zod: "npm:^3.22.4"
   checksum: 10c0/52b996d7236afbfc0559f1ca26572592efb59d773641af19ce9b5f04aeddc691c4d7d36666f95d4b146f3bccc35f01ce5e81d4d7d38d05fc25fb9567da6c9a86
+  languageName: node
+  linkType: hard
+
+"@contentful/experiences-validators@npm:1.30.3":
+  version: 1.30.3
+  resolution: "@contentful/experiences-validators@npm:1.30.3"
+  dependencies:
+    zod: "npm:^3.22.4"
+  checksum: 10c0/4de660e32367d3613228e289fed184bd681b463b53b4a4bdf2a39d0a10c90577a74be71f2f107025aad9d7587f007e5486c1de9bfaada61b9f14c0a3327ee87a
   languageName: node
   linkType: hard
 
@@ -1159,6 +1218,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@contentful/experiences-visual-editor-react@npm:1.30.3":
+  version: 1.30.3
+  resolution: "@contentful/experiences-visual-editor-react@npm:1.30.3"
+  dependencies:
+    "@contentful/experiences-components-react": "npm:1.30.3"
+    "@contentful/experiences-core": "npm:1.30.3"
+    "@hello-pangea/dnd": "npm:^16.3.0"
+    classnames: "npm:^2.3.2"
+    contentful: "npm:^10.6.14"
+    immer: "npm:^10.0.3"
+    lodash-es: "npm:^4.17.21"
+    md5: "npm:^2.3.0"
+    style-inject: "npm:^0.3.0"
+    use-debounce: "npm:^10.0.0"
+    uuid: "npm:^9.0.1"
+    zustand: "npm:^4.4.7"
+  peerDependencies:
+    react: ">=17.0.0"
+    react-dom: ">=17.0.0"
+  checksum: 10c0/6a8da4a507c536ffd128edaeae8f851082ece8d70ee168316d10df8695c0ec62ec06549b80afcc167946231c255d10fbed15a1a88e3be34f56254f812951637d
+  languageName: node
+  linkType: hard
+
 "@contentful/rich-text-react-renderer@npm:^15.17.2":
   version: 15.22.11
   resolution: "@contentful/rich-text-react-renderer@npm:15.22.11"
@@ -1171,10 +1253,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@contentful/rich-text-react-renderer@npm:^16.0.1":
+  version: 16.0.1
+  resolution: "@contentful/rich-text-react-renderer@npm:16.0.1"
+  dependencies:
+    "@contentful/rich-text-types": "npm:^17.0.0"
+  peerDependencies:
+    react: ^16.8.6 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^16.8.6 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/ca8f37590db34c1b7bb9fbafe055bcd3e53700a131e44d2dab2daa8a8011dcd780420dbfb91ae7eda095b8036045898fa84e81cce2197c923a539602cbee38cf
+  languageName: node
+  linkType: hard
+
 "@contentful/rich-text-types@npm:^16.0.2, @contentful/rich-text-types@npm:^16.2.1, @contentful/rich-text-types@npm:^16.3.0, @contentful/rich-text-types@npm:^16.6.1, @contentful/rich-text-types@npm:^16.8.5":
   version: 16.8.5
   resolution: "@contentful/rich-text-types@npm:16.8.5"
   checksum: 10c0/0af82d501bb26d854fa3bc68136db1f0738428135066876062370637f219cd51f10abecf8e02a72c2cf9eb012523add21f4a3f72af4981a7ad4c95a9bbcb237f
+  languageName: node
+  linkType: hard
+
+"@contentful/rich-text-types@npm:^17.0.0":
+  version: 17.0.0
+  resolution: "@contentful/rich-text-types@npm:17.0.0"
+  dependencies:
+    is-plain-obj: "npm:^3.0.0"
+  checksum: 10c0/cdeb1239b459d4c0796a0367bfd784f1f2b6b27956bba00fd7b0c80ecbe93a33d0856a49dc525f5f6ce6b5488835c224868fa17c67eeb6b7170d6cc6a9641fe0
   languageName: node
   linkType: hard
 
@@ -10443,6 +10546,13 @@ __metadata:
   version: 2.0.0
   resolution: "is-obj@npm:2.0.0"
   checksum: 10c0/85044ed7ba8bd169e2c2af3a178cacb92a97aa75de9569d02efef7f443a824b5e153eba72b9ae3aca6f8ce81955271aa2dc7da67a8b720575d3e38104208cb4e
+  languageName: node
+  linkType: hard
+
+"is-plain-obj@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "is-plain-obj@npm:3.0.0"
+  checksum: 10c0/8e6483bfb051d42ec9c704c0ede051a821c6b6f9a6c7a3e3b55aa855e00981b0580c8f3b1f5e2e62649b39179b1abfee35d6f8086d999bfaa32c1908d29b07bc
   languageName: node
   linkType: hard
 

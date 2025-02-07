@@ -1,10 +1,10 @@
 import Alert from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import {
@@ -112,10 +112,21 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       />
       <CollapsibleSection headerContent="Library & Sounds">
         <div className={moduleStyles.section}>
-          <i>
-            Note that currently, all levels within a lesson must use the same
-            library.
-          </i>
+          <i>Tips for levelbuilders:</i>
+          <ul>
+            <li>Currently, only the launch2024 library supports Share/Remix</li>
+            <li>
+              The intro2024 library is no longer maintained but is still used in
+              early music lab progressions - consider picking a newer library
+              instead!
+            </li>
+            <li>
+              The curriculum2024 library is currently just a staging ground for
+              sounds that we want to test out in scripts not intended for full
+              launch. Once those sounds are finalized, they will be put into the
+              launch2024 library in the appropriate form.
+            </li>
+          </ul>
           <div>
             <SimpleDropdown
               labelText="Selected Library"

@@ -6,12 +6,12 @@ import {Button} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButtonsGroup} from '@code-dot-org/component-library/radioButton';
-import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {Fragment, ReactNode, useMemo, useState} from 'react';
 
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';

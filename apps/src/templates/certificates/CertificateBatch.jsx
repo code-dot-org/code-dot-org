@@ -1,11 +1,11 @@
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import {
   Heading1,
   Heading3,
   Heading4,
-} from '@code-dot-org/component-library/typography';
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
-
+} from '@cdo/apps/componentLibrary/typography';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
