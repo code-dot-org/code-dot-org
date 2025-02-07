@@ -59,7 +59,13 @@ class AichatSafetyHelperTest < ActionView::TestCase
     DCDO.stubs(:get).with("aichat_openai_system_prompt", anything).returns('simple')
     ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, @webpurify_profanity))
     AichatComprehendHelper.stubs(:get_toxicity).returns(@comprehend_response)
-    OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_profanity_json)
+    # OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_profanity_json)
+    mock_response = stub(
+      body: @openai_response_profanity_json,
+      code: 200,
+      success?: true
+    )
+    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
   end
 
   ROLES.each do |role|
@@ -81,7 +87,14 @@ class AichatSafetyHelperTest < ActionView::TestCase
   test "returns nil if no toxicity is detected" do
     AichatComprehendHelper.stubs(:get_toxicity).returns(nil)
     ShareFiltering.stubs(:find_profanity_failure).returns(nil)
-    OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_safe_json)
+    # OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_safe_json)
+    mock_response = stub(
+      body: @openai_response_safe_json,
+      code: 200,
+      success?: true
+    )
+    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
+
     DCDO.stubs(:get).with("aichat_safety_profane_word_blocklist", anything).returns([])
     ROLES.each do |role|
       SERVICES.each do |service|
@@ -94,19 +107,48 @@ class AichatSafetyHelperTest < ActionView::TestCase
 
   test "request_safety_check returns a valid response.body the first time it is called" do
     stub_safety_services('openai', 'user')
-    OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_safe_json).once
+    # OpenaiChatHelper.stubs(:request_safety_check).returns().once
+    mock_response = stub(
+      body: @openai_response_safe_json,
+      code: 200,
+      success?: true
+    )
+    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response).once
+
     AichatSafetyHelper.find_toxicity('user', 'clean message', 'en')
   end
 
   test "retries if request_safety_check returns a response.body other than INAPPROPRIATE or OK" do
     stub_safety_services('openai', 'user')
-    OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_invalid_json).returns(@openai_response_safe_json).twice
+    # OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_invalid_json).returns(@openai_response_safe_json).twice
+    mock_response_invalid = stub(
+      body: @openai_response_invalid_json,
+      code: 200,
+      success?: true
+    )
+    mock_response_safe = stub(
+      body: @openai_response_safe_json,
+      code: 200,
+      success?: true
+    )
+    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).
+      returns(mock_response_invalid).
+      returns(mock_response_safe).
+      twice
+
     AichatSafetyHelper.find_toxicity('user', 'clean message', 'en')
   end
 
   test "raises an error if request_safety_check returns a response.body other than INAPPROPRIATE or OK twice" do
     stub_safety_services('openai', 'user')
-    OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_invalid_json)
+    # OpenaiChatHelper.stubs(:request_safety_check).returns(@openai_response_invalid_json)
+    mock_response = stub(
+      body: @openai_response_invalid_json,
+      code: 200,
+      success?: true
+    )
+    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).returns(mock_response)
+
     assert_raises do
       AichatSafetyHelper.find_toxicity('user', 'clean message', 'en')
     end
