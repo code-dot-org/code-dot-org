@@ -4,7 +4,9 @@ import {
   ButtonType,
   LinkButton,
 } from '@code-dot-org/component-library/button';
-import React from 'react';
+import React, {useMemo} from 'react';
+
+import {fontAwesomeV6BrandIconsMap} from '@/components/common/constants';
 
 type ButtonProps = {
   /** Button text */
@@ -15,18 +17,10 @@ type ButtonProps = {
   type: Extract<ButtonType, 'primary' | 'secondary'>;
   /** Button link href */
   href?: string;
-  /** Button link target (where to open link) */
-  target?: string;
-  /** Is Button disabled */
-  disabled?: boolean;
+  /** Whether Link is for internal code.org pages, or external web page. (external links are opened in new tab) */
+  isLinkExternal?: boolean;
   /** Button left icon name */
   iconLeftName?: string;
-  /** Button left icon is brand icon */
-  isLeftIconBrand?: boolean;
-  /** Button right icon name */
-  iconRightName?: string;
-  /** Button right icon is brand icon */
-  isRightIconBrand?: boolean;
 };
 
 const Button: React.FunctionComponent<ButtonProps> = ({
@@ -34,22 +28,21 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   color,
   type,
   href,
-  target,
-  disabled,
+  isLinkExternal = false,
   iconLeftName,
-  isLeftIconBrand,
-  iconRightName,
-  isRightIconBrand,
 }) => {
+  const isLeftIconBrand = useMemo(
+    () => !!iconLeftName && fontAwesomeV6BrandIconsMap.has(iconLeftName),
+    [iconLeftName],
+  );
   return (
     <LinkButton
       text={text}
       size="m"
       href={href}
-      target={target}
+      target={isLinkExternal ? '_blank' : '_self'}
       type={type}
       color={color}
-      disabled={disabled}
       iconLeft={
         iconLeftName
           ? {
@@ -60,11 +53,10 @@ const Button: React.FunctionComponent<ButtonProps> = ({
           : undefined
       }
       iconRight={
-        iconRightName
+        isLinkExternal
           ? {
-              iconName: iconRightName,
+              iconName: 'up-right-from-square',
               iconStyle: 'solid',
-              iconFamily: isRightIconBrand ? 'brands' : undefined,
             }
           : undefined
       }

@@ -50,20 +50,11 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'https://code.org',
       group: 'content',
     },
-    target: {
-      displayName: 'Open link in (Link target)',
-      type: 'Text',
-      defaultValue: '_self',
-      group: 'style',
-      validations: {
-        in: [
-            {value: '_self', displayName: 'Same tab'},
-            {value: '_blank', displayName: 'New tab'},
-        ],
-      },
-    },
-    disabled: {
-      displayName: 'Disabled',
+    isLinkExternal: {
+      displayName:
+        'Is this link external? (Does this link leave the code.org site?)',
+      description:
+        'External links will be opened in a new tab, while internal links will be opened in the same tab.',
       type: 'Boolean',
       defaultValue: false,
       group: 'style',
@@ -73,24 +64,6 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       group: 'style',
       defaultValue: '',
-    },
-    isLeftIconBrand: {
-      displayName: 'Is left icon a brand icon?',
-      type: 'Boolean',
-      group: 'style',
-      defaultValue: false,
-    },
-    iconRightName: {
-      displayName: 'Right Icon Name',
-      type: 'Text',
-      group: 'style',
-      defaultValue: '',
-    },
-    isRightIconBrand: {
-      displayName: 'Is right icon a brand icon?',
-      type: 'Boolean',
-      group: 'style',
-      defaultValue: false,
     },
   },
 };
