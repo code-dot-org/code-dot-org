@@ -7,9 +7,11 @@
 #  storage_app_id :integer          not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  game_id        :integer
 #
 # Indexes
 #
+#  fk_rails_5ae7249531                (game_id)
 #  index_backpacks_on_storage_app_id  (storage_app_id) UNIQUE
 #  index_backpacks_on_user_id         (user_id) UNIQUE
 #
