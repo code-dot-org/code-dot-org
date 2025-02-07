@@ -1,7 +1,7 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import PropTypes from 'prop-types';
 import React, {useContext, useState} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   BodyFourText,
   StrongText,

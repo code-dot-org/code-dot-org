@@ -125,6 +125,7 @@ function initPage() {
         courseVersionId={scriptData.courseVersionId}
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
+        isSingleUnitCourse={scriptData.is_single_unit_course}
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={scriptData.teacher_resources}
         studentResources={scriptData.student_resources || []}
@@ -198,12 +199,14 @@ function displayDifferentiationChat(scriptData) {
 
   if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
     ReactDOM.render(
-      <AiDiffFloatingActionButton
-        context={AiDiffContext.UNIT}
-        scriptId={scriptData.id}
-        scriptName={scriptData.name}
-        unitDisplayName={scriptData.title}
-      />,
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={AiDiffContext.UNIT}
+          scriptId={scriptData.id}
+          scriptName={scriptData.name}
+          unitDisplayName={scriptData.title}
+        />
+      </Provider>,
       aiDiffFabMountPoint
     );
   }

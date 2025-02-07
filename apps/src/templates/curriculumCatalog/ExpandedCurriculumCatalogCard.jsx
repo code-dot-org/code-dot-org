@@ -1,13 +1,13 @@
-import {TextLink} from '@dsco_/link';
-import PropTypes from 'prop-types';
-import React, {useEffect, useRef} from 'react';
-
 import {
   Button,
   buttonColors,
   LinkButton,
-} from '@cdo/apps/componentLibrary/button';
-import Link from '@cdo/apps/componentLibrary/link';
+} from '@code-dot-org/component-library/button';
+import Link from '@code-dot-org/component-library/link';
+import {TextLink} from '@dsco_/link';
+import PropTypes from 'prop-types';
+import React, {useEffect, useRef} from 'react';
+
 import {
   BodyTwoText,
   Heading3,

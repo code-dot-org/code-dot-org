@@ -4,7 +4,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
   setup do
     @locale = 'en'
     @student = create :student
-    @model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}
+    @model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test", selectedModelId: SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL]}
     @new_message = {chatMessageText: 'hello', role: 'user', status: 'unknown', timestamp: Time.now.to_i}
     @toxic_response = {text: 'profane text', blocked_by: 'openai', details: {evaluation: 'INAPPROPRIATE'}}
     @test_env = 'unit-test-env'
@@ -53,6 +53,20 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns(model_response)
 
     request = create :aichat_request
+    perform_enqueued_jobs do
+      AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
+    end
+
+    assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], request.reload.execution_status
+    assert_equal model_response, request.response
+  end
+
+  test 'execution status is set to SUCCESS if no profanity is detected using gpt-4o-mini' do
+    model_response = 'response'
+    AichatOpenaiHelper.expects(:get_openai_assistant_response).once.returns(model_response)
+    chatgpt_model_customizations = @model_customizations.merge({selectedModelId: SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]})
+
+    request = create :aichat_request, model_customizations: chatgpt_model_customizations
     perform_enqueued_jobs do
       AichatRequestChatCompletionJob.perform_later(request: request, locale: 'en')
     end

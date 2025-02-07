@@ -108,8 +108,13 @@ const checkButtonPropsForErrors = ({
   color,
   type,
 }: _BaseButtonProps) => {
-  if (color === 'gray' && type !== 'secondary') {
-    throw new Error('Expect type prop to be secondary when color is gray');
+  if (
+    (color === 'gray' && type == 'primary') ||
+    (color === 'gray' && type === 'tertiary' && !isIconOnly)
+  ) {
+    throw new Error(
+      'Expect type prop to be secondary or tertiary(with isIconOnly prop set to true) when color is gray',
+    );
   }
 
   if (color === 'purple' && type === 'secondary') {

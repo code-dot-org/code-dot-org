@@ -964,6 +964,27 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        music-pilot-gj-2025:
+          title: music-pilot-gj-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        data-science-beta:
+          title: "[BETA] Data Science"
+          description_short: ''
+          description_student: ''
+          description_teacher: |-
+            **for external preview**
+
+            Data Science builds a strong foundation in data analysis and visualization for students, using programming tools such as CODAP in Unit 1 and Python in Unit 2 to deepen their analytical skills. Through structured lessons and projects, students will learn how to use data science tools to transform raw data into meaningful visualizations. The units emphasize ethical considerations, guiding students through discussions and activities focused on data privacy, bias, and the societal impacts of data-driven decisions. By the end of each unit, students will be prepared to investigate and solve real-world problems using a comprehensive data-driven approach, culminating in a project that showcases their ability to craft compelling data stories.
+          version_title: ''
+        data-science-with-python-pilot-2024:
+          title: "[PILOT] Data Science with Python"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
     resources:
       curriculum/csd/2017:
         name: Curriculum

@@ -11,6 +11,7 @@
 #  deleted_at     :datetime
 #  code           :string(255)
 #  session_format :integer
+#  time_zone      :string(255)
 #
 # Indexes
 #
@@ -56,6 +57,14 @@ class Pd::Session < ApplicationRecord
     end_time = self.end.strftime('%l:%M%P').strip
 
     "#{formatted_date}, #{start_time}-#{end_time}"
+  end
+
+  def session_info_for_calendar
+    {
+      id: id,
+      start: start,
+      end: self.end
+    }
   end
 
   def start_date_us_format

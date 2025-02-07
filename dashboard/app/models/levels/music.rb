@@ -53,10 +53,6 @@ class Music < Blockly
     )
   end
 
-  def uses_google_blockly?
-    true
-  end
-
   def uses_lab2?
     true
   end

@@ -98,3 +98,8 @@ Feature: Unit overview page
     And I click selector ".ui-test-lesson-resources" once I see it
     When I switch tabs
     And I wait until current URL contains "s/allthemigratedthings/lessons/1/student"
+
+  Scenario: Unit overview for unit in single-unit course
+    Given I am on "http://studio.code.org/s/ui-test-single-unit"
+    And I wait to see ".uitest-summary-progress-table"
+    And I wait until I don't see selector ".unit-breadcrumb"

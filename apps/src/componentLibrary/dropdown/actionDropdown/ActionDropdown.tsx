@@ -1,7 +1,10 @@
+import {ButtonProps} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useCallback, memo, AriaAttributes} from 'react';
 
-import {ButtonProps} from '@cdo/apps/componentLibrary/button';
 import {
   DropdownProviderWrapper,
   useDropdownContext,
@@ -10,9 +13,6 @@ import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 

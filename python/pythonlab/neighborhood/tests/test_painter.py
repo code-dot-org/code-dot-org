@@ -29,10 +29,15 @@ def test_set_paint():
   painter3.set_paint(5)
   assert painter3.get_my_paint() == 5
 
-def test_get_initialization_message():
+def test_get_initialization_message_detail():
   painter4 = Painter()
-  initialization_message = painter4._get_initialization_message(0,0,'east',0)
-  assert initialization_message == '[PAINTER] INITIALIZE_PAINTER {"id": "painter-4", "direction": "east", "x": 0, "y": 0, "paint": 0}'
+  initialization_detail = painter4._get_initialization_message_detail(0,0,'east',0)
+  assert initialization_detail == {
+    "x": 0,
+    "y": 0,
+    "direction": 'east',
+    "paint": 0,
+  }
 
 def test_is_facing_directions():
   painter = Painter(0, 0, "north")
@@ -113,5 +118,7 @@ def test_can_move():
   assert painter.can_move("south") is True
   assert painter.can_move("east") is True
   assert painter.can_move("west") is False
+  # Without a parameter, can_move checks if the painter can move in the direction it is facing.
+  assert painter.can_move() is True
   painter.move() # Now painter is on 1,0.
   assert painter.can_move("east") is False
