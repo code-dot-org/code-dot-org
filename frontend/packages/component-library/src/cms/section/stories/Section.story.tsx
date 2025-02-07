@@ -51,7 +51,7 @@ export const DefaultSection: Story = {
 
 export const SectionWithBackgroundColor: Story = {
   args: {
-    backgroundColor: sectionBackground.secondary,
+    background: sectionBackground.secondary,
     padding: 'l',
     children: (
       <>
@@ -67,7 +67,7 @@ export const MultipleSections = MultipleTemplate.bind({});
 MultipleSections.args = {
   components: [
     {
-      backgroundColor: sectionBackground.primary,
+      background: sectionBackground.primary,
       padding: 'l',
       children: (
         <>
@@ -77,7 +77,7 @@ MultipleSections.args = {
       ),
     },
     {
-      backgroundColor: sectionBackground.secondary,
+      background: sectionBackground.secondary,
       padding: 'l',
       children: (
         <>
@@ -87,7 +87,7 @@ MultipleSections.args = {
       ),
     },
     {
-      backgroundColor: sectionBackground.brandLightPrimary,
+      background: sectionBackground.brandLightPrimary,
       padding: 'l',
       children: (
         <>

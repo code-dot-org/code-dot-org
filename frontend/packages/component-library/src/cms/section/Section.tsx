@@ -23,7 +23,7 @@ export const sectionBackground: {
 
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   /** Background color */
-  backgroundColor?: SectionBackground;
+  background?: SectionBackground;
   /** Vertical padding */
   padding?: Exclude<ComponentSizeXSToL, 'xs' | 's'>;
   /** Section content */
@@ -44,7 +44,7 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  * Acts as a container for section content in the Contentful CMS.
  */
 const Section: React.FC<SectionProps> = ({
-  backgroundColor = 'primary',
+  background = 'primary',
   padding = 'l',
   children,
   className,
@@ -54,7 +54,7 @@ const Section: React.FC<SectionProps> = ({
     <section
       className={classNames(
         moduleStyles.section,
-        moduleStyles[`section-${backgroundColor}`],
+        moduleStyles[`section-${background}`],
         moduleStyles[`section-${padding}`],
         className,
       )}

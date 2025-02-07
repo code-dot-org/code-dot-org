@@ -19,7 +19,7 @@ describe('Section Component', () => {
 
   it('changes background color based on props', () => {
     const {rerender} = renderComponent({
-      backgroundColor: sectionBackground.secondary,
+      background: sectionBackground.secondary,
     });
 
     // check if background color is light gray
@@ -29,7 +29,7 @@ describe('Section Component', () => {
 
     // change background color to light teal
     rerender(
-      <Section backgroundColor="brandLightPrimary">
+      <Section background="brandLightPrimary">
         <div>This is content.</div>
       </Section>,
     );
