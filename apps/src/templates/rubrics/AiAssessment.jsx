@@ -1,7 +1,7 @@
-import {Heading6, StrongText} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {Heading6, StrongText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import AiAssessmentBox from './AiAssessmentBox';

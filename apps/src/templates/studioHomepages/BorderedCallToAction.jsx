@@ -1,10 +1,8 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {
-  Heading3,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 
 import styles from './borderedCallToAction.module.scss';
 

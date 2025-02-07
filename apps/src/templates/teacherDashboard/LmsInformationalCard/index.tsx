@@ -1,7 +1,7 @@
 import Link from '@code-dot-org/component-library/link';
-import Typography from '@code-dot-org/component-library/typography';
 import React from 'react';
 
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';

@@ -1,10 +1,7 @@
-import {
-  BodyThreeText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+import {BodyThreeText, StrongText} from '@cdo/apps/componentLibrary/typography';
 
 import aichatI18n from '../../locale';
 import {ModelDescription} from '../../types';

@@ -1,5 +1,6 @@
 import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import moment from 'moment-timezone';
 import React from 'react';
 import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import '../workshopFactory';
@@ -164,6 +165,121 @@ describe('WorkshopForm test', () => {
     // defaults to first session format option
     expect(sessionFormatDropdown.props().value).to.equal(
       PdSessionFormats[0].value
+    );
+  });
+
+  it("new workshop sessions are created with the user's local timezone", () => {
+    const easternTz = 'America/New_York';
+    jest
+      .spyOn(Intl.DateTimeFormat.prototype, 'resolvedOptions')
+      .mockReturnValueOnce({
+        timeZone: easternTz,
+      });
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const tzAbbreviation = moment.tz(easternTz).format('z');
+
+    expect(wrapper.find('WorkshopForm').find('Col').first().text()).to.equal(
+      `All workshop times are ${tzAbbreviation}:`
+    );
+  });
+
+  it('edits to workshop sessions are done in the original timezone', () => {
+    const easternTz = 'America/New_York';
+    jest
+      .spyOn(Intl.DateTimeFormat.prototype, 'resolvedOptions')
+      .mockReturnValueOnce({
+        timeZone: easternTz,
+      });
+
+    const workshop = Factory.build('workshop');
+    const [firstSession] = workshop.sessions;
+    const sessionTz = firstSession.time_zone; // America/Denver in workshop factory
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={workshop}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const tzAbbreviation = moment.tz(sessionTz).format('z');
+
+    const workshopForm = wrapper.find('WorkshopForm');
+
+    const [formattedSessionData] = workshopForm
+      .instance()
+      .prepareSessionsForForm(workshop.sessions);
+
+    expect(formattedSessionData.startTime).to.equal('9:00am');
+    expect(formattedSessionData.endTime).to.equal('5:00pm');
+    expect(formattedSessionData.date).to.equal('2016-07-01');
+
+    expect(workshopForm.find('Col').first().text()).to.equal(
+      `All workshop times are ${tzAbbreviation}:`
+    );
+  });
+
+  it('edits to legacy workshop sessions without a timezone are done in UTC', () => {
+    const easternTz = 'America/New_York';
+    jest
+      .spyOn(Intl.DateTimeFormat.prototype, 'resolvedOptions')
+      .mockReturnValueOnce({
+        timeZone: easternTz,
+      });
+
+    const workshop = Factory.build('workshop');
+    const [firstSession] = workshop.sessions;
+    // remove time_zone and reset session time to 9-5 utc, like legacy sessions are in the db
+    firstSession.time_zone = null;
+    const start = new Date(firstSession.start);
+    const end = new Date(firstSession.end);
+    start.setHours(9);
+    end.setHours(17);
+    firstSession.start = start.toISOString();
+    firstSession.end = end.toISOString();
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={workshop}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const tzAbbreviation = 'UTC';
+
+    const workshopForm = wrapper.find('WorkshopForm');
+
+    const [formattedSessionData] = workshopForm
+      .instance()
+      .prepareSessionsForForm(workshop.sessions);
+
+    expect(formattedSessionData.startTime).to.equal('9:00am');
+    expect(formattedSessionData.endTime).to.equal('5:00pm');
+    expect(formattedSessionData.date).to.equal('2016-07-01');
+
+    expect(workshopForm.find('Col').first().text()).to.equal(
+      `All workshop times are ${tzAbbreviation}:`
     );
   });
 

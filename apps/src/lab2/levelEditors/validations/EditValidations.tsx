@@ -1,6 +1,6 @@
-import Typography from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {MusicConditions} from '@cdo/apps/music/progress/MusicConditions';
 import {convertOptionalStringToBoolean} from '@cdo/apps/types/utils';
 import {createUuid} from '@cdo/apps/utils';
