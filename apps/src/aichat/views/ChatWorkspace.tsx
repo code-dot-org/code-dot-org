@@ -4,7 +4,6 @@ import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
-import {setShowModalType} from '@cdo/apps/aichat/redux';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -12,7 +11,11 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
-import {fetchStudentChatHistory, selectAllVisibleMessages} from '../redux';
+import {
+  fetchStudentChatHistory,
+  selectAllVisibleMessages,
+  setShowModalType,
+} from '../redux';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
