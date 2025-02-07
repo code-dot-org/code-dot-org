@@ -9,8 +9,6 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 
-// import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 jest.mock('@react-pdf/renderer', () => {
   return {
     PDFDownloadLink: () => null,

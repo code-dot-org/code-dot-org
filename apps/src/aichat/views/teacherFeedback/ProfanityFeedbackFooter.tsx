@@ -88,7 +88,7 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
     <div className={moduleStyles.teacherFeedbackContainer}>
       {profaneMessageVisible && (
         <>
-          <EmText>{text}</EmText>
+          <EmText className={moduleStyles.flaggedText}>{text}</EmText>
           <ThumbButton type="up" selected={thumbsUpSelected} />
           <ThumbButton type="down" selected={thumbsDownSelected} />
         </>

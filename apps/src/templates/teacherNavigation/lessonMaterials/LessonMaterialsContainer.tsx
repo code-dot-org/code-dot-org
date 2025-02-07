@@ -1,7 +1,7 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import _ from 'lodash';
 import React, {useState, useMemo, useCallback} from 'react';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';

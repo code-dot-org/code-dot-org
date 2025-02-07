@@ -1,8 +1,8 @@
+import TextField from '@code-dot-org/component-library/textField';
 import Papa from 'papaparse';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
-import TextField from '@cdo/apps/componentLibrary/textField';
 
 import {fetchStudentCodeSamples} from './StudentCodeSamplesApi';
 

@@ -1,7 +1,6 @@
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import classnames from 'classnames';
 import React from 'react';
-
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import SegmentedButton, {
   SegmentedButtonModel,

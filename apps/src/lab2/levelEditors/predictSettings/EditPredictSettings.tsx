@@ -1,7 +1,7 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useState} from 'react';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 
 import {PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT} from '../../constants';

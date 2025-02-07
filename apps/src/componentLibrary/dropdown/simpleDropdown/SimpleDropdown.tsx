@@ -1,13 +1,12 @@
+import {
+  ComponentSizeXSToL,
+  DropdownFormFieldRelatedProps,
+} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {HTMLAttributes} from 'react';
-
-import {
-  ComponentSizeXSToL,
-  DropdownFormFieldRelatedProps,
-} from '@cdo/apps/componentLibrary/common/types';
 
 import moduleStyles from './simpleDropdown.module.scss';
 

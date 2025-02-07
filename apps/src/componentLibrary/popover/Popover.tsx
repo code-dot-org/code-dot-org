@@ -1,14 +1,14 @@
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {
+  ComponentPlacementDirection,
+  ComponentSizeXSToL,
+} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classnames from 'classnames';
 import React, {HTMLAttributes, ReactNode} from 'react';
 
-import {
-  ComponentPlacementDirection,
-  ComponentSizeXSToL,
-} from '@cdo/apps/componentLibrary/common/types';
 import {BodyTwoText, Heading5} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './popover.module.scss';
