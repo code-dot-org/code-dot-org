@@ -1,10 +1,9 @@
 @import 'color.scss';
 
 .workspace {
-  height: 100%;
   grid-area: workspace;
   color: $white;
-  overflow: visible;
+  overflow: hidden;
   z-index: 2;
 }
 
@@ -45,14 +44,6 @@
 
 .workspaceWorkarea.withFileBrowser {
   grid-template-columns: 156px auto;
-}
-
-.workspaceAndOutput {
-  height: 100%;
-  grid-area: workspace-and-output;
-  background-color: $light_black;
-  color: $white;
-  overflow: hidden;
 }
 
 .workspaceWarningArea {

@@ -1,13 +1,13 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   BodyThreeText,
   BodyFourText,

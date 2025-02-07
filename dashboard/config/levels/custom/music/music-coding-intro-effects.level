@@ -84,9 +84,97 @@
             }
           ]
         }
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_pattern_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "pattern": {
+                "instrument": "drums",
+                "length": 1,
+                "events": [
+                  {
+                    "tick": 1,
+                    "note": 1
+                  },
+                  {
+                    "tick": 5,
+                    "note": 1
+                  },
+                  {
+                    "tick": 9,
+                    "note": 1
+                  },
+                  {
+                    "tick": 13,
+                    "note": 1
+                  },
+                  {
+                    "tick": 1,
+                    "note": 0
+                  },
+                  {
+                    "tick": 3,
+                    "note": 0
+                  },
+                  {
+                    "tick": 5,
+                    "note": 0
+                  },
+                  {
+                    "tick": 7,
+                    "note": 0
+                  },
+                  {
+                    "tick": 9,
+                    "note": 0
+                  },
+                  {
+                    "tick": 11,
+                    "note": 0
+                  },
+                  {
+                    "tick": 13,
+                    "note": 0
+                  },
+                  {
+                    "tick": 15,
+                    "note": 0
+                  }
+                ],
+                "ai": false
+              }
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_chord_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "chord": {
+                "notes": [
+                  60,
+                  64,
+                  67
+                ],
+                "playStyle": "arpeggio-up",
+                "instrument": "piano"
+              }
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
       }
     },
-    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> Make your own melody\r\n\r\n1. Click on the [play notes](#clickable=play-notes-block) block to create your own unique melody.\r\n2. Then, click on the [play drums](#clickable=play-drums-block) block to make your own beat.\r\n3. Press [Run](#clickable=run-button) then trigger your new sound!",
     "validations": [
       {
         "key": "music-coding-intro-effects_70c7b024-3441-4cb3-a904-33635808b53c",
@@ -159,9 +247,10 @@
         "callout": "run-button"
       }
     ],
+    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> Make your own melody\r\n\r\n1. Click on the [play notes](#clickable=play-notes-block) block to create your own unique melody.\r\n2. Then, click on the [play drums](#clickable=play-drums-block) block to make your own beat.\r\n3. Press [Run](#clickable=run-button) then trigger your new sound!",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-12-05 19:30:00 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:31:46 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:41:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:11:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:13:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:16:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:17:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:28:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:29:18 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:02:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:03:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:05:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:10:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:12:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 21:59:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:05:09 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:06:26 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:07:03 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:10:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:13:06 +0000\",\"changed\":[\"level_data\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:13:49 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-05 19:30:00 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:31:46 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:41:03 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:11:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:13:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:16:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:17:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:28:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:29:18 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:02:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:03:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:05:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:10:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:12:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 21:59:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:05:09 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:06:26 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:07:03 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:10:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:13:06 +0000\",\"changed\":[\"level_data\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 22:13:49 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-06 21:41:56 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 21:51:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 22:01:08 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,0 +1,27 @@
+name 'emma-test-computational-thinking-python-twowayselection-CFU'
+title 'Check for Understanding'
+
+wrong 'A'
+wrong 'B'
+wrong 'C'
+right 'D'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What would the result be if the user's input was `10` and `green`?
+```
+if input > 5 {
+
+ if (red) {
+    paint background(color)
+    }
+  else {
+    paint line(color) 
+}
+
+else {
+    paint star(color)
+   }
+}
+``` 
+MARKDOWN

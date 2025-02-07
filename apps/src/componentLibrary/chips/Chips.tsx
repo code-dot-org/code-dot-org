@@ -1,8 +1,7 @@
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import classNames from 'classnames';
 import uniq from 'lodash/uniq';
 import React, {useEffect} from 'react';
-
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import Chip from './_Chip';
 

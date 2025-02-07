@@ -1,13 +1,5 @@
-import classNames from 'classnames';
-import React from 'react';
-
-import HttpClient from '@cdo/apps/util/HttpClient';
-import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
-import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
-import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
-
-import {Button} from '../../componentLibrary/button';
-import FontAwesomeV6Icon from '../../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyOneText,
   BodyThreeText,
@@ -16,7 +8,15 @@ import {
   Heading3,
   Heading6,
   StrongText,
-} from '../../componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import React from 'react';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
+import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
+import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
+import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
+
 import AiDiffChat, {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,

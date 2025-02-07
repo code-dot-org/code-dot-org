@@ -11,24 +11,34 @@
     "panels": [
       {
         "text": "This block lets you play an **arpeggio**, which is a string of notes.",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/ddc094e194c79fa9fd6e968ff3e3cc37-Lesson 3 Level 7a.png",
         "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
-        "layout": "text-top-center"
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
       },
       {
-        "text": "Choose the instrument and whether the notes play up, down, randomly, or all together.",
-        "imageUrl": "",
+        "text": "Click on the block to choose the instrument and whether the notes play up, down, randomly, or all together.",
+        "imageUrl": "https://images.code.org/743321458a828a34392b7ee09554675d-Lesson 3 Level 7b (1).png",
         "key": "music-coding-intro-effects-panel-6df27d16-d6f1-4aff-b88a-d4921d2b6347",
-        "layout": "text-top-center"
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
       },
       {
-        "text": "Now you are the sound designer. What notes will you play?",
-        "imageUrl": "",
-        "key": "music-coding-intro-effects-panel-73c494ff-321c-41bf-ae75-c95818ba22ae",
+        "text": "This block lets you play drums on a drum set!",
+        "imageUrl": "https://images.code.org/e5292c5ece3f85b05c662b0e065947cf-Lesson 3 Level 7c.png",
+        "key": "music-coding-intro-effects-panel-d45981b9-9c92-44c8-b5ed-2c03677f22c2",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "Click on the block to choose which drums to play.",
+        "imageUrl": "https://images.code.org/939e27d20c68b4ef92f100a674c28e35-Lesson 3 Level 7d.png",
+        "key": "music-coding-intro-effects-panel-419eec8f-c8c5-4242-b6bc-edc9d4ace123",
+        "fadeInOverPrevious": true,
         "layout": "text-top-center"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-12-05T17:48:09.786+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-scenes-panel\\\"\"],\"cloned_from\":\"music-coding-intro-scenes-panel\"},{\"changed_at\":\"2024-12-05 19:21:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:42:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:10:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 15:49:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:39:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 17:36:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-05T17:48:09.786+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-scenes-panel\\\"\"],\"cloned_from\":\"music-coding-intro-scenes-panel\"},{\"changed_at\":\"2024-12-05 19:21:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:42:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:10:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-06 15:49:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:39:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 17:36:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 21:58:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 21:59:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 22:00:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 22:09:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 22:10:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
