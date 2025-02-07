@@ -1,4 +1,3 @@
-import {updatePositionedElementStyles} from '@code-dot-org/component-library/common/helpers';
 import React, {
   useEffect,
   useRef,
@@ -8,6 +7,8 @@ import React, {
   HTMLAttributes,
   SyntheticEvent,
 } from 'react';
+
+import {updatePositionedElementStyles} from '@cdo/apps/componentLibrary/common/helpers';
 
 import Popover, {PopoverProps} from './Popover';
 
