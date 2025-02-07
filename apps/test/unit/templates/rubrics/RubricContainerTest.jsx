@@ -388,7 +388,7 @@ describe('RubricContainer', () => {
     );
 
     // Wait for fetches and re-render
-    jest.advanceTimersByTime(50000);
+    jest.advanceTimersByTime(5000);
     await wait();
 
     // 3. Fetch returns a json object with puts AI Status into EVALUATION_PENDING state
