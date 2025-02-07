@@ -1,7 +1,7 @@
 import type {Meta, StoryObj, StoryFn} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
-import Section, {SectionProps} from '../index';
+import Section, {SectionProps, sectionBackgroundColors} from '../index';
 import {BodyOneText, Heading2} from '@/typography';
 
 export default {
@@ -51,7 +51,7 @@ export const DefaultSection: Story = {
 
 export const SectionWithBackgroundColor: Story = {
   args: {
-    backgroundColor: 'secondary',
+    backgroundColor: sectionBackgroundColors.secondary,
     padding: 'l',
     children: (
       <>
@@ -67,7 +67,7 @@ export const MultipleSections = MultipleTemplate.bind({});
 MultipleSections.args = {
   components: [
     {
-      backgroundColor: 'primary',
+      backgroundColor: sectionBackgroundColors.primary,
       padding: 'l',
       children: (
         <>
@@ -77,7 +77,7 @@ MultipleSections.args = {
       ),
     },
     {
-      backgroundColor: 'secondary',
+      backgroundColor: sectionBackgroundColors.secondary,
       padding: 'l',
       children: (
         <>
@@ -87,7 +87,7 @@ MultipleSections.args = {
       ),
     },
     {
-      backgroundColor: 'brandLightPrimary',
+      backgroundColor: sectionBackgroundColors.brandLightPrimary,
       padding: 'l',
       children: (
         <>
