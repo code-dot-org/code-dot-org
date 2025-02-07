@@ -48,7 +48,6 @@ const CopyChatHistoryButton: React.FunctionComponent<{isDisabled: boolean}> = ({
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'COPY_CHAT',
-        hideForParticipants: true,
       })
     );
   };
