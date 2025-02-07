@@ -1224,7 +1224,8 @@ class User < ApplicationRecord
       followers: {section: section}
     )
 
-    return if user.secret_words.delete(' ') != params[:secret_words].delete(' ')
+    return unless user&.valid_secret_words?(params[:secret_words])
+
     user
   end
 
