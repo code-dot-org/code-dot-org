@@ -1,16 +1,11 @@
 @import 'color.scss';
 
 $bar-width: 1px;
-$bar-width-hovered: 4px;
+$bar-width-hovered: 5px;
 
 .resizeBar {
   background-color: $light_gray_800;
-  color: $light-white;
-  text-align: center;
   flex-shrink: 0;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
   position: relative;
 }
 
@@ -32,7 +27,7 @@ $bar-width-hovered: 4px;
 }
 
 .verticalGrabbable {
-  width: 5px;
+  width: $bar-width-hovered;
   height: 100%;
   top: 0;
   bottom: 0;
@@ -42,7 +37,7 @@ $bar-width-hovered: 4px;
 }
 
 .horizontalGrabbable {
-  height: 5px;
+  height: $bar-width-hovered;
   width: 100%;
   left: 0;
   right: 0;

@@ -11,27 +11,29 @@ interface ResizeBarProps {
 }
 
 export const RESIZE_BAR_SIZE_PX = 1;
-export const RESIZE_BAR_SIZE_PX_HOVERED = 3;
 
+// A resize bar that can be dragged to resize two adjacent panels.
+// The bar is 1px wide, but when it is hovered/focused or being dragged, it
+// becomes 5px wide. The area that can be grabbed is also 5px wide.
+// The resize bar should be used with useResizable from react-resizable-layout.
 const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
   isVertical,
   isDragging,
   separatorProps,
 }) => {
-  const layoutClass = isVertical
-    ? moduleStyles.verticalBar
-    : moduleStyles.horizontalBar;
-  const [isFocused, setIsFocused] = React.useState(false);
+  const [isActive, setIsActive] = React.useState(false);
 
   useEffect(() => {
-    const isResizing = isDragging || isFocused;
+    // Ensure the cursor changes when the user is dragging or is hovered
+    // over/focused on the resize bar.
+    const isResizing = isDragging || isActive;
     const cursor = !isResizing
       ? 'default'
       : isVertical
       ? 'col-resize'
       : 'row-resize';
     document.body.style.cursor = cursor;
-  }, [isDragging, isFocused, isVertical]);
+  }, [isDragging, isActive, isVertical]);
 
   const grabbableClass = useMemo(() => {
     const className = [
@@ -39,11 +41,17 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
         ? moduleStyles.verticalGrabbable
         : moduleStyles.horizontalGrabbable,
     ];
-    if (isDragging || isFocused) {
+    if (isDragging || isActive) {
+      // When we are dragging or the resize bar is active, we show the wider
+      // grabbable bar.
       className.push(moduleStyles.visible);
     }
     return classNames(...className);
-  }, [isDragging, isFocused, isVertical]);
+  }, [isDragging, isActive, isVertical]);
+
+  const layoutClass = isVertical
+    ? moduleStyles.verticalBar
+    : moduleStyles.horizontalBar;
 
   return (
     <div className={classNames(moduleStyles.resizeBar, layoutClass)}>
@@ -55,10 +63,10 @@ const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
         // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role
         // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
         tabIndex={0}
-        onFocus={() => setIsFocused(true)}
-        onBlur={() => setIsFocused(false)}
-        onMouseEnter={() => setIsFocused(true)}
-        onMouseLeave={() => setIsFocused(false)}
+        onFocus={() => setIsActive(true)}
+        onBlur={() => setIsActive(false)}
+        onMouseEnter={() => setIsActive(true)}
+        onMouseLeave={() => setIsActive(false)}
       />
     </div>
   );
