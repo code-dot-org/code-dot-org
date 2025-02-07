@@ -19169,7 +19169,7 @@ en:
               name: Experimenting with shorter sounds
           lesson_groups:
             lessonGroup-3:
-              display_name: New progression
+              display_name: Intro to Programming with Music Lab
             lessonGroup-2:
               display_name: Original progression
           name: pilot-elem-music-lab
@@ -19989,3 +19989,6 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        pilot-pl-teaching-k5-music-lab:
+          lessons: {}
+          lesson_groups: {}

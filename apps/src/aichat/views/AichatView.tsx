@@ -1,12 +1,12 @@
 /** @file Top-level view for AI Chat Lab */
 
 import Button from '@code-dot-org/component-library/button';
+import ActionDropdown from '@code-dot-org/component-library/dropdown/actionDropdown';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
 import React, {useCallback, useEffect} from 'react';
 
-import ActionDropdown from '@cdo/apps/componentLibrary/dropdown/actionDropdown/ActionDropdown';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
@@ -188,10 +188,7 @@ const AichatView: React.FunctionComponent = () => {
         ? aichatI18n.aichatWorkspaceHeader()
         : botName}
       {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2
-          tooltipPlace="onBottom"
-          className={moduleStyles.icon}
-        />
+        <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
       )}
     </div>
   );

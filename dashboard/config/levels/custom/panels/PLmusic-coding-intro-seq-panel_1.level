@@ -9,14 +9,14 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "#### Here is an overview of the Music Lab platform. ",
+        "text": "#### Click next for an overview of the Music Lab platform. ",
         "imageUrl": "https://images.code.org/5234d8faef5afb0152365043af53a647-Screenshot 2025-02-05 at 3.47.11 PM.png",
         "key": "music-coding-intro-seq-panel-5c8e1776-1332-425c-8237-86189507ca3c",
         "layout": "text-top-center",
         "fadeInOverPrevious": true
       },
       {
-        "text": "#### Directions are here",
+        "text": "#### Directions are shown here.",
         "imageUrl": "https://images.code.org/4846ded901431f36e4ce9b42884b20f2-Untitled design.jpg",
         "key": "music-coding-intro-seq-panel-eef7e23a-96dd-448a-a2c6-7e458e637905",
         "layout": "text-bottom-left",
@@ -30,27 +30,35 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "Bold words in the instructions are call outs. When clicked, call outs provide a visual hint using a blue arrow. ",
-        "imageUrl": "https://images.code.org/72e14bfc9b4c3e2565797a11b874f053-audio-record-studio-room-2023-11-27-04-58-32-utc.jpg",
+        "text": "#### Bold words in the instructions are call outs. When clicked, call outs provide a visual hint using a blue arrow. ",
+        "imageUrl": "https://images.code.org/29e2e405ba4fda45299ae5b17881e1f4-bold words.gif",
         "key": "music-coding-intro-seq-panel-d44bed52-d4c8-45eb-9e23-4821e9210a2d",
-        "layout": "text-bottom-left",
+        "layout": "text-bottom-center",
         "fadeInOverPrevious": true
       },
       {
         "text": "If there is no code in the workspace, a hint will be given. ",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/161fe2b22073965a30811614beec267b-feedback.gif",
         "key": "PLmusic-coding-intro-seq-panel_1-23eca036-2ed7-4e70-b0e6-e3139acbff7a",
-        "layout": "text-bottom-right"
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
       },
       {
-        "text": "#### If you are new to coding and want more support, check out our <a href=\"https://studio.code.org/courses/self-paced-pl-k5-2024\" target=\"_blank\">Computer Science Basics </a> self-paced professional learning module.",
+        "text": "#### In Music Lab, there is no dropdown arrow to make selections in your code. Click directly on the box to change the code. ",
+        "imageUrl": "https://images.code.org/44694a1655aa4b5c6b45fd775b605b6a-down arrow.gif",
+        "key": "PLmusic-coding-intro-seq-panel_1-e92de425-c829-4bcf-a83b-9c10b9405fe4"
+      },
+      {
+        "text": "## If you are new to coding and want more support, check out our <a href=\"https://studio.code.org/courses/self-paced-pl-k5-2024\" target=\"_blank\">Computer Science Basics </a> self-paced professional learning module.",
         "imageUrl": "",
-        "key": "PLmusic-coding-intro-seq-panel_1-cdbc86af-7d08-4f5c-952f-df65d975fdb3"
+        "key": "PLmusic-coding-intro-seq-panel_1-cdbc86af-7d08-4f5c-952f-df65d975fdb3",
+        "layout": "text-top-center",
+        "fadeInOverPrevious": false
       }
     ],
     "offer_browser_tts": "true",
     "name_suffix": "_1"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-05T22:34:20.147+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-seq-panel_1\\\"\"],\"cloned_from\":\"music-coding-intro-seq-panel_1\"},{\"changed_at\":\"2025-02-05 22:44:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-05 23:47:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 00:00:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-05T22:34:20.147+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-seq-panel_1\\\"\"],\"cloned_from\":\"music-coding-intro-seq-panel_1\"},{\"changed_at\":\"2025-02-05 22:44:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-05 23:47:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 00:00:29 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 17:01:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 17:24:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 17:26:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 17:27:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 17:28:10 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 17:48:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 17:59:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 20:45:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 21:27:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 21:40:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 21:44:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 21:46:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 21:50:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 21:59:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 22:09:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 22:11:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 22:12:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-06 23:00:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
 </Panels>

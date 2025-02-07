@@ -1,9 +1,9 @@
 @import 'color.scss';
 
-.cdoide-container {
-  display: grid;
-  width: 100%;
+.codebridgeContainer {
   height: 100%;
+  width: 100%;
+
   scrollbar-color: $light_gray_700 $light_black;
   // webkit-scrollbar is only used by Safari. Chrome and Firefox use scrollbar-color.
   ::-webkit-scrollbar {
@@ -18,6 +18,10 @@
   ::-webkit-scrollbar-corner {
     background: $light_black;
   }
+}
+
+.codebridgeGridContainer {
+  display: grid;
 
   // Background color and gap make a border around the grid items.
   background-color: $light_gray_800;
