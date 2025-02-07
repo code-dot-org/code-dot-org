@@ -563,10 +563,10 @@ describe('FinishTeacherAccount', () => {
       const displayNameInput = screen.getAllByRole('textbox')[0];
       fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
 
-      fireEvent.change(screen.getAllByRole('combobox')[0], {
+      fireEvent.change(screen.getAllByRole('combobox')[1], {
         target: {value: 'AU'},
       });
-      fireEvent.change(screen.getAllByDisplayValue('')[1], {
+      fireEvent.change(screen.getAllByDisplayValue('')[0], {
         target: {value: 'Test School'},
       });
 
