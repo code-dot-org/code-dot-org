@@ -1,4 +1,3 @@
-import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -6,6 +5,7 @@ import {
   ChatCompletionMessage,
   AITutorInteractionStatus as Status,
 } from '@cdo/apps/aiTutor/types';
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import AssistantMessageFeedback from './AssistantMessageFeedback';

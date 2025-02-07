@@ -1,11 +1,9 @@
 import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import React, {HTMLAttributes, ReactNode} from 'react';
+
+import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './modal.module.scss';
 
