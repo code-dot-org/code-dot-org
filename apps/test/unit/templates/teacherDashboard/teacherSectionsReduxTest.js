@@ -288,15 +288,21 @@ describe('teacherSectionsRedux', () => {
     it('adds an id for each section', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);
-      assert.deepEqual(nextState.sectionIds, [11, 12, 307]);
+      assert.deepEqual(nextState.sectionIds, [11, 12, 13, 307]);
     });
 
     it('groups our sections by id', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);
-      assert.deepEqual(Object.keys(nextState.sections), ['11', '12', '307']);
+      assert.deepEqual(Object.keys(nextState.sections), [
+        '11',
+        '12',
+        '13',
+        '307',
+      ]);
       assert.strictEqual(nextState.sections[11].id, 11);
       assert.strictEqual(nextState.sections[12].id, 12);
+      assert.strictEqual(nextState.sections[13].id, 13);
       assert.strictEqual(nextState.sections[307].id, 307);
     });
 
@@ -1772,6 +1778,10 @@ describe('teacherSectionsRedux', () => {
         {
           id: 307,
           name: 'My Third Section',
+        },
+        {
+          id: 13,
+          name: 'My Single-Unit Course Section',
         },
         {
           id: 12,

@@ -94,7 +94,7 @@ const sectionRowData = [
     code: 'PQR',
     courseId: 10,
     grades: ['10'],
-    loginType: 'google_classroom',
+    loginType: 'email',
     providerManaged: true,
     hidden: false,
     courseOfferingsAreLoaded: true,
