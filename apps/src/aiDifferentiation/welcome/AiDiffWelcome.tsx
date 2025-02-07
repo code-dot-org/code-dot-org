@@ -230,6 +230,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     );
   }, [
     selectedOption,
+    context,
     scriptId,
     scriptName,
     unitDisplayName,
