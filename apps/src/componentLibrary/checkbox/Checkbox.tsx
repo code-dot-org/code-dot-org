@@ -1,8 +1,9 @@
 import {componentSizeToBodyTextSizeMap} from '@code-dot-org/component-library/common/constants';
 import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
-import Typography from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import React, {useRef, useEffect, ChangeEvent, HTMLAttributes} from 'react';
+
+import Typography from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './checkbox.module.scss';
 
