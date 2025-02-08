@@ -91,7 +91,6 @@ def navigate_to(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
       root = @browser.find_element(css: ':root')
-      puts "@browser.navigate.to #{url.inspect}"
       @browser.navigate.to url
       # Wait until the document has actually changed
       if root
