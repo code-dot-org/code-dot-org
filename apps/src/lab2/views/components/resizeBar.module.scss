@@ -1,7 +1,10 @@
 @import 'color.scss';
 
 $bar-width: 1px;
-$bar-width-hovered: 5px;
+$bar-width-grab-area: 5px;
+
+$grab-area-offset: calc(($bar-width-grab-area - 1px)/2);
+$negative-grab-area-offset: calc(-1 * $grab-area-offset);
 
 .resizeBar {
   background-color: $light_gray_800;
@@ -24,25 +27,26 @@ $bar-width-hovered: 5px;
   background-color: $light_gray_800;
   opacity: 0;
   z-index: 3;
+  transition: opacity 0.1s ease-in;
 }
 
 .verticalGrabbable {
-  width: $bar-width-hovered;
+  width: $bar-width-grab-area;
   height: 100%;
   top: 0;
   bottom: 0;
-  left: -2px;
-  right: 2px;
+  left: $negative-grab-area-offset;
+  right: $grab-area-offset;
   cursor: col-resize;
 }
 
 .horizontalGrabbable {
-  height: $bar-width-hovered;
+  height: $bar-width-grab-area;
   width: 100%;
   left: 0;
   right: 0;
-  top: -2px;
-  bottom: 2px;
+  top: $negative-grab-area-offset;
+  bottom: $grab-area-offset;
   cursor: row-resize;
 }
 

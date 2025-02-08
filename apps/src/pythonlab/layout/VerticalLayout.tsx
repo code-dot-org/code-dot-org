@@ -1,9 +1,12 @@
-import ResizeBar, {RESIZE_BAR_SIZE_PX} from '@codebridge/components/ResizeBar';
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
 import Output from '@codebridge/Workspace/Output';
 import React, {useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
+
+import ResizeBar, {
+  RESIZE_BAR_SIZE_PX,
+} from '@cdo/apps/lab2/views/components/ResizeBar';
 
 import moduleStyles from './layout.module.scss';
 

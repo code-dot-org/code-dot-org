@@ -7,7 +7,7 @@ import {useResizable} from 'react-resizable-layout';
 
 import ResizeBar, {
   RESIZE_BAR_SIZE_PX,
-} from '@cdo/apps/codebridge/components/ResizeBar';
+} from '@cdo/apps/lab2/views/components/ResizeBar';
 
 import moduleStyles from './layout.module.scss';
 

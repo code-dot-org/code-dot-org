@@ -13,8 +13,8 @@ interface ResizeBarProps {
 export const RESIZE_BAR_SIZE_PX = 1;
 
 // A resize bar that can be dragged to resize two adjacent panels.
-// The bar is 1px wide, but when it is hovered/focused or being dragged, it
-// becomes 5px wide. The area that can be grabbed is also 5px wide.
+// The visible bar starts out 1px wide. There is an absolutely-positioned 5px bar
+// that is used for grabbing, and becomes visible when it is hovered/focused or being dragged.
 // The resize bar should be used with useResizable from react-resizable-layout.
 const ResizeBar: React.FunctionComponent<ResizeBarProps> = ({
   isVertical,
