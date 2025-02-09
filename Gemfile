@@ -124,7 +124,7 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 6.4', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
@@ -158,12 +158,12 @@ gem 'gemoji'
 
 # Authentication and permissions.
 gem 'cancancan', '~> 3.5.0'
-gem 'devise', '~> 4.9.0'
-gem 'devise_invitable', '~> 2.0.2'
+gem 'devise', '~> 4.9.4'
+gem 'devise_invitable', '~> 2.0.9'
 
 gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
 gem 'omniauth-facebook', '~> 10.0.0'
-gem 'omniauth-google-oauth2', '~> 1.1.3'
+gem 'omniauth-google-oauth2', '~> 1.2.1'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 
 # Resolve CVE 2015 9284
@@ -206,7 +206,7 @@ gem 'execjs'
 # JavaScript runtime used by ExecJS.
 gem 'mini_racer'
 
-gem 'jwt', '~> 2.7.0'
+gem 'jwt', '~> 2.10.1'
 
 # SMS API for send-to-phone feature; 6.0 includes some breaking changes which
 # we'll need to prepare for:
@@ -246,7 +246,7 @@ gem 'aws-sdk-secretsmanager'
 # Lint tools
 group :development, :staging, :levelbuilder, :test do
   gem 'haml_lint', require: false
-  gem 'rubocop', '~> 1.28', require: false
+  gem 'rubocop', '~> 1.71', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rails-accessibility', require: false
