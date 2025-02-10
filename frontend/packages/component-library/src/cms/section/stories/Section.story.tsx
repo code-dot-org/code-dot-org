@@ -63,6 +63,24 @@ export const SectionWithBackgroundColor: Story = {
   play: createPlayFunction('This is a section with a background color'),
 };
 
+export const SectionWithBackgroundPattern: Story = {
+  args: {
+    background: sectionBackground.patternPrimary,
+    backgroundImageUrl:
+      'https://code.org/images/banners/banner-bg-lines-neutral-light.png',
+    padding: 'l',
+    children: (
+      <>
+        <Heading2 style={{color: 'white'}}>
+          This is a section with a background pattern
+        </Heading2>
+        <BodyOneText style={{color: 'white'}}>I'm just a sentence.</BodyOneText>
+      </>
+    ),
+  },
+  play: createPlayFunction('This is a section with a background color'),
+};
+
 export const MultipleSections = MultipleTemplate.bind({});
 MultipleSections.args = {
   components: [
@@ -93,6 +111,20 @@ MultipleSections.args = {
         <>
           <Heading2>This is section three</Heading2>
           <BodyOneText>I'm just a sentence.</BodyOneText>
+        </>
+      ),
+    },
+    {
+      background: sectionBackground.patternDark,
+      backgroundImageUrl:
+        'https://code.org/images/banners/banner-bg-lines-neutral-light.png',
+      padding: 'l',
+      children: (
+        <>
+          <Heading2 style={{color: 'white'}}>This is section three</Heading2>
+          <BodyOneText style={{color: 'white'}}>
+            I'm just a sentence.
+          </BodyOneText>
         </>
       ),
     },
