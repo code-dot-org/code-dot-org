@@ -162,7 +162,10 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
                     {equals: {key: "lesson", value: "L03"}},
                     {equals: {key: "lesson", value: "all"}}
                   ]},
-                  {equals: {key: "unit", value: "U2"}},
+                  {or_all: [
+                    {equals: {key: "unit", value: "U2"}},
+                    {equals: {key: "unit", value: "all"}}
+                  ]},
                   {equals: {key: "course", value: "test_course"}},
                 ]
               },
@@ -207,7 +210,10 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
             vector_search_configuration: {
               filter: {
                 and_all: [
-                  {equals: {key: "unit", value: "U2"}},
+                  {or_all: [
+                    {equals: {key: "unit", value: "U2"}},
+                    {equals: {key: "unit", value: "all"}}
+                  ]},
                   {equals: {key: "course", value: "test_course"}},
                 ]
               },

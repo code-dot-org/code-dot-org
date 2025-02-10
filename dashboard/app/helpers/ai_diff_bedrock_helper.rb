@@ -86,7 +86,14 @@ module AiDiffBedrockHelper
         ]
       )
     end
-    temp_filters.push({equals: {key: "unit", value: format("U%d", unit_num)}}) unless unit_num.nil?
+    unless unit_num.nil?
+      temp_filters.push(
+        or_all: [
+          {equals: {key: "unit", value: format("U%d", unit_num)}},
+          {equals: {key: "unit", value: "all"}}
+        ]
+      )
+    end
     temp_filters.push({equals: {key: "course", value: course_name}}) unless course_name.nil?
 
     #can't use "and_all" if there is only 1 expression to filter on, only 2+
