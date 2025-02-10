@@ -1,3 +1,5 @@
+# Skipped due to flakiness caused by the CDO icon animation on YouTube videos
+@skip
 @chrome
 Feature: Global Edition - Farsi MVP - Videos page
 
