@@ -9,7 +9,9 @@ export type SectionBackground =
   | 'secondary'
   | 'dark'
   | 'brandLightPrimary'
-  | 'brandLightSecondary';
+  | 'brandLightSecondary'
+  | 'patternDark'
+  | 'patternPrimary';
 
 export const sectionBackground: {
   [key in SectionBackground]: SectionBackground;
@@ -19,11 +21,15 @@ export const sectionBackground: {
   dark: 'dark',
   brandLightPrimary: 'brandLightPrimary',
   brandLightSecondary: 'brandLightSecondary',
+  patternDark: 'patternDark',
+  patternPrimary: 'patternPrimary',
 };
 
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   /** Background color */
   background?: SectionBackground;
+  /** Background image */
+  backgroundImageUrl?: string;
   /** Vertical padding */
   padding?: Exclude<ComponentSizeXSToL, 'xs' | 's'>;
   /** Section content */
@@ -45,6 +51,7 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  */
 const Section: React.FC<SectionProps> = ({
   background = 'primary',
+  backgroundImageUrl,
   padding = 'l',
   children,
   className,
@@ -56,9 +63,17 @@ const Section: React.FC<SectionProps> = ({
         moduleStyles.section,
         moduleStyles[`section-${background}`],
         moduleStyles[`section-${padding}`],
+        moduleStyles[`section-${padding}`],
         className,
       )}
       {...HTMLAttributes}
+      style={{
+        ...(backgroundImageUrl && {
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '18rem',
+        }),
+      }}
     >
       <div className={classNames(moduleStyles.container)}>{children}</div>
     </section>
