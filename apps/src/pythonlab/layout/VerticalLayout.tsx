@@ -45,6 +45,7 @@ const VerticalLayout: React.FunctionComponent = () => {
   });
 
   const adjustWidths = useCallback(() => {
+    console.log('hello from adjustWidths');
     // Editor takes priority in terms of available space.
     const adjustedEditorWidth = Math.max(
       window.innerWidth - rawInfoPanelWidth - rawOutputWidth - TWO_RESIZE_BARS,
@@ -80,11 +81,14 @@ const VerticalLayout: React.FunctionComponent = () => {
 
   useEffect(() => {
     adjustWidths();
-  }, [rawInfoPanelWidth, rawOutputWidth, adjustWidths]);
+  }, [adjustWidths]);
 
-  // Flexbox can handle adjusting the widths of the panel to fit the screen, but the
-  // output panel needs an accurate width in order to resize the visualization appropriately.
-  window.addEventListener('resize', adjustWidths);
+  useEffect(() => {
+    // Flexbox can handle adjusting the widths of the panel to fit the screen, but the
+    // output panel needs an accurate width in order to resize the visualization appropriately.
+    window.addEventListener('resize', adjustWidths);
+    return () => window.removeEventListener('resize', adjustWidths);
+  }, [adjustWidths]);
 
   return (
     <div className={moduleStyles.layoutContainer}>

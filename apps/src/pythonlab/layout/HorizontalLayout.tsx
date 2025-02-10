@@ -1,7 +1,8 @@
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
 import Output from '@codebridge/Workspace/Output';
-import React, {useEffect} from 'react';
+import {throttle} from 'lodash';
+import React, {useCallback, useEffect, useMemo} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import ResizeBar, {
@@ -46,7 +47,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
     reverse: true,
   });
 
-  useEffect(() => {
+  const adjustRightPanelWidth = useCallback(() => {
     setRightPanelWidth(
       Math.max(
         window.innerWidth - infoPanelWidth - RESIZE_BAR_SIZE_PX,
@@ -55,7 +56,12 @@ const HorizontalLayout: React.FunctionComponent = () => {
     );
   }, [infoPanelWidth]);
 
-  useEffect(() => {
+  const throttledAdjustRightPanelWidth = useMemo(
+    () => throttle(adjustRightPanelWidth, 30),
+    [adjustRightPanelWidth]
+  );
+
+  const adjustWorkspaceHeight = useCallback(() => {
     setWorkspaceHeight(
       Math.max(
         window.innerHeight -
@@ -66,6 +72,34 @@ const HorizontalLayout: React.FunctionComponent = () => {
       )
     );
   }, [outputHeight]);
+
+  const throttledAdjustWorkspaceHeight = useMemo(
+    () => throttle(adjustWorkspaceHeight, 30),
+    [adjustWorkspaceHeight]
+  );
+
+  const throttledResize = useMemo(
+    () =>
+      throttle(() => {
+        console.log('hello from throttled resize');
+        adjustRightPanelWidth();
+        adjustWorkspaceHeight();
+      }, 30),
+    [adjustRightPanelWidth, adjustWorkspaceHeight]
+  );
+
+  useEffect(() => {
+    throttledAdjustRightPanelWidth();
+  }, [throttledAdjustRightPanelWidth]);
+
+  useEffect(() => {
+    throttledAdjustWorkspaceHeight();
+  }, [throttledAdjustWorkspaceHeight]);
+
+  useEffect(() => {
+    window.addEventListener('resize', throttledResize);
+    return () => window.removeEventListener('resize', throttledResize);
+  }, [throttledResize]);
 
   return (
     <div className={moduleStyles.layoutContainer}>
