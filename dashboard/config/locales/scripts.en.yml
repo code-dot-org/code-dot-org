@@ -19733,8 +19733,18 @@ en:
           description: ''
           student_description: ''
         kt-test-123:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: kt-test-123-lesson1
+            lesson-2:
+              name: kt-test-123-lesson2
           lesson_groups: {}
+          name: kt-test-123
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         dan-test:
           lessons: {}
           lesson_groups: {}
@@ -19992,3 +20002,9 @@ en:
         pilot-pl-teaching-k5-music-lab:
           lessons: {}
           lesson_groups: {}
+          name: pilot-pl-teaching-k5-music-lab
+          title: 'Teaching Programming with Music Lab '
+          description_audience: ''
+          description_short: ''
+          description: "##### Welcome! This module prepares teachers for Code.org's Programming with Music Lab curriculum. Programming with Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards. "
+          student_description: "##### Welcome! This module prepares teachers for Code.org's Programming with Music Lab curriculum. Programming with Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards. "

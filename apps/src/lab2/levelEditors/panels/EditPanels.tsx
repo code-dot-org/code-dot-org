@@ -19,6 +19,9 @@ import moduleStyles from './edit-panels.module.scss';
 
 const createKey = (levelName: string) => levelName + '-' + createUuid();
 
+const PANEL_WIDTH = 1920;
+const PANEL_HEIGHT = 1080;
+
 function sanitizePanels(panels: Panel[], levelName: string) {
   return panels.map(panel => {
     return {
@@ -121,8 +124,8 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
             panels={panels}
             background={'light'}
             onContinue={onContinue}
-            targetWidth={1920}
-            targetHeight={1080}
+            targetWidth={PANEL_WIDTH}
+            targetHeight={PANEL_HEIGHT}
             offerBrowserTts={false}
             resetOnChange={false}
             levelId={null}
@@ -239,6 +242,8 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           updateImageUrl={imageUrl => {
             updatePanel({...panel, imageUrl: imageUrl});
           }}
+          dimensions={{width: PANEL_WIDTH, height: PANEL_HEIGHT}}
+          fileTypes={['GIF', 'JPG', 'PNG']}
         />
       </div>
       <div className={moduleStyles.fieldRow}>
