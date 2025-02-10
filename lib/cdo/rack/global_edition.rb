@@ -23,7 +23,6 @@ module Rack
         # it is more efficient to remove the Global Edition prefix and treat the request as a standard route.
         # Additionally, preventing OAuth routes from being redirected, ensuring the authentication process is not disrupted.
         ::OmniAuth.config.path_prefix, # e.g. `/users/auth`
-        /^\/lti\//, # e.g. `/lti/v1/authenticate`
       ].compact.freeze
 
       attr_reader :app, :env
@@ -106,7 +105,8 @@ module Rack
 
       private def dashboard_route?(path = request.path)
         return false unless request.hostname == CDO.dashboard_hostname
-        Dashboard::Application.routes.recognize_path(path, method: request.request_method).present?
+        request_method = request.params['_method'].presence || request.request_method
+        Dashboard::Application.routes.recognize_path(path, method: request_method).present?
       rescue ActionController::RoutingError
         false
       end
