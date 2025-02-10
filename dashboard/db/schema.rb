@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_02_07_175343) do
+ActiveRecord::Schema.define(version: 2025_01_29_162309) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -192,8 +192,6 @@ ActiveRecord::Schema.define(version: 2025_02_07_175343) do
     t.integer "storage_app_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "game_id"
-    t.index ["game_id"], name: "fk_rails_5ae7249531"
     t.index ["storage_app_id"], name: "index_backpacks_on_storage_app_id", unique: true
     t.index ["user_id"], name: "index_backpacks_on_user_id", unique: true
   end
@@ -2516,7 +2514,6 @@ ActiveRecord::Schema.define(version: 2025_02_07_175343) do
   add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
   add_foreign_key "ai_tutor_interaction_feedbacks", "users"
   add_foreign_key "aichat_events", "aichat_requests", column: "request_id"
-  add_foreign_key "backpacks", "games"
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
