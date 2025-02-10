@@ -88,8 +88,7 @@
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
 
-- if current_user.migrated?
-  -# Mount point for React ManageLinkedAccounts component.
+- if current_user.teacher?
   %div#turn-off-ai-diff
 
 - if current_user.can_create_personal_login?
