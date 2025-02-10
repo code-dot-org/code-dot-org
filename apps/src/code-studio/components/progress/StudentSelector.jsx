@@ -1,10 +1,10 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import i18n from '@cdo/locale';
 
 import style from './unit-overview.module.scss';

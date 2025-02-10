@@ -6,6 +6,7 @@
 // Try to avoid use of inline styles if you're creating new component).
 // Keeping that in mind -
 
+$figtree-font: 'Figtree';
 $metropolis-font: 'Metropolis';
 $noto-sans-fonts: 'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic',
   'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans SC', 'Noto Sans TC',
@@ -14,7 +15,7 @@ $noto-sans-fonts: 'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic',
   'Noto Sans Myanmar', 'Noto Sans Sinhala', 'Noto Sans Tamil',
   'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Sans Thaana';
 
-$main-font: $metropolis-font, $noto-sans-fonts, sans-serif;
+$main-font: $figtree-font, $metropolis-font, $noto-sans-fonts, sans-serif;
 
 $thin-font-weight: 100;
 $extra-light-font-weight: 200;
@@ -125,9 +126,11 @@ $black-font-weight: 900;
   font-style: italic;
 }
 
-$barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold',
+// The CSS Variable for Barlow is defined in the marketing font loader as a custom font face cannot be defined
+// on Next.js. Rather, a CSS variable was added to reference to the CSS Module for the respective Barlow variation.
+$barlowSemiCondensed-semibold: var(--font-barlow-semi-condensed-semi-bold), 'Barlow Semi Condensed Semibold',
   $noto-sans-fonts, sans-serif;
-$barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', $noto-sans-fonts,
+$barlowSemiCondensed-medium: var(--font-barlow-semi-condensed-medium), 'Barlow Semi Condensed Medium', $noto-sans-fonts,
   sans-serif;
 
 /*

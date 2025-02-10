@@ -197,7 +197,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
     // Show a little extra playback.  If there are any triggers, then play for longer in case
     // the user wants to trigger another sound.
-    const extraMeasures = blocklyWorkspace.hasAnyTriggers() ? 4 : 1;
+    const extraMeasures = blocklyWorkspace.hasAnyTriggers() ? 4 : 2;
 
     if (currentPlayheadPosition >= stopMeasure + extraMeasures) {
       setPlaying(false);
