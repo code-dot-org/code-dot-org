@@ -1,26 +1,26 @@
 name 'emma-test-computational-thinking-python-twowayselection-CFU'
 title 'Check for Understanding'
 
-wrong 'A'
-wrong 'B'
-wrong 'C'
-right 'D'
+wrong 'Red background'
+wrong 'Red line'
+wrong 'Green star'
+right 'Green line'
 allow_multiple_attempts true
 
 markdown <<MARKDOWN
-What would the result be if the user's input was `10` and `green`?
+What will the Painter paint if the `user_number` is `10` and the `user_color` is `green`?
 ```
-if input > 5 {
+if user_number > 5 {
 
- if (red) {
-    paint background(color)
-    }
-  else {
-    paint line(color) 
-}
+   if (user_color == "red") {
+      paint background(user_color)
+   }
+   else {
+      paint line(user_color) 
+   }
 
 else {
-    paint star(color)
+    paint star(user_color)
    }
 }
 ``` 

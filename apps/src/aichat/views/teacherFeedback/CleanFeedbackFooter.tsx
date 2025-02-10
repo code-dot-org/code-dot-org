@@ -8,7 +8,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import aichatI18n from '../../locale';
-import {submitTeacherFeedback} from '../../redux/aichatRedux';
+import {submitTeacherFeedback} from '../../redux';
 import {FeedbackValue} from '../../types';
 
 import moduleStyles from './teacher-feedback-footer.module.scss';

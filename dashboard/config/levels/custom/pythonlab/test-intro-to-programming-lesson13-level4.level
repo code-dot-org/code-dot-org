@@ -14,43 +14,43 @@
       [
         {
           "tileType": 1,
-          "value": 15,
-          "assetId": 303
-        },
-        {
-          "tileType": 1,
           "value": 0,
           "assetId": 0
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 52
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 283
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 283
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 283
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 283
         },
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 283
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 283
         }
       ],
       [
@@ -97,9 +97,9 @@
       ],
       [
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 50
         },
         {
           "tileType": 1,
@@ -139,9 +139,9 @@
       ],
       [
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 284
         },
         {
           "tileType": 1,
@@ -181,9 +181,9 @@
       ],
       [
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 284
         },
         {
           "tileType": 1,
@@ -223,9 +223,9 @@
       ],
       [
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 284
         },
         {
           "tileType": 1,
@@ -265,9 +265,9 @@
       ],
       [
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 284
         },
         {
           "tileType": 1,
@@ -307,9 +307,9 @@
       ],
       [
         {
-          "tileType": 1,
+          "tileType": 0,
           "value": 0,
-          "assetId": 0
+          "assetId": 284
         },
         {
           "tileType": 1,
@@ -353,14 +353,14 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "# Do This:\r\n1. Run your code and observe the outcome.\r\n#\r\n2. Then do this\r\n#\r\n3. **Discuss**: How does using the `move_and_paint()` function simplify your code?\r\n#\r\n4. **Modify**: \r\n    - *Hint: Create a new `turn_right` function or copy over the existing code from your backpack.*\r\n    - **Discuss**: *What happens when you reuse the `move_and_paint` function after making the Painter turn?*\r\n",
+    "long_instructions": "# Do This:\r\n1. **Run and Observe:** Run your code and observe the outcome. \r\n#\r\n2. **Discuss**: What error occurred when running this code?\r\n    - *Hint: Read the error message closely to figure out what happened*\r\n3. **Modify**: On line 23, add an `if` statement to check if the Painter can move. Then run your code to see the result.\r\n    - **Discuss:** Why does the Painter not do anything?\r\n    - *Hint: Because your code is now running in a while loop forever, you will need to click the Stop button.*\r\n4. **Modify**: On line 47, add an `else` statement to move the Painter to a spot where they can plant with no obstacles. \r\n    - *Hint: Because your code is in a loop, you just need to move the Painter to a new location. Then the code in the nested* `if` *statement will run.*\r\n5. **Test:** Run your code again to make sure the Painter can plant something.\r\n",
     "start_sources": {
       "files": {
         "0": {
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "from neighborhood import Painter\n\ntalia = Painter()\n\n# Collect all the paint in the bucket\n\n\n# Add your code here\n",
+          "contents": "from neighborhood import Painter\n\n# Create a new Painter object\njordan = Painter()\n\n# Define turn_right function\ndef turn_right():\n  jordan.turn_left()\n  jordan.turn_left()\n  jordan.turn_left()\n\n# Define a function that takes in user input\ndef flower_or_grass():\n  # Declare variable for user input\n  what_to_plant = input(\"Do you want to plant grass or a flower? \")\n  \n  # Set the amount of paint the Painter has\n  jordan.set_paint(5)\n\n  # Inside a loop, make the Painter move, add dirt, and plant something\n  while jordan.has_paint():   \n    # ADD IF STATEMENT HERE TO CHECK IF PAINTER CAN MOVE \n\n      # If user chooses grass, plant grass\n      if what_to_plant == \"grass\":\n        jordan.paint(\"saddlebrown\")\n        jordan.move()\n        jordan.paint(\"saddlebrown\")\n        jordan.move()\n        jordan.paint(\"green\")\n        jordan.move()\n        jordan.paint(\"saddlebrown\")\n        jordan.move()\n        jordan.paint(\"saddlebrown\")\n      # Else plant a flower\n      else:\n        jordan.paint(\"saddlebrown\")\n        jordan.move()\n        jordan.paint(\"saddlebrown\")\n        jordan.move()\n        jordan.paint(\"yellow\")\n        jordan.move()\n        jordan.paint(\"saddlebrown\")\n        jordan.move()\n        jordan.paint(\"saddlebrown\")\n    # ADD ELSE STATEMENT HERE TO MOVE PAINTER TO A NEW SPOT WHERE THEY CAN PLANT\n   \n      \n# Call your function here\nflower_or_grass()\n\n\n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -369,8 +369,8 @@
       "folders": {
       }
     },
-    "encrypted_exemplar_sources": "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\naXVwthNFdJiCV0qcDTDah/p9IEkhGvK+vf3ddSmTVH+rdGakPfBt/ejutUNG\n+FvvApKJkFflbeDJoevUWAJRom0Oyzg8O2jSXVXWY2xOepx3b5rRujug6k8z\nugZGGpaa3QskyrTJlfNKWFzc54Bis4QuAn4WGcFjfvSNNaNCoHn99gAsqOOK\nIMjayL3x0nFlcl96arGHVY9ngYPCXoaEg7WDa+PwwNGwWjh8KXyAoCBJ5C5d\nqGNr5aaficuDaQ8+1sDruqOxI0vggGOerGptOeLGqmX7HV4k8dwmQX26rCtB\n7z86SZpi0D3ogy58flj4Vc3eYQi6YnGjIE4cOKthY1yrK3U/HMqEIqobjymX\nJE+U+JqllXB/uZePTCzngAkiP/g0PVpbvrcp9mLoFg+tFtYlUihX+4eAplqM\nxiFBWav7Gnoq4pHiq6ccG4fJXiCEwiPuGPBYnMbEUWO3yVL0SFNlGdiGxgYt\nGR/gJesktA5HudaVOvyIDcRkfJ7hdgxQEL+ZdGSXiGQ40XLLgLucAaDh1/+P\nBWQO3ua+riGN2jmvTtvddj9YG8xiZHRewUpA6GX/spSSnedLXVDQToqIaL5+\nJ4BhQ09TAa9IoAcPD/lvUX8Qc6EudjaDLGMk6UYyhwcZEg==\n"
+    "encrypted_exemplar_sources": "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\n"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-06T23:36:49.235+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson13-level3\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson13-level3\"},{\"changed_at\":\"2025-02-06 23:37:04 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-06T23:36:49.235+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson13-level3\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson13-level3\"},{\"changed_at\":\"2025-02-06 23:37:04 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 18:54:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 18:55:08 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:28:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:30:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:33:33 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:38:08 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:40:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:41:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:44:58 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:46:31 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 22:40:53 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
