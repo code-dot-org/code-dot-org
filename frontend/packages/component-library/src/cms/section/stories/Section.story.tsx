@@ -21,18 +21,6 @@ const MultipleTemplate: StoryFn<{components: SectionProps[]}> = args => (
   </>
 );
 
-const createPlayFunction =
-  (headingText: string) =>
-  async ({canvasElement}: {canvasElement: HTMLElement}) => {
-    const canvas = within(canvasElement);
-    const headings = canvas.getAllByText(headingText);
-
-    // check if children content is in the document
-    headings.forEach(heading => {
-      expect(heading).toBeInTheDocument();
-    });
-  };
-
 //
 // STORIES
 //
@@ -46,7 +34,13 @@ export const DefaultSection: Story = {
       </>
     ),
   },
-  play: createPlayFunction('This is a default section'),
+  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+    const canvas = within(canvasElement);
+    const heading = canvas.getByText('This is a default section');
+
+    // check if children content is in the section
+    expect(heading).toBeInTheDocument();
+  },
 };
 
 export const SectionWithBackgroundColor: Story = {
@@ -60,7 +54,15 @@ export const SectionWithBackgroundColor: Story = {
       </>
     ),
   },
-  play: createPlayFunction('This is a section with a background color'),
+  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+    const canvas = within(canvasElement);
+    const heading = canvas.getByText(
+      'This is a section with a background color',
+    );
+
+    // check if children content is in the section
+    expect(heading).toBeInTheDocument();
+  },
 };
 
 export const SectionWithBackgroundPattern: Story = {
@@ -90,6 +92,8 @@ export const SectionWithBackgroundPattern: Story = {
     const heading = canvas.getByText(
       'This is a section with a background pattern',
     );
+
+    // check if children content is in the section
     expect(heading).toBeInTheDocument();
 
     // check if background image is set
@@ -165,6 +169,8 @@ MultipleSections.play = async ({
 
   headings.forEach(async headingText => {
     const heading = await canvas.findByText(headingText);
+
+    // check if children content is in each section
     expect(heading).toBeInTheDocument();
   });
 };
