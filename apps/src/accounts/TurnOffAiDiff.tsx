@@ -1,11 +1,9 @@
-/* eslint-disable react/no-danger */
 import React from 'react';
 
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import {BodyTwoText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {setAiDifferentiationEnabled} from '@cdo/apps/templates/currentUserRedux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -28,18 +26,12 @@ const TurnOffAiDiff: React.FC = () => {
   const [hasAIDiffAccess, setHasAIDiffAccess] = React.useState(startingState);
 
   const handleToggle = () => {
-    console.log('Toggling AI Teaching Assistant');
-    console.log('familyNameTest:', familyNameTest);
     dispatch(setAiDifferentiationEnabled(!hasAIDiffAccess));
     new UserPreferences().setAiDifferentiationEnabled(!hasAIDiffAccess);
     setHasAIDiffAccess(!hasAIDiffAccess);
   };
 
   const dispatch = useAppDispatch();
-
-  const familyNameTest = useAppSelector(
-    state => state.currentUser.isSortedByFamilyName
-  );
 
   const setEnabled = hasAIDiffAccess ? i18n.enabled() : i18n.disabled();
 
@@ -55,13 +47,9 @@ const TurnOffAiDiff: React.FC = () => {
         onChange={handleToggle}
         name="aiTeacherDiffToggle"
         position={'left'}
-        label={
-          <SafeMarkdown
-            markdown={i18n.aiTeachingAssistantSettingsStatus({
-              status: setEnabled,
-            })}
-          />
-        }
+        label={i18n.aiTeachingAssistantSettingsStatus({
+          status: setEnabled,
+        })}
         size={'m'}
       />
     </div>

@@ -165,7 +165,7 @@
   "aiTeachingAssistant": "AI Teaching Assistant",
   "aiTeachingAssistantSettings": "AI Teaching Assistant Settings",
   "aiTeachingAssistantSettingsDescription": "AI Teaching Assistant is an experiment that offers AI-supported tools in select locations across Code.org. To disable these features, please use the toggles below.  You can learn more about AI Teaching Assistant here.",
-  "aiTeachingAssistantSettingsStatus": "Chat functionality for AI Teaching Assistant is **{status}**",
+  "aiTeachingAssistantSettingsStatus": "Chat functionality for AI Teaching Assistant is {status}",
   "aiTrainedModels": "AI Trained Models",
   "aiTrainedModelsNoModels": "You have not trained any AI models yet.",
   "aiTrainedModelsDeleteModelConfirm": "Are you sure you would like to delete this model?",

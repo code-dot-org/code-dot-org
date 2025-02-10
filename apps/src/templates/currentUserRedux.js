@@ -117,6 +117,7 @@ const initialState = {
   userRoleInCourse: CourseRoles.Unknown,
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
+  aiDifferentiationEnabled: null,
   isBackgroundMusicMuted: false,
   isSortedByFamilyName: false,
   isLti: undefined,
