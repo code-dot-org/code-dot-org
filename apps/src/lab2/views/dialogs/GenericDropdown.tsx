@@ -1,10 +1,10 @@
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
-import React, {useCallback, useEffect} from 'react';
-
 import {
   SimpleDropdown,
   SimpleDropdownProps,
-} from '@cdo/apps/componentLibrary/dropdown';
+} from '@code-dot-org/component-library/dropdown';
+import React, {useCallback, useEffect} from 'react';
+
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
 import {useDialogControl} from './DialogControlContext';
 import GenericDialog, {GenericDialogProps} from './GenericDialog';

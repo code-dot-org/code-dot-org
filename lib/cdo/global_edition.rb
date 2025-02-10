@@ -74,6 +74,12 @@ module Cdo
       configuration_for(region)&.dig(:locales)
     end
 
+    # @return [NilClass, Array<String>] List of project types available in the given region.
+    # @note +nil+ means all projects are available.
+    def self.region_project_types(region)
+      configuration_for(region)&.dig(:project_types)
+    end
+
     def self.main_region_locale(region)
       region_locales(region)&.first
     end

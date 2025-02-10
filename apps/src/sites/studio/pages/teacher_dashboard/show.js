@@ -130,7 +130,11 @@ $(document).ready(function () {
   };
 
   const getV2TeacherDashboard = () => {
-    const selectedSectionFromList = sections.find(s => s.id === section.id);
+    const selectedSectionFromList = window.location.pathname.includes(
+      '/teacher_dashboard/home'
+    )
+      ? sections[0]
+      : sections.find(s => s.id === section.id);
     const selectedSection = {...selectedSectionFromList, ...section};
 
     getStore().dispatch(selectSection(selectedSection.id));

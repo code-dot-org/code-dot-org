@@ -65,6 +65,9 @@ class CreateHeader
       entries.unshift(options[:project_type])
     end
 
+    available_entries = Cdo::GlobalEdition.region_project_types(options[:ge_region])
+    entries &= available_entries if available_entries
+
     entries.map {|entry| get_project_info(entry, ge_region: options[:ge_region])}
   end
 end

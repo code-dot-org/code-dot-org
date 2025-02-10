@@ -30,6 +30,7 @@
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "devDependencies": {
     "@storybook/test-runner": "^0.19.1",
+    "lint-staged": "^15.4.3",
     "prettier": "3.3.3",
     "rimraf": "^6.0.1",
     "turbo": "^2.3.0",

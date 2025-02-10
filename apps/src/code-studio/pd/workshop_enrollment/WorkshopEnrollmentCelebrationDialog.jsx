@@ -1,14 +1,15 @@
 import Button from '@code-dot-org/component-library/button';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import Typography, {
   Heading2,
   Heading3,
   Heading6,
   BodyTwoText,
-} from '@code-dot-org/component-library/typography';
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
-
-import LinkButton from '@cdo/apps/componentLibrary/button/LinkButton';
+} from '@cdo/apps/componentLibrary/typography';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
@@ -197,7 +198,23 @@ export default function WorkshopEnrollmentCelebrationDialog({
       return buildGoogleCalendarLink(session, workshopTitle, workshopLocation);
     } else if (calendarType === 'Outlook') {
       return buildOutlookCalendarLink(session, workshopTitle, workshopLocation);
+    } else if (calendarType === 'Apple') {
+      return buildAppleCalendarLink(session, workshopTitle, workshopLocation);
     }
+  };
+
+  const onClickAddToCalendar = (session, calendarType) => {
+    analyticsReporter.sendEvent(
+      EVENTS.WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT,
+      {'calendar type': calendarType}
+    );
+
+    window.open(
+      getCalendarLink(session, calendarType),
+      '_blank',
+      'noopener',
+      'noreferrer'
+    );
   };
 
   const RenderCalendarSessionDialog = () => {
@@ -235,7 +252,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                     <BodyTwoText>{generateTimeText(session)}</BodyTwoText>
                   </td>
                   <td>
-                    <LinkButton
+                    <Button
                       text={i18n.enrollmentCelebrationAddToCalendarButton()}
                       ariaLabel={i18n.addToCalendarType({
                         calendar_type: multipleSessionDialogType,
@@ -244,8 +261,9 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       color={'black'}
                       iconLeft={{iconName: 'fa-solid fa-plus'}}
                       className={style.addSessionToCalendarButton}
-                      target="_blank"
-                      href={getCalendarLink(session, multipleSessionDialogType)}
+                      onClick={() =>
+                        onClickAddToCalendar(session, multipleSessionDialogType)
+                      }
                     />
                   </td>
                 </tr>
@@ -297,7 +315,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                     {i18n.addToYourCalendar()}
                   </Typography>
                   <div className={style.calendarButtons}>
-                    <LinkButton
+                    <Button
                       text={'Apple'}
                       ariaLabel={i18n.addToCalendarType({
                         calendar_type: 'Apple',
@@ -308,12 +326,9 @@ export default function WorkshopEnrollmentCelebrationDialog({
                         iconName: 'brands fa-apple',
                         iconStyle: 'light',
                       }}
-                      target="_blank"
-                      href={buildAppleCalendarLink(
-                        workshopSessionInfo,
-                        workshopTitle,
-                        workshopLocation
-                      )}
+                      onClick={() =>
+                        onClickAddToCalendar(workshopSessionInfo, 'Apple')
+                      }
                     />
                     {hasMultipleSessions ? (
                       <>
@@ -342,7 +357,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                       </>
                     ) : (
                       <>
-                        <LinkButton
+                        <Button
                           text={'Google'}
                           ariaLabel={i18n.addToCalendarType({
                             calendar_type: 'Google',
@@ -353,13 +368,14 @@ export default function WorkshopEnrollmentCelebrationDialog({
                             iconName: 'brands fa-google',
                             iconStyle: 'light',
                           }}
-                          target="_blank"
-                          href={getCalendarLink(
-                            workshopSessionInfo[0],
-                            'Google'
-                          )}
+                          onClick={() =>
+                            onClickAddToCalendar(
+                              workshopSessionInfo[0],
+                              'Google'
+                            )
+                          }
                         />
-                        <LinkButton
+                        <Button
                           text={'Outlook'}
                           ariaLabel={i18n.addToCalendarType({
                             calendar_type: 'Outlook',
@@ -370,11 +386,12 @@ export default function WorkshopEnrollmentCelebrationDialog({
                             iconName: 'brands fa-microsoft',
                             iconStyle: 'light',
                           }}
-                          target="_blank"
-                          href={getCalendarLink(
-                            workshopSessionInfo[0],
-                            'Outlook'
-                          )}
+                          onClick={() =>
+                            onClickAddToCalendar(
+                              workshopSessionInfo[0],
+                              'Outlook'
+                            )
+                          }
                         />
                       </>
                     )}

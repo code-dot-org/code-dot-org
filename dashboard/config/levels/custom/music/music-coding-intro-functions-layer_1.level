@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-01-07T23:37:17.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "####You’re the producer! \r\n\r\nSelect a trackt whose sounds you want to use and build up a new song using functions!\r\n\r\n- Get creative and experiment with different layers of sound!\r\n",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:** \r\n##### This is another opportunity for students to create using what they have learned, and is the final step in the Use-Modify-Create pedagogical practice. \r\n\r\n\r\n\r\n___\r\n\r\n\r\n####You’re the producer! \r\n\r\nSelect a track whose sounds you want to use and build up a new song using functions!\r\n\r\n- Get creative and experiment with different layers of sound!\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -86,8 +87,7 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:17.279+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-layer\\\"\"],\"cloned_from\":\"music-coding-intro-functions-layer\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:17.279+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-layer\\\"\"],\"cloned_from\":\"music-coding-intro-functions-layer\"},{\"changed_at\":\"2025-02-07 20:24:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-07 20:27:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

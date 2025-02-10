@@ -2,7 +2,7 @@
  * This file contains constants that are used across the component library
  */
 
-import {VisualAppearance} from '@code-dot-org/component-library/typography';
+import {VisualAppearance} from '@cdo/apps/componentLibrary/typography/types';
 
 import {ComponentSizeXSToL, DropdownColor} from './types';
 

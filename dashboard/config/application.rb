@@ -134,6 +134,7 @@ module Dashboard
 
     # By default, config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.json').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*', '*.json').to_s]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = [Cdo::I18n::DEFAULT_LOCALE]

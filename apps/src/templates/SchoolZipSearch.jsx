@@ -1,8 +1,8 @@
-import {BodyThreeText} from '@code-dot-org/component-library/typography';
+import TextField from '@code-dot-org/component-library/textField';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
+import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import {ZIP_REGEX} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import i18n from '@cdo/locale';
 

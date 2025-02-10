@@ -1,3 +1,4 @@
+import Toggle from '@code-dot-org/component-library/toggle';
 import {
   Heading6,
   BodyTwoText,
@@ -12,7 +13,6 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {queryParams, updateQueryParam} from '../../code-studio/utils';
-import Toggle from '../../componentLibrary/toggle/Toggle.tsx';
 import CheckboxDropdown from '../CheckboxDropdown';
 import {
   translatedCourseOfferingCsTopics,
