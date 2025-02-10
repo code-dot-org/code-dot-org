@@ -1,11 +1,11 @@
 module User::UserType
   extend ActiveSupport::Concern
 
-  def student_2?
-    user_type == self.class::TYPE_STUDENT
+  def student?
+    Policies::User::UserType.new(self).student?
   end
 
-  def teacher_2?
-    user_type == self.class::TYPE_TEACHER
+  def teacher?
+    Policies::User::UserType.new(self).teacher?
   end
 end

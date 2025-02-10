@@ -1520,14 +1520,6 @@ class User < ApplicationRecord
     unit_group.can_be_instructor?(self) ? get_instructor_hidden_ids(false) : get_participant_hidden_ids(unit_group.id, false)
   end
 
-  def student?
-    user_type == TYPE_STUDENT
-  end
-
-  def teacher?
-    user_type == TYPE_TEACHER
-  end
-
   # Warning: Calling this method will trigger the sending of a verification email,
   # as establish in the user_permission model
   def verify_teacher!
