@@ -44,7 +44,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         in_section: current_user.student? ? current_user.sections_as_student.present? : nil,
         created_at: current_user.created_at,
         has_seen_ai_assessments_announcement: current_user.has_seen_ai_assessments_announcement?,
-        #ai_differentiation_enabled: Policies::Ai.ai_differentiation_enabled?(current_user),
         ai_differentiation_enabled: current_user.ai_differentiation_enabled?,
       }
     else
