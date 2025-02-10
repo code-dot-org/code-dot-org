@@ -1,7 +1,6 @@
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
 import Output from '@codebridge/Workspace/Output';
-import classNames from 'classnames';
 import React, {useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
@@ -70,7 +69,10 @@ const HorizontalLayout: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.layoutContainer}>
-      <InfoPanel style={{width: infoPanelWidth}} />
+      <InfoPanel
+        style={{width: infoPanelWidth}}
+        className={moduleStyles.shrinkAndGrow}
+      />
       <ResizeBar
         isVertical={true}
         separatorProps={infoPanelSeparatorProps}
@@ -79,20 +81,14 @@ const HorizontalLayout: React.FunctionComponent = () => {
       <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
         <Workspace
           style={{height: workspaceHeight}}
-          className={moduleStyles.flexGrow}
+          className={moduleStyles.shrinkAndGrow}
         />
         <ResizeBar
           isVertical={false}
           separatorProps={outputSeparatorProps}
           isDragging={outputDragging}
         />
-        <Output
-          className={classNames(
-            moduleStyles.flexShrink0,
-            moduleStyles.flexGrow
-          )}
-          height={outputHeight}
-        />
+        <Output className={moduleStyles.shrinkAndGrow} height={outputHeight} />
       </div>
     </div>
   );

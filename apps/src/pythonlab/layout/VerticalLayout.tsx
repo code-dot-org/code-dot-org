@@ -82,7 +82,7 @@ const VerticalLayout: React.FunctionComponent = () => {
     <div className={moduleStyles.layoutContainer}>
       <InfoPanel
         style={{width: infoPanelWidth}}
-        className={moduleStyles.flexShrink0}
+        className={moduleStyles.shrinkAndGrow}
       />
       <ResizeBar
         isVertical={true}
@@ -91,14 +91,14 @@ const VerticalLayout: React.FunctionComponent = () => {
       />
       <Workspace
         style={{width: editorWidth}}
-        className={moduleStyles.flexGrow}
+        className={moduleStyles.shrinkAndGrow}
       />
       <ResizeBar
         isVertical={true}
         separatorProps={outputSeparatorProps}
         isDragging={outputDragging}
       />
-      <Output width={outputWidth} className={moduleStyles.flexShrink0} />
+      <Output width={outputWidth} className={moduleStyles.shrinkAndGrow} />
     </div>
   );
 };

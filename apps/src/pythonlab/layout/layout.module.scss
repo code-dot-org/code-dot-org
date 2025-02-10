@@ -9,12 +9,9 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  flex-shrink: 1;
 }
 
-.flexGrow {
-  flex-grow: 1;
-}
-
-.flexShrink0 {
-  flex-shrink: 0;
+.shrinkAndGrow {
+  flex: 1 1 auto;
 }
