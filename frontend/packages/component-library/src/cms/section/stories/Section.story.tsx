@@ -92,6 +92,7 @@ export const SectionWithBackgroundPattern: Story = {
     );
     expect(heading).toBeInTheDocument();
 
+    // check if background image is set
     const section = heading.closest('section');
     if (section) {
       const backgroundImage = section.style.backgroundImage;
