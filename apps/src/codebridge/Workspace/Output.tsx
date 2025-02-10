@@ -2,14 +2,19 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import MiniAppPreview from '@codebridge/MiniAppPreview/MiniAppPreview';
 import classNames from 'classnames';
 import {throttle} from 'lodash';
-import React, {useCallback, useEffect, useMemo} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useResizable} from 'react-resizable-layout';
 
 import Console from '@cdo/apps/codebridge/Console/Console';
+import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {MiniApps} from '../constants';
 
 import moduleStyles from './output.module.scss';
+
+const DEFAULT_MINI_APP_SIZE = 400;
+const MIN_MINI_APP_SIZE = 200;
 
 interface OutputProps {
   className?: string;
@@ -29,6 +34,19 @@ const Output: React.FunctionComponent<OutputProps> = ({
     height,
     width,
   };
+  const resizeContainerRef = useRef<HTMLDivElement>(null);
+  //const [consoleSize, setConsoleSize] = useState<number | undefined>(undefined);
+
+  const {
+    position: miniAppSize,
+    separatorProps: miniAppSeparatorProps,
+    isDragging: miniAppDragging,
+  } = useResizable({
+    axis: isVertical ? 'y' : 'x',
+    initial: DEFAULT_MINI_APP_SIZE,
+    min: MIN_MINI_APP_SIZE,
+    containerRef: resizeContainerRef,
+  });
 
   // When the width or height of the output is changed, re-fit the console to the
   // available space and resize the visualization if necessary.
@@ -36,7 +54,9 @@ const Output: React.FunctionComponent<OutputProps> = ({
     (
       desiredHeight: number | undefined,
       desiredWidth: number | undefined,
-      miniAppName: string | undefined
+      miniAppName: string | undefined,
+      miniAppSize: number,
+      isVertical: boolean
     ) => {
       // Fit the console to the new container.
       CodebridgeRegistry.getInstance()
@@ -47,13 +67,23 @@ const Output: React.FunctionComponent<OutputProps> = ({
       // If this is a neighborhood level, also resize the visualization.
       if (
         miniAppName === MiniApps.Neighborhood &&
-        (desiredHeight !== undefined || desiredWidth !== undefined)
+        (desiredHeight !== undefined ||
+          desiredWidth !== undefined ||
+          miniAppSize)
       ) {
-        const defaultSize = 400;
-        const newHeight =
-          desiredHeight !== undefined ? desiredHeight : defaultSize;
-        const newWidth =
-          desiredWidth !== undefined ? desiredWidth : defaultSize;
+        console.log({desiredHeight, desiredWidth, miniAppSize, isVertical});
+        // In vertical mode, miniAppSize is the height of the mini app.
+        // In horizontal mode, miniAppSize is the width of the mini app.
+        const newHeight = isVertical
+          ? miniAppSize
+          : desiredHeight !== undefined
+          ? desiredHeight
+          : DEFAULT_MINI_APP_SIZE;
+        const newWidth = !isVertical
+          ? miniAppSize
+          : desiredWidth !== undefined
+          ? desiredWidth
+          : DEFAULT_MINI_APP_SIZE;
         const sliderHeight = 60;
         // The original visualization is rendered at 800x800.
         const originalVisualizationWidth = 800;
@@ -90,10 +120,14 @@ const Output: React.FunctionComponent<OutputProps> = ({
   );
 
   useEffect(() => {
-    if (height !== undefined || width !== undefined) {
-      throttledResize(height, width, miniApp);
+    if (
+      height !== undefined ||
+      width !== undefined ||
+      miniAppSize !== undefined
+    ) {
+      throttledResize(height, width, miniApp, miniAppSize, isVertical);
     }
-  }, [height, width, miniApp, throttledResize]);
+  }, [height, width, miniApp, throttledResize, miniAppSize, isVertical]);
 
   if (!miniApp) {
     return (
@@ -106,6 +140,10 @@ const Output: React.FunctionComponent<OutputProps> = ({
     );
   }
 
+  const miniAppStyle = isVertical
+    ? {height: miniAppSize}
+    : {width: miniAppSize};
+
   return (
     <div
       className={classNames(
@@ -114,9 +152,19 @@ const Output: React.FunctionComponent<OutputProps> = ({
         className
       )}
       style={style}
+      ref={resizeContainerRef}
     >
-      <MiniAppPreview />
-      <Console />
+      <div style={miniAppStyle} className={moduleStyles.growAndShrink}>
+        <MiniAppPreview />
+      </div>
+      <ResizeBar
+        isVertical={!isVertical}
+        separatorProps={miniAppSeparatorProps}
+        isDragging={miniAppDragging}
+      />
+      <div className={moduleStyles.growAndShrink}>
+        <Console />
+      </div>
     </div>
   );
 };
