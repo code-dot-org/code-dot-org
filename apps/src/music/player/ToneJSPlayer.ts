@@ -149,7 +149,7 @@ class ToneJSPlayer {
 
     this.samplers[instrumentName] = effectsSamplers;
     // Create a separate sampler without effects for previews
-    this.previewSamplers[instrumentName] = new Sampler(urls).toDestination();
+    this.previewSamplers[instrumentName] = new Sampler(urls).connect(reverb);
     for (const callback of this.registeredCallbacks['InstrumentLoaded'] || []) {
       callback(instrumentName);
     }

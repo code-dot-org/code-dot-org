@@ -10,21 +10,20 @@ import {
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
 
-import MusicRegistry from '../MusicRegistry';
-import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
-import MusicLibrary from '../player/MusicLibrary';
+import MusicRegistry from '../../MusicRegistry';
+import {InstrumentEventValue} from '../../player/interfaces/InstrumentEvent';
+import MusicLibrary from '../../player/MusicLibrary';
 import {
   getNoteName,
   getNotesInKey,
   getPitchName,
   isBlackKey,
   Key,
-} from '../utils/Notes';
+} from '../../utils/Notes';
+import LoadingOverlay from '../LoadingOverlay';
+import PreviewControls from '../PreviewControls';
 
-import LoadingOverlay from './LoadingOverlay';
-import PreviewControls from './PreviewControls';
-
-import styles from './instrument-grid.module.scss';
+import styles from './styles.module.scss';
 
 const START_OCTAVE = 4;
 const TOTAL_OCTAVES = 3;
