@@ -1,15 +1,15 @@
+import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Heading2} from '@code-dot-org/component-library/typography';
 import React, {useState, useEffect} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
-import FontAwesomeV6Icon from '../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {Heading2} from '../componentLibrary/typography';
 import AccountCard from '../templates/account/AccountCard';
 import {navigateToHref} from '../utils';
 

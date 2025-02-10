@@ -15,18 +15,44 @@ $tabs-default-spacing: 4px;
 
 %conversation-area,
 .conversationArea {
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
-  gap: $default-spacing;
   box-sizing: border-box;
   overflow-y: auto;
+}
+
+.scrollToBottomContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.scrollToBottomButton {
+  border-radius: 50%;
+}
+
+.messageArea {
+  display: flex;
+  flex-direction: column;
+  gap: $default-spacing;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
   padding: $default-spacing;
+}
+
+.floatingScrollToBottomButtonContainer {
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .tabsContainer {
   background-color: #eaebeb;
   padding: $tabs-default-spacing $tabs-default-spacing 0 $tabs-default-spacing;
+
   ul {
     li > button[role="tab"] {
       max-width: 300px;
@@ -36,10 +62,12 @@ $tabs-default-spacing: 4px;
 
 .tabPanelsContainer {
   @extend %conversation-area;
+
   > div {
     display: flex;
     height: 100%;
   }
+
   > div[hidden] {
     display: none;
   }

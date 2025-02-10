@@ -16,18 +16,6 @@ module Rack
     class RouteHandler
       include Middleware::Helpers::Cookies
 
-      # @example Matches paths like `/global/fa/home`, capturing:
-      # - ge_prefix: "/global/fa"
-      # - ge_region: "fa"
-      # - main_path: "/home"
-      PATH_PATTERN = Regexp.new <<~REGEXP.remove(/\s+/)
-        ^(?<ge_prefix>
-          #{Cdo::GlobalEdition::ROOT_PATH}/
-          (?<ge_region>#{Cdo::GlobalEdition::REGIONS.join('|')})
-        )
-        (?<main_path>/.*|$)
-      REGEXP
-
       # HTTP paths that to be excluded from Global Edition scope.
       EXCLUDED_PATHS = [
         # To make an OAuth callback accessible, it must be added to the whitelist of each SSO provider.
@@ -58,7 +46,7 @@ module Rack
 
           setup_region(new_region)
           setup_redirect_to(redirect_path)
-        elsif PATH_PATTERN.match?(request.path_info)
+        elsif Cdo::GlobalEdition::PATH_PATTERN.match?(request.path_info)
           ge_prefix, ge_region, main_path = request_path_vars(:ge_prefix, :ge_region, :main_path)
 
           if Cdo::GlobalEdition.region_available?(ge_region) && dashboard_route?(main_path)
@@ -98,7 +86,7 @@ module Rack
       end
 
       private def request_path_vars(*keys)
-        PATH_PATTERN.match(request.path_info)&.values_at(*keys) || []
+        Cdo::GlobalEdition::PATH_PATTERN.match(request.path_info)&.values_at(*keys) || []
       end
 
       private def setup_region(region)

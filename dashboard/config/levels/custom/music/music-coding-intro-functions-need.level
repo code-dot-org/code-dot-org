@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2024-11-27T17:46:26.000Z",
   "level_num": "custom",
@@ -34,27 +33,39 @@
                 "block": {
                   "type": "play_sounds_together",
                   "id": "play_sounds_together",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
                   "inputs": {
                     "code": {
                       "block": {
                         "type": "play_sound_at_current_location_simple2",
                         "id": "play_sound_at_current_location_simple2",
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
                         "fields": {
-                          "sound": "dove_cameron_boyfriend/main_beat"
+                          "sound": "sabrina_carpenter_espresso/drums_main_beat"
                         },
                         "next": {
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "9kTSW_VXaBT/A[T+vzw$",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
                             "fields": {
-                              "sound": "dove_cameron_boyfriend/vocals_chorus_1"
+                              "sound": "sabrina_carpenter_espresso/bass_main"
                             },
                             "next": {
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "WKFEdaq)zzApgs9,+17C",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
                                 "fields": {
-                                  "sound": "dove_cameron_boyfriend/vocals_ooh"
+                                  "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
                                 }
                               }
                             }
@@ -67,34 +78,49 @@
                     "block": {
                       "type": "play_sound_at_current_location_simple2",
                       "id": "@tf5unHUq]=oHQJ7fNW;",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
                       "fields": {
-                        "sound": "dove_cameron_boyfriend/plucks"
+                        "sound": "sabrina_carpenter_espresso/drums_fill"
                       },
                       "next": {
                         "block": {
                           "type": "play_sounds_together",
                           "id": "sXVk^hx@R-Xt?LmL3Ey[",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
                           "inputs": {
                             "code": {
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "U0k%~xxIxb8ck?R7Sh{k",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
                                 "fields": {
-                                  "sound": "dove_cameron_boyfriend/main_beat"
+                                  "sound": "sabrina_carpenter_espresso/drums_main_beat"
                                 },
                                 "next": {
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": "%9J;,qJ;Z~F5?G$gH,UP",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
                                     "fields": {
-                                      "sound": "dove_cameron_boyfriend/vocals_chorus_1"
+                                      "sound": "sabrina_carpenter_espresso/bass_main"
                                     },
                                     "next": {
                                       "block": {
                                         "type": "play_sound_at_current_location_simple2",
                                         "id": "_SU2ZGOf5/N-k)QvrTC+",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
                                         "fields": {
-                                          "sound": "dove_cameron_boyfriend/vocals_ooh"
+                                          "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
                                         }
                                       }
                                     }
@@ -107,34 +133,49 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "j~?aOr_ttL-[iBXsGQ/M",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
                               "fields": {
-                                "sound": "dove_cameron_boyfriend/brass"
+                                "sound": "sabrina_carpenter_espresso/crash"
                               },
                               "next": {
                                 "block": {
                                   "type": "play_sounds_together",
                                   "id": "@,9(VL$LHCDW9B$?*~,a",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
                                   "inputs": {
                                     "code": {
                                       "block": {
                                         "type": "play_sound_at_current_location_simple2",
                                         "id": "#JG1P/CIwLIlY=mDFayN",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
                                         "fields": {
-                                          "sound": "dove_cameron_boyfriend/main_beat"
+                                          "sound": "sabrina_carpenter_espresso/drums_main_beat"
                                         },
                                         "next": {
                                           "block": {
                                             "type": "play_sound_at_current_location_simple2",
                                             "id": "p@(]/umL:cu-^gDyJG2{",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
                                             "fields": {
-                                              "sound": "dove_cameron_boyfriend/vocals_chorus_1"
+                                              "sound": "sabrina_carpenter_espresso/bass_main"
                                             },
                                             "next": {
                                               "block": {
                                                 "type": "play_sound_at_current_location_simple2",
                                                 "id": "Y)RU4YX0RY.#JAiZ9Q5{",
+                                                "extraState": {
+                                                  "disableNextConnection": false
+                                                },
                                                 "fields": {
-                                                  "sound": "dove_cameron_boyfriend/vocals_ooh"
+                                                  "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
                                                 }
                                               }
                                             }
@@ -157,7 +198,16 @@
           ]
         }
       },
-      "packId": "dove_cameron_boyfriend"
+      "packId": "sabrina_carpenter_espresso",
+      "sounds": {
+        "sabrina_carpenter_espresso": [
+          "drums_main_beat",
+          "drums_fill",
+          "bass_main",
+          "vocals_chorus_1",
+          "crash"
+        ]
+      }
     },
     "long_instructions": "###<i class=\"fa-regular fa-face-thinking\"></i> What do you notice? \r\n\r\n1. Look for patterns in the code.\r\n2. Press [Run](#clickable=run-button) to listen to the song.",
     "validations": [
@@ -197,7 +247,8 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-11-27 17:47:17 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-27 20:01:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 16:35:15 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 16:35:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 16:47:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 16:47:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 16:48:23 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 17:14:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 17:39:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 17:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 21:43:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 21:46:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 19:10:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 16:54:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 18:17:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 18:20:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 18:27:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:05:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:27:58 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 16:30:29 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 19:20:33 +0000\",\"changed\":[\"level_data\",\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 19:25:54 +0000\",\"changed\":[\"level_data\",\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 19:27:12 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 19:28:23 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 19:29:43 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 20:58:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-11-27 17:47:17 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-27 20:01:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 16:35:15 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 16:35:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 16:47:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 16:47:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 16:48:23 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 17:14:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 17:39:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 17:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 21:43:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 21:46:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 19:10:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 16:54:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 18:17:42 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 18:20:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 18:27:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:05:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:27:58 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 16:30:29 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 19:20:33 +0000\",\"changed\":[\"level_data\",\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 19:25:54 +0000\",\"changed\":[\"level_data\",\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 19:27:12 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 19:28:23 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 19:29:43 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 20:58:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 23:35:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 23:36:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

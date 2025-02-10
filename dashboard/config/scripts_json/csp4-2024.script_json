@@ -15,12 +15,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-11 18:45:36 UTC",
+    "serialized_at": "2025-01-22 19:00:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

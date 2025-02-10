@@ -1,9 +1,8 @@
+import Toggle, {ToggleProps} from '@code-dot-org/component-library/toggle';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React, {ChangeEvent, useState} from 'react';
-
-import Toggle, {ToggleProps} from '@cdo/apps/componentLibrary/toggle';
 
 describe('Design System - Toggle', () => {
   const renderToggle = (props: Partial<ToggleProps>) => {

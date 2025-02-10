@@ -97,6 +97,10 @@
       &Clickable {
         cursor: pointer;
       }
+
+      &ThinBorder {
+        border-width: 1px;
+      }
     }
 
     .tracksContainer {

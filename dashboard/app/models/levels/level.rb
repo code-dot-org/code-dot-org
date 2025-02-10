@@ -595,10 +595,6 @@ class Level < ApplicationRecord
     false
   end
 
-  def uses_google_blockly?
-    false
-  end
-
   def uses_lab2?
     false
   end

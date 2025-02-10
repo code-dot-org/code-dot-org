@@ -58,6 +58,9 @@ class DCDOBase < DynamicConfigBase
       # Enabled locales for browser text to speech. Set to an empty array to disable all languages, or true to enable all.
       'browser-tts-button-enabled-locales': DCDO.get('browser-tts-button-enabled-locales', ['en-US']),
       'lab2-submit-project-enabled': DCDO.get('lab2-submit-project-enabled', true),
+      'cdo-blockly-usage': DCDO.get('cdo-blockly-usage', false),
+      # TODO ACQ-3074 - Remove this after the Exploring Gen AI launch
+      'exploring-gen-ai-launch': DCDO.get('exploring-gen-ai-launch', false),
     }
   end
 end

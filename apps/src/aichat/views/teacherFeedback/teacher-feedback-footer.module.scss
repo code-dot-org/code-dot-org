@@ -1,0 +1,59 @@
+@import '@cdo/apps/componentLibrary/common/styles/colors.css';
+
+@mixin icon-button($background, $selected, $active) {
+  i {
+    color: var(--text-neutral-tertiary);
+  }
+
+  &.selected i, &:hover i {
+    color: $selected;
+  }
+
+  &:hover {
+    background-color: $background;
+  }
+
+  &:active i {
+    color: $active;
+  }
+}
+
+.teacherFeedbackContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+  button.icon-button-affirmative {
+    @include icon-button(var(--background-success-light), var(--text-success-primary), var(--text-success-secondary));
+  }
+
+  button.icon-button-negative {
+    @include icon-button(var(--background-error-light), var(--text-error-primary), var(--text-error-secondary));
+  }
+
+  button.icon-button-gray {
+    @include icon-button(var(--background-neutral-quaternary), var(--text-neutral-tertiary), var(--text-neutral-secondary));
+  }
+}
+
+.leftAlign {
+  justify-content: flex-start;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tooltip {
+  animation: fade-in 0.3s;
+}
+
+.flaggedText {
+  margin-right: 4px;
+}
+

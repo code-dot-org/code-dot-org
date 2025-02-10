@@ -61,14 +61,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
 
         if @workshop.course == COURSE_BUILD_YOUR_OWN
           enrollment.update!(enrollment_params)
-
-          # Mark attendance for all sessions in Build Your Own workshops (we are not tracking attendance in
-          # this way for Build Your Own workshops, but we want to ensure that functionality for emails,
-          # certificates, etc. remains the same).
-          @workshop.sessions.each do |session|
-            attendance = Pd::Attendance.find_restore_or_create_by! session: session, teacher: user, enrollment: enrollment
-            attendance.update! marked_by_user: user
-          end
         else
           enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
           user&.update_school_info(enrollment.school_info)
@@ -180,7 +172,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       school_district_other: params[:school_info][:school_district_other]&.strip_utf8mb4,
       school_id: params[:school_info][:school_id],
       school_name: params[:school_info][:school_name]&.strip_utf8mb4,
-      country: "US" # we currently only support enrollment in pd for US schools
+      country: params[:school_info][:country]
     }
   end
 

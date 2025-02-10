@@ -1,6 +1,5 @@
+import {useDocumentKeydown} from '@code-dot-org/component-library/common/hooks';
 import {useCallback} from 'react';
-
-import useDocumentKeydown from '@cdo/apps/componentLibrary/common/hooks/useDocumentKeydown';
 
 /**
  * useEscapeKeyHandler

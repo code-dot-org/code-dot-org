@@ -15,12 +15,11 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-16 22:41:27 UTC",
+    "serialized_at": "2025-01-22 20:03:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -231,7 +230,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice the basics of loops including using while loops, for loops, and updating multiple screen elements with a for loop. Along the way students develop debugging practices with loops.",
-        "preparation": "* Review the programming progression to understand what students will be asked to do\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1zHvcREojOLrrbDUeq1YV5k68Y2HptzBUT35zUrE1DzA/edit?usp=sharing)",
+        "preparation": "* Review the programming progression to understand what students will be asked to do\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-loops-lessons-5-8/36480) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "student_overview": "Practice programming with loops through a set of programming puzzles."
       },
       "seeding_key": {

@@ -2169,7 +2169,11 @@ StudioApp.prototype.configureDom = function (config) {
       eventName = EVENTS.LEVEL_ACTIVITY;
     }
     if (!runButtonWasClicked) {
-      analyticsReporter.sendEvent(eventName, {}, PLATFORMS.BOTH);
+      analyticsReporter.sendEvent(
+        eventName,
+        {signedIn: config.isSignedIn},
+        PLATFORMS.BOTH
+      );
       runButtonWasClicked = true;
     }
   };
@@ -2799,6 +2803,13 @@ StudioApp.prototype.validateCodeChanged = function () {
   }
 
   return project.isCurrentCodeDifferent(level.startBlocks);
+};
+
+StudioApp.prototype.analyticsData = function () {
+  return {
+    levelId: this.config.serverLevelId,
+    scriptId: this.config.scriptId,
+  };
 };
 
 /**

@@ -1,9 +1,9 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {
   BodyThreeText,
   Heading3,
@@ -119,6 +119,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
         <div className={moduleStyles.fullSizeContainer}>
           <PanelsView
             panels={panels}
+            background={'light'}
             onContinue={onContinue}
             targetWidth={1920}
             targetHeight={1080}

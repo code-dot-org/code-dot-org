@@ -1,0 +1,9 @@
+name 'test-computer-systems-and-devices-lesson-6-level2a'
+title 'Realistic Scenario'
+description ''
+question 'Which of the problems did you find most realistic?'
+right 'Slow Performance'
+right 'Program Crashes'
+right 'Error Messages'
+right 'Permission Errors'
+allow_multiple_attempts false
