@@ -1,8 +1,8 @@
 @import 'color.scss';
 
 $bar-width: 1px;
-$bar-width-grab-area: 5px;
-$grab-area-offset: calc(($bar-width-grab-area - 1px) / 2);
+$bar-width-grab-area: 3px;
+$grab-area-offset: calc(($bar-width-grab-area - $bar-width) / 2);
 $negative-grab-area-offset: calc(-1 * $grab-area-offset);
 
 .resizeBar {
