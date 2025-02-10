@@ -9,7 +9,7 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
     'https://images.ctfassets.net/90t6bu6vlf76/2CPKrKCB3KxD1n6wG9JTn9/aab22373a39e9cc5305b21c08bba588d/component_link_thumbnail.png',
   tooltip: {
     description:
-      'A standalone text that directs users to internal or external pages, with options for styling and accessibility.',
+      'A standalone text link that directs users to internal or external pages, with options for styling and accessibility.',
     imageUrl:
       'https://images.ctfassets.net/90t6bu6vlf76/3Nx2ASyu1g0rwVAPrc7Srb/9c2c3e85246d8572326b741a02b69a04/component_link_tooltip.png',
   },
