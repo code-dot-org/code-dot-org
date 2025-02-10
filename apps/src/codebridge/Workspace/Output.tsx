@@ -15,6 +15,8 @@ import moduleStyles from './output.module.scss';
 
 const DEFAULT_MINI_APP_SIZE = 400;
 const MIN_MINI_APP_SIZE = 200;
+const MIN_CONSOLE_SIZE = 200;
+const MAX_MINI_APP_SIZE = 800;
 
 interface OutputProps {
   className?: string;
@@ -35,7 +37,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
     width,
   };
   const resizeContainerRef = useRef<HTMLDivElement>(null);
-  //const [consoleSize, setConsoleSize] = useState<number | undefined>(undefined);
+  const [consoleSize, setConsoleSize] = useState<number | undefined>(undefined);
 
   const {
     position: miniAppSize,
@@ -45,6 +47,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
     axis: isVertical ? 'y' : 'x',
     initial: DEFAULT_MINI_APP_SIZE,
     min: MIN_MINI_APP_SIZE,
+    max: MAX_MINI_APP_SIZE,
     containerRef: resizeContainerRef,
   });
 
@@ -71,7 +74,15 @@ const Output: React.FunctionComponent<OutputProps> = ({
           desiredWidth !== undefined ||
           miniAppSize)
       ) {
-        console.log({desiredHeight, desiredWidth, miniAppSize, isVertical});
+        const outputSize = isVertical
+          ? desiredHeight || resizeContainerRef.current?.clientHeight
+          : desiredWidth || resizeContainerRef.current?.clientWidth;
+        const newConsoleSize = Math.max(
+          MIN_CONSOLE_SIZE,
+          (outputSize || 0) - miniAppSize
+        );
+        setConsoleSize(newConsoleSize);
+
         // In vertical mode, miniAppSize is the height of the mini app.
         // In horizontal mode, miniAppSize is the width of the mini app.
         const newHeight = isVertical
@@ -144,6 +155,10 @@ const Output: React.FunctionComponent<OutputProps> = ({
     ? {height: miniAppSize}
     : {width: miniAppSize};
 
+  const consoleStyle = isVertical
+    ? {height: consoleSize}
+    : {width: consoleSize};
+
   return (
     <div
       className={classNames(
@@ -162,7 +177,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
         separatorProps={miniAppSeparatorProps}
         isDragging={miniAppDragging}
       />
-      <div className={moduleStyles.growAndShrink}>
+      <div className={moduleStyles.growAndShrink} style={consoleStyle}>
         <Console />
       </div>
     </div>
