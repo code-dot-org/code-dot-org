@@ -144,6 +144,7 @@ cron:
 - dashboard.lti_user_identities
 - dashboard.lti_deployments_user_identities
 - dashboard.new_feature_feedbacks
+- dashboard.user_level_interactions
 - dashboard.cap_user_events
 - dashboard.ai_tutor_interaction_feedbacks
 - dashboard.aichat_sessions
