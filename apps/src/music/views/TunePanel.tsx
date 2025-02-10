@@ -17,7 +17,9 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
 }) => {
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
-  const currentValue: InstrumentEventValue = JSON.parse(JSON.stringify(initValue));
+  const currentValue: InstrumentEventValue = JSON.parse(
+    JSON.stringify(initValue)
+  );
 
   return (
     <div className={moduleStyles.tunePanelContainer}>

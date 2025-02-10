@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 
 import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 
@@ -22,7 +22,6 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   const currentValue: InstrumentEventValue = JSON.parse(
     JSON.stringify(initValue)
   );
-
 
   return (
     <SequenceEditor

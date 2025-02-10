@@ -11,7 +11,7 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 
 import MusicRegistry from '../MusicRegistry';
-import {InstrumentEventValue} from '../player/interfaces/TuneEvent';
+import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import {
   getNoteName,
@@ -105,7 +105,7 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
   };
 
   const startPreview = useCallback(() => {
-    MusicRegistry.player.previewTune(
+    MusicRegistry.player.previewNotes(
       currentValue,
       (tick: number) => setCurrentPreviewTick(tick),
       () => setCurrentPreviewTick(0)
