@@ -1,0 +1,53 @@
+a.link {
+  margin-top: 0;
+}
+
+// Currently purple color styles are match component-library styles completely so we are not editing it.
+//a.link-purple {
+//}
+
+a.link-white {
+  color: var(--text-neutral-white-fixed);
+
+  &:hover,
+  :active,
+  :visited {
+    color: var(--neutral-gray-10);
+  }
+
+  &:focus-visible {
+    color: var(--text-neutral-white-fixed);
+  }
+}
+
+a.link-l {
+  gap: 0.5rem;
+}
+
+a.link-m {
+  gap: 0.5rem;
+}
+
+a.link-s {
+  gap: 0.375rem;
+}
+
+a.link-xs {
+  gap: 0.25rem;
+}
+
+a.link-bottomMargin-none {
+  margin-bottom: 0;
+}
+
+a.link-bottomMargin-xs {
+  margin-bottom: 8px;
+}
+
+a.link-bottomMargin-s {
+  margin-bottom: 16px;
+}
+
+a.link-bottomMargin-m {
+  margin-bottom: 24px;
+}
