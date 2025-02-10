@@ -73,4 +73,8 @@ class FreeResponse < Level
       smart: true
     )
   end
+
+  def stay_on_level?
+    return true if name == 'bethany-test-checkin-fr'
+  end
 end

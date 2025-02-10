@@ -899,6 +899,10 @@ class Level < ApplicationRecord
     properties['validations']
   end
 
+  def stay_on_level?
+    false
+  end
+
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.

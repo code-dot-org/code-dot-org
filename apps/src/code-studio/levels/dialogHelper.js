@@ -174,7 +174,7 @@ export function processResults(onComplete, beforeHook) {
             redirect: lastServerResponse.nextRedirect,
           });
           dialog.show();
-        } else if (lastServerResponse.nextRedirect) {
+        } else if (lastServerResponse.nextRedirect && !appOptions.stayOnLevel) {
           if (appOptions.dialog.shouldShowDialog) {
             showDialog(getSuccessDialog(appOptions), null, () => {
               var lastServerResponse =

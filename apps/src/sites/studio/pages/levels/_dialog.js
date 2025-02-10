@@ -69,7 +69,11 @@ $(document).ready(() => {
       submitButton.attr('disabled', true);
 
       var onComplete = function (willRedirect) {
-        if (!willRedirect) {
+        if (appOptions.stayOnLevel) {
+          $('.response').attr('disabled', true);
+          $('.nextLevelButton').show();
+          $('.levelCompletedMessage').show();
+        } else if (!willRedirect) {
           $('.submitButton').attr('disabled', false);
         }
       };

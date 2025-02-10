@@ -140,7 +140,7 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    render json: milestone_response(
+    response =  milestone_response(
       script_level: @script_level,
       level: @level,
       solved?: solved,
@@ -150,7 +150,9 @@ class ActivitiesController < ApplicationController
       share_failure: share_failure,
       user_level: @user_level
     )
+    puts response.inspect
 
+    render json: response
     # log this at the end so that server errors (which might be caused by invalid input) prevent logging
     log_milestone(@level_source, params)
   end
