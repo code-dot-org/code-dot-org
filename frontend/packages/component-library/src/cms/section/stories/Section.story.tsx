@@ -85,7 +85,19 @@ export const SectionWithBackgroundPattern: Story = {
       },
     },
   },
-  play: createPlayFunction('This is a section with a background pattern'),
+  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+    const canvas = within(canvasElement);
+    const heading = canvas.getByText(
+      'This is a section with a background pattern',
+    );
+    expect(heading).toBeInTheDocument();
+
+    const section = heading.closest('section');
+    if (section) {
+      const backgroundImage = section.style.backgroundImage;
+      expect(backgroundImage).toContain('banner-bg-lines-neutral-light.png');
+    }
+  },
 };
 
 export const MultipleSections = MultipleTemplate.bind({});
