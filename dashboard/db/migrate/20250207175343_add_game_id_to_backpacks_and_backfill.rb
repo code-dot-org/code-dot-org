@@ -1,7 +1,6 @@
-class AddForeignKeyFromGamesToBackpacksAndBackfill < ActiveRecord::Migration[6.1]
+class AddGameIdToBackpacksAndBackfill < ActiveRecord::Migration[6.1]
   def change
     add_column :backpacks, :game_id, :integer, index: true
-    add_foreign_key :backpacks, :games, column: :game_id
 
     reversible do |dir|
       dir.up do
