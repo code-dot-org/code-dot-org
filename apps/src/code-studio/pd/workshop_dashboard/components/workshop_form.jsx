@@ -280,11 +280,11 @@ export class WorkshopForm extends React.Component {
   // Convert from [date, startTime, endTime] to [start, end] and merge destroyedSessions
   prepareSessionsForApi(sessions, destroyedSessions) {
     const editing = Boolean(this.props.workshop);
+    const timeZone = editing
+      ? [...sessions, ...destroyedSessions].find(s => s.timeZone)?.timeZone
+      : Intl.DateTimeFormat().resolvedOptions().timeZone;
     return sessions
       .map(session => {
-        const timeZone = editing
-          ? session.timeZone
-          : Intl.DateTimeFormat().resolvedOptions().timeZone;
         return {
           id: session.id,
           session_format: session.format,

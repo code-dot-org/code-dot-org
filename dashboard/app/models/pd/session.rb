@@ -53,7 +53,7 @@ class Pd::Session < ApplicationRecord
   end
 
   def set_default_time_zone
-    self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : 'UTC'
+    self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : nil
   end
 
   def prevent_time_zone_change
