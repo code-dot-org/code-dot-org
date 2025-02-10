@@ -1,7 +1,7 @@
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
 import Output from '@codebridge/Workspace/Output';
-import React, {useEffect} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import ResizeBar, {
@@ -44,7 +44,7 @@ const VerticalLayout: React.FunctionComponent = () => {
     reverse: true,
   });
 
-  useEffect(() => {
+  const adjustWidths = useCallback(() => {
     // Editor takes priority in terms of available space.
     const adjustedEditorWidth = Math.max(
       window.innerWidth - rawInfoPanelWidth - rawOutputWidth - TWO_RESIZE_BARS,
@@ -78,11 +78,19 @@ const VerticalLayout: React.FunctionComponent = () => {
     setInfoPanelWidth(adjustedInfoPanelWidth);
   }, [rawInfoPanelWidth, rawOutputWidth]);
 
+  useEffect(() => {
+    adjustWidths();
+  }, [rawInfoPanelWidth, rawOutputWidth, adjustWidths]);
+
+  // Flexbox can handle adjusting the widths of the panel to fit the screen, but the
+  // output panel needs an accurate width in order to resize the visualization appropriately.
+  window.addEventListener('resize', adjustWidths);
+
   return (
     <div className={moduleStyles.layoutContainer}>
       <InfoPanel
         style={{width: infoPanelWidth}}
-        className={moduleStyles.shrinkAndGrow}
+        className={moduleStyles.flexShrink0}
       />
       <ResizeBar
         isVertical={true}

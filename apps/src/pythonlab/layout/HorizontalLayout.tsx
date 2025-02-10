@@ -71,7 +71,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
     <div className={moduleStyles.layoutContainer}>
       <InfoPanel
         style={{width: infoPanelWidth}}
-        className={moduleStyles.shrinkAndGrow}
+        className={moduleStyles.flexShrink0}
       />
       <ResizeBar
         isVertical={true}
