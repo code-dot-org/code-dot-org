@@ -1,8 +1,10 @@
-import React, {memo, useMemo, useState} from 'react';
+import React, {memo, useState} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {getChatMessageDisplayText} from '@cdo/apps/aiComponentLibrary/chatMessage/utils';
+import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {ChatMessage as ChatMessageType} from '../types';
@@ -20,15 +22,14 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   isChatHistoryView,
 }) => {
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
+  const {status, role, chatMessageText} = chatMessage;
 
-  const displayText: string = useMemo(() => {
-    return getChatMessageDisplayText(
-      chatMessage.status,
-      chatMessage.role,
-      chatMessage.chatMessageText,
-      showProfaneUserMessage
-    );
-  }, [chatMessage, showProfaneUserMessage]);
+  const displayText = getChatMessageDisplayText(
+    status,
+    role,
+    chatMessageText,
+    showProfaneUserMessage
+  );
 
   // If the chat message's text is what is displayed (i.e. no error or violation)
   const messageVisible =
@@ -44,9 +45,16 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   // but is currently marked optional because the ChatEvent type
   // is used for both chat history and live chat.
   // TODO: Clean up types to separate server and client IDs.
-  const commonProps = {...chatMessage, id: chatMessage.id!};
-  const footer = messageVisible ? (
-    <CleanFeedbackFooter {...commonProps} />
+  const commonProps = {
+    id: chatMessage.id!,
+    chatMessageText: chatMessage.chatMessageText,
+    teacherFeedback: chatMessage?.teacherFeedback,
+  };
+
+  const isAssistant = chatMessage.role === Role.ASSISTANT;
+
+  const chatHistoryFooter = messageVisible ? (
+    <CleanFeedbackFooter {...commonProps} isAssistant={isAssistant} />
   ) : userMessageProfanity ? (
     <ProfanityFeedbackFooter
       {...commonProps}
@@ -56,14 +64,68 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
       profaneMessageVisible={showProfaneUserMessage}
     />
   ) : null;
+  const defaultFooter =
+    messageVisible && isAssistant ? (
+      <CopyButton copyText={chatMessage.chatMessageText} />
+    ) : null;
 
   return (
     <ChatMessage
-      {...chatMessage}
-      showProfaneUserMessage={showProfaneUserMessage}
-      footer={isChatHistoryView && footer}
+      text={displayText}
+      role={role}
+      messageStyle={getMessageStyle(status, role)}
+      footer={isChatHistoryView ? chatHistoryFooter : defaultFooter}
     />
   );
 };
+
+function getChatMessageDisplayText(
+  status: ValueOf<typeof Status>,
+  role: Role,
+  chatMessageText: string,
+  showProfaneUserMessage: boolean
+) {
+  // If Role is USER, display the original message, unless there is a PII violation
+  // or a profanity violation and the message is not supposed to be shown.
+  if (role === Role.USER) {
+    if (status === Status.PII_VIOLATION) {
+      return commonI18n.aiChatTooPersonalUserMessage();
+    }
+    if (status === Status.PROFANITY_VIOLATION && !showProfaneUserMessage) {
+      return commonI18n.aiChatInappropriateUserMessage();
+    }
+    return chatMessageText;
+  }
+
+  // If Role is ASSISTANT, display the appropriate message based on the status.
+  switch (status) {
+    case Status.PROFANITY_VIOLATION:
+      return commonI18n.aiChatInappropriateModelMessage();
+    case Status.PII_VIOLATION:
+      return commonI18n.aiChatTooPersonalUserMessage();
+    case Status.USER_INPUT_TOO_LARGE:
+      return commonI18n.aiChatUserInputTooLargeMessage();
+    case Status.ERROR:
+      return commonI18n.aiChatResponseError();
+    default:
+      return chatMessageText;
+  }
+}
+
+function getMessageStyle(status: ValueOf<typeof Status>, role: Role) {
+  if (
+    status === Status.PROFANITY_VIOLATION ||
+    status === Status.USER_INPUT_TOO_LARGE ||
+    (role === Role.ASSISTANT && status === Status.ERROR)
+  ) {
+    return 'danger';
+  }
+
+  if (status === Status.PII_VIOLATION) {
+    return 'warning';
+  }
+
+  return 'default';
+}
 
 export default memo(ChatMessageView);

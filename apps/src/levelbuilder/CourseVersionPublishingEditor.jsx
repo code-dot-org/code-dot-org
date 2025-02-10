@@ -1,7 +1,7 @@
+import Link from '@code-dot-org/component-library/link';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import Link from '@cdo/apps/componentLibrary/link/Link';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';

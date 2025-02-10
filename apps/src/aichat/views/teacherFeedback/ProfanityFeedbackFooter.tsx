@@ -1,13 +1,14 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import classNames from 'classnames';
 import React, {memo} from 'react';
 
-import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {EmText} from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import aichatI18n from '../../locale';
-import {submitTeacherFeedback} from '../../redux/aichatRedux';
+import {submitTeacherFeedback} from '../../redux';
 import {FeedbackValue} from '../../types';
 
 import moduleStyles from './teacher-feedback-footer.module.scss';
@@ -73,13 +74,12 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
             ? aichatI18n.aria_thumbsUp()
             : aichatI18n.aria_thumbsDown()
         }
-        className={
-          selected
-            ? moduleStyles[
-                `button${type === 'up' ? 'Affirmative' : 'Negative'}`
-              ]
-            : moduleStyles.button
-        }
+        className={classNames(
+          moduleStyles[
+            `icon-button-${type === 'up' ? 'affirmative' : 'negative'}`
+          ],
+          selected && moduleStyles.selected
+        )}
       />
     );
   };
@@ -88,7 +88,7 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
     <div className={moduleStyles.teacherFeedbackContainer}>
       {profaneMessageVisible && (
         <>
-          <EmText>{text}</EmText>
+          <EmText className={moduleStyles.flaggedText}>{text}</EmText>
           <ThumbButton type="up" selected={thumbsUpSelected} />
           <ThumbButton type="down" selected={thumbsDownSelected} />
         </>
@@ -109,7 +109,7 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
           color={buttonColors.black}
           icon={{
             iconName: profaneMessageVisible ? 'eye-slash' : 'eye',
-            iconStyle: 'regular',
+            iconStyle: profaneMessageVisible ? 'solid' : 'regular',
           }}
           isIconOnly={true}
           onClick={toggleProfaneMessageVisibility}
@@ -120,7 +120,10 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
               ? aichatI18n.aria_hideMessage()
               : aichatI18n.aria_showMessage()
           }
-          className={moduleStyles.button}
+          className={classNames(
+            moduleStyles[`icon-button-gray`],
+            profaneMessageVisible && moduleStyles.selected
+          )}
         />
       </WithTooltip>
     </div>

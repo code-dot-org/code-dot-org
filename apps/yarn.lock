@@ -10303,6 +10303,7 @@ __metadata:
     mocha: ^10.6.0
     mock-firmata: 0.2.0
     moment: ^2.29.4
+    moment-timezone: ^0.5.47
     object-fit-images: ^3.2.3
     papaparse: ^5.4.1
     path-browserify: ^1.0.1
@@ -10344,6 +10345,7 @@ __metadata:
     react-redux: ~8.0.5
     react-refresh: ^0.14.0
     react-refresh-typescript: ^2.0.9
+    react-resizable-layout: ^0.7.2
     react-router: 3.2.6
     react-router-dom: ^6.26.0
     react-select: ^1.2.1
@@ -20869,6 +20871,15 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"moment-timezone@npm:^0.5.47":
+  version: 0.5.47
+  resolution: "moment-timezone@npm:0.5.47"
+  dependencies:
+    moment: ^2.29.4
+  checksum: 6288a9d653b902bd913f1dca24426ad71e5a98cd98684139e3ed74e635289e6acde62450735364fd3758d6ac836a1eaab859c08d0252587a377192f25f0bda5a
+  languageName: node
+  linkType: hard
+
 "moment@npm:^2.10.2, moment@npm:^2.29.4":
   version: 2.29.4
   resolution: "moment@npm:2.29.4"
@@ -24153,6 +24164,16 @@ es6-shim@latest:
     "@types/react":
       optional: true
   checksum: e7ad2383ce20d63cf28f3ed14e63f684e139301fc4a5c1573da330d4465b733e6084c33b2bfcaee448c9b1df0e37993a15d6cba8a1dd80fe631f803e48e9f798
+  languageName: node
+  linkType: hard
+
+"react-resizable-layout@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "react-resizable-layout@npm:0.7.2"
+  peerDependencies:
+    react: ">=17.0.0"
+    react-dom: ">=17.0.0"
+  checksum: 9994856125d4262053a56fb9989e68237ab8f28079c8b11926abb3c9dc0e368b33853b9057330df5ed82869a8e665fd2b9e5681bc105f1197fdf6368b853bd65
   languageName: node
   linkType: hard
 

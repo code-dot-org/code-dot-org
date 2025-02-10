@@ -1,10 +1,9 @@
-import {Meta, StoryFn} from '@storybook/react';
-import React, {useState} from 'react';
-
 import {
   SimpleDropdown,
   SimpleDropdownProps,
-} from '@cdo/apps/componentLibrary/dropdown';
+} from '@code-dot-org/component-library/dropdown';
+import {Meta, StoryFn} from '@storybook/react';
+import React, {useState} from 'react';
 
 export default {
   title: 'DesignSystem/Dropdown/Simple Dropdown', // eslint-disable-line storybook/no-title-property-in-meta

@@ -7,9 +7,8 @@
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
-    "display_name": "Dr. Maria Gonzalez",
+    "display_name": "Wildlife Conservationist",
     "long_instructions": "## Priya Desai, Wildlife Conservationist 🌍\r\n\r\n<br/>\r\n\r\n<p style=\"font-size:16px\"><strong>📍 Location:</strong> Gujarat, India </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🏞️ Workplace:</strong> Snake Conservation Research Center </p><br/>\r\n\r\n<p style=\"font-size:16px\">💼<strong> Expertise:</strong> Wildlife protection, snake research, community education </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🔍 How I Use AI:</strong> \"The AI Snake Identification App allows me to accurately track snake populations, educate local communities on venomous species, and assist hospitals in identifying snakebites. By using AI, we can reduce unnecessary fear, protect biodiversity, and support safer human-snake interactions.\" </p>\r\n\r\n\r\n---\r\n\r\n\r\n## Do This:\r\n\r\n<ol style=\"font-size:16px\">\r\n<li>Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:</li>\r\n\t<ul style=\"font-size:16px\">\r\n    \t<li>Key roles and responsibilities</li>\r\n\t\t<li>Key challenges</li>\r\n\t\t<li>How computing supports their work</li>\r\n\t\t<li>How your chosen innovation helps their job</li>\r\n    </ul>\r\n<br/>\r\n<li>Summarize key insights in your activity guide.</li>\r\n</ol>\r\n",
-    "bubble_choice_description": "Meet Dr. Maria Gonzalez, an emergency room doctor working in a hospital where snakebite cases are common.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -42,8 +41,9 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ]
-    }
+    },
+    "thumbnail_url": "https://images.code.org/660772aa23f5f2b7892dc8fe66aed3ba-Pasted Graphic 13.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T05:09:42.320+00:00\",\"changed\":[\"cloned from \\\"computer-systems-nurse-sudan-aichat\\\"\"],\"cloned_from\":\"computer-systems-nurse-sudan-aichat\"},{\"changed_at\":\"2025-01-31 05:11:51 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 05:13:26 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:09:42.320+00:00\",\"changed\":[\"cloned from \\\"computer-systems-nurse-sudan-aichat\\\"\"],\"cloned_from\":\"computer-systems-nurse-sudan-aichat\"},{\"changed_at\":\"2025-01-31 05:11:51 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 05:13:26 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 14:13:55 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 14:27:03 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -1,7 +1,6 @@
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import classNames from 'classnames';
 import React, {HTMLAttributes} from 'react';
-
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import moduleStyles from './link.module.scss';
 

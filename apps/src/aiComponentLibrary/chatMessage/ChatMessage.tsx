@@ -1,51 +1,31 @@
 import classNames from 'classnames';
-import React, {useMemo} from 'react';
+import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {Role} from './types';
-import {getChatMessageDisplayText} from './utils';
 
 import moduleStyles from './chat-message.module.scss';
 
 interface ChatMessageProps {
-  chatMessageText: string;
+  text: string;
   role: Role;
-  status: string;
-  showProfaneUserMessage?: boolean;
   customStyles?: {[label: string]: string};
   footer?: React.ReactNode;
   isTA?: boolean;
+  messageStyle?: 'default' | 'warning' | 'danger';
 }
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
-  chatMessageText,
+  text,
   role,
-  status,
-  showProfaneUserMessage,
   customStyles,
   footer,
   isTA,
+  messageStyle = 'default',
 }) => {
-  const hasDangerStyle =
-    status === Status.PROFANITY_VIOLATION ||
-    status === Status.USER_INPUT_TOO_LARGE ||
-    (role === Role.ASSISTANT && status === Status.ERROR);
-
-  const hasWarningStyle = status === Status.PII_VIOLATION;
-
-  const getDisplayText: string = useMemo(() => {
-    return getChatMessageDisplayText(
-      status,
-      role,
-      chatMessageText,
-      showProfaneUserMessage || false
-    );
-  }, [chatMessageText, role, status, showProfaneUserMessage]);
-
   return (
     <div className={moduleStyles[`message-container-${role}`]}>
       <div className={moduleStyles.messageWithChildren}>
@@ -74,8 +54,8 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             className={classNames(
               moduleStyles[`message-${role}`],
               customStyles && customStyles[`message-${role}`],
-              hasDangerStyle && moduleStyles.danger,
-              hasWarningStyle && moduleStyles.warning
+              messageStyle === 'danger' && moduleStyles.danger,
+              messageStyle === 'warning' && moduleStyles.warning
             )}
             aria-label={
               role === Role.ASSISTANT
@@ -83,7 +63,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                 : commonI18n.aiChatMessageUser()
             }
           >
-            <SafeMarkdown markdown={getDisplayText} />
+            <SafeMarkdown markdown={text} />
           </div>
         </div>
         <div

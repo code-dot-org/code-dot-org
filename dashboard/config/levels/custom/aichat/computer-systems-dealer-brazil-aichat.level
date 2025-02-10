@@ -41,8 +41,9 @@
       "availableModelIds": [
         "gpt-4o-mini"
       ]
-    }
+    },
+    "thumbnail_url": "https://images.code.org/f4b0e52bc5492b73e4ffed7875077a63-Pasted Graphic 27.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T05:27:08.240+00:00\",\"changed\":[\"cloned from \\\"computer-systems-advisor-brazil-aichat\\\"\"],\"cloned_from\":\"computer-systems-advisor-brazil-aichat\"},{\"changed_at\":\"2025-01-31 05:27:56 +0000\",\"changed\":[\"display_name\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 05:28:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:27:08.240+00:00\",\"changed\":[\"cloned from \\\"computer-systems-advisor-brazil-aichat\\\"\"],\"cloned_from\":\"computer-systems-advisor-brazil-aichat\"},{\"changed_at\":\"2025-01-31 05:27:56 +0000\",\"changed\":[\"display_name\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 05:28:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 15:19:54 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

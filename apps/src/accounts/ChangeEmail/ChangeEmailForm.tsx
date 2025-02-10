@@ -1,9 +1,9 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
+import {RadioButtonsGroup} from '@code-dot-org/component-library/radioButton';
+import TextField from '@code-dot-org/component-library/textField';
 import React, {useState} from 'react';
 
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import Link from '@cdo/apps/componentLibrary/link/Link';
-import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';

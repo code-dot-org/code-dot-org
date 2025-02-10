@@ -29,6 +29,12 @@
   align-items: stretch;
 }
 
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .hiddenAiDiffPanel {
   display: none;
 }
@@ -147,12 +153,12 @@
 
 .chat {
   &Content {
-    height: calc(100% - 84px);
     padding: 20px 16px;
     overflow-y: scroll;
 
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     gap: 20px;
   }
 

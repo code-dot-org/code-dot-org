@@ -1,9 +1,9 @@
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import classnames from 'classnames';
 import React, {useCallback, useEffect, useState} from 'react';
 
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
-import _TabPanel from '@cdo/apps/componentLibrary/tabs/_TabPanel';
+import _Tab, {TabModel} from './_Tab';
+import _TabPanel from './_TabPanel';
 
 import moduleStyles from './tabs.module.scss';
 
