@@ -33,6 +33,7 @@
     #stats
       .user-stats-block
 
+      -# TODO(lfm): need to move this to react
     %div{style: 'clear: both;'}
     %br/
     %br/
@@ -47,6 +48,8 @@
     -# Show all the levels, their names, and instructions in the extra links box.
     = render layout: 'shared/extra_links' do
       %strong= @script.name
+      %br/
+      = "id: #{@script.id}"
       %ul
         - if Rails.application.config.levelbuilder_mode
           %li= link_to "Edit", edit_script_path(@script)

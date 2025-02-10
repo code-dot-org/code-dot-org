@@ -16,18 +16,21 @@
           "buttonText": "Computer Science Basics for K-5 Teachers "
         }
       ],
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "es-ES",
         "es-MX"
       ],
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "iceage",
-    "serialized_at": "2024-07-23 00:18:18 UTC",
+    "serialized_at": "2025-01-09 18:06:43 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -90,7 +93,8 @@
       "key": "b3fd8108-41b8-46f8-9382-f19c73c597cb",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "b3fd8108-41b8-46f8-9382-f19c73c597cb",

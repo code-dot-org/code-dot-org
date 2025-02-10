@@ -4,9 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "bg-BG",
@@ -44,11 +46,12 @@
         "zh-TW"
       ],
       "tts": true,
-      "version_year": "2021"
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "poem-art",
-    "serialized_at": "2024-04-08 22:51:29 UTC",
+    "serialized_at": "2025-01-09 16:44:08 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

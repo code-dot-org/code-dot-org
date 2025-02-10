@@ -219,10 +219,6 @@ class CourseOffering < ApplicationRecord
     end
   end
 
-  def self.single_unit_course_offerings_containing_units_info(unit_ids)
-    single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
-  end
-
   def summarize_for_unit_selector(unit_ids)
     {
       display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
@@ -423,10 +419,6 @@ class CourseOffering < ApplicationRecord
 
   def any_version_is_unit?
     course_versions.any? {|cv| cv.content_root_type == 'Unit'}
-  end
-
-  def self.single_unit_course_offerings_containing_units(unit_ids)
-    CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
   end
 
   def csd?

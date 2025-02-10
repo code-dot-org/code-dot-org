@@ -16,6 +16,7 @@ interface KeyHandlerProps {
   togglePlaying: () => void;
   playTrigger: (triggerId: string) => void;
   uiShortcutsEnabled: boolean;
+  disabled?: boolean;
 }
 
 /**
@@ -26,6 +27,7 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
   togglePlaying,
   playTrigger,
   uiShortcutsEnabled,
+  disabled,
 }) => {
   const analyticsReporter = useContext(AnalyticsContext);
   const dispatch = useDispatch();
@@ -44,10 +46,13 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
   const handleKeyUp = useCallback(
     (event: KeyboardEvent) => {
       // Don't handle a keyboard shortcut if the active element is an
-      // input field, since the user is probably trying to type something.
+      // input field or textarea, since the user is probably trying to type something.
       if (
-        document.activeElement &&
-        document.activeElement.tagName.toLowerCase() === 'input'
+        disabled ||
+        (document.activeElement &&
+          ['input', 'textarea'].includes(
+            document.activeElement.tagName.toLowerCase()
+          ))
       ) {
         return;
       }
@@ -89,7 +94,14 @@ const KeyHandler: React.FunctionComponent<KeyHandlerProps> = ({
         togglePlaying();
       }
     },
-    [togglePlaying, playTrigger, reportKeyPress, dispatch, uiShortcutsEnabled]
+    [
+      togglePlaying,
+      playTrigger,
+      reportKeyPress,
+      dispatch,
+      uiShortcutsEnabled,
+      disabled,
+    ]
   );
 
   useEffect(() => {

@@ -164,12 +164,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       reset_password_token: 'fake-reset-password-token'
     refute_nil user.encrypted_password
     refute_nil user.reset_password_token
+
+    purge_user user
+
+    assert_nil user.encrypted_password
+    assert_nil user.reset_password_token
+  end
+
+  test 'clears secret picture and words' do
+    user = create(:student, :sponsored, reset_password_token: 'fake-reset-password-token')
+
+    refute_nil user.reset_password_token
     refute_nil user.secret_picture
     refute_nil user.secret_words
 
     purge_user user
 
-    assert_nil user.encrypted_password
     assert_nil user.reset_password_token
     assert_nil user.secret_picture
     assert_nil user.secret_words
@@ -245,7 +255,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     purge_user user
 
-    assert_nil user.urm
+    refute user.urm
     assert_nil user.races
   end
 

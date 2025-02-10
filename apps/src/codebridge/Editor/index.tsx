@@ -4,10 +4,10 @@ import React, {useCallback, useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {BodyOneText} from '@cdo/apps/componentLibrary/typography';
-import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
+import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 
-import {editableFileType} from '../utils';
+import {editableFileType, viewableImageFileType} from '../utils';
 
 import moduleStyles from './styles/editor.module.scss';
 
@@ -17,9 +17,9 @@ interface EditorProps {
 }
 
 export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
-  const {project, saveFile} = useCodebridgeContext();
+  const {source, saveFile} = useCodebridgeContext();
 
-  const file = getActiveFileForProject(project);
+  const file = getActiveFileForSource(source);
 
   const onChange = useCallback(
     (value: string) => {
@@ -37,6 +37,15 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       return [];
     }
   }, [file?.language, langMapping]);
+
+  if (file && viewableImageFileType(file.language)) {
+    const base64 = window.btoa(file.contents);
+    return (
+      <div>
+        <img src={`data:image/png;base64,${base64}`} alt={file.name} />
+      </div>
+    );
+  }
 
   if (file && !editableFileType(file.language, editableFileTypes)) {
     return (

@@ -1816,6 +1816,12 @@
     "hoc2022_nasa_banner_description": "Premiering 10AM ET, December 5th on NASA STEM's YouTube channel.",
     "hoc2022_nasa_banner_heading_posthoc": "Check out NASA's special Hour of Code feature about computer science in space!",
     "microsoft_logo_alt": "Microsoft logo",
-    "code_org_logo_alt": "Code.org Home"
+    "code_org_logo_alt": "Code.org Home",
+    "global_edition": {
+      "region_language_switch": "View in %{language}",
+      "regions": {
+        "fa": "Farsi"
+      }
+    }
   }
 }

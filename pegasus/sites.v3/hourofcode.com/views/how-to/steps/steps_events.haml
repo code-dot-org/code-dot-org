@@ -4,16 +4,16 @@
   steps_educators_heading = [
     hoc_s("hoc_how_to.label.register"),
     hoc_s("hoc_how_to.label.choose"),
-    hoc_s("hoc_how_to.label.prepare"),
-    hoc_s("hoc_how_to.label.plan_hour"),
+    hoc_s("hoc_how_to.label.plan_event"),
+    hoc_s("hoc_how_to.label.schedule_event"),
     hoc_s("hoc_how_to.label.get_coding"),
     hoc_s("hoc_how_to.label.after"),
     hoc_s("hoc_how_to.label.beyond")
   ]
 
   steps_educators_desc = [
-    hoc_s("hoc_how_to.events.steps.register"),
-    hoc_s("hoc_how_to.events.steps.choose_activity"),
+    hoc_s("hoc_how_to.events.steps_v2.register"),
+    hoc_s("hoc_how_to.events.steps_v2.choose_activity"),
     "",
     hoc_s("hoc_how_to.events.steps.plan.body_01"),
     hoc_s("hoc_how_to.events.steps.get_coding.body_01"),
@@ -68,17 +68,17 @@
             - if index === 3
               %ul
                 %li
-                  =hoc_s(:hoc_how_to_step_events_plan_hour_desc_02, markdown: :inline, locals:{videos_url: resolve_url("/resources#videos")})
+                  =hoc_s("hoc_how_to.events.steps_v2.plan.list_01", markdown: :inline, locals:{video_url: resolve_url("/resources#videos")})
                 %li
-                  =hoc_s("hoc_how_to.events.steps.plan.list_02")
+                  =hoc_s("hoc_how_to.events.steps_v2.plan.list_02")
                 %li
-                  =hoc_s("hoc_how_to.events.steps.plan.list_03")
+                  =hoc_s("hoc_how_to.events.steps_v2.plan.list_03")
                 %li
-                  =hoc_s("hoc_how_to.events.steps.plan.list_04")
+                  =hoc_s("hoc_how_to.events.steps_v2.plan.list_04")
                 %li
-                  =hoc_s("hoc_how_to.events.steps.plan.list_05")
+                  =hoc_s("hoc_how_to.events.steps_v2.plan.list_05")
                 %li
-                  =hoc_s("hoc_how_to.events.steps.plan.list_06")
+                  =hoc_s("hoc_how_to.events.steps_v2.plan.list_06")
 
             -# Step 5 additional content
             - if index === 4
@@ -91,15 +91,13 @@
             - if index === 5
               %ul
                 %li
-                  =hoc_s("hoc_how_to.events.steps.after.list_01")
+                  =hoc_s("hoc_how_to.events.steps_v2.after.list_01")
                 %li
-                  =hoc_s("hoc_how_to.events.steps.after.list_02")
+                  =hoc_s("hoc_how_to.events.steps_v2.after.list_02")
                 %li
                   =hoc_s("hoc_how_to.events.steps.after.list_03")
                 %li
                   =hoc_s("hoc_how_to.events.steps.after.list_04")
-                %li
-                  =hoc_s("hoc_how_to.events.steps.after.list_05")
               %a.link-button.has-external-link{href: "https://code.org/certificates", target: "_blank", rel: "noopener noreferrer"}
                 =hoc_s("hoc_how_to.button.print_certificates")
 

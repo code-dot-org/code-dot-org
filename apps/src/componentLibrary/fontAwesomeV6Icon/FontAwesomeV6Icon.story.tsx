@@ -12,7 +12,6 @@ export default {
 // TEMPLATE
 //
 // This is needed to fix children type error (passing string instead of React.ReactNode type)
-// eslint-disable-next-line
 const SingleTemplate: StoryFn<FontAwesomeV6IconProps> = args => (
   <FontAwesomeV6Icon {...args} />
 );
@@ -91,6 +90,31 @@ GroupOfFamiliesOfFontAwesomeV6Icon.args = {
 export const GroupOfCustomIconsOfFontAwesomeV6Icon = MultipleTemplate.bind({});
 GroupOfCustomIconsOfFontAwesomeV6Icon.args = {
   components: [
+    {
+      iconFamily: 'kit',
+      iconName: 'click-to-continue-down',
+      title: 'click-to-continue-down-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'click-to-continue-up',
+      title: 'click-to-continue-up-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'connected-level',
+      title: 'connected-level-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-bot-solid',
+      title: 'ai-bot-solid-kit',
+    },
+    {
+      iconFamily: 'kit',
+      iconName: 'ai-bot-regular',
+      title: 'ai-bot-regular-kit',
+    },
     {
       iconFamily: 'kit',
       iconName: 'text-speech-pause',

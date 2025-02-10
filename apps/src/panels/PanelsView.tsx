@@ -1,13 +1,22 @@
+import {Button} from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import markdownToTxt from 'markdown-to-txt';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import Typist from 'react-typist';
 
+import {capitalizeFirstLetter} from '@cdo/apps/blockly/utils';
+import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+import {LessonBackground} from '@cdo/apps/types/progressTypes';
+
+import {queryParams} from '../code-studio/utils';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
+import {useBrowserTextToSpeech} from '../sharedComponents/BrowserTextToSpeechWrapper';
 import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import {commonI18n} from '../types/locale';
 
 import {Panel} from './types';
 
-import styles from './panels.module.scss';
+import styles from './panelsView.module.scss';
 
 // Leave a margin to the left and the right of the panels, to the edges
 // of the screen.
@@ -23,11 +32,24 @@ const childrenAreaHeight = 70;
 
 interface PanelsProps {
   panels: Panel[];
+  background: LessonBackground;
   onContinue: (nextUrl?: string) => void;
   onSkip?: () => void;
   targetWidth: number;
   targetHeight: number;
+  offerBrowserTts: boolean;
+  levelId: string | null;
   resetOnChange?: boolean;
+  onChangePanel?: (
+    source: 'button' | 'bubble',
+    currentPanel: number,
+    nextPanel: number,
+    timeSpentOnPanelSeconds: number
+  ) => void;
+  onClickContinue?: (
+    currentPanel: number,
+    timeSpentOnPanelSeconds: number
+  ) => void;
 }
 
 /**
@@ -35,13 +57,25 @@ interface PanelsProps {
  */
 const PanelsView: React.FunctionComponent<PanelsProps> = ({
   panels,
+  background,
   onContinue,
   onSkip,
   targetWidth,
   targetHeight,
+  offerBrowserTts,
+  levelId,
   resetOnChange = true,
+  onChangePanel,
+  onClickContinue,
 }) => {
-  const [currentPanel, setCurrentPanel] = useState(0);
+  const [currentPanelIndex, setCurrentPanelIndex] = useState(0);
+  const [previousPanelIndex, setPreviousPanelIndex] = useState<
+    number | undefined
+  >(undefined);
+  const [typingDone, setTypingDone] = useState(false);
+  const {cancel} = useBrowserTextToSpeech();
+
+  const lastPanelStartTime = useRef<number>(Date.now());
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -62,83 +96,190 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
     return [width, height];
   }, [targetWidth, targetHeight]);
 
-  const handleButtonClick = useCallback(() => {
-    if (currentPanel < panels.length - 1) {
-      setCurrentPanel(currentPanel + 1);
-    } else {
-      onContinue(panels[currentPanel].nextUrl);
-    }
-  }, [panels, currentPanel, onContinue]);
+  const changePanel = useCallback(
+    (index: number, source: 'button' | 'bubble') => {
+      if (onChangePanel) {
+        onChangePanel(
+          source,
+          currentPanelIndex,
+          index,
+          (Date.now() - lastPanelStartTime.current) / 1000
+        );
+      }
+      setPreviousPanelIndex(currentPanelIndex);
+      setCurrentPanelIndex(index);
+    },
+    [currentPanelIndex, onChangePanel]
+  );
 
-  const handleBubbleClick = (index: number) => {
-    setCurrentPanel(index);
-  };
+  const handleButtonClick = useCallback(() => {
+    if (currentPanelIndex < panels.length - 1) {
+      changePanel(currentPanelIndex + 1, 'button');
+    } else {
+      if (onClickContinue) {
+        onClickContinue(
+          currentPanelIndex,
+          (Date.now() - lastPanelStartTime.current) / 1000
+        );
+      }
+      onContinue(panels[currentPanelIndex].nextUrl);
+    }
+  }, [changePanel, panels, currentPanelIndex, onContinue, onClickContinue]);
+
+  const handleBubbleClick = useCallback(
+    (index: number) => {
+      changePanel(index, 'bubble');
+    },
+    [changePanel]
+  );
 
   // Reset to first panel whenever panels content changes if specified.
   useEffect(() => {
     if (resetOnChange) {
-      setCurrentPanel(0);
+      setPreviousPanelIndex(undefined);
+      setCurrentPanelIndex(0);
     }
   }, [panels, resetOnChange]);
 
-  // Reset to last panel if number of panels has reduced
+  // Reset to last panel if number of panels has reduced.
   useEffect(() => {
-    if (currentPanel >= panels.length) {
-      setCurrentPanel(Math.max(panels.length - 1, 0));
+    if (!resetOnChange && currentPanelIndex >= panels.length) {
+      setCurrentPanelIndex(Math.max(panels.length - 1, 0));
     }
-  }, [currentPanel, panels]);
+  }, [currentPanelIndex, panels, resetOnChange]);
 
-  const panel = panels[currentPanel];
+  // Cancel any in-progress text-to-speech when the panel changes
+  // and reset the last panel start time.
+  useEffect(() => {
+    if (offerBrowserTts) {
+      cancel();
+    }
+    lastPanelStartTime.current = Date.now();
+  }, [currentPanelIndex, offerBrowserTts, cancel]);
+
+  // Reset typing if the panel changes.
+  useEffect(() => {
+    setTypingDone(false);
+  }, [currentPanelIndex, setTypingDone]);
+
+  const panel = panels[currentPanelIndex];
   if (!panel) {
     return null;
   }
 
-  const showSmallText = height < 300;
-  const textLayoutClass =
-    panel.layout === 'text-top-left'
-      ? styles.markdownTextTopLeft
-      : panel.layout === 'text-bottom-left'
-      ? styles.markdownTextBottomLeft
-      : panel.layout === 'text-bottom-right'
-      ? styles.markdownTextBottomRight
-      : styles.markdownTextTopRight;
+  const backgroundSuffix = capitalizeFirstLetter(background || 'dark');
+
+  const previousPanel =
+    panel.fadeInOverPrevious &&
+    previousPanelIndex !== undefined &&
+    panels[previousPanelIndex];
+
+  const nextPanel =
+    currentPanelIndex + 1 < panels.length && panels[currentPanelIndex + 1];
+
+  const layoutClassMap = {
+    'text-top-left': styles.textTopLeft,
+    'text-top-center': styles.textTopCenter,
+    'text-bottom-left': styles.textBottomLeft,
+    'text-bottom-center': styles.textBottomCenter,
+    'text-bottom-right': styles.textBottomRight,
+    'text-top-right': styles.textTopRight,
+  };
+
+  const textLayoutClass = panel.layout
+    ? layoutClassMap[panel.layout]
+    : styles.textTopRight;
+
+  const buttonText =
+    currentPanelIndex < panels.length - 1
+      ? commonI18n.next()
+      : commonI18n.continue();
+
+  const plainText = markdownToTxt(panel.text);
+
+  const showTyping =
+    panel.typing || queryParams('panels-show-typing') === 'true';
+
+  // When typing, only show the button when the typing is done.
+  const showButton = !showTyping || typingDone;
 
   return (
     <div
       id="panels-container"
       className={styles.panelsContainer}
-      key={currentPanel}
+      key={`${levelId || 'default'}-${currentPanelIndex}`}
     >
       <div className={styles.panel} style={{width, height}}>
+        {previousPanel && (
+          <div
+            className={styles.image}
+            style={{
+              backgroundImage: `url("${previousPanel.imageUrl}")`,
+            }}
+          />
+        )}
         <div
-          className={styles.image}
+          className={classNames(styles.image, styles.imageCurrent)}
           style={{
             backgroundImage: `url("${panel.imageUrl}")`,
           }}
         />
-        <EnhancedSafeMarkdown
-          markdown={panel.text}
-          className={classNames(
-            styles.markdownText,
-            showSmallText && styles.markdownTextSmall,
-            textLayoutClass
-          )}
-        />
+        {nextPanel && (
+          <div
+            className={classNames(styles.image, styles.imageInvisible)}
+            style={{
+              backgroundImage: `url("${nextPanel.imageUrl}")`,
+            }}
+          />
+        )}
+        {panel.text && (
+          <div
+            className={classNames(
+              styles.text,
+              panel.dark && styles.textDark,
+              textLayoutClass
+            )}
+          >
+            {offerBrowserTts && <TextToSpeech text={panel.text} />}
+            {showTyping ? (
+              <div>
+                <div className={styles.invisiblePlaceholder}>{plainText}</div>
+                <Typist
+                  startDelay={750}
+                  avgTypingDelay={35}
+                  stdTypingDelay={15}
+                  cursor={{show: false}}
+                  onTypingDone={() => {
+                    setTypingDone(true);
+                  }}
+                  className={styles.typist}
+                >
+                  {plainText}
+                </Typist>
+              </div>
+            ) : (
+              <EnhancedSafeMarkdown markdown={panel.text} />
+            )}
+          </div>
+        )}
       </div>
       <div
         className={styles.childrenArea}
         style={{width: width, height: childrenAreaHeight}}
       >
-        <button
-          id="panels-button"
-          type="button"
-          onClick={handleButtonClick}
-          className={styles.button}
-        >
-          {currentPanel < panels.length - 1
-            ? commonI18n.next()
-            : commonI18n.continue()}
-        </button>
+        {showButton && (
+          <Button
+            key={`button-${currentPanelIndex}`}
+            id="panels-button"
+            onClick={handleButtonClick}
+            className={classNames(
+              styles.button,
+              showTyping ? styles.buttonReady : styles.buttonDelay
+            )}
+            text={buttonText}
+          />
+        )}
+
         {panels.length > 1 && (
           <div id="panels-bubbles">
             {Array.from(Array(panels.length).keys()).map(index => {
@@ -148,9 +289,9 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
                   className={classNames(
                     'icon',
                     styles.bubble,
-                    index === currentPanel
-                      ? styles.bubbleCurrent
-                      : styles.bubbleNotCurrent
+                    index === currentPanelIndex
+                      ? styles[`bubbleCurrent${backgroundSuffix}`]
+                      : styles[`bubbleNotCurrent${backgroundSuffix}`]
                   )}
                   title={undefined}
                   icon="circle"

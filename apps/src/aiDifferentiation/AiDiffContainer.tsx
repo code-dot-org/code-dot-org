@@ -1,149 +1,96 @@
-import classnames from 'classnames';
-import React, {useEffect, useRef, useState} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
-import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import Button from '@cdo/apps/componentLibrary/button';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
-import HttpClient from '../util/HttpClient';
+import {useAppSelector} from '../util/reduxHooks';
+import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
-import AiDiffChatFooter from './AiDiffChatFooter';
-import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
-import {ChatItem, ChatPrompt} from './types';
+import AiDiffChat from './AiDiffChat';
+import AiDiffWelcome from './welcome/AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
+
+const AI_DIFF_POSITION_X = 'aiDiffPositionX';
+const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
+
+// TODO: Update to support i18n
+const AI_DIFF_HEADER_TEXT = 'AI Teaching Assistant';
 
 interface AiDiffContainerProps {
   closeTutor?: () => void;
   open: boolean;
   lessonId: number;
+  lessonName: string;
   unitDisplayName: string;
+  disableWelcome?: boolean;
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   open,
   lessonId,
+  lessonName,
   unitDisplayName,
+  // TODO(lfm): remove this when welcome is ready to be shown.
+  disableWelcome = true,
 }) => {
-  // TODO: Update to support i18n
-  const aiDiffHeaderText = 'AI Teaching Assistant';
+  const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
 
-  const aiDiffChatMessageEndpoint = '/ai_diff/chat_completion';
+  const [positionX, setPositionX] = useState(
+    parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
+  );
+  const [positionY, setPositionY] = useState(
+    parseInt(tryGetSessionStorage(AI_DIFF_POSITION_Y, 0)) || 0
+  );
 
-  const [positionX, setPositionX] = useState(0);
-  const [positionY, setPositionY] = useState(0);
+  const hasCompletedAiDifferentiationWelcome = useAppSelector(
+    state => state.currentUser.hasCompletedAiDifferentiationWelcome
+  );
 
-  const [sessionId, setSessionId] = useState(null);
+  useEffect(() => {
+    trySetSessionStorage(AI_DIFF_POSITION_X, String(positionX));
+  }, [positionX]);
 
-  const [isWaitingForResponse, setIsWaitingForResponse] = useState(false);
-
-  const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
-    {
-      role: Role.ASSISTANT,
-      chatMessageText: `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`,
-      status: Status.OK,
-    },
-    [
-      {
-        label: 'Explain a concept',
-        prompt:
-          'I need an explanation of a concept. You can ask me a follow-up question to find out what concept needs to be explained.',
-      },
-      {
-        label: 'Give an example to use with my class',
-        prompt:
-          'Can I have an example to use with my class? You can ask me a follow-up question to get more details for the kind of example needed.',
-      },
-      {
-        label: 'Write an extension activity for students who finish early',
-        prompt:
-          'Write an extension activity for this lesson for students who finish early',
-      },
-      {
-        label:
-          'Write an extension activity for students who need extra practice',
-        prompt:
-          'Write an extension activity for this lesson for students who need extra practice',
-      },
-    ],
-  ]);
+  useEffect(() => {
+    trySetSessionStorage(AI_DIFF_POSITION_Y, String(positionY));
+  }, [positionY]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
     setPositionY(data.y);
   };
 
-  const onMessageSend = (message: string) => {
-    const newUserMessage = {
-      role: Role.USER,
-      chatMessageText: message,
-      status: Status.OK,
-    };
-
-    setMessageHistory(prevMessages => [...prevMessages, newUserMessage]);
-    getAIResponse(message);
-  };
-
-  const onPromptSelect = (prompt: ChatPrompt) => {
-    getAIResponse(prompt.prompt);
-  };
-
-  const getAIResponse = (prompt: string) => {
-    setIsWaitingForResponse(true);
-
-    const body = JSON.stringify({
-      inputText: prompt,
-      lessonId: lessonId,
-      unitDisplayName: unitDisplayName,
-      sessionId: sessionId,
-    });
-    HttpClient.post(`${aiDiffChatMessageEndpoint}`, body, true, {
-      'Content-Type': 'application/json',
-    })
-      .then(response => response.json())
-      .then(json => {
-        const newAiMessage = {
-          role: Role.ASSISTANT,
-          chatMessageText: json.chat_message_text,
-          status: json.status,
-        };
-        setSessionId(json.session_id);
-        setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
-      })
-      .catch(error => console.log(error))
-      .finally(() => {
-        setIsWaitingForResponse(false);
-      });
-  };
-
-  // Scroll to bottom of content when a new message comes in
-  const chatWindowRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    chatWindowRef.current?.lastElementChild?.scrollIntoView();
-  }, [messageHistory]);
-
   return (
     <Draggable
+      handle=".ai_diff_handle"
       defaultPosition={{x: positionX, y: positionY}}
       onStop={onStopHandler}
     >
       <div
-        className={classnames(style.aiDiffContainer, {
-          [style.hiddenAiDiffPanel]: !open,
-        })}
+        // eslint-disable-next-line react/forbid-dom-props
+        data-testid="draggable-test-id"
+        id="draggable-id"
+        className={style.aiDiffContainer}
+        style={open ? undefined : {display: 'none'}}
       >
-        <div className={style.aiDiffHeader}>
+        <div className={classNames(style.aiDiffHeader, 'ai_diff_handle')}>
           <div className={style.aiDiffHeaderLeftSide}>
-            <img
-              src={aiBotOutlineIcon}
-              className={style.aiBotOutlineIcon}
-              alt={aiDiffHeaderText}
-            />
-            <span>{aiDiffHeaderText}</span>
+            <div className={style.aiBotHeader}>
+              <img
+                src={aiBotOutlineIcon}
+                className={style.aiBotOutlineIcon}
+                alt={AI_DIFF_HEADER_TEXT}
+              />
+              <div className={style.taOverlayHeader}>
+                <span>{'TA'}</span>
+              </div>
+            </div>
+            <span className={style.aiDiffHeaderText}>
+              {AI_DIFF_HEADER_TEXT}
+            </span>
           </div>
           <div className={style.aiDiffHeaderRightSide}>
             <Button
@@ -158,30 +105,22 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         </div>
 
         <div className={style.fabBackground}>
-          <div className={style.chatContent} ref={chatWindowRef}>
-            {messageHistory.map((item: ChatItem, id: number) =>
-              Array.isArray(item) ? (
-                <AiDiffSuggestedPrompts
-                  suggestedPrompts={item}
-                  isLatest={id === messageHistory.length - 1}
-                  onSubmit={onPromptSelect}
-                  key={id}
-                />
-              ) : (
-                <ChatMessage {...item} key={id} />
-              )
-            )}
-            <img
-              src="/blockly/media/aichat/typing-animation.gif"
-              alt={'Waiting for response'}
-              className={
-                isWaitingForResponse
-                  ? style.waitingForResponse
-                  : style.hideWaitingForResponse
-              }
+          {!disableWelcome &&
+          !hasCompletedAiDifferentiationWelcome &&
+          showWelcomeExperience ? (
+            <AiDiffWelcome
+              setShowWelcomeExperience={setShowWelcomeExperience}
+              lessonId={lessonId}
+              lessonName={lessonName}
+              unitDisplayName={unitDisplayName}
             />
-          </div>
-          <AiDiffChatFooter onSubmit={onMessageSend} />
+          ) : (
+            <AiDiffChat
+              lessonId={lessonId}
+              lessonName={lessonName}
+              unitDisplayName={unitDisplayName}
+            />
+          )}
         </div>
       </div>
     </Draggable>

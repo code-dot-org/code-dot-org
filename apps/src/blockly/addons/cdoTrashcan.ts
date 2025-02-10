@@ -1,20 +1,21 @@
-import GoogleBlockly, {IDraggable, WorkspaceSvg} from 'blockly/core';
-import {Abstract} from 'blockly/core/events/events_abstract';
-import {BlockDrag} from 'blockly/core/events/events_block_drag';
-import {UiMetrics} from 'blockly/core/metrics_manager';
+import * as GoogleBlockly from 'blockly/core';
+
+import {isDarkTheme} from '../utils';
 
 export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
-  private workspace: WorkspaceSvg;
+  private workspace: GoogleBlockly.WorkspaceSvg;
   private isLidOpen: boolean;
   private lidTask_: number;
   private lidOpen_: number;
+  private trashUrl: string;
   private container: SVGElement | undefined;
   private svgGroup_: SVGElement | undefined;
   private svgLid_: SVGImageElement | undefined;
   private notAllowed_: SVGElement | undefined;
   public readonly TRASH_URL = '/blockly/media/trash.png';
+  public readonly TRASH_URL_DARK = '/blockly/media/trash_dark.png';
 
-  constructor(workspace: WorkspaceSvg) {
+  constructor(workspace: GoogleBlockly.WorkspaceSvg) {
     super();
     this.workspace = workspace;
     this.id = `cdoTrashcan-${this.getSafeWorkspaceId()}`;
@@ -31,6 +32,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
      * Current state of lid opening (0.0 = closed, 1.0 = open).
      */
     this.lidOpen_ = 0;
+    this.trashUrl = isDarkTheme(workspace.getTheme())
+      ? this.TRASH_URL_DARK
+      : this.TRASH_URL;
   }
 
   /**
@@ -115,7 +119,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     body.setAttributeNS(
       Blockly.utils.dom.XLINK_NS,
       'xlink:href',
-      this.TRASH_URL
+      this.trashUrl
     );
 
     // trashcan lid
@@ -143,7 +147,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     this.svgLid_.setAttributeNS(
       Blockly.utils.dom.XLINK_NS,
       'xlink:href',
-      this.TRASH_URL
+      this.trashUrl
     );
 
     // not allowed symbol
@@ -174,9 +178,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     return this.svgGroup_;
   }
 
-  workspaceChangeHandler(blocklyEvent: Abstract) {
+  workspaceChangeHandler(blocklyEvent: GoogleBlockly.Events.Abstract) {
     if (blocklyEvent.type === Blockly.Events.BLOCK_DRAG) {
-      const event = blocklyEvent as BlockDrag;
+      const event = blocklyEvent as GoogleBlockly.Events.BlockDrag;
       let trashcanVisibility = 'hidden';
       let toolboxVisibility = 'visible';
       // Don't show the trashcan if the block is being dragged out of the toolbox.
@@ -231,7 +235,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * Positions the container and the trashcan itself. Called when the window is resized and on initialization.
    * @param {!Blockly.MetricsManager.UiMetrics} metrics The workspace metrics.
    */
-  position(metrics: UiMetrics) {
+  position(metrics: GoogleBlockly.MetricsManager.UiMetrics) {
     const toolboxWidth = Blockly.cdoUtils.getToolboxWidth(this.workspace);
     if (!this.container) {
       return;
@@ -353,8 +357,11 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @param {!Blockly.IDraggable} _dragElement The block or bubble currently being
    *   dragged.
    */
-  onDragEnter(_dragElement: IDraggable) {
-    this.setLidOpen(_dragElement.isDeletable());
+  onDragEnter(_dragElement: GoogleBlockly.IDraggable) {
+    // BlockSvgs and Bubbles are both draggable elements, but we only care about blocks.
+    if (_dragElement instanceof GoogleBlockly.BlockSvg) {
+      this.setLidOpen(_dragElement.isDeletable());
+    }
   }
 
   /**
@@ -364,7 +371,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @param {!Blockly.IDraggable} _dragElement The block or bubble currently being
    *   dragged.
    */
-  onDragOver(_dragElement: IDraggable) {}
+  onDragOver(_dragElement: GoogleBlockly.IDraggable) {}
 
   /**
    * IDragTarget method
@@ -372,7 +379,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @param {!Blockly.IDraggable} _dragElement The block or bubble currently being
    *   dragged.
    */
-  onDragExit(_dragElement: IDraggable) {
+  onDragExit(_dragElement: GoogleBlockly.IDraggable) {
     this.setLidOpen(false);
   }
 
@@ -383,7 +390,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @param {!Blockly.IDraggable} _dragElement The block or bubble currently being
    *   dragged.
    */
-  onDrop(_dragElement: IDraggable) {
+  onDrop(_dragElement: GoogleBlockly.IDraggable) {
     this.setLidOpen(false);
   }
 
@@ -397,7 +404,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @return {boolean} Whether the block or bubble provided should be returned to
    *     drag start.
    */
-  shouldPreventMove(_dragElement: IDraggable) {
+  shouldPreventMove(_dragElement: GoogleBlockly.IDraggable) {
     return false;
   }
 }
@@ -445,12 +452,12 @@ const ANIMATION_FRAMES = 4;
 /**
  * The minimum (resting) opacity of the trashcan and lid.
  */
-const OPACITY_MIN = 0.4;
+const OPACITY_MIN = 0.8;
 
 /**
  * The maximum (hovered) opacity of the trashcan and lid.
  */
-const OPACITY_MAX = 0.8;
+const OPACITY_MAX = 1.0;
 
 /**
  * The maximum angle the trashcan lid can opens to. At the end of the open

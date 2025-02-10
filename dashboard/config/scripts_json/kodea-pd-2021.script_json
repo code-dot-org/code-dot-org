@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "self_paced_pl_k_5",
+      "curriculum_umbrella": "Self-paced PL - CSF",
       "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "csf-online-pd-kodea",
@@ -11,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "kodea-pd-2021",
-    "serialized_at": "2023-07-13 22:16:09 UTC",
+    "serialized_at": "2025-01-13 23:41:17 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3442,6 +3444,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

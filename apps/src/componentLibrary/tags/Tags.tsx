@@ -1,7 +1,6 @@
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import classNames from 'classnames';
 import React from 'react';
-
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import Tag, {TagProps} from './_Tag';
 
@@ -40,6 +39,7 @@ const Tags: React.FunctionComponent<TagsProps> = ({
       moduleStyles[`tags-${size}`],
       className
     )}
+    // eslint-disable-next-line react/forbid-dom-props
     data-testid="tags"
   >
     {tagsList.map(({tooltipId, label, tooltipContent, ariaLabel, icon}) => (

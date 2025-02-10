@@ -7,23 +7,25 @@ theme: responsive_full_width
 %link{href: "/css/generated/page/music-styles.css", rel: "stylesheet"}
 
 %section.hero-banner-basic.overlay
-  .wrapper.grid-container.justify-space-between.align-items-center.gap-4
+  .wrapper.grid-container.justify-space-between.align-items-center.gap-2
     .text-wrapper
-      %p.body-one.white.has-icon
-        =hoc_s("music_lab.introducing_music_lab_strong", markdown: :inline, locals:{music_lab: "Music Lab"})
       %h1.white
-        =hoc_s("music_lab.banner.heading")
+        =hoc_s("music_lab.jam_session.name")
       %p.body-one.white
-        =hoc_s("music_lab.banner.desc")
-      %a.link-button.white{href: CDO.studio_url("/s/music-intro-2024/reset")}
-        =hoc_s("music_lab.button.try_music_lab")
+        =hoc_s("music_lab.jam_session.banner.desc_01")
+      .button-wrapper{style: "column-gap: 1rem; row-gap: 0"}
+        %a.link-button.white{href: CDO.studio_url("/s/music-jam-2024/reset")}
+          =hoc_s("music_lab.jam_session.button.start")
+        %a.link-button.secondary.white{href: CDO.studio_url("/projects/music/new")}
+          =hoc_s("music_lab.jam_session.button.create_new_project")
+
       .afe.flex-container.align-items-baseline.wrap
         %p.add-margin-top.no-margin-bottom.white
           =hoc_s("music_lab.in_partnership_with")
         %figure
           %img{src: "/images/avatars/amazon_future_engineer_light.png", alt: hoc_s("music_lab.amazon_future_engineer")}
     %figure
-      %img{src: "/images/music-lab/music-lab-banner-graphic.png", alt: "", style: "width: 100%"}
+      %img{src: "/images/music-lab/music-lab-banner-graphic-best-of-stem.png", alt: "", style: "width: 100%"}
 
 %section.bg-neutral-light
   .wrapper.flex-container.justify-space-between.align-items-center.gap-1.wrap.flex-direction-column-mobile
@@ -31,14 +33,11 @@ theme: responsive_full_width
       %h2.heading-lg
         =hoc_s("music_lab.featuring_songs_by")
       %p.no-margin-bottom
-        =hoc_s("music_lab.artist_list", markdown: :inline, locals:{artist_list: "The Chainsmokers, Tinashe, Rosa Linn, Coldplay, Aloe Blacc, Chloe x Halle, Lady Gaga, Dove Cameron"})
+        =hoc_s("music_lab.artist_list", markdown: :inline, locals:{artist_list: "Sabrina Carpenter, Shakira, Benson Boone, Henry Moodie, The Chainsmokers, Rosa Linn, Tinashe, Dove Cameron, Aloe Blacc"})
     .flex-1
       = view :"music/music_lab_featured_artists"
 
-%section.student-projects
-  .wrapper
-    %h2=hoc_s("music_lab.student_projects.heading")
-    = view :"music/music_lab_student_projects"
+= view :"music/music_lab_tutorials"
 
 %section.bg-primary-light.aws-career-tours
   .wrapper.flex-container.justify-space-between.align-items-center.wrap.flex-direction-column-tablet.gap-1
@@ -52,27 +51,20 @@ theme: responsive_full_width
     %a.link-button.has-external-link{href: "https://www.amazonfutureengineer.com/music?utm_campaign=Code.org&utm_medium=Direct%20Promotion&utm_source=DP%20Music&utm_content=Music%20Lab", target: "_blank", rel: "noopener noreferrer"}
       =hoc_s("music_lab.button.amazon_career_tour")
 
-%section
+%section.student-projects
   .wrapper
-    %h2=hoc_s("music_lab.videos.heading")
+    %h2=hoc_s("music_lab.student_projects.heading")
+    = view :"music/music_lab_student_projects"
+
+%section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s("music_lab.videos.heading_2")
     = view :"music/music_lab_carousel_videos"
 
 %section.quote
   .wrapper
     %h2.white=hoc_s("music_lab.quotes.heading")
     = view :"music/music_lab_carousel_quotes"
-
-%section
-  .wrapper
-    .flex-container.justify-space-between.align-items-center.wrap.gap-2
-      %figure.col-45
-        %img.rounded-corners{src: "/images/music-lab/music-lab-tutorial.png", alt: "", style: "width: 100%;"}
-      .text-wrapper.col-50
-        %h2=hoc_s("music_lab.tutorial.heading")
-        %p.wrap-pretty
-          =hoc_s("music_lab.tutorial.desc")
-        %a.link-button{href: CDO.studio_url("/s/music-tutorial-2024")}
-          =hoc_s("music_lab.tutorial.button")
 
 %section.bg-neutral-light
   .wrapper

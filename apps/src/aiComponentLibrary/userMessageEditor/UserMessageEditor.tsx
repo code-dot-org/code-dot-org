@@ -1,10 +1,12 @@
+import Button from '@code-dot-org/component-library/button';
 import classnames from 'classnames';
 import React, {useState, useCallback, useMemo} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from './user-message-editor.module.scss';
+
+const MAX_MESSAGE_LENGTH = 10000;
 
 /**
  * Renders the user message editor component.
@@ -40,7 +42,7 @@ const UserMessageEditor = React.forwardRef<
     }, [userMessage]);
 
     const handleKeyPress = (e: React.KeyboardEvent, userMessage: string) => {
-      if (e.key === 'Enter' && userMessage.trim() !== '') {
+      if (e.key === 'Enter' && !e.shiftKey && userMessage.trim() !== '') {
         e.preventDefault(); // Prevent the text box from having just a blank line.
         handleSubmit(userMessage);
       }
@@ -73,10 +75,12 @@ const UserMessageEditor = React.forwardRef<
           value={userMessage}
           disabled={disabled}
           onKeyDown={e => handleKeyPress(e, userMessage)}
+          maxLength={MAX_MESSAGE_LENGTH}
         />
 
         <div className={moduleStyles.centerSingleItemContainer}>
           <Button
+            aria-label={commonI18n.submit()}
             id="uitest-chat-submit"
             isIconOnly={!showSubmitLabel}
             onClick={() => handleSubmit(userMessage)}

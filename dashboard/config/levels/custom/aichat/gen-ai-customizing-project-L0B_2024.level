@@ -1,0 +1,61 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-10-24T21:12:53.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Car Bot\r\n\r\nClick into \"User View\" to view the model card for this project and interact with the chatbot.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": 1,
+        "systemPrompt": "Your audience is intended for people who might not know much about cars. For you to begin speaking to your user, the user must say \"Lets begin!\"  When your user says \"Lets begin!\" before answering any questions, ask the user about how much they know about cars using a scale of; very much, somewhat a lot, or nothing at all. Depending on how much this person may know, it will tell you how formal or straightforward you should respond to the user. Use a nice and friendly tone when answering questions. \nTry giving short and simple answers that people new to learning about cars can understand. Explain any terms a user might not know. ",
+        "retrievalContexts": [
+          "The power of an engine measured in terms of horsepower.",
+          "A supercharger works by increasing an engine's power and torque.",
+          "Torque is a measure of the force that can cause an object to rotate about an axis.",
+          "A 2024 Hellcat SRT has a supercharged 6.2L HEMI V8 in the Challenger SRT Hellcat. This beast of an engine cranks out an incredible 717 horsepower and 656 pound-feet of torque, making it the most powerful muscle car you'll ever find stock.",
+          "Lexus, Toyota, and Mini are the three most reliable brands as of 2023's annual auto reliability brand rankings, with the two Japanese brands swapping spaces from last year (Toyota and Lexus). The automaker Honda follows, with its luxury Acura brand coming in fourth and the mainstream Honda brand rounding out the top five.",
+          "Top 10 Fastest Cars In The World (Not in Order) Hennessey Venom GT Bugatti Chiron Super Sport Rimac Nevera Bugatti Veyron 16.4 Super Sport Pagani Huayra Koenigsegg Agera McLaren Speedtail SSC Tuatara Koenigsegg Jesko",
+          "Fun Facts About Cars! - Nearly 900 Million Oil Changes Are Performed Each Year (An Oil Change is the act of removing the used oil in your engine and replacing it with new, clean oil in your car. Clean oil helps lubricate engine parts.) - The Average Car Owner Spends About $400 On Diagnostics, Scheduled Maintenance, and Tune-Ups Every Year (keeping their car up to date and not falling apart) - Cars Are Made Up Of Approximately 30,000 Parts"
+        ],
+        "modelCardInfo": {
+          "botName": "Car Bot",
+          "description": "Car bot is an AI used to learn more about cars. Ask the bot any question you want specifically about cars and it will give you a straightforward answer. \nStart the bot by saying \"Lets begin!\"",
+          "intendedUse": "Only ask about cars.",
+          "limitationsAndWarnings": "Do not add any personal information !\nThe chat bot cannot answer questions that aren't related to cars. ",
+          "testingAndEvaluation": "Ask a couple questions. Other people tested it. ",
+          "exampleTopics": [
+            "What is the fastest car in the world?",
+            "What are some reliable cars?",
+            "What kind of cars count as muscle cars?"
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "readonly",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "readonly",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    },
+    "name_suffix": "_2024",
+    "display_name": "Car Bot",
+    "bubble_choice_description": "Car bot is an AI used to learn more about cars. Ask the bot any question you want specifically about cars and it will give you a straightforward answer."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-24T21:12:53.433+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L0B_2024-TESTING\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L0B_2024-TESTING\"},{\"changed_at\":\"2024-10-24 21:12:57 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

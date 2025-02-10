@@ -1,0 +1,13 @@
+name 'self-paced-pl-ai-districts-introduction_08_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Next Steps 
+
+#### 🎉 Congratulations on completing this lesson.
+
+#### **What’s next?** Click continue to learn how to bring AI to your district.
+
+## Let's continue this exciting journey!
+MARKDOWN

@@ -50,7 +50,7 @@
       }
     },
     "instructions_important": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "validations": [
       {
         "conditions": [

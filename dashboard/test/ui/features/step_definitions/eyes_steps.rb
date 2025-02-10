@@ -50,6 +50,13 @@ end
 And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |identifier, stitch_mode|
   next if CDO.disable_all_eyes_running
 
+  # Wait until the fonts are fully loaded and rendering the page
+  # Hopefully fixes many of the issues with font wiggle due to lazily loading
+  # alternative fonts for symbols and localized glyphs.
+  wait_until do
+    fonts_loaded?
+  end
+
   if stitch_mode == "none"
     @eyes.force_full_page_screenshot = false
   else
@@ -67,6 +74,23 @@ And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |
   @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
 end
 
+And(/^I see no difference for "([^"]*)" within "([^"]*)"$/) do |identifier, selector|
+  next if CDO.disable_all_eyes_running
+
+  element = nil
+  wait_until do
+    element = @browser.find_element(:css, selector)
+    element.displayed? && fonts_loaded?
+  end
+
+  initial_force_full_page_screenshot = @eyes.force_full_page_screenshot
+  @eyes.force_full_page_screenshot = false
+
+  @eyes.check_region(element, tag: identifier, match_timeout: MATCH_TIMEOUT, stitch_content: true)
+
+  @eyes.force_full_page_screenshot = initial_force_full_page_screenshot
+end
+
 And(/^The header is finished animating$/) do
   wait_for_jquery
 
@@ -80,4 +104,8 @@ def ensure_eyes_available
   @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
   @eyes.log_handler = Logger.new('../../log/eyes.log')
+end
+
+def fonts_loaded?
+  @browser.execute_script('return document.fonts.status === "loaded"') == true
 end

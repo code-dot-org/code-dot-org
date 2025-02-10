@@ -1,44 +1,56 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
-import classNames from 'classnames';
+import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
-import {newFolderPromptType, newFilePromptType} from './types';
+import {
+  useFileUploader,
+  useFileUploadErrorCallback,
+  useHandleFileUpload,
+  usePrompts,
+} from './hooks';
 
-import moduleStyles from './styles/filebrowser.module.scss';
-import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
+export const FileBrowserHeaderPopUpButton = () => {
+  const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
+  const {
+    source,
+    config: {validMimeTypes},
+  } = useCodebridgeContext();
+  const uploadErrorCallback = useFileUploadErrorCallback();
+  const handleFileUpload = useHandleFileUpload(source.files);
 
-type FileBrowserHeaderPopUpButtonProps = {
-  newFolderPrompt: newFolderPromptType;
-  newFilePrompt: newFilePromptType;
+  const {startFileUpload, FileUploaderComponent} = useFileUploader({
+    callback: handleFileUpload,
+    errorCallback: uploadErrorCallback,
+    validMimeTypes,
+  });
+  return (
+    <>
+      <FileUploaderComponent />
+      <PopUpButton iconName="plus" alignment="left" id="uitest-files-plus">
+        <PopUpButtonOption
+          iconName="plus"
+          labelText={codebridgeI18n.newFolder()}
+          clickHandler={() =>
+            openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})
+          }
+        />
+        <PopUpButtonOption
+          iconName="plus"
+          labelText={codebridgeI18n.newFile()}
+          clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
+          id="uitest-new-file"
+        />
+
+        <PopUpButtonOption
+          iconName="upload"
+          labelText={codebridgeI18n.uploadFile()}
+          clickHandler={() => startFileUpload()}
+        />
+      </PopUpButton>
+    </>
+  );
 };
-
-export const FileBrowserHeaderPopUpButton = ({
-  newFolderPrompt,
-  newFilePrompt,
-}: FileBrowserHeaderPopUpButtonProps) => (
-  <PopUpButton iconName="plus" alignment="left">
-    <div
-      onClick={() => newFolderPrompt()}
-      className={classNames(
-        darkModeStyles.dropdownItem,
-        moduleStyles.dropdownItem
-      )}
-    >
-      <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-      <div>{codebridgeI18n.newFolder()}</div>
-    </div>
-    <div
-      onClick={() => newFilePrompt()}
-      className={classNames(
-        darkModeStyles.dropdownItem,
-        moduleStyles.dropdownItem
-      )}
-    >
-      <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
-      <div>{codebridgeI18n.newFile()}</div>
-    </div>
-  </PopUpButton>
-);

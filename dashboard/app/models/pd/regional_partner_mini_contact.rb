@@ -48,8 +48,6 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
           Pd::RegionalPartnerMiniContactMailer.matched(form, rp_pm).deliver_now
         end
       end
-    else
-      Pd::RegionalPartnerMiniContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL).deliver_now
     end
 
     Pd::RegionalPartnerMiniContactMailer.receipt(form, regional_partner).deliver_now

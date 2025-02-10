@@ -25,6 +25,11 @@ class StudentTable extends React.Component {
     isSortedByFamilyName: PropTypes.bool,
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {sortedStudents: []};
+  }
+
   getRowLink = studentId => {
     const queryStr = `?section_id=${this.props.sectionId}&user_id=${studentId}`;
 
@@ -46,26 +51,25 @@ class StudentTable extends React.Component {
   };
 
   componentDidMount() {
-    this.sortStudents();
+    this.setState({sortedStudents: this.sortStudents()});
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.isSortedByFamilyName !== this.props.isSortedByFamilyName) {
-      this.sortStudents();
+      this.setState({sortedStudents: this.sortStudents()});
     }
   }
 
   sortStudents() {
     const {students, isSortedByFamilyName} = this.props;
-    isSortedByFamilyName
-      ? students.sort(stringKeyComparator(['familyName', 'name']))
-      : students.sort(stringKeyComparator(['name', 'familyName']));
-    this.setState({students});
+    return isSortedByFamilyName
+      ? [...students].sort(stringKeyComparator(['familyName', 'name']))
+      : [...students].sort(stringKeyComparator(['name', 'familyName']));
   }
 
   render() {
-    const {students, onSelectUser, selectedUserId, levelsWithProgress} =
-      this.props;
+    const {onSelectUser, selectedUserId, levelsWithProgress} = this.props;
+    const {sortedStudents} = this.state;
 
     return (
       <table style={styles.table} className="student-table">
@@ -76,7 +80,7 @@ class StudentTable extends React.Component {
           >
             <td style={styles.meRow}>{i18n.studentTableTeacherDemo()}</td>
           </tr>
-          {students.map(student => (
+          {sortedStudents.map(student => (
             <tr
               key={`tr-${student.id}`}
               style={this.getRowStyle(selectedUserId, student.id)}

@@ -35,7 +35,10 @@ style_min: true
 = view :header
 
 #homepage.supreme-container
-  = view :homepage_hero
+  - if !!DCDO.get('exploring-gen-ai-launch', false)
+    = view :exploring_gen_ai_hero_banner
+  - else
+    = view :homepage_hero
 
   - if request.language == "en"
     = view :curriculum_banner

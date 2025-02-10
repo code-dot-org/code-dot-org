@@ -9,35 +9,26 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/hour-of-code-styles.css", rel: "stylesheet", type: "text/css"}
 
--# TODO - clean up soon-hoc logic once this is launched
--# Show 2024 HOC banner if hoc_mode is "soon-hoc", otherwise show 2023 banner
-- if hoc_mode == "soon-hoc"
-  %section.hero-banner-basic.hoc-2024
-    .wrapper.centered.flex-container.align-items-center.flex-direction-column.gap-2
-      %figure
-        %img{src: "/images/banners/banner-hoc-2024.png", alt: ""}
-      .text-wrapper
-        %h1=hoc_s("hoc_2024.header")
-        %a.link-button.black.has-external-link{href: "https://hourofcode.com/events", target: "_blank", rel: "noopener noreferrer"}
-          =hoc_s("hoc_2024.button_host_an_event")
-- else
-  %section.hero-banner-basic
-    .wrapper.centered
-      %p.hoc-label
-        =hoc_s(:hour_of_code)
-      %h1=hoc_s(:hoc2023_header)
+%section.hero-banner-basic
+  .wrapper.centered.flex-container.align-items-center.flex-direction-column.gap-2
+    %figure
+      %img{src: "/images/banners/banner-hoc-2024.png", alt: ""}
+    .text-wrapper
+      %h1=hoc_s("hoc_2024.header")
+      %a.link-button.black.has-external-link{href: CDO.hourofcode_url('events', locale: 'fa-IR'), target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s("hoc_2024.button_host_an_event")
 
 %section.bg-neutral-light
   .wrapper.flex-container.justify-space-between.wrap
     .text-wrapper.col-50
       %h2=hoc_s(:hoc_page_what_is_hoc_heading)
       %p.body-three.has-external-link
-        =hoc_s(:hoc_page_desc, markdown: :inline, locals:{hoc_url: "https://hourofcode.com"})
+        = hoc_s(:hoc_page_desc, markdown: :inline, locals: {hoc_url: CDO.hourofcode_url(locale: 'fa-IR')})
       %p.body-three
         =hoc_s(:hoc_page_desc_2023)
     %div.col-45
-      = view :display_video_thumbnail, id: "hoc_celebrities_2023", video_code: "ybBUd9-0ZJQ", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/hour_of_code_celebrities_2023.mp4"
-      %a.body-three{href: "/educate/resources/videos"}
+      = view :display_video_thumbnail, id: "hoc_celebrities_2023", video_code: "ybBUd9-0ZJQ", play_button: 'center', letterbox: 'false', download_path: CDO.video_url('hour_of_code_celebrities_2023.mp4')
+      %a.body-three{href: CDO.code_org_url('videos', ge_region: request.ge_region)}
         =hoc_s(:call_to_action_see_more_insp_videos)
   .clear
 
@@ -45,8 +36,8 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:hoc_page_lead_activity_heading)
     %p.has-external-link
-      =hoc_s(:"hoc_page.activities.desc", markdown: :inline, locals:{register_activity_url: "https://hourofcode.com/events"})
+      = hoc_s(:"hoc_page.activities.desc", markdown: :inline, locals:{register_url: CDO.hourofcode_url('events', locale: 'fa-IR')})
     = view :"global/fa/hoc_activities_featured"
     %div.centered{style: "margin-top: 2rem"}
-      %a.link-button.secondary{href: "https://studio.code.org/catalog?marketingInitiative=hoc"}
+      %a.link-button.secondary{href: CDO.studio_url('catalog?marketingInitiative=hoc', ge_region: request.ge_region)}
         =hoc_s(:call_to_action_explore_all_hoc_activities)

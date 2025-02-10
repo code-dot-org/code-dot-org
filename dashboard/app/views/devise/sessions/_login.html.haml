@@ -1,5 +1,7 @@
 - content_for :head do
-  %script{src: webpack_asset_path('js/devise/sessions/_login.js')}
+  :ruby
+    script_data = {userReturnTo: @user_return_to.presence.to_json}
+  %script{src: webpack_asset_path('js/devise/sessions/_login.js'), data: script_data}
 
 %h2= t('signin_form.title')
 
@@ -30,7 +32,7 @@
 
     / Not yet signed up? Sign up
     - if devise_mapping.registerable?
-      %a#signup-link.field-aligned{href: new_user_registration_path}
+      %a#signup-link.field-aligned{href: users_new_sign_up_account_type_path}
         %button.neutral-button{:id => 'user_signup'}= t('nav.user.signup')
 
   %div.vertical-or

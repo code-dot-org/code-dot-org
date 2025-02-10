@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2024-08-29T16:28:31.000Z",
   "level_num": "custom",
@@ -28,7 +27,7 @@
           "language": "py",
           "contents": "import matplotlib.pyplot as plt\nimport pandas as pd\n\n#Import the data\nchart_one_data = pd.read_csv('US_Gas_Prices.csv')\nchart_two_data = pd.read_csv('gas_prices_by_city.csv')\n\nplt.figure()\nplt.plot(chart_one_data['Date'], chart_one_data['US Average'], marker='*', linestyle='-', color='blue')\n\nplt.title('US Average Gas Prices')\nplt.xlabel('Date')\nplt.ylabel('Price')\n\nplt.show()\n\nplt.figure()\nplt.bar(chart_two_data['City'], chart_two_data['Price'], color='blue')\n\nplt.xlabel('Cities')\nplt.ylabel('Average Price (US$)')\n\nplt.show()\n",
           "folderId": "0",
-          "active": false,
+          "active": true,
           "open": true
         },
         "1": {
@@ -37,7 +36,7 @@
           "language": "csv",
           "contents": ",City,Price\n0,US Average,1.49\n1,Boston,1.51\n2,Chicago,1.59\n3,Cleveland,1.41\n4,Denver,1.46\n5,Houston,1.35\n6,Los Angeles,1.75\n7,Miami,1.52\n8,New York City,1.56\n9,San Francisco,1.84\n10,Seattle,1.53\n",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
         },
         "2": {
@@ -59,6 +58,7 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-29 16:28:35 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 17:47:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 17:49:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 17:53:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:15:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 23:18:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 23:20:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 23:20:35 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 23:20:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-29 16:28:35 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 17:47:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 17:49:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 17:53:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-29 18:15:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 23:18:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 23:20:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 23:20:35 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-10 23:20:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-08 16:42:12 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-10-08 16:42:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,10 +1,20 @@
-import classNames from 'classnames';
-import React, {useCallback} from 'react';
-
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  TooltipProps,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
+import classNames from 'classnames';
+import React, {
+  useCallback,
+  useState,
+  useRef,
+  useEffect,
+  MutableRefObject,
+} from 'react';
 
 import moduleStyles from './tabs.module.scss';
 
@@ -23,10 +33,16 @@ export interface TabModel {
   tooltip?: TooltipProps;
   /** Tab icon */
   icon?: FontAwesomeV6IconProps;
+  /** Tab size (e.g. Used for closableButton) */
+  size?: ComponentSizeXSToL;
   /** Tab content */
   tabContent: React.ReactNode;
   /** Is tab disabled */
   disabled?: boolean;
+  /** Is tab closable */
+  isClosable?: boolean;
+  /** Callback when tab is closed */
+  onClose?: (value: string) => void;
 }
 
 interface TabsProps extends TabModel {
@@ -59,7 +75,8 @@ const renderTabButtonContent = (
   icon?: FontAwesomeV6IconProps,
   text?: string,
   iconLeft?: FontAwesomeV6IconProps,
-  iconRight?: FontAwesomeV6IconProps
+  iconRight?: FontAwesomeV6IconProps,
+  tabTextRef?: MutableRefObject<HTMLSpanElement | null>
 ) => {
   if (isIconOnly && icon) {
     return <FontAwesomeV6Icon {...icon} />;
@@ -67,12 +84,11 @@ const renderTabButtonContent = (
   return (
     <>
       {iconLeft && <FontAwesomeV6Icon {...iconLeft} />}
-      {text && <span>{text}</span>}
+      {text && <span ref={tabTextRef}>{text}</span>}
       {iconRight && <FontAwesomeV6Icon {...iconRight} />}
     </>
   );
 };
-
 const _Tab: React.FunctionComponent<TabsProps> = ({
   isSelected,
   onClick,
@@ -82,12 +98,19 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
   iconRight,
   icon,
   tooltip,
+  size,
   tabPanelId,
   tabButtonId,
   disabled = false,
   isIconOnly = false,
+  isClosable = false,
+  onClose = () => {},
 }) => {
+  const [overflowTooltip, setOverflowTooltip] = useState<TooltipProps>();
+  const tabTextRef = useRef<HTMLSpanElement | null>(null);
   const handleClick = useCallback(() => onClick(value), [onClick, value]);
+  const handleClose = useCallback(() => onClose(value), [onClose, value]);
+
   checkTabForErrors(isIconOnly, icon, text);
 
   const buttonContent = renderTabButtonContent(
@@ -95,7 +118,8 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
     icon,
     text,
     iconLeft,
-    iconRight
+    iconRight,
+    tabTextRef
   );
 
   const buttonElement = (
@@ -113,13 +137,43 @@ const _Tab: React.FunctionComponent<TabsProps> = ({
       disabled={disabled}
     >
       {buttonContent}
+      {isClosable && (
+        <CloseButton
+          onClick={handleClose}
+          size={size}
+          aria-label={`Close ${text}`}
+        />
+      )}
     </button>
   );
 
+  const preferredTooltip = tooltip || overflowTooltip;
+
+  useEffect(() => {
+    if (tabTextRef.current) {
+      const textElement = tabTextRef.current;
+      if (
+        textElement.scrollWidth > textElement.clientWidth &&
+        !tooltip &&
+        text
+      ) {
+        setOverflowTooltip({
+          tooltipId: `${tabButtonId}-overflow-tooltip`,
+          text: text,
+          direction: 'onBottom',
+        });
+      } else {
+        setOverflowTooltip(undefined);
+      }
+    }
+  }, [text, tooltip, tabButtonId]);
+
   return (
     <li role="presentation">
-      {tooltip ? (
-        <WithTooltip tooltipProps={tooltip}>{buttonElement}</WithTooltip>
+      {preferredTooltip ? (
+        <WithTooltip tooltipProps={preferredTooltip}>
+          {buttonElement}
+        </WithTooltip>
       ) : (
         buttonElement
       )}

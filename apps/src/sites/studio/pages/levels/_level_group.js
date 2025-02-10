@@ -1,11 +1,16 @@
 import $ from 'jquery';
 import throttle from 'lodash/throttle';
 import React from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import Match from '@cdo/apps/code-studio/levels/match';
 import {LegacySingleLevelGroupDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
+import {getStore} from '@cdo/apps/redux';
+import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import i18n from '@cdo/locale';
 
@@ -26,6 +31,21 @@ $(document).ready(() => {
       initData.page,
       initData.last_attempt
     );
+    //This is the entry point for the summary page. It looks for a div with the id 'summaryEntryPoint' and renders the SummaryEntryPoint component inside it.
+    //The div is created by the _level_group.html.haml file only for levelgroups marked as activity guide levels.
+    $('#summaryEntryPoint').each(function () {
+      const container = this;
+      const store = getStore();
+
+      ReactDOM.render(
+        <Provider store={store}>
+          <InstructorsOnly>
+            <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
+          </InstructorsOnly>
+        </Provider>,
+        container
+      );
+    });
   }
 
   reportTeacherReviewingStudentNonLabLevel({page: initData?.page});

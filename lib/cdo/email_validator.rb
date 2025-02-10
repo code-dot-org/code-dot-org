@@ -5,6 +5,8 @@ require 'active_support/core_ext/object/blank'
 module Cdo
   module EmailValidator
     # Returns true if address is a valid email address.
+    # This is meant to match client side email validation in formatValidation.js.
+    # If you update this method, please also update 'isEmail' there.
     def self.email_address?(address)
       return false if address.blank?  # Must not be blank
       email = Mail::Address.new(address)

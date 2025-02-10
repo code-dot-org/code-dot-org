@@ -7,13 +7,13 @@
   align-items: flex-end;
   overflow-x: scroll;
   max-width: 100%;
-  background-color: $charcoal;
+  background-color: $light_gray_900;
   scrollbar-width: none;
   grid-area: file-tabs;
   min-height: 32px;
   font-size: 14px;
   font-weight: 600;
-  color: $neutral_dark20;
+  color: $light_gray_200;
 }
 
 .fileTab {
@@ -21,28 +21,32 @@
   cursor: pointer;
   white-space: nowrap;
   justify-content: space-between;
-  gap: 10px;
-  padding: 0 6px;
   height: 28px;
-  background-color: $dark_charcoal;
+  background-color: $light_gray_950;
   border-radius: 4px 4px 0 0;
+
+  &:hover:not(.active) {
+    background-color: $light_gray_800;
+  }
 }
 
-.fileTab > span {
+.label {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 0 10px;
 }
 
 .active {
-  background-color: #292f36;
+  background-color: $light_black;
   color: $white;
 }
 
 .inactive {
-  color: $neutral_dark20;
+  color: $light_gray_200;
 }
 
 .closeButton {
-  margin-top: 4px;
+  margin: 4px 0;
+  padding-right: 10px;
 }

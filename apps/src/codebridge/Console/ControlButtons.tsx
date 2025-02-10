@@ -1,8 +1,12 @@
+import Button from '@code-dot-org/component-library/button';
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
+import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import Button from '@cdo/apps/componentLibrary/button';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -14,15 +18,12 @@ import {
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {useCodebridgeContext} from '../codebridgeContext';
-import WithConditionalTooltip from '../components/WithConditionalTooltip';
-import {appendSystemMessage} from '../redux/consoleRedux';
-import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './console.module.scss';
-import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 // Control buttons for running and stopping code.
 // Can be extended in the future to include a test button.
@@ -30,8 +31,10 @@ const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
   const {onRun, onStop} = useCodebridgeContext();
 
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const scriptId = useAppSelector(state => state.lab.scriptId);
   const source = useAppSelector(
-    state => state.lab2Project.projectSource?.source
+    state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
   const hasPredictResponse = useAppSelector(
     state => !!state.predictLevel.response
@@ -39,8 +42,8 @@ const ControlButtons: React.FunctionComponent = () => {
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
-  const isLoadingEnvironment = useAppSelector(
-    state => state.lab2System.loadingCodeEnvironment
+  const hasLoadedEnvironment = useAppSelector(
+    state => state.lab2System.loadedCodeEnvironment
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
@@ -63,12 +66,19 @@ const ControlButtons: React.FunctionComponent = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName);
+      logUserLevelInteraction({
+        levelId: levelId,
+        scriptId: scriptId,
+        interaction: UserLevelInteractions.click_run,
+      });
       onRun(/*runTests*/ false, dispatch, source).finally(() =>
         dispatch(setIsRunning(false))
       );
       dispatch(setHasRun(true));
     } else {
-      dispatch(appendSystemMessage("We don't know how to run your code."));
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeSystemMessage("We don't know how to run your code.", appName);
     }
   };
 
@@ -77,7 +87,9 @@ const ControlButtons: React.FunctionComponent = () => {
       onStop();
       dispatch(setIsRunning(false));
     } else {
-      dispatch(appendSystemMessage("We don't know how to stop your code."));
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeSystemMessage("We don't know how to stop your code.", appName);
       dispatch(setIsRunning(false));
     }
   };
@@ -91,7 +103,7 @@ const ControlButtons: React.FunctionComponent = () => {
     let tooltip = null;
     if (awaitingPredictSubmit) {
       tooltip = codebridgeI18n.predictRunDisabledTooltip();
-    } else if (isLoadingEnvironment) {
+    } else if (!hasLoadedEnvironment) {
       tooltip = codebridgeI18n.loadingEnvironmentTooltip();
     } else if (isValidating) {
       tooltip = codebridgeI18n.validatingRunDisabledTooltip();
@@ -100,7 +112,7 @@ const ControlButtons: React.FunctionComponent = () => {
   };
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
-  const disabledCodeActionsIcon = isLoadingEnvironment
+  const disabledCodeActionsIcon = !hasLoadedEnvironment
     ? 'fa-spinner fa-spin'
     : 'fa-question-circle-o';
 
@@ -108,7 +120,7 @@ const ControlButtons: React.FunctionComponent = () => {
     <div className={moduleStyles.controlButtons}>
       {isRunning ? (
         <Button
-          text={'Stop'}
+          text={codebridgeI18n.stop()}
           onClick={handleStop}
           color={'destructive'}
           iconLeft={{iconStyle: 'solid', iconName: 'square'}}
@@ -125,10 +137,12 @@ const ControlButtons: React.FunctionComponent = () => {
             text: disabledCodeActionsTooltip || '',
             size: 's',
             tooltipId: 'code-actions-tooltip',
+            className: darkModeStyles.tooltipRight,
           }}
         >
           <Button
-            text={'Run'}
+            id="uitest-codebridge-run"
+            text={codebridgeI18n.run()}
             onClick={handleRun}
             disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}

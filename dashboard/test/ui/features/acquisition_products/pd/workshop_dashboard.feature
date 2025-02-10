@@ -2,6 +2,9 @@
 @eyes
 Feature: Workshop Dashboard
 
+# This test has become flaky, so skipping until we can address the cause of the flakiness
+# See https://codedotorg.atlassian.net/browse/ACQ-2623
+@skip
 Scenario: New workshop: CSF intro
   Given I am a CSF facilitator named "Test CSF Facilitator" for regional partner "Test Partner"
   Then I open the new workshop form

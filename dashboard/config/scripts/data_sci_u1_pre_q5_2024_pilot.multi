@@ -1,0 +1,15 @@
+name 'Data Sci U1 Pre Q5_2024-pilot'
+
+question 'For a study aiming to understand user behavior on a website, which data collection method would provide the most accurate and detailed insights?'
+
+wrong 'Surveys, to collect users\' subjective opinions.'
+right 'Observations, to watch users navigate the site in real-time.'
+wrong 'Web scraping, to gather quantitative data on user interactions and patterns.'
+wrong 'Experiments, to test different versions of the website.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

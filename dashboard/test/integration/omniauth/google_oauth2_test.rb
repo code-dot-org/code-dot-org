@@ -15,19 +15,15 @@ module OmniauthCallbacksControllerTests
       SignUpTracking.stubs(:split_test_percentage).returns(0)
     end
 
-    test "student sign-up" do
+    test "student sign up for newest sign up flow" do
       auth_hash = mock_oauth
 
-      get '/users/sign_up'
-      sign_in_through_google
-      omniauth_redirect
+      post "/users/auth/google_oauth2"
+      get '/users/auth/google_oauth2/callback', params: {finish_url: '/users/new_sign_up/finish_student_account'}
+      assert_template 'omniauth/redirect'
       assert PartialRegistration.in_progress? session
 
-      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
-      assert_redirected_to '/'
-      follow_redirect!
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
+      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT, true}
       refute PartialRegistration.in_progress? session
 
       created_user = User.find signed_in_user_id
@@ -37,7 +33,6 @@ module OmniauthCallbacksControllerTests
       assert_sign_up_tracking(
         SignUpTracking::CONTROL_GROUP,
         %w(
-          load-sign-up-page
           google_oauth2-callback
           google_oauth2-load-finish-sign-up-page
           google_oauth2-sign-up-success
@@ -47,17 +42,15 @@ module OmniauthCallbacksControllerTests
       created_user&.destroy!
     end
 
-    test "teacher sign-up" do
+    test "teacher sign up for newest sign up flow" do
       auth_hash = mock_oauth
 
-      get '/users/sign_up'
-      sign_in_through_google
-      omniauth_redirect
+      post "/users/auth/google_oauth2"
+      get '/users/auth/google_oauth2/callback', params: {finish_url: '/users/new_sign_up/finish_teacher_account'}
+      assert_template 'omniauth/redirect'
       assert PartialRegistration.in_progress? session
 
-      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
+      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER, true}
       refute PartialRegistration.in_progress? session
 
       created_user = User.find signed_in_user_id
@@ -67,7 +60,6 @@ module OmniauthCallbacksControllerTests
       assert_sign_up_tracking(
         SignUpTracking::CONTROL_GROUP,
         %w(
-          load-sign-up-page
           google_oauth2-callback
           google_oauth2-load-finish-sign-up-page
           google_oauth2-sign-up-success
@@ -77,162 +69,7 @@ module OmniauthCallbacksControllerTests
       created_user&.destroy!
     end
 
-    test "fail to finish sign-up" do
-      auth_hash = mock_oauth
-
-      get '/users/sign_up'
-      sign_in_through_google
-      omniauth_redirect
-      assert PartialRegistration.in_progress? session
-
-      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
-      assert_response :success
-      assert_template partial: '_finish_sign_up'
-      assert PartialRegistration.in_progress? session
-
-      # Let's try that one more time...
-      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
-      assert_response :success
-      assert_template partial: '_finish_sign_up'
-      assert PartialRegistration.in_progress? session
-
-      assert_sign_up_tracking(
-        SignUpTracking::CONTROL_GROUP,
-        %w(
-          load-sign-up-page
-          google_oauth2-callback
-          google_oauth2-load-finish-sign-up-page
-          google_oauth2-load-finish-sign-up-page
-          google_oauth2-sign-up-error
-          google_oauth2-load-finish-sign-up-page
-          google_oauth2-sign-up-error
-        )
-      )
-    end
-
-    test "student sign-up (new sign-up flow)" do
-      auth_hash = mock_oauth
-      SignUpTracking.stubs(:split_test_percentage).returns(100)
-
-      get '/users/sign_up'
-      sign_in_through_google
-      omniauth_redirect
-      assert PartialRegistration.in_progress? session
-
-      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
-      assert_redirected_to '/'
-      follow_redirect!
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
-      refute PartialRegistration.in_progress? session
-
-      created_user = User.find signed_in_user_id
-      assert_valid_student created_user, expected_email: auth_hash.info.email
-      assert_credentials auth_hash, created_user
-
-      assert_sign_up_tracking(
-        SignUpTracking::NEW_SIGN_UP_GROUP,
-        %w(
-          load-new-sign-up-page
-          google_oauth2-callback
-          google_oauth2-load-finish-sign-up-page
-          google_oauth2-sign-up-success
-        )
-      )
-    ensure
-      created_user&.destroy!
-    end
-
-    test "teacher sign-up (new sign-up flow)" do
-      auth_hash = mock_oauth
-      SignUpTracking.stubs(:split_test_percentage).returns(100)
-
-      get '/users/sign_up'
-      sign_in_through_google
-      omniauth_redirect
-      assert PartialRegistration.in_progress? session
-
-      assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
-      assert_redirected_to '/home'
-      assert_equal I18n.t('devise.registrations.signed_up'), flash[:notice]
-      refute PartialRegistration.in_progress? session
-
-      created_user = User.find signed_in_user_id
-      assert_valid_teacher created_user, expected_email: auth_hash.info.email
-      assert_credentials auth_hash, created_user
-
-      assert_sign_up_tracking(
-        SignUpTracking::NEW_SIGN_UP_GROUP,
-        %w(
-          load-new-sign-up-page
-          google_oauth2-callback
-          google_oauth2-load-finish-sign-up-page
-          google_oauth2-sign-up-success
-        )
-      )
-    ensure
-      created_user&.destroy!
-    end
-
-    test "cancel sign-up (new sign-up flow)" do
-      mock_oauth
-      SignUpTracking.stubs(:split_test_percentage).returns(100)
-
-      get '/users/sign_up'
-      sign_in_through_google
-
-      omniauth_redirect
-
-      assert PartialRegistration.in_progress? session
-
-      get '/users/cancel'
-
-      assert_redirected_to '/users/sign_up'
-      assert_sign_up_tracking(
-        SignUpTracking::NEW_SIGN_UP_GROUP,
-        %w(
-          load-new-sign-up-page
-          google_oauth2-callback
-          google_oauth2-load-finish-sign-up-page
-          google_oauth2-cancel-finish-sign-up
-        )
-      )
-      refute PartialRegistration.in_progress? session
-    end
-
-    test "fail to finish sign-up (new sign-up flow)" do
-      auth_hash = mock_oauth
-      SignUpTracking.stubs(:split_test_percentage).returns(100)
-
-      get '/users/sign_up'
-      sign_in_through_google
-      omniauth_redirect
-      assert PartialRegistration.in_progress? session
-
-      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
-      assert_response :success
-      assert_template partial: '_finish_sign_up'
-      assert PartialRegistration.in_progress? session
-
-      # Let's try that one more time...
-      refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
-      assert_response :success
-      assert_template partial: '_finish_sign_up'
-      assert PartialRegistration.in_progress? session
-
-      assert_sign_up_tracking(
-        SignUpTracking::NEW_SIGN_UP_GROUP,
-        %w(
-          load-new-sign-up-page
-          google_oauth2-callback
-          google_oauth2-load-finish-sign-up-page
-          google_oauth2-load-finish-sign-up-page
-          google_oauth2-sign-up-error
-          google_oauth2-load-finish-sign-up-page
-          google_oauth2-sign-up-error
-        )
-      )
-    end
+    ### TODO: Write sign up failure and cancel scenario tests for new sign up flow if applicable ACQ-2871
 
     test "student sign-in" do
       auth_hash = mock_oauth
@@ -270,27 +107,28 @@ module OmniauthCallbacksControllerTests
       refute_sign_up_tracking
     end
 
-    test "sign-in from sign-up page" do
-      auth_hash = mock_oauth
+    ### TODO: Create an equivalent test for this in new sign up flow ACQ-2871
+    # test "sign-in from sign-up page" do
+    #   auth_hash = mock_oauth
 
-      teacher = create(:teacher, :google_sso_provider, uid: auth_hash.uid)
+    #   teacher = create(:teacher, :google_sso_provider, uid: auth_hash.uid)
 
-      get '/users/sign_up'
-      refute_creates(User) {sign_in_through_google}
-      assert_redirected_to '/home'
-      assert_equal I18n.t('auth.signed_in'), flash[:notice]
+    #   get '/users/sign_up'
+    #   refute_creates(User) {sign_in_through_google}
+    #   assert_redirected_to '/home'
+    #   assert_equal I18n.t('auth.signed_in'), flash[:notice]
 
-      assert_equal teacher.id, signed_in_user_id
+    #   assert_equal teacher.id, signed_in_user_id
 
-      assert_sign_up_tracking(
-        SignUpTracking::CONTROL_GROUP,
-        %w(
-          load-sign-up-page
-          google_oauth2-callback
-          google_oauth2-sign-in
-        )
-      )
-    end
+    #   assert_sign_up_tracking(
+    #     SignUpTracking::CONTROL_GROUP,
+    #     %w(
+    #       load-sign-up-page
+    #       google_oauth2-callback
+    #       google_oauth2-sign-in
+    #     )
+    #   )
+    # end
 
     test 'user_type is usually unset on finish_sign_up' do
       mock_oauth

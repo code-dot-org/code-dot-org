@@ -1,0 +1,15 @@
+name 'Data Sci U1 Pre Q19_2024-pilot'
+
+question 'A technology company is implementing a new feature that tracks user location data to provide personalized services. What steps should the company take to address user privacy concerns effectively?'
+
+wrong 'Implement the feature without informing users to avoid unnecessary panic and ensure full data collection.'
+wrong 'Collect location data anonymously but do not disclose the data collection practices to users.'
+wrong 'Only inform users if there is a security breach involving their data.'
+right 'Clearly inform users about the data being collected and obtain explicit consent, while offering an opt-out option.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

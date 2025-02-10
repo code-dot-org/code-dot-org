@@ -59,11 +59,15 @@ export function onSubmitComplete(response) {
  * When submit button is pressed, confirm, and then do it.
  */
 function onPuzzleSubmit() {
-  showConfirmationDialog({
-    title: commonMsg.submitYourProject(),
-    text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: () => onPuzzleComplete(true),
-  });
+  if (studioApp.skin.id === 'gamelab') {
+    onPuzzleComplete(true);
+  } else {
+    showConfirmationDialog({
+      title: commonMsg.submitYourProject(),
+      text: commonMsg.submitYourProjectConfirm(),
+      onConfirm: () => onPuzzleComplete(true),
+    });
+  }
 }
 
 /**

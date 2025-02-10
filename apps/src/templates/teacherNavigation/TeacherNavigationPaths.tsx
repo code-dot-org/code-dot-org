@@ -11,21 +11,28 @@ export const TEACHER_NAVIGATION_PATHS = {
   assessments: 'assessments',
   projects: 'projects',
   stats: 'stats',
-  manageStudents: 'manage_students',
+  roster: 'roster',
   loginInfo: 'login_info',
   standardsReport: 'standards_report',
   aiTutorChatMessages: 'ai_tutor',
   lessonMaterials: 'materials',
   calendar: 'calendar',
-  courseOverview: 'course',
-  unitOverview: 'unit',
+  courseOverview: 'courses/:courseVersionName?',
+  unitOverview: 'unit/:unitName?',
   settings: 'settings',
+  home: 'home',
 };
 
 const getAbsolutePath = (name: string) =>
   `${TEACHER_NAVIGATION_SECTIONS_URL}/${SPECIFIC_SECTION_BASE_URL}/${name}`;
 
 export const LABELED_TEACHER_NAVIGATION_PATHS = {
+  home: {
+    url: TEACHER_NAVIGATION_PATHS.home,
+    absoluteUrl: TEACHER_NAVIGATION_PATHS.home,
+    label: i18n.teacherHomePage(),
+    icon: null,
+  },
   progress: {
     url: TEACHER_NAVIGATION_PATHS.progress,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.progress),
@@ -56,9 +63,9 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     label: i18n.teacherTabStats(),
     icon: 'chart-simple',
   },
-  manageStudents: {
-    url: TEACHER_NAVIGATION_PATHS.manageStudents,
-    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.manageStudents),
+  roster: {
+    url: TEACHER_NAVIGATION_PATHS.roster,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.roster),
     label: i18n.roster(),
     icon: 'users',
   },
@@ -66,14 +73,14 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.loginInfo,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.loginInfo),
     // this is not part of the navigation sidebar so it doesn't need a label or icon
-    label: null,
+    label: i18n.loginInfo(),
     icon: null,
   },
   standardsReport: {
     url: TEACHER_NAVIGATION_PATHS.standardsReport,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.standardsReport),
     // this is not part of the navigation sidebar so it doesn't need a label or icon
-    label: null,
+    label: i18n.standardsReportHeader(),
     icon: null,
   },
   aiTutorChatMessages: {
@@ -104,7 +111,7 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
   unitOverview: {
     url: TEACHER_NAVIGATION_PATHS.unitOverview,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.unitOverview),
-    label: i18n.unit(),
+    label: i18n.course(),
     icon: 'desktop',
   },
   settings: {

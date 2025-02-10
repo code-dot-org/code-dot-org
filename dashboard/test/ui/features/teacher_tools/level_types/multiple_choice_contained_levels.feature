@@ -14,8 +14,7 @@ Scenario: GameLab with a submittable contained level
   And I see no difference for "answer entered" using stitch mode "none"
   Then I press "runButton"
   And I see no difference for "level run" using stitch mode "none"
-  And I press "submitButton"
-  And I press "confirm-button"
+  And I press "submitButton" to load a new page
   And I wait until current URL contains "/lessons/41/levels/8"
   Then I close my eyes
 
@@ -71,7 +70,7 @@ Scenario: Teacher can reset progress on multiple choice contained level
   And I verify progress in the header of the current page is "perfect" for level 2
   Then I press "resetButton"
   Then I click selector "button:contains('Delete Answer')"
-  And I wait up to 5 seconds for element "#unchecked_0" to be visible
+  And I wait until element "#unchecked_0" is visible
   And I wait for 5 seconds
   And I verify progress in the header of the current page is "not_tried" for level 2
   Then I press "unchecked_1"

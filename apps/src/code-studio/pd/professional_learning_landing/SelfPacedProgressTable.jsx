@@ -1,8 +1,8 @@
+import {LinkButton} from '@code-dot-org/component-library/button';
+import Link from '@code-dot-org/component-library/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import Link from '@cdo/apps/componentLibrary/link';
 import {
   BodyThreeText,
   BodyFourText,
@@ -41,6 +41,7 @@ const CourseRow = ({
             {percent_completed}% {i18n.selfPacedPlCompleted()}
           </BodyThreeText>
           {/* Progress bar */}
+          {/* eslint-disable-next-line react/forbid-dom-props */}
           <div className={styles.progressBar} data-testid="progress-bar">
             <span
               className={styles.progressBarFill}

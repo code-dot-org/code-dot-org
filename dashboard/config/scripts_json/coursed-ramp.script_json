@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -11,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "coursed-ramp",
-    "serialized_at": "2022-04-08 15:40:41 UTC",
+    "serialized_at": "2024-11-19 01:14:26 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -685,6 +687,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -16,9 +16,11 @@
           "buttonText": "Computer Science Basics for K-5 Teachers "
         }
       ],
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "az-AZ",
@@ -69,11 +71,12 @@
         "zh-TW"
       ],
       "tts": true,
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "sports",
-    "serialized_at": "2024-02-05 21:49:22 UTC",
+    "serialized_at": "2025-01-09 16:46:22 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

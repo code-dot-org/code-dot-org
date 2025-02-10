@@ -26,8 +26,7 @@ class Projects
   #### rather than this middleware class (Projects, plural)
   #### such that we can make use of model associations managed by Rails.
   def get_rails_project(project_id)
-    return @rails_project if @rails_project
-    @rails_project = Project.find(project_id)
+    Project.find(project_id)
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
@@ -137,10 +136,8 @@ class Projects
     raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
 
     rails_project = get_rails_project(project_id)
-    if rails_project.apply_project_age_publish_limits?
-      raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
-      raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
-    end
+    raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
+    raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
 
     project_query_result.update(row)
 
@@ -257,13 +254,23 @@ class Projects
     return true
   end
 
-  def increment_abuse(channel_id, amount = 10)
+  def increment_abuse(channel_id, amount, override_frozen = false)
     _owner, project_id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
+    # If the project is frozen then it is an active featured project or a curriculum exemplar.
+    # Do not update the abuse score of a frozen project unless override_frozen is true.
+    # This flag is set to true if the current_user is a project validator or if the project's
+    # thumbnail image was flagged by image moderation.
+    increment_amount =
+      if JSON.parse(row[:value])['frozen'] && !override_frozen
+        0
+      else
+        amount
+      end
 
-    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
+    new_score = row[:abuse_score] + increment_amount
 
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
@@ -281,15 +288,6 @@ class Projects
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     0
-  end
-
-  def buffer_abuse_score(channel_id)
-    buffered_abuse_score = -50
-    # Reset to 0 first so projects that are featured,
-    # unfeatured, then re-featured don't have super low
-    # abuse scores.
-    reset_abuse(channel_id)
-    increment_abuse(channel_id, buffered_abuse_score)
   end
 
   def content_moderation_disabled?(channel_id)

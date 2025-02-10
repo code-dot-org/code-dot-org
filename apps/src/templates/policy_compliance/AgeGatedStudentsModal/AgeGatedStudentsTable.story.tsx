@@ -3,7 +3,6 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-// @ts-expect-error Typescript type declaration error
 import {reduxStore} from '@cdo/storybook/decorators';
 
 import AgeGatedStudentsTable from './AgeGatedStudentsTable';

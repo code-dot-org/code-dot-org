@@ -1,0 +1,40 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-24T17:05:23.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/2ee8994619ea5c609ea825ae7d5cd347-IPP_SampleProgression_UMC_Panel_1.png",
+        "key": "undefined-bf54bb91-2edf-449e-90ca-d03b523cae9a",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/16a25defb797ebcbe8d8a545aea07ca3-IPP_SampleProgression_UMC_Panel_2.png",
+        "key": "IPP_SampleProgression_UMC_3-f778cb47-29ca-4ab7-ae6b-d59d8e96c27b",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/1fdacfcc13c5245712b444e4ffdf919f-IPP_SampleProgression_UMC_Panel_3.png",
+        "key": "IPP_SampleProgression_UMC_3-09cf19d4-9888-4a76-bd04-ee933efad4f9",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/896c284a53964f8aad0de2fb2253a33a-IPP_SampleProgression_UMC_Panel_4.png",
+        "key": "IPP_SampleProgression_UMC_3-e08a773f-2207-4d77-a98c-92fa7147bf9f",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-24 17:06:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-24 17:09:09 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-24 19:53:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-27 20:03:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-27 20:04:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

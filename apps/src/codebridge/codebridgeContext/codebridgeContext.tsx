@@ -1,14 +1,15 @@
 import React, {createContext, useContext} from 'react';
 
+import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+
 import {setFileType} from '../FileBrowser/types';
 import {
-  ProjectType,
   ConfigType,
   SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
-  SourceType,
   OnStopFunction,
+  SendConsoleInputFunction,
 } from '../types';
 
 import {
@@ -28,8 +29,8 @@ import {
   RearrangeFilesFunction,
 } from './types';
 
-type CodebridgeContextType = {
-  project: ProjectType;
+export type CodebridgeContextType = {
+  source: MultiFileSource;
   config: ConfigType;
   setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
@@ -50,7 +51,9 @@ type CodebridgeContextType = {
   renameFolder: RenameFolderFunction;
   setFileType: setFileType;
   rearrangeFiles: RearrangeFilesFunction;
-  startSource: SourceType;
+  startSources: ProjectSources;
+  labConfig?: LabConfig;
+  sendConsoleInput?: SendConsoleInputFunction;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

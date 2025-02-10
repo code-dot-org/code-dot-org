@@ -132,7 +132,7 @@ function updateSectionCourse(updateCourse, course) {
     courseOfferingId: course.id,
     versionId: courseVersionId,
     unitId: null,
-    hasLessonExtras: hasLessonExtras,
-    hasTextToSpeech: hasTextToSpeech,
+    lessonExtrasAvailable: hasLessonExtras,
+    textToSpeechEnabled: hasTextToSpeech,
   });
 }

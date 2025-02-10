@@ -2,7 +2,6 @@
 title: Teach Computer Science
 theme: responsive_full_width
 ---
-%script{src: webpack_asset_path('js/code.org/public/teach.js')}
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/teach-styles.css", rel: "stylesheet"}
@@ -14,7 +13,7 @@ theme: responsive_full_width
       %p=hoc_s(:teach_page_top_desc_01)
       %p.body-three
         =hoc_s(:teach_page_top_desc_02)
-      %a#signup-link{href: CDO.studio_url("/users/sign_up"), class: "link-button"}
+      %a#signup-link{href: CDO.studio_url("/users/new_sign_up/account_type"), class: "link-button"}
         =hoc_s(:call_to_action_sign_up_free)
     %figure.col-45{style: "float: right; margin-top: 1.25rem;"}
       %img.rounded-corners.box-shadow-primary{src: "/images/teach-page-top.png", alt: "", style: "position: relative; width: 100%;"}
@@ -23,8 +22,8 @@ theme: responsive_full_width
 -# Show Curriculum Launch banner if dcdo is true
 = view :curriculum_launch_skinny_banner
 
--# Show Hour of Code 2024 banner if hoc_mode is set to "soon-hoc"
-= view :hoc_skinny_banner
+-# Show Generative AI Launch banner if 'gen-ai-launch' dcdo is true
+= view :gen_ai_launch_skinny_banner
 
 %section.why-teach-cs.bg-neutral-light
   .wrapper
@@ -97,6 +96,9 @@ theme: responsive_full_width
           =hoc_s(:grade_level_label_middle)
         %a.link-button{href: "/educate/curriculum/high-school"}
           =hoc_s(:grade_level_label_high)
+
+-# Show Hour of Code 2024 banner if hoc_mode is set to "soon-hoc"
+= view :hoc_skinny_banner
 
 %section.curriculum-offerings
   .wrapper

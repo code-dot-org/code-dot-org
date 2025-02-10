@@ -1,8 +1,8 @@
-import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {TuneEventValue} from '../player/interfaces/TuneEvent';
+import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 import {getNoteName} from '../utils/Notes';
 import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
 import TunePanel, {TunePanelProps} from '../views/TunePanel';
@@ -18,15 +18,16 @@ const FIELD_HEIGHT = 18;
 const FIELD_PADDING = 2;
 
 interface FieldTuneOptions {
-  currentValue: TuneEventValue;
+  currentValue: InstrumentEventValue;
 }
 
 /**
  * A custom field that renders the tune selection UI, used in the
  * "play_tune" block. The UI is rendered by {@link TunePanel}.
  */
-export default class FieldTune extends Field {
-  static fromJson(options: FieldTuneOptions) {
+export default class FieldTune extends GoogleBlockly.Field {
+  static fromJson(_options: GoogleBlockly.FieldConfig) {
+    const options = _options as FieldTuneOptions;
     return new FieldTune(options);
   }
 
@@ -48,7 +49,7 @@ export default class FieldTune extends Field {
     return this.getValue();
   }
 
-  loadState(state: TuneEventValue) {
+  loadState(state: InstrumentEventValue) {
     this.setValue(state);
   }
 
@@ -72,7 +73,7 @@ export default class FieldTune extends Field {
   }
 
   applyColour() {
-    const style = (this.sourceBlock_ as BlockSvg).style;
+    const style = (this.sourceBlock_ as GoogleBlockly.BlockSvg).style;
     if (this.borderRect_) {
       this.borderRect_.setAttribute('stroke', style.colourTertiary);
       this.borderRect_.setAttribute('fill', 'transparent');
@@ -112,7 +113,7 @@ export default class FieldTune extends Field {
     );
 
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
-      tuneEventValue: this.getValue(),
+      value: this.getValue(),
       width: FIELD_WIDTH,
       height: FIELD_HEIGHT,
       numOctaves: 3,
@@ -154,12 +155,18 @@ export default class FieldTune extends Field {
     super.showEditor_();
 
     const editor = this.createDropdown();
-    DropDownDiv.getContentDiv().appendChild(editor);
+    GoogleBlockly.DropDownDiv.getContentDiv().appendChild(editor);
 
-    const style = (this.sourceBlock_ as BlockSvg).style;
-    DropDownDiv.setColour(style.colourPrimary, style.colourTertiary);
+    const style = (this.sourceBlock_ as GoogleBlockly.BlockSvg).style;
+    GoogleBlockly.DropDownDiv.setColour(
+      style.colourPrimary,
+      style.colourTertiary
+    );
 
-    DropDownDiv.showPositionedByField(this, this.disposeDropdown.bind(this));
+    GoogleBlockly.DropDownDiv.showPositionedByField(
+      this,
+      this.disposeDropdown.bind(this)
+    );
   }
 
   private createDropdown(): HTMLDivElement {
@@ -191,6 +198,11 @@ export default class FieldTune extends Field {
   }
 
   private disposeDropdown() {
+    if (!this.newDiv) {
+      return;
+    }
+
+    ReactDOM.unmountComponentAtNode(this.newDiv);
     this.newDiv = null;
   }
 
@@ -202,5 +214,5 @@ export default class FieldTune extends Field {
     return notes.length > MAX_DISPLAY_NOTES ? allNotes + '...' : allNotes;
   }
 
-  private onValueChange = (value: TuneEventValue) => this.setValue(value);
+  private onValueChange = (value: InstrumentEventValue) => this.setValue(value);
 }

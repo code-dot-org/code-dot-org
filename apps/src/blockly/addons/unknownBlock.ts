@@ -1,10 +1,10 @@
-import {Block} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
 import {BlockColors} from '../constants';
 
 export const UNKNOWN_BLOCK = {
   unknownBlock: true,
-  init: function (this: Block) {
+  init: function (this: GoogleBlockly.Block) {
     // Unknown blocks use a hard-coded HSV color and are not compatible with themes.
     Blockly.cdoUtils.handleColorAndStyle(this, BlockColors.UNKNOWN);
     this.appendDummyInput().appendField('unknown block', 'NAME');

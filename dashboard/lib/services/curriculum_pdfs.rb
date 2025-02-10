@@ -80,6 +80,7 @@ module Services
 
     DEBUG = false
     S3_BUCKET = "cdo-lesson-plans#{'-dev' if DEBUG}".freeze
+    S3_BUCKET_AI = "cdo-ai-diff-production#{'-dev' if DEBUG}".freeze
 
     # Do no generate the overview pdf is there are no lesson plans
     def self.should_generate_overview_pdf?(unit)
@@ -121,6 +122,30 @@ module Services
       end
     end
 
+    # Intended to be run to get all lesson plans from all stable units to the AI S3 bucket
+    def self.generate_lesson_plan_pdfs_for_all_stable_units
+      Unit.all.select(&:stable?).each do |unit|
+        generate_lesson_plan_pdfs_for_ai(unit)
+      end
+    end
+
+    def self.generate_lesson_plan_pdfs_for_ai(script)
+      Dir.mktmpdir("pdf_generation") do |dir|
+        script.lessons.select(&:has_lesson_plan).each do |lesson|
+          puts "Generating Lesson PDFs for #{lesson.key} (from #{script.name})"
+          # generate PDF and get the pathname to the generated PDF
+          pdf_pathname = generate_lesson_pdf(lesson, dir)
+
+          # Generate metadata
+          course_name = script.unit_group ? script.unit_group.name : script.name
+          metadata = generate_metadata_for_ai(script, lesson)
+          file_path = "/tmp/#{course_name}-#{script.name}-#{format("L%02d", lesson.absolute_position)}.metadata.json"
+          add_metadata_to_ai_s3(file_path, metadata)
+          add_pdf_to_ai_s3(pdf_pathname, metadata)
+        end
+      end
+    end
+
     def self.regenerate_pdfs(scripts)
       scripts.each do |script|
         Dir.mktmpdir("pdf_generation") do |dir|
@@ -128,8 +153,16 @@ module Services
 
           script.lessons.select(&:has_lesson_plan).each do |lesson|
             puts "Regenerating Lesson PDFs for #{lesson.key} (from #{script.name})"
-            generate_lesson_pdf(lesson, dir)
+            # generate PDF and get the pathname to the generated PDF
+            pdf_pathname = generate_lesson_pdf(lesson, dir)
             any_pdf_generated = true
+
+            # Generate metadata
+            course_name = script.unit_group ? script.unit_group.name : script.name
+            metadata = generate_metadata_for_ai(script, lesson)
+            file_path = "/tmp/#{course_name}-#{script.name}-#{format("L%02d", lesson.absolute_position)}.metadata.json"
+            add_metadata_to_ai_s3(file_path, metadata)
+            add_pdf_to_ai_s3(pdf_pathname, metadata)
           end
 
           if should_generate_overview_pdf?(script)
@@ -150,6 +183,35 @@ module Services
           end
         end
       end
+    end
+
+    def self.generate_metadata_for_ai(script, lesson)
+      course_name = script.unit_group ? script.unit_group.name : script.name
+      metadata ={
+        course: course_name,
+        unit_fullname: script.name,
+        unit: script.unit_number ? format("U%02d", script.unit_number) : "U01",
+        lesson: format("L%02d", lesson.absolute_position),
+        url: "https://studio.code.org" + lesson.lesson_plan_html_url,
+        verified_teacher: false,
+      }
+      return metadata
+    end
+
+    def self.add_metadata_to_ai_s3(file_path, metadata)
+      full_metadata_json = {
+        metadataAttributes: metadata
+      }.to_json
+      flat_filename = "live/pdfgen_#{File.basename(file_path)}"
+      AWS::S3.upload_to_bucket(S3_BUCKET_AI, flat_filename, full_metadata_json, no_random: true)
+    end
+
+    def self.add_pdf_to_ai_s3(filepath, metadata)
+      data = File.read(filepath)
+
+      flat_filename = "live/pdfgen_#{metadata[:course]}-#{metadata[:unit_fullname]}-#{metadata[:lesson]}.pdf"
+
+      AWS::S3.upload_to_bucket(S3_BUCKET_AI, flat_filename, data, no_random: true)
     end
 
     def self.generate_missing_pdfs

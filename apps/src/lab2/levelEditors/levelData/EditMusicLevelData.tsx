@@ -1,14 +1,20 @@
+import Alert from '@code-dot-org/component-library/alert';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import {installFunctionBlocks} from '@cdo/apps/music/blockly/blockUtils';
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
-import {BlockMode, DEFAULT_LIBRARY} from '@cdo/apps/music/constants';
+import {
+  BlockMode,
+  DEFAULT_BPM,
+  DEFAULT_LIBRARY,
+  DEFAULT_PACK,
+} from '@cdo/apps/music/constants';
 import MusicRegistry from '@cdo/apps/music/MusicRegistry';
-import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
+import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
 import MusicPlayer from '@cdo/apps/music/player/MusicPlayer';
 import {MusicLevelData} from '@cdo/apps/music/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
@@ -19,7 +25,7 @@ import RawJsonEditor from './RawJsonEditor';
 
 import moduleStyles from './edit-music-level-data.module.scss';
 
-const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024'];
+const VALID_LIBRARIES = [DEFAULT_LIBRARY, 'launch2024', 'curriculum2024'];
 const RECOMMENDED_LIBRARY = 'launch2024';
 
 const JSON_FIELDS = [['startSources', 'Start Sources']] as const;
@@ -71,15 +77,31 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
     [levelData.library, loadedLibraries]
   );
 
-  const restrictedPacks = useMemo(
+  const restrictedPackOptions = useMemo(
     () =>
       levelData.library &&
       loadedLibraries[levelData.library]
         ?.getRestrictedPacks()
-        ?.map(({name, id}) => ({value: id, text: name})),
+        // Sort by artist name, then by pack name if artists are the same
+        ?.sort((a, b) =>
+          a.artist && b.artist
+            ? a.artist.localeCompare(b.artist) || a.name.localeCompare(b.name)
+            : 0
+        )
+        ?.map(({name, id, artist, bpm, sounds}) => {
+          // Use the pack bpm if present, or the bpm of the first sound that has one.
+          const packTempo =
+            bpm || sounds?.find(sound => sound.bpm)?.bpm || DEFAULT_BPM;
+          return {
+            value: id,
+            text: `[${packTempo}] ${artist} - ${name}`,
+          };
+        }),
     [levelData.library, loadedLibraries]
   );
 
+  const restrictedPackKeys =
+    (restrictedPackOptions || []).map(pack => pack.value) || [];
   return (
     <div>
       <input
@@ -90,10 +112,21 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
       />
       <CollapsibleSection headerContent="Library & Sounds">
         <div className={moduleStyles.section}>
-          <i>
-            Note that currently, all levels within a lesson must use the same
-            library.
-          </i>
+          <i>Tips for levelbuilders:</i>
+          <ul>
+            <li>Currently, only the launch2024 library supports Share/Remix</li>
+            <li>
+              The intro2024 library is no longer maintained but is still used in
+              early music lab progressions - consider picking a newer library
+              instead!
+            </li>
+            <li>
+              The curriculum2024 library is currently just a staging ground for
+              sounds that we want to test out in scripts not intended for full
+              launch. Once those sounds are finalized, they will be put into the
+              launch2024 library in the appropriate form.
+            </li>
+          </ul>
           <div>
             <SimpleDropdown
               labelText="Selected Library"
@@ -115,22 +148,44 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               }}
             />
           </div>
-          {hasRestrictedSounds && restrictedPacks && (
+          {hasRestrictedSounds && restrictedPackOptions && (
             <div>
               <SimpleDropdown
                 labelText="Selected Artist Pack"
                 name="packId"
                 size="s"
-                items={[{value: 'none', text: '(none)'}, ...restrictedPacks]}
+                items={[
+                  {value: 'none', text: '(none)'},
+                  {
+                    value: DEFAULT_PACK,
+                    text: `[${DEFAULT_BPM}] Code.org (Default)`,
+                  },
+                  ...restrictedPackOptions,
+                ]}
                 selectedValue={levelData.packId}
                 onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
                   const packId =
                     event.target.value === 'none'
                       ? undefined
                       : event.target.value;
-                  setLevelData({...levelData, packId});
+                  // Reset selected sounds from previously selected packs.
+                  const previousSounds = levelData.sounds;
+                  const sounds = previousSounds
+                    ? Object.keys(previousSounds)
+                        .filter(
+                          soundKey => !restrictedPackKeys.includes(soundKey)
+                        )
+                        .reduce((newSounds: Sounds, key) => {
+                          newSounds[key] = previousSounds[key];
+                          return newSounds;
+                        }, {})
+                    : undefined;
+                  setLevelData({...levelData, packId, sounds});
                 }}
               />
+              <BodyFourText>
+                <i>Numbers in square brackets indicate the pack tempo (BPM).</i>
+              </BodyFourText>
             </div>
           )}
           {levelData.library && loadedLibraries[levelData.library] ? (
@@ -177,32 +232,74 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
             }}
             size="s"
           />
+          <Checkbox
+            checked={!!levelData.allowChangeStartingPlayheadPosition}
+            name="allowChangeStartingPlayheadPosition"
+            label="Allow change starting playhead position"
+            onChange={event => {
+              setLevelData({
+                ...levelData,
+                allowChangeStartingPlayheadPosition: event.target.checked,
+              });
+            }}
+            size="s"
+          />
         </div>
       </CollapsibleSection>
       <hr />
+      <div>
+        {'You can also edit toolbox blocks using Blockly using Extra Links.'}
+      </div>
       <CollapsibleSection headerContent="Toolbox">
         <EditMusicToolbox
           toolbox={levelData.toolbox}
           blockMode={levelData.blockMode || BlockMode.SIMPLE2}
+          addFunctionDefinition={levelData.toolbox?.addFunctionDefinition}
           addFunctionCalls={levelData.toolbox?.addFunctionCalls}
-          onChange={toolbox => setLevelData({...levelData, toolbox})}
-          onBlockModeChange={blockMode =>
+          onChange={toolbox =>
+            // Reset toolbox mode configuration when changing toolbox settings
+            setLevelData({...levelData, toolbox, toolboxDefinition: undefined})
+          }
+          onBlockModeChange={blockMode => {
+            const startSourcesFilename = `startSources${blockMode}`;
+            const startSources = require(`@cdo/static/music/${startSourcesFilename}.json`);
+
             // Reset toolbox blocks when changing block mode
             setLevelData({
               ...levelData,
               blockMode,
+              startSources,
               toolbox: {
                 ...levelData.toolbox,
                 blocks: undefined,
+                addFunctionDefinition: undefined,
                 addFunctionCalls: undefined,
               },
-            })
-          }
+              toolboxDefinition: undefined,
+            });
+          }}
+          onAddFunctionDefinitionChange={(addFunctionDefinition: boolean) => {
+            setLevelData({
+              ...levelData,
+              toolbox: {
+                ...levelData.toolbox,
+                addFunctionDefinition,
+                // Call blocks are required if definitions are included.
+                addFunctionCalls: addFunctionDefinition
+                  ? true
+                  : levelData.toolbox?.addFunctionCalls,
+              },
+            });
+          }}
           onAddFunctionCallsChange={(addFunctionCalls: boolean) => {
             setLevelData({
               ...levelData,
               toolbox: {
                 ...levelData.toolbox,
+                // Definitions are prohibited unless call blocks are included.
+                addFunctionDefinition: !addFunctionCalls
+                  ? false
+                  : levelData.toolbox?.addFunctionDefinition,
                 addFunctionCalls,
               },
             });

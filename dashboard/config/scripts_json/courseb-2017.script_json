@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/courseb/{LESSON}",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -48,7 +49,7 @@
     },
     "new_name": "courseb-2017",
     "family_name": "courseb",
-    "serialized_at": "2022-05-05 20:51:06 UTC",
+    "serialized_at": "2024-11-19 01:14:06 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3743,6 +3744,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -2,9 +2,8 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import ChangeEmailModal from '@cdo/apps/accounts/ChangeEmailModal';
+import ChangeEmailModal from '@cdo/apps/accounts/ChangeEmail/ChangeEmailModal';
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
@@ -30,14 +29,20 @@ describe('ChangeEmailModal', () => {
   const emailOptInButton = wrapper => wrapper.find(EMAIL_OPT_IN_SELECTOR);
   const emailOptOutButton = wrapper => wrapper.find(EMAIL_OPT_OUT_SELECTOR);
   const submitButton = wrapper =>
-    wrapper
-      .find(Button)
-      .filterWhere(n => n.prop('text') === i18n.changeEmailModal_save());
+    wrapper.findWhere(
+      node =>
+        node.type() === 'button' && node.text() === i18n.changeEmailModal_save()
+    );
   const cancelButton = wrapper =>
-    wrapper.find(Button).filterWhere(n => n.prop('text') === i18n.cancel());
+    wrapper.findWhere(
+      node => node.type() === 'button' && node.text() === i18n.cancel()
+    );
 
   beforeEach(() => {
     wrapper = mount(<ChangeEmailModal {...DEFAULT_PROPS} />);
+
+    // causing a blank change event to reveal validation messages
+    emailInput(wrapper).simulate('change');
   });
 
   afterEach(() => {
@@ -48,7 +53,7 @@ describe('ChangeEmailModal', () => {
     describe(`as ${userType}`, () => {
       beforeEach(() => wrapper.setProps({userType}));
 
-      it('disables everything and shows save text when saving', () => {
+      it('disables everything and shows spinner when saving', () => {
         wrapper.setState({saveState: 'saving'});
         expect(emailInput(wrapper)).to.have.attr('disabled');
         expect(passwordInput(wrapper)).to.have.attr('disabled');
@@ -58,7 +63,7 @@ describe('ChangeEmailModal', () => {
         }
         expect(submitButton(wrapper)).to.have.attr('disabled');
         expect(cancelButton(wrapper)).to.have.attr('disabled');
-        expect(wrapper.text()).to.include(i18n.saving());
+        expect(wrapper.find('i.fa-spinner.fa-spin')).to.exist;
       });
 
       it('shows unknown error text when an unknown error occurs', () => {
@@ -283,7 +288,7 @@ describe('ChangeEmailModal', () => {
             expect(wrapper.state().serverErrors.emailOptIn).to.equal(
               'test-server-error'
             );
-            emailOptOutButton(wrapper).simulate('click');
+            emailOptOutButton(wrapper).simulate('change');
             expect(wrapper.state().serverErrors.emailOptIn).to.be.undefined;
           });
         }

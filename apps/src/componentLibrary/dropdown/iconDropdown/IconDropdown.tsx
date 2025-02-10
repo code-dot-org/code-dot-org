@@ -1,29 +1,30 @@
-import classNames from 'classnames';
-import React, {useCallback, memo, AriaAttributes} from 'react';
-
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
+import {dropdownColors} from '@code-dot-org/component-library/common/constants';
 import {
   DropdownProviderWrapper,
   useDropdownContext,
-} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+} from '@code-dot-org/component-library/common/contexts';
 import {
   ComponentSizeXSToL,
   DropdownColor,
-} from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown, {
-  _CustomDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+  DropdownFormFieldRelatedProps,
+} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
+import React, {useCallback, memo, AriaAttributes} from 'react';
 
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
+import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+
+import moduleStyles from './../customDropdown.module.scss';
 
 export interface IconDropdownOption extends _CustomDropdownOption {
   icon: FontAwesomeV6IconProps;
 }
 
-export interface IconDropdownProps extends AriaAttributes {
+export interface IconDropdownProps
+  extends DropdownFormFieldRelatedProps,
+    AriaAttributes {
   /** IconDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
@@ -32,9 +33,11 @@ export interface IconDropdownProps extends AriaAttributes {
   /** IconDropdown color */
   color?: DropdownColor;
   /** IconDropdown size */
-  size: ComponentSizeXSToL;
+  size?: ComponentSizeXSToL;
   /** IconDropdown disabled state */
   disabled?: boolean;
+  /** IconDropdown readOnly state */
+  readOnly?: boolean;
   /** IconDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
@@ -57,8 +60,13 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   selectedOption = {},
   onChange,
   disabled = false,
+  readOnly = false,
   color = dropdownColors.black,
   size = 'm',
+  helperMessage,
+  helperIcon,
+  errorMessage,
+  styleAsFormField = false,
   ...rest
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
@@ -79,9 +87,15 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       labelText={labelText}
       labelType={labelType}
       disabled={disabled}
+      readOnly={readOnly}
       color={color}
       icon={selectedOption?.icon}
       size={size}
+      helperMessage={helperMessage}
+      helperIcon={helperIcon}
+      errorMessage={errorMessage}
+      styleAsFormField={styleAsFormField}
+      selectedValueText={selectedOption?.label}
       {...rest}
     >
       <div className={moduleStyles.dropdownMenuContainer}>
@@ -133,7 +147,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/IconDropdownTest.jsx)
+ * * (see apps/test/unit/componentLibrary/IconDropdownTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

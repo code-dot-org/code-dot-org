@@ -1,10 +1,9 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useContext, useRef, useState} from 'react';
+import React, {useContext, useState} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   Card,
@@ -12,7 +11,12 @@ import {
   CardContent,
   CardHeader,
 } from '@cdo/apps/sharedComponents/card';
+import {
+  ACCOUNT_TYPE_SESSION_KEY,
+  EMAIL_SESSION_KEY,
+} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {LtiProviderContext} from '../../context';
@@ -20,9 +24,13 @@ import {LtiProviderContext} from '../../context';
 import styles from '../../../../../link-account.module.scss';
 
 const LtiNewAccountCard = () => {
-  const {ltiProviderName, newAccountUrl, emailAddress, userType} =
-    useContext(LtiProviderContext)!;
-  const finishSignupFormRef = useRef<HTMLFormElement>(null);
+  const {
+    ltiProviderName,
+    finishSignUpUrl,
+    emailAddress,
+    userType,
+    newAccountUrl,
+  } = useContext(LtiProviderContext)!;
 
   const [isSaving, setIsSaving] = useState(false);
 
@@ -32,18 +40,24 @@ const LtiNewAccountCard = () => {
       user_type: userType,
     };
     analyticsReporter.sendEvent(
-      'lti_new_account_click',
+      EVENTS.SIGN_UP_STARTED_EVENT,
+      {source: 'LTI'},
+      PLATFORMS.BOTH
+    );
+    analyticsReporter.sendEvent(
+      EVENTS.LTI_NEW_ACCOUNT_CLICK,
       eventPayload,
       PLATFORMS.STATSIG
     );
 
-    finishSignupFormRef.current?.submit();
+    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType);
+    sessionStorage.setItem(EMAIL_SESSION_KEY, emailAddress);
+    navigateToHref(finishSignUpUrl);
   };
 
   const handleNewAccountSubmit = async () => {
     setIsSaving(true);
-
-    fetch('/lti/v1/account_linking/new_account', {
+    fetch(newAccountUrl.href, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -57,6 +71,7 @@ const LtiNewAccountCard = () => {
   };
 
   return (
+    // eslint-disable-next-line react/forbid-component-props
     <Card data-testid={'new-account-card'}>
       <CardHeader
         title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
@@ -71,17 +86,6 @@ const LtiNewAccountCard = () => {
         {i18n.ltiLinkAccountNewAccountCardContent({
           providerName: ltiProviderName,
         })}
-
-        <form
-          data-testid={'new-account-form'}
-          action={newAccountUrl}
-          ref={finishSignupFormRef}
-          method="post"
-          className={styles.newAccountForm}
-        >
-          <RailsAuthenticityToken />
-          <input type="hidden" value={emailAddress} name={'user[email]'} />
-        </form>
       </CardContent>
       <CardActions>
         <Button

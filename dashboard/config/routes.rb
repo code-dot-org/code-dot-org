@@ -7,8 +7,17 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
-  # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
-  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section"
+  # Redirect old sign up flow to new sign up flow
+  get "/users/sign_up", to: redirect("/users/new_sign_up/account_type")
+
+  # Redirect studio.code.org/sections/teacher_dashboard/first_section/*location to the teacher's most recent section
+  # on teacher dashboard, where *location is one of the following: courses, calendar, progress, or materials.
+  get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
+  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
+
+  # Redirect enable and disable experiments to most recent section
+  get '/teacher_dashboard/sections/enable_experiments', to: "teacher_dashboard#enable_experiments"
+  get '/teacher_dashboard/sections/disable_experiments', to: "teacher_dashboard#disable_experiments"
 
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
@@ -19,9 +28,12 @@ Dashboard::Application.routes.draw do
   constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
+      get :home, controller: :teacher_dashboard, action: :show
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
+          get :courses, params: :course_version_name, action: :show
+          get :unit, params: :unitName, action: :show
           get '*path', action: :show, via: :all, as: :subpath
         end
       end
@@ -36,6 +48,8 @@ Dashboard::Application.routes.draw do
     get '/user_levels/get_token', to: 'user_levels#get_token'
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
     get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
+
+    resources :user_level_interactions, only: [:create]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -71,7 +85,8 @@ Dashboard::Application.routes.draw do
 
     resources :images, only: [:new]
 
-    get "/ai_tutor/tester", to: "ai_tutor#tester"
+    get "/ai_iteration/tools", to: "ai_iteration#tools"
+    get "/student_code_sample/:num_samples/:script_id/:level_id", to: "student_code_sample#fetch_student_code_samples"
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
@@ -200,6 +215,7 @@ Dashboard::Application.routes.draw do
       post '/users/finish_sign_up', to: 'registrations#new'
       get '/users/new_sign_up/account_type', to: 'registrations#account_type'
       get '/users/new_sign_up/login_type', to: 'registrations#login_type'
+      get '/users/gdpr_check', to: 'registrations#gdpr_check'
       get '/users/new_sign_up/finish_student_account', to: 'registrations#finish_student_account'
       get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
@@ -215,6 +231,7 @@ Dashboard::Application.routes.draw do
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
+      delete '/expire_other', to: 'sessions#expire_other'
       get '/users/existing_account', to: 'registrations#existing_account'
       get '/users/edit', to: 'registrations#edit'
     end
@@ -246,6 +263,9 @@ Dashboard::Application.routes.draw do
     end
 
     get "/gallery", to: redirect("/projects/public")
+
+    get 'projects/:project_type/:channel_id/submission_status', to: 'projects#submission_status'
+    post 'projects/:project_type/:channel_id/submit', to: 'projects#submit'
 
     get 'projects/featured', to: 'projects#featured'
     delete '/featured_projects/:channel_id', to: 'featured_projects#destroy'
@@ -347,6 +367,7 @@ Dashboard::Application.routes.draw do
         post 'update_exemplar_code'
         get 'level_properties'
         get 'extra_links'
+        patch 'update_bubble_choice_settings'
       end
     end
 
@@ -674,7 +695,6 @@ Dashboard::Application.routes.draw do
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
     # Experiments are get requests so that a user can click on a link to join or leave an experiment
-    get '/experiments/set_course_experiment/:experiment_name', to: 'experiments#set_course_experiment'
     get '/experiments/set_single_user_experiment/:experiment_name', to: 'experiments#set_single_user_experiment'
     get '/experiments/disable_single_user_experiment/:experiment_name', to: 'experiments#disable_single_user_experiment'
 
@@ -794,6 +814,9 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
     get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
     get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning_landing#applications_closed'
+    get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_facilitator_for_pl_page'
+    get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_organizer_for_pl_page'
+    get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning_landing#workshops_as_program_manager_for_pl_page'
     post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
     post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
@@ -891,6 +914,7 @@ Dashboard::Application.routes.draw do
     end
 
     get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
+    get 'dashboardapi/unit_summary/:unit_name', to: 'api#unit_summary'
     get 'dashboardapi/lesson_materials/:unit_id', to: 'api#lesson_materials'
 
     # Wildcard routes for API controller: select all public instance methods in the controller,
@@ -956,6 +980,7 @@ Dashboard::Application.routes.draw do
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
+        post 'users/has_completed_ai_differentiation_welcome', to: 'users#post_has_completed_ai_differentiation_welcome'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
@@ -965,7 +990,6 @@ Dashboard::Application.routes.draw do
         get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
-        get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
         get 'users/cached_page_auth_redirect', to: 'users#cached_page_auth_redirect'
@@ -980,6 +1004,8 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/dismiss_census_banner', to: 'users#dismiss_census_banner'
         post 'users/:user_id/dismiss_donor_teacher_banner', to: 'users#dismiss_donor_teacher_banner'
         post 'users/:user_id/dismiss_parent_email_banner', to: 'users#dismiss_parent_email_banner'
+
+        post 'users/set_seen_ta_scores', to: 'users#set_seen_ta_scores'
 
         get 'school-districts/:state', to: 'school_districts#index', defaults: {format: 'json'}
         get 'schools/:school_district_id/:school_type', to: 'schools#index', defaults: {format: 'json'}
@@ -1035,7 +1061,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
     get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
-    get '/dashboardapi/v1/users/:user_id/school_donor_name', to: 'api/v1/users#get_school_donor_name'
     post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
     get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id/afe_high_needs', to: 'api/v1/schools#afe_high_needs', defaults: {format: 'json'}
@@ -1180,10 +1205,13 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
-    post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
-    get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
-    post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
-    get '/aichat/chat_request/:id', to: 'aichat#chat_request'
+    post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
+    get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
+
+    post '/aichat_events/log_chat_event', to: 'aichat_events#log_chat_event'
+    post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
+    get '/aichat_events/student_chat_history', to: 'aichat_events#student_chat_history'
+
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 

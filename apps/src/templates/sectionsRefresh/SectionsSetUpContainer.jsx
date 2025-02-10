@@ -18,8 +18,10 @@ import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
+import {CapLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import AdvancedSettingToggles from './AdvancedSettingToggles';
@@ -59,7 +61,7 @@ const useSections = section => {
             ttsAutoplayEnabled: false,
             lessonExtras: true,
             aiTutorEnabled: false,
-            course: {hasTextToSpeech: false, hasLessonExtras: false},
+            course: {textToSpeechEnabled: false, lessonExtrasAvailable: false},
           },
         ]
   );
@@ -86,8 +88,14 @@ export default function SectionsSetUpContainer({
   sectionToBeEdited,
   canEnableAITutor,
   userCountry,
+  defaultRedirectUrl,
+  setIsEditInProgress = value => {},
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
+  const updateSectionAndSetEditInProgress = (sectionIdx, keyToUpdate, val) => {
+    updateSection(sectionIdx, keyToUpdate, val);
+    setIsEditInProgress(true);
+  };
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
   const [advancedSettingsOpen, setAdvancedSettingsOpen] = useState(false);
   const [isSaveInProgress, setIsSaveInProgress] = useState(false);
@@ -125,7 +133,7 @@ export default function SectionsSetUpContainer({
     */
     if (isNewSection) {
       analyticsReporter.sendEvent(
-        EVENTS.COMPLETED_EVENT,
+        EVENTS.SECTION_SETUP_COMPLETED,
         {
           sectionUnitId: section.course?.unitId,
           sectionCurriculumLocalizedName: section.course?.displayName,
@@ -136,6 +144,7 @@ export default function SectionsSetUpContainer({
           sectionName: section.name,
           sectionPairProgramSelection: section.pairingAllowed,
           flowVersion: NEW,
+          isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
         },
         PLATFORMS.BOTH
       );
@@ -154,24 +163,31 @@ export default function SectionsSetUpContainer({
         initialSection &&
         section.course?.unitId !== initialSection.course?.unitId)
     ) {
-      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
-        sectionName: section.name,
-        sectionId: section.id,
-        sectionLoginType: section.loginType,
-        previousUnitId: initialSection.course?.unitId,
-        previousCourseId: initialSection.course?.courseOfferingId,
-        previousCourseVersionId: initialSection.course?.versionId,
-        previousVersionYear: null,
-        newUnitId: section.course?.unitId,
-        newCourseId: section.course?.courseOfferingId,
-        newCourseVersionId: section.course?.courseVersionId,
-        newVersionYear: null,
-        flowVersion: NEW,
-      });
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_ASSIGNED,
+        {
+          sectionName: section.name,
+          sectionId: section.id,
+          sectionLoginType: section.loginType,
+          previousUnitId: initialSection.course?.unitId,
+          previousCourseId: initialSection.course?.courseOfferingId,
+          previousCourseVersionId: initialSection.course?.versionId,
+          previousVersionYear: null,
+          newUnitId: section.course?.unitId,
+          newCourseId: section.course?.courseOfferingId,
+          newCourseVersionId: section.course?.courseVersionId,
+          newVersionYear: null,
+          flowVersion: NEW,
+          isOnTeacherDashboard: location.pathname.includes('teacher_dashboard'),
+        },
+        PLATFORMS.BOTH
+      );
     }
   };
 
   const saveSection = (section, createAnotherSection, coteachersToAdd) => {
+    setIsEditInProgress(false);
+
     const shouldShowCelebrationDialogOnRedirect = !!isUsersFirstSection;
     // Determine data sources and save method based on new vs edit section
     const dataUrl = isNewSection
@@ -242,7 +258,8 @@ export default function SectionsSetUpContainer({
         // Redirect to the given redirectUrl if present, otherwise redirect to the
         // sections list on the homepage.
         let url =
-          window.location.origin + (redirectUrl ? `/${redirectUrl}` : '/home');
+          window.location.origin +
+          (redirectUrl ? `/${redirectUrl}` : defaultRedirectUrl);
         if (!redirectUrl) {
           if (createAnotherSection) {
             url += '?openAddSectionDialog=true';
@@ -254,6 +271,7 @@ export default function SectionsSetUpContainer({
       })
       .catch(err => {
         setIsSaveInProgress(false);
+        setIsEditInProgress(true);
         console.error(err);
       });
   };
@@ -264,8 +282,8 @@ export default function SectionsSetUpContainer({
         courseOfferingId: sections[0].courseOfferingId,
         versionId: sections[0].courseVersionId,
         unitId: sections[0].unitId,
-        hasLessonExtras: sections[0].lessonExtras,
-        hasTextToSpeech: sections[0].ttsAutoplayEnabled,
+        lessonExtrasAvailable: sections[0].lessonExtras,
+        textToSpeechEnabled: sections[0].ttsAutoplayEnabled,
         displayName: sections[0].courseDisplayName,
       };
     } else {
@@ -301,7 +319,7 @@ export default function SectionsSetUpContainer({
             type={NotificationType.warning}
             notice=""
             details={i18n.childAccountPolicy_CreateSectionsWarning()}
-            detailsLink="https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts"
+            detailsLink={CapLinks.PARENTAL_CONSENT_GUIDE_URL}
             detailsLinkNewWindow={true}
             detailsLinkText={i18n.childAccountPolicy_LearnMore()}
             dismissible={false}
@@ -337,7 +355,7 @@ export default function SectionsSetUpContainer({
   };
 
   const renderAdvancedSettings = () => {
-    // TODO: this will probably eventually be a setting on the course similar to hasTextToSpeech
+    // TODO: this will probably eventually be a setting on the course similar to textToSpeechEnabled
     // currently we're working towards piloting in Javalab in CSA only.
     const aiTutorAvailable =
       canEnableAITutor &&
@@ -348,10 +366,10 @@ export default function SectionsSetUpContainer({
       () => i18n.advancedSettings(),
       () => (
         <AdvancedSettingToggles
-          updateSection={(key, val) => updateSection(0, key, val)}
+          updateSection={(key, val) =>
+            updateSectionAndSetEditInProgress(0, key, val)
+          }
           section={sections[0]}
-          hasLessonExtras={sections[0].course.hasLessonExtras}
-          hasTextToSpeech={sections[0].course.hasTextToSpeech}
           aiTutorAvailable={aiTutorAvailable}
           label={i18n.pairProgramming()}
         />
@@ -382,7 +400,10 @@ export default function SectionsSetUpContainer({
           sectionId={sections[0].id}
           sectionInstructors={sections[0].sectionInstructors}
           primaryTeacher={sections[0].primaryInstructor}
-          setCoteachersToAdd={setCoteachersToAdd}
+          setCoteachersToAdd={value => {
+            setCoteachersToAdd(value);
+            setIsEditInProgress(true);
+          }}
           coteachersToAdd={coteachersToAdd}
           sectionMetricInformation={getCoteacherMetricInfoFromSection(
             sections[0]
@@ -422,16 +443,24 @@ export default function SectionsSetUpContainer({
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
-        updateSection={(key, val) => updateSection(0, key, val)}
+        updateSection={(key, val) =>
+          updateSectionAndSetEditInProgress(0, key, val)
+        }
         isNewSection={isNewSection}
       />
 
-      <CurriculumQuickAssign
-        id="uitest-curriculum-quick-assign"
-        isNewSection={isNewSection}
-        updateSection={(key, val) => updateSection(0, key, val)}
-        sectionCourse={sections[0].course || consolidatedCourseData()}
-        initialParticipantType={sections[0].participantType}
+      {/* Allow the curriculum quick assign region to be configured per-region */}
+      <GlobalEditionWrapper
+        component={CurriculumQuickAssign}
+        componentId="CurriculumQuickAssign"
+        props={{
+          id: 'uitest-curriculum-quick-assign',
+          isNewSection: isNewSection,
+          updateSection: (key, val) => updateSection(0, key, val),
+          setIsEditInProgress: setIsEditInProgress,
+          sectionCourse: sections[0].course || consolidatedCourseData(),
+          initialParticipantType: sections[0].participantType,
+        }}
       />
 
       <div
@@ -489,4 +518,6 @@ SectionsSetUpContainer.propTypes = {
   sectionToBeEdited: PropTypes.object,
   canEnableAITutor: PropTypes.bool,
   userCountry: PropTypes.string,
+  defaultRedirectUrl: PropTypes.string.isRequired,
+  setIsEditInProgress: PropTypes.func,
 };

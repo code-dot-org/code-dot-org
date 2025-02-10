@@ -1,3 +1,5 @@
+import {Order} from 'blockly/javascript';
+
 import {BlockTypes} from '../blockTypes';
 import {FIELD_SOUNDS_NAME, SOUND_VALUE_TYPE} from '../constants';
 import {fieldSoundsDefinition} from '../fields';
@@ -14,8 +16,5 @@ export const valueSample: BlockConfig = {
     style: 'lab_blocks',
     output: SOUND_VALUE_TYPE,
   },
-  generator: block => [
-    block.getFieldValue(FIELD_SOUNDS_NAME),
-    Blockly.JavaScript.ORDER_ATOMIC,
-  ],
+  generator: block => [block.getFieldValue(FIELD_SOUNDS_NAME), Order.ATOMIC],
 };

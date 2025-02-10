@@ -6,63 +6,87 @@ import {
 } from '@reduxjs/toolkit';
 import {AnyAction} from 'redux';
 
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {RootState} from '@cdo/apps/types/redux';
 
 import Lab2Registry from '../Lab2Registry';
 
 export interface Lab2ProjectState {
-  projectSource: ProjectSources | undefined;
+  projectSources: ProjectSources | undefined;
   viewingOldVersion: boolean;
   restoredOldVersion: boolean;
+  hasEdited: boolean;
 }
 
 const initialState: Lab2ProjectState = {
-  projectSource: undefined,
+  projectSources: undefined,
   viewingOldVersion: false,
   restoredOldVersion: false,
+  hasEdited: false,
 };
 
 // THUNKS
 
 // Store the project source in the redux store and tell the project manager
 // to save it.
-export const setAndSaveProjectSource = (
-  projectSource: ProjectSources,
+export const setAndSaveProjectSources = (
+  projectSources: ProjectSources,
   forceSave: boolean = false,
   forceNewVersion: boolean = false
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return dispatch => {
-    dispatch(projectSlice.actions.setProjectSource(projectSource));
+    dispatch(projectSlice.actions.setProjectSource(projectSources));
     if (Lab2Registry.getInstance().getProjectManager()) {
       Lab2Registry.getInstance()
         .getProjectManager()
-        ?.save(projectSource, forceSave, forceNewVersion);
+        ?.save(projectSources, forceSave, forceNewVersion);
+    }
+  };
+};
+
+export const setAndSaveSource = (
+  source: MultiFileSource,
+  forceSave: boolean = false,
+  forceNewVersion: boolean = false
+): ThunkAction<void, RootState, undefined, AnyAction> => {
+  return (dispatch, getState) => {
+    dispatch(setSource(source));
+    const projectSources = getState().lab2Project.projectSources;
+    if (Lab2Registry.getInstance().getProjectManager() && projectSources) {
+      Lab2Registry.getInstance()
+        .getProjectManager()
+        ?.save(projectSources, forceSave, forceNewVersion);
     }
   };
 };
 
 export const loadVersion = createAsyncThunk(
   'lab2Project/loadVersion',
-  async (payload: {versionId: string}, thunkAPI) => {
+  async (
+    payload: {versionId: string; startSources: ProjectSources},
+    thunkAPI
+  ) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (projectManager) {
       // We need to ensure we save the existing project before loading a new one.
       await projectManager.flushSave();
-      const sources = await projectManager.loadSources(payload.versionId);
+      // Fall back to start source if we can't load the version.
+      const sources =
+        (await projectManager.loadSources(payload.versionId)) ||
+        payload.startSources;
       thunkAPI.dispatch(setPreviousVersionSource(sources));
     }
   }
 );
 
-export const previewStartSource = createAsyncThunk(
-  'lab2Project/previewStartSource',
-  async (payload: {startSource: ProjectSources}, thunkAPI) => {
+export const previewStartSources = createAsyncThunk(
+  'lab2Project/previewStartSources',
+  async (payload: {startSources: ProjectSources}, thunkAPI) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (projectManager) {
       // We need to ensure we save the existing project before loading the start source.
       await projectManager.flushSave();
-      thunkAPI.dispatch(setPreviousVersionSource(payload.startSource));
+      thunkAPI.dispatch(setPreviousVersionSource(payload.startSources));
     }
   }
 );
@@ -86,13 +110,19 @@ const projectSlice = createSlice({
   initialState,
   reducers: {
     setProjectSource(state, action: PayloadAction<ProjectSources | undefined>) {
-      state.projectSource = action.payload;
+      state.projectSources = action.payload;
+    },
+    setSource(state, action: PayloadAction<MultiFileSource>) {
+      state.projectSources = {
+        ...state.projectSources,
+        source: action.payload,
+      };
     },
     setPreviousVersionSource(
       state,
       action: PayloadAction<ProjectSources | undefined>
     ) {
-      state.projectSource = action.payload;
+      state.projectSources = action.payload;
       state.viewingOldVersion = true;
     },
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
@@ -100,6 +130,16 @@ const projectSlice = createSlice({
     },
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
+    },
+    setHasEdited(state, action: PayloadAction<boolean>) {
+      state.hasEdited = action.payload;
+    },
+    resetProjectMetadata(state) {
+      // Reset the state that needs to be reset manually on level change.
+      // Project source is handled elsewhere.
+      state.hasEdited = false;
+      state.viewingOldVersion = false;
+      state.restoredOldVersion = false;
     },
   },
 });
@@ -109,6 +149,9 @@ export const {
   setPreviousVersionSource,
   setViewingOldVersion,
   setRestoredOldVersion,
+  resetProjectMetadata,
+  setHasEdited,
+  setSource,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

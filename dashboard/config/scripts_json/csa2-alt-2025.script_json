@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "CSA",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-02 22:21:02 UTC",
+    "serialized_at": "2024-11-19 01:14:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3103,6 +3105,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -3125,6 +3130,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -3147,6 +3155,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -3169,6 +3180,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -3191,6 +3205,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-4_alt-2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -3213,6 +3230,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3_pilot_alt-2025"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -3235,6 +3255,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4_pilot_alt-2025"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -3257,6 +3280,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L5_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3279,6 +3305,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Selection Statements"
       },
       "bonus": false,
@@ -3301,6 +3330,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Selection Statements"
       },
       "bonus": false,
@@ -3323,6 +3355,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L3_pilot_alt-2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -3345,6 +3380,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L4_pilot_alt-2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -3367,6 +3405,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L5_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3389,6 +3430,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Multi-Selection Statements"
       },
       "bonus": false,
@@ -3411,6 +3455,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -3433,6 +3480,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -3455,6 +3505,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L4_alt-2025"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -3477,6 +3530,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L5_alt-2025"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -3499,6 +3555,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L6_alt-2025"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -3521,6 +3580,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L7_alt-2025"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -3543,6 +3605,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L8_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3565,6 +3630,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Nested if Statements"
       },
       "bonus": false,
@@ -3587,6 +3655,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Nested if Statements"
       },
       "bonus": false,
@@ -3609,6 +3680,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Nested if Statements"
       },
       "bonus": false,
@@ -3631,6 +3705,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L4_alt-2025"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -3653,6 +3730,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L5_alt-2025"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -3675,6 +3755,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L6_alt-2025"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -3697,6 +3780,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L7_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3719,6 +3805,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Logical Operators"
       },
       "bonus": false,
@@ -3741,6 +3830,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -3763,6 +3855,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -3785,6 +3880,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L4_alt-2025"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -3807,6 +3905,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L5 Finding Patterns_alt-2025"
+        ],
         "progression": "Finding Patterns"
       },
       "bonus": false,
@@ -3829,6 +3930,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L6_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3851,6 +3955,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Comparing Objects"
       },
       "bonus": false,
@@ -3873,6 +3980,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -3895,6 +4005,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -3917,6 +4030,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L4_alt-2025"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -3939,6 +4055,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L5_alt-2025"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -3961,6 +4080,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L6_alt-2025"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -3983,6 +4105,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L7_alt-2025"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -4005,6 +4130,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L8_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4027,6 +4155,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L1_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4049,6 +4180,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L1_alt-2025"
+        ],
         "progression": "Predict and Run: For Loops"
       },
       "bonus": false,
@@ -4071,6 +4205,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: For Loops"
       },
       "bonus": false,
@@ -4093,6 +4230,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L3_alt-2025"
+        ],
         "progression": "Investigate and Modify: For Loops"
       },
       "bonus": false,
@@ -4115,6 +4255,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L4_alt-2025"
+        ],
         "progression": "Investigate and Modify: For Loops"
       },
       "bonus": false,
@@ -4137,6 +4280,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L5_alt-2025"
+        ],
         "progression": "Practice: Using for Loops"
       },
       "bonus": false,
@@ -4159,6 +4305,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L6_alt-2025"
+        ],
         "progression": "Practice: Using for Loops"
       },
       "bonus": false,
@@ -4181,6 +4330,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L7_alt-2025"
+        ],
         "progression": "Practice: Using for Loops"
       },
       "bonus": false,
@@ -4203,6 +4355,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L8_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4225,6 +4380,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L1_alt-2025"
+        ],
         "progression": "Predict and Run: Selection and Logic"
       },
       "bonus": false,
@@ -4247,6 +4405,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L2_alt-2025"
+        ],
         "progression": "Investigate and Modify: Selection and Logic"
       },
       "bonus": false,
@@ -4269,6 +4430,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L3_pilot_alt-2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -4291,6 +4455,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L4_pilot_alt-2025"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -4313,6 +4480,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L5_pilot_alt-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,

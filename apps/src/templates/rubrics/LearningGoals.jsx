@@ -12,6 +12,7 @@ import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ai_rubric_cyan} from '@cdo/apps/util/color';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -535,7 +536,20 @@ export default function LearningGoals({
     );
   };
 
+  // Remember whether no not the code editor is loaded
+  const studio = studioApp();
+  const [editorLoaded, setEditorLoaded] = useState(!!studio.editor);
+  useMemo(() => {
+    studio.on('afterInit', () => {
+      setEditorLoaded(true);
+    });
+  }, [studio]);
+
   const aiEvidence = useMemo(() => {
+    if (!editorLoaded) {
+      return;
+    }
+
     const onEvidenceTooltipOpened = () => {
       // When the tooltip is opened, we will record that this happened alongside
       // information about the learning goal.
@@ -575,6 +589,7 @@ export default function LearningGoals({
     return [];
   }, [
     aiEvalInfo,
+    editorLoaded,
     productTour,
     currentLearningGoal,
     learningGoals,

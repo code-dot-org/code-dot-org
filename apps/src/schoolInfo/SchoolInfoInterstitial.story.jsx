@@ -23,7 +23,13 @@ Overview.args = {
     formUrl: '',
     authTokenName: 'auth_token',
     authTokenValue: 'fake_auth_token',
-    existingSchoolInfo: {},
+    usIp: false,
+    existingSchoolInfo: {
+      country: '',
+      school_id: '',
+      school_name: '',
+      school_zip: '',
+    },
   },
   onClose: action('onClose callback'),
 };

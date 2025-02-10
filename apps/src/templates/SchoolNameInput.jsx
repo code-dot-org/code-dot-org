@@ -1,23 +1,24 @@
+import TextField from '@code-dot-org/component-library/textField';
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React from 'react';
 
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import i18n from '@cdo/locale';
 
-import {SCHOOL_NAME_SESSION_KEY} from '../signUpFlow/signUpFlowConstants';
-
-export default function SchoolNameInput({fieldNames}) {
-  const detectedName = sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) || '';
-  const [schoolName, setSchoolName] = useState(detectedName);
+export default function SchoolNameInput({
+  fieldNames,
+  schoolName,
+  setSchoolName,
+}) {
+  const handleSchoolNameChange = name => {
+    setSchoolName(name);
+  };
 
   return (
     <TextField
+      id="uitest-school-name"
       name={fieldNames.schoolName}
       label={i18n.schoolOrganizationQuestion()}
-      onChange={e => {
-        setSchoolName(e.target.value);
-        sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, e.target.value);
-      }}
+      onChange={e => handleSchoolNameChange(e.target.value)}
       value={schoolName}
     />
   );
@@ -25,4 +26,6 @@ export default function SchoolNameInput({fieldNames}) {
 
 SchoolNameInput.propTypes = {
   fieldNames: PropTypes.object,
+  schoolName: PropTypes.string,
+  setSchoolName: PropTypes.func,
 };

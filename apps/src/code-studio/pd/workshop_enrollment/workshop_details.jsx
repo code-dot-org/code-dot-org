@@ -4,6 +4,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {COURSE_BUILD_YOUR_OWN} from '../workshop_dashboard/workshopConstants';
+
 import {WorkshopPropType} from './enrollmentConstants';
 
 export default class WorkshopDetails extends React.Component {
@@ -83,6 +85,31 @@ export default class WorkshopDetails extends React.Component {
     );
   }
 
+  buildYourOwnWSDetails() {
+    return (
+      <>
+        {this.props.workshop.name && (
+          <div className="row">
+            <div className="span2" style={styles.label}>
+              <strong>Workshop Name:</strong>
+            </div>
+            <div className="span2">{this.props.workshop.name}</div>
+          </div>
+        )}
+        <div className="row">
+          <div className="span2" style={styles.label}>
+            <strong>Topics:</strong>
+          </div>
+          <div className="span2">
+            {this.props.workshop.course_offerings.map(topic => (
+              <div key={topic.key}>{topic.display_name}</div>
+            ))}
+          </div>
+        </div>
+      </>
+    );
+  }
+
   fee() {
     if (this.props.workshop.course === 'CS Fundamentals') {
       return (
@@ -145,7 +172,9 @@ export default class WorkshopDetails extends React.Component {
         </div>
         {this.sessionDates()}
         {this.location()}
-        {this.courseAndSubject()}
+        {this.props.workshop.course === COURSE_BUILD_YOUR_OWN
+          ? this.buildYourOwnWSDetails()
+          : this.courseAndSubject()}
         {this.fee()}
         {this.regionalPartner()}
         {this.organizerAndNotes()}

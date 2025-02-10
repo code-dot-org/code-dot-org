@@ -16,9 +16,11 @@
           "buttonText": "Computer Science Basics for K-5 Teachers "
         }
       ],
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "az-AZ",
@@ -72,11 +74,12 @@
         "zh-TW",
         "es-MX"
       ],
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "hourofcode",
-    "serialized_at": "2024-07-22 23:56:57 UTC",
+    "serialized_at": "2025-01-09 16:55:20 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -139,7 +142,8 @@
       "key": "67c7a27f-b92e-4c6f-af4c-87ceb52ea7b0",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "67c7a27f-b92e-4c6f-af4c-87ceb52ea7b0",

@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '3.0.5'
+ruby '>= 3.0', '< 3.5'
+# after pushing this fuzzy match thru chef, commit to make this be:
+# ruby '3.3.4'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
@@ -15,21 +17,15 @@ gem 'cgi', '~> 0.3.6'
 # see https://github.com/ruby/set/pull/2
 gem 'sorted_set'
 
-# Force HTTPS for github-source gems.
-# This is a temporary workaround - remove when bundler version is >=2.0
-# @see https://github.com/bundler/bundler/issues/4978
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
+gem 'mutex_m' # needed for httpclient in Ruby >= 3.4, drop explicit dep if we upgrade httpclient
+
+gem 'abbrev' # needed for activesupport in Ruby >= 3.4, drop explicit dep after we upgrade to activesupport >= 7.2
+gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 
 gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
-
-# Compile Sprockets assets concurrently in `assets:precompile`.
-# Ref: https://github.com/rails/sprockets/pull/470
-gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
-gem 'sprockets-rails', '3.3.0'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
@@ -115,11 +111,12 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec', require: false
-  gem 'selenium-webdriver', '~> 4.0'
+  # Starting with version 4.6, Selenium uses Selenium Manager, eliminating the need for the webdriver gem.
+  # See: https://github.com/titusfortner/webdrivers/commit/5b3dc29ff5cdb7bec110de949e78184c789ef63a
+  gem 'selenium-webdriver', '~> 4.6'
   gem 'simplecov', '~> 0.22.0', require: false
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
-  gem 'webdrivers', '~> 5.2'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
@@ -165,8 +162,8 @@ gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
 gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
-gem 'omniauth-facebook', '~> 4.0.0'
-gem 'omniauth-google-oauth2', '~> 0.6.0'
+gem 'omniauth-facebook', '~> 10.0.0'
+gem 'omniauth-google-oauth2', '~> 1.1.3'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 
 # Resolve CVE 2015 9284
@@ -181,13 +178,13 @@ gem 'jquery-ui-rails', '~> 6.0.1'
 
 gem 'nokogiri', '>= 1.10.0'
 
-gem 'highline', '~> 1.6.21'
+gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.5.1'
+gem 'redcarpet', '~> 3.6.0'
 
 gem 'geocoder'
 
@@ -227,7 +224,7 @@ gem 'active_model_serializers', '~> 0.10.13'
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
 gem 'aws-sdk-applicationautoscaling'
-gem 'aws-sdk-autoscaling', '>= 1.121.0'
+gem 'aws-sdk-autoscaling'
 gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
@@ -365,3 +362,7 @@ gem 'mailjet', '~> 1.7.3'
 
 gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
+
+gem "csv"
+
+gem "async", "~> 1.32"

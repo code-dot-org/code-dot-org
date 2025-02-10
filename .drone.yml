@@ -20,13 +20,24 @@ services:
       - 6379
 
 steps:
-  - name: info
+  - name: bin/drone/shell
     image: curlimages/curl
     commands:
+      - set +x
       # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
-      - echo "Running on $hostname"
+      - |
+        cat <<EOF
+
+        Running on hostname: $hostname
+        
+        To "ssh" into this drone instance, wait until the 'unit-tests' step starts and run:
+        bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
+        EOF
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
   - name: get-cached-staging
@@ -69,13 +80,13 @@ steps:
       filename: unit-tests-cache-ubuntu-20.tar
 
   - name: unit-tests
-    # see: docker/continuous-integration/Dockerfile
+    # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.10.0
+    image: codedotorg/code-dot-org:1.14
     pull: always
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
@@ -85,12 +96,14 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
-      - sudo chown -R circleci:circleci .
+      - sudo chown -R ci:ci .
       # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
-      - rm -rf "$(pwd)/home/circleci/.rbenv"
-      # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-      - export CIRCLE_SHA1=$DRONE_COMMIT
+      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
+      - rm -rf "$(pwd)/home/ci/.rbenv"
+      # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
+      - export GIT_COMMIT=$DRONE_COMMIT
+      - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
+      - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
       - EXIT_CODE=0
       - /entrypoint.sh docker/unit_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -100,7 +113,7 @@ steps:
     image: plugins/s3-cache
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
     settings:
       endpoint: s3://cdo-drone
       debug: true
@@ -108,7 +121,7 @@ steps:
       rebuild: true
       filename: unit-tests-cache-ubuntu-20.tar
       mount:
-        - /home/circleci/.rbenv
+        - /home/ci/.rbenv
 
 volumes:
   - name: rbenv
@@ -140,13 +153,24 @@ services:
       - 6379
 
 steps:
-  - name: info
+  - name: bin/drone/shell
     image: curlimages/curl
     commands:
+      - set +x
       # If running on EC2, get hostname from ec2 metadata
       - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
       - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
-      - echo "Running on $hostname"
+      - |
+        cat <<EOF
+
+        Running on hostname: $hostname
+        
+        To "ssh" into this drone instance, wait until the 'ui-tests' step starts and run:
+        bin/drone/shell $hostname
+
+        You can also open a VSCode tunnel into drone to edit live:
+        bin/drone/vscode $hostname
+        EOF
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
   - name: get-cached-staging
@@ -189,13 +213,13 @@ steps:
       filename: ui-tests-cache-ubuntu-20.tar
 
   - name: ui-tests
-    # see: docker/continuous-integration/Dockerfile
+    # see: docker/ci/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.10.0
+    image: codedotorg/code-dot-org:1.14
     pull: always
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
       - name: mysql
         path: /var/lib/mysql
     environment:
@@ -211,11 +235,14 @@ steps:
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
     commands:
-      - sudo chown -R circleci:circleci .
+      - sudo chown -R ci:ci .
       # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
-      # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-      - export CIRCLE_SHA1=$DRONE_COMMIT
+      - cp -rn "$(pwd)/home/ci/.rbenv" /home/ci || true
+      # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
+      - export GIT_COMMIT=$DRONE_COMMIT
+      - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
+      - export CI_HEAD_BRANCH=$DRONE_SOURCE_BRANCH
+      - export CI_BUILD_NUMBER=$DRONE_BUILD_NUMBER # used by UI tests to set their S3 log path
       - EXIT_CODE=0
       - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
@@ -225,7 +252,7 @@ steps:
     image: plugins/s3-cache
     volumes:
       - name: rbenv
-        path: /home/circleci/.rbenv
+        path: /home/ci/.rbenv
     settings:
       endpoint: s3://cdo-drone
       debug: true
@@ -233,7 +260,7 @@ steps:
       rebuild: true
       filename: ui-tests-cache-ubuntu-20.tar
       mount:
-        - /home/circleci/.rbenv
+        - /home/ci/.rbenv
         # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
         - dashboard/db/ui_test_data.hash
         - dashboard/db/ui_test_data.sql
@@ -289,6 +316,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 8551f3e768d263e92bb0c8060de2b6bfd8cf939aa31c52047621485746726d16
+hmac: 438911a0c59ad180adae90c55e5bf3f15713df10458caf0f44347f7fff00eb4c
 
 ...

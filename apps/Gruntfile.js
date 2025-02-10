@@ -363,6 +363,9 @@ module.exports = function (grunt) {
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
+    generateRegionConfigurations:
+      'bundle exec ./script/generateRegionConfigurations.rb',
+    buildFrontendDependencies: './script/build-frontend-dependencies.sh',
   };
 
   grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
@@ -386,6 +389,7 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
+    'exec:generateRegionConfigurations',
     'newer:copy:static',
   ]);
 
@@ -540,11 +544,13 @@ module.exports = function (grunt) {
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',
+    'exec:generateRegionConfigurations',
     'newer:copy:src',
     'newer:copy:lib',
     'locales',
     'ejs',
     'detect-production-webpack-chunks',
+    'exec:buildFrontendDependencies',
   ]);
 
   grunt.registerTask('check-entry-points', function () {

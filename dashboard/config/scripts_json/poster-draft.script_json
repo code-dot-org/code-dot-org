@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "is_course": true,
       "is_migrated": true,
       "project_sharing": true,
@@ -12,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "poster-draft",
-    "serialized_at": "2022-04-08 15:41:09 UTC",
+    "serialized_at": "2024-11-19 01:19:22 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -560,6 +562,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -1,13 +1,19 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
 
+import {BodyFourText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {
+  selectHasLoadedStudentStatus,
+  selectReadyStudentCount,
+} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
@@ -21,14 +27,14 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
 } from './rubricShapes';
+import StudentScoresAlert from './StudentScoresAlert';
 
 import style from './rubrics.module.scss';
 
 export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
   <div
-    className={classnames(style.rubricContainer, {
-      [style.hiddenRubricContainer]: !isOpen,
-    })}
+    className={style.rubricContainer}
+    style={isOpen ? null : {display: 'none'}}
   >
     <div className={style.rubricHeaderRedesign}>
       <div className={style.rubricHeaderLeftSide}>
@@ -69,20 +75,31 @@ function RubricFloatingActionButton({
   reportingData,
   aiEnabled,
   sectionId,
+  canShowTaScoresAlert,
 }) {
   const sessionStorageKey = 'RubricFabOpenStateKey';
-  const [isOpen, setIsOpen] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
-  );
+
+  const initialIsOpen = useMemo(() => {
+    return JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false;
+  }, []);
+  const [isOpen, setIsOpen] = useState(initialIsOpen);
+
   // Show the pulse if this is the first time the user has seen the FAB in this
   // session. Depends on other logic which sets the open state in session storage.
   const [isFirstSession] = useState(
-    JSON.parse(tryGetSessionStorage(sessionStorageKey, null)) === null
+    tryGetSessionStorage(sessionStorageKey, null) === null
   );
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
   const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
 
   const [internalError, setInternalError] = useState(null);
+
+  const onLevelForEvaluation = currentLevelName === rubric.level.name;
+
+  const readyStudentCount = useAppSelector(selectReadyStudentCount);
+  const hasLoadedStudentStatus = useAppSelector(selectHasLoadedStudentStatus);
+  const showCountBubble =
+    onLevelForEvaluation && hasLoadedStudentStatus && readyStudentCount > 0;
 
   const eventData = useMemo(() => {
     return {
@@ -97,8 +114,45 @@ function RubricFloatingActionButton({
       ? EVENTS.TA_RUBRIC_CLOSED_FROM_FAB_EVENT
       : EVENTS.TA_RUBRIC_OPENED_FROM_FAB_EVENT;
     analyticsReporter.sendEvent(eventName, eventData);
+    if (!isOpen && showCountBubble) {
+      setSeenTaScores();
+    }
     setIsOpen(!isOpen);
   };
+
+  const [hasSeenAlert, setHasSeenAlert] = useState(!canShowTaScoresAlert);
+  const showScoresAlert =
+    canShowTaScoresAlert && !hasSeenAlert && showCountBubble;
+
+  const [dismissConfirmed, setDismissConfirmed] = useState(false);
+
+  const setSeenTaScores = useCallback(() => {
+    setHasSeenAlert(true);
+
+    fetch(`/api/v1/users/set_seen_ta_scores`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({lesson_id: rubric.lesson.id}),
+    })
+      .then(response => {
+        setDismissConfirmed(true);
+      })
+      .catch(error => {
+        console.error('Error setting seen TA scores:', error);
+      });
+  }, [rubric.lesson.id]);
+
+  const viewScores = () => {
+    setSeenTaScores();
+    setIsOpen(true);
+  };
+
+  // Dismiss the alert if the TA window is open initially.
+  useEffect(() => {
+    if (canShowTaScoresAlert && !hasSeenAlert && initialIsOpen) {
+      setSeenTaScores();
+    }
+  }, [canShowTaScoresAlert, hasSeenAlert, initialIsOpen, setSeenTaScores]);
 
   const logInternalError = (error, componentStack) => {
     console.error(
@@ -148,8 +202,10 @@ function RubricFloatingActionButton({
   }, [isOpen]);
 
   const fabIcon = aiEnabled ? aiFabIcon : rubricFabIcon;
+  const allImagesLoaded =
+    isFabImageLoaded && (showCountBubble || isTaImageLoaded);
 
-  const showPulse = isFirstSession && isFabImageLoaded && isTaImageLoaded;
+  const showPulse = isFirstSession && allImagesLoaded && hasLoadedStudentStatus;
   const classes = showPulse
     ? classnames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
@@ -158,6 +214,7 @@ function RubricFloatingActionButton({
     <div id="fab-contained">
       <button
         id="ui-floatingActionButton"
+        aria-label={i18n.openOrCloseTeachingAssistant()}
         className={classes}
         onClick={handleClick}
         type="button"
@@ -168,16 +225,42 @@ function RubricFloatingActionButton({
           onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
         />
       </button>
-      <div
-        className={style.taOverlay}
-        style={{backgroundImage: `url(${taIcon})`}}
-      >
-        <img
-          src={taIcon}
-          alt="TA overlay"
-          onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
-        />
-      </div>
+      {showCountBubble ? (
+        <>
+          <div
+            className={classnames(
+              style.countOverlay,
+              'uitest-count-bubble',
+              dismissConfirmed && 'uitest-dismiss-confirmed'
+            )}
+          >
+            <BodyFourText className={style.countText}>
+              <StrongText>
+                <span aria-label={i18n.aiEvaluationsToReview()}>
+                  {readyStudentCount}
+                </span>
+              </StrongText>
+            </BodyFourText>
+          </div>
+          {showScoresAlert && (
+            <StudentScoresAlert
+              closeAlert={setSeenTaScores}
+              viewScores={viewScores}
+            />
+          )}
+        </>
+      ) : (
+        <div
+          className={style.taOverlay}
+          style={{backgroundImage: `url(${taIcon})`}}
+        >
+          <img
+            src={taIcon}
+            alt="TA overlay"
+            onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
+          />
+        </div>
+      )}
       {/* TODO: do not hardcode in AI setting */}
       <ErrorBoundary
         fallback={
@@ -193,7 +276,7 @@ function RubricFloatingActionButton({
           rubric={rubric}
           studentLevelInfo={studentLevelInfo}
           reportingData={reportingData}
-          currentLevelName={currentLevelName}
+          onLevelForEvaluation={onLevelForEvaluation}
           teacherHasEnabledAi={aiEnabled}
           open={isOpen}
           closeRubric={handleClick}
@@ -211,10 +294,11 @@ RubricFloatingActionButton.propTypes = {
   reportingData: reportingDataShape,
   aiEnabled: PropTypes.bool,
   sectionId: PropTypes.number,
+  canShowTaScoresAlert: PropTypes.bool,
 };
 
 export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;
 
 export default connect(state => ({
-  sectionId: selectedSection(state)?.id,
+  sectionId: selectedSectionSelector(state)?.id,
 }))(RubricFloatingActionButton);

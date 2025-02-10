@@ -5,55 +5,55 @@ layout: wide
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Образец резолюции Недели Компьютерные науки
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Ниже приведен язык образца резолюции в поддержку Недели образования в области компьютерных наук и ее целей, которое может быть использовано государственными и местными законодателями.
 
 * * *
 
-#### **RESOLUTION**  
+#### **РЕЗОЛЮЦИЯ**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Поддержка целей и идеалов «Недели образования в области компьютерных наук»
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Принимая во внимание, что Неделя образования в области компьютерных наук подчеркивает решающую роль компьютерных наук в преобразовании нашего общества и то, как компьютерные науки способствуют инновациям и создают возможности для экономического роста;
 
-Компьютерные технологии стали неотъемлимой частью нашей жизни, они меняют взаимоотношения между людьми и трансформирую мир вокруг нас;
+Принимая во внимание, что компьютерные технологии являются неотъемлемой частью современной культуры и трансформируют взаимодействие людей друг с другом и окружающим миром;
 
 Информационные технологии преобразовывают существующие отрасли промышленности, создают новые направления коммерции, открывают неизведанные горизонты на всех направлениях развития науки, а также являются мощным толчком для повышения производительности труда во всех отраслях экономики;
 
-Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Принимая во внимание, что информатика является фундаментальным предметом, лежащим в основе сектора информационных технологий нашей экономики, который вносит значительный вклад в экономическое производство США;
 
-Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
+Принимая во внимание, что грамотность в области искусственного интеллекта означает знания, навыки и отношения, связанные с работой искусственного интеллекта, включая фундаментальные концепции компьютерных наук и способы безопасного, ответственного и этичного использования искусственного интеллекта;
 
-Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
+Принимая во внимание, что компьютерные науки, включая искусственный интеллект, представляют собой технологии, способные коренным образом трансформировать почти все сектора экономики США;
 
-Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
+Принимая во внимание, что технологическое лидерство во всех областях компьютерных наук, включая искусственный интеллект, является императивом экономики и национальной безопасности;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Принимая во внимание, что перспективы трудоустройства в сфере компьютерных наук благоприятные: по всей стране открыто более 500 000 рабочих мест в сфере вычислительной техники;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Принимая во внимание, что предоставление учащимся возможности участвовать в высококачественных занятиях по информатике открывает перед ними широкие возможности и дает им навыки критического мышления, которые пригодятся им на протяжении всей жизни;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Принимая во внимание, что все учащиеся заслуживают тщательной подготовки к обучению информатике, включая доступ к квалифицированным учителям, технологиям и соответствующей возрасту учебной программе, необходимой для изучения информатики на начальном и среднем уровнях образования;
 
-Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
+Принимая во внимание, что обучение информатике сопряжено с проблемами, требующими решения, включая улучшение доступа к курсам информатики для всех учащихся и обеспечение профессионального развития учителей информатики;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Принимая во внимание, что участие в проекте «Час программирования » во время Недели образования в области компьютерных наук может развеять мифы связанные с областью информационных технологий и побудить больше учащихся продолжить их изучение;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
+Принимая во внимание, что в области компьютерных наук существуют значительные препятствия для обеспечения равенства, в том числе привлечение и удержание кандидатов разной расы, этнической принадлежности и пола на всех уровнях и во всех отраслях;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Принимая во внимание, что Грейс Мюррей Хоппер, одна из первых женщин в области компьютерных наук, разработала новые языки программирования и разработала стандарты для компьютерных систем, которые заложили основу для многих достижений в области компьютерных наук; и
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Принимая во внимание, что неделя {{ campaign_date/start_long }}, приуроченная к дню рождения Грейс Хоппер, объявлена «Неделей образования в области компьютерных наук», то теперь пусть так будет <br />
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Принято решение, что (ПАЛАТА ИЛИ СЕНАТ, ШТАТНЫЙ, ОКРУЖНОЙ, ГОРОДСКОЙ ИЛИ ШКОЛЬНЫЙ СОВЕТ) --
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+(1) поддерживает создание Недели образования в области компьютерных наук ({{ campaign_date/full }});
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(2) призывает школы, преподавателей, родителей и политиков принять участие в Неделе образования в области компьютерных наук, предоставляя учащимся возможность принять участие в проекте "Час кода";
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(3) рекомендует школам, учителям, исследователям, университетам, бизнес-лидерам и политикам определить механизмы передового профессионального развития учителей для обеспечения устойчивого обучения информатике на всех уровнях образования и поощрения учащихся к ознакомлению с концепциями компьютерных наук;
 
-(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
+(4) поощряет возможности, в том числе в рамках существующих программ, для студенток и учащихся из расовых и этнических групп, недостаточно представленных в компьютерных науках.
 
 {{ signup_button }}

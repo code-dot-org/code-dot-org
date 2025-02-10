@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import {unitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
@@ -35,7 +35,7 @@ class StatsTable extends Component {
 
   nameFormatter = (name, {rowData}) => {
     const {sectionId, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(sectionId, scriptName, rowData.id);
+    const studentUrl = unitUrlForStudent(sectionId, scriptName, rowData.id);
 
     if (studentUrl) {
       return (
@@ -203,7 +203,7 @@ const styles = {
 
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({
-  scriptName: getSelectedScriptName(state),
+  scriptName: getSelectedUnitName(state),
   participantType:
     state.teacherSections.sections[state.teacherSections.selectedSectionId]
       .participantType,

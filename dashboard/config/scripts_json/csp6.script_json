@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "hideable_lessons": true,
       "is_course": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csp6",
-    "serialized_at": "2022-04-08 15:40:35 UTC",
+    "serialized_at": "2024-11-19 01:16:59 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -690,6 +691,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

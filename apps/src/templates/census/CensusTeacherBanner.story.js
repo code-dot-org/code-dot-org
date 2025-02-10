@@ -9,20 +9,21 @@ export default {
 export const BasicCensus = () => (
   <CensusTeacherBanner
     schoolYear={2024}
-    onSubmit={() => {}}
+    onSubmitSuccess={() => {}}
     onDismiss={() => {}}
     onPostpone={() => {}}
     onTeachesChange={() => {}}
     onInClassChange={() => {}}
-    ncesSchoolId={'-1'}
+    existingSchoolInfo={{
+      id: 'ABCD',
+      name: 'NCES School',
+      country: 'US',
+      zip: '12345',
+    }}
     question={'how_many_10_hours'}
     teaches={true}
     inClass={true}
-    teacherId={1111111}
     teacherName={'BlakeSmith'}
     teacherEmail={'BlakeSmith@gmail.com'}
-    showInvalidError={false}
-    showUnknownError={false}
-    submittedSuccessfully={true}
   />
 );

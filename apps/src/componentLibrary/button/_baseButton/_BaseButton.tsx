@@ -1,11 +1,10 @@
-import classNames from 'classnames';
-import React, {memo, useMemo, HTMLAttributes} from 'react';
-
-import {ButtonType, ButtonColor} from '@cdo/apps/componentLibrary/button';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import {ButtonType, ButtonColor} from '@code-dot-org/component-library/button';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
+import React, {memo, useMemo, HTMLAttributes} from 'react';
 
 import moduleStyles from './_baseButton.module.scss';
 
@@ -297,7 +296,7 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/_BaseButtonTest.jsx)
+ * * (see apps/test/unit/componentLibrary/_BaseButtonTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
@@ -305,6 +304,6 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
  * Design System: ***_BaseButton*** Component.
  *
  * ***(!IMPORTANT!)*** This is a private component for Designs System use only. It provides a base for ***Button***
- * and ***LinkButton*** components, implementing all of the logic and styles for them.
+ * and ***LinkButton*** components, implementing all the logic and styles for them.
  */
 export default memo(BaseButton);

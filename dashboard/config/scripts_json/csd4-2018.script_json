@@ -14,6 +14,7 @@
           "key": "d9b403ff-aa97-487a-a32d-df4da9967249"
         }
       ],
+      "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -21,12 +22,11 @@
       "project_sharing": true,
       "student_detail_progress_view": true,
       "tts": true,
-      "use_legacy_lesson_plans": true,
-      "version_year": "2018"
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2022-09-28 14:31:28 UTC",
+    "serialized_at": "2025-01-22 18:59:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2911,6 +2911,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

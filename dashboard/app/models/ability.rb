@@ -95,6 +95,7 @@ class Ability
       can :create, Activity, user_id: user.id
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
+      can :create, UserLevelInteraction, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower do |follower|
         follower.student_user_id == user.id && !user.student?
@@ -103,6 +104,14 @@ class Ability
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :view_project_commits, User do |project_owner|
         project_owner.id == user.id || can?(:code_review, project_owner)
+      end
+
+      can :submission_status, Project do |project|
+        project.owner_id == user.id
+      end
+
+      can :submit, Project do |project|
+        project.owner_id == user.id && project.submission_status == SharedConstants::PROJECT_SUBMISSION_STATUS[:CAN_SUBMIT]
       end
 
       can :create, CodeReview do |code_review, project|
@@ -257,16 +266,6 @@ class Ability
         can :report_csv, :peer_review_submissions
       end
 
-      if user.has_ai_tutor_access?
-        can :chat_completion, :openai_chat
-        can :create, AiTutorInteraction, user_id: user.id
-        can :index, AiTutorInteraction
-      end
-
-      if user.can_view_student_ai_chat_messages?
-        can :index, AiTutorInteraction
-      end
-
       if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :chat_completion, :ai_diff
       end
@@ -353,6 +352,11 @@ class Ability
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       can :extra_links, ProjectsController
+    end
+
+    if user.persisted? && user.can_use_ai_iteration_tools?
+      can [:tools], :ai_iteration
+      can [:fetch_student_code_samples], :student_code_sample
     end
 
     # In order to accommodate the possibility of there being no database, we
@@ -479,14 +483,36 @@ class Ability
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      can [:log_chat_event, :start_chat_completion, :chat_request, :find_toxicity], :aichat do
+      can :index, AiTutorInteraction do
+        user.can_view_student_ai_chat_messages? || user.has_ai_tutor_access?
+      end
+
+      can :create, AiTutorInteraction do
+        user.has_ai_tutor_access?
+      end
+
+      can :chat_completion, :openai_chat do
+        user.has_ai_tutor_access?
+      end
+
+      can [:start_chat_completion, :chat_request], :aichat_request do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
+
+      can :find_toxicity, :aichat do
+        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
+      end
+
+      can :log_chat_event, :aichat_event do
+        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
+      end
+
       # Additional logic that confirms that a given teacher should have access
-      # to a given student's chat history is in aichat_controller.
-      can :student_chat_history, :aichat do
+      # to a given student's chat history is in aichat_events_controller.
+      can [:student_chat_history, :submit_teacher_feedback], :aichat_event do
         user.teacher_can_access_ai_chat?
       end
+
       can :user_has_access, :aichat
     end
 

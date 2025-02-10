@@ -5,12 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # For loops
 
-In lesson 4 we will be focusing on using for loops with Java.  We will also incorporate your knowledge of conditional statements, arithmetic operations, and variables as you write and debug code in programs.  
+#### In lesson 4 we will be focusing on using for loops with Java.  We will also incorporate your knowledge of conditional statements, arithmetic operations, and variables as you write and debug code in programs.  
 
-**After this lesson you will be able to:**
+#### **After this lesson you will be able to:**
 
-* How to read, write, and debug for loops in Java
+- #### How to read, write, and debug for loops in Java
 
-Let’s get started with learning for loops. 
+## Let’s get started with learning for loops.
 
 MARKDOWN

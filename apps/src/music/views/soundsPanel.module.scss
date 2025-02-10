@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .soundsPanel {
   user-select: none;
@@ -11,10 +11,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
+    gap: 8px;
 
     .segmentedButtons {
       span {
-        font-size: 12px !important;
+        user-select: none;
       }
     }
   }
@@ -101,6 +102,10 @@
 
     &:hover {
       background-color: $neutral_dark90;
+
+      .lengthNoMarginRight {
+        color: $neutral_dark30;
+      }
     }
 
     &:focus-visible {
@@ -114,13 +119,14 @@
     &Left {
       display: flex;
       align-items: center;
-      width: 200px;
+      width: calc(100% - 30px);
 
       .typeIcon {
         margin-right: 6px;
         margin-left: 4px;
         width: 24px;
         text-align: center;
+        flex-shrink: 0;
       }
 
       .name {
@@ -137,6 +143,11 @@
 
     &Middle {
       font-size: 11px;
+      min-width: 240px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     &Right {
@@ -155,6 +166,10 @@
 
     &NoMarginRight {
       margin-right: 0;
+
+      &Selected {
+        color: $neutral_dark20;
+      }
     }
   }
 

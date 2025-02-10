@@ -15,6 +15,7 @@ import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
 import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
 
 import Certificate from './Certificate';
+import SuggestedAssignableCourses from './SuggestedAssignableCourses';
 
 import style from './certificate_batch.module.scss';
 
@@ -65,9 +66,9 @@ export default function Congrats(props) {
    * @returns {Object} extraLinkUrl, extraLinkText
    */
   const getExtraLinkData = (language, tutorial, currentDate) => {
-    // https://codedotorg.atlassian.net/browse/P20-948
-    const codingPartyStart = new Date('2024-06-17T00:00:00+09:00');
-    const codingPartyEnd = new Date('2024-07-28T00:00:00+09:00');
+    // https://codedotorg.atlassian.net/browse/P20-1144
+    const codingPartyStart = new Date('2024-10-07:00:00+09:00');
+    const codingPartyEnd = new Date('2024-11-17:00:00+09:00');
     const codingPartyActive =
       codingPartyStart <= currentDate && currentDate < codingPartyEnd;
     if (language === 'ko' && codingPartyActive) {
@@ -75,12 +76,17 @@ export default function Congrats(props) {
         '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
       if (/oceans/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2024-1-oceans.png'),
+          extraLinkUrl: pegasus('/files/online-coding-party-2024-2-oceans.png'),
           extraLinkText: extraLinkText,
         };
       } else if (/hero/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2024-1-hero.png'),
+          extraLinkUrl: pegasus('/files/online-coding-party-2024-2-hero.png'),
+          extraLinkText: extraLinkText,
+        };
+      } else if (/dance/.test(tutorial)) {
+        return {
+          extraLinkUrl: pegasus('/files/online-coding-party-2024-2-dance.png'),
           extraLinkText: extraLinkText,
         };
       }
@@ -114,6 +120,8 @@ export default function Congrats(props) {
     nextCourseTitle,
     nextCourseDesc,
     curriculumUrl,
+    assignableCourseSuggestions,
+    isEnglish,
   } = props;
 
   // Determine what time we should consider the current time to be when
@@ -435,6 +443,12 @@ export default function Congrats(props) {
               {renderExtraCertificateLinks(language, tutorial, currentDate)}
             </Certificate>
           </div>
+          {assignableCourseSuggestions && (
+            <SuggestedAssignableCourses
+              assignableCourseSuggestions={assignableCourseSuggestions}
+              isEnglish={isEnglish}
+            />
+          )}
           {renderRecommendedOptions()}
         </>
       )}
@@ -468,4 +482,6 @@ Congrats.propTypes = {
   nextCourseTitle: PropTypes.string,
   nextCourseDesc: PropTypes.string,
   currentDate: PropTypes.object,
+  assignableCourseSuggestions: PropTypes.array,
+  isEnglish: PropTypes.bool,
 };

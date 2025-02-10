@@ -1,4 +1,4 @@
-import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {UnconnectedSectionAssigner as SectionAssigner} from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
@@ -19,19 +19,5 @@ describe('SectionAssigner', () => {
     const wrapper = mount(<SectionAssigner {...defaultProps} />);
 
     expect(wrapper.find('TeacherSectionSelector').exists()).toBe(true);
-  });
-
-  it('does not render an MultipleAssignButton if showAssignButton is false', () => {
-    const wrapper = mount(<SectionAssigner {...defaultProps} />);
-
-    expect(wrapper.find('MultipleAssignButton').exists()).toBe(false);
-  });
-
-  it('renders an MultipleAssignButton', () => {
-    const wrapper = shallow(
-      <SectionAssigner {...defaultProps} showAssignButton={true} />
-    );
-
-    expect(wrapper.find('Connect(MultipleAssignButton)').exists()).toBe(true);
   });
 });

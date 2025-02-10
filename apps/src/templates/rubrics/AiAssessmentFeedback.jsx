@@ -1,7 +1,7 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import PropTypes from 'prop-types';
 import React, {useContext, useState} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   BodyFourText,
   StrongText,
@@ -130,6 +130,7 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
                   setAIOtherContent(e.target.value);
                 }}
                 type="text"
+                // eslint-disable-next-line react/forbid-dom-props
                 data-testid="ai-assessment-feedback-textarea"
               />
             </div>

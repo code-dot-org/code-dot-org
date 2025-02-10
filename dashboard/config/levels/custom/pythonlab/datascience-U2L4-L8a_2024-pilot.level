@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2024-09-15T21:22:21.000Z",
   "level_num": "custom",
@@ -22,7 +21,7 @@
           "language": "py",
           "contents": "import matplotlib.pyplot as plt\nimport pandas as pd\n\n#Import the data\ndf = pd.read_csv('US_Gas_Prices.csv', sep=',')\ndf.columns\n\n# Create the chart\nplt.plot(df['Date'], df['US Average'], linestyle=':', color='blue')\n\n# ADD CODE HERE To Display the chart\n\n\n# Add title and labels\nplt.title( 'US Average Gas Prices')\nplt.xlabel('Date')\nplt.ylabel('US Dollars')",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
         },
         "1": {
@@ -46,8 +45,19 @@
     "project_template_level_name": "datascience-U2L4-L6aTempl_2024-pilot",
     "teacher_markdown": "If students encounter issues with their plots not displaying, remind them to check for plt.show() at the end of their plotting commands.\r\n",
     "bubble_choice_description": "Practice creating a line chart to represent the average value of Bitcoin each year.",
-    "thumbnail_url": "https://images.code.org/4a2ca020cecfdfe680777fda74a2060f-wallet.png"
+    "thumbnail_url": "https://images.code.org/4a2ca020cecfdfe680777fda74a2060f-wallet.png",
+    "validation_file": {
+      "id": "2",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\nimport matplotlib.pyplot as plt\n\nclass TestBitcoinChart(unittest.TestCase):\n    def setUp(self):\n        # Read the student's code from 'main.py' and parse it into an AST\n        with open('main.py', 'r') as f:\n            self.tree = ast.parse(f.read())\n\n    def find_plot_call(self):\n        for node in ast.walk(self.tree):\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == 'plot' and isinstance(node.func.value, ast.Name) and node.func.value.id == 'plt':\n                    return node\n        return None\n\n    def find_function_call(self, func_name):\n        for node in ast.walk(self.tree):\n            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):\n                if node.func.attr == func_name and isinstance(node.func.value, ast.Name) and node.func.value.id == 'plt':\n                    return True\n        return False\n\n    def is_column_access(self, node, column_name):\n        return (isinstance(node, ast.Subscript) and \n                isinstance(node.value, ast.Name) and \n                isinstance(node.slice, ast.Constant) and \n                node.slice.value == column_name)\n\n    def test_step_1_create_line_chart(self):\n        \"\"\"Test if a line chart is created using plot with correct data.\"\"\"\n        plot_call = self.find_plot_call()\n        self.assertIsNotNone(plot_call, \"No plt.plot() call found.\")\n        \n        args = plot_call.args\n        self.assertGreaterEqual(len(args), 2, \"plt.plot() should have at least two arguments (x and y).\")\n        \n        x_arg = args[0]\n        y_arg = args[1]\n        self.assertTrue(self.is_column_access(x_arg, 'Year'), \"X-axis should use the 'Year' column.\")\n        self.assertTrue(self.is_column_access(y_arg, 'Price'), \"Y-axis should use the 'Price' column.\")\n\n    def test_step_2_chart_labels(self):\n        \"\"\"Test if title, x-axis, and y-axis labels are added to the chart.\"\"\"\n        self.assertTrue(self.find_function_call('title'), \"Chart title not set using plt.title().\")\n        self.assertTrue(self.find_function_call('xlabel'), \"X-axis label not set using plt.xlabel().\")\n        self.assertTrue(self.find_function_call('ylabel'), \"Y-axis label not set using plt.ylabel().\")\n\n    def test_step_3_show_chart(self):\n        \"\"\"Test if the chart is displayed.\"\"\"\n        self.assertTrue(self.find_function_call('show'), \"Chart not displayed using plt.show().\")\n\nif __name__ == '__main__':\n    unittest.main()",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-15T21:22:21.344+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L7a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L7a_2024-pilot\"},{\"changed_at\":\"2024-09-15 21:25:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 21:31:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-09-15T21:22:21.344+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L7a_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L7a_2024-pilot\"},{\"changed_at\":\"2024-09-15 21:25:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"teacher_markdown\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-09-15 21:31:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-05 20:06:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-10-05 20:07:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-10-14 03:46:54 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Pythonlab>

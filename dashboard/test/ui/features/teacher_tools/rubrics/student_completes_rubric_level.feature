@@ -9,12 +9,8 @@ Feature: Student can complete rubric-enabled level
     # Student submits code
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
-    And I click selector "#runButton"
-    And I wait until element ".project_updated_at" contains text "Saved"
-    And I wait until element "#submitButton" is visible
-    And I click selector "#submitButton"
-    And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button" to load a new page
+    And I submit this gamelab level
+    
 
     # Student can see new progress in header
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
@@ -31,12 +27,7 @@ Feature: Student can complete rubric-enabled level
     # Student submits code
     When I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
-    And I click selector "#runButton"
-    And I wait until element ".project_updated_at" contains text "Saved"
-    And I wait until element "#submitButton" is visible
-    And I click selector "#submitButton"
-    And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button" to load a new page
+    And I submit this gamelab level
     # Student can see new progress in header
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the lab page to fully load

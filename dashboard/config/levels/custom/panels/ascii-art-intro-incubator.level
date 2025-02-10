@@ -1,0 +1,31 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-10-28T16:39:18.000Z",
+  "level_num": "custom",
+  "user_id": 18914,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Lets create some art using ASCII characters! \n\n::: details [**Image Credits**]\n* [Bear image](https://www.asciiart.eu/animals/bears)\n* [Frog image](https://www.asciiart.eu/animals/frogs)\n* [Dolphin image](https://www.asciiart.eu/animals/dolphins)\n* [Cat image](https://www.asciiart.eu/animals/cats)\n* [Dinosaurs image](https://www.asciiart.eu/animals/reptiles/dinosaurs)\n* [Fish image](https://www.asciiart.eu/animals/fish)\n:::",
+        "imageUrl": "https://images.code.org/41837932928625cd0ae910647fa2a95a-Screenshot 2024-10-31 at 11.25.34 AM.png",
+        "key": "ascii-art-intro-incubator-74928108-2dc7-4468-85a9-e2cd5e18a3b2"
+      },
+      {
+        "text": "ASCII art is art that is created using only keys on your keyboard. For example, this fish is made out of the keys: \n\n>  < { \">\n",
+        "imageUrl": "https://images.code.org/b80ab56b69fa5261caa29477f9f91b7b-Screenshot 2024-11-04 at 1.34.56 PM.png",
+        "key": "ascii-art-intro-incubator-33d1aea9-be91-4293-afa8-4e67ffb093ed"
+      },
+      {
+        "text": "You will be using Python and a brand new Code.org Lab called Codebridge to create some ASCII art.  ",
+        "imageUrl": "https://images.code.org/cd74698f51c3331d37437b3491f2226e-Screenshot 2024-11-04 at 1.49.58 PM.png",
+        "key": "ascii-art-intro-incubator-15f6f7c8-dc8f-4ba4-b138-dc13deb651dd"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-28 17:11:01 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-28 19:05:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-10-31 15:24:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 15:34:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 15:35:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 17:44:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 18:44:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-04 18:51:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

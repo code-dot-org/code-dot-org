@@ -1,5 +1,5 @@
 @no_mobile
-Feature: Using the V2 teacher dashboard
+Feature: Using the V2 progress page
 
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
@@ -33,8 +33,6 @@ Scenario: Viewing student metadata
   Given I am assigned to unit "allthethings"
   And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/9?noautoplay=true"
   And I wait to see "#runButton"
-  When I press "runButton"
-  And I wait for 5 seconds
   And I submit this level
 
   # Progress tab

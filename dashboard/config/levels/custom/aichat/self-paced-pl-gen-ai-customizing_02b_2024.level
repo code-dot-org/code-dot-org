@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Teacher Tip**: In this level, you will notice the middle segment, ‘Model Customization’. This is the same chatbot as the previous level, but now you can see its purpose in the model card. Encourage your students to carefully read each section of the model card to fully understand how this chatbot works.\r\n\r\n## Explore a Chatbot Round 2\r\n\r\nThis chatbot now has additional information you can view, called the **Model Card**. This displays additional information for you, the user, about how the chatbot works.\r\n\r\n### Do This\r\n\r\n1) Read the model card to learn more about how the chatbot works\r\n2) With this new information: try to have a successful conversation with the chatbot\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!",
+    "long_instructions": "##  🔍Teacher Tip\r\n\r\nIn this level, you will notice the middle segment, ‘Model Customization’. This is the same chatbot as the previous level, but now you can see its purpose in the model card. Encourage your students to carefully read each section of the model card to fully understand how this chatbot works.\r\n\r\n---\r\n\r\n## Explore a Chatbot Round 2\r\n\r\nThis chatbot now has additional information you can view, called the **Model Card**. This displays additional information for you, the user, about how the chatbot works.\r\n\r\n### Do This\r\n\r\n1) Read the model card to learn more about how the chatbot works\r\n2) With this new information: try to have a successful conversation with the chatbot\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -49,6 +49,6 @@
     },
     "name_suffix": "_2024"
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-11T17:49:16.660+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L2_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L2_2024\"},{\"changed_at\":\"2024-09-12 16:57:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-11T17:49:16.660+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L2_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L2_2024\"},{\"changed_at\":\"2024-09-12 16:57:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-03 14:11:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -33,6 +33,7 @@ class AccountPurgerIntegrationTest < ActionDispatch::IntegrationTest
   # We can purge a student in a section when they have a family name.
   test 'can purge a student account with a family name that is in a section' do
     DCDO.stubs(:get).with('family-name-features', false).returns(true)
+    DCDO.stubs(:get).with('migration_service_enabled', false).returns(false)
     user = create :young_student_with_teacher
 
     # Delete the user

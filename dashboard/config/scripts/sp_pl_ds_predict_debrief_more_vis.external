@@ -1,0 +1,36 @@
+name 'SP-PL-DS-Predict_Debrief_More_Vis'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Debriefing Predict and Run
+
+
+## You might have noticed:
+<img src="https://images.code.org/fee63fd0e5ad5d4734a8fe28cc69edb7-image-1727886727528.png" alt="notice emoji" width="250px" style="border-radius:10px; float:right; margin: 0 40px 0px 0px;">
+
+- #### The `groupby()` function is used to group the data by 'Year' and 'Creature'.
+- #### The data is reorganized with `unstack()` to prepare it for visualization.
+- #### The `plot()` function creates a stacked bar chart.
+- #### The chart title and axis labels are added using `plt.title()`, `plt.xlabel()`, and `plt.ylabel()`.
+
+## You might Wonder: 
+
+<img src="https://images.code.org/848c3672cf46fce0d2e63eb58f7580e3-image-1727886614718.png" alt="notice emoji" width="130px" style="border-radius:10px; float:right; margin: 0 90px 0px 0px;">
+
+- #### Why is `unstack()` necessary, and how does it contribute to creating the stacked bar chart?
+- #### How would changing the grouping parameters impact the visualization?
+- #### What effect would using a different chart type have on interpreting the data?
+
+
+<br>
+
+<div style="clear:both;"></div>
+<br>
+
+
+##Let's continue to the **Investigate & Modify** levels.
+
+
+
+MARKDOWN

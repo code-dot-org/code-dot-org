@@ -1,0 +1,89 @@
+name 'self-paced-equity-U2L4-information-processing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Thread 1: Identity and Culture
+
+## What is it?
+
+#### We believe that when students feel a strong sense of belonging in the CS classroom, they experience greater success. Affirming personal and cultural identity builds trust, which in turn helps transition students from dependent learners to independent learners as they grow in the four dimensions of an academic mindset:
+
+<div style="background-color: #B8E0E5; color: #000; padding: 20px; border-radius: 10px; width: 80%; margin: 20px auto; text-align: center;  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); border-top: 5px solid #4A90E2; border-bottom: 5px solid #4A90E2;">
+<p style="font-size: 24px; margin-bottom: 20px;"><b>Beliefs of Students with an Academic Mindset<sup>1</sup></b></p>
+    <p style="margin-bottom: 15px; font-size: 18px; line-height: 1.6;">
+        <strong>📚 I belong to this academic community.</strong> A strong sense of academic belonging where students see themselves as members of not only a social community, but an intellectual community.
+    </p>
+    <p style="margin-bottom: 15px; font-size: 18px; line-height: 1.6;">
+        <strong>🏆 I can succeed at this.</strong> The degree to which students believe they are "good" at a particular kind of task or field of study is strongly associated with academic perseverance.
+    </p>
+    <p style="margin-bottom: 15px; font-size: 18px; line-height: 1.6;">
+        <strong>🌱 My ability and competence grow with my effort.</strong> The degree to which students have a growth mindset means they are more likely to interpret academic challenges or mistakes as opportunities to learn and develop their brains.
+    </p>
+    <p style="margin-bottom: 15px; font-size: 18px; line-height: 1.6;">
+        <strong>💡 This work has value for me.</strong> The intrinsic value placed on academic tasks and topics that connect in some way to students' lives, future educational pursuits, or current interests.
+    </p>
+</div>
+
+
+#### As students become independent learners and develop an academic mindset, they then feel supported to put forth effort, share their perspectives, ask questions, and take risks to expand their knowledge and skills.
+
+## What does it look like?
+
+<img src="https://images.code.org/bfc983fe6ea794003f89fd20dc521083-image-1736464360709.12.37 PM.png" alt="A student with a head covering smiles in a classroom." style="border-radius:20px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0px 20px 20px 20px;">
+
+* #### Incorporating strategies and activities to support teachers in connecting with and validating students from diverse backgrounds.
+* #### Supporting teachers' authentic connections with their students by learning about their personal interests and strengths and supporting their growth.
+* #### Showing students representations of themselves in the CS industry to help them see what is possible.
+* #### Providing students the time and space to work through problems and explore new concepts.
+* #### Developing students' skills in the problem-solving process to encourage persistence, effort, and engagement.
+
+
+## Examples in Code.org Curricula
+
+##### Click on the arrows below to expand each section.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Elementary Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### In <a href="https://studio.code.org/s/coursef-2024/lessons/2" target="blank" rel="noopener noreferrer">Course F, Lesson 2: Introducing Sprite Lab</a>, the lesson opens with a couple of questions about students' preferences for apps: <i>"What is your favorite game or app? What choices do you get to make while using it?"</i> The teacher then writes the apps and reasons for liking them on a whiteboard or anchor chart. This is a great way to connect with students and affirm that their opinions are valuable.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">Middle School Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### Students are introduced to debugging - the process of finding and removing errors in code - in <a href="https://studio.code.org/s/csd2-2024/lessons/3" target="blank" rel="noopener noreferrer">Unit 2 - Web Development, Lesson 3 - Headings and Lists</a>. Student watch a <a href="https://www.youtube.com/watch?v=auv10y-dN4s" target="blank" rel="noopener noreferrer">"How to Debug" video</a> and are encouraged to refer to the <a href="https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit?tab=t.0#" target="blank" rel="noopener noreferrer">Student Guide to Debugging</a>. In the lesson, teachers receive the following guidance to help students with debugging:
+
+#### <i>**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. To counter this, we recommend **normalizing bugs and mistakes as something that happens to everyone** - it’s just part of the process. </i>
+
+#### By encouraging students when they make a mistake, teachers can help them adopt the mindset that they can be successful at computer science.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+
+<summary style="font-size: 18px; font-weight: bold;">High School Example</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+<p style="font-size: 18px;">
+
+#### In CS Principles Unit 7 - Parameters, Return, and Libraries, the end-of-unit project, <a href="https://studio.code.org/s/csp7-2024/lessons/8" target="blank" rel="noopener noreferrer">Make a Library</a>, prompts students to curate a library of **functions** that they can use in their own code. Functions are a named group of programming instructions. 
+
+#### Once students make their libraries, they can publish them to a class repository of student libraries. From there, other students can download their libraries of code, use them to code, and give feedback. Students are able to see their contributions as useful to other students and become an active member of the learning community.
+
+</p></div>
+</details>
+
+___
+
+##### <sup>1</sup> Zaretta Hammond, <i>Culturally Responsive Teaching & the Brain.</i> (California: Corwin, 2015), p.75-118
+
+MARKDOWN

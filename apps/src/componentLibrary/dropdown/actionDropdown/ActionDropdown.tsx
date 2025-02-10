@@ -1,20 +1,18 @@
-import classNames from 'classnames';
-import React, {useCallback, memo, AriaAttributes} from 'react';
-
-import {ButtonProps} from '@cdo/apps/componentLibrary/button';
+import {ButtonProps} from '@code-dot-org/component-library/button';
 import {
   DropdownProviderWrapper,
   useDropdownContext,
-} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown, {
-  _CustomDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+} from '@code-dot-org/component-library/common/contexts';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
+import React, {useCallback, memo, AriaAttributes} from 'react';
 
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
+import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+
+import moduleStyles from './../customDropdown.module.scss';
 
 export interface ActionDropdownOption extends _CustomDropdownOption {
   onClick: () => void;
@@ -128,7 +126,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/ActionDropdownTest.jsx)
+ * * (see apps/test/unit/componentLibrary/ActionDropdownTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

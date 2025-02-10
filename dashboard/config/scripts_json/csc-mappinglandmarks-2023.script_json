@@ -4,16 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2023"
+      "version_year": "2023",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "csc-mappinglandmarks",
-    "serialized_at": "2024-07-26 22:46:19 UTC",
+    "serialized_at": "2025-01-09 16:38:18 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

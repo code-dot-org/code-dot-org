@@ -1,3 +1,5 @@
+require 'cdo/i18n'
+
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
 
@@ -14,6 +16,28 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
+    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
+      if request.query_parameters.include? "user_id"
+        redirect_query_string = request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")
+        if redirect_query_string.empty?
+          redirect_to script_path(@script)
+        else
+          redirect_to "#{script_path(@script)}?#{redirect_query_string}"
+        end
+        return
+      end
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}
+        most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}.last
+        if !params[:section_id]
+          redirect_to "/teacher_dashboard/sections/#{most_recent_section.id}/unit/#{@script.name}"
+          return
+        elsif params[:section_id]
+          redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/unit/#{@script.name}"
+          return
+        end
+      end
+    end
+
     if @script.is_deprecated
       return render 'errors/deprecated_course'
     end
@@ -69,6 +93,7 @@ class ScriptsController < ApplicationController
       locale_code: request.locale,
       course_link: @script.course_link(params[:section_id]),
       course_title: @script.course_title || I18n.t('view_all_units'),
+      is_single_unit_course: @script.unit_group&.single_unit_course?,
       sections: @sections
     }
 
@@ -171,7 +196,7 @@ class ScriptsController < ApplicationController
       script: @script ? @script.summarize_for_unit_edit : {},
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
-      locales: options_for_locale_select,
+      locales: Cdo::I18n.locale_options,
       script_families: Unit.family_names,
       version_year_options: Unit.get_version_year_options,
       is_levelbuilder: current_user.levelbuilder?

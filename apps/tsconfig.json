@@ -6,6 +6,8 @@
 {
   "extends": "./tsconfig.build.json",
   "include": [
+    "./.storybook/**/*.js",
+    "./.storybook/**/*.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./test/**/*.ts",

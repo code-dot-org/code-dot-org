@@ -1,19 +1,20 @@
+import Alert, {AlertProps} from '@code-dot-org/component-library/alert';
+import Button from '@code-dot-org/component-library/button';
+import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
   setModelCardProperty,
   saveModelCard,
-  publishModel,
+  publishModelCard,
   selectHasFilledOutModelCard,
   selectHavePropertiesChanged,
-} from '@cdo/apps/aichat/redux/aichatRedux';
-import Alert, {AlertProps} from '@cdo/apps/componentLibrary/alert/Alert';
-import Button from '@cdo/apps/componentLibrary/button/Button';
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@cdo/apps/aichat/redux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import aichatI18n from '../../locale';
 import {ModelCardInfo} from '../../types';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
@@ -45,7 +46,7 @@ const PublishNotes: React.FunctionComponent = () => {
   }, [dispatch]);
 
   const onPublish = useCallback(() => {
-    dispatch(publishModel());
+    dispatch(publishModelCard());
   }, [dispatch]);
 
   const spinnerIconProps: FontAwesomeV6IconProps = {
@@ -54,8 +55,8 @@ const PublishNotes: React.FunctionComponent = () => {
   };
 
   const [alertText, type]: [string, AlertProps['type']] = hasFilledOutModelCard
-    ? ['Ready to publish', 'success']
-    : ['In order to publish, you must fill out a model card', 'warning'];
+    ? [aichatI18n.modelCard_publishSuccess(), 'success']
+    : [aichatI18n.modelCard_publishWarning(), 'warning'];
 
   return (
     <div
@@ -114,7 +115,7 @@ const PublishNotes: React.FunctionComponent = () => {
       <div className={modelCustomizationStyles.footerButtonContainer}>
         <Button
           id="uitest-publish-notes-save"
-          text="Save"
+          text={aichatI18n.modelCustomizationSaveButtonText()}
           iconLeft={
             saveInProgress && currentSaveType === 'saveModelCard'
               ? spinnerIconProps

@@ -343,6 +343,7 @@ roles = {
     RoleName: 'ProductManager_FullAccess',
     GoogleIdsSSMParameter: 'ProductGoogleIDs',
     ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
       '!Ref BedrockKnowledgeBaseInvocationPolicy',
       '!Ref CloudwatchDashboardViewerPolicy',
     ]
@@ -768,45 +769,6 @@ roles.each do |name, config| %>
             - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
       ManagedPolicyArns:
       - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-  # Percona Monitoring and Management RDS access role.
-  # See: https://www.percona.com/doc/percona-monitoring-and-management/amazon-rds.html#creating-a-policy
-  # TODO: Move to Data stack
-  PMMRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service: [ec2.amazonaws.com, ecs-tasks.amazonaws.com]
-            Action: ['sts:AssumeRole']
-      Policies:
-        - PolicyName: PMMRolePolicy
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Sid: Stmt1508404837000
-                Effect: Allow
-                Action:
-                  - 'rds:DescribeDBInstances'
-                  - 'cloudwatch:GetMetricStatistics'
-                  - 'cloudwatch:ListMetrics'
-                Resource: '*'
-              - Sid: Stmt1508410723001
-                Effect: Allow
-                Action:
-                  - 'logs:DescribeLogStreams'
-                  - 'logs:GetLogEvents'
-                  - 'logs:FilterLogEvents'
-                Resource:
-                  - "arn:aws:logs:*:*:log-group:RDSOSMetrics:*"
-  # TODO: Move to Data stack
-  PMMInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      InstanceProfileName: Percona-Monitoring-Management
-      Path: '/'
-      Roles: [!Ref PMMRole]
   # Global managed-policy named role used by ECS.
   # Ref: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html
   EcsTaskExecutionRole:
@@ -882,10 +844,6 @@ Outputs:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-FirehoseLambdaRoleARN"}
-  PerconaMonitoringRoleARN:
-    Description: Percona Monitoring Role ARN
-    Value: !GetAtt PMMRole.Arn
-    Export: {Name: !Sub "${AWS::StackName}-PerconaMonitoringRoleARN"}
   SessionPermissions:
     Description: Session Permissions
     Value: !Ref SessionPermissions

@@ -2,7 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.4]()
+## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/62863)
+
+- updated color variables to use `primitiveColors.css`
+
+## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62719)
+
+- rewritten `LinkTest` in typescript
+- refactored/optimized `LinkTest.tsx`
+
+## [0.3.0](https://github.com/code-dot-org/code-dot-org/pull/61754)
+
+- updated `Link` props to support native HTML Element attributes
+
+## [0.2.4](https://github.com/code-dot-org/code-dot-org/pull/61281)
 
 * minor types updates
 

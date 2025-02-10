@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": ">Throughout this unit, the **PRIMM** method is used. The **\"Predict\"** step is crucial because it encourages students to think critically about code behavior before running it, fostering deeper understanding and problem-solving skills.\r\n\r\n# Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!\r\n\r\n",
+    "long_instructions": ">Notice the two different files for this program. Toggle between the two of them.\r\n\r\n> **gas_prices.csv** is the data file.\r\n\r\n> **main.py** is the main code that is run during this program. \r\n\r\n# Predict and Run\r\n\r\n**What do you think this program does?**\r\n\r\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!\r\n\r\n*You must type an answer and run the program before you can continue.*",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -49,6 +49,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-09-25T20:34:21.224+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L1_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L1_2024-pilot\"},{\"changed_at\":\"2024-09-25 20:46:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-25T20:34:21.224+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L3-L1_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L3-L1_2024-pilot\"},{\"changed_at\":\"2024-09-25 20:46:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 21:07:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 21:10:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 21:11:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 21:13:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 21:14:20 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-11-19 21:16:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

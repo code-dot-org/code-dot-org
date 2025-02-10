@@ -261,6 +261,24 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal LEVEL_STATUS.attempted,  best_activity_css_class([user_level1, user_level2])
   end
 
+  test 'school year returns correctly on July 1' do
+    Timecop.travel Time.local(2024, 7, 1, 12, 0, 0) do
+      assert_equal '2024-25', school_year
+    end
+  end
+
+  test 'school year returns correctly in the fall' do
+    Timecop.travel Time.local(2024, 10, 14, 12, 0, 0) do
+      assert_equal '2024-25', school_year
+    end
+  end
+
+  test 'school year returns correctly in the spring' do
+    Timecop.travel Time.local(2025, 3, 7, 12, 0, 0) do
+      assert_equal '2024-25', school_year
+    end
+  end
+
   private def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
   end

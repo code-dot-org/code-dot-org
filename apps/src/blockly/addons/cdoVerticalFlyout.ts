@@ -1,4 +1,4 @@
-import GoogleBlockly from 'blockly/core';
+import * as GoogleBlockly from 'blockly/core';
 
 import {ExtendedWorkspaceSvg} from '../types';
 

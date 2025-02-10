@@ -16,6 +16,7 @@ describe('ImageWithStatus', () => {
         height={THUMBNAIL_SIZE}
       />
     );
+    // eslint-disable-next-line no-restricted-properties
     const loading = container.querySelector('div[data-image-status="loading"]');
     expect(loading).not.toBeNull();
   });
@@ -29,10 +30,12 @@ describe('ImageWithStatus', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const image = container.querySelector(`img[src='${CAT_IMAGE_URL}']`);
     image.dispatchEvent(new Event('load'));
 
     const loaded = await waitFor(() =>
+      // eslint-disable-next-line no-restricted-properties
       container.querySelector('div[data-image-status="loaded"]')
     );
     expect(loaded).not.toBeNull();
@@ -47,10 +50,12 @@ describe('ImageWithStatus', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const image = container.querySelector(`img[src='${CAT_IMAGE_URL}']`);
     image.dispatchEvent(new Event('load'));
 
     let loaded = await waitFor(() =>
+      // eslint-disable-next-line no-restricted-properties
       container.querySelector('div[data-image-status="loaded"]')
     );
     expect(loaded).not.toBeNull();
@@ -64,12 +69,14 @@ describe('ImageWithStatus', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const loading = container.querySelector('div[data-image-status="loading"]');
     expect(loading).not.toBeNull();
 
     image.dispatchEvent(new Event('load'));
 
     loaded = await waitFor(() =>
+      // eslint-disable-next-line no-restricted-properties
       container.querySelector('div[data-image-status="loaded"]')
     );
     expect(loaded).not.toBeNull();
@@ -84,10 +91,12 @@ describe('ImageWithStatus', () => {
       />
     );
 
+    // eslint-disable-next-line no-restricted-properties
     const image = container.querySelector(`img[src='${BOGUS_IMAGE_URL}']`);
     image.dispatchEvent(new Event('error'));
 
     const error = await waitFor(() =>
+      // eslint-disable-next-line no-restricted-properties
       container.querySelector('div[data-image-status="error"]')
     );
     expect(error).not.toBeNull();

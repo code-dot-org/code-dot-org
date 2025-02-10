@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-import {MusicConditions} from '@cdo/apps/music/progress/MusicValidator';
+import {MusicConditions} from '@cdo/apps/music/progress/MusicConditions';
 import {convertOptionalStringToBoolean} from '@cdo/apps/types/utils';
 import {createUuid} from '@cdo/apps/utils';
 

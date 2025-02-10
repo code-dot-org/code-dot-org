@@ -22,7 +22,7 @@ class ActiveJobReportingTest < ActiveJob::TestCase
   end
 
   describe '#report_exception' do
-    subject(:report_exception) {decribed_instance.send(:report_exception, exception)}
+    subject(:report_exception) {decribed_instance.report_exception(exception)}
 
     let(:exception) {StandardError.new('expected_error')}
 

@@ -1,0 +1,699 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-16T19:06:39.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "blockMode": "Advanced",
+      "toolbox": {
+      },
+      "startSources": {
+        "variables": [
+          {
+            "name": "verse4",
+            "id": "]$EXHpiIqs2Wya@[Hce}"
+          },
+          {
+            "name": "measure",
+            "id": "[OzmDPm2plJH])sVCWq|"
+          },
+          {
+            "name": "verse",
+            "id": "%@gitA*}Yr6?6i-643q8"
+          },
+          {
+            "name": "verse1",
+            "id": "Y2sfI-9cK83^jC+eo-^|"
+          },
+          {
+            "name": "verse2",
+            "id": "vwYbb2vB:U{u6Uk%l,5P"
+          },
+          {
+            "name": "verse3",
+            "id": "CKyYMKEA~iANA3VdtI/T"
+          }
+        ],
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "variables_set",
+                  "id": "1[zi=_!=kARY[?vwT^6f",
+                  "extraState": {
+                  },
+                  "fields": {
+                    "VAR": {
+                      "id": "Y2sfI-9cK83^jC+eo-^|"
+                    }
+                  },
+                  "inputs": {
+                    "VALUE": {
+                      "block": {
+                        "type": "math_number",
+                        "id": "p~#mo0bD@3pSSvMVQJvL",
+                        "fields": {
+                          "NUM": 1
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "variables_set",
+                      "id": "W-ONurS^4rxAiu9KA/ZF",
+                      "extraState": {
+                      },
+                      "fields": {
+                        "VAR": {
+                          "id": "vwYbb2vB:U{u6Uk%l,5P"
+                        }
+                      },
+                      "inputs": {
+                        "VALUE": {
+                          "block": {
+                            "type": "math_number",
+                            "id": "_xYf*zOcg}]/CTp-AJ=$",
+                            "fields": {
+                              "NUM": 5
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "variables_set",
+                          "id": "I@7Pmd1S;Oy~_B6k`drb",
+                          "extraState": {
+                          },
+                          "fields": {
+                            "VAR": {
+                              "id": "CKyYMKEA~iANA3VdtI/T"
+                            }
+                          },
+                          "inputs": {
+                            "VALUE": {
+                              "block": {
+                                "type": "math_number",
+                                "id": "jx[yys*cS`ZHif3tAg#l",
+                                "fields": {
+                                  "NUM": 9
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "variables_set",
+                              "id": "Zzn}Abq)R#vSVisHO;uJ",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "]$EXHpiIqs2Wya@[Hce}"
+                                }
+                              },
+                              "inputs": {
+                                "VALUE": {
+                                  "block": {
+                                    "type": "math_number",
+                                    "id": "gA_x]9SU%HLrEQVB(GdZ",
+                                    "fields": {
+                                      "NUM": 13
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound",
+                                  "id": "!L$S]bmH9^n2~DL!A;2s",
+                                  "fields": {
+                                    "sound": "katy_perry_firework/vocals_verse_1"
+                                  },
+                                  "inputs": {
+                                    "measure": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": "bmV+pIb%(M|*7}Nj7l3+",
+                                        "fields": {
+                                          "NUM": 1
+                                        }
+                                      },
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "$cri-^AYVOBpse7sv].b",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "Y2sfI-9cK83^jC+eo-^|"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound",
+                                      "id": "#T,gQaqnc}}T+x8J7RI,",
+                                      "fields": {
+                                        "sound": "electro/drum_beat_pause"
+                                      },
+                                      "inputs": {
+                                        "measure": {
+                                          "shadow": {
+                                            "type": "math_number",
+                                            "id": "el+:~3ZOiC/I8_%MhoLe",
+                                            "fields": {
+                                              "NUM": 1
+                                            }
+                                          },
+                                          "block": {
+                                            "type": "variables_get",
+                                            "id": "d_5.nI[TKFO[$S1ba~$S",
+                                            "extraState": {
+                                            },
+                                            "fields": {
+                                              "VAR": {
+                                                "id": "Y2sfI-9cK83^jC+eo-^|"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound",
+                                          "id": "zIoZ1_DHUq$*iv%OKL13",
+                                          "fields": {
+                                            "sound": "electro/drum_beat_pause"
+                                          },
+                                          "inputs": {
+                                            "measure": {
+                                              "shadow": {
+                                                "type": "math_number",
+                                                "id": "el+:~3ZOiC/I8_%MhoLe",
+                                                "fields": {
+                                                  "NUM": 1
+                                                }
+                                              },
+                                              "block": {
+                                                "type": "math_arithmetic",
+                                                "id": "OAJTOh5Ln@mx=owt`AEw",
+                                                "fields": {
+                                                  "OP": "<field name=\"OP\">ADD</field>"
+                                                },
+                                                "inputs": {
+                                                  "A": {
+                                                    "shadow": {
+                                                      "type": "math_number",
+                                                      "id": "Yk@{4DT.M`k*vHaVeIQJ",
+                                                      "fields": {
+                                                        "NUM": 1
+                                                      }
+                                                    },
+                                                    "block": {
+                                                      "type": "variables_get",
+                                                      "id": "8p;6H`CbUjNo(It:1SY_",
+                                                      "extraState": {
+                                                      },
+                                                      "fields": {
+                                                        "VAR": {
+                                                          "id": "Y2sfI-9cK83^jC+eo-^|"
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "B": {
+                                                    "shadow": {
+                                                      "type": "math_number",
+                                                      "id": "RdmO|$}dd(0#j!P_cg5S",
+                                                      "fields": {
+                                                        "NUM": 2
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound",
+                                              "id": "azA6JBmw+yiRx75Iwfvs",
+                                              "fields": {
+                                                "sound": "katy_perry_firework/vocals_verse_2"
+                                              },
+                                              "inputs": {
+                                                "measure": {
+                                                  "shadow": {
+                                                    "type": "math_number",
+                                                    "id": "bmV+pIb%(M|*7}Nj7l3+",
+                                                    "fields": {
+                                                      "NUM": 1
+                                                    }
+                                                  },
+                                                  "block": {
+                                                    "type": "variables_get",
+                                                    "id": "qDZZ0D/O#lj4x:UYa]0Y",
+                                                    "extraState": {
+                                                    },
+                                                    "fields": {
+                                                      "VAR": {
+                                                        "id": "vwYbb2vB:U{u6Uk%l,5P"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound",
+                                                  "id": "S8iLoZ(%{zAc9B`O:jzc",
+                                                  "fields": {
+                                                    "sound": "electro/drum_beat_swirl"
+                                                  },
+                                                  "inputs": {
+                                                    "measure": {
+                                                      "shadow": {
+                                                        "type": "math_number",
+                                                        "id": "el+:~3ZOiC/I8_%MhoLe",
+                                                        "fields": {
+                                                          "NUM": 1
+                                                        }
+                                                      },
+                                                      "block": {
+                                                        "type": "variables_get",
+                                                        "id": "*m1uE(IhE#:OT3LBd_%3",
+                                                        "extraState": {
+                                                        },
+                                                        "fields": {
+                                                          "VAR": {
+                                                            "id": "vwYbb2vB:U{u6Uk%l,5P"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound",
+                                                      "id": "}LUn^Z+%ic:9Q[;8eyZ;",
+                                                      "fields": {
+                                                        "sound": "electro/drum_beat_swirl"
+                                                      },
+                                                      "inputs": {
+                                                        "measure": {
+                                                          "shadow": {
+                                                            "type": "math_number",
+                                                            "id": "el+:~3ZOiC/I8_%MhoLe",
+                                                            "fields": {
+                                                              "NUM": 1
+                                                            }
+                                                          },
+                                                          "block": {
+                                                            "type": "math_arithmetic",
+                                                            "id": "/l]=-IY|#@?5BD5_p~X%",
+                                                            "fields": {
+                                                              "OP": "<field name=\"OP\">ADD</field>"
+                                                            },
+                                                            "inputs": {
+                                                              "A": {
+                                                                "shadow": {
+                                                                  "type": "math_number",
+                                                                  "id": "Yk@{4DT.M`k*vHaVeIQJ",
+                                                                  "fields": {
+                                                                    "NUM": 1
+                                                                  }
+                                                                },
+                                                                "block": {
+                                                                  "type": "variables_get",
+                                                                  "id": "O*xcj{F.WEHNLZc}YRR0",
+                                                                  "extraState": {
+                                                                  },
+                                                                  "fields": {
+                                                                    "VAR": {
+                                                                      "id": "vwYbb2vB:U{u6Uk%l,5P"
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "B": {
+                                                                "shadow": {
+                                                                  "type": "math_number",
+                                                                  "id": "TN9P8ijaka(HE-3Yy)a)",
+                                                                  "fields": {
+                                                                    "NUM": 2
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      "next": {
+                                                        "block": {
+                                                          "type": "play_sound",
+                                                          "id": "q-0L`qvu_OsB@0Wa,:OK",
+                                                          "fields": {
+                                                            "sound": "katy_perry_firework/vocals_verse_3"
+                                                          },
+                                                          "inputs": {
+                                                            "measure": {
+                                                              "shadow": {
+                                                                "type": "math_number",
+                                                                "id": "bmV+pIb%(M|*7}Nj7l3+",
+                                                                "fields": {
+                                                                  "NUM": 1
+                                                                }
+                                                              },
+                                                              "block": {
+                                                                "type": "variables_get",
+                                                                "id": "$=ID9}lX:;2Ut2r|0{LM",
+                                                                "extraState": {
+                                                                },
+                                                                "fields": {
+                                                                  "VAR": {
+                                                                    "id": "CKyYMKEA~iANA3VdtI/T"
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          },
+                                                          "next": {
+                                                            "block": {
+                                                              "type": "play_sound",
+                                                              "id": "?CYT*=$G9%O7*U%ZCz2O",
+                                                              "fields": {
+                                                                "sound": "groove/reggaeton_beat"
+                                                              },
+                                                              "inputs": {
+                                                                "measure": {
+                                                                  "shadow": {
+                                                                    "type": "math_number",
+                                                                    "id": "el+:~3ZOiC/I8_%MhoLe",
+                                                                    "fields": {
+                                                                      "NUM": 1
+                                                                    }
+                                                                  },
+                                                                  "block": {
+                                                                    "type": "variables_get",
+                                                                    "id": "`Z2#g`8=BUZ$X)W-o6|I",
+                                                                    "extraState": {
+                                                                    },
+                                                                    "fields": {
+                                                                      "VAR": {
+                                                                        "id": "CKyYMKEA~iANA3VdtI/T"
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              },
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "play_sound",
+                                                                  "id": "X$i/*|zs`ilHVFDEq=FD",
+                                                                  "fields": {
+                                                                    "sound": "groove/reggaeton_beat"
+                                                                  },
+                                                                  "inputs": {
+                                                                    "measure": {
+                                                                      "shadow": {
+                                                                        "type": "math_number",
+                                                                        "id": "el+:~3ZOiC/I8_%MhoLe",
+                                                                        "fields": {
+                                                                          "NUM": 1
+                                                                        }
+                                                                      },
+                                                                      "block": {
+                                                                        "type": "math_arithmetic",
+                                                                        "id": "u,w!.-4Q`qP1_0RNW-jC",
+                                                                        "fields": {
+                                                                          "OP": "<field name=\"OP\">ADD</field>"
+                                                                        },
+                                                                        "inputs": {
+                                                                          "A": {
+                                                                            "shadow": {
+                                                                              "type": "math_number",
+                                                                              "id": "Yk@{4DT.M`k*vHaVeIQJ",
+                                                                              "fields": {
+                                                                                "NUM": 1
+                                                                              }
+                                                                            },
+                                                                            "block": {
+                                                                              "type": "variables_get",
+                                                                              "id": ")(3n@!GIw)s{{fq]s*uw",
+                                                                              "extraState": {
+                                                                              },
+                                                                              "fields": {
+                                                                                "VAR": {
+                                                                                  "id": "CKyYMKEA~iANA3VdtI/T"
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          },
+                                                                          "B": {
+                                                                            "shadow": {
+                                                                              "type": "math_number",
+                                                                              "id": "@MyZ}{jB)|Nq6La?5{.3",
+                                                                              "fields": {
+                                                                                "NUM": 2
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "next": {
+                                                                    "block": {
+                                                                      "type": "play_sound",
+                                                                      "id": "~[Zpv@k!!w+wK`9P;d*S",
+                                                                      "fields": {
+                                                                        "sound": "katy_perry_firework/vocals_verse_4"
+                                                                      },
+                                                                      "inputs": {
+                                                                        "measure": {
+                                                                          "shadow": {
+                                                                            "type": "math_number",
+                                                                            "id": "bmV+pIb%(M|*7}Nj7l3+",
+                                                                            "fields": {
+                                                                              "NUM": 1
+                                                                            }
+                                                                          },
+                                                                          "block": {
+                                                                            "type": "variables_get",
+                                                                            "id": "?$}LHR*|;?/LM9Gqktd:",
+                                                                            "extraState": {
+                                                                            },
+                                                                            "fields": {
+                                                                              "VAR": {
+                                                                                "id": "]$EXHpiIqs2Wya@[Hce}"
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      "next": {
+                                                                        "block": {
+                                                                          "type": "play_sound",
+                                                                          "id": "ZoN;*#x4mkr!aK1+r=~E",
+                                                                          "fields": {
+                                                                            "sound": "electro/drum_beat_hyper"
+                                                                          },
+                                                                          "inputs": {
+                                                                            "measure": {
+                                                                              "shadow": {
+                                                                                "type": "math_number",
+                                                                                "id": "el+:~3ZOiC/I8_%MhoLe",
+                                                                                "fields": {
+                                                                                  "NUM": 1
+                                                                                }
+                                                                              },
+                                                                              "block": {
+                                                                                "type": "variables_get",
+                                                                                "id": "zS)8aT:a?U0e*C`JmY{z",
+                                                                                "extraState": {
+                                                                                },
+                                                                                "fields": {
+                                                                                  "VAR": {
+                                                                                    "id": "]$EXHpiIqs2Wya@[Hce}"
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          },
+                                                                          "next": {
+                                                                            "block": {
+                                                                              "type": "play_sound",
+                                                                              "id": ".0HzIv|hQeV|Ut,.EC3W",
+                                                                              "fields": {
+                                                                                "sound": "electro/drum_beat_hyper"
+                                                                              },
+                                                                              "inputs": {
+                                                                                "measure": {
+                                                                                  "shadow": {
+                                                                                    "type": "math_number",
+                                                                                    "id": "el+:~3ZOiC/I8_%MhoLe",
+                                                                                    "fields": {
+                                                                                      "NUM": 1
+                                                                                    }
+                                                                                  },
+                                                                                  "block": {
+                                                                                    "type": "math_arithmetic",
+                                                                                    "id": "PQ$tA{W@S0.!.HNO4%j[",
+                                                                                    "fields": {
+                                                                                      "OP": "<field name=\"OP\">ADD</field>"
+                                                                                    },
+                                                                                    "inputs": {
+                                                                                      "A": {
+                                                                                        "shadow": {
+                                                                                          "type": "math_number",
+                                                                                          "id": "Yk@{4DT.M`k*vHaVeIQJ",
+                                                                                          "fields": {
+                                                                                            "NUM": 1
+                                                                                          }
+                                                                                        },
+                                                                                        "block": {
+                                                                                          "type": "variables_get",
+                                                                                          "id": "BD@gTdTY}?9k3U`Uo:f+",
+                                                                                          "extraState": {
+                                                                                          },
+                                                                                          "fields": {
+                                                                                            "VAR": {
+                                                                                              "id": "]$EXHpiIqs2Wya@[Hce}"
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      },
+                                                                                      "B": {
+                                                                                        "shadow": {
+                                                                                          "type": "math_number",
+                                                                                          "id": ":NU#;njs)fs~?DXZ-N]#",
+                                                                                          "fields": {
+                                                                                            "NUM": 2
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "next": {
+                                                                                "block": {
+                                                                                  "type": "play_sound",
+                                                                                  "id": "*bJ_/QbDB;YE~$?[LMqB",
+                                                                                  "fields": {
+                                                                                    "sound": "katy_perry_firework/vocals_prechorus_1"
+                                                                                  },
+                                                                                  "inputs": {
+                                                                                    "measure": {
+                                                                                      "shadow": {
+                                                                                        "type": "math_number",
+                                                                                        "id": "#3*?IP21-D5S!K+;r*|a",
+                                                                                        "fields": {
+                                                                                          "NUM": 1
+                                                                                        }
+                                                                                      },
+                                                                                      "block": {
+                                                                                        "type": "math_arithmetic",
+                                                                                        "id": "ILi_H%djH+7++,,J$`Q5",
+                                                                                        "fields": {
+                                                                                          "OP": "<field name=\"OP\">ADD</field>"
+                                                                                        },
+                                                                                        "inputs": {
+                                                                                          "A": {
+                                                                                            "shadow": {
+                                                                                              "type": "math_number",
+                                                                                              "id": "Yk@{4DT.M`k*vHaVeIQJ",
+                                                                                              "fields": {
+                                                                                                "NUM": 1
+                                                                                              }
+                                                                                            },
+                                                                                            "block": {
+                                                                                              "type": "variables_get",
+                                                                                              "id": "#2zpPz48eLOO;lHO#{$K",
+                                                                                              "extraState": {
+                                                                                              },
+                                                                                              "fields": {
+                                                                                                "VAR": {
+                                                                                                  "id": "]$EXHpiIqs2Wya@[Hce}"
+                                                                                                }
+                                                                                              }
+                                                                                            }
+                                                                                          },
+                                                                                          "B": {
+                                                                                            "shadow": {
+                                                                                              "type": "math_number",
+                                                                                              "id": "H)_0N]gI1oX2K#k(G0]a",
+                                                                                              "fields": {
+                                                                                                "NUM": 3
+                                                                                              }
+                                                                                            }
+                                                                                          }
+                                                                                        }
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "library": "launch2024",
+      "packId": "katy_perry_firework"
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-16T19:06:39.940+00:00\",\"changed\":[\"cloned from \\\"advanced-model-sandbox-variables-1\\\"\"],\"cloned_from\":\"advanced-model-sandbox-variables-1\"},{\"changed_at\":\"2024-10-16 19:06:44 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 19:19:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 19:20:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 19:20:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 19:27:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 20:33:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 20:34:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 21:08:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 21:12:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-16 21:14:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

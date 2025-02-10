@@ -1,4 +1,4 @@
-import {Block} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 
 import {ExtendedBlockSvg} from '../types';
 
@@ -87,7 +87,7 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
    */
   private initializeAngleHelper(): void {
     const container = this.createAngleHelperContainer();
-    const sourceBlock = this.getSourceBlock() as Block;
+    const sourceBlock = this.getSourceBlock() as GoogleBlockly.Block;
     this.angleHelper = new Blockly.AngleHelper(this.getDirection(), {
       onUpdate: this.updateDropdownMenuOptions.bind(this),
       snapPoints: this.getOptions().map(option => parseInt(option[1])),

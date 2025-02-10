@@ -1,8 +1,11 @@
 name: Check for manual deployment requirements
 
 on:
+  # Run on any pull request into the trunk branch
   pull_request:
     types: [opened, synchronize]
+    branches:
+      - staging
 
 jobs:
   check-files:

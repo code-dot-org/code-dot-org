@@ -5,7 +5,7 @@ require 'cdo/honeybadger'
 module ActiveJobReporting
   extend ActiveSupport::Concern
 
-  protected def report_exception(exception)
+  def report_exception(exception)
     Honeybadger.notify(
       exception,
       error_message: "[#{self.class}] Runtime error",

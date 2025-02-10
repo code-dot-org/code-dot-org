@@ -1,10 +1,13 @@
+import Button from '@code-dot-org/component-library/button';
 import ValidatedInstructionsView from '@codebridge/InfoPanel/ValidatedInstructions';
 import React, {useEffect, useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
 import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 
@@ -12,7 +15,7 @@ import ForTeachersOnly from './ForTeachersOnly';
 import HelpAndTips from './HelpAndTips';
 
 import moduleStyles from './styles/info-panel.module.scss';
-import darkModeStyles from '@codebridge/styles/dark-mode.module.scss';
+import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 enum Panels {
   Instructions = 'Instructions',
@@ -38,7 +41,23 @@ const panelEventNames = {
   [Panels.ForTeachersOnly]: EVENTS.CODEBRIDGE_FOR_TEACHERS_ONLY_TOGGLE,
 };
 
-export const InfoPanel = React.memo(() => {
+const panelHeaderNames = {
+  [Panels.Instructions]: codebridgeI18n.instructionsHeader(),
+  [Panels.HelpAndTips]: codebridgeI18n.helpAndTipsHeader(),
+  [Panels.ForTeachersOnly]: codebridgeI18n.forTeachersOnlyHeader(),
+};
+
+interface InfoPanelProps {
+  style?: React.CSSProperties;
+  className?: string;
+}
+
+export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
+  style,
+  className,
+}) => {
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const scriptId = useAppSelector(state => state.lab.scriptId);
   const mapReference = useAppSelector(
     state => state.lab.levelProperties?.mapReference
   );
@@ -50,6 +69,9 @@ export const InfoPanel = React.memo(() => {
   );
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const [currentPanel, setCurrentPanel] = useState(Panels.Instructions);
+  const [currentPanelHeader, setCurrentPanelHeader] = useState(
+    codebridgeI18n.instructionsHeader()
+  );
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [panelOptions, setPanelOptions] = useState<Panels[]>([
     Panels.Instructions,
@@ -102,48 +124,58 @@ export const InfoPanel = React.memo(() => {
           ariaLabel={'Information panel dropdown'}
           size={'xs'}
           type={'tertiary'}
-          className={darkModeStyles.iconOnlyTertiaryButton}
+          className={darkModeStyles.tertiaryButton}
         />
       </div>
     ) : null;
   };
 
   const changePanel = (panel: Panels) => {
+    if (panel === Panels.HelpAndTips) {
+      logUserLevelInteraction({
+        levelId: levelId,
+        scriptId: scriptId,
+        interaction: UserLevelInteractions.click_help_and_tips,
+      });
+    }
     if (panel !== currentPanel) {
       setCurrentPanel(panel);
+      setCurrentPanelHeader(panelHeaderNames[panel]);
       sendCodebridgeAnalyticsEvent(panelEventNames[panel], appName);
     }
     setIsDropdownOpen(false);
   };
 
   const CurrentPanelView = panelMap[currentPanel];
-
   return (
-    <PanelContainer
-      id="codebridge-info-panel"
-      headerContent={currentPanel}
-      rightHeaderContent={renderHeaderButton()}
-      className={moduleStyles.infoPanel}
-    >
-      {isDropdownOpen && (
-        <form className={moduleStyles.dropdownContainer}>
-          <ul>
-            {panelOptions.map(panel => (
-              <li key={panel}>
-                <Button
-                  color={'black'}
-                  onClick={() => changePanel(panel)}
-                  ariaLabel={panel}
-                  size={'xs'}
-                  text={panel}
-                  className={moduleStyles.dropdownItem}
-                />
-              </li>
-            ))}
-          </ul>
-        </form>
-      )}
-      <CurrentPanelView {...panelProps[currentPanel]} />
-    </PanelContainer>
+    <div style={style} className={className}>
+      <PanelContainer
+        id="codebridge-info-panel"
+        headerContent={currentPanelHeader}
+        rightHeaderContent={renderHeaderButton()}
+        className={moduleStyles.infoPanel}
+        headerClassName={moduleStyles.infoPanelHeader}
+      >
+        {isDropdownOpen && (
+          <form className={moduleStyles.dropdownContainer}>
+            <ul>
+              {panelOptions.map(panel => (
+                <li key={panel}>
+                  <Button
+                    color={'black'}
+                    onClick={() => changePanel(panel)}
+                    ariaLabel={panel}
+                    size={'xs'}
+                    text={panel}
+                    className={moduleStyles.dropdownItem}
+                  />
+                </li>
+              ))}
+            </ul>
+          </form>
+        )}
+        <CurrentPanelView {...panelProps[currentPanel]} />
+      </PanelContainer>
+    </div>
   );
-});
+};

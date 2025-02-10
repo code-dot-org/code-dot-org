@@ -1,0 +1,17 @@
+name 'Data Sci U1 Pre Q14_2024-pilot'
+
+question 'Which of the following is an example of an ethical issue in data collection?'
+
+wrong 'Creating a bar chart instead of a line graph.'
+right 'Using a dataset without verifying its source or accuracy.'
+wrong 'Using open-ended survey questions.'
+wrong 'Organizing data by categories.'
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

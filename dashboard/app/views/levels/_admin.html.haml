@@ -84,7 +84,7 @@
       %br
       %button{type: 'button', onclick: 'Blockly.mainBlockSpace.clear()', class: 'btn btn-default btn-sm'}
         Clear workspace
-      - if @level.uses_google_blockly? || params[:blocklyVersion] == 'google' || Experiment.enabled?(experiment_name: 'google_blockly', user: current_user)
+      - unless params[:blocklyVersion] == 'cdo'
         %button{type: 'button', onclick: 'Blockly.getMainWorkspace().undo(false)', class: 'btn btn-default btn-sm'}
           Undo
       %hr
@@ -212,9 +212,6 @@
       %br
         %button{id: "admin-abuse-reset", class: "btn btn-default btn-sm"}
           Reset abuse score to 0
-      %br
-        %button{id: "admin-abuse-buffer", class: "btn btn-default btn-sm"}
-          Set abuse score to -50
       %br
       %br
       .admin-report-abuse

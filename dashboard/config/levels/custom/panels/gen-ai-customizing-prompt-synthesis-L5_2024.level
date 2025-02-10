@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-06-28T19:54:45.000Z",
   "level_num": "custom",
@@ -8,26 +9,26 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "## Providing Examples\n### Another advanced strategy for prompting is providing examples. This can be useful when we want the chatbot to respond in a specific format.\n\n### In this example, the chatbot isn't doing exactly what we want.",
-        "imageUrl": "https://images.code.org/880c351a0f563c626b9391eca6e0a3c8-examples-1.png",
+        "text": "# Providing Examples\nAnother advanced strategy for prompting is providing examples. This can be useful when we want the chatbot to respond in a specific format.\n\nIn this example, the chatbot isn't doing exactly what we want.",
+        "imageUrl": "https://images.code.org/241f5bc93673517ef1ad758a496ebb27-Slide19.PNG",
         "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c",
         "layout": "text-top-left"
       },
       {
-        "text": "## Providing Examples\n### We can improve our results by adding an example. Now the format is a little better.\n### This is called _One-Shot Prompting_.",
-        "imageUrl": "https://images.code.org/dc6a7d6839cbb59a0cf94ca48b426df0-examples-2.png",
+        "text": "# Providing Examples\nWe can improve our results by adding an example. Now the format is a little better.\n\nThis is called _One-Shot Prompting_.",
+        "imageUrl": "https://images.code.org/18f8f562b11fc8a691ade65f02934657-Slide20.PNG",
         "key": "gen-ai-customizing-prompt-synthesis-L5-22940fc4-83e4-41c0-a0cb-63946b8a7c38"
       },
       {
-        "text": "## Providing Examples\n### The more examples we add, the better the results.\n### Adding multiple examples is called _Few-Shot Prompting_.",
-        "imageUrl": "https://images.code.org/ac0a34296e902156030414fbf6cd2a7a-examples-3.png",
+        "text": "# Providing Examples\nThe more examples we add, the better the results.\n\nAdding multiple examples is called _Few-Shot Prompting_.",
+        "imageUrl": "https://images.code.org/738724f84d2fe02ab9ed52d10c0905db-Slide21.PNG",
         "key": "gen-ai-customizing-prompt-synthesis-L5-3e87b89b-7436-4bc7-940e-4977905da175",
         "layout": "text-bottom-left"
       }
     ],
-    "name_suffix": "_2024"
+    "name_suffix": "_2024",
+    "offer_browser_tts": "true"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:45.928+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L5\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L5\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:45.928+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L5\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L5\"},{\"changed_at\":\"2024-10-27 18:34:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-01-10 22:02:28 +0000\",\"changed\":[\"panels\",\"offer_browser_tts\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

@@ -1,6 +1,5 @@
 import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
-import {BlockSvg, MenuItem, MenuOption} from 'blockly';
-import {ImageProperties} from 'blockly/core/field_dropdown';
+import * as GoogleBlockly from 'blockly/core';
 
 import color from '@cdo/apps/util/color';
 
@@ -9,17 +8,32 @@ interface ButtonConfig {
   action: () => void;
 }
 
+/**
+ * Definition of a human-readable image dropdown option.
+ * TODO: Remove after the resolution of https://github.com/google/blockly/issues/8621
+ */
+interface ImageProperties {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
 // Note that this class *does not* inherit from CdoFieldDropdown
 export class CdoFieldImageDropdown extends FieldGridDropdown {
   private buttons_: ButtonConfig[] | undefined;
   private imageWidth_: number;
   private imageHeight_: number;
+  private whiteBackground: boolean;
 
   constructor(
-    menuGenerator: MenuOption[] | (() => MenuOption[]),
+    menuGenerator:
+      | GoogleBlockly.MenuOption[]
+      | (() => GoogleBlockly.MenuOption[]),
     width: number,
     height: number,
-    buttons: ButtonConfig[] | undefined
+    buttons: ButtonConfig[] | undefined,
+    whiteBackground: boolean = true
   ) {
     // We have to decide how many columns to have when we create the block. The
     // number of options in the block can change over time, but we can just use
@@ -41,6 +55,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     this.buttons_ = buttons;
     this.imageWidth_ = width;
     this.imageHeight_ = height;
+    this.whiteBackground = whiteBackground;
   }
 
   /**
@@ -72,8 +87,9 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     if (this.buttons_) {
       // Force buttons to a new row by adding blank elements if needed.
       // menuItems is private in the parent.
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const numItems = ((this.menu_ as any).menuItems as MenuItem[]).length;
+      const numItems =
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ((this.menu_ as any).menuItems as GoogleBlockly.MenuItem[]).length;
       // columns is private in the parent.
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const columns = (this as any).columns as number;
@@ -109,19 +125,42 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     this.menu_.render(Blockly.DropDownDiv.getContentDiv());
     const menuElement = this.menu_.getElement();
     if (menuElement) {
+      const menuItems = menuElement.querySelectorAll('.blocklyMenuItem');
+
+      menuItems.forEach(item => {
+        const element = item as HTMLElement;
+        element.style.width = `${this.imageWidth_}px`;
+        element.style.height = `${this.imageHeight_}px`;
+        const imgElement = element.querySelector(
+          'img'
+        ) as HTMLImageElement | null;
+        if (imgElement) {
+          imgElement.style.width = `${this.imageWidth_}px`;
+          imgElement.style.height = `${this.imageHeight_}px`;
+        }
+      });
       Blockly.utils.dom.addClass(menuElement, 'blocklyDropdownMenu');
       Blockly.utils.dom.addClass(menuElement, 'fieldGridDropDownContainer');
+      if (!this.whiteBackground) {
+        Blockly.utils.dom.addClass(menuElement, 'transparentContainer');
+      }
     }
 
-    if (this.sourceBlock_) {
-      const primaryColour = color.white;
-      const sourceBlockSvg = this.sourceBlock_ as BlockSvg;
-      const parent = sourceBlockSvg.getParent();
-      const borderColour =
-        sourceBlockSvg.isShadow() && parent
-          ? parent.style.colourTertiary
-          : sourceBlockSvg.style.colourTertiary;
-      Blockly.DropDownDiv.setColour(primaryColour, borderColour);
+    const sourceBlockSvg =
+      this.getSourceBlock() as GoogleBlockly.BlockSvg | null;
+    if (sourceBlockSvg) {
+      let backgroundColour = sourceBlockSvg.style.colourTertiary;
+      let borderColour = sourceBlockSvg.style.colourPrimary;
+
+      if (this.whiteBackground) {
+        backgroundColour = color.white;
+        const parent = sourceBlockSvg.getParent();
+        borderColour =
+          sourceBlockSvg.isShadow() && parent
+            ? parent.style.colourTertiary
+            : sourceBlockSvg.style.colourTertiary;
+      }
+      Blockly.DropDownDiv.setColour(backgroundColour, borderColour);
     }
 
     // Focusing needs to be handled after the menu is rendered and positioned.
@@ -131,7 +170,8 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
 
     // selectedMenuItem is private in the parent.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const selectedMenuItem = (this as any).selectedMenuItem as MenuItem | null;
+    const selectedMenuItem = (this as any)
+      .selectedMenuItem as GoogleBlockly.MenuItem | null;
     if (selectedMenuItem) {
       this.menu_.setHighlighted(selectedMenuItem);
     }
@@ -151,10 +191,12 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
 }
 
 export function fixMenuGenerator(
-  menuGenerator: MenuOption[] | (() => MenuOption[]),
+  menuGenerator:
+    | GoogleBlockly.MenuOption[]
+    | (() => GoogleBlockly.MenuOption[]),
   width: number,
   height: number
-): MenuOption[] {
+): GoogleBlockly.MenuOption[] {
   // Google Blockly supports images in dropdowns but has a different format,
   // so we just need to restructure our menu items before passing through to
   // the FieldDropdown constructor.

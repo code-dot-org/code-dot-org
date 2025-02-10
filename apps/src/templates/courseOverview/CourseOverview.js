@@ -17,7 +17,6 @@ import Notification, {
 import styleConstants from '@cdo/apps/styleConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {
   assignmentCourseVersionShape,
   sectionForDropdownShape,
@@ -32,10 +31,9 @@ import {
 } from '@cdo/apps/util/dismissVersionRedirect';
 import i18n from '@cdo/locale';
 
-import {queryParams} from '../../code-studio/utils';
-import * as utils from '../../utils';
 import SafeMarkdown from '../SafeMarkdown';
 
+import CourseOverviewActionRow from './CourseOverviewActionRow';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
 import CourseScript from './CourseScript';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
@@ -90,17 +88,24 @@ class CourseOverview extends Component {
         },
         PLATFORMS.BOTH
       );
+    } else if (props.userType === 'student') {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT,
+        {
+          'unit group name': props.name,
+        },
+        PLATFORMS.BOTH
+      );
+    } else {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,
+        {
+          'unit group name': props.name,
+        },
+        PLATFORMS.BOTH
+      );
     }
   }
-
-  onChangeVersion = versionId => {
-    const version = this.props.versions[versionId];
-    if (versionId !== this.props.id && version) {
-      const sectionId = queryParams('section_id');
-      const queryString = sectionId ? `?section_id=${sectionId}` : '';
-      utils.navigateToHref(`${version.path}${queryString}`);
-    }
-  };
 
   onDismissVersionWarning = () => {
     if (!this.props.scripts[0]) {
@@ -206,15 +211,19 @@ class CourseOverview extends Component {
         {showNotification && <VerifiedResourcesNotification />}
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
-          {Object.values(versions).length > 1 && (
-            <AssignmentVersionSelector
-              onChangeVersion={this.onChangeVersion}
-              courseVersions={versions}
-              rightJustifiedPopupMenu={true}
-              selectedCourseVersionId={this.props.courseVersionId}
-            />
-          )}
         </div>
+        <CourseOverviewActionRow
+          courseVersionId={courseVersionId}
+          courseId={id}
+          versions={versions}
+          teacherResources={teacherResources}
+          studentResources={studentResources}
+          isInstructor={viewAs === ViewType.Instructor}
+          viewAs={viewAs}
+          showAssignButton={showAssignButton}
+          title={title}
+          participantAudience={participantAudience}
+        />
         <SafeMarkdown
           style={styles.description}
           openExternalLinksInNewTab={true}
@@ -232,8 +241,6 @@ class CourseOverview extends Component {
             courseVersionId={courseVersionId}
             id={id}
             courseName={title}
-            teacherResources={teacherResources}
-            studentResources={studentResources}
             showAssignButton={showAssignButton}
             isInstructor={viewAs === ViewType.Instructor}
             participantAudience={participantAudience}
@@ -251,6 +258,7 @@ class CourseOverview extends Component {
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             showAssignButton={showAssignButton}
+            participantAudience={participantAudience}
           />
         ))}
       </div>

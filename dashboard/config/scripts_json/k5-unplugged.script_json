@@ -4,14 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSF",
+      "content_area": "self_paced_pl_k_5",
+      "curriculum_umbrella": "Self-paced PL - CSF",
       "is_course": true,
       "is_migrated": true,
-      "version_year": "unversioned"
+      "show_calendar": true,
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "k5-unplugged",
-    "serialized_at": "2024-08-13 16:44:26 UTC",
+    "serialized_at": "2025-01-13 23:48:21 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

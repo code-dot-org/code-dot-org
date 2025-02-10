@@ -4,13 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "CSA",
       "is_course": true,
       "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csa2-2022-exemplars",
-    "serialized_at": "2022-04-08 15:41:13 UTC",
+    "serialized_at": "2024-11-19 01:14:50 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2078,6 +2080,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -16,6 +16,8 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
@@ -95,6 +97,12 @@ var codegen = require('./lib/tools/jsinterpreter/codegen');
  * then the padding can be configured via query param as well.
  */
 const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
+
+/**
+ * Track whether the run button was clicked, which we log an event for. We
+ * only want to log this event once for the first click but not subsequent clicks
+ */
+let runButtonWasClicked = false;
 
 /**
  * Get the maximum resizable width of the playspace.
@@ -1022,7 +1030,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
   container.appendChild(footerDiv);
 
   var reactProps = {
-    i18nDropdown: '',
+    i18nDropdownInBase: false,
     privacyPolicyInBase: false,
     copyrightInBase: false,
     baseMoreMenuString: msg.builtOnCodeStudio(),
@@ -2150,6 +2158,26 @@ StudioApp.prototype.configureDom = function (config) {
     trailing: false,
   });
 
+  // Modify throttledRunClick to include metrics logging
+  const originalThrottledRunClick = throttledRunClick;
+  throttledRunClick = () => {
+    originalThrottledRunClick();
+    let eventName;
+    if (!!config.level.isProjectLevel) {
+      eventName = EVENTS.PROJECT_ACTIVITY;
+    } else {
+      eventName = EVENTS.LEVEL_ACTIVITY;
+    }
+    if (!runButtonWasClicked) {
+      analyticsReporter.sendEvent(
+        eventName,
+        {signedIn: config.isSignedIn},
+        PLATFORMS.BOTH
+      );
+      runButtonWasClicked = true;
+    }
+  };
+
   if (runButton && resetButton) {
     dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
@@ -2161,6 +2189,7 @@ StudioApp.prototype.configureDom = function (config) {
       }
     });
   }
+
   var skipButton = container.querySelector('#skipButton');
   if (skipButton) {
     dom.addClickTouchEvent(skipButton, this.skipLevel.bind(this));
@@ -2476,7 +2505,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     var filtered =
       editor.completer.completions && editor.completer.completions.filtered;
     for (var i = 0; i < (filtered && filtered.length); i++) {
-      // If we have any exact maches in our filtered completions that include
+      // If we have any exact matches in our filtered completions that include
       // this period, allow the completer to stay active:
       if (filtered[i].exactMatch) {
         return;
@@ -2776,6 +2805,13 @@ StudioApp.prototype.validateCodeChanged = function () {
   return project.isCurrentCodeDifferent(level.startBlocks);
 };
 
+StudioApp.prototype.analyticsData = function () {
+  return {
+    levelId: this.config.serverLevelId,
+    scriptId: this.config.scriptId,
+  };
+};
+
 /**
  * Set whether to alert user to empty blocks, short-circuiting all other tests.
  * @param {boolean} checkBlocks Whether to check for empty blocks.
@@ -2913,6 +2949,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
 
   var div = document.getElementById('codeWorkspace');
+  var isJigsaw = config.levelGameName === 'Jigsaw';
   // TODO: How many of these options apply to modal function editor?
   var options = {
     toolbox: config.level.toolbox,
@@ -2953,8 +2990,14 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false),
     valueTypeTabShapeMap: utils.valueOr(config.valueTypeTabShapeMap, {}),
     typeHints: utils.valueOr(config.level.showTypeHints, false),
-    isBlocklyRtl:
-      getStore().getState().isRtl && config.levelGameName !== 'Jigsaw', // disable RTL for blockly on jigsaw
+    isBlocklyRtl: getStore().getState().isRtl && !isJigsaw, // disable RTL for blockly on jigsaw
+    isJigsaw,
+    analyticsData: {
+      appType: config.app,
+      scriptName: config.scriptName,
+      scriptId: config.scriptId,
+      levelId: config.serverLevelId,
+    },
   };
 
   // Never show unused blocks in edit mode. Procedure autopopulate should always
@@ -3026,173 +3069,6 @@ StudioApp.prototype.hasUnwantedExtraTopBlocks = function () {
  */
 StudioApp.prototype.hasQuestionMarksInNumberField = function () {
   return this.feedback_.hasQuestionMarksInNumberField();
-};
-
-/**
- * @returns true if any non-example block in the workspace has an unfilled input
- */
-StudioApp.prototype.hasUnfilledFunctionalBlock = function () {
-  return !!this.getUnfilledFunctionalBlock();
-};
-
-/**
- * @returns {Block} The first block that has an unfilled input, or undefined
- *   if there isn't one.
- */
-StudioApp.prototype.getUnfilledFunctionalBlock = function () {
-  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
-    return rootBlock.type !== 'functional_example';
-  });
-};
-
-/**
- * @returns {Block} The first example block that has an unfilled input, or
- *   undefined if there isn't one. Ignores example blocks that don't have a
- *   call portion, as these are considered invalid.
- */
-StudioApp.prototype.getUnfilledFunctionalExample = function () {
-  return this.getFilteredUnfilledFunctionalBlock_(function (rootBlock) {
-    if (rootBlock.type !== 'functional_example') {
-      return false;
-    }
-    var actual = rootBlock.getInputTargetBlock('ACTUAL');
-    return actual && actual.getFieldValue('NAME');
-  });
-};
-
-/**
- * @param {function} filter Run against root block in chain. Returns true if
- *   this is a block we care about
- */
-StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
-  var unfilledBlock;
-  Blockly.mainBlockSpace.getAllUsedBlocks().some(function (block) {
-    // Get the root block in the chain
-    var rootBlock = block.getRootBlock();
-    if (!filter(rootBlock)) {
-      return false;
-    }
-  });
-
-  return unfilledBlock;
-};
-
-/**
- * @returns {string} The name of a function that doesn't have any examples, or
- *   undefined if all have at least one.
- */
-StudioApp.prototype.getFunctionWithoutTwoExamples = function () {
-  var definitionNames = Blockly.mainBlockSpace
-    .getTopBlocks()
-    .filter(function (block) {
-      return block.type === 'functional_definition' && !block.isVariable();
-    })
-    .map(function (definitionBlock) {
-      return definitionBlock.getProcedureInfo().name;
-    });
-
-  var exampleNames = Blockly.mainBlockSpace
-    .getTopBlocks()
-    .filter(function (block) {
-      if (block.type !== 'functional_example') {
-        return false;
-      }
-
-      // Only care about functional_examples that have an ACTUAL input (i.e. it's
-      // clear which function they're for
-      var actual = block.getInputTargetBlock('ACTUAL');
-      return actual && actual.getFieldValue('NAME');
-    })
-    .map(function (exampleBlock) {
-      return exampleBlock.getInputTargetBlock('ACTUAL').getFieldValue('NAME');
-    });
-
-  var definitionWithLessThanTwoExamples;
-  definitionNames.forEach(function (def) {
-    var definitionExamples = exampleNames.filter(function (example) {
-      return def === example;
-    });
-
-    if (definitionExamples.length < 2) {
-      definitionWithLessThanTwoExamples = def;
-    }
-  });
-  return definitionWithLessThanTwoExamples;
-};
-
-/**
- * Get the error message when we have an unfilled block
- * @param {string} topLevelType The block.type For our expected top level block
- */
-StudioApp.prototype.getUnfilledFunctionalBlockError = function (topLevelType) {
-  var unfilled = this.getUnfilledFunctionalBlock();
-
-  if (!unfilled) {
-    return null;
-  }
-
-  var topParent = unfilled;
-  while (topParent.getParent()) {
-    topParent = topParent.getParent();
-  }
-
-  if (unfilled.type === topLevelType) {
-    return msg.emptyTopLevelBlock({
-      topLevelBlockName: unfilled.getFieldValue(),
-    });
-  }
-
-  if (topParent.type !== 'functional_definition') {
-    return msg.emptyFunctionalBlock();
-  }
-
-  var procedureInfo = topParent.getProcedureInfo();
-  if (topParent.isVariable()) {
-    return msg.emptyBlockInVariable({name: procedureInfo.name});
-  } else {
-    return msg.emptyBlockInFunction({name: procedureInfo.name});
-  }
-};
-
-/**
- * Looks for failing examples, and updates the result text for them if they're
- * open in the contract editor
- * @param {function} failureChecker Apps example tester that takes in an example
- *   block, and outputs a failure string (or null if success)
- * @returns {string} Name of block containing first failing example we found, or
- *   empty string if no failures.
- */
-StudioApp.prototype.checkForFailingExamples = function (failureChecker) {
-  var failingBlockName = '';
-  Blockly.mainBlockSpace
-    .findFunctionExamples()
-    .forEach(function (exampleBlock) {
-      var failure = failureChecker(exampleBlock, false);
-
-      // Update the example result. No-op if we're not currently editing this
-      // function.
-      Blockly.contractEditor.updateExampleResult(exampleBlock, failure);
-
-      if (failure) {
-        failingBlockName = exampleBlock
-          .getInputTargetBlock('ACTUAL')
-          .getFieldValue('NAME');
-      }
-    });
-  return failingBlockName;
-};
-
-/**
- * @returns {boolean} True if we have a function or variable named "" (empty string)
- */
-StudioApp.prototype.hasEmptyFunctionOrVariableName = function () {
-  return Blockly.mainBlockSpace.getTopBlocks().some(function (block) {
-    if (block.type !== 'functional_definition') {
-      return false;
-    }
-
-    return !block.getProcedureInfo().name;
-  });
 };
 
 StudioApp.prototype.createCoordinateGridBackground = function (options) {

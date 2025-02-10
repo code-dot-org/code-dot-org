@@ -5,7 +5,7 @@
   left_align = local_assigns[:left_align]
   is_contained_level ||= false
   js_data = {
-    response_count: @responses&.count || 0,
+    response_count: @responses&.first&.count || 0,
     is_contained_level: is_contained_level
   }
 

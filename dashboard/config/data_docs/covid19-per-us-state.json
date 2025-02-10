@@ -1,5 +1,0 @@
-{
-  "key": "covid19-per-us-state",
-  "name": "COVID-19 Cases per US State",
-  "content": "Description: live dataset, updated weekly, on confirmed cases of COVID-19 per US state\r\n\r\nSource: [DataHub](https://datahub.io/core/covid-19#data)  \r\n \r\nColumns\r\n\r\n* Date (string): the recorded date associated with new COVID-19 cases for that state \r\n* State (string): what state recorded new COVID-19 cases\r\n* Confirmed New Cases (numerical): how many new confirmed cases were recorded in that state for that day\r\n* Deaths (numerical)): how many deaths caused by COVID-19 occurred in that state for the day"
-}

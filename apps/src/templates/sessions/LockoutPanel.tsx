@@ -90,6 +90,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
         inSection: props.inSection,
         consentStatus: props.permissionStatus,
         requestSent: !!props.pendingEmail,
+        us_state: currentUser.usStateCode,
       });
     }
   }, [
@@ -97,6 +98,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
     props.permissionStatus,
     props.pendingEmail,
     currentUser.userId,
+    currentUser.usStateCode,
   ]);
 
   /**
@@ -114,19 +116,28 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
       reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_SUBMITTED, {
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: currentUser.usStateCode,
       });
     } else if (parentalPermissionRequest.parent_email === prevPendingEmail) {
       reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_RESEND, {
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: currentUser.usStateCode,
       });
     } else {
       reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_UPDATED, {
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
+        us_state: currentUser.usStateCode,
       });
     }
-  }, [action, prevPendingEmail, parentalPermissionRequest, props.inSection]);
+  }, [
+    action,
+    prevPendingEmail,
+    parentalPermissionRequest,
+    props.inSection,
+    currentUser.usStateCode,
+  ]);
 
   // This will set the email to the current pending email and fire off the
   // form as though they had typed in the same email again.
@@ -158,6 +169,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
     reportEvent(EVENTS.CAP_LOCKOUT_SIGN_OUT, {
       inSection: props.inSection,
       consentStatus: status,
+      us_state: currentUser.usStateCode,
     });
   };
 

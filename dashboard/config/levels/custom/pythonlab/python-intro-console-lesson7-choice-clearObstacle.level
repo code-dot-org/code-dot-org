@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-22T22:37:59.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Give your character more actions\r\n\r\nDo this: \r\n- Use a function with parameters to perform a new action like clearing an obstacle, collecting an item, or marking their trail.\r\n- User parameters like `obstacle`, `item` or `trailmarker` to customize the types of items your character can interact with. ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# create new functions that give your characters more actions\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzuj4wvKl/PYXtA1u/nVF1aH+PiG+QcWx\nt4Kz0GTg8y/twu2sS6dFQ1BVQk/7yjpNXawheE69p6lm9wvQwA5zXHKKZP9w\nV+BD5qcVvi1FQHP5WbWjMi8SZam9nhLd5Kv4yBGtIuBnkhag5McqmGixoBl7\nxaf7Dl/NBubMRTEAK2alhjl30cApUUbH5V2reqs/ArB7Cne2/IDO8JDZaOEk\nnyr3zwuieuQtx8vwvmymSU2cS1OAzx/7ovz2eqQRP2RVOTZETf4kzfNW96PL\nL0GIzen4Gfucwkl9yOZQiEdI8q8o68F7vccslfWy+Cgku7Z4X9FNA2hWtCSv\ns2u6keem7stnpN1cRlLfxuR/OVVZV2RRh2ozxBLxUfysf358QIqNkbf2JJa3\ngwKZj4EB1YXGyON8SPOb067t3t1z4l4NXWMcpjxuuRmcHiCVh9TAfgud2kzL\nZJwbYtPAzERtcYGX0arms865VdP+coNG0ia5FZ5nJkMDrmMmXTu4cYmTqWnv\noXujsz2FEwQtptICtjguLA8V92QTZph8wsLuL9Rd+GuXxHhDQRFmsYFZxYnu\nlW7D+SYRhYsnSfvhXeJFrx4OinwFATxDOKcUXfaF2rwIeBnPS12PvpL3A7ip\nA5yliDtDHusuaCIQ44NCawBWXrFZZcX2Ag6noJ1/EoJQQHZ2xjNl7/j3zmCl\nRMGMs1+vXFV3QHmb5ulk7+QPsWcQ5lcX/Og=\n",
+    "display_name": "More Actions",
+    "bubble_choice_description": "What else can your character do? ",
+    "thumbnail_url": "https://images.code.org/9c1600059639016ccc264aaf1c2f0af2-Screen Shot 2025-01-22 at 2.52.40 PM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-22T22:37:59.776+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-choice-gameWorld\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-choice-gameWorld\"},{\"changed_at\":\"2025-01-22 22:41:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:42:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:53:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -8,7 +8,9 @@ export const getLockedStatusPerStudent = (
       student.id,
       lesson.lockable &&
         lesson.levels.every(
-          level => levelProgressByStudent[student.id][level.id]?.locked
+          level =>
+            levelProgressByStudent[student.id] &&
+            levelProgressByStudent[student.id][level.id]?.locked
         ),
     ])
   );

@@ -74,8 +74,11 @@ body.oceans-blue {
   background-color: $oceans_deep_blue;
 }
 
-body.music-black {
+body.music-black, body.background-dark {
   background-color: $dark_black;
+}
+
+body.background-dark, body.background-light {
   overscroll-behavior: none;
 }
 
@@ -83,6 +86,10 @@ h1 {
   @include main-font-bold;
   font-size: 32px;
   color: $purple;
+
+  &.text-black {
+    color: $light_black;
+  }
 }
 
 h2 {
@@ -128,6 +135,29 @@ em {
 strong em,
 em strong {
   @include main-font-bold-italic;
+}
+
+a.skip_link {
+  background: $white;
+  color: $black;
+  padding: 8px;
+  z-index: 10;
+  text-decoration: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  transform: translateX(var(--skip-link-transform, -100%));
+  transition: all 0.2s ease-in;
+  opacity: 0;
+
+  html[dir="rtl"] & {
+    --skip-link-transform: 100%;
+  }
+
+  &:focus {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 a.video_link {
@@ -289,6 +319,9 @@ img.video_thumbnail {
     a:hover {
       text-decoration: none;
       background-color: $orange;
+    }
+    &:active {
+      border: 2px solid $white !important;
     }
   }
 
@@ -583,16 +616,23 @@ html, body {
       @include main-font-semi-bold;
     }
   }
+  #localeForm {
+    max-width: fit-content;
+
+    select {
+      min-width: 8.43rem;
+    }
+  }
+  #global-edition-region-reset-button-container {
+    width: max-content;
+    margin: 0.5rem 0;
+  }
   .dim {
     display: inline-block;
     opacity: 0.8;
   }
 
   .container {
-    html[dir=rtl] & {
-      float: right;
-    }
-
     .row {
       [class*="span"] {
         html[dir=rtl] & {
@@ -621,15 +661,17 @@ html, body {
 }
 
 /* Styling that keeps the small footer consistent with other page elements */
-$codeApp-left-margin: 25px;
+$codeApp-left-margin: 15px;
+$codeApp-bottom-margin: 12px;
 $small-footer-horizontal-margin: 15px;
 $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
 .small-footer-base, #more-menu {
-  background-color: $background_gray;
+  background-color: initial;
   color: $dimgray;
   font-size: 14px;
+  margin: 8px;
   a {
     @include main-font-semi-bold;
     &:link {
@@ -700,9 +742,7 @@ $small-footer-standard-width: 400px;
 .small-footer-base {
   position: absolute;
   bottom: 0;
-  margin: 0 $codeApp-left-margin;
   display: flex;
-  border-top: 1px solid $lighter_gray;
   padding: 6px 0 3px 0;
   width: 100%;
   max-width: $small-footer-standard-width;
@@ -712,6 +752,10 @@ $small-footer-standard-width: 400px;
    * fit between the visualization above and the .small-footer
    */
   margin-top: 5px;
+  margin-bottom: $codeApp-bottom-margin;
+  margin-inline-end: 0;
+  margin-inline-start: $codeApp-left-margin;
+
 
   select {
     color: $charcoal;
@@ -724,7 +768,7 @@ $small-footer-standard-width: 400px;
     border: 0;
   }
 
-  .copyright-button, .i18n-dropdown-container, .globe-icon {
+  .copyright-button, .languageSelect {
     align-self: center;
   }
 
@@ -732,31 +776,12 @@ $small-footer-standard-width: 400px;
     margin: 0 10px;
     button {
       padding: 3px;
-      font-size: 16px;
-      line-height: 16px;
+      font-size: 1rem;
+      line-height: 1rem;
       margin: 0;
       border: 1px solid $lighter_gray;
-      background-color: $background-gray;
+      background-color: initial;
     }
-  }
-
-  .globe-icon {
-    color: $charcoal;
-    font-size: 18px;
-    margin: 0 1px;
-  }
-
-  .i18n-dropdown-container {
-    display: flex;
-    border: 1px solid $lighter_gray;
-    border-radius: 4px;
-    background-color: $white;
-    padding: 0 0 0 4px;
-    margin: 0;
-  }
-
-  .i18n-dropdown-container:dir(rtl) {
-    padding: 0 4px 0 0;
   }
 }
 
@@ -772,6 +797,98 @@ $small-footer-standard-width: 400px;
   @media screen and (min-width: 970px) {
     & {
       display: none;
+    }
+  }
+}
+
+body.background-dark, body.music-black {
+  .small-footer-base {
+    background-color: initial;
+    border-top: initial;
+  }
+
+  #page-small-footer {
+    user-select: none;
+
+    .small-footer-base {
+      margin-inline-start: 10px;
+      margin-bottom: 12px;
+      padding-bottom: 0;
+      transition: max-width 0.75s;
+
+      .version-caption {
+        display: none;
+      }
+
+      > p {
+        color: $light_white;
+      }
+    }
+
+    /* Use the underlying background color. */
+    select, .copyright-button {
+      background-color: initial;
+    }
+
+    /* Edge uses the select's background color for the dropdown as well, so we
+     * override it here. */
+    option {
+      background-color: $light_gray_950;
+    }
+
+    .copyright-button {
+      height: 1.625rem;
+      width: 1.625rem;
+      box-sizing: border-box;
+      border: solid 1px $light_white;
+      color: $light_white;
+    }
+  }
+
+  .languageSelect {
+    > div {
+      select {
+        border-color: $light_white;
+        background-color: $light_black;
+        color: $light_white;
+      }
+      &::after {
+        background-color: initial;
+
+        // This will otherwise get overridden by the simpleDropdown DSCO component
+        color: $light_white !important;
+      }
+      &::before {
+        background-color: initial;
+        color: $light_white;
+      }
+
+      &:has(select:hover) {
+        select:not(:disabled) {
+          color: $light_white;
+          background-color: $light_black;
+        }
+        &::before {
+          color: $light_white;
+        }
+        &::after {
+          color: $light_white;
+        }
+      }
+
+      &:has(select:active) {
+        select:not(:disabled) {
+          color: $light_white;
+          background-color: $light_black;
+        }
+
+        &::before {
+          color: $light_white;
+        }
+        &::after {
+          color: $light_white;
+        }
+      }
     }
   }
 }
@@ -816,12 +933,6 @@ $small-footer-standard-width: 400px;
   }
 }
 
-.dark {
-  .small-footer-base {
-    font-size: 12px;
-  }
-}
-
 /* All three major components of .small-footer are stacked:
    Need to have this reasonably, high since some of our elements (such as
    applab editor) have higher values
@@ -837,45 +948,14 @@ $small-footer-standard-width: 400px;
 #locale {
   font-family: sans-serif;
   height: 24px;
+  @media screen and (max-width: 1024px) {
+    max-width: 150px;
+  }
 }
 
 .oceans-blue .small-footer-base, .music-black .small-footer-base {
   background-color: initial;
   border-top: initial;
-}
-
-/* Custom styling for the locale & copyright buttons for Music Lab. */
-.music-black {
-  #page-small-footer {
-    user-select: none;
-
-    .small-footer-base {
-      margin-left: 10px;
-
-      .version-caption {
-        display: none;
-      }
-    }
-
-    .i18n-dropdown-container, .copyright-link {
-      height: 26px;
-      box-sizing: border-box;
-      border: solid 1px $neutral_dark40;
-    }
-
-    .copyright-button {
-      user-select: none;
-
-      .copyright-link {
-        width: 26px;
-      }
-    }
-
-    .i18n-dropdown-container, .globe-icon, #locale, .copyright-link {
-      background-color: initial;
-      color: $neutral_dark40;
-    }
-  }
 }
 
 .header_separator {
@@ -2409,6 +2489,18 @@ a.download-video {
 
 #hoc_download {
   color: $charcoal;
+  #deprecation-warning-banner {
+    margin: 1em 0;
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 1em;
+    #warning-icon {
+      font-size: 3em;
+    }
+  }
   .capsule {
     background-color: $lightest_gray;
     border-radius: 10px;

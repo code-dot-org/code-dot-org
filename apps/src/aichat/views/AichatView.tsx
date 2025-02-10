@@ -1,12 +1,12 @@
 /** @file Top-level view for AI Chat Lab */
 
-import React, {useCallback, useEffect} from 'react';
-
-import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
-import Button from '@cdo/apps/componentLibrary/button/Button';
+import Button from '@code-dot-org/component-library/button';
+import ActionDropdown from '@code-dot-org/component-library/dropdown/actionDropdown';
 import SegmentedButtons, {
   SegmentedButtonsProps,
-} from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+} from '@code-dot-org/component-library/segmentedButtons';
+import React, {useCallback, useEffect} from 'react';
+
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
@@ -14,12 +14,13 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
+import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getUserHasAichatAccess} from '../aichatApi';
+import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
 import {
   addChatEvent,
@@ -30,11 +31,12 @@ import {
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   sendAnalytics,
+  setShowModalType,
   setStartingAiCustomizations,
   setUserHasAichatAccess,
   setViewMode,
   updateAiCustomization,
-} from '../redux/aichatRedux';
+} from '../redux';
 import {getNewMessageId} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
@@ -47,7 +49,7 @@ import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
   id: getNewMessageId(),
-  text: 'Model customizations and model card information have been reset to default settings.',
+  text: aichatI18n.modelResetNotification(),
   notificationType: 'success',
   timestamp: Date.now(),
   includeInChatHistory: true,
@@ -57,10 +59,7 @@ const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-
-  const beforeNextLevel = useCallback(() => {
-    dispatch(sendSuccessReport('aichat'));
-  }, [dispatch]);
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
 
   const levelAichatSettings = useAppSelector(
     state =>
@@ -159,17 +158,21 @@ const AichatView: React.FunctionComponent = () => {
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
       {
-        label: 'Edit',
+        label: aichatI18n.editModeButtonText(),
         value: ViewMode.EDIT,
-        iconLeft: {iconName: 'wrench', iconStyle: 'solid', title: 'Edit Mode'},
+        iconLeft: {
+          iconName: 'wrench',
+          iconStyle: 'solid',
+          title: aichatI18n.aichatView_screenReader_EditModeButton(),
+        },
       },
       {
-        label: 'User View',
+        label: aichatI18n.userViewButtonText(),
         value: ViewMode.PRESENTATION,
         iconLeft: {
           iconName: 'user-group',
           iconStyle: 'solid',
-          title: 'User View Mode',
+          title: aichatI18n.aichatView_screenReader_UserViewModeButton(),
         },
         id: 'uitest-user-view-button',
       },
@@ -180,13 +183,13 @@ const AichatView: React.FunctionComponent = () => {
   };
 
   const chatWorkspaceHeader = (
-    <div>
-      {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIcon tooltipPlace="bottom" dark />
-      )}
+    <div className={moduleStyles.workspaceHeaderContent}>
       {viewMode === ViewMode.EDIT
         ? aichatI18n.aichatWorkspaceHeader()
         : botName}
+      {projectTemplateLevel && (
+        <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
+      )}
     </div>
   );
 
@@ -244,18 +247,21 @@ const AichatView: React.FunctionComponent = () => {
                 headerContent={commonI18n.instructions()}
                 className={moduleStyles.panelContainer}
                 headerClassName={moduleStyles.panelHeader}
+                rightHeaderContent={renderInstructionsHeaderRight(
+                  isUserTeacher,
+                  () => {
+                    dispatch(setShowModalType(ModalTypes.TEACHER_ONBOARDING));
+                  }
+                )}
               >
-                <Instructions
-                  beforeNextLevel={beforeNextLevel}
-                  className={moduleStyles.instructions}
-                />
+                <Instructions className={moduleStyles.instructions} />
               </PanelContainer>
             </div>
             {!allFieldsHidden && (
               <div className={moduleStyles.customizationArea}>
                 <PanelContainer
                   id="aichat-model-customization-panel"
-                  headerContent="Model Customization"
+                  headerContent={aichatI18n.modelCustomizationHeader()}
                   className={moduleStyles.panelContainer}
                   headerClassName={moduleStyles.panelHeader}
                   rightHeaderContent={renderModelCustomizationHeaderRight(
@@ -282,7 +288,7 @@ const AichatView: React.FunctionComponent = () => {
           >
             <PanelContainer
               id="aichat-presentation-panel"
-              headerContent={'Model Card'}
+              headerContent={aichatI18n.modelCardPanelHeader()}
               className={moduleStyles.panelContainer}
               headerClassName={moduleStyles.panelHeader}
             >
@@ -307,19 +313,46 @@ const AichatView: React.FunctionComponent = () => {
 
 const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
   return (
-    <div className={moduleStyles.chatHeaderRight}>
+    <div>
       <Button
         icon={{iconStyle: 'solid', iconName: 'refresh'}}
         isIconOnly={true}
         color={'black'}
         onClick={onStartOver}
-        ariaLabel={'Start Over'}
+        ariaLabel={aichatI18n.aria_startOver()}
         size={'xs'}
         type="tertiary"
-        className={moduleStyles.aichatViewButton}
+        className={moduleStyles.startOverButton}
       />
     </div>
   );
+};
+
+const renderInstructionsHeaderRight = (
+  isUserTeacher: boolean | undefined,
+  onInfoClick: () => void
+) => {
+  return isUserTeacher ? (
+    <ActionDropdown
+      name="instructionsInfoDropdown"
+      labelText={aichatI18n.instructionsHeaderRight()}
+      size="xs"
+      triggerButtonProps={{
+        type: 'tertiary',
+        isIconOnly: true,
+        color: 'black',
+        icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
+      }}
+      options={[
+        {
+          value: 'teacherOnboardingModal',
+          label: aichatI18n.aboutAichatLab(),
+          icon: {iconName: 'circle-info', iconStyle: 'solid'},
+          onClick: onInfoClick,
+        },
+      ]}
+    />
+  ) : null;
 };
 
 export default AichatView;

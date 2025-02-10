@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "csa-collegeboard-labs",
-    "serialized_at": "2022-09-27 14:43:39 UTC",
+    "serialized_at": "2025-01-11 14:24:35 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1547,6 +1548,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

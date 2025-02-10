@@ -1,7 +1,7 @@
+import Alert from '@code-dot-org/component-library/alert';
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import MusicBlocklyWorkspace from '@cdo/apps/music/blockly/MusicBlocklyWorkspace';
 import {ToolboxData} from '@cdo/apps/music/blockly/toolbox/types';
 import {BlockMode} from '@cdo/apps/music/constants';
@@ -66,8 +66,8 @@ const PreviewMusicWorkspace: React.FC<PreviewMusicWorkspaceProps> = ({
         the toolbox. Blocks added to the workspace and changes made
         to field values will not be saved. ` +
           (toolboxData?.type === 'flyout' && blockMode === BlockMode.SIMPLE2
-            ? `Function calls for (non-deletable, non-editable) function definitions in
-        the user workspace will not be shown in this preview`
+            ? `Function blocks are dynamically generated and will not be shown
+            in this preview.`
             : ``)
         }
         type="info"

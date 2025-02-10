@@ -4,15 +4,22 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSF",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
+      "topic_tags": [
+        "ai",
+        "data_science"
+      ],
       "tts": true,
-      "version_year": "2024"
+      "version_year": "2024",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-07-12 14:27:04 UTC",
+    "serialized_at": "2025-01-09 16:37:56 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

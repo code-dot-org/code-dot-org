@@ -48,6 +48,7 @@ const nodeModulesToTranspile = [
   '@blockly/plugin-scroll-options',
   '@blockly/field-angle',
   '@blockly/field-bitmap',
+  '@blockly/field-colour',
   'blockly',
   '@code-dot-org/dance-party',
   '@code-dot-org/johnny-five',
@@ -189,6 +190,10 @@ const APPLICATION_ALIASES = {
   '@cdoide': p('src/weblab2/CDOIDE'),
   '@cdo/generated-scripts': p('generated-scripts'),
   '@codebridge': p('src/codebridge'),
+  // Prevent webpack from including linked npm dependencies' version of React
+  // In other words, only bundle one copy of React (the one specified in this file)
+  // and not the one specified by linked dependencies.
+  react: p('node_modules/react'),
 };
 
 const LOCALE_ALIASES = {
@@ -331,6 +336,13 @@ const WEBPACK_BASE_CONFIG = {
               test: /(blockly\/.*\.js)$/,
               use: ['source-map-loader'],
               enforce: 'pre',
+            },
+            // Enable source maps for shared frontend packages
+            {
+              test: /\.js$/,
+              enforce: 'pre',
+              include: /frontend\/packages/,
+              use: ['source-map-loader'],
             },
           ]
         : []),
@@ -579,6 +591,9 @@ function createWebpackConfig({
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
         DEBUG_MINIFIED: envConstants.DEBUG_MINIFIED || 0,
+        'process.env.STATSIG_LOCAL_MODE_OFF': JSON.stringify(
+          envConstants.STATSIG_LOCAL_MODE_OFF ?? ''
+        ),
       }),
       ...(process.env.ANALYZE_BUNDLE
         ? [

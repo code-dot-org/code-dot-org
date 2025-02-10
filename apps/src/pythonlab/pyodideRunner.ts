@@ -1,10 +1,14 @@
-import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {MiniApps} from '@codebridge/constants';
 import {AnyAction, Dispatch} from 'redux';
 
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {getStore} from '@cdo/apps/redux';
+
+import {getValidationFromSource} from '../codebridge';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
@@ -13,33 +17,51 @@ import {
 } from './pyodideWorkerManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
+const appName = 'pythonlab';
+
 export async function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined,
-  progressManager: ProgressManager | null
+  progressManager: ProgressManager | null,
+  validationFile?: ProjectFile
 ) {
+  const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
   if (!source) {
-    dispatch(appendSystemMessage('You have no code to run.'));
+    consoleManager?.writeSystemMessage('You have no code to run.', appName);
     return;
   }
   if (runTests) {
-    await runAllTests(source, dispatch, progressManager);
+    await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
     if (!code) {
-      dispatch(appendSystemMessage(`You have no ${MAIN_PYTHON_FILE} to run.`));
+      consoleManager?.writeSystemMessage(
+        `You have no ${MAIN_PYTHON_FILE} to run.`,
+        appName
+      );
       return;
     }
-    dispatch(appendSystemMessage('Running program...'));
+    consoleManager?.writeSystemMessage('Running program...', appName);
     await runPythonCode(code, source);
+    if (isNeighborhoodLevel()) {
+      CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+    }
   }
 }
 
-export async function runPythonCode(mainFile: string, source: MultiFileSource) {
+export async function runPythonCode(
+  mainFile: string,
+  source: MultiFileSource,
+  validationFile?: ProjectFile
+) {
   try {
-    return await asyncRun(mainFile, source);
+    if (isNeighborhoodLevel()) {
+      CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+      CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    }
+    return await asyncRun(mainFile, source, validationFile);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     console.log(
@@ -49,6 +71,9 @@ export async function runPythonCode(mainFile: string, source: MultiFileSource) {
 }
 
 export function stopPythonCode() {
+  if (isNeighborhoodLevel()) {
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onStop();
+  }
   // This will terminate the worker and create a new one if there is a running program.
   restartPyodideIfProgramIsRunning();
 }
@@ -56,19 +81,22 @@ export function stopPythonCode() {
 export async function runAllTests(
   source: MultiFileSource,
   dispatch: Dispatch<AnyAction>,
-  progressManager: ProgressManager | null
+  progressManager: ProgressManager | null,
+  validationFile?: ProjectFile
 ) {
-  // If the project has a validation file, we just run those tests.
-  const validationFile = Object.values(source.files).find(
-    f => f.type === ProjectFileType.VALIDATION
-  );
-  if (validationFile) {
-    // We only support one validation file. If somehow there is more than one, just run the first one.
-    dispatch(appendSystemMessage(`Running level tests...`));
+  // We default to using the validation file passed in. If it does not exist,
+  // we check the source for the validation file (this is the case in start mode).
+  const validationToRun = validationFile || getValidationFromSource(source);
+  const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+  if (validationToRun) {
+    consoleManager?.writeSystemMessage(`Running level tests...`, appName);
     progressManager?.resetValidation();
+    // We only send the separate validation file, because otherwise the
+    // source already has the validation file.
     const result = await runPythonCode(
-      runValidationTests(validationFile.name),
-      source
+      runValidationTests(validationToRun.name),
+      source,
+      validationFile
     );
     if (result?.message) {
       // Get validation test results
@@ -83,8 +111,17 @@ export async function runAllTests(
       }
     }
   } else {
-    dispatch(appendSystemMessage(`Running your project's tests...`));
+    consoleManager?.writeSystemMessage(
+      `Running your project's tests...`,
+      appName
+    );
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.
     await runPythonCode(runStudentTests(), source);
   }
+}
+
+function isNeighborhoodLevel() {
+  return (
+    getStore().getState().lab.levelProperties?.miniApp === MiniApps.Neighborhood
+  );
 }

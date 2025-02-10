@@ -10,30 +10,77 @@ markdown <<MARKDOWN
 
 ---
 
-## Lesson 8 - Data Cleaning
+## Lesson 9 - Data Cleaning and Analysis Techniques
 
 
-<img src="https://images.code.org/01467ad73fa6fe46843fe7e62d99adb8-image-1724423225270.png" alt="codap logo" width="220px"   style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 20px;">
+    <div style="flex: 2; line-height: 1.6;">
+        <h4 style="font-size: 18px; margin-bottom: 10px;">In this lesson, students explore how raw data can hinder insights and practice data cleaning decisions.</h4>
+        <h4 style="font-size: 18px; margin-bottom: 20px;">
+            They conclude with a discussion on tradeoffs that can introduce bias and inaccuracy.
+        </h4>
+        <p style="font-size: 18px;">
+            <strong>Check out the entire lesson plan  
+                <a href="LINK" rel="noopener noreferrer" style="color: #0093A4; text-decoration: none;">here</a>.
+            </strong>
+        </p>
+    </div>
+       <div style="flex: 1; text-align: center;">
+        <img src="https://images.code.org/01467ad73fa6fe46843fe7e62d99adb8-image-1724423225270.png" 
+             alt="CODAP logo" 
+             width="180px" 
+             style="border-radius: 10px;">
+    </div>
 
-#### In this lesson, students look at how raw data can be in a format that prevents useful insights from being drawn.
-#### Students practice making the decisions that go into cleaning data and debrief with each other over the challenging parts of that process.
-#### The lesson concludes with a discussion about the tradeoffs inherent in these decisions since they can introduce bias and inaccuracy into a dataset.
+</div>
 
-### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+<br><br>
+
+> #### **Key Concepts:**
+> - #### **data cleaning** - the process of making data useful by deleting doubles or blanks, creating categories, and editing spelling errors
+> - #### **measures of center** - represent the central point or typical value of a data set
+> - #### **shape of distribution** - how data values are spread out and how they form a pattern when visualized on a graph
+> - #### **skewed distribution** - occurs when the data stretches out more on one side than the other
 
 <div style="clear:both;"></div>
 
-## Lesson 9 - Data Interpretation 
-<img src="https://images.code.org/ebfa1afbe8f17eae9192bde2b7314eb6-image-1724423378353.png" alt="graph icon" width="220px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
-
-#### This lesson delves into how various data visualizations can shape our understanding of the same topic, emphasizing identifying trends, patterns, and outliers. 
-#### Students will analyze individual datasets and create visualizations before participating in a jigsaw activity to merge and discuss insights from different perspectives. 
-#### This collaborative approach enhances their ability to critically assess data and understand the ethical considerations involved in its presentation.
-
-### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+## Lesson 10 - Data Interpretation 
 
 
-####Let’s take a look at a cleaning data activity from lesson 8! 
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 20px;">    
+    <div style="flex: 2; line-height: 1.6;">
+        <h4 style="font-size: 20px; margin-bottom: 10px;">
+            This lesson explores how different data visualizations shape our understanding by highlighting trends, patterns, and outliers.
+        </h4>
+        <h4 style="font-size: 20px; margin-bottom: 20px;">
+            Students create visualizations, then collaborate to discuss insights and ethical considerations in data presentation.
+        </h4>
+        <p style="font-size: 18px;">
+            <strong>Check out the entire lesson plan  
+                <a href="LINK" rel="noopener noreferrer" style="color: #0093A4; text-decoration: none;">here</a>.
+            </strong>
+        </p>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img src="https://images.code.org/ebfa1afbe8f17eae9192bde2b7314eb6-image-1724423378353.png" 
+             alt="graph icon" 
+             width="180px" 
+             style="border-radius: 10px;">
+    </div>
+
+</div>
+
+<div style="clear:both;"></div>
+<br>
+
+> #### **Key Concepts:**
+> - #### **outlier** - a data point that significantly differs from other data points
+> - #### **pattern** - a consistent or recurring sequence that can be observed and predicted
+> - #### **trend** - the general direction in which data points are heading over a period of time
+
+## What's Next?
+
+####Let’s take a look at a cleaning data activity from **Lesson 9!** 
 
 
 MARKDOWN

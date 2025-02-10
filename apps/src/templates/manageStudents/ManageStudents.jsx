@@ -4,54 +4,38 @@ import {connect} from 'react-redux';
 
 import SyncOmniAuthSectionControl from '@cdo/apps/accounts/SyncOmniAuthSectionControl';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {loadSectionStudentData} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
-import ManageStudentsTable from './ManageStudentsTable';
+import ManageStudentsTable from './Table';
 
-class ManageStudents extends React.Component {
-  static propTypes = {
-    studioUrlPrefix: PropTypes.string,
-
-    // Provided by redux
-    sectionId: PropTypes.number,
-    isLoadingStudents: PropTypes.bool.isRequired,
-    loadSectionStudentData: PropTypes.func.isRequired,
-  };
-
-  componentDidMount() {
-    this.props.loadSectionStudentData(this.props.sectionId);
-  }
-
-  render() {
-    const {sectionId, studioUrlPrefix, isLoadingStudents} = this.props;
-
-    return (
-      <div data-testid={'manage-students-tab'}>
-        {isLoadingStudents && <Spinner />}
-        {!isLoadingStudents && (
-          <div>
-            <SyncOmniAuthSectionControl
-              sectionId={sectionId}
-              studioUrlPrefix={studioUrlPrefix}
-            />
-            <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
-          </div>
-        )}
-      </div>
-    );
-  }
+function ManageStudents({studioUrlPrefix, sectionId, isLoadingStudents}) {
+  return (
+    // eslint-disable-next-line react/forbid-dom-props
+    <div data-testid={'manage-students-tab'}>
+      {isLoadingStudents && <Spinner />}
+      {!isLoadingStudents && (
+        <div>
+          <SyncOmniAuthSectionControl
+            sectionId={sectionId}
+            studioUrlPrefix={studioUrlPrefix}
+          />
+          <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
+        </div>
+      )}
+    </div>
+  );
 }
 
 export const UnconnectedManageStudents = ManageStudents;
 
-export default connect(
-  state => ({
-    sectionId: state.teacherSections.selectedSectionId,
-    isLoadingStudents: state.manageStudents.isLoadingStudents,
-  }),
-  dispatch => ({
-    loadSectionStudentData(sectionId) {
-      dispatch(loadSectionStudentData(sectionId));
-    },
-  })
-)(ManageStudents);
+ManageStudents.propTypes = {
+  studioUrlPrefix: PropTypes.string,
+
+  // Provided by redux
+  sectionId: PropTypes.number,
+  isLoadingStudents: PropTypes.bool.isRequired,
+};
+
+export default connect(state => ({
+  sectionId: state.teacherSections.selectedSectionId,
+  isLoadingStudents: state.manageStudents.isLoadingStudents,
+}))(ManageStudents);

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -15,6 +16,7 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "ca-ES",
@@ -49,11 +51,12 @@
         "zh-TW"
       ],
       "tts": true,
-      "version_year": "2021"
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2023-11-10 23:40:08 UTC",
+    "serialized_at": "2025-01-09 16:10:14 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

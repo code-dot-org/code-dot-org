@@ -296,7 +296,7 @@ class PardotV2
         # Also sort its values to keep consistent order.
         # @see http://developer.pardot.com/kb/api-version-4/prospects/#updating-fields-with-multiple-values
         contact[contact_field].split(',').sort.each_with_index do |value, index|
-          split_key = "#{prospect_field}_#{index}".to_sym
+          split_key = :"#{prospect_field}_#{index}"
           prospect[split_key] = value
         end
       else

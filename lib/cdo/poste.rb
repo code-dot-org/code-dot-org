@@ -539,6 +539,14 @@ module Poste2
       partner@code.org
     ]
 
+    def initialize(settings = nil)
+      # The mail gem expects to be able to initialize the configured delivery
+      # method with some settings. We therefore declare an empty initializer to
+      # support that pattern, despite us not actually needing any settings.
+      #
+      # See https://github.com/mikel/mail/blob/2.8.1/lib/mail/message.rb#L278
+    end
+
     def deliver!(mail)
       attachments = nil
 

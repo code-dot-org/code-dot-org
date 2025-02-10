@@ -1,5 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
-import {pull} from 'lodash';
+import {intersection, pull} from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -140,26 +140,39 @@ describe('CurriculumCatalogCard', () => {
       `+${subjects.length + topics.length - 1}`
     );
 
+    const remainingLabelsTooltipContent = intersection(
+      subjectsAndTopicsOrder,
+      remainingLabels
+    )
+      .map(label => translatedLabels[label])
+      .join(', ');
+
     // does not show when not hovered
     remainingLabels.forEach(label =>
       expect(screen.queryByText(translatedLabels[label])).toBeNull()
     );
 
     fireEvent.mouseOver(plusSignText);
-    remainingLabels.forEach(label => screen.getByText(translatedLabels[label]));
+    expect(screen.getByText(remainingLabelsTooltipContent)).toBeInTheDocument();
   });
 
   it('renders tooltip showing remaining labels when plus sign is focused', () => {
     renderCurriculumCard({...defaultProps, subjects: subjects, topics: topics});
-    const remainingLabels = pull(
-      [...subjects, ...topics],
-      subjectsAndTopicsOrder[firstSubjectIndexUsed]
-    );
+    const remainingLabelsTooltipContent = intersection(
+      subjectsAndTopicsOrder,
+      pull(
+        [...subjects, ...topics],
+        subjectsAndTopicsOrder[firstSubjectIndexUsed]
+      )
+    )
+      .map(label => translatedLabels[label])
+      .join(', ');
+
     const plusSignText = screen.getByText(
       `+${subjects.length + topics.length - 1}`
     );
     plusSignText.closest('div').focus();
-    remainingLabels.forEach(label => screen.getByText(translatedLabels[label]));
+    expect(screen.getByText(remainingLabelsTooltipContent)).toBeInTheDocument();
   });
 
   it('renders one topic, the first available from ordered list, if no subject present', () => {
@@ -196,6 +209,7 @@ describe('CurriculumCatalogCard', () => {
     const {container} = renderCurriculumCard();
 
     expect(screen.queryByTitle(translationIconTitle)).toBeNull();
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=language]')).toHaveLength(0);
   });
 
@@ -207,6 +221,7 @@ describe('CurriculumCatalogCard', () => {
     });
 
     expect(screen.queryByTitle(translationIconTitle)).toBeNull();
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=language]')).toHaveLength(0);
   });
 
@@ -218,6 +233,7 @@ describe('CurriculumCatalogCard', () => {
     });
 
     screen.getByTitle(translationIconTitle);
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=language]')).toHaveLength(1);
   });
 
@@ -231,6 +247,7 @@ describe('CurriculumCatalogCard', () => {
         }`
       )
     );
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=user]')).toHaveLength(1);
   });
 
@@ -242,6 +259,7 @@ describe('CurriculumCatalogCard', () => {
     });
 
     screen.getByText(new RegExp(`Grade: ${grade}`));
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=user]')).toHaveLength(1);
   });
 
@@ -249,6 +267,7 @@ describe('CurriculumCatalogCard', () => {
     const {container} = renderCurriculumCard();
 
     screen.getByText(defaultProps.duration, {exact: false});
+    // eslint-disable-next-line no-restricted-properties
     expect(container.querySelectorAll('i[class*=clock]')).toHaveLength(1);
   });
 

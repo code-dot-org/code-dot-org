@@ -1,3 +1,7 @@
+import CheckboxDropdown, {
+  CheckboxDropdownOption,
+} from '@code-dot-org/component-library/dropdown/checkboxDropdown';
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import moment from 'moment';
 import React, {useEffect, useState} from 'react';
 import * as Table from 'reactabular-table';
@@ -8,15 +12,12 @@ import {
   AITutorInteractionStatus,
   AITutorInteractionStatusValue,
 } from '@cdo/apps/aiTutor/types';
-import CheckboxDropdown, {
-  CheckboxDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import styleConstants from '@cdo/apps/styleConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 // TODO: Condense use of inline and imported styles
 import interactionsStyle from './interactions-table.module.scss';
@@ -260,10 +261,12 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           labelText="Filter by Status"
           name="filter-statuses"
           onChange={handleStatusFilterChange}
-          onClearAll={() => setSelectedStatuses([])}
           onSelectAll={() =>
             setSelectedStatuses(Object.values(AITutorInteractionStatus))
           }
+          onClearAll={() => setSelectedStatuses([])}
+          selectAllText={i18n.selectAll()}
+          clearAllText={i18n.clearAll()}
           size="s"
         />
         <CheckboxDropdown
@@ -274,10 +277,12 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
           labelText="Filter by Student"
           name="filter-students"
           onChange={handleStudentFilterChange}
-          onClearAll={() => setSelectedUserIds([])}
           onSelectAll={() =>
             setSelectedUserIds(studentFilterOptions.map(option => option.value))
           }
+          onClearAll={() => setSelectedUserIds([])}
+          selectAllText={i18n.selectAll()}
+          clearAllText={i18n.clearAll()}
           size="s"
         />
         <SimpleDropdown

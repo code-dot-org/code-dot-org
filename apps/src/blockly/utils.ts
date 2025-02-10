@@ -1,20 +1,21 @@
-import {Block, BlockSvg, WorkspaceSvg} from 'blockly';
+import * as GoogleBlockly from 'blockly/core';
 import _ from 'lodash';
 
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
+import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/metrics/events';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 
-import {DARK_THEME_SUFFIX, Themes} from './constants';
+import {DARK_THEME_SUFFIX, Themes, BLOCK_TYPES} from './constants';
 import {ExtendedBlock} from './types';
 
 type xmlAttribute = string | null;
 type InputTuple = [string, string, number];
 type InputCallback = () => void;
 type InputArgs = [...(InputTuple | InputCallback)[], number];
-type BlockList = Array<Block | BlockSvg>;
+type BlockList = Array<GoogleBlockly.Block | GoogleBlockly.BlockSvg>;
 
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
 export const FALSEY_DEFAULT = (attributeValue: xmlAttribute) =>
@@ -123,7 +124,9 @@ export function numberListToString(numberList: number[]) {
  * @param {Blockly.WorkspaceSvg} workspace - The workspace to be checked for serialization as hidden.
  * @returns {boolean} Returns `true` if the hidden workspace should be skipped, otherwise `false`.
  */
-export function shouldSkipHiddenWorkspace(workspace: WorkspaceSvg) {
+export function shouldSkipHiddenWorkspace(
+  workspace: GoogleBlockly.WorkspaceSvg
+) {
   return (
     !Blockly.getHiddenDefinitionWorkspace ||
     Blockly.getMainWorkspace().id !== workspace.id ||
@@ -153,6 +156,18 @@ export function handleCodeGenerationFailure(
     });
   }
 }
+/**
+ * Report usage of CDO Blockly, once all Blockly labs are purported to
+ * on mainline Google Blockly.
+ * @param {MetricEvent} eventName Event name to log
+ */
+export function reportCdoBlocklyUsage(eventName: MetricEvent) {
+  if (DCDO.get('cdo-blockly-usage', false)) {
+    MetricsReporter.logInfo({
+      event: eventName,
+    });
+  }
+}
 
 // Returns the current theme name without the 'dark' suffix, if present.
 export function getBaseName(themeName: Themes) {
@@ -160,6 +175,11 @@ export function getBaseName(themeName: Themes) {
     return themeName.replace(DARK_THEME_SUFFIX, '');
   }
 }
+
+export function isDarkTheme(theme: GoogleBlockly.Theme | undefined) {
+  return theme?.name.includes(DARK_THEME_SUFFIX);
+}
+
 export const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
 
@@ -309,4 +329,38 @@ export function getAllBlocks(): BlockList {
       ? Blockly.getHiddenDefinitionWorkspace().getAllBlocks()
       : []),
   ];
+}
+
+export function disableOrphanBlocks(eventWorkspace: GoogleBlockly.Workspace) {
+  // When a function definition is moved, we should not suddenly enable
+  // its call blocks.
+  eventWorkspace.getTopBlocks().forEach(block => {
+    if (block.type === BLOCK_TYPES.procedureCall) {
+      block.setEnabled(false);
+    }
+    updateBlockEnabled(block);
+  });
+}
+
+export function updateBlockEnabled(block: GoogleBlockly.Block) {
+  // Changing blocks as part of this event shouldn't be undoable.
+  const initialUndoFlag = Blockly.Events.getRecordUndo();
+  try {
+    Blockly.Events.setRecordUndo(false);
+    const parent = block.getParent();
+    if (parent && parent.isEnabled()) {
+      const children = block.getDescendants(false);
+      for (let i = 0, child; (child = children[i]); i++) {
+        child.setEnabled(true);
+      }
+    } else if (block.outputConnection || block.previousConnection) {
+      let currentBlock: GoogleBlockly.Block | null = block;
+      do {
+        currentBlock.setEnabled(false);
+        currentBlock = currentBlock.getNextBlock();
+      } while (currentBlock);
+    }
+  } finally {
+    Blockly.Events.setRecordUndo(initialUndoFlag);
+  }
 }

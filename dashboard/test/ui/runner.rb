@@ -33,13 +33,13 @@ require_relative './utils/selenium_constants'
 
 require 'active_support/core_ext/object/blank'
 
-ENV['BUILD'] ||= `git rev-parse --short HEAD`
+ENV['GIT_COMMIT'] ||= `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
 LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV.fetch('CIRCLE_BUILD_NUM', nil)}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
+S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV.fetch('CI_BUILD_NUMBER', nil)}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
 #
@@ -173,8 +173,8 @@ def parse_options
       opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
         options.maximize = true
       end
-      opts.on("--circle", "Whether is CircleCI (skip failing Circle tests)") do
-        options.is_circle = true
+      opts.on("--ci", "Whether is CI (skip failing CI tests)") do
+        options.is_ci = true
       end
       opts.on("--html", "Use html reporter") do
         options.html = true
@@ -448,8 +448,16 @@ def report_tests_finished(start_time, run_results)
   + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
   + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
-  unless failures.empty?
-    ChatClient.log "Failed tests: \n #{failures.join("\n")}"
+  a_status_page = status_page_url ? "<a href=\"#{status_page_url}\">" : ''
+  end_a = status_page_url ? "</a>" : ''
+
+  if failures.empty?
+    ChatClient.log "*#{a_status_page}SUMMARY, #{suite_success_count} DASHBOARD #{test_type.upcase} TESTS PASSED#{end_a}*", color: 'purple'
+  else
+    ChatClient.log "*#{a_status_page}SUMMARY, #{failures.count} DASHBOARD #{test_type.upcase} TESTS FAILED#{end_a}:*", color: 'purple'
+    failures.each do |failure|
+      ChatClient.log "\t• #{failure}", color: 'purple'
+    end
   end
 end
 
@@ -543,7 +551,7 @@ end
 
 def parallel_config(parallel_limit)
   {
-    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+    # Run in parallel threads on CI (less memory), processes on main test machine (better CPU utilization)
     in_threads: ENV['CI'] ? parallel_limit : nil,
     in_processes: ENV['CI'] ? nil : parallel_limit,
 
@@ -673,12 +681,12 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@only_mobile') unless browser['appium:mobile']
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
-  arguments += skip_tag('@no_circle') if options.is_circle
+  arguments += skip_tag('@no_ci') if options.is_ci
 
-  # always run locally or during circle runs.
+  # always run locally or during CI runs.
   # Note that you may end up running in more than one browser if you use flags
-  # like [test safari] or [test firefox] during a circle run.
-  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_circle
+  # like [test safari] or [test firefox] during a CI run.
+  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_ci
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
@@ -702,14 +710,19 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
     arguments += " --format rerun --out #{rerun_filename test_run_string}"
   end
 
-  # In CircleCI we export additional logs in junit xml format so CircleCI can
+  # In CI we export additional logs in junit xml format so CI could in theory
   # provide pretty test reports with success/fail/timing data upon completion.
-  # See: https://circleci.com/docs/test-metadata/#cucumber
   if ENV['CI']
-    arguments += " --format junit --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.xml"
+    arguments += " --format junit --out $CI_TEST_REPORTS/cucumber/#{test_run_string}.xml"
   end
 
   arguments
+end
+
+def to_percent(number, n_sig_digits)
+  percent = number * 100.0
+  return 0 if percent.zero?
+  "#{percent.round(-(Math.log10(percent).ceil - n_sig_digits))}%"
 end
 
 def run_feature(browser, feature, options)
@@ -744,7 +757,6 @@ def run_feature(browser, feature, options)
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
-  run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
   run_environment['PRIORITY'] = options.priority
 
   # disable some stuff to make require_rails_env run faster within cucumber.
@@ -776,11 +788,13 @@ def run_feature(browser, feature, options)
   # only retry cucumber/selenium errors, not eyes mismatches.
   while !cucumber_succeeded && (reruns < max_reruns)
     reruns += 1
+    retry_again_msg = reruns < max_reruns ? " once, will retry" : ", not going to retry"
 
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
-    ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{flakiness_for_test(test_run_string) || '?'})..."
+    message = "#{test_run_string} failed#{retry_again_msg} (retry #{reruns} of #{max_reruns}, flakiness: #{to_percent(flakiness_for_test(test_run_string) || 0.0, 3) || '?'})"
+    message += "#{log_link}, first selenium error: <i>#{first_selenium_error(html_log)}</i>" if options.html
+    ChatClient.log message
     $lock.synchronize do
       log_error prefix_string(Time.now, log_prefix)
       log_error prefix_string(browser.to_yaml, log_prefix)
@@ -841,11 +855,10 @@ def run_feature(browser, feature, options)
     # Don't log individual successes because we hit ChatClient rate limits
     # ChatClient.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
-    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})#{log_link}"
-    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}"
+    message = "*FAILED: #{test_run_string}* #{log_link}"
+    message += "\n(#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})"
     ChatClient.log message, color: 'red'
   end
   result_string =

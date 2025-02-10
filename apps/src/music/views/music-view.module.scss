@@ -27,6 +27,9 @@ $default-spacing: 2px;
   max-height: calc(100% - $timeline-area-height);
   gap: $default-spacing;
   overflow: hidden;
+  &.toolboxMode {
+    max-height: 100%; // Allow the work area to take full height
+  }
 }
 
 .playArea {
@@ -80,6 +83,10 @@ $default-spacing: 2px;
   overflow: hidden;
   flex: 1;
   position: relative;
+}
+
+.panelContainerHeader {
+  margin-bottom: 2px;
 }
 
 .advancedControlsContainer {

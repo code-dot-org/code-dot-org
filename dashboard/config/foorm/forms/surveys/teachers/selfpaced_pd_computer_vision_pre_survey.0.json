@@ -72,6 +72,10 @@
           "title": "Are you planning to teach one or more of the Computer Vision lessons? ",
           "choices": [
             {
+              "value": "def_no",
+              "text": "Definitely no"
+            },
+            {
               "value": "no",
               "text": "No"
             },
@@ -88,12 +92,12 @@
               "text": "Probably yes"
             },
             {
-              "value": "def_yes",
-              "text": "Definitely yes"
-            },
-            {
               "value": "yes",
               "text": "Yes"
+            },
+            {
+              "value": "def_yes",
+              "text": "Definitely yes"
             }
           ]
         }

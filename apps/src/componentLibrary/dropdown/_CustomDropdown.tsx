@@ -1,3 +1,14 @@
+import {Button, ButtonProps} from '@code-dot-org/component-library/button';
+import {dropdownColors} from '@code-dot-org/component-library/common/constants';
+import {useDropdownContext} from '@code-dot-org/component-library/common/contexts';
+import {getAriaPropsFromProps} from '@code-dot-org/component-library/common/helpers';
+import {
+  ComponentSizeXSToL,
+  DropdownColor,
+} from '@code-dot-org/component-library/common/types';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -7,18 +18,6 @@ import React, {
   AriaAttributes,
   KeyboardEvent,
 } from 'react';
-
-import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
-import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
-import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
-import {
-  ComponentSizeXSToL,
-  DropdownColor,
-} from '@cdo/apps/componentLibrary/common/types';
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from './customDropdown.module.scss';
 
@@ -51,6 +50,8 @@ export interface CustomDropdownProps extends AriaAttributes {
   menuPlacement?: 'left' | 'right';
   /** CustomDropdown disabled state */
   disabled?: boolean;
+  /** CustomDropdown readOnly state */
+  readOnly?: boolean;
   /** CustomDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
@@ -66,6 +67,16 @@ export interface CustomDropdownProps extends AriaAttributes {
   triggerButtonProps?: ButtonProps;
   /** Children */
   children: React.ReactNode;
+  /** CustomDropdown helper message */
+  helperMessage?: string;
+  /** CustomDropdown helper icon */
+  helperIcon?: FontAwesomeV6IconProps;
+  /** CustomDropdown error message */
+  errorMessage?: string;
+  /** Style the dropdown as a form field */
+  styleAsFormField?: boolean;
+  /** (used with styleAsFormField: true) Selected value text */
+  selectedValueText?: string;
 }
 
 /**
@@ -82,11 +93,17 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   isSomeValueSelected = false,
   icon,
   disabled = false,
+  readOnly = false,
   color = dropdownColors.black,
   size = 'm',
   menuPlacement = 'left',
   useDSCOButtonAsTrigger = false,
   triggerButtonProps = {},
+  helperMessage,
+  helperIcon,
+  errorMessage,
+  styleAsFormField = false,
+  selectedValueText,
   ...rest
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
@@ -148,7 +165,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     id: `${name}-dropdown-button`,
     'data-toggle': 'dropdown',
     onClick: toggleDropdown,
-    disabled: disabled,
+    disabled: disabled || readOnly,
     ...ariaProps,
     'aria-haspopup': true,
     'aria-label': ariaProps['aria-label'] || `${name} filter dropdown`,
@@ -158,7 +175,12 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     <div
       id={`${name}-dropdown`}
       className={classNames(
-        {[moduleStyles.open]: isOpen},
+        {
+          [moduleStyles.open]: isOpen,
+          [moduleStyles.hasError]: errorMessage,
+          [moduleStyles.readOnly]: readOnly,
+          [moduleStyles.styleAsFormField]: styleAsFormField,
+        },
         moduleStyles.dropdownContainer,
         moduleStyles[`dropdownContainer-${menuPlacement}-menuPlacement`],
         moduleStyles[`dropdownContainer-${color}`],
@@ -169,6 +191,11 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       ref={dropdownRef}
       aria-describedby={ariaProps['aria-describedby']}
     >
+      {styleAsFormField && labelText && (
+        <div>
+          <span className={moduleStyles.dropdownFieldLabel}>{labelText}</span>
+        </div>
+      )}
       {useDSCOButtonAsTrigger ? (
         <Button
           {...triggerComponentProps}
@@ -201,17 +228,36 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           <span
             className={classNames(
               moduleStyles.dropdownLabel,
-              moduleStyles[`dropdownLabel-${labelType}`]
+              moduleStyles[
+                `dropdownLabel-${styleAsFormField ? 'thin' : labelType}`
+              ]
             )}
           >
-            {labelText}
+            {styleAsFormField ? selectedValueText : labelText}
           </span>
           <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
         </button>
       )}
-
       {/** Dropdown menu content is rendered here as children props*/}
       {children}
+
+      {!errorMessage && (helperMessage || helperIcon) && (
+        <div className={moduleStyles.helperSection}>
+          {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
+          {helperMessage && <span>{helperMessage}</span>}
+        </div>
+      )}
+      {errorMessage && (
+        <div
+          className={classNames(
+            moduleStyles.errorSection,
+            moduleStyles.helperSection
+          )}
+        >
+          <FontAwesomeV6Icon iconName="circle-exclamation" />
+          <span>{errorMessage}</span>
+        </div>
+      )}
     </div>
   );
 };

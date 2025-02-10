@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-10-30T15:42:29.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "long_instructions": "# Random Assignment of Variables\r\n\r\n::: details [Step 1]\r\nRun the code multiple times to see how the character stats change with each execution.\r\n:::\r\n\r\n::: details [Step 2]\r\nModify the code by changing the ranges for the random values.\r\n:::\r\n\r\n::: details [Step 3]\r\nAdd a new variable, such as health, and assign it a random value using `random.randint()`.\r\n:::",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "import random\n\n# Assign random values to variables\ncharacter_age = random.randint(18, 40)  # Random age between 18 and 40\nstrength = random.randint(5, 20)  # Random strength level between 5 and 20\nquests_completed = random.randint(1, 10)  # Random number of quests completed between 1 and 10\n\n\n# Display the randomly assigned character stats\nprint(\"Character Stats:\")\nprint(\"Age:\", character_age)\nprint(\"Strength:\", strength)\nprint(\"Quests Completed:\", quests_completed)",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzjeN79sMlWVZZ3h9Kzhd4rcO9pqVY2I/\nJhkgXx6NH3V98auevuS1U7yVoDtxuyQl2GAkznUEn0vUDW37KuFbjJAISz5A\n+RIBO9JHqmkPp3yowvchPQXpLL8ijmsAMmoEPOgEuOt9tGmBbee84hO8VsAJ\n0eZ+19TmD8go2XG0+INJM4ONs6ynROp/xIh7o6ndj2+vHOlGafjr+23kX7gg\niVoGOsGz3vE7MFr+N7AuDHNCvPv/ocPz535EC4iM4zKvJiEFKQjd6mXer/m7\nJTnpvM4j+QSSK3nCrLDwFgYsbpDKU+DzXSHYlYrNbsxu6NKVp5eM1Upefg4q\nceeE7HJUf5aVRXV3WG9xIMqOeA2obEirQnYW7ZD03ORmcbmoOrssQVATpWxH\nWqN1jb9KaUJ59LrsCgHiq0lGAxbVht3iS1q9cWoPdOJHKPOmuE8Bu4Y8DYa6\nOHbN03QvPSIdpYQRcYL6zYAqnSPkUKwtlpB2uORlr0t0JP7IG9ZFFVC5eKIk\nnQ==\n",
+    "display_name": "Random Assignment ",
+    "bubble_choice_description": "Learn how to assign random values to variables using `random.randint()`.",
+    "thumbnail_url": "https://images.code.org/a2960ba6fbe85c997256e8efd24e8fea-number.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-10-30T15:42:29.988+00:00\",\"changed\":[\"cloned from \\\"IPP_SampleProgression_UMC_Inspiration_3\\\"\"],\"cloned_from\":\"IPP_SampleProgression_UMC_Inspiration_3\"},{\"changed_at\":\"2024-10-30 15:43:23 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:43:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:43:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-30 15:43:40 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-10-31 00:49:52 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

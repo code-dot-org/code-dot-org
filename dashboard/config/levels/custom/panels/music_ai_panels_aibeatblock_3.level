@@ -1,0 +1,41 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-09-30T17:16:43.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_3",
+    "panels": [
+      {
+        "text": "Use the **play AI drums** block to help you generate new beats!",
+        "imageUrl": "https://images.code.org/50f6a8f66c6a76e126f8abb649edba0c-empty beat block.png",
+        "key": "music_ai_panels_function-973d8506-2906-4bdf-96c6-e08d64b1e677",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "First, add a few beats. ",
+        "imageUrl": "https://images.code.org/5433f72d8af7bbe308866777572e408f-seed beat please.gif",
+        "key": "music_ai_panels_aibeatblock-2590f59d-fc81-460c-8499-036f2a1f5b60",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Then, click \"Generate\" and A.I. will do the rest. ",
+        "imageUrl": "https://images.code.org/9e4af2fa58e57b7eabdc15ff5c265d7e-geeenerate.gif",
+        "key": "music_ai_panels_aibeatblock-dbb9516c-1147-4f1e-951a-4ef7e00c129f",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Now, it's your turn! ",
+        "imageUrl": "https://images.code.org/042c61aba57e3d29c6395c6471d88340-Screen Shot 2024-10-01 at 5.07.29 PM.png",
+        "key": "music_ai_panels_aibeatblock-6678c7d9-3f09-4960-9113-548c9cfb156e",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-09-30T17:16:43.059+00:00\",\"changed\":[\"cloned from \\\"music_ai_panels_aibeatblock_2\\\"\"],\"cloned_from\":\"music_ai_panels_aibeatblock_2\"},{\"changed_at\":\"2024-10-01 22:43:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-01 23:01:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-02 00:05:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-02 00:06:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-02 00:08:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

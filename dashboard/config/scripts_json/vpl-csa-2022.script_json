@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSA",
       "hideable_lessons": true,
       "is_course": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csa",
-    "serialized_at": "2024-03-06 20:07:27 UTC",
+    "serialized_at": "2024-11-19 01:19:48 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",

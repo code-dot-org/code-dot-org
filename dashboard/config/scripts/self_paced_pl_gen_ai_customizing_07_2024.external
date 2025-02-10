@@ -8,9 +8,6 @@ markdown <<MARKDOWN
 #### There are lots of new key concepts introduced around system prompting that students will engage with during these lessons. We’ve summarized them below.
 
 
-<Table style="width:100%;">
-<tr>
-<td>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Role
 </summary>
@@ -19,15 +16,13 @@ markdown <<MARKDOWN
 
 #### The part the model plays when responding, like being a teacher, helper, or friend.
 
-<img src="https://images.code.org/72763f3d42a80e44b0dfded8daff8f68-Screenshot 2024-09-11 at 2.00.51 PM.png" alt="chatbot lab level" width="500px" style="border: 2px solid black; border-radius: 8px; float:center">
+<img src="https://images.code.org/72763f3d42a80e44b0dfded8daff8f68-Screenshot 2024-09-11 at 2.00.51 PM.png" alt="system prompt example - role" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
 
 <br>
 
 </p></div>
 </details>
-</td>
 
-<td>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Tone
 </summary>
@@ -36,7 +31,7 @@ markdown <<MARKDOWN
 
 #### The way the model speaks, such as being formal, friendly, or casual.
 
-<img src="https://images.code.org/f7b61b13570706aa62dc8c6974528956-Screenshot 2024-09-11 at 2.00.58 PM.png" alt="chatbot lab level" width="500px" style="border: 2px solid black; border-radius: 8px; float:center">
+<img src="https://images.code.org/f7b61b13570706aa62dc8c6974528956-Screenshot 2024-09-11 at 2.00.58 PM.png" alt="system prompt example - tone" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
 
 
 <br>
@@ -44,11 +39,6 @@ markdown <<MARKDOWN
 </p></div>
 </details>
 
-</td>
-</tr>
-<tr>
-
-<td>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Audience
 </summary>
@@ -56,16 +46,14 @@ markdown <<MARKDOWN
     <p>
 
 #### The people the model is talking to, like kids, adults, or professionals.
-<img src="https://images.code.org/b451c5ba210c49b035f79dbcfb10fffc-Screenshot 2024-09-11 at 2.01.37 PM.png" alt="chatbot lab level" width="500px" style="border: 2px solid black; border-radius: 8px; float:center">
+<img src="https://images.code.org/b451c5ba210c49b035f79dbcfb10fffc-Screenshot 2024-09-11 at 2.01.37 PM.png" alt="system prompt example - audience" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
 
 
 <br>
 
 </p></div>
 </details>
-</td>
 
-<td>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Delivery
 </summary>
@@ -73,23 +61,40 @@ markdown <<MARKDOWN
     <p>
 
 #### How the model says things, whether it’s simple, detailed, quick, or slow, depending on who’s listening.
-<img src="https://images.code.org/21634632a6b6b454982372261637e6c5-Screenshot 2024-09-11 at 2.01.43 PM.png" alt="chatbot lab level" width="500px" style="border: 2px solid black; border-radius: 8px; float:center">
+<img src="https://images.code.org/21634632a6b6b454982372261637e6c5-Screenshot 2024-09-11 at 2.01.43 PM.png" alt="system prompt example - delivery" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
 
 
 <br>
 
 </p></div>
 </details>
-</td>
-
-</tr>
-</Table>
-
-
 
 
 ## Up Next!
 #### The next level is an example of an **Assessment Level** from the curriculum. These levels require students to apply the skills they've learned with less scaffolding and support than other levels. Teachers are encouraged to use these for gathering information about what students are and are not grasping from the lessons.
 
-#### But don't worry! We've added in some additional scaffolding for you for this level as you try out writing a system prompt that includes all of these components.
+#### But don't worry! We're going to help you out before you try this level. **Teacher answer keys and exemplars are provided as part of each lesson plan.** Before you move on, review the exemplar shown below.
+
+<p style="text-align: center;">
+<img src="https://images.code.org/0786bfc04abd7ea4d2836e85d13988a9-Screenshot 2024-10-04 at 1.39.12 PM.png
+" alt="exemplar from Lesson 14, Level 12" width="90%" style="border: 2px solid black; border-radius: 8px; float:center">
+</p>
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔍 Where do I find the exemplars? 
+</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### On each relevant Lesson Plan you'll find a link to the Key and Exemplars in the Links, for Teacher's section.
+<img src="https://images.code.org/48368c9cc0474c28fb8015706144f14e-Screenshot 2024-10-04 at 1.40.40 PM.png" alt="lesson plan with arrow going to '[Key]Level Guide: System Prompting - Practice" width="900px" style="border: 2px solid black; border-radius: 8px; float:center">
+
+
+<br>
+
+</p></div>
+</details>
+
 MARKDOWN

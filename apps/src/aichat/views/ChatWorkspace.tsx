@@ -1,33 +1,31 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
+import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+
+import {ModalTypes} from '../constants';
+import aichatI18n from '../locale';
 import {
   fetchStudentChatHistory,
   selectAllVisibleMessages,
-  setShowWarningModal,
-} from '@cdo/apps/aichat/redux/aichatRedux';
-import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
+  setShowModalType,
+} from '../redux';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
-import CopyButton from './CopyButton';
+import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatWorkspaceProps {
   onClear: () => void;
-}
-interface Students {
-  [index: number]: {
-    id: number;
-    name: string;
-  };
 }
 
 enum WorkspaceTeacherViewTab {
@@ -48,32 +46,30 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showWarningModal, studentChatHistory} = useAppSelector(
+  const {showModalType, studentChatHistory} = useAppSelector(
     state => state.aichat
   );
-  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const visibleItems = useSelector(selectAllVisibleMessages);
-
-  const students = useSelector(
-    (state: {teacherSections: {selectedStudents: Students}}) =>
-      state.teacherSections.selectedStudents
-  );
+  const selectedStudent = useAppSelector(({teacherSections, progress}) => {
+    const students = teacherSections.selectedStudents;
+    if (progress.viewAsUserId && progress.currentLevelId) {
+      return Object.values(students).find(
+        student => student.id === progress.viewAsUserId
+      );
+    }
+  });
 
   const dispatch = useAppDispatch();
 
-  const selectedStudentName = useMemo(() => {
-    if (viewAsUserId && currentLevelId) {
-      const selectedStudent = Object.values(students).find(
-        student => student.id === viewAsUserId
-      );
-      if (selectedStudent) {
-        dispatch(fetchStudentChatHistory(selectedStudent.id));
-        return getShortName(selectedStudent.name);
-      }
+  useEffect(() => {
+    if (selectedStudent) {
+      dispatch(fetchStudentChatHistory(selectedStudent.id));
     }
-    return null;
-  }, [viewAsUserId, students, dispatch, currentLevelId]);
+  }, [selectedStudent, dispatch]);
+
+  const selectedStudentName =
+    selectedStudent && getShortName(selectedStudent.name);
 
   // Teacher user is able to interact with chatbot.
   const canChatWithModel = useMemo(
@@ -82,13 +78,25 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   useEffect(() => {
+    const teacherSawAichatOnboardingModal = tryGetLocalStorage(
+      'teacherSawAichatOnboarding',
+      'no'
+    );
+    const modalToShow =
+      isUserTeacher && teacherSawAichatOnboardingModal !== 'yes'
+        ? ModalTypes.TEACHER_ONBOARDING
+        : ModalTypes.WARNING;
+    dispatch(setShowModalType(modalToShow));
+  }, [isUserTeacher, dispatch]);
+
+  useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
-    if (viewAsUserId && !selectedTab) {
+    if (selectedStudent && !selectedTab) {
       setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
-    } else if (!viewAsUserId) {
+    } else if (!selectedStudent) {
       setSelectedTab(null);
     }
-  }, [viewAsUserId, selectedTab]);
+  }, [selectedStudent, selectedTab]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
@@ -99,11 +107,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     {
       value: 'viewStudentChatHistory',
       text:
-        `${selectedStudentName}'s chat history` +
-        (selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
-          ? ' (view only)'
-          : ''),
-
+        selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+          ? aichatI18n.viewOnlyTabLabel({
+              fieldLabel: aichatI18n.viewStudentChatHistory({
+                selectedStudentName: selectedStudentName ?? '',
+              }),
+            })
+          : aichatI18n.viewStudentChatHistory({
+              selectedStudentName: selectedStudentName ?? '',
+            }),
       tabContent: (
         <ChatEventsList events={studentChatHistory} isTeacherView={true} />
       ),
@@ -111,7 +123,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     },
     {
       value: 'testStudentModel',
-      text: 'Test student model',
+      text: aichatI18n.testStudentModel(),
       tabContent: <ChatEventsList events={visibleItems} />,
     },
   ];
@@ -133,15 +145,35 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
-  const onCloseWarningModal = useCallback(
-    () => dispatch(setShowWarningModal(false)),
-    [dispatch]
+  const ChatModal = useMemo(
+    () =>
+      showModalType === ModalTypes.TEACHER_ONBOARDING
+        ? TeacherOnboardingModal
+        : showModalType === ModalTypes.WARNING
+        ? ChatWarningModal
+        : undefined,
+    [showModalType]
   );
+
+  const onCloseModal = useCallback(() => {
+    // We only want to show the teacher onboarding modal the first time a teacher user
+    // interacts with the aichat tool. Thus, we store a value in local storage when
+    // closing the modal. After the first time viewing the modal, the teacher user
+    // sees the warning modal on page load from then on.
+    if (
+      isUserTeacher &&
+      showModalType === ModalTypes.TEACHER_ONBOARDING &&
+      tryGetLocalStorage('teacherSawAichatOnboarding', 'no') !== 'yes'
+    ) {
+      trySetLocalStorage('teacherSawAichatOnboarding', 'yes');
+    }
+    dispatch(setShowModalType(undefined));
+  }, [dispatch, isUserTeacher, showModalType]);
 
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
-      {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
-      {viewAsUserId ? (
+      {ChatModal && <ChatModal onClose={onCloseModal} />}
+      {selectedStudent ? (
         <Tabs {...tabArgs} />
       ) : (
         <ChatEventsList events={visibleItems} />
@@ -155,7 +187,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         )}
         <div className={moduleStyles.buttonRow}>
           <Button
-            text="Clear chat"
+            text={aichatI18n.clearChatButtonText()}
             disabled={!canChatWithModel}
             iconLeft={eraserIcon}
             size="s"
@@ -163,7 +195,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             color="gray"
             onClick={onClear}
           />
-          <CopyButton isDisabled={!canChatWithModel} />
+          <CopyChatHistoryButton isDisabled={!canChatWithModel} />
         </div>
       </div>
     </div>

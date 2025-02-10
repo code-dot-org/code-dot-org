@@ -10,7 +10,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {StickyContainer} from 'react-sticky';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 import FilterHeader from './filterHeader';
@@ -219,23 +218,28 @@ export default class TutorialExplorer extends React.Component {
    * Given a sort by choice (popularityrank or displayweight) and a grade range,
    * return the field name from the tutorials data that should used for sorting.
    */
+
+  // As of 2024 we will manually sort activities by displayweight on
+  // the cdo-tutorials gsheet with new activities at the top of the
+  // list followed by ranking in popularity from the previous year.
+  // See https://github.com/code-dot-org/code-dot-org/pull/60728
   getSortByFieldName(sortBy, grade) {
     let sortByFieldName;
 
     const gradeToDisplayWeightSortByFieldName = {
       all: TutorialsSortByFieldNames.displayweight,
-      pre: TutorialsSortByFieldNames.displayweight_pre,
-      '2-5': TutorialsSortByFieldNames.displayweight_25,
-      '6-8': TutorialsSortByFieldNames.displayweight_middle,
-      '9+': TutorialsSortByFieldNames.displayweight_high,
+      pre: TutorialsSortByFieldNames.displayweight,
+      '2-5': TutorialsSortByFieldNames.displayweight,
+      '6-8': TutorialsSortByFieldNames.displayweight,
+      '9+': TutorialsSortByFieldNames.displayweight,
     };
 
     const gradeToPopularityRankSortByFieldName = {
       all: TutorialsSortByFieldNames.popularityrank,
-      pre: TutorialsSortByFieldNames.popularityrank_pre,
-      '2-5': TutorialsSortByFieldNames.popularityrank_25,
-      '6-8': TutorialsSortByFieldNames.popularityrank_middle,
-      '9+': TutorialsSortByFieldNames.popularityrank_high,
+      pre: TutorialsSortByFieldNames.popularityrank,
+      '2-5': TutorialsSortByFieldNames.popularityrank,
+      '6-8': TutorialsSortByFieldNames.popularityrank,
+      '9+': TutorialsSortByFieldNames.popularityrank,
     };
 
     // If we're sorting by recommendation (a.k.a. displayweight) then find the
@@ -538,12 +542,6 @@ export default class TutorialExplorer extends React.Component {
   }
 
   render() {
-    const bottomLinksContainerStyle = {
-      ...styles.bottomLinksContainer,
-      textAlign: getResponsiveValue({xs: 'left', md: 'right'}),
-      visibility: this.shouldShowTutorials() ? 'visible' : 'hidden',
-    };
-
     const grade = this.state.filters.grade[0];
 
     return (
@@ -637,17 +635,6 @@ export default class TutorialExplorer extends React.Component {
                   />
                 )}
               </div>
-
-              <div style={bottomLinksContainerStyle}>
-                <div>
-                  <a
-                    style={styles.bottomLinksLink}
-                    href="https://support.code.org/hc/en-us/articles/115001306531-How-can-students-with-special-needs-or-disabilities-participate-"
-                  >
-                    {i18n.bottomSpecialNeedsLink()}
-                  </a>
-                </div>
-              </div>
             </div>
           </StickyContainer>
         )}
@@ -655,21 +642,6 @@ export default class TutorialExplorer extends React.Component {
     );
   }
 }
-
-const styles = {
-  bottomLinksContainer: {
-    padding: '10px 7px 40px 7px',
-    fontSize: 13,
-    lineHeight: '17px',
-    clear: 'both',
-  },
-  bottomLinksLink: {
-    ...fontConstants['main-font-semi-bold'],
-  },
-  bottomLinksLinkFirst: {
-    paddingBottom: 10,
-  },
-};
 
 function getFilters({mobile}) {
   const filters = [
@@ -684,16 +656,6 @@ function getFilters({mobile}) {
         {name: '2-5', text: i18n.filterGrades25()},
         {name: '6-8', text: i18n.filterGrades68()},
         {name: '9+', text: i18n.filterGrades9()},
-      ],
-    },
-    {
-      name: 'student_experience',
-      text: i18n.filterStudentExperience(),
-      headerOnDesktop: true,
-      singleEntry: true,
-      entries: [
-        {name: 'beginner', text: i18n.filterStudentExperienceBeginner()},
-        {name: 'comfortable', text: i18n.filterStudentExperienceComfortable()},
       ],
     },
     {
@@ -770,7 +732,6 @@ function getFilters({mobile}) {
   ];
 
   const initialFilters = {
-    student_experience: ['beginner'],
     grade: ['all'],
   };
 

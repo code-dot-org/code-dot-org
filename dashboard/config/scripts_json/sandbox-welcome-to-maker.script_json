@@ -4,18 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSF Self Paced PL",
+      "curriculum_umbrella": "K-5 Special topics curriculum selfpaced pl",
       "is_migrated": true,
       "student_detail_progress_view": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 20:30:53 UTC",
+    "serialized_at": "2025-01-22 19:00:17 UTC",
     "published_state": null,
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "sandbox-welcome-to-maker"
     }

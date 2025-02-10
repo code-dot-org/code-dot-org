@@ -16,18 +16,15 @@
   label {
     width: 100%;
     margin-bottom: 0;
+
+    span::after {
+      content: '*';
+    }
   }
 
-  input {
+  input,
+  .dropdown > div {
     width: 100%;
-    box-sizing: border-box;
-    height: 46px !important;
-    text-indent: 0.25rem;
-  }
-
-  select {
-    font-weight: 400 !important;
-    width: 100% !important;
   }
 
   button {

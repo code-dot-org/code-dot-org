@@ -1,25 +1,23 @@
-import React, {AriaAttributes, memo, MouseEvent} from 'react';
-
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
-import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {dropdownColors} from '@code-dot-org/component-library/common/constants';
+import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
 import {
   ComponentSizeXSToL,
   DropdownColor,
-} from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown, {
-  _CustomDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import i18n from '@cdo/locale';
+  DropdownFormFieldRelatedProps,
+} from '@code-dot-org/component-library/common/types';
+import React, {AriaAttributes, memo} from 'react';
 
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
+import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+
+import moduleStyles from './../customDropdown.module.scss';
 
 export interface CheckboxDropdownOption extends _CustomDropdownOption {}
 
-export interface CheckboxDropdownProps extends AriaAttributes {
+interface BaseCheckboxDropdownProps
+  extends DropdownFormFieldRelatedProps,
+    AriaAttributes {
   /** CheckboxDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
@@ -28,9 +26,11 @@ export interface CheckboxDropdownProps extends AriaAttributes {
   /** CheckboxDropdown color */
   color?: DropdownColor;
   /** CheckboxDropdown size */
-  size: ComponentSizeXSToL;
+  size?: ComponentSizeXSToL;
   /** CheckboxDropdown disabled state */
   disabled?: boolean;
+  /** CheckboxDropdown readOnly state */
+  readOnly?: boolean;
   /** CheckboxDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
@@ -42,19 +42,32 @@ export interface CheckboxDropdownProps extends AriaAttributes {
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
-  /** CheckboxDropdown onSelectAll handler */
+}
+
+interface CheckboxDropdownWithoutControlProps
+  extends BaseCheckboxDropdownProps {
+  hideControls: true;
+}
+
+interface CheckboxDropdownWithControlsProps extends BaseCheckboxDropdownProps {
+  hideControls?: false;
   onSelectAll: (
     event:
       | React.MouseEvent<HTMLButtonElement>
       | React.MouseEvent<HTMLAnchorElement>
   ) => void;
-  /** CheckboxDropdown onClearAll handler */
   onClearAll: (
     event:
       | React.MouseEvent<HTMLButtonElement>
       | React.MouseEvent<HTMLAnchorElement>
   ) => void;
+  selectAllText: string;
+  clearAllText: string;
 }
+
+export type CheckboxDropdownProps =
+  | CheckboxDropdownWithoutControlProps
+  | CheckboxDropdownWithControlsProps;
 
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   name,
@@ -64,11 +77,14 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
   allOptions,
   checkedOptions = [],
   onChange,
-  onSelectAll,
-  onClearAll,
   disabled = false,
+  readOnly = false,
   color = dropdownColors.black,
   size = 'm',
+  helperMessage,
+  helperIcon,
+  errorMessage,
+  styleAsFormField = false,
   ...rest
 }) => {
   return (
@@ -79,8 +95,16 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       labelType={labelType}
       color={color}
       disabled={disabled}
+      readOnly={readOnly}
       size={size}
       isSomeValueSelected={checkedOptions.length > 0}
+      helperMessage={helperMessage}
+      helperIcon={helperIcon}
+      errorMessage={errorMessage}
+      styleAsFormField={styleAsFormField}
+      selectedValueText={checkedOptions
+        ?.map(str => allOptions.find(opt => opt.value === str)?.label)
+        .join(', ')}
       {...rest}
     >
       <div className={moduleStyles.dropdownMenuContainer}>
@@ -99,22 +123,24 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             </li>
           ))}
         </ul>
-        <div className={moduleStyles.bottomButtonsContainer}>
-          <Button
-            type="tertiary"
-            color={buttonColors.purple}
-            text={i18n.selectAll()}
-            onClick={onSelectAll}
-            size={size}
-          />
-          <Button
-            type="tertiary"
-            color={buttonColors.purple}
-            text={i18n.clearAll()}
-            onClick={onClearAll}
-            size={size}
-          />
-        </div>
+        {!rest.hideControls && (
+          <div className={moduleStyles.bottomButtonsContainer}>
+            <Button
+              type="tertiary"
+              color={buttonColors.purple}
+              text={rest.selectAllText}
+              onClick={rest.onSelectAll}
+              size={size}
+            />
+            <Button
+              type="tertiary"
+              color={buttonColors.purple}
+              text={rest.clearAllText}
+              onClick={rest.onClearAll}
+              size={size}
+            />
+          </div>
+        )}
       </div>
     </CustomDropdown>
   );

@@ -41,6 +41,40 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     assert Policies::Lti.lti?(@user)
   end
 
+  test 'links a roster-synced LTI account to an existing account' do
+    roster_synced_teacher = create :teacher
+    fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao = AuthenticationOption.new(
+      authentication_id: auth_id,
+      credential_type: AuthenticationOption::LTI_V1,
+      email: @user.email,
+      )
+    target_url = "some/test/path"
+    session[:user_return_to] = target_url
+    roster_synced_teacher.authentication_options = [ao]
+    Services::Lti.create_lti_user_identity(roster_synced_teacher)
+    PartialRegistration.persist_attributes session, roster_synced_teacher
+    User.any_instance.stubs(:valid_password?).returns(true)
+
+    Metrics::Events.expects(:log_event).with(
+      has_entries(
+        user: @user,
+        event_name: 'lti_account_linked'
+      )
+    )
+    Metrics::Events.expects(:log_event).with(
+      has_entries(
+        user: @user,
+        event_name: 'lti_user_signin'
+      )
+    )
+    post :link_email, params: {email: @user.email, password: 'password'}
+    assert_equal I18n.t('lti.account_linking.successfully_linked'), flash[:notice]
+    assert_redirected_to target_url
+    assert Policies::Lti.lti?(@user)
+  end
+
   test 'disallow account linking for admin users' do
     partial_lti_teacher = create :teacher
     fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'bar'}

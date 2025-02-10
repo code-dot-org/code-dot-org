@@ -84,6 +84,28 @@ module LevelsHelper
     view_options(signed_replay_log_url: signed_url)
   end
 
+  def get_project_and_version_id(level_id, script_id)
+    result = {project_id: nil, version_id: nil}
+
+    user_storage_id = storage_id_for_user_id(current_user.id)
+    return result unless user_storage_id
+
+    level = Level.find(level_id)
+    return result unless level
+
+    channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
+    return result unless channel_token
+
+    _owner_id, result[:project_id] = storage_decrypt_channel_id(channel_token.channel)
+    source_data = SourceBucket.new.get(channel_token.channel, "main.json")
+
+    if source_data[:status] == 'FOUND'
+      result[:version_id] = source_data[:version_id]
+    end
+
+    result
+  end
+
   # If given a user, find the channel associated with the given level/user.
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level
@@ -440,17 +462,14 @@ module LevelsHelper
   end
 
   # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses.
-  # In priority order they, are:
-  # 1. Enrolling in the google_blockly experiment using the set_single_user_experiment endpoint (persists across levels).
-  # 2. Setting the blocklyVersion view_option, usually configured by a URL parameter (not persistent across levels).
-  # 3. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
-  #    have fully transitioned to Google Blockly.
+  # In priority order they are:
+  # 1. Setting the blocklyVersion view_option, usually configured by a URL parameter (not persistent across levels).
+  # 2. All Blockly levels now default to using Google Blockly.
+
   def use_google_blockly
-    return true if Experiment.enabled?(experiment_name: 'google_blockly', user: current_user)
     return true if view_options[:blocklyVersion]&.downcase == 'google'
     return false if view_options[:blocklyVersion]&.downcase == 'cdo'
-    return true if @level.uses_google_blockly?
-    return false
+    return true
   end
 
   # Options hash for Widget
@@ -714,6 +733,7 @@ module LevelsHelper
       app_options[:is_viewing_exemplar] = level_options[:is_viewing_exemplar] || false
     end
     app_options[:share] = level_options[:share] if level_options[:share]
+    app_options[:public_caching] = @public_caching
     app_options.camelize_keys
   end
 

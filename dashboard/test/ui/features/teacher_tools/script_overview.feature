@@ -20,7 +20,7 @@ Feature: Unit overview page
 
     # Verify progress as teacher viewing themself and student on script overview page
     When I sign in as "Teacher_Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new&blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new"
     And I am on "http://studio.code.org/s/allthethings"
     And I wait until element ".teacher-panel" is visible
     Then I verify progress for lesson 29 level 4 in detail view is "perfect"
@@ -98,3 +98,8 @@ Feature: Unit overview page
     And I click selector ".ui-test-lesson-resources" once I see it
     When I switch tabs
     And I wait until current URL contains "s/allthemigratedthings/lessons/1/student"
+
+  Scenario: Unit overview for unit in single-unit course
+    Given I am on "http://studio.code.org/s/ui-test-single-unit"
+    And I wait to see ".uitest-summary-progress-table"
+    And I wait until I don't see selector ".unit-breadcrumb"

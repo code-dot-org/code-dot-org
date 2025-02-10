@@ -1,0 +1,12 @@
+name 'Data Sci U2 Pre Q11_2024-pilot'
+
+question 'What does the `head()` function do in a pandas DataFrame?'
+
+wrong 'It displays the last five rows of the DataFrame.'
+right 'It displays the first five rows of the DataFrame.'
+wrong 'It displays a summary of the DataFrame.'
+wrong 'It counts the total number of rows in the DataFrame.'
+
+
+
+allow_multiple_attempts false

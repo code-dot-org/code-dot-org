@@ -73,13 +73,13 @@
       "/courses/csd-2022/guides/counter-patterns-with-event",
       "/maker/setup"
     ],
-    "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\n  console.log(\"You pressed Button A!\");\n});\nonBoardEvent(buttonB, \"down\", function() {\n  //Add in a console print statement below\n  ;\n});\n",
+    "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\n  console.log(\"You pressed Button A!\");\n});\nonBoardEvent(buttonB, \"down\", function() {\n  //Add in a console print statement below\n \n});\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-09-26T19:55:24.207+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Buttons 1\\\"\"],\"cloned_from\":\"Computer Systems Playground - Buttons 1\"},{\"changed_at\":\"2024-09-26 19:55:27 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-26 20:17:52 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-26T19:55:24.207+00:00\",\"changed\":[\"cloned from \\\"Computer Systems Playground - Buttons 1\\\"\"],\"cloned_from\":\"Computer Systems Playground - Buttons 1\"},{\"changed_at\":\"2024-09-26 19:55:27 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-26 20:17:52 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-09-30 19:34:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

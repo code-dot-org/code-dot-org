@@ -1,3 +1,5 @@
+require 'cdo/i18n'
+
 module LocaleHelper
   # Symbol of best valid locale code to be used for I18n.locale.
   def locale
@@ -9,7 +11,7 @@ module LocaleHelper
   end
 
   def locale_dir
-    Dashboard::Application::LOCALES[locale.to_s][:dir] || 'ltr'
+    Cdo::I18n.locale_direction(locale)
   end
 
   # String representing the 2 letter language code.
@@ -20,18 +22,11 @@ module LocaleHelper
 
   # String representing the Locale code for the Blockly client code.
   def js_locale(locale_code = locale)
-    locale_code.to_s.downcase.tr('-', '_')
+    Cdo::I18n.js_locale(locale_code)
   end
 
-  def options_for_locale_select
-    options = []
-    Dashboard::Application::LOCALES.each do |locale, data|
-      next unless I18n.available_locales.include?(locale.to_sym) && data.is_a?(Hash)
-      name = data[:native]
-      name = (data[:debug] ? "#{name} DBG" : name)
-      options << [name, locale]
-    end
-    options
+  def locale_options
+    request.ge_region ? Cdo::GlobalEdition.region_locale_options(request.ge_region) : Cdo::I18n.locale_options
   end
 
   def options_for_locale_code_select
@@ -77,13 +72,5 @@ module LocaleHelper
     I18n.t(dotted_path, **{raise: true}.merge(params))
   rescue
     nil
-  end
-
-  def i18n_dropdown
-    # NOTE UTF-8 is not being enforced for this form. Do not modify it to accept
-    # user input or to persist data without also updating it to enforce UTF-8
-    form_tag(locale_url, method: :post, id: 'localeForm', style: 'margin-bottom: 0px;', enforce_utf8: false) do
-      (hidden_field_tag :user_return_to, request.url) + (select_tag :locale, options_for_select(options_for_locale_select, locale), onchange: 'this.form.submit();')
-    end
   end
 end

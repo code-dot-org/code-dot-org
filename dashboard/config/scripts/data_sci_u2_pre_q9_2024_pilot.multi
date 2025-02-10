@@ -1,0 +1,11 @@
+name 'Data Sci U2 Pre Q9_2024-pilot'
+
+question 'Why is it important to refine a broad research topic into a specific question before starting data collection?'
+
+right 'To ensure that data collection is aligned with the specific inquiry, leading to more precise insights.'
+wrong 'To make the research process faster by avoiding unnecessary data collection.'
+wrong 'To allow for flexibility in the research design.'
+wrong 'To simplify the analysis by reducing the data needed.'
+
+
+allow_multiple_attempts false

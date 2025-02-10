@@ -1,7 +1,6 @@
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
-import {BlockMode} from '../constants';
-import musicI18n from '../locale';
+import {BlockMode, MAX_FUNCTION_CALLS_COUNT} from '../constants';
 
 import {BlockTypes} from './blockTypes';
 import {DOCS_BASE_URL} from './constants';
@@ -29,7 +28,7 @@ export function getCodeForSingleBlock(block) {
     return getCodeForSingleBlock(block.getNextBlock());
   }
 
-  var func = Blockly.JavaScript[block.type];
+  const func = Blockly.JavaScript.forBlock[block.type];
   if (typeof func !== 'function') {
     throw Error(
       'Language "JavaScript" does not know how to generate ' +
@@ -41,7 +40,7 @@ export function getCodeForSingleBlock(block) {
   // Prior to 24 September 2013 'this' was the only way to access the block.
   // The current preferred method of accessing the block is through the second
   // argument to func.call, which becomes the first parameter to the generator.
-  var code = func.call(block, block);
+  const code = func.call(block, block, Blockly.JavaScript);
   if (Array.isArray(code)) {
     // Value blocks return tuples of code and operator order.
     if (!block.outputConnection) {
@@ -75,8 +74,9 @@ export function installFunctionBlocks(blockMode) {
     Blockly.cdoUtils.registerCustomAdvancedProcedureBlocks();
     // Re-define blocks from core, in case they were deleted for Simple2 mode.
     restoreBlockDefinitions();
-    // Replaces "variable:" with "parameter:" block text for added parameters
-    Blockly.Msg['PROCEDURE_VARIABLE'] = musicI18n.parameterLabel();
+    // Copies the generator function for variables to our function argument reporters.
+    Blockly.JavaScript.forBlock.argument_reporter =
+      Blockly.JavaScript.forBlock.variables_get;
   } else {
     Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Remove two advanced blocks in the toolbox's Functions category that
@@ -89,7 +89,8 @@ export function installFunctionBlocks(blockMode) {
       generator
     ) =>
       simple2FunctionCallGenerator(
-        generator.getProcedureName(block.getFieldValue('NAME'))
+        generator.getProcedureName(block.getFieldValue('NAME')),
+        block.getProcedureModel().id
       );
   }
   // Sets the help URL for each function definiton block to the appropriate
@@ -134,12 +135,87 @@ function restoreBlockDefinitions() {
 }
 
 // A helper function to generate the code for a function call to play sounds sequentially.
-function simple2FunctionCallGenerator(functionName) {
+function simple2FunctionCallGenerator(functionName, functionCallBllockId) {
   return `
-    Sequencer.startFunctionContext('${functionName}');
-    Sequencer.playSequential();
-    ${functionName}();
-    Sequencer.endSequential();
-    Sequencer.endFunctionContext();
+    if (__functionCallsCount++ < ${MAX_FUNCTION_CALLS_COUNT}) {
+      Sequencer.startFunctionContext('${functionName}', '${functionCallBllockId}');
+      Sequencer.playSequential();
+      ${functionName}();
+      Sequencer.endSequential();
+      Sequencer.endFunctionContext();
+    }
   `;
+}
+
+// For a given block id, return a list of block types. These block types
+// represent any C-shaped block between itself and the root (top) block
+// which contains it. The returned list could include types for loop blocks,
+// function definitions, conditionals, or other control structures.
+// These blocks all have a "statement" input that contains other blocks.
+export function findParentStatementInputTypes(id) {
+  if (id === 'preview') {
+    return [];
+  }
+
+  // Ensure Blockly is defined for the sake of unit tests.
+  const block = Blockly.getMainWorkspace()?.getBlockById(id);
+
+  const parentTypes = [];
+  function addParentBlockTypes(currentBlock) {
+    if (currentBlock) {
+      const parentBlock = currentBlock.getParent();
+      const parentInput =
+        currentBlock.previousConnection?.targetConnection?.getParentInput();
+      if (parentInput?.type === Blockly.inputTypes.STATEMENT) {
+        parentTypes.push(parentBlock.type);
+      }
+      addParentBlockTypes(parentBlock);
+    }
+  }
+
+  addParentBlockTypes(block);
+
+  return parentTypes;
+}
+
+/**
+ * Adds a warning to blocks that are not positioned under a static category block,
+ * except when there are no categories at all. If warnings are ignored, we will
+ * still save the blocks into a "DEFAULT" category.
+ */
+export function validateBlockCategories(workspace) {
+  workspace.cleanUp();
+  const topBlocks = workspace.getTopBlocks(true);
+
+  const noCategoryBlocks =
+    !workspace.getBlocksByType(BlockTypes.CATEGORY).length &&
+    !workspace.getBlocksByType(BlockTypes.CUSTOM_CATEGORY).length;
+
+  let currentCategoryBlock = null;
+  let warningText = 'This block is not positioned under a category.';
+
+  topBlocks.forEach(block => {
+    // If there are no categories, remove all warnings.
+    if (noCategoryBlocks) {
+      block.setWarningText(null);
+      return;
+    }
+    if (block.type === BlockTypes.CATEGORY) {
+      // Update the current category to this block
+      currentCategoryBlock = block;
+    } else if (block.type === BlockTypes.CUSTOM_CATEGORY) {
+      // Reset the current category since dynamic categories can't include static blocks
+      currentCategoryBlock = null;
+      warningText = 'Auto-populated categories cannot include static blocks.';
+    } else {
+      // All non-category blocks
+      if (!currentCategoryBlock) {
+        // No static category block above this block
+        block.setWarningText(warningText);
+      } else {
+        // Valid placement under a static category block
+        block.setWarningText(null);
+      }
+    }
+  });
 }

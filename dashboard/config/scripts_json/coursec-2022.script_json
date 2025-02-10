@@ -16,6 +16,7 @@
           "buttonText": "Learn more"
         }
       ],
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -27,6 +28,7 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "show_calendar": true,
       "supported_locales": [
         "fa-AF",
         "fa-IR",
@@ -34,11 +36,12 @@
         "sq-AL"
       ],
       "tts": true,
-      "version_year": "2022"
+      "version_year": "2022",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2023-12-15 22:10:18 UTC",
+    "serialized_at": "2025-01-09 16:07:21 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

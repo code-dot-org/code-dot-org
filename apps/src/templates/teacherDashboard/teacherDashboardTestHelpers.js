@@ -50,6 +50,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: false,
+        locale_codes: ['fa-AF', 'cs-CZ', 'de-DE', 'en-US'],
         locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
         units: {
           1: {
@@ -71,6 +72,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: ['en-US', 'it-IT', 'sk-SK'],
         locales: ['English', 'Italiano', 'Slovenčina'],
         units: {
           2: {
@@ -100,6 +102,7 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: false,
+        locale_codes: [],
         locales: [],
         units: {
           3: {
@@ -130,6 +133,7 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           5: {
@@ -168,6 +172,7 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           7: {
@@ -206,6 +211,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: false,
+        locale_codes: [],
         locales: [],
         units: {
           9: {
@@ -236,6 +242,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           10: {
@@ -266,6 +273,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           11: {
@@ -296,6 +304,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           12: {
@@ -326,6 +335,7 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           13: {
@@ -364,6 +374,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           15: {
@@ -386,6 +397,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           16: {

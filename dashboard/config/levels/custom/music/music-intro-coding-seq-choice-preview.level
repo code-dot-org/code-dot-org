@@ -8,11 +8,102 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "####Make your own beat\r\n\r\n1. Use the drum beat block to customize your own drum rhythm. \r\n2. Then add that block to your program to hear your music.",
+    "long_instructions": "####Make your own beat\r\n\r\n1. Use the drum beat block to customize your own drum rhythm.\r\n2. Then add that block to your program to hear your music.",
     "hide_share_and_remix": "false",
+    "display_name": "Try a new block",
+    "level_data": {
+      "library": "launch2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_pattern_at_current_location_simple2",
+                  "id": "play_pattern_at_current_location_simple2",
+                  "fields": {
+                    "pattern": {
+                      "instrument": "drums",
+                      "length": 1,
+                      "events": [
+
+                      ],
+                      "ai": false
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "packId": "chainsmokers_riptide",
+      "sounds": {
+        "chainsmokers_riptide": [
+          "vocals_verse_1",
+          "vocals_verse_2",
+          "vocals_prechorus_1",
+          "vocals_prechorus_2",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_chorus_tag",
+          "vocals_its_only_you",
+          "drums_kick_snare_big",
+          "drums_kick_snare_small",
+          "drums_claps",
+          "drums_full",
+          "drums_hat",
+          "drums_mouth_drums",
+          "drums_scratch_tone",
+          "drums_snare_tone",
+          "cymbal_long",
+          "cymbal_short",
+          "open_can",
+          "reverse_chord",
+          "riser",
+          "bass_1",
+          "bass_2",
+          "bass_drop",
+          "bass_growl",
+          "bass_sub_1",
+          "bass_sub_2",
+          "synth_drop",
+          "synth_slide"
+        ]
+      },
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Functions": [
+
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2",
+            "play_pattern_at_current_location_simple2",
+            "play_chord_at_current_location_simple2"
+          ],
+          "Control": [
+            "play_sounds_together"
+          ]
+        }
+      }
+    },
+    "bubble_choice_description": "Challenge yourself to use a new block! The beat block lets you create your own beats. ",
+    "thumbnail_url": "https://images.code.org/83c10a8cb39a0a1209373f5d6761d0d1-music.png",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-29 20:43:12 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-29 20:43:12 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-10-08 18:30:06 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-13 20:22:21 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-15 17:28:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-15 17:30:20 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-11-15 17:32:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

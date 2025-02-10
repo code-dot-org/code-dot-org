@@ -1,7 +1,7 @@
+import {buttonColors, LinkButton} from '@code-dot-org/component-library/button';
 import type {Meta, StoryObj} from '@storybook/react';
 import React from 'react';
 
-import {buttonColors, LinkButton} from '@cdo/apps/componentLibrary/button';
 import {CardActions} from '@cdo/apps/sharedComponents/card/CardActions';
 import {CardContent} from '@cdo/apps/sharedComponents/card/CardContent';
 import {CardHeader} from '@cdo/apps/sharedComponents/card/CardHeader';
@@ -21,6 +21,7 @@ type Story = StoryObj<typeof Card>;
 
 export const UserSignupCard: Story = {
   render: () => (
+    // eslint-disable-next-line react/forbid-component-props
     <Card data-testid={'existing-account-card'}>
       <CardHeader title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()} />
       <CardContent className={cardStyles.cardContent}>

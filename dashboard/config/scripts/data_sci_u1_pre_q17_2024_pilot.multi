@@ -1,0 +1,15 @@
+name 'Data Sci U1 Pre Q17_2024-pilot'
+
+question 'When interpreting data, which factors should be considered to avoid biased conclusions?'
+
+right 'Considering context, trends, and anomalies.'
+wrong 'Focusing solely on numerical values.'
+wrong 'Relying on personal assumptions and biases.'
+wrong 'Using only visual data representations.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,7 +1,6 @@
 - require '../shared/middleware/helpers/experiments'
 - require 'policies/lti'
-- SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
-- require 'cpa'
+- SignUpTracking.log_load_finish_sign_up request, (@user.provider || 'email')
 - require 'geocoder'
 - location = Geocoder.search(request.ip).try(:first)
 - country_code = location&.country_code.to_s.upcase
@@ -141,7 +140,7 @@
       .span5
         = f.select :age, age_options, include_blank: true
 
-    - if us_ip && Cpa.cpa_experience(request)
+    - if us_ip
       .row#us-state-dropdown{style: "display: none;"}
         .span3.signup-field-label.required
           = f.label :us_state
@@ -248,7 +247,8 @@
   script_data = {
     signup: {
       usIp: us_ip,
-      signUpUID: "#{session[:sign_up_uid]}"
+      signUpUID: "#{session[:sign_up_uid]}",
+      isLTI: is_lti
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/_finish_sign_up.js'), data: script_data}

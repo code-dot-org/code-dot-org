@@ -33,11 +33,11 @@ require 'cdo/shared_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 require 'ruby-progressbar'
 
-TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
-
 # A sequence of Levels
 class Unit < ApplicationRecord
   self.table_name = 'scripts'
+
+  TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
   include ScriptConstants
   include Curriculum::SharedCourseConstants
@@ -585,6 +585,17 @@ class Unit < ApplicationRecord
     end
   end
 
+  # Returns all units within a family ordered by version year
+  # @param family_name [String] Family name for the desired units.
+  # @return [Array<Unit>] Scripts within the specified family, ordered by
+  #   version year
+  def self.family_unit_versions(family_name)
+    # We usually expect version_year to be a string but it can be nil. To
+    # prevent sort_by from blowing up in that case, normalize all values to
+    # strings.
+    Unit.get_family_from_cache(family_name).sort_by {|u| u.version_year.to_s}
+  end
+
   def self.remove_from_cache(unit_name)
     script_cache&.delete(unit_name)
   end
@@ -592,7 +603,7 @@ class Unit < ApplicationRecord
   def self.get_unit_family_redirect_for_user(family_name, user: nil, locale: 'en-US')
     return nil unless family_name
 
-    family_units = Unit.get_family_from_cache(family_name).sort_by(&:version_year).reverse
+    family_units = family_unit_versions(family_name).reverse
 
     return nil unless family_units&.last&.can_be_instructor?(user) || family_units&.last&.can_be_participant?(user)
 
@@ -734,8 +745,7 @@ class Unit < ApplicationRecord
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil if family_name.blank?
 
-    unit_versions = Unit.get_family_from_cache(family_name).
-      sort_by(&:version_year).reverse
+    unit_versions = family_unit_versions(family_name).reverse
 
     # Only select stable, supported units (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
@@ -777,13 +787,12 @@ class Unit < ApplicationRecord
   def self.latest_version_with_progress(family_name, user)
     return nil unless family_name && user
 
-    family_unit_versions = Unit.get_family_from_cache(family_name).
-      sort_by(&:version_year).freeze
-    family_unit_names = family_unit_versions.map(&:name)
+    family_units = family_unit_versions(family_name).freeze
+    family_unit_names = family_units.map(&:name)
     progress = UserScript.lookup_hash(user, family_unit_names)
 
     latest_version_with_progress = nil
-    family_unit_versions.each do |version|
+    family_units.each do |version|
       latest_version_with_progress = version if progress[version.name]
     end
     latest_version_with_progress
@@ -915,29 +924,37 @@ class Unit < ApplicationRecord
   end
 
   def csf?
-    under_curriculum_umbrella?('CSF')
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSF)
   end
 
   def csd?
-    under_curriculum_umbrella?('CSD')
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
   end
 
   def csp?
-    under_curriculum_umbrella?('CSP')
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP)
   end
 
   def csa?
-    under_curriculum_umbrella?('CSA')
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
   end
 
   def csc?
     in_initiative?('CSC')
   end
 
+  def foundations_of_cs?
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_cs)
+  end
+
+  def foundations_of_programming?
+    under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.foundations_of_programming)
+  end
+
   # TODO: (Dani) Update to use new course types framework.
   # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
   def middle_high?
-    csd? || csp? || csa?
+    csd? || csp? || csa? || foundations_of_cs? || foundations_of_programming?
   end
 
   def requires_verified_instructor?
@@ -1041,8 +1058,8 @@ class Unit < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this unit.
   def has_older_version_progress?(user)
-    return nil unless user && family_name && version_year
-    return nil unless has_other_versions?
+    return false unless user && family_name && version_year
+    return false unless has_other_versions?
 
     user_unit_ids = user.user_scripts.pluck(:script_id)
 
@@ -1568,7 +1585,7 @@ class Unit < ApplicationRecord
         project_sharing: project_sharing,
         curriculum_umbrella: curriculum_umbrella,
         family_name: family_name,
-        version_year: version_year,
+        version_year: unit_group&.version_year || version_year,
         assigned_section_id: assigned_section_id,
         hasStandards: has_standards_associations?,
         tts: tts?,
@@ -1612,14 +1629,16 @@ class Unit < ApplicationRecord
       title: title_for_display,
       name: name,
       unitNumber: unit_number,
+      unitName: title_for_display,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      hasNumberedUnits: unit_group&.has_numbered_units?,
+      versionYear: unit_group&.version_year || version_year,
     }
     # Only get lessons with lesson plans
-    filtered_lessons = lessons.select(&:has_lesson_plan)
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
+    summary[:lessons] = lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
 
     summary
   end
@@ -1928,17 +1947,6 @@ class Unit < ApplicationRecord
     version_year.blank? || version_year == CourseVersion::UNVERSIONED
   end
 
-  # If there is an alternate version of this unit which the user should be on
-  # due to existing progress or a course experiment, return that unit. Otherwise,
-  # return nil.
-  def alternate_script(user)
-    unit_group_units.each do |ugu|
-      alternate_ugu = ugu.unit_group.select_unit_group_unit(user, ugu)
-      return alternate_ugu.script if ugu != alternate_ugu
-    end
-    nil
-  end
-
   def included_in_units?(unit_ids)
     unit_ids.include? id
   end
@@ -1974,6 +1982,10 @@ class Unit < ApplicationRecord
     locales = supported_locales || []
     locales += ['en-US'] unless locales.include? 'en-US'
     locales.sort
+  end
+
+  def supported_locale?(locale)
+    supported_locale_codes.include?(locale.to_s)
   end
 
   def supported_locale_names

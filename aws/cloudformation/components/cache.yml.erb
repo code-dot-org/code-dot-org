@@ -7,7 +7,7 @@
   GeocoderGroup:
     Type: AWS::ElastiCache::ReplicationGroup
     Properties:
-      ReplicationGroupDescription: Geocoder Replication Group
+      ReplicationGroupDescription: <%="Geocoder Replication Group (#{stack_name})" %>
       NumCacheClusters: 3
 <%  if cache_node_type.include? 'cache.t2' -%>
       AutomaticFailoverEnabled: false

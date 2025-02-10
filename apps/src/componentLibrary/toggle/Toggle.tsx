@@ -1,13 +1,12 @@
+import {componentSizeToBodyTextSizeMap} from '@code-dot-org/component-library/common/constants';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
+import Typography from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
-import React, {ChangeEvent, memo} from 'react';
-
-import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import React, {ChangeEvent, HTMLAttributes, memo} from 'react';
 
 import moduleStyles from './toggle.module.scss';
 
-export interface ToggleProps {
+export interface ToggleProps extends HTMLAttributes<HTMLInputElement> {
   /** Toggle id selector, used for UI tests */
   id?: string;
   /** Toggle checked state */
@@ -41,6 +40,7 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
   disabled = false,
   position = 'left',
   size = 'm',
+  ...HTMLAttributes
 }) => {
   const bodyTextSize = componentSizeToBodyTextSizeMap[size];
 
@@ -60,6 +60,7 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
           checked={checked}
           onChange={onChange}
           disabled={disabled}
+          {...HTMLAttributes}
         />
         <span className={moduleStyles.switch}>
           <i className="fa-solid" />
@@ -81,7 +82,7 @@ const Toggle: React.FunctionComponent<ToggleProps> = ({
  *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
  *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see apps/test/unit/componentLibrary/ToggleTest.jsx)
+ *  * (see apps/test/unit/componentLibrary/ToggleTest.tsx)
  *  * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

@@ -20,12 +20,14 @@ import {
   playRestAtCurrentLocationSimple2,
   setEffectAtCurrentLocationSimple2,
   playSoundsTogether,
+  playSoundsTogetherNoNext,
   playSoundsSequential,
   playSoundsRandom,
   repeatSimple2,
   playChordAtCurrentLocationSimple2,
   playTuneAtCurrentLocationSimple2,
 } from './blocks/simple2';
+import {dynamicCategoryBlock, staticCategoryBlock} from './blocks/toolboxMode';
 import {
   newTrackAtMeasure,
   newTrackAtStart,
@@ -55,6 +57,7 @@ const blockList = [
   playChordAtCurrentLocationSimple2,
   playTuneAtCurrentLocationSimple2,
   playSoundsTogether,
+  playSoundsTogetherNoNext,
   playSoundsSequential,
   playSoundsRandom,
   repeatSimple2,
@@ -65,6 +68,8 @@ const blockList = [
   playSoundInTrack,
   restInTrack,
   valueSample,
+  staticCategoryBlock,
+  dynamicCategoryBlock,
 ];
 
 const MUSIC_BLOCKS = {};

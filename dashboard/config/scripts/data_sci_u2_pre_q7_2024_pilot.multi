@@ -1,0 +1,10 @@
+name 'Data Sci U2 Pre Q7_2024-pilot'
+
+question 'Which Pandas function would you use to find missing values in a DataFrame?'
+
+wrong '`dropna()`'
+wrong '`fillna()`'
+right '`isnull()`'
+wrong '`describe()`'
+
+allow_multiple_attempts false

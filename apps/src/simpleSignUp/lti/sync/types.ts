@@ -20,6 +20,7 @@ export interface LtiSectionSyncResult {
   error?: string;
   message?: string;
   course_name?: string;
+  honeybadger_id?: string;
 }
 
 export interface LtiSectionSyncDialogProps {

@@ -1,0 +1,19 @@
+name 'Data Sci U1 Pre Q2_2024-pilot'
+
+question 'A data scientist is working in the healthcare sector. Which of the following activities best exemplifies their contribution to this industry?'
+
+wrong 'Developing marketing materials to advertise a new healthcare product.'
+right 'Analyzing patient data to predict disease outbreaks and improve treatment plans.'
+wrong 'Designing new medical devices without any data analysis.'
+wrong 'Managing the hospital\'s daily administrative tasks.'
+
+
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

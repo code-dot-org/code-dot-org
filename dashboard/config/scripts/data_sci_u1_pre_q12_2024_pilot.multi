@@ -1,0 +1,15 @@
+name 'Data Sci U1 Pre Q12_2024-pilot'
+
+question 'Compare and contrast the ethical implications of collecting data through web scraping versus surveys in the context of social media research.'
+
+wrong 'Web scraping and surveys are both unethical if done without consent.'
+wrong 'Surveys are always more accurate and ethical than web scraping.'
+wrong 'Web scraping is always ethical if data is publicly available, unlike surveys which require user interaction.'
+right 'Web scraping can violate terms of service and privacy policies, while surveys require informed consent but may introduce self-reporting bias.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

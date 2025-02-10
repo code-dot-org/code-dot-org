@@ -73,6 +73,51 @@ module Levels
 
         return update_params
       end
+
+      # Create ParentLevelsChildLevel many-to-many relationships based on the
+      # contents of the specified levels' `contained_level_names` or `project_template_level_name` properties.
+      # Differentiated by child_level_kind (either ParentLevelsChildLevel::CONTAINED or ParentLevelsChildLevel::PROJECT_TEMPLATE)
+      def setup_child_levels_for(levels, child_level_kind)
+        outdated_levels_child_level_ids = []
+        new_levels_child_levels = []
+
+        levels.each do |level|
+          # Determine which level names to use based on child_level_kind
+          child_level_names = child_level_kind == ParentLevelsChildLevel::CONTAINED ? level.contained_level_names : [level.project_template_level_name]
+          # Skip if the current level's child levels already match the names
+          next if level.child_levels.send(child_level_kind).map(&:name) == child_level_names
+
+          # Collect outdated child levels' ids
+          outdated_levels_child_level_ids += level.levels_child_levels.send(child_level_kind).ids
+
+          next if child_level_names.blank?
+
+          # Create new relationships for matching names
+          Level.where(name: child_level_names).find_each do |child_level|
+            position = child_level_names.index(child_level.name) if child_level_kind == ParentLevelsChildLevel::CONTAINED
+            new_levels_child_levels << ParentLevelsChildLevel.new(
+              parent_level: level,
+              child_level: child_level,
+              kind: child_level_kind,
+              position: position
+            )
+          end
+        end
+
+        # Delete outdated child levels in batches
+        outdated_levels_child_level_ids.each_slice(1000) do |ids_batch|
+          ParentLevelsChildLevel.where(id: ids_batch).delete_all
+        end
+
+        # Insert new child level relationships in batches
+        ParentLevelsChildLevel.import!(new_levels_child_levels, batch_size: 1000) if new_levels_child_levels.any?
+
+        # Reset child level caches for each level
+        levels.each do |level|
+          level.levels_child_levels.reset
+          level.child_levels.reset
+        end
+      end
     end
 
     # Returns all child levels of this level, which could include contained
@@ -141,39 +186,12 @@ module Levels
       properties["contained_level_names"] = contained_level_names
     end
 
-    # Create ParentLevelsChildLevel many-to-many relationships based on the
-    # contents of this level's `contained_level_names` property.
     def setup_contained_levels
-      # if our existing contained levels already match the given names, do
-      # nothing
-      return if child_levels.contained.map(&:name) == contained_level_names
-
-      # otherwise, update contained levels to match
-      levels_child_levels.contained.destroy_all
-      Level.where(name: contained_level_names).each do |contained_level|
-        ParentLevelsChildLevel.create!(
-          child_level: contained_level,
-          kind: ParentLevelsChildLevel::CONTAINED,
-          parent_level: self,
-          position: contained_level_names.index(contained_level.name)
-        )
-      end
+      self.class.setup_child_levels_for([self], ParentLevelsChildLevel::CONTAINED)
     end
 
     def setup_project_template_level
-      # if we already have a project template level which matches the specified
-      # name, do nothing.
-      return if child_levels.project_template.first&.name == project_template_level_name
-
-      # otherwise, update project template level to match
-      levels_child_levels.project_template.destroy_all
-      return if project_template_level_name.blank?
-      template_level = Level.find_by_name!(project_template_level_name)
-      ParentLevelsChildLevel.create!(
-        child_level: template_level,
-        kind: ParentLevelsChildLevel::PROJECT_TEMPLATE,
-        parent_level: self
-      )
+      self.class.setup_child_levels_for([self], ParentLevelsChildLevel::PROJECT_TEMPLATE)
     end
   end
 end

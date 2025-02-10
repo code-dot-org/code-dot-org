@@ -29,6 +29,6 @@
     "encrypted_examples": "v+EpjYO6l1BGcxZWfofrLlrX6Gb4qe8XNEE1L0GNTYSCqFKYDHzMjXt3r3TS\nKZTNVMnKhMriztOcQWptSefD7w==\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-09-25T20:57:01.309+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - PracC_2024\\\"\"],\"cloned_from\":\"CSD U2L2 - PracC_2024\"},{\"changed_at\":\"2024-09-25 21:01:48 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-09-25T20:57:01.309+00:00\",\"changed\":[\"cloned from \\\"CSD U2L2 - PracC_2024\\\"\"],\"cloned_from\":\"CSD U2L2 - PracC_2024\"},{\"changed_at\":\"2024-09-25 21:01:48 +0000\",\"changed\":[\"start_sources\",\"encrypted_examples\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-10-02 20:20:46 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
 </Weblab>

@@ -1,13 +1,12 @@
 import React, {useCallback} from 'react';
 
-import {PatternEventValue} from '../player/interfaces/PatternEvent';
-import {InstrumentEventValue} from '../player/interfaces/TuneEvent';
+import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 
 import SequenceEditor from './InstrumentGrid';
 
 interface PatternPanelProps {
-  initValue: PatternEventValue;
-  onChange: (value: PatternEventValue) => void;
+  initValue: InstrumentEventValue;
+  onChange: (value: InstrumentEventValue) => void;
 }
 
 /*
@@ -21,19 +20,15 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   // Make a copy of the value object so that we don't overwrite Blockly's
   // data.
   const currentValue: InstrumentEventValue = JSON.parse(
-    JSON.stringify({...initValue, instrument: initValue.kit})
+    JSON.stringify(initValue)
   );
-  const changeCallback = useCallback(
-    (newValue: InstrumentEventValue) =>
-      onChange({...newValue, kit: newValue.instrument}), // TODO Fix types / missing src
-    [onChange]
-  );
+
 
   return (
     <SequenceEditor
       editorType="drums"
       initialValue={currentValue}
-      onChange={changeCallback}
+      onChange={onChange}
       lengthMeasures={1}
     />
   );

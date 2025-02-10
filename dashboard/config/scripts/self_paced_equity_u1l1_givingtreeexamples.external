@@ -1,0 +1,73 @@
+name 'self-paced-equity-U1L1-givingtreeexamples'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Going Deeper
+
+#### It's important to make the distinction between equality, equity, and justice when tackling topics of education. Take a look at the following image, created by Tony Ruth<sup>4</sup>:
+<br>
+
+<a href="https://docs.google.com/presentation/d/1EnQ8lf1l2FVqU0AVvwODPcwW9ERlD8vle2ELAyqKIjA/edit?usp=sharing" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/1deaadb47c55ad112dd414bdf93b93f1-image-1732573038355.17.14 PM.png" alt="Four panels show a Giving Tree analogy for inequality, equality, equity, and justice."></a>
+##### **Note**: Click the image to access a larger version.
+
+## Examples
+
+#### Knowing what each of these key concepts looks like in action will help you to notice and act on issues of inequity in your school. Read the following examples to learn more. While you do so, considering the distinguishing features between each. We'll get into CS-specific examples in the next level.
+
+<table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+    <thead>
+        <tr style="background-color: rgba(0, 158, 176, 1); text-align: left;">
+        	<th style="padding: 10px; font-size: 18px; border: 1px solid #ccc;"><b>Term</b></th>
+            <th style="padding: 10px; font-size: 18px; border: 1px solid #ccc;"><b>Example</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background-color: F7F8FA;">
+            <td style="padding: 10px; font-size: 16px; border: 1px solid #ccc;">
+                <strong>Inequality</strong>
+            </td>
+            <td style="padding: 10px; font-size: 16px; border: 1px solid #ccc;">
+                Some students have access to high-speed internet and personal computers at home, allowing them to complete online assignments more easily, while other students rely on school resources because they lack internet or devices at home. This results in unequal opportunities for completing homework or participating in online learning.
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; font-size: 16px; border: 1px solid #ccc;">
+                <strong>Equality</strong>
+            </td>
+            <td style="padding: 10px; font-size: 16px; border: 1px solid #ccc;">
+                Every student receives the same amount of time to complete a standardized test and is given identical resources, such as pencils and erasers. However, this approach doesn’t consider individual needs, such as learning disabilities or language barriers.
+            </td>
+        </tr>
+        <tr style="background-color: F7F8FA;">
+            <td style="padding: 10px; font-size: 16px; border: 1px solid #ccc;">
+            	<strong>Equity</strong>
+            </td>
+            <td style="padding: 10px; font-size: 16px; border: 1px solid #ccc;">
+                Recognizing that some students struggle with reading comprehension, the school provides additional reading support and tutoring for those students, while others who are already proficient in reading have advanced materials to challenge them. This way, each student receives the support or resources needed to achieve similar educational outcomes, rather than the exact same treatment.
+            </td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; font-size: 16px; border: 1px solid #ccc;">
+                <strong>Justice</strong> 
+            </td>
+            <td style="padding: 10px; font-size: 16px; border: 1px solid #ccc;">
+                After noticing that certain groups of students consistently struggle with reading and writing, the school examines its curriculum, teaching practices, and assessment methods to identify any systemic barriers. They then adjust these policies to create a fairer learning environment that addresses the root causes of these disparities, helping all students to succeed in the long term.
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br><br>
+
+
+<div style="display: flex; align-items: left;">
+	<img src="https://images.code.org/08d8da1158d67fd1ed7535c90b2b91bc-image-1731961007471.png" style="width: auto; height: 100px;"  alt="An open hand with an open book floating above it.">
+	<div style="background-color: #009EB0; border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 5%; padding: 10px 10px 5px 10px;">
+		<p style="color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Resource Suggestion</b></p>
+        <p style="color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px">For the purposes of this course, we will be focusing on effecting change with regards to equity, as educators typically have the most influence in their school and district. If you are interested in enacting justice by influencing education systems on a larger scale, consider advocating for a complete K-12 computer science pathway at your district and state.  <span style="background-color: LightCyan;"><a href="https://csforca.org/csequityguide/" target="blank" rel="noopener noreferrer">The CA for CS Equity Guide</a></span> is a good resource to start with.</p>
+	</div>
+</div>
+
+___
+##### <sup>4</sup>Created by <a href="https://x.com/lunchbreath?lang=en" target="blank" rel="noopener noreferrer">@lunchbreath</a> based on Shel Silverstein's <ins>The Giving Tree</ins> for <a href="https://designintech.report/wp-content/uploads/2019/03/dit2019_v00.pdf" target="blank" rel="noopener noreferrer">John Maeda's 2019 Design in Tech Report</a>.
+MARKDOWN

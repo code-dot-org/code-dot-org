@@ -29,9 +29,9 @@ import Sortable from './Sortable';
 import moduleStyles from './styles/fileTabs.module.scss';
 
 export const FileTabs = React.memo(() => {
-  const {project, rearrangeFiles} = useCodebridgeContext();
+  const {source, rearrangeFiles} = useCodebridgeContext();
 
-  const files = getOpenFiles(project);
+  const files = getOpenFiles(source);
 
   const sensors = useSensors(
     useSensor(PointerSensor, {

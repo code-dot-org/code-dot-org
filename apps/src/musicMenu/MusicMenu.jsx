@@ -59,6 +59,31 @@ const optionsList = [
     ],
   },
   {
+    name: 'tts-play-pause',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Disable play/pause functionality for text to speech (default).',
+      },
+      {
+        value: 'true',
+        description: 'Enable play/pause functionality for text to speech.',
+      },
+    ],
+  },
+  {
+    name: 'tts-play-icon',
+    type: 'string',
+    description: 'Use a specific icon for text to speech play button.',
+  },
+  {
+    name: 'tts-stop-icon',
+    type: 'string',
+    description: 'Use a specific icon for text to speech stop button.',
+  },
+  {
     name: 'play-tune-block',
     type: 'radio',
     values: [
@@ -80,6 +105,28 @@ const optionsList = [
     values: [
       {value: 'false', description: 'Show AI temperature (default).'},
       {value: 'true', description: 'Hide AI temperature.'},
+    ],
+  },
+  {
+    name: 'show-ai-temperature-explanation',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'Hide AI temperature explanation (default).',
+      },
+      {value: 'true', description: 'Show AI temperature.'},
+    ],
+  },
+  {
+    name: 'show-ai-generate-again-help',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't show AI generate again help (default).",
+      },
+      {value: 'true', description: 'Show AI generate again help.'},
     ],
   },
   {
@@ -114,6 +161,39 @@ const optionsList = [
     values: [
       {value: 'sample', description: 'Use the sample player (legacy).'},
       {value: 'tonejs', description: 'Use the ToneJS player (default).'},
+    ],
+  },
+  {
+    name: 'allow-change-starting-playhead-position',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't allow change starting playhead position (default).",
+      },
+      {value: 'true', description: 'Allow change starting playhead position.'},
+    ],
+  },
+  {
+    name: 'use-secondary-finish-button',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't use secondary finish button (default).",
+      },
+      {value: 'true', description: 'Use secondary finish button.'},
+    ],
+  },
+  {
+    name: 'show-secondary-finish-button-question',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: "Don't show secondary finish button question (default).",
+      },
+      {value: 'true', description: 'Show secondary finish button question.'},
     ],
   },
   {

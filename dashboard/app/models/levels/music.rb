@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 # Music uses level_data, which is actual JSON in each .level file, and
@@ -50,10 +51,6 @@ class Music < Blockly
         properties: {}
       )
     )
-  end
-
-  def uses_google_blockly?
-    true
   end
 
   def uses_lab2?

@@ -1,5 +1,6 @@
 import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import moment from 'moment-timezone';
 import React from 'react';
 import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import '../workshopFactory';
@@ -15,7 +16,10 @@ import Permission, {
   ProgramManager,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {COURSE_BUILD_YOUR_OWN} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
-import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {
+  Subjects,
+  PdSessionFormats,
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
 
 // Returns a fake "today" for the stubbed out "getToday" method in workshop_form.jsx.
@@ -131,6 +135,159 @@ describe('WorkshopForm test', () => {
     expect(onPublish).to.have.been.calledOnce;
 
     server.restore();
+  });
+
+  it('new workshops form is shown with a default session', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const sessionFormPart = wrapper
+      .find('SessionListFormPart')
+      .find('SessionFormPart');
+
+    expect(sessionFormPart.exists()).to.be.true;
+    expect(sessionFormPart).to.have.lengthOf(1);
+
+    const timeInputs = sessionFormPart.find('TimeSelect');
+    expect(timeInputs).to.have.lengthOf(2);
+    const datePicker = sessionFormPart.find('DatePicker');
+    expect(datePicker).to.have.lengthOf(2); // nested react DatePicker inside custom DatePicker component
+    const sessionFormatDropdown = sessionFormPart.find('select[name="format"]');
+    expect(sessionFormatDropdown).to.have.lengthOf(1);
+    // defaults to first session format option
+    expect(sessionFormatDropdown.props().value).to.equal(
+      PdSessionFormats[0].value
+    );
+  });
+
+  it("new workshop sessions are created with the user's local timezone", () => {
+    const easternTz = 'America/New_York';
+    jest
+      .spyOn(Intl.DateTimeFormat.prototype, 'resolvedOptions')
+      .mockReturnValueOnce({
+        timeZone: easternTz,
+      });
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const tzAbbreviation = moment.tz(easternTz).format('z');
+
+    expect(wrapper.find('WorkshopForm').find('Col').first().text()).to.equal(
+      `All workshop times are ${tzAbbreviation}:`
+    );
+  });
+
+  it('edits to workshop sessions are done in the original timezone', () => {
+    const easternTz = 'America/New_York';
+    jest
+      .spyOn(Intl.DateTimeFormat.prototype, 'resolvedOptions')
+      .mockReturnValueOnce({
+        timeZone: easternTz,
+      });
+
+    const workshop = Factory.build('workshop');
+    const [firstSession] = workshop.sessions;
+    const sessionTz = firstSession.time_zone; // America/Denver in workshop factory
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={workshop}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const tzAbbreviation = moment.tz(sessionTz).format('z');
+
+    const workshopForm = wrapper.find('WorkshopForm');
+
+    const [formattedSessionData] = workshopForm
+      .instance()
+      .prepareSessionsForForm(workshop.sessions);
+
+    expect(formattedSessionData.startTime).to.equal('9:00am');
+    expect(formattedSessionData.endTime).to.equal('5:00pm');
+    expect(formattedSessionData.date).to.equal('2016-07-01');
+
+    expect(workshopForm.find('Col').first().text()).to.equal(
+      `All workshop times are ${tzAbbreviation}:`
+    );
+  });
+
+  it('edits to legacy workshop sessions without a timezone are done in UTC', () => {
+    const easternTz = 'America/New_York';
+    jest
+      .spyOn(Intl.DateTimeFormat.prototype, 'resolvedOptions')
+      .mockReturnValueOnce({
+        timeZone: easternTz,
+      });
+
+    const workshop = Factory.build('workshop');
+    const [firstSession] = workshop.sessions;
+    // remove time_zone and reset session time to 9-5 utc, like legacy sessions are in the db
+    firstSession.time_zone = null;
+    const start = new Date(firstSession.start);
+    const end = new Date(firstSession.end);
+    start.setHours(9);
+    end.setHours(17);
+    firstSession.start = start.toISOString();
+    firstSession.end = end.toISOString();
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            workshop={workshop}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const workshopForm = wrapper.find('WorkshopForm');
+
+    expect(workshopForm.find('Col').first().text()).to.equal(
+      `All workshop times are local:`
+    );
+
+    const formSessions = workshopForm
+      .instance()
+      .prepareSessionsForForm(workshop.sessions);
+
+    expect(formSessions[0].startTime).to.equal('9:00am');
+    expect(formSessions[0].endTime).to.equal('5:00pm');
+    expect(formSessions[0].date).to.equal('2016-07-01');
+    expect(formSessions[0].timeZone).to.be.null;
+
+    const sessionsForApi = workshopForm
+      .instance()
+      .prepareSessionsForApi(formSessions, []);
+
+    expect(sessionsForApi[0].start).to.equal('2016-07-01T09:00:00.000Z');
+    expect(sessionsForApi[0].end).to.equal('2016-07-01T17:00:00.000Z');
+    expect(sessionsForApi[0].time_zone).to.be.null;
   });
 
   it('edits form and can save', () => {
@@ -561,7 +718,7 @@ describe('WorkshopForm test', () => {
     expect(wrapper.find('#suppress_email')).to.have.lengthOf(0);
   });
 
-  it('selecting Build Your Own Workshop shows pl topics', () => {
+  it('selecting Build Your Own Workshop shows and requires name, participant group type, and pl topics', () => {
     const server = sinon.fakeServer.create();
     server.respondWith(
       'GET',
@@ -575,12 +732,20 @@ describe('WorkshopForm test', () => {
         ]),
       ]
     );
+    server.respondWith('POST', '/api/v1/pd/workshops', [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify({}),
+    ]);
+    const onPublish = sinon.spy();
+
     const wrapper = mount(
       <Provider store={store}>
         <MemoryRouter>
           <WorkshopForm
             permission={new Permission([WorkshopAdmin])}
             facilitatorCourses={[]}
+            onSaved={onPublish}
             today={getFakeToday(false)}
             readOnly={false}
           />
@@ -588,17 +753,64 @@ describe('WorkshopForm test', () => {
       </Provider>
     );
     server.respond();
-    // Verify the topics dropdown doesn't show up until Build Your Own is selected
-    expect(wrapper.find('#course_offerings')).to.have.lengthOf(0);
+
+    // Verify the name field, participant group type dropdown, and topics dropdown don't show up until
+    // Build Your Own is selected as the course.
+    expect(wrapper.find('#name').exists()).to.equal(false);
+    expect(wrapper.find('#participant-group-type').exists()).to.equal(false);
+    expect(wrapper.find('#course_offerings').exists()).to.equal(false);
     const courseField = wrapper.find('#course').first();
     courseField.simulate('change', {
       target: {name: 'course', value: COURSE_BUILD_YOUR_OWN},
     });
-    expect(wrapper.find('#course_offerings')).to.have.lengthOf(1);
-    wrapper.find('#dropdownMenuButton').first().simulate('click');
-    // A user can select either the label or checkbox, so we expect 2 for each here
+    assert(wrapper.find('#name').exists());
+    assert(wrapper.find('#participant-group-type').exists());
+    assert(wrapper.find('#course_offerings').exists());
+
+    // Set other fields required to publish any workshop
+    const locationField = wrapper.find('#location_name').first();
+    locationField.simulate('change', {
+      target: {name: 'location_name', value: 'Test location'},
+    });
+
+    const capacityField = wrapper.find('#capacity').first();
+    capacityField.simulate('change', {
+      target: {name: 'capacity', value: 10},
+    });
+
+    // Try (and fail) to publish workshop without filling in name and topics (both required for BYOW)
+    expect(onPublish).not.to.have.been.called;
+    const publishButton = wrapper.find('#workshop-form-save-btn').first();
+    publishButton.simulate('click');
+    server.respond();
+    expect(onPublish).not.to.have.been.called;
+
+    // Fill in name
+    const nameField = wrapper.find('#name').first();
+    nameField.simulate('change', {
+      target: {name: 'capacity', value: 'Fake workshop name'},
+    });
+
+    // Fill in participant group type (user can select either the label or checkbox, so we expect 2 for each here)
+    const participantGroupTypeDropdown = wrapper
+      .find('#participant-group-type')
+      .first();
+    participantGroupTypeDropdown.simulate('change', {
+      target: {name: 'participant-group-type', value: 'Regional'},
+    });
+
+    // Fill in topics
+    const plTopicsDropdown = wrapper.find('#dropdownMenuButton').first();
+    plTopicsDropdown.simulate('click');
     expect(wrapper.find({name: 'myPlTestTopic'})).to.have.lengthOf(2);
     expect(wrapper.find({name: 'mySecondTopic'})).to.have.lengthOf(2);
+
+    // Successfully submit form now that all required fields are filled in
+    publishButton.simulate('click');
+    server.respond();
+    expect(onPublish).to.have.been.calledOnce;
+
+    server.restore();
   });
 
   it('editing form as non-admin does not show organizer field', () => {

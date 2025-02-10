@@ -1,8 +1,8 @@
+import {componentSizeToBodyTextSizeMap} from '@code-dot-org/component-library/common/constants';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import classnames from 'classnames';
 import React, {useRef, useEffect, ChangeEvent, HTMLAttributes} from 'react';
 
-import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import Typography from '@cdo/apps/componentLibrary/typography';
 
 import moduleStyles from './checkbox.module.scss';
@@ -34,7 +34,7 @@ export interface CheckboxProps extends HTMLAttributes<HTMLInputElement> {
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/CheckboxTest.jsx)
+ * * (see apps/test/unit/componentLibrary/CheckboxTest.tsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```

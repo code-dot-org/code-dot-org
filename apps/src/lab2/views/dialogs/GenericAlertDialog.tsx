@@ -2,9 +2,7 @@ import React from 'react';
 
 import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
-export type GenericAlertDialogProps = Required<
-  Pick<GenericDialogProps, 'title'>
-> &
+export type GenericAlertDialogProps = Pick<GenericDialogProps, 'title'> &
   Pick<GenericDialogProps, 'message'>;
 
 const GenericAlertDialog: React.FunctionComponent<GenericAlertDialogProps> = ({

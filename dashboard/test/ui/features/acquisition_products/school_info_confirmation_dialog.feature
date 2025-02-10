@@ -28,14 +28,14 @@ Scenario: School Info Confirmation Dialog
   And I wait to see ".modal"
 
   # Teacher completes school info interstitial
-  And element "#react-select-2--value" contains text "United States"
-  And element "#school-type" is visible
-  And I select the "Public" option in dropdown "school-type"
-  And I wait until element "#nces_school" is visible
-  Then I press keys "Alakanuk School" for element "#nces_school"
-  Then I wait until element ".VirtualizedSelectOption:contains('Alakanuk School - Alakanuk, AK 99554')" is visible
-  Then I press ".VirtualizedSelectOption:contains('Alakanuk School - Alakanuk, AK 99554')" using jQuery
+  And I select the "United States" option in dropdown "uitest-country-dropdown"
+  And I press keys "31513" for element "#uitest-school-zip"
+  Then I wait until element "#uitest-school-dropdown" contains text "Appling County High School"
+  And I select the "Appling County High School" option in dropdown "uitest-school-dropdown"
+  And I open my eyes to test "School Association"
+  And I see no difference for "School Association: all fields"
   Then I press "#save-button" using jQuery
+  And I wait until element ".modal" is gone
 
   # One week later, the teacher does not see the prompt
   And eight days pass for user "Teacher_Chuba"
@@ -46,3 +46,9 @@ Scenario: School Info Confirmation Dialog
   And one year passes for user "Teacher_Chuba"
   Then I reload the page
   And element ".modal-body" is visible
+  Then I press "#update-button" using jQuery
+  And element ".modal" is visible
+  Then element "#uitest-country-dropdown" has value "US"
+  Then element "#uitest-school-zip" has value "31513"
+  # value is school_id for "Appling County High School"
+  Then I wait until element "#uitest-school-dropdown" has the value "130006000010"

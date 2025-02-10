@@ -3,30 +3,33 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-#Data Science
-## Lesson 5: Getting to Know your Data  
+#Data Science with Python
 
-#### Students will learn four of the major data types which they will work with while using pandas: int64, float64, object, and datetime.
-#### Students will practice converting columns of data from one type to another. 
+<img src="https://images.code.org/363f5971510c9408cf5c9bdc819c3a64-image-1732128942568.png" alt="diagram of data types" width="250px" style="border-radius:10px; display: block; float:right;">
 
-#### Additionally, they will be able to use the info() and describe() functions to get insight into their imported data.
+## Lesson 6: Getting to Know your Data  
 
-<img src="https://images.code.org/f4166989fb2990247c6407c6e4d74acc-image-1724776438427.png" alt="diagram of data types" width="550px" style="display: block; margin-left: auto; margin-right: auto;">
+#### Students will learn four of the major data types which they will work with while using pandas and practice converting columns of data from one type to another. 
+
+#### Additionally, they will be able to use the **info()** and **describe()** functions to get insight into their imported data.
+
+
 
 ### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
 
 
-
-## Key concepts 
-
-- #### **info()** - Displays a DataFrame's column names, non-null counts, and data types
-- #### **describe()** - Generates summary statistics of a DataFrame's numerical columns
-- #### **astype()** - Converts a DataFrame's column data type to specified type
-- #### **to_datetime()** - Converts a DataFrame's column data type to datetime format
+<div style="clear:both;"></div><br><br>
 
 
+>## Key concepts:
+>- #### **info()** - Displays a DataFrame's column names, non-null counts, and data types
+>- #### **describe()** - Generates summary statistics of a DataFrame's numerical columns
+>- #### **astype()** - Converts a DataFrame's column data type to specified type
+>- #### **to_datetime()** - Converts a DataFrame's column data type to datetime format
 
 
-## Let's practice!  
+
+## Let's try an *investigate* level!  
+
 
 MARKDOWN

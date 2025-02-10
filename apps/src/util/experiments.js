@@ -41,14 +41,10 @@ experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 // Experiment for showing the gender field
 experiments.GENDER_FEATURE_ENABLED = 'gender';
-// Experiment for enabling the CPA lockout
-experiments.CPA_EXPERIENCE = 'cpa_experience';
 // Experiment for enabling the AI-TA differentiation chat
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
-// Uses Google Blockly for a given user across labs/levels until the experiment is disabled
-experiments.GOOGLE_BLOCKLY = 'google_blockly';
 // Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
 experiments.SPRITE_LAB_DOCS = 'sl_docs';
 // Adds a keyboard navigation toggle to the workspace header in Google Blockly labs
@@ -59,13 +55,12 @@ experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
 // Shows the new sign-up flow
 experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
-// Allows teacher view of student chat history in aichat workspace
-experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
 // Allows user to view the new version of the teacher navigation
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
-// Enables LMS cards in the LoginTypePicker during section creation
-experiments.SECTION_CREATE_LMS_CARDS = 'section_create_lms_cards';
-experiments.LTI_ACCOUNT_UNLINKING = 'lti_account_unlinking';
+// Shows 'check my code' button in App Lab for validation via AI
+experiments.CSP_VALIDATION_VIA_AI = 'csp_validation_via_ai';
+// Allows users to view the new version of the teacher homepage
+experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

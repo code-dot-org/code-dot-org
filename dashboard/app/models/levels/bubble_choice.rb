@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class BubbleChoice < DSLDefined
@@ -138,7 +139,8 @@ class BubbleChoice < DSLDefined
           position: index + 1,
           letter: ALPHABET[index],
           icon: level.try(:icon),
-          uses_lab2: level.uses_lab2?
+          uses_lab2: level.uses_lab2?,
+          parent_level_id: id,
         }
       )
 
