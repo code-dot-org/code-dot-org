@@ -38,6 +38,19 @@ const getLengthRepresentation = (length: number) => {
   return lengthToSymbol[length] || length;
 };
 
+const decimalToFraction = (decimal: number): string => {
+  if (decimal % 1 === 0) return decimal.toString();
+
+  const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : a);
+
+  const len = decimal.toString().length - 2;
+  const denominator = Math.pow(10, len);
+  const numerator = decimal * denominator;
+  const divisor = gcd(numerator, denominator);
+
+  return `${numerator / divisor}/${denominator / divisor}`;
+};
+
 interface FolderPanelRowProps {
   libraryGroupPath: string;
   playingPreview: string;
@@ -179,7 +192,9 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         }
       }}
       ref={isSelected ? currentSoundRefCallback : null}
-      aria-label={sound.name + musicI18n.measureLength() + sound.length}
+      aria-label={
+        sound.name + musicI18n.measureLength() + decimalToFraction(sound.length)
+      }
       tabIndex={0}
       role="tabpanel"
     >
