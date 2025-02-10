@@ -162,7 +162,18 @@ module AichatSafetyHelper
     end
   end
 
+  class StubbedToxicityDetector
+    def find_toxicity(_, text, _)
+      text == 'damn' ?
+        {text: text, blocked_by: 'openai', details: {evaluation: 'INAPPROPRIATE'}} :
+        nil
+    end
+  end
+
   def self.find_toxicity(role, text, locale)
-    ToxicityDetector.new.find_toxicity(role, text, locale)
+    # Stubbed SageMaker allows UI tests (without the roundtrip to the model) to run in CI environments
+    Rails.application.config.respond_to?(:stub_aichat_services) && Rails.application.config.stub_aichat_services ?
+      StubbedToxicityDetector.new.find_toxicity(role, text, locale) :
+      ToxicityDetector.new.find_toxicity(role, text, locale)
   end
 end

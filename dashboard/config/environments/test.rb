@@ -19,10 +19,10 @@ Dashboard::Application.configure do
 
   is_ci = !!ENV.fetch('CI', nil)
 
-  # In CI environments (ie, Drone), stub relevant AWS services (currently just SageMaker)
+  # In CI environments (ie, Drone), stub relevant services (SageMaker and our safety check, which is currently implemented with OpenAI)
   # so we can run UI tests for our AI Chat (ie, Generative AI) lab.
   if is_ci
-    config.stub_aichat_aws_services = true
+    config.stub_aichat_services = true
   end
 
   config.assets.quiet = true

@@ -1,5 +1,4 @@
 @no_mobile
-@no_ci
 
 Feature: AI Chat
 
