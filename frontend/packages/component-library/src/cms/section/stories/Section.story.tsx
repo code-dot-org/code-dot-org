@@ -78,7 +78,7 @@ export const SectionWithBackgroundPattern: Story = {
       </>
     ),
   },
-  play: createPlayFunction('This is a section with a background color'),
+  play: createPlayFunction('This is a section with a background pattern'),
 };
 
 export const MultipleSections = MultipleTemplate.bind({});
@@ -121,7 +121,7 @@ MultipleSections.args = {
       padding: 'l',
       children: (
         <>
-          <Heading2 style={{color: 'white'}}>This is section three</Heading2>
+          <Heading2 style={{color: 'white'}}>This is section four</Heading2>
           <BodyOneText style={{color: 'white'}}>
             I'm just a sentence.
           </BodyOneText>
@@ -130,6 +130,21 @@ MultipleSections.args = {
     },
   ],
 };
-MultipleSections.play = createPlayFunction('This is section one');
-MultipleSections.play = createPlayFunction('This is section two');
-MultipleSections.play = createPlayFunction('This is section three');
+MultipleSections.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const headings = [
+    'This is section one',
+    'This is section two',
+    'This is section three',
+    'This is section four',
+  ];
+
+  headings.forEach(async headingText => {
+    const heading = await canvas.findByText(headingText);
+    expect(heading).toBeInTheDocument();
+  });
+};
