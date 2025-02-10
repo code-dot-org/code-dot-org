@@ -1,0 +1,13 @@
+diff --git a/dist/compiled/@next/font/dist/google/fetch-font-file.js b/dist/compiled/@next/font/dist/google/fetch-font-file.js
+index 8ece2fc4a2ea27ff7723e1c467ef6ddeacb1159a..2c4b389dbd68b525da85a4df6c62ca648781588a 100644
+--- a/dist/compiled/@next/font/dist/google/fetch-font-file.js
++++ b/dist/compiled/@next/font/dist/google/fetch-font-file.js
+@@ -23,7 +23,7 @@ async function fetchFontFile(url, isDev) {
+     }
+     return await (0, retry_1.retry)(async () => {
+         const controller = new AbortController();
+-        const timeoutId = setTimeout(() => controller.abort(), 3000);
++        const timeoutId = setTimeout(() => controller.abort(), 30_000);
+         const arrayBuffer = await (0, node_fetch_1.default)(url, {
+             agent: (0, get_proxy_agent_1.getProxyAgent)(),
+             // Add a timeout in dev

@@ -30,7 +30,7 @@
     "@code-dot-org/component-library": "workspace:*",
     "@contentful/experiences-sdk-react": "^1.30.3",
     "contentful": "^11.2.5",
-    "next": "^15.1.2",
+    "next": "patch:next@npm%3A15.1.4#~/apps/marketing/patches/next-npm-15.1.4-0932792742.patch",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
