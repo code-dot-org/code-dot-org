@@ -41,12 +41,13 @@ const getLengthRepresentation = (length: number) => {
 const decimalToFraction = (decimal: number): string => {
   if (decimal % 1 === 0) return decimal.toString();
 
-  const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : a);
+  const greatestCommonDivisor = (a: number, b: number): number =>
+    b ? greatestCommonDivisor(b, a % b) : a;
 
   const len = decimal.toString().length - 2;
   const denominator = Math.pow(10, len);
   const numerator = decimal * denominator;
-  const divisor = gcd(numerator, denominator);
+  const divisor = greatestCommonDivisor(numerator, denominator);
 
   return `${numerator / divisor}/${denominator / divisor}`;
 };
