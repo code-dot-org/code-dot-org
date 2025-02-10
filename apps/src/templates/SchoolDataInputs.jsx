@@ -96,7 +96,6 @@ export default function SchoolDataInputs({
 
   const computedStyleClass = classNames(
     style.schoolAssociationWrapper,
-    style.requiredLabel,
     containerClassName
   );
 
