@@ -193,7 +193,6 @@ ActiveRecord::Schema.define(version: 2025_02_07_175343) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "game_id"
-    t.index ["game_id"], name: "fk_rails_5ae7249531"
     t.index ["storage_app_id"], name: "index_backpacks_on_storage_app_id", unique: true
     t.index ["user_id"], name: "index_backpacks_on_user_id", unique: true
   end
@@ -1738,7 +1737,7 @@ ActiveRecord::Schema.define(version: 2025_02_07_175343) do
     t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
   end
 
-  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "storage_id"
     t.text "value", size: :medium
     t.datetime "updated_at", null: false
@@ -2516,7 +2515,6 @@ ActiveRecord::Schema.define(version: 2025_02_07_175343) do
   add_foreign_key "ai_tutor_interaction_feedbacks", "ai_tutor_interactions"
   add_foreign_key "ai_tutor_interaction_feedbacks", "users"
   add_foreign_key "aichat_events", "aichat_requests", column: "request_id"
-  add_foreign_key "backpacks", "games"
   add_foreign_key "cap_user_events", "users"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
