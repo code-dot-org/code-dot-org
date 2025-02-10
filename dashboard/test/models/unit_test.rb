@@ -1999,11 +1999,16 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test "show_unit_overview_between_lessons" do
+    aiml_6_8 = create :unit, name: 'aiml-6-8', properties: {content_area: "6-8 Curriculum"}
+    aiml_9_12 = create :unit, name: 'aiml-9-12', properties: {content_area: "9-12 Curriculum"}
+
     assert @csd_unit.show_unit_overview_between_lessons?
     assert @csp_unit.show_unit_overview_between_lessons?
     assert @csa_unit.show_unit_overview_between_lessons?
     assert @foundations_of_cs_unit.show_unit_overview_between_lessons?
     assert @foundations_of_programming_unit.show_unit_overview_between_lessons?
+    assert aiml_6_8.show_unit_overview_between_lessons?
+    assert aiml_9_12.show_unit_overview_between_lessons?
 
     refute @csf_unit.show_unit_overview_between_lessons?
     refute @hoc_unit.show_unit_overview_between_lessons?

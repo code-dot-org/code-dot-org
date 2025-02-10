@@ -2135,7 +2135,14 @@ class Unit < ApplicationRecord
   # To help teachers have more control over the pacing of certain scripts, we
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
-    csd? || csp? || csa? || foundations_of_cs? || foundations_of_programming? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+    csd? ||
+      csp? ||
+      csa? ||
+      foundations_of_cs? ||
+      foundations_of_programming? ||
+      ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key) ||
+      properties['content_area'] == Curriculum::SharedCourseConstants::CURRICULUM_CONTENT_AREA.curriculum_6_8 ||
+      properties['content_area'] == Curriculum::SharedCourseConstants::CURRICULUM_CONTENT_AREA.curriculum_9_12
   end
 
   def ai_assessment_enabled?
