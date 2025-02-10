@@ -78,6 +78,13 @@ export const SectionWithBackgroundPattern: Story = {
       </>
     ),
   },
+  parameters: {
+    docs: {
+      description: {
+        story: `The \`backgroundImageUrl\` prop can be set manually as seen here, or logically as seen in the CMS implementation where there are predefined options set.`,
+      },
+    },
+  },
   play: createPlayFunction('This is a section with a background pattern'),
 };
 
