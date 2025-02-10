@@ -140,6 +140,14 @@ const Output: React.FunctionComponent<OutputProps> = ({
     }
   }, [height, width, miniApp, throttledResize, miniAppSize, isVertical]);
 
+  useEffect(() => {
+    // Fit the console to the new container.
+    CodebridgeRegistry.getInstance()
+      .getConsoleManager()
+      ?.getTerminalFitAddon()
+      ?.fit();
+  }, [consoleSize]);
+
   if (!miniApp) {
     return (
       <div
