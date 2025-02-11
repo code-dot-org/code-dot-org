@@ -1,28 +1,24 @@
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import React, {
+  Fragment,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 
 import MusicRegistry from '../../MusicRegistry';
 import {InstrumentEventValue} from '../../player/interfaces/InstrumentEvent';
-import MusicLibrary from '../../player/MusicLibrary';
-import {
-  getNoteName,
-  getNotesInKey,
-  getPitchName,
-  isBlackKey,
-  Key,
-} from '../../utils/Notes';
+import {getPitchName, isBlackKey} from '../../utils/Notes';
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControls from '../PreviewControls';
 
-import {integers} from './util';
+import {getDisplayNotes, getInstruments, integers} from './util';
 
 import styles from './styles.module.scss';
-
-const START_OCTAVE = 4;
-const DISPLAY_OCTAVES = 3;
 
 interface Props {
   initialValue: InstrumentEventValue;
@@ -31,8 +27,8 @@ interface Props {
   lengthMeasures: number;
 }
 
-type EditorType = 'drums' | 'notes';
-type ScaleMode = 'simple' | 'chromatic';
+export type EditorType = 'drums' | 'notes';
+export type ScaleMode = 'simple' | 'chromatic';
 
 const InstrumentGrid: React.FunctionComponent<Props> = ({
   initialValue,
@@ -148,7 +144,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-theme="Dark">
       <div className={styles.controlRow}>
         <SimpleDropdown
           items={instruments.map(instrument => ({
@@ -165,7 +161,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           selectedValue={currentValue.instrument}
         />
         {editorType === 'notes' && (
-          <div className={styles.scaleModeToggle} data-theme="Dark">
+          <div className={styles.scaleModeToggle}>
             <SegmentedButtons
               buttons={[
                 {
@@ -197,34 +193,30 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           ]
         )}
       >
-        {displayNotes.map(({note, name}, i) => {
-          return (
-            <div className={styles.pitchRow} key={note}>
-              <RowLabel name={name} note={note} i={i} />
-              <div className={styles.cellRow}>
-                {ticks.map(tick => {
-                  return (
-                    <>
-                      <button
-                        type="button"
-                        className={classNames(
-                          editorType === 'drums'
-                            ? styles['cell-drums']
-                            : styles[`cell-${scaleMode}`],
-                          isSelected(note, tick) && styles.activeCell,
-                          currentPreviewTick === tick && styles.previewCell
-                        )}
-                        key={tick}
-                        onClick={() => onClickCell(note, tick)}
-                      />
-                      {tick % 4 === 0 && <div /> /* Spacer */}
-                    </>
-                  );
-                })}
-              </div>
+        {displayNotes.map(({note, name}, i) => (
+          <div className={styles.pitchRow} key={note}>
+            <RowLabel name={name} note={note} i={i} />
+            <div className={styles.cellRow}>
+              {ticks.map(tick => (
+                <Fragment key={tick}>
+                  <button
+                    type="button"
+                    className={classNames(
+                      editorType === 'drums'
+                        ? styles['cell-drums']
+                        : styles[`cell-${scaleMode}`],
+                      isSelected(note, tick) && styles.activeCell,
+                      currentPreviewTick === tick && styles.previewCell
+                    )}
+                    key={tick}
+                    onClick={() => onClickCell(note, tick)}
+                  />
+                  {tick % 4 === 0 && <div /> /* Spacer */}
+                </Fragment>
+              ))}
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
       <PreviewControls
         enabled={currentValue.events.length > 0 && !isLoading}
@@ -237,36 +229,5 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     </div>
   );
 };
-
-function getDisplayNotes(
-  editorType: EditorType,
-  scaleMode: ScaleMode,
-  instrument: string,
-  rootKey: Key
-) {
-  if (editorType === 'drums') {
-    const kitFolder = MusicLibrary.getInstance()?.kits.find(
-      kit => kit.id === instrument
-    );
-    return (
-      kitFolder?.sounds.map((sound, i) => ({name: sound.name, note: i})) || []
-    );
-  }
-  let noteValues;
-  if (scaleMode === 'chromatic') {
-    noteValues = integers(DISPLAY_OCTAVES * 12, START_OCTAVE * 12);
-  } else {
-    noteValues = getNotesInKey(rootKey, START_OCTAVE, DISPLAY_OCTAVES);
-  }
-
-  return noteValues.map(note => ({note, name: getNoteName(note)}));
-}
-
-function getInstruments(editorType: EditorType) {
-  if (editorType === 'drums') {
-    return MusicLibrary.getInstance()?.kits || [];
-  }
-  return MusicLibrary.getInstance()?.instruments || [];
-}
 
 export default InstrumentGrid;

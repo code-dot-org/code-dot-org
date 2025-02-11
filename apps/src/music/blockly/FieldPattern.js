@@ -5,8 +5,10 @@ import ReactDOM from 'react-dom';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 
+import appConfig from '../appConfig';
 import {DEFAULT_PATTERN_LENGTH} from '../constants';
 import {generateGraphDataFromPattern} from '../utils/Patterns';
+import InstrumentGrid from '../views/InstrumentGrid';
 import PatternPanel from '../views/PatternPanel';
 
 import styles from './fields.module.scss';
@@ -114,13 +116,26 @@ class FieldPattern extends GoogleBlockly.Field {
       return;
     }
 
-    ReactDOM.render(
-      <PatternPanel
-        initValue={this.getValue()}
-        onChange={this.onValueChange}
-      />,
-      this.newDiv_
-    );
+    if (appConfig.getValue('play-tune-block') === 'true') {
+      ReactDOM.render(
+        <InstrumentGrid
+          editorType="drums"
+          // Make a copy of the value object so that we don't overwrite Blockly's data.
+          initialValue={JSON.parse(JSON.stringify(this.getValue()))}
+          onChange={this.onValueChange}
+          lengthMeasures={1}
+        />,
+        this.newDiv_
+      );
+    } else {
+      ReactDOM.render(
+        <PatternPanel
+          initValue={this.getValue()}
+          onChange={this.onValueChange}
+        />,
+        this.newDiv_
+      );
+    }
   }
 
   dropdownDispose_() {

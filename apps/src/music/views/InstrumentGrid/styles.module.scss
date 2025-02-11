@@ -12,7 +12,8 @@ $row-gap: 4px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 8px;
+  padding: 16px;
+  user-select: none;
 }
 
 .controlRow {
@@ -139,9 +140,12 @@ $row-gap: 4px;
   width: 100px;
   justify-content: flex-start;
   background-color: transparent;
-  padding-left: 8px;
+  transition: opacity 0.2s ease;
+  opacity: 1;
 
   &:hover {
+    opacity: 0.7;
+    transform: none;
     background-color: transparent;
   }
 }
