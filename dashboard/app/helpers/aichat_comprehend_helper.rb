@@ -4,7 +4,7 @@ module AichatComprehendHelper
 
   def self.create_comprehend_client
     # Stubbed Comprehend allows UI tests (without the roundtrip to the model) to run in CI environments
-    Rails.application.config.respond_to?(:stub_aichat_services) && Rails.application.config.stub_aichat_services ?
+    CI::Utils.ci_job_ui_tests? ?
       StubbedComprehendClient.new :
       Aws::Comprehend::Client.new
   end
