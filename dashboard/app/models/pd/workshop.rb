@@ -46,7 +46,7 @@ class Pd::Workshop < ApplicationRecord
   belongs_to :organizer, class_name: 'User', optional: true
   has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
 
-  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id', inverse_of: :workshop
   accepts_nested_attributes_for :sessions, allow_destroy: true
 
   has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
