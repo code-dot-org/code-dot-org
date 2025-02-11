@@ -282,96 +282,106 @@ class Game < ApplicationRecord
     CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV.fetch('CI', nil))
   end
 
-  # Format: name:app:intro_video
-  # Don't change the order of existing entries! Always append to the end of the list.
-  # The list contains no longer used level types in order to maintain the order
-  # including: Scratch
+  # Format: id:name:app:intro_video
+  # Don't change existing IDs! Always append new games to the end.
   GAMES_BY_INDEX = %w(
-    Maze:maze:maze_intro
-    Artist:turtle:artist_intro
-    Artist2:turtle
-    Farmer:maze:farmer_intro
-    Artist3:turtle
-    Farmer2:maze
-    Artist4:turtle
-    Farmer3:maze
-    Artist5:turtle
-    MazeEC:maze:maze_intro
-    Unplug1:unplug
-    Unplug2:unplug
-    Unplug3:unplug
-    Unplug4:unplug
-    Unplug5:unplug
-    Unplug6:unplug
-    Unplug7:unplug
-    Unplug8:unplug
-    Unplug9:unplug
-    Unplug10:unplug
-    Unplug11:unplug
-    Bounce:bounce
-    Custom:turtle
-    Flappy:flappy:flappy_intro
-    CustomMaze:maze
-    Studio:studio
-    Jigsaw:jigsaw
-    MazeStep:maze
-    Multi:multi
-    Match:match
-    Unplugged:unplug
-    Wordsearch:wordsearch
-    CustomStudio:studio
-    Calc:calc
-    Webapp:webapp
-    Eval:eval
-    ArtistEC:turtle:artist_intro
-    TextMatch
-    StudioEC:studio
-    ContractMatch
-    Applab:applab
-    NetSim:netsim
-    External:external
-    Pixelation:pixelation
-    TextCompression:text_compression
-    Odometer:odometer
-    FrequencyAnalysis:frequency_analysis
-    Vigenere:vigenere
-    Craft:craft
-    Gamelab:gamelab
-    LevelGroup:level_group
-    FreeResponse:free_response
-    NotUsed:not_used
-    StandaloneVideo:standalone_video
-    ExternalLink:external_link
-    EvaluationMulti:evaluation_multi
-    PublicKeyCryptography:public_key_cryptography
-    Weblab:weblab
-    CurriculumReference:curriculum_reference
-    Map:map
-    CustomFlappy:flappy
-    Scratch:scratch
-    Dance:dance
-    Spritelab:spritelab
-    BubbleChoice:bubble_choice
-    Fish:fish
-    Ailab:ailab
-    Javalab:javalab
-    Poetry:poetry
-    Music:music
-    Aichat:aichat
-    Pythonlab:pythonlab
-    Panels:panels
-    Weblab2:weblab2
+    1:Maze:maze:maze_intro
+    2:Artist:turtle:artist_intro
+    3:Artist2:turtle
+    4:Farmer:maze:farmer_intro
+    5:Artist3:turtle
+    6:Farmer2:maze
+    7:Artist4:turtle
+    8:Farmer3:maze
+    9:Artist5:turtle
+    10:MazeEC:maze:maze_intro
+    11:Unplug1:unplug
+    12:Unplug2:unplug
+    13:Unplug3:unplug
+    14:Unplug4:unplug
+    15:Unplug5:unplug
+    16:Unplug6:unplug
+    17:Unplug7:unplug
+    18:Unplug8:unplug
+    19:Unplug9:unplug
+    20:Unplug10:unplug
+    21:Unplug11:unplug
+    22:Bounce:bounce
+    23:Custom:turtle
+    24:Flappy:flappy:flappy_intro
+    25:CustomMaze:maze
+    26:Studio:studio
+    27:Jigsaw:jigsaw
+    28:MazeStep:maze
+    29:Multi:multi
+    30:Match:match
+    31:Unplugged:unplug
+    32:Wordsearch:wordsearch
+    33:CustomStudio:studio
+    34:Calc:calc
+    35:Webapp:webapp
+    36:Eval:eval
+    37:ArtistEC:turtle:artist_intro
+    38:TextMatch
+    39:StudioEC:studio
+    40:ContractMatch
+    41:Applab:applab
+    42:NetSim:netsim
+    43:External:external
+    44:Pixelation:pixelation
+    45:TextCompression:text_compression
+    46:Odometer:odometer
+    47:FrequencyAnalysis:frequency_analysis
+    48:Vigenere:vigenere
+    49:Craft:craft
+    50:Gamelab:gamelab
+    51:LevelGroup:level_group
+    52:FreeResponse:free_response
+    53:NotUsed:not_used
+    54:StandaloneVideo:standalone_video
+    55:ExternalLink:external_link
+    56:EvaluationMulti:evaluation_multi
+    57:PublicKeyCryptography:public_key_cryptography
+    58:Weblab:weblab
+    59:CurriculumReference:curriculum_reference
+    60:Map:map
+    61:CustomFlappy:flappy
+    62:Scratch:scratch
+    63:Dance:dance
+    64:Spritelab:spritelab
+    65:BubbleChoice:bubble_choice
+    66:Fish:fish
+    67:Ailab:ailab
+    68:Javalab:javalab
+    69:Poetry:poetry
+    70:Music:music
+    71:Aichat:aichat
+    72:Pythonlab:pythonlab
+    73:Panels:panels
+    74:Weblab2:weblab2
   )
 
   def self.setup
-    videos_by_key = Video.all.where(locale: 'en-US').index_by(&:key)
-    games = GAMES_BY_INDEX.map.with_index(1) do |line, id|
-      name, app, intro_video_key = line.split ':'
-      {id: id, name: name, app: app, intro_video_id: videos_by_key[intro_video_key]&.id}
+    videos_by_key = Video.where(locale: 'en-US').index_by(&:key)
+
+    games = GAMES_BY_INDEX.map do |line|
+      id, name, app, intro_video_key = line.split ':'
+      {
+        id: id.to_i,
+        name: name,
+        app: app,
+        intro_video_id: videos_by_key[intro_video_key]&.id
+      }
     end
-    transaction do
-      reset_db
-      Game.import! games
-    end
+
+    existing_ids = Game.pluck(:id).to_set
+    new_ids = games.to_set {|g| g[:id]}
+
+    # Insert or update records
+    Game.upsert_all(games, unique_by: :id)
+
+    # Remove games that are no longer in GAMES_BY_INDEX
+    to_delete = existing_ids - new_ids
+    Game.where(id: to_delete).delete_all if to_delete.any?
   end
 end
