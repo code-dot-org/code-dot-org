@@ -46,7 +46,9 @@ export default class WorkshopEnroll extends React.Component {
   constructor(props) {
     super(props);
 
-    const workshopTitle = props.workshop.name ?? `a ${props.workshop.course}`;
+    const workshopTitle = props.workshop.name
+      ? props.workshop.name
+      : `a ${props.workshop.course}`;
     let workshopEnrollTitle = `Register for ${workshopTitle}`;
     if (!workshopTitle.toLowerCase().endsWith('workshop')) {
       workshopEnrollTitle += ' workshop';
