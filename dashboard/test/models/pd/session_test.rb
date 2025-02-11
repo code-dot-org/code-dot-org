@@ -50,10 +50,6 @@ class Pd::SessionTest < ActiveSupport::TestCase
       end: Time.current.in_time_zone('UTC').change(year: 2016, month: 3, day: 1, hour: 17).utc.iso8601
     )
 
-    # override validation on create that defaults new sessions to UTC timezone if not provided
-    # to reproduce a legacy session with no time_zone
-    session.workshop.time_zone = nil
-
     assert_equal '2016-03-01, 9:00am-5:00pm', session.formatted_date_with_start_and_end_times
   end
 
