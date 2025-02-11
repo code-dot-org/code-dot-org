@@ -103,7 +103,9 @@ class FieldPattern extends GoogleBlockly.Field {
     this.renderContent();
 
     this.newDiv_.style.color = color.neutral_light;
-    // this.newDiv_.style.width = '420px';
+    if (appConfig.getValue('play-tune-block') !== 'true') {
+      this.newDiv_.style.width = '420px';
+    }
     this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
     this.newDiv_.className = styles.blocklyDropdownFullHeightClass;

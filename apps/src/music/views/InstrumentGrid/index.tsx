@@ -14,7 +14,7 @@ import MusicRegistry from '../../MusicRegistry';
 import {InstrumentEventValue} from '../../player/interfaces/InstrumentEvent';
 import {getPitchName, isBlackKey} from '../../utils/Notes';
 import LoadingOverlay from '../LoadingOverlay';
-import PreviewControls from '../PreviewControls';
+import PreviewControlsV2 from '../PreviewControlsV2';
 
 import {getDisplayNotes, getInstruments, integers} from './util';
 
@@ -218,7 +218,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           </div>
         ))}
       </div>
-      <PreviewControls
+      <PreviewControlsV2
         enabled={currentValue.events.length > 0 && !isLoading}
         playPreview={startPreview}
         onClickClear={() => setCurrentValue({...currentValue, events: []})}
