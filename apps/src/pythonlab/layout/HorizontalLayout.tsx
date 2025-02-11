@@ -11,8 +11,8 @@ import ResizeBar, {
 
 import moduleStyles from './layout.module.scss';
 
-const MIN_RIGHT_PANEL_WIDTH = 500;
-const MIN_LEFT_PANEL_WIDTH = 200;
+const MIN_RIGHT_PANEL_WIDTH = 300;
+const MIN_LEFT_PANEL_WIDTH = 150;
 const MIN_OUTPUT_HEIGHT = 120;
 const MIN_EDITOR_HEIGHT = 200;
 const INITIAL_INFO_PANEL_WIDTH = 300;
@@ -104,10 +104,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.layoutContainer}>
-      <InfoPanel
-        style={{width: infoPanelWidth}}
-        className={moduleStyles.flexShrink0}
-      />
+      <InfoPanel style={{width: infoPanelWidth}} />
       <ResizeBar
         isVertical={true}
         separatorProps={infoPanelSeparatorProps}

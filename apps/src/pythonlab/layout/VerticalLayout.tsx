@@ -10,9 +10,9 @@ import ResizeBar, {
 
 import moduleStyles from './layout.module.scss';
 
-const MIN_INFO_PANEL_WIDTH = 200;
+const MIN_INFO_PANEL_WIDTH = 150;
 const MIN_OUTPUT_WIDTH = 200;
-const MIN_EDITOR_WIDTH = 500;
+const MIN_EDITOR_WIDTH = 300;
 const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
 const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_OUTPUT_WIDTH = 400;
