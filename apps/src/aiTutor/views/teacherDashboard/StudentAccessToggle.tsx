@@ -1,7 +1,7 @@
+import Toggle from '@code-dot-org/component-library/toggle';
 import React, {useState} from 'react';
 
 import {handleUpdateAITutorAccess} from '@cdo/apps/aiTutor/accessControlsApi';
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 
 interface StudentAccessToggleProps {
   studentId: number;

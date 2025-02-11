@@ -6,7 +6,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../constants';
 import aichatI18n from '../locale';
-import {removeUpdateMessage} from '../redux/aichatRedux';
+import {removeUpdateMessage} from '../redux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
   ChatEvent,

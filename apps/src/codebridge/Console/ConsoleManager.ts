@@ -10,8 +10,8 @@ export default class ConsoleManager {
   // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
   private lastLineIsPartial: boolean;
 
-  private IMAGE_WIDTH = 400;
-  private IMAGE_HEIGHT = 400;
+  private IMAGE_WIDTH = 600;
+  private IMAGE_HEIGHT = 600;
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;

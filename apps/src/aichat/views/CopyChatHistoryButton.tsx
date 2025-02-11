@@ -6,7 +6,7 @@ import {
   addChatEvent,
   selectAllVisibleMessages,
   sendAnalytics,
-} from '@cdo/apps/aichat/redux/aichatRedux';
+} from '@cdo/apps/aichat/redux';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
