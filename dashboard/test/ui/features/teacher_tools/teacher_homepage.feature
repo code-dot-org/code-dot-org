@@ -221,7 +221,7 @@ Feature: Using the teacher homepage sections feature
     Then I should see the student section table
     And the student section table should have 2 rows
     And the section table row at index 0 has primary assignment path "/courses/ui-test-single-unit-course-2025"
-    And element ".uitest-owned-sections" does not contain text "Current unit: ui-test-single-unit-2025"
+    And element ".uitest-owned-sections" does not contain text "Current unit:"
 
     When I click selector ".uitest-owned-sections a:contains('ui-test-single-unit-course-2025')" to load a new page
     Then check that the URL contains "/s/ui-test-single-unit-2025"
