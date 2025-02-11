@@ -1,5 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
 import {
   BodyOneText,
   BodyThreeText,
@@ -17,6 +17,7 @@ import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
+import {Button} from '../../componentLibrary/button';
 import AiDiffChat, {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
@@ -41,8 +42,9 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
-  lessonId: number;
-  lessonName: string;
+  context: string;
+  scriptId: number;
+  scriptName: string;
   unitDisplayName: string;
 }
 
@@ -122,8 +124,9 @@ const getStartedPage = (onClick: () => void) => {
 
 const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
-  lessonId,
-  lessonName,
+  context,
+  scriptId,
+  scriptName,
   unitDisplayName,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
@@ -147,17 +150,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       return (
         <div className={style.bottomButtons}>
           <Button
-            onClick={() => updateShowWelcomeExperience()}
-            text="Skip"
-            className={style.skipButton}
-            color="gray"
-            type="secondary"
-          />
-          <Button
             onClick={() => setCurrentWelcomeState(nextState)}
             text="Continue"
-            className={style.continueButton}
             disabled={continueDisabled}
+          />
+          <Link
+            className={style.skipLink}
+            onClick={() => updateShowWelcomeExperience()}
+            text="Skip the tutorial"
+            size="xs"
+            type="secondary"
           />
         </div>
       );
@@ -255,8 +257,9 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     return (
       <div className={style.practicePage}>
         <AiDiffChat
-          lessonId={lessonId}
-          lessonName={lessonName}
+          context={context}
+          scriptId={scriptId}
+          scriptName={scriptName}
           chatResponseCallback={() => setChatContinueButtonDisabled(false)}
           unitDisplayName={unitDisplayName}
           initialChatMessage={initialMessage}
@@ -271,8 +274,9 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     );
   }, [
     selectedOption,
-    lessonId,
-    lessonName,
+    context,
+    scriptId,
+    scriptName,
     unitDisplayName,
     continueAndSkipButtons,
     chatContinueButtonDisabled,

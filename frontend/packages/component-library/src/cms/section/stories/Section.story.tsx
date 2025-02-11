@@ -1,7 +1,7 @@
 import type {Meta, StoryObj, StoryFn} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
-import Section, {SectionProps, sectionBackgroundColors} from '../index';
+import Section, {SectionProps, sectionBackground} from '../index';
 import {BodyOneText, Heading2} from '@/typography';
 
 export default {
@@ -21,18 +21,6 @@ const MultipleTemplate: StoryFn<{components: SectionProps[]}> = args => (
   </>
 );
 
-const createPlayFunction =
-  (headingText: string) =>
-  async ({canvasElement}: {canvasElement: HTMLElement}) => {
-    const canvas = within(canvasElement);
-    const headings = canvas.getAllByText(headingText);
-
-    // check if children content is in the document
-    headings.forEach(heading => {
-      expect(heading).toBeInTheDocument();
-    });
-  };
-
 //
 // STORIES
 //
@@ -46,12 +34,18 @@ export const DefaultSection: Story = {
       </>
     ),
   },
-  play: createPlayFunction('This is a default section'),
+  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+    const canvas = within(canvasElement);
+    const heading = canvas.getByText('This is a default section');
+
+    // check if children content is in the section
+    expect(heading).toBeInTheDocument();
+  },
 };
 
 export const SectionWithBackgroundColor: Story = {
   args: {
-    backgroundColor: sectionBackgroundColors.secondary,
+    background: sectionBackground.secondary,
     padding: 'l',
     children: (
       <>
@@ -60,14 +54,62 @@ export const SectionWithBackgroundColor: Story = {
       </>
     ),
   },
-  play: createPlayFunction('This is a section with a background color'),
+  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+    const canvas = within(canvasElement);
+    const heading = canvas.getByText(
+      'This is a section with a background color',
+    );
+
+    // check if children content is in the section
+    expect(heading).toBeInTheDocument();
+  },
+};
+
+export const SectionWithBackgroundPattern: Story = {
+  args: {
+    background: sectionBackground.patternPrimary,
+    backgroundImageUrl:
+      'https://code.org/images/banners/banner-bg-lines-neutral-light.png',
+    padding: 'l',
+    children: (
+      <>
+        <Heading2 style={{color: 'white'}}>
+          This is a section with a background pattern
+        </Heading2>
+        <BodyOneText style={{color: 'white'}}>I'm just a sentence.</BodyOneText>
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `The \`backgroundImageUrl\` prop can be set manually as seen here, or logically as seen in the CMS implementation where there are predefined options set.`,
+      },
+    },
+  },
+  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+    const canvas = within(canvasElement);
+    const heading = canvas.getByText(
+      'This is a section with a background pattern',
+    );
+
+    // check if children content is in the section
+    expect(heading).toBeInTheDocument();
+
+    // check if background image is set
+    const section = heading.closest('section');
+    if (section) {
+      const backgroundImage = section.style.backgroundImage;
+      expect(backgroundImage).toContain('banner-bg-lines-neutral-light.png');
+    }
+  },
 };
 
 export const MultipleSections = MultipleTemplate.bind({});
 MultipleSections.args = {
   components: [
     {
-      backgroundColor: sectionBackgroundColors.primary,
+      background: sectionBackground.primary,
       padding: 'l',
       children: (
         <>
@@ -77,7 +119,7 @@ MultipleSections.args = {
       ),
     },
     {
-      backgroundColor: sectionBackgroundColors.secondary,
+      background: sectionBackground.secondary,
       padding: 'l',
       children: (
         <>
@@ -87,7 +129,7 @@ MultipleSections.args = {
       ),
     },
     {
-      backgroundColor: sectionBackgroundColors.brandLightPrimary,
+      background: sectionBackground.brandLightPrimary,
       padding: 'l',
       children: (
         <>
@@ -96,8 +138,39 @@ MultipleSections.args = {
         </>
       ),
     },
+    {
+      background: sectionBackground.patternDark,
+      backgroundImageUrl:
+        'https://code.org/images/banners/banner-bg-lines-neutral-light.png',
+      padding: 'l',
+      children: (
+        <>
+          <Heading2 style={{color: 'white'}}>This is section four</Heading2>
+          <BodyOneText style={{color: 'white'}}>
+            I'm just a sentence.
+          </BodyOneText>
+        </>
+      ),
+    },
   ],
 };
-MultipleSections.play = createPlayFunction('This is section one');
-MultipleSections.play = createPlayFunction('This is section two');
-MultipleSections.play = createPlayFunction('This is section three');
+MultipleSections.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const headings = [
+    'This is section one',
+    'This is section two',
+    'This is section three',
+    'This is section four',
+  ];
+
+  headings.forEach(async headingText => {
+    const heading = await canvas.findByText(headingText);
+
+    // check if children content is in each section
+    expect(heading).toBeInTheDocument();
+  });
+};
