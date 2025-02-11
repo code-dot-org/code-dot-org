@@ -171,7 +171,7 @@ module AichatSafetyHelper
   end
 
   def self.find_toxicity(role, text, locale)
-    # Stubbed SageMaker allows UI tests (without the roundtrip to the model) to run in CI environments
+    # Stubbed toxicity detection allows UI tests (without the roundtrip to third-party moderation services) to run in CI environments
     Rails.application.config.respond_to?(:stub_aichat_services) && Rails.application.config.stub_aichat_services ?
       StubbedToxicityDetector.new.find_toxicity(role, text, locale) :
       ToxicityDetector.new.find_toxicity(role, text, locale)
