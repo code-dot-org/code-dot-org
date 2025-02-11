@@ -190,7 +190,7 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
                     styles.labelCell
                   )}
                 >
-                  {displayNotes.length - i}
+                  {((displayNotes.length - i - 1) % 7) + 1}
                 </div>
               )}
               <div className={styles.cellRow}>

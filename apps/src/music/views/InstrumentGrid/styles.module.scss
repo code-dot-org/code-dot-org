@@ -1,11 +1,11 @@
 @import '../../../mixins.scss';
 @import 'color.scss';
 
-$colors-simple: #2980b9, #16a085, #2ecc71, #f1c40f, #f39c12, #d35400, #e74c3c,
-  #ff4c3c;
+$colors-simple: #2980b9, #16a085, #2ecc71, #f1c40f, #f39c12, #d35400, #e74c3c;
 $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
   #55efc4;
-$cell-size: 25px;
+$cell-width: 25px;
+$cell-height: 20px;
 $row-gap: 4px;
 
 .container {
@@ -36,14 +36,20 @@ $row-gap: 4px;
   padding-right: 16px;
 }
 
-.sequence-editor-simple, .sequence-editor-drums {
+.sequence-editor-drums {
   @extend %sequence-editor;
-  max-height: ($cell-size + $row-gap) * 11; // show 8 notes/drum sounds plus a few extra
+  overflow: hidden;
+}
+
+.sequence-editor-simple {
+  @extend %sequence-editor;
+  padding-left: 4px;
+  max-height: ($cell-height + $row-gap) * 11; // show 8 notes plus a few extra
 }
 
 .sequence-editor-chromatic {
   @extend %sequence-editor;
-  max-height: ($cell-size + $row-gap) * 15; // show a full octave of 12 notes plus a few extra
+  max-height: ($cell-height + $row-gap) * 15; // show a full octave of 12 notes plus a few extra
 }
 
 .pitchRow {
@@ -51,16 +57,20 @@ $row-gap: 4px;
   gap: 8px;
   align-items: stretch;
 
-  @for $i from 1 through 8 {
+  @for $i from 1 through 22 {
     &:nth-child(#{$i}) {
       .cell-simple {
         &.labelCell,
         &.activeCell,
         &.activeCell:hover {
-          background-color: nth($colors-simple, 8 - $i + 1);
+          background-color: nth($colors-simple, (22 - $i) % 7 + 1);
         }
       }
+    }
+  }
 
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
       .cell-drums {
         &.activeCell,
         &.activeCell:hover {
@@ -88,10 +98,10 @@ $row-gap: 4px;
   gap: 4px;
 }
 
-%cell, .cell {
+%cell {
   @include remove-button-styles;
-  width: $cell-size;
-  height: $cell-size;
+  width: $cell-width;
+  height: $cell-height;
   background-color: $neutral_dark80;
   box-sizing: border-box;
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -120,69 +130,14 @@ $row-gap: 4px;
   @extend %cell;
 }
 
-.activeCell {
-  background-color: $brand_primary_default;
-  &.previewCell {
-    transform: scale(1.2);
-  }
-}
-
 .previewCell {
   background-color: $neutral_dark70;
 }
 
-.middleArea {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-}
-
-.advancedToggleContainer {
-  display: flex;
-  flex-direction: row;
-  color: $neutral_light;
-  gap: 4px;
-  align-items: center;
-
-  .toggleLabel {
-    margin: 0;
-    color: $neutral_light;
-  }
-}
-
-.controlLabel {
-  color: $neutral_light;
-  margin: 0;
-}
-
-.pageSwitcher {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: center;
-
-  .pageButton {
-    @include remove-button-styles;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: $neutral_dark80;
-    transition: background-color 0.2s ease;
-    &.selected {
-      background-color: $neutral_light;
-    }
-  }
-
-  .changePageButton {
-    @include remove-button-styles;
-    width: 20px;
-    height: 20px;
-    color: $neutral_light;
-
-    &:hover {
-      color: $neutral_dark40;
-    }
+.activeCell {
+  background-color: $brand_primary_default;
+  &.previewCell {
+    transform: scale(1.2);
   }
 }
 
