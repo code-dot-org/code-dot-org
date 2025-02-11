@@ -127,7 +127,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
+    assert_creates(LevelSource, UserLevel, UserScript) do
       post :milestone, params: @milestone_params
     end
     assert_response :success
@@ -244,7 +244,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
-    assert_creates(LevelSource, Activity) do
+    assert_creates(LevelSource) do
       assert_does_not_create(UserLevel, UserScript) do
         post :milestone, params: @milestone_params
       end
@@ -259,7 +259,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(Activity, UserLevel, UserScript) do
+    assert_creates(UserLevel, UserScript) do
       assert_does_not_create(LevelSource) do
         post :milestone, params: @milestone_params.merge(program: "<hey>" * 10000)
       end
@@ -285,7 +285,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(Activity, UserLevel, UserScript, LevelSource) do
+    assert_creates(UserLevel, UserScript, LevelSource) do
       post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
     end
 
@@ -313,7 +313,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel) do
+    assert_creates(LevelSource, UserLevel) do
       post :milestone,
         params: @milestone_params.merge(result: 'false', testResult: 10)
     end
@@ -326,7 +326,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel) do
+    assert_creates(LevelSource, UserLevel) do
       post :milestone,
         params: @milestone_params.merge(
           result: 'false',
@@ -347,7 +347,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_s3_upload
 
-    original_activity_count = Activity.count
     original_user_level_count = UserLevel.count
 
     expected_created_classes = [LevelSource, UserLevel, LevelSourceImage]
@@ -356,7 +355,6 @@ class ActivitiesControllerTest < ActionController::TestCase
       post :milestone,
         params: @milestone_params.merge(image: Base64.encode64(@good_image))
     end
-    assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
     refute_nil UserLevel.where(
       user_id: @user,
@@ -387,7 +385,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
+    assert_creates(UserLevel) do
       assert_does_not_create(LevelSource) do
         post :milestone,
           params: @milestone_params.merge(
@@ -419,7 +417,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
+    assert_creates(UserLevel) do
       assert_does_not_create(LevelSource) do
         post :milestone,
           params: @milestone_params.merge(
@@ -449,7 +447,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
+    assert_creates(UserLevel) do
       assert_does_not_create(LevelSource) do
         post :milestone,
           params: @milestone_params.merge(
@@ -481,7 +479,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
+    assert_creates(UserLevel) do
       assert_does_not_create(LevelSource) do
         post :milestone,
           params: @milestone_params.merge(
@@ -523,7 +521,7 @@ class ActivitiesControllerTest < ActionController::TestCase
       then.
       returns(existing_user_level)
 
-    assert_creates(LevelSource, Activity) do
+    assert_creates(LevelSource) do
       assert_does_not_create(UserLevel) do
         post :milestone, params: @milestone_params
       end
@@ -594,7 +592,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
 
     assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel) do
+      assert_does_not_create(UserLevel) do
         post :milestone, params: @milestone_params.merge(user_id: 0)
       end
     end
@@ -617,7 +615,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
 
     assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel) do
+      assert_does_not_create(UserLevel) do
         post :milestone, params: @milestone_params.merge(user_id: 0)
       end
     end
@@ -637,7 +635,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     @controller.expects :log_milestone
 
     assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel) do
+      assert_does_not_create(UserLevel) do
         post :milestone,
           params: @milestone_params.merge(
             user_id: 0, result: "false",
@@ -665,7 +663,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expect_s3_upload
 
     assert_creates(LevelSource, LevelSourceImage) do
-      assert_does_not_create(Activity, UserLevel) do
+      assert_does_not_create(UserLevel) do
         post :milestone,
           params: @milestone_params.merge(
             user_id: 0,
@@ -694,7 +692,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     expect_s3_upload_failure
 
     assert_creates(LevelSource) do
-      assert_does_not_create(Activity, UserLevel, LevelSourceImage) do
+      assert_does_not_create(UserLevel, LevelSourceImage) do
         post :milestone,
           params: @milestone_params.merge(
             user_id: 0,
