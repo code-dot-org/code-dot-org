@@ -45,7 +45,6 @@ const VerticalLayout: React.FunctionComponent = () => {
   });
 
   const adjustWidths = useCallback(() => {
-    console.log('hello from adjustWidths');
     // Editor takes priority in terms of available space.
     const adjustedEditorWidth = Math.max(
       window.innerWidth - rawInfoPanelWidth - rawOutputWidth - TWO_RESIZE_BARS,

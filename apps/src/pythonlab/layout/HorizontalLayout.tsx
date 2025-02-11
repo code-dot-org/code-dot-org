@@ -81,7 +81,6 @@ const HorizontalLayout: React.FunctionComponent = () => {
   const throttledResize = useMemo(
     () =>
       throttle(() => {
-        console.log('hello from throttled resize');
         adjustRightPanelWidth();
         adjustWorkspaceHeight();
       }, 30),
@@ -122,7 +121,11 @@ const HorizontalLayout: React.FunctionComponent = () => {
           separatorProps={outputSeparatorProps}
           isDragging={outputDragging}
         />
-        <Output className={moduleStyles.shrinkAndGrow} height={outputHeight} />
+        <Output
+          className={moduleStyles.shrinkAndGrow}
+          height={outputHeight}
+          width={rightPanelWidth}
+        />
       </div>
     </div>
   );
