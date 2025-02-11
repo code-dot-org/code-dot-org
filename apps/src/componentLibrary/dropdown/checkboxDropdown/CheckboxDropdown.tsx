@@ -1,19 +1,17 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import React, {AriaAttributes, memo} from 'react';
-
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
-import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+import {dropdownColors} from '@code-dot-org/component-library/common/constants';
+import {DropdownProviderWrapper} from '@code-dot-org/component-library/common/contexts';
 import {
   ComponentSizeXSToL,
   DropdownColor,
   DropdownFormFieldRelatedProps,
-} from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown, {
-  _CustomDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+} from '@code-dot-org/component-library/common/types';
+import React, {AriaAttributes, memo} from 'react';
 
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
+import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+
+import moduleStyles from './../customDropdown.module.scss';
 
 export interface CheckboxDropdownOption extends _CustomDropdownOption {}
 

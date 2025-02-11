@@ -5,7 +5,6 @@ import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {getStore} from '@cdo/apps/redux';
-import experiments from '@cdo/apps/util/experiments';
 import {createUuid} from '@cdo/apps/utils';
 
 import {AWAITING_INPUT, SENDING_INPUT} from './pythonHelpers/constants';
@@ -105,12 +104,8 @@ const setUpPyodideWorker = () => {
 };
 
 const canSupportInput = () => {
-  // We can support input if service workers are supported by the current browser
-  // and the python input experiment is enabled.
-  return (
-    'serviceWorker' in navigator &&
-    experiments.isEnabled(experiments.PYTHON_INPUT)
-  );
+  // We can support input if service workers are supported by the current browser.
+  return 'serviceWorker' in navigator;
 };
 
 const registerServiceWorker = async () => {

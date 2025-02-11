@@ -278,6 +278,28 @@ Given(/^I am a teacher enrolling in "([^"]*)"$/) do |course|
   GHERKIN
 end
 
+Given 'I start a self-paced PL course' do
+  steps <<~GHERKIN
+    Given I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
+    And I wait until element "a[aria-label='Level 3 Lesson Instructor In Training Levels']" is visible
+    Then I click selector "a[aria-label='Level 3 Lesson Instructor In Training Levels']"
+    When I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/3"
+    Then I wait until element "a:contains(Submit)" is visible
+    When I click selector "a:contains(Submit)"
+    Then I wait until I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/4"
+    And I wait until element "a:contains(Submit)" is visible
+  GHERKIN
+end
+
+And 'I see Farsi version of Professional Learning Lending page' do
+  steps <<~GHERKIN
+    And element "a:contains(Learn about professional learning)" is not visible
+    And element "button.ui-test-join-section" is not visible
+    And element "a:contains(Learn more about workshops)" is not visible
+    And the href of selector "a:contains(Start professional learning courses)" contains "/global/fa/teacher"
+  GHERKIN
+end
+
 def create_fake_survey_questions(workshop)
   Pd::SurveyQuestion.find_or_create_by!(form_id: CDO.jotform_forms['local_summer']['day_0'],
     questions: [

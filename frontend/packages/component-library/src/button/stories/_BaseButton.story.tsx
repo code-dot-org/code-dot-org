@@ -296,6 +296,15 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      ariaLabel: 'Gray tertiary icon only base button',
+      color: buttonColors.gray,
+      type: 'tertiary',
+      isIconOnly: true,
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
       ariaLabel: 'Destructive tertiary icon only base button',
       color: buttonColors.destructive,
       type: 'tertiary',

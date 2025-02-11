@@ -10344,6 +10344,7 @@ __metadata:
     react-redux: ~8.0.5
     react-refresh: ^0.14.0
     react-refresh-typescript: ^2.0.9
+    react-resizable-layout: ^0.7.2
     react-router: 3.2.6
     react-router-dom: ^6.26.0
     react-select: ^1.2.1
@@ -24153,6 +24154,16 @@ es6-shim@latest:
     "@types/react":
       optional: true
   checksum: e7ad2383ce20d63cf28f3ed14e63f684e139301fc4a5c1573da330d4465b733e6084c33b2bfcaee448c9b1df0e37993a15d6cba8a1dd80fe631f803e48e9f798
+  languageName: node
+  linkType: hard
+
+"react-resizable-layout@npm:^0.7.2":
+  version: 0.7.2
+  resolution: "react-resizable-layout@npm:0.7.2"
+  peerDependencies:
+    react: ">=17.0.0"
+    react-dom: ">=17.0.0"
+  checksum: 9994856125d4262053a56fb9989e68237ab8f28079c8b11926abb3c9dc0e368b33853b9057330df5ed82869a8e665fd2b9e5681bc105f1197fdf6368b853bd65
   languageName: node
   linkType: hard
 

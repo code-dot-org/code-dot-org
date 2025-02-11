@@ -5,7 +5,7 @@ import {
   selectCurrentCustomizationsMatchInitial,
   selectHavePropertiesChanged,
   selectSavedCustomizationsMatchInitial,
-} from '@cdo/apps/aichat/redux/aichatRedux';
+} from '@cdo/apps/aichat/redux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../../locale';

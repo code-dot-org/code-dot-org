@@ -1,7 +1,7 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import i18n from '@cdo/locale';
 
 const SubLevelDropdown = ({subLevels, handleChange}) => {

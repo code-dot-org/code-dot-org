@@ -5,7 +5,12 @@ import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
-import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
+import {RegionalLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
+import {
+  buildGoogleCalendarLink,
+  buildOutlookCalendarLink,
+  buildAppleCalendarLink,
+} from '@cdo/apps/code-studio/pd/workshop_enrollment/WorkshopEnrollmentCelebrationDialog';
 import {
   getStore,
   registerReducers,
@@ -39,6 +44,19 @@ const TEST_WORKSHOP = {
   status: 'Not Started',
 };
 
+const TEST_WORKSHOP_SESSIONS = [
+  {
+    id: 1,
+    start: '2025-01-23 09:00:00',
+    end: '2025-01-23 14:00:00',
+  },
+  {
+    id: 2,
+    start: '2025-01-24 09:00:00',
+    end: '2025-01-24 14:00:00',
+  },
+];
+
 const DEFAULT_PROPS = {
   lastWorkshopSurveyUrl: 'url',
   lastWorkshopSurveyCourse: 'CS Fundamentals',
@@ -56,15 +74,19 @@ const DEFAULT_PROPS = {
 
 describe('LandingPage', () => {
   let store;
+  const defaultCreateObjectURL = window.URL.createObjectURL;
 
   beforeEach(() => {
     stubRedux();
     registerReducers({isRtl, teacherSections});
     store = getStore();
+    window.open = jest.fn();
   });
 
   afterEach(() => {
     restoreRedux();
+    window.URL.createObjectURL = defaultCreateObjectURL;
+    jest.resetAllMocks();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -421,8 +443,14 @@ describe('LandingPage', () => {
   });
 
   it('page shows success dialog stating workshop course when redirected here from successful non-BYOW enrollment', () => {
+    window.URL.createObjectURL = () => 'testCreateObjectURL';
+
     const workshopCourse = 'TEST COURSE';
     sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify([TEST_WORKSHOP_SESSIONS[0]])
+    );
 
     renderDefault();
 
@@ -435,10 +463,16 @@ describe('LandingPage', () => {
   });
 
   it('page shows success dialog stating workshop name when redirected here from successful BYOW enrollment', () => {
+    window.URL.createObjectURL = () => 'testCreateObjectURL';
+
     const workshopCourse = 'TEST COURSE';
     const workshopName = 'TEST NAME';
     sessionStorage.setItem('workshopCourse', workshopCourse);
     sessionStorage.setItem('workshopName', workshopName);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify([TEST_WORKSHOP_SESSIONS[0]])
+    );
 
     renderDefault();
 
@@ -448,5 +482,576 @@ describe('LandingPage', () => {
     );
 
     sessionStorage.clear();
+  });
+
+  it('enroll success dialog shows buttons with links to add session to calendar for workshops with one session', () => {
+    window.URL.createObjectURL = () => 'testCreateObjectURL';
+
+    const workshopCourse = 'TEST COURSE';
+    const workshopLocation = 'Seattle, WA';
+    const workshopSession = TEST_WORKSHOP_SESSIONS[0];
+    sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem('workshopLocation', workshopLocation);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify([workshopSession])
+    );
+
+    renderDefault();
+
+    screen.getByText(i18n.enrollmentCelebrationTitle());
+    screen.getByText(
+      i18n.enrollmentCelebrationBody({workshopName: workshopCourse})
+    );
+    screen.getByText(i18n.addToYourCalendar());
+
+    // Add to Apple calendar button has expected download .ics file link
+    const expectedAppleCalendarDownloadLink = buildAppleCalendarLink(
+      [workshopSession],
+      workshopCourse,
+      workshopLocation
+    );
+    fireEvent.click(
+      screen.getByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Apple',
+        })
+      )
+    );
+    expect(window.open).toHaveBeenCalledWith(
+      expectedAppleCalendarDownloadLink,
+      '_blank',
+      'noopener',
+      'noreferrer'
+    );
+
+    // Add to Google calendar button has expected link to add event to calendar
+    const expectedGoogleCalendarLink = buildGoogleCalendarLink(
+      workshopSession,
+      workshopCourse,
+      workshopLocation
+    );
+    fireEvent.click(
+      screen.getByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Google',
+        })
+      )
+    );
+    expect(window.open).toHaveBeenCalledWith(
+      expectedGoogleCalendarLink,
+      '_blank',
+      'noopener',
+      'noreferrer'
+    );
+
+    // Add to Outlook calendar button has expected link to add event to calendar
+    const expectedOutlookCalendarLink = buildOutlookCalendarLink(
+      workshopSession,
+      workshopCourse,
+      workshopLocation
+    );
+    fireEvent.click(
+      screen.getByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Outlook',
+        })
+      )
+    );
+    expect(window.open).toHaveBeenCalledWith(
+      expectedOutlookCalendarLink,
+      '_blank',
+      'noopener',
+      'noreferrer'
+    );
+
+    // Does not show the dialog for adding multiple sessions to calendar
+    expect(
+      screen.queryByText(i18n.enrollmentCelebrationAddToCalendarButton())
+    ).toBe(null);
+
+    sessionStorage.clear();
+  });
+
+  it('enroll success dialog shows buttons that open dialog to add multiple sessions to calendar for workshops with multiple sessions', () => {
+    window.URL.createObjectURL = () => 'testCreateObjectURL';
+
+    const workshopCourse = 'TEST COURSE';
+    const workshopLocation = 'Seattle, WA';
+    sessionStorage.setItem('workshopCourse', workshopCourse);
+    sessionStorage.setItem('workshopLocation', workshopLocation);
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify(TEST_WORKSHOP_SESSIONS)
+    );
+
+    renderDefault();
+
+    screen.getByText(i18n.enrollmentCelebrationTitle());
+    screen.getByText(
+      i18n.enrollmentCelebrationBody({workshopName: workshopCourse})
+    );
+    screen.getByText(i18n.addToYourCalendar());
+
+    // Google and Outlook Calendar buttons are not links if there are multiple sessions
+    expect(screen.queryByRole('link', {name: 'Google'})).toBe(null);
+    expect(screen.queryByRole('link', {name: 'Outlook'})).toBe(null);
+
+    // Apple calendar button is link to download .ics file with multiple sessions
+    const expectedAppleCalendarDownloadLink = buildAppleCalendarLink(
+      TEST_WORKSHOP_SESSIONS,
+      workshopCourse,
+      workshopLocation
+    );
+    fireEvent.click(
+      screen.getByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Apple',
+        })
+      )
+    );
+    expect(window.open).toHaveBeenCalledWith(
+      expectedAppleCalendarDownloadLink,
+      '_blank',
+      'noopener',
+      'noreferrer'
+    );
+
+    // Can open the Google calendar dialog
+    fireEvent.click(screen.getByRole('button', {name: 'Google'}));
+    screen.getByText(i18n.enrollmentCelebrationAddToCalendarTitle());
+
+    const googleCalendarButtonLinks = screen.getAllByLabelText(
+      i18n.addToCalendarType({
+        calendar_type: 'Google',
+      })
+    );
+    googleCalendarButtonLinks.forEach((googleCalendarButton, index) => {
+      const expectedGoogleButtonLink = buildGoogleCalendarLink(
+        TEST_WORKSHOP_SESSIONS[index],
+        workshopCourse,
+        workshopLocation
+      );
+      fireEvent.click(googleCalendarButton);
+      expect(window.open).toHaveBeenCalledWith(
+        expectedGoogleButtonLink,
+        '_blank',
+        'noopener',
+        'noreferrer'
+      );
+    });
+
+    // Can close the Google calendar dialog with the 'Change calendar' button and open the Outlook calendar dialog
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: i18n.enrollmentCelebrationChangeCalendarButton(),
+      })
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Outlook'}));
+    screen.getByText(i18n.enrollmentCelebrationAddToCalendarTitle());
+
+    const outlookCalendarButtonLinks = screen.getAllByLabelText(
+      i18n.addToCalendarType({
+        calendar_type: 'Outlook',
+      })
+    );
+    outlookCalendarButtonLinks.forEach((outlookCalendarButton, index) => {
+      const expectedOutlookButtonLink = buildOutlookCalendarLink(
+        TEST_WORKSHOP_SESSIONS[index],
+        workshopCourse,
+        workshopLocation
+      );
+      fireEvent.click(outlookCalendarButton);
+      expect(window.open).toHaveBeenCalledWith(
+        expectedOutlookButtonLink,
+        '_blank',
+        'noopener',
+        'noreferrer'
+      );
+    });
+
+    // Can close all dialogs with 'Go to my professional learning' dialog
+    fireEvent.click(
+      screen.getAllByText(i18n.enrollmentCelebrationCallToAction())[0]
+    );
+    expect(screen.queryByText(i18n.enrollmentCelebrationTitle())).toBe(null);
+    expect(
+      screen.queryByText(i18n.enrollmentCelebrationAddToCalendarTitle())
+    ).toBe(null);
+
+    sessionStorage.clear();
+  });
+
+  describe('Global Edition Configurations', () => {
+    describe('hideMyFacilitatorCenterTab', () => {
+      let props = {
+        userPermissions: ['facilitator'],
+      };
+
+      const findFacilitatorCenterTab = () =>
+        screen.queryByRole('tab', {name: 'Facilitator Center'});
+
+      it('renders Facilitator Center tab', () => {
+        renderDefault(props);
+        expect(findFacilitatorCenterTab()).toBeInTheDocument();
+      });
+
+      describe('when hideMyFacilitatorCenterTab is true', () => {
+        beforeEach(() => {
+          props['hideMyFacilitatorCenterTab'] = true;
+        });
+
+        it('does not render Facilitator Center tab', () => {
+          renderDefault(props);
+          expect(findFacilitatorCenterTab()).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('hideInstructorCenterTab', () => {
+      let props = {
+        userPermissions: ['universal_instructor'],
+      };
+
+      const findInstructorCenterTab = () =>
+        screen.queryByRole('tab', {name: 'Instructor Center'});
+
+      it('renders Instructor Center tab', () => {
+        renderDefault(props);
+        expect(findInstructorCenterTab()).toBeInTheDocument();
+      });
+
+      describe('when hideInstructorCenterTab is true', () => {
+        beforeEach(() => {
+          props['hideInstructorCenterTab'] = true;
+        });
+
+        it('does not render Instructor Center tab', () => {
+          renderDefault(props);
+          expect(findInstructorCenterTab()).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('hideRPCenterTab', () => {
+      let props = {
+        userPermissions: ['program_manager'],
+      };
+
+      const findRPCenterTab = () =>
+        screen.queryByRole('tab', {name: 'Regional Partner Center'});
+
+      it('renders Regional Partner Center tab', () => {
+        renderDefault(props);
+        expect(findRPCenterTab()).toBeInTheDocument();
+      });
+
+      describe('when hideRPCenterTab is true', () => {
+        beforeEach(() => {
+          props['hideRPCenterTab'] = true;
+        });
+
+        it('does not render Regional Partner Center tab', () => {
+          renderDefault(props);
+          expect(findRPCenterTab()).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('hideWorkshopOrganizerCenterTab', () => {
+      let props = {
+        userPermissions: ['workshop_organizer'],
+      };
+
+      const findWorkshopOrganizerCenterTab = () =>
+        screen.queryByRole('tab', {name: 'Workshop Organizer Center'});
+
+      it('renders Workshop Organizer Center tab', () => {
+        renderDefault(props);
+        expect(findWorkshopOrganizerCenterTab()).toBeInTheDocument();
+      });
+
+      describe('when hideWorkshopOrganizerCenterTab is true', () => {
+        beforeEach(() => {
+          props['hideWorkshopOrganizerCenterTab'] = true;
+        });
+
+        it('does not render Workshop Organizer Center tab', () => {
+          renderDefault(props);
+          expect(findWorkshopOrganizerCenterTab()).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('hideMyPLWorkshopEnrollmentCelebrationDialog', () => {
+      let props = {};
+
+      const findWorkshopEnrollmentCelebrationDialog = () =>
+        screen.queryByRole('heading', {
+          name: "You've been enrolled!",
+        });
+
+      const createObjectURL = 'testCreateObjectURL';
+      const workshopCourse = 'TEST COURSE';
+      const sessionTimeInfo = JSON.stringify([TEST_WORKSHOP_SESSIONS[0]]);
+
+      beforeEach(() => {
+        window.URL.createObjectURL = () => createObjectURL;
+        sessionStorage.setItem('workshopCourse', workshopCourse);
+        sessionStorage.setItem('sessionTimeInfo', sessionTimeInfo);
+      });
+
+      afterEach(() => {
+        sessionStorage.clear();
+      });
+
+      it('renders Workshop Enrollment Celebration dialog', () => {
+        renderDefault(props);
+        expect(findWorkshopEnrollmentCelebrationDialog()).toBeInTheDocument();
+      });
+
+      describe('when hideMyPLWorkshopEnrollmentCelebrationDialog is true', () => {
+        beforeEach(() => {
+          props['hideMyPLWorkshopEnrollmentCelebrationDialog'] = true;
+        });
+
+        it('does not render Workshop Enrollment Celebration dialog', () => {
+          renderDefault(props);
+          expect(
+            findWorkshopEnrollmentCelebrationDialog()
+          ).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('hideMyPLBanner', () => {
+      let props = {
+        currentYearApplicationId: null,
+        hasEnrorolledInWorkshop: false,
+        plCoursesStarted: [],
+      };
+
+      const findMyPLBanner = () =>
+        screen.queryByRole('heading', {
+          name: 'Getting started with Professional Learning',
+        });
+
+      it('renders Professional Learning banner', () => {
+        renderDefault(props);
+        expect(findMyPLBanner()).toBeInTheDocument();
+      });
+
+      describe('when hideMyPLBanner is true', () => {
+        beforeEach(() => {
+          props['hideMyPLBanner'] = true;
+        });
+
+        it('does not render Professional Learning banner', () => {
+          renderDefault(props);
+          expect(findMyPLBanner()).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('hideMyPLSelfPacedPL', () => {
+      let props = {};
+
+      const findSelfPacedPLCourses = () =>
+        screen.queryByRole('heading', {
+          name: 'Self-Paced Professional Learning Courses',
+        });
+
+      it('renders Self-Paced PL Courses table', () => {
+        renderDefault(props);
+        expect(findSelfPacedPLCourses()).toBeInTheDocument();
+      });
+
+      describe('when hideMyPLSelfPacedPL is true', () => {
+        beforeEach(() => {
+          props['hideMyPLSelfPacedPL'] = true;
+        });
+
+        it('does not render Self-Paced PL Courses table', () => {
+          renderDefault(props);
+          expect(findSelfPacedPLCourses()).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('hideMyPLJoinSectionArea', () => {
+      let props = {};
+
+      const findMyPLBanner = () =>
+        screen.queryByRole('heading', {
+          name: 'Joined Professional Learning Sections',
+        });
+
+      it('renders Joined Sections area', () => {
+        renderDefault(props);
+        expect(findMyPLBanner()).toBeInTheDocument();
+      });
+
+      describe('when hideMyPLJoinSectionArea is true', () => {
+        beforeEach(() => {
+          props['hideMyPLJoinSectionArea'] = true;
+        });
+
+        it('does not render Joined Sections area', () => {
+          renderDefault(props);
+          expect(findMyPLBanner()).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('hideMyPLLandingPageWorkshopsTable', () => {
+      let props = {};
+      let fetchStub;
+
+      beforeEach(() => {
+        fetchStub = jest
+          .spyOn(window, 'fetch')
+          .mockClear()
+          .mockResolvedValue({
+            ok: true,
+            json: () => Promise.resolve([TEST_WORKSHOP]),
+          });
+      });
+
+      afterEach(() => {
+        fetchStub.mockRestore();
+      });
+
+      const findLandingPageWorkshopsTable = () =>
+        screen.queryByRole('heading', {
+          name: 'My Workshops',
+        });
+
+      it('renders Workshops table', async () => {
+        renderDefault(props);
+
+        await waitFor(() => {
+          expect(findLandingPageWorkshopsTable()).toBeInTheDocument();
+        });
+      });
+
+      describe('when hideMyPLLandingPageWorkshopsTable is true', () => {
+        beforeEach(() => {
+          props['hideMyPLLandingPageWorkshopsTable'] = true;
+        });
+
+        it('does not render Workshops table', async () => {
+          renderDefault(props);
+
+          await waitFor(() => {
+            expect(findLandingPageWorkshopsTable()).not.toBeInTheDocument();
+          });
+        });
+      });
+    });
+
+    describe('hideMyPLStaticRecommendedPL', () => {
+      let props = {};
+
+      const findStaticRecommendedPL = () =>
+        screen.queryByRole('heading', {
+          name: 'Recommended for you',
+        });
+
+      it('renders Recommended block', () => {
+        renderDefault(props);
+        expect(findStaticRecommendedPL()).toBeInTheDocument();
+      });
+
+      describe('when hideMyPLStaticRecommendedPL is true', () => {
+        beforeEach(() => {
+          props['hideMyPLStaticRecommendedPL'] = true;
+        });
+
+        it('does not render Recommended block', () => {
+          renderDefault(props);
+          expect(findStaticRecommendedPL()).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('hideMyPLStaticRecommendedPLMidHighBlock', () => {
+      let props = {};
+
+      const findMidHighBlock = () =>
+        screen.queryByRole('heading', {
+          name: '6-12 Teacher Workshops',
+        });
+
+      it('renders 6-12 Teacher Workshops block', () => {
+        renderDefault(props);
+        expect(findMidHighBlock()).toBeInTheDocument();
+      });
+
+      describe('when hideMyPLStaticRecommendedPLMidHighBlock is true', () => {
+        beforeEach(() => {
+          props['hideMyPLStaticRecommendedPLMidHighBlock'] = true;
+        });
+
+        it('does not render 6-12 Teacher Workshops block', () => {
+          renderDefault(props);
+          expect(findMidHighBlock()).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('hideMyPLStaticRecommendedPLSelfPacedBlock', () => {
+      let props = {};
+
+      const findSelfPacedBlock = () =>
+        screen.queryByRole('heading', {
+          name: 'Self-Paced Professional Learning',
+        });
+
+      it('renders Self-Paced PL block', () => {
+        renderDefault(props);
+        expect(findSelfPacedBlock()).toBeInTheDocument();
+      });
+
+      describe('when hideMyPLStaticRecommendedPLSelfPacedBlock is true', () => {
+        beforeEach(() => {
+          props['hideMyPLStaticRecommendedPLSelfPacedBlock'] = true;
+        });
+
+        it('does not render Self-Paced PL block', () => {
+          renderDefault(props);
+          expect(findSelfPacedBlock()).not.toBeInTheDocument();
+        });
+      });
+    });
+
+    describe('myPLStaticRecommendedPLSelfPacedBlockButtonUrl', () => {
+      let props = {};
+
+      const findSelfPacedBlockLink = () =>
+        screen.queryByRole('link', {
+          name: 'Start professional learning courses',
+        });
+
+      it('renders Self-Paced PL block with the default link', () => {
+        renderDefault(props);
+        expect(findSelfPacedBlockLink()).toHaveAttribute(
+          'href',
+          '/educate/professional-development-online'
+        );
+      });
+
+      describe('when myPLStaticRecommendedPLSelfPacedBlockButtonUrl is assigned a custom value', () => {
+        const buttonUrl = '/test/url';
+
+        beforeEach(() => {
+          props['myPLStaticRecommendedPLSelfPacedBlockButtonUrl'] = buttonUrl;
+        });
+
+        it('renders Self-Paced PL block button with the custom link', () => {
+          renderDefault(props);
+          expect(findSelfPacedBlockLink()).toHaveAttribute('href', buttonUrl);
+        });
+      });
+    });
   });
 });

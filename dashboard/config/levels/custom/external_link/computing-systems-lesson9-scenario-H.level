@@ -11,9 +11,9 @@
     "link_title": "Library Books Dataset",
     "url": "https://docs.google.com/spreadsheets/d/1ArYkmUcYwbXz-hQkyIon2t87WZbLEOFfUaOFj5jZdE4",
     "display_name": "Scenario H",
-    "thumbnail_url": "https://images.code.org/e7322f03e2f04434d2a7c0b09272d047-27a768c9be4aa3b57785dc670f8c53aa-updateSign.png",
+    "thumbnail_url": "https://images.code.org/4f23e0f25c5e02011583a53b7e94cfd1-Pasted Graphic 54.png",
     "bubble_choice_description": "The librarian suspects there are duplicate book entries in the system."
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-23T20:21:33.592+00:00\",\"changed\":[\"cloned from \\\"Computing Systems - Library Books Dataset Scenario F\\\"\"],\"cloned_from\":\"Computing Systems - Library Books Dataset Scenario F\"},{\"changed_at\":\"2025-01-23 20:22:11 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:22:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:53:54 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-23T20:21:33.592+00:00\",\"changed\":[\"cloned from \\\"Computing Systems - Library Books Dataset Scenario F\\\"\"],\"cloned_from\":\"Computing Systems - Library Books Dataset Scenario F\"},{\"changed_at\":\"2025-01-23 20:22:11 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:22:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-23 20:53:54 +0000\",\"changed\":[\"name\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-03 22:52:35 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </ExternalLink>

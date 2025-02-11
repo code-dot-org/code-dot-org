@@ -4,7 +4,7 @@ import FontAwesomeV6Icon, {
 import classnames from 'classnames';
 import React, {useCallback} from 'react';
 
-import moduleStyles from '@cdo/apps/componentLibrary/segmentedButtons/segmentedButtons.module.scss';
+import moduleStyles from './segmentedButtons.module.scss';
 
 export type SegmentButtonType = 'withLabel' | 'iconOnly' | 'number';
 

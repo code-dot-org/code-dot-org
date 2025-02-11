@@ -10,11 +10,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-12-20 16:46:41 UTC",
-    "published_state": "in_development",
-    "instruction_type": "self_paced",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "serialized_at": "2025-02-05 17:37:26 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "sandbox-teaching-data-science"
     }
@@ -2538,6 +2538,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-lesson4_Overview"
+        ],
         "progression": "Getting to Know Your Data "
       },
       "bonus": false,

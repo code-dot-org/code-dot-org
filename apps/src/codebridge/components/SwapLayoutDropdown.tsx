@@ -28,24 +28,24 @@ const SwapLayoutDropdown: React.FunctionComponent = () => {
 
   const onLayoutChange = useCallback(() => {
     const newLayout =
-      config.activeGridLayout === 'horizontal' ? 'vertical' : 'horizontal';
+      config.activeLayout === 'horizontal' ? 'vertical' : 'horizontal';
     sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_CONSOLE, appName, {
       positionMovedTo: newLayout,
     });
     setConfig({
       ...config,
-      activeGridLayout: newLayout,
+      activeLayout: newLayout,
     });
   }, [appName, config, setConfig]);
 
-  if (!config.activeGridLayout || !config.labeledGridLayouts) {
+  if (!config.activeLayout) {
     return null;
   }
 
   const iconName =
-    config.activeGridLayout === 'horizontal' ? 'up-down' : 'left-right';
+    config.activeLayout === 'horizontal' ? 'up-down' : 'left-right';
   const layoutLabel =
-    config.activeGridLayout === 'horizontal'
+    config.activeLayout === 'horizontal'
       ? codebridgeI18n.verticalLayout()
       : codebridgeI18n.defaultLayout();
 

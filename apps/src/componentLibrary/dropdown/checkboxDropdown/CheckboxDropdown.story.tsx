@@ -1,7 +1,6 @@
+import {dropdownColors} from '@code-dot-org/component-library/dropdown';
 import {Meta, StoryFn} from '@storybook/react';
 import React, {useState, useCallback} from 'react';
-
-import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
 
 import CheckboxDropdown, {CheckboxDropdownProps} from './index';
 
