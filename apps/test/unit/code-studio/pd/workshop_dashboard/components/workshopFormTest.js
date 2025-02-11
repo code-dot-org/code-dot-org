@@ -1,6 +1,5 @@
 import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import moment from 'moment-timezone';
 import React from 'react';
 import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import '../workshopFactory';
@@ -168,7 +167,7 @@ describe('WorkshopForm test', () => {
     );
   });
 
-  it("new workshop sessions are created with the user's local timezone", () => {
+  it("new workshops are created with the user's local timezone", () => {
     const easternTz = 'America/New_York';
     jest
       .spyOn(Intl.DateTimeFormat.prototype, 'resolvedOptions')
@@ -187,10 +186,8 @@ describe('WorkshopForm test', () => {
       </Provider>
     );
 
-    const tzAbbreviation = moment.tz(easternTz).format('z');
-
     expect(wrapper.find('WorkshopForm').find('Col').first().text()).to.equal(
-      `All workshop times are ${tzAbbreviation}:`
+      `All workshop times are ${easternTz}:`
     );
   });
 
@@ -203,8 +200,7 @@ describe('WorkshopForm test', () => {
       });
 
     const workshop = Factory.build('workshop');
-    const [firstSession] = workshop.sessions;
-    const sessionTz = firstSession.time_zone; // America/Denver in workshop factory
+    const workshopTz = workshop.time_zone; // America/Denver in workshop factory
 
     const wrapper = mount(
       <Provider store={store}>
@@ -218,8 +214,6 @@ describe('WorkshopForm test', () => {
       </Provider>
     );
 
-    const tzAbbreviation = moment.tz(sessionTz).format('z');
-
     const workshopForm = wrapper.find('WorkshopForm');
 
     const [formattedSessionData] = workshopForm
@@ -231,11 +225,11 @@ describe('WorkshopForm test', () => {
     expect(formattedSessionData.date).to.equal('2016-07-01');
 
     expect(workshopForm.find('Col').first().text()).to.equal(
-      `All workshop times are ${tzAbbreviation}:`
+      `All workshop times are ${workshopTz}:`
     );
   });
 
-  it('edits to legacy workshop sessions without a timezone are done in UTC', () => {
+  it('edits to legacy workshop sessions without a timezone are done in local time', () => {
     const easternTz = 'America/New_York';
     jest
       .spyOn(Intl.DateTimeFormat.prototype, 'resolvedOptions')
@@ -246,7 +240,7 @@ describe('WorkshopForm test', () => {
     const workshop = Factory.build('workshop');
     const [firstSession] = workshop.sessions;
     // remove time_zone and reset session time to 9-5 utc, like legacy sessions are in the db
-    firstSession.time_zone = null;
+    workshop.time_zone = null;
     const start = new Date(firstSession.start);
     const end = new Date(firstSession.end);
     start.setHours(9);
@@ -266,8 +260,6 @@ describe('WorkshopForm test', () => {
       </Provider>
     );
 
-    const tzAbbreviation = 'UTC';
-
     const workshopForm = wrapper.find('WorkshopForm');
 
     const [formattedSessionData] = workshopForm
@@ -279,7 +271,7 @@ describe('WorkshopForm test', () => {
     expect(formattedSessionData.date).to.equal('2016-07-01');
 
     expect(workshopForm.find('Col').first().text()).to.equal(
-      `All workshop times are ${tzAbbreviation}:`
+      `All workshop times are local:`
     );
   });
 
