@@ -30,6 +30,10 @@ interface Props {
 export type EditorType = 'drums' | 'notes';
 export type ScaleMode = 'simple' | 'chromatic';
 
+/**
+ * Instrument grid editor for selecting notes in a pattern.
+ * Used in the "play_tune" and "play_pattern" blocks.
+ */
 const InstrumentGrid: React.FunctionComponent<Props> = ({
   initialValue,
   onChange,
