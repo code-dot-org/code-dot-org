@@ -20,6 +20,12 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
   justify-content: space-between;
 }
 
+.scaleModeToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .sequenceEditor {
   display: flex;
   flex-direction: column;
@@ -128,20 +134,6 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
   .toggleLabel {
     margin: 0;
     color: $neutral_light;
-  }
-}
-
-.advancedControlsDrawer {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  align-items: center;
-  height: 0;
-  visibility: hidden;
-
-  &.show {
-    height: 100%;
-    visibility: visible;
   }
 }
 

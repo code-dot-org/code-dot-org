@@ -4,11 +4,6 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-import {
-  BodyFourText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
 
 import MusicRegistry from '../../MusicRegistry';
 import {InstrumentEventValue} from '../../player/interfaces/InstrumentEvent';
@@ -52,7 +47,6 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
   const [scaleMode, setScaleMode] = useState<ScaleMode>('simple');
-  const [showingAdvancedControls, setShowingAdvancedControls] = useState(false);
   const [currentOctaveOffset, setCurrentOctaveOffset] = useState(1);
 
   useEffect(() => {
@@ -152,44 +146,24 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
           selectedValue={currentValue.instrument}
         />
         {editorType === 'notes' && (
-          <div className={styles.advancedToggleContainer}>
-            <BodyFourText className={styles.toggleLabel}>
-              More Controls
-            </BodyFourText>
-            <Toggle
-              id="advanced-toggle"
-              checked={showingAdvancedControls}
-              onChange={event =>
-                setShowingAdvancedControls(event.target.checked)
-              }
-              name="advanced"
+          <div className={styles.scaleModeToggle} data-theme="Dark">
+            <SegmentedButtons
+              buttons={[
+                {
+                  label: 'Best Notes',
+                  value: 'simple',
+                },
+                {
+                  label: 'All Notes',
+                  value: 'chromatic',
+                },
+              ]}
+              onChange={value => setScaleMode(value as ScaleMode)}
+              selectedButtonValue={scaleMode}
               size="xs"
             />
           </div>
         )}
-      </div>
-      <div
-        className={classNames(
-          styles.advancedControlsDrawer,
-          showingAdvancedControls && styles.show
-        )}
-      >
-        <BodyThreeText className={styles.controlLabel}>Mode:</BodyThreeText>
-        <SegmentedButtons
-          buttons={[
-            {
-              label: 'Simple',
-              value: 'simple',
-            },
-            {
-              label: 'Chromatic',
-              value: 'chromatic',
-            },
-          ]}
-          onChange={value => setScaleMode(value as ScaleMode)}
-          selectedButtonValue={scaleMode}
-          size="xs"
-        />
       </div>
       <div className={styles.middleArea}>
         <div className={classNames(styles.sequenceEditor)}>
@@ -237,7 +211,7 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
             );
           })}
         </div>
-        {editorType === 'notes' && showingAdvancedControls && (
+        {editorType === 'notes' && (
           <PageSwitcher
             currentPage={currentOctaveOffset}
             totalPages={TOTAL_OCTAVES}
