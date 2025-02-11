@@ -239,13 +239,13 @@ def main
   offset = $options[:offset].presence
 
   output_filename = [
+    Time.now.strftime("%Y%m%d-%H%M%S"),
     (simple ? "simple" : "full"),
     "unit-#{unit_name}",
     ("level-#{level_id}" if level_id),
     ("limit-#{limit}" if limit),
     ("offset-#{offset}" if offset),
-    'datetime-' + Time.now.strftime("%Y%m%d-%H%M%S"),
-  ].compact.join('-')
+  ].compact.join('-') + '.jsonl'
 
   results = fetch_progress(
     simple: simple,
