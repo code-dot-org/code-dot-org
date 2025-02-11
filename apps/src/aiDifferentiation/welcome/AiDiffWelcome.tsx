@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
 import {
@@ -17,7 +18,6 @@ import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
-import {Button} from '../../componentLibrary/button';
 import AiDiffChat, {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
