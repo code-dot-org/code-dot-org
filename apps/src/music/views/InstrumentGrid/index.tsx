@@ -23,6 +23,8 @@ import {
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControls from '../PreviewControls';
 
+import {integers} from './util';
+
 import styles from './styles.module.scss';
 
 const START_OCTAVE = 4;
@@ -130,10 +132,7 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
 
   displayNotes.sort((a, b) => b.note - a.note);
 
-  const ticks =
-    editorType === 'notes' && scaleMode === 'simple'
-      ? integers(lengthMeasures * 8, 1).map(i => i * 2 - 1)
-      : integers(lengthMeasures * 16, 1);
+  const ticks = integers(lengthMeasures * 16, 1);
 
   return (
     <div className={styles.container}>
@@ -193,8 +192,8 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
         />
       </div>
       <div className={styles.middleArea}>
-        <div className={styles.sequenceEditor}>
-          {displayNotes.map(({note, name}) => {
+        <div className={classNames(styles.sequenceEditor)}>
+          {displayNotes.map(({note, name}, i) => {
             return (
               <div className={styles.pitchRow} key={note}>
                 {editorType === 'drums' && (
@@ -202,6 +201,16 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
                 )}
                 {editorType === 'notes' && scaleMode === 'chromatic' && (
                   <KeyLabel note={note} />
+                )}
+                {editorType === 'notes' && scaleMode === 'simple' && (
+                  <div
+                    className={classNames(
+                      styles['cell-simple'],
+                      styles.labelCell
+                    )}
+                  >
+                    {displayNotes.length - i}
+                  </div>
                 )}
                 <div className={styles.cellRow}>
                   {ticks.map(tick => {
@@ -247,9 +256,6 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
     </div>
   );
 };
-
-const integers = (length: number, start: number = 0) =>
-  Array.from({length}, (_, i) => i + start);
 
 function getDisplayNotes(
   startOctave: number,

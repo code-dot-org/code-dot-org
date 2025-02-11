@@ -34,6 +34,7 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
   @for $i from 1 through 8 {
     &:nth-child(#{$i}) {
       .cell-simple {
+        &.labelCell,
         &.activeCell,
         &.activeCell:hover {
           background-color: nth($colors-simple, 8 - $i + 1);
@@ -56,15 +57,21 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
   align-items: center;
 }
 
+.labelCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .cellRow {
   display: flex;
   gap: 4px;
 }
 
-%cell {
+%cell, .cell {
   @include remove-button-styles;
   width: 25px;
-  height: 30px;
+  height: 25px;
   background-color: $neutral_dark80;
   box-sizing: border-box;
   transition: transform 0.2s ease, background-color 0.2s ease;
@@ -83,17 +90,14 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
 
 .cell-simple {
   @extend %cell;
-  width: 50px;
 }
 
 .cell-chromatic {
   @extend %cell;
-  height: 20px;
 }
 
 .cell-drums {
   @extend %cell;
-  height: 25px;
 }
 
 .activeCell {
