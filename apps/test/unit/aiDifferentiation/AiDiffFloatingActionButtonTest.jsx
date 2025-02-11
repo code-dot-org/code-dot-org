@@ -9,8 +9,6 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 
-// import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 jest.mock('@react-pdf/renderer', () => {
   return {
     PDFDownloadLink: () => null,
@@ -21,8 +19,8 @@ jest.mock('@react-pdf/renderer', () => {
 });
 
 const DEFAULT_PROPS = {
-  lessonId: 1,
-  lessonName: 'test_lesson',
+  scriptId: 1,
+  scriptName: 'test_lesson',
   unitDisplayName: 'test unit name',
 };
 

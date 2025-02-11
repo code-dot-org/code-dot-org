@@ -1,0 +1,31 @@
+name 'PLStyleGuide_L1_Text3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Links
+
+#### Links are naturally set to be underlined and in a different color in Level Builder. Do not change these settings.
+
+## Link Settings
+
+#### The standard in professional learning is to open all links in a new tab. This is achieved by including the text `target="blank"` in link HTML code.
+
+## Link Text
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px 20px 20px 20px; width: 90%; word-wrap: break-word;">
+	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Writing Link Text</b></p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Link text</b> is the text you select for a link that describing what happens when a user activates it. Link text needs to clearly and accurately convey the link's purpose. Good link text helps all users find the information they need, and is particularly helpful for screen reader users, who might navigate pages by moving from link to link, hearing only the text of each link in turn. If the link text doesn't indicate the destination or purpose of the link, screen-reader users have to rely on listening to the surrounding text for context. </p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Commonly, link text is the name of the linked page or document. When a link leads to a document that's not a web page, such as a PDF or Word document, that should be clarified in the link text. Avoid overly terse, ambiguous link text, and avoid reusing the same link text within a page for links that lead to different destinations.</p>
+    
+<hr>
+    
+    <p style="font-size: 10pt; margin-top: 12px; line-height: 115%;">"Technique: Writing Link Text." <i>Digital Accessibility</i>, Harvard University, <a href="https://accessibility.huit.harvard.edu/technique-writing-link-text" target="blank" rel="noopener noreferrer">https://accessibility.huit.harvard.edu/technique-writing-link-text</a>.</div>
+
+### **Examples of Link Text**
+
+* #### ✅ **Good example:** You can find more information at the <a href="https://docs.google.com/document/d/1_l6i_uCScy9Cfom8oqeaN9VM0TS9ELDXd1MLH8i4HzU/edit?usp=drive_link" target="blank" rel="noopener noreferrer">CSD Guide to Debugging.</a>
+
+* #### ❌ **Bad example:** Learn more about debugging in CSD at <a href="https://docs.google.com/document/d/1_l6i_uCScy9Cfom8oqeaN9VM0TS9ELDXd1MLH8i4HzU/edit?usp=drive_link" target="blank" rel="noopener noreferrer">this link</a>.
+MARKDOWN

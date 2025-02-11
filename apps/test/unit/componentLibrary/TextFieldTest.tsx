@@ -1,9 +1,10 @@
+import TextField, {
+  TextFieldProps,
+} from '@code-dot-org/component-library/textField';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React, {useState, ChangeEvent} from 'react';
-
-import TextField, {TextFieldProps} from '@cdo/apps/componentLibrary/textField';
 
 describe('Design System - TextField', () => {
   const renderTextField = (props: Partial<TextFieldProps>) => {

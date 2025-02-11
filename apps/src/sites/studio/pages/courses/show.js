@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import announcementReducer, {
   addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
@@ -27,7 +28,9 @@ import {
   setPageType,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(showCourseOverview);
 
@@ -109,4 +112,25 @@ function showCourseOverview() {
     document.getElementById('course_overview')
   );
   tooltipifyVocabulary();
+  displayDifferentiationChat(scriptData);
+}
+
+function displayDifferentiationChat(scriptData) {
+  const aiDiffFabMountPoint = document.getElementById(
+    'ai-differentiation-fab-mount-point'
+  );
+
+  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={AiDiffContext.COURSE}
+          scriptId={scriptData.course_summary.id}
+          scriptName={scriptData.course_summary.name}
+          unitDisplayName={scriptData.course_summary.title}
+        />
+      </Provider>,
+      aiDiffFabMountPoint
+    );
+  }
 }

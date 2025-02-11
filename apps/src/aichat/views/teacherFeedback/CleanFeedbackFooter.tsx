@@ -1,14 +1,14 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {memo} from 'react';
 
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
-import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import aichatI18n from '../../locale';
-import {submitTeacherFeedback} from '../../redux/aichatRedux';
+import {submitTeacherFeedback} from '../../redux';
 import {FeedbackValue} from '../../types';
 
 import moduleStyles from './teacher-feedback-footer.module.scss';
