@@ -20,7 +20,7 @@ export type LinkProps = {
   size: ComponentSizeXSToL;
   /** Whether Link is for internal code.org pages, or external web page. (external links are opened in new tab) */
   isLinkExternal: boolean;
-  /** ClassName passed by contentful to apply styles that are set through contentful native editor*/
+  /** ClassName passed by Contentful to apply styles that are set through Contentful native editor */
   className?: string;
 };
 
