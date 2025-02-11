@@ -337,6 +337,13 @@ const WEBPACK_BASE_CONFIG = {
               use: ['source-map-loader'],
               enforce: 'pre',
             },
+            // Enable source maps for shared frontend packages
+            {
+              test: /\.js$/,
+              enforce: 'pre',
+              include: /frontend\/packages/,
+              use: ['source-map-loader'],
+            },
           ]
         : []),
     ],

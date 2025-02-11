@@ -266,21 +266,28 @@ describe('WorkshopForm test', () => {
       </Provider>
     );
 
-    const tzAbbreviation = 'UTC';
-
     const workshopForm = wrapper.find('WorkshopForm');
 
-    const [formattedSessionData] = workshopForm
+    expect(workshopForm.find('Col').first().text()).to.equal(
+      `All workshop times are local:`
+    );
+
+    const formSessions = workshopForm
       .instance()
       .prepareSessionsForForm(workshop.sessions);
 
-    expect(formattedSessionData.startTime).to.equal('9:00am');
-    expect(formattedSessionData.endTime).to.equal('5:00pm');
-    expect(formattedSessionData.date).to.equal('2016-07-01');
+    expect(formSessions[0].startTime).to.equal('9:00am');
+    expect(formSessions[0].endTime).to.equal('5:00pm');
+    expect(formSessions[0].date).to.equal('2016-07-01');
+    expect(formSessions[0].timeZone).to.be.null;
 
-    expect(workshopForm.find('Col').first().text()).to.equal(
-      `All workshop times are ${tzAbbreviation}:`
-    );
+    const sessionsForApi = workshopForm
+      .instance()
+      .prepareSessionsForApi(formSessions, []);
+
+    expect(sessionsForApi[0].start).to.equal('2016-07-01T09:00:00.000Z');
+    expect(sessionsForApi[0].end).to.equal('2016-07-01T17:00:00.000Z');
+    expect(sessionsForApi[0].time_zone).to.be.null;
   });
 
   it('edits form and can save', () => {

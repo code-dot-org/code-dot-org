@@ -7,10 +7,10 @@ import {useSelector} from 'react-redux';
 import {
   setModelCardProperty,
   saveModelCard,
-  publishModel,
+  publishModelCard,
   selectHasFilledOutModelCard,
   selectHavePropertiesChanged,
-} from '@cdo/apps/aichat/redux/aichatRedux';
+} from '@cdo/apps/aichat/redux';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -46,7 +46,7 @@ const PublishNotes: React.FunctionComponent = () => {
   }, [dispatch]);
 
   const onPublish = useCallback(() => {
-    dispatch(publishModel());
+    dispatch(publishModelCard());
   }, [dispatch]);
 
   const spinnerIconProps: FontAwesomeV6IconProps = {

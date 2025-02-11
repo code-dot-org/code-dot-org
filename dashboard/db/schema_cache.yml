@@ -1831,25 +1831,6 @@ columns:
     comment: 
   - *36
   - *46
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: experiment_name
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb3_unicode_ci
-    comment: If present, the SingleTeacherExperiment with this name must be enabled
-      in order for a teacher or their students to see this script.
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: default_script_id
-    sql_type_metadata: *2
-    'null': true
-    default: 
-    default_function: 
-    collation: 
-    comment: If present, indicates the default script which this script will replace
-      when the corresponding experiment is enabled. Should be null for default scripts
-      (those that show up without experiments).
   course_versions:
   - *5
   - *22
@@ -9213,19 +9194,6 @@ indexes:
     unique: false
     columns:
     - course_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: course_scripts
-    name: index_course_scripts_on_default_script_id
-    unique: false
-    columns:
-    - default_script_id
     lengths: {}
     orders: {}
     opclasses: {}
