@@ -3,6 +3,9 @@ require 'cdo/aws/metrics'
 # Provides functionality to detect toxicity in user input and model output used in the AI Chat Lab.
 # Uses various services to check for profanity and toxicity based on DCDO settings.
 module AichatSafetyHelper
+  API_KEY = CDO.openai_aichat_safety_api_key
+  MODEL = SharedConstants::AICHAT_MODEL_VERSION
+
   class ToxicityDetector
     DEFAULT_TOXICITY_THRESHOLD_USER_INPUT = 0.3
     DEFAULT_TOXICITY_THRESHOLD_MODEL_OUTPUT = 0.5
@@ -34,6 +37,7 @@ module AichatSafetyHelper
       end
     end
 
+    # Used to check safety content given text with the given moderation system prompt.
     private def openai_safety_check(text)
       details = nil
       start_time = Time.now
@@ -42,8 +46,11 @@ module AichatSafetyHelper
       # replying with something other valid expected output.
       attempts = 1
       Retryable.retryable(tries: 2) do
-        openai_response = OpenaiChatHelper.request_safety_check(text, get_safety_system_prompt)
-        evaluation = JSON.parse(openai_response)['choices'][0]['message']['content']
+        messages = safety_check_messages(text)
+        response = client.request_chat_completion(messages, 1)
+        raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
+
+        evaluation = JSON.parse(response.body)['choices'][0]['message']['content']
         unless VALID_EVALUATION_RESPONSES_SIMPLE.include?(evaluation)
           report_openai_safety_check("InvalidResponse")
           attempts += 1
@@ -59,6 +66,10 @@ module AichatSafetyHelper
       latency = Time.now - start_time
       report_openai_safety_latency(latency, attempts)
       details
+    end
+
+    private def client
+      OpenaiChatHelper::Client.new(API_KEY, MODEL)
     end
 
     private def comprehend_enabled?(role)
@@ -95,6 +106,20 @@ module AichatSafetyHelper
 
     private def get_safety_system_prompt_version
       'V0'
+    end
+
+    # Format messages with text to be checked for safety and moderation system prompt.
+    private def safety_check_messages(text)
+      [
+        {
+          role: "system",
+          content: get_safety_system_prompt
+        },
+        {
+          role: "user",
+          content: text
+        }
+      ]
     end
 
     private def report_openai_safety_check(metric_name, num_attempts = 1)

@@ -736,7 +736,7 @@ module SharedConstants
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
+  AI_TUTOR_CHAT_MODEL_VERSION = 'gpt-4o-2024-05-13'
   AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
 
   # These reflect the 'status' of an AI Interaction,
