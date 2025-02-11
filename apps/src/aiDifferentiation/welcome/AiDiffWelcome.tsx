@@ -131,6 +131,9 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>('get_started');
 
+  const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
+    React.useState(true);
+
   const [selectedOption, setSelectedOption] = React.useState<
     'plan' | 'create' | null
   >(null);
@@ -142,7 +145,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   }, [setShowWelcomeExperience]);
 
   const continueAndSkipButtons = React.useCallback(
-    (nextState: WelcomeState) => {
+    (nextState: WelcomeState, continueDisabled: boolean) => {
       return (
         <div className={style.bottomButtons}>
           <Button
@@ -156,12 +159,12 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             onClick={() => setCurrentWelcomeState(nextState)}
             text="Continue"
             className={style.continueButton}
-            disabled={!selectedOption}
+            disabled={continueDisabled}
           />
         </div>
       );
     },
-    [selectedOption, updateShowWelcomeExperience]
+    [updateShowWelcomeExperience]
   );
 
   const selectAnOptionPage = React.useCallback(
@@ -188,7 +191,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
             )}
           </div>
-          {continueAndSkipButtons(nextState)}
+          {continueAndSkipButtons(nextState, !selectedOption)}
         </div>
       );
     },
@@ -257,12 +260,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
           context={context}
           scriptId={scriptId}
           scriptName={scriptName}
+          chatResponseCallback={() => setChatContinueButtonDisabled(false)}
           unitDisplayName={unitDisplayName}
           initialChatMessage={initialMessage}
           suggestedPrompts={suggestedPrompts}
           disableEndButtons={true}
         />
-        {continueAndSkipButtons(WelcomeStates.end_page)}
+        {continueAndSkipButtons(
+          WelcomeStates.end_page,
+          chatContinueButtonDisabled
+        )}
       </div>
     );
   }, [
@@ -272,6 +279,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     scriptName,
     unitDisplayName,
     continueAndSkipButtons,
+    chatContinueButtonDisabled,
   ]);
 
   const currentWelcomePage = React.useMemo(() => {

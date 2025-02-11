@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-06 23:49:45 UTC",
+    "serialized_at": "2025-02-10 21:43:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1065,7 +1065,7 @@
       "key": "c18d08fe-4ecd-4d59-abcd-7fbe2291d36b",
       "position": 4,
       "properties": {
-        "progression_name": "Choice Level"
+        "progression_name": "Practice Choice Level"
       },
       "seeding_key": {
         "activity_section.key": "c18d08fe-4ecd-4d59-abcd-7fbe2291d36b",
@@ -1087,6 +1087,7 @@
       "key": "2bb4a754-11e5-46d9-b96d-338cb395570b",
       "position": 1,
       "properties": {
+        "progression_name": "Pixels of Me Project"
       },
       "seeding_key": {
         "activity_section.key": "2bb4a754-11e5-46d9-b96d-338cb395570b",
@@ -2692,6 +2693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson13-twowayselection-predict"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2714,6 +2718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson13-level2"
+        ],
         "progression": "Modify and Investigate"
       },
       "bonus": false,
@@ -2736,6 +2743,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson13-level3"
+        ],
         "progression": "Modify and Investigate"
       },
       "bonus": false,
@@ -2758,6 +2768,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-intro-to-programming-lesson13-level4"
+        ],
         "progression": "Modify and Investigate"
       },
       "bonus": false,
@@ -2780,6 +2793,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emma-test-computational-thinking-python-twowayselection-CFU"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2802,7 +2818,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Choice Level"
+        "level_keys": [
+          "test-intro-to-programming-lesson13-level6"
+        ],
+        "progression": "Practice Choice Level"
       },
       "bonus": false,
       "seeding_key": {
@@ -2820,24 +2839,24 @@
     },
     {
       "chapter": 61,
-      "position": 7,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Choice Level: More Practice with Flowcharts"
+        "progression": "Pixels of Me Project"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-intro-to-programming-lesson13-level7"
+          "test-intro-to-programming-lesson14-choice-level1"
         ],
-        "lesson.key": "lesson-18",
+        "lesson.key": "lesson-19",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "6-12-intro-to-programming-python",
-        "activity_section.key": "31740ab7-5ddb-4d02-b6d6-3053c921c160"
+        "activity_section.key": "2bb4a754-11e5-46d9-b96d-338cb395570b"
       },
       "level_keys": [
-        "test-intro-to-programming-lesson13-level7"
+        "test-intro-to-programming-lesson14-choice-level1"
       ]
     },
     {
@@ -4714,14 +4733,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-intro-to-programming-lesson13-level7",
+        "level.key": "test-intro-to-programming-lesson14-choice-level1",
         "script_level.level_keys": [
-          "test-intro-to-programming-lesson13-level7"
+          "test-intro-to-programming-lesson14-choice-level1"
         ],
-        "lesson.key": "lesson-18",
+        "lesson.key": "lesson-19",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "6-12-intro-to-programming-python",
-        "activity_section.key": "31740ab7-5ddb-4d02-b6d6-3053c921c160"
+        "activity_section.key": "2bb4a754-11e5-46d9-b96d-338cb395570b"
       }
     },
     {

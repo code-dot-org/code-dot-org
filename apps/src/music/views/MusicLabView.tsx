@@ -359,6 +359,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 hideChaff={hideChaff}
               />
             }
+            headerClassName={moduleStyles.panelContainerHeader}
           >
             {isStartMode && (
               <div

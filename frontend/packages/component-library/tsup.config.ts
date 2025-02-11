@@ -20,6 +20,7 @@ function createConfig(format: 'cjs' | 'esm'): Options {
     clean: true,
     target: 'es2019',
     format: [format],
+    sourcemap: true,
     external: [
       '/fonts/barlowSemiCondensed/BarlowSemiCondensed-Medium.ttf',
       '/fonts/barlowSemiCondensed/BarlowSemiCondensed-SemiBold.ttf',

@@ -42,6 +42,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-02T00:04:42.191+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson8-level4\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson8-level4\"},{\"changed_at\":\"2025-02-02 00:04:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-02T00:04:42.191+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson8-level4\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson8-level4\"},{\"changed_at\":\"2025-02-02 00:04:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-10 18:36:48 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:12:53 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Aichat>
