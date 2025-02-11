@@ -96,6 +96,8 @@ const HorizontalLayout: React.FunctionComponent = () => {
   }, [throttledAdjustWorkspaceHeight]);
 
   useEffect(() => {
+    // Flexbox can handle adjusting the widths of the panel to fit the screen, but the
+    // output panel needs an accurate width in order to resize the visualization appropriately.
     window.addEventListener('resize', throttledResize);
     return () => window.removeEventListener('resize', throttledResize);
   }, [throttledResize]);
