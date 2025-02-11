@@ -261,15 +261,6 @@ steps:
       - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
-    networks:
-      default:
-        aliases:
-          - localhost-studio.code.org
-          - localhost.code.org
-          - localhost.hourofcode.com
-          - localhost.codeprojects.org
-    expose:
-      - "3000"
 
   - name: update-cache
     image: plugins/s3-cache
