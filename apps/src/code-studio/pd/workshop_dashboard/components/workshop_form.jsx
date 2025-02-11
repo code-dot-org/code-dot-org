@@ -279,12 +279,10 @@ export class WorkshopForm extends React.Component {
 
   // Convert from [date, startTime, endTime] to [start, end] and merge destroyedSessions
   prepareSessionsForApi(sessions, destroyedSessions) {
-    const editing = Boolean(this.props.workshop);
     return sessions
       .map(session => {
-        const timeZone = editing
-          ? session.timeZone
-          : Intl.DateTimeFormat().resolvedOptions().timeZone;
+        const timeZone =
+          session.timeZone ?? Intl.DateTimeFormat().resolvedOptions().timeZone;
         return {
           id: session.id,
           session_format: session.format,
@@ -314,17 +312,13 @@ export class WorkshopForm extends React.Component {
   }
 
   get workshopTimezone() {
-    const {workshop} = this.props;
-    const existingTimezone = workshop?.sessions?.[0]?.time_zone;
-    // handle editing legacy sessions stored without timezone offset
-    if (!existingTimezone && workshop) {
-      return 'local';
-    }
     // a new session is created using the user's local timezone
-    const sessionTz =
-      existingTimezone ||
-      Intl.DateTimeFormat().resolvedOptions().timeZone ||
-      'UTC';
+    let sessionTz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
+    const editing = Boolean(this.props.workshop);
+    if (editing) {
+      // handle legacy sessions stored without timezone offset
+      sessionTz = this.props.workshop.sessions?.[0]?.time_zone || 'UTC';
+    }
     return moment.tz(sessionTz).format('z');
   }
 
