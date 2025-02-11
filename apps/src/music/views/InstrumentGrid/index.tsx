@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 
 import MusicRegistry from '../../MusicRegistry';
@@ -23,8 +22,7 @@ import {integers} from './util';
 import styles from './styles.module.scss';
 
 const START_OCTAVE = 4;
-const TOTAL_OCTAVES = 3;
-const DISPLAY_OCTAVES = 1;
+const DISPLAY_OCTAVES = 3;
 
 interface SequenceEditorProps {
   initialValue: InstrumentEventValue;
@@ -47,7 +45,6 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
   const [scaleMode, setScaleMode] = useState<ScaleMode>('simple');
-  const [currentOctaveOffset, setCurrentOctaveOffset] = useState(1);
 
   useEffect(() => {
     onChange(currentValue);
@@ -115,13 +112,12 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
   const displayNotes = useMemo(
     () =>
       getDisplayNotes(
-        currentOctaveOffset + START_OCTAVE,
         editorType,
         scaleMode,
         currentValue.instrument,
         MusicRegistry.player.getKey()
       ),
-    [currentOctaveOffset, editorType, scaleMode, currentValue.instrument]
+    [editorType, scaleMode, currentValue.instrument]
   );
 
   displayNotes.sort((a, b) => b.note - a.note);
@@ -165,59 +161,62 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
           </div>
         )}
       </div>
-      <div className={styles.middleArea}>
-        <div className={classNames(styles.sequenceEditor)}>
-          {displayNotes.map(({note, name}, i) => {
-            return (
-              <div className={styles.pitchRow} key={note}>
-                {editorType === 'drums' && (
-                  <div className={styles.label}>{name}</div>
-                )}
-                {editorType === 'notes' && scaleMode === 'chromatic' && (
-                  <KeyLabel note={note} />
-                )}
-                {editorType === 'notes' && scaleMode === 'simple' && (
-                  <div
-                    className={classNames(
-                      styles['cell-simple'],
-                      styles.labelCell
-                    )}
-                  >
-                    {displayNotes.length - i}
-                  </div>
-                )}
-                <div className={styles.cellRow}>
-                  {ticks.map(tick => {
-                    return (
-                      <>
-                        <button
-                          type="button"
-                          className={classNames(
-                            editorType === 'drums'
-                              ? styles['cell-drums']
-                              : styles[`cell-${scaleMode}`],
-                            isSelected(note, tick) && styles.activeCell,
-                            currentPreviewTick === tick && styles.previewCell
-                          )}
-                          key={tick}
-                          onClick={() => onClickCell(note, tick)}
-                        />
-                        {tick % 4 === 0 && <div /> /* Spacer */}
-                      </>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        {editorType === 'notes' && (
-          <PageSwitcher
-            currentPage={currentOctaveOffset}
-            totalPages={TOTAL_OCTAVES}
-            onChange={page => setCurrentOctaveOffset(page)}
-          />
+      <div
+        className={classNames(
+          styles[
+            `sequence-editor-${
+              editorType === 'drums'
+                ? 'drums'
+                : scaleMode === 'simple'
+                ? 'simple'
+                : 'chromatic'
+            }`
+          ]
         )}
+      >
+        {displayNotes.map(({note, name}, i) => {
+          return (
+            <div className={styles.pitchRow} key={note}>
+              {editorType === 'drums' && (
+                <div className={styles.label}>{name}</div>
+              )}
+              {editorType === 'notes' && scaleMode === 'chromatic' && (
+                <KeyLabel note={note} />
+              )}
+              {editorType === 'notes' && scaleMode === 'simple' && (
+                <div
+                  className={classNames(
+                    styles['cell-simple'],
+                    styles.labelCell
+                  )}
+                >
+                  {displayNotes.length - i}
+                </div>
+              )}
+              <div className={styles.cellRow}>
+                {ticks.map(tick => {
+                  return (
+                    <>
+                      <button
+                        type="button"
+                        className={classNames(
+                          editorType === 'drums'
+                            ? styles['cell-drums']
+                            : styles[`cell-${scaleMode}`],
+                          isSelected(note, tick) && styles.activeCell,
+                          currentPreviewTick === tick && styles.previewCell
+                        )}
+                        key={tick}
+                        onClick={() => onClickCell(note, tick)}
+                      />
+                      {tick % 4 === 0 && <div /> /* Spacer */}
+                    </>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
       </div>
       <PreviewControls
         enabled={currentValue.events.length > 0 && !isLoading}
@@ -232,7 +231,6 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
 };
 
 function getDisplayNotes(
-  startOctave: number,
   editorType: EditorType,
   scaleMode: ScaleMode,
   instrument: string,
@@ -248,9 +246,9 @@ function getDisplayNotes(
   }
   let noteValues;
   if (scaleMode === 'chromatic') {
-    noteValues = integers(DISPLAY_OCTAVES * 12, startOctave * 12);
+    noteValues = integers(DISPLAY_OCTAVES * 12, START_OCTAVE * 12);
   } else {
-    noteValues = getNotesInKey(rootKey, startOctave, DISPLAY_OCTAVES);
+    noteValues = getNotesInKey(rootKey, START_OCTAVE, DISPLAY_OCTAVES);
   }
 
   return noteValues.map(note => ({note, name: getNoteName(note)}));
@@ -262,48 +260,6 @@ function getInstruments(editorType: EditorType) {
   }
   return MusicLibrary.getInstance()?.instruments || [];
 }
-
-const PageSwitcher: React.FunctionComponent<{
-  currentPage: number;
-  totalPages: number;
-  onChange: (page: number) => void;
-}> = ({currentPage, totalPages, onChange}) => {
-  return (
-    <div className={styles.pageSwitcher}>
-      <button
-        type="button"
-        onClick={() => onChange(currentPage + 1)}
-        disabled={currentPage === totalPages - 1}
-        className={styles.changePageButton}
-      >
-        <FontAwesomeV6Icon iconName="caret-up" />
-      </button>
-      {integers(totalPages)
-        .map(i => {
-          return (
-            <button
-              type="button"
-              className={classNames(
-                styles.pageButton,
-                currentPage === i && styles.selected
-              )}
-              onClick={() => onChange(i)}
-              key={i}
-            />
-          );
-        })
-        .reverse()}
-      <button
-        type="button"
-        onClick={() => onChange(currentPage - 1)}
-        disabled={currentPage === 0}
-        className={styles.changePageButton}
-      >
-        <FontAwesomeV6Icon iconName="caret-down" />
-      </button>
-    </div>
-  );
-};
 
 const KeyLabel: React.FunctionComponent<{note: number}> = ({note}) => {
   return (

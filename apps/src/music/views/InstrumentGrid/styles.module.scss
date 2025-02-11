@@ -5,6 +5,8 @@ $colors-simple: #2980b9, #16a085, #2ecc71, #f1c40f, #f39c12, #d35400, #e74c3c,
   #ff4c3c;
 $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
   #55efc4;
+$cell-size: 25px;
+$row-gap: 4px;
 
 .container {
   display: flex;
@@ -26,10 +28,22 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
   gap: 8px;
 }
 
-.sequenceEditor {
+%sequence-editor {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: $row-gap;
+  overflow-y: auto;
+  padding-right: 16px;
+}
+
+.sequence-editor-simple, .sequence-editor-drums {
+  @extend %sequence-editor;
+  max-height: ($cell-size + $row-gap) * 11; // show 8 notes/drum sounds plus a few extra
+}
+
+.sequence-editor-chromatic {
+  @extend %sequence-editor;
+  max-height: ($cell-size + $row-gap) * 15; // show a full octave of 12 notes plus a few extra
 }
 
 .pitchRow {
@@ -76,8 +90,8 @@ $colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
 
 %cell, .cell {
   @include remove-button-styles;
-  width: 25px;
-  height: 25px;
+  width: $cell-size;
+  height: $cell-size;
   background-color: $neutral_dark80;
   box-sizing: border-box;
   transition: transform 0.2s ease, background-color 0.2s ease;
