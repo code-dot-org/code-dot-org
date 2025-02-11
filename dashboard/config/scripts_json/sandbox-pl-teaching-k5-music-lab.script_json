@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-07 22:18:01 UTC",
+    "serialized_at": "2025-02-10 22:22:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -805,6 +805,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -995,30 +998,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "MLfunctionsdebug"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "MLfunctionsdebug"
-        ],
-        "lesson.key": "Producer Power",
-        "lesson_group.key": "",
-        "script.name": "sandbox-pl-teaching-k5-music-lab",
-        "activity_section.key": "8a1520c5-0a77-49cb-8bcc-d58eb7402d56"
-      },
-      "level_keys": [
-        "MLfunctionsdebug"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "music-coding-intro-functions-beat_1"
         ]
       },
@@ -1037,9 +1016,9 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 12,
-      "activity_section_position": 12,
+      "chapter": 34,
+      "position": 11,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1061,9 +1040,9 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 13,
-      "activity_section_position": 13,
+      "chapter": 35,
+      "position": 12,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1085,7 +1064,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1109,7 +1088,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1133,7 +1112,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1157,7 +1136,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1181,7 +1160,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1205,7 +1184,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -1229,11 +1208,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLmusic-coding-intro-event-functions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1250,7 +1232,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -1274,7 +1256,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1298,7 +1280,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1700,18 +1682,6 @@
         "level.key": "MLU2L4 Multiple Choice packets2022_2023",
         "script_level.level_keys": [
           "MLU2L4 Multiple Choice packets2022_2023"
-        ],
-        "lesson.key": "Producer Power",
-        "lesson_group.key": "",
-        "script.name": "sandbox-pl-teaching-k5-music-lab",
-        "activity_section.key": "8a1520c5-0a77-49cb-8bcc-d58eb7402d56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "MLfunctionsdebug",
-        "script_level.level_keys": [
-          "MLfunctionsdebug"
         ],
         "lesson.key": "Producer Power",
         "lesson_group.key": "",

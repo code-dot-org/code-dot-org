@@ -48,10 +48,13 @@ const SUGGESTED_PROMPTS = [
   EXTRA_PRACTICE_PROMPT,
 ];
 
+const AI_DIFF_CHAT_MESSAGE_ENDPOINT = '/ai_diff/chat_completion';
+
 interface AiDiffChatProps {
   lessonId: number;
   lessonName: string;
   unitDisplayName: string;
+  chatResponseCallback?: () => void;
   initialChatMessage?: string;
   suggestedPrompts?: ChatPrompt[];
   disableEndButtons?: boolean;
@@ -61,17 +64,18 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
   lessonId,
   lessonName,
   unitDisplayName,
+  chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
   suggestedPrompts = SUGGESTED_PROMPTS,
   disableEndButtons = false,
 }) => {
-  const aiDiffChatMessageEndpoint = '/ai_diff/chat_completion';
-
-  const reportingData = {
-    lessonId: lessonId,
-    lessonName: lessonName,
-    unitName: unitDisplayName,
-  };
+  const reportingData = React.useMemo(() => {
+    return {
+      lessonId: lessonId,
+      lessonName: lessonName,
+      unitName: unitDisplayName,
+    };
+  }, [lessonId, lessonName, unitDisplayName]);
 
   const [sessionId, setSessionId] = useState(null);
 
@@ -105,71 +109,73 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
     setMessageHistory(prevMessages => [...prevMessages, suggestedPrompts]);
   };
 
-  const sendChatEvent = (
-    role: string,
-    prompt: string,
-    preset: boolean,
-    session: string
-  ) => {
-    const responseEventData = {
-      ...reportingData,
-      role: role,
-      isPreset: preset,
-      text: prompt,
-      sessionId: session,
-    };
-    analyticsReporter.sendEvent(
-      EVENTS.AI_DIFF_CHAT_EVENT,
-      responseEventData,
-      PLATFORMS.STATSIG
-    );
-  };
+  const sendChatEvent = React.useCallback(
+    (role: string, prompt: string, preset: boolean, session: string) => {
+      const responseEventData = {
+        ...reportingData,
+        role: role,
+        isPreset: preset,
+        text: prompt,
+        sessionId: session,
+      };
+      analyticsReporter.sendEvent(
+        EVENTS.AI_DIFF_CHAT_EVENT,
+        responseEventData,
+        PLATFORMS.STATSIG
+      );
+    },
+    [reportingData]
+  );
 
-  const getAIResponse = (prompt: string, isPreset: boolean) => {
-    setIsWaitingForResponse(true);
+  const getAIResponse = React.useCallback(
+    (prompt: string, isPreset: boolean) => {
+      setIsWaitingForResponse(true);
 
-    if (sessionId !== null) {
-      sendChatEvent(Role.USER, prompt, isPreset, sessionId);
-    }
+      if (sessionId !== null) {
+        sendChatEvent(Role.USER, prompt, isPreset, sessionId);
+      }
 
-    const body = JSON.stringify({
-      inputText: prompt,
-      lessonId: lessonId,
-      unitDisplayName: unitDisplayName,
-      sessionId: sessionId,
-      isPreset: isPreset,
-    });
-    HttpClient.post(`${aiDiffChatMessageEndpoint}`, body, true, {
-      'Content-Type': 'application/json',
-    })
-      .then(response => response.json())
-      .then(json => {
-        const newAiMessage = {
-          role: Role.ASSISTANT,
-          chatMessageText: json.chat_message_text,
-          status: json.status,
-        };
-
-        // logging here because on the first user message the sessionId is null
-        // we only get a sessionID initialized in the response
-        if (sessionId === null) {
-          sendChatEvent(Role.USER, prompt, isPreset, json.session_id);
-        }
-
-        sendChatEvent(
-          Role.ASSISTANT,
-          json.chat_message_text,
-          isPreset,
-          json.session_id
-        );
-        setSessionId(json.session_id);
-        setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
-      })
-      .catch(error => console.log(error))
-      .finally(() => {
-        setIsWaitingForResponse(false);
+      const body = JSON.stringify({
+        inputText: prompt,
+        lessonId: lessonId,
+        unitDisplayName: unitDisplayName,
+        sessionId: sessionId,
+        isPreset: isPreset,
       });
-  };
+      HttpClient.post(`${AI_DIFF_CHAT_MESSAGE_ENDPOINT}`, body, true, {
+        'Content-Type': 'application/json',
+      })
+        .then(response => response.json())
+        .then(json => {
+          const newAiMessage = {
+            role: Role.ASSISTANT,
+            chatMessageText: json.chat_message_text,
+            status: json.status,
+          };
+
+          // logging here because on the first user message the sessionId is null
+          // we only get a sessionID initialized in the response
+          if (sessionId === null) {
+            sendChatEvent(Role.USER, prompt, isPreset, json.session_id);
+          }
+
+          sendChatEvent(
+            Role.ASSISTANT,
+            json.chat_message_text,
+            isPreset,
+            json.session_id
+          );
+          setSessionId(json.session_id);
+          setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
+        })
+        .catch(error => console.log(error))
+        .finally(() => {
+          setIsWaitingForResponse(false);
+          chatResponseCallback();
+        });
+    },
+    [lessonId, unitDisplayName, sessionId, chatResponseCallback, sendChatEvent]
+  );
 
   // Scroll to bottom of content when a new message comes in
   const chatWindowRef = useRef<HTMLDivElement>(null);

@@ -492,10 +492,7 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.integer "course_id", null: false
     t.integer "script_id", null: false
     t.integer "position", null: false
-    t.string "experiment_name", comment: "If present, the SingleTeacherExperiment with this name must be enabled in order for a teacher or their students to see this script."
-    t.integer "default_script_id", comment: "If present, indicates the default script which this script will replace when the corresponding experiment is enabled. Should be null for default scripts (those that show up without experiments)."
     t.index ["course_id"], name: "index_course_scripts_on_course_id"
-    t.index ["default_script_id"], name: "index_course_scripts_on_default_script_id"
     t.index ["script_id"], name: "index_course_scripts_on_script_id"
   end
 

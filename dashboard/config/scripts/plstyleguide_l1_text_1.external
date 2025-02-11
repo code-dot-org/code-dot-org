@@ -1,0 +1,57 @@
+name 'PLStyleGuide_L1_Text 1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Headings
+
+#### Headings provide structure and break long passages of text into manageable chunks. Visually, headings and their corresponding sections can increase white space on the page. Learners reading text may find information easier to locate and categorize with the use of effective headings.
+
+#### Additionally, screen readers scan a page using headings. Separating each chunk of the page into sections aids in accessibility.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px 20px 20px 20px; width: 90%; word-wrap: break-word;">
+	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
+    <p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Much of the time - perhaps most of the time - that users spend on your Web pages is spent scanning the text in search of something.</p>
+    <p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">The way your text is formatted can do a lot to make it easier for them.</p>
+    <p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Use plenty of headings</b></p>
+    <p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Well-written, thoughtful headings interspersed in the text act as an informal outline or table of contents for a page. They tell you what each section is about or, if they’re less literal, they intrigue you. Either way they help you decide which parts to read, scan, or skip.</p>
+    <p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">In general, you’ll want to use more headings than you’d think and put more time into writing them.</p>
+	
+<hr>
+
+##### Krug, Steve. <i>Don't Make Me Think, Revisited: A Common Sense Approach to Web Usability.</i> 3rd ed., New Riders, 2014.
+</div>
+
+## Heading Types in Level Builder
+
+# Heading 1
+#### `#` or `<h1>TEXT</h1>`
+
+## Heading 2
+#### `##` or `<h2>TEXT</h2>`
+
+### **Heading 3**
+#### `###` or `<h3>TEXT</h3>`
+
+## Heading Guidelines
+
+### **Usage**
+* #### An H1 heading should only be used once on a single page, at the top. If you find that you need another, consider breaking your content onto multiple pages.
+
+* #### An H2 heading may be used to separate a page into multiple sections. Each section should be topically related to the H1 heading, or otherwise separated onto a new page. 
+
+* #### An H3 heading may be used to further separate section into subsections. Again, each subsection should be topically related to the heading(s) above it. To distinguish an H3 heading from an H4 heading due to similar sizing, the above heading, "Usage", is bold.
+
+### **Best Practices**
+
+* #### Use short headings of seven words or less since lengthy headings are harder to read and listen to. (DiPeri, p. 61)
+
+* #### Provide contrast between headings and body text. 
+	* #### H1 and H2 headings in Level Builder provide contrast through color. 
+    * #### An H3 heading should be bolded (as noted above) to distinguish it from body text.
+
+* #### When capitalizing titles, use title case.
+
+
+
+MARKDOWN
