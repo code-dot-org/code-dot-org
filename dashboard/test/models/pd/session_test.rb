@@ -29,31 +29,16 @@ class Pd::SessionTest < ActiveSupport::TestCase
     assert_equal 'Meeting link is not a valid URL', session.errors.full_messages[0]
   end
 
-  test 'prevent_time_zone_change' do
-    session = create(:pd_session, time_zone: 'America/Denver')
-    assert_equal 'America/Denver', session.time_zone
-
-    session.update!(time_zone: 'America/New_York')
-    assert_equal 'America/Denver', session.time_zone
-  end
-
-  test 'bad time_zone value results in UTC' do
-    session = create(:pd_session, time_zone: 'Bad/Zone')
-    assert_equal 'UTC', session.time_zone
-  end
-
   test 'formatted_date' do
     session = build :pd_session, start: DateTime.new(2016, 3, 1, 9).in_time_zone
     assert_equal '2016-03-01', session.formatted_date
   end
 
   test 'formatted_date_with_start_and_end_times' do
-    session = create(
-      :pd_session,
-      time_zone: 'America/Denver',
-      start: Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 9).utc.iso8601,
-      end: Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 17).utc.iso8601
-    )
+    session = build :pd_session
+    session.workshop.time_zone = 'America/Denver'
+    session.start = Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 9).utc.iso8601
+    session.end = Time.current.in_time_zone('America/Denver').change(year: 2016, month: 3, day: 1, hour: 17).utc.iso8601
 
     assert_equal '2016-03-01, 9:00am-5:00pm MST', session.formatted_date_with_start_and_end_times
   end
@@ -65,11 +50,9 @@ class Pd::SessionTest < ActiveSupport::TestCase
       end: Time.current.in_time_zone('UTC').change(year: 2016, month: 3, day: 1, hour: 17).utc.iso8601
     )
 
-    assert_equal 'UTC', session.time_zone
-
     # override validation on create that defaults new sessions to UTC timezone if not provided
     # to reproduce a legacy session with no time_zone
-    session.time_zone = nil
+    session.workshop.time_zone = nil
 
     assert_equal '2016-03-01, 9:00am-5:00pm', session.formatted_date_with_start_and_end_times
   end
