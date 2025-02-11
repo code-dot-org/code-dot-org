@@ -195,7 +195,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         email: user.email
     else
       # This is a new registration
-      register_new_user(user)
+      register_new_user(user, provider)
     end
   end
 
@@ -232,7 +232,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
       return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email})
     else
-      register_new_user(user)
+      register_new_user(user, AuthenticationOption::GOOGLE)
     end
   end
 
@@ -268,7 +268,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return redirect_to users_existing_account_path({provider: auth_hash.provider, email: user.email}) if existing_account
 
     # otherwise, this is a new registration
-    register_new_user(user)
+    register_new_user(user, AuthenticationOption::CLEVER)
   end
 
   private def find_user_by_credential
@@ -305,11 +305,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  private def register_new_user(user)
+  private def register_new_user(user, provider)
     PartialRegistration.persist_attributes(session, user)
 
     @form_data = {
-      email: user.email
+      email: user.email,
+      provider: provider
     }
     new_sign_up_url = determine_sign_up_url(user)
     render 'omniauth/redirect', layout: false, locals: {new_sign_up_url: new_sign_up_url}
@@ -322,9 +323,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       return users_new_sign_up_finish_student_account_path
     elsif user_type == 'teacher'
       return users_new_sign_up_finish_teacher_account_path
+    else
+      return users_new_sign_up_account_type_path
     end
-    # We are in the old sign up flow -> redirect to old finish_sign_up page
-    return ''
   end
 
   private def extract_microsoft_data(auth)

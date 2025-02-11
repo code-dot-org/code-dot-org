@@ -1,13 +1,12 @@
+import {
+  ComponentPlacementDirection,
+  ComponentSizeXSToL,
+} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classnames from 'classnames';
 import React from 'react';
-
-import {
-  ComponentPlacementDirection,
-  ComponentSizeXSToL,
-} from '@cdo/apps/componentLibrary/common/types';
 
 import moduleStyles from './tooltip.module.scss';
 

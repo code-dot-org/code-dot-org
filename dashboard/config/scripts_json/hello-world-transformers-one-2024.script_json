@@ -53,7 +53,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-transformers-one",
-    "serialized_at": "2025-01-09 16:41:05 UTC",
+    "serialized_at": "2025-02-06 21:13:37 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

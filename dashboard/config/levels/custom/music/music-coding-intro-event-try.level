@@ -181,7 +181,8 @@
             }
           ]
         }
-      }
+      },
+      "packId": "default"
     },
     "long_instructions": "###<i class=\"fa-solid fa-play\"></i> Try it out!\r\n\r\n1. Press [Run](#clickable=run-button) to start the background music. \r\n2. Press the triggers [1](#clickable=trigger-button-1), 2, or 3.\r\n3. What do you notice? ",
     "validations": [
@@ -231,7 +232,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-12-05 18:04:24 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 18:11:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 18:12:19 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:21:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:17:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 21:12:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 21:15:09 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-05 18:04:24 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 18:11:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 18:12:19 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:21:28 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:17:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 21:12:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 21:15:09 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-06 22:19:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -792,7 +792,7 @@ def run_feature(browser, feature, options)
 
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
-    message = "#{test_run_string} failed#{retry_again_msg} (retry #{reruns} of #{max_reruns}, flakiness: #{to_percent(flakiness_for_test(test_run_string), 3) || '?'})"
+    message = "#{test_run_string} failed#{retry_again_msg} (retry #{reruns} of #{max_reruns}, flakiness: #{to_percent(flakiness_for_test(test_run_string) || 0.0, 3) || '?'})"
     message += "#{log_link}, first selenium error: <i>#{first_selenium_error(html_log)}</i>" if options.html
     ChatClient.log message
     $lock.synchronize do

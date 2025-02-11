@@ -3,10 +3,8 @@
 
 .container {
   display: flex;
-
-  .subContainer {
-    display: flex;
-  }
+  min-width: 190px;
+  max-width: calc(100vw - 270px);
 }
 
 .button {
@@ -22,6 +20,7 @@
   border-radius: 3px;
   margin: 2px;
   transition: opacity 0.2s ease;
+  flex-shrink: 0;
 
   &Disabled {
     opacity: 50%;
@@ -36,18 +35,23 @@
   &Wide {
     width: initial;
     padding: 0 6px 0 2px;
+    overflow: hidden;
+    flex-shrink: 1;
 
     html[dir="rtl"] & {
       padding: 0 2px 0 6px;
     }
 
     &Image {
-      height: 20px;
+      height: 22px;
       border-radius: 2px;
     }
 
     &Content {
       padding: 0 16px 0 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       html[dir="rtl"] & {
         padding: 0 8px 0 16px;

@@ -1,18 +1,22 @@
-import classNames from 'classnames';
-import React from 'react';
-
-import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
-import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
-
-import {Button} from '../../componentLibrary/button';
-import FontAwesomeV6Icon from '../../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
+  BodyOneText,
   BodyThreeText,
   BodyTwoText,
+  Heading1,
   Heading3,
   Heading6,
   StrongText,
-} from '../../componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import React from 'react';
+
+import HttpClient from '@cdo/apps/util/HttpClient';
+import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
+import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
+import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
+
 import AiDiffChat, {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
@@ -23,9 +27,13 @@ import {ChatPrompt} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
 
-type WelcomeState = 'select_option' | 'practice' | 'end_page';
+const HAS_SEEN_WELCOME_URL =
+  '/api/v1/users/has_completed_ai_differentiation_welcome';
+
+type WelcomeState = 'get_started' | 'select_option' | 'practice' | 'end_page';
 
 const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
+  get_started: 'get_started',
   select_option: 'select_option',
   practice: 'practice',
   end_page: 'end_page',
@@ -89,6 +97,29 @@ const optionButton = (
   );
 };
 
+const getStartedPage = (onClick: () => void) => {
+  return (
+    <div className={style.getStartedPage}>
+      <div className={style.getStartedContent}>
+        <div className={style.getStartedTop}>
+          <img
+            src={aiBotScanning}
+            className={style.botScanning}
+            alt={'AI Teaching Assistant'}
+          />
+          <Heading1 className={style.getStartedTitle}>
+            AI Teaching Assistant
+          </Heading1>
+          <BodyOneText className={style.getStartedSubtitle}>
+            Empowering teachers. Enhancing learning.
+          </BodyOneText>
+        </div>
+        <Button onClick={onClick} text="Get Started" />
+      </div>
+    </div>
+  );
+};
+
 const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   lessonId,
@@ -96,18 +127,27 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   unitDisplayName,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
-    React.useState<WelcomeState>('select_option');
+    React.useState<WelcomeState>('get_started');
+
+  const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
+    React.useState(true);
 
   const [selectedOption, setSelectedOption] = React.useState<
     'plan' | 'create' | null
   >(null);
 
+  const updateShowWelcomeExperience = React.useCallback(() => {
+    HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
+      setShowWelcomeExperience(false);
+    });
+  }, [setShowWelcomeExperience]);
+
   const continueAndSkipButtons = React.useCallback(
-    (nextState: WelcomeState) => {
+    (nextState: WelcomeState, continueDisabled: boolean) => {
       return (
         <div className={style.bottomButtons}>
           <Button
-            onClick={() => setShowWelcomeExperience(false)}
+            onClick={() => updateShowWelcomeExperience()}
             text="Skip"
             className={style.skipButton}
             color="gray"
@@ -117,12 +157,12 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             onClick={() => setCurrentWelcomeState(nextState)}
             text="Continue"
             className={style.continueButton}
-            disabled={!selectedOption}
+            disabled={continueDisabled}
           />
         </div>
       );
     },
-    [selectedOption, setShowWelcomeExperience]
+    [updateShowWelcomeExperience]
   );
 
   const selectAnOptionPage = React.useCallback(
@@ -149,7 +189,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
             )}
           </div>
-          {continueAndSkipButtons(nextState)}
+          {continueAndSkipButtons(nextState, !selectedOption)}
         </div>
       );
     },
@@ -200,10 +240,10 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             />
           </a>
         </div>
-        <Button onClick={() => setShowWelcomeExperience(false)} text="Finish" />
+        <Button onClick={() => updateShowWelcomeExperience()} text="Finish" />
       </div>
     );
-  }, [setShowWelcomeExperience]);
+  }, [updateShowWelcomeExperience]);
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
@@ -217,12 +257,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         <AiDiffChat
           lessonId={lessonId}
           lessonName={lessonName}
+          chatResponseCallback={() => setChatContinueButtonDisabled(false)}
           unitDisplayName={unitDisplayName}
           initialChatMessage={initialMessage}
           suggestedPrompts={suggestedPrompts}
           disableEndButtons={true}
         />
-        {continueAndSkipButtons(WelcomeStates.end_page)}
+        {continueAndSkipButtons(
+          WelcomeStates.end_page,
+          chatContinueButtonDisabled
+        )}
       </div>
     );
   }, [
@@ -231,10 +275,15 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     lessonName,
     unitDisplayName,
     continueAndSkipButtons,
+    chatContinueButtonDisabled,
   ]);
 
   const currentWelcomePage = React.useMemo(() => {
     switch (currentWelcomeState) {
+      case WelcomeStates.get_started:
+        return getStartedPage(() =>
+          setCurrentWelcomeState(WelcomeStates.select_option)
+        );
       case WelcomeStates.select_option:
         return selectAnOptionPage(WelcomeStates.practice);
       case WelcomeStates.practice:
