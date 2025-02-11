@@ -231,11 +231,6 @@ class ApplicationController < ActionController::Base
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
-    # We no longer set options[:activity] (see https://github.com/code-dot-org/code-dot-org/pull/63713),
-    #   so response[:activity_id] will always be nil.
-    # TODO: figure out whether anything depends on activity_id being set, and delete this line if not.
-    response[:activity_id] = options[:activity] && options[:activity].id
-
     response
   end
 
