@@ -21,6 +21,16 @@
   flex-direction: column;
   align-items: stretch;
   text-align: center;
+
+  & h1 {
+    color: $light_white;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    color: var(--brand-aqua-50, #3CFFF7)
+  }
 }
 
 
@@ -30,16 +40,6 @@
   object-fit: cover;
   object-position: top left;
   align-self: center;
-}
-
-.getStartedTitle {
-  color: $light_white;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.getStartedSubtitle {
-  color: var(--brand-aqua-50, #3CFFF7)
 }
 
 .selectOption {

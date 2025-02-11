@@ -79,6 +79,7 @@ const optionButton = (
       )}
       onClick={onClick}
       type="button"
+      id="uitest-ai-diff-option"
     >
       <FontAwesomeV6Icon
         iconName={iconName}
@@ -117,7 +118,11 @@ const getStartedPage = (onClick: () => void) => {
             Empowering teachers. Enhancing learning.
           </BodyOneText>
         </div>
-        <Button onClick={onClick} text="Get Started" />
+        <Button
+          onClick={onClick}
+          id="uitest-ai-diff-get-started"
+          text="Get Started"
+        />
       </div>
     </div>
   );
@@ -175,6 +180,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             onClick={() => setCurrentWelcomeState(nextState)}
             text="Continue"
             disabled={continueDisabled}
+            id="uitest-ai-diff-continue"
           />
           <Link
             className={style.skipLink}
@@ -182,6 +188,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             text="Skip the tutorial"
             size="xs"
             type="secondary"
+            id="uitest-ai-diff-skip"
           />
         </div>
       );
@@ -280,7 +287,11 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             />
           </a>
         </div>
-        <Button onClick={() => updateShowWelcomeExperience()} text="Finish" />
+        <Button
+          onClick={() => updateShowWelcomeExperience()}
+          text="Finish"
+          id="uitest-ai-diff-finish"
+        />
       </div>
     );
   }, [updateShowWelcomeExperience, confettiActive]);
