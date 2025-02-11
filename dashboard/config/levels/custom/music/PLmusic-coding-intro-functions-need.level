@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-02-06T22:48:09.000Z",
   "level_num": "custom",
@@ -209,7 +210,7 @@
         ]
       }
     },
-    "long_instructions": "###<i class=\"fa-regular fa-face-thinking\"></i> What do you notice? \r\n\r\n1. Look for patterns in the code.\r\n2. Press [Run](#clickable=run-button) to listen to the song.",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:** \r\n##### In this level, students complete the Use step. Promote classroom discussions using <a href=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit#slide=id.g317fe39f44b_0_382\" target=\"_blank\">lesson slide deck.</a>\r\n___\r\n\r\n###<i class=\"fa-regular fa-face-thinking\"></i> What do you notice? \r\n\r\n1. Look for patterns in the code.\r\n2. Press [Run](#clickable=run-button) to listen to the song.",
     "validations": [
       {
         "key": "music-coding-intro-functions-need_0494dc13-1782-465b-91a8-0ed486477a1b",
@@ -247,8 +248,7 @@
     ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-06T22:48:09.292+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-06T22:48:09.292+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need\"},{\"changed_at\":\"2025-02-07 20:07:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

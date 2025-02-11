@@ -80,11 +80,13 @@ describe('LandingPage', () => {
     stubRedux();
     registerReducers({isRtl, teacherSections});
     store = getStore();
+    window.open = jest.fn();
   });
 
   afterEach(() => {
     restoreRedux();
     window.URL.createObjectURL = defaultCreateObjectURL;
+    jest.resetAllMocks();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -504,20 +506,23 @@ describe('LandingPage', () => {
     screen.getByText(i18n.addToYourCalendar());
 
     // Add to Apple calendar button has expected download .ics file link
-    const appleCalendarDownloadLink = screen
-      .getByLabelText(
-        i18n.addToCalendarType({
-          calendar_type: 'Apple',
-        })
-      )
-      .getAttribute('href');
     const expectedAppleCalendarDownloadLink = buildAppleCalendarLink(
       [workshopSession],
       workshopCourse,
       workshopLocation
     );
-    expect(appleCalendarDownloadLink).toStrictEqual(
-      expectedAppleCalendarDownloadLink
+    fireEvent.click(
+      screen.getByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Apple',
+        })
+      )
+    );
+    expect(window.open).toHaveBeenCalledWith(
+      expectedAppleCalendarDownloadLink,
+      '_blank',
+      'noopener',
+      'noreferrer'
     );
 
     // Add to Google calendar button has expected link to add event to calendar
@@ -526,15 +531,19 @@ describe('LandingPage', () => {
       workshopCourse,
       workshopLocation
     );
-    expect(
-      screen
-        .getByLabelText(
-          i18n.addToCalendarType({
-            calendar_type: 'Google',
-          })
-        )
-        .getAttribute('href')
-    ).toBe(expectedGoogleCalendarLink);
+    fireEvent.click(
+      screen.getByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Google',
+        })
+      )
+    );
+    expect(window.open).toHaveBeenCalledWith(
+      expectedGoogleCalendarLink,
+      '_blank',
+      'noopener',
+      'noreferrer'
+    );
 
     // Add to Outlook calendar button has expected link to add event to calendar
     const expectedOutlookCalendarLink = buildOutlookCalendarLink(
@@ -542,15 +551,19 @@ describe('LandingPage', () => {
       workshopCourse,
       workshopLocation
     );
-    expect(
-      screen
-        .getByLabelText(
-          i18n.addToCalendarType({
-            calendar_type: 'Outlook',
-          })
-        )
-        .getAttribute('href')
-    ).toBe(expectedOutlookCalendarLink);
+    fireEvent.click(
+      screen.getByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Outlook',
+        })
+      )
+    );
+    expect(window.open).toHaveBeenCalledWith(
+      expectedOutlookCalendarLink,
+      '_blank',
+      'noopener',
+      'noreferrer'
+    );
 
     // Does not show the dialog for adding multiple sessions to calendar
     expect(
@@ -585,41 +598,48 @@ describe('LandingPage', () => {
     expect(screen.queryByRole('link', {name: 'Outlook'})).toBe(null);
 
     // Apple calendar button is link to download .ics file with multiple sessions
-    const appleCalendarDownloadLink = screen
-      .getByLabelText(
-        i18n.addToCalendarType({
-          calendar_type: 'Apple',
-        })
-      )
-      .getAttribute('href');
     const expectedAppleCalendarDownloadLink = buildAppleCalendarLink(
       TEST_WORKSHOP_SESSIONS,
       workshopCourse,
       workshopLocation
     );
-    expect(appleCalendarDownloadLink).toStrictEqual(
-      expectedAppleCalendarDownloadLink
+    fireEvent.click(
+      screen.getByLabelText(
+        i18n.addToCalendarType({
+          calendar_type: 'Apple',
+        })
+      )
+    );
+    expect(window.open).toHaveBeenCalledWith(
+      expectedAppleCalendarDownloadLink,
+      '_blank',
+      'noopener',
+      'noreferrer'
     );
 
     // Can open the Google calendar dialog
     fireEvent.click(screen.getByRole('button', {name: 'Google'}));
-
     screen.getByText(i18n.enrollmentCelebrationAddToCalendarTitle());
-    const googleCalendarButtonLinks = screen
-      .getAllByLabelText(
-        i18n.addToCalendarType({
-          calendar_type: 'Google',
-        })
-      )
-      .map(button => {
-        return button.getAttribute('href');
-      });
-    const expectedGoogleCalendarLinks = TEST_WORKSHOP_SESSIONS.map(session => {
-      return buildGoogleCalendarLink(session, workshopCourse, workshopLocation);
-    });
-    expect(googleCalendarButtonLinks).toStrictEqual(
-      expectedGoogleCalendarLinks
+
+    const googleCalendarButtonLinks = screen.getAllByLabelText(
+      i18n.addToCalendarType({
+        calendar_type: 'Google',
+      })
     );
+    googleCalendarButtonLinks.forEach((googleCalendarButton, index) => {
+      const expectedGoogleButtonLink = buildGoogleCalendarLink(
+        TEST_WORKSHOP_SESSIONS[index],
+        workshopCourse,
+        workshopLocation
+      );
+      fireEvent.click(googleCalendarButton);
+      expect(window.open).toHaveBeenCalledWith(
+        expectedGoogleButtonLink,
+        '_blank',
+        'noopener',
+        'noreferrer'
+      );
+    });
 
     // Can close the Google calendar dialog with the 'Change calendar' button and open the Outlook calendar dialog
     fireEvent.click(
@@ -628,27 +648,27 @@ describe('LandingPage', () => {
       })
     );
     fireEvent.click(screen.getByRole('button', {name: 'Outlook'}));
-
     screen.getByText(i18n.enrollmentCelebrationAddToCalendarTitle());
-    const outlookCalendarButtonLinks = screen
-      .getAllByLabelText(
-        i18n.addToCalendarType({
-          calendar_type: 'Outlook',
-        })
-      )
-      .map(button => {
-        return button.getAttribute('href');
-      });
-    const expectedOutlookCalendarLinks = TEST_WORKSHOP_SESSIONS.map(session => {
-      return buildOutlookCalendarLink(
-        session,
+
+    const outlookCalendarButtonLinks = screen.getAllByLabelText(
+      i18n.addToCalendarType({
+        calendar_type: 'Outlook',
+      })
+    );
+    outlookCalendarButtonLinks.forEach((outlookCalendarButton, index) => {
+      const expectedOutlookButtonLink = buildOutlookCalendarLink(
+        TEST_WORKSHOP_SESSIONS[index],
         workshopCourse,
         workshopLocation
       );
+      fireEvent.click(outlookCalendarButton);
+      expect(window.open).toHaveBeenCalledWith(
+        expectedOutlookButtonLink,
+        '_blank',
+        'noopener',
+        'noreferrer'
+      );
     });
-    expect(outlookCalendarButtonLinks).toStrictEqual(
-      expectedOutlookCalendarLinks
-    );
 
     // Can close all dialogs with 'Go to my professional learning' dialog
     fireEvent.click(

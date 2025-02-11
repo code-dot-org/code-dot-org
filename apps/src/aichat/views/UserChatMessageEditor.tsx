@@ -3,7 +3,7 @@ import React, {useCallback, useEffect, useRef} from 'react';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {submitChatContents} from '../redux/aichatRedux';
+import {submitChatContents} from '../redux';
 
 /**
  * Renders the AI Chat Lab user chat message editor component.
@@ -12,7 +12,7 @@ const UserChatMessageEditor: React.FunctionComponent<{
   editorContainerClassName?: string;
 }> = ({editorContainerClassName}) => {
   const isWaitingForChatResponse = useAppSelector(
-    state => state.aichat.isWaitingForChatResponse
+    state => !!state.aichat.chatMessagePending
   );
 
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);

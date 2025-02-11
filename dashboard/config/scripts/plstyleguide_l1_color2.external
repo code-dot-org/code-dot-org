@@ -1,0 +1,129 @@
+name 'PLStyleGuide_L1_Color2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Color Bank
+
+#### Each of the following colors align with Code.org branding. Use them in accordance with the breakdown on the previous page.
+
+#### **Note**: The text color (black or white) on top of the colored circles in the following tables represent the text color that should be overlaid the brand color. These pairings pass WCAG contrast standards.
+
+## Neutrals
+
+#### These colors should comprise at least 60% of the page, which is achieved through Level Builder's background.
+
+<br>
+<div style="display:flex;flex-direction:column;border-top:1px solid #000000;border-bottom:1px solid #000000;width:500px;font-size:14pt;margin:auto;">
+
+<div style="display:flex;font-weight:bold;border-bottom:1px solid #000000;background:#F5F7F8;">
+<div style="flex:1;padding:10px;text-align:center;">Color</div>
+<div style="flex:1;padding:10px;text-align:center;">Name</div>
+<div style="flex:1;padding:10px;text-align:center;">Hex Code</div>
+</div>
+
+<div style="display:flex;border-bottom:1px solid #000000;">
+<div style="flex:1;padding:10px;text-align:center;">
+<img src="https://images.code.org/2ba61ae14d1b9795ea709f81935488bc-image-1739224975646.58.48 PM.png" width="100" height="100">
+</div>
+<div style="flex:1;padding:10px;text-align:center;">White</div>
+<div style="flex:1;padding:10px;text-align:center;">#FFFFFF</div>
+</div>
+
+<div style="display:flex;border-bottom:1px solid #000000;">
+<div style="flex:1;padding:10px;text-align:center;">
+<img src="https://images.code.org/800f052e47a8a7eecf51af12c14cb68e-image-1739224975648.58.43 PM.png" width="100" height="100">
+</div>
+<div style="flex:1;padding:10px;text-align:center;">Black</div>
+<div style="flex:1;padding:10px;text-align:center;">#000000</div>
+</div>
+
+<div style="display:flex;">
+<div style="flex:1;padding:10px;text-align:center;">
+<img src="https://images.code.org/a306c51b070dde3317546d00249986a4-image-1739224975644.58.53 PM.png" width="100" height="100">
+</div>
+<div style="flex:1;padding:10px;text-align:center;">Gray</div>
+<div style="flex:1;padding:10px;text-align:center;">#F5F7F8</div>
+</div>
+
+</div>
+
+
+## Primary
+
+#### Primary brand color. Should be dominant throughout Code.org branding.
+<br>
+<div style="display:flex;flex-direction:column;border-top:1px solid #000000;border-bottom:1px solid #000000;width:500px;font-size:14pt; margin: auto;">
+
+<div style="display:flex;font-weight:bold;border-bottom:1px solid #000000;background:#F5F7F8;">
+<div style="flex:1;padding:10px;">Color</div>
+<div style="flex:1;padding:10px;">Name</div>
+<div style="flex:1;padding:10px;">Hex Code</div>
+</div>
+
+<div style="display:flex;border-bottom:1px solid #000000;">
+<div style="flex:1;padding:10px;">
+<img src="https://images.code.org/d8efbc52dd826ed290517e0bcb0a5f7c-image-1739223750273.38.12 PM.png" width="100" height="100">
+</div>
+<div style="flex:1;padding:10px;">Teal, main</div>
+<div style="flex:1;padding:10px;">#008899</div>
+</div>
+
+<div style="display:flex;border-bottom:1px solid #000000;">
+<div style="flex:1;padding:10px;">
+<img src="https://images.code.org/78534ec5c38b6ca9b21852dc60fd1fe9-image-1739223750271.38.18 PM.png" width="100" height="100">
+</div>
+<div style="flex:1;padding:10px;">Teal, light</div>
+<div style="flex:1;padding:10px;">#B7E0E5</div>
+</div>
+
+<div style="display:flex;">
+<div style="flex:1;padding:10px;">
+<img src="https://images.code.org/b39647d0668e3288757979d3983537a3-image-1739223750275.38.22 PM.png" width="100" height="100">
+</div>
+<div style="flex:1;padding:10px;">Teal, dark</div>
+<div style="flex:1;padding:10px;">#006C7A</div>
+</div>
+
+</div>
+<br>
+
+## Secondary
+
+#### Accent color. Used to emphasize actions (like a button a user can click) and highlighted information.
+
+<br>
+<div style="display:flex;flex-direction:column;border-top:1px solid #000000;border-bottom:1px solid #000000;width:500px;font-size:14pt;margin:auto;">
+
+<div style="display:flex;font-weight:bold;border-bottom:1px solid #000000;background:#F5F7F8;">
+<div style="flex:1;padding:10px;text-align:center;">Color</div>
+<div style="flex:1;padding:10px;text-align:center;">Name</div>
+<div style="flex:1;padding:10px;text-align:center;">Hex Code</div>
+</div>
+
+<div style="display:flex;border-bottom:1px solid #000000;">
+<div style="flex:1;padding:10px;text-align:center;">
+<img src="https://images.code.org/4e407cca0ca88dbab83c7dba1a29b3e7-image-1739224759429.58.28 PM.png" width="100" height="100">
+</div>
+<div style="flex:1;padding:10px;text-align:center;">Purple, main</div>
+<div style="flex:1;padding:10px;text-align:center;">#8148B2</div>
+</div>
+
+<div style="display:flex;border-bottom:1px solid #000000;">
+<div style="flex:1;padding:10px;text-align:center;">
+<img src="https://images.code.org/5ad9cbd85231b5e6f6e22f9bc1bef3e5-image-1739227001792.36.29 PM.png" width="100" height="100">
+</div>
+<div style="flex:1;padding:10px;text-align:center;">Purple, light</div>
+<div style="flex:1;padding:10px;text-align:center;">#DECEEA</div>
+</div>
+
+<div style="display:flex;">
+<div style="flex:1;padding:10px;text-align:center;">
+<img src="https://images.code.org/fa7e4133dca0093572bf5ba0c0b05ab0-image-1739224759390.58.37 PM.png" width="100" height="100">
+</div>
+<div style="flex:1;padding:10px;text-align:center;">Purple, dark</div>
+<div style="flex:1;padding:10px;text-align:center;">#603E7E</div>
+</div>
+
+</div>
+MARKDOWN

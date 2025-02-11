@@ -1,0 +1,36 @@
+name 'PLStyleGuide_L1_Color1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Code.org Color Branding
+
+#### The branding of professional learning should mirror the branding of Code.org in general. This is true both in terms of which colors we use and *how* they are used.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px 20px 20px 20px; width: 90%; word-wrap: break-word;">
+	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Color can make designs more visually interesting and aesthetic, and can reinforce the organization and meaning of elements in a design. If applied improperly, however, color can seriously harm the form and function of a design.</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Number of Colors</b></p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Use color conservatively. Limit the palette to what the eye can process at one glance (about five colors depending on the complexity of the design). Do not use color as the only means to impart information since a significant portion of the population has limited color vision.</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Saturation</b></p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Use saturated colors (pure hues) when attracting attention is the priority. Use desaturated colors when performance and efficiency are the priority. Generally, desaturated, bright colors are perceived as friendly and professional; desaturated, dark colors are perceived as serious and professional; and saturated colors are perceived as more exciting and dynamic. Exercise caution when combining saturated colors, as they can visually interfere with one another and increase eye fatigue.</p>
+    
+<hr>
+    
+    <p style="font-size: 10pt; margin-top: 12px; line-height: 115%;">Lidwell, William, Kritina Holden, and Jill Butler. <i>Universal Principles of Design: 125 Ways to Enhance Usability, Influence Perception, Increase Appeal, Make Better Design Decisions, and Teach through Design.</i> Revised and Updated Edition, Rockport Publishers, 2010.
+</div>
+
+## Color Usage
+
+#### Resist the urge to decorate your pages with excess color. The breakdown should roughly approximate the following percentages. 
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://images.code.org/e5d30e5f31525f8184ecabee100d4843-image-1739218312583.07.40 PM.png" 
+       alt="A diagram of Code.org branding. 60% is neutrals, 30% is primary (teal), and 10% is accent (purple and strawberry)" 
+       style="max-width: 500px; width: 100%; height: auto;">
+</div>
+
+#### Level Builder's white backgrounds help to naturally achieve 60% neutrals. If you would like to add color, ensure that they mostly come from the 30% primary color(s) to draw attention to a portion of the page. The use of accent colors should be sparing and align with semantic meaning.
+
+#### You also do not *need* to have primary and accent colors on a page. Black and white are fine!
+MARKDOWN
