@@ -287,7 +287,7 @@ describe('WorkshopForm test', () => {
 
     expect(sessionsForApi[0].start).to.equal('2016-07-01T09:00:00.000Z');
     expect(sessionsForApi[0].end).to.equal('2016-07-01T17:00:00.000Z');
-    expect(sessionsForApi[0].time_zone).to.be.null;
+    expect(sessionsForApi[0].time_zone).to.be.undefined;
   });
 
   it('edits form and can save', () => {
