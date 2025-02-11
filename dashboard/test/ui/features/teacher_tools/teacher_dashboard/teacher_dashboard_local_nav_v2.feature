@@ -51,6 +51,6 @@ Feature: Using the V2 teacher dashboard local navigation
 
     Given I click selector "#ui-test-teacher-sidebar a:contains('Course')" once I see it
     Then check that the URL contains "/unit/ui-test-single-unit-2025"
-    And I wait until element "h1:contains('ui-test-single-unit-2025')" is visible
+    And I wait until element "h1:contains('Single Unit 2025')" is visible
     And I wait until element "#assignment-version-year" contains text "2025"
     And I wait until I don't see selector ".unit-breadcrumb"
