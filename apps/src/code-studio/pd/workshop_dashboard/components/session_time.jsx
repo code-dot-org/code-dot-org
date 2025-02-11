@@ -18,11 +18,16 @@ export default class SessionTime extends React.Component {
 
   render() {
     const {session} = this.props;
-    const tz = session.time_zone || 'UTC';
-    const formattedTime =
-      moment.utc(session.start).tz(tz).format(DATETIME_FORMAT) +
-      '-' +
-      moment.utc(session.end).tz(tz).format(TIME_FORMAT);
+    const tzAbbreviation = session.time_zone
+      ? moment.utc(session.start).tz(session.time_zone).format('z')
+      : 'local';
+    const formattedTime = `${moment
+      .utc(session.start)
+      .tz(session.time_zone || 'UTC')
+      .format(DATETIME_FORMAT)}-${moment
+      .utc(session.end)
+      .tz(session.time_zone || 'UTC')
+      .format(TIME_FORMAT)} ${tzAbbreviation}`;
 
     return <div>{formattedTime}</div>;
   }
