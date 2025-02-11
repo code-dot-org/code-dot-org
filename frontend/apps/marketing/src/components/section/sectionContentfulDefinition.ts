@@ -17,8 +17,8 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
   builtInStyles: [],
   children: true,
   variables: {
-    backgroundColor: {
-      displayName: 'Background color',
+    background: {
+      displayName: 'Background',
       type: 'Text',
       group: 'style',
       description: 'The background color of the section.',
@@ -27,14 +27,22 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
         in: [
           {value: 'primary', displayName: 'Primary (white)'},
           {value: 'secondary', displayName: 'Secondary (light gray)'},
-          {value: 'dark', displayName: 'Dark (dark gray)'},
+          {value: 'dark', displayName: 'Dark gray'},
           {
             value: 'brandLightPrimary',
-            displayName: 'Brand Light Primary (light teal)',
+            displayName: 'Light teal',
           },
           {
             value: 'brandLightSecondary',
-            displayName: 'Brand Light Secondary (light purple)',
+            displayName: 'Light purple',
+          },
+          {
+            value: 'patternDark',
+            displayName: 'Pattern dark',
+          },
+          {
+            value: 'patternPrimary',
+            displayName: 'Pattern teal',
           },
         ],
       },

@@ -117,6 +117,7 @@ def main
       US_STATES
       PROJECT_SUBMISSION_STATUS
       EDUCATOR_ROLES
+      AI_DIFF_CONTEXT
     ),
     file_type: 'ts'
   )

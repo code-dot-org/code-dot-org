@@ -16,6 +16,7 @@
       }
     ],
     "paths": {
+      "@public/*": ["./public/*"],
       "@/*": ["./src/*"]
     },
     "allowJs": true,
