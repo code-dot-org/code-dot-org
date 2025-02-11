@@ -1,4 +1,4 @@
-// Creates a definition for the Typography component to be used in Contentful Studio
+// Creates a definition for the Link component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
 export const LinkContentfulComponentDefinition: ComponentDefinition = {
