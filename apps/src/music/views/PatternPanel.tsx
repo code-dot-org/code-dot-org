@@ -2,7 +2,7 @@ import React from 'react';
 
 import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 
-import SequenceEditor from './InstrumentGrid';
+import InstrumentGrid from './InstrumentGrid';
 
 interface PatternPanelProps {
   initValue: InstrumentEventValue;
@@ -24,7 +24,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   );
 
   return (
-    <SequenceEditor
+    <InstrumentGrid
       editorType="drums"
       initialValue={currentValue}
       onChange={onChange}

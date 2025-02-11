@@ -2,7 +2,7 @@ import React from 'react';
 
 import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 
-import SequenceEditor from './InstrumentGrid';
+import InstrumentGrid from './InstrumentGrid';
 
 import moduleStyles from './tunePanel.module.scss';
 
@@ -23,7 +23,7 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
 
   return (
     <div className={moduleStyles.tunePanelContainer}>
-      <SequenceEditor
+      <InstrumentGrid
         initialValue={currentValue}
         editorType="notes"
         onChange={onChange}

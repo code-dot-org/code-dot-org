@@ -24,7 +24,7 @@ import styles from './styles.module.scss';
 const START_OCTAVE = 4;
 const DISPLAY_OCTAVES = 3;
 
-interface SequenceEditorProps {
+interface Props {
   initialValue: InstrumentEventValue;
   onChange: (value: InstrumentEventValue) => void;
   editorType: EditorType;
@@ -34,7 +34,7 @@ interface SequenceEditorProps {
 type EditorType = 'drums' | 'notes';
 type ScaleMode = 'simple' | 'chromatic';
 
-const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
+const InstrumentGrid: React.FunctionComponent<Props> = ({
   initialValue,
   onChange,
   editorType,
@@ -269,4 +269,4 @@ function getInstruments(editorType: EditorType) {
   return MusicLibrary.getInstance()?.instruments || [];
 }
 
-export default SequenceEditor;
+export default InstrumentGrid;
