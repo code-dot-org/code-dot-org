@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2024-11-27T16:40:42.000Z",
   "level_num": "custom",
@@ -54,18 +53,24 @@
                 "block": {
                   "type": "play_sounds_together",
                   "id": "$?KUv+Cn|@?~MOOU,:^L",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
                   "inputs": {
                     "code": {
                       "block": {
                         "type": "procedures_callnoreturn",
                         "id": "3dL3[wJFA7v0!aKt9L}P",
                         "extraState": {
-                          "name": "groove"
+                          "name": "beat"
                         },
                         "next": {
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "J/`-LtA.rk~8(BW-/2/.",
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
                             "fields": {
                               "sound": "rosa_linn_snap/chorus_1"
                             }
@@ -78,18 +83,24 @@
                     "block": {
                       "type": "play_sounds_together",
                       "id": "d?4Q}?QHYAfA/bxc):lZ",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
                       "inputs": {
                         "code": {
                           "block": {
                             "type": "procedures_callnoreturn",
                             "id": "p:o+x)5M]FrGx16h7zmD",
                             "extraState": {
-                              "name": "groove"
+                              "name": "beat"
                             },
                             "next": {
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "AO;ZNEsT8oO17w:6Nvwk",
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
                                 "fields": {
                                   "sound": "rosa_linn_snap/chorus_2"
                                 }
@@ -102,18 +113,24 @@
                         "block": {
                           "type": "play_sounds_together",
                           "id": "I{%rkRaHY)T$Fm|ow~8@",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
                           "inputs": {
                             "code": {
                               "block": {
                                 "type": "procedures_callnoreturn",
                                 "id": "pM4l`$]S?rzA!8nY*NoT",
                                 "extraState": {
-                                  "name": "groove"
+                                  "name": "beat"
                                 },
                                 "next": {
                                   "block": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": "b(N06rwO4l{3A4/dbKcp",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
                                     "fields": {
                                       "sound": "rosa_linn_snap/chorus_3"
                                     },
@@ -121,6 +138,9 @@
                                       "block": {
                                         "type": "play_sound_at_current_location_simple2",
                                         "id": "gixyt{4ys68^/0w2e0Mh",
+                                        "extraState": {
+                                          "disableNextConnection": true
+                                        },
                                         "fields": {
                                           "sound": "rosa_linn_snap/driving_piano"
                                         }
@@ -135,18 +155,24 @@
                             "block": {
                               "type": "play_sounds_together",
                               "id": "wl`NW-}NQm4K|!@Gf4.-",
+                              "extraState": {
+                                "disableNextConnection": true
+                              },
                               "inputs": {
                                 "code": {
                                   "block": {
                                     "type": "procedures_callnoreturn",
                                     "id": "1HWK-=$}w7-tM1l1vP:S",
                                     "extraState": {
-                                      "name": "groove"
+                                      "name": "beat"
                                     },
                                     "next": {
                                       "block": {
                                         "type": "play_sound_at_current_location_simple2",
                                         "id": "VlK;u3tGj.xVcnM7aeB}",
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
                                         "fields": {
                                           "sound": "rosa_linn_snap/chorus_4"
                                         },
@@ -154,6 +180,9 @@
                                           "block": {
                                             "type": "play_sound_at_current_location_simple2",
                                             "id": "k2aXwJ{3T1@AyBpYR9bH",
+                                            "extraState": {
+                                              "disableNextConnection": false
+                                            },
                                             "fields": {
                                               "sound": "rosa_linn_snap/backup_4"
                                             },
@@ -161,6 +190,9 @@
                                               "block": {
                                                 "type": "play_sound_at_current_location_simple2",
                                                 "id": ";QiSKA4PWyEH88(Fh/i;",
+                                                "extraState": {
+                                                  "disableNextConnection": true
+                                                },
                                                 "fields": {
                                                   "sound": "rosa_linn_snap/dramatic_piano"
                                                 }
@@ -185,16 +217,29 @@
             {
               "type": "procedures_defnoreturn",
               "id": "/:rj,cf~}c%NT]G7~N7W",
-              "x": 310,
+              "x": 290,
               "y": 50,
+              "editable": false,
               "extraState": {
                 "procedureId": "c^8.V/v,CyY5dTsQxr%6",
                 "initialDeleteConfig": true,
-                "initialEditConfig": true,
+                "initialEditConfig": false,
                 "initialMoveConfig": true
               },
               "fields": {
-                "NAME": "groove"
+                "NAME": "beat"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "play_sounds_together",
+                    "movable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    }
+                  }
+                }
               }
             }
           ]
@@ -202,7 +247,7 @@
         "procedures": [
           {
             "id": "c^8.V/v,CyY5dTsQxr%6",
-            "name": "groove",
+            "name": "beat",
             "returnTypes": null
           }
         ]
@@ -239,6 +284,30 @@
           "rhythm_full",
           "driving_piano"
         ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "rosa_linn_snap/rhythm_full"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
       }
     },
     "name_suffix": "_final",
@@ -247,7 +316,8 @@
     "hint_prompt_attempts_threshold": "1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-11-27T16:40:42.570+00:00\",\"changed\":[\"cloned from \\\"music-jam-functions-verse\\\"\"],\"cloned_from\":\"music-jam-functions-verse\"},{\"changed_at\":\"2024-12-03 23:03:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 23:05:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:13:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:20:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:15:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:19:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:20:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 19:50:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 20:01:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 20:30:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:58:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 17:38:39 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:41:05 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:44:07 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:47:38 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 19:34:23 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 16:58:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 16:59:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 17:02:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 20:54:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-11-27T16:40:42.570+00:00\",\"changed\":[\"cloned from \\\"music-jam-functions-verse\\\"\"],\"cloned_from\":\"music-jam-functions-verse\"},{\"changed_at\":\"2024-12-03 23:03:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 23:05:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:13:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 20:20:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:15:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:19:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-04 21:20:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 19:50:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-09 20:01:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-13 20:30:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 22:58:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 17:38:39 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:41:05 +0000\",\"changed\":[\"long_instructions\",\"validations\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:44:07 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 17:47:38 +0000\",\"changed\":[\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 19:34:23 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 16:58:30 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 16:59:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-19 17:02:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-30 20:54:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-05 22:44:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-05 22:45:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-05 22:45:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-05 22:46:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

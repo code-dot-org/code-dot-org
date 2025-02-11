@@ -1,0 +1,70 @@
+name 'MLPLPLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL_prod_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pedagogical Approach: Use-Modify-Create  
+## What is Use-Modify-Create?
+
+* #### Three progressive stages to help students develop their programming skills
+* #### First, students use existing software.
+* #### Then, they modify this software to explore how changes affect outcomes.
+* #### Last, they create their own projects from scratch, applying their acquired skills to design and implement original software. 
+
+
+
+
+
+
+
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; font-size: 18px; margin-bottom: 10px;">
+        <div style="background-color: #D6EAF8; padding: 15px; border-radius: 10px; text-align: center; font-weight: bold; width: 120px;">
+            Use
+        </div>
+        <div style="width: 50px; text-align: center;">→</div>
+        <div style="background-color: #E8DAEF; padding: 15px; border-radius: 10px; text-align: center; width: 200px;">
+            Try some Code
+        </div>
+    </div>
+
+    <!-- Step 2: Modify -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; font-size: 18px; margin-bottom: 10px;">
+        <div style="background-color: #D6EAF8; padding: 15px; border-radius: 10px; text-align: center; font-weight: bold; width: 120px;">
+            Modify
+        </div>
+        <div style="width: 50px; text-align: center;">→</div>
+        <div style="background-color: #E8DAEF; padding: 15px; border-radius: 10px; text-align: center; width: 200px;">
+            Edit or Add Code
+        </div>
+    </div>
+
+    <!-- Step 3: Create -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px; font-size: 18px;">
+        <div style="background-color: #D6EAF8; padding: 15px; border-radius: 10px; text-align: center; font-weight: bold; width: 120px;">
+            Create
+        </div>
+        <div style="width: 50px; text-align: center;">→</div>
+        <div style="background-color: #E8DAEF; padding: 15px; border-radius: 10px; text-align: center; width: 200px;">
+            Create with Code
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+#### This method supports incremental learning, builds confidence, and mirrors real-world programming practices, making it an effective pedagogical strategy for teaching computer science.
+
+##Use-Modify-Create in Programming with Music Lab 
+####In the Programming with Music Lab module, students begin by <b>using</b> pre-created code.Then, they will practice coding music by <b>modifying</b> and building on existing code.To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to <b>create</b> a unique song. 
+
+
+
+<div style="clear:both"/>
+
+
+MARKDOWN

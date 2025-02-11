@@ -12,7 +12,7 @@ import moduleStyles from './mini-app-preview.module.scss';
 
 const MiniAppPreview: React.FunctionComponent = () => {
   const {config, labConfig} = useCodebridgeContext();
-  const isHorizontal = config.activeGridLayout === 'horizontal';
+  const isHorizontal = config.activeLayout === 'horizontal';
 
   const miniApp = labConfig?.miniApp?.name;
 

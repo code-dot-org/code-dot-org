@@ -60,7 +60,7 @@ export const getDefaultCodebridgeContext = () => {
       PreviewComponents: undefined,
       languageMapping: {},
       labeledGridLayouts: undefined,
-      activeGridLayout: undefined,
+      activeLayout: undefined,
       showFileBrowser: false,
       validMimeTypes: undefined,
     },

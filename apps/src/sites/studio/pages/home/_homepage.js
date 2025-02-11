@@ -88,7 +88,7 @@ function showHomepage() {
   ReactDOM.render(
     <Provider store={store}>
       <div>
-        {isTeacher && (
+        {isTeacher ? (
           <TeacherHomepage
             announcement={announcement}
             hocLaunch={homepageData.hocLaunch}
@@ -120,8 +120,7 @@ function showHomepage() {
             showIncubatorBanner={homepageData.showIncubatorBanner}
             currentUserId={homepageData.currentUserId}
           />
-        )}
-        {!isTeacher && (
+        ) : (
           <StudentHomepage
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}

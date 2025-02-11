@@ -1,0 +1,369 @@
+{
+  "script": {
+    "name": "musiclab-6-12-playground",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-02-05 22:05:19 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "musiclab-6-12-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Templates and Experiments",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "7cce43a7-4e44-45f4-b735-6ad7613287cc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "93e09deb-9a8e-4076-9879-44499b2283b1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Simple Mode Template"
+      },
+      "seeding_key": {
+        "activity_section.key": "93e09deb-9a8e-4076-9879-44499b2283b1",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
+    },
+    {
+      "key": "55e72162-65a3-4ed4-83dc-5cd7de556b76",
+      "position": 2,
+      "properties": {
+        "progression_name": "Advanced Mode Template"
+      },
+      "seeding_key": {
+        "activity_section.key": "55e72162-65a3-4ed4-83dc-5cd7de556b76",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
+    },
+    {
+      "key": "20657467-b8bd-42b3-a372-7f9f01cef27a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Simple Mode Libraries (Launch + Curriculum)"
+      },
+      "seeding_key": {
+        "activity_section.key": "20657467-b8bd-42b3-a372-7f9f01cef27a",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
+    },
+    {
+      "key": "162846c1-b39a-422d-b665-2030263277c4",
+      "position": 4,
+      "properties": {
+        "progression_name": "Toolbox Experiments"
+      },
+      "seeding_key": {
+        "activity_section.key": "162846c1-b39a-422d-b665-2030263277c4",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
+    },
+    {
+      "key": "714bff6c-48bb-461f-ac60-bf4420ecaa8f",
+      "position": 5,
+      "properties": {
+        "progression_name": "Drumeo Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "714bff6c-48bb-461f-ac60-bf4420ecaa8f",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Simple Mode Template"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "93e09deb-9a8e-4076-9879-44499b2283b1"
+      },
+      "level_keys": [
+        "music-lab-simple-template"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Advanced Mode Template"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-advanced-template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "55e72162-65a3-4ed4-83dc-5cd7de556b76"
+      },
+      "level_keys": [
+        "music-lab-advanced-template"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Simple Mode Libraries (Launch + Curriculum)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-testlibrary1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "20657467-b8bd-42b3-a372-7f9f01cef27a"
+      },
+      "level_keys": [
+        "music-lab-simple-testlibrary1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Simple Mode Libraries (Launch + Curriculum)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-testlibrary2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "20657467-b8bd-42b3-a372-7f9f01cef27a"
+      },
+      "level_keys": [
+        "music-lab-simple-testlibrary2"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Toolbox Experiments"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-toolbox-experiment1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "162846c1-b39a-422d-b665-2030263277c4"
+      },
+      "level_keys": [
+        "music-lab-simple-toolbox-experiment1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Drumeo Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-toolbox-experiment2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "714bff6c-48bb-461f-ac60-bf4420ecaa8f"
+      },
+      "level_keys": [
+        "music-lab-simple-toolbox-experiment2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-template",
+        "script_level.level_keys": [
+          "music-lab-simple-template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "93e09deb-9a8e-4076-9879-44499b2283b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-advanced-template",
+        "script_level.level_keys": [
+          "music-lab-advanced-template"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "55e72162-65a3-4ed4-83dc-5cd7de556b76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-testlibrary1",
+        "script_level.level_keys": [
+          "music-lab-simple-testlibrary1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "20657467-b8bd-42b3-a372-7f9f01cef27a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-testlibrary2",
+        "script_level.level_keys": [
+          "music-lab-simple-testlibrary2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "20657467-b8bd-42b3-a372-7f9f01cef27a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-toolbox-experiment1",
+        "script_level.level_keys": [
+          "music-lab-simple-toolbox-experiment1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "162846c1-b39a-422d-b665-2030263277c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-toolbox-experiment2",
+        "script_level.level_keys": [
+          "music-lab-simple-toolbox-experiment2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "714bff6c-48bb-461f-ac60-bf4420ecaa8f"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}
