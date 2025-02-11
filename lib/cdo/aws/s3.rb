@@ -249,8 +249,8 @@ module AWS
     # @return [Aws::S3::Types::CopyObjectOutput]
     # @raise [Aws::S3::Errors::ServiceError]
     def self.backup_object(source_bucket, source_object_key, destination_bucket, destination_object_prefix)
-      # `copy_object` uses REST internally, so encode Object keys for safe transport via HTTP/REST.
-      encoded_source_object_key = source_object_key.ascii_only? ? source_object_key : selective_encode(source_object_key)
+      # `copy_object` uses REST internally, so encode UTF-8 characters in Object Key for safe transport via HTTP/REST.
+      encoded_source_object_key = source_object_key.chars.map {|char| char.ascii_only? ? char : URI.encode_www_form_component(char)}.join
       create_client.copy_object(
         {
           bucket: destination_bucket,
@@ -404,16 +404,6 @@ module AWS
           return upload_log(File.basename(filename), file, options)
         end
       end
-    end
-    # Only encode non-ASCII characters in an Object Key for safe transport via REST by the S3 SDK to the S3 service.
-    private def selective_encode(key)
-      key.chars.map do |char|
-        if char.ascii_only?
-          char  # Leave ASCII characters as-is
-        else
-          URI.encode_www_form_component(char)  # Only encode non-ASCII
-        end
-      end.join
     end
   end
 end

@@ -135,16 +135,20 @@ begin
   file_contents = File.read(options[:log_filename])
   # Log what was backed up to source location.
   AWS::S3.upload_to_bucket(
-    bucket: options[:source_bucket],
-    key: "#{options[:source_prefix]}/#{options[:log_filename]}",
-    body: file_contents
+    options[:source_bucket],
+    # Begin filename with `_` so that it's more likely to be displayed at the beginning of the S3 Console listing.
+    "_#{options[:source_prefix]}/#{options[:log_filename]}",
+    file_contents
   )
+  CDO.log.info "[BACKUP S3 BUCKET] Uploaded backup log CSV #{options[:log_filename]} to source bucket/prefix."
   # Log what was backed up to destination location
   AWS::S3.upload_to_bucket(
-    bucket: options[:destination_bucket],
-    key: "#{options[:destination_prefix]}/#{options[:log_filename]}",
-    body: file_contents
+    options[:destination_bucket],
+    # Begin filename with `_` so that it's more likely to be displayed at the beginning of the S3 Console listing.
+    "_#{options[:destination_prefix]}/#{options[:log_filename]}",
+    file_contents
   )
+  CDO.log.info "[BACKUP S3 BUCKET] Uploaded backup log CSV #{options[:log_filename]} to destination bucket/prefix."
 rescue Aws::Errors::ServiceError, StandardError => exception
   CDO.log.error "[BACKUP S3 BUCKET] Error uploading backup CSV log to source/destination buckets: #{exception.message}"
 end
