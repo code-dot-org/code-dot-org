@@ -51,6 +51,9 @@ const Output: React.FunctionComponent<OutputProps> = ({
     containerRef: resizeContainerRef,
   });
 
+  const [adjustedMiniAppSize, setAdjustedMiniAppSize] =
+    useState<number>(miniAppSize);
+
   // When the width or height of the output is changed, re-fit the console to the
   // available space and resize the visualization if necessary.
   const handleResize = useCallback(
@@ -82,16 +85,24 @@ const Output: React.FunctionComponent<OutputProps> = ({
           (outputSize || 0) - miniAppSize
         );
         setConsoleSize(newConsoleSize);
+        let newMiniAppSize = miniAppSize;
+        if (outputSize) {
+          newMiniAppSize = Math.max(
+            Math.min(miniAppSize, outputSize - newConsoleSize),
+            MIN_MINI_APP_SIZE
+          );
+        }
+        setAdjustedMiniAppSize(newMiniAppSize);
 
         // In vertical mode, miniAppSize is the height of the mini app.
         // In horizontal mode, miniAppSize is the width of the mini app.
         const newHeight = isVertical
-          ? miniAppSize
+          ? newMiniAppSize
           : desiredHeight !== undefined
           ? desiredHeight
           : DEFAULT_MINI_APP_SIZE;
         const newWidth = !isVertical
-          ? miniAppSize
+          ? newMiniAppSize
           : desiredWidth !== undefined
           ? desiredWidth
           : DEFAULT_MINI_APP_SIZE;
@@ -160,8 +171,8 @@ const Output: React.FunctionComponent<OutputProps> = ({
   }
 
   const miniAppStyle = isVertical
-    ? {height: miniAppSize}
-    : {width: miniAppSize};
+    ? {height: adjustedMiniAppSize}
+    : {width: adjustedMiniAppSize};
 
   const consoleStyle = isVertical
     ? {height: consoleSize}
