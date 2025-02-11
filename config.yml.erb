@@ -387,10 +387,10 @@ optimize_webpack_assets: true
 
 optimize_rails_assets: true
 
-# Allows your local server to render non-English locales, defaults to false in development.
-# If false, choosing a locale other than English will have no effect.
-# Note: You may need to be in an incognito window to see changes
-# due to a difference in the language cookie between production and localhost.
+# Allows your local server to lazy load locales.
+lazy_load_i18n: false
+
+# (Deprecated: use +lazy_load_i18n+ config instead)
 load_locales:
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.
