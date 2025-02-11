@@ -596,17 +596,11 @@ export default class MusicBlocklyWorkspace {
       return;
     }
 
-    if (blockId) {
-      (this.workspace as GoogleBlockly.WorkspaceSvg)
-        .getBlockById(blockId)
-        ?.select();
-    } else {
-      (this.workspace as GoogleBlockly.WorkspaceSvg)
-        .getAllBlocks()
-        .forEach(block => {
-          block.unselect();
-        });
-    }
+    (this.workspace as GoogleBlockly.WorkspaceSvg)
+      .getAllBlocks()
+      .forEach(block => {
+        block.id === blockId ? block.select() : block.unselect();
+      });
   }
 
   getSelectedTriggerId(blockId: string) {

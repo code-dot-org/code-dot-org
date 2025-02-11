@@ -25,7 +25,8 @@
     background-color: var(--background-neutral-secondary);
   }
 
-  &-dark {
+  &-dark,
+  &-patternDark {
     background-color: var(--background-neutral-black-fixed);
   }
 
@@ -35,6 +36,10 @@
 
   &-brandLightSecondary {
     background-color: var(--background-brand-purple-extra-light);
+  }
+
+  &-patternPrimary {
+    background-color: var(--brand-teal-50);
   }
 }
 

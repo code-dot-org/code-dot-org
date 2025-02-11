@@ -19,8 +19,8 @@ jest.mock('@react-pdf/renderer', () => {
 });
 
 const DEFAULT_PROPS = {
-  lessonId: 1,
-  lessonName: 'test_lesson',
+  scriptId: 1,
+  scriptName: 'test_lesson',
   unitDisplayName: 'test unit name',
 };
 

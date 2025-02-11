@@ -12,7 +12,7 @@ Feature: Global Edition - Farsi MVP - Landing page
 
     # Section 1: Free foundational computer science curriculum
     Given I wait until element "section:nth-of-type(1) h1" contains text "منابع بنیادی رایگان برای علوم رایانه"
-    And the link reading "ایجاد حساب کاربری رایگان" within element "section:nth-of-type(1)" goes to "http://studio.code.org/users/sign_up"
+    And the link reading "ایجاد حساب کاربری رایگان" within element "section:nth-of-type(1)" goes to "http://studio.code.org/users/new_sign_up/account_type"
 
     # Section 2: Curriculum offerings students love
     Given I wait until element "section:nth-of-type(2) h2" contains text "پیشنهادات برنامه درسی موردعلاقه دانش‌آموزان"

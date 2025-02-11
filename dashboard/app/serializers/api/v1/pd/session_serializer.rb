@@ -15,7 +15,7 @@
 #
 
 class Api::V1::Pd::SessionSerializer < ActiveModel::Serializer
-  attributes :id, :start, :end, :time_zone, :code, :session_format, :show_link?, :attendance_count
+  attributes :id, :start, :end, :code, :session_format, :show_link?, :attendance_count
 
   def attendance_count
     Pd::Attendance.where(session: object).count

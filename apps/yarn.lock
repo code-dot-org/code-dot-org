@@ -10303,7 +10303,6 @@ __metadata:
     mocha: ^10.6.0
     mock-firmata: 0.2.0
     moment: ^2.29.4
-    moment-timezone: ^0.5.47
     object-fit-images: ^3.2.3
     papaparse: ^5.4.1
     path-browserify: ^1.0.1
@@ -20868,15 +20867,6 @@ es6-shim@latest:
   dependencies:
     board-io: ^3.0.5
   checksum: b6b95409b02f3e4d2248d34e80b1175870f6bfb34f4bd3764c31fef6e40915a1c5c7452d8fbd84731015721053ed37745953cc3601a377f1a100050a5332d103
-  languageName: node
-  linkType: hard
-
-"moment-timezone@npm:^0.5.47":
-  version: 0.5.47
-  resolution: "moment-timezone@npm:0.5.47"
-  dependencies:
-    moment: ^2.29.4
-  checksum: 6288a9d653b902bd913f1dca24426ad71e5a98cd98684139e3ed74e635289e6acde62450735364fd3758d6ac836a1eaab859c08d0252587a377192f25f0bda5a
   languageName: node
   linkType: hard
 
