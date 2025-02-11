@@ -60,6 +60,7 @@ class Pd::Workshop < ApplicationRecord
     'fee',
     'grades',
     'prereq',
+    'time_zone',
 
     # Allows a workshop to be associated with a third party
     # organization.
@@ -74,6 +75,8 @@ class Pd::Workshop < ApplicationRecord
     # can be set to be true or false from the UI
     'suppress_email'
   ]
+
+  before_validation :sanitize_time_zone
 
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
@@ -129,6 +132,10 @@ class Pd::Workshop < ApplicationRecord
 
   def virtual?
     sessions.any? {|session| session.session_format == "virtual"}
+  end
+
+  def sanitize_time_zone
+    self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : nil
   end
 
   # Whether enrollment in this workshop requires an application

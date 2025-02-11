@@ -33,10 +33,6 @@ class Pd::Session < ApplicationRecord
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: 'pd_workshop_id', optional: true
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: 'pd_session_id', dependent: :destroy
 
-  before_validation :set_default_time_zone
-
-  before_update :prevent_time_zone_change
-
   validates_presence_of :start, :end
   validate :starts_and_ends_on_the_same_day
   validate :starts_before_ends
@@ -62,22 +58,12 @@ class Pd::Session < ApplicationRecord
     end
   end
 
-  def set_default_time_zone
-    self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : 'UTC'
-  end
-
-  def prevent_time_zone_change
-    if time_zone_changed?
-      self.time_zone = time_zone_was # Revert to the original time_zone
-    end
-  end
-
   def start_time
-    start.in_time_zone(time_zone || 'UTC')
+    start.in_time_zone(workshop.time_zone || 'UTC')
   end
 
   def end_time
-    self.end.in_time_zone(time_zone || 'UTC')
+    self.end.in_time_zone(workshop.time_zone || 'UTC')
   end
 
   def formatted_date
@@ -85,8 +71,8 @@ class Pd::Session < ApplicationRecord
   end
 
   def tz_abbreviation
-    return '' if time_zone.blank?
-    ActiveSupport::TimeZone[time_zone].tzinfo.current_period.abbreviation.to_s
+    return '' if workshop.time_zone.blank?
+    ActiveSupport::TimeZone[workshop.time_zone].tzinfo.current_period.abbreviation.to_s
   end
 
   def formatted_date_with_start_and_end_times
