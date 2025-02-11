@@ -116,13 +116,36 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
         scaleMode,
         currentValue.instrument,
         MusicRegistry.player.getKey()
-      ),
+      ).sort((a, b) => b.note - a.note), // Sort descending
     [editorType, scaleMode, currentValue.instrument]
   );
 
-  displayNotes.sort((a, b) => b.note - a.note);
-
   const ticks = integers(lengthMeasures * 16, 1);
+
+  const RowLabel = (props: {name: string; note: number; i: number}) => {
+    return (
+      <button
+        type="button"
+        className={classNames(
+          editorType === 'drums'
+            ? styles.textLabel
+            : scaleMode === 'chromatic'
+            ? styles.keyLabel
+            : styles.label,
+          isBlackKey(props.note) && styles.blackKey
+        )}
+        onClick={() =>
+          MusicRegistry.player.previewNote(props.note, currentValue.instrument)
+        }
+      >
+        {editorType === 'drums'
+          ? props.name
+          : scaleMode === 'chromatic'
+          ? getPitchName(props.note)
+          : ((displayNotes.length - props.i - 1) % 7) + 1}
+      </button>
+    );
+  };
 
   return (
     <div className={styles.container}>
@@ -177,22 +200,7 @@ const SequenceEditor: React.FunctionComponent<SequenceEditorProps> = ({
         {displayNotes.map(({note, name}, i) => {
           return (
             <div className={styles.pitchRow} key={note}>
-              {editorType === 'drums' && (
-                <div className={styles.label}>{name}</div>
-              )}
-              {editorType === 'notes' && scaleMode === 'chromatic' && (
-                <KeyLabel note={note} />
-              )}
-              {editorType === 'notes' && scaleMode === 'simple' && (
-                <div
-                  className={classNames(
-                    styles['cell-simple'],
-                    styles.labelCell
-                  )}
-                >
-                  {((displayNotes.length - i - 1) % 7) + 1}
-                </div>
-              )}
+              <RowLabel name={name} note={note} i={i} />
               <div className={styles.cellRow}>
                 {ticks.map(tick => {
                   return (
@@ -260,18 +268,5 @@ function getInstruments(editorType: EditorType) {
   }
   return MusicLibrary.getInstance()?.instruments || [];
 }
-
-const KeyLabel: React.FunctionComponent<{note: number}> = ({note}) => {
-  return (
-    <div
-      className={classNames(
-        styles.keyLabel,
-        isBlackKey(note) && styles.blackKey
-      )}
-    >
-      {getPitchName(note)}
-    </div>
-  );
-};
 
 export default SequenceEditor;

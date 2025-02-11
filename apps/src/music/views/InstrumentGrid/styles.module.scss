@@ -34,6 +34,7 @@ $row-gap: 4px;
   gap: $row-gap;
   overflow-y: auto;
   padding-right: 16px;
+  padding-left: 4px;
 }
 
 .sequence-editor-drums {
@@ -43,7 +44,6 @@ $row-gap: 4px;
 
 .sequence-editor-simple {
   @extend %sequence-editor;
-  padding-left: 4px;
   max-height: ($cell-height + $row-gap) * 11; // show 8 notes plus a few extra
 }
 
@@ -59,12 +59,8 @@ $row-gap: 4px;
 
   @for $i from 1 through 22 {
     &:nth-child(#{$i}) {
-      .cell-simple {
-        &.labelCell,
-        &.activeCell,
-        &.activeCell:hover {
-          background-color: nth($colors-simple, (22 - $i) % 7 + 1);
-        }
+      .cell-simple.activeCell, .cell-simple.activeCell:hover, .label {
+        background-color: nth($colors-simple, (22 - $i) % 7 + 1);
       }
     }
   }
@@ -79,18 +75,6 @@ $row-gap: 4px;
       }
     }
   }
-}
-
-.label {
-  width: 100px;
-  display: flex;
-  align-items: center;
-}
-
-.labelCell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .cellRow {
@@ -141,13 +125,32 @@ $row-gap: 4px;
   }
 }
 
-.keyLabel {
-  width: 50px;
-  background-color: $neutral_light;
-  color: $neutral_dark;
+.label, %label {
+  @extend %cell;
+  font-size: 0.8125rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: $neutral_light;
+}
+
+.textLabel {
+  @extend %label;
+  width: 100px;
+  justify-content: flex-start;
+  background-color: transparent;
+  padding-left: 8px;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.keyLabel {
+  @extend %label;
+  width: 50px;
+  background-color: $neutral_light;
+  color: $neutral_dark;
   border-radius: 0 2px 2px 0;
 
   &.blackKey {
