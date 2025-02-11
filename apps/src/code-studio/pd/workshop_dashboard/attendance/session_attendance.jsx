@@ -134,15 +134,15 @@ export class SessionAttendance extends React.Component {
       this.setState({
         attendance: clonedAttendance,
       });
-
-      if (value.attended) {
-        analyticsReporter.sendEvent(EVENTS.WORKSHOP_ATTENDANCE_MARKED_EVENT, {
-          user_logged_own_attendance: false,
-          session_id: this.props.sessionId,
-        });
-      }
     }
     this.props.onSaved(value);
+
+    if (!value.error && value.attended) {
+      analyticsReporter.sendEvent(EVENTS.WORKSHOP_ATTENDANCE_MARKED_EVENT, {
+        user_logged_own_attendance: false,
+        session_id: this.props.sessionId,
+      });
+    }
   };
 
   render() {
