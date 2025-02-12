@@ -127,27 +127,32 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   const scrollRef = useRef<HTMLDivElement>(null);
   useInitialScroll(scrollRef, editorType, scaleMode, displayNotes.length);
 
+  const interfaceMode = editorType === 'drums' ? 'drums' : scaleMode;
+
   const RowLabel = (props: {name: string; note: number; i: number}) => {
+    const [style, label] = {
+      drums: [styles.textLabel, props.name],
+      simple: [styles.label, ((displayNotes.length - props.i - 1) % 7) + 1],
+      chromatic: [styles.keyLabel, getPitchName(props.note)],
+    }[interfaceMode];
+
     return (
       <button
         type="button"
-        className={classNames(
-          editorType === 'drums'
-            ? styles.textLabel
-            : scaleMode === 'chromatic'
-            ? styles.keyLabel
-            : styles.label,
-          isBlackKey(props.note) && styles.blackKey
-        )}
+        className={styles['cell-outer']}
         onClick={() =>
           MusicRegistry.player.previewNote(props.note, currentValue.instrument)
         }
       >
-        {editorType === 'drums'
-          ? props.name
-          : scaleMode === 'chromatic'
-          ? getPitchName(props.note)
-          : ((displayNotes.length - props.i - 1) % 7) + 1}
+        <div
+          className={classNames(
+            style,
+            isBlackKey(props.note) && styles.blackKey,
+            styles.innerCell
+          )}
+        >
+          {label}
+        </div>
       </button>
     );
   };
@@ -186,14 +191,8 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           <SegmentedButtons
             className={styles.flexAutoWidth}
             buttons={[
-              {
-                label: 'Best Notes',
-                value: 'simple',
-              },
-              {
-                label: 'All Notes',
-                value: 'chromatic',
-              },
+              {label: 'Best Notes', value: 'simple'},
+              {label: 'All Notes', value: 'chromatic'},
             ]}
             onChange={value => setScaleMode(value as ScaleMode)}
             selectedButtonValue={scaleMode}
@@ -202,17 +201,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         )}
       </div>
       <div
-        className={classNames(
-          styles[
-            `sequence-editor-${
-              editorType === 'drums'
-                ? 'drums'
-                : scaleMode === 'simple'
-                ? 'simple'
-                : 'chromatic'
-            }`
-          ]
-        )}
+        className={classNames(styles[`sequence-editor-${interfaceMode}`])}
         ref={scrollRef}
       >
         {displayNotes.map(({note, name}, i) => (
@@ -223,17 +212,23 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                 <Fragment key={tick}>
                   <button
                     type="button"
-                    className={classNames(
-                      editorType === 'drums'
-                        ? styles['cell-drums']
-                        : styles[`cell-${scaleMode}`],
-                      isSelected(note, tick) && styles.activeCell,
-                      currentPreviewTick === tick && styles.previewCell
-                    )}
+                    className={styles[`cell-outer-${interfaceMode}`]}
                     key={tick}
                     onClick={() => onClickCell(note, tick)}
-                  />
-                  {tick % 4 === 0 && <div /> /* Spacer */}
+                  >
+                    <div
+                      className={classNames(
+                        styles.innerCell,
+                        isSelected(note, tick) && styles.selected,
+                        currentPreviewTick === tick && styles.preview
+                      )}
+                    />
+                  </button>
+                  {
+                    tick % 4 === 0 && (
+                      <div className={styles.spacer} />
+                    ) /* Spacer */
+                  }
                 </Fragment>
               ))}
             </div>
