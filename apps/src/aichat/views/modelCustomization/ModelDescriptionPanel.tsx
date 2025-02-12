@@ -1,6 +1,6 @@
+import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
 import React, {useState} from 'react';
 
-import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import {BodyThreeText, StrongText} from '@cdo/apps/componentLibrary/typography';
 
 import aichatI18n from '../../locale';

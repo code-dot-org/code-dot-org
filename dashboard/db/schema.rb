@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_01_29_162309) do
+ActiveRecord::Schema.define(version: 2025_02_07_175343) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -192,6 +192,7 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.integer "storage_app_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "game_id"
     t.index ["storage_app_id"], name: "index_backpacks_on_storage_app_id", unique: true
     t.index ["user_id"], name: "index_backpacks_on_user_id", unique: true
   end
@@ -492,10 +493,7 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.integer "course_id", null: false
     t.integer "script_id", null: false
     t.integer "position", null: false
-    t.string "experiment_name", comment: "If present, the SingleTeacherExperiment with this name must be enabled in order for a teacher or their students to see this script."
-    t.integer "default_script_id", comment: "If present, indicates the default script which this script will replace when the corresponding experiment is enabled. Should be null for default scripts (those that show up without experiments)."
     t.index ["course_id"], name: "index_course_scripts_on_course_id"
-    t.index ["default_script_id"], name: "index_course_scripts_on_default_script_id"
     t.index ["script_id"], name: "index_course_scripts_on_script_id"
   end
 

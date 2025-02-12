@@ -1,0 +1,7 @@
+name 'PLStyleGuide_L1_Color4'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Placeholder for now
+MARKDOWN
