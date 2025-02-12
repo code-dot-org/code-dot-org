@@ -1,5 +1,5 @@
 export const marginBottomNoneToMDefinition = {
-  displayName: 'Bottom Margin',
+  displayName: 'Margin bottom',
   type: 'Text',
   defaultValue: 'xs',
   group: 'style',
