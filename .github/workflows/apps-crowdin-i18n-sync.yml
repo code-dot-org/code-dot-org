@@ -1,0 +1,60 @@
+name: Apps i18n Sync
+
+on:
+  push:
+    branches:
+      - staging
+    paths:
+      - "apps/i18n/**/en_us.json"
+  schedule:
+    - cron: '0 12 * * MON-FRI'  # Runs daily at 4 AM PST
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  sync_sources:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Upload source files to Crowdin
+        uses: crowdin/github-action@v2
+        with:
+          config: "apps/crowdin.yml"
+          upload_sources: true
+          upload_translations: false
+        env:
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+  download_translations:
+    runs-on: ubuntu-latest
+    needs: sync_sources
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Get current date
+        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Download translations from Crowdin
+        uses: crowdin/github-action@v2
+        with:
+          config: "apps/crowdin.yml"
+          upload_sources: false
+          download_translations: true
+          localization_branch_name: update-apps-translations-${{ env.DATE }}
+          create_pull_request: true
+          title: "i18n: update apps translations from Crowdin"
+          body: "This PR contains the latest apps translations from Crowdin."
+          pull_request_base_branch_name: staging
+          commit_message: "i18n: update apps translations from Crowdin"
+        env:
+          # Visit https://crowdin.com/settings#api-key to create this token
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+          # A classic GitHub Personal Access Token with the 'repo' scope selected (the user should have write access to the repository).
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          # A numeric ID, found at https://crowdin.com/project/<projectName>/tools/api
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}

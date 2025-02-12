@@ -1,0 +1,23 @@
+project_id: your_project_id
+api_token_env: CROWDIN_PERSONAL_TOKEN
+"base_path": "apps/i18n"
+"preserve_hierarchy": true
+
+# API Credentials must be loaded from a separate identity file. See
+# https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
+"api_key" : ""
+
+files: [
+  {
+    "source": "/**/en_us.json",
+    "translation": "/%original_path%/%locale_with_underscore%",
+    "ignore": [
+      "/calc/en_us.json",
+      "/eval/en_us.json",
+      "/netsim/en_us.json",
+      "/mlPlayground/en_us.json"
+      "/fish/en_us.json"
+    ],
+    "update_option" : "update_as_unapproved"
+  }
+]
