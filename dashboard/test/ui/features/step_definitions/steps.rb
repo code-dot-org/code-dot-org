@@ -1226,6 +1226,7 @@ def browser_request(url:, method: 'GET', headers: {}, body: nil, code: 200, trie
     }
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4) {
+        console.log(xhr.responseText);
         callback(JSON.stringify({
           status: xhr.status,
           response: xhr.responseText
