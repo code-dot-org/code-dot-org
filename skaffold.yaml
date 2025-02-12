@@ -15,7 +15,7 @@ build:
         - '**/*.json'
     custom:
       buildCommand: |
-        k8s/bin/buildx.sh -f k8s/docker/code-dot-org.dockerfile \
+        k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org.dockerfile \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
           --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
           --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC"
@@ -31,19 +31,19 @@ build:
       alias: CODE_DOT_ORG_STATIC
   - image: code-dot-org-core
     custom:
-      buildCommand: k8s/bin/buildx.sh -f k8s/docker/code-dot-org-core.dockerfile
+      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-core.dockerfile
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-core.dockerfile
   - image: code-dot-org-static
     custom:
-      buildCommand: k8s/bin/buildx.sh -f k8s/docker/code-dot-org-static.dockerfile
+      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-static.dockerfile
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-static.dockerfile
   - image: code-dot-org-db-seed
     custom:
-      buildCommand: k8s/bin/buildx.sh -f k8s/docker/code-dot-org-db-seed.dockerfile
+      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-db-seed.dockerfile
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-db-seed.dockerfile
