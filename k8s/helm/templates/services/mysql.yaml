@@ -43,7 +43,7 @@ spec:
           mountPath: /var/lib/mysql/
   volumeClaimTemplates:
   - metadata:
-      name: {{ include "cdo.fullname" (merge (dict "component" "mysql-data") .) }}
+      name: mysql-data
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
