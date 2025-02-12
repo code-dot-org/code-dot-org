@@ -27,8 +27,14 @@ const HorizontalLayout: React.FunctionComponent = () => {
   const [workspaceHeight, setWorkspaceHeight] = React.useState<
     number | undefined
   >(undefined);
+  const [infoPanelWidth, setInfoPanelWidth] = React.useState<number>(
+    INITIAL_INFO_PANEL_WIDTH
+  );
+  const [outputHeight, setOutputHeight] = React.useState<number>(
+    INITIAL_OUTPUT_HEIGHT
+  );
   const {
-    position: infoPanelWidth,
+    position: rawInfoPanelWidth,
     separatorProps: infoPanelSeparatorProps,
     isDragging: infoPanelDragging,
   } = useResizable({
@@ -37,7 +43,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
     min: MIN_LEFT_PANEL_WIDTH,
   });
   const {
-    position: outputHeight,
+    position: rawOutputHeight,
     separatorProps: outputSeparatorProps,
     isDragging: outputDragging,
   } = useResizable({
@@ -48,13 +54,20 @@ const HorizontalLayout: React.FunctionComponent = () => {
   });
 
   const adjustRightPanelWidth = useCallback(() => {
-    setRightPanelWidth(
-      Math.max(
-        window.innerWidth - infoPanelWidth - RESIZE_BAR_SIZE_PX,
-        MIN_RIGHT_PANEL_WIDTH
-      )
+    const newRightPanelWidth = Math.max(
+      window.innerWidth - rawInfoPanelWidth - RESIZE_BAR_SIZE_PX,
+      MIN_RIGHT_PANEL_WIDTH
     );
-  }, [infoPanelWidth]);
+    setRightPanelWidth(newRightPanelWidth);
+    const newInfoPanelWidth = Math.max(
+      Math.min(
+        rawInfoPanelWidth,
+        window.innerWidth - newRightPanelWidth - RESIZE_BAR_SIZE_PX
+      ),
+      MIN_LEFT_PANEL_WIDTH
+    );
+    setInfoPanelWidth(newInfoPanelWidth);
+  }, [rawInfoPanelWidth]);
 
   const throttledAdjustRightPanelWidth = useMemo(
     () => throttle(adjustRightPanelWidth, 30),
@@ -62,16 +75,26 @@ const HorizontalLayout: React.FunctionComponent = () => {
   );
 
   const adjustWorkspaceHeight = useCallback(() => {
-    setWorkspaceHeight(
-      Math.max(
-        window.innerHeight -
-          outputHeight -
-          RESIZE_BAR_SIZE_PX -
-          PANEL_TOP_COORDINATE,
-        MIN_EDITOR_HEIGHT
-      )
+    const newWorkspaceHeight = Math.max(
+      window.innerHeight -
+        rawOutputHeight -
+        RESIZE_BAR_SIZE_PX -
+        PANEL_TOP_COORDINATE,
+      MIN_EDITOR_HEIGHT
     );
-  }, [outputHeight]);
+    setWorkspaceHeight(newWorkspaceHeight);
+    const newOutputHeight = Math.max(
+      Math.min(
+        rawOutputHeight,
+        window.innerHeight -
+          newWorkspaceHeight -
+          RESIZE_BAR_SIZE_PX -
+          PANEL_TOP_COORDINATE
+      ),
+      MIN_OUTPUT_HEIGHT
+    );
+    setOutputHeight(newOutputHeight);
+  }, [rawOutputHeight]);
 
   const throttledAdjustWorkspaceHeight = useMemo(
     () => throttle(adjustWorkspaceHeight, 30),
@@ -83,7 +106,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
       throttle(() => {
         adjustRightPanelWidth();
         adjustWorkspaceHeight();
-      }, 10),
+      }, 30),
     [adjustRightPanelWidth, adjustWorkspaceHeight]
   );
 
@@ -104,27 +127,23 @@ const HorizontalLayout: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.layoutContainer}>
-      <InfoPanel style={{width: infoPanelWidth}} />
+      <InfoPanel
+        style={{width: infoPanelWidth}}
+        className={moduleStyles.flexShrink0}
+      />
       <ResizeBar
         isVertical={true}
         separatorProps={infoPanelSeparatorProps}
         isDragging={infoPanelDragging}
       />
       <div className={moduleStyles.flexColumn} style={{width: rightPanelWidth}}>
-        <Workspace
-          style={{height: workspaceHeight}}
-          className={moduleStyles.shrinkAndGrow}
-        />
+        <Workspace style={{height: workspaceHeight}} />
         <ResizeBar
           isVertical={false}
           separatorProps={outputSeparatorProps}
           isDragging={outputDragging}
         />
-        <Output
-          className={moduleStyles.shrinkAndGrow}
-          height={outputHeight}
-          width={rightPanelWidth}
-        />
+        <Output height={outputHeight} width={rightPanelWidth} />
       </div>
     </div>
   );
