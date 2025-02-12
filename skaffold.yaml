@@ -126,8 +126,11 @@ profiles:
 
 portForward:
 - resourceType: Service
-  resourceName: cdo-dashboard
+  resourceName: code-dot-org-dashboard
   port: 3000
 - resourceType: Service
-  resourceName: cdo-dashboard-mysql
+  resourceName: code-dot-org-mysql
   port: 3306
+- resourceType: Service
+  resourceName: code-dot-org-redis
+  port: 6379
