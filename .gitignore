@@ -106,4 +106,3 @@ npm-debug.log
 .pdm-python
 
 skaffold-build-tags.json
-skaffoldStorage/
