@@ -30,7 +30,7 @@ class Pd::Session < ApplicationRecord
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
-  belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: 'pd_workshop_id', optional: true, inverse_of: :sessions
+  belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: 'pd_workshop_id', optional: true
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: 'pd_session_id', dependent: :destroy
 
   validates_presence_of :start, :end
