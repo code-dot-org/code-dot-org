@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-24 22:35:38 UTC",
+    "serialized_at": "2025-02-11 22:24:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2687,6 +2687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci U2 Pre-Test_2024-pilot_pilot-2024"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -2709,6 +2712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L1_2024-pilot_pilot-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -2731,6 +2737,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L2_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2753,6 +2762,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L4_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2775,6 +2787,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L5_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2797,6 +2812,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L7_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2819,6 +2837,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L8_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2841,6 +2862,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-CFU_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2863,6 +2887,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L8Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2885,6 +2912,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L9Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2907,6 +2937,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L1_2024-pilot_pilot-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -2929,6 +2962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L2_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2951,6 +2987,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L3_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2973,6 +3012,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L4_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2995,6 +3037,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L6_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3017,6 +3062,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-CFU_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3039,6 +3087,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L7Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3061,6 +3112,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L8Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3083,6 +3137,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L9Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3105,6 +3162,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L1_2024-pilot_pilot-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3127,6 +3187,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L2_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3149,6 +3212,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L3_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3171,6 +3237,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L5_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3193,6 +3262,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-CFU_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3215,6 +3287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L6Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3237,6 +3312,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L7Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3259,6 +3337,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L8Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3281,6 +3362,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L9Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3303,6 +3387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L1_2024-pilot_pilot-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3325,6 +3412,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L2_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3347,6 +3437,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L3_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3369,6 +3462,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L4_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3391,6 +3487,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L6_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3413,6 +3512,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-CFU_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3435,6 +3537,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L7Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3457,6 +3562,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L8Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3479,6 +3587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L1_2024-pilot_pilot-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3501,6 +3612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L2_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3523,6 +3637,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L3_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3545,6 +3662,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L6_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3567,6 +3687,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L7_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3589,6 +3712,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L11_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3611,6 +3737,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-CFU_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3633,6 +3762,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L7Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3655,6 +3787,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L8Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3677,6 +3812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L1_2024-pilot_pilot-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3699,6 +3837,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L2_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3721,6 +3862,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L5_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3743,6 +3887,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L7_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3765,6 +3912,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L10_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3787,6 +3937,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-CFU_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3809,6 +3962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L7Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3831,6 +3987,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L8Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3853,6 +4012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L1_2024-pilot_pilot-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3875,6 +4037,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L2_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3897,6 +4062,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L4_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3919,6 +4087,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L7_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3941,6 +4112,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L10_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3963,6 +4137,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L12_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3985,6 +4162,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-CFU_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4007,6 +4187,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L8Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4029,6 +4212,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L9Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4051,6 +4237,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L10Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4073,6 +4262,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L1_2024-pilot_pilot-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -4095,6 +4287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L2_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4117,6 +4312,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L3_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4139,6 +4337,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L4_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4161,6 +4362,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-CFU_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4183,6 +4387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L6_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4205,6 +4412,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L7_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4227,6 +4437,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L8Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4249,6 +4462,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L1_2024-pilot_pilot-2024"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -4271,6 +4487,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L2_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4293,6 +4512,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L3_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4315,6 +4537,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L4_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4337,6 +4562,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L5_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4359,6 +4587,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L6_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4381,6 +4612,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-CFU_2024-pilot_pilot-2024"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4403,6 +4637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L8Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4425,6 +4662,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L9Prac_2024-pilot_pilot-2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4447,6 +4687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L11-L1_2024-pilot_pilot-2024"
+        ],
         "progression": "Data Project"
       },
       "bonus": false,
@@ -4469,6 +4712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci U2 Post-Test_2024-pilot_pilot-2024"
+        ],
         "progression": "Unit 2 Assessment"
       },
       "bonus": false,
@@ -5600,6 +5846,18 @@
       }
     },
     {
+      "name": "Data Science: Using Python",
+      "url": "https://www.youtube.com/watch?v=xkVwZEogksw",
+      "key": "data_science_using_python",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_using_python"
+      }
+    },
+    {
       "name": "Exploratory Data Analysis",
       "url": "https://docs.google.com/presentation/d/1NnZk4lfwSDAgtI30pc32mmFLol1GyB3I2w9E8qEiWIk/template/preview",
       "key": "exploratory_data_analysis",
@@ -5963,6 +6221,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Pandas",
         "resource.key": "us_gas_prices_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Python",
+        "resource.key": "data_science_using_python"
       }
     },
     {

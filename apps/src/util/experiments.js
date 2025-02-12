@@ -45,8 +45,6 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
-// Uses Google Blockly for a given user across labs/levels until the experiment is disabled
-experiments.GOOGLE_BLOCKLY = 'google_blockly';
 // Adds documentation links to block context menus in Sprite Lab (supported with Google Blockly only)
 experiments.SPRITE_LAB_DOCS = 'sl_docs';
 // Adds a keyboard navigation toggle to the workspace header in Google Blockly labs
@@ -63,8 +61,6 @@ experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 experiments.CSP_VALIDATION_VIA_AI = 'csp_validation_via_ai';
 // Allows users to view the new version of the teacher homepage
 experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
-// Allow use of input in python lab
-experiments.PYTHON_INPUT = 'python-input';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

@@ -14,8 +14,8 @@
       [
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 8,
+          "assetId": 303
         },
         {
           "tileType": 1,
@@ -374,6 +374,6 @@
     "thumbnail_url": "https://images.code.org/588e0949748ba9e9208ece1b336cad20-debug.png",
     "bubble_choice_description": "Your painter is hard at work, but something seems... off. You expected a nice pattern, but instead, the results are overlapping and messy. Can you figure out what’s going wrong and set things right?"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-29T03:54:27.601+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson8-level6\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson8-level6\"},{\"changed_at\":\"2025-01-29 03:55:38 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 03:56:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 04:06:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 04:08:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 04:10:37 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 04:10:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 04:15:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-04 01:56:08 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-29T03:54:27.601+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson8-level6\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson8-level6\"},{\"changed_at\":\"2025-01-29 03:55:38 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 03:56:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 04:06:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 04:08:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 04:10:37 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 04:10:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-29 04:15:32 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-04 01:56:08 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-04 17:09:32 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

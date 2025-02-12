@@ -108,12 +108,12 @@ export function extractNeighborhoodExceptionType(
   }
 }
 
-// This function parses the message string (example: '[PAINTER] PAINT {"color": "Blue"}') to a NeighborhoodSignal.
+// This function parses the message string (example: '[NEIGHBORHOOD] PAINT {"color": "Blue"}') to a NeighborhoodSignal.
 export function parseMessageToNeighborhoodSignal(
   message: string
 ): NeighborhoodSignal | null {
   /*
-    \[(\w+)]\ captures the signal type inside square brackets, e.g., PAINTER
+    \[(\w+)]\ captures the signal type inside square brackets, e.g., NEIGHBORHOOD
     \s+ matches one or more spaces
     ([^\s]+) captures the value, e.g., PAINT.
     (\{.*\})? optionally captures the detail json if it exists, e.g., {"color": "Blue"}

@@ -1,3 +1,4 @@
+import {updatePositionedElementStyles} from '@code-dot-org/component-library/common/helpers';
 import React, {
   useEffect,
   useRef,
@@ -7,8 +8,6 @@ import React, {
   HTMLAttributes,
 } from 'react';
 import {createPortal} from 'react-dom';
-
-import {updatePositionedElementStyles} from '@cdo/apps/componentLibrary/common/helpers';
 
 import Tooltip, {TooltipOverlay, TooltipProps} from './_Tooltip';
 

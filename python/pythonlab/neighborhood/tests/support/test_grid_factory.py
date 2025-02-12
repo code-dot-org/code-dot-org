@@ -10,20 +10,20 @@ def test_cannot_create_invalid_grid_from_string():
     grid_factory.create_grid_from_string('[[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}], [{"tileType":1,"value":0,"assetId":0}]]')
     assert False
   except NeighborhoodRuntimeException as e:
-    assert str(e) == "NeighborhoodRuntimeException: INVALID_GRID: Grid is not a square"
+    assert str(e) == "INVALID_GRID: Grid is not a square"
   # empty grid
   try:
     grid_factory.create_grid_from_string('[]')
     assert False
   except NeighborhoodRuntimeException as e: 
-    assert str(e) == "NeighborhoodRuntimeException: INVALID_GRID: Grid is empty"
+    assert str(e) == "INVALID_GRID: Grid is empty"
   # invalid configuration, missing a tile type
   invalid_grid = '[[{"tileType":1,"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}],[{"value":0,"assetId":0},{"tileType":1,"value":0,"assetId":0}]]'
   try:
     grid_factory.create_grid_from_string(invalid_grid)
     assert False
   except NeighborhoodRuntimeException as e:
-    assert str(e) == "NeighborhoodRuntimeException: INVALID_GRID"
+    assert str(e) == "INVALID_GRID"
 
 def test_can_create_valid_grid_from_string():
   grid = grid_factory.create_grid_from_string(SAMPLE_MAZE)

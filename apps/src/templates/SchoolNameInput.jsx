@@ -1,7 +1,7 @@
+import TextField from '@code-dot-org/component-library/textField';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import i18n from '@cdo/locale';
 
 export default function SchoolNameInput({

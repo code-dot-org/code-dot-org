@@ -9,4 +9,4 @@ class NeighborhoodRuntimeException(Exception):
 
     def __str__(self):
         message_str = f": {self.message}" if self.message else ""
-        return f"NeighborhoodRuntimeException: {self.key.value}{message_str}"
+        return f"{self.key.value}{message_str}"
