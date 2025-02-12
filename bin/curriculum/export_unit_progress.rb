@@ -29,6 +29,9 @@ OptionParser.new do |opts|
   opts.on('-f', "--offset OFFSET") do |offset|
     $options[:offset] = offset
   end
+  opts.on('-p', "--pretty-print") do
+    $options[:pretty] = true
+  end
 
   opts.on("-h", "--help", "Prints this help") do
     puts opts
@@ -211,7 +214,7 @@ def main
       row.delete('user_id')
 
       file.flock(File::LOCK_EX)
-      file.puts row.to_json
+      file.puts $options[:pretty] ? JSON.pretty_generate(row) : row.to_json
       file.flock(File::LOCK_UN)
     rescue => exception
       puts "Error processing source for channel #{row && row[:channel_id]}: #{exception.message}"
