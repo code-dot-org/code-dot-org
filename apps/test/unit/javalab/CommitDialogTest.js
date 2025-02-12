@@ -5,10 +5,10 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {UnconnectedCommitDialog as CommitDialog} from '@cdo/apps/javalab/CommitDialog';
 import CommitDialogBody from '@cdo/apps/javalab/CommitDialogBody';
 import CommitDialogFileRow from '@cdo/apps/javalab/CommitDialogFileRow';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import i18n from '@cdo/javalab/locale';
 
-import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('CommitDialog test', () => {

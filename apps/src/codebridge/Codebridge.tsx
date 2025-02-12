@@ -20,6 +20,8 @@ import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
 import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 import Workspace from './Workspace';
 import Output from './Workspace/Output';
@@ -147,6 +149,8 @@ export const Codebridge = React.memo(
       config.layoutComponents,
     ]);
 
+    const backpackApi = new BackpackClientApi('pythonlab', null);
+
     return (
       <CodebridgeContextProvider
         value={{
@@ -162,15 +166,17 @@ export const Codebridge = React.memo(
           sendConsoleInput,
         }}
       >
-        <div
-          className={classNames(
-            moduleStyles.codebridgeContainer,
-            innerLayout.className
-          )}
-          style={innerLayout.style}
-        >
-          {innerLayout.children}
-        </div>
+        <BackpackAPIContext.Provider value={backpackApi}>
+          <div
+            className={classNames(
+              moduleStyles.codebridgeContainer,
+              innerLayout.className
+            )}
+            style={innerLayout.style}
+          >
+            {innerLayout.children}
+          </div>
+        </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>
     );
   }
