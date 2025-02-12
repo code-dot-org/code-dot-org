@@ -6,6 +6,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import Console from '@cdo/apps/codebridge/Console/Console';
+import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
 import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
@@ -51,6 +52,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
     min: MIN_MINI_APP_SIZE,
     max: MAX_MINI_APP_SIZE,
     containerRef: resizeContainerRef,
+    onResizeStart: logOnResize,
   });
 
   const [adjustedMiniAppSize, setAdjustedMiniAppSize] =
