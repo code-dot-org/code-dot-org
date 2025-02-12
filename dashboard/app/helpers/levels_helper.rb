@@ -253,7 +253,8 @@ module LevelsHelper
     )
 
     # Enable backpack for levels with a backpack option (currently all non-standalone Javalab),
-    # and get the backpack channel token if it exists
+    # and get the backpack channel token if it exists.
+    # Backpack is used in lab2 apps also but app_options is only used by legacy labs.
     backpack_enabled = !!(@level.is_a?(Javalab) &&
       (ProjectsController::STANDALONE_PROJECTS["javalab"]["name"] != @level.name) &&
       (@user || current_user))
@@ -261,10 +262,8 @@ module LevelsHelper
     view_options(backpack_enabled: backpack_enabled)
 
     if backpack_enabled
-      # Backpack is used in lab2 apps also but app_options is only used by legacy labs, i.e., Javalab.
-      game_id = Game.by_name('Javalab')
       user_id = @user&.id || current_user&.id
-      backpack = Backpack.find_by(user_id: user_id, game_id: game_id)
+      backpack = Backpack.find_by(user_id: user_id, game_id: @level.game_id)
       view_options(backpack_channel: backpack&.channel)
     end
 
