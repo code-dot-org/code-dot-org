@@ -39,10 +39,3 @@ Feature: AI Differentiation Welcome - eyes
     And I see no difference for "after welcome"
 
     And I close my eyes
-
-
-
-
-
-
-
