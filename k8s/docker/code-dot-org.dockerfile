@@ -70,6 +70,10 @@ COPY --chown=${UID} \
   ./apps/eslint \
   ./apps/eslint/
 
+COPY --chown=${UID} \
+  ./frontend/packages/component-library/package.json \
+  ./frontend/packages/component-library/
+
 RUN \
   #
   # Instuct Docker to maintain a download cache for yarn packages
