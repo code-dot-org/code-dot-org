@@ -51,6 +51,10 @@ export const useFileRowOptions = (
   const {openConfirmDeleteFile, openMoveFilePrompt, openRenameFilePrompt} =
     usePrompts();
 
+  const handleSaveToBackpack = () => {
+    console.log('save to backpack');
+  };
+
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -91,6 +95,12 @@ export const useFileRowOptions = (
         iconName: 'trash',
         labelText: codebridgeI18n.deleteFile(),
         clickHandler: () => openConfirmDeleteFile({file}),
+      },
+      {
+        condition: !isLocked,
+        iconName: 'backpack',
+        labelText: 'Save to backpack',
+        clickHandler: () => handleSaveToBackpack(),
       },
     ],
     [
