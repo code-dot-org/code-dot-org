@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-01-22T22:22:53.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Set your Game World\r\n\r\nDo this: \r\n- Use a function with parameters to describe a game world. \r\n- User parameters like `name`, `setting`, and `main_challenge` to customize your world's attributes. ",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# create a describe_world() function\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzuj4wvKl/PYXtA1u/nVF1aH+PiG+QcWx\nt4Kz0GTg8y/twu2sS6dFQ1BVQk/7yjpNXawheE69p6lm9wvQwA5zXHKKZP9w\nV+BD5qcVvi1FQHP5WbWjMi8SZam9nhLd5Kv4yBGtIuBnkhag5McqmGixoBl7\nxaf7Dl/NBubMRTEAK2alhjl30cApUUbH5V2reqs/ArB7Cne2/IDO8JDZaOEk\nnyr3zwuieuQtx8vwvmymSU2cS1OAzx/7ovz2eqQRP2RVOTZETf4kzfNW96PL\nL0GIzen4Gfucwkl9yOZQiEdI8q8o68F7vccslfWy+Cgku7Z4X9FNA2hWtCSv\ns2u6keem7stnpN1cRlLfxuR/OVVZV2RRh2ozxBLxUfysf358QIqNkbf2JJa3\ngwKZj4EB1YXGyON8SPOb067t3t1z4l4NXWMcpjxuuRmcHiCVh9TAfgud2kzL\nZJwbYtPAzERtcYGX0arms865VdP+coNG0ia5FZ5nJkMDrmMmXTu4cYmTqWnv\noXujsz2FEwQtptICtjguLA8V92QTZph8wsLuL9Rd+GuXxHhDQRFmsYFZxYnu\nlW7D+SYRhYsnSfvhXeJFrx4OinwFATxDOKcUXfaF2rwIeBnPS12PvpL3A7ip\nA5yliDtDHusuaCIQ44NCawBWXrFZZcX2Ag6noJ1/EoJQQHZ2xjNl7/j3zmCl\nRMGMs1+vXFV3QHmb5ulk7+QPsWcQ5lcX/Og=\n",
+    "display_name": "Set your Game World",
+    "bubble_choice_description": "Where will your game take place? ",
+    "thumbnail_url": "https://images.code.org/f4436eba37d8ea7cda72f1829881de9f-Screen Shot 2025-01-22 at 2.55.18 PM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-22T22:22:53.668+00:00\",\"changed\":[\"cloned from \\\"python-intro-console-lesson7-choice-companion\\\"\"],\"cloned_from\":\"python-intro-console-lesson7-choice-companion\"},{\"changed_at\":\"2025-01-22 22:24:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:25:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-01-22 22:55:43 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Pythonlab>

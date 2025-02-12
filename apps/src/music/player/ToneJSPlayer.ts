@@ -21,7 +21,6 @@ import {SoundLoadCallbacks} from '../types';
 import {Effects} from './interfaces/Effects';
 import SoundCache from './SoundCache';
 import {
-  AudioPlayer,
   InstrumentData,
   PlayerEvent,
   SampleEvent,
@@ -32,12 +31,12 @@ import {generateEffectsKeyString} from './utils';
 const EMPTY_EFFECTS_KEY = '';
 
 /**
- * An {@link AudioPlayer} implementation using the Tone.js library.
+ * A player implementation using the Tone.js library.
  *
  * TODO:
  * - Sample sequences
  */
-class ToneJSPlayer implements AudioPlayer {
+class ToneJSPlayer {
   private samplers: {[instrument: string]: {[effectsKey: string]: Sampler}};
   private previewSamplers: {[instrument: string]: Sampler};
   private activePlayers: Source<SourceOptions>[];
@@ -67,10 +66,6 @@ class ToneJSPlayer implements AudioPlayer {
     this.loadingInstruments = {};
     this.currentSequencePreviewTimer = null;
     this.generateEffectBusses();
-  }
-
-  supportsSamplers(): boolean {
-    return true;
   }
 
   getCurrentPlaybackPosition(): number {
@@ -273,6 +268,8 @@ class ToneJSPlayer implements AudioPlayer {
     Transport.bpm.value = bpm;
     // We need to regenerate all effect busses when BPM changes as some effects (e.g. delay) are BPM-dependent.
     this.generateEffectBusses();
+    // We also need to regenerate samplers so that they connect themselves to the new effects busses.
+    this.samplers = {};
   }
 
   scheduleSample(sample: SampleEvent, onSampleStart: (id: string) => void) {

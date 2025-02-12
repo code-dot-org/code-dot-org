@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '3.0.5'
+ruby '>= 3.0', '< 3.5'
+# after pushing this fuzzy match thru chef, commit to make this be:
+# ruby '3.3.4'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
@@ -160,7 +162,7 @@ gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
 gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
-gem 'omniauth-facebook', '~> 4.0.0'
+gem 'omniauth-facebook', '~> 10.0.0'
 gem 'omniauth-google-oauth2', '~> 1.1.3'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 

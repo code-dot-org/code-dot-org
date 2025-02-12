@@ -111,6 +111,7 @@ class RegistrationsController < Devise::RegistrationsController
     @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
       {value: code, text: name}
     end
+    @redirect_url = session[:user_return_to] || home_path
 
     render 'finish_student_account'
   end
@@ -122,6 +123,8 @@ class RegistrationsController < Devise::RegistrationsController
     location = Geocoder.search(request.ip).try(:first)
     @country_code = location&.country_code.to_s.upcase
     @us_ip = ['US', 'RD'].include?(@country_code)
+    @redirect_url = session[:user_return_to] || home_path
+
     render 'finish_teacher_account'
   end
 
@@ -467,7 +470,7 @@ class RegistrationsController < Devise::RegistrationsController
     # Get the request location
     location = Geocoder.search(request.ip).try(:first)
     @country_code = location&.country_code.to_s.upcase
-    @is_usa = ['US', 'RD'].include?(@country_code)
+    @is_usa = Policies::User.in_usa?(@country_code)
 
     # A student is underage if they reside in a state with a CAP policy and are in the affected age range.
     underage = Policies::ChildAccount.underage?(current_user)
@@ -476,6 +479,7 @@ class RegistrationsController < Devise::RegistrationsController
     @student_in_lockout_flow = underage && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
 
     @personal_account_linking_enabled = Policies::ChildAccount.can_link_new_personal_account?(current_user) && !Policies::ChildAccount.partially_locked_out?(current_user)
+    @personal_account_linking_enabled = false if current_user.student? && (@is_usa && current_user.country_code.nil?)
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
     if underage || !Policies::ChildAccount.has_required_information?(current_user)

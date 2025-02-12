@@ -14,10 +14,11 @@
     end
 
     email ||= params[:email]
-    new_account_url = users_finish_sign_up_path
+    finish_sign_up_url = user_type == User::TYPE_TEACHER ? users_new_sign_up_finish_teacher_account_path : users_new_sign_up_finish_student_account_path
     script_data[:lti_provider] = lti_provider
     script_data[:lti_provider_name] = Policies::Lti::LMS_PLATFORMS[lti_provider.to_sym][:name]
-    script_data[:new_account_url] = new_account_url
+    script_data[:finish_sign_up_url] = finish_sign_up_url
+    script_data[:new_account_url] = CDO.studio_url(lti_v1_account_linking_new_account_path, CDO.default_scheme)
     script_data[:existing_account_url] = CDO.studio_url(lti_v1_account_linking_finish_link_path, CDO.default_scheme)
     script_data[:continue_account_url] = session[:user_return_to] || home_path
     script_data[:email] = email

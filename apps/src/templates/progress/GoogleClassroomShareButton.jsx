@@ -4,7 +4,6 @@ import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/metrics/firehose';
-import {isIE11} from '@cdo/apps/util/browser-detector';
 import i18n from '@cdo/locale';
 
 // used to give each instance a unique id to use for callback names
@@ -33,16 +32,10 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
     this.onShareStart = this.onShareStart.bind(this);
     this.onShareComplete = this.onShareComplete.bind(this);
     this.logEvent = this.logEvent.bind(this);
-
-    // For metrics in IE.
-    this.blur = this.blur.bind(this);
-    this.mouseOver = this.mouseOver.bind(this);
-    this.mouseOut = this.mouseOut.bind(this);
   }
 
   instanceId = componentCount++;
   buttonRef = null;
-  iframeMouseOver = false;
   state = {
     buttonMounted: false,
   };
@@ -54,13 +47,6 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
     // Use unique callback names since we're adding to the global namespace
     window[this.onShareStartName()] = this.onShareStart;
     window[this.onShareCompleteName()] = this.onShareComplete;
-
-    // The button callbacks are not supported in IE, so in IE we use click
-    // events to record analytics. The button is rendered in an iframe though,
-    // so to detect the click events we need to use the 'blur' event.
-    if (isIE11) {
-      window.addEventListener('blur', this.blur);
-    }
   }
 
   componentDidUpdate(prevProps) {
@@ -83,21 +69,6 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
 
   onShareComplete() {
     this.logEvent('share_completed');
-  }
-
-  blur() {
-    if (this.iframeMouseOver) {
-      // This is the only event we will capture in IE.
-      this.logEvent('button_clicked');
-    }
-  }
-
-  mouseOver() {
-    this.iframeMouseOver = true;
-  }
-
-  mouseOut() {
-    this.iframeMouseOver = false;
   }
 
   logEvent(event) {
@@ -129,11 +100,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
   render() {
     return (
       <span style={styles.container}>
-        <span
-          ref={elem => (this.buttonRef = elem)}
-          onMouseOver={this.mouseOver}
-          onMouseOut={this.mouseOut}
-        />
+        <span ref={elem => (this.buttonRef = elem)} />
         {this.state.buttonMounted && (
           <span style={styles.label}>{i18n.shareToGoogleClassroom()}</span>
         )}

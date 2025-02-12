@@ -33,6 +33,9 @@ export function buildSchoolData({
     country === US_COUNTRY_CODE &&
     schoolId === NonSchoolOptions.NO_SCHOOL_SETTING
   ) {
+    if (!schoolZip) {
+      return;
+    }
     return {
       country,
       school_type: NonSchoolOptions.NO_SCHOOL_SETTING,
@@ -40,7 +43,7 @@ export function buildSchoolData({
     };
   }
 
-  if (country && country !== SELECT_COUNTRY) {
+  if (country && country !== SELECT_COUNTRY && schoolName) {
     return {
       country,
       school_name: schoolName,

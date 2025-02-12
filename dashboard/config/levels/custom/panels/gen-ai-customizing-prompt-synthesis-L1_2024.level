@@ -10,30 +10,30 @@
     "panels": [
       {
         "text": "# Chain of Reasoning\nYou can ask the chatbot to follow specific steps when generating it's responses.",
-        "imageUrl": "https://images.code.org/303e965d8b414c05bf7396f0a02cf170-chain-panel-1.png",
+        "imageUrl": "https://images.code.org/c8f0a38dc673b7942dfdd652f4c38672-Slide14.PNG",
         "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
       },
       {
         "text": "# Chain of Reasoning\nChain of Reasoning can improve chatbot responses to be more strategic or methodical",
-        "imageUrl": "https://images.code.org/daae42d480d82ddeea1bd601075eeb1e-chain-panel-2.png",
+        "imageUrl": "https://images.code.org/a131340796ae0660f840970fbe7bcc6e-Slide15.PNG",
         "key": "gen-ai-customizing-prompt-synthesis-L1-d8c2782a-9aae-4e43-a315-a0c4c0a3ce75",
         "layout": "text-bottom-right"
       },
       {
         "text": "# Chain of Reasoning\nYou can also use these steps to have the chatbot ask the user questions as part of its goal",
-        "imageUrl": "https://images.code.org/b93f36c3dd581950ad8956d06939c956-chain-panel-3.png",
+        "imageUrl": "https://images.code.org/40185479f46807b26128cdaef8af730f-Slide16.PNG",
         "key": "gen-ai-customizing-prompt-synthesis-L1-6926d39c-6edd-449b-bcb3-51992e618d5e",
         "layout": "text-top-left"
       },
       {
         "text": "# Chain of Reasoning\nThe chatbot will use this user input when generating its responses",
-        "imageUrl": "https://images.code.org/6ed7854242cb207f1a758b4e4ea871c6-chain-panel-4.png",
+        "imageUrl": "https://images.code.org/fd9faf54012cee008ef5c56274272794-Slide17.PNG",
         "key": "gen-ai-customizing-prompt-synthesis-L1-febf6bf9-3ddb-4509-8dd4-697a2293be2e"
       }
     ],
     "name_suffix": "_2024",
-    "offer_browser_tts": "false"
+    "offer_browser_tts": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:45.233+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L1\"},{\"changed_at\":\"2024-10-27 18:32:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:45.233+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L1\"},{\"changed_at\":\"2024-10-27 18:32:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-01-10 21:36:15 +0000\",\"changed\":[\"panels\",\"offer_browser_tts\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

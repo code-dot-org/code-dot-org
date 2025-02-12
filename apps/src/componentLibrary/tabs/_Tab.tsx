@@ -1,3 +1,12 @@
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  TooltipProps,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -6,13 +15,6 @@ import React, {
   useEffect,
   MutableRefObject,
 } from 'react';
-
-import CloseButton from '@cdo/apps/componentLibrary/closeButton';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import FontAwesomeV6Icon, {
-  FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {TooltipProps, WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
 import moduleStyles from './tabs.module.scss';
 

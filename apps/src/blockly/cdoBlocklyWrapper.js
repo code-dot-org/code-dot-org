@@ -20,6 +20,7 @@ import {
   LOOP_HIGHLIGHT,
   getCodeBlocks,
   handleCodeGenerationFailure,
+  reportCdoBlocklyUsage,
   strip,
 } from './utils';
 
@@ -32,6 +33,7 @@ import {
  */
 const BlocklyWrapper = function (blocklyInstance) {
   this.version = BlocklyVersion.CDO;
+  reportCdoBlocklyUsage(MetricEvent.CDO_BLOCKLY_INITIALIZED);
   this.blockly_ = blocklyInstance;
   this.wrapReadOnlyProperty = function (propertyName) {
     Object.defineProperty(this, propertyName, {

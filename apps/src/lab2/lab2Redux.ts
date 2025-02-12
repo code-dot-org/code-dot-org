@@ -36,7 +36,6 @@ import {RootState} from '../types/redux';
 import HttpClient, {NetworkError} from '../util/HttpClient';
 import {AppDispatch} from '../util/reduxHooks';
 
-import {START_SOURCES} from './constants';
 import Lab2Registry from './Lab2Registry';
 import {
   getInitialValidationState,
@@ -81,11 +80,14 @@ export interface LabState {
   validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
+  // Script id for the current level.
+  scriptId: number | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
   // If this lab is blocked because abuse score >= 15.
   isBlocked: boolean | undefined;
   overrideValidations: Validation[] | undefined;
+  permissions: string[];
 }
 
 const initialState: LabState = {
@@ -96,9 +98,11 @@ const initialState: LabState = {
   initialSources: undefined,
   validationState: getInitialValidationState(),
   levelProperties: undefined,
+  scriptId: undefined,
   isShareView: undefined,
   isBlocked: undefined,
   overrideValidations: undefined,
+  permissions: [],
 };
 
 // Thunks
@@ -141,6 +145,8 @@ export const setUpWithLevel = createAsyncThunk<
       payload.levelPropertiesPath
     );
 
+    thunkAPI.dispatch(setScriptId(payload.scriptId));
+
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .updateProperties({appName: levelProperties.appName});
@@ -174,11 +180,11 @@ export const setUpWithLevel = createAsyncThunk<
       return;
     }
 
-    // If we are in start mode or are editing or viewing exemplars,
+    // If we are in a block edit mode or are editing or viewing exemplars,
     // we don't use a channel id.
     // We can skip creating a project manager and just set the level data.
-    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-    if (isStartMode || isViewingExemplar || isEditingExemplar) {
+    const isEditMode = !!getAppOptionsEditBlocks();
+    if (isEditMode || isViewingExemplar || isEditingExemplar) {
       setProjectAndLevelData(
         {levelProperties},
         thunkAPI.signal.aborted,
@@ -314,12 +320,11 @@ export const isLabLoading = (state: {lab: LabState}) =>
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isEditMode = !!getAppOptionsEditBlocks();
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
 
-  // We are always in edit mode if we are in start or editing exemplar mode.
-  // Both of these modes have no channel.
-  if (isStartMode || isEditingExemplarMode) {
+  // Exemplar and block edit modes do not have a channel.
+  if (isEditMode || isEditingExemplarMode) {
     return false;
   }
 
@@ -385,6 +390,9 @@ const labSlice = createSlice({
     setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
     },
+    setScriptId(state, action: PayloadAction<number | undefined>) {
+      state.scriptId = action.payload;
+    },
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
     },
@@ -414,6 +422,9 @@ const labSlice = createSlice({
       action: PayloadAction<Validation[] | undefined>
     ) {
       state.overrideValidations = action.payload;
+    },
+    setPermissions(state, action: PayloadAction<string[]>) {
+      state.permissions = action.payload;
     },
   },
   extraReducers: builder => {
@@ -633,7 +644,9 @@ export const {
   setValidationState,
   setIsShareView,
   setOverrideValidations,
+  setScriptId,
   onLevelChange,
+  setPermissions,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

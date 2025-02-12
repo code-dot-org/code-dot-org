@@ -10,7 +10,9 @@ function getAbsolutePath(value: string) {
 }
 
 const config: StorybookConfig = {
-  stories: ['../../../packages/dsco/src/**/stories/*.story.@(ts|tsx)'],
+  stories: [
+    '../../../packages/component-library/src/**/stories/*.story.@(ts|tsx)',
+  ],
   addons: [
     getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@storybook/addon-essentials'),
@@ -47,6 +49,21 @@ const config: StorybookConfig = {
               },
             ],
           },
+          {
+            test: /\.css$/,
+            use: [
+              'style-loader',
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: {
+                    auto: true,
+                    localIdentName: '[name]__[local]--[hash:base64:5]',
+                  },
+                },
+              },
+            ],
+          },
         ],
       },
     },
@@ -55,6 +72,7 @@ const config: StorybookConfig = {
     name: getAbsolutePath('@storybook/react-webpack5'),
     options: {},
   },
+  staticDirs: ['./styles'],
   swc: () => ({
     // Removes the need to import React by specifying we are targeting React 17+ using the React jsx transform
     // See: https://storybook.js.org/docs/8.5/configure/integration/compilers#the-swc-compiler-doesnt-work-with-react
@@ -70,7 +88,7 @@ const config: StorybookConfig = {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@': resolve(__dirname, '../../../packages/dsco/src'),
+        '@': resolve(__dirname, '../../../packages/component-library/src'),
       };
     }
 

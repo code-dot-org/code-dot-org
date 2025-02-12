@@ -1,8 +1,8 @@
+import RadioButton from '@code-dot-org/component-library/radioButton';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import RadioButton from '@cdo/apps/componentLibrary/radioButton/RadioButton';
 import {
   BodyThreeText,
   StrongText,

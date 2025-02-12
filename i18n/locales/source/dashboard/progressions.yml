@@ -5,6 +5,7 @@ en:
       '"If/Else" with the Bee': '"If/Else" with the Bee'
       "(Optional) Eliza Widget": "(Optional) Eliza Widget"
       "(Optional) GAN Guess Widget": "(Optional) GAN Guess Widget"
+      "(Optional) User Story #3: Alex Martinez": "(Optional) User Story #3: Alex Martinez"
       8-Bit Binary Number Widget: 8-Bit Binary Number Widget
       AI Lab and Isaac's Data: AI Lab and Isaac's Data
       AI Lab and Kim's Data: AI Lab and Kim's Data
@@ -14,6 +15,7 @@ en:
       'AI: Impact on Society - Video': 'AI: Impact on Society - Video'
       'AI: Training Data & Bias - Video': 'AI: Training Data & Bias - Video'
       Accelerometer Events: Accelerometer Events
+      Accurate Information: Accurate Information
       Add Content and HTML: Add Content and HTML
       Add Content and Structure to Your Page: Add Content and Structure to Your Page
       Add Movement: Add Movement
@@ -60,6 +62,7 @@ en:
       Assessment: Assessment
       Assessment Level: Assessment Level
       Attribution: Attribution
+      Audience & Delivery: Audience & Delivery
       Back and Forth: Back and Forth
       Balance an Ecosystem: Balance an Ecosystem
       Basic Conditionals: Basic Conditionals
@@ -104,6 +107,7 @@ en:
       'Career Explorations: The Sports Industry': 'Career Explorations: The Sports Industry'
       'Career Spotlight: Creative Technologist': 'Career Spotlight: Creative Technologist'
       'Career Spotlight: Healthcare': 'Career Spotlight: Healthcare'
+      Chain of Reasoning: Chain of Reasoning
       Challenge: Challenge
       Challenge Levels: Challenge Levels
       Challenge/Practice: Challenge/Practice
@@ -123,6 +127,7 @@ en:
       Check For Understanding: Check For Understanding
       Check Your Work: Check Your Work
       Check for Understanding: Check for Understanding
+      Check-In: Check-In
       Check-In Survey: Check-In Survey
       Checking for a Winner: Checking for a Winner
       Choice: Choice
@@ -181,6 +186,7 @@ en:
       Creative Commons Search: Creative Commons Search
       Creativity + Code with Event-based Programs: Creativity + Code with Event-based Programs
       Cropping Widget: Cropping Widget
+      Current Information: Current Information
       Custom notes & beats: Custom notes & beats
       Customize: Customize
       Customize Your App: Customize Your App
@@ -251,7 +257,9 @@ en:
       'Exploration: Sample Apps': 'Exploration: Sample Apps'
       'Exploration: Sample Programs': 'Exploration: Sample Programs'
       'Exploration: Sample Project': 'Exploration: Sample Project'
+      Explore: Explore
       Explore HTML: Explore HTML
+      Explore a Chatbot: Explore a Chatbot
       Explore a Digital Book Cover Example: Explore a Digital Book Cover Example
       Explore!: Explore!
       Exploring CS in Entertainment: Exploring CS in Entertainment
@@ -297,6 +305,7 @@ en:
       Getters and Setters: Getters and Setters
       Getting Loopy - Student Handout: Getting Loopy - Student Handout
       Getting Properties: Getting Properties
+      Giving Examples: Giving Examples
       Graph Paper Programming - Student Resources: Graph Paper Programming - Student Resources
       Graph Paper Programming - Unplugged Activity: Graph Paper Programming - Unplugged Activity
       Graph Paper Programming - Video: Graph Paper Programming - Video
@@ -328,6 +337,7 @@ en:
       Improve Your Game: Improve Your Game
       Improved Shoe Recommender: Improved Shoe Recommender
       Incorporate Feedback: Incorporate Feedback
+      Initial Scenario: Initial Scenario
       Innovation Research: Innovation Research
       Input Examples: Input Examples
       Input with If-Else: Input with If-Else
@@ -355,6 +365,7 @@ en:
       Introduction to Variables: Introduction to Variables
       Introduction to Variables - Part 1: Introduction to Variables - Part 1
       Investigate: Investigate
+      Investigating Hallucinations: Investigating Hallucinations
       Isaac's Survey Data: Isaac's Survey Data
       Iteration and Parameters: Iteration and Parameters
       Jam Session: Jam Session
@@ -382,12 +393,14 @@ en:
       Looking for Patterns: Looking for Patterns
       Looping: Looping
       Loops with the Artist: Loops with the Artist
+      Make: Make
       Make Dancer & Dance Move: Make Dancer & Dance Move
       Make Your Sprites: Make Your Sprites
       Make a Prediction: Make a Prediction
       Make an Interactive Card: Make an Interactive Card
       Make it Interactive: Make it Interactive
       Make it Your Own: Make it Your Own
+      Making Decisions: Making Decisions
       Making Music: Making Music
       Making Scenes: Making Scenes
       Making Songs: Making Songs
@@ -423,6 +436,9 @@ en:
       'Mini-project: Jorge the Dog': 'Mini-project: Jorge the Dog'
       'Mini-project: Sticker Art': 'Mini-project: Sticker Art'
       'Mini-project: Sticker Design': 'Mini-project: Sticker Design'
+      Model Card: Model Card
+      Model, Temperature, and Prompt: Model, Temperature, and Prompt
+      Modify: Modify
       Modify simulation variables: Modify simulation variables
       Modifying Arrays: Modifying Arrays
       Modifying and Creating Arrays: Modifying and Creating Arrays
@@ -538,6 +554,7 @@ en:
       Representing Images: Representing Images
       Responding to Board Events: Responding to Board Events
       Responding to User Input: Responding to User Input
+      Retrieval: Retrieval
       Review: Review
       Review - Choice Level: Review - Choice Level
       Review Shape Blocks: Review Shape Blocks
@@ -552,6 +569,7 @@ en:
       Revise Sprite Lab Project: Revise Sprite Lab Project
       Revisiting the Counter Pattern: Revisiting the Counter Pattern
       Robot Doodle: Robot Doodle
+      Role & Tone: Role & Tone
       Run a simulation: Run a simulation
       Safari App: Safari App
       Safari Model: Safari Model
@@ -587,6 +605,7 @@ en:
       Sharing Your Poem: Sharing Your Poem
       Shoe Recommendation Survey: Shoe Recommendation Survey
       Shoe Recommender: Shoe Recommender
+      Show What You Know: Show What You Know
       Side Scroller: Side Scroller
       Side Scroller Example: Side Scroller Example
       Simple Circuits: Simple Circuits
@@ -604,6 +623,7 @@ en:
       Songwriting - Functions Unplugged Activity: Songwriting - Functions Unplugged Activity
       'Songwriting - Functions Video ': 'Songwriting - Functions Video '
       Songwriting - Student Resources: Songwriting - Student Resources
+      Specialized Information: Specialized Information
       Speed it Up, Slow it Down: Speed it Up, Slow it Down
       Sprite Interactions: Sprite Interactions
       Sprite Interactions Review: Sprite Interactions Review
@@ -617,6 +637,8 @@ en:
       Sprites and the Draw Loop: Sprites and the Draw Loop
       Star Chaser: Star Chaser
       Star Quilts Video: Star Quilts Video
+      'Step 4: Create your Chatbot': 'Step 4: Create your Chatbot'
+      'Step 5: Make a Model Card': 'Step 5: Make a Model Card'
       Student Post-Survey: Student Post-Survey
       Student Pre-Survey: Student Pre-Survey
       Styling Text: Styling Text
@@ -627,6 +649,7 @@ en:
       Teachable Machine: Teachable Machine
       Teaching and Learning Strategies: Teaching and Learning Strategies
       'Technique: Frequency Analysis': 'Technique: Frequency Analysis'
+      Temperature: Temperature
       Terminology Recap: Terminology Recap
       Text Compression: Text Compression
       The Accelerometer: The Accelerometer
@@ -664,12 +687,16 @@ en:
       Upload Your Images: Upload Your Images
       Use AI: Use AI
       User Interface: User Interface
+      "User Story #1: Sarah Thompson": "User Story #1: Sarah Thompson"
+      "User Story #2: Janet Lee": "User Story #2: Janet Lee"
+      User Testing: User Testing
       Using Accelerometer Events: Using Accelerometer Events
       Using Arrays: Using Arrays
       Using Getters and Setters: Using Getters and Setters
       Using HTML Tags: Using HTML Tags
       Using Random Numbers: Using Random Numbers
       Using Training Data: Using Training Data
+      Using a System Prompt: Using a System Prompt
       Using the Grid: Using the Grid
       Using the LED: Using the LED
       Using the Repeat Block: Using the Repeat Block
@@ -824,6 +851,7 @@ en:
       Written Voice Simulator Widget: Written Voice Simulator Widget
       'You Choose: Improve Your App': 'You Choose: Improve Your App'
       'You Choose: Restaurant Recommendations': 'You Choose: Restaurant Recommendations'
+      You Decide!: You Decide!
       Your Personal Website: Your Personal Website
       Your Team Project: Your Team Project
       Zoo Predictions: Zoo Predictions

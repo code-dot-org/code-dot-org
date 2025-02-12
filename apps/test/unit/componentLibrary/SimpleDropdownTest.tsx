@@ -1,9 +1,8 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, {useState, ChangeEvent} from 'react';
 import '@testing-library/jest-dom';
-
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
 describe('Design System - Dropdown Select Component', () => {
   const renderDropdown = (

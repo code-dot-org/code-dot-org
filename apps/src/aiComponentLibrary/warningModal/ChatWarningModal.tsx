@@ -1,6 +1,6 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import React from 'react';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {
   BodyTwoText,
   Heading3,
