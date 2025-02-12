@@ -78,7 +78,6 @@ Resources:
         # Eventually some of these (at least production) should be
         # in their own profile, but for now simple wins:
         - Namespace: infra
-        - Namespace: argocd
         - Namespace: kube-system
 
   # # staging namespace
@@ -134,22 +133,6 @@ Resources:
   #       - !Ref PrivateSubnet1
   #       - !Ref PrivateSubnet2
   #
-  # # Fargate profile for ArgoCD to run on AWS Fargate
-  # ArgoCD:
-  #   Type: AWS::EKS::FargateProfile
-  #   Properties:
-  #     ClusterName: !Ref EKSCluster
-  #     FargateProfileName: argocd
-  #     PodExecutionRoleArn: !GetAtt EKSFargatePodExecutionRole.Arn
-  #     Subnets:
-  #       - !Ref PrivateSubnet1
-  #       - !Ref PrivateSubnet2
-  #     Selectors:
-  #       - Namespace: argocd
-  #   # DependsOn forces profiles to be deployed sequentially, otherwise they try
-  #   # in parallel (which fargate doesn't allow) and the second one times out:
-  #   DependsOn: DefaultFargateProfile
-
 
   # === IAM Roles for EKS & Fargate ===
   # IAM role allowing EKS to manage cluster operations
