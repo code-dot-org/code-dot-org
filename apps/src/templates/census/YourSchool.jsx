@@ -10,10 +10,7 @@ import Notification, {
 } from '../../sharedComponents/Notification';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 
-import {
-  UnconnectedCensusForm as CensusForm,
-  censusFormPrefillDataShape,
-} from './CensusForm';
+import {CensusForm} from './CensusForm';
 import CensusMap from './CensusMap';
 import YourSchoolResources from './YourSchoolResources';
 
@@ -23,7 +20,17 @@ class YourSchool extends Component {
     alertHeading: PropTypes.string,
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
-    prefillData: censusFormPrefillDataShape,
+    prefillData: PropTypes.shape({
+      userName: PropTypes.string,
+      userEmail: PropTypes.string,
+      isTeacher: PropTypes.bool,
+      schoolCountry: PropTypes.string,
+      schoolId: PropTypes.string,
+      schoolType: PropTypes.string,
+      schoolName: PropTypes.string,
+      schoolState: PropTypes.string,
+      schoolZip: PropTypes.string,
+    }),
     hideMap: PropTypes.bool,
     currentCensusYear: PropTypes.number,
     teacherApplicationMode: PropTypes.string,

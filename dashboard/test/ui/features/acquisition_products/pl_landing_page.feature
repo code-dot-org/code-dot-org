@@ -119,14 +119,7 @@ Feature: Professional Learning landing page
     And the href of selector "a:contains(Start professional learning courses)" contains "/educate/professional-development-online"
 
     # Starts a self-paced PL course
-    Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
-    And I wait until element "a[aria-label='Level 3 Lesson Instructor In Training Levels']" is visible
-    Then I click selector "a[aria-label='Level 3 Lesson Instructor In Training Levels']"
-    Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/3"
-    And I wait until element "a:contains(Submit)" is visible
-    Then I click selector "a:contains(Submit)"
-    Then I wait until I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/4"
-    And I wait until element "a:contains(Submit)" is visible
+    When I start a self-paced PL course
     Then I am on "http://studio.code.org/my-professional-learning"
 
     # Sees Self-Paced Professional Learning Courses table

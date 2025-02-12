@@ -69,7 +69,7 @@ const defaultConfig: ConfigType = {
   ],
 
   labeledGridLayouts,
-  activeGridLayout: 'horizontal',
+  activeLayout: 'horizontal',
   showFileBrowser: true,
 };
 

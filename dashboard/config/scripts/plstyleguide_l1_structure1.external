@@ -1,0 +1,11 @@
+name 'PLStyleGuide_L1_Structure1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Designing on a Grid
+
+<div style="text-align:center;">
+    <img src="https://images.code.org/f33cc2206a56e5b19aae256a5294a6d6-image-1739308416310.png" width="500" style="display:block;margin:auto; border:0.5px solid black;">
+</div>
+MARKDOWN

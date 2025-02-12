@@ -1138,6 +1138,25 @@ class UnitTest < ActiveSupport::TestCase
     end
   end
 
+  test 'summarize_course_versions for versioned single-unit course' do
+    versioned_course_offering = create(:course_offering, key: 'versioned-single-unit-course', display_name: 'versioned-single-unit-course')
+
+    # Create courses
+    versioned_single_unit_course25 = create(:single_unit_course, name: 'versioned-single-unit-course-2025', family_name: 'versioned-single-unit-course', version_year: '2025', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    versioned_single_unit_course26 = create(:single_unit_course, name: 'versioned-single-unit-course-2026', family_name: 'versioned-single-unit-course', version_year: '2026', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+
+    # Create course versions
+    create(:course_version, :with_unit_group, key: '2025', display_name: '2025', course_offering: versioned_course_offering, content_root: versioned_single_unit_course25)
+    create(:course_version, :with_unit_group, key: '2026', display_name: '2026', course_offering: versioned_course_offering, content_root: versioned_single_unit_course26)
+
+    single_unit = versioned_single_unit_course25.default_units.first
+
+    UnitGroup.any_instance.expects(:summarize_course_versions).once.returns(versioned_single_unit_course25.course_version&.course_offering&.course_versions)
+    course_versions = single_unit.summarize_course_versions(create(:teacher))
+    puts course_versions.inspect
+    assert_equal 2, course_versions.count
+  end
+
   test 'summarize excludes unlaunched versions' do
     teacher = create(:teacher)
     foo17 = create(

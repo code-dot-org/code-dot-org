@@ -15,16 +15,16 @@ import {
   OnRunFunction,
   SendConsoleInputFunction,
 } from '@codebridge/types';
-import React, {useEffect, useReducer, useRef} from 'react';
+import classNames from 'classnames';
+import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
 import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import Workspace from './Workspace';
 import Output from './Workspace/Output';
-import WorkspaceAndOutput from './Workspace/WorkspaceAndOutput';
 
-import moduleStyles from './styles/cdoIDE.module.scss';
+import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
 
 type CodebridgeProps = {
@@ -70,43 +70,82 @@ export const Codebridge = React.memo(
       }
     }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
-    const ComponentMap = {
-      'file-browser': FileBrowser,
-      'side-bar': SideBar,
-      'file-preview': FilePreview,
-      'info-panel': config.Instructions || InfoPanel,
-      workspace: Workspace,
-      output: Output,
-      'workspace-and-output': WorkspaceAndOutput,
-    };
-
-    let gridLayout: string;
-    let gridLayoutRows: string;
-    let gridLayoutColumns: string;
-    if (
-      config.gridLayout &&
-      config.gridLayoutRows &&
-      config.gridLayoutColumns
-    ) {
-      gridLayout = config.gridLayout;
-      gridLayoutRows = config.gridLayoutRows;
-      gridLayoutColumns = config.gridLayoutColumns;
-    } else if (config.labeledGridLayouts && config.activeGridLayout) {
-      const labeledLayout = config.labeledGridLayouts[config.activeGridLayout];
-      gridLayout = labeledLayout.gridLayout;
-      gridLayoutRows = labeledLayout.gridLayoutRows;
-      gridLayoutColumns = labeledLayout.gridLayoutColumns;
-    } else {
-      throw new Error('Cannot render codebridge - no layout provided');
-    }
-    // gridLayout is a css string that defines the components in the grid layout.
-    // In order to find which components are in the grid layout, we remove all quotes
-    // from the string and tokenize it.
-    const gridLayoutKeys = gridLayout
-      .trim()
-      .replaceAll(`"`, '')
-      .split(' ')
-      .map(key => key.trim());
+    const innerLayout = useMemo(() => {
+      let currentLayout = config.activeLayout;
+      if (!currentLayout) {
+        currentLayout = 'horizontal';
+      }
+      if (config.layoutComponents) {
+        // If we were provided layout components, use them directly.
+        return {
+          children: config.layoutComponents[currentLayout],
+          style: undefined,
+          className: undefined,
+        };
+      } else {
+        // Otherwise, get the components from the grid layout.
+        const ComponentMap = {
+          'file-browser': FileBrowser,
+          'side-bar': SideBar,
+          'file-preview': FilePreview,
+          'info-panel': config.Instructions || InfoPanel,
+          workspace: Workspace,
+          output: Output,
+        };
+        let gridLayout: string;
+        let gridLayoutRows: string;
+        let gridLayoutColumns: string;
+        if (
+          config.gridLayout &&
+          config.gridLayoutRows &&
+          config.gridLayoutColumns
+        ) {
+          gridLayout = config.gridLayout;
+          gridLayoutRows = config.gridLayoutRows;
+          gridLayoutColumns = config.gridLayoutColumns;
+        } else if (config.labeledGridLayouts && config.activeLayout) {
+          const labeledLayout = config.labeledGridLayouts[config.activeLayout];
+          gridLayout = labeledLayout.gridLayout;
+          gridLayoutRows = labeledLayout.gridLayoutRows;
+          gridLayoutColumns = labeledLayout.gridLayoutColumns;
+        } else {
+          throw new Error('Cannot render codebridge - no layout provided');
+        }
+        // gridLayout is a css string that defines the components in the grid layout.
+        // In order to find which components are in the grid layout, we remove all quotes
+        // from the string and tokenize it.
+        const gridLayoutKeys = gridLayout
+          .trim()
+          .replaceAll(`"`, '')
+          .split(' ')
+          .map(key => key.trim());
+        const children = (
+          Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>
+        )
+          .filter(key => gridLayoutKeys.includes(key))
+          .map(key => {
+            const Component = ComponentMap[key];
+            return <Component key={key} />;
+          });
+        return {
+          children,
+          style: {
+            gridTemplateAreas: gridLayout,
+            gridTemplateRows: gridLayoutRows,
+            gridTemplateColumns: gridLayoutColumns,
+          },
+          className: moduleStyles.codebridgeGridContainer,
+        };
+      }
+    }, [
+      config.Instructions,
+      config.activeLayout,
+      config.gridLayout,
+      config.gridLayoutColumns,
+      config.gridLayoutRows,
+      config.labeledGridLayouts,
+      config.layoutComponents,
+    ]);
 
     return (
       <CodebridgeContextProvider
@@ -124,21 +163,13 @@ export const Codebridge = React.memo(
         }}
       >
         <div
-          className={moduleStyles['cdoide-container']}
-          style={{
-            gridTemplateAreas: gridLayout,
-            gridTemplateRows: gridLayoutRows,
-            gridTemplateColumns: gridLayoutColumns,
-          }}
+          className={classNames(
+            moduleStyles.codebridgeContainer,
+            innerLayout.className
+          )}
+          style={innerLayout.style}
         >
-          {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
-            .filter(key => gridLayoutKeys.includes(key))
-            .map(key => {
-              const Component = ComponentMap[key];
-              return <Component key={key} />;
-            })}
-
-          {/*<Search />*/}
+          {innerLayout.children}
         </div>
       </CodebridgeContextProvider>
     );

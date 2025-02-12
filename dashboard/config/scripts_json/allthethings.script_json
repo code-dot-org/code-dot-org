@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-22 18:09:32 UTC",
+    "serialized_at": "2025-02-05 08:34:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -765,6 +765,7 @@
       "has_lesson_plan": true,
       "relative_position": 46,
       "properties": {
+        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-49",
@@ -6729,6 +6730,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {

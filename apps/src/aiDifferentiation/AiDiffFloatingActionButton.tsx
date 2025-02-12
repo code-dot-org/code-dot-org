@@ -19,14 +19,16 @@ import style from './ai-differentiation.module.scss';
  */
 
 interface AiDiffFloatingActionButtonProps {
-  lessonId: number;
-  lessonName: string;
+  context: string;
+  scriptId: number;
+  scriptName: string;
   unitDisplayName: string;
 }
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
-  lessonId,
-  lessonName,
+  context,
+  scriptId,
+  scriptName,
   unitDisplayName,
 }) => {
   const sessionStorageKey = 'AiDiffFabOpenStateKey';
@@ -48,8 +50,9 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
 
   const handleClick = () => {
     const eventData = {
-      lessonId: lessonId,
-      lessonName: lessonName,
+      aiDiffChatContext: context,
+      scriptId: scriptId,
+      scriptName: scriptName,
       unitName: unitDisplayName,
     };
     const eventName = isOpen
@@ -90,9 +93,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       </div>
       <AiDiffContainer
         open={isOpen}
+        context={context}
         closeTutor={handleClick}
-        lessonId={lessonId}
-        lessonName={lessonName}
+        scriptId={scriptId}
+        scriptName={scriptName}
         unitDisplayName={unitDisplayName}
       />
     </div>
