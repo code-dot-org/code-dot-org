@@ -85,9 +85,7 @@ const TeacherNavigationBar: React.FC<{
     );
   }
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    showAITutorTab &&
-    selectedSection &&
-    selectedSection.courseVersionName.includes('csa')
+    showAITutorTab && selectedSection?.courseVersionName?.includes('csa')
       ? [
           'progress',
           'assessments',
