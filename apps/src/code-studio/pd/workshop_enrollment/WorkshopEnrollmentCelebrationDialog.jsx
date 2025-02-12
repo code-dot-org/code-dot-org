@@ -41,8 +41,8 @@ const zeroPad = value => {
 const generateDateText = session => {
   const date = new Date(session.start);
   return `${
-    MonthNames[date.getMonth()]
-  } ${date.getDate()}, ${date.getFullYear()}`;
+    MonthNames[date.getUTCMonth()]
+  } ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
 };
 
 const generateTimeText = session => {
@@ -50,14 +50,16 @@ const generateTimeText = session => {
   const end = new Date(session.end);
 
   const startTimeText = start
-    .toLocaleString('utc', {
+    .toLocaleString('en-US', {
+      timeZone: 'utc',
       hour: 'numeric',
       minute: 'numeric',
       hour12: true,
     })
     .replaceAll(' ', '');
   const endTimeText = end
-    .toLocaleString('utc', {
+    .toLocaleString('en-US', {
+      timeZone: 'utc',
       hour: 'numeric',
       minute: 'numeric',
       hour12: true,
@@ -84,14 +86,14 @@ export const buildAppleCalendarLink = (
     const end = new Date(session.end);
     // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
     // as January, so the month needs to be offset by 1.
-    const date = `${start.getFullYear()}${zeroPad(
-      start.getMonth() + 1
-    )}${zeroPad(start.getDate())}`;
-    const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
-      start.getMinutes()
+    const date = `${start.getUTCFullYear()}${zeroPad(
+      start.getUTCMonth() + 1
+    )}${zeroPad(start.getUTCDate())}`;
+    const startTime = `${date}T${zeroPad(start.getUTCHours())}${zeroPad(
+      start.getUTCMinutes()
     )}00`;
-    const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
-      end.getMinutes()
+    const endTime = `${date}T${zeroPad(end.getUTCHours())}${zeroPad(
+      end.getUTCMinutes()
     )}00`;
 
     icsFileContent.push(
@@ -124,14 +126,14 @@ export const buildGoogleCalendarLink = (
   const end = new Date(session.end);
   // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
   // as January, so the month needs to be offset by 1.
-  const date = `${start.getFullYear()}${zeroPad(start.getMonth() + 1)}${zeroPad(
-    start.getDate()
-  )}`;
-  const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
-    start.getMinutes()
+  const date = `${start.getUTCFullYear()}${zeroPad(
+    start.getUTCMonth() + 1
+  )}${zeroPad(start.getUTCDate())}`;
+  const startTime = `${date}T${zeroPad(start.getUTCHours())}${zeroPad(
+    start.getUTCMinutes()
   )}00`;
-  const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
-    end.getMinutes()
+  const endTime = `${date}T${zeroPad(end.getUTCHours())}${zeroPad(
+    end.getUTCMinutes()
   )}00`;
 
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
@@ -150,14 +152,14 @@ export const buildOutlookCalendarLink = (
   const end = new Date(session.end);
   // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
   // as January, so the month needs to be offset by 1.
-  const date = `${start.getFullYear()}-${zeroPad(
-    start.getMonth() + 1
-  )}-${zeroPad(start.getDate())}`;
-  const startTime = `${date}T${zeroPad(start.getHours())}:${zeroPad(
-    start.getMinutes()
+  const date = `${start.getUTCFullYear()}-${zeroPad(
+    start.getUTCMonth() + 1
+  )}-${zeroPad(start.getUTCDate())}`;
+  const startTime = `${date}T${zeroPad(start.getUTCHours())}:${zeroPad(
+    start.getUTCMinutes()
   )}:00`;
-  const endTime = `${date}T${zeroPad(end.getHours())}:${zeroPad(
-    end.getMinutes()
+  const endTime = `${date}T${zeroPad(end.getUTCHours())}:${zeroPad(
+    end.getUTCMinutes()
   )}:00`;
 
   return `https://outlook.live.com/calendar/action/compose?rru=addevent&subject=${encodeURIComponent(

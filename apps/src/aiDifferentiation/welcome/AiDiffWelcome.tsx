@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
 import {
@@ -18,7 +19,6 @@ import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
-import {Button} from '../../componentLibrary/button';
 import AiDiffChat, {
   EXAMPLE_PROMPT,
   EXPLAIN_CONCEPT_PROMPT,
@@ -122,6 +122,25 @@ const getStartedPage = (onClick: () => void) => {
           onClick={onClick}
           id="uitest-ai-diff-get-started"
           text="Get Started"
+        />
+      </div>
+    </div>
+  );
+};
+
+const progressBarHeader = (percentage: number, onBack: () => void) => {
+  return (
+    <div className={style.progressBarHeader}>
+      <button className={style.headerBackButton} type="button" onClick={onBack}>
+        <FontAwesomeV6Icon
+          iconName="arrow-left"
+          className={style.headerBackIcon}
+        />
+      </button>
+      <div className={style.progressBar}>
+        <div
+          className={style.progressBarFill}
+          style={{width: `${percentage}%`}}
         />
       </div>
     </div>
