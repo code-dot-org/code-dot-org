@@ -83,7 +83,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
       throttle(() => {
         adjustRightPanelWidth();
         adjustWorkspaceHeight();
-      }, 30),
+      }, 10),
     [adjustRightPanelWidth, adjustWorkspaceHeight]
   );
 
