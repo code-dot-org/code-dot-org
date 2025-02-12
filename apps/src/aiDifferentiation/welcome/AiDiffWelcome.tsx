@@ -111,12 +111,8 @@ const getStartedPage = (onClick: () => void) => {
             className={style.botScanning}
             alt={'AI Teaching Assistant'}
           />
-          <Heading1 className={style.getStartedTitle}>
-            AI Teaching Assistant
-          </Heading1>
-          <BodyOneText className={style.getStartedSubtitle}>
-            Empowering teachers. Enhancing learning.
-          </BodyOneText>
+          <Heading1>AI Teaching Assistant</Heading1>
+          <BodyOneText>Empowering teachers. Enhancing learning.</BodyOneText>
         </div>
         <Button
           onClick={onClick}
