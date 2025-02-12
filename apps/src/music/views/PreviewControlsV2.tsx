@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -10,18 +11,20 @@ import moduleStyles from './preview-controls.module.scss';
 const PreviewControlsV2: React.FunctionComponent<
   PreviewButtonProps & ClearButtonProps
 > = props => (
-  <div className={moduleStyles.controlsRow}>
+  <div className={classNames(moduleStyles.controlsRow, moduleStyles.v2)}>
     <PreviewButton {...props} />
     <ClearButton {...props} />
   </div>
 );
 
 interface ClearButtonProps {
+  enabled: boolean;
   onClickClear: () => void;
   cancelPreviews: () => void;
 }
 
 const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
+  enabled,
   onClickClear,
   cancelPreviews,
 }) => {
@@ -31,10 +34,13 @@ const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
   }, [cancelPreviews, onClickClear]);
   return (
     <Button
+      color={'white'}
+      type="secondary"
       onClick={onClick}
       isIconOnly={true}
       icon={{iconName: 'ban'}}
       size="s"
+      disabled={!enabled}
     />
   );
 };
@@ -62,6 +68,8 @@ const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
 
   return (
     <Button
+      color={'white'}
+      type="secondary"
       onClick={onClick}
       isIconOnly={true}
       icon={{iconName: isPlayingPreview ? 'stop' : 'play'}}

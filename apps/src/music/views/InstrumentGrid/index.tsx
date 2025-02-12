@@ -4,6 +4,7 @@ import React, {
   useCallback,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react';
 
@@ -16,6 +17,7 @@ import {getPitchName, isBlackKey} from '../../utils/Notes';
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControlsV2 from '../PreviewControlsV2';
 
+import {useInitialScroll} from './useInitialScroll';
 import {getDisplayNotes, getInstruments, integers} from './util';
 
 import styles from './styles.module.scss';
@@ -122,6 +124,9 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
   const ticks = integers(lengthMeasures * 16, 1);
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+  useInitialScroll(scrollRef, editorType, scaleMode, displayNotes.length);
+
   const RowLabel = (props: {name: string; note: number; i: number}) => {
     return (
       <button
@@ -150,38 +155,50 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   return (
     <div className={styles.container} data-theme="Dark">
       <div className={styles.controlRow}>
-        <SimpleDropdown
-          items={instruments.map(instrument => ({
-            value: instrument.id,
-            text: instrument.name,
-          }))}
-          onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
-            setCurrentValue({...currentValue, instrument: event.target.value});
-          }}
-          size="s"
-          name="instrument"
-          labelText="Instrument"
-          isLabelVisible={false}
-          selectedValue={currentValue.instrument}
-        />
+        <div className={styles.left}>
+          <SimpleDropdown
+            className={styles.flexAutoWidth}
+            items={instruments.map(instrument => ({
+              value: instrument.id,
+              text: instrument.name,
+            }))}
+            onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
+              setCurrentValue({
+                ...currentValue,
+                instrument: event.target.value,
+              });
+            }}
+            size="s"
+            name="instrument"
+            labelText="Instrument"
+            isLabelVisible={false}
+            selectedValue={currentValue.instrument}
+          />
+          <PreviewControlsV2
+            enabled={currentValue.events.length > 0 && !isLoading}
+            playPreview={startPreview}
+            onClickClear={() => setCurrentValue({...currentValue, events: []})}
+            cancelPreviews={stopPreview}
+            isPlayingPreview={currentPreviewTick > 0}
+          />
+        </div>
         {editorType === 'notes' && (
-          <div className={styles.scaleModeToggle}>
-            <SegmentedButtons
-              buttons={[
-                {
-                  label: 'Best Notes',
-                  value: 'simple',
-                },
-                {
-                  label: 'All Notes',
-                  value: 'chromatic',
-                },
-              ]}
-              onChange={value => setScaleMode(value as ScaleMode)}
-              selectedButtonValue={scaleMode}
-              size="xs"
-            />
-          </div>
+          <SegmentedButtons
+            className={styles.flexAutoWidth}
+            buttons={[
+              {
+                label: 'Best Notes',
+                value: 'simple',
+              },
+              {
+                label: 'All Notes',
+                value: 'chromatic',
+              },
+            ]}
+            onChange={value => setScaleMode(value as ScaleMode)}
+            selectedButtonValue={scaleMode}
+            size="xs"
+          />
         )}
       </div>
       <div
@@ -196,6 +213,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
             }`
           ]
         )}
+        ref={scrollRef}
       >
         {displayNotes.map(({note, name}, i) => (
           <div className={styles.pitchRow} key={note}>
@@ -222,13 +240,6 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           </div>
         ))}
       </div>
-      <PreviewControlsV2
-        enabled={currentValue.events.length > 0 && !isLoading}
-        playPreview={startPreview}
-        onClickClear={() => setCurrentValue({...currentValue, events: []})}
-        cancelPreviews={stopPreview}
-        isPlayingPreview={currentPreviewTick > 0}
-      />
       <LoadingOverlay show={isLoading} />
     </div>
   );

@@ -25,7 +25,7 @@ export function getDisplayNotes(
   }
   let noteValues;
   if (scaleMode === 'chromatic') {
-    noteValues = integers(DISPLAY_OCTAVES * 12, START_OCTAVE * 12);
+    noteValues = integers(DISPLAY_OCTAVES * 12 + 1, START_OCTAVE * 12);
   } else {
     noteValues = getNotesInKey(rootKey, START_OCTAVE, DISPLAY_OCTAVES);
   }
