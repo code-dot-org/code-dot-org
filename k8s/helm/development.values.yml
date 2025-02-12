@@ -1,4 +1,4 @@
-environment: development
+RAILS_ENV: development
 services:
   redis:
     enabled: true

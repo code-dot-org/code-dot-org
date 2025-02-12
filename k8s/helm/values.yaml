@@ -6,7 +6,7 @@ image: code-dot-org:latest
 command: ["bin/dashboard-server"]
 
 # Override to set RAILS_ENV
-environment:
+RAILS_ENV:
 
 locals.yml:
 
@@ -22,8 +22,10 @@ services:
   mysql:
     enabled: false
 
-# Match the USERNAME, UID and GID args in the docker image (note this)
-# is overridden to root in skaffold.yaml due to a bug in skaffold sync
+# These should match the docker image's USERNAME, UID and GID args
+#
+# NOTE: these currently have no effect because they are overridden to root
+# in skaffold.yaml due to a bug in skaffold sync
 user:
   username: code-dot-org
   uid: 1000
