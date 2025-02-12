@@ -56,17 +56,6 @@ Dockerfiles are found in `k8s/*.dockerfile`, note the .dockerignore files that a
 what's included in each image. The key issue is not to be sending 20GBs to the docker daemon when
 you build, that takes foooooorever and then each `skaffold dev` suddenly takes 2minutes.
 
-### Technology Selection
-
-
-Continuous Deployment
-- ArgoCD: if we decide to deploy with a GitOps workflow, we'll use ArgoCD.
-
-Skaffold
-
-- Pometheus
-- Grafana
-
 # Setting up a prod-like cluster
 
 1. Create a cloudformation stack by uploading k8s/cloudformation/cdo-k8s.yaml in the AWS console
