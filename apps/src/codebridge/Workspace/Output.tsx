@@ -37,6 +37,8 @@ const Output: React.FunctionComponent<OutputProps> = ({
     width,
   };
   const resizeContainerRef = useRef<HTMLDivElement>(null);
+  // In vertical mode, consoleSize is the height of the console.
+  // In horizontal mode, consoleSize is the width of the console.
   const [consoleSize, setConsoleSize] = useState<number | undefined>(undefined);
 
   const {
