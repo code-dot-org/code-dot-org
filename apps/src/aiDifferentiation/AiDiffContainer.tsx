@@ -37,7 +37,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   scriptName,
   unitDisplayName,
   // TODO(lfm): remove this when welcome is ready to be shown.
-  disableWelcome = false,
+  disableWelcome = true,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
 

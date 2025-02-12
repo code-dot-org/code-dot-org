@@ -11,8 +11,8 @@ import {
 } from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
+import Confetti from 'react-dom-confetti';
 
-import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
@@ -225,12 +225,10 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
 
   React.useEffect(() => {
     if (currentWelcomeState === WelcomeStates.end_page) {
-      setConfettiActive(false);
-      setTimeout(() => {
-        setConfettiActive(true);
-      }, 10);
+      setConfettiActive(true);
     }
     if (currentWelcomeState === WelcomeStates.practice) {
+      setConfettiActive(false);
       setChatContinueButtonDisabled(true);
     }
   }, [currentWelcomeState]);
@@ -239,7 +237,9 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     return (
       <div className={style.endPage}>
         <div className={style.endPageTop}>
-          <BackToFrontConfetti active={confettiActive} style={{left: '0'}} />
+          <div className={style.confetti}>
+            <Confetti active={confettiActive} />
+          </div>
           <img
             src={aiBotConfetti}
             className={style.botConfetti}
