@@ -52,19 +52,11 @@ class Policies::Ai
   end
 
   def self.ai_differentiation_enabled_for_unit?(unit_or_unit_group)
-    # Checks the allowlists of specifically enabled units for this feature
-    return true if UNIT_DIFFERENTIATION_ALLOWLIST.include?(unit_or_unit_group&.name) && unit_or_unit_group.is_a?(Unit)
-    return true if UNIT_GROUP_DIFFERENTIATION_ALLOWLIST.include?(unit_or_unit_group&.name) && unit_or_unit_group.is_a?(UnitGroup)
-
-    # Otherwise, disabled
-    false
+    unit_or_unit_group.stable?
   end
 
   def self.ai_differentiation_enabled_for_lesson?(lesson)
     # Currently, all lessons of an allowed unit will allow ai differentiation features
-    return true if ai_differentiation_enabled_for_unit?(lesson&.script)
-
-    # Otherwise, disabled
-    false
+    ai_differentiation_enabled_for_unit?(lesson&.script)
   end
 end
