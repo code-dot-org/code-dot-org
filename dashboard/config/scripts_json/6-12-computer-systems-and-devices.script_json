@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-04 20:34:52 UTC",
+    "serialized_at": "2025-02-11 18:19:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -400,6 +400,18 @@
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices"
       }
+    },
+    {
+      "key": "d736e951-0a96-4679-8fc8-6337351c8ebe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices"
+      }
     }
   ],
   "activity_sections": [
@@ -629,6 +641,17 @@
       "seeding_key": {
         "activity_section.key": "5dd71177-b7c4-48b2-890a-b2ec93f83be6",
         "lesson_activity.key": "c7428662-603c-4f10-9e06-96780ad9bb10"
+      }
+    },
+    {
+      "key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0",
+      "position": 1,
+      "properties": {
+        "progression_name": "AI and Emerging Technologies Ethics Roleplaying"
+      },
+      "seeding_key": {
+        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0",
+        "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe"
       }
     }
   ],
@@ -1287,6 +1310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson10-level1-frq"
+        ],
         "progression": "Free Response Question"
       },
       "bonus": false,
@@ -1426,6 +1452,72 @@
       },
       "level_keys": [
         "test-computer-systems-lesson11-level5"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI and Emerging Technologies Ethics Roleplaying"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson12-scenario-1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
+      },
+      "level_keys": [
+        "computer-systems-lesson12-scenario-1"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "AI and Emerging Technologies Ethics Roleplaying"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson12-scenario-2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
+      },
+      "level_keys": [
+        "computer-systems-lesson12-scenario-2"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "AI and Emerging Technologies Ethics Roleplaying"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson12-scenario-3"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
+      },
+      "level_keys": [
+        "computer-systems-lesson12-scenario-3"
       ]
     }
   ],
@@ -1812,6 +1904,42 @@
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices",
         "activity_section.key": "5dd71177-b7c4-48b2-890a-b2ec93f83be6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson12-scenario-1",
+        "script_level.level_keys": [
+          "computer-systems-lesson12-scenario-1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson12-scenario-2",
+        "script_level.level_keys": [
+          "computer-systems-lesson12-scenario-2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson12-scenario-3",
+        "script_level.level_keys": [
+          "computer-systems-lesson12-scenario-3"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
       }
     }
   ],
