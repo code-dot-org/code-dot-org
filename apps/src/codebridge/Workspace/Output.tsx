@@ -190,7 +190,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
       style={style}
       ref={resizeContainerRef}
     >
-      <div style={miniAppStyle} className={moduleStyles.growAndShrink}>
+      <div style={miniAppStyle} className={moduleStyles.flexShrink0}>
         <MiniAppPreview />
       </div>
       <ResizeBar
@@ -198,7 +198,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
         separatorProps={miniAppSeparatorProps}
         isDragging={miniAppDragging}
       />
-      <div className={moduleStyles.growAndShrink} style={consoleStyle}>
+      <div style={consoleStyle} className={moduleStyles.flexShrink0}>
         <Console />
       </div>
     </div>
