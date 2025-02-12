@@ -137,7 +137,7 @@ begin
   AWS::S3.upload_to_bucket(
     options[:source_bucket],
     # Begin filename with `_` so that it's more likely to be displayed at the beginning of the S3 Console listing.
-    "_#{options[:source_prefix]}/#{options[:log_filename]}",
+    "#{options[:source_prefix]}/_#{options[:log_filename]}",
     file_contents
   )
   CDO.log.info "[BACKUP S3 BUCKET] Uploaded backup log CSV #{options[:log_filename]} to source bucket/prefix."
@@ -145,7 +145,7 @@ begin
   AWS::S3.upload_to_bucket(
     options[:destination_bucket],
     # Begin filename with `_` so that it's more likely to be displayed at the beginning of the S3 Console listing.
-    "_#{options[:destination_prefix]}/#{options[:log_filename]}",
+    "#{options[:destination_prefix]}/_#{options[:log_filename]}",
     file_contents
   )
   CDO.log.info "[BACKUP S3 BUCKET] Uploaded backup log CSV #{options[:log_filename]} to destination bucket/prefix."

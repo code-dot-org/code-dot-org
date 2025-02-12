@@ -239,6 +239,28 @@ module AWS
       object_keys
     end
 
+    # Encodes an S3 Object Key for safe transport via HTTP/REST while preserving ASCII characters.
+    # Only encodes non-ASCII characters and converts trailing whitespace to %20.
+    # @param [String] object_key The S3 Object Key to encode
+    # @return [String] The encoded key
+    def self.encode_object_key_for_transport(object_key)
+      trailing_whitespace_count = object_key.length - object_key.rstrip.length
+      chars = object_key.chars
+
+      chars.map.with_index do |char, index|
+        if char.ascii_only?
+          # Convert trailing whitespace to %20, but keep other whitespace as-is
+          if char <= " " && index >= (chars.length - trailing_whitespace_count)
+            '%20'
+          else
+            char
+          end
+        else
+          URI.encode_www_form_component(char)
+        end
+      end.join
+    end
+
     # Back up an S3 Object by copying it. Preserve the source Object key while prefixing it with a destination (backup)
     # folder name. For example, use this method to back up:
     #  user-content-bucket://my/path/to/object_name.ext --> backup-bucket://backups/user-content/my/path/to/object_name.ext
@@ -249,8 +271,7 @@ module AWS
     # @return [Aws::S3::Types::CopyObjectOutput]
     # @raise [Aws::S3::Errors::ServiceError]
     def self.backup_object(source_bucket, source_object_key, destination_bucket, destination_object_prefix)
-      # `copy_object` uses REST internally, so encode UTF-8 characters in Object Key for safe transport via HTTP/REST.
-      encoded_source_object_key = source_object_key.chars.map {|char| char.ascii_only? ? char : URI.encode_www_form_component(char)}.join
+      encoded_source_object_key = encode_object_key_for_transport(source_object_key)
       create_client.copy_object(
         {
           bucket: destination_bucket,

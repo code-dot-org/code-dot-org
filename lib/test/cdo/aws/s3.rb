@@ -134,6 +134,34 @@ class CdoAwsS3Test < Minitest::Test
     assert result
   end
 
+  def test_backup_object_with_trailing_whitespace_in_key
+    # Test with keys containing various trailing whitespace patterns
+    {
+      "test/path/file.txt   " => "test/path/file.txt%20%20%20",
+      "test/path/file.txt \t " => "test/path/file.txt%20%20%20",
+      "test/path/file with spaces.txt  " => "test/path/file with spaces.txt%20%20",
+      "test/path/привет.txt " => "test/path/%D0%BF%D1%80%D0%B8%D0%B2%D0%B5%D1%82.txt%20"
+    }.each do |source_key, expected_encoded_key|
+      destination_prefix = "backups/2024"
+
+      # Set up expectations for the copy_object call
+      AWS::S3.s3.expects(:copy_object).with(
+        bucket: TEST_DESTINATION_BUCKET,
+        copy_source: "/#{TEST_BUCKET}/#{expected_encoded_key}",
+        key: "#{destination_prefix}/#{expected_encoded_key}"
+      ).returns(true)
+
+      # Call the method and verify it succeeds
+      result = AWS::S3.backup_object(
+        TEST_BUCKET,
+        source_key,
+        TEST_DESTINATION_BUCKET,
+        destination_prefix
+      )
+      assert result
+    end
+  end
+
   def test_backup_object_handles_s3_errors
     # Test error handling with a simple ASCII key
     source_key = "test/path/file.txt"
