@@ -1,4 +1,0 @@
-resources:
-  - ../../base
-patchesStrategicMerge:
-  - dashboard.patch.yaml
