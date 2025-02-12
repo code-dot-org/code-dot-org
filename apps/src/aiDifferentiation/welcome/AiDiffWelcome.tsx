@@ -143,25 +143,6 @@ const progressBarHeader = (percentage: number, onBack: () => void) => {
   );
 };
 
-const progressBarHeader = (percentage: number, onBack: () => void) => {
-  return (
-    <div className={style.progressBarHeader}>
-      <button className={style.headerBackButton} type="button" onClick={onBack}>
-        <FontAwesomeV6Icon
-          iconName="arrow-left"
-          className={style.headerBackIcon}
-        />
-      </button>
-      <div className={style.progressBar}>
-        <div
-          className={style.progressBarFill}
-          style={{width: `${percentage}%`}}
-        />
-      </div>
-    </div>
-  );
-};
-
 const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   context,
