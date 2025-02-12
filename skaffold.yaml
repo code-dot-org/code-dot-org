@@ -129,5 +129,5 @@ portForward:
   resourceName: dashboard
   port: 3000
 - resourceType: Service
-  resourceName: dashboard-db
+  resourceName: dashboard-mysql
   port: 3306
