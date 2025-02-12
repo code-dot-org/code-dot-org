@@ -4,7 +4,7 @@
 # This module is structured very similarly to the AichatSagemakerHelper module,
 # which manages AI Chat lab's interaction with models that use AWS Sagemaker.
 module AichatOpenaiHelper
-  API_KEY = CDO.openai_chat_completion_api_key
+  API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id)

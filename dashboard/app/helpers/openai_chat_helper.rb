@@ -11,12 +11,10 @@ module OpenaiChatHelper
     end
 
     def request_chat_completion(messages, temperature = DEFAULT_TEMPERATURE)
-      # Set up the API endpoint URL and request headers
       headers = {
         "Content-Type" => "application/json",
         "Authorization" => "Bearer #{api_key}"
       }
-      headers["OpenAI-Organization"] = CDO.openai_chat_completion_org_id if CDO.openai_chat_completion_org_id
 
       data = {
         model: model,
