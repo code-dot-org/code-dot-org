@@ -38,7 +38,7 @@ build_apps: true
 use_my_apps: true
 
 
-# Allows your local server to lazy load locales, defaults to true.
+# Improves Rails server load time by delaying the loading of i18n files until the locale is changed; defaults to true.
 # Note: You may need to be in an incognito window to see changes,
 #       as once the `language_` cookie is set in production (HTTPS),
 #       it becomes "Secure" and can't be rewritten in a local (HTTP) environment.
