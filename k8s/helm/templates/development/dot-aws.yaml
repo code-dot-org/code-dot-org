@@ -3,9 +3,9 @@
 apiVersion: v1 
 kind: PersistentVolumeClaim 
 metadata:   
-  name: dot-aws
+  name: {{ include "cdo.fullname" (merge (dict "component" "dot-aws") .) }}
   labels:
-    app: dashboard
+    {{ include "cdo.labels" (merge (dict "component" "dot-aws") .) | nindent 4 }}
 spec:
   resources:
     requests:
@@ -13,13 +13,16 @@ spec:
   accessModes:
     - ReadWriteMany
   storageClassName: hostpath
+  selector:
+    matchLabels:
+      {{ include "cdo.selectorLabels" (merge (dict "component" "dot-aws") .) | nindent 6 }}
 ---
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: dot-aws
+  name: {{ include "cdo.fullname" (merge (dict "component" "dot-aws") .) }}
   labels:
-    app: dashboard
+    {{ include "cdo.labels" (merge (dict "component" "dot-aws") .) | nindent 4 }}
 spec:
   capacity:
     storage: 5Mi
@@ -27,7 +30,7 @@ spec:
     - ReadWriteMany
   hostPath:
     path: {{ .Values.development.mounts.hostPaths.home }}/.aws
-  claimRef:
-    name: dot-aws
-    namespace: {{ .Release.Namespace }}
+  # claimRef:
+  #   name: dot-aws
+  #   namespace: {{ .Release.Namespace }}
 {{- end }}

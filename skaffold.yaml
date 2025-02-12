@@ -60,7 +60,7 @@ build:
 deploy:
   helm:
     releases:
-      - name: dashboard
+      - name: code-dot-org
         chartPath: ./k8s/helm
         setValueTemplates:
           image: "{{.IMAGE_FULLY_QUALIFIED_code_dot_org}}"
@@ -126,8 +126,8 @@ profiles:
 
 portForward:
 - resourceType: Service
-  resourceName: dashboard
+  resourceName: cdo-dashboard
   port: 3000
 - resourceType: Service
-  resourceName: dashboard-mysql
+  resourceName: cdo-dashboard-mysql
   port: 3306

@@ -1,5 +1,5 @@
 apiVersion: v2
-name: dashboard
+name: code-dot-org
 description: Helm chart for the code-dot-org dashboard
 type: application
 

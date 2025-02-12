@@ -5,12 +5,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "dashboard.fullname" . }}
+  name: {{ include "cdo.fullname" (merge (dict "component" "dashboard") .) }}
   labels:
-    {{- include "dashboard.labels" . | nindent 4 }}
+    {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 4 }}
 spec:
   selector:
-    {{- include "dashboard.selectorLabels" . | nindent 4 }}
+    {{ include "cdo.selectorLabels" (merge (dict "component" "dasboard") .) | nindent 4 }}
   ports:
     - protocol: TCP
       port: 3000
@@ -18,20 +18,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "dashboard.fullname" . }}
+  name: {{ include "cdo.fullname" (merge (dict "component" "dashboard") .) }}
   labels:
-    {{- include "dashboard.labels" . | nindent 4 }}
+    {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.autoscaling.replicasWhenAutoscaleDisabled }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "dashboard.selectorLabels" . | nindent 6 }}
+      {{ include "cdo.selectorLabels" (merge (dict "component" "dashboard") .) | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "dashboard.selectorLabels" . | nindent 8 }}
+        {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 8 }}
     spec:
       containers:
       - name: dashboard
@@ -57,23 +57,23 @@ spec:
           name: dot-config-gcloud
         {{- end }}
         - mountPath: /code-dot-org/locals.yml
-          name: dashboard-locals
+          name: locals-yml
           subPath: locals.yml
         securityContext:
           allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
       volumes:
-        - name: dashboard-locals
+        - name: locals-yml
           configMap:
-            name: dashboard-locals
+            name: {{ include "cdo.fullname" (merge (dict "component" "locals.yml") .) }}
         {{- if .Values.development.mounts.mountDotAWS }}
         - name: dot-aws
           persistentVolumeClaim:
-            claimName: dot-aws
+            claimName: {{ include "cdo.fullname" (merge (dict "component" "dot-aws") .) }}
         {{- end }}
         {{- if .Values.development.mounts.mountDotConfigGcloud }}
         - name: dot-config-gcloud
           persistentVolumeClaim:
-            claimName: dot-config-gcloud
+            claimName: {{ include "cdo.fullname" (merge (dict "component" "dot-config-gcloud") .) }}
         {{- end }}
             
       securityContext:

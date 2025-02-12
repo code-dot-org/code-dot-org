@@ -3,30 +3,32 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "dashboard.fullname" . }}-mysql
+  name: {{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}
   labels:
-    app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-mysql
+    {{ include "cdo.labels" (merge (dict "component" "mysql") .) | nindent 4 }}
 spec:
   ports:
     - protocol: TCP
       port: 3306
   selector:
-    app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-mysql
+    {{ include "cdo.selectorLabels" (merge (dict "component" "mysql") .) | nindent 4 }}
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ include "dashboard.fullname" . }}-mysql
+  name: {{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "mysql") .) | nindent 4 }}
 spec:
-  serviceName: {{ include "dashboard.fullname" . }}-mysql
+  serviceName: {{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-mysql
+      {{ include "cdo.selectorLabels" (merge (dict "component" "mysql") .) | nindent 6 }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-mysql
+        {{ include "cdo.labels" (merge (dict "component" "mysql") .) | nindent 8 }}
     spec:
       containers:
       - name: db
@@ -41,7 +43,7 @@ spec:
           mountPath: /var/lib/mysql/
   volumeClaimTemplates:
   - metadata:
-      name: mysql-data
+      name: {{ include "cdo.fullname" (merge (dict "component" "mysql-data") .) }}
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
