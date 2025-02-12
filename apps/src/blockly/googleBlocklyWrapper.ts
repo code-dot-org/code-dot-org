@@ -874,7 +874,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
 
-    const keyboardNavigation = new KeyboardNavigation(workspace);
+    new KeyboardNavigation(workspace);
 
     // Typically, we need to handle disabling blocks that are not connected to an
     // appropriate top block. A few exceptions exist.
@@ -980,7 +980,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     if (options.useModalFunctionEditor) {
       // If the modal function editor is enabled for this level,
       // initialize the modal function editor.
-      keyboardNavigation.dispose();
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
     }
