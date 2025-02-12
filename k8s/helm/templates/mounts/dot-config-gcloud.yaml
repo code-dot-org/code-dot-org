@@ -13,6 +13,7 @@ spec:
   accessModes:
     - ReadWriteMany
   storageClassName: hostpath
+  volumeName: {{ include "cdo.fullname" (merge (dict "component" "dot-config-gcloud") .) }}
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -25,9 +26,7 @@ spec:
     storage: 5Mi
   accessModes:
     - ReadWriteMany
+  storageClassName: hostpath
   hostPath:
     path: {{ .Values.development.mounts.hostPaths.home }}/.config/gcloud
-  claimRef:
-    name: {{ include "cdo.fullname" (merge (dict "component" "dot-config-gcloud") .) }}
-    namespace: {{ .Release.Namespace }}
 {{- end }}
