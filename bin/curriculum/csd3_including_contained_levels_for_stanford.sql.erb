@@ -2,26 +2,56 @@
 -- this is an analytics query, to be run against the redshift database.
 --
 with
+    template_levels as (
+        select distinct
+            cs4.level_id as parent_level_id,
+            cl2.id as template_level_id
+        from analysis.course_structure cs4
+             LEFT JOIN dashboard_production.parent_levels_child_levels as plcl ON cs4.level_id = plcl.parent_level_id
+             LEFT JOIN dashboard_production.levels as cl2 ON plcl.child_level_id = cl2.id
+        WHERE
+            plcl.kind = 'project_template'
+    )
+    ,
     course_structure_segment as (
         select distinct
             cs3.course_name_true
-                      , cs3.script_id
-                      , cs3.script_name
-                      , cs3.unit
-                      , cs3.version_year
-                      , cs3.stage_id
-                      , cs3.stage_name
-                      , cs3.stage_number
-                      , cs3.level_id
-                      , cs3.level_name
-                      , cs3.level_type
-                      , cs3.level_number
-                      , cs3.is_group_level
-                      , coalesce( cl.contained_level_id , cs3.level_id) activity_level_id  -- contained level if it is a contained level, otherwise, base level
-                      , cl.contained_level_position
-                      , cl.contained_level_page
+          , cs3.script_id
+          , cs3.script_name
+          , cs3.unit
+          , cs3.version_year
+          , cs3.stage_id
+          , cs3.stage_name
+          , cs3.stage_number
+          , cs3.level_id
+          , cs3.level_name
+          , cs3.level_type
+          , cs3.level_number
+          , cs3.is_group_level
+
+          -- activity_level_id is the level id associated with user_levels and non-project source code.
+          , CASE
+                WHEN cl.contained_level_id IS NOT NULL THEN 'contained'
+                ELSE 'base'
+            END AS activity_level_origin
+          , coalesce(cl.contained_level_id, cs3.level_id) activity_level_id
+
+          -- project_level_id is the level id associated with project source code.
+          --
+          , CASE
+                -- For contained levels, the student's work is always stored as
+                -- non-project code stored on the child level. Make sure to ignore
+                -- any project source code stored on the parent level in this case.
+                WHEN cl.contained_level_id IS NOT NULL THEN 'none'
+                WHEN tl.template_level_id IS NOT NULL THEN 'template'
+                ELSE 'base'
+            END AS project_level_origin
+          , coalesce(cl.contained_level_id, tl.template_level_id, cs3.level_id) project_level_id
+          , cl.contained_level_position
+          , cl.contained_level_page
         from analysis.course_structure cs3
                  left JOIN dashboard_production.contained_levels cl on cs3.level_id = cl.level_group_level_id
+                 left JOIN template_levels tl on cs3.level_id = tl.parent_level_id
         where
             cs3.course_name_true = 'csd'
           and cs3.unit in ('csd3')
@@ -82,11 +112,9 @@ with
    , channel_tokens_users as (
         select
             usi.user_id
-             , cs2.activity_level_id
-             , ct2.*
-        from course_structure_segment  cs2
-                 join dashboard_production.channel_tokens ct2 on cs2.script_id = ct2.script_id and cs2.activity_level_id = ct2.level_id  -- joins on the actovity level: contained level if exists, otherwise, base level
-                 join dashboard_production.user_project_storage_ids usi on ct2.storage_id = usi.id
+             , ct.*
+        from dashboard_production.channel_tokens ct
+             join dashboard_production.user_project_storage_ids usi on ct.storage_id = usi.id
     )
 select distinct
     ul.user_id
@@ -99,9 +127,12 @@ select distinct
     , cs.level_type
     , cs.level_id
     , cs.is_group_level
+    , cs.activity_level_origin -- "contained" or "base"
     , cs.activity_level_id  -- contained level if it is a contained level, otherwise, base level
-    , cs.activity_level_name  -- contained level if it is a contained level, otherwise, base level
-    , cs.activity_level_type  -- contained level if it is a contained level, otherwise, base level
+    , cs.activity_level_name
+    , cs.activity_level_type
+    , cs.project_level_origin -- "none", "template" or "base"
+    , cs.project_level_id
     , cs.contained_level_position
     , cs.instructions
     , ul.created_at
@@ -188,13 +219,13 @@ select distinct
         when p.project_type = 'free_response' then null
         else 'https://studio.code.org/projects/'||p.project_type||'/'||JSON_EXTRACT_PATH_TEXT(p.value,'id',true)
         end link_to_project
---, p.value
+    , JSON_EXTRACT_PATH_TEXT(p.value,'id',true) channel_id
 from activity_level_details  cs
          join dashboard_production.user_levels ul on ul.script_id = cs.script_id and ul.level_id = cs.activity_level_id
 --          join analysis.school_years sy on ul.created_at between sy.started_at and sy.ended_at
          left join level_sources_segment ls  on ul.level_source_id = ls.id
          left join level_sources_free_response_segment lsfr  on ul.level_source_id = lsfr.id
-         left join channel_tokens_users ctu on ul.user_id = ctu.user_id and ul.script_id = ctu.script_id and ul.level_id = ctu.activity_level_id
+         left join channel_tokens_users ctu on ul.user_id = ctu.user_id and cs.script_id = ctu.script_id and cs.project_level_id = ctu.level_id
          left join dashboard_production_pii.projects p on ctu.storage_id = p.storage_id and ctu.storage_app_id = p.id
          left join dashboard_production_pii.users u on ul.user_id = u.id
 where

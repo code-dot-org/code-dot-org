@@ -98,64 +98,6 @@ rescue => exception
   raise
 end
 
-def add_channel_ids(results, unit_id, level_id)
-  puts "Looking up channel ids..."
-  start_time = Time.now
-  if Rails.env.production?
-    channel_map = get_channel_map(unit_id, level_id)
-    results = results.map do |row|
-      row[:channel_id] = channel_map[row['user_id']]
-      row
-    end
-  else
-    # can't use redshift in development because it won't match our local db
-    results = results.map do |row|
-      row[:channel_id] = get_project_channel_id(row['user_id'], row['level_id'], row['script_id'])
-      row
-    end
-  end
-  puts "Channel id lookups completed in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count}"
-  results
-end
-
-def get_project_channel_id(user_id, level_id, script_id)
-  user_storage_id = storage_id_for_user_id(user_id)
-  return unless user_storage_id
-
-  level = Level.find(level_id)
-  return unless level
-
-  # takes project-backed levels into account
-  channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
-  return unless channel_token
-
-  channel_token.channel
-end
-
-def get_redshift_channel_query(unit_name, level_id)
-  <<~SQL
-    SELECT ct.storage_app_id as project_id, ct.storage_id, ct.level_id, ct.script_id, us.user_id from dashboard_production.channel_tokens ct
-    LEFT JOIN dashboard_production.scripts s ON  ct.script_id = s.id
-    LEFT JOIN dashboard_production.user_project_storage_ids us ON ct.storage_id = us.id
-    WHERE s.name = #{unit_name}
-    #{level_id ? "AND ct.level_id = #{level_id}" : ''}
-    ;
-  SQL
-end
-
-# create a map from user_id to channel_id
-def get_channel_map(unit_id, level_id)
-  channel_query = get_redshift_channel_query(unit_id, level_id)
-  channel_rows = execute_redshift_query(RedshiftClient.instance, channel_query)
-  channel_rows.map do |row|
-    user_id = row['user_id']
-    project_id = row['project_id']
-    storage_id = row['storage_id']
-    channel_id = storage_encrypt_channel_id(storage_id, project_id)
-    [user_id, channel_id]
-  end.to_h
-end
-
 def get_project_source(channel_id)
   return nil unless channel_id
 
@@ -255,15 +197,13 @@ def main
     offset: offset,
   )
 
-  results = add_channel_ids(results, unit_id, level_id)
-
   puts "Processing source..."
   start_time = Time.now
 
   File.open(output_filename, 'w') do |file|
     # parallelize network requests to projects API and AWS Comprehend
     Parallel.each(results, in_processes: $max_processes) do |row|
-      row[:source] = get_project_source(row[:channel_id])
+      row[:source] = get_project_source(row['channel_id'])
 
       process_row_pii(row)
 
@@ -274,7 +214,7 @@ def main
       file.puts row.to_json
       file.flock(File::LOCK_UN)
     rescue => exception
-      puts "Error processing source for channel #{row[:channel_id]}: #{exception.message}"
+      puts "Error processing source for channel #{row && row[:channel_id]}: #{exception.message}"
     end
   end
   puts "Processed source in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count} processes: #{$max_processes}"
