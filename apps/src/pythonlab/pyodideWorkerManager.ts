@@ -68,6 +68,12 @@ const setUpPyodideWorker = () => {
         getStore().dispatch(setAndSaveSource(message));
         break;
       case 'error':
+        if (message.includes(MessageTag.INPUT_FAILED)) {
+          consoleManager?.writeErrorMessage(
+            "We're sorry, input is unavailable at this time. Input may not work in a private or incognito window. If you are in a standard browser window, please try refreshing the page. If the issue persists, contact support@code.org."
+          );
+          break;
+        }
         consoleManager?.writeErrorMessage(parseErrorMessage(message));
         break;
       case 'system_error':
@@ -187,7 +193,6 @@ const asyncRun = (() => {
         id,
         source,
         validationFile,
-        canSupportInput: canSupportInput(),
       };
       pyodideWorker.postMessage(messageData);
     });
