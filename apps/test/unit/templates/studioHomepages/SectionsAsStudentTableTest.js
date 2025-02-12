@@ -7,6 +7,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 import i18n from '@cdo/locale';
 
+import {manageStudentsUrl, progressUrl} from './fakeSectionUtils';
 import {joinedSections} from './homepagesTestData';
 
 const store = createStore(combineReducers({isRtl}));
@@ -100,5 +101,39 @@ describe('SectionsAsStudentTable', () => {
     expect(wrapper.containsMatchingElement(<td>DoNotShowThis</td>)).toBe(false);
     expect(wrapper.containsMatchingElement(<td>Clever</td>));
     expect(wrapper.containsMatchingElement(<td>OrThisEither</td>)).toBe(false);
+  });
+
+  it('does not show a unit link for a single-unit course', () => {
+    const singleUnitCourseSection = [
+      {
+        id: 11,
+        name: 'Period 5',
+        loginType: 'picture',
+        teacherName: 'Ms. Frizzle',
+        studentCount: 10,
+        linkToProgress: progressUrl,
+        assignedTitle: 'Single Unit Course',
+        linkToAssigned:
+          'https://studio.code.org/courses/ui-test-single-unit-course',
+        currentUnitTitle: 'Single Unit',
+        linkToCurrentUnit: 'https://studio.code.org/s/ui-test-single-unit',
+        is_assigned_single_unit_course: true,
+        numberOfStudents: 2,
+        linkToStudents: manageStudentsUrl,
+        code: 'ClassFiveCode',
+        hidden: false,
+        participantType: 'student',
+      },
+    ];
+
+    const wrapper = wrapped(
+      <SectionsAsStudentTable
+        sections={singleUnitCourseSection}
+        canLeave={false}
+      />
+    );
+    expect(wrapper.containsMatchingElement(<div>Current unit:</div>)).toBe(
+      false
+    );
   });
 });

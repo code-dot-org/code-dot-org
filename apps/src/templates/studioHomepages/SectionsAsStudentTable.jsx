@@ -25,6 +25,7 @@ class SectionsAsStudentTable extends React.Component {
   };
 
   renderSectionCodeCell(section) {
+    console.log(section);
     if (section.login_type === SectionLoginType.clever) {
       return i18n.loginTypeClever();
     } else if (section.login_type === SectionLoginType.google_classroom) {
@@ -63,7 +64,6 @@ class SectionsAsStudentTable extends React.Component {
     const styles = this.props.isPlSections
       ? plTableLayoutStyles
       : studentSectionsStyles;
-
     return (
       <table
         style={styles.table}
@@ -136,14 +136,15 @@ class SectionsAsStudentTable extends React.Component {
                 <a href={section.linkToAssigned} style={styles.link}>
                   {section.assignedTitle}
                 </a>
-                {section.currentUnitTitle && (
-                  <div style={styles.currentUnit}>
-                    <div>{i18n.currentUnit()}</div>
-                    <a href={section.linkToCurrentUnit} style={styles.link}>
-                      {section.currentUnitTitle}
-                    </a>
-                  </div>
-                )}
+                {!section.is_assigned_single_unit_course &&
+                  section.currentUnitTitle && (
+                    <div style={styles.currentUnit}>
+                      <div>{i18n.currentUnit()}</div>
+                      <a href={section.linkToCurrentUnit} style={styles.link}>
+                        {section.currentUnitTitle}
+                      </a>
+                    </div>
+                  )}
               </td>
               <td style={{...styles.col, ...styles.col3Student}}>
                 {section.teacherName}
