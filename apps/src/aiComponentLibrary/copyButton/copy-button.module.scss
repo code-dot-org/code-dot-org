@@ -1,7 +1,7 @@
-@import '@cdo/apps/componentLibrary/common/styles/colors.css';
-@import '@cdo/apps/componentLibrary/common/styles/mixins.scss';  
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@cdo/apps/mixins.scss';
 
-.button {
+button.copy-button.copy-button {
   @include icon-button(var(--background_neutral_quaternary), var(--text-neutral-tertiary), var(--text_neutral_secondary));
 }
 

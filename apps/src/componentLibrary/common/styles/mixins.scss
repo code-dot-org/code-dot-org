@@ -151,21 +151,3 @@
   border-color: var(--neutral-gray-70);
   background-color: var(--neutral-gray-90);
 }
-
-@mixin icon-button($background, $selected, $active) {
-  i {
-    color: var(--text-neutral-tertiary);
-  }
-
-  &.selected i, &:hover i {
-    color: $selected;
-  }
-
-  &:hover {
-    background-color: $background;
-  }
-
-  &:active i {
-    color: $active;
-  }
-}

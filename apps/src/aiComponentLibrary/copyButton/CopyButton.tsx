@@ -37,7 +37,7 @@ const CopyButton: React.FC<{copyText: string}> = ({copyText}) => {
           iconName: 'copy',
         }}
         type="primary"
-        className={style.button}
+        className={style['copy-button']}
       />
     </WithTooltip>
   );
