@@ -2,10 +2,12 @@
 
 # Pull in the static assets and db seed layers
 # built from separate dockerfiles by skaffold
+ARG CODE_DOT_ORG_PEGASUS
 ARG CODE_DOT_ORG_STATIC
 ARG CODE_DOT_ORG_DB_SEED
 ARG CODE_DOT_ORG_CORE
 
+FROM $CODE_DOT_ORG_PEGASUS AS code-dot-org-pegasus
 FROM $CODE_DOT_ORG_STATIC AS code-dot-org-static
 FROM $CODE_DOT_ORG_DB_SEED AS code-dot-org-db-seed
 FROM $CODE_DOT_ORG_CORE AS code-dot-org-core
@@ -110,6 +112,11 @@ RUN \
 #
 # Question: what if any set of builders should enable --link
 # in a way that's performant on Docker 24?
+
+# Link in pegasus built into a separate dockerfile
+COPY --chown=${UID} --link \
+  --from=code-dot-org-pegasus / \
+  ./
 
 # Link in large static assets built in a separate dockerfile
 COPY --chown=${UID} --link \

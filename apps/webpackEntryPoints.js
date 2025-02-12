@@ -337,7 +337,7 @@ module.exports = {
   appsEntriesFor,
   CODE_STUDIO_ENTRIES,
   INTERNAL_ENTRIES,
-  PEGASUS_ENTRIES: {}, // pegasus is disabled for skaffold, disabling here so `lint-entry-points` doesn't fail
+  PEGASUS_ENTRIES,
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,

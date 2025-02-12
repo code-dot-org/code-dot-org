@@ -18,6 +18,7 @@ build:
         k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org.dockerfile \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
           --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
           --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC"
       dependencies:
         dockerfile:
@@ -27,6 +28,8 @@ build:
       alias: CODE_DOT_ORG_CORE
     - image: code-dot-org-db-seed
       alias: CODE_DOT_ORG_DB_SEED
+    - image: code-dot-org-pegasus
+      alias: CODE_DOT_ORG_PEGASUS
     - image: code-dot-org-static
       alias: CODE_DOT_ORG_STATIC
   - image: code-dot-org-core
@@ -35,6 +38,12 @@ build:
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-core.dockerfile
+  - image: code-dot-org-pegasus
+    custom:
+      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-pegasus.dockerfile
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org-pegasus.dockerfile
   - image: code-dot-org-static
     custom:
       buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-static.dockerfile
