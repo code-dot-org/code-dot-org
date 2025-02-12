@@ -1,8 +1,6 @@
-{{- if .Values.services.redis.enabled }}
-
 # NOTE: this redis config is intended for dev/testing only.
 # It does NOT persist data or permit replicas.
-
+{{- if .Values.services.redis.enabled }}
 apiVersion: v1
 kind: Service
 metadata:
@@ -28,5 +26,4 @@ spec:
     image: redis
     ports:
     - containerPort: 6379
-
 {{- end }}

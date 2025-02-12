@@ -1,5 +1,5 @@
+# NOTE: this mysql config is intended for dev/testing only.
 {{- if .Values.services.mysql.enabled }}
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -49,5 +49,4 @@ spec:
       resources:
         requests:
           storage: 1Gi
-
 {{- end }}

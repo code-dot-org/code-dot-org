@@ -1,7 +1,3 @@
-{{- if or (eq .Values.RAILS_ENV "") (not .Values.RAILS_ENV) }}
-{{- fail (printf "Error: RAILS_ENV is not set by values.yaml (current value: '%s').\n\nHint: if you're trying to do local dev with skaffold, try the -p flag, e.g. `skaffold -p development` sets RAILS_ENV=development.\n" .Values.RAILS_ENV) }}
-{{- end }}
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -80,3 +76,7 @@ spec:
         runAsUser: {{ .Values.user.uid }}
         runAsGroup: {{ .Values.user.gid }}
         fsGroup: {{ .Values.user.gid }}
+
+{{- if or (eq .Values.RAILS_ENV "") (not .Values.RAILS_ENV) }}
+{{- fail (printf "Error: RAILS_ENV is not set by values.yaml (current value: '%s').\n\nHint: if you're trying to do local dev with skaffold, try the -p flag, e.g. `skaffold -p development` sets RAILS_ENV=development.\n" .Values.RAILS_ENV) }}
+{{- end }}
