@@ -2,10 +2,10 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import {UnconnectedCommitDialog as CommitDialog} from '@cdo/apps/javalab/CommitDialog';
 import CommitDialogBody from '@cdo/apps/javalab/CommitDialogBody';
 import CommitDialogFileRow from '@cdo/apps/javalab/CommitDialogFileRow';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import i18n from '@cdo/javalab/locale';
 
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
