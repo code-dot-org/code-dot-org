@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import aiFabWithIcon from '@cdo/static/ai-bot-ta-tag.png';
+import aiFabWithIcon from '@cdo/static/ai-bot-ta.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
