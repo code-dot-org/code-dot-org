@@ -4,7 +4,7 @@ build:
   artifacts:
   - image: toy
     custom:
-      buildCommand: k8s/bin/buildx.sh -f k8s/toy/toy.dockerfile --build-arg TOY_BASE="$TOY_BASE"
+      buildCommand: k8s/bin/docker-buildx.sh -f k8s/toy/toy.dockerfile --build-arg TOY_BASE="$TOY_BASE"
       dependencies:
         dockerfile:
           path: k8s/toy/toy.dockerfile
@@ -13,8 +13,7 @@ build:
       alias: TOY_BASE
   - image: toy-base
     custom:
-      buildCommand: echo $PWD && k8s/bin/buildx.sh -f k8s/toy/toy-base.dockerfile
+      buildCommand: echo $PWD && k8s/bin/docker-buildx.sh -f k8s/toy/toy-base.dockerfile
       dependencies:
         dockerfile:
           path: k8s/toy/toy-base.dockerfile
-
