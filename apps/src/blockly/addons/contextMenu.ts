@@ -490,7 +490,6 @@ function registerCustomWorkspaceOptions() {
 
   // Custom workspace options. We increment the weight for each so they are automatically
   // sorted in the order listed here. The ++ incrementation happens after the value is accessed.
-  registerKeyboardNavigation(nextWeight++);
   registerThemes(nextWeight++, themes);
   registerAllBlocksUndeletable(nextWeight++);
 }

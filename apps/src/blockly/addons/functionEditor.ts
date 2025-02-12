@@ -3,6 +3,7 @@ import {
   ObservableProcedureModel,
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
+import {KeyboardNavigation} from '@blockly/keyboard-experiment';
 import {
   ScrollBlockDragger,
   ScrollOptions,
@@ -45,6 +46,7 @@ export default class FunctionEditor {
   private primaryWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
   private editorWorkspace: EditorWorkspaceSvg | undefined;
   private block: ProcedureBlock | undefined;
+  private keyboardNavigation: KeyboardNavigation | undefined;
 
   constructor() {
     this.isReadOnly = false;
@@ -103,7 +105,7 @@ export default class FunctionEditor {
     // Disable blocks that aren't attached. We don't want these to generate
     // code in the hidden workspace.
     this.editorWorkspace.addChangeListener(disableOrphans);
-    Blockly.navigationController.addWorkspace(this.editorWorkspace);
+
     // Close handler
     document
       .getElementById(MODAL_EDITOR_CLOSE_ID)
@@ -142,6 +144,7 @@ export default class FunctionEditor {
     functionEditorTrashcan.init();
     // Set primary workspace to be active (until a function is shown).
     Blockly.common.setMainWorkspace(this.primaryWorkspace);
+    this.keyboardNavigation = new KeyboardNavigation(this.primaryWorkspace);
   }
 
   hide() {
@@ -149,8 +152,8 @@ export default class FunctionEditor {
     if (this.editorWorkspace?.keyboardAccessibilityMode) {
       // Disable it on the current workspace so there's no chance of
       // controlling it accidentally while it is hidden.
-      Blockly.navigationController.disable(this.editorWorkspace);
-      Blockly.navigationController.enable(this.primaryWorkspace);
+      this.keyboardNavigation?.dispose?.();
+      new KeyboardNavigation(this.primaryWorkspace);
     }
     if (this.dom) {
       this.dom.style.display = 'none';
@@ -304,14 +307,8 @@ export default class FunctionEditor {
     ) {
       // Disable it on the primary workspace so there's no chance of
       // controlling it accidentally while the function editor is open.
-      Blockly.navigationController.disable(this.primaryWorkspace);
-      Blockly.navigationController.enable(this.editorWorkspace);
-
-      // If this editor was already open (e.g. changing from one function to another)
-      // we need to re-focus so the cursor highlights the correct block.
-      Blockly.navigationController.navigation.focusWorkspace(
-        this.editorWorkspace
-      );
+      this.keyboardNavigation?.dispose();
+      this.keyboardNavigation = new KeyboardNavigation(this.editorWorkspace);
     }
     // We only want to be able to delete things that are user-created (functions and behaviors)
     // and not things that are being previewed from a read-only workspace.
