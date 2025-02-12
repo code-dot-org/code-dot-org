@@ -16,6 +16,12 @@ autoscaling:
   maxReplicas: 1
   replicasWhenAutoscaleDisabled: 1
 
+services:
+  redis:
+    enabled: false
+  mysql:
+    enabled: false
+
 # Match the USERNAME, UID and GID args in the docker image (note this)
 # is overridden to root in skaffold.yaml due to a bug in skaffold sync
 user:
@@ -23,10 +29,15 @@ user:
   uid: 1000
   gid: 1000
   home: /home/code-dot-org
+  allowSudo: false
 
 development:
-  # These are set in the skaffold development profile so we can
-  # use dynamic values appropriate to your particular system
-  hostPaths:
-    home: # ~ on  your local dev box, set automatically by skaffold
-    skaffoldStorage: # code-dot-org/skaffoldStorage on your local dev box, set automatically by skaffold
+  mounts:
+    mountDotAWS: false
+    mountDotConfigGcloud: false
+
+    # These are set in the skaffold development profile so we can
+    # use dynamic values appropriate to your particular system
+    hostPaths:
+      home: # ~ on  your local dev box, set automatically by skaffold
+      skaffoldStorage: # code-dot-org/skaffoldStorage on your local dev box, set automatically by skaffold

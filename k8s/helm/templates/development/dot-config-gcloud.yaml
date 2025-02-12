@@ -1,5 +1,5 @@
 # In development, this allows us to re-use our aws-google login from our local machine.
-{{- if eq .Values.environment "development" }}
+{{- if .Values.development.mounts.mountDotConfigGcloud }}
 apiVersion: v1 
 kind: PersistentVolumeClaim 
 metadata:   
@@ -26,7 +26,7 @@ spec:
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: {{ .Values.development.hostPaths.home }}/.config/gcloud
+    path: {{ .Values.development.mounts.hostPaths.home }}/.config/gcloud
   claimRef:
     name: dot-config-gcloud
     namespace: {{ .Release.Namespace }}

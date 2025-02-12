@@ -1,31 +1,32 @@
-{{- if eq .Values.environment "development" }}
+{{- if .Values.services.mysql.enabled }}
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "dashboard.fullname" . }}-db
+  name: {{ include "dashboard.fullname" . }}-mysql
   labels:
-    app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
+    app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-mysql
 spec:
   ports:
     - protocol: TCP
       port: 3306
   selector:
-    app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
+    app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-mysql
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ include "dashboard.fullname" . }}-db
+  name: {{ include "dashboard.fullname" . }}-mysql
 spec:
-  serviceName: {{ include "dashboard.fullname" . }}-db
+  serviceName: {{ include "dashboard.fullname" . }}-mysql
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
+      app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-mysql
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
+        app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-mysql
     spec:
       containers:
       - name: db
@@ -46,4 +47,5 @@ spec:
       resources:
         requests:
           storage: 1Gi
+
 {{- end }}

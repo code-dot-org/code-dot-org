@@ -43,10 +43,12 @@ spec:
         - containerPort: 3000
         tty: true # dashboard stdout logging assumes a tty
         volumeMounts:
-        {{- if eq .Values.environment "development" }}
+        {{- if .Values.development.mounts.mountDotAWS }}
         # These allow us to re-use our aws / aws-google login from our local machine.
         - mountPath: {{ .Values.user.home }}/.aws
           name: dot-aws
+        {{- end }}
+        {{- if .Values.development.mounts.mountDotConfigGcloud }}
         - mountPath: {{ .Values.user.home }}/.config/gcloud
           name: dot-config-gcloud
         {{- end }}
@@ -54,15 +56,17 @@ spec:
           name: dashboard-locals
           subPath: locals.yml
         securityContext:
-          allowPrivilegeEscalation: {{ if eq .Values.environment "development" }}true{{ else }}false{{ end }}
+          allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
       volumes:
         - name: dashboard-locals
           configMap:
             name: dashboard-locals
-        {{- if eq .Values.environment "development" }}
+        {{- if .Values.development.mounts.mountDotAWS }}
         - name: dot-aws
           persistentVolumeClaim:
             claimName: dot-aws
+        {{- end }}
+        {{- if .Values.development.mounts.mountDotConfigGcloud }}
         - name: dot-config-gcloud
           persistentVolumeClaim:
             claimName: dot-config-gcloud

@@ -1,1 +1,12 @@
 environment: development
+services:
+  redis:
+    enabled: true
+  mysql:
+    enabled: true
+development:
+  mounts:
+    mountDotAWS: true
+    mountDotConfigGcloud: true
+user:
+  allowSudo: true
