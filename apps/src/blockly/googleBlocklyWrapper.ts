@@ -197,11 +197,11 @@ const BlocklyWrapper = function (
 
 /**
  * Note that this can only be called once per page load, as this initializes
- * the navigation controller, and multiple calls to navigationController.init()
- * will throw an error.
+ * the navigation controller, and multiple calls to KeyboardNavigation will
+ * cause an error.
  *
  * If this needs to be called multiple times (for example, in tests), call
- * Blockly.navigationController.dispose() before calling this function again.
+ * Blockly.KeyboardNavigation.dispose() before calling this function again.
  */
 function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
@@ -874,7 +874,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
 
-    new KeyboardNavigation(workspace);
+    const keyboardNavigation = new KeyboardNavigation(workspace);
 
     // Typically, we need to handle disabling blocks that are not connected to an
     // appropriate top block. A few exceptions exist.
@@ -980,6 +980,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     if (options.useModalFunctionEditor) {
       // If the modal function editor is enabled for this level,
       // initialize the modal function editor.
+      keyboardNavigation.dispose();
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
     }

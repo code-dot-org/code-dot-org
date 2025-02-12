@@ -17,7 +17,7 @@ describe('Google Blockly Wrapper', () => {
   });
   afterEach(() => {
     // Dispose navigation controller before initializing the wrapper again.
-    Blockly.navigationController.dispose();
+    Blockly.KeyboardNavigation.dispose();
     // Reset Blockly for other tests.
     Blockly = cdoBlockly; // eslint-disable-line no-global-assign
     // Reset context menu for other tests.

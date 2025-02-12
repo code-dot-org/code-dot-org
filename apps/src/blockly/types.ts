@@ -95,7 +95,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   >;
   themes: {[key in Themes]: GoogleBlockly.Theme};
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  navigationController: any; // Navigation Controller is not typed by Blockly
+  KeyboardNavigation: any; // Keyboard Navigation is not typed by Blockly
   BlockSpace: {
     EVENTS: typeof WORKSPACE_EVENTS;
     onMainBlockSpaceCreated: (callback: () => void) => void;
