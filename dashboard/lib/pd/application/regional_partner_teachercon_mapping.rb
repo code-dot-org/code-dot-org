@@ -38,8 +38,12 @@ module Pd::Application
       Pd::Workshop.
         in_year(year).
         where(course: course, subject: subject).
-        where('pd_workshops.location_address like ?', "%#{city}%").
-        first
+        joins(:sessions).
+        where(
+          'pd_workshops.location_address LIKE ? OR pd_sessions.location_address LIKE ?',
+          "%#{city}%",
+          "%#{city}%"  # Check both the workshop's location and the session's location
+        ).first
     end
   end
 end
