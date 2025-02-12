@@ -53,30 +53,75 @@
 .selectOptionPage {
   display: flex;
   flex-direction: column;
-  margin: 48px 56px 20px 56px;
+  margin: 0;
   align-items: center;
+  height: 100%;
+}
+
+.selectOptionContent {
+  margin: 0 56px 24px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progressBarHeader {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  align-items: center;
+}
+
+.headerBackButton {
+  min-width: 32px;
+  font-size: 14px;
+  margin-inline-start: 16px;
+  border: 0;
+  margin: 0;
+  line-height: 0px;
+  padding: 8px;
+  background-color: $light_white;
+
+  &:active {
+    border: 0 !important;
+  }
+}
+
+.progressBar {
+  height: 12px;
+  width: 100%;
+  background-color: #eaebeb;
+  border-radius: 100px;
+  margin-inline-end: 56px;
+  margin-inline-start: 24px;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 100px;
+  background-color: $light_affirmative_500;
 }
 
 .selectOptionSubtitle {
   color: $light_gray_800
 }
 
-.skipButton {
-  flex-grow: 1;
-  margin-inline-start: 20px;
-}
-
-.continueButton {
-  flex-grow: 4;
-  margin-inline-start: 20px;
-  margin-inline-end: 20px;
+.skipLink {
+  align-self: end;
+  margin-top: 4px;
+  cursor: pointer;
+  margin-bottom: 8px;
 }
 
 .bottomButtons {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 20px;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  text-align: end;
+  align-self: center;
+  margin-top: auto;
 }
 
 .optionRow {
@@ -157,6 +202,12 @@
   display: flex;
   flex-direction: column;
   align-content: stretch;
+}
+
+.practiceContent {
+  height: calc(100% - 123px);
+  max-height: calc(100% - 123px);
+  border-top: 2px solid $neutral_gray10;
 }
 
 .endPage {

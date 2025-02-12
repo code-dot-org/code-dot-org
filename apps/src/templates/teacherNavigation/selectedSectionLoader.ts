@@ -7,6 +7,7 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {
   setLoginType,
   setShowSharingColumn,
+  loadSectionStudentData,
 } from '../manageStudents/manageStudentsRedux';
 import {
   finishLoadingSectionData,
@@ -34,6 +35,7 @@ export const asyncLoadSelectedSection = async (
 
   getStore().dispatch(startLoadingSectionData());
   getStore().dispatch(selectSection(sectionId));
+  getStore().dispatch(loadSectionStudentData(sectionId));
 
   const response = fetch(`/dashboardapi/section/${sectionId}`, {
     method: 'GET',

@@ -4,6 +4,7 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
+import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -116,9 +117,12 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           type={'tertiary'}
           color={buttonColors.white}
           text={commonI18n.skipToProject()}
-          className={darkModeStyles.tertiaryButton}
+          className={classNames(
+            darkModeStyles.tertiaryButton,
+            moduleStyles.buttonSkip
+          )}
         >
-          {commonI18n.skipToProject()}
+          <span>{commonI18n.skipToProject()}</span>
         </Button>
       )}
     </div>

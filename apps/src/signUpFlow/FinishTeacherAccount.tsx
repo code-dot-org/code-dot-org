@@ -75,12 +75,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
     useState(false);
 
-  const isInSchoolRequiredExperiment = statsigReporter.getIsInExperiment(
-    'require_school_in_signup_v1',
-    'requireInfo',
-    false
-  );
-
   const showEducatorRole = statsigReporter.getIsInExperiment(
     'educator_role',
     'showEducatorRole',
@@ -152,16 +146,9 @@ const FinishTeacherAccount: React.FunctionComponent<{
       name?.trim() === '' ||
       name?.length > MAX_DISPLAY_NAME_LENGTH ||
       !gdprValid ||
-      (isInSchoolRequiredExperiment && schoolInfoInvalid(schoolInfo)) ||
+      schoolInfoInvalid(schoolInfo) ||
       (requireEducatorRole && !educatorRole),
-    [
-      gdprValid,
-      isInSchoolRequiredExperiment,
-      name,
-      schoolInfo,
-      requireEducatorRole,
-      educatorRole,
-    ]
+    [gdprValid, name, schoolInfo, requireEducatorRole, educatorRole]
   );
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -318,11 +305,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
               dropdownTextThickness="thin"
             />
           )}
-          <SchoolDataInputs
-            {...schoolInfo}
-            includeHeaders={false}
-            markFieldsAsRequired={isInSchoolRequiredExperiment}
-          />
+          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>
               <BodyThreeText

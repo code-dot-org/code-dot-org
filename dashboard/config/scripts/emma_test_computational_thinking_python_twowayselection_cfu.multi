@@ -8,20 +8,16 @@ right 'Green line'
 allow_multiple_attempts true
 
 markdown <<MARKDOWN
-What will the Painter paint if the `user_number` is `10` and the `user_color` is `green`?
+What will the Painter paint if the `user_number` is `5` and the `user_color` is `green`?
 ```
-if user_number > 5 {
+if user_number == 5:
+   if user_color == "red":
+      paint_background(user_color)
+   else:
+      paint_line(user_color) 
+else:
+    paint_star(user_color)
 
-   if (user_color == "red") {
-      paint background(user_color)
-   }
-   else {
-      paint line(user_color) 
-   }
 
-else {
-    paint star(user_color)
-   }
-}
 ``` 
 MARKDOWN

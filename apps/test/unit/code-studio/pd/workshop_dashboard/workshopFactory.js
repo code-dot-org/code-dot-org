@@ -12,8 +12,7 @@ import {
  */
 
 // For testing average middle of the year dates.
-const middleOfYearFakeToday = new Date(2016, 6, 1, 15); // July 1st, 2016
-const middleOfYearFakeTodayEnd = new Date(2016, 6, 1, 23); // July 1st, 2016
+const middleOfYearFakeToday = new Date(2016, 6, 1); // July 1st, 2016
 // For testing cases when wrapping around from December of one year to January of the next.
 const endOfYearFakeToday = new Date(2016, 12, 30); // December 30th, 2016
 
@@ -114,8 +113,7 @@ Factory.define('session')
   .sequence('id')
   .attr('code', 'TEST')
   .attr('start', middleOfYearFakeToday.toISOString())
-  .attr('end', middleOfYearFakeTodayEnd.toISOString())
-  .attr('time_zone', 'America/Denver')
+  .attr('end', middleOfYearFakeToday.toISOString())
   .attr('attendance_count', 0)
   .attr('session_format', PdSessionFormats[0].value)
   .attr('show_link?', false);

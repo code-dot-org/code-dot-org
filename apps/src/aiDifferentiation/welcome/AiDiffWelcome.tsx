@@ -1,5 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Link from '@code-dot-org/component-library/link';
 import {
   BodyOneText,
   BodyThreeText,
@@ -41,8 +42,9 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
-  lessonId: number;
-  lessonName: string;
+  context: string;
+  scriptId: number;
+  scriptName: string;
   unitDisplayName: string;
 }
 
@@ -120,14 +122,37 @@ const getStartedPage = (onClick: () => void) => {
   );
 };
 
+const progressBarHeader = (percentage: number, onBack: () => void) => {
+  return (
+    <div className={style.progressBarHeader}>
+      <button className={style.headerBackButton} type="button" onClick={onBack}>
+        <FontAwesomeV6Icon
+          iconName="arrow-left"
+          className={style.headerBackIcon}
+        />
+      </button>
+      <div className={style.progressBar}>
+        <div
+          className={style.progressBarFill}
+          style={{width: `${percentage}%`}}
+        />
+      </div>
+    </div>
+  );
+};
+
 const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
-  lessonId,
-  lessonName,
+  context,
+  scriptId,
+  scriptName,
   unitDisplayName,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>('get_started');
+
+  const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
+    React.useState(true);
 
   const [selectedOption, setSelectedOption] = React.useState<
     'plan' | 'create' | null
@@ -140,26 +165,25 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   }, [setShowWelcomeExperience]);
 
   const continueAndSkipButtons = React.useCallback(
-    (nextState: WelcomeState) => {
+    (nextState: WelcomeState, continueDisabled: boolean) => {
       return (
         <div className={style.bottomButtons}>
           <Button
-            onClick={() => updateShowWelcomeExperience()}
-            text="Skip"
-            className={style.skipButton}
-            color="gray"
-            type="secondary"
-          />
-          <Button
             onClick={() => setCurrentWelcomeState(nextState)}
             text="Continue"
-            className={style.continueButton}
-            disabled={!selectedOption}
+            disabled={continueDisabled}
+          />
+          <Link
+            className={style.skipLink}
+            onClick={() => updateShowWelcomeExperience()}
+            text="Skip the tutorial"
+            size="xs"
+            type="secondary"
           />
         </div>
       );
     },
-    [selectedOption, updateShowWelcomeExperience]
+    [updateShowWelcomeExperience]
   );
 
   const selectAnOptionPage = React.useCallback(
@@ -167,26 +191,29 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       return (
         <div className={style.selectOption}>
           <div className={style.selectOptionPage}>
-            <Heading3>Pick a skill to practice</Heading3>
-            <Heading6 className={style.selectOptionSubtitle}>
-              Using AI in multiple ways increases productivity.
-            </Heading6>
-            {optionButton(
-              selectedOption === 'plan',
-              () => setSelectedOption('plan'),
-              'folder-tree',
-              'Plan',
-              'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
-            )}
-            {optionButton(
-              selectedOption === 'create',
-              () => setSelectedOption('create'),
-              'file-pen',
-              'Create',
-              'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
-            )}
+            {progressBarHeader(30, () => setCurrentWelcomeState('get_started'))}
+            <div className={style.selectOptionContent}>
+              <Heading3>Pick a skill to practice</Heading3>
+              <Heading6 className={style.selectOptionSubtitle}>
+                Using AI in multiple ways increases productivity.
+              </Heading6>
+              {optionButton(
+                selectedOption === 'plan',
+                () => setSelectedOption('plan'),
+                'folder-tree',
+                'Plan',
+                'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
+              )}
+              {optionButton(
+                selectedOption === 'create',
+                () => setSelectedOption('create'),
+                'file-pen',
+                'Create',
+                'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
+              )}
+            </div>
+            {continueAndSkipButtons(nextState, !selectedOption)}
           </div>
-          {continueAndSkipButtons(nextState)}
         </div>
       );
     },
@@ -251,23 +278,33 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
 
     return (
       <div className={style.practicePage}>
-        <AiDiffChat
-          lessonId={lessonId}
-          lessonName={lessonName}
-          unitDisplayName={unitDisplayName}
-          initialChatMessage={initialMessage}
-          suggestedPrompts={suggestedPrompts}
-          disableEndButtons={true}
-        />
-        {continueAndSkipButtons(WelcomeStates.end_page)}
+        {progressBarHeader(60, () => setCurrentWelcomeState('select_option'))}
+        <div className={style.practiceContent}>
+          <AiDiffChat
+            context={context}
+            scriptId={scriptId}
+            scriptName={scriptName}
+            chatResponseCallback={() => setChatContinueButtonDisabled(false)}
+            unitDisplayName={unitDisplayName}
+            initialChatMessage={initialMessage}
+            suggestedPrompts={suggestedPrompts}
+            disableEndButtons={true}
+          />
+        </div>
+        {continueAndSkipButtons(
+          WelcomeStates.end_page,
+          chatContinueButtonDisabled
+        )}
       </div>
     );
   }, [
     selectedOption,
-    lessonId,
-    lessonName,
+    context,
+    scriptId,
+    scriptName,
     unitDisplayName,
     continueAndSkipButtons,
+    chatContinueButtonDisabled,
   ]);
 
   const currentWelcomePage = React.useMemo(() => {
