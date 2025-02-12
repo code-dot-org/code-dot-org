@@ -1,7 +1,11 @@
+@use '@/components/common/styles/mixins' as mixins;
+
+// Common link styles
 a.link {
   margin-top: 0;
 }
 
+// Link colors
 // Currently purple color styles are match component-library styles completely so we are not editing it.
 //a.link-purple {
 //}
@@ -20,6 +24,7 @@ a.link-white {
   }
 }
 
+// Link sizes
 a.link-l {
   gap: 0.5rem;
 }
@@ -36,18 +41,19 @@ a.link-xs {
   gap: 0.25rem;
 }
 
-a.link-bottomMargin-none {
-  margin-bottom: 0;
+// Link marginBottom styles
+a.link-margin-bottom-none {
+  @include mixins.common-margin-bottom-none;
 }
 
-a.link-bottomMargin-xs {
-  margin-bottom: 8px;
+a.link-margin-bottom-xs {
+  @include mixins.common-margin-bottom-xs;
 }
 
-a.link-bottomMargin-s {
-  margin-bottom: 16px;
+a.link-margin-bottom-s {
+  @include mixins.common-margin-bottom-s;
 }
 
-a.link-bottomMargin-m {
-  margin-bottom: 24px;
+a.link-margin-bottom-m {
+  @include mixins.common-margin-bottom-m;
 }
