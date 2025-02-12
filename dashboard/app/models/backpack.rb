@@ -25,7 +25,7 @@ class Backpack < ApplicationRecord
   def self.find_or_create(user_id, game_id, ip)
     backpack = find_by(user_id: user_id, game_id: game_id)
     unless backpack
-      # Create a project for this user's backpack in the app_type ('Javalab' or 'Pythonlab') determined by game_id
+      # Create a project for this user's backpack in the app determined by game_id
       project = Projects.new(storage_id_for_user_id(user_id))
       encrypted_id = project.create({hidden: true}, ip: ip, type: 'backpack')
       _, project_id = storage_decrypt_channel_id(encrypted_id)

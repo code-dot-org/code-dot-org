@@ -261,8 +261,10 @@ module LevelsHelper
     view_options(backpack_enabled: backpack_enabled)
 
     if backpack_enabled
+      # Backpack is used in lab2 apps also but app_options is only used by legacy labs, i.e., Javalab.
+      game_id = Game.by_name('Javalab')
       user_id = @user&.id || current_user&.id
-      backpack = Backpack.find_by_user_id(user_id)
+      backpack = Backpack.find_by(user_id: user_id, game_id: game_id)
       view_options(backpack_channel: backpack&.channel)
     end
 
