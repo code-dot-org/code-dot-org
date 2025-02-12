@@ -64,7 +64,15 @@ describe('TeacherNavigationBar', () => {
       id: 15,
       name: 'hidden',
       hidden: true,
+      courseVersionName: 'csd-2022',
       unitName: null,
+    },
+    {
+      id: 16,
+      name: 'Period 5',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
     },
   ];
   const serverSections = sections.map(serverSectionFromSection);
@@ -73,7 +81,11 @@ describe('TeacherNavigationBar', () => {
 
   let loadSelectedSectionSpy;
 
-  const renderDefault = (selectedSectionId = 11, selectedRoute = null) => {
+  const renderDefault = (
+    selectedSectionId = 11,
+    selectedRoute = null,
+    showAITutorTab = false
+  ) => {
     store = getStore();
     registerReducers({
       teacherSections,
@@ -99,7 +111,7 @@ describe('TeacherNavigationBar', () => {
                 path={TEACHER_NAVIGATION_SECTIONS_URL}
                 element={
                   <div>
-                    <TeacherNavigationBar />
+                    <TeacherNavigationBar showAITutorTab={showAITutorTab} />
                     <Outlet />
                   </div>
                 }
@@ -253,5 +265,12 @@ describe('TeacherNavigationBar', () => {
     const dropdownAfterClick = screen.getByRole('combobox');
     expect(dropdownAfterClick).toHaveValue('14');
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
+  });
+
+  test('AI Tutor tab diplayed when teacher has access and section has CSA assigned', async () => {
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    screen.getByText('AI Tutor');
   });
 });

@@ -27,7 +27,9 @@ import {
 
 import styles from './teacher-navigation.module.scss';
 
-const TeacherNavigationBar: React.FunctionComponent = () => {
+const TeacherNavigationBar: React.FC<{
+  showAITutorTab: boolean;
+}> = showAITutorTab => {
   const sections = useAppSelector(state => state.teacherSections.sections);
 
   const [sectionArray, setSectionArray] = useState<
@@ -73,8 +75,28 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   }
 
   const performanceSectionTitle = getSectionHeader(i18n.performance());
+
+  if (
+    window.location.pathname.includes('ai_tutor') &&
+    !selectedSection.courseVersionName.includes('csa')
+  ) {
+    window.location.replace(
+      `/teacher_dashboard/sections/${selectedSection.id}/progress`
+    );
+  }
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+    showAITutorTab &&
+    selectedSection &&
+    selectedSection.courseVersionName.includes('csa')
+      ? [
+          'progress',
+          'assessments',
+          'projects',
+          'stats',
+          'textResponses',
+          'aiTutorChatMessages',
+        ]
+      : ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
 
   const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
   const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =

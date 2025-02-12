@@ -205,20 +205,18 @@ function TeacherDashboard({
             />
           }
         />
-        {showAITutorTab && (
-          <Route
-            path={TEACHER_DASHBOARD_PATHS.aiTutorChatMessages}
-            element={
-              <EmptySectionV1
-                hasStudents={studentCount > 0}
-                hasCurriculumAssigned={anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(
-                  <TutorTab sectionId={sectionId} />
-                )}
-              />
-            }
-          />
-        )}
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.aiTutorChatMessages}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(
+                <TutorTab sectionId={sectionId} />
+              )}
+            />
+          }
+        />
         {/* '/roster' is the new URL for '/manage_students' in TeacherNavigationRouter. We should redirect to manage students if a user somehow gets sent `/roster' */}
         <Route
           path="/roster"

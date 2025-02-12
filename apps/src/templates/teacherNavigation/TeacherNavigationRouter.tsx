@@ -129,7 +129,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div className={styles.pageAndSidebar}>
-                <TeacherNavigationBar />
+                <TeacherNavigationBar showAITutorTab={showAITutorTab} />
                 <Outlet />
               </div>
             </>
@@ -302,20 +302,18 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 />
               }
             />
-            {showAITutorTab && (
-              <Route
-                path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
-                element={
-                  <ElementOrEmptyPage
-                    showNoStudents={studentCount === 0}
-                    showNoCurriculumAssigned={!anyStudentHasProgress}
-                    element={applyV1TeacherDashboardWidth(
-                      <TutorTab sectionId={sectionId || 0} />
-                    )}
-                  />
-                }
-              />
-            )}
+            <Route
+              path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
+              element={
+                <ElementOrEmptyPage
+                  showNoStudents={studentCount === 0}
+                  showNoCurriculumAssigned={!anyStudentHasProgress}
+                  element={applyV1TeacherDashboardWidth(
+                    <TutorTab sectionId={sectionId || 0} />
+                  )}
+                />
+              }
+            />
           </Route>
         </Route>
       </Route>
