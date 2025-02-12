@@ -55,15 +55,3 @@ amount of stuff, including pegasus, i18n locales, etc.
 Dockerfiles are found in `k8s/*.dockerfile`, note the .dockerignore files that are used to shape
 what's included in each image. The key issue is not to be sending 20GBs to the docker daemon when
 you build, that takes foooooorever and then each `skaffold dev` suddenly takes 2minutes.
-
-# Setting up a prod-like cluster
-
-1. Create a cloudformation stack by uploading k8s/cloudformation/cdo-k8s.yaml in the AWS console
-  - Record the ClusterName param you input when creating the stack
-  - Wait for the stack to be created...
-2. Setup kubectl to access your new cluster via kubeconfig: `k8s/bin/select-eks-cluster.sh`
-  - Alternatively, if you already have aws region and profile defaults setup correctly you can run `aws eks update-kubeconfig --name <ClusterName from step 1>` directly
-  - Verify you
-  - Or run: 
-    - You'll need to have AWS_REGION and AWS_PROFILE already set appropriately
-    - verify everything is working with `kubectl cluster-info`
