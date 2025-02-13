@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Backpack from '@cdo/apps/sharedComponents/backpack/Backpack';
+import Backpack from '@cdo/apps/javalab/Backpack';
 import PaneHeader, {
   PaneSection,
   PaneButton,
