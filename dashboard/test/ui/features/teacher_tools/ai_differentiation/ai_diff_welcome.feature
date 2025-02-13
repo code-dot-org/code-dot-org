@@ -4,10 +4,10 @@ Feature: AI Differentiation Welcome - eyes
   Scenario: AI Differentiation Welcome
 
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "csd3-2023" with teacher "Teacher_Sally"
+    Given I am assigned to unit "csd3-2024" with teacher "Teacher_Sally"
 
     When I sign in as "Teacher_Sally" and go home
-    Given I am on "http://studio.code.org/s/csd3-2023/lessons/3?enableExperiments=ai-differentiation"
+    Given I am on "http://studio.code.org/s/csd3-2024/lessons/3?enableExperiments=ai-differentiation"
     When I open my eyes to test "ai diff welcome"
 
     And I see no difference for "ai floating button"
