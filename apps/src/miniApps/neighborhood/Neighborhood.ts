@@ -90,6 +90,17 @@ export default class Neighborhood {
     }
     this.signals = [];
     this.nextSignalIndex = 0;
+
+    // Expose an interface for testing.
+    // Only used in legacy labs.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const testInterface = (window as any).__TestInterface;
+    if (testInterface) {
+      testInterface.setSpeedSliderValue = (value: number) => {
+        // The old slider used a range of 0 to 1, while the new slider uses 0 to 100.
+        this.speedTracker.setSpeed(value * 100);
+      };
+    }
   }
 
   handleSignal(signal: NeighborhoodSignal | null) {
