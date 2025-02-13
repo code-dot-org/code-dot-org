@@ -1,6 +1,10 @@
 import {ProjectFile} from '@codebridge/types';
 
-import {LevelProperties, MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  LevelProperties,
+  MultiFileSource,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 import {InitProgressPayload, LevelResults} from '@cdo/apps/types/progressTypes';
 
 const initProgressPayload: InitProgressPayload = require('./initProgressPayload.json');
@@ -9,6 +13,7 @@ const nonValidatedLevelProperties: LevelProperties = require('./nonValidatedLeve
 const predictLevelProperties: LevelProperties = require('./predictLevelProperties.json');
 const testProject: MultiFileSource = require('./project.json');
 const smallProject: MultiFileSource = require('./smallProject.json');
+const smallProjectSources: ProjectSources = require('./smallProjectSources.json');
 const starterFile: ProjectFile = require('./starterFile.json');
 const submittableLevelProperties: LevelProperties = require('./submittableLevelProperties.json');
 const supportFile: ProjectFile = require('./supportFile.json');
@@ -22,6 +27,7 @@ export {
   predictLevelProperties,
   testProject,
   smallProject,
+  smallProjectSources,
   starterFile,
   submittableLevelProperties,
   supportFile,
