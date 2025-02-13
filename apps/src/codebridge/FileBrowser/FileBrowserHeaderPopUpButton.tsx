@@ -27,6 +27,10 @@ export const FileBrowserHeaderPopUpButton = () => {
     errorCallback: uploadErrorCallback,
     validMimeTypes,
   });
+
+  const startImportFromBackpack = () => {
+    console.log('import from backpack');
+  };
   return (
     <>
       <FileUploaderComponent />
@@ -49,6 +53,12 @@ export const FileBrowserHeaderPopUpButton = () => {
           iconName="upload"
           labelText={codebridgeI18n.uploadFile()}
           clickHandler={() => startFileUpload()}
+        />
+
+        <PopUpButtonOption
+          iconName="backpack"
+          labelText="Import from backpack"
+          clickHandler={() => startImportFromBackpack()}
         />
       </PopUpButton>
     </>

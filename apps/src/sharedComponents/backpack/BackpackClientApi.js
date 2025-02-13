@@ -80,6 +80,25 @@ export default class BackpackClientApi {
   }
 
   /**
+   * Save files to the backpack
+   * @param {String} filesJson json-formatted string of all file sources in the project
+   * Expected format is {"filename1.java": {"text": "{...}"},...}.
+   * @param {Array} filenames Array of filenames to save to the backpack. Filenames must
+   * exist in filesJson.
+   * @param {Function} onError Function to call if any file fails to save
+   * @param {Function} onSuccess Function to call if all files save.
+   */
+  savePythonlabFile(filesJson, filenames, onError, onSuccess) {
+    this.updateFilesHelper(
+      this.fileUploadsInProgress,
+      filenames,
+      onError,
+      onSuccess,
+      () => this.saveFilesHelper(filesJson, filenames, onError, onSuccess)
+    );
+  }
+
+  /**
    * Delete files from the backpack
    * @param {Array} filenames Array of filenames to delete from the backpack.
    * @param {Function} onError Function to call if any file fails to delete
