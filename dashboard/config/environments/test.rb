@@ -1,6 +1,6 @@
 Dashboard::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.i18n.backend = Cdo::I18n::LazyLoadableBackend.new(lazy_load: true)
   # We sometimes use Spring in test, so want to enable live reloading if and
   # only if this is an environment in which Spring is running
   # https://guides.rubyonrails.org/configuring.html#config-cache-classes

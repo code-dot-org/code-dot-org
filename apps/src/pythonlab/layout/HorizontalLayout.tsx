@@ -1,6 +1,6 @@
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
-import Output from '@codebridge/Workspace/Output';
+import Output from '@codebridge/Workspace/HorizontalOutput';
 import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo} from 'react';
 import {useResizable} from 'react-resizable-layout';
