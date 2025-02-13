@@ -55,7 +55,6 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
     href: {
       displayName: 'Link URL',
       type: 'Text',
-      defaultValue: 'https://code.org',
       group: 'content',
     },
     children: {

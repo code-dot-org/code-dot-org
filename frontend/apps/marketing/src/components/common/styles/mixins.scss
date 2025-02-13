@@ -3,17 +3,17 @@
 }
 
 @mixin common-margin-bottom-xs {
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 
 @mixin common-margin-bottom-s {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 @mixin common-margin-bottom-m {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 @mixin common-margin-bottom-l {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
