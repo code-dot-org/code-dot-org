@@ -10,11 +10,13 @@ import {
   useParams,
 } from 'react-router-dom';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxSelectors';
@@ -215,6 +217,20 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         />
         {navbarComponents.map(component => component)}
       </div>
+      <AiDiffFloatingActionButton
+        context={
+          selectedSection.courseId || selectedSection.unitId
+            ? AiDiffContext.COURSE
+            : AiDiffContext.GENERAL
+        }
+        scriptId={
+          selectedSection.courseId
+            ? selectedSection.courseId
+            : selectedSection.unitId
+        }
+        scriptName={selectedSection.courseVersionName}
+        unitDisplayName={selectedSection.courseDisplayName}
+      />
     </nav>
   );
 };
