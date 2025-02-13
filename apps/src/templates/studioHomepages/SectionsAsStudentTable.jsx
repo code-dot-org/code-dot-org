@@ -25,7 +25,6 @@ class SectionsAsStudentTable extends React.Component {
   };
 
   renderSectionCodeCell(section) {
-    console.log(section);
     if (section.login_type === SectionLoginType.clever) {
       return i18n.loginTypeClever();
     } else if (section.login_type === SectionLoginType.google_classroom) {
@@ -64,6 +63,7 @@ class SectionsAsStudentTable extends React.Component {
     const styles = this.props.isPlSections
       ? plTableLayoutStyles
       : studentSectionsStyles;
+
     return (
       <table
         style={styles.table}

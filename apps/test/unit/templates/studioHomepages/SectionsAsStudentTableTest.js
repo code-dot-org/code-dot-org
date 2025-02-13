@@ -7,7 +7,6 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 import i18n from '@cdo/locale';
 
-import {manageStudentsUrl, progressUrl} from './fakeSectionUtils';
 import {joinedSections} from './homepagesTestData';
 
 const store = createStore(combineReducers({isRtl}));
@@ -111,7 +110,8 @@ describe('SectionsAsStudentTable', () => {
         loginType: 'picture',
         teacherName: 'Ms. Frizzle',
         studentCount: 10,
-        linkToProgress: progressUrl,
+        linkToProgress:
+          'https://studio.code.org/teacher_dashboard/sections/111111/progress',
         assignedTitle: 'Single Unit Course',
         linkToAssigned:
           'https://studio.code.org/courses/ui-test-single-unit-course',
@@ -119,7 +119,8 @@ describe('SectionsAsStudentTable', () => {
         linkToCurrentUnit: 'https://studio.code.org/s/ui-test-single-unit',
         is_assigned_single_unit_course: true,
         numberOfStudents: 2,
-        linkToStudents: manageStudentsUrl,
+        linkToStudents:
+          'https://studio.code.org/teacher_dashboard/sections/111111/manage_students',
         code: 'ClassFiveCode',
         hidden: false,
         participantType: 'student',
