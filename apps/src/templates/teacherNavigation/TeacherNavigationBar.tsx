@@ -15,6 +15,7 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -217,20 +218,22 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         />
         {navbarComponents.map(component => component)}
       </div>
-      <AiDiffFloatingActionButton
-        context={
-          selectedSection.courseId || selectedSection.unitId
-            ? AiDiffContext.COURSE
-            : AiDiffContext.GENERAL
-        }
-        scriptId={
-          selectedSection.courseId
-            ? selectedSection.courseId
-            : selectedSection.unitId
-        }
-        scriptName={selectedSection.courseVersionName}
-        unitDisplayName={selectedSection.courseDisplayName}
-      />
+      {experiments.isEnabled('ai-differentiation') && (
+        <AiDiffFloatingActionButton
+          context={
+            selectedSection.courseId || selectedSection.unitId
+              ? AiDiffContext.COURSE
+              : AiDiffContext.GENERAL
+          }
+          scriptId={
+            selectedSection.courseId
+              ? selectedSection.courseId
+              : selectedSection.unitId
+          }
+          scriptName={selectedSection.courseVersionName}
+          unitDisplayName={selectedSection.courseDisplayName}
+        />
+      )}
     </nav>
   );
 };
