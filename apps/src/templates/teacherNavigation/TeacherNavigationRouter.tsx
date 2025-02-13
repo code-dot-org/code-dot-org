@@ -116,7 +116,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div>
-                <TeacherHomepageV2 headline={'Testing'} />
+                <TeacherHomepageV2 />
               </div>
             </>
           }
