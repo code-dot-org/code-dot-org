@@ -3,11 +3,13 @@
 .neighborhoodPreviewBackground {
   background: $neutral_dark;
 }
-.sliderBackground {
-  background-color: $background_black;
+
+.sliderContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
 }
 
 .slider {
-  display: block;
-  margin: 0 auto;
+  width: 200px;
 }
