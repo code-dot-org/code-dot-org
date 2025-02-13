@@ -61,7 +61,9 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
     : 'beat';
 
   return (
-    <div
+    <button
+      type="button"
+      aria-label={soundType}
       className={classNames(
         'timeline-element',
         moduleStyles.timelineElement,
@@ -86,7 +88,7 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
       }}
     >
       &nbsp;
-    </div>
+    </button>
   );
 };
 
