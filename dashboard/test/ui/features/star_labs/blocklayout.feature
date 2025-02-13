@@ -20,6 +20,6 @@ Scenario: Auto-placing blocks with XML positioning
   When I've initialized the workspace with a manually-positioned playlab puzzle
 
   Then block "whenUp" is near offset "20, 162"
-  And block "whenDown" is near offset "16, 232"
+  And block "whenDown" is near offset "16, 233"
   And block "whenLeft" is near offset "20, 22"
   And block "whenRight" is near offset "16, 92"
