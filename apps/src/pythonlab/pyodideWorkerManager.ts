@@ -4,6 +4,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {setLoadedCodeEnvironment} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -68,6 +69,10 @@ const setUpPyodideWorker = () => {
         getStore().dispatch(setAndSaveSource(message));
         break;
       case 'error':
+        if (message.includes(MessageTag.INPUT_FAILED)) {
+          consoleManager?.writeErrorMessage(pythonlabI18n.inputFailed());
+          break;
+        }
         consoleManager?.writeErrorMessage(parseErrorMessage(message));
         break;
       case 'system_error':
@@ -187,7 +192,6 @@ const asyncRun = (() => {
         id,
         source,
         validationFile,
-        canSupportInput: canSupportInput(),
       };
       pyodideWorker.postMessage(messageData);
     });

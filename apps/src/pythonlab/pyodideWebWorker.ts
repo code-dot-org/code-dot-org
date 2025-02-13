@@ -94,7 +94,7 @@ initializePyodide();
 onmessage = async event => {
   // make sure loading is done
   await initializePyodide();
-  const {id, python, source, validationFile, canSupportInput} = event.data;
+  const {id, python, source, validationFile} = event.data;
   let results = undefined;
   let sourceToWrite = source;
   // Add the validation file to the source if it exists.
@@ -110,9 +110,7 @@ onmessage = async event => {
   try {
     writeSource(sourceToWrite, DEFAULT_FOLDER_ID, '', pyodide);
     await importPackagesFromFiles(sourceToWrite, pyodide);
-    if (canSupportInput) {
-      await patchInput(id);
-    }
+    await patchInput(id);
     results = await pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
