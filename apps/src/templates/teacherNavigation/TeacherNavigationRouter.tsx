@@ -337,13 +337,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     () => window.location.pathname.split('/teacher_dashboard')[0] || ''
   );
 
-  console.log('lfm', {
-    baseUrlPrepend: baseUrlPrepend(),
-    path: window.location.pathname,
-    split: window.location.pathname.split('/teacher_dashboard'),
-    basename: baseUrlPrepend() + TEACHER_NAVIGATION_BASE_URL,
-  });
-
   return (
     <RouterProvider
       router={createBrowserRouter(createRoutesFromElements(routes), {
