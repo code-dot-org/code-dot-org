@@ -84,10 +84,6 @@ export default class Neighborhood {
     this.controller.subtype.initWallMap();
     this.controller.initWithSvg(svg);
 
-    const slider = document.getElementById('slider');
-    if (!slider) {
-      return;
-    }
     this.signals = [];
     this.nextSignalIndex = 0;
 
@@ -98,6 +94,7 @@ export default class Neighborhood {
     if (testInterface) {
       testInterface.setSpeedSliderValue = (value: number) => {
         // The old slider used a range of 0 to 1, while the new slider uses 0 to 100.
+        // Note: this will change the animation speed but won't actually update the UI.
         this.speedTracker.setSpeed(value * 100);
       };
     }
