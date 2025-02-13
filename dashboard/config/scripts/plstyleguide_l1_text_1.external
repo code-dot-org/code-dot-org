@@ -9,7 +9,7 @@ markdown <<MARKDOWN
 
 #### Additionally, screen readers scan a page using headings. Separating each chunk of the page into sections aids in accessibility.
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px 20px 20px 20px; width: 90%; word-wrap: break-word;">
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
     <p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Much of the time - perhaps most of the time - that users spend on your Web pages is spent scanning the text in search of something.</p>
     <p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">The way your text is formatted can do a lot to make it easier for them.</p>

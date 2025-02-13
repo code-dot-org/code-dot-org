@@ -14,6 +14,6 @@ convertScssToJs(
   path.resolve('./src/styleConstants.js')
 );
 convertScssToJs(
-  path.resolve('../shared/css/font.scss'),
+  path.resolve('node_modules/@code-dot-org/component-library-styles/font.scss'),
   path.resolve('./src/fontConstants.js')
 );

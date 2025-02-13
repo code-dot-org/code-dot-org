@@ -17,7 +17,7 @@ module AichatOpenaiHelper
 
     request_chat_completion(
       messages,
-      aichat_model_customizations['temperature']
+      aichat_model_customizations['temperature'].to_f
     )
   end
 
