@@ -158,7 +158,6 @@ namespace :seed do
     coursed-2024
     coursee-2024
     coursef-2024
-    csd3-2023
     csd1-2024
     csd2-2024
     csd3-2024
@@ -309,7 +308,7 @@ namespace :seed do
 
   timed_task_with_logging courses_adhoc: :environment do
     # seed those courses that are best to test on adhoc for the most current year
-    %w(allthethingscourse csp-2024 csd-2024 csa-2024 csd-2023).each do |course_name|
+    %w(allthethingscourse csp-2024 csd-2024 csa-2024).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
   end
@@ -579,7 +578,7 @@ namespace :seed do
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :import_pegasus_data, :datablock_storage].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
-  DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
+  DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then FULL_SEED_TASKS else FULL_SEED_TASKS end
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
