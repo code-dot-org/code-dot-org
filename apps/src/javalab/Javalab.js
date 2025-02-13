@@ -313,7 +313,7 @@ Javalab.prototype.init = function (config) {
 
   let backpackApi = null;
   if (backpackEnabled) {
-    backpackApi = new BackpackClientApi(config.backpackChannel);
+    backpackApi = new BackpackClientApi('javalab', config.backpackChannel);
   }
 
   // Used for some post requests made in Javalab, namely

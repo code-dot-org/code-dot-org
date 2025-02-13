@@ -3,8 +3,9 @@ import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
 const REQUEST_RETRY_COUNT = 1;
 
 export default class BackpackClientApi {
-  constructor(channelId) {
+  constructor(appType, channelId) {
     this.backpackApi = clientApi.create('/v3/libraries');
+    this.appType = appType;
     this.channelId = channelId;
     this.uploadingFiles = false;
     this.fileUploadsInProgress = [];
@@ -19,7 +20,7 @@ export default class BackpackClientApi {
 
   fetchChannelId(callback) {
     $.ajax({
-      url: '/backpacks/channel',
+      url: `/backpacks/channel/${this.appType}`,
       type: 'get',
     }).done(response => {
       this.channelId = response.channel;
