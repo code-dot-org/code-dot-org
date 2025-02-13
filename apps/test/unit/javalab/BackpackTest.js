@@ -2,11 +2,11 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {BackpackAPIContext} from '@cdo/apps/backpack/BackpackAPIContext';
 import {UnconnectedBackpack as Backpack} from '@cdo/apps/javalab/Backpack';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 import {expect, assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
