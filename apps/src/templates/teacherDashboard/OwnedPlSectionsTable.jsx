@@ -65,7 +65,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
           >
             {assignmentNames[0]}
           </a>
-          {assignmentPaths.length > 1 && isAssignedSingleUnitCourse && (
+          {assignmentPaths.length > 1 && !isAssignedSingleUnitCourse && (
             <div style={plTableLayoutStyles.currentUnit}>
               <div>{i18n.currentUnit()}</div>
               <a
