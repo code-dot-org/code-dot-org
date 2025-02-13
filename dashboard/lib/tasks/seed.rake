@@ -309,7 +309,7 @@ namespace :seed do
 
   timed_task_with_logging courses_adhoc: :environment do
     # seed those courses that are best to test on adhoc for the most current year
-    %w(allthethingscourse csp-2024 csd-2024 csa-2024).each do |course_name|
+    %w(allthethingscourse csp-2024 csd-2024 csa-2024 csd-2023).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
   end

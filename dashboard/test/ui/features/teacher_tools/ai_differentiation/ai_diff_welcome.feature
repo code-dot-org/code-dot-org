@@ -25,16 +25,20 @@ Feature: AI Differentiation Welcome - eyes
     Then I wait until element "#uitest-chat-textarea" is visible
     And I see no difference for "chat"
 
-    When I press keys "Hello" for element "#uitest-chat-textarea"
-    And I wait until element "#uitest-chat-submit" is enabled
-    And I click selector "#uitest-chat-submit"
-    And I wait until "#uitest-ai-diff-continue" is not disabled
-    Then I click selector "#uitest-ai-diff-continue"
-    Then I wait until element "#uitest-ai-diff-option" is visible
-    And I wait until element "#uitest-ai-diff-finish" is visible
-    And I see no difference for "end page"
+    # TODO(lfm): when there is a way to test the chat without calling bedrock, uncomment this
+      #  and remove `And I click selector "a:contains('Skip the tutorial')" `
+#    When I press keys "Hello" for element "#uitest-chat-textarea"
+#    And I wait until element "#uitest-chat-submit" is enabled
+#    And I click selector "#uitest-chat-submit"
+#    And I wait until "#uitest-ai-diff-continue" is not disabled
+#    Then I click selector "#uitest-ai-diff-continue"
+#    Then I wait until element "#uitest-ai-diff-option" is visible
+#    And I wait until element "#uitest-ai-diff-finish" is visible
+#    And I see no difference for "end page"
 
-    And I click selector "#uitest-ai-diff-finish"
+#    And I click selector "#uitest-ai-diff-finish"
+
+    And I click selector "a:contains('Skip the tutorial')"
     Then I wait until element "#uitest-chat-textarea" is visible
     And I see no difference for "after welcome"
 
