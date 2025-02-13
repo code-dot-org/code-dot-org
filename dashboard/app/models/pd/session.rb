@@ -89,8 +89,9 @@ class Pd::Session < ApplicationRecord
   def session_info_for_calendar
     {
       id: id,
-      start: start,
-      end: self.end
+      start: start_time.utc.iso8601,
+      end: end_time.utc.iso8601,
+      is_local: workshop.time_zone.blank?
     }
   end
 

@@ -74,9 +74,25 @@ const DEFAULT_PROPS = {
 
 describe('LandingPage', () => {
   let store;
-  const defaultCreateObjectURL = window.URL.createObjectURL;
+  let defaultCreateObjectURL;
+  let blobContentPromise;
+  let workshopTitle = 'New Workshop';
+  let workshopLocation = '123 Main St';
+
+  beforeAll(() => {
+    defaultCreateObjectURL = window.URL.createObjectURL;
+  });
 
   beforeEach(() => {
+    let mockCreateObjectUrl = jest.fn().mockImplementation(blob => {
+      blobContentPromise = new Promise(res => {
+        const fileReader = new FileReader();
+        fileReader.onload = () => res(fileReader.result);
+        fileReader.readAsText(blob);
+      });
+      return 'testCreateObjectURL';
+    });
+    window.URL.createObjectURL = mockCreateObjectUrl;
     stubRedux();
     registerReducers({isRtl, teacherSections});
     store = getStore();
@@ -87,6 +103,7 @@ describe('LandingPage', () => {
     restoreRedux();
     window.URL.createObjectURL = defaultCreateObjectURL;
     jest.resetAllMocks();
+    blobContentPromise = undefined;
   });
 
   function renderDefault(propOverrides = {}) {
@@ -443,8 +460,6 @@ describe('LandingPage', () => {
   });
 
   it('page shows success dialog stating workshop course when redirected here from successful non-BYOW enrollment', () => {
-    window.URL.createObjectURL = () => 'testCreateObjectURL';
-
     const workshopCourse = 'TEST COURSE';
     sessionStorage.setItem('workshopCourse', workshopCourse);
     sessionStorage.setItem(
@@ -463,8 +478,6 @@ describe('LandingPage', () => {
   });
 
   it('page shows success dialog stating workshop name when redirected here from successful BYOW enrollment', () => {
-    window.URL.createObjectURL = () => 'testCreateObjectURL';
-
     const workshopCourse = 'TEST COURSE';
     const workshopName = 'TEST NAME';
     sessionStorage.setItem('workshopCourse', workshopCourse);
@@ -485,8 +498,6 @@ describe('LandingPage', () => {
   });
 
   it('enroll success dialog shows buttons with links to add session to calendar for workshops with one session', () => {
-    window.URL.createObjectURL = () => 'testCreateObjectURL';
-
     const workshopCourse = 'TEST COURSE';
     const workshopLocation = 'Seattle, WA';
     const workshopSession = TEST_WORKSHOP_SESSIONS[0];
@@ -574,8 +585,6 @@ describe('LandingPage', () => {
   });
 
   it('enroll success dialog shows buttons that open dialog to add multiple sessions to calendar for workshops with multiple sessions', () => {
-    window.URL.createObjectURL = () => 'testCreateObjectURL';
-
     const workshopCourse = 'TEST COURSE';
     const workshopLocation = 'Seattle, WA';
     sessionStorage.setItem('workshopCourse', workshopCourse);
@@ -680,6 +689,148 @@ describe('LandingPage', () => {
     ).toBe(null);
 
     sessionStorage.clear();
+  });
+
+  describe('buildGoogleCalendarLink', () => {
+    test('creates link with UTC datetime when session is not local', () => {
+      const session = {
+        start: '2025-02-11T16:00:00Z', // 9 AM MST
+        end: '2025-02-12T00:00:00Z', // 5 PM MST
+        is_local: false,
+      };
+
+      const result = buildGoogleCalendarLink(
+        session,
+        workshopTitle,
+        workshopLocation
+      );
+
+      expect(result).toContain(
+        `dates=${encodeURIComponent('20250211T160000Z/20250212T000000Z')}`
+      );
+    });
+
+    test('creates a link with local time for legacy sessions', () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        is_local: true,
+      };
+
+      const result = buildGoogleCalendarLink(
+        session,
+        workshopTitle,
+        workshopLocation
+      );
+
+      // datetime params do not have trailing 'Z' indicating user's local time
+      expect(result).toContain(
+        `dates=${encodeURIComponent('20250211T090000/20250211T170000')}`
+      );
+    });
+  });
+
+  describe('buildOutlookCalendarLink', () => {
+    test('creates link with UTC datetime when session is not local', () => {
+      const session = {
+        start: '2025-02-11T16:00:00Z',
+        end: '2025-02-12T00:00:00Z',
+        is_local: false,
+      };
+
+      const link = buildOutlookCalendarLink(
+        session,
+        workshopTitle,
+        workshopLocation
+      );
+
+      expect(link).toContain(
+        `startdt=${encodeURIComponent('2025-02-11T16:00:00Z')}`
+      );
+      expect(link).toContain(
+        `enddt=${encodeURIComponent('2025-02-12T00:00:00Z')}`
+      );
+    });
+
+    test('creates a link with local time for legacy sessions', () => {
+      const session = {
+        start: '2025-02-11T09:00:00Z',
+        end: '2025-02-11T17:00:00Z',
+        is_local: true,
+      };
+
+      const link = buildOutlookCalendarLink(
+        session,
+        workshopTitle,
+        workshopLocation
+      );
+
+      // datetime params do not have trailing 'Z' indicating user's local time
+      expect(link).toContain(
+        `startdt=${encodeURIComponent('2025-02-11T09:00:00')}`
+      );
+      expect(link).toContain(
+        `enddt=${encodeURIComponent('2025-02-11T17:00:00')}`
+      );
+    });
+  });
+
+  describe('buildAppleCalendarLink', () => {
+    const workshopSessions = [
+      {
+        start: '2025-02-11T16:00:00Z',
+        end: '2025-02-12T00:00:00Z',
+        is_local: false,
+      },
+      {
+        start: '2025-02-12T16:00:00Z',
+        end: '2025-02-13T00:00:00Z',
+        is_local: false,
+      },
+    ];
+
+    it('should generate a valid ics file content for sessions with time zones', async () => {
+      buildAppleCalendarLink(workshopSessions, workshopTitle, workshopLocation);
+
+      // wait for blob content to be read
+      const icsFileContent = await blobContentPromise;
+      expect(icsFileContent).toContain('BEGIN:VCALENDAR');
+      expect(icsFileContent).toContain('VERSION:2.0');
+      expect(icsFileContent).toContain(
+        `PRODID:${workshopTitle} 20250211T160000Z/ics`
+      );
+      expect(icsFileContent).toContain('DTSTART:20250211T160000Z');
+      expect(icsFileContent).toContain('DTEND:20250212T000000Z');
+      expect(icsFileContent).toContain('DTSTART:20250212T160000Z');
+      expect(icsFileContent).toContain('DTEND:20250213T000000Z');
+      expect(icsFileContent).toContain('SUMMARY:New Workshop');
+      expect(icsFileContent).toContain('LOCATION:123 Main St');
+      expect(icsFileContent).toContain('END:VCALENDAR');
+    });
+
+    it('should handle legacy sessions stored as local time without time zone', async () => {
+      const legacySessions = [
+        {
+          start: '2025-02-11T09:00:00Z',
+          end: '2025-02-11T17:00:00Z',
+          is_local: true,
+        },
+      ];
+
+      buildAppleCalendarLink(legacySessions, workshopTitle, workshopLocation);
+
+      const icsFileContent = await blobContentPromise;
+      expect(icsFileContent).toContain('BEGIN:VCALENDAR');
+      expect(icsFileContent).toContain('VERSION:2.0');
+      expect(icsFileContent).toContain(
+        `PRODID:${workshopTitle} 20250211T090000/ics`
+      );
+      expect(icsFileContent).toContain('DTSTART:20250211T090000');
+      expect(icsFileContent).toContain('DTEND:20250211T170000');
+      expect(icsFileContent).toContain('SUMMARY:New Workshop');
+      expect(icsFileContent).toContain('LOCATION:123 Main St');
+      expect(icsFileContent).toContain('END:VCALENDAR');
+    });
   });
 
   describe('Global Edition Configurations', () => {
