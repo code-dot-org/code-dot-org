@@ -158,6 +158,9 @@ namespace :seed do
     coursed-2024
     coursee-2024
     coursef-2024
+    csd1-2023
+    csd2-2023
+    csd3-2023
     csd1-2024
     csd2-2024
     csd3-2024
