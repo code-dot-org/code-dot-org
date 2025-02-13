@@ -1,6 +1,6 @@
 import {
   SET_SCRIPT,
-  getSelectedScriptName,
+  getSelectedUnitName,
   doesCurrentCourseUseFeedback,
 } from '@cdo/apps/redux/unitSelectionRedux';
 
@@ -1080,7 +1080,7 @@ export const getExportableFeedbackData = state => {
 };
 
 export const isCurrentScriptCSD = state => {
-  const scriptName = getSelectedScriptName(state) || '';
+  const scriptName = getSelectedUnitName(state) || '';
   return scriptName.includes('csd');
 };
 

@@ -26,7 +26,7 @@ class AiTutorInteractionsController < ApplicationController
       :ai_response
     )
     ai_tutor_interaction_params[:user_id] = current_user.id
-    ai_tutor_interaction_params[:ai_model_version] = SharedConstants::AI_TUTOR_CHAT_MODEL_VERISON
+    ai_tutor_interaction_params[:ai_model_version] = SharedConstants::AI_TUTOR_CHAT_MODEL_VERSION
     project_data = get_project_and_version_id(ai_tutor_interaction_params[:level_id], ai_tutor_interaction_params[:script_id])
     ai_tutor_interaction_params[:project_id] = project_data[:project_id]
     ai_tutor_interaction_params[:project_version_id] = project_data[:version_id]

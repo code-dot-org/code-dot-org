@@ -1,16 +1,17 @@
 // My Professional Learning landing page
 // studio.code.org/my-professional-learning
 
+import Tabs from '@code-dot-org/component-library/tabs';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect, useDispatch} from 'react-redux';
 
-import Tabs from '@cdo/apps/componentLibrary/tabs';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
@@ -44,7 +45,14 @@ import style from './landingPage.module.scss';
 
 import './tableStyles.scss';
 
-const getAvailableTabs = permissions => {
+const getAvailableTabs = (permissions, regionConfigs) => {
+  const {
+    hideMyFacilitatorCenterTab,
+    hideInstructorCenterTab,
+    hideRPCenterTab,
+    hideWorkshopOrganizerCenterTab,
+  } = regionConfigs;
+
   let tabs = [
     {
       value: 'myPL',
@@ -52,14 +60,15 @@ const getAvailableTabs = permissions => {
     },
   ];
 
-  if (permissions.includes('facilitator')) {
+  if (!hideMyFacilitatorCenterTab && permissions.includes('facilitator')) {
     tabs.push({
       value: 'myFacilitatorCenter',
       text: i18n.plLandingTabFacilitatorCenter(),
     });
   } else if (
-    permissions.includes('universal_instructor') ||
-    permissions.includes('plc_reviewer')
+    !hideInstructorCenterTab &&
+    (permissions.includes('universal_instructor') ||
+      permissions.includes('plc_reviewer'))
   ) {
     // We only want to show the Instructor Center if the user is also not a Facilitator
     tabs.push({
@@ -68,14 +77,17 @@ const getAvailableTabs = permissions => {
     });
   }
 
-  if (permissions.includes('program_manager')) {
+  if (!hideRPCenterTab && permissions.includes('program_manager')) {
     tabs.push({
       value: 'RPCenter',
       text: i18n.plLandingTabRPCenter(),
     });
   }
 
-  if (permissions.includes('workshop_organizer')) {
+  if (
+    !hideWorkshopOrganizerCenterTab &&
+    permissions.includes('workshop_organizer')
+  ) {
     tabs.push({
       value: 'workshopOrganizerCenter',
       text: i18n.plLandingTabWorkshopOrganizerCenter(),
@@ -83,29 +95,6 @@ const getAvailableTabs = permissions => {
   }
 
   return tabs;
-};
-
-const getEnrollSucessWorkshopTitle = () => {
-  // If a user was sent here after successfully enrolling in a workshop, the one field guaranteed to have
-  // been set in sessionStorage is 'workshopCourse' (since a workshop must have a course) so we can use
-  // its presence to determine whether to log the WORKSHOP_ENROLLMENT_COMPLETED_EVENT event or not.
-  const workshopCourse = sessionStorage.getItem('workshopCourse', null);
-  if (!workshopCourse) {
-    return '';
-  } else {
-    const workshopName = sessionStorage.getItem('workshopName', null);
-
-    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
-      'regional partner': sessionStorage.getItem('rpName', null),
-      'workshop course': workshopCourse,
-      'workshop subject': sessionStorage.getItem('workshopSubject', null),
-    });
-    ['workshopCourse', 'workshopSubject', 'workshopName', 'rpName'].forEach(
-      sessionKey => sessionStorage.removeItem(sessionKey)
-    );
-
-    return !!workshopName ? workshopName : workshopCourse;
-  }
 };
 
 function LandingPage({
@@ -121,14 +110,39 @@ function LandingPage({
   coursesAsFacilitator,
   plSectionIds,
   hiddenPlSectionIds,
+  // Global Edition Region Configurations
+  hideMyFacilitatorCenterTab,
+  hideInstructorCenterTab,
+  hideRPCenterTab,
+  hideWorkshopOrganizerCenterTab,
+  hideMyPLWorkshopEnrollmentCelebrationDialog,
+  hideMyPLBanner,
+  hideMyPLSelfPacedPL,
+  hideMyPLJoinSectionArea,
+  hideMyPLLandingPageWorkshopsTable,
+  hideMyPLStaticRecommendedPL,
+  hideMyPLStaticRecommendedPLMidHighBlock,
+  hideMyPLStaticRecommendedPLSelfPacedBlock,
+  myPLStaticRecommendedPLSelfPacedBlockButtonUrl,
 }) {
-  const availableTabs = getAvailableTabs(userPermissions);
+  const regionTabConfigs = {
+    hideMyFacilitatorCenterTab,
+    hideInstructorCenterTab,
+    hideRPCenterTab,
+    hideWorkshopOrganizerCenterTab,
+  };
+  const availableTabs = getAvailableTabs(userPermissions, regionTabConfigs);
   // The success message will state the title of the workshop the user just enrolled in:
   // - In the case of Build Your Own workshops, it will state the workshop's name.
   // - In the case of any other type of workshop, it will state the workshop's course.
-  const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] = useState(
-    getEnrollSucessWorkshopTitle()
-  );
+  const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] =
+    useState('');
+  const [enrollSuccessWorkshopLocation, setEnrollSuccessWorkshopLocation] =
+    useState('');
+  const [
+    enrollSuccessWorkshopSessionInfo,
+    setEnrollSuccessWorkshopSessionInfo,
+  ] = useState([]);
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
 
   const [workshopsAsParticipant, setWorkshopsAsParticipant] = useState([]);
@@ -154,6 +168,11 @@ function LandingPage({
       : style.headerWithoutTabsContainer;
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
+
+  // Load successful enrollment dialog info if user was redirected here after successfully enrolling
+  useEffect(() => {
+    setUpWorkshopEnrollSuccessContent();
+  }, []);
 
   // Load PL section into redux and fetch applicable workshop info
   const dispatch = useDispatch();
@@ -272,6 +291,41 @@ function LandingPage({
     }
   }, [dispatch, userPermissions]);
 
+  const setUpWorkshopEnrollSuccessContent = () => {
+    // If a user was sent here after successfully enrolling in a workshop, the one field guaranteed to have
+    // been set in sessionStorage is 'workshopCourse' (since a workshop must have a course) so we can use
+    // its presence to determine whether to log the WORKSHOP_ENROLLMENT_COMPLETED_EVENT event or not.
+    const workshopCourse = sessionStorage.getItem('workshopCourse', null);
+    if (!workshopCourse) {
+      return '';
+    }
+
+    const workshopName = sessionStorage.getItem('workshopName', null);
+    setEnrollSuccessWorkshopLocation(
+      sessionStorage.getItem('workshopLocation', null)
+    );
+    setEnrollSuccessWorkshopSessionInfo(
+      JSON.parse(sessionStorage.getItem('sessionTimeInfo', null)) ?? []
+    );
+
+    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+      'regional partner': sessionStorage.getItem('rpName', null),
+      'workshop course': workshopCourse,
+      'workshop subject': sessionStorage.getItem('workshopSubject', null),
+    });
+    [
+      'workshopCourse',
+      'workshopSubject',
+      'workshopName',
+      'sessionTimeInfo',
+      'rpName',
+    ].forEach(sessionKey => sessionStorage.removeItem(sessionKey));
+
+    setEnrollSuccessWorkshopTitle(
+      !!workshopName ? workshopName : workshopCourse
+    );
+  };
+
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
       imageUrl={pegasus('/shared/images/fill-540x300/misc/teacher.png')}
@@ -349,8 +403,10 @@ function LandingPage({
   };
 
   const RenderStaticRecommendedPL = () => {
-    const actionBlocks = [
-      {
+    const actionBlocks = [];
+
+    if (!hideMyPLStaticRecommendedPLMidHighBlock) {
+      actionBlocks.push({
         overline: i18n.plLandingStaticPLMidHighOverline(),
         imageUrl: pegasus('/images/pl-page-educator-support.png'),
         heading: i18n.plLandingStaticPLMidHighHeading(),
@@ -362,8 +418,11 @@ function LandingPage({
             text: i18n.plLandingStaticPLMidHighButton(),
           },
         ],
-      },
-      {
+      });
+    }
+
+    if (!hideMyPLStaticRecommendedPLSelfPacedBlock) {
+      actionBlocks.push({
         overline: i18n.plLandingStaticPLSelfPacedOverline(),
         imageUrl: pegasus('/images/fill-448x280/admins-page-pl.png'),
         heading: i18n.plLandingStaticPLSelfPacedHeading(),
@@ -371,12 +430,16 @@ function LandingPage({
         buttons: [
           {
             color: 'purple',
-            url: pegasus('/educate/professional-development-online'),
+            url: pegasus(
+              myPLStaticRecommendedPLSelfPacedBlockButtonUrl ||
+                '/educate/professional-development-online'
+            ),
             text: i18n.plLandingStaticPLSelfPacedButton(),
           },
         ],
-      },
-    ];
+      });
+    }
+
     return <ActionBlocksWrapper actionBlocks={actionBlocks} />;
   };
 
@@ -503,32 +566,43 @@ function LandingPage({
   const RenderMyPlTab = () => {
     return (
       <>
-        {enrollSuccessWorkshopTitle && (
-          <WorkshopEnrollmentCelebrationDialog
-            workshopTitle={enrollSuccessWorkshopTitle}
-            onClose={() => setEnrollSuccessWorkshopTitle('')}
+        {!hideMyPLWorkshopEnrollmentCelebrationDialog &&
+          enrollSuccessWorkshopTitle && (
+            <WorkshopEnrollmentCelebrationDialog
+              workshopTitle={enrollSuccessWorkshopTitle}
+              workshopLocation={enrollSuccessWorkshopLocation}
+              workshopSessionInfo={enrollSuccessWorkshopSessionInfo}
+              onClose={() => setEnrollSuccessWorkshopTitle('')}
+            />
+          )}
+        {!hideMyPLBanner && RenderBanner()}
+        {!hideMyPLSelfPacedPL &&
+          plCoursesStarted?.length >= 1 &&
+          RenderSelfPacedPL()}
+        {!hideMyPLJoinSectionArea && (
+          <div className={joinedPlSectionsStyling}>
+            <JoinSectionArea
+              initialJoinedStudentSections={joinedStudentSections}
+              initialJoinedPlSections={joinedPlSections}
+              isTeacher={true}
+              isPlSections={true}
+            />
+          </div>
+        )}
+        {!hideMyPLLandingPageWorkshopsTable && (
+          <LandingPageWorkshopsTable
+            workshops={workshopsAsParticipant}
+            isLoading={loadingWorkshopsAsParticipant}
+            tableHeader={i18n.myWorkshops()}
+            participantView
           />
         )}
-        {RenderBanner()}
-        {plCoursesStarted?.length >= 1 && RenderSelfPacedPL()}
-        <div className={joinedPlSectionsStyling}>
-          <JoinSectionArea
-            initialJoinedStudentSections={joinedStudentSections}
-            initialJoinedPlSections={joinedPlSections}
-            isTeacher={true}
-            isPlSections={true}
-          />
-        </div>
-        <LandingPageWorkshopsTable
-          workshops={workshopsAsParticipant}
-          isLoading={loadingWorkshopsAsParticipant}
-          tableHeader={i18n.myWorkshops()}
-          participantView
-        />
-        <section>
-          <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
-          {RenderStaticRecommendedPL()}
-        </section>
+        {!hideMyPLStaticRecommendedPL && (
+          <section>
+            <Heading2>{i18n.plLandingRecommendedHeading()}</Heading2>
+            {RenderStaticRecommendedPL()}
+          </section>
+        )}
       </>
     );
   };
@@ -627,12 +701,18 @@ function LandingPage({
   );
 }
 
-export const UnconnectedLandingPage = LandingPage;
+export const RegionalLandingPage = props => (
+  <GlobalEditionWrapper
+    component={LandingPage}
+    componentId="LandingPage"
+    props={props}
+  />
+);
 
 export default connect(state => ({
   plSectionIds: state.teacherSections.plSectionIds,
   hiddenPlSectionIds: hiddenPlSectionIds(state),
-}))(LandingPage);
+}))(RegionalLandingPage);
 
 LandingPage.propTypes = {
   lastWorkshopSurveyUrl: PropTypes.string,
@@ -648,4 +728,17 @@ LandingPage.propTypes = {
   coursesAsFacilitator: PropTypes.arrayOf(PropTypes.string),
   plSectionIds: PropTypes.arrayOf(PropTypes.number),
   hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number),
+  hideMyFacilitatorCenterTab: PropTypes.bool,
+  hideInstructorCenterTab: PropTypes.bool,
+  hideRPCenterTab: PropTypes.bool,
+  hideWorkshopOrganizerCenterTab: PropTypes.bool,
+  hideMyPLWorkshopEnrollmentCelebrationDialog: PropTypes.bool,
+  hideMyPLBanner: PropTypes.bool,
+  hideMyPLSelfPacedPL: PropTypes.bool,
+  hideMyPLJoinSectionArea: PropTypes.bool,
+  hideMyPLLandingPageWorkshopsTable: PropTypes.bool,
+  hideMyPLStaticRecommendedPL: PropTypes.bool,
+  hideMyPLStaticRecommendedPLMidHighBlock: PropTypes.bool,
+  hideMyPLStaticRecommendedPLSelfPacedBlock: PropTypes.bool,
+  myPLStaticRecommendedPLSelfPacedBlockButtonUrl: PropTypes.string,
 };

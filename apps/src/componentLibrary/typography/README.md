@@ -75,7 +75,7 @@ Here are some examples:
 
 
 ```javascript
-import {Heading1, BodyTwoText, StrongText} from './../componentLibrary/typography';
+import {Heading1, BodyTwoText, StrongText} from '@code-dot-org/component-library/typography';
 
 <Heading1>Some Heading</Heading1>
 <BodyTwoText>Some body text</BodyTwoText>
@@ -83,7 +83,7 @@ import {Heading1, BodyTwoText, StrongText} from './../componentLibrary/typograph
 
 // OR
 
-import Typography from './../componentLibrary/typography';
+import Typography from '@code-dot-org/component-library/typography';
 
 <Typography semanticTag="h1" visualAppearance="heading-xxl">Some Heading1</Typography>
 <Typography semanticTag="p" visualAppearance="body-two">Some body text</Typography>

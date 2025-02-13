@@ -5,6 +5,9 @@
 $message-border-radius: 8px;
 $user-color: $light_gray_100;
 $assistant-color: $brand_primary_light;
+$bot-container-size: 32px;
+$icon-message-gap: 8px;
+$icon-overlay-padding-right: 8px;
 
 %message {
   @extend %markdown-styles;
@@ -88,7 +91,7 @@ $assistant-color: $brand_primary_light;
 %container {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: $icon-message-gap;
 }
 
 .container-assistant {
@@ -102,14 +105,10 @@ $assistant-color: $brand_primary_light;
   justify-content: flex-end;
 }
 
-.userProfaneMessageButton {
-  width: 120px;
-}
-
 .botIconContainer {
-  flex: 0 0 32px;
-  height: 32px;
-  width: 32px;
+  flex: 0 0 $bot-container-size;
+  height: $bot-container-size;
+  width: $bot-container-size;
   background: $light-black;
   border-radius: 20px;
   display: flex;
@@ -121,12 +120,16 @@ $assistant-color: $brand_primary_light;
 .botIconContainerWithOverlay {
   position: relative;
   display: flex;
-  padding-right: 8px;
+  padding-right: $icon-overlay-padding-right;
   padding-top: 3px;
 }
 
-.childContainer {
-  margin-left: 48px;
+.footer {
+  margin-left: $bot-container-size + $icon-message-gap;
+}
+
+.footerWithOverlay {
+  margin-left: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;
 }
 
 .botIcon {

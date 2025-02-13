@@ -1,25 +1,25 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
-import {
-  fetchStudentChatHistory,
-  selectAllVisibleMessages,
-  setShowModalType,
-} from '@cdo/apps/aichat/redux/aichatRedux';
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import {ModalTypes} from '../constants';
 import aichatI18n from '../locale';
+import {
+  fetchStudentChatHistory,
+  selectAllVisibleMessages,
+  setShowModalType,
+} from '../redux';
 import {getShortName} from '../utils';
 
 import ChatEventsList from './ChatEventsList';
-import CopyButton from './CopyButton';
+import CopyChatHistoryButton from './CopyChatHistoryButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
@@ -50,28 +50,26 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     state => state.aichat
   );
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
-  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const visibleItems = useSelector(selectAllVisibleMessages);
-
-  const students = useAppSelector(
-    state => state.teacherSections.selectedStudents
-  );
+  const selectedStudent = useAppSelector(({teacherSections, progress}) => {
+    const students = teacherSections.selectedStudents;
+    if (progress.viewAsUserId && progress.currentLevelId) {
+      return Object.values(students).find(
+        student => student.id === progress.viewAsUserId
+      );
+    }
+  });
 
   const dispatch = useAppDispatch();
 
-  const selectedStudentName = useMemo(() => {
-    if (viewAsUserId && currentLevelId) {
-      const selectedStudent = Object.values(students).find(
-        student => student.id === viewAsUserId
-      );
-      if (selectedStudent) {
-        dispatch(fetchStudentChatHistory(selectedStudent.id));
-        return getShortName(selectedStudent.name);
-      }
+  useEffect(() => {
+    if (selectedStudent) {
+      dispatch(fetchStudentChatHistory(selectedStudent.id));
     }
-    return null;
-  }, [viewAsUserId, students, dispatch, currentLevelId]);
+  }, [selectedStudent, dispatch]);
+
+  const selectedStudentName =
+    selectedStudent && getShortName(selectedStudent.name);
 
   // Teacher user is able to interact with chatbot.
   const canChatWithModel = useMemo(
@@ -93,12 +91,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
-    if (viewAsUserId && !selectedTab) {
+    if (selectedStudent && !selectedTab) {
       setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
-    } else if (!viewAsUserId) {
+    } else if (!selectedStudent) {
       setSelectedTab(null);
     }
-  }, [viewAsUserId, selectedTab]);
+  }, [selectedStudent, selectedTab]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
@@ -175,7 +173,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {ChatModal && <ChatModal onClose={onCloseModal} />}
-      {viewAsUserId ? (
+      {selectedStudent ? (
         <Tabs {...tabArgs} />
       ) : (
         <ChatEventsList events={visibleItems} />
@@ -197,7 +195,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
             color="gray"
             onClick={onClear}
           />
-          <CopyButton isDisabled={!canChatWithModel} />
+          <CopyChatHistoryButton isDisabled={!canChatWithModel} />
         </div>
       </div>
     </div>

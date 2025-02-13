@@ -1,11 +1,10 @@
+import ActionDropdown, {
+  ActionDropdownOption,
+} from '@code-dot-org/component-library/dropdown/actionDropdown';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
-
-import ActionDropdown, {
-  ActionDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/actionDropdown';
 
 const allOptions: ActionDropdownOption[] = [
   {

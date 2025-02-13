@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-01-23T21:20:52.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Reflection Question 2",
+    "long_instructions": "How did using the spreadsheet make the task easier or faster?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "height": "100"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-23T21:20:52.886+00:00\",\"changed\":[\"cloned from \\\"computing-systems-lesson9-reflection1\\\"\"],\"cloned_from\":\"computing-systems-lesson9-reflection1\"},{\"changed_at\":\"2025-01-23 21:21:19 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

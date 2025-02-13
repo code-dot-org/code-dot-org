@@ -1389,6 +1389,14 @@
     prerequisites: "Verified teacher account or SSO-login needed to access AI Chat Lab"
     aria_label: "Start the Teaching Exploring Generative AI professional learning course"
 
+  exploring_gen_ai:
+    banner:
+      overline: "Explore our new"
+      title: "Generative AI curriculum"
+      desc: "Designed to inspire and equip the next generation of creators, thinkers, and innovators."
+      in_partnership_with: "In partnership with"
+      button: "Explore course"
+
   ai_integrations:
     heading: "AI Integrations"
     desc: "We are working on some exciting new technologies to empower students and teachers in the classroom."
@@ -1471,6 +1479,7 @@
   how_ai_works_resources_desc: "Interested in learning more about AI? Here are some additional resources that can help extend you and your students' learning."
 
   ai_vid_intro_caption: "Introducing How AI Works"
+  ai_vid_socimp_caption: "Impact on Society"
   ai_vid_chatbots_caption: "How Chatbots and Large Language Models Work"
   ai_vid_creativity_caption: "Does AI Have Creativity and Imagination?"
   ai_vid_mlintro_caption: "What is Machine Learning?"
@@ -2604,6 +2613,7 @@
         explore: "Explore Music Lab: Jam Session"
         explore_short: "Explore Music Lab"
         start: "Start Music Lab: Jam Session"
+        create_new_project: "Create new project"
       banner:
         desc_01: "Learn to code as you remix your favorite artists' tracks and use AI to generate your own beats!"
         desc_02: "Make music and learn to code in our new Music Lab activity for Hour of Code! In this self-guided, one-hour activity, students remix tracks from artists like %{artist_list}, and %{artist_name} while mastering coding basics such as sequencing, functions, and exploring AI-driven beat creation."

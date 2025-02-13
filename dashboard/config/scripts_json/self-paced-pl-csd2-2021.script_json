@@ -19,12 +19,11 @@
       "curriculum_umbrella": "Self-paced PL - CSD",
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "tts": true,
-      "version_year": "2021"
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-13 21:19:11 UTC",
+    "serialized_at": "2025-01-22 18:59:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

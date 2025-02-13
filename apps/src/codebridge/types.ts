@@ -7,6 +7,8 @@ import {
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 
+import {LayoutKey} from './constants';
+
 export type {
   FileId,
   FolderId,
@@ -49,9 +51,10 @@ export type ConfigType = {
       gridLayoutColumns: string;
     };
   };
-  activeGridLayout?: string;
+  activeLayout?: LayoutKey;
   showFileBrowser: boolean;
   validMimeTypes?: string[];
+  layoutComponents?: {horizontal: React.ReactNode; vertical: React.ReactNode};
 };
 
 export type SetProjectFunction = (project: ProjectSources) => void;
@@ -63,6 +66,7 @@ export type OnRunFunction = (
   source: MultiFileSource | undefined
 ) => Promise<void>;
 export type OnStopFunction = () => void;
+export type SendConsoleInputFunction = (input: string) => void;
 
 export type ReducerAction = {
   type: string;

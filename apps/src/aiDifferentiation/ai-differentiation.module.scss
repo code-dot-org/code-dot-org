@@ -29,6 +29,12 @@
   align-items: stretch;
 }
 
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .hiddenAiDiffPanel {
   display: none;
 }
@@ -54,14 +60,14 @@
   border-style: solid;
 }
 
-.aiBotHeader{
-  position:relative;
+.aiBotHeader {
+  position: relative;
   padding-right: 12px;
   padding-top: 3px;
 }
 
 .taOverlayHeader {
-  position:absolute;
+  position: absolute;
   top: 0;
   right: 0;
   display: flex;
@@ -147,12 +153,12 @@
 
 .chat {
   &Content {
-    height: calc(100% - 84px);
     padding: 20px 16px;
     overflow-y: scroll;
 
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     gap: 20px;
   }
 
@@ -221,17 +227,16 @@
   left: 10px;
   bottom: 48px;
 
-  height: 55px;
-  width: 55px;
-  background-size: 55px;
+  height: 66px;
+  width: 66px;
+  background-size: 66px;
   padding: 0;
+  background-color: transparent;
 
   border-width: 0;
-  border-radius: 30px;
 
   img {
     opacity: 1;
-    border-radius: 30px;
   }
 }
 

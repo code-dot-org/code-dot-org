@@ -9,6 +9,7 @@ import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import i18n from '@cdo/locale';
 
 import CurriculumQuickAssignTopRow from './CurriculumQuickAssignTopRow';
@@ -57,6 +58,7 @@ export default function CurriculumQuickAssign({
   const [decideLater, setDecideLater] = useState(false);
   const [marketingAudience, setMarketingAudience] = useState('');
   const [selectedCourseOffering, setSelectedCourseOffering] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   const participantType = isNewSection
     ? queryParams('participantType')
@@ -145,7 +147,9 @@ export default function CurriculumQuickAssign({
 
       if (!curriculumTypes) {
         // hoc and pl have no curriculum types and just have a list of curriculum in filteredCourseOfferings
-        return filteredCourseOfferings[audience];
+        return Object.values(filteredCourseOfferings[audience]).flatMap(
+          courseSection => Object.values(courseSection)
+        );
       }
 
       // return a flattened array of all courses for the given audience
@@ -188,7 +192,7 @@ export default function CurriculumQuickAssign({
     if (!filteredCourseOfferings) return;
     if (!isNewSection) {
       const determineSelectedCourseOffering = () => {
-        const selection = getSelectedCourseOffering(filteredCourseOfferings);
+        const selection = getSelectedCourseOffering();
 
         if (selection) {
           setSelectedCourseOffering(selection.course);
@@ -200,9 +204,10 @@ export default function CurriculumQuickAssign({
 
       if (!selectedCourseOffering) {
         determineSelectedCourseOffering(filteredCourseOfferings);
+        setIsLoading(false);
       }
+      isNewSection && setIsLoading(false);
     }
-    // added all these dependencies given the eslint warning
   }, [
     filteredCourseOfferings,
     isNewSection,
@@ -278,62 +283,71 @@ export default function CurriculumQuickAssign({
 
   return (
     <div className={moduleStyles.containerWithMarginTop}>
-      <div className={moduleStyles.input}>
-        <label
-          className={classnames(
-            moduleStyles.decideLater,
-            moduleStyles.typographyLabel
+      {isLoading && !isNewSection ? (
+        <>
+          <Heading3>{i18n.assignCurriculum()}</Heading3>
+          <Spinner />
+        </>
+      ) : (
+        <>
+          <div className={moduleStyles.input}>
+            <label
+              className={classnames(
+                moduleStyles.decideLater,
+                moduleStyles.typographyLabel
+              )}
+              htmlFor="decide-later"
+            >
+              {selectedCourseOffering
+                ? i18n.clearAssignedCurriculum()
+                : i18n.decideLater()}
+            </label>
+            <input
+              checked={decideLater}
+              className={classnames(
+                moduleStyles.inputBox,
+                moduleStyles.withBrandAccentColor
+              )}
+              type="checkbox"
+              id="decide-later"
+              onChange={toggleDecideLater}
+            />
+            <Heading3>{i18n.assignCurriculum()}</Heading3>
+            <BodyTwoText>{i18n.useDropdownMessage()}</BodyTwoText>
+          </div>
+          <CurriculumQuickAssignTopRow
+            showPlOfferings={showPlOfferings}
+            marketingAudience={marketingAudience}
+            updateMarketingAudience={setMarketingAudience}
+          />
+          {marketingAudience && filteredCourseOfferings && (
+            <SelectedQuickAssignTable
+              marketingAudience={marketingAudience}
+              courseOfferings={filteredCourseOfferings}
+              setSelectedCourseOffering={offering => {
+                setDecideLater(false);
+                setSelectedCourseOffering(offering);
+              }}
+              updateCourse={value => {
+                updateCourse(value);
+                setIsEditInProgress(true);
+              }}
+              sectionCourse={sectionCourse}
+              isNewSection={isNewSection}
+            />
           )}
-          htmlFor="decide-later"
-        >
-          {selectedCourseOffering
-            ? i18n.clearAssignedCurriculum()
-            : i18n.decideLater()}
-        </label>
-        <input
-          checked={decideLater}
-          className={classnames(
-            moduleStyles.inputBox,
-            moduleStyles.withBrandAccentColor
+          {marketingAudience && (
+            <VersionUnitDropdowns
+              courseOffering={selectedCourseOffering}
+              updateCourse={value => {
+                updateCourse(value);
+                setIsEditInProgress(true);
+              }}
+              sectionCourse={sectionCourse}
+              isNewSection={isNewSection}
+            />
           )}
-          type="checkbox"
-          id="decide-later"
-          onChange={toggleDecideLater}
-        />
-        <Heading3>{i18n.assignCurriculum()}</Heading3>
-        <BodyTwoText>{i18n.useDropdownMessage()}</BodyTwoText>
-      </div>
-      <CurriculumQuickAssignTopRow
-        showPlOfferings={showPlOfferings}
-        marketingAudience={marketingAudience}
-        updateMarketingAudience={setMarketingAudience}
-      />
-      {marketingAudience && filteredCourseOfferings && (
-        <SelectedQuickAssignTable
-          marketingAudience={marketingAudience}
-          courseOfferings={filteredCourseOfferings}
-          setSelectedCourseOffering={offering => {
-            setDecideLater(false);
-            setSelectedCourseOffering(offering);
-          }}
-          updateCourse={value => {
-            updateCourse(value);
-            setIsEditInProgress(true);
-          }}
-          sectionCourse={sectionCourse}
-          isNewSection={isNewSection}
-        />
-      )}
-      {marketingAudience && (
-        <VersionUnitDropdowns
-          courseOffering={selectedCourseOffering}
-          updateCourse={value => {
-            updateCourse(value);
-            setIsEditInProgress(true);
-          }}
-          sectionCourse={sectionCourse}
-          isNewSection={isNewSection}
-        />
+        </>
       )}
     </div>
   );

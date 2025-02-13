@@ -432,7 +432,6 @@ describe('teacherSectionsRedux', () => {
       });
     });
   });
-
   describe('beginEditingSection', () => {
     it('populates sectionBeingEdited if no section provided', () => {
       assert.isNull(initialState.sectionBeingEdited);
@@ -494,6 +493,7 @@ describe('teacherSectionsRedux', () => {
         unitName: 'coursea-2017',
         unitId: null,
         isAssignedStandaloneCourse: true,
+        isAssignedSingleUnitCourse: undefined,
         courseId: undefined,
         createdAt: createdAt,
         studentCount: 1,
@@ -839,6 +839,7 @@ describe('teacherSectionsRedux', () => {
           unitId: undefined,
           course: null,
           isAssignedStandaloneCourse: undefined,
+          isAssignedSingleUnitCourse: undefined,
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,

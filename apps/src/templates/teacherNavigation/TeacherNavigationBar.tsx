@@ -1,3 +1,5 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import Tags from '@code-dot-org/component-library/tags';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
 import {
@@ -8,7 +10,6 @@ import {
   useParams,
 } from 'react-router-dom';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -80,9 +81,23 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     ['roster', 'settings'];
 
   const teacherNavigationBarContent = [
-    {title: coursecontentSectionTitle, keys: courseContentKeys},
-    {title: performanceSectionTitle, keys: performanceContentKeys},
-    {title: classroomContentSectionTitle, keys: classroomContentKeys},
+    {
+      title: coursecontentSectionTitle,
+      keys: courseContentKeys,
+      sectionTag: (
+        <Tags tagsList={[{label: 'New'}]} className={styles.sidebarNewTags} />
+      ),
+    },
+    {
+      title: performanceSectionTitle,
+      keys: performanceContentKeys,
+      sectionTag: null,
+    },
+    {
+      title: classroomContentSectionTitle,
+      keys: classroomContentKeys,
+      sectionTag: null,
+    },
   ];
 
   const navigate = useNavigate();
@@ -159,12 +174,15 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   };
 
   const navbarComponents = teacherNavigationBarContent.map(
-    ({title, keys}, index) => {
+    ({title, keys, sectionTag}, index) => {
       const sidebarOptions = getSidebarOptionsForSection(keys);
 
       return (
         <div key={`section-${index}`}>
-          {title}
+          <div className={styles.sidebarSectionHeader}>
+            {title}
+            {sectionTag}
+          </div>
           {sidebarOptions}
         </div>
       );

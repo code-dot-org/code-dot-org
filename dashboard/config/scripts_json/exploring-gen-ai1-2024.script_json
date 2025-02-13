@@ -15,12 +15,11 @@
         "ai"
       ],
       "tts": true,
-      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-15 20:43:34 UTC",
+    "serialized_at": "2025-01-22 19:00:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -63,6 +62,7 @@
             "buttonText": "Learn More"
           }
         ],
+        "background": "light",
         "overview": "\nThis lesson introduces the learning goals focused on artificial intelligence (AI), transitioning into generative AI. It begins with a discussion on the impact of past technological innovations on society. Students then explore the concept of generative AI through the lens of someone familiar only with its hype, aiming to foster understanding and responsible engagement with AI technology. A key part of the lesson is the introduction of the Input, Storage, Processing, Output (ISPO) framework, essential for understanding generative AI's workings. The lesson concludes with students receiving a graphic organizer for the unit and sharing their anticipations about learning more on generative AI.",
         "preparation": "- Print copies of the graphic organizer for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Explore some of the key themes from this unit, like how we being informed about Artificial Intelligence can help us make better decisions on when and how to use it."
@@ -81,6 +81,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "background": "light",
         "overview": "In this lesson, students explore the process of recognizing and categorizing words, comparing it to how AI systems achieve similar tasks. Through discussion and activities, they consider the data sources an AI system requires to build a task-specific vocabulary, leading to the understanding that language models necessitate vast data amounts, like the entire internet. The lesson concludes with students updating a graphic organizer to reflect the Input step of generative AI.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how a computer learns to recognize the words used in language"
@@ -99,6 +100,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "background": "light",
         "overview": "This lesson formally introduces the concept of bias, where certain information is favored over others. Students experience how bias can implicitly and unintentionally creep into large-language models by participating in an activity where they are asked to source articles and information for a RecipeBot. Once they've used search engine results to generate their training data, they analyze patterns in the data that the class found as a collection, noticing unintended biases such as certain cuisines being unintentionally excluded or all the articles falling within a certain narrow date range. After acknowledging how bias can appear, students analyze several scenarios and discuss how bias could appear in the training data of each one.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how our choices during pre-training can influence a large-language model"
@@ -117,6 +119,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "background": "light",
         "overview": "In this lesson, students explore how language models understand and represent word meanings. Beginning with a game, they investigate the concept of words being \"close\" in meaning. This leads to an activity where students assume the roles of fictional characters, using a sequence of numbers to represent their \"character traits\" and comparing these numerical representations to others. The lesson demonstrates that language models use a similar method, known as embeddings, to represent words as sequences of numbers, with similar words being numerically close to each other. The lesson concludes with students updating the storage section of their graphic organizer to encapsulate the idea of word embeddings.",
         "preparation": "- Have markers, crayons, or colored pencils prepared for students\n- Print copies of the activity guide for each student\n- Print copies of the activity instructions and cut them into quarter-sheets\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how computers represent the meaning of words"
@@ -135,6 +138,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "background": "light",
         "overview": "\nIn this lesson, students delve into the creation of word embeddings. They start by interpreting a passage in a made-up language, using context clues to understand word meanings based on their relationships with other words. Following this, they engage in an activity to construct embeddings from sentences by noting word proximity. The climax reveals that students worked with two distinct passages, illustrating how the same word can have different representations based on its usage context. This insight sets the stage for upcoming lessons on how language models use sentence structure and context to determine word meanings accurately.",
         "preparation": "- Print copies of **both versions** of the activity guide for each student. Ensure some students get Version A while others get Version B.\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
@@ -152,6 +156,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "background": "light",
         "overview": "This lesson introduces neural networks through a hands-on activity where students create a lunch recommender for a school cafeteria. It starts with an exercise involving two mad-libs that use the same words in different orders, highlighting how word relations and grammar influence word choice. Students then work together to build a neural network model for the cafeteria's lunch choices, learning about key concepts like hidden layers and weights. The lesson concludes by tying these ideas back to language, prompting students to think about how words can change meaning in different contexts or phrases.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how neural networks make decisions"
@@ -170,6 +175,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "background": "light",
         "overview": "This lesson explores supervised learning and its role in teaching neural networks language structure. Starting with a game, students learn through trial and error and use their past outcomes to inform future decisions. They then extend this approach to engaging in conversations in a fictional language, initially facing more failures but gradually improving as they identify patterns. This process illustrates how neural networks adjust their behavior based on new data. The lesson concludes with a reflection on whether this process signifies true \"intelligence\" or merely a sophisticated rule-following system.",
         "preparation": "- Print copies of the activity guide for each student\n- Print and cut out copies of the language cards for each group of students\n- Run through the slide deck and videos ahead of time\n  - Prepare to play the Green Glass Door game with the class\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how neural networks are trained to represent relationships between words"
@@ -188,6 +194,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "background": "light",
         "overview": "This lesson delves into the ambiguity of language and the necessity of context for meaning. Students first discuss examples of ambiguous language, followed by an activity where they brainstorm words with multiple meanings and craft sentences to clarify their intended meanings through context. After trading papers with a partner, students guess the intended meanings, identifying which words provided the most context. Reflecting on this, the lesson connects the activity to how language models use embeddings for word meanings and neural networks for relational meaning, introducing the concept of Attention as the process of updating word meanings based on context.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how language models determine the meaning of words within a sentence"
@@ -206,6 +213,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "background": "light",
         "overview": "In this lesson, students investigate how language models generate output based on probabilities. The lesson kicks off with the class collaboratively crafting a story, with a twist to alternate between realistic and fantastical elements. This leads into a group activity where students fill in a mad lib with predetermined words, aiming for either coherent or absurd outcomes. They are then introduced to an app that aggregates responses from numerous users to the same mad lib, showcasing a variety of popular choices for each blank. Through selecting the most popular choices based on this data, students experience firsthand how language models select words with the highest probability from training data.",
         "preparation": "- Print copies of the mad lib story and cut them into quarters\n- Print copies of the mad lib cards - one set per group\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn the final step for language models to generate a response"
@@ -224,6 +232,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "background": "light",
         "overview": "In this lesson, students investigate why language models may produce inaccurate outputs, known as hallucinations. They start by understanding the probabilistic nature of generative AI and how bias in training data can lead to such errors. Following discussions on examples of AI systems recalled for bias and hallucinations, students assume the role of AI Auditors to explore proactive measures for mitigating harm caused by deployed language models. After their exploration, they watch a video of a professional AI Auditor, reflecting on the parallels between the professional's work and their class activity.",
         "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn what happens when a language model gives inaccurate information"
@@ -254,6 +263,7 @@
             "buttonText": "Teacher Survey"
           }
         ],
+        "background": "light",
         "overview": "In this lesson, students create their project for the unit. In the project, students read several generative AI opinion articles that contain misrepresentations or exaggerations of what generative AI is capable of and how it works. Using their newfound knowledge from this unit, students draft a rebuttal and create an artifact to help visualize or conceptualize an aspect of their argument. This project acts as a summative assessment for the content of this unit.",
         "preparation": "- Print copies of the project guide for each student\n- Print multiple copies of the four Generative AI Opinion Articles for students to review\n- Decide how students will submit their work for the project\n- Decide which options for student artifacts you would like to emphasize for students\n- Decide how to break up the multi-day lesson with your class schedule\n- Run through the slide deck and videos ahead of time",
         "student_overview": "Learn how to apply knowledge about generative AI to help educate and inform people who may have misconceptions"

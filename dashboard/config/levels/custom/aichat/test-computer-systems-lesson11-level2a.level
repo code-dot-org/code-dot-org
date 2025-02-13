@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-01-31T18:20:12.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Analyzing User Testing Results\r\n\r\n**Goal:** Interact with the AI to identify common themes or pain points a user might have in the app.\r\n\r\n1. Use the Example System Prompt and the User Testing Results from the product you looked at on the previous level to begin interacting with the AI to identify common themes or pain points. \r\n\r\n---\r\n\r\n### 👍🏼  Example AI System Prompt  👍🏼\r\n>You are an insight analyst, your job is to analyze user feedback and reviews for my app and provide insights into common themes or pain points so that I can then figure out improvements for my program. \r\nI will provide you with user feedback statements. Please do not provide insights for every single user feedback response. Instead, please group your analysis into the top 3 most common themes and pain points.\r\n\r\n---\r\n\r\n###User Testing Results\r\n*Click on the triangle to expand the results for the product you worked on. These are the same data you saw on the previous level. You can copy and paste the data for the AI to analyze.*\r\n\r\n::: details [**Wearable Stress-Monitoring Device**]\r\n### **Observations from Testing**\r\n- **User 1:** The device frequently lost connection to the mobile app during busy hallway transitions.\r\n- **User 2:** The stress level alerts (vibration) were too subtle to notice during noisy environments like the cafeteria.\r\n- **User 3:** Found the interface confusing, especially when trying to interpret the “stress level graph” on the app.\r\n- **User 4:** Wore the device on their dominant wrist, causing frequent accidental taps on the screen.\r\n- **User 5:** Device fit was uncomfortable after prolonged use, particularly during physical education class.\r\n\r\n### **Survey Results**\r\n| Question                                  | User 1 | User 2 | User 3 | User 4 | User 5 | Avg. |\r\n|------------------------------------------|--------|--------|--------|--------|--------|------|\r\n| Device accurately measured stress levels. | 4      | 3      | 5      | 3      | 4      | 3.8  |\r\n| Alerts were helpful in managing stress.   | 3      | 2      | 4      | 3      | 4      | 3.2  |\r\n| Device was comfortable to wear all day.   | 2      | 4      | 3      | 3      | 2      | 2.8  |\r\n| The app was easy to navigate and use.     | 3      | 4      | 2      | 3      | 4      | 3.2  |\r\n\r\n### **Quotes from User Interviews**\r\n- **User 1:** *\"I liked that it could measure my stress, but it disconnected from the app every time I went to class.\"*\r\n- **User 2:** *\"The alert vibration was too weak; I missed most of them when I wasn’t paying attention.\"*\r\n- **User 3:** *\"The graph on the app was interesting but hard to understand—I couldn’t tell if my stress was going up or down.\"*\r\n- **User 4:** *\"It got in the way when I was writing or using my hands a lot. I wish there was a way to adjust it better.\"*\r\n- **User 5:** *\"I noticed it was squeezing my wrist too tightly during gym, even on the loosest setting.\"*\r\n:::\r\n\r\n::: details [**Smart Bike Helmet**]\r\n### **Observations from Testing**\r\n- **User 1:** The built-in turn signals were not bright enough in daylight.\r\n- **User 2:** The voice navigation system was distracting while riding.\r\n- **User 3:** The helmet felt too tight, even in the largest adjustable setting.\r\n- **User 4:** Battery life lasted only 4 hours instead of the advertised 8 hours.\r\n- **User 5:** The helmet’s emergency alert feature falsely triggered after a hard stop.\r\n\r\n### **Survey Results**\r\n| Question                                  | User 1 | User 2 | User 3 | User 4 | User 5 | Avg. |\r\n|------------------------------------------|--------|--------|--------|--------|--------|------|\r\n| The helmet was comfortable to wear.      | 3      | 3      | 2      | 4      | 4      | 3.2  |\r\n| The turn signals were visible to others. | 2      | 3      | 4      | 3      | 4      | 3.2  |\r\n| The navigation system was helpful.       | 4      | 2      | 3      | 3      | 4      | 3.2  |\r\n| The emergency alert system worked correctly. | 3  | 3  | 3  | 3  | 2  | 2.8  |\r\n\r\n### **Quotes from User Interviews**\r\n- **User 1:** *\"The turn signals looked fine at night but weren’t visible enough during the day.\"*\r\n- **User 2:** *\"I got distracted by the voice navigation—it felt like it took my focus off the road.\"*\r\n- **User 3:** *\"Even when adjusted, the helmet felt too tight for long rides.\"*\r\n- **User 4:** *\"The battery died before my afternoon ride. It didn’t last nearly as long as I expected.\"*\r\n- **User 5:** *\"I braked hard at an intersection, and the helmet thought I crashed. My emergency contact got a false alert.\"*\r\n:::\r\n\r\n---- \r\n\r\n### 💡  Tips for working with the Insight Analyst  💡\r\n\r\n**Tip #1:** Is the AI giving insight that could be biased or discriminatory to any users? AI is better at not being biased or discriminatory if you explicitly ask it to!\r\n\r\n- *Example: A common theme you identified is biased toward senior citizens. Please make sure you take into consideration all age groups when providing insights and suggestions.*\r\n\r\n**Tip #2:**  Ask for more detail on one of the features to better understand the analysis.\r\n\r\n- *Example: Can you give more detail on the [Personalization and Recommandations]? Is this a common theme or pain point, and why?*\r\n\r\n**Tip #3:** Splitting up the common themes and pain points might be helpful. Ask the AI to identify comment themes, then ask it to identify the top 3 pain points.\r\n\r\n**Tip #4:** Ask the AI how an improvement or new feature idea might be implemented into the program to help you better understand the analysis, any suggestions, and their implications to the program.\r\n\r\n**Tip #5:** Any time the AI gives you a lot of information and you feel overwhelmed, try focusing on just the first one or two. Or adjust the question you just asked and limit the AI’s results by putting a number limit on them.\r\n\r\n- *Example: How can user interaction and engagement be implemented into the app? Please provide 2-3 suggestions.*\r\n\r\n**Tip #6:** Try asking the AI to use simpler language or to explain its insight in 20 words or less. This might make understanding what the AI is trying to tell you much easier!",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-01-31 18:38:16 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:39:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:41:22 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:42:16 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-01-31 18:43:33 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

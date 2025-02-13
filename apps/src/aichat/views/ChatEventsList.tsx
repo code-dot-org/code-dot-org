@@ -1,7 +1,7 @@
+import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
-import Button from '@cdo/apps/componentLibrary/button';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../locale';
@@ -25,7 +25,9 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
 }) => {
   const [inProgrammaticScroll, setInProgrammaticScroll] = useState(false);
   const [showScrollToBottom, setShowScrollToBottom] = useState(true);
-  const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
+  const isWaitingForChatResponse = useAppSelector(
+    state => !!state.aichat.chatMessagePending
+  );
 
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 

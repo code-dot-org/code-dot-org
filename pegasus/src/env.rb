@@ -53,7 +53,7 @@ def load_pegasus_settings
   # We don't load all translations in dev and test environment.
   # Loading translations from files is slow, more than 60s sometimes. That can
   # cause unrelated eyes tests to fail because of command timeout.
-  if (rack_env?(:development) || rack_env?(:test)) && !CDO.load_locales
+  if rack_env?(:development) && !CDO.load_locales
     I18n.load_path += Dir[cache_dir('i18n/en-US.json')]
     I18n.load_path += Dir[cache_dir('i18n/es-ES.json')]
     I18n.load_path += Dir[hoc_dir('i18n/en.yml')]

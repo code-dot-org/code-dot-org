@@ -845,7 +845,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.disableVariableEditing =
       !!optOptionsExtended.disableVariableEditing;
     blocklyWrapper.varsInGlobals = !!optOptionsExtended.varsInGlobals;
-    blocklyWrapper.isStartMode = !!optOptionsExtended.editBlocks;
+    blocklyWrapper.isStartMode =
+      optOptionsExtended.editBlocks === 'start_sources';
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.analyticsData = optOptionsExtended.analyticsData;
@@ -985,6 +986,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       // initialize the modal function editor.
       blocklyWrapper.functionEditor = new FunctionEditor();
       blocklyWrapper.functionEditor.init(options);
+    }
+
+    const blocklySvgElement = document.querySelector('.blocklySvg');
+    if (blocklySvgElement) {
+      blocklySvgElement.setAttribute('tabindex', '-1');
     }
 
     return workspace;

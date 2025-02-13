@@ -1,0 +1,23 @@
+name 'test-intro-to-programming-lesson10-level5'
+title 'Check for Understanding'
+description 'Match each condition with what it is checking for.'
+height '50'
+
+question '`painter.is_on_bucket()`'
+answer 'The painter is standing on a bucket.'
+question '`painter.can_move(\'south\')`'
+answer 'The painter could move south without hitting an obstacle.'
+question '`painter.is_facing_east()`'
+answer 'The painter is facing toward the right on the screen.'
+question '`painter.is_on_paint()`'
+answer 'The painter is standing on a painted square.'
+question '`painter.can_move()`'
+answer 'The painter can move forward in the direction it is currently facing.'
+
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

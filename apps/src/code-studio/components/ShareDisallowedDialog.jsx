@@ -1,8 +1,8 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
@@ -37,7 +37,7 @@ class ShareDisallowedDialog extends Component {
             />
             <Button
               useAsLink={true}
-              href={`/users/sign_up?user_return_to=${location.pathname}`}
+              href={`/users/new_sign_up/account_type?user_return_to=${location.pathname}`}
               text={i18n.createAccount()}
             />
           </div>

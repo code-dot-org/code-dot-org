@@ -1,12 +1,13 @@
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import {setScriptId, setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import {
   setLoginType,
   setShowSharingColumn,
+  loadSectionStudentData,
 } from '../manageStudents/manageStudentsRedux';
 import {
   finishLoadingSectionData,
@@ -34,6 +35,7 @@ export const asyncLoadSelectedSection = async (
 
   getStore().dispatch(startLoadingSectionData());
   getStore().dispatch(selectSection(sectionId));
+  getStore().dispatch(loadSectionStudentData(sectionId));
 
   const response = fetch(`/dashboardapi/section/${sectionId}`, {
     method: 'GET',
@@ -70,7 +72,6 @@ export const setSelectedSectionData = (sectionData: any) => {
     getStore().dispatch(setShowSharingColumn(true));
   }
 
-  getStore().dispatch(setUnitName(sectionData.script.name));
   getStore().dispatch(setLoginType(sectionData.login_type));
   getStore().dispatch(setRosterProvider(sectionData.login_type));
   getStore().dispatch(setRosterProviderName(sectionData.login_type_name));
