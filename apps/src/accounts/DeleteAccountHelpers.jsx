@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import {
@@ -9,24 +10,33 @@ import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-export const TeacherWarning = () => {
+export const BaseTeacherWarning = ({hideInstructions}) => {
   return (
     <div>
       <SafeMarkdown markdown={i18n.deleteAccount_teacherWarning()} />
 
-      <GlobalEditionWrapper
-        component={() => (
-          <SafeMarkdown
-            markdown={i18n.deleteAccount_personalLoginInstructions({
-              explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL,
-            })}
-          />
-        )}
-        componentId="DeleteAccountPersonalLoginInstructions"
-      />
+      {!hideInstructions && (
+        <SafeMarkdown
+          markdown={i18n.deleteAccount_personalLoginInstructions({
+            explanationUrl: ADD_A_PERSONAL_LOGIN_HELP_URL,
+          })}
+        />
+      )}
     </div>
   );
 };
+
+BaseTeacherWarning.propTypes = {
+  hideInstructions: PropTypes.bool,
+};
+
+export const TeacherWarning = props => (
+  <GlobalEditionWrapper
+    component={BaseTeacherWarning}
+    componentId="TeacherWarning"
+    props={props}
+  />
+);
 
 export const StudentWarning = () => {
   return <div>{i18n.deleteAccount_studentWarning()}</div>;

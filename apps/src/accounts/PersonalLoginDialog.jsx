@@ -15,36 +15,24 @@ import {
 
 const GUTTER = 20;
 
-export default class PersonalLoginDialog extends React.Component {
+export class PersonalLoginDialog extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     dependentStudentsCount: PropTypes.number.isRequired,
     onCancel: PropTypes.func.isRequired,
     onConfirm: PropTypes.func.isRequired,
+    hideInstructions: PropTypes.bool,
   };
 
   render() {
-    const {isOpen, dependentStudentsCount, onCancel, onConfirm} = this.props;
-    const PersonalLoginDeleteAccountDialog = () => (
-      <>
-        <p>
-          {i18n.personalLoginDialog_body3()}
-          <strong>{i18n.personalLoginDialog_body4()}</strong>
-          {i18n.personalLoginDialog_body5()}
-        </p>
-        <Button
-          __useDeprecatedTag
-          text={i18n.removeStudentSendHomeInstructions()}
-          target="_blank"
-          href={ADD_A_PERSONAL_LOGIN_HELP_URL}
-          color={Button.ButtonColor.blue}
-          size={Button.ButtonSize.large}
-          style={styles.button}
-          tabIndex="1"
-        />
-        <p>{i18n.personalLoginDialog_body6()}</p>
-      </>
-    );
+    const {
+      isOpen,
+      dependentStudentsCount,
+      onCancel,
+      onConfirm,
+      hideInstructions,
+    } = this.props;
+
     return (
       <BaseDialog
         useUpdatedStyles
@@ -64,10 +52,26 @@ export default class PersonalLoginDialog extends React.Component {
               })}
             </strong>
           </p>
-          <GlobalEditionWrapper
-            component={PersonalLoginDeleteAccountDialog}
-            componentId="PersonalLoginDeleteAccountDialog"
-          />
+          {!hideInstructions && (
+            <>
+              <p>
+                {i18n.personalLoginDialog_body3()}
+                <strong>{i18n.personalLoginDialog_body4()}</strong>
+                {i18n.personalLoginDialog_body5()}
+              </p>
+              <Button
+                __useDeprecatedTag
+                text={i18n.removeStudentSendHomeInstructions()}
+                target="_blank"
+                href={ADD_A_PERSONAL_LOGIN_HELP_URL}
+                color={Button.ButtonColor.blue}
+                size={Button.ButtonSize.large}
+                style={styles.button}
+                tabIndex="1"
+              />
+              <p>{i18n.personalLoginDialog_body6()}</p>
+            </>
+          )}
           <ConfirmCancelFooter
             confirmText={i18n.personalLoginDialog_button()}
             onConfirm={onConfirm}
@@ -103,3 +107,13 @@ const styles = {
     marginBottom: '1em',
   },
 };
+
+const RegionalPersonalLoginDialog = props => (
+  <GlobalEditionWrapper
+    component={PersonalLoginDialog}
+    componentId="PersonalLoginDialog"
+    props={props}
+  />
+);
+
+export default RegionalPersonalLoginDialog;
