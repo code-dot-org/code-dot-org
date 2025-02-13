@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, {useEffect, useRef} from 'react';
 import {useDispatch} from 'react-redux';
 import {
@@ -332,10 +333,21 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     ]
   );
 
+  const baseUrlPrepend = _.once(
+    () => window.location.pathname.split('/teacher_dashboard')[0] || ''
+  );
+
+  console.log('lfm', {
+    baseUrlPrepend: baseUrlPrepend(),
+    path: window.location.pathname,
+    split: window.location.pathname.split('/teacher_dashboard'),
+    basename: baseUrlPrepend() + TEACHER_NAVIGATION_BASE_URL,
+  });
+
   return (
     <RouterProvider
       router={createBrowserRouter(createRoutesFromElements(routes), {
-        basename: TEACHER_NAVIGATION_BASE_URL,
+        basename: baseUrlPrepend() + TEACHER_NAVIGATION_BASE_URL,
       })}
     />
   );
