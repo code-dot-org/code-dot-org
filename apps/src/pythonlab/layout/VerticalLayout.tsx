@@ -1,7 +1,7 @@
 import {InfoPanel} from '@codebridge/InfoPanel';
 import Workspace from '@codebridge/Workspace';
 import Output from '@codebridge/Workspace/Output';
-import React, {useEffect} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import ResizeBar, {
@@ -10,9 +10,9 @@ import ResizeBar, {
 
 import moduleStyles from './layout.module.scss';
 
-const MIN_INFO_PANEL_WIDTH = 200;
+const MIN_INFO_PANEL_WIDTH = 150;
 const MIN_OUTPUT_WIDTH = 200;
-const MIN_EDITOR_WIDTH = 500;
+const MIN_EDITOR_WIDTH = 300;
 const TWO_RESIZE_BARS = RESIZE_BAR_SIZE_PX * 2;
 const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_OUTPUT_WIDTH = 400;
@@ -44,7 +44,7 @@ const VerticalLayout: React.FunctionComponent = () => {
     reverse: true,
   });
 
-  useEffect(() => {
+  const adjustWidths = useCallback(() => {
     // Editor takes priority in terms of available space.
     const adjustedEditorWidth = Math.max(
       window.innerWidth - rawInfoPanelWidth - rawOutputWidth - TWO_RESIZE_BARS,
@@ -78,6 +78,17 @@ const VerticalLayout: React.FunctionComponent = () => {
     setInfoPanelWidth(adjustedInfoPanelWidth);
   }, [rawInfoPanelWidth, rawOutputWidth]);
 
+  useEffect(() => {
+    adjustWidths();
+  }, [adjustWidths]);
+
+  useEffect(() => {
+    // Flexbox can handle adjusting the widths of the panel to fit the screen, but the
+    // output panel needs an accurate width in order to resize the visualization appropriately.
+    window.addEventListener('resize', adjustWidths);
+    return () => window.removeEventListener('resize', adjustWidths);
+  }, [adjustWidths]);
+
   return (
     <div className={moduleStyles.layoutContainer}>
       <InfoPanel
@@ -91,14 +102,14 @@ const VerticalLayout: React.FunctionComponent = () => {
       />
       <Workspace
         style={{width: editorWidth}}
-        className={moduleStyles.flexGrow}
+        className={moduleStyles.shrinkAndGrow}
       />
       <ResizeBar
         isVertical={true}
         separatorProps={outputSeparatorProps}
         isDragging={outputDragging}
       />
-      <Output width={outputWidth} className={moduleStyles.flexShrink0} />
+      <Output width={outputWidth} className={moduleStyles.shrinkAndGrow} />
     </div>
   );
 };

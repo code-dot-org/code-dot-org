@@ -161,6 +161,9 @@ module Dashboard
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.
     config.assets.paths << Rails.root.join('./public/blockly')
     config.assets.paths << Rails.root.join('../shared/css')
+    # Shared Component Library CSS & SASS are stored in the `frontend` monorepo as an NPM package.
+    # For Rails, load then NPM package directly without NPM scaffolding.
+    config.assets.paths << Rails.root.join('../frontend/packages/component-library-styles')
     config.assets.paths << Rails.root.join('../shared/js')
 
     # Whether to fallback to assets pipeline if a precompiled asset is missed.

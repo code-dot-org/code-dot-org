@@ -5,7 +5,37 @@ description 'description here'
 markdown <<MARKDOWN
 # Designing on a Grid
 
-<div style="text-align:center;">
-    <img src="https://images.code.org/f33cc2206a56e5b19aae256a5294a6d6-image-1739308416310.png" width="500" style="display:block;margin:auto; border:0.5px solid black;">
+#### Generally, organizing information on a grid allows for the user's focus to be on the content, rather than its structure.
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>The benefits of working on a grid are simple: clarity, efficiency, economy, and continuity.</b></p>
+	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;">Before anything else, a grid introduces systematic order to a layout, distinguishing types of information and easing a user's navigation through them. Using a grid permits a designer to lay out enormous amounts of information...in substantially less time because many design considerations have been addressed in building the grid's structure.</p>
+    
+	<hr>
+    
+    <p style="font-size: 10pt; margin-top: 12px; line-height: 115%;">Samara, Timothy. <i>Making and Breaking the Grid: A Graphic Design Layout Workshop.</i> Rockport Publishers, 2002.</p>
 </div>
+
+
+## Examples
+
+#### The following examples use various columns and rows to organize the page. Notice that like elements - such as cards and images - have similar widths and heights. Notice *also* that not everything aligns perfectly with the columns and rows, but are pretty close. That's good enough for the purposes of PL.
+
+<div style="display:flex;justify-content:center;gap:20px;text-align:center;max-width:100%;flex-wrap:wrap;margin:20px 0px 20px 0px">
+    <div style="flex:1;min-width:300px;">
+        <img src="https://images.code.org/f33cc2206a56e5b19aae256a5294a6d6-image-1739308416310.png" width="300" style="border:0.5px solid black" alt="A page in LevelBuilder using three columns and two rows.">
+        <p style="font-size:12pt;margin-top:5px;">This example uses equal margins between columns.</p>
+    </div>
+    <div style="flex:1;min-width:300px;">
+        <img src="https://images.code.org/0fa9618fbe84d4d1754f830c48a6a95e-image-1739404849777.png" width="300" style="border:0.5px solid black;" alt="A page in LevelBuilder where everything is in one column.">
+        <p style="font-size:12pt;margin-top:5px;">Everything in this example is set to 100% width.</p>
+    </div>
+    <div style="flex:1;min-width:300px;">
+        <img src="https://images.code.org/43e81586ab10d82ed52e6d79f1dce467-image-1739404859816.png" width="300" style="border:0.5px solid black;" alt="A page in LevelBuilder using two columns of different widths.">
+        <p style="font-size:12pt;margin-top:5px;">This example adheres to two columns of different widths.</p>
+    </div>
+</div>
+
+#### Chances are, you're probably already designing like this. You don't need to plan your grid before adding content to a page. Just ensure that you've got a general sense of organization and a set structure among similar elements.
 MARKDOWN

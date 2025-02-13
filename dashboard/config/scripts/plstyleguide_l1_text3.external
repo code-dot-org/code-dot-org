@@ -13,7 +13,7 @@ markdown <<MARKDOWN
 
 ## Link Text
 
-<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px 20px 20px 20px; width: 90%; word-wrap: break-word;">
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 100%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 	<p style="font-size: 14pt; font-weight: bold; margin: 0;">💡 Design Tip</p>
 	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Writing Link Text</b></p>
 	<p style="font-size: 12pt; margin-top: 12px; line-height: 120%;"><b>Link text</b> is the text you select for a link that describing what happens when a user activates it. Link text needs to clearly and accurately convey the link's purpose. Good link text helps all users find the information they need, and is particularly helpful for screen reader users, who might navigate pages by moving from link to link, hearing only the text of each link in turn. If the link text doesn't indicate the destination or purpose of the link, screen-reader users have to rely on listening to the surrounding text for context. </p>

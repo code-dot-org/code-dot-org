@@ -21,7 +21,8 @@
  *= require_directory ./lti
  *
  * Shared
- *= require barlow-semi-condensed-font
+ *= require fonts/barlow-semi-condensed
+ *= require fonts/figtree
  *= require fonts/metropolis
  *= require fonts/noto-sans
  *= require user-menu
@@ -76,6 +77,7 @@ body.oceans-blue {
 
 body.music-black, body.background-dark {
   background-color: $dark_black;
+  color: $neutral_light;
 }
 
 body.background-dark, body.background-light {
