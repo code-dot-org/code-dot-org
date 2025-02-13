@@ -3,11 +3,13 @@ import React from 'react';
 
 import MazeVisualization from '@cdo/apps/maze/Visualization';
 
+import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
+
 import moduleStyles from './neighborhood.module.scss';
 
 interface NeighborhoodVisualizationProps {
   className?: string;
-  isDarkMode: boolean;
+  isDarkMode?: boolean;
   useProtectedDiv?: boolean;
 }
 
@@ -17,7 +19,9 @@ const NeighborhoodVisualization: React.FunctionComponent<
   const [sliderValue, setSliderValue] = React.useState(50);
   const handleSpeedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log('Speed changed to: ', e.target.value);
-    setSliderValue(parseInt(e.target.value));
+    const newSpeed = parseInt(e.target.value);
+    setSliderValue(newSpeed);
+    NeighborhoodSpeedTracker.getInstance().setSpeed(newSpeed);
   };
 
   return (
@@ -30,7 +34,7 @@ const NeighborhoodVisualization: React.FunctionComponent<
           name="neighborhood-speed"
           value={sliderValue}
           onChange={handleSpeedChange}
-          color={'white'}
+          color={isDarkMode ? 'white' : 'black'}
           isPercentMode={true}
           hideValue={true}
           leftButtonProps={{
