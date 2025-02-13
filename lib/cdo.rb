@@ -34,10 +34,16 @@ module Cdo
         "#{root}/config.yml.erb"
       )
 
-      defaults = render("#{root}/config.yml.erb").first
-      to_h.each_key do |key|
-        raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
+      configured_properties = to_h.keys.map(&:to_sym)
+      default_properties = render("#{root}/config.yml.erb").first.keys
+      unknown_properties = configured_properties - default_properties
+      unless unknown_properties.empty?
+        raise <<~ERROR
+          Property or properties "#{unknown_properties.join(', ')}" defined in the environment without a default specified in `config.yml.erb`.
+          Likely this is a former configuration value which has been removed from `config.yml.erb` but still exists in your `locals.yml`.
+        ERROR
       end
+
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
       freeze_config
     end
