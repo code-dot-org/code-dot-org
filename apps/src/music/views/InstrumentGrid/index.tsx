@@ -4,7 +4,6 @@ import React, {
   useCallback,
   useEffect,
   useMemo,
-  useRef,
   useState,
 } from 'react';
 
@@ -16,8 +15,8 @@ import {InstrumentEventValue} from '../../player/interfaces/InstrumentEvent';
 import {getPitchName, isBlackKey} from '../../utils/Notes';
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControlsV2 from '../PreviewControlsV2';
+import EaseIntoView from '../util/EaseIntoView';
 
-import {useInitialScroll} from './useInitialScroll';
 import {getDisplayNotes, getInstruments, integers} from './util';
 
 import styles from './styles.module.scss';
@@ -124,9 +123,6 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
   const ticks = integers(lengthMeasures * 16, 1);
 
-  const scrollRef = useRef<HTMLDivElement>(null);
-  useInitialScroll(scrollRef, editorType, scaleMode, displayNotes.length);
-
   const interfaceMode = editorType === 'drums' ? 'drums' : scaleMode;
 
   const RowLabel = (props: {name: string; note: number; i: number}) => {
@@ -156,6 +152,26 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       </button>
     );
   };
+
+  const [scrollStart, scrollEnd] = useMemo(() => {
+    const {cellHeight, rowGap, displayRows, peekHeight} = styles;
+    if (editorType !== 'notes') {
+      return [0, 0];
+    }
+
+    const notesInOctave = scaleMode === 'chromatic' ? 12 : 7;
+    // Scroll so that the middle octave is at the bottom of the editor.
+    const topVisibleRow =
+      displayNotes.length - notesInOctave - parseInt(displayRows);
+    // Start scrolling a few rows below
+    const scrollStartRow = topVisibleRow + 5;
+    const cellHeightWithGap = parseInt(cellHeight) + parseInt(rowGap);
+
+    return [
+      scrollStartRow * cellHeightWithGap,
+      topVisibleRow * cellHeightWithGap - parseInt(peekHeight),
+    ];
+  }, [displayNotes.length, editorType, scaleMode]);
 
   return (
     <div className={styles.container} data-theme="Dark">
@@ -200,9 +216,12 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           />
         )}
       </div>
-      <div
+      <EaseIntoView
+        doEase={editorType !== 'drums'}
+        frames={50}
+        scrollStart={scrollStart}
+        scrollEnd={scrollEnd}
         className={classNames(styles[`sequence-editor-${interfaceMode}`])}
-        ref={scrollRef}
       >
         {displayNotes.map(({note, name}, i) => (
           <div className={styles.pitchRow} key={note}>
@@ -234,7 +253,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
             </div>
           </div>
         ))}
-      </div>
+      </EaseIntoView>
       <LoadingOverlay show={isLoading} />
     </div>
   );
