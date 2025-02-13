@@ -12,7 +12,7 @@ export default class SessionTime extends React.Component {
     session: PropTypes.shape({
       start: PropTypes.string.isRequired,
       end: PropTypes.string.isRequired,
-      is_local: PropTypes.string,
+      is_local: PropTypes.bool.isRequired,
     }).isRequired,
   };
 
