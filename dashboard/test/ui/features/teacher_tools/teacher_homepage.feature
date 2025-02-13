@@ -53,7 +53,7 @@ Feature: Using the teacher homepage sections feature
 
     # save the older section id, from the last row of the table
     And I save the section id from row 1 of the section table
-
+    And I wait until element ".uitest-owned-sections" contains text "Computer Science Principles"
     And the href of selector ".uitest-owned-sections a:contains('Computer Science Principles')" contains the section id
     And the href of selector ".uitest-owned-sections a:contains('Unit 1')" contains the section id
 
