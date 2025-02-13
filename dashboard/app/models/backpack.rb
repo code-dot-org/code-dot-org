@@ -12,7 +12,6 @@
 # Indexes
 #
 #  index_backpacks_on_storage_app_id  (storage_app_id) UNIQUE
-#  index_backpacks_on_user_id         (user_id) UNIQUE
 #
 class Backpack < ApplicationRecord
   belongs_to :user, optional: true
