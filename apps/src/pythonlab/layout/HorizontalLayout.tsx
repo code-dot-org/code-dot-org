@@ -42,7 +42,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
     axis: 'x',
     initial: INITIAL_INFO_PANEL_WIDTH,
     min: MIN_LEFT_PANEL_WIDTH,
-    onResizeStart: logOnResize,
+    onResizeStart: () => logOnResize('pythonlab'),
   });
   const {
     position: rawOutputHeight,
@@ -53,7 +53,7 @@ const HorizontalLayout: React.FunctionComponent = () => {
     initial: INITIAL_OUTPUT_HEIGHT,
     min: MIN_OUTPUT_HEIGHT,
     reverse: true,
-    onResizeStart: logOnResize,
+    onResizeStart: () => logOnResize('pythonlab'),
   });
 
   const adjustRightPanelWidth = useCallback(() => {

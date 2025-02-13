@@ -1,7 +1,10 @@
-import Lab2Registry from '../Lab2Registry';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
-export const logOnResize = () => {
-  Lab2Registry.getInstance()
-    .getMetricsReporter()
-    .incrementCounter('Lab2.DragToResize');
+export const logOnResize = (labType?: string) => {
+  analyticsReporter.sendEvent(
+    EVENTS.LAB2_RESIZE_DRAG_START,
+    {labType},
+    PLATFORMS.STATSIG
+  );
 };
