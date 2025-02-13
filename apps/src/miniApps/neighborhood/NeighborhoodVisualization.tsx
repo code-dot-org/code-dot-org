@@ -18,7 +18,6 @@ const NeighborhoodVisualization: React.FunctionComponent<
 > = ({className, isDarkMode, useProtectedDiv = true}) => {
   const [sliderValue, setSliderValue] = React.useState(50);
   const handleSpeedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log('Speed changed to: ', e.target.value);
     const newSpeed = parseInt(e.target.value);
     setSliderValue(newSpeed);
     NeighborhoodSpeedTracker.getInstance().setSpeed(newSpeed);
