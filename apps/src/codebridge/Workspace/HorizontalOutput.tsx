@@ -1,5 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import MiniAppPreview from '@codebridge/MiniAppPreview/MiniAppPreview';
+import {scaleMiniAppVisualization} from '@codebridge/utils';
 import classNames from 'classnames';
 import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
@@ -13,7 +14,7 @@ import {MiniApps} from '../constants';
 
 import moduleStyles from './output.module.scss';
 
-const DEFAULT_MINI_APP_WIDTH = 400;
+const DEFAULT_MINI_APP_SIZE = 400;
 const MIN_MINI_APP_WIDTH = 200;
 const MIN_CONSOLE_WIDTH = 200;
 const MAX_MINI_APP_WIDTH = 800;
@@ -47,7 +48,7 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
     isDragging: miniAppDragging,
   } = useResizable({
     axis: 'x',
-    initial: DEFAULT_MINI_APP_WIDTH,
+    initial: DEFAULT_MINI_APP_SIZE,
     min: MIN_MINI_APP_WIDTH,
     max: MAX_MINI_APP_WIDTH,
     containerRef: resizeContainerRef,
@@ -92,34 +93,9 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         }
         setAdjustedMiniAppWidth(newMiniAppWidth);
         const newHeight =
-          desiredHeight !== undefined ? desiredHeight : DEFAULT_MINI_APP_WIDTH;
+          desiredHeight !== undefined ? desiredHeight : DEFAULT_MINI_APP_SIZE;
         const newWidth = newMiniAppWidth;
-
-        const sliderHeight = 60;
-        // The original visualization is rendered at 800x800.
-        const originalVisualizationWidth = 800;
-        const headerSize = 40;
-        const availableHeight = newHeight - headerSize - sliderHeight;
-        const newVisualizationWidth = Math.min(availableHeight, newWidth);
-        // Scale the visualization.
-        let scale = newVisualizationWidth / originalVisualizationWidth;
-        if (scale < 0) {
-          // Avoid inverting.
-          scale = 0;
-        }
-        const scaleCss = `scale(${scale})`;
-        $('#svgMaze').css({
-          transform: scaleCss,
-          'transform-origin': '0 0',
-          position: 'absolute',
-        });
-
-        // Scale the visualization div
-        $('#visualization').css({
-          height: newVisualizationWidth,
-          width: newVisualizationWidth,
-          'margin-left': (newWidth - newVisualizationWidth) / 2,
-        });
+        scaleMiniAppVisualization(newHeight, newWidth);
       }
     },
     []
@@ -159,10 +135,6 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
     );
   }
 
-  const miniAppStyle = {width: adjustedMiniAppWidth};
-
-  const consoleStyle = {width: consoleWidth};
-
   return (
     <div
       className={classNames(
@@ -173,7 +145,10 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
       style={style}
       ref={resizeContainerRef}
     >
-      <div style={miniAppStyle} className={moduleStyles.flexShrink0}>
+      <div
+        style={{width: adjustedMiniAppWidth}}
+        className={moduleStyles.flexShrink0}
+      >
         <MiniAppPreview />
       </div>
       <ResizeBar
@@ -181,7 +156,7 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
         separatorProps={miniAppSeparatorProps}
         isDragging={miniAppDragging}
       />
-      <div style={consoleStyle} className={moduleStyles.flexShrink0}>
+      <div style={{width: consoleWidth}} className={moduleStyles.flexShrink0}>
         <Console />
       </div>
     </div>

@@ -19,3 +19,4 @@ export * from './sortFilesByName';
 export * from './validateFileName';
 export * from './validateFolderName';
 export * from './viewableImageFileType';
+export * from './scaleMiniAppVisualization';
