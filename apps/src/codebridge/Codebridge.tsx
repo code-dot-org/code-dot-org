@@ -149,7 +149,10 @@ export const Codebridge = React.memo(
       config.layoutComponents,
     ]);
 
-    const backpackApi = new BackpackClientApi('pythonlab', null);
+    const backpackApi = useMemo(
+      () => new BackpackClientApi('pythonlab', null),
+      []
+    );
 
     return (
       <CodebridgeContextProvider
