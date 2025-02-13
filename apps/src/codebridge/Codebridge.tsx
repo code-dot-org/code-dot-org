@@ -22,6 +22,7 @@ import {FilePreview} from '@cdo/apps/codebridge/FilePreview';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Workspace from './Workspace';
 import Output from './Workspace/Output';
@@ -149,9 +150,11 @@ export const Codebridge = React.memo(
       config.layoutComponents,
     ]);
 
+    const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
     const backpackApi = useMemo(
-      () => new BackpackClientApi('pythonlab', null),
-      []
+      () => new BackpackClientApi(appName, null),
+      [appName]
     );
 
     return (
