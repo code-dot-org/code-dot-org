@@ -38,7 +38,8 @@ build_apps: true
 use_my_apps: true
 
 
-# Improves Rails server load time by delaying the loading of i18n files until the locale is changed; defaults to true.
+# Improves local environment load time by loading only the i18n data for the current locale.
+# Defaults to `true` in the development environment.
 # Note: You may need to be in an incognito window to see changes,
 #       as once the `language_` cookie is set in production (HTTPS),
 #       it becomes "Secure" and can't be rewritten in a local (HTTP) environment.

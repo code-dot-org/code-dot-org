@@ -387,7 +387,8 @@ optimize_webpack_assets: true
 
 optimize_rails_assets: true
 
-# Allows your local server to lazy load locales.
+# Improves local environment load time by loading only the i18n data for the current locale.
+# Note: Not intended for production use.
 lazy_load_i18n: false
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.
