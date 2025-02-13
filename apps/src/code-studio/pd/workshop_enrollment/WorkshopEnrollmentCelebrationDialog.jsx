@@ -13,6 +13,8 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
+import {getSessionDate, getSessionTimes} from '../sessionDateUtils';
+
 import style from '@cdo/apps/code-studio/pd/professional_learning_landing/landingPage.module.scss';
 
 const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
@@ -39,34 +41,23 @@ const zeroPad = value => {
 };
 
 const generateDateText = session => {
-  const date = new Date(session.start);
-  return `${
-    MonthNames[date.getUTCMonth()]
-  } ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+  return getSessionDate({
+    session,
+    format: 'MMMM D, YYYY',
+    isLocal: session.is_local,
+  });
 };
 
 const generateTimeText = session => {
-  const start = new Date(session.start);
-  const end = new Date(session.end);
+  const {startTime, endTime} = getSessionTimes({
+    session,
+    format: 'h:mmA',
+    isLocal: session.is_local,
+  });
 
-  const startTimeText = start
-    .toLocaleString('en-US', {
-      timeZone: 'utc',
-      hour: 'numeric',
-      minute: 'numeric',
-      hour12: true,
-    })
-    .replaceAll(' ', '');
-  const endTimeText = end
-    .toLocaleString('en-US', {
-      timeZone: 'utc',
-      hour: 'numeric',
-      minute: 'numeric',
-      hour12: true,
-    })
-    .replaceAll(' ', '');
+  return `${startTime} - ${endTime}`;
+};
 
-  return `${startTimeText} - ${endTimeText}`;
 };
 
 export const buildAppleCalendarLink = (
