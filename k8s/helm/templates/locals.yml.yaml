@@ -19,3 +19,9 @@ data:
     dashboard_enable_pegasus: false
     build_apps: true
     use_my_apps: true
+
+    # Should we use these?
+    cloudfront_key_pair_id: localoverride
+    cloudfront_private_key: localoverride
+    slack_bot_token: localoverride
+    properties_encryption_key: ''
