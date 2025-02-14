@@ -10,6 +10,9 @@ RAILS_ENV:
 
 locals.yml:
 
+healthChecks:
+  enabled: false
+
 autoscaling:
   enabled: false
   minReplicas: 1

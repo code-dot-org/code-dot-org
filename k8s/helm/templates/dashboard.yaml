@@ -34,8 +34,11 @@ spec:
       containers:
       - name: dashboard
         image: "{{.Values.image}}"
+
         command: {{ .Values.command | toJson }}
         # command: ["zsh"]
+        tty: true # dashboard stdout logging assumes a tty
+
         env:
           - name: RAILS_ENV
             value: {{ .Values.RAILS_ENV }}
@@ -45,12 +48,18 @@ spec:
           - name: AWS_PROFILE
             value: {{ .Values.localDev.mounts.AWS_PROFILE }}
           {{- end }}
+
+        securityContext:
+          allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
+
         ports:
         - name: http
           containerPort: 3000
         - name: http-hmr
           containerPort: 9000
-        tty: true # dashboard stdout logging assumes a tty
+
+
+        {{- if .Values.healthChecks.enabled }}
         startupProbe:
           # Fail pod if it hasn't started within 5 minutes
           failureThreshold: 300
@@ -77,7 +86,13 @@ spec:
           httpGet:
             path: /health_check
             port: http
+        {{- end }}
+
         volumeMounts:
+        - mountPath: /code-dot-org/locals.yml
+          name: locals-yml
+          subPath: locals.yml
+
         {{- if .Values.localDev.mounts.mountDotAWS }}
         # These allow us to re-use our aws / aws-google login from our local machine.
         - mountPath: {{ .Values.user.home }}/.aws
@@ -87,15 +102,12 @@ spec:
         - mountPath: {{ .Values.user.home }}/.config/gcloud
           name: dot-config-gcloud
         {{- end }}
-        - mountPath: /code-dot-org/locals.yml
-          name: locals-yml
-          subPath: locals.yml
-        securityContext:
-          allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
+
       volumes:
         - name: locals-yml
           configMap:
             name: {{ include "cdo.fullname" (merge (dict "component" "locals.yml") .) }}
+
         {{- if .Values.localDev.mounts.mountDotAWS }}
         - name: dot-aws
           persistentVolumeClaim:

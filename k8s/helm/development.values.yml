@@ -1,4 +1,6 @@
 RAILS_ENV: development
+healthChecks:
+  enabled: true
 services:
   redis:
     enabled: true
