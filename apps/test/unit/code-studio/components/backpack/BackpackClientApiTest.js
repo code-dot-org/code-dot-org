@@ -1,6 +1,6 @@
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

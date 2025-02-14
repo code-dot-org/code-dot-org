@@ -34,7 +34,7 @@ markdown <<MARKDOWN
 
 * #### ***Italicized text*** - Use italicized text for emphasis. Use italicized text sparingly - do not use it for long chunks of text, such as quotes or reading passages.
 * #### **Bold text** - Use bold text for emphasis. Be mindful to not emphasize too much on a page, otherwise scanning for information becomes difficult.
-* #### <ins><b>Underlined text</b></ins> - Underlined text is only to be used as a visual cue for links. Do not use underlined text for emphasis.
+* #### <ins><b>Underlined text</b></ins> - Underlined text is only to be used as a visual cue for links. (This is not currently true for Level Builder.) Do not use underlined text for emphasis.
 * #### <mark>**Highlighted text**</mark> - Highlighting should only be used to message caution or an important message.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> 

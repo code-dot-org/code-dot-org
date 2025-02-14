@@ -47,7 +47,12 @@ export const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
-  const {assignmentNames, assignmentPaths, courseOfferingsAreLoaded} = rowData;
+  const {
+    assignmentNames,
+    assignmentPaths,
+    courseOfferingsAreLoaded,
+    isAssignedSingleUnitCourse,
+  } = rowData;
   return (
     <div>
       {courseOfferingsAreLoaded ? (
@@ -60,7 +65,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
           >
             {assignmentNames[0]}
           </a>
-          {assignmentPaths.length > 1 && (
+          {assignmentPaths.length > 1 && !isAssignedSingleUnitCourse && (
             <div style={plTableLayoutStyles.currentUnit}>
               <div>{i18n.currentUnit()}</div>
               <a

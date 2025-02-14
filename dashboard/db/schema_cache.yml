@@ -8637,10 +8637,10 @@ indexes:
   backpacks:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: backpacks
-    name: index_backpacks_on_user_id
+    name: index_backpacks_on_storage_app_id
     unique: true
     columns:
-    - user_id
+    - storage_app_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -8650,10 +8650,11 @@ indexes:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: backpacks
-    name: index_backpacks_on_storage_app_id
+    name: index_backpacks_on_user_id_and_game_id
     unique: true
     columns:
-    - storage_app_id
+    - user_id
+    - game_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -13938,7 +13939,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250207175343
+version: 20250213210703
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

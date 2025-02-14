@@ -180,6 +180,7 @@
       "import": "./dist/esm/link/index.mjs",
       "require": "./dist/cjs/link/index.js"
     },
+    "./link/index.css": "./dist/esm/link/index.css",
     "./modal": {
       "types": {
         "import": "./dist/esm/modal/index.d.mts",

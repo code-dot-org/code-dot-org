@@ -3756,12 +3756,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/component-library-styles@portal:../frontend/packages/component-library-styles/::locator=blockly-mooc%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@code-dot-org/component-library-styles@portal:../frontend/packages/component-library-styles/::locator=blockly-mooc%40workspace%3A."
-  languageName: node
-  linkType: soft
-
 "@code-dot-org/component-library@portal:../frontend/packages/component-library/::locator=blockly-mooc%40workspace%3A.":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/component-library@portal:../frontend/packages/component-library/::locator=blockly-mooc%40workspace%3A."
@@ -10145,7 +10139,6 @@ __metadata:
     "@code-dot-org/artist": 0.2.1
     "@code-dot-org/blockly": 4.0.14
     "@code-dot-org/component-library": "portal:../frontend/packages/component-library/"
-    "@code-dot-org/component-library-styles": "portal:../frontend/packages/component-library-styles/"
     "@code-dot-org/craft": 0.2.2
     "@code-dot-org/dance-party": 2.0.0
     "@code-dot-org/johnny-five": 2.1.0-cdo.3
