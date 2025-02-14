@@ -24,6 +24,11 @@ services:
     enabled: false
   mysql:
     enabled: false
+  minio:
+    enabled: false
+    username:
+    password:
+    runScriptInstallS3: false # seed the minio buckets, runs a one-time job
 
 # These should match the docker image's USERNAME, UID and GID args
 #

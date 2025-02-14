@@ -6,6 +6,10 @@ services:
     enabled: true
   mysql:
     enabled: true
+  minio:
+    enabled: true
+    username: local-development
+    password: allstudents
 localDev:
   mounts:
     mountDotAWS: true

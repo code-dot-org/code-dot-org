@@ -18,6 +18,12 @@ data:
     - master: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379
     {{- end }}
 
+    {{- if .Values.services.minio.enabled }}
+    aws_s3_endpoint: http://{{ include "cdo.fullname" (merge (dict "component" "minio") .) }}:9000
+    aws_s3_access_key_id: {{ .Values.services.minio.username }}
+    aws_s3_secret_access_key: {{ .Values.services.minio.password }}
+    aws_s3_emulated: true
+    {{- end }}
 
     dashboard_enable_pegasus: false
     build_apps: true
