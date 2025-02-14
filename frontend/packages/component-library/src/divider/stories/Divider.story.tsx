@@ -90,7 +90,7 @@ export const GroupOfDividersWithMargin: StoryObj<{
     docs: {
       description: {
         story:
-          'Gray background exists to show padding, it will not appear with component.',
+          'Gray background exists to show margin, it will not appear with component.',
       },
     },
   },
