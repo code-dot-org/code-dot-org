@@ -4,19 +4,10 @@
 FROM ubuntu:22.04 AS code-dot-org-base
 ################################################################################
 
-# skaffold sync only works when the user is root 😤:
-# https://github.com/GoogleContainerTools/skaffold/issues/2479
-# If we find a solution, we can swith to this:
-#
-# ARG \
-#   USERNAME=code-dot-org \
-#   UID=1000 \
-#   GID=1000
-
 ARG \
-  USERNAME=root \
-  UID=0 \
-  GID=0 \
+  USERNAME=code-dot-org \
+  UID=1000 \
+  GID=1000 \
   SRC="/code-dot-org"
 
 ENV \

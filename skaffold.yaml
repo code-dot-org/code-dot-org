@@ -39,7 +39,14 @@ build:
       alias: CODE_DOT_ORG_STATIC
   - image: code-dot-org-core
     custom:
-      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-core.dockerfile
+      # skaffold sync only works when the user is root 😤:
+      # https://github.com/GoogleContainerTools/skaffold/issues/2479
+      # If we find a solution, we can drop this override:
+      buildCommand: |
+        k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-core.dockerfile \
+          --build-arg USERNAME=root \
+          --build-arg UID=0 \
+          --build-arg GID=0
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-core.dockerfile
@@ -71,8 +78,7 @@ deploy:
           image: "{{.IMAGE_FULLY_QUALIFIED_code_dot_org}}"
           # skaffold sync only works when the user is root 😤:
           # https://github.com/GoogleContainerTools/skaffold/issues/2479
-          # If we find a solution, we can drop this override along with
-          # changing ARGS in code-dot-org-core.dockerfile itself:
+          # If we find a solution, we can drop this override:
           user.username: root
           user.uid: 0
           user.gid: 0
