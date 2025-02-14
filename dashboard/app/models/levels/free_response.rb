@@ -76,7 +76,6 @@ class FreeResponse < Level
   end
 
   def stay_on_level?
-    return true if name == 'bethany-test-checkin-fr'
-    try(:stay_on_level_after_submit).to_bool
+    !!try(:stay_on_level_after_submit)
   end
 end
