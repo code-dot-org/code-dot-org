@@ -20,6 +20,7 @@ import {
 import {
   neighborhoodLevelProperties,
   nonValidatedLevelProperties,
+  smallProject,
   smallProjectSources,
   templateBackedLevelProperties,
 } from '../test-files';
@@ -37,6 +38,23 @@ const generateMazeFile = (mazeContents: MazeCell[][], fileId: string) => {
     type: ProjectFileType.SYSTEM_SUPPORT,
     language: 'txt',
     folderId: DEFAULT_FOLDER_ID,
+  };
+};
+
+const getExpectedMazeSources = (
+  startSources: MultiFileSource | undefined,
+  maze: MazeCell[][],
+  fileId: string
+) => {
+  return {
+    source: {
+      ...startSources,
+      files: {
+        ...startSources?.files,
+        [fileId]: generateMazeFile(maze, fileId),
+      },
+    },
+    labConfig: {miniApp: {name: 'neighborhood'}},
   };
 };
 
@@ -142,35 +160,111 @@ describe('useInitialSources', () => {
       templateStartSources,
       parsedDefaultSources,
     } = renderDefault();
-    const expectedSources = {
-      source: {
-        ...neighborhoodLevelProperties.startSources,
-        files: {
-          ...neighborhoodLevelProperties.startSources?.files,
-          '1': generateMazeFile(
-            neighborhoodLevelProperties.serializedMaze!,
-            '1'
-          ),
-        },
-      },
-      labConfig: {miniApp: {name: 'neighborhood'}},
-    };
-    const expectedNeighborhoodDefaultSources = {
-      source: {
-        ...(expectedParsedDefaultSources.source as MultiFileSource),
-        files: {
-          ...(expectedParsedDefaultSources.source as MultiFileSource).files,
-          '1': generateMazeFile(
-            neighborhoodLevelProperties.serializedMaze!,
-            '1'
-          ),
-        },
-      },
-      labConfig: {miniApp: {name: 'neighborhood'}},
-    };
+    const expectedSources = getExpectedMazeSources(
+      neighborhoodLevelProperties.startSources,
+      neighborhoodLevelProperties.serializedMaze!,
+      '1'
+    );
+
+    const expectedNeighborhoodDefaultSources = getExpectedMazeSources(
+      expectedParsedDefaultSources.source as MultiFileSource,
+      neighborhoodLevelProperties.serializedMaze!,
+      '1'
+    );
+
     expect(initialSources).toEqual(expectedSources);
     expect(levelStartSources).toEqual(expectedSources);
     expect(templateStartSources).toBeUndefined();
     expect(parsedDefaultSources).toEqual(expectedNeighborhoodDefaultSources);
+  });
+
+  it('populates template sources with neighborhood grid', () => {
+    const levelProperties = {...neighborhoodLevelProperties};
+    levelProperties.templateSources =
+      templateBackedLevelProperties.templateSources;
+    store.dispatch(onLevelChange({levelProperties}));
+    const {
+      initialSources,
+      levelStartSources,
+      templateStartSources,
+      parsedDefaultSources,
+    } = renderDefault();
+    const expectedLevelSources = getExpectedMazeSources(
+      levelProperties.startSources,
+      levelProperties.serializedMaze!,
+      '1'
+    );
+    const expectedTemplateSources = getExpectedMazeSources(
+      levelProperties.templateSources,
+      levelProperties.serializedMaze!,
+      '1'
+    );
+    const expectedNeighborhoodDefaultSources = getExpectedMazeSources(
+      expectedParsedDefaultSources.source as MultiFileSource,
+      neighborhoodLevelProperties.serializedMaze!,
+      '1'
+    );
+    expect(initialSources).toEqual(expectedTemplateSources);
+    expect(levelStartSources).toEqual(expectedLevelSources);
+    expect(templateStartSources).toEqual(expectedTemplateSources);
+    expect(parsedDefaultSources).toEqual(expectedNeighborhoodDefaultSources);
+  });
+
+  it('sets initial sources as lab initial sources if they exist', () => {
+    const expectedInitialSources = {
+      source: smallProject,
+      labConfig: undefined,
+    };
+    store.dispatch(
+      onLevelChange({
+        levelProperties: nonValidatedLevelProperties,
+        initialSources: expectedInitialSources,
+      })
+    );
+    const {
+      initialSources,
+      levelStartSources,
+      templateStartSources,
+      parsedDefaultSources,
+    } = renderDefault();
+
+    const expectedStartSources = {
+      source: nonValidatedLevelProperties.startSources,
+      labConfig: undefined,
+    };
+    expect(initialSources).toEqual(expectedInitialSources);
+    expect(levelStartSources).toEqual(expectedStartSources);
+    expect(templateStartSources).toBeUndefined();
+    expect(parsedDefaultSources).toEqual(expectedParsedDefaultSources);
+  });
+
+  it('sets start sources as initial sources in start mode', () => {
+    const shouldBeIgnoredInitialSources = {
+      source: smallProject,
+      labConfig: undefined,
+    };
+    const querySelectorMock = jest.spyOn(document, 'querySelector');
+    const mockData = {
+      appoptions: JSON.stringify({
+        editBlocks: 'start_sources',
+      }),
+    };
+    querySelectorMock.mockReturnValue({
+      dataset: mockData,
+    } as unknown as Element);
+    store.dispatch(
+      onLevelChange({
+        levelProperties: nonValidatedLevelProperties,
+        initialSources: shouldBeIgnoredInitialSources,
+      })
+    );
+
+    const {initialSources} = renderDefault();
+
+    const expectedStartSources = {
+      source: nonValidatedLevelProperties.startSources,
+      labConfig: undefined,
+    };
+    expect(initialSources).toEqual(expectedStartSources);
   });
 });
