@@ -160,6 +160,9 @@ COPY --chown=${UID} --link \
 # Copy in the rest of the source code
 COPY --chown=${UID} --link ./ ./
 
+# Temporary locals.yml used to bootstrap `rake build`
+COPY --chown=${UID} ./k8s/docker/locals.rake-build.yml locals.yml
+
 RUN <<EOF
   # Run final build optimizations that require full source code
   #

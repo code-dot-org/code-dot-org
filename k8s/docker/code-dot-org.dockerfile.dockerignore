@@ -2,6 +2,7 @@
 skaffold.yaml
 .github/workflows
 k8s
+!k8s/docker/locals.rake-build.yml
 
 ##########################################################################
 # THESE LARGE STATIC FILES ARE INJECTED USING code-dot-org-static.dockerfile #
