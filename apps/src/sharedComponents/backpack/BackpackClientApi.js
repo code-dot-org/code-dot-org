@@ -81,20 +81,29 @@ export default class BackpackClientApi {
 
   /**
    * Save files to the backpack
-   * @param {String} filesJson json-formatted string of all file sources in the project
-   * Expected format is {"filename1.java": {"text": "{...}"},...}.
-   * @param {Array} filenames Array of filenames to save to the backpack. Filenames must
-   * exist in filesJson.
-   * @param {Function} onError Function to call if any file fails to save
-   * @param {Function} onSuccess Function to call if all files save.
    */
-  savePythonlabFile(filesJson, filenames, onError, onSuccess) {
+  savePythonlabFile(filename, fileContents) {
+    const fileObject = {[filename]: fileContents};
+
+    const onError = () => {
+      console.log('onError');
+    };
+    const onSuccess = () => {
+      console.log('onSuccess');
+    };
     this.updateFilesHelper(
       this.fileUploadsInProgress,
-      filenames,
+      [filename],
       onError,
       onSuccess,
-      () => this.saveFilesHelper(filesJson, filenames, onError, onSuccess)
+      () =>
+        this.saveFilesHelper(
+          fileObject,
+          [filename],
+          onError,
+          onSuccess,
+          'pythonlab'
+        )
     );
   }
 
@@ -146,11 +155,14 @@ export default class BackpackClientApi {
     }
   }
 
-  saveFilesHelper(filesJson, filenames, onError, onSuccess) {
+  saveFilesHelper(filesJson, filenames, onError, onSuccess, appType) {
     this.fileUploadsInProgress = [...filenames];
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
-      const fileContents = filesJson[filename].text;
+      const fileContents =
+        appType === 'pythonlab'
+          ? filesJson[filename].contents
+          : filesJson[filename].text;
       // write file with REQUEST_RETRY_COUNT failure retries
       this.writeSingleFileToBackpack(
         filename,

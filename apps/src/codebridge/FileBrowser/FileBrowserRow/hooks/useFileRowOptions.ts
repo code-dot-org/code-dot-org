@@ -13,6 +13,7 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
@@ -48,20 +49,29 @@ export const useFileRowOptions = (
     config: {editableFileTypes},
   } = useCodebridgeContext();
 
+  const backpackApi = useBackpackAPIContext();
+
   const {openConfirmDeleteFile, openMoveFilePrompt, openRenameFilePrompt} =
     usePrompts();
-
-  const handleSaveToBackpack = () => {
-    console.log('save to backpack');
-  };
 
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const isLocked = !isStartMode && file.type === ProjectFileType.LOCKED_STARTER;
 
-  const dropdownOptions = useMemo(
-    () => [
+  const dropdownOptions = useMemo(() => {
+    const handleSaveToBackpack = () => {
+      const fileContents = {
+        name: file.name,
+        contents: file.contents,
+        folderId: '0',
+        language: 'py',
+        open: true,
+        active: false,
+      };
+      backpackApi.savePythonlabFile(file.name, fileContents);
+    };
+    return [
       {
         condition:
           !isLocked &&
@@ -102,21 +112,20 @@ export const useFileRowOptions = (
         labelText: 'Save to backpack',
         clickHandler: () => handleSaveToBackpack(),
       },
-    ],
-    [
-      appName,
-      editableFileTypes,
-      file,
-      isLocked,
-      isStartMode,
-      openConfirmDeleteFile,
-      openMoveFilePrompt,
-      openRenameFilePrompt,
-      projectFiles,
-      projectFolders,
-    ]
-  );
-
+    ];
+  }, [
+    appName,
+    backpackApi,
+    editableFileTypes,
+    file,
+    isLocked,
+    isStartMode,
+    openConfirmDeleteFile,
+    openMoveFilePrompt,
+    openRenameFilePrompt,
+    projectFiles,
+    projectFolders,
+  ]);
   const startModeFileOptions = useStartModeFileRowOptions(
     file,
     hasValidationFile
