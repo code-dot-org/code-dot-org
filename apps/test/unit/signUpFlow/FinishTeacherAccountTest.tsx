@@ -247,6 +247,12 @@ describe('FinishTeacherAccount', () => {
     // Check that button is disabled until GDPR is checked (and other required fields are filled)
     const displayNameInput = screen.getAllByRole('textbox')[0];
     fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
+      target: {value: 'AU'},
+    });
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: 'Test School'},
+    });
     const finishSignUpButton = screen.getByRole('button', {
       name: locale.go_to_my_account(),
     });
@@ -275,12 +281,8 @@ describe('FinishTeacherAccount', () => {
         name: name,
         email_preference_opt_in: true,
         school_info_attributes: {
-          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
-          country: 'US',
-          schoolName: '',
-          schoolZip: '',
-          schoolsList: [],
-          usIp: true,
+          country: 'AU',
+          school_name: 'Test School',
         },
         country_code: 'US',
         educator_role: null,
@@ -302,6 +304,12 @@ describe('FinishTeacherAccount', () => {
     // Fill in fields
     fireEvent.change(screen.getAllByDisplayValue('')[0], {
       target: {value: name},
+    });
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
+      target: {value: 'AU'},
+    });
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: 'Test School'},
     });
     fireEvent.click(screen.getByRole('checkbox'));
 
@@ -359,12 +367,8 @@ describe('FinishTeacherAccount', () => {
         name: name,
         email_preference_opt_in: true,
         school_info_attributes: {
-          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
-          country: 'US',
-          schoolName: '',
-          schoolZip: '',
-          schoolsList: [],
-          usIp: true,
+          country: 'AU',
+          school_name: 'Test School',
         },
         country_code: 'US',
         educator_role: null,
@@ -384,6 +388,12 @@ describe('FinishTeacherAccount', () => {
     // Fill in fields
     fireEvent.change(screen.getAllByDisplayValue('')[0], {
       target: {value: name},
+    });
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
+      target: {value: 'AU'},
+    });
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: 'Test School'},
     });
     fireEvent.click(screen.getByRole('checkbox'));
 
@@ -439,12 +449,8 @@ describe('FinishTeacherAccount', () => {
         name: name,
         email_preference_opt_in: true,
         school_info_attributes: {
-          schoolId: NonSchoolOptions.SELECT_A_SCHOOL,
-          country: 'US',
-          schoolName: '',
-          schoolZip: '',
-          schoolsList: [],
-          usIp: true,
+          country: 'AU',
+          school_name: 'Test School',
         },
         country_code: 'US',
         educator_role: null,
@@ -467,6 +473,12 @@ describe('FinishTeacherAccount', () => {
     // Fill in fields
     fireEvent.change(screen.getAllByDisplayValue('')[0], {
       target: {value: name},
+    });
+    fireEvent.change(screen.getAllByRole('combobox')[0], {
+      target: {value: 'AU'},
+    });
+    fireEvent.change(screen.getAllByDisplayValue('')[0], {
+      target: {value: 'Test School'},
     });
     fireEvent.click(screen.getByRole('checkbox'));
 
@@ -551,6 +563,13 @@ describe('FinishTeacherAccount', () => {
       const displayNameInput = screen.getAllByRole('textbox')[0];
       fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
 
+      fireEvent.change(screen.getAllByRole('combobox')[1], {
+        target: {value: 'AU'},
+      });
+      fireEvent.change(screen.getAllByDisplayValue('')[0], {
+        target: {value: 'Test School'},
+      });
+
       const finishSignUpButton = screen.getByRole('button', {
         name: locale.go_to_my_account(),
       });
@@ -577,6 +596,13 @@ describe('FinishTeacherAccount', () => {
 
       const displayNameInput = screen.getAllByRole('textbox')[0];
       fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+
+      fireEvent.change(screen.getAllByRole('combobox')[1], {
+        target: {value: 'AU'},
+      });
+      fireEvent.change(screen.getAllByDisplayValue('')[0], {
+        target: {value: 'Test School'},
+      });
 
       let finishSignUpButton = screen.getByRole('button', {
         name: locale.go_to_my_account(),

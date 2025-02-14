@@ -1,7 +1,7 @@
+import Button from '@code-dot-org/component-library/button';
 import React, {useCallback, useEffect, useState} from 'react';
 
 import {AITutorTypes as ActionType, Role} from '@cdo/apps/aiTutor/types';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 
 import {askAITutor} from '../aiTutor/redux/aiTutorRedux';
 import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
@@ -60,7 +60,7 @@ const ValidationButton: React.FunctionComponent = () => {
   return (
     <>
       <Button
-        color="purple"
+        color="white"
         text="Check my code"
         type="secondary"
         onClick={onClick}

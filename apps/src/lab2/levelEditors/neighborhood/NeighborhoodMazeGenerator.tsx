@@ -1,12 +1,12 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {MazeCell} from '@cdo/apps/lab2/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
-import {categories, imageTiles} from './constants';
+import {categories, customTileTypes, imageTiles} from './constants';
 
 import moduleStyles from './neighborhood-maze-generator.module.scss';
 
@@ -90,7 +90,9 @@ const NeighborhoodMazeGenerator: React.FunctionComponent<
       const newMaze = maze.map((rowDefinition, rowIndex) =>
         rowDefinition.map((cell, columnIndex) => {
           if (rowIndex === row && columnIndex === column) {
-            return {...cell, assetId: selectedAsset, value};
+            // Most assets should be designated as tileType 0 (wall), but a few have different tile types.
+            const tileType = customTileTypes[selectedAsset] || 0;
+            return {...cell, tileType, assetId: selectedAsset, value};
           }
           return cell;
         })

@@ -1,9 +1,9 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import {
   Heading3,
   Heading5,

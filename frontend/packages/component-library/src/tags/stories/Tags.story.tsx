@@ -71,6 +71,33 @@ DefaultTags.args = {
   className: 'test',
 };
 
+export const NoTooltipTags = SingleTemplate.bind({});
+NoTooltipTags.args = {
+  tagsList: [
+    {label: 'Math'},
+    {
+      label: '+1',
+      icon: {
+        iconName: 'check',
+        iconStyle: 'solid',
+        title: 'check',
+        placement: 'left',
+      },
+    },
+    {
+      label: '+1',
+      icon: {
+        iconName: 'check',
+        iconStyle: 'solid',
+        title: 'check',
+        placement: 'right',
+      },
+    },
+  ],
+  size: 'm',
+  className: 'test',
+};
+
 export const TagsWithHTMLTooltipContent = SingleTemplate.bind({});
 TagsWithHTMLTooltipContent.args = {
   tagsList: [

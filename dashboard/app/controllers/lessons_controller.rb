@@ -198,6 +198,7 @@ class LessonsController < ApplicationController
       :assessment,
       :unplugged,
       :creative_commons_license,
+      :background,
       :lockable,
       :has_lesson_plan,
       :purpose,

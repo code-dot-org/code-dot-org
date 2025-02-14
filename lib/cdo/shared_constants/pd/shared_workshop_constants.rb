@@ -299,5 +299,98 @@ module Pd
       'Facilitator',
       'Train the trainer'
     ].freeze
+
+    PD_SESSION_FORMATS = [
+      {value: 'in_person', label: 'In-Person', enum_value: 0},
+      {value: 'virtual', label: 'Digital', enum_value: 1}
+    ].freeze
+
+    SESSION_FIELDS = {
+      start: {
+        required: true
+      },
+      end: {
+        required: true
+      },
+      session_format: {
+        required: true,
+        options: PD_SESSION_FORMATS
+      },
+      location_name: {
+        required: false
+      },
+      location_address: {
+        required: false
+      },
+      meeting_link: {
+        required: false
+      },
+    }
+
+    COMMON_COURSE_FIELDS = {
+      name: {
+        required: true
+      },
+      capacity: {
+        required: true
+      },
+      notes: {
+        required: false
+      },
+      suppress_email: {
+        required: false
+      },
+      regional_partner_id: {
+        required: false
+      },
+      organizer_id: {
+        required: false
+      },
+      facilitators: {
+        required: false
+      },
+    }
+
+    WORKSHOP_COURSE_CONFIGS = [
+      {
+        slug: COURSE_CSF.parameterize(separator: "_"),
+        label: COURSE_CSF,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSF].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_CSP.parameterize(separator: "_"),
+        label: COURSE_CSP,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSP].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_CSD.parameterize(separator: "_"),
+        label: COURSE_CSD,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSD].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_CSA.parameterize(separator: "_"),
+        label: COURSE_CSA,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_ADMIN_COUNSELOR.parameterize(separator: "_"),
+        label: COURSE_ADMIN_COUNSELOR,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
+        label: COURSE_BUILD_YOUR_OWN,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(
+          course_offerings: {required: true},
+          participant_group_type: {required: true, options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
+        )
+      }
+    ].freeze
   end
 end

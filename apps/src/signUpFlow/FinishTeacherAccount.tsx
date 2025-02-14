@@ -1,13 +1,13 @@
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import CloseButton from '@code-dot-org/component-library/closeButton';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import TextField from '@code-dot-org/component-library/textField';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   BodyThreeText,
   BodyFourText,
@@ -21,9 +21,11 @@ import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {UserTypes, EducatorRoles} from '@cdo/generated-scripts/sharedConstants';
 
 import {useSchoolInfo} from '../schoolInfo/hooks/useSchoolInfo';
+import {buildSchoolData} from '../schoolInfo/utils/buildSchoolData';
 import {navigateToHref} from '../utils';
 
 import locale from './locale';
@@ -45,9 +47,11 @@ const roleItemGroups = [
     groupItems: [{value: '', text: locale.select_a_role()}],
   },
   ...Object.entries(
-    EducatorRoles.reduce((groups, {category, value, label}) => {
-      groups[category] = groups[category] ?? [];
-      groups[category].push({value, text: label});
+    EducatorRoles.reduce((groups, {category, value}) => {
+      const text = locale[value]?.() ?? '';
+      const categoryLabel = locale[category]?.() ?? '';
+      groups[categoryLabel] = groups[categoryLabel] ?? [];
+      groups[categoryLabel].push({value, text});
       return groups;
     }, {} as Record<string, {value: string; text: string}[]>)
   ).map(([label, groupItems]) => ({label, groupItems})),
@@ -56,7 +60,8 @@ const roleItemGroups = [
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
   countryCode: string;
-}> = ({usIp, countryCode}) => {
+  redirectUrl?: string;
+}> = ({usIp, countryCode, redirectUrl}) => {
   const schoolInfo = useSchoolInfo({usIp});
   const [name, setName] = useState('');
   const [nameErrorMessage, setNameErrorMessage] = useState(null);
@@ -69,12 +74,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorCreatingAccountMessage, showErrorCreatingAccountMessage] =
     useState(false);
-
-  const isInSchoolRequiredExperiment = statsigReporter.getIsInExperiment(
-    'require_school_in_signup_v1',
-    'requireInfo',
-    false
-  );
 
   const showEducatorRole = statsigReporter.getIsInExperiment(
     'educator_role',
@@ -127,11 +126,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
     };
     fetchGdprData();
 
-    const userReturnToHref = sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY);
+    const userReturnToHref =
+      sessionStorage.getItem(USER_RETURN_TO_SESSION_KEY) || redirectUrl;
     if (userReturnToHref) {
       setUserReturnTo(userReturnToHref);
     }
-  }, [countryCode, usIp]);
+  }, [countryCode, usIp, redirectUrl]);
 
   // GDPR is valid if
   // 1. The fetch call has completed AND
@@ -146,16 +146,9 @@ const FinishTeacherAccount: React.FunctionComponent<{
       name?.trim() === '' ||
       name?.length > MAX_DISPLAY_NAME_LENGTH ||
       !gdprValid ||
-      (isInSchoolRequiredExperiment && schoolInfoInvalid(schoolInfo)) ||
+      schoolInfoInvalid(schoolInfo) ||
       (requireEducatorRole && !educatorRole),
-    [
-      gdprValid,
-      isInSchoolRequiredExperiment,
-      name,
-      schoolInfo,
-      requireEducatorRole,
-      educatorRole,
-    ]
+    [gdprValid, name, schoolInfo, requireEducatorRole, educatorRole]
   );
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -190,7 +183,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
         email: sessionStorage.getItem(EMAIL_SESSION_KEY),
         name: name,
         email_preference_opt_in: emailOptInChecked,
-        school_info_attributes: {...schoolInfo},
+        school_info_attributes: buildSchoolData({
+          schoolId: schoolInfo.schoolId,
+          country: schoolInfo.country,
+          schoolName: schoolInfo.schoolName,
+          schoolZip: schoolInfo.schoolZip,
+        }),
         country_code: countryCode,
         educator_role: educatorRole || null,
       },
@@ -220,9 +218,16 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   const sendFinishEvent = (): void => {
-    const hasSchool = !!document.querySelector(
-      'select[name="user[school_info_attributes][school_id]"]'
-    );
+    // Log to Statsig and Amplitude
+    const schoolData = buildSchoolData({
+      schoolId: schoolInfo.schoolId,
+      country: schoolInfo.country,
+      schoolName: schoolInfo.schoolName,
+      schoolZip: schoolInfo.schoolZip,
+    });
+    // schoolData would be undefined if not valid, and the only
+    // school_type sent is 'noSchoolSetting', which is not a school
+    const hasSchool = schoolData && !schoolData.school_type;
     analyticsReporter.sendEvent(
       EVENTS.SIGN_UP_FINISHED_EVENT,
       {
@@ -234,6 +239,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
       },
       PLATFORMS.BOTH
     );
+
+    // Log to Google Analytics
+    trackEvent('sign_up', 'sign_up_success', {
+      value: 'teacher',
+    });
   };
 
   return (
@@ -295,11 +305,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
               dropdownTextThickness="thin"
             />
           )}
-          <SchoolDataInputs
-            {...schoolInfo}
-            includeHeaders={false}
-            markFieldsAsRequired={isInSchoolRequiredExperiment}
-          />
+          <SchoolDataInputs {...schoolInfo} includeHeaders={false} />
           {showGDPR && (
             <div>
               <BodyThreeText

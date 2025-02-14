@@ -1,9 +1,8 @@
+import Tags, {TagProps} from '@code-dot-org/component-library/tags';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
-
-import Tags, {TagProps} from '@cdo/apps/componentLibrary/tags';
 
 describe('Design System - Tags Component', () => {
   const tagsList: TagProps[] = [

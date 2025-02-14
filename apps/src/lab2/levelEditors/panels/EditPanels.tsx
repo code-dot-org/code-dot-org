@@ -1,9 +1,9 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {
   BodyThreeText,
   Heading3,
@@ -18,6 +18,9 @@ import {createUuid} from '@cdo/apps/utils';
 import moduleStyles from './edit-panels.module.scss';
 
 const createKey = (levelName: string) => levelName + '-' + createUuid();
+
+const PANEL_WIDTH = 1920;
+const PANEL_HEIGHT = 1080;
 
 function sanitizePanels(panels: Panel[], levelName: string) {
   return panels.map(panel => {
@@ -119,9 +122,10 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
         <div className={moduleStyles.fullSizeContainer}>
           <PanelsView
             panels={panels}
+            background={'light'}
             onContinue={onContinue}
-            targetWidth={1920}
-            targetHeight={1080}
+            targetWidth={PANEL_WIDTH}
+            targetHeight={PANEL_HEIGHT}
             offerBrowserTts={false}
             resetOnChange={false}
             levelId={null}
@@ -238,6 +242,8 @@ const EditPanel: React.FunctionComponent<EditPanelProps> = ({
           updateImageUrl={imageUrl => {
             updatePanel({...panel, imageUrl: imageUrl});
           }}
+          dimensions={{width: PANEL_WIDTH, height: PANEL_HEIGHT}}
+          fileTypes={['GIF', 'JPG', 'PNG']}
         />
       </div>
       <div className={moduleStyles.fieldRow}>

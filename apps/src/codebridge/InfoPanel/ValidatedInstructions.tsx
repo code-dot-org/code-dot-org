@@ -1,3 +1,5 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
@@ -12,8 +14,6 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   isPredictAnswerLocked,
@@ -27,8 +27,12 @@ import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  LevelStatus,
+  UserLevelInteractions,
+} from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
 import ValidationResults from './ValidationResults';
@@ -71,6 +75,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const {onRun, onStop} = useCodebridgeContext();
   const dialogControl = useDialogControl();
 
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const scriptId = useAppSelector(state => state.lab.scriptId);
   const instructionsText = useAppSelector(
     state => state.lab.levelProperties?.longInstructions
   );
@@ -91,7 +97,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     state => state.lab.levelProperties?.submittable
   );
   const source = useAppSelector(
-    state => state.lab2Project.projectSource?.source
+    state => state.lab2Project.projectSources?.source
   ) as MultiFileSource | undefined;
 
   const appType = useAppSelector(state => state.lab.levelProperties?.appName);
@@ -146,6 +152,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     );
     // If we just submitted, continue or finish the lesson.
     if (submit) {
+      logUserLevelInteraction({
+        levelId: levelId,
+        scriptId: scriptId,
+        interaction: UserLevelInteractions.click_submit,
+      });
       dispatch(continueOrFinishLesson());
     }
   };
@@ -154,6 +165,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     if (onRun) {
       dispatch(setIsValidating(true));
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_VALIDATE_CLICK, appType);
+      logUserLevelInteraction({
+        levelId: levelId,
+        scriptId: scriptId,
+        interaction: UserLevelInteractions.click_validate,
+      });
       onRun(true, dispatch, source).finally(() =>
         dispatch(setIsValidating(false))
       );

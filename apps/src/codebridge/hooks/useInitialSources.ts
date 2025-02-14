@@ -1,6 +1,6 @@
 import {getNextFileId} from '@codebridge/codebridgeContext';
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {combineStartSourcesAndValidation} from '@codebridge/utils';
+import {DEFAULT_FOLDER_ID, MAZE_FILE_NAME} from '@codebridge/constants';
+import {combineStartSourcesAndValidation, findFile} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
 
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -10,6 +10,7 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {
+  MazeCell,
   MultiFileSource,
   ProjectFileType,
   ProjectSources,
@@ -40,7 +41,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     state => state.lab.levelProperties?.templateSources
   );
 
-  const exemplarSources = useAppSelector(
+  const exemplarSource = useAppSelector(
     state => state.lab.levelProperties?.exemplarSources
   );
   const validationFile = useAppSelector(
@@ -51,6 +52,20 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     state => state.lab.levelProperties?.serializedMaze
   );
   const miniApp = useAppSelector(state => state.lab.levelProperties?.miniApp);
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
+  );
+
+  const generateMazeFile = (mazeContents: MazeCell[][], fileId: string) => {
+    return {
+      id: fileId,
+      name: MAZE_FILE_NAME,
+      contents: JSON.stringify(mazeContents),
+      type: ProjectFileType.SYSTEM_SUPPORT,
+      language: 'txt',
+      folderId: DEFAULT_FOLDER_ID,
+    };
+  };
 
   const generateProjectSourceFromStartSource = useCallback(
     (startCode: MultiFileSource) => {
@@ -59,14 +74,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
       // system support file.
       if (serializedMaze) {
         const mazeFileId = getNextFileId(Object.values(startCode.files));
-        const mazeFile = {
-          id: mazeFileId,
-          name: 'serialized_maze.txt',
-          contents: JSON.stringify(serializedMaze),
-          type: ProjectFileType.SYSTEM_SUPPORT,
-          language: 'txt',
-          folderId: DEFAULT_FOLDER_ID,
-        };
+        const mazeFile = generateMazeFile(serializedMaze, mazeFileId);
         startCode = {
           ...startCode,
           files: {
@@ -122,13 +130,44 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     if (isStartMode) {
       return startSources;
     }
+    if (isPredictLevel) {
+      // Predict levels never use sources loaded from the server, only the start sources.
+      return templateSources || startSources;
+    }
     if (isEditingExemplar || isViewingExemplar) {
+      // Show the existing exemplar sources when editing or viewing exemplar sources,
+      // if they exist.
+      if (exemplarSource) {
+        const parsedExemplarSource: ProjectSources = {
+          source: exemplarSource,
+          labConfig: levelStartSources?.labConfig,
+        };
+        if (serializedMaze) {
+          // If there is an existing maze file, we will replace it with the current maze.
+          // Otherwise, we will create a new maze file.
+          const existingMazeFile = findFile(
+            exemplarSource,
+            MAZE_FILE_NAME,
+            DEFAULT_FOLDER_ID
+          );
+          const mazeFileId =
+            existingMazeFile?.id ||
+            getNextFileId(Object.values(exemplarSource.files));
+          const mazeFile = generateMazeFile(serializedMaze, mazeFileId);
+          parsedExemplarSource.source = {
+            ...exemplarSource,
+            files: {
+              ...exemplarSource.files,
+              [mazeFileId]: mazeFile,
+            },
+          };
+        }
+        return parsedExemplarSource;
+      }
       // If we are viewing exemplars sources and have no exemplar, we show a fallback
       // page from LabViewsRenderer. We fall back to template sources, if they exist,
       // or the level's start sources for editing.
-      return exemplarSources
-        ? {source: exemplarSources}
-        : templateSources || startSources;
+      return templateSources || startSources;
     }
 
     const projectSources = labInitialSources;
@@ -138,10 +177,12 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     parsedDefaultSources,
     templateStartSources,
     isStartMode,
+    isPredictLevel,
     isEditingExemplar,
     isViewingExemplar,
     labInitialSources,
-    exemplarSources,
+    exemplarSource,
+    serializedMaze,
   ]);
 
   return {

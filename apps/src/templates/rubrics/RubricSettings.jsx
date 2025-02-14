@@ -1,3 +1,5 @@
+import Link from '@code-dot-org/component-library/link';
+import Toggle from '@code-dot-org/component-library/toggle';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -5,8 +7,6 @@ import React, {useEffect, useState, useMemo, useCallback} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import Link from '@cdo/apps/componentLibrary/link/Link';
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import {
   BodyTwoText,
   BodyThreeText,

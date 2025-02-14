@@ -688,7 +688,7 @@ en:
             #### **Extra Step:** Because we are currently piloting this unit, you first need to enroll in the pilot in order to see the curriculum units. <strong><a href="http://studio.code.org/experiments/set_single_user_experiment/csf-maker-pilot" target="blank" rel="noopener noreferrer">Click here to enroll in the pilot</a> </strong>
           version_title: ''
         foundations-of-cs-beta-2024:
-          title: Foundations of Computer Science BETA
+          title: Foundations of Computer Science BETA (now called CS and AI Foundations BETA)
           description_short: ''
           description_student: |-
             Welcome to Foundations of Computer Science! This exciting course is your gateway to the powerful world of computer science. Whether you're curious about how apps work or want to know more about the impact of technology on society, this course has something for you. Over the semester, you'll learn the basics of programming, dive into how the Internet functions, and even create your own projects that could solve real-world problems.
@@ -799,7 +799,7 @@ en:
           description_teacher: ''
           version_title: '2024'
         self-paced-pl-csa-2024:
-          title: self-paced-pl-csa-2024
+          title: Teaching AP Computer Science A
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -857,7 +857,7 @@ en:
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 4 - The Design Process** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 4 - The Design Process. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           version_title: "'24 - '25"
         self-paced-pl-ai-101-2024:
-          title: AI 101 Self Paced Professional Learning for Educators
+          title: AI 101 Professional Learning for Educators
           description_short: ''
           description_student: |-
             ## Welcome!
@@ -1009,7 +1009,7 @@ en:
             - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
           version_title: "'24-'25"
         self-paced-foundations-cs-2024:
-          title: Teaching Foundations of Computer Science
+          title: Teaching CS and AI Foundations
           description_short: ''
           description_student: |
             ## Welcome!
@@ -1045,19 +1045,19 @@ en:
           description_teacher: ''
           version_title: ''
         3-5gamedesign-2024:
-          title: Preparing to Teach Elementary Game Design
+          title: Teaching Elementary Game Design
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         microbitmakermodule-2024:
-          title: Preparing to Teach Maker with micro:bit
+          title: Teaching Maker with micro:bit
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         elementaryai-2024:
-          title: Preparing to Teach How AI Makes Decisions
+          title: Teaching How AI Makes Decisions
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
@@ -1178,7 +1178,7 @@ en:
           description_teacher: ''
           version_title: "'24-'25"
         self-paced-exploring-gen-ai-2024:
-          title: Exploring Generative AI Self-Paced Professional Learning
+          title: Exploring Generative AI Professional Learning
           description_short: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
           description_student: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for grade 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
           description_teacher: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Exploring Generative AI course.\n\n##### Exploring Generative AI is designed as standalone coursework for 8-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to the Exploring Generative AI Unit. "
@@ -1207,3 +1207,54 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        tess-modularity-2025:
+          title: tess-modularity-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        music-pilot-gj-2025:
+          title: music-pilot-gj-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        data-science-beta:
+          title: "[BETA] Data Science"
+          description_short: ''
+          description_student: ''
+          description_teacher: |-
+            **for external preview**
+
+            Data Science builds a strong foundation in data analysis and visualization for students, using programming tools such as CODAP in Unit 1 and Python in Unit 2 to deepen their analytical skills. Through structured lessons and projects, students will learn how to use data science tools to transform raw data into meaningful visualizations. The units emphasize ethical considerations, guiding students through discussions and activities focused on data privacy, bias, and the societal impacts of data-driven decisions. By the end of each unit, students will be prepared to investigate and solve real-world problems using a comprehensive data-driven approach, culminating in a project that showcases their ability to craft compelling data stories.
+          version_title: ''
+        data-science-with-python-pilot-2024:
+          title: "[PILOT] Data Science with Python"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        alloftheplaygrounds:
+          title: All of the Playgrounds
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        pilot-pl-teaching-k5-music-lab:
+          title: pilot-pl-teaching-k5-music-lab
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        ui-test-single-unit-course-2025:
+          title: Single Unit Course 2025
+          description_short: This is the short description for Single-Unit Course 2025.
+          description_student: This is the student description for Single-Unit Course 2025.
+          description_teacher: This is the teacher description for Single-Unit Course 2025.
+          version_title: '2025'
+        ui-test-single-unit-course-2026:
+          title: Single-Unit Course 2026
+          description_short: This is the short description for Single-Unit Course 2026.
+          description_student: This is the student description for Single-Unit Course 2026.
+          description_teacher: This is the teacher description for Single-Unit Course 2026.
+          version_title: '2026'

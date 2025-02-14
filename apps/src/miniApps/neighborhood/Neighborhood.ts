@@ -1,9 +1,10 @@
 import {tiles, MazeController} from '@code-dot-org/maze';
 
-import javalabMsg from '@cdo/apps/javalab/locale';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
+import {LOOK_ID, SVG_ID} from '@cdo/apps/maze/constants';
 import Slider from '@cdo/apps/slider';
+import commonI18n from '@cdo/locale';
 
 import {NeighborhoodSignalType} from './constants';
 import {NeighborhoodSignal} from './types';
@@ -64,6 +65,8 @@ export default class Neighborhood {
     if (!level.serializedMaze) {
       return;
     }
+    this.prepareForNewMaze();
+
     this.controller = new MazeController(level, skin, config, {
       // TODO: Either get rid of these methods or support audio in Neighborhood.
       // https://codedotorg.atlassian.net/browse/CT-942
@@ -74,9 +77,8 @@ export default class Neighborhood {
         getTestResults,
       },
     });
-    // 'svgMaze' is a magic value that we use throughout our code-dot-org and maze code to
-    // reference the maze visualization area. It is initially set up in maze's Visualization.jsx
-    const svg = document.getElementById('svgMaze');
+
+    const svg = document.getElementById(SVG_ID);
     this.controller.subtype.initStartFinish();
     this.controller.subtype.createDrawer(svg);
     this.controller.subtype.initWallMap();
@@ -101,14 +103,17 @@ export default class Neighborhood {
     }
   }
 
-  handleSignal(signal: NeighborhoodSignal) {
-    // add next signal to our queue of signals
+  handleSignal(signal: NeighborhoodSignal | null) {
+    if (!signal) {
+      return;
+    }
+    // Add next signal to our queue of signals.
     this.signals.push(signal);
     // if this is the first signal, send a starting painter message
     if (!this.seenFirstSignal) {
       this.seenFirstSignal = true;
       this.onOutputMessage(
-        `${this.statusMessagePrefix} ${javalabMsg.startingPainter()}`
+        `${this.statusMessagePrefix} ${commonI18n.startingPainter()}`
       );
       this.onNewlineMessage();
     }
@@ -217,6 +222,14 @@ export default class Neighborhood {
   }
 
   onCompile() {
+    this.setProcessSignals();
+  }
+
+  onRun() {
+    this.setProcessSignals();
+  }
+
+  setProcessSignals() {
     this.controller.hideDefaultPegman();
     // start checking for signals after the specified wait time
     timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
@@ -251,5 +264,23 @@ export default class Neighborhood {
     // The slider goes from 0 to 1. We scale the speed slider value to be between
     // 2 (slowest) and 0 (fastest).
     return -2 * this.speedSlider!.getValue() + 2;
+  }
+
+  // Ensure the svg maze is empty except for the 'look' tile.
+  // We will reuse the same svg for a new maze if the user changes their version
+  // and had a different maze in a previous version.
+  // We want to make sure it's empty to avoid confusing rendering bugs due to overlapping tiles.
+  prepareForNewMaze() {
+    const svg = document.getElementById(SVG_ID);
+    // Visualization.jsx includes a 'look' tile that we want to keep inside svgMaze.
+    const idToIgnore = LOOK_ID;
+    if (svg?.children && svg.children.length > 1) {
+      const mazeTiles = Array.from(svg.children);
+      mazeTiles.forEach(tile => {
+        if (tile.id !== idToIgnore) {
+          svg.removeChild(tile);
+        }
+      });
+    }
   }
 }

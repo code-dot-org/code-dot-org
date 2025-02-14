@@ -16,7 +16,15 @@ export default class WorkshopEnroll extends React.Component {
   static propTypes = {
     user_id: PropTypes.number.isRequired,
     workshop: WorkshopPropType,
+    workshop_location_for_calendar: PropTypes.string,
     session_dates: PropTypes.arrayOf(PropTypes.string),
+    session_info_for_calendar: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        start: PropTypes.string.isRequired,
+        end: PropTypes.string.isRequired,
+      })
+    ),
     enrollment: PropTypes.shape({
       email: PropTypes.string,
       first_name: PropTypes.string,
@@ -38,7 +46,16 @@ export default class WorkshopEnroll extends React.Component {
   constructor(props) {
     super(props);
 
+    const workshopTitle = props.workshop.name
+      ? props.workshop.name
+      : `a ${props.workshop.course}`;
+    let workshopEnrollTitle = `Register for ${workshopTitle}`;
+    if (!workshopTitle.toLowerCase().endsWith('workshop')) {
+      workshopEnrollTitle += ' workshop';
+    }
+
     this.state = {
+      workshopEnrollTitle: workshopEnrollTitle,
       workshopEnrollmentStatus:
         this.props.workshop_enrollment_status ||
         SUBMISSION_STATUSES.UNSUBMITTED,
@@ -137,6 +154,14 @@ export default class WorkshopEnroll extends React.Component {
       this.props.workshop.subject || ''
     );
     sessionStorage.setItem('workshopName', this.props.workshop.name || '');
+    sessionStorage.setItem(
+      'workshopLocation',
+      this.props.workshop_location_for_calendar || ''
+    );
+    sessionStorage.setItem(
+      'sessionTimeInfo',
+      JSON.stringify(this.props.session_info_for_calendar)
+    );
 
     navigateToHref('/my-professional-learning');
   }
@@ -158,7 +183,7 @@ export default class WorkshopEnroll extends React.Component {
       default:
         return (
           <div>
-            <h1>{`Register for a ${this.props.workshop.course} workshop`}</h1>
+            <h1>{this.state.workshopEnrollTitle}</h1>
             <p>
               Taught by Code.org facilitators who are experienced computer
               science educators, our workshops will prepare you to teach the
@@ -190,6 +215,7 @@ export default class WorkshopEnroll extends React.Component {
                         workshop_id={this.props.workshop.id}
                         workshop_course={this.props.workshop.course}
                         first_name={this.props.enrollment.first_name}
+                        last_name={this.props.enrollment.last_name}
                         email={this.props.enrollment.email}
                         onSubmissionComplete={this.onSubmissionComplete}
                         workshop_subject={this.props.workshop.subject}

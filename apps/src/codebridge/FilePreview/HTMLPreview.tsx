@@ -10,7 +10,7 @@ type HTMLPreviewProps = {
 export const HTMLPreview = ({file}: HTMLPreviewProps) => {
   const iframeRef = useRef(null);
   const {
-    project: {files, folders},
+    source: {files, folders},
   } = useCodebridgeContext();
 
   const srcdoc = useMemo(() => {

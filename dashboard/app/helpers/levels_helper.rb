@@ -283,7 +283,8 @@ module LevelsHelper
     )
 
     # Enable backpack for levels with a backpack option (currently all non-standalone Javalab),
-    # and get the backpack channel token if it exists
+    # and get the backpack channel token if it exists.
+    # Backpack is used in lab2 apps also but app_options is only used by legacy labs.
     backpack_enabled = !!(@level.is_a?(Javalab) &&
       (ProjectsController::STANDALONE_PROJECTS["javalab"]["name"] != @level.name) &&
       (@user || current_user))
@@ -292,7 +293,7 @@ module LevelsHelper
 
     if backpack_enabled
       user_id = @user&.id || current_user&.id
-      backpack = Backpack.find_by_user_id(user_id)
+      backpack = Backpack.find_by(user_id: user_id, game_id: @level.game_id)
       view_options(backpack_channel: backpack&.channel)
     end
 
@@ -492,17 +493,14 @@ module LevelsHelper
   end
 
   # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses.
-  # In priority order they, are:
-  # 1. Enrolling in the google_blockly experiment using the set_single_user_experiment endpoint (persists across levels).
-  # 2. Setting the blocklyVersion view_option, usually configured by a URL parameter (not persistent across levels).
-  # 3. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
-  #    have fully transitioned to Google Blockly.
+  # In priority order they are:
+  # 1. Setting the blocklyVersion view_option, usually configured by a URL parameter (not persistent across levels).
+  # 2. All Blockly levels now default to using Google Blockly.
+
   def use_google_blockly
-    return true if Experiment.enabled?(experiment_name: 'google_blockly', user: current_user)
     return true if view_options[:blocklyVersion]&.downcase == 'google'
     return false if view_options[:blocklyVersion]&.downcase == 'cdo'
-    return true if @level.uses_google_blockly?
-    return false
+    return true
   end
 
   # Options hash for Widget

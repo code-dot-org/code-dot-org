@@ -126,6 +126,33 @@ export const blocks = {
       return code;
     };
   },
+  overrideMathChangeGenerator() {
+    Blockly.JavaScript.forBlock.math_change = function (
+      block: GoogleBlockly.Block,
+      generator: JavascriptGeneratorType
+    ) {
+      // Add to a variable in place.
+      const argument0 =
+        generator.valueToCode(block, 'DELTA', Order.ADDITION) || '0';
+
+      // Customization: use translateVarName instead of getVariableName
+      const varName = (
+        generator as unknown as ExtendedCodeGenerator
+      ).translateVarName(block.getFieldValue('VAR'));
+      // End customization
+
+      return (
+        varName +
+        ' = (typeof ' +
+        varName +
+        " === 'number' ? " +
+        varName +
+        ' : 0) + ' +
+        argument0 +
+        ';\n'
+      );
+    };
+  },
   overrideProceduresGenerators() {
     // Function definition. This code is copied and modified Core Blockly:
     // https://github.com/google/blockly/blob/a42c2d15082d3261a643f205bae1c7860ba48416/generators/javascript/procedures.ts#L104-L116

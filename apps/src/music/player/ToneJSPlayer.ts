@@ -268,6 +268,8 @@ class ToneJSPlayer {
     Transport.bpm.value = bpm;
     // We need to regenerate all effect busses when BPM changes as some effects (e.g. delay) are BPM-dependent.
     this.generateEffectBusses();
+    // We also need to regenerate samplers so that they connect themselves to the new effects busses.
+    this.samplers = {};
   }
 
   scheduleSample(sample: SampleEvent, onSampleStart: (id: string) => void) {

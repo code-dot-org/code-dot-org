@@ -409,7 +409,7 @@
   "https://studio.code.org/s/allthethings/lessons/13/levels/1": {
     "dsls": {
       "content1": "description here",
-      "markdown": "\n## Today you're going to learn how to use and create: **functions**\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\n* Making a newly named block that has all of the code you want to run inside of it.  \n <xml>\n <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get only nectar</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"maze_nectar\" deletable=\"false\"/>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  </xml>\n\n* The single green block itself that you use, or call, to run the function you created.  \n<xml>  \n<block type=\"when_run\" deletable=\"false\" movable=\"false\"/>\n  <block type=\"procedures_callnoreturn\" id=\"callMe\">\n    <mutation name=\"get only nectar\"/>\n  </block>\n  </xml>\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!\n"
+      "markdown": "\n## Today you're going to learn how to use and create: **functions**\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\n* Making a newly named block that has all of the code you want to run inside of it.  \n\n* The single green block itself that you use, or call, to run the function you created.  \n\nPrepare to get familiar with functions, learn how to edit them, and create your own!\n\n*Note: This level used to include embedded Blockly blocks, but support for that feature was [deprecated](https://github.com/code-dot-org/code-dot-org/pull/63723) in 2025.* \n"
     }
   },
   "https://studio.code.org/s/allthethings/lessons/14/levels/1": {
@@ -3031,6 +3031,14 @@
   },
   "https://studio.code.org/s/allthethings/lessons/50/levels/8": {
     "long_instructions": "## Python Lab with micro:bit enabled\n\nConnect your micro:bit, write a MicroPython program in the workspace, then click on the 'Send to micro:bit' button.\nIf you open your dev console, you will see a log of the percent completion and also when the flashing of the micro:bit is completed.",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/9": {
+    "long_instructions": "## Neighborhood level with validation",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/10": {
+    "long_instructions": "## Neighborhood level",
     "teacher_markdown": "Teachers should see this extra info."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/1": {

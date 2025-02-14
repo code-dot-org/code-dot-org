@@ -1,6 +1,6 @@
+import Checkbox from '@code-dot-org/component-library/checkbox';
 import React from 'react';
 
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 

@@ -8,6 +8,7 @@ on:
             - staging-next
         paths:
             - 'frontend/**'
+            - 'shared/**'
 
 jobs:
     build:
@@ -16,7 +17,9 @@ jobs:
         steps:
             - uses: actions/checkout@v4
               with:
-                sparse-checkout: 'frontend'
+                sparse-checkout: |
+                  frontend
+                  shared/fonts
             
             - name: Enable Corepack before setting up Node
               run: corepack enable
