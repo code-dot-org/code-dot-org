@@ -2,6 +2,7 @@ import Slider from '@code-dot-org/component-library/slider';
 import React from 'react';
 
 import MazeVisualization from '@cdo/apps/maze/Visualization';
+import commonI18n from '@cdo/locale';
 
 import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
 
@@ -16,7 +17,9 @@ interface NeighborhoodVisualizationProps {
 const NeighborhoodVisualization: React.FunctionComponent<
   NeighborhoodVisualizationProps
 > = ({className, isDarkMode, useProtectedDiv = true}) => {
-  const [sliderValue, setSliderValue] = React.useState(50);
+  const [sliderValue, setSliderValue] = React.useState(
+    NeighborhoodSpeedTracker.getInstance().getSpeed()
+  );
   const handleSpeedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newSpeed = parseInt(e.target.value);
     setSliderValue(newSpeed);
@@ -37,18 +40,18 @@ const NeighborhoodVisualization: React.FunctionComponent<
           isPercentMode={true}
           hideValue={true}
           leftButtonProps={{
-            'aria-label': 'Decrease',
+            'aria-label': commonI18n.decreaseSpeed(),
             icon: {
               iconName: 'turtle',
-              title: 'Decrease',
+              title: commonI18n.decreaseSpeed(),
             },
             size: 's',
           }}
           rightButtonProps={{
-            'aria-label': 'Increase',
+            'aria-label': commonI18n.increaseSpeed(),
             icon: {
               iconName: 'rabbit',
-              title: 'Increase',
+              title: commonI18n.increaseSpeed(),
             },
             size: 's',
           }}
