@@ -3,7 +3,7 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {AiCustomizations} from './customizations';
-import {FeedbackValue} from './miscellaneous';
+import {FeedbackValue} from './toxicity';
 
 export type ChatEventDescriptionKey = 'COPY_CHAT' | 'CLEAR_CHAT' | 'LOAD_LEVEL';
 
@@ -36,7 +36,11 @@ export interface CompletedChatMessage extends BaseChatMessage {
   requestId: number;
   /** Profanity classification feedback given by the teacher. If undefined, the teacher took no action or undid their action. */
   teacherFeedback?: FeedbackValue;
-  /** Can be any status besides 'unknown', which is reserved only for pending messages. */
+  /**
+   * Can be any status besides 'unknown', which is reserved only for pending messages.
+   * Note that 'error' here means that the chat message call was returned by the server, but the server returned an error
+   * (i.e. downstream AI service error).
+   */
   status: Exclude<ValueOf<typeof AiInteractionStatus>, 'unknown'>;
 }
 
@@ -68,7 +72,7 @@ export interface Notification extends BaseChatEvent {
   includeInChatHistory?: boolean;
 }
 
-/** All chat events displayed in the student's chat workspace must be one of these types. */
+/** All chat events displayed in the chat workspace must be one of these types. */
 export type ChatEvent =
   | ChatMessage
   | ModelUpdate

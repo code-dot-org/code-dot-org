@@ -236,6 +236,7 @@ async function postChatCompletionAsyncPolling(
 
 /**
  * Get the updated user and assistant message based on the status of the chat completion request.
+ * Returns a {@link CompletedChatMessage} without a request ID (added by the caller).
  */
 function getUpdatedMessages(
   userMessage: PendingChatMessage,

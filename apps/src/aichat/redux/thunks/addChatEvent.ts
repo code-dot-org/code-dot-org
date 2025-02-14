@@ -16,7 +16,7 @@ import {addEventToChatEventsCurrent} from '../slice';
 export const addChatEvent =
   <T extends ChatEvent>(chatEvent: T) =>
   (dispatch: AppDispatch, getState: () => RootState) => {
-    // User action events are hidden from participants
+    // User action events are hidden from participants and only displayed in teacher view of student chat history.
     if (!isUserActionEvent(chatEvent)) {
       dispatch(addEventToChatEventsCurrent(chatEvent));
     }
