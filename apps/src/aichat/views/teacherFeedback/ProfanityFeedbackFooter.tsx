@@ -85,7 +85,12 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
   };
 
   return (
-    <div className={moduleStyles.teacherFeedbackContainer}>
+    <div
+      className={classNames(
+        moduleStyles.teacherFeedbackContainer,
+        'uitest-profane-feedback-footer'
+      )}
+    >
       {profaneMessageVisible && (
         <>
           <EmText className={moduleStyles.flaggedText}>{text}</EmText>
