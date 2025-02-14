@@ -9,7 +9,12 @@ import {
 } from '@cdo/apps/codebridge/constants';
 import {useInitialSources} from '@cdo/apps/codebridge/hooks';
 import lab, {onLevelChange} from '@cdo/apps/lab2/lab2Redux';
-import {MazeCell, MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+import {
+  MazeCell,
+  MultiFileSource,
+  ProjectFile,
+  ProjectFileType,
+} from '@cdo/apps/lab2/types';
 import {
   getStore,
   registerReducers,
@@ -20,9 +25,11 @@ import {
 import {
   neighborhoodLevelProperties,
   nonValidatedLevelProperties,
+  predictLevelProperties,
   smallProject,
   smallProjectSources,
   templateBackedLevelProperties,
+  withExemplarLevelProperties,
 } from '../test-files';
 
 const expectedParsedDefaultSources = {
@@ -30,7 +37,15 @@ const expectedParsedDefaultSources = {
   labConfig: undefined,
 };
 
-const generateMazeFile = (mazeContents: MazeCell[][], fileId: string) => {
+const sampleInitialSources = {
+  source: smallProject,
+  labConfig: undefined,
+};
+
+const generateMazeFile = (
+  mazeContents: MazeCell[][],
+  fileId: string
+): ProjectFile => {
   return {
     id: fileId,
     name: MAZE_FILE_NAME,
@@ -70,6 +85,7 @@ describe('useInitialSources', () => {
 
   afterEach(() => {
     restoreRedux();
+    jest.resetAllMocks();
   });
 
   function renderDefault() {
@@ -211,14 +227,10 @@ describe('useInitialSources', () => {
   });
 
   it('sets initial sources as lab initial sources if they exist', () => {
-    const expectedInitialSources = {
-      source: smallProject,
-      labConfig: undefined,
-    };
     store.dispatch(
       onLevelChange({
         levelProperties: nonValidatedLevelProperties,
-        initialSources: expectedInitialSources,
+        initialSources: sampleInitialSources,
       })
     );
     const {
@@ -232,30 +244,24 @@ describe('useInitialSources', () => {
       source: nonValidatedLevelProperties.startSources,
       labConfig: undefined,
     };
-    expect(initialSources).toEqual(expectedInitialSources);
+    expect(initialSources).toEqual(sampleInitialSources);
     expect(levelStartSources).toEqual(expectedStartSources);
     expect(templateStartSources).toBeUndefined();
     expect(parsedDefaultSources).toEqual(expectedParsedDefaultSources);
   });
 
   it('sets start sources as initial sources in start mode', () => {
-    const shouldBeIgnoredInitialSources = {
-      source: smallProject,
-      labConfig: undefined,
-    };
-    const querySelectorMock = jest.spyOn(document, 'querySelector');
-    const mockData = {
-      appoptions: JSON.stringify({
-        editBlocks: 'start_sources',
-      }),
-    };
-    querySelectorMock.mockReturnValue({
-      dataset: mockData,
+    jest.spyOn(document, 'querySelector').mockReturnValue({
+      dataset: {
+        appoptions: JSON.stringify({
+          editBlocks: 'start_sources',
+        }),
+      },
     } as unknown as Element);
     store.dispatch(
       onLevelChange({
         levelProperties: nonValidatedLevelProperties,
-        initialSources: shouldBeIgnoredInitialSources,
+        initialSources: sampleInitialSources,
       })
     );
 
@@ -266,5 +272,109 @@ describe('useInitialSources', () => {
       labConfig: undefined,
     };
     expect(initialSources).toEqual(expectedStartSources);
+  });
+
+  it('uses exemplar code in exemplar mode', () => {
+    jest.spyOn(document, 'querySelector').mockReturnValue({
+      dataset: {
+        appoptions: JSON.stringify({
+          isEditingExemplar: true,
+        }),
+      },
+    } as unknown as Element);
+    store.dispatch(
+      onLevelChange({
+        levelProperties: withExemplarLevelProperties,
+        initialSources: sampleInitialSources,
+      })
+    );
+    const {initialSources} = renderDefault();
+
+    const expectedInitialSources = {
+      source: withExemplarLevelProperties.exemplarSources,
+      labConfig: undefined,
+    };
+
+    expect(initialSources).toEqual(expectedInitialSources);
+  });
+
+  it('uses exemplar code in viewing exemplar mode', () => {
+    jest.spyOn(document, 'querySelector').mockReturnValue({
+      dataset: {
+        appoptions: JSON.stringify({
+          isViewingExemplar: true,
+        }),
+      },
+    } as unknown as Element);
+    store.dispatch(
+      onLevelChange({
+        levelProperties: withExemplarLevelProperties,
+        initialSources: sampleInitialSources,
+      })
+    );
+    const {initialSources} = renderDefault();
+
+    const expectedInitialSources = {
+      source: withExemplarLevelProperties.exemplarSources,
+      labConfig: undefined,
+    };
+
+    expect(initialSources).toEqual(expectedInitialSources);
+  });
+
+  it('does not use exemplar in standard mode', () => {
+    store.dispatch(
+      onLevelChange({
+        levelProperties: withExemplarLevelProperties,
+        initialSources: sampleInitialSources,
+      })
+    );
+    const {initialSources} = renderDefault();
+
+    expect(initialSources).toEqual(sampleInitialSources);
+  });
+
+  it('updates exemplar with level grid in neighborhood mode', () => {
+    const levelProperties = {...neighborhoodLevelProperties};
+    levelProperties.exemplarSources = {
+      ...withExemplarLevelProperties.exemplarSources!,
+      files: {
+        ...withExemplarLevelProperties.exemplarSources?.files,
+        '1': generateMazeFile([[]], '1'),
+      },
+    };
+    store.dispatch(onLevelChange({levelProperties}));
+
+    jest.spyOn(document, 'querySelector').mockReturnValue({
+      dataset: {
+        appoptions: JSON.stringify({
+          isViewingExemplar: true,
+        }),
+      },
+    } as unknown as Element);
+    const expectedInitialSources = getExpectedMazeSources(
+      withExemplarLevelProperties.exemplarSources,
+      levelProperties.serializedMaze!,
+      '1'
+    );
+    const {initialSources} = renderDefault();
+
+    expect(initialSources).toEqual(expectedInitialSources);
+  });
+
+  it('predict levels always use start code', () => {
+    store.dispatch(
+      onLevelChange({
+        levelProperties: predictLevelProperties,
+        initialSources: sampleInitialSources,
+      })
+    );
+
+    const {initialSources} = renderDefault();
+    const expectedInitialSources = {
+      source: predictLevelProperties.startSources,
+      labConfig: undefined,
+    };
+    expect(initialSources).toEqual(expectedInitialSources);
   });
 });

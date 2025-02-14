@@ -21,6 +21,7 @@ const supportFile: ProjectFile = require('./supportFile.json');
 const templateBackedLevelProperties: LevelProperties = require('./templateBackedLevelProperties.json');
 const validatedLevelProperties: LevelProperties = require('./validatedLevelProperties.json');
 const validationFile: ProjectFile = require('./validationFile.json');
+const withExemplarLevelProperties: LevelProperties = require('./withExemplarLevelProperties.json');
 
 export {
   initProgressPayload,
@@ -37,4 +38,5 @@ export {
   templateBackedLevelProperties,
   validatedLevelProperties,
   validationFile,
+  withExemplarLevelProperties,
 };
