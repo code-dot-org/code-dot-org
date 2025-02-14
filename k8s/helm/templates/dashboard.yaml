@@ -8,8 +8,10 @@ spec:
   selector:
     {{ include "cdo.selectorLabels" (merge (dict "component" "dashboard") .) | nindent 4 }}
   ports:
-    - protocol: TCP
+    - name: http
       port: 3000
+    - name: http-hmr
+      port: 9000
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -46,6 +48,8 @@ spec:
         ports:
         - name: http
           containerPort: 3000
+        - name: http-hmr
+          containerPort: 9000
         tty: true # dashboard stdout logging assumes a tty
         startupProbe:
           # Fail pod if it hasn't started within 5 minutes
