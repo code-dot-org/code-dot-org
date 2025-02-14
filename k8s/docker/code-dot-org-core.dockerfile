@@ -11,7 +11,8 @@ ARG \
   SRC="/code-dot-org"
 
 ENV \
-  AWS_PROFILE=cdo \
+  LANG=C.UTF-8 \
+  TZ=Etc/UTC \
   SRC=${SRC}
 
 # -e is important because we are using the `RUN <<EOF` approach to multi-line shell
@@ -44,6 +45,7 @@ RUN <<EOF
     libsqlite3-dev \
     libssl-dev \
     libyaml-dev \
+    locales \
     lsof \
     mysql-client \
     parallel \
@@ -73,6 +75,9 @@ RUN <<EOF
   # Create ${SRC} directory
   mkdir -p ${SRC}
   chown ${UID}:${GID} ${SRC}
+
+  # en_US.UTF-8 locale not available by default
+  locale-gen en_US.UTF-8
 EOF
 
 ENV HOME=/home/${USERNAME}
