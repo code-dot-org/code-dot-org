@@ -5,7 +5,7 @@ import {Store} from 'redux';
 
 import progress from '@cdo/apps/code-studio/progressRedux';
 import {useSource} from '@cdo/apps/codebridge/hooks/useSource';
-import lab, {setChannel} from '@cdo/apps/lab2/lab2Redux';
+import lab, {onLevelChange, setChannel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -17,7 +17,17 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 
-import {smallProjectSources} from '../test-files';
+import {
+  nonValidatedLevelProperties,
+  smallProject,
+  smallProjectSources,
+  templateBackedLevelProperties,
+} from '../test-files';
+import {mockAppOptions} from '../test_utils';
+
+const defaultSources = {
+  source: smallProject,
+};
 
 describe('useSource', () => {
   let store: Store;
@@ -48,7 +58,7 @@ describe('useSource', () => {
     const wrapper = ({children}: {children?: React.ReactNode}) => (
       <Provider store={store}>{children}</Provider>
     );
-    const {result} = renderHook(() => useSource(smallProjectSources), {
+    const {result} = renderHook(() => useSource(defaultSources), {
       wrapper,
     });
     return result.current;
@@ -71,5 +81,77 @@ describe('useSource', () => {
       setProject(smallProjectSources);
     });
     expect(mockedProjectManager.save).toHaveBeenCalled();
+  });
+
+  it('does not save to project manager in readonly mode', () => {
+    store.dispatch(
+      setChannel({
+        id: '1',
+        name: '1',
+        // If the user is not the owner, we are in readonly mode.
+        isOwner: false,
+        projectType: 'pythonlab',
+        publishedAt: null,
+        createdAt: '',
+        updatedAt: '',
+      })
+    );
+    const {setProject} = renderDefault();
+    act(() => {
+      setProject(smallProjectSources);
+    });
+    expect(mockedProjectManager.save).toHaveBeenCalledTimes(0);
+  });
+
+  it('sets project as edited on first edit', () => {
+    expect(store.getState().lab2Project.hasEdited).toBe(false);
+    const {setProject} = renderDefault();
+    act(() => {
+      setProject(smallProjectSources);
+    });
+    expect(store.getState().lab2Project.hasEdited).toBe(true);
+  });
+
+  it('returns level start sources in start mode', () => {
+    mockAppOptions({editBlocks: 'start_sources'});
+    store.dispatch(
+      onLevelChange({levelProperties: templateBackedLevelProperties})
+    );
+    const {startSources} = renderDefault();
+    const expectedStartSources = {
+      source: templateBackedLevelProperties.startSources,
+      labConfig: undefined,
+    };
+    expect(startSources).toEqual(expectedStartSources);
+  });
+
+  it('returns template start sources in standard mode', () => {
+    store.dispatch(
+      onLevelChange({levelProperties: templateBackedLevelProperties})
+    );
+    const {startSources} = renderDefault();
+    const expectedStartSources = {
+      source: templateBackedLevelProperties.templateSources,
+      labConfig: undefined,
+    };
+    expect(startSources).toEqual(expectedStartSources);
+  });
+
+  it('updates source on level change', () => {
+    // TODO: this doesn't work
+    store.dispatch(
+      onLevelChange({levelProperties: templateBackedLevelProperties})
+    );
+    renderDefault();
+    expect(mockedProjectManager.save).toHaveBeenCalledTimes(0);
+    store.dispatch(
+      onLevelChange({levelProperties: nonValidatedLevelProperties})
+    );
+    expect(mockedProjectManager.save).toHaveBeenCalledTimes(1);
+    const expectedNewSources = {
+      source: nonValidatedLevelProperties.startSources,
+      labConfig: undefined,
+    };
+    expect(mockedProjectManager.save).toHaveBeenCalledWith(expectedNewSources);
   });
 });
