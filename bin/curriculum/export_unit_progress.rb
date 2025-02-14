@@ -115,13 +115,24 @@ rescue NoMethodError => exception
 end
 
 def process_row_pii(row)
-  pii_score, pii_entities = check_source_pii(row[:source])
-  row[:pii_score] = pii_score
-  row[:pii_entities] = pii_entities
-  if pii_score > $pii_threshold
-    row[:source] = nil
-    row['link_to_project'] = nil
-    row[:channel_id] = nil
+  if row[:source].present?
+    pii_score, pii_entities = check_source_pii(row[:source])
+    row[:source_pii_score] = pii_score
+    row[:source_pii_entities] = pii_entities
+    if pii_score > $pii_threshold
+      row[:source] = nil
+      row['link_to_project'] = nil
+      row['channel_id'] = nil
+    end
+  end
+
+  if row['student_answer'].present?
+    pii_score, pii_entities = check_source_pii(row['student_answer'])
+    row[:student_answer_pii_score] = pii_score
+    row[:student_answer_pii_entities] = pii_entities
+    if pii_score > $pii_threshold
+      row['student_answer'] = nil
+    end
   end
 end
 
