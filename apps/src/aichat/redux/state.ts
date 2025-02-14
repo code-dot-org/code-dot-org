@@ -2,9 +2,10 @@ import {ModalTypes} from '../constants';
 import {
   AiCustomizations,
   ChatEvent,
-  ChatMessage,
   FieldVisibilities,
+  PendingChatMessage,
   SaveType,
+  ServerChatEvent,
   ViewMode,
 } from '../types';
 
@@ -15,9 +16,9 @@ export interface AichatState {
   // Items in the current chat session that we want to provide as history to the model.
   chatEventsCurrent: ChatEvent[];
   // The user message currently awaiting response from the model (if any).
-  chatMessagePending?: ChatMessage;
-  // Student events viewed by a teacher user in chat workspace
-  studentChatHistory: ChatEvent[];
+  chatMessagePending?: PendingChatMessage;
+  // Student events viewed by a teacher user in chat workspace. Always fetched from the server.
+  studentChatHistory: ServerChatEvent[];
   // Denotes whether we should show the warning or teacher onboarding modal
   showModalType: ModalTypes | undefined;
   initialAiCustomizations: AiCustomizations;

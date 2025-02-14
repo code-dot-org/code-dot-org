@@ -7,7 +7,6 @@
 // Keeping that in mind -
 
 $figtree-font: 'Figtree';
-$metropolis-font: 'Metropolis';
 $noto-sans-fonts: 'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic',
   'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans SC', 'Noto Sans TC',
   'Noto Sans Devanagari', 'Noto Sans Georgian', 'Noto Sans Hebrew',
@@ -15,7 +14,7 @@ $noto-sans-fonts: 'Noto Sans', 'Noto Sans Math', 'Noto Sans Arabic',
   'Noto Sans Myanmar', 'Noto Sans Sinhala', 'Noto Sans Tamil',
   'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Sans Thaana';
 
-$main-font: $figtree-font, $metropolis-font, $noto-sans-fonts, sans-serif;
+$main-font: $figtree-font, $noto-sans-fonts, sans-serif;
 
 $thin-font-weight: 100;
 $extra-light-font-weight: 200;
