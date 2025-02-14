@@ -31,6 +31,7 @@ import {
   templateBackedLevelProperties,
   withExemplarLevelProperties,
 } from '../test-files';
+import {mockAppOptions} from '../test_utils';
 
 const expectedParsedDefaultSources = {
   ...smallProjectSources,
@@ -54,14 +55,6 @@ const generateMazeFile = (
     language: 'txt',
     folderId: DEFAULT_FOLDER_ID,
   };
-};
-
-const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
-  jest.spyOn(document, 'querySelector').mockReturnValue({
-    dataset: {
-      appoptions: JSON.stringify(innerAppOptions),
-    },
-  } as unknown as Element);
 };
 
 const getExpectedMazeSources = (
