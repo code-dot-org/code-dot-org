@@ -1465,6 +1465,7 @@ body.iframe_embed_app_and_code {
   .help_title {
     @include main-font-bold;
     font-size: 17.5px;
+    display: inline-block;
   }
 
   .solution_link {
@@ -1481,6 +1482,10 @@ body.iframe_embed_app_and_code {
     &:hover {
       color: $brand_secondary_dark;
     }
+  }
+
+  .help_subtitle {
+    display: inline-block;
   }
 }
 
