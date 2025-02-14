@@ -5,6 +5,7 @@ import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 
 import {
   useFileUploader,
@@ -28,8 +29,26 @@ export const FileBrowserHeaderPopUpButton = () => {
     validMimeTypes,
   });
 
+  const backpackApi = useBackpackAPIContext();
   const startImportFromBackpack = () => {
     console.log('import from backpack');
+    backpackApi.getFileList(
+      () => {
+        console.log('onError');
+      },
+      (filenames: unknown) => {
+        console.log('filenames', filenames);
+      }
+    );
+    backpackApi.fetchFile(
+      'main.py',
+      () => {
+        console.log('onError');
+      },
+      (fileContent: unknown) => {
+        console.log('fileContent', fileContent);
+      }
+    );
   };
   return (
     <>

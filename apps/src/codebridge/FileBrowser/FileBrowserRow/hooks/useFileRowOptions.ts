@@ -107,7 +107,7 @@ export const useFileRowOptions = (
         clickHandler: () => openConfirmDeleteFile({file}),
       },
       {
-        condition: !isLocked,
+        condition: true,
         iconName: 'backpack',
         labelText: 'Save to backpack',
         clickHandler: () => handleSaveToBackpack(),
