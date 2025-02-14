@@ -4,6 +4,7 @@
 
 image: code-dot-org:latest
 command: ["bin/dashboard-server"]
+args:
 
 # Override to set RAILS_ENV
 RAILS_ENV:
@@ -19,6 +20,15 @@ autoscaling:
   maxReplicas: 1
   replicasWhenAutoscaleDisabled: 1
 
+dashboardJob:
+  enabled: false
+  name: zsh
+  command: ["zsh", "-c"]
+  args: []
+  restartPolicy: Never
+  backoffLimit: 1
+  ttlSecondsAfterFinished: 60
+
 services:
   redis:
     enabled: false
@@ -28,7 +38,7 @@ services:
     enabled: false
     username:
     password:
-    runScriptInstallS3: false # seed the minio buckets, runs a one-time job
+    runJobInstallS3: false # seed the minio buckets, runs a one-time job
 
 # These should match the docker image's USERNAME, UID and GID args
 #

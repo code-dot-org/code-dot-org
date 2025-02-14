@@ -120,23 +120,14 @@ profiles:
       path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.AWS_PROFILE
       value: '{{ cmd "sh" "-c" "echo $AWS_PROFILE" }}'
 
-- name: seed
+- name: setup-db
   patches:
-    - op: add
-      path: /deploy/helm/releases/0/setValueTemplates/command
-      value: ["rake", "dashboard:setup_db"]
-
-- name: build
-  patches:
-    - op: add
-      path: /deploy/helm/releases/0/setValueTemplates/command
-      value: ["rake", "build"]
-
-- name: zsh
-  patches:
-    - op: add
-      path: /deploy/helm/releases/0/setValueTemplates/command
-      value: ["zsh"]
+      - op: add
+        path: /deploy/helm/releases/0/setValueTemplates/dashboardJob
+        value:
+          enabled: true
+          name: setup-db
+          args: ["cd dashboard && rake dashboard:setup-db"]
 
 portForward:
 - resourceType: Service

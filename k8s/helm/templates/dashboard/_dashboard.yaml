@@ -1,42 +1,44 @@
-apiVersion: v1
-kind: Service
+# Defines the dashboard Deployment as a template, included by dashboard/deployment.yaml
+#
+# We've defined it as a template (_dashboard.yaml vs dashboard.yaml) so we can re-use
+# it in dashboard/job.yaml as well.
+{{- define "dashboard" }}
+
+# Lets you do guard blocks to skip elements that aren't valid for Jobs:
+{{- $isDeployment := eq (.kind | default "Deployment") "Deployment" }}
+{{- $isJob := eq (.kind | default "Deployment") "Job" }}
+
+apiVersion: {{ .apiVersion | default "apps/v1" }}
+kind: {{ .kind | default "Deployment" }}
 metadata:
-  name: {{ include "cdo.fullname" (merge (dict "component" "dashboard") .) }}
+  name: {{ .name }}
   labels:
-    {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 4 }}
+    {{ .labels | nindent 4 }}
 spec:
-  selector:
-    {{ include "cdo.selectorLabels" (merge (dict "component" "dashboard") .) | nindent 4 }}
-  ports:
-    - name: http
-      port: 3000
-    - name: http-hmr
-      port: 9000
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: {{ include "cdo.fullname" (merge (dict "component" "dashboard") .) }}
-  labels:
-    {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 4 }}
-spec:
-  {{- if not .Values.autoscaling.enabled }}
-  replicas: {{ .Values.autoscaling.replicasWhenAutoscaleDisabled }}
-  {{- end }}
+
+  {{- if $isDeployment }}
+  replicas: {{ .Values.autoscaling.replicasWhenAutoscaleDisabled | default 1 }}
   selector:
     matchLabels:
-      {{ include "cdo.selectorLabels" (merge (dict "component" "dashboard") .) | nindent 6 }}
+      {{ .selectorLabels | nindent 6 }}
+  {{- end }}
+
+  {{- if $isJob }}
+  backoffLimit: {{ .backoffLimit | default 1 }}
+  ttlSecondsAfterFinished: {{ .ttlSecondsAfterFinished | default 60 }}
+  {{- end }}
+
   template:
     metadata:
       labels:
-        {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 8 }}
+        {{ .labels | nindent 8 }}
     spec:
       containers:
       - name: dashboard
-        image: "{{.Values.image}}"
+        image: "{{ .Values.image }}"
 
-        command: {{ .Values.command | toJson }}
-        # command: ["zsh"]
+        command: {{ (.command | default .Values.command) | toJson }}
+        args: {{ (.args | default .Values.args) | toJson }}
         tty: true # dashboard stdout logging assumes a tty
 
         env:
@@ -58,10 +60,8 @@ spec:
         - name: http-hmr
           containerPort: 9000
 
-
-        {{- if .Values.healthChecks.enabled }}
+        {{- if (.healthChecksEnabled | default .Values.healthChecks.enabled) }}
         startupProbe:
-          # Fail pod if it hasn't started within 5 minutes
           failureThreshold: 300
           periodSeconds: 1
           timeoutSeconds: 5
@@ -69,8 +69,6 @@ spec:
             path: /health_check
             port: http
         readinessProbe:
-          # After pod is started, ping /health_check every 10s, if it fails 2 in a row
-          # stop sending the pod traffic until it passes 2x health checks in a row.
           successThreshold: 2
           failureThreshold: 2
           periodSeconds: 10
@@ -79,7 +77,6 @@ spec:
             path: /health_check
             port: http
         livenessProbe:
-          # If the pod is down for 2 minutes, consider it irrecoverable and restart it.
           failureThreshold: 4
           periodSeconds: 30
           timeoutSeconds: 5
@@ -94,7 +91,6 @@ spec:
           subPath: locals.yml
 
         {{- if .Values.localDev.mounts.mountDotAWS }}
-        # These allow us to re-use our aws / aws-google login from our local machine.
         - mountPath: {{ .Values.user.home }}/.aws
           name: dot-aws
         {{- end }}
@@ -124,6 +120,8 @@ spec:
         runAsGroup: {{ .Values.user.gid }}
         fsGroup: {{ .Values.user.gid }}
 
-{{- if or (eq .Values.RAILS_ENV "") (not .Values.RAILS_ENV) }}
-{{- fail (printf "Error: RAILS_ENV is not set by values.yaml (current value: '%s').\n\nHint: if you're trying to do local dev with skaffold, try the -p flag, e.g. `skaffold -p development` sets RAILS_ENV=development.\n" .Values.RAILS_ENV) }}
+      {{- if $isJob }}
+      restartPolicy: {{ .restartPolicy | default "Never" }}
+      {{- end }}
+
 {{- end }}
