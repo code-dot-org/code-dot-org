@@ -37,8 +37,6 @@ module Cdo
       end
 
       def flush(events)
-        return unless CDO.send_metrics_to_cloudwatch
-
         client = Cdo::Metrics.client ||= ::Aws::CloudWatch::Client.new(
           retry_limit: 3,
           http_open_timeout: 5,
