@@ -1,0 +1,105 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/mixins.scss';
+
+:root {
+  // Swiper CSS custom properties
+  --swiper-pagination-color: var(--background-brand-teal-primary);
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-bullet-inactive-color: var(--background-neutral-tertiary);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 0.25rem;
+}
+
+// Carousel common styles
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  // Applies certain styles if carousel
+  // contains videos with a caption
+  &:has(figcaption) {
+    margin-bottom: 0 !important;
+
+    // Center navigation buttons on the video
+    // and ignore extra space added by the caption
+    .swiperNavPrev,
+    .swiperNavNext {
+      margin-top: -2.5rem;
+    }
+  }
+}
+
+// Navigation button styles
+.swiperNavPrev,
+.swiperNavNext {
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+  background: var(--background-neutral-tertiary);
+  min-width: 3rem;
+  height: 3rem;
+  @include transition-all;
+
+  // Arrow styles
+  & > i {
+    font-size: 1.5rem;
+    color: var(--text-neutral-tertiary);
+    @include transition-all;
+  }
+
+  // Hover styles
+  &:hover {
+    background: var(--background-neutral-quaternary);
+
+    & > i {
+      color: var(--text-neutral-primary);
+    }
+  }
+
+  // Focus styles
+  &:focus {
+    @include focus-styles;
+  }
+
+  // Hide focus outline on mouse click
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  // Disabled styles
+  &:disabled {
+    background: var(--background-neutral-secondary);
+    cursor: not-allowed;
+
+    & > i {
+      color: var(--text-neutral-disabled);
+    }
+  }
+}
+
+// Pagination styles
+.swiperPagination {
+  text-align: center;
+  margin-top: 1.5rem;
+
+  :global(.swiper-pagination-bullet) {
+    @include transition-all;
+
+    // Hover styles
+    &:hover {
+      background: var(--background-neutral-quaternary);
+    }
+
+    // Focus styles
+    &:focus {
+      @include focus-styles;
+    }
+
+    // Hide focus outline on mouse click
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+  }
+}
