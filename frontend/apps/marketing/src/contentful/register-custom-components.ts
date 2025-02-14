@@ -10,6 +10,7 @@ import Divider, {
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
+import Link, {LinkContentfulComponentDefinition} from '@/components/link';
 import Paragraph, {
   ParagraphContentfulComponentDefinition,
 } from '@/components/paragraph';
@@ -36,6 +37,10 @@ defineComponents(
     {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
+    },
+    {
+      component: Link,
+      definition: LinkContentfulComponentDefinition,
     },
     {
       component: Paragraph,

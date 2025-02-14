@@ -3,8 +3,7 @@ import React, {useEffect, useState} from 'react';
 
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import taIcon from '@cdo/static/ai-bot-tag-TA.png';
-import aiFabIcon from '@cdo/static/ai-fab-background.png';
+import aiFabWithIcon from '@cdo/static/ai-bot-ta.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
@@ -41,9 +40,8 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
   );
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
-  const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
 
-  const showPulse = isFirstSession && isFabImageLoaded && isTaImageLoaded;
+  const showPulse = isFirstSession && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
@@ -77,20 +75,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       >
         <img
           alt="AI bot"
-          src={aiFabIcon}
+          src={aiFabWithIcon}
           onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
         />
       </button>
-      <div
-        className={style.taOverlay}
-        style={{backgroundImage: `url(${taIcon})`}}
-      >
-        <img
-          src={taIcon}
-          alt="TA overlay"
-          onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
-        />
-      </div>
       <AiDiffContainer
         open={isOpen}
         context={context}

@@ -1,18 +1,18 @@
 import * as aichatApi from '@cdo/apps/aichat/aichatApi';
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
-import {AichatContext, ChatMessage} from '@cdo/apps/aichat/types';
+import {AichatContext, CompletedChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 describe('ChatEventLogger', () => {
-  let userChatMessage: ChatMessage;
+  let userChatMessage: CompletedChatMessage;
   let aichatContext: AichatContext;
   let chatEventLogger: ChatEventLogger;
   let postLogChatEventSpy: jest.SpyInstance;
 
   beforeEach(() => {
     userChatMessage = {
-      id: 1,
+      requestId: 1,
       role: Role.USER,
       chatMessageText: 'hello',
       status: AiInteractionStatus.OK,

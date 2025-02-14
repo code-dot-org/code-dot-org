@@ -37,11 +37,13 @@ build_apps: true
 # If false, dashboard will try to use a prepackaged version from S3.
 use_my_apps: true
 
-# Allows your local server to render non-English locales, defaults to false.
-# If false, choosing a locale other than English will have no effect.
-# Note: You may need to be in an incognito window to see changes
-# due to a difference in the language cookie between production and localhost.
-#load_locales: true
+
+# Improves local environment load time by loading only the i18n data for the current locale.
+# Defaults to `true` in the development environment.
+# Note: You may need to be in an incognito window to see changes,
+#       as once the `language_` cookie is set in production (HTTPS),
+#       it becomes "Secure" and can't be rewritten in a local (HTTP) environment.
+#lazy_load_i18n: true
 
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.

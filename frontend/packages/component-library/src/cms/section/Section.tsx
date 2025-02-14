@@ -61,8 +61,8 @@ const Section: React.FC<SectionProps> = ({
     <section
       className={classNames(
         moduleStyles.section,
-        moduleStyles[`section-${background}`],
-        moduleStyles[`section-${padding}`],
+        moduleStyles[`section-background-${background}`],
+        moduleStyles[`section-padding-${padding}`],
         className,
       )}
       {...HTMLAttributes}

@@ -118,6 +118,43 @@ class User < ApplicationRecord
   #   roster_synced: Indicates if the user was created during a roster sync operation from an LMS. Implies that the user
   #     is a school-managed account.
   #   educator_role: Indicates the role of the educator, e.g. 'teacher', 'school_admin', 'district_admin', etc.
+
+  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
+  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
+  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
+
+  # FND-1130: This field will no longer be required
+  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
+  DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
+    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
+    ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
+  ].freeze
+
+  # constants for resetting user secret words/picture
+  MAX_SECRET_RESET_ATTEMPTS = 5
+  RESET_SECRETS = 'reset_secrets'.freeze
+
+  # Provider variables
+  PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
+  PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
+  PROVIDER_MIGRATED = 'migrated'.freeze
+
+  SYSTEM_DELETED_USERNAME = 'sys_deleted'
+
+  # When adding a new version, append to the end of the array
+  # using the next increasing natural number.
+  TERMS_OF_SERVICE_VERSIONS = [
+    1  # (July 2016) Teachers can grant access to labs for U13 students.
+  ].freeze
+
+  # :user_type is locked. Use the :permissions property for more granular user permissions.
+  USER_TYPE_OPTIONS = [
+    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
+    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
+  ].freeze
+
+  USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
+
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -206,22 +243,7 @@ class User < ApplicationRecord
 
   scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
 
-  PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
-  PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
-  PROVIDER_MIGRATED = 'migrated'.freeze
   after_create_commit :migrate_to_multi_auth
-
-  SYSTEM_DELETED_USERNAME = 'sys_deleted'
-
-  # constants for resetting user secret words/picture
-  RESET_SECRETS = 'reset_secrets'.freeze
-  MAX_SECRET_RESET_ATTEMPTS = 5
-
-  # :user_type is locked. Use the :permissions property for more granular user permissions.
-  USER_TYPE_OPTIONS = [
-    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
-    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
-  ].freeze
 
   validates_presence_of :user_type
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
@@ -516,11 +538,6 @@ class User < ApplicationRecord
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
 
-  DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
-    ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
-    ACCEPT_DATA_TRANSFER_DIALOG = 'ACCEPT_DATA_TRANSFER_DIALOG'.freeze
-  ].freeze
-
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
   has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
@@ -569,10 +586,8 @@ class User < ApplicationRecord
   defer_age = proc {|user| %w(google_oauth2 clever).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
-  AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
-  USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, if: :username_changed?, with: USERNAME_REGEX, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
@@ -620,11 +635,6 @@ class User < ApplicationRecord
   validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
   validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
 
-  # When adding a new version, append to the end of the array
-  # using the next increasing natural number.
-  TERMS_OF_SERVICE_VERSIONS = [
-    1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ].freeze
   validates :terms_of_service_version,
     inclusion: {in: TERMS_OF_SERVICE_VERSIONS},
     allow_nil: true
@@ -870,7 +880,6 @@ class User < ApplicationRecord
     "#{raw_name['first']} #{raw_name['last']}".squish
   end
 
-  CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params, request = nil)
     omniauth_user = find_by_credential(type: auth.provider, id: auth.uid)
 
@@ -972,9 +981,6 @@ class User < ApplicationRecord
     # New users with no encrypted_password set
     !persisted? && encrypted_password.blank?
   end
-
-  # FND-1130: This field will no longer be required
-  DATE_TEACHER_EMAIL_REQUIREMENT_ADDED = '2016-06-14 00:00:00'.to_datetime
 
   # Determines if email is a required field for a teacher.
   # Currently, we have some old teacher accounts which don't have an email
@@ -1560,8 +1566,6 @@ class User < ApplicationRecord
       permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
       permission?(UserPermission::LEVELBUILDER)
   end
-
-  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
 
   def ai_tutor_permission?
     permission?(UserPermission::AI_TUTOR_ACCESS)

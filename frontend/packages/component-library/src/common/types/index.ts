@@ -6,6 +6,12 @@ import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 export type ComponentSizeXSToL = 'xs' | 's' | 'm' | 'l';
 
 /**
+ * Possible options for spacing related props in Design System components
+ */
+export type SpacingNoneToM = 'none' | 'xs' | 's' | 'm';
+export type SpacingNoneToL = SpacingNoneToM | 'l';
+
+/**
  * Possible colors for the dropdown components
  */
 export type DropdownColor = 'white' | 'black' | 'gray';
