@@ -171,6 +171,9 @@ RUN <<EOF
 
   # Enable Git LFS in ~/.gitconfig
   git lfs install
+
+  # Link /code-dot-org into the homedir so its easy to find when you shell in
+  ln -s ${SRC} ${HOME}
 EOF
 
 ENV \
