@@ -1,6 +1,11 @@
 import {ConditionNames} from './MusicValidator';
 
 export const MusicConditions: ConditionNames = {
+  PLAYED_SOUNDS_IN_SEQUENCE: {
+    name: 'played_sounds_in_sequence',
+    valueType: 'string',
+    description: 'Checks if the given sequence has been played.',
+  },
   PLAYED_SOUNDS_TOGETHER: {
     name: 'played_sounds_together',
     valueType: 'number',

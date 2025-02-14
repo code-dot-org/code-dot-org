@@ -62,20 +62,41 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
           <label htmlFor="conditionValue" className={moduleStyles.label}>
             Value:
           </label>
-          <input
-            type={isNumeric ? 'number' : 'text'}
-            name="conditionValue"
-            id="conditionValue"
-            value={condition.value}
-            onChange={e => {
-              condition.value = isNumeric
-                ? parseInt(e.target.value)
-                : e.target.value;
-              onConditionChange(condition, index);
-            }}
-          />
+          <div>
+            <input
+              type={isNumeric ? 'number' : 'text'}
+              name="conditionValue"
+              id="conditionValue"
+              value={condition.value}
+              onChange={e => {
+                condition.value = isNumeric
+                  ? parseInt(e.target.value)
+                  : e.target.value;
+                onConditionChange(condition, index);
+              }}
+            />
+
+            {hasValue &&
+              condition.name === 'played_sounds_in_sequence' &&
+              condition.value && (
+                <div className={moduleStyles.sequence}>
+                  <label
+                    htmlFor="conditionValue"
+                    className={moduleStyles.label}
+                  >
+                    Sequence:
+                  </label>
+                  {JSON.parse(condition.value as string)['sequence'].map(
+                    (value: string) => {
+                      return <div>{value}</div>;
+                    }
+                  )}
+                </div>
+              )}
+          </div>
         </>
       )}
+
       <button
         type="button"
         onClick={() => deleteCondition(index)}

@@ -396,7 +396,39 @@ export default class MusicValidator extends Validator {
     }
   }
 
+  private checkConditionPlayedSoundsInSequence(value: {sequence: [string]}) {
+    const playbackEvents = this.getPlaybackEvents();
+
+    let lastMeasure = 0;
+    for (const step of value['sequence']) {
+      const foundEvent = playbackEvents.find(
+        event => event.id === step && event.when > lastMeasure
+      );
+      if (!foundEvent) {
+        return false;
+      }
+      lastMeasure = foundEvent.when;
+    }
+
+    return true;
+  }
+
   conditionsMet(conditions: Condition[]): boolean {
+    if (
+      conditions.length > 0 &&
+      conditions[0].name === MusicConditions.PLAYED_SOUNDS_IN_SEQUENCE.name
+    ) {
+      if (
+        conditions[0].value &&
+        this.checkConditionPlayedSoundsInSequence(
+          JSON.parse(conditions[0].value as string)
+        )
+      ) {
+        console.log(conditions);
+        return true;
+      }
+    }
+
     return this.conditionsChecker.checkRequirementConditions(conditions);
   }
 
