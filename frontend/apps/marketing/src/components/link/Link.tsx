@@ -11,12 +11,10 @@ import classNames from 'classnames';
 import moduleStyles from './link.module.scss';
 
 export type LinkProps = {
-  /** Link content */
+  /** Link Label */
   children: ReactNode;
   /** Link URL */
   href: string;
-  /** Link color */
-  color: 'purple' | 'white';
   /** Link margin bottom */
   marginBottom: SpacingNoneToM;
   /** Link size */
@@ -28,7 +26,6 @@ export type LinkProps = {
 const Link: React.FunctionComponent<LinkProps> = ({
   children,
   href,
-  color,
   size,
   marginBottom,
   isLinkExternal,
@@ -39,8 +36,7 @@ const Link: React.FunctionComponent<LinkProps> = ({
     size={size}
     className={classNames(
       moduleStyles.link,
-      moduleStyles[`link-${color}`],
-      moduleStyles[`link-${size}`],
+      moduleStyles[`link-size-${size}`],
       moduleStyles[`link-margin-bottom-${marginBottom}`],
     )}
   >

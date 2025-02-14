@@ -16,18 +16,6 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
   },
   builtInStyles: [],
   variables: {
-    color: {
-      displayName: 'Color',
-      type: 'Text',
-      defaultValue: 'purple',
-      group: 'style',
-      validations: {
-        in: [
-          {value: 'purple', displayName: 'Purple'},
-          {value: 'white', displayName: 'White'},
-        ],
-      },
-    },
     size: {
       displayName: 'Size',
       type: 'Text',
@@ -58,7 +46,7 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
       group: 'content',
     },
     children: {
-      displayName: 'Content',
+      displayName: 'Link Label',
       type: 'Text',
       defaultValue: 'Link',
       group: 'content',

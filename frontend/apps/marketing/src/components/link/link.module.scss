@@ -5,51 +5,40 @@ a.link {
   margin-top: 0;
 }
 
-// Link colors
-a.link-white {
-  color: var(--text-neutral-white-fixed);
-
-  &:hover,
-  :active,
-  :visited {
-    color: var(--neutral-gray-10);
-  }
-
-  &:focus-visible {
-    color: var(--text-neutral-white-fixed);
-  }
-}
-
 // Link sizes
-a.link-l {
-  gap: 0.5rem;
-}
+a.link-size {
+  &-l {
+    gap: 0.5rem;
+  }
 
-a.link-m {
-  gap: 0.5rem;
-}
+  &-m {
+    gap: 0.5rem;
+  }
 
-a.link-s {
-  gap: 0.375rem;
-}
+  &-s {
+    gap: 0.375rem;
+  }
 
-a.link-xs {
-  gap: 0.25rem;
+  &-xs {
+    gap: 0.25rem;
+  }
 }
 
 // Link marginBottom styles
-a.link-margin-bottom-none {
-  @include mixins.common-margin-bottom-none;
-}
+a.link-margin-bottom {
+  &-none {
+    @include mixins.common-margin-bottom-none;
+  }
 
-a.link-margin-bottom-xs {
-  @include mixins.common-margin-bottom-xs;
-}
+  &-xs {
+    @include mixins.common-margin-bottom-xs;
+  }
 
-a.link-margin-bottom-s {
-  @include mixins.common-margin-bottom-s;
-}
+  &-s {
+    @include mixins.common-margin-bottom-s;
+  }
 
-a.link-margin-bottom-m {
-  @include mixins.common-margin-bottom-m;
+  &-m {
+    @include mixins.common-margin-bottom-m;
+  }
 }
