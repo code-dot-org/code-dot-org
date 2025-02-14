@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import {ComponentSizeXSToL} from '@/common/types';
+import {SpacingNoneToL} from '@/common/types';
 import moduleStyles from './section.module.scss';
 
 export type SectionBackground =
@@ -31,7 +31,7 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
   /** Background image */
   backgroundImageUrl?: string;
   /** Vertical padding */
-  padding?: Exclude<ComponentSizeXSToL, 'xs' | 's'>;
+  padding?: Exclude<SpacingNoneToL, 'none' | 'xs' | 's'>;
   /** Section content */
   children?: ReactNode;
 }
