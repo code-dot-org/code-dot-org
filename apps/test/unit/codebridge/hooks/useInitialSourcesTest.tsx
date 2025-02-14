@@ -56,6 +56,14 @@ const generateMazeFile = (
   };
 };
 
+const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
+  jest.spyOn(document, 'querySelector').mockReturnValue({
+    dataset: {
+      appoptions: JSON.stringify(innerAppOptions),
+    },
+  } as unknown as Element);
+};
+
 const getExpectedMazeSources = (
   startSources: MultiFileSource | undefined,
   maze: MazeCell[][],
@@ -251,13 +259,7 @@ describe('useInitialSources', () => {
   });
 
   it('sets start sources as initial sources in start mode', () => {
-    jest.spyOn(document, 'querySelector').mockReturnValue({
-      dataset: {
-        appoptions: JSON.stringify({
-          editBlocks: 'start_sources',
-        }),
-      },
-    } as unknown as Element);
+    mockAppOptions({editBlocks: 'start_sources'});
     store.dispatch(
       onLevelChange({
         levelProperties: nonValidatedLevelProperties,
@@ -275,13 +277,7 @@ describe('useInitialSources', () => {
   });
 
   it('uses exemplar code in exemplar mode', () => {
-    jest.spyOn(document, 'querySelector').mockReturnValue({
-      dataset: {
-        appoptions: JSON.stringify({
-          isEditingExemplar: true,
-        }),
-      },
-    } as unknown as Element);
+    mockAppOptions({isEditingExemplar: true});
     store.dispatch(
       onLevelChange({
         levelProperties: withExemplarLevelProperties,
@@ -299,13 +295,7 @@ describe('useInitialSources', () => {
   });
 
   it('uses exemplar code in viewing exemplar mode', () => {
-    jest.spyOn(document, 'querySelector').mockReturnValue({
-      dataset: {
-        appoptions: JSON.stringify({
-          isViewingExemplar: true,
-        }),
-      },
-    } as unknown as Element);
+    mockAppOptions({isViewingExemplar: true});
     store.dispatch(
       onLevelChange({
         levelProperties: withExemplarLevelProperties,
@@ -345,13 +335,8 @@ describe('useInitialSources', () => {
     };
     store.dispatch(onLevelChange({levelProperties}));
 
-    jest.spyOn(document, 'querySelector').mockReturnValue({
-      dataset: {
-        appoptions: JSON.stringify({
-          isViewingExemplar: true,
-        }),
-      },
-    } as unknown as Element);
+    mockAppOptions({isViewingExemplar: true});
+
     const expectedInitialSources = getExpectedMazeSources(
       withExemplarLevelProperties.exemplarSources,
       levelProperties.serializedMaze!,
