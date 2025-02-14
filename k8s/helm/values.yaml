@@ -40,6 +40,7 @@ development:
 
     # These are set in the skaffold development profile so we can
     # use dynamic values appropriate to your particular system
+    AWS_PROFILE: # for mountDotAWS: match AWS_PROFILE on your local system
     hostPaths:
       home: # ~ on  your local dev box, set automatically by skaffold
       skaffoldStorage: # code-dot-org/skaffoldStorage on your local dev box, set automatically by skaffold

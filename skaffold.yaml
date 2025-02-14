@@ -116,6 +116,9 @@ profiles:
     - op: add
       path: /deploy/helm/releases/0/setValueTemplates/development.mounts.hostPaths.skaffoldStorage
       value: '{{ cmd "sh" "-c" "echo $PWD/skaffoldStorage" }}'
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/development.mounts.AWS_PROFILE
+      value: '{{ cmd "sh" "-c" "echo $AWS_PROFILE" }}'
 
 - name: seed
   patches:

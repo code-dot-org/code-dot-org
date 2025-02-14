@@ -39,6 +39,10 @@ spec:
             value: {{ .Values.RAILS_ENV }}
           - name: RACK_ENV
             value: {{ .Values.RAILS_ENV }}
+          {{- if .Values.development.mounts.mountDotAWS }}
+          - name: AWS_PROFILE
+            value: {{ .Values.development.mounts.AWS_PROFILE }}
+          {{- end }}
         ports:
         - name: http
           containerPort: 3000
