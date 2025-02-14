@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_02_13_210703) do
+ActiveRecord::Schema.define(version: 2025_02_14_202758) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1543,6 +1543,9 @@ ActiveRecord::Schema.define(version: 2025_02_13_210703) do
     t.string "module"
     t.string "name"
     t.string "participant_group_type"
+    t.text "description"
+    t.text "registration_link"
+    t.boolean "hidden"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id"
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id"
   end
