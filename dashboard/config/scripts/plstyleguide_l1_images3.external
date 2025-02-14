@@ -1,0 +1,8 @@
+name 'PLStyleGuide_L1_Images3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Generated Images
+
+MARKDOWN

@@ -212,3 +212,16 @@ Feature: Using the teacher homepage sections feature
     And I wait until current URL contains "/certificates/batch"
     And element "#certificate-batch" is visible
     Then element "#certificate-batch" contains text "Sally"
+
+  Scenario: Do not see the unit when a section is assigned a single-unit course
+    Given I create a teacher-associated student named "Sally"
+    Given I am assigned to course "ui-test-single-unit-course-2025" and unit "ui-test-single-unit-2025" with teacher "Teacher_Sally"
+
+    Given I sign in as "Teacher_Sally" and go home
+    Then I should see the student section table
+    And the student section table should have 2 rows
+    And the section table row at index 0 has primary assignment path "/courses/ui-test-single-unit-course-2025"
+    And element ".uitest-owned-sections" does not contain text "Current unit:"
+
+    When I click selector ".uitest-owned-sections a:contains('Single Unit Course 2025')" to load a new page
+    Then check that the URL contains "/s/ui-test-single-unit-2025"
