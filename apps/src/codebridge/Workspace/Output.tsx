@@ -54,7 +54,11 @@ const Output: React.FunctionComponent<OutputProps> = ({
     min: MIN_MINI_APP_SIZE,
     max: MAX_MINI_APP_SIZE,
     containerRef: resizeContainerRef,
-    onResizeStart: () => logOnResize(appName),
+    onResizeStart: () =>
+      logOnResize(appName, {
+        layout: config.activeLayout || '',
+        resizeBar: 'neighborhood',
+      }),
   });
 
   const [adjustedMiniAppSize, setAdjustedMiniAppSize] =
