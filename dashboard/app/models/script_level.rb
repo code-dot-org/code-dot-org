@@ -148,10 +148,11 @@ class ScriptLevel < ApplicationRecord
     extras_lesson = nil,
     bubble_choice_parent: false
   )
+    #return nil if levels.any?(&:stay_on_level?)
 
     if valid_progression_level?(user)
       # if we're coming from an unplugged level, it's ok to continue to unplugged
-      # level (example: if you start a sequence of assessments associated with an
+      # level (example: if you start a sequence of assessments assoc iated with an
       # unplugged level you should continue on that sequence instead of skipping to
       # next lesson)
       level_to_follow = next_progression_level(user)
