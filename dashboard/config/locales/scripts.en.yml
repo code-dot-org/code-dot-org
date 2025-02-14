@@ -19827,6 +19827,22 @@ en:
               name: Decomposing Adventure Game (Lesson 12)
             lesson-22:
               name: Variables with AI Tutor
+            lesson-23:
+              name: Lesson 5 - Variables and Data Flow
+            lesson-24:
+              name: Lesson 6 - Working with Objects
+            lesson-25:
+              name: Lesson 7 - Functions and Parameters
+            lesson-26:
+              name: Lesson 9 - Intro to Loops
+            lesson-27:
+              name: Lesson 10 - Conditionals
+            lesson-28:
+              name: Lesson 12 - Decomposing a Pixel Image
+            lesson-29:
+              name: Lesson 13 - Two-Way & Nested Selection
+            lesson-30:
+              name: Lesson 14 - Pixels of Me Project
           lesson_groups:
             lessonGroup-2:
               display_name: console-only levels
