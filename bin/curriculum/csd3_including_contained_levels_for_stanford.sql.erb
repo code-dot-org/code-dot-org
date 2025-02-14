@@ -117,7 +117,8 @@ with
              join dashboard_production.user_project_storage_ids usi on ct.storage_id = usi.id
     )
 select distinct
-    ul.user_id
+    ul.id user_level_id
+    , ul.user_id
     , cs.unit
     , cs.script_id
     , cs.stage_number
