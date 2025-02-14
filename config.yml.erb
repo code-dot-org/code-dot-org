@@ -666,3 +666,7 @@ active_job_backend_rolling_restart_in_n_batches: 2
 
 # aiproxy credentials
 aiproxy_api_key: !Secret
+
+# By default, we log metrics to CloudWatch, and generate an error if they cannot be sent.
+# Disable this if you're trying to run without access to AWS.
+send_metrics_to_cloudwatch: true
