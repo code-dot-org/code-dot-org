@@ -5,11 +5,10 @@ import React from 'react';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
-import moduleStyles from './teacher-panel.module.scss';
-
 export default class TeacherPanelContainer extends React.Component {
   static propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string,
     logToFirehose: PropTypes.func,
   };
 
@@ -35,11 +34,9 @@ export default class TeacherPanelContainer extends React.Component {
   render() {
     return (
       <div
-        className={classNames(
-          'teacher-panel',
-          moduleStyles.teacherPanelContainer,
-          {hidden: !this.state.open}
-        )}
+        className={classNames('teacher-panel', this.props.className, {
+          hidden: !this.state.open,
+        })}
       >
         <div className="hide-handle">
           <FontAwesome icon="chevron-right" onClick={this.hide} />
