@@ -82,8 +82,10 @@ describe('AiDiffWelcome', () => {
     fireEvent.change(input, {target: {value: 'Test'}});
     fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
 
-    await waitFor(() =>
-      expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled()
+    await waitFor(
+      () =>
+        expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled(),
+      {timeout: 100}
     );
     fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
 
@@ -93,8 +95,9 @@ describe('AiDiffWelcome', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Finish'}));
 
-    await waitFor(() =>
-      expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false)
+    await waitFor(
+      () => expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false),
+      {timeout: 100}
     );
   });
 
