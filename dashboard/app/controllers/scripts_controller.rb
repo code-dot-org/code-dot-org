@@ -16,6 +16,16 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
+    if @script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
+    if @script.redirect_to?
+      redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
+      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+      redirect_to "#{redirect_path}#{redirect_query_string}"
+      return
+    end
+
     if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
       if request.query_parameters.include? "user_id"
         redirect_query_string = request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")
@@ -36,16 +46,6 @@ class ScriptsController < ApplicationController
           return
         end
       end
-    end
-
-    if @script.is_deprecated
-      return render 'errors/deprecated_course'
-    end
-    if @script.redirect_to?
-      redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
-      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-      redirect_to "#{redirect_path}#{redirect_query_string}"
-      return
     end
 
     if request.path != (canonical_path = script_path(@script))

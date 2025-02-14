@@ -51,7 +51,10 @@ module Cdo
     end
 
     def i18n_backend
-      CDO_I18N_BACKEND
+      @i18n_backend ||=
+        # Because loading i18n files is super-slow, lazy load them in development.
+        # To load all locales for testing, add "lazy_load_i18n: false" to +locals.yml+ config
+        CDO.lazy_load_i18n ? Cdo::I18n::LazyLoadableBackend.new(lazy_load: true) : Cdo::I18n::SimpleBackend.new
     end
 
     def canonical_hostname(domain)

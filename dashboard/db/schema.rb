@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_02_07_175343) do
+ActiveRecord::Schema.define(version: 2025_02_13_210703) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -194,7 +194,7 @@ ActiveRecord::Schema.define(version: 2025_02_07_175343) do
     t.datetime "updated_at", null: false
     t.integer "game_id"
     t.index ["storage_app_id"], name: "index_backpacks_on_storage_app_id", unique: true
-    t.index ["user_id"], name: "index_backpacks_on_user_id", unique: true
+    t.index ["user_id", "game_id"], name: "index_backpacks_on_user_id_and_game_id", unique: true
   end
 
   create_table "blocks", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

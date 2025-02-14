@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-11 18:19:15 UTC",
+    "serialized_at": "2025-02-12 22:22:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -283,6 +283,7 @@
       "key": "035725b8-7dd1-4439-80b5-db0324125a0a",
       "position": 1,
       "properties": {
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "035725b8-7dd1-4439-80b5-db0324125a0a",
@@ -480,9 +481,21 @@
       }
     },
     {
-      "key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3",
+      "key": "2af2a495-d86e-4b2f-a523-dfcd7201284c",
       "position": 1,
       "properties": {
+        "progression_name": "Wearable Scenario: Online Artifacts"
+      },
+      "seeding_key": {
+        "activity_section.key": "2af2a495-d86e-4b2f-a523-dfcd7201284c",
+        "lesson_activity.key": "035725b8-7dd1-4439-80b5-db0324125a0a"
+      }
+    },
+    {
+      "key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Hardware Careers: Components & Troubleshooting"
       },
       "seeding_key": {
         "activity_section.key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3",
@@ -1010,6 +1023,72 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Wearable Scenario: Online Artifacts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson3-onlineresources-1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "2af2a495-d86e-4b2f-a523-dfcd7201284c"
+      },
+      "level_keys": [
+        "computer-systems-lesson3-onlineresources-1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware Careers: Components & Troubleshooting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson-3-wrap-up"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3"
+      },
+      "level_keys": [
+        "computer-systems-lesson-3-wrap-up"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Hardware Careers: Components & Troubleshooting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson3-wrap-up-FRQ"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3"
+      },
+      "level_keys": [
+        "computer-systems-lesson3-wrap-up-FRQ"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-computer-systems-lesson6-level1"
         ],
@@ -1030,7 +1109,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1055,7 +1134,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1080,7 +1159,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1105,7 +1184,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1130,7 +1209,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1155,7 +1234,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1180,7 +1259,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1205,7 +1284,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1230,7 +1309,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1255,7 +1334,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1280,7 +1359,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1305,7 +1384,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1330,7 +1409,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1355,7 +1434,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1380,7 +1459,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1405,7 +1484,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1430,7 +1509,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -1455,11 +1534,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson12-scenario-1"
+        ],
         "progression": "AI and Emerging Technologies Ethics Roleplaying"
       },
       "bonus": false,
@@ -1477,11 +1559,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson12-scenario-2"
+        ],
         "progression": "AI and Emerging Technologies Ethics Roleplaying"
       },
       "bonus": false,
@@ -1499,11 +1584,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson12-scenario-3"
+        ],
         "progression": "AI and Emerging Technologies Ethics Roleplaying"
       },
       "bonus": false,
@@ -1688,6 +1776,42 @@
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices",
         "activity_section.key": "8e036283-c4b7-4ad3-87c4-fc2c8165be62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson3-onlineresources-1",
+        "script_level.level_keys": [
+          "computer-systems-lesson3-onlineresources-1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "2af2a495-d86e-4b2f-a523-dfcd7201284c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson-3-wrap-up",
+        "script_level.level_keys": [
+          "computer-systems-lesson-3-wrap-up"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson3-wrap-up-FRQ",
+        "script_level.level_keys": [
+          "computer-systems-lesson3-wrap-up-FRQ"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "76e42a86-4b6d-4e72-8efc-97d429c42fe3"
       }
     },
     {
