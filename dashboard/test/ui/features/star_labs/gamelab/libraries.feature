@@ -39,7 +39,7 @@ Feature: Libraries
     And I wait until element "a:contains('UntitledProject')" is visible
 
     # Remove Student1's library from Student2's project
-    And I click selector ".ui-test-remove-library:eq(0)" to load a new page
+    And I click selector ".ui-test-remove-library:nth-child(1)" to load a new page
     And I wait for the lab page to fully load
     Then I open the Manage Libraries dialog
     And I wait until element "div:contains('You have no libraries in your project')" is visible
@@ -55,7 +55,7 @@ Feature: Libraries
     And I click selector "#ui-test-manage-libraries" once I see it
     And I wait until element ".ui-test-sortable-table-select" is visible
     When I select the "Untitled Project" option in dropdown named "selectOption"
-    And I click selector ".ui-test-sortable-table-select table input:eq(0)"
+    And I click selector ".ui-test-sortable-table-select table input:nth-child(1)"
     And I click selector ".modal div:contains('Assign library'):last"
     And I wait until element "p:contains('This library is assigned to the following sections:')" is visible
     Then I sign out

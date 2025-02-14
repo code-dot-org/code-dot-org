@@ -29,7 +29,7 @@ module BlocklyHelpers
   end
 
   def get_indexed_blockly_draggable_selector(index)
-    ".blocklyDraggable:visible:eq(#{index - 1})"
+    ".blocklyDraggable:visible:nth-child(#{index})"
   end
 
   def drag_indexed_block_to_offset(block_selector, dx, dy)

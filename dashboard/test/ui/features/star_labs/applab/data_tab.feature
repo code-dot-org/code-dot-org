@@ -17,7 +17,7 @@ Feature: App Lab Data Tab
     And I wait until element ".modal h1" is visible
     Then I save the table name from element ".modal h1"
     And I press "ui-test-import-table-btn"
-    Then I wait until element "#dataTablesBody table tr:eq(2) td:eq(0)" contains the saved table name
+    Then I wait until element "#dataTablesBody table tr:nth-child(3) td:nth-child(1)" contains the saved table name
 
   Scenario: Data Tables Tab
     # Create a new table
@@ -36,13 +36,13 @@ Feature: App Lab Data Tab
     And I click selector "#addDataTableRow input:first-of-type"
     And I press keys "2" for element "#addDataTableRow input:first-of-type"
     And I click selector "#addDataTableRow button:first-of-type"
-    Then I wait until element ".uitest-data-table-row:eq(0) td:nth-child(2)" contains text "2"
+    Then I wait until element ".uitest-data-table-row:nth-child(1) td:nth-child(2)" contains text "2"
 
     # Edit a row
-    And I click selector ".uitest-data-table-row:eq(0) td:nth-child(4) button:first-of-type"
-    Then I click selector ".uitest-data-table-row:eq(0) td:nth-child(2) input:first-of-type" once I see it
+    And I click selector ".uitest-data-table-row:nth-child(1) td:nth-child(4) button:first-of-type"
+    Then I click selector ".uitest-data-table-row:nth-child(1) td:nth-child(2) input:first-of-type" once I see it
     And I press keys "1" for element ".uitest-data-table-row td:nth-child(2) input"
-    And I click selector ".uitest-data-table-row:eq(0) td:nth-child(4) button:first-of-type"
+    And I click selector ".uitest-data-table-row:nth-child(1) td:nth-child(4) button:first-of-type"
     Then I wait until element ".uitest-data-table-content:first-of-type td:nth-child(2)" contains text "21"
 
   Scenario: Key/Value Pairs Tab

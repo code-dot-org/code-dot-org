@@ -13,7 +13,7 @@ Feature: Lesson extras teacher panel
     And check that the URL contains "section_id="
     And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
     And I wait until element ".student-table" is visible
-    And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
+    And I click selector "#teacher-panel-container tr:nth-child(2)" to load a new page
 
     # Lesson extras individual puzzle page
     And I click selector ".sublevel-card-title-uitest" once I see it to load a new page
@@ -22,4 +22,4 @@ Feature: Lesson extras teacher panel
     And check that the URL contains "section_id="
     And check that the URL contains "user_id="
     And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
-    And I wait until element "td:eq(1)" contains text "Sally"
+    And I wait until element "td:nth-child(2)" contains text "Sally"

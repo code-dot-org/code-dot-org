@@ -269,7 +269,7 @@ Then /^the section table row at index (\d+) has (primary|secondary) assignment p
   # Wait until the link loads in the table
   href = nil
   wait_until do
-    href = @browser.execute_script("return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href');")
+    href = @browser.execute_script("return $('.uitest-owned-sections tbody tr:nth-child(#{row_index + 1}) td:nth-child(4) a:nth-child(#{link_index - 1})').attr('href');")
     !href.nil?
   end
 
@@ -356,7 +356,7 @@ def get_section_id_from_table(row_index)
   href = nil
   wait_until do
     href = @browser.execute_script(
-      "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(1) a').attr('href')"
+      "return $('.uitest-owned-sections tbody tr:nth-child(#{row_index + 1}) td:nth-child(2) a').attr('href')"
     )
     !href.nil?
   end

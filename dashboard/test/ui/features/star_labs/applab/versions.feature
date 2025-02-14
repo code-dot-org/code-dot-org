@@ -23,10 +23,10 @@ Scenario: Script Level Versions
   And element ".project_updated_at" eventually contains text "Saved"
 
   When I press "versions-header"
-  And I wait until element "button:contains(Restore):eq(0)" is visible
+  And I wait until element "button:contains(Restore):nth-child(1)" is visible
   And element "button.btn-info" is visible
   And I make all links open in the current tab
-  And I click selector "button.btn-info:eq(0)" to load a new page
+  And I click selector "button.btn-info:nth-child(1)" to load a new page
   And I wait for the lab page to fully load
   Then ace editor code is equal to "// comment 1"
   And element "#workspace-header-span" contains text "View only"
@@ -69,7 +69,7 @@ Scenario: Project Load and Reload
   Then ".versionRow:nth-child(2) p" contains the saved text
   And element ".versionRow:nth-child(2) .img-upload" contains text "Restore"
 
-  And element "#showVersionsModal tr:contains(a minute ago):contains(Restore):eq(1)" is not visible
+  And element "#showVersionsModal tr:contains(a minute ago):contains(Restore):nth-child(2)" is not visible
 
 @no_mobile
 Scenario: Project Version Checkpoints
