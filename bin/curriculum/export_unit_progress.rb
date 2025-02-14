@@ -56,7 +56,7 @@ puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 $comprehend = Aws::Comprehend::Client.new
 $pii_threshold = 0.7
 
-$max_processes = 100
+$max_processes = 25
 
 def fetch_progress(simple:, unit_id:, level_id:, limit:, offset:)
   if Rails.env.production?
