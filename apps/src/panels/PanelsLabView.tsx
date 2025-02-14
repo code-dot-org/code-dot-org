@@ -22,6 +22,7 @@ import {
 } from '../code-studio/progressReduxSelectors';
 import {queryParams} from '../code-studio/utils';
 import useLifecycleNotifier from '../lab2/hooks/useLifecycleNotifier';
+import {LabProps} from '../lab2/types';
 import {LifecycleEvent} from '../lab2/utils';
 import MusicAnalyticsReporter from '../music/analytics/AnalyticsReporter';
 import useWindowSize from '../util/hooks/useWindowSize';
@@ -68,7 +69,7 @@ const updateAnalyticsProperty = (key: string, value: string) => {
   identify(identifyEvent);
 };
 
-const PanelsLabView: React.FunctionComponent = () => {
+const PanelsLabView: React.FunctionComponent<LabProps> = () => {
   const dispatch = useAppDispatch();
 
   const panels = useAppSelector(
