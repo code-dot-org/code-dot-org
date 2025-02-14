@@ -20,6 +20,8 @@ export default async function ExperiencePage({
   const {expEditorMode} = await searchParams;
   const editorMode = expEditorMode === 'true';
   const {experience, error} = await getExperience(slug, locale, editorMode);
+  const experienceJSON = experience ? JSON.stringify(experience, null, 2) : null;
+  console.log(experienceJSON)
 
   if (error) {
     return <div>{error.message}</div>;
@@ -30,7 +32,8 @@ export default async function ExperiencePage({
   const stylesheet = experience ? detachExperienceStyles(experience) : null;
 
   // experience currently needs to be stringified manually to be passed to the component
-  const experienceJSON = experience ? JSON.stringify(experience) : null;
+
+
   return (
     <main style={{width: '100%'}} className={classNames(fontVariables)}>
       {stylesheet && <style>{stylesheet}</style>}
