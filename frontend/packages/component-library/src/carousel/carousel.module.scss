@@ -19,14 +19,16 @@
 
   // Applies certain styles if carousel
   // contains videos with a caption
-  &:has(figcaption) {
+  figcaption {
     margin-bottom: 0 !important;
+  }
 
-    // Center navigation buttons on the video
-    // and ignore extra space added by the caption
+  // Center navigation buttons on the video
+  // and ignore extra space added by the caption
+  &:has(figcaption) {
     .swiperNavPrev,
     .swiperNavNext {
-      margin-top: -2.5rem;
+      margin-top: -1.875rem;
     }
   }
 }
