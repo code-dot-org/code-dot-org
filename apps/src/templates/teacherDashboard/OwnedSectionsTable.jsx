@@ -47,7 +47,13 @@ export const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
-  const {assignmentNames, assignmentPaths, courseOfferingsAreLoaded} = rowData;
+  const {
+    assignmentNames,
+    assignmentPaths,
+    courseOfferingsAreLoaded,
+    isAssignedSingleUnitCourse,
+  } = rowData;
+
   return (
     <div>
       {courseOfferingsAreLoaded ? (
@@ -55,7 +61,13 @@ export const courseLinkFormatter = function (course, {rowData}) {
           <a
             href={
               showV2TeacherDashboard()
-                ? teacherDashboardUrl(rowData.id, assignmentPaths[0])
+                ? assignmentPaths.length > 0 &&
+                  assignmentPaths[0].includes('/s/')
+                  ? teacherDashboardUrl(
+                      rowData.id,
+                      assignmentPaths[0].replace('/s/', '/unit/')
+                    )
+                  : teacherDashboardUrl(rowData.id, assignmentPaths[0])
                 : `${assignmentPaths[0]}${stringifyQueryParams({
                     section_id: rowData.id,
                   })}`
@@ -64,7 +76,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
           >
             {assignmentNames[0]}
           </a>
-          {assignmentPaths.length > 1 && (
+          {assignmentPaths.length > 1 && !isAssignedSingleUnitCourse && (
             <div style={styles.currentUnit}>
               <div>{i18n.currentUnit()}</div>
               <a

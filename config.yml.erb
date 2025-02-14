@@ -264,6 +264,15 @@ google_client_secret:
 # Default AWS region for the application.
 aws_region: us-east-1
 
+# Override the endpoint used for S3, typically to point to an emulated local
+# instance of the service; LocalStack, MinIO, etc. Particularly useful for
+# developers without AWS credentials; see `/docker/developers` for more,
+# particularly `docker-compose.minio.yml`
+aws_s3_endpoint:
+aws_s3_access_key_id:
+aws_s3_secret_access_key:
+aws_s3_emulated: false
+
 # Amazon Future Engineer integration
 afe_pardot_form_handler_url:
 csta_jotform_api_key: !Secret
@@ -357,7 +366,7 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net https://*.lausd.iap.allhere.co'
+allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net'
 
 skip_locales:
 secret_pictures_csv:
@@ -378,11 +387,9 @@ optimize_webpack_assets: true
 
 optimize_rails_assets: true
 
-# Allows your local server to render non-English locales, defaults to false in development.
-# If false, choosing a locale other than English will have no effect.
-# Note: You may need to be in an incognito window to see changes
-# due to a difference in the language cookie between production and localhost.
-load_locales:
+# Improves local environment load time by loading only the i18n data for the current locale.
+# Note: Not intended for production use.
+lazy_load_i18n: false
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
@@ -442,9 +449,7 @@ levelbuilder_mode:
 # make it easier to tell the difference
 use_local_header_color:
 
-default_hoc_mode: actual-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
-default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
-hoc-2024-nov-launch: true # overridden by 'hoc-2024-nov-launch' DCDO param, except in :test
+default_hoc_mode: false  # overridden by 'hoc_mode' DCDO param, except in :test
 
 # teacher_application_mode values: 'open', 'closing-soon', 'closed'
 default_teacher_application_mode: 'closed' # overridden by 'teacher_application_mode' DCDO param, except in :test
@@ -610,7 +615,14 @@ cdo_amplitude_api_key:
 ddconf_api_key: !Secret
 
 # JSON Web Key Set and private key data
-jwks_data: <%=File.read("#{File.expand_path(File.dirname(__FILE__))}/dashboard/public/oauth/jwks.json")%>
+jwks_data:
+  keys:
+    - kty: "RSA"
+      n: "o-pwMF3Hf7iy_Rev-XEf4aPxCYxYiOevIXZVrQuQPVU8JE80XcNlrq8az8c3afp4G79nAVRWDxWTsYQXTNnr-HEBBklO_w5M-h6wIgMCnA9VDJtATgIlqNJ5hIQ37U_1Mmw3oLYJVXaKhkjD-GNFTF0r6rKjeAOp4sWoKTn83r2Tyi8ZGM2l3IQ9NYsurFrAT7DALu01V5EsM_sdBezc6r-LkGyTkIQqS4qDV7qesJE9cUe2FVXfnedWLeYBCsq-tIh50XVMB1FMFa97kN3UfS3rigQYAq-LkDc3e7rHB0DqduHJNZKiHBoYOra484N4nmDYj-cSoBkDzhyu84ni4w"
+      e: "AQAB"
+      use: "sig"
+      alg: "RS256"
+      kid: "yNt3MOdUenNV_bn6IKboK2d8iJBL2hDJ_RoMhUtO33Q"
 jwk_private_key_data: !Secret
 
 # Credentials for OpenAI API
@@ -649,8 +661,8 @@ active_job_queues:
 active_job_queue_adapter: :delayed_job
 
 # Number of workers to start when running `rake build:start_active_job_workers`:
-active_job_backend_n_workers_to_start: 2
-active_job_backend_rolling_restart_in_n_batches: 1
+active_job_backend_n_workers_to_start: 10
+active_job_backend_rolling_restart_in_n_batches: 2
 
 # aiproxy credentials
 aiproxy_api_key: !Secret

@@ -15,19 +15,22 @@ import {
   ChatEvent,
   ChatMessage,
   DetectToxicityResponse,
-  LogChatEventApiResponse,
+  FeedbackValue,
 } from './types';
 import {extractFieldsToCheckForToxicity} from './utils';
 
-const ROOT_URL = '/aichat';
+const ROOT_GENERAL_URL = '/aichat';
+const ROOT_REQUEST_URL = '/aichat_request';
+const ROOT_EVENT_URL = '/aichat_events';
 const paths = {
-  CHAT_COMPLETION_URL: `${ROOT_URL}/chat_completion`,
-  GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
-  LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
-  START_CHAT_COMPLETION_URL: `${ROOT_URL}/start_chat_completion`,
-  STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
-  USER_HAS_AICHAT_ACCESS_URL: `${ROOT_URL}/user_has_access`,
-  FIND_TOXICITY_URL: `${ROOT_URL}/find_toxicity`,
+  START_CHAT_COMPLETION_URL: `${ROOT_REQUEST_URL}/start_chat_completion`,
+  GET_CHAT_REQUEST_URL: `${ROOT_REQUEST_URL}/chat_request`,
+  CHAT_COMPLETION_URL: `${ROOT_GENERAL_URL}/chat_completion`,
+  LOG_CHAT_EVENT_URL: `${ROOT_EVENT_URL}/log_chat_event`,
+  STUDENT_CHAT_HISTORY_URL: `${ROOT_EVENT_URL}/student_chat_history`,
+  SUBMIT_TEACHER_FEEDBACK_URL: `${ROOT_EVENT_URL}/submit_teacher_feedback`,
+  USER_HAS_AICHAT_ACCESS_URL: `${ROOT_GENERAL_URL}/user_has_access`,
+  FIND_TOXICITY_URL: `${ROOT_GENERAL_URL}/find_toxicity`,
 };
 
 const MAX_POLLING_TIME_MS = 45000;
@@ -66,6 +69,29 @@ export async function postAichatCompletionMessage(
     maxPollingTimeMs
   );
 }
+/**
+ * @param eventId
+ * @param feedback
+ *
+ * Sends a POST request to the aichat submit teacher feedback backend controller.
+ */
+export async function postSubmitTeacherFeedback(
+  eventId: number,
+  feedback: FeedbackValue | undefined
+) {
+  const payload = {
+    eventId,
+    feedback,
+  };
+  await HttpClient.post(
+    `${paths.SUBMIT_TEACHER_FEEDBACK_URL}`,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+}
 
 /**
  * This function sends a POST request to the aichat log event backend controller, then returns
@@ -74,7 +100,7 @@ export async function postAichatCompletionMessage(
 export async function postLogChatEvent(
   newChatEvent: ChatEvent,
   aichatContext: AichatContext
-): Promise<LogChatEventApiResponse> {
+): Promise<ChatEvent> {
   const payload = {
     newChatEvent,
     aichatContext,
@@ -98,20 +124,17 @@ export async function postLogChatEvent(
 export async function getStudentChatHistory(
   studentUserId: number,
   levelId: number,
-  scriptId: number | null,
-  scriptLevelId: number | undefined
+  scriptId: number | null
 ): Promise<ChatEvent[]> {
   const params: Record<string, string> = {
     studentUserId: studentUserId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
   };
-  if (scriptLevelId) {
-    params.scriptLevelId = scriptLevelId.toString();
-  }
   const response = await HttpClient.fetchJson<ChatEvent[]>(
     paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );
+
   return response.value;
 }
 

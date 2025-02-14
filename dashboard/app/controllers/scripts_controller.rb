@@ -16,16 +16,6 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
-    if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}} && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false))
-      if !params[:section_id] && current_user&.last_section_id
-        redirect_to "/teacher_dashboard/sections/#{current_user.last_section_id}/unit/#{@script.name}"
-        return
-      elsif params[:section_id]
-        redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/unit/#{@script.name}"
-        return
-      end
-    end
-
     if @script.is_deprecated
       return render 'errors/deprecated_course'
     end
@@ -34,6 +24,28 @@ class ScriptsController < ApplicationController
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
       redirect_to "#{redirect_path}#{redirect_query_string}"
       return
+    end
+
+    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
+      if request.query_parameters.include? "user_id"
+        redirect_query_string = request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")
+        if redirect_query_string.empty?
+          redirect_to script_path(@script)
+        else
+          redirect_to "#{script_path(@script)}?#{redirect_query_string}"
+        end
+        return
+      end
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}
+        most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}.last
+        if !params[:section_id]
+          redirect_to "/teacher_dashboard/sections/#{most_recent_section.id}/unit/#{@script.name}"
+          return
+        elsif params[:section_id]
+          redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/unit/#{@script.name}"
+          return
+        end
+      end
     end
 
     if request.path != (canonical_path = script_path(@script))
@@ -81,6 +93,7 @@ class ScriptsController < ApplicationController
       locale_code: request.locale,
       course_link: @script.course_link(params[:section_id]),
       course_title: @script.course_title || I18n.t('view_all_units'),
+      is_single_unit_course: @script.unit_group&.single_unit_course?,
       sections: @sections
     }
 

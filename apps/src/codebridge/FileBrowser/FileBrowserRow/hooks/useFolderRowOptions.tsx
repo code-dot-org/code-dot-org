@@ -22,7 +22,7 @@ export const useFolderRowOptions = (
   startFileUpload: ReturnType<typeof useFileUploader>['startFileUpload']
 ) => {
   const {
-    project: {folders: projectFolders},
+    source: {folders: projectFolders},
   } = useCodebridgeContext();
 
   const {

@@ -1,9 +1,8 @@
+import Link from '@code-dot-org/component-library/link';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import React from 'react';
-
-import Link from '@cdo/apps/componentLibrary/link';
 
 describe('Design System - Link', () => {
   it('renders with correct text when passed as children prop', () => {

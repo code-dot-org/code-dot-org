@@ -56,6 +56,15 @@ FactoryBot.define do
     instruction_type {"teacher_led"}
     participant_audience {"student"}
     instructor_audience {"teacher"}
+
+    factory :single_unit_course do
+      transient do
+        unit {nil}
+      end
+      after(:create) do |unit_group, evaluator|
+        create :unit_group_unit, unit_group: unit_group, script: (evaluator.unit || create(:unit)), position: 1
+      end
+    end
   end
 
   factory :experiment do
@@ -126,6 +135,9 @@ FactoryBot.define do
         password {nil}
         after(:create) {|user| user.update(admin: true)}
       end
+      trait :with_educator_role do
+        educator_role {SharedConstants::EDUCATOR_ROLES.first[:value]}
+      end
       trait :with_school_info do
         school_info
       end
@@ -166,6 +178,13 @@ FactoryBot.define do
         after(:create) do |ai_tutor_access|
           ai_tutor_access.permission = UserPermission::AI_TUTOR_ACCESS
           ai_tutor_access.save
+        end
+      end
+      factory :ai_iteration_tools_user do
+        after(:create) do |ai_iteration_tools_user|
+          ai_iteration_tools_user.permission = UserPermission::AI_TUTOR_ACCESS
+          ai_iteration_tools_user.permission = UserPermission::LEVELBUILDER
+          ai_iteration_tools_user.save
         end
       end
       factory :facilitator do
@@ -1065,15 +1084,6 @@ FactoryBot.define do
       after(:create) do |csa_script|
         csa_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA
         csa_script.save!
-      end
-    end
-
-    factory :csc_script do
-      after(:create) do |csc_script|
-        csc_script.curriculum_umbrella = Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC
-        csc_script.save!
-        course_offering = CourseOffering.add_course_offering(csc_script)
-        course_offering.update!(marketing_initiative: 'CSC')
       end
     end
 

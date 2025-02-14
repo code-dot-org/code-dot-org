@@ -1,24 +1,22 @@
-import classNames from 'classnames';
-import React, {useCallback, memo, AriaAttributes} from 'react';
-
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
+import {dropdownColors} from '@code-dot-org/component-library/common/constants';
 import {
   DropdownProviderWrapper,
   useDropdownContext,
-} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
+} from '@code-dot-org/component-library/common/contexts';
 import {
   ComponentSizeXSToL,
   DropdownColor,
   DropdownFormFieldRelatedProps,
-} from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown, {
-  _CustomDropdownOption,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
+import React, {useCallback, memo, AriaAttributes} from 'react';
 
-import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
+import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+
+import moduleStyles from './../customDropdown.module.scss';
 
 export interface IconDropdownOption extends _CustomDropdownOption {
   icon: FontAwesomeV6IconProps;

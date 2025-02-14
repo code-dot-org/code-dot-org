@@ -1,0 +1,46 @@
+name 'datasci-U1L12-projectL1_pilot2024_beta'
+title 'Three Reads'
+description 'Explore the datasets below.'
+
+markdown <<MARKDOWN
+## Three Reads of Data
+
+# Do This:
+1. Take a minute to look at the data sets provided below. 
+2. Pick one that interests you and fill in the Three Reads of Data on Day 1 of your Project Guide.
+
+::: details [**Mammals**]
+This dataset has information about 27 different mammals! Check it out here: <a href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FAvxdL60EukvbI0mOAxjL%2Ffile.json" target="_blank">Mammals Dataset</a>
+
+:::
+
+::: details [**PISA Dataset**]
+This dataset has information from students who took a survey about themselves and how they feel about school. Check it out here: <a href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FKTQOXH6OZbkiyWjIDQ4Q%2Ffile.json" target="_blank">PISA Dataset</a>
+
+:::
+
+::: details [**Movie Characters**]
+This dataset looks at 2000 movies and popular characters in the movies, scraped from IMDB. Check it out here: <a href="https://codap.concord.org/releases/latest/static/dg/en/cert/index.html?url=https://concord-consortium.github.io/codap-data/SampleDocs/LanguageArts/Movie_Characters/Movie_Characters.codap#shared=https%3A%2F%2Fcfm-shared.concord.org%2FHnPgrKSfvMECBZEgboT0%2Ffile.json" target="_blank">Movie Characters Dataset</a>
+
+:::
+
+::: details [**Data Science Salaries**]
+This dataset has information about salaries in the data science field, capturing various aspects such as experience level, employment type, and remote work ratio. Check it out here: <a href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FiLSHseFqzZZsiKtdqaUW%2Ffile.json" target="_blank">Data Science Salaries Dataset</a>
+
+:::
+
+::: details [**States' Education**]
+This dataset has information about information for each state such as average years of schooling for the different levels of education, female and male percentages, and more. Check it out here: <a href="https://codap.concord.org/releases/latest/static/dg/en/cert/index.html?url=https://concord-consortium.github.io/codap-data/SampleDocs/Social_Science/United_States/statesnpeople/States_and_Education.codap#shared=https%3A%2F%2Fcfm-shared.concord.org%2FAQp8L6hQTriuYxMaVnm7%2Ffile.json" target="_blank">States' Education Dataset</a>
+
+:::
+
+::: details [**Four Elephant Seals**]
+This dataset has information about four elephant seals and their locations during various times of the year. Check it out here: <a href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FADKLsr14bCQTYmXrbJBy%2Ffile.json" target="_blank">Four Elephant Seals Dataset</a>
+
+:::
+
+::: details [**Earthquakes**]
+This dataset has information about earthquakes from 2016-2017. It contains data ranging from the Magnitude of earthquakes to the type of earthquake. Check it out here: <a href="https://codap.concord.org/releases/latest/static/dg/en/cert/index.html?url=https://concord-consortium.github.io/codap-data/SampleDocs/Science/E_Sciences/Earthquakes/EarthquakeData.codap#shared=https%3A%2F%2Fcfm-shared.concord.org%2FWt5GZvbM9GY0gxArvqfK%2Ffile.json" target="_blank">Earthquakes Dataset</a>
+
+:::
+MARKDOWN

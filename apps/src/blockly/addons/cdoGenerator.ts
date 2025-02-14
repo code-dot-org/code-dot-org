@@ -5,6 +5,7 @@ import {
   ExtendedBlock,
   ExtendedCodeGenerator,
   ExtendedJavascriptGenerator,
+  ExtendedWorkspaceSvg,
 } from '@cdo/apps/blockly/types';
 
 export default function initializeGenerator(
@@ -13,10 +14,13 @@ export default function initializeGenerator(
   (
     blocklyWrapper.getGenerator() as ExtendedJavascriptGenerator
   ).translateVarName = function (name: string) {
-    return (Blockly.JavaScript.nameDB_ as GoogleBlockly.Names).getName(
+    let varName = (Blockly.JavaScript.nameDB_ as GoogleBlockly.Names).getName(
       name,
       Blockly.VARIABLE_CATEGORY_NAME
     );
+    // Play Lab (aka Studio) variables are contained within the Globals namespace.
+    if (Blockly.varsInGlobals) varName = 'Globals.' + varName;
+    return varName;
   };
 
   // This function was a custom addition in CDO Blockly, so we need to add it here
@@ -39,6 +43,13 @@ export default function initializeGenerator(
     let blocksToGenerate = blocklyWrapper.mainBlockSpace.getTopBlocks(
       true /* ordered */
     );
+    if (blocklyWrapper.getHiddenDefinitionWorkspace()) {
+      blocksToGenerate.push(
+        ...(
+          blocklyWrapper.getHiddenDefinitionWorkspace() as ExtendedWorkspaceSvg
+        ).getTopBlocks(true)
+      );
+    }
     if (opt_typeFilter) {
       if (typeof opt_typeFilter === 'string') {
         opt_typeFilter = [opt_typeFilter];

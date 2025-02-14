@@ -1,11 +1,10 @@
-import classNames from 'classnames';
-import React, {memo, useMemo, HTMLAttributes} from 'react';
-
-import {ButtonType, ButtonColor} from '@cdo/apps/componentLibrary/button';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import {ButtonType, ButtonColor} from '@code-dot-org/component-library/button';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
-} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import classNames from 'classnames';
+import React, {memo, useMemo, HTMLAttributes} from 'react';
 
 import moduleStyles from './_baseButton.module.scss';
 

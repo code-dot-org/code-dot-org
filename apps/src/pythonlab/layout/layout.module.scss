@@ -1,0 +1,19 @@
+.layoutContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.shrinkAndGrow {
+  flex: 1 1 auto;
+}
+
+.flexShrink0 {
+  flex-shrink: 0;
+}

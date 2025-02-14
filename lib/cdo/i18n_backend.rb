@@ -279,5 +279,3 @@ module Cdo
     end
   end
 end
-
-CDO_I18N_BACKEND = Cdo::I18n::SimpleBackend.new

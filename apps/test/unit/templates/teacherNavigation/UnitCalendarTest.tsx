@@ -13,7 +13,9 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import unitSelection, {setUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {
+  setCoursesWithProgress,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
@@ -106,6 +108,58 @@ const LEGACY_UNIT_SUMMARY = {
   version_year: '2020',
 };
 
+const COURSES_WITH_PROGRESS = [
+  {
+    id: 1,
+    display_name: 'CSD',
+    units: [
+      {
+        id: UNIT_SUMMARY.id,
+        version_year: UNIT_SUMMARY.version_year,
+        key: UNIT_SUMMARY.name,
+        name: UNIT_SUMMARY.title,
+        position: null,
+      },
+    ],
+  },
+];
+
+const LEGACY_COURSES_WITH_PROGRESS = [
+  {
+    id: 1,
+    display_name: 'CSD',
+    units: [
+      {
+        id: LEGACY_UNIT_SUMMARY.id,
+        version_year: LEGACY_UNIT_SUMMARY.version_year,
+        key: LEGACY_UNIT_SUMMARY.name,
+        name: LEGACY_UNIT_SUMMARY.title,
+        position: null,
+      },
+    ],
+  },
+];
+
+const mockSpy = (
+  spy: jest.SpyInstance,
+  unitSummaryResponse: any, // eslint-disable-line @typescript-eslint/no-explicit-any
+  coursesWithProgress: any // eslint-disable-line @typescript-eslint/no-explicit-any
+) => {
+  spy.mockImplementation((url: string) => {
+    if (url.includes('unit_summary')) {
+      return Promise.resolve({
+        value: unitSummaryResponse,
+        response: new Response(),
+      });
+    } else if (url.includes('section_courses')) {
+      return Promise.resolve({
+        value: coursesWithProgress,
+        response: new Response(),
+      });
+    }
+  });
+};
+
 describe('UnitCalendar', () => {
   let store: Store;
 
@@ -129,7 +183,7 @@ describe('UnitCalendar', () => {
     store.dispatch(setInitialData({id: 1, user_type: 'teacher'}));
     store.dispatch(setSections(SECTIONS));
     store.dispatch(selectSection(1));
-    store.dispatch(setUnitName('csd1-2024'));
+    store.dispatch(setCoursesWithProgress(COURSES_WITH_PROGRESS));
 
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
   });
@@ -156,16 +210,18 @@ describe('UnitCalendar', () => {
   });
 
   it('renders calendar with instructional minutes dropdown, week, and calendar when loaded', async () => {
-    fetchSpy.mockResolvedValue({
-      value: {
+    mockSpy(
+      fetchSpy,
+      {
         unitData: UNIT_SUMMARY,
         plcBreadcrumb: {
           unit_name: 'csd1-2024',
           course_view_path: 'http://example.com/course',
         },
       },
-      response: new Response(),
-    });
+      COURSES_WITH_PROGRESS
+    );
+
     await act(async () => {
       renderComponent();
     });
@@ -197,7 +253,6 @@ describe('UnitCalendar', () => {
 
   it('tells users to select a curriculum when no curriculum assigned', async () => {
     store.dispatch(selectSection(9));
-    store.dispatch(setUnitName(null));
 
     await act(async () => {
       renderComponent();
@@ -211,7 +266,6 @@ describe('UnitCalendar', () => {
 
   it('tells users to select a unit when no unit assigned', async () => {
     store.dispatch(selectSection(10));
-    store.dispatch(setUnitName(null));
 
     await act(async () => {
       renderComponent();
@@ -226,18 +280,18 @@ describe('UnitCalendar', () => {
   });
 
   it('notifies users that the assigned curriculum is pre-2020', async () => {
-    store.dispatch(setUnitName('csd1-2020'));
     store.dispatch(selectSection(11));
-    fetchSpy.mockResolvedValue({
-      value: {
+    mockSpy(
+      fetchSpy,
+      {
         unitData: LEGACY_UNIT_SUMMARY,
         plcBreadcrumb: {
           unit_name: 'csd1-2020',
           course_view_path: 'http://example.com/course',
         },
       },
-      response: new Response(),
-    });
+      LEGACY_COURSES_WITH_PROGRESS
+    );
 
     await act(async () => {
       renderComponent();

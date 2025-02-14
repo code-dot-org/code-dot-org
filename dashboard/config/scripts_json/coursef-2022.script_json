@@ -28,6 +28,7 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "show_calendar": true,
       "supported_locales": [
         "fa-AF",
         "fa-IR",
@@ -40,7 +41,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-11-19 01:14:37 UTC",
+    "serialized_at": "2025-01-09 16:02:46 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

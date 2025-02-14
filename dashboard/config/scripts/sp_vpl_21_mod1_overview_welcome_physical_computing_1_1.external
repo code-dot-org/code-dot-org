@@ -1,0 +1,25 @@
+name 'SP-VPL-21-mod1-Overview-Welcome_physical-computing_1_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Welcome!
+
+<img src="https://images.code.org/8f8f1dae36b39433164cf3752db52472-image-1628784411625.jpg" alt="Two students laughing next to a laptop" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0; ">
+
+#### This free self-paced professional learning experience is designed for users brand new to Code.org’s platform who want an overview of the teacher experience.
+<br>
+
+#### **You will:**
+
+
+* #### Get an introduction to Code.org’s mission.
+* #### Learn how to navigate the Code.org website and teacher tools.
+* #### Set up a classroom section.
+* #### Locate and use course lesson plans and teacher resources.
+* #### Learn how to access support while teaching Code.org curricula.
+* #### **Note:** This module is to onboard you to Code.org's Professional Learning platform. You will not gain any programming experience at the end of this module. 
+<br>
+
+#### **Suggested time to complete the Getting Started Module:** 80 minutes
+MARKDOWN

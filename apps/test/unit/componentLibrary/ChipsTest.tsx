@@ -1,9 +1,8 @@
+import Chips, {ChipsProps} from '@code-dot-org/component-library/chips';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, {useState} from 'react';
 import '@testing-library/jest-dom';
-
-import Chips, {ChipsProps} from '@cdo/apps/componentLibrary/chips';
 
 const options = [
   {value: 'chip1', label: 'Chip1'},

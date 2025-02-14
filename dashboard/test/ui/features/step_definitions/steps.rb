@@ -108,6 +108,20 @@ def navigate_to(url)
   install_js_error_recorder
 end
 
+def shadow_element(shadow_host, element_selector)
+  shadow_root = nil
+
+  wait_until do
+    shadow_root = @browser.find_element(:css, shadow_host).shadow_root
+  end
+
+  @browser.execute_script(<<~JS, shadow_root, element_selector)
+    const shadowDOM = arguments[0].querySelector('*');
+    const selector = arguments[1];
+    return $(shadowDOM).find(selector)[0];
+  JS
+end
+
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   begin
@@ -405,7 +419,7 @@ end
 Then /^the link reading "([^"]*)"(?: within element "([^"]*)")? goes to "([^"]*)"$/ do |text, parent, url|
   context = @browser.find_element(:css, parent) if parent
   context ||= @browser
-  xpath = ".//a[starts-with(text(), '#{text}')]"
+  xpath = ".//a[starts-with(normalize-space(text()), '#{text}')]"
   link = context.find_element(:xpath, xpath)
   expect(link.attribute("href")).to eq(replace_hostname(url)).or eq(url)
 end
@@ -530,20 +544,8 @@ rescue
   @browser.execute_script("$('" + category_selector + "').last().simulate('drag', function(){});")
 end
 
-When /^I press dropdown button with text "([^"]*)"$/ do |text|
-  @browser.execute_script("$('.goog-flat-menu-button-caption:contains(#{text})').simulate('drag', function(){});")
-end
-
-When /^I press dropdown item with text "([^"]*)"$/ do |text|
-  @browser.execute_script("$('.goog-menuitem:contains(#{text})').last().simulate('drag', function(){});")
-end
-
 When /^I press the edit button on a function call named "([^"]*)"$/ do |text|
   @browser.execute_script("$('.blocklyDraggable:contains(#{text})').find('.blocklyIconGroup:contains(edit)').first().simulate('drag', function(){})")
-end
-
-When /^I press dropdown item "([^"]*)"$/ do |index|
-  @browser.execute_script("$('.goog-menuitem').eq(#{index}).simulate('drag', function(){});")
 end
 
 When /^I press a button with xpath "([^"]*)"$/ do |xpath|
@@ -573,10 +575,11 @@ When /^I select the end of "([^"]*)"$/ do |selector|
   @browser.execute_script("document.querySelector(\"#{selector}\").setSelectionRange(9999, 9999);")
 end
 
-When /^I click selector "([^"]*)"(?: to load a new (page|tab))?$/ do |jquery_selector, load|
+When /^I click selector "([^"]*)"(?: within shadow-host "([^"]*)")?(?: to load a new (page|tab))?$/ do |jquery_selector, shadow_host, load|
   # normal a href links can only be clicked this way
   page_load(load) do
-    @browser.execute_script("$(\"#{jquery_selector}\")[0].click();")
+    jquery_selector = shadow_element(shadow_host, jquery_selector) if shadow_host
+    @browser.execute_script('$(arguments[0])[0].click();', jquery_selector)
   end
 end
 
@@ -1016,14 +1019,26 @@ Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
   expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
 end
 
+Then /^I wait until I see (\d*) of jquery selector (.*)$/ do |num, selector|
+  wait_until do
+    @browser.execute_script("return $(\"#{selector}\").length;") == num.to_i
+  end
+end
+
 Then /^I wait until I (don't )?see selector "(.*)"$/ do |negation, selector|
   wait_until do
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == negation.nil?
   end
 end
 
-Then /^there's a div with a background image "([^"]*)"$/ do |path|
-  exists = @browser.execute_script("return $('div').filter(function(){return $(this).css('background-image').indexOf('#{path}') != -1 }).length > 0")
+Then /^there's an element with an image "([^"]*)"$/ do |path|
+  exists = @browser.execute_script(<<-JS)
+    return $('div').filter(function() {
+      return $(this).css('background-image').indexOf('#{path}') != -1;
+    }).length > 0 || $('img').filter(function() {
+      return $(this).attr('src').indexOf('#{path}') != -1;
+    }).length > 0;
+  JS
   expect(exists).to eq(true)
 end
 

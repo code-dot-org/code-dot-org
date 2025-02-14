@@ -18,9 +18,16 @@ This directory uses [Turborepo](https://turbo.build/) to manage the monorepo and
 
 ### Packages
 
-- `packages/dsco`: The Design System for Code.org including its react components and styling
+- `packages/component-library`: The Design System React component library for Code.org
+- `packages/component-library-styles`: Styles and theming based on the Code.org Design System
 
 ### Getting Started
+
+Ensure that [corepack](https://nodejs.org/api/corepack.html) is enabled.
+
+```bash
+corepack enable
+```
 
 Initialize the frontend package:
 

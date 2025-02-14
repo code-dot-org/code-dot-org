@@ -23,21 +23,39 @@
     animation: fadein 0.5s;
 
     .pageError {
+      display: flex;
       background-color: $neutral_light;
+      flex-direction: column;
+      align-items: center;
       border-radius: 5px;
       padding: 20px;
-      text-align: center;
+      gap: 20px;
 
       &Image {
         width: 120px;
-        display: block;
-        margin: 2px auto 15px auto;
       }
 
       &Message {
         color: $neutral_dark70;
-        margin-top: 10px;
       }
     }
+  }
+
+  .blockedProjectUIContainer {
+    background-color: $white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 80;
+  }
+
+  .blockedProjectUIContainerProjectValidator {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 80;
   }
 }

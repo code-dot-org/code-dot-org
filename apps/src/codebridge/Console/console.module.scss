@@ -8,11 +8,9 @@
   background-color: $black;
 }
 
-.console {
-  font-family:'Courier New', Courier, monospace;
-  overflow-y: scroll;
-  user-select: text;
-  height: 100%
+.consoleV2 {
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .errorLine {
@@ -36,6 +34,10 @@
 .consoleHeader {
   height: 40px;
   min-height: 40px;
+
+  & > div {
+    height: 40px;
+  }
 }
 
 .controlButton {

@@ -1,8 +1,9 @@
 import {RenameFolderFunction} from '@codebridge/codebridgeContext/types';
-import {ProjectType, FolderId} from '@codebridge/types';
+import {FolderId} from '@codebridge/types';
 import {validateFolderName} from '@codebridge/utils';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   DialogType,
   DialogControlInterface,
@@ -14,7 +15,7 @@ type RenameNewFilePromptArgsType = {
   folderId: FolderId;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   renameFolder: RenameFolderFunction;
-  projectFolders: ProjectType['folders'];
+  projectFolders: MultiFileSource['folders'];
   sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
 };
 

@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import announcementsReducer, {
   addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
@@ -31,7 +32,9 @@ import {
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
+import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 
@@ -122,6 +125,7 @@ function initPage() {
         courseVersionId={scriptData.courseVersionId}
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
+        isSingleUnitCourse={scriptData.is_single_unit_course}
         excludeCsfColumnInLegend={!scriptData.csf}
         teacherResources={scriptData.teacher_resources}
         studentResources={scriptData.student_resources || []}
@@ -156,6 +160,7 @@ function initPage() {
   );
 
   tooltipifyVocabulary();
+  displayDifferentiationChat(scriptData);
 }
 
 function initializeGooglePlatformApi(store) {
@@ -185,4 +190,24 @@ function initializeStoreWithSections(store, sections, currentSection) {
   }
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(currentSection.id.toString()));
+}
+
+function displayDifferentiationChat(scriptData) {
+  const aiDiffFabMountPoint = document.getElementById(
+    'ai-differentiation-fab-mount-point'
+  );
+
+  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={AiDiffContext.UNIT}
+          scriptId={scriptData.id}
+          scriptName={scriptData.name}
+          unitDisplayName={scriptData.title}
+        />
+      </Provider>,
+      aiDiffFabMountPoint
+    );
+  }
 }

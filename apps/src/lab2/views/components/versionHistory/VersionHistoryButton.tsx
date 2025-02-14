@@ -1,10 +1,12 @@
+import Alert from '@code-dot-org/component-library/alert';
+import {Button} from '@code-dot-org/component-library/button';
+import {
+  WithTooltip,
+  TooltipProps,
+} from '@code-dot-org/component-library/tooltip';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
-import Alert from '@cdo/apps/componentLibrary/alert';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {TooltipProps} from '@cdo/apps/componentLibrary/tooltip';
-import WithTooltip from '@cdo/apps/componentLibrary/tooltip/WithTooltip';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -19,7 +21,7 @@ import moduleStyles from './version-history.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface VersionHistoryProps {
-  startSource: ProjectSources;
+  startSources: ProjectSources;
   updatedSourceCallback?: (source: ProjectSources) => void;
 }
 
@@ -27,7 +29,7 @@ interface VersionHistoryProps {
  * Button that opens a dropdown with a list of versions for the current project.
  */
 const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
-  startSource,
+  startSources,
   updatedSourceCallback,
 }) => {
   const [isVersionHistoryOpen, setIsVersionHistoryOpen] = useState(false);
@@ -137,7 +139,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
       <VersionHistoryDropdown
         versionList={versionList}
         updatedSourceCallback={updatedSourceCallback}
-        startSource={startSource}
+        startSources={startSources}
         closeDropdown={() => setIsVersionHistoryOpen(false)}
         isOpen={isVersionHistoryOpen}
       />

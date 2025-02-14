@@ -33,8 +33,8 @@ Feature: Curriculum Catalog Page
     And I see no difference for "Curriculum Catalog: All Offerings in Spanish"
 
     Then I click selector "#topic-dropdown-button"
-    And I wait until element "span:contains(Alfabetización digital)" is visible
-    Then I click selector "span:contains(Alfabetización digital)"
+    And I wait until element "span:contains(Alfabetización Digital)" is visible
+    Then I click selector "span:contains(Alfabetización Digital)"
     And I wait until element "h4:contains(Inteligencia Artificial para Océanos)" is not visible
     And I see no difference for "Curriculum Catalog: One Offering in Spanish"
 
@@ -88,6 +88,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is selected
     And the "Section 2" checkbox is not selected
     And I click selector "button:contains(Confirm section assignments)"
+    And I wait until element "p:contains(You have successfully assigned)" is visible
 
     # Assign a course
     Then I wait until element "h4:contains(Computer Science Principles)" is visible
@@ -101,7 +102,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click selector "button:contains(Confirm section assignments)"
-    And element "p:contains(You have successfully assigned)" is visible
+    And I wait until element "p:contains(You have successfully assigned)" is visible
 
     # Confirm assignment
     Then I am on "http://studio.code.org"
@@ -259,7 +260,7 @@ Feature: Curriculum Catalog Page
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click selector "button:contains(Confirm section assignments)"
-    And element "p:contains(You have successfully assigned)" is visible
+    And I wait until element "p:contains(You have successfully assigned)" is visible
 
     # Confirm assignment
     Then I am on "http://studio.code.org"

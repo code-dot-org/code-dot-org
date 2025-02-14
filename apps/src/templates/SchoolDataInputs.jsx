@@ -1,9 +1,9 @@
+import {Button} from '@code-dot-org/component-library/button';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import {
   SELECT_COUNTRY,
@@ -41,7 +41,6 @@ export default function SchoolDataInputs({
   usIp,
   containerClassName,
   includeHeaders = true,
-  markFieldsAsRequired = false,
   fieldNames = {
     country: 'user[school_info_attributes][country]',
     ncesSchoolId: 'user[school_info_attributes][school_id]',
@@ -94,9 +93,6 @@ export default function SchoolDataInputs({
 
   const computedStyleClass = classNames(
     style.schoolAssociationWrapper,
-    {
-      [style.requiredLabel]: markFieldsAsRequired,
-    },
     containerClassName
   );
 
@@ -217,7 +213,6 @@ export default function SchoolDataInputs({
 
 SchoolDataInputs.propTypes = {
   includeHeaders: PropTypes.bool,
-  markFieldsAsRequired: PropTypes.bool,
   fieldNames: PropTypes.object,
   containerClassName: PropTypes.string,
   schoolId: PropTypes.string.isRequired,
