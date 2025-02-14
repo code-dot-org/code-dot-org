@@ -181,9 +181,9 @@ pages:
       LtiRosterSyncSettings: false
       # Do not provide parental links to information about how to create accounts when deleting sections / accounts
       PersonalLoginDialog:
-        hideInstructions: false
+        hideInstructions: true
       TeacherWarning:
-        hideInstructions: false
+        hideInstructions: true
   # Professional Learning
   - path: /my-professional-learning
     components:
