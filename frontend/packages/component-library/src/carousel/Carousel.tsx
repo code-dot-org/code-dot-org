@@ -6,14 +6,13 @@ import {HTMLAttributes, ReactNode} from 'react';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Navigation, Pagination, A11y} from 'swiper/modules';
 
-import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import moduleStyles from './carousel.module.scss';
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   /** Carousel content */

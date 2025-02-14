@@ -3,6 +3,7 @@
 
 :root {
   // Swiper CSS custom properties
+  // See docs here: https://swiperjs.com/swiper-api#pagination
   --swiper-pagination-color: var(--background-brand-teal-primary);
   --swiper-pagination-bullet-size: 1rem;
   --swiper-pagination-bullet-inactive-color: var(--background-neutral-tertiary);
@@ -16,21 +17,6 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-
-  // Applies certain styles if carousel
-  // contains videos with a caption
-  figcaption {
-    margin-bottom: 0 !important;
-  }
-
-  // Center navigation buttons on the video
-  // and ignore extra space added by the caption
-  &:has(figcaption) {
-    .swiperNavPrev,
-    .swiperNavNext {
-      margin-top: -1.875rem;
-    }
-  }
 }
 
 // Navigation button styles
@@ -102,6 +88,24 @@
     // Hide focus outline on mouse click
     &:focus:not(:focus-visible) {
       outline: none;
+    }
+  }
+}
+
+// Video styles
+// Applies certain styles if carousel
+// contains videos with a caption
+.carousel {
+  figcaption {
+    margin-bottom: 0 !important;
+  }
+
+  // Center navigation buttons on the video
+  // and remove extra space added by the caption
+  &:has(figcaption) {
+    .swiperNavPrev,
+    .swiperNavNext {
+      margin-top: -1.875rem;
     }
   }
 }
