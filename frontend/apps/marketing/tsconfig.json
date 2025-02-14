@@ -17,6 +17,7 @@
     ],
     "paths": {
       "@public/*": ["./public/*"],
+      "@locales/*": ["./public/locales/*"],
       "@/*": ["./src/*"]
     },
     "allowJs": true,

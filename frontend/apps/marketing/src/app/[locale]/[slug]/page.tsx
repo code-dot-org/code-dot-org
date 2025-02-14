@@ -6,6 +6,7 @@ import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 import '@/contentful/register-custom-components';
 import classNames from 'classnames';
 import {FONT_VARIABLES_BY_LOCALE} from '@/config/fonts';
+import initTranslations from "@/app/i18n";
 
 type ExperiencePageProps = {
   params: Promise<{locale?: string; slug?: string; preview?: string}>;
@@ -17,6 +18,7 @@ export default async function ExperiencePage({
   searchParams,
 }: ExperiencePageProps) {
   const {locale = 'en-US', slug = 'home-page'} = (await params) || {};
+  const { t } = await initTranslations(locale, ['common']);
   const {expEditorMode} = await searchParams;
   const editorMode = expEditorMode === 'true';
   const {experience, error} = await getExperience(slug, locale, editorMode);
@@ -36,6 +38,7 @@ export default async function ExperiencePage({
 
   return (
     <main style={{width: '100%'}} className={classNames(fontVariables)}>
+      <h1>{t('hello')}</h1>
       {stylesheet && <style>{stylesheet}</style>}
       <ExperiencePageLoader experienceJSON={experienceJSON} locale={locale} />
     </main>
