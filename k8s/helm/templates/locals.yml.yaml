@@ -7,21 +7,26 @@ metadata:
 data:
   locals.yml: |
 
-    # MySQL connections
+    {{- if .Values.services.mysql.enabled }}
     db_writer: 'mysql://root@{{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}/'
-
-    # Redis connections
+    {{- end }}
+    
+    {{- if .Values.services.redis.enabled }}
     geocoder_redis_url: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0/geocoder
     session_store_server: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0/session
     netsim_redis_groups:
     - master: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379
+    {{- end }}
+
 
     dashboard_enable_pegasus: false
     build_apps: true
     use_my_apps: true
 
-    # Should we use these?
+    # FIXME: once mountDotAWS is reliable, we should uncomment this conditional
+    # {{- if not .Values.localDev.mounts.mountDotAWS }}
     cloudfront_key_pair_id: localoverride
     cloudfront_private_key: localoverride
     slack_bot_token: localoverride
     properties_encryption_key: ''
+    # {{- end }}
