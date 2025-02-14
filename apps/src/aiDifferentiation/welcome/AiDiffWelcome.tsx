@@ -16,7 +16,7 @@ import Confetti from 'react-dom-confetti';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
-import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
+import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
 import AiDiffChat, {
@@ -244,8 +244,8 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             <Confetti active={confettiActive} />
           </div>
           <img
-            src={aiBotConfetti}
-            className={style.botConfetti}
+            src={aiBotHappy}
+            className={style.botHappy}
             alt={'Congratulations!'}
           />
           <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
