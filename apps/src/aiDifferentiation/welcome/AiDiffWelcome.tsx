@@ -80,6 +80,7 @@ const optionButton = (
       onClick={onClick}
       type="button"
       id="uitest-ai-diff-option"
+      aria-label={title}
     >
       <FontAwesomeV6Icon
         iconName={iconName}
@@ -127,7 +128,12 @@ const getStartedPage = (onClick: () => void) => {
 const progressBarHeader = (percentage: number, onBack: () => void) => {
   return (
     <div className={style.progressBarHeader}>
-      <button className={style.headerBackButton} type="button" onClick={onBack}>
+      <button
+        className={style.headerBackButton}
+        type="button"
+        onClick={onBack}
+        aria-label="Back"
+      >
         <FontAwesomeV6Icon
           iconName="arrow-left"
           className={style.headerBackIcon}
@@ -279,7 +285,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             <img
               src={ai101Thumnail}
               className={style.ai101Thumbnail}
-              alt={'AI 101 professional learning course'}
+              alt={''}
             />
           </a>
         </div>
