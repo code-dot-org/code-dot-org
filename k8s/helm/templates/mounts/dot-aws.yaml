@@ -1,5 +1,5 @@
 # In development, this allows us to re-use our AWS config from our local machine.
-{{- if .Values.development.mounts.mountDotAWS }}
+{{- if .Values.localDev.mounts.mountDotAWS }}
 apiVersion: v1 
 kind: PersistentVolumeClaim 
 metadata:   
@@ -28,5 +28,5 @@ spec:
     - ReadWriteMany
   storageClassName: hostpath
   hostPath:
-    path: {{ .Values.development.mounts.hostPaths.home }}/.aws
+    path: {{ .Values.localDev.mounts.hostPaths.home }}/.aws
 {{- end }}

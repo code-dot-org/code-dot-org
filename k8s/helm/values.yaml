@@ -33,7 +33,7 @@ user:
   home: /home/code-dot-org
   allowSudo: false
 
-development:
+localDev:
   mounts:
     mountDotAWS: false
     mountDotConfigGcloud: false

@@ -4,7 +4,7 @@ services:
     enabled: true
   mysql:
     enabled: true
-development:
+localDev:
   mounts:
     mountDotAWS: true
     mountDotConfigGcloud: true

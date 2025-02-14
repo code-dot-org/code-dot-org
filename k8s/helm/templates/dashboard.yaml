@@ -39,9 +39,9 @@ spec:
             value: {{ .Values.RAILS_ENV }}
           - name: RACK_ENV
             value: {{ .Values.RAILS_ENV }}
-          {{- if .Values.development.mounts.mountDotAWS }}
+          {{- if .Values.localDev.mounts.mountDotAWS }}
           - name: AWS_PROFILE
-            value: {{ .Values.development.mounts.AWS_PROFILE }}
+            value: {{ .Values.localDev.mounts.AWS_PROFILE }}
           {{- end }}
         ports:
         - name: http
@@ -74,12 +74,12 @@ spec:
             path: /health_check
             port: http
         volumeMounts:
-        {{- if .Values.development.mounts.mountDotAWS }}
+        {{- if .Values.localDev.mounts.mountDotAWS }}
         # These allow us to re-use our aws / aws-google login from our local machine.
         - mountPath: {{ .Values.user.home }}/.aws
           name: dot-aws
         {{- end }}
-        {{- if .Values.development.mounts.mountDotConfigGcloud }}
+        {{- if .Values.localDev.mounts.mountDotConfigGcloud }}
         - mountPath: {{ .Values.user.home }}/.config/gcloud
           name: dot-config-gcloud
         {{- end }}
@@ -92,12 +92,12 @@ spec:
         - name: locals-yml
           configMap:
             name: {{ include "cdo.fullname" (merge (dict "component" "locals.yml") .) }}
-        {{- if .Values.development.mounts.mountDotAWS }}
+        {{- if .Values.localDev.mounts.mountDotAWS }}
         - name: dot-aws
           persistentVolumeClaim:
             claimName: {{ include "cdo.fullname" (merge (dict "component" "dot-aws") .) }}
         {{- end }}
-        {{- if .Values.development.mounts.mountDotConfigGcloud }}
+        {{- if .Values.localDev.mounts.mountDotConfigGcloud }}
         - name: dot-config-gcloud
           persistentVolumeClaim:
             claimName: {{ include "cdo.fullname" (merge (dict "component" "dot-config-gcloud") .) }}
