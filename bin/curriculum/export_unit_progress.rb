@@ -201,7 +201,9 @@ def main
     ("level-#{level_id}" if level_id),
     ("limit-#{limit}" if limit),
     ("offset-#{offset}" if offset),
-  ].compact.join('-') + '.jsonl'
+  ].compact.join('-') +
+    '-unfiltered' \
+    '.jsonl'
 
   results = fetch_progress(
     simple: simple,
@@ -218,8 +220,6 @@ def main
     # parallelize network requests to projects API and AWS Comprehend
     Parallel.each(results, in_processes: $max_processes) do |row|
       row[:source] = get_project_source(row['channel_id'])
-
-      process_row_pii(row)
 
       row[:hashed_user_id] = hashed_user_id(row['user_id'])
       row.delete('user_id')
