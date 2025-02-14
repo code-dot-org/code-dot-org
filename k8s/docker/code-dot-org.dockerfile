@@ -160,11 +160,12 @@ COPY --chown=${UID} --link \
 # Copy in the rest of the source code
 COPY --chown=${UID} --link ./ ./
 
-# Now run final build optimizations that truly require full source code
-#
-# Our high-level goal is to save startup time by doing as much as possible at
-# docker build time. So if you need it, do it here. But, if you can, do it earlier!
 RUN <<EOF
+  # Run final build optimizations that require full source code
+  #
+  # Our high-level goal is to save startup time by doing as much as possible at
+  # docker build time. So if you need it, do it here. But, if you can: do it earlier!
+
   # we pre-optimized this step earlier to install 3rd party packages.
   # Now we just need to build our in-house python packages.
   uv sync --frozen --quiet
