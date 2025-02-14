@@ -7,8 +7,12 @@ metadata:
 data:
   locals.yml: |
 
+    # MySQL connections
     db_writer: 'mysql://root@{{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}/'
 
+    # Redis connections
+    geocoder_redis_url: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0/geocoder
+    session_store_server: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0/session
     netsim_redis_groups:
     - master: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379
 
