@@ -6,7 +6,7 @@ metadata:
     {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 4 }}
 spec:
   selector:
-    {{ include "cdo.selectorLabels" (merge (dict "component" "dasboard") .) | nindent 4 }}
+    {{ include "cdo.selectorLabels" (merge (dict "component" "dashboard") .) | nindent 4 }}
   ports:
     - protocol: TCP
       port: 3000
@@ -47,32 +47,32 @@ spec:
         - name: http
           containerPort: 3000
         tty: true # dashboard stdout logging assumes a tty
-        startupProbe:
-          # Fail pod if it hasn't started within 5 minutes
-          failureThreshold: 300
-          periodSeconds: 1
-          timeoutSeconds: 5
-          httpGet:
-            path: /health_check
-            port: http
-        readinessProbe:
-          # After pod is started, ping /health_check every 10s, if it fails 2 in a row
-          # stop sending the pod traffic until it passes 2x health checks in a row.
-          successThreshold: 2
-          failureThreshold: 2
-          periodSeconds: 10
-          timeoutSeconds: 5
-          httpGet:
-            path: /health_check
-            port: http
-        livenessProbe:
-          # If the pod is down for 2 minutes, consider it irrecoverable and restart it.
-          failureThreshold: 4
-          periodSeconds: 30
-          timeoutSeconds: 5
-          httpGet:
-            path: /health_check
-            port: http
+        # startupProbe:
+        #   # Fail pod if it hasn't started within 5 minutes
+        #   failureThreshold: 300
+        #   periodSeconds: 1
+        #   timeoutSeconds: 5
+        #   httpGet:
+        #     path: /health_check
+        #     port: http
+        # readinessProbe:
+        #   # After pod is started, ping /health_check every 10s, if it fails 2 in a row
+        #   # stop sending the pod traffic until it passes 2x health checks in a row.
+        #   successThreshold: 2
+        #   failureThreshold: 2
+        #   periodSeconds: 10
+        #   timeoutSeconds: 5
+        #   httpGet:
+        #     path: /health_check
+        #     port: http
+        # livenessProbe:
+        #   # If the pod is down for 2 minutes, consider it irrecoverable and restart it.
+        #   failureThreshold: 4
+        #   periodSeconds: 30
+        #   timeoutSeconds: 5
+        #   httpGet:
+        #     path: /health_check
+        #     port: http
         volumeMounts:
         {{- if .Values.development.mounts.mountDotAWS }}
         # These allow us to re-use our aws / aws-google login from our local machine.
