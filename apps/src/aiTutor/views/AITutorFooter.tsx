@@ -1,14 +1,9 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import React, {useCallback} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
-import {
-  MultiFileSource,
-  ProjectFile,
-  // ProjectSources,
-} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -51,14 +46,12 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
     state => state.javalabEditor.activeTabKey
   );
 
-  // Compute studentCode based on the lab type
   let studentCode: string = '';
   if (level?.type === 'Pythonlab') {
     // TODO: For PythonLab, we are only considering the active file contents,
     // but this seems to get us parity with JavaLab. We may need to revisit this.
     studentCode = pythonLabSource ? getActiveFileContents(pythonLabSource) : '';
   } else {
-    // Here, we assume that javaLabSources and fileMetadata are always defined
     studentCode = javaLabSources[fileMetadata[activeTabKey]].text;
   }
 
