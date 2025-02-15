@@ -52,10 +52,6 @@ puts "Loading Rails environment..."
 require_relative '../../dashboard/config/environment'
 puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 
-# thread-safe client for AWS Comprehend
-$comprehend = Aws::Comprehend::Client.new
-$pii_threshold = 0.7
-
 def fetch_progress(simple:, unit_id:, level_id:, limit:, offset:)
   if Rails.env.production?
     # fetch the data from redshift in production, because it relies on an unindexed query on
@@ -97,73 +93,6 @@ def execute_redshift_query(client, query)
 rescue => exception
   puts "Error executing Redshift query: #{exception.message}\n#{exception.backtrace.join("\n")}"
   raise
-end
-
-def process_row_pii(row)
-  if row[:source].present?
-    pii_score, pii_entities = check_source_pii(row[:source])
-    row[:source_pii_score] = pii_score
-    row[:source_pii_entities] = pii_entities
-    if pii_score > $pii_threshold
-      row[:source] = nil
-      row['link_to_project'] = nil
-      row['channel_id'] = nil
-    end
-  end
-
-  if row['student_answer'].present?
-    pii_score, pii_entities = check_source_pii(row['student_answer'])
-    row[:student_answer_pii_score] = pii_score
-    row[:student_answer_pii_entities] = pii_entities
-    if pii_score > $pii_threshold
-      row['student_answer'] = nil
-    end
-  end
-end
-
-def check_source_pii(source)
-  return [0, []] unless source.present?
-
-  params = {
-    language_code: "en",
-    text: source
-  }
-  response = $comprehend.detect_pii_entities(params)
-
-  # a string without pii concerns will contain no entities. example responses:
-  # {
-  #   "source": "the quick brown fox jumped over the lazy dog",
-  #   "response": []
-  # }
-  # {
-  #   "source": "the quick brown fox (206) 555-1212 jumped over the lazy dog at 55 main st",
-  #   "response": [
-  #     "{:score=>0.9999105930328369, :type=>\"PHONE\", :begin_offset=>20, :end_offset=>34}",
-  #     "{:score=>0.9999832510948181, :type=>\"ADDRESS\", :begin_offset=>63, :end_offset=>73}"
-  #   ]
-  # }
-
-  max_score = response.entities.map(&:score).max || 0
-
-  [max_score, response.entities]
-rescue => exception
-  puts "Error checking source for PII: #{exception.message}"
-  [1, []]
-end
-
-def hashed_user_id(user_id)
-  secret_key = CDO.properties_encryption_key
-  raise "missing CDO.properties_encryption_key" unless secret_key
-
-  # a one-way hash that cannot be reverse-engineered by guessing and
-  # checking user ids without knowing the secret.
-  input_data = "#{user_id}#{secret_key}"
-  digest = Digest::SHA256.hexdigest(input_data)
-
-  # truncate to 128 bits to make digest length more manageable. user ids are
-  # currently 27 bits in 2025. chance of collision is 2^-75 which low enough to ignore.
-  # https://en.wikipedia.org/wiki/Birthday_attack#Simple_approximation
-  digest[0..31]
 end
 
 def main
