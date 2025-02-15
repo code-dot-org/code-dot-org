@@ -59,15 +59,16 @@ spec:
           storage: {{ .Values.services.minio.storage | default "1Gi" }}
 {{- end }}
 ---
-{{- if .Values.services.minio.runJobInstallS3 }}
+{{- if .Values.services.minio.runSetupS3Job }}
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ include "cdo.fullname" (merge (dict "component" "minio-install") .) }}
+  name: {{ include "cdo.fullname" (merge (dict "component" "minio-setup-s3-job") .) }}
   labels:
-    {{ include "cdo.labels" (merge (dict "component" "minio-install") .) | nindent 4 }}
+    {{ include "cdo.labels" (merge (dict "component" "minio-setup-s3-job") .) | nindent 4 }}
 spec:
   backoffLimit: 1
+  ttlSecondsAfterFinished: 3600
   template:
     metadata:
       labels:

@@ -54,11 +54,13 @@ spec:
         securityContext:
           allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
 
+        {{- if $isDeployment }}
         ports:
         - name: http
           containerPort: 3000
         - name: http-hmr
           containerPort: 9000
+        {{- end }}
 
         {{- if (.healthChecksEnabled | default .Values.healthChecks.enabled) }}
         startupProbe:

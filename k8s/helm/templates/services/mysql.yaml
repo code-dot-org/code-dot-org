@@ -8,7 +8,8 @@ metadata:
     {{ include "cdo.labels" (merge (dict "component" "mysql") .) | nindent 4 }}
 spec:
   ports:
-    - protocol: TCP
+    - name: mysql
+      protocol: TCP
       port: 3306
   selector:
     {{ include "cdo.selectorLabels" (merge (dict "component" "mysql") .) | nindent 4 }}

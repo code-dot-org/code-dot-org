@@ -27,7 +27,7 @@ dashboardJob:
   args: []
   restartPolicy: Never
   backoffLimit: 1
-  ttlSecondsAfterFinished: 60
+  ttlSecondsAfterFinished: 3600 # cleanup job an hour after it completes
 
 services:
   redis:
@@ -38,7 +38,7 @@ services:
     enabled: false
     username:
     password:
-    runJobInstallS3: false # seed the minio buckets, runs a one-time job
+    runSetupS3Job: false # seed the minio buckets, runs a one-time job
 
 # These should match the docker image's USERNAME, UID and GID args
 #

@@ -127,15 +127,35 @@ profiles:
         value:
           enabled: true
           name: setup-db
-          args: ["cd dashboard && rake dashboard:setup-db"]
+          args: ["cd dashboard && rake dashboard:setup_db"]
+
+- name: setup-s3
+  patches:
+      - op: add
+        path: /deploy/helm/releases/0/setValueTemplates/services.minio.runSetupS3Job
+        value: true
 
 portForward:
 - resourceType: Service
   resourceName: code-dot-org-dashboard
-  port: 3000
+  port: http
+  localPort: 3000
+- resourceType: Service
+  resourceName: code-dot-org-dashboard
+  port: http-hmr
+  localPort: 9000
 - resourceType: Service
   resourceName: code-dot-org-mysql
-  port: 3306
+  port: mysql
+  localPort: 16379
 - resourceType: Service
   resourceName: code-dot-org-redis
-  port: 6379
+  port: redis
+- resourceType: service
+  resourceName: code-dot-org-minio
+  port: api
+  localPort: 19000
+- resourceType: service
+  resourceName: code-dot-org-minio
+  port: console
+  localPort: 19001

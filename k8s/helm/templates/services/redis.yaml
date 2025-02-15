@@ -11,7 +11,8 @@ spec:
   selector:
     {{ include "cdo.selectorLabels" (merge (dict "component" "redis") .) | nindent 4 }}
   ports:
-    - protocol: TCP
+    - name: redis
+      protocol: TCP
       port: 6379
 ---
 apiVersion: v1
