@@ -2,7 +2,6 @@
 
 require 'optparse'
 require 'parallel'
-# require 'aws-sdk-s3'
 require 'json'
 require 'fileutils'
 
@@ -38,6 +37,8 @@ require_relative '../../deployment'
 start_time = Time.now
 puts "Loading Rails environment..."
 require_relative '../../dashboard/config/environment'
+# load secret before parallelizing to reduce debug spew
+CDO.channels_api_secret
 puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 
 def list_s3_files(bucket, prefix)
@@ -48,30 +49,59 @@ def list_s3_files(bucket, prefix)
   keys
 end
 
+$max_processes = 25
+
 def process_s3_file(bucket, key)
-  puts "Processing s3 file: #{key} basename: #{File.basename(key)}"
+  puts "Downloading s3://#{bucket}/#{key}"
+  start_time = Time.now
+  s3 = Aws::S3::Client.new
+  response = s3.get_object(bucket: bucket, key: key)
+  rows = response.body.string.each_line.to_a
+  puts "Downloaded #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
+
+  puts "Processing #{File.basename(key)} in parallel with #{$max_processes} processes"
+  start_time = Time.now
   output_filename = File.join($output_dir, File.basename(key))
   File.open(output_filename, 'w') do |file|
-    s3 = Aws::S3::Client.new
-    s3.get_object(bucket: bucket, key: key) do |row|
-      file.write(row)
+    Parallel.each(rows, in_processes: $max_processes) do |row|
+      data = JSON.parse(row)
+      channel_id = data['channel_id']
+      source = get_project_source(channel_id)
+      data['source'] = source
+
+      # rows may be written out of order, but each row must be intact.
+      file.flock(File::LOCK_EX)
+      file.puts data.to_json
+      file.flock(File::LOCK_UN)
+    rescue JSON::ParserError => exception
+      puts "Error parsing JSON: #{exception}"
     end
   end
+  puts "Processed #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
+end
+
+def get_project_source(channel_id)
+  return nil unless channel_id
+
+  source_data = SourceBucket.new.get(channel_id, "main.json")
+  return nil unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
+
+  main_json = source_data[:body].string
+  JSON.parse(main_json)['source']
+rescue NoMethodError => exception
+  puts "Error getting source for channel id: #{channel_id}: #{exception}"
+  nil
 end
 
 def main
-  puts "Processing source..."
   start_time = Time.now
-
-  # list all files in the input directory in s3
   keys = list_s3_files('cdo-data-sharing-internal', "stanford/unload/#{$options[:input_dir]}/")
+  puts "Found #{keys.size} files in s3://cdo-data-sharing-internal/stanford/unload/#{$options[:input_dir]}/"
 
-  # process each file
   keys.each do |key|
     process_s3_file('cdo-data-sharing-internal', key)
   end
 
-  # puts "Processed source in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count} processes: #{$max_processes}"
   puts "Processed source in #{(Time.now - start_time).round(2)} seconds."
 end
 
