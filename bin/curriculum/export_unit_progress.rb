@@ -56,8 +56,6 @@ puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 $comprehend = Aws::Comprehend::Client.new
 $pii_threshold = 0.7
 
-$max_processes = 25
-
 def fetch_progress(simple:, unit_id:, level_id:, limit:, offset:)
   if Rails.env.production?
     # fetch the data from redshift in production, because it relies on an unindexed query on
@@ -99,19 +97,6 @@ def execute_redshift_query(client, query)
 rescue => exception
   puts "Error executing Redshift query: #{exception.message}\n#{exception.backtrace.join("\n")}"
   raise
-end
-
-def get_project_source(channel_id)
-  return nil unless channel_id
-
-  source_data = SourceBucket.new.get(channel_id, "main.json")
-  return nil unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
-
-  main_json = source_data[:body].string
-  JSON.parse(main_json)['source']
-rescue NoMethodError => exception
-  puts "Error getting source for channel id: #{channel_id}: #{exception}"
-  nil
 end
 
 def process_row_pii(row)
@@ -194,44 +179,13 @@ def main
   limit = $options[:limit].presence
   offset = $options[:offset].presence
 
-  output_filename = [
-    Time.now.strftime("%Y%m%d-%H%M%S"),
-    (simple ? "simple" : "full"),
-    "unit-#{unit_name}",
-    ("level-#{level_id}" if level_id),
-    ("limit-#{limit}" if limit),
-    ("offset-#{offset}" if offset),
-  ].compact.join('-') +
-    '-unfiltered' \
-    '.jsonl'
-
-  results = fetch_progress(
+  fetch_progress(
     simple: simple,
     unit_id: unit_id,
     level_id: level_id,
     limit: limit,
     offset: offset,
   )
-
-  puts "Processing source..."
-  start_time = Time.now
-
-  File.open(output_filename, 'w') do |file|
-    # parallelize network requests to projects API and AWS Comprehend
-    Parallel.each(results, in_processes: $max_processes) do |row|
-      row[:source] = get_project_source(row['channel_id'])
-
-      row[:hashed_user_id] = hashed_user_id(row['user_id'])
-      row.delete('user_id')
-
-      file.flock(File::LOCK_EX)
-      file.puts $options[:pretty] ? JSON.pretty_generate(row) : row.to_json
-      file.flock(File::LOCK_UN)
-    rescue => exception
-      puts "Error processing source for channel #{row && row[:channel_id]}: #{exception.message}"
-    end
-  end
-  puts "Processed source in #{(Time.now - start_time).round(2)} seconds. rows: #{results.count} processes: #{$max_processes}"
 end
 
 main
