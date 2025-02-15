@@ -1,8 +1,14 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, {useCallback} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
+import {
+  MultiFileSource,
+  ProjectFile,
+  // ProjectSources,
+} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -17,6 +23,13 @@ interface AITutorFooterProps {
   renderAITutor: boolean;
 }
 
+// Helper function to extract active file contents from a MultiFileSource
+const getActiveFileContents = (multiFileSource: MultiFileSource): string => {
+  const filesArray: ProjectFile[] = Object.values(multiFileSource.files);
+  const activeFile = filesArray.find(file => file.active);
+  return activeFile ? activeFile.contents : '';
+};
+
 const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
@@ -24,14 +37,30 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
 
   const level = useAppSelector(state => state.aiTutor.level);
 
-  const sources = useAppSelector(state => state.javalabEditor.sources);
+  // For Pythonlab, these selectors will be used and we are guaranteed that source is a MultiFileSource
+  const pythonLabSource = useAppSelector(
+    state => state.lab2Project?.projectSources?.source
+  ) as MultiFileSource | undefined;
+
+  // For JavaLab
+  const javaLabSources = useAppSelector(state => state.javalabEditor.sources);
   const fileMetadata = useAppSelector(
     state => state.javalabEditor.fileMetadata
   );
   const activeTabKey = useAppSelector(
     state => state.javalabEditor.activeTabKey
   );
-  const studentCode = sources[fileMetadata[activeTabKey]].text;
+
+  // Compute studentCode based on the lab type
+  let studentCode: string = '';
+  if (level?.type === 'Pythonlab') {
+    // TODO: For PythonLab, we are only considering the active file contents,
+    // but this seems to get us parity with JavaLab. We may need to revisit this.
+    studentCode = pythonLabSource ? getActiveFileContents(pythonLabSource) : '';
+  } else {
+    // Here, we assume that javaLabSources and fileMetadata are always defined
+    studentCode = javaLabSources[fileMetadata[activeTabKey]].text;
+  }
 
   const dispatch = useAppDispatch();
 
