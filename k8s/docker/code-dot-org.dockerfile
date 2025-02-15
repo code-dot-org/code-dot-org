@@ -177,10 +177,11 @@ RUN <<EOF
   # will be running a live version of the apps/ build rather than having
   # it served off disk (so why wait for a very slow `yarn build step`).
   #
-  # Besides the app build, it would be great to optimize this step so that
-  # its run earlier, with a smaller subset of source files, that actually require
-  # re-running `rake build`, but for now, we just run it.
-  rake build
+  # Having done a diff, it seems that the build output between RAILS_ENV=development
+  # and being unset is basically non-existent, but if we dont set RAILS_ENV=development
+  # then `rake build` will do weird stuff like trying to restart the dashboard-server,
+  # and possibly accidentally start it in the process?
+  RAILS_ENV=development rake build
   rm locals.yml
 EOF
 
