@@ -172,6 +172,16 @@ RUN <<EOF
   # we pre-optimized this step earlier to install 3rd party packages.
   # Now we just need to build our in-house python packages.
   uv sync --frozen --quiet
+
+  # This is a very slow step, particularly in cases where the server
+  # will be running a live version of the apps/ build rather than having
+  # it served off disk (so why wait for a very slow `yarn build step`).
+  #
+  # Besides the app build, it would be great to optimize this step so that
+  # its run earlier, with a smaller subset of source files, that actually require
+  # re-running `rake build`, but for now, we just run it.
+  rake build
+  rm locals.yml
 EOF
 
 ENTRYPOINT [ "/usr/bin/zsh" ]

@@ -19,7 +19,7 @@ skip_seed_all: true
 # If this is not set to true, it will attempt to download an apps package build
 # from S3 for the current file checksums, which will probably fail unless all
 # files match staging.
-use_my_apps: false
+use_my_apps: true
 
 # If daemon is true (default in dev), then `rake build` will attempt
 # to run DB migrations, but we are running without a DB during docker build.
