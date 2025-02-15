@@ -44,6 +44,8 @@ puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 $comprehend = Aws::Comprehend::Client.new
 $pii_threshold = 0.7
 
+$max_processes = 25
+
 def main
   puts "Filtering PII..."
   start_time = Time.now
@@ -61,12 +63,13 @@ def process_file(input_filename)
   rows = File.read(input_filename).split("\n")
   output_filename = File.join($output_dir, File.basename(input_filename))
   File.open(output_filename, 'w') do |file|
-    # Parallel.each(rows, in_processes: $max_processes) do |row|
-    #   comprehend = Aws::Comprehend::Client.new
-    rows.each do |row|
+    Parallel.each(rows, in_processes: $max_processes) do |row|
       row = JSON.parse(row, symbolize_names: true)
       process_row_pii(row)
+
+      file.flock(File::LOCK_EX)
       file.puts($options[:pretty] ? JSON.pretty_generate(row) : row.to_json)
+      file.flock(File::LOCK_UN)
     end
   end
   puts "Processed #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
