@@ -354,12 +354,16 @@ export default function SectionsSetUpContainer({
     );
   };
 
+  // TODO: this will probably eventually be a setting on the course similar to textToSpeechEnabled
+  // currently we're working towards piloting in Javalab in CSA only.
+  const aiTutorAllowedForCourse = section =>
+    ['Data Science *', 'Computer Science A'].includes(
+      section?.course?.displayName
+    );
+
   const renderAdvancedSettings = () => {
-    // TODO: this will probably eventually be a setting on the course similar to textToSpeechEnabled
-    // currently we're working towards piloting in Javalab in CSA only.
     const aiTutorAvailable =
-      canEnableAITutor &&
-      sections[0].course.displayName === 'Computer Science A';
+      canEnableAITutor && aiTutorAllowedForCourse(sections[0]);
 
     return renderExpandableSection(
       'uitest-expandable-settings',
