@@ -8,6 +8,7 @@ import {
   openMoveFolderPrompt as globalOpenMoveFolderPrompt,
   openRenameFilePrompt as globalOpenRenameFilePrompt,
   openRenameFolderPrompt as globalOpenRenameFolderPrompt,
+  openBackpackPrompt as globalopenBackpackPrompt,
 } from '@codebridge/FileBrowser/prompts';
 import {sendCodebridgeAnalyticsEvent as globalSendCodebridgeAnalyticsEvent} from '@codebridge/utils';
 import {useCallback, useMemo} from 'react';
@@ -29,6 +30,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
  *   - **openNewFolderPrompt:** Opens a prompt for creating a new folder within the source.
  *   - **openRenameFilePrompt:** Opens a prompt for renaming a file within the source.
  *   - **openRenameFolderPrompt:** Opens a prompt for renaming a folder within the source.
+ *   - **openBackpackPrompt:** Opens a prompt for importing file(s) from the user's backpack.
  */
 export const usePrompts = () => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
@@ -128,6 +130,11 @@ export const usePrompts = () => {
     sendCodebridgeAnalyticsEvent,
   } satisfies PAFunctionArgs<typeof globalOpenRenameFolderPrompt>);
 
+  const openBackpackPrompt = usePartialApply(globalopenBackpackPrompt, {
+    newFile,
+    dialogControl,
+  } satisfies PAFunctionArgs<typeof globalopenBackpackPrompt>);
+
   return useMemo(
     () => ({
       openConfirmDeleteFile,
@@ -138,6 +145,7 @@ export const usePrompts = () => {
       openMoveFolderPrompt,
       openRenameFilePrompt,
       openRenameFolderPrompt,
+      openBackpackPrompt,
     }),
     [
       openConfirmDeleteFile,
@@ -148,6 +156,7 @@ export const usePrompts = () => {
       openMoveFolderPrompt,
       openRenameFilePrompt,
       openRenameFolderPrompt,
+      openBackpackPrompt,
     ]
   );
 };

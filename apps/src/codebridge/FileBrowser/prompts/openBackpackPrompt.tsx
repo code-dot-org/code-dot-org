@@ -1,0 +1,79 @@
+// import codebridgeI18n from '@cdo/apps/codebridge/locale';
+// import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {NewFileFunction} from '@codebridge/codebridgeContext/types';
+
+import {
+  DialogType,
+  DialogControlInterface,
+  extractUserInput,
+} from '@cdo/apps/lab2/views/dialogs';
+import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
+import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+// import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+
+type OpenBackpackPromptArgsType = {
+  dialogControl: Pick<DialogControlInterface, 'showDialog'>;
+  backpackApi: BackpackContextType;
+  newFile: NewFileFunction;
+};
+
+export const openBackpackPrompt = async ({
+  dialogControl,
+  backpackApi,
+  newFile,
+}: OpenBackpackPromptArgsType) => {
+  backpackApi.getFileList(
+    () => {
+      console.log('onError');
+    },
+    async (filenames: string[]) => {
+      console.log('filenames', filenames);
+      const savedFilesInBackpack: GenericDropdownProps['items'] = filenames.map(
+        filename => ({value: filename, text: filename})
+      );
+      const results = await dialogControl?.showDialog({
+        type: DialogType.GenericDropdown,
+        title: 'Import file from backpack',
+        dropdownLabel: '',
+        items: savedFilesInBackpack,
+        selectedValue: savedFilesInBackpack[0].value,
+      });
+
+      if (results.type !== 'confirm') {
+        return;
+      }
+      if (results.type !== 'confirm') {
+        return;
+      }
+      console.log('results', results);
+      const selectedBackpackFileName = extractUserInput(results);
+      console.log('selectedBackpackFileName', selectedBackpackFileName);
+      backpackApi.fetchFile(
+        selectedBackpackFileName,
+        () => {
+          console.log('onError');
+        },
+        (fileContent: string) => {
+          console.log('fileContent', fileContent);
+          newFile({
+            fileName: selectedBackpackFileName,
+            contents: fileContent,
+          });
+        }
+      );
+    }
+  );
+};
+
+//   backpackApi.fetchFile(
+//     'main.py',
+//     () => {
+//       console.log('onError');
+//     },
+//     (fileContent: unknown) => {
+//       console.log('fileContent', fileContent);
+//     }
+//   );
+// };
+
+//   sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_OPEN_BACKPACK);

@@ -15,7 +15,8 @@ import {
 } from './hooks';
 
 export const FileBrowserHeaderPopUpButton = () => {
-  const {openNewFilePrompt, openNewFolderPrompt} = usePrompts();
+  const {openNewFilePrompt, openNewFolderPrompt, openBackpackPrompt} =
+    usePrompts();
   const {
     source,
     config: {validMimeTypes},
@@ -30,26 +31,6 @@ export const FileBrowserHeaderPopUpButton = () => {
   });
 
   const backpackApi = useBackpackAPIContext();
-  const startImportFromBackpack = () => {
-    console.log('import from backpack');
-    backpackApi.getFileList(
-      () => {
-        console.log('onError');
-      },
-      (filenames: unknown) => {
-        console.log('filenames', filenames);
-      }
-    );
-    backpackApi.fetchFile(
-      'main.py',
-      () => {
-        console.log('onError');
-      },
-      (fileContent: unknown) => {
-        console.log('fileContent', fileContent);
-      }
-    );
-  };
   return (
     <>
       <FileUploaderComponent />
@@ -77,7 +58,7 @@ export const FileBrowserHeaderPopUpButton = () => {
         <PopUpButtonOption
           iconName="backpack"
           labelText="Import from backpack"
-          clickHandler={() => startImportFromBackpack()}
+          clickHandler={() => openBackpackPrompt({backpackApi: backpackApi})}
         />
       </PopUpButton>
     </>

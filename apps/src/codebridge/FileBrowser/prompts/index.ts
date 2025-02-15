@@ -6,3 +6,4 @@ export * from './openNewFilePrompt';
 export * from './openNewFolderPrompt';
 export * from './openRenameFilePrompt';
 export * from './openRenameFolderPrompt';
+export * from './openBackpackPrompt';

@@ -46,18 +46,29 @@ export default class BackpackClientApi {
   }
 
   getFileList(onError, onSuccess) {
-    if (!this.hasBackpack()) {
+    if (!this.hasBackpack() && this.appType === 'javalab') {
       onError();
     }
-    this.backpackApi.fetch(this.channelId, (error, data) => {
-      if (error) {
-        onError(error);
-      } else {
-        const filenames = [];
-        data.forEach(fileData => filenames.push(fileData['filename']));
+    const fetchFiles = () => {
+      this.backpackApi.fetch(this.channelId, (error, data) => {
+        if (error) {
+          onError(error);
+          return;
+        }
+        const filenames = data.map(fileData => fileData.filename);
         onSuccess(filenames);
-      }
-    });
+      });
+    };
+
+    // Only fetch channel id if we don't yet have it.
+    if (!this.channelId) {
+      this.fetchChannelId(() => {
+        console.log('Fetched channel id:', this.channelId);
+        fetchFiles();
+      });
+    } else {
+      fetchFiles();
+    }
   }
 
   /**
