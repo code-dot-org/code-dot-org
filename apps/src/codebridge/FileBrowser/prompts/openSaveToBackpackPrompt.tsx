@@ -29,8 +29,9 @@ export const openSaveToBackpackPrompt = async ({
       );
       console.log('savedFilesInBackpack', savedFilesInBackpack);
       const results = await dialogControl?.showDialog({
-        type: DialogType.GenericPrompt,
+        type: DialogType.GenericConfirmation,
         title: 'Save to backpack',
+        message: `You are about to save ${file.name} to your backpack`,
       });
 
       if (results.type !== 'confirm') {

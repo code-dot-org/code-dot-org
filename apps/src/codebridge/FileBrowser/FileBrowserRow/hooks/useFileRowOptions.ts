@@ -51,8 +51,12 @@ export const useFileRowOptions = (
 
   const backpackApi = useBackpackAPIContext();
 
-  const {openConfirmDeleteFile, openMoveFilePrompt, openRenameFilePrompt} =
-    usePrompts();
+  const {
+    openConfirmDeleteFile,
+    openMoveFilePrompt,
+    openRenameFilePrompt,
+    openSaveToBackpackPrompt,
+  } = usePrompts();
 
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -60,17 +64,6 @@ export const useFileRowOptions = (
   const isLocked = !isStartMode && file.type === ProjectFileType.LOCKED_STARTER;
 
   const dropdownOptions = useMemo(() => {
-    const handleSaveToBackpack = () => {
-      const fileContents = {
-        name: file.name,
-        contents: file.contents,
-        folderId: '0',
-        language: 'py',
-        open: true,
-        active: false,
-      };
-      backpackApi.savePythonlabFile(file.name, fileContents);
-    };
     return [
       {
         condition:
@@ -110,7 +103,7 @@ export const useFileRowOptions = (
         condition: true,
         iconName: 'backpack',
         labelText: 'Save to backpack',
-        clickHandler: () => handleSaveToBackpack(),
+        clickHandler: () => openSaveToBackpackPrompt({file, backpackApi}),
       },
     ];
   }, [
@@ -123,6 +116,7 @@ export const useFileRowOptions = (
     openConfirmDeleteFile,
     openMoveFilePrompt,
     openRenameFilePrompt,
+    openSaveToBackpackPrompt,
     projectFiles,
     projectFolders,
   ]);
