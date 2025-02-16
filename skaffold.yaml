@@ -216,11 +216,11 @@ portForward:
 - resourceType: Service
   resourceName: cdo-dashboard
   port: http
-  localPort: 3000
+  localPort: 13000
 - resourceType: Service
   resourceName: cdo-dashboard
   port: http-hmr
-  localPort: 9000
+  localPort: 19000
 - resourceType: Service
   resourceName: cdo-mysql
   port: mysql
@@ -231,8 +231,8 @@ portForward:
 - resourceType: service
   resourceName: cdo-minio
   port: api
-  localPort: 19000
+  localPort: 29000
 - resourceType: service
   resourceName: cdo-minio
   port: console
-  localPort: 19001
+  localPort: 29001

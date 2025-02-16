@@ -36,7 +36,7 @@ NOTE: this command **will not exit automatically** when complete, and will take 
 When you see the output: `[setup-db] setup-db COMPLETE`, press Ctrl-C to exit,
 and move on to the [next step](#run-dashboard). 
 
-Alternatively, you can try dashboard before you ctrl-c: http://localhost-studio.code.org:3000
+Alternatively, you can try dashboard before you ctrl-c: http://localhost-studio.code.org:13000
 
 <details>
   <summary>What is it doing?</summary>
@@ -54,7 +54,7 @@ Once setup is done, the command to start dashboard is:
 `skaffold dev`
 ```
 
-Then open: http://localhost-studio.code.org:3000
+Then open: http://localhost-studio.code.org:13000
 
 <details>
   <summary>Why does it take 3+ minutes to start `skaffold dev`?</summary>
