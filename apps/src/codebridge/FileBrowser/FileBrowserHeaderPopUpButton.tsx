@@ -15,7 +15,7 @@ import {
 } from './hooks';
 
 export const FileBrowserHeaderPopUpButton = () => {
-  const {openNewFilePrompt, openNewFolderPrompt, openBackpackPrompt} =
+  const {openNewFilePrompt, openNewFolderPrompt, openImportFromBackpackPrompt} =
     usePrompts();
   const {
     source,
@@ -58,7 +58,9 @@ export const FileBrowserHeaderPopUpButton = () => {
         <PopUpButtonOption
           iconName="backpack"
           labelText="Import from backpack"
-          clickHandler={() => openBackpackPrompt({backpackApi: backpackApi})}
+          clickHandler={() =>
+            openImportFromBackpackPrompt({backpackApi: backpackApi})
+          }
         />
       </PopUpButton>
     </>

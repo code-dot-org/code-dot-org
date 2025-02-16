@@ -11,17 +11,17 @@ import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 // import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
-type OpenBackpackPromptArgsType = {
+type OpenImportFromBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   backpackApi: BackpackContextType;
   newFile: NewFileFunction;
 };
 
-export const openBackpackPrompt = async ({
+export const openImportFromBackpackPrompt = async ({
   dialogControl,
   backpackApi,
   newFile,
-}: OpenBackpackPromptArgsType) => {
+}: OpenImportFromBackpackPromptArgsType) => {
   backpackApi.getFileList(
     () => {
       console.log('onError');
@@ -39,9 +39,6 @@ export const openBackpackPrompt = async ({
         selectedValue: savedFilesInBackpack[0].value,
       });
 
-      if (results.type !== 'confirm') {
-        return;
-      }
       if (results.type !== 'confirm') {
         return;
       }
