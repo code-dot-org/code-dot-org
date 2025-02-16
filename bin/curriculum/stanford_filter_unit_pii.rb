@@ -60,19 +60,30 @@ end
 def process_file(input_filename)
   puts "Processing #{input_filename}"
   start_time = Time.now
-  rows = File.read(input_filename).split("\n")
+  lines = File.read(input_filename).split("\n")
   output_filename = File.join($output_dir, File.basename(input_filename))
   File.open(output_filename, 'w') do |file|
-    Parallel.each(rows, in_processes: $max_processes) do |row|
-      row = JSON.parse(row, symbolize_names: true)
+    Parallel.each(lines, in_processes: $max_processes) do |line|
+      next if line.blank?
+
+      # parallel processing in the previous step may have put multiple rows in a single line.
+      # skip these rather than dumping them as undiagnosed json errors.
+      if line.include?('}{"user_level_id"')
+        puts "Skipping line containing multiple rows"
+        next
+      end
+
+      row = JSON.parse(line, symbolize_names: true)
       process_row_pii(row)
 
       file.flock(File::LOCK_EX)
       file.puts($options[:pretty] ? JSON.pretty_generate(row) : row.to_json)
       file.flock(File::LOCK_UN)
+    rescue JSON::ParserError => exception
+      puts "Error parsing JSON: #{exception.message}"
     end
   end
-  puts "Processed #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
+  puts "Processed #{lines.size} rows in #{(Time.now - start_time).round(2)} seconds."
 end
 
 def process_row_pii(row)
