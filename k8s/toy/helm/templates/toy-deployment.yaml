@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  labels:
+    app: {{ .Release.Name }}-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-deployment
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-deployment
+    spec:
+      containers:
+        - name: {{ .Release.Name }}-deployment
+          image: {{ .Values.image }}
+          command: {{ .Values.command | toJson }}
+          args: {{ .Values.args | toJson }}
+          ports:
+            - containerPort: 3000

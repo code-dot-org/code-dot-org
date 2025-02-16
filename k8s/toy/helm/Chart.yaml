@@ -1,0 +1,7 @@
+apiVersion: v2
+name: toy
+description: toy chart
+type: application
+
+# Chart version, increment when changing helm templates, follow semver
+version: 0.1.0

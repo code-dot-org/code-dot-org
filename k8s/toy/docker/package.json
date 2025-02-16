@@ -1,0 +1,8 @@
+{
+  "name": "toy",
+  "scripts": {
+    "start": "npx http-server"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

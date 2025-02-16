@@ -1,0 +1,21 @@
+{{- if .Values.job.enabled }}
+{{- $uniqueJobID := randAlphaNum 4 | lower }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ .Release.Name }}-job-{{ .Values.job.name }}-{{ $uniqueJobID }}
+  labels:
+    app: {{ .Release.Name }}-job-{{ .Values.job.name }}-{{ $uniqueJobID }}
+spec:
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-job-{{ .Values.job.name }}-{{ $uniqueJobID }}
+    spec:
+      containers:
+        - name: {{ .Release.Name }}-job-{{ .Values.job.name }}-{{ $uniqueJobID }}
+          image: {{ .Values.image }}
+          command: {{ .Values.job.command | toJson }}
+          args: {{ .Values.job.args | toJson }}
+      restartPolicy: Never
+{{- end }}
