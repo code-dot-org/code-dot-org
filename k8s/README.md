@@ -36,15 +36,15 @@ NOTE: this command **will not exit automatically** when complete, and will take 
 When you see the output: `[setup-db] setup-db COMPLETE`, press Ctrl-C to exit,
 and move on to the [next step](#run-dashboard). 
 
-Alternatively, you can try dashboard before moving on: http://localhost-studio.code.org:3000
+Alternatively, you can try dashboard before you ctrl-c: http://localhost-studio.code.org:3000
 
 <details>
   <summary>What is it doing?</summary>
 Your first skaffold run will:
-  1. Build the docker images (~5-15 minutes)
+  1. Build the docker images (20 minutes on an M2)
   1. Then it will run K8S jobs:
-     1. setup-db: runs `rake dasboard:setup_db` to seed your DB
-     1. setup-s3: create s3 buckets in minio
+     1. setup-db: runs `rake dasboard:setup_db` to seed your DB (25 minutes on an M2)
+     1. setup-s3: create s3 buckets in minio (16 seconds on an M2)
 </details>
 
 ### Run dashboard
@@ -55,6 +55,13 @@ Once setup is done, the command to start dashboard is:
 ```
 
 Then open: http://localhost-studio.code.org:3000
+
+<details>
+  <summary>Why does it take 3+ minutes to start `skaffold dev`?</summary>
+
+  Our giant repo size takes that long for docker+skaffold to checksum to make sure no files changed.
+  If this is affecting development of docker+k8s features, check out the mimic feature below.
+</details>
 
 ## Debugging and monitoring dashboard
 
