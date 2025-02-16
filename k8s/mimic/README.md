@@ -11,11 +11,8 @@ and symlinks.
 ## Using Mimic
 
 To run a mimic, from the repo root:
-1. Build the mimic context: `./k8s/mimic/bin/update-cdo-no-symlinks.sh`
-2. Run whatever skaffold command you want, but add `-p mimic`:
-```
-skaffold dev -p mimic`
-```
+1. Build the mimic context: `skaffold build -p mimic --cache-artifacts=false`
+2. Run: `skaffold dev -p mimic`
 
 This will build and run the same k8s charts, but MUCH faster. Instead of our
 real application, the resulting services will use stubbed out applications.
@@ -51,17 +48,18 @@ mkdir -p newjs
 cd newjs
 ln -s ../../../../newjs/package.json
 ```
-2. Finally, run: `k8s/mimic/bin/update-cdo-no-symlinks.sh`
+2. Finally, to the update cdo-no-symlinks dir, run: `skaffold build -p mimic --cache-artifacts=false`
 
 Now `skaffold dev -p mimic` should work again.
 
 ## The cdo-no-symlinks directory
 
 - used as the docker context (='base filesystem) for the mimic
-- auto-created by `k8s/mimic/bin/update-cdo-no-symlinks.sh`
-- not stored in git
-- can be delted at any time
 - a symlink-free copy of k8s/mimic/code-dot-org, which contains symlinks to "real files" referenced in .dockerfiles
+- auto-created by `./bin/update-cdo-no-symlinks.sh`
+  - which is invoked by `skaffold build -p mimic --cache-artifacts=false`
+- can be deleted at any time
+- See `./bin/update-cdo-no-symlinks.sh` for details
 
 ## Common Errors
 

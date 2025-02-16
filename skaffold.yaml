@@ -139,7 +139,7 @@ profiles:
 # fast iterative development of our k8s docker files and helm charts.
 #
 # To use:
-# 1. Run: k8s/mimic/bin/create-cdo-no-symlinks.sh
+# 1. First-time: skaffold dev -p mimic --cache-artifacts=false
 # 2. Run: skaffold dev -p mimic
 #
 # For details, see: ./k8s/mimic/README.md
