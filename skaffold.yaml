@@ -104,6 +104,7 @@ profiles:
 - name: development
   activation:
     - command: dev
+    - command: debug
     - kubeContext: docker-desktop
   patches:
     - op: add
@@ -127,7 +128,7 @@ profiles:
         value:
           enabled: true
           name: setup-db
-          args: ["cd dashboard && rake dashboard:setup_db"]
+          args: ["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]
 
 - name: setup-s3
   patches:
