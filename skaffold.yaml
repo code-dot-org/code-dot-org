@@ -20,7 +20,7 @@ build:
         - '**/*.json'
     custom:
       buildCommand: |
-        k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org.dockerfile \
+        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
           --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
           --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
@@ -43,7 +43,7 @@ build:
       # https://github.com/GoogleContainerTools/skaffold/issues/2479
       # If we find a solution, we can drop this override:
       buildCommand: |
-        k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-core.dockerfile \
+        k8s/bin/docker-buildx -f k8s/docker/code-dot-org-core.dockerfile \
           --build-arg USERNAME=root \
           --build-arg UID=0 \
           --build-arg GID=0
@@ -52,19 +52,19 @@ build:
           path: k8s/docker/code-dot-org-core.dockerfile
   - image: code-dot-org-pegasus
     custom:
-      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-pegasus.dockerfile
+      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-pegasus.dockerfile
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-pegasus.dockerfile
   - image: code-dot-org-static
     custom:
-      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-static.dockerfile
+      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-static.dockerfile
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-static.dockerfile
   - image: code-dot-org-db-seed
     custom:
-      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-db-seed.dockerfile
+      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-db-seed.dockerfile
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-db-seed.dockerfile
