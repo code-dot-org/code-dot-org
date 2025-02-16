@@ -34,7 +34,7 @@ spec:
         {{ .labels | nindent 8 }}
     spec:
       containers:
-      - name: dashboard
+      - name: {{ .shortName | default "dashboard" }}
         image: "{{ .Values.image }}"
 
         command: {{ (.command | default .Values.command) | toJson }}

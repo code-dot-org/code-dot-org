@@ -19,19 +19,32 @@ We're currently configured to use docker-desktop to run kubernetes, but you coul
 1. On mac, enable containerd: https://docs.docker.com/desktop/containerd/#enable-the-containerd-image-store
 1. You'll need to give Docker Desktop 100GB (haven't measured?) of disk space in Settings->Resources, than "Apply & Restart"
 
-Optional: you can run `skaffold build` to build the docker images, this will also happen automatically when you run other skaffold commands if needed.
+### Run dashboard, first time
 
-### Seed
+From code-dot-org/ run:
+```
+skaffold dev --auto-build=false --auto-deploy=false -p setup-db -p setup-s3
+```
 
-Before you run dashboard, you'll need to seed.
+This will take about 30 minutes:
+  1. Build the docker images (~5-10 minutes)
+  1. Start a code-dot-org-dashboard instance in k8s
+     1. as well as a mysql instance, redis instance, and minio (s3) instance
+  1. Seed your mysql DB `rake dasboard:setup_db` in a separate code-dot-org-dashboard-job-setup-db job
+  1. Create appropriate S3 buckets in minio in a separate job
 
-1. `skaffold dev -p seed`: this will build the docker images (slow!) and then run `rake install` (slow!)
+This command will not exit, but you will see output
 
-### Run dashboard
+
+### Run dashboard, after first time
 
 1. `skaffold dev`: this will rebuild anything that needs rebuilding, and start `bin/dashboard`
 2. You should be able to open dashboard: http://localhost-studio.code.org:3000
 3. When you ctrl-c skaffold dev, dashboard will stop and all k8s resources will be garbage collected (except mysql storage volumes)
+
+### Build docker images
+
+Optional: you can run `skaffold build` to build the docker images, this will also happen automatically when you run other skaffold commands, if needed.
 
 ### Other Commands
 

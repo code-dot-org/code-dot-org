@@ -3,7 +3,7 @@
 #
 # This is currently an experimental feature, see: k8s/experimental.yaml
 
-apiVersion: skaffold/v4beta11
+apiVersion: skaffold/v4beta12
 kind: Config
 build:
   artifacts:
@@ -144,8 +144,6 @@ profiles:
 #
 # For details, see: ./k8s/mimic/README.md
 - name: mimic
-  activation:
-    - env: PWD=.*
   patches:
     # Name the helm release 'mimic' instead of 'code-dot-org'
     - op: replace
