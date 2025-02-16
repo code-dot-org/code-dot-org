@@ -72,7 +72,7 @@ build:
 deploy:
   helm:
     releases:
-      - name: code-dot-org
+      - name: cdo
         chartPath: ./k8s/helm
         setValueTemplates:
           image: "{{.IMAGE_FULLY_QUALIFIED_code_dot_org}}"
@@ -213,25 +213,25 @@ profiles:
 
 portForward:
 - resourceType: Service
-  resourceName: code-dot-org-dashboard
+  resourceName: cdo-dashboard
   port: http
   localPort: 3000
 - resourceType: Service
-  resourceName: code-dot-org-dashboard
+  resourceName: cdo-dashboard
   port: http-hmr
   localPort: 9000
 - resourceType: Service
-  resourceName: code-dot-org-mysql
+  resourceName: cdo-mysql
   port: mysql
   localPort: 16379
 - resourceType: Service
-  resourceName: code-dot-org-redis
+  resourceName: cdo-redis
   port: redis
 - resourceType: service
-  resourceName: code-dot-org-minio
+  resourceName: cdo-minio
   port: api
   localPort: 19000
 - resourceType: service
-  resourceName: code-dot-org-minio
+  resourceName: cdo-minio
   port: console
   localPort: 19001

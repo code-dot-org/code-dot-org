@@ -126,4 +126,9 @@ spec:
       restartPolicy: {{ .restartPolicy | default "Never" }}
       {{- end }}
 
+      # k8s defaults to injecting lots of env vars like CDO_MYSQL_SERVICE_PORT_MYSQL.
+      # This is an archaic k8s feature, we don't use it, and dashboard special cases
+      # the CDO_* namespace for locals.yml type vars. Therefore, we disable it:
+      enableServiceLinks: false
+
 {{- end }}
