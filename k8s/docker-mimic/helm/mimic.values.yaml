@@ -1,9 +1,0 @@
-image: mimic:latest
-command: ["npx", "-y", "http-server", "-p", "3000"]
-args:
-
-job:
-  enabled: false
-  name: sh
-  command: ["sh", "-c"]
-  args: []

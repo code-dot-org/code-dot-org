@@ -135,6 +135,84 @@ profiles:
         path: /deploy/helm/releases/0/setValueTemplates/services.minio.runSetupS3Job
         value: true
 
+# Mimic allows us to run a light-weight stubbed version of our huge repo. Its great for
+# fast iterative development of our k8s docker files and helm charts.
+#
+# To use:
+# 1. Run: k8s/mimic/bin/create-cdo-no-symlinks.sh
+# 2. Run: skaffold dev -p mimic
+#
+# For details, see: ./k8s/mimic/README.md
+- name: mimic
+  activation:
+    - env: PWD=.*
+  patches:
+    # Name the helm release 'mimic' instead of 'code-dot-org'
+    - op: replace
+      path: /deploy/helm/releases/0/name
+      value: mimic
+    # Create the k8s/mimic/cdo-no-symlinks dir to serve as the build context for the
+    # mimic docker build. This is just a copy of k8s/mimic/code-dot-org, but symlinks
+    # have been replaced by copies of the real files, because docker doesn't follow
+    # symlinks outside its root build context.
+    - op: add
+      path: /build/hooks
+      value:
+        before:
+          - command: ["k8s/mimic/bin/update-cdo-no-symlinks.sh"]
+    # Artifact 0 (code-dot-org)
+    - op: add
+      path: /build/artifacts/0/context
+      value: k8s/mimic/cdo-no-symlinks
+    - op: replace
+      path: /build/artifacts/0/image
+      value: mimic
+    # Artifact 1 (code-dot-org-core)
+    - op: add
+      path: /build/artifacts/1/context
+      value: k8s/mimic/cdo-no-symlinks
+    - op: replace
+      path: /build/artifacts/1/image
+      value: mimic-core
+    # Artifact 2 (code-dot-org-pegasus)
+    - op: add
+      path: /build/artifacts/2/context
+      value: k8s/mimic/cdo-no-symlinks
+    - op: replace
+      path: /build/artifacts/2/image
+      value: mimic-pegasus
+    # Artifact 3 (code-dot-org-static)
+    - op: add
+      path: /build/artifacts/3/context
+      value: k8s/mimic/cdo-no-symlinks
+    - op: replace
+      path: /build/artifacts/3/image
+      value: mimic-static
+    # Artifact 4 (code-dot-org-db-seed)
+    - op: add
+      path: /build/artifacts/4/context
+      value: k8s/mimic/cdo-no-symlinks
+    - op: replace
+      path: /build/artifacts/4/image
+      value: mimic-db-seed
+    # Update required images in artifact 0
+    - op: replace
+      path: /build/artifacts/0/requires/0/image
+      value: mimic-core
+    - op: replace
+      path: /build/artifacts/0/requires/1/image
+      value: mimic-db-seed
+    - op: replace
+      path: /build/artifacts/0/requires/2/image
+      value: mimic-pegasus
+    - op: replace
+      path: /build/artifacts/0/requires/3/image
+      value: mimic-static
+    # Update the docker image passed to helm
+    - op: replace
+      path: /deploy/helm/releases/0/setValueTemplates/image
+      value: "{{.IMAGE_FULLY_QUALIFIED_mimic}}"
+
 portForward:
 - resourceType: Service
   resourceName: code-dot-org-dashboard

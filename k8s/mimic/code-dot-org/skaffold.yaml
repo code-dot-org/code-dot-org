@@ -1,0 +1,42 @@
+apiVersion: skaffold/v4beta11
+kind: Config
+metadata:
+  name: mimic
+requires:
+  - path: ../../skaffold.yaml
+profiles:
+  - name: mimic
+    patches:
+      - op: add
+        path: /build/artifacts/0/context
+        value: k8s/mimic
+      - op: replace
+        path: /build/artifacts/0/image
+        value: mimic
+      - op: add
+        path: /build/artifacts/1/context
+        value: k8s/mimic
+      - op: replace
+        path: /build/artifacts/1/image
+        value: mimic-core
+      - op: add
+        path: /build/artifacts/2/context
+        value: k8s/mimic
+      - op: replace
+        path: /build/artifacts/2/image
+        value: mimic-pegasus
+      - op: add
+        path: /build/artifacts/3/context
+        value: k8s/mimic
+      - op: replace
+        path: /build/artifacts/3/image
+        value: mimic-static
+      - op: add
+        path: /build/artifacts/4/context
+        value: k8s/mimic
+      - op: replace
+        path: /build/artifacts/4/image
+        value: mimic-db-seed
+    # Make the mimic profile ALWAYS active by saying "auto-active if $PWD exists, which it always does"
+    activation:
+      - env: PWD=.*

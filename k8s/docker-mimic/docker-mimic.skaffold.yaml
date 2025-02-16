@@ -17,22 +17,3 @@ build:
       dependencies:
         dockerfile:
           path: k8s/mimic/docker/mimic-base.dockerfile
-deploy:
-  helm:
-    releases:
-      - name: mimic
-        chartPath: ./k8s/mimic/helm
-        setValueTemplates:
-          image: "{{.IMAGE_FULLY_QUALIFIED_mimic}}"
-        valuesFiles:
-          - k8s/mimic/helm/mimic.values.yaml
-
-profiles:
-- name: run-job
-  patches:
-      - op: add
-        path: /deploy/helm/releases/0/setValueTemplates/job
-        value:
-          enabled: true
-          name: sleep
-          args: ["sleep 600"]
