@@ -78,6 +78,7 @@ def process_file(input_filename)
 
       file.flock(File::LOCK_EX)
       file.puts($options[:pretty] ? JSON.pretty_generate(row) : row.to_json)
+      file.flush
       file.flock(File::LOCK_UN)
     rescue JSON::ParserError => exception
       puts "Error parsing JSON: #{exception.message}"
