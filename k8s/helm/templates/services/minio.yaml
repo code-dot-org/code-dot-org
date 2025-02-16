@@ -139,6 +139,8 @@ spec:
                 aws s3api put-bucket-versioning --bucket ${bucket_name} --versioning-configuration Status=Enabled
               fi
             done
+
+            echo "setup-s3 COMPLETE"
         env:
         - name: AWS_ACCESS_KEY_ID
           value: "local-development"
