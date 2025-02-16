@@ -1,6 +1,6 @@
 apiVersion: v2
-name: toy
-description: toy chart
+name: mimic
+description: mimic chart
 type: application
 
 # Chart version, increment when changing helm templates, follow semver

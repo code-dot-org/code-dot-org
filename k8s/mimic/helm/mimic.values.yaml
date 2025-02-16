@@ -1,4 +1,4 @@
-image: toy:latest
+image: mimic:latest
 command: ["npx", "-y", "http-server", "-p", "3000"]
 args:
 

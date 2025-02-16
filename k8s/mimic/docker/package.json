@@ -1,5 +1,5 @@
 {
-  "name": "toy",
+  "name": "mimic",
   "scripts": {
     "start": "npx http-server"
   },
