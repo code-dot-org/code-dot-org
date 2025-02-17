@@ -33,10 +33,12 @@ export const openImportFromBackpackPrompt = async ({
       );
       const results = await dialogControl?.showDialog({
         type: DialogType.GenericDropdown,
-        title: 'Import file from backpack',
+        title: 'Files Saved in Backpack',
         dropdownLabel: '',
+        confirmText: 'Import',
         items: savedFilesInBackpack,
         selectedValue: savedFilesInBackpack[0].value,
+        neutralText: 'Delete file from backpack',
       });
 
       if (results.type !== 'confirm') {
