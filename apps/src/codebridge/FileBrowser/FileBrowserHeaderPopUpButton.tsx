@@ -6,6 +6,7 @@ import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import experiments from '@cdo/apps/util/experiments';
 
 import {
   useFileUploader,
@@ -54,14 +55,15 @@ export const FileBrowserHeaderPopUpButton = () => {
           labelText={codebridgeI18n.uploadFile()}
           clickHandler={() => startFileUpload()}
         />
-
-        <PopUpButtonOption
-          iconName="backpack"
-          labelText="Import from backpack"
-          clickHandler={() =>
-            openImportFromBackpackPrompt({backpackApi: backpackApi})
-          }
-        />
+        {experiments.isEnabled(experiments.PYTHONLAB_BACKPACK) && (
+          <PopUpButtonOption
+            iconName="backpack"
+            labelText="Import from backpack"
+            clickHandler={() =>
+              openImportFromBackpackPrompt({backpackApi: backpackApi})
+            }
+          />
+        )}
       </PopUpButton>
     </>
   );

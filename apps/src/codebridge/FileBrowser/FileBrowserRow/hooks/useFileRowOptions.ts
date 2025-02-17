@@ -14,6 +14,7 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
@@ -64,7 +65,7 @@ export const useFileRowOptions = (
   const isLocked = !isStartMode && file.type === ProjectFileType.LOCKED_STARTER;
 
   const dropdownOptions = useMemo(() => {
-    return [
+    const options = [
       {
         condition:
           !isLocked &&
@@ -99,13 +100,18 @@ export const useFileRowOptions = (
         labelText: codebridgeI18n.deleteFile(),
         clickHandler: () => openConfirmDeleteFile({file}),
       },
-      {
+    ];
+
+    // Conditionally add the "Save to backpack" option
+    if (experiments.isEnabled(experiments.PYTHONLAB_BACKPACK)) {
+      options.push({
         condition: true,
         iconName: 'backpack',
         labelText: 'Save to backpack',
         clickHandler: () => openSaveToBackpackPrompt({file, backpackApi}),
-      },
-    ];
+      });
+    }
+    return options;
   }, [
     appName,
     backpackApi,
@@ -120,6 +126,7 @@ export const useFileRowOptions = (
     projectFiles,
     projectFolders,
   ]);
+
   const startModeFileOptions = useStartModeFileRowOptions(
     file,
     hasValidationFile
