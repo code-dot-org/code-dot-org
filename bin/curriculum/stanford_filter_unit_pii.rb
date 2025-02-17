@@ -54,7 +54,7 @@ def main
   input_filenames.each do |input_filename|
     process_file(input_filename)
   rescue Parallel::DeadWorker => exception
-    puts "Error processing file: #{exception.message}"
+    puts "parallel error: #{exception.class}: #{exception.message}\n#{exception.backtrace.join("\n")}"
   end
   puts "Filtered PII in #{(Time.now - start_time).to_i} seconds."
 end
