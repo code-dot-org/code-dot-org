@@ -53,6 +53,8 @@ def main
   puts "Found #{input_filenames.size} input files in #{$input_dir}"
   input_filenames.each do |input_filename|
     process_file(input_filename)
+  rescue Parallel::DeadWorker => exception
+    puts "Error processing file: #{exception.message}"
   end
   puts "Filtered PII in #{(Time.now - start_time).to_i} seconds."
 end
