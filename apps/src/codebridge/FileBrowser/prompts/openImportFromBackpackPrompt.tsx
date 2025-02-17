@@ -41,25 +41,32 @@ export const openImportFromBackpackPrompt = async ({
         neutralText: 'Delete file from backpack',
       });
 
-      if (results.type !== 'confirm') {
+      if (results.type === 'cancel') {
         return;
       }
-      console.log('results', results);
-      const selectedBackpackFileName = extractUserInput(results);
-      console.log('selectedBackpackFileName', selectedBackpackFileName);
-      backpackApi.fetchFile(
-        selectedBackpackFileName,
-        () => {
-          console.log('onError');
-        },
-        (fileContent: string) => {
-          console.log('fileContent', fileContent);
-          newFile({
-            fileName: selectedBackpackFileName,
-            contents: fileContent,
-          });
-        }
-      );
+      const selectedBackpackFileName = extractUserInput(results, true);
+      if (results.type === 'confirm') {
+        backpackApi.fetchFile(
+          selectedBackpackFileName,
+          () => {
+            console.log('fetchFile - onError');
+          },
+          (fileContent: string) => {
+            console.log('fileContent', fileContent);
+            newFile({
+              fileName: selectedBackpackFileName,
+              contents: fileContent,
+            });
+          }
+        );
+      } else if (results.type === 'neutral') {
+        console.log('delete file from backpack');
+        backpackApi.deleteFiles(
+          [selectedBackpackFileName],
+          () => console.log('deleteFiles - onError'),
+          () => console.log(`deleted file ${selectedBackpackFileName}`)
+        );
+      }
     }
   );
 };
