@@ -55,8 +55,9 @@ export const openImportFromBackpackPrompt = async ({
               projectFiles,
               isStartMode: false,
               validationFile,
-              customErrorMessage:
-                'This backpack file has the same name as an existing file in the root folder of your project and will overwrite the existing file if you import.',
+              customErrorMessage: `This backpack file has the same name as an existing file in the root folder of your project so will be imported as ${
+                fileName.split('.')[0]
+              }_copy.py`,
             }),
         });
 
@@ -65,15 +66,26 @@ export const openImportFromBackpackPrompt = async ({
         }
         const selectedBackpackFileName = extractUserInput(results, true);
         if (results.type === 'confirm') {
+          const validationError = validateFileName({
+            fileName: selectedBackpackFileName,
+            folderId: DEFAULT_FOLDER_ID,
+            projectFiles,
+            isStartMode: false,
+            validationFile,
+          });
+          const selectedBackpackFileNameCopy = validationError
+            ? `${selectedBackpackFileName.split('.')[0]}_copy.py`
+            : undefined;
+
           backpackApi.fetchFile(
             selectedBackpackFileName,
             () => {
-              console.log('fetchFile - onError');
+              console.log('Error in fetching file.');
             },
             (fileContent: string) => {
-              console.log('fileContent', fileContent);
               newFile({
-                fileName: selectedBackpackFileName,
+                fileName:
+                  selectedBackpackFileNameCopy || selectedBackpackFileName,
                 contents: fileContent,
               });
             }
