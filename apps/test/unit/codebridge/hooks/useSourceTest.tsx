@@ -10,6 +10,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import lab2Project from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import lab2System from '@cdo/apps/lab2/redux/systemRedux';
+import {Channel} from '@cdo/apps/lab2/types';
 import {
   getStore,
   registerReducers,
@@ -27,6 +28,16 @@ import {mockAppOptions} from '../test_utils';
 
 const defaultSources = {
   source: smallProject,
+};
+
+const ownedChannel: Channel = {
+  id: '1',
+  name: '1',
+  isOwner: true,
+  projectType: 'pythonlab',
+  publishedAt: null,
+  createdAt: '',
+  updatedAt: '',
 };
 
 describe('useSource', () => {
@@ -47,6 +58,8 @@ describe('useSource', () => {
       save: projectSaveSpy,
     } as unknown as jest.Mocked<ProjectManager>;
     Lab2Registry.getInstance().setProjectManager(mockedProjectManager);
+    // Set up the channel so we are not in read only mode (isOwner = true)
+    store.dispatch(setChannel(ownedChannel));
   });
 
   afterEach(() => {
@@ -65,17 +78,6 @@ describe('useSource', () => {
   }
 
   it('set project saves to project manager in standard mode', () => {
-    store.dispatch(
-      setChannel({
-        id: '1',
-        name: '1',
-        isOwner: true,
-        projectType: 'pythonlab',
-        publishedAt: null,
-        createdAt: '',
-        updatedAt: '',
-      })
-    );
     const {setProject} = renderDefault();
     act(() => {
       setProject(smallProjectSources);
@@ -138,20 +140,31 @@ describe('useSource', () => {
   });
 
   it('updates source on level change', () => {
-    // TODO: this doesn't work
     store.dispatch(
-      onLevelChange({levelProperties: templateBackedLevelProperties})
+      onLevelChange({
+        levelProperties: templateBackedLevelProperties,
+        channel: ownedChannel,
+      })
     );
     renderDefault();
-    expect(mockedProjectManager.save).toHaveBeenCalledTimes(0);
-    store.dispatch(
-      onLevelChange({levelProperties: nonValidatedLevelProperties})
-    );
     expect(mockedProjectManager.save).toHaveBeenCalledTimes(1);
+    act(() => {
+      store.dispatch(
+        onLevelChange({
+          levelProperties: nonValidatedLevelProperties,
+          channel: ownedChannel,
+        })
+      );
+    });
+    expect(mockedProjectManager.save).toHaveBeenCalledTimes(2);
     const expectedNewSources = {
       source: nonValidatedLevelProperties.startSources,
       labConfig: undefined,
     };
-    expect(mockedProjectManager.save).toHaveBeenCalledWith(expectedNewSources);
+    expect(mockedProjectManager.save).toHaveBeenLastCalledWith(
+      expectedNewSources,
+      false,
+      false
+    );
   });
 });
