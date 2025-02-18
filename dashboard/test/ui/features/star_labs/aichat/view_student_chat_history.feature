@@ -42,13 +42,13 @@ Scenario: Teacher views student chat histor
   And I wait until element ".student-table" is visible
   And I click selector "#teacher-panel-container tr:eq(1)"
   And I dismiss the teacher panel
+  When I click selector ".uitest-clean-feedback-footer button[aria-label='flag']"
+  Then I wait until element ".uitest-clean-feedback-footer button[aria-label='unflag']" is visible
   Then element ".uitest-chat-message" contains text "This message has been flagged by our content moderation policy."
   When I click selector "[aria-label='show message']"
   Then I wait until element ".uitest-profane-feedback-footer" contains text "Was this content flagged correctly?"
   When I click selector "[aria-label='thumbs up']"
   Then I wait until element ".uitest-profane-feedback-footer" contains text "This content was flagged correctly."
-  When I click selector ".uitest-clean-feedback-footer button[aria-label='flag']"
-  Then I wait until element ".uitest-clean-feedback-footer button[aria-label='unflag']" is visible
 
   # Teacher can interact with student model.
   Given element ".uitest-temperature-container" contains text "0.7"
