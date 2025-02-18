@@ -1,12 +1,12 @@
 /** @file Top-level view for AI Chat Lab */
 
 import Button from '@code-dot-org/component-library/button';
+import ActionDropdown from '@code-dot-org/component-library/dropdown/actionDropdown';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
 import React, {useCallback, useEffect} from 'react';
 
-import ActionDropdown from '@cdo/apps/componentLibrary/dropdown/actionDropdown/ActionDropdown';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
@@ -36,8 +36,8 @@ import {
   setUserHasAichatAccess,
   setViewMode,
   updateAiCustomization,
-} from '../redux/aichatRedux';
-import {getNewMessageId} from '../redux/utils';
+} from '../redux';
+import {getNewRemoveId} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
@@ -48,7 +48,7 @@ import PresentationView from './presentation/PresentationView';
 import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
-  id: getNewMessageId(),
+  removeId: getNewRemoveId(),
   text: aichatI18n.modelResetNotification(),
   notificationType: 'success',
   timestamp: Date.now(),
@@ -116,7 +116,6 @@ const AichatView: React.FunctionComponent = () => {
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'LOAD_LEVEL',
-        hideForParticipants: true,
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
@@ -188,10 +187,7 @@ const AichatView: React.FunctionComponent = () => {
         ? aichatI18n.aichatWorkspaceHeader()
         : botName}
       {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIconV2
-          tooltipPlace="onBottom"
-          className={moduleStyles.icon}
-        />
+        <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
       )}
     </div>
   );
@@ -221,7 +217,6 @@ const AichatView: React.FunctionComponent = () => {
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'CLEAR_CHAT',
-        hideForParticipants: true,
       })
     );
     dispatch(

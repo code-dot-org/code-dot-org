@@ -20,12 +20,19 @@ export const TEACHER_NAVIGATION_PATHS = {
   courseOverview: 'courses/:courseVersionName?',
   unitOverview: 'unit/:unitName?',
   settings: 'settings',
+  home: 'home',
 };
 
 const getAbsolutePath = (name: string) =>
   `${TEACHER_NAVIGATION_SECTIONS_URL}/${SPECIFIC_SECTION_BASE_URL}/${name}`;
 
 export const LABELED_TEACHER_NAVIGATION_PATHS = {
+  home: {
+    url: TEACHER_NAVIGATION_PATHS.home,
+    absoluteUrl: TEACHER_NAVIGATION_PATHS.home,
+    label: i18n.teacherHomePage(),
+    icon: null,
+  },
   progress: {
     url: TEACHER_NAVIGATION_PATHS.progress,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.progress),

@@ -1,8 +1,7 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
-  "created_at": "2025-01-23T02:07:14.000Z",
+  "created_at": "2025-01-24T09:35:12.000Z",
   "level_num": "custom",
   "user_id": 6959,
   "properties": {
@@ -14,7 +13,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "from neighborhood import Painter\n\np = Painter()\nprint(p.get_x())\np.turn_left()\np.paint('Blue')\np.scrape_paint()\np.move()\np.set_paint(10)\nprint(p.get_my_paint())",
+          "contents": "from neighborhood import Painter\n\np = Painter(1,1,'south',3)\nprint(p.get_x())\np.turn_left()\np.paint('Blue')\np.move()\np.set_paint(10)\nprint(p.get_my_paint())",
           "folderId": "0",
           "active": false,
           "open": true,
@@ -391,6 +390,7 @@
     "enable_micro_bit": "false",
     "mini_app": "neighborhood"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22T10:07:14.637-08:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 9\\\"\"],\"cloned_from\":\"Allthethings Python Lab 9\"},{\"changed_at\":\"2025-01-22 10:08:38 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 10:32:29 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 11:41:13 -0800\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-22T10:07:14.637-08:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 9\\\"\"],\"cloned_from\":\"Allthethings Python Lab 9\"},{\"changed_at\":\"2025-01-22 10:08:38 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 10:32:29 -0800\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 11:41:13 -0800\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 14:36:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

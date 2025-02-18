@@ -150,7 +150,9 @@ export default function CurriculumQuickAssign({
 
       if (!curriculumTypes) {
         // hoc and pl have no curriculum types and just have a list of curriculum in filteredCourseOfferings
-        return filteredCourseOfferings[audience];
+        return Object.values(filteredCourseOfferings[audience]).flatMap(
+          courseSection => Object.values(courseSection)
+        );
       }
 
       // return a flattened array of all courses for the given audience
@@ -193,7 +195,7 @@ export default function CurriculumQuickAssign({
     if (!filteredCourseOfferings) return;
     if (!isNewSection) {
       const determineSelectedCourseOffering = () => {
-        const selection = getSelectedCourseOffering(filteredCourseOfferings);
+        const selection = getSelectedCourseOffering();
 
         if (selection) {
           setSelectedCourseOffering(selection.course);
@@ -209,7 +211,6 @@ export default function CurriculumQuickAssign({
       }
       isNewSection && setIsLoading(false);
     }
-    // added all these dependencies given the eslint warning
   }, [
     filteredCourseOfferings,
     isNewSection,

@@ -4,12 +4,9 @@ class ExperimentsController < ApplicationController
   # Experiments are get requests so that a user can click on a link to join or leave an experiment
 
   # Returns whether the given experiment can be joined (or left) via url.
-  # Currently, joining by URL is enabled for:
-  # 1. Pilots where allow_joining_via_url is true
-  # 2. Self-enrolling to use Google Blockly across labs
+  # Currently, joining by URL is enabled for pilots where allow_joining_via_url is true
   def can_join_via_url?(experiment_name)
     return true if Pilot.find_by(name: experiment_name).try(:allow_joining_via_url)
-    return true if params[:experiment_name] == 'google_blockly'
     return false
   end
 

@@ -41,6 +41,7 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
   );
   const isInsideRandom = eventData.skipContext?.insideRandom;
   const isSkipSound = isPlaying && eventData.skipContext?.skipSound;
+  const isThinBorder = height <= 4;
 
   const isCurrentlyPlaying =
     isPlaying &&
@@ -59,8 +60,13 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
     ? eventData.instrumentType
     : 'beat';
 
+  // The format of an id is "soundType/soundName" so parsing out the soundName
+  const friendlyLabel = eventData.id.split('/').pop();
+
   return (
-    <div
+    <button
+      type="button"
+      aria-label={friendlyLabel}
       className={classNames(
         'timeline-element',
         moduleStyles.timelineElement,
@@ -70,7 +76,8 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
         isInsideRandom && moduleStyles.timelineElementInsideRandom,
         isSkipSound && moduleStyles.timelineElementSkipSound,
         isBlockSelected && moduleStyles.timelineElementBlockSelected,
-        !isPlaying && moduleStyles.timelineElementClickable
+        !isPlaying && moduleStyles.timelineElementClickable,
+        isThinBorder && moduleStyles.timelineElementThinBorder
       )}
       style={{
         width: barWidth * eventData.length,
@@ -84,7 +91,7 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
       }}
     >
       &nbsp;
-    </div>
+    </button>
   );
 };
 

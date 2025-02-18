@@ -8,7 +8,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import aichatI18n from '../../locale';
-import {submitTeacherFeedback} from '../../redux/aichatRedux';
+import {submitTeacherFeedback} from '../../redux';
 import {FeedbackValue} from '../../types';
 
 import moduleStyles from './teacher-feedback-footer.module.scss';
@@ -88,7 +88,7 @@ const ProfanityFeedbackFooter: React.FC<Props> = ({
     <div className={moduleStyles.teacherFeedbackContainer}>
       {profaneMessageVisible && (
         <>
-          <EmText>{text}</EmText>
+          <EmText className={moduleStyles.flaggedText}>{text}</EmText>
           <ThumbButton type="up" selected={thumbsUpSelected} />
           <ThumbButton type="down" selected={thumbsDownSelected} />
         </>

@@ -1,0 +1,54 @@
+@import 'color.scss';
+
+$bar-width: 1px;
+$bar-width-grab-area: 3px;
+$grab-area-offset: calc(($bar-width-grab-area - $bar-width) / 2);
+$negative-grab-area-offset: calc(-1 * $grab-area-offset);
+
+.resizeBar {
+  background-color: $light_gray_800;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.verticalBar {
+  width: $bar-width;
+  height: 100%;
+}
+
+.horizontalBar {
+  width: 100%;
+  height: $bar-width;
+}
+
+.grabbableDiv {
+  position: absolute;
+  background-color: $light_gray_800;
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 0.1s ease-in;
+}
+
+.verticalGrabbable {
+  width: $bar-width-grab-area;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: $negative-grab-area-offset;
+  right: $grab-area-offset;
+  cursor: col-resize;
+}
+
+.horizontalGrabbable {
+  height: $bar-width-grab-area;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: $negative-grab-area-offset;
+  bottom: $grab-area-offset;
+  cursor: row-resize;
+}
+
+.visible {
+  opacity: 1;
+}

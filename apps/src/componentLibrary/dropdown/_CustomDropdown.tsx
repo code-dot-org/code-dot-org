@@ -1,4 +1,11 @@
 import {Button, ButtonProps} from '@code-dot-org/component-library/button';
+import {dropdownColors} from '@code-dot-org/component-library/common/constants';
+import {useDropdownContext} from '@code-dot-org/component-library/common/contexts';
+import {getAriaPropsFromProps} from '@code-dot-org/component-library/common/helpers';
+import {
+  ComponentSizeXSToL,
+  DropdownColor,
+} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -11,14 +18,6 @@ import React, {
   AriaAttributes,
   KeyboardEvent,
 } from 'react';
-
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
-import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
-import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
-import {
-  ComponentSizeXSToL,
-  DropdownColor,
-} from '@cdo/apps/componentLibrary/common/types';
 
 import moduleStyles from './customDropdown.module.scss';
 

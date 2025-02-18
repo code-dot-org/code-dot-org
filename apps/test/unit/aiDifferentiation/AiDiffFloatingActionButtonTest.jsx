@@ -9,8 +9,6 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 
-// import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-
 jest.mock('@react-pdf/renderer', () => {
   return {
     PDFDownloadLink: () => null,
@@ -21,8 +19,8 @@ jest.mock('@react-pdf/renderer', () => {
 });
 
 const DEFAULT_PROPS = {
-  lessonId: 1,
-  lessonName: 'test_lesson',
+  scriptId: 1,
+  scriptName: 'test_lesson',
   unitDisplayName: 'test unit name',
 };
 
@@ -86,10 +84,6 @@ describe('AIDiffFloatingActionButton', () => {
 
       const fabImage = screen.getByRole('img', {name: 'AI bot'});
       fireEvent.load(fabImage);
-      expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
-
-      const taImage = screen.getByRole('img', {name: 'TA overlay'});
-      fireEvent.load(taImage);
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(true);
     });
 
@@ -98,8 +92,6 @@ describe('AIDiffFloatingActionButton', () => {
       renderDefault();
       const image = screen.getByRole('img', {name: 'AI bot'});
       fireEvent.load(image);
-      const taImage = screen.getByRole('img', {name: 'TA overlay'});
-      fireEvent.load(taImage);
       const fab = screen.getByRole('button', {
         name: i18n.openOrCloseTeachingAssistant(),
       });

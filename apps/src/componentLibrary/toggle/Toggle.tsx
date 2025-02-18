@@ -1,9 +1,8 @@
+import {componentSizeToBodyTextSizeMap} from '@code-dot-org/component-library/common/constants';
+import {ComponentSizeXSToL} from '@code-dot-org/component-library/common/types';
 import Typography from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import React, {ChangeEvent, HTMLAttributes, memo} from 'react';
-
-import {componentSizeToBodyTextSizeMap} from '@cdo/apps/componentLibrary/common/constants';
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import moduleStyles from './toggle.module.scss';
 

@@ -1,7 +1,10 @@
+@import 'color';
+
 .neighborhoodPreviewBackground {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  background: $neutral_dark;
+}
+.sliderBackground {
+  background-color: $background_black;
 }
 
 .slider {
