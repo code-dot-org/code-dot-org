@@ -95,7 +95,7 @@ Feature: Curriculum Catalog Page
     And I click selector "[aria-label='Assign Computer Science Principles to your classroom']"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
-    And element "input[type=checkbox]:nth-child(3)" is not checked
+    And element "input[type=checkbox]:eq(2)" is not checked
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is not selected
     And I click the "Section 2" checkbox in the dialog
@@ -127,7 +127,7 @@ Feature: Curriculum Catalog Page
     And I click selector "[aria-label='Assign Computer Science Principles to your classroom']"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
-    And element "input[type=checkbox]:nth-child(3)" is not checked
+    And element "input[type=checkbox]:eq(2)" is not checked
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click the "Section 2" checkbox in the dialog
@@ -253,7 +253,7 @@ Feature: Curriculum Catalog Page
     And I click selector "button:contains(Assign to class sections)"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
-    And element "input[type=checkbox]:nth-child(3)" is not checked
+    And element "input[type=checkbox]:eq(2)" is not checked
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is not selected
     And I click the "Section 2" checkbox in the dialog
@@ -289,7 +289,7 @@ Feature: Curriculum Catalog Page
     And I click selector "button:contains(Assign to class sections)"
     And element "span:contains(Section 1)" is visible
     And element "span:contains(Section 2)" is visible
-    And element "input[type=checkbox]:nth-child(3)" is not checked
+    And element "input[type=checkbox]:eq(2)" is not checked
     And the "Section 1" checkbox is not selected
     And the "Section 2" checkbox is selected
     And I click the "Section 2" checkbox in the dialog

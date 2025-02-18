@@ -17,7 +17,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait to see "#ui-floatingActionButton"
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".student-table" is visible
-  And I click selector ".student-table tr:nth-child(2)" to load a new page
+  And I click selector ".student-table tr:eq(1)" to load a new page
   And I wait for the lab page to fully load
   And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
   And I click selector ".introjs-skipbutton" once I see it
@@ -58,8 +58,8 @@ Scenario: Teacher views rubric product tour
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I wait for the lab page to fully load
-  And element ".teacher-panel td:nth-child(2)" contains text "Aiden"
-  And I click selector ".teacher-panel td:nth-child(2)" to load a new page
+  And element ".teacher-panel td:eq(1)" contains text "Aiden"
+  And I click selector ".teacher-panel td:eq(1)" to load a new page
   And I wait for the lab page to fully load
 
   # Teacher views product tour step 1
@@ -148,8 +148,8 @@ Scenario: Teacher views Rubric and Settings tabs
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I wait for the lab page to fully load
-  And element ".teacher-panel td:nth-child(2)" contains text "Aiden"
-  And I click selector ".teacher-panel td:nth-child(2)" to load a new page
+  And element ".teacher-panel td:eq(1)" contains text "Aiden"
+  And I click selector ".teacher-panel td:eq(1)" to load a new page
   And I wait for the lab page to fully load
   And I click selector ".introjs-skipbutton" if it exists
 
@@ -181,8 +181,8 @@ Scenario: Teacher views product tour
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
   And I wait for the lab page to fully load
-  And element ".teacher-panel td:nth-child(2)" contains text "Aiden"
-  And I click selector ".teacher-panel td:nth-child(2)" to load a new page
+  And element ".teacher-panel td:eq(1)" contains text "Aiden"
+  And I click selector ".teacher-panel td:eq(1)" to load a new page
   And I wait for the lab page to fully load
 
   # Teacher views product tour step 1

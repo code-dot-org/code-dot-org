@@ -45,7 +45,7 @@ Feature: Using the Internet Simulator Lobby
     Given I am on the 3rd NetSim test level
     And I wait up to 5 seconds for element ".modal" to be visible
     Then element ".modal" is visible
-    And element ".modal h1:nth-child(1)" contains text "Puzzle 3 of 5"
+    And element ".modal h1:eq(0)" contains text "Puzzle 3 of 5"
     And element ".instructions-markdown" contains text "Transfer your favicon to a partner"
 
     # We can close the instructions modal

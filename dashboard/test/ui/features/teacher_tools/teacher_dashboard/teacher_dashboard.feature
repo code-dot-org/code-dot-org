@@ -47,12 +47,12 @@ Feature: Using the teacher dashboard
     # Stats tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
     And I wait until element "#uitest-stats-table" is visible
-    And element "#uitest-stats-table tr:nth-child(2)" contains text "Sally"
+    And element "#uitest-stats-table tr:eq(1)" contains text "Sally"
 
     # Manage students tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
     And I wait until element "#uitest-manage-students-table" is visible
-    And element "#uitest-manage-students-table tr:nth-child(2)" contains text "Sally"
+    And element "#uitest-manage-students-table tr:eq(1)" contains text "Sally"
     And I wait until element "#uitest-privacy-text" is visible
     And element "#uitest-privacy-text" contains text "We encourage you to share this letter"
     And I wait until element "#uitest-privacy-link" is visible
@@ -78,7 +78,7 @@ Feature: Using the teacher dashboard
     # Assessments/Surveys tab: assessment
     And I select the "Lesson 33: Single page assessment" option in dropdown "assessment-selector"
     And I wait until element "#uitest-submission-status-table" is visible
-    And element "#uitest-submission-status-table tr:nth-child(2)" contains text "Sally"
+    And element "#uitest-submission-status-table tr:eq(1)" contains text "Sally"
 
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"
@@ -206,10 +206,10 @@ Feature: Using the teacher dashboard
     Then I navigate to teacher dashboard for the section I saved
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
     And I wait until element "#uitest-projects-table" is visible
-    And I wait until the image within element "tr:nth-child(2)" has loaded
-    And I wait until the image within element "tr:nth-child(3)" has loaded
-    And I wait until the image within element "tr:nth-child(4)" has loaded
-    And I wait until the image within element "tr:nth-child(5)" has loaded
+    And I wait until the image within element "tr:eq(1)" has loaded
+    And I wait until the image within element "tr:eq(2)" has loaded
+    And I wait until the image within element "tr:eq(3)" has loaded
+    And I wait until the image within element "tr:eq(4)" has loaded
 
     Then I see no difference for "projects list view"
     And I close my eyes
@@ -256,7 +256,7 @@ Feature: Using the teacher dashboard
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
-  Scenario: Accept invitation to new progress view and see new view immediately.
+  Scenario: Accept invitation to new progress view and see new view immediately. 
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
@@ -274,7 +274,7 @@ Feature: Using the teacher dashboard
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
 
-  Scenario: Delay responding to invitation to new progress view and see old view immediately.
+  Scenario: Delay responding to invitation to new progress view and see old view immediately. 
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
@@ -315,3 +315,4 @@ Feature: Using the teacher dashboard
     And I click selector "button:contains(View more)"
     And I see no difference for "all tiles visible"
     And I close my eyes
+    
