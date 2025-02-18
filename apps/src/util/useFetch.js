@@ -4,7 +4,8 @@ const baseFetchState = {
   loading: false,
   data: null,
   response: null,
-  error: null
+  error: null,
+  status: null,
 };
 
 const EMPTY_OPTIONS = {};
@@ -36,7 +37,7 @@ const EMPTY_OPTIONS = {};
  * @param {RequestInit} options - options to pass to fetch
  * @param {any[]} deps - array of values that fetch depends on; a new fetch
  *    request will be sent if any of the values in the array change
- * @returns {{loading: boolean, data: Object, error: Object}}
+ * @returns {{loading: boolean, data: Object, error: Object, status: number | null}}
  */
 export const useFetch = (url, options = EMPTY_OPTIONS) => {
   const [fetchState, setFetchState] = useState(baseFetchState);
@@ -57,7 +58,7 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
     const calculatedOptions = {
       credentials: 'same-origin',
       signal: abortController ? abortController.signal : undefined,
-      ...options
+      ...options,
     };
 
     // This async IIFE contains the core of the fetch logic. Note that the
@@ -65,9 +66,11 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
     // returned to the caller until (at least) the next render cycle.
     (async () => {
       setFetchState({...baseFetchState, loading: true});
+      let status = null;
       try {
         const response = await fetch(url, calculatedOptions);
         if (!response.ok) {
+          status = response.status;
           throw new Error(
             `fetch request to ${url} failed with status code ${response.status}`
           );
@@ -75,12 +78,17 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
 
         const data = await response.json();
         if (!canceled) {
-          setFetchState({...baseFetchState, data, response});
+          setFetchState({
+            ...baseFetchState,
+            data,
+            response,
+            status: response.status,
+          });
         }
       } catch (e) {
         console.error(e);
         if (!canceled) {
-          setFetchState({...baseFetchState, error: e});
+          setFetchState({...baseFetchState, error: e, status});
         }
       }
     })();
@@ -97,6 +105,7 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
     loading: fetchState.loading,
     data: fetchState.data,
     response: fetchState.response,
-    error: fetchState.error
+    error: fetchState.error,
+    status: fetchState.status,
   };
 };

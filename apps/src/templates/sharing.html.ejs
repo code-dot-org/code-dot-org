@@ -1,3 +1,9 @@
+<%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var options = locals.options;
+%>
 <% var msg = require('@cdo/locale'); %>
 <% if (options.feedbackImage) { %>
   <img class="feedback-image" src="<%= options.feedbackImage %>"/>
@@ -24,14 +30,14 @@
   <div class='social-buttons'>
     <% if (options.facebookUrl) { -%>
       <a id='sharing-facebook' href='<%= options.facebookUrl %>' target="_blank" class="popup-window" style="display: none">
-        <button>
+        <button id='facebook-button'>
           <i class="fa fa-facebook fa-lg"></i>
         </button>
       </a>
     <% } -%>
     <% if (options.twitterUrl) { -%>
       <a id='sharing-twitter' href='<%= options.twitterUrl %>' target="_blank" class="popup-window" style="display: none">
-        <button>
+        <button id='twitter-button'>
           <i class="fa fa-twitter fa-lg"></i>
         </button>
       </a>
@@ -48,9 +54,6 @@
     <% } else if (options.saveToProjectGallery && !options.disableSaveToGallery) { %>
       <button id="save-to-project-gallery-button">
         <%= msg.addToProjects() %>
-      </button>
-      <button id="publish-to-project-gallery-button">
-          <%= msg.publish() %>
       </button>
     <% } %>
    <button id="sharing-phone">

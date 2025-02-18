@@ -1,27 +1,25 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import QuickActionsCell from '../tables/QuickActionsCell';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
-import Button from '../Button';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import QuickActionsCell from '../tables/QuickActionsCell';
+
+import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import ProjectNameFailureDialog from './ProjectNameFailureDialog';
 import {
   startRenamingProject,
   cancelRenamingProject,
   saveProjectName,
-  remix,
-  unsetNameFailure
+  unsetNameFailure,
 } from './projectsRedux';
-import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
-import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
 
-export const styles = {
-  xIcon: {
-    paddingRight: 5
-  }
-};
+import moduleStyles from './personal-projects-table-actions-cell.module.scss';
 
 export class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
@@ -34,9 +32,9 @@ export class PersonalProjectsTableActionsCell extends Component {
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
-    remix: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
-    unsetNameFailure: PropTypes.func.isRequired
+    unsetNameFailure: PropTypes.func.isRequired,
+    isFrozen: PropTypes.bool,
   };
 
   onDelete = () => {
@@ -56,7 +54,7 @@ export class PersonalProjectsTableActionsCell extends Component {
   };
 
   onRemix = () => {
-    this.props.remix(this.props.projectId, this.props.projectType);
+    window.location = `/projects/${this.props.projectType}/${this.props.projectId}/remix`;
   };
 
   handleNameFailureDialogClose = () => {
@@ -70,40 +68,47 @@ export class PersonalProjectsTableActionsCell extends Component {
       <div>
         {!isEditing && (
           <QuickActionsCell>
-            <PopUpMenu.Item onClick={this.onRename}>
-              {i18n.rename()}
-            </PopUpMenu.Item>
+            {!this.props.isFrozen && (
+              <PopUpMenu.Item onClick={this.onRename}>
+                {i18n.rename()}
+              </PopUpMenu.Item>
+            )}
             <PopUpMenu.Item onClick={this.onRemix}>
               {i18n.remix()}
             </PopUpMenu.Item>
-            <MenuBreak />
-            <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-              <FontAwesome icon="times-circle" style={styles.xIcon} />
-              {i18n.delete()}
-            </PopUpMenu.Item>
+            {!this.props.isFrozen && <MenuBreak />}
+            {!this.props.isFrozen && (
+              <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
+                <FontAwesome
+                  icon="times-circle"
+                  className={moduleStyles.xIcon}
+                />
+                {i18n.delete()}
+              </PopUpMenu.Item>
+            )}
           </QuickActionsCell>
         )}
         {isEditing && (
           <div>
             <Button
-              __useDeprecatedTag
               onClick={this.onSave}
-              color={Button.ButtonColor.orange}
               text={i18n.save()}
-              style={styles.saveButton}
+              size="s"
+              color={buttonColors.purple}
               disabled={isSaving}
-              className="ui-projects-rename-save"
+              id="ui-projects-rename-save"
+              className={moduleStyles.buttonMargin}
             />
-            <br />
             <Button
-              __useDeprecatedTag
               onClick={this.onCancel}
-              color={Button.ButtonColor.gray}
               text={i18n.cancel()}
+              size="s"
+              type="secondary"
+              color={buttonColors.gray}
             />
           </div>
         )}
-        <NameFailureDialog
+        <ProjectNameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.handleNameFailureDialogClose}
@@ -128,11 +133,8 @@ export default connect(
     saveProjectName(projectId, updatedName, lastUpdatedAt) {
       dispatch(saveProjectName(projectId, updatedName, lastUpdatedAt));
     },
-    remix(projectId, projectType) {
-      dispatch(remix(projectId, projectType));
-    },
     unsetNameFailure(projectId) {
       dispatch(unsetNameFailure(projectId));
-    }
+    },
   })
 )(PersonalProjectsTableActionsCell);

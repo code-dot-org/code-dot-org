@@ -6,7 +6,7 @@ Feature: Creating and deleting data docs
     And I am on "http://studio.code.org/data_docs/edit"
 
     # create data doc
-    And I click selector "#create_new_data_doc"
+    And I click selector "#create_new_data_doc" to load a new page
     And I wait until element "#form" is visible
     And I enter a temp data doc key and temp data doc name
     And I press keys "Description of Doc" for element "textarea"
@@ -28,7 +28,7 @@ Feature: Creating and deleting data docs
     And element "a" contains the name of the temp data doc
     And the element contains the path to the temp data doc
     And I click the icon to edit the temp data doc
-    And I wait until element "#edit-data-doc" is visible
+    And I wait for the temp data doc edit page to load
     And I press keys "New description of Doc" for element "textarea"
     And I click "button[type='submit']" to load a new page
 

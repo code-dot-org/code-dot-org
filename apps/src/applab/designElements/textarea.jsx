@@ -1,26 +1,32 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PropertyRow from './PropertyRow';
+
+import applabMsg from '@cdo/applab/locale';
+
+import * as utils from '../../utils';
+import designMode from '../designMode';
+import themeValues, {CLASSIC_TEXT_AREA_PADDING} from '../themeValues';
+
 import BooleanPropertyRow from './BooleanPropertyRow';
+import BorderProperties from './BorderProperties';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
-import ZOrderRow from './ZOrderRow';
+import * as elementUtils from './elementUtils';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
-import BorderProperties from './BorderProperties';
-import * as utils from '../../utils';
-import * as elementUtils from './elementUtils';
-import EnumPropertyRow from './EnumPropertyRow';
-import designMode from '../designMode';
-import themeValues, {CLASSIC_TEXT_AREA_PADDING} from '../themeValues';
 import elementLibrary from './library';
+import PropertyRow from './PropertyRow';
+import TextAlignmentPropertyRow, {
+  TEXT_ALIGNMENT_LEFT,
+} from './TextAlignmentPropertyRow';
+import ZOrderRow from './ZOrderRow';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -36,49 +42,49 @@ class TextAreaProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <PropertyRow
-          desc={'text'}
+          desc={applabMsg.designElementProperty_text()}
           isMultiLine
           initialValue={escapedText}
           handleChange={this.props.handleChange.bind(this, 'text')}
         />
         <PropertyRow
-          desc={'width (px)'}
+          desc={applabMsg.designElementProperty_widthPx()}
           isNumber
           initialValue={parseInt(element.style.width, 10)}
           foo={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
-          desc={'height (px)'}
+          desc={applabMsg.designElementProperty_heightPx()}
           isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
-          desc={'x position (px)'}
+          desc={applabMsg.designElementProperty_xPositionPx()}
           isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
-          desc={'y position (px)'}
+          desc={applabMsg.designElementProperty_yPositionPx()}
           isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <ColorPickerPropertyRow
-          desc={'text color'}
+          desc={applabMsg.designElementProperty_textColor()}
           initialValue={element.style.color}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <ColorPickerPropertyRow
-          desc={'background color'}
+          desc={applabMsg.designElementProperty_backgroundColor()}
           initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
@@ -89,15 +95,13 @@ class TextAreaProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
         <PropertyRow
-          desc={'font size (px)'}
+          desc={applabMsg.designElementProperty_fontSizePx()}
           isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
-        <EnumPropertyRow
-          desc={'text alignment'}
-          initialValue={element.style.textAlign || 'left'}
-          options={['left', 'right', 'center', 'justify']}
+        <TextAlignmentPropertyRow
+          initialValue={element.style.textAlign || TEXT_ALIGNMENT_LEFT}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <BorderProperties
@@ -116,12 +120,12 @@ class TextAreaProperties extends React.Component {
           )}
         />
         <BooleanPropertyRow
-          desc={'read only'}
+          desc={applabMsg.designElementProperty_readOnly()}
           initialValue={!element.isContentEditable}
           handleChange={this.props.handleChange.bind(this, 'readonly')}
         />
         <BooleanPropertyRow
-          desc={'hidden'}
+          desc={applabMsg.designElementProperty_hidden()}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
@@ -142,7 +146,7 @@ class TextAreaEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getChangeEventCode() {
@@ -157,22 +161,19 @@ class TextAreaEvents extends React.Component {
 
   render() {
     const element = this.props.element;
-    const changeName = 'Change';
-    const changeDesc =
-      'Triggered when the text area loses focus if the text has changed.';
 
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <EventHeaderRow />
         <EventRow
-          name={changeName}
-          desc={changeDesc}
+          name={applabMsg.designElementEvent_change()}
+          desc={applabMsg.designElement_textArea_changeEventDesc()}
           handleInsert={this.insertChange}
         />
       </div>
@@ -185,7 +186,7 @@ export default {
   EventTab: TextAreaEvents,
   themeValues: themeValues.textArea,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('div');
     element.setAttribute('contenteditable', true);
     element.style.width = '200px';
@@ -203,7 +204,7 @@ export default {
     return element;
   },
 
-  onDeserialize: function(element) {
+  onDeserialize: function (element) {
     // Set border styles for older projects that didn't set them on create:
     elementUtils.setDefaultBorderStyles(element, {textInput: true});
     // Set the font family for older projects that didn't set it on create:
@@ -215,7 +216,7 @@ export default {
 
     $(element).addClass('textArea');
 
-    $(element).on('mousedown', function(e) {
+    $(element).on('mousedown', function (e) {
       if (!Applab.isRunning()) {
         // Disable clicking into text area unless running
         e.preventDefault();
@@ -223,30 +224,10 @@ export default {
     });
 
     // swallow keydown unless we're running
-    $(element).on('keydown', function(e) {
+    $(element).on('keydown', function (e) {
       if (!Applab.isRunning()) {
         e.preventDefault();
       }
     });
   },
-
-  onPropertyChange: function(element, name, value) {
-    switch (name) {
-      case 'value':
-        element.innerHTML = value;
-        break;
-      default:
-        return false;
-    }
-    return true;
-  },
-
-  readProperty: function(element, name) {
-    switch (name) {
-      case 'value':
-        return element.innerHTML;
-      default:
-        throw `unknown property name ${name}`;
-    }
-  }
 };

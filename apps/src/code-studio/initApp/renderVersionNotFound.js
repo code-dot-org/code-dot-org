@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AlertExclamation from '../components/AlertExclamation';
+
 import msg from '@cdo/locale';
+
+import AlertExclamation from '../components/AlertExclamation';
 
 export function VersionNotFoundAlert() {
   return (
@@ -24,6 +26,6 @@ const styles = {
   text: {
     fontSize: 18,
     lineHeight: '24px',
-    padding: 5
-  }
+    padding: 5,
+  },
 };

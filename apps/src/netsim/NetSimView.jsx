@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 
@@ -9,7 +10,7 @@ import StudioAppWrapper from '../templates/StudioAppWrapper';
 export default class NetSimView extends React.Component {
   static propTypes = {
     generateCodeAppHtml: PropTypes.func.isRequired,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
   };
 
   componentDidMount() {

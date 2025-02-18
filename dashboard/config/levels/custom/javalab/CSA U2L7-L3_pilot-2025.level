@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T22:23:01.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "project_template_level_name": "CSA U2L7-Accessors PBT_pilot-2025",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Add the following code to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">CourseRunner.java</code>.\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nCourse history = new Course(17);\r\nhistory.getNumStudents();\r\n</pre>\r\n\r\nWhat happens when you run the program? Why do you think this happened?\r\n\r\nModify this code segment to print the result of the call to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">history.getNumStudents();</code> to the console.",
+    "teacher_markdown": "When the code segment is added to the program, nothing is displayed to the console. This is because the accessor method returns the value, but the `CourseRunner` class does not *do* anything with the value that is returned. To use or see the value returned from an accessor method, it must either be stored in a variable or called inside of a print statement.",
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T22:23:01.620+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-L3_2025\\\"\"],\"cloned_from\":\"CSA U2L7-L3_2025\"}]"
+}]]></config>
+</Javalab>

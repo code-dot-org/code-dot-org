@@ -4,7 +4,7 @@
   "category": "Loops",
   "category_key": "loops",
   "block_name": "controls_repeat",
-  "content": "Repeats a sequence of code a specified number of times.\r\n\r\nInstead of writing the same code again and again, you can use a repeat loop. When a program is run and reaches the repeat loop, it will run the code inside of that loop the specified number of times. Once the repeat loop is finished, the program will continue from where it left off.",
+  "content": "Repeats a sequence of code a specified number of times.\n\nInstead of writing the same code again and again, you can use a repeat loop. When a program is run and reaches the repeat loop, it will run the code inside of that loop the specified number of times. Once the repeat loop is finished, the program will continue down the blocks.",
   "examples": [
     {
       "name": "Example 1",

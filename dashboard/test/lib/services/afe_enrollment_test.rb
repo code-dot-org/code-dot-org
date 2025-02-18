@@ -30,7 +30,6 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
           'school-zip' => 'test-zip',
           'inspirational-marketing-kit' => '1',
           'csta-plus' => '1',
-          'aws-educate' => '1',
           'amazon-terms' => '1',
           'new-code-account' => '1',
           'registration-date-time' => Time.now.iso8601
@@ -43,35 +42,35 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'false becomes "0" for boolean params' do
-    assert_param_translation({aws_educate: false}, {'aws-educate' => '0'})
+    assert_param_translation({csta_plus: false}, {'csta-plus' => '0'})
   end
 
   test 'the string "false" becomes "0" for boolean params' do
-    assert_param_translation({aws_educate: 'false'}, {'aws-educate' => '0'})
+    assert_param_translation({csta_plus: 'false'}, {'csta-plus' => '0'})
   end
 
   test 'the number 0 becomes "0" for boolean params' do
-    assert_param_translation({aws_educate: 0}, {'aws-educate' => '0'})
+    assert_param_translation({csta_plus: 0}, {'csta-plus' => '0'})
   end
 
   test 'the string "0" becomes "0" for boolean params' do
-    assert_param_translation({aws_educate: '0'}, {'aws-educate' => '0'})
+    assert_param_translation({csta_plus: '0'}, {'csta-plus' => '0'})
   end
 
   test 'true becomes "1" for boolean params' do
-    assert_param_translation({aws_educate: true}, {'aws-educate' => '1'})
+    assert_param_translation({csta_plus: true}, {'csta-plus' => '1'})
   end
 
   test 'the string "true" becomes "1" for boolean params' do
-    assert_param_translation({aws_educate: 'true'}, {'aws-educate' => '1'})
+    assert_param_translation({csta_plus: 'true'}, {'csta-plus' => '1'})
   end
 
   test 'the number 1 becomes "1" for boolean params' do
-    assert_param_translation({aws_educate: 1}, {'aws-educate' => '1'})
+    assert_param_translation({csta_plus: 1}, {'csta-plus' => '1'})
   end
 
   test 'the string "1" becomes "1" for boolean params' do
-    assert_param_translation({aws_educate: '1'}, {'aws-educate' => '1'})
+    assert_param_translation({csta_plus: '1'}, {'csta-plus' => '1'})
   end
 
   test 'raises without submitting if amazon_terms is not true' do
@@ -108,12 +107,10 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     )
   end
 
-  private
-
   # Check that certain input params turn into expected output params
   # @param input_params [Hash] partial input params, to be merged over valid input
   # @param expected_params [Hash] expected params sent to AFE; does not need to be complete
-  def assert_param_translation(input_params, expected_params)
+  private def assert_param_translation(input_params, expected_params)
     captured_params = nil
     expected_request = Net::HTTP.expects(:post_form).with do |_, params|
       captured_params = params; true
@@ -128,7 +125,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     end
   end
 
-  def valid_test_params
+  private def valid_test_params
     {
       first_name: 'test-first-name',
       last_name: 'test-last-name',
@@ -141,13 +138,12 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
       zip: 'test-zip',
       marketing_kit: true,
       csta_plus: true,
-      aws_educate: true,
       amazon_terms: true,
       new_code_account: true
     }
   end
 
-  def fake_success_response
+  private def fake_success_response
     mock.tap do |response|
       response.stubs(:code).returns('200')
       response.stubs(:body).returns(<<~BODY)
@@ -156,7 +152,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     end
   end
 
-  def fake_validation_failure_response
+  private def fake_validation_failure_response
     mock.tap do |response|
       # This reflects the actual behavior of the Pardot form handler: It returns a
       # 200 when a validation failure occurs.
@@ -168,7 +164,7 @@ class Services::AFEEnrollmentTest < ActiveSupport::TestCase
     end
   end
 
-  def fake_unavailable_response
+  private def fake_unavailable_response
     mock.tap do |response|
       response.stubs(:code).returns('503')
     end

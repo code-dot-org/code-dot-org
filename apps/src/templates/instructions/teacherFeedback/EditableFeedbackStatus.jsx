@@ -1,14 +1,15 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import moment from 'moment/moment';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 
 class EditableFeedbackStatus extends Component {
   static propTypes = {
-    latestFeedback: PropTypes.object.isRequired
+    latestFeedback: PropTypes.object.isRequired,
   };
 
   getFriendlyDate(feedbackSeen) {
@@ -29,7 +30,7 @@ class EditableFeedbackStatus extends Component {
     const {student_last_updated} = this.props.latestFeedback;
     const style = {
       ...styles.timeTeacher,
-      ...styles.timeTeacherStudentSeen
+      ...styles.timeTeacherStudentSeen,
     };
     const formattedTime = this.getFriendlyDate(student_last_updated);
 
@@ -47,7 +48,7 @@ class EditableFeedbackStatus extends Component {
     const {student_seen_feedback} = this.props.latestFeedback;
     const style = {
       ...styles.timeTeacher,
-      ...styles.timeTeacherStudentSeen
+      ...styles.timeTeacherStudentSeen,
     };
     const formattedTime = this.getFriendlyDate(student_seen_feedback);
 
@@ -106,17 +107,17 @@ class EditableFeedbackStatus extends Component {
 
 const styles = {
   checkboxIcon: {
-    color: '#25c23c'
+    color: '#25c23c',
   },
   timeTeacher: {
     paddingLeft: 8,
     fontStyle: 'italic',
     fontSize: 12,
-    color: color.cyan
+    color: color.cyan,
   },
   timeTeacherStudentSeen: {
-    color: '#25c23c'
-  }
+    color: '#25c23c',
+  },
 };
 
 export default EditableFeedbackStatus;

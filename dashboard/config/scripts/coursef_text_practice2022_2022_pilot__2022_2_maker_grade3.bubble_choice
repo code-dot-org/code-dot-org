@@ -1,0 +1,12 @@
+name 'courseF_text_practice2022_2022_pilot_-2022-2_maker_grade3'
+display_name 'Text and Prompts Practice'
+description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with text and prompts!'
+
+sublevels
+level 'courseF_text_choice_conversation_grade3'
+level 'courseF_text_choice_events_grade3'
+level 'courseF_text_choice_interview_grade3'
+level 'courseF_text_choice_multiprompt_grade3'
+level 'courseF_text_choice_title_grade3'
+level 'courseF_text_choice_color_grade3'
+level 'courseF_text_choice_freeplay_grade3'

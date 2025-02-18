@@ -55,7 +55,7 @@ export function searchAssets(
     results: results.slice(
       currentPage * maxResults,
       (currentPage + 1) * maxResults
-    )
+    ),
   };
 }
 

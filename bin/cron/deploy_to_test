@@ -7,15 +7,14 @@ require 'cdo/chat_client'
 require 'cdo/developers_topic'
 require 'cdo/github'
 require 'cdo/infra_test_topic'
-require 'cdo/metrics_helper'
 
 TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
 TOPIC_DTT_FAILED = 'no (robo-DTT failed)'.freeze
 ALWAYS_DTT = ARGV[0] && ARGV[0] == 'always_dtt'
 
 def main
-  unless ALWAYS_DTT
-    return unless DevelopersTopic.dtt?
+  if !ALWAYS_DTT && !DevelopersTopic.dtt?
+    return
   end
   return unless GitHub.behind?(base: 'staging', compare: 'test')
 
@@ -37,11 +36,10 @@ def main
     "robo-DTT created and merged <a href=\"#{GitHub.url(pr_number)}\">PR#{pr_number}</a>",
     color: 'green'
   )
-  Metrics.write_metric('dtt_start', GitHub.sha('test'), Metrics::AUTOMATIC)
-rescue Exception => e
+rescue Exception => exception
   ChatClient.message(
     'infra-test',
-    "EXCEPTION: #{e.message}\n```\n#{e.class}\n#{e.backtrace}\n```",
+    "EXCEPTION: #{exception.message}\n```\n#{exception.class}\n#{exception.backtrace}\n```",
     color: 'red'
   )
   DevelopersTopic.set_dtt TOPIC_DTT_FAILED

@@ -11,3 +11,5 @@ wrong 'Because you dont have to worry about syntax as much, like where to put a 
 wrong 'Because you can focus on the logic of programming'
 wrong 'Because the commands are listed in a menu rather than having to remember them yourself'
 right 'All of the above'
+
+allow_multiple_attempts true

@@ -1,0 +1,17 @@
+name 'Data Sci U2 Post Q4_2024-pilot'
+
+question 'You use `describe()` on a dataset but notice that one of your variables, `Age`, is showing a lot of `NaN` values. You realize its datatype is currently an object. What should you do to see the descriptive statistics for `Age` in the summary table?'
+
+wrong 'Drop the `Age` column from the dataset and analyze it separately.'
+right 'Convert the datatype of `Age` to a numerical type using `df["Age"] = df["Age"].astype(float).`'
+wrong 'Replace the `NaN` values in the `Age` column with zero.'
+wrong 'Convert the datatype of `Age` to a string using `df["Age"] = df["Age"].astype(str).`'
+
+
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

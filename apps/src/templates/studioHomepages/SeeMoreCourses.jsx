@@ -1,11 +1,14 @@
-import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import CourseCard from './CourseCard';
-import ContentContainer from '../ContentContainer';
-import Button from '../Button';
-import shapes from './shapes';
-import color from '../../util/color';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import ContentContainer from '../ContentContainer';
+
+import CourseCard from './CourseCard';
+import shapes from './shapes';
 
 // This component - used on the teacher and student homepages -
 // shows a button to view more courses if the user has more than a few courses.
@@ -16,11 +19,11 @@ import PropTypes from 'prop-types';
 export default class SeeMoreCourses extends Component {
   static propTypes = {
     courses: shapes.courses,
-    isProfessionalLearningCourse: PropTypes.bool
+    isProfessionalLearningCourse: PropTypes.bool,
   };
 
   state = {
-    open: false
+    open: false,
   };
 
   showMoreCourses() {
@@ -48,13 +51,16 @@ export default class SeeMoreCourses extends Component {
           </ContentContainer>
         )}
         {!this.state.open && (
-          <Button
-            onClick={this.showMoreCourses.bind(this)}
-            color={Button.ButtonColor.gray}
-            icon="caret-down"
-            text={i18n.viewMore()}
-            style={styles.button}
-          />
+          <div style={styles.viewMoreContainer}>
+            <Button
+              onClick={this.showMoreCourses.bind(this)}
+              color={Button.ButtonColor.neutralDark}
+              icon="caret-down"
+              text={i18n.viewMore()}
+              style={styles.button}
+              className="ui-test-view-more-courses"
+            />
+          </div>
         )}
       </div>
     );
@@ -62,14 +68,18 @@ export default class SeeMoreCourses extends Component {
 }
 
 const styles = {
+  viewMoreContainer: {
+    display: 'flex',
+    justifyContent: 'end',
+  },
   spacer: {
     width: 20,
     float: 'left',
-    color: color.white
+    color: color.white,
   },
   button: {
     float: 'right',
     margin: 0,
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };

@@ -44,7 +44,7 @@ module Services::I18n::CurriculumSyncUtils
         # default of only a single level of nesting.
         options[:include_directive] ||= JSONAPI::IncludeDirective.new('**', allow_wildcard: true)
         # compact the result, excluding not only nil values but also empty ones
-        result = super.reject {|_, v| v.blank?}
+        result = super.compact_blank
         raise KeyEror.new("Serializer must define :crowdin_key for curriculum content I18N serialization; got #{result.keys.inspect}") unless result.key?(:crowdin_key)
         # We override the default serialization for single objects because we want the crowdin_key
         # moved outside the object. For example:

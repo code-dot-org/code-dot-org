@@ -1,16 +1,18 @@
 /**
  * Table displaying a summary of application statuses
  */
+import {difference, upperFirst} from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table, Button} from 'react-bootstrap';
-import {StatusColors, getApplicationStatuses} from './constants';
-import {difference, upperFirst} from 'lodash';
+import {Table, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import color from '@cdo/apps/util/color';
+
+import {StatusColors, getApplicationStatuses} from './constants';
 
 const ApplicationDataPropType = PropTypes.shape({
   total: PropTypes.number.isRequired,
-  locked: PropTypes.number
+  locked: PropTypes.number,
 });
 
 export class SummaryTable extends React.Component {
@@ -19,17 +21,17 @@ export class SummaryTable extends React.Component {
     data: PropTypes.objectOf(ApplicationDataPropType),
     path: PropTypes.string.isRequired,
     id: PropTypes.string,
-    isWorkshopAdmin: PropTypes.bool
+    isWorkshopAdmin: PropTypes.bool,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   tableBody() {
     const totals = {
       locked: 0,
-      all: 0
+      all: 0,
     };
 
     const statusesInOrder = difference(
@@ -41,8 +43,9 @@ export class SummaryTable extends React.Component {
         'pending',
         'pending_space_availability',
         'accepted',
+        'enrolled',
         'declined',
-        'withdrawn'
+        'withdrawn',
       ],
       this.props.isWorkshopAdmin ? [] : ['incomplete']
     );
@@ -68,7 +71,7 @@ export class SummaryTable extends React.Component {
       <tr key="totals-row" style={styles.totalsRow}>
         <td style={{textAlign: 'right'}}>Total</td>
         <td>{totals.all}</td>
-      </tr>
+      </tr>,
     ];
   }
 
@@ -116,21 +119,21 @@ export class SummaryTable extends React.Component {
 const styles = {
   table: {
     paddingLeft: '15px',
-    paddingRight: '15px'
+    paddingRight: '15px',
   },
   tableWrapper: {
-    paddingBottom: '30px'
+    paddingBottom: '30px',
   },
   totalsRow: {
     fontWeight: 'bold',
     borderTopStyle: 'solid',
     borderTopWidth: 2,
-    borderTopColor: color.charcoal
+    borderTopColor: color.charcoal,
   },
   statusCell: StatusColors,
   viewApplicationsButton: {
-    marginRight: '10px'
-  }
+    marginRight: '10px',
+  },
 };
 
 export default SummaryTable;

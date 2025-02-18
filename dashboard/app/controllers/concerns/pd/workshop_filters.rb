@@ -21,7 +21,7 @@ module Pd::WorkshopFilters
   #  - course: null (all), 'csf', or '-csf' (not CSF)
   def load_filtered_ended_workshops
     # Default to the last week, by schedule
-    end_date = params[:end] || Date.today
+    end_date = params[:end] || Time.zone.today
     start_date = params[:start] || (end_date - 1.week)
     query_by = params[:query_by] || QUERY_BY_SCHEDULE
     course = params[:course]
@@ -171,13 +171,11 @@ module Pd::WorkshopFilters
     )
   end
 
-  private
-
   # Verifies a date string is valid
   # param @date_str [String] the string to verify
   # raises [ArgumentError] if the date string is invalid
   # returns [String] the original value
-  def ensure_date(date_str)
+  private def ensure_date(date_str)
     # will raise ArgumentError if it's not a valid date string
     DateTime.parse(date_str) && date_str
   end

@@ -1,0 +1,10 @@
+name 'data_sci ch1_project'
+title 'Chapter 1 Project'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'data_sci ch1_dataQ'
+level 'data_sci ch1_analysis'
+level 'data_sci ch1_process'
+level 'data_sci ch1_ethical_usage'

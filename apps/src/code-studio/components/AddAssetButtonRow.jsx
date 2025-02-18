@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import AssetUploader from './AssetUploader';
-import Button from '../../templates/Button';
-import i18n from '@cdo/locale';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {isIE11} from '@cdo/apps/util/browser-detector';
+import i18n from '@cdo/locale';
+
+import AssetUploader from './AssetUploader';
 
 export const assetButtonStyles = {
   button: {
@@ -12,13 +14,13 @@ export const assetButtonStyles = {
     marginTop: 5,
     fontSize: 'large',
     fontWeight: 'lighter',
-    marginRight: 10
+    marginRight: 10,
   },
   buttonRow: {
     display: 'flex',
     flexFlow: 'row',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 const RecordButton = ({onSelectRecord, disabled}) => (
@@ -38,7 +40,7 @@ const RecordButton = ({onSelectRecord, disabled}) => (
 
 RecordButton.propTypes = {
   onSelectRecord: PropTypes.func,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 /**
@@ -55,7 +57,7 @@ export default class AddAssetButtonRow extends React.Component {
     onSelectRecord: PropTypes.func.isRequired,
     statusMessage: PropTypes.string,
     recordDisabled: PropTypes.bool,
-    hideAudioRecording: PropTypes.bool
+    hideAudioRecording: PropTypes.bool,
   };
 
   render() {

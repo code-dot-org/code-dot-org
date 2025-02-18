@@ -1,0 +1,100 @@
+name 'VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_ph_-foundations-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Input and Output Features on the Front
+
+#### Throughout the Computer Systems and Devices unit, students will develop programs that utilize hardware inputs and outputs.<br><br> Let's explore the features on the front of the micro:bit! 
+<br>
+
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"> 
+
+## Key Vocabulary
+
+* #### **Input** - the information computers get from users, devices, or other computers.
+* #### **Output** - the information computers give to users, devices, or other computers.
+</p></div>
+
+## The micro:bit Inputs and Outputs
+
+#### The micro:bit is a simple single board computer with many built in inputs and outputs for students to explore. Students will first explore this concept by turning an LED light on and off. 
+
+## Features on the Front
+
+<img src="https://images.code.org/0150993dcb2c9078e6d358b02f4c0f3d-image-1681166384281.png" style="width:500px; margin-left:200px; margin-bottom:5px;">
+<br>
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">1) A Button</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### The A (left) button is available in code as `buttonA`. This button is identical to the B Button - other than location.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">2) Input/Output Pins</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### The **Input/Output Pins** on the micro:bit are "0", "1", and "2". These allow you to connect LEDs or buttons.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">3) 3 Volt Pin</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### The **"3V pin** is the 3 volt power pin that you can use to power external LEDs and other electronics.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">4) Ground Pin</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### The **GND pin** is the ground pin. It's used to complete electrical circuits when you connect headphones, LEDs, or external switches to the micro:bit.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">5) B Button</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### The B (right) button is available in code as `buttonB`. This button is identical to the A Button - other than location.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">6) LED Lights & Light Sensor</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:100px;">
+    <p><img src="https://images.code.org/a5e885401f1337fcc29374bb7bfd3a18-image-1681167337528.gif" style="width:200px; float:left; margin: 5px 20px 0px 10px;">
+
+#### **The Light Emitting Diode (LED)**
+
+#### When a computer only needs to communicate simple information, often a blinky light is the quickest and easiest way to do so. LEDs, or Light Emitting Diodes, are small, low power, and easy to use devices for communicating with light. 
+
+#### The LED is probably the simplest form of output available and the micro:bit has a display of 25 red LEDs for you to program. The LEDs are arranged in a 5x5 grid allowing it to disiplay patterns, images, letters, or numbers. 
+
+#### **Light Sensor**
+
+#### The LED Screen also contains a light sensor, which can detect how bright or how dim the environment is. This sensor is a form of input that gives a range of values from 0 (very dark) to 255 (very bright).
+
+</p></div>
+</details>
+
+
+
+<div style="clear:both"/>
+MARKDOWN

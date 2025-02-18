@@ -3,11 +3,14 @@
  */
 var commonMsg = require('@cdo/locale');
 
+var BlockStyles = require('./blockly/constants').BlockStyles;
+var BlockColors = require('./blockly/constants').BlockColors;
+
 /**
  * Install extensions to Blockly's language and JavaScript generator
  * @param blockly instance of Blockly
  */
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -19,26 +22,40 @@ exports.install = function(blockly, blockInstallOptions) {
   installWhenRun(blockly, skin, isK1);
   installJoinBlock(blockly);
   installCommentBlock(blockly);
+  // The custom block supports the US English spelling of "color"
+  installCustomColourRandomBlock(blockly);
 };
 
 function installControlsRepeatSimplified(blockly, skin) {
   // Re-uses the repeat block generator from core
-  blockly.JavaScript.controls_repeat_simplified =
-    blockly.JavaScript.controls_repeat;
-  blockly.JavaScript.controls_repeat_simplified_dropdown =
-    blockly.JavaScript.controls_repeat;
+  blockly.customBlocks.copyBlockGenerator(
+    blockly.JavaScript,
+    'controls_repeat_simplified',
+    'controls_repeat'
+  );
+  blockly.customBlocks.copyBlockGenerator(
+    blockly.JavaScript,
+    'controls_repeat_simplified_dropdown',
+    'controls_repeat'
+  );
 
   blockly.Blocks.controls_repeat_simplified = {
     // Repeat n times (internal number) with simplified UI
-    init: function() {
+    init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput()
-        .appendField(blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT)
+        .appendField(
+          blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
+        )
         .appendField(
           new blockly.FieldTextInput(
             '10',
-            blockly.FieldTextInput.nonnegativeIntegerValidator
+            blockly.cdoUtils.nonnegativeIntegerValidator
           ),
           'TIMES'
         );
@@ -48,16 +65,22 @@ function installControlsRepeatSimplified(blockly, skin) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(blockly.Msg.CONTROLS_REPEAT_TOOLTIP);
-    }
+    },
   };
 
   blockly.Blocks.controls_repeat_simplified_dropdown = {
     // Repeat n times (internal number) with simplified UI
-    init: function() {
+    init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput()
-        .appendField(blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT)
+        .appendField(
+          blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
+        )
         .appendField(new blockly.FieldDropdown(), 'TIMES');
       this.appendStatementInput('DO').appendField(
         new blockly.FieldImage(skin.repeatImage)
@@ -65,45 +88,64 @@ function installControlsRepeatSimplified(blockly, skin) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(blockly.Msg.CONTROLS_REPEAT_TOOLTIP);
-    }
+    },
   };
 }
 
 function installControlsRepeatDropdown(blockly) {
-  blockly.JavaScript.controls_repeat_dropdown =
-    blockly.JavaScript.controls_repeat;
+  blockly.customBlocks.copyBlockGenerator(
+    blockly.JavaScript,
+    'controls_repeat_dropdown',
+    'controls_repeat'
+  );
 
   blockly.Blocks.controls_repeat_dropdown = {
     // Repeat n times (internal number) with a customizable dropdown of # choices.
-    init: function() {
+    init: function () {
       this.setHelpUrl(blockly.Msg.CONTROLS_REPEAT_HELPURL);
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.appendDummyInput()
-        .appendField(blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT)
+        .appendField(
+          blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT || commonMsg.repeat()
+        )
         .appendField(new blockly.FieldDropdown(), 'TIMES')
-        .appendField(blockly.Msg.CONTROLS_REPEAT_TITLE_TIMES);
+        .appendField(
+          blockly.Msg.CONTROLS_REPEAT_TITLE_TIMES || commonMsg.times()
+        );
       this.appendStatementInput('DO').appendField(
         blockly.Msg.CONTROLS_REPEAT_INPUT_DO
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(blockly.Msg.CONTROLS_REPEAT_TOOLTIP);
-    }
+    },
   };
 }
 
 function installNumberDropdown(blockly) {
-  blockly.JavaScript.math_number_dropdown = blockly.JavaScript.math_number;
+  blockly.customBlocks.copyBlockGenerator(
+    blockly.JavaScript,
+    'math_number_dropdown',
+    'math_number'
+  );
 
   blockly.Blocks.math_number_dropdown = {
     // Numeric value with a customizable dropdown.
-    init: function() {
+    init: function () {
       this.setHelpUrl(blockly.Msg.MATH_NUMBER_HELPURL);
-      Blockly.cdoUtils.setHSV(this, 258, 0.35, 0.62);
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.MATH,
+        BlockStyles.MATH
+      );
       this.appendDummyInput().appendField(new blockly.FieldDropdown(), 'NUM');
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(blockly.Msg.MATH_NUMBER_TOOLTIP);
-    }
+    },
   };
 }
 
@@ -112,28 +154,39 @@ function installNumberDropdown(blockly) {
 function installPickOne(blockly) {
   blockly.Blocks.pick_one = {
     // Repeat n times (internal number).
-    init: function() {
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+    init: function () {
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
 
       // Not localized as this is only used by level builders
       this.appendDummyInput().appendField(
         'Pick one (Use only in required blocks)'
       );
       this.appendStatementInput('PICK');
+    },
+  };
+  Blockly.customBlocks.defineNewBlockGenerator(
+    blockly.JavaScript,
+    'pick_one',
+    () => {
+      return '\n';
     }
-  };
-
-  blockly.JavaScript.pick_one = function() {
-    return '\n';
-  };
+  );
 }
 
 // A "Category" block for level editing, for delineating category groups.
 function installCategory(blockly) {
   blockly.Blocks.category = {
     // Repeat n times (internal number).
-    init: function() {
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+    init: function () {
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.setInputsInline(true);
 
       // Not localized as this is only used by level builders
@@ -142,24 +195,31 @@ function installCategory(blockly) {
         .appendField(new blockly.FieldTextInput('Name'), 'CATEGORY');
       this.setPreviousStatement(false);
       this.setNextStatement(false);
+    },
+  };
+  Blockly.customBlocks.defineNewBlockGenerator(
+    blockly.JavaScript,
+    'category',
+    () => {
+      return '\n';
     }
-  };
-
-  blockly.JavaScript.category = function() {
-    return '\n';
-  };
+  );
 
   blockly.Blocks.custom_category = {
     // Repeat n times (internal number).
-    init: function() {
-      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+    init: function () {
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.LOOP,
+        BlockStyles.LOOP
+      );
       this.setInputsInline(true);
 
       var customDropdown = new blockly.FieldDropdown([
         ['Variables', 'VARIABLE'],
         ['Functions', 'PROCEDURE'],
         ['Behaviors', 'Behavior'],
-        ['Locations', 'Location']
+        ['Locations', 'Location'],
       ]);
       // Not localized as this is only used by level builders
       this.appendDummyInput()
@@ -167,20 +227,28 @@ function installCategory(blockly) {
         .appendField(customDropdown, 'CUSTOM');
       this.setPreviousStatement(false);
       this.setNextStatement(false);
-    }
+    },
   };
 
-  blockly.JavaScript.custom_category = function() {
-    return '\n';
-  };
+  Blockly.customBlocks.defineNewBlockGenerator(
+    blockly.JavaScript,
+    'custom_category',
+    () => {
+      return '\n';
+    }
+  );
 }
 
 function installWhenRun(blockly, skin, isK1) {
   blockly.Blocks.when_run = {
     // Block to handle event where mouse is clicked
     helpUrl: '',
-    init: function() {
-      Blockly.cdoUtils.setHSV(this, 39, 1.0, 0.99);
+    init: function () {
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.SETUP,
+        BlockStyles.SETUP
+      );
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.whenRun())
@@ -190,136 +258,50 @@ function installWhenRun(blockly, skin, isK1) {
       }
       this.setPreviousStatement(false);
       this.setNextStatement(true);
+      Blockly.customBlocks.addSerializationHooksToBlock(this);
     },
-    shouldBeGrayedOut: function() {
+    shouldBeGrayedOut: function () {
       return false;
-    }
+    },
   };
 
-  blockly.JavaScript.when_run = function() {
-    // Generate JavaScript for handling click event.
-    return '\n';
-  };
+  Blockly.customBlocks.defineNewBlockGenerator(
+    blockly.JavaScript,
+    'when_run',
+    () => {
+      // Generate JavaScript for handling click event.
+      return '\n';
+    }
+  );
 }
 
 function installJoinBlock(blockly) {
-  blockly.Blocks.text_join_simple = {
-    init: function() {
-      this.helpUrl = '';
-      this.setColour(160);
-      this.setOutput(true, Blockly.BlockValueType.STRING);
-      this.setTooltip(commonMsg.joinTextTooltip());
-      this.inputCount = 0;
-    },
-
-    getCustomContextMenuItems: function() {
-      return [
-        {
-          text: `Set number of inputs (current: ${this.inputCount})`,
-          enabled: true,
-          callback: function() {
-            var ret = prompt('Number of inputs', this.inputCount);
-            if (ret === '???') {
-              this.setInputCount(ret);
-            } else if (ret !== '') {
-              this.setInputCount(parseInt(ret));
-            }
-          }.bind(this)
-        }
-      ];
-    },
-
-    setInputCount: function(inputCount) {
-      let newInputCount;
-      if (inputCount === '???') {
-        newInputCount = 2;
-      } else {
-        newInputCount = Math.max(parseInt(inputCount), 2);
-      }
-      if (newInputCount > this.inputCount) {
-        for (var i = this.inputCount; i < newInputCount; i++) {
-          var input = this.appendValueInput('ADD' + i);
-          if (i === 0) {
-            input.appendField(commonMsg.joinText());
-          }
-        }
-      } else {
-        for (i = this.inputCount - 1; i >= newInputCount; i--) {
-          this.removeInput('ADD' + i);
-        }
-      }
-      if (inputCount === '???') {
-        this.inputCount = inputCount;
-      } else {
-        this.inputCount = newInputCount;
-      }
-    },
-
-    pendingConnection: function(oldConnection, newConnection) {
-      var lastConnectionIndex = 0;
-      var oldConnectionIndex = -1;
-      var newConnectionIndex = -1;
-      for (var i = 0; i < this.inputList.length; i++) {
-        var connection = this.inputList[i].connection;
-        if (connection.targetConnection) {
-          lastConnectionIndex = i;
-        }
-        if (connection === oldConnection) {
-          oldConnectionIndex = i;
-        }
-        if (connection === newConnection) {
-          newConnectionIndex = i;
-        }
-      }
-
-      var toEnd = newConnectionIndex >= lastConnectionIndex;
-      var fromEnd = oldConnectionIndex >= lastConnectionIndex;
-
-      if (this.delayedResize && toEnd ^ fromEnd) {
-        window.clearTimeout(this.delayedResize);
-        this.delayedResize = null;
-      }
-      if (toEnd && !fromEnd) {
-        this.setInputCount(lastConnectionIndex + 2);
-      } else if (fromEnd && !toEnd) {
-        this.delayedResize = window.setTimeout(
-          () => this.setInputCount(lastConnectionIndex + 1),
-          100
-        );
-      }
-    }
-  };
-
-  blockly.JavaScript.text_join_simple = function() {
-    var parts = new Array(this.inputCount === '???' ? 2 : this.inputCount);
-    for (var n = 0; n < this.inputCount; n++) {
-      parts[n] =
-        Blockly.JavaScript.valueToCode(
-          this,
-          'ADD' + n,
-          Blockly.JavaScript.ORDER_COMMA
-        ) || "''";
-    }
-    var code = `[${parts.join(',')}].join('')`;
-    return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
-  };
+  Blockly.customBlocks.installJoinBlock(blockly);
+}
+function installCustomColourRandomBlock(blockly) {
+  Blockly.customBlocks.installCustomColourRandomBlock(blockly);
 }
 
 function installCommentBlock(blockly) {
   blockly.Blocks.comment = {
-    init: function() {
-      Blockly.cdoUtils.setHSV(this, 0, 0, 0.6);
+    init: function () {
+      // Comment blocks use a hard-coded HSV color and are not compatible with themes.
+      Blockly.cdoUtils.handleColorAndStyle(this, BlockColors.COMMENT);
       this.appendDummyInput()
         .appendField(commonMsg.commentPrefix())
         .appendField(new Blockly.FieldTextInput(''), 'TEXT');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(commonMsg.commentTooltip());
-    }
+    },
   };
 
-  blockly.JavaScript.comment = function() {
-    var comment = this.getFieldValue('TEXT');
-    return `// ${comment}\n`;
-  };
+  Blockly.customBlocks.defineNewBlockGenerator(
+    blockly.JavaScript,
+    'comment',
+    function () {
+      var comment = this.getFieldValue('TEXT');
+      return `// ${comment}\n`;
+    }
+  );
 }

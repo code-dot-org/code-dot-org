@@ -20,13 +20,16 @@ end
 
 get '/api/hour/begin/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
+  tutorial = Tutorials.new(:tutorials).find_with_code(code)
+  tutorial ||= Tutorials.new(:tutorials_more).find_with_code(code)
+
+  pass unless tutorial
 
   # set company to nil if not a valid company
   company = request.GET['company'] || request.cookies['company']
   # Pass through the company param to the congrats page only if an entry exists in the forms.
-  unless company.nil?
-    company = nil unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
+  if !company.nil? && !DB[:forms].where(kind: 'CompanyProfile', name: company).first
+    company = nil
   end
 
   launch_tutorial(tutorial, company: company)
@@ -38,13 +41,19 @@ end
 # reenable this in a scalable way or remove it entirely.
 get '/api/hour/begin_learn/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
+  tutorial = Tutorials.new(:tutorials).find_with_code(code)
+  tutorial ||= Tutorials.new(:tutorials_more).find_with_code(code)
+
+  pass unless tutorial
   redirect tutorial[:url], 302
 end
 
 get '/api/hour/begin_:code.png' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
+  tutorial = Tutorials.new(:tutorials).find_with_code(code)
+  tutorial ||= Tutorials.new(:tutorials_more).find_with_code(code)
+
+  pass unless tutorial
   launch_tutorial_pixel(tutorial)
 end
 
@@ -55,13 +64,19 @@ end
 
 get '/api/hour/finish/:code' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
+  tutorial = Tutorials.new(:tutorials).find_with_code(code)
+  tutorial ||= Tutorials.new(:tutorials_more).find_with_code(code)
+
+  pass unless tutorial
   complete_tutorial(tutorial)
 end
 
 get '/api/hour/finish_:code.png' do |code|
   only_for ['code.org', 'csedweek.org', partner_sites].flatten
-  pass unless tutorial = Tutorials.new(:tutorials).find_with_code(code)
+  tutorial = Tutorials.new(:tutorials).find_with_code(code)
+  tutorial ||= Tutorials.new(:tutorials_more).find_with_code(code)
+
+  pass unless tutorial
   complete_tutorial_pixel(tutorial)
 end
 

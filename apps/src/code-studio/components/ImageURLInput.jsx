@@ -1,15 +1,16 @@
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import moment from 'moment';
+
+import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
 import InputPrompt from '@cdo/apps/templates/InputPrompt';
 import i18n from '@cdo/locale';
-import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
 
 export default class ImageURLInput extends React.Component {
   static propTypes = {
     assetChosen: PropTypes.func,
     allowedExtensions: PropTypes.string,
-    currentValue: PropTypes.string
+    currentValue: PropTypes.string,
   };
   state = {showError: false};
 
@@ -45,14 +46,14 @@ const styles = {
   supportingText: {
     margin: '1em 0',
     fontSize: '16px',
-    lineHeight: '20px'
+    lineHeight: '20px',
   },
   example: {
     margin: '1em 0',
     fontSize: '16px',
-    lineHeight: '20px'
+    lineHeight: '20px',
   },
   error: {
-    color: 'red'
-  }
+    color: 'red',
+  },
 };

@@ -1,0 +1,111 @@
+name 'ssp-pl-Code_w_AI-nextsteps_24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Next Steps
+
+#### Thank you for completing the **Coding with AI** self-paced professional learning module. Now that you've learned some basic AI partnership strategies, check out our curriculum and professional learning offerings to continue your journey.
+
+## Help us make this module better!
+
+#### Code.org values and is responsive to feedback. Please fill out this <a href="LINK" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
+
+<a class="btn btn-large btn-primary" href="LINK" target="blank" rel="noopener noreferrer">Take the survey</a>
+
+
+## Teach Coding with AI in your class
+#### Explore these curriculum options to get started teaching with and about AI in your class right away. 
+
+
+<table width="1000px">
+	<tr> 
+    	<th style="font-size: 16px;"> <b>Coding with AI</b> <br><i>(6th-12th grade)</i></th>
+        <th style="font-size: 16px;"> <b>How AI Works</b> <br> <i>(6th-12th grade)</i></th>
+        <th style="font-size: 16px;"> <b>AI and Machine Learning</b> <br> <i>(6th - 12th grade)</i></th>
+        <th style="font-size: 16px;"> <b>AI and Ethics </b> <br><i>(7th-12th grade)</i></th>
+    </tr>
+    <tr>
+    	<td>
+         <a href="https://code.org/curriculum/coding-with-ai" target="blank" rel="noopener noreferrer">Coding with AI</a> 
+        	
+        </td>
+    	<td>
+         <a href="https://code.org/ai/how-ai-works" target="blank" rel="noopener noreferrer">How AI Works</a> 
+        	
+        </td>
+        <td>
+         <a href="https://studio.code.org/s/aiml-2023" target="blank" rel="noopener noreferrer">AI and Machine Learning </a> 
+        	
+        </td>
+        <td>
+         <a href="https://studio.code.org/s/ai-ethics-2023/lessons/1" target="blank" rel="noopener noreferrer">AI and Ethics </a> 
+        	
+        </td>
+      </tr>
+     <tr>
+    	<td> <img src="https://images.code.org/0063afa44f459510b53f9134aa102e97-image-1712948564386.png" alt="thumnail for Coding with AI" width="268" style="border-radius:10px;  margin: 0px 10px 0px 0px;"></td>
+    	<td> <img src="https://images.code.org/f6516d0acc1efec8ca7abb3508ddcacb-image-1712948949190.png" alt="thumbnail for How AI Works" width="250" style="border-radius:10px;  margin: 0px 10px 00px 0px;"></td>
+        <td> <img src="https://images.code.org/d20a870ccc6b04da63380d05bce41d06-image-1712949088162.png" alt="thumbnail for AI and Machine Learning" width="250" style="border-radius:10px;  margin: 0px 10px 00px 0px;"></td>
+        <td> <img src="https://images.code.org/ecfe601f4fb5d56cf7795244e4d43d4a-image-1712949346590.png" alt="thumbnail for AI and Ethics" width="270" style="border-radius:10px;  margin: 0px 10px 00px 0px;"></td>
+      </tr>
+      </table>
+<br>
+
+## Continue learning
+#### Learn more about teaching AI with these self-paced professional learning modules. 
+
+<table width="1000px">
+	<tr> 
+    	<th width="33.3%"style="font-size: 14px; padding-right: 10px;"> <b>AI 101 Self-Paced PL </b> </th>
+        <th width="33.3%" style="font-size: 14px; padding-right: 10px;"> <b>AI 101 for Teachers  </b>  </th>
+        <th width="33.3%" style="font-size: 14px; padding-right: 10px;"> <b>Teaching AI and Machine Learning</b> </th>
+        
+    </tr>
+    <tr>
+    	<td style = "padding-right: 20px;">
+         <p> This five part, foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.</p>
+        </td>
+    	<td style = "padding-right: 20px;">
+        <p>
+        This is a foundational learning series for any teacher and educator interested learning about AI and its transformative potential in education.
+        </p>
+        </td>
+        <td style = "padding-right: 20px;">
+			<p>
+            This course provides an introduction to artificial intelligence and machine learning. Train a machine learning model using AI Lab and engage with machine learning apps. 
+            </p>
+        </td>
+        
+      </tr>
+     <tr>
+    	<td> <img src= "https://images.code.org/6b3fa240c139dd6e10b453c67f17fc58-image-1716322075536.png" alt="thumbnail for the AI 101 self-paced professional learniing module" width="315" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
+        
+    	<td><img src="https://images.code.org/f65ed33537cc1319f101902479a21f50-image-1712950126755.png" alt="thumbnail for AI 101" width="325" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
+        
+        <td><img src="https://images.code.org/874607855273e71341babc00d4dbc8df-image-1712949845614.png" alt="thumbnail for teaching AI and Machine learning" width="290" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
+      </tr>
+      
+      
+      <tr>
+      		<td><a href="https://studio.code.org/courses/self-paced-pl-ai-101-2024" target="blank" rel="noopener noreferrer">AI 101 Self-Paced PL </a></td>
+        	<td><a href="https://code.org/ai/pl/101" target="blank" rel="noopener noreferrer">AI 101 for Teachers </a></td>
+         	 <td><a href="https://studio.code.org/courses/self-paced-pl-aiml-2023" target="blank" rel="noopener noreferrer">Teaching AI and Machine Learning </a></td>
+      </tr>
+  </table>
+
+<p>
+
+
+## Stay connected 
+
+* #### Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org teacher forum</a>. 
+
+* #### Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.
+
+* #### Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>. 
+
+<br>
+</p>
+
+MARKDOWN

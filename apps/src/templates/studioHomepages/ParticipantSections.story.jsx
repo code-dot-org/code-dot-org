@@ -1,8 +1,10 @@
-import React from 'react';
-import ParticipantSections from './ParticipantSections';
 import {action} from '@storybook/addon-actions';
-import {reduxStore} from '@cdo/storybook/decorators';
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import ParticipantSections from './ParticipantSections';
 
 const sections = [
   {
@@ -13,7 +15,7 @@ const sections = [
     linkToAssigned: 'to Course',
     numberOfStudents: 14,
     linkToStudents: 'to Manage Students tab',
-    code: 'ABCDEF'
+    code: 'ABCDEF',
   },
   {
     name: 'Algebra Period 2',
@@ -23,7 +25,7 @@ const sections = [
     linkToAssigned: 'to Course',
     numberOfStudents: 19,
     linkToStudents: 'to Manage Students tab',
-    code: 'EEB206'
+    code: 'EEB206',
   },
   {
     name: 'Period 3',
@@ -33,13 +35,12 @@ const sections = [
     linkToAssigned: 'to Course',
     numberOfStudents: 22,
     linkToStudents: 'to Manage Students tab',
-    code: 'HPRWHG'
-  }
+    code: 'HPRWHG',
+  },
 ];
 
 export default {
-  title: 'ParticipantSections',
-  component: ParticipantSections
+  component: ParticipantSections,
 };
 
 const Template = args => {
@@ -56,18 +57,18 @@ const Template = args => {
 
 export const StudentNoSectionsExample = Template.bind({});
 StudentNoSectionsExample.args = {
-  sections: []
+  sections: [],
 };
 
 export const StudentEnrolledInSectionsExample = Template.bind({});
 StudentEnrolledInSectionsExample.args = {
-  sections: sections
+  sections: sections,
 };
 
 export const TeacherEnrolledAsStudentsWithPermissionExample = Template.bind({});
 TeacherEnrolledAsStudentsWithPermissionExample.args = {
   sections: sections,
-  isTeacher: true
+  isTeacher: true,
 };
 
 export const PLTeacherEnrolledAsStudentsWithPermissionExample = Template.bind(
@@ -76,5 +77,5 @@ export const PLTeacherEnrolledAsStudentsWithPermissionExample = Template.bind(
 PLTeacherEnrolledAsStudentsWithPermissionExample.args = {
   sections: sections,
   isTeacher: true,
-  isPlSections: true
+  isPlSections: true,
 };

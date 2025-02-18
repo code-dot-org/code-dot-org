@@ -1,18 +1,18 @@
 require 'nokogiri'
 
-IGNORED_SOLUTION_BLOCK_ATTRS = {
-  'uservisible' => 'false',
-  'deletable' => 'false',
-  'editable' => 'false',
-  'disabled' => 'true',
-  'movable' => 'false'
-}.freeze
-NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'.freeze
-STRIPPED_NODES_XPATH = './next|./value|./statement|./title'.freeze
-STRIPPED_ATTRS = (['id', 'inline'] + IGNORED_SOLUTION_BLOCK_ATTRS.keys).freeze
-
 module SolutionBlocks
   extend ActiveSupport::Concern
+
+  IGNORED_SOLUTION_BLOCK_ATTRS = {
+    'uservisible' => 'false',
+    'deletable' => 'false',
+    'editable' => 'false',
+    'disabled' => 'true',
+    'movable' => 'false'
+  }.freeze
+  NEW_CATEGORY_XML = '<category name="NEW BLOCKS"/>'.freeze
+  STRIPPED_NODES_XPATH = './next|./value|./statement|./title'.freeze
+  STRIPPED_ATTRS = (['id', 'inline'] + IGNORED_SOLUTION_BLOCK_ATTRS.keys).freeze
 
   def strip_block(block)
     stripped_block = block.dup
@@ -24,7 +24,7 @@ module SolutionBlocks
     return stripped_block.to_xml
   end
 
-  def get_solution_blocks(create_for_toolbox=true)
+  def get_solution_blocks(create_for_toolbox = true)
     solution = Nokogiri::XML(properties['solution_blocks'])
 
     # flatten
@@ -38,7 +38,7 @@ module SolutionBlocks
     end
 
     # sanitize
-    solution_blocks.map!(&method(:strip_block))
+    solution_blocks.map! {|solution_block| strip_block(solution_block)}
 
     if create_for_toolbox
       # uniqueify and sort

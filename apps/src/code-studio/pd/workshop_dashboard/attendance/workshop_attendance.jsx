@@ -6,25 +6,34 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Row, Col, ButtonToolbar, Button, Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-import SessionTime from '../components/session_time';
-import Spinner from '../../components/spinner';
-import SessionAttendance from './session_attendance';
-import {PermissionPropType, WorkshopAdmin, Organizer} from '../permission';
+
 import color from '@cdo/apps/util/color';
-import {Row, Col, ButtonToolbar, Button, Tabs, Tab} from 'react-bootstrap';
+
+import Spinner from '../../../../sharedComponents/Spinner';
+import SessionTime from '../components/session_time';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  Organizer,
+  Facilitator,
+  ProgramManager,
+} from '../permission';
+
+import SessionAttendance from './session_attendance';
 
 export class WorkshopAttendance extends React.Component {
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   static propTypes = {
     permission: PermissionPropType.isRequired,
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired,
-      sessionId: PropTypes.string
-    }).isRequired
+      sessionId: PropTypes.string,
+    }).isRequired,
   };
 
   state = {
@@ -34,7 +43,7 @@ export class WorkshopAttendance extends React.Component {
     numPendingSaves: 0,
     lastSaveFailed: false,
     accountRequiredForAttendance: true,
-    scholarshipWorkshop: undefined
+    scholarshipWorkshop: undefined,
   };
 
   hasWorkshopEnded() {
@@ -49,7 +58,7 @@ export class WorkshopAttendance extends React.Component {
     this.loadSummaryRequest = $.ajax({
       method: 'GET',
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/summary`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       // No session Id, or an invalid session Id in the Url? Redirect to the first one.
       if (
@@ -65,7 +74,7 @@ export class WorkshopAttendance extends React.Component {
         accountRequiredForAttendance: data['account_required_for_attendance?'],
         scholarshipWorkshop: data['account_required_for_attendance?'],
         course: data.course,
-        enrollmentCount: data.enrollment_count
+        enrollmentCount: data.enrollment_count,
       });
     });
   }
@@ -121,7 +130,7 @@ export class WorkshopAttendance extends React.Component {
     const numPendingSaves = this.state.numPendingSaves - 1;
     this.setState({
       numPendingSaves,
-      lastSaveFailed
+      lastSaveFailed,
     });
   };
 
@@ -132,7 +141,12 @@ export class WorkshopAttendance extends React.Component {
 
     const isReadOnly =
       this.hasWorkshopEnded() &&
-      !this.props.permission.hasAny(WorkshopAdmin, Organizer);
+      !this.props.permission.hasAny(
+        WorkshopAdmin,
+        Organizer,
+        Facilitator,
+        ProgramManager
+      );
 
     let intro = null;
     if (isReadOnly) {
@@ -150,9 +164,7 @@ export class WorkshopAttendance extends React.Component {
     } else {
       const activeSession = this.state.sessions.find(s => s['show_link?']);
       const attendanceUrl = activeSession
-        ? `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${
-            activeSession.code
-          }`
+        ? `${window.location.protocol}${window.dashboard.CODE_ORG_URL}/pd/${activeSession.code}`
         : null;
       intro = (
         <div>
@@ -238,11 +250,11 @@ export class WorkshopAttendance extends React.Component {
 const styles = {
   saveStatus: {
     error: {
-      color: color.red
-    }
-  }
+      color: color.red,
+    },
+  },
 };
 
 export default connect(state => ({
-  permission: state.workshopDashboard.permission
+  permission: state.workshopDashboard.permission,
 }))(WorkshopAttendance);

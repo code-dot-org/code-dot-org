@@ -1,23 +1,22 @@
 name 'U2L07 Assessment2'
-encrypted '2r97FUpSnrORVUk/a18iKklKg4TmRLX7VwkEB8+5jpuVXnOP0sJa80Ragufy
-1BbZ9ofqbKikxOD1v5XrxWf0UNtmbhMVvR6+LogxdZbFhJcdgy4W3L3nJCeH
-uUsxB/3C2S5YO1AlUeMHk34yU6MDgNXRy9HecYSkrC1+rzQ+dj/kIRIcNDrO
-H/pbuT/cuzX7n7EJ/4dF1eTPbXEIsQ5zz3dBGiGWQFCfpozwisI0WPfnI/yp
-v4QPzEs4SAgakOiYh4zhJ/HziAIYCslxDyv/mLugmymsCPHoFuu54dxt/PI7
-/aXCiZjusAmBOuC7VtHM4fiSS/WVPPNPx+zaZyYA+zd4NSKyAyWVLd2dcFt/
-p/rqjl46B/9ibAfRa3yMAgx8Q3OTyo/GfC9sa4hgRmUq9uC7Vu8rlW9boJ2A
-9eFhgay9OCynoi9Odgh4OIBKtDk2Ac/vdG/ErJG3YVZnCnVKo6NBRwWW42HH
-ZUGeGzpLKPrvq5Th9tREX5PQretdnOKLfjRDjWm6gvCF/d4UeJTsY74i/f38
-hvEGTGd4Pfp2mmc1mJmsf/ZHsCMFl6YueVtwNTJ5sUFZ1Wgc1z1xsOdiOFaO
-qhtumiybFVpbC8uZ+WWkvS94T+zrHYSWUUNllH/itIFG9GElpw+MeGLxIbJC
-TAnG9V1TuB819mBqo8ZetJ3+BKeETeiEIA8QO/EIeT4pkWO1k3o06drjcByd
-WlzgrHWv7ITtzaPJbMrZ5lT+CiCbDYdggN5Pb3wH4EwTlbNumnUowXD2L56m
-e/Mmz3FjZx8B+/45pYHEY0ZlbuUiX1mE6KH5LdYSAhm9Tkut0UWrpsiNnFvY
-0OgyYHcg8JT6CMX5goYwdHr0+ZtOogsX82IyjUg/5Kl0QnuiDfZNxSUdQ1O2
-jGrc4bGjeDw3nmf55s+RP8bLH/nlXSPDo0BxA5t+PqF2dZuXtNfzhjVj7D+o
-EyfULacYrAEuVMbhIWScm8u6B6cjq8MdX17ZcuaLQrproRdZ2SO5HFnBe5pp
-2n1dFYmA5P1Q5ChZq4JeN6pR3qvCtMaN+TUTOJGjMMK7KcIiRoiHvoxyFJ3z
-oF1cOFajTV1+jITQ/vWIa0mXmS0qPAsGQwg0SQAgoDHt3yXKF3GeOE6mnesV
-QtFfaZEXYjJy3YX0twiPunzh9ydZSiPRzLTiGeMRiLcQGFAQuDbjjy/NEece
-N3tJDHNNTNGSgUUsjvYvc6MHY0wnPMjwwRPKtP+zTyYFGFMERGGNNt8Haa8=
-'
+title 'Question 2'
+hide_submit true
+answer_line true
+
+question 'Which of the following statements is FALSE about minimum spanning trees (from the previous lesson) and shortest path trees:'
+wrong 'The minimum spanning tree algorithm you learned does not necessarily need to try every edge.'
+wrong 'A minimum spanning tree contains the shortest path between the starting vertex and every other reachable vertex in the graph.'
+right 'The shortest path algorithm you learned visits each vertex and edge once.'
+wrong 'Both the minimum spanning tree algorithm you learned and the
+shortest path algorithm you learned used a “greedy” approach,
+choosing the smallest edge first or vertex with the smallest distance value first.'
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- B. The shortest path algorithm you learned visits each vertex and edge once.
+MARKDOWN
+
+allow_multiple_attempts true

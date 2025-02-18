@@ -1,0 +1,24 @@
+name 'virtual-pl-csd-summer-day5-AsyncIntro'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Day 5, Asynchronous Part 1
+
+##### The CS community can help students see the real-world relevance of CS and how they fit into CS. It is also important for teachers to connect with other CS educators in order to learn and grow as professionals. 
+
+<img src="https://images.code.org/27326a0bfbdb02a27ddf5e0264357ae3-image-1684378334965.52.11 PM.png" alt="A student points two finger guns jokingly at their computer. Two students and a teacher look on with them." style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 20px;">
+
+## In this lesson, you will:
+
+* ##### Explore CS Journeys.
+* ##### Make a plan for connecting with your local community.
+* ##### Make a plan for connecting with other CS educators. 
+
+### **Suggested time:** 60 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

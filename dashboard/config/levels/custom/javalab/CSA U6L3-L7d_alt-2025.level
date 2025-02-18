@@ -1,0 +1,37 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:51:00.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A nutritionist wants to calculate the nutritional value of a recipe.\r\n\r\n✅ **TO DO #1:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Recipe</code> class, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcValue()</code> method to calculate and return the nutritional value of a recipe.\r\n\r\n✅ **TO DO #2:** In the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">RecipeRunner</code> class, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">calcValue()</code> method and print the result.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Double</code> class in the <strong>Documentation</strong> tab ⬆️ for help with instantiating <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Double</code> objects and using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">doubleValue()</code> method.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "video_key": "csa_wrapper_classes_part_1",
+    "display_name": "Pizza Recipe",
+    "bubble_choice_description": "A nutritionist wants to calculate the nutritional value of a recipe.",
+    "thumbnail_url": "https://images.code.org/158950218221211673f7959945bfed80-recipe.png",
+    "encrypted_validation": "jUIVw/QNHK6OtDdpfomsoGpNZKu4wNPpL1QyVrV2uUUpkjBlw41r8MWiziPL\nGP8/GYuwjqS96axpKtXCd/7y905IZ9pKsqDh3w+s6NieHtIhnSWcjmqI4DgV\nPDNWJ6p8HJscLMSE4fyihfl3RbVgcWB6h+BujONXJ20HNcFH4dCVksrq75Hj\nok1eHY+6DV1XekaylHtxSX2DmMtvblgUdez2qOKxFtsd7r+H8CLQgQ2kxr7i\n2NRFMarFJmYiwHS07MkhKXvTeHbKUWUiSALtx4IWvauiQOt+Wu3tBU6nc6vo\nLqr0zVZkrkWF2YpuXzwEgBFBZFI/hrpMArUuj4mUJOr4ZCphCtWImBb6BxQ4\nm+rnTou3QbqyCc25JETqzTqim9Agrk1aLe9PqbFwIVNt5einkCAsnF3EceUJ\nptPgIQYhRt0gXoi9+KXjsx89+flYIGR2yymXsvviV6si5umZUmHEm24P70lF\nKMkxR542y29weDxwlKSjff4DNPiags9acz3sAbTVVdTDJxWo63+Yp3ppJmWt\nGw81AvqC2gSI3Lv3nACCDDSFv23SWu5sbXNoto0FRLa+9f63WV6kCWJbDpyS\nDQxdWaOPN4PhmSxjyJEvITcwPlf8LteWsfSYE5z4WdfhAOLu0tGdCOyXdjDq\nMaZ2/MBfd1DAbR3+eHVmHTiP57s0rMs4j3/gCOY24PCpkLVSS6IhCA2psY/5\nr0BaF9aAn9lVUcMI7f/95XoKBeUsZ4yU8VMsTaNZYUbWLg2bfeQYC8Yg0gLu\nninmoVkzXpDoytU08fJqTJIDAuM0w+2Zvm/RCCFxognvGrJqFyS+85BT7qF8\ncSehR2PwCiOsp4KXcEzk7BK0d9JsCYwKm1j9aW8SMw6amWtkQ0Ubs0ll95Wh\nWa+o6F5zB90FQkb3MuQtO7+84wbj9899hWL6yRLgKTI7p7qODzACJ/7Jo/B0\nc+SpDqaKaWr/8Bq6LZMf99wM5M3tZavTMWm7DFDZmg2JzHffWmMPvnayj0/P\nFOLVO6jXF6I5ir6Ro8DyTVorCm01BeKGSqcfAtjnHR8DpKavUywJTwSLn5+g\nBZF3OLyzmevutT48RvMoTfNNqMjzHgK9xWPIeQNXRk3fYDj07qEHGGDM8h3i\nL+g2H+BXcVFql2BjG9w5VJNz6AInWP+PrpogYaBTNaYb6t4bMs2DfVNncbAA\nvJSG+ZB0KFw18onT/KR+cJUXjFYQ8p5x9oGl55aco9OaSGlGnN2IC4Yca8Nj\nhka9j7JS7Yi1VZATUNl+YAAiWULshX20Wu7sPmJnv2UgVxRMrn0anLUv4kdc\no/ei8e49Z7q6+M7BtbqE3f9g\n",
+    "encrypted_exemplar_sources": "45C5mytYNiDeiywmNh+i04S//EcPgj7WYTIAoUVNR9SfEW/yDtCeqMgkp+MD\nncvSslQ2qb6xpVZgWHg3TEquX2qUh5ccgXG8XUoRSUnOFUtmbpE8Oby5nYAo\ncQYTkrCLVOl8b+tzr4wtOVMPiVwwq5idbKJF7p5dFWmAlP/72TVwzycc0DzN\nHEwxhLLBhZiXDHSI3TSkqEsGyNEJu0Okz2WzYnkuNJFSFbf/4onZyK+US2S/\nvddwvVZXZts90f6HFNtXDgvMsS45KiDgvY67TMwooC04gYzEMV4OLXbWf5IZ\nm4EkoO8dnJAZkAE0tmkUubgRSVrsVRiXt1+zjmoDmcv8+c2SKILJCeo4+Pz/\nf1TREbCbAnWGE+diMJhC4MrlcoaUzViCyvs6784EPxZP2arImhnIXD/iai+V\nhMfg+CcndxsZ2ghbiVnQGvPVWg/qFzmFiJS/dd2/EX8afe2kaT4FxRKBgu8Q\nqBFSQvsnqOekPCnoXtzejLjrn0ecE6MbnBchxdmBQVr7wvhkxTf+lgzvEumW\nCI4CgtAkBfoFEVrReT8aDMFaB6O4YCnwgyfHV0CI9Afr0zXGKaLGytTH4in+\nhkrgOmoJQihnLaT8XEIHgQ3cL8av9Bwadq8lMZ8LEnlc0O/N73RlXsRBDrmg\noo+e0WFqAK0GlRdhXKcbUySfaTiOp/4IqxwCVnIReeYCR/rgLodW3vNvCmWq\ncqCHIRzr+cgP260NbdrjeUVkj+tv6JQV3GSWKUJ8XkcrR454j0s++j2y9gV5\nk57CyAT1XgBDBx/0iMeYzbFiOfrLNpQMatH5nark07Afbo4rqK3BKVm7ul2/\nNV0nGolouWpT0oiyBc3ZoX3CjBTl+tLZDAFTm3JikJjGmxmwcAu7ViA5Oc+j\nTck3AhIx6gxxFrcwARAZ8nTWxCScQphhfrnsFsQYV9Suf8H+PWPtdNn7uXxY\nxOxmMvpg4My9HFQ647RFxtKLVDUNjiav61Lin9lLb0FUOLrG4LYOhzRFe1/I\norVSUmFDzpIXNf56kgmHmNae0gw0RGUAob09VDwMkeFnhT8PzPhus2FF55mk\nTeNqr64s/Wp4n7vyhDDUbWegnzhNvk/C6uINjkMjWJB3XiY91LPm4088+IAU\nPbaPxGU0W0kUt2aOCqqdJ+aPahTBE4/AVZhLt11UXGytJYGAzHNWcqhJnBD+\nC5QkZmVrtfl+8hJ/UcbKSskR3aLmLv4AvJGXURAB1cfXVJEV0kpdYpz7SoX7\nOewb6lkVP+0cUwpEQPgcy3jgxnaCE0PEIPMQIlBzVAKcE+yHTpfo4PXk6kWg\nFaUWa0PMqWIcG76g9ZiWXaXX1nNdx2pJSQl8gSEA/SJL9TiSwJJ1azrgBJG/\nJhFv8fEAe1y0Y2KUjsR16j3FYkS25FRTsYcXQQ3t8CTHZKk/NyDrGl2gVeWT\nLQ6qlWGJgoMGolDJRsa+3vTBHlmVD01iNdoa5vmiMyyVULnJmVBLzos568Kw\ndCMft02Jsr4xzDnkQ3LnQXBvboaZZgRPppQ9A1z2ynTYR7Z0W8m4I7xdhGOw\n0QGOsZ5Y/CU7wV/arPbfRzuIFXyMjPXYzC0QGnL2Lw4vMtGsPDEg02Bg71CZ\nVw==\n",
+    "start_sources": {
+      "RecipeRunner.java": {
+        "text": "public class RecipeRunner {\n  public static void main(String[] args) {\n\n    // The calories and servings for a recipe\n    String calories = \"170.5\";\n    String servings = \"3.1\";\n    \n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Call calcValue() and print the result.\n     * -----------------------------------------------------------------------------\n     */\n\n\n    \n\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Recipe.java": {
+        "text": "/*\n * Represents a Recipe\n */\npublic class Recipe {\n\n  /*\n   * Returns nutrional value\n   */\n  public static double calcValue(String calories, String servings) {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Convert the calories and servings from a String to a double.\n     * Then multiply the two values together.\n     * -----------------------------------------------------------------------------\n     */\n\n    return -1;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "name_suffix": "_alt-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:51:00.875+00:00\",\"changed\":[\"cloned from \\\"CSA U6L3-L7d_pilot-2025\\\"\"],\"cloned_from\":\"CSA U6L3-L7d_pilot-2025\"}]"
+}]]></config>
+</Javalab>

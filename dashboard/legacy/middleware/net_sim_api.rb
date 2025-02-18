@@ -312,7 +312,7 @@ class NetSimApi < Sinatra::Base
   def validate_router(shard_id, router)
     return VALIDATION_ERRORS[:malformed] unless router.key?('routerNumber')
     existing_routers = get_table(shard_id, TABLE_NAMES[:node]).
-        to_a.select {|x| x['type'] == NODE_TYPES[:router]}
+      to_a.select {|x| x['type'] == NODE_TYPES[:router]}
 
     # Check for routerNumber collisions and router limits
     return VALIDATION_ERRORS[:limit_reached] unless existing_routers.count < CDO.netsim_max_routers
@@ -405,13 +405,11 @@ class NetSimApi < Sinatra::Base
     @@overridden_redis = override_redis
   end
 
-  private
-
   # Returns a new Redis client for the current configuration shard id.
   #
   # @param [String] shard_id
   # @return [Redis]
-  def get_redis_client(shard_id)
+  private def get_redis_client(shard_id)
     return @@overridden_redis unless @@overridden_redis.nil?
     ShardedRedisFactory.new(redis_groups).client_for_key(shard_id)
   end
@@ -436,14 +434,14 @@ class NetSimApi < Sinatra::Base
   # to connect to a single master node at the default port on localhost.
   #
   # @return [Hash<'master':String, 'read_replicas':String[]>[]]
-  def redis_groups
+  private def redis_groups
     CDO.netsim_redis_groups || [{'master' => DEFAULT_LOCAL_REDIS}]
   end
 
   # Get the Pub/Sub API interface for the current configuration
   #
   # @return [PusherApi]
-  def get_pub_sub_api
+  private def get_pub_sub_api
     return @@overridden_pub_sub_api unless @@overridden_pub_sub_api.nil?
     CDO.use_pusher ? PusherApi.new : NullPubSubApi.new
   end
@@ -453,9 +451,9 @@ class NetSimApi < Sinatra::Base
   #
   # @param [Request] request
   # @return [Boolean]
-  def has_json_utf8_headers?(request)
+  private def has_json_utf8_headers?(request)
     request.content_type.to_s.split(';').first == 'application/json' &&
-        request.content_charset.to_s.casecmp?('utf-8')
+      request.content_charset.to_s.casecmp?('utf-8')
   end
 
   # Perform delete operation, potentially on multiple rows at once,
@@ -466,7 +464,7 @@ class NetSimApi < Sinatra::Base
   # @param [String] shard_id
   # @param [String] table_name
   # @param [Array<String>] ids
-  def delete_many(shard_id, table_name, ids)
+  private def delete_many(shard_id, table_name, ids)
     if table_name == TABLE_NAMES[:node]
       # Cascade deletions
       delete_wires_for_nodes(shard_id, ids)
@@ -481,7 +479,7 @@ class NetSimApi < Sinatra::Base
   # @private
   # @param [String] shard_id
   # @param [Array<Integer>] node_ids
-  def delete_wires_for_nodes(shard_id, node_ids)
+  private def delete_wires_for_nodes(shard_id, node_ids)
     wire_table = get_table(shard_id, TABLE_NAMES[:wire])
     wires = wire_table.to_a.select do |wire|
       node_ids.any? do |node_id|
@@ -497,7 +495,7 @@ class NetSimApi < Sinatra::Base
   # @private
   # @param [String] shard_id
   # @param [Array<Integer>] node_ids
-  def delete_messages_for_nodes(shard_id, node_ids)
+  private def delete_messages_for_nodes(shard_id, node_ids)
     message_table = get_table(shard_id, TABLE_NAMES[:message])
     messages = message_table.to_a.select do |message|
       node_ids.member? message['simulatedBy']
@@ -513,7 +511,7 @@ class NetSimApi < Sinatra::Base
   #   about event counts.
   # @param [String] unit (default 'Count') unit of measurement. For allowed units,
   #   see https://docs.aws.amazon.com/sdkforruby/api/Aws/CloudWatch/Types/MetricDatum.html#unit-instance_method
-  def record_metric(event_type, value = 1, unit = 'Count')
+  private def record_metric(event_type, value = 1, unit = 'Count')
     return unless CDO.netsim_enable_metrics
     Cdo::Metrics.push('NetSimApi',
       [
@@ -551,7 +549,9 @@ end
 def parse_ids_from_query_string(query_string)
   [].tap do |ids|
     CGI.parse(query_string)['id[]'].each do |id|
-      ids << Integer(id, 10) rescue ArgumentError
+      ids << Integer(id, 10)
+    rescue ArgumentError
+      # omit nonintegers
     end
   end
 end

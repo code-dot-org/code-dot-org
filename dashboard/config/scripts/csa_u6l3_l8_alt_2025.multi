@@ -1,0 +1,28 @@
+name 'CSA U6L3-L8_alt-2025'
+title 'Check for Understanding'
+
+right '`-2147483648` (equivalent to `Integer.MIN_VALUE`)'
+wrong '`0`'
+wrong '`1`'
+wrong '`2147483647` (equivalent to `Integer.MAX_VALUE`)'
+wrong '`2147483648`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+Integer val = Integer.MAX_VALUE;
+val = val + 1;
+System.out.println(val);
+```
+
+What is printed as a result of executing the code segment?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In this code segment, the `val` variable is initialized with the maximum value that an `Integer` can hold, which is `Integer.MAX_VALUE`. When `val` is then incremented by `1`, it exceeds the maximum value that an `Integer` can hold, causing it to "wrap around" to the minimum value that an `Integer` can hold, which is `Integer.MIN_VALUE`.
+
+This happens because of integer overflow, which occurs when the value of an integer exceeds the maximum or minimum value that can be represented by the data type. In the case of `Integer.MAX_VALUE`, adding `1` to it causes it to exceed the maximum value, resulting in an overflow and a "wrap around" to `Integer.MIN_VALUE`.
+MARKDOWN

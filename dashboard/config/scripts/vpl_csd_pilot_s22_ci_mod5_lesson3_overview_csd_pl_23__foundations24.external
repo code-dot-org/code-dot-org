@@ -1,0 +1,20 @@
+name 'VPL-CSD-PILOT-S22-CI-mod5-lesson3-overview_CSD_PL_23_-foundations24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Explore Data At A Large Scale
+
+<img src="https://images.code.org/3e976de83848899cb3d32c5b818381da-image-1707775176306.59.31 PM.png" style="float:right; width:300px; border-radius:30px; margin-left:15px; margin-right: 15px;" alt="A teacher crouches next to two students who look on to a laptop.">
+
+#### In **Chapter 1** of the the Data and Society unit, student spend time exploring how computers represent different types of information, or data. In **Chapter 2**, they will learn how data can be used to solve real-word problems, revising the problem solving process through the lens of data analysis. 
+
+#### In the next section of this professional learning module, you will get an introduction to Chapter 2 of the Data and Society unit.
+
+### **You will:**
+
+* #### Apply the problem solving process to solve data problems.
+<br>
+
+#### **Suggested time:** 20 minutes
+MARKDOWN

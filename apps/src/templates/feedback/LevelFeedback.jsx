@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {levelFeedbackType} from './types';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
-import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {levelFeedbackType} from './types';
 
 function LevelFeedback({
   lessonName,
@@ -11,7 +14,7 @@ function LevelFeedback({
   levelNum,
   linkToLevel,
   unitName,
-  feedbacks
+  feedbacks,
 }) {
   const [showingOlderComments, setShowOlderComments] = useState(false);
 
@@ -29,7 +32,7 @@ function LevelFeedback({
           {i18n.feedbackNotificationLesson({
             lessonNum,
             lessonName,
-            levelNum
+            levelNum,
           })}
         </a>
         <div style={styles.unit}>
@@ -57,16 +60,16 @@ function LevelFeedback({
 
 const styles = {
   levelEntry: {
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   lessonDetails: {
-    marginBottom: 4
+    marginBottom: 4,
   },
   lessonLevel: {
     fontSize: 18,
     lineHeight: '24px',
     color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif'
+    ...fontConstants['main-font-semi-bold'],
   },
   unit: {
     color: color.dark_charcoal,
@@ -74,13 +77,13 @@ const styles = {
     lineHeight: '17px',
     marginBottom: 8,
     marginTop: 4,
-    fontFamily: '"Gotham 5r", sans-serif'
+    ...fontConstants['main-font-semi-bold'],
   },
   showOlderComments: {
     float: 'right',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: 16
-  }
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 16,
+  },
 };
 
 LevelFeedback.propTypes = levelFeedbackType;

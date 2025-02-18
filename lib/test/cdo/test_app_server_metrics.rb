@@ -7,7 +7,7 @@ class AppServerMetricsTest < Minitest::Test
   SOCKET_LISTENER = '/tmp/sock'.freeze
 
   def app
-    ok = ->(_) do
+    ok = lambda do |_|
       @app.collect_metrics
       [200, {'Content-Type' => 'text/plain'}, ['OK']]
     end
@@ -23,7 +23,7 @@ class AppServerMetricsTest < Minitest::Test
   def expect_metrics(*metrics)
     @sequence ||= sequence('metrics')
     metrics.each do |name, value|
-      Cdo::Metrics.expects(:put).with("App Server/#{name}", value, {}, {storage_resolution: 1, unit: 'Count'}).in_sequence(@sequence)
+      Cdo::Metrics.expects(:put).with("App Server", name, value, {}, {storage_resolution: 1, unit: 'Count'}).in_sequence(@sequence)
     end
   end
 

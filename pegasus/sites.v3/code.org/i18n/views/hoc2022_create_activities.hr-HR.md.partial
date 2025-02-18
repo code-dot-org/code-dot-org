@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Plesna zabava", body: "Kodirajte plesnu zabavu! Neka u njoj budu Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, glazba iz Disneyevog \"Encanta\" i još mnogo toga!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Pjesničke slike", body: "Dodajte sliku i animaciju klasičnoj pjesmi u ovoj aktivnosti Sat kodiranja!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Umjetnik", body: "Crtajte sjajne slike i dizajne s Umjetnikom!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Laboratorija za Infinity igru", body: "Upotrijebite Laboratoriju za igru za stvaranje priče ili igre s likovima Disney Infinity u glavnim ulogama.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

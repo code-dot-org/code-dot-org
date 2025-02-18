@@ -1,0 +1,9 @@
+name 'CSA Post-Survey q66_2024'
+question 'Explain why a code segment will not compile or work as intended.'
+
+right 'Never'
+right 'A few classes'
+right 'About half the class sessions'
+right 'Many class sessions'
+right 'Once or more per class session'
+allow_multiple_attempts true

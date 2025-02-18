@@ -1,0 +1,8 @@
+name 'gen-ai-humanities-research-quote3'
+
+
+markdown <<MARKDOWN
+### Quote 3
+
+![](https://images.code.org/1bb9a4c359a10fb8bdbbcb5ebe7cc448-image-1718998126157.png)
+MARKDOWN

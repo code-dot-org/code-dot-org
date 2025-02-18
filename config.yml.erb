@@ -25,14 +25,10 @@ dashboard_facebook_key:         !Secret
 dashboard_facebook_secret:      !Secret
 dashboard_google_key:           !Secret
 dashboard_google_secret:        !Secret
-dashboard_windowslive_key:      !Secret
-dashboard_windowslive_secret:   !Secret
 dashboard_microsoft_key:        !Secret
 dashboard_microsoft_secret:     !Secret
 dashboard_clever_key:           !Secret
 dashboard_clever_secret:        !Secret
-dashboard_schoolproject_key:    !Secret
-dashboard_schoolproject_secret: !Secret
 
 # Recaptcha
 recaptcha_site_key: !Secret
@@ -132,8 +128,9 @@ jotform_forms:
     post201:     90065524560150
     facilitator: 91405279991164
 
-# Learning Tools Interoperability (LTI)
-lti_credentials: !Secret
+# HubSpot
+hubspot_portal_id:              !Secret
+hubspot_admin_interest_form_id: !Secret
 
 # PagerDuty
 pagerduty_token: !Secret
@@ -171,10 +168,44 @@ gdrive_export_secret:     !Secret
 
 # Mapbox
 mapbox_upload_token:
+mapbox_upload_tileset:
 mapbox_access_token:      !Secret
+mapbox_access_tileset:    'censustiles'
 
 # Crowdin
 crowdin_codeorg_api_key:
+
+crowdin_projects:
+  codeorg:
+    id: 26074
+    source_language: 'enus'
+  hour-of-code:
+    id: 55536
+    source_language: 'en'
+  codeorg-markdown:
+    id: 314545
+    source_language: 'en'
+  codeorg-restricted:
+    id: 464582
+    source_language: 'en'
+  codeorg-testing:
+    id: 346087
+    source_language: 'en'
+  codeorg-markdown-testing:
+    id: 547997
+    source_language: 'en'
+  hour-of-code-test:
+    id: 634038
+    source_language: 'en'
+  codeorg-restricted-test:
+    id: 634320
+    source_language: 'en'
+
+crowdin_project_test_mapping:
+  codeorg: codeorg-testing
+  codeorg-markdown: codeorg-markdown-testing
+  codeorg-restricted: codeorg-restricted-test
+  hour-of-code: hour-of-code-test
 
 # Azure Content Moderator
 azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
@@ -184,6 +215,7 @@ azure_content_moderation_key:
 # multiple browsers
 saucelabs_username:
 saucelabs_authkey:
+saucelabs_tunnel_name:
 
 # Credentials for applitools.com, used for running automated visual tests
 applitools_eyes_api_key:      !Secret
@@ -199,19 +231,6 @@ slack_log_room:                 <%=env%>
 hip_chat_logging:               false
 # Logging endpoint used by broken link checker.
 slack_endpoint_broken_links:
-
-# Credentials/configuration for connecting to Firebase to use data blocks or data browser
-# in Applab.
-firebase_name: cdo-v3-<%=env%>
-firebase_secret: !Secret
-firebase_shared_secret: !Secret
-firebase_channel_id_suffix: ''
-firebase_max_channel_writes_per_15_sec: 300
-firebase_max_channel_writes_per_60_sec: 600
-firebase_max_table_count: 10
-firebase_max_table_rows: 20000
-firebase_max_record_size: 4096
-firebase_max_property_size: 4096
 
 # Azure keys for speech service
 azure_speech_service_key: !Secret
@@ -245,6 +264,15 @@ google_client_secret:
 # Default AWS region for the application.
 aws_region: us-east-1
 
+# Override the endpoint used for S3, typically to point to an emulated local
+# instance of the service; LocalStack, MinIO, etc. Particularly useful for
+# developers without AWS credentials; see `/docker/developers` for more,
+# particularly `docker-compose.minio.yml`
+aws_s3_endpoint:
+aws_s3_access_key_id:
+aws_s3_secret_access_key:
+aws_s3_emulated: false
+
 # Amazon Future Engineer integration
 afe_pardot_form_handler_url:
 csta_jotform_api_key: !Secret
@@ -253,7 +281,7 @@ csta_jotform_form_id: !Secret
 ### Service configurations (urls, endpoints, etc)
 
 freegeoip_host:
-geocoder_redis_url:
+geocoder_redis_url: 'redis://localhost:6379/0/geocoder'
 solr_server: localhost
 
 # S3 bucket and (environment-specific) path-prefix configuration
@@ -271,6 +299,9 @@ libraries_s3_bucket:       cdo-v3-libraries
 libraries_s3_directory:    libraries<%=_env%>
 videos_s3_bucket:          videos.code.org
 videos_url:                //videos.code.org
+
+# Session Store (ElastiCache Redis)
+session_store_server:
 
 # Memcached (ElastiCache)
 memcached_endpoint:
@@ -291,8 +322,16 @@ netsim_shard_expiry_seconds: 7200
 dcdo_table_name:       dcdo_<%=env%>
 gatekeeper_table_name: gatekeeper_<%=env%>
 
+# Allows DCDO settings via cookies. See: `Rack::CookieDCDO`
+use_cookie_dcdo: false
+
+# Allows Geolocation to be altered via cookies.
+# See: 'lib/cdo/rack/geolocation_override.rb'
+# and: 'dashboard/test/ui/features/xteam/gdpr_dialog.feature'
+use_geolocation_override: false
+
 # Poste (internal transactional email processing framework)
-poste_host: <%= code_org_url.sub('//', '') %>
+poste_host: '<%= code_org_url.sub('//', '') %>'
 poste_attachment_dir:
 poste_smtp_password: !Secret
 poste_smtp_server:   email-smtp.us-east-1.amazonaws.com
@@ -307,7 +346,7 @@ chef_org_name: code-dot-org
 chef_client_key: <%="#{ENV['HOME']}/.chef/#{chef_node_name}.pem"%>
 chef_validation_client_name: <%="#{chef_org_name}-validator"%>
 chef_validation_key: <%="#{ENV['HOME']}/.chef/#{chef_validation_client_name}.pem"%>
-chef_server_url: '<%="https://api.opscode.com/organizations/#{chef_org_name}"%>'
+chef_server_url: '<%="https://code-org.saas.chef.io/organizations/#{chef_org_name}"%>'
 
 # Cloudfront keys for private content
 cloudfront_key_pair_id: !Secret
@@ -318,18 +357,20 @@ discourse_sso_secret:
 
 ### Application configuration defaults
 
-i18n_key_value:
+# Installs bin/i18n dependencies
+build_i18n: false
+
 i18n_backend:
 cache:
 app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_hostname%> <%=dashboard_hostname%> curriculum.code.org codecurricula.com
+allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net'
+
 skip_locales:
 secret_pictures_csv:
 no_https_store:
-firebase_debug:
 pd_teacher_application_list_secret_key:
 
 # Configure CloudFront to serve static, custom, student-friendly page when web application returns error HTTP response.
@@ -346,11 +387,9 @@ optimize_webpack_assets: true
 
 optimize_rails_assets: true
 
-# Allows your local server to render non-English locales, defaults to false in development.
-# If false, choosing a locale other than English will have no effect.
-# Note: You may need to be in an incognito window to see changes
-# due to a difference in the language cookie between production and localhost.
-load_locales:
+# Improves local environment load time by loading only the i18n data for the current locale.
+# Note: Not intended for production use.
+lazy_load_i18n: false
 
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
@@ -365,12 +404,6 @@ cache_assets_in_memory:
 # Encryption key required for decoding certain protected level sources.
 # Contributors should ask a Code.org engineer for this if needed.
 properties_encryption_key: !Secret
-
-start_circle_builds_branch:
-start_circle_builds_token:
-circle_build_num: <%=ENV['CIRCLE_BUILD_NUM']%>
-circle_node_index: <%=ENV['CIRCLE_NODE_INDEX']%>
-circle_run_identifier: <%=circle_build_num ? "CIRCLE-BUILD-#{circle_build_num}-#{circle_node_index}" : nil%>
 
 ignore_eyes_mismatches:
 
@@ -388,7 +421,7 @@ dashboard_secret_key_base: !Secret
 dashboard_host: 0.0.0.0
 dashboard_port: 3000
 dashboard_workers: 8
-dashboard_unicorn_name: dashboard
+dashboard_web_server_name: dashboard
 dashboard_sock:
 
 # Causes dashboard-server to run pegasus as middleware, starting both in a
@@ -400,7 +433,7 @@ override_pegasus:
 pegasus_host:
 pegasus_sock:
 pegasus_port: 3000
-pegasus_unicorn_name: pegasus
+pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
 
@@ -416,8 +449,7 @@ levelbuilder_mode:
 # make it easier to tell the difference
 use_local_header_color:
 
-default_hoc_mode: post-hoc  # overridden by 'hoc_mode' DCDO param, except in :test
-default_hoc_launch: ''      # overridden by 'hoc_launch' DCDO param, except in :test
+default_hoc_mode: false  # overridden by 'hoc_mode' DCDO param, except in :test
 
 # teacher_application_mode values: 'open', 'closing-soon', 'closed'
 default_teacher_application_mode: 'closed' # overridden by 'teacher_application_mode' DCDO param, except in :test
@@ -447,7 +479,7 @@ stub_school_data: false
 
 disable_s3_image_uploads: false
 
-channels_api_secret: <%=poste_secret%>
+channels_api_secret: !Secret
 
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.
@@ -469,8 +501,6 @@ geocoder_read_replica_1:
 geocoder_read_replica_2:
 browserstack_username:
 browserstack_authkey:
-dashboard_powerschool_key:
-dashboard_powerschool_secret:
 x-dashboard_twitter_key:
 x-dashboard_twitter_secret:
 ga_service_account_email:
@@ -516,20 +546,19 @@ redshift_password:
 devinternal_db_writer: !Secret
 
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
-db_cluster_id: !Secret
-db_proxy_reporting_endpoint: !Secret
-db_writer_endpoint: !Secret
+db_cluster_id: !StackSecret
+db_endpoint_writer: !StackSecret
+db_endpoint_proxy_writer: !StackSecret
+db_endpoint_proxy_reader: !StackSecret
+db_endpoint_proxy_reporting: !StackSecret
 
-db_admin_user: master
-db_admin_password: !Secret
-db_writer_user: application-writer
-db_writer_password: !Secret
-db_reader_user: readonly
-db_reader_password: !Secret
+# Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
+# https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
+db_credential_admin: !StackSecret
+db_credential_writer: !StackSecret
+db_credential_reader: !StackSecret
 
-# Legacy database configuration settings contain a complete URI (username, password, servername, and database).
-db_admin: !Secret
-reporting_db_admin:
+# mysql:// URI (including credentials) to connect to ProxySQL administrative interface (which emulates a MySQL server)
 db_proxy_admin:
 
 db_writer: !Secret
@@ -581,3 +610,56 @@ local_javabuilder_stack_name:
 amplitude_api_key: !Secret
 # General CDO key
 cdo_amplitude_api_key:
+
+# API Key for doublethedonation.com
+ddconf_api_key: !Secret
+
+# JSON Web Key Set and private key data
+jwks_data:
+  keys:
+    - kty: "RSA"
+      n: "o-pwMF3Hf7iy_Rev-XEf4aPxCYxYiOevIXZVrQuQPVU8JE80XcNlrq8az8c3afp4G79nAVRWDxWTsYQXTNnr-HEBBklO_w5M-h6wIgMCnA9VDJtATgIlqNJ5hIQ37U_1Mmw3oLYJVXaKhkjD-GNFTF0r6rKjeAOp4sWoKTn83r2Tyi8ZGM2l3IQ9NYsurFrAT7DALu01V5EsM_sdBezc6r-LkGyTkIQqS4qDV7qesJE9cUe2FVXfnedWLeYBCsq-tIh50XVMB1FMFa97kN3UfS3rigQYAq-LkDc3e7rHB0DqduHJNZKiHBoYOra484N4nmDYj-cSoBkDzhyu84ni4w"
+      e: "AQAB"
+      use: "sig"
+      alg: "RS256"
+      kid: "yNt3MOdUenNV_bn6IKboK2d8iJBL2hDJ_RoMhUtO33Q"
+jwk_private_key_data: !Secret
+
+# Credentials for OpenAI API
+openai_evaluate_rubric_api_key: !Secret
+openai_student_learning_api_key: !Secret
+
+# AI Proxy for OpenAI API
+ai_proxy_origin: https://aiproxy-test.code.org
+
+# Statsig API keys
+# These are dummy values for all environments except Production and our managed
+# Test web application server, which are overridden in production.yml.erb
+# and test.yml.erb. The Statsig SDK expects the prefixed key type (secret-) in
+# the string, otherwise it will throw an error on initialization, even in
+# local_mode.
+statsig_server_secret_key: 'secret-fake-key'
+statsig_api_client_key: 'client-fake-key'
+
+# MailGun/MailJet API keys
+mailjet_api_key:
+mailjet_secret_key:
+mailgun_api_key:
+
+### ActiveJob configuration
+
+# ActiveJob queues
+active_job_queues:
+  :default: :default
+  :mailers: :mailers
+  :mailjet: :mailjet
+
+# ActiveJob Queue Adapter
+active_job_queue_adapter: :delayed_job
+
+# Number of workers to start when running `rake build:start_active_job_workers`:
+active_job_backend_n_workers_to_start: 10
+active_job_backend_rolling_restart_in_n_batches: 2
+
+# aiproxy credentials
+aiproxy_api_key: !Secret

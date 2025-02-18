@@ -1,6 +1,7 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import {EMPTY_IMAGE, PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 const MARGIN_PX = 2;
@@ -17,9 +18,10 @@ export default class AnimationPreview extends React.Component {
     height: PropTypes.number.isRequired,
     playBehavior: PropTypes.oneOf([
       PlayBehavior.ALWAYS_PLAY,
-      PlayBehavior.NEVER_PLAY
+      PlayBehavior.NEVER_PLAY,
     ]),
-    onPreviewLoad: PropTypes.func
+    onPreviewLoad: PropTypes.func,
+    isFocused: PropTypes.bool,
   };
 
   state = {
@@ -28,7 +30,7 @@ export default class AnimationPreview extends React.Component {
     scaledSourceSize: {x: 0, y: 0},
     scaledFrameSize: {x: 0, y: 0},
     extraTopMargin: 0,
-    extraLeftMargin: 0
+    extraLeftMargin: 0,
   };
 
   UNSAFE_componentWillMount() {
@@ -42,6 +44,25 @@ export default class AnimationPreview extends React.Component {
     } else if (
       nextProps.playBehavior !== PlayBehavior.ALWAYS_PLAY &&
       this.timeout_
+    ) {
+      this.stopAndResetAnimation();
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    // Only start/stop animations via focus if there is no playBehavior set.
+    // If set, the playBehavior prop sets the animation to 'ALWAYS_PLAY' or 'NEVER_PLAY',
+    // which determines if animation preview should play and should not be overridden by the focus state.
+    if (
+      !prevProps.isFocused &&
+      this.props.isFocused &&
+      !this.props.playBehavior
+    ) {
+      this.advanceFrame();
+    } else if (
+      prevProps.isFocused &&
+      !this.props.isFocused &&
+      !this.props.playBehavior
     ) {
       this.stopAndResetAnimation();
     }
@@ -65,7 +86,7 @@ export default class AnimationPreview extends React.Component {
     const {currentFrame} = this.state;
     const {frameCount} = this.props.animationProps;
     this.setState({
-      currentFrame: (currentFrame + 1) % frameCount
+      currentFrame: (currentFrame + 1) % frameCount,
     });
     clearTimeout(this.timeout_);
     // 33 maps to a 30 fps frameRate
@@ -99,7 +120,7 @@ export default class AnimationPreview extends React.Component {
       scaledSourceSize: scaleVector2(sourceSize, scale),
       scaledFrameSize: scaledFrameSize,
       extraTopMargin: Math.ceil((innerHeight - scaledFrameSize.y) / 2),
-      extraLeftMargin: Math.ceil((innerWidth - scaledFrameSize.x) / 2)
+      extraLeftMargin: Math.ceil((innerWidth - scaledFrameSize.x) / 2),
     });
   }
 
@@ -110,7 +131,7 @@ export default class AnimationPreview extends React.Component {
       scaledSourceSize,
       scaledFrameSize,
       extraTopMargin,
-      extraLeftMargin
+      extraLeftMargin,
     } = this.state;
 
     const row = Math.floor(currentFrame / framesPerRow);
@@ -121,7 +142,7 @@ export default class AnimationPreview extends React.Component {
     const containerStyle = {
       width: this.props.width,
       height: this.props.height,
-      textAlign: 'center'
+      textAlign: 'center',
     };
     const cropStyle = {
       width: scaledFrameSize.x,
@@ -130,7 +151,7 @@ export default class AnimationPreview extends React.Component {
       marginTop: MARGIN_PX + extraTopMargin,
       marginLeft: MARGIN_PX + extraLeftMargin,
       marginRight: MARGIN_PX,
-      marginBottom: MARGIN_PX
+      marginBottom: MARGIN_PX,
     };
 
     const imageStyle = {
@@ -144,12 +165,12 @@ export default class AnimationPreview extends React.Component {
       width: scaledSourceSize.x,
       height: scaledSourceSize.y,
       marginLeft: xOffset,
-      marginTop: yOffset
+      marginTop: yOffset,
     };
     const backgroundImageStyle = {
       borderRadius: 10,
       height: '100%',
-      width: '100%'
+      width: '100%',
     };
 
     if (
@@ -158,15 +179,24 @@ export default class AnimationPreview extends React.Component {
       this.props.animationProps.categories.includes('backgrounds')
     ) {
       return (
+        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+        // Verify or update this alt-text as necessary
         <img
           onLoad={this.props.onPreviewLoad}
           src={this.props.sourceUrl || EMPTY_IMAGE}
           style={backgroundImageStyle}
+          alt=""
         />
       );
     }
 
     return (
+      /*
+        The behavior managed by the onMouseOver and onMouseOut handlers is replicated on focus and blur
+        in the componentDidUpdate lifecycle method for accessibility purposes.
+        This div is never actually focused, so using native onFocus and onBlur handlers doesn't work without substantial changes. 
+        We include no-op onFocus and onBlur handlers to suppress a11y linter errors.
+      */
       <div
         ref="root"
         style={containerStyle}
@@ -180,12 +210,19 @@ export default class AnimationPreview extends React.Component {
             ? this.onMouseOut
             : null
         }
+        onFocus={() => {}}
+        onBlur={() => {}}
       >
         <div style={cropStyle}>
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
           <img
             onLoad={this.props.onPreviewLoad}
             src={this.props.sourceUrl || EMPTY_IMAGE}
             style={imageStyle}
+            alt=""
           />
         </div>
       </div>
@@ -196,6 +233,6 @@ export default class AnimationPreview extends React.Component {
 function scaleVector2(vector, scale) {
   return {
     x: vector.x * scale,
-    y: vector.y * scale
+    y: vector.y * scale,
   };
 }

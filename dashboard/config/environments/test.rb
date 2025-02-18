@@ -1,11 +1,12 @@
 Dashboard::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # The test environment is used exclusively to run your application's
-  # test suite. You never need to work with it otherwise. Remember that
-  # your test database is "scratch space" for the test suite and is wiped
-  # and recreated between test runs. Don't rely on the data there!
-  config.cache_classes = true
+  # We sometimes use Spring in test, so want to enable live reloading if and
+  # only if this is an environment in which Spring is running
+  # https://guides.rubyonrails.org/configuring.html#config-cache-classes
+  # https://stackoverflow.com/a/70566038/1810460
+  # https://github.com/rails/spring/issues/598#issuecomment-1268885973
+  config.cache_classes = !(defined?(Spring::Env) && Spring::Env.new.server_running?)
 
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
@@ -16,18 +17,12 @@ Dashboard::Application.configure do
   config.public_file_server.enabled = true
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=3600, s-maxage=1800"}
 
-  # test environment should use precompiled, minified, digested assets like production,
-  # unless it's being used for unit tests.
-  ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
+  is_ci = !!ENV.fetch('CI', nil)
 
-  unless ci_test
-    # Compress JavaScripts and CSS.
-    # webpack handles js compression for us
-    # config.assets.js_compressor = :uglifier
-    # config.assets.css_compressor = :sass
-
-    # Version of your assets, change this if you want to expire all your assets.
-    config.assets.version = '1.0'
+  # In CI environments (ie, Drone), stub relevant AWS services (currently just SageMaker)
+  # so we can run UI tests for our AI Chat (ie, Generative AI) lab.
+  if is_ci
+    config.stub_aichat_aws_services = true
   end
 
   config.assets.quiet = true
@@ -37,10 +32,8 @@ Dashboard::Application.configure do
   config.action_controller.perform_caching = false
 
   # Disable Rails.cache when running unit tests.
-  config.cache_store = :memory_store, {size: 64.megabytes} if ci_test
-
-  # config.action_mailer.raise_delivery_errors = true
-  # config.action_mailer.delivery_method = :smtp
+  # Also disabled in Drone, although unsure sure if this is strictly desired.
+  config.cache_store = :memory_store, {size: 64.megabytes} if ENV['UNIT_TEST'] || is_ci
 
   # Show mail previews (rails/mailers).
   # See http://edgeguides.rubyonrails.org/action_mailer_basics.html#previewing-emails
@@ -74,9 +67,16 @@ Dashboard::Application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
-  # Whether or not to skip script preloading. Setting this to true
-  # significantly speeds up server startup time.
-  config.skip_script_preload = false
+  if CDO.running_web_application?
+    # Use default logging formatter so that PID and timestamp are not suppressed.
+    config.log_formatter = Logger::Formatter.new
+
+    # Log condensed lines to syslog for centralized logging.
+    config.lograge.enabled = true
+    config.lograge.formatter = Lograge::Formatters::Cee.new
+    require 'syslog/logger'
+    config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
+  end
 
   config.experiment_cache_time_seconds = 0
 end

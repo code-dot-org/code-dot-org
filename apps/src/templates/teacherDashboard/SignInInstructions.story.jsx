@@ -1,9 +1,11 @@
 import React from 'react';
+
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+
 import SignInInstructions from './SignInInstructions';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 export default {
-  component: SignInInstructions
+  component: SignInInstructions,
 };
 
 const Template = args => (
@@ -16,25 +18,30 @@ const Template = args => (
 
 export const Picture = Template.bind({});
 Picture.args = {
-  loginType: SectionLoginType.picture
+  loginType: SectionLoginType.picture,
 };
 
 export const Word = Template.bind({});
 Word.args = {
-  loginType: SectionLoginType.word
+  loginType: SectionLoginType.word,
 };
 
 export const Email = Template.bind({});
 Email.args = {
-  loginType: SectionLoginType.email
+  loginType: SectionLoginType.email,
 };
 
 export const GoogleClassroom = Template.bind({});
 GoogleClassroom.args = {
-  loginType: SectionLoginType.google_classroom
+  loginType: SectionLoginType.google_classroom,
 };
 
 export const Clever = Template.bind({});
 Clever.args = {
-  loginType: SectionLoginType.clever
+  loginType: SectionLoginType.clever,
+};
+
+export const LTI = Template.bind({});
+LTI.args = {
+  loginType: SectionLoginType.lti_v1,
 };

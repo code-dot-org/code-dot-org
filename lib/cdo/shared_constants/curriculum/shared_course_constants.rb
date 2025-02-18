@@ -47,34 +47,62 @@ module Curriculum
         CSD: 'CSD',
         CSP: 'CSP',
         CSA: 'CSA',
-        CSC: 'CSC',
         HOC: 'HOC',
-        CSA_self_paced_pl: 'CSA Self Paced PL',
-        CSP_self_paced_pl: 'CSP Self Paced PL',
-        CSD_self_paced_pl: 'CSD Self Paced PL',
-        CSF_self_paced_pl: 'CSF Self Paced PL',
-        CSP_virtual_pl: 'CSP Virtual PL',
-        CSD_virtual_pl: 'CSD Virtual PL',
-        CSA_virtual_pl: 'CSA Virtual PL',
-        student_self_paced: 'Student Self Paced Courses'
+        foundations_of_cs: 'Foundations of CS and AI',
+        foundations_of_programming: 'Foundations of Programming',
+        CSC_K_5: 'CSC K-5',
+        CSC_6_8: 'CSC 6-8',
+        CSC_9_12: 'CSC 9-12',
+        special_topics_k_5: 'K-5 Special topics',
+        special_topics_6_8: '6-8 Special topics',
+        special_topics_9_12: '9-12 Special topics',
+        pd_for_facilitators: 'PD for Facilitators',
+        pd_workshop_activity_csf: 'PD Workshop Activity CSF',
+        pd_workshop_activity_csd: 'PD Workshop Activity CSD',
+        pd_workshop_activity_csp: 'PD Workshop Activity CSP',
+        pd_workshop_activity_csa: 'PD Workshop Activity CSA',
+        CSA_self_paced_pl: 'Self-paced PL - CSA',
+        CSP_self_paced_pl: 'Self-paced PL - CSP',
+        CSD_self_paced_pl: 'Self-paced PL - CSD',
+        CSF_self_paced_pl: 'Self-paced PL - CSF',
+        CSC_k_5_self_paced_pl: 'Self-paced PL - CSC K-5',
+        foundations_of_cs_selfpaced_pl: 'Self-paced PL - Foundations of CS and AI',
+        ai_for_teachers_selfpaced_pl: 'Self-paced PL - AI for teachers',
+        special_topics_curriculum_selfpaced_pl_k_5: 'Self-paced PL - K-5 special topics',
+        special_topics_curriculum_selfpaced_pl_6_8: 'Self-paced PL - 6-8 special topics',
+        special_topics_curriculum_selfpaced_pl_9_12: 'Self-paced PL - 9-12 special topics',
+        pedagogy_special_topics_selfpaced_pl: 'Self-paced PL - Pedagogy special topics',
+        cs_basics_selfpaced_pl: 'Self-paced PL - CS Basics',
+        other: 'Other'
       }
     ).freeze
 
-    # All the categories options used to group course offerings in the assignment dropdown
-    COURSE_OFFERING_CATEGORIES = %w(
-      pl_self_paced
-      pl_virtual
-      pl_other
-      full_course
-      csf
-      csc
-      aiml
-      maker
-      hoc
-      csf_international
-      math
-      twenty_hour
-      other
+    # An allowlist of all topic tags that can be applied for units.
+    CURRICULUM_TOPIC_TAGS = OpenStruct.new(
+      {
+        ai: 'AI',
+        maker: 'Maker',
+        music_lab: 'Music lab',
+        survey: 'Survey',
+        data_science: 'Data Science'
+      }
+    ).freeze
+
+    # A list of all content area categories that can be set to units.
+    CURRICULUM_CONTENT_AREA = OpenStruct.new(
+      {
+        curriculum_k_5: 'K-5 Curriculum',
+        curriculum_6_8: '6-8 Curriculum',
+        curriculum_9_12: '9-12 Curriculum',
+        hoc: 'HOC',
+        pl_workshop_activities: 'PL Workshop activities',
+        self_paced_pl_k_5: 'K-5 self-paced PL',
+        self_paced_pl_6_8: '6-8 self-paced PL',
+        self_paced_pl_9_12: '9-12 self-paced PL',
+        skills_focused_self_paced_pl: 'Skills-focused self-paced PL',
+        pd_for_facilitators: 'PD for Facilitators',
+        other: 'Other'
+      }
     ).freeze
 
     # The curriculum types used in curriculum quick assign
@@ -82,7 +110,9 @@ module Curriculum
       {
         module: 'Module',
         course: 'Course',
-        standalone_unit: 'Standalone Unit'
+        standalone_unit: 'Standalone Unit',
+        hoc: 'Hour of Code',
+        pl: 'Professional Learning'
       }
     ).freeze
 
@@ -103,9 +133,10 @@ module Curriculum
         self_paced: 'Self-Paced',
         teacher_led: 'Teacher-Led',
         collections: 'Collections',
-        virtual_pl: 'Virtual Professional Learning',
-        self_paced_pl: 'Self Paced Professional Learning',
-        other_pl: 'Other Professional Learning'
+        workshops_k5: 'K-5 Workshops',
+        summer_workshops_612: '6-12 Summer Workshops',
+        virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops',
+        unsupported: 'Unsupported'
       }
     ).freeze
 
@@ -114,9 +145,51 @@ module Curriculum
       {
         hoc: 'HOC',
         csc: 'CSC',
-        csf: 'CSF'
+        csf: 'CSF',
+        csa: 'CSA',
+        csp: 'CSP',
+        csd: 'CSD'
       }
     )
+
+    # CS topic field values for course offerings
+    COURSE_OFFERING_CS_TOPICS = %w(
+      art_and_design
+      app_design
+      artificial_intelligence
+      cybersecurity
+      data
+      digital_literacy
+      games_and_animations
+      internet
+      physical_computing
+      web_design
+      programming
+    ).freeze
+
+    # School subject field values for course offerings
+    COURSE_OFFERING_SCHOOL_SUBJECTS = %w(
+      math
+      science
+      english_language_arts
+      history
+    ).freeze
+
+    # Device types for course offerings
+    DEVICE_TYPES = %w(
+      computer
+      chromebook
+      tablet
+      mobile
+      no_device
+    ).freeze
+
+    # Device compatibility levels for course offerings
+    DEVICE_COMPATIBILITY_LEVELS = %w(
+      ideal
+      not_recommended
+      incompatible
+    ).freeze
 
     # Sections have a participant_type and courses have a participant_audience. A section
     # should never be assigned a course where the participants in the section can not be

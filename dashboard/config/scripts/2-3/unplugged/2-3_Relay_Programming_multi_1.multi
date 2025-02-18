@@ -12,3 +12,5 @@ right '/script_assets/2-3_images/unplugged/relay_programming_1_a3.png'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

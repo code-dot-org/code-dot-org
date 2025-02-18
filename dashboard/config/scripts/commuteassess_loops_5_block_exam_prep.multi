@@ -22,3 +22,5 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/95d7d469e22ca670564b953b0d9a54ff-image-1522966051439.png" style="width: 225px">
 MARKDOWN
+
+allow_multiple_attempts true

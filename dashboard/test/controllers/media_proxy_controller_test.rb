@@ -1,6 +1,6 @@
+require 'test_helper'
 require 'webmock/minitest'
 WebMock.disable_net_connect!(allow_localhost: true)
-require 'test_helper'
 
 class MediaProxyControllerTest < ActionController::TestCase
   IMAGE_URI = 'http://www.example.com/foo.jpg'
@@ -21,7 +21,7 @@ class MediaProxyControllerTest < ActionController::TestCase
       cache_control = response['Cache-Control']
       assert cache_control =~ /public/i, 'Response should be publically cacheable'
       assert cache_control =~ /max-age=#{ActiveSupport::Duration.build(10.years).to_i}/i, 'Response should expired in 10 years'
-      assert cache_control.include?('no-transform')
+      assert_includes(cache_control, 'no-transform')
       assert_equal response['Content-Transfer-Encoding'], 'binary'
       assert_equal response['Content-Disposition'], 'inline'
       assert_equal IMAGE_DATA, response.body

@@ -1,14 +1,21 @@
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ProjectCardRow from './ProjectCardRow';
-import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
-import color from '../../util/color';
-import styleConstants from '../../styleConstants';
-import Button from '../Button';
 import {connect} from 'react-redux';
-import {appendProjects, setHasOlderProjects} from './projectsRedux';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
+
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+
+import ProjectCardRow from './ProjectCardRow';
+import {
+  MAX_PROJECTS_PER_CATEGORY,
+  publishedFeaturedProjectPropType,
+} from './projectConstants';
+import {appendProjects, setHasOlderProjects} from './projectsRedux';
 
 const NUM_PROJECTS_TO_ADD = 12;
 
@@ -16,26 +23,27 @@ class ProjectAppTypeArea extends React.Component {
   static propTypes = {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,
-    labViewMoreString: PropTypes.string.isRequired,
     // Ability to hide link for Applab and Gamelab
     hideViewMoreLink: PropTypes.bool,
-    projectList: PropTypes.arrayOf(projectPropType),
+    projectList: PropTypes.arrayOf(publishedFeaturedProjectPropType),
     numProjectsToShow: PropTypes.number.isRequired,
     galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
-    navigateFunction: PropTypes.func.isRequired,
-
-    // Only show one project type.
-    isDetailView: PropTypes.bool.isRequired,
-
     // Hide projects that don't have thumbnails
     hideWithoutThumbnails: PropTypes.bool,
 
+    // We are temporarily not using the following props since we are not using the 'View more' link
+    // in the updated featured projects public gallery.
+    // However, there are plans to update the featured projects public gallery with
+    // sections and use the view more links in the future. See https://docs.google.com/document/d/1vU68tzXG72Z80MvM6xYEDwF5hLDf7V097P-0dDfpouc/edit?disco=AAABGLQtJe0.
+    labViewMoreString: PropTypes.string,
+    navigateFunction: PropTypes.func,
+    // Only show one project type.
+    isDetailView: PropTypes.bool,
     // from redux state
-    hasOlderProjects: PropTypes.bool.isRequired,
-
+    hasOlderProjects: PropTypes.bool,
     // from redux dispatch
-    appendProjects: PropTypes.func.isRequired,
-    setHasOlderProjects: PropTypes.func.isRequired
+    appendProjects: PropTypes.func,
+    setHasOlderProjects: PropTypes.func,
   };
 
   constructor(props) {
@@ -46,13 +54,13 @@ class ProjectAppTypeArea extends React.Component {
         : 0,
       numProjects: this.props.numProjectsToShow,
       // Disables the View More button when a network request is pending.
-      disableViewMore: false
+      disableViewMore: false,
     };
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({
-      maxNumProjects: nextProps.projectList ? nextProps.projectList.length : 0
+      maxNumProjects: nextProps.projectList ? nextProps.projectList.length : 0,
     });
   }
 
@@ -107,17 +115,26 @@ class ProjectAppTypeArea extends React.Component {
    *   completed and the done handler has been run (if successful).
    */
   fetchOlderProjects() {
-    const {projectList, labKey: projectType} = this.props;
-    const oldestProject = projectList[projectList.length - 1];
-    const oldestPublishedAt =
-      oldestProject && oldestProject.projectData.publishedAt;
+    const projectType =
+      this.props.labKey === 'featured' ? 'all' : this.props.labKey;
+    const {projectList} = this.props;
+    const projectListToSort = [...projectList];
+    // Sort from least recent (oldest) to most recent featured_at date.
+    projectListToSort.sort((a, b) => {
+      const projectAFeaturedAt = a.projectData.featuredAt;
+      const projectBFeaturedAt = b.projectData.featuredAt;
+      return projectAFeaturedAt.localeCompare(projectBFeaturedAt);
+    });
+    const oldestProject = projectListToSort[0];
+    const oldestFeaturedAt =
+      oldestProject && oldestProject.projectData.featuredAt;
 
     return $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/${projectType}/${MAX_PROJECTS_PER_CATEGORY}/${oldestPublishedAt}`,
-      dataType: 'json'
+      url: `/api/v1/projects/gallery/public/${projectType}/${oldestFeaturedAt}`,
+      dataType: 'json',
     }).done(data => {
-      // olderProjects all have an older publishedAt date than oldestProject.
+      // olderProjects all have an older featuredAt date than oldestProject.
       const olderProjects = data[projectType];
 
       // Don't try to fetch projects of this projectType again in the future if we
@@ -144,20 +161,22 @@ class ProjectAppTypeArea extends React.Component {
       <div style={styles.viewMoreButtons}>
         {showViewMore && (
           <Button
-            __useDeprecatedTag
-            onClick={this.loadMore}
-            color={Button.ButtonColor.neutralDark}
-            icon="plus-circle"
             text={i18n.viewMore()}
+            onClick={this.loadMore}
+            size="s"
+            type="secondary"
+            color="black"
+            iconLeft={{iconStyle: 'solid', iconName: 'plus-circle'}}
             style={styles.buttonRightMargin}
           />
         )}
-        <Button
-          __useDeprecatedTag
-          href="#top"
-          color={Button.ButtonColor.neutralDark}
-          icon="chevron-circle-up"
+        <LinkButton
           text={i18n.backToTop()}
+          href="#top"
+          size="s"
+          type="secondary"
+          color="black"
+          iconLeft={{iconStyle: 'solid', iconName: 'chevron-circle-up'}}
         />
       </div>
     );
@@ -198,7 +217,7 @@ class ProjectAppTypeArea extends React.Component {
 
 const styles = {
   grid: {
-    width: styleConstants['content-width']
+    width: styleConstants['content-width'],
   },
   labHeading: {
     textAlign: 'left',
@@ -207,7 +226,7 @@ const styles = {
     marginBottom: 0,
     paddingBottom: 0,
     paddingTop: 0,
-    float: 'left'
+    float: 'left',
   },
   viewMore: {
     color: color.neutral_dark,
@@ -215,29 +234,31 @@ const styles = {
     marginTop: 35,
     marginBottom: 16,
     cursor: 'pointer',
-    fontFamily: '"Gotham 5r", sans-serif'
+    ...fontConstants['main-font-semi-bold'],
   },
   viewMoreButtons: {
     float: 'right',
-    marginRight: 22
+    marginInlineEnd: 22,
+    display: 'flex',
+    alignItems: 'center',
   },
   buttonRightMargin: {
-    marginRight: 20
+    marginInlineEnd: 20,
   },
   iconPaddingLeft: {
-    paddingLeft: 6
+    paddingLeft: 6,
   },
   iconPaddingRight: {
-    paddingRight: 6
+    paddingRight: 6,
   },
   clear: {
-    clear: 'both'
-  }
+    clear: 'both',
+  },
 };
 
 export default connect(
   (state, ownProps) => ({
-    hasOlderProjects: state.projects.hasOlderProjects[ownProps.labKey]
+    hasOlderProjects: state.projects.hasOlderProjects[ownProps.labKey],
   }),
   {appendProjects, setHasOlderProjects}
 )(ProjectAppTypeArea);

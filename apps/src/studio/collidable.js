@@ -4,9 +4,8 @@
  * Copyright 2014 Code.org
  *
  */
-import {singleton as studioApp} from '../StudioApp';
-
 import {BEHAVIOR_STOP} from '../constants';
+import {singleton as studioApp} from '../StudioApp';
 
 export default class Collidable {
   /**
@@ -116,7 +115,7 @@ export default class Collidable {
    * remove any that are complete.
    */
   updateActions() {
-    this.actions_.forEach(function(action) {
+    this.actions_.forEach(function (action) {
       action.update(this);
     }, this);
 

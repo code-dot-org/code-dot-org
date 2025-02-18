@@ -1,12 +1,16 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PopUpMenu from '../../lib/ui/PopUpMenu';
-import {assignmentCourseVersionShape} from './shapes';
-import i18n from '@cdo/locale';
-import FontAwesome from './../FontAwesome';
-import color from '../../util/color';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import PopUpMenu from '../../sharedComponents/PopUpMenu';
+import color from '../../util/color';
+
+import {assignmentCourseVersionShape} from './shapes';
 
 export default function AssignmentVersionMenuItem(props) {
   // Returns whether we should display this version as english-only.
@@ -52,7 +56,7 @@ export default function AssignmentVersionMenuItem(props) {
             <div>
               <span data-tip data-for={tooltipId}>
                 {i18n.numLanguages({
-                  numLanguages: courseVersion.locales.length
+                  numLanguages: courseVersion.locales.length,
                 })}
                 &nbsp;
                 <FontAwesome icon="info-circle" style={style.infoCircle} />
@@ -71,20 +75,20 @@ export default function AssignmentVersionMenuItem(props) {
 AssignmentVersionMenuItem.propTypes = {
   selectedCourseVersionId: PropTypes.number,
   courseVersion: assignmentCourseVersionShape,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };
 
 export const columnWidths = {
   selected: 25,
   title: 70,
   status: 160,
-  language: 140
+  language: 140,
 };
 
 export const rowHeight = 35;
 
 export const cellStyle = {
-  display: 'inline-block'
+  display: 'inline-block',
 };
 
 const style = {
@@ -92,36 +96,35 @@ const style = {
     fontSize: 16,
     minHeight: rowHeight,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   selectedColumn: {
     ...cellStyle,
     width: columnWidths.selected,
-    marginLeft: -10
+    marginLeft: -10,
   },
   titleColumn: {
     ...cellStyle,
     width: columnWidths.title,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold'
+    ...fontConstants['main-font-semi-bold'],
   },
   statusColumn: {
     ...cellStyle,
-    width: columnWidths.status
+    width: columnWidths.status,
   },
   recommended: {
     display: 'inline-block',
     borderRadius: 5,
     padding: 8,
     backgroundColor: color.cyan,
-    color: 'white'
+    color: 'white',
   },
   languageColumn: {
     ...cellStyle,
     width: columnWidths.language,
-    marginRight: -10
+    marginRight: -10,
   },
   infoCircle: {
-    fontSize: 18
-  }
+    fontSize: 18,
+  },
 };

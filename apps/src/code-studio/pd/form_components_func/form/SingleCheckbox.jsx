@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
+
 import SingleCheckboxComponent from '../../form_components/SingleCheckbox';
 import {getValidationState, FormContext} from '../FormComponent';
 
@@ -24,5 +25,5 @@ export const SingleCheckbox = props => {
 SingleCheckbox.propTypes = {
   // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired,
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };

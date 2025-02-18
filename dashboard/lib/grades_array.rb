@@ -14,6 +14,6 @@ class GradesArray
   end
 
   def self.load(grades)
-    grades ? grades.split(',').uniq : nil
+    grades&.split(',')&.uniq
   end
 end

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "댄스 파티", body: "댄스 파티를 코딩하세요! 비욘세, 해리 스타일스, 리조, 릴 나스 엑스, 셀레나 고메즈가 등장하는 디즈니의 \"엔칸토\" 음악 등이 기다립니다!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "시의 예술", body: "이 아워오브코드 활동에서 전통 시에 아트와 애니메이션을 추가하세요!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "아티스트", body: "아티스트와 함께 멋진 사진과 디자인을 그려보세요!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "인피니티 플레이 랩", body: "플레이 랩을 이용하여 디즈니 인피니티 캐릭터가 등장하는 이야기나 게임을 만들어보세요.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

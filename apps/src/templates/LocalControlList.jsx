@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import SafeMarkdown from './SafeMarkdown';
 
 export const styles = {
@@ -9,13 +10,13 @@ export const styles = {
     padding: '5px',
     fontSize: 'inherit',
     textDecoration: 'none',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   listStyle: {
     margin: '0px',
     padding: '0px',
-    listStyleType: 'none'
-  }
+    listStyleType: 'none',
+  },
 };
 
 export default class LocalMapControlList extends React.Component {
@@ -27,7 +28,7 @@ export default class LocalMapControlList extends React.Component {
     flyToLocation: PropTypes.func.isRequired,
     createPopUp: PropTypes.func.isRequired,
     resetMap: PropTypes.func.isRequired,
-    updateActive: PropTypes.func.isRequired
+    updateActive: PropTypes.func.isRequired,
   };
 
   render() {
@@ -39,7 +40,7 @@ export default class LocalMapControlList extends React.Component {
       createPopUp,
       resetMap,
       selected,
-      updateActive
+      updateActive,
     } = this.props;
     var allFeatures = [];
     featureList.forEach((feature, index) => {
@@ -80,7 +81,7 @@ class LocalMapControlItem extends React.Component {
     index: PropTypes.number.isRequired,
     selected: PropTypes.bool.isRequired,
     onSelect: PropTypes.func.isRequired,
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
   };
   render() {
     const {index, selected, onSelect, title} = this.props;

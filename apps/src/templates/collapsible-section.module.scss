@@ -1,0 +1,19 @@
+@import '@cdo/apps/mixins.scss';
+@import 'color.scss';
+
+.expandCollapseButton {
+  @include remove-button-styles;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+  width: 100%;
+}
+
+.icon {
+  transition: transform 0.2s ease;
+  &Expanded {
+    transform: rotate(90deg);
+  }
+}

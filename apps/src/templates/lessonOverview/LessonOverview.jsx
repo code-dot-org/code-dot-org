@@ -2,33 +2,44 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
-import Button from '@cdo/apps/templates/Button';
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import styleConstants from '@cdo/apps/styleConstants';
+import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
-import {linkWithQueryParams} from '@cdo/apps/utils';
+import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
+import currentLocale from '@cdo/apps/util/currentLocale';
+import {linkWithQueryParams} from '@cdo/apps/utils';
+import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-import styleConstants from '@cdo/apps/styleConstants';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
+
 import Announcements from '../../code-studio/components/progress/Announcements';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
-import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import FontAwesome from '../FontAwesome';
-import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+const ResourceActions = {
+  PRINT: 'print',
+  NAVIGATE: 'navigate',
+};
+
+const WINDOW_PRINT = 'windowPrint';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -40,40 +51,49 @@ class LessonOverview extends Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
-    hasVerifiedResources: PropTypes.bool.isRequired
+    hasVerifiedResources: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
     super(props);
 
-    analyticsReporter.sendEvent(EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT, {
-      lessonId: props.lesson.id,
-      lessonName: props.lesson.displayName,
-      lessonLink: document.location.pathname,
-      referrer: document.referrer,
-      unitName: props.lesson.unit.displayName,
-      unitLink: props.lesson.unit.link
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT,
+      {
+        lessonId: props.lesson.id,
+        lessonName: props.lesson.displayName,
+        lessonLink: document.location.pathname,
+        referrer: document.referrer,
+        unitName: props.lesson.unit.displayName,
+        unitLink: props.lesson.unit.link,
+      },
+      PLATFORMS.BOTH
+    );
   }
 
-  recordAndNavigateToPdf = (e, firehoseKey, url) => {
-    // Prevent navigation to url until callback
-    e.preventDefault();
+  recordAndHandleResource = (e, firehoseKey, action, url = null) => {
+    e.preventDefault(); // Prevent navigation to url until callback
+    const event =
+      action === ResourceActions.NAVIGATE ? 'open-pdf' : 'print-from-browser';
     firehoseClient.putRecord(
       {
         study: 'pdf-click',
         study_group: 'lesson',
-        event: 'open-pdf',
+        event: event,
         data_json: JSON.stringify({
           name: this.props.lesson.key,
-          pdfType: firehoseKey
-        })
+          pdfType: firehoseKey,
+        }),
       },
       {
         includeUserId: true,
         callback: () => {
-          window.location.href = url;
-        }
+          if (action === ResourceActions.NAVIGATE && url) {
+            window.location.href = url; // Navigate to the URL
+          } else if (action === ResourceActions.PRINT) {
+            window.print(); // Trigger the print dialog
+          }
+        },
       }
     );
     return false;
@@ -91,17 +111,52 @@ class LessonOverview extends Component {
       options.push({
         key: 'singleLessonPlan',
         name: i18n.printLessonPlan(),
-        url: lessonPlanPdfUrl
+        url: lessonPlanPdfUrl,
       });
     }
     if (scriptResourcesPdfUrl) {
       options.push({
         key: 'scriptResources',
         name: i18n.printHandouts(),
-        url: scriptResourcesPdfUrl
+        url: scriptResourcesPdfUrl,
       });
     }
     return options;
+  };
+
+  renderPrintOptions = () => {
+    const pdfDropdownOptions = this.compilePdfDropdownOptions();
+
+    if (pdfDropdownOptions.length > 0 && currentLocale() === DefaultLocale) {
+      return pdfDropdownOptions.map(option => (
+        <a
+          key={option.key}
+          onClick={e =>
+            this.recordAndHandleResource(
+              e,
+              option.key,
+              ResourceActions.NAVIGATE,
+              option.url
+            )
+          }
+          href={option.url}
+        >
+          {option.name}
+        </a>
+      ));
+    } else {
+      return [
+        <a
+          key={WINDOW_PRINT}
+          onClick={e =>
+            this.recordAndHandleResource(e, WINDOW_PRINT, ResourceActions.PRINT)
+          }
+          href="#"
+        >
+          {i18n.printLessonPlan()}
+        </a>,
+      ];
+    }
   };
 
   render() {
@@ -111,15 +166,13 @@ class LessonOverview extends Component {
       isSignedIn,
       viewAs,
       isVerifiedInstructor,
-      hasVerifiedResources
+      hasVerifiedResources,
     } = this.props;
 
     const displayVerifiedResourcesNotification =
       viewAs === ViewType.Instructor &&
       !isVerifiedInstructor &&
       hasVerifiedResources;
-
-    const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
     return (
       <div className="lesson-overview">
@@ -132,33 +185,21 @@ class LessonOverview extends Component {
               {`< ${lesson.unit.displayName}`}
             </a>
             <div style={styles.dropdowns}>
-              {pdfDropdownOptions.length > 0 && (
-                <div style={{marginRight: 5}}>
-                  <DropdownButton
-                    color={Button.ButtonColor.gray}
-                    customText={
-                      <div>
-                        <FontAwesome icon="print" style={styles.icon} />
-                        <span style={styles.customText}>
-                          {i18n.printingOptions()}
-                        </span>
-                      </div>
-                    }
-                  >
-                    {pdfDropdownOptions.map(option => (
-                      <a
-                        key={option.key}
-                        onClick={e =>
-                          this.recordAndNavigateToPdf(e, option.key, option.url)
-                        }
-                        href={option.url}
-                      >
-                        {option.name}
-                      </a>
-                    ))}
-                  </DropdownButton>
-                </div>
-              )}
+              <div style={{marginRight: 5}}>
+                <DropdownButton
+                  color={Button.ButtonColor.gray}
+                  customText={
+                    <div>
+                      <FontAwesome icon="print" style={styles.icon} />
+                      <span style={styles.customText}>
+                        {i18n.printingOptions()}
+                      </span>
+                    </div>
+                  }
+                >
+                  {this.renderPrintOptions()}
+                </DropdownButton>
+              </div>
               <LessonNavigationDropdown lesson={lesson} />
             </div>
           </div>
@@ -169,7 +210,7 @@ class LessonOverview extends Component {
             width={styleConstants['content-width']}
             viewAs={viewAs}
             firehoseAnalyticsData={{
-              lesson_id: lesson.id
+              lesson_id: lesson.id,
             }}
           />
         )}
@@ -182,7 +223,7 @@ class LessonOverview extends Component {
         <h1>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
-            lessonName: lesson.displayName
+            lessonName: lesson.displayName,
           })}
         </h1>
         <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
@@ -343,10 +384,10 @@ const styles = {
   frontPage: {
     display: 'flex',
     flexDirection: 'row',
-    marginTop: 40
+    marginTop: 40,
   },
   customText: {
-    margin: '0px 2px'
+    margin: '0px 2px',
   },
   icon: {
     margin: '0px 2px',
@@ -354,47 +395,47 @@ const styles = {
     // we want our icon text to be a different size than our button text, which
     // requires we manually offset to get it centered properly
     position: 'relative',
-    top: 1
+    top: 1,
   },
   left: {
     width: '60%',
-    paddingRight: 20
+    paddingRight: 20,
   },
   right: {
     width: '40%',
     padding: '0px 10px 10px 20px',
-    borderLeft: 'solid 1px #333'
+    borderLeft: 'solid 1px #333',
   },
   header: {
     margin: '10px 0px',
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   navLink: {
     fontSize: 14,
     lineHeight: '22px',
     color: color.purple,
-    margin: '10px 0px'
+    margin: '10px 0px',
   },
   copyResourceWarningArea: {
     color: '#8a6d3b',
     backgroundColor: '#fcf8e3',
     border: '2px solid #f5e79e',
     borderRadius: 4,
-    padding: '10px 10px 0px 10px'
+    padding: '10px 10px 0px 10px',
   },
   titleNoTopMargin: {
-    marginTop: 0
+    marginTop: 0,
   },
   dropdowns: {
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   standardsHeaderAndButton: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 export const UnconnectedLessonOverview = LessonOverview;
@@ -404,5 +445,5 @@ export default connect(state => ({
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
-  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources
+  hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
 }))(LessonOverview);

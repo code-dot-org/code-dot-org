@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import DesignToolboxElement from './DesignToolboxElement';
+
 import applabMsg from '@cdo/applab/locale';
+
 import ThemeDropdown from './designElements/ThemeDropdown';
+import DesignToolboxElement from './DesignToolboxElement';
 
 const IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
@@ -10,8 +12,9 @@ export default class DesignToolbox extends React.Component {
   static propTypes = {
     handleDragStart: PropTypes.func.isRequired,
     isToolboxVisible: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
     handleScreenChange: PropTypes.func.isRequired,
-    themeValue: PropTypes.string.isRequired
+    themeValue: PropTypes.string.isRequired,
   };
 
   render() {
@@ -22,10 +25,13 @@ export default class DesignToolbox extends React.Component {
       bottom: 0,
       width: 270,
       boxSizing: 'border-box',
-      borderRight: '1px solid gray',
+      borderRight: this.props.isRtl ? '' : '1px solid gray',
+      borderLeft: this.props.isRtl ? '1px solid gray' : '',
       overflowY: 'auto',
       padding: 10,
-      paddingRight: 0 // setting this to 0 allows 2 columns with the potential scrollbar on Windows
+      // setting this to 0 allows 2 columns with the potential scrollbar on Windows
+      paddingRight: this.props.isRtl ? 10 : 0,
+      paddingLeft: this.props.isRtl ? 0 : 10,
     };
 
     return (
@@ -34,85 +40,85 @@ export default class DesignToolbox extends React.Component {
         <ThemeDropdown
           initialValue={this.props.themeValue}
           handleChange={this.props.handleScreenChange.bind(this, 'theme')}
-          description={'Theme'}
+          description={applabMsg.designElementTheme()}
           key={this.props.themeValue}
         />
         <p>{applabMsg.designToolboxDescription()}</p>
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'button.png'}
-          desc={'Button'}
+          desc={applabMsg.designElement_button()}
           elementType={'BUTTON'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'input.png'}
-          desc={'Text Input'}
+          desc={applabMsg.designElement_textInput()}
           elementType={'TEXT_INPUT'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'label.png'}
-          desc={'Label'}
+          desc={applabMsg.designElement_label()}
           elementType={'LABEL'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'dropdown.png'}
-          desc={'Dropdown'}
+          desc={applabMsg.designElement_dropdown()}
           elementType={'DROPDOWN'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'radio.png'}
-          desc={'Radio Button'}
+          desc={applabMsg.designElement_radioButton()}
           elementType={'RADIO_BUTTON'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'checkbox.png'}
-          desc={'Checkbox'}
+          desc={applabMsg.designElement_checkbox()}
           elementType={'CHECKBOX'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'image.png'}
-          desc={'Image'}
+          desc={applabMsg.designElement_image()}
           elementType={'IMAGE'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'canvas.png'}
-          desc={'Canvas'}
+          desc={applabMsg.designElement_canvas()}
           elementType={'CANVAS'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'screen.png'}
-          desc={'Screen'}
+          desc={applabMsg.designElement_screen()}
           elementType={'SCREEN'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'textarea.png'}
-          desc={'Text Area'}
+          desc={applabMsg.designElement_textArea()}
           elementType={'TEXT_AREA'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'chart.png'}
-          desc={'Chart'}
+          desc={applabMsg.designElement_chart()}
           elementType={'CHART'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'slider.png'}
-          desc={'Slider'}
+          desc={applabMsg.designElement_slider()}
           elementType={'SLIDER'}
           handleDragStart={this.props.handleDragStart}
         />
         <DesignToolboxElement
           imageUrl={IMAGE_BASE_URL + 'camera.png'}
-          desc={'Photo Select'}
+          desc={applabMsg.designElement_photoSelect()}
           elementType={'PHOTO_SELECT'}
           handleDragStart={this.props.handleDragStart}
         />

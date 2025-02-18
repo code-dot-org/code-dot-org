@@ -1,20 +1,20 @@
 import 'details-element-polyfill';
 import 'lazysizes';
 import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
-import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
-import {initHamburger} from '@cdo/apps/hamburger/hamburger';
-import {loadVideos} from '@cdo/apps/util/loadVideos';
 import testImageAccess from '@cdo/apps/code-studio/url_test';
+import {initHamburger} from '@cdo/apps/hamburger/hamburger';
+import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
+import {loadVideos} from '@cdo/apps/util/loadVideos';
 
 // Prevent filtered errors from being passed to New Relic.
 if (window.newrelic) {
-  window.newrelic.setErrorHandler(function(err) {
+  window.newrelic.setErrorHandler(function (err) {
     // Remove errors from unsupportenewrelicnd IE versions
     return !!isUnsupportedBrowser();
   });
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   if (isUnsupportedBrowser()) {
     $('#warning-banner').show();
   }
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 initHamburger();
 
-$(window).load(function() {
+$(window).load(function () {
   if (document.getElementsByClassName('insert_video_player').length > 0) {
     const urlParams = window.location.search;
     let forcePlayer = false;
@@ -35,7 +35,7 @@ $(window).load(function() {
   }
 
   // This code is for the share_buttons partial.
-  $(document).ready(function() {
+  $(document).ready(function () {
     testImageAccess(
       'https://facebook.com/favicon.ico' + '?' + Math.random(),
       () => {

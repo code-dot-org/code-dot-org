@@ -1,10 +1,10 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
 import FatalErrorDialog from './FatalErrorDialog';
 
 export default {
-  title: 'FatalErrorDialog',
-  component: FatalErrorDialog
+  component: FatalErrorDialog,
 };
 
 export const Basic = () => (

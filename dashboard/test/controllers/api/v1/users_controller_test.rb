@@ -24,7 +24,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'a post request to using_text_mode updates using_text_mode' do
     sign_in(@user)
-    assert !@user.using_text_mode
+    refute @user.using_text_mode
     post :post_using_text_mode, params: {user_id: 'me', using_text_mode: 'true'}
     assert_response :success
     response = JSON.parse(@response.body)
@@ -57,7 +57,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'a post request to mute_music updates mute_music' do
     sign_in(@user)
-    assert !@user.mute_music
+    refute @user.mute_music
     post :post_mute_music, params: {user_id: 'me', mute_music: 'true'}
     assert_response :success
     response = JSON.parse(@response.body)
@@ -72,6 +72,64 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     @user.reload
     assert_equal false, !!@user.mute_music
   end
+
+  test 'a post request to show_progress_table_v2 updates show_progress_table_v2' do
+    sign_in(@user)
+    assert_nil @user.show_progress_table_v2
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
+    assert_response :success
+    @user.reload
+    assert @user.show_progress_table_v2
+
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
+    assert_response :success
+    @user.reload
+    refute @user.show_progress_table_v2
+  end
+
+  test 'a post request to show_progress_table_v2 updates appropriate timestamp' do
+    sign_in(@user)
+    assert_nil @user.progress_table_v2_timestamp
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
+    assert_response :success
+    @user.reload
+    assert @user.progress_table_v2_timestamp
+    assert_nil @user.progress_table_v1_timestamp
+
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
+    assert_response :success
+    @user.reload
+    assert @user.progress_table_v2_timestamp
+    assert @user.progress_table_v1_timestamp
+  end
+
+  test 'a post request to disable_lti_roster_sync updates lti_roster_sync_enabled' do
+    teacher = create :teacher, lti_roster_sync_enabled: true
+    sign_in(teacher)
+
+    assert teacher.lti_roster_sync_enabled
+    post :post_disable_lti_roster_sync, params: {user_id: 'me', show_progress_table_v2: true}
+    assert_response :success
+    teacher.reload
+    assert_nil teacher.lti_roster_sync_enabled
+  end
+
+  test 'a post request to disable_lti_roster_sync as student is forbidden' do
+    sign_in(@user)
+
+    assert_nil @user.lti_roster_sync_enabled
+    post :post_disable_lti_roster_sync, params: {user_id: 'me', show_progress_table_v2: true}
+    assert_response :unauthorized
+    @user.reload
+    assert_nil @user.lti_roster_sync_enabled
+  end
+
+  test_user_gets_response_for(
+    :post_disable_lti_roster_sync,
+    user: nil,
+    params: {user_id: 'me'},
+    response: :unauthorized
+  )
 
   test 'a get request to display_theme returns display_theme attribute of user object' do
     sign_in(@user)
@@ -90,7 +148,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'a post request to display_theme updates display_theme' do
     sign_in(@user)
-    assert !@user.display_theme
+    refute @user.display_theme
     post :update_display_theme, params: {user_id: 'me', display_theme: 'dark'}
     assert_response :success
     response = JSON.parse(@response.body)
@@ -247,25 +305,76 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response 403
   end
 
-  test "get_school_donor_name 403s when not signed in" do
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 403
+  test "teacher can update ai tutor access for student in section" do
+    teacher = create :teacher
+    student_in_section = create :student
+    section = create :section, teacher: teacher
+    section.students << student_in_section
+
+    sign_in(teacher)
+
+    post :update_ai_tutor_access, params: {user_id: student_in_section.id, ai_tutor_access: false}
+    assert_response :no_content
+    student_in_section.reload
+    assert_equal true, student_in_section.ai_tutor_access_denied
   end
 
-  test "get_school_donor_name returns null when no donor is found" do
-    sign_in create :teacher
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 200
-    assert_equal 'null', response.body
+  test 'teacher cannot update ai tutor access for student not in section' do
+    teacher = create :teacher
+    student_not_in_section = create :student
+    create :section, teacher: teacher
+
+    sign_in(teacher)
+
+    post :update_ai_tutor_access, params: {user_id: student_not_in_section.id, ai_tutor_access: false}
+    assert_response :unauthorized
   end
 
-  test "get_school_donor_name returns donor name" do
-    usi = create :user_school_info
-    create :donor_school, name: 'DonorName', nces_id: usi.school_info.school_id
+  test 'student cannot modify ai tutor access' do
+    student = create :student
 
-    sign_in usi.user
-    get :get_school_donor_name, params: {user_id: 'me'}
-    assert_response 200
-    assert_equal '"DonorName"', response.body
+    sign_in(student)
+
+    post :update_ai_tutor_access, params: {user_id: student.id, ai_tutor_access: false}
+    assert_response :unauthorized
+  end
+
+  test 'updating ai tutor access for uncreated user returns unauthorized' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    post :update_ai_tutor_access, params: {user_id: -1, ai_tutor_access: false}
+
+    assert_response :unauthorized
+  end
+
+  test 'set_seen_ta_scores updates seen_ta_scores_map' do
+    teacher = create :teacher
+    assert_nil teacher.seen_ta_scores_map
+    sign_in(teacher)
+
+    unit = create :unit, :with_lessons
+    lesson = unit.lessons.first
+    params = {lesson_id: lesson.id}
+
+    post :set_seen_ta_scores, params: params
+    assert_response :success
+    assert_equal({lesson.id.to_s => true}, teacher.reload.seen_ta_scores_map)
+  end
+
+  test 'set_seen_ta_scores returns 400 if lesson id is missing' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    post :set_seen_ta_scores
+    assert_response :bad_request
+  end
+
+  test 'set_seen_ta_scores returns 400 if lesson id is not a number' do
+    teacher = create :teacher
+    sign_in(teacher)
+
+    post :set_seen_ta_scores, params: {lesson_id: 'not_a_number'}
+    assert_response :bad_request
   end
 end

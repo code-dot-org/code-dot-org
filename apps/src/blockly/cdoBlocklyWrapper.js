@@ -1,14 +1,28 @@
-import {BlocklyVersion} from '@cdo/apps/constants';
-import {CLAMPED_NUMBER_REGEX} from './constants';
+import {
+  BlocklyVersion,
+  CLAMPED_NUMBER_REGEX,
+  stringIsXml,
+} from '@cdo/apps/blockly/constants';
+import {MetricEvent} from '@cdo/apps/metrics/events';
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import {getStore} from '@cdo/apps/redux';
+import {
+  setFailedToGenerateCode,
+  setHasIncompatibleSources,
+} from '@cdo/apps/redux/blockly';
 
-const INFINITE_LOOP_TRAP =
-  '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
+import * as blockUtils from '../block_utils';
+import {parseElement as parseXmlElement} from '../xml';
 
-const LOOP_HIGHLIGHT = 'loopHighlight();\n';
-const LOOP_HIGHLIGHT_RE = new RegExp(
-  LOOP_HIGHLIGHT.replace(/\(.*\)/, '\\(.*\\)') + '\\s*',
-  'g'
-);
+import customBlocks from './customBlocks/cdoBlockly/index.js';
+import {
+  INFINITE_LOOP_TRAP,
+  LOOP_HIGHLIGHT,
+  getCodeBlocks,
+  handleCodeGenerationFailure,
+  reportCdoBlocklyUsage,
+  strip,
+} from './utils';
 
 /**
  * Wrapper class for https://github.com/code-dot-org/blockly
@@ -17,56 +31,28 @@ const LOOP_HIGHLIGHT_RE = new RegExp(
  * object without affecting apps code.
  * See also ./googleBlocklyWrapper.js
  */
-const BlocklyWrapper = function(blocklyInstance) {
+const BlocklyWrapper = function (blocklyInstance) {
   this.version = BlocklyVersion.CDO;
+  reportCdoBlocklyUsage(MetricEvent.CDO_BLOCKLY_INITIALIZED);
   this.blockly_ = blocklyInstance;
-  this.wrapReadOnlyProperty = function(propertyName) {
+  this.wrapReadOnlyProperty = function (propertyName) {
     Object.defineProperty(this, propertyName, {
-      get: function() {
+      get: function () {
         return this.blockly_[propertyName];
-      }
+      },
     });
-    this.wrapSettableProperty = function(propertyName) {
+    this.wrapSettableProperty = function (propertyName) {
       Object.defineProperty(this, propertyName, {
-        get: function() {
+        get: function () {
           return this.blockly_[propertyName];
         },
-        set: function(newValue) {
+        set: function (newValue) {
           this.blockly_[propertyName] = newValue;
-        }
+        },
       });
     };
   };
 };
-
-function escapeRegExp(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-/**
- * Extract the user's code as raw JavaScript.
- * @param {string} code Generated code.
- * @return {string} The code without serial numbers and timeout checks.
- */
-function strip(code) {
-  return (
-    code
-      // Strip out serial numbers.
-      .replace(/(,\s*)?'block_id_\d+'\)/g, ')')
-      // Remove timeouts.
-      .replace(new RegExp(escapeRegExp(INFINITE_LOOP_TRAP), 'g'), '')
-      // Strip out loop highlight
-      .replace(LOOP_HIGHLIGHT_RE, '')
-      // Strip out class namespaces.
-      .replace(/(StudioApp|Maze|Turtle)\./g, '')
-      // Strip out particular helper functions.
-      .replace(/^function (colour_random)[\s\S]*?^}/gm, '')
-      // Collapse consecutive blank lines.
-      .replace(/\n\n+/gm, '\n\n')
-      // Trim.
-      .replace(/^\s+|\s+$/g, '')
-  );
-}
 
 /**
  * Given a type string for a field input, returns an appropriate change handler function
@@ -155,6 +141,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
+  blocklyWrapper.wrapReadOnlyProperty('varsInGlobals');
   blocklyWrapper.wrapReadOnlyProperty('WidgetDiv');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
@@ -171,36 +158,36 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
 
-  blocklyWrapper.BlockSpace.prototype.registerGlobalVariables = function() {}; // Not implemented.
+  blocklyWrapper.BlockSpace.prototype.registerGlobalVariables = function () {}; // Not implemented.
 
-  blocklyWrapper.BlockSpace.prototype.getContainer = function() {
+  blocklyWrapper.BlockSpace.prototype.getContainer = function () {
     return this.blockSpaceEditor.getSVGElement().parentNode;
   };
 
-  blocklyWrapper.getGenerator = function() {
+  blocklyWrapper.getGenerator = function () {
     return blocklyWrapper.Generator.get('JavaScript');
   };
 
-  blocklyWrapper.addChangeListener = function(blockspace, handler) {
+  blocklyWrapper.addChangeListener = function (blockspace, handler) {
     if (!blockspace) {
       return;
     }
     blockspace.getCanvas().addEventListener('blocklyBlockSpaceChange', handler);
   };
 
-  blocklyWrapper.setInfiniteLoopTrap = function() {
+  blocklyWrapper.setInfiniteLoopTrap = function () {
     Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
   };
 
-  blocklyWrapper.clearInfiniteLoopTrap = function() {
+  blocklyWrapper.clearInfiniteLoopTrap = function () {
     Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
   };
 
-  blocklyWrapper.getInfiniteLoopTrap = function() {
+  blocklyWrapper.getInfiniteLoopTrap = function () {
     return Blockly.JavaScript.INFINITE_LOOP_TRAP;
   };
 
-  blocklyWrapper.loopHighlight = function(apiName, blockId) {
+  blocklyWrapper.loopHighlight = function (apiName, blockId) {
     var args = "'block_id_" + blockId + "'";
     if (blockId === undefined) {
       args = '%1';
@@ -210,13 +197,25 @@ function initializeBlocklyWrapper(blocklyInstance) {
     );
   };
 
-  blocklyWrapper.getWorkspaceCode = function(opt_showHidden) {
-    const code = Blockly.Generator.blockSpaceToCode(
-      'JavaScript',
-      null,
-      !!opt_showHidden
-    );
-    return strip(code);
+  blocklyWrapper.getWorkspaceCode = function (opt_showHidden) {
+    let code = '';
+    try {
+      code = Blockly.Generator.blockSpaceToCode(
+        'JavaScript',
+        null,
+        !!opt_showHidden
+      );
+      code = strip(code);
+      getStore().dispatch(setFailedToGenerateCode(false));
+    } catch (e) {
+      handleCodeGenerationFailure(MetricEvent.CDO_BLOCKLY_GET_CODE_ERROR, e);
+    }
+    return code;
+  };
+
+  // We renamed createReadOnlyBlockSpace to createEmbeddedWorkspace for clarity.
+  blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
+    return Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, options);
   };
 
   // The second argument to Google Blockly's blockToCode specifies whether to
@@ -227,11 +226,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Blockly, which allows us to change the usage across apps code to treat the
   // second argument as opt_thisOnly rather than opt_showHidden.
   const originalBlockToCode = blocklyWrapper.JavaScript.blockToCode;
-  blocklyWrapper.JavaScript.blockToCode = function(block, opt_thisOnly) {
+  blocklyWrapper.JavaScript.blockToCode = function (block, opt_thisOnly) {
     return originalBlockToCode.call(this, block, true /* opt_showHidden */);
   };
 
-  blocklyWrapper.Input.prototype.getFieldRow = function() {
+  blocklyWrapper.Input.prototype.getFieldRow = function () {
     return this.titleRow;
   };
 
@@ -240,39 +239,171 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Input.prototype.appendTitle;
   blocklyWrapper.Block.prototype.getFieldValue =
     blocklyWrapper.Block.prototype.getTitleValue;
+  blocklyWrapper.Block.prototype.appendEndRowInput =
+    blocklyWrapper.Block.prototype.appendDummyInput;
+
+  // Block.setStyle doesn't exist in CDO Blockly but it is called
+  // in definitions of various common blocks that are also supported
+  // on Google Blockly.
+  blocklyWrapper.Block.prototype.setStyle = function () {};
 
   blocklyWrapper.cdoUtils = {
-    blockLimitExceeded: function(blockType) {
+    loadBlocksToWorkspace(blockSpace, source) {
+      const isXml = stringIsXml(source);
+      if (!isXml) {
+        getStore().dispatch(setHasIncompatibleSources(true));
+        source = '';
+      }
+      Blockly.Xml.domToBlockSpace(blockSpace, parseXmlElement(source));
+    },
+    blockLimitExceeded: function (blockType) {
       const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
       return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
     },
-    getBlockFields: function(block) {
+    getBlockFields: function (block) {
       return block.getTitles();
     },
-    getToolboxWidth: function() {
+    getToolboxWidth: function () {
       return Blockly.mainBlockSpaceEditor.getToolboxWidth();
     },
-    getBlockLimit: function(blockType) {
+    getBlockLimit: function (blockType) {
       return Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
         blockType
       );
     },
-    isWorkspaceReadOnly: function(workspace) {
+    isWorkspaceReadOnly: function (workspace) {
       return workspace.isReadOnly();
     },
-    setHSV: function(block, h, s, v) {
+    handleColorAndStyle(block, color, style, returnType) {
+      // CDO Blockly does not support block styles.
+      if (color) {
+        this.setHSV(block, ...color);
+      } else if (!returnType) {
+        // CDO Blockly assigns colors to blocks with an output connection based on return type.
+        // See Blockly.Connection.prototype.colorForType
+        const DEFAULT_COLOR = [184, 1.0, 0.74];
+        this.setHSV(block, ...DEFAULT_COLOR);
+      }
+    },
+    setHSV: function (block, h, s, v) {
       block.setHSV(h, s, v);
     },
-    workspaceSvgResize: function(workspace) {
+    workspaceSvgResize: function (workspace) {
       return workspace.blockSpaceEditor.svgResize();
     },
-    bindBrowserEvent: function(element, name, thisObject, func, useCapture) {
+    bindBrowserEvent: function (element, name, thisObject, func, useCapture) {
       return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
     },
-    getField: function(type) {
+    nonnegativeIntegerValidator: function (text) {
+      return Blockly.FieldTextInput.nonnegativeIntegerValidator(text);
+    },
+    numberValidator: function (text) {
+      return Blockly.FieldTextInput.numberValidator(text);
+    },
+    getField: function (type) {
       return new Blockly.FieldTextInput('', getFieldInputChangeHandler(type));
-    }
+    },
+    getCode: function (workspace) {
+      return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+    },
+    soundField: function (onClick) {
+      return new Blockly.FieldDropdown([['Choose', 'Choose']], onClick);
+    },
+    locationField: function (
+      icon,
+      onClick,
+      block,
+      inputConfig,
+      currentInputRow
+    ) {
+      const fieldRow = currentInputRow.getFieldRow();
+      const fieldLabel = fieldRow[fieldRow.length - 1];
+      const transformTextSetLabel = value => {
+        if (value) {
+          try {
+            const loc = JSON.parse(value);
+            fieldLabel.setValue(
+              `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
+            );
+          } catch (e) {
+            // Just ignore bad values
+          }
+        }
+      };
+      const color = block.getHexColour();
+      return new Blockly.FieldButton(
+        icon,
+        onClick,
+        color,
+        transformTextSetLabel
+      );
+    },
+    injectCss(document) {
+      return Blockly.Css.inject(document);
+    },
+    resizeSvg(blockSpace) {
+      return blockSpace.blockSpaceEditor.svgResize();
+    },
+    registerCustomProcedureBlocks() {
+      // Google Blockly only. Registers custom blocks for modal function editor.
+    },
+    appendSharedFunctions(source, functionsXml) {
+      const isXml = stringIsXml(source);
+      if (isXml) {
+        return blockUtils.appendNewFunctions(source, functionsXml);
+      } else {
+        // CDO Blockly is not equipped to handle json projects, and we will reset the
+        // project to empty in loadBlocksToWorkspace if it is json. So if we see
+        // json here, we just return the json as-is.
+        return source;
+      }
+    },
+    processToolboxXml(toolbox) {
+      return toolbox;
+    },
+    highlightBlock(id, spotlight) {
+      Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    },
+    getAllGeneratedCode(extraCode) {
+      const studentCode = Blockly.Generator.blocksToCode(
+        'JavaScript',
+        getCodeBlocks()
+      );
+      return (extraCode || '') + studentCode;
+    },
+    getCodeFromBlockXmlSource(xmlString) {
+      const domBlocks = Blockly.Xml.textToDom(xmlString);
+      return Blockly.Generator.xmlToCode('JavaScript', domBlocks);
+    },
   };
+  blocklyWrapper.customBlocks = customBlocks;
+
+  // Pointer block behavior is handled in the cdo blockly repo,
+  // so we can safely return an empty string here.
+  blocklyWrapper.getPointerBlockImageUrl = () => {
+    return '';
+  };
+
+  // No-op for CDO Blockly.
+  blocklyWrapper.setHiddenDefinitionWorkspace = _ => {};
+
+  // CDO Blockly does not have a concept of a hidden definition workspace,
+  // so we return undefined here.
+  blocklyWrapper.getHiddenDefinitionWorkspace = () => {
+    return undefined;
+  };
+
+  // CDO Blockly does not have a separate workspace for the function editor,
+  // so we return undefined here.
+  blocklyWrapper.getFunctionEditorWorkspace = () => {
+    return undefined;
+  };
+
+  // Google Blockly labs also need to clear separate workspaces for the function editor.
+  blocklyWrapper.clearAllStudentWorkspaces = () => {
+    Blockly.mainBlockSpace.clear();
+  };
+
   return blocklyWrapper;
 }
 

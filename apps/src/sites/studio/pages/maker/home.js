@@ -2,11 +2,12 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import MakerLanding from '@cdo/apps/templates/MakerLanding';
 
-$(function() {
+import {getStore} from '@cdo/apps/redux';
+import MakerLanding from '@cdo/apps/templates/MakerLanding';
+import getScriptData from '@cdo/apps/util/getScriptData';
+
+$(function () {
   const store = getStore();
   const course = getScriptData('makerHome').course;
 

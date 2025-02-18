@@ -1,0 +1,33 @@
+name 'virtual-pl-csp-summer-day1-asynch1-03-2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Navigating to Lesson Plans
+## Accessing Your TLO Lesson
+
+#### Throughout the school year, you'll access the CS Principles curriculum by clicking on a link next to your classroom section on the Teacher Dashboard. However, because you have not set up a class section through the Code.org platform yet, use the following link to open your lesson in a new tab instead:
+<br>
+<a class="btn btn-large btn-primary" href="https://studio.code.org/courses/csp-2024" target="blank" rel="noopener noreferrer">CS Principles Curriculum</a>
+
+___
+
+## Accessing Lesson Plans on the Teacher Dashboard
+
+#### Later in the week, you will have the opportunity to set up your class sections. Once you have set up a class section, you'll follow these steps to access the curriculum:
+<br>
+
+##### **Step 1:** Log into your teacher account on Code.org. 
+
+##### **Step 2:** Click on "Computer Science Principles (2024)" in the "Course" column of the "Classroom Sections" table on the "My Dashboard" page. 
+
+<img src="https://images.code.org/91c67cc19be3ae852ffcdd3b0fdd6e6b-Screenshot 2023-10-25 at 1.42.36 PM.png" alt="Screenshot showing Computer Science Principles (23-24) circled in yellow." width="800 px" style="clear: both; margin: 0 20px 20px 0;"> 
+
+##### **Step 3:** On the Course Overview Page, scroll to the unit you would like to access and click "Go to Unit".
+
+<img src="https://images.code.org/9ecbbc6f2ab0b6d6c829045ed13e74fc-Screenshot 2023-10-25 at 1.42.49 PM.png" alt="Screenshot showing Go to Unit circled in yellow." width="800 px" style="clear: both; margin: 0 20px 20px 0;"> 
+
+##### **Step 4:** On the Unit Overview Page, navigate to the lesson you would like to view and click on the "View Lesson Plan" button.
+
+<img src="https://images.code.org/4c16170be00a0376dded714118b12e62-Screenshot 2023-10-25 at 1.42.55 PM.png" alt="Screenshot showing View Lesson Plan circled in yellow." width="800 px" style="clear: both; margin: 0 20px 20px 0;"> 
+MARKDOWN

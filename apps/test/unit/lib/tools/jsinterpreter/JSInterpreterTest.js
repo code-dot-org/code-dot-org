@@ -1,10 +1,12 @@
-import {expect, assert} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
-import Observer from '@cdo/apps/Observer';
-import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-describe('The JSInterpreter class', function() {
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
+import Observer from '@cdo/apps/Observer';
+
+import {expect, assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+describe('The JSInterpreter class', function () {
   var jsInterpreter;
 
   describe('static function getFunctionsAndMetadata', () => {
@@ -84,10 +86,10 @@ describe('The JSInterpreter class', function() {
     // Setup a jsInterpreter instance with `hideSource: true` so an editor isn't
     // needed.
     jsInterpreter = new JSInterpreter({
-      shouldRunAtMaxSpeed: function() {
+      shouldRunAtMaxSpeed: function () {
         return false;
       },
-      studioApp: {hideSource: true}
+      studioApp: {hideSource: true},
     });
 
     // Initialize a test program
@@ -182,12 +184,12 @@ describe('The JSInterpreter class', function() {
             globalFunctions: {
               derp: {
                 add: (a, b) => a + b,
-                mul: (a, b) => a * b
+                mul: (a, b) => a * b,
               },
               slerp: {
-                sub: (a, b) => a - b
-              }
-            }
+                sub: (a, b) => a - b,
+              },
+            },
           })
         );
 
@@ -215,7 +217,7 @@ describe('The JSInterpreter class', function() {
                 name => 'hello, ' + name
               );
               jsInterpreter.createGlobalProperty('NAME', 'world');
-            }
+            },
           });
           expect(
             jsInterpreter.evalInCurrentScope('hello(NAME)').valueOf()
@@ -229,8 +231,8 @@ describe('The JSInterpreter class', function() {
             code: '',
             initGlobals: () => {
               expect(jsInterpreter.interpreter).not.to.be.null;
-              const nativeCallsBackInterpreterFunc = jsInterpreter.interpreter.makeNativeMemberFunction(
-                {
+              const nativeCallsBackInterpreterFunc =
+                jsInterpreter.interpreter.makeNativeMemberFunction({
                   nativeFunc: () => {
                     var state = jsInterpreter.getCurrentState();
                     if (!state.__callCount) {
@@ -248,9 +250,8 @@ describe('The JSInterpreter class', function() {
                   dontMarshal: false,
                   nativeParentObj: {},
                   maxDepth: 5,
-                  nativeCallsBackInterpreter: true
-                }
-              );
+                  nativeCallsBackInterpreter: true,
+                });
               jsInterpreter.interpreter.setProperty(
                 jsInterpreter.globalScope,
                 'nativeCallsBackInterpreterFunc',
@@ -258,7 +259,7 @@ describe('The JSInterpreter class', function() {
                   nativeCallsBackInterpreterFunc
                 )
               );
-            }
+            },
           });
           expect(
             jsInterpreter
@@ -273,10 +274,10 @@ describe('The JSInterpreter class', function() {
           const nativeParent = {testProp: 7};
           const jsInterpreterWithGlobalProps = new JSInterpreter({
             studioApp: {hideSource: true},
-            customMarshalGlobalProperties: {testProp: nativeParent}
+            customMarshalGlobalProperties: {testProp: nativeParent},
           });
           jsInterpreterWithGlobalProps.parse({
-            code: ''
+            code: '',
           });
           expect(
             jsInterpreterWithGlobalProps
@@ -305,7 +306,7 @@ setCallback(function(message) {
               jsInterpreter.createGlobalProperty('allDone', message => {
                 allDone(message);
               });
-            }
+            },
           });
         });
 
@@ -313,7 +314,7 @@ setCallback(function(message) {
           let allDone = sinon.spy();
           jsInterpreter.parse({
             enableEvents: false,
-            ...config(allDone)
+            ...config(allDone),
           });
           expect(lastCallback).to.be.null;
           expect(allDone).not.to.have.been.called;
@@ -329,7 +330,7 @@ setCallback(function(message) {
             beforeEach(() => {
               jsInterpreter.parse({
                 enableEvents: true,
-                ...config(allDone)
+                ...config(allDone),
               });
               sinon.spy(jsInterpreter, 'executeInterpreter');
               jsInterpreter.executeInterpreter(true);
@@ -385,7 +386,7 @@ function myCallback(message) {
 }
 setCallback(myCallback);
 myCallback("this message is coming from inside the interpreter");
-`
+`,
               });
               sinon.spy(jsInterpreter, 'executeInterpreter');
               jsInterpreter.executeInterpreter(true);
@@ -413,10 +414,10 @@ myCallback("this message is coming from inside the interpreter");
         studioApp: {
           editor: {
             aceEditor: {
-              getSession: aceGetSessionStub
-            }
-          }
-        }
+              getSession: aceGetSessionStub,
+            },
+          },
+        },
       });
     });
 
@@ -431,15 +432,15 @@ myCallback("this message is coming from inside the interpreter");
   });
 
   let aceEditor;
-  let Range = function(startRow, startColumn, endRow, endColumn) {
+  let Range = function (startRow, startColumn, endRow, endColumn) {
     this.start = {
       row: startRow,
-      column: startColumn
+      column: startColumn,
     };
 
     this.end = {
       row: endRow,
-      column: endColumn
+      column: endColumn,
     };
   };
 
@@ -449,13 +450,13 @@ myCallback("this message is coming from inside the interpreter");
     beforeEach(() => {
       oldAce = window.ace;
       window.ace = {
-        require: sinon.stub().returns({Range})
+        require: sinon.stub().returns({Range}),
       };
       const breakpoints = [];
       const aceSession = {
         addMarker: sinon.spy(() => markerId++),
         getBreakpoints: sinon.stub().returns(breakpoints),
-        removeMarker: sinon.spy()
+        removeMarker: sinon.spy(),
       };
       aceEditor = {
         isRowFullyVisible: () => true,
@@ -463,10 +464,10 @@ myCallback("this message is coming from inside the interpreter");
         getSelection: () => ({
           getRange: () => ({
             start: {},
-            end: {}
+            end: {},
           }),
-          clearSelection: () => {}
-        })
+          clearSelection: () => {},
+        }),
       };
     });
     afterEach(() => {
@@ -482,10 +483,10 @@ myCallback("this message is coming from inside the interpreter");
         studioApp: {
           hideSource: false,
           editor: {
-            aceEditor: aceEditor
+            aceEditor: aceEditor,
           },
-          editCode: true
-        }
+          editCode: true,
+        },
       });
       onPauseObserver = sinon.spy();
       jsInterpreter.onPause.register(onPauseObserver);
@@ -522,7 +523,7 @@ myCallback("this message is coming from inside the interpreter");
             }
           }
           add(3);
-        `
+        `,
         });
         jsInterpreter.executeInterpreter(true);
       });
@@ -540,7 +541,7 @@ myCallback("this message is coming from inside the interpreter");
           '[forTest]',
           'incrementor.next:0',
           '[forUpdate]',
-          '[forTest]'
+          '[forTest]',
         ]);
       });
     });
@@ -556,7 +557,7 @@ myCallback("this message is coming from inside the interpreter");
           currentLine = 3;
           currentLine = 4;
           currentLine = 5;
-        `
+        `,
         });
         jsInterpreter.executeInterpreter(true);
       });
@@ -568,12 +569,12 @@ myCallback("this message is coming from inside the interpreter");
           {
             start: {
               row: 2,
-              column: 10
+              column: 10,
             },
             end: {
               row: 2,
-              column: 26
-            }
+              column: 26,
+            },
           }
         );
       });
@@ -596,12 +597,12 @@ myCallback("this message is coming from inside the interpreter");
           ).to.deep.equal({
             start: {
               row: 4,
-              column: 10
+              column: 10,
             },
             end: {
               row: 4,
-              column: 26
-            }
+              column: 26,
+            },
           });
         });
         describe('and executed again after all breakpoints have been reached', () => {
@@ -629,7 +630,7 @@ myCallback("this message is coming from inside the interpreter");
           currentLine = 3;
           currentLine = 4;
           currentLine = 5;
-        `
+        `,
         });
         aceEditor.getSession().getBreakpoints()[2] = true;
         jsInterpreter.executeInterpreter(true);
@@ -645,12 +646,12 @@ myCallback("this message is coming from inside the interpreter");
           {
             start: {
               row: 3,
-              column: 10
+              column: 10,
             },
             end: {
               row: 3,
-              column: 26
-            }
+              column: 26,
+            },
           }
         );
       });
@@ -667,7 +668,7 @@ myCallback("this message is coming from inside the interpreter");
           var currentLine = 5;
           breakInHere();
           currentLine = 7;
-        `
+        `,
         });
         aceEditor.getSession().getBreakpoints()[3] = true;
         // go to breakpoint on currentLine = 3;
@@ -690,12 +691,12 @@ myCallback("this message is coming from inside the interpreter");
           {
             start: {
               row: 7,
-              column: 10
+              column: 10,
             },
             end: {
               row: 7,
-              column: 26
-            }
+              column: 26,
+            },
           }
         );
       });
@@ -717,7 +718,7 @@ myCallback("this message is coming from inside the interpreter");
           var currentLine = 10;
           breakLowerDown();
           currentLine = 12;
-        `
+        `,
         });
         aceEditor.getSession().getBreakpoints()[3] = true;
         // go to breakpoint on currentLine = 3;
@@ -746,12 +747,12 @@ myCallback("this message is coming from inside the interpreter");
           {
             start: {
               row: 8,
-              column: 12
+              column: 12,
             },
             end: {
               row: 8,
-              column: 28
-            }
+              column: 28,
+            },
           }
         );
       });
@@ -770,12 +771,12 @@ myCallback("this message is coming from inside the interpreter");
           ).to.deep.equal({
             start: {
               row: 12,
-              column: 10
+              column: 10,
             },
             end: {
               row: 12,
-              column: 27
-            }
+              column: 27,
+            },
           });
         });
       });
@@ -793,7 +794,7 @@ myCallback("this message is coming from inside the interpreter");
           currentLine = 6; // breakpoint set here
           breakInHere();
           currentLine = 7;
-        `
+        `,
         });
         aceEditor.getSession().getBreakpoints()[4] = true;
         aceEditor.getSession().getBreakpoints()[6] = true;
@@ -823,12 +824,12 @@ myCallback("this message is coming from inside the interpreter");
           {
             start: {
               row: 4,
-              column: 12
+              column: 12,
             },
             end: {
               row: 4,
-              column: 28
-            }
+              column: 28,
+            },
           }
         );
       });
@@ -841,7 +842,7 @@ myCallback("this message is coming from inside the interpreter");
           var currentLine = 1;
           currentLine = 2;
           currentLine = 3;
-        `
+        `,
         });
         jsInterpreter.handleStepIn();
         jsInterpreter.executeInterpreter(true);
@@ -860,12 +861,12 @@ myCallback("this message is coming from inside the interpreter");
           {
             start: {
               row: 1,
-              column: 10
+              column: 10,
             },
             end: {
               row: 1,
-              column: 30
-            }
+              column: 30,
+            },
           }
         );
       });
@@ -884,12 +885,12 @@ myCallback("this message is coming from inside the interpreter");
           ).to.deep.equal({
             start: {
               row: 2,
-              column: 10
+              column: 10,
             },
             end: {
               row: 2,
-              column: 26
-            }
+              column: 26,
+            },
           });
         });
         it('will keep the interpreter in the paused state', () => {
@@ -921,7 +922,7 @@ myCallback("this message is coming from inside the interpreter");
         jsInterpreter.parse({
           code: `
           throw "gotcha";
-        `
+        `,
         });
       });
       describe('with hideSource=false', () => {
@@ -939,12 +940,12 @@ myCallback("this message is coming from inside the interpreter");
           ).to.deep.equal({
             start: {
               row: 0,
-              column: 0
+              column: 0,
             },
             end: {
               row: 1,
-              column: 0
-            }
+              column: 0,
+            },
           });
           expect(aceEditor.getSession().addMarker.lastCall.args[1]).to.equal(
             'ace_error'
@@ -970,7 +971,7 @@ myCallback("this message is coming from inside the interpreter");
     });
   });
 
-  it('steps a `for` loop', function() {
+  it('steps a `for` loop', function () {
     initWithCode('for (var i = 0; i < 2; i++) { 1; }');
     assertCurrentState({node: {type: 'ForStatement'}, mode: undefined});
 
@@ -982,11 +983,11 @@ myCallback("this message is coming from inside the interpreter");
       {node: {type: 'ForStatement'}, mode_: 1}, // (test) i < 2;
       {node: {type: 'ExpressionStatement'}}, // (body) 1;
       {node: {type: 'ForStatement'}, mode_: 3}, // (update) i++
-      {node: {type: 'ForStatement'}, mode_: 1} // (test) i < 2;
+      {node: {type: 'ForStatement'}, mode_: 1}, // (test) i < 2;
     ]);
   });
 
-  it('steps a `switch` statement', function() {
+  it('steps a `switch` statement', function () {
     initWithCode('switch (5) { case 5: 1; } 2;');
     assertCurrentState({node: {type: 'SwitchStatement'}});
 
@@ -994,13 +995,13 @@ myCallback("this message is coming from inside the interpreter");
     verifyStepSequence([
       {node: {type: 'SwitchStatement'}},
       {node: {type: 'ExpressionStatement', expression: {value: 1}}},
-      {node: {type: 'ExpressionStatement', expression: {value: 2}}}
+      {node: {type: 'ExpressionStatement', expression: {value: 2}}},
     ]);
   });
 
-  it('hits a breakpoint', function() {
+  it('hits a breakpoint', function () {
     initWithCode('0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;');
-    jsInterpreter.isBreakpointRow = function(row) {
+    jsInterpreter.isBreakpointRow = function (row) {
       return row === 3 || row === 5;
     };
 
@@ -1008,7 +1009,7 @@ myCallback("this message is coming from inside the interpreter");
       hitBreakpoint = false,
       MAX_STEPS = 100,
       i;
-    observer.observe(jsInterpreter.onPause, function() {
+    observer.observe(jsInterpreter.onPause, function () {
       hitBreakpoint = true;
     });
 
@@ -1019,7 +1020,7 @@ myCallback("this message is coming from inside the interpreter");
     }
     hitBreakpoint = false;
     assertCurrentState({
-      node: {type: 'ExpressionStatement', expression: {value: 3}}
+      node: {type: 'ExpressionStatement', expression: {value: 3}},
     });
 
     for (i = 0; !hitBreakpoint && i < MAX_STEPS; i++) {
@@ -1027,7 +1028,7 @@ myCallback("this message is coming from inside the interpreter");
     }
     hitBreakpoint = false;
     assertCurrentState({
-      node: {type: 'ExpressionStatement', expression: {value: 5}}
+      node: {type: 'ExpressionStatement', expression: {value: 5}},
     });
   });
 });

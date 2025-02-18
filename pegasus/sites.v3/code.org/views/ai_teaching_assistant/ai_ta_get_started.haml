@@ -1,0 +1,15 @@
+.flex-container.justify-space-between.align-items-center.gap-2.wrap
+  %div.col-47
+    = view :display_video_thumbnail, id: "intro_ta", video_code: "Lj7uZx-BKhw", play_button: 'center', letterbox: 'false'
+  .text-wrapper.col-47
+    %h2=hoc_s("ai_ta_page.get_started.header")
+    %ol
+      %li=hoc_s("ai_ta_page.get_started.watch_demo")
+      %li=hoc_s("ai_ta_page.get_started.assign_csd_3")
+      %li
+        %a{href: "https://form.jotform.com/240863841362155"}
+          = hoc_s("ai_ta_page.get_started.become_verified")
+      %li=hoc_s("ai_ta_page.get_started.use_rubric")
+    .content-footer
+      %a.link-button{href: "https://studio.code.org/s/csd3-2024"}
+        = hoc_s("ai_ta_page.get_started.use_ta")

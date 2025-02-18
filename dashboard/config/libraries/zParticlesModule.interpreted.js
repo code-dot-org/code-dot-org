@@ -18,22 +18,25 @@ function filterSprites(costume) {
 
 //Equivalent of layoutAsGrid({costume: costume})
 function helperGrid(costume) {
-    spriteIds = filterSprites(costume);
-    count = spriteIds.length;
-    //Now this is essentially the same code as layoutGrid block
-    var numRows = Math.ceil(Math.sqrt(count));
-    var numCols = Math.ceil(count / numRows);
-    for (var i = 0; i < count; i++) {
-      var spriteIdArg = {id: spriteIds[i]};
-      var row = Math.floor(i / numCols);
-      var col = i % numCols;
-      var colFraction = col / (numCols - 1) || 0;
-      var x = MIN_XY + colFraction * (MAX_XY - MIN_XY);
-      var rowFraction = row / (numRows - 1) || 0;
-      var y = MIN_XY + rowFraction * (MAX_XY - MIN_XY);
+  var SPRITE_SIZE = 25;
+  var MIN_XY = SPRITE_SIZE / 2 + 5;
+  var MAX_XY = 400 - MIN_XY;
+  spriteIds = filterSprites(costume);
+  count = spriteIds.length;
+  //Now this is essentially the same code as layoutGrid block
+  var numRows = Math.ceil(Math.sqrt(count));
+  var numCols = Math.ceil(count / numRows);
+  for (var i = 0; i < count; i++) {
+    var spriteIdArg = {id: spriteIds[i]};
+    var row = Math.floor(i / numCols);
+    var col = i % numCols;
+    var colFraction = col / (numCols - 1) || 0;
+    var x = MIN_XY + colFraction * (MAX_XY - MIN_XY);
+    var rowFraction = row / (numRows - 1) || 0;
+    var y = MIN_XY + rowFraction * (MAX_XY - MIN_XY);
 
-      jumpTo(spriteIdArg, {x: x, y: y});
-    }
+    jumpTo(spriteIdArg, {x: x, y: y});
+  }
 }
 
 
@@ -67,12 +70,12 @@ function setupParticlesValidation() {
   //function block may have already created these objects, so this checks to make sure
   //we don't accidentally overwrite them.
   if(!validationProps.particles) {
-  	validationProps.particles = {};
-  	validationProps.particles.blocks = [];
+    validationProps.particles = {};
+    validationProps.particles.blocks = [];
   }
   if(!validationProps.particles.previous) {
-  	validationProps.particles.previous = {};
-  	validationProps.particles.previous.blocks = [];
+    validationProps.particles.previous = {};
+    validationProps.particles.previous.blocks = [];
   }
   return true;
 }

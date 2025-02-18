@@ -10,15 +10,18 @@ theme: responsive
 
 - Vaší škole doporučujeme internetové připojení o rychlosti alespoň 15 MBit/s.
 - Nejmenší velikost obrazovky, kterou podporujeme, je 1024 x 728 px.
-- Na naše středoškolské kurzy Objevy v počítačových vědách, Principy počítačových věd a Úvod do Laboratoře aplikací budete potřebovat stolní počítač nebo laptop s myší (nebo touchpadem) a klávesnicí. Většinu tabletů a mobilních zařízení tyto kurzy nepodporují. Viz níže uvedenou část „Podrobnosti o podpoře mobilních zařízení a tabletů“, kde najdete výjimky specifické pro příslušná zařízení.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Viz níže uvedenou část „Podrobnosti o podpoře mobilních zařízení a tabletů“, kde najdete výjimky specifické pro příslušná zařízení.
 - Veškerý jiný obsah, jako například kurzy K-5 (Základy počítačových věd) a aktivity Hodina programování jsou kompatibilní s iPady a Chromebooky a veškerými ostatními moderními tablety a laptopy nebo stolními počítači.
 - Hledáte informace o podpoře mobilních zařízení? Přečtěte si níže uvedené.
 
 ## Minimální podporované prohlížeče a platformy
 
+Počínaje červencem 2024 aktualizujeme minimální verze požadované pro prohlížeče a operační systémy. Zatímco staré verze mohou stále fungovat, nebudeme moci podporovat požadavky na opravy chyb ve starších verzích.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Prohlížeč
@@ -39,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Prohlížeč červenec '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobilní Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Okraj 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platforma
@@ -61,33 +86,55 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma červenec '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Servery k odblokování
 
 Pro co nejlepší prožitek s veškerým obsahem od Code.org Vám doporučujeme poradit se s Vaší školou nebo s IT oddělením školního okrsku, aby bylo zajištěno, že následující servery budou povoleny a nebudou blokovány.
 
-| Priorita                                                           | URL                                                                                                        |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| **Povinné**                                                        | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Volitelné**                                                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Používat videa umístěná na YouTube (režim zlepšeného soukromí)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Používat videa umístěná na Code.org**                            | `https://videos.code.org`                                                                                  |
-| **Používat simulátor internetu**                                   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Používat Web Lab**                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Používat tlačítko sdílení Třídy Google**                         | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                        | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Priorita                                                                                                 | URL                                                                                                        |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Povinné**                                                                                              | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Zajistit, aby systémy CAPTCHA mohly odlišit vaše použití od automatizované podvodné činnosti („bot“)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Volitelné**                                                                                            | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Používat videa umístěná na YouTube (režim zlepšeného soukromí)**                                       | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Používat videa umístěná na Code.org**                                                                  | `https://videos.code.org`                                                                                  |
+| **Používat simulátor internetu**                                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Používat Web Lab**                                                                                     | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Používat tlačítko sdílení Třídy Google**                                                               | `https://apis.google.com`                                                                                  |
 
 ## Údaje o podpoře mobilů a tabletů
 
-Ne všechny kurzy Objevy v počítačových vědách, Principy počítačových věd a Úvod do Laboratoře apliakcí jsou kompatibilní s tablety či mobilními zařízeními — je potřeba kompletní klávesnice a myš (nebo touchpad, jako například na počítačích MacBook). Tablety většinou podporovány nejsou, s následujícími výjimkami:
+Všechny kurzy CS Discoveries, CS Principles, CS A a Intro to App Lab nejsou kompatibilní s tablety nebo mobilními zařízeními - vyžaduje se plná klávesnice a myš (nebo touchpad). Tablety většinou podporovány nejsou, s následujícími výjimkami:
 
 - Microsoft Surface Pro s externí klávesnicí
 - iPad, na němž je spuštěn iPadOS 13.4 nebo novější s externí klávesnicí a externí myší nebo touchpadem
 
-Veškerý jiný obsah, jako například kurzy K-5 (Základy počítačových věd) a aktivity Hodina programování jsou kompatibilní s iPady a Chromebooky a veškerými ostatními moderními tablety a laptopy nebo stolními počítači.
+Veškerý další obsah, jako jsou kurzy K-5 (Základy informatiky) a aktivity Hour of Code jsou kompatibilní na iPadech a dalších moderních tabletech a přenosných nebo stolních počítačích.
 
 ### Mobilní telefony
 
@@ -101,7 +148,17 @@ K začlenění videí do Code.org a do naší [online výukové platformy](http
 
 Než zahájíte online kurzy na Code.org, vyzkoušejte si přehrávání níže uvedeného videa, abyste se ujistili, zda máte připraveno vše potřebné.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 Toto je přehrávač používaný v těchto výukových materiálech. Pokusí se zobrazit video přes YouTube, a jestliže bude YouTube zablokováno, zobrazí namísto něho video umístěné na serveru Code.org pomocí našeho „náhradního“ prohlížeče.
 

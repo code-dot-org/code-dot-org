@@ -1,0 +1,10 @@
+name 'Computer-Vision-Post-Assessment-Q3'
+title 'Computer Vision Post-Assessment'
+question 'Propose a sample solution to the following scenario that best utilizes computer vision–
+
+A shop keeper is worried that she might have bought too much merchandise.'
+right 'Implement a computer vision system to monitor customer interactions with products, analyzing patterns to predict demand and optimize inventory levels'
+wrong 'Develop a computer vision application that tracks the attendance and work hours of employees to improve staffing efficiency'
+wrong 'Use a computer vision system to track the overall foot traffic in the shop and provide weekly reports on customer visits'
+wrong 'Install computer vision cameras to monitor and enhance the lighting and ambiance within the shop to create a more inviting environment for customers'
+allow_multiple_attempts false

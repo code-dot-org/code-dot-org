@@ -1,8 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import {
   BubbleSize,
-  bubbleContainerWidths
+  bubbleContainerWidths,
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
 
@@ -10,27 +11,27 @@ const styles = {
   node: {
     ...progressStyles.inlineBlock,
     minWidth: bubbleContainerWidths[BubbleSize.full],
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 };
 
 const levelSpacerItemShape = PropTypes.shape({
   node: PropTypes.node.isRequired,
   nodeStyle: PropTypes.object,
-  sublevelCount: PropTypes.number
+  sublevelCount: PropTypes.number,
 });
 
 function SublevelSpacer({sublevelCount}) {
   return (
     <span
       style={{
-        width: sublevelCount * bubbleContainerWidths[BubbleSize.letter]
+        width: sublevelCount * bubbleContainerWidths[BubbleSize.letter],
       }}
     />
   );
 }
 SublevelSpacer.propTypes = {
-  sublevelCount: PropTypes.number.isRequired
+  sublevelCount: PropTypes.number.isRequired,
 };
 
 /**
@@ -57,9 +58,9 @@ export default function ProgressTableLevelSpacer({items}) {
   );
 }
 ProgressTableLevelSpacer.propTypes = {
-  items: PropTypes.arrayOf(levelSpacerItemShape).isRequired
+  items: PropTypes.arrayOf(levelSpacerItemShape).isRequired,
 };
 
 export const unitTestExports = {
-  SublevelSpacer
+  SublevelSpacer,
 };

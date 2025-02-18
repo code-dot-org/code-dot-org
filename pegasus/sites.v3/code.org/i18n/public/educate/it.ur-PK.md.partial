@@ -10,15 +10,18 @@ theme: responsive
 
 - ہم آپ کے سکول کے لیے 15 میگابٹ/سیکنڈ کے انٹرنٹ کنکشن کی سفارش کرتے ہیں.
 - سب سے چھوٹا سکریں سائز جسے ہم سپورٹ کرتے ہیں 1024 × 728 پکسل ہے.
-- آپ کو ہماے مڈل اور ہائی سکول لیول کے کورسوں CS Discoveries, CS Principles, اور Intro to App Lab کے لیے ماؤس (ٹچ پیڈ) اور کیبورڈ کے حامل ایک ڈسک ٹاپ یا لیپ ٹاپ کی ضرورت ہو گی. ان کورسز کے لیے اکثر ٹیبلٹ اور موبائل ڈیوائسز کو سپورٹ نہیں کیا جاتا. ڈیوائس کے لیے مخصوص مستثنیات کے لیے نیچے "موبائل اور ٹیبلٹ سپورٹ کی تفصیلات" دیکھیں۔
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. ڈیوائس کے لیے مخصوص مستثنیات کے لیے نیچے "موبائل اور ٹیبلٹ سپورٹ کی تفصیلات" دیکھیں۔
 - دیگر تمام مواد، جیسے K-5 کورسز (کمپیوٹر سائنس کے بنیادی اصول) اور آور آف کوڈ سرگرمیاں دیگر تمام جدید ٹیبلٹس اور لیپ ٹاپ یا ڈیسک ٹاپ کمپیوٹرز کے علاوہ iPads اور Chromebooks کے ساتھ مطابقت رکھتی ہیں۔
 - کیا آپ موبائل ڈیوائس کے سپورٹ کی تفصیلات تلاش کر رہے ہیں؟ درج ذیل پڑھ لیں۔
 
 ## کم سے کم تعاون یافتہ براؤزرز اور پلیٹ فارمز
 
+جولائی 2024 سے شروع کرتے ہوئے، ہم براؤزر اور آپریٹنگ سسٹم کے لئے درکار کم از کم ورژن کو اپ ڈیٹ کریں گے۔ اگرچہ پرانے ورژن اب بھی کام کر سکتے ہیں، ہم پرانے ورژن میں بگ فکسز کی درخواستوں کی حمایت کرنے سے قاصر ہوں گے۔
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           براؤزر
@@ -39,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          براؤزر جولائی '24
+        </th>
+        <tr>
+          <td>کروم 103.x</td>
+        </tr>
+        <tr>
+          <td>سفاری 14.ایکس</td>
+        </tr>
+        <tr>
+          <td>موبائل سفاری 14.x</td>
+        </tr>
+        <tr>
+          <td>ایج 119.ایکس</td>
+        </tr>
+        <tr>
+          <td>فائر فاکس 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           پلیٹ فارم
@@ -61,33 +86,55 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          پلیٹ فارم جولائی '24
+        </th>
+        <tr>
+          <td>میکوس 10.15</td>
+        </tr>
+        <tr>
+          <td>آئی او ایس 15.ایکس</td>
+        </tr>
+        <tr>
+          <td>ونڈوز 8</td>
+        </tr>
+        <tr>
+          <td>اینڈروئیڈ 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## انبلاک (unblock) کرنے کے لیے سائٹس
 
 Code.org کے تمام مواد کے ساتھ بہترین تجربہ کے لیے، ہم آپ کے اسکول یا ضلع کے آئی ٹی ڈیپارٹمنٹ سے مشورہ کرنے کی تجویز کرتے ہیں تاکہ یہ یقینی بنایا جا سکے کہ درج ذیل سائٹس کھولنے کی اجازت ہے اور وہ بلاک نہیں ہیں۔
 
-| ترجیح                                                           | URL                                                                                                        |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **ضروری**                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **اختیاری**                                                     | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **YouTube پر ویڈیوز استعمال کرنے کے لیے (بہتر رازداری کا موڈ)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Code.org پر ویڈیوز استعمال کرنے کے لیے**                      | `https://videos.code.org`                                                                                  |
-| **انٹرنیٹ سیمولیٹر استعمال کرنے کے لیے**                        | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **ویب لیب استعمال کرنے کے لیے**                                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **گوگل کلاس روم شیئر بٹن استعمال کرنے کے لیے**                  | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                     | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| ترجیح                                                                                                       | URL                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **ضروری**                                                                                                   | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **اس بات کو یقینی بنانے کے لئے کیپچا سسٹم آپ کے استعمال کو خودکار جعلی (“بوٹ”) سرگرمی سے ممتاز کرسکتے ہیں** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **اختیاری**                                                                                                 | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **YouTube پر ویڈیوز استعمال کرنے کے لیے (بہتر رازداری کا موڈ)**                                             | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org پر ویڈیوز استعمال کرنے کے لیے**                                                                  | `https://videos.code.org`                                                                                  |
+| **انٹرنیٹ سیمولیٹر استعمال کرنے کے لیے**                                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **ویب لیب استعمال کرنے کے لیے**                                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **گوگل کلاس روم شیئر بٹن استعمال کرنے کے لیے**                                                              | `https://apis.google.com`                                                                                  |
 
 ## موبائل اور ٹیبلٹ سپورٹ کی تفصیلات
 
-تمام CS Discoveries, CS Principles, اور Intro to App Lab کورسز ٹیبلیٹ یا موبائل ڈیوائسز کے ساتھ مطابقت نہیں رکھتے- ایک مکمل کیبورڈ اور ماؤس (یا ٹچ پیڈ، جیسا کہ MacBooks پر) درکار ہیں. زیادہ تر ٹیبلٹ تعاون یافتہ نہیں ہیں، درج ذیل مستثنیات کے ساتھ:
+تمام سی ایس ڈسکویریز، سی ایس اصول، سی ایس اے، اور انٹرو ٹو ایپ لیب کورسز ٹیبلٹس یا موبائل آلات کے ساتھ مطابقت نہیں رکھتے ہیں - مکمل کی بورڈ اور ماؤس (یا ٹچ پیڈ) کی ضرورت ہے۔ زیادہ تر ٹیبلٹ تعاون یافتہ نہیں ہیں، درج ذیل مستثنیات کے ساتھ:
 
 - Microsoft Surface Pro ایک بیرونی کی بورڈ کے ساتھ
 - ایک بیرونی کیبورڈ اور ایک بیرونی ماؤس یا ٹچ پیڈ کے ساتھ iPadOS 13.4 یا اس کے بعد کے آپریٹنگ سسٹم کے ساتھ چلنے والا iPad
 
-دیگر تمام مواد، جیسے K-5 کورسز (کمپیوٹر سائنس کے بنیادی اصول) اور آور آف کوڈ سرگرمیاں دیگر تمام جدید ٹیبلٹس اور لیپ ٹاپ یا ڈیسک ٹاپ کمپیوٹرز کے علاوہ iPads اور Chromebooks کے ساتھ مطابقت رکھتی ہیں۔
+دوسرے تمام مواد، جیسے K-5 کورسز (کمپیوٹر سائنس کے بنیادی اصول) اور آور آف کوڈ سرگرمیاں آئی پیڈ اور دیگر جدید ٹیبلٹس اور لیپ ٹاپ یا ڈیسک ٹاپ کمپیوٹرز پر مطابقت رکھتی ہیں۔
 
 ### موبائل فونز
 
@@ -101,7 +148,17 @@ Code.org کے تمام مواد کے ساتھ بہترین تجربہ کے لی�
 
 اس سے پہلے کہ آپ Code.org کے آن لائن کورسز شروع کریں، نیچے دی گئی ویڈیو کے لیے پلے بیک کی جانچ کریں تاکہ یہ یقینی بنایا جا سکے کہ آپ شروع کرنے کے لیے تیار ہیں.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 پورے نصاب میں یہی پلیئر استعمال ہوتا ہے. یہ YouTube کے ذریعے ویڈیو دکھانے کی کوشش کرے گا اور، اگر یوٹیوب بلاک ہے، تو آپ اس کے بجائے ہمارے "بیک اپ" پلیئر کا استعمال کرتے ہوئے Code.org کے فراہم کردہ ویڈیو دکھا سکتے ہیں.
 

@@ -1,7 +1,8 @@
 import $ from 'jquery';
+
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 
 $(document).ready(() => {
   const script = document.querySelector('script[data-external]');
@@ -24,7 +25,7 @@ $(document).ready(() => {
   // By using a static ancestor jQuery will automatically bind the event handler later
   // when .submitButton is added to the DOM.
   // @see https://stackoverflow.com/q/203198
-  $('.full_container').on('click', '.submitButton', function() {
+  $('.full_container').on('click', '.submitButton', function () {
     onContinue();
   });
 });

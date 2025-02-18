@@ -1,23 +1,26 @@
+import {compact} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {compact} from 'lodash';
-import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import Button from '@cdo/apps/templates/Button';
+
+import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
+import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import color from '@cdo/apps/util/color';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import {
   updateStudentTransfer,
   transferStudents,
   TransferType,
   TransferStatus,
-  cancelStudentTransfer
+  cancelStudentTransfer,
 } from './manageStudentsRedux';
-import color from '@cdo/apps/util/color';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const OTHER_TEACHER = 'otherTeacher';
 const PADDING = 20;
@@ -29,7 +32,7 @@ class MoveStudents extends Component {
     studentData: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired
+        name: PropTypes.string.isRequired,
       })
     ).isRequired,
     transferData: PropTypes.shape({
@@ -37,12 +40,12 @@ class MoveStudents extends Component {
       sectionId: PropTypes.number,
       otherTeacher: PropTypes.bool.isRequired,
       otherTeacherSection: PropTypes.string.isRequired,
-      copyStudents: PropTypes.bool.isRequired
+      copyStudents: PropTypes.bool.isRequired,
     }),
     transferStatus: PropTypes.shape({
       status: PropTypes.string,
       type: PropTypes.string,
-      error: PropTypes.string
+      error: PropTypes.string,
     }),
 
     // redux provided
@@ -50,17 +53,17 @@ class MoveStudents extends Component {
       PropTypes.shape({
         name: PropTypes.string.isRequired,
         id: PropTypes.number.isRequired,
-        loginType: PropTypes.string.isRequired
+        loginType: PropTypes.string.isRequired,
       })
     ).isRequired,
     currentSectionId: PropTypes.number.isRequired,
     updateStudentTransfer: PropTypes.func.isRequired,
     transferStudents: PropTypes.func.isRequired,
-    cancelStudentTransfer: PropTypes.func.isRequired
+    cancelStudentTransfer: PropTypes.func.isRequired,
   };
 
   state = {
-    isDialogOpen: false
+    isDialogOpen: false,
   };
 
   openDialog = () => {
@@ -71,8 +74,8 @@ class MoveStudents extends Component {
         study_group: 'manage-students-actions',
         event: 'move-students-button-click',
         data_json: JSON.stringify({
-          sectionId: this.props.currentSectionId
-        })
+          sectionId: this.props.currentSectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -105,7 +108,7 @@ class MoveStudents extends Component {
     const isExternallyRostered = ![
       SectionLoginType.word,
       SectionLoginType.picture,
-      SectionLoginType.email
+      SectionLoginType.email,
     ].includes(section.loginType);
 
     return !isSameAsSource && !isExternallyRostered;
@@ -135,13 +138,13 @@ class MoveStudents extends Component {
     if (sectionValue === OTHER_TEACHER) {
       newTransferData = {
         otherTeacher: true,
-        sectionId: null
+        sectionId: null,
       };
     } else {
       newTransferData = {
         otherTeacher: false,
         sectionId: parseInt(sectionValue),
-        copyStudents: false
+        copyStudents: false,
       };
     }
 
@@ -150,13 +153,13 @@ class MoveStudents extends Component {
 
   onChangeTeacherSection = event => {
     this.props.updateStudentTransfer({
-      otherTeacherSection: event.target.value
+      otherTeacherSection: event.target.value,
     });
   };
 
   onChangeMoveOrCopy = event => {
     this.props.updateStudentTransfer({
-      copyStudents: event.target.value === TransferType.COPY_STUDENTS
+      copyStudents: event.target.value === TransferType.COPY_STUDENTS,
     });
   };
 
@@ -165,12 +168,8 @@ class MoveStudents extends Component {
   };
 
   isButtonDisabled = () => {
-    const {
-      studentIds,
-      sectionId,
-      otherTeacher,
-      otherTeacherSection
-    } = this.props.transferData;
+    const {studentIds, sectionId, otherTeacher, otherTeacherSection} =
+      this.props.transferData;
     if (otherTeacher) {
       return studentIds.length === 0 || !otherTeacherSection;
     } else {
@@ -196,13 +195,13 @@ class MoveStudents extends Component {
 
     const selectedStudentData = studentData.map(row => ({
       ...row,
-      isChecked: transferData.studentIds.includes(row.id)
+      isChecked: transferData.studentIds.includes(row.id),
     }));
 
     return (
       <div>
         <Button
-          __useDeprecatedTag
+          style={styles.buttonWithoutMargin}
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.moveStudents()}
@@ -274,16 +273,16 @@ class MoveStudents extends Component {
           </SortedTableSelect>
           <DialogFooter>
             <Button
-              __useDeprecatedTag
+              style={styles.buttonWithoutMargin}
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
-              __useDeprecatedTag
+              style={styles.buttonWithoutMargin}
               text={i18n.moveStudents()}
               onClick={this.transfer}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
               disabled={pendingTransfer || this.isButtonDisabled()}
               isPending={pendingTransfer}
               pendingText={i18n.movingStudents()}
@@ -299,26 +298,30 @@ const styles = {
   dialog: {
     padding: PADDING,
     width: DIALOG_WIDTH,
-    marginLeft: -(DIALOG_WIDTH / 2)
+    marginLeft: -(DIALOG_WIDTH / 2),
+  },
+  buttonWithoutMargin: {
+    margin: 0,
+    marginBottom: 5,
   },
   label: {
-    paddingTop: PADDING / 2
+    paddingTop: PADDING / 2,
   },
   input: {
-    marginLeft: PADDING / 2
+    marginLeft: PADDING / 2,
   },
   sectionInput: {
-    width: INPUT_WIDTH
+    width: INPUT_WIDTH,
   },
   radioOption: {
     paddingLeft: PADDING / 2,
-    fontFamily: '"Gotham 4r", sans-serif'
+    ...fontConstants['main-font-regular'],
   },
   error: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.red,
-    paddingBottom: PADDING / 2
-  }
+    paddingBottom: PADDING / 2,
+  },
 };
 
 export const UnconnectedMoveStudents = MoveStudents;
@@ -326,7 +329,7 @@ export const UnconnectedMoveStudents = MoveStudents;
 export default connect(
   state => ({
     sections: getVisibleSections(state),
-    currentSectionId: state.teacherSections.selectedSectionId
+    currentSectionId: state.teacherSections.selectedSectionId,
   }),
   dispatch => ({
     updateStudentTransfer(transferData) {
@@ -337,6 +340,6 @@ export default connect(
     },
     cancelStudentTransfer() {
       dispatch(cancelStudentTransfer());
-    }
+    },
   })
 )(MoveStudents);

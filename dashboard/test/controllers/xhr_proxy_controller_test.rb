@@ -1,7 +1,7 @@
+require 'test_helper'
 require 'webmock/minitest'
 WebMock.disable_net_connect!(allow_localhost: true)
 require_relative '../../../shared/test/spy_newrelic_agent'
-require 'test_helper'
 
 class XhrProxyControllerTest < ActionController::TestCase
   XHR_REDIRECT_URI = 'https://www.wikipedia.org/bar/a1b2'

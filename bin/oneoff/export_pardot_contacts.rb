@@ -14,8 +14,9 @@ require_relative '../../deployment'
 require 'cdo/pegasus'
 require 'cdo/pardot'
 require 'set'
+require 'cdo/sequel'
 
-PEGASUS_DB_READER = sequel_connect(
+PEGASUS_DB_READER = Cdo::Sequel.database_connection_pool(
   CDO.pegasus_db_reader,
   CDO.pegasus_db_reader,
   query_timeout: 1800.seconds

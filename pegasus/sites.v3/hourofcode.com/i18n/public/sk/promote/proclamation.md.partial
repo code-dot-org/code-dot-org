@@ -1,7 +1,6 @@
 ---
 title: Vzorové uznesenie napísané na podporu Týždňa informatiky a Hodiny kódu
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -23,38 +22,38 @@ Počítačové technológie sú neoddeliteľnou súčasťou modernej kultúry a�
 
 Informatika transformuje celé odvetvia, vytvára nové podnikateľské možnosti, poháňa inovácie vo všetkých vedných oblastiach a zvyšuje produktivitu v už zavedených sektoroch ekonomiky.
 
-Informatika je základom nášho technologického sektora a výrazne prispieva do slovenskej ekonomiky.
+Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Informatika je pre dnešný digitálny vek nevyhnutným odborom.
+Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
 
-Sektor informačných technológií má jedinečnú možnosť prispieť k obnove ekonomiky výskumom a vývojom nových inovácií.
+Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
 
-Po celej krajine budú v blízkej budúcnosti tisícky voľných pozícií v sektore informačných technológií.
+Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
 
-Ak žiakom poskytneme možnosť zúčastniť sa kvalitných aktivít zameraných na informatiku, otvoríme im bohaté možnosti uplatnenia sa v danom odvetví a poskytneme im dôležité zručnosti, ktoré budú môcť využívať počas celého života.
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Všetci žiaci základných a stredných škôl si zaslúžia kvalitné informatické vzdelanie, čo si, okrem iného, vyžaduje aj kvalifikovaných učiteľov, prístup k technológiam a vhodné osnovy prispôsobené veku žiakov.
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Informatika má pred sebou viaceré výzvy vrátane nízkej hodinovej dotácie na školách či nedostatočného profesijného rozvoja pre učiteľov informatiky.
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Učasť na Hodine kódu počas Týždňa informatiky môže pomôcť demystifikovať informačné technológie a motivovať žiakov k tomu, aby sa v informatike vzdelávali aj ďalej.
+Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
 
-Vo svete informačných technológií existuje množstvo bariér, ktoré majú za následok nedostatočného zastúpenie žien a predstaviteľov menšín na všetkých úrovniach a vo všetkých oblastiach.
+Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
 
-Grace Murray Hopper, jedna z prvých informatičiek, vyvinula nové programovacie jazyky a vytvorila štandardy pre počítačové systémy, ktoré položili základy pre mnohé pokroky v oblasti informačných technológií.
+Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
 
-Týždeň {{ campaign_date/start_long }} je na počesť narodenín Grace Hopper vyhlásený za Týždeň informatiky.<br />
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Preto sa uznášame, že (PARLAMENT, VLÁDA, KRAJSKÉ/MESTSKÉ/OBECNÉ ZASTUPITEĽSTVO, RADA ŠKOLY):
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-(1) podporuje zavedenie Týždňa informatiky ({{ campaign_date/full }});
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(2) podporuje školy, pedagógov, rodičov a zákonodarcov v tom, aby sa zapojili do Týždňa informatiky tým, že žiakom umožnia zúčastniť sa Hodiny kódu;
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-(3) podporuje školy, učiteľov, výskumníkov, vysoké školy, podnikateľov a zákonodarcov v hľadaní mechanizmov, ktoré by učiteľom zabezpečili špičkový profesijný rozvoj, aby dokázali poskytovať udržateľné informatické vzdelanie na všetkých stupňoch vzdelávania a motivovali žiakov k spoznávaniu informatiky a jej konceptov;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(4) podporuje zákonodarcov pri odstraňovaní bariér zvýhodňujúcich iné predmety na úkor informatiky, ktorá v dôsledku toho nebýva ťažiskovým predmetom;
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(5) podporuje všetky (aj už existujúce) programy, ktoré pomáhajú ženám a predstaviteľom menšín nájsť si uplatnenie v oblasti informatiky.
+(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
 
 {{ signup_button }}

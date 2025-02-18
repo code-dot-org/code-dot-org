@@ -13,14 +13,12 @@ class Api::V1::SectionLibrariesController < Api::V1::JSONApiController
     render json: libraries.uniq
   end
 
-  private
-
-  def no_active_sections?
+  private def no_active_sections?
     active_sections.empty?
   end
 
-  def active_sections
-    sections = current_user.sections + current_user.sections_as_student
+  private def active_sections
+    sections = current_user.sections_instructed + current_user.sections_as_student
     sections.select {|section| !section.hidden}
   end
 end

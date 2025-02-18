@@ -1,0 +1,13 @@
+name 'sp-pd-Code_w_AI-L3-Algorithms_24'
+skip_dialog true
+markdown <<MARKDOWN
+# Lesson Three: Navigating Algorithms with the help of AI 
+
+<img src="https://images.code.org/0a71bc29a0556d364dfce75d09928f4e-image-1712848455200.png" alt="AI bot looking at code" width="200px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
+
+#### In this lesson, students engage in a two-step strategy that integrates AI into algorithm planning. They use AI to help them identify key steps in an algorithm and generate pseudocode. 
+
+#### The lesson also emphasizes ethical considerations and personal value reflections regarding the use of AI in the creative process of algorithm planning.
+
+## Let's practice!
+MARKDOWN

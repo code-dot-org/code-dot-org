@@ -1,0 +1,25 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-05-03T23:32:06.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "### Audience\nIt can also help to direct a chatbot to address a certain audience with its response. For example:\n- \"Respond as thought speaking to [X]...\"\n- \"Your response should be appropriate for [X]...\"",
+        "imageUrl": "https://images.code.org/85dbec93fb2d76a7abc299f2ff2cee14-Audience Modality 1.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "### Modality\nYou can also shape the format of the response that a chatbot gives. For example:\n- \"Give your response as a [X]...\"\n- \"Limit your response to [X]...\"",
+        "imageUrl": "https://images.code.org/11f0047cb969afce78a479c48ebac8b9-Audience Modality 2.png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      }
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-03T23:32:06.041+00:00\",\"changed\":[\"cloned from \\\"gen-ai-panels-test1-L7\\\"\"],\"cloned_from\":\"gen-ai-panels-test1-L7\"}]"
+}]]></config>
+</Panels>

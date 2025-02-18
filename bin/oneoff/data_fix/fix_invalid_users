@@ -27,7 +27,7 @@ require_relative '../../../dashboard/config/environment'
 # Please note that we _did_ see some impact to database performance while running
 # this script, even on the upgraded HoC db instance.
 
-CDO.log = Logger.new(STDOUT)
+CDO.log = Logger.new($stdout)
 ActiveRecord::Base.record_timestamps = false
 
 options = {actually_update: false}
@@ -69,9 +69,9 @@ User.where(username: nil).
 
       raise ActiveRecord::Rollback unless options[:actually_update]
     end
-  rescue => ex
+  rescue => exception
     generate_username_errors += 1
-    CDO.log.error ex
+    CDO.log.error exception
   end
 end
 
@@ -88,9 +88,9 @@ User.where(provider: nil).
 
       raise ActiveRecord::Rollback unless options[:actually_update]
     end
-  rescue => ex
+  rescue => exception
     destroy_user_errors += 1
-    CDO.log.error ex
+    CDO.log.error exception
   end
 end
 

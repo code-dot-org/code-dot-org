@@ -1,17 +1,16 @@
 import spritelabInputList, * as spritelabInput from '@cdo/apps/p5lab/redux/spritelabInput';
-import {expect} from '../../../util/reconfiguredChai';
 
 const PromptType = spritelabInput.PromptType;
 
 describe('spritelabInput', () => {
   const initialState = [];
   it('has expected default state', () => {
-    expect(spritelabInputList(undefined, {})).to.deep.equal(initialState);
+    expect(spritelabInputList(undefined, {})).toEqual(initialState);
   });
 
   it('returns original state on unhandled action', () => {
     const state = {abc: 'def'};
-    expect(spritelabInputList(state, {})).to.equal(state);
+    expect(spritelabInputList(state, {})).toBe(state);
   });
 
   describe('addTextPrompt', () => {
@@ -22,31 +21,31 @@ describe('spritelabInput', () => {
         state,
         addTextPrompt('promptText', 'variableName')
       );
-      expect(newState).to.deep.equal([
+      expect(newState).toEqual([
         {
           promptType: PromptType.TEXT,
           promptText: 'promptText',
-          variableName: 'variableName'
-        }
+          variableName: 'variableName',
+        },
       ]);
     });
 
     it('adds a text prompt to the end of the list', () => {
       const state = [
         {promptType: PromptType.TEXT, promptText: 'first'},
-        {promptType: PromptType.MULTIPLE_CHOICE, promptText: 'second'}
+        {promptType: PromptType.MULTIPLE_CHOICE, promptText: 'second'},
       ];
       const newState = spritelabInputList(
         state,
         addTextPrompt('promptText', 'variableName')
       );
-      expect(newState).to.deep.equal([
+      expect(newState).toEqual([
         ...state,
         {
           promptType: PromptType.TEXT,
           promptText: 'promptText',
-          variableName: 'variableName'
-        }
+          variableName: 'variableName',
+        },
       ]);
     });
   });
@@ -59,40 +58,40 @@ describe('spritelabInput', () => {
         state,
         addMultipleChoicePrompt('promptText', 'variableName', [
           'choice1',
-          'choice2'
+          'choice2',
         ])
       );
-      expect(newState).to.deep.equal([
+      expect(newState).toEqual([
         {
           promptType: PromptType.MULTIPLE_CHOICE,
           promptText: 'promptText',
           variableName: 'variableName',
-          choices: ['choice1', 'choice2']
-        }
+          choices: ['choice1', 'choice2'],
+        },
       ]);
     });
 
     it('adds a multiple choice prompt to the end of the list', () => {
       const state = [
         {promptType: PromptType.TEXT, promptText: 'first'},
-        {promptType: PromptType.MULTIPLE_CHOICE, promptText: 'second'}
+        {promptType: PromptType.MULTIPLE_CHOICE, promptText: 'second'},
       ];
       const newState = spritelabInputList(
         state,
         addMultipleChoicePrompt('promptText', 'variableName', [
           'choice1',
           'choice2',
-          'choice3'
+          'choice3',
         ])
       );
-      expect(newState).to.deep.equal([
+      expect(newState).toEqual([
         ...state,
         {
           promptType: PromptType.MULTIPLE_CHOICE,
           promptText: 'promptText',
           variableName: 'variableName',
-          choices: ['choice1', 'choice2', 'choice3']
-        }
+          choices: ['choice1', 'choice2', 'choice3'],
+        },
       ]);
     });
   });
@@ -102,16 +101,16 @@ describe('spritelabInput', () => {
     it('gracefully handles empty list', () => {
       const state = [];
       const newState = spritelabInputList(state, popPrompt());
-      expect(newState).to.deep.equal([]);
+      expect(newState).toEqual([]);
     });
     it('removes the first prompt from the list', () => {
       const state = [
         {promptType: PromptType.TEXT, promptText: 'first'},
-        {promptType: PromptType.MULTIPLE_CHOICE, promptText: 'second'}
+        {promptType: PromptType.MULTIPLE_CHOICE, promptText: 'second'},
       ];
       const newState = spritelabInputList(state, popPrompt());
-      expect(newState).to.deep.equal([
-        {promptType: PromptType.MULTIPLE_CHOICE, promptText: 'second'}
+      expect(newState).toEqual([
+        {promptType: PromptType.MULTIPLE_CHOICE, promptText: 'second'},
       ]);
     });
   });
@@ -121,10 +120,10 @@ describe('spritelabInput', () => {
     it('returns []', () => {
       const state = [
         {promptType: PromptType.TEXT, promptText: 'first'},
-        {promptType: PromptType.MULTIPLE_CHOICE, promptText: 'second'}
+        {promptType: PromptType.MULTIPLE_CHOICE, promptText: 'second'},
       ];
       const newState = spritelabInputList(state, clearPrompts());
-      expect(newState).to.deep.equal([]);
+      expect(newState).toEqual([]);
     });
   });
 });

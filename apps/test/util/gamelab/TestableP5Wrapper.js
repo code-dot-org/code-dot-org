@@ -1,10 +1,11 @@
 /** @file Helper to load a configured P5Wrapper object for tests */
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
-import {expect} from '../deprecatedChai';
-import P5Wrapper from '@cdo/apps/p5lab/P5Wrapper';
-import {injectJSInterpreter as injectJSInterpreterToSprite} from '@cdo/apps/p5lab/P5SpriteWrapper';
 import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/p5lab/P5GroupWrapper';
+import {injectJSInterpreter as injectJSInterpreterToSprite} from '@cdo/apps/p5lab/P5SpriteWrapper';
+import P5Wrapper from '@cdo/apps/p5lab/P5Wrapper';
+
+import {expect} from '../deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 /**
  * Builds a P5Wrapper object ready to use in a test and then be thrown away.
@@ -17,10 +18,10 @@ export default function createP5Wrapper() {
 function createP5WrapperWithInterpreter(interpreter) {
   let p5Wrapper = new P5Wrapper();
   p5Wrapper.init({
-    onExecutionStarting: function() {},
-    onPreload: function() {},
-    onSetup: function() {},
-    onDraw: function() {}
+    onExecutionStarting: function () {},
+    onPreload: function () {},
+    onSetup: function () {},
+    onDraw: function () {},
   });
   p5Wrapper.startExecution();
 

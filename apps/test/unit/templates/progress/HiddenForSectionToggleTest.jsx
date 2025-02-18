@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {UnconnectedHiddenForSectionToggle as HiddenForSectionToggle} from '@cdo/apps/templates/progress/HiddenForSectionToggle';
-import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('HiddenForSectionToggle', () => {
   it('renders two buttons reflecting hidden state', () => {
@@ -45,21 +47,13 @@ describe('HiddenForSectionToggle', () => {
     );
 
     // Click the first button
-    wrapper
-      .find(Button)
-      .at(0)
-      .props()
-      .onClick();
+    wrapper.find(Button).at(0).props().onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('visible');
 
     callback.resetHistory();
 
     // Click the second button
-    wrapper
-      .find(Button)
-      .at(1)
-      .props()
-      .onClick();
+    wrapper.find(Button).at(1).props().onClick();
     expect(callback).to.have.been.calledOnce.and.calledWith('hidden');
   });
 
@@ -70,16 +64,8 @@ describe('HiddenForSectionToggle', () => {
     );
 
     // Click both buttons
-    wrapper
-      .find(Button)
-      .at(0)
-      .props()
-      .onClick();
-    wrapper
-      .find(Button)
-      .at(1)
-      .props()
-      .onClick();
+    wrapper.find(Button).at(0).props().onClick();
+    wrapper.find(Button).at(1).props().onClick();
     expect(callback).not.to.have.been.called;
   });
 });

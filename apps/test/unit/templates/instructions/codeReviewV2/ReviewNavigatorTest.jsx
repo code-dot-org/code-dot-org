@@ -1,17 +1,19 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import Button from '@cdo/apps/templates/Button';
-import javalabMsg from '@cdo/javalab/locale';
-import sinon from 'sinon';
+import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import * as utils from '@cdo/apps/utils';
+import javalabMsg from '@cdo/javalab/locale';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   viewPeerList: true,
   loadPeers: () => {},
-  teacherAccountViewingAsParticipant: false
+  teacherAccountViewingAsParticipant: false,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -42,8 +44,8 @@ describe('ReviewNavigator', () => {
         {ownerId: 1, ownerName: 'Jerry'},
         {
           ownerId: 2,
-          ownerName: 'Elaine'
-        }
+          ownerName: 'Elaine',
+        },
       ];
       const loadPeersStub = sinon.stub();
       const wrapper = setUp({viewPeerList: true, loadPeers: loadPeersStub});
@@ -62,7 +64,7 @@ describe('ReviewNavigator', () => {
       const loadPeersStub = sinon.stub();
       const wrapper = setUp({
         viewPeerList: true,
-        loadPeers: loadPeersStub
+        loadPeers: loadPeersStub,
       });
 
       const dropdown = wrapper.find(DropdownButton);
@@ -78,7 +80,7 @@ describe('ReviewNavigator', () => {
       const loadPeersStub = sinon.stub();
       const wrapper = setUp({
         viewPeerList: true,
-        loadPeers: loadPeersStub
+        loadPeers: loadPeersStub,
       });
 
       const dropdown = wrapper.find(DropdownButton);
@@ -94,7 +96,7 @@ describe('ReviewNavigator', () => {
     const navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
     sinon.stub(utils, 'currentLocation').returns({
       origin: 'fakeOrigin',
-      pathname: '/fakePath'
+      pathname: '/fakePath',
     });
     const fakePeerList = [{ownerId: 1, ownerName: 'Jerry'}];
     const loadPeersStub = sinon.stub();
@@ -119,7 +121,7 @@ describe('ReviewNavigator', () => {
     const navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
     sinon.stub(utils, 'currentLocation').returns({
       origin: 'fakeOrigin',
-      pathname: '/fakePath'
+      pathname: '/fakePath',
     });
     const wrapper = setUp({viewPeerList: false});
 

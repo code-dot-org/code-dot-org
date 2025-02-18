@@ -34,7 +34,7 @@
 #footer-links a {
   color: white;
   font-weight: normal;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
   text-decoration: none;
 }
 
@@ -66,7 +66,7 @@
 
 #non-en {
   height: 90px;
-  background-color: #7665a0
+  background-color: var(--brand_secondary_default)
 }
 
 #non-en .language-dropdown select {
@@ -178,7 +178,8 @@
    #privacy a {
     color: #ffa400;
     opacity: 1;
-    font-family: 'Gotham 5r', sans-serif;
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
   }
 
   #privacy a:hover {

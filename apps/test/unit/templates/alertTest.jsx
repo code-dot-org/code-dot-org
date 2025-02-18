@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
-import Alert from '@cdo/apps/templates/alert';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import Alert from '@cdo/apps/legacySharedComponents/alert';
+
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('Alert', () => {
   it('renders any children', () => {

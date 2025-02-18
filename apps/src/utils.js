@@ -1,9 +1,11 @@
-import $ from 'jquery';
 import Immutable from 'immutable';
-import MD5 from 'crypto-js/md5';
+import $ from 'jquery';
+import md5 from 'md5';
 import RGBColor from 'rgbcolor';
+
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
+
 import './polyfills';
 
 /**
@@ -140,7 +142,7 @@ export function range(start, end) {
  * second function if and only if the first function returns true
  */
 export function executeIfConditional(conditional, fn) {
-  return function() {
+  return function () {
     if (conditional()) {
       return fn.apply(this, arguments);
     }
@@ -169,7 +171,7 @@ export const stripEncapsulatingDoubleQuotes = inputString =>
 /**
  * Defines an inheritance relationship between parent class and this class.
  */
-Function.prototype.inherits = function(parent) {
+Function.prototype.inherits = function (parent) {
   this.prototype = Object.create(parent.prototype);
   this.prototype.constructor = this;
   this.superPrototype = parent.prototype;
@@ -180,17 +182,17 @@ Function.prototype.inherits = function(parent) {
  * done so that level builders can specify required blocks with wildcard fields.
  */
 export function wrapNumberValidatorsForLevelBuilder() {
-  var nonNeg = Blockly.FieldTextInput.nonnegativeIntegerValidator;
-  var numVal = Blockly.FieldTextInput.numberValidator;
+  var nonNeg = Blockly.cdoUtils.nonnegativeIntegerValidator;
+  var numVal = Blockly.cdoUtils.numberValidator;
 
-  Blockly.FieldTextInput.nonnegativeIntegerValidator = function(text) {
+  Blockly.cdoUtils.nonnegativeIntegerValidator = function (text) {
     if (text === '???') {
       return text;
     }
     return nonNeg(text);
   };
 
-  Blockly.FieldTextInput.numberValidator = function(text) {
+  Blockly.cdoUtils.numberValidator = function (text) {
     if (text === '???') {
       return text;
     }
@@ -224,7 +226,7 @@ export function randomKey(obj) {
  * @returns {string} RFC4122-compliant UUID
  */
 export function createUuid() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
     var r = (Math.random() * 16) | 0,
       v = c === 'x' ? r : (r & 0x3) | 0x8;
     return v.toString(16);
@@ -356,7 +358,7 @@ export function escapeText(text) {
   return (
     first +
     rest
-      .map(function(line) {
+      .map(function (line) {
         return '<div>' + (line.length ? line : '<br>') + '</div>';
       })
       .join('')
@@ -372,21 +374,21 @@ export function showGenericQtip(targetElement, title, message, position) {
         <p>${message}</p>
       `,
         title: {
-          button: $('<div class="tooltip-x-close"/>')
-        }
+          button: $('<div class="tooltip-x-close"/>'),
+        },
       },
       position,
       style: {
         classes: 'cdo-qtips',
         tip: {
           width: 20,
-          height: 20
-        }
+          height: 20,
+        },
       },
       hide: {
-        event: 'unfocus'
+        event: 'unfocus',
       },
-      show: false // don't show on mouseover
+      show: false, // don't show on mouseover
     })
     .qtip('show');
 }
@@ -397,7 +399,7 @@ export function showUnusedBlockQtip(targetElement) {
   const message = msg.unattachedBlockTipBody();
   const position = {
     my: 'bottom left',
-    at: 'top right'
+    at: 'top right',
   };
 
   showGenericQtip(targetElement, title, message, position);
@@ -406,7 +408,7 @@ export function showUnusedBlockQtip(targetElement) {
 /**
  * @param {string} key
  * @param {string} defaultValue
- * @return {string}
+ * @return {string} returns the value of the key in localStorage, null if not set or the defaultValue if there is an error
  */
 export function tryGetLocalStorage(key, defaultValue) {
   if (defaultValue === undefined) {
@@ -575,7 +577,7 @@ export function normalize(vector) {
   }
   return {
     x: vector.x / mag,
-    y: vector.y / mag
+    y: vector.y / mag,
   };
 }
 
@@ -812,9 +814,9 @@ export function resetAniGif(element) {
 export function interpolateColors(from, to, value) {
   const fromRGB = new RGBColor(from);
   const toRGB = new RGBColor(to);
-  const r = fromRGB.r * (1 - value) + toRGB.r * value;
-  const g = fromRGB.g * (1 - value) + toRGB.g * value;
-  const b = fromRGB.b * (1 - value) + toRGB.b * value;
+  const r = Math.round(fromRGB.r * (1 - value) + toRGB.r * value);
+  const g = Math.round(fromRGB.g * (1 - value) + toRGB.g * value);
+  const b = Math.round(fromRGB.b * (1 - value) + toRGB.b * value);
   return `rgb(${r}, ${g}, ${b})`;
 }
 
@@ -851,7 +853,7 @@ export function calculateOffsetCoordinates(element, clientX, clientY) {
   const rect = element.getBoundingClientRect();
   return {
     x: Math.round(((clientX - rect.left) * element.offsetWidth) / rect.width),
-    y: Math.round(((clientY - rect.top) * element.offsetHeight) / rect.height)
+    y: Math.round(((clientY - rect.top) * element.offsetHeight) / rect.height),
   };
 }
 
@@ -867,7 +869,7 @@ export const findProfanity = (text, locale, authenticityToken = null) => {
     url: '/profanity/find',
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify({text, locale})
+    data: JSON.stringify({text, locale}),
   };
 
   if (authenticityToken) {
@@ -883,7 +885,7 @@ export const findProfanity = (text, locale, authenticityToken = null) => {
  * @returns {string} A string representing an MD5 hash.
  */
 export function hashString(str) {
-  return MD5(str).toString();
+  return md5(str);
 }
 
 /*
@@ -892,11 +894,131 @@ export function hashString(str) {
  * @see https://getbootstrap.com/2.3.2/javascript.html#tooltips
  */
 export function tooltipifyVocabulary() {
-  $('.vocab').each(function() {
+  $('.vocab').each(function () {
     $(this).tooltip({placement: 'bottom'});
   });
 }
 
 export function isBlank(str) {
   return !!(!str || str.trim() === '');
+}
+
+const Environments = {
+  production: 'production',
+  levelbuilder: 'levelbuilder',
+  test: 'test',
+  staging: 'staging',
+  adhoc: 'adhoc',
+  development: 'development',
+  unknown: 'unknown',
+};
+
+export function getEnvironment() {
+  const hostname = currentLocation().hostname;
+  if (hostname.includes('adhoc')) {
+    // As adhoc hostnames may include other keywords, check it first.
+    return Environments.adhoc;
+  }
+  if (hostname.includes('test')) {
+    return Environments.test;
+  }
+  if (hostname.includes('levelbuilder')) {
+    return Environments.levelbuilder;
+  }
+  if (hostname.includes('staging')) {
+    return Environments.staging;
+  }
+  if (hostname.includes('localhost') || hostname.includes('127.0.0.1')) {
+    return Environments.development;
+  }
+  if (
+    hostname === 'code.org' ||
+    hostname === 'studio.code.org' ||
+    hostname === 'hourofcode.com'
+  ) {
+    return Environments.production;
+  }
+  return Environments.unknown;
+}
+
+export function isDevelopmentEnvironment() {
+  return getEnvironment() === Environments.development;
+}
+
+export function isStagingEnvironment() {
+  return getEnvironment() === Environments.staging;
+}
+
+export function isTestEnvironment() {
+  return getEnvironment() === Environments.test;
+}
+
+export function isProductionEnvironment() {
+  return getEnvironment() === Environments.production;
+}
+
+/**
+ * Fetch cookies signed by cloudfront which grant access to restricted content.
+ * @returns {Promise<Response>}
+ */
+export function fetchSignedCookies(buster = false) {
+  return fetch(
+    `/dashboardapi/sign_cookies${buster ? `?bust=${Date.now()}` : ''}`,
+    {
+      credentials: 'same-origin',
+    }
+  );
+}
+
+export function getAlphanumericId() {
+  const validCharacters =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const idLength = 16;
+  const id = [];
+  for (let i = 0; i < idLength; i++) {
+    id.push(
+      validCharacters.charAt(Math.floor(Math.random() * validCharacters.length))
+    );
+  }
+  return id.join('');
+}
+
+/**
+ * Parses a level's XML properties for block ids that were explicitly set.
+ * @param {Object} appOptions
+ * @returns {Set<string>} - A set of explicitly set 'id' attributes found in the XML.
+ */
+export function findExplicitlySetBlockIds(appOptions = null) {
+  if (!appOptions || !appOptions.level) {
+    return [];
+  }
+  const explicitlySetIds = new Set();
+
+  const blockSources = ['startBlocks', 'toolbox'];
+  for (const levelProperty of blockSources) {
+    const xmlString = appOptions.level?.[levelProperty];
+
+    try {
+      if (!xmlString) {
+        break;
+      }
+
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlString, 'text/xml');
+
+      // Find all 'block' elements and extract explicitly set ids
+      const blockElements = xmlDoc.querySelectorAll('block');
+      blockElements.forEach(blockElement => {
+        const idAttribute = blockElement.getAttribute('id');
+        if (idAttribute) {
+          explicitlySetIds.add(idAttribute);
+        }
+      });
+    } catch (error) {
+      // Handle parsing errors (e.g., invalid XML)
+      console.error(`Error parsing XML for ${levelProperty}:`, error);
+    }
+  }
+
+  return explicitlySetIds;
 }

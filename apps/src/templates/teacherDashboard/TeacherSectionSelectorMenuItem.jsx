@@ -1,14 +1,18 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import PopUpMenu from '../../lib/ui/PopUpMenu';
-import FontAwesome from './../FontAwesome';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import PopUpMenu from '../../sharedComponents/PopUpMenu';
 import color from '../../util/color';
+
 import {sectionForDropdownShape} from './shapes';
 
 export default class TeacherSectionSelectorMenuItem extends Component {
   static propTypes = {
     section: sectionForDropdownShape,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   };
 
   render() {
@@ -16,7 +20,7 @@ export default class TeacherSectionSelectorMenuItem extends Component {
     const checkMarkStyle = {
       marginRight: 5,
       color: color.level_perfect,
-      visibility: section.isAssigned ? 'visible' : 'hidden'
+      visibility: section.isAssigned ? 'visible' : 'hidden',
     };
 
     return (
@@ -36,10 +40,10 @@ const styles = {
     lineHeight: '28px',
     width: 270,
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    paddingLeft: 10
-  }
+    paddingLeft: 10,
+  },
 };

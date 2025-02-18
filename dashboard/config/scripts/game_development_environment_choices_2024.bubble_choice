@@ -1,0 +1,8 @@
+name 'game_development_environment_choices_2024'
+display_name 'Sprite Type: Environment'
+description 'Choose a game to check out how environment type sprites block all of the others!'
+
+sublevels
+level 'game_mechanics_type_choice1_2024'
+level 'game_new3_environment_choice1_2024'
+level 'game_new3_environment_choice2_2024'

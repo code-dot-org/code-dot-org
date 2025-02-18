@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
+
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
 import FilterGroup from '@cdo/apps/tutorialExplorer/filterGroup';
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
+
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const TEST_GROUP_NAME = 'Redwall';
 const TEST_TEXT = 'Mossflower';
@@ -14,7 +16,7 @@ const DEFAULT_PROPS = {
   filterEntries: [],
   selection: [],
   onUserInput: TEST_CALLBACK,
-  singleEntry: false
+  singleEntry: false,
 };
 
 describe('FilterGroup', () => {
@@ -25,12 +27,12 @@ describe('FilterGroup', () => {
         filterEntries={[
           {
             name: 'Martin the Warrior',
-            text: 'The Bellmaker'
+            text: 'The Bellmaker',
           },
           {
             name: 'The Legend of Luke',
-            text: 'The Long Patrol'
-          }
+            text: 'The Long Patrol',
+          },
         ]}
       />
     );
@@ -65,8 +67,8 @@ describe('FilterGroup', () => {
         filterEntries={[
           {
             name: 'Martin the Warrior',
-            text: 'The Bellmaker'
-          }
+            text: 'The Bellmaker',
+          },
         ]}
         singleEntry={true}
       />
@@ -93,16 +95,16 @@ describe('FilterGroup', () => {
         filterEntries={[
           {
             name: 'Mariel of Redwall',
-            text: ''
+            text: '',
           },
           {
             name: 'Mattimeo',
-            text: ''
+            text: '',
           },
           {
             name: 'Triss',
-            text: ''
-          }
+            text: '',
+          },
         ]}
         selection={['Mariel of Redwall', 'Triss']}
       />

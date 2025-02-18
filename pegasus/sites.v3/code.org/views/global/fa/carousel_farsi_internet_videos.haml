@@ -1,0 +1,19 @@
+- video_internet_index = 8
+
+- internet_video_caption = [hoc_s(:video_library_page_internet_work_video_title_1), hoc_s(:video_library_page_internet_work_video_title_5), hoc_s(:video_library_page_internet_work_video_title_2), hoc_s(:video_library_page_internet_work_video_title_6) , hoc_s(:video_library_page_internet_work_video_title_3), hoc_s(:video_library_page_internet_work_video_title_7), hoc_s(:video_library_page_internet_work_video_title_4), hoc_s(:video_library_page_internet_work_video_title_8)]
+
+- video_download_path = ["//videos.code.org/farsi/how-internet-works/what-is-internet.mp4", "//videos.code.org/farsi/how-internet-works/internet-wire-cables.mp4", "//videos.code.org/farsi/how-internet-works/internet-ip.mp4", "//videos.code.org/farsi/how-internet-works/internet-packets.mp4", "//videos.code.org/farsi/how-internet-works/internet-http-html.mp4", "//videos.code.org/farsi/how-internet-works/internet-encryption.mp4", "//videos.code.org/farsi/how-internet-works/internet-cybersecurity.mp4", "//videos.code.org/farsi/how-internet-works/internet-search.mp4"]
+
+- video_internet = ["zHJ1E-qAxiA", "QPWb53_wM6Q", "Gy5Qe75Gy1w", "WLc3kCKgbtw", "cold1Glav6o", "itX9NUDYhis", "vY269KmgXi8", "mkLKkCJ1Z4Y"]
+
+.carousel-wrapper.video-carousel
+  %swiper-container.how-internet-works{navigation: "true", "navigation-next-el": ".nav-next-how-internet-works", "navigation-prev-el": ".nav-prev-how-internet-works", pagination: "true", init: "false", "allow-touch-move": "false"}
+    - video_internet_index.times do |index|
+      %swiper-slide
+        %figure
+          = view :video_with_fallback, video_code: video_internet[index], download_path: video_download_path[index]
+          %figcaption.no-margin-bottom
+            = internet_video_caption[index]
+
+  %button.swiper-nav-prev.nav-prev-how-internet-works
+  %button.swiper-nav-next.nav-next-how-internet-works

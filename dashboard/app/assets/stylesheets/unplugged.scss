@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:05c1bdaaccbf4dc235726f9c27a7f7f451c285e5cce439867a271e465885100e
-size 584
+@import "color";
+@import "mixins";
+
+.unplugged {
+  $page_width: 800px;
+
+  width: $page_width;
+  margin-left: auto;
+  margin-right: auto;
+
+  .video-section {
+    margin-top: 12px;
+
+    .video-container {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .pdf-button {
+    margin-right: 10px;
+  }
+
+  .lesson-plan {
+    margin-top: 40px;
+
+    .pdf-button {
+      margin-right: 0;
+      margin-top: 5px;
+    }
+  }
+
+  .coming-soon {
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .video-download {
+    margin-bottom: 3px;
+  }
+
+  @include selectable;
+}

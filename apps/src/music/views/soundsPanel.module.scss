@@ -1,81 +1,189 @@
-@import "color.scss";
-@import "./theme/tokens-dark";
+@import 'color.scss';
 
 .soundsPanel {
   user-select: none;
-}
+  width: 600px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
 
-.folder {
-  background-color: $gray-900;
-  overflow: hidden;
-  border-radius: 4px;
-  padding: 6px;
-  &:first-child {
-    margin-top: 0;
+  &Top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    gap: 8px;
+
+    .segmentedButtons {
+      span {
+        user-select: none;
+      }
+    }
   }
-  &:not(:first-child) {
-    margin-top: 6px;
+
+  &Body {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex: 1;
+    gap: 5px;
+
+    .leftColumn {
+      background-color: $neutral_dark;
+      flex: 1;
+      overflow-y: scroll;
+    }
+
+    .rightColumn {
+      background-color: $neutral_dark;
+      flex: 1;
+      overflow-y: scroll;
+    }
   }
-}
 
-.folderName {
-  font-size: 18px;
-  padding: 6px 0;
-  margin-bottom: 6px;
-  border-bottom: solid 1px $gray-800;
-  margin-right: 12px;
-}
+  .folderRow {
+    padding: 6px 0;
+    margin: 1px 1px 6px 1px;
+    overflow: hidden;
+    cursor: pointer;
 
-.soundRow {
-  overflow: hidden;
-  padding: 4px 0;
-  &:hover {
-    background-color: $gray-800;
+    &:hover {
+      background-color: $neutral_dark90;
+    }
+
+    &:focus-visible {
+      outline: $neutral_light solid 1px;
+    }
+
+    &Selected {
+      background-color: $neutral_dark80;
+    }
+
+    &:first-child {
+      margin-top: 1px;
+    }
+
+    &Left {
+      width: 55px;
+      height: 55px;
+      margin: 0 6px 0 4px;
+      float: left;
+    }
+
+    &Middle {
+      width: calc(100% - 75px - 58px);
+      float: left;
+
+      &Name {
+        font-size: 16px;
+      }
+
+      &SubTitle {
+        font-size: 11px;
+        line-height: 2em;
+      }
+    }
+
+    &Right {
+      float: right;
+      width: 43px;
+      margin-right: 15px;
+    }
   }
-  &Selected {
-    background-color: $gray-700;
+
+  .soundRow {
+    overflow: hidden;
+    font-size: 14px;
+    margin: 1px;
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $neutral_dark90;
+
+      .lengthNoMarginRight {
+        color: $neutral_dark30;
+      }
+    }
+
+    &:focus-visible {
+      outline: $neutral_light solid 1px;
+    }
+
+    &Selected {
+      background-color: $neutral_dark80;
+    }
+
+    &Left {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 30px);
+
+      .typeIcon {
+        margin-right: 6px;
+        margin-left: 4px;
+        width: 24px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .name {
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &Vocal {
+          font-style: italic;
+        }
+      }
+    }
+
+    &Middle {
+      font-size: 11px;
+      min-width: 240px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &Right {
+      display: flex;
+      margin-right: 15px;
+    }
   }
-}
 
-.soundRowLeft {
-  width: 15px;
-  margin: 0 4px;
-  float: left;
-}
+  .length {
+    display: inline-block;
+    font-size: 13px;
+    width: 15px;
+    margin-right: 10px;
+    color: $neutral_dark50;
+    text-align: right;
 
-.icon-beat {
-  color: #fc55ff;
-}
+    &NoMarginRight {
+      margin-right: 0;
 
-.icon-bass {
-  color: #00c0ff;
-}
+      &Selected {
+        color: $neutral_dark20;
+      }
+    }
+  }
 
-.icon-lead {
-  color: #00ff02;
-}
+  .previewContainer {
+    display: inline-block;
+    font-size: 16px;
+  }
 
-.icon-fx {
-  color: #ff0;
-}
+  .preview {
+    color: $neutral_dark40;
 
-.soundRowMiddle {
-  width: calc(100% - 23px - 30px);
-  float: left;
-}
-
-.soundRowRight {
-  float: right;
-  width: 15px;
-  margin-right: 15px;
-  font-size: 16px;
-}
-
-.preview {
-  color: $gray-300;
-
-  &Playing {
-    color: $gray-600;
-    cursor: default;
+    &Playing {
+      color: $neutral_dark70;
+      cursor: default;
+    }
   }
 }

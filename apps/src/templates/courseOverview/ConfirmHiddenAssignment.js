@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
 
 /**
  * Confirmation dialog for when assigning a script or course from the course or script overview page
@@ -13,7 +14,7 @@ export default class ConfirmHiddenAssignment extends Component {
     sectionName: PropTypes.string.isRequired,
     assignmentName: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
-    onConfirm: PropTypes.func.isRequired
+    onConfirm: PropTypes.func.isRequired,
   };
 
   render() {
@@ -38,7 +39,7 @@ export default class ConfirmHiddenAssignment extends Component {
             text={i18n.unhideUnitAndAssign()}
             style={{marginLeft: 5}}
             onClick={onConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </div>
       </BaseDialog>
@@ -50,7 +51,7 @@ const styles = {
   header: {
     fontSize: 16,
     marginBottom: 5,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   content: {
     fontSize: 14,
@@ -63,6 +64,6 @@ const styles = {
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderStyle: 'solid',
-    borderColor: color.lighter_gray
-  }
+    borderColor: color.lighter_gray,
+  },
 };

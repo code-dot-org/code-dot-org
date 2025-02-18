@@ -1,40 +1,41 @@
+import {TestResults, ResultType} from '../constants';
+import AppView from '../templates/AppView';
+
+const maze = require('@code-dot-org/maze');
 const React = require('react');
 const ReactDOM = require('react-dom');
 const Provider = require('react-redux').Provider;
 
-const timeoutList = require('../lib/util/timeoutList');
-import AppView from '../templates/AppView';
-const CustomMarshalingInterpreter = require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter')
-  .default;
+const containedLevels = require('../containedLevels');
 const dom = require('../dom');
-const utils = require('../utils');
-import {TestResults, ResultType} from '../constants';
 const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
+const CustomMarshalingInterpreter =
+  require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter').default;
+const timeoutList = require('../lib/util/timeoutList');
 const getStore = require('../redux').getStore;
 const studioApp = require('../StudioApp').singleton;
-const containedLevels = require('../containedLevels');
+const utils = require('../utils');
+
+const api = require('./api');
+const dropletConfig = require('./dropletConfig');
+const ExecutionInfo = require('./executionInfo');
+const MazeVisualizationColumn = require('./MazeVisualizationColumn');
+const mazeReducer = require('./redux');
+const createResultsHandlerForSubtype =
+  require('./results/utils').createResultsHandlerForSubtype;
+
 const getContainedLevelResultInfo = containedLevels.getContainedLevelResultInfo;
 const postContainedLevelAttempt = containedLevels.postContainedLevelAttempt;
 const runAfterPostContainedLevel = containedLevels.runAfterPostContainedLevel;
 
-const ExecutionInfo = require('./executionInfo');
-const MazeVisualizationColumn = require('./MazeVisualizationColumn');
-const api = require('./api');
-const dropletConfig = require('./dropletConfig');
-const mazeReducer = require('./redux');
-
-const maze = require('@code-dot-org/maze');
 const MazeController = maze.MazeController;
 const tiles = maze.tiles;
-
-const createResultsHandlerForSubtype = require('./results/utils')
-  .createResultsHandlerForSubtype;
 
 module.exports = class Maze {
   constructor() {
     this.scale = {
       snapRadius: 1,
-      stepSpeed: 5
+      stepSpeed: 5,
     };
 
     this.shouldSpeedUpInfiniteLoops = true;
@@ -57,7 +58,7 @@ module.exports = class Maze {
    */
   getAppReducers() {
     return {
-      maze: mazeReducer.default
+      maze: mazeReducer.default,
     };
   }
 
@@ -92,8 +93,8 @@ module.exports = class Maze {
         },
         playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
         loadAudio: studioApp().loadAudio.bind(studioApp()),
-        getTestResults: studioApp().getTestResults.bind(studioApp())
-      }
+        getTestResults: studioApp().getTestResults.bind(studioApp()),
+      },
     });
 
     this.resultsHandler = createResultsHandlerForSubtype(
@@ -145,6 +146,12 @@ module.exports = class Maze {
         Blockly.HSV_SATURATION = 0.6;
 
         Blockly.SNAP_RADIUS *= this.scale.snapRadius;
+
+        // Add API name and local variable to generator reserved words list.
+        // This prevents students from overriding these with their own
+        // functions/variables.
+        Blockly.JavaScript.addReservedWords('Maze,code');
+
         Blockly.setInfiniteLoopTrap();
       }
 
@@ -190,7 +197,7 @@ module.exports = class Maze {
 
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
-      hideRunButton: alwaysHideRunButton
+      hideRunButton: alwaysHideRunButton,
     });
 
     var visualizationColumn = (
@@ -308,14 +315,11 @@ module.exports = class Maze {
     this.beginAttempt();
     this.prepareForExecution_();
 
-    var code = '';
+    let code = '';
     if (studioApp().isUsingBlockly()) {
-      let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
-      if (studioApp().initializationBlocks) {
-        codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
-      }
-
-      code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+      code = Blockly.cdoUtils.getAllGeneratedCode(
+        studioApp().initializationCode
+      );
     } else {
       code = generateCodeAliases(dropletConfig, 'Maze');
       code += studioApp().editor.getValue();
@@ -359,7 +363,7 @@ module.exports = class Maze {
             // Run trial
             CustomMarshalingInterpreter.evalWith(code, {
               Maze: api,
-              executionInfo: this.executionInfo
+              executionInfo: this.executionInfo,
             });
 
             // Sort static grids based on trial result
@@ -402,7 +406,7 @@ module.exports = class Maze {
 
         CustomMarshalingInterpreter.evalWith(code, {
           Maze: api,
-          executionInfo: this.executionInfo
+          executionInfo: this.executionInfo,
         });
       }
 
@@ -474,8 +478,7 @@ module.exports = class Maze {
 
       program = studioApp().editor.getValue();
     } else {
-      var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-      program = Blockly.Xml.domToText(xml);
+      program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
     }
 
     this.waitingForReport = true;
@@ -493,7 +496,7 @@ module.exports = class Maze {
         result: this.result === ResultType.SUCCESS,
         testResult: this.testResults,
         program: encodeURIComponent(program),
-        onComplete: this.onReportComplete_
+        onComplete: this.onReportComplete_,
       });
     }
 
@@ -561,7 +564,7 @@ module.exports = class Maze {
     var options = {
       feedbackType: this.testResults,
       response: this.response,
-      level: this.controller.level
+      level: this.controller.level,
     };
 
     let message;
@@ -610,7 +613,7 @@ module.exports = class Maze {
    */
   prepareForExecution_() {
     this.executionInfo = new ExecutionInfo({
-      ticks: 1000
+      ticks: 1000,
     });
     this.resultsHandler.executionInfo = this.executionInfo;
     this.result = ResultType.UNSET;
@@ -717,7 +720,7 @@ module.exports = class Maze {
       studioApp().playAudioOnWin();
       this.controller.animatedFinish(timePerStep);
     } else {
-      timeoutList.setTimeout(function() {
+      timeoutList.setTimeout(function () {
         studioApp().playAudioOnFailure();
       }, this.stepSpeed);
     }

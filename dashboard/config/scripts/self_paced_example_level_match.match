@@ -29,3 +29,5 @@ markdown <<MARKDOWN
 ![](https://docs.google.com/drawings/d/e/2PACX-1vS_xO5UX3YmJwLglcW-LT_zhgHrBhNBV2H7KqtbXtU7uXVwliiDkh7Eul2F3R5omBifhofX2GpB8Jzf/pub?w=1094&h=610)
 
 MARKDOWN
+
+allow_multiple_attempts true

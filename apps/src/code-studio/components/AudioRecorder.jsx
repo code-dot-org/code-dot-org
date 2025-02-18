@@ -1,13 +1,14 @@
-/* global navigator */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button from '../../templates/Button';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
 import {assets as assetsApi} from '@cdo/apps/clientApi';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import {assetButtonStyles} from './AddAssetButtonRow';
 import {AudioErrorType} from './AssetManager';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import getRecorder, {RecordingFileType} from './recorders';
 
 const RECORD_MAX_TIME = 30000;
@@ -19,7 +20,7 @@ export default class AudioRecorder extends React.Component {
     recordingFileType: PropTypes.oneOf(Object.values(RecordingFileType)),
 
     //Temporary prop for logging - indicates user chose 'Manage Assets'
-    imagePicker: PropTypes.bool
+    imagePicker: PropTypes.bool,
   };
 
   constructor(props) {
@@ -29,7 +30,7 @@ export default class AudioRecorder extends React.Component {
     this.state = {
       audioName: '',
       recording: false,
-      loading: true
+      loading: true,
     };
   }
 
@@ -98,7 +99,7 @@ export default class AudioRecorder extends React.Component {
           study: 'sound-dialog-2',
           study_group: studyGroup,
           event: 'record-sound',
-          data_json: this.state.audioName
+          data_json: this.state.audioName,
         },
         {includeUserId: true}
       );
@@ -175,20 +176,20 @@ const styles = {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   recordingIcon: {
     color: 'red',
-    margin: 5
+    margin: 5,
   },
   warning: {
     textAlign: 'left',
-    color: color.red
+    color: color.red,
   },
   spinner: {
     display: 'inline-block',
     verticalAlign: 'top',
     marginTop: '16px',
-    marginRight: '10px'
-  }
+    marginRight: '10px',
+  },
 };

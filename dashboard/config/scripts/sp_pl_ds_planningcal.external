@@ -1,0 +1,20 @@
+name 'sp-pl-DS-planningCal'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit 1 Overview
+
+#### **Unit 1: Introduction to Data Science** is made up of 13 lessons including a final assessment. Take some time to consider how and when you will teach these lessons. 
+
+#### Look at the calendar tool on the  <a href="url" target="blank" rel="noopener noreferrer">overview page</a> and use the drop down menu to adjust to your instructional minutes per week.
+
+<img src="https://images.code.org/3a51a38f20b8caa26203575fdef4042f-image-1730743808088.png" alt="calendar of lesson overview" width="650px" style="border-radius:10px; float:left;">
+
+
+<div style="clear:both;"></div>
+
+## Let's dive in! 
+
+
+MARKDOWN

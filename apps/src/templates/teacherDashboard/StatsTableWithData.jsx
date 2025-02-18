@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import StatsTable from './StatsTable';
+
 import {
   getStudentsCompletedLevelCount,
-  asyncSetCompletedLevelCount
+  asyncSetCompletedLevelCount,
 } from './statsRedux';
+import StatsTable from './StatsTable';
 
 class StatsTableWithData extends Component {
   static propTypes = {
@@ -13,7 +14,7 @@ class StatsTableWithData extends Component {
     sectionId: PropTypes.number,
     students: PropTypes.array,
     studentsCompletedLevelCount: PropTypes.object,
-    asyncSetCompletedLevelCount: PropTypes.func.isRequired
+    asyncSetCompletedLevelCount: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -42,11 +43,11 @@ export default connect(
     studentsCompletedLevelCount: getStudentsCompletedLevelCount(
       state,
       state.teacherSections.selectedSectionId
-    )
+    ),
   }),
   dispatch => ({
     asyncSetCompletedLevelCount(sectionId) {
       dispatch(asyncSetCompletedLevelCount(sectionId));
-    }
+    },
   })
 )(StatsTableWithData);

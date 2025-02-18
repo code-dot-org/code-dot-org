@@ -1,0 +1,12 @@
+name 'PLgame_development_environment_choices_course-e_independent'
+display_name 'Sprite Type: Environment'
+description ' **Teacher Tip:** Students will be able to choose between the different levels. They only need to complete one, but can play all three if time allows.  <br> Choose a game to check out how environment type sprites block all of the others!'
+
+sublevels
+level 'game_mechanics_type_choice1_independent'
+level 'game_new3_environment_choice1_independent'
+level 'game_new3_environment_choice2_independent'
+
+markdown <<MARKDOWN
+
+MARKDOWN

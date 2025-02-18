@@ -10,15 +10,18 @@ theme: responsive
 
 - Nous vous recommandons de mettre à la disposition de votre école une connexion Internet d'au moins 15 MBit/sec.
 - La plus petite taille d'écran supportée est de 1024 x 728 px.
-- Vous aurez besoin d'un ordinateur de bureau ou portable avec une souris (ou un pavé tactile) et un clavier pour nos cours de niveau collège et lycée : CS Discoveries, CS Principles, et Introduction à App Lab. La plupart des tablettes et des appareils mobiles ne sont pas adaptés à ces cours. Voir "Détails relatifs à la prise en charge des téléphones mobiles et des tablettes" ci-dessous pour connaître les particularités liées aux appareils.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Voir "Détails relatifs à la prise en charge des téléphones mobiles et des tablettes" ci-dessous pour connaître les particularités liées aux appareils.
 - Tous les autres contenus, comme les cours K-5 ( Fondamentaux de l'informatique) et les activités de Hour of Code, sont compatibles avec les iPads et les Chromebooks, en plus de toutes les autres tablettes modernes et ordinateurs portables ou de bureau.
 - Besoin de détails sur les appareils mobiles pris en charge ? Lire la suite.
 
 ## Configuration minimale requise pour les navigateurs et les plateformes
 
+À compter de juillet 2024, nous mettrons à jour les versions minimales requises pour les navigateurs et les systèmes d'exploitation. Bien que les anciennes versions puissent toujours fonctionner, nous ne serons pas en mesure de répondre aux demandes de correction de bogues dans les anciennes versions.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Navigateur
@@ -39,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Navigateur July '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x pour appareil mobile</td>
+        </tr>
+        <tr>
+          <td>Edge 119,x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98. x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Plateforme
@@ -61,33 +86,55 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Plateforme du 24 juillet
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites à débloquer
 
 Pour une meilleure utilisation de tout le contenu de Code.org, nous vous recommandons de consulter le service informatique de votre école ou de votre district pour vous assurer que les sites suivants sont autorisés et ne sont pas bloqués.
 
-| Priorité                                                                              | URL                                                                                                        |
-| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Obligatoire**                                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Facultatif**                                                                        | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Pour utiliser les vidéos hébergées par YouTube (mode de confidentialité amélioré)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Pour utiliser les vidéos hébergées par Code.org**                                   | `https://videos.code.org`                                                                                  |
-| **Pour utiliser le simulateur de réseau**                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Pour utiliser Web Lab**                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Pour utiliser la fonction de partage de Google Classroom**                          | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                           | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Priorité                                                                                                                            | URL                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Obligatoire**                                                                                                                     | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Pour s'assurer que les systèmes CAPTCHA peuvent distinguer votre utilisation des activités frauduleuses automatisées (« bots »)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Facultatif**                                                                                                                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Pour utiliser les vidéos hébergées par YouTube (mode de confidentialité amélioré)**                                               | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Pour utiliser les vidéos hébergées par Code.org**                                                                                 | `https://videos.code.org`                                                                                  |
+| **Pour utiliser le simulateur de réseau**                                                                                           | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Pour utiliser Web Lab**                                                                                                           | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Pour utiliser la fonction de partage de Google Classroom**                                                                        | `https://apis.google.com`                                                                                  |
 
 ## Détails relatifs à la prise en charge des appareils mobiles et tablettes
 
-Tous les cours intitulés CS Discoveries, CS Principles, et Introduction à App Lab ne sont pas compatibles avec les tablettes ou les appareils mobiles - vous devez disposer d'un clavier complet et d'une souris (ou d'un pavé tactile, comme sur les MacBooks). La plupart des tablettes ne sont pas prises en charge, à l'exception des cas suivants :
+Tous les cours CS Discoveries, CS Principles, CS A et Intro to App Lab ne sont pas compatibles avec les tablettes ou les appareils mobiles. Un clavier et une souris complets (ou pavé tactile) sont nécessaires. La plupart des tablettes ne sont pas prises en charge, à l'exception des cas suivants :
 
 - Microsoft Surface Pro avec clavier externe
 - iPad fonctionnant sous iPadOS 13.4 ou une version ultérieure, avec un clavier externe et une souris ou un pavé tactile externe
 
-Tous les autres contenus, comme les cours K-5 ( Fondamentaux de l'informatique) et les activités de Hour of Code, sont compatibles avec les iPads et les Chromebooks, en plus de toutes les autres tablettes modernes et ordinateurs portables ou de bureau.
+Tous les autres contenus, tels que les cours de la maternelle à la 5e année (principes fondamentaux de l'informatique) et les activités Hour of Code, sont compatibles sur les iPad et autres tablettes modernes et les ordinateurs portables ou de bureau.
 
 ### Téléphone mobile
 
@@ -101,7 +148,17 @@ Nous utilisons [YouTube](https://www.youtube.com) pour intégrer des vidéos dan
 
 Avant de commencer les cours en ligne de Code.org, essayez de lire la vidéo ci-dessous pour être sûr d'être prêt.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 C'est le lecteur qui sera utilisé tout au long de la formation. Il vous permettra de lire la vidéo sur YouTube et, si YouTube est bloqué, il vous affichera la vidéo hébergée par Code.org en utilisant notre lecteur "de secours" en lieu et place.
 

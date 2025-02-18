@@ -1,9 +1,11 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table} from 'react-bootstrap';
-import {RegionalPartnerValuePropType} from '../components/regional_partner_dropdown';
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import {CohortCalculatorStatuses} from '@cdo/apps/generated/pd/sharedApplicationConstants';
-import $ from 'jquery';
+
+import {RegionalPartnerValuePropType} from '../components/regional_partner_dropdown';
 
 export function countAcceptedApplications(applications) {
   return (applications || []).filter(app =>
@@ -15,7 +17,7 @@ export default class CohortCalculator extends React.Component {
   static propTypes = {
     role: PropTypes.string.isRequired,
     regionalPartnerFilterValue: RegionalPartnerValuePropType,
-    accepted: PropTypes.number.isRequired
+    accepted: PropTypes.number.isRequired,
   };
 
   constructor(props) {
@@ -23,7 +25,7 @@ export default class CohortCalculator extends React.Component {
 
     this.state = {
       loadingEnrollmentCount: null,
-      enrolled: null
+      enrolled: null,
     };
   }
 
@@ -34,7 +36,7 @@ export default class CohortCalculator extends React.Component {
   getPartnerRegistrationCount(role, regional_partner_value) {
     return $.get({
       url: `/api/v1/regional_partners/enrolled?role=${role}&regional_partner_value=${regional_partner_value}`,
-      dataType: 'json'
+      dataType: 'json',
     });
   }
 
@@ -48,7 +50,7 @@ export default class CohortCalculator extends React.Component {
       .done(data => {
         this.setState({
           loadingEnrollmentCount: false,
-          enrolled: data.enrolled
+          enrolled: data.enrolled,
         });
       })
       .fail(() => {
@@ -89,6 +91,6 @@ export default class CohortCalculator extends React.Component {
 
 const styles = {
   tableWrapper: {
-    float: 'right'
-  }
+    float: 'right',
+  },
 };

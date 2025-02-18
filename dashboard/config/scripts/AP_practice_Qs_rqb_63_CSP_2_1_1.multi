@@ -21,3 +21,5 @@ Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1E**
  (D) With one extra bit, the barcode can represent two times as many possible unique identifiers. This stems from the fact that binary is base 2 (whereas decimal is base 10). 
 
 MARKDOWN
+
+allow_multiple_attempts true

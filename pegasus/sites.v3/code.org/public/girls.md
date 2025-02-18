@@ -12,8 +12,8 @@ In U.S. high schools, the Advanced Placement exam in Computer Science has histor
 <p>
 While things are starting to move in the right direction, we have a long way to go to reach a balanced population in computer science. Code.org focuses on K-12 learning because data shows that experiences in K-12 directly impact students’ future in computer science. <strong>Among young women, those who try AP Computer Science in high school are 10 times more likely to major in computer science.</strong>
 <p><br>
+<center><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Om0lYzVZAq8" frameborder="0" allowfullscreen></iframe><br></center><Br>
 <center><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe><br></center><Br>
-
 <h1>How You Can Help</h1>
 
 Computer science is foundational to many fields and students of all genders report being not only interested in the subject but confident of their abilities as well. Despite this, not enough girls are choosing to study it. <strong>Here are some proven methods for encouraging girls to try computer science:</strong>*
@@ -143,7 +143,7 @@ Both boys and girls care about making the world a better place and may not be aw
 
 You can help by showing examples of CS careers that blend academic skills such as problem solving with intrinsic social causes like conservation or medical care. When students see that a career in CS can be rewarding in a variety of ways, they’re more likely to continue pursuing their interest.
 
-Take a look at some <a href="https://code.org/careers-in-tech">great examples</a> of how everyday people use CS in their careers.
+Take a look at some <a href="https://code.org/careers-with-cs">great examples</a> of how everyday people use CS in their careers.
 
 
 [col-50]
@@ -172,9 +172,9 @@ Take a look at some <a href="https://code.org/careers-in-tech">great examples</a
 
 <h2>Show them a day in the life of a CS professional</h2>
 
-Dispel misconceptions about what a future in computer science looks like by using our [inspirational videos](https://code.org/educate/resources/inspire), many of which feature women in a variety of creative and impactful industries!
+Dispel misconceptions about what a future in computer science looks like by using our [inspirational videos](https://code.org/videos), many of which feature women in a variety of creative and impactful industries!
 
-Students have positive attitudes about science careers when they’re able to see what a day in the life really looks like, especially if it’s highly collaborative. In addition to [videos that dive deep into potential careers](https://code.org/careers-in-tech), it’s a great idea to connect with a local university or college’s CS department to coordinate a school visit or guest speaker.
+Students have positive attitudes about science careers when they’re able to see what a day in the life really looks like, especially if it’s highly collaborative. In addition to [videos that dive deep into potential careers](https://code.org/careers-with-cs), it’s a great idea to connect with a local university or college’s CS department to coordinate a school visit or guest speaker.
 
 [breakoutquote]
 

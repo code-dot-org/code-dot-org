@@ -26,3 +26,5 @@ Going through the code line by line:
 * Variable result is set to "5hello"
 * The result is then printed out, and since result holds "5hello", "5hello" is the output for this code
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,10 +1,10 @@
 import React from 'react';
-import MatchByStudentTable from './MatchByStudentTable';
+
 import {matchDataForSingleStudent} from './assessmentsTestHelpers';
+import MatchByStudentTable from './MatchByStudentTable';
 
 export default {
-  title: 'MatchByStudentTable',
-  component: MatchByStudentTable
+  component: MatchByStudentTable,
 };
 
 //
@@ -20,5 +20,5 @@ const Template = args => <MatchByStudentTable {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   questionAnswerData: matchDataForSingleStudent,
-  studentAnswerData: {responses: [0, 1]}
+  studentAnswerData: {responses: [0, 1]},
 };

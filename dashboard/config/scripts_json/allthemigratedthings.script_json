@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
@@ -14,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "ui-test-versioned-script",
-    "serialized_at": "2021-11-22 19:57:34 UTC",
+    "serialized_at": "2024-11-19 01:13:53 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -360,7 +362,13 @@
       "position": 2,
       "properties": {
         "name": "Standalone Video",
-        "progression_name": "Standalone Video"
+        "progression_name": "Standalone Video",
+        "tips": [
+          {
+            "type": "ethicsOpportunity",
+            "markdown": "This is a great time to talk about ethics."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d0e7256a-9dbf-4850-8386-31aca733070a",
@@ -625,6 +633,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

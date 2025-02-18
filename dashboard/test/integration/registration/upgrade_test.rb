@@ -108,7 +108,7 @@ module RegistrationsControllerTests
       mail = ActionMailer::Base.deliveries.first
       assert_equal [parent_email], mail.to
       assert_equal 'Login information for Code.org', mail.subject
-      assert mail.body.to_s.include?('Your child')
+      assert_includes(mail.body.to_s, 'Your child')
     end
 
     test 'upgrade migrated student to password account with malformed parent email fails and does not send email' do

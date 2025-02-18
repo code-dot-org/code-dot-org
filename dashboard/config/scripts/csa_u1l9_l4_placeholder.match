@@ -11,3 +11,4 @@ question 'constructor'
 answer 'a block of code in the class that tells the computer how to create a new object'
 question 'class'
 answer 'a user-defined blueprint from which objects are created'
+allow_multiple_attempts true

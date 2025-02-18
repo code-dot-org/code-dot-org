@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-04-19T17:54:56.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Influence of Datasets\r\n\r\n#### Reflecting on today’s lesson, how do the suitability and characteristics of different datasets influence the design of computer vision applications?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20662,
+    "name_suffix": "_2024",
+    "allow_multiple_attempts": "false",
+    "teacher_markdown": "To synthesize learning by having students articulate the critical role of selecting appropriate datasets in designing computer vision applications that can accurately perceive and interpret images.\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-19T17:54:56.775+00:00\",\"changed\":[\"cloned from \\\"CV_L8_Reflection_2\\\"\"],\"cloned_from\":\"CV_L8_Reflection_2\"},{\"changed_at\":\"2024-04-19 17:55:41 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 19:23:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,11 +1,10 @@
 Feature: Gamelab Projects
 
-@as_student @no_mobile
+@as_taught_student @no_mobile
 Scenario: Gamelab Flow
   Given I am on "http://studio.code.org/projects/gamelab"
   And I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   And element "#runButton" is visible
   And element ".project_updated_at" eventually contains text "Saved"
@@ -18,31 +17,9 @@ Scenario: Gamelab Flow
   And I ensure droplet is in text mode
   And I append gamelab code to draw a ninja
 
-  # Thumbnail is required to publish the project
-  And I press "runButton"
-  And I wait until element ".project_updated_at" contains text "Saved"
-  And I wait until initial thumbnail capture is complete
-
-  Given I open the project share dialog
-  And the project is unpublished
-  When I publish the project from the share dialog
-  And I open the project share dialog
-  Then the project is published
-
-  When I reload the project page
-  And I open the project share dialog
-  Then the project is published
-
-  When I unpublish the project from the share dialog
-  And I open the project share dialog
-  Then the project is unpublished
-
-  When I reload the project page
-  And I open the project share dialog
-  Then the project is unpublished
-
   # Test the "View code" button, as the owner goes to /edit
-  When I navigate to the share URL
+  Then I open the project share dialog
+  And I navigate to the share URL
   And I wait to see "#footerDiv"
   Then I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
   And element "#codeWorkspace" is hidden
@@ -67,7 +44,7 @@ Scenario: Gamelab Flow
   And selector "#codeWorkspace" doesn't have class "readonly"
 
   # Test the "View code" button, as an anonymous user goes to /view
-  When I am on "http://studio.code.org/users/sign_out"
+  And I sign out
   And I navigate to the last shared URL
   And I wait to see "#footerDiv"
   Then I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
@@ -93,9 +70,7 @@ Scenario: Gamelab Flow
   # Test navigating to /edit as a non-owner user redirects to /view
   Given I am on "http://studio.code.org/"
   And I create a teacher named "Non-Owner"
-  And I am on "http://studio.code.org/users/sign_in"
-  And I reload the page
-  When I navigate to the last shared URL
+  And I navigate to the last shared URL
   And I append "/edit" to the URL
   Then I get redirected to "/projects/gamelab/([^\/]*?)/view" via "pushState"
   And I wait to see "#codeWorkspace"
@@ -106,8 +81,7 @@ Scenario: Gamelab Flow
 Scenario: Remix project creates and redirects to new channel
   Given I am on "http://studio.code.org/projects/gamelab"
   And I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   And element "#runButton" is visible
   And element ".project_updated_at" eventually contains text "Saved"
@@ -119,7 +93,7 @@ Scenario: Remix project creates and redirects to new channel
   And I save the URL
 
   Then I click selector ".project_remix" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I should see title includes "Remix: Code Ninja - Game Lab - Code.org"
   And check that the URL contains "/edit"
   And check that the URL contains "http://studio.code.org/projects/gamelab"

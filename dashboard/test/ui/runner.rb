@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 require_relative '../../../deployment'
 
-ROOT = File.expand_path('../../../..', __FILE__)
+UI_TEST_DIR = File.expand_path(__dir__)
+ROOT = File.expand_path('../../..', UI_TEST_DIR)
 
 # Set up gems listed in the Gemfile.
 ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
@@ -10,6 +11,7 @@ require 'bundler/setup'
 
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
+require 'cdo/data/logging/infrastructure_logger'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
@@ -31,14 +33,14 @@ require_relative './utils/selenium_constants'
 
 require 'active_support/core_ext/object/blank'
 
-ENV['BUILD'] ||= `git rev-parse --short HEAD`
+ENV['GIT_COMMIT'] ||= `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
-LOCAL_LOG_DIRECTORY = 'log'
+LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
-S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
-LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
+S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV.fetch('CI_BUILD_NUMBER', nil)}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
+LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
 #
 # Run a set of UI/Eyes tests according to the provided options.
@@ -64,9 +66,11 @@ def main(options)
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
-  rescue => e
-    ChatClient.log "Exception: #{e.message}", color: 'red'
+  rescue => exception
+    ChatClient.log "Exception: #{exception.message}", color: 'red'
     raise
+  ensure
+    Infrastructure::Logger.flush
   end
 
   # Produce a final report if we aborted due to excess failures
@@ -99,7 +103,6 @@ def parse_options
     options.dashboard_domain = 'test-studio.code.org'
     options.hourofcode_domain = 'test.hourofcode.com'
     options.csedweek_domain = 'test.csedweek.org'
-    options.advocacy_domain = 'test-advocacy.code.org'
     options.local = nil
     options.local_headless = true
     options.html = nil
@@ -140,21 +143,20 @@ def parse_options
         options.dashboard_domain = 'localhost-studio.code.org:3000'
         options.hourofcode_domain = 'localhost.hourofcode.com:3000'
         options.csedweek_domain = 'localhost.csedweek.org:3000'
-        options.advocacy_domain = 'localhost-advocacy.code.org:3000'
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
+          print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n" \
                 "Try '-p localhost.code.org:3000' instead (this is the default when using '-l').\n"
         end
         options.pegasus_domain = p
       end
       opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost-studio.code.org:3000") do |d|
         if d == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
+          print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n" \
                 "Try '-d localhost-studio.code.org:3000' instead (this is the default when using '-l').\n"
         end
         options.dashboard_domain = d
@@ -171,8 +173,8 @@ def parse_options
       opts.on("-m", "--maximize", "Maximize local webdriver window on startup") do
         options.maximize = true
       end
-      opts.on("--circle", "Whether is CircleCI (skip failing Circle tests)") do
-        options.is_circle = true
+      opts.on("--ci", "Whether is CI (skip failing CI tests)") do
+        options.is_ci = true
       end
       opts.on("--html", "Use html reporter") do
         options.html = true
@@ -233,7 +235,7 @@ def parse_options
     opt_parser.parse!(ARGV)
     # Standardize: Drop leading dot-slash on feature paths
     options.features = ARGV + (options.features || []).
-        map! {|feature| feature.gsub(/^\.\//, '')}
+      map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
       options.pegasus_db_access = true
@@ -265,7 +267,7 @@ def select_browser_configs(options)
     }]
   end
 
-  browsers = JSON.parse(File.read('browsers.json'))
+  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json')))
   if options.config
     options.config.map do |name|
       browsers.detect {|b| b['name'] == name}.tap do |browser|
@@ -285,10 +287,12 @@ end
 # @return [String] a public hyperlink to the uploaded log, or empty string.
 def upload_log_and_get_public_link(filename, metadata)
   return '' unless $options.html
-  log_url = LOG_UPLOADER.upload_file(filename, {metadata: metadata})
+  # Assume all log files are Cucumber reports in html format.
+  # TODO: Set content type dynamically based on filename extension.
+  log_url = LOG_UPLOADER.upload_file(filename, {content_type: 'text/html', metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => msg
-  ChatClient.log "Uploading log to S3 failed: #{msg}"
+rescue Exception => exception
+  ChatClient.log "Uploading log to S3 failed: #{exception}"
   return ''
 end
 
@@ -298,9 +302,9 @@ end
 
 def open_log_files
   FileUtils.mkdir_p(LOCAL_LOG_DIRECTORY)
-  $success_log = File.open("#{LOCAL_LOG_DIRECTORY}/success.log", 'w')
-  $error_log = File.open("#{LOCAL_LOG_DIRECTORY}/error.log", 'w')
-  $errorbrowsers_log = File.open("#{LOCAL_LOG_DIRECTORY}/errorbrowsers.log", 'w')
+  $success_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "success.log"), 'w')
+  $error_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "error.log"), 'w')
+  $errorbrowsers_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "errorbrowsers.log"), 'w')
 end
 
 def close_log_files
@@ -324,22 +328,36 @@ def log_browser_error(msg)
   puts msg if $options.verbose
 end
 
-def run_tests(env, feature, arguments, log_prefix)
+def run_tests(env, feature, target_platform, arguments, log_prefix)
   start_time = Time.now
   cmd = "cucumber #{feature} #{arguments}"
   puts "#{log_prefix}#{cmd}"
-  Open3.popen3(env, cmd) do |stdin, stdout, stderr, wait_thr|
+  Open3.popen3(env, cmd, chdir: UI_TEST_DIR) do |stdin, stdout, stderr, wait_thr|
     stdin.close
     stdout = stdout.read
     stderr = stderr.read
     cucumber_succeeded = wait_thr.value.exitstatus == 0
     eyes_succeeded = count_eyes_errors(stdout) == 0
-    return cucumber_succeeded, eyes_succeeded, stdout, stderr, Time.now - start_time
+    duration = Time.now - start_time
+    extra_dimensions = {test_type: test_type,
+                        feature_name: feature.include?(".feature") ? feature.split(".feature")[0] : feature,
+                        target_browser: target_platform}
+    # Metrics for individual feature runs. They will be flushed once all of them run
+    Infrastructure::Logger.put("runner_feature_eyes_diff", 1, extra_dimensions) unless eyes_succeeded
+    Infrastructure::Logger.put("runner_feature_success", 1, extra_dimensions) if cucumber_succeeded
+    Infrastructure::Logger.put("runner_feature_failure", 1, extra_dimensions) unless cucumber_succeeded
+    Infrastructure::Logger.put("runner_feature_execution_time", duration, extra_dimensions)
+    return cucumber_succeeded, eyes_succeeded, stdout, stderr, duration
   end
 end
 
 def features_to_run
-  $features_to_run ||= $options.features.empty? ? Dir.glob('features/**/*.feature') : $options.features
+  $features_to_run ||=
+    if $options.features.empty?
+      Dir.glob(File.join(UI_TEST_DIR, 'features', '**', '*.feature'))
+    else
+      $options.features
+    end
 end
 
 #
@@ -356,12 +374,14 @@ end
 # ]
 #
 def browser_features
-  ($browsers.product features_to_run).map do |browser, feature|
+  ($browsers.product features_to_run).filter_map do |browser, feature|
+    full_feature_path = File.expand_path(feature)
+    relative_feature_path = Pathname.new(full_feature_path).relative_path_from(UI_TEST_DIR).to_s
     arguments = cucumber_arguments_for_browser(browser, $options)
-    scenario_count = ParallelTests::Cucumber::Scenarios.all([feature], test_options: arguments).length
+    scenario_count = ParallelTests::Cucumber::Scenarios.all([full_feature_path], test_options: arguments).length
     next if scenario_count.zero?
-    [browser, feature]
-  end.compact
+    [browser, relative_feature_path]
+  end
 end
 
 def test_type
@@ -383,13 +403,13 @@ end
 
 def applitools_batch_url
   return nil unless eyes?
-  "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV['BATCH_ID']}&hideBatchList=true"
+  "https://eyes.applitools.com/app/batches/?startInfoBatchId=#{ENV.fetch('BATCH_ID', nil)}&hideBatchList=true"
 end
 
 def report_tests_starting
   ChatClient.log "Starting #{browser_features.count} <b>dashboard</b> #{test_type} tests in #{$options.parallel_limit} threads..."
   if eyes?
-    ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV['BATCH_NAME']}</a>."
+    ChatClient.log "Batching eyes tests as <a href=\"#{applitools_batch_url}\">#{ENV.fetch('BATCH_NAME', nil)}</a>."
   end
 end
 
@@ -411,6 +431,15 @@ def report_tests_finished(start_time, run_results)
     end
   end
 
+  extra_dimensions = {test_type: test_type}
+  success_rate = run_results.count > 0 ? (1.0 * suite_success_count) / run_results.count : nil
+  Infrastructure::Logger.put('runner_feature_tests_success', suite_success_count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_failure', failures.count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_success_rate', success_rate, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_flaky_reruns', total_flaky_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_successful_flaky_reruns', total_flaky_successful_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
+  Infrastructure::Logger.flush
   ChatClient.log "#{suite_success_count} succeeded.  #{failures.count} failed. " \
   "Test count: #{run_results.count}. " \
   "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
@@ -419,8 +448,16 @@ def report_tests_finished(start_time, run_results)
   + (status_page_url ? " <a href=\"#{status_page_url}\">#{test_type} test status page</a>." : '') \
   + (applitools_batch_url ? " <a href=\"#{applitools_batch_url}\">Applitools results</a>." : '')
 
-  unless failures.empty?
-    ChatClient.log "Failed tests: \n #{failures.join("\n")}"
+  a_status_page = status_page_url ? "<a href=\"#{status_page_url}\">" : ''
+  end_a = status_page_url ? "</a>" : ''
+
+  if failures.empty?
+    ChatClient.log "*#{a_status_page}SUMMARY, #{suite_success_count} DASHBOARD #{test_type.upcase} TESTS PASSED#{end_a}*", color: 'purple'
+  else
+    ChatClient.log "*#{a_status_page}SUMMARY, #{failures.count} DASHBOARD #{test_type.upcase} TESTS FAILED#{end_a}:*", color: 'purple'
+    failures.each do |failure|
+      ChatClient.log "\t• #{failure}", color: 'purple'
+    end
   end
 end
 
@@ -438,10 +475,10 @@ def scheme_for_environment
 end
 
 def generate_status_page(suite_start_time)
-  test_status_template = File.read('test_status.haml')
+  test_status_template = File.read(File.join(UI_TEST_DIR, 'test_status.haml'))
   haml_engine = Haml::Engine.new(test_status_template)
   File.write(
-    status_page_filename,
+    File.join(UI_TEST_DIR, status_page_filename),
     haml_engine.render(
       Object.new,
       {
@@ -460,7 +497,7 @@ def generate_status_page(suite_start_time)
 end
 
 def test_run_identifier(browser, feature)
-  feature_name = feature.gsub('features/', '').gsub('.feature', '').tr('/', '_')
+  feature_name = feature.gsub(/.*features\//, '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
   "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
 end
@@ -473,8 +510,8 @@ end
 def flakiness_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_flakiness, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating flakiness: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating flakiness: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -483,8 +520,8 @@ end
 def estimate_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_estimate, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating estimate: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating estimate: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -514,7 +551,7 @@ end
 
 def parallel_config(parallel_limit)
   {
-    # Run in parallel threads on CircleCI (less memory), processes on main test machine (better CPU utilization)
+    # Run in parallel threads on CI (less memory), processes on main test machine (better CPU utilization)
     in_threads: ENV['CI'] ? parallel_limit : nil,
     in_processes: ENV['CI'] ? nil : parallel_limit,
 
@@ -545,9 +582,9 @@ end
 # return all text after "Failing Scenarios"
 def output_synopsis(output_text, log_prefix)
   # example output:
-  # ["    And I press \"resetButton\"                                                                                                                                    # step_definitions/steps.rb:63\n",
-  #  "    Then element \"#runButton\" is visible                                                                                                                         # step_definitions/steps.rb:124\n",
-  #  "    And element \"#resetButton\" is hidden                                                                                                                         # step_definitions/steps.rb:130\n",
+  # ["    And I press \"resetButton\"            # step_definitions/steps.rb:63\n",
+  #  "    Then element \"#runButton\" is visible # step_definitions/steps.rb:124\n",
+  #  "    And element \"#resetButton\" is hidden # step_definitions/steps.rb:130\n",
   #  "\n",
   #  "Failing Scenarios:\n",
   #  "cucumber features/artist.feature:11 # Scenario: Loading the first level\n",
@@ -600,15 +637,15 @@ end
 
 def html_output_filename(test_run_string, options)
   if options.html
-    "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}_output.html"
+    File.join(LOCAL_LOG_DIRECTORY, "#{test_run_string}_output.html")
   end
 end
 
 def rerun_filename(test_run_string)
-  "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}.rerun"
+  File.join(LOCAL_LOG_DIRECTORY, "#{test_run_string}.rerun")
 end
 
-def tag(tag, run=true)
+def tag(tag, run = true)
   return skip_tag(tag) unless run
   " -t #{tag}"
 end
@@ -626,12 +663,9 @@ def cucumber_arguments_for_browser(browser, options)
   # skipped via skip_tag(). See `cucumber --help` for more info.
   if eyes?
     arguments +=
-      if browser['mobile']
+      if browser['appium:mobile']
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
-      elsif browser['browserName'] == 'Internet Explorer'
-        # IE will only run eyes tests tagged with @eyes_ie.
-        tag('@eyes_ie')
       else
         # All other desktop browsers, including Chrome, will run any eyes test
         # tagged with @eyes.
@@ -640,21 +674,19 @@ def cucumber_arguments_for_browser(browser, options)
   else
     # Make sure eyes tests don't run when --eyes is not specified.
     arguments += skip_tag('@eyes_mobile')
-    arguments += skip_tag('@eyes_ie')
     arguments += skip_tag('@eyes')
   end
 
-  arguments += skip_tag('@no_mobile') if browser['mobile']
-  arguments += skip_tag('@only_mobile') unless browser['mobile']
+  arguments += skip_tag('@no_mobile') if browser['appium:mobile']
+  arguments += skip_tag('@only_mobile') unless browser['appium:mobile']
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
-  arguments += skip_tag('@no_circle') if options.is_circle
-  arguments += skip_tag('@no_ie') if browser['browserName'] == 'Internet Explorer'
+  arguments += skip_tag('@no_ci') if options.is_ci
 
-  # Only run in IE during a DTT. always run locally or during circle runs.
+  # always run locally or during CI runs.
   # Note that you may end up running in more than one browser if you use flags
-  # like [test safari], [test ie] or [test firefox] during a circle run.
-  arguments += skip_tag('@only_one_browser') if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
+  # like [test safari] or [test firefox] during a CI run.
+  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_ci
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'
@@ -678,14 +710,19 @@ def cucumber_arguments_for_feature(options, test_run_string, max_reruns)
     arguments += " --format rerun --out #{rerun_filename test_run_string}"
   end
 
-  # In CircleCI we export additional logs in junit xml format so CircleCI can
+  # In CI we export additional logs in junit xml format so CI could in theory
   # provide pretty test reports with success/fail/timing data upon completion.
-  # See: https://circleci.com/docs/test-metadata/#cucumber
   if ENV['CI']
-    arguments += " --format junit --out $CIRCLE_TEST_REPORTS/cucumber/#{test_run_string}.xml"
+    arguments += " --format junit --out $CI_TEST_REPORTS/cucumber/#{test_run_string}.xml"
   end
 
   arguments
+end
+
+def to_percent(number, n_sig_digits)
+  percent = number * 100.0
+  return 0 if percent.zero?
+  "#{percent.round(-(Math.log10(percent).ceil - n_sig_digits))}%"
 end
 
 def run_feature(browser, feature, options)
@@ -715,13 +752,11 @@ def run_feature(browser, feature, options)
   run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
   run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
   run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
-  run_environment['ADVOCACY_TEST_DOMAIN'] = options.advocacy_domain if options.advocacy_domain
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
-  run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"
+  run_environment['MOBILE'] = browser['appium:mobile'] ? "true" : "false"
   run_environment['TEST_RUN_NAME'] = test_run_string
-  run_environment['IS_CIRCLE'] = options.is_circle ? "true" : "false"
   run_environment['PRIORITY'] = options.priority
 
   # disable some stuff to make require_rails_env run faster within cucumber.
@@ -738,7 +773,7 @@ def run_feature(browser, feature, options)
   reruns = 0
   arguments = cucumber_arguments_for_browser(browser, options)
   arguments += cucumber_arguments_for_feature(options, test_run_string, max_reruns)
-  cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, arguments, log_prefix)
+  cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, feature, browser_name_or_unknown(browser), arguments, log_prefix)
   feature_succeeded = cucumber_succeeded && eyes_succeeded
   log_link = upload_log_and_get_public_link(
     html_log,
@@ -753,11 +788,13 @@ def run_feature(browser, feature, options)
   # only retry cucumber/selenium errors, not eyes mismatches.
   while !cucumber_succeeded && (reruns < max_reruns)
     reruns += 1
+    retry_again_msg = reruns < max_reruns ? " once, will retry" : ", not going to retry"
 
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     # Since output_stderr is empty, we do not log it to ChatClient.
-    ChatClient.log "<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)})#{log_link}, retrying (#{reruns}/#{max_reruns}, flakiness: #{flakiness_for_test(test_run_string) || '?'})..."
+    message = "#{test_run_string} failed#{retry_again_msg} (retry #{reruns} of #{max_reruns}, flakiness: #{to_percent(flakiness_for_test(test_run_string) || 0.0, 3) || '?'})"
+    message += "#{log_link}, first selenium error: <i>#{first_selenium_error(html_log)}</i>" if options.html
+    ChatClient.log message
     $lock.synchronize do
       log_error prefix_string(Time.now, log_prefix)
       log_error prefix_string(browser.to_yaml, log_prefix)
@@ -769,7 +806,7 @@ def run_feature(browser, feature, options)
 
     rerun_feature = File.exist?(rerun_file) ? File.read(rerun_file).split.join(' ') : feature
 
-    cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, rerun_feature, arguments, log_prefix)
+    cucumber_succeeded, eyes_succeeded, output_stdout, output_stderr, test_duration = run_tests(run_environment, rerun_feature, browser_name_or_unknown(browser), arguments, log_prefix)
     feature_succeeded = cucumber_succeeded && eyes_succeeded
     log_link = upload_log_and_get_public_link(
       html_log,
@@ -818,11 +855,10 @@ def run_feature(browser, feature, options)
     # Don't log individual successes because we hit ChatClient rate limits
     # ChatClient.log "<b>dashboard</b> UI tests passed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info})"
   else
-    ChatClient.log "#{test_run_string} first selenium error: #{first_selenium_error(html_log)}" if options.html
     ChatClient.log output_synopsis(output_stdout, log_prefix), {wrap_with_tag: 'pre'} if options.output_synopsis
     ChatClient.log prefix_string(output_stderr, log_prefix), {wrap_with_tag: 'pre'}
-    message = "#{log_prefix}<b>dashboard</b> UI tests failed with <b>#{test_run_string}</b> (#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})#{log_link}"
-    message += "<br/>rerun:<br/>bundle exec ./runner.rb --html#{' --eyes' if eyes?} -c #{browser_name} -f #{feature}"
+    message = "*FAILED: #{test_run_string}* #{log_link}"
+    message += "\n(#{RakeUtils.format_duration(test_duration)}#{scenario_info}#{rerun_info}#{eyes_info})"
     ChatClient.log message, color: 'red'
   end
   result_string =

@@ -3,15 +3,19 @@
  * It's basically a wrapper around react-datepicker (with limited props) that displays
  * as a React-Bootstrap select with a calendar icon Addon.
  */
-import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import {InputGroup, FormGroup, FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ReactDatePicker from 'react-datepicker';
+import ReactDOM from 'react-dom';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+
 import {DATE_FORMAT} from '../workshopConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {InputGroup, FormGroup, FormControl} from 'react-bootstrap';
+
 import 'react-datepicker/dist/react-datepicker.css';
+import '@cdo/apps/code-studio/assets/date_picker.scss';
 
 class DateInputWithIconUnwrapped extends React.Component {
   static propTypes = {
@@ -23,7 +27,7 @@ class DateInputWithIconUnwrapped extends React.Component {
     onChange: PropTypes.func,
     onClick: PropTypes.func,
     value: PropTypes.string,
-    onBlur: PropTypes.func
+    onBlur: PropTypes.func,
   };
 
   // Called by ReactDatePicker to focus on the custom input.
@@ -85,14 +89,14 @@ export default class DatePicker extends React.Component {
     startDate: ReactDatePicker.propTypes.startDate,
     endDate: ReactDatePicker.propTypes.endDate,
     readOnly: ReactDatePicker.propTypes.disabled,
-    clearable: PropTypes.bool
+    clearable: PropTypes.bool,
   };
 
   static defaultProps = {
     selectsStart: false,
     selectsEnd: false,
     startDate: null,
-    endDate: null
+    endDate: null,
   };
 
   handleChange = date => this.props.onChange(date);
@@ -119,6 +123,7 @@ export default class DatePicker extends React.Component {
         startDate={this.props.startDate}
         endDate={this.props.endDate}
         disabled={this.props.readOnly}
+        popperClassName={'datePicker'}
       />
     );
   }
@@ -128,7 +133,7 @@ const styles = {
   readOnlyInput: {
     backgroundColor: 'inherit',
     cursor: 'default',
-    border: 'none'
+    border: 'none',
   },
   clearElement: {
     color: '#999',
@@ -137,7 +142,7 @@ const styles = {
     cursor: 'pointer',
     pointerEvents: 'all',
     ':hover': {
-      color: '#D0021B'
-    }
-  }
+      color: '#D0021B',
+    },
+  },
 };

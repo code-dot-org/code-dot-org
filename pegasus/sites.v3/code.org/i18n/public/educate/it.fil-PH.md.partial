@@ -10,15 +10,18 @@ theme: responsive
 
 - Inirerekomenda namin ang hindi bababa sa 15 MBit/sec na koneksiyon sa Internet para sa paaralan mo.
 - 1024 x 728 px ang pinakamaliit na laki ng screen na sinusuportahan namin.
-- Kakailanganin mo ng desktop o laptop na computer na may mouse (o touchpad) at keyboard para sa mga kurso namin sa antas ng middle at high school: CS Discoveries, CS Principles, at Intro to App Lab. Hindi suportado ang karamihan sa mga tablet at mobile device para sa mga kursong ito. Tingnan ang "Mga Detalye ng Suporta sa Mobile at Tablet" sa ibaba para sa mga pagbubukod sa device-specific.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Tingnan ang "Mga Detalye ng Suporta sa Mobile at Tablet" sa ibaba para sa mga pagbubukod sa device-specific.
 - Tugma sa mga iPad at Chromebook ang lahat ng iba pang content, gaya ng mga K-5 courses (Computer Science Fundamentals) at Hour of Code na aktibidad bilang karagdagan sa lahat ng iba pang modernong tablet at laptop o desktop computer.
 - Naghahanap ng mga detalye ng suporta sa mobile device? Basahin sa ibaba.
 
 ## Minimum na Mga Sinusuportahang Browser at Platform
 
+Starting in July 2024, we will update the minimum versions required for browsers and operating systems. While the old versions may still work, we will be unable to support requests for bug fixes in the older versions.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -39,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser July '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platform
@@ -61,33 +86,55 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform July '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Mga Site na I-unblock
 
 Para sa pinakamagandang karanasan sa lahat ng nilalaman ng Code.org, inirerekumenda namin ang pagkonsulta sa departamento ng IT ng paaralan o distrito mo upang matiyak na ang mga sumusunod na site ay pinapayagan at hindi na-block.
 
-| Priyoridad                                                                                  | URL                                                                                                        |
-| ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Kinakailangan**                                                                           | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Opsyonal**                                                                                | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Upang gamitin ang mga video na naka-host sa YouTube (Pinahusay na Mode ng Pagkapribado)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Upang gamitin ang Code.org na naka-host na mga video**                                    | `https://videos.code.org`                                                                                  |
-| **Upang gamitin ang Internet Simulator**                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Upang gamitin ang Web Lab**                                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Para gamitin ang Google Classroom Share na Button**                                       | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                                 | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Priyoridad                                                                                          | URL                                                                                                        |
+| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Kinakailangan**                                                                                   | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **To ensure CAPTCHA systems can distinguish your usage from automated fraudulent (“bot”) activity** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Opsyonal**                                                                                        | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Upang gamitin ang mga video na naka-host sa YouTube (Pinahusay na Mode ng Pagkapribado)**         | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Upang gamitin ang Code.org na naka-host na mga video**                                            | `https://videos.code.org`                                                                                  |
+| **Upang gamitin ang Internet Simulator**                                                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Upang gamitin ang Web Lab**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Para gamitin ang Google Classroom Share na Button**                                               | `https://apis.google.com`                                                                                  |
 
 ## Mga Detalye ng Suporta sa Mobile at Tablet
 
-Hindi tugma sa mga tablet o mobile device ang lahat ng CS Discoveries, CS Principles, at Intro to App Lab na mga kurso - kinakailangan ang isang buong keyboard at mouse (o touchpad, tulad ng sa MacBooks). Hindi suportado ang karamihan sa mga tablet, kasama ang mga sumusunod na pagbubukod:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Hindi suportado ang karamihan sa mga tablet, kasama ang mga sumusunod na pagbubukod:
 
 - Microsoft Surface Pro na may external na keyboard
 - iPad na nagpapatakbo ng iPadOS 13.4 o mas bago na may external na keyboard at external na mouse o touchpad
 
-Tugma sa mga iPad at Chromebook ang lahat ng iba pang content, gaya ng mga K-5 courses (Computer Science Fundamentals) at Hour of Code na aktibidad bilang karagdagan sa lahat ng iba pang modernong tablet at laptop o desktop computer.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Mga Mobile Phone
 
@@ -101,7 +148,17 @@ Gumagamit kami ng [YouTube](https://www.youtube.com) upang mag-embed ng mga vide
 
 Bago mo simulan ang mga online na kurso ng Code.org, subukan ang pag-playback ng video sa ibaba upang matiyak na handa ka nang magsimula.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 Ito ang player na ginagamit sa buong kurikulum. Susubukan nitong ipakita ang video sa pamamagitan ng YouTube at, kung naka-block ang YouTube, ipakita sa halip ang Code.org na naka-host na video gamit ang "fallback" player namin.
 

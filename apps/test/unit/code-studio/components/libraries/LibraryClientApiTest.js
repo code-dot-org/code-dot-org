@@ -1,5 +1,5 @@
-import {assert} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
 describe('LibraryClientApi', () => {
@@ -18,7 +18,7 @@ describe('LibraryClientApi', () => {
         name: 'My Project',
         libraryName: 'My Library',
         libraryDescription: 'A very cool library!',
-        libraryPublishedAt: new Date()
+        libraryPublishedAt: new Date(),
       };
       unpublishCallback = sinon.stub();
     });
@@ -32,7 +32,7 @@ describe('LibraryClientApi', () => {
       server.respondWith('delete', `/v3/libraries/${channelId}/library.json`, [
         status,
         {'Content-Type': 'application/json'},
-        ''
+        '',
       ]);
     };
 
@@ -42,19 +42,19 @@ describe('LibraryClientApi', () => {
         ...project,
         libraryName: undefined,
         libraryDescription: undefined,
-        libraryPublishedAt: null
+        libraryPublishedAt: null,
       };
 
       libraryApi.unpublish(project, unpublishCallback);
       server.respond();
 
-      assert(
+      expect(
         channelUpdateStub.calledOnceWith(
           channelId,
           updatedProject,
           unpublishCallback
         )
-      );
+      ).toBeTruthy();
     });
 
     it('invokes callback on failure', () => {
@@ -63,8 +63,8 @@ describe('LibraryClientApi', () => {
       libraryApi.unpublish(project, unpublishCallback);
       server.respond();
 
-      assert.equal(0, channelUpdateStub.callCount);
-      assert(unpublishCallback.calledOnce);
+      expect(0).toEqual(channelUpdateStub.callCount);
+      expect(unpublishCallback.calledOnce).toBeTruthy();
     });
   });
 });

@@ -164,9 +164,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  private
-
-  def formatted_response
+  private def formatted_response
     @response.body.delete!('\\"')
   end
 end

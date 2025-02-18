@@ -1,0 +1,52 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-08-27T19:04:01.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "name_suffix": "_v2",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/c956ab9c12d158a2f4a2028f9511f939-Screen Shot 2024-08-27 at 12.06.01 PM.png",
+        "text": "##Introducing Trigger Events with Grayson Brown\nMy name is Grayson Brown. I'm a UX designer here at Amazon Music. \n\n",
+        "key": "musiclab_intro_panels_playtogether_pdx-a5066092-2920-4c8d-89ea-00b7a8531ad0"
+      },
+      {
+        "text": "UX stands for user experience—how you feel when you use any app or game.",
+        "imageUrl": "https://images.code.org/fef94c85521d3f7247715aeff08a3374-Screen Shot 2024-08-27 at 12.06.30 PM.png",
+        "key": "music_ai_panels_grayson-1709c918-9e1e-4875-9a4b-fd797d683a01"
+      },
+      {
+        "text": "Growing up, I had a knack for drawing but didn’t know how to turn that into a job.",
+        "imageUrl": "https://images.code.org/b5e88e6f04a7abaff50d44831d2c4ea5-Screen Shot 2024-08-27 at 12.07.06 PM.png",
+        "key": "music_ai_panels_grayson-7ea85372-1450-4750-9167-2623a47ef80c"
+      },
+      {
+        "text": "UX became a cool outlet where artistic skills, science, and thinking all come together. UX helps you turn your ideas into processes and real products—like apps and games.",
+        "imageUrl": "https://images.code.org/c4e08242c56592cb20baa839ae56779e-cover-mobile-ux-design-best-practices.png",
+        "key": "music_ai_panels_grayson-d86db5c5-b756-4a3b-889d-0f997929a850"
+      },
+      {
+        "text": "One cool thing I work with every day is called events or 'triggers. Triggers are signals that tell a webpage to do something when you interact with it.\n\nThink of it like this: pressing a key on your keyboard can trigger something in real-time.",
+        "imageUrl": "https://images.code.org/de0482aaacb93ae8039aa8ff96ce29e7-triggers (1).gif",
+        "key": "music_ai_panels_grayson-9949f5ca-f6d3-4723-ac40-c925b7e0bd1e"
+      },
+      {
+        "text": "In Music Lab, you’ll use key pressed triggers to play sounds instantly. Just like a DJ triggering sounds with their equipment.",
+        "imageUrl": "https://images.code.org/414bce849cb2fa80dcbecbc6c441edbb-trigger buttons.gif",
+        "key": "music_ai_panels_grayson-7695680d-1533-455e-b15d-b1592b6b632e"
+      },
+      {
+        "text": "So get ready to code, experiment, and have fun!\n\nYou’re about to turn your keyboard into a musical instrument with Code.org’s Music Lab.",
+        "imageUrl": "https://images.code.org/846388521fe0f07f2577b346a7ba51d9-musiclab-big-banner-image.png",
+        "key": "music_ai_panels_grayson-b5c7cbfd-ab75-43d0-8a9b-6e4252044419"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-27T19:04:01.626+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_playtogether\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_playtogether\"},{\"changed_at\":\"2024-08-27 19:18:11 +0000\",\"changed\":[\"level_data\",\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-27 19:55:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-27 22:24:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</Panels>

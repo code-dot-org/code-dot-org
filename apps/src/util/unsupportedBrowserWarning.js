@@ -1,14 +1,14 @@
-/* global appOptions */
+import $ from 'jquery';
+
 import {
   isUnsupportedBrowser,
   isIE11,
   isMobileDevice,
-  isStorageAvailable
+  isStorageAvailable,
 } from '@cdo/apps/util/browser-detector';
-import $ from 'jquery';
 
-export var checkForUnsupportedBrowsersOnLoad = function() {
-  $(document).ready(function() {
+export var checkForUnsupportedBrowsersOnLoad = function () {
+  $(document).ready(function () {
     let textDivId = null;
 
     if (isUnsupportedBrowser() || isIE11()) {

@@ -1,0 +1,5 @@
+%script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
+%script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
+%script{src: webpack_asset_path('js/hourofcode.com/views/analytics_event_log_helper.js')}
+
+#analytics-event-log-helper{"data-event-name" => event_name}

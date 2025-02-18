@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -19,7 +20,8 @@ export const sectionShape = PropTypes.shape({
   grades: PropTypes.arrayOf(PropTypes.string),
   providerManaged: PropTypes.bool.isRequired,
   restrictSection: PropTypes.bool,
-  postMilestoneDisabled: PropTypes.bool
+  postMilestoneDisabled: PropTypes.bool,
+  syncEnabled: PropTypes.bool,
 });
 
 export const assignmentUnitShape = PropTypes.shape({
@@ -28,7 +30,7 @@ export const assignmentUnitShape = PropTypes.shape({
   path: PropTypes.string.isRequired,
   lesson_extras_available: PropTypes.bool.isRequired,
   text_to_speech_enabled: PropTypes.bool.isRequired,
-  position: PropTypes.number
+  position: PropTypes.number,
 });
 
 export const assignmentCourseVersionShape = PropTypes.shape({
@@ -42,33 +44,34 @@ export const assignmentCourseVersionShape = PropTypes.shape({
   is_stable: PropTypes.bool.isRequired,
   is_recommended: PropTypes.bool.isRequired,
   locales: PropTypes.array,
-  units: PropTypes.object.isRequired
+  units: PropTypes.object.isRequired,
 });
 
 export const assignmentCourseOfferingShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  display_name: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  is_featured: PropTypes.bool.isRequired,
-  course_versions: PropTypes.object.isRequired
+  elementary: PropTypes.object,
+  high: PropTypes.object,
+  hoc: PropTypes.object,
+  middle: PropTypes.object,
 });
 
 export const classroomShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   section: PropTypes.string,
-  enrollment_code: PropTypes.string.isRequired
+  enrollment_code: PropTypes.string.isRequired,
+  course_state: PropTypes.string,
 });
 
 export const loadErrorShape = PropTypes.shape({
   status: PropTypes.number.isRequired,
-  message: PropTypes.string.isRequired
+  message: PropTypes.string.isRequired,
 });
 
 export const sortableSectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   courseVersionName: PropTypes.string,
+  courseDisplayName: PropTypes.string,
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)).isRequired,
   studentCount: PropTypes.number.isRequired,
   code: PropTypes.string.isRequired,
@@ -76,16 +79,11 @@ export const sortableSectionShape = PropTypes.shape({
   providerManaged: PropTypes.bool.isRequired,
   hidden: PropTypes.bool.isRequired,
   assignmentName: PropTypes.arrayOf(PropTypes.string),
-  assignmentPath: PropTypes.arrayOf(PropTypes.string)
+  assignmentPath: PropTypes.arrayOf(PropTypes.string),
 });
 
 export const sectionForDropdownShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  isAssigned: PropTypes.bool.isRequired
-});
-
-export const multiSelectOptionShape = PropTypes.shape({
-  value: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired
+  isAssigned: PropTypes.bool.isRequired,
 });

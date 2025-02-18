@@ -1,16 +1,16 @@
-import {assert} from '../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {DropdownButton} from '@cdo/apps/templates/DropdownButton';
-import Button from '@cdo/apps/templates/Button';
 
 const clickSpy = sinon.spy();
 
 const defaultProps = {
   text: 'Click me',
-  color: Button.ButtonColor.orange,
-  children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>]
+  color: Button.ButtonColor.brandSecondaryDefault,
+  children: [<a href="foo">href</a>, <a onClick={clickSpy}>onclick</a>],
 };
 
 describe('DropdownButton', () => {
@@ -18,44 +18,30 @@ describe('DropdownButton', () => {
 
   it('is initially just a button', () => {
     const wrapper = shallow(<DropdownButton {...defaultProps} />);
-    assert.strictEqual(wrapper.children().length, 1);
-    assert.strictEqual(wrapper.childAt(0).name(), 'Button');
+    expect(wrapper.children().length).toBe(1);
+    expect(wrapper.childAt(0).name()).toBe('Button');
   });
 
   it('shows children when clicked', () => {
     const wrapper = shallow(<DropdownButton {...defaultProps} />);
     wrapper.find('Button').simulate('click');
-    assert.strictEqual(wrapper.find('a').length, 2);
+    expect(wrapper.find('a').length).toBe(2);
   });
 
   it('passes through href', () => {
     const wrapper = shallow(<DropdownButton {...defaultProps} />);
     wrapper.find('Button').simulate('click');
-    assert.strictEqual(
-      wrapper
-        .find('a')
-        .at(0)
-        .props().href,
-      'foo'
-    );
+    expect(wrapper.find('a').at(0).props().href).toBe('foo');
   });
 
   it('passes through onClick and closes dropdown', () => {
     const wrapper = shallow(<DropdownButton {...defaultProps} />);
     wrapper.find('Button').simulate('click');
-    assert(
-      wrapper
-        .find('a')
-        .at(1)
-        .props().onClick
-    );
-    wrapper
-      .find('a')
-      .at(1)
-      .simulate('click');
-    assert(clickSpy.calledOnce);
+    expect(wrapper.find('a').at(1).props().onClick).toBeTruthy();
+    wrapper.find('a').at(1).simulate('click');
+    expect(clickSpy.calledOnce).toBeTruthy();
 
     // dropdown is closed
-    assert.equal(wrapper.find('a').length, 0);
+    expect(wrapper.find('a').length).toEqual(0);
   });
 });

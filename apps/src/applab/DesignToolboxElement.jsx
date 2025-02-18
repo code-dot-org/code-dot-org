@@ -2,6 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import library from './designElements/library';
 
 export default class DesignToolboxElement extends React.Component {
@@ -9,7 +10,7 @@ export default class DesignToolboxElement extends React.Component {
     imageUrl: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
     elementType: PropTypes.string.isRequired,
-    handleDragStart: PropTypes.func.isRequired
+    handleDragStart: PropTypes.func.isRequired,
   };
 
   render() {
@@ -19,15 +20,15 @@ export default class DesignToolboxElement extends React.Component {
         width: 120,
         display: 'inline-block',
         textAlign: 'center',
-        paddingBottom: 15
+        paddingBottom: 15,
       },
       innerContainer: {
         textAlign: 'center',
-        cursor: 'grab'
+        cursor: 'grab',
       },
       image: {
-        marginBottom: 5
-      }
+        marginBottom: 5,
+      },
     };
 
     return (
@@ -41,6 +42,7 @@ export default class DesignToolboxElement extends React.Component {
             src={this.props.imageUrl}
             className="design-element-image"
             style={styles.image}
+            alt={this.props.desc}
           />
           <div>{this.props.desc}</div>
         </div>
@@ -97,7 +99,7 @@ export default class DesignToolboxElement extends React.Component {
             event.offsetY || event.pageY - $(event.target).offset().top;
           $(this).draggable('option', 'cursorAt', {
             left: elementWidth / 2,
-            top: Math.min(offsetY, elementHeight)
+            top: Math.min(offsetY, elementHeight),
           });
 
           return parent.append(element)[0];
@@ -108,7 +110,7 @@ export default class DesignToolboxElement extends React.Component {
         // Make sure the dragged element appears in front of #belowVisualization,
         // which has z-index 1.
         zIndex: 2,
-        start: this.props.handleDragStart
+        start: this.props.handleDragStart,
       });
   }
 }

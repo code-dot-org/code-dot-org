@@ -1,0 +1,10 @@
+name 'CSA-SE-CV-Pre-Assessment-Q05'
+
+question 'Which of the following best describes the limitations of training AI models?'
+
+wrong 'AI models can process unlimited amounts of data without any errors.'
+right 'AI models are limited by the quality and quantity of the data they are trained on and they can sometimes be biased.'
+wrong 'AI models can be trained in a few minutes, irrespective of the complexity of the task.'
+wrong 'AI models do not have any limitations.'
+
+allow_multiple_attempts false

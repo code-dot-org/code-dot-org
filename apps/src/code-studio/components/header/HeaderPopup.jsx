@@ -1,11 +1,14 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import i18n from '@cdo/locale';
+
 import progress from '../../progress';
 import MiniView from '../progress/MiniView';
-import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
 import styles from './header-popup.module.scss';
-import classNames from 'classnames';
 
 export default class HeaderPopup extends Component {
   static propTypes = {
@@ -13,11 +16,11 @@ export default class HeaderPopup extends Component {
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
     minimal: PropTypes.bool,
-    windowHeight: PropTypes.number
+    windowHeight: PropTypes.number,
   };
 
   state = {
-    open: false
+    open: false,
   };
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -28,7 +31,8 @@ export default class HeaderPopup extends Component {
     );
   }
 
-  handleClickOpen = () => {
+  handleClickOpen = e => {
+    e.stopPropagation();
     this.setState({open: true});
 
     progress.retrieveProgress(
@@ -42,8 +46,8 @@ export default class HeaderPopup extends Component {
         study: 'mini_view',
         event: 'mini_view_opened',
         data_json: JSON.stringify({
-          current_level_id: this.props.currentLevelId
-        })
+          current_level_id: this.props.currentLevelId,
+        }),
       },
       {includeUserId: true}
     );

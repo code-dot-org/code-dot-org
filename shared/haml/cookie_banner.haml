@@ -4,7 +4,7 @@
   'onetrust_cookie_scripts' experiment.
 
 -# Don't show this banner if we are showing the new OneTrust GDPR cookie banner.
-- return if experiment_value('onetrust_cookie_scripts')
+- return if experiment_value('onetrust_cookie_scripts', request)
 -#
   Only show cookie banner when in a GDPR country, or when we are in the test
   environment and the show_cookie_banner_on_test URL parameter is specified,

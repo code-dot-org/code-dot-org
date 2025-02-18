@@ -20,8 +20,7 @@ class MilestoneParser
     production-daemon
     staging
     test
-    levelbuilder-staging
-    levelbuilder-development
+    levelbuilder
     development
     react
     adhoc
@@ -140,9 +139,9 @@ class MilestoneParser
     FileUtils.rm path
     debug "Count: #{count}"
     response
-  rescue => e
-    debug "Error counting #{log.key}: #{e.message}"
-    {'count' => 0, 'error' => e.message}
+  rescue => exception
+    debug "Error counting #{log.key}: #{exception.message}"
+    {'count' => 0, 'error' => exception.message}
   end
 
   def stub_fetch(key, path, bytes)

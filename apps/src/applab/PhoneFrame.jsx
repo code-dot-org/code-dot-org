@@ -1,11 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import style from './phone-frame.module.scss';
-import ScreenSelector from './ScreenSelector';
-import {RunButton, ResetButton} from '../templates/GameButtons';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import FontAwesome from '../legacySharedComponents/FontAwesome';
 import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
-import FontAwesome from '../templates/FontAwesome';
+import {RunButton, ResetButton} from '../templates/GameButtons';
+
+import ScreenSelector from './ScreenSelector';
+
+import style from './phone-frame.module.scss';
 
 export default class PhoneFrame extends React.Component {
   static propTypes = {
@@ -14,17 +17,12 @@ export default class PhoneFrame extends React.Component {
     showSelector: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool.isRequired,
     onScreenCreate: PropTypes.func.isRequired,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   render() {
-    const {
-      isDark,
-      screenIds,
-      showSelector,
-      isPaused,
-      onScreenCreate
-    } = this.props;
+    const {isDark, screenIds, showSelector, isPaused, onScreenCreate} =
+      this.props;
     return (
       <span id="phoneFrame">
         <div id="phoneFrameWrapper">
@@ -71,6 +69,6 @@ export default class PhoneFrame extends React.Component {
 
 const styles = {
   buttonMinWidth: {
-    minWidth: CompletionButtonStyles.phoneFrameButton.minWidth
-  }
+    minWidth: CompletionButtonStyles.phoneFrameButton.minWidth,
+  },
 };

@@ -1,25 +1,32 @@
-import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import PropTypes from 'prop-types';
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useMemo,
+  forwardRef,
+} from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
-import javalabMsg from '@cdo/javalab/locale';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+
+import project from '@cdo/apps/code-studio/initApp/project';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
-import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
-import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
-import Button from '@cdo/apps/templates/Button';
 import {
   setIsReadOnlyWorkspace,
-  setHasOpenCodeReview
-} from '@cdo/apps/javalab/javalabRedux';
-import project from '@cdo/apps/code-studio/initApp/project';
+  setHasOpenCodeReview,
+} from '@cdo/apps/javalab/redux/javalabRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
+import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
+import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
+import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
-const CommitsAndReviewTab = props => {
-  const {
+const CommitsAndReviewTab = forwardRef(function (
+  {
     channelId,
     serverLevelId,
     serverProjectLevelId,
@@ -33,9 +40,10 @@ const CommitsAndReviewTab = props => {
     setIsReadOnlyWorkspace,
     setHasOpenCodeReview,
     isCommitSaveInProgress,
-    hasCommitSaveError
-  } = props;
-
+    hasCommitSaveError,
+  },
+  ref
+) {
   const [isLoadingTimelineData, setIsLoadingTimelineData] = useState(false);
   const [openReviewData, setOpenReviewData] = useState(null);
   const [timelineData, setTimelineData] = useState([]);
@@ -104,7 +112,7 @@ const CommitsAndReviewTab = props => {
       );
       setOpenReviewData({
         ...openReviewData,
-        comments: [...openReviewData.comments, newComment]
+        comments: [...openReviewData.comments, newComment],
       });
       onSuccess();
     } catch (err) {
@@ -172,7 +180,10 @@ const CommitsAndReviewTab = props => {
   // comments cannot be made on projects in this state.
   if (!channelId) {
     return (
-      <div style={{...styles.reviewsContainer, ...styles.messageText}}>
+      <div
+        ref={ref}
+        style={{...styles.reviewsContainer, ...styles.messageText}}
+      >
         {javalabMsg.noCodeReviewUntilStudentEditsCode()}
       </div>
     );
@@ -180,14 +191,14 @@ const CommitsAndReviewTab = props => {
 
   if (isLoadingTimelineData) {
     return (
-      <div style={styles.loadingContainer}>
+      <div ref={ref} style={styles.loadingContainer}>
         <Spinner size="large" />
       </div>
     );
   }
 
   return (
-    <div style={styles.reviewsContainer}>
+    <div ref={ref} style={styles.reviewsContainer}>
       <div style={styles.header}>
         <div style={styles.navigator}>
           {codeReviewEnabled && !viewAsTeacher && (
@@ -220,7 +231,7 @@ const CommitsAndReviewTab = props => {
           <CodeReviewTimeline
             timelineData={[
               ...timelineData,
-              ...(openReviewData ? [openReviewData] : [])
+              ...(openReviewData ? [openReviewData] : []),
             ]}
             addCodeReviewComment={addCodeReviewComment}
             closeReview={handleCloseReview}
@@ -244,7 +255,7 @@ const CommitsAndReviewTab = props => {
             <div
               style={{
                 ...styles.timelineAligned,
-                ...styles.reviewDisabledMsg
+                ...styles.reviewDisabledMsg,
               }}
             >
               {javalabMsg.codeReviewDisabledMessage()}
@@ -254,7 +265,7 @@ const CommitsAndReviewTab = props => {
       )}
     </div>
   );
-};
+});
 
 export const UnconnectedCommitsAndReviewTab = CommitsAndReviewTab;
 export default connect(
@@ -270,14 +281,16 @@ export default connect(
     locale: state.pageConstants.locale,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     isCommitSaveInProgress: state.javalab.isCommitSaveInProgress,
-    hasCommitSaveError: state.javalab.hasCommitSaveError
+    hasCommitSaveError: state.javalab.hasCommitSaveError,
   }),
   dispatch => ({
     setIsReadOnlyWorkspace: isReadOnly =>
       dispatch(setIsReadOnlyWorkspace(isReadOnly)),
     setHasOpenCodeReview: hasOpenCodeReview =>
-      dispatch(setHasOpenCodeReview(hasOpenCodeReview))
-  })
+      dispatch(setHasOpenCodeReview(hasOpenCodeReview)),
+  }),
+  null,
+  {forwardRef: true}
 )(CommitsAndReviewTab);
 
 CommitsAndReviewTab.propTypes = {
@@ -295,46 +308,46 @@ CommitsAndReviewTab.propTypes = {
   setIsReadOnlyWorkspace: PropTypes.func.isRequired,
   setHasOpenCodeReview: PropTypes.func.isRequired,
   isCommitSaveInProgress: PropTypes.bool,
-  hasCommitSaveError: PropTypes.bool
+  hasCommitSaveError: PropTypes.bool,
 };
 
 const styles = {
   loadingContainer: {
     display: 'flex',
     margin: '25px',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   reviewsContainer: {
-    margin: '0px 5px 25px 16px'
+    margin: '0px 5px 25px 16px',
   },
   header: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
-    margin: '5px 0'
+    margin: '5px 0',
   },
   refreshButtonContainer: {
-    margin: '5px 0'
+    margin: '5px 0',
   },
   navigator: {
-    margin: '5px 0'
+    margin: '5px 0',
   },
   messageText: {
     fontSize: 13,
     margin: '15px 5px 25px 16px',
-    color: color.light_gray
+    color: color.light_gray,
   },
   refreshButtonStyle: {
     fontSize: 13,
-    margin: 0
+    margin: 0,
   },
   timelineAligned: {
-    marginLeft: '30px'
+    marginLeft: '30px',
   },
   reviewDisabledMsg: {
     padding: '12px 6px',
     fontStyle: 'italic',
     color: color.charcoal,
-    lineHeight: '22px'
-  }
+    lineHeight: '22px',
+  },
 };

@@ -1,0 +1,44 @@
+name 'CSA U6 Assessment q08_pilot-2025'
+
+wrong '`"abcdefghi"`'
+wrong '`"ghidefabc"`'
+wrong '`"heb"`'
+wrong '`"gda"`'
+right '`"ghdeab"`'
+
+markdown <<MARKDOWN
+Consider the following method.
+
+```
+public String mystery(String word) {
+  String ret = "";
+
+  for (int k = 0; k < word.length(); k++) {
+    if (k % 3 == 1) {
+      ret = word.substring(k - 1, k + 1) + ret;
+    }
+  }
+
+  return ret;
+}
+```
+
+The following code segment appears in another method in the same class as `mystery`.
+
+```
+System.out.println(mystery("abcdefghij"));
+```
+
+What is printed as a result of executing the code segment?
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+The variable `ret` is initialized as an empty `String`. The loop starts with `k` initialized to `0`. In the first iteration, `k % 3` is 0, which does not satisfy the condition `k % 3 == 1`. The loop continues to the next iteration.
+
+In the second iteration, `k % 3` is `1`, which satisfies the condition `k % 3 == 1`. The `ret` string is updated by concatenating the substring `word.substring(k - 1, k + 1)` with the current value of `ret`. Since `k` is `1`, `word.substring(k - 1, k + 1)` returns the substring `"ab"`. The updated `ret` becomes `"ab"`. The loop continues to the next iteration.
+
+In the third iteration, `k % 3` is `2`, which does not satisfy the condition `k % 3 == 1`. The loop continues to the next iteration.
+
+The loop continues this pattern, only considering `k` values that satisfy `k % 3 == 1`. After iterating over all characters of `word`, the value of `ret` is "ghdeab".
+MARKDOWN

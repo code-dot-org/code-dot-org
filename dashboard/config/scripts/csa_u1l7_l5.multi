@@ -12,3 +12,5 @@ wrong 'False'
 markdown <<MARKDOWN
 ![](https://images.code.org/9afbeee9b9197abb73d7a11d744774db-image-1625661814091.png)
 MARKDOWN
+
+allow_multiple_attempts true

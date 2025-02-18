@@ -14,6 +14,7 @@ def set_course_audiences
     next if script.unit_group
 
     # rubocop:disable Style/WordArray
+    # rubocop:disable Performance/CollectionLiteralInLoop
     script.instructor_audience = if ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
                                      'csd6-dlp-18', 'csp1-dlp-18', 'csp2-dlp-18', 'csp3-dlp-18', 'csp4-dlp-18',
                                      'csp5-dlp-18', 'csp-create-dlp-18', 'csp-explore-dlp-18', 'csp-novice-18',
@@ -44,6 +45,7 @@ def set_course_audiences
                                     Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
                                   end
     # rubocop:enable Style/WordArray
+    # rubocop:enable Performance/CollectionLiteralInLoop
 
     script.update!(skip_name_format_validation: true)
     script.write_script_json
@@ -51,13 +53,13 @@ def set_course_audiences
 
   UnitGroup.all.each do |course|
     # default is instructor_audience teacher and participant_audience student so only need to update unit groups we want something else
-    next unless ['self-paced-pl-csp-2021'].include?(course.name)
+    next unless course.name == 'self-paced-pl-csp-2021'
 
-    course.instructor_audience = if ['self-paced-pl-csp-2021'].include?(course.name)
+    course.instructor_audience = if course.name == 'self-paced-pl-csp-2021'
                                    Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
                                  end
 
-    course.participant_audience = if ['self-paced-pl-csp-2021'].include?(course.name)
+    course.participant_audience = if course.name == 'self-paced-pl-csp-2021'
                                     Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
                                   end
 

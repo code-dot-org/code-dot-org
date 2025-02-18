@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Hello World: Space", body: "Buat adegan antargalaksi dengan karakter dan suara yang akan membuat kamu berkata, \"Halo dunia!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "Ciptakan tata surya super keren, juga belajar tentang musik, astronomi, dan coding dalam prosesnya!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "Star Wars", body: "Belajar memprogram droid, dan membuat game Star Wars kamu sendiri di galaksi yang sangat jauh.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "Dalam petualangan coding online ini, kamu akan membawa Subby si kapal selam melewati tantangan di bawah air.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

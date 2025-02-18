@@ -1,8 +1,9 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert} from 'chai';
-import sinon from 'sinon';
 import {Factory} from 'rosie';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import './workshopFactory';
 import IntroPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/IntroPanel';
 
@@ -60,7 +61,7 @@ describe('IntroPanel', () => {
     it('for admin', () => {
       shallowIntroPanel({
         workshopState,
-        isWorkshopAdmin: true
+        isWorkshopAdmin: true,
       });
     });
   });
@@ -71,14 +72,14 @@ describe('IntroPanel', () => {
     it('and account is not required for attendance', () => {
       shallowIntroPanel({
         workshopState,
-        isAccountRequiredForAttendance: true
+        isAccountRequiredForAttendance: true,
       });
     });
 
     it('and account is required for attendance', () => {
       shallowIntroPanel({
         workshopState,
-        isAccountRequiredForAttendance: false
+        isAccountRequiredForAttendance: false,
       });
     });
 
@@ -86,7 +87,7 @@ describe('IntroPanel', () => {
       const wrapper = shallowIntroPanel({
         workshopState,
         workshopId: 1,
-        isWorkshopAdmin: true
+        isWorkshopAdmin: true,
       });
 
       // Click the Unstart button to show the confirmation dialog
@@ -103,7 +104,7 @@ describe('IntroPanel', () => {
       server.respondWith('POST', `/api/v1/pd/workshops/1/Unstart`, [
         204,
         {},
-        ''
+        '',
       ]);
       server.respond();
       wrapper.update();
@@ -131,14 +132,14 @@ describe('IntroPanel', () => {
     const workshopState = 'Ended';
     it('for non-admin', () => {
       shallowIntroPanel({
-        workshopState
+        workshopState,
       });
     });
 
     it('for admin', () => {
       shallowIntroPanel({
         workshopState,
-        isWorkshopAdmin: true
+        isWorkshopAdmin: true,
       });
     });
   });

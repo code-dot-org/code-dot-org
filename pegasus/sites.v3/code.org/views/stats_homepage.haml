@@ -1,9 +1,9 @@
 :ruby
-  student_accounts = "80M"
-  female_students = "30M"
+  student_accounts = "99M"
+  female_students = "42M"
   project_count = fetch_project_count['rounded_down_millions']
   project_count = project_count.to_s + "M"
-  teacher_users = "2M"
+  teacher_users = "2.9M"
   states_policy_change = "50"
 
   top_statistic_number = student_accounts
@@ -23,7 +23,7 @@
     {
       number: teacher_users,
       phrase: "teachers use Code.org",
-      link: CDO.studio_url('/courses?view=teacher')
+      link: CDO.code_org_url('/teach')
     },
     {
       number: states_policy_change,

@@ -5,11 +5,15 @@
  */
 
 import $ from 'jquery';
-var utils = require('../utils'); // Provides Function.prototype.inherits
-var i18n = require('@cdo/netsim/locale');
-var markup = require('./NetSimShardSelectionPanel.html.ejs');
-var NetSimPanel = require('./NetSimPanel');
+
 import {KeyCodes} from '../constants';
+
+var i18n = require('@cdo/netsim/locale');
+
+var utils = require('../utils'); // Provides Function.prototype.inherits
+
+var NetSimPanel = require('./NetSimPanel');
+var markup = require('./NetSimShardSelectionPanel.html.ejs');
 
 /**
  * @type {string}
@@ -34,7 +38,7 @@ var SELECTOR_NONE_VALUE = '';
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimShardSelectionPanel = (module.exports = function(
+var NetSimShardSelectionPanel = (module.exports = function (
   rootDiv,
   options,
   callbacks
@@ -78,7 +82,7 @@ var NetSimShardSelectionPanel = (module.exports = function(
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-shard-selection-panel',
     panelTitle: i18n.pickASection(),
-    userToggleable: false
+    userToggleable: false,
   });
 });
 NetSimShardSelectionPanel.inherits(NetSimPanel);
@@ -86,7 +90,7 @@ NetSimShardSelectionPanel.inherits(NetSimPanel);
 /**
  * Recreate markup within panel body.
  */
-NetSimShardSelectionPanel.prototype.render = function() {
+NetSimShardSelectionPanel.prototype.render = function () {
   // Create boilerplate panel markup
   NetSimShardSelectionPanel.superPrototype.render.call(this);
 
@@ -96,7 +100,7 @@ NetSimShardSelectionPanel.prototype.render = function() {
       displayName: this.displayName_,
       selectedShardID: this.selectedShardID_,
       shardChoices: this.shardChoices_,
-      SELECTOR_NONE_VALUE: SELECTOR_NONE_VALUE
+      SELECTOR_NONE_VALUE: SELECTOR_NONE_VALUE,
     })
   );
   this.getBody().html(newMarkup);
@@ -129,7 +133,7 @@ NetSimShardSelectionPanel.prototype.render = function() {
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimShardSelectionPanel.prototype.onNameKeyUp_ = function(jQueryEvent) {
+NetSimShardSelectionPanel.prototype.onNameKeyUp_ = function (jQueryEvent) {
   var name = jQueryEvent.target.value;
   var setNameButton = this.getBody().find('#netsim-lobby-set-name-button');
   setNameButton.attr('disabled', name.length === 0);
@@ -140,19 +144,15 @@ NetSimShardSelectionPanel.prototype.onNameKeyUp_ = function(jQueryEvent) {
 };
 
 /** @private */
-NetSimShardSelectionPanel.prototype.setNameButtonClick_ = function() {
-  this.setNameCallback_(
-    this.getBody()
-      .find('#netsim-lobby-name')
-      .val()
-  );
+NetSimShardSelectionPanel.prototype.setNameButtonClick_ = function () {
+  this.setNameCallback_(this.getBody().find('#netsim-lobby-name').val());
 };
 
 /**
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimShardSelectionPanel.prototype.onShardSelectChange_ = function(
+NetSimShardSelectionPanel.prototype.onShardSelectChange_ = function (
   jQueryEvent
 ) {
   var shardID = jQueryEvent.target.value;
@@ -164,7 +164,7 @@ NetSimShardSelectionPanel.prototype.onShardSelectChange_ = function(
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimShardSelectionPanel.prototype.onShardSelectKeyUp_ = function(
+NetSimShardSelectionPanel.prototype.onShardSelectKeyUp_ = function (
   jQueryEvent
 ) {
   var shardID = jQueryEvent.target.value;
@@ -178,10 +178,6 @@ NetSimShardSelectionPanel.prototype.onShardSelectKeyUp_ = function(
 };
 
 /** @private */
-NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function() {
-  this.setShardCallback_(
-    this.getBody()
-      .find('#netsim-shard-select')
-      .val()
-  );
+NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
+  this.setShardCallback_(this.getBody().find('#netsim-shard-select').val());
 };

@@ -1,8 +1,9 @@
-import React from 'react';
-import i18n from '@cdo/locale';
-import color from '../util/color';
-import trackEvent from '../util/trackEvent';
 import _ from 'lodash';
+import React from 'react';
+
+import i18n from '@cdo/locale';
+
+import color from '../util/color';
 
 /**
  * If the browser supports window.visualViewport, and we detect that the user
@@ -15,7 +16,7 @@ import _ from 'lodash';
 export default class FixZoomHelper extends React.Component {
   // mode can be "none", "button", or "helper".
   state = {
-    mode: 'none'
+    mode: 'none',
   };
 
   isLandscape() {
@@ -32,17 +33,11 @@ export default class FixZoomHelper extends React.Component {
     const isZoomed = this.isZoomed();
 
     if (this.state.mode !== 'none' && !isZoomed) {
-      const lastMode = this.state.mode;
-
       // If transitioning from zoomed to non-zoomed, then mode goes to "none".
       this.setState({mode: 'none'});
-
-      trackEvent('Research', 'FixZoomHelper', `${lastMode}-to-none`);
     } else if (this.state.mode === 'none' && isZoomed) {
       // If transitioning from non-zoomed to zoomed, then mode goes to "button".
       this.setState({mode: 'button'});
-
-      trackEvent('Research', 'FixZoomHelper', 'none-to-button');
     }
 
     // Also update the viewport information.
@@ -51,7 +46,7 @@ export default class FixZoomHelper extends React.Component {
         offsetLeft: window.visualViewport.offsetLeft,
         offsetTop: window.visualViewport.offsetTop,
         width: window.visualViewport.width,
-        height: window.visualViewport.height
+        height: window.visualViewport.height,
       });
     }
   };
@@ -76,14 +71,10 @@ export default class FixZoomHelper extends React.Component {
 
   onButtonClick = () => {
     this.setState({mode: 'helper'});
-
-    trackEvent('Research', 'FixZoomHelper', 'button-to-helper');
   };
 
   onHelperClick = () => {
     this.setState({mode: 'button'});
-
-    trackEvent('Research', 'FixZoomHelper', 'helper-to-button');
   };
 
   render() {
@@ -138,17 +129,17 @@ const styles = {
     padding: 15,
     transform: 'translate(-100%,-100%)',
     whiteSpace: 'nowrap',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   buttonIcon: {
     display: 'inline-block',
     verticalAlign: 'middle',
-    fontSize: 24
+    fontSize: 24,
   },
   buttonText: {
     display: 'inline-block',
     verticalAlign: 'middle',
-    paddingTop: 5
+    paddingTop: 5,
   },
   helper: {
     position: 'fixed',
@@ -160,7 +151,7 @@ const styles = {
     right: 0,
     bottom: 0,
     width: '100%',
-    height: '100%'
+    height: '100%',
   },
   helperInner: {
     position: 'fixed',
@@ -172,16 +163,16 @@ const styles = {
     padding: 15,
     borderRadius: 5,
     textAlign: 'center',
-    pointerEvents: 'none'
+    pointerEvents: 'none',
   },
   helperInnerIcons: {
     fontSize: 24,
-    marginBottom: 10
+    marginBottom: 10,
   },
   closeX: {
     position: 'absolute',
     top: 5,
     right: 5,
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 };

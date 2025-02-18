@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
-import UsPhoneNumberInput from '../form_components/UsPhoneNumberInput';
 import SingleCheckbox from '../form_components/SingleCheckbox';
+import UsPhoneNumberInput from '../form_components/UsPhoneNumberInput';
+
 import utils from './utils';
 
 /**
@@ -13,7 +15,7 @@ import utils from './utils';
  * FormController, within which each FormComponent will act as a single page of
  * the form.
  *
- * @see the pageComponents of WorkshopSurvey for example usage.
+ * @see the pageComponents of TeacherApplication for example usage.
  */
 export default class FormComponent extends React.Component {
   static propTypes = {
@@ -21,7 +23,7 @@ export default class FormComponent extends React.Component {
     errors: PropTypes.arrayOf(PropTypes.string).isRequired,
     errorMessages: PropTypes.object.isRequired,
     data: PropTypes.object.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   /**
@@ -116,7 +118,7 @@ export default class FormComponent extends React.Component {
       placeholder,
       required,
       options,
-      ...props
+      ...props,
     });
   }
 
@@ -293,7 +295,7 @@ export default class FormComponent extends React.Component {
       required,
       options,
       textFieldMap,
-      ...props
+      ...props,
     });
   }
 
@@ -334,7 +336,7 @@ export default class FormComponent extends React.Component {
         answerText: answer,
         inputValue: this.props.data[textFieldName],
         onInputChange: newValue =>
-          this.handleChange({[textFieldName]: newValue})
+          this.handleChange({[textFieldName]: newValue}),
       };
     });
 

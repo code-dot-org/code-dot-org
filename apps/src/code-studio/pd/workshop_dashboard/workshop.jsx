@@ -8,30 +8,32 @@ import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Grid, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-import {Grid, Row, Col} from 'react-bootstrap';
-import Spinner from '../components/spinner';
-import {PermissionPropType, WorkshopAdmin} from './permission';
-import SignUpPanel from './SignUpPanel';
-import IntroPanel from './IntroPanel';
+
+import Spinner from '../../../sharedComponents/Spinner';
+
 import AttendancePanel from './AttendancePanel';
+import DetailsPanel from './DetailsPanel';
 import EndWorkshopPanel from './EndWorkshopPanel';
 import EnrollmentsPanel from './EnrollmentsPanel';
-import DetailsPanel from './DetailsPanel';
+import IntroPanel from './IntroPanel';
+import {PermissionPropType, WorkshopAdmin} from './permission';
+import SignUpPanel from './SignUpPanel';
 
 export class Workshop extends React.Component {
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   static propTypes = {
     params: PropTypes.shape({
-      workshopId: PropTypes.string.isRequired
+      workshopId: PropTypes.string.isRequired,
     }).isRequired,
     route: PropTypes.shape({
-      view: PropTypes.string
+      view: PropTypes.string,
     }).isRequired,
-    permission: PermissionPropType.isRequired
+    permission: PermissionPropType.isRequired,
   };
 
   constructor(props) {
@@ -41,7 +43,7 @@ export class Workshop extends React.Component {
       this.state = {
         loadingWorkshop: true,
         loadingEnrollments: true,
-        showAdminEditConfirmation: false
+        showAdminEditConfirmation: false,
       };
     }
   }
@@ -73,13 +75,14 @@ export class Workshop extends React.Component {
     this.loadWorkshopRequest = $.ajax({
       method: 'GET',
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}`,
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(data => {
         this.setState({
           loadingWorkshop: false,
           workshop: _.pick(data, [
             'id',
+            'name',
             'organizer',
             'facilitators',
             'location_name',
@@ -104,15 +107,18 @@ export class Workshop extends React.Component {
             'created_at',
             'virtual',
             'suppress_email',
-            'third_party_provider'
-          ])
+            'third_party_provider',
+            'course_offerings',
+            'module',
+            'participant_group_type',
+          ]),
         });
       })
       .fail(data => {
         if (data.statusText !== 'abort') {
           this.setState({
             loadingWorkshop: false,
-            workshop: null
+            workshop: null,
           });
         }
       })
@@ -126,14 +132,14 @@ export class Workshop extends React.Component {
     this.loadEnrollmentsRequest = $.ajax({
       method: 'GET',
       url: `/api/v1/pd/workshops/${this.props.params.workshopId}/enrollments`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
         loadingEnrollments: false,
         enrollments: data,
         workshop: _.merge(_.cloneDeep(this.state.workshop), {
-          enrolled_teacher_count: data.length
-        })
+          enrolled_teacher_count: data.length,
+        }),
       });
       this.loadEnrollmentsRequest = null;
     });
@@ -214,7 +220,7 @@ export class Workshop extends React.Component {
 }
 
 export default connect(state => ({
-  permission: state.workshopDashboard.permission
+  permission: state.workshopDashboard.permission,
 }))(Workshop);
 
 /**
@@ -234,10 +240,10 @@ const MetadataFooter = ({createdAt}) => (
   </Row>
 );
 MetadataFooter.propTypes = {
-  createdAt: PropTypes.string.isRequired // An ISO 8601 date string
+  createdAt: PropTypes.string.isRequired, // An ISO 8601 date string
 };
 const METADATA_FOOTER_STYLE = {
   textAlign: 'right',
   fontSize: 'smaller',
-  fontStyle: 'italic'
+  fontStyle: 'italic',
 };

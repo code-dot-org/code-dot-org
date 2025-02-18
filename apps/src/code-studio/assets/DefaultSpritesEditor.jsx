@@ -1,11 +1,12 @@
 import React from 'react';
+
 import {
   getDefaultListMetadata,
-  regenerateDefaultSpriteMetadata
+  regenerateDefaultSpriteMetadata,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 export default class DefaultSpritesEditor extends React.Component {
   state = {
@@ -13,7 +14,7 @@ export default class DefaultSpritesEditor extends React.Component {
     defaultList: [], // Array of name/category sprite objects
     pendingChangesCount: 0,
     isUpdating: false,
-    errorText: ''
+    errorText: '',
   };
 
   componentDidMount() {
@@ -29,7 +30,7 @@ export default class DefaultSpritesEditor extends React.Component {
 
   incrementPendingChanges = () => {
     this.setState(state => ({
-      pendingChangesCount: state.pendingChangesCount + 1
+      pendingChangesCount: state.pendingChangesCount + 1,
     }));
   };
 
@@ -87,7 +88,7 @@ export default class DefaultSpritesEditor extends React.Component {
         this.setState({
           pendingChangesCount: 0,
           isUpdating: false,
-          errorText: ''
+          errorText: '',
         });
       })
       .catch(err => {
@@ -166,6 +167,6 @@ const styles = {
   changesRow: {
     display: 'flex',
     justifyContent: 'flex-start',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };

@@ -2,7 +2,7 @@
 - if Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   - correct_answers = data['answers'].each_with_index.map do |answer, index|
     - next unless answer['correct']
-    - letter = standalone ? nil : Multi.value_to_letter(index)
+    - letter = Multi.value_to_letter(index)
     - {index: index, letter: letter}
   - end.compact
   - unless correct_answers.empty?

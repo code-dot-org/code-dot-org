@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Select from 'react-select';
+
 import {SelectStyleProps} from '../constants';
 
 export default class WorkshopAssignmentSelect extends React.Component {
@@ -8,11 +9,11 @@ export default class WorkshopAssignmentSelect extends React.Component {
     workshops: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.isRequired,
-        value: PropTypes.number.isRequired
+        value: PropTypes.number.isRequired,
       })
     ).isRequired,
     assignedWorkshopId: PropTypes.number,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -32,6 +33,6 @@ export default class WorkshopAssignmentSelect extends React.Component {
 const styles = {
   select: {
     width: 400,
-    display: 'inline-block'
-  }
+    display: 'inline-block',
+  },
 };

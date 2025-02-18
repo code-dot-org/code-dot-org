@@ -1,17 +1,18 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
-import AssignmentVersionSelector from './AssignmentVersionSelector';
+import React from 'react';
+
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
+import AssignmentVersionSelector from './AssignmentVersionSelector';
+
 export default {
-  title: 'AssignmentVersionSelector',
-  component: AssignmentVersionSelector
+  component: AssignmentVersionSelector,
 };
 
 const styles = {
   dropdown: {
-    padding: '0.3em'
-  }
+    padding: '0.3em',
+  },
 };
 
 const Template = args => (
@@ -25,13 +26,13 @@ const Template = args => (
 
 export const Enabled = Template.bind({});
 Enabled.args = {
-  dropdownStyle: styles.dropdown
+  dropdownStyle: styles.dropdown,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   disabled: true,
-  dropdownStyle: styles.dropdown
+  dropdownStyle: styles.dropdown,
 };
 
 export const EnabledNoStyling = Template.bind({});

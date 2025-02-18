@@ -1,14 +1,17 @@
 import React from 'react';
-import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-import LessonProgress from './LessonProgress';
+import {createStore, combineReducers} from 'redux';
+
+import {TestResults} from '@cdo/apps/constants';
+
 import lessonLock from '../../lessonLockRedux';
 import progress, {
   initProgress,
   mergeResults,
-  setLessonExtrasEnabled
+  setLessonExtrasEnabled,
 } from '../../progressRedux';
-import {TestResults} from '@cdo/apps/constants';
+
+import LessonProgress from './LessonProgress';
 
 const activityPuzzle = {
   ids: ['123'],
@@ -19,7 +22,7 @@ const activityPuzzle = {
   title: 1,
   url: 'http://studio.code.org/s/course1/lessons/3/levels/2',
   freePlay: false,
-  is_concept_level: false
+  is_concept_level: false,
 };
 
 const conceptPuzzle = {
@@ -32,7 +35,7 @@ const conceptPuzzle = {
   url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/1',
   freePlay: false,
   progression: 'Lesson Vocabulary & Resources',
-  is_concept_level: true
+  is_concept_level: true,
 };
 
 const assessment1 = {
@@ -44,7 +47,7 @@ const assessment1 = {
   title: 3,
   url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/3',
   freePlay: false,
-  progression: 'Check Your Understanding'
+  progression: 'Check Your Understanding',
 };
 
 const assessment2 = {
@@ -56,7 +59,7 @@ const assessment2 = {
   title: 4,
   url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/4',
   freePlay: false,
-  progression: 'Check Your Understanding'
+  progression: 'Check Your Understanding',
 };
 
 const assessment3 = {
@@ -68,7 +71,7 @@ const assessment3 = {
   title: 5,
   url: 'http://studio.code.org/s/csp1-2019/lessons/2/levels/5',
   freePlay: false,
-  progression: 'Check Your Understanding'
+  progression: 'Check Your Understanding',
 };
 
 const unplugged = {
@@ -79,19 +82,18 @@ const unplugged = {
   isUnplugged: true,
   position: 1,
   title: 1,
-  url: 'http://studio.code.org/s/course1/lessons/1/levels/1'
+  url: 'http://studio.code.org/s/course1/lessons/1/levels/1',
 };
 
 const bonus = {
   ids: ['100'],
   activeId: '100',
   title: 1,
-  bonus: true
+  bonus: true,
 };
 
 export default {
-  title: 'LessonProgress',
-  component: LessonProgress
+  component: LessonProgress,
 };
 
 const createStoreForLevels = (
@@ -114,9 +116,9 @@ const createStoreForLevels = (
         {
           id: 123,
           lesson_extras_level_url: showLessonExtras && 'fakeurl',
-          levels
-        }
-      ]
+          levels,
+        },
+      ],
     })
   );
   const results = {123: TestResults.ALL_PASS};
@@ -143,17 +145,17 @@ LessonProgressExample.args = {
   store: createStoreForLevels(
     [activityPuzzle, conceptPuzzle, assessment1, assessment2, assessment3],
     4
-  )
+  ),
 };
 
 export const UnpluggedAsCurrent = Template.bind({});
 UnpluggedAsCurrent.args = {
-  store: createStoreForLevels([unplugged, assessment1], 0)
+  store: createStoreForLevels([unplugged, assessment1], 0),
 };
 
 export const UnpluggedAsNonCurrent = Template.bind({});
 UnpluggedAsNonCurrent.args = {
-  store: createStoreForLevels([unplugged, assessment1], 1)
+  store: createStoreForLevels([unplugged, assessment1], 1),
 };
 
 export const LessonExtrasNotStarted = Template.bind({});
@@ -163,7 +165,7 @@ LessonExtrasNotStarted.args = {
     1,
     true /* showLessonExtras */,
     false /* onLessonExtras */
-  )
+  ),
 };
 
 export const LessonExtrasCompleted = Template.bind({});
@@ -174,7 +176,7 @@ LessonExtrasCompleted.args = {
     true /* showLessonExtras */,
     false /* onLessonExtras */,
     true /* bonusCompleted */
-  )
+  ),
 };
 
 export const LessonExtrasCurrentLevelNotStarted = Template.bind({});
@@ -184,7 +186,7 @@ LessonExtrasCurrentLevelNotStarted.args = {
     null,
     true /* showLessonExtras */,
     true /* onLessonExtras */
-  )
+  ),
 };
 
 export const LessonExtrasCurrentLevelCompleted = Template.bind({});
@@ -195,7 +197,7 @@ LessonExtrasCurrentLevelCompleted.args = {
     true /* showLessonExtras */,
     true /* onLessonExtras */,
     true /* bonusCompleted */
-  )
+  ),
 };
 
 export const LessonEmptyTrophy = Template.bind({});
@@ -205,7 +207,7 @@ LessonEmptyTrophy.args = {
     0,
     false /* showLessonExtras */,
     true /* onLessonExtras */
-  )
+  ),
 };
 
 export const Lesson20PercentTrophy = Template.bind({});
@@ -215,7 +217,7 @@ Lesson20PercentTrophy.args = {
     0,
     false /* showLessonExtras */,
     true /* onLessonExtras */
-  )
+  ),
 };
 
 export const Lesson67PercentTrophy = Template.bind({});
@@ -225,7 +227,7 @@ Lesson67PercentTrophy.args = {
     0,
     false /* showLessonExtras */,
     true /* onLessonExtras */
-  )
+  ),
 };
 
 export const LessonMasteryTrophy = Template.bind({});
@@ -235,5 +237,5 @@ LessonMasteryTrophy.args = {
     0,
     false /* showLessonExtras */,
     true /* onLessonExtras */
-  )
+  ),
 };

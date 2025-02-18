@@ -13,7 +13,7 @@ export const testSection = {
   pairingAllowed: true,
   studentCount: 10,
   code: 'PMTKVH',
-  participantType: 'student'
+  participantType: 'student',
 };
 export const noStudentsSection = {
   id: 11,
@@ -30,14 +30,13 @@ export const noStudentsSection = {
   pairingAllowed: true,
   studentCount: 0,
   code: 'PMTKVH',
-  participantType: 'student'
+  participantType: 'student',
 };
 
 export const courseOfferings = {
   1: {
     id: 1,
     display_name: 'Course A',
-    category: 'csf',
     is_featured: false,
     participant_audience: 'student',
     course_versions: {
@@ -51,6 +50,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: false,
+        locale_codes: ['fa-AF', 'cs-CZ', 'de-DE', 'en-US'],
         locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
         units: {
           1: {
@@ -58,9 +58,9 @@ export const courseOfferings = {
             name: 'Course A',
             path: '/s/coursea-2017',
             lesson_extras_available: true,
-            position: null
-          }
-        }
+            position: null,
+          },
+        },
       },
       2: {
         id: 2,
@@ -72,6 +72,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: ['en-US', 'it-IT', 'sk-SK'],
         locales: ['English', 'Italiano', 'Slovenčina'],
         units: {
           2: {
@@ -79,16 +80,15 @@ export const courseOfferings = {
             name: 'Course A (2018)',
             path: '/s/coursea-2018',
             lesson_extras_available: true,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   2: {
     id: 2,
     display_name: 'Computer Science Discoveries',
-    category: 'full_course',
     is_featured: false,
     participant_audience: 'student',
     course_versions: {
@@ -102,6 +102,7 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: false,
+        locale_codes: [],
         locales: [],
         units: {
           3: {
@@ -110,7 +111,7 @@ export const courseOfferings = {
             path: '/s/csd1-2017',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           4: {
             id: 4,
@@ -118,9 +119,9 @@ export const courseOfferings = {
             path: '/s/csd2-2017',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
+            position: 2,
+          },
+        },
       },
       4: {
         id: 4,
@@ -132,6 +133,7 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           5: {
@@ -140,7 +142,7 @@ export const courseOfferings = {
             path: '/s/csd1-2018',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           6: {
             id: 6,
@@ -148,16 +150,15 @@ export const courseOfferings = {
             path: '/s/csd2-2018',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
-      }
-    }
+            position: 2,
+          },
+        },
+      },
+    },
   },
   3: {
     id: 3,
     display_name: 'Computer Science A',
-    category: 'full_course',
     is_featured: false,
     participant_audience: 'student',
     course_versions: {
@@ -171,6 +172,7 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           7: {
@@ -179,7 +181,7 @@ export const courseOfferings = {
             path: '/s/csa1-2022',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           8: {
             id: 8,
@@ -187,16 +189,15 @@ export const courseOfferings = {
             path: '/s/csa2-2022',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
-      }
-    }
+            position: 2,
+          },
+        },
+      },
+    },
   },
   4: {
     id: 4,
     display_name: 'Flappy',
-    category: 'hoc',
     is_featured: false,
     participant_audience: 'student',
     course_versions: {
@@ -210,6 +211,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: false,
+        locale_codes: [],
         locales: [],
         units: {
           9: {
@@ -218,16 +220,15 @@ export const courseOfferings = {
             path: '/s/flappy',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   5: {
     id: 5,
     display_name: 'Hello World',
-    category: 'hoc',
     is_featured: true,
     participant_audience: 'student',
     course_versions: {
@@ -241,6 +242,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           10: {
@@ -249,16 +251,15 @@ export const courseOfferings = {
             path: '/s/hello-world',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   6: {
     id: 6,
     display_name: 'Poem Art',
-    category: 'hoc',
     is_featured: true,
     participant_audience: 'student',
     course_versions: {
@@ -272,6 +273,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           11: {
@@ -280,16 +282,15 @@ export const courseOfferings = {
             path: '/s/poem-art',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   7: {
     id: 7,
     display_name: 'Artist',
-    category: 'hoc',
     is_featured: false,
     participant_audience: 'student',
     course_versions: {
@@ -303,6 +304,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           12: {
@@ -311,16 +313,15 @@ export const courseOfferings = {
             path: '/s/artist',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   8: {
     id: 8,
     display_name: 'Self Paced PL CSP',
-    category: 'self_paced_pl',
     is_featured: false,
     participant_audience: 'teacher',
     course_versions: {
@@ -334,6 +335,7 @@ export const courseOfferings = {
         type: 'UnitGroup',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           13: {
@@ -342,7 +344,7 @@ export const courseOfferings = {
             path: '/s/self-paced-pl-csp1-2021',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           14: {
             id: 14,
@@ -350,16 +352,15 @@ export const courseOfferings = {
             path: '/s/self-paced-pl-csp2-2021',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
-      }
-    }
+            position: 2,
+          },
+        },
+      },
+    },
   },
   9: {
     id: 9,
     display_name: 'Virtual PL CSP',
-    category: 'virtual_pl',
     is_featured: false,
     participant_audience: 'teacher',
     course_versions: {
@@ -373,6 +374,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           15: {
@@ -381,9 +383,9 @@ export const courseOfferings = {
             path: '/s/vpl-csp-2020',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
+            position: null,
+          },
+        },
       },
       12: {
         id: 12,
@@ -395,6 +397,7 @@ export const courseOfferings = {
         type: 'Unit',
         is_stable: true,
         is_recommended: true,
+        locale_codes: [],
         locales: [],
         units: {
           16: {
@@ -403,16 +406,71 @@ export const courseOfferings = {
             path: '/s/vpl-csp-2021',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
-  }
+            position: null,
+          },
+        },
+      },
+    },
+  },
+  10: {
+    id: 10,
+    display_name: 'Single Unit Course',
+    is_featured: false,
+    participant_audience: 'student',
+    course_versions: {
+      13: {
+        id: 13,
+        key: '2025',
+        version_year: '2025',
+        content_root_id: 17,
+        name: 'Single Unit Course 2025',
+        path: '/courses/single-unit-course-2025',
+        type: 'UnitGroup',
+        is_stable: true,
+        is_recommended: false,
+        locale_codes: [],
+        locales: [],
+        units: {
+          17: {
+            id: 17,
+            name: 'Single Unit 2025',
+            path: '/s/single-unit-2025',
+            lesson_extras_available: false,
+            text_to_speech_enabled: false,
+            position: null,
+          },
+        },
+      },
+      14: {
+        id: 14,
+        key: '2026',
+        version_year: '2026',
+        content_root_id: 18,
+        name: 'Single Unit Course 2026',
+        path: '/courses/single-unit-course-2026',
+        type: 'UnitGroup',
+        is_stable: true,
+        is_recommended: false,
+        locale_codes: [],
+        locales: [],
+        units: {
+          17: {
+            id: 17,
+            name: 'Single Unit 2026',
+            path: '/s/single-unit-2026',
+            lesson_extras_available: false,
+            text_to_speech_enabled: false,
+            position: null,
+          },
+        },
+      },
+    },
+  },
 };
 
 export const fakeCoursesWithProgress = [
   {
+    id: 1,
     display_name: 'Course A',
     units: [
       {
@@ -420,18 +478,19 @@ export const fakeCoursesWithProgress = [
         version_year: '2018',
         key: 'coursea-2018',
         name: 'Course A (2018)',
-        position: null
+        position: null,
       },
       {
         id: 1,
         version_year: '2017',
         key: 'coursea-2017',
         name: 'Course A (2017)',
-        position: null
-      }
-    ]
+        position: null,
+      },
+    ],
   },
   {
+    id: 2,
     display_name: 'CS Discoveries 2018',
     units: [
       {
@@ -439,18 +498,19 @@ export const fakeCoursesWithProgress = [
         version_year: null,
         key: 'csd1-2018',
         name: 'Unit 1',
-        position: 1
+        position: 1,
       },
       {
         id: 6,
         version_year: null,
         key: 'csd2-2018',
         name: 'Unit 2',
-        position: 2
-      }
-    ]
+        position: 2,
+      },
+    ],
   },
   {
+    id: 3,
     display_name: 'Flappy',
     units: [
       {
@@ -459,8 +519,8 @@ export const fakeCoursesWithProgress = [
         key: 'flappy',
         name: 'Flappy',
         position: null,
-        description: 'Make a flappy game!'
-      }
-    ]
-  }
+        description: 'Make a flappy game!',
+      },
+    ],
+  },
 ];

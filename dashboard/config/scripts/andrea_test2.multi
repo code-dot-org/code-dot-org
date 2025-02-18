@@ -19,3 +19,5 @@ markdown <<MARKDOWN
 
 test test test
 MARKDOWN
+
+allow_multiple_attempts true

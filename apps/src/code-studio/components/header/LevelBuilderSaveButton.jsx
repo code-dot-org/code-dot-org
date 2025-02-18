@@ -2,12 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import ProjectUpdatedAt from './ProjectUpdatedAt';
 import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
-  setProjectUpdatedSaved
+  setProjectUpdatedSaved,
 } from '../../projectRedux';
+
+import ProjectUpdatedAt from './ProjectUpdatedAt';
 
 // Levelbuilder-only UI for saving changes to a level.
 class LevelBuilderSaveButton extends React.Component {
@@ -17,7 +18,7 @@ class LevelBuilderSaveButton extends React.Component {
     setProjectUpdatedSaving: PropTypes.func.isRequired,
     setProjectUpdatedSaved: PropTypes.func.isRequired,
     overrideHeaderText: PropTypes.string,
-    overrideOnSaveURL: PropTypes.string
+    overrideOnSaveUrl: PropTypes.string,
   };
 
   onSave = () => {
@@ -25,12 +26,12 @@ class LevelBuilderSaveButton extends React.Component {
 
     $.ajax({
       type: 'POST',
-      url: this.props.overrideOnSaveURL || '../update_start_code',
+      url: this.props.overrideOnSaveUrl || '../update_start_code',
       data: JSON.stringify(this.props.getChanges()),
       dataType: 'json',
       error: this.props.setProjectUpdatedError,
       success: this.props.setProjectUpdatedSaved,
-      contentType: 'application/json'
+      contentType: 'application/json',
     });
   };
 
@@ -55,11 +56,11 @@ export default connect(
   state => ({
     getChanges: state.header.getLevelBuilderChanges,
     overrideHeaderText: state.header.overrideHeaderText,
-    overrideOnSaveURL: state.header.overrideOnSaveURL
+    overrideOnSaveUrl: state.header.overrideOnSaveUrl,
   }),
   {
     setProjectUpdatedError,
     setProjectUpdatedSaving,
-    setProjectUpdatedSaved
+    setProjectUpdatedSaved,
   }
 )(LevelBuilderSaveButton);

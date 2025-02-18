@@ -1,0 +1,10 @@
+name 'ai_sorting_items_predict_2_pl_prod'
+question 'Look at the items on the left. Predict where the circle with the black border and pink color will go.'
+
+wrong '**Box 1** sorted by shape', feedback: 'Not quite! This item could be sorted by shape or inside color. We need more data to know.'
+wrong '**Box 2** sorted by inside color', feedback: 'Not quite! These items could be sorted by shape or inside color. We need more data to know.'
+wrong '**Box 3** sorted by border color', feedback: 'Not quite! These items could be sorted by shape or inside color. We need more data to know.'
+right 'It could go in **Box 1** or **Box 2**. We need more training data to know.', feedback: 'Correct! These items could be sorted by shape or inside color. We need more data to know.'
+
+
+allow_multiple_attempts true

@@ -1,0 +1,15 @@
+:css
+  .gallery {
+    max-width: 970px;
+    margin: 0px auto 80px;
+  }
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/googleblockly.js')}
+  %script{src: webpack_asset_path("js/#{js_locale}/music_locale.js")}
+  %script{src: webpack_asset_path('js/musiclab/gallery.js'), data: {channelids: @channel_ids}}
+
+.gallery
+  %h1 Internal Music Gallery
+
+  #musiclab-container{style: "width: 50%"}

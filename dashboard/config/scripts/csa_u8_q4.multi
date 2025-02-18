@@ -43,3 +43,5 @@ int result = bSearch(nums, 0, nums.length - 1, 30);
 
 What is the value of `result` after the code segment has been executed?
 MARKDOWN
+
+allow_multiple_attempts true

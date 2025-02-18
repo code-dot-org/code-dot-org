@@ -1,23 +1,22 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+
+import {KeyCodes} from '@cdo/apps/constants';
 import DebugConsole from '@cdo/apps/lib/tools/jsdebugger/DebugConsole';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
-import {KeyCodes} from '@cdo/apps/constants';
-import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 const newJSInterpreter = () => {
   let interpreter = new JSInterpreter({
     shouldRunAtMaxSpeed: () => false,
-    studioApp: {hideSource: true}
+    studioApp: {hideSource: true},
   });
   const code = '0;\n1;\n2;\n3;\n4;\n5;\n6;\n7;';
   interpreter.calculateCodeInfo({code});
@@ -35,14 +34,16 @@ describe('The DebugConsole component when the console is enabled', () => {
   beforeEach(() => {
     stubRedux();
     registerReducers(reducers);
-    getStore().dispatch(actions.initialize(sinon.spy()));
+    getStore().dispatch(actions.initialize(jest.fn()));
     root = mount(
       <Provider store={getStore()}>
         <DebugConsole debugConsoleDisabled={false} />
       </Provider>
     );
     const debugConsoleInstance = root.find('DebugConsole').instance();
-    jumpToBottomSpy = sinon.spy(debugConsoleInstance, 'jumpToBottom');
+    jumpToBottomSpy = jest
+      .spyOn(debugConsoleInstance, 'jumpToBottom')
+      .mockClear();
   });
 
   afterEach(() => {
@@ -54,25 +55,25 @@ describe('The DebugConsole component when the console is enabled', () => {
   const debugInputText = () => debugInput().instance().value;
 
   it('renders a debug output div', () => {
-    expect(debugOutput()).to.exist;
+    expect(debugOutput()).toBeDefined();
   });
 
   it('renders a debug input div', () => {
-    expect(debugInput()).to.exist;
+    expect(debugInput()).toBeDefined();
   });
 
   it('jumps to bottom on componentDidUpdate if log output has changed', () => {
-    expect(jumpToBottomSpy).not.to.have.been.called;
+    expect(jumpToBottomSpy).not.toHaveBeenCalled();
     getStore().dispatch(actions.attach(newJSInterpreter()));
-    expect(jumpToBottomSpy).not.to.have.been.called;
+    expect(jumpToBottomSpy).not.toHaveBeenCalled();
     getStore().dispatch(actions.appendLog({output: 1 + 1}));
-    expect(jumpToBottomSpy).to.have.been.calledOnce;
+    expect(jumpToBottomSpy).toHaveBeenCalledTimes(1);
   });
 
   function typeKey(keyCode) {
     debugInput().simulate('keydown', {
       target: debugInput().instance(),
-      keyCode: keyCode
+      keyCode: keyCode,
     });
   }
 
@@ -93,15 +94,15 @@ describe('The DebugConsole component when the console is enabled', () => {
       beforeEach(() => submit("console.log('hello');"));
 
       it('the text gets appended to the output', () => {
-        expect(debugOutput().text()).to.contain("> console.log('hello');");
+        expect(debugOutput().text()).toContain("> console.log('hello');");
       });
 
       it('a notice about the interpreter not running gets spit out', () => {
-        expect(debugOutput().text()).to.contain('< "(not running)"');
+        expect(debugOutput().text()).toContain('< "(not running)"');
       });
 
       it('the text gets removed from the input', () => {
-        expect(debugInputText()).not.to.contain("console.log('hello');");
+        expect(debugInputText()).not.toContain("console.log('hello');");
       });
     });
 
@@ -110,16 +111,14 @@ describe('The DebugConsole component when the console is enabled', () => {
 
       it('the expressions is added to the list of watch expressions', () => {
         expect(
-          getStore()
-            .getState()
-            .watchedExpressions.getIn([0, 'expression'])
-        ).to.equal('a+b');
+          getStore().getState().watchedExpressions.getIn([0, 'expression'])
+        ).toBe('a+b');
       });
 
       describe('And then using the $unwatch prefix on the same expression', () => {
         beforeEach(() => submit('$unwatch a+b'));
         it('removes the expression from the watch list', () => {
-          expect(getStore().getState().watchedExpressions.size).to.equal(0);
+          expect(getStore().getState().watchedExpressions.size).toBe(0);
         });
       });
     });
@@ -133,15 +132,15 @@ describe('The DebugConsole component when the console is enabled', () => {
     });
 
     it('the up arrow cycles up through previous expressions', () => {
-      expect(debugInputText()).to.equal('');
+      expect(debugInputText()).toBe('');
       typeKey(KeyCodes.UP);
-      expect(debugInputText()).to.equal('3+3');
+      expect(debugInputText()).toBe('3+3');
       typeKey(KeyCodes.UP);
-      expect(debugInputText()).to.equal('2+2');
+      expect(debugInputText()).toBe('2+2');
       typeKey(KeyCodes.UP);
-      expect(debugInputText()).to.equal('1+1');
+      expect(debugInputText()).toBe('1+1');
       typeKey(KeyCodes.UP);
-      expect(debugInputText()).to.equal('1+1');
+      expect(debugInputText()).toBe('1+1');
     });
 
     it('the down arrow cycles back down through the expressions', () => {
@@ -149,13 +148,13 @@ describe('The DebugConsole component when the console is enabled', () => {
         // first go back three
         typeKey(KeyCodes.UP);
       }
-      expect(debugInputText()).to.equal('1+1');
+      expect(debugInputText()).toBe('1+1');
       typeKey(KeyCodes.DOWN);
-      expect(debugInputText()).to.equal('2+2');
+      expect(debugInputText()).toBe('2+2');
       typeKey(KeyCodes.DOWN);
-      expect(debugInputText()).to.equal('3+3');
+      expect(debugInputText()).toBe('3+3');
       typeKey(KeyCodes.DOWN);
-      expect(debugInputText()).to.equal('');
+      expect(debugInputText()).toBe('');
     });
   });
 
@@ -168,19 +167,19 @@ describe('The DebugConsole component when the console is enabled', () => {
       beforeEach(() => submit('1+1;'));
 
       it('the text gets appended to the output', () => {
-        expect(debugOutput().text()).to.contain('> 1+1;');
+        expect(debugOutput().text()).toContain('> 1+1;');
       });
 
       it('no notice about the interpreter not running gets spit out', () => {
-        expect(debugOutput().text()).not.to.contain('< "(not running)"');
+        expect(debugOutput().text()).not.toContain('< "(not running)"');
       });
 
       it('the result of evaluating the expression gets spit out', () => {
-        expect(debugOutput().text()).to.contain('< 2');
+        expect(debugOutput().text()).toContain('< 2');
       });
 
       it('the text gets removed from the input', () => {
-        expect(debugInputText()).not.to.contain('1+1;');
+        expect(debugInputText()).not.toContain('1+1;');
       });
     });
 
@@ -189,40 +188,40 @@ describe('The DebugConsole component when the console is enabled', () => {
         getStore().dispatch(
           actions.appendLog({
             output: ['test'],
-            fromConsoleLog: true
+            fromConsoleLog: true,
           })
         );
-        expect(debugOutput().text()).to.equal('▶["test"]');
+        expect(debugOutput().text()).toBe('▶["test"]');
       });
 
       it('a logged string prints a string without an arrow', () => {
         getStore().dispatch(
           actions.appendLog({
             output: 'hello world',
-            fromConsoleLog: true
+            fromConsoleLog: true,
           })
         );
-        expect(debugOutput().text()).to.equal('"hello world"');
+        expect(debugOutput().text()).toBe('"hello world"');
       });
 
       it('a logged integer or mathematical operation prints an integer without an arrow', () => {
         getStore().dispatch(
           actions.appendLog({
             output: 1 + 1,
-            fromConsoleLog: true
+            fromConsoleLog: true,
           })
         );
-        expect(debugOutput().text()).to.equal('2');
+        expect(debugOutput().text()).toBe('2');
       });
 
       it('a logged object prints an object with an expandable arrow', () => {
         getStore().dispatch(
           actions.appendLog({
             output: {foo: 'bar'},
-            fromConsoleLog: true
+            fromConsoleLog: true,
           })
         );
-        expect(debugOutput().text()).to.equal('▶Object {foo: "bar"}');
+        expect(debugOutput().text()).toBe('▶Object {foo: "bar"}');
       });
     });
 
@@ -230,58 +229,58 @@ describe('The DebugConsole component when the console is enabled', () => {
       it('the original array is prepended with >, and the interpreted array with an expander icon is prepended with < ', () => {
         getStore().dispatch(
           actions.appendLog({
-            input: '["test"]'
+            input: '["test"]',
           })
         );
         getStore().dispatch(
           actions.appendLog({
-            output: ['test']
+            output: ['test'],
           })
         );
-        expect(debugOutput().text()).to.equal('> ["test"]< ▶["test"]');
+        expect(debugOutput().text()).toBe('> ["test"]< ▶["test"]');
       });
 
       it('the original string is prepended with >, and the interpreted string is prepended with <', () => {
         var input = 'hello world';
         getStore().dispatch(
           actions.appendLog({
-            input: input
+            input: input,
           })
         );
         getStore().dispatch(
           actions.appendLog({
-            output: input
+            output: input,
           })
         );
-        expect(debugOutput().text()).to.equal(`> ${input}< "${input}"`);
+        expect(debugOutput().text()).toBe(`> ${input}< "${input}"`);
       });
 
       it('the original integer or mathematical operation is prepended with >, and the interpreted integer or mathematical operation is prepended with <', () => {
         getStore().dispatch(
           actions.appendLog({
-            input: '1 + 1'
+            input: '1 + 1',
           })
         );
         getStore().dispatch(
           actions.appendLog({
-            output: 1 + 1
+            output: 1 + 1,
           })
         );
-        expect(debugOutput().text()).to.equal('> 1 + 1< 2');
+        expect(debugOutput().text()).toBe('> 1 + 1< 2');
       });
 
       it('the original object is prepended with >, and the interpreted object with an expander icon is prepended with <', () => {
         getStore().dispatch(
           actions.appendLog({
-            input: "{foo: 'bar'}"
+            input: "{foo: 'bar'}",
           })
         );
         getStore().dispatch(
           actions.appendLog({
-            output: {foo: 'bar'}
+            output: {foo: 'bar'},
           })
         );
-        expect(debugOutput().text()).to.equal(
+        expect(debugOutput().text()).toBe(
           '> {foo: \'bar\'}< ▶Object {foo: "bar"}'
         );
       });
@@ -291,11 +290,11 @@ describe('The DebugConsole component when the console is enabled', () => {
       beforeEach(() => submit('a+b;'));
 
       it('the text gets appended to the output', () => {
-        expect(debugOutput().text()).to.contain('> a+b;');
+        expect(debugOutput().text()).toContain('> a+b;');
       });
 
       it('the error gets appended to the output', () => {
-        expect(debugOutput().text()).to.contain(
+        expect(debugOutput().text()).toContain(
           '< "ReferenceError: a is not defined"'
         );
       });
@@ -309,31 +308,34 @@ describe('The DebugConsole component when the console is enabled', () => {
       submit('1+1');
       selection = '';
       inputEl = debugInput().instance();
-      sinon.spy(inputEl, 'focus');
-      sinon.stub(window, 'getSelection').callsFake(() => selection);
+      jest.spyOn(inputEl, 'focus').mockClear();
+      jest
+        .spyOn(window, 'getSelection')
+        .mockClear()
+        .mockImplementation(() => selection);
     });
 
     afterEach(() => {
-      inputEl.focus.restore();
-      window.getSelection.restore();
+      inputEl.focus.mockRestore();
+      window.getSelection.mockRestore();
     });
 
     it('clicking the debug output window without selecting text will refocus the input', () => {
       debugOutput().simulate('mouseup', {target: debugOutput().instance()});
-      expect(inputEl.focus).to.have.been.called;
+      expect(inputEl.focus).toHaveBeenCalled();
     });
 
     it('but if you selected some text, the input will not be refocused', () => {
       selection = 'some selected text';
       debugOutput().simulate('mouseup', {target: debugOutput().instance()});
-      expect(inputEl.focus).not.to.have.been.called;
+      expect(inputEl.focus).not.toHaveBeenCalled();
     });
   });
 
   describe('debug output highlighting behavior', () => {
     it('normal debug output will not change background color', () => {
       getStore().dispatch(actions.appendLog({output: 'test normal text'}));
-      expect(debugOutput().instance().style.backgroundColor).to.equal('');
+      expect(debugOutput().instance().style.backgroundColor).toBe('');
     });
 
     it('warning debug output will change background color to lightest yellow', () => {
@@ -341,7 +343,7 @@ describe('The DebugConsole component when the console is enabled', () => {
       getStore().dispatch(
         actions.appendLog({output: 'test warning text'}, 'WARNING')
       );
-      expect(debugOutput().instance().style.backgroundColor).to.equal(
+      expect(debugOutput().instance().style.backgroundColor).toBe(
         'rgb(255, 247, 223)'
       );
     });
@@ -354,7 +356,7 @@ describe('The DebugConsole component when the console is enabled', () => {
       getStore().dispatch(
         actions.appendLog({output: 'test error text'}, 'ERROR')
       );
-      expect(debugOutput().instance().style.backgroundColor).to.equal(
+      expect(debugOutput().instance().style.backgroundColor).toBe(
         'rgb(255, 204, 204)'
       );
     });
@@ -367,7 +369,7 @@ describe('The DebugConsole component when the debug console is disabled', () => 
   beforeEach(() => {
     stubRedux();
     registerReducers(reducers);
-    getStore().dispatch(actions.initialize(sinon.spy()));
+    getStore().dispatch(actions.initialize(jest.fn()));
     root = mount(
       <Provider store={getStore()}>
         <DebugConsole debugConsoleDisabled={true} />
@@ -383,18 +385,18 @@ describe('The DebugConsole component when the debug console is disabled', () => 
   const debugInput = () => root.find('#debug-input');
 
   it('renders a debug output div', () => {
-    expect(debugOutput()).to.exist;
+    expect(debugOutput()).toBeDefined();
   });
 
   it('renders a debug input div', () => {
-    expect(debugInput()).to.exist;
-    expect(debugInput().instance().disabled).to.equal(true);
+    expect(debugInput()).toBeDefined();
+    expect(debugInput().instance().disabled).toBe(true);
   });
 
   function typeKey(keyCode) {
     debugInput().simulate('keydown', {
       target: debugInput().instance(),
-      keyCode: keyCode
+      keyCode: keyCode,
     });
   }
 
@@ -418,12 +420,12 @@ describe('The DebugConsole component when the debug console is disabled', () => 
     describe('When typing into the text input and pressing enter,', () => {
       it('the text does not get appended to the output if the html is unaltered', () => {
         submit('console.log("test")');
-        expect(debugOutput().text()).not.to.contain('test');
+        expect(debugOutput().text()).not.toContain('test');
       });
       it('the text does not get appended to the output if the html is changed to enable the input', () => {
         debugInput().instance().disabled = false;
         submit('console.log("test")');
-        expect(debugOutput().text()).not.to.contain('test');
+        expect(debugOutput().text()).not.toContain('test');
       });
     });
   });

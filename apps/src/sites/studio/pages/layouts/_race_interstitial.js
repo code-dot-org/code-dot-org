@@ -1,13 +1,13 @@
 import $ from 'jquery';
 
 $(document).ready(() => {
-  var editUser = $('#edit_user');
+  var editUser = $('#edit_user_race_form');
   var raceCheckboxes = $('.race-checkbox');
 
   editUser.on('change', () => {
     var shouldEnableSubmit = false;
     var optOutSelected = false;
-    raceCheckboxes.each(function(i) {
+    raceCheckboxes.each(function (i) {
       if (this.checked) {
         shouldEnableSubmit = true;
         if (this.id === 'user_races_opt_out') {
@@ -28,13 +28,9 @@ $(document).ready(() => {
     }
 
     if (shouldEnableSubmit) {
-      $('#race-submit')
-        .prop('disabled', false)
-        .removeClass('disabled-button');
+      $('#race-submit').prop('disabled', false).removeClass('disabled-button');
     } else {
-      $('#race-submit')
-        .prop('disabled', true)
-        .addClass('disabled-button');
+      $('#race-submit').prop('disabled', true).addClass('disabled-button');
     }
   });
 
@@ -43,8 +39,7 @@ $(document).ready(() => {
       type: 'POST',
       url: form.prop('action'),
       data: form.serialize(),
-      dataType: 'json',
-      success: data => $('#race-modal').modal('hide')
+      success: data => $('#race-modal').modal('hide'),
     });
   }
 
@@ -60,9 +55,7 @@ $(document).ready(() => {
     submitCheckboxData(editUser);
     $('#race-modal').modal('hide');
   });
-});
 
-$(document).ready(() => {
   $('#race-modal').modal('show');
   $('#closed-dialog-label').hide();
 });

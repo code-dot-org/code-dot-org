@@ -1,10 +1,14 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import i18n from '@cdo/locale';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
+
+import {reducers} from '@cdo/apps/applab/redux/applab';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
+import i18n from '@cdo/locale';
 
 // Note: The UnconnectedTeacherDashboadHeader assumes the sections it receives
 // have already been filtered (to remove hidden sections) and sorted
@@ -17,7 +21,8 @@ const MOCK_SECTIONS = [
     ttsAutoplayEnabled: false,
     studentCount: 5,
     code: 'VQGSJR',
-    providerManaged: false
+    providerManaged: false,
+    courseDisplayName: 'Course D (2019)',
   },
   {
     id: 2,
@@ -27,7 +32,8 @@ const MOCK_SECTIONS = [
     ttsAutoplayEnabled: false,
     studentCount: 4,
     code: 'TQGSJR',
-    providerManaged: false
+    providerManaged: false,
+    courseDisplayName: 'Course A (2019)',
   },
   {
     id: 1,
@@ -37,71 +43,81 @@ const MOCK_SECTIONS = [
     ttsAutoplayEnabled: false,
     studentCount: 6,
     code: 'XQGSJR',
-    providerManaged: false
-  }
+    providerManaged: false,
+    courseDisplayName: 'Course B (2019)',
+  },
 ];
-
-const MOCK_SCRIPT = {
-  name: 'Course D (2019)'
-};
 
 const DEFAULT_PROPS = {
   sections: MOCK_SECTIONS,
   selectedSection: MOCK_SECTIONS[0],
-  assignmentName: MOCK_SCRIPT.name,
-  openEditSectionDialog: () => {}
+  openEditSectionDialog: () => {},
 };
 
 describe('TeacherDashboardHeader', () => {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers(commonReducers);
+    registerReducers(reducers);
+    registerReducers({currentUser});
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
   it('renders section name in header', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let h1Elements = wrapper.find('h1');
-    expect(h1Elements).to.have.lengthOf(1);
-    expect(h1Elements.contains('intro to computer science III')).to.equal(true);
+    expect(h1Elements).toHaveLength(1);
+    expect(h1Elements.contains('intro to computer science III')).toBe(true);
   });
 
   it('renders assigned script name if assigned', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
-    expect(wrapper.find('#assignment-name')).to.have.lengthOf(1);
-    expect(wrapper.contains('Course D (2019)')).to.equal(true);
+    expect(wrapper.find('#assignment-name')).toHaveLength(1);
+    expect(wrapper.contains('Course D (2019)')).toBe(true);
   });
 
   it('does not render script name if not assigned', () => {
     const wrapper = shallow(
-      <TeacherDashboardHeader {...DEFAULT_PROPS} assignmentName="" />
+      <TeacherDashboardHeader
+        {...DEFAULT_PROPS}
+        selectedSection={{...MOCK_SECTIONS[0], courseDisplayName: null}}
+      />
     );
-    expect(wrapper.find('#assignment-name')).to.have.lengthOf(0);
-    expect(wrapper.contains('Course D (2019)')).to.equal(false);
+    expect(wrapper.find('#assignment-name')).toHaveLength(0);
+    expect(wrapper.contains('Course D (2019)')).toBe(false);
   });
 
   it('renders dropdown button with links to sections, highlighting current section', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let dropdownButton = wrapper.find(DropdownButton);
-    expect(dropdownButton).to.have.lengthOf(1);
+    expect(dropdownButton).toHaveLength(1);
 
     let dropdownLinks = dropdownButton.find('a');
-    expect(dropdownLinks).to.have.lengthOf(3);
+    expect(dropdownLinks).toHaveLength(3);
 
     let checkmarkIcon = <FontAwesome icon="check" />;
-    expect(
-      dropdownLinks.at(0).contains('intro to computer science III')
-    ).to.equal(true);
-    expect(dropdownLinks.at(0).contains(checkmarkIcon)).to.equal(true);
+    expect(dropdownLinks.at(0).contains('intro to computer science III')).toBe(
+      true
+    );
+    expect(dropdownLinks.at(0).contains(checkmarkIcon)).toBe(true);
 
-    expect(
-      dropdownLinks.at(1).contains('intro to computer science II')
-    ).to.equal(true);
-    expect(dropdownLinks.at(1).contains(checkmarkIcon)).to.equal(false);
+    expect(dropdownLinks.at(1).contains('intro to computer science II')).toBe(
+      true
+    );
+    expect(dropdownLinks.at(1).contains(checkmarkIcon)).toBe(false);
   });
 
-  it('renders button to edit section details', () => {
+  it('renders button to edit section details in new section setup flow', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let editSectionButton = wrapper.findWhere(
       element =>
         element.is('Button') &&
-        element.prop('text') === i18n.editSectionDetails()
+        element.prop('text') === i18n.editSectionDetails() &&
+        element.prop('href') === '/sections/3/edit'
     );
-    expect(editSectionButton).to.have.lengthOf(1);
-    expect(wrapper.find('Connect(EditSectionDialog)')).to.have.lengthOf(1);
+    expect(editSectionButton).toHaveLength(1);
   });
 });

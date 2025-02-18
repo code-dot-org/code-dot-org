@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Artist < Blockly
@@ -44,6 +45,16 @@ class Artist < Blockly
 
   def xml_blocks
     super + %w(predraw_blocks)
+  end
+
+  def project_type
+    if skin == 'elsa' || skin == 'anna'
+      'frozen'
+    elsif is_k1 == 'true'
+      'artist_k1'
+    else
+      'artist'
+    end
   end
 
   # List of possible skins, the first is used as a default.
@@ -298,5 +309,9 @@ class Artist < Blockly
       <block type="simple_jump_down_left"></block>
       <block type="simple_jump_down_right"></block>
     XML
+  end
+
+  def validated?
+    properties['free_play'] == 'false'
   end
 end

@@ -10,14 +10,17 @@ import * as utils from '../../utils';
  */
 exports.SelectStyleProps = {
   menuContainerStyle: {
-    maxHeight: 400
+    maxHeight: 400,
   },
   menuStyle: {
-    maxHeight: 398
-  }
+    maxHeight: 398,
+  },
 };
 
 export const PrivacyDialogMode = utils.makeEnum(
   'TEACHER_APPLICATION',
   'PRINCIPAL_APPROVAL'
 );
+
+export const DATE_ORDER_ASC = 'date asc';
+export const DATE_ORDER_DESC = 'date desc';

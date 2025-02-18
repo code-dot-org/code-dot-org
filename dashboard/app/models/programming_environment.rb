@@ -45,9 +45,9 @@ class ProgrammingEnvironment < ApplicationRecord
     environment_config.symbolize_keys
   end
 
-  def self.seed_all(glob="config/programming_environments/*.json")
+  def self.seed_all(root_dir: Rails.root, glob: "config/programming_environments/*.json")
     removed_records = all.pluck(:name)
-    Dir.glob(Rails.root.join(glob)).each do |path|
+    Dir.glob(root_dir.join(glob)).each do |path|
       removed_records -= [ProgrammingEnvironment.seed_record(path)]
     end
     where(name: removed_records).destroy_all
@@ -83,7 +83,7 @@ class ProgrammingEnvironment < ApplicationRecord
   def remove_serialization
     return unless Rails.application.config.levelbuilder_mode
 
-    File.delete(file_path) if File.exist?(file_path)
+    FileUtils.rm_f(file_path)
   end
 
   def studio_documentation_path

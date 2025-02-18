@@ -1,18 +1,23 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {windowOpen} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
 import DropdownButton from '../DropdownButton';
-import Button from '../Button';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
 import {
   isGDocsUrl,
   gDocsPdfUrl,
   gDocsMsOfficeUrl,
-  gDocsCopyUrl
+  gDocsCopyUrl,
 } from './googleDocsUtils';
+
+import style from './resource-list.module.scss';
 
 export default class ResourceList extends Component {
   static propTypes = {
@@ -20,8 +25,8 @@ export default class ResourceList extends Component {
     pageType: PropTypes.oneOf([
       'student-lesson-plan',
       'teacher-lesson-plan',
-      'resources-rollup'
-    ]).isRequired
+      'resources-rollup',
+    ]).isRequired,
   };
 
   normalizeUrl = url => {
@@ -48,8 +53,8 @@ export default class ResourceList extends Component {
         event: 'download-resource',
         data_int: resource.id,
         data_json: JSON.stringify({
-          resourceId: resource.id
-        })
+          resourceId: resource.id,
+        }),
       },
       {
         includeUserId: true,
@@ -59,7 +64,7 @@ export default class ResourceList extends Component {
             'noopener',
             'noreferrer'
           );
-        }
+        },
       }
     );
   };
@@ -79,14 +84,14 @@ export default class ResourceList extends Component {
         event: 'open-resource',
         data_int: resource.id,
         data_json: JSON.stringify({
-          resourceId: resource.id
-        })
+          resourceId: resource.id,
+        }),
       },
       {
         includeUserId: true,
         callback: () => {
           windowOpen(this.normalizeUrl(resource.url), 'noopener', 'noreferrer');
-        }
+        },
       }
     );
   };
@@ -100,7 +105,7 @@ export default class ResourceList extends Component {
       resourceUrl: resource.url,
       resourceDownloadUrl: resource.download_url,
       visitType: visitType,
-      path: document.location.pathname
+      path: document.location.pathname,
     });
   };
 
@@ -134,6 +139,7 @@ export default class ResourceList extends Component {
             text={i18n.makeACopy()}
             color={Button.ButtonColor.gray}
             size={Button.ButtonSize.small}
+            className={style.dropdownButton}
           >
             <a
               href={gDocsPdfUrl(resource.url)}

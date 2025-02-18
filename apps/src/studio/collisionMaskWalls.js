@@ -1,5 +1,6 @@
-import Walls from './walls';
 import {toImageData, URIFromImageData} from '../imageUtils';
+
+import Walls from './walls';
 
 const BYTES_PER_PIXEL = 4;
 const BITS_PER_BYTE = 8;
@@ -31,7 +32,7 @@ export default class CollisionMaskWalls extends Walls {
             wallColor: WALL_COLOR,
             wallMap: wallMap,
             overlayURI: this.wallOverlayURI(imageData, wallMap),
-            srcUrl: skin.wallMaps[mapName].srcUrl
+            srcUrl: skin.wallMaps[mapName].srcUrl,
           };
         });
       })

@@ -43,3 +43,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The `for` loop traverses each element in the 1D array `shapes`. On each iteration, the `printShape()` method is called on the object. This method is overridden in each class, so the `printShape()` method in the `Square` class is called on `Square` objects, the `printShape()` method in the `Triangle` class is called on `Triangle` objects, and the `printShape()` method in the `Shape` class is called on `Shape` objects.
 MARKDOWN
+
+allow_multiple_attempts true

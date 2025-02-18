@@ -1,0 +1,15 @@
+@import 'color.scss';
+
+$default-border-radius: 0;
+
+.editorContainer {
+  display: flex;
+  color: $neutral_light;
+  background-color: $dark_black;
+  border-radius: $default-border-radius;
+  padding: 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  height: 80%;
+  width: 100%;
+}

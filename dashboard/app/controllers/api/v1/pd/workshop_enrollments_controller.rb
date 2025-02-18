@@ -41,7 +41,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     end
 
     enrollment_email = params[:email]
-    user = User.find_by_email_or_hashed_email enrollment_email
+    user = User.find(params[:user_id])
 
     # See if a previous enrollment exists for this email
     previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
@@ -58,22 +58,36 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     else
       ActiveRecord::Base.transaction do
         enrollment = ::Pd::Enrollment.new workshop: @workshop
-        enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
 
-        user&.update_school_info(enrollment.school_info)
+        if @workshop.course == COURSE_BUILD_YOUR_OWN
+          enrollment.update!(enrollment_params)
+        else
+          enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
+          user&.update_school_info(enrollment.school_info)
+        end
+
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
 
+        # Also send to the teacher's alternate summer email if they entered it in their application and
+        # it's for a summer workshop.
+        if @workshop.subject == SUBJECT_SUMMER_WORKSHOP
+          alt_summer_email = user&.alternate_email
+          if alt_summer_email.present?
+            Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment, alt_summer_email).deliver_now
+          end
+        end
+
         render json: {
           workshop_enrollment_status: RESPONSE_MESSAGES[:SUCCESS],
-          account_exists: enrollment.resolve_user.present?,
-          sign_up_url: url_for('/users/sign_up'),
+          account_exists: user.present?,
+          sign_up_url: url_for('/users/new_sign_up/account_type'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
         }
       rescue ActiveRecord::ValueTooLong
         render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: 'a response is too long'}
-      rescue ActiveRecord::RecordInvalid => invalid
-        render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: invalid.message}
+      rescue ActiveRecord::RecordInvalid => exception
+        render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: exception.message}
       end
     end
   end
@@ -99,6 +113,15 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     enrollment.destroy!
     Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
     Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
+
+    # Also send to the user's alternate summer email if they entered it in their application
+    # and it's for a summer workshop.
+    if enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
+      alt_summer_email = enrollment.user&.alternate_email
+      if alt_summer_email.present?
+        Pd::WorkshopMailer.teacher_cancel_receipt(enrollment, alt_summer_email).deliver_now
+      end
+    end
   end
 
   # POST /api/v1/pd/enrollments/move
@@ -115,13 +138,12 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   def edit
     return head :forbidden unless current_user.workshop_admin?
     enrollment = Pd::Enrollment.find_by(id: params[:id])
-    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name])
+    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
   end
 
-  private
-
-  def enrollment_params
+  private def enrollment_params
     {
+      user_id: params[:user_id],
       first_name: params[:first_name]&.strip_utf8mb4,
       last_name: params[:last_name]&.strip_utf8mb4,
       email: params[:email]&.strip_utf8mb4,
@@ -130,9 +152,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       attended_csf_intro_workshop: params[:attended_csf_intro_workshop],
       csf_course_experience: params[:csf_course_experience],
       csf_courses_planned: params[:csf_courses_planned],
-      csf_has_physical_curriculum_guide: params[:csf_has_physical_curriculum_guide],
       previous_courses: params[:previous_courses],
-      replace_existing: params[:replace_existing],
       csf_intro_intent: params[:csf_intro_intent],
       csf_intro_other_factors: params[:csf_intro_other_factors],
       # params only collected in CSP returning teachers workshop
@@ -143,33 +163,33 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     }
   end
 
-  def school_info_params
+  private def school_info_params
     {
       school_type: params[:school_info][:school_type],
       school_state: params[:school_info][:school_state],
-      school_zip: params[:school_info][:school_zip],
+      school_zip: params[:school_info][:zip],
       school_district_name: params[:school_info][:school_district_name]&.strip_utf8mb4,
       school_district_other: params[:school_info][:school_district_other]&.strip_utf8mb4,
       school_id: params[:school_info][:school_id],
       school_name: params[:school_info][:school_name]&.strip_utf8mb4,
-      country: "US" # we currently only support enrollment in pd for US schools
+      country: params[:school_info][:country]
     }
   end
 
-  def render_unsuccessful(error_message, options={})
+  private def render_unsuccessful(error_message, options = {})
     render json: options.merge({workshop_enrollment_status: error_message}),
       status: :bad_request
   end
 
-  def workshop_closed?
+  private def workshop_closed?
     @workshop.state == STATE_ENDED
   end
 
-  def workshop_full?
+  private def workshop_full?
     @workshop.enrollments.count >= @workshop.capacity
   end
 
-  def workshop_owned_by?(user)
+  private def workshop_owned_by?(user)
     return false unless user
     @workshop.organizer_or_facilitator? user
   end

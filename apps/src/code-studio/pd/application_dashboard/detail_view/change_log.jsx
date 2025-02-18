@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class ChangeLog extends React.Component {
   static propTypes = {
@@ -8,9 +8,9 @@ export default class ChangeLog extends React.Component {
       PropTypes.shape({
         title: PropTypes.string.isRequired,
         time: PropTypes.string.isRequired,
-        changing_user: PropTypes.string
+        changing_user: PropTypes.string,
       })
-    ).isRequired
+    ).isRequired,
   };
 
   render() {
@@ -40,6 +40,6 @@ export default class ChangeLog extends React.Component {
 const styles = {
   table: {
     marginTop: '20px',
-    width: '80%'
-  }
+    width: '80%',
+  },
 };

@@ -1,0 +1,34 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:53:04.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getStudentGrades()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Teacher</code> class. What does this method return? Why?\r\n\r\nAdd the following code to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TeacherRunner</code> class:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nString studentGrades = msHamilton.getStudentGrades(1);\r\nSystem.out.println(studentGrades);\r\n</pre>\r\n\r\nWhat is printed? What row or column in <code style=\"background-color: #ececec; color: black; font-weight: bold;\">augustGrades</code> do the results correspond to?",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "TeacherRunner.java": {
+        "text": "public class TeacherRunner {\n  public static void main(String[] args) {\n\n    int[][] augustGrades = { {85, 90, 78}, {92, 87, 80}, {76, 89, 97} };\n\n    Teacher msHamilton = new Teacher(augustGrades);\n\n    int currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    msHamilton.setGrade(1, 1, 100);\n\n    currentStudent = msHamilton.getGrade(1, 1);\n    System.out.println(currentStudent);\n\n    System.out.println(\"\\nPrint First Row:\");\n    System.out.println(msHamilton.getStudentGrades(0));\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n\n\n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Teacher.java": {
+        "text": "/*\n * Represents a teacher\n */\npublic class Teacher {\n\n  private int[][] weeklyGrades;\n\n  public Teacher(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int[][] getWeeklyGrades() {\n    return weeklyGrades;\n  }\n\n  public void setWeeklyGrades(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int getGrade(int row, int col) {\n    return weeklyGrades[row][col];\n  }\n\n  public void setGrade(int row, int col, int newValue) {\n    weeklyGrades[row][col] = newValue;\n  }\n\n  public String getStudentGrades(int week) {\n    String result = \"\";\n    \n    for (int index = 0; index < weeklyGrades[week].length; index++) {\n      result += weeklyGrades[week][index] + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "project_template_level_name": "CSA U5L2-2D Arrays PBT_alt-2025",
+    "teacher_markdown": "The `getStudentGrades()` method returns a `String` that contains the grades of the first student in each week.\r\n\r\nThe code `int[] studentGrades = msHamilton.getStudentGrades(1)` will retrieve the grades for the student in row `1` (i.e., the second row, since arrays are zero-indexed) of the `weeklyGrades` array in the `Teacher` class. The `getStudentGrades()` method returns an array of `int` values corresponding to the grades of the specified student across all weeks.",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:53:04.098+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-L4_pilot-2025\"}]"
+}]]></config>
+</Javalab>

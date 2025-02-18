@@ -40,14 +40,17 @@ class I18nSync
 
   def run
     if @options[:interactive]
+      # Run `sync-in` first to generate `original` files for the restoration of redacted files during `sync-out`
       return_to_staging_branch
       sync_in if should_i "sync in"
       sync_up if should_i "sync up"
       CreateI18nPullRequests.in_and_up if @options[:with_pull_request] && should_i("create the in & up PR")
+
+      # Force switch to the `staging` branch to avoid potential merge conflicts with the `sync-in-up` PR
+      return_to_staging_branch(force: true)
       sync_down if should_i "sync down"
-      sync_out(true) if should_i "sync out"
+      sync_out if should_i "sync out"
       CreateI18nPullRequests.down_and_out if @options[:with_pull_request] && should_i("create the down & out PR")
-      return_to_staging_branch
     elsif @options[:command]
       case @options[:command]
       when 'in'
@@ -64,7 +67,7 @@ class I18nSync
         sync_down
       when 'out'
         puts "Distributing translations from i18n/locales out into codebase"
-        sync_out(true)
+        sync_out
         if @options[:with_pull_request] && should_i("create the down & out PR")
           CreateI18nPullRequests.down_and_out
         end
@@ -74,11 +77,31 @@ class I18nSync
     end
   end
 
-  private
+  attr_reader :options
 
-  def parse_options(args)
+  private def sync_in
+    I18n::SyncIn.perform
+  end
+
+  private def sync_up
+    I18n::SyncUp.perform(options)
+  end
+
+  private def sync_down
+    I18n::SyncDown.perform(options)
+  end
+
+  private def sync_out
+    I18n::SyncOut.perform(options)
+  end
+
+  private def parse_options(args)
     options = {}
-    opt_parser = OptionParser.new do |opts|
+    opt_parser = nil
+
+    I18nScriptUtils.parse_options(args, options: options) do |opts|
+      opt_parser = opts
+
       opts.banner = <<-USAGE
   Usage: sync-all [options]
 
@@ -107,7 +130,6 @@ class I18nSync
         options[:yes] = true
       end
     end
-    opt_parser.parse!(args)
 
     unless options[:interactive] || options[:command]
       puts "  ERROR: Must specify either interactive or command mode\n\n"
@@ -118,7 +140,7 @@ class I18nSync
     options
   end
 
-  def should_i(question)
+  private def should_i(question)
     return true if @options[:yes]
 
     loop do
@@ -138,24 +160,23 @@ class I18nSync
     end
   end
 
-  def return_to_staging_branch
+  private def return_to_staging_branch(force: false)
     case GitUtils.current_branch
     when "staging"
       # If we're already on staging, we don't need to bother
       return
     when /^i18n-sync/
-      # If we're on an i18n sync branch, only return to staging if the branch
-      # has been merged.
-      return unless GitUtils.current_branch_merged_into? "origin/staging"
+      # If we're on an i18n sync branch, only return to staging if the branch has been merged.
+      return if !force && !GitUtils.current_branch_merged_into?('origin/staging')
     else
       # If we're on some other branch, then we're in some kind of weird state,
       # so error out.
       raise "Tried to return to staging branch from unknown branch #{GitUtils.current_branch.inspect}"
     end
     `git checkout staging` if should_i "switch to staging branch"
-  rescue => e
-    puts "return_to_staging_branch failed from the error: #{e}"
-    raise e
+  rescue => exception
+    puts "return_to_staging_branch failed from the error: #{exception}"
+    raise exception
   end
 end
 

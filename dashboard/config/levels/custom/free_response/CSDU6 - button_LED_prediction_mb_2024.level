@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2024-07-10T18:56:56.000Z",
+  "level_num": "custom",
+  "user_id": 568,
+  "properties": {
+    "long_instructions": "# Board Events\r\n\r\nThe [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block allows you to start taking input from your micro:bit. Look at the program with a partner and discuss what you think it'll do. Once you've come up with an answer, click \"Run\" to check your answer.",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20414,
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:56:56.780+00:00\",\"changed\":[\"cloned from \\\"CSDU6 - button_LED_prediction_mb2022\\\"\"],\"cloned_from\":\"CSDU6 - button_LED_prediction_mb2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

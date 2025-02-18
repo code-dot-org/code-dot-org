@@ -1,12 +1,10 @@
-# Skip on IE due to blocked pop-ups and possible "new document" issues
-@no_ie
 @as_student
 @no_mobile
 Feature: App Lab Embed
 
   Background:
     Given I start a new Applab project
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
 
   Scenario: App Lab Embed
@@ -27,7 +25,7 @@ Feature: App Lab Embed
     Then I wait until element "a:contains('How it Works (View Code)')" is visible
     And I click selector "a:contains('How it Works (View Code)')" to load a new tab
 
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait to see Applab code mode
 
   Scenario: App Lab Embed without Source

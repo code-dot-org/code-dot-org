@@ -16,9 +16,7 @@ class ProgrammingMethodsController < ApplicationController
     end
   end
 
-  private
-
-  def programming_method_params
+  private def programming_method_params
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :name,

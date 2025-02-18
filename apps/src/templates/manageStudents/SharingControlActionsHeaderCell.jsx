@@ -1,16 +1,19 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import QuickActionsCell, {
-  QuickActionsCellType
-} from '../tables/QuickActionsCell';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import i18n from '@cdo/locale';
-import {handleShareSetting} from './manageStudentsRedux';
 import {connect} from 'react-redux';
+
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
+import i18n from '@cdo/locale';
+
+import QuickActionsCell, {
+  QuickActionsCellType,
+} from '../tables/QuickActionsCell';
+
+import {handleShareSetting} from './manageStudentsRedux';
 
 class SharingControlActionsHeaderCell extends Component {
   static propTypes = {
-    handleShareSetting: PropTypes.func
+    handleShareSetting: PropTypes.func,
   };
 
   onEnableAll = () => {
@@ -46,13 +49,14 @@ class SharingControlActionsHeaderCell extends Component {
   }
 }
 
-export const UnconnectedSharingControlActionsHeaderCell = SharingControlActionsHeaderCell;
+export const UnconnectedSharingControlActionsHeaderCell =
+  SharingControlActionsHeaderCell;
 
 export default connect(
   state => ({}),
   dispatch => ({
     handleShareSetting(disable) {
       dispatch(handleShareSetting(disable));
-    }
+    },
   })
 )(SharingControlActionsHeaderCell);

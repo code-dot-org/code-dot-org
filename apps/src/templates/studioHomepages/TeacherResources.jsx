@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
-import ImageResourceCard from './ImageResourceCard';
-import ContentContainer from '../ContentContainer';
-import i18n from '@cdo/locale';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import i18n from '@cdo/locale';
+
 import styleConstants from '../../styleConstants';
+import ContentContainer from '../ContentContainer';
+
+import ImageResourceCard from './ImageResourceCard';
 
 const contentWidth = styleConstants['content-width'];
 
@@ -24,7 +27,7 @@ export default class TeacherResources extends Component {
             description={i18n.professionalLearningDescription()}
             image="professionallearning.png"
             buttonText={i18n.exploreProfessionalLearning()}
-            link="/my-professional-learning"
+            link={pegasus('/educate/professional-learning')}
           />
           <ImageResourceCard
             title={i18n.csJourneys()}
@@ -35,11 +38,11 @@ export default class TeacherResources extends Component {
             link={pegasus('/csjourneys')}
           />
           <ImageResourceCard
-            title={i18n.standardsAndFramework()}
-            description={i18n.standardsAndFrameworkDescription()}
+            title={i18n.curriculumCatalogHeaderTitle()}
+            description={i18n.curriculumCatalogDescription()}
             image="standardsandframework.png"
-            buttonText={i18n.reviewDocuments()}
-            link={pegasus('/lesson_plans')}
+            buttonText={i18n.exploreCurriculumCatalog()}
+            link={'/catalog'}
           />
         </div>
       </ContentContainer>
@@ -52,6 +55,6 @@ const styles = {
     width: contentWidth,
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+  },
 };

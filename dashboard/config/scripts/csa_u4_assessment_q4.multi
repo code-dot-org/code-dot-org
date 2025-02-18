@@ -20,3 +20,5 @@ Assume that `numList` is an `array` that has been correctly constructed and popu
 
 
 MARKDOWN
+
+allow_multiple_attempts true

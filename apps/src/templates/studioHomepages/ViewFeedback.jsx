@@ -1,7 +1,9 @@
-import React from 'react';
-import i18n from '@cdo/locale';
-import BorderedCallToAction from './BorderedCallToAction';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import i18n from '@cdo/locale';
+
+import BorderedCallToAction from './BorderedCallToAction';
 
 const ViewFeedback = ({isProfessionalLearningCourse}) => (
   <BorderedCallToAction
@@ -24,5 +26,5 @@ const ViewFeedback = ({isProfessionalLearningCourse}) => (
 export default ViewFeedback;
 
 ViewFeedback.propTypes = {
-  isProfessionalLearningCourse: PropTypes.bool
+  isProfessionalLearningCourse: PropTypes.bool,
 };

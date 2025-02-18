@@ -3,7 +3,7 @@ import {makeEnum} from '@cdo/apps/utils';
 const SET_RESPONSIVE_SIZE = 'responsive/SET_RESPONSIVE_SIZE';
 export const setResponsiveSize = responsiveSize => ({
   type: SET_RESPONSIVE_SIZE,
-  responsiveSize
+  responsiveSize,
 });
 
 export const ResponsiveSize = makeEnum('lg', 'md', 'sm', 'xs');
@@ -13,15 +13,22 @@ const Breakpoints = [
   {breakpoint: 992, responsiveSize: ResponsiveSize.lg},
   {breakpoint: 720, responsiveSize: ResponsiveSize.md},
   {breakpoint: 650, responsiveSize: ResponsiveSize.sm},
-  {breakpoint: 0, responsiveSize: ResponsiveSize.xs}
+  {breakpoint: 0, responsiveSize: ResponsiveSize.xs},
 ];
 
 export function getResponsiveBreakpoint(width) {
-  return Breakpoints.find(({breakpoint}) => width > breakpoint).responsiveSize;
+  const responsiveSize = Breakpoints.find(({breakpoint}) => width > breakpoint);
+  if (responsiveSize === undefined) {
+    console.error(
+      `No responsive size found for width ${width}, defaulting to xs`
+    );
+    return ResponsiveSize.xs;
+  }
+  return responsiveSize.responsiveSize;
 }
 
 const initialState = {
-  responsiveSize: getResponsiveBreakpoint(window.innerWidth)
+  responsiveSize: getResponsiveBreakpoint(window.innerWidth),
 };
 
 /**

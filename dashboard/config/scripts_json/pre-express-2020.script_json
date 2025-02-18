@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/pre-express/{LESSON}",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2022-03-22 21:16:46 UTC",
+    "serialized_at": "2024-11-19 01:19:23 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5659,6 +5660,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

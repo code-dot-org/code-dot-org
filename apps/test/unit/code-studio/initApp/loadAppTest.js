@@ -1,23 +1,27 @@
 import $ from 'jquery';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {files} from '@cdo/apps/clientApi';
 import clientState from '@cdo/apps/code-studio/clientState';
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
 import loadAppOptions, {
   setupApp,
-  setAppOptions
+  setAppOptions,
 } from '@cdo/apps/code-studio/initApp/loadApp';
-import {files} from '@cdo/apps/clientApi';
-import * as imageUtils from '@cdo/apps/imageUtils';
 import project from '@cdo/apps/code-studio/initApp/project';
+import * as imageUtils from '@cdo/apps/imageUtils';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const SERVER_LEVEL_ID = 5;
 const SERVER_PROJECT_LEVEL_ID = 10;
 const OLD_CODE = '<some><blocks with="stuff">in<them/></blocks></some>';
 
+jest.unmock('@cdo/apps/imageUtils');
+
 describe('loadApp.js', () => {
   let oldAppOptions, appOptions, writtenLevelId, readLevelId;
 
-  before(() => {
+  beforeAll(() => {
     oldAppOptions = window.appOptions;
     sinon
       .stub(clientState, 'writeSourceForLevel')
@@ -31,7 +35,7 @@ describe('loadApp.js', () => {
         return OLD_CODE;
       });
     sinon.stub(project, 'load').callsFake(() => ({
-      then: successCallback => successCallback()
+      then: successCallback => successCallback(),
     }));
     sinon.stub(project, 'hideBecauseAbusive').returns(false);
     sinon.stub(project, 'hideBecausePrivacyViolationOrProfane').returns(false);
@@ -43,17 +47,17 @@ describe('loadApp.js', () => {
       done: successCallback => ({
         fail: failureCallback => {
           successCallback({signedIn: false});
-        }
-      })
+        },
+      }),
     }));
     writtenLevelId = undefined;
     readLevelId = undefined;
     appOptions = {
-      level: {}
+      level: {},
     };
     setAppOptions(appOptions);
   });
-  after(() => {
+  afterAll(() => {
     clientState.writeSourceForLevel.restore();
     clientState.sourceForLevel.restore();
     project.load.restore();
@@ -93,7 +97,7 @@ describe('loadApp.js', () => {
         scriptName: 'test-script',
         lessonPosition: '1',
         levelPosition: '2',
-        serverLevelId: SERVER_LEVEL_ID
+        serverLevelId: SERVER_LEVEL_ID,
       };
     });
 
@@ -159,13 +163,13 @@ describe('loadApp.js', () => {
     it('gets channel if appOptions has levelRequiresChannel true and no channel', done => {
       appOptions = {
         ...appOptions,
-        levelRequiresChannel: true
+        levelRequiresChannel: true,
       };
 
       const responseChannel = 'fakeChannelId';
       stubAppOptionsRequests(appOptions, {
         signedIn: false,
-        channel: responseChannel
+        channel: responseChannel,
       });
 
       const appOptionsData = document.createElement('script');
@@ -187,14 +191,14 @@ describe('loadApp.js', () => {
     it('calls example_solutions endpoint and sets example solutions to appOptions', done => {
       appOptions = {
         ...appOptions,
-        serverScriptLevelId: '5'
+        serverScriptLevelId: '5',
       };
 
       const exampleSolutions = ['/example-solution'];
       stubAppOptionsRequests(
         appOptions,
         {
-          signedIn: false
+          signedIn: false,
         },
         exampleSolutions
       );
@@ -221,7 +225,7 @@ describe('loadApp.js', () => {
       'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 
     beforeEach(() => {
-      sinon.spy(imageUtils, 'dataURIToFramedBlob');
+      sinon.stub(imageUtils, 'dataURIToFramedBlob');
       sinon.stub(files, 'putFile');
       appOptions.level.isProjectLevel = true;
       appOptions.level.edit_blocks = false;
@@ -233,10 +237,13 @@ describe('loadApp.js', () => {
     });
 
     it('uploads a share image for a non-droplet project (instead of writing the level)', done => {
+      imageUtils.dataURIToFramedBlob.callsFake((dataURI, callback) =>
+        callback()
+      );
+
       files.putFile.callsFake((name, blob) => {
         expect(writtenLevelId).to.be.undefined;
         expect(name).to.equal('_share_image.png');
-        expect(blob).to.have.property('type', 'image/png');
         done();
       });
 

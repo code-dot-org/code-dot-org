@@ -1,0 +1,32 @@
+name 'sp-pl-CV_prototyping_teachableMachine'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teachable Machine
+
+
+#### Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. It’s a hands-on way for students to see how datasets influence computer decision making. 
+
+#### In lesson 10, students will build a model to train a computer. 
+
+---
+
+#### Click on the image below to watch a video to learn more about how Teachable Machine Works. *The video will open in a new tab.*
+
+
+<table style="width: 100%; height: 100%; border: none;">
+        <tr>
+            <td style="text-align: center; vertical-align: middle;">
+                 <a href="https://www.youtube.com/watch?v=T2qQGqZxkD0" target="blank" rel="noopener noreferrer">
+        <img src="https://images.code.org/cef968808480a0a84bba2fcb11ee3934-image-1715026898364.png" alt="top portion of handout" width="350px" style="border-radius:10px; border: 2px solid black;">
+    </a>
+            </td>
+        </tr>
+    </table>
+<br>
+
+
+
+
+MARKDOWN

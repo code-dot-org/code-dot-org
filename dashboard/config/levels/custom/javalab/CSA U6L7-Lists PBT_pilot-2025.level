@@ -1,0 +1,36 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T21:31:38.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "ListRunner.java": {
+        "text": "import java.util.ArrayList;\n\npublic class ListRunner {\n  public static void main(String[] args) {\n\n    Book firstBook = new Book(\"Adventures in Java Lab\", 100);\n    Book secondBook = new Book(\"My Life as a Software Engineer\", 200);\n    Book thirdBook = new Book(\"Computer Science is Cool\", 150);\n\n    Pet fido = new Pet(\"dog\", 3);\n\n    ArrayList<Book> csBooks = new ArrayList<Book>();\n\n    csBooks.add(firstBook);\n    csBooks.add(secondBook);\n    csBooks.add(thirdBook);\n\n    for (int index = 0; index < csBooks.size(); index++) {\n      System.out.println(csBooks.get(index));\n    }\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Book.java": {
+        "text": "/*\n * Represents a book\n */\npublic class Book {\n\n  private String title;   // The title of the book\n  private int numPages;   // The number of pages in the book\n\n  /*\n   * Sets title and numPages to the specified title of the\n   * book and its number of pages\n   */\n  public Book(String title, int numPages) {\n    this.title = title;\n    this.numPages = numPages;\n  }\n\n  /*\n   * Returns the title and number of pages for the book\n   */\n  public String toString() {\n    return title + \" - Number of Pages: \" + numPages;\n  }\n\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "Pet.java": {
+        "text": "/*\n * Represents a pet\n */\npublic class Pet {\n\n  private String type;   // The type of pet\n  private int age;       // The age of the pet\n\n  /*\n   * Sets type to the specified type of pet and\n   * age to the specified age of the pet\n   */\n  public Pet(String type, int age) {\n    this.type = type;\n    this.age = age;\n  }\n\n  /*\n   * Returns the type and age of the pet\n   */\n  public String toString() {\n    return type + \", Age: \" + age;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      }
+    },
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T21:31:38.418+00:00\",\"changed\":[\"cloned from \\\"CSA U6L7-Lists PBT_2025\\\"\"],\"cloned_from\":\"CSA U6L7-Lists PBT_2025\"}]"
+}]]></config>
+</Javalab>

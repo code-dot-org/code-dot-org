@@ -2,17 +2,21 @@
  * Facilitator bio as used on the workshop enrollment form
  */
 import React from 'react';
-import {FacilitatorPropType} from './enrollmentConstants';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
+import {FacilitatorPropType} from './enrollmentConstants';
 
 export default class FacilitatorBio extends React.Component {
   static propTypes = {
-    facilitator: FacilitatorPropType
+    facilitator: FacilitatorPropType,
   };
 
   image = () => {
     if (this.props.facilitator.image_path) {
-      return <img src={this.props.facilitator.image_path} />;
+      // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+      // Verify or update this alt-text as necessary
+      return <img src={this.props.facilitator.image_path} alt="" />;
     }
   };
 

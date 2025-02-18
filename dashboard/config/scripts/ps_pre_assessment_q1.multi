@@ -6,3 +6,4 @@ wrong 'Slightly disagree'
 wrong 'Slightly agree'
 wrong 'Agree'
 wrong 'Strongly agree'
+allow_multiple_attempts true

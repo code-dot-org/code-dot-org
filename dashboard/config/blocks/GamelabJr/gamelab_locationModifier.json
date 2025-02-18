@@ -4,6 +4,7 @@
     "func": "locationModifier",
     "blockText": "{DISTANCE} pixels {DIRECTION} of {LOCATION}",
     "returnType": "Location",
+    "style": "location_blocks",
     "args": [
       {
         "name": "DISTANCE",

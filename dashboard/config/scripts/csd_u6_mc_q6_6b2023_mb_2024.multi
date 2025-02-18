@@ -1,0 +1,15 @@
+name 'CSD U6 MC Q6_6b2023_mb_2024'
+type 'multi2'
+question 'In which scenarios would you most likely use `getProperty`? (Select all that apply)'
+wrong 'Change the homescreen background color to beige'
+right 'See which option the user selected in the dropdown'
+wrong 'Update the width of a picture'
+right 'Read the value that the user chose in a slider'
+wrong 'Make the font smaller'
+teacher_markdown <<MARKDOWN
+**Content: Unit 6 Lesson 8**
+
+`getProperty` allows you to access user input on the screen. The incorrect options are updating UI elements, which would use `setProperty`.
+MARKDOWN
+
+allow_multiple_attempts true

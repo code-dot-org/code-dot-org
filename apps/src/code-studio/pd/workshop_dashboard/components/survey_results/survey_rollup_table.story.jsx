@@ -1,12 +1,16 @@
 import React from 'react';
+
 import SurveyRollupTable from '../../components/survey_results/survey_rollup_table';
-import reactBootstrapStoryDecorator from '../../../reactBootstrapStoryDecorator';
 import {COURSE_CSF} from '../../workshopConstants';
+
+export default {
+  component: SurveyRollupTable,
+};
 
 const facilitator_rollups = {
   facilitators: {
-    '1': 'Facilitator Person 1',
-    '2': 'Facilitator Person 2'
+    1: 'Facilitator Person 1',
+    2: 'Facilitator Person 2',
   },
   questions: {
     facilitator_effectiveness_0: 'Demonstrated knowledge of the curriculum.',
@@ -17,7 +21,7 @@ const facilitator_rollups = {
     facilitator_effectiveness_4:
       'Helped me see ways to create and support an equitable learning environment for my students.',
     facilitator_effectiveness_5:
-      'Demonstrated a healthy working relationship with their co-facilitator (if applicable).'
+      'Demonstrated a healthy working relationship with their co-facilitator (if applicable).',
   },
   rollups: {
     facilitator_1_single_ws: {
@@ -29,8 +33,8 @@ const facilitator_rollups = {
         facilitator_effectiveness_2: 4.0,
         facilitator_effectiveness_4: 3.0,
         facilitator_effectiveness_5: 1.0,
-        facilitator_effectiveness: 2.25
-      }
+        facilitator_effectiveness: 2.25,
+      },
     },
     facilitator_1_all_ws: {
       facilitator_id: 1,
@@ -42,8 +46,8 @@ const facilitator_rollups = {
         facilitator_effectiveness_2: 4.0,
         facilitator_effectiveness_4: 3.0,
         facilitator_effectiveness_5: 1.0,
-        facilitator_effectiveness: 2.25
-      }
+        facilitator_effectiveness: 2.25,
+      },
     },
     facilitator_2_single_ws: {
       facilitator_id: 2,
@@ -54,8 +58,8 @@ const facilitator_rollups = {
         facilitator_effectiveness_2: 4.0,
         facilitator_effectiveness_4: 3.0,
         facilitator_effectiveness_5: 1.0,
-        facilitator_effectiveness: 2.25
-      }
+        facilitator_effectiveness: 2.25,
+      },
     },
     facilitator_2_all_ws: {
       facilitator_id: 2,
@@ -67,16 +71,16 @@ const facilitator_rollups = {
         facilitator_effectiveness_2: 4.0,
         facilitator_effectiveness_4: 3.0,
         facilitator_effectiveness_5: 1.0,
-        facilitator_effectiveness: 2.25
-      }
-    }
-  }
+        facilitator_effectiveness: 2.25,
+      },
+    },
+  },
 };
 
 const workshop_rollups = {
   facilitators: {
-    '1': 'Facilitator Person 1',
-    '2': 'Facilitator Person 2'
+    1: 'Facilitator Person 1',
+    2: 'Facilitator Person 2',
   },
   questions: {
     overall_success_0:
@@ -96,7 +100,7 @@ const workshop_rollups = {
     teacher_engagement_2:
       'I frequently talk about ideas or content from the workshop with others.',
     teacher_engagement_3:
-      'I am planning to make use of ideas and content covered in this workshop in my classroom.'
+      'I am planning to make use of ideas and content covered in this workshop in my classroom.',
   },
   rollups: {
     this_ws: {
@@ -113,8 +117,8 @@ const workshop_rollups = {
         teacher_engagement_2: 6.0,
         teacher_engagement_3: 7.0,
         overall_success: 6.4,
-        teacher_engagement: 6.5
-      }
+        teacher_engagement: 6.5,
+      },
     },
     facilitator_1_all_ws: {
       facilitator_id: 1,
@@ -132,8 +136,8 @@ const workshop_rollups = {
         teacher_engagement_2: 6.0,
         teacher_engagement_3: 7.0,
         overall_success: 6.4,
-        teacher_engagement: 6.5
-      }
+        teacher_engagement: 6.5,
+      },
     },
     facilitator_2_all_ws: {
       facilitator_id: 2,
@@ -151,38 +155,30 @@ const workshop_rollups = {
         teacher_engagement_2: 6.0,
         teacher_engagement_3: 7.0,
         overall_success: 6.4,
-        teacher_engagement: 6.5
-      }
-    }
-  }
+        teacher_engagement: 6.5,
+      },
+    },
+  },
 };
 
-export default storybook => {
-  storybook
-    .storiesOf('SurveyRollupTable', module)
-    .addDecorator(reactBootstrapStoryDecorator)
-    .addStoryTable([
-      {
-        name: 'Facilitator Rollup Table',
-        story: () => (
-          <SurveyRollupTable
-            courseName="CS Principles"
-            rollups={facilitator_rollups.rollups}
-            questions={facilitator_rollups.questions}
-            facilitators={facilitator_rollups.facilitators}
-          />
-        )
-      },
-      {
-        name: 'Workshop Rollup Table',
-        story: () => (
-          <SurveyRollupTable
-            courseName={COURSE_CSF}
-            rollups={workshop_rollups.rollups}
-            questions={workshop_rollups.questions}
-            facilitators={workshop_rollups.facilitators}
-          />
-        )
-      }
-    ]);
+const Template = args => (
+  <div id="application-container">
+    <SurveyRollupTable {...args} />
+  </div>
+);
+
+export const FacilitatorRollup = Template.bind({});
+FacilitatorRollup.args = {
+  courseName: 'CS Principles',
+  rollups: facilitator_rollups.rollups,
+  questions: facilitator_rollups.questions,
+  facilitators: facilitator_rollups.facilitators,
+};
+
+export const WorkshopRollup = Template.bind({});
+WorkshopRollup.args = {
+  courseName: COURSE_CSF,
+  rollups: workshop_rollups.rollups,
+  questions: workshop_rollups.questions,
+  facilitators: workshop_rollups.facilitators,
 };

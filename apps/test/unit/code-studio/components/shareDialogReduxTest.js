@@ -1,5 +1,4 @@
 /** @file Tests for share dialog redux module */
-import {expect} from '../../../util/reconfiguredChai';
 import reducer, * as shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';
 
 describe('Share dialog redux module', () => {
@@ -7,7 +6,7 @@ describe('Share dialog redux module', () => {
     isOpen: false,
     isUnpublishPending: false,
     didUnpublish: false,
-    libraryDialogIsOpen: false
+    libraryDialogIsOpen: false,
   };
 
   const UNPUBLISH_REQUEST = 'shareDialog/UNPUBLISH_REQUEST';
@@ -15,19 +14,17 @@ describe('Share dialog redux module', () => {
   const UNPUBLISH_FAILURE = 'shareDialog/UNPUBLISH_FAILURE';
 
   it('has expected default state', () => {
-    expect(reducer(undefined, {})).to.deep.equal(originalState);
+    expect(reducer(undefined, {})).toEqual(originalState);
   });
 
   it('returns default state when a nonrecognized action is applied', () => {
-    expect(reducer(undefined, {type: 'fakeAction'})).to.deep.equal(
-      originalState
-    );
+    expect(reducer(undefined, {type: 'fakeAction'})).toEqual(originalState);
   });
 
   it('showShareDialog sets isOpen to true', () => {
-    expect(reducer(undefined, shareDialog.showShareDialog())).to.deep.equal({
+    expect(reducer(undefined, shareDialog.showShareDialog())).toEqual({
       ...originalState,
-      ...{isOpen: true}
+      ...{isOpen: true},
     });
   });
 
@@ -37,17 +34,17 @@ describe('Share dialog redux module', () => {
         {
           isUnpublishPending: true,
           didUnpublish: true,
-          libraryDialogIsOpen: true
+          libraryDialogIsOpen: true,
         },
         shareDialog.showShareDialog()
       )
-    ).to.deep.equal({...originalState, ...{isOpen: true}});
+    ).toEqual({...originalState, ...{isOpen: true}});
   });
 
   it('hideShareDialog sets isOpen to false', () => {
-    expect(
-      reducer({isOpen: true}, shareDialog.hideShareDialog()).isOpen
-    ).to.equal(false);
+    expect(reducer({isOpen: true}, shareDialog.hideShareDialog()).isOpen).toBe(
+      false
+    );
   });
 
   it('hideShareDialog sets unpublish values to false', () => {
@@ -56,10 +53,10 @@ describe('Share dialog redux module', () => {
         {isOpen: true, isUnpublishPending: true, didUnpublish: true},
         shareDialog.hideShareDialog()
       )
-    ).to.deep.equal({
+    ).toEqual({
       isOpen: false,
       isUnpublishPending: false,
-      didUnpublish: false
+      didUnpublish: false,
     });
   });
 
@@ -69,19 +66,20 @@ describe('Share dialog redux module', () => {
         {isOpen: true, libraryDialogIsOpen: true},
         shareDialog.hideShareDialog()
       ).libraryDialogIsOpen
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('unpublish project sets isUnpublishPending to true', () => {
-    expect(reducer(undefined, {type: UNPUBLISH_REQUEST}).isUnpublishPending).to
-      .be.true;
+    expect(
+      reducer(undefined, {type: UNPUBLISH_REQUEST}).isUnpublishPending
+    ).toBe(true);
   });
 
   it('unpublish project only changes isUnpublishPending', () => {
     let state = {isOpen: true, libraryDialogIsOpen: true};
-    expect(reducer(state, {type: UNPUBLISH_REQUEST})).to.deep.equal({
+    expect(reducer(state, {type: UNPUBLISH_REQUEST})).toEqual({
       ...state,
-      isUnpublishPending: true
+      isUnpublishPending: true,
     });
   });
 
@@ -90,16 +88,16 @@ describe('Share dialog redux module', () => {
       {isOpen: true, isUnpublishPending: true, didUnpublish: false},
       {type: UNPUBLISH_SUCCESS}
     );
-    expect(result.isOpen).to.be.false;
-    expect(result.isUnpublishPending).to.be.false;
-    expect(result.didUnpublish).to.be.true;
+    expect(result.isOpen).toBe(false);
+    expect(result.isUnpublishPending).toBe(false);
+    expect(result.didUnpublish).toBe(true);
   });
 
   it('unpublish success leaves libraryDialogIsOpen unchanged', () => {
     expect(
       reducer({libraryDialogIsOpen: true}, {type: UNPUBLISH_SUCCESS})
         .libraryDialogIsOpen
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('unpublish fail changes only isUnpublishPending', () => {
@@ -107,11 +105,11 @@ describe('Share dialog redux module', () => {
       isOpen: true,
       isUnpublishPending: true,
       didUnpublish: true,
-      libraryDialogIsOpen: true
+      libraryDialogIsOpen: true,
     };
-    expect(reducer(state, {type: UNPUBLISH_FAILURE})).to.deep.equal({
+    expect(reducer(state, {type: UNPUBLISH_FAILURE})).toEqual({
       ...state,
-      ...{isUnpublishPending: false}
+      ...{isUnpublishPending: false},
     });
   });
 
@@ -120,12 +118,12 @@ describe('Share dialog redux module', () => {
       isOpen: true,
       isUnpublishPending: true,
       didUnpublish: true,
-      libraryDialogIsOpen: true
+      libraryDialogIsOpen: true,
     };
     let testLog = 'test';
-    expect(reducer(state, shareDialog.saveReplayLog(testLog))).to.deep.equal({
+    expect(reducer(state, shareDialog.saveReplayLog(testLog))).toEqual({
       ...state,
-      ...{replayLog: testLog}
+      ...{replayLog: testLog},
     });
   });
 });

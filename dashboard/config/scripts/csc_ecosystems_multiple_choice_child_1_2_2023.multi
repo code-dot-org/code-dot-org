@@ -1,7 +1,9 @@
 name 'csc_ecosystems_multiple_choice_child_1_2_2023'
-question 'Read this example code carefully. Predict what the code will do by selecting one of the options below.'
-wrong 'If there are less than 8 algae, change healthy coral to sick coral. ', feedback: 'Incorrect.'
-wrong 'If there are any algae, remove all sick coral ', feedback: 'Incorrect.'
-right 'If there are more than 8 algae, change healthy coral to sick coral.', feedback: 'Correct!'
-wrong 'If the coral is dirty, change it to clean coral.', feedback: 'Incorrect.'
+question 'Read the code carefully. Predict what will happen by selecting one of the options below. Then click Run'
+wrong 'If there is too little algae, the coral gets sick. ', feedback: 'Incorrect.'
+wrong 'If there is just enough algae, the coral is removed ', feedback: 'Incorrect.'
+right 'If there is too much algae, the coral gets sick.', feedback: 'Correct!'
+wrong 'If the coral is dirty, it changes to clean coral.', feedback: 'Incorrect.'
 
+
+allow_multiple_attempts false

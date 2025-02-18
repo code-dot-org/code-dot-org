@@ -4,6 +4,15 @@ require 'time'
 class HomeControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  test "teacher in teacher-homepage-v2 experiment redirected to teacher_dashboard/home" do
+    teacher = create :teacher
+    SingleUserExperiment.find_or_create_by!(min_user_id: teacher.id, name: 'teacher-homepage-v2')
+    sign_in teacher
+    get :home
+
+    assert_redirected_to '/teacher_dashboard/home'
+  end
+
   test "teacher without progress or assigned course/script redirected to index" do
     teacher = create :teacher
     sign_in teacher
@@ -176,7 +185,7 @@ class HomeControllerTest < ActionController::TestCase
       get :index
     end
 
-    assert_redirected_to '/courses'
+    assert_redirected_to '/users/sign_in'
   end
 
   test "language is determined from cdo.locale" do
@@ -196,9 +205,7 @@ class HomeControllerTest < ActionController::TestCase
 
     get :set_locale, params: {user_return_to: "/blahblah", locale: "es-ES"}
 
-    assert_equal "es-ES", cookies[:language_]
-    assert_match "language_=es-ES; domain=.code.org; path=/; expires=#{10.years.from_now.rfc2822}"[0..-15], @response.headers["Set-Cookie"]
-    assert_redirected_to 'http://studio.code.org/blahblah?lang=es-ES'
+    assert_redirected_to 'http://studio.code.org/blahblah?set_locale=es-ES&lang=es-ES'
   end
 
   test "handle nonsense in user_return_to by returning to home" do
@@ -217,13 +224,13 @@ class HomeControllerTest < ActionController::TestCase
       user_return_to: "http://blah.com/blerg",
       locale: "es-ES"
     }
-    assert_redirected_to 'http://studio.code.org/blerg?lang=es-ES'
+    assert_redirected_to 'http://studio.code.org/blerg?set_locale=es-ES&lang=es-ES'
   end
 
   test "if user_return_to in set_locale is nil redirects to homepage" do
     request.host = "studio.code.org"
     get :set_locale, params: {user_return_to: nil, locale: "es-ES"}
-    assert_redirected_to 'http://studio.code.org?lang=es-ES'
+    assert_redirected_to 'http://studio.code.org?set_locale=es-ES&lang=es-ES'
   end
 
   test "should get index with edmodo header" do
@@ -278,35 +285,147 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'a[href="/levels/new"]'
   end
 
-  test 'user without age gets age prompt' do
-    skip 'TODO: get :home'
+  test 'student without age gets student information prompt with age select' do
+    student = create(:student)
+    student.update_attribute(:birthday, nil) # bypasses validations
+    student.update_attribute(:us_state, 'DC')
+    student = student.reload
+    refute student.age, "user should not have age, but value was #{student.age}"
+    assert student.us_state
 
-    user = create(:user)
-    user.update_attribute(:birthday, nil) # bypasses validations
-    user = user.reload
-    refute user.age, "user should not have age, but value was #{user.age}"
+    sign_in student
+    get :home
 
-    sign_in user
-    get :index
-
-    assert_select '#age-modal'
+    assert_select '#student-information-modal'
+    assert_select '#user_age'
+    assert_select '#user_us_state', false
+    assert_select '#user_gender_student_input', false
   end
 
-  test 'user with age does not get age prompt' do
-    user = create(:user)
-    assert user.age
+  test 'LTI student without us_state gets student information prompt' do
+    student = create :student, :with_lti_auth
 
-    sign_in user
+    student.update_attribute(:us_state, nil) # bypasses validations
+    refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
 
-    get :index
+    sign_in student
+    get :home
 
-    assert_select '#age-modal', false
+    assert_select '#student-information-modal'
+    assert_select '#user_us_state'
+    assert_select '#user_gender_student_input'
   end
 
-  test 'anonymous does not get age prompt' do
+  test 'student with age does not get student information prompt' do
+    student = create(:student)
+    assert student.age
+
+    sign_in student
+
+    get :home
+
+    assert_select '#student-information-modal', false
+  end
+
+  test 'LTI student with age and us_state does not get student information prompt' do
+    student = create :student, :with_lti_auth
+    assert student.age
+    student.update_attribute(:us_state, 'AL')
+    student = student.reload
+    assert student.us_state
+
+    sign_in student
+
+    get :home
+
+    assert_select '#student-information-modal', false
+  end
+
+  test 'student under 13 and in US with no us_state gets student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
+    student.update_attribute(:us_state, nil) # bypasses validations
+    refute student.us_state, "user should not have us_state, but value was #{student.us_state}"
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    sign_in student
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state', true
+    assert_select '#user_gender_student_input', false
+  end
+
+  test 'student under 13 and in US with no provided us_state gets student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:us_state, 'DC')
+    student.update_attribute(:user_provided_us_state, false)
+    student.update_attribute(:created_at, DateTime.new(2023, 6, 30))
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    student = student.reload
+    assert student.age, 12
+
+    sign_in student
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state', true
+    assert_select '#user_gender_student_input', false
+  end
+
+  test 'CAP student missing us_state and created after CPA started does sees the student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:created_at, DateTime.new(2023, 7, 1))
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    student = student.reload
+    assert student.age, 12
+
+    sign_in student
+    get :home
+
+    assert_select '#student-information-modal', true
+    assert_select '#user_age', false
+    assert_select '#user_us_state', true
+    assert_select '#user_gender_student_input', false
+  end
+
+  test 'student under 13 and in US with provided us_state does not get student information prompt' do
+    student = create(:student, age: 12)
+    student.update_attribute(:us_state, 'DC')
+    student.update_attribute(:user_provided_us_state, true)
+    student = student.reload
+    assert student.age, 12
+    assert student.us_state
+
+    sign_in student
+    get :home
+
+    assert_select '#student-information-modal', false
+  end
+
+  test 'student over 13 and in US with us_state does not get student information prompt' do
+    student = create(:student, age: 19)
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    sign_in student
+    get :home
+
+    assert_select '#student-information-modal', false
+  end
+
+  test 'clever student under 13 and in US with no us_state does not get student information prompt' do
+    student = create :student, :clever_sso_provider
+    student.update_attribute(:age, 11)
+    request.env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = 'US'
+    sign_in student
+    get :home
+    assert_select '#student-information-modal', false
+  end
+
+  test 'anonymous does not get student information prompt' do
     get :index
 
-    assert_select '#age-modal', false
+    assert_select '#student-information-modal', false
   end
 
   test "teacher visiting homepage gets expected cookies set" do
@@ -315,9 +434,9 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     cookie_header = @response.header['Set-Cookie']
-    assert cookie_header.include?("teacher_account_age_in_years")
-    assert cookie_header.include?("teacher_within_us")
-    assert cookie_header.include?("teacher_has_attended_pd")
+    assert_includes(cookie_header, "teacher_account_age_in_years")
+    assert_includes(cookie_header, "teacher_within_us")
+    assert_includes(cookie_header, "teacher_has_attended_pd")
   end
 
   # This exception is actually annoying to handle because it never gets to
@@ -340,94 +459,5 @@ class HomeControllerTest < ActionController::TestCase
     assert_raises ActionController::UrlGenerationError do
       get :debug
     end
-  end
-
-  # TODO: remove this test when workshop_organizer is deprecated
-  test 'workshop organizers see dashboard links' do
-    sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
-    query_count = 17
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'program managers see dashboard links' do
-    sign_in create(:program_manager, :with_terms_of_service, :not_first_sign_in)
-    query_count = 18
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'workshop admins see dashboard links' do
-    sign_in create(:workshop_admin, :with_terms_of_service, :not_first_sign_in)
-    query_count = 16
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'facilitators see dashboard links' do
-    facilitator = create(:facilitator, :with_terms_of_service, :not_first_sign_in)
-    sign_in facilitator
-    query_count = 17
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Workshop Dashboard'
-  end
-
-  test 'teachers cannot see dashboard links' do
-    sign_in create(:terms_of_service_teacher, :not_first_sign_in)
-    query_count = 15
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 0, text: 'Workshop Dashboard'
-  end
-
-  test 'workshop admins see application dashboard links' do
-    sign_in create(:workshop_admin, :with_terms_of_service, :not_first_sign_in)
-    query_count = 16
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Application Dashboard'
-    assert_select 'h3', count: 1, text: 'Manage Applications'
-  end
-
-  # TODO: remove this test when workshop_organizer is deprecated
-  test 'workshop organizers who are regional partner program managers see application dashboard links' do
-    sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service, :not_first_sign_in)
-    query_count = 18
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Application Dashboard'
-    assert_select 'h3', count: 1, text: 'Manage Applications'
-  end
-
-  test 'program managers see application dashboard links' do
-    sign_in create(:program_manager, :with_terms_of_service, :not_first_sign_in)
-    query_count = 18
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 1, text: 'Application Dashboard'
-    assert_select 'h3', count: 1, text: 'Manage Applications'
-  end
-
-  # TODO: remove this test when workshop_organizer is deprecated
-  test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
-    sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
-    query_count = 17
-    assert_queries query_count do
-      get :home
-    end
-    assert_select 'h1', count: 0, text: 'Application Dashboard'
-    assert_select 'h3', count: 0, text: 'Manage Applications'
   end
 end

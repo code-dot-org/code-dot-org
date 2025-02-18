@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
+
 import Tooltip from '@cdo/apps/templates/Tooltip';
+import i18n from '@cdo/locale';
 
 // Render a string and possibly a tooltip that describes the student's
 // partners. This method should only be called when the student is in a
@@ -44,7 +45,7 @@ const SelectedStudentPairing = ({partnerNames, partnerCount}) => {
 
 SelectedStudentPairing.propTypes = {
   partnerNames: PropTypes.array,
-  partnerCount: PropTypes.number
+  partnerCount: PropTypes.number,
 };
 
 export default SelectedStudentPairing;

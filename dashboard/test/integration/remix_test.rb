@@ -122,14 +122,6 @@ class RemixTest < ActionDispatch::IntegrationTest
     assert_only_remixes_sources 'algebra_game'
   end
 
-  test 'calc only remixes Sources bucket' do
-    assert_only_remixes_sources 'calc'
-  end
-
-  test 'eval only remixes Sources bucket' do
-    assert_only_remixes_sources 'eval'
-  end
-
   test 'javalab only remixes Sources and Assets buckets, and Starter assets' do
     assert_only_remixes_sources_assets_starter_assets 'javalab'
   end
@@ -218,8 +210,8 @@ class RemixTest < ActionDispatch::IntegrationTest
   end
 
   private def stub_project_level(type)
-    factory = FactoryGirl.factories.registered?(type) ? type : :level
-    level = FactoryGirl.create(factory)
+    factory = FactoryBot.factories.registered?(type) ? type : :level
+    level = FactoryBot.create(factory)
     ProjectsController.any_instance.stubs(:get_from_cache).returns(level)
   end
 

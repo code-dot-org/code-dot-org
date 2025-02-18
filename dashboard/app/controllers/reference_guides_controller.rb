@@ -74,16 +74,14 @@ class ReferenceGuidesController < ApplicationController
     @edit_all_url = edit_all_reference_guides_url(params[:course_course_name])
   end
 
-  private
-
-  def after_last_child_position(course_version_id, parent_key)
+  private def after_last_child_position(course_version_id, parent_key)
     (ReferenceGuide.
       where(course_version_id: course_version_id, parent_reference_guide_key: parent_key).
       order('position').
       last&.position || 0) + 1
   end
 
-  def redirect_unit_group
+  private def redirect_unit_group
     course_name = params[:course_course_name]
 
     # When the url of a course family is requested, redirect to a specific course version.
@@ -93,7 +91,7 @@ class ReferenceGuidesController < ApplicationController
     end
   end
 
-  def find_reference_guide
+  private def find_reference_guide
     course_version_id = CurriculumHelper.find_matching_course_version(params[:course_course_name])&.id
     unless course_version_id
       flash[:alert] = 'No matching course version found.'
@@ -106,7 +104,7 @@ class ReferenceGuidesController < ApplicationController
     end
   end
 
-  def find_reference_guides
+  private def find_reference_guides
     course_version = CurriculumHelper.find_matching_course_version(params[:course_course_name])
     authorize! :read, course_version.content_root
     unless course_version&.id
@@ -116,7 +114,7 @@ class ReferenceGuidesController < ApplicationController
     @reference_guides = ReferenceGuide.where(course_version_id: course_version&.id).map(&:summarize_for_index)
   end
 
-  def reference_guide_params
+  private def reference_guide_params
     params.permit(
       :parent_reference_guide_key,
       :display_name,

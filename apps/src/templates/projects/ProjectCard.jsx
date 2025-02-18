@@ -1,20 +1,29 @@
+/* eslint-disable react/jsx-no-target-blank */
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../../util/color';
-import i18n from '@cdo/locale';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 
-const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import i18n from '@cdo/locale';
 
 import {UnlocalizedTimeAgo} from '../TimeAgo';
+
+import {getProjectCardImageUrl} from './projectUtils';
+
+import style from './project-card.module.scss';
 
 export default class ProjectCard extends React.Component {
   static propTypes = {
     projectData: PropTypes.object.isRequired,
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
-    isDetailView: PropTypes.bool
+    isDetailView: PropTypes.bool,
+    showReportAbuseHeader: PropTypes.bool,
   };
+
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     const {projectData, currentGallery, isDetailView} = this.props;
@@ -25,154 +34,82 @@ export default class ProjectCard extends React.Component {
       ? `/projects/${type}/${channel}/edit`
       : `/projects/${type}/${channel}`;
 
-    const thumbnailStyle = styles.thumbnail;
-    if (this.props.showFullThumbnail) {
-      Object.assign(thumbnailStyle, styles.fullThumbnail);
-    }
-
     const shouldShowPublicDetails =
       isPublicGallery && isDetailView && projectData.publishedAt;
-    const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
     return (
-      <div className="project_card">
-        <div style={styles.card}>
-          <div style={thumbnailStyle}>
-            <a
-              href={studio(url)}
-              style={{width: '100%'}}
-              target={isPublicGallery ? '_blank' : undefined}
-            >
-              <img
-                src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
-                style={styles.image}
-                alt={i18n.projectThumbnail()}
-              />
-            </a>
-          </div>
-          <a
-            style={styles.titleLink}
-            href={studio(url)}
-            target={isPublicGallery ? '_blank' : undefined}
+      <div className={style.card}>
+        <a
+          className={style.link}
+          href={studio(url)}
+          target={isPublicGallery ? '_blank' : undefined}
+        >
+          <div
+            className={classNames(style.thumbnail, {
+              [style.fullThumbnail]: this.props.showFullThumbnail,
+            })}
           >
-            <div
-              style={styles.title}
-              className={`ui-project-name-${projectData.type}`}
-            >
-              {projectData.name}
-            </div>
-          </a>
-          <div style={noTimeOnCardStyle}>
+            <img
+              src={getProjectCardImageUrl(projectData.thumbnailUrl, type)}
+              alt={i18n.projectThumbnail()}
+              className={style.image}
+            />
+          </div>
+
+          <div
+            className={classNames(
+              style.title,
+              `ui-project-name-${projectData.type}`
+            )}
+          >
+            {projectData.name}
+          </div>
+
+          <div
+            className={classNames({
+              [style.noTime]: !shouldShowPublicDetails,
+            })}
+          >
             {isPublicGallery && projectData.studentName && (
-              <span style={styles.firstInitial}>
+              <span className={style.firstInitial}>
                 {i18n.by()}:&nbsp;
-                <span style={styles.bold}>{projectData.studentName}</span>
+                <span className={style.bold}>{projectData.studentName}</span>
               </span>
             )}
             {isPublicGallery && projectData.studentAgeRange && (
-              <span style={styles.ageRange}>
+              <span className={style.ageRange}>
                 {i18n.age()}:&nbsp;
-                <span style={styles.bold}>{projectData.studentAgeRange}</span>
+                <span className={style.bold}>
+                  {projectData.studentAgeRange}
+                </span>
               </span>
             )}
           </div>
           {shouldShowPublicDetails && !projectData.isFeatured && (
-            <div style={styles.lastEdit}>
+            <div className={style.lastEdit}>
               {i18n.published()}:&nbsp;
               <UnlocalizedTimeAgo
-                style={styles.bold}
+                className={style.bold}
                 dateString={projectData.publishedAt}
               />
             </div>
           )}
           {shouldShowPublicDetails && projectData.isFeatured && (
-            <div style={styles.lastEdit}>
-              <span style={styles.bold}>{i18n.featuredProject()}</span>
+            <div className={style.lastEdit}>
+              <span className={style.bold}>{i18n.featuredProject()}</span>
             </div>
           )}
           {isPersonalGallery && projectData.updatedAt && (
-            <div style={styles.lastEdit}>
+            <div className={style.lastEdit}>
               {i18n.projectLastUpdated()}:&nbsp;
               <UnlocalizedTimeAgo
-                style={styles.bold}
                 dateString={projectData.updatedAt}
+                className={style.bold}
               />
             </div>
           )}
-        </div>
+        </a>
       </div>
     );
   }
 }
-
-const styles = {
-  card: {
-    border: '1px solid #bbbbbb',
-    borderRadius: 2,
-    width: 214,
-    backgroundColor: color.neutral_light
-  },
-  title: {
-    paddingLeft: 15,
-    paddingRight: 10,
-    paddingTop: 18,
-    paddingBottom: 5,
-    fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.neutral_dark,
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    height: 18,
-    boxSizing: 'content-box'
-  },
-  titleLink: {
-    color: color.neutral_dark,
-    textDecoration: 'none'
-  },
-  lastEdit: {
-    paddingLeft: 15,
-    paddingRight: 10,
-    paddingBottom: 10,
-    fontSize: 11,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.neutral_dark
-  },
-  ageRange: {
-    paddingLeft: 10,
-    paddingTop: 5,
-    fontSize: 11,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.neutral_dark
-  },
-  firstInitial: {
-    paddingTop: 5,
-    fontSize: 11,
-    paddingLeft: 15,
-    paddingRight: 15,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.neutral_dark
-  },
-  thumbnail: {
-    width: 214,
-    height: 150,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'hidden'
-  },
-  fullThumbnail: {
-    height: 214
-  },
-  image: {
-    flexShrink: 0,
-    width: '100%',
-    weight: '100%'
-  },
-  bold: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  noTime: {
-    paddingBottom: 10
-  }
-};

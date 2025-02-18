@@ -1,0 +1,7 @@
+name 'cv-studentsurvey-premodule-q1'
+question 'Before this unit, how much have you learned about computer vision?'
+right 'A lot'
+right 'Some'
+right 'A little'
+right 'Nothing at all'
+allow_multiple_attempts true

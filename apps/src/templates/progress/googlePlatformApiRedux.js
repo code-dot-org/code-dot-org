@@ -1,4 +1,4 @@
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 
 /*
  * The Google Classroom Share Button is only available through the google
@@ -18,7 +18,7 @@ const LOAD_TIMEOUT_MILLIS = 15000;
 const initialState = {
   loading: false,
   loaded: false,
-  loadStartTime: null
+  loadStartTime: null,
 };
 
 export function loadGooglePlatformApi() {
@@ -47,14 +47,14 @@ function onLoadFinished(success, promise) {
 
     const data = {
       success: success,
-      load_time: elapsedLoadTimeSeconds(getState)
+      load_time: elapsedLoadTimeSeconds(getState),
     };
     firehoseClient.putRecord(
       {
         study: 'google-classroom-share-button',
         study_group: 'v0',
         event: 'api_load_finished',
-        data_json: JSON.stringify(data)
+        data_json: JSON.stringify(data),
       },
       {includeUserId: true}
     );
@@ -70,14 +70,14 @@ export default function googlePlatformApi(state = initialState, action) {
     return {
       ...state,
       loading: true,
-      loadStartTime: action.startTime
+      loadStartTime: action.startTime,
     };
   }
   if (action.type === FINISH_LOADING_GAPI) {
     return {
       ...state,
       loading: false,
-      loaded: action.success
+      loaded: action.success,
     };
   }
   return state;
@@ -86,7 +86,7 @@ export default function googlePlatformApi(state = initialState, action) {
 function loadApi(dispatch, getState, promise) {
   if (!document.getElementById(GOOGLE_PLATFORM_API_ID)) {
     window.___gcfg = {
-      parsetags: 'explicit'
+      parsetags: 'explicit',
     };
 
     const gapi = document.createElement('script');

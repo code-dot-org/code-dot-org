@@ -87,8 +87,8 @@ class RedshiftImport
     constraint_column_ids_list = result[0]['constraint_column_ids']
 
     # Strip the curly braces off.
-    constraint_column_ids_list.slice!("\{")
-    constraint_column_ids_list.slice!("\}")
+    constraint_column_ids_list.slice!("{")
+    constraint_column_ids_list.slice!("}")
 
     # Get the names of the columns that a primary key is composed of.
     column_query = <<~SQL
@@ -131,6 +131,7 @@ class RedshiftImport
         schema,
         current_table_name,
         primary_key[:name],
+        # AWS Database Migration Service uses the all caps suffix `_PRIMARY` when creating constraints on the _import_ tables it creates.
         new_table_name + '_primary',
         primary_key[:columns]
       )
@@ -142,8 +143,8 @@ class RedshiftImport
       ALTER TABLE #{current_table_name} RENAME TO #{new_table_name};
     SQL
     redshift_client.exec(query)
-  rescue PG::UndefinedTable => undefined_table_error
-    CDO.log.info "Unable to rename table #{schema}.#{current_table_name} because it does not exist. #{undefined_table_error}"
+  rescue PG::UndefinedTable => exception
+    CDO.log.info "Unable to rename table #{schema}.#{current_table_name} because it does not exist. #{exception}"
   end
 
   # Get name and columns of primary key constraint for a specific table, if constraint exists.
@@ -158,8 +159,10 @@ class RedshiftImport
     query = <<~SQL
       SET search_path TO #{schema};
       BEGIN;
-      ALTER TABLE #{table} DROP CONSTRAINT #{current_index_name}; -- Does not fail if constraint doesn't exist.
-      ALTER TABLE #{table} ADD CONSTRAINT #{new_index_name} PRIMARY KEY (#{columns.join(',')});
+      -- Use double quotes around constraint name due to issues with the case-sensitive `_PRIMARY` suffix that
+      -- Database Migration Service uses when creating primaries keys on tables it creates.
+      ALTER TABLE #{table} DROP CONSTRAINT "#{current_index_name}";
+      ALTER TABLE #{table} ADD CONSTRAINT "#{new_index_name}" PRIMARY KEY (#{columns.join(',')});
       COMMIT;
     SQL
     redshift_client.exec(query)

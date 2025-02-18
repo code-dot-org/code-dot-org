@@ -20,3 +20,5 @@ public static void strChange(String str) {
 
 Which of the following best describes the behavior of the method?
 MARKDOWN
+
+allow_multiple_attempts true

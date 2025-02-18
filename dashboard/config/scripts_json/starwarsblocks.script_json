@@ -4,14 +4,58 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
+      "supported_locales": [
+        "ar-SA",
+        "ca-ES",
+        "cs-CZ",
+        "de-DE",
+        "el-GR",
+        "es-ES",
+        "es-MX",
+        "fa-IR",
+        "fi-FI",
+        "fr-FR",
+        "he-IL",
+        "hi-IN",
+        "hu-HU",
+        "id-ID",
+        "is-IS",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "kn-IN",
+        "mn-MN",
+        "mr-IN",
+        "ms-MY",
+        "nl-NL",
+        "no-NO",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK",
+        "sv-SE",
+        "ta-IN",
+        "th-TH",
+        "tr-TR",
+        "uk-UA",
+        "ur-PK",
+        "uz-UZ",
+        "vi-VN",
+        "zh-CN",
+        "zh-TW"
+      ],
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "starwarsblocks",
-    "serialized_at": "2022-03-17 22:42:35 UTC",
+    "serialized_at": "2025-01-09 00:11:11 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,7 +104,8 @@
       "key": "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6",
       "position": 1,
       "properties": {
-        "name": "Getting Started (5 minutes)"
+        "duration": 5,
+        "name": "Getting Started"
       },
       "seeding_key": {
         "lesson_activity.key": "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6",
@@ -73,7 +118,8 @@
       "key": "d1fb8b1b-235a-41a7-bfb9-8c916983bb68",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "d1fb8b1b-235a-41a7-bfb9-8c916983bb68",
@@ -86,7 +132,8 @@
       "key": "d77010f1-4c38-4b28-8b5f-ef931622b016",
       "position": 3,
       "properties": {
-        "name": "Wrap Up (5 minutes)"
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "d77010f1-4c38-4b28-8b5f-ef931622b016",
@@ -112,7 +159,8 @@
       "key": "894da896-c653-4f74-a0f9-b02dca7ebcad",
       "position": 5,
       "properties": {
-        "name": "Assessment (2 minutes)"
+        "duration": 5,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "894da896-c653-4f74-a0f9-b02dca7ebcad",
@@ -927,6 +975,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

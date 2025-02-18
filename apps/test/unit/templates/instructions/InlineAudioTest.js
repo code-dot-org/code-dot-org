@@ -1,9 +1,16 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
-import {setExternalGlobals} from '../../../util/testUtils';
+import {render} from '@testing-library/react';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {StatelessInlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {
+  AudioQueue,
+  AudioQueueContext,
+} from '@cdo/apps/templates/instructions/AudioQueue';
+import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
+
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {setExternalGlobals} from '../../../util/testUtils';
 
 const DEFAULT_PROPS = {
   assetUrl: () => {},
@@ -13,9 +20,9 @@ const DEFAULT_PROPS = {
   textToSpeechEnabled: true,
   style: {
     button: {},
-    buttonImg: {}
+    buttonImg: {},
   },
-  ttsAutoplayEnabled: false
+  ttsAutoplayEnabled: false,
 };
 
 // this is a helper function which is used in a test to
@@ -25,11 +32,11 @@ const waitForPromises = async () => {
 };
 
 function getComponent(element) {
-  const wrapper = mount(element);
-  return wrapper.at(0);
+  const wrapper = mount(<AudioQueue>{element}</AudioQueue>);
+  return wrapper.at(0).find(InlineAudio);
 }
 
-describe('InlineAudio', function() {
+describe('InlineAudio', function () {
   setExternalGlobals();
 
   let windowAudio;
@@ -43,11 +50,11 @@ describe('InlineAudio', function() {
     window.Audio = windowAudio;
   });
 
-  it('uses a given src if there is one', function() {
+  it('uses a given src if there is one', function () {
     const src = 'test';
     const component = getComponent(
-      <StatelessInlineAudio
-        assetUrl={function() {}}
+      <InlineAudio
+        assetUrl={function () {}}
         isK1={true}
         locale="en_us"
         src={src}
@@ -57,10 +64,10 @@ describe('InlineAudio', function() {
     assert.equal(src, result);
   });
 
-  it('generates a src from message text if none is given', function() {
+  it('generates a src from message text if none is given', function () {
     const component = getComponent(
-      <StatelessInlineAudio
-        assetUrl={function() {}}
+      <InlineAudio
+        assetUrl={function () {}}
         isK1={true}
         locale="en_us"
         message={'test'}
@@ -74,10 +81,10 @@ describe('InlineAudio', function() {
     );
   });
 
-  it('does not generate src from message text if no voice is available for locale', function() {
+  it('does not generate src from message text if no voice is available for locale', function () {
     const component = getComponent(
-      <StatelessInlineAudio
-        assetUrl={function() {}}
+      <InlineAudio
+        assetUrl={function () {}}
         isK1={true}
         locale="aa_aa"
         message={'test'}
@@ -88,10 +95,10 @@ describe('InlineAudio', function() {
     assert.equal(result, undefined);
   });
 
-  it('can handle (select) non-english locales', function() {
+  it('can handle (select) non-english locales', function () {
     const component = getComponent(
-      <StatelessInlineAudio
-        assetUrl={function() {}}
+      <InlineAudio
+        assetUrl={function () {}}
         isK1={true}
         locale="it_it"
         message={'test'}
@@ -105,9 +112,9 @@ describe('InlineAudio', function() {
     );
   });
 
-  it('renders controls if text-to-speech is enabled and sound is loaded', function() {
+  it('renders controls if text-to-speech is enabled and sound is loaded', function () {
     const wrapper = mount(
-      <StatelessInlineAudio {...DEFAULT_PROPS} textToSpeechEnabled />
+      <InlineAudio {...DEFAULT_PROPS} textToSpeechEnabled />
     );
     expect(wrapper.find('.inline-audio').exists()).to.be.false;
     const component = wrapper.at(0);
@@ -116,8 +123,8 @@ describe('InlineAudio', function() {
     expect(wrapper.find('.inline-audio').exists()).to.be.true;
   });
 
-  it('can toggle audio', async function() {
-    const component = getComponent(<StatelessInlineAudio {...DEFAULT_PROPS} />);
+  it('can toggle audio', async function () {
+    const component = getComponent(<InlineAudio {...DEFAULT_PROPS} />);
 
     expect(component.state().playing).to.be.false;
     component.instance().toggleAudio();
@@ -128,12 +135,9 @@ describe('InlineAudio', function() {
     expect(component.state().playing).to.be.false;
   });
 
-  it('autoplays if autoplay of text-to-speech is enabled', async function() {
-    const component = mount(
-      <StatelessInlineAudio
-        assetUrl={function() {}}
-        ttsAutoplayEnabled={true}
-      />
+  it('autoplays if autoplay of text-to-speech is enabled', async function () {
+    const component = getComponent(
+      <InlineAudio assetUrl={function () {}} ttsAutoplayEnabled={true} />
     );
 
     await waitForPromises();
@@ -141,11 +145,8 @@ describe('InlineAudio', function() {
   });
 
   it('when playAudio resolves, state.playing set to true', async () => {
-    const component = mount(
-      <StatelessInlineAudio
-        assetUrl={function() {}}
-        ttsAutoplayEnabled={false}
-      />
+    const component = getComponent(
+      <InlineAudio assetUrl={function () {}} ttsAutoplayEnabled={false} />
     );
 
     expect(component.state().playing).to.be.false;
@@ -153,9 +154,9 @@ describe('InlineAudio', function() {
     expect(component.state().playing).to.be.true;
   });
 
-  it('only initializes Audio once', function() {
+  it('only initializes Audio once', function () {
     sinon.spy(window, 'Audio');
-    const component = getComponent(<StatelessInlineAudio {...DEFAULT_PROPS} />);
+    const component = getComponent(<InlineAudio {...DEFAULT_PROPS} />);
 
     expect(window.Audio).to.have.been.calledOnce;
     component.instance().playAudio();
@@ -167,8 +168,8 @@ describe('InlineAudio', function() {
     sinon.restore();
   });
 
-  it('handles source update gracefully, stopping audio', async function() {
-    const wrapper = mount(<StatelessInlineAudio {...DEFAULT_PROPS} />);
+  it('handles source update gracefully, stopping audio', async function () {
+    const wrapper = mount(<InlineAudio {...DEFAULT_PROPS} />);
     const component = wrapper.at(0);
     await component.instance().playAudio();
     expect(component.state().playing).to.be.true;
@@ -177,6 +178,41 @@ describe('InlineAudio', function() {
     expect(component.state().audio).to.be.undefined;
     expect(component.state().playing).to.be.false;
     expect(component.state().error).to.be.false;
+  });
+
+  it('calls addToQueue for each InlineAudio rendered', () => {
+    const addToQueueSpy = sinon.spy();
+    render(
+      <AudioQueueContext.Provider
+        value={{
+          addToQueue: addToQueueSpy,
+          playNextAudio: () => {},
+          clearQueue: () => {},
+          isPlaying: {current: false},
+        }}
+      >
+        <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={true} />
+        <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={true} />
+      </AudioQueueContext.Provider>
+    );
+    expect(addToQueueSpy).to.have.been.calledTwice;
+  });
+
+  it('does not add to queue if autoplay is off', () => {
+    const addToQueueSpy = sinon.spy();
+    render(
+      <AudioQueueContext.Provider
+        value={{
+          addToQueue: addToQueueSpy,
+          playNextAudio: () => {},
+          clearQueue: () => {},
+          isPlaying: {current: false},
+        }}
+      >
+        <InlineAudio {...DEFAULT_PROPS} />
+      </AudioQueueContext.Provider>
+    );
+    expect(addToQueueSpy).to.not.have.been.called;
   });
 });
 

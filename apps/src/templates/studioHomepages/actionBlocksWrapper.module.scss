@@ -1,0 +1,53 @@
+@import 'color';
+
+// Breakpoints
+$width-sm: 640px;
+$width-lg: 1020px;
+
+// Set up default grid
+@mixin default-grid($columns: 2) {
+  display: grid;
+  gap: 1.25rem;
+
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat($columns, 1fr);
+  }
+}
+
+// Begin styles
+.wrapperTwoCol {
+  @include default-grid;
+}
+
+.wrapperThreeCol {
+  @include default-grid(2);
+
+  @media screen and (min-width: $width-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.oneColumnActionBlock {
+  background: $light_gray_50;
+  border: 1px solid $light_gray_200;
+  border-radius: 4px;
+  padding: 1.25rem;
+  text-align: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .overline {
+    color: $light_primary_500;
+  }
+
+  img {
+    margin-bottom: 1rem;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}

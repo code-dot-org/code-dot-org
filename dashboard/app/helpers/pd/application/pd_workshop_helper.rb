@@ -36,10 +36,8 @@ module Pd::Application
       # @param key [String] cache key
       # @yield [Object] the raw, uncached, object.
       #   Note, when this is run, the result will be stored in the cache
-      def cache_fetch(key)
-        Rails.cache.fetch(key, expires_in: CACHE_TTL) do
-          yield
-        end
+      def cache_fetch(key, &block)
+        Rails.cache.fetch(key, expires_in: CACHE_TTL, &block)
       end
     end
 

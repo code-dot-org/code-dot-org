@@ -1,11 +1,12 @@
-import msg from '@cdo/poetry/locale';
 import {getStore} from '@cdo/apps/redux';
-import trackEvent from '@cdo/apps/util/trackEvent';
-import {setPoem, hasSelectedPoemChanged} from '../redux/poetry';
+import msg from '@cdo/poetry/locale';
+
 import {P5LabType} from '../constants';
+import {setPoem, hasSelectedPoemChanged, setPoemList} from '../redux/poetry';
 import SpriteLab from '../spritelab/SpriteLab';
+
+import {getPoem, getPoemsFromListOrDefault} from './poem';
 import PoetryLibrary from './PoetryLibrary';
-import {getPoem} from './poem';
 
 export default class Poetry extends SpriteLab {
   init(config) {
@@ -14,6 +15,9 @@ export default class Poetry extends SpriteLab {
     if (poem) {
       getStore().dispatch(setPoem(poem));
     }
+
+    const poemList = getPoemsFromListOrDefault(config.level.availablePoems);
+    getStore().dispatch(setPoemList(poemList));
     return loader;
   }
 
@@ -42,13 +46,6 @@ export default class Poetry extends SpriteLab {
       return;
     }
     return new PoetryLibrary(args.p5);
-  }
-
-  runButtonClick() {
-    super.runButtonClick();
-    const poem = getPoem(getStore().getState().poetry?.selectedPoem?.key);
-    const poemTitle = poem ? poem.title : 'Custom';
-    trackEvent('HoC_Poem', 'Play-2021', poemTitle);
   }
 
   preloadInstructorImage() {
@@ -90,7 +87,7 @@ export default class Poetry extends SpriteLab {
       swirls: 'swirlyline',
       waves: 'water',
       wood: 'wood',
-      zigzag: 'lightning'
+      zigzag: 'lightning',
     };
     if (!this.preloadFrames_) {
       this.preloadFrames_ = Promise.all(
@@ -122,7 +119,7 @@ export default class Poetry extends SpriteLab {
     return Promise.all([
       super.preloadLabAssets(),
       this.preloadInstructorImage(),
-      this.preloadFrames()
+      this.preloadFrames(),
     ]);
   }
 

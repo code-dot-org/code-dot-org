@@ -3,14 +3,16 @@
  * @see @cdo/apps/studio/cell
  */
 
+import React from 'react';
+
 import {
   Direction,
   Emotions,
   SpriteSize,
   SpriteSpeed,
-  SquareType
+  SquareType,
 } from '@cdo/apps/studio/constants';
-import React from 'react';
+
 import CellEditor from './CellEditor';
 
 // TODO elijah this list is pulled from @cdo/apps/studio/skins:loadStudio(),
@@ -51,7 +53,7 @@ const avatarList = [
   'soccergirl',
   'soccerboy',
   'tennisgirl',
-  'tennisboy'
+  'tennisboy',
 ];
 
 // Use a subset of studio SquareTypes for the tiletypes, since many of them are
@@ -60,7 +62,7 @@ const avatarList = [
 const usedSquareTypes = {
   OPEN: SquareType.OPEN,
   GOAL: SquareType.SPRITEFINISH,
-  START: SquareType.SPRITESTART
+  START: SquareType.SPRITESTART,
 };
 
 export default class StudioCellEditor extends CellEditor {

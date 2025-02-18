@@ -1,4 +1,4 @@
-import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 
 export const progressUrl =
   'https://studio.code.org/teacher_dashboard/sections/111111/progress';
@@ -23,7 +23,8 @@ export const sections = [
     courseId: null,
     courseOfferingId: null,
     courseVersionId: null,
-    unitId: null
+    unitId: null,
+    participant_type: 'student',
   },
   {
     id: 12,
@@ -41,8 +42,9 @@ export const sections = [
     courseId: null,
     courseOfferingId: null,
     courseVersionId: null,
-    unitId: null
-  }
+    unitId: null,
+    participant_type: 'student',
+  },
 ];
 
 export const serverSections = sections.map(serverSectionFromSection);

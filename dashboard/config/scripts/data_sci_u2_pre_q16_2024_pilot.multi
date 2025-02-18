@@ -1,0 +1,10 @@
+name 'Data Sci U2 Pre Q16_2024-pilot'
+
+question 'What is the purpose of using the `agg()` function in pandas during exploratory data analysis?'
+
+wrong 'To merge two DataFrames.'
+right 'To apply multiple functions to a DataFrame.'
+wrong 'To split a DataFrame into multiple smaller DataFrames.'
+wrong 'To count the number of missing values in a DataFrame.'
+
+allow_multiple_attempts false

@@ -1,0 +1,21 @@
+name 'gen-ai-customizing-usertesting-multi-L4'
+question 'Given this new information, what do you think we should do?'
+
+wrong '🟢Launch it anyway - no action needed!'
+wrong '🟡Launch the chatbot, but follow-up with a quick fix to address the issue'
+wrong '🟠Delay the launch until we fix the issue'
+wrong '🔴Cancel the project altogether - this issue is too serious'
+
+allow_multiple_attempts false
+markdown <<MARKDOWN
+## Eating Disorder Helpline
+
+#### A health and wellness company runs an eating disorder helpline, where you can call in and get counseling to help with issues related to eating disorders. The company has decided to replace the call-in line with an online chatbot instead.
+
+#### Some users are reporting that the chatbot offers the wrong advice and can be cued into suggesting counter-productive strategies that can harm the health and well-being of the user if followed.
+
+#### Given this new information, how should the company respond?
+
+<hr />
+
+MARKDOWN

@@ -1,0 +1,25 @@
+name 'self-paced-pl-ai-districts-transforming_01_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Bringing AI to Your District
+
+
+#### Welcome! This lesson is designed to help you understand how to support your district in using AI.
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Image of AI bot" style="border-radius:40px; float: right; padding-right: 75px; height: 275px; clear: both; margin: 0 0px 0px 0;">
+
+## In this module, you will:
+
+* #### Learn guiding principles when using AI in an educational context.
+* #### Practice how to effectively use AI tools to support various educational tasks.
+* #### Learn about the resources available to teach about AI in the classroom.
+
+### **Suggested time:**  30 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

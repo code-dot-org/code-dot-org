@@ -1,0 +1,45 @@
+@import 'color.scss';
+@import './dialog-manager.module.scss';
+
+%generic-dialog {
+  @extend %dialog;
+  display: flex;
+  flex-direction: column;
+}
+
+.genericDialog-dark {
+  @extend %generic-dialog;
+  background-color: $light_gray_950;
+
+  // override any foreground text in the dialog that might be
+  // passed in for the title or body of the dialog
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  strong {
+    color: $light_white;
+  }
+}
+
+.genericDialog-light {
+  @extend %generic-dialog;
+}
+
+.buttonContainer {
+  .outerButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .innerButtonContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -3,6 +3,8 @@
 # As part of this content, it also provides CSS classes which determine
 # responsive visibility for the header itself and the items inside it.
 
+require 'cdo/global_edition'
+
 require_relative 'help_header'
 
 class Hamburger
@@ -11,9 +13,13 @@ class Hamburger
   SHOW_ALWAYS = "show-always".freeze
   HIDE_ALWAYS = "hide-always".freeze
   SHOW_MOBILE = "show-mobile".freeze
+  HIDE_MOBILE = "hide-mobile".freeze
+  SHOW_SMALL_DESKTOP = "show-small-desktop".freeze
+  HIDE_SMALL_DESKTOP = "hide-small-desktop".freeze
 
   def self.get_divider_visibility(above_section_visibility, below_section_visibility)
     return HIDE_ALWAYS if above_section_visibility == HIDE_ALWAYS || below_section_visibility == HIDE_ALWAYS
+    return SHOW_SMALL_DESKTOP if above_section_visibility == SHOW_SMALL_DESKTOP || below_section_visibility == SHOW_SMALL_DESKTOP
     return SHOW_MOBILE if above_section_visibility == SHOW_MOBILE || below_section_visibility == SHOW_MOBILE
     return SHOW_ALWAYS
   end
@@ -21,10 +27,9 @@ class Hamburger
   def self.get_visibility(options)
     show_teacher_options = HIDE_ALWAYS
     show_student_options = HIDE_ALWAYS
-    show_signed_out_options = HIDE_ALWAYS
     show_pegasus_options = HIDE_ALWAYS
     show_intl_about = SHOW_MOBILE
-    show_help_options = SHOW_MOBILE
+    show_help_options = SHOW_SMALL_DESKTOP
 
     if options[:level]
       # The header is taken over by level-related UI, so we need the hamburger
@@ -33,46 +38,43 @@ class Hamburger
       case options[:user_type]
       when 'teacher'
         show_teacher_options = SHOW_ALWAYS
+        show_help_options = SHOW_MOBILE
       when 'student'
         show_student_options = SHOW_ALWAYS
-      else
-        show_signed_out_options = SHOW_ALWAYS
+        show_help_options = SHOW_MOBILE
       end
 
-      # Regardless of user type, if they are English, then they also need the pegasus
+      # Regardless of user type, then they also need the pegasus
       # options in the hamburger.
-      if options[:language] == "en"
-        show_pegasus_options = SHOW_ALWAYS
-      end
+      show_pegasus_options = SHOW_ALWAYS
 
     else
-
       # The header is available for showing whichever options we want, but they should
       # appear in the hamburger at mobile widths.
       case options[:user_type]
       when 'teacher'
         show_teacher_options = SHOW_MOBILE
+        show_help_options = SHOW_MOBILE
       when 'student'
         show_student_options = SHOW_MOBILE
-      else
-        show_signed_out_options = SHOW_MOBILE
+        show_help_options = SHOW_MOBILE
       end
 
-      if options[:language] == "en"
-        # We want to show the pegasus options.  They're in the hamburger for desktop
-        # if they didn't fit on the header, or they're just in it for mobile if they did.
-        show_pegasus_options =
-          (options[:user_type] == "teacher" || options[:user_type] == "student") ? SHOW_ALWAYS : SHOW_MOBILE
-      end
+      # We want to show the pegasus options.  They're in the hamburger for desktop
+      # if they didn't fit on the header, or they're just in it for mobile if they did.
+      show_pegasus_options =
+        (options[:user_type] == "teacher" || options[:user_type] == "student" || options[:level]) ? SHOW_ALWAYS : SHOW_SMALL_DESKTOP
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
-    show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options]
+    show_set = [show_teacher_options, show_student_options, show_pegasus_options]
     hamburger_class =
       if show_set.include? SHOW_ALWAYS
         SHOW_ALWAYS
       elsif show_set.include? SHOW_MOBILE
         SHOW_MOBILE
+      elsif show_set.include? SHOW_SMALL_DESKTOP
+        SHOW_SMALL_DESKTOP
       else
         HIDE_ALWAYS
       end
@@ -82,7 +84,6 @@ class Hamburger
       hamburger_class: hamburger_class,
       show_teacher_options: show_teacher_options,
       show_student_options: show_student_options,
-      show_signed_out_options: show_signed_out_options,
       show_pegasus_options: show_pegasus_options,
       show_intl_about: show_intl_about,
       show_help_options: show_help_options
@@ -91,250 +92,182 @@ class Hamburger
 
   def self.get_hamburger_contents(options)
     loc_prefix = options[:loc_prefix]
+    is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
+    is_level = options[:level]
 
-    teacher_entries = [
-      {title: "my_dashboard", url: CDO.studio_url("/home")},
-      {title: "course_catalog", url: CDO.studio_url("/courses?view=teacher")},
-      {title: "project_gallery", url: CDO.studio_url("/projects")},
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end
-
-    student_entries = [
-      {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
-      {title: "course_catalog", url: CDO.studio_url("/courses")},
-      {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"}
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end
-
-    signed_out_entries = [
-      {title: "course_catalog", url: CDO.studio_url("/courses")},
-      {title: "project_gallery", url: CDO.studio_url("/projects/public"), id: "hamburger-signed-out-projects"}
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end
-
-    if options[:language] == "en"
-      if options[:user_type] == "teacher"
-        teacher_entries << {
-          title: I18n.t("#{loc_prefix}professional_learning"),
-          url: CDO.studio_url("/my-professional-learning"),
-        }
-      end
-
-      entries = [teacher_entries, student_entries, signed_out_entries]
-      entries.each do |entry|
-        entry << {
-          title: I18n.t("#{loc_prefix}incubator"),
-          url: CDO.studio_url("/incubator"),
-        }
-      end
-    else
-      entries = [teacher_entries, student_entries, signed_out_entries]
-      entries.each do |entry|
-        entry << {
-          title: I18n.t("#{loc_prefix}about"),
-          url: CDO.code_org_url("/international/about"),
-          id: "header-intl-about"
-        }
-      end
-    end
-
-    # When viewing courses, a signed-out user in English gets the teacher view.
-    teach_url =
-      if !["teacher", "student"].include?(options[:user_type]) && options[:language] == "en"
-        "/courses?view=teacher"
-      else
-        "/courses"
-      end
-
-    educate_entries = [
-      {title: "educate_overview", url: CDO.studio_url(teach_url), id: "educate-overview"},
-      {title: "educate_elementary", url: CDO.code_org_url("/educate/curriculum/elementary-school")},
-      {title: "educate_middle", url: CDO.code_org_url("/educate/curriculum/middle-school")},
-      {title: "educate_high", url: CDO.code_org_url("/educate/curriculum/high-school")},
-      {title: "educate_hoc", url: "https://hourofcode.com"},
-      {title: "educate_partner", url: CDO.code_org_url("/educate/partner")},
-      {title: "educate_beyond", url: CDO.code_org_url("/educate/curriculum/3rd-party")},
-      {title: "educate_inspire", url: CDO.code_org_url("/educate/resources/inspire")},
-      {title: "educate_community", url: CDO.code_org_url("/educate/community")},
-      {title: "educate_requirements", url: CDO.code_org_url("/educate/it")},
-      {title: "educate_tools", url: CDO.code_org_url("/educate/resources/videos")},
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
-
-    about_entries = [
-      {title: "about_us", url: CDO.code_org_url("/about"), id: "about-us"},
-      {title: "about_leadership", url: CDO.code_org_url("/about/leadership")},
-      {title: "about_donors", url: CDO.code_org_url("/about/donors")},
-      {title: "about_partners", url: CDO.code_org_url("/about/partners")},
-      {title: "about_team", url: CDO.code_org_url("/about/team")},
-      {title: "about_news", url: CDO.code_org_url("/about/news")},
-      {title: "about_evaluation", url: CDO.code_org_url("/about/evaluation")},
-      {title: "about_jobs", url: CDO.code_org_url("/about/jobs")},
-      {title: "about_contact", url: CDO.code_org_url("/contact")},
-      {title: "about_faqs", url: CDO.code_org_url("/faq")},
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
-
-    legal_entries = [
-      {title: "legal_privacy", url: CDO.code_org_url("/privacy")},
-      {title: "legal_cookie_notice", url: CDO.code_org_url("/cookies")},
-      {title: "legal_tos", url: CDO.code_org_url("/tos")},
-    ].each do |entry|
-      entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
+    ge_region = Cdo::GlobalEdition.region_available?(options[:ge_region]) ? options[:ge_region] : :root
+    ge_config = Cdo::GlobalEdition.configuration_for(ge_region)[:header] || {}
+    ge_hamburger_config = ge_config[:hamburger] || {}
 
     # Get visibility CSS.
     visibility_options = {level: options[:level], language: options[:language], user_type: options[:user_type]}
     visibility = Hamburger.get_visibility(visibility_options)
 
-    # Generate the list of entries.
-
+    # We will build on the menu items here
     entries = []
 
-    # user_type-specific.
+    # We negotiate the region configuration for the hamburger items
+    hamburger_links = ge_hamburger_config[:teacher] || {}
+    if options[:user_type] == "student"
+      hamburger_links = ge_hamburger_config[:student] || {}
+    end
+    hamburger_items = hamburger_links.map {|item| item[:title]}
 
-    case options[:user_type]
-    when 'teacher'
-      entries = entries.concat teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]}
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_help_options]), id: "after-teacher"}
-    when 'student'
-      entries = entries.concat student_entries.each {|e| e[:class] = visibility[:show_student_options]}
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
-    else
-      entries = entries.concat signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]}
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_signed_out_options], visibility[:show_help_options]), id: "after-signed-out"}
+    # Then, we get the header contents, which we put into the hamburger menu
+    # when the width prohibits their visibility
+    header_links = get_header_contents(options)
+    header_items = header_links.map {|item| item[:key]}
+
+    # Then we add those first, with the proper visibility
+    # When we find a header entry that matches a hamburger option, we omit
+    # it in the hamburger menu unless it has mobile visibility
+    header_links_visibility = visibility[:show_teacher_options]
+    if options[:user_type] == "student"
+      header_links_visibility = visibility[:show_student_options]
+    end
+    entries.concat(header_links.filter_map do |header_link|
+      # Ignore if it is already in the hamburger items
+      next nil if hamburger_items.include?(header_link[:key])
+
+      # Convert 'hide' into 'show' to invert the visibility logic
+      # so that we 'show' the hamburger options when we 'hide' the
+      # header links
+      header_link[:class] = header_link[:class].gsub("hide", "show")
+
+      if header_link[:class].include?('show-small-desktop')
+        header_links_visibility = SHOW_SMALL_DESKTOP
+      end
+
+      # Ensure a unique id that is prepended with 'hamburger-'
+      header_link[:id] = "hamburger-#{header_link[:id]}" if header_link[:id]
+      if options[:user_type] == "teacher"
+        header_link[:class] = "#{header_link[:class]} #{visibility[:show_teacher_options]}"
+      elsif options[:user_type] == "student"
+        header_link[:class] = "#{header_link[:class]} #{visibility[:show_student_options]}"
+      end
+
+      header_link
+    end
+)
+
+    if options[:user_type] == "teacher"
+      entries << {type: "divider", class: get_divider_visibility(header_links_visibility, visibility[:show_help_options]), id: "after-teacher"}
+    elsif options[:user_type] == "student"
+      entries << {type: "divider", class: get_divider_visibility(header_links_visibility, visibility[:show_help_options]), id: "after-student"}
     end
 
+    # Show help links before Pegasus links for signed in users.
     help_contents = HelpHeader.get_help_contents(options)
-    entries.concat help_contents.each {|e| e[:class] = visibility[:show_help_options]}
-    entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
-
-    # Pegasus options.
-
-    entries << {
-      title: I18n.t("#{loc_prefix}learn"),
-      url: CDO.studio_url("/courses"),
-      class: visibility[:show_pegasus_options],
-      id: "learn"
-    }
-
-    if options[:language] == "en"
-      entries << {
-        type: "expander",
-        title: I18n.t("#{loc_prefix}teach"),
-        id: "educate_entries",
-        subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-        class: visibility[:show_pegasus_options]
-      }
+    if is_teacher_or_student
+      entries.concat(help_contents.each do |e|
+        e[:class] = visibility[:show_help_options]
+        # Ensure a unique id that is prepended with 'hamburger-'
+        e[:id] = "hamburger-#{e[:id]}" if e[:id]
+      end
+)
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
     end
 
-    entries << {
-      title: I18n.t("#{loc_prefix}stats"),
-      url: CDO.code_org_url("/promote"),
-      class: visibility[:show_pegasus_options],
-      id: "stats"
-    }
+    # For each one, we localize the link contents and add it to our list
+    entries.concat(hamburger_links.map do |link|
+      link = link.dup
 
-    entries << {
-      title: I18n.t("#{loc_prefix}help_us"),
-      url: CDO.code_org_url("/help"),
-      class: visibility[:show_pegasus_options],
-      id: "help-us"
-    }
+      # This item is also in the header, give it the same visibility class
+      # so that it appears when the header items disappear.
+      header_index = header_items.index(link[:title])
+      unless header_index.nil?
+        link[:class] = header_links[header_index][:class]
+        # Invert the visibility
+        link[:class] = link[:class].gsub("hide", "show")
+      end
 
-    if options[:language] == "en"
-      entries << {
-        type: "expander",
-        title: I18n.t("#{loc_prefix}about"),
-        id: "about_entries",
-        subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-        class: visibility[:show_pegasus_options]
-      }
+      link[:title] = I18n.t("#{loc_prefix}#{link[:title]}")
+      if link[:domain] == 'studio.code.org'
+        link[:url] = CDO.studio_url(link[:url])
+      elsif link[:domain] == 'code.org'
+        link[:url] = CDO.code_org_url(link[:url])
+      end
+
+      # Also handle subentries
+      if link[:subentries]
+        link[:subentries] = link[:subentries].filter_map do |sublink|
+          sublink = sublink.dup
+          if sublink[:domain] == 'studio.code.org'
+            sublink[:url] = CDO.studio_url(sublink[:url])
+          elsif sublink[:domain] == 'code.org'
+            sublink[:url] = CDO.code_org_url(sublink[:url])
+          end
+
+          # Also handle subentries that are already header items and make sure those
+          # do not appear in the submenu.
+          header_index = header_items.index(sublink[:title])
+          next nil unless header_index.nil?
+
+          # Localize the title
+          sublink[:title] = I18n.t("#{loc_prefix}#{sublink[:title]}")
+          sublink
+        end
+      end
+
+      link
     end
+)
 
-    entries << {
-      type: "expander",
-      title: I18n.t("#{loc_prefix}legal"),
-      id: "legal_entries",
-      subentries: legal_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-      class: visibility[:show_pegasus_options]
-    }
+    # Show help links at the bottom of the list for signed out users.
+    unless is_teacher_or_student
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]) + (is_level ? "  hide-large-desktop" : ""), id: "before-help"}
+      entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
+    end
 
     {entries: entries, visibility: visibility[:hamburger_class]}
   end
 
+  # Main header navigation links next to the Code.org logo.
   def self.get_header_contents(options)
     loc_prefix = options[:loc_prefix]
-    header_links = []
 
-    any_teacher_links = [
-      {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
-      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-teacher-courses"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
-    ]
+    ge_region = Cdo::GlobalEdition.region_available?(options[:ge_region]) ? options[:ge_region] : :root
+    ge_config = Cdo::GlobalEdition.configuration_for(ge_region)[:header] || {}
+    ge_top_config = ge_config[:top] || {}
 
-    en_teacher = [
-      {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"},
-      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
-    ]
-
-    any_student_links = [
-      {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
-      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
-    ]
-
-    en_student = [
-      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
-    ]
-
-    en_signed_out_links = [
-      # When signed out, "Learn" will take an English user to the student view of /courses.
-      {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-en-learn"},
-      # When signed out, "Teach" will take an English user to the teacher view of /courses.
-      {title: I18n.t("#{loc_prefix}teach"), url: CDO.studio_url("/courses?view=teacher"), id: "header-en-teach"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-en-projects"},
-      {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
-      {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
-      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-en-incubator"},
-      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
-    ]
-
-    non_en_signed_out_links = [
-      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
-      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-non-en-projects"},
-    ]
-
-    about_intl = [
-      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/international/about"), id: "header-non-en-about"}
-    ]
-
+    links = ge_top_config[:signed_out] || []
     if options[:user_type] == "teacher"
-      header_links = any_teacher_links
-      if options[:language] == "en"
-        header_links.concat(en_teacher)
-      else
-        header_links.concat(about_intl)
-      end
+      links = ge_top_config[:teacher] || []
     elsif options[:user_type] == "student"
-      header_links = any_student_links
-      if options[:language] == "en"
-        header_links.concat(en_student)
-      else
-        header_links.concat(about_intl)
-      end
-    else
-      if options[:language] == "en"
-        header_links = en_signed_out_links
-      else
-        header_links.concat(non_en_signed_out_links).concat(about_intl)
-      end
+      links = ge_top_config[:student] || []
     end
-    header_links
+
+    # Translate the titles and create fully-formed URLs
+    links = links.map.with_index do |info, i|
+      if info.is_a? Hash
+        info = info.dup
+        info[:key] = info[:title]
+        i18n_prefix = info[:loc_prefix] || loc_prefix
+        info[:title] = I18n.t("#{i18n_prefix}#{info[:title]}")
+        if info[:domain] == 'studio.code.org'
+          info[:url] = CDO.studio_url(info[:url])
+        elsif info[:domain] == 'code.org'
+          info[:url] = CDO.code_org_url(info[:url])
+        end
+      end
+
+      # Only show three options when small
+      # We have a 'hide-small-desktop' which hides it when the width gets to be small
+      # And, confusingly, a 'show-small-desktop' which is for things that
+      # show up when the width is *very* small
+      # Specifying both will cause it to disappear for medium width but also
+      # continue to appear in very small widths.
+      #
+      # The exact rule here is: collapse all but the first 3 links when there are
+      # 6 or more links total
+      info[:class] = if i > 2 && links.length > 5
+                       HIDE_SMALL_DESKTOP
+                     else
+                       HIDE_MOBILE
+                     end
+      info
+    end
+
+    links
   end
 end

@@ -1,15 +1,17 @@
+import throttle from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '../../util/color';
-import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
+
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import styleConstants from '../../styleConstants';
-import throttle from 'lodash/debounce';
-import FontAwesome from '../FontAwesome';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import color from '../../util/color';
 
 export const QuickActionsCellType = {
   header: 'header',
-  body: 'body'
+  body: 'body',
 };
 
 export default class QuickActionsCell extends Component {
@@ -21,12 +23,12 @@ export default class QuickActionsCell extends Component {
       study_group: PropTypes.string,
       event: PropTypes.string,
       user_id: PropTypes.number,
-      data_json: PropTypes.string
-    })
+      data_json: PropTypes.string,
+    }),
   };
 
   static defaultProps = {
-    type: QuickActionsCellType.body
+    type: QuickActionsCellType.body,
   };
 
   state = {
@@ -34,7 +36,18 @@ export default class QuickActionsCell extends Component {
     canOpen: true,
     menuTop: 0, // location of dropdown menu
     menuLeft: 0,
-    currWindowWidth: window.innerWidth // used to calculate location of menu on resize
+    currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
+  };
+
+  handleClick = e => {
+    e.stopPropagation();
+
+    if (this.state.open) {
+      this.close();
+      this.onClose();
+    } else {
+      this.state.canOpen ? this.open() : undefined;
+    }
   };
 
   // Menu open
@@ -57,7 +70,7 @@ export default class QuickActionsCell extends Component {
   onClose = () => {
     this.setState({
       open: false,
-      canOpen: true
+      canOpen: true,
     });
   };
 
@@ -72,13 +85,13 @@ export default class QuickActionsCell extends Component {
           rect.left -
           rect.width -
           (windowWidth - this.state.currWindowWidth) / 2,
-        currWindowWidth: window.innerWidth
+        currWindowWidth: window.innerWidth,
       });
     } else {
       // Accounts for scrolling or resizing when scrollable
       this.setState({
         menuTop: rect.bottom + window.pageYOffset,
-        menuLeft: rect.left - rect.width + window.pageXOffset
+        menuLeft: rect.left - rect.width + window.pageXOffset,
       });
     }
   };
@@ -89,7 +102,7 @@ export default class QuickActionsCell extends Component {
 
     const icons = {
       header: 'cog',
-      body: 'chevron-down'
+      body: 'chevron-down',
     };
 
     const styleByType =
@@ -102,7 +115,7 @@ export default class QuickActionsCell extends Component {
     const iconStyle = {
       ...styles.icon,
       ...styleByType,
-      ...hoverStyle
+      ...hoverStyle,
     };
 
     return (
@@ -110,8 +123,15 @@ export default class QuickActionsCell extends Component {
         <FontAwesome
           icon={icons[type]}
           style={iconStyle}
-          onClick={this.state.canOpen ? this.open : undefined}
           className="ui-test-section-dropdown ui-projects-table-dropdown"
+          onClick={this.handleClick}
+          tabIndex="0"
+          onKeyDown={e => {
+            if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {
+              e.preventDefault();
+              this.state.canOpen ? this.open() : undefined;
+            }
+          }}
         />
         <PopUpMenu
           targetPoint={targetPoint}
@@ -132,27 +152,24 @@ const styles = {
     paddingRight: 5,
     paddingTop: 4,
     paddingBottom: 4,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   actionButton: {
     [QuickActionsCellType.body]: {
       border: '1px solid ' + color.white,
       borderRadius: 5,
-      color: color.darker_gray,
-      margin: 3
+      margin: 3,
     },
     [QuickActionsCellType.header]: {
       fontSize: 20,
       lineHeight: '15px',
-      color: color.charcoal
-    }
+    },
   },
   hoverFocus: {
     [QuickActionsCellType.body]: {
       backgroundColor: color.lighter_gray,
       border: '1px solid ' + color.light_gray,
       borderRadius: 5,
-      color: color.white
-    }
-  }
+    },
+  },
 };

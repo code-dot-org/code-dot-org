@@ -1,7 +1,9 @@
-var utils = require('@cdo/apps/utils');
+import {GamelabBlocks} from '@cdo/generated-scripts/sharedGamelabBlocks';
+
 var blockUtils = require('@cdo/apps/block_utils');
+var utils = require('@cdo/apps/utils');
+
 var tb = blockUtils.createToolbox;
-import {GamelabBlocks} from '@cdo/apps/p5lab/gamelab/sharedGamelabBlocks';
 
 /**
  * Properties of the game lab level object
@@ -36,18 +38,19 @@ levels.sandbox = {
   ideal: Infinity,
   requiredBlocks: [],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   freePlay: true,
   toolbox: tb(),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
 
 // Base config for levels created via levelbuilder
 levels.custom = utils.extend(levels.sandbox, {
   editCode: true,
   codeFunctions: GamelabBlocks,
-  startBlocks: null
+  startBlocks: null,
 });
 
 levels.ec_sandbox = utils.extend(levels.custom, {});

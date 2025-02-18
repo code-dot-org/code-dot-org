@@ -1,4 +1,7 @@
 require 'test_reporter'
+require 'faker'
+
+require_relative '../../lib/cdo/ci_utils'
 
 if defined? ActiveRecord
   ActiveRecord::Migration&.check_pending!
@@ -10,8 +13,8 @@ Minitest.extensions.delete('rails')
 Minitest.extensions.unshift('rails')
 
 reporters = [CowReporter.new]
-if ENV['CIRCLECI']
-  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV['CIRCLE_TEST_REPORTS']}/dashboard")
+if CI::Utils.ci_job_ui_tests?
+  reporters << Minitest::Reporters::JUnitReporter.new("#{ENV.fetch('CI_TEST_REPORTS', nil)}/dashboard")
 end
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
@@ -29,11 +32,12 @@ ENV['TZ'] = 'UTC'
 require 'mocha/mini_test'
 
 CDO.stubs(:rack_env).returns(:test) if defined? CDO
-Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.application)
+Rails.application&.reload_routes! if defined?(Rails) && defined?(Rails.application)
 
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
+I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
 CDO.stubs(override_pegasus: nil)
 CDO.stubs(override_dashboard: nil)
 
@@ -51,7 +55,9 @@ require 'dynamic_config/dcdo'
 require 'testing/setup_all_and_teardown_all'
 require 'testing/lock_thread'
 require 'testing/transactional_test_case'
+require 'testing/spec_syntax'
 require 'testing/capture_queries'
+require 'testing/rspec_mocks'
 
 require 'parallel_tests/test/runtime_logger'
 
@@ -87,13 +93,22 @@ class ActiveSupport::TestCase
     CDO.stubs(:optimize_webpack_assets).returns(false)
     CDO.stubs(:use_my_apps).returns(true)
 
+    # Don't attempt to make actual AWS API calls, either, for the same reason
     AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
+    AWS::S3.stubs(:exists_in_bucket).returns(true)
   end
 
   teardown do
     Dashboard::Application.config.action_controller.perform_caching = false
     I18n.locale = I18n.default_locale
     set_env :test
+  end
+
+  def after_teardown
+    super
+  ensure
+    # Ensures the time for the next tests is unfrozen.
+    Timecop.return if Timecop.frozen?
   end
 
   def panda_panda
@@ -123,13 +138,26 @@ class ActiveSupport::TestCase
     AWS::S3.expects(:upload_to_bucket).never
   end
 
+  # helper method to stub out the source data for a project when we don't want to look in s3
+  def stub_project_source_data(channel_id, code: 'fake-code', version_id: 'fake-version-id')
+    fake_main_json = {source: code}.to_json
+    fake_source_data = {
+      status: 'FOUND',
+      body: StringIO.new(fake_main_json),
+      version_id: version_id,
+      last_modified: DateTime.now
+    }
+    SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
+  end
+
   # Add more helper methods to be used by all tests here...
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
   include ActiveSupport::Testing::SetupAllAndTeardownAll
   include ActiveSupport::Testing::TransactionalTestCase
+  include ActiveSupport::Testing::SpecSyntax
   include CaptureQueries
 
-  setup_all do
+  def seed_deprecated_unit_fixtures
     # Some of the functionality we're testing here relies on Scripts with
     # certain hardcoded names. In the old fixture-based model, this data was
     # all provided; in the new factory-based model, we need to do a little
@@ -170,30 +198,22 @@ class ActiveSupport::TestCase
     end
   end
 
-  def assert_creates(*args)
-    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
-      yield
-    end
+  def assert_creates(*args, &block)
+    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end
 
-  def assert_does_not_create(*args)
-    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
-      yield
-    end
+  def assert_does_not_create(*args, &block)
+    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end
   alias refute_creates assert_does_not_create
   alias refute_creates_or_destroys assert_does_not_create
 
-  def assert_destroys(*args)
-    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, -1) do
-      yield
-    end
+  def assert_destroys(*args, &block)
+    assert_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, -1, &block)
   end
 
-  def assert_does_not_destroy(*args)
-    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}) do
-      yield
-    end
+  def assert_does_not_destroy(*args, &block)
+    assert_no_difference(args.collect(&:to_s).collect {|class_name| "#{class_name}.count"}, &block)
   end
 
   #
@@ -255,6 +275,10 @@ class ActiveSupport::TestCase
     end
   end
 
+  def set_request_locale(locale)
+    request.env['cdo.locale'] = locale
+  end
+
   def with_default_locale(locale)
     original_locale = I18n.default_locale
     request.env['cdo.locale'] = I18n.default_locale = locale
@@ -270,7 +294,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Security/Eval
-      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
+      e.respond_to?(:call) ? e : -> {eval(e, block.binding)}
       # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
@@ -280,7 +304,7 @@ class ActiveSupport::TestCase
     expressions.zip(exps).each_with_index do |(code, e), i|
       error  = "#{code.inspect} didn't change"
       error  = "#{message}.\n#{error}" if message
-      assert_not_equal(before[i], e.call, error)
+      refute_equal(before[i], e.call, error)
     end
   end
 
@@ -291,7 +315,7 @@ class ActiveSupport::TestCase
 
     exps = expressions.map do |e|
       # rubocop:disable Security/Eval
-      e.respond_to?(:call) ? e : lambda {eval(e, block.binding)}
+      e.respond_to?(:call) ? e : -> {eval(e, block.binding)}
       # rubocop:enable Security/Eval
     end
     before = exps.map(&:call)
@@ -319,9 +343,9 @@ class ActiveSupport::TestCase
   def assert_raises_matching(matcher)
     assert_raises do
       yield
-    rescue => err
-      assert_match matcher, err.to_s
-      raise err
+    rescue => exception
+      assert_match matcher, exception.message
+      raise exception
     end
   end
 
@@ -334,11 +358,7 @@ class ActiveSupport::TestCase
   end
 
   def assert_caching_disabled(cache_control_header)
-    expected_directives = [
-      'no-store',
-      'max-age=0',
-      'must-revalidate'
-    ]
+    expected_directives = ['no-store']
     assert_cache_control_match expected_directives, cache_control_header
   end
 
@@ -356,7 +376,7 @@ class ActiveSupport::TestCase
   #   class MyTest < ActiveSupport::TestCase
   #     freeze_time
   #     #...
-  def self.freeze_time(time=nil)
+  def self.freeze_time(time = nil)
     time ||= Time.now.utc.to_date + 9.hours
     setup do
       Timecop.freeze time
@@ -444,7 +464,7 @@ class ActionController::TestCase
   # @param method [Symbol, String] http method with which to perform the action (default :get)
   # @param response [Symbol, String, Number] expected response (default :success)
   # @param user [Symbol, String, Proc] user to log in, or nil to test as a not-logged-in user (default: nil)
-  #   It can be a factory name to be passed to FactoryGirl.create,
+  #   It can be a factory name to be passed to FactoryBot.create,
   #   or a proc that runs in the context of the test case and returns a user.
   # @param params [Hash, Proc] params to pass to the action. It can be a direct hash,
   #   or a proc that generates a hash at runtime in the context of the test case.
@@ -499,7 +519,7 @@ class ActionController::TestCase
       params = instance_exec(&params) if params.is_a? Proc
 
       if user
-        # user can be a symbol or string for FactoryGirl creation,
+        # user can be a symbol or string for FactoryBot creation,
         # or a proc that returns a user object at runtime
         actual_user = user.is_a?(Proc) ? instance_exec(&user) : create(user)
         sign_in actual_user
@@ -533,7 +553,7 @@ class ActionController::TestCase
     end
   end
 
-  def assert_sharing_meta_tags(opts={})
+  def assert_sharing_meta_tags(opts = {})
     # example:
     # <meta content="500177453358606" property="fb:app_id" />
     # <meta content="article" property="og:type" />
@@ -595,6 +615,7 @@ class ActionController::TestCase
 end
 
 class ActionDispatch::IntegrationTest
+  include ActiveJob::TestHelper
   include Devise::Test::IntegrationHelpers
 
   setup do

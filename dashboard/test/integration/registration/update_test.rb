@@ -18,17 +18,16 @@ module RegistrationsControllerTests
       assert_response :bad_request
     end
 
-    test "update student with utf8mb4 in name fails" do
+    test "update student with utf8mb4 in name succeeds" do
       student = create :student
 
       sign_in student
 
-      assert_does_not_create(User) do
-        put '/users', params: {user: {name: panda_panda}}
-      end
-      assert_response :success # which actually means an error...
-      assert_equal ['Display Name is invalid'], assigns(:user).errors.full_messages
-      assert_select 'div#error_explanation', /Display Name is invalid/ # ... is rendered on the page
+      put '/users', params: {format: :js, user: {name: panda_panda}}
+      assert_response :no_content
+
+      student.reload
+      assert_equal panda_panda.sanitize_utf8mb4, student.name
     end
 
     test "update student with age" do
@@ -40,7 +39,7 @@ module RegistrationsControllerTests
         put '/users', params: {format: :js, user: {age: 9}}
         assert_response :no_content
 
-        assert_equal Date.today - 9.years, assigns(:user).birthday
+        assert_equal Time.zone.today - 9.years, assigns(:user).birthday
       end
     end
 
@@ -260,9 +259,7 @@ module RegistrationsControllerTests
       assert can_edit_password_with_password? teacher_with_password, 'oldpassword'
     end
 
-    private
-
-    def can_edit_password_without_password?(user)
+    private def can_edit_password_without_password?(user)
       new_password = 'newpassword'
 
       sign_in user
@@ -277,7 +274,7 @@ module RegistrationsControllerTests
       user.valid_password? new_password
     end
 
-    def can_edit_password_with_password?(user, current_password)
+    private def can_edit_password_with_password?(user, current_password)
       new_password = 'newpassword'
 
       sign_in user

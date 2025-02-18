@@ -1,0 +1,22 @@
+name 'CSA U1L5-L5_pilot_alt-2025'
+title 'Check for Understanding'
+
+right 'A `while` loop always makes decisions about whether or not to run the code in the body of the loop.'
+wrong 'The code inside the body of a `while` loop always runs forever.'
+wrong 'The code inside the body of a `while` always runs multiple times.'
+wrong 'The code inside the body of a `while` loop always runs only once.'
+wrong 'The code inside the body of a `while` loop never runs.'
+
+markdown <<MARKDOWN
+Which of the following is ALWAYS true about a `while` loop?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+A `while` loop always make decisions about whether or not to run the code in the body of the loop.
+
+While it is possible that the code inside the body of a `while` loop can run forever, multiple times, or only once based on the number of times the condition is `true`, this is not *always* the case.
+
+It is also possible that the code inside the body of a `while` loop never runs if the condition is never `true`, this is not *always* the case.
+MARKDOWN
+
+allow_multiple_attempts true

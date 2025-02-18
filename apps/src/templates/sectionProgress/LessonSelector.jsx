@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {h3Style} from '../../lib/ui/Headings';
+
 import i18n from '@cdo/locale';
+
+import {h3Style} from '../../legacySharedComponents/Headings';
 
 class LessonSelector extends Component {
   static propTypes = {
     lessons: PropTypes.arrayOf(PropTypes.object).isRequired,
     onChange: PropTypes.func.isRequired,
-    lessonOfInterest: PropTypes.number.isRequired
+    lessonOfInterest: PropTypes.number.isRequired,
   };
 
   render() {
@@ -42,15 +44,15 @@ const styles = {
     height: 34,
     paddingLeft: 5,
     paddingRight: 5,
-    width: 300
+    width: 300,
   },
   heading: {
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 };
 
 export const UnconnectedLessonSelector = LessonSelector;
 
 export default connect(state => ({
-  lessonOfInterest: state.sectionProgress.lessonOfInterest
+  lessonOfInterest: state.sectionProgress.lessonOfInterest,
 }))(LessonSelector);

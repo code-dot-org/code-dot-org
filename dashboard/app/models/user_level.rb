@@ -32,6 +32,8 @@ class UserLevel < ApplicationRecord
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
+  store :properties, accessors: %i[locale locale_supported], coder: JSON
+
   belongs_to :user, optional: true
   belongs_to :level, optional: true
   belongs_to :script, class_name: 'Unit', optional: true
@@ -39,6 +41,8 @@ class UserLevel < ApplicationRecord
 
   after_save :after_submit, if: :submitted_or_resubmitted?
   before_save :before_unsubmit, if: ->(ul) {ul.submitted_changed? from: true, to: false}
+
+  validates :locale, inclusion: {in: I18n.available_locales.as_json}, allow_nil: true, if: :locale_changed?
 
   # TODO(asher): Consider making these scopes and the methods below more consistent, in tense and in
   # word choice.
@@ -65,26 +69,6 @@ class UserLevel < ApplicationRecord
 
   def passing?
     ActivityConstants.passing?(best_result)
-  end
-
-  # Retrieves and memoizes the latest PairedUserLevel that's associated with
-  # this UserLevel for internal callers. External callers should call one of
-  # the higher-level pairing-related methods below.
-  #
-  # Conceptually, each UserLevel should only be associated with one
-  # PairedUserLevel. However, since we don't clean up previous entries in the
-  # paired_user_levels table when posting progress, there can be multiple
-  # entries in the paired_user_levels table associated with a user_level. We
-  # heuristically consider the latest entry in the paired_user_levels table as
-  # the "active" one. This is correct for most cases but can be incorrect in
-  # some edge cases such as when a student leaves a pairing group and makes
-  # further progress on a level as an individual.
-  private def latest_paired_user_level
-    return @latest_paired_user_level if defined? @latest_paired_user_level
-    @latest_paired_user_level =
-      PairedUserLevel.where(driver_user_level_id: id).
-        or(PairedUserLevel.where(navigator_user_level_id: id)).
-        last
   end
 
   # Returns whether this UserLevel represents progress completed by a pairing
@@ -235,7 +219,7 @@ class UserLevel < ApplicationRecord
     user_level.save!(touch: false)
   end
 
-  def self.update_best_result(user_id, level_id, script_id, best_result, touch_updated_at = true)
+  def self.update_best_result(user_id, level_id, script_id, best_result, touch_updated_at: true)
     user_level = UserLevel.find_by(
       level_id: level_id,
       script_id: script_id,
@@ -257,16 +241,34 @@ class UserLevel < ApplicationRecord
     joins(:user).merge(users).passing.group(:user_id).count
   end
 
+  # Retrieves and memoizes the latest PairedUserLevel that's associated with
+  # this UserLevel for internal callers. External callers should call one of
+  # the higher-level pairing-related methods below.
+  #
+  # Conceptually, each UserLevel should only be associated with one
+  # PairedUserLevel. However, since we don't clean up previous entries in the
+  # paired_user_levels table when posting progress, there can be multiple
+  # entries in the paired_user_levels table associated with a user_level. We
+  # heuristically consider the latest entry in the paired_user_levels table as
+  # the "active" one. This is correct for most cases but can be incorrect in
+  # some edge cases such as when a student leaves a pairing group and makes
+  # further progress on a level as an individual.
+  private def latest_paired_user_level
+    return @latest_paired_user_level if defined? @latest_paired_user_level
+    @latest_paired_user_level =
+      PairedUserLevel.where(driver_user_level_id: id).
+        or(PairedUserLevel.where(navigator_user_level_id: id)).
+        last
+  end
+
   # Making unlocked_at private ensures future updates will use the locked
   # virtual attribute directly, avoiding the need to recalculate a value
   # for locked based on the 'unlocked_at' field in the db.
-  private
-
-  def unlocked_at
+  private def unlocked_at
     self[:unlocked_at]
   end
 
-  def unlocked_at=(val)
+  private def unlocked_at=(val)
     write_attribute :unlocked_at, val
   end
 end

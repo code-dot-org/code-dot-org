@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:59:33.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "editable"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    },
+    "long_instructions": "## Isaac's Cooking Chatbot\r\n\r\nMake the chatbot your class decided on!\r\n\r\n(If you lost your activity guide, <a href=\"https://docs.google.com/document/d/1-lIWtV556QCZ2hUlaHajtTugty9-TWy84YGk8UvXZH4/edit\" target=\"_blank\">click here to see Isaac's scenario</a>)\r\n\r\n### Do This\r\n\r\n1) Make Isaac's chatbot! Choose a system prompt that represents the decisions made as a class\r\n2) Test the chatbot to make sure it works as expected! You'll need to write down how you tested the chatbot on your model card!\r\n3) Create a Model Card based on these decisions\r\n4) \"Publish\" the chatbot and see how it would look to a user!\r\n    - Press the <code class=\"visual-block\" style=\"color:white; background-color:#7435b2\">Publish</code> button and you'll be taken to the User View. ",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:59:33.034+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-modelcards-practice-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-modelcards-practice-L1\"}]"
+}]]></config>
+</Aichat>

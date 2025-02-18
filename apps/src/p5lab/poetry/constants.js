@@ -1,10 +1,13 @@
+import {EFFECTS_PALETTES} from '../constants';
+
 export const PoetryStandaloneApp = {
   Poetry: 'poetry',
   PoetryHoc: 'poetry_hoc',
-  TimeCapsule: 'time_capsule'
+  TimeCapsule: 'time_capsule',
 };
 
 export const PALETTES = {
+  ...EFFECTS_PALETTES,
   grayscale: [
     '#000000',
     '#333333',
@@ -12,21 +15,18 @@ export const PALETTES = {
     '#999999',
     '#CCCCCC',
     '#EEEEEE',
-    '#FFFFFF'
+    '#FFFFFF',
   ],
   sky: ['#3878A4', '#82A9B1', '#ECCEC4', '#F8B8A8', '#E4929C', '#7D7095'],
-  ocean: ['#7FD0F5', '#3FABE3', '#2C7DBB', '#1D57A0', '#144188', '#061F4B'],
   sunrise: ['#F5DC72', '#F4B94F', '#F48363', '#F15C4C', '#372031'],
   sunset: ['#530075', '#921499', '#E559BB', '#F7B9DD', '#307087', '#123F50'],
   spring: ['#303F06', '#385202', '#547607', '#85AF4C', '#C1E876', '#D7FF6B'],
   summer: ['#FAD0AE', '#F69F88', '#EE6E51', '#BC4946', '#425D19', '#202E14'],
   autumn: ['#484F0C', '#AEA82E', '#EEBB10', '#D46324', '#731B31', '#4A173C'],
   winter: ['#EAECE8', '#E3DDDF', '#D3CEDC', '#A2B6BF', '#626C7D', '#A4C0D0'],
-  twinkling: ['#FFC702', '#FC9103', '#F17302', '#B83604', '#7E1301'],
   rainbow: ['#A800FF', '#0079FF', '#00F11D', '#FF7F00', '#FF0900'],
-  roses: ['#4C0606', '#86003C', '#E41F7B', '#FF8BA0 ', '#FFB6B3']
+  roses: ['#4C0606', '#86003C', '#E41F7B', '#FF8BA0 ', '#FFB6B3'],
 };
-
 // Notes:
 // - author is not translated.
 // - Poems are shown in all languages, unless there is a locales attribute, in which case
@@ -46,11 +46,11 @@ export const POEMS = {
   ewing: {author: 'Eve L. Ewing'},
   alexander: {
     author:
-      'Kwame Alexander\nfrom "Booked" used by permission of Kwame Alexander'
+      'Kwame Alexander\nfrom "Booked" used by permission of Kwame Alexander',
   },
   harjo: {
     author:
-      'Joy Harjo  Copyright © 1983\nfrom SHE HAD SOME HORSES by Joy Harjo.\nUsed by permission of W. W. Norton & Company, Inc.'
+      'Joy Harjo  Copyright © 1983\nfrom SHE HAD SOME HORSES by Joy Harjo.\nUsed by permission of W. W. Norton & Company, Inc.',
   },
   po: {author: 'Li Po'},
   tzu: {author: 'Lao Tzu'},
@@ -63,6 +63,9 @@ export const POEMS = {
   lomeli1: {author: 'Caia Lomeli'},
   lomeli2: {author: 'Caia Lomeli'},
   frost: {author: 'Robert Frost'},
+  hope: {author: 'Ishmael Angaluuk Hope'},
+  priest: {author: 'Rena Priest'},
+  whitney: {author: 'Jael Whitney'},
   cb: {
     locales: ['en_us'],
     author: 'C. B.',
@@ -77,8 +80,8 @@ export const POEMS = {
       'over and over again.',
       'When I go to a new city',
       'with different smells, sounds, and feelings,',
-      "I'll still remember everything my city had."
-    ]
+      "I'll still remember everything my city had.",
+    ],
   },
   rusinek1: {
     locales: ['pl_pl'],
@@ -97,8 +100,8 @@ export const POEMS = {
       'zaczepne, rogate',
       'i okropnie pyskate!',
       'Kto słyszy ich awantury,',
-      'chowa się do mysiej dziury.'
-    ]
+      'chowa się do mysiej dziury.',
+    ],
   },
   rusinek2: {
     locales: ['pl_pl'],
@@ -113,8 +116,8 @@ export const POEMS = {
       'Ważne, by podczas rozmowy',
       'nie przyszło ci czasem do głowy',
       'kręcić kurkiem, uparciuszku,',
-      'bo będziesz mieć wodę w uszku!'
-    ]
+      'bo będziesz mieć wodę w uszku!',
+    ],
   },
   rusinek3: {
     locales: ['pl_pl'],
@@ -139,8 +142,8 @@ export const POEMS = {
       'Ustawiałby górnik na full',
       'swój toster – i siadał jak król.',
       'A węgiel by robił się sam.',
-      'No, mówię wam!'
-    ]
+      'No, mówię wam!',
+    ],
   },
   rusinek4: {
     locales: ['pl_pl'],
@@ -150,8 +153,8 @@ export const POEMS = {
       'Bez względu na to, czy w wazonie',
       'stoją żonkile, czy piwonie,',
       'wazon jest przede wszystkim po to,',
-      'by dać się czasem rozbić kotom.'
-    ]
+      'by dać się czasem rozbić kotom.',
+    ],
   },
   rusinek5: {
     locales: ['pl_pl'],
@@ -171,8 +174,8 @@ export const POEMS = {
       'Ten, kto na podróż w czasie ma chętkę,',
       'może odkręcić jedną zakrętkę:',
       'wtedy ze środka uleci wokół',
-      'trochę powietrza – z zeszłego roku!'
-    ]
+      'trochę powietrza – z zeszłego roku!',
+    ],
   },
   quasimodo: {
     locales: ['it_it'],
@@ -191,8 +194,8 @@ export const POEMS = {
       'che oggi rispecchia nei fossi',
       'più azzurro il suo pezzo di cielo,',
       'quel verde che spacca la scorza',
-      "che pure stanotte non c'era."
-    ]
+      "che pure stanotte non c'era.",
+    ],
   },
   pascoli: {
     locales: ['it_it'],
@@ -208,8 +211,8 @@ export const POEMS = {
       "sul mare è apparso un bel ponte d'argento.",
       '  ',
       'Ponte gettato sui laghi sereni,',
-      'per chi dunque sei fatto e dove meni?'
-    ]
+      'per chi dunque sei fatto e dove meni?',
+    ],
   },
   rodari: {
     locales: ['it_it'],
@@ -226,8 +229,8 @@ export const POEMS = {
       "e liberò i prigionieri cancellando l'accento.",
       '  ',
       'Ora ai giardini pubblici han dedicato un busto',
-      '"A colui che sa mettere gli accenti al posto giusto".'
-    ]
+      '"A colui che sa mettere gli accenti al posto giusto".',
+    ],
   },
   ungaretti: {
     locales: ['it_it'],
@@ -244,8 +247,8 @@ export const POEMS = {
       'Mi riconosco',
       'immagine passeggera',
       '  ',
-      'Presa in un giro immortale.'
-    ]
+      'Presa in un giro immortale.',
+    ],
   },
   carducci1: {
     locales: ['it_it'],
@@ -264,8 +267,8 @@ export const POEMS = {
       '  ',
       "E del grave occhio glauco entro l'austera",
       'Dolcezza si rispecchia ampio e quieto',
-      'Il divino del pian silenzio verde.'
-    ]
+      'Il divino del pian silenzio verde.',
+    ],
   },
   carducci2: {
     locales: ['it_it'],
@@ -279,9 +282,9 @@ export const POEMS = {
       "Gira su' ceppi accesi lo spiedo scoppiettando:",
       "sta il cacciator fischiando sull'uscio a rimirar",
       "tra le rossastre nubi stormi d'uccelli neri,",
-      "com'esuli pensieri, nel vespero migrar."
-    ]
-  }
+      "com'esuli pensieri, nel vespero migrar.",
+    ],
+  },
 };
 
 export const TIME_CAPSULE_POEMS = {
@@ -298,8 +301,8 @@ export const TIME_CAPSULE_POEMS = {
       'Something happening right now is Yo MTV Raps',
       'Watching Salt-N-Pepa and LL Cool J, mad snaps',
       'Slap bracelets are something cool',
-      'And neon colors, they totally rule.'
-    ]
+      'And neon colors, they totally rule.',
+    ],
   },
   erin: {author: 'Erin P.'},
   aryanna: {
@@ -315,8 +318,8 @@ export const TIME_CAPSULE_POEMS = {
       'In my neighborhood, we all have our own flair,',
       'People I know like to ride bikes, and style their hair.',
       "Something fun right now is TikTok, can't you see?",
-      'Dancing is popular, and I love the energy.'
-    ]
+      'Dancing is popular, and I love the energy.',
+    ],
   },
   tj: {author: 'TJ'},
   erik: {author: 'Erik D.'},
@@ -324,5 +327,5 @@ export const TIME_CAPSULE_POEMS = {
   noemi: {author: 'Noemi R.'},
   ken: {author: 'Ken A.'},
   mike: {author: 'Mike H.'},
-  jess: {author: 'Jess B.'}
+  jess: {author: 'Jess B.'},
 };

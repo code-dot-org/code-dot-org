@@ -7,25 +7,30 @@
  * Confetti component directly.
  */
 
-import Confetti from 'react-dom-confetti';
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import Confetti from 'react-dom-confetti';
 
 const defaultStyle = {
   position: 'relative',
-  left: '50%'
+  left: '50%',
 };
 
+/*
+  Makes confetti appear first behind and then in front of any HTML element.
+  Confetti appears when the `active` prop is changed from false to true.
+  `active` must start false in order to show confetti.
+*/
 export default class BackToFrontConfetti extends React.Component {
   static propTypes = {
     style: PropTypes.object,
-    active: PropTypes.bool
+    active: PropTypes.bool,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      confettiOnTop: false
+      confettiOnTop: false,
     };
   }
 

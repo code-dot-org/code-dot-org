@@ -3,15 +3,20 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Consider real world implications
+# Introduction to Pair Programming
 
-##### In the next section of this professional learning module, you will be introduced to AI and ethics with a focus on how students will consider the real world impacts of training data bias. 
+#### In the next section of this professional learning module, you will be introduced to pair programming.  
+#### **Pair programming** is a technique in which two programmers work together at one computer.
+
+* #### The **“navigator”** tells the **“driver”** what to type or write.
+* #### The **“driver”** types or writes the code.
+* #### The two programmers switch roles often.
 
 ## You will:
 
-* ##### Consider real-world implications of AI and machine learning.
+* #### Watch a video about pair programming.
+* #### Review suggestions for implementing pair programming.
 
-### **Suggested time:** 20 minutes
 
 ## Let's keep learning! 
 

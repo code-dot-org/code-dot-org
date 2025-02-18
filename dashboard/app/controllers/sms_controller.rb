@@ -11,7 +11,7 @@ class SmsController < ApplicationController
         if params[:type] == 'weblab'
           "https://codeprojects.org/#{params[:channel_id]}"
         else
-          polymorphic_url(["#{params[:type]}_project_share".to_sym, :projects], channel_id: params[:channel_id])
+          polymorphic_url([:"#{params[:type]}_project_share", :projects], channel_id: params[:channel_id])
         end
       send_sms_link(url, params[:phone])
     else
@@ -19,14 +19,13 @@ class SmsController < ApplicationController
     end
   end
 
-  private
-
-  def send_sms_link(link, phone)
-    body = "Check this out on Code Studio: #{link} (reply STOP to stop receiving this)"
+  private def send_sms_link(link, phone)
+    decorated_link = link + '?sms=true'
+    body = "Check this out on Code Studio: #{decorated_link} (reply STOP to stop receiving this)"
     send_sms(body, phone)
   end
 
-  def send_sms(body, phone)
+  private def send_sms(body, phone)
     # If the Twilio WebService is unavailable or experiencing latency issues we can no-op this method to avoid
     # tie-ing up all puma worker threads waiting for the Twilio API to respond by switching a Gatekeeper flag.
     return head :ok unless Gatekeeper.allows('twilio', default: true)
@@ -39,8 +38,8 @@ class SmsController < ApplicationController
       body: body
     )
     head :ok
-  rescue Twilio::REST::RestError => e
-    case e.message
+  rescue Twilio::REST::RestError => exception
+    case exception.message
     when /The message From\/To pair violates a blacklist rule./
       # recipient unsubscribed from twilio, pretend it succeeded
       head :ok

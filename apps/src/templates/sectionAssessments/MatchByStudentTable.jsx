@@ -1,20 +1,23 @@
+import orderBy from 'lodash/orderBy';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+
 import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
-import PercentAnsweredCell from './PercentAnsweredCell';
+
 import {
   matchQuestionPropType,
-  studentMatchResponsePropType
+  studentMatchResponsePropType,
 } from './assessmentDataShapes';
+import PercentAnsweredCell from './PercentAnsweredCell';
 
 export const COLUMNS = {
   OPTION: 0,
   STUDENT_ANSWER: 1,
-  CORRECT_ANSWER: 2
+  CORRECT_ANSWER: 2,
 };
 
 const ANSWER_COLUMN_WIDTH = 200;
@@ -22,14 +25,14 @@ const ANSWER_COLUMN_WIDTH = 200;
 class MatchByStudentTable extends Component {
   static propTypes = {
     questionAnswerData: matchQuestionPropType,
-    studentAnswerData: studentMatchResponsePropType
+    studentAnswerData: studentMatchResponsePropType,
   };
 
   state = {
     [COLUMNS.NAME]: {
       direction: 'desc',
-      position: 0
-    }
+      position: 0,
+    },
   };
 
   getSortingColumns = () => {
@@ -44,10 +47,10 @@ class MatchByStudentTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -80,17 +83,17 @@ class MatchByStudentTable extends Component {
         property: 'option',
         header: {
           label: i18n.option(),
-          props: {style: tableLayoutStyles.headerCell}
+          props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
           formatters: [this.optionCellFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.optionCell
-            }
-          }
-        }
+              ...styles.optionCell,
+            },
+          },
+        },
       },
       {
         property: 'studentAnswer',
@@ -99,19 +102,19 @@ class MatchByStudentTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.answerColumnHeader
-            }
-          }
+              ...styles.answerColumnHeader,
+            },
+          },
         },
         cell: {
           formatters: [this.studentAnswerColumnFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.answerColumnCell
-            }
-          }
-        }
+              ...styles.answerColumnCell,
+            },
+          },
+        },
       },
       {
         property: 'correctAnswer',
@@ -120,20 +123,20 @@ class MatchByStudentTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.answerColumnHeader
-            }
-          }
+              ...styles.answerColumnHeader,
+            },
+          },
         },
         cell: {
           formatters: [this.correctAnswerColumnFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.answerColumnCell
-            }
-          }
-        }
-      }
+              ...styles.answerColumnCell,
+            },
+          },
+        },
+      },
     ];
     return dataColumns;
   };
@@ -159,7 +162,7 @@ class MatchByStudentTable extends Component {
               ? this.props.questionAnswerData.answers[
                   this.props.studentAnswerData.responses[index]
                 ].text
-              : null
+              : null,
         };
       }
     );
@@ -167,7 +170,7 @@ class MatchByStudentTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(rowData);
 
     return (
@@ -182,17 +185,17 @@ class MatchByStudentTable extends Component {
 const styles = {
   answerColumnHeader: {
     width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   answerColumnCell: {
-    width: ANSWER_COLUMN_WIDTH
+    width: ANSWER_COLUMN_WIDTH,
   },
   optionCell: {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    maxWidth: 470
-  }
+    maxWidth: 470,
+  },
 };
 
 export default MatchByStudentTable;

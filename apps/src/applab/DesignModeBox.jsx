@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '../util/color';
-import DesignToolbox from './DesignToolbox';
+
 import DesignProperties from './designProperties';
+import DesignToolbox from './DesignToolbox';
 
 export default class DesignModeBox extends React.Component {
   static propTypes = {
@@ -12,6 +14,7 @@ export default class DesignModeBox extends React.Component {
     handleDragStart: PropTypes.func,
     isDimmed: PropTypes.bool.isRequired,
     isToolboxVisible: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
     onCopyElementToScreen: PropTypes.func.isRequired,
     onChangeElement: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
@@ -21,7 +24,7 @@ export default class DesignModeBox extends React.Component {
     onInsertEvent: PropTypes.func.isRequired,
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     currentTheme: PropTypes.string.isRequired,
-    handleScreenChange: PropTypes.func.isRequired
+    handleScreenChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -35,24 +38,24 @@ export default class DesignModeBox extends React.Component {
         boxSizing: 'border-box',
         borderLeft: '1px solid gray',
         borderRight: '1px solid gray',
-        borderBottom: '1px solid gray'
+        borderBottom: '1px solid gray',
       },
       designProperties: {
         position: 'absolute',
         top: 0,
         bottom: 0,
-        left: this.props.isToolboxVisible ? 270 : 0,
-        right: 0,
+        left: this.props.isToolboxVisible && !this.props.isRtl ? 270 : 0,
+        right: this.props.isToolboxVisible && this.props.isRtl ? 270 : 0,
         boxSizing: 'border-box',
-        padding: 10
+        padding: 10,
       },
       transparent: {
         width: '100%',
         height: '100%',
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
         position: 'relative',
-        zIndex: 1
-      }
+        zIndex: 1,
+      },
     };
 
     let transparencyLayer;
@@ -68,6 +71,7 @@ export default class DesignModeBox extends React.Component {
         <DesignToolbox
           handleDragStart={this.props.handleDragStart}
           isToolboxVisible={this.props.isToolboxVisible}
+          isRtl={this.props.isRtl}
           handleScreenChange={this.props.handleScreenChange}
           themeValue={this.props.currentTheme}
         />
@@ -84,6 +88,7 @@ export default class DesignModeBox extends React.Component {
             onDelete={this.props.onDelete}
             onInsertEvent={this.props.onInsertEvent}
             screenIds={this.props.screenIds}
+            isRtl={this.props.isRtl}
           />
         </div>
         {transparencyLayer}

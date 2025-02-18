@@ -1,0 +1,54 @@
+{
+  "encrypted": false,
+  "startSources": {
+    "files": {
+      "0": {
+        "id": "0",
+        "name": "main.py",
+        "language": "py",
+        "contents": "print('Hello from the start!')",
+        "folderId": "0",
+        "active": false,
+        "open": true,
+        "type": "locked_starter"
+      },
+      "2": {
+        "id": "2",
+        "name": "support.py",
+        "language": "py",
+        "contents": "",
+        "folderId": "0",
+        "active": false,
+        "open": true,
+        "type": "support"
+      }
+    },
+    "folders": {},
+    "openFiles": [
+      "0",
+      "2"
+    ]
+  },
+  "longInstructions": "## Welcome to Python Lab\r\n\r\nPress the Run button and see what happens.",
+  "hideShareAndRemix": true,
+  "referenceLinks": [
+    "/courses/csa-2023/guides/instantiating-objects"
+  ],
+  "mapReference": "/docs/concepts/html/",
+  "teacherMarkdown": "Teachers should see this extra info.",
+  "aiTutorAvailable": true,
+  "submittable": false,
+  "predictSettings": {
+    "isPredictLevel": false
+  },
+  "containedLevelNames": null,
+  "id": 28048,
+  "helpVideos": [],
+  "type": "Pythonlab",
+  "appName": "pythonlab",
+  "useRestrictedSongs": false,
+  "usesProjects": true,
+  "finishUrl": "/s/allthethings/lessons/50/levels/2",
+  "exampleSolutions": [],
+  "exemplarSources": null
+}

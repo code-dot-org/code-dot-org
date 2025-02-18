@@ -3,6 +3,7 @@
   "config": {
     "simpleValue": true,
     "name": "clickedSpritePointer",
+    "docFunc": "gamelab_spriteClicked",
     "blockText": "{SPRITE}",
     "args": [
       {
@@ -10,6 +11,7 @@
         "customInput": "spritePointer"
       }
     ],
-    "returnType": "Sprite"
+    "returnType": "Sprite",
+    "style": "sprite_blocks"
   }
 }

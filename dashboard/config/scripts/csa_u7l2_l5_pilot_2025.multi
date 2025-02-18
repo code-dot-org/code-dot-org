@@ -1,0 +1,48 @@
+name 'CSA U7L2-L5_pilot-2025'
+title 'Check for Understanding'
+
+wrong 'The code will not compile.'
+wrong 'The code will throw a `NullPointerException` at runtime.'
+wrong 'The price of the second item will be $5.'
+right 'The price of the second item will be $10.'
+wrong 'The price of the second item will be $7.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+public class Item {
+   double price;
+
+   public Item(double price) {
+      this.price = price;
+   }
+
+   public void updatePrice(Item item) {
+      item.price = 10.0;
+   }
+}
+```
+
+The following code segment appears in class other than `Item`.
+
+```
+Item item1 = new Item(5.0);
+Item item2 = new Item(7.0);
+
+item1.updatePrice(item2);
+System.out.println(item2.price);
+```
+
+What would be the price of the second item after the method call?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+When the `updatePrice()` method is called with `item2` as the argument, it is actually passing a reference to the `item2` object. In Java, objects are passed by reference, which means that changes made to the object inside the method will affect the original object outside the method.
+
+In the `updatePrice()` method, the `price` attribute of the item object passed as a parameter is updated to `10.0`. Since the `item1` object and the `item2` object both refer to the same object in memory, the `price` attribute of `item2` is also updated to `10.0`.
+
+Therefore, when `System.out.println(item2.price);` is executed, it prints the updated price of MARKDOWN0.
+MARKDOWN

@@ -14,3 +14,4 @@ answer 'a variable that is changed by a constant value and determines the end of
 
 question 'element'
 answer 'a single value or object in a data structure'
+allow_multiple_attempts true

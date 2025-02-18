@@ -3,10 +3,11 @@
  */
 import _ from 'lodash';
 
-import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
-import library from './designElements/library';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
+
 import {fontFamilyOptions} from './constants';
+import library from './designElements/library';
 var ElementType = library.ElementType;
 
 /**
@@ -29,115 +30,115 @@ var PROP_INFO = {
     friendlyName: 'width',
     internalName: 'style-width',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '100',
   },
   height: {
     friendlyName: 'height',
     internalName: 'style-height',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '100',
   },
   canvasWidth: {
     friendlyName: 'width',
     internalName: 'width',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '100',
   },
   canvasHeight: {
     friendlyName: 'height',
     internalName: 'height',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '100',
   },
   x: {
     friendlyName: 'x',
     internalName: 'left',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '100',
   },
   y: {
     friendlyName: 'y',
     internalName: 'top',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '100',
   },
   textColor: {
     friendlyName: 'text-color',
     internalName: 'textColor',
     type: 'string',
-    defaultValue: '"red"'
+    defaultValue: '"red"',
   },
   backgroundColor: {
     friendlyName: 'background-color',
     internalName: 'backgroundColor',
     type: 'string',
-    defaultValue: '"red"'
+    defaultValue: '"red"',
   },
   borderWidth: {
     friendlyName: 'border-width',
     internalName: 'borderWidth',
     type: 'number',
-    defaultValue: '0'
+    defaultValue: '0',
   },
   borderColor: {
     friendlyName: 'border-color',
     internalName: 'borderColor',
     type: 'string',
-    defaultValue: '"black"'
+    defaultValue: '"black"',
   },
   borderRadius: {
     friendlyName: 'border-radius',
     internalName: 'borderRadius',
     type: 'number',
-    defaultValue: '0'
+    defaultValue: '0',
   },
   fontFamily: {
     friendlyName: 'font-family',
     internalName: 'fontFamily',
     type: 'string',
-    defaultValue: `"${fontFamilyOptions[0]}"`
+    defaultValue: `"${fontFamilyOptions[0]}"`,
   },
   fontSize: {
     friendlyName: 'font-size',
     internalName: 'fontSize',
     type: 'number',
-    defaultValue: '14'
+    defaultValue: '14',
   },
   textAlign: {
     friendlyName: 'text-align',
     internalName: 'textAlign',
     type: 'string',
-    defaultValue: '"left"'
+    defaultValue: '"left"',
   },
   hidden: {
     friendlyName: 'hidden',
     internalName: 'hidden',
     type: 'boolean',
-    defaultValue: 'true'
+    defaultValue: 'true',
   },
   text: {
     friendlyName: 'text',
     internalName: 'text',
     type: 'uistring',
-    defaultValue: '"text"'
+    defaultValue: '"text"',
   },
   placeholder: {
     friendlyName: 'placeholder',
     internalName: 'placeholder',
     type: 'uistring',
-    defaultValue: '"text"'
+    defaultValue: '"text"',
   },
   image: {
     friendlyName: 'image',
     internalName: 'image',
     type: 'string',
-    defaultValue: '"https://code.org/images/logo.png"'
+    defaultValue: '"https://code.org/images/logo.png"',
   },
   screenImage: {
     friendlyName: 'image',
     internalName: 'screen-image',
     type: 'string',
-    defaultValue: '"https://code.org/images/logo.png"'
+    defaultValue: '"https://code.org/images/logo.png"',
   },
   // pictureImage and picture both map to 'picture' internally, but allow us to accept
   // either 'image' or 'picture' as the property name. picture is marked as an alias so
@@ -146,99 +147,93 @@ var PROP_INFO = {
     friendlyName: 'image',
     internalName: 'picture',
     type: 'string',
-    defaultValue: '"https://code.org/images/logo.png"'
+    defaultValue: '"https://code.org/images/logo.png"',
   },
   picture: {
     friendlyName: 'picture',
     internalName: 'picture',
     type: 'string',
     alias: true,
-    defaultValue: '"https://code.org/images/logo.png"'
+    defaultValue: '"https://code.org/images/logo.png"',
   },
   iconColor: {
     friendlyName: 'icon-color',
     internalName: 'icon-color',
     type: 'string',
-    defaultValue: '"red"'
+    defaultValue: '"red"',
   },
   photoSelectIconColor: {
     friendlyName: 'icon-color',
     internalName: 'textColor',
     type: 'string',
-    defaultValue: '"red"'
-  },
-  iconSize: {
-    friendlyName: 'icon-size',
-    internalName: 'fontSize',
-    type: 'number',
-    defaultValue: '32'
+    defaultValue: '"red"',
   },
   groupId: {
     friendlyName: 'group-id',
     internalName: 'groupId',
     type: 'string',
-    defaultValue: '"text"'
+    defaultValue: '"text"',
   },
   checked: {
     friendlyName: 'checked',
     internalName: 'checked',
     type: 'boolean',
-    defaultValue: 'true'
+    defaultValue: 'true',
   },
   readonly: {
     friendlyName: 'readonly',
     internalName: 'readonly',
     type: 'boolean',
-    defaultValue: 'true'
+    defaultValue: 'true',
   },
   options: {
     friendlyName: 'options',
     internalName: 'options',
     type: 'array',
-    defaultValue: '["option1", "etc"]'
+    defaultValue: '["option1", "etc"]',
   },
   sliderValue: {
     friendlyName: 'value',
     internalName: 'sliderValue',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '100',
   },
   min: {
     friendlyName: 'min',
     internalName: 'min',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '100',
   },
   max: {
     friendlyName: 'max',
     internalName: 'max',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '100',
   },
   step: {
     friendlyName: 'step',
     internalName: 'step',
     type: 'number',
-    defaultValue: '100'
+    defaultValue: '100',
   },
   value: {
     friendlyName: 'value',
     internalName: 'value',
     type: 'uistring',
-    defaultValue: '"text"'
+    defaultValue: '"text"',
   },
   fit: {
     friendlyName: 'fit',
     internalName: 'objectFit',
     type: 'string',
-    defaultValue: '"fill"'
+    defaultValue: '"fill"',
   },
   index: {
     friendlyName: 'index',
     internalName: 'index',
     type: 'number',
-    defaultValue: '0'
-  }
+    defaultValue: '0',
+  },
 };
 
 // When we don't know the element type, we display all possible friendly names
@@ -279,8 +274,8 @@ PROPERTIES[ElementType.BUTTON] = {
     'hidden',
     'borderWidth',
     'borderColor',
-    'borderRadius'
-  ]
+    'borderRadius',
+  ],
 };
 PROPERTIES[ElementType.TEXT_INPUT] = {
   propertyNames: [
@@ -299,8 +294,8 @@ PROPERTIES[ElementType.TEXT_INPUT] = {
     'value',
     'borderWidth',
     'borderColor',
-    'borderRadius'
-  ]
+    'borderRadius',
+  ],
 };
 PROPERTIES[ElementType.LABEL] = {
   propertyNames: [
@@ -317,8 +312,8 @@ PROPERTIES[ElementType.LABEL] = {
     'hidden',
     'borderWidth',
     'borderColor',
-    'borderRadius'
-  ]
+    'borderRadius',
+  ],
 };
 PROPERTIES[ElementType.DROPDOWN] = {
   propertyNames: [
@@ -338,8 +333,8 @@ PROPERTIES[ElementType.DROPDOWN] = {
     'value',
     'borderWidth',
     'borderColor',
-    'borderRadius'
-  ]
+    'borderRadius',
+  ],
 };
 PROPERTIES[ElementType.RADIO_BUTTON] = {
   propertyNames: [
@@ -350,11 +345,11 @@ PROPERTIES[ElementType.RADIO_BUTTON] = {
     'x',
     'y',
     'hidden',
-    'checked'
-  ]
+    'checked',
+  ],
 };
 PROPERTIES[ElementType.CHECKBOX] = {
-  propertyNames: ['text', 'width', 'height', 'x', 'y', 'hidden', 'checked']
+  propertyNames: ['text', 'width', 'height', 'x', 'y', 'hidden', 'checked'],
 };
 PROPERTIES[ElementType.IMAGE] = {
   propertyNames: [
@@ -370,14 +365,14 @@ PROPERTIES[ElementType.IMAGE] = {
     'fit',
     'borderWidth',
     'borderColor',
-    'borderRadius'
-  ]
+    'borderRadius',
+  ],
 };
 PROPERTIES[ElementType.CANVAS] = {
-  propertyNames: ['text', 'canvasWidth', 'canvasHeight', 'x', 'y', 'hidden']
+  propertyNames: ['text', 'canvasWidth', 'canvasHeight', 'x', 'y', 'hidden'],
 };
 PROPERTIES[ElementType.SCREEN] = {
-  propertyNames: ['backgroundColor', 'screenImage', 'iconColor']
+  propertyNames: ['backgroundColor', 'screenImage', 'iconColor'],
 };
 PROPERTIES[ElementType.TEXT_AREA] = {
   propertyNames: [
@@ -393,14 +388,13 @@ PROPERTIES[ElementType.TEXT_AREA] = {
     'textAlign',
     'readonly',
     'hidden',
-    'value',
     'borderWidth',
     'borderColor',
-    'borderRadius'
-  ]
+    'borderRadius',
+  ],
 };
 PROPERTIES[ElementType.CHART] = {
-  propertyNames: ['text', 'width', 'height', 'x', 'y', 'hidden']
+  propertyNames: ['text', 'width', 'height', 'x', 'y', 'hidden'],
 };
 PROPERTIES[ElementType.SLIDER] = {
   propertyNames: [
@@ -413,8 +407,8 @@ PROPERTIES[ElementType.SLIDER] = {
     'min',
     'max',
     'step',
-    'hidden'
-  ]
+    'hidden',
+  ],
 };
 PROPERTIES[ElementType.PHOTO_SELECT] = {
   propertyNames: [
@@ -424,12 +418,11 @@ PROPERTIES[ElementType.PHOTO_SELECT] = {
     'y',
     'iconColor',
     'backgroundColor',
-    'iconSize',
     'hidden',
     'borderWidth',
     'borderColor',
-    'borderRadius'
-  ]
+    'borderRadius',
+  ],
 };
 
 // Initialize dropdownOptions and infoForFriendlyNames fields in PROPERTIES map.
@@ -437,7 +430,7 @@ for (var elementType in PROPERTIES) {
   var elementProperties = PROPERTIES[elementType];
   elementProperties.dropdownOptions = [];
   elementProperties.infoForFriendlyName = {};
-  elementProperties.propertyNames.forEach(function(propName) {
+  elementProperties.propertyNames.forEach(function (propName) {
     var friendlyName = PROP_INFO[propName].friendlyName;
     if (elementProperties.infoForFriendlyName[friendlyName]) {
       throw new Error(
@@ -485,7 +478,7 @@ function constructDropdownOption(propName) {
   return {
     text: '"' + friendlyName + '"',
     display: '"' + friendlyName + '"',
-    setValueParam: defaultValue
+    setValueParam: defaultValue,
   };
 }
 
@@ -581,7 +574,7 @@ function getPropertyValueDropdown(param2) {
     '75',
     '100',
     '150',
-    '200'
+    '200',
   ];
 
   if (!param2) {
@@ -605,7 +598,7 @@ function getPropertyValueDropdown(param2) {
         '"yellow"',
         'rgb(255,0,0)',
         'rgb(255,0,0,0.5)',
-        '"#FF0000"'
+        '"#FF0000"',
       ];
     case 'border-radius':
     case 'border-width':
@@ -638,7 +631,7 @@ function getPropertyValueDropdown(param2) {
  *  then returns the appropriate dropdown based on the value.
  */
 export function setPropertyValueSelector() {
-  return function(editor) {
+  return function (editor) {
     const param2 = getSecondSetPropertyParam(this.parent, editor);
     return getPropertyValueDropdown(param2);
   };
@@ -652,7 +645,7 @@ export function setPropertyValueSelector() {
  *   types, provides full list of properties across all types.
  */
 export function setPropertyDropdown(setMode) {
-  return function(aceEditor) {
+  return function (aceEditor) {
     var elementType;
     // Note: We depend on "this" being the droplet socket when in block mode,
     // such that parent ends up being the block. In text mode, this.parent
@@ -673,5 +666,5 @@ export function setPropertyDropdown(setMode) {
 export var __TestInterface = {
   stripQuotes: stripQuotes,
   getDropdownProperties: getDropdownProperties,
-  getPropertyValueDropdown: getPropertyValueDropdown
+  getPropertyValueDropdown: getPropertyValueDropdown,
 };

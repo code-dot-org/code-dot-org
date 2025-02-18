@@ -1,4 +1,5 @@
 import sanitize from 'sanitize-html';
+
 import * as elementUtils from './designElements/elementUtils';
 
 /**
@@ -15,7 +16,7 @@ function removedHtml(before, after) {
     afterLinesMap[afterLines[i]] = true;
   }
 
-  var removedLines = beforeLines.filter(function(line) {
+  var removedLines = beforeLines.filter(function (line) {
     return !afterLinesMap[line];
   });
 
@@ -43,7 +44,7 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
   // for why this works. This hack is necessary in order to warn when
   // attributes containing disallowed URL schemes are removed.
   var allSchemes = [];
-  allSchemes.indexOf = function() {
+  allSchemes.indexOf = function () {
     return 0;
   };
 
@@ -56,11 +57,11 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
     'vk_19391', // Origin unknown.
     'vk_197cd', // Origin unknown.
     '_vkenabled', // Origin unknown.
-    'abp' // adblock plus plugin.
+    'abp', // adblock plus plugin.
   ];
 
   var ignoredTags = [
-    'grammarly-btn' // Grammarly plugin.
+    'grammarly-btn', // Grammarly plugin.
   ];
 
   var processed = sanitize(unsafe, {
@@ -70,7 +71,7 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
     // Use transformTags to ignore certain attributes, since allowedAttributes
     // can only accept an allowlist not a denylist.
     transformTags: {
-      '*': function(tagName, attribs) {
+      '*': function (tagName, attribs) {
         for (var i = 0; i < ignoredAttributes.length; i++) {
           var ignored = ignoredAttributes[i];
           if (attribs[ignored]) {
@@ -79,13 +80,13 @@ function warnAboutUnsafeHtml(warn, unsafe, safe, warnings) {
         }
         return {
           tagName: tagName,
-          attribs: attribs
+          attribs: attribs,
         };
-      }
+      },
     },
-    exclusiveFilter: function(element) {
+    exclusiveFilter: function (element) {
       return ignoredTags.indexOf(element.tag) !== -1;
-    }
+    },
   });
   if (processed !== safe) {
     warn(removedHtml(processed, safe), unsafe, safe, warnings);
@@ -102,7 +103,7 @@ function isIdAvailable(elementId) {
   var options = {
     allowCodeElements: false,
     allowDesignElements: true,
-    allowDesignPrefix: true
+    allowDesignPrefix: true,
   };
   if (!elementUtils.isIdAvailable(elementId, options)) {
     return false;
@@ -139,7 +140,7 @@ export default function sanitizeHtml(
     'spellcheck',
     'style',
     'title',
-    'width'
+    'width',
   ];
   // <i> could allow people to covertly specify font awesome icons, which seems ok
   var tagsWithStandardAttributes = [
@@ -167,7 +168,7 @@ export default function sanitizeHtml(
     'th',
     'tr',
     'u',
-    'ul'
+    'ul',
   ];
   if (!persistingHtml) {
     // Spans are allowed when using write(), but we don't want to persist them
@@ -175,7 +176,7 @@ export default function sanitizeHtml(
     tagsWithStandardAttributes.push('span');
   }
   var defaultAttributesMap = {};
-  tagsWithStandardAttributes.forEach(function(tag) {
+  tagsWithStandardAttributes.forEach(function (tag) {
     defaultAttributesMap[tag] = standardAttributes;
   });
 
@@ -188,7 +189,7 @@ export default function sanitizeHtml(
       'data-canonical-image-url',
       'data-theme',
       'tabindex',
-      'xmlns'
+      'xmlns',
     ]),
     img: standardAttributes.concat(['data-canonical-image-url', 'src']),
     input: standardAttributes.concat([
@@ -204,9 +205,9 @@ export default function sanitizeHtml(
       'accept',
       'hidden',
       'capture',
-      'readonly'
+      'readonly',
     ]),
-    select: standardAttributes.concat(['multiple', 'size'])
+    select: standardAttributes.concat(['multiple', 'size']),
   };
   var tagsWithCustomAttributes = Object.keys(customAttributesMap);
 
@@ -224,7 +225,7 @@ export default function sanitizeHtml(
     allowedAttributes: allowedAttributes,
     allowedSchemes: sanitize.defaults.allowedSchemes.concat(['data']),
     transformTags: {
-      '*': function(tagName, attribs) {
+      '*': function (tagName, attribs) {
         if (rejectExistingIds && attribs.id && !isIdAvailable(attribs.id)) {
           warnings.push('element id is already in use: ' + attribs.id);
           delete attribs.id;
@@ -237,10 +238,10 @@ export default function sanitizeHtml(
         }
         return {
           tagName: tagName,
-          attribs: attribs
+          attribs: attribs,
         };
-      }
-    }
+      },
+    },
   });
 
   if (typeof warn === 'function' && safe !== unsafe) {

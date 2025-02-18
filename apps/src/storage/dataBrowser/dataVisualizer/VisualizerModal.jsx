@@ -1,27 +1,33 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import memoize from 'memoize-one';
-import {DebounceInput} from 'react-debounce-input';
-import _ from 'lodash';
-import msg from '@cdo/locale';
-import color from '../../../util/color';
-import dataStyles from '../data-styles.module.scss';
 import classNames from 'classnames';
+import _ from 'lodash';
+import memoize from 'memoize-one';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {DebounceInput} from 'react-debounce-input';
+import {connect} from 'react-redux';
+
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
-import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
+import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import DropdownField from './DropdownField';
+import msg from '@cdo/locale';
+
+import color from '../../../util/color';
+import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
+
+import {MAX_CROSSTAB_CELLS, MAX_CROSSTAB_COLUMNS} from './CrossTabChart';
 import DataVisualizer from './DataVisualizer';
-import Snapshot from './Snapshot';
+import DropdownField from './DropdownField';
 import placeholderImage from './placeholder.png';
+import Snapshot from './Snapshot';
+
+import dataStyles from '../data-styles.module.scss';
 
 export const OperatorType = {
   EQUAL: 0,
   LESS_THAN: 1,
   LESS_THAN_OR_EQUAL: 2,
   GREATER_THAN: 3,
-  GREATER_THAN_OR_EQUAL: 4
+  GREATER_THAN_OR_EQUAL: 4,
 };
 
 export const INITIAL_STATE = {
@@ -34,7 +40,7 @@ export const INITIAL_STATE = {
   filterColumn: '',
   filterOperator: OperatorType.EQUAL,
   filterValue: '',
-  screen: ''
+  screen: '',
 };
 
 class VisualizerModal extends React.Component {
@@ -43,7 +49,7 @@ class VisualizerModal extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
-    tableRecords: PropTypes.array.isRequired
+    tableRecords: PropTypes.array.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -138,9 +144,10 @@ class VisualizerModal extends React.Component {
       case ChartType.CROSS_TAB:
         return msg.crossTab();
       default:
-        return chartType;
+        return '';
     }
   }
+
   getDisplayNameForOperator(operator) {
     switch (operator) {
       case OperatorType.GREATER_THAN:
@@ -187,16 +194,44 @@ class VisualizerModal extends React.Component {
       options.push(
         msg.dataVisualizerFilterDescription({
           column: this.state.filterColumn,
-          value: this.state.filterValue
+          value: this.state.filterValue,
         })
       );
     }
     return options.join(', ');
   }
 
+  getValuesByColumn = memoize((records, tableColumns, chartType) => {
+    if (chartType !== ChartType.CROSS_TAB) {
+      return undefined;
+    } else {
+      return records.reduce((bucket, record) => {
+        tableColumns.forEach(column => {
+          bucket[column] ||= new Set();
+          bucket[column].add(record[column]);
+        });
+        return bucket;
+      }, new Set());
+    }
+  });
+
+  tooBigColumns = memoize((tableColumns, valuesByColumn, selectedColumn1) => {
+    if (!valuesByColumn) {
+      return [];
+    } else {
+      const xCount = selectedColumn1 ? valuesByColumn[selectedColumn1].size : 0;
+      return tableColumns.filter(
+        column =>
+          valuesByColumn[column].size >= MAX_CROSSTAB_COLUMNS ||
+          xCount * valuesByColumn[column].size >= MAX_CROSSTAB_CELLS
+      );
+    }
+  });
+
   render() {
     const parsedRecords = this.parseRecords(this.props.tableRecords);
     let filteredRecords = parsedRecords;
+
     if (this.state.filterColumn !== '' && this.state.filterValue !== '') {
       filteredRecords = this.filterRecords(
         parsedRecords,
@@ -210,21 +245,31 @@ class VisualizerModal extends React.Component {
       this.props.tableColumns
     );
 
-    let disabledOptions = [];
+    const valuesByColumn = this.getValuesByColumn(
+      filteredRecords,
+      this.props.tableColumns,
+      this.state.chartType
+    );
+
+    let disabledNonNumericOptions = [];
     const disableNonNumericColumns = [
       ChartType.SCATTER_PLOT,
-      ChartType.HISTOGRAM
+      ChartType.HISTOGRAM,
     ].includes(this.state.chartType);
     if (disableNonNumericColumns) {
-      disabledOptions = _.difference(this.props.tableColumns, numericColumns);
+      disabledNonNumericOptions = _.difference(
+        this.props.tableColumns,
+        numericColumns
+      );
     }
     const isMultiColumnChart = [
       ChartType.SCATTER_PLOT,
-      ChartType.CROSS_TAB
+      ChartType.CROSS_TAB,
     ].includes(this.state.chartType);
     const isFilterColumnNumeric = numericColumns.includes(
       this.state.filterColumn
     );
+
     return (
       <span
         style={
@@ -251,7 +296,7 @@ class VisualizerModal extends React.Component {
               <h2 style={styles.h2}>
                 {' '}
                 {msg.exploreDataset({
-                  datasetName: this.props.tableName
+                  datasetName: this.props.tableName,
                 })}{' '}
               </h2>
 
@@ -278,7 +323,7 @@ class VisualizerModal extends React.Component {
                   ChartType.BAR_CHART,
                   ChartType.HISTOGRAM,
                   ChartType.SCATTER_PLOT,
-                  ChartType.CROSS_TAB
+                  ChartType.CROSS_TAB,
                 ]}
                 getDisplayNameForOption={this.getDisplayNameForChartType}
                 value={this.state.chartType}
@@ -286,7 +331,7 @@ class VisualizerModal extends React.Component {
                   this.setState({
                     chartType: parseFloat(event.target.value),
                     selectedColumn1: '',
-                    selectedColumn2: ''
+                    selectedColumn2: '',
                   })
                 }
               />
@@ -313,7 +358,10 @@ class VisualizerModal extends React.Component {
                     : msg.dataVisualizerValues()
                 }
                 options={this.props.tableColumns}
-                disabledOptions={disabledOptions}
+                disabledOptions={_.union(
+                  disabledNonNumericOptions,
+                  this.tooBigColumns(this.props.tableColumns, valuesByColumn)
+                )}
                 value={this.state.selectedColumn1}
                 onChange={event =>
                   this.setState({selectedColumn1: event.target.value})
@@ -324,7 +372,14 @@ class VisualizerModal extends React.Component {
                 <DropdownField
                   displayName={msg.dataVisualizerYValues()}
                   options={this.props.tableColumns}
-                  disabledOptions={disabledOptions}
+                  disabledOptions={_.union(
+                    disabledNonNumericOptions,
+                    this.tooBigColumns(
+                      this.props.tableColumns,
+                      valuesByColumn,
+                      this.state.selectedColumn1
+                    )
+                  )}
                   value={this.state.selectedColumn2}
                   onChange={event =>
                     this.setState({selectedColumn2: event.target.value})
@@ -339,7 +394,7 @@ class VisualizerModal extends React.Component {
                 overflow:
                   this.state.chartType === ChartType.CROSS_TAB
                     ? 'auto'
-                    : 'hidden'
+                    : 'hidden',
               }}
             >
               {this.canDisplayChart() ? (
@@ -371,7 +426,7 @@ class VisualizerModal extends React.Component {
                   this.setState({
                     filterColumn: event.target.value,
                     filterOperator: OperatorType.EQUAL,
-                    filterValue: ''
+                    filterValue: '',
                   })
                 }
                 inlineLabel
@@ -384,14 +439,14 @@ class VisualizerModal extends React.Component {
                     OperatorType.GREATER_THAN_OR_EQUAL,
                     OperatorType.EQUAL,
                     OperatorType.LESS_THAN_OR_EQUAL,
-                    OperatorType.LESS_THAN
+                    OperatorType.LESS_THAN,
                   ]}
                   getDisplayNameForOption={this.getDisplayNameForOperator}
                   disabledOptions={[]}
                   value={this.state.filterOperator}
                   onChange={event =>
                     this.setState({
-                      filterOperator: parseFloat(event.target.value)
+                      filterOperator: parseFloat(event.target.value),
                     })
                   }
                   inlineLabel
@@ -429,25 +484,25 @@ class VisualizerModal extends React.Component {
 
 const styles = {
   container: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   containerRtl: {
-    marginLeft: '10px'
+    marginLeft: '10px',
   },
   modalBody: {
     display: 'flex',
     flexDirection: 'column',
-    height: '100%'
+    height: '100%',
   },
   h2: {
-    margin: '0 0 10px 0'
+    margin: '0 0 10px 0',
   },
   input: {
     ...rowStyle.container,
-    float: 'left'
+    float: 'left',
   },
   chartArea: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   placeholderContainer: {
     position: 'relative',
@@ -455,16 +510,16 @@ const styles = {
     textAlign: 'center',
     backgroundImage: `url('${placeholderImage}')`,
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
   },
   placeholderText: {
     position: 'absolute',
     width: '100%',
     bottom: '50%',
-    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 20,
-    color: color.dark_charcoal
-  }
+    color: color.dark_charcoal,
+  },
 };
 
 export const UnconnectedVisualizerModal = VisualizerModal;
@@ -472,5 +527,5 @@ export default connect(state => ({
   isRtl: state.isRtl,
   tableColumns: state.data.tableColumns || [],
   tableRecords: state.data.tableRecords || [],
-  tableName: state.data.tableName || ''
+  tableName: state.data.tableName || '',
 }))(VisualizerModal);

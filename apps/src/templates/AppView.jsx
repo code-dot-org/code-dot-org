@@ -1,13 +1,17 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
 import {connect} from 'react-redux';
+
+import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
+
+import VisualizationResizeBar from '../code-studio/components/VisualizationResizeBar';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-import StudioAppWrapper from './StudioAppWrapper';
-import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
+
 import CodeWorkspace from './CodeWorkspace';
+import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
 import Overlay from './Overlay';
-import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
+import StudioAppWrapper from './StudioAppWrapper';
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -20,7 +24,7 @@ class AppView extends React.Component {
 
     // not provided by redux
     visualizationColumn: PropTypes.element,
-    onMount: PropTypes.func.isRequired
+    onMount: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -30,7 +34,7 @@ class AppView extends React.Component {
   render() {
     const visualizationColumnClassNames = classNames({
       responsive: this.props.isResponsive,
-      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom
+      pin_bottom: !this.props.hideSource && this.props.pinWorkspaceToBottom,
     });
 
     return (
@@ -42,6 +46,7 @@ class AppView extends React.Component {
         <VisualizationResizeBar />
         <InstructionsWithWorkspace>
           <CodeWorkspace />
+          <ModalFunctionEditor />
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
     );
@@ -52,5 +57,5 @@ export const UnconnectedAppView = AppView;
 export default connect(state => ({
   hideSource: state.pageConstants.hideSource,
   isResponsive: isResponsiveFromState(state),
-  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom
+  pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
 }))(UnconnectedAppView);

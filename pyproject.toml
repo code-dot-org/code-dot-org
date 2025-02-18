@@ -1,0 +1,40 @@
+[project]
+name = 'code-dot-org'
+version = '1.0'
+requires-python = '>=3.12'
+dependencies = [
+  # Register local python packages from /python in 3 places: this list, 
+  # in [tool.uv.sources] and in [tool.uv.workspace]
+  'pycdo',
+  'neighborhood',
+  'pythonlab_setup',
+  'unittest_runner',
+  ## Do not add dependencies here, add them to a pyproject.toml in a /python sub-dir ##
+]
+
+[dependency-groups]
+dev = [
+  'coverage >=7',
+  'ipython >=8',
+  'pytest >=8',
+  'pytest-mock >=3',
+  'ruff >=0.8',
+]
+
+[tool.uv.sources]
+pycdo = { workspace = true }
+neighborhood = { workspace = true }
+pythonlab_setup = { workspace = true }
+unittest_runner = { workspace = true }
+
+[tool.uv.workspace]
+members = [
+  'python/pycdo',
+  'python/pythonlab/pythonlab_setup',
+  'python/pythonlab/unittest_runner',
+  'python/pythonlab/neighborhood',
+]
+
+[tool.ruff]
+# we use ruff for linting
+line-length = 100

@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
-import {NotificationType} from '@cdo/apps/templates/Notification';
+
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 
 const ADD_ANNOUNCEMENT = 'announcements/ADD_ANNOUNCEMENT';
+const CLEAR_ANNOUNCEMENTS = 'announcements/CLEAR_ANNOUNCEMENTS';
 
 export const addAnnouncement = ({
   key,
@@ -11,7 +13,7 @@ export const addAnnouncement = ({
   type,
   visibility,
   dismissible,
-  buttonText
+  buttonText,
 }) => ({
   type: ADD_ANNOUNCEMENT,
   key,
@@ -21,13 +23,17 @@ export const addAnnouncement = ({
   announcementType: type,
   visibilityType: visibility,
   dismissible,
-  buttonText
+  buttonText,
+});
+
+export const clearAnnouncements = () => ({
+  type: CLEAR_ANNOUNCEMENTS,
 });
 
 export const VisibilityType = {
   teacher: 'Teacher-only',
   student: 'Student-only',
-  teacherAndStudent: 'Teacher and student'
+  teacherAndStudent: 'Teacher and student',
 };
 
 export const announcementShape = PropTypes.shape({
@@ -38,7 +44,7 @@ export const announcementShape = PropTypes.shape({
   type: PropTypes.oneOf(Object.values(NotificationType)).isRequired,
   visibility: PropTypes.oneOf(Object.values(VisibilityType)),
   dismissible: PropTypes.bool,
-  buttonText: PropTypes.string
+  buttonText: PropTypes.string,
 });
 
 export default function announcements(state = [], action) {
@@ -51,8 +57,11 @@ export default function announcements(state = [], action) {
       type: action.announcementType,
       visibility: action.visibilityType,
       dismissible: action.dismissible,
-      buttonText: action.buttonText
+      buttonText: action.buttonText,
     });
+  }
+  if (action.type === CLEAR_ANNOUNCEMENTS) {
+    return [];
   }
 
   return state;

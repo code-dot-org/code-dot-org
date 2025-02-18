@@ -1,0 +1,12 @@
+name 'csc_ecosystems_survey_L2-test'
+title 'Ecosystems Survey Lesson 2'
+submittable 'true'
+anonymous 'true'
+
+page
+level ‘pilot2022_l2_q1'
+level ‘pilot2022_l2_q2’
+level ‘pilot2022_l2_q3’
+level ‘pilot2022_l2_q4’
+level ‘pilot2022_l2_q5’
+level ‘pilot2022_l2_q6’

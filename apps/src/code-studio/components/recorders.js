@@ -1,5 +1,5 @@
-import vmsg from 'vmsg';
 import Recorder from 'recorder-js';
+import vmsg from 'vmsg';
 
 class Mp3Recorder {
   constructor() {
@@ -66,7 +66,7 @@ class WavRecorder {
 
 export const RecordingFileType = {
   MP3: '.mp3',
-  WAV: '.wav'
+  WAV: '.wav',
 };
 
 const getRecorder = extension => {

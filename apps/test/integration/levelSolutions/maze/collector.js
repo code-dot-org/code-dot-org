@@ -12,7 +12,7 @@ const levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -22,7 +22,7 @@ const levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -32,7 +32,7 @@ const levelDef = {
       {tileType: 1},
       {tileType: 1},
       {tileType: 1},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -42,7 +42,7 @@ const levelDef = {
       {tileType: 1, value: 1},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -52,7 +52,7 @@ const levelDef = {
       {tileType: 1},
       {tileType: 1},
       {tileType: 1},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -62,7 +62,7 @@ const levelDef = {
       {tileType: 1},
       {tileType: 1},
       {tileType: 1},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -72,7 +72,7 @@ const levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -82,9 +82,9 @@ const levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
-    ]
-  ]
+      {tileType: 0},
+    ],
+  ],
 };
 
 module.exports = {
@@ -96,16 +96,16 @@ module.exports = {
       description: 'Collector collected nothing',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
       customValidator: () => Maze.executionInfo.terminationValue() === 1, // COLLECTED_NOTHING
-      xml: '<xml></xml>'
+      xml: '<xml></xml>',
     },
     {
       description: 'Collector collected just some',
       expected: {
         result: true,
-        testResult: TestResults.APP_SPECIFIC_IMPERFECT_PASS
+        testResult: TestResults.APP_SPECIFIC_IMPERFECT_PASS,
       },
       customValidator: () => Maze.executionInfo.terminationValue() === 6, // COLLECTED_ENOUGH_BUT_NOT_ALL
       xml:
@@ -119,13 +119,13 @@ module.exports = {
         '      </block>' +
         '    </next>' +
         '  </block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Collector collected all',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
@@ -143,13 +143,13 @@ module.exports = {
         '      </block>' +
         '    </next>' +
         '  </block>' +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'Collector used too many blocks',
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
       customValidator: () => Maze.executionInfo.terminationValue() === 0, // TOO_MANY_BLOCKS
       xml:
@@ -179,7 +179,7 @@ module.exports = {
         '      </block>' +
         '    </next>' +
         '  </block>' +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

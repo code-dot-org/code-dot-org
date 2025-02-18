@@ -1,8 +1,8 @@
 /** @file An animated image, which handles frame counts, rates and offsets
  * internally and exposes simple methods for rendering at the desired position. */
 
-import {valueOr} from '../utils';
 import {SVG_NS} from '../constants';
+import {valueOr} from '../utils';
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -206,7 +206,7 @@ export default class StudioAnimation {
     // TODO: Improve this by scaling around an explicitly encoded 'sprite center'
     var topLeft = {
       x: center.x - (frame.width / 2) * scale,
-      y: center.y - (frame.height / 2) * (2 * scale - 1)
+      y: center.y - (frame.height / 2) * (2 * scale - 1),
     };
 
     // Offset the spritesheet DOM element by the inverse of the offset of the

@@ -1,0 +1,37 @@
+name 'CSA U6L2-L9_alt-2025'
+title 'Check for Understanding'
+
+right '`a=1 b=3 c=8`'
+wrong '`a=0 b=2 c=7`'
+wrong '`a=1 b=2 c=8`'
+wrong '`a=1 b=3 c=7`'
+wrong '`a=2 b=4 c=9`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the code segment below.
+
+```
+String str = "level nail";
+System.out.println(str.substring(a,b) + str.substring(c));
+```
+
+Which values of `a`, `b`, and `c` will cause the program to output the word `"evil"`?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+`str.substring(a, b)` returns a new `String` that contains the characters in `str` from index `a` up to (but not including) index `b`.
+
+`str.substring(c)` returns a new `String` that contains the characters in `str` from index `c` to the end of the `String`.
+
+In order to output the word `"evil"`, we need to extract the letters `"e"`, `"v"`, `"i"`, and `"l"` from `"level nail"`.
+
+The letters `"e"`, `"v"`, and `"i"` are located at indices `1`, `2`, and `3` in the first word `"level"`.
+
+The letter `"l"` is located at index `8` in the second word `"nail"`.
+
+Therefore, we can extract the desired letters by using `str.substring(1, 3)` to extract `"evi"` from the first word, and `str.substring(8)` to extract `"l"` from the second word.
+
+Concatenating these substrings gives us the desired word `"evil"`.
+MARKDOWN

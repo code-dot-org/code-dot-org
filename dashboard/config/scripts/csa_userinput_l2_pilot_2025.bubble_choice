@@ -1,0 +1,9 @@
+name 'CSA-UserInput-L2_pilot-2025'
+display_name 'Getting User Input'
+description 'Get user input to greet the user, perform calculations, or create objects.'
+
+sublevels
+level 'CSA-UserInput-L2a_pilot-2025'
+level 'CSA-UserInput-L2b_pilot-2025'
+level 'CSA-UserInput-L2c_pilot-2025'
+level 'CSA-UserInput-L2d_pilot-2025'

@@ -17,6 +17,8 @@
 
 a.progress-bubble-link {
   display: inline-block;
+  cursor: pointer;
+
   // Use important to overwrite default projects link underline.
   text-decoration: none !important;
 

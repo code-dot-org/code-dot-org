@@ -18,6 +18,6 @@ class Pilot < ApplicationRecord
   validates :name, presence: true, uniqueness: {case_sensitive: true}, format: {with: /\A[a-z0-9-]+\z/}
   validates :display_name, presence: true
 
-  # If allow_joining_via_url is ture, the url to join the pilot is:
+  # If allow_joining_via_url is true, the url to join the pilot is:
   # http://studio.code.org/experiments/set_single_user_experiment/<pilot.name>
 end

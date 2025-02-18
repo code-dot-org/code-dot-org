@@ -1,0 +1,65 @@
+@import 'color';
+
+hr {
+  margin: 1rem 0;
+  border-color: $light_gray_200;
+}
+
+.textContainer {
+  background-color: $light_gray_50;
+  border-radius: 4px;
+}
+
+.modelText {
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.modelDescriptionPanelContainer {
+  flex: 1;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+div.modelComparisonDialog {
+  max-height: calc(90vh - 100px);
+  width: 800px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modelComparisonContainer {
+  display: flex;
+  position: relative;
+  overflow-y: hidden;
+  flex: 1;
+}
+
+.viewMoreButton {
+  width: fit-content;
+  float: right;
+}
+
+.rightAlign {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modelDescriptionContainer {
+  overflow-y: auto;
+}
+
+.compareModelsDropdown {
+  width: 100%;
+  display: inline-block;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+}
+

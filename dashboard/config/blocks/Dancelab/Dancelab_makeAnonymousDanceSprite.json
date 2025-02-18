@@ -2,6 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "makeAnonymousDanceSprite",
+    "docFunc": "gamelab_makeNewSpriteAnon",
     "inline": false,
     "blockText": "make a new {COSTUME} at {LOCATION}",
     "style": "sprite_blocks",

@@ -7,3 +7,4 @@ wrong ' !='
 right '='
 wrong '\>'
 right '||'
+allow_multiple_attempts true

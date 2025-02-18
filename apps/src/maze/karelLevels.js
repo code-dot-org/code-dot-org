@@ -7,7 +7,7 @@ var levelBase = require('../level_base');
 var msg = require('./locale');
 
 //TODO: Fix hacky level-number-dependent toolbox.
-var toolbox = function(page, level) {
+var toolbox = function (page, level) {
   var template;
   // Must use switch, since browserify only works on requires with literals.
   switch (page) {
@@ -25,19 +25,19 @@ var toolbox = function(page, level) {
 };
 
 //TODO: Fix hacky level-number-dependent startBlocks.
-var startBlocks = function(page, level) {
+var startBlocks = function (page, level) {
   return require('./karelStartBlocks.xml.ejs')({
     page: page,
-    level: level
+    level: level,
   });
 };
 
 // This tests for and creates the "move_forward" block.
 var MOVE_FORWARD = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'maze_moveForward';
   },
-  type: 'maze_moveForward'
+  type: 'maze_moveForward',
 };
 
 // This tests for and creates the "dig" block.
@@ -48,143 +48,143 @@ var FILL = {test: 'fill', type: 'maze_fill'};
 
 // This tests for and creates the "controls_repeat" block.
 var REPEAT = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'controls_repeat';
   },
   type: 'controls_repeat',
-  titles: {TIMES: '???'}
+  titles: {TIMES: '???'},
 };
 
 // This tests for and creates the "controls_repeat_ext" block.
 var REPEAT_EXT = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'controls_repeat_ext';
   },
-  type: 'controls_repeat_ext'
+  type: 'controls_repeat_ext',
 };
 
 // This tests for and creates the "controls_for" block.
 var CONTROLS_FOR = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'controls_for';
   },
-  type: 'controls_for'
+  type: 'controls_for',
 };
 
 // This tests for and creates the "variables_get" block.
 var VARIABLES_GET = {
-  test: function(block) {
+  test: function (block) {
     return block.type === 'variables_get';
   },
   type: 'variables_get',
-  titles: {VAR: 'i'}
+  titles: {VAR: 'i'},
 };
 
 // This tests for and creates the "maze_turn" block turning left.
 var TURN_LEFT = {
   test: 'turnLeft',
   type: 'maze_turn',
-  titles: {DIR: 'turnLeft'}
+  titles: {DIR: 'turnLeft'},
 };
 
 // This tests for and creates the "maze_turn" block turning right.
 var TURN_RIGHT = {
   test: 'turnRight',
   type: 'maze_turn',
-  titles: {DIR: 'turnRight'}
+  titles: {DIR: 'turnRight'},
 };
 
 // This tests for and creates the "maze_untilBlocked" block.
 var UNTIL_BLOCKED = {
   test: 'while (Maze.isPathForward',
-  type: 'maze_untilBlocked'
+  type: 'maze_untilBlocked',
 };
 
 // This tests for and creates the "maze_untilBlockedOrNotClear" block with the option "pilePresent" selected.
 var WHILE_OPT_PILE_PRESENT = {
   test: 'while (Maze.pilePresent',
   type: 'maze_untilBlockedOrNotClear',
-  titles: {DIR: 'pilePresent'}
+  titles: {DIR: 'pilePresent'},
 };
 
 // This tests for and creates the "maze_untilBlockedOrNotClear" block with the option "holePresent" selected.
 var WHILE_OPT_HOLE_PRESENT = {
   test: 'while (Maze.holePresent',
   type: 'maze_untilBlockedOrNotClear',
-  titles: {DIR: 'holePresent'}
+  titles: {DIR: 'holePresent'},
 };
 
 // This tests for and creates the "maze_untilBlockedOrNotClear" block with the option "isPathForward" selected.
 var WHILE_OPT_PATH_AHEAD = {
   test: 'while (Maze.isPathForward',
   type: 'maze_untilBlockedOrNotClear',
-  titles: {DIR: 'isPathForward'}
+  titles: {DIR: 'isPathForward'},
 };
 
 // This tests for and creates the "karel_if" block with the option "pilePresent" selected.
 var IF_OPT_PILE_PRESENT = {
   test: 'if (Maze.pilePresent',
   type: 'karel_if',
-  titles: {DIR: 'pilePresent'}
+  titles: {DIR: 'pilePresent'},
 };
 
 // This tests for and creates the "karel_if" block with the option "holePresent" selected.
 var IF_OPT_HOLE_PRESENT = {
   test: 'if (Maze.holePresent',
   type: 'karel_if',
-  titles: {DIR: 'holePresent'}
+  titles: {DIR: 'holePresent'},
 };
 
 // This tests for and creates the "karel_ifElse" block.
 var IF_ELSE = {test: '} else {', type: 'karel_ifElse'};
 
 // This tests for and creates the "fill num" block.
-var fill = function(num) {
+var fill = function (num) {
   return {
-    test: function(block) {
+    test: function (block) {
       return block.getFieldValue('NAME') === msg.fillN({shovelfuls: num});
     },
     type: 'procedures_callnoreturn',
-    titles: {NAME: msg.fillN({shovelfuls: num})}
+    titles: {NAME: msg.fillN({shovelfuls: num})},
   };
 };
 
 // This tests for and creates the "remove num" blcok.
-var remove = function(num) {
+var remove = function (num) {
   return {
-    test: function(block) {
+    test: function (block) {
       return block.getFieldValue('NAME') === msg.removeN({shovelfuls: num});
     },
     type: 'procedures_callnoreturn',
-    titles: {NAME: msg.removeN({shovelfuls: num})}
+    titles: {NAME: msg.removeN({shovelfuls: num})},
   };
 };
 
 // This tests for and creates the "avoid the cow and remove 1" block.
 var AVOID_OBSTACLE_AND_REMOVE = {
-  test: function(block) {
+  test: function (block) {
     return block.getFieldValue('NAME') === msg.avoidCowAndRemove();
   },
   type: 'procedures_callnoreturn',
-  titles: {NAME: msg.avoidCowAndRemove()}
+  titles: {NAME: msg.avoidCowAndRemove()},
 };
 
 // This tests for and creates the "remove piles" block.
 var REMOVE_PILES = {
-  test: function(block) {
+  test: function (block) {
     return block.getFieldValue('NAME') === msg.removeStack({shovelfuls: 4});
   },
   type: 'procedures_callnoreturn',
-  titles: {NAME: msg.removeStack({shovelfuls: 4})}
+  titles: {NAME: msg.removeStack({shovelfuls: 4})},
 };
 
 // This tests for and creates the "fill holes" block.
 var FILL_HOLES = {
-  test: function(block) {
+  test: function (block) {
     return block.getFieldValue('NAME') === msg.fillStack({shovelfuls: 2});
   },
   type: 'procedures_callnoreturn',
-  titles: {NAME: msg.fillStack({shovelfuls: 2})}
+  titles: {NAME: msg.fillStack({shovelfuls: 2})},
 };
 
 module.exports = {
@@ -196,7 +196,7 @@ module.exports = {
     ideal: 6,
     requiredBlocks: [[MOVE_FORWARD], [DIG]],
     scale: {
-      snapRadius: 2.0
+      snapRadius: 2.0,
     },
     map: [
       [0, 0, 0, 0, 0, 1, 1, 1],
@@ -206,7 +206,7 @@ module.exports = {
       [2, 1, 1, 1, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 1, 1, 0, 0, 0, 0],
-      [0, 0, 1, 1, 0, 0, 0, 0]
+      [0, 0, 1, 1, 0, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -217,8 +217,8 @@ module.exports = {
       [0, 0, 0, 0, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '1_2': {
@@ -234,7 +234,7 @@ module.exports = {
       [0, 1, 2, 1, 0, 0, 0, 0],
       [0, 1, 1, 1, 0, 1, 1, 1],
       [0, 0, 0, 0, 0, 1, 1, 1],
-      [0, 0, 0, 0, 0, 1, 1, 1]
+      [0, 0, 0, 0, 0, 1, 1, 1],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -245,8 +245,8 @@ module.exports = {
       [0, 0, 0, -2, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '1_3': {
@@ -262,7 +262,7 @@ module.exports = {
       [0, 0, 0, 0, 1, 1, 1, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [1, 1, 0, 0, 0, 0, 0, 0],
-      [1, 1, 0, 0, 0, 0, 0, 0]
+      [1, 1, 0, 0, 0, 0, 0, 0],
     ],
     startDirection: Direction.SOUTH,
     initialDirt: [
@@ -273,8 +273,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 10, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '1_4': {
@@ -289,7 +289,7 @@ module.exports = {
       [0, 0, 0, 2, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [1, 1, 1, 1, 1, 1, 1, 1]
+      [1, 1, 1, 1, 1, 1, 1, 1],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -300,8 +300,8 @@ module.exports = {
       [0, 0, 0, 1, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '1_5': {
@@ -310,7 +310,7 @@ module.exports = {
     ideal: 5,
     requiredBlocks: [[MOVE_FORWARD], [FILL], [REPEAT], [UNTIL_BLOCKED]],
     scale: {
-      stepSpeed: 2
+      stepSpeed: 2,
     },
     map: [
       [1, 1, 0, 0, 0, 0, 0, 0],
@@ -320,7 +320,7 @@ module.exports = {
       [0, 0, 0, 0, 1, 1, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [2, 1, 1, 1, 1, 1, 0, 0]
+      [2, 1, 1, 1, 1, 1, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -331,8 +331,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, -5, -5, -5, -5, -5, 0, 0]
-    ]
+      [0, -5, -5, -5, -5, -5, 0, 0],
+    ],
   },
 
   '1_6': {
@@ -341,10 +341,10 @@ module.exports = {
     requiredBlocks: [
       [MOVE_FORWARD],
       [DIG],
-      [WHILE_OPT_PILE_PRESENT, REPEAT, WHILE_OPT_PATH_AHEAD]
+      [WHILE_OPT_PILE_PRESENT, REPEAT, WHILE_OPT_PATH_AHEAD],
     ],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [1, 1, 0, 1, 1, 0, 1, 1],
@@ -354,7 +354,7 @@ module.exports = {
       [0, 0, 0, 1, 1, 0, 0, 0],
       [0, 0, 0, 1, 1, 0, 0, 0],
       [1, 1, 0, 1, 1, 0, 1, 1],
-      [1, 1, 0, 1, 1, 0, 1, 1]
+      [1, 1, 0, 1, 1, 0, 1, 1],
     ],
     startDirection: Direction.SOUTH,
     initialDirt: [
@@ -365,8 +365,8 @@ module.exports = {
       [0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '1_7': {
@@ -377,10 +377,10 @@ module.exports = {
       [TURN_RIGHT],
       [MOVE_FORWARD],
       [FILL],
-      [WHILE_OPT_HOLE_PRESENT]
+      [WHILE_OPT_HOLE_PRESENT],
     ],
     scale: {
-      stepSpeed: 2
+      stepSpeed: 2,
     },
     map: [
       [1, 1, 0, 0, 0, 0, 1, 1],
@@ -390,7 +390,7 @@ module.exports = {
       [0, 0, 0, 1, 1, 1, 0, 0],
       [0, 0, 0, 0, 1, 1, 1, 0],
       [1, 0, 0, 0, 0, 1, 1, 1],
-      [1, 1, 0, 0, 0, 0, 1, 1]
+      [1, 1, 0, 0, 0, 0, 1, 1],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -401,8 +401,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '1_8': {
@@ -410,7 +410,7 @@ module.exports = {
     ideal: 4,
     requiredBlocks: [[MOVE_FORWARD], [FILL], [WHILE_OPT_PATH_AHEAD, REPEAT]],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -420,7 +420,7 @@ module.exports = {
       [1, 1, 1, 1, 1, 1, 1, 1],
       [2, 1, 1, 1, 1, 1, 1, 1],
       [1, 1, 1, 1, 1, 1, 1, 1],
-      [1, 1, 1, 1, 1, 1, 1, 1]
+      [1, 1, 1, 1, 1, 1, 1, 1],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -431,8 +431,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, -1],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '1_9': {
@@ -442,10 +442,10 @@ module.exports = {
       [MOVE_FORWARD],
       [DIG],
       [WHILE_OPT_PATH_AHEAD, REPEAT],
-      [TURN_LEFT]
+      [TURN_LEFT],
     ],
     scale: {
-      stepSpeed: 2.5
+      stepSpeed: 2.5,
     },
     map: [
       [0, 0, 0, 0, 0, 0, 1, 1],
@@ -455,7 +455,7 @@ module.exports = {
       [0, 1, 1, 0, 1, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0],
-      [2, 1, 1, 1, 1, 0, 0, 0]
+      [2, 1, 1, 1, 1, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -466,8 +466,8 @@ module.exports = {
       [0, 0, 0, 0, 1, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0],
-      [0, 1, 1, 1, 1, 0, 0, 0]
-    ]
+      [0, 1, 1, 1, 1, 0, 0, 0],
+    ],
   },
 
   '1_10': {
@@ -478,10 +478,10 @@ module.exports = {
       [MOVE_FORWARD],
       [DIG],
       [IF_OPT_PILE_PRESENT],
-      [UNTIL_BLOCKED, REPEAT]
+      [UNTIL_BLOCKED, REPEAT],
     ],
     scale: {
-      stepSpeed: 2.5
+      stepSpeed: 2.5,
     },
     map: [
       [1, 1, 0, 0, 0, 0, 1, 1],
@@ -491,7 +491,7 @@ module.exports = {
       [2, 1, 1, 1, 1, 1, 1, 1],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [1, 1, 0, 0, 0, 0, 1, 1],
-      [1, 1, 0, 0, 0, 0, 1, 1]
+      [1, 1, 0, 0, 0, 0, 1, 1],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -502,8 +502,8 @@ module.exports = {
       [0, 1, 0, 0, 1, 1, 0, 1],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '1_11': {
@@ -516,10 +516,10 @@ module.exports = {
       [FILL],
       [IF_OPT_PILE_PRESENT],
       [IF_OPT_HOLE_PRESENT],
-      [UNTIL_BLOCKED, REPEAT]
+      [UNTIL_BLOCKED, REPEAT],
     ],
     scale: {
-      stepSpeed: 2.5
+      stepSpeed: 2.5,
     },
     map: [
       [1, 1, 0, 0, 0, 0, 1, 1],
@@ -529,7 +529,7 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [1, 0, 0, 0, 0, 0, 0, 1],
       [1, 1, 0, 0, 0, 0, 1, 1],
-      [1, 1, 1, 0, 0, 1, 1, 1]
+      [1, 1, 1, 0, 0, 1, 1, 1],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -540,8 +540,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   // Formerly page 2
@@ -554,7 +554,7 @@ module.exports = {
     requiredBlocks: [],
     recommendedBlocks: [[MOVE_FORWARD], [DIG], [FILL], [TURN_LEFT, TURN_RIGHT]],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 0, 0, 0, 1, 1],
@@ -564,7 +564,7 @@ module.exports = {
       [1, 1, 1, 0, 0, 0, 0, 0],
       [1, 1, 1, 0, 0, 0, 0, 0],
       [1, 1, 1, 0, 0, 0, 0, 0],
-      [2, 1, 1, 0, 0, 0, 0, 0]
+      [2, 1, 1, 0, 0, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -575,8 +575,8 @@ module.exports = {
       [1, 0, 1, 0, 0, 0, 0, 0],
       [1, 0, 1, 0, 0, 0, 0, 0],
       [1, -1, 1, 0, 0, 0, 0, 0],
-      [1, -1, 1, 0, 0, 0, 0, 0]
-    ]
+      [1, -1, 1, 0, 0, 0, 0, 0],
+    ],
   },
 
   '2_2': {
@@ -593,7 +593,7 @@ module.exports = {
       [0, 1, 0, 1, 1, 0, 1, 0],
       [0, 1, 0, 0, 0, 0, 1, 0],
       [0, 1, 1, 1, 1, 1, 1, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
+      [0, 0, 0, 0, 0, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -604,8 +604,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '2_3': {
@@ -615,7 +615,7 @@ module.exports = {
     requiredBlocks: [],
     recommendedBlocks: [[MOVE_FORWARD], [fill(5)], [UNTIL_BLOCKED, REPEAT]],
     scale: {
-      stepSpeed: 2
+      stepSpeed: 2,
     },
     map: [
       [0, 1, 1, 1, 1, 1, 1, 0],
@@ -625,7 +625,7 @@ module.exports = {
       [1, 0, 0, 0, 0, 0, 0, 1],
       [1, 0, 0, 0, 0, 0, 0, 1],
       [1, 0, 0, 0, 0, 0, 0, 1],
-      [0, 2, 1, 1, 1, 1, 1, 0]
+      [0, 2, 1, 1, 1, 1, 1, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -636,8 +636,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, -5, -5, -5, -5, -5, 0]
-    ]
+      [0, 0, -5, -5, -5, -5, -5, 0],
+    ],
   },
 
   '2_4': {
@@ -651,10 +651,10 @@ module.exports = {
       [remove(7)],
       [MOVE_FORWARD],
       [TURN_LEFT],
-      [TURN_RIGHT]
+      [TURN_RIGHT],
     ],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [1, 1, 1, 1, 0, 0, 1, 1],
@@ -664,7 +664,7 @@ module.exports = {
       [0, 0, 1, 1, 1, 0, 0, 1],
       [0, 1, 2, 1, 0, 0, 1, 1],
       [1, 1, 1, 0, 0, 1, 1, 1],
-      [1, 1, 0, 0, 1, 1, 1, 1]
+      [1, 1, 0, 0, 1, 1, 1, 1],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -675,8 +675,8 @@ module.exports = {
       [0, 0, 0, 7, 0, 0, 0, 0],
       [0, 0, 7, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '2_5': {
@@ -686,7 +686,7 @@ module.exports = {
     requiredBlocks: [],
     recommendedBlocks: [[DIG], [REPEAT], [remove(6)], [MOVE_FORWARD]],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 1, 1, 0, 0, 0],
@@ -696,7 +696,7 @@ module.exports = {
       [1, 1, 1, 1, 1, 1, 1, 1],
       [0, 0, 0, 1, 1, 0, 0, 0],
       [0, 0, 0, 1, 1, 0, 0, 0],
-      [0, 0, 0, 1, 1, 0, 0, 0]
+      [0, 0, 0, 1, 1, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -707,8 +707,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '2_6': {
@@ -720,10 +720,10 @@ module.exports = {
       [remove(8)],
       [fill(8)],
       [MOVE_FORWARD],
-      [UNTIL_BLOCKED, REPEAT]
+      [UNTIL_BLOCKED, REPEAT],
     ],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 1, 1, 0, 0, 0, 0],
@@ -733,7 +733,7 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 1, 1, 0],
       [0, 0, 0, 0, 1, 1, 1, 0],
-      [0, 0, 0, 0, 1, 1, 1, 0]
+      [0, 0, 0, 0, 1, 1, 1, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -744,8 +744,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '2_7': {
@@ -762,7 +762,7 @@ module.exports = {
       [0, 0, 2, 4, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 1, 1, 0, 0, 0, 0],
-      [0, 0, 1, 1, 0, 0, 0, 0]
+      [0, 0, 1, 1, 0, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -773,8 +773,8 @@ module.exports = {
       [0, 0, 0, 0, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '2_8': {
@@ -784,7 +784,7 @@ module.exports = {
     requiredBlocks: [],
     recommendedBlocks: [[REPEAT], [AVOID_OBSTACLE_AND_REMOVE]],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -794,7 +794,7 @@ module.exports = {
       [2, 4, 1, 4, 1, 4, 1, 1],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
+      [0, 0, 0, 0, 0, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -805,8 +805,8 @@ module.exports = {
       [0, 0, 1, 0, 1, 0, 1, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   '2_9': {
@@ -817,10 +817,10 @@ module.exports = {
     recommendedBlocks: [
       [REMOVE_PILES],
       [MOVE_FORWARD],
-      [UNTIL_BLOCKED, REPEAT]
+      [UNTIL_BLOCKED, REPEAT],
     ],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -830,7 +830,7 @@ module.exports = {
       [1, 1, 1, 1, 1, 1, 1, 1],
       [1, 1, 1, 1, 1, 1, 1, 1],
       [1, 1, 1, 1, 1, 1, 1, 1],
-      [2, 1, 1, 1, 1, 1, 1, 1]
+      [2, 1, 1, 1, 1, 1, 1, 1],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -841,8 +841,8 @@ module.exports = {
       [1, 1, 1, 1, 1, 1, 0, 0],
       [1, 1, 1, 1, 1, 1, 0, 0],
       [1, 1, 1, 1, 1, 1, 0, 0],
-      [1, 1, 1, 1, 1, 1, 0, 0]
-    ]
+      [1, 1, 1, 1, 1, 1, 0, 0],
+    ],
   },
 
   '2_10': {
@@ -855,10 +855,10 @@ module.exports = {
       [MOVE_FORWARD],
       [FILL_HOLES],
       [IF_OPT_PILE_PRESENT, IF_ELSE],
-      [UNTIL_BLOCKED, REPEAT]
+      [UNTIL_BLOCKED, REPEAT],
     ],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -868,7 +868,7 @@ module.exports = {
       [1, 1, 1, 1, 1, 1, 1, 1],
       [1, 1, 1, 1, 1, 1, 1, 1],
       [1, 1, 1, 1, 1, 1, 1, 1],
-      [2, 1, 1, 1, 1, 1, 1, 1]
+      [2, 1, 1, 1, 1, 1, 1, 1],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -879,8 +879,8 @@ module.exports = {
       [1, 0, 1, 0, 0, 1, 0, 0],
       [1, 0, 1, 0, 0, 1, 0, 0],
       [1, -1, 1, -1, -1, 1, -1, 0],
-      [1, -1, 1, -1, -1, 1, -1, 0]
-    ]
+      [1, -1, 1, -1, -1, 1, -1, 0],
+    ],
   },
 
   // Page 3 to Debug
@@ -899,7 +899,7 @@ module.exports = {
       [0, 0, 4, 1, 1, 0, 0, 0],
       [0, 0, 2, 1, 4, 0, 0, 0],
       [1, 1, 0, 0, 0, 1, 1, 0],
-      [1, 1, 0, 0, 0, 0, 0, 0]
+      [1, 1, 0, 0, 0, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -910,8 +910,8 @@ module.exports = {
       [0, 0, 0, -1, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   debug_seq_2: {
@@ -927,7 +927,7 @@ module.exports = {
       [0, 0, 1, 1, 1, 0, 1, 0],
       [0, 0, 1, 1, 1, 0, 0, 0],
       [1, 0, 0, 0, 0, 0, 0, 1],
-      [1, 1, 0, 0, 0, 0, 0, 1]
+      [1, 1, 0, 0, 0, 0, 0, 1],
     ],
     startDirection: Direction.SOUTH,
     initialDirt: [
@@ -938,8 +938,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   debug_repeat: {
@@ -951,10 +951,10 @@ module.exports = {
       [DIG],
       [TURN_LEFT],
       [TURN_RIGHT],
-      [REPEAT]
+      [REPEAT],
     ],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [1, 1, 1, 1, 1, 1, 1, 1],
@@ -964,7 +964,7 @@ module.exports = {
       [1, 0, 1, 1, 1, 1, 0, 1],
       [1, 0, 1, 1, 1, 1, 0, 1],
       [1, 0, 0, 0, 0, 0, 0, 1],
-      [1, 1, 1, 1, 1, 1, 1, 1]
+      [1, 1, 1, 1, 1, 1, 1, 1],
     ],
     startDirection: Direction.SOUTH,
     initialDirt: [
@@ -975,8 +975,8 @@ module.exports = {
       [0, 0, 0, 0, 5, 0, 0, 0],
       [0, 0, 0, 0, 0, 7, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   debug_while: {
@@ -987,10 +987,10 @@ module.exports = {
       [MOVE_FORWARD],
       [REPEAT],
       [FILL],
-      [WHILE_OPT_HOLE_PRESENT]
+      [WHILE_OPT_HOLE_PRESENT],
     ],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 0, 0, 1, 1, 0],
@@ -1000,7 +1000,7 @@ module.exports = {
       [0, 2, 1, 1, 1, 1, 1, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [1, 1, 0, 0, 0, 0, 0, 0],
-      [1, 1, 0, 0, 0, 0, 0, 0]
+      [1, 1, 0, 0, 0, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -1011,8 +1011,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, -15, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   debug_if: {
@@ -1025,10 +1025,10 @@ module.exports = {
       [TURN_RIGHT],
       [REPEAT],
       [DIG],
-      [IF_OPT_PILE_PRESENT, WHILE_OPT_PILE_PRESENT]
+      [IF_OPT_PILE_PRESENT, WHILE_OPT_PILE_PRESENT],
     ],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 0, 0, 0, 0, 1],
@@ -1038,7 +1038,7 @@ module.exports = {
       [0, 0, 0, 1, 1, 0, 1, 1],
       [0, 0, 1, 1, 0, 1, 1, 0],
       [0, 1, 1, 0, 1, 1, 0, 1],
-      [2, 1, 0, 1, 1, 0, 1, 1]
+      [2, 1, 0, 1, 1, 0, 1, 1],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -1049,8 +1049,8 @@ module.exports = {
       [0, 0, 0, 0, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 1, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   debug_if_else: {
@@ -1064,10 +1064,10 @@ module.exports = {
       [REPEAT],
       [DIG],
       [FILL],
-      [IF_ELSE, IF_OPT_HOLE_PRESENT]
+      [IF_ELSE, IF_OPT_HOLE_PRESENT],
     ],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 0, 1, 1, 0, 1],
@@ -1077,7 +1077,7 @@ module.exports = {
       [1, 1, 0, 1, 1, 0, 1, 1],
       [1, 0, 1, 1, 0, 1, 1, 0],
       [0, 1, 1, 0, 1, 1, 0, 0],
-      [2, 1, 0, 1, 1, 0, 0, 0]
+      [2, 1, 0, 1, 1, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -1088,8 +1088,8 @@ module.exports = {
       [0, 0, 0, 0, -1, 0, 0, 0],
       [0, 0, 0, -1, 0, 0, 0, 0],
       [0, 0, 1, 0, 0, 0, 0, 0],
-      [0, -1, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, -1, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   debug_function_1: {
@@ -1098,7 +1098,7 @@ module.exports = {
     ideal: 8,
     requiredBlocks: [[MOVE_FORWARD], [TURN_LEFT], [REPEAT], [DIG]],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1108,7 +1108,7 @@ module.exports = {
       [0, 0, 1, 0, 0, 1, 0, 0],
       [0, 0, 2, 1, 1, 1, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
+      [0, 0, 0, 0, 0, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -1119,8 +1119,8 @@ module.exports = {
       [0, 0, 1, 0, 0, 1, 0, 0],
       [0, 0, 1, 1, 1, 1, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   debug_function_2: {
@@ -1134,10 +1134,10 @@ module.exports = {
       [DIG],
       [FILL],
       [levelBase.call(msg.fillSquare())],
-      [levelBase.call(msg.removeSquare())]
+      [levelBase.call(msg.removeSquare())],
     ],
     scale: {
-      stepSpeed: 3
+      stepSpeed: 3,
     },
     map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1147,7 +1147,7 @@ module.exports = {
       [1, 0, 1, 0, 0, 1, 0, 1],
       [2, 1, 1, 1, 1, 1, 1, 1],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
+      [0, 0, 0, 0, 0, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -1158,8 +1158,8 @@ module.exports = {
       [1, 0, 1, 0, 0, -1, 0, -1],
       [1, 1, 1, 0, 0, -1, -1, -1],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   debug_function_3: {
@@ -1172,10 +1172,10 @@ module.exports = {
       [DIG],
       [CONTROLS_FOR],
       [levelBase.callWithArg(msg.removePile(), msg.heightParameter())],
-      [VARIABLES_GET]
+      [VARIABLES_GET],
     ],
     scale: {
-      stepSpeed: 2
+      stepSpeed: 2,
     },
     map: [
       [0, 0, 0, 0, 0, 0, 0, 0],
@@ -1185,7 +1185,7 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [1, 2, 1, 1, 1, 1, 1, 1],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 1, 1, 0, 0]
+      [0, 0, 0, 0, 1, 1, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -1196,8 +1196,8 @@ module.exports = {
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 1, 2, 3, 4, 5, 6, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
   },
 
   bee_1: {
@@ -1218,7 +1218,7 @@ module.exports = {
     startBlocks: startBlocks(1, 1),
     requiredBlocks: [],
     scale: {
-      snapRadius: 2.0
+      snapRadius: 2.0,
     },
     honeyGoal: 1,
     // nectarGoal: 2,
@@ -1231,7 +1231,7 @@ module.exports = {
       [2, 'P', 1, 1, 1, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 1, 1, 0, 0, 0, 0],
-      [0, 0, 1, 1, 0, 0, 0, 0]
+      [0, 0, 1, 1, 0, 0, 0, 0],
     ],
     startDirection: Direction.EAST,
     initialDirt: [
@@ -1242,7 +1242,7 @@ module.exports = {
       [0, 3, -1, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
-      [0, 0, 0, 0, 0, 0, 0, 0]
-    ]
-  }
+      [0, 0, 0, 0, 0, 0, 0, 0],
+    ],
+  },
 };

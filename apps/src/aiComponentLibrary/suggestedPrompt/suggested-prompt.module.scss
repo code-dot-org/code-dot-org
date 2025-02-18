@@ -1,0 +1,38 @@
+@import "color.scss";
+@import "font.scss";
+@import "@cdo/apps/componentLibrary/typography/typography.module";
+
+.prompts {
+  display: flex;
+  column-gap: 0.5em;
+
+  .prompt {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    color: $neutral-dark;
+    padding: 2px 12px;
+    background-color: $brand_primary_light;
+    border-radius: 6.25rem;;
+    max-width: 18em;
+
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    i {
+      display: flex;
+      justify-content: center;
+    }
+
+    &:has(i:first-child) {
+      padding-inline-start: 8px;
+    }
+
+    &:has(i:not(:first-child)) {
+      padding-inline-end: 8px;
+    }
+  }
+}

@@ -37,11 +37,9 @@ class Api::V1::TeacherScoresController < Api::V1::JSONApiController
     end
   end
 
-  private
-
   # Never trust parameters from the scary internet, only allow the following
   # list through.
-  def teacher_score_params
+  private def teacher_score_params
     params.require(:teacher_score).permit(:user_level_id, :score, :teacher_id, :section_id, :lesson_id, :script_id)
   end
 end

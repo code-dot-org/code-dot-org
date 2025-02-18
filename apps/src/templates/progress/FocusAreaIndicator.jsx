@@ -3,10 +3,11 @@
  * a focus area. Note: This is English only.
  */
 
-import React from 'react';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 
 const styles = {
@@ -15,12 +16,12 @@ const styles = {
     position: 'absolute',
     right: 0,
     top: 0,
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   arrowContainer: {
     display: 'inline-block',
     position: 'relative',
-    top: 10
+    top: 10,
   },
   leftArrow: {
     display: 'inline-block',
@@ -28,7 +29,7 @@ const styles = {
     height: 0,
     borderStyle: 'solid',
     borderWidth: '17px 20px 17px',
-    borderColor: `transparent ${color.cyan} transparent transparent`
+    borderColor: `transparent ${color.cyan} transparent transparent`,
   },
   focusArea: {
     display: 'inline-block',
@@ -37,10 +38,10 @@ const styles = {
     height: 34,
     lineHeight: '34px',
     position: 'relative',
-    top: -3
+    top: -3,
   },
   text: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   focusAreaIcon: {
     display: 'inline-block',
@@ -51,9 +52,9 @@ const styles = {
     marginRight: 5,
     borderRadius: 4,
     ':hover': {
-      backgroundColor: color.default_blue
-    }
-  }
+      backgroundColor: color.default_blue,
+    },
+  },
 };
 
 const FocusAreaIndicator = () => (

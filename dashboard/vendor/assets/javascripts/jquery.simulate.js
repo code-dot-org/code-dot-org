@@ -11,7 +11,8 @@
 
 (function($, undefined) {
   var rkeyEvent = /^key/,
-    rmouseEvent = /^(?:mouse|contextmenu|touch|pointer|MSPointer)|click/;
+    rmouseEvent = /^(?:mouse|contextmenu|touch)|click/,
+    rpointerEvent = /^pointer/;
 
   $.fn.simulate = function(type, options) {
     return this.each(function() {
@@ -78,6 +79,10 @@
 
       if (rmouseEvent.test(type)) {
         return this.mouseEvent(type, options);
+      }
+
+      if (rpointerEvent.test(type)) {
+        return this.pointerEvent(type, options);
       }
     },
 
@@ -165,6 +170,18 @@
       }
 
       return event;
+    },
+
+    pointerEvent: function(type, options) {
+      options = $.extend(
+        {
+          pointerType: "mouse",
+          pointerId: 1,
+          isPrimary: true
+        },
+        options
+      );
+      return new PointerEvent(type, options);
     },
 
     keyEvent: function(type, options) {
@@ -376,6 +393,9 @@
       function simulateEvent(obj, target, name, param) {
         if (name in touchMappings) {
           name = touchMappings[name];
+        }
+        if (name === "pointerup") {
+          target = target.ownerDocument;
         }
         obj.simulateEvent(target, name, param);
       }

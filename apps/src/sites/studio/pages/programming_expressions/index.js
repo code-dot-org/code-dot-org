@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import AllCodeDocs from '@cdo/apps/levelbuilder/code-docs-editor/AllCodeDocs';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import AllCodeDocs from '@cdo/apps/lib/levelbuilder/code-docs-editor/AllCodeDocs';
 
 $(document).ready(() => {
   const programmingEnvironments = getScriptData('programmingEnvironments');

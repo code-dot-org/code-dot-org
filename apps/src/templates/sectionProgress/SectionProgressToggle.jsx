@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ToggleGroup from '../ToggleGroup';
-import color from '@cdo/apps/util/color';
 import {connect} from 'react-redux';
-import {setCurrentView} from './sectionProgressRedux';
-import {ViewType} from './sectionProgressConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import ToggleGroup from '../ToggleGroup';
+
+import {ViewType} from './sectionProgressConstants';
+import {setCurrentView} from './sectionProgressRedux';
 
 /**
  * A toggle that provides a way to switch between detail, summary, and standards views of
@@ -21,7 +24,7 @@ class SectionProgressToggle extends React.Component {
     currentView: PropTypes.string.isRequired,
     setCurrentView: PropTypes.func.isRequired,
     sectionId: PropTypes.number,
-    scriptId: PropTypes.number
+    scriptId: PropTypes.number,
   };
 
   onChange = selectedToggle => {
@@ -34,15 +37,15 @@ class SectionProgressToggle extends React.Component {
           section_id: this.props.sectionId,
           old_view: this.props.currentView,
           new_view: selectedToggle,
-          script_id: this.props.scriptId
-        })
+          script_id: this.props.scriptId,
+        }),
       },
       {includeUserId: true}
     );
     analyticsReporter.sendEvent(EVENTS.PROGRESS_TOGGLE, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,
-      newView: selectedToggle
+      newView: selectedToggle,
     });
     this.props.setCurrentView(selectedToggle);
   };
@@ -54,6 +57,7 @@ class SectionProgressToggle extends React.Component {
         selected={currentView}
         activeColor={color.teal}
         onChange={this.onChange}
+        style={styles.toggleGroup}
       >
         <button
           type="button"
@@ -89,8 +93,11 @@ const styles = {
   toggleButton: {
     padding: '3px 20px',
     height: 34,
-    margin: 'auto auto 10px auto'
-  }
+    margin: 'auto auto 10px auto',
+  },
+  toggleGroup: {
+    minWidth: 'fit-content',
+  },
 };
 
 export const UnconnectedSectionProgressToggle = SectionProgressToggle;
@@ -99,11 +106,11 @@ export default connect(
   state => ({
     currentView: state.sectionProgress.currentView,
     sectionId: state.teacherSections.selectedSectionId,
-    scriptId: state.unitSelection.scriptId
+    scriptId: state.unitSelection.scriptId,
   }),
   dispatch => ({
     setCurrentView(viewType) {
       dispatch(setCurrentView(viewType));
-    }
+    },
   })
 )(SectionProgressToggle);

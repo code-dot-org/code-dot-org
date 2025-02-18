@@ -9,3 +9,5 @@ right '/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png'
 wrong '/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png'
 wrong '/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png'
 wrong '/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png'
+
+allow_multiple_attempts true

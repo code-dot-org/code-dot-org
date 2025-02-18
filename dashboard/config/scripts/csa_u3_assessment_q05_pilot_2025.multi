@@ -1,0 +1,23 @@
+name 'CSA U3 Assessment q05_pilot-2025'
+
+wrong '`0`'
+right '`0.0`'
+wrong '`10`'
+wrong '`5.5`'
+wrong '`ArrayIndexOutOfBoundsException`'
+
+markdown <<MARKDOWN
+What is the output of the following code snippet?
+
+```
+double[] numArray = new double[10];
+numArray[0] = 5.5;
+System.out.print(numArray[3]);
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+When a 1D array is declared and initialized using the `new` keyword, the elements are initialized to the default value for the specified data type. Since this 1D array is a `double`, the elements are initialized to `0.0`. The only element that is then changed is the value assigned at index `0`, or the first position in `numArray`. The other values in `numArray` are still `0.0`.
+MARKDOWN
+
+allow_multiple_attempts true

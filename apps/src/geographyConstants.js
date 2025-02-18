@@ -1,3 +1,7 @@
+import {UsStates} from '@cdo/generated-scripts/sharedConstants';
+
+export const STATE_CODES = Object.keys(UsStates).sort();
+
 export const STATES = [
   '',
   'Alabama',
@@ -50,7 +54,7 @@ export const STATES = [
   'Washington',
   'West Virginia',
   'Wisconsin',
-  'Wyoming'
+  'Wyoming',
 ];
 
 // Note that this array is returned sorted by country name, not abbreviation.
@@ -300,5 +304,5 @@ export const COUNTRIES = [
   {label: 'YT', value: 'Mayotte'},
   {label: 'ZA', value: 'South Africa'},
   {label: 'ZM', value: 'Zambia'},
-  {label: 'ZW', value: 'Zimbabwe'}
+  {label: 'ZW', value: 'Zimbabwe'},
 ].sort((a, b) => a.value.localeCompare(b.value));

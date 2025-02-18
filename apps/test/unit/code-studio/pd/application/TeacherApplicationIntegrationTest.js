@@ -1,12 +1,12 @@
-import React from 'react';
-import {expect} from 'chai';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
-import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import * as utils from '@cdo/apps/utils';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
+import * as utils from '@cdo/apps/utils';
+
 import FindYourRegion from '../../../../../src/code-studio/pd/application/teacher/FindYourRegion';
 
 describe('TeacherApplication', () => {
@@ -22,41 +22,22 @@ describe('TeacherApplication', () => {
     apiEndpoint: '/path/to/endpoint',
     options: fakeOptions,
     accountEmail: 'user@email.com',
-    userId: 1,
     errors: [],
     data: {},
-    onChange: () => {}
+    onChange: () => {},
   };
 
   beforeEach(() => {
     sinon.stub($, 'ajax').returns(new $.Deferred());
     sinon.stub($, 'param').returns(new $.Deferred());
     sinon.stub(window, 'fetch').returns(Promise.resolve({ok: true}));
-    sinon.stub(firehoseClient, 'putRecord');
     sinon.stub(utils, 'reload');
-    sinon
-      .stub(window.sessionStorage, 'getItem')
-      .withArgs('TeacherApplication')
-      .returns(JSON.stringify({}));
-    sinon.stub(window.sessionStorage, 'setItem');
     window.ga = sinon.fake();
   });
 
   afterEach(() => {
     sinon.restore();
     window.ga = undefined;
-  });
-
-  it('Sends firehose event on initialization, save, and submit', () => {
-    const teacherApp = mount(<TeacherApplication {...defaultProps} />);
-    const formControllerProps = teacherApp.find('FormController').props();
-    sinon.assert.calledOnce(firehoseClient.putRecord);
-
-    formControllerProps.onSuccessfulSave();
-    sinon.assert.calledTwice(firehoseClient.putRecord);
-
-    formControllerProps.onSuccessfulSubmit();
-    sinon.assert.calledThrice(firehoseClient.putRecord);
   });
 
   it('Does not set schoolId if not provided', () => {
@@ -78,24 +59,11 @@ describe('TeacherApplication', () => {
   });
 
   it('Sets the school dropdown value from storage', () => {
-    window.sessionStorage.getItem.restore();
-    sinon
-      .stub(window.sessionStorage, 'getItem')
-      .withArgs('TeacherApplication')
-      .returns({program: 'CSD', school: '25'});
-    const page = mount(
-      <FindYourRegion
-        {...defaultProps}
-        data={window.sessionStorage.getItem('TeacherApplication')}
-      />
-    );
+    const data = {program: 'CSD', school: '25'};
+
+    const page = mount(<FindYourRegion {...defaultProps} data={data} />);
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       '25'
     );
-  });
-
-  it('Reports to google analytics', () => {
-    mount(<TeacherApplication {...defaultProps} />);
-    sinon.assert.called(window.ga);
   });
 });

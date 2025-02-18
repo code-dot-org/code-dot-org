@@ -9,5 +9,9 @@ module Api::V1::Pd
         object.registered_workshop? ? object.workshop.id : nil
       end
     end
+
+    def status
+      object.try(:status_including_enrolled)
+    end
   end
 end

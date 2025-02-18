@@ -1,6 +1,6 @@
-/* eslint-disable react/no-danger */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 /**
@@ -12,10 +12,10 @@ export default class AbuseError extends React.Component {
   static propTypes = {
     i18n: PropTypes.shape({
       tos: PropTypes.string.isRequired,
-      contact_us: PropTypes.string.isRequired
+      contact_us: PropTypes.string.isRequired,
     }).isRequired,
     className: PropTypes.string,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   render() {

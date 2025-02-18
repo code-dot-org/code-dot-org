@@ -131,5 +131,10 @@ module Pd
       VIRTUAL_8_CATEGORY => [1].freeze,
       CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
     }
+
+    SURVEY_LINKS = {
+      COURSE_BUILD_YOUR_OWN_TEACHER: 'form/professional_learning_educator_post_workshop_survey'.freeze,
+      COURSE_BUILD_YOUR_OWN_FACILITATOR: 'form/professional_learning_facilitator_post_workshop_survey'.freeze
+    }
   end
 end

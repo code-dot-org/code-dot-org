@@ -2,13 +2,15 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
+import msg from '@cdo/locale';
+
+import ToggleGroup from '../templates/ToggleGroup';
 
 import {ApplabInterfaceMode} from './constants';
-import msg from '@cdo/locale';
 import {actions} from './redux/applab';
-import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
-import ToggleGroup from '../templates/ToggleGroup';
 
 class PlaySpaceHeader extends React.Component {
   static propTypes = {
@@ -20,12 +22,12 @@ class PlaySpaceHeader extends React.Component {
     interfaceMode: PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
-      ApplabInterfaceMode.DATA
+      ApplabInterfaceMode.DATA,
     ]).isRequired,
     playspacePhoneFrame: PropTypes.bool,
     screenIds: PropTypes.array.isRequired,
     onScreenCreate: PropTypes.func.isRequired,
-    onInterfaceModeChange: PropTypes.func.isRequired
+    onInterfaceModeChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -104,14 +106,14 @@ export default connect(
       hasDesignMode: state.pageConstants.hasDesignMode,
       isShareView: state.pageConstants.isShareView,
       interfaceMode: state.interfaceMode,
-      playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+      playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
     };
   },
   function propsFromDispatch(dispatch) {
     return {
-      onInterfaceModeChange: function(mode) {
+      onInterfaceModeChange: function (mode) {
         dispatch(actions.changeInterfaceMode(mode));
-      }
+      },
     };
   }
 )(PlaySpaceHeader);

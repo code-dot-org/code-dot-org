@@ -4,7 +4,20 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "announcements": [
+        {
+          "key": "a58ae58b-016b-4573-a9e6-030b9baeb655",
+          "notice": "Ecosystems (beta) is being deprecated",
+          "details": "We are in the process of fully removing the Ecosystems (beta) content and course from Code.org within the next 5-7 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Ecosystems (beta) content will unfortunately not be addressed or fixed, as we work towards fully removing it. You can learn more about other course options here: ",
+          "link": "https://code.org/educate/csc",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "CS Connections Landing Page"
+        }
+      ],
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -13,8 +26,8 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-02-08 23:07:16 UTC",
-    "published_state": "stable",
+    "serialized_at": "2024-11-19 01:15:36 UTC",
+    "published_state": "sunsetting",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -2966,5 +2979,14 @@
         "opportunity_standard.shortcode": "3-LS4-4"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

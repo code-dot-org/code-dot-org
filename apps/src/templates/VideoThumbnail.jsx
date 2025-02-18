@@ -1,13 +1,15 @@
-import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import {showVideoDialog} from '@cdo/apps/code-studio/videos';
+
 import {videoDataShape} from './types';
 
 export default class VideoThumbnail extends Component {
   static propTypes = {
     video: videoDataShape,
     onClick: PropTypes.func,
-    openInNewTab: PropTypes.bool
+    openInNewTab: PropTypes.bool,
   };
 
   onThumbnailClick = () => {
@@ -24,7 +26,7 @@ export default class VideoThumbnail extends Component {
           download: video.download,
           thumbnail: video.thumbnail,
           enable_fallback: video.enable_fallback,
-          autoplay: video.autoplay
+          autoplay: video.autoplay,
         },
         true
       );
@@ -53,12 +55,12 @@ const styles = {
     fontWeight: 'bold',
     fontSize: 16,
     lineHeight: '25px',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   videoThumbnail: {
     borderRadius: 5,
     height: 40,
     width: 'auto',
-    marginRight: 8
-  }
+    marginRight: 8,
+  },
 };

@@ -10,3 +10,5 @@ wrong 'wrong answer'
 markdown <<MARKDOWN
 How are `while`(#e7e8ea) loops and `if`(#e7e8ea) statements similar? How are they different?
 MARKDOWN
+
+allow_multiple_attempts true

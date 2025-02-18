@@ -1,20 +1,23 @@
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import _ from 'lodash';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import LessonStatusDialog from './LessonStatusDialog';
+
+import firehoseClient from '../../../metrics/firehose';
+
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
+import LessonStatusDialog from './LessonStatusDialog';
 import {
   setTeacherCommentForReport,
   getUnpluggedLessonsForScript,
-  fetchStudentLevelScores
+  fetchStudentLevelScores,
 } from './sectionStandardsProgressRedux';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import firehoseClient from '../../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {TeacherScores} from './standardsConstants';
 
 const STANDARDS = 'standards';
@@ -27,14 +30,14 @@ class StandardsViewHeaderButtons extends Component {
     scriptId: PropTypes.number,
     selectedLessons: PropTypes.array.isRequired,
     unpluggedLessons: PropTypes.array.isRequired,
-    fetchStudentLevelScores: PropTypes.func
+    fetchStudentLevelScores: PropTypes.func,
   };
 
   state = {
     isLessonStatusDialogOpen: false,
     isCreateReportDialogOpen: false,
     comment: '',
-    commentUpdated: false
+    commentUpdated: false,
   };
 
   openLessonStatusDialog = () => {
@@ -46,15 +49,15 @@ class StandardsViewHeaderButtons extends Component {
         event: 'click_update_unplugged_lessons',
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
-          script_id: this.props.scriptId
-        })
+          script_id: this.props.scriptId,
+        }),
       },
       {includeUserId: true}
     );
     analyticsReporter.sendEvent(EVENTS.PROGRESS_TOGGLE, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,
-      newView: STANDARDS
+      newView: STANDARDS,
     });
   };
 
@@ -71,8 +74,8 @@ class StandardsViewHeaderButtons extends Component {
         event: 'open_generate_report_dialog',
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
-          script_id: this.props.scriptId
-        })
+          script_id: this.props.scriptId,
+        }),
       },
       {includeUserId: true}
     );
@@ -93,7 +96,7 @@ class StandardsViewHeaderButtons extends Component {
     );
     window.teacherDashboardStoreInformation = {
       teacherComment: this.state.comment,
-      scriptId: this.props.scriptId
+      scriptId: this.props.scriptId,
     };
     firehoseClient.putRecord(
       {
@@ -103,8 +106,8 @@ class StandardsViewHeaderButtons extends Component {
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
           script_id: this.props.scriptId,
-          added_or_changed_comment: this.state.commentUpdated
-        })
+          added_or_changed_comment: this.state.commentUpdated,
+        }),
       },
       {includeUserId: true}
     );
@@ -129,14 +132,14 @@ class StandardsViewHeaderButtons extends Component {
     for (var i = 0; i < selectedLessonIds.length; i++) {
       selectedLessonScores[i] = {
         lesson_id: selectedLessonIds[i],
-        score: TeacherScores.COMPLETE
+        score: TeacherScores.COMPLETE,
       };
     }
 
     for (var j = 0; j < unselectedLessonIds.length; j++) {
       unselectedLessonScores[j] = {
         lesson_id: unselectedLessonIds[j],
-        score: TeacherScores.INCOMPLETE
+        score: TeacherScores.INCOMPLETE,
       };
     }
 
@@ -147,8 +150,8 @@ class StandardsViewHeaderButtons extends Component {
       dataType: 'json',
       data: JSON.stringify({
         section_id: sectionId,
-        lesson_scores: selectedLessonScores.concat(unselectedLessonScores)
-      })
+        lesson_scores: selectedLessonScores.concat(unselectedLessonScores),
+      }),
     }).done(() => {
       if (this.state.isLessonStatusDialogOpen) {
         this.closeLessonStatusDialog();
@@ -162,7 +165,6 @@ class StandardsViewHeaderButtons extends Component {
         {this.props.unpluggedLessons.length > 0 && (
           <div>
             <Button
-              __useDeprecatedTag
               onClick={this.openLessonStatusDialog}
               color={Button.ButtonColor.gray}
               text={i18n.updateUnpluggedProgress()}
@@ -176,7 +178,6 @@ class StandardsViewHeaderButtons extends Component {
           </div>
         )}
         <Button
-          __useDeprecatedTag
           onClick={this.openCreateReportDialog}
           color={Button.ButtonColor.gray}
           text={i18n.generatePDFReport()}
@@ -202,11 +203,12 @@ const styles = {
   buttonsGroup: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   button: {
-    marginLeft: 20
-  }
+    margin: '0 0 0 20px',
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+  },
 };
 
 export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
@@ -215,7 +217,7 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     selectedLessons: state.sectionStandardsProgress.selectedLessons,
-    unpluggedLessons: getUnpluggedLessonsForScript(state)
+    unpluggedLessons: getUnpluggedLessonsForScript(state),
   }),
   dispatch => ({
     setTeacherCommentForReport(comment) {
@@ -223,6 +225,6 @@ export default connect(
     },
     fetchStudentLevelScores(scriptId, sectionId) {
       dispatch(fetchStudentLevelScores(scriptId, sectionId));
-    }
+    },
   })
 )(StandardsViewHeaderButtons);

@@ -1,12 +1,15 @@
-import {assert, expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
+
+import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('BackpackClientApi', () => {
   const channelId = 'fake_channel_id';
+  const appType = 'javalab';
   const sampleFileJson = {
     'test.java': {text: 'hello'},
-    'test2.java': {text: 'hello'}
+    'test2.java': {text: 'hello'},
   };
 
   let server,
@@ -19,7 +22,7 @@ describe('BackpackClientApi', () => {
     server.respondWith('put', `/v3/libraries/${channelId}/${filename}`, [
       status,
       {'Content-Type': 'application/json'},
-      '{}'
+      '{}',
     ]);
   };
 
@@ -27,14 +30,14 @@ describe('BackpackClientApi', () => {
     server.respondWith('delete', `/v3/libraries/${channelId}/${filename}`, [
       status,
       {'Content-Type': 'application/json'},
-      '{}'
+      '{}',
     ]);
   };
 
   describe('with provided channel id', () => {
     beforeEach(() => {
       server = sinon.fakeServer.create();
-      backpackClientApi = new BackpackClientApi(channelId);
+      backpackClientApi = new BackpackClientApi(appType, channelId);
       fetchChannelIdStub = sinon.stub(backpackClientApi, 'fetchChannelId');
       errorCallback = sinon.fake();
       successCallback = sinon.fake();
@@ -120,7 +123,7 @@ describe('BackpackClientApi', () => {
   describe('without provided channel id', () => {
     beforeEach(() => {
       server = sinon.fakeServer.create();
-      backpackClientApi = new BackpackClientApi();
+      backpackClientApi = new BackpackClientApi(appType);
       fetchChannelIdStub = sinon.stub(backpackClientApi, 'fetchChannelId');
       errorCallback = sinon.fake();
       successCallback = sinon.fake();

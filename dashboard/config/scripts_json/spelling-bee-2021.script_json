@@ -4,16 +4,31 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "announcements": [
+        {
+          "key": "919225c8-d889-4974-b8ee-9e640ee88c21",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Are you an elementary school teacher who wants to teach computer science, but you’re not sure where to start? Discover Code.org's newly released professional learning module on Computer Science Basics. Click the button to start this two-hour, self-paced course to equip yourself with the skills to teach foundational computer science concepts to your students.",
+          "link": "https://studio.code.org/courses/self-paced-pl-k5-2024?",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Computer Science Basics for K-5 Teachers"
+        }
+      ],
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "has_verified_resources": true,
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "tts": true,
-      "version_year": "2021"
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "spelling-bee",
-    "serialized_at": "2022-09-07 17:27:19 UTC",
+    "serialized_at": "2025-01-09 16:47:04 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -755,6 +770,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

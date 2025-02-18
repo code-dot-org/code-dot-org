@@ -1,12 +1,12 @@
-import {expect} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
 describe('VerifiedResourcesNotification', () => {
   const defaultProps = {
     width: 700,
-    inLesson: false
+    inLesson: false,
   };
 
   it('renders course details description when notification not in lesson', () => {
@@ -14,12 +14,7 @@ describe('VerifiedResourcesNotification', () => {
       <VerifiedResourcesNotification {...defaultProps} />
     );
 
-    expect(
-      wrapper
-        .find('Connect(Notification)')
-        .first()
-        .props().details
-    ).to.equal(
+    expect(wrapper.find('Connect(Notification)').first().props().details).toBe(
       'This course provides extra resources which are only available to verified teachers.'
     );
   });
@@ -29,12 +24,7 @@ describe('VerifiedResourcesNotification', () => {
       <VerifiedResourcesNotification {...defaultProps} inLesson={true} />
     );
 
-    expect(
-      wrapper
-        .find('Connect(Notification)')
-        .first()
-        .props().details
-    ).to.equal(
+    expect(wrapper.find('Connect(Notification)').first().props().details).toBe(
       'This lesson contains extra resources or levels which are only available to verified teachers.'
     );
   });

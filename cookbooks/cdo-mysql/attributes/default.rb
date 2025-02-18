@@ -3,11 +3,9 @@ default['cdo-mysql'] = {
     # Enable ProxySQL on non-daemon app-servers by default.
     enabled: node['cdo-apps'] && !node['cdo-apps']['daemon'],
     port: 6033,
-    reporting_port: 6034,
-    admin: 'mysql2://admin:admin@127.0.0.1:6032'
-  },
-
-  # If RDS Proxy endpoint is provided it will be used instead of ProxySQL.
-  rds_proxy: nil
+    admin: 'mysql2://admin:admin@127.0.0.1:6032',
+    # Past Connection Attempt spikes have peaked at about 2 per second per web application server EC2 Instance.
+    throttle_connections_per_sec_to_hostgroup: 100
+  }
 }
 default['cdo-secrets'] = {}

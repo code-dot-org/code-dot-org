@@ -24,6 +24,6 @@ begin
     found_students += 1
   end
   puts "Cleared data for #{found_students} students"
-rescue Clever::ApiError => e
-  puts "Exception: #{e}"
+rescue Clever::ApiError => exception
+  puts "Exception: #{exception}"
 end

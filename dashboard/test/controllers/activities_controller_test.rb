@@ -65,6 +65,28 @@ class ActivitiesControllerTest < ActionController::TestCase
       app: 'test',
       program: '<hey>'
     }
+
+    # set up params for testing rubric evaluation
+    @teacher = create :authorized_teacher
+    @section = create :section, teacher: @teacher
+    @student = create :student
+    create :follower, section: @section, student_user: @student
+    @milestone_rubric_params = @milestone_params.merge(
+      user_id: @student.id,
+      submitted: 'true'
+    )
+
+    @unauthorized_teacher = create :teacher
+    @unauth_teacher_section = create :section, teacher: @unauthorized_teacher
+    @unauth_teacher_student = create :student
+    create :follower, section: @unauth_teacher_section, student_user: @unauth_teacher_student
+    @unauth_milestone_rubric_params = @milestone_params.merge(
+      user_id: @unauth_teacher_student.id,
+      submitted: 'true'
+    )
+
+    Metrics::Events.stubs(:log_event).never
+    EvaluateRubricJob.expects(:perform_later).never
   end
 
   # Ignore any additional keys in 'actual' not found in 'expected'.
@@ -84,8 +106,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def studio_program_with_text(text)
     '<xml><block type="when_run" deletable="false"><next><block type="studio_showTitleScreen"><title name="TITLE">' +
-        text +
-        '</title><title name="TEXT">type text here</title></block></next></block>'
+      text +
+      '</title><title name="TEXT">type text here</title></block></next></block>'
   end
 
   def build_expected_response(options = {})
@@ -105,8 +127,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel, UserScript) do
-      post :milestone, params: @milestone_params
+    assert_creates(LevelSource, UserLevel, UserScript) do
+      assert_does_not_create(Activity) do
+        post :milestone, params: @milestone_params
+      end
     end
     assert_response :success
 
@@ -222,8 +246,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     UserScript.create(user: @user, script: @script_level.script)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
-    assert_creates(LevelSource, Activity) do
-      assert_does_not_create(UserLevel, UserScript) do
+    assert_creates(LevelSource) do
+      assert_does_not_create(UserLevel, UserScript, Activity) do
         post :milestone, params: @milestone_params
       end
     end
@@ -237,8 +261,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(Activity, UserLevel, UserScript) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel, UserScript) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone, params: @milestone_params.merge(program: "<hey>" * 10000)
       end
     end
@@ -263,8 +287,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(Activity, UserLevel, UserScript, LevelSource) do
-      post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
+    assert_creates(UserLevel, UserScript, LevelSource) do
+      assert_does_not_create(Activity) do
+        post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
+      end
     end
 
     assert_response :success
@@ -291,9 +317,11 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel) do
-      post :milestone,
-        params: @milestone_params.merge(result: 'false', testResult: 10)
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(Activity) do
+        post :milestone,
+          params: @milestone_params.merge(result: 'false', testResult: 10)
+      end
     end
 
     assert_response :success
@@ -304,13 +332,15 @@ class ActivitiesControllerTest < ActionController::TestCase
     # do all the logging
     @controller.expects :log_milestone
 
-    assert_creates(LevelSource, Activity, UserLevel) do
-      post :milestone,
-        params: @milestone_params.merge(
-          result: 'false',
-          testResult: 10,
-          image: Base64.encode64(@good_image)
-        )
+    assert_creates(LevelSource, UserLevel) do
+      assert_does_not_create(Activity) do
+        post :milestone,
+          params: @milestone_params.merge(
+            result: 'false',
+            testResult: 10,
+            image: Base64.encode64(@good_image)
+          )
+      end
     end
 
     # assert_equal @good_image.size, LevelSourceImage.last.image.size
@@ -325,23 +355,23 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_s3_upload
 
-    original_activity_count = Activity.count
     original_user_level_count = UserLevel.count
 
     expected_created_classes = [LevelSource, UserLevel, LevelSourceImage]
 
     assert_creates(*expected_created_classes) do
-      post :milestone,
-        params: @milestone_params.merge(image: Base64.encode64(@good_image))
+      assert_does_not_create(Activity) do
+        post :milestone,
+          params: @milestone_params.merge(image: Base64.encode64(@good_image))
+      end
     end
-    assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
-    assert_not_nil UserLevel.where(
+    refute_nil UserLevel.where(
       user_id: @user,
       level_id: @script_level.level_id,
       script_id: @script_level.script_id
     ).first
-    assert_not_nil UserScript.where(user_id: @user, script_id: @script_level.script_id).first
+    refute_nil UserScript.where(user_id: @user, script_id: @script_level.script_id).first
 
     assert_response :success
 
@@ -365,8 +395,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -397,8 +427,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -427,8 +457,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -459,8 +489,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     expect_no_s3_upload
 
-    assert_creates(Activity, UserLevel) do
-      assert_does_not_create(LevelSource) do
+    assert_creates(UserLevel) do
+      assert_does_not_create(LevelSource, Activity) do
         post :milestone,
           params: @milestone_params.merge(
             program: program,
@@ -501,8 +531,8 @@ class ActivitiesControllerTest < ActionController::TestCase
       then.
       returns(existing_user_level)
 
-    assert_creates(LevelSource, Activity) do
-      assert_does_not_create(UserLevel) do
+    assert_creates(LevelSource) do
+      assert_does_not_create(UserLevel, Activity) do
         post :milestone, params: @milestone_params
       end
     end
@@ -534,6 +564,29 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_response :success
 
     assert_equal false, UserLevel.where(user_id: @user.id, level: @level.id).first.submitted?
+  end
+
+  test 'logged in milestone with current locale' do
+    current_locale = set_request_locale('uk-UA')
+
+    post :milestone, params: @milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user_id: @user.id, level: @level.id)
+    assert_equal current_locale, user_level.locale
+    assert_equal false, user_level.locale_supported
+  end
+
+  test 'logged in milestone with current locale support flag' do
+    current_locale = set_request_locale('uk-UA')
+    @script.update!(supported_locales: [current_locale])
+
+    post :milestone, params: @milestone_params
+    assert_response :success
+
+    user_level = UserLevel.find_by(user_id: @user.id, level: @level.id)
+    assert_equal current_locale, user_level.locale
+    assert_equal true, user_level.locale_supported
   end
 
   test "Milestone with milestone posts disabled returns 503 status" do
@@ -1114,17 +1167,95 @@ class ActivitiesControllerTest < ActionController::TestCase
       submitted: false
     }
 
+    current_locale = set_request_locale('uk-UA')
+
     post :milestone, params: milestone_params
     assert_response :success
 
     user_level = UserLevel.find_by(user: @user, level: sublevel1, script: script)
     refute_nil user_level
     assert_equal 100, user_level.best_result
+    assert_equal current_locale, user_level.locale
 
     assert_nil UserLevel.find_by(user: @user, level: sublevel2, script: script)
 
     parent_user_level = UserLevel.find_by(user: @user, level: bubble_choice, script: script)
     refute_nil parent_user_level
     assert_equal 100, parent_user_level.best_result
+    assert_equal current_locale, parent_user_level.locale
+  end
+
+  test 'milestone triggers AI rubric eval job' do
+    section = create :section, teacher: @teacher, script: @script
+    create :follower, section: section, student_user: @student
+
+    Metrics::Events.stubs(:log_event).once
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
+    EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id).once
+    sign_in @student
+
+    post :milestone, params: @milestone_rubric_params
+    assert_response :success
+  end
+
+  test 'milestone where teacher disables AI does not triggers rubric eval job' do
+    @teacher.ai_rubrics_disabled = true
+    @teacher.save!
+    section = create :section, teacher: @teacher, script: @script
+    create :follower, section: section, student_user: @student
+    Metrics::Events.stubs(:log_event).never
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
+    EvaluateRubricJob.expects(:perform_later).never
+    sign_in @student
+
+    post :milestone, params: @milestone_rubric_params
+    assert_response :success
+  end
+
+  test 'milestone with student on non ai level does not trigger rubric eval job' do
+    section = create :section, teacher: @teacher, script: @script
+    create :follower, section: section, student_user: @student
+    Metrics::Events.stubs(:log_event).never
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(false)
+    EvaluateRubricJob.expects(:perform_later).never
+    sign_in @student
+
+    post :milestone, params: @milestone_rubric_params
+    assert_response :success
+  end
+
+  test 'milestone with teacher does not trigger rubric eval job' do
+    Metrics::Events.stubs(:log_event).never
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
+    EvaluateRubricJob.expects(:perform_later).never
+    sign_in @teacher
+
+    @milestone_rubric_params[:user_id] = @teacher.id
+    # teachers are not shown the option to submit, and we rely on this to avoid
+    # requesting rubric evaluations for teachers
+    @milestone_rubric_params.delete(:submitted)
+
+    post :milestone, params: @milestone_rubric_params
+    assert_response :success
+  end
+
+  test 'milestone submitted by student with unverified teacher does not trigger rubric eval job' do
+    Metrics::Events.stubs(:log_event).never
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(true)
+    EvaluateRubricJob.expects(:perform_later).never
+    sign_in @unauth_teacher_student
+
+    post :milestone, params: @unauth_milestone_rubric_params
+    assert_response :success
+  end
+
+  test 'milestone on level without ai enabled does not trigger rubric eval job' do
+    Metrics::Events.stubs(:log_event).never
+    AiRubricConfig.stubs(:ai_enabled?).with(@script_level).returns(false)
+    EvaluateRubricJob.expects(:perform_later).never
+    sign_in @student
+
+    post :milestone, params: @milestone_rubric_params
+    assert_response :success
   end
 end

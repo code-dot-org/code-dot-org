@@ -96,13 +96,18 @@ class ClientState
 
   # Adds callout_key to the set of callouts seen in the current user session.
   def add_callout_seen(callout_key)
-    session[:callouts_seen] ||= Set.new
-    session[:callouts_seen].add(callout_key)
+    session[:callouts_seen] ||= []
+    # Ensure all old states that are using a Set are converted to an Array
+    session[:callouts_seen] = session[:callouts_seen].to_a
+    # Deletes a key if it exists (does nothing if not)
+    session[:callouts_seen].delete(callout_key)
+    # Append to the end of the list
+    session[:callouts_seen] << callout_key
+    # Rotate the list to only a certain number of the newest items
+    session[:callouts_seen].shift(session[:callouts_seen].length - 20) if session[:callouts_seen].length > 20
   end
 
-  private
-
-  def progress_hash
+  private def progress_hash
     migrate_cookies
     progress = cookies[:progress]
     progress ? JSON.parse(progress) : {}
@@ -111,7 +116,7 @@ class ClientState
   end
 
   # Migrates session state to unencrypted cookies.
-  def migrate_cookies
+  private def migrate_cookies
     if session[:progress]
       cookies.permanent[:progress] = JSON.generate(session[:progress])
       session[:progress] = nil

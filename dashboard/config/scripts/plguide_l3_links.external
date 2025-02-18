@@ -1,0 +1,13 @@
+name 'PLGuide_L3_Links'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Link Guidelines
+
+#### Best practice is to format all links to open in a new tab as the default.
+
+#### **Example:** <a href="https://www.google.com" target="_blank">Link Text</a>
+#### **HTML:** &lt;a href="https://www.google.com" **target="_blank"**>Link Text</a&gt;
+
+MARKDOWN

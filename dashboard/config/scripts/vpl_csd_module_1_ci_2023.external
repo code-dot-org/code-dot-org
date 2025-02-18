@@ -1,0 +1,21 @@
+name 'VPL - CSD - Module 1 - CI_2023'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Curriculum Investigation
+
+## Overview
+
+##### In the following activities, you will engage in activities that your students will complete as a part of Interactive Animations and Games - <a href="https://studio.code.org/s/csd3-2023/lessons/12" target="blank">Lesson 12: The Draw Loop</a>. As you work through these activities to gain a better understanding of Interactive Animations and Games content, also think about your role as the teacher. How will you support student learning during this lesson? 
+
+## Investigation Goal
+
+##### Use a draw loop to add movement to sprites in Game Lab.
+
+
+
+
+
+MARKDOWN

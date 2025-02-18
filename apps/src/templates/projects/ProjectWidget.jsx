@@ -1,10 +1,13 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PersonalRecentProjects from './PersonalRecentProjects.jsx';
-import ContentContainer from '../ContentContainer.jsx';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome.jsx';
 import i18n from '@cdo/locale';
-import _ from 'lodash';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import ContentContainer from '../ContentContainer.jsx';
+
+import PersonalRecentProjects from './PersonalRecentProjects.jsx';
 import StartNewProject from './StartNewProject';
 
 class ProjectWidget extends React.Component {
@@ -13,11 +16,11 @@ class ProjectWidget extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isLoading: PropTypes.bool,
     canViewFullList: PropTypes.bool,
-    canViewAdvancedTools: PropTypes.bool // Default: true
+    canViewAdvancedTools: PropTypes.bool, // Default: true
   };
 
   state = {
-    showFullList: false
+    showFullList: false,
   };
 
   toggleShowFullList = () => {
@@ -57,7 +60,7 @@ class ProjectWidget extends React.Component {
 // The project widget uses the channels API to populate the personal projects
 // and the data needs to be converted to match the format of the project cards
 // before passing it to PersonalRecentProjects.
-const convertChannelsToProjectData = function(projects) {
+const convertChannelsToProjectData = function (projects) {
   // Sort by most recently updated.
   let projectLists = _.sortBy(projects, 'updatedAt').reverse();
 
@@ -71,7 +74,7 @@ const convertChannelsToProjectData = function(projects) {
     channel: projectLists[i].id,
     thumbnailUrl: projectLists[i].thumbnailUrl,
     type: projectLists[i].projectType,
-    updatedAt: projectLists[i].updatedAt
+    updatedAt: projectLists[i].updatedAt,
   }));
 };
 

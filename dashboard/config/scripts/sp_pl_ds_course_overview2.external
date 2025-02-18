@@ -1,0 +1,68 @@
+name 'sp-pl-DS course_overview2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data Science Course Overview
+ 
+#### While the Data Science Units are part of the **Computer Science and AI Foundations** course, they can also serve as a standalone unit for 9-12 students that can be integrated seamlessly into existing curriculum, including computer science, math, or science, offering teachers the flexibility to introduce it according to their schedule and educational needs.
+
+#### This course consists of two units. You can choose to teach one or both units, whichever works for your class and schedule.
+
+
+## Unit l: Foundations of Data Science
+#### This unit consists of 13 lessons and takes about three weeks to complete and does not have Python programming.
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
+      <li><strong>Understand the fundamental concepts</strong> of data science</li>
+      <li>Engage in hands-on activities that involve data analysis, data manipulation, and data visualizations</li>
+      <li>Explore and discuss the ethical implications and responsibilities associated with data science</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/384395754f9060f684fba88efd6d679b-image-1724077977393.png" 
+         alt="Icon with computer and data symbols" 
+         style="border-radius: 10px; width: 300px; height: auto;">
+  </div>
+</div>
+
+
+
+
+#### <b> Explore Unit One <a href = "https://studio.code.org/s/intro-to-data-science-2024" target = "blank" rel = "noopener noreferrer"> here </a></b>
+
+
+<div style="clear:both;"></div>
+
+## Unit 2: Data Science with Python
+
+#### This unit consists of 13 lessons and takes about 3 weeks to complete and features Python and Pandas in the new Python Lab.
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 10px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+  <div style="flex: 1; padding-right: 10px;">
+    <h3 style="margin-top: 0; font-weight: bold;">Students will:</h3>
+    <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt;">
+      <li><strong>Explore Python syntax</strong> and foundational programming concepts</li>
+      <li>Utilize data science libraries like <strong>Pandas and Matplotlib</strong> to manipulate and visualize datasets</li>
+      <li>Apply techniques for data cleaning, filtering, and statistical analysis to answer data-driven questions</li>
+      <li>Create custom visualizations and effectively communicate insights through a project addressing a real-world issue</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/6fd3e81dbbba4b9575faa0cde3cf8372-image-1727728740354.png" 
+         alt="Icon of computer with Python logo" 
+         style="border-radius: 10px; width: 175px; height: auto;">
+  </div>
+</div>
+
+
+#### <b>Explore Unit Two <a href = "https://studio.code.org/s/data-science-with-python-2024" target = "blank" rel = "noopener noreferrer"> here </a>
+
+<div style="clear:both;"></div>
+
+
+MARKDOWN

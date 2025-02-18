@@ -3,6 +3,11 @@
 var commonMsg = require('@cdo/locale');
 var mazeMsg = require('.././locale');
 
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var level = locals.level;
+
 var addProcedures = function() { -%>
   <% if (level > 3) { -%>
     <category name="<%= commonMsg.catProcedures() %>" custom="PROCEDURE"></category>

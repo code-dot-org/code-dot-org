@@ -1,0 +1,19 @@
+@import "color";
+
+.extraLinksButton {
+  position: fixed;
+  bottom: 44px; /* just above small footer */
+  left: 0;
+  margin-left: 14px;
+  z-index: 1000;
+}
+
+.errorMessage {
+  color: $red;
+}
+
+.bottomButton {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+

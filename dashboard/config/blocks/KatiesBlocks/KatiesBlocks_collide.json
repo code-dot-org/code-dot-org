@@ -1,0 +1,19 @@
+{
+  "category": "Sprites",
+  "config": {
+    "style": "default",
+    "func": "collide",
+    "docFunc": "collide",
+    "blockText": "{SPRITE} blocks {TARGET}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "TARGET",
+        "type": "Sprite"
+      }
+    ]
+  }
+}

@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import * as rowStyle from './rowStyle';
 import ColorPicker from 'react-color';
+import ReactDOM from 'react-dom';
+
+import * as rowStyle from './rowStyle';
 
 export default class ColorPickerPropertyRow extends React.Component {
   static propTypes = {
     initialValue: PropTypes.string.isRequired,
     handleChange: PropTypes.func,
-    desc: PropTypes.node
+    desc: PropTypes.node,
   };
 
   state = {
     colorPickerText: this.props.initialValue,
-    displayColorPicker: false
+    displayColorPicker: false,
   };
 
   componentDidMount() {
@@ -64,7 +65,7 @@ export default class ColorPickerPropertyRow extends React.Component {
   render() {
     const buttonStyle = {
       backgroundColor: this.state.colorPickerText,
-      verticalAlign: 'top'
+      verticalAlign: 'top',
     };
     let colorPicker = this.state.displayColorPicker ? (
       <ColorPicker

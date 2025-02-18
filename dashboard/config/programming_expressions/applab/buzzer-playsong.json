@@ -4,6 +4,13 @@
   "category": "Circuit",
   "category_key": "circuit",
   "content": "Plays an array of notes one after the other at specified durations for each one.\r\n\r\n[`buzzer.playSong()`(#f78183)](/docs/applab/buzzer.playSong/) works just like [`buzzer.playNotes`(#f78183)](/docs/applab/buzzer.playNotes/), except now you can determine the duration for each note, which allows you to create music like what you would normally hear. ",
+  "examples": [
+    {
+      "name": "Play Happy Birthday",
+      "description": "Plays the Happy Birthday song when run",
+      "code": "````\n//Plays the happy birthday song\nbuzzer.playSong([[\"D4\", 0.5], [\"D4\", 0.5], [\"E4\", 1], [\"D4\", 1], [\"G4\", 1], [\"F#4\", 2]], 120);\n````"
+    }
+  ],
   "palette_params": [
     {
       "name": "notes",

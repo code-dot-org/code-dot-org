@@ -1,14 +1,16 @@
-import React from 'react';
 import moment from 'moment';
+import React from 'react';
+
 import {
   lessonIsAllAssessment,
-  lessonHasLevels
+  lessonHasLevels,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import ProgressTableSummaryCell from './ProgressTableSummaryCell';
-import ProgressTableDetailCell from './ProgressTableDetailCell';
-import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
-import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+
+import ProgressTableDetailCell from './ProgressTableDetailCell';
+import ProgressTableLevelIconSet from './ProgressTableLevelIconSet';
+import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
+import ProgressTableSummaryCell from './ProgressTableSummaryCell';
 
 /**
  * @return {Array} Array of formatter functions for the progress table summary view
@@ -27,7 +29,7 @@ export function getSummaryCellFormatters(
   onClickLesson
 ) {
   const mainCellFormatter = (lesson, student) => {
-    if (lessonHasLevels(lesson)) {
+    if (lessonHasLevels(lesson) && lessonProgressByStudent?.[student.id]) {
       return (
         <ProgressTableSummaryCell
           studentId={student.id}
@@ -129,7 +131,7 @@ export function getLevelIconHeaderFormatter(scriptData) {
 function detailCellItems(lesson, studentProgress, textFormatter) {
   return lesson.levels.map(level => ({
     node: textFormatter(studentProgress[level.id]),
-    sublevelCount: level.sublevels && level.sublevels.length
+    sublevelCount: level.sublevels && level.sublevels.length,
   }));
 }
 
@@ -179,5 +181,5 @@ function emptyLessonFormatter() {
 
 export const unitTestExports = {
   formatTimeSpent,
-  formatLastUpdated
+  formatLastUpdated,
 };

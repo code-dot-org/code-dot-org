@@ -110,13 +110,12 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def find_experiment_level(user, section)
+  def find_experiment_level(user)
     levels.sort_by(&:created_at).find do |level|
       experiments(level).any? do |experiment_name|
         Experiment.enabled?(
           experiment_name: experiment_name,
           user: user,
-          section: section,
           script: script
         )
       end
@@ -146,8 +145,8 @@ class ScriptLevel < ApplicationRecord
 
   def next_level_or_redirect_path_for_user(
     user,
-    extras_lesson=nil,
-    bubble_choice_parent=false
+    extras_lesson = nil,
+    bubble_choice_parent: false
   )
 
     if valid_progression_level?(user)
@@ -176,6 +175,10 @@ class ScriptLevel < ApplicationRecord
           script_path(script)
         end
       end
+    elsif script.pl_course?
+      return build_script_level_path(level_to_follow) if level_to_follow
+      next_unit = script.next_unit(user)
+      next_unit ? script_path(next_unit) : script_completion_redirect(user, script)
     elsif bubble_choice? && !bubble_choice_parent
       # Redirect user back to the BubbleChoice activity page from sublevels.
       build_script_level_path(self)
@@ -194,7 +197,7 @@ class ScriptLevel < ApplicationRecord
           script_path(script) + "?completedLessonNumber=#{lesson.relative_position}"
         end
       else
-        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(user, script)
       end
     end
   end
@@ -207,17 +210,17 @@ class ScriptLevel < ApplicationRecord
   end
 
   # Returns the next valid progression level, or nil if no such level exists
-  def next_progression_level(user=nil)
-    next_level ? next_level.or_next_progression_level(user) : nil
+  def next_progression_level(user = nil)
+    next_level&.or_next_progression_level(user)
   end
 
   # Returns the first level in the sequence starting with this one that is a
   # valid progress level
-  def or_next_progression_level(user=nil)
+  def or_next_progression_level(user = nil)
     valid_progression_level?(user) ? self : next_progression_level(user)
   end
 
-  def valid_progression_level?(user=nil)
+  def valid_progression_level?(user = nil)
     return false if level.unplugged?
     return false if lesson&.unplugged_lesson?
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
@@ -274,6 +277,12 @@ class ScriptLevel < ApplicationRecord
     return level.properties["anonymous"] == "true"
   end
 
+  def activity_guide_level?
+    return false if level.nil? || level.properties.nil?
+
+    return level.properties["activity_guide_level"] == "true"
+  end
+
   def bubble_choice?
     oldest_active_level.is_a? BubbleChoice
   end
@@ -284,7 +293,7 @@ class ScriptLevel < ApplicationRecord
 
   def report_bug_url(request)
     message = "Bug in Course #{script.name} lesson #{lesson.absolute_position} Puzzle #{position}\n#{request.url}\n#{request.user_agent}\n"
-    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+    "https://support.code.org/hc/en-us/requests/new?&tf_description=#{CGI.escape(message)}"
   end
 
   def level_display_text
@@ -305,7 +314,7 @@ class ScriptLevel < ApplicationRecord
     build_script_level_path(self)
   end
 
-  def summarize(include_prev_next=true, for_edit: false, user_id: nil)
+  def summarize(include_prev_next = true, for_edit: false, user_id: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       ids = level_ids
       active_id = oldest_active_level.id
@@ -316,6 +325,7 @@ class ScriptLevel < ApplicationRecord
       end
 
       summary = {
+        id: id.to_s,
         ids: ids.map(&:to_s),
         activeId: active_id.to_s,
         inactiveIds: inactive_ids.map(&:to_s),
@@ -325,14 +335,24 @@ class ScriptLevel < ApplicationRecord
         is_concept_level: level.concept_level?,
         title: level_display_text,
         url: build_script_level_url(self),
+        path: build_script_level_path(self),
         freePlay: level.try(:free_play) == "true",
         bonus: bonus,
-        display_as_unplugged: level.display_as_unplugged?
+        display_as_unplugged: level.display_as_unplugged?,
+        app: level.game&.app,
+        uses_lab2: level.uses_lab2?,
+        is_validated: level.validated?,
+        can_have_feedback: level.can_have_feedback?
       }
 
       if progression
         summary[:progression] = progression
-        localized_progression_name = I18n.t("data.progressions.#{progression}", default: progression)
+        localized_progression_name = I18n.t(
+          progression,
+          scope: %i[data progressions],
+          default: progression,
+          smart: true
+        )
         summary[:progression_display_name] = localized_progression_name
       end
 
@@ -581,7 +601,7 @@ class ScriptLevel < ApplicationRecord
   # @param [boolean] use_existing_level_keys - If true, use existing information in the level_keys property if available
   #   instead of re-querying associated levels. We want to reuse this data during seeding, but not during serialization.
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
-  def seeding_key(seed_context, use_existing_level_keys = true)
+  def seeding_key(seed_context, use_existing_level_keys: true)
     my_key = {
       'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys)
     }
@@ -672,12 +692,12 @@ class ScriptLevel < ApplicationRecord
     instructor_in_training && script.pl_course? && script.can_be_participant?(current_user)
   end
 
-  def get_example_solutions(level, current_user, section_id=nil)
+  def get_example_solutions(level, current_user, section_id = nil)
     level_example_links = []
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    # exemplar_sources is used by Javalab levels to store level solutions
+    # exemplar_sources is used by Javalab and Code Bridge levels to store level solutions
     if level.try(:exemplar_sources).present? && current_user&.verified_instructor?
       if oldest_active_level.is_a? BubbleChoice
         # If the script level has sublevels, get a link for the sublevel that looks like
@@ -705,30 +725,53 @@ class ScriptLevel < ApplicationRecord
         # final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
         case level
         when Dancelab
-          send("#{'dance'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{'dance'}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Poetry
-          send("#{level.standalone_app_name}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{level.standalone_app_name}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when GamelabJr
-          send("#{level.standalone_app_name_or_default}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{level.standalone_app_name_or_default}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Artist
-          artist_type = ['elsa', 'anna'].include?(level.skin) ? 'frozen' : 'artist'
-          send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          artist_type = (level.skin == 'elsa' || level.skin == 'anna') ? 'frozen' : 'artist'
+          send(:"#{artist_type}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         when Studio # playlab
-          send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{'playlab'}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         else
-          send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+          send(:"#{level.game.app}_project_view_projects_url", channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         end
       end
     elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
-      level_example_links.push(build_script_level_url(self, {solution: true}.merge(section_id ? {section_id: section_id} : {})))
+      unless ScriptConfig.allows_public_caching_for_script(script.name)
+        level_example_links.push(build_script_level_url(self, {solution: true}.merge(section_id ? {section_id: section_id} : {})))
+      end
     end
 
     level_example_links
   end
 
-  private
+  def level_deprecated?
+    level&.deprecated?
+  end
 
-  def kind
+  # WARNING: Do NOT reuse this trashy little method. It is fragile English-only string comparison
+  # written for a very specific use case - logging analytics for the CSA '24-'25 AI Tutor pilot,
+  # in which the level progression naming conventions follow a very specific pattern aligned
+  # with the PRIMM pedagogical approach.
+  #
+  # If the concept of a "progression type" becomes more general, or you're tempted to use this method,
+  # consider a more robust solution such as creating a new property that can be designated by a
+  # Levelbuilder, similar to how we designate assessment levels.
+  def primm_progression_type
+    progression_name = properties["progression"]
+    substring = progression_name.split(":").first if progression_name
+    return "predict_and_run" if substring&.include?("Predict and Run")
+    return "investigate_and_modify" if substring&.include?("Investigate and Modify")
+    return "practice" if substring&.include?("Practice")
+    return "project" if substring&.include?("Project")
+    return "assessment" if substring&.include?("Check for Understanding")
+    return "other"
+  end
+
+  private def kind
     if level.unplugged?
       LEVEL_KIND.unplugged
     elsif assessment
@@ -738,7 +781,7 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def build_exemplar_url(path)
+  private def build_exemplar_url(path)
     CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
   end
 end

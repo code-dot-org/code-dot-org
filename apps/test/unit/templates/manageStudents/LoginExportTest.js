@@ -1,13 +1,13 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import LoginExport from '@cdo/apps/templates/manageStudents/LoginExport';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import LoginExport from '@cdo/apps/templates/manageStudents/LoginExport';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 const DEFAULT_PROPS = {
   sectionCode: 'ABCDEF',
-  sectionName: 'Section Name'
+  sectionName: 'Section Name',
 };
 
 describe('LoginExport', () => {
@@ -16,7 +16,7 @@ describe('LoginExport', () => {
       {id: 1, name: 'studentb', secretWords: 'one two'},
       {id: 3, name: 'studenta', secretWords: 'three four'},
       {id: 0, name: '', secretWords: ''},
-      {id: 2, name: 'studentf', secretWords: 'six seven'}
+      {id: 2, name: 'studentf', secretWords: 'six seven'},
     ];
 
     const wrapper = shallow(
@@ -28,26 +28,26 @@ describe('LoginExport', () => {
     );
 
     const logins = wrapper.instance().generateLogins();
-    expect(logins.length).to.equal(3);
-    expect(logins).to.deep.equal([
+    expect(logins.length).toBe(3);
+    expect(logins).toEqual([
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'word',
         studentName: 'studentb',
-        studentLoginSecret: 'one two'
+        studentLoginSecret: 'one two',
       },
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'word',
         studentName: 'studenta',
-        studentLoginSecret: 'three four'
+        studentLoginSecret: 'three four',
       },
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'word',
         studentName: 'studentf',
-        studentLoginSecret: 'six seven'
-      }
+        studentLoginSecret: 'six seven',
+      },
     ]);
   });
 
@@ -56,7 +56,7 @@ describe('LoginExport', () => {
       {id: 1, name: 'studentb', secretPicturePath: 'wizard.png'},
       {id: 3, name: 'studenta', secretPicturePath: 'ghost.png'},
       {id: 0, name: '', secretPicturePath: ''},
-      {id: 2, name: 'studentf', secretPicturePath: 'robot.png'}
+      {id: 2, name: 'studentf', secretPicturePath: 'robot.png'},
     ];
 
     const wrapper = shallow(
@@ -68,26 +68,26 @@ describe('LoginExport', () => {
     );
 
     const logins = wrapper.instance().generateLogins();
-    expect(logins.length).to.equal(3);
-    expect(logins).to.deep.equal([
+    expect(logins.length).toBe(3);
+    expect(logins).toEqual([
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'picture',
         studentName: 'studentb',
-        studentLoginSecret: pegasus('/images/wizard.png')
+        studentLoginSecret: pegasus('/images/wizard.png'),
       },
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'picture',
         studentName: 'studenta',
-        studentLoginSecret: pegasus('/images/ghost.png')
+        studentLoginSecret: pegasus('/images/ghost.png'),
       },
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'picture',
         studentName: 'studentf',
-        studentLoginSecret: pegasus('/images/robot.png')
-      }
+        studentLoginSecret: pegasus('/images/robot.png'),
+      },
     ]);
   });
 });

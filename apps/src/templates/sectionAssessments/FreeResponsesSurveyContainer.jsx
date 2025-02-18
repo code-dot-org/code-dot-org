@@ -1,25 +1,27 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import {QUESTION_CHARACTER_LIMIT} from './assessmentDataShapes';
 import FreeResponsesSurveyTable from './FreeResponsesSurveyTable';
 import {
   getSurveyFreeResponseQuestions,
-  setQuestionIndex
+  setQuestionIndex,
 } from './sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {QUESTION_CHARACTER_LIMIT} from './assessmentDataShapes';
 
 const freeResponseQuestionsPropType = PropTypes.shape({
   questionNumber: PropTypes.number,
   questionText: PropTypes.string,
-  answers: PropTypes.array
+  answers: PropTypes.array,
 });
 
 class FreeResponsesSurveyContainer extends Component {
   static propTypes = {
     freeResponsesByQuestion: PropTypes.arrayOf(freeResponseQuestionsPropType),
     openDialog: PropTypes.func.isRequired,
-    setQuestionIndex: PropTypes.func.isRequired
+    setQuestionIndex: PropTypes.func.isRequired,
   };
 
   selectQuestion = index => {
@@ -61,19 +63,20 @@ const styles = {
   text: {
     font: 10,
     paddingTop: 20,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
 };
 
-export const UnconnectedFreeResponsesSurveyContainer = FreeResponsesSurveyContainer;
+export const UnconnectedFreeResponsesSurveyContainer =
+  FreeResponsesSurveyContainer;
 
 export default connect(
   state => ({
-    freeResponsesByQuestion: getSurveyFreeResponseQuestions(state)
+    freeResponsesByQuestion: getSurveyFreeResponseQuestions(state),
   }),
   dispatch => ({
     setQuestionIndex(questionIndex) {
       dispatch(setQuestionIndex(questionIndex));
-    }
+    },
   })
 )(FreeResponsesSurveyContainer);

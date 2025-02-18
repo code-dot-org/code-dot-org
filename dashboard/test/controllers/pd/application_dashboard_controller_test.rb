@@ -1,10 +1,9 @@
 require 'test_helper'
 
-class Pd::ApplicationDashboardControllerTest < ::ActionController::TestCase
+class Pd::ApplicationDashboardControllerTest < ActionController::TestCase
   test_redirect_to_sign_in_for :index
   test_user_gets_response_for :index, user: :teacher, response: :forbidden
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test_user_gets_response_for(
     :index,
     name: 'Regional Partner program managers as workshop organizers can see the application dashboard',

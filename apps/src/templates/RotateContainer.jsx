@@ -1,18 +1,19 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import msg from '@cdo/locale';
-import _ from 'lodash';
 
 /**
  * "Rotate your device" overlay.
  */
 export default class RotateContainer extends React.Component {
   static propTypes = {
-    assetUrl: PropTypes.func.isRequired
+    assetUrl: PropTypes.func.isRequired,
   };
 
   state = {
-    hasVisualViewport: false
+    hasVisualViewport: false,
   };
 
   componentDidMount() {
@@ -31,7 +32,7 @@ export default class RotateContainer extends React.Component {
       offsetLeft: window.visualViewport.offsetLeft,
       offsetTop: window.visualViewport.offsetTop,
       width: window.visualViewport.width,
-      height: window.visualViewport.height
+      height: window.visualViewport.height,
     });
   };
 
@@ -40,7 +41,7 @@ export default class RotateContainer extends React.Component {
     let rotateContainerInnerStyle = {
       ...styles.rotateContainerInner,
       backgroundImage:
-        'url(' + this.props.assetUrl('media/turnphone_horizontal.png') + ')'
+        'url(' + this.props.assetUrl('media/turnphone_horizontal.png') + ')',
     };
     let rotateTextStyle = {...styles.rotateText};
     let paragraphStyle = {...styles.paragraph};
@@ -60,18 +61,18 @@ export default class RotateContainer extends React.Component {
         width: width,
         height: height,
         left: offsetLeft,
-        top: offsetTop
+        top: offsetTop,
       };
 
       rotateTextStyle = {
         ...rotateTextStyle,
         left: textLeft,
-        top: textTop
+        top: textTop,
       };
 
       paragraphStyle = {
         ...paragraphStyle,
-        fontSize: fontSize
+        fontSize: fontSize,
       };
     }
 
@@ -103,7 +104,7 @@ const styles = {
     right: 0,
     bottom: 0,
     width: '100%',
-    height: '100%'
+    height: '100%',
   },
   rotateContainerInner: {
     position: 'absolute',
@@ -111,17 +112,17 @@ const styles = {
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     width: '100%',
-    height: '100%'
+    height: '100%',
   },
   rotateText: {
     position: 'relative',
     top: '50%',
-    left: '-40%'
+    left: '-40%',
   },
   paragraph: {
     textAlign: 'center',
     fontSize: 24,
     lineHeight: 1.5,
-    transform: 'rotate(90deg)'
-  }
+    transform: 'rotate(90deg)',
+  },
 };

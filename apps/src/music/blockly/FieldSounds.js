@@ -1,8 +1,17 @@
+import * as GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SoundsPanel from '../views/SoundsPanel';
-import GoogleBlockly from 'blockly/core';
+
+import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
+
+import MusicRegistry from '../MusicRegistry';
+import MusicLibrary from '../player/MusicLibrary';
+import SoundStyle from '../utils/SoundStyle';
+import SoundsPanel from '../views/SoundsPanel';
+
+const FIELD_HEIGHT = 20;
+const FIELD_PADDING = 2;
 
 /**
  * A custom field that renders the sample previewing and choosing UI, used in
@@ -10,12 +19,18 @@ import experiments from '@cdo/apps/util/experiments';
  */
 class FieldSounds extends GoogleBlockly.Field {
   constructor(options) {
-    super(options.currentValue);
+    const currentValue =
+      options.currentValue || MusicLibrary.getInstance().getDefaultSound();
+
+    super(currentValue);
 
     this.options = options;
     this.playingPreview = null;
     this.SERIALIZABLE = true;
     this.CURSOR = 'default';
+    this.backgroundElement = null;
+    this.currentFieldWidth = 0;
+    this.showingEditor = false;
   }
 
   saveState() {
@@ -36,6 +51,14 @@ class FieldSounds extends GoogleBlockly.Field {
     if (this.borderRect_) {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
+
+    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
+      'g',
+      {
+        transform: 'translate(1,1)',
+      },
+      this.fieldGroup_
+    );
   }
 
   applyColour() {
@@ -46,12 +69,16 @@ class FieldSounds extends GoogleBlockly.Field {
     }
     if (this.textElement_) {
       if (experiments.isEnabled('zelos')) {
-        this.textElement_.style.fill = 'white';
+        this.textElement_.style.fill = color.neutral_light;
       }
     }
   }
 
   showEditor_() {
+    if (this.showingEditor) {
+      return;
+    }
+
     super.showEditor_();
 
     const editor = this.dropdownCreate_();
@@ -66,6 +93,8 @@ class FieldSounds extends GoogleBlockly.Field {
       this,
       this.dropdownDispose_.bind(this)
     );
+
+    this.showingEditor = true;
   }
 
   dropdownCreate_() {
@@ -73,11 +102,10 @@ class FieldSounds extends GoogleBlockly.Field {
 
     this.renderContent();
 
-    this.newDiv_.style.color = 'white';
-    this.newDiv_.style.width = '300px';
-    this.newDiv_.style.backgroundColor = 'black';
+    this.newDiv_.style.color = color.neutral_light;
+    this.newDiv_.style.width = '600px';
+    this.newDiv_.style.backgroundColor = color.dark_black;
     this.newDiv_.style.padding = '5px';
-    this.newDiv_.style.cursor = 'pointer';
 
     return this.newDiv_;
   }
@@ -89,14 +117,15 @@ class FieldSounds extends GoogleBlockly.Field {
 
     ReactDOM.render(
       <SoundsPanel
-        library={this.options.getLibrary()}
+        library={MusicLibrary.getInstance()}
         currentValue={this.getValue()}
         playingPreview={this.playingPreview}
+        showSoundFilters={MusicRegistry.showSoundFilters}
         onPreview={value => {
           this.playingPreview = value;
           this.renderContent();
 
-          this.options.playPreview(value, () => {
+          MusicRegistry.player.previewSound(value, () => {
             // If the user starts another preview while one is
             // already playing, it will have started playing before
             // we get this stop event.  We want to wait until the
@@ -109,17 +138,17 @@ class FieldSounds extends GoogleBlockly.Field {
             this.renderContent();
           });
         }}
-        onSelect={value => {
-          this.setValue(value);
-          this.hide_();
-        }}
+        onSelect={value => this.setValue(value)}
       />,
       this.newDiv_
     );
   }
 
   dropdownDispose_() {
+    MusicRegistry.player.cancelPreviews();
+
     this.newDiv_ = null;
+    this.showingEditor = false;
   }
 
   hide_() {
@@ -128,8 +157,116 @@ class FieldSounds extends GoogleBlockly.Field {
   }
 
   render_() {
-    super.render_();
+    if (this.backgroundElement) {
+      this.backgroundElement.innerHTML = '';
+    }
+
+    const fieldText = this.getText();
+
+    const constants = this.getConstants();
+
+    // Create the text element so we can measure it.
+    const textElement = GoogleBlockly.utils.dom.createSvgElement('text', {
+      fill: color.neutral_light,
+      x: 27,
+      y: 16,
+      width: 100,
+      height: 20,
+    });
+
+    const soundType = MusicLibrary.getInstance().getSoundForId(
+      this.getValue()
+    )?.type;
+
+    if (soundType === 'vocal') {
+      textElement.setAttribute('font-style', 'italic');
+    }
+
+    // Attach the actual text.
+    textElement.appendChild(document.createTextNode(fieldText));
+
+    // Convert our 13px font size to 9.75pt for the measurement.
+    const fontSize = 9.75;
+
+    // Measure the rendered text.
+    const textWidth = GoogleBlockly.utils.dom.getFastTextWidth(
+      textElement,
+      fontSize,
+      constants.FIELD_TEXT_FONTWEIGHT,
+      constants.FIELD_TEXT_FONTFAMILY
+    );
+
+    // The full width essentially comprises:
+    // 5px left margin, 17px image, 4px gap, text width, 5px right margin.
+    this.currentFieldWidth = 5 + 17 + 4 + textWidth + 5;
+
+    // Create the background rectangle and attach it to the background
+    // parent.
+    GoogleBlockly.utils.dom.createSvgElement(
+      'rect',
+      {
+        fill: color.neutral_dark90,
+        x: 1,
+        y: 1,
+        width: this.currentFieldWidth,
+        height: FIELD_HEIGHT,
+        rx: 3,
+      },
+      this.backgroundElement
+    );
+
+    let iconElement;
+
+    // Add an icon for the sound type.
+    if (soundType) {
+      iconElement = GoogleBlockly.utils.dom.createSvgElement('text', {
+        fill: color.neutral_light,
+        x: 5 + SoundStyle[soundType].marginLeft,
+        y: 16,
+        width: 20,
+        height: 20,
+      });
+
+      iconElement.setAttribute('style', 'font-family: "Font Awesome 6 Pro"');
+      iconElement.classList.add(SoundStyle[soundType].classNameFill);
+
+      // Attach the actual text.
+      iconElement.appendChild(
+        document.createTextNode(SoundStyle[soundType].iconCode)
+      );
+    }
+
+    // Now attach the text element to the background parent.  It will
+    // render on top of the background rectangle.
+    this.backgroundElement.appendChild(textElement);
+
+    // Similarly, add the icon text element to the background parent.
+    if (iconElement) {
+      this.backgroundElement.appendChild(iconElement);
+    }
+
+    // Update the field size.
+    this.updateSize_();
+
+    // Possibly render the panel contents.
     this.renderContent();
+  }
+
+  getText() {
+    return (
+      MusicLibrary.getInstance().getSoundForId(this.getValue())?.name || ''
+    );
+  }
+
+  updateSize_() {
+    const width = this.currentFieldWidth + 2 * FIELD_PADDING;
+    const height = FIELD_HEIGHT + 2 * FIELD_PADDING;
+
+    this.borderRect_?.setAttribute('width', '' + width);
+    this.borderRect_?.setAttribute('height', '' + height);
+
+    this.size_.width = width;
+    this.size_.height = height;
   }
 }
 

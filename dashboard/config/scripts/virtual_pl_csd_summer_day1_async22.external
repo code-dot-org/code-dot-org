@@ -1,0 +1,17 @@
+name 'virtual-pl-csd-summer-day1-async22'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Journaling
+
+<br>
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### **What type of journal will your students use? What will you have students include in their journals?** 
+
+#### Take a moment to return to your cohort's slide deck and submit an answer to this question on a virtual post-it. Review the responses from other people in your cohort to see their thoughts.
+<br>
+
+![](https://images.code.org/99848e14ab87c2ce5b4f2282eea014b7-image-1684293093286.11.31 PM.png)
+MARKDOWN

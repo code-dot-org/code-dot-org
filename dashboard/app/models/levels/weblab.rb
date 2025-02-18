@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Weblab < Level
@@ -51,15 +52,21 @@ class Weblab < Level
 
   # Return an 'appOptions' hash derived from the level contents
   def non_blockly_puzzle_level_options
-    options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do
+    options = Rails.cache.fetch("#{cache_key}/#{I18n.locale}/non_blockly_puzzle_level_options/v2") do
       level_prop = {}
 
-      properties.keys.each do |dashboard|
-        apps_prop_name = dashboard.camelize(:lower)
+      properties.each_key do |dashboard|
         # Select value from properties json
-        # Don't override existing valid (non-nil/empty) values
         value = JSONValue.value(properties[dashboard].presence)
+        apps_prop_name = dashboard.camelize(:lower)
+        # Don't override existing valid (non-nil/empty) values
         level_prop[apps_prop_name] = value unless value.nil? # make sure we convert false
+      end
+
+      # FND-985 Create shared API to get localized level properties.
+      if should_localize?
+        localized_long_instructions = I18n.t(name, scope: [:data, 'long_instructions'], default: level_prop['longInstructions'])
+        level_prop['longInstructions'] = localized_long_instructions
       end
 
       level_prop['levelId'] = level_num
@@ -69,7 +76,7 @@ class Weblab < Level
       level_prop['teacherMarkdown'] = nil
 
       # Don't set nil values
-      level_prop.reject! {|_, value| value.nil?}
+      level_prop.compact!
     end
     options.freeze
   end

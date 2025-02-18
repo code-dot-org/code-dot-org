@@ -16,3 +16,5 @@ answer '**Add Player 1 roll to total score**'
 
 question '**4)**'
 answer '**Compare player scores to see who wins**'
+
+allow_multiple_attempts true

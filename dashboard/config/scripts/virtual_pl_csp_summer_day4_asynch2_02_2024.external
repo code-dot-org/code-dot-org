@@ -1,0 +1,20 @@
+name 'virtual-pl-csp-summer-day4-asynch2-02-2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Recruiting And Retaining Students Gallery Walk
+
+<br>
+<img src="https://images.code.org/9df1a7b659aba5907457cec20dd907a8-Screenshot 2023-10-19 at 12.26.39 PM.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### This session is an opportunity for you to take part in a "gallery walk" to review the work of their fellow teachers from the Recruiting and Retaining Students synchronous session.
+
+---
+## To Do:
+
+#### **Step 1:** Review the slides your fellow participants made in the Recruiting and Retaining Students synchronous session.
+#### **Step 2:** While viewing, highlight barriers you may be able to influence, and leave a comment (either in the Notes section or using the Comment feature) identifying actions you might take as a teacher for CS Principles to influence, reduce, or eliminate this barrier.
+#### **Step 3:** Think about the lessons that you experienced today.
+
+MARKDOWN

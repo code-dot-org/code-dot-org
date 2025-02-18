@@ -1,13 +1,13 @@
 import appMain from '@cdo/apps/appMain';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
-import blocks from '@cdo/apps/p5lab/spritelab/blocks';
-import skins from '@cdo/apps/p5lab/skins';
-import levels from '@cdo/apps/p5lab/levels';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
-import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import levels from '@cdo/apps/p5lab/levels';
+import skins from '@cdo/apps/p5lab/skins';
+import blocks from '@cdo/apps/p5lab/spritelab/blocks';
+import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
+import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 export default function loadSpritelab(options) {
   options.skinsModule = skins;
@@ -26,7 +26,7 @@ export default function loadSpritelab(options) {
         study: 'sprite_default_load',
         study_group: 'spritelab',
         event: 'backup_animations_used',
-        project_id: getCurrentId()
+        project_id: getCurrentId(),
       });
 
       return initializeOptionsAndSpritelab(spritelab, options);
@@ -35,9 +35,8 @@ export default function loadSpritelab(options) {
 
 function initializeOptionsAndSpritelab(spritelab, options) {
   // Bind helper that provides project metadata for gamelab autosave
-  options.getAnimationList = spritelab.getSerializedAnimationList.bind(
-    spritelab
-  );
+  options.getAnimationList =
+    spritelab.getSerializedAnimationList.bind(spritelab);
 
   spritelab.injectStudioApp(studioApp());
   appMain(spritelab, levels, options);

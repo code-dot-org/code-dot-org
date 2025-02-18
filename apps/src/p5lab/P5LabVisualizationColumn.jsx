@@ -1,35 +1,37 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
-import classNames from 'classnames';
-import GameButtons from '@cdo/apps/templates/GameButtons';
+
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
-import PauseButton from '@cdo/apps/templates/PauseButton';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
-import {APP_HEIGHT, APP_WIDTH} from './constants';
-import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
+import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
+import GameButtons from '@cdo/apps/templates/GameButtons';
+import PauseButton from '@cdo/apps/templates/PauseButton';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import VisualizationOverlay from '@cdo/apps/templates/VisualizationOverlay';
-import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 import TooltipOverlay, {
-  coordinatesProvider
+  coordinatesProvider,
 } from '@cdo/apps/templates/TooltipOverlay';
+import VisualizationOverlay from '@cdo/apps/templates/VisualizationOverlay';
+import {isMobileDevice} from '@cdo/apps/util/browser-detector';
+import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
 import {toggleGridOverlay} from './actions';
+import {APP_HEIGHT, APP_WIDTH} from './constants';
+import {GAMELAB_DPAD_CONTAINER_ID} from './gamelab/constants';
 import GridOverlay from './gamelab/GridOverlay';
-import TextConsole from './spritelab/TextConsole';
-import SpritelabInput from './spritelab/SpritelabInput';
 import {
   cancelLocationSelection,
   selectLocation,
   updateLocation,
-  isPickingLocation
+  isPickingLocation,
 } from './redux/locationPicker';
-import {calculateOffsetCoordinates} from '@cdo/apps/utils';
-import {isMobileDevice} from '@cdo/apps/util/browser-detector';
+import SpritelabInput from './spritelab/SpritelabInput';
+import TextConsole from './spritelab/TextConsole';
 
 const MODAL_Z_INDEX = 1050;
 const LOCATION_PICKER_CANCEL_THRESHOLD_MS = 250;
@@ -55,14 +57,14 @@ class P5LabVisualizationColumn extends React.Component {
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
     consoleMessages: PropTypes.array.isRequired,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   // Cache app-space mouse coordinates, which we get from the
   // VisualizationOverlay when they change.
   state = {
     mouseX: -1,
-    mouseY: -1
+    mouseY: -1,
   };
 
   pickerPointerMove = e => {
@@ -156,7 +158,7 @@ class P5LabVisualizationColumn extends React.Component {
     const divGameLabStyle = {
       touchAction: 'none',
       width: APP_WIDTH,
-      height: APP_HEIGHT
+      height: APP_HEIGHT,
     };
     if (this.props.pickingLocation) {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
@@ -243,21 +245,21 @@ class P5LabVisualizationColumn extends React.Component {
 
 const styles = {
   containedInstructions: {
-    marginTop: 10
+    marginTop: 10,
   },
   selectStyle: {
-    width: APP_WIDTH
+    width: APP_WIDTH,
   },
   checkbox: {
     flex: 'none',
     marginBottom: 3,
-    marginRight: 4
+    marginRight: 4,
   },
   checkboxLabel: {
     display: 'flex',
     alignItems: 'center',
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 };
 
 export default connect(
@@ -271,12 +273,12 @@ export default connect(
     pickingLocation: isPickingLocation(state.locationPicker),
     requestTime: state.locationPicker.requestTime,
     consoleMessages: state.textConsole,
-    isRtl: state.isRtl
+    isRtl: state.isRtl,
   }),
   dispatch => ({
     toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
     cancelPicker: () => dispatch(cancelLocationSelection()),
     updatePicker: loc => dispatch(updateLocation(loc)),
-    selectPicker: loc => dispatch(selectLocation(loc))
+    selectPicker: loc => dispatch(selectLocation(loc)),
   })
 )(P5LabVisualizationColumn);

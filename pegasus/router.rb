@@ -2,7 +2,6 @@ require_relative 'src/env'
 require 'rack'
 require 'cdo/rack/locale'
 require 'sinatra/base'
-require 'sinatra/verbs'
 require 'cdo/sinatra'
 require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
@@ -38,7 +37,6 @@ require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
 require src_dir 'homepage'
-require src_dir 'advocacy_site'
 require 'cdo/hamburger'
 
 require pegasus_dir 'helper_modules/multiple_extname_file_utils'
@@ -106,13 +104,13 @@ class Documents < Sinatra::Base
     set :template_extnames, ['.erb', '.haml', '.html', '.md', '.partial']
     set :non_static_extnames,
       settings.not_found_extnames +
-      settings.redirect_extnames +
-      settings.template_extnames +
-      settings.exclude_extnames +
-      ['.fetch']
+        settings.redirect_extnames +
+        settings.template_extnames +
+        settings.exclude_extnames +
+        ['.fetch']
     # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    ['code.org', 'hourofcode.com', 'advocacy.code.org'].each do |site|
+    ['code.org', 'hourofcode.com'].each do |site|
       Sass::Plugin.add_template_location(
         sites_v3_dir(site, 'public', 'css'),
         sites_v3_dir(site, 'public', 'css', 'generated')
@@ -131,58 +129,7 @@ class Documents < Sinatra::Base
   end
 
   before do
-    $log.debug request.url
-
-    Honeybadger.context({url: request.url, locale: request.locale})
-
-    uri = request.path_info.chomp('/')
-    redirect uri unless uri.empty? || request.path_info == uri
-
-    I18n.locale = request.locale
-
-    @config = settings.configs[request.site]
-    @header = {}
-
-    @dirs = []
-
-    if request.site == 'hourofcode.com'
-      @dirs << [File.join(request.site, 'i18n')]
-    end
-
-    if request.site == 'code.org'
-      @dirs << File.join(request.site, 'i18n')
-    end
-
-    @dirs << request.site
-
-    # Implement recursive site-inheritance feature.
-    # Site renders fallback documents from 'base' site defined in config.
-    if @config
-      base = @config[:base]
-      while base
-        @dirs << base
-        base = settings.configs[base][:base]
-      end
-    end
-
-    @actionview ||= begin
-      # Lazily require actionview_sinatra here, because it it turn will require
-      # ActionView::Base, which will in turn run the ActiveSupport load hooks for
-      # the class.
-      #
-      # This can cause some issues for environments that want to load both
-      # Pegasus and Dashboard, since if ActionView is loaded outside the context
-      # of Rails it won't load all functionality, and ActionView won't be
-      # re-initialized when it _does_ get loaded by Rails.
-      #
-      # This is similar to the lazy loading we need to do for Haml:
-      # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
-      require 'cdo/pegasus/actionview_sinatra'
-      ActionViewSinatra.create_view(self)
-    end
-
-    update_actionview_assigns
-    @actionview.instance_variable_set(:@_request, request)
+    setup_for(request)
   end
 
   # This will make all instance variables on our sinatra controller also
@@ -220,8 +167,10 @@ class Documents < Sinatra::Base
   ['/private', '/private/*'].each do |uri|
     get_head_or_post uri do
       unless rack_env?(:development)
+        # rubocop:disable CustomCops/DashboardDbUsage
         not_authorized! unless dashboard_user_helper
         forbidden! unless dashboard_user_helper.admin?
+        # rubocop:enable CustomCops/DashboardDbUsage
       end
       pass
     end
@@ -284,6 +233,11 @@ class Documents < Sinatra::Base
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
 
+    if @header['embeddable']
+      response.headers['X-Frame-Options'] = 'ALLOWALL'
+      response.headers['Content-Security-Policy'] = 'frame-ancestors *'
+    end
+
     if @header['content-type']
       response.headers['Content-Type'] = @header['content-type']
     end
@@ -309,6 +263,63 @@ class Documents < Sinatra::Base
   end
 
   helpers(Dashboard) do
+    def setup_for(request)
+      instance_variable_set(:@request, request) unless instance_variable_get(:@request)
+
+      $log.debug request.url
+
+      Honeybadger.context({url: request.url, locale: request.locale})
+
+      uri = request.path_info.chomp('/')
+      redirect uri unless uri.empty? || request.path_info == uri
+
+      I18n.locale = request.locale
+
+      @config = settings.configs[request.site]
+      @header = {}
+
+      @dirs = []
+
+      if request.site == 'hourofcode.com'
+        @dirs << [File.join(request.site, 'i18n')]
+      end
+
+      if request.site == 'code.org'
+        @dirs << File.join(request.site, 'i18n')
+      end
+
+      @dirs << request.site
+
+      # Implement recursive site-inheritance feature.
+      # Site renders fallback documents from 'base' site defined in config.
+      if @config
+        base = @config[:base]
+        while base
+          @dirs << base
+          base = settings.configs[base][:base]
+        end
+      end
+
+      @actionview ||= begin
+        # Lazily require actionview_sinatra here, because it it turn will require
+        # ActionView::Base, which will in turn run the ActiveSupport load hooks for
+        # the class.
+        #
+        # This can cause some issues for environments that want to load both
+        # Pegasus and Dashboard, since if ActionView is loaded outside the context
+        # of Rails it won't load all functionality, and ActionView won't be
+        # re-initialized when it _does_ get loaded by Rails.
+        #
+        # This is similar to the lazy loading we need to do for Haml:
+        # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
+        require 'cdo/pegasus/actionview_sinatra'
+        ActionViewSinatra.create_view(self)
+      end
+
+      update_actionview_assigns
+      @actionview.instance_variable_set(:@_request, request)
+    end
+
     def content_dir(*paths)
       File.join(settings.views, *paths)
     end
@@ -319,7 +330,9 @@ class Documents < Sinatra::Base
     # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
     def dashboard_user
       return nil if (id = dashboard_user_id).nil?
+      # rubocop:disable CustomCops/DashboardDbUsage
       @dashboard_user ||= Dashboard.db[:users][id: id]
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     # Get the current dashboard user wrapped in a helper
@@ -328,7 +341,9 @@ class Documents < Sinatra::Base
     # TODO: When we are using this everywhere, rename to just `dashboard_user`
     def dashboard_user_helper
       return nil if (id = dashboard_user_id).nil?
+      # rubocop:disable CustomCops/DashboardDbUsage
       @dashboard_user_helper ||= Dashboard::User.get(id)
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     # Get the current dashboard user ID
@@ -348,9 +363,9 @@ class Documents < Sinatra::Base
       remaining_content = match.post_match
       line = content.lines.count - remaining_content.lines.count + 1
       [header, remaining_content, line]
-    rescue => e
+    rescue => exception
       # Append rendered header to error message.
-      e.message << "\n#{match[:yaml]}" if match[:yaml]
+      exception.message << "\n#{match[:yaml]}" if match[:yaml]
       raise
     end
 
@@ -377,10 +392,10 @@ class Documents < Sinatra::Base
 
       response.headers['X-Pegasus-Version'] = '3'
       render_(content, path, line)
-    rescue => e
+    rescue => exception
       # Add document path to backtrace if not already included.
-      if path && [e.message, *e.backtrace].none? {|location| location.include?(path)}
-        e.set_backtrace e.backtrace.unshift(path)
+      if path && [exception.message, *exception.backtrace].none? {|location| location.include?(path)}
+        exception.set_backtrace exception.backtrace.unshift(path)
       end
       raise
     end
@@ -444,7 +459,7 @@ class Documents < Sinatra::Base
       nil
     end
 
-    def resolve_template(subdir, extnames, uri, is_document = false)
+    def resolve_template(subdir, extnames, uri, is_document: false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
         # Negotiate for a locale specific partial
@@ -510,7 +525,7 @@ class Documents < Sinatra::Base
         File.join(uri, "index")
       ]
       paths.each do |path|
-        template = resolve_template('public', settings.non_static_extnames, path, true)
+        template = resolve_template('public', settings.non_static_extnames, path, is_document: true)
         return template if template
       end
 
@@ -520,7 +535,7 @@ class Documents < Sinatra::Base
       while at != '/'
         parent = File.dirname(at)
 
-        path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), true)
+        path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), is_document: true)
         if path
           request.env[:splat_path_info] = uri[parent.length..]
           return path
@@ -541,14 +556,14 @@ class Documents < Sinatra::Base
       nil
     end
 
-    def render_template(path, locals={})
+    def render_template(path, locals = {})
       render_(File.read(path), path, 0, locals)
-    rescue => e
-      Honeybadger.context({path: path, e: e})
-      raise "Error rendering #{path}: #{e}"
+    rescue => exception
+      Honeybadger.context({path: path, e: exception})
+      raise "Error rendering #{path}: #{exception}"
     end
 
-    def render_(body, path=nil, line=0, locals={})
+    def render_(body, path = nil, line = 0, locals = {})
       extensions = MultipleExtnameFileUtils.all_extnames(path)
 
       # Now, apply the processing operations implied by each extension to the
@@ -632,7 +647,7 @@ class Documents < Sinatra::Base
       return path
     end
 
-    def view(uri, locals={})
+    def view(uri, locals = {})
       path = resolve_view_template(uri)
       render_template(path, locals)
     end

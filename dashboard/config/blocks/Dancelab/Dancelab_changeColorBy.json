@@ -2,6 +2,7 @@
   "category": "World",
   "config": {
     "func": "changeColorBy",
+    "docFunc": "gamelab_changePropBy",
     "blockText": "change {COLOR} {METHOD} by {AMOUNT}",
     "returnType": "Colour",
     "style": "colour_blocks",

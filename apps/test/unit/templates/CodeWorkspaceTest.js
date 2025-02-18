@@ -1,11 +1,16 @@
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount, shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
-import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
-import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
-import sinon from 'sinon';
-import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
+
 import {workspaceAlertTypes} from '@cdo/apps/code-studio/projectRedux';
+import {
+  singleton as studioAppSingleton,
+  stubStudioApp,
+  restoreStudioApp,
+} from '@cdo/apps/StudioApp';
+import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
+
+import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('CodeWorkspace', () => {
   const MINIMUM_PROPS = {
@@ -22,21 +27,23 @@ describe('CodeWorkspace', () => {
     workspaceAlert: {
       type: workspaceAlertTypes.error,
       message: 'This is an error message',
-      displayBottom: false
+      displayBottom: false,
     },
-    closeWorkspaceAlert: () => {}
+    closeWorkspaceAlert: () => {},
   };
 
   let studioApp, workspace;
 
   beforeEach(() => {
+    stubStudioApp();
     studioApp = studioAppSingleton();
-    sinon.stub(studioApp, 'showGeneratedCode');
+    jest.spyOn(studioApp, 'showGeneratedCode').mockClear().mockImplementation();
     workspace = mount(<CodeWorkspace {...MINIMUM_PROPS} />);
   });
 
   afterEach(() => {
-    studioApp.showGeneratedCode.restore();
+    studioApp.showGeneratedCode.mockRestore();
+    restoreStudioApp();
   });
 
   it('onToggleShowCode displays blocks for levels with enableShowBlockCount=true', () => {
@@ -58,7 +65,7 @@ describe('CodeWorkspace', () => {
   it('displays old version warning when displayOldVersionBanner is true', () => {
     const props = {
       ...MINIMUM_PROPS,
-      ...{displayOldVersionBanner: true}
+      ...{displayOldVersionBanner: true},
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
     expect(wrapper.find('div#oldVersionBanner')).to.have.lengthOf(1);
@@ -67,7 +74,7 @@ describe('CodeWorkspace', () => {
   it('displays not started warning when displayNotStartedBanner is true', () => {
     const props = {
       ...MINIMUM_PROPS,
-      ...{displayNotStartedBanner: true}
+      ...{displayNotStartedBanner: true},
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
     expect(wrapper.find('div#notStartedBanner')).to.have.lengthOf(1);
@@ -81,8 +88,8 @@ describe('CodeWorkspace', () => {
     const props = {
       ...MINIMUM_PROPS,
       ...{
-        workspaceAlert: null
-      }
+        workspaceAlert: null,
+      },
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
     expect(wrapper.find('WorkspaceAlert')).to.have.lengthOf(0);
@@ -92,8 +99,8 @@ describe('CodeWorkspace', () => {
     const props = {
       ...MINIMUM_PROPS,
       ...{
-        editCode: true
-      }
+        editCode: true,
+      },
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
     expect(wrapper.find('WorkspaceAlert')).to.have.lengthOf(1);
@@ -106,8 +113,8 @@ describe('CodeWorkspace', () => {
     const props = {
       ...MINIMUM_PROPS,
       ...{
-        editCode: false
-      }
+        editCode: false,
+      },
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
     expect(wrapper.find('WorkspaceAlert')).to.have.lengthOf(1);

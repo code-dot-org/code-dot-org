@@ -26,8 +26,8 @@ module AzureTextToSpeech
 
       token_http_request.request(token_request)&.body
     end
-  rescue => e
-    Honeybadger.notify(e, error_message: 'Request for authentication token from Azure Speech Service failed')
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Request for authentication token from Azure Speech Service failed')
     nil
   end
 
@@ -60,8 +60,8 @@ module AzureTextToSpeech
     return yield(nil) if request.body.nil_or_empty?
 
     yield(http_request.request(request)&.body)
-  rescue => e
-    Honeybadger.notify(e, error_message: 'Request for speech from Azure Speech Service failed')
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Request for speech from Azure Speech Service failed')
     yield(nil)
   end
 
@@ -96,8 +96,8 @@ module AzureTextToSpeech
       # Only keep voices that contain 2+ genders and a locale
       voice_dictionary.reject {|_, opt| opt.length < 3}
     end
-  rescue => e
-    Honeybadger.notify(e, error_message: 'Request for list of voices from Azure Speech Service failed')
+  rescue => exception
+    Honeybadger.notify(exception, error_message: 'Request for list of voices from Azure Speech Service failed')
     nil
   end
 

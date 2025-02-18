@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-24T15:48:33.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Skill Building",
+    "long_instructions": "##Using Formulas\r\n###When trying to analyze our data, creating new attributes from our existing data can help us learn more about our data question and gain new insights.\r\n\r\n###[CODAP Link](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FMsg2aPBQk7QIVPIZ5uSE%2Ffile.json)\r\n\r\n###**Do This**\r\n####1. Click on the grey “+” at the top of the table to add a new attribute in the “States” section.\r\n####2. Title this new attributes “State Total”\r\n\r\n<details><summary><strong>🔎 Show Me How 🔎</strong></summary>\r\n<img src=\"https://images.code.org/5c02639ed91d660f0030b289cb274d9f-image-1721835893942.gif\">\r\n</details>\r\n\r\n####3. Click on the “State Total” attribute and select “Edit formula”\r\n####4. Add the “count()” function.\r\n- ####You should be able to start typing the word “count” and see the option to select the count() function pop up.\r\n- ####Make sure you click the “Apply” button\r\n\r\n<details><summary><strong>🔎 Show Me How 🔎</strong></summary>\r\n<img src=\"https://images.code.org/ea6469dfda854da4ec6586869d12eb4d-image-1721835941105.gif\">\r\n</details>\r\n\r\n####5. Add a graph and add the “State Total” attribute to the x-axis\r\n####6. Which states have the most roller coasters? How many do they have?\r\n####7. What other questions does this new attribute make you wonder about? Add other attributes to the graph to help you answer those questions and add the insights you gained below.\r\n",
+    "teacher_markdown": "![](https://images.code.org/9a204b20b525e4f5272d2f49d9207cfd-image-1721836085919.png)\r\n\r\nExample student response:\r\n- California and Pennsylvania have the most roller coasters at 18.\r\n\r\nOther questions students may wonder about and investigate include:\r\n- What is the average age of roller coasters in states with the most versus the least roller coasters? Or Do states with more roller coasters have a wider variety of coaster types? Or How does the intensity of roller coasters (as measured by speed, height, or inversions) compare across states with different numbers of coasters?\r\n- Whatever questions students investigate, they should be relevant to the dataset and its attributes. The insights they gain from any new graphs created should be directly related to the questions posed and supported by the data analysis conducted. They should be clear, concise, and logically derived from the data. Teachers should value insights that show unique thinking or new connections.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-24 15:48:40 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-24 16:55:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-24 16:57:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

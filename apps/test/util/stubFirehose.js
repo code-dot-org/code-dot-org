@@ -1,5 +1,6 @@
-import {stub} from 'sinon';
-import firehose from '@cdo/apps/lib/util/firehose';
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import firehose from '@cdo/apps/metrics/firehose';
 
 /**
  * Stub firehose logging functions within this block of tests,

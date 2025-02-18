@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import VersionRow from './VersionRow';
-import {sources as sourcesApi, files as filesApi} from '../clientApi';
+
 import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import * as utils from '../utils';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
+
+import {sources as sourcesApi, files as filesApi} from '../clientApi';
+import * as utils from '../utils';
+
+import VersionRow from './VersionRow';
 
 /**
  * A component for viewing project version history.
@@ -16,7 +19,7 @@ export default class VersionHistory extends React.Component {
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     useFilesApi: PropTypes.bool.isRequired,
     selectedVersion: PropTypes.string,
-    isReadOnly: PropTypes.bool.isRequired
+    isReadOnly: PropTypes.bool.isRequired,
   };
 
   /**
@@ -35,7 +38,7 @@ export default class VersionHistory extends React.Component {
     versions: null,
     statusMessage: '',
     showSpinner: true,
-    confirmingClearPuzzle: false
+    confirmingClearPuzzle: false,
   };
 
   UNSAFE_componentWillMount() {
@@ -123,8 +126,8 @@ export default class VersionHistory extends React.Component {
           currentUrl: window.location.href,
           shareUrl: project.getShareUrl(),
           isProjectTemplateLevel: this.props.isProjectTemplateLevel,
-          currentSourceVersionId: project.getCurrentSourceVersionId()
-        })
+          currentSourceVersionId: project.getCurrentSourceVersionId(),
+        }),
       },
       {includeUserId: true}
     );
@@ -178,7 +181,7 @@ export default class VersionHistory extends React.Component {
       title = i18n.versionHistory_header();
 
       const rows = this.state.versions.map(
-        function(version) {
+        function (version) {
           return (
             <VersionRow
               key={version.versionId}
@@ -229,9 +232,9 @@ export default class VersionHistory extends React.Component {
 
     return (
       <div className="modal-content" style={{margin: 0}}>
-        <h1 className="dialog-title">{title}</h1>
+        <h5 className="dialog-title">{title}</h5>
         {body}
-        {this.state.statusMessage}
+        <p className="caption-text">{this.state.statusMessage}</p>
       </div>
     );
   }

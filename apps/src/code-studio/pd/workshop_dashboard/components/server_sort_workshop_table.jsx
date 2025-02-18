@@ -7,8 +7,14 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import WorkshopTableLoader from './workshop_table_loader';
+
+import {
+  DATE_ORDER_ASC,
+  DATE_ORDER_DESC,
+} from '@cdo/apps/code-studio/pd/constants';
+
 import WorkshopTable from './workshop_table';
+import WorkshopTableLoader from './workshop_table_loader';
 
 export default class ServerSortWorkshopTable extends React.Component {
   static propTypes = {
@@ -20,12 +26,13 @@ export default class ServerSortWorkshopTable extends React.Component {
     showSignupUrl: PropTypes.bool,
     showOrganizer: PropTypes.bool,
     generateCaptionFromWorkshops: PropTypes.func,
-    moreUrl: PropTypes.string
+    moreUrl: PropTypes.string,
+    initialOrderBy: PropTypes.oneOf([DATE_ORDER_ASC, DATE_ORDER_DESC]),
   };
 
   constructor(props) {
     super(props);
-    this.state = {orderBy: 'date desc'};
+    this.state = {orderBy: props.initialOrderBy || DATE_ORDER_DESC};
   }
 
   handleWorkshopsReceived = workshops => {
@@ -52,7 +59,7 @@ export default class ServerSortWorkshopTable extends React.Component {
   render() {
     const queryParams = {
       ...this.props.queryParams,
-      order_by: this.state.orderBy
+      order_by: this.state.orderBy,
     };
 
     return (

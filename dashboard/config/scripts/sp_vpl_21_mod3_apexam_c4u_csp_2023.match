@@ -1,0 +1,16 @@
+name 'SP-VPL-21-mod3-APExam-c4u-CSP_2023'
+title 'Check for understanding'
+description 'Match the statement with the AP Exam component.'
+height'125'
+question 'Multiple-choice questions that require a single correct answer.'
+answer 'Single-select'
+
+question 'Multiple-choice questions that are based on a short passage. These also require a single correct answer.'
+answer 'Single-select with reading passage'
+
+question 'Multiple choice questions that require students to choose two correct answers.'
+answer 'Multi-select'
+
+question 'An independent programming project, along with written responses explaining the project.'
+answer 'Create Performance Task'
+allow_multiple_attempts true

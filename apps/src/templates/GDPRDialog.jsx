@@ -1,27 +1,34 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from './Button';
+
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
+
 import BaseDialog from './BaseDialog';
 import DialogFooter from './teacherDashboard/DialogFooter';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class GDPRDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     currentUserId: PropTypes.number.isRequired,
     // If we're coming from pegasus, studioUrlPrefix is passed in as a prop and used to construct the logout url.
-    studioUrlPrefix: PropTypes.string
+    studioUrlPrefix: PropTypes.string,
   };
 
   state = {
-    isDialogOpen: this.props.isDialogOpen
+    isDialogOpen: this.props.isDialogOpen,
   };
 
   handleYesClick = () => {
     this.setState({isDialogOpen: false});
-    $.post(`/dashboardapi/v1/users/accept_data_transfer_agreement`, {
-      user_id: this.props.currentUserId
+    $.post('/dashboardapi/v1/users/accept_data_transfer_agreement', {
+      user_id: this.props.currentUserId,
+    }).then(() => {
+      const gdprDataScript = document.querySelector('script[data-gdpr]');
+      const gdprData = JSON.parse(gdprDataScript.dataset['gdpr']);
+      gdprData.show_gdpr_dialog = false;
+      gdprDataScript.dataset['gdpr'] = JSON.stringify(gdprData);
     });
   };
 
@@ -54,18 +61,18 @@ export default class GDPRDialog extends Component {
         </div>
         <DialogFooter>
           <Button
-            __useDeprecatedTag
-            text={i18n.gdprDialogLogout()}
-            href={logOutUrl}
-            color={Button.ButtonColor.gray}
             className="ui-test-gdpr-dialog-logout"
+            text={i18n.gdprDialogLogout()}
+            useAsLink={true}
+            href={logOutUrl}
+            color={buttonColors.gray}
+            type="secondary"
+            size="m"
           />
           <Button
-            __useDeprecatedTag
+            className="ui-test-gdpr-dialog-accept"
             text={i18n.gdprDialogYes()}
             onClick={this.handleYesClick}
-            color={Button.ButtonColor.orange}
-            className="ui-test-gdpr-dialog-accept"
           />
         </DialogFooter>
       </BaseDialog>
@@ -77,9 +84,9 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   instructions: {
-    marginTop: 20
-  }
+    marginTop: 20,
+  },
 };

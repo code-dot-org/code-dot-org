@@ -1,4 +1,3 @@
-include_recipe 'cdo-mysql::repo'
+include_recipe 'apt'
 
-apt_package 'libmysqlclient-dev'
-apt_package 'mysql-client'
+apt_package ['libmysqlclient-dev', 'mysql-client']

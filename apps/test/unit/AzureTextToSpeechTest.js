@@ -1,6 +1,8 @@
-import {assert, expect} from '../util/reconfiguredChai';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
+
+import {assert, expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const assertSoundResponsesEqual = (expected, actual) => {
   assert.deepEqual(expected.bytes, actual.bytes);
@@ -16,15 +18,11 @@ const assertSoundResponsesEqual = (expected, actual) => {
 };
 
 describe('AzureTextToSpeech', () => {
-  let azureTTS, playBytesStub;
+  let azureTTS;
 
   beforeEach(() => {
     azureTTS = new AzureTextToSpeech();
-    playBytesStub = sinon.stub(azureTTS, 'playBytes_');
-  });
-
-  afterEach(() => {
-    playBytesStub.restore();
+    jest.spyOn(azureTTS, 'playBytes_');
   });
 
   describe('createSoundPromise', () => {
@@ -41,7 +39,7 @@ describe('AzureTextToSpeech', () => {
         beforeEach(() => {
           const badWord = 'badWord';
           cachedSoundResponse = azureTTS.createSoundResponse_({
-            profaneWords: [badWord]
+            profaneWords: [badWord],
           });
           azureTTS.setCachedSound_(
             'en-US',
@@ -53,7 +51,7 @@ describe('AzureTextToSpeech', () => {
             text: `hi ${badWord}`,
             gender: 'female',
             locale: 'en-US',
-            onFailure: onFailureSpy
+            onFailure: onFailureSpy,
           });
         });
 
@@ -73,7 +71,7 @@ describe('AzureTextToSpeech', () => {
 
         beforeEach(() => {
           cachedSoundResponse = azureTTS.createSoundResponse_({
-            bytes: new ArrayBuffer()
+            bytes: new ArrayBuffer(),
           });
           azureTTS.setCachedSound_(
             'en-US',
@@ -85,7 +83,7 @@ describe('AzureTextToSpeech', () => {
             text: 'hi',
             gender: 'female',
             locale: 'en-US',
-            onFailure: onFailureSpy
+            onFailure: onFailureSpy,
           });
         });
 
@@ -121,18 +119,18 @@ describe('AzureTextToSpeech', () => {
           server.respondWith('POST', `/profanity/find`, [
             200,
             {'Content-Type': 'application/json'},
-            JSON.stringify([badWord])
+            JSON.stringify([badWord]),
           ]);
           options = {
             text: badWord,
             gender: 'female',
             locale: 'en-US',
-            onFailure: onFailureSpy
+            onFailure: onFailureSpy,
           };
           soundPromise = azureTTS.createSoundPromise(options);
           expectedSoundResponse = azureTTS.createSoundResponse_({
             ...options,
-            profaneWords: [badWord]
+            profaneWords: [badWord],
           });
         });
 
@@ -164,25 +162,25 @@ describe('AzureTextToSpeech', () => {
           server.respondWith('POST', `/profanity/find`, [
             200,
             {'Content-Type': 'application/json'},
-            JSON.stringify([])
+            JSON.stringify([]),
           ]);
         });
 
         describe('on success', () => {
           beforeEach(() => {
             const bytes = new ArrayBuffer();
-            sinon
-              .stub(azureTTS, 'convertTextToSpeech')
-              .returns(new Promise(resolve => resolve(bytes)));
+            jest
+              .spyOn(azureTTS, 'convertTextToSpeech')
+              .mockResolvedValue(bytes);
             options = {
               text: 'hello',
               gender: 'male',
-              locale: 'es-MX'
+              locale: 'es-MX',
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
               ...options,
-              bytes
+              bytes,
             });
           });
 
@@ -205,19 +203,19 @@ describe('AzureTextToSpeech', () => {
         describe('on failure', () => {
           beforeEach(() => {
             const error = {status: 400};
-            sinon
-              .stub(azureTTS, 'convertTextToSpeech')
-              .returns(new Promise((_, reject) => reject(error)));
+            jest
+              .spyOn(azureTTS, 'convertTextToSpeech')
+              .mockRejectedValue(error);
             options = {
               text: 'hello',
               gender: 'male',
               locale: 'es-MX',
-              onFailure: onFailureSpy
+              onFailure: onFailureSpy,
             };
             soundPromise = azureTTS.createSoundPromise(options);
             expectedSoundResponse = azureTTS.createSoundResponse_({
               ...options,
-              error
+              error,
             });
           });
 
@@ -252,57 +250,51 @@ describe('AzureTextToSpeech', () => {
     beforeEach(() => {
       playSpy = sinon.spy();
       successfulResponse = azureTTS.createSoundResponse_({
-        bytes: new ArrayBuffer()
+        bytes: new ArrayBuffer(),
       });
     });
 
     it('no-ops if sound is already playing', async () => {
-      const dequeueStub = sinon.stub(azureTTS, 'dequeue_');
+      const dequeueStub = jest.spyOn(azureTTS, 'dequeue_');
       azureTTS.playing = true;
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
-      expect(dequeueStub).not.to.have.been.called;
+      expect(dequeueStub.mock.calls.length).to.equal(0);
       expect(playSpy).not.to.have.been.called;
-
-      dequeueStub.restore();
     });
 
     it('no-ops if queue is empty', async () => {
-      const dequeueStub = sinon.stub(azureTTS, 'dequeue_').returns(undefined);
+      const dequeueStub = jest
+        .spyOn(azureTTS, 'dequeue_')
+        .mockReturnValue(undefined);
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
-      expect(dequeueStub).to.have.been.calledOnce;
+      expect(dequeueStub.mock.calls.length).to.equal(1);
       expect(playSpy).not.to.have.been.called;
-
-      dequeueStub.restore();
     });
 
     it('plays sound if response was successful', async () => {
-      const dequeueStub = sinon
-        .stub(azureTTS, 'dequeue_')
-        .returns(() => Promise.resolve(successfulResponse));
+      jest
+        .spyOn(azureTTS, 'dequeue_')
+        .mockReturnValue(() => Promise.resolve(successfulResponse));
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
       expect(playSpy).to.have.been.calledOnce;
-
-      dequeueStub.restore();
     });
 
     it('ends sound if response was unsuccessful', async () => {
       const unsuccessfulResponse = azureTTS.createSoundResponse_({
-        error: new Error()
+        error: new Error(),
       });
       unsuccessfulResponse.playbackOptions.onEnded = sinon.spy();
-      const dequeueStub = sinon
-        .stub(azureTTS, 'dequeue_')
-        .returns(() => Promise.resolve(unsuccessfulResponse));
+      jest
+        .spyOn(azureTTS, 'dequeue_')
+        .mockReturnValue(() => Promise.resolve(unsuccessfulResponse));
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
       expect(unsuccessfulResponse.playbackOptions.onEnded).to.have.been
         .calledOnce;
       expect(playSpy).not.to.have.been.called;
-
-      dequeueStub.restore();
     });
   });
 });

@@ -1,7 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {isLevelAssessment} from './progressHelpers';
-import {levelWithProgressType} from './progressTypes';
+import React from 'react';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import i18n from '@cdo/locale';
+
+import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {
   BasicBubble,
   BubbleLink,
@@ -10,12 +13,11 @@ import {
   getBubbleClassNames,
   getBubbleContent,
   getBubbleShape,
-  getBubbleUrl
+  getBubbleUrl,
 } from './BubbleFactory';
+import {isLevelAssessment} from './progressHelpers';
 import {levelProgressStyle} from './progressStyles';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import BubbleBadge, {BadgeType} from './BubbleBadge';
-import i18n from '@cdo/locale';
+import {levelWithProgressType} from './progressTypes';
 
 /**
  * A ProgressBubble represents progress for a specific level. It can be a circle
@@ -30,14 +32,14 @@ export default class ProgressBubble extends React.Component {
     selectedSectionId: PropTypes.number,
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.number
+      PropTypes.number,
     ]),
     hideToolTips: PropTypes.bool,
     onClick: PropTypes.func,
     // We have the ability to hide the assessment checkmark badge because
     // it's visually cluttering in places like the teacher panel and progress table
     hideAssessmentBadge: PropTypes.bool,
-    lessonName: PropTypes.string
+    lessonName: PropTypes.string,
   };
 
   isClickable() {
@@ -127,12 +129,12 @@ export default class ProgressBubble extends React.Component {
     const levelID = level.bubbleText || level.letter || level.levelNumber;
     const lessonName = this.props.lessonName;
     let description = i18n.progressBubbleDescription({
-      levelID: levelID
+      levelID: levelID,
     });
     if (lessonName) {
       description = i18n.progressBubbleDescriptionWithLesson({
         levelID: levelID,
-        lessonName: lessonName
+        lessonName: lessonName,
       });
     }
     if (this.isClickable()) {

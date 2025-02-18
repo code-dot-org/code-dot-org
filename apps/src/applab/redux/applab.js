@@ -1,14 +1,15 @@
 /** @file App Lab redux module */
-import {ApplabInterfaceMode} from '../constants';
-import data from '../../storage/redux/data';
-import screens from './screens';
 import {reducers as jsDebuggerReducers} from '../../lib/tools/jsdebugger/redux';
-import {reducer as maker} from '../../lib/kits/maker/redux';
+import {reducer as maker} from '../../maker/redux';
+import data from '../../storage/redux/data';
+import {ApplabInterfaceMode} from '../constants';
+
+import screens from './screens';
 
 export const REDIRECT_RESPONSE = {
   APPROVED: 'approved',
   REJECTED: 'rejected',
-  UNSUPPORTED: 'unsupported'
+  UNSUPPORTED: 'unsupported',
 };
 
 // Selectors
@@ -32,7 +33,7 @@ function changeInterfaceMode(interfaceMode) {
   }
   return {
     type: CHANGE_INTERFACE_MODE,
-    interfaceMode: interfaceMode
+    interfaceMode: interfaceMode,
   };
 }
 
@@ -46,7 +47,7 @@ function addRedirectNotice(response, url) {
   return {
     type: ADD_REDIRECT_NOTICE,
     response: response,
-    url: url
+    url: url,
   };
 }
 
@@ -56,7 +57,7 @@ function addRedirectNotice(response, url) {
  */
 function dismissRedirectNotice() {
   return {
-    type: DISMISS_REDIRECT_NOTICE
+    type: DISMISS_REDIRECT_NOTICE,
   };
 }
 
@@ -67,7 +68,7 @@ function dismissRedirectNotice() {
 function setLevelData(data) {
   return {
     type: SET_LEVEL_DATA,
-    data
+    data,
   };
 }
 
@@ -75,7 +76,7 @@ export const actions = {
   changeInterfaceMode,
   addRedirectNotice,
   dismissRedirectNotice,
-  setLevelData
+  setLevelData,
 };
 
 // Reducers
@@ -100,8 +101,8 @@ function redirectDisplay(state, action) {
       return [
         {
           response: action.response,
-          url: action.url
-        }
+          url: action.url,
+        },
       ].concat(state);
     case DISMISS_REDIRECT_NOTICE:
       // Dismiss the top-most redirect on the stack of notices
@@ -122,7 +123,7 @@ function level(state, action) {
     case SET_LEVEL_DATA:
       return {
         ...state,
-        ...action.data
+        ...action.data,
       };
     default:
       return state;
@@ -136,5 +137,5 @@ export const reducers = {
   interfaceMode,
   redirectDisplay,
   screens,
-  level
+  level,
 };

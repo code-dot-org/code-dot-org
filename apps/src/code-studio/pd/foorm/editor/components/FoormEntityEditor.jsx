@@ -1,10 +1,11 @@
-import React from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import {Tabs, Tab} from 'react-bootstrap';
-import FoormEntityEditorPreview from './FoormEntityEditorPreview';
-import FoormEntityEditorHeader from './FoormEntityEditorHeader';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {connect} from 'react-redux';
+
+import FoormEntityEditorHeader from './FoormEntityEditorHeader';
+import FoormEntityEditorPreview from './FoormEntityEditorPreview';
 
 const facilitator_names = ['Alice', 'Bob', 'Carly', 'Dave'];
 
@@ -28,7 +29,7 @@ class FoormEntityEditor extends React.Component {
     validateInExistingEntityContext: PropTypes.bool,
 
     // populated by redux
-    questions: PropTypes.object
+    questions: PropTypes.object,
   };
 
   constructor(props) {
@@ -46,22 +47,22 @@ class FoormEntityEditor extends React.Component {
         {
           facilitator_id: 1,
           facilitator_name: 'Alice',
-          facilitator_position: 1
+          facilitator_position: 1,
         },
         {
           facilitator_id: 2,
           facilitator_name: 'Bob',
-          facilitator_position: 2
-        }
+          facilitator_position: 2,
+        },
       ],
       day: 1,
       is_friday_institute: false,
-      workshop_agenda: 'module1'
+      workshop_agenda: 'module1',
     };
 
     // use debounce to only call once per second when editing
     this.previewFoorm = _.debounce(this.props.preparePreview, 1000, {
-      leading: true
+      leading: true,
     });
   }
 
@@ -99,12 +100,12 @@ class FoormEntityEditor extends React.Component {
         facilitators.push({
           facilitator_id: i,
           facilitator_name: facilitator_name,
-          facilitator_position: i + 1
+          facilitator_position: i + 1,
         });
       }
       this.setState({
         num_facilitators: num_facilitators,
-        facilitators: facilitators
+        facilitators: facilitators,
       });
     }
   };
@@ -260,7 +261,7 @@ class FoormEntityEditor extends React.Component {
                   is_virtual: this.state.is_virtual,
                   day: this.state.day,
                   is_friday_institute: this.state.is_friday_institute,
-                  workshop_agenda: this.state.workshop_agenda
+                  workshop_agenda: this.state.workshop_agenda,
                 }}
               />
             </Tab>
@@ -278,23 +279,23 @@ const styles = {
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     width: '100%',
-    marginBottom: 10
+    marginBottom: 10,
   },
   editor: {
     minWidth: 560,
     width: '48%',
-    marginRight: 12
+    marginRight: 12,
   },
   options: {
     minWidth: 215,
-    marginLeft: 5
+    marginLeft: 5,
   },
   preview: {
     width: '48%',
-    marginRight: 12
-  }
+    marginRight: 12,
+  },
 };
 
 export default connect(state => ({
-  questions: state.foorm.questions || {}
+  questions: state.foorm.questions || {},
 }))(FoormEntityEditor);

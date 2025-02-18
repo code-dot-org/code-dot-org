@@ -1,12 +1,15 @@
 import _ from 'lodash';
+
 import {navigateToHref} from '@cdo/apps/utils';
-import {TeacherDashboardPath} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation';
-import firehoseClient from '../../lib/util/firehose';
+
+import firehoseClient from '../../metrics/firehose';
+
+import {TEACHER_DASHBOARD_PATHS} from './TeacherDashboardNavigation';
 
 export function switchToSection(toSectionId, fromSectionId) {
   const baseUrl = `/teacher_dashboard/sections/${toSectionId}/`;
   const currentTab = _.last(_.split(window.location.pathname, '/'));
-  const teacherNavigationTabs = _.values(TeacherDashboardPath);
+  const teacherNavigationTabs = _.values(TEACHER_DASHBOARD_PATHS);
   const sectionUrl = teacherNavigationTabs.includes(`/${currentTab}`)
     ? baseUrl.concat(currentTab)
     : baseUrl;
@@ -22,8 +25,8 @@ export function recordSwitchToSection(toSectionId, fromSectionId, studyGroup) {
       data_json: JSON.stringify({
         section_id: fromSectionId,
         old_section_id: fromSectionId,
-        new_section_id: toSectionId
-      })
+        new_section_id: toSectionId,
+      }),
     },
     {includeUserId: true}
   );
@@ -36,8 +39,8 @@ export function recordOpenEditSectionDetails(sectionId, studyGroup) {
       study_group: studyGroup,
       event: 'open_edit_section_dashboard_header',
       data_json: JSON.stringify({
-        section_id: sectionId
-      })
+        section_id: sectionId,
+      }),
     },
     {includeUserId: true}
   );

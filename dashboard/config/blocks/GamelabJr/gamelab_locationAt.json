@@ -5,6 +5,7 @@
     "docFunc": "gamelab_locationAt",
     "blockText": "location x: {X} y: {Y}",
     "returnType": "Location",
+    "style": "location_blocks",
     "args": [
       {
         "name": "X",

@@ -90,9 +90,7 @@ class Plc::UserCourseEnrollment < ApplicationRecord
     }
   end
 
-  private
-
-  def create_authorized_teacher_user_permission
+  private def create_authorized_teacher_user_permission
     if user.teacher? && !user.verified_teacher?
       user.permission = UserPermission::AUTHORIZED_TEACHER
     end

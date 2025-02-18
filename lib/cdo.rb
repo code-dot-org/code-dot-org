@@ -34,12 +34,18 @@ module Cdo
         "#{root}/config.yml.erb"
       )
 
-      defaults = render("#{root}/config.yml.erb").first
-      to_h.keys.each do |key|
-        raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
+      configured_properties = to_h.keys.map(&:to_sym)
+      default_properties = render("#{root}/config.yml.erb").first.keys
+      unknown_properties = configured_properties - default_properties
+      unless unknown_properties.empty?
+        raise <<~ERROR
+          Property or properties "#{unknown_properties.join(', ')}" defined in the environment without a default specified in `config.yml.erb`.
+          Likely this is a former configuration value which has been removed from `config.yml.erb` but still exists in your `locals.yml`.
+        ERROR
       end
+
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
-      freeze
+      freeze_config
     end
 
     def shared_cache
@@ -51,7 +57,10 @@ module Cdo
     end
 
     def i18n_backend
-      CDO_I18N_BACKEND
+      @i18n_backend ||=
+        # Because loading i18n files is super-slow, lazy load them in development.
+        # To load all locales for testing, add "lazy_load_i18n: false" to +locals.yml+ config
+        CDO.lazy_load_i18n ? Cdo::I18n::LazyLoadableBackend.new(lazy_load: true) : Cdo::I18n::SimpleBackend.new
     end
 
     def canonical_hostname(domain)
@@ -64,8 +73,9 @@ module Cdo
 
       # our HTTPS wildcard certificate only supports *.code.org
       # 'env', 'studio.code.org' over https must resolve to 'env-studio.code.org' for non-prod environments
-      sep = (domain.include?('.code.org')) ? '-' : '.'
-      return "localhost#{sep}#{domain}" if rack_env?(:development)
+      sep = domain.include?('.code.org') ? '-' : '.'
+      # developers and CI servers use localhost
+      return "localhost#{sep}#{domain}" if rack_env?(:development) || ci_webserver?
       return "translate#{sep}#{domain}" if name == 'crowdin'
       "#{rack_env}#{sep}#{domain}"
     end
@@ -80,10 +90,6 @@ module Cdo
 
     def hourofcode_hostname
       canonical_hostname('hourofcode.com')
-    end
-
-    def advocacy_hostname
-      canonical_hostname('advocacy.code.org')
     end
 
     def codeprojects_hostname
@@ -103,32 +109,51 @@ module Cdo
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
-        (ENV['CI'] && host.include?('localhost'))
+          (ENV.fetch('CI', nil) && host.include?('localhost'))
         port = ['studio.code.org'].include?(domain) ? dashboard_port : pegasus_port
         host += ":#{port}"
       end
       host
     end
 
-    def site_url(domain, path = '', scheme = '')
+    def dashboard_site_host
+      site_host('studio.code.org')
+    end
+
+    def pegasus_site_host
+      site_host('code.org')
+    end
+
+    def site_url(domain, path = '', scheme = '', ge_region: nil)
       path = '/' + path unless path.empty? || path[0] == '/'
+
+      if ge_region && Cdo::GlobalEdition.target_host?(canonical_hostname(domain))
+        path = Cdo::GlobalEdition.path(ge_region, path)
+      end
+
       "#{scheme}//#{site_host(domain)}#{path}"
     end
 
-    def studio_url(path = '', scheme = '')
-      site_url('studio.code.org', path, scheme)
+    def studio_url(path = '', scheme = '', ge_region: nil)
+      site_url('studio.code.org', path, scheme, ge_region: ge_region)
     end
 
-    def code_org_url(path = '', scheme = '')
-      site_url('code.org', path, scheme)
+    def code_org_url(path = '', scheme = '', ge_region: nil)
+      site_url('code.org', path, scheme, ge_region: ge_region)
     end
 
-    def advocacy_url(path = '', scheme = '')
-      site_url('advocacy.code.org', path, scheme)
-    end
+    def hourofcode_url(path = '', scheme = '', locale: nil)
+      if locale
+        language = Cdo::I18n.available_languages_by_locale[locale.to_s]
+        hoc_locale = language[:unique_language_s] if language && language[:supported_hoc_b] == 'TRUE'
+        path = File.join('/', hoc_locale, path) if hoc_locale
+      end
 
-    def hourofcode_url(path = '', scheme = '')
       site_url('hourofcode.com', path, scheme)
+    end
+
+    def video_url(path)
+      File.join('//videos.code.org', path)
     end
 
     def javabuilder_url(path = '', scheme = '')
@@ -143,8 +168,8 @@ module Cdo
         # deployed development instance of Javabuilder, set
         # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
         return 'ws://localhost:8080/javabuilder' if CDO.use_localhost_javabuilder
-        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
-        "wss://#{stack_name}.code.org"
+        javabuilder_stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "wss://#{javabuilder_stack_name}.code.org"
       else
         DCDO.get("javabuilder_websocket_url", 'wss://javabuilder.code.org')
       end
@@ -158,12 +183,21 @@ module Cdo
         # deployed development instance of Javabuilder, set
         # 'local_javabuilder_stack_name: "your stack name"' in your locals.yml.
         return 'http://localhost:8080/javabuilderfiles/seedsources' if CDO.use_localhost_javabuilder
-        stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
-        "https://#{stack_name}-http.code.org/seedsources/sources.json"
+        javabuilder_stack_name = CDO.local_javabuilder_stack_name || 'javabuilder-test'
+        "https://#{javabuilder_stack_name}-http.code.org/seedsources/sources.json"
       else
         http_url = DCDO.get("javabuilder_http_url", 'https://javabuilder-http.code.org')
         http_url + "/seedsources/sources.json"
       end
+    end
+
+    def javabuilder_demo_url(path = '', scheme = '')
+      DCDO.get("javabuilder_demo_websocket_url", 'wss://javabuilder-demo.code.org')
+    end
+
+    def javabuilder_demo_upload_url(path = '', scheme = '')
+      http_url = DCDO.get("javabuilder_demo_http_url", 'https://javabuilder-demo-http.code.org')
+      http_url + "/seedsources/sources.json"
     end
 
     # Get a list of all languages for which we want to link to a localized
@@ -207,7 +241,7 @@ module Cdo
       return @@curriculum_languages
     end
 
-    def curriculum_url(locale, uri = '', autocomplete_partial_path = true)
+    def curriculum_url(locale, uri = '', autocomplete_partial_path: true)
       return unless uri
       uri = URI::DEFAULT_PARSER.escape(uri)
       uri = URI::DEFAULT_PARSER.parse(uri)
@@ -233,6 +267,15 @@ module Cdo
       ''
     end
 
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Statsig API key.
+    def safe_statsig_api_client_key
+      CDO.statsig_api_client_key
+    rescue ArgumentError
+      # Return an empty string instead of raising
+      ''
+    end
+
     def dir(*dirs)
       File.join(root_dir, *dirs)
     end
@@ -242,10 +285,25 @@ module Cdo
     end
 
     # Identify whether we are executing on the managed test system (test.code.org / test-studio.code.org)
-    # to ensure that other systems (such as staging-next or Continuous Integration builds) that are operating
+    # to ensure that other systems (such as Continuous Integration builds) that are operating
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
     def test_system?
       rack_env?(:test) && pegasus_hostname == 'test.code.org'
+    end
+
+    # Identify whether we are executing within a web application server as most of our Ruby classes and modules
+    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb).
+    # Some components may operate differently within a web application server, such as using a database proxy to
+    # connect to the database. We use the `puma` web application server in most environments, except development, where
+    # we use `thin`.
+    def running_web_application?
+      %w(puma thin).include?(File.basename($0))
+    end
+
+    # Is this code running in a webserver as part of our Continuous Integration
+    # builds?
+    def ci_webserver?
+      running_web_application? && ENV.fetch('CI', nil)
     end
 
     def shared_image_url(path)
@@ -259,10 +317,10 @@ module Cdo
 
     def log
       require 'logger'
-      @@log ||= Logger.new(STDOUT).tap do |l|
+      @@log ||= Logger.new($stdout).tap do |l|
         l.level = Logger::INFO
         l.formatter = proc do |severity, _, _, msg|
-          "#{severity != 'INFO' ? "#{severity}: " : ''}#{msg}\n"
+          "#{severity == 'INFO' ? '' : "#{severity}: "}#{msg}\n"
         end
       end
     end
@@ -305,4 +363,4 @@ module Cdo
     end
   end
 end
-CDO ||= Cdo::Impl.instance
+CDO = Cdo::Impl.instance

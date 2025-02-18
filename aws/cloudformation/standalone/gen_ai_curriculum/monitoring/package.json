@@ -1,0 +1,17 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@aws-sdk/client-cloudwatch": "^3.675.0",
+    "@types/node": "^22.7.6",
+    "cloudwatch-dashboard-types": "^1.0.1",
+    "process": "^0.11.10"
+  }
+}

@@ -7,13 +7,14 @@
  */
 require('../utils'); // For Function.prototype.inherits()
 import $ from 'jquery';
+
 var i18n = require('@cdo/netsim/locale');
+
 var markup = require('./NetSimBitLogPanel.html.ejs');
-var NetSimPanel = require('./NetSimPanel');
 var NetSimEncodingControl = require('./NetSimEncodingControl');
 var NetSimGlobals = require('./NetSimGlobals');
-
 var logger = require('./NetSimLogger').getSingleton();
+var NetSimPanel = require('./NetSimPanel');
 
 /**
  * Generator and controller for bit-log, which receives bits one at a time.
@@ -27,7 +28,7 @@ var logger = require('./NetSimLogger').getSingleton();
  * @augments NetSimPanel
  * @implements INetSimLogPanel
  */
-var NetSimBitLogPanel = (module.exports = function(rootDiv, options) {
+var NetSimBitLogPanel = (module.exports = function (rootDiv, options) {
   /**
    * The current binary contents of the log panel
    * @type {string}
@@ -83,12 +84,12 @@ var NetSimBitLogPanel = (module.exports = function(rootDiv, options) {
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-log-panel',
     panelTitle: options.logTitle,
-    beginMinimized: options.isMinimized
+    beginMinimized: options.isMinimized,
   });
 });
 NetSimBitLogPanel.inherits(NetSimPanel);
 
-NetSimBitLogPanel.prototype.render = function() {
+NetSimBitLogPanel.prototype.render = function () {
   // Create boilerplate panel markup
   NetSimBitLogPanel.superPrototype.render.call(this);
 
@@ -98,7 +99,7 @@ NetSimBitLogPanel.prototype.render = function() {
       binary: this.binary_,
       enabledEncodings: this.encodings_,
       chunkSize: this.chunkSize_,
-      showReadWireButton: this.showReadWireButton_
+      showReadWireButton: this.showReadWireButton_,
     })
   );
   this.getBody().html(newMarkup);
@@ -119,7 +120,7 @@ NetSimBitLogPanel.prototype.render = function() {
  * Remove all packets from the log, resetting its state.
  * @private
  */
-NetSimBitLogPanel.prototype.onClearButtonPress_ = function() {
+NetSimBitLogPanel.prototype.onClearButtonPress_ = function () {
   this.binary_ = '';
   this.render();
 };
@@ -129,7 +130,7 @@ NetSimBitLogPanel.prototype.onClearButtonPress_ = function() {
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function(jQueryEvent) {
+NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function (jQueryEvent) {
   var thisButton = $(jQueryEvent.target);
   if (thisButton.is('[disabled]')) {
     return;
@@ -137,7 +138,7 @@ NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function(jQueryEvent) {
 
   thisButton.attr('disabled', 'disabled');
   this.netsim_.receiveBit(
-    function(err, message) {
+    function (err, message) {
       if (err) {
         logger.warn('Error reading wire state: ' + err.message);
         thisButton.removeAttr('disabled');
@@ -162,7 +163,7 @@ NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function(jQueryEvent) {
  * Put a message into the log.
  * @param {string} binaryBit
  */
-NetSimBitLogPanel.prototype.log = function(binaryBit) {
+NetSimBitLogPanel.prototype.log = function (binaryBit) {
   this.binary_ += binaryBit.toString();
   this.render();
 };
@@ -172,7 +173,7 @@ NetSimBitLogPanel.prototype.log = function(binaryBit) {
  * mode.
  * @param {EncodingType[]} newEncodings
  */
-NetSimBitLogPanel.prototype.setEncodings = function(newEncodings) {
+NetSimBitLogPanel.prototype.setEncodings = function (newEncodings) {
   this.encodings_ = newEncodings;
   this.render();
 };
@@ -181,7 +182,7 @@ NetSimBitLogPanel.prototype.setEncodings = function(newEncodings) {
  * Change how binary input in interpreted and formatted in the log.
  * @param {number} newChunkSize
  */
-NetSimBitLogPanel.prototype.setChunkSize = function(newChunkSize) {
+NetSimBitLogPanel.prototype.setChunkSize = function (newChunkSize) {
   this.chunkSize_ = newChunkSize;
   this.render();
 };
@@ -190,7 +191,7 @@ NetSimBitLogPanel.prototype.setChunkSize = function(newChunkSize) {
  * Sets the vertical space that this log panel should consume (including margins)
  * @param {number} heightPixels
  */
-NetSimBitLogPanel.prototype.setHeight = function(heightPixels) {
+NetSimBitLogPanel.prototype.setHeight = function (heightPixels) {
   this.openHeight_ = heightPixels;
   this.sizeToOpenHeight_();
 };
@@ -200,7 +201,7 @@ NetSimBitLogPanel.prototype.setHeight = function(heightPixels) {
  * is the desired height.
  * @private
  */
-NetSimBitLogPanel.prototype.sizeToOpenHeight_ = function() {
+NetSimBitLogPanel.prototype.sizeToOpenHeight_ = function () {
   var root = this.getRoot().find('.netsim-panel');
   var panelHeader = root.find('h1');
   var panelBody = root.find('.panel-body');
@@ -228,10 +229,8 @@ NetSimBitLogPanel.prototype.sizeToOpenHeight_ = function() {
  * @returns {number} vertical space that panel currently consumes (including
  * margins) in pixels.
  */
-NetSimBitLogPanel.prototype.getHeight = function() {
-  return this.getRoot()
-    .find('.netsim-panel')
-    .outerHeight(true);
+NetSimBitLogPanel.prototype.getHeight = function () {
+  return this.getRoot().find('.netsim-panel').outerHeight(true);
 };
 
 /**
@@ -240,7 +239,7 @@ NetSimBitLogPanel.prototype.getHeight = function() {
  * @private
  * @override
  */
-NetSimBitLogPanel.prototype.onMinimizerClick_ = function() {
+NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
   NetSimBitLogPanel.superPrototype.onMinimizerClick_.call(this);
   NetSimGlobals.updateLayout();
 };

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import VerticalImageResourceCard from '@cdo/apps/templates/VerticalImageResourceCard';
+
 import {
   nextLevelCourseCards,
-  defaultNextLevelCourseCard
+  defaultNextLevelCourseCard,
 } from '@cdo/apps/templates/certificates/congratsNextLevelActivityCards';
+import VerticalImageResourceCard from '@cdo/apps/templates/VerticalImageResourceCard';
+import i18n from '@cdo/locale';
 
 const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
   // The scriptName prop takes the form `course1` or `courseb-2022` or `applab-intro`
@@ -37,7 +38,7 @@ const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
 GraduateToNextLevel.propTypes = {
   scriptName: PropTypes.string,
   courseTitle: PropTypes.string,
-  courseDesc: PropTypes.string
+  courseDesc: PropTypes.string,
 };
 
 export default GraduateToNextLevel;

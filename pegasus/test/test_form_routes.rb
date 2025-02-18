@@ -41,18 +41,21 @@ class FormRoutesTest < SequelTestCase
     end
 
     it 'returns local results' do
-      create_volunteer name: 'Local Person', location: '37.774929,-122.419416'
-      results = search location: '37.774368,-122.428760'
-      assert_equal 0.8236209090344097, results.first['distance']
+      volunteer_location = '-122.419416,37.774929'
+      create_volunteer(name: 'Local Person', location: volunteer_location)
+      search_location = '-122.428760,37.774368'
+      results = search(location: search_location)
+      expected_distance = 0.8236238528508886
+      assert_equal expected_distance, results.first['distance']
     end
 
     it 'uses reverse chronological order' do
-      here = '35.774929,-122.419416'
+      here = '-122.419416,35.774929'
       create_volunteer name: 'Oldest', location: here
       create_volunteer name: 'Middle', location: here
       create_volunteer name: 'Newest', location: here
       results = search location: here
-      assert_equal %w(Newest Middle Oldest), results.map {|r| r['name_s']}
+      assert_equal(%w(Newest Middle Oldest), results.map {|r| r['name_s']})
     end
 
     def create_volunteer(name:, location:)

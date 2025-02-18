@@ -1,9 +1,8 @@
 import reducer, * as feedback from '@cdo/apps/redux/feedback';
-import {expect} from '../../util/reconfiguredChai';
 
 describe('feedback redux module', () => {
   it('has expected default state', () => {
-    expect(reducer(undefined, {})).to.deep.equal({
+    expect(reducer(undefined, {})).toEqual({
       displayingFeedback: false,
       displayingCode: false,
       displayingShareControls: false,
@@ -16,42 +15,42 @@ describe('feedback redux module', () => {
       displayFunometer: true,
       studentCode: {
         message: '',
-        code: ''
+        code: '',
       },
-      feedbackImage: null
+      feedbackImage: null,
     });
   });
 
   it('returns original state on unhandled action', () => {
     const state = {fakeProp: 'fakeValue'};
-    expect(reducer(state, {type: 'fakeAction'})).to.equal(state);
+    expect(reducer(state, {type: 'fakeAction'})).toBe(state);
   });
 
   describe('action: show and hide feedback', () => {
     const state = {
       displayingFeedback: false,
-      displayingShareControls: false
+      displayingShareControls: false,
     };
     it('sets the displayingFeedback property to true', () => {
       const newState = reducer(state, feedback.showFeedback());
-      expect(newState).to.deep.equal({
+      expect(newState).toEqual({
         displayingFeedback: true,
-        displayingShareControls: false
+        displayingShareControls: false,
       });
     });
 
     it('sets the displayingFeedback property to false', () => {
       const intermediateState = reducer(state, feedback.showFeedback());
       const newState = reducer(intermediateState, feedback.hideFeedback());
-      expect(newState).to.deep.equal({
+      expect(newState).toEqual({
         displayingFeedback: false,
-        displayingShareControls: false
+        displayingShareControls: false,
       });
     });
 
     it('produces a new object', () => {
       const showState = reducer(state, feedback.showFeedback());
-      expect(showState).not.to.equal(state);
+      expect(showState).not.toBe(state);
     });
   });
 
@@ -59,16 +58,16 @@ describe('feedback redux module', () => {
     it('changes the blockLimit property', () => {
       const state = {};
       const newState = reducer(state, feedback.setBlockLimit(42));
-      expect(newState).to.deep.equal({
-        blockLimit: 42
+      expect(newState).toEqual({
+        blockLimit: 42,
       });
     });
 
     it('clears the blockLimit property', () => {
       const state = {blockLimit: 42};
       const newState = reducer(state, feedback.setBlockLimit(undefined));
-      expect(newState).to.deep.equal({
-        blockLimit: undefined
+      expect(newState).toEqual({
+        blockLimit: undefined,
       });
     });
   });
@@ -84,16 +83,16 @@ describe('feedback redux module', () => {
           blocksUsed: 19,
           displayFunometer: false,
           studentCode: 'console.log("hello world!");',
-          feedbackImage: 'fake_image.png'
+          feedbackImage: 'fake_image.png',
         })
       );
-      expect(newState).to.deep.equal({
+      expect(newState).toEqual({
         isChallenge: true,
         isPerfect: true,
         blocksUsed: 19,
         displayFunometer: false,
         studentCode: 'console.log("hello world!");',
-        feedbackImage: 'fake_image.png'
+        feedbackImage: 'fake_image.png',
       });
     });
   });

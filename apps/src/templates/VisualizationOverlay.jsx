@@ -1,9 +1,10 @@
 /** @file SVG Visualization Overlay */
 
+import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import debounce from 'lodash/debounce';
+
 import {createEvent} from '@cdo/apps/utils';
 
 const resizeEventName = 'visualizationOverlayResize';
@@ -23,14 +24,14 @@ export class VisualizationOverlay extends React.Component {
     areRunStateOverlaysVisible: PropTypes.bool.isRequired,
     onMouseMove: PropTypes.func,
     children: PropTypes.node,
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   state = {
     /** @type {number} */
     mouseX: -1,
     /** @type {number} */
-    mouseY: -1
+    mouseY: -1,
   };
 
   componentDidMount() {
@@ -97,7 +98,7 @@ export class VisualizationOverlay extends React.Component {
     );
     this.setState({
       mouseX: this.mousePos_.x,
-      mouseY: this.mousePos_.y
+      mouseY: this.mousePos_.y,
     });
     if (typeof this.props.onMouseMove === 'function') {
       this.props.onMouseMove(this.mousePos_.x, this.mousePos_.y);
@@ -116,7 +117,7 @@ export class VisualizationOverlay extends React.Component {
           width: this.props.width,
           height: this.props.height,
           mouseX: this.state.mouseX,
-          mouseY: this.state.mouseY
+          mouseY: this.state.mouseY,
         });
       }
     });
@@ -143,7 +144,7 @@ export class VisualizationOverlay extends React.Component {
 }
 export default connect(state => ({
   areOverlaysVisible: shouldOverlaysBeVisible(state),
-  areRunStateOverlaysVisible: shouldRunStateOverlaysBeVisible(state)
+  areRunStateOverlaysVisible: shouldRunStateOverlaysBeVisible(state),
 }))(VisualizationOverlay);
 
 export function shouldRunStateOverlaysBeVisible(state) {

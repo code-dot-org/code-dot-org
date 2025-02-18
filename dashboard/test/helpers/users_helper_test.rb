@@ -5,6 +5,41 @@ class UsersHelperTest < ActionView::TestCase
   include UsersHelper
   include SharedConstants
 
+  class CountryCodeTest < ActionView::TestCase
+    setup do
+      @country_code = 'US'
+      @request = ActionDispatch::Request.new({'HTTP_CLOUDFRONT_VIEWER_COUNTRY' => @country_code.downcase})
+    end
+
+    test 'returns country code of student' do
+      student_country_code = 'UA'
+
+      student = build(:student, country_code: student_country_code)
+
+      assert_equal student_country_code, country_code(student, @request)
+    end
+
+    test 'returns nil if country code of student is not set' do
+      student = build(:student, country_code: nil)
+
+      assert_nil country_code(student, @request)
+    end
+
+    test 'returns country code of teacher' do
+      teacher_country_code = 'UA'
+
+      teacher = build(:teacher, country_code: teacher_country_code)
+
+      assert_equal teacher_country_code, country_code(teacher, @request)
+    end
+
+    test 'returns request country code when teacher country_code is not set' do
+      teacher = build(:teacher, country_code: '')
+
+      assert_equal @country_code, country_code(teacher, @request)
+    end
+  end
+
   def test_summarize_user_progress
     script = create(:script, :with_levels, levels_count: 3)
     user = create :user
@@ -291,11 +326,13 @@ class UsersHelperTest < ActionView::TestCase
   def test_script_progress_for_users
     user_1 = create :user
     user_2 = create :user
+    user_3 = create :user
 
     teacher = create :teacher
     section = create :section, teacher: teacher
     section.students << user_1 # we query for feedback where student is currently in section
     section.students << user_2
+    section.students << user_3
 
     # set up progress
     script = create :script
@@ -324,6 +361,8 @@ class UsersHelperTest < ActionView::TestCase
     sublevel1_user_level_2 = create :user_level, user: user_2, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
     sublevel2_user_level_2 = create :user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300
     create :teacher_feedback, student: user_2, teacher: teacher, level: sublevel2, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+    create :teacher_feedback, student: user_3, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+    create :teacher_feedback, student: user_3, teacher: teacher, level: sublevel2, script: script, comment: 'Better get working on this one!'
 
     sublevel1_last_progress_2 = UserLevel.find(sublevel1_user_level_2.id).updated_at.to_i
     sublevel2_last_progress_2 = UserLevel.find(sublevel2_user_level_2.id).updated_at.to_i
@@ -371,16 +410,34 @@ class UsersHelperTest < ActionView::TestCase
             time_spent: 480, # sum of time spent on sublevels
             teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
           }
+        },
+        user_3.id => {
+          sublevel1.id => {
+            status: LEVEL_STATUS.not_tried,
+            teacher_feedback_new: true,
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+          },
+          sublevel2.id => {
+            status: LEVEL_STATUS.not_tried,
+            teacher_feedback_commented: true,
+            teacher_feedback_new: true
+          },
+          level.id => {
+            status: LEVEL_STATUS.not_tried,
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking,
+            teacher_feedback_new: true
+          }
         }
       },
       {
         user_1.id => sublevel1_last_progress,
-        user_2.id => sublevel2_last_progress_2
+        user_2.id => sublevel2_last_progress_2,
+        user_3.id => nil
       }
     ]
 
     assert_equal expected_progress, script_progress_for_users(
-      [user_1, user_2], script
+      [user_1, user_2, user_3], script
     )
   end
 
@@ -436,5 +493,58 @@ class UsersHelperTest < ActionView::TestCase
 
     assert_equal(101, level_with_best_progress([101, 102], level_progress))
     assert_equal(101, level_with_best_progress([102, 101], level_progress))
+  end
+
+  def test_move_sections_and_destroy_source_user
+    teacher = create :teacher
+    coteacher = create :teacher
+    section = create :section, user: teacher
+    create :section_instructor, section: section, instructor: coteacher
+    section2 = create :section, user: coteacher
+    section_instructor2 = create :section_instructor, section: section2, instructor: teacher
+    destination_teacher = create :teacher
+
+    move_sections_and_destroy_source_user(source_user: teacher, destination_user: destination_teacher, takeover_type: 'type', provider: 'provider')
+
+    section.reload
+    section_instructor2.reload
+
+    assert_equal 2, destination_teacher.sections_instructed.count
+    assert_equal 0, teacher.sections_instructed.count
+    assert_equal 2, coteacher.sections_instructed.count
+    assert_equal destination_teacher.id, section.user.id
+    assert_equal destination_teacher.id, section_instructor2.instructor.id
+  end
+
+  describe '.account_linking_lock_reason' do
+    let(:user) {build_stubbed(:user)}
+
+    let(:user_cap_compliant?) {true}
+    let(:user_in_grace_period?) {false}
+
+    before do
+      Policies::ChildAccount.stubs(:compliant?).with(user).returns(user_cap_compliant?)
+      Policies::ChildAccount::ComplianceState.stubs(:grace_period?).with(user).returns(user_in_grace_period?)
+    end
+
+    it 'returns nil' do
+      _(account_linking_lock_reason(user)).must_be_nil
+    end
+
+    context 'when user is not compliant with CAP' do
+      let(:user_cap_compliant?) {false}
+
+      it 'returns lock reason message' do
+        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent.'
+      end
+    end
+
+    context 'when user is in grace period' do
+      let(:user_in_grace_period?) {true}
+
+      it 'returns lock reason message' do
+        _(account_linking_lock_reason(user)).must_equal 'Uh oh! You must obtain parental permission before creating a linked account. Please log in to the account you are trying to link and obtain parental consent.'
+      end
+    end
   end
 end

@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Javalab < Level
@@ -105,7 +106,7 @@ class Javalab < Level
     options = Rails.cache.fetch("#{cache_key}/non_blockly_puzzle_level_options/v2") do
       level_prop = {}
 
-      properties.keys.each do |dashboard|
+      properties.each_key do |dashboard|
         apps_prop_name = dashboard.camelize(:lower)
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
@@ -127,8 +128,8 @@ class Javalab < Level
       # Pull in the level name
       level_prop['name'] = name
 
-      # Set the javabuilder url
-      level_prop['javabuilderUrl'] = CDO.javabuilder_url
+      # Pass through the captcha key so we can challenge users in demo mode
+      level_prop['recaptchaSiteKey'] = CDO.recaptcha_site_key
 
       # Send validation file names without code to prevent naming collisions. If we are in start mode,
       # the actual validation code will be sent by levels_controller.
@@ -141,7 +142,7 @@ class Javalab < Level
       end
 
       # Don't set nil values
-      level_prop.reject! {|_, value| value.nil?}
+      level_prop.compact!
     end
     options.freeze
   end
@@ -168,5 +169,9 @@ class Javalab < Level
 
   def age_13_required?
     true
+  end
+
+  def validated?
+    properties['encrypted_validation'].present?
   end
 end

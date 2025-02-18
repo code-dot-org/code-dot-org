@@ -1,7 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
-  ReactDOM.render(<SectionsSetUpContainer />, document.getElementById('form'));
+  const isUsersFirstSection = getScriptData('isUsersFirstSection');
+  const canEnableAITutor = getScriptData('canEnableAITutor');
+  const userCountry = getScriptData('userCountry');
+
+  ReactDOM.render(
+    <SectionsSetUpContainer
+      isUsersFirstSection={isUsersFirstSection}
+      canEnableAITutor={canEnableAITutor}
+      userCountry={userCountry}
+      defaultRedirectUrl="/home"
+    />,
+    document.getElementById('form')
+  );
 });

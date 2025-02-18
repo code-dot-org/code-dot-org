@@ -1,0 +1,11 @@
+name 'CSD U3 drawing challenges_csd-vpl-23'
+display_name 'Drawing Challenges'
+description 'Try out some challenges!'
+
+sublevels
+level 'CSD U3 drawing challenge 2_csd-vpl-23'
+level 'CSD U3 drawing challenge 3_csd-vpl-23'
+level 'CSD U3 drawing challenge no fill_csd-vpl-23'
+level 'CSD U3 challenge face_csd-vpl-23'
+level 'CSD U3 L3 Freeplay_csd-vpl-23'
+level 'CSD U3 L3 Freeplay2_csd-vpl-23'

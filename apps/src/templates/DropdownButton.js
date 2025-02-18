@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import Button from '@cdo/apps/templates/Button';
-import onClickOutside from 'react-onclickoutside';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import onClickOutside from 'react-onclickoutside';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+
 import style from './dropdown-button.module.scss';
 
 /**
@@ -26,11 +28,11 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
           throw new Error('each child must have an href or onclick');
         }
       });
-    }
+    },
   };
 
   state = {
-    dropdownOpen: false
+    dropdownOpen: false,
   };
 
   expandDropdown = () => {
@@ -81,14 +83,14 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
     return (
       <div className={style.main}>
         <Button
-          __useDeprecatedTag
+          useDefaultLineHeight
           text={text}
           size={size}
           onClick={this.toggleDropdown}
           icon={dropdownOpen ? 'caret-up' : 'caret-down'}
           iconClassName={style.icon}
           color={color}
-          className={this.props.className}
+          className={classNames(style.dropdownButton, this.props.className)}
         >
           {this.props.customText && (
             <div className={style.main}>{this.props.customText}</div>
@@ -111,9 +113,11 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
                   index > 0 && style.nonFirstAnchor
                 )}
                 style={{
-                  ...child.props.style
+                  ...child.props.style,
                 }}
-              />
+              >
+                {child.props.children}
+              </a>
             ))}
           </div>
         )}

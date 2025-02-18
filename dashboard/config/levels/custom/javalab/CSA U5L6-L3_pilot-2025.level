@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T18:17:24.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO #1:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPixelsFromImage()</code> method. Why do you think the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">tempPixels</code> array is initialized with <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getHeight()</code> rows and <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getWidth()</code> columns? What happens if you change these values?\r\n\r\n✅ **TO DO #2:** What is the purpose of **Line 23**? Why do you think it is <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPixel(col, row)</code> instead of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getPixel(row, col)</code>? What happens if you switch these?",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U5L6-Image Filters PBT_pilot-2025",
+    "teacher_markdown": "1. These rows and columns are directly related to the width and height of the image file. If we were to change this value, it would change the proportion of the image that will be brightened when we call the `brightenColors()` method.\r\n\r\n2. The reason that we use `getPixel(col, row)` instead of `getPixel(row, col)` is because `col` refers to the `x` value and `row` refers to the `y` value. The arguments that we pass into the `getPixel()` method should be formatted as follows: `public Pixel getPixel(int x, int y)`. When we switch the `col` and `row` order as arguments in this method, the image is going to appear the same in the output window. However, the data that is arranged in the 2D array `imagePixels` will be changed.",
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T18:17:24.962+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L3_2025\\\"\"],\"cloned_from\":\"CSA U5L6-L3_2025\"}]"
+}]]></config>
+</Javalab>

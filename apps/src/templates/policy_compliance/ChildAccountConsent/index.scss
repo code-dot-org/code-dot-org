@@ -1,0 +1,34 @@
+@import 'color';
+@import 'font';
+
+#permission_granted_container, #expired_token_container {
+  border: 1px solid rgb(233 233 233);
+  box-shadow: 5px 5px 3px 0 #ccc;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  max-width: 700px;
+  padding: 36px;
+
+  & h4 {
+    color: #00adbc;
+  }
+
+  & p {
+    margin-bottom: 20px;
+  }
+
+  & p.permission-granted-date {
+    margin: 28px 0;
+
+    & .date {
+      color: $bright_green;
+    }
+  }
+
+  & .return-to-cdo {
+    display: block;
+    margin: 64px 0 0 auto;
+  }
+}

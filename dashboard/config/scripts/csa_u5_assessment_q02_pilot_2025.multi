@@ -1,0 +1,34 @@
+name 'CSA U5 Assessment q02_pilot-2025'
+
+right 'The initial value of `max` should be set to `Integer.MIN_VALUE` instead of `0`.'
+wrong 'The loop condition for the outer loop should be `i < arr.length - 1`.'
+wrong 'The loop condition for the inner loop should be `j < arr.length - 1`.'
+wrong 'The condition `arr[i][j] > max` should be `arr[i][j] < max`.'
+wrong 'The return type of the method should be `void` instead of `int`.'
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+public static int findMaxValue(int[][] arr) {
+    int max = 0;
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = 0; j < arr[0].length; j++) {
+            if (arr[i][j] > max) {
+                max = arr[i][j];
+            }
+        }
+    }
+    return max;
+}
+```
+
+Which of the following options identifies the error in the given code segment?
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+By initializing `max` to `Integer.MIN_VALUE`, the code ensures that any value encountered in the array will be greater than the initial value of `max`. This allows the code to correctly track and update the maximum value found.
+
+If `max` were initialized to `0`, it would incorrectly assume that the maximum value in the array could be `0`. This would result in incorrect output if the array contains negative numbers or if the maximum value in the array is smaller than `0`.
+MARKDOWN

@@ -1,41 +1,42 @@
+import {render, screen, fireEvent} from '@testing-library/react';
 import $ from 'jquery';
-import {Provider, connect} from 'react-redux';
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea';
-import sinon from 'sinon';
+import {Provider, connect} from 'react-redux';
+
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
+import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea';
 import projectsReducer, {
-  appendProjects
+  appendProjects,
 } from '@cdo/apps/templates/projects/projectsRedux';
+import i18n from '@cdo/locale';
+
 import {
   allowConsoleErrors,
-  allowConsoleWarnings
+  allowConsoleWarnings,
 } from '../../../util/throwOnConsole';
 
-function wrapped(element) {
-  return mount(<Provider store={getStore()}>{element}</Provider>);
+function renderWithRedux(element, {initialState, store = getStore()} = {}) {
+  return {...render(<Provider store={store}>{element}</Provider>), store};
 }
 
 const ProjectProvider = connect((state, ownProps) => ({
   projectList: state.projects.projectLists[ownProps.labKey].map(project => {
     return {
       projectData: project,
-      currentGallery: 'public'
+      currentGallery: 'public',
     };
-  })
+  }),
 }))(ProjectAppTypeArea);
 
 function generateFakeProjects(numProjects, projectType) {
   return generateFakeProjectData(numProjects, projectType).map(data => ({
     projectData: data,
-    currentGallery: 'public'
+    currentGallery: 'public',
   }));
 }
 
@@ -47,7 +48,8 @@ function generateFakeProjectData(numProjects, projectType) {
     type: projectType,
     publishedAt: new Date(startTime + projectNum).toISOString(),
     publishedToPublic: true,
-    publishedToClass: true
+    publishedToClass: true,
+    featuredAt: new Date(startTime + projectNum).toISOString(),
   }));
 }
 
@@ -61,19 +63,21 @@ describe('ProjectAppTypeArea', () => {
     stubRedux();
     registerReducers({projects: projectsReducer});
     ajaxDeferred = new $.Deferred();
-    stubAjax = sinon.stub($, 'ajax');
-    stubAjax.returns(ajaxDeferred);
-    stubNavigate = sinon.spy();
+    stubAjax = jest.spyOn($, 'ajax').mockClear().mockImplementation();
+    stubAjax.mockReturnValue(ajaxDeferred);
+    stubNavigate = jest.fn();
   });
 
   afterEach(() => {
-    stubAjax.restore();
+    stubAjax.mockRestore();
     restoreRedux();
+    jest.clearAllMocks();
+    jest.resetModules();
   });
 
   describe('detail view', () => {
     it('shows the right number of projects initially', () => {
-      const wrapper = wrapped(
+      renderWithRedux(
         <ProjectAppTypeArea
           labKey="applab"
           labName="App Lab"
@@ -85,19 +89,17 @@ describe('ProjectAppTypeArea', () => {
           isDetailView={true}
         />
       );
-      expect(wrapper.find('ProjectCard')).to.have.length(12);
-      expect(
-        wrapper
-          .find('Button')
-          .first()
-          .text()
-      ).to.equal('View more');
-      expect(stubAjax).not.to.have.been.called;
+      const projectCards = screen.getAllByRole('listitem');
+      expect(projectCards).toHaveLength(12);
+
+      const viewMoreButton = screen.getByText(i18n.viewMore());
+      expect(viewMoreButton).toBeInTheDocument();
+      expect(stubNavigate).not.toHaveBeenCalled();
     });
 
     it('renders a working link to view more projects of a specific type', () => {
       var viewMoreLink = 'more App Lab projects';
-      const wrapper = wrapped(
+      renderWithRedux(
         <ProjectAppTypeArea
           labKey="applab"
           labName="App Lab"
@@ -109,10 +111,9 @@ describe('ProjectAppTypeArea', () => {
           isDetailView={true}
         />
       );
-      expect(wrapper.find('.viewMoreLink')).to.have.length(1);
-      expect(wrapper.find('.viewMoreLink').text()).to.equal(viewMoreLink);
-      wrapper.find('.viewMoreLink').simulate('click');
-      expect(stubNavigate).to.have.been.called;
+      const viewMoreLinkElement = screen.getByText(viewMoreLink);
+      fireEvent.click(viewMoreLinkElement);
+      expect(stubNavigate).toHaveBeenCalled();
     });
 
     it('displays more projects when View More is pressed', () => {
@@ -120,7 +121,7 @@ describe('ProjectAppTypeArea', () => {
       store.dispatch(
         appendProjects(generateFakeProjectData(30, 'applab'), 'applab')
       );
-      const wrapper = mount(
+      render(
         <Provider store={store}>
           <ProjectProvider
             labKey="applab"
@@ -133,45 +134,64 @@ describe('ProjectAppTypeArea', () => {
           />
         </Provider>
       );
-      // some of the most useful selectors like [text="View more"] don't work
-      // with mount(). see: https://github.com/airbnb/enzyme/issues/534
-      expect(wrapper.find('ProjectCard')).to.have.length(12);
-      let viewMoreWrapper = wrapper.find('Button').first();
-      expect(viewMoreWrapper.text()).to.equal('View more');
+      const getAllCards = () => screen.getAllByRole('listitem');
+      const viewMoreButton = screen.getByText(i18n.viewMore());
+
+      // 12 projects are displayed initially.
+      expect(getAllCards()).toHaveLength(12);
+      expect(viewMoreButton).toBeInTheDocument();
 
       // Each click shows 12 more projects.
-      viewMoreWrapper.simulate('click');
-      expect(wrapper.find('ProjectCard')).to.have.length(24);
-      viewMoreWrapper = wrapper.find('Button').first();
-      expect(viewMoreWrapper.text()).to.equal('View more');
-      expect(viewMoreWrapper).to.have.length(1);
-      expect(stubAjax).not.to.have.been.called;
+      fireEvent.click(viewMoreButton);
+      expect(getAllCards()).toHaveLength(24);
+      expect(viewMoreButton).toBeInTheDocument();
 
-      // Requests more from the server once all projects are displayed.
-      viewMoreWrapper.simulate('click');
-      expect(wrapper.find('ProjectCard')).to.have.length(30);
-      viewMoreWrapper = wrapper.find('Button').first();
-      expect(viewMoreWrapper.text()).to.equal('View more');
-      expect(stubAjax).to.have.been.calledOnce;
+      // No more projects are displayed once max is reached.
+      fireEvent.click(viewMoreButton);
+      expect(getAllCards()).toHaveLength(30);
+    });
+
+    it('requests more from the server once all projects are displayed', () => {
+      const store = getStore();
+      store.dispatch(
+        appendProjects(generateFakeProjectData(15, 'applab'), 'applab')
+      );
+      render(
+        <Provider store={store}>
+          <ProjectProvider
+            labKey="applab"
+            labName="App Lab"
+            labViewMoreString="more App Lab projects"
+            numProjectsToShow={10}
+            galleryType="public"
+            navigateFunction={stubNavigate}
+            isDetailView={true}
+          />
+        </Provider>
+      );
+      const getAllCards = () => screen.getAllByRole('listitem');
+      const viewMoreButton = screen.getByText(i18n.viewMore());
+
+      expect(getAllCards()).toHaveLength(10);
+      expect(viewMoreButton).toBeInTheDocument();
+
+      fireEvent.click(viewMoreButton);
+
+      // No more projects are displayed once max is reached.
+      fireEvent.click(viewMoreButton);
+      expect(getAllCards()).toHaveLength(15);
+      expect(viewMoreButton).toBeInTheDocument();
+      expect(stubAjax).toHaveBeenCalledTimes(1);
 
       // Simulate the network request completing.
       ajaxDeferred.resolve({
-        applab: generateFakeProjectData(40, 'applab')
+        applab: generateFakeProjectData(20, 'applab'),
       });
-      wrapper.setProps({}); // Force refresh
-
-      // Displays additional projects returned from the server.
-      expect(wrapper.find('ProjectCard')).to.have.length(36);
-      viewMoreWrapper = wrapper.find('Button').first();
-      expect(viewMoreWrapper.text()).to.equal('View more');
 
       // Skips fetching projects from the server and hides the View More button
       // once all projects on the server and client are shown.
-      viewMoreWrapper.simulate('click');
-      expect(wrapper.find('ProjectCard')).to.have.length(40);
-      const otherButtonWrapper = wrapper.find('Button').first();
-      expect(otherButtonWrapper.text()).not.to.equal('View more');
-      expect(stubAjax).to.have.been.calledOnce;
+      expect(getAllCards()).toHaveLength(20);
+      expect(viewMoreButton).not.toBeInTheDocument();
     });
   });
 });

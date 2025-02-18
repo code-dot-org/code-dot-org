@@ -4,19 +4,34 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "3ebb91a0-6267-47d0-b100-9814e663c96e",
+          "notice": "Course Warning",
+          "details": "We are in the process of fully removing the Accelerated Intro to CS content and course from Code.org within the next 6-8 months, as we no longer actively support this older offering. Any existing bugs or seemingly-missing content within Accelerated Intro to CS Course content will unfortunately not be addressed or fixed, as we work towards fully removing it and dedicate our staff resources on new content offerings.",
+          "link": "https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses",
+          "type": "warning",
+          "visibility": "Teacher-only",
+          "dismissible": false,
+          "buttonText": "Learn More"
+        }
+      ],
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "de-DE"
       ],
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "20-hour",
-    "serialized_at": "2021-11-22 19:55:33 UTC",
-    "published_state": "preview",
+    "serialized_at": "2025-01-09 16:06:20 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -355,6 +370,7 @@
       "key": "df6a9899-cae8-41ff-be01-bbed96e0fcb0",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -368,6 +384,7 @@
       "key": "629a8ea7-38c1-4e8c-8a3a-02e11734e777",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -381,6 +398,7 @@
       "key": "e56a46b0-3a23-4e0b-a19f-f8fa5091a0a0",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -394,6 +412,7 @@
       "key": "4dd3027b-8aa1-431e-a4c1-9a38e5c26901",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -407,6 +426,7 @@
       "key": "6c86fa98-5aba-46d8-a466-51a08af4b0cc",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -420,6 +440,7 @@
       "key": "9597ee3d-f5bd-46e6-baf9-bf2ce1bf1dcf",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -433,6 +454,7 @@
       "key": "43c1f8ed-71e1-4adc-978e-dba047e3dd78",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -446,6 +468,7 @@
       "key": "ffd1f281-1a26-492b-86c0-3a54a39332d7",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -459,6 +482,7 @@
       "key": "ac74ccc0-dc40-497d-a7e1-93093aef6096",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -472,6 +496,7 @@
       "key": "8eefad01-1265-440f-b42d-5872a860872c",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -485,6 +510,7 @@
       "key": "b330d7df-f913-486a-bbc3-bebb7545e5c4",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -498,6 +524,7 @@
       "key": "3741e756-1984-45a6-9845-61abf853227b",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -511,6 +538,7 @@
       "key": "5f6d154e-2aad-4cd6-a855-e89e17c914be",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -524,6 +552,7 @@
       "key": "f6dfa646-651d-40b2-90a5-488e47180046",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -537,6 +566,7 @@
       "key": "a042fdb4-089f-48cd-be10-2520ed6d2740",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -550,6 +580,7 @@
       "key": "42d54a2a-acb0-441d-acc0-af376fcfad3b",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -563,6 +594,7 @@
       "key": "2909b0eb-0b31-415f-814b-5358e07b5111",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -576,6 +608,7 @@
       "key": "0afd3f44-0b8e-4d87-9348-c301a6a08061",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -589,6 +622,7 @@
       "key": "effe5a40-9d89-4b6c-971e-47210fddb06e",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -602,6 +636,7 @@
       "key": "98c53ee2-317c-4989-ad5c-15c9957fe5cc",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -4770,6 +4805,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

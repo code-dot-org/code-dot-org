@@ -1,0 +1,291 @@
+{
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro_computer_vision_post",
+          "html": "<h1>Code.org Self-paced Online Professional Learning - Computer Vision!</p><h3><strong>Post-Module Survey</strong></h3><p><strong>Thanks for learning with us!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>Computer Vision - Post-Module Survey</h2>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "computer_vision_better_understanding",
+          "title": "After completing this module, I have a better understanding of how computer vision works.",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Strongly disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "4",
+              "text": "Agree"
+            },
+            {
+              "value": "5",
+              "text": "Strongly agree"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "computer_vision_comfort_supporting_students_learn",
+          "title": "After completing this module, I am more comfortable in my ability to support students in understanding computer vision concepts.",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Strongly disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "4",
+              "text": "Agree"
+            },
+            {
+              "value": "5",
+              "text": "Strongly agree"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "computer_vision_know_what_students_learn",
+          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s Computer Vision curriculum.",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Strongly disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "4",
+              "text": "Agree"
+            },
+            {
+              "value": "5",
+              "text": "Strongly agree"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "computer_vision_comfort_ability_to_teach",
+          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s Computer Vision curriculum than I did before starting this professional learning course.",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Strongly disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "4",
+              "text": "Agree"
+            },
+            {
+              "value": "5",
+              "text": "Strongly agree"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "computer_vision_different_grade_levels",
+          "title": "Having the course split into grade levels was helpful to me.",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Strongly disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "4",
+              "text": "Agree"
+            },
+            {
+              "value": "5",
+              "text": "Strongly agree"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "computer_vision_easy_navigation",
+          "title": "Course navigation was clear and easy to follow.",
+          "choices": [
+            {
+              "value": "1",
+              "text": "Strongly disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "4",
+              "text": "Agree"
+            },
+            {
+              "value": "5",
+              "text": "Strongly agree"
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "computer_vision_supported_learning",
+          "title": "Which of the following supported your learning the most? Rank the options from most helpful (5) to least helpful (1). Please apply each rank (1-5) exactly once; don't give the same ranking to two different items.",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            }
+          ],
+          "rows": [
+            {
+              "value": "reading",
+              "text": "Reading a page that contained text and images about a topic."
+            },
+            {
+              "value": "trying_a_task",
+              "text": "Trying a task with step by step instructions."
+            },
+            {
+              "value": "making_a_plan",
+              "text": "Making a plan to prepare to teach Code.org's Computer Vision."
+            },
+            {
+              "value": "check_for_understanding",
+              "text": "Completing a check for understanding question."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "computer_vision_how_long_to_complete",
+          "title": "How long did you spend completing this module?",
+          "choices": [
+            {
+              "value": "less_than_30",
+              "text": "Less than 30 minutes"
+            },
+            {
+              "value": "30_60",
+              "text": "Between 30 minutes and 60 minutes"
+            },
+            {
+              "value": "60_90",
+              "text": "Between 60 minutes and 90 minutes"
+            },
+            {
+              "value": "90_120",
+              "text": "Between 90 minutes and 120 minutes"
+            },
+            {
+              "value": "over_120",
+              "text": "Over 120 minutes"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "nps_self_paced_pd",
+          "title": "How likely are you to recommend this self-paced professional learning experience to a friend or colleague?",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not likely at all",
+          "maxRateDescription": "Extremely likely"
+        },
+        {
+          "type": "comment",
+          "name": "computer_vision_other_feedback",
+          "title": "Do you have any feedback about this module that you would like to share with the Code.org team? "
+        },
+        {
+          "type": "radiogroup",
+          "name": "computer_vision_participate_focus_group",
+          "title": "OPTIONAL: Would you be willing to participate in a follow-up focus group to provide direct feedback about this online course?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "computer_vision_email_focus_group",
+          "title": "Great! Please share an email address where we may contact you.",
+          "visibleIf": "{computer_vision_participate_focus_group}='yes'"
+        },
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/workshop_elements",
+          "library_version": 0,
+          "name": "thank_you_heading"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

@@ -1,30 +1,35 @@
 import $ from 'jquery';
-import sinon from 'sinon';
-import {expect} from '../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {assets as assetsApi} from '@cdo/apps/clientApi';
+import {listStore} from '@cdo/apps/code-studio/assets';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import project from '@cdo/apps/code-studio/initApp/project';
+import * as redux from '@cdo/apps/redux';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
+import Sounds from '@cdo/apps/Sounds';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
-  makeFooterMenuItems
+  makeFooterMenuItems,
 } from '@cdo/apps/StudioApp';
-import Sounds from '@cdo/apps/Sounds';
-import {assets as assetsApi} from '@cdo/apps/clientApi';
-import {listStore} from '@cdo/apps/code-studio/assets';
-import * as commonReducers from '@cdo/apps/redux/commonReducers';
-import * as redux from '@cdo/apps/redux';
-import project from '@cdo/apps/code-studio/initApp/project';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import setBlocklyGlobal from '../util/setupBlocklyGlobal';
 import {
   sandboxDocumentBody,
   replaceOnWindow,
-  restoreOnWindow
+  restoreOnWindow,
 } from '../util/testUtils';
+
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
-import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
-import * as utils from '@cdo/apps/utils';
-import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
+  setBlocklyGlobal();
 
   describe('StudioApp.singleton', () => {
     let containerDiv, codeWorkspaceDiv;
@@ -80,12 +85,12 @@ describe('StudioApp', () => {
           containerId: 'foo',
           level: {
             editCode: true,
-            codeFunctions: {}
+            codeFunctions: {},
           },
           dropletConfig: {
-            blocks: []
+            blocks: [],
           },
-          skin: {}
+          skin: {},
         });
 
         expect(assetsApi.getFiles).to.have.been.calledOnce;
@@ -101,12 +106,12 @@ describe('StudioApp', () => {
           containerId: 'foo',
           level: {
             editCode: true,
-            codeFunctions: {}
+            codeFunctions: {},
           },
           dropletConfig: {
-            blocks: []
+            blocks: [],
           },
-          skin: {}
+          skin: {},
         });
 
         expect(listener).to.have.been.calledOnce;
@@ -235,7 +240,7 @@ describe('StudioApp', () => {
         studio = studioApp();
         studio.feedback_ = {
           canContinueToNextLevel: () => {},
-          getNumBlocksUsed: () => {}
+          getNumBlocksUsed: () => {},
         };
 
         onAttemptSpy = sinon.spy();
@@ -260,13 +265,13 @@ describe('StudioApp', () => {
         sinon.stub(redux, 'getStore').returns({
           getState: () => ({
             studioAppActivity: {
-              idleTimeSinceLastReport: 3000
+              idleTimeSinceLastReport: 3000,
             },
             pageConstants: {
-              isReadOnlyWorkspace: false
-            }
+              isReadOnlyWorkspace: false,
+            },
           }),
-          dispatch: stubbedDispatch
+          dispatch: stubbedDispatch,
         });
 
         studio.report({});
@@ -286,13 +291,13 @@ describe('StudioApp', () => {
         sinon.stub(redux, 'getStore').returns({
           getState: () => ({
             studioAppActivity: {
-              idleTimeSinceLastReport: 1000
+              idleTimeSinceLastReport: 1000,
             },
             pageConstants: {
-              isReadOnlyWorkspace: false
-            }
+              isReadOnlyWorkspace: false,
+            },
           }),
-          dispatch: sinon.stub()
+          dispatch: sinon.stub(),
         });
 
         studio.milestoneStartTime = 1000;
@@ -307,7 +312,7 @@ describe('StudioApp', () => {
           time: 2000,
           timeSinceLastMilestone: 1000,
           attempt: 0,
-          lines: undefined
+          lines: undefined,
         });
 
         redux.getStore.restore();
@@ -390,6 +395,37 @@ describe('StudioApp', () => {
     });
   });
 
+  describe('getCode', () => {
+    beforeEach(() => stubStudioApp);
+    afterEach(() => restoreStudioApp);
+
+    it('should get the starting blocks if the source is hidden', () => {
+      studioApp().editCode = true;
+      studioApp().hideSource = true;
+      studioApp().startBlocks_ = 'start blocks';
+      expect(studioApp().getCode()).to.equal('start blocks');
+    });
+
+    it('should get the blockly workspace code if it is read only', () => {
+      studioApp().editCode = false;
+      let stub = sinon
+        .stub(Blockly, 'getWorkspaceCode')
+        .returns('blockly workspace');
+      expect(studioApp().getCode()).to.equal('blockly workspace');
+      stub.restore();
+    });
+
+    it('should get the code from the editor itself if editable and the source is not hidden', () => {
+      studioApp().editCode = true;
+      studioApp().hideSource = false;
+      let oldEditor = studioApp().editor;
+      studioApp().editor = sinon.stub();
+      studioApp().editor.getValue = sinon.stub().returns('editor code');
+      expect(studioApp().getCode()).to.equal('editor code');
+      studioApp().editor = oldEditor;
+    });
+  });
+
   describe('playAudio', () => {
     let playStub, isPlayingStub;
     beforeEach(() => {
@@ -423,12 +459,12 @@ describe('StudioApp', () => {
   describe('loadLibraryBlocks', () => {
     const initialConfig = {
       level: {
-        codeFunctions: {preExistingFunction: null}
+        codeFunctions: {preExistingFunction: null},
       },
       dropletConfig: {
         additionalPredefValues: ['preExistingValue'],
-        blocks: ['preExistingBlock']
-      }
+        blocks: ['preExistingBlock'],
+      },
     };
 
     it('given no libraries, leaves the config unchanged', () => {
@@ -457,7 +493,7 @@ describe('StudioApp', () => {
       let targetBlocks = [
         'preExistingBlock',
         ...sampleLibrary.libraries[0].dropletConfig,
-        ...sampleLibrary.libraries[1].dropletConfig
+        ...sampleLibrary.libraries[1].dropletConfig,
       ];
 
       config.level.libraries = sampleLibrary.libraries;
@@ -470,12 +506,12 @@ describe('StudioApp', () => {
       let librarycode = [
         {
           name: sampleLibrary.libraries[0].name,
-          code: createLibraryClosure(sampleLibrary.libraries[0])
+          code: createLibraryClosure(sampleLibrary.libraries[0]),
         },
         {
           name: sampleLibrary.libraries[1].name,
-          code: createLibraryClosure(sampleLibrary.libraries[1])
-        }
+          code: createLibraryClosure(sampleLibrary.libraries[1]),
+        },
       ];
 
       config.level.libraries = sampleLibrary.libraries;
@@ -489,7 +525,7 @@ describe('StudioApp', () => {
         preExistingFunction: null,
         'twoFunctionLibrary.functionWithParams': null,
         'twoFunctionLibrary.functionWithGlobalVariable': null,
-        'oneFunctionLibrary.functionWithPrivateFunctionCall': null
+        'oneFunctionLibrary.functionWithPrivateFunctionCall': null,
       };
 
       config.level.libraries = sampleLibrary.libraries;

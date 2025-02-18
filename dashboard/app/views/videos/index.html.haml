@@ -26,3 +26,5 @@
         %td= link_to('Download', video.download)
         - if can? :update, video
           %td= link_to t('crud.edit'), edit_video_path(video)
+
+= render partial: 'home/admin'

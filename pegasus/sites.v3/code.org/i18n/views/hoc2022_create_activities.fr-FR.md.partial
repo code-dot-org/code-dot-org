@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Soirée dansante", body: "Organise une soirée dansante ! Avec Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, les extraits du film Disney \"Encanto,\" et bien plus encore !", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "Poem Art", body: "Associe l'art et l'animation à un poème classique au cours de cette activité de l'Heure du code !", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Artiste", body: "Dessine des images et des dessins surprenants avec l'artiste !", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Laboratoire de jeu Infinity", body: "Utilise Play Lab pour créer une histoire ou un jeu mettant en scène les personnages de Disney Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

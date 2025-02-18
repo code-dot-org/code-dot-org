@@ -16,9 +16,7 @@ module Pd::Payment
       end
     end
 
-    private
-
-    def calculate_csf_payment(workshop)
+    private def calculate_csf_payment(workshop)
       return 0 unless workshop.funded
 
       attending_teachers = workshop.attending_teachers
@@ -33,7 +31,7 @@ module Pd::Payment
       qualified_teacher_count * PAYMENT_PER_TEACHER_CSF
     end
 
-    def calculate_workshop_payment(workshop)
+    private def calculate_workshop_payment(workshop)
       attending_teachers = workshop.attending_teachers
       payment_term = Pd::PaymentTerm.for_workshop(workshop)
 

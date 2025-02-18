@@ -1,0 +1,78 @@
+$width-sm: 640px;
+
+.music-lab-skinny-banner {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 16, 125, 1) 0%,
+    rgba(11, 28, 66, 1) 33%,
+    rgba(8, 18, 49, 1) 71%,
+    rgba(52, 28, 101, 1) 100%
+  );
+  padding: 2rem;
+  @media (max-width: $width-sm) {
+    background: linear-gradient(
+      130deg,
+      rgba(2, 16, 125, 1) 0%,
+      rgba(11, 28, 66, 1) 33%,
+      rgba(8, 18, 49, 1) 71%,
+      rgba(52, 28, 101, 1) 100%
+    );
+  }
+
+  .wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    gap: 4rem;
+
+    p.desc {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 900px) {
+      gap: 2rem;
+    }
+
+    @media (max-width: $width-sm) {
+      padding-block: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+
+  .text-wrapper {
+    flex: 2;
+
+    @media (max-width: $width-sm) {
+      text-align: center;
+    }
+  }
+
+  .partner {
+    p {
+      white-space: nowrap;
+    }
+
+    img {
+      max-width: 12rem;
+      margin-left: 0.5rem;
+    }
+
+    @media (max-width: $width-sm) {
+      justify-content: center;
+      flex-direction: column;
+
+      img {
+        margin: 0;
+      }
+    }
+  }
+
+  img {
+    max-width: 18rem;
+  }
+
+  a.link-button {
+    max-width: 15rem;
+  }
+}

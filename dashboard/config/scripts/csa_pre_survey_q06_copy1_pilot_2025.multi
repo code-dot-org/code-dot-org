@@ -1,0 +1,11 @@
+name 'CSA Pre-Survey q06_copy1_pilot-2025'
+question 'It is important for me to be good at computer science.'
+
+right 'Strongly agree'
+right 'Agree'
+right 'Slightly agree'
+right 'Neither'
+right 'Slightly disagree'
+right 'Disagree'
+right 'Strongly disagree'
+allow_multiple_attempts true

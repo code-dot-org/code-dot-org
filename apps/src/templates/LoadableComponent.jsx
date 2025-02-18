@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import i18n from '@cdo/locale';
+import React, {useEffect, useState} from 'react';
+
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 /**
  * A wrapper component that loads data for another component and
@@ -20,7 +21,7 @@ export default function LoadableComponent({
   spinnerStyle,
   spinnerSize,
   errorMessageStyle,
-  errorMessage
+  errorMessage,
 }) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -89,17 +90,17 @@ LoadableComponent.propTypes = {
   /** Optional. Additional styles to apply to the error message. */
   errorMessageStyle: PropTypes.object,
   /** Optional. Custom error message text. Defaults to a standard load error message. */
-  errorMessage: PropTypes.string
+  errorMessage: PropTypes.string,
 };
 
 LoadableComponent.defaultProps = {
   spinnerSize: 'medium',
-  errorMessage: i18n.loadingError()
+  errorMessage: i18n.loadingError(),
 };
 
 const styles = {
   errorMessage: {
     fontSize: 12,
-    color: color.red
-  }
+    color: color.red,
+  },
 };

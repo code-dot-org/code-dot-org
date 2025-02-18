@@ -1,0 +1,27 @@
+name 'Why is bias important'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Why is Bias Important to Consider? 
+
+##Bias can cause inaccurate predictions
+
+
+#### The previous activity showed that having <b>more data from more people </b> can help solve this problem and avoid biased input data. Combining Melissa, Dan, and Amanda’s training data would ensure the results represent more types of fish.
+
+
+## How can you decrease bias? 
+
+#### You can address bias by recognizing human biases are replicated in the predictions made by AI, since humans are involved in training these models. 
+
+## Teacher Tip: 
+* #### Bias (fair/unfair) in data can be a tricky concept to teach students. Alternatively, you can use the words, <b>“fair/unfair”</b>  to discuss topics of bias with your students. 
+* #### Another way to explain bias is to ask your students, “Would it be fair if I only called on [boys/people with blue eyes/etc]? Would the [girls/people with not blue eyes] have the same learning experience?”
+
+
+
+<div style="clear:both"/>
+
+
+MARKDOWN

@@ -63,8 +63,6 @@ module Pd
         get "submission/#{submission_id}"
       end
 
-      private
-
       # Makes a GET call to the specified path
       # @param path [String]
       # @param params [Hash] url params
@@ -72,14 +70,14 @@ module Pd
       # @raises [RestClient::ExceptionWithResponse] on known error codes.
       # See https://github.com/rest-client/rest-client#exceptions-see-httpwwww3orgprotocolsrfc2616rfc2616-sec10html
       # Note the supplied params will be merged with default_params
-      def get(path, params = {})
+      private def get(path, params = {})
         path_with_params = "#{path}?#{default_params.merge(params).to_query}"
         response = @resource[path_with_params].get
         JSON.parse response.body
       end
 
       # We must pass the API Key on the url to authenticate.
-      def default_params
+      private def default_params
         {
           apiKey: @api_key
         }

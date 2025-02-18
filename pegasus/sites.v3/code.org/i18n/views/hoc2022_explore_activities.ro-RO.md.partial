@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Salutare Lume: Spațiul", body: "Crează scene intergalactice cu personaje și sunete care te vor face să spui, \"Salutare lumi!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "Crează un sistem solar nebunesc, învățând în același timp despre muzică, astronomie și codificare!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "Războiul Stelelor", body: "Învată să programezi droizi și crează-ți propriul joc Războiul Stelelor într-o galaxie departe, foarte departe.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "În această aventură de codificare online, vei duce submarinul Subby prin provocările submarine.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

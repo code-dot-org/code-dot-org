@@ -20,3 +20,5 @@ else {
 
 Which of the following initializations for `degrees`, if any, will demonstrate that the code segment may not work as intended?
 MARKDOWN
+
+allow_multiple_attempts true

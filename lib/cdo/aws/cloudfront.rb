@@ -13,6 +13,9 @@ module AWS
     # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
     CLIENT_ERROR_CODES = [400, 403, 404, 405, 414].freeze
     SERVER_ERROR_CODES = [500, 501, 502, 503, 504].freeze
+    CUSTOM_ERROR_PAGES = {
+      500 => '/assets/error-pages/500.html'
+    }.freeze
     ERROR_CACHE_TTL = 60
     # Configure CloudFront to forward these headers for S3 origins.
     S3_FORWARD_HEADERS = %w(
@@ -35,31 +38,31 @@ module AWS
       pegasus: {
         # NOTE: Keep this list in sync with the call to AWS::CloudFront.distribution_config in cloud_formation_stack.yml.erb.
         # CloudFormation stack should be refactored to reference this configuration in the future.
-        aliases: [CDO.pegasus_hostname, CDO.advocacy_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
-        origin: "#{ENV['RACK_ENV']}-pegasus.code.org",
+        aliases: [CDO.pegasus_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
+        origin: "#{ENV.fetch('RACK_ENV', nil)}-pegasus.code.org",
         # ACM domain name
         ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
-          prefix: "#{ENV['RACK_ENV']}-pegasus-cdn"
+          prefix: "#{ENV.fetch('RACK_ENV', nil)}-pegasus-cdn"
         }
       },
       dashboard: {
         aliases: [CDO.dashboard_hostname],
-        origin: "#{ENV['RACK_ENV']}-dashboard.code.org",
+        origin: "#{ENV.fetch('RACK_ENV', nil)}-dashboard.code.org",
         ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
-          prefix: "#{ENV['RACK_ENV']}-dashboard-cdn"
+          prefix: "#{ENV.fetch('RACK_ENV', nil)}-dashboard-cdn"
         }
       },
       hourofcode: {
         aliases: [CDO.hourofcode_hostname],
-        origin: "#{ENV['RACK_ENV']}-origin.hourofcode.com",
+        origin: "#{ENV.fetch('RACK_ENV', nil)}-origin.hourofcode.com",
         ssl_cert: 'hourofcode.com',
         log: {
           bucket: 'cdo-logs',
-          prefix: "#{ENV['RACK_ENV']}-hourofcode-cdn"
+          prefix: "#{ENV.fetch('RACK_ENV', nil)}-hourofcode-cdn"
         }
       }
     }
@@ -134,7 +137,7 @@ module AWS
 
     # Returns a CloudFront DistributionConfig in CloudFormation syntax.
     # `app` is a symbol containing the app name (:pegasus, :dashboard or :hourofcode)
-    def self.distribution_config(app, origin, aliases, ssl_cert=nil)
+    def self.distribution_config(app, origin, aliases, ssl_cert = nil)
       # Add root-domain aliases to production environment stack.
       aliases += CONFIG[app][:aliases] if rack_env?(:production)
 
@@ -150,21 +153,21 @@ module AWS
               ErrorCode: error,
             }
           end +
-          SERVER_ERROR_CODES.map do |error|
-            {
-              ErrorCachingMinTTL: ERROR_CACHE_TTL,
-              ErrorCode: error,
-              ResponseCode: error,
-              ResponsePagePath: '/assets/error-pages/site-down.html'
-            }.tap do |error_response_hash|
-              # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
-              unless CDO.custom_error_response
-                error_response_hash[:ErrorCachingMinTTL] = 0
-                error_response_hash.delete(:ResponseCode)
-                error_response_hash.delete(:ResponsePagePath)
+            SERVER_ERROR_CODES.map do |error|
+              {
+                ErrorCachingMinTTL: ERROR_CACHE_TTL,
+                ErrorCode: error,
+                ResponseCode: error,
+                ResponsePagePath: CUSTOM_ERROR_PAGES[error] || '/assets/error-pages/site-down.html'
+              }.tap do |error_response_hash|
+                # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
+                unless CDO.custom_error_response
+                  error_response_hash[:ErrorCachingMinTTL] = 0
+                  error_response_hash.delete(:ResponseCode)
+                  error_response_hash.delete(:ResponsePagePath)
+                end
               end
-            end
-          end,
+            end,
         DefaultCacheBehavior: cache_behavior(config[:default]),
         DefaultRootObject: '',
         Enabled: true,
@@ -180,7 +183,7 @@ module AWS
               Id: app_name == proxy ? 'cdo' : app_name,
               CustomOriginConfig: {
                 OriginProtocolPolicy: 'match-viewer',
-                OriginSSLProtocols: %w(TLSv1.2 TLSv1.1),
+                OriginSSLProtocols: %w(TLSv1.2),
                 OriginReadTimeout: rack_env?(:levelbuilder) ? 60 : 30
               },
               DomainName: origin,
@@ -222,9 +225,10 @@ module AWS
         },
         ViewerCertificate: ssl_cert ? ssl_cert : {
           CloudFrontDefaultCertificate: true,
-          MinimumProtocolVersion: 'TLSv1' # accepts SSLv3, TLSv1
+          MinimumProtocolVersion: 'TLSv1.2_2021'
         },
-        HttpVersion: 'http2'
+        HttpVersion: 'http2',
+        WebACLId: {'Fn::Sub': 'arn:aws:wafv2:${AWS::Region}:${AWS::AccountId}:global/webacl/code-dot-org/a79a67de-dabf-4555-a8dc-98c3a20b562f'}
       }.to_json
     end
 
@@ -243,7 +247,7 @@ module AWS
     end
 
     # Returns a CloudFront CacheBehavior Hash compatible with AWS CloudFormation.
-    def self.cache_behavior(behavior_config, path=nil)
+    def self.cache_behavior(behavior_config, path = nil)
       s3 = ['cdo-assets', 'cdo-restricted'].include? behavior_config[:proxy]
       # Include Host header in CloudFront's cache key to match Varnish for custom origins.
       # Include S3 forward headers for s3 origins.
@@ -304,11 +308,6 @@ module AWS
       raise 'missing CDO.cloudfront_key_pair_id' unless CDO.cloudfront_key_pair_id
       raise 'missing CDO.cloudfront_private_key' unless CDO.cloudfront_private_key
 
-      signer = Aws::CloudFront::CookieSigner.new(
-        key_pair_id: CDO.cloudfront_key_pair_id,
-        private_key: CDO.cloudfront_private_key
-      )
-
       policy = {
         "Statement" => [
           {
@@ -319,6 +318,18 @@ module AWS
           }
         ]
       }.to_json
+
+      # If we are emulating AWS at all, we just return mock cloudfront policy output
+      if CDO.aws_s3_emulated
+        return {
+          'CloudFront-Policy-Emulated': Base64.encode64(policy).tr('+=/', '-_~')
+        }
+      end
+
+      signer = Aws::CloudFront::CookieSigner.new(
+        key_pair_id: CDO.cloudfront_key_pair_id,
+        private_key: CDO.cloudfront_private_key
+      )
 
       # Generate signed cookies representing a custom policy.
       signer.signed_cookie(

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Dans Partisi", body: "Bir Dans Partisi Kodlayın! Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Disney'in \"Encanto\"sundan müzikler and daha fazlası!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: “Şiir Sanatı”, body: “Bu Hour of Code etkinliğinde klasik bir şiire sanat ve animasyon ekleyin!”, image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{featured_tutorial, title: “Sanatçı”, body: “Sanatçı ile harika resimler ve tasarımlar çizin!”, image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: “Infinity Oyun Laboratuvarı”, body: “Disney Infinity karakterlerinin oynadığı bir hikaye veya oyun oluşturmak için Oyun Laboratuvarını kullanın.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

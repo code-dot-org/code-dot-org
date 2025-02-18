@@ -1,28 +1,29 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
+import TopInstructions, {
+  TabType,
+} from '@cdo/apps/templates/instructions/TopInstructions';
+import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
+import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
+
+import styleConstants from '../styleConstants';
+
+import {CsaViewMode} from './constants';
+import ControlButtons from './ControlButtons';
+import {DisplayTheme} from './DisplayTheme';
+import JavalabCaptchaDialog from './JavalabCaptchaDialog';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabPanels from './JavalabPanels';
-import {
-  appendOutputLog,
-  setDisplayTheme,
-  setIsRunning,
-  setIsTesting
-} from './javalabRedux';
-import {DisplayTheme} from './DisplayTheme';
-import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
-import TopInstructions, {
-  TabType
-} from '@cdo/apps/templates/instructions/TopInstructions';
-import javalabMsg from '@cdo/javalab/locale';
-import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
-import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
-import ControlButtons from './ControlButtons';
-import {CsaViewMode} from './constants';
-import styleConstants from '../styleConstants';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import {appendOutputLog} from './redux/consoleRedux';
+import {setIsRunning, setIsTesting} from './redux/javalabRedux';
+import {setDisplayTheme} from './redux/viewRedux';
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -62,7 +63,7 @@ class JavalabView extends React.Component {
     validationPassed: PropTypes.bool,
     hasRunOrTestedCode: PropTypes.bool,
     hasOpenCodeReview: PropTypes.bool,
-    isJavabuilderConnecting: PropTypes.bool
+    isJavabuilderConnecting: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -135,12 +136,32 @@ class JavalabView extends React.Component {
         id="visualization"
         style={{
           ...styles.visualizationPlaceholder,
-          width: width + styleConstants['resize-bar-width']
+          width: width + styleConstants['resize-bar-width'],
         }}
       >
         &nbsp;
       </div>
     );
+  };
+
+  onCaptchaVerify = () => {
+    const {isRunning, isTesting, onRun, onTest} = this.props;
+    if (isRunning) {
+      onRun();
+    }
+    if (isTesting) {
+      onTest();
+    }
+  };
+
+  onCaptchaCancel = () => {
+    const {isRunning, isTesting, setIsRunning, setIsTesting} = this.props;
+    if (isRunning) {
+      setIsRunning(false);
+    }
+    if (isTesting) {
+      setIsTesting(false);
+    }
   };
 
   render() {
@@ -166,7 +187,7 @@ class JavalabView extends React.Component {
       validationPassed,
       hasRunOrTestedCode,
       hasOpenCodeReview,
-      isJavabuilderConnecting
+      isJavabuilderConnecting,
     } = this.props;
 
     if (displayTheme === DisplayTheme.DARK) {
@@ -194,9 +215,13 @@ class JavalabView extends React.Component {
       <StudioAppWrapper>
         <div
           style={{
-            ...styles.javalab
+            ...styles.javalab,
           }}
         >
+          <JavalabCaptchaDialog
+            onVerify={this.onCaptchaVerify}
+            onCancel={this.onCaptchaCancel}
+          />
           <JavalabPanels
             isLeftSideVisible={this.isLeftSideVisible()}
             viewMode={viewMode}
@@ -204,6 +229,7 @@ class JavalabView extends React.Component {
             topLeftPanel={height => (
               <TopInstructions
                 mainStyle={styles.instructions}
+                isOldPurpleColorHeader
                 standalone
                 displayDocumentationTab
                 displayReviewTab
@@ -232,7 +258,7 @@ class JavalabView extends React.Component {
                 onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
                 style={{
                   ...styles.consoleParent,
-                  ...(!this.isLeftSideVisible() && {paddingBottom: 40})
+                  ...(!this.isLeftSideVisible() && {paddingBottom: 40}),
                 }}
                 bottomRow={
                   <ControlButtons
@@ -274,7 +300,7 @@ const styles = {
     position: 'relative',
     marginLeft: 0,
     color: color.black,
-    left: 0
+    left: 0,
   },
   consoleParent: {
     position: 'relative',
@@ -282,24 +308,24 @@ const styles = {
     flexDirection: 'column',
     height: '100%',
     flexGrow: 1,
-    overflowY: 'hidden'
+    overflowY: 'hidden',
   },
   visualizationPlaceholder: {
     height: 1,
     maxWidth: undefined,
     maxHeight: undefined,
-    marginTop: styleConstants['resize-bar-width']
+    marginTop: styleConstants['resize-bar-width'],
   },
   preview: {
-    marginTop: styleConstants['resize-bar-width']
+    marginTop: styleConstants['resize-bar-width'],
   },
   javalab: {
     display: 'flex',
     flexWrap: 'wrap',
-    direction: 'ltr'
+    direction: 'ltr',
   },
   clear: {
-    clear: 'both'
+    clear: 'both',
   },
   buttons: {
     display: 'flex',
@@ -307,25 +333,24 @@ const styles = {
     justifyContent: 'flex-end',
     width: '100%',
     margin: '10px 0',
-    overflowY: 'hidden'
-  }
+    overflowY: 'hidden',
+  },
 };
 
-// We use the UnconnectedJavalabView to make this component's methods testable.
-// This is a deprecated pattern but calling shallow().dive().instance() on the
-// connected JavalabView does not give us access to the methods owned by JavalabView.
+// Exported for tests
 export const UnconnectedJavalabView = JavalabView;
+
 export default connect(
   state => ({
     isProjectLevel: state.pageConstants.isProjectLevel,
     channelId: state.pageConstants.channelId,
-    displayTheme: state.javalab.displayTheme,
+    displayTheme: state.javalabView.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isRunning: state.javalab.isRunning,
     isTesting: state.javalab.isTesting,
     canRun: !state.javalab.isTesting,
     canTest: !state.javalab.isRunning,
-    editorColumnHeight: state.javalab.editorColumnHeight,
+    editorColumnHeight: state.javalabView.editorColumnHeight,
     longInstructions: state.instructions.longInstructions,
     hasContainedLevels: state.pageConstants.hasContainedLevels,
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
@@ -335,12 +360,12 @@ export default connect(
     validationPassed: state.javalab.validationPassed,
     hasRunOrTestedCode: state.javalab.hasRunOrTestedCode,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
-    isJavabuilderConnecting: state.javalab.isJavabuilderConnecting
+    isJavabuilderConnecting: state.javalab.isJavabuilderConnecting,
   }),
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
-    setIsTesting: isTesting => dispatch(setIsTesting(isTesting))
+    setIsTesting: isTesting => dispatch(setIsTesting(isTesting)),
   })
 )(UnconnectedJavalabView);

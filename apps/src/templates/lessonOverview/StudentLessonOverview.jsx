@@ -1,24 +1,27 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import Announcements from '../../code-studio/components/progress/Announcements';
 import {connect} from 'react-redux';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import {levelsForLessonId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import styleConstants from '@cdo/apps/styleConstants';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import styleConstants from '@cdo/apps/styleConstants';
-import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import ProgressLessonContent from '@cdo/apps/templates/progress/ProgressLessonContent';
-import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
-import {linkWithQueryParams} from '@cdo/apps/utils';
-import Button from '@cdo/apps/templates/Button';
-import StyledCodeBlock from './StyledCodeBlock';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
-import {levelsForLessonId} from '@cdo/apps/code-studio/progressRedux';
+import color from '@cdo/apps/util/color';
+import {linkWithQueryParams} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import Announcements from '../../code-studio/components/progress/Announcements';
+
+import StyledCodeBlock from './StyledCodeBlock';
 
 class StudentLessonOverview extends Component {
   static propTypes = {
@@ -27,7 +30,7 @@ class StudentLessonOverview extends Component {
     // from redux
     lessonLevels: PropTypes.arrayOf(levelWithProgressType),
     announcements: PropTypes.arrayOf(announcementShape),
-    isSignedIn: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired,
   };
 
   renderLevels = () => {
@@ -82,7 +85,7 @@ class StudentLessonOverview extends Component {
         <h1>
           {i18n.lessonNumbered({
             lessonNumber: lesson.position,
-            lessonName: lesson.displayName
+            lessonName: lesson.displayName,
           })}
         </h1>
         {lesson.overview && (
@@ -142,17 +145,17 @@ const styles = {
   header: {
     margin: '10px 0px',
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   navLink: {
     fontSize: 14,
     lineHeight: '22px',
     color: color.purple,
-    margin: '10px 0px'
+    margin: '10px 0px',
   },
   titleNoTopMargin: {
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 };
 
 export const UnconnectedStudentLessonOverview = StudentLessonOverview;
@@ -160,5 +163,5 @@ export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 export default connect((state, ownProps) => ({
   announcements: state.announcements || [],
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
-  lessonLevels: levelsForLessonId(state.progress, ownProps.lesson.id)
+  lessonLevels: levelsForLessonId(state.progress, ownProps.lesson.id),
 }))(StudentLessonOverview);

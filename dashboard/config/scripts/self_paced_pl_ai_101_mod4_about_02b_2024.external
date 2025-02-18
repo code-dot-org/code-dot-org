@@ -1,0 +1,26 @@
+name 'self-paced-pl-ai-101-mod4-about_02b_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching About AI
+
+#### We hope that by completing these levels you were able to learn a bit more about what teaching about AI looks like, and maybe even learned something about AI yourself.
+
+#### If you’re interested, be sure to check out the complete <a href="https://studio.code.org/s/oceans?section_id=4974168" target="_blank">AI for Oceans</a> activity and the associated <a href="https://studio.code.org/s/oceans/lessons/1" target="_blank">Lesson Plan</a>.
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">What Else is Out There?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### Code.org has a lot of other resources for teaching about AI. Check out the <a href="https://code.org/curriculum/how-ai-works" target="_blank">How AI Works</a> page to find lessons and activities that align with your content and classroom. For elementary school teachers you can also check out <a href="https://studio.code.org/s/dance-ai-2023?section_id=4974168" target="_blank">Dance Party: AI Edition</a>, which is appropriate for 3rd grade and up.
+
+
+</p></div>
+</details>
+
+
+MARKDOWN

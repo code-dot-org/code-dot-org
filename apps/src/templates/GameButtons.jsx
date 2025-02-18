@@ -1,19 +1,20 @@
-import React from 'react';
-import msg from '@cdo/locale';
-
-import ProtectedStatefulDiv from './ProtectedStatefulDiv';
-import commonStyles from '../commonStyles';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import SkipButton from './SkipButton';
+import React from 'react';
 import {connect} from 'react-redux';
 
+import msg from '@cdo/locale';
+
 import blankImg from '../../static/common_images/1x1.gif';
+import commonStyles from '../commonStyles';
+
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import SkipButton from './SkipButton';
 
 export const FinishButton = () => (
   <button type="button" id="finishButton" className="share">
-    <img src="/blockly/media/1x1.gif" />
+    <img src="/blockly/media/1x1.gif" alt="" />
     {msg.finish()}
   </button>
 );
@@ -32,10 +33,14 @@ export const RunButton = Radium(props => (
 RunButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
-  runButtonText: PropTypes.string
+  runButtonText: PropTypes.string,
 };
 RunButton.displayName = 'RunButton';
 
+// The reset button is hidden by default,
+// then shown either by passing in style props to override
+// or imperatively by selecting the DOM node by ID
+// elsewhere in our code base (eg, StudioApp)
 export const ResetButton = Radium(props => (
   <button
     type="button"
@@ -45,7 +50,7 @@ export const ResetButton = Radium(props => (
       'launch',
       'blocklyLaunch',
       props.hideText && 'hideText',
-      props.hidden && 'hide'
+      props.hidden && 'hide',
     ])}
     style={[commonStyles.hidden, props.style]}
   >
@@ -56,7 +61,7 @@ export const ResetButton = Radium(props => (
 ResetButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
-  hideText: PropTypes.bool
+  hideText: PropTypes.bool,
 };
 ResetButton.displayName = 'ResetButton';
 
@@ -91,13 +96,12 @@ UnconnectedGameButtons.propTypes = {
   hideRunButton: PropTypes.bool,
   hideResetButton: PropTypes.bool,
   runButtonText: PropTypes.string,
-  playspacePhoneFrame: PropTypes.bool,
   nextLevelUrl: PropTypes.string,
   showSkipButton: PropTypes.bool,
   widgetMode: PropTypes.bool,
   showFinishButton: PropTypes.bool,
   children: PropTypes.node,
-  noRunResetButton: PropTypes.bool
+  noRunResetButton: PropTypes.bool,
 };
 UnconnectedGameButtons.displayName = 'GameButtons';
 
@@ -105,8 +109,7 @@ export default connect(state => ({
   hideRunButton: state.pageConstants.hideRunButton,
   hideResetButton: state.pageConstants.hideResetButton,
   runButtonText: state.pageConstants.runButtonText,
-  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   nextLevelUrl: state.pageConstants.nextLevelUrl,
   showSkipButton: state.pageConstants.isChallengeLevel,
-  widgetMode: state.pageConstants.widgetMode
+  widgetMode: state.pageConstants.widgetMode,
 }))(UnconnectedGameButtons);

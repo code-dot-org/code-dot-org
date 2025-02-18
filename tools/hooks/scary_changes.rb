@@ -26,9 +26,18 @@ class ScaryChangeDetector
     @all = @added + @deleted + @modified
   end
 
-  private
+  def detect_scary_changes
+    detect_new_models
+    detect_new_table_or_new_column
+    detect_column_rename
+    detect_migration_causing_db_performance_risk
+    detect_missing_yarn_lock
+    detect_special_files
+    detect_dropbox_conflicts
+    detect_changed_feature_files
+  end
 
-  def detect_new_models
+  private def detect_new_models
     changes = @added.grep(/^dashboard\/app\/models\/levels\//)
     return if changes.empty?
 
@@ -39,7 +48,7 @@ class ScaryChangeDetector
       "the code that adds it to scripts."
   end
 
-  def detect_changed_feature_files
+  private def detect_changed_feature_files
     changes = @all.grep(/^dashboard\/test\/ui\/features\//)
     return if changes.empty?
 
@@ -49,17 +58,17 @@ class ScaryChangeDetector
 
         #{changes.join("\n")}
 
-        If you'd like Drone to test your changes across all browsers
+        If you'd like CI to test your changes across all browsers
         (instead of only in Chrome, the default),
         amend your commit message to include the tag [test all browsers] if you haven't already.
 
-        Note that (as of January 2021) Drone will not successfully run all tests across all browsers,
+        Note that (as of January 2021) CI will not successfully run all tests across all browsers,
         so you may need another commit without the [test all browsers] tag
-        if you'd like to see all tests (in Chrome) passing in Drone without manual inspection.
+        if you'd like to see all tests (in Chrome) passing in CI without manual inspection.
     EOS
   end
 
-  def detect_new_table_or_new_column
+  private def detect_new_table_or_new_column
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !(@changed_lines.include?("add_column") || @changed_lines.include?("create_table"))
 
@@ -72,7 +81,7 @@ class ScaryChangeDetector
     EOS
   end
 
-  def detect_column_rename
+  private def detect_column_rename
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !@changed_lines.include?("rename_column")
 
@@ -87,7 +96,7 @@ class ScaryChangeDetector
     EOS
   end
 
-  def detect_migration_causing_db_performance_risk
+  private def detect_migration_causing_db_performance_risk
     changes = @all.grep(/^dashboard\/db\/migrate\//)
     return if changes.empty? || !(@changed_lines.include?("add_column") || @changed_lines.include?("add_index") || @changed_lines.include?("change_column"))
 
@@ -96,14 +105,14 @@ class ScaryChangeDetector
         Looks like you are adding a column, changing a column or adding an index in this migration:
         #{changes.join("\n")}
         Making these types of changes on a large table (>10M rows) needs to be reviewed and
-        tested with the Infrastructure cabal to avoid negatively impacting production database performance.
+        tested with the Infrastructure team to avoid negatively impacting production database performance.
         The may cause MySQL to rebuild the entire table.
-        For more information see https://dev.mysql.com/doc/refman/5.7/en/innodb-online-ddl-operations.html#online-ddl-column-operations.
+        For more information see https://dev.mysql.com/doc/refman/8.0/en/innodb-online-ddl-operations.html#online-ddl-column-operations-table
 
     EOS
   end
 
-  def detect_missing_yarn_lock
+  private def detect_missing_yarn_lock
     changed_package_json = @all.include? 'apps/package.json'
     changed_yarn_lock = @all.include? 'apps/yarn.lock'
     if changed_package_json && !changed_yarn_lock
@@ -116,7 +125,7 @@ class ScaryChangeDetector
     end
   end
 
-  def detect_special_files
+  private def detect_special_files
     changes = @all.grep(/locals.yml$/)
     unless changes.empty?
       puts red <<-EOS
@@ -131,7 +140,7 @@ class ScaryChangeDetector
     end
   end
 
-  def detect_dropbox_conflicts
+  private def detect_dropbox_conflicts
     changes = @added.grep(/'s conflicted copy/)
     unless changes.empty?
       puts red <<~EOS
@@ -155,19 +164,6 @@ class ScaryChangeDetector
       EOS
       raise "Commit blocked."
     end
-  end
-
-  public
-
-  def detect_scary_changes
-    detect_new_models
-    detect_new_table_or_new_column
-    detect_column_rename
-    detect_migration_causing_db_performance_risk
-    detect_missing_yarn_lock
-    detect_special_files
-    detect_dropbox_conflicts
-    detect_changed_feature_files
   end
 end
 

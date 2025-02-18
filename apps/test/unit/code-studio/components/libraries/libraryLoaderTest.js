@@ -1,9 +1,11 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import annotationList from '@cdo/apps/acemode/annotationList';
-import sinon from 'sinon';
-import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
-import loadLibrary from '@cdo/apps/code-studio/components/libraries/libraryLoader';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+import loadLibrary from '@cdo/apps/code-studio/components/libraries/libraryLoader';
+import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('libraryLoader.load', () => {
@@ -11,17 +13,17 @@ describe('libraryLoader.load', () => {
   let onErrorStub, onSuccessStub, functionStub;
   let libraryName = 'Name';
   let source = 'function foo() {}';
-  before(() => {
+  beforeAll(() => {
     replaceOnWindow('dashboard', {
       project: {
         getUpdatedSourceAndHtml_: () => {},
-        getLevelName: () => {}
-      }
+        getLevelName: () => {},
+      },
     });
     libraryClientApi = new LibraryClientApi('123');
   });
 
-  after(() => {
+  afterAll(() => {
     restoreOnWindow('dashboard');
   });
 
@@ -90,7 +92,7 @@ describe('libraryLoader.load', () => {
       libraryName: libraryName,
       librarySource: library + source,
       selectedFunctions: {},
-      sourceFunctionList: sourceFunctionList
+      sourceFunctionList: sourceFunctionList,
     });
 
     libraryParser.createLibraryClosure.restore();
@@ -99,12 +101,12 @@ describe('libraryLoader.load', () => {
   it('pre-sets library values to the values of the already-published library', async () => {
     let sourceFunctionList = [
       {functionName: 'foo', comment: ''},
-      {functionName: 'bar', comment: ''}
+      {functionName: 'bar', comment: ''},
     ];
     let existingLibrary = {
       description: 'description',
       name: 'existingLibraryName',
-      functions: ['foo', 'baz']
+      functions: ['foo', 'baz'],
     };
     getJSLintAnnotationsStub.returns([]);
     functionStub.returns(sourceFunctionList);
@@ -120,7 +122,7 @@ describe('libraryLoader.load', () => {
       libraryName: existingLibrary.name,
       librarySource: source,
       selectedFunctions: {foo: true},
-      sourceFunctionList: sourceFunctionList
+      sourceFunctionList: sourceFunctionList,
     });
   });
 });

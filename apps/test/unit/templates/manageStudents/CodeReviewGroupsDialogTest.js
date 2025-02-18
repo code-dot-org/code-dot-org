@@ -1,11 +1,13 @@
-import React from 'react';
-import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import Button from '@cdo/apps/templates/Button';
 import {isolateComponent} from 'isolate-react';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
+import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('CodeReviewGroupsDialog', () => {
   let wrapper, dataApi, fakeGroups;
@@ -19,15 +21,15 @@ describe('CodeReviewGroupsDialog', () => {
           done: callback => {
             callback(fakeGroups);
             return {fail: () => {}};
-          }
+          },
         };
       },
       setCodeReviewGroups: sinon.stub().returns({
         done: callback => {
           callback();
           return {fail: () => {}};
-        }
-      })
+        },
+      }),
     };
 
     wrapper = isolateComponent(<CodeReviewGroupsDialog dataApi={dataApi} />);

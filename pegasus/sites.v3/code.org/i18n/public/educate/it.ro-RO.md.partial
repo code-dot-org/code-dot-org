@@ -10,15 +10,18 @@ theme: responsive
 
 - Pentru lecțiile dvs. recomandăm o conexiune la Internet de cel puțin 15MBit/sec.
 - Cea mai mică dimensiune de ecran pe care o sprijinim este de 1024 x 728 px.
-- Veți avea nevoie de un computer desktop sau laptop cu un mouse (sau o tastatură tactilă) și tastatură pentru cursurile nivelului de școală intermediară și superioară: Descoperiri CS, Principii CS, și Introducere în App Lab. Majoritatea tabletelor și dispozitivelor mobile nu sunt acceptate pentru aceste cursuri. Consultați „Detaliile privind Asistența Telefonului Mobil și a Tabletei” de mai jos pentru excepțiile specifice dispozitivului.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Consultați „Detaliile privind Asistența Telefonului Mobil și a Tabletei” de mai jos pentru excepțiile specifice dispozitivului.
 - Restul conținutului, precum cursurile K-5 (Fundamentele Informaticii) și activitățile Hour of Code sunt compatibile pe iPad-uri și Chromebooks în plus față de toate celelalte tablete și computere laptop sau desktop moderne.
 - Căutați detalii de asistență pentru dispozitivul mobil? Citiți mai jos.
 
 ## Browsere și Platforme Minimum Sprijinite
 
+Începând cu iulie 2024, vom actualiza versiunile minime necesare pentru browsere și sisteme de operare. Deși versiunile vechi pot funcționa în continuare, nu vom putea accepta cererile de remediere a erorilor în versiunile mai vechi.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -39,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser iulie '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari mobil 14.x</td>
+        </tr>
+        <tr>
+          <td>Margine 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platformă
@@ -61,33 +86,55 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma iulie '24
+        </th>
+        <tr>
+          <td>MacOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Site-uri pentru Debloare
 
 Pentru cea mai bună experiență cu întreg conținutul Code.org, vă recomandăm să vă consultanți cu școala dvs. sau cu departamentul IT districtual pentru a vă asigura că următoarele site-uri sunt permise și nu sunt blocate.
 
-| Prioritate                                                                               | URL                                                                                                        |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Obligatorii**                                                                          | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Opționale**                                                                            | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Pentru utilizarea videoclipurilor găzduite pe YouTube (Mod Confidențialitate Sporit)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Pentru utilizarea videoclipurilor găzduite de Code.org**                               | `https://videos.code.org`                                                                                  |
-| **Pentru utilizarea Simulatorului de Internet**                                          | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Pentru utilizarea Web Lab-ului**                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Pentru utilizarea Butonului de Partajare a Clasei Google**                             | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                              | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Prioritate                                                                                                            | URL                                                                                                        |
+| --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Obligatorii**                                                                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Pentru a vă asigura că sistemele CAPTCHA pot distinge utilizarea dvs. de activitatea frauduloasă automată („bot”)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Opționale**                                                                                                         | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Pentru utilizarea videoclipurilor găzduite pe YouTube (Mod Confidențialitate Sporit)**                              | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Pentru utilizarea videoclipurilor găzduite de Code.org**                                                            | `https://videos.code.org`                                                                                  |
+| **Pentru utilizarea Simulatorului de Internet**                                                                       | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Pentru utilizarea Web Lab-ului**                                                                                    | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Pentru utilizarea Butonului de Partajare a Clasei Google**                                                          | `https://apis.google.com`                                                                                  |
 
 ## Detalii de Sprijinire a Mobilului și a Tabletei
 
-Toate cursurile Descoperiri CS, Principii CS și Introducere în App Lab nu sunt compatibile cu tabletele sau dispozitivele mobile - sunt necesare tastatură și mouse complete (sau tastatură tactilă, ca pe MacBooks). Majoritatea tabletelor nu sunt acceptate, cu următoarele excepții:
+Toate cursurile CS Discoveries, CS Principles, CS A și Intro to App Lab nu sunt compatibile cu tablete sau dispozitive mobile - sunt necesare o tastatură completă și un mouse (sau touchpad). Majoritatea tabletelor nu sunt acceptate, cu următoarele excepții:
 
 - Microsoft Surface Pro cu o tastatură externă
 - iPad care rulează iPadOS 13.4 sau mai actuală cu o tastatură externă și un mouse sau tastatură tactilă externe
 
-Restul conținutului, precum cursurile K-5 (Fundamentele Informaticii) și activitățile Hour of Code sunt compatibile pe iPad-uri și Chromebooks în plus față de toate celelalte tablete și computere laptop sau desktop moderne.
+Toate celelalte conținuturi, cum ar fi cursurile K-5 (Computer Science Fundamentals) și activitățile Hour of Code sunt compatibile pe iPad-uri și alte tablete moderne și computere laptop sau desktop.
 
 ### Telefoane Mobile
 
@@ -101,7 +148,17 @@ Noi utilizăm [YouTube](https://www.youtube.com) pentru a insera videoclipuri î
 
 Înainte de a începe cursurile online Code.org, testați redarea videoclipului de mai jos pentru a vă asigura că sunteți pregătit.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 Acesta este executantul utilizat pe tot parcursul programei. Acesta va încerca să afișeze videoclipul prin YouTube și, dacă YouTube este blocat, va afișa videoclipul găzduit de Code.org folosind în schimb executantul nostru "de rezervă".
 

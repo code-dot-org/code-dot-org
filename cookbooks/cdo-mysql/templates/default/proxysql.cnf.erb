@@ -7,7 +7,7 @@ if @is_aurora
     server.host = get_cname(server.host)
   end
 end
-writer, reader, reporting = servers
+writer, reader = servers
 -%>
 
 # libconfig file format:
@@ -35,11 +35,11 @@ mysql_variables=
 
   # Semicolon-separated list of hostname:port entries for interfaces for incoming MySQL traffic.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-interfaces
-  interfaces="127.0.0.1:<%=@port%>;127.0.0.1:<%=@reporting_port%>"
+  interfaces="127.0.0.1:<%=@port%>"
 
   # The server version with which the proxy will respond to the clients.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-server_version
-  server_version="5.7.12-proxysql"
+  server_version="8.0.37-proxysql"
 
   # The user needs only USAGE privileges to connect, ping and check read_only.
   # The user needs also REPLICATION CLIENT if it needs to monitor replication lag.
@@ -82,6 +82,13 @@ mysql_variables=
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-ping_timeout_server
   # [Milliseconds, default 200]
   ping_timeout_server=1000
+
+  # Prevent Connection Attempt spikes - a negative feedback cycle where a short period of high DB Load due to high usage
+  # or inefficient queries increases query latency, which increases the likelihood that ProxySQL needs to open new
+  # connections to execute new queries, which in turn further degrades query latency due to CPU load to service
+  # new connection attempts.
+  # https://proxysql.com/documentation/global-variables/mysql-variables/#mysql-throttle_connections_per_sec_to_hostgroup
+  throttle_connections_per_sec_to_hostgroup=<%=node['cdo-mysql']['proxy']['throttle_connections_per_sec_to_hostgroup']%>
 }
 
 # https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_servers
@@ -191,12 +198,4 @@ mysql_query_rules:
     match_digest="SET @@wait_timeout"
     multiplex=2
   },
-  {
-    # Send reporting-port queries to the reporting hostgroup (HG3).
-    rule_id=6
-    proxy_port=<%=@reporting_port%>
-    active=1
-    destination_hostgroup=3
-    apply=1
-  }
 )

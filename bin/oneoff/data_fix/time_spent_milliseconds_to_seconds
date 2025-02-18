@@ -28,8 +28,8 @@ UserLevel.find_each(start: 93_221_000, finish: 2_811_329_000, batch_size: 5000).
     # update without validation, callbacks, or changes to updated_at
     user_level.update_columns(time_spent: new_time_spent)
   end
-rescue Exception => e
-  puts "Error with user_level #{user_level.id}. Skipping and continuing. Error message: #{e.message}"
+rescue Exception => exception
+  puts "Error with user_level #{user_level.id}. Skipping and continuing. Error message: #{exception.message}"
 end
 
 puts "Finished!"

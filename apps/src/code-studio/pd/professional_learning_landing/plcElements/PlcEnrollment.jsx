@@ -1,15 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
 import color from '../../../../util/color';
+
 import EnrollmentUnitAssignment from './EnrollmentUnitAssignment';
 
 export default class PlcEnrollment extends React.Component {
   static propTypes = {
-    plcData: PropTypes.object
+    plcData: PropTypes.object,
   };
 
   renderEnrollmentUnitAssignments() {
-    const courseUnits = this.props.plcData['courseUnits'].map(
+    const courseUnits = this.props.plcData['courseUnits']?.map(
       (courseUnit, i) => {
         return <EnrollmentUnitAssignment key={i} courseUnitData={courseUnit} />;
       }
@@ -36,11 +40,11 @@ export default class PlcEnrollment extends React.Component {
 const styles = {
   courseSection: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   courseSectionHeader: {
     color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r"',
-    fontSize: '18px'
-  }
+    ...fontConstants['main-font-regular'],
+    fontSize: '18px',
+  },
 };

@@ -1,0 +1,24 @@
+name 'PLdancepartyPL'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+#Events: Unplugged
+## What is an unplugged lesson?
+
+#### An unplugged lesson is a teaching method where CS concepts are taught without the use of a computer. 
+
+
+## Why teach an unplugged lesson? 
+#### These lessons involve hands-on activities or games that illustrate computer science principles in tangible and understandable ways for beginners. 
+
+## How?
+#### Unplugged lessons are offered throughout Code.org's curriculum offerings. In the maker course, students engage with unplugged activities through a game. In this game, students will determine if a conditional is met based on criteria. The students will predict an outcome given a set input. 
+
+#### Take time to read the Unplugged Conditionals with Cards <a href="https://levelbuilder-studio.code.org/s/grade3-maker-2024/lessons/1">lesson plan</a>. Make sure to check out the resources including the student facing markdown level, slides, and other resources. 
+
+<div style="text-align: center;">
+
+
+
+MARKDOWN

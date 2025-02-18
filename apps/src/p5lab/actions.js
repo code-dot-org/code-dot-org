@@ -1,7 +1,9 @@
 /** @file Redux action-creators for Game Lab.
  *  @see http://redux.js.org/docs/basics/Actions.html */
 import $ from 'jquery';
+
 import {setAllowInstructionsResize} from '../redux/instructions';
+
 import {P5LabInterfaceMode} from './constants';
 
 /** @enum {string} */
@@ -26,11 +28,11 @@ export const ADD_MESSAGE = 'spritelab/ADD_MESSAGE';
  * @returns {function}
  */
 export function changeInterfaceMode(interfaceMode) {
-  return function(dispatch) {
+  return function (dispatch) {
     $(window).trigger('appModeChanged');
     dispatch({
       type: CHANGE_INTERFACE_MODE,
-      interfaceMode: interfaceMode
+      interfaceMode: interfaceMode,
     });
     dispatch(
       setAllowInstructionsResize(interfaceMode === P5LabInterfaceMode.CODE)
@@ -39,10 +41,10 @@ export function changeInterfaceMode(interfaceMode) {
 }
 
 export function toggleGridOverlay(showGridOverlay) {
-  return function(dispatch) {
+  return function (dispatch) {
     dispatch({
       type: TOGGLE_GRID_OVERLAY,
-      showGridOverlay: showGridOverlay
+      showGridOverlay: showGridOverlay,
     });
   };
 }
@@ -50,7 +52,7 @@ export function toggleGridOverlay(showGridOverlay) {
 export function viewAnimationJson(animationJson) {
   return {
     type: VIEW_ANIMATION_JSON,
-    content: animationJson
+    content: animationJson,
   };
 }
 

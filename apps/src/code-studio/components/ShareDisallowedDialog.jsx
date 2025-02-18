@@ -1,17 +1,21 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
-import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
+
 import {hideShareDialog} from './shareDialogRedux';
 
 class ShareDisallowedDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    hideShareDialog: PropTypes.func.isRequired
+    hideShareDialog: PropTypes.func.isRequired,
   };
+
   render() {
     return (
       <BaseDialog
@@ -26,16 +30,15 @@ class ShareDisallowedDialog extends Component {
           </div>
           <div style={styles.bottom}>
             <Button
-              __useDeprecatedTag
-              onClick={this.props.hideShareDialog}
               text={i18n.cancel()}
-              color={Button.ButtonColor.gray}
+              onClick={this.props.hideShareDialog}
+              type="secondary"
+              color={buttonColors.gray}
             />
             <Button
-              __useDeprecatedTag
-              href={`/users/sign_up?user_return_to=${location.pathname}`}
+              useAsLink={true}
+              href={`/users/new_sign_up/account_type?user_return_to=${location.pathname}`}
               text={i18n.createAccount()}
-              color={Button.ButtonColor.orange}
             />
           </div>
         </div>
@@ -47,11 +50,11 @@ class ShareDisallowedDialog extends Component {
 const styles = {
   container: {
     margin: 20,
-    color: color.charcoal
+    color: color.charcoal,
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif"
+    ...fontConstants['main-font-semi-bold'],
   },
   middle: {
     marginTop: 20,
@@ -64,19 +67,19 @@ const styles = {
     borderLeftWidth: 0,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    display: 'flex'
+    display: 'flex',
   },
   bottom: {
     display: 'flex',
-    justifyContent: 'space-between'
-  }
+    justifyContent: 'space-between',
+  },
 };
 
 export const UnconnectedShareDisallowedDialog = ShareDisallowedDialog;
 
 export default connect(
   state => ({
-    isOpen: state.shareDialog.isOpen
+    isOpen: state.shareDialog.isOpen,
   }),
   {hideShareDialog}
 )(ShareDisallowedDialog);

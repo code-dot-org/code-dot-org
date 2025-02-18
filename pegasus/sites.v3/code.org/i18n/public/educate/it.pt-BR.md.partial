@@ -10,15 +10,18 @@ theme: responsive
 
 - Recomendamos pelo menos uma conexão de 15 MBit/s com a internet na sua escola.
 - A menor resolução de vídeo compatível é de 1024 x 728 p.
-- Você vai precisar de um desktop ou de um notebook, com um mouse (ou touchpad) e teclado, para os cursos para ensino fundamental e ensino médio: Descobertas da SC, Princípios da SC e Introdução ao App Lab. A maioria dos tablets e dispositivos móveis não é compatível com esses cursos. Veja "Detalhes sobre a compatibilidade de dispositivos móveis e tablets" abaixo para ver as exceções em termos de dispositivos.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Veja "Detalhes sobre a compatibilidade de dispositivos móveis e tablets" abaixo para ver as exceções em termos de dispositivos.
 - Todos os demais conteúdos, como os cursos K-5 (Fundamentos da ciência da computação) e atividades no Hour of Code funcionam em iPads e Chromebooks, além de todos os outros tablets, notebooks ou desktops modernos.
 - Está procurando detalhes sobre a compatibilidade de dispositivos móveis? Leia abaixo.
 
 ## Plataformas e navegadores mínimos compatíveis
 
+A partir de julho de 2024, atualizaremos as versões mínimas exigidas para navegadores e sistemas operacionais. Embora as versões antigas ainda funcionem, não poderemos atender às solicitações de correções de erros nas versões mais antigas.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Navegador
@@ -39,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser, julho de 24
+        </th>
+        <tr>
+          <td>Chrome 10.3.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x móvel</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Plataforma
@@ -61,33 +86,55 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Plataforma: julho de 24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites para desbloquear
 
 Para tem a melhor experiência possível com todo o conteúdo do Code.org, recomendamos um consulta com o departamento de TI da sua escola ou distrito, para se certificar de que os sites a seguir são permitidos não estão bloqueados.
 
-| Prioridade                                                                            | URL                                                                                                        |
-| ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Obrigatório**                                                                       | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Opcional**                                                                          | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Para utilizar nossos vídeos hospedados no YouTube (Modo de privacidade otimizada)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Para utilizar os vídeos hospedados no Code.org**                                    | `https://videos.code.org`                                                                                  |
-| **Para utilizar o Simulador de internet**                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Para utilizar o Laboratório de internet**                                           | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Para utilizar o botão Compartilhar sala de aula no Google**                         | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                           | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Prioridade                                                                                                        | URL                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Obrigatório**                                                                                                   | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Para garantir que os sistemas CAPTCHA possam distinguir seu uso da atividade fraudulenta automatizada (“bot”)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Opcional**                                                                                                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Para utilizar nossos vídeos hospedados no YouTube (Modo de privacidade otimizada)**                             | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Para utilizar os vídeos hospedados no Code.org**                                                                | `https://videos.code.org`                                                                                  |
+| **Para utilizar o Simulador de internet**                                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Para utilizar o Laboratório de internet**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Para utilizar o botão Compartilhar sala de aula no Google**                                                     | `https://apis.google.com`                                                                                  |
 
 ## Detalhes sobre a compatibilidade de dispositivos móveis e tablets
 
-Os cursos Descobertas da SC, Princípios da SC e Introdução ao App Lab não são compatíveis com tablets ou dispositivos móveis – um teclado completo e um mouse (ou touchpad em MacBooks, por exemplo) são necessários. A maioria dos tablets não é compatível, com as seguintes exceções:
+Todos os cursos CS Discoveries, CS Principles, CS A e Intro to App Lab não são compatíveis com tablets ou dispositivos móveis - é necessário um teclado e mouse completos (ou touchpad). A maioria dos tablets não é compatível, com as seguintes exceções:
 
 - Microsoft Surface Pro com teclado externo
 - iPad com iPadOS 13.4 ou posterior, com teclado externo e mouse externo ou touchpad
 
-Todos os demais conteúdos, como os cursos K-5 (Fundamentos da ciência da computação) e atividades no Hour of Code funcionam em iPads e Chromebooks, além de todos os outros tablets, notebooks ou desktops modernos.
+Todos os outros conteúdos, como cursos K-5 (Fundamentos da Ciência da Computação) e atividades da Hora do Código, são compatíveis com iPads e outros tablets e laptops e computadores desktop modernos.
 
 ### Telefones celulares
 
@@ -101,7 +148,17 @@ Utilizamos o [YouTube](https://www.youtube.com) para hospedar os vídeos do Code
 
 Antes de começar os cursos on-line do Code.org, teste a reprodução do vídeo abaixo para se certificar de que você está em condições de iniciar o curso.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 Este é o player utilizado em todo o currículo. Ele vai tentar exibir o vídeo no YouTube e, se o YouTube estiver bloqueado, no player de vídeo hospedado no Code.org, utilizando nosso player de "contingência".
 

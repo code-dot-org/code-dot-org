@@ -1,20 +1,21 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import colorUtil from '@cdo/apps/util/color';
 import {Link} from '@dsco_/link';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import colorUtil from '@cdo/apps/util/color';
 
 export const NavigationItem = ({
   text,
   href,
   indentLevel = 0,
-  isActive = false
+  isActive = false,
 }) => (
   <div
     style={{paddingLeft: `${indentLevel * 12}px`}}
     className={classNames({
       'nav-link': true,
-      active: isActive
+      active: isActive,
     })}
   >
     <Link className="link" href={href} weight="medium">
@@ -26,7 +27,7 @@ NavigationItem.propTypes = {
   text: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,
   indentLevel: PropTypes.number,
-  isActive: PropTypes.bool
+  isActive: PropTypes.bool,
 };
 
 export const NavigationCategory = ({
@@ -34,7 +35,7 @@ export const NavigationCategory = ({
   color = colorUtil.teal,
   initialIsOpen = false,
   useColorWhenClosed = false,
-  children
+  children,
 }) => {
   const [isOpen, setIsOpen] = useState(initialIsOpen || false);
   const backgroundColor =
@@ -45,12 +46,12 @@ export const NavigationCategory = ({
     <div
       style={{
         backgroundColor,
-        color: textColor
+        color: textColor,
       }}
       className={classNames({
         category: true,
         open: isOpen,
-        'transition-color': isOpen && !useColorWhenClosed
+        'transition-color': isOpen && !useColorWhenClosed,
       })}
     >
       <span
@@ -75,7 +76,7 @@ NavigationCategory.propTypes = {
   color: PropTypes.string,
   useColorWhenClosed: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export const NavigationBar = ({children}) => {
@@ -83,5 +84,5 @@ export const NavigationBar = ({children}) => {
 };
 
 NavigationBar.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };

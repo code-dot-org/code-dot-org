@@ -7,3 +7,4 @@ wrong 'A machine with a screen and a keyboard'
 wrong 'A machine that can connect to the Internet'
 right 'A machine that inputs, outputs, stores, and processes information'
 wrong 'A machine that uses electricity (from a cable or battery)'
+allow_multiple_attempts true

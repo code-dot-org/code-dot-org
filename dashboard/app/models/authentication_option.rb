@@ -35,24 +35,22 @@ class AuthenticationOption < ApplicationRecord
   validate :email_must_be_unique, :hashed_email_must_be_unique, unless: -> {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
 
   validates :authentication_id, uniqueness: {scope: [:credential_type, :deleted_at], case_sensitive: true}
+  validates :authentication_id, if: :lti?, format: {with: /\A(\S+\|\S+\|\S+)\z/, message: "For LTI authentication_options, format must be 'issuer|audience|subject'"}
 
   after_create :set_primary_contact_info
 
-  # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
   OAUTH_CREDENTIAL_TYPES = [
     CLEVER = 'clever',
     FACEBOOK = 'facebook',
     GOOGLE = 'google_oauth2',
-    POWERSCHOOL = 'powerschool',
     QWIKLABS = 'lti_lti_prod_kids.qwikcamps.com',
-    THE_SCHOOL_PROJECT = 'the_school_project',
     TWITTER = 'twitter',
-    WINDOWS_LIVE = 'windowslive',
     MICROSOFT = 'microsoft_v2_auth',
   ].freeze
 
   CREDENTIAL_TYPES = [
     EMAIL = 'email',
+    LTI_V1 = 'lti_v1',
     OAUTH_CREDENTIAL_TYPES,
   ].flatten.freeze
 
@@ -70,7 +68,7 @@ class AuthenticationOption < ApplicationRecord
   # user, and instead to rely exclusively on authentication_id
   UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
     CLEVER,
-    POWERSCHOOL
+    LTI_V1,
   ].freeze
 
   TRUSTED_EMAIL_CREDENTIAL_TYPES = (
@@ -80,8 +78,6 @@ class AuthenticationOption < ApplicationRecord
   SILENT_TAKEOVER_CREDENTIAL_TYPES = [
     FACEBOOK,
     GOOGLE,
-    # TODO: (madelynkasula) Remove once we are sure users are no longer logging in via windowslive.
-    WINDOWS_LIVE,
     MICROSOFT
   ].freeze
 
@@ -91,12 +87,20 @@ class AuthenticationOption < ApplicationRecord
     credential_type == GOOGLE
   end
 
+  def email?
+    credential_type == EMAIL
+  end
+
   def codeorg_email?
     Mail::Address.new(email).domain == 'code.org'
   end
 
   def oauth?
     OAUTH_CREDENTIAL_TYPES.include? credential_type
+  end
+
+  def lti?
+    credential_type == LTI_V1
   end
 
   def primary?
@@ -108,7 +112,7 @@ class AuthenticationOption < ApplicationRecord
   end
 
   def fill_authentication_id
-    self.authentication_id = hashed_email if EMAIL == credential_type
+    self.authentication_id = hashed_email if credential_type == EMAIL
   end
 
   def set_primary_contact_info
@@ -171,6 +175,7 @@ class AuthenticationOption < ApplicationRecord
 
     other = User.find_by_email_or_hashed_email(email)
     if other && other != user
+      return if Policies::Lti.only_lti_auth?(other)
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end
@@ -181,6 +186,7 @@ class AuthenticationOption < ApplicationRecord
 
     other = User.find_by_hashed_email(hashed_email)
     if other && other != user
+      return if Policies::Lti.only_lti_auth?(other)
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end

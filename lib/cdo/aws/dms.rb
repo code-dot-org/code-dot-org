@@ -181,9 +181,9 @@ module Cdo
         end
 
         CDO.log.info "DMS Task Completed Successfully: #{@arn}"
-      rescue StandardError => error
-        CDO.log.info "Error executing DMS Replication Task #{@arn} - #{error.message}"
-        raise error
+      rescue StandardError => exception
+        CDO.log.info "Error executing DMS Replication Task #{@arn} - #{exception}"
+        raise exception
       end
 
       # Check periodically until replication task has completed and then validate that it was successful.
@@ -202,8 +202,8 @@ module Cdo
 
         return task if completed_successfully?
 
-        raise StandardError.new("Timeout after waiting #{attempts * delay} seconds or Replication Task" \
-          " #{@arn} did not complete successfully.  Task Status - #{status}"
+        raise StandardError.new("Timeout after waiting #{attempts * delay} seconds or Replication Task " \
+          "#{@arn} did not complete successfully.  Task Status - #{status}"
         )
       end
 
@@ -212,13 +212,13 @@ module Cdo
         task = status
 
         return task.status == 'stopped' &&
-          task.stop_reason.include?('FULL_LOAD_ONLY_FINISHED') &&
-          task.full_load_progress_percent == 100 &&
-          task.tables_loaded > 0 &&
-          task.tables_loading == 0 &&
-          task.tables_queued == 0 &&
-          task.tables_errored == 0 &&
-          task.table_statistics.all? {|table| table.table_state == 'Table completed'}
+            task.stop_reason.include?('FULL_LOAD_ONLY_FINISHED') &&
+            task.full_load_progress_percent == 100 &&
+            task.tables_loaded > 0 &&
+            task.tables_loading == 0 &&
+            task.tables_queued == 0 &&
+            task.tables_errored == 0 &&
+            task.table_statistics.all? {|table| table.table_state == 'Table completed'}
       end
     end
   end

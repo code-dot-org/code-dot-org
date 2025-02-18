@@ -15,8 +15,11 @@ class AdminSearchController < ApplicationController
     users = User.with_deleted
 
     # If requested, filter...
+    if params[:usernameFilter].present?
+      users = users.where(username: params[:usernameFilter])
+    end
     if params[:studentNameFilter].present?
-      users = users.where("name LIKE ?", "%#{params[:studentNameFilter]}%")
+      users = users.where(User.arel_table[:name].matches("%#{params[:studentNameFilter]}%"))
     end
     if params[:studentEmailFilter].present?
       hashed_email = User.hash_email params[:studentEmailFilter]
@@ -24,8 +27,8 @@ class AdminSearchController < ApplicationController
     end
     if params[:teacherNameFilter].present? || params[:teacherEmailFilter].present?
       teachers = User.
-        where("name LIKE ?", "%#{params[:teacherNameFilter]}%").
-        where("email LIKE ?", "%#{params[:teacherEmailFilter]}%").
+        where(User.arel_table[:name].matches("%#{params[:teacherNameFilter]}%")).
+        where(User.arel_table[:email].matches("%#{params[:teacherEmailFilter]}%")).
         all
       if teachers.count > 1
         flash[:alert] = 'Multiple teachers matched the name and email search criteria.'
@@ -86,8 +89,8 @@ class AdminSearchController < ApplicationController
         display_name: pilot_params[:display_name],
         allow_joining_via_url: pilot_params[:allow_joining_via_url]
       )
-    rescue StandardError => e
-      return render status: :bad_request, json: {error: e.message}
+    rescue StandardError => exception
+      return render status: :bad_request, json: {error: exception.message}
     end
 
     redirect_to :pilots
@@ -97,7 +100,7 @@ class AdminSearchController < ApplicationController
     @pilot_name = params[:pilot_name]
     return head :bad_request unless Pilot.exists?(name: @pilot_name)
     user_ids = SingleUserExperiment.where(name: @pilot_name).map(&:min_user_id)
-    @emails = User.where(id: user_ids).pluck(:email)
+    @emails = User.where(id: user_ids).pluck(:email).sort
     @join_url = Pilot.find_by(name: @pilot_name).allow_joining_via_url ? "http://studio.code.org/experiments/set_single_user_experiment/#{@pilot_name}" : nil
   end
 

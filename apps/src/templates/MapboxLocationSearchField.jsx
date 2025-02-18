@@ -1,8 +1,8 @@
-/* globals MapboxGeocoder */
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
 /**
  * A search box that loads a Mapbox location search control.
  *
@@ -21,7 +21,7 @@ export class MapboxLocationSearchField extends React.Component {
     style: PropTypes.object,
     className: PropTypes.string,
     // location type reference - https://docs.mapbox.com/api/search/#data-types
-    locationTypes: PropTypes.array
+    locationTypes: PropTypes.array,
   };
 
   static defaultProps = {
@@ -32,8 +32,8 @@ export class MapboxLocationSearchField extends React.Component {
       'place',
       'postcode',
       'locality',
-      'neighborhood'
-    ]
+      'neighborhood',
+    ],
   };
 
   // Uses the Mapbox SDK to create a location search box.
@@ -42,12 +42,11 @@ export class MapboxLocationSearchField extends React.Component {
     if (!this.props.mapboxAccessToken || this.props.readOnly) {
       return;
     }
-    // eslint-disable-next-line no-undef
     const mapboxGeocoder = new MapboxGeocoder({
       accessToken: this.props.mapboxAccessToken,
       types: this.props.locationTypes.join(','),
       placeholder:
-        this.props.placeholder || i18n.schoolLocationSearchPlaceholder()
+        this.props.placeholder || i18n.schoolLocationSearchPlaceholder(),
     });
     mapboxGeocoder.addTo(`#${this.searchContainerRef.id}`);
     mapboxGeocoder.setInput(this.props.value);
@@ -106,6 +105,11 @@ export class MapboxLocationSearchField extends React.Component {
   }
 }
 
-export default connect(state => ({
-  mapboxAccessToken: state.mapbox.mapboxAccessToken
-}))(MapboxLocationSearchField);
+export default connect(
+  state => ({
+    mapboxAccessToken: state.mapbox.mapboxAccessToken,
+  }),
+  undefined,
+  null,
+  {forwardRef: true}
+)(MapboxLocationSearchField);

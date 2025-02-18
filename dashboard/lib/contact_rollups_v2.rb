@@ -1,10 +1,11 @@
 require 'cdo/log_collector'
 require 'honeybadger/ruby'
+require 'cdo/sequel'
 
 class ContactRollupsV2
   MAX_EXECUTION_TIME_SEC = 18_000
 
-  DASHBOARD_DB_WRITER = sequel_connect(
+  DASHBOARD_DB_WRITER = Cdo::Sequel.database_connection_pool(
     CDO.dashboard_db_writer,
     CDO.dashboard_db_reader,
     query_timeout: MAX_EXECUTION_TIME_SEC
@@ -22,7 +23,7 @@ class ContactRollupsV2
     # to a create connection with custom query_timeout and read_timeout values.
     #
     # However, Sequel write operations to the dashboard database don't work in test environments
-    # (in local, Drone, and test machine) and Rails console sandbox. In those environments,
+    # (in local, CI, and test machine) and Rails console sandbox. In those environments,
     # all database operations are wrapped in a ActiveRecord transaction so they can be rolled
     # back later. Sequel write operations cannot acquire a lock to the dashboard database, which
     # already locked by ActiveRecord, then fail with "Lock wait timeout exceeded" error.
@@ -57,7 +58,7 @@ class ContactRollupsV2
     # Its default value is 1024, too short for the amount of data we need to concat.
     # @see:
     #   ContactRollupsProcessed.get_data_aggregation_query
-    #   https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_group_concat_max_len
+    #   https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len
     DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
   end
 
@@ -71,8 +72,8 @@ class ContactRollupsV2
     @is_dry_run = is_dry_run
     @limit = limit_extraction
     @log_collector = LogCollector.new('ContactRollupsV2')
-    @log_collector.info("Initialization params: "\
-      "is_dry_run: #{is_dry_run}, "\
+    @log_collector.info("Initialization params: " \
+      "is_dry_run: #{is_dry_run}, " \
       "limit_extraction = #{limit_extraction || 'nil'}"
     )
     self.class.set_db_variables
@@ -127,17 +128,11 @@ class ContactRollupsV2
   end
 
   # Process contacts in ContactRollupsRaw table and save the results to ContactRollupsProcessed.
-  # The results are then copied over to ContactRollupsFinal for further analysis.
   def process_contacts
     start_time = Time.now
     @log_collector.time!("Processes all extracted data with batch size #{ContactRollupsProcessed::BATCH_SIZE}") do
       results = ContactRollupsProcessed.import_from_raw_table
       @log_collector.record_metrics({ContactsWithInvalidData: results[:invalid_contacts]})
-    end
-
-    @log_collector.time!("Overwrites contact_rollups_final table") do
-      truncate_or_delete_table ContactRollupsFinal
-      ContactRollupsFinal.insert_from_processed_table
     end
   ensure
     @log_collector.record_metrics(
@@ -169,8 +164,8 @@ class ContactRollupsV2
         ContactRollupsPardotMemory.download_pardot_ids
       end
     end
-  rescue StandardError => e
-    @log_collector.record_exception e
+  rescue StandardError => exception
+    @log_collector.record_exception exception
   ensure
     @log_collector.record_metrics(
       {SyncNewContactsDuration: Time.now - start_time}
@@ -273,7 +268,7 @@ class ContactRollupsV2
     log_link = "<a href='#{log_url}'>:cloud: Log on S3</a>"
 
     cloud_watch_link =
-      "<a href='https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Contact-Rollups-V2'>"\
+      "<a href='https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards:name=Contact-Rollups-V2'>" \
       ":chart_with_upwards_trend: CloudWatch dashboard</a>"
 
     summary = [

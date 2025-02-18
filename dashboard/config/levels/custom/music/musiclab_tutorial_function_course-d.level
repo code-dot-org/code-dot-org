@@ -1,0 +1,131 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-05-29T18:18:43.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "long_instructions": "#### Functions\r\n\r\nOrganize your music using functions.\r\n\r\n1. Click [Functions](#clickable=toolbox-first-row)\r\n2. Attach [chorus](#clickable=toolbox-second-block) under [when run](#clickable=when-run-block)\r\n3. What do you notice? ",
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "x": 230,
+              "y": 30,
+              "fields": {
+                "NAME": "chorus"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sound_at_current_location_simple2",
+                    "fields": {
+                      "sound": "beats/bold_alternate_beat"
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "fields": {
+                                "sound": "beats/bold_beat"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "fields": {
+                                    "sound": "leads/riff_guitar"
+                                  },
+                                  "next": null
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sounds_together",
+                            "inputs": {
+                              "code": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "fields": {
+                                    "sound": "beats/bold_beat"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "fields": {
+                                        "sound": "leads/power_guitar"
+                                      },
+                                      "next": null
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Functions": [
+
+          ]
+        }
+      }
+    },
+    "instructions_important": "false",
+    "name_suffix": "_course-d",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "conditions": [
+          {
+            "name": "played_sounds_together",
+            "value": 1
+          }
+        ],
+        "message": "Nice work.  You successfully used the function to play a sound.",
+        "next": true,
+        "key": "musiclab_intro_function_elementary_328ae4f1-4120-4555-bfba-4654bd618fd8"
+      },
+      {
+        "message": "Connect the \"chorus\" block under [when run](#clickable=when-run-block) to play the sounds in the function.",
+        "key": "musiclab_intro_function_elementary_33cfaef2-2b2e-4e45-93b8-88632b06f78a",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-29T18:18:43.628+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_function_express\\\"\"],\"cloned_from\":\"musiclab_tutorial_function_express\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -6,3 +6,4 @@ right '...I got about half right and half wrong'
 right '...I only got a few right'
 right '...I didn\'t get any questions right'
 right 'I did not take the CS Principles AP Exam'
+allow_multiple_attempts true

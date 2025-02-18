@@ -1,10 +1,11 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import Button from '../Button';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // This min length is configured in user.rb with validates_length_of :password
 const MIN_PASSWORD_LENGTH = 6;
@@ -15,24 +16,24 @@ class PasswordReset extends Component {
     sectionId: PropTypes.number,
     studentId: PropTypes.number,
     resetDisabled: PropTypes.bool,
-    setPasswordLengthFailure: PropTypes.func
+    setPasswordLengthFailure: PropTypes.func,
   };
 
   state = {
     isResetting: !!this.props.initialIsResetting,
-    input: ''
+    input: '',
   };
 
   reset = () => {
     this.setState({
-      isResetting: true
+      isResetting: true,
     });
   };
 
   cancel = () => {
     this.setState({
       isResetting: false,
-      input: ''
+      input: '',
     });
     this.hidePasswordLengthFailure();
   };
@@ -51,23 +52,23 @@ class PasswordReset extends Component {
 
     const dataToUpdate = {
       student: {
-        password: this.state.input
-      }
+        password: this.state.input,
+      },
     };
 
     fetch(`/dashboardapi/sections/${sectionId}/students/${studentId}`, {
       method: 'PATCH',
       headers: {
-        'Content-Type': 'application/json;charset=UTF-8'
+        'Content-Type': 'application/json;charset=UTF-8',
       },
       body: JSON.stringify(dataToUpdate),
-      credentials: 'same-origin'
+      credentials: 'same-origin',
     })
       .then(res => {
         if (res.ok) {
           this.setState({
             isResetting: false,
-            input: ''
+            input: '',
           });
           this.recordResetSecret();
           this.hidePasswordLengthFailure();
@@ -95,8 +96,8 @@ class PasswordReset extends Component {
         data_json: JSON.stringify({
           sectionId: sectionId,
           studentId: studentId,
-          loginType: 'email'
-        })
+          loginType: 'email',
+        }),
       },
       {includeUserId: true}
     );
@@ -104,7 +105,7 @@ class PasswordReset extends Component {
 
   updateInput = event => {
     this.setState({
-      input: event.target.value
+      input: event.target.value,
     });
   };
 
@@ -162,11 +163,11 @@ const styles = {
     height: 29,
     marginRight: 10,
     marginLeft: 5,
-    padding: 5
+    padding: 5,
   },
   button: {
-    margin: 5
-  }
+    margin: 5,
+  },
 };
 
 export default PasswordReset;

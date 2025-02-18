@@ -2,14 +2,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
 import color from '@cdo/apps/util/color';
-import * as shapes from '../shapes';
+import i18n from '@cdo/locale';
+
+import {P5LabInterfaceMode} from '../constants';
 import {show, showBackground, Goal} from '../redux/animationPicker';
+import * as shapes from '../shapes';
+
 import AnimationListItem from './AnimationListItem';
 import NewListItem from './NewListItem';
 import ScrollableList from './ScrollableList';
-import i18n from '@cdo/locale';
-import {P5LabInterfaceMode} from '../constants';
+
 /**
  * Vertical scrolling list of animations associated with the project.
  */
@@ -21,7 +25,7 @@ class AnimationList extends React.Component {
     spriteLab: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
     hideCostumes: PropTypes.bool.isRequired,
-    labType: PropTypes.string.isRequired
+    labType: PropTypes.string.isRequired,
   };
 
   render() {
@@ -32,7 +36,7 @@ class AnimationList extends React.Component {
       labType,
       onNewItemClick,
       spriteLab,
-      currentAnimations
+      currentAnimations,
     } = this.props;
     let newAnimationLabel;
     if (spriteLab) {
@@ -96,14 +100,14 @@ const styles = {
     borderRight: 'none',
     backgroundColor: color.lightest_gray,
     paddingRight: 10,
-    paddingLeft: 10
-  }
+    paddingLeft: 10,
+  },
 };
 export default connect(
   state => ({
     animationList: state.animationList,
     currentAnimations: state.animationTab.currentAnimations,
-    spriteLab: state.pageConstants.isBlockly
+    spriteLab: state.pageConstants.isBlockly,
   }),
   dispatch => ({
     onNewItemClick(isSpriteLab, hideCostumes) {
@@ -112,6 +116,6 @@ export default connect(
       } else {
         dispatch(show(Goal.NEW_ANIMATION, isSpriteLab));
       }
-    }
+    },
   })
 )(AnimationList);

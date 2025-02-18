@@ -1,35 +1,37 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ToggleGroup from '../ToggleGroup';
-import color from '@cdo/apps/util/color';
-import {setIsSummaryView, hasGroups} from '@cdo/apps/code-studio/progressRedux';
 import {connect} from 'react-redux';
+
+import {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
+import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import summaryActive from './images/toggleSummaryActive.png';
-import summaryInactive from './images/toggleSummaryInactive.png';
-import detailActive from './images/toggleDetailActive.png';
-import detailInactive from './images/toggleDetailInactive.png';
+import ToggleGroup from '../ToggleGroup';
 
-import groupSummaryActive from './images/groupToggleSummaryActive.png';
-import groupSummaryInactive from './images/groupToggleSummaryInactive.png';
 import groupDetailActive from './images/groupToggleDetailActive.png';
 import groupDetailInactive from './images/groupToggleDetailInactive.png';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import groupSummaryActive from './images/groupToggleSummaryActive.png';
+import groupSummaryInactive from './images/groupToggleSummaryInactive.png';
+import detailActive from './images/toggleDetailActive.png';
+import detailInactive from './images/toggleDetailInactive.png';
+import summaryActive from './images/toggleSummaryActive.png';
+import summaryInactive from './images/toggleSummaryInactive.png';
 
 const imageSets = {
   teal: {
     summaryActive,
     summaryInactive,
     detailActive,
-    detailInactive
+    detailInactive,
   },
   purple: {
     summaryActive: groupSummaryActive,
     summaryInactive: groupSummaryInactive,
     detailActive: groupDetailActive,
-    detailInactive: groupDetailInactive
-  }
+    detailInactive: groupDetailInactive,
+  },
 };
 
 /**
@@ -46,7 +48,7 @@ class ProgressDetailToggle extends React.Component {
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
     hasGroups: PropTypes.bool.isRequired,
-    setIsSummaryView: PropTypes.func.isRequired
+    setIsSummaryView: PropTypes.func.isRequired,
   };
 
   onChange = () => {
@@ -60,7 +62,7 @@ class ProgressDetailToggle extends React.Component {
       {
         study: 'progress-detail-toggle',
         study_group: this.props.toggleStudyGroup,
-        event: isSummary ? 'see-summary' : 'see-detail'
+        event: isSummary ? 'see-summary' : 'see-detail',
       },
       {includeUserId: true}
     );
@@ -85,7 +87,11 @@ class ProgressDetailToggle extends React.Component {
         <button
           type="button"
           value="summary"
-          style={whiteBorder ? styles.whiteBorder : undefined}
+          style={
+            whiteBorder
+              ? {...styles.whiteBorder, ...styles.buttonStyles}
+              : styles.buttonStyles
+          }
         >
           <img
             src={isSummaryView ? images.summaryActive : images.summaryInactive}
@@ -96,7 +102,11 @@ class ProgressDetailToggle extends React.Component {
         <button
           type="button"
           value="detail"
-          style={whiteBorder ? styles.whiteBorder : undefined}
+          style={
+            whiteBorder
+              ? {...styles.whiteBorder, ...styles.buttonStyles}
+              : styles.buttonStyles
+          }
           className="uitest-toggle-detail"
         >
           <img
@@ -114,7 +124,10 @@ const styles = {
   whiteBorder: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.white
+    borderColor: color.white,
+  },
+  buttonStyles: {
+    marginBottom: 5,
   },
   icon: {
     fontSize: 20,
@@ -123,8 +136,8 @@ const styles = {
     paddingTop: 6,
     paddingBottom: 3,
     // If not set explicitly, css sets "button > img" to 0.6
-    opacity: 1
-  }
+    opacity: 1,
+  },
 };
 
 export const UnconnectedProgressDetailToggle = ProgressDetailToggle;
@@ -133,7 +146,7 @@ export default connect(
   state => ({
     isPlc: !!state.progress.deeperLearningCourse,
     isSummaryView: state.progress.isSummaryView,
-    hasGroups: hasGroups(state.progress)
+    hasGroups: hasGroups(state.progress),
   }),
   {setIsSummaryView}
 )(ProgressDetailToggle);

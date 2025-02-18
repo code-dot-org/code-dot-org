@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
+import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
-import Button from '@cdo/apps/templates/Button';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
-import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
+
+import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
+import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -18,7 +19,7 @@ export const UnconnectedContainedLevelResetButton = ({
   userRoleInCourse,
   codeIsRunning,
   serverScriptId,
-  serverLevelId
+  serverLevelId,
 }) => {
   const [resetFailed, setResetFailed] = useState(false);
 
@@ -26,8 +27,9 @@ export const UnconnectedContainedLevelResetButton = ({
     firehoseClient.putRecord({
       study: 'reset-predict-level',
       event: 'level-reset',
+      user_id: userId,
       script_id: serverScriptId,
-      level_id: serverLevelId
+      level_id: serverLevelId,
     });
   };
 
@@ -40,6 +42,7 @@ export const UnconnectedContainedLevelResetButton = ({
   return (
     <div>
       <Button
+        name="containedLevelResetButton"
         text={i18n.deleteAnswer()}
         onClick={() => {
           resetContainedLevel().then(
@@ -51,8 +54,11 @@ export const UnconnectedContainedLevelResetButton = ({
           );
           logButtonClick();
         }}
-        color={Button.ButtonColor.red}
+        size={'s'}
         disabled={!hasLevelResults || !!codeIsRunning}
+        color={buttonColors.destructive}
+        iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
+        type={'secondary'}
       />
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
       {resetFailed && (
@@ -71,30 +77,29 @@ UnconnectedContainedLevelResetButton.propTypes = {
   codeIsRunning: PropTypes.bool,
   // used for reporting
   serverScriptId: PropTypes.number,
-  serverLevelId: PropTypes.number
+  serverLevelId: PropTypes.number,
 };
 
 export default connect(
   state => ({
-    hasLevelResults: !!state.progress.levelResults[
-      parseInt(state.progress.currentLevelId)
-    ],
+    hasLevelResults:
+      !!state.progress.levelResults[parseInt(state.progress.currentLevelId)],
     userId: state.pageConstants.userId,
     userRoleInCourse: state.currentUser.userRoleInCourse,
     codeIsRunning: state.runState.isRunning,
     serverScriptId: state.pageConstants.serverScriptId,
-    serverLevelId: state.pageConstants.serverLevelId
+    serverLevelId: state.pageConstants.serverLevelId,
   }),
   dispatch => ({
     queryUserProgress(userId) {
       dispatch(queryUserProgress(userId));
-    }
+    },
   })
 )(UnconnectedContainedLevelResetButton);
 
 const styles = {
   error: {
     color: color.red,
-    fontStyle: 'italic'
-  }
+    fontStyle: 'italic',
+  },
 };

@@ -6,7 +6,7 @@ require 'geocoder/lookups/freegeoip'
 module Geocoder
   module Result
     class Base
-      def summarize(prefix='location_')
+      def summarize(prefix = 'location_')
         {}.tap do |results|
           results['location_p'] = "#{latitude},#{longitude}" if latitude && longitude
           %w(street_number route street_address city state state_code country country_code postal_code).each do |component_name|
@@ -71,9 +71,7 @@ module Geocoder
         data['relevance']
       end
 
-      private
-
-      def mapbox_context(name)
+      private def mapbox_context(name)
         context.map do |c|
           c if c['id']&.match?(Regexp.new(name))
         end&.compact&.first
@@ -93,7 +91,11 @@ module Geocoder
 
     first_number_to_end = number_to_end_search.first.first
 
-    return nil if Float(first_number_to_end) rescue false # is a number
+    begin
+      return nil if Float(first_number_to_end)
+    rescue
+      false # is a number
+    end
     return nil if first_number_to_end.length < MIN_ADDRESS_LENGTH # too short to be an address
     return nil if first_number_to_end.count(' ') < 2 # too few words to be an address
 
@@ -131,7 +133,11 @@ module Geocoder
     ]
 
     def search(query, options = {})
-      ip = IPAddr.new(query) rescue nil
+      ip = begin
+        IPAddr.new(query)
+      rescue
+        nil
+      end
       if SAUCELABS_CIDR.any? {|cidr| cidr.include?(ip)}
         [OpenStruct.new(country_code: 'US', country: 'United States')]
       else
@@ -142,12 +148,16 @@ module Geocoder
   singleton_class.prepend SauceLabsOverride
 
   # Override Geocoder#search to default to the same behavior as the FreeGeoIP service used on our staging and production
-  # servers. Localhost lookups are usually because UI tests are making requests and we want our developer and drone
+  # servers. Localhost lookups are usually because UI tests are making requests and we want our developer and CI
   # environments to behave similar to production and staging.
   # https://github.com/alexreisner/geocoder/blob/350cf0cc6a158d510aec3d91594d9b5718f877a9/lib/geocoder/lookups/freegeoip.rb#L41-L54
   module LocahostOverride
     def search(query, options = {})
-      ip = IPAddr.new(query) rescue nil
+      ip = begin
+        IPAddr.new(query)
+      rescue
+        nil
+      end
       if ip&.loopback?
         [OpenStruct.new(
           ip: ip.to_s,
@@ -180,7 +190,7 @@ def geocoder_config
     timeout: 10,
     units: :km,
   }.tap do |config|
-    config[:cache] = Redis.connect(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
+    config[:cache] = Redis.new(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
     if CDO.mapbox_access_token
       config[:lookup] = :mapbox
       config[:use_https] = true

@@ -1,0 +1,34 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2024-08-23T21:31:53.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n  </head>\\n  <body>\\n    <!-- Cake recipe -->\\n    <h1>Cake</h1>\\n    \\n    <p>Prep time: 35 minutes | Cook Time: 25 minutes | Serves: 12</p>\\n    \\n    <hr>\\n    \\n    <h2>Recipe</h2>\\n    \\n    <p>3 and 2/3 cups (420g) cake flour <br>\\n      1 teaspoon salt <br>\\n      1 teaspoon baking powder <br>\\n      1 and 1/2 cups (345g) unsalted butter <br>\\n      2 cups (400g) sugar <br>\\n      3 eggs <br>\\n      1 tablespoon vanilla extract <br></p>\\n    \\n    <!-- 1) Add an image to the end of this cake recipe -->\\n    \\n  </body>\\n</html>\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "instructions_important": "false",
+    "long_instructions": "# Add Image\r\n\r\nHere you can practice adding a new image to a web page.\r\n\r\n# Do This\r\n1) Add an image to the end of this cake recipe.\r\n* Don't forget to use the `add image` button and include an image tag in your code.\r\n",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "encrypted_examples": "OZSns1ChiFEFTes4A7XtMN09AsRrcv8E2psruCTps2t23HzP/b88a4GGcy6z\nl9+CmUl3ZC4u0njbBaRlHwh0qA==\n",
+    "parent_level_id": 18899,
+    "name_suffix": "_csd-vpl-m1-2024",
+    "reference_links": [
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/lists"
+    ],
+    "map_reference": "/courses/csd-2022/guides/images-in-html",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "display_name": "Add new image",
+    "bubble_choice_description": "Add an image to this recipe.",
+    "thumbnail_url": "https://images.code.org/75eabeb2e4d16ed2e284ce49341d30b7-image-1564091283732.jpg",
+    "validation_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-23T21:31:53.196+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag Add Image_2024\\\"\"],\"cloned_from\":\"CSD U2 Image Tag Add Image_2024\"}]"
+}]]></config>
+</Weblab>

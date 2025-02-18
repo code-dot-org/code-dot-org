@@ -63,13 +63,14 @@ module Pd
       new_general_foorm(survey_names: PRE_SURVEY_CONFIG_PATHS, day: 0)
     end
 
-    # General post-workshop survey using foorm system.
-    # GET '/pd/workshop_post_survey?enrollmentCode=code'
-    # Enrollment code is an optional parameter, otherwise will show most recent workshop.
-    #
-    # If the post-survey has been already completed, will redirect to thanks page.
-    def new_post_foorm
-      new_general_foorm(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
+    def new_facilitator_post_foorm(workshop)
+      survey_name = FACILITATOR_POST_SURVEY_CONFIG_PATH
+
+      agenda = params[:agenda] || nil
+      # remove / from agenda url so module/1 => module1
+      agenda&.tr!("/", "")
+
+      render_survey_foorm(survey_name: survey_name, workshop: workshop, session: nil, day: nil, workshop_agenda: agenda)
     end
 
     def new_general_foorm(survey_names:, day:, subject: FOORM_GENERAL_SURVEY_SUBJECTS)
@@ -98,9 +99,24 @@ module Pd
     # Post workshop survey. This one will be emailed and displayed in the my PL page,
     # and can persist for more than a day, so it uses an enrollment code to be tied to a specific workshop.
     # GET /pd/workshop_survey/post/:enrollment_code
-    # This will direct to new_post_foorm
+    # If Build Your Own, redirect to its specific survey link. Otherwise, use Foorm.
     def new_post
-      return new_post_foorm
+      course = Pd::Enrollment.find_by(code: params[:enrollment_code], user: current_user)&.workshop&.course
+      if course == COURSE_BUILD_YOUR_OWN
+        redirect_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_TEACHER], CDO.default_scheme
+      else
+        # If the post-survey has been already completed, will redirect to thanks page.
+        return new_general_foorm(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
+      end
+    end
+
+    def new_facilitator_post
+      workshop = Pd::Workshop.find(params[:workshop_id])
+      if workshop.course == COURSE_BUILD_YOUR_OWN
+        redirect_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_FACILITATOR], CDO.default_scheme
+      else
+        new_facilitator_post_foorm(workshop)
+      end
     end
 
     # Display CSF201 (Deep Dive) pre-workshop survey using Foorm.
@@ -171,8 +187,6 @@ module Pd
       ayw_helper(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
     end
 
-    protected
-
     # This method finds a workshop either by enrollment code or by the given course and subject.
     # @param enrollment_code String: enrollment code for a workshop
     # @param course String: name of course (ex. CS Principles)
@@ -187,7 +201,7 @@ module Pd
     # course and subject. If they have none, render not enrolled. If they have any and should_have_attended is false,
     # return the most recent workshop. If should_have_attended is true, return the most recent workshop the user has
     # attended, or render no attendance if the user has not attended any workshops.
-    def get_workshop_by_enrollment_or_course_and_subject(enrollment_code:, course:, subject:, should_have_attended: true)
+    protected def get_workshop_by_enrollment_or_course_and_subject(enrollment_code:, course:, subject:, should_have_attended: true)
       if enrollment_code
         return get_workshop_by_enrollment(enrollment_code: enrollment_code, should_have_attended: should_have_attended)
       else
@@ -195,7 +209,7 @@ module Pd
       end
     end
 
-    def get_workshop_by_enrollment(enrollment_code:, should_have_attended:)
+    protected def get_workshop_by_enrollment(enrollment_code:, should_have_attended:)
       workshop = Pd::Enrollment.find_by(code: enrollment_code, user: current_user)&.workshop
 
       unless workshop
@@ -210,7 +224,7 @@ module Pd
       end
     end
 
-    def get_workshop_by_course_and_subject(course:, subject:, should_have_attended:)
+    protected def get_workshop_by_course_and_subject(course:, subject:, should_have_attended:)
       enrolled_workshops = Workshop.
         where(course: course, subject: subject).
         enrolled_in_by(current_user)
@@ -234,7 +248,7 @@ module Pd
       workshop
     end
 
-    def ayw_helper(survey_names:, day:)
+    protected def ayw_helper(survey_names:, day:)
       # get workshop (based on url/user)
       workshop_subject = ACADEMIC_YEAR_WORKSHOPS[params[:workshop_subject]]
       return render_404 unless workshop_subject
@@ -242,7 +256,7 @@ module Pd
       new_general_foorm(survey_names: survey_names, day: day, subject: workshop_subject)
     end
 
-    def render_survey_foorm(survey_name:, workshop:, session:, day:, workshop_agenda: nil)
+    protected def render_survey_foorm(survey_name:, workshop:, session:, day:, workshop_agenda: nil)
       return render_404 unless survey_name
 
       if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(
@@ -279,11 +293,11 @@ module Pd
       render :new_general_foorm
     end
 
-    def get_session_for_workshop_and_day(workshop, day)
+    protected def get_session_for_workshop_and_day(workshop, day)
       day > 0 ? workshop.sessions[day - 1] : nil
     end
 
-    def validate_session_for_survey(session, workshop, day)
+    protected def validate_session_for_survey(session, workshop, day)
       unless session
         render_404
         return false
@@ -299,7 +313,7 @@ module Pd
       return true
     end
 
-    def get_foorm_survey_data(workshop, day=nil, workshop_agenda=nil)
+    protected def get_foorm_survey_data(workshop, day = nil, workshop_agenda = nil)
       facilitator_data = workshop.facilitators.each_with_index.map do |facilitator, i|
         {
           Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID => facilitator.id,

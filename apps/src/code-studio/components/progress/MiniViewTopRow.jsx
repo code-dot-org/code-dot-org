@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
-import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import Button from '@cdo/apps/templates/Button';
-import {stringifyQueryParams} from '@cdo/apps/utils';
+
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {getStore} from '@cdo/apps/redux';
+import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
+import color from '@cdo/apps/util/color';
+import {stringifyQueryParams} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 export default class MiniViewTopRow extends React.Component {
   static propTypes = {
     scriptName: PropTypes.string.isRequired,
-    selectedSectionId: PropTypes.number
+    selectedSectionId: PropTypes.number,
   };
 
   render() {
@@ -61,26 +62,26 @@ const styles = {
     marginBottom: 0,
     // matches the lineHeight of Button,
     height: 34,
-    lineHeight: '34px'
+    lineHeight: '34px',
   },
   // absolutely position children so that they're located correctly in RTL as well
   button: {
     position: 'absolute',
-    left: 15
+    left: 15,
   },
   buttonRtl: {
     position: 'absolute',
-    right: 15
+    right: 15,
   },
   toggle: {
     position: 'absolute',
     top: 10,
-    right: 15
+    right: 15,
   },
   toggleRtl: {
     position: 'absolute',
     top: 10,
     left: 15,
-    direction: 'ltr'
-  }
+    direction: 'ltr',
+  },
 };

@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import MethodWithOverloads, {
   MethodOverloadSection,
-  SingleMethod
+  SingleMethod,
 } from '@cdo/apps/templates/codeDocs/MethodWithOverloads';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('MethodWithOverloads', () => {
   it('shows MethodOverloadSection if method has overloads', () => {
@@ -15,8 +17,8 @@ describe('MethodWithOverloads', () => {
           name: 'method1()',
           overloads: [
             {key: 'method1-int-i', name: 'method1(int i)'},
-            {key: 'method1-string-s', name: 'method1(string s)'}
-          ]
+            {key: 'method1-string-s', name: 'method1(string s)'},
+          ],
         }}
         programmingEnvironmentName="test-environment"
       />
@@ -43,7 +45,7 @@ describe('MethodOverloadSection', () => {
       <MethodOverloadSection
         overloads={[
           {key: 'method1-int-i', name: 'method1(int i)'},
-          {key: 'method1-string-s', name: 'method1(string s)'}
+          {key: 'method1-string-s', name: 'method1(string s)'},
         ]}
         programmingEnvironmentName="test-environment"
       />
@@ -57,7 +59,7 @@ describe('MethodOverloadSection', () => {
       <MethodOverloadSection
         overloads={[
           {key: 'method1-int-i', name: 'method1(int i)'},
-          {key: 'method1-string-s', name: 'method1(string s)'}
+          {key: 'method1-string-s', name: 'method1(string s)'},
         ]}
         programmingEnvironmentName="test-environment"
       />
@@ -92,17 +94,17 @@ describe('SingleMethod', () => {
       examples: [
         {
           name: 'Example 1',
-          description: 'the first example'
-        }
+          description: 'the first example',
+        },
       ],
       parameters: [
         {
           name: 'i',
           type: 'int',
           required: true,
-          description: 'a parameter'
-        }
-      ]
+          description: 'a parameter',
+        },
+      ],
     };
   });
 
@@ -114,28 +116,19 @@ describe('SingleMethod', () => {
       'Returns',
       'Parameters',
       'Examples',
-      'Additional Information'
+      'Additional Information',
     ]);
 
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(0)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown
     ).to.equal(defaultMethod.syntax);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(1)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown
     ).to.contain(defaultMethod.content);
     expect(wrapper.find('ParametersTable').length).to.equal(1);
     expect(wrapper.find('Example').length).to.equal(1);
     expect(
-      wrapper
-        .find('EnhancedSafeMarkdown')
-        .at(2)
-        .props().markdown
+      wrapper.find('EnhancedSafeMarkdown').at(2).props().markdown
     ).to.contain(defaultMethod.externalDocumentation);
   });
 

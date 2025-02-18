@@ -1,7 +1,10 @@
-import {expect} from '../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import MusicController from '@cdo/apps/MusicController';
-import sinon from 'sinon';
 import Sounds from '@cdo/apps/Sounds';
+
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 
 describe('MusicController', () => {
@@ -10,7 +13,7 @@ describe('MusicController', () => {
     hasOgg: false,
     name: 'win',
     isloaded: false,
-    group: 'mygroup'
+    group: 'mygroup',
   };
 
   let musicController, sound, sounds, sourceURL;
@@ -20,7 +23,7 @@ describe('MusicController', () => {
     sourceURL = winMp3;
     sounds.register({
       id: winMp3,
-      mp3: winMp3
+      mp3: winMp3,
     });
     sound = sounds.soundsById[sourceURL];
     sinon.spy(sound, 'play');

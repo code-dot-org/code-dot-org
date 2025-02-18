@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+
 import GeneratedCode from '@cdo/apps/templates/feedback/GeneratedCode';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('GeneratedCode', () => {
   const wrapper = shallow(

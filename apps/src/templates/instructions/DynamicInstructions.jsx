@@ -1,11 +1,14 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ImmersiveReaderButton from './ImmersiveReaderButton';
+
 import i18n from '@cdo/locale';
+
 import styleConstants from '../../styleConstants';
 import SafeMarkdown from '../SafeMarkdown';
-import _ from 'lodash';
+
+import ImmersiveReaderButton from './ImmersiveReaderButton';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -23,11 +26,11 @@ class DynamicInstructions extends React.Component {
   static propTypes = {
     dynamicInstructions: PropTypes.object,
     dynamicInstructionsKey: PropTypes.string,
-    setInstructionsRenderedHeight: PropTypes.func
+    setInstructionsRenderedHeight: PropTypes.func,
   };
 
   state = {
-    dynamicInstructionsHeight: null
+    dynamicInstructionsHeight: null,
   };
 
   constructor(props) {
@@ -86,7 +89,7 @@ class DynamicInstructions extends React.Component {
         <div
           style={{
             ...styles.container,
-            height: this.state.dynamicInstructionsHeight
+            height: this.state.dynamicInstructionsHeight,
           }}
         >
           {Object.keys(this.props.dynamicInstructions).map(key => {
@@ -94,7 +97,7 @@ class DynamicInstructions extends React.Component {
               <div
                 style={{
                   ...styles.instruction,
-                  opacity: key === this.props.dynamicInstructionsKey ? 1 : 0
+                  opacity: key === this.props.dynamicInstructionsKey ? 1 : 0,
                 }}
                 key={key}
               >
@@ -120,12 +123,12 @@ const styles = {
   container: {
     position: 'relative',
     marginTop: 10,
-    marginRight: 50
+    marginRight: 50,
   },
   instruction: {
     position: 'absolute',
-    top: 0
-  }
+    top: 0,
+  },
 };
 
 module.exports = DynamicInstructions;

@@ -1,0 +1,40 @@
+name 'CSA U6 Assessment q04_pilot-2025'
+
+wrong '`squid and whale`'
+right '`whale and octopus`'
+wrong '`octopus and turtle`'
+wrong '`whale and turtle`'
+wrong '`shark and octopus`'
+
+markdown <<MARKDOWN
+Consider the following code segment.
+
+```
+ArrayList<String> animals = new ArrayList<String>();
+animals.add("whale");
+animals.add(0, "shark");
+animals.add("turtle");
+animals.set(2, "octopus");
+animals.add(1, "squid");
+System.out.println(animals.get(2) + " and " + animals.get(3));
+```
+
+What is printed as a result of executing the code segment?
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+`ArrayList<String> animals = new ArrayList<String>();`: This line initializes an empty `ArrayList` called `animals` that can store strings.
+
+`animals.add("whale");`: Adds `"whale"` to the `animals` list. The list now contains: `["whale"]`.
+
+`animals.add(0, "shark");`: Inserts `"shark"` at index `0`, shifting the existing elements to the right. The list now contains: `["shark", "whale"]`.
+
+`animals.add("turtle");`: Adds `"turtle"` to the end of the `animals` list. The list now contains: `["shark", "whale", "turtle"]`.
+
+`animals.set(2, "octopus");`: Replaces the element at index `2` with `"octopus"`. The list now contains: `["shark", "whale", "octopus"]`.
+
+`animals.add(1, "squid");`: Inserts `"squid"` at index `1`, shifting the existing elements to the right. The list now contains: `["shark", "squid", "whale", "octopus"]`.
+
+`System.out.println(animals.get(2) + " and " + animals.get(3));`: Prints the element at index `2` (`"whale"`) followed by `" and "` and then the element at index `3` (`"octopus"`). 
+MARKDOWN

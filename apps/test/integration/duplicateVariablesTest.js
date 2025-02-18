@@ -1,11 +1,12 @@
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
-describe('hasDuplicateVariablesInForLoops', function() {
+describe('hasDuplicateVariablesInForLoops', function () {
   var studioApp;
 
   // create our environment
-  beforeEach(function() {
+  beforeEach(function () {
     setupTestBlockly();
     studioApp = getStudioAppSingleton();
 
@@ -13,13 +14,13 @@ describe('hasDuplicateVariablesInForLoops', function() {
     artistBlocks.install(Blockly, {skin: 'turtle'});
   });
 
-  afterEach(function() {
-    Blockly.mainBlockSpace.getTopBlocks().forEach(function(b) {
+  afterEach(function () {
+    Blockly.mainBlockSpace.getTopBlocks().forEach(function (b) {
       b.dispose();
     });
   });
 
-  it('returns true for nested for loops with the same variable name', function() {
+  it('returns true for nested for loops with the same variable name', function () {
     // for (counter from 1 to 100 by 1) {
     //   for (counter from 1 to 100 by 1) {
     //     moveForward(100);
@@ -78,7 +79,7 @@ describe('hasDuplicateVariablesInForLoops', function() {
     assert.equal(studioApp.hasDuplicateVariablesInForLoops(), true);
   });
 
-  it('returns false for nested for loops with different variable names', function() {
+  it('returns false for nested for loops with different variable names', function () {
     // for (counter from 1 to 100 by 1) {
     //   for (counter from 1 to 100 by 1) {
     //     moveForward(100);
@@ -137,7 +138,7 @@ describe('hasDuplicateVariablesInForLoops', function() {
     assert.equal(studioApp.hasDuplicateVariablesInForLoops(), false);
   });
 
-  it('returns false for siblings with the same variable name', function() {
+  it('returns false for siblings with the same variable name', function () {
     // for (counter from 1 to 100 by 1) {
     //   moveForward(100);
     // }
@@ -207,7 +208,7 @@ describe('hasDuplicateVariablesInForLoops', function() {
     assert.equal(studioApp.hasDuplicateVariablesInForLoops(), false);
   });
 
-  it('returns false for empty for loops', function() {
+  it('returns false for empty for loops', function () {
     // for (counter from 1 to 10 by 1) {
     // }
     studioApp.loadBlocks(

@@ -11,3 +11,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 `arcLeft` is the one that is least similar because it is the only one that repositions / reorients the turtle while the other have to do with setting things about the pen.
 MARKDOWN
+
+allow_multiple_attempts true

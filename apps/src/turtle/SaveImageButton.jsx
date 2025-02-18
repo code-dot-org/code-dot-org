@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
+
 import * as imageUtils from '@cdo/apps/imageUtils';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 export default class SaveImageButton extends React.Component {
   static propTypes = {
-    displayCanvas: PropTypes.instanceOf(HTMLCanvasElement).isRequired
+    displayCanvas: PropTypes.instanceOf(HTMLCanvasElement).isRequired,
   };
 
   save = async () => {
@@ -28,14 +29,14 @@ const styles = {
   icon: {
     lineHeight: 'inherit',
     color: color.white,
-    paddingRight: 8
+    paddingRight: 8,
   },
   container: {
     lineHeight: '40px',
     textAlign: 'center',
     verticalAlign: 'middle',
     display: 'inline-block',
-    textSize: 'large'
+    textSize: 'large',
   },
   button: {
     padding: '0px 8px',
@@ -43,6 +44,6 @@ const styles = {
     borderRadius: 5,
     backgroundColor: color.cyan,
     borderColor: color.cyan,
-    color: color.white
-  }
+    color: color.white,
+  },
 };

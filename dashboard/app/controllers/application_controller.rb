@@ -3,6 +3,7 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
+require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -14,6 +15,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  before_action :handle_cap_lockout, :assert_lms_landing_policy, if: :current_user
+
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -24,6 +27,10 @@ class ApplicationController < ActionController::Base
   before_action :fix_crawlers_with_bad_accept_headers
 
   before_action :clear_sign_up_session_vars
+
+  before_action :initialize_statsig_stable_id
+
+  around_action :with_global_current_user
 
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
@@ -52,7 +59,7 @@ class ApplicationController < ActionController::Base
     # if params['dbg'] is 'off'.
     def configure_web_console
       if params[:dbg]
-        cookies[:dbg] = (params[:dbg] != 'off') ? 'on' : nil
+        cookies[:dbg] = (params[:dbg] == 'off') ? nil : 'on'
       end
       @use_web_console = cookies[:dbg]
     end
@@ -93,17 +100,15 @@ class ApplicationController < ActionController::Base
 
   def prevent_caching
     # Rails has some logic to normalize the cache-control header that varies
-    # from version to version. Ideally, we would include 'no-cache' here but
-    # that causes Rails (starting in 5.2, still true as of 6.0) to remove
-    # 'must-revalidate' which causes issues on older mobile Safari browsers.
+    # from version to version. Ideally, we would include 'no-cache, max-age=0,
+    # must-revalidate' here, but when `no-store` is present it will clear out
+    # all the others.
     # See Rails logic at
-    # https://github.com/rails/rails/blob/v6.0.4.4/actionpack/lib/action_dispatch/http/cache.rb#L184
-    response.headers["Cache-Control"] = "no-store, max-age=0, must-revalidate"
+    # https://github.com/rails/rails/blob/v6.1.4.7/actionpack/lib/action_dispatch/http/cache.rb#L185
+    response.headers["Cache-Control"] = "no-store"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
-
-  protected
 
   # These are sometimes updated from the registration form
   SCHOOL_INFO_ATTRIBUTES = [
@@ -125,7 +130,9 @@ class ApplicationController < ActionController::Base
   # set in accounts created/updated in tests, but do not
   # want to be set via account creates/updates otherwise.
   UI_TEST_ATTRIBUTES = [
-    :sign_in_count
+    :sign_in_count,
+    :provider,
+    :created_at,
   ].freeze
 
   PERMITTED_USER_FIELDS = [
@@ -136,6 +143,8 @@ class ApplicationController < ActionController::Base
     :password_confirmation,
     :locale,
     :gender,
+    :gender_student_input,
+    :gender_teacher_input,
     :login,
     :remember_me,
     :age,
@@ -151,30 +160,35 @@ class ApplicationController < ActionController::Base
     :parent_email_preference_opt_in_required,
     :parent_email_preference_opt_in,
     :parent_email_preference_email,
-    school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
+    :us_state,
+    :country_code,
+    {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
+    {
+      authentication_options_attributes: [
+        :email,
+      ],
+    },
   ]
 
   PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)
   PERMITTED_USER_FIELDS.freeze
 
-  def configure_permitted_parameters
+  protected def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:account_update) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_up) {|u| u.permit PERMITTED_USER_FIELDS}
     devise_parameter_sanitizer.permit(:sign_in) {|u| u.permit PERMITTED_USER_FIELDS}
   end
 
   # Capture the current request URL for i18n string tracking
-  def setup_i18n_tracking
+  protected def setup_i18n_tracking
     Thread.current[:current_request_url] = request.url
   end
 
-  def with_locale
-    I18n.with_locale(locale) do
-      yield
-    end
+  protected def with_locale(&block)
+    I18n.with_locale(locale, &block)
   end
 
-  def milestone_response(options)
+  protected def milestone_response(options)
     response = {
       timestamp: DateTime.now.to_milliseconds
     }
@@ -208,11 +222,9 @@ class ApplicationController < ActionController::Base
       response[:share_failure] = response_for_share_failure(options[:share_failure])
     end
 
-    if HintViewRequest.enabled?
-      if script_level && current_user
-        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
-        response[:hint_view_request_url] = hint_view_requests_path
-      end
+    if HintViewRequest.enabled? && (script_level && current_user)
+      response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
+      response[:hint_view_request_url] = hint_view_requests_path
     end
 
     if PuzzleRating.enabled?
@@ -224,15 +236,15 @@ class ApplicationController < ActionController::Base
     response
   end
 
-  def set_locale_cookie(locale)
+  protected def set_locale_cookie(locale)
     cookies[:language_] = {value: locale, domain: :all, expires: 10.years.from_now}
   end
 
-  def require_english_in_levelbuilder_mode
+  protected def require_english_in_levelbuilder_mode
     redirect_to '/', flash: {alert: 'Editing on levelbuilder is only supported in English (en-US locale).'} unless locale == :'en-US'
   end
 
-  def require_levelbuilder_mode
+  protected def require_levelbuilder_mode
     require_english_in_levelbuilder_mode
 
     unless Rails.application.config.levelbuilder_mode
@@ -248,7 +260,7 @@ class ApplicationController < ActionController::Base
   # not modify curriculum content in a way could introduce intermittent failures
   # in other tests. Developers wishing to run these tests locally should run
   # their local server in levelbuilder_mode.
-  def require_levelbuilder_mode_or_test_env
+  protected def require_levelbuilder_mode_or_test_env
     require_english_in_levelbuilder_mode
 
     unless Rails.application.config.levelbuilder_mode || rack_env?(:test)
@@ -256,11 +268,11 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def require_admin
+  protected def require_admin
     authorize! :read, :reports
   end
 
-  def redirect_admin_from_labs
+  protected def redirect_admin_from_labs
     redirect_to root_path, flash: {alert: 'Labs not allowed for admins.'} if current_user&.admin?
   end
 
@@ -268,7 +280,7 @@ class ApplicationController < ActionController::Base
   # (storing full objects is not a good idea because the session is
   # saved as a cookie)
 
-  def pairings=(pairings_from_params)
+  protected def pairings=(pairings_from_params)
     # remove pairings
     if pairings_from_params[:pairings].blank?
       session[:pairings] = []
@@ -277,7 +289,7 @@ class ApplicationController < ActionController::Base
     end
 
     # replace pairings
-    session[:pairings] = pairings_from_params[:pairings].map do |pairing_param|
+    session[:pairings] = pairings_from_params[:pairings].filter_map do |pairing_param|
       other_user = User.find(pairing_param[:id])
       if current_user.can_pair_with? other_user
         other_user.id
@@ -285,12 +297,12 @@ class ApplicationController < ActionController::Base
         # TODO: should this cause an error to be returned to the user?
         nil
       end
-    end.compact
+    end
 
     session[:pairing_section_id] = pairings_from_params[:section_id].to_i
   end
 
-  def pairings
+  protected def pairings
     return [] if session[:pairings].blank?
     if pairing_still_enabled
       User.find(session[:pairings])
@@ -303,7 +315,7 @@ class ApplicationController < ActionController::Base
 
   # @return [Array of Integers] an array of user IDs of users paired with the
   #   current user.
-  def pairing_user_ids
+  protected def pairing_user_ids
     unless pairing_still_enabled
       # clear the pairing data from the session cookie
       self.pairings = {pairings: []}
@@ -313,7 +325,7 @@ class ApplicationController < ActionController::Base
     session[:pairings].nil? ? [] : session[:pairings]
   end
 
-  def clear_sign_up_session_vars
+  protected def clear_sign_up_session_vars
     if session[:sign_up_uid] || session[:sign_up_type] || session[:sign_up_tracking_expiration]
       session.delete(:sign_up_uid)
       session.delete(:sign_up_type)
@@ -321,9 +333,87 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  private
+  # Check that the user is compliant with the Child Account Policy. If they
+  # are not compliant, then we need to send them to the lockout page.
+  protected def handle_cap_lockout
+    # Transits the user to the CAP grace period if they are eligible.
+    Services::ChildAccount::GracePeriodHandler.call(user: current_user)
 
-  def pairing_still_enabled
+    # Locks out the user if they are not compliant with CAP, otherwise, do nothing.
+    return unless Services::ChildAccount::LockoutHandler.call(user: current_user)
+
+    # URLs we should not redirect.
+    return if Set[
+      # Allow retrieval of current user data for event reporting
+      api_v1_users_current_path,
+      # Don't block any user from signing out
+      destroy_user_session_path,
+      # Allow retrieval of CSRF token
+      get_token_path,
+      # Don't block any user from changing the language
+      locale_path,
+      # Avoid an infinite redirect loop to the lockout page
+      lockout_path,
+      # The locked out student needs access to the policy consent API's
+      policy_compliance_child_account_consent_path,
+      # The age interstitial when the age isn't known will block the lockout page
+      users_set_student_information_path,
+      # Allow students to join sections while locked out
+      student_user_new_path,
+      student_register_path,
+      reset_session_path,
+    ].any? {|path| request.path.include?(path)}
+
+    redirect_to lockout_path
+  rescue StandardError => exception
+    Honeybadger.notify(
+      exception,
+      error_message: 'Failed to apply the Child Account Policy to the user',
+      context: {
+        user_id: current_user.id,
+        request_path: request.path,
+      }
+    )
+  end
+
+  # Check that the user has completed the LMS onboarding flow
+  protected def assert_lms_landing_policy
+    return unless Policies::Lti.account_linking?(session, current_user)
+
+    # URLs we should not redirect.
+    return if Set[
+      # Don't block any user from signing out
+      destroy_user_session_path,
+      # Don't block any user from changing the language
+      locale_path,
+      # Avoid an infinite redirect loop to the lockout page
+      lti_v1_account_linking_landing_path,
+      # Allow the 'finish link' path
+      lti_v1_account_linking_finish_link_path,
+      # Allow API call to set lockout state
+      lti_v1_account_linking_new_account_path,
+      # Allow cancelling the link
+      users_cancel_path
+    ].include?(request.path)
+
+    redirect_to lti_v1_account_linking_landing_path
+  end
+
+  # Creates a statsig stable id for use of signed-out user tracking.
+  # This cookie is used by the Statsig SDK for both JS and Ruby.
+  protected def initialize_statsig_stable_id
+    cookies[:statsig_stable_id] ||= {value: SecureRandom.uuid, domain: :all, path: '/'}
+  end
+
+  private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
+  end
+
+  # Makes `current_user` accessible everywhere within an HTTP request.
+  private def with_global_current_user
+    RequestStore.store[:current_user] = current_user
+    yield
+  ensure
+    RequestStore.store[:current_user] = nil
   end
 end

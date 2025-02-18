@@ -1,8 +1,9 @@
 /** @file Filter that adds a white glowing outline to an image. */
 
 import '@cdo/apps/utils'; // Provides Function.prototype.inherits
-import color from '@cdo/apps/util/color';
 import {SVG_NS} from '@cdo/apps/constants';
+import color from '@cdo/apps/util/color';
+
 import ImageFilter from './ImageFilter';
 
 /**
@@ -11,7 +12,7 @@ import ImageFilter from './ImageFilter';
  * @constructor
  * @extends {ImageFilter}
  */
-var GlowFilter = function(svg) {
+var GlowFilter = function (svg) {
   ImageFilter.call(this, svg);
 
   /** @private {SVGElement} */
@@ -30,7 +31,7 @@ module.exports = GlowFilter;
  * @private
  * @override
  */
-GlowFilter.prototype.createFilterSteps_ = function() {
+GlowFilter.prototype.createFilterSteps_ = function () {
   // 1. Flood-fill the glow color (white)
   // 2. Dilate (grow) the source alpha mask
   // 3. Combine to get a silhouette in the correct color
@@ -86,7 +87,7 @@ GlowFilter.prototype.createFilterSteps_ = function() {
     feCompositeSilhouette,
     feGaussianBlur,
     feCompositeMaskedGlow,
-    feCompositeLayers
+    feCompositeLayers,
   ];
 };
 
@@ -95,7 +96,7 @@ GlowFilter.prototype.createFilterSteps_ = function() {
  * @param {number} timeMs
  * @override
  */
-GlowFilter.prototype.update = function(timeMs) {
+GlowFilter.prototype.update = function (timeMs) {
   if (this.feCompositeLayers_) {
     this.feCompositeLayers_.setAttribute('k3', this.curve_(timeMs));
   }

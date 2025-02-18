@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "საცეკვაო წვეულება", body: "დააპროგრამეთ საცეკვაო წვეულება! რომელშიც მონაწილეობს Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, მუსიკა Disney-ის \"Encanto,\"-დან ბევრი სხვა!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "პოემის ხელოვნება", body: "დაამატეთ არტი და ანიმაცია კლასიკურ პოემას კოდის ერთი საათის აქტივობაში!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Artist", body: "დახატეთ მოდური სურათები და დიზაინები Artist-ის საშუალებით", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity Play Lab", body: "გამოიყენეთ Play Lab ისტორიის ან თამაშის შესაქმნელად, რომელშიც იქნება Disney-ის Infinity-ის პერსონაჟები.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

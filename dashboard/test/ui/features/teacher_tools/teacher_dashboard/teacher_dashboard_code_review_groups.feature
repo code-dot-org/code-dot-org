@@ -28,6 +28,6 @@ Background:
 
   Scenario: Enable code review for a section
     Given I open the code review groups management dialog
-    When I click selector ".toggle-input"
+    When I click selector "#uitest-code-review-groups-toggle"
     # We display a message with the number of days until code review groups expire when code review is enabled
     Then element "#uitest-code-review-groups-status-message" eventually contains text "Code review will be automatically disabled"

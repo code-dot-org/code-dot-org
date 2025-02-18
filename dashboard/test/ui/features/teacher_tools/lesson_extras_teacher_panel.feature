@@ -17,7 +17,7 @@ Feature: Lesson extras teacher panel
 
     # Lesson extras individual puzzle page
     And I click selector ".sublevel-card-title-uitest" once I see it to load a new page
-    When I wait for the page to fully load
+    When I wait for the lab page to fully load
     And I wait until element "#teacher-panel-container" is visible
     And check that the URL contains "section_id="
     And check that the URL contains "user_id="

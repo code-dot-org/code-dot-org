@@ -1,17 +1,16 @@
 name 'U2L05 Assessment 2'
-encrypted 'iNVYpXNYSL7COTNTIRU46MA1dvmrj0KXrMLAmdvkoiqOCEr89uXAac3pkgaV
-/YLxBfilHjxhKTXJ2ZVhfPTvxOkFDFnwQcpGnbg4FqsoNF4ucI3ekXg+xl/S
-Gp3eeAPBRGFnPOWmAt+LcbfHZpcI+FI2gecTdkE5ZjGcegdhMh/3Q1NlYWzI
-M8SHFViM7UoHSgxtgH3Ehy+5oVFRzIyBaYQOjr7PEJ9Z2ODVrQsqcF5dSAuK
-rvs1m7L12D1unK3UaHGcpl/JGO3NwrZ1LVlBRbUBBvdPvc4DtDUWJz6yD2sd
-eXzAV8qCeQ029dI2FZTw0Aw2QovFhVlYYs+eZt1OwEbyt4Z7AIMjdMut9Fn1
-KISlMYCXPUraGMLDFu2+Kgb3LYQrI/BiVLhLDpPjcT+2nkjh00oAQMvrnkHf
-N7OjJDjufgkCB+POPapJi+cJjNhe1CJyVIf9FoiSlE0pJrdIOUPolLmYmrP7
-L1R1/oxxnsX+3iBtc0oULGmR51zmv/ENam97EEgVblCaL11Qf0IMdiDFM4Dg
-V389Hia0jAVvQsRRu3dWl2aAycTLxTt9jEANrWuyMomFDoGhTYHUpJ6tqy9Z
-sDlcjdOBabI4EnUH8ZCv2zwr8BwTLYOezZBgPRDP94hj3lkc3nKx2jHa1/YH
-FPCqXjMzN1c5plriDDbqIfwNOypZwDni2JibjGmgfI+JXWoQA3n3kwuPiWgi
-K1oWfd0pO3VL5iF7UOzce/sVlBjhguaxjkjZfSK7zMtpUs4TIS/aDiPveh+4
-onQbDGjn6sFwsYhbnuWGmIsVNFrFWSDUrLT8mz0yfTnciOwxr/xYhVxMSBRq
-ZxVUxT08bb+yx9yTNElIcXrl6CxkH2zd5XQ=
-'
+title 'Packets and Making a Reliable Internet: Question 2'
+question 'Which of the following is NOT true about packets?'
+wrong 'Packets are numbered so if they arrive out of order the message can be reassembled.'
+right 'A message sent across the Internet can always be contained in a single packet'
+wrong 'Packets are routed on different paths from sender to receiver.'
+wrong 'The receiver computer must confirm to the sending computer that each packet was received.'
+
+
+teacher_markdown <<MARKDOWN
+answer:
+
+- B. A message sent across the Internet can always be contained in a single packet.
+MARKDOWN
+
+allow_multiple_attempts true

@@ -1,15 +1,17 @@
-import React from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import queryString from 'query-string';
+import React from 'react';
+
+import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
-import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
-import queryString from 'query-string';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
-import _ from 'lodash';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
 
 export default class SublevelCard extends React.Component {
   static propTypes = {
@@ -17,7 +19,7 @@ export default class SublevelCard extends React.Component {
     // sublevels generally use "perfect" instead of status
     sublevel: levelType,
     sectionId: PropTypes.number,
-    userId: PropTypes.number
+    userId: PropTypes.number,
   };
 
   getSublevelUrl = () => {
@@ -32,7 +34,7 @@ export default class SublevelCard extends React.Component {
           queryString.stringify({
             id: sublevel.id,
             section_id: sectionId,
-            user_id: userId
+            user_id: userId,
           })
         );
       } else if (sectionId) {
@@ -40,7 +42,7 @@ export default class SublevelCard extends React.Component {
           baseUrl +
           queryString.stringify({
             id: sublevel.id,
-            section_id: sectionId
+            section_id: sectionId,
           })
         );
       }
@@ -62,7 +64,11 @@ export default class SublevelCard extends React.Component {
   renderThumbnail = () => {
     const {sublevel} = this.props;
     if (sublevel.thumbnail_url) {
-      return <img src={sublevel.thumbnail_url} style={styles.thumbnail} />;
+      // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+      // Verify or update this alt-text as necessary
+      return (
+        <img src={sublevel.thumbnail_url} style={styles.thumbnail} alt="" />
+      );
     } else if (['Maze', 'Karel'].includes(sublevel.type)) {
       return this.renderWithMazeThumbnail();
     } else {
@@ -122,7 +128,7 @@ export default class SublevelCard extends React.Component {
         <div
           style={{
             ...styles.column,
-            ...{width: WIDTH - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE)}
+            ...{width: WIDTH - (MARGIN * 2 + THUMBNAIL_IMAGE_SIZE)},
           }}
         >
           <div style={styles.bubbleAndTitle}>
@@ -158,17 +164,17 @@ const styles = {
     display: 'flex',
     width: WIDTH,
     marginBottom: MARGIN,
-    marginRight: MARGIN,
+    marginInlineEnd: MARGIN,
     backgroundColor: color.white,
     border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2
+    borderRadius: 2,
   },
   thumbnail: {
     minWidth: THUMBNAIL_IMAGE_SIZE,
     width: THUMBNAIL_IMAGE_SIZE,
     height: THUMBNAIL_IMAGE_SIZE,
     border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2
+    borderRadius: 2,
   },
   placeholderThumbnail: {
     minWidth: THUMBNAIL_IMAGE_SIZE,
@@ -179,40 +185,40 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     border: '1px solid rgb(187, 187, 187)',
-    borderRadius: 2
+    borderRadius: 2,
   },
   icon: {
     fontSize: THUMBNAIL_IMAGE_SIZE - 50,
     color: color.white,
-    opacity: 0.8
+    opacity: 0.8,
   },
   column: {
     marginLeft: MARGIN * 2,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    margin: MARGIN
+    margin: MARGIN,
   },
   bubbleAndTitle: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
   },
   title: {
     minHeight: 30,
     fontSize: 16,
     lineHeight: '25px',
-    fontFamily: '"Gotham 5r"',
+    ...fontConstants['main-font-semi-bold'],
     color: color.teal,
     marginBottom: 10,
-    marginLeft: MARGIN,
+    marginInlineStart: MARGIN,
     overflowWrap: 'break-word',
     wordWrap: 'break-word',
     hyphens: 'auto',
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   description: {
-    marginTop: 5
-  }
+    marginTop: 5,
+  },
 };

@@ -1,22 +1,21 @@
 name 'U2L06- MC: what is an MST?'
-encrypted 'w9l87SAvTE7npZBwJ/1LjccI7vJv7t3RktQxWYWHYIMoYG5vdRQGUIvf6heL
-gFzHDnfMkklU2OMcPe2L6kI3Yrx5S8r7qsEMAf2Psr1eRq5/plrd+Mgtz93d
-9y4NZ3r7/Gz/RTeaY8MQDochJhx5A2DMpdBmtiNlEHuusFGe/XoUEs1zNTKz
-JlgC0JgH34mZCip5qb6Qgo4XXlKZiLTS+zdxyA9ITeVQEqeAi0J9InVPZMw/
-j3k+6u1t9N7HENCEJsPyM8aMFjrBOxzXTQBvSQEh8bP0ipeZ1KM7nIY6mVPT
-TXF2jDGmTIXiQt59/ISH8i9JSP7q3bVMTxmBwJQLbtzB/TQc0TwLVvUeO0XG
-APDs9lLWGSnwsyOJWga+0+l00hpKzqTeKh9BWjoBbsaMyiURDa73qyOCuk16
-eyMzyD+Oi1msc4qSjeYG9yzy+e4oMzSog20fzY2LKy3BpnTkn7LwM4epIY1m
-kXpujCMF4FJM6Q2xIo8jmc/e1q/1ViDUtCxmOgFVXQbGquJetF53hLpebDU4
-+nPpvH+fQfmtmdce+s4XXT5J3msMjHkzaHJKqZ4JpWoARP7wy5IgScLLhztz
-LIKqSFm6j1N46S0zY2q1G4o4BhY9fCsZO6OQl5URlscu4bjbbs7K5MtIUlRc
-XaXNOh00ybm+46EwGO3psIrQOo5wM+34NdFZkkvhEYiv9RklpLQsZGJmq/0a
-PiwHqac/4V2kmgDEjG6c3rovCDQr2HV9EPsVNHGb54/ZZCaZNMgiZw6czFcs
-sVVYqCOxBb4sJU//lRg5LUBEKJ2yfiqdUQse/KSWZDlPW0UMngZycF8EmJkO
-g8nED2GrdHyq4B5/P+Sh/mh0Y663molhLJgq24Yfeme6n9bMCqZYGZPFrmPW
-Y6zTg1ZHfwqbxuNspMEg7df1Z2X4qMMA0jM+gUQAQ+22Hb2aRcvbP13EyvXX
-hjmMiSM/41kuVCaeM8b2MFM6yy8D28aknaVsVg5hFQGMAYRaeyvQVdWItZ9j
-1V62r3LX0clHl0X3yd0tUyLMcgYWTFHGzAELbzx7s6PbdhKJ0L3Jzj/Ypxcy
-YoLyEkI2fxjLeurx3yFmVs0WQ3Qd6M/uYo8hfVgC4wxTRpZiwWo0f2eDeB1a
-u31lhndgVhOPHlm6iixhQHuROL98YD2ttw==
-'
+title 'Minimum Spanning Trees'
+height '40'
+
+question 'What does a minimum spanning tree tell you about a graph?'
+wrong 'The shortest path from a particular point in the graph to another point in the graph'
+wrong 'The shortest path between any two points for all points in the graph'
+right 'The fewest number and smallest total distance of connections necessary to connect all points in a graph'
+wrong 'Whether or not the graph represents a network'
+wrong 'The fewest number and smallest total distance of connections necessary to travel from one point to all the other points without having to visit a point twice'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer:
+
+- C: The fewest number and smallest total distance of connections necessary to connect all points in a graph
+MARKDOWN
+
+allow_multiple_attempts true

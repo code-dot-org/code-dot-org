@@ -1,0 +1,26 @@
+name 'environment lesson plan'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Classroom Implementation
+
+<img src="https://images.code.org/1342955a45551535071edc758fa44fb1-image-1720559612404.13.30 PM.png" alt="pixelated cartoon cow" width="200px" style="border-radius:10px; float:right; margin: 0 40px 40px 40px;">
+
+#### The lesson plan explains the lesson in detail with suggestions for discussions, remarks, and teacher actions.
+
+## Example lesson plan
+
+#### Preview this lesson plan from the <a href="https://levelbuilder-studio.code.org/s/elem-game-design-2024/lessons/3" target="blank">Environment and Players</a> lesson.
+
+### **When exploring the lesson plan, locate...**
+* #### Slide decks
+* #### Activity guides
+* #### Answer keys
+<br>
+
+#### Take your time working through all of the lesson features. Think about how you could implement the lesson in your class. 
+
+## Let's keep learning! 
+
+MARKDOWN

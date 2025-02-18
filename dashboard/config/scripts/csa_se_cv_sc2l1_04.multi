@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SC2L1-04'
+
+question 'Elements of today\'s lesson boosted my confidence in my potential to contribute to or work in the computer science industry.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

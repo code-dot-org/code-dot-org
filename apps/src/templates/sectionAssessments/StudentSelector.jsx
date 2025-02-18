@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {dropdownStyles} from '@cdo/apps/templates/sectionProgress/UnitSelector';
-import {ALL_STUDENT_FILTER} from './sectionAssessmentsRedux';
+
 import i18n from '@cdo/locale';
+
+import {ALL_STUDENT_FILTER} from './sectionAssessmentsRedux';
+
+import styles from '@cdo/apps/templates/sectionProgress/unit-selector.module.scss';
 
 export default class StudentSelector extends Component {
   static propTypes = {
     studentList: PropTypes.array.isRequired,
     studentId: PropTypes.number,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -19,7 +22,7 @@ export default class StudentSelector extends Component {
         <select
           value={studentId}
           onChange={event => onChange(parseInt(event.target.value))}
-          style={dropdownStyles.dropdown}
+          className={styles.dropdown}
         >
           <option key={ALL_STUDENT_FILTER} value={ALL_STUDENT_FILTER}>
             {i18n.allStudents()}

@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {studentsShape} from './types';
+
+import {sortSectionsList} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import i18n from '@cdo/locale';
-import {sortSectionsList} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux.js';
+
+import {studentsShape} from './types';
 
 /**
  * Section selector component, for students in multiple sections.
@@ -13,11 +15,11 @@ export default class SectionSelector extends React.Component {
       PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
-        students: studentsShape
+        students: studentsShape,
       })
     ),
     selectedSectionId: PropTypes.number,
-    handleChange: PropTypes.func.isRequired
+    handleChange: PropTypes.func.isRequired,
   };
 
   render() {

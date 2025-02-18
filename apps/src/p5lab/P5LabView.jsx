@@ -1,29 +1,34 @@
 /** @file Top-level view for GameLab */
-/* global dashboard */
+
 import classNames from 'classnames';
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
-import AnimationTab from './AnimationTab/AnimationTab';
+import {connect} from 'react-redux';
+
+import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
+import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
+import VisualizationResizeBar from '@cdo/apps/code-studio/components/VisualizationResizeBar';
+import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
+import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
+import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import {isResponsiveFromState} from '@cdo/apps/templates/ProtectedVisualizationDiv';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
-import ErrorDialogStack from './ErrorDialogStack';
+import experiments from '@cdo/apps/util/experiments';
+
 import AnimationJsonViewer from './AnimationJsonViewer';
+import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
+import AnimationTab from './AnimationTab/AnimationTab';
 import {
   P5LabInterfaceMode,
   P5LabType,
   APP_WIDTH,
-  APP_HEIGHT
+  APP_HEIGHT,
 } from './constants';
-import P5LabVisualizationHeader from './P5LabVisualizationHeader';
+import ErrorDialogStack from './ErrorDialogStack';
 import P5LabVisualizationColumn from './P5LabVisualizationColumn';
-import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
-import {isResponsiveFromState} from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
+import P5LabVisualizationHeader from './P5LabVisualizationHeader';
 import {allowAnimationMode} from './stateQueries';
-import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
-import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
-import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
-import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
+
 /**
  * Top-level React wrapper for GameLab
  */
@@ -41,7 +46,7 @@ class P5LabView extends React.Component {
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
       P5LabInterfaceMode.ANIMATION,
-      P5LabInterfaceMode.BACKGROUND
+      P5LabInterfaceMode.BACKGROUND,
     ]).isRequired,
     isResponsive: PropTypes.bool.isRequired,
     hideSource: PropTypes.bool.isRequired,
@@ -51,7 +56,7 @@ class P5LabView extends React.Component {
     isRunning: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isBackground: PropTypes.bool,
-    currentUserType: PropTypes.string
+    currentUserType: PropTypes.string,
   };
 
   constructor(props) {
@@ -64,7 +69,7 @@ class P5LabView extends React.Component {
 
     this.state = {
       libraryManifest: {},
-      projectType
+      projectType,
     };
   }
 
@@ -87,12 +92,10 @@ class P5LabView extends React.Component {
     });
   }
 
-  shouldHideAnimationUpload() {
-    // Teachers should always be allowed to upload animations.
-    if (this.props.currentUserType === 'teacher') {
-      return false;
-    }
-
+  // Users of non-Blockly labs should always be allowed to upload animations
+  // with no restrictions. Teachers in blockly labs (ie. Sprite Lab) can upload with a warning.
+  // When students upload animations in Blockly labs, we disable publish and remix for the project.
+  shouldWarnOnAnimationUpload() {
     return this.props.isBlockly;
   }
 
@@ -102,26 +105,22 @@ class P5LabView extends React.Component {
       isResponsive,
       hideSource,
       pinWorkspaceToBottom,
-      showFinishButton
+      showFinishButton,
     } = this.props;
 
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
     const codeModeStyle = {
-      display: interfaceMode !== P5LabInterfaceMode.CODE ? 'none' : undefined
-    };
-
-    const visualizationColumnStyle = {
-      width: APP_WIDTH
+      display: interfaceMode !== P5LabInterfaceMode.CODE ? 'none' : undefined,
     };
 
     const visualizationColumnClassNames = classNames({
       responsive: isResponsive,
-      pin_bottom: !hideSource && pinWorkspaceToBottom
+      pin_bottom: !hideSource && pinWorkspaceToBottom,
     });
     let defaultQuery = {
       categoryQuery: '',
-      searchQuery: ''
+      searchQuery: '',
     };
     if (this.props.isBackground) {
       defaultQuery.categoryQuery = 'backgrounds';
@@ -138,7 +137,11 @@ class P5LabView extends React.Component {
         <div
           id="visualizationColumn"
           className={visualizationColumnClassNames}
-          style={visualizationColumnStyle}
+          style={
+            experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE)
+              ? {}
+              : {width: APP_WIDTH}
+          }
         >
           <P5LabVisualizationHeader labType={this.props.labType} />
           <P5LabVisualizationColumn
@@ -151,7 +154,7 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={channelId}
               libraryManifest={this.state.libraryManifest}
-              hideUploadOption={this.shouldHideAnimationUpload()}
+              shouldWarnOnAnimationUpload={this.shouldWarnOnAnimationUpload()}
               hideAnimationNames={this.props.isBlockly}
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
@@ -176,6 +179,7 @@ class P5LabView extends React.Component {
         <VisualizationResizeBar />
         <InstructionsWithWorkspace>
           <CodeWorkspace withSettingsCog={!this.props.isBlockly} />
+          <ModalFunctionEditor />
         </InstructionsWithWorkspace>
       </div>
     );
@@ -185,7 +189,7 @@ class P5LabView extends React.Component {
     const {allowAnimationMode, interfaceMode} = this.props;
     let defaultQuery = {
       categoryQuery: '',
-      searchQuery: ''
+      searchQuery: '',
     };
     if (this.props.isBackground) {
       // Navigate to the backgrounds animation category.
@@ -199,7 +203,7 @@ class P5LabView extends React.Component {
         channelId={this.getChannelId()}
         defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
-        hideUploadOption={this.shouldHideAnimationUpload()}
+        shouldWarnOnAnimationUpload={this.shouldWarnOnAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
         hideBackgrounds={this.props.isBlockly && !isBackgroundMode}
         hideCostumes={isBackgroundMode}
@@ -211,9 +215,7 @@ class P5LabView extends React.Component {
         }
         interfaceMode={interfaceMode}
       />
-    ) : (
-      undefined
-    );
+    ) : undefined;
   }
 
   render() {
@@ -237,5 +239,5 @@ export default connect(state => ({
   isIframeEmbed: state.pageConstants.isIframeEmbed,
   isBlockly: state.pageConstants.isBlockly,
   isBackground: state.animationPicker.isBackground,
-  currentUserType: state.currentUser?.userType
+  currentUserType: state.currentUser?.userType,
 }))(P5LabView);

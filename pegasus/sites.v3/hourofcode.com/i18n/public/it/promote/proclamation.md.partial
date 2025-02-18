@@ -1,7 +1,6 @@
 ---
-title: Un esempio di delibera per supportare la Settimana di Educazione all'Informatica e l'Ora del Codice
+title: Un esempio di delibera per supportare la Settimana Internazionale di Educazione all'Informatica e l'Ora del Codice
 layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -23,38 +22,38 @@ Visto che la tecnologia informatica è un parte integrante della cultura e sta t
 
 Visto che l'ingegneria informatica sta trasformando l'industria, creando nuovi ambiti di commercio, guidando l'innovazione in ogni campo della scienza e incrementando la produttività nei settori economici consolidati;
 
-Visto che l'ambito dell'ingegneria informatica è alla base del settore della tecnologia dell'informazione della nostra economia e che apporta un significativo contributo al prodotto economico dell'Italia;
+Whereas the field of computer science is a foundational subject that underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
 
-Visto che il campo dell'ingegneria informatica è una scienza fondamentale per l'Era Digitale;
+Whereas artificial intelligence literacy refers to the knowledge, skills, and attitudes associated with how artificial intelligence works, including fundamental concepts in computer science, and how to use artificial intelligence safely, responsibly, and ethically;
 
-Visto che il settore della tecnologia dell'informazione è esclusivamente posizionato per aiutare la ripresa economica attraverso la ricerca e lo sviluppo di nuove innovazioni;
+Whereas the field of computer science, including artificial intelligence, are technologies with the power to fundamentally transform nearly all sectors of the United States economy;
 
-Considerando che le prospettive per i posti di lavori nel campo dell'informatica sono luminose con oltre 500.000 posizioni informatiche aperte in tutto il paese;
+Whereas technological leadership in all areas of computer science, including artificial intelligence, is an economic and national security imperative;
 
-Considerato che offrire agli studenti la possibilità di partecipare ad attività informatiche di alta qualità li espone alle ricche opportunità che il settore offre, e fornisce le abilità di pensiero critico che gli serviranno nel corso della loro vita;
+Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
 
-Considerando che tutti gli studenti meritano una preparazione completa nell'insegnamento dell'informatica, compreso l'accesso a insegnanti qualificati, tecnologia e curriculum adeguati all'età, necessari per apprendere l'informatica ai livelli elementare e secondario dell'istruzione;
+Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
 
-Considerando che l'insegnamento dell'informatica deve affrontare delle sfide, tra cui il conteggio delle lezioni di informatica ai fini del conseguimento del diploma di scuola superiore e l'offerta di sviluppo professionale per gli insegnanti di informatica;
+Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
 
-Considerando che la partecipazione a un'Ora del Codice durante la settimana dell'insegnamento dell'informatica può servire a demistificare il campo dell'informatica e incoraggiare un maggior numero di studenti a intraprendere ulteriori studi di informatica;
+Whereas computer science education has challenges to address, including improving access to computer science courses for all students, and providing professional development for computer science teachers;
 
-Considerando che il campo dell'informatica ha notevoli barriere da affrontare per raggiungere l'equità, tra cui l'attrazione di una maggiore partecipazione delle donne e delle minoranze sotto-rappresentate in tutti i livelli e settori;
+Considerando che la partecipazione a un'Ora del Codice durante la settimana dell'insegnamento dell'informatica può servire a fare chiarezza sul tema dell'informatica e incoraggiare un maggior numero di studenti a intraprendere ulteriori studi in questo ambito;
 
-Considerando che Grace Murray Hopper, una delle prime donne nel campo dell'informatica, ha progettato nuovi linguaggi di programmazione e ha introdotto standard per i sistemi informatici che hanno gettato le basi per molti progressi nell'informatica; e
+Whereas the field of computer science has significant equity barriers to address, including attracting and retaining a field of candidates diverse in race, ethnicity, and gender at all levels and branches;
 
-Considerando che la settimana di {{ campaign_date/start_long }}, in onore del compleanno di Grace Hopper, è designato come "Settimana della formazione informatica": Adesso, quindi, sia<br />
+Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Determinato che il (IL SENATO, STATO, CONTEA, CITTÀ O CONSIGLIO SCOLASTICO) -
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
-(1) sostiene la designazione di Settimana dell'insegnamento dell'informatica ({{ campaign_date/full }});
+Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(2) incoraggia le scuole, gli educatori, i genitori e i responsabili politici a partecipare alla Settimana dell'insegnamento dell'informatica consentendo ai propri studenti di partecipare all'Ora del Codice;
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
-(3) incoraggia scuole, insegnanti, ricercatori, università, dirigenti d'azienda e responsabili politici a identificare meccanismi che consentano agli insegnanti di ricevere uno sviluppo professionale all'avanguardia per fornire esperienze di apprendimento sostenibile in informatica a tutti i livelli educativi e incoraggiare gli studenti ad avvicinarsi ai concetti di informatica ;
+(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
-(4) incoraggia i responsabili politici a rimuovere le barriere che impediscono alle lezioni di informatica di essere conteggiate come crediti di matematica o scienze nei requisiti richiesti per il conseguimento del diploma;
+(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
 
-(5) incoraggia le opportunità, anche attraverso i programmi esistenti, per le donne e le minoranze sotto-rappresentate nell'informatica.
+(4) encourages opportunities, including through existing programs, for female students and students from racial and ethnic groups underrepresented in computer science.
 
 {{ signup_button }}

@@ -40,21 +40,21 @@ class DataDoc < ApplicationRecord
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
     directory_name = File.dirname(file_path)
-    Dir.mkdir(directory_name) unless File.exist?(directory_name)
+    FileUtils.mkdir_p(directory_name)
     File.write(file_path, JSON.pretty_generate(serialize))
   end
 
   def remove_serialization
     return unless Rails.application.config.levelbuilder_mode
-    File.delete(file_path) if File.exist?(file_path)
+    FileUtils.rm_f(file_path)
   end
 
   # creates and deletes records to match all the seed files
-  def self.seed_all
+  def self.seed_all(dashboard_root = '.')
     # collect all existing docs, and for each json file,
     # seed the data doc and remove it from the removed_records
     records_to_be_removed = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/data_docs/**/*.json")).each do |path|
+    Dir.glob(Rails.root.join("#{dashboard_root}/config/data_docs/**/*.json")).each do |path|
       records_to_be_removed -= [DataDoc.seed_record(path)]
     end
     # the remaining ids that were not seeded should be removed

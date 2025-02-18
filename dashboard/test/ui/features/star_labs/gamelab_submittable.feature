@@ -4,12 +4,11 @@ Feature: Submittable GameLab
 
 Background:
   Given I am on "http://studio.code.org/s/allthethings/lessons/19/levels/1?noautoplay=true"
-  Then I rotate to landscape
-  And I wait to see "#runButton"
+  Then I wait to see "#runButton"
 
 Scenario: Submit anything, unsubmit, be able to resubmit.
   # First, submit something.
-  When I submit this level
+  When I submit this gamelab level
 
   # Reload the page to see that unsubmit is the option.
   Then I am on "http://studio.code.org/s/allthethings/lessons/19/levels/1?noautoplay=true"

@@ -1,0 +1,11 @@
+.flex-container.flex-direction-column-mobile-reverse.align-items-center.gap-2
+  .text-wrapper.flex-2
+    %h2.white
+      =hoc_s("hoc_resources.stickers.heading")
+    %p.body-two.white
+      =hoc_s("hoc_resources.stickers.desc")
+    %a.link-button.white{href: "https://hourofcode.com/images/hour-of-code-stickers.pdf", target: "_blank", rel: "noopener noreferrer"}
+      %i{class: "fa-solid fa-download", style: "margin-inline-end: 0.25rem;"}
+      =hoc_s("hoc_resources.stickers.button")
+  %figure{style: "flex: 0.75"}
+    %img{src: "/images/resources/stickers.png", alt: "", style: "width: 100%"}

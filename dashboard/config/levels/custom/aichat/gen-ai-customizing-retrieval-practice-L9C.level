@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-05-04T02:27:26.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Know Your Rights\r\n\r\nVeronica wants to make a chatbot to help people understand their rights in certain situations. The user should be able to ask \"what are my rights when [X] happens?\" or \"what are my rights when I'm in [X]\" and the chatbot will respond. This requires very specific and accurate information, so Veronica has decided to use Retrieval to help her create the chatbot.\r\n\r\n### Do This\r\n1) Visit a website that helps people understand their rights in different situations\r\n    - For example: the [ACLU Know your Rights page](https://www.aclu.org/know-your-rights) or the [CAIR Know your Rights Guides](https://www.cair.com/know_your_rights/download-know-your-rights-guides/)\r\n2) Decide on a situation or context that is meaningful for you\r\n    - For example: patient rights in the medical system, or your rights to free speech\r\n3) Create a system prompt that helps people understand these rights\r\n4) Add at least 5 pieces of retrieval based on your source.\r\n5) **Test the chatbot carefully!** This is a situation where incorrect information could be harmful to someone trying to use this chatbot.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "display_name": "Know Your Rights",
+    "bubble_choice_description": "Veronica wants to make a chatbot to help people understand their rights in certain situations.",
+    "thumbnail_url": "https://images.code.org/6cbdf39de5e1d6d256f6920ba6d05c12-Lesson 7 - Level 9C- Know Your Rights.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:27:26.926+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L7\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L7\"},{\"changed_at\":\"2024-05-10 04:46:07 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:32:43 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

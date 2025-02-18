@@ -3,26 +3,25 @@
  * Used in LevelBuilder, and relies on some apps code for validation.
  * Supports both Bee and Farmer skins.
  */
+import {cells, utils as mazeUtils} from '@code-dot-org/maze';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {cells, utils as mazeUtils} from '@code-dot-org/maze';
-
 var StudioCell = require('@cdo/apps/studio/cell');
 
+var BeeCellEditor = require('./BeeCellEditor');
+var BounceCellEditor = require('./BounceCellEditor');
+var CellEditor = require('./CellEditor');
+var Grid = require('./Grid');
 var HarvesterCellEditor = require('./HarvesterCellEditor');
 var PlanterCellEditor = require('./PlanterCellEditor');
-var BeeCellEditor = require('./BeeCellEditor');
-var CellEditor = require('./CellEditor');
-var StudioCellEditor = require('./StudioCellEditor');
 var StarWarsGridCellEditor = require('./StarWarsGridCellEditor');
-var BounceCellEditor = require('./BounceCellEditor');
-var Grid = require('./Grid');
+var StudioCellEditor = require('./StudioCellEditor');
 
 class CellJSON extends React.Component {
   static propTypes = {
     serialization: PropTypes.object.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   componentDidUpdate() {
@@ -56,7 +55,7 @@ export default class GridEditor extends React.Component {
     maze: PropTypes.arrayOf(PropTypes.array), // maze items can be integers or strings
     initialDirt: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
     skin: PropTypes.string.isRequired,
-    onUpdate: PropTypes.func.isRequired
+    onUpdate: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -76,7 +75,7 @@ export default class GridEditor extends React.Component {
     }
 
     this.state = {
-      cells: cells
+      cells: cells,
     };
   }
 
@@ -113,7 +112,7 @@ export default class GridEditor extends React.Component {
   changeSelection = (row, col) => {
     this.setState({
       selectedRow: row,
-      selectedCol: col
+      selectedCol: col,
     });
   };
 
@@ -157,7 +156,7 @@ export default class GridEditor extends React.Component {
 
     this.props.onUpdate(serializedData);
     this.setState({
-      cells: cells
+      cells: cells,
     });
   }
 
@@ -187,7 +186,7 @@ export default class GridEditor extends React.Component {
    */
   setCopiedCells = cells => {
     this.setState({
-      copiedCells: cells
+      copiedCells: cells,
     });
   };
 

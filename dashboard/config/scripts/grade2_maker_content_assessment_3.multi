@@ -1,0 +1,23 @@
+name 'grade2-maker-content-assessment-3'
+editor_experiment ''
+right 'An action that causes something to happen'
+wrong 'An error in a program'
+wrong 'A type of variable used to store information in a program'
+wrong 'A reusable chunk of code'
+
+
+
+markdown <<MARKDOWN
+# Question Three
+
+Which is the best definition of an event?
+
+<img src="https://images.code.org/b6628da3d9f2bc668f68112e43e77921-image-1713910778046.png" style="float:left; width:60%">
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+
+MARKDOWN
+
+allow_multiple_attempts true

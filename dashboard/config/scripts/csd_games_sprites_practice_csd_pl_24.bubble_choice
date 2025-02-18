@@ -1,0 +1,11 @@
+name 'CSD Games Sprites practice_CSD-PL-24'
+display_name 'Creating sprites and animations'
+description 'Use your new sprite and animation skills to complete these levels.'
+
+sublevels
+level 'CSD U3 Sprites missing_CSD-PL-24'
+level 'CSD U3 Sprites names_CSD-PL-24'
+level 'CSD U3 Sprites name sprite_CSD-PL-24'
+level 'CSD U3 Sprites order_CSD-PL-24'
+level 'CSD U3 Sprites fish_CSD-PL-24'
+level 'CSD U3 Sprites sprite draw_CSD-PL-24'

@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-11-25T22:07:13.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_Equity_in_CS_Education",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_2024",
+    "encrypted": "false",
+    "long_instructions": "#### The following video provides more information about Code.org's stance toward equity in computer science education. \r\n\r\n#### While you watch, reflect on the key terms we introduced in the previous level. Consider how would you evaluate your district, school, and/or classroom on the following:\r\n\r\n* #### **Access**: On a scale of 1-5, how well does your district/school/classroom ensure that all students, especially those from marginalized groups, have the right and opportunity to learn and experience computer science?\r\n* #### **Inclusion**: One a scale of 1-5, how effective are your strategies  to create learning environments that welcome and celebrate students’ diverse identities and perspectives?\r\n* #### **Diversity**: On a scale of 1-5, how well does your school/district/classroom integrate and celebrate diverse perspectives in your curriculum and teaching practices?\r\n<br>"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-11-25T22:07:13.545+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod1-welcome-vid_2024\\\"\"],\"cloned_from\":\"SP-VPL-21-mod1-welcome-vid_2024\"},{\"changed_at\":\"2024-11-25 22:09:05 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-01-21 23:47:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-01-21 23:47:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

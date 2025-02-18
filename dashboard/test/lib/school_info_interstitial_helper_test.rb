@@ -171,4 +171,15 @@ class SchoolInfoInterstitialHelperTest < ActiveSupport::TestCase
     refute SchoolInfoInterstitialHelper.show_confirmation_dialog? user
     refute SchoolInfoInterstitialHelper.show? user
   end
+
+  test 'shows school info interstitial if account has no school info even if created recently if LTI user' do
+    user = create :teacher, created_at: 5.minutes.ago
+    create :lti_authentication_option, user: user
+
+    assert_nil user.school_info
+    assert_empty user.user_school_infos
+
+    refute SchoolInfoInterstitialHelper.show_confirmation_dialog? user
+    assert SchoolInfoInterstitialHelper.show? user
+  end
 end

@@ -6,21 +6,13 @@ module TestRunUtils
   def self.run_apps_tests
     Dir.chdir(apps_dir) do
       ChatClient.wrap('apps tests') do
-        RakeUtils.system_stream_output 'DEV=1 npm run test-low-memory'
-      end
-    end
-  end
-
-  def self.run_interpreter_tests
-    Dir.chdir(apps_dir) do
-      ChatClient.wrap('interpreter tests') do
-        RakeUtils.system './test/interpreter/test-on-circle.sh'
+        RakeUtils.system_stream_output 'DEV=1 npm run test'
       end
     end
   end
 
   def self.run_local_ui_test
-    feature_path = File.expand_path(ENV['feature'])
+    feature_path = File.expand_path(ENV.fetch('feature', nil))
     Dir.chdir(dashboard_dir('test/ui/')) do
       RakeUtils.system "./runner.rb --verbose --pegasus=localhost.code.org:3000 --dashboard=localhost-studio.code.org:3000 --local --headed --feature=#{feature_path}"
     end
@@ -89,10 +81,28 @@ module TestRunUtils
     end
   end
 
-  def self.run_bin_i18n_tests
-    Dir.chdir(bin_i18n_dir) do
-      ChatClient.wrap('bin/i18n tests') do
+  def self.run_python_tests
+    ChatClient.wrap('python tests') do
+      # Run pytest on every sub-dir in python/ that has a pyproject.toml
+      Dir.glob('python/**/pyproject.toml').map {|file| File.dirname(file)}.each do |dir|
+        PythonVenv.pytest dir
+      end
+    end
+  end
+
+  def self.run_bin_tests
+    Dir.chdir(bin_dir) do
+      ChatClient.wrap('bin tests') do
         RakeUtils.rake_stream_output 'test'
+      end
+    end
+  end
+
+  def self.run_frontend_tests
+    Dir.chdir(frontend_dir) do
+      ChatClient.wrap('frontend tests') do
+        # Only run frontend tests that are relevant to `code-dot-org/apps`
+        RakeUtils.system_stream_output 'yarn test --filter @code-dot-org/component-library'
       end
     end
   end

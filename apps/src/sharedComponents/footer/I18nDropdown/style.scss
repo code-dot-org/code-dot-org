@@ -1,0 +1,85 @@
+@import 'color';
+
+#localeForm {
+  min-width: 6.25rem;
+  max-width: 50%;
+}
+
+.languageSelect {
+  > div {
+    display: flex;
+    align-items: center;
+
+    select {
+      height: 1.625rem;
+      padding-inline-start: 1.75rem;
+      padding-inline-end: 1.75rem;
+    }
+
+    &:before {
+      position: absolute;
+      pointer-events: none;
+      height: 1rem;
+      width: 1rem;
+      padding-inline-start: 0.5rem;
+
+      color: $light_gray_950;
+      content: '\f0ac';
+      text-align: center;
+
+      font-family: 'Font Awesome 6 Pro', sans-serif;
+      font-size: 0.8125rem;
+
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.25;
+    }
+  }
+}
+
+.music-black {
+  .languageSelect {
+    > div {
+      select {
+        border-color: $light_white;
+        background-color: $light_gray_950;
+        color: $light_white;
+      }
+      &::after {
+        background-color: initial;
+        color: $light_white;
+      }
+      &::before {
+        background-color: initial;
+        color: $light_white;
+      }
+
+      &:has(select:hover) {
+        select:not(:disabled) {
+          color: $light_white;
+          background-color: $light_gray_950;
+        }
+        &::before {
+          color: $light_white;
+        }
+        &::after {
+          color: $light_white;
+        }
+      }
+
+      &:has(select:active) {
+        select:not(:disabled) {
+          color: $light_white;
+          background-color: $light_gray_950;
+        }
+
+        &::before {
+          color: $light_white;
+        }
+        &::after {
+          color: $light_white;
+        }
+      }
+    }
+  }
+}

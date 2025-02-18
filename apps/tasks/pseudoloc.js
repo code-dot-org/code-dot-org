@@ -1,6 +1,4 @@
 module.exports = function (grunt) {
-  'use strict';
-
   var path = require('path');
 
   var pseudolocString = function (string) {
@@ -9,7 +7,6 @@ module.exports = function (grunt) {
   };
 
   grunt.registerMultiTask('pseudoloc', 'Pseudolocalize Messages', function () {
-
     var srcBase = this.data.srcBase;
     var srcLocale = this.data.srcLocale;
     var destBase = this.data.destBase;
@@ -23,7 +20,7 @@ module.exports = function (grunt) {
         var destPath = matchedPath.substring(srcBase.length);
         var filename = destPath.replace(srcLocale, pseudoLocale);
         return path.join(destBase, filename);
-      }
+      },
     });
 
     // Pseudolocalize each string from the source locale.
@@ -34,7 +31,5 @@ module.exports = function (grunt) {
       });
       grunt.file.write(file.dest, JSON.stringify(messages, null, 2));
     });
-
   });
-
 };

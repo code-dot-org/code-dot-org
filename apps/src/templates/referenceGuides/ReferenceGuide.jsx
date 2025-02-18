@@ -1,12 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import i18n from '@cdo/locale';
-import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import '../../../style/curriculum/documentation_tables.scss';
 
 const referenceGuideShape = PropTypes.shape({
-  content: PropTypes.string
+  content: PropTypes.string,
 });
 
 export default function ReferenceGuide({referenceGuide}) {
@@ -26,5 +27,5 @@ export default function ReferenceGuide({referenceGuide}) {
 }
 
 ReferenceGuide.propTypes = {
-  referenceGuide: referenceGuideShape.isRequired
+  referenceGuide: referenceGuideShape.isRequired,
 };

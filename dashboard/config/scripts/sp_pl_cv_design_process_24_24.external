@@ -1,0 +1,27 @@
+name 'sp-pl-CV_Design_Process_24_24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Design Thinking Process
+
+<img src="https://images.code.org/af347ab3e6a799250df9c3301d93674c-image-1714589887029.png" alt="design process graph of the cycle" width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+
+
+#### The **Design Thinking Process** involves five steps that teams use to understand users, challenge assumptions, redefine problems, and create innovative solutions. 
+
+## Cyclical Design Process 
+
+#### Students will use this process throughout this unit as they work towards developing a prototype for a computer vision product. It involves understanding users, defining problems, brainstorming solutions, creating prototypes, and testing them while emphasizing a **user-centric mindset**.
+
+## Why use this process?
+
+#### By practicing these steps, students will learn to continuously improve their ideas and ultimately develop their own prototypes. This cyclical process helps students build creativity and problem-solving skills in a practical, hands-on way.
+
+
+
+
+
+
+MARKDOWN

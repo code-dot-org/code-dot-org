@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
+
+import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 export default class CourseOverviewTopRow extends Component {
   static propTypes = {
@@ -14,7 +16,9 @@ export default class CourseOverviewTopRow extends Component {
     teacherResources: PropTypes.arrayOf(resourceShape),
     studentResources: PropTypes.arrayOf(resourceShape),
     showAssignButton: PropTypes.bool,
-    isInstructor: PropTypes.bool
+    isInstructor: PropTypes.bool,
+    courseName: PropTypes.string,
+    participantAudience: PropTypes.string,
   };
 
   render() {
@@ -22,33 +26,25 @@ export default class CourseOverviewTopRow extends Component {
       id,
       courseOfferingId,
       courseVersionId,
-      teacherResources,
-      studentResources,
       showAssignButton,
       sectionsForDropdown,
-      isInstructor
+      isInstructor,
+      courseName,
+      participantAudience,
     } = this.props;
 
     return (
       <div style={styles.main} className="course-overview-top-row">
-        {isInstructor && teacherResources.length > 0 && (
-          <ResourcesDropdown resources={teacherResources} unitGroupId={id} />
-        )}
-        {isInstructor && (
+        {isInstructor && !showV2TeacherDashboard() && (
           <SectionAssigner
             sections={sectionsForDropdown}
             showAssignButton={showAssignButton}
             courseId={id}
-            buttonLocationAnalytics={'course-overview-top'}
+            isAssigningCourse={true}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
-          />
-        )}
-        {!isInstructor && studentResources && studentResources.length > 0 && (
-          <ResourcesDropdown
-            resources={studentResources}
-            unitGroupId={id}
-            studentFacing
+            assignmentName={courseName}
+            participantAudience={participantAudience}
           />
         )}
       </div>
@@ -59,9 +55,9 @@ export default class CourseOverviewTopRow extends Component {
 const styles = {
   main: {
     marginBottom: 10,
-    position: 'relative'
+    position: 'relative',
   },
   dropdown: {
-    display: 'inline-block'
-  }
+    display: 'inline-block',
+  },
 };

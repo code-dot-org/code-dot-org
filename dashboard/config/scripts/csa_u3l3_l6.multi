@@ -16,3 +16,5 @@ wrong '5'
 wrong '4'
 right '3'
 wrong '2'
+
+allow_multiple_attempts true

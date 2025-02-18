@@ -1,9 +1,11 @@
-import React from 'react';
-import {mount} from 'enzyme';
-import {assert, expect} from 'chai';
-import sinon from 'sinon';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 
 describe('SchoolAutocompleteDropdown', () => {
@@ -45,7 +47,7 @@ describe('SchoolAutocompleteDropdown', () => {
     fetchStub.withArgs(url).returns(
       Promise.resolve({
         ok: true,
-        json: () => responseJson
+        json: () => responseJson,
       })
     );
 
@@ -67,7 +69,7 @@ describe('SchoolAutocompleteDropdown', () => {
       handleChange.calledOnce &&
         handleChange.calledWith({
           value: '1',
-          label: 'selected school'
+          label: 'selected school',
         })
     );
   });
@@ -93,12 +95,12 @@ describe('SchoolAutocompleteDropdown', () => {
     describe('(stubbing debounce)', () => {
       let debounceStub;
 
-      before(() => {
+      beforeAll(() => {
         // stub out debounce to return the original function, so it's called immediately
         debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
       });
 
-      after(() => {
+      afterAll(() => {
         debounceStub.restore();
       });
 
@@ -109,15 +111,15 @@ describe('SchoolAutocompleteDropdown', () => {
             name: 'Abcd School 1',
             city: 'Seattle',
             state: 'WA',
-            zip: '98101'
+            zip: '98101',
           },
           {
             nces_id: 11,
             name: 'Abcd School 2',
             city: 'Redmond',
             state: 'WA',
-            zip: '98073'
-          }
+            zip: '98073',
+          },
         ]);
 
         const response = await getOptions('abcd');
@@ -127,7 +129,7 @@ describe('SchoolAutocompleteDropdown', () => {
             {
               value: '-1',
               label:
-                'Other school not listed below (click here to provide details)'
+                'Other school not listed below (click here to provide details)',
             },
             {
               value: '10',
@@ -137,8 +139,8 @@ describe('SchoolAutocompleteDropdown', () => {
                 name: 'Abcd School 1',
                 city: 'Seattle',
                 state: 'WA',
-                zip: '98101'
-              }
+                zip: '98101',
+              },
             },
             {
               value: '11',
@@ -148,10 +150,10 @@ describe('SchoolAutocompleteDropdown', () => {
                 name: 'Abcd School 2',
                 city: 'Redmond',
                 state: 'WA',
-                zip: '98073'
-              }
-            }
-          ]
+                zip: '98073',
+              },
+            },
+          ],
         });
       });
 
@@ -165,9 +167,9 @@ describe('SchoolAutocompleteDropdown', () => {
             {
               value: '-1',
               label:
-                'Other school not listed below (click here to provide details)'
-            }
-          ]
+                'Other school not listed below (click here to provide details)',
+            },
+          ],
         });
       });
 
@@ -180,9 +182,9 @@ describe('SchoolAutocompleteDropdown', () => {
             {
               value: '-1',
               label:
-                'Other school not listed below (click here to provide details)'
-            }
-          ]
+                'Other school not listed below (click here to provide details)',
+            },
+          ],
         });
       });
 
@@ -193,7 +195,7 @@ describe('SchoolAutocompleteDropdown', () => {
           name: 'Abcd School 1',
           city: 'Seattle',
           state: 'WA',
-          zip: '98101'
+          zip: '98101',
         });
 
         const response = await getOptions('');
@@ -208,10 +210,10 @@ describe('SchoolAutocompleteDropdown', () => {
                 name: 'Abcd School 1',
                 city: 'Seattle',
                 state: 'WA',
-                zip: '98101'
-              }
-            }
-          ]
+                zip: '98101',
+              },
+            },
+          ],
         });
       });
     });

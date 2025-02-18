@@ -3,39 +3,42 @@
  * Route: /reports
  * Contains query fields (from, to, queryBy, course, report) and generates a report based on the response.
  */
-import PropTypes from 'prop-types';
-import React from 'react';
 import _ from 'lodash';
 import moment from 'moment';
-import WorkshopSummaryReport from './workshop_summary_report';
-import TeacherAttendanceReport from './teacher_attendance_report';
-import DatePicker from '../components/date_picker';
-
+import PropTypes from 'prop-types';
+import React from 'react';
+/* eslint-disable no-restricted-imports */
 import {
   Grid,
   Row,
   Col,
   FormGroup,
   ControlLabel,
-  FormControl
+  FormControl,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
+
+import DatePicker from '../components/date_picker';
+
 import {
   QUERY_BY_OPTIONS,
   QUERY_BY_VALUES,
   COURSE_OPTIONS,
-  COURSE_VALUES
+  COURSE_VALUES,
 } from './report_constants';
+import TeacherAttendanceReport from './teacher_attendance_report';
+import WorkshopSummaryReport from './workshop_summary_report';
 
 const REPORT_VALUES = ['Teacher Attendance', 'Workshop Summary'];
 const API_DATE_FORMAT = 'YYYY-MM-DD';
 
 export default class ReportView extends React.Component {
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   static propTypes = {
-    location: PropTypes.object
+    location: PropTypes.object,
   };
 
   constructor(props) {
@@ -65,7 +68,7 @@ export default class ReportView extends React.Component {
       endDate: end || moment(),
       queryBy: queryBy || QUERY_BY_VALUES[0],
       course: course,
-      report: report || REPORT_VALUES[0]
+      report: report || REPORT_VALUES[0],
     };
   }
 
@@ -111,15 +114,13 @@ export default class ReportView extends React.Component {
       API_DATE_FORMAT
     );
     const queryBy = newState.queryBy || this.state.queryBy;
-    const course = newState.hasOwnProperty('course')
+    const course = Object.prototype.hasOwnProperty.call(newState, 'course')
       ? newState.course
       : this.state.course;
     const report = newState.report || this.state.report;
 
     const course_param = course ? `&course=${course}` : '';
-    const url = `${
-      this.props.location.pathname
-    }?start=${startDate}&end=${endDate}&queryBy=${queryBy}${course_param}&report=${report}`;
+    const url = `${this.props.location.pathname}?start=${startDate}&end=${endDate}&queryBy=${queryBy}${course_param}&report=${report}`;
     this.context.router.replace(url);
 
     if (!_.isEmpty(newState)) {

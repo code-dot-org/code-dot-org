@@ -3,6 +3,7 @@
 # Recipe:: default
 #
 
+# Install binary nodejs from nodesource apt repo
 node.default['nodejs']['repo'] = "https://deb.nodesource.com/node_#{node['cdo-nodejs']['version']}"
 include_recipe 'nodejs'
 
@@ -11,13 +12,6 @@ package 'nodejs' do
   action :upgrade
 end
 
-apt_repository "yarn" do
-  uri "https://dl.yarnpkg.com/debian/"
-  distribution 'stable'
-  components ['main']
-  key "https://dl.yarnpkg.com/debian/pubkey.gpg"
-end
-
-apt_package 'yarn' do
-  version node['cdo-nodejs']['yarn_version']
+execute 'enable corepack for yarn support' do
+  command 'corepack enable'
 end

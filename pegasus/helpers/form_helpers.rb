@@ -26,11 +26,13 @@ end
 #   @option [Integer] :parent_id The ID of the parent form.
 # TODO(asher): Fix this method, both the naming of it (to indicate the upsert behavior) and its
 # implementation (not overwriting various fields on update).
-def insert_or_upsert_form(kind, data, options={})
+def insert_or_upsert_form(kind, data, options = {})
+  # rubocop:disable CustomCops/DashboardDbUsage
   if dashboard_user
     data[:email_s] ||= dashboard_user[:email]
     data[:name_s] ||= dashboard_user[:name]
   end
+  # rubocop:enable CustomCops/DashboardDbUsage
 
   # The DB cannot store utf8mb4 characters so make sure they are all stripped out.
   data.each do |k, v|
@@ -55,7 +57,9 @@ def insert_or_upsert_form(kind, data, options={})
     updated_ip: request.ip,
     hashed_email: Digest::MD5.hexdigest(normalized_email),
   }
+  # rubocop:disable CustomCops/DashboardDbUsage
   row[:user_id] = dashboard_user ? dashboard_user[:id] : data[:user_id_i]
+  # rubocop:enable CustomCops/DashboardDbUsage
 
   form_class = Object.const_get(kind)
   row[:source_id] = form_class.get_source_id(data) if form_class.respond_to? :get_source_id
@@ -89,10 +93,12 @@ end
 def update_form(kind, secret, updates)
   return nil unless (update_form = Form.find(kind: kind, secret: secret))
 
+  # rubocop:disable CustomCops/DashboardDbUsage
   if dashboard_user && !dashboard_user[:admin]
     updates[:email_s] ||= dashboard_user[:email]
     updates[:name_s] ||= dashboard_user[:name]
   end
+  # rubocop:enable CustomCops/DashboardDbUsage
 
   existing_data = JSON.parse update_form.data, symbolize_names: true
   form_data = JSON.parse updates[:data], symbolize_names: true if updates[:data]
@@ -102,7 +108,9 @@ def update_form(kind, secret, updates)
 
   normalized_email = merged_info[:email_s].to_s.strip.downcase if merged_info.key?(:email_s)
 
+  # rubocop:disable CustomCops/DashboardDbUsage
   update_form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
+  # rubocop:enable CustomCops/DashboardDbUsage
   update_form[:email] = normalized_email
   update_form[:name] = merged_info[:name_s].to_s.strip if merged_info.key?(:name_s)
   update_form[:data] = merged_info.to_json

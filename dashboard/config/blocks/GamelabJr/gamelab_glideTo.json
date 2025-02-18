@@ -2,7 +2,6 @@
   "category": "Sprites",
   "config": {
     "func": "glideTo",
-    "docFunc": "gamelab_glideTo",
     "blockText": "{SPRITE} glide to {LOCATION}",
     "args": [
       {
@@ -13,6 +12,7 @@
         "name": "LOCATION",
         "type": "Location"
       }
-    ]
+    ],
+    "style": "default"
   }
 }

@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 require "csv"
@@ -510,6 +511,20 @@ class Craft < Blockly
     grid_height || 10
   end
 
+  def project_type
+    if is_agent_level == 'true'
+      'minecraft_hero'
+    elsif is_event_level == 'true'
+      'minecraft_designer'
+    elsif is_connection_level == 'true'
+      'minecraft_codebuilder'
+    elsif is_aquatic_level == 'true'
+      'minecraft_aquatic'
+    else
+      'minecraft_adventurer'
+    end
+  end
+
   def self.create_from_level_builder(params, level_params)
     default_game_params = {}
     default_game_params[:ground_plane] = '[' + ([(['"grass"'] * 12).join(',')] * 12).join(",\n") + ']'
@@ -720,5 +735,9 @@ class Craft < Blockly
       </category>
       #{common_blocks(type)}
     XML
+  end
+
+  def validated?
+    properties['free_play'] == 'false'
   end
 end

@@ -18,12 +18,12 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   timeoutFailureTick: 200,
   freePlay: true,
   edgeCollisions: true,
-  allowSpritesOutsidePlayspace: false
+  allowSpritesOutsidePlayspace: false,
 };
 
 module.exports = {
@@ -84,13 +84,13 @@ module.exports = {
         '</block></next>' +
         '</block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 3000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert(
           Studio.playerScore === 4,
           'actual player score is ' + Studio.playerScore
@@ -106,8 +106,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -144,13 +144,13 @@ module.exports = {
         '<title name="VALUE">1</title>' +
         '</block></next></block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // make sure we've scored multiple points
         assert(
           Studio.playerScore > 1,
@@ -160,8 +160,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -198,13 +198,13 @@ module.exports = {
         '<title name="VALUE">1</title>' +
         '</block></next></block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // make sure we've scored multiple points
         assert(
           Studio.playerScore > 1,
@@ -214,8 +214,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
 
     {
@@ -272,13 +272,13 @@ module.exports = {
         '</block></next>' +
         '</block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 2000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // make sure we've scored all four points
         assert(
           Studio.playerScore === 4,
@@ -295,8 +295,8 @@ module.exports = {
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

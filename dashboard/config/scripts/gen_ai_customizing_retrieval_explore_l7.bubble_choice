@@ -1,0 +1,14 @@
+name 'gen-ai-customizing-retrieval-explore-L7'
+editor_experiment ''
+display_name 'Modify Levels'
+description 'Choose 1-2 levels below to modify and experiment with how Retrieval works'
+
+sublevels
+level 'gen-ai-customizing-retrieval-explore-L7A'
+level 'gen-ai-customizing-retrieval-explore-L7B'
+level 'gen-ai-customizing-retrieval-explore-L7C'
+level 'gen-ai-customizing-retrieval-explore-L7D'
+
+markdown <<MARKDOWN
+
+MARKDOWN

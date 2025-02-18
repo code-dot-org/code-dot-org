@@ -33,7 +33,7 @@ class Block < ApplicationRecord
   end
 
   def self.load_and_cache_by_pool(pool)
-    if Unit.should_cache? && !Block.all_pool_names.include?(pool)
+    if Unit.should_cache? && Block.all_pool_names.exclude?(pool)
       return nil
     end
 
@@ -87,10 +87,10 @@ class Block < ApplicationRecord
   end
 
   def delete_additional_files
-    File.delete js_path_was if File.exist? js_path_was
+    FileUtils.rm_f js_path_was
   end
 
-  def js_path(old=false)
+  def js_path(old = false)
     Pathname.new(file_path(old)).sub_ext('.js')
   end
 

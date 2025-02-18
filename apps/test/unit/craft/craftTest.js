@@ -1,17 +1,19 @@
-import {assert} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import Craft from '@cdo/apps/craft/code-connection/craft';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
-import Craft from '@cdo/apps/craft/code-connection/craft';
+
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Craft', () => {
-  before(() => sinon.stub(Craft, 'render'));
-  after(() => Craft.render.restore());
+  beforeAll(() => sinon.stub(Craft, 'render'));
+  afterAll(() => Craft.render.restore());
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);
@@ -20,7 +22,7 @@ describe('Craft', () => {
     registerReducers({pageConstants});
     const config = {
       level: {},
-      skin: {}
+      skin: {},
     };
 
     // Craft.init makes an API call, and if that call fails, tries to display
@@ -31,7 +33,7 @@ describe('Craft', () => {
     server.respondWith('GET', 'http://localhost:8080/connected', [
       200,
       {'Content-Type': 'application/json'},
-      '{"foo": "bar"}'
+      '{"foo": "bar"}',
     ]);
 
     Craft.init(config);

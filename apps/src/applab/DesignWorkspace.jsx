@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
 import DesignModeBox from './DesignModeBox';
 import DesignModeHeaders from './DesignModeHeaders';
-import {connect} from 'react-redux';
 
 class DesignWorkspace extends React.Component {
   static propTypes = {
@@ -28,14 +29,14 @@ class DesignWorkspace extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    showMakerToggle: PropTypes.bool
+    showMakerToggle: PropTypes.bool,
   };
 
   state = {isToolboxVisible: true};
 
   onToggleToolbox = () =>
     this.setState({
-      isToolboxVisible: !this.state.isToolboxVisible
+      isToolboxVisible: !this.state.isToolboxVisible,
     });
 
   render() {
@@ -60,6 +61,7 @@ class DesignWorkspace extends React.Component {
           handleDragStart={this.props.handleDragStart}
           isDimmed={this.props.isDimmed}
           isToolboxVisible={this.state.isToolboxVisible}
+          isRtl={this.props.isRtl}
           onCopyElementToScreen={this.props.onCopyElementToScreen}
           onChangeElement={this.props.onChangeElement}
           onDelete={this.props.onDelete}
@@ -76,9 +78,9 @@ class DesignWorkspace extends React.Component {
   }
 }
 export default connect(state => ({
-  showProjectTemplateWorkspaceIcon: !!state.pageConstants
-    .showProjectTemplateWorkspaceIcon,
+  showProjectTemplateWorkspaceIcon:
+    !!state.pageConstants.showProjectTemplateWorkspaceIcon,
   isRtl: state.isRtl,
   isRunning: !!state.runState.isRunning,
-  showMakerToggle: !!state.pageConstants.showMakerToggle
+  showMakerToggle: !!state.pageConstants.showMakerToggle,
 }))(DesignWorkspace);

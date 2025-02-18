@@ -1,17 +1,15 @@
 module Pd::Payment
-  # Payment model for counselor and admin workshops.
+  # Payment model for Admin/Counselor workshops.
   class PaymentCalculatorCounselorAdmin < PaymentCalculatorBase
     PLP_URBAN_MULTIPLIER = 1.25
     FOOD_PAYMENT_PER_TEACHER_PER_DAY = 20
     STAFFER_PAYMENT_PER_DAY = 250
     VENUE_PAYMENT_PER_DAY = 400
 
-    protected
-
     # Calculates payment amounts.
     # @param workshop_summary [WorkshopSummary] calculated workshop details that go into payment amount calculation.
     # @return [Hash{String => Numeric}] Map of payment parts (e.g. :food) to their dollar amounts.
-    def calculate_payment_amounts(workshop_summary)
+    protected def calculate_payment_amounts(workshop_summary)
       plp_multiplier = workshop_summary.plp&.urban? ? PLP_URBAN_MULTIPLIER : 1
 
       {

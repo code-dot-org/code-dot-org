@@ -1,12 +1,14 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
-import OwnedSectionsTable from './OwnedSectionsTable';
+
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import teacherSections, {
   setCourseOfferings,
-  setSections
+  setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import OwnedSectionsTable from './OwnedSectionsTable';
 
 const serverSections = [
   {
@@ -21,7 +23,7 @@ const serverSections = [
     script: null,
     course_id: 29,
     studentCount: 10,
-    hidden: false
+    hidden: false,
   },
   {
     id: 12,
@@ -34,11 +36,11 @@ const serverSections = [
     pairing_allowed: true,
     script: {
       id: 36,
-      name: 'course3'
+      name: 'course3',
     },
     course_id: null,
     studentCount: 1,
-    hidden: false
+    hidden: false,
   },
   {
     id: 20,
@@ -52,11 +54,11 @@ const serverSections = [
     pairing_allowed: true,
     script: {
       id: 36,
-      name: 'course3'
+      name: 'course3',
     },
     course_id: null,
     studentCount: 5,
-    hidden: false
+    hidden: false,
   },
   {
     id: 21,
@@ -70,11 +72,11 @@ const serverSections = [
     pairing_allowed: true,
     script: {
       id: 36,
-      name: 'course3'
+      name: 'course3',
     },
     course_id: null,
     studentCount: 4,
-    hidden: false
+    hidden: false,
   },
   {
     id: 307,
@@ -87,17 +89,17 @@ const serverSections = [
     pairing_allowed: false,
     script: {
       id: 46,
-      name: 'infinity'
+      name: 'infinity',
     },
     course_id: null,
     studentCount: 0,
-    hidden: false
-  }
+    hidden: false,
+  },
 ];
 
 export default {
   name: 'OwnedSectionsTable (teacher dashboard)',
-  component: OwnedSectionsTable
+  component: OwnedSectionsTable,
 };
 
 export const SectionTable = () => {

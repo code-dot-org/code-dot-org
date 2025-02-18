@@ -1,27 +1,33 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PropertyRow from './PropertyRow';
+
+import applabMsg from '@cdo/applab/locale';
+
+import {ICON_PREFIX_REGEX} from '../constants';
+import designMode from '../designMode';
+import themeValues from '../themeValues';
+
 import BooleanPropertyRow from './BooleanPropertyRow';
+import BorderProperties from './BorderProperties';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
-import ImagePickerPropertyRow from './ImagePickerPropertyRow';
-import ZOrderRow from './ZOrderRow';
+import * as elementUtils from './elementUtils';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import EnumPropertyRow from './EnumPropertyRow';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
-import BorderProperties from './BorderProperties';
-import themeValues from '../themeValues';
-import {ICON_PREFIX_REGEX} from '../constants';
-import * as elementUtils from './elementUtils';
-import designMode from '../designMode';
+import ImagePickerPropertyRow from './ImagePickerPropertyRow';
 import elementLibrary from './library';
+import PropertyRow from './PropertyRow';
+import TextAlignmentPropertyRow, {
+  TEXT_ALIGNMENT_CENTER,
+} from './TextAlignmentPropertyRow';
+import ZOrderRow from './ZOrderRow';
 
 class ButtonProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   handleIconColorChange = value => {
@@ -40,7 +46,7 @@ class ButtonProperties extends React.Component {
     if (ICON_PREFIX_REGEX.test(canonicalImage)) {
       iconColorPicker = (
         <ColorPickerPropertyRow
-          desc={'icon color'}
+          desc={applabMsg.designElementProperty_iconColor()}
           initialValue={element.getAttribute('data-icon-color') || '#000000'}
           handleChange={this.handleIconColorChange}
         />
@@ -50,47 +56,47 @@ class ButtonProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <PropertyRow
-          desc={'text'}
+          desc={applabMsg.designElementProperty_text()}
           initialValue={$(element).text()}
           handleChange={this.props.handleChange.bind(this, 'text')}
         />
         <PropertyRow
-          desc={'width (px)'}
+          desc={applabMsg.designElementProperty_widthPx()}
           isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
-          desc={'height (px)'}
+          desc={applabMsg.designElementProperty_heightPx()}
           isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
-          desc={'x position (px)'}
+          desc={applabMsg.designElementProperty_xPositionPx()}
           isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
-          desc={'y position (px)'}
+          desc={applabMsg.designElementProperty_yPositionPx()}
           isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <ColorPickerPropertyRow
-          desc={'text color'}
+          desc={applabMsg.designElementProperty_textColor()}
           initialValue={element.style.color}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <ColorPickerPropertyRow
-          desc={'background color'}
+          desc={applabMsg.designElementProperty_backgroundColor()}
           initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
@@ -101,19 +107,17 @@ class ButtonProperties extends React.Component {
           handleChange={this.props.handleChange.bind(this, 'fontFamily')}
         />
         <PropertyRow
-          desc={'font size (px)'}
+          desc={applabMsg.designElementProperty_fontSizePx()}
           isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
         />
-        <EnumPropertyRow
-          desc={'text alignment'}
-          initialValue={element.style.textAlign || 'center'}
-          options={['left', 'right', 'center', 'justify']}
+        <TextAlignmentPropertyRow
+          initialValue={element.style.textAlign || TEXT_ALIGNMENT_CENTER}
           handleChange={this.props.handleChange.bind(this, 'textAlign')}
         />
         <ImagePickerPropertyRow
-          desc={'image'}
+          desc={applabMsg.designElementProperty_image()}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           currentImageType={element.getAttribute('data-image-type') || ''}
           handleChange={this.props.handleChange.bind(this, 'image')}
@@ -136,7 +140,7 @@ class ButtonProperties extends React.Component {
           )}
         />
         <BooleanPropertyRow
-          desc={'hidden'}
+          desc={applabMsg.designElementProperty_hidden()}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
@@ -153,7 +157,7 @@ class ButtonEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getClickEventCode() {
@@ -166,22 +170,19 @@ class ButtonEvents extends React.Component {
 
   render() {
     const element = this.props.element;
-    const clickName = 'Click';
-    const clickDesc =
-      'Triggered when the button is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
         />
         <EventHeaderRow />
         <EventRow
-          name={clickName}
-          desc={clickDesc}
+          name={applabMsg.designElementEvent_click()}
+          desc={applabMsg.designElement_button_clickEventDesc()}
           handleInsert={this.insertClick}
         />
       </div>
@@ -202,7 +203,7 @@ export default {
   EventTab: ButtonEvents,
   themeValues: themeValues.button,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('button');
     element.appendChild(document.createTextNode('Button'));
     element.style.padding = '0px';
@@ -226,7 +227,7 @@ export default {
 
     return element;
   },
-  onDeserialize: function(element, updateProperty) {
+  onDeserialize: function (element, updateProperty) {
     const url = element.getAttribute('data-canonical-image-url');
     if (url) {
       updateProperty(element, 'image', url);
@@ -235,5 +236,5 @@ export default {
     elementUtils.setDefaultBorderStyles(element);
     // Set the font family for older projects that didn't set them on create:
     elementUtils.setDefaultFontFamilyStyle(element);
-  }
+  },
 };

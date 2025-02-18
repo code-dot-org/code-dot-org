@@ -22,3 +22,5 @@ Given the following method header:
 
 How many actual parameters are needed when calling the `drawRectangle()` method?
 MARKDOWN
+
+allow_multiple_attempts true

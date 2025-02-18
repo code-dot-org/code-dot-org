@@ -1,5 +1,6 @@
 /** @file Static instructions for the Bob character in the crypto widget */
 import React from 'react';
+
 import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step, SubStep} from './NumberedSteps';
 

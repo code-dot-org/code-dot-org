@@ -1,0 +1,31 @@
+{
+  "category": "Sprites",
+  "config": {
+    "style": "default",
+    "func": "addTarget",
+    "blockText": "{TARGET} {OPT} {SPRITE} ",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "TARGET",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "OPT",
+        "options": [
+          [
+            "follows",
+            "\"follows\""
+          ],
+          [
+            "avoids",
+            "\"avoids\""
+          ]
+        ]
+      }
+    ]
+  }
+}

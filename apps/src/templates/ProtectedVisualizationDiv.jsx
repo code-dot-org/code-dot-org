@@ -1,7 +1,8 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import classNames from 'classnames';
+
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 
 export const VISUALIZATION_DIV_ID = 'visualization';
@@ -12,7 +13,7 @@ export const VISUALIZATION_DIV_ID = 'visualization';
  *          elements in the current view.
  */
 export function isResponsiveFromState(state) {
-  return state.pageConstants.isResponsive;
+  return state.pageConstants?.isResponsive || false;
 }
 
 /**
@@ -24,7 +25,7 @@ export function isResponsiveFromState(state) {
 class ProtectedVisualizationDiv extends React.Component {
   static propTypes = {
     isResponsive: PropTypes.bool.isRequired,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   render() {
@@ -39,5 +40,5 @@ class ProtectedVisualizationDiv extends React.Component {
   }
 }
 export default connect(state => ({
-  isResponsive: isResponsiveFromState(state)
+  isResponsive: isResponsiveFromState(state),
 }))(ProtectedVisualizationDiv);

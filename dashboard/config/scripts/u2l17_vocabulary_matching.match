@@ -26,3 +26,5 @@ Answers:
 - A problem that requires an unreasonable amount of time to solve, even for many computers: Computationally hard
 
 MARKDOWN
+
+allow_multiple_attempts true

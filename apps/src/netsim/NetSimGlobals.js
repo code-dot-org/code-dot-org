@@ -36,7 +36,7 @@ var pseudoRandomNumberFunction_ = Math.random;
  * @param {number} high exclusive upper end of range
  * @returns {number}
  */
-var randomIntInRange = function(low, high) {
+var randomIntInRange = function (low, high) {
   return Math.floor(pseudoRandomNumberFunction_() * (high - low)) + low;
 };
 
@@ -49,7 +49,7 @@ module.exports = {
    * @param {StudioApp} studioApp
    * @param {NetSim} netsim
    */
-  setRootControllers: function(studioApp, netsim) {
+  setRootControllers: function (studioApp, netsim) {
     studioApp_ = studioApp;
     netsim_ = netsim;
   },
@@ -57,45 +57,45 @@ module.exports = {
   /**
    * @returns {NetSimLevelConfiguration}
    */
-  getLevelConfig: function() {
+  getLevelConfig: function () {
     return netsim_.level;
   },
 
   /**
    * @returns {PubSubConfig}
    */
-  getPubSubConfig: function() {
+  getPubSubConfig: function () {
     return {
       usePusher: netsim_.usePusher,
-      pusherApplicationKey: netsim_.pusherApplicationKey
+      pusherApplicationKey: netsim_.pusherApplicationKey,
     };
   },
 
   /**
    * @returns {number}
    */
-  getGlobalMaxRouters: function() {
+  getGlobalMaxRouters: function () {
     return netsim_.globalMaxRouters;
   },
 
   /**
    * @returns {function}
    */
-  getAssetUrlFunction: function() {
+  getAssetUrlFunction: function () {
     return studioApp_.assetUrl;
   },
 
   /**
    * Trigger a layout update of the right column, received/sent/send panels.
    */
-  updateLayout: function() {
+  updateLayout: function () {
     netsim_.updateLayout();
   },
 
   /**
    * Trigger an attempt to complete the current level and continue to the next.
    */
-  completeLevelAndContinue: function() {
+  completeLevelAndContinue: function () {
     netsim_.completeLevelAndContinue();
   },
 
@@ -104,14 +104,14 @@ module.exports = {
    * Math.random function is used as the generator.
    * @param {string} newSeed
    */
-  setRandomSeed: function(newSeed) {
+  setRandomSeed: function (newSeed) {
     pseudoRandomNumberFunction_ = seedrandom(newSeed);
   },
 
   /**
    * @returns {number} a random value between 0 and 1
    */
-  random: function() {
+  random: function () {
     return pseudoRandomNumberFunction_();
   },
 
@@ -128,12 +128,12 @@ module.exports = {
    * @param {Array} collection
    * @returns {*} undefined if collection is empty
    */
-  randomPickOne: function(collection) {
+  randomPickOne: function (collection) {
     var size = collection.length;
     if (size === 0) {
       return undefined;
     }
 
     return collection[randomIntInRange(0, size)];
-  }
+  },
 };

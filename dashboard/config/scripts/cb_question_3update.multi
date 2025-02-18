@@ -1,21 +1,16 @@
 name 'CB_Question_3update'
-encrypted '56MX7+wzxKlJPa2d0SLePpUwmutTk6TBsQ/WBl3WWm5XhgZC0At32ObUxTsI
-3s84fpaV4ajreoPCLvbQtUiJhCIq2o8NG5fxC/Gl/IYXNMROyQLIoWpGS9KR
-Gj+kMXBSyd00RVD+PZB9Twx17RGvhekLn8Bf2TIULzTLONwCKjZ4WshTT+4p
-PDGuaC98WQ1csTdpi8C+aNXVr9kN5Kuy7tJwpekd3O697F9aBNI2ZNA1GZmU
-CPbmzXGWzBWNEiNrUpxvLs+aEXUvx4IHQI3bpS4aU7BBiKK5Ik9+N8lYePxH
-nIROzTm6Ch+EMNGfSDXT1k0uJgQEREU+PxzPCDTq3gf+XcF9QltLi1/4pTuw
-9vcCv01WtiD/wAdZjk/RHF8CmQTK9OIhu49Y/ndSSSAp+zd/o7RAE8jpi30D
-Kk/J3DeZ94BSQYuLocdEhrSKhKet0uDv2A1vdg4xBJepxqUFDQ8QZOZRag/S
-ZIXLn4gJDE5+bRbL39/6KEiQ8xfsIxsJTreJDhit4SmR8EHhDMwXger/4Y55
-89+8XFKXtRFIcFHpV8OXyzBsVbHygxrC5Nhk4urb8xYlrVE3/ZBqkHImBRO9
-dN8ZuxGz093wIaqShUu3sbVupEsDdtxUXl78au8cbj1pAK4rT9tbp/i8g9zE
-I2JkRWJDB4WrN7m/AKhHiLPAJ8VKVSL6fXIhaW9Hc3w7OodKUd9TJg9CCf7l
-ggsF/0jK63+K7T81x9GrDfXVvUpjY+Vtbjdic93s60fe/0fDfT5eDWSt/+bk
-JGbSgj522WSjVlfmMB2LNgsD9mzIRGLHbw6XPfJULgBfiSLfp3nwlkyDiNQH
-HEXewv5a8RBSqXtYIEjMyVFHrb1Mm/+ljQjyvpnHWKZ+FfQAmqy+Uh16BsWn
-Xq8ZfREjYozPsWYmNXhPb1ZHyae//l7HM4flU/qVrJvDwP1EwdB+vK8glSxr
-I9tI7AzCsE33jdcJ+sz2NjfcWrTtmYLypAFoD6Qlm+GAbpiKaLMz6Eq/C7Vh
-9MTrXm0IFxVMUzC0J4C28lbLcDGbP+Hc5vp48O3BS9PF1f8AGp/YOfw7WtRV
-Q+FOc1kxFJTLNGzmGQ1cykeb+O6uiDXEClfmni34HeMHimKt0Jw=
-'
+wrong 'ASCII Character: ` A `'
+right 'ASCII Character: ` B `'
+wrong 'ASCII Character: ` D `'
+wrong 'The table does not contain the value represented by the binary number `0100 0010`'
+
+markdown <<MARKDOWN
+ASCII is a character-encoding scheme that uses a numeric value to represent each character. For example, the uppercase letter "G" is represented by the decimal (base 10) value 71. A partial list of characters and their corresponding ASCII values are shown in the table below. 
+
+<img src="https://images.code.org/b904412c88623430eb43aea06b334af7-image-1461448943197.PNG" width="500">
+
+ASCII characters can also be represented by binary numbers. According to ASCII character encoding, which of the following letters is represented by the 8-bit binary value: `0100 0010`
+
+MARKDOWN
+
+allow_multiple_attempts true

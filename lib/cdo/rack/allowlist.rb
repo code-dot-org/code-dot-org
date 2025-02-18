@@ -100,7 +100,7 @@ module Rack
           # Add "Vary: X-COOKIE-*" to the response for each allowlisted cookie.
           request_cookies = request.cookies
           request_cookies.slice!(*cookies)
-          request_cookies.keys.each do |key|
+          request_cookies.each_key do |key|
             response.add_header 'Vary', "X-COOKIE-#{key.tr('_', '-')}"
           end
           response.add_header 'Vary', 'Cookie'

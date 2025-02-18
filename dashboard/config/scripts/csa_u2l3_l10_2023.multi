@@ -18,3 +18,5 @@ public class Customer {
 
 Which of the following replacements for `/* missing code */` is the most appropriate implementation of the `Customer` class?
 MARKDOWN
+
+allow_multiple_attempts true

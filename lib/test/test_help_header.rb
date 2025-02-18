@@ -4,11 +4,11 @@ require 'active_support/i18n'
 
 class HelpHeaderTest < Minitest::Test
   def assert_includes_id(items, id)
-    assert items.find {|e| e[:id] == id}
+    assert(items.find {|e| e[:id] == id})
   end
 
   def refute_includes_id(items, id)
-    assert_nil items.find {|e| e[:id] == id}
+    assert_nil(items.find {|e| e[:id] == id})
   end
 
   def test_help_header_non_level

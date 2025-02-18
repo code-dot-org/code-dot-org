@@ -1,20 +1,23 @@
-import Dialog from '../../templates/Dialog';
-import PendingButton from '../../templates/PendingButton';
-import React from 'react';
-import PropTypes from 'prop-types';
-import msg from '@cdo/locale';
-import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import msg from '@cdo/locale';
+
+import Dialog from '../../legacySharedComponents/Dialog';
+import PendingButton from '../../legacySharedComponents/PendingButton';
+
+import dataStyles from './data-styles.module.scss';
 
 const INITIAL_STATE = {
   isConfirmDialogOpen: false,
-  isImporting: false
+  isImporting: false,
 };
 
 class ConfirmImportButton extends React.Component {
   static propTypes = {
     importCsv: PropTypes.func.isRequired,
-    containerStyle: PropTypes.any
+    containerStyle: PropTypes.any,
   };
 
   state = {...INITIAL_STATE};
@@ -27,7 +30,7 @@ class ConfirmImportButton extends React.Component {
   handleConfirm = () => {
     this.setState({
       isConfirmDialogOpen: false,
-      isImporting: true
+      isImporting: true,
     });
     this.uploadFile();
   };

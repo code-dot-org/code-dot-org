@@ -1,13 +1,14 @@
-/* globals dashboard, appOptions */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import popupWindow from './popup-window';
-import ShareDialog from './components/ShareDialog';
 import {Provider} from 'react-redux';
+
+import {AllPublishableProjectTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import {getStore} from '../redux';
+
+import ShareDialog from './components/ShareDialog';
 import {showShareDialog} from './components/shareDialogRedux';
-import {AllPublishableProjectTypes} from '../util/sharedConstants';
+import popupWindow from './popup-window';
 
 export function shareProject(shareUrl) {
   dashboard.project.saveIfSourcesChanged().then(() => {
@@ -35,7 +36,8 @@ export function shareProject(shareUrl) {
 
     // Allow publishing for any project type that students can publish.
     // Younger students can now get to the share dialog if their teacher allows
-    // it, and should be able to publish in that case.
+    // it. ShareAllowedDialog will disable publishing, even if canPublish is true,
+    // if the project is in restricted share mode.
     const canPublish =
       !!appOptions.isSignedIn && AllPublishableProjectTypes.includes(appType);
 

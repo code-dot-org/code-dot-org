@@ -1,0 +1,17 @@
+name 'self-paced-pl-gen-ai-customizing-project_04_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrapping up
+
+#### 🎉 Congratulations on building a solid foundation in the technical aspects of chatbot development! Throughout this unit, you've focused on mastering the intricacies of constructing chatbots to meet specific needs.
+
+#### **What’s next?** The upcoming lesson will explore the principles of User-Centered Design — an essential approach that ensures the chatbots your students build are not only functional but also intuitive and engaging for end-users. You'll delve into strategies for building chatbots that solve problems within key communities that your students identify.
+
+#### Ready to take your skills to the next level? Let’s continue this exciting journey!
+
+
+ 
+
+MARKDOWN

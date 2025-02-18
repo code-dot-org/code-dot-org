@@ -1,0 +1,21 @@
+name 'self-paced-pl-gen-ai-resources-assessments_01_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Predict Levels
+
+#### Predict levels in the Customizing Generative AI unit are designed to engage students by asking them to anticipate how a specific feature will impact the chatbot. These levels serve as low-stakes, no-wrong-answer prompts that encourage students to think critically and forecast the lesson’s direction. By predicting outcomes, students are actively involved in their learning process, which helps set the stage for the rest of the lesson. These predictions can spark class discussions and provide a natural segue into deeper exploration of the lesson content.
+
+#### Key strategies for leveraging these levels include:
+* #### **Encouraging Class Discussions**: Use the summary response screen to highlight and discuss student predictions, connecting their thoughts to the lesson's objectives. This approach is aligned with the PRIMM method for teaching programming, which follows the sequence: Predict, Run, Investigate, Modify, Make.
+
+* #### **Elevating Student Voices**: Always incorporate a discussion around these levels, focusing on specific outcomes outlined in your lesson plan. This not only validates student input but also helps guide the class through key concepts in a structured manner, enhancing comprehension and engagement.
+
+#### By integrating these strategies around Predict levels into your teaching, you create an interactive learning environment where students are motivated to think ahead, share their ideas, and engage more deeply with the material.
+
+#### Learn more about incorporating student responses <a href="https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs" target="blank" rel="noopener noreferrer">🔗here</a>.
+
+## Up Next!
+#### Check out one of the predict levels from the Unit.
+MARKDOWN

@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2024-07-10T18:57:52.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "long_instructions": "# Happiness Tracker\r\n\r\nThis app can be used to keep track of your current happiness and update the screen based on the result. When the user presses one of the buttons on the micro:bit, the screen should update.\r\n\r\nRead the code below and predict what you think will happen on the screen when the user interacts with the micro:bit. What do you think the green `updateScreen()` block is doing?",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20572,
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:57:52.390+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions predict embed_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Functions predict embed_mb2022\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

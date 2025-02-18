@@ -19,3 +19,5 @@ wrong 'II and III only'
 right 'I, II, and III only'
 wrong 'III and IV only'
 wrong 'I, II, III, and IV'
+
+allow_multiple_attempts true

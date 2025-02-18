@@ -1,13 +1,14 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import ReactTooltip from 'react-tooltip';
+
+import * as utils from '@cdo/apps/code-studio/utils';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
-import * as utils from '@cdo/apps/code-studio/utils';
-import sinon from 'sinon';
+import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const unpluggedLevel = {
   id: '1',
@@ -15,7 +16,7 @@ const unpluggedLevel = {
   isUnplugged: true,
   status: LevelStatus.perfect,
   isLocked: false,
-  teacherFeedbackReviewState: undefined
+  teacherFeedbackReviewState: undefined,
 };
 
 const assessmentLevel = {
@@ -24,17 +25,17 @@ const assessmentLevel = {
   isUnplugged: false,
   status: LevelStatus.perfect,
   isLocked: false,
-  teacherFeedbackReviewState: undefined
+  teacherFeedbackReviewState: undefined,
 };
 
 const keepWorkingLevel = {
   ...unpluggedLevel,
-  teacherFeedbackReviewState: ReviewStates.keepWorking
+  teacherFeedbackReviewState: ReviewStates.keepWorking,
 };
 
 const levelWithUrl = {
   ...unpluggedLevel,
-  url: '/foo/bar'
+  url: '/foo/bar',
 };
 
 const DEFAULT_PROPS = {
@@ -42,7 +43,7 @@ const DEFAULT_PROPS = {
   icon: 'desktop',
   text: '1',
   fontSize: 12,
-  disabled: false
+  disabled: false,
 };
 
 describe('ProgressPill', () => {
@@ -63,20 +64,8 @@ describe('ProgressPill', () => {
       />
     );
     assert.equal(wrapper.find('ReactTooltip').length, 1);
-    assert.equal(
-      wrapper
-        .find('div')
-        .first()
-        .props()['data-tip'],
-      true
-    );
-    assert.equal(
-      wrapper
-        .find('div')
-        .first()
-        .props()['data-for'],
-      123
-    );
+    assert.equal(wrapper.find('div').first().props()['data-tip'], true);
+    assert.equal(wrapper.find('div').first().props()['data-for'], 123);
   });
 
   it('has an href when single level with url', () => {
@@ -98,12 +87,12 @@ describe('ProgressPill', () => {
   });
 
   it('includes user_id in href when user_id query param is present', () => {
-    sinon.stub(utils, 'queryParams').returns('123');
+    jest.spyOn(utils, 'queryParams').mockClear().mockReturnValue('123');
     const wrapper = shallow(
       <ProgressPill levels={[levelWithUrl]} text="Unplugged Activity" />
     );
     assert.equal(wrapper.find('a').props().href, '/foo/bar?user_id=123');
-    utils.queryParams.restore();
+    utils.queryParams.mockRestore();
   });
 
   it('does not have an href when disabled', () => {
@@ -142,7 +131,7 @@ describe('ProgressPill', () => {
   it('has an keep working icon when single level is assessment and has keepWorking feedback', () => {
     const level = {
       ...assessmentLevel,
-      teacherFeedbackReviewState: ReviewStates.keepWorking
+      teacherFeedbackReviewState: ReviewStates.keepWorking,
     };
     const wrapper = shallow(
       <ProgressPill {...DEFAULT_PROPS} levels={[level]} />

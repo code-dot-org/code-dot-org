@@ -3,15 +3,16 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import SessionTime from './session_time';
 
 export default class SessionTimesList extends React.Component {
   static propTypes = {
     sessions: PropTypes.arrayOf(
       PropTypes.shape({
-        id: PropTypes.number.isRequired
+        id: PropTypes.number.isRequired,
       })
-    ).isRequired
+    ).isRequired,
   };
 
   render() {

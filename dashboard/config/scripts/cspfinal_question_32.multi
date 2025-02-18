@@ -23,3 +23,5 @@ REPEAT_UNTIL( x = 3 )
 
 </pre>
 MARKDOWN
+
+allow_multiple_attempts true

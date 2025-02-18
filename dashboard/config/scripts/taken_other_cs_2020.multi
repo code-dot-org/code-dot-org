@@ -5,3 +5,4 @@ right 'No'
 right 'Yes, a little bit in another class'
 right 'Yes, a semester-long class'
 right 'Yes, a year-long class'
+allow_multiple_attempts true

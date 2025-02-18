@@ -10,15 +10,18 @@ theme: responsive
 
 - Для проведения уроков рекомендуется, чтобы скорость подключения интернета в школе была не менее 15 Мбит/с.
 - Наименьший поддерживаемый размер экрана: 1024 x 728 пикселей.
-- Для уроков среднего и старшего уровня («Знакомство с информатикой», «Принципы информатики» и «Введение в App Lab») понадобится настольный или портативный компьютер с мышью (или сенсорной панелью) и клавиатурой. Большинство планшетов и мобильных устройств не подойдут для этих уроков. Исключения, касающиеся конкретных устройств, см. в разделе «Информация о поддержке мобильных устройств и планшетов» ниже.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Исключения, касающиеся конкретных устройств, см. в разделе «Информация о поддержке мобильных устройств и планшетов» ниже.
 - Весь остальной контент, например уроки K-5 (Основы информатики) и задания Часа кода совместимы с iPad и Chromebook, а также всеми остальными современными планшетами, ноутбуками и настольными компьютерами.
 - Нужна информация о поддержке мобильных устройств? Читайте далее.
 
 ## Минимальные поддерживаемые браузеры и платформы
 
+Начиная с июля 2024 года мы обновим минимальные версии, необходимые для браузеров и операционных систем. Хотя старые версии все еще могут работать, мы не сможем удовлетворить запросы на исправление ошибок в старых версиях.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Браузер
@@ -39,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Браузер, июль '24
+        </th>
+        <tr>
+          <td>Хром 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Мобильный браузер Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Платформа
@@ -61,33 +86,55 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Платформа 24 июля
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Виндовс 8</td>
+        </tr>
+        <tr>
+          <td>Андроид 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Какие сайты нужно разблокировать
 
 Для обеспечения правильной работы всего контента Code.org мы рекомендуем обратиться в Ит-отдел вашей школы или района и убедиться, что перечисленные ниже сайте не запрещены и разблокированы.
 
-| Приоритет                                                                                | URL                                                                                                        |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Обязательно**                                                                          | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Опционально**                                                                          | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Для просмотра видео, размещенных на YouTube (в режиме улучшенной конфиденциальности)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Для просмотра видео, размещенных на Code.org**                                         | `https://videos.code.org`                                                                                  |
-| **Для использования интернет-симулятора**                                                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Для использования Web Lab**                                                            | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Для использования кнопки Google Classroom Share**                                      | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                              | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Приоритет                                                                                                      | URL                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Обязательно**                                                                                                | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Чтобы системы CAPTCHA могли отличить ваше использование от автоматических мошеннических действий («ботов»)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Опционально**                                                                                                | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Для просмотра видео, размещенных на YouTube (в режиме улучшенной конфиденциальности)**                       | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Для просмотра видео, размещенных на Code.org**                                                               | `https://videos.code.org`                                                                                  |
+| **Для использования интернет-симулятора**                                                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Для использования Web Lab**                                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Для использования кнопки Google Classroom Share**                                                            | `https://apis.google.com`                                                                                  |
 
 ## Информация о поддержке мобильных устройств и планшетов
 
-Все курсы «Знакомство с информатикой», «Принципы информатики» и «Введение в App Lab» несовместимы с планшетами или мобильными устройствами — для них требуется полноценная клавиатура и мышь (или сенсорная панель, как на MacBook). Большинство планшетов не поддерживаются, за исключением перечисленных ниже:
+Все курсы CS Discoveries, CS Principles, CS A и Intro to App Lab несовместимы с планшетами или мобильными устройствами — требуется полноценная клавиатура и мышь (или сенсорная панель). Большинство планшетов не поддерживаются, за исключением перечисленных ниже:
 
 - Microsoft Surface Pro с внешней клавиатурой
 - iPad на ОС iPadOS 13.4 или более поздней версии с внешней клавиатурой и внешней мышью или сенсорной панелью
 
-Весь остальной контент, например уроки K-5 (Основы информатики) и задания Часа кода совместимы с iPad и Chromebook, а также всеми остальными современными планшетами, ноутбуками и настольными компьютерами.
+Все остальные материалы, такие как курсы K-5 («Основы компьютерных наук») и задания «Час программирования», совместимы с iPad и другими современными планшетами, ноутбуками или настольными компьютерами.
 
 ### Мобильные телефоны
 
@@ -101,7 +148,17 @@ theme: responsive
 
 Прежде чем начать прохождение онлайн-уроков на Code.org, проверьте, что вы можете посмотреть приведенное ниже видео.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 Этот проигрыватель используется на протяжении всего учебного курса. Он пытается показать видео через YouTube а если YouTube заблокирован, он переключится на резервное видео, размещенное на Code.org.
 

@@ -1,13 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import moduleStyles from './collapser-icon.module.scss';
 
 const styles = {
   icon: {
     fontSize: 18,
-    fontWeight: 400
-  }
+    fontWeight: 400,
+  },
 };
 
 function CollapserIcon({
@@ -17,7 +18,7 @@ function CollapserIcon({
   collapsedIconClass,
   expandedIconClass,
   style,
-  className
+  className,
 }) {
   const iconClass = isCollapsed ? collapsedIconClass : expandedIconClass;
 
@@ -25,7 +26,6 @@ function CollapserIcon({
     <button
       id={id}
       onClick={onClick}
-      role="button"
       className={classNames(
         iconClass + ' fa',
         className,
@@ -45,13 +45,13 @@ CollapserIcon.propTypes = {
   collapsedIconClass: PropTypes.string,
   expandedIconClass: PropTypes.string,
   style: PropTypes.object,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 CollapserIcon.defaultProps = {
   collapsedIconClass: 'fa-chevron-circle-down',
   expandedIconClass: 'fa-chevron-circle-up',
-  style: {}
+  style: {},
 };
 
 export default CollapserIcon;

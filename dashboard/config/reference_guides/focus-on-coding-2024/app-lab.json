@@ -1,0 +1,9 @@
+{
+  "key": "app-lab",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-coding",
+  "parent_reference_guide_key": null,
+  "display_name": "App Lab",
+  "content": "App Lab is a tool built with [JavaScript](/concepts/javascript/) that can be used to create apps. Read more about App Lab's commands in the [App Lab documentation](/docs/applab/).",
+  "position": 1
+}

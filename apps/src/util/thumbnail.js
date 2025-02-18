@@ -3,9 +3,9 @@
  * of code studio apps.
  */
 
+import project from '../code-studio/initApp/project';
 import {canvasToBlob, svgToDataURI, toCanvas} from '../imageUtils';
 import {getStore} from '../redux';
-import project from '../code-studio/initApp/project';
 import {html2canvas} from '../util/htmlToCanvasWrapper';
 
 // Thumbnail image width in pixels.
@@ -173,7 +173,7 @@ export function captureThumbnailFromElement(element) {
   isCapturePending = true;
 
   const options = {
-    background: '#eee'
+    background: '#eee',
   };
 
   // html2canvas can take up to 2 seconds to capture the element contents

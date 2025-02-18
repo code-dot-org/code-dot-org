@@ -9,3 +9,5 @@ right '3 answer'
 right '4 answer'
 right '5 answer'
 right '6 answer'
+
+allow_multiple_attempts true

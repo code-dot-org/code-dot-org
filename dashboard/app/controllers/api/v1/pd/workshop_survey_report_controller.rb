@@ -49,40 +49,6 @@ module Api::V1::Pd
       end
     end
 
-    # GET /api/v1/pd/workshops/:id/local_workshop_survey_report
-    def local_workshop_survey_report
-      unless @workshop.local_summer?
-        raise 'Only call this route for local workshop survey reports'
-      end
-
-      facilitator_name = facilitator_name_filter
-      survey_report = Hash.new
-
-      survey_report[:this_workshop] = summarize_workshop_surveys(workshops: [@workshop], facilitator_name_filter: facilitator_name)
-
-      survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
-        workshops: Pd::Workshop.where(
-          subject: @workshop.subject,
-          course: @workshop.course
-        ).managed_by(current_user).in_state(Pd::Workshop::STATE_ENDED),
-        facilitator_breakdown: false,
-        facilitator_name_filter: facilitator_name,
-        include_free_response: false
-      )
-
-      aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-production"))
-      survey_report[:all_workshops_for_course] = aggregate_for_all_workshops['CSP Local Summer Workshops']
-
-      survey_report[:facilitator_breakdown] = facilitator_name.nil?
-      survey_report[:facilitator_names] = @workshop.facilitators.pluck(:name) if facilitator_name.nil?
-
-      respond_to do |format|
-        format.json do
-          render json: survey_report
-        end
-      end
-    end
-
     # GET /api/v1/pd/workshops/:id/generic_survey_report
     def generic_survey_report
       # 2 separate routes for CSF deep dive (201) workshop and summer/academic year workshop.
@@ -91,31 +57,29 @@ module Api::V1::Pd
       return create_generic_survey_report if [COURSE_CSP, COURSE_CSD, COURSE_CSA].include?(@workshop.course)
 
       raise 'Action generic_survey_report should not be used for this workshop'
-    rescue => e
-      notify_error e
+    rescue => exception
+      notify_error exception
     end
 
     # GET /api/v1/pd/workshops/experiment_survey_report/:id/
     def experiment_survey_report
       render json: {experiment: true}
-    rescue => e
-      notify_error e
+    rescue => exception
+      notify_error exception
     end
 
-    private
-
-    def create_csf_survey_report
+    private def create_csf_survey_report
       render json: report_single_workshop(@workshop, current_user)
     end
 
-    def create_generic_survey_report
+    private def create_generic_survey_report
       this_ws_report = report_single_workshop(@workshop, current_user)
       rollup_report = report_rollups(@workshop, current_user)
 
       render json: this_ws_report.merge(rollup_report)
     end
 
-    def notify_error(exception, error_status_code = :bad_request)
+    private def notify_error(exception, error_status_code = :bad_request)
       Honeybadger.notify(
         exception,
         context: {
@@ -129,8 +93,8 @@ module Api::V1::Pd
         errors: [
           {
             severity: Logger::Severity::ERROR,
-            message: "#{exception.message}. First backtrace: #{exception.backtrace.first}."\
-              " Workshop id: #{@workshop.id}, course: #{@workshop.course}, subject: #{@workshop.subject}."
+            message: "#{exception.message}. First backtrace: #{exception.backtrace.first}. " \
+              "Workshop id: #{@workshop.id}, course: #{@workshop.course}, subject: #{@workshop.subject}."
           }
         ]
       }
@@ -138,7 +102,7 @@ module Api::V1::Pd
 
     # We want to filter facilitator-specific responses if the user is a facilitator and
     # NOT a workshop admin, workshop organizer, or program manager - the filter is the user's name.
-    def facilitator_name_filter
+    private def facilitator_name_filter
       return nil if current_user.workshop_admin? || current_user.workshop_organizer? || current_user.program_manager?
       return current_user.name if current_user.facilitator?
 

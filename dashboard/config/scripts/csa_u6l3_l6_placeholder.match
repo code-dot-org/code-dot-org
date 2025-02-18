@@ -14,3 +14,4 @@ answer 'the process of automatically converting a primitive type value into an o
 
 question 'parsing'
 answer 'converting formatted text into a different type'
+allow_multiple_attempts true

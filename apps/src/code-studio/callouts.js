@@ -1,6 +1,10 @@
 import $ from 'jquery';
+
 import 'qtip2';
 var clientState = require('./clientState');
+
+let hiddenCallouts = {};
+let allCallouts = [];
 
 /**
  * @fileoverview handles creation and updating of dashboard tooltips, aka callouts.
@@ -27,23 +31,24 @@ var clientState = require('./clientState');
  * @param {CalloutDefinition[]} callouts
  */
 export default function createCallouts(callouts) {
+  allCallouts = [];
+  hiddenCallouts = {};
   if (!callouts || callouts.length === 0) {
     return;
   }
 
   // Hide callouts when the function editor is closed (otherwise they jump to
   // the top left corner)
-  $(window).on('function_editor_closed', function() {
+  $(window).on('function_editor_closed', function () {
     $('.cdo-qtips').qtip('hide');
   });
 
   // Update callout positions when a blockly editor is scrolled.
-  $(window).on('block_space_metrics_set', function() {
-    snapCalloutsToTargets();
-    showHideWorkspaceCallouts();
-  });
+  $(window).on('block_space_metrics_set', handleWorkspaceResizeOrScroll);
+  // Update callout positions when the browser is resized.
+  window.addEventListener('resize', handleWorkspaceResizeOrScroll);
 
-  $(window).on('droplet_change', function(e, dropletEvent) {
+  $(window).on('droplet_change', function (e, dropletEvent) {
     switch (dropletEvent) {
       case 'scrollace':
         // Destroy all ace gutter tooltips on scroll. Ace dynamically reuses
@@ -51,7 +56,7 @@ export default function createCallouts(callouts) {
         // number to a different DOM element, so the only ways to track with the
         // gutter movement would be to manually adjust position or to destroy
         // the qtips and manually recreate new ones with each scroll.
-        $('.cdo-qtips').each(function() {
+        $('.cdo-qtips').each(function () {
           var api = $(this).qtip('api');
           var target = $(api.elements.target);
           if ($('.ace_gutter').has(target)) {
@@ -98,7 +103,7 @@ export function addCallouts(callouts) {
   $.fn.qtip.zindex = 500;
 
   var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
-  callouts.forEach(function(callout) {
+  callouts.forEach(function (callout) {
     var selector = callout.element_id; // jquery selector.
     if ($(selector).length === 0 && !callout.on) {
       return;
@@ -109,24 +114,24 @@ export function addCallouts(callouts) {
       content: {
         text: callout.localized_text,
         title: {
-          button: $('<div class="tooltip-x-close"/>')
-        }
+          button: $('<div class="tooltip-x-close"/>'),
+        },
       },
       style: {
         classes: '',
         tip: {
           width: 20,
-          height: 20
-        }
+          height: 20,
+        },
       },
       position: {
         my: 'bottom left',
-        at: 'top right'
+        at: 'top right',
       },
       hide: {
-        event: 'click mousedown touchstart'
+        event: 'click mousedown touchstart',
       },
-      show: false // don't show on mouseover
+      show: false, // don't show on mouseover
     };
 
     var customConfig =
@@ -169,8 +174,14 @@ export function addCallouts(callouts) {
       config.style.classes += ' flip-x-close';
     }
 
+    // If the callout is in #codeWorkspace and is not currently visible,
+    // we don't want to show it on page load. This is because Google Blockly
+    // labs can have a hidden (on start) function editor workspace that we don't
+    // want to show callouts for.
+    const container = $('#codeWorkspace');
+
     if (callout.on) {
-      $(window).on(callout.on, function(e, action) {
+      $(window).on(callout.on, function (e, action) {
         if (!config.codeStudio.selector) {
           config.codeStudio.selector = selector;
         }
@@ -180,13 +191,11 @@ export function addCallouts(callouts) {
           lastSelector !== config.codeStudio.selector &&
           $(lastSelector).length > 0
         ) {
-          $(lastSelector)
-            .qtip(config)
-            .qtip('destroy');
+          $(lastSelector).qtip(config).qtip('destroy');
         }
         // 'show' after async delay so that DOM changes that may have taken
         // place inside the 'prepareforcallout' event can complete first
-        setTimeout(function() {
+        setTimeout(function () {
           if ($(config.codeStudio.selector).length > 0) {
             if (
               action === 'hashchange' ||
@@ -194,18 +203,39 @@ export function addCallouts(callouts) {
               !callout.seen ||
               config.codeStudio.canReappear
             ) {
-              $(config.codeStudio.selector)
-                .qtip(config)
-                .qtip('show');
+              // create callout(s)
+              $(config.codeStudio.selector).qtip(config);
+              allCallouts.push(config.codeStudio.selector);
+              showHideCalloutsOnInit(config.codeStudio.selector, container);
             }
             callout.seen = true;
           }
         }, 0);
       });
     } else if (!callout.seen) {
-      $(selector)
-        .qtip(config)
-        .qtip('show');
+      // create callout(s)
+      $(selector).qtip(config);
+      allCallouts.push(selector);
+      showHideCalloutsOnInit(selector, container);
+    }
+  });
+  // Ensure any callouts pointing to hidden elements are hidden.
+  showHideWorkspaceCallouts();
+}
+
+export function handleWorkspaceResizeOrScroll() {
+  snapCalloutsToTargets();
+  showHideWorkspaceCallouts();
+}
+
+function showHideCalloutsOnInit(selector, container) {
+  $(selector).each(function () {
+    const api = $(this).qtip('api');
+    if (calloutShouldBeVisible(container, api)) {
+      api.show();
+    } else {
+      api.hide();
+      hiddenCallouts[api.id] = true;
     }
   });
 }
@@ -220,15 +250,13 @@ function snapCalloutsToTargets() {
   $('.cdo-qtips').qtip('reposition', triggerEvent, animate);
 }
 
-export var showHideWorkspaceCallouts = showOrHideCalloutsByTargetVisibility(
-  '#codeWorkspace'
-);
+export var showHideWorkspaceCallouts =
+  showOrHideCalloutsByTargetVisibility('#codeWorkspace');
 var showHidePaletteCallouts = showOrHideCalloutsByTargetVisibility(
   '.droplet-palette-scroller'
 );
-var showHideDropletGutterCallouts = showOrHideCalloutsByTargetVisibility(
-  '.droplet-gutter'
-);
+var showHideDropletGutterCallouts =
+  showOrHideCalloutsByTargetVisibility('.droplet-gutter');
 
 /**
  * For callouts with targets in the containerSelector (blockly, flyout elements,
@@ -238,54 +266,57 @@ var showHideDropletGutterCallouts = showOrHideCalloutsByTargetVisibility(
  * @function
  */
 function showOrHideCalloutsByTargetVisibility(containerSelector) {
-  // Close around this object, which we use to remember which callouts
-  // were hidden by scrolling and should be shown again when they scroll
-  // back in.
-  /**
-   * Remember callouts hidden due to overlap, keyed by qtip id
-   * @type {Object.<string, boolean>}
-   */
-  var calloutsHiddenByScrolling = {};
-  var calloutsHiddenByContainerVisibility = {};
-  return function() {
+  return function () {
     var container = $(containerSelector);
-    $('.cdo-qtips').each(function() {
-      var api = $(this).qtip('api');
-      var target = $(api.elements.target);
-
-      if ($(document).has(target).length === 0) {
-        api.destroy(true);
-        return;
-      }
-
-      var isTargetInContainer = container.has(target).length > 0;
-      if (!isTargetInContainer) {
-        return;
-      }
-
-      if (container.is(':visible')) {
-        if (calloutsHiddenByContainerVisibility[api.id]) {
-          api.show();
-          delete calloutsHiddenByContainerVisibility[api.id];
+    const invalidCallouts = [];
+    allCallouts.forEach(function (selector) {
+      // Callout selector could reference multiple locations (for example, in Sprite Lab
+      // the toolbox is duplicated between the main workspace and the function editor workspace).
+      // Iterate over all matching elements and show/hide the callout for each.
+      $(selector).each(function () {
+        var api = $(this).qtip('api');
+        if (!api) {
+          invalidCallouts.push(selector);
+          return;
         }
-      } else {
-        api.hide();
-        calloutsHiddenByContainerVisibility[api.id] = true;
-      }
+        var target = $(api.elements.target);
 
-      if (target && target.overlaps(container).length > 0) {
-        if (calloutsHiddenByScrolling[api.id]) {
-          api.show();
-          delete calloutsHiddenByScrolling[api.id];
+        if ($(document).has(target).length === 0) {
+          api.destroy(true);
+          invalidCallouts.push(selector);
+          return;
         }
-      } else {
-        if ($(this).is(':visible')) {
+
+        var isTargetInContainer = container.has(target).length > 0;
+        if (!isTargetInContainer) {
+          return;
+        }
+        const shouldBeVisible = calloutShouldBeVisible(container, api);
+        if (shouldBeVisible && hiddenCallouts[api.id]) {
+          api.show();
+          delete hiddenCallouts[api.id];
+        } else if (!shouldBeVisible && !hiddenCallouts[api.id]) {
           api.hide();
-          calloutsHiddenByScrolling[api.id] = true;
+          hiddenCallouts[api.id] = true;
         }
-      }
+      });
+    });
+    invalidCallouts.forEach(selector => {
+      allCallouts.splice(allCallouts.indexOf(selector), 1);
     });
   };
+}
+
+function calloutShouldBeVisible(container, qtipApi) {
+  var target = $(qtipApi.elements.target);
+  var isTargetInContainer = container.has(target).length > 0;
+  if (!isTargetInContainer) {
+    // Case of a callout outside of the container (usually the code editor), which we always show.
+    return true;
+  }
+  const isContainerVisible = container.is(':visible');
+  const elementIsContained = target && elementIsInContainer(target, container);
+  return isContainerVisible && elementIsContained;
 }
 
 function reverseCallout(position) {
@@ -302,4 +333,16 @@ function reverseDirection(token) {
     default:
       return token;
   }
+}
+
+// Return true if the element is fully contained within the container.
+function elementIsInContainer(element, container) {
+  var elementRect = element[0].getBoundingClientRect();
+  var containerRect = container[0].getBoundingClientRect();
+  return (
+    elementRect.left >= containerRect.left &&
+    elementRect.right <= containerRect.right &&
+    elementRect.top >= containerRect.top &&
+    elementRect.bottom <= containerRect.bottom
+  );
 }

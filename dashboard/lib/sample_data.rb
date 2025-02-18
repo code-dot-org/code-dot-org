@@ -1,4 +1,4 @@
-include FactoryGirl::Syntax::Methods
+include FactoryBot::Syntax::Methods
 
 class SampleData
   SAMPLE_TEACHER_EMAIL = 'testteacher@code.org'.freeze
@@ -82,7 +82,7 @@ class SampleData
     # Delete any existing test data
     user = User.find_by_email_or_hashed_email(email)
     unless user.nil?
-      user.sections.each do |section|
+      user.sections_instructed.each do |section|
         # Hard-delete all students in each section.
         section.students.each do |student_user|
           raise "Not a sample student - #{student_user.name}" unless SAMPLE_STUDENT_NAME_REGEX.match?(student_user.name)
@@ -239,15 +239,14 @@ class SampleData
   # Helper that generates a few sentences of plausible latin-esqe text, for use as obviously
   # fake text data.
   def self.tiny_lipsum
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut" \
-    " labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco" \
-    " laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in" \
-    " voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat" \
-    " non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut " \
+    "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco " \
+    "laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in " \
+    "voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat " \
+    "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.".
       split(/[.,]/).
       sample(rng.rand(3..6)).
-      map(&:strip).
-      compact.
+      filter_map(&:strip).
       map(&:capitalize).
       join('. ') + '.'
   end

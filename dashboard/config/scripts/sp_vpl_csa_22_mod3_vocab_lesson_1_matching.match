@@ -16,3 +16,5 @@ answer 'Camel case'
 
 question 'Finding and fixing problems in an algorithm or program'
 answer 'Debugging'
+
+allow_multiple_attempts true

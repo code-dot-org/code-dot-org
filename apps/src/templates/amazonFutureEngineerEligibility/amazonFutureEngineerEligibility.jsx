@@ -1,14 +1,18 @@
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import React from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, Button} from 'react-bootstrap';
-import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
-import color from '@cdo/apps/util/color';
-import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
-import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
-import AmazonFutureEngineerAccountConfirmation from './amazonFutureEngineerAccountConfirmation';
+import React from 'react';
+import {FormGroup, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census/SchoolAutocompleteDropdownWithLabel';
+import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+
+import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
+
+import AmazonFutureEngineerAccountConfirmation from './amazonFutureEngineerAccountConfirmation';
+import AmazonFutureEngineerEligibilityForm from './amazonFutureEngineerEligibilityForm';
 
 const sessionStorageKey = 'AmazonFutureEngineerEligibility';
 
@@ -20,7 +24,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     schoolId: PropTypes.string,
     schoolEligible: PropTypes.bool,
     accountEmail: PropTypes.string,
-    isStudentAccount: PropTypes.bool
+    isStudentAccount: PropTypes.bool,
   };
 
   constructor(props) {
@@ -40,9 +44,9 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
         ),
         schoolId:
           sessionEligibilityData.schoolId || this.props.schoolId || null,
-        consentAFE: sessionEligibilityData.consentAFE || false
+        consentAFE: sessionEligibilityData.consentAFE || false,
       },
-      errors: {}
+      errors: {},
     };
   }
 
@@ -86,10 +90,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
   };
 
   submit = () => {
-    firehoseClient.putRecord({
-      study: 'amazon-future-engineer-eligibility',
-      event: 'submit_school_info'
-    });
+    analyticsReporter.sendEvent(EVENTS.AFE_SUBMIT_SCHOOL_INFO);
 
     if (this.state.formData.schoolId === '-1') {
       this.handleEligibility(false);
@@ -101,7 +102,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
         this.state.formData.schoolId +
         '/afe_high_needs',
       type: 'get',
-      dataType: 'json'
+      dataType: 'json',
     }).done(schoolData => {
       this.handleEligibility(schoolData.afe_high_needs);
     });
@@ -155,37 +156,39 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
   handleEligibility(isEligible) {
     this.setState({
-      formData: {...this.state.formData, schoolEligible: isEligible}
+      formData: {...this.state.formData, schoolEligible: isEligible},
     });
     this.saveToSessionStorage();
 
     if (!isEligible) {
-      firehoseClient.putRecord(
-        {
-          study: 'amazon-future-engineer-eligibility',
-          event: 'ineligible'
-        },
-        {callback: () => (window.location = pegasus('/afe/start-codeorg'))}
-      );
+      analyticsReporter.sendEvent(EVENTS.AFE_INELIGIBLE);
+      window.location = pegasus('/afe/start-codeorg');
     }
   }
 
   handleSchoolDropdownChange = (field, event) => {
     const newData = {
       schoolId: event ? event.value : '',
-      schoolName: event ? event.label : ''
+      schoolName: event ? event.label : '',
     };
 
     this.updateFormData(newData);
   };
 
   submitToAFE = () => {
+    if (this.props.signedIn && !this.props.isStudentAccount) {
+      analyticsReporter.sendEvent(EVENTS.AFE_SUBMIT, {
+        formEmail: this.state.formData.email,
+        formSchoolId: this.state.formData.schoolId,
+        formData: JSON.stringify(this.state.formData),
+      });
+    }
     return fetch('/dashboardapi/v1/amazon_future_engineer_submit', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(this.state.formData)
+      body: JSON.stringify(this.state.formData),
     });
   };
 
@@ -207,7 +210,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
         console.error(submissionError);
         this.setState({
           submissionError,
-          submissionErrorTime: new Date().toISOString()
+          submissionErrorTime: new Date().toISOString(),
         });
       }
     }
@@ -262,7 +265,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 required={true}
                 onChange={this.updateFormData}
                 validationState={
-                  this.state.errors.hasOwnProperty('email')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'email'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -272,7 +278,10 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
                 setField={this.handleSchoolDropdownChange}
                 showRequiredIndicator={true}
                 value={formData.schoolId}
-                showErrorMsg={this.state.errors.hasOwnProperty('schoolId')}
+                showErrorMsg={Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'schoolId'
+                )}
                 style={styles.schoolInput}
               />
               <Button
@@ -290,6 +299,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
             email={formData.email}
             schoolId={formData.schoolId}
             updateFormData={this.updateAndStoreFormData}
+            isSignedIn={formData.signedIn}
           />
         )}
         {formData.schoolEligible &&
@@ -302,21 +312,22 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
 const styles = {
   intro: {
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   container: {
-    borderColor: color.teal,
+    backgroundColor: 'var(--neutral_white)',
+    border: '1px solid var(--neutral_dark20)',
     borderWidth: 'thin',
     borderStyle: 'solid',
-    padding: '10px 15px 10px 15px'
+    padding: '10px 15px 10px 15px',
   },
   button: {
     backgroundColor: color.orange,
-    color: color.white
+    color: color.white,
   },
   header: {
-    marginTop: '10px'
-  }
+    marginTop: '10px',
+  },
 };
 
 const StudentAccountNotification = (
@@ -356,7 +367,7 @@ const SubmissionError = ({submissionError, submissionErrorTime}) => (
 );
 SubmissionError.propTypes = {
   submissionError: PropTypes.text,
-  submissionErrorTime: PropTypes.text
+  submissionErrorTime: PropTypes.text,
 };
 
 function getSessionData() {
@@ -368,7 +379,7 @@ function updateSessionData(data) {
     sessionStorageKey,
     JSON.stringify({
       ...getSessionData(),
-      ...data
+      ...data,
     })
   );
 }

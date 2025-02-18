@@ -6,15 +6,21 @@ require 'cdo/geocoder'
 require 'varnish_environment'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
-require_relative '../legacy/middleware/tables_api'
 require 'shared_resources'
 require_relative '../legacy/middleware/net_sim_api'
 require_relative '../legacy/middleware/sound_library_api'
 require_relative '../legacy/middleware/animation_library_api'
 
 require 'bootstrap-sass'
+require 'cdo/global_edition'
 require 'cdo/hash'
+require 'cdo/i18n'
 require 'cdo/i18n_backend'
+require 'cdo/shared_constants'
+
+# load and configure pycall before numpy and any other python-related gems
+# can be automatically loaded just below.
+require 'cdo/pycall'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -23,7 +29,7 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    config.load_defaults 6.0
+    config.load_defaults 6.1
 
     # Temporarily disable some default values that we aren't yet ready for.
     # Right now, these changes to cookie functionality break projects
@@ -36,6 +42,22 @@ module Dashboard
     config.active_support.use_authenticated_message_encryption = false
     # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
     config.action_dispatch.use_cookies_with_metadata = false
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins CDO.pegasus_site_host
+        resource '/dashboardapi/*', headers: :any, methods: [:get]
+      end
+    end
+
+    if CDO.use_cookie_dcdo
+      # Enables the setting of DCDO via cookies for testing purposes.
+      require 'cdo/rack/cookie_dcdo'
+      config.middleware.insert_before Rack::Cors, Rack::CookieDCDO
+    end
+
+    require 'cdo/rack/global_edition'
+    config.middleware.insert_before Rack::Cors, Rack::GlobalEdition
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
@@ -58,6 +80,13 @@ module Dashboard
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
       # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
       config.autoload_paths << Rails.root.join('test/mailers/previews')
+
+      # Automatically load tools intended to make the local development
+      # environment behave more like production.
+      require 'cdo/local_development'
+      if CDO.aws_s3_emulated
+        config.autoload_paths << Rails.root.join('../lib/cdo/local_development/s3_emulation')
+      end
     end
 
     if CDO.image_optim
@@ -69,8 +98,7 @@ module Dashboard
     config.middleware.insert_after VarnishEnvironment, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi
-    config.middleware.insert_after ChannelsApi, TablesApi
-    config.middleware.insert_after TablesApi, SharedResources
+    config.middleware.insert_after ChannelsApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
@@ -81,6 +109,12 @@ module Dashboard
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
+
+    if CDO.use_geolocation_override
+      # Apply the remote_addr middleware to allow pretending to be at a particular IP
+      require 'cdo/rack/geolocation_override'
+      config.middleware.insert_after ActionDispatch::RequestId, Rack::GeolocationOverride
+    end
 
     config.encoding = 'utf-8'
 
@@ -95,25 +129,24 @@ module Dashboard
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'UTC'
+    config.active_record.default_timezone = :utc
 
     # By default, config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.json').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*', '*.json').to_s]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
-    config.i18n.available_locales = ['en-US']
-    config.i18n.fallbacks[:defaults] = ['en-US']
-    config.i18n.default_locale = 'en-US'
-    LOCALES = YAML.load_file("#{Rails.root}/config/locales.yml")
-    LOCALES.each do |locale, data|
-      next unless data.is_a? Hash
-      data.symbolize_keys!
-      unless data[:debug] && Rails.env.production?
-        config.i18n.available_locales << locale
-      end
-      if data[:fallback]
-        config.i18n.fallbacks[locale] = data[:fallback]
-      end
+    config.i18n.available_locales = [Cdo::I18n::DEFAULT_LOCALE]
+    config.i18n.fallbacks[:defaults] = [Cdo::I18n::DEFAULT_LOCALE]
+    config.i18n.default_locale = Cdo::I18n::DEFAULT_LOCALE
+    LOCALES = Cdo::I18n::LOCALE_CONFIGS
+    Cdo::I18n.available_languages.each do |language|
+      locale = language[:locale_s]
+      fallback_locale = Cdo::I18n::LOCALE_CONFIGS.dig(locale, :fallback)
+
+      config.i18n.available_locales << locale
+      config.i18n.fallbacks[locale] = fallback_locale if fallback_locale
     end
 
     config.after_initialize do
@@ -168,6 +201,8 @@ module Dashboard
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
+    config.action_mailer.delivery_job = 'MailDeliveryJob'
+    config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
     # Rails.cache is a fast memory store, cleared every time the application reloads.
     config.cache_store = :memory_store, {
@@ -194,5 +229,8 @@ module Dashboard
 
     # Use custom routes for error codes
     config.exceptions_app = routes
+
+    config.active_job.queue_adapter = CDO.active_job_queue_adapter
+    config.active_job.default_queue_name = CDO.active_job_queues[:default]
   end
 end

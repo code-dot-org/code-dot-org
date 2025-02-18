@@ -1,0 +1,395 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2024-04-23T19:56:42.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "true",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "edit_code": "false",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "auto_run_setup": "DRAW_LOOP",
+    "parent_level_id": 27140,
+    "show_type_hints": "true",
+    "include_shared_functions": "true",
+    "block_pool": "gamelab",
+    "name_suffix": "_grade5",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "long_instructions": "#Carrot Collector\r\n\r\nUse the arrow keys to collect all the carrots.\r\n\r\n## Do This\r\n* Read the code below. *What do you think it does?*\r\n* Press \"Run\" to play this game. *How does the player move? How are points scored?*\r\n* Make changes to the code. Press \"Finish\" when you are done.",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton",
+      "downButton"
+    ],
+    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"6105d3fc-843b-4968-ba66-3bb408ebee03\",\r\n    \"68b70e3c-aa3f-443d-aeca-307cf608c301\",\r\n    \"8b50a8fc-75d7-43c0-945e-3a5f89d52454\",\r\n    \"365664db-4695-4883-98e4-74bfef134570\",\r\n    \"c83ef3c8-7f74-48da-90bb-6d7c16b5e9ee\",\r\n    \"38b72c32-0476-4c45-a0d2-6614c1704852\",\r\n    \"f3689fbf-66d3-4176-8914-16e74813ed4f\",\r\n    \"17ed6075-65be-45af-887d-13f1c586e199\",\r\n    \"91d1e3eb-56b0-4127-9b20-1bf7f8962a6a\",\r\n    \"1c24c511-ac87-49e0-9779-269df7f1df26\",\r\n    \"5a86fb91-09da-4836-b184-fed0448387dc\",\r\n    \"b61f0677-a87d-473d-8c00-9579ecf3681b\",\r\n    \"23022f65-35fc-4e13-8d8e-d1d61926fa44\",\r\n    \"5058e14d-0adf-4ae9-af61-92ce6124a34c\",\r\n    \"0db58555-2c23-44b3-b115-6f7578b0ba18\",\r\n    \"ce227d82-4ef5-4db4-8edc-f5c736ab0852\",\r\n    \"33e70251-c275-46b4-894c-645775fba568\",\r\n    \"4a6ae9d7-cf8c-4da3-a808-7ceaa1d99b14\",\r\n    \"9e76f527-b3af-4b64-aee4-30ceecd51924\",\r\n    \"b5bbc280-ec88-4ca7-9bbc-e02281fc0ec2\",\r\n    \"8a03c83f-0e58-4c26-97ef-639719f11d64\",\r\n    \"1741e6b1-2a43-44b3-90a4-9e94d0d930e5\",\r\n    \"84044c63-4086-4104-a7b4-4098186f6067\",\r\n    \"1224151d-3c48-40b0-99cd-78ef6100956a\",\r\n    \"0e7a76c0-a1c9-4bdf-812d-093385dfd493\",\r\n    \"682cb6f6-510a-40ec-8dbd-fc02f41ac290\",\r\n    \"197eb2fb-354f-4168-a67b-5c3e5e9a5efe\",\r\n    \"1efa9531-3898-4f78-a4dc-d0401807934e\",\r\n    \"4ae62704-e306-4a5e-a79c-580be8b2f511\",\r\n    \"ecb78397-b3a1-4bd6-9cb0-0ae5ed66ac71\",\r\n    \"f86875c1-5756-4455-bd7c-1b147f995b9d\",\r\n    \"a69118c3-e80a-4f71-9b4e-e16880996dbe\",\r\n    \"d26fe8fe-cc82-425e-bda6-85774a36e5c6\",\r\n    \"8cfe72f1-62ed-4e2b-8117-fd20d1d9acd2\",\r\n    \"3c2c37ff-2882-4763-9ae8-81083e9f4d04\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"6105d3fc-843b-4968-ba66-3bb408ebee03\": {\r\n      \"name\": \"bunny2_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/kBiszeGACcLTGTrqmS4laPVQKPGQnDln/category_animals/bunny2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 152,\r\n        \"y\": 193\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"kBiszeGACcLTGTrqmS4laPVQKPGQnDln\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"68b70e3c-aa3f-443d-aeca-307cf608c301\": {\r\n      \"name\": \"bunny1_ready_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/uPIxfWA_cXFQ3rZjtIfd5beAWtSMrP1l/category_animals/bunny1_ready.png\",\r\n      \"frameSize\": {\r\n        \"x\": 120,\r\n        \"y\": 191\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"uPIxfWA_cXFQ3rZjtIfd5beAWtSMrP1l\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"8b50a8fc-75d7-43c0-945e-3a5f89d52454\": {\r\n      \"name\": \"carrot_2\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/QfIbb_F.hhLm1oJ6aZdVnStJLi2GS3Su/category_food/carrot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 78,\r\n        \"y\": 70\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"QfIbb_F.hhLm1oJ6aZdVnStJLi2GS3Su\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"365664db-4695-4883-98e4-74bfef134570\": {\r\n      \"name\": \"carrot_gold_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/HaaDdu6gJmq26f5YHzlCuruunH3zXzBm/category_food/carrot_gold.png\",\r\n      \"frameSize\": {\r\n        \"x\": 78,\r\n        \"y\": 70\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"HaaDdu6gJmq26f5YHzlCuruunH3zXzBm\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"c83ef3c8-7f74-48da-90bb-6d7c16b5e9ee\": {\r\n      \"name\": \"rocket1_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/MEMqXMue5aCM6clF3v8P6dI4JWfl9qTN/category_icons/rocket1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"MEMqXMue5aCM6clF3v8P6dI4JWfl9qTN\",\r\n      \"categories\": [\r\n        \"icons\"\r\n      ]\r\n    },\r\n    \"38b72c32-0476-4c45-a0d2-6614c1704852\": {\r\n      \"name\": \"rocket3_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/6jXtGEuw1yHbJ7mpzcM1uccOS31XhmaT/category_icons/rocket3.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"6jXtGEuw1yHbJ7mpzcM1uccOS31XhmaT\",\r\n      \"categories\": [\r\n        \"icons\"\r\n      ]\r\n    },\r\n    \"f3689fbf-66d3-4176-8914-16e74813ed4f\": {\r\n      \"name\": \"star1_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/WFeMBtQNLwmutaIR7uB8VwdVVhGBrj.u/category_icons/star1.png\",\r\n      \"frameSize\": {\r\n        \"x\": 396,\r\n        \"y\": 376\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"WFeMBtQNLwmutaIR7uB8VwdVVhGBrj.u\",\r\n      \"categories\": [\r\n        \"icons\"\r\n      ]\r\n    },\r\n    \"17ed6075-65be-45af-887d-13f1c586e199\": {\r\n      \"name\": \"star2_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/SV_eokrv3bYzaicDcAdec0_JTDWfCcjl/category_icons/star2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 393,\r\n        \"y\": 375\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"SV_eokrv3bYzaicDcAdec0_JTDWfCcjl\",\r\n      \"categories\": [\r\n        \"icons\"\r\n      ]\r\n    },\r\n    \"91d1e3eb-56b0-4127-9b20-1bf7f8962a6a\": {\r\n      \"name\": \"cuteanimals_seahorse_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/dg09n.6ByrgnL3f3zOzvHZTOOzP8JxjO/category_animals/cuteanimals_seahorse.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"dg09n.6ByrgnL3f3zOzvHZTOOzP8JxjO\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"1c24c511-ac87-49e0-9779-269df7f1df26\": {\r\n      \"name\": \"cuteanimals_tuna_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/s7FEz6qK3bC85.O2zg7fyshxhRyzWZ6./category_animals/cuteanimals_tuna.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"s7FEz6qK3bC85.O2zg7fyshxhRyzWZ6.\",\r\n      \"categories\": [\r\n        \"animals\"\r\n      ]\r\n    },\r\n    \"5a86fb91-09da-4836-b184-fed0448387dc\": {\r\n      \"name\": \"bubble_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/oUeg8NWQn_oXIVMO86ZMTEUwERu98eOm/category_aquatic_objects/bubble.png\",\r\n      \"frameSize\": {\r\n        \"x\": 211,\r\n        \"y\": 215\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oUeg8NWQn_oXIVMO86ZMTEUwERu98eOm\",\r\n      \"categories\": [\r\n        \"aquatic_objects\"\r\n      ]\r\n    },\r\n    \"b61f0677-a87d-473d-8c00-9579ecf3681b\": {\r\n      \"name\": \"shell_09_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/94W5VYrZMoAQeAXpSjkTGFh6TnYoyy.6/category_aquatic_objects/shell_09.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 250\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"94W5VYrZMoAQeAXpSjkTGFh6TnYoyy.6\",\r\n      \"categories\": [\r\n        \"aquatic_objects\"\r\n      ]\r\n    },\r\n    \"23022f65-35fc-4e13-8d8e-d1d61926fa44\": {\r\n      \"name\": \"alien_03_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/bCofBPuF7Uztbqt5boNOsHc_HWd9o5Be/category_fantasy/alien_03.png\",\r\n      \"frameSize\": {\r\n        \"x\": 389,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"bCofBPuF7Uztbqt5boNOsHc_HWd9o5Be\",\r\n      \"categories\": [\r\n        \"fantasy\"\r\n      ]\r\n    },\r\n    \"5058e14d-0adf-4ae9-af61-92ce6124a34c\": {\r\n      \"name\": \"pink_monster_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/ICX8FNAVTD5h9tK.vBaqq18e63OUYDFP/category_fantasy/pink_monster.png\",\r\n      \"frameSize\": {\r\n        \"x\": 242,\r\n        \"y\": 285\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ICX8FNAVTD5h9tK.vBaqq18e63OUYDFP\",\r\n      \"categories\": [\r\n        \"fantasy\"\r\n      ]\r\n    },\r\n    \"0db58555-2c23-44b3-b115-6f7578b0ba18\": {\r\n      \"name\": \"ore_diamond_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/w6PTRjAQNwyJ56.CQKlwkbzYzT.SUvzu/category_video_games/ore_diamond.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"w6PTRjAQNwyJ56.CQKlwkbzYzT.SUvzu\",\r\n      \"categories\": [\r\n        \"video_games\"\r\n      ]\r\n    },\r\n    \"ce227d82-4ef5-4db4-8edc-f5c736ab0852\": {\r\n      \"name\": \"ore_emerald_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/spritelab/xImTuFeowlh7a4B_MFUyjgTG3BJ2MfPI/category_video_games/ore_emerald.png\",\r\n      \"frameSize\": {\r\n        \"x\": 128,\r\n        \"y\": 128\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"xImTuFeowlh7a4B_MFUyjgTG3BJ2MfPI\",\r\n      \"categories\": [\r\n        \"video_games\"\r\n      ]\r\n    },\r\n    \"33e70251-c275-46b4-894c-645775fba568\": {\r\n      \"name\": \"abstract_08_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2F.g_fM0jG5YHeQCetPtAd_H9pyzUfaVjK%2Fcategory_backgrounds%2Fabstract_08.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \".g_fM0jG5YHeQCetPtAd_H9pyzUfaVjK\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"4a6ae9d7-cf8c-4da3-a808-7ceaa1d99b14\": {\r\n      \"name\": \"abstract_26_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2F_pBimGWbiO2Nbb6J7Bfjez6VIWSBKdx.%2Fcategory_backgrounds%2Fabstract_26.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_pBimGWbiO2Nbb6J7Bfjez6VIWSBKdx.\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"9e76f527-b3af-4b64-aee4-30ceecd51924\": {\r\n      \"name\": \"grid_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2F6udB34wA0EBLf0wwVkEWGCKKSjt5rRRr%2Fcategory_backgrounds%2Fbackground_grid.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"6udB34wA0EBLf0wwVkEWGCKKSjt5rRRr\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"b5bbc280-ec88-4ca7-9bbc-e02281fc0ec2\": {\r\n      \"name\": \"cave_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FIn3iY920nuOrZ0JmAOQbuVG8j8D4iTGD%2Fcategory_backgrounds%2Fbackground_cave.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"In3iY920nuOrZ0JmAOQbuVG8j8D4iTGD\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"8a03c83f-0e58-4c26-97ef-639719f11d64\": {\r\n      \"name\": \"santa_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2F9ZleRnJkMxYhfpPY2zZrrikGdZ6H6F6l%2Fcategory_backgrounds%2Fbackground_santa.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"9ZleRnJkMxYhfpPY2zZrrikGdZ6H6F6l\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"1741e6b1-2a43-44b3-90a4-9e94d0d930e5\": {\r\n      \"name\": \"space_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FqoFFPgWiydir6HZwldQy.Fmh8NmNhTI9%2Fcategory_backgrounds%2Fbackground_space.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"qoFFPgWiydir6HZwldQy.Fmh8NmNhTI9\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"84044c63-4086-4104-a7b4-4098186f6067\": {\r\n      \"name\": \"sci_fi_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FnzRiSKyDsq4blLQyAWJbkkTtTLJ64kxP%2Fcategory_backgrounds%2Fbackground_scifi.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"nzRiSKyDsq4blLQyAWJbkkTtTLJ64kxP\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"1224151d-3c48-40b0-99cd-78ef6100956a\": {\r\n      \"name\": \"desk_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FMsrs4LVRVjsfciXAjZGCmhP_AcN4iPk3%2Fcategory_backgrounds%2Fdesk.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Msrs4LVRVjsfciXAjZGCmhP_AcN4iPk3\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"0e7a76c0-a1c9-4bdf-812d-093385dfd493\": {\r\n      \"name\": \"desert_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FAt9X2LiZq9X6dQUW0NBluC3Te8fbAPEx%2Fcategory_backgrounds%2Fbackground_desert.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"At9X2LiZq9X6dQUW0NBluC3Te8fbAPEx\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"682cb6f6-510a-40ec-8dbd-fc02f41ac290\": {\r\n      \"name\": \"continuous_grass_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FbzBzwUgBEeqWUbNBmcmnl1egMrpmBw3o%2Fcategory_backgrounds%2Fcontinuous_grass.png\",\r\n      \"frameSize\": {\r\n        \"x\": 800,\r\n        \"y\": 398\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"bzBzwUgBEeqWUbNBmcmnl1egMrpmBw3o\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"197eb2fb-354f-4168-a67b-5c3e5e9a5efe\": {\r\n      \"name\": \"gradient_01_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FUXLibXLPPb5ofYkbGpXPPKBf.txNOBHP%2Fcategory_backgrounds%2Fgradient_01.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"UXLibXLPPb5ofYkbGpXPPKBf.txNOBHP\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"1efa9531-3898-4f78-a4dc-d0401807934e\": {\r\n      \"name\": \"gradient_15_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2F7sYC8PslcLJGgu.y2HZfYLRHsCFyPUY1%2Fcategory_backgrounds%2Fgradient_15.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"7sYC8PslcLJGgu.y2HZfYLRHsCFyPUY1\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"4ae62704-e306-4a5e-a79c-580be8b2f511\": {\r\n      \"name\": \"gradient_03_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2Fclm.B3LRlh0tz1foLrkbOixSsCSCUY_P%2Fcategory_backgrounds%2Fgradient_03.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"clm.B3LRlh0tz1foLrkbOixSsCSCUY_P\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"ecb78397-b3a1-4bd6-9cb0-0ae5ed66ac71\": {\r\n      \"name\": \"gradient_25_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FHJMXamvByE28ZPEEbFg5KUDcFo6EhoEf%2Fcategory_backgrounds%2Fgradient_25.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 339\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"HJMXamvByE28ZPEEbFg5KUDcFo6EhoEf\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"f86875c1-5756-4455-bd7c-1b147f995b9d\": {\r\n      \"name\": \"living_room_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FysHVw5mmZbMIqwDVXi7C.B4OuPqNMHVm%2Fcategory_backgrounds%2Fliving_room.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ysHVw5mmZbMIqwDVXi7C.B4OuPqNMHVm\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"a69118c3-e80a-4f71-9b4e-e16880996dbe\": {\r\n      \"name\": \"sun_and_rainbow_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FU_B34s7WuMGQBIqtrDWle53mf8DRkN9h%2Fcategory_backgrounds%2Fsun_and_rainbow.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"U_B34s7WuMGQBIqtrDWle53mf8DRkN9h\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"d26fe8fe-cc82-425e-bda6-85774a36e5c6\": {\r\n      \"name\": \"park_view_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FeRBbLv0JNKLk62sMh4QJET1_ifFvV_vS%2Fcategory_backgrounds%2Fpark_view.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"eRBbLv0JNKLk62sMh4QJET1_ifFvV_vS\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"8cfe72f1-62ed-4e2b-8117-fd20d1d9acd2\": {\r\n      \"name\": \"bg_landscape21_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2FGTrVmut4s5PswM6hx254yCcDWLNhhmVk%2Fcategory_backgrounds%2Fbg_landscape21.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"GTrVmut4s5PswM6hx254yCcDWLNhhmVk\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"3c2c37ff-2882-4763-9ae8-81083e9f4d04\": {\r\n      \"name\": \"sports_basketballhalf2_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/media?u=https%3A%2F%2Fstudio.code.org%2Fapi%2Fv1%2Fanimation-library%2Fgamelab%2F4cK4OL0TYp17v4XpNg9ICEQ_SgSA7nCh%2Fcategory_backgrounds%2Fsports_basketballhalf2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"4cK4OL0TYp17v4XpNg9ICEQ_SgSA7nCh\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "validation_enabled": "false",
+    "mini_toolbox": "true",
+    "display_name": "Carrot Collector",
+    "bubble_choice_description": "Collect as many carrots as you can before time runs out.",
+    "thumbnail_url": "https://images.code.org/1a6c4b9f3a518096209bc11c238196e3-image-1642799084834.png",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"visualizationResizeBar\",\r\n  \"callout_text\": \"Drag the 3 dots to resize the play area.\",\r\n  \"element_id\": \"#visualizationResizeBar\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"top center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_pause_button": "false",
+    "short_instructions": "Read the code below. Press \"Run\" to play this game. Make changes to the code. Press \"Finish\" when you are done.",
+    "instructions_icon": "purplebunny",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:56:42.153+00:00\",\"changed\":[\"cloned from \\\"courseF_apps_collector_move_maker\\\"\"],\"cloned_from\":\"courseF_apps_collector_move_maker\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="gamelab_setBackground">
+              <value name="COLOR">
+                <block type="colour_picker">
+                  <field name="COLOUR">#99ff99</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon">
+                  <field name="ANIMATION_NAME">"bunny2_1"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker">
+                      <field name="LOCATION">{"x":100,"y":200}</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorSimple">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"bunny2_1"</field>
+                        </block>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_playerBehaviors">
+                          <field name="BEHAVIOR">new Behavior(moving_with_arrow_keys, [])</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_makeNumSprites">
+                          <field name="ANIMATION_NAME">"carrot_2"</field>
+                          <value name="NUM">
+                            <block type="math_number">
+                              <field name="NUM">10</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_setProp">
+                              <field name="PROPERTY">"scale"</field>
+                              <value name="SPRITE">
+                                <block type="gamelab_allSpritesWithAnimation">
+                                  <field name="ANIMATION">"carrot_2"</field>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number">
+                                  <field name="NUM">50</field>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_addBehaviorSimple">
+                                  <value name="SPRITE">
+                                    <block type="gamelab_allSpritesWithAnimation">
+                                      <field name="ANIMATION">"carrot_2"</field>
+                                    </block>
+                                  </value>
+                                  <value name="BEHAVIOR">
+                                    <block type="gamelab_collectibleBehaviors">
+                                      <field name="BEHAVIOR">new Behavior(spinning_right, [])</field>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="variables_set">
+                                      <field name="VAR">score</field>
+                                      <value name="VALUE">
+                                        <block type="math_number">
+                                          <field name="NUM">0</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="gamelab_printText">
+                                          <value name="TEXT">
+                                            <block type="text">
+                                              <field name="TEXT">Press the arrow keys to move.</field>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_atTime">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">5</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_makeNumSprites">
+              <field name="ANIMATION_NAME">"carrot_2"</field>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">10</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_setProp">
+                  <field name="PROPERTY">"scale"</field>
+                  <value name="SPRITE">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"carrot_2"</field>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_number">
+                      <field name="NUM">50</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorSimple">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"carrot_2"</field>
+                        </block>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_collectibleBehaviors">
+                          <field name="BEHAVIOR">new Behavior(spinning_right, [])</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_atTime">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">7</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_makeNumSprites">
+              <field name="ANIMATION_NAME">"carrot_gold_1"</field>
+              <value name="NUM">
+                <block type="math_number">
+                  <field name="NUM">1</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_setProp">
+                  <field name="PROPERTY">"scale"</field>
+                  <value name="SPRITE">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"carrot_gold_1"</field>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_number">
+                      <field name="NUM">75</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_addBehaviorSimple">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"carrot_gold_1"</field>
+                        </block>
+                      </value>
+                      <value name="BEHAVIOR">
+                        <block type="gamelab_collectibleBehaviors">
+                          <field name="BEHAVIOR">new Behavior(wandering, [])</field>
+                        </block>
+                      </value>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_atTime">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">10</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_printText">
+              <value name="TEXT">
+                <block type="gamelab_textJoin">
+                  <field name="TEXT1">Great job! Your score: </field>
+                  <value name="TEXT2">
+                    <block type="variables_get">
+                      <field name="VAR">score</field>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_destroy">
+                  <value name="THIS">
+                    <block type="gamelab_allSpritesWithAnimation">
+                      <field name="ANIMATION">"carrot_2"</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_removeAllBehaviors">
+                      <value name="SPRITE">
+                        <block type="gamelab_allSpritesWithAnimation">
+                          <field name="ANIMATION">"bunny2_1"</field>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_playSound">
+                          <field name="SOUND">sound://category_achievements/peaceful_win_8.mp3</field>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"bunny2_1"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"carrot_2"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_destroy">
+              <value name="THIS">
+                <block type="gamelab_objectSpritePointer"/>
+              </value>
+              <next>
+                <block type="math_change">
+                  <field name="VAR">score</field>
+                  <value name="DELTA">
+                    <block type="math_number">
+                      <field name="NUM">1</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_playSound">
+                      <field name="SOUND">sound://category_collect/clicky_crunch.mp3</field>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="gamelab_checkTouching">
+          <field name="CONDITION">"when"</field>
+          <value name="SPRITE1">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"bunny2_1"</field>
+            </block>
+          </value>
+          <value name="SPRITE2">
+            <block type="gamelab_allSpritesWithAnimation">
+              <field name="ANIMATION">"carrot_gold_1"</field>
+            </block>
+          </value>
+          <next>
+            <block type="gamelab_destroy">
+              <value name="THIS">
+                <block type="gamelab_objectSpritePointer"/>
+              </value>
+              <next>
+                <block type="math_change">
+                  <field name="VAR">score</field>
+                  <value name="DELTA">
+                    <block type="math_number">
+                      <field name="NUM">5</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="gamelab_playSound">
+                      <field name="SOUND">sound://category_collect/energy_bar_recharge_4.mp3</field>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

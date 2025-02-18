@@ -1,12 +1,14 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import JavalabDropdown from './components/JavalabDropdown';
 import {DisplayTheme} from './DisplayTheme';
-import i18n from '@cdo/locale';
-import CloseOnEscape from './components/CloseOnEscape';
 
 /**
  * A button that drops down to a set of clickable file names, and closes itself if
@@ -16,11 +18,11 @@ class JavalabFileExplorer extends Component {
   static propTypes = {
     fileMetadata: PropTypes.object,
     onSelectFile: PropTypes.func.isRequired,
-    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
   };
 
   state = {
-    dropdownOpen: false
+    dropdownOpen: false,
   };
 
   expandDropdown = () => {
@@ -71,7 +73,7 @@ class JavalabFileExplorer extends Component {
           onClick={this.toggleDropdown}
           style={{
             ...styles.button,
-            ...(displayTheme === DisplayTheme.DARK && styles.darkButton)
+            ...(displayTheme === DisplayTheme.DARK && styles.darkButton),
           }}
         >
           <FontAwesome icon="folder" />
@@ -102,11 +104,11 @@ const styles = {
     float: 'left',
     height: 29,
     width: 29,
-    margin: 2
+    margin: 2,
   },
   dropdown: {
     maxHeight: 190,
-    overflowY: 'scroll'
+    overflowY: 'scroll',
   },
   button: {
     height: '100%',
@@ -114,11 +116,11 @@ const styles = {
     padding: 3,
     margin: 0,
     borderRadius: 2,
-    backgroundColor: color.background_gray
+    backgroundColor: color.background_gray,
   },
   darkButton: {
-    color: color.dark_charcoal
-  }
+    color: color.dark_charcoal,
+  },
 };
 
 export default onClickOutside(JavalabFileExplorer);

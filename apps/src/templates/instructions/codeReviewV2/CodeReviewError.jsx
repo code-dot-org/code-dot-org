@@ -1,8 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const CodeReviewError = ({messageTitle, messageText, style = {}}) => {
   const title = messageTitle || javalabMsg.genericError();
@@ -21,25 +23,25 @@ const CodeReviewError = ({messageTitle, messageText, style = {}}) => {
 const styles = {
   saveStatus: {
     display: 'flex',
-    marginTop: 2
+    marginTop: 2,
   },
   iconError: {
     color: color.light_orange,
     fontSize: 30,
-    marginRight: 10
+    marginRight: 10,
   },
   messageTitle: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
     marginBottom: 0,
-    color: color.dark_charcoal
+    color: color.dark_charcoal,
   },
   messageText: {
     fontStyle: 'italic',
     fontSize: 12,
     marginBottom: 0,
-    color: color.dark_charcoal
-  }
+    color: color.dark_charcoal,
+  },
 };
 
 export default CodeReviewError;
@@ -47,5 +49,5 @@ export default CodeReviewError;
 CodeReviewError.propTypes = {
   messageTitle: PropTypes.string,
   messageText: PropTypes.string,
-  style: PropTypes.object
+  style: PropTypes.object,
 };

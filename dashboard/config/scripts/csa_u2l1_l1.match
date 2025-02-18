@@ -11,3 +11,4 @@ question 'instance variable'
 answer 'a variable that exists only within a specific class'
 question 'data encapsulation'
 answer 'details of a class are hidden from the user'
+allow_multiple_attempts true

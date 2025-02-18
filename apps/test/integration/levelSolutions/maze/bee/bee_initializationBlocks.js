@@ -13,7 +13,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -23,7 +23,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -33,7 +33,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -43,7 +43,7 @@ var levelDef = {
       {tileType: 1},
       {tileType: 1, value: 5, range: 5, featureType: 1},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -53,7 +53,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -63,7 +63,7 @@ var levelDef = {
       {tileType: 1},
       {tileType: 1, value: 5, range: 5, featureType: 1},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -73,7 +73,7 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
+      {tileType: 0},
     ],
     [
       {tileType: 0},
@@ -83,8 +83,8 @@ var levelDef = {
       {tileType: 0},
       {tileType: 0},
       {tileType: 0},
-      {tileType: 0}
-    ]
+      {tileType: 0},
+    ],
   ],
   flowerType: 'redWithNectar',
   initializationBlocks:
@@ -109,7 +109,7 @@ var levelDef = {
     '</next>' +
     '</block>' +
     '</next>' +
-    '</block>'
+    '</block>',
 };
 
 module.exports = {
@@ -121,7 +121,7 @@ module.exports = {
       description: 'Run with initialization blocks.',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
@@ -255,7 +255,7 @@ module.exports = {
         '</block>' +
         '</statement>' +
         '</block>' +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

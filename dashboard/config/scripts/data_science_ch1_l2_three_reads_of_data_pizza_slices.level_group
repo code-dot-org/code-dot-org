@@ -1,0 +1,10 @@
+name 'Data Science Ch1 L2 Three Reads of Data - Pizza Slices'
+title 'Three Reads of Data - Pizza Slices'
+submittable 'false'
+anonymous 'false'
+
+page
+text 'Data Science Ch1 L2 Three Reads of Data - Pizza Slices Dataset'
+level 'Data Science Ch1 L2 Three Reads of Data - Pizza Slices Read1'
+level 'Data Science Ch1 L2 Three Reads of Data - Pizza Slices Read2'
+level 'Data Science Ch1 L2 Three Reads of Data - Pizza Slices Read3'

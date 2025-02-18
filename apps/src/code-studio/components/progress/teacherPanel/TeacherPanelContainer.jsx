@@ -1,13 +1,15 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 export default class TeacherPanelContainer extends React.Component {
   static propTypes = {
     children: PropTypes.node,
-    logToFirehose: PropTypes.func
+    className: PropTypes.string,
+    logToFirehose: PropTypes.func,
   };
 
   state = {open: tryGetLocalStorage('teacher-panel', 'open') !== 'closed'};
@@ -31,7 +33,11 @@ export default class TeacherPanelContainer extends React.Component {
 
   render() {
     return (
-      <div className={classNames('teacher-panel', {hidden: !this.state.open})}>
+      <div
+        className={classNames('teacher-panel', this.props.className, {
+          hidden: !this.state.open,
+        })}
+      >
         <div className="hide-handle">
           <FontAwesome icon="chevron-right" onClick={this.hide} />
         </div>

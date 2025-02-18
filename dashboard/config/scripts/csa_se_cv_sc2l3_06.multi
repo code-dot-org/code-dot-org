@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SC2L3-06'
+
+question 'Code-generating AI tools were more useful in understanding programming concepts compared to traditional methods.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

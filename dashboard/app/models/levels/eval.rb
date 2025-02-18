@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Eval < Blockly
@@ -126,5 +127,9 @@ class Eval < Blockly
     match = /<xml><block type="functional_display".*?><functional_input.*?>(.*)<\/functional_input><\/block><\/xml>/.match(block_xml)
     embed_xml = match[1] if match && match[1]
     return embed_xml
+  end
+
+  def deprecated?
+    true
   end
 end

@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
 export function ProgrammingEnvironmentCard({programmingEnvironment}) {
@@ -9,7 +10,13 @@ export function ProgrammingEnvironmentCard({programmingEnvironment}) {
     <div style={styles.card}>
       <div>
         {programmingEnvironment.imageUrl && (
-          <img style={styles.image} src={programmingEnvironment.imageUrl} />
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+          <img
+            style={styles.image}
+            src={programmingEnvironment.imageUrl}
+            alt=""
+          />
         )}
         {programmingEnvironment.title && (
           <h2>{programmingEnvironment.title}</h2>
@@ -50,18 +57,18 @@ export default function ProgrammingEnvironmentIndex({programmingEnvironments}) {
 const ProgrammingEnvironmentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   title: PropTypes.string,
-  descriotion: PropTypes.string,
+  description: PropTypes.string,
   imageUrl: PropTypes.string,
-  showPath: PropTypes.string.isRequired
+  showPath: PropTypes.string.isRequired,
 });
 
 ProgrammingEnvironmentIndex.propTypes = {
   programmingEnvironments: PropTypes.arrayOf(ProgrammingEnvironmentShape)
-    .isRequired
+    .isRequired,
 };
 
 ProgrammingEnvironmentCard.propTypes = {
-  programmingEnvironment: ProgrammingEnvironmentShape
+  programmingEnvironment: ProgrammingEnvironmentShape,
 };
 
 const styles = {
@@ -76,16 +83,16 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   all: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   image: {
-    width: '100%'
+    width: '100%',
   },
   header: {
-    margin: 5
-  }
+    margin: 5,
+  },
 };

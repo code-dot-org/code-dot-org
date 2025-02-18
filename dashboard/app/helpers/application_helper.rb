@@ -29,12 +29,6 @@ module ApplicationHelper
     "#{s} ago"
   end
 
-  def gender_options
-    Policies::Gender::OPTIONS.map do |key, value|
-      [(key ? t(key) : ''), value]
-    end
-  end
-
   def user_type_options
     User::USER_TYPE_OPTIONS.map do |user_type|
       [t("user_type.#{user_type}"), user_type]
@@ -47,6 +41,21 @@ module ApplicationHelper
     end
   end
 
+  def us_state_options
+    User.us_state_dropdown_options.map do |code, name|
+      [name, code]
+    end
+  end
+
+  # This method formats a date string to align with the format used in analytics:
+  # "YYYY-YY+1" (e.g. "2022-23")
+  # We define a school year as July 1st YYYY - June 30th YYYY+1, so:
+  # 07/01/2022 - 06/30/2023 should be formatted as "2022-23"
+  def school_year
+    year = Time.now.month >= 7 ? Time.now.year : Time.now.year - 1
+    "#{year}-#{year.to_s[-2..].to_i + 1}"
+  end
+
   def activity_css_class(user_level)
     best_activity_css_class([user_level])
   end
@@ -54,9 +63,9 @@ module ApplicationHelper
   def best_activity_css_class(user_levels)
     # For definitions of the result values, see /app/src/constants.js.
     user_level = user_levels.
-        select {|ul| ul.try(:best_result) && ul.best_result != 0}.
-        max_by(&:best_result) ||
-        user_levels.first
+      select {|ul| ul.try(:best_result) && ul.best_result != 0}.
+      max_by(&:best_result) ||
+      user_levels.first
     result = user_level.try(:best_result)
 
     if result == Activity::REVIEW_REJECTED_RESULT
@@ -80,17 +89,29 @@ module ApplicationHelper
     ret = ''
     if notice.present?
       ret += content_tag(:div, flash.notice, {class: 'alert alert-success'})
-      flash.notice = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash.notice = nil
+      end
     end
 
     if flash[:info].present?
       ret += content_tag(:div, flash[:info], {class: 'alert alert-info'})
-      flash[:info] = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash[:info] = nil
+      end
     end
 
     if alert.present?
       ret += content_tag(:div, flash.alert, {class: 'alert alert-danger'})
-      flash.alert = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash.alert = nil
+      end
     end
 
     ret
@@ -98,14 +119,6 @@ module ApplicationHelper
 
   def code_org_root_path
     CDO.code_org_url
-  end
-
-  def home_url
-    '/home'
-  end
-
-  def teacher_dashboard_section_progress_url(section)
-    "/teacher_dashboard/sections/#{section.id}/progress"
   end
 
   # used by sign-up to retrieve the user return_to URL from the session and delete it.
@@ -125,8 +138,6 @@ module ApplicationHelper
     case provider.to_sym
     when :facebook
       'https://www.facebook.com/logout.php'
-    when :windowslive
-      'http://login.live.com/logout.srf'
     when :google_oauth2
       'https://accounts.google.com/logout'
     end
@@ -155,7 +166,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB, Game::DANCE, Game::SPRITELAB].include? app
+    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB, Game::DANCE, Game::SPRITELAB, Game::MUSIC].include? app
       asset_url "#{app}_sharing_drawing.png"
     elsif app == Game::BOUNCE
       if ["basketball", "sports"].include? skin
@@ -166,29 +177,6 @@ module ApplicationHelper
     else
       asset_url 'sharing_drawing.png'
     end
-  end
-
-  def signup_error_messages!
-    # See also https://github.com/plataformatec/devise/blob/master/app/helpers/devise_helper.rb
-    return "" if resource.errors.empty?
-
-    messages = resource.errors.full_messages.map {|msg| content_tag(:li, msg)}.join
-    sentence = resource.oauth? ?
-      I18n.t("signup_form.additional_information") :
-      I18n.t(
-        "errors.messages.not_saved",
-        count: resource.errors.count,
-        resource: resource.class.model_name.human.downcase
-      )
-
-    html = <<-HTML
-    <div id="error_explanation">
-      <h2>#{sentence}</h2>
-      <ul>#{messages}</ul>
-    </div>
-    HTML
-
-    html.html_safe
   end
 
   # Returns a client state object for the current session and cookies.
@@ -226,9 +214,11 @@ module ApplicationHelper
     obj
   end
 
-  private
+  def render_shared_haml(name, locals = {})
+    render inline: File.read(CDO.dir("shared/haml/#{name}.haml")), type: :haml, locals: locals # rubocop:disable Rails/RenderInline
+  end
 
-  def share_failure_message(failure_type)
+  private def share_failure_message(failure_type)
     case failure_type
     when ShareFiltering::FailureType::EMAIL
       t('share_code.email_not_allowed')

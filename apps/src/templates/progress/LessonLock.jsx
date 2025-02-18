@@ -1,12 +1,13 @@
 /**
- * A button that opens our LessonLockDialog component, using our redesigned button.
+ * A button that opens our LessonLockDialog component
  */
 
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Button';
-import i18n from '@cdo/locale';
+import React, {useState} from 'react';
+
 import LessonLockDialog from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import i18n from '@cdo/locale';
 
 const LessonLock = ({unitId, lessonId, isHidden}) => {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -37,24 +38,24 @@ const LessonLock = ({unitId, lessonId, isHidden}) => {
 LessonLock.propTypes = {
   unitId: PropTypes.number.isRequired,
   lessonId: PropTypes.number.isRequired,
-  isHidden: PropTypes.bool
+  isHidden: PropTypes.bool,
 };
 
 const styles = {
   main: {
-    marginTop: 5
+    marginTop: 5,
   },
   buttonContainer: {
     marginLeft: 15,
-    marginRight: 15
+    marginRight: 15,
   },
   // Using 'margin' instead of 'marginTop' intentionally to override styling
   button: {
     paddingLeft: 0,
     paddingRight: 0,
     width: '100%',
-    margin: '5px 0px 0px 0px'
-  }
+    margin: '5px 0px 0px 0px',
+  },
 };
 
 export default LessonLock;

@@ -1,9 +1,12 @@
-import React from 'react';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
-import sinon from 'sinon';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {UnconnectedManageStudentsActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   id: 2,
@@ -14,7 +17,7 @@ const DEFAULT_PROPS = {
   cancelEditingStudent: () => {},
   removeStudent: () => {},
   canEdit: true,
-  loadSectionData: () => {}
+  loadSectionData: () => {},
 };
 
 describe('ManageStudentsActionsCell', () => {
@@ -66,13 +69,23 @@ describe('ManageStudentsActionsCell', () => {
     expect(wrapper).not.to.contain('Edit');
   });
 
+  it('does not render the edit option when loginType is lti', () => {
+    const wrapper = shallow(
+      <ManageStudentsActionsCell
+        {...DEFAULT_PROPS}
+        loginType={SectionLoginType.lti_v1}
+      />
+    );
+    expect(wrapper).not.to.contain('Edit');
+  });
+
   describe('onDelete', () => {
     beforeEach(() => {
       sinon.stub($, 'ajax').returns({
         done: sinon
           .stub()
           .callsArg(0)
-          .returns({fail: () => {}})
+          .returns({fail: () => {}}),
       });
     });
 
@@ -84,7 +97,7 @@ describe('ManageStudentsActionsCell', () => {
       const loadSectionSpy = sinon.spy();
       const props = {
         ...DEFAULT_PROPS,
-        ...{loadSectionData: loadSectionSpy}
+        ...{loadSectionData: loadSectionSpy},
       };
       const wrapper = shallow(<ManageStudentsActionsCell {...props} />);
       wrapper.instance().onConfirmDelete();

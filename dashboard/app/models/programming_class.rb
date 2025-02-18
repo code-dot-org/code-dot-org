@@ -49,9 +49,9 @@ class ProgrammingClass < ApplicationRecord
     )
   end
 
-  def self.seed_all
+  def self.seed_all(root_dir: Rails.root)
     removed_records = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/programming_classes/**/*.json")).each do |path|
+    Dir.glob(root_dir.join("config/programming_classes/**/*.json")).each do |path|
       removed_records -= [ProgrammingClass.seed_record(path)]
     end
     where(id: removed_records).destroy_all
@@ -89,13 +89,13 @@ class ProgrammingClass < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
     object_to_serialize = serialize
     directory_name = File.dirname(file_path)
-    FileUtils.mkdir_p(directory_name) unless File.exist?(directory_name)
+    FileUtils.mkdir_p(directory_name)
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end
 
   def remove_serialization
     return unless Rails.application.config.levelbuilder_mode
-    File.delete(file_path) if File.exist?(file_path)
+    FileUtils.rm_f(file_path)
   end
 
   def summarize_for_edit
@@ -173,13 +173,11 @@ class ProgrammingClass < ApplicationRecord
     end
   end
 
-  private
-
-  def parsed_examples
+  private def parsed_examples
     examples.blank? ? [] : JSON.parse(examples)
   end
 
-  def parsed_fields
+  private def parsed_fields
     fields.blank? ? [] : JSON.parse(fields)
   end
 end

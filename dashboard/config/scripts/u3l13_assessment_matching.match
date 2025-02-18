@@ -20,3 +20,4 @@ answer 'Calls an embedded function'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

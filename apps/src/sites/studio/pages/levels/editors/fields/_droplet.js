@@ -1,22 +1,23 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
+
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/level-editor/DropletPaletteSelector';
+import DropletPaletteSelector from '@cdo/apps/levelbuilder/level-editor/DropletPaletteSelector';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 const data = getScriptData('pageOptions');
 
 const fieldConfig = {
   starterCode: {
     codemirror: 'level_start_blocks',
-    codemirrorMode: 'javascript'
+    codemirrorMode: 'javascript',
   },
   codeFunctions: {
     hideWhen: !data.uses_droplet,
     codemirror: 'level_code_functions',
-    codemirrorMode: 'javascript'
-  }
+    codemirrorMode: 'javascript',
+  },
 };
 
 Object.keys(fieldConfig).forEach(key => {

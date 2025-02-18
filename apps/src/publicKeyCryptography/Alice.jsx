@@ -1,10 +1,8 @@
 /** @file The Alice character panel from the crypto widget */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import CharacterPanel from './CharacterPanel';
-import NumberedSteps, {Step} from './NumberedSteps';
-import IntegerField from './IntegerField';
-import IntegerTextbox from './IntegerTextbox';
 import {
   PrivateKeyDropdown,
   PublicModulusDropdown,
@@ -13,16 +11,19 @@ import {
   KeywordPublicKey,
   KeywordPrivateKey,
   KeywordPublicNumber,
-  KeywordSecretNumber
+  KeywordSecretNumber,
 } from './cryptographyFields';
 import {computePublicKey} from './cryptographyMath';
+import IntegerField from './IntegerField';
+import IntegerTextbox from './IntegerTextbox';
+import NumberedSteps, {Step} from './NumberedSteps';
 import {COLORS} from './style';
 
 const INITIAL_STATE = {
   publicModulus: null,
   privateKey: null,
   publicNumber: null,
-  secretNumber: null
+  secretNumber: null,
 };
 
 export default class Alice extends React.Component {
@@ -30,7 +31,7 @@ export default class Alice extends React.Component {
     disabled: PropTypes.bool,
     setPublicModulus: PropTypes.func.isRequired,
     setPublicKey: PropTypes.func.isRequired,
-    runModuloClock: PropTypes.func.isRequired
+    runModuloClock: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};

@@ -33,7 +33,6 @@ require 'cdo/honeybadger'
 require 'cdo/infra_production_topic'
 require 'cdo/rake_utils'
 require 'cdo/test_server_status'
-require 'cdo/metrics_helper'
 require 'dynamic_config/dcdo'
 require 'aws-sdk-cloudwatch'
 
@@ -48,15 +47,16 @@ S3_LOGS_PREFIX = CDO.name.freeze
 # @return [String] Hyperlink to uploaded log, or empty string
 def upload_log_and_get_link(key, body, metadata)
   log_url = AWS::S3::LogUploader.
-      new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
-      upload_log(
-        key,
-        body,
-        {metadata: metadata}
-      )
-  " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => msg
-  ChatClient.log "Uploading log to S3 failed: #{msg}"
+    new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
+    upload_log(
+      key,
+      body,
+      {metadata: metadata}
+    )
+  permalink = AWS::S3.get_console_link_from_presigned(log_url)
+  " <a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
+rescue Exception => exception
+  ChatClient.log "Uploading log to S3 failed: #{exception}"
   return ''
 end
 
@@ -74,10 +74,8 @@ def build
     File.write(deploy_dir('rebuild'), log)
 
     git_revision = RakeUtils.git_revision
-    git_revision_short = GitUtils.git_revision_short
 
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
-    write_build_status rack_env, git_revision_short, :start
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
@@ -93,8 +91,8 @@ def build
       end
 
       result
-    rescue => e
-      CDO.backtrace e
+    rescue => exception
+      CDO.backtrace exception
     end
 
     FileUtils.rm STARTED if File.file?(STARTED)
@@ -109,8 +107,8 @@ def main
   status = 0
   log = RakeUtils.capture do
     status = build
-  rescue => e
-    status = "Error: #{e.message}\n#{CDO.backtrace e}"
+  rescue => exception
+    status = "Error: #{exception.message}\n#{CDO.backtrace exception}"
   end
   return status if status == 0 && log.empty?
 
@@ -119,7 +117,6 @@ def main
     projects = 'websites' if projects.empty?
 
     commit_hash = RakeUtils.git_revision
-    commit_hash_short = GitUtils.git_revision_short
     commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}"
 
     duration = Time.now.to_i - start_time.to_i
@@ -146,8 +143,6 @@ def main
       message = "<b>#{projects}</b> built." + time_message + log_link
       ChatClient.log message, color: 'green'
 
-      write_build_status rack_env, commit_hash_short, :success
-
       if CDO.test_system?
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
         mark_dtt_green
@@ -165,13 +160,6 @@ def main
 
         # Schedule a reminder for the dotd to check Zendesk in 2 hours
         Slack.remind(Slack.user_id(DevelopersTopic.dotd), Time.now.to_i + 7200, 'Reminder: check <https://codeorg.zendesk.com/agent/filters/44863373|Zendesk>')
-
-        # Check hoc_mode and hoc_launch only on successful DTPs, so that we get about 1 reminder per
-        # day to bring staging, test and production to the same hoc_mode and hoc_launch after a
-        # hoc_mode or hoc_launch change. Note that this will only warn us if test and production
-        # (but not staging) are out of sync.
-        check_hoc_mode
-        check_hoc_launch
       end
     else
       message = "<b>#{projects}</b> failed to build!" + time_message + log_link
@@ -181,11 +169,12 @@ def main
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
 
-      write_build_status rack_env, commit_hash_short, :failed
-
       if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
-        ChatClient.log "*** Before you manually re-run a test, please ensure that the cabal who owns that test is actively tracking de-flaking. ***", color: 'yellow'
+        msg = "***<@#{DevelopersTopic.dotd}> See instructions in " \
+          "<https://docs.google.com/document/d/1T4gZD6A5jOflEQH0i9_y2VA4trlJTsmdZXWTdGRzGWA/edit?usp=sharing|this document> " \
+          "for current guidance on tracking flaky tests.***"
+        ChatClient.log msg, color: 'yellow'
       end
     end
 
@@ -210,32 +199,6 @@ def main
   status
 end
 
-def check_hoc_mode
-  hoc_mode = DCDO.get('hoc_mode', false)
-  if hoc_mode != CDO.default_hoc_mode
-    # The test machine cannot remember DCDO params, so its hoc_mode is controlled by
-    # CDO.default_hoc_mode.
-    msg = "<!here> #{rack_env} hoc_mode (#{hoc_mode.inspect}) and default_hoc_mode "\
-      "(#{CDO.default_hoc_mode.inspect}) are out of sync. Please update CDO.default_hoc_mode in "\
-      "github, DCDO hoc_mode in staging, and DCDO hoc_mode in production to the same values, so "\
-      "that our staging, test and production environments all show the same version of our site."
-    ChatClient.log msg
-  end
-end
-
-def check_hoc_launch
-  hoc_launch = DCDO.get('hoc_launch', false)
-  if hoc_launch != CDO.default_hoc_launch
-    # The test machine cannot remember DCDO params, so its hoc_launch is controlled by
-    # CDO.default_hoc_launch.
-    msg = "<!here> #{rack_env} hoc_launch (#{hoc_launch.inspect}) and default_hoc_launch "\
-      "(#{CDO.default_hoc_launch.inspect}) are out of sync. Please update CDO.default_hoc_launch in "\
-      "github, DCDO hoc_launch in staging, and DCDO hoc_launch in production to the same values, so "\
-      "that our staging, test and production environments all show the same version of our site."
-    ChatClient.log msg
-  end
-end
-
 def mark_dtt_green
   # Look at the HEAD revision on the test machine, rather than the one in
   # GitHub. Otherwise, if someone pushes more changes to the test branch while
@@ -247,19 +210,7 @@ def mark_dtt_green
   ChatClient.log msg
   ChatClient.message 'deploy-status', msg
 
-  TestServerStatus.mark_green test_branch_sha, Metrics::AUTOMATIC
-end
-
-# Log details of a build to metrics database.
-# TODO: (suresh) This method will eventually be used to write build status for all managed environments.
-# @param [Symbol] environment
-# @param [String] commit_hash
-# @param [Symbol] status - :start, :success, :failed
-def write_build_status(environment, commit_hash, status)
-  event = "#{environment}_#{status}"
-  if environment == :staging
-    Metrics.write_metric(event, commit_hash, Metrics::AUTOMATIC)
-  end
+  TestServerStatus.mark_green test_branch_sha
 end
 
 def emit_deploy_metric(deployment_stage, successful)
@@ -272,9 +223,9 @@ def emit_deploy_metric(deployment_stage, successful)
       }]
     }
   )
-rescue => error
+rescue => exception
   ChatClient.log 'Unable to emit metrics', color: 'red'
-  ChatClient.log "/quote #{error}", color: 'gray', message_format: 'text'
+  ChatClient.log "/quote #{exception}", color: 'gray', message_format: 'text'
 end
 
 main

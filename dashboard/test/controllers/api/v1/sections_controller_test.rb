@@ -45,8 +45,11 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     CourseOffering.add_course_offering(@csp_unit_group)
     @csp_unit_group.reload
     @csp_script = create(:script, name: 'csp1', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @csp_script2 = create(:script, name: 'csp2', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
+    create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script2, position: 2)
     @csp_script.reload
+    @csp_script2.reload
 
     @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@csp_unit_group_soft_launched)
@@ -84,6 +87,32 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal expected, returned_json
   end
 
+  test 'returns all sections instructed by teacher' do
+    cotaught_section = create(:section, user: create(:teacher), login_type: 'word')
+    create(:section_instructor, instructor: @teacher, section: cotaught_section, status: :active)
+
+    sign_in @teacher
+    get :index
+    assert_response :success
+
+    expected = [@section, @section_with_unit_group, @section_with_script, cotaught_section].map(&:summarize_without_students).as_json
+    assert_equal expected, returned_json
+  end
+
+  test 'returns sections co-taught with a deleted instructor' do
+    cotaught_section = create(:section, user: @teacher, login_type: 'word')
+    coteacher = create(:teacher)
+    create(:section_instructor, instructor: coteacher, section: cotaught_section, status: :active)
+    coteacher.destroy!
+
+    sign_in @teacher
+    get :index
+    assert_response :success
+
+    expected = [@section, @section_with_unit_group, @section_with_script, cotaught_section].map(&:summarize_without_students).as_json
+    assert_equal expected, returned_json
+  end
+
   # It's easy to accidentally grant admins permission to `index` all sections
   # in the database - a huge query that we don't want to permit.  Admin users
   # should therefore only get their own sections when indexing sections,
@@ -95,7 +124,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in admin
     get :index
     assert_response :success
-    expected = admin.sections.map(&:summarize_without_students).as_json
+    expected = admin.sections_instructed.map(&:summarize_without_students).as_json
     assert_equal expected, returned_json
   end
 
@@ -281,6 +310,21 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       returned_json.with_indifferent_access
   end
 
+  test 'invalid params does not create section and returns an error' do
+    sign_in @facilitator
+
+    assert_does_not_create(Section) do
+      # As is, this will fail because the grade "PL" is not provided but
+      # this test is meant to ensure a non-200 is returned when creating a section fails
+      post :create, params: {
+        login_type: Section::LOGIN_TYPE_EMAIL,
+        participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher,
+      }
+
+      assert_response :bad_request
+    end
+  end
+
   test 'current user owns the created section' do
     sign_in @teacher
     post :create, params: {
@@ -343,6 +387,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   Section::LOGIN_TYPES.each do |desired_type|
+    # LTI Section are not created using this API.
+    next if desired_type == Section::LOGIN_TYPE_LTI_V1
     test "can set login_type to #{desired_type} during creation" do
       sign_in @teacher
       post :create, params: {
@@ -764,6 +810,40 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 0, @teacher.scripts.size
   end
 
+  test 'creating a section with a coteacher adds both teachers' do
+    sign_in @teacher
+
+    coteacher = create(:teacher)
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      instructor_emails: [coteacher.email]
+    }
+    assert_response :success
+    assert_equal 2, returned_section.section_instructors.size
+
+    # Assert that the teacher is an accepted instructor
+    teacher_instructor = returned_section.section_instructors.find_by(instructor_id: @teacher.id)
+    assert_equal 'active', teacher_instructor.status
+
+    # Assert that the coteacher is an invited instructor
+    coteacher_instructor = returned_section.section_instructors.find_by(instructor_id: coteacher.id)
+    assert_equal 'invited', coteacher_instructor.status
+  end
+
+  test 'creating a section adds teacher as instructor' do
+    sign_in @teacher
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+    }
+    assert_response :success
+    assert_equal 1, returned_section.section_instructors.size
+    assert_equal @teacher.id, returned_section.section_instructors.first.instructor_id
+  end
+
   test 'creating a section with no course or script does not assign a script' do
     sign_in @teacher
     assert_equal 0, @teacher.scripts.size
@@ -858,6 +938,22 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     section.reload
     assert_equal 'Old section name', section.name
+  end
+
+  test 'update: add coteacher' do
+    coteacher = create(:teacher)
+
+    section = create :section
+    sign_in section.teacher
+
+    assert_equal 1, section.section_instructors.size
+
+    post :update, params: {
+      id: section.id,
+      instructor_emails: [coteacher.email]
+    }
+    assert_response :success
+    assert_equal 2, section.section_instructors.size
   end
 
   test "update: course_id is cleared if not provided and script has no default course" do
@@ -1010,7 +1106,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       course_version_id: @script.course_version.id
     }
 
-    assert_not_nil UserScript.find_by(script: @script, user: student)
+    refute_nil UserScript.find_by(script: @script, user: student)
   end
 
   test 'logged out cannot delete a section' do
@@ -1284,7 +1380,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     post :set_code_review_enabled, params: {id: @section.id, enabled: true}
     @section.reload
     assert_response :success
-    assert_not_nil json_response["expiration"]
+    refute_nil json_response["expiration"]
     assert_equal @section.code_review_expires_at, json_response["expiration"]
   end
 
@@ -1299,9 +1395,37 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil @section.code_review_expires_at
   end
 
-  private
+  test 'can toggle ai_tutor_enabled by the section teacher' do
+    sign_in @teacher
+    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
+    assert_response :success
+    @section.reload
+    assert @section.ai_tutor_enabled
 
-  def set_up_code_review_groups
+    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: false}
+    assert_response :success
+    @section.reload
+    refute @section.ai_tutor_enabled
+  end
+
+  test 'cannot set ai_tutor_enabled by a different teacher' do
+    sign_in @following_teacher
+    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
+    assert_response :forbidden
+  end
+
+  test 'set ai_tutor_enabled returns 403 for unauthorized access' do
+    post :set_ai_tutor_enabled, params: {id: @section.id, ai_tutor_enabled: true}
+    assert_response :forbidden
+  end
+
+  test 'set ai_tutor_enabled fails when section does not exist' do
+    sign_in @teacher
+    post :set_ai_tutor_enabled, params: {id: -1, ai_tutor_enabled: true}
+    assert_response :forbidden
+  end
+
+  private def set_up_code_review_groups
     # create a new section to avoid extra unassigned students
     @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
     # Create 5 students

@@ -1,12 +1,12 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Well} from 'react-bootstrap';
-import _ from 'lodash';
+import {Well} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class FreeResponseSection extends React.Component {
   static propTypes = {
     questions: PropTypes.arrayOf(PropTypes.object).isRequired,
-    responseData: PropTypes.object.isRequired
+    responseData: PropTypes.object.isRequired,
   };
 
   renderFacilitatorsAndAnswers(answers) {

@@ -16,9 +16,9 @@ User.where.not(school_info: nil).where(user_type: "teacher").find_in_batches(bat
         start_date: user.created_at,
         last_confirmation_date: user.last_seen_school_info_interstitial.nil? ? user.created_at : user.last_seen_school_info_interstitial
       )
-    rescue StandardError => e
+    rescue StandardError => exception
       puts "Error: teacher with user id #{user.id} with school id #{user.school_info_id}"
-      exceptions.push(e)
+      exceptions.push(exception)
     end
     if exceptions.any?
       puts exceptions

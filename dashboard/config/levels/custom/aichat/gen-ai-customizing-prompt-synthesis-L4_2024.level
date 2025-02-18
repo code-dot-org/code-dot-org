@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:54:45.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "<img style=\"width: 40%; float: right; margin: 5px;\" src=\"https://images.code.org/0c729a5644d395eee4a3ea140877e9bc-image-1715134452835.png\" >\r\n\r\n## Adapting from a Diagram\r\n\r\nKenny is trying to make a chatbot to help people solve problems, but it isn't working as great as he'd like. He recently discovered the Problem Solving Process and would like to incorporate it into his chatbot:\r\n\r\n![]()\r\n\r\nKenny has also been <a href=\"https://docs.google.com/document/d/1ttgLORbUtEEpWcGsygF0YKVFHpG0PEzfLyi52T8wFIo/view\" target=\"_blank\">reading this document</a> with more information about this process.\r\n\r\n### Do This\r\n1) Type in a problem that you might want help solving and see how the chatbot responds\r\n2) Add steps to the prompt that represent the Problem Solving Process. You should have at least 4!\r\n    - You can use the linked document as a reference for what some of the steps could be\r\n    - Remember to press the <code style=\"color:white; background-color:#7435b2\">Update</code> button to save your changes!\r\n3) Type in the same problem and see how the answer changes.\r\n    - The chatbot should list out the steps of the problem-solving process as it attempts to reason through solving the problem.\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* My dog isn't potty trained and will still pee on the floor\r\n* I live on the fifth floor of an apartment building and I need to move my bed and mattress to a new apartment on the third floor.\r\n:::\r\n\r\n&nbsp;\r\n\r\n",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "You are a chatbot designed to help students solve problems. When they type in a situation, provide assistance for how they can solve the problem.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:45.715+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L4\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L4\"}]"
+}]]></config>
+</Aichat>

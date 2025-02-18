@@ -1,125 +1,104 @@
-| Country/Territory                     | Organization                                                      | Contact Name                         | Email or Website                                                                                   |
-|---------------------------------------|-------------------------------------------------------------------|--------------------------------------|----------------------------------------------------------------------------------------------------|
-| Albania                               | ALMOOC                                                            | Ridvan Aliu <br> Isak Bilalli        | ridvan@eduongo.com <br> isaactiral@gmail.com                                                       |
-| Albania                               | Code For Albania                                                  | Admir Malaj                          | https://www.codeforalbania.com/ <br> admirmalaj@codeforalbania.com                                 |
-| Antigua and Barbuda                   | iLabGlobal Inc.                                                   | Makŏ Williams                        | http://ilabglobal.com <br> mako@ilabglobal.com                                                     |
-| Argentina                             | Fundación Sadosky                                                 |                                      | www.fundacionsadosky.org.ar <br> www.program.ar                                                    |
-| Argentina                             | NUCBA                                                             | Luciano D'Amico                      | http://www.nucba.com.ar <br> info@nucba.com.ar                                                     |
-| Australia                             | Google                                                            | Marie Efstathiou                     | https://www.google.com/edu/cs                                                                      |
-| Australia                             | Grok Learning                                                     | Jane Abrams                          | https://groklearning.com                                                                           |
-| Bangladesh                            | Women in Digital                                                  | Achia Nila                           | https://www.womenindigital.net <br> info@womenindigital.net                                        |
-| Brazil                                | Codifica Ed Tech                                                  |                                      | http://www.codificaedu.com.br/ <br> contato@codificaedu.com.br                                     |
-| Brazil                                | Fundação Telefônica Vivo - Programaê!                             |                                      | http://programae.org.br/horadocodigo/                                                              |
-| Cambodia                              | InSTEDD iLab Southeast Asia                                       | Channe Suy                           | http://ilabsoutheastasia.org <br> channe@instedd.org                                               |
-| Cameroon                              | Big IT Company Ltd                                                |                                      |                                                                                                    |
-| Canada                                | Brilliant Labs                                                    | Jeffrey Willson                      | https://www.brilliantlabs.ca <br> jeff@brilliantlabs.ca                                            |
-| Canada                                | Hatch Canada                                                      |                                      | www.hatchcanada.com                                                                                |
-| Canada                                | Canada Learning Code                                              |                                      | https://www.canadalearningcode.ca                                                                  |
-| Canada                                | Actua                                                             |                                      | www.actua.ca <br> teachers@actua.ca                                                                |
-| Canada                                | Kids & Code                                                       |                                      | www.kidsandcode.org <br> hello@kidsandcode.org                                                     |
-| Canada                                | Kids Code Jeunesse                                                | Erin Johnston                        | http://kidscodejeunesse.org <br> contact@kidscodejeunesse.org                                      |
-| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Nick Baskwill                        | http://ednet.ns.ca <br> nicholas.baskwill@novascotia.ca                                            |
-| Canada                                | Partners In Research Canada                                       | Stacey Joyce                         | www.pirweb.org/en <br> sjoyce@pirweb.org                                                           |
-| Canada                                | Sault Ste. Marie innovation Centre                                |                                      | https://ssmic.com/                                                                                 |
-| Chile                                 | Fundación Kodea                                                   | Claudia Jaña                         | http://horadelcodigo.cl <br> cjana@kodea.org                                                       |
-| China                                 | 码趣学院CodingMarch                                                | Delia Wu                             | www.codingmarch.com <br> delia.wu@codingmarch.com                                                  |
-| Colombia                              | Computadores para Educar                                          |                                      | http://www.computadoresparaeducar.gov.co/ <br> info@cpe.gov.co                                     |
-| Colombia								| Makaia                                                            |                                      | www.makaia.org <br> comunicaciones@makaia.org                                                      |
-| Colombia (also Brazil, Mexico, Spain) | World Tech Makers                                                 | Ilana Milkes                         | http://worldtechmakers.com <br> ilana@worldtechmakers.com                                          |
-| Côte d’Ivoire                         | Africa Children Code                                              | M. Gnahoré Didier                    | http://www.africachildrencode.org <br> gnahore@africachildrencode.org                              |
-| Czech Republic                        | Czechitas                                                         | Lucie Jurystová                      | https://czechitas.cz <br> lucie@czechitas.cz                                                       |
-| Democratic Republic of Congo          | ASCITECH, The Academy of Science and Technology                   |                                      |                                                                                                    |
-| Ecuador                               | Progracademy                                                      | Angelica Rodriguez                   | http://www.progracademy.org <br> angelica.rodriguez@progracademy.org                               |
-| Egypt                                 | Q-STEAM Club                                                      | Tamer Ragab                          | http://q-steam.com <br> learn@q-steam.com                                                          |
-| Estonia                               | Vaata Maailma SA                                                  | Kristi Kivilo                        | http://www.vaatamaailma.ee <br> kristi@vaatamaailma.ee                                             |
-| Fiji                                  | Quantum Space                                                     | Janice Nand                          | https://quantumspacehub.com <br> info@quantumspacehub.com                                          |
-| The Gambia                            | KidCoders Academy                                                 | Amie Njie                            | http://www.kidcodersacademy.gm <br> njieamy03@gmail.com                                            |
-| Georgia                               | Design Thinking Society                                           | Shota Murtskhvaladze                 | http://designthinkingsociety.org.ge <br> shotamur@mindworks.ge                                     |
-| Georgia                               | Educare Georgia                                                   | George Jibladze <br> Razmik Badalyan | http://www.educaregeorgia.org <br> gjibladze@educaregeorgia.com <br> rbadalyan@educaregeorgia.com  |
-| Germany                               | moinworld e.V.                                                    |                                      | https://moinworld.de <br> moin@moinworld.de                                                        |
-| Ghana                                 | Ghana Code Club                                                   | Ernestina Edem Appiah                | www.ghanacodeclub.org <br> tinasupport@gmail.com                                                   |
-| Hong Kong                             | Idea Maker HK                                                     | Henry Lee                            | www.ideamakerhk.com <br> henrylee@i3dprinter.com.hk                                                |
-| Hong Kong                             | IAMAI Academy (Hong Kong) Ltd                                     | Johnson Chu                          | www.iamai.hk <br> johnson.chu@iamai.hk                                                             |
-| India                                 | Asha for Education, Chennai Chapter                               | Rajaraman Krishnan                   | https://chennai.ashanet.org/ <br> chennai@ashanet.org                                              |
-| India                                 | CodeTigers                                                        | Sandeep Sheokand                     | https://www.codetigers.com <br> sandeep@codetigers.com                                             |
-| India                                 | Developer Circle Indore                                           | Mrinal Jain                          | https://www.facebook.com/groups/DevCIndore/ <br> jain.mrinal140@gmail.com                          |
-| India                                 | Leadership for Equity                                             | Mayuresh Bhoyte                      | https://www.leadershipforequity.org/ <br> mayuresh.bhoyte@leadershipforequity.org |
-| India                                 | Literacy India                                                    | Indraani Singh                       | https://literacyindia.org/ <br> indraani@literacyindia.org                                         |
-| India                                 | NatureNurture                                                     |                                      | https://www.naturenurture.in <br> info@naturenurture.in                                            |
-| India                                 | Pi Jam Foundation                                                 | Shoaib Dar                           | http://www.thepijam.org <br> shoaib.dar@thepijam.org                                               |
-| India                                 | RISHS International School                                        |                                      | www.rishsinternationalschool.com <br> principal@rishsinternationalschool.com                       |
-| India                                 | Be Cre8v                                                          |                                      | www.becre8v.com <br> sandeep@becre8v.com                                                           |
-| Indonesia                             | Coding Bee Academy                                                | Eko Haripin                          | http://www.codingbee.org <br> hello@codingbee.org                                                  |
-| Iraq                                  | ABCode                                                            | Batool Hussain                       | ABcode.global@gmail.com                                                                            |
-| Ireland                               | Cybersmarties.com                                                 | Diarmuid Hudner                      | https://cybersmarties.com <br> diarmuid@cybersmarties.com                                          |
-| Israel                                | Wix                                                               | Yossi Hayut                          | www.wix.com <br> yossih@wix.com                                                                    |
-| Italy                                 | Programma il Futuro                                               | Enrico Nardelli                      | https://programmailfuturo.it <br> didattica@programmailfuturo.it                                   |
-| Jamaica					            | Seprod Foundation                                                 | Lisa D'Oyen                          | www.seprodfoundation.org <br> ldoyen@seprod.com                                                    |
-| Japan                                 | 特定非営利活動法人みんなのコード (Code for Everyone)                       | 利根川 裕太 (Yuta Tonegawa)             | info@code.or.jp                                                                                    |
-| Japan                                 | 湘南ゼミナール (Shonan Seminar)                                       | Team Hour of Code                    | https://shozemi.com                                                                                |
-| Kazakhstan                            | Love to Code                                                      | Alyona Tkachenko                     | alyona@lovetocode.kz                                                                               |
-| Kenya                                 | Uzima Aid                                                         | Nicholas Juma                        | http://www.uzimaid.org <br> nicholasjuma@uzimaid.org                                               |
-| Kuwait                                | Makers Academy                                                    |                                      | http://makersacademy.net/ <br> a.alsaleh@bbrains.net                                               |
-| Lebanon                               | Rana Maroun Jbeily Foundation                                     |                                      | rmjfoundation@hotmail.com                                                                          |
-| Malaysia                              | Malaysia Digital Economy Corporation (MDEC)                       | Mohamad Zulfadli Mohd Amin           | https://www.mdec.my <br> zulfadli.amin@mdec.com.my                                                 |
-| Malaysia                              | Telebort Technologies Sdn Bhd                                     |                                      | www.telebort.com                                                                                   |
-| Maldives                              | Women in Tech Maldives                                            | Aishath Adnan                        | https://www.womenintechmv.org/ <br> info@womenintechmv.org                                         |
-| Mauritania                            | HADINA RIMTIC                                                     |                                      | http://hadinarimtic.org                                                                            |
-| Mexico                                | Colegio Nikola Tesla                                              | Larisa Hinojosa                      | http://nikolatesla.edu.mx                                                                          |
-| Mexico                                | Cuantrix - Fundación Televisa                                     | Nomara Parra                         | www.cuantrix.mx <br> nomara.parra@fundaciontelevisa.org                                            |
-| Mongolia                              | Codercub                                                          | Zolbayar Magsar                      | http://www.computerscience.mn/ <br> info@computerscience.mn                                        |
-| Morocco                               | S.T.E.M ROBOTICS AGADIR                                           | Dr. Isha Daramy                      | Stemagadir@gmail.com                                                                               |
-| Myanmar                               | Thate Pan Hub                                                     | Min Aung Thu                         | https://www.thatepanhub.com <br> strategic@thatepanhub.com                                         |
-| Nepal                                 | Adhyayan School                                                   | Sandeep Sharma                       | http://adhyayan.edu.np <br> sandeep.sharma@adhyayan.edu.np                                         |
-| Nepal                                 | Women in STEAM                                                    | Binita Shrestha                      | https://www.wisteamnepal.org <br> info@wistemnepal.org                                             |
-| New Zealand                           | Ara Institute of Canterbury                                       | Amitrajit Sarkar                     | www.ara.ac.nz <br> sarkara@cpit.ac.nz                                                              |
-| New Zealand                           | Google                                                            | Sally-Ann Williams                   | https://www.google.com/edu/cs                                                                      |
-| New Zealand (Aotearoa)                | OMGTech!                                                          | Education Team @ OMGTech!            | https://omgtech.co.nz <br> schools@omgtech.co.nz                                                   |
-| Nigeria                               | CODE4KT - coding for kids & teens                                 | Mayokun Odusote                      | http://code4kt.com.ng <br> hello@code4kt.com.ng                                                    |
-| Nigeria                               | Dev's District Nigeria                                            | Emmanuel Odunlade                    | http://devsdistrictnigeria.com <br> E.odunlade@devsdistrictnigeria.com                             |
-| Nigeria                               | Eduxtra                                                           | Paul Obuke Omu                       | http://www.eduxtra.com.ng <br> paul.omu@eduxtra.com.ng                                             |
-| Nigeria                               | Odyssey Educational Foundation                                    | Stella Uzochukwu-Denis               | www.odysseyedufoundation.org <br> ifywayne@gmail.com                                               |
-| Nigeria                               | KodeHauz                                                          | Glory Agatevure                      | http://www.kodehauz.com                                                                            |
-| Nigeria                               | The Zariah Elizabeth Foundation                                   | Akindayo Akindolani                  | www.tzefoundation.org <br> dayo@tzefoundation.org                                                  |
-| Norway                                | Lær Kidsa Koding                                                  | Line Moseng                          | https://kidsakoder.no                                                                              |
-| Oman                                  | Engineering Village                                               |                                      | www.ev-center.com                                                                                  |
-| Pakistan                              | DIGIT                                                             | Majid Hussain                        | https://digit.com.pk/ <br> majid.hussain@digit.com.pk                                              |
-| Pakistan                              | KnowledgeJump                                                     | Nasir Farhat Khan                    | nasir@knowledgejump.net                                                                            |
-| Pakistan                              | TechValley                                                        | Dr. Waqar S. Qureshi                 |                                                                                                    |
-| Paraguay				| Paraguay Educa                                                    | Team at Paraguay Educa               | http://paraguayeduca.org/es/ <br> info@paraguayeduca.org                                           |
-| Peru                                  | Code en mi Cole                                                   | Renzo Sousa                          | http://codenmicole.com                                                                             |
-| Philippines                           | CodersGuild.Net                                                   | Joey Gurango                         | https://www.codersguild.net <br> joey@gurango.net                                                  |
-| Philippines                           | The Startup Deck Balanga                                          | Mark Colentava                       | https://web.facebook.com/thestartupdeck/<br> mark@colentava.com                                    |
-| Philippines                           | UP System Information Technology Foundation, Inc.                 | Noel Feria                           | https://upsitf.org                                                                                 |
-| Poland                                |                                                                   | Maciej M. Sysło                      | http://mmsyslo.pl/ <br> syslo@ii.uni.wroc.pl                                                       |
-| Portugal                              | Associação Nacional de Professores de Informática (ANPRI)         | Fernanda Ledesma                     | http://www.anpri.pt/ <br> geral@anpri.pt                                                           |
-| Portugal                              | Colégio EFANOR                                                    |                                      | http://www.colegioefanor.pt/pt                                                                     |
-| Portugal                              | Gabinete de Modernização das Tecnologias Educativas               | Rodolfo Pinto                        | http://www02.madeira-edu.pt/dre/main.aspx                                                          |
-| Romania                               | ADFABER                                                           | Alin Chiriac                         | https://adfaber.org <br> alin@adfaber.org                                                          |
-| Rwanda                                | Children’s Creativity Lab                                         | Ildephonse Mungwarakarama            | http://creativity.rw <br> ildephonse@creativity.rw                                                 |
-| Singapore                             | Infocomm Media Development Authority of Singapore                 |                                      | https://www.imda.gov.sg                                                                            |
-| Slovakia                              | Accenture                                                         | Zuzana Tankova                       | http://ds.blf.sk <br> ucme.informatiku.inak@gmail.com                                              |
-| South Africa                          | Code for Change                                                   |                                      | http://www.codeforchange.co.za                                                                     |
-| South Africa                          | ITC CLUB Mpumalanga                                               | Nomusa Keninda                       | http://mpumalangaictclub.blogspot.com                                                              |
-| South Korea                           | Korea Information Science Education Federation                    | Soohwan Kim                          | http://kcode.kr <br> hwankim92@gmail.com                                                           |
-| South Korea                           | KOFAC                                                             | Sewon Chun                           | https://kofac.re.kr/main <br> sewon@kofac.re.kr                                                    |
-| Spain                                 | Acludi                                                            | Juana Martínez                       | www.acludi.blogspot.com <br> acludi@yahoo.com                                                      |
-| Spain                                 | Asociación Andaluza de Profesores de Informática                  | Santiago Fernández-Cabaleiro         | http://www.aapri.es <br> santiagocabaleiro@gmail.com                                               |
-| Spain                                 | ASTI Talent & Tech Foundation                                     | Roberto Ranz                         | https://astifoundation.com/ <br> robertort.cext@asti.tech                                          |
-| Spain                                 | Informatics Faculty - University of the Basque Country (UPV/EHU)  | Edurne Larraza Mendiluze             | https://www.ehu.eus/en/web/informatika-fakultatea/home <br> edurne.larraza@ehu.eus                 |
-| Sri Lanka                             | STEMUP Educational Foundation                                     | Prabhath Mannapperuma                | http://stemup.lk <br> prabhath@stemup.foundation                                                   |
-| Sri Lanka                             | XiCigny                                                           | Dileepa Rajapaksa                    | dileepa@xicigny.com                                                                                |
-| Sweden                                | Edvira                                                            |                                      | http://edvira.com <br> hoc@edvira.com                                                              |
-| Taiwan                                | Girls in Tech Taiwan                                              | Jane Shih                            | https://facebook.com/girlsintechtaiwan <br> Jane.shih@girlsintech.org                              |
-| Taiwan                                | Junyi Academy                                                     | Ray Lu                               | https://www.junyiacademy.org <br> support@junyiacademy.org                                         |
-| Taiwan                                | Women Who Code Taipei                                             | Jane Shih                            | https://www.womenwhocode.com/taipei <br> Janeshih@womenwhocode.com                                 |
-| Tanzania                              | Jenga Hub                                                         |                                      | http://jengahub.com <br> info@jengahub.com                                                         |
-| Thailand                              | Aksorn Education PLC                                              |                                      | www.aksorn.com                                                                                     |
-| Thailand                              | Siamentis Ltd.                                                    | Chet Chetsandtikhun                  | chet@siamentis.com                                                                                 |
-| Turkey                                | RobinCode                                                         | Gözde Erbaz                          | www.robincode.org <br> gozde@robincode.org                                                         |
-| UK                                    | Computing At School (CAS)                                         | Abi Edwards                          | http://www.computingatschool.org.uk <br> compatsch@bcs.uk                                          |
-| Uzbekistan                            | IT Park Uzbekistan                                                | Farhod Ibragimov                     | https://it-park.uz <br> info@it-park.uz                                                            |
-| Uruguay								| Elemental                                                         |                                      | www.elemental.edu.uy                                                                               |
-| US                                    | The Trust for the Americas                                        |                                      | https://www.thetrustfortheamericas.org/                                                            |
-| Vietnam                               | Galaxy Education                                                  | Minh Le                              | https://coding.ican.vn <br> coding@ican.vn                                                         | 
-| Vietnam                               | Vietnet Information Technology and Communication Center (Vietnet-ICT) | Minh Trang Ngo                   | http://vietnet-ict.org <br> contact@vietnet-ict.org                                                |
+|Country/Territory|Organization|Contact Name|Email or Website|
+|---|---|---|---|
+|Americas|The Trust for the Americas|Pierina Nepote Rangel|pnepote@trust-oea.org<br>https://www.thetrustfortheamericas.org/|
+|Antigua and Barbuda|iLabGlobal & Caribbean Tech Genius Foundation|Makŏ Williams|mako@iLabGlobal.com<br>https://ilabglobal.com/<br>http://techgenius.edu.ag/|
+|Argentina|Municipalidad de Córdoba|Alicia La Terza|seceduc.lic.laterza@gmail.com<br>https://cordoba.gob.ar/areas-de-gobierno/secretaria-de-educacion/|
+|Australia|Grok Academy|Lisette Tennant|https://groklearning.com|
+|Botswana|CSEdBotswana|Dr. Ethel Tshukudu|ethel.tshukudu01@gmail.com<br>https://www.csedbotswana.org/|
+|Brasil|Universidade Federal Do Amapá|Simone De Almeida Delphim Leal|leal@unifap.br<br>www.unifap.br|
+|Brazil|Codifica|Guilherme Fortes|contato@codificaedu.com.br|
+|Brazil|Fundação Telefônica Vivo - Programaê!||http://programae.org.br/horadocodigo/|
+|Cambodia|Kawsang||https://www.kawsang.com/|
+|Cambodia|Tech for Kids Academy|Lydet PIDOR|lydetpidor@gmail.com, lydet.pidor@techforkids.asia<br>https://techforkids.asia/en|
+|Canada|Canada Learning Code||https://www.canadalearningcode.ca|
+|Canada|Digital Moment (formerly Kids Code Jeunesse)||comms@digitalmoment.org<br>https://digitalmoment.org|
+|Chile|Fundación Kodea|Claudia Jaña|cjana@kodea.org<br>https://kodea.org/|
+|China|码趣学院CodingMarch|Delia Wu|delia.wu@codingmarch.com<br>http://www.codingmarch.com|
+|Colombia|Computadores para Educar||info@cpe.gov.co<br>http://www.computadoresparaeducar.gov.co/|
+|Colombia|Makaia||comunicaciones@makaia.org<br>http://www.makaia.org|
+|Ecuador|Montebello Academy|Alexandra Falcón|info@montebello.edu.ec<br>www.montebello.edu.ec|
+|Ecuador, Mexico|Progracademy|Angelica Rodriguez|angelica.rodriguez@progracademy.org<br>www.progracademy.org|
+|Egypt|Little Coder Academy|Asmaa Abo-amra|eng.asmaa.aboamra@gmail.com, little.coder.ac@gmail.com<br>https://littlecoderacademy.com/|
+|Georgia|Educare Georgia|George Jibladze <br> Razmik Badalyan|gjibladze@educaregeorgia.com <br> rbadalyan@educaregeorgia.com<br>http://www.educaregeorgia.org|
+|Ghana|Ghana Code Club|Ernestina Edem Appiah|tinasupport@gmail.com<br>http://www.ghanacodeclub.org|
+|Hong Kong|Hong Kong Programming Society|Peter Cheung|peter@hkprog.org<br>https://www.hkprog.org/|
+|India|Asha for Education, Chennai Chapter|Rajaraman Krishnan|chennai@ashanet.org<br>https://chennai.ashanet.org/|
+|India|Aveti Learning|Sibabrata Choudhury|siba@shikhya.org<br>https://avetilearning.com/|
+|India|CodeTigers|Sandeep Sheokand|sandeep@codetigers.com<br>https://www.codetigers.com|
+|India|Developer Circle Indore|Mrinal Jain|jain.mrinal140@gmail.com<br>https://www.meetup.com/devcindore/|
+|India|Leadership for Equity|Mayuresh Bhoyte|mayuresh.bhoyte@leadershipforequity.org<br>https://www.leadershipforequity.org/|
+|India|Literacy India|Indraani Singh|indraani@literacyindia.org<br>https://literacyindia.org/|
+|India|Nirmaan|Swati Vempati|contact@nirmaan.org<br>https://www.nirmaan.org|
+|India|Pi Jam Foundation|Shoaib Dar|shoaib.dar@thepijam.org<br>http://www.thepijam.org|
+|India|Sri Sakthi Social Economical and Educational Welfare Trust|Karthi Jayarajan|karthi.jayarajan@sakthitrust.org<br>https://sakthitrust.org/|
+|India|upEducators|Ankush Bhandari|ankushb@upeducators.com<br>https://www.upeducators.com/|
+|Indonesia|Coding Bee Academy|Eko Haripin|hello@codingbee.org<br>http://www.codingbee.org|
+|Indonesia|Diginusa Kompas Gramedia||marketingdiginusa@gmail.com<br>www.diginusa.com|
+|Indonesia|KodeKiddo|Meilani|meilani@kodekiddo.com<br>www.kodekiddo.com|
+|Indonesia|Koding Next|Abdallah|contact@kodingnext.com, abdallah@kodingnext.com<br>https://kodingnext.com|
+|Indonesia|Optima Tech Academy|Klara Widya Astuti|info@techacademy.id<br>https://techacademy.id/|
+|Indonesia|Prestasi Junior Indonesia|Retna Widiyasrini|retno@prestasijunior.org<br>www.prestasijunior.org|
+|Indonesia|ProVisi Mandiri Pratama|Chatarina Trihastuti|rina@provisimandiripratama.com<br>https://provisimandiripratama.com/|
+|Iraq|ABCode|Batool Hussain|ABcode.global@gmail.com|
+|Ireland|National Learning Network|Pranav Chavan|pranav.chavan@nln.ie<br>https://rehab.ie/national-learning-network/|
+|Israel|Wix|Hour of Code Israel Team|connect@hourofcode.com<br>https://www.hourofcode.co.il|
+|Italy|Programma il Futuro|Enrico Nardelli|didattica@programmailfuturo.it<br>https://programmailfuturo.it|
+|Japan|Code for Everyone / 特定非営利活動法人みんなのコード|Yuta Tonegawa|info@code.or.jp<br>https://code.or.jp/|
+|Kenya|STEAMLabs Africa|Felix Malombe|fmalombe@steamlabsafrica.com<br>https://steamlabsafrica.com/|
+|Kenya|Uzima Aid|Gideon Ochieng|gideon.ochieng@uzimaid.org<br>https://www.uzimaid.org/|
+|Korea of republic|Korea National University of Education|Kwihoon Kim|kimkh@knue.ac.kr<br>https://en.knue.ac.kr/smain.html|
+|Kosovo|SHPIK|Bekim Kasumi|bekim.kasumi@shpik.org<br>www.shpik.org|
+|Latin America|Eidos Global|Marina Puente Pistarini|marina@eidosglobal.org<br>https://www.eidosglobal.org/|
+|Macau|Macau International STEAM Education Association (MISEA)|Man Fai Lai|macaumisea@gmail.com<br>https://www.steam.mo/|
+|Malaysia|Chumbaka|Nigel Sim|nigel@chumbaka.asia<br>www.chumbaka.asia|
+|Malaysia|Fondation Rolf Schnyder|Scott and Andrea Wong|scott.andrea@fondationrolfschnyder.org<br>www.fondationrolfschnyder.org|
+|Malaysia|Malaysia Digital Economy Corporation (MDEC)|Sofia Akmal Abu Bakar|sofia@mdec.com.my<br>https://mdec.my/|
+|Malaysia|Telebort|Chong Wei|mytelebort@gmail.com<br>https://www.telebort.com/|
+|Maldives|Women in Tech Maldives|Aishath Adnan|info@womenintechmv.org<br>https://www.womenintechmv.org/|
+|Malta|eSkills Malta Foundation|Carmel Cachia|Carmel.b.cachia@gov.mt<br>https://eskills.org.mt/|
+|Mexico|Colegio Nikola Tesla|Larisa Hinojosa|http://nikolatesla.edu.mx|
+|Mexico|Cuantrix - Fundación Televisa|Ilse Alvarez|ilse.alvarez@fundaciontelevisa.org<br>www.cuantrix.mx|
+|Mongolia|Codercub|Zolbayar Magsar|info@computerscience.mn<br>http://www.computerscience.mn/|
+|Multiple Countries|Aga Khan Schools|Atifa Sayani|atifa.sayani@akdn.org<br>www.akdn.org|
+|Myanmar|Thate Pan Hub|Min Aung Thu|strategic@thatepanhub.org<br>https://thatepanhub.org/|
+|Nepal|Adhyayan School|Sandeep Sharma|sandeep.sharma@adhyayan.edu.np<br>http://adhyayan.edu.np|
+|Netherlands, Serbia|codethatidea|Snezana Perovic|info@codethatidea.com<br>www.codethatidea.com|
+|New Zealand|Ara Institute of Canterbury|Amitrajit Sarkar|sarkara@cpit.ac.nz<br>http://www.ara.ac.nz|
+|Nigeria|Odyssey Educational Foundation|Stella UzochukwuDenis|ifywayne@gmail.com<br>www.odysseyedufoundation.org|
+|Nigeria|Skooqs|Oluwadamilola Soyombo|hello@skooqs.com<br>https://skooqs.com|
+|Nigeria and The United States of America|CTRL Code|Mary Adegbesan|ctrl.code1@gmail.com<br>www.ctrlcode.org|
+|Pakistan|DIGIT|Majid Hussain|majid.hussain@digit.com.pk<br>https://digit.com.pk/|
+|Peru|Code en mi Cole|Renzo Sousa|http://codenmicole.com|
+|Peru|Instituto San Agustín - ISAT|Mariano Rojas Erazo|mrojas@isat.edu.pe, comunicaciones@isat.edu.pe<br>https://isat.edu.pe|
+|Philippines|DEVCON Kids Philippines|Pam Ros Damarillo|info@devconkids.org<br>www.devconkids.org|
+|Philippines|UP System Information Technology Foundation, Inc.|Noel Feria|https://upsitf.org|
+|Poland|Warsaw School of Computer Science|Maciej M. Sysło|syslo@ii.uni.wroc.pl<br>https://mmsyslo.pl|
+|Portugal|Associação Nacional de Professores de Informática (ANPRI)|Fernanda Ledesma|geral@anpri.pt<br>http://www.anpri.pt/|
+|Portugal|Gabinete de Modernização das Tecnologias Educativas|Rodolfo Pinto|http://www02.madeira-edu.pt/dre/main.aspx|
+|Romania|ADFABER|Alin Chiriac|alin@adfaber.org<br>https://adfaber.org|
+|Rwanda|Creativity Lab|Ildephonse Mungwarakarama|ildephonse@creativity.rw<br>https://creativity.rw|
+|Slovakia|Accenture|Soňa Dunčková|sona.dunckova@accenture.com|
+|Slovakia|Informatika 2.0||servus@informatika20.sk<br>www.informatika20.sk|
+|South Africa|Code for Change|Sibusiso Khoza|sibusiso@codejika.com<br>https://codeforchange.org.za/|
+|South Africa|ITC CLUB Mpumalanga|Nomusa Keninda|http://mpumalangaictclub.blogspot.com|
+|South Korea|Enuma|Eugine Chung|info@enuma.com<br>https://enuma.com/|
+|South Korea|Future Class Network|Chanpil Jung|malgu@futureclass.net<br>https://www.futureclassnet.org/index.do|
+|South Korea|KOFAC|Sewon Chun|sewon@kofac.re.kr<br>https://kofac.re.kr/main|
+|South Korea|Korea Information Science Education Federation|Soohwan Kim|hwankim92@gmail.com<br>http://kcode.kr|
+|Spain|Asociación Andaluza de Profesores de Informática|Santiago Fernández-Cabaleiro|santiagocabaleiro@gmail.com<br>http://www.aapri.es|
+|Spain|Informatics Faculty - University of the Basque Country (UPV/EHU)|Edurne Larraza Mendiluze|edurne.larraza@ehu.eus<br>https://www.ehu.eus/en/web/informatika-fakultatea/home|
+|Sri Lanka|Shilpa Sayura Foundation|Niranjan Meegammana|niranjan.meegammana@gmail.com<br>http://shilpasayura.org|
+|Sri Lanka|Spectrum Institute of Science & Technology|Dinu Ravindra|dinu@spectrumcampus.edu.lk<br>https://www.spectrumcampus.edu.lk/|
+|Sri Lanka|STEMUP Educational Foundation|Prabhath Mannapperuma|prabhath@stemup.foundation<br>http://stemup.lk|
+|Tanzania|Jenga Hub||info@jengahub.com<br>http://jengahub.com|
+|Thailand|Aksorn Education PLC|Sasithorn Eve|sasithornr@aksorn.com<br>www.aksorn.com|
+|Thailand|Digital Economy Promotion Agency (DEPA)||https://www.depa.or.th/|
+|Thailand|Spark Education|Apinya Hiranyawech|apinya@spark-education.co<br>https://spark-education.co/|
+|Turkey|RobinCode|Gözde Erbaz|gozde@robincode.org<br>http://www.robincode.org|
+|UK|Computing At School (CAS)|Abi Edwards|compatsch@bcs.uk<br>http://www.computingatschool.org.uk|
+|United Kingdom|Apps for Good|Ross Dempster Johnson|education@appsforgood.org<br>https://www.appsforgood.org/|
+|United States|Code.X||contact@codedotx.org<br>https://www.codedotx.org/|
+|Uruguay|Elemental|Magela Fuzatti|info@elemental.edu.uy<br>https://www.elemental.edu.uy/|
+|Uruguay|UNESCO|Zelmira May|z.may@unesco.org<br>https://es.unesco.org/fieldoffice/montevideo|
+|Uzbekistan|IT Park Uzbekistan|Farhod Ibragimov|info@it-park.uz<br>https://it-park.uz|
+|Vietnam|Vietnet Information Technology and Communication Center (Vietnet-ICT)|Minh Trang Ngo|contact@vietnet-ict.org<br>http://vietnet-ict.org|

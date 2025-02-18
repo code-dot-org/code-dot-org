@@ -1,25 +1,26 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import _ from 'lodash';
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import {assert} from 'chai';
+import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
+import FoormLibrarySaveBar, {
+  UnconnectedFoormLibrarySaveBar,
+} from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibrarySaveBar';
 import {
   stubRedux,
   restoreRedux,
   getStore,
-  registerReducers
+  registerReducers,
 } from '@cdo/apps/redux';
-import {Provider} from 'react-redux';
-import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
-import FoormLibrarySaveBar, {
-  UnconnectedFoormLibrarySaveBar
-} from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibrarySaveBar';
+
 import foorm, {
   setLibraryData,
-  setLibraryQuestionData
+  setLibraryQuestionData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
-import sinon from 'sinon';
-import _ from 'lodash';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 global.$ = require('jquery');
 
 describe('FoormEntityEditor in Library editing mode', () => {
@@ -42,7 +43,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     const HeaderTitle = React.createElement('h1', null, 'A title');
     const SaveBar = React.createElement(FoormLibrarySaveBar, {
       resetCodeMirror: () => {},
-      libraryCategories: ['surveys/pd', 'surveys/teacher']
+      libraryCategories: ['surveys/pd', 'surveys/teacher'],
     });
 
     defaultProps = {
@@ -54,7 +55,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
       headerTitle: HeaderTitle,
       validateURL: '/a/fake/url',
       validateDataKey: 'a_string',
-      saveBar: SaveBar
+      saveBar: SaveBar,
     };
 
     wrapper = mount(
@@ -72,32 +73,32 @@ describe('FoormEntityEditor in Library editing mode', () => {
   const sampleExistingLibraryQuestionData = {
     question: {},
     name: 'sample_library_question_name',
-    id: 0
+    id: 0,
   };
 
   const sampleExistingLibraryData = {
     name: 'sample_library_name',
     version: 0,
-    id: 1
+    id: 1,
   };
 
   const sampleSaveResponseData = {
     question: '{}',
     name: 'sample_library_question_name',
-    id: 1
+    id: 1,
   };
 
   const sampleNewResponseData = {
     library_question: {
       question: '{"type": "html"}',
       name: 'new_library_question_name',
-      id: 1
+      id: 1,
     },
     library: {
       id: 2,
       version: 0,
-      name: 'new_library_name'
-    }
+      name: 'new_library_name',
+    },
   };
 
   const fakeSurveysAppearedIn = ['surveys/pd/a_form.0'];
@@ -109,7 +110,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     server.respondWith('PUT', '/foorm/library_questions/0', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(sampleSaveResponseData)
+      JSON.stringify(sampleSaveResponseData),
     ]);
 
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
@@ -142,7 +143,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     server.respondWith('POST', '/foorm/library_questions', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(sampleNewResponseData)
+      JSON.stringify(sampleNewResponseData),
     ]);
 
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
@@ -163,8 +164,8 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // expect second response (upon successful save of the library question)
     server.respond();
 
-    const fetchableLibraryQuestions = store.getState().foorm
-      .fetchableSubEntities;
+    const fetchableLibraryQuestions =
+      store.getState().foorm.fetchableSubEntities;
     assert(
       _.some(fetchableLibraryQuestions, ['id', 1]),
       'Newly saved library question does not appear in list of library questions for selected library'
@@ -178,7 +179,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     server.respondWith('POST', '/foorm/library_questions', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(sampleNewResponseData)
+      JSON.stringify(sampleNewResponseData),
     ]);
 
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
@@ -200,8 +201,8 @@ describe('FoormEntityEditor in Library editing mode', () => {
     // expect second response (upon successful save of the library question)
     server.respond();
 
-    const fetchableLibraryQuestions = store.getState().foorm
-      .fetchableSubEntities;
+    const fetchableLibraryQuestions =
+      store.getState().foorm.fetchableSubEntities;
     const fetchableLibraries = store.getState().foorm.fetchableEntities;
     assert(
       _.some(fetchableLibraries, ['id', 2]),
@@ -224,7 +225,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
       [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(fakeSurveysAppearedIn)
+        JSON.stringify(fakeSurveysAppearedIn),
       ]
     );
 
@@ -240,10 +241,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     // check that modal pops up
     assert(
-      wrapper
-        .find('ConfirmationDialog')
-        .at(0)
-        .prop('show'),
+      wrapper.find('ConfirmationDialog').at(0).prop('show'),
       'Save ConfirmationDialog is showing'
     );
   });
@@ -255,7 +253,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     server.respondWith('PUT', `/foorm/library_questions/0`, [
       500,
       {'Content-Type': 'application/json'},
-      'Save error'
+      'Save error',
     ]);
 
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
@@ -303,10 +301,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     // check that modal pops up
     assert(
-      wrapper
-        .find('Modal')
-        .at(0)
-        .prop('show'),
+      wrapper.find('Modal').at(0).prop('show'),
       'Save New Form Modal is showing'
     );
 

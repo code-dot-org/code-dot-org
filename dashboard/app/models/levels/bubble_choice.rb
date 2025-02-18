@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class BubbleChoice < DSLDefined
@@ -80,7 +81,7 @@ class BubbleChoice < DSLDefined
   # @return [Hash]
   def summarize(script_level: nil, user: nil, should_localize: false)
     ActiveRecord::Base.connected_to(role: :reading) do
-      user_id = user ? user.id : nil
+      user_id = user&.id
       summary = {
         id: id.to_s,
         display_name: display_name,
@@ -93,7 +94,7 @@ class BubbleChoice < DSLDefined
 
       if script_level
         previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
-        redirect_url = script_level.next_level_or_redirect_path_for_user(user, nil, true)
+        redirect_url = script_level.next_level_or_redirect_path_for_user(user, bubble_choice_parent: true)
 
         summary.merge!(
           {
@@ -123,17 +124,23 @@ class BubbleChoice < DSLDefined
   # @return [Array]
   def summarize_sublevels(script_level: nil, user_id: nil, should_localize: false)
     summary = []
+    localized_properties = %i[display_name short_instructions long_instructions]
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans.symbolize_keys
+
+      level_desc = level.try(:bubble_choice_description)
+      level_desc = I18n.t(level.name, scope: %i[data bubble_choice_description], default: level_desc) if should_localize
 
       level_info.merge!(
         {
           id: level.id.to_s,
-          description: level.try(:bubble_choice_description),
+          description: level_desc,
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
           letter: ALPHABET[index],
-          icon: level.try(:icon)
+          icon: level.try(:icon),
+          uses_lab2: level.uses_lab2?,
+          parent_level_id: id,
         }
       )
 
@@ -143,6 +150,10 @@ class BubbleChoice < DSLDefined
       level_info[:url] = script_level ?
         build_script_level_url(script_level, {sublevel_position: index + 1}) :
         level_url(level.id)
+
+      level_info[:path] = script_level ?
+        build_script_level_path(script_level, {sublevel_position: index + 1}) :
+        level_path(level.id)
 
       if user_id
         level_for_sublevel_progress = BubbleChoice.level_for_progress_for_sublevel(level)
@@ -164,7 +175,7 @@ class BubbleChoice < DSLDefined
       end
 
       if should_localize
-        %i[display_name short_instructions long_instructions].each do |property|
+        localized_properties.each do |property|
           localized_value = I18n.t(level.name, scope: [:data, property], default: nil, smart: true)
           level_info[property] = localized_value unless localized_value.nil?
         end
@@ -176,6 +187,11 @@ class BubbleChoice < DSLDefined
     summary
   end
 
+  # Overrides original method declared in Level class.
+  def get_level_for_progress(student, script)
+    get_sublevel_for_progress(student, script) || self
+  end
+
   # Determine which sublevel's status to display in our progress bubble.
   # If there is a sublevel marked with feedback "keep working", display that one. Otherwise display the
   # progress for sublevel that has the best result
@@ -184,6 +200,18 @@ class BubbleChoice < DSLDefined
     return keep_working_level if keep_working_level.present?
 
     return best_result_sublevel(student, script)
+  end
+
+  # Use pre-loaded feedback and progress data to get the sublevel ID using the
+  # same criteria as in get_sublevel_for_progress
+  def get_sublevel_for_progress_optimized(teacher_feedbacks:, user_levels:)
+    keep_working_level_id = teacher_feedbacks.find do |feedback|
+      feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking
+    end&.level_id
+
+    return keep_working_level_id if keep_working_level_id
+
+    user_levels.max_by(&:best_result)&.level_id
   end
 
   # Returns an array of BubbleChoice parent levels for any given sublevel name.
@@ -238,19 +266,17 @@ class BubbleChoice < DSLDefined
     sublevel.contained_levels.any? ? sublevel.contained_levels.first : sublevel
   end
 
-  private
-
   # Returns the sublevel for a user that has the highest best_result.
   # @param [User]
   # @param [Unit]
   # @return [Level]
-  def best_result_sublevel(user, script)
+  private def best_result_sublevel(user, script)
     sublevels_for_progress = sublevels.map {|sublevel| BubbleChoice.level_for_progress_for_sublevel(sublevel)}
     ul = user.user_levels.where(level: sublevels_for_progress, script: script).max_by(&:best_result)
     ul&.level
   end
 
-  def keep_working_sublevel(user, script)
+  private def keep_working_sublevel(user, script)
     # get latest feedback on sublevels where keepWorking is true
     level_ids = sublevels.map(&:id)
     latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)

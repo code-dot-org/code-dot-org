@@ -1,6 +1,8 @@
-import sinon from 'sinon';
-import {assert, expect} from '../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import CdoBramble from '@cdo/apps/weblab/CdoBramble';
+
+import {assert, expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DISALLOWED_HTML_TAGS = ['script', 'a'];
 const VALID_HTML = `<!DOCTYPE html>
@@ -46,16 +48,16 @@ describe('CdoBramble', () => {
       deleteProjectFile: () => {},
       renameProjectFile: () => {},
       changeProjectFile: () => {},
-      openDisallowedHtmlDialog: () => {}
+      openDisallowedHtmlDialog: () => {},
     };
     storeState = {
       maxProjectCapacity: 1000,
-      pageConstants: {isReadOnlyWorkspace: false}
+      pageConstants: {isReadOnlyWorkspace: false},
     };
     const mockStore = {
       getStore: () => ({
-        getState: () => storeState
-      })
+        getState: () => storeState,
+      }),
     };
 
     cdoBramble = new CdoBramble(
@@ -199,7 +201,7 @@ describe('CdoBramble', () => {
       fileChange = {
         operation: 'change',
         file: filename,
-        fileDataPath: projectPath + filename
+        fileDataPath: projectPath + filename,
       };
     });
 
@@ -257,7 +259,7 @@ describe('CdoBramble', () => {
 
       expect(callbackSpy).to.have.been.calledOnceWith(null, {
         newDom: FIXED_INVALID_HTML,
-        tags: DISALLOWED_HTML_TAGS
+        tags: DISALLOWED_HTML_TAGS,
       });
     });
 
@@ -271,7 +273,7 @@ describe('CdoBramble', () => {
 
       expect(callbackSpy).to.have.been.calledOnceWith(null, {
         newDom: VALID_HTML,
-        tags: []
+        tags: [],
       });
     });
   });
@@ -313,7 +315,7 @@ describe('CdoBramble', () => {
 
       cdoBramble.brambleProxy = {
         enableReadOnly: sinon.spy(),
-        disableReadOnly: sinon.spy()
+        disableReadOnly: sinon.spy(),
       };
       sinon
         .stub(cdoBramble, 'detectDisallowedHtml')
@@ -348,7 +350,7 @@ describe('CdoBramble', () => {
       expect(cdoBramble.recentChanges.length).to.equal(0);
       cdoBramble.onFileDeleted(projectPath + 'index.html');
       expect(cdoBramble.recentChanges).to.deep.equal([
-        {operation: 'delete', file: 'index.html'}
+        {operation: 'delete', file: 'index.html'},
       ]);
     });
 
@@ -370,14 +372,14 @@ describe('CdoBramble', () => {
       cdoBramble.recentChanges = [
         {operation: 'change', fileDataPath: 'other.html'},
         {operation: 'change', fileDataPath: oldPath},
-        {operation: 'delete', fileDataPath: 'style.css'}
+        {operation: 'delete', fileDataPath: 'style.css'},
       ];
       cdoBramble.onFileRenamed(oldPath, newPath);
       expect(cdoBramble.recentChanges).to.deep.equal([
         {operation: 'change', fileDataPath: 'other.html'},
         {operation: 'change', fileDataPath: newPath},
         {operation: 'delete', fileDataPath: 'style.css'},
-        {operation: 'rename', file: 'old.html', newFile: 'new.html'}
+        {operation: 'rename', file: 'old.html', newFile: 'new.html'},
       ]);
     });
 
@@ -385,7 +387,7 @@ describe('CdoBramble', () => {
       expect(cdoBramble.recentChanges.length).to.equal(0);
       cdoBramble.onFileRenamed(oldPath, newPath);
       expect(cdoBramble.recentChanges).to.deep.equal([
-        {operation: 'rename', file: 'old.html', newFile: 'new.html'}
+        {operation: 'rename', file: 'old.html', newFile: 'new.html'},
       ]);
     });
 
@@ -405,7 +407,7 @@ describe('CdoBramble', () => {
     beforeEach(() => {
       fileData = [
         {name: 'index.html', data: '<div></div>'},
-        {name: 'style.css', data: '* {margin: 0;}'}
+        {name: 'style.css', data: '* {margin: 0;}'},
       ];
       sinon
         .stub(cdoBramble, 'getAllFileData')
@@ -481,7 +483,7 @@ describe('CdoBramble', () => {
       const changes = [
         {operation: 'delete', file: 'style.css'},
         {operation: 'rename', file: 'old.html', newFile: 'new.html'},
-        {operation: 'change', file: 'index.html'}
+        {operation: 'change', file: 'index.html'},
       ];
       cdoBramble.recursivelySaveChangesToServer(changes, 0, () => {
         expect(cdoBramble.api.deleteProjectFile).to.have.been.calledOnceWith(
@@ -531,7 +533,7 @@ describe('CdoBramble', () => {
 
       const changes = [
         {operation: 'delete', file: 'style.css'},
-        {operation: 'change', file: 'index.html'}
+        {operation: 'change', file: 'index.html'},
       ];
       cdoBramble.recursivelySaveChangesToServer(changes, 0, () => {
         expect(cdoBramble.api.deleteProjectFile).to.have.been.calledOnce;
@@ -551,7 +553,7 @@ describe('CdoBramble', () => {
 
       cdoBramble.lastSyncedVersionId = null;
       const changes = [
-        {operation: 'rename', file: 'old.css', newFile: 'new.css'}
+        {operation: 'rename', file: 'old.css', newFile: 'new.css'},
       ];
       cdoBramble.recursivelySaveChangesToServer(changes, 0, () => {
         expect(cdoBramble.lastSyncedVersionId).to.equal('new-version-id');
@@ -581,7 +583,7 @@ describe('CdoBramble', () => {
     it('downloads file data and writes it to bramble', done => {
       const files = [
         {name: 'index.html', url: '/v3/files/a1b2c3/index.html', versionId: 1},
-        {name: 'style.css', url: '/v3/files/a1b2c3/style.css'}
+        {name: 'style.css', url: '/v3/files/a1b2c3/style.css'},
       ];
       cdoBramble.recursivelyWriteFiles(files, 0, () => {
         expect(cdoBramble.downloadFile).to.have.been.calledTwice;
@@ -637,7 +639,7 @@ describe('CdoBramble', () => {
 
       const files = [
         {name: 'index.html', url: '/v3/files/abc/index.html'},
-        {name: 'other.html', url: '/v3/files/abc/other.html'}
+        {name: 'other.html', url: '/v3/files/abc/other.html'},
       ];
       cdoBramble.recursivelyWriteFiles(files, 0, () => {
         expect(cdoBramble.downloadFile).to.have.been.calledTwice;
@@ -679,7 +681,7 @@ describe('CdoBramble', () => {
     it('does not write invalid source files', done => {
       const invalidFiles = [
         {data: '<div></div>'}, // no name
-        {name: 'index.html'} // no URL or data
+        {name: 'index.html'}, // no URL or data
       ];
       cdoBramble.recursivelyWriteSourceFiles(invalidFiles, 0, () => {
         expect(console.error).to.have.been.calledTwice;
@@ -716,7 +718,7 @@ describe('CdoBramble', () => {
       const files = [
         {name: 'style.css'}, // invalid file
         {name: 'index.html', url: '/v3/files/1234/index.html'}, // will fail to download
-        {name: 'other.html', data: '<div></div>'} // will succeed
+        {name: 'other.html', data: '<div></div>'}, // will succeed
       ];
       cdoBramble.recursivelyWriteSourceFiles(files, 0, () => {
         expect(cdoBramble.downloadFile).to.have.been.calledOnce;
@@ -776,12 +778,12 @@ describe('CdoBramble', () => {
       const startSources = {
         files: [
           {name: 'index.html', data: '<div></div>'},
-          {name: 'other.html', data: '<p></p>'}
-        ]
+          {name: 'other.html', data: '<p></p>'},
+        ],
       };
       const userFiles = [
         {name: 'index.html', data: '<span></span>'},
-        {name: 'other.html', data: '<p></p>'}
+        {name: 'other.html', data: '<p></p>'},
       ];
       cdoBramble.api.getStartSources.restore();
       sinon.stub(cdoBramble.api, 'getStartSources').returns(startSources);
@@ -798,7 +800,7 @@ describe('CdoBramble', () => {
     it('is false if no files have changed', done => {
       const files = [
         {name: 'index.html', data: '<div></div>'},
-        {name: 'other.html', data: '<p></p>'}
+        {name: 'other.html', data: '<p></p>'},
       ];
       cdoBramble.api.getStartSources.restore();
       sinon
@@ -816,7 +818,7 @@ describe('CdoBramble', () => {
 
     it('is false if source file has no data', done => {
       const startSources = {
-        files: [{name: 'img.png', url: '/v3/files/img.png'}]
+        files: [{name: 'img.png', url: '/v3/files/img.png'}],
       };
       const userFiles = [{name: 'img.png', data: 'stringified-image-data'}];
       cdoBramble.api.getStartSources.restore();

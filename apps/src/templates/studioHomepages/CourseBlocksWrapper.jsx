@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
-import ContentContainer from '../ContentContainer';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
 import ResourceCard from '@cdo/apps/templates/studioHomepages/ResourceCard';
 import ResourceCardResponsiveContainer from '@cdo/apps/templates/studioHomepages/ResourceCardResponsiveContainer';
+
+import ContentContainer from '../ContentContainer';
 
 class CourseBlocksWrapper extends Component {
   static propTypes = {
@@ -11,7 +13,7 @@ class CourseBlocksWrapper extends Component {
     description: PropTypes.string,
     link: PropTypes.string,
     linkText: PropTypes.string,
-    hideBottomMargin: PropTypes.bool
+    hideBottomMargin: PropTypes.bool,
   };
 
   render() {

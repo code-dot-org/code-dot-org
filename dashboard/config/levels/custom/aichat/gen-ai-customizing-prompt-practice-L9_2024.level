@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:53:25.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Creative Classifications\r\n\r\nThis chatbot is designed to create a creative summary from the description of a person. The user provides a description, and the chatbot provides a creative interpretation. We need to decide what that creative interpretation should be.\r\n\r\n### Do This\r\n\r\n1) Add a sentence to the end of the system prompt so the chatbot responds with:\r\n    - A short story with this person as the protagonist\r\n    - A country western song\r\n    - a Haiku\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Bob was a grumpy curmudgeon who only stayed indoors and loathed the fresh air and sunlight\r\n* Jill was bright and full of light, always smiling and humming a tune in the spring air.\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "You are a chatbot that provides creative summaries based on the user's prompt. The user will type in a description of a character, and you will respond with a creative interpretation of this character using a variety of metaphors and abstract language.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:53:25.585+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-practice-L9\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-practice-L9\"}]"
+}]]></config>
+</Aichat>

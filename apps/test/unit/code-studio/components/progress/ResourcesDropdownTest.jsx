@@ -1,10 +1,10 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
 
 describe('ResourcesDropdown', () => {
   it('renders resources for teacher', () => {
@@ -14,13 +14,13 @@ describe('ResourcesDropdown', () => {
           {
             key: 'key1',
             name: 'Curriculum',
-            url: 'https://example.com/a'
+            url: 'https://example.com/a',
           },
           {
             key: 'key2',
             name: 'Vocabulary',
-            url: 'https://example.com/b'
-          }
+            url: 'https://example.com/b',
+          },
         ]}
       />
     );
@@ -36,7 +36,7 @@ describe('ResourcesDropdown', () => {
           </DropdownButton>
         </div>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('renders resources for student', () => {
@@ -46,13 +46,13 @@ describe('ResourcesDropdown', () => {
           {
             key: 'key1',
             name: 'Curriculum',
-            url: 'https://example.com/a'
+            url: 'https://example.com/a',
           },
           {
             key: 'key2',
             name: 'Vocabulary',
-            url: 'https://example.com/b'
-          }
+            url: 'https://example.com/b',
+          },
         ]}
         studentFacing={true}
       />
@@ -69,6 +69,6 @@ describe('ResourcesDropdown', () => {
           </DropdownButton>
         </div>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 });

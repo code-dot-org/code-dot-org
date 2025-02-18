@@ -13,3 +13,5 @@ answer 'red: 107, green: 142, blue: 35 - rgb(107,142,35)'
 markdown <<MARKDOWN
 # Match the Colors and RGB Values
 MARKDOWN
+
+allow_multiple_attempts true

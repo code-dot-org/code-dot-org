@@ -27,3 +27,5 @@ In this code segment, the length of `numbers` is `4`, so the first `if` statemen
 
 The inner `if` statement is then evaluated to check if the value at index `2` in `numbers` is greater than `9`. The value at index `2` is `10`, so the condition is `true`. The value at index `2` in `numbers` is then printed, so `10` is printed to the console.
 MARKDOWN
+
+allow_multiple_attempts true

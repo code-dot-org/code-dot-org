@@ -163,9 +163,7 @@ class PublicThumbnailsTest < FilesApiTestBase
     end
   end
 
-  private
-
-  def assert_moderates_project_type(project_type)
+  private def assert_moderates_project_type(project_type)
     ImageModeration.expects(:rate_image).once.returns :everyone
     with_project_type project_type do |channel_id|
       get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
@@ -173,7 +171,7 @@ class PublicThumbnailsTest < FilesApiTestBase
     end
   end
 
-  def refute_moderates_project_type(project_type)
+  private def refute_moderates_project_type(project_type)
     ImageModeration.expects(:rate_image).never
     with_project_type project_type do |channel_id|
       get "/v3/files-public/#{channel_id}/#{@thumbnail_filename}"
@@ -184,7 +182,7 @@ class PublicThumbnailsTest < FilesApiTestBase
   # Creates a channel of the given type, with a thumbnail populated.
   # Yields the channel id to the provided block.
   # Performs cleanup of the thumbnail and channel when the block ends.
-  def with_project_type(project_type)
+  private def with_project_type(project_type)
     # Setup
     channel_id = create_channel(projectType: project_type)
     create_thumbnail(channel_id)
@@ -201,12 +199,12 @@ class PublicThumbnailsTest < FilesApiTestBase
     delete_channel(channel_id)
   end
 
-  def create_thumbnail(channel_id)
+  private def create_thumbnail(channel_id)
     put "/v3/files/#{channel_id}/#{@thumbnail_filename}", @thumbnail_body, {}
     assert successful?
   end
 
-  def delete_thumbnail(channel_id)
+  private def delete_thumbnail(channel_id)
     delete "/v3/files/#{channel_id}/#{@thumbnail_filename}"
     assert successful?
   end

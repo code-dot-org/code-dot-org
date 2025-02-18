@@ -1,0 +1,165 @@
+@import 'color';
+@import 'font';
+
+#parental-permission-modal {
+  $icon-font-path: 'bootstrap-sass/assets/fonts/bootstrap/';
+
+  @import 'bootstrap-sass/assets/stylesheets/bootstrap'; // stylelint-disable-line no-invalid-position-at-import-rule
+  @include main-font-regular;
+
+  border-radius: 4px;
+  width: 100%;
+  max-width: 700px;
+  min-width: $screen-xs-min;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: unset;
+
+  @media (min-width: $screen-sm-min) {
+    .modal-dialog {
+      width: 610px;
+      margin: 36px auto;
+    }
+  }
+
+  & .modal-content {
+    all: unset;
+
+    & form {
+      all: unset;
+    }
+
+    & .modal-header {
+      padding: unset;
+      border-bottom: unset;
+      height: fit-content;
+
+      & .close {
+        border: unset !important;
+        box-shadow: none;
+        margin: unset;
+        position: fixed;
+        top: 12px;
+        right: 10px;
+        font-weight: $extra-light-font-weight;
+        font-size: 40px;
+        line-height: unset;
+      }
+
+      & img {
+        display: block;
+        margin: 0 auto;
+        width: 116px;
+      }
+
+      & .modal-title {
+        @include main-font-semi-bold;
+        color: $teal;
+        margin: 25px 0 10px 0;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+
+    & .modal-body {
+      $margin-bottom: 16px;
+      padding: unset;
+
+      & a, #resend-permission-email-button {
+        color: $brand_secondary_default;
+        text-decoration: underline;
+
+        &:hover {
+          color: $brand_secondary_dark;
+          text-decoration: underline;
+        }
+      }
+
+      & p {
+        font-size: 14px;
+        margin-bottom: $margin-bottom;
+        line-height: 21px;
+      }
+
+      & #parental-permission-request {
+        margin: 32px 0;
+
+        & .form-group-lg {
+          $font-size: 16px;
+          $font-weight: $semi-bold-font-weight;
+          $padding-top: 13px;
+
+          margin: 0 0 8px 0;
+
+          & .control-label {
+            width: 100%;
+            text-align: left;
+            font-size: $font-size;
+            font-weight: $font-weight;
+            padding-top: $padding-top;
+            padding-right: 20px;
+          }
+
+          & div[class^="col-"] {
+            padding: unset;
+          }
+
+          &#parental-permission-request-status {
+            & .form-control-static {
+              font-size: $font-size;
+              font-weight: $font-weight;
+              padding: $padding-top 0 0 0;
+              margin: unset;
+            }
+
+            & .status {
+              &.not-submitted, &.error {
+                color: $red;
+              }
+
+              &.pending {
+                color: $orange;
+              }
+            }
+          }
+
+          &#parental-permission-request-email {
+            margin-bottom: 32px;
+
+            & #last-email-sent-at {
+              @include main-font-regular-italic;
+              display: block;
+              font-size: 14px;
+              line-height: 30px;
+              padding: 0 10px;
+            }
+          }
+        }
+      }
+    }
+
+    & .modal-footer {
+      background: unset;
+      border: unset;
+      padding: unset;
+
+      & button {
+        margin: unset;
+
+        &.primary {
+          float: right;
+          color: $white;
+
+          &:hover {
+            color: $orange;
+          }
+        }
+
+        &.secondary {
+          float: left;
+        }
+      }
+    }
+  }
+}

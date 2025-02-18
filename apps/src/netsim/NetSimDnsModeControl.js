@@ -2,8 +2,9 @@
  * @overview UI component used to select a DNS mode at runtime.
  */
 import $ from 'jquery';
-var markup = require('./NetSimDnsModeControl.html.ejs');
+
 var DnsMode = require('./NetSimConstants').DnsMode;
+var markup = require('./NetSimDnsModeControl.html.ejs');
 
 /**
  * Generator and controller for DNS mode selector
@@ -11,7 +12,7 @@ var DnsMode = require('./NetSimConstants').DnsMode;
  * @param {function} dnsModeChangeCallback
  * @constructor
  */
-var NetSimDnsModeControl = (module.exports = function(
+var NetSimDnsModeControl = (module.exports = function (
   rootDiv,
   dnsModeChangeCallback
 ) {
@@ -48,7 +49,7 @@ var NetSimDnsModeControl = (module.exports = function(
 /**
  * Fill the root div with new elements reflecting the current state
  */
-NetSimDnsModeControl.prototype.render = function() {
+NetSimDnsModeControl.prototype.render = function () {
   var renderedMarkup = $(markup({}));
   this.rootDiv_.html(renderedMarkup);
 
@@ -63,7 +64,7 @@ NetSimDnsModeControl.prototype.render = function() {
  * Handler for a new radio button being selected.
  * @private
  */
-NetSimDnsModeControl.prototype.onDnsModeChange_ = function() {
+NetSimDnsModeControl.prototype.onDnsModeChange_ = function () {
   var newDnsMode = this.dnsModeRadios_.filter(':checked').val();
   this.dnsModeChangeCallback_(newDnsMode);
 };
@@ -71,7 +72,7 @@ NetSimDnsModeControl.prototype.onDnsModeChange_ = function() {
 /**
  * @param {DnsMode} newDnsMode
  */
-NetSimDnsModeControl.prototype.setDnsMode = function(newDnsMode) {
+NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
   this.currentDnsMode_ = newDnsMode;
   this.dnsModeRadios_
     .filter('[value="' + newDnsMode + '"]')

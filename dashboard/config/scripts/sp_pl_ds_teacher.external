@@ -1,0 +1,66 @@
+name 'sp-pl-DS-teacher'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Voices from the Classroom
+
+#### Data science is revolutionizing how we live and work. Understanding its principles and impacts is essential. **Code.org's Data Science** covers into key concepts, explores real-world applications, and highlights the importance of data ethics.
+
+
+#### See what educators are saying about teaching the Data Science unit. 
+
+<hr style="clear:both">
+
+<!-- Flexbox Section 1 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+    <img src="https://images.code.org/7224577644d121fc104a54358f35fbc7-image-1734635672027.png" alt="Headshot of female teacher" style="height: 130px; border-radius: 10px;">
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #b2dee3; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      The detailed lesson plans and slides are fantastic. They take the stress out of teaching new concepts, making the whole process seamless and enjoyable.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 2 -->
+<div style="display: flex; align-items: center; gap: 5px; flex-direction: row-reverse; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+    <img src="https://images.code.org/816ff87b33db0c70b73d663effdf9d35-image-1734635774943.png" alt="Teacher smiling at camera" style="height: 130px; border-radius: 10px;">
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #ffd199; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      Connecting data science to Netflix, social media feeds, and online shopping really clicked with my students. They loved seeing how data impacts their daily lives!
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+<!-- Flexbox Section 3 -->
+<div style="display: flex; align-items: center; gap: 5px; width: 80%; margin: 20px auto;">
+  <!-- Image -->
+  <div style="flex: 1; text-align: center;">
+    <img src="https://images.code.org/975f5c4d0697ea6ac583777803008a86-image-1724092021325.png" alt="female teacher smiling at camera" style="height: 150px; border-radius: 10px;">
+  </div>
+  <!-- Text Box -->
+  <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
+    <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
+      With so many new terms, using a word wall for all the new concepts in the Data Science course is a brilliant idea! It keeps students engaged and helps them quickly grasp and remember complex ideas.
+    </p>
+    <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
+  </div>
+</div>
+
+
+
+
+MARKDOWN

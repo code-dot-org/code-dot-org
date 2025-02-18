@@ -1,16 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import * as rowStyle from './rowStyle';
 
 export default class BooleanPropertyRow extends React.Component {
   static propTypes = {
     initialValue: PropTypes.bool.isRequired,
     handleChange: PropTypes.func,
-    desc: PropTypes.node
+    desc: PropTypes.node,
   };
 
   state = {
-    isChecked: this.props.initialValue
+    isChecked: this.props.initialValue,
   };
 
   handleClick = () => {

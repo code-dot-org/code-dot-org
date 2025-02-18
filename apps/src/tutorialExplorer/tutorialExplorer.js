@@ -2,15 +2,26 @@
  * Entry point to build a bundle containing a set of globals used when displaying
  * tutorialExplorer.  Includes the TutorialExplorer React class.
  */
+import Immutable from 'immutable';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Immutable from 'immutable';
+import {StickyContainer} from 'react-sticky';
+
+import i18n from '@cdo/tutorialExplorer/locale';
+
 import FilterHeader from './filterHeader';
 import FilterSet from './filterSet';
-import TutorialSet from './tutorialSet';
-import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
+import {
+  getResponsiveContainerWidth,
+  isResponsiveCategoryInactive,
+  getResponsiveValue,
+} from './responsive';
 import Search from './search';
+import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
+import TutorialSet from './tutorialSet';
 import {
   isTutorialSortByFieldNamePopularity,
   TutorialsSortByOptions,
@@ -19,17 +30,8 @@ import {
   mobileCheck,
   DoNotShow,
   orgNameCodeOrg,
-  orgNameMinecraft
+  orgNameMinecraft,
 } from './util';
-import {
-  getResponsiveContainerWidth,
-  isResponsiveCategoryInactive,
-  getResponsiveValue
-} from './responsive';
-import i18n from '@cdo/tutorialExplorer/locale';
-import _ from 'lodash';
-import queryString from 'query-string';
-import {StickyContainer} from 'react-sticky';
 
 export default class TutorialExplorer extends React.Component {
   static propTypes = {
@@ -42,7 +44,7 @@ export default class TutorialExplorer extends React.Component {
     showSortDropdown: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
     defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortByOptions))
-      .isRequired
+      .isRequired,
   };
 
   constructor(props) {
@@ -84,7 +86,7 @@ export default class TutorialExplorer extends React.Component {
       sortBy: sortBy,
       orgName: orgName,
       showingAllTutorials: showingAllTutorials,
-      searchTerm: defaultSearchTerm
+      searchTerm: defaultSearchTerm,
     };
   }
 
@@ -99,7 +101,7 @@ export default class TutorialExplorer extends React.Component {
     this.setState({
       searchTerm,
       filteredTutorials,
-      filteredTutorialsCount: filteredTutorials.length
+      filteredTutorialsCount: filteredTutorials.length,
     });
   };
 
@@ -146,7 +148,7 @@ export default class TutorialExplorer extends React.Component {
     this.setState({
       ...newState,
       filteredTutorials,
-      filteredTutorialsCount: filteredTutorials.length
+      filteredTutorialsCount: filteredTutorials.length,
     });
   };
 
@@ -165,7 +167,7 @@ export default class TutorialExplorer extends React.Component {
     this.setState({
       filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
-      sortBy: value
+      sortBy: value,
     });
 
     this.scrollToTop();
@@ -184,7 +186,7 @@ export default class TutorialExplorer extends React.Component {
     this.setState({
       filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length,
-      orgName: value
+      orgName: value,
     });
 
     this.scrollToTop();
@@ -216,23 +218,28 @@ export default class TutorialExplorer extends React.Component {
    * Given a sort by choice (popularityrank or displayweight) and a grade range,
    * return the field name from the tutorials data that should used for sorting.
    */
+
+  // As of 2024 we will manually sort activities by displayweight on
+  // the cdo-tutorials gsheet with new activities at the top of the
+  // list followed by ranking in popularity from the previous year.
+  // See https://github.com/code-dot-org/code-dot-org/pull/60728
   getSortByFieldName(sortBy, grade) {
     let sortByFieldName;
 
     const gradeToDisplayWeightSortByFieldName = {
       all: TutorialsSortByFieldNames.displayweight,
-      pre: TutorialsSortByFieldNames.displayweight_pre,
-      '2-5': TutorialsSortByFieldNames.displayweight_25,
-      '6-8': TutorialsSortByFieldNames.displayweight_middle,
-      '9+': TutorialsSortByFieldNames.displayweight_high
+      pre: TutorialsSortByFieldNames.displayweight,
+      '2-5': TutorialsSortByFieldNames.displayweight,
+      '6-8': TutorialsSortByFieldNames.displayweight,
+      '9+': TutorialsSortByFieldNames.displayweight,
     };
 
     const gradeToPopularityRankSortByFieldName = {
       all: TutorialsSortByFieldNames.popularityrank,
-      pre: TutorialsSortByFieldNames.popularityrank_pre,
-      '2-5': TutorialsSortByFieldNames.popularityrank_25,
-      '6-8': TutorialsSortByFieldNames.popularityrank_middle,
-      '9+': TutorialsSortByFieldNames.popularityrank_high
+      pre: TutorialsSortByFieldNames.popularityrank,
+      '2-5': TutorialsSortByFieldNames.popularityrank,
+      '6-8': TutorialsSortByFieldNames.popularityrank,
+      '9+': TutorialsSortByFieldNames.popularityrank,
     };
 
     // If we're sorting by recommendation (a.k.a. displayweight) then find the
@@ -259,7 +266,7 @@ export default class TutorialExplorer extends React.Component {
       locale: 'en-US',
       orgName: orgName,
       sortByFieldName: this.getSortByFieldName(sortBy, grade),
-      searchTerm: searchTerm
+      searchTerm: searchTerm,
     };
 
     return TutorialExplorer.filterTutorials(this.props.tutorials, filterProps);
@@ -271,7 +278,7 @@ export default class TutorialExplorer extends React.Component {
    */
   filterTutorialSetForLocale() {
     const filterProps = {
-      sortByFieldName: this.props.defaultSortBy
+      sortByFieldName: this.props.defaultSortBy,
     };
 
     filterProps.specificLocale = true;
@@ -353,7 +360,7 @@ export default class TutorialExplorer extends React.Component {
 
     this.setState({
       windowWidth: $(window).width(),
-      windowHeight: $(window).height()
+      windowHeight: $(window).height(),
     });
 
     this.setState({mobileLayout: isResponsiveCategoryInactive('md')});
@@ -394,7 +401,7 @@ export default class TutorialExplorer extends React.Component {
       filters,
       hideFilters,
       sortByFieldName,
-      searchTerm
+      searchTerm,
     } = filterProps;
 
     const cleanSearchTerm = searchTerm?.toLowerCase()?.trim();
@@ -535,12 +542,6 @@ export default class TutorialExplorer extends React.Component {
   }
 
   render() {
-    const bottomLinksContainerStyle = {
-      ...styles.bottomLinksContainer,
-      textAlign: getResponsiveValue({xs: 'left', md: 'right'}),
-      visibility: this.shouldShowTutorials() ? 'visible' : 'hidden'
-    };
-
     const grade = this.state.filters.grade[0];
 
     return (
@@ -548,7 +549,7 @@ export default class TutorialExplorer extends React.Component {
         style={{
           width: getResponsiveContainerWidth(),
           margin: '0 auto',
-          paddingBottom: 0
+          paddingBottom: 0,
         }}
       >
         {this.shouldShowTutorialsForLocale() && (
@@ -596,7 +597,7 @@ export default class TutorialExplorer extends React.Component {
                 <div
                   style={{
                     float: 'left',
-                    width: getResponsiveValue({xs: 100, md: 20})
+                    width: getResponsiveValue({xs: 100, md: 20}),
                   }}
                 >
                   <Search
@@ -622,7 +623,7 @@ export default class TutorialExplorer extends React.Component {
               <div
                 style={{
                   float: 'left',
-                  width: getResponsiveValue({xs: 100, md: 80})
+                  width: getResponsiveValue({xs: 100, md: 80}),
                 }}
               >
                 {this.shouldShowTutorials() && (
@@ -634,25 +635,6 @@ export default class TutorialExplorer extends React.Component {
                   />
                 )}
               </div>
-
-              <div style={bottomLinksContainerStyle}>
-                <div style={styles.bottomLinksLinkFirst}>
-                  <a
-                    style={styles.bottomLinksLink}
-                    href="https://hourofcode.com/activity-guidelines"
-                  >
-                    {i18n.bottomGuidelinesLink()}
-                  </a>
-                </div>
-                <div>
-                  <a
-                    style={styles.bottomLinksLink}
-                    href="https://support.code.org/hc/en-us/articles/115001306531-How-can-students-with-special-needs-or-disabilities-participate-"
-                  >
-                    {i18n.bottomSpecialNeedsLink()}
-                  </a>
-                </div>
-              </div>
             </div>
           </StickyContainer>
         )}
@@ -660,21 +642,6 @@ export default class TutorialExplorer extends React.Component {
     );
   }
 }
-
-const styles = {
-  bottomLinksContainer: {
-    padding: '10px 7px 40px 7px',
-    fontSize: 13,
-    lineHeight: '17px',
-    clear: 'both'
-  },
-  bottomLinksLink: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  bottomLinksLinkFirst: {
-    paddingBottom: 10
-  }
-};
 
 function getFilters({mobile}) {
   const filters = [
@@ -688,18 +655,8 @@ function getFilters({mobile}) {
         {name: 'pre', text: i18n.filterGradesPre()},
         {name: '2-5', text: i18n.filterGrades25()},
         {name: '6-8', text: i18n.filterGrades68()},
-        {name: '9+', text: i18n.filterGrades9()}
-      ]
-    },
-    {
-      name: 'student_experience',
-      text: i18n.filterStudentExperience(),
-      headerOnDesktop: true,
-      singleEntry: true,
-      entries: [
-        {name: 'beginner', text: i18n.filterStudentExperienceBeginner()},
-        {name: 'comfortable', text: i18n.filterStudentExperienceComfortable()}
-      ]
+        {name: '9+', text: i18n.filterGrades9()},
+      ],
     },
     {
       name: 'platform',
@@ -710,23 +667,27 @@ function getFilters({mobile}) {
         {name: 'ios', text: i18n.filterPlatformIos()},
         {
           name: 'robotics',
-          text: i18n.filterPlatformRobotics()
+          text: i18n.filterPlatformRobotics(),
         },
         {name: 'no-internet', text: i18n.filterPlatformNoInternet()},
-        {name: 'no-computers', text: i18n.filterPlatformNoComputers()}
-      ]
+        {name: 'no-computers', text: i18n.filterPlatformNoComputers()},
+      ],
     },
     {
       name: 'subject',
       text: i18n.filterTopics(),
       entries: [
-        {name: 'science', text: i18n.filterTopicsScience()},
-        {name: 'math', text: i18n.filterTopicsMath()},
-        {name: 'history', text: i18n.filterTopicsHistory()},
-        {name: 'la', text: i18n.filterTopicsLa()},
         {name: 'art', text: i18n.filterTopicsArt()},
-        {name: 'cs-only', text: i18n.filterTopicsCsOnly()}
-      ]
+        {
+          name: 'ai',
+          text: i18n.filterTopicsArtificialIntelligence(),
+        },
+        {name: 'la', text: i18n.filterTopicsLa()},
+        {name: 'math', text: i18n.filterTopicsMath()},
+        {name: 'science', text: i18n.filterTopicsScience()},
+        {name: 'history', text: i18n.filterTopicsHistory()},
+        {name: 'cs-only', text: i18n.filterTopicsCsOnly()},
+      ],
     },
     {
       name: 'activity_type',
@@ -734,10 +695,10 @@ function getFilters({mobile}) {
       entries: [
         {
           name: 'online-tutorial',
-          text: i18n.filterActivityTypeOnlineTutorial()
+          text: i18n.filterActivityTypeOnlineTutorial(),
         },
-        {name: 'lesson-plan', text: i18n.filterActivityTypeLessonPlan()}
-      ]
+        {name: 'lesson-plan', text: i18n.filterActivityTypeLessonPlan()},
+      ],
     },
     {
       name: 'length',
@@ -745,8 +706,8 @@ function getFilters({mobile}) {
       entries: [
         {name: '1hour', text: i18n.filterLength1Hour()},
         {name: '1hour-follow', text: i18n.filterLength1HourFollow()},
-        {name: 'few-hours', text: i18n.filterLengthFewHours()}
-      ]
+        {name: 'few-hours', text: i18n.filterLengthFewHours()},
+      ],
     },
     {
       name: 'accessibility',
@@ -756,8 +717,8 @@ function getFilters({mobile}) {
         {name: 'tts', text: i18n.filterAccessibilityTTS()},
         {name: 'keyboard', text: i18n.filterAccessibilityKeyboard()},
         {name: 'captions', text: i18n.filterAccessibilityCaptions()},
-        {name: 'highcontrast', text: i18n.filterAccessibilityHighContrast()}
-      ]
+        {name: 'highcontrast', text: i18n.filterAccessibilityHighContrast()},
+      ],
     },
     {
       name: 'programming_language',
@@ -765,14 +726,13 @@ function getFilters({mobile}) {
       entries: [
         {name: 'blocks', text: i18n.filterProgrammingLanguageBlocks()},
         {name: 'typing', text: i18n.filterProgrammingLanguageTyping()},
-        {name: 'other', text: i18n.filterProgrammingLanguageOther()}
-      ]
-    }
+        {name: 'other', text: i18n.filterProgrammingLanguageOther()},
+      ],
+    },
   ];
 
   const initialFilters = {
-    student_experience: ['beginner'],
-    grade: ['all']
+    grade: ['all'],
   };
 
   const hideFilters = {};
@@ -831,7 +791,7 @@ function getUrlParameters(filters) {
   return parametersObject;
 }
 
-window.TutorialExplorerManager = function(options) {
+window.TutorialExplorerManager = function (options) {
   options.mobile = mobileCheck();
   let {filters, initialFilters, hideFilters} = getFilters(options);
 
@@ -847,7 +807,7 @@ window.TutorialExplorerManager = function(options) {
     ? TutorialsSortByOptions.popularityrank
     : TutorialsSortByOptions.displayweight;
 
-  this.renderToElement = function(element) {
+  this.renderToElement = function (element) {
     ReactDOM.render(
       <TutorialExplorer
         tutorials={options.tutorials}

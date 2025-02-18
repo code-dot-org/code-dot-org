@@ -1,0 +1,39 @@
+:ruby
+  block_items = [
+    {
+      title: hoc_s("donate_page.empower.worldwide.title"),
+      img: "/images/action-blocks/action-block-donate-students.png",
+      desc: hoc_s("donate_page.empower.worldwide.desc"),
+      amount: hoc_s("donate_page.empower.worldwide.amount"),
+      url: "https://donate.code.org/give/172233?amount=50#!/donation/checkout",
+    },
+    {
+      title: hoc_s("donate_page.empower.teacher.title"),
+      img: "/images/action-blocks/action-block-donate-teachers.png",
+      desc: hoc_s("donate_page.empower.teacher.desc"),
+      amount: hoc_s("donate_page.empower.teacher.amount"),
+      url: "https://donate.code.org/give/172233?amount=250#!/donation/checkout",
+    },
+    {
+      title: hoc_s("donate_page.empower.workshops.title"),
+      img: "/images/action-blocks/action-block-donate-workshops.png",
+      desc: hoc_s("donate_page.empower.workshops.desc"),
+      amount: hoc_s("donate_page.empower.workshops.amount"),
+      url: "https://donate.code.org/give/172233?amount=750#!/donation/checkout",
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - block_items.each do |block_item|
+    .action-block.action-block--one-col.flex-space-between.no-border
+      .content-wrapper
+        %h3
+          = block_item[:title]
+        %img{src: block_item[:img], alt: ""}
+        %p
+          = block_item[:desc]
+      .content-footer
+        %p.no-margin-bottom.overline{style: "font-size: 0.875rem"}
+          = block_item[:amount]
+        %a.link-button.has-external-link{href: block_item[:url], target: "_blank", rel: "noopener noreferrer"}
+          =hoc_s("donate_page.empower.button")

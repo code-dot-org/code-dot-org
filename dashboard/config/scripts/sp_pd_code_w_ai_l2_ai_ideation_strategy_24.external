@@ -1,0 +1,23 @@
+name 'sp-pd-Code_w_AI-L2-AI_Ideation_strategy_24'
+skip_dialog true
+markdown <<MARKDOWN
+# AI Strategies: Differentiation Options
+
+<img src="https://images.code.org/e6f929733325a4c58869d2c067b4bcb8-image-1714147075800.png" alt="diagram suggesting activity pathway" width="320px" style="border-radius:10px; float:right; margin: 0 40px 0px 10px;">
+
+
+#### Depending on your students’ level of computer science exposure and comfort, you can choose from two strategies:  <a href="https://docs.google.com/document/d/167P0Kso5w3kvpveY9PKlRwj65Sy0Q7z_o9bbYVlImKE/edit?usp=sharing" target="blank" rel="noopener noreferrer">Brainstorming Partner</a> and  <a href="https://docs.google.com/document/d/1G47NDbc1YOQcaMNK1F3cG_lwPx8_fGsFAvd4FWVvHF4/edit" target="blank" rel="noopener noreferrer">Pseudocode Assistant</a>.
+
+
+#### If you have beginning programmers, it is suggested to use the Brainstorming strategy. However, if your students have been exposed to pseudocode (or you would like to use this as an opportunity to have them start working with pseudocode), choose the Pseudocode Assistant strategy for your students.
+
+## Extention activity
+
+#### If you have computer science students who are familiar with libraries, there is also an additional, optional strategy that involves finding libraries to work on a project. It  is a good extension for more experienced programmers who will be working with larger programs, or who might already have experience working with libraries.
+
+#### In this professional learning module, we will explore the  <a href="https://docs.google.com/document/d/167P0Kso5w3kvpveY9PKlRwj65Sy0Q7z_o9bbYVlImKE/edit?usp=sharing" target="blank" rel="noopener noreferrer">Brainstorming Partner</a> Strategy.
+
+##Let's dive in! 
+
+![]()
+MARKDOWN

@@ -1,7 +1,7 @@
 .unplugged.match{id: "level_#{level.id}"}
   = render partial: 'levels/content', locals: {app: 'match', data: level.properties, content_class: level.question_content_class, source_level: level, hide_header: !standalone}
 
-  - if standalone && !(level.properties['options'].try(:[], 'hide_submit'))
+  - if standalone && !level.properties['options'].try(:[], 'hide_submit')
     .buttons
       %a.btn.btn-large.btn-primary.next-lesson.submitButton
         =t('submit')

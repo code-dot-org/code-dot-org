@@ -4,15 +4,68 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "02e8e6bf-3c9b-421a-a2ef-ad5313143cb0",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Are you an elementary school teacher who wants to teach computer science, but you’re not sure where to start? Discover Code.org's newly released professional learning module on Computer Science Basics. Click the button to start this two-hour, self-paced course to equip yourself with the skills to teach foundational computer science concepts to your students.",
+          "link": "https://studio.code.org/courses/self-paced-pl-k5-2024",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Computer Science Basics for K-5 Teachers "
+        }
+      ],
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
+      "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
+      "supported_locales": [
+        "ar-SA",
+        "cs-CZ",
+        "de-DE",
+        "el-GR",
+        "es-ES",
+        "es-MX",
+        "fa-IR",
+        "fr-FR",
+        "he-IL",
+        "hi-IN",
+        "hu-HU",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ka-GE",
+        "ko-KR",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK",
+        "sq-AL",
+        "ta-IN",
+        "te-IN",
+        "th-TH",
+        "tr-TR",
+        "uk-UA",
+        "ur-PK",
+        "vi-VN",
+        "zh-CN",
+        "zh-TW"
+      ],
       "tts": true,
-      "version_year": "2021"
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "hello-world-food",
-    "serialized_at": "2022-09-13 19:03:58 UTC",
+    "serialized_at": "2025-01-09 16:43:23 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -174,6 +227,22 @@
       },
       "seeding_key": {
         "activity_section.key": "656eee11-dc6d-428e-8849-6e4b31dc8c81",
+        "lesson_activity.key": "ae872c5e-1b66-4026-b2d7-e26574ff8b57"
+      }
+    },
+    {
+      "key": "f39d7745-dd63-424d-baa1-de4e4fd0f0c0",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Professional Learning Opportunity**\n\nWant to keep the fun going but not sure how? Consider engaging in our self-paced professional learning module, [Preparing to Teach Interactive Animations and Games](https://studio.code.org/courses/self-paced-pl-csd-unit3-2023)! This unit teaches students to build exciting creations using sprites. This module will give you all the necessary tools, skills, and knowledge."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f39d7745-dd63-424d-baa1-de4e4fd0f0c0",
         "lesson_activity.key": "ae872c5e-1b66-4026-b2d7-e26574ff8b57"
       }
     }
@@ -663,6 +732,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

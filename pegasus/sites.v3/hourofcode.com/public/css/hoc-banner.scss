@@ -2,107 +2,129 @@
 
 #fullwidth {
   overflow: hidden;
-  background: url('/images/hoc2022-hero-banner.svg') no-repeat center center;
-  background-size: cover;
-
-  @media screen and (max-width: $width-sm) {
-    background: url('/images/hoc2022-hero-banner-mobile.svg') no-repeat center center;
-    background-size: cover;
-  }
+  background: linear-gradient(110deg, #6977CD -10.82%, #BCDEDE 43.13%, #34DFE5 68.88%, #688AED 95.85%);
 }
 
+#pageheader {
+  background-color: rgba($neutral-white, .9);
+}
+
+// Homepage banner
 section.banner.homepage {
-  padding: 0;
-
-  h1 {
-    font-size: 4em;
-    margin: 0.5em auto 0;
-
-    @media screen and (max-width: $width-md) {
-      font-size: 3.5em;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      font-size: 2.75em;
-      margin-top: 0;
-    }
-  }
+  padding-bottom: 4rem;
 
   h2 {
-    font-size: 1.5em;
+    font-weight: 400;
+  }
 
-    @media screen and (max-width: $width-sm) {
-      font-size: 1.25em;
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  figure {
+    margin: 0 auto 2rem;
+  }
+
+  .show-tablet {
+    display: none;
+  }
+
+  .wrapper.show-desktop {
+    background: url('/images/hoc-2024-graphic-bg.png') no-repeat center center;
+    background-size: contain;
+    max-width: 960px;
+    height: 552px;
+    position: relative;
+
+    html[dir="rtl"] & {
+      background: url('/images/hoc-2024-graphic-bg-rtl.png') no-repeat center center;
+      background-size: contain;
+    }
+
+    .text-wrapper {
+      position: absolute;
+      bottom: 6rem;
+      left: 3rem;
+      text-align: initial;
+      max-width: 390px;
+
+      html[dir="rtl"] & {
+        right: 3rem;
+      }
+
+      h1, h2, p {
+        color: var(--neutral_white);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .button-wrapper {
+      justify-content: start;
     }
   }
 
-  .wrapper {
-    padding: 3em 0 6em;
-    width: 100%;
+  @media (max-width: 1023px) {
+    .show-tablet {
+      display: block;
+    }
 
-    @media screen and (max-width: $width-sm) {
-      padding: 3em 1em;
+    .show-desktop {
+      display: none;
     }
   }
 }
 
 section.banner {
-  text-align: center;
-  color: $darkest_gray;
+  padding: 2rem 0 6rem;
+  position: relative;
 
-  &.hoc-mode {
+  .wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1;
 
     @media screen and (max-width: $width-md) {
-      padding: 1.25em 0;
+      width: 80%;
     }
   }
 
-  h1, h2 {
-    color: $darkest_gray;
-    margin: 0;
+  h1, p {
+    color: var(--neutral_dark);
   }
 
   h1 {
-    font-size: 3em;
-
-    @media screen and (max-width: $width-md) {
-      font-size: 2.5em;
-    }
+    font-size: 3rem;
+    margin-block: 0 1rem;
   }
 
-  h2 {
-    font-family: $gotham-regular;
-    font-size: 1.2em;
-    line-height: 1.4;
-    margin: 1em auto 2em;
-  }
-
-  .wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 2em 0 7em;
-
-    @media screen and (max-width: $width-md) {
-      width: 70%;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      padding: 1em 1em 3em;
-      width: 88%;
-    }
-  }
-
-  a {
-    color: $darkest_gray;
-    text-decoration: underline;
-    font-family: $gotham-bold;
-
-    &.ctabuttonatag {
-      text-decoration: none;
-    }
-  }
-
-  p:last-child {
+  p {
     margin-bottom: 0;
+  }
+
+  figure {
+    max-width: 344px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .button-wrapper {
+    justify-content: center;
+  }
+
+  .overlay {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 45%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
   }
 }

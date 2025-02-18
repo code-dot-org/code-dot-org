@@ -1,8 +1,8 @@
+import he from 'he';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Well} from 'react-bootstrap';
-import _ from 'lodash';
-import he from 'he';
+import {Well} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class TextResponses extends React.Component {
   static propTypes = {
@@ -10,7 +10,7 @@ export default class TextResponses extends React.Component {
     answers: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
       .isRequired,
     showAverage: PropTypes.bool,
-    facilitators: PropTypes.object
+    facilitators: PropTypes.object,
   };
 
   renderResponseBullets() {

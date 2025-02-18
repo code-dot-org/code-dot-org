@@ -1,25 +1,26 @@
 <style>
     .microsoft-partnership {
-      font-size: 24px;
+      font-size: 1.5rem;
       text-align: center;
-      margin-top: 40px;
     }
 
     .microsoft-thanks {
-      font-size: 14px;
+      font-size: 1rem;
       text-align: center;
-      padding-top: 20px;
-      margin-bottom: 80px;
-      margin-left: 18%;
-      margin-right: 18%;
+      margin: 0 auto;
+    }
+
+    .logo {
+      width: 210px;
+      margin-top: -4px;
     }
 </style>
 
-<div class="microsoft-partnership">
+<p class="microsoft-partnership">
   <%= I18n.t("ai_in_partnership_with", default: "In partnership with") %>
   &nbsp;
-  <img src="images/fit-240/avatars/microsoft.png" alt="<%= I18n.t("microsoft_logo_alt", default: "Microsoft logo")%>" >
-</div>
-<div class="microsoft-thanks">
+  <img class="logo" src="images/avatars/microsoft.png" alt="<%= I18n.t("microsoft_logo_alt", default: "Microsoft logo")%>" >
+</p>
+<p class="microsoft-thanks">
   <%= I18n.t("ai_microsoft_thanks", default: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century.") %>
-</div>
+</p>

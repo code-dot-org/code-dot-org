@@ -1,0 +1,30 @@
+!!!
+%html{lang: "en"}
+  %body
+    %h1 Connect Existing Account
+
+    = form_with(url: lti_v1_account_linking_link_email_path, html: {class: "signup"}) do |f|
+      / Email
+      .row
+        .span3.signup-field-label
+          = f.label :email do
+            = succeed '&nbsp;*'.html_safe do
+              = User.human_attribute_name(:email)
+          - if @user.errors[:email].present?
+            %p.error= @user.errors[:email]&.first
+        .span4
+          = f.email_field :email, maxlength: 255, required: true
+
+      / Password
+      .row
+        .span3.signup-field-label
+          = f.label :password
+          - if @user.errors[:password].present?
+            %p.error= @user.errors[:password]&.first
+        .span4
+          = f.password_field :password, maxlength: 255, required: true
+
+      / Submit
+      .row
+        .span8
+          %button.submit{:id => 'connect_form_submit'}= 'Connect Existing Account'

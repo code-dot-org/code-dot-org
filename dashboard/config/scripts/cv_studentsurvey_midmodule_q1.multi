@@ -1,0 +1,8 @@
+name 'cv-studentsurvey-midmodule-q1'
+question 'How interesting have you found the content of the Computer Vision unit so far?'
+right 'Very interesting'
+right 'Somewhat interesting'
+right 'Neutral'
+right 'Not very interesting'
+right 'Not interesting at all'
+allow_multiple_attempts true

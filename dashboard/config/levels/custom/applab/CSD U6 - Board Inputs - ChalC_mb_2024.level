@@ -1,0 +1,99 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-07-10T18:57:01.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "onBoardEvent": {
+        "dropdown": {
+          "0": [
+            "buttonA",
+            "buttonB"
+          ],
+          "1": [
+            "\"down\"",
+            "\"up\""
+          ]
+        }
+      },
+      "setProperty": null,
+      "setText": null,
+      "playSound": null,
+      "playSpeech": null,
+      "randomNumber_min_max": null,
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
+      "ledScreen.clear": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "submittable": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "microbit",
+    "long_instructions": "# Correct-or-Incorrect Sound Board\r\n\r\nCreate an app that plays a \"correct\" or \"incorrect\" sound when you press a button on the micro:bit. You can use the [`playSound()`(#fff176)](/docs/applab/playSound/) or [`playSpeech()`(#fff176)](/docs/applab/playSpeech/) blocks to make a sound of your choosing. Then use that app to quiz your friends and let them know if they got the answer correct or incorrect.\r\n\r\n## Do This\r\n\r\n1) When you press the A button, the app plays the \"correct\" sound.\r\n2) When you press the B button, the app plays the \"incorrect\" sound.\r\n\r\n**Run Your Code!** Look up 5 trivia questions and ask them to some of your classmates, then use the app to let them know if they got it correct or incorrect!",
+    "parent_level_id": 20595,
+    "mini_rubric": "false",
+    "text_mode_at_start": "false",
+    "encrypted": "false",
+    "libraries_enabled": "false",
+    "widget_mode": "false",
+    "ai_enabled": "false",
+    "display_name": "Correct or Incorrect",
+    "thumbnail_url": "https://images.code.org/5430e1b1567969bfff45e8362b8e4d28-image-1650059568902.png",
+    "bubble_choice_description": "Create an app that uses the playSound or playSpeech block to make \"correct\" or \"incorrect\" responses",
+    "start_blocks": "//1) When you press the A button, the app plays the \"correct\" sound.\r\n\r\n//2) When you press the B button, the app plays the \"incorrect\" sound.",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "encrypted_examples": "gz1qTLINqJw3fNNTmNt6Ez5q+31OJW8FtsALU3lDz75zQ/aYpmrVa1QkTAOu\noPq1XW0wmJGYa7FPlrYNqxrk2w==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:57:01.063+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalC_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalC_mb2022\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

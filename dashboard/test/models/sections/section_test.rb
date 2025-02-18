@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class SectionTest < ActiveSupport::TestCase
+  include Minitest::RSpecMocks
   self.use_transactional_test_case = true
   setup_all do
     @student = create :student
@@ -31,6 +32,14 @@ class SectionTest < ActiveSupport::TestCase
     assert follower.reload.deleted?
     assert already_deleted_follower.reload.deleted?
     assert_equal delete_time.utc.to_s, already_deleted_follower.deleted_at.to_s
+  end
+
+  test "destroying section destroys associated LTI section" do
+    section = create :section
+    lti_section = create :lti_section, section: section
+    section.destroy
+    assert lti_section.reload.deleted_at.present?, "LTI section should be soft deleted"
+    assert LtiSection.without_deleted.where(id: lti_section.id).empty?, "LTI section should be soft deleted"
   end
 
   test "restoring section restores appropriate followers" do
@@ -315,6 +324,17 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test 'add_student returns failure for section instructor' do
+    section_owner = create :teacher
+    section = create :section, user: section_owner
+    create :section_instructor, section: section, instructor: @teacher, status: :active
+
+    assert_does_not_create(Follower) do
+      add_student_return = section.add_student @teacher
+      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+    end
+  end
+
   test 'add_student returns failure if user does not meet participant_type for section' do
     section_with_teacher_participants = build :section, :teacher_participants
     assert_does_not_create(Follower) do
@@ -432,6 +452,371 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal script1, section.default_script
   end
 
+  test 'concise_summarize: section with a course assigned' do
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    Timecop.freeze(Time.zone.now) do
+      section = create :section, script: nil, unit_group: unit_group
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        courseVersionName: 'somecourse',
+        unitName: nil,
+        isAssignedStandaloneCourse: false,
+        login_type: "email",
+        grades: nil,
+        providerManaged: false,
+        lesson_extras: false,
+        pairing_allowed: true,
+        tts_autoplay_enabled: false,
+        sharing_disabled: false,
+        studentCount: 0,
+        code: section.code,
+        course_display_name: unit_group.course_version.localized_title,
+        course_offering_id: unit_group.course_version.course_offering.id,
+        course_version_id: unit_group.course_version.id,
+        unit_id: nil,
+        course_id: unit_group.id,
+        hidden: false,
+        restrict_section: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil,
+        is_assigned_csa: false,
+        participant_type: 'student',
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
+        ai_tutor_enabled: false,
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.concise_summarize.except!(:createdAt)
+    end
+  end
+
+  test 'concise_summarize: section with a script assigned' do
+    # Use an existing script so that it has a translation
+    script = Unit.find_by_name('jigsaw')
+    CourseOffering.add_course_offering(script)
+
+    Timecop.freeze(Time.zone.now) do
+      section = create :section, script: script, unit_group: nil
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        courseVersionName: 'jigsaw',
+        unitName: script.name,
+        isAssignedStandaloneCourse: true,
+        login_type: "email",
+        grades: nil,
+        providerManaged: false,
+        lesson_extras: false,
+        pairing_allowed: true,
+        tts_autoplay_enabled: false,
+        sharing_disabled: false,
+        studentCount: 0,
+        code: section.code,
+        course_display_name: script.course_version.localized_title,
+        course_offering_id: script.course_version.course_offering.id,
+        course_version_id: script.course_version.id,
+        unit_id: script.id,
+        course_id: nil,
+        hidden: false,
+        restrict_section: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil,
+        is_assigned_csa: false,
+        participant_type: 'student',
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
+        ai_tutor_enabled: false,
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.concise_summarize.except!(:createdAt)
+    end
+  end
+
+  test 'concise_summarize: section with a coteacher' do
+    # Use an existing script so that it has a translation
+    script = Unit.find_by_name('jigsaw')
+    CourseOffering.add_course_offering(script)
+
+    Timecop.freeze(Time.zone.now) do
+      section = create :section
+      coteacher_user = create :teacher
+      primary_section_instructor_id = section.section_instructors[0].id
+      coteacher_section_instructor = section.invite_instructor(coteacher_user.email, current_user)
+      section.reload
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        courseVersionName: nil,
+        unitName: nil,
+        isAssignedStandaloneCourse: false,
+        login_type: "email",
+        grades: nil,
+        providerManaged: false,
+        lesson_extras: false,
+        pairing_allowed: true,
+        tts_autoplay_enabled: false,
+        sharing_disabled: false,
+        studentCount: 0,
+        code: section.code,
+        course_display_name: nil,
+        course_offering_id: nil,
+        course_version_id: nil,
+        unit_id: nil,
+        course_id: nil,
+        hidden: false,
+        restrict_section: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil,
+        is_assigned_csa: false,
+        participant_type: 'student',
+        sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
+                             {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
+        sync_enabled: nil,
+        ai_tutor_enabled: false,
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.concise_summarize.except!(:createdAt)
+    end
+  end
+
+  test 'concise_summarize: section with both a course and a script' do
+    # Use an existing script so that it has a translation
+    script = Unit.find_by_name('jigsaw')
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    Timecop.freeze(Time.zone.now) do
+      # If this were a real section, it would actually have a script that is part of
+      # the provided course
+      section = create :section, script: script, unit_group: unit_group
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        courseVersionName: 'somecourse',
+        unitName: script.name,
+        isAssignedStandaloneCourse: false,
+        login_type: "email",
+        grades: nil,
+        providerManaged: false,
+        lesson_extras: false,
+        pairing_allowed: true,
+        tts_autoplay_enabled: false,
+        sharing_disabled: false,
+        studentCount: 0,
+        code: section.code,
+        course_display_name: unit_group.course_version.localized_title,
+        course_offering_id: unit_group.course_version.course_offering.id,
+        course_version_id: unit_group.course_version.id,
+        unit_id: script.id,
+        course_id: unit_group.id,
+        hidden: false,
+        restrict_section: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil,
+        is_assigned_csa: false,
+        participant_type: 'student',
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
+        ai_tutor_enabled: false,
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.concise_summarize.except!(:createdAt)
+    end
+  end
+
+  test 'concise_summarize: section with neither course or script assigned' do
+    Timecop.freeze(Time.zone.now) do
+      section = create :section, script: nil, unit_group: nil
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        courseVersionName: nil,
+        unitName: nil,
+        isAssignedStandaloneCourse: false,
+        login_type: "email",
+        grades: nil,
+        providerManaged: false,
+        lesson_extras: false,
+        pairing_allowed: true,
+        tts_autoplay_enabled: false,
+        sharing_disabled: false,
+        studentCount: 0,
+        code: section.code,
+        course_display_name: nil,
+        course_offering_id: nil,
+        course_version_id: nil,
+        unit_id: nil,
+        course_id: nil,
+        hidden: false,
+        restrict_section: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil,
+        is_assigned_csa: false,
+        participant_type: 'student',
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
+        ai_tutor_enabled: false,
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.concise_summarize.except!(:createdAt)
+    end
+  end
+
+  test 'concise_summarize: section with students' do
+    section = create :section, script: nil, unit_group: nil
+    create(:follower, section: section).student_user
+    create(:follower, section: section).student_user
+
+    summarized_section = section.concise_summarize
+    assert_equal 2, summarized_section[:studentCount]
+  end
+
+  test 'concise_summarize: section with duplicate students' do
+    section = create :section, script: nil, unit_group: nil
+    student = create :student
+    create(:follower, section: section, student_user: student)
+    create(:follower, section: section, student_user: student)
+    assert_equal 2, Follower.where(section: section, student_user: student).count
+
+    summarized_section = section.concise_summarize
+    assert_equal 1, summarized_section[:studentCount]
+  end
+
+  test 'concise_summarize: section with sharing disabled and script with project sharing' do
+    script = create :script, project_sharing: true
+    section = create :section, sharing_disabled: true, script: script, unit_group: nil
+    summarized_section = section.concise_summarize
+
+    assert summarized_section[:sharing_disabled]
+  end
+
+  test 'selected_section_summarize: section with no script' do
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    Timecop.freeze(Time.zone.now) do
+      section = create :section, script: nil, unit_group: unit_group
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        login_type_name: "Email",
+        script: {id: nil, name: nil, project_sharing: nil},
+        students: [],
+        any_student_has_progress: false,
+        is_assigned_single_unit_course: false,
+        course: {
+          course_offering_id: unit_group.course_version.course_offering.id,
+          version_id: unit_group.course_version.id,
+          lesson_extras_available: nil,
+          text_to_speech_enabled: nil,
+          unit_id: section.unit_group ? section.script_id : nil,
+        }
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.selected_section_summarize.except!(:createdAt)
+    end
+  end
+
+  test 'selected_section_summarize: section with a script assigned' do
+    # Use an existing script so that it has a translation
+    script = Unit.find_by_name('jigsaw')
+    CourseOffering.add_course_offering(script)
+
+    Timecop.freeze(Time.zone.now) do
+      section = create :section, script: script, unit_group: nil
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        login_type_name: "Email",
+        script: {id: script.id, name: script.name, project_sharing: nil},
+        students: [],
+        any_student_has_progress: false,
+        is_assigned_single_unit_course: nil,
+        course: {
+          course_offering_id: script.course_version.course_offering.id,
+          version_id: script.course_version.id,
+          lesson_extras_available: script.lesson_extras_available,
+          text_to_speech_enabled: script.text_to_speech_enabled?,
+          unit_id: section.unit_group ? section.script_id : nil,
+        }
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.selected_section_summarize.except!(:createdAt)
+    end
+  end
+
+  test 'selected_section_summarize: section with a single-unit course assigned' do
+    single_unit_course = create :single_unit_course
+    single_unit = single_unit_course.default_units.first
+    section = create :section, unit_group: single_unit_course
+    CourseOffering.add_course_offering(single_unit_course)
+
+    summarized_section = section.selected_section_summarize
+    expected_script_info = {
+      id: single_unit.id,
+      name: single_unit.name,
+      project_sharing: single_unit.project_sharing
+    }
+
+    assert_equal single_unit_course.course_version.course_offering.id, summarized_section[:course][:course_offering_id]
+    assert_equal expected_script_info, summarized_section[:script]
+    assert_equal true, summarized_section[:is_assigned_single_unit_course]
+  end
+
+  test 'selected_section_summarize: section with students' do
+    section = create :section, script: nil, unit_group: nil
+    student1 = create(:follower, section: section).student_user
+    student2 = create(:follower, section: section).student_user
+
+    summarized_section = section.selected_section_summarize
+    assert_includes summarized_section[:students], student1.summarize
+    assert_includes summarized_section[:students], student2.summarize
+  end
+
+  test 'selected_section_summarize: section with duplicate students' do
+    section = create :section, script: nil, unit_group: nil
+    student = create :student
+    create(:follower, section: section, student_user: student)
+    create(:follower, section: section, student_user: student)
+    assert_equal 2, Follower.where(section: section, student_user: student).count
+
+    summarized_section = section.selected_section_summarize
+    assert_includes summarized_section[:students], student.summarize
+    assert summarized_section[:students].count, 1
+  end
+
+  test 'selected_section_summarize: section with sharing disabled and script with project sharing' do
+    script = create :script, project_sharing: true
+    section = create :section, sharing_disabled: true, script: script, unit_group: nil
+    summarized_section = section.selected_section_summarize
+
+    assert summarized_section[:script][:project_sharing]
+  end
+
   test 'summarize: section with a course assigned' do
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
     CourseOffering.add_course_offering(unit_group)
@@ -457,7 +842,9 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        login_type_name: "Email",
         participant_type: 'student',
+        course_display_name: unit_group.course_version.localized_title,
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: nil,
@@ -470,8 +857,14 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
+        is_assigned_single_unit_course: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
+        ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -506,7 +899,9 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        login_type_name: "Email",
         participant_type: 'student',
+        course_display_name: script.course_version.localized_title,
         course_offering_id: script.course_version.course_offering.id,
         course_version_id: script.course_version.id,
         unit_id: nil,
@@ -519,8 +914,76 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
+        is_assigned_single_unit_course: nil,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
+        ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.summarize.except!(:createdAt)
+    end
+  end
+
+  test 'summarize: section with a coteacher' do
+    # Use an existing script so that it has a translation
+    script = Unit.find_by_name('jigsaw')
+    CourseOffering.add_course_offering(script)
+
+    Timecop.freeze(Time.zone.now) do
+      section = create :section
+      coteacher_user = create :teacher
+      primary_section_instructor_id = section.section_instructors[0].id
+      coteacher_section_instructor = section.invite_instructor(coteacher_user.email, current_user)
+      section.reload
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        teacherName: section.teacher.name,
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
+        assignedTitle: '',
+        linkToAssigned: '//test-studio.code.org/teacher_dashboard/sections/',
+        currentUnitTitle: '',
+        linkToCurrentUnit: '',
+        courseVersionName: nil,
+        numberOfStudents: 0,
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
+        code: section.code,
+        lesson_extras: false,
+        pairing_allowed: true,
+        tts_autoplay_enabled: false,
+        sharing_disabled: false,
+        login_type: "email",
+        login_type_name: "Email",
+        participant_type: 'student',
+        course_display_name: nil,
+        course_offering_id: nil,
+        course_version_id: nil,
+        unit_id: nil,
+        course_id: nil,
+        script: {id: nil, name: nil, project_sharing: nil},
+        studentCount: 0,
+        grades: nil,
+        providerManaged: false,
+        hidden: false,
+        students: [],
+        restrict_section: false,
+        is_assigned_csa: false,
+        is_assigned_single_unit_course: nil,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
+                             {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
+        sync_enabled: nil,
+        ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -558,7 +1021,9 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        login_type_name: "Email",
         participant_type: 'student',
+        course_display_name: unit_group.course_version.localized_title,
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: script.id,
@@ -571,8 +1036,14 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
+        is_assigned_single_unit_course: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
+        ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -603,7 +1074,9 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        login_type_name: "Email",
         participant_type: 'student',
+        course_display_name: nil,
         course_offering_id: nil,
         course_version_id: nil,
         unit_id: nil,
@@ -616,8 +1089,14 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
+        is_assigned_single_unit_course: nil,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sync_enabled: nil,
+        ai_tutor_enabled: false,
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -658,6 +1137,24 @@ class SectionTest < ActiveSupport::TestCase
 
     assert summarized_section[:script][:project_sharing]
     assert summarized_section[:sharing_disabled]
+  end
+
+  test 'summarize: section with a single-unit course assigned' do
+    single_unit_course = create :single_unit_course
+    single_unit = single_unit_course.default_units.first
+    section = create :section, unit_group: single_unit_course
+    CourseOffering.add_course_offering(single_unit_course)
+
+    summarized_section = section.summarize
+    expected_script_info = {
+      id: single_unit.id,
+      name: single_unit.name,
+      project_sharing: single_unit.project_sharing
+    }
+
+    assert_equal single_unit_course.id, summarized_section[:course_id]
+    assert_equal expected_script_info, summarized_section[:script]
+    assert_equal true, summarized_section[:is_assigned_single_unit_course]
   end
 
   test 'can_join_section_as_participant? returns correct response based on permissions' do
@@ -725,6 +1222,40 @@ class SectionTest < ActiveSupport::TestCase
     refute section.code_review_enabled?
   end
 
+  test 'any_student_has_progress? returns false if no student progress' do
+    section = create :section, script: nil, unit_group: nil
+
+    create(:follower, section: section).student_user
+
+    refute section.any_student_has_progress?
+  end
+
+  test 'any_student_has_progress? returns true if student has progress on unit assigned to section' do
+    script = Unit.find_by_name('jigsaw')
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create :section, script: script, unit_group: unit_group
+
+    student = create(:follower, section: section).student_user
+    UserScript.create!(user: student, script: script)
+
+    assert section.any_student_has_progress?
+  end
+
+  test 'any_student_has_progress? returns true if student has progress on unit not assigned to section' do
+    script = Unit.find_by_name('jigsaw')
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
+    section = create :section, script: nil, unit_group: nil
+
+    student = create(:follower, section: section).student_user
+    UserScript.create!(user: student, script: script)
+
+    assert section.any_student_has_progress?
+  end
+
   test 'reset_code_review_groups creates new code review groups' do
     code_review_group_section = create(:section, user: @teacher, login_type: 'word')
     # Create 5 students
@@ -767,7 +1298,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'update_code_review_expiration resets expiration time when enabling code review' do
     @section.update_code_review_expiration(true)
     @section.save
-    assert_not_nil @section.code_review_expires_at
+    refute_nil @section.code_review_expires_at
     # check the expiration date was set to a time greater than now.
     assert DateTime.parse(@section.code_review_expires_at) > DateTime.now
   end
@@ -780,6 +1311,101 @@ class SectionTest < ActiveSupport::TestCase
     @section.update_code_review_expiration(false)
     @section.save
     assert_nil @section.code_review_expires_at
+  end
+
+  test 'section create adds section instructor' do
+    assert_difference 'SectionInstructor.count' do
+      section = create(:section)
+      instructor = section.instructors.first
+      assert_equal instructor, section.user
+    end
+  end
+
+  test 'section update fixes section instructor' do
+    section = create(:section)
+    si = section.section_instructors.first
+    si.status = :declined
+    si.save!
+
+    assert_empty section.instructors
+
+    section.name = 'newly renamed!'
+    section.save!
+
+    assert_equal 1, section.instructors.length
+  end
+
+  test 'section update fixes soft-deleted section instructor' do
+    section = create(:section)
+    si = section.section_instructors.first
+    si.destroy!
+
+    assert_empty section.instructors
+
+    section.name = 'newly renamed again!'
+    section.save!
+
+    assert_equal 1, section.instructors.length
+  end
+
+  test 'add_instructor returns true and adds the teacher if not previously a co-teacher' do
+    section = create(:section)
+    user = create :teacher
+
+    assert section.add_instructor(user)
+    assert_equal user, section.section_instructors.last.instructor
+  end
+
+  test 'add_instructor returns true and restores the teacher if previously deleted co-teacher' do
+    section = create(:section)
+    user = create :teacher
+
+    # Add instructor, then delete the instructor
+    section.add_instructor(user)
+    section.section_instructors.last.destroy
+
+    # Re-add the deleted instructor
+    result = section.add_instructor(user)
+
+    assert_equal true, result
+    assert_equal user, section.section_instructors.last.instructor
+  end
+
+  test 'add_instructor returns true and activates the teacher if the teacher was previously invited' do
+    section = create(:section)
+    inviter = create :teacher
+    user = create :teacher
+
+    section.invite_instructor(user.email, inviter)
+    result = section.add_instructor(user)
+    si = section.section_instructors.last
+
+    assert_equal true, result
+    assert_equal user, si.instructor
+    assert_equal "active", si.status
+  end
+
+  test 'remove_instructor destroys the applicable SectionInstructor' do
+    section = create(:section)
+    user = create :teacher
+
+    section.add_instructor(user)
+    si = section.section_instructors.last
+    section.remove_instructor(user)
+    si.reload
+
+    assert_equal true, si.deleted?
+  end
+
+  test 'remove_instructor does not remove the primary teacher' do
+    user = create :teacher
+    section = create(:section, user: user)
+
+    si = SectionInstructor.find_by(instructor: user, section_id: section.id)
+    section.remove_instructor(user)
+    si.reload
+
+    refute si.deleted?
   end
 
   def set_up_code_review_groups
@@ -801,90 +1427,60 @@ class SectionTest < ActiveSupport::TestCase
     CodeReviewGroupMember.create(follower_id: @followers[2].id, code_review_group_id: @group2.id)
   end
 
-  class HasSufficientDiscountCodeProgress < ActiveSupport::TestCase
-    self.use_transactional_test_case = true
+  describe '.summarize' do
+    let(:section) {create :section}
+    let(:student) {create :student, us_state: at_risk_age_gated_us_state}
+    let(:summarize) {section.summarize}
+    let(:at_risk_age_gated_date) {DateTime.now}
+    let(:at_risk_age_gated_us_state) {'WA'}
 
-    def create_script_with_levels(name, level_type)
-      script = Unit.find_by_name(name) || create(:script, name: name)
-      lesson_group = create :lesson_group, script: script
-      lesson = create :lesson, script: script, lesson_group: lesson_group
-      # 5 non-programming levels
-      5.times do
-        create :script_level, script: script, lesson: lesson, levels: [create(:unplugged)]
-      end
-
-      # 5 programming levels
-      5.times do
-        create :script_level, script: script, lesson: lesson, levels: [create(level_type)]
-      end
-      script
+    before do
+      allow(section).to receive(:at_risk_age_gated_student).and_return(student)
+      allow(student).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
     end
 
-    # Create progress for student in given script. Assumes all levels are either
-    # Unplugged or some form of programming level
-    # @param {Unit} script
-    # @param {User} student
-    # @param {number} num_programming_levels
-    # @param {number} num_non_programming_levels
-    def simulate_student_progress(script, student, num_programming_levels, num_non_programing_levels)
-      progress_levels = script.levels.select {|level| level.is_a?(Unplugged)}.last(num_non_programing_levels) +
-        script.levels.select {|level| !level.is_a?(Unplugged)}.last(num_programming_levels)
-
-      progress_levels.each do |level|
-        create :user_level, level: level, user: student, script: script
-      end
+    it 'has at_risk_age_gated_date' do
+      _(summarize).must_be_kind_of Hash
+      _(summarize[:at_risk_age_gated_date]).must_equal at_risk_age_gated_date
     end
 
-    setup_all do
-      @csd2 = create_script_with_levels('csd2-2019', :weblab)
-      @csd3 = create_script_with_levels('csd3-2019', :gamelab)
+    it 'has at_risk_age_gated_us_state' do
+      _(summarize).must_be_kind_of Hash
+      _(summarize[:at_risk_age_gated_us_state]).must_equal at_risk_age_gated_us_state
+    end
+  end
+
+  describe '.at_risk_age_gated_student' do
+    let(:section) {create :section, hidden: archived?}
+    let(:student) {create :student}
+    let(:archived?) {false}
+    let(:student_at_risk_age_gated_date) {nil}
+    let(:at_risk_age_gated_student) {section.at_risk_age_gated_student}
+    let(:at_risk_age_gated_date) {at_risk_age_gated_student&.at_risk_age_gated_date}
+
+    before do
+      allow(section).to receive(:students).and_return([student])
+      allow(student).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
     end
 
-    test 'returns true when all conditions met' do
-      section = create :section
-      10.times do
-        follower = create :follower, section: section
-        simulate_student_progress(@csd2, follower.student_user, 5, 0)
-        simulate_student_progress(@csd3, follower.student_user, 5, 0)
-      end
-      assert_equal true, section.has_sufficient_discount_code_progress?
+    it 'does not return a student' do
+      _(at_risk_age_gated_student).must_equal nil
     end
 
-    test 'returns false if only enough progress in one script' do
-      section = create :section
-      10.times do
-        follower = create :follower, section: section
-        simulate_student_progress(@csd2, follower.student_user, 5, 0)
-        # no progress in csd3
-      end
-      assert_equal false, section.has_sufficient_discount_code_progress?
-    end
+    context 'has an at risk student' do
+      let(:student_at_risk_age_gated_date) {DateTime.now}
 
-    test 'return false if not enough progress in programming levels' do
-      section = create :section
-      10.times do
-        follower = create :follower, section: section
-        # Though we have 7 levels of progress in each script, only 4 of those are
-        # for programming levels
-        simulate_student_progress(@csd2, follower.student_user, 4, 3)
-        simulate_student_progress(@csd3, follower.student_user, 4, 3)
+      it 'returns the at risk student' do
+        _(at_risk_age_gated_student).must_equal at_risk_age_gated_student
       end
-      assert_equal false, section.has_sufficient_discount_code_progress?
-    end
 
-    test 'returns false if not enough students have progress' do
-      section = create :section
-      9.times do
-        follower = create :follower, section: section
-        # Though we have 7 levels of progress in each script, only 4 of those are
-        # for programming levels
-        simulate_student_progress(@csd2, follower.student_user, 4, 3)
-        simulate_student_progress(@csd3, follower.student_user, 4, 3)
+      context 'the section is archived' do
+        let(:archived?) {true}
+
+        it 'does not return a student' do
+          _(at_risk_age_gated_student).must_equal nil
+        end
       end
-      # 10th student has no progress
-      create :follower, section: section
-
-      assert_equal false, section.has_sufficient_discount_code_progress?
     end
   end
 end

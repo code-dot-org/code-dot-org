@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
-import {lessonOfBonusLevels} from './shapes';
-import LessonExtrasNotification from './LessonExtrasNotification';
-import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
+
 import BonusLevels from './BonusLevels';
+import LessonExtrasNotification from './LessonExtrasNotification';
+import {lessonOfBonusLevels} from './shapes';
 
 export default class LessonExtras extends React.Component {
   static propTypes = {
@@ -17,7 +20,7 @@ export default class LessonExtras extends React.Component {
     bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
     sectionId: PropTypes.number,
     userId: PropTypes.number,
-    showLessonExtrasWarning: PropTypes.bool
+    showLessonExtrasWarning: PropTypes.bool,
   };
 
   render() {
@@ -30,7 +33,7 @@ export default class LessonExtras extends React.Component {
       userId,
       showProjectWidget,
       projectTypes,
-      showLessonExtrasWarning
+      showLessonExtrasWarning,
     } = this.props;
 
     let nextMessage = i18n.extrasNextUnitOverview();
@@ -53,7 +56,7 @@ export default class LessonExtras extends React.Component {
             href={nextLevelPath}
             text={nextMessage}
             size={Button.ButtonSize.large}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             style={styles.button}
           />
         </div>
@@ -80,23 +83,21 @@ export default class LessonExtras extends React.Component {
 
 const styles = {
   header: {
-    fontSize: 24
+    fontSize: 24,
   },
   headerAndButton: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   button: {
-    margin: '10px 0px'
+    margin: '10px 0px',
   },
   subHeader: {
     fontSize: 24,
     color: 'rgb(91, 103, 112)',
-    fontFamily: 'Gotham 4r',
-    fontWeight: 'normal',
-    fontStyle: 'normal',
+    ...fontConstants['main-font-regular'],
     paddingTop: 10,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
 };

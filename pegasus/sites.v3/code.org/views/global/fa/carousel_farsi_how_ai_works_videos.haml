@@ -1,0 +1,55 @@
+:ruby
+  videos = [
+    {
+      caption: hoc_s(:ai_vid_intro_caption),
+      youtube_code: 'UzrBpYrcacM',
+      download_path: CDO.video_url('farsi/how-ai-works/how-ai-works.mp4'),
+    },
+    {
+      caption: hoc_s(:ai_vid_socimp_caption),
+      youtube_code: 'LlB8YK5dCcw',
+      download_path: CDO.video_url('farsi/how-ai-works/ai-impact-society.mp4'),
+    },
+    {
+      caption: hoc_s(:ai_vid_trainingdata_caption),
+      youtube_code: '_egaRTxlA44',
+      download_path: CDO.video_url('farsi/how-ai-works/ai-training-data-bias.mp4'),
+    },
+    {
+      caption: hoc_s(:ai_vid_mlintro_caption),
+      youtube_code: '2V6zog8MPQo',
+      download_path: CDO.video_url('farsi/how-ai-works/ai-what-machine-learning.mp4'),
+    },
+    {
+      caption: hoc_s(:ai_vid_computervision_caption),
+      youtube_code: 'VZnsiH__38I',
+      download_path: CDO.video_url('farsi/how-ai-works/how-computer-vision-works.mp4'),
+    },
+    {
+      caption: hoc_s(:ai_vid_neuralnetworks_caption),
+      youtube_code: 'NomhPbeo2t4',
+      download_path: CDO.video_url('farsi/how-ai-works/how-neural-networks-work.mp4'),
+    },
+    {
+      caption: hoc_s(:ai_vid_ethics1_caption),
+      youtube_code: 'Y3tzSlzVh9M',
+      download_path: CDO.video_url('farsi/how-ai-works/ethics-ai-equal-access-algorithmic-bias.mp4'),
+    },
+    {
+      caption: hoc_s(:ai_vid_ethics2_caption),
+      youtube_code: 'R0isSTNDZiQ',
+      download_path: CDO.video_url('farsi/how-ai-works/ethics-ai-privacy-the-future-of-work.mp4'),
+    },
+  ]
+
+.carousel-wrapper.video-carousel
+  %swiper-container.how-ai-works{navigation: "true", "navigation-next-el": ".nav-next-how-ai-works", "navigation-prev-el": ".nav-prev-how-ai-works", pagination: "true", init: "false", "allow-touch-move": "false"}
+    - videos.each do |video|
+      %swiper-slide
+        %figure
+          = view :video_with_fallback, video_code: video[:youtube_code], download_path: video[:download_path]
+          %figcaption.no-margin-bottom
+            = video[:caption]
+
+  %button.swiper-nav-prev.nav-prev-how-ai-works
+  %button.swiper-nav-next.nav-next-how-ai-works

@@ -1,0 +1,40 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2024-08-15T22:49:55.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "validation_enabled": "true",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n    <!-- Title -->\\n    <h1>My Favorite Game</h1>\\n    \\n    <!-- background -->\\n    <p>Ever since we were kids, my sister and I have been die-hard fans of the Super Mario games, a passion that Nintendo might not have originally targeted towards girls like us. But they certainly captured our hearts! Watching the 2023 Super Mario animated movie, with its cleverly inserted classic sound effects, was like a delightful journey down memory lane, filling me with an indescribable sense of joy and nostalgia.</p>\\n    \\n    <!-- gallery -->\\n    \\n \\n      <img src=\\\"super_mario_.jpg\\\" alt=\\\"mario\\\">\\n      <img src=\\\"luigi.jpg\\\" alt=\\\"luigi\\\">\\n      <img src=\\\"mario_luigi.jpg\\\" alt=\\\"mario & luigi\\\">\\n      <img src=\\\"luigi_yoschi.jpg\\\" alt=\\\"luigi & yoschi\\\">\\n      <img src=\\\"mario_luigi_2.jpg\\\" alt=\\\"mario & luigi\\\">\\n      <img src=\\\"mario_yoschi.jpg\\\" alt=\\\"mario & yoschi\\\">\\n      <img src=\\\"mario_luigi_0.jpg\\\" alt=\\\"mario & luigi\\\">\\n      <img src=\\\"mario_luigi_1.jpg\\\" alt=\\\"mario & luigi\\\">\\n      <img src=\\\"mario_luigi_yoschi.jpg\\\" alt=\\\"mario, luigi & yoschi\\\">\\n      <img src=\\\"yoschi.jpg\\\" alt=\\\"yoschi\\\">\\n\\n    \\n    <!-- image citation -->\\n    <div class=\\\"citation\\\">\\n      <p class=\\\"citation\\\"> All images CC0 from free-images.com</p>\\n    </div>\\n\\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \"body {\\n  background: #ffeeee;\\n}\\n\\np {\\n  font-family: cursive;\\n  text-align: center;\\n  font-size: 20px;\\n}\\n\\nh1 {\\n  font-family: cursive;\\n  text-align: center;\\n  font-size: 36px;\\n}\\n\\nimg {\\n  border-style: solid;\\n  border-color: #cafab5;\\n  border-radius: 10px;\\n}\\n\\n/* gallery */\\n.container {\\n  display flex;\\n  flex-direction: column;\\n  flex-wrap: warp;\\n  justify-content: spaced-evenly;\\n  align-content: center;\\n  height: 300px;\\n}\\n\\n/* image citation */\\n.citation {\\n  font-size: 10px;\\n  font-style: italic;\\n  height: 200px;\\n  display: flex;\\n  align-items: flex-end;\\n}\"\r\n    },\r\n    {\r\n      \"name\": \"luigi.jpg\",\r\n      \"url\": \"https://images.code.org/e98d491584d1cabbdd29a4467184e5d4-luigi.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"mario_yoschi.jpg\",\r\n      \"url\": \"https://images.code.org/0501cf679da12e586b4c73e23cbc8331-mario_yoschi.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"luigi_yoschi.jpg\",\r\n      \"url\": \"https://images.code.org/9110b5aa61ab24d11311e17ccf454b6b-luigi_yoschi.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"mario_luigi.jpg\",\r\n      \"url\": \"https://images.code.org/acdfedcb12f89dafcdb4eccbb0e94589-mario_luigi.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"mario_luigi_0.jpg\",\r\n      \"url\": \"https://images.code.org/1a6154377130b883c3d7b3df59b1fc41-mario_luigi_0.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"mario_luigi_1.jpg\",\r\n      \"url\": \"https://images.code.org/8a46a7fec16d51fb5a82d95434cdc389-mario_luigi_1.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"mario_luigi_2.jpg\",\r\n      \"url\": \"https://images.code.org/b0dad0c3592295b8ba80479a3b37aeac-mario_luigi_2.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"super_mario_.jpg\",\r\n      \"url\": \"https://images.code.org/8094b743561f679cd93900caca4819af-super_mario_.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"mario_luigi_yoschi.jpg\",\r\n      \"url\": \"https://images.code.org/4dad6ff73913c6dd3390a21a4c11c70d-mario_luigi_yoschi.jpg\"\r\n    },\r\n    {\r\n      \"name\": \"yoschi.jpg\",\r\n      \"url\": \"https://images.code.org/6d76f1a9e4970fd1c622e627944a1293-yoschi.jpg\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "encrypted_examples": "ds2Dj1kJ6hmVVYvl9toOkECV08koXAR4JHP7GCfK0dJ7o8DZwwyV5Z+H8+dK\nrowUg+V4gsdFUzAQazvR9ms+LQ==\n",
+    "long_instructions": "<img src=\"https://images.code.org/206a7742149ba08385f454fb98910893-image-1705777723042.png\" style=\"float:right; width: 350px;\">\r\n\r\n# Find All The Bugs!\r\n\r\nTrinity was making this webpage to blog about her love of Super Mario but she has run into some problems. She had the page looking like the image to the right but then she wasn't paying attention and changed some stuff and can't figure out where the bugs are. Can you help her?\r\n\r\n# Do This\r\n\r\n1. Look through both the HTML file and the CSS file to see if you can find and fix all 4 bugs to get Trinity's page to look like the image to the right.\r\n\r\n![]()",
+    "display_name": "Find All The Bugs!",
+    "bubble_choice_description": "Can you find all the bugs to fix the image gallery?",
+    "thumbnail_url": "https://images.code.org/18034cab25645c5e17e8dd7d39d3a6e9-mario.png",
+    "reference_links": [
+      "/courses/csd-2022/guides/div",
+      "/courses/csd-2022/guides/classes",
+      "/courses/csd-2022/guides/layout-properties",
+      "/courses/csd-2022/guides/body-styling",
+      "/courses/csd-2022/guides/images-in-html",
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/flexbox"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-15T22:49:55.417+00:00\",\"changed\":[\"cloned from \\\"CSD U2L12 Div Flex SB_8\\\"\"],\"cloned_from\":\"CSD U2L12 Div Flex SB_8\"}]"
+}]]></config>
+</Weblab>

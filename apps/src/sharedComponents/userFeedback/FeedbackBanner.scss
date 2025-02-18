@@ -1,0 +1,79 @@
+@import 'animations';
+@import 'color';
+@import 'font';
+
+.feedback-banner {
+  $indent: 1rem;
+
+  background-color: $light_info_100;
+  border-color: $light_info_100;
+  color: $dark_charcoal;
+  line-height: 2rem;
+
+  & .share-more,
+  & .feedback-title {
+    font-size: 16px;
+  }
+
+  & .feedback-banner-greeting {
+    display: inline-block;
+    margin-right: $indent;
+
+    @include wave-animation;
+    animation-iteration-count: 2;
+
+    & .fa-hand-wave {
+      font-weight: 400;
+      vertical-align: middle;
+
+      &:hover {
+        @include high-five-animation;
+      }
+    }
+  }
+
+  & i {
+    color: #0f0f0f;
+    font-size: 1.3rem;
+  }
+
+  & #feedback-banner-share-more-link {
+    font-weight: normal;
+  }
+
+  & button.close {
+    border: unset !important;
+    box-shadow: none;
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: unset;
+    margin: 0;
+    top: 0;
+  }
+
+  & .feedback {
+    margin-left: $indent;
+
+    & button {
+      all: unset;
+      border: unset !important;
+      box-shadow: none;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+
+      &:has(.fa-thumbs-o-down) {
+        transform: scaleX(-1);
+      }
+
+      & i {
+        &:hover {
+          @include approval-animation;
+          color: rgb(0 0 0 / 0.6);
+        }
+      }
+    }
+  }
+}

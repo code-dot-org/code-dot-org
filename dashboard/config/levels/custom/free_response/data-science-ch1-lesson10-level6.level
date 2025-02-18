@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-24T15:36:57.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Skill Building",
+    "long_instructions": "##Histogram\r\n###Sometimes, if we put our data into bins, we can get some clearer insights.\r\n\r\n###[CODAP Link](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FkM84z9r7ZG2rJxKkc3Im%2Ffile.json)\r\n\r\n###**Do This**\r\n####1. Add the “Age Group” attribute to the Y-Axis.\r\n####2. Add the “Type” attribute to the center of the graph in order to create a legend.\r\n####3. Click on the “Configuration” tab on the graph toolbar \r\n####4. Select “Group into Bins”\r\n####5. Do new coasters have higher top speeds than older coasters? How can you tell?\r\n####6. What are new coasters more likely to be made of? What makes you think this?\r\n####7. If a roller coaster was to be built today that went over 100 mph, what do you predict it would be made out of? What makes you believe this?\r\n",
+    "teacher_markdown": "\r\n![](https://images.code.org/d137d6070dcdfc53831ffbfd13a88345-image-1721835324670.png)\r\n\r\nExample student responses:\r\n\r\nDo new coasters have higher top speeds than older coasters? How can you tell?\r\n- New coasters seem to have higher top speeds than older coasters. I can tell because in the graph, the dots representing newer coasters (in the 'newest' age group) are more frequently found in higher top speed intervals (80-100 mph, 100-120 mph) compared to older coasters, which are mostly in the lower speed ranges (20-40 mph, 40-60 mph).\r\n\r\nWhat are new coasters more likely to be made of? What makes you think this?\r\n- New coasters are more likely to be made of steel. This is evident because in the 'newest' age group section of the graph, there are more steel coasters (represented by pink dots) than wooden coasters (represented by green dots), especially at higher speed ranges.\r\n\r\nIf a roller coaster was to be built today that went over 100 mph, what do you predict it would be made out of? What makes you believe this?\r\n- I predict that a roller coaster built today that goes over 100 mph would be made out of steel. This is because, in the graph, almost all the coasters that have top speeds over 100 mph are represented by pink dots, which indicate they are made of steel. This suggests steel is preferred for higher-speed coasters.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-24 15:37:00 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-24 15:39:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

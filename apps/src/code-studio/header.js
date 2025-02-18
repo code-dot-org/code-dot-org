@@ -1,36 +1,37 @@
-/* globals dashboard */
-
 import $ from 'jquery';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+
+import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {
+  setUserSignedIn,
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
+
+import logToCloud from '../logToCloud';
+import {getStore} from '../redux';
+
+import {setupNavigationHandler} from './browserNavigation';
+import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
 import {
   showProjectHeader,
   showMinimalProjectHeader,
   showProjectBackedHeader,
-  showLevelBuilderSaveButton
+  showLevelBuilderSaveButton,
 } from './headerRedux';
+import progress from './progress';
+import {setCurrentLevelId} from './progressRedux';
 import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
   showProjectUpdatedAt,
   setProjectUpdatedAt,
   refreshProjectName,
-  setShowTryAgainDialog
+  setShowTryAgainDialog,
 } from './projectRedux';
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-import {Provider} from 'react-redux';
-import progress from './progress';
-import {getStore} from '../redux';
-import {
-  setUserSignedIn,
-  setInitialData
-} from '@cdo/apps/templates/currentUserRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import logToCloud from '../logToCloud';
-
-import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
-import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
-import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -70,7 +71,7 @@ var header = {};
  * @param {boolean} isLessonExtras Boolean indicating we are not on a script
  *   level and therefore are on lesson extras
  */
-header.build = function(
+header.build = function (
   scriptData,
   lessonGroupData,
   lessonData,
@@ -104,18 +105,22 @@ header.build = function(
     currentPageNumber
   );
 
+  // Set up a navigation handler, in case we contain levels that don't
+  // require a page reload when switching between them.
+  if (lessonData.levels.some(level => level.uses_lab2)) {
+    setupNavigationHandler(currentLevelId);
+  }
+
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
-  const store = getStore();
-  $(document).ready(function() {
+  $(document).ready(function () {
     ReactDOM.render(
-      <Provider store={store}>
+      <Provider store={getStore()}>
         <HeaderMiddle
           scriptNameData={scriptNameData}
           lessonData={lessonData}
           scriptData={scriptData}
-          currentLevelId={currentLevelId}
         />
       </Provider>,
       document.querySelector('.header_level')
@@ -123,6 +128,21 @@ header.build = function(
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
     if (scriptData.show_sign_in_callout && signedIn === false) {
+      // Additionally, update those urls to return user to level after
+      const currentUrl = window.location.pathname;
+      const buttons = [
+        document.querySelector('#signin_button'),
+        document.querySelector('#create_account_button'),
+      ];
+
+      buttons.forEach(button => {
+        if (button) {
+          const url = new URL(button.href);
+          url.searchParams.set('user_return_to', currentUrl);
+          button.href = url.toString();
+        }
+      });
+
       ReactDOM.render(
         <SignInCalloutWrapper />,
         document.querySelector('.signin_callout_wrapper')
@@ -131,9 +151,14 @@ header.build = function(
   });
 };
 
-header.buildProjectInfoOnly = function() {
+header.buildProjectInfoOnly = function (currentLevelId) {
+  const store = getStore();
+
+  // Store the current level ID in the progressRedux store.
+  store.dispatch(setCurrentLevelId(currentLevelId));
+
   ReactDOM.render(
-    <Provider store={getStore()}>
+    <Provider store={store}>
       <HeaderMiddle projectInfoOnly={true} />
     </Provider>,
     document.querySelector('.header_level')
@@ -142,7 +167,7 @@ header.buildProjectInfoOnly = function() {
 
 // When viewing the level page in code review mode, we want to show only the
 // lesson information (which is displayed by the ScriptName component).
-header.buildScriptNameOnly = function(scriptNameData) {
+header.buildScriptNameOnly = function (scriptNameData) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />
@@ -153,14 +178,14 @@ header.buildScriptNameOnly = function(scriptNameData) {
 
 // When the page is cached, this function is called to retrieve and set the
 // sign-in button or user menu in the DOM.
-header.buildUserMenu = function() {
+header.buildUserMenu = function () {
   // Need to wait until the document is ready so we can accurately check to see
   // if the create menu is present.
   $(document).ready(() => {
     const showCreateMenu = $('.create_menu').length > 0;
 
     fetch(`/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`, {
-      credentials: 'same-origin'
+      credentials: 'same-origin',
     })
       .then(response => response.text())
       .then(data => $('#sign_in_or_user').html(data))
@@ -203,7 +228,7 @@ setupReduxSubscribers(getStore());
 
 function setUpGlobalData(store) {
   fetch('/api/v1/users/current', {
-    credentials: 'same-origin'
+    credentials: 'same-origin',
   })
     .then(response => response.json())
     .then(data => {
@@ -221,12 +246,12 @@ function setUpGlobalData(store) {
 }
 setUpGlobalData(getStore());
 
-header.showMinimalProjectHeader = function() {
+header.showMinimalProjectHeader = function () {
   getStore().dispatch(refreshProjectName());
   getStore().dispatch(showMinimalProjectHeader());
 };
 
-header.showLevelBuilderSaveButton = function(
+header.showLevelBuilderSaveButton = function (
   getChanges,
   overrideHeaderText,
   overrideOnSaveURL
@@ -246,7 +271,7 @@ header.showLevelBuilderSaveButton = function(
  *   showExport: boolean
  * }}
  */
-header.showHeaderForProjectBacked = function(options) {
+header.showHeaderForProjectBacked = function (options) {
   if (options.showShareAndRemix) {
     getStore().dispatch(showProjectBackedHeader());
   }
@@ -255,13 +280,13 @@ header.showHeaderForProjectBacked = function(options) {
   header.updateTimestamp();
 };
 
-header.showProjectHeader = function() {
+header.showProjectHeader = function () {
   header.updateTimestamp();
   getStore().dispatch(refreshProjectName());
   getStore().dispatch(showProjectHeader());
 };
 
-header.updateTimestamp = function() {
+header.updateTimestamp = function () {
   const timestamp = dashboard.project.getCurrentTimestamp();
   getStore().dispatch(setProjectUpdatedAt(timestamp));
 };

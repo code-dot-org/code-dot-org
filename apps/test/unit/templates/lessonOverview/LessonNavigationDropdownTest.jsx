@@ -1,11 +1,13 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import sinon from 'sinon';
+import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import * as utils from '@cdo/apps/utils';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const singleLessonGroup = [
   {
@@ -18,17 +20,17 @@ const singleLessonGroup = [
         key: 'lesson-1',
         position: 1,
         displayName: 'Lesson 1',
-        link: '/lessons/1'
+        link: '/lessons/1',
       },
       {
         id: 2,
         key: 'lesson-2',
         position: 2,
         displayName: 'Lesson 2',
-        link: '/lessons/2'
-      }
-    ]
-  }
+        link: '/lessons/2',
+      },
+    ],
+  },
 ];
 
 const nonUserFacingLessonGroup = [
@@ -42,17 +44,17 @@ const nonUserFacingLessonGroup = [
         key: 'lesson-1',
         position: 1,
         displayName: 'Lesson 1',
-        link: '/lessons/1'
+        link: '/lessons/1',
       },
       {
         id: 2,
         key: 'lesson-2',
         position: 2,
         displayName: 'Lesson 2',
-        link: '/lessons/2'
-      }
-    ]
-  }
+        link: '/lessons/2',
+      },
+    ],
+  },
 ];
 
 let longLessonList1 = [];
@@ -62,7 +64,7 @@ for (let i = 1; i <= 9; i++) {
     key: `lesson-${i}`,
     position: i,
     displayName: `Lesson ${i}`,
-    link: `/lessons/${i}`
+    link: `/lessons/${i}`,
   });
 }
 
@@ -73,7 +75,7 @@ for (let i = 10; i <= 16; i++) {
     key: `lesson-${i}`,
     position: i,
     displayName: `Lesson ${i}`,
-    link: `/lessons/${i}`
+    link: `/lessons/${i}`,
   });
 }
 
@@ -82,21 +84,21 @@ const twoLessonGroups = [
     key: 'lg-1',
     displayName: 'Lesson Group 1',
     userFacing: true,
-    lessons: longLessonList1
+    lessons: longLessonList1,
   },
   {
     key: 'lg-2',
     displayName: 'Lesson Group 2',
     userFacing: true,
-    lessons: longLessonList2
-  }
+    lessons: longLessonList2,
+  },
 ];
 
 let lesson = {
   unit: {
     displayName: 'Unit 1',
     link: '/s/unit-1',
-    lessonGroups: []
+    lessonGroups: [],
   },
   id: 3,
   key: 'lesson-1',
@@ -108,7 +110,7 @@ let lesson = {
   overview: 'Lesson Overview',
   purpose: 'The purpose of the lesson is for people to learn',
   preparation: '- One',
-  assessmentOpportunities: 'Assessment Opportunities'
+  assessmentOpportunities: 'Assessment Opportunities',
 };
 
 describe('LessonNavigationDropdown', () => {
@@ -195,12 +197,7 @@ describe('LessonNavigationDropdown', () => {
     const wrapper = shallow(<LessonNavigationDropdown lesson={lesson} />);
     expect(wrapper.find('a').length).to.equal(11);
     let lesson1 = wrapper.find('a').at(1);
-    expect(
-      wrapper
-        .find('a')
-        .at(1)
-        .contains('1 - Lesson 1')
-    ).to.be.true;
+    expect(wrapper.find('a').at(1).contains('1 - Lesson 1')).to.be.true;
     lesson1.simulate('click', {preventDefault: () => {}});
 
     expect(firehoseClient.putRecord).to.have.been.calledOnce;

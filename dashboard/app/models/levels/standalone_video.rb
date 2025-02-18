@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class StandaloneVideo < Level
@@ -31,6 +32,7 @@ class StandaloneVideo < Level
     video_rounded_corners
     video_full_width
     background
+    uses_lab2
   )
 
   before_validation do
@@ -59,8 +61,19 @@ class StandaloneVideo < Level
     video_full_width
   end
 
+  def uses_lab2?
+    uses_lab2
+  end
+
   def self.create_from_level_builder(params, level_params)
-    create!(level_params.merge(user: params[:user], game: Game.standalone_video, level_num: 'custom'))
+    create!(
+      level_params.merge(
+        user: params[:user],
+        game: Game.standalone_video,
+        level_num: 'custom',
+        properties: {}
+      )
+    )
   end
 
   def localized_long_instructions

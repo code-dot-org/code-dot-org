@@ -27,3 +27,5 @@ The line `double z = y;` then widens the value assigned to `y` to a `double` val
 
 As a result, `2` is printed for `y` and `2.0` is printed for `z`.
 MARKDOWN
+
+allow_multiple_attempts true

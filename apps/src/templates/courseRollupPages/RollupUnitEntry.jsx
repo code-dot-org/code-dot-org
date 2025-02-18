@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import RollupLessonEntry from './RollupLessonEntry';
 import {unitShape} from './rollupShapes';
 
 export default class RollupUnitEntry extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    unit: unitShape
+    unit: unitShape,
   };
 
   render() {

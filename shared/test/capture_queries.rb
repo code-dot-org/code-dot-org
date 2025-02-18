@@ -4,7 +4,7 @@ require 'stringio'
 module CaptureQueries
   def logger
     @output ||= StringIO.new
-    @log ||= Logger.new(@output).tap do |l|
+    @logger ||= Logger.new(@output).tap do |l|
       l.level = Logger::DEBUG
       l.formatter = ->(*, msg) {"#{msg}\n"}
     end
@@ -30,6 +30,6 @@ module CaptureQueries
   ensure
     dbs.each {|db| db.loggers.delete(logger)}
     @output = nil
-    @log = nil
+    @logger = nil
   end
 end

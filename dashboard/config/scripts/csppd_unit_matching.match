@@ -13,3 +13,5 @@ question 'Unit 4'
 answer 'data extraction, modeling, and processing' 
 question 'Unit 5'
 answer 'planning, organizing, and completion of performance tasks' 
+
+allow_multiple_attempts true

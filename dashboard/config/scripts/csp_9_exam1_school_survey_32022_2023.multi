@@ -26,3 +26,5 @@ teacher_markdown <<MARKDOWN
 * DAT-2.A: Describe what information can be extracted from data.
 :::
 MARKDOWN
+
+allow_multiple_attempts true

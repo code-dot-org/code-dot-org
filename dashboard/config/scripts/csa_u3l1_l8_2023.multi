@@ -17,3 +17,5 @@ The syntax for declaring and initializing a 1D array is:
 dataType[] nameOfArray = new dataType[numberOfElements];
 ```
 MARKDOWN
+
+allow_multiple_attempts true

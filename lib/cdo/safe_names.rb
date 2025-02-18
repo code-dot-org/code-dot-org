@@ -65,8 +65,8 @@ module SafeNames
     # its parent is a terminal node (implying a name that's a strict
     # subset of our own)
     leaf = leaf.parent until leaf.parent.nil? ||
-      leaf.parent.children.count > 1 ||
-      leaf.parent.terminal?
+        leaf.parent.children.count > 1 ||
+        leaf.parent.terminal?
 
     # If our "rightmost" character is a space, add an additional
     # letter for visibility if we can. Note that by this stage we

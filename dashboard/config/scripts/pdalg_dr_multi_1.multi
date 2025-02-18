@@ -14,3 +14,4 @@ If you have a budget in dollars, can you write a function `treats` that returns 
 `treats: Number Number -> Number`
 
 MARKDOWN
+allow_multiple_attempts true

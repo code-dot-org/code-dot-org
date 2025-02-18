@@ -1,24 +1,25 @@
 import $ from 'jquery';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import queryString from 'query-string';
-import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
-import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
-import i18n from '@cdo/locale';
 import {Provider} from 'react-redux';
+
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
+import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
+import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import {
   pageTypes,
   setAuthProviders,
   setPageType,
   beginCreatingSection,
-  setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
-import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import i18n from '@cdo/locale';
 
 $(document).ready(showHomepage);
 
@@ -29,6 +30,7 @@ function showHomepage() {
   const isEnglish = homepageData.isEnglish;
   const announcementOverride = homepageData.announcement;
   const specialAnnouncement = homepageData.specialAnnouncement;
+  const studentSpecialAnnouncement = homepageData.studentSpecialAnnouncement;
   const query = queryString.parse(window.location.search);
   registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
@@ -36,9 +38,6 @@ function showHomepage() {
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
   store.dispatch(setLocaleCode(homepageData.localeCode));
-
-  // DCDO Flag - show/hide Lock Section field
-  store.dispatch(setShowLockSectionField(homepageData.showLockSectionField));
 
   if (homepageData.mapboxAccessToken) {
     store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
@@ -49,6 +48,7 @@ function showHomepage() {
   let courseOfferingId;
   let courseVersionId;
   let unitId;
+  let participantType;
   if (query.courseOfferingId) {
     courseOfferingId = parseInt(query.courseOfferingId, 10);
     updateQueryParam('courseOfferingId', undefined, true);
@@ -61,18 +61,34 @@ function showHomepage() {
     unitId = parseInt(query.unitId, 10);
     updateQueryParam('unitId', undefined, true);
   }
-  if (courseOfferingId && courseVersionId) {
+  if (query.participantType) {
+    participantType = queryParams('participantType');
+    updateQueryParam('participantType', undefined, true);
+  }
+  if ((courseOfferingId && courseVersionId) || query.openAddSectionDialog) {
+    updateQueryParam('openAddSectionDialog', undefined, true);
     store.dispatch(
-      beginCreatingSection(courseOfferingId, courseVersionId, unitId)
+      beginCreatingSection(
+        courseOfferingId,
+        courseVersionId,
+        unitId,
+        participantType
+      )
     );
   }
 
   const announcement = getTeacherAnnouncement(announcementOverride);
+  const parentalPermissionBanner = homepageData.parentalPermissionBanner && (
+    <ParentalPermissionBanner
+      key="parental-permission-banner"
+      {...homepageData.parentalPermissionBanner}
+    />
+  );
 
   ReactDOM.render(
     <Provider store={store}>
       <div>
-        {isTeacher && (
+        {isTeacher ? (
           <TeacherHomepage
             announcement={announcement}
             hocLaunch={homepageData.hocLaunch}
@@ -84,8 +100,7 @@ function showHomepage() {
             topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            isEnglish={isEnglish}
-            ncesSchoolId={homepageData.ncesSchoolId}
+            existingSchoolInfo={homepageData.existingSchoolInfo}
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
             showNpsSurvey={homepageData.showNpsSurvey}
@@ -95,7 +110,7 @@ function showHomepage() {
             showReturnToReopenedTeacherApplication={
               homepageData.showReturnToReopenedTeacherApplication
             }
-            donorBannerName={homepageData.donorBannerName}
+            afeEligible={homepageData.afeEligible}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}
             teacherEmail={homepageData.teacherEmail}
@@ -105,8 +120,7 @@ function showHomepage() {
             showIncubatorBanner={homepageData.showIncubatorBanner}
             currentUserId={homepageData.currentUserId}
           />
-        )}
-        {!isTeacher && (
+        ) : (
           <StudentHomepage
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}
@@ -118,6 +132,8 @@ function showHomepage() {
             showVerifiedTeacherWarning={
               homepageData.showStudentAsVerifiedTeacherWarning
             }
+            specialAnnouncement={studentSpecialAnnouncement}
+            topComponents={[parentalPermissionBanner]}
           />
         )}
       </div>
@@ -137,11 +153,10 @@ function getTeacherAnnouncement(override) {
     heading: i18n.announcementHeadingBackToSchoolRemote(),
     buttonText: i18n.announcementButtonBackToSchool(),
     description: i18n.announcementDescriptionBackToSchoolRemote(),
-    link:
-      'https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ',
+    link: 'https://support.code.org/hc/en-us/articles/360013399932-Back-to-School-FAQ',
     image: '',
     type: 'bullhorn',
-    id: 'back_to_school_2018'
+    id: 'back_to_school_2018',
   };
 
   // Optional override of teacher announcement (typically via DCDO).
@@ -160,7 +175,7 @@ function getTeacherAnnouncement(override) {
       description: override.teacher_announce_description,
       link: override.teacher_announce_url,
       type: override.teacher_announce_type,
-      id: override.teacher_announce_id
+      id: override.teacher_announce_id,
     };
   }
 

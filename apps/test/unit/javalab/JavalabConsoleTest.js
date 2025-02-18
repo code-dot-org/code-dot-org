@@ -1,29 +1,32 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import JavalabConsole from '@cdo/apps/javalab/JavalabConsole';
 import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
+import JavalabConsole from '@cdo/apps/javalab/JavalabConsole';
+import javalabConsole, {
+  openPhotoPrompter,
+  closePhotoPrompter,
+} from '@cdo/apps/javalab/redux/consoleRedux';
+import javalab from '@cdo/apps/javalab/redux/javalabRedux';
+import javalabView, {setDisplayTheme} from '@cdo/apps/javalab/redux/viewRedux';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
-import javalab, {
-  setDisplayTheme,
-  closePhotoPrompter,
-  openPhotoPrompter
-} from '@cdo/apps/javalab/javalabRedux';
-import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
-import sinon from 'sinon';
-import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
+
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Java Lab Console Test', () => {
   let store;
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({javalab});
+    registerReducers({javalab, javalabView, javalabConsole});
     store = getStore();
   });
 
@@ -47,16 +50,10 @@ describe('Java Lab Console Test', () => {
     it('Has light mode', () => {
       const editor = createWrapper();
       expect(
-        editor
-          .find('input')
-          .first()
-          .instance().style.backgroundColor
+        editor.find('input').first().instance().style.backgroundColor
       ).to.equal('rgba(0, 0, 0, 0)');
       expect(
-        editor
-          .find('.javalab-console')
-          .first()
-          .instance().style.backgroundColor
+        editor.find('.javalab-console').first().instance().style.backgroundColor
       ).to.equal('rgb(255, 255, 255)');
     });
 
@@ -64,16 +61,10 @@ describe('Java Lab Console Test', () => {
       const editor = createWrapper();
       store.dispatch(setDisplayTheme(DisplayTheme.DARK));
       expect(
-        editor
-          .find('input')
-          .first()
-          .instance().style.backgroundColor
+        editor.find('input').first().instance().style.backgroundColor
       ).to.equal('rgba(0, 0, 0, 0)');
       expect(
-        editor
-          .find('.javalab-console')
-          .first()
-          .instance().style.backgroundColor
+        editor.find('.javalab-console').first().instance().style.backgroundColor
       ).to.equal('rgb(0, 0, 0)');
     });
   });
@@ -85,7 +76,7 @@ describe('Java Lab Console Test', () => {
     beforeEach(() => {
       onPhotoPrompterFileSelected = sinon.stub();
       wrapper = createWrapper({
-        onPhotoPrompterFileSelected: onPhotoPrompterFileSelected
+        onPhotoPrompterFileSelected: onPhotoPrompterFileSelected,
       });
     });
 

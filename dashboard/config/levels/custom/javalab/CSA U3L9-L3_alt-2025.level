@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:48:49.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO #1:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">printSquare()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Patterns</code> class. What do you think this method does?\r\n\r\nCall the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">printSquare()</code> method in <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PatternRunner.java</code> with different values. How do different values impact the output?\r\n\r\n✅ **TO DO #2:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">printTriangle()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Patterns</code> class. What do you think this method does?\r\n\r\nCall the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">printTriangle()</code> method in <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PatternRunner.java</code> with different values. How do different values impact the output?\r\n\r\n✅ **TO DO #3:** What would you need to change to make the triangle print upside down? For example:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\n* * * * *\r\n* * * *\r\n* * *\r\n* *\r\n*\r\n</pre>\r\n\r\nTry changing the inner <code style=\"background-color: #ececec; color: black; font-weight: bold;\">for</code> loop in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">printTriangle()</code> method to the following:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nfor (int inner = outer; inner <= height; inner++)\r\n</pre>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U3L9-Nested PBT_alt-2025",
+    "teacher_markdown": "Students should notice that the outer `for` loop is moving to the next row for each shape, while the inner `for` loop is filling in each row with `\"*\"`. Calling the methods with different values will impact the number of rows that are printed and the number of `\"*\"` on each row.",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:48:49.331+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L9-L3_pilot-2025\"}]"
+}]]></config>
+</Javalab>

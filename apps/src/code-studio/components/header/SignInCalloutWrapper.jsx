@@ -1,5 +1,6 @@
-import React from 'react';
 import cookies from 'js-cookie';
+import React from 'react';
+
 import SignInCallout from './SignInCallout';
 
 const HideSignInCallout = 'hide_signin_callout';
@@ -20,7 +21,7 @@ export default class SignInCalloutWrapper extends React.Component {
         // The use of both session storage and cookies is to check for 1 day
         // and 1 session, and display the callout again once BOTH have passed.
         cookies.get(HideSignInCallout) === 'true' ||
-        sessionStorage.getItem(HideSignInCallout) === 'true'
+        sessionStorage.getItem(HideSignInCallout) === 'true',
     };
   }
 
@@ -42,7 +43,10 @@ export default class SignInCalloutWrapper extends React.Component {
     this.setState({hideCallout: true});
     cookies.set(HideSignInCallout, 'true', {expires: 1, path: '/'});
     sessionStorage.setItem(HideSignInCallout, 'true');
+    // Needed to prevent sending the user to the sign up page when dismissing the callout
     event.preventDefault();
+    // Needed to prevent triggering the Create Account Button Clicked analytics event firing
+    event.stopPropagation();
     this.signInElement &&
       this.signInElement.classList.remove('z_index_above_modal');
   }

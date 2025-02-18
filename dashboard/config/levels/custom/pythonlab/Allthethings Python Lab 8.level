@@ -1,0 +1,57 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-12-18T09:35:39.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "enableMicroBit": true,
+    "encrypted": "false",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# Imports go at the top\nfrom microbit import *\n\n\n# Code in a 'while True:' loop repeats forever\nwhile True:\n    display.show(Image.HEART)\n    sleep(1000)\n    display.scroll('Hello')",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
+        },
+        "2": {
+          "id": "2",
+          "name": "support.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "2"
+      ]
+    },
+    "long_instructions": "## Python Lab with micro:bit enabled\r\n\r\nConnect your micro:bit, write a MicroPython program in the workspace, then click on the 'Send to micro:bit' button.\r\nIf you open your dev console, you will see a log of the percent completion and also when the flashing of the micro:bit is completed.",
+    "hide_share_and_remix": "true",
+    "reference_links": [
+      "/courses/csa-2023/guides/instantiating-objects"
+    ],
+    "map_reference": "/docs/concepts/html/",
+    "teacher_markdown": "Teachers should see this extra info.",
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "enable_micro_bit": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-12-03T20:20:47.104+00:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2024-12-03 20:28:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 20:30:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-03 20:30:51 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 15:40:36 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 15:41:26 +0000\",\"changed\":[\"predict_settings\",\"enable_micro_bit\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 15:56:24 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 15:58:29 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 15:58:45 +0000\",\"changed\":[\"predict_settings\",\"skip_url\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 15:59:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:02:55 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 16:03:12 +0000\",\"changed\":[\"predict_settings\",\"skip_url\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

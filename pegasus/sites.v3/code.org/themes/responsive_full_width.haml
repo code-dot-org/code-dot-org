@@ -1,11 +1,11 @@
 !!! 5
 
-- if @header['set_dir']
+- if ! @header['set_dir']
   - dir = language_dir_class
 
 %html{dir: dir}
   %head
-    = render inline: File.read(deploy_dir('shared/haml/onetrust_cookie_scripts.haml')), type: :haml
+    = render inline: File.read(deploy_dir('shared/haml/onetrust_cookie_scripts.haml')), type: :haml, locals: {domain: 'code.org'}
 
     %meta{name: "google-site-verification", content: "EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A"}
 
@@ -22,5 +22,6 @@
 
     =view :theme_common_head_after
   %body
+    =view :theme_common_google_tag_manager
     =body
     =view :theme_common_body_after

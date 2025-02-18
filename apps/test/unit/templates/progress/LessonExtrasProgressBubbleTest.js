@@ -1,15 +1,17 @@
-import {assert} from '../../../util/reconfiguredChai';
-import {stub} from 'sinon';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
+import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import * as utils from '@cdo/apps/utils';
+
+import {assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const defaultProps = {
   lessonExtrasUrl: '/extras',
   isPerfect: false,
-  isSelected: false
+  isSelected: false,
 };
 
 describe('LessonExtrasProgressBubble', () => {

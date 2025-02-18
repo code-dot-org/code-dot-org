@@ -8,6 +8,14 @@
 #hoc_download
   .row
     .span12
+      %div
+        #deprecation-warning-banner{class: 'alert alert-warning', role: 'alert'}
+          %span
+            %i.fa.fa-warning.warning-sign.banner-icon#warning-icon
+          %span
+            = t('hoc_download.deprecation')
+  .row
+    .span12
       %h1
         = t('hoc_download.title')
   .row
@@ -51,13 +59,3 @@
                 =link_to t('hoc_download.mac'), @download_urls[:"#{lang}_mac_url_js"], :class => 'hoc-download-link'
 %br/
 %br/
-
-:javascript
-  $(document).ready(function() {
-     // Track Google Analytics events for HOC download clicks
-     $('.hoc-download-link').on('click', function() {
-        var url = $(this).attr('href');
-        trackEvent('DownloadHOC','startdownload', url);
-        return true;
-    });
-  });

@@ -1,8 +1,9 @@
-import * as api from './api';
-import {executors as audioExecutors} from '../lib/util/audioApi';
-import {executors as timeoutExecutors} from '../lib/util/timeoutApi';
 import * as dontMarshalApi from '../dontMarshalApi';
 import {dropletGlobalConfigBlocks} from '../dropletUtils';
+import {executors as audioExecutors} from '../lib/util/audioApi';
+import {executors as timeoutExecutors} from '../lib/util/timeoutApi';
+
+import * as api from './api';
 
 export function getExportedGlobals() {
   const globals = Object.assign(

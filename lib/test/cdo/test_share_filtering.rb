@@ -6,10 +6,10 @@ class ShareFilteringTest < Minitest::Test
   # @param title_text [String] The text of the title of the program.
   # @return [String] A sample program.
   def generate_program(title_name, title_text)
-    '<xml><block type="when_run" deletable="false">'\
-      '<next><block type="studio_showTitleScreen">'\
-      "<title name=\"TITLE\">#{title_name}</title>"\
-      "<title name=\"TEXT\">#{title_text}</title>"\
+    '<xml><block type="when_run" deletable="false">' \
+      '<next><block type="studio_showTitleScreen">' \
+      "<title name=\"TITLE\">#{title_name}</title>" \
+      "<title name=\"TEXT\">#{title_text}</title>" \
       '</block></next></block></xml>'
   end
 
@@ -18,6 +18,13 @@ class ShareFilteringTest < Minitest::Test
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'test@example.com'),
       ShareFiltering.find_share_failure(program, 'en')
+    )
+
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'test@example.com'),
+      assert_raises(PIIFilterException) do
+        ShareFiltering.find_share_failure(program, 'en', exceptions: true)
+      end.share_failure
     )
   end
 
@@ -37,6 +44,16 @@ class ShareFilteringTest < Minitest::Test
       ),
       ShareFiltering.find_share_failure(program, 'en')
     )
+
+    assert_equal(
+      ShareFailure.new(
+        ShareFiltering::FailureType::ADDRESS,
+        '1600 Pennsylvania Ave NW, Washington, DC 20500'
+      ),
+      assert_raises(PIIFilterException) do
+        ShareFiltering.find_share_failure(program, 'en', exceptions: true)
+      end.share_failure
+    )
   end
 
   def test_find_share_failure_with_phone_number
@@ -49,6 +66,13 @@ class ShareFilteringTest < Minitest::Test
       ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
       ShareFiltering.find_share_failure(program, 'en')
     )
+
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PHONE, '123-456-7890'),
+      assert_raises(PIIFilterException) do
+        ShareFiltering.find_share_failure(program, 'en', exceptions: true)
+      end.share_failure
+    )
   end
 
   def test_find_share_failure_with_profanity
@@ -58,6 +82,13 @@ class ShareFilteringTest < Minitest::Test
     assert_equal(
       ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'),
       ShareFiltering.find_share_failure(program, 'en')
+    )
+
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'),
+      assert_raises(ProfanityFilterException) do
+        ShareFiltering.find_share_failure(program, 'en', exceptions: true)
+      end.share_failure
     )
   end
 
@@ -77,10 +108,20 @@ class ShareFilteringTest < Minitest::Test
       ShareFiltering.find_share_failure(program, 'en')
     )
 
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'fu'),
+      assert_raises(ProfanityFilterException) do
+        ShareFiltering.find_share_failure(program, 'en', exceptions: true)
+      end.share_failure
+    )
+
     # But the innocent program is fine
     assert_nil(
       ShareFiltering.find_share_failure(innocent_program, 'en')
     )
+
+    # Should not raise an exception
+    ShareFiltering.find_share_failure(innocent_program, 'en', exceptions: true)
 
     # Blocked in Spanish
     assert_equal(
@@ -88,10 +129,20 @@ class ShareFilteringTest < Minitest::Test
       ShareFiltering.find_share_failure(program, 'es')
     )
 
+    assert_equal(
+      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'fu'),
+      assert_raises(ProfanityFilterException) do
+        ShareFiltering.find_share_failure(program, 'es', exceptions: true)
+      end.share_failure
+    )
+
     # Allowed in Italian
     assert_nil(
       ShareFiltering.find_share_failure(program, 'it')
     )
+
+    # Should not raise an exception
+    ShareFiltering.find_share_failure(program, 'it', exceptions: true)
   end
 
   def test_profanity_with_swedish_edge_case
@@ -128,20 +179,20 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_find_share_failure_for_non_playlab
-    program = '<xml><block type=\"controls_repeat\">'\
-      '<title name=\"TIMES\">4</title><statement name=\"DO\">'\
-      '<block type=\"draw_move_by_constant\">'\
-      '<title name=\"DIR\">moveForward</title>'\
-      '<title name=\"VALUE\">100</title><next>'\
-      '<block type=\"draw_turn_by_constant_restricted\">'\
-      '<title name=\"DIR\">turnRight</title>'\
-      '<title name=\"VALUE\">90</title></block></next></block></statement>'\
+    program = '<xml><block type=\"controls_repeat\">' \
+      '<title name=\"TIMES\">4</title><statement name=\"DO\">' \
+      '<block type=\"draw_move_by_constant\">' \
+      '<title name=\"DIR\">moveForward</title>' \
+      '<title name=\"VALUE\">100</title><next>' \
+      '<block type=\"draw_turn_by_constant_restricted\">' \
+      '<title name=\"DIR\">turnRight</title>' \
+      '<title name=\"VALUE\">90</title></block></next></block></statement>' \
       '</block></xml>'
     assert_nil ShareFiltering.find_share_failure(program, 'en')
   end
 
   def test_find_share_failure_for_playlab_without_user_text_indicators
-    program = '<xml><block type="when_run" deletable="false"><next>'\
+    program = '<xml><block type="when_run" deletable="false"><next>' \
       '<block type="studio_showTitleScreen"></block></next></block></xml>'
     assert_nil ShareFiltering.find_share_failure(program, 'en')
   end
@@ -149,7 +200,7 @@ class ShareFilteringTest < Minitest::Test
   def test_find_name_failure_calls_find_failure
     text = 'project title'
     locale = 'en'
-    ShareFiltering.expects(:find_failure).with(text, locale).returns nil
+    ShareFiltering.expects(:find_failure).with(text, locale, {}, exceptions: false).returns nil
     assert_nil ShareFiltering.find_name_failure(text, locale)
   end
 end

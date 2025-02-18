@@ -10,15 +10,18 @@ theme: responsive
 
 - نوصي باتصال إنترنت بسرعة 15 ميجابايت / ثانية على الأقل في مدرستك.
 - أصغر حجم شاشة ندعمه هو 1024 × 728 بكسل.
-- ستحتاج إلى كمبيوتر مكتبي أو كمبيوتر محمول مزود بفأرة (أو لوحة اللمس) ولوحة مفاتيح لدوراتنا التدريبية على مستوى المدرسة الإعدادية والثانوية: اكتشافات علوم الكمبيوتر ومبادئ علوم الكمبيوتر ومقدمة إلى App Lab. معظم الأجهزة اللوحية والأجهزة المحمولة غير مدعومة لهذه الدورات التدريبية. انظر "تفاصيل دعم الأجهزة المحمولة والأجهزة اللوحية" أدناه للتعرف على الاستثناءات الخاصة بالأجهزة.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. انظر "تفاصيل دعم الأجهزة المحمولة والأجهزة اللوحية" أدناه للتعرف على الاستثناءات الخاصة بالأجهزة.
 - جميع المحتويات الأخرى، مثل دورات رياض الأطفال-الصف الخامس (أساسيات علوم الكمبيوتر) وأنشطة ساعة البرمجة متوافقة مع أجهزة iPad وأجهزة Chromebook بالإضافة إلى جميع الأجهزة اللوحية والكمبيوتر المحمول أو أجهزة الكمبيوتر المكتبية الحديثة الأخرى.
 - هل تبحث عن تفاصيل دعم الجهاز المحمول؟ اقرأ ما يلي.
 
 ## الحد الأدنى من المتصفحات والمنصات المدعومة
 
+بدءًا من يوليو 2024، سنقوم بتحديث الحد الأدنى من الإصدارات المطلوبة للمتصفحات وأنظمة التشغيل. على الرغم من أن الإصدارات القديمة قد لا تزال تعمل، إلا أننا لن نتمكن من دعم طلبات إصلاح الأخطاء في الإصدارات القديمة.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           المتصفح
@@ -39,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          المتصفح 24 يوليو
+        </th>
+        <tr>
+          <td>كروم 103.x</td>
+        </tr>
+        <tr>
+          <td>سفاري 14.x</td>
+        </tr>
+        <tr>
+          <td>موبايل سفاري 14.x</td>
+        </tr>
+        <tr>
+          <td>إيدج 119.x</td>
+        </tr>
+        <tr>
+          <td>فايرفوكس 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           المنصة
@@ -61,33 +86,55 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          منصة 24 يوليو
+        </th>
+        <tr>
+          <td>ماك أو إس 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>نظام التشغيل Windows 8</td>
+        </tr>
+        <tr>
+          <td>أندرويد 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## مواقع لإلغاء الحظر
 
 للحصول على أفضل تجربة مع كل محتوى على منصة Code.org، نوصي بالتشاور مع قسم تكنولوجيا المعلومات في مدرستك أو منطقتك للتأكد من أن المواقع التالية مسموح بها وغير محظورة.
 
-| الأولوية                                                            | عنوان موقع الإنترنت                                                                                        |
-| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **مطلوب**                                                           | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **اختياري**                                                         | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **لاستخدام مقاطع الفيديو الموجوة على يوتيوب (وضع الخصوصية المحسن)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **لاستخدام ملفات الفيديو المستضافة على منصة Code.org**              | `https://videos.code.org`                                                                                  |
-| **لاستخدام محاكي الإنترنت**                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **لاستخدام معمل الويب**                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **لاستخدام زر المشاركة في Google Classroom**                        | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                         | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| الأولوية                                                                            | عنوان موقع الإنترنت                                                                                        |
+| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **مطلوب**                                                                           | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **لضمان قدرة أنظمة CAPTCHA على تمييز استخدامك عن النشاط الاحتيالي الآلي («البوت»)** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **اختياري**                                                                         | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **لاستخدام مقاطع الفيديو الموجوة على يوتيوب (وضع الخصوصية المحسن)**                 | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **لاستخدام ملفات الفيديو المستضافة على منصة Code.org**                              | `https://videos.code.org`                                                                                  |
+| **لاستخدام محاكي الإنترنت**                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **لاستخدام معمل الويب**                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **لاستخدام زر المشاركة في Google Classroom**                                        | `https://apis.google.com`                                                                                  |
 
 ## تفاصيل دعم الهاتف المحمول والكمبيوتر اللوحي
 
-لا تتوافق جميع دورات استكشافات علوم الكمبيوتر ومباديء علوم الكمبيوتر ومقدمة إلى App Lab مع الأجهزة اللوحية أو الأجهزة المحمولة - يلزم وجود لوحة مفاتيح وفأرة كاملة (أو لوحة اللمس، مثل أجهزة MacBooks). معظم الأجهزة اللوحية غير مدعومة، مع الاستثناءات التالية:
+لا تتوافق جميع دورات CS Discoveries وCS Principles وCS A وIntro to App Lab مع الأجهزة اللوحية أو الأجهزة المحمولة - يلزم وجود لوحة مفاتيح كاملة وماوس (أو لوحة لمس). معظم الأجهزة اللوحية غير مدعومة، مع الاستثناءات التالية:
 
 - جهاز Microsoft Surface Pro مع لوحة مفاتيح خارجية
 - جهاز iPad يعمل بنظام iPadOS 13.4 أو أحدث مع لوحة مفاتيح خارجية وفأرة خارجية أو لوحة لمس
 
-جميع المحتويات الأخرى، مثل دورات رياض الأطفال-الصف الخامس (أساسيات علوم الكمبيوتر) وأنشطة ساعة البرمجة متوافقة مع أجهزة iPad وأجهزة Chromebook بالإضافة إلى جميع الأجهزة اللوحية والكمبيوتر المحمول أو أجهزة الكمبيوتر المكتبية الحديثة الأخرى.
+جميع المحتويات الأخرى، مثل دورات K-5 (أساسيات علوم الكمبيوتر) وأنشطة «ساعة البرمجة» متوافقة مع أجهزة iPad وغيرها من الأجهزة اللوحية الحديثة وأجهزة الكمبيوتر المحمولة أو أجهزة الكمبيوتر المكتبية.
 
 ### الهواتف المحمولة
 
@@ -101,7 +148,17 @@ theme: responsive
 
 قبل أن تبدأ دورات منصة Code.org عبر الإنترنت، اختبر تشغيل الفيديو أدناه للتأكد من أنك جاهز للبدء.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 هذا هو مشغل الفيديو المستخدم في المنهج. سيحاول عرض الفيديو عبر يوتيوب، وإذا تم حظر موقع يوتيوب، يمكنك إظهار الفيديو المستضاف على منصة Code.org باستخدام المشغل "الاحتياطي" بدلاً من ذلك.
 

@@ -6,11 +6,13 @@ $row-height: 42px;
 $expanded-row-height: 30px;
 $max-rows: 14;
 $max-height: $max-rows * $row-height + $scrollbar-height;
+$table-width: calc($content-width - 64px);
 $student-list-width: 170px;
-$content-view-width: $content-width - $student-list-width;
+$content-view-width: $table-width - $student-list-width;
 
 :export {
   MAX_BODY_HEIGHT: math.div($max-height, 1px);
+  TABLE_WIDTH: math.div($table-width, 1px);
   STUDENT_LIST_WIDTH: math.div($student-list-width, 1px);
   CONTENT_VIEW_WIDTH: math.div($content-view-width, 1px);
   ROW_HEIGHT: math.div($row-height, 1px);

@@ -1,14 +1,16 @@
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {
   commands,
   executors,
   dropletConfig,
-  injectExecuteCmd
+  injectExecuteCmd,
 } from '@cdo/apps/lib/util/timeoutApi';
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
-import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Timeout API', () => {
   let testErrorHandler, clock;
@@ -34,7 +36,7 @@ describe('Timeout API', () => {
   // executor because they get aliased.
   it('is internally complete', () => {
     for (let commandName in commands) {
-      if (!commands.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(commands, commandName)) {
         continue;
       }
       expect(executors).to.have.ownProperty(commandName);
@@ -42,7 +44,7 @@ describe('Timeout API', () => {
     }
 
     for (let commandName in executors) {
-      if (!executors.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(executors, commandName)) {
         continue;
       }
       expect(commands).to.have.ownProperty(commandName);
@@ -50,7 +52,7 @@ describe('Timeout API', () => {
     }
 
     for (let commandName in dropletConfig) {
-      if (!dropletConfig.hasOwnProperty(commandName)) {
+      if (!Object.prototype.hasOwnProperty.call(dropletConfig, commandName)) {
         continue;
       }
       expect(dropletConfig[commandName].func).to.equal(commandName);
@@ -67,7 +69,7 @@ describe('Timeout API', () => {
       // Check droplet config
       expect(dropletConfig[funcName].paletteParams).to.deep.equal([
         'callback',
-        'ms'
+        'ms',
       ]);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
@@ -78,25 +80,25 @@ describe('Timeout API', () => {
       expect(spy).to.have.been.calledOnce;
       expect(spy.firstCall.args[2]).to.deep.equal({
         callback: 'one',
-        milliseconds: 'two'
+        milliseconds: 'two',
       });
     });
 
     itComplainsIfArgumentIsNotAFunction(funcName, 'callback', {
       callback: () => {},
-      milliseconds: 0
+      milliseconds: 0,
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'milliseconds', {
       callback: () => {},
-      milliseconds: 0
+      milliseconds: 0,
     });
 
     it('sets a timeout', () => {
       const spy = sinon.spy();
       commands[funcName]({
         callback: spy,
-        milliseconds: 3
+        milliseconds: 3,
       });
       expect(spy).not.to.have.been.called;
       clock.tick(3);
@@ -121,14 +123,14 @@ describe('Timeout API', () => {
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'timeoutId', {
-      timeoutId: 0
+      timeoutId: 0,
     });
 
     it('clears a timeout', () => {
       const spy = sinon.spy();
       const key = commands.setTimeout({
         callback: spy,
-        milliseconds: 2
+        milliseconds: 2,
       });
       expect(spy).not.to.have.been.called;
       commands.clearTimeout({timeoutId: key});
@@ -144,7 +146,7 @@ describe('Timeout API', () => {
       // Check droplet config
       expect(dropletConfig[funcName].paletteParams).to.deep.equal([
         'callback',
-        'ms'
+        'ms',
       ]);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
@@ -155,25 +157,25 @@ describe('Timeout API', () => {
       expect(spy).to.have.been.calledOnce;
       expect(spy.firstCall.args[2]).to.deep.equal({
         callback: 'one',
-        milliseconds: 'two'
+        milliseconds: 'two',
       });
     });
 
     itComplainsIfArgumentIsNotAFunction(funcName, 'callback', {
       callback: () => {},
-      milliseconds: 0
+      milliseconds: 0,
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'milliseconds', {
       callback: () => {},
-      milliseconds: 0
+      milliseconds: 0,
     });
 
     it('sets an interval', () => {
       const spy = sinon.spy();
       commands[funcName]({
         callback: spy,
-        milliseconds: 3
+        milliseconds: 3,
       });
       expect(spy).not.to.have.been.called;
       clock.tick(3);
@@ -202,14 +204,14 @@ describe('Timeout API', () => {
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'intervalId', {
-      intervalId: 0
+      intervalId: 0,
     });
 
     it('clears an interval', () => {
       const spy = sinon.spy();
       const key = commands.setInterval({
         callback: spy,
-        milliseconds: 3
+        milliseconds: 3,
       });
       expect(spy).not.to.have.been.called;
       clock.tick(3);
@@ -230,7 +232,7 @@ describe('Timeout API', () => {
       // Check droplet config
       expect(dropletConfig[funcName].paletteParams).to.deep.equal([
         'ms',
-        'callback'
+        'callback',
       ]);
       expect(dropletConfig[funcName].params).to.have.length(2);
 
@@ -244,19 +246,19 @@ describe('Timeout API', () => {
 
     itComplainsIfArgumentIsNotAFunction(funcName, 'callback', {
       callback: () => {},
-      ms: 0
+      ms: 0,
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'ms', {
       callback: () => {},
-      ms: 0
+      ms: 0,
     });
 
     it('sets an interval', () => {
       const spy = sinon.spy();
       commands[funcName]({
         callback: spy,
-        ms: 3
+        ms: 3,
       });
       expect(spy).not.to.have.been.called;
       clock.tick(3);
@@ -277,7 +279,7 @@ describe('Timeout API', () => {
       expect(dropletConfig[funcName].params).to.be.undefined;
       expect(dropletConfig[funcName].paramButtons).to.deep.equal({
         minArgs: 0,
-        maxArgs: 1
+        maxArgs: 1,
       });
 
       // Check executors map arguments to object correctly
@@ -295,14 +297,14 @@ describe('Timeout API', () => {
     });
 
     itComplainsIfArgumentIsNotANumber(funcName, 'key', {
-      key: 0
+      key: 0,
     });
 
     it('clears an interval started by setTimedLoop', () => {
       const spy = sinon.spy();
       const key = commands.timedLoop({
         callback: spy,
-        ms: 3
+        ms: 3,
       });
       expect(spy).not.to.have.been.called;
       clock.tick(3);
@@ -370,7 +372,7 @@ describe('Timeout API', () => {
     function callFuncWithArgValue(badValue) {
       commands[funcName]({
         ...validArgs,
-        [argName]: badValue
+        [argName]: badValue,
       });
     }
 

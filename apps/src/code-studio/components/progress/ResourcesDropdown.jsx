@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import i18n from '@cdo/locale';
 
 export default class ResourcesDropdown extends React.Component {
   static propTypes = {
@@ -13,7 +14,7 @@ export default class ResourcesDropdown extends React.Component {
 
     //For firehose
     unitGroupId: PropTypes.number,
-    unitId: PropTypes.number
+    unitId: PropTypes.number,
   };
 
   handleDropdownClick = () => {
@@ -22,11 +23,11 @@ export default class ResourcesDropdown extends React.Component {
       : 'teacher-resources';
     if (this.props.unitGroupId) {
       this.recordFirehose(study, 'unit-group', 'click-dropdown', {
-        unitGroupId: this.props.unitGroupId
+        unitGroupId: this.props.unitGroupId,
       });
     } else if (this.props.unitId) {
       this.recordFirehose(study, 'unit', 'click-dropdown', {
-        unitId: this.props.unitId
+        unitId: this.props.unitId,
       });
     }
   };
@@ -50,7 +51,7 @@ export default class ResourcesDropdown extends React.Component {
         'click-resource',
         {
           unitGroupId: this.props.unitGroupId,
-          resourceKey: resourceKey
+          resourceKey: resourceKey,
         },
         callback
       );
@@ -61,7 +62,7 @@ export default class ResourcesDropdown extends React.Component {
         'click-resource',
         {
           unitId: this.props.unitId,
-          resourceKey: resourceKey
+          resourceKey: resourceKey,
         },
         callback
       );
@@ -74,7 +75,7 @@ export default class ResourcesDropdown extends React.Component {
         study,
         study_group: study_group,
         event: event,
-        data_json: JSON.stringify(data_json)
+        data_json: JSON.stringify(data_json),
       },
       {includeUserId: true, callback}
     );
@@ -122,6 +123,6 @@ export default class ResourcesDropdown extends React.Component {
 const styles = {
   dropdown: {
     display: 'inline-block',
-    marginRight: 5
-  }
+    marginRight: 5,
+  },
 };

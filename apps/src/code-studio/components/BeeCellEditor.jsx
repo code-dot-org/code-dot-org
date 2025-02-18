@@ -3,9 +3,10 @@
  * @see @code-dot-org/maze/src/beeCell
  */
 
-import React from 'react';
-import CellEditor from './CellEditor';
 import {cells} from '@code-dot-org/maze';
+import React from 'react';
+
+import CellEditor from './CellEditor';
 
 const BeeCell = cells.BeeCell;
 

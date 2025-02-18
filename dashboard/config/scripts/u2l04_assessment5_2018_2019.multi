@@ -15,3 +15,5 @@ Answers:
 - D: A packet travelling between two computers on the Internet may be rerouted many times along the way.
 - E: A packet contains addressing information to allow routers to decide how best to forward along that packet towards its destination.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,23 +1,23 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import queryString from 'query-string';
-import {assign, isEmpty} from 'lodash';
+import React from 'react';
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {reload} from '@cdo/apps/utils';
+
 import FormController from '../../form_components_func/FormController';
-import ChooseYourProgram from './ChooseYourProgram';
-import FindYourRegion from './FindYourRegion';
+
 import AboutYou from './AboutYou';
 import AdditionalDemographicInformation from './AdditionalDemographicInformation';
 import AdministratorInformation from './AdministratorInformation';
+import ChooseYourProgram from './ChooseYourProgram';
+import FindYourRegion from './FindYourRegion';
 import ImplementationPlan from './ImplementationPlan';
 import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {reload} from '@cdo/apps/utils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-/* global ga */
 
 const submitButtonText = 'Complete and Send';
 const sessionStorageKey = 'TeacherApplication';
+const hasLoggedTeacherAppStart = 'hasLoggedTeacherAppStart';
 const pageComponents = [
   ChooseYourProgram,
   FindYourRegion,
@@ -25,27 +25,16 @@ const pageComponents = [
   AdditionalDemographicInformation,
   AdministratorInformation,
   ImplementationPlan,
-  ProfessionalLearningProgramRequirements
+  ProfessionalLearningProgramRequirements,
 ];
 const autoComputedFields = [
   'regionalPartnerGroup',
   'regionalPartnerId',
-  'regionalPartnerWorkshopIds'
+  'regionalPartnerWorkshopIds',
 ];
 
-const sendFirehoseEvent = (userId, event) => {
-  firehoseClient.putRecord(
-    {
-      user_id: userId,
-      study: 'application-funnel',
-      event: event
-    },
-    {includeUserId: false}
-  );
-};
-
 const TeacherApplication = props => {
-  const {savedFormData, accountEmail, userId, savedStatus, schoolId} = props;
+  const {savedFormData, accountEmail, schoolId} = props;
 
   const getInitialData = () => {
     const dataOnPageLoad = savedFormData && JSON.parse(savedFormData);
@@ -66,45 +55,25 @@ const TeacherApplication = props => {
   };
 
   const onInitialize = () => {
-    sendFirehoseEvent(userId, 'started-teacher-application');
+    if (!sessionStorage.getItem(hasLoggedTeacherAppStart)) {
+      sessionStorage.setItem(hasLoggedTeacherAppStart, true);
+      analyticsReporter.sendEvent(EVENTS.TEACHER_APP_VISITED_EVENT);
+    }
   };
 
   const getPageProps = () => ({
-    accountEmail: accountEmail
+    accountEmail: accountEmail,
   });
 
   const onSuccessfulSubmit = () => {
     // Let the server display a confirmation page as appropriate
     reload();
 
-    sendFirehoseEvent(userId, 'submitted-teacher-application');
     analyticsReporter.sendEvent(EVENTS.APPLICATION_SUBMITTED_EVENT);
   };
 
   const onSuccessfulSave = () => {
-    // only send firehose event on the first save of the teacher application
-    !savedStatus && sendFirehoseEvent(userId, 'saved-teacher-application');
     analyticsReporter.sendEvent(EVENTS.APPLICATION_SAVED_EVENT);
-  };
-
-  const onSetPage = newPage => {
-    const nominated = queryString.parse(window.location.search).nominated;
-
-    // Report a unique page view to GA.
-    let url = '/pd/application/teacher/';
-    url += newPage + 1;
-
-    const parameters = assign(
-      {},
-      nominated && {nominated: 'true'},
-      savedStatus === 'incomplete' && {incomplete: 'true'}
-    );
-    if (!isEmpty(parameters)) {
-      url += `?${queryString.stringify(parameters)}`;
-    }
-
-    ga('set', 'page', url);
-    ga('send', 'pageview');
   };
 
   return (
@@ -115,7 +84,6 @@ const TeacherApplication = props => {
       autoComputedFields={autoComputedFields}
       getPageProps={getPageProps}
       getInitialData={getInitialData}
-      onSetPage={onSetPage}
       onInitialize={onInitialize}
       onSuccessfulSubmit={onSuccessfulSubmit}
       onSuccessfulSave={onSuccessfulSave}
@@ -129,8 +97,7 @@ const TeacherApplication = props => {
 TeacherApplication.propTypes = {
   ...FormController.propTypes,
   accountEmail: PropTypes.string.isRequired,
-  userId: PropTypes.number.isRequired,
-  schoolId: PropTypes.string
+  schoolId: PropTypes.string,
 };
 
 export default TeacherApplication;

@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {studentsShape} from './types';
-import i18n from '@cdo/locale';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {studentsShape} from './types';
 
 /**
  * A component for selecting one or more students in a section.
@@ -10,11 +13,11 @@ import color from '@cdo/apps/util/color';
 export default class StudentSelector extends React.Component {
   static propTypes = {
     students: studentsShape,
-    handleSubmit: PropTypes.func.isRequired
+    handleSubmit: PropTypes.func.isRequired,
   };
 
   state = {
-    selectedStudentIds: []
+    selectedStudentIds: [],
   };
 
   handleStudentClicked = event => {
@@ -101,23 +104,23 @@ export default class StudentSelector extends React.Component {
 // see pairing.scss for general button styling
 const styles = {
   buttonLeft: {
-    marginLeft: 0
+    marginLeft: 0,
   },
   enabled: {
     backgroundColor: 'white',
-    fontSize: '13px'
+    fontSize: '13px',
   },
   warning: {
     color: 'red',
-    fontFamily: "'Gotham 4r', sans-serif",
+    ...fontConstants['main-font-regular'],
     fontSize: '12px',
-    paddingTop: '5px'
+    paddingTop: '5px',
   },
   disabled: {
-    opacity: 0.5
+    opacity: 0.5,
   },
   selected: {
     backgroundColor: color.cyan,
-    color: 'white'
-  }
+    color: 'white',
+  },
 };

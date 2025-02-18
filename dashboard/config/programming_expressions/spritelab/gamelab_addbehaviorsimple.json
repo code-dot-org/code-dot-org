@@ -4,7 +4,7 @@
   "category": "Behaviors",
   "category_key": "behaviors",
   "block_name": "gamelab_addBehaviorSimple",
-  "content": "Sprite begins doing a specified behavior.\n\n(Opens YouTube in new tab)\n\n[![How To Make A Sprite](https://img.youtube.com/vi/wbTJpx3driA/0.jpg)](https://www.youtube.com/watch?v=wbTJpx3driA)\n\nThe sprite will begin running a behavior over and over again. The sprite will repeatedly run the set of actions contained in the behavior while the project is being run, unless it is instructed to stop. For more information see [`Adding and Removing Behaviors`(#89eba4)](/docs/spritelab/spritelab_adding-and-removing-behaviors/).",
+  "content": "Sprite begins doing a specified behavior.\n\n(Opens YouTube in new tab)\n\n[How To Make A Sprite](https://www.youtube.com/watch?v=wbTJpx3driA)\n\nThe sprite will begin running a behavior over and over again. The sprite will repeatedly run the set of actions contained in the behavior while the project is being run, unless it is instructed to stop. For more information see [`Adding and Removing Behaviors`(#89eba4)](/docs/spritelab/spritelab_adding-and-removing-behaviors/).",
   "examples": [
     {
       "name": "Example 1",

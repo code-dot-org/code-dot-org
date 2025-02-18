@@ -1,24 +1,26 @@
-import {expect} from '../../../util/reconfiguredChai';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
-import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import {unitTestExports as cacheExports} from '@cdo/apps/util/CachedElement';
-import i18n from '@cdo/locale';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {
+  KeepWorkingBadge,
+  BadgeType,
+} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
   BasicBubble,
   BubbleLink,
   BubbleSize,
-  BubbleShape
+  BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import BubbleBadge, {
-  KeepWorkingBadge,
-  BadgeType
-} from '@cdo/apps/templates/progress/BubbleBadge';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
+import {unitTestExports as cacheExports} from '@cdo/apps/util/CachedElement';
+import color from '@cdo/apps/util/color';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const TITLE = '1';
 
@@ -26,34 +28,34 @@ const defaultProps = {
   levelStatus: LevelStatus.not_tried,
   levelKind: LevelKind.level,
   title: TITLE,
-  url: '/foo/bar'
+  url: '/foo/bar',
 };
 
 const borderColors = {
   [LevelStatus.not_tried]: color.lighter_gray,
   [LevelStatus.attempted]: color.level_perfect,
   [LevelStatus.passed]: color.level_perfect,
-  [LevelStatus.perfect]: color.level_perfect
+  [LevelStatus.perfect]: color.level_perfect,
 };
 const backgroundColors = {
   [LevelStatus.not_tried]: color.level_not_tried,
   [LevelStatus.attempted]: color.level_not_tried,
   [LevelStatus.passed]: color.level_passed,
-  [LevelStatus.perfect]: color.level_perfect
+  [LevelStatus.perfect]: color.level_perfect,
 };
 const assessmentBorders = {
   [LevelStatus.not_tried]: color.lighter_gray,
   [LevelStatus.attempted]: color.level_submitted,
   [LevelStatus.submitted]: color.level_submitted,
   [LevelStatus.completed_assessment]: color.level_submitted,
-  [LevelStatus.perfect]: color.level_submitted
+  [LevelStatus.perfect]: color.level_submitted,
 };
 const assessmentBackgrounds = {
   [LevelStatus.not_tried]: color.level_not_tried,
   [LevelStatus.attempted]: color.level_not_tried,
   [LevelStatus.submitted]: color.level_submitted,
   [LevelStatus.completed_assessment]: color.level_submitted,
-  [LevelStatus.perfect]: color.level_submitted
+  [LevelStatus.perfect]: color.level_submitted,
 };
 
 /**
@@ -108,7 +110,7 @@ function getFirstRenderedBasicBubble(propOverrides = {}) {
 function basicBubbleStyleForStatus(status, propOverrides = {}) {
   const wrapper = getFirstRenderedBasicBubble({
     ...propOverrides,
-    levelStatus: status
+    levelStatus: status,
   });
   return wrapper.childAt(0).props().style;
 }
@@ -123,7 +125,7 @@ describe('ProgressTableLevelBubble', () => {
     cacheExports.clearElementsCache('BasicBubble');
   });
 
-  after(() => {
+  afterAll(() => {
     renderPropsSpy.resetHistory();
     cacheExports.clearElementsCache('BasicBubble');
   });
@@ -165,7 +167,7 @@ describe('ProgressTableLevelBubble', () => {
 
   it('shows title in letter bubble', () => {
     const wrapper = getFirstRenderedBasicBubble({
-      bubbleSize: BubbleSize.letter
+      bubbleSize: BubbleSize.letter,
     });
     expect(wrapper.text()).to.equal(TITLE);
   });
@@ -177,7 +179,7 @@ describe('ProgressTableLevelBubble', () => {
 
   it('shows correct icon when locked', () => {
     const wrapper = getFirstRenderedBasicBubble({
-      isLocked: true
+      isLocked: true,
     });
     const icon = wrapper.find(FontAwesome);
     expect(icon).to.have.lengthOf(1);
@@ -201,7 +203,7 @@ describe('ProgressTableLevelBubble', () => {
   it('only shows paired icon for bonus + paired', () => {
     const wrapper = getFirstRenderedBasicBubble({
       isBonus: true,
-      isPaired: true
+      isPaired: true,
     });
     const icon = wrapper.find(FontAwesome);
     expect(icon).to.have.lengthOf(1);
@@ -225,7 +227,7 @@ describe('ProgressTableLevelBubble', () => {
   Object.keys(assessmentBorders).forEach(status => {
     it(`shows correct border color for status ${status} - assessment`, () => {
       const style = basicBubbleStyleForStatus(status, {
-        levelKind: LevelKind.assessment
+        levelKind: LevelKind.assessment,
       });
       expect(style.borderColor).to.equal(assessmentBorders[status]);
     });
@@ -234,7 +236,7 @@ describe('ProgressTableLevelBubble', () => {
   Object.keys(assessmentBackgrounds).forEach(status => {
     it(`shows correct background color for status ${status} - assessment`, () => {
       const style = basicBubbleStyleForStatus(status, {
-        levelKind: LevelKind.assessment
+        levelKind: LevelKind.assessment,
       });
       expect(style.backgroundColor).to.equal(assessmentBackgrounds[status]);
     });
@@ -243,28 +245,28 @@ describe('ProgressTableLevelBubble', () => {
   describe('badges', () => {
     it('shows a badge for ReviewState.keepWorking', () => {
       const wrapper = getFirstRenderedBasicBubble({
-        reviewState: ReviewStates.keepWorking
+        reviewState: ReviewStates.keepWorking,
       });
       expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
     });
 
     it('shows a badge for ReviewState.awaitingReview', () => {
       const wrapper = getFirstRenderedBasicBubble({
-        reviewState: ReviewStates.awaitingReview
+        reviewState: ReviewStates.awaitingReview,
       });
       expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
     });
 
     it('does not show a badge for ReviewState.completed', () => {
       const wrapper = getFirstRenderedBasicBubble({
-        reviewState: ReviewStates.completed
+        reviewState: ReviewStates.completed,
       });
       expect(wrapper.find(KeepWorkingBadge)).to.be.empty;
     });
 
     it('does not show a badge if no review state', () => {
       const wrapper = getFirstRenderedBasicBubble({
-        reviewState: undefined
+        reviewState: undefined,
       });
       expect(wrapper.find(KeepWorkingBadge)).to.be.empty;
     });

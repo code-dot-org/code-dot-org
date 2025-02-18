@@ -1,18 +1,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
-import DialogFooter from '../templates/teacherDashboard/DialogFooter';
-import Button from '../templates/Button';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-import {actions, REDIRECT_RESPONSE} from './redux/applab';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
+
 import {BASE_DIALOG_WIDTH} from '@cdo/apps/constants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Dialog, {Body} from '@cdo/apps/legacySharedComponents/Dialog';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import i18n from '@cdo/locale';
+
+import DialogFooter from '../templates/teacherDashboard/DialogFooter';
+
+import {actions, REDIRECT_RESPONSE} from './redux/applab';
 
 class ExternalRedirectDialog extends React.Component {
   static propTypes = {
     handleClose: PropTypes.func,
-    redirects: PropTypes.array
+    redirects: PropTypes.array,
   };
 
   handleRedirect(url) {
@@ -59,7 +62,7 @@ class ExternalRedirectDialog extends React.Component {
           <Button
             onClick={() => this.handleRedirect(url)}
             text={i18n.continue()}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             style={{margin: 0}}
           />
         </DialogFooter>
@@ -103,7 +106,7 @@ class ExternalRedirectDialog extends React.Component {
 const styles = {
   title: {
     display: 'inline',
-    wordWrap: 'break-word'
+    wordWrap: 'break-word',
   },
   url: {
     display: '-webkit-box',
@@ -112,18 +115,18 @@ const styles = {
     overflow: 'hidden',
     maxWidth: '100%',
     wordWrap: 'break-word',
-    maxHeight: '140px'
-  }
+    maxHeight: '140px',
+  },
 };
 
 export const UnconnectedExternalRedirectDialog = ExternalRedirectDialog;
 export default connect(
   state => ({
-    redirects: state.redirectDisplay
+    redirects: state.redirectDisplay,
   }),
   dispatch => ({
     handleClose() {
       dispatch(actions.dismissRedirectNotice());
-    }
+    },
   })
 )(UnconnectedExternalRedirectDialog);

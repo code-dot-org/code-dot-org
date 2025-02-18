@@ -8,3 +8,5 @@ wrong 'Hardware is the type of software used in physical prototypes.'
 right 'Hardware and software work together to make computing devices useful.'
 wrong 'In computing devices, hardware controls output and software controls input.'
 
+
+allow_multiple_attempts true

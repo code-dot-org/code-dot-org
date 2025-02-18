@@ -1,4 +1,4 @@
-exports.load = function(assetUrl) {
+exports.load = function (assetUrl) {
   return {
     patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'), // default first, then alphabetical
     brickLine: assetUrl('media/common_images/brick.png'),
@@ -50,6 +50,6 @@ exports.load = function(assetUrl) {
     traintrackLine: assetUrl('media/common_images/traintrack.png'),
     traintrackMenu: assetUrl('media/common_images/traintrack-menuicon.png'),
     waterLine: assetUrl('media/common_images/water.png'),
-    waterMenu: assetUrl('media/common_images/water-menuicon.png')
+    waterMenu: assetUrl('media/common_images/water-menuicon.png'),
   };
 };

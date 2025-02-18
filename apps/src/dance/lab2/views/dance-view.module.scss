@@ -1,0 +1,40 @@
+@import 'color.scss';
+@import './constants.scss';
+
+.danceLab {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+
+.visualizationArea {
+  flex: 0;
+  height: 100%;
+  background-color: $neutral_dark10;
+}
+
+.visualizationColumn {
+  margin: 2px 5px;
+}
+
+.visualization {
+  // TODO: support resizing
+  width: $visualization-size;
+  height: $visualization-size;
+  background-color: $neutral_white;
+}
+
+.workArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.instructionsArea {
+  flex: 0;
+}
+
+.workspaceArea {
+  flex: 1;
+}

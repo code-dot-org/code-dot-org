@@ -1,11 +1,9 @@
 @no_mobile
-@no_ie
 Feature: Submittable JavaLab
 
 Background:
   Given I create a teacher-associated student named "Lillian"
   And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/9?noautoplay=true"
-  Then I rotate to landscape
   And I wait to see "#runButton"
 
 Scenario: Submit anything, unsubmit, be able to resubmit.
@@ -48,7 +46,7 @@ Scenario: Submit anything, teacher is able to unsubmit
   And I press "#unsubmit-button-uitest" using jQuery to load a new page
 
   # Unsubmit should be disabled now
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait to see ".show-handle"
   And I wait until element ".student-table" is visible
   Then I wait until element "#unsubmit-button-uitest" is visible

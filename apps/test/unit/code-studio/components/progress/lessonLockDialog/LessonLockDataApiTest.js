@@ -1,13 +1,15 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import PropTypes from 'prop-types';
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
+
 import {
   LockStatus,
   saveLockState,
-  useGetLockState
+  useGetLockState,
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import * as useFetch from '@cdo/apps/util/useFetch';
+
+window.fetch = jest.fn();
 
 describe('LessonLockDataApi', () => {
   const fakeUnitId = 1;
@@ -16,7 +18,7 @@ describe('LessonLockDataApi', () => {
 
   // Functional react component to host the useGetLockState hook
   let useGetLockStateReturnValue = {
-    current: null
+    current: null,
   };
   const UseGetLockStateHarness = ({unitId, lessonId, sectionId}) => {
     useGetLockStateReturnValue.current = useGetLockState(
@@ -37,21 +39,21 @@ describe('LessonLockDataApi', () => {
                 user_level_data: {},
                 name: 'Student1',
                 locked: true,
-                readonly_answers: false
+                readonly_answers: false,
               },
               {
                 user_level_data: {},
                 name: 'Student2',
                 locked: false,
-                readonly_answers: false
-              }
-            ]
-          }
-        }
+                readonly_answers: false,
+              },
+            ],
+          },
+        },
       };
-      sinon.stub(useFetch, 'useFetch').returns({
+      jest.spyOn(useFetch, 'useFetch').mockClear().mockReturnValue({
         loading: false,
-        data: fakeLockStatusData
+        data: fakeLockStatusData,
       });
       mount(
         <UseGetLockStateHarness
@@ -61,58 +63,58 @@ describe('LessonLockDataApi', () => {
         />
       );
       const {loading, serverLockState} = useGetLockStateReturnValue.current;
-      expect(loading).to.be.false;
-      expect(serverLockState).to.deep.equal([
+      expect(loading).toBe(false);
+      expect(serverLockState).toEqual([
         {
           name: 'Student1',
           lockStatus: 'Locked',
-          userLevelData: {}
+          userLevelData: {},
         },
         {
           name: 'Student2',
           lockStatus: 'Editable',
-          userLevelData: {}
-        }
+          userLevelData: {},
+        },
       ]);
-      useFetch.useFetch.restore();
+      useFetch.useFetch.mockRestore();
     });
   });
 
   describe('saveLockState', () => {
     it('calls lock_status api with changes in the lock state', () => {
-      const fetchSpy = sinon.spy(window, 'fetch');
+      const fetchSpy = jest.spyOn(window, 'fetch').mockClear();
       const previousLockState = [
         {
           name: 'Student1',
           lockStatus: LockStatus.Editable,
-          userLevelData: {}
+          userLevelData: {},
         },
         {
           name: 'Student2',
           lockStatus: LockStatus.Editable,
-          userLevelData: {}
-        }
+          userLevelData: {},
+        },
       ];
       const newLockState = [
         {
           name: 'Student1',
           lockStatus: LockStatus.Editable,
-          userLevelData: {}
+          userLevelData: {},
         },
         {
           name: 'Student2',
           lockStatus: LockStatus.Locked,
-          userLevelData: {}
-        }
+          userLevelData: {},
+        },
       ];
 
       saveLockState(previousLockState, newLockState, 'fake-csrf');
 
-      expect(fetchSpy).to.have.been.calledWith('/api/lock_status', {
+      expect(fetchSpy).toHaveBeenCalledWith('/api/lock_status', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-CSRF-Token': 'fake-csrf'
+          'X-CSRF-Token': 'fake-csrf',
         },
         credentials: 'same-origin',
         body: JSON.stringify({
@@ -120,13 +122,19 @@ describe('LessonLockDataApi', () => {
             {
               user_level_data: {},
               locked: true,
-              readonly_answers: false
-            }
-          ]
-        })
+              readonly_answers: false,
+            },
+          ],
+        }),
       });
 
-      window.fetch.restore();
+      window.fetch.mockRestore();
     });
   });
+
+  UseGetLockStateHarness.propTypes = {
+    unitId: PropTypes.number,
+    lessonId: PropTypes.number,
+    sectionId: PropTypes.number,
+  };
 });

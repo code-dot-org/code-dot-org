@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import color from '../util/color';
-import AgeDropdown from './AgeDropdown';
+
 import commonMsg from '@cdo/locale';
+
+import color from '../util/color';
+
+import AgeDropdown from './AgeDropdown';
 
 /**
  * Dialog contents for when you visit a shared Applab page. If not signed in,
@@ -15,7 +18,7 @@ class ShareWarnings extends Component {
     promptForAge: PropTypes.bool.isRequired,
     showStoreDataAlert: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
-    handleTooYoung: PropTypes.func.isRequired
+    handleTooYoung: PropTypes.func.isRequired,
   };
 
   handleOk = () => {
@@ -80,30 +83,30 @@ const styles = {
     width: 220,
     height: 30,
     lineHeight: '30px',
-    marginBottom: 10
+    marginBottom: 10,
   },
   dataMessage: {
     fontSize: 18,
     lineHeight: '21px',
-    marginBottom: 30
+    marginBottom: 30,
   },
   dataMessageHighlight: {
-    backgroundColor: 'yellow'
+    backgroundColor: 'yellow',
   },
   ageMessage: {
     fontSize: 18,
-    marginBottom: 10
+    marginBottom: 10,
   },
   moreInfo: {
     marginLeft: 0,
-    fontSize: 15
+    fontSize: 15,
   },
   ok: {
     backgroundColor: color.orange,
     border: '1px solid ' + color.orange,
     color: color.white,
-    float: 'right'
-  }
+    float: 'right',
+  },
 };
 
 export default ShareWarnings;

@@ -1,10 +1,12 @@
 import $ from 'jquery';
-var DropletFunctionTooltip = require('./DropletFunctionTooltip');
-var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
-var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
-var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
-import {getAllAvailableDropletBlocks} from '../dropletUtils';
+
 import LegacyDialog from '../code-studio/LegacyDialog';
+import {getAllAvailableDropletBlocks} from '../dropletUtils';
+
+var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
+var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
+var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
+var DropletFunctionTooltip = require('./DropletFunctionTooltip');
 
 /**
  * @fileoverview Manages a store of known blocks and tooltips
@@ -73,24 +75,22 @@ function DropletTooltipManager(
    * @type {DropletAutocompletePopupTooltipManager}
    * @private
    */
-  this.dropletAutocompletePopupTooltipManager_ = new DropletAutocompletePopupTooltipManager(
-    this
-  );
+  this.dropletAutocompletePopupTooltipManager_ =
+    new DropletAutocompletePopupTooltipManager(this);
 
   /**
    * @type {DropletAutocompletePopupTooltipManager}
    * @private
    */
-  this.dropletAutocompleteParameterTooltipManager_ = new DropletAutocompleteParameterTooltipManager(
-    this
-  );
+  this.dropletAutocompleteParameterTooltipManager_ =
+    new DropletAutocompleteParameterTooltipManager(this);
 }
 
 /**
  * Registers handlers for droplet block tooltips.
  * @param dropletEditor
  */
-DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function(
+DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function (
   dropletEditor
 ) {
   this.dropletBlockTooltipManager_.installTooltipsForEditor_(dropletEditor);
@@ -100,7 +100,7 @@ DropletTooltipManager.prototype.registerDropletBlockModeHandlers = function(
  * Registers handlers for ACE mode tooltips
  * @param dropletEditor
  */
-DropletTooltipManager.prototype.registerDropletTextModeHandlers = function(
+DropletTooltipManager.prototype.registerDropletTextModeHandlers = function (
   dropletEditor
 ) {
   this.dropletAutocompletePopupTooltipManager_.installTooltipsForEditor_(
@@ -115,13 +115,13 @@ DropletTooltipManager.prototype.registerDropletTextModeHandlers = function(
  * Registers block tooltips for blocks based on the dropletBlocks and
  * codeFunctions passed to the constructor
  */
-DropletTooltipManager.prototype.registerBlocks = function() {
+DropletTooltipManager.prototype.registerBlocks = function () {
   var blocks = getAllAvailableDropletBlocks(
     this.dropletConfig,
     this.codeFunctions,
     this.autocompletePaletteApisOnly
   );
-  blocks.forEach(function(dropletBlockDefinition) {
+  blocks.forEach(function (dropletBlockDefinition) {
     var key =
       dropletBlockDefinition.modeOptionName || dropletBlockDefinition.func;
     if (dropletBlockDefinition.docFunc) {
@@ -136,12 +136,12 @@ DropletTooltipManager.prototype.registerBlocks = function() {
   }, this);
 };
 
-DropletTooltipManager.prototype.getDocFor = function(functionName) {
+DropletTooltipManager.prototype.getDocFor = function (functionName) {
   var docFuncName = this.docFuncMapping_[functionName] || functionName;
   return this.blockTypeToTooltip_[docFuncName];
 };
 
-DropletTooltipManager.prototype.showDocFor = function(functionName) {
+DropletTooltipManager.prototype.showDocFor = function (functionName) {
   if (!this.tooltipsEnabled) {
     return;
   }
@@ -165,7 +165,7 @@ DropletTooltipManager.prototype.showDocFor = function(functionName) {
       .attr('src', tooltip.getFullDocumentationURL(this.appType)),
     autoResizeScrollableElement: '.markdown-instructions-container',
     id: 'block-documentation-lightbox',
-    link: tooltip.getFullDocumentationURL(this.appType)
+    link: tooltip.getFullDocumentationURL(this.appType),
   });
   dialog.show();
 };
@@ -174,12 +174,14 @@ DropletTooltipManager.prototype.showDocFor = function(functionName) {
  * @param {String} functionName
  * @returns {DropletFunctionTooltip}
  */
-DropletTooltipManager.prototype.getDropletTooltip = function(functionName) {
+DropletTooltipManager.prototype.getDropletTooltip = function (functionName) {
   var tooltip = this.getDocFor(functionName);
   if (!tooltip) {
-    throw 'Function name ' +
+    throw (
+      'Function name ' +
       functionName +
-      ' not registered in documentation manager.';
+      ' not registered in documentation manager.'
+    );
   }
 
   return tooltip;
@@ -188,7 +190,7 @@ DropletTooltipManager.prototype.getDropletTooltip = function(functionName) {
 /**
  * @param {boolean} enabled if tooltips should be enabled.
  */
-DropletTooltipManager.prototype.setTooltipsEnabled = function(enabled) {
+DropletTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
   this.tooltipsEnabled = !!enabled;
   this.dropletAutocompletePopupTooltipManager_.setTooltipsEnabled(enabled);
   this.dropletAutocompleteParameterTooltipManager_.setTooltipsEnabled(enabled);

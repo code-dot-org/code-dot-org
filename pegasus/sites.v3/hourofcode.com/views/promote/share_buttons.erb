@@ -1,8 +1,0 @@
-<%
-  facebook = {:u=>"http://#{request.host}/us"}
-  twitter_text = hoc_s(:twitter_default_text_donor, locals: {random_donor: PegasusCdoDonor.get_random_donor_twitter})
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>twitter_text}
-  twitter[:hashtags] = 'HourOfCode' unless twitter_text.include? '#HourOfCode'
-%>
-
-<%= view :share_buttons, facebook:facebook, twitter:twitter %>

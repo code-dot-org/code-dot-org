@@ -3,6 +3,7 @@
  */
 
 import $ from 'jquery';
+
 import {isPointInBounds} from '../util/grid';
 
 const GRID_SIZE = 5;
@@ -37,7 +38,7 @@ export function scaledDropPoint(draggedElement) {
 
   return {
     left: left,
-    top: top
+    top: top,
   };
 }
 

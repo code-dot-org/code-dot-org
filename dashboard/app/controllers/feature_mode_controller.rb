@@ -45,10 +45,8 @@ class FeatureModeController < ApplicationController
     redirect_to(action: 'show')
   end
 
-  private
-
   # Returns the pending feature mode, or nil if unset or expired.
-  def pending_mode
+  private def pending_mode
     if pending_mode_expired?
       session[:pending_mode_time] = nil
       session[:pending_mode] = nil
@@ -56,7 +54,7 @@ class FeatureModeController < ApplicationController
     session[:pending_mode]
   end
 
-  def set_pending_mode(mode)
+  private def set_pending_mode(mode)
     session[:pending_mode_time] = Time.now.to_i
     session[:pending_mode] = mode
   end
@@ -65,8 +63,8 @@ class FeatureModeController < ApplicationController
   # no longer valid because it has pending for longing than MAX_UPDATE_TIME.
   # (Someone else might update the feature mode after we start a pending request
   # so there is no guarantee the mode will eventually equal the pending mode.)
-  def pending_mode_expired?
+  private def pending_mode_expired?
     @expired = session[:pending_mode_time].nil? ||
-         (Time.now.to_i > session[:pending_mode_time] + MAX_UPDATE_TIME)
+      (Time.now.to_i > session[:pending_mode_time] + MAX_UPDATE_TIME)
   end
 end

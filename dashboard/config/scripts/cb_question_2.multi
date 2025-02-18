@@ -1,29 +1,20 @@
 name 'CB_Question_2'
-encrypted 'swQBY8TS3X7zr9/jDyCUwsk8eLSkOb51mOnt4FG0r3Qzb/xAHg1d/Hia0LWG
-HcKWP4SkVZd0Oi4BJTDZxZ1DJOz7KuEi6QTEr1ruQ/b2L114zr0DYVfuSZrH
-uQXa2E1nN1RKlhE2JSKgd+Oy90DjOI5Tq4d0QAwk//AHbavLV2VxTvrmY5ni
-/O0hsydl83J1oHn18cH+WvSBPsgrzJUVGGLg5ZO4O764Eb6b2FpI//XXPcps
-L8wM0Nlu5gfFgnVaLmGyKh+saQCEhzEmqghM6ybKN31BMzI3nZ1bHE0edNEu
-f09N9xErttZsOyMId6d4m4II5+QUy2w1LI4c5Czih23dRIfv6scXDzRR6NPz
-4rWDd7rgCU8bWvSrsi/MbQdg2inOzQDl2MAVZJCA7EKvqCRB6dg3nLg7zOAv
-p+77X26NsaIpg/YrACcq/XJtUyKg0c0D0k2O+ZQPYdidIkoyReJTjSfXqsXq
-ddK8gRMDwZleBxSBorR/uDs1XplNCqJ7RP3MtMyq5gdaWr62Q4kLOpdZFuiy
-mnnQc3UCmCnRRyQGKm9RlPFuW37sfZmaYhWbW+nKHW/k9saYy89OEywbf6Jr
-egI9ZHQvTx/lSDHkbqVBdbpxUYw99VCqIox4iFDLkz34Bd0DCeUMoNHu8tfS
-k6WlV66BLRqhjgUBqSh8PmQ6ZRE/zG9SNkEIs+W9ynZVvaFMMEIn60R55r+C
-3QA+y6ZBJt1l95mlbQiC4rhGhiwAzU7y+bWkjpqU8NcWsZ1ECFt42+LZjD81
-tBHeOeY9h0BUezHGuggrXK7XZEKcpOhYgSjKEBNqHRYKbI2zzotXvpLHKb5X
-BMRK+T6NRXpOfv9Kg2MII98tzvtGkZB6yLgNnJ+LJaTMKtTfqaSExjUUZYGt
-ufXZKsUOZ/EE32IiEBqDyjFKUx2AqdnUDUBgzKbP7iAL/7bVVoYi2PiLfuN1
-f0jhZ558je6p/0OaKF+MmZNFoeDwJb6E9CGdLxS4fPubJCIRWiiHZ1e4QxwR
-qKRvi8JRJ+BO2LZbPi7vrtwTGXuQ4eYtIOCpbLuwNf+sMXI09noP/VSHxD1a
-0Gcot7JjWGbP2lVVQciz9BRPplK3yS82f15e+oylLYP7mi3BToQB0NpVclpl
-LJflPm6N0q9ZJm+8ff/QKiKc7d5nBDQROeWIhfPj4oU4Ok9oK3ZOZ2rbQx5j
-VagZvU0l4e8NfEvxV7qEb55c09T0SOP2KQV7f0vim8c8Yc5q5wm8BuWWawLS
-sCSMTsduCTFNKjOCJlOY/NP15sVcQH7DD3rh5qlrQSHiMZyc/x1MYONaqNsr
-18tpXLdxofDiDDevjOJV6GaKwLoQ+So1HoyxIfuy/1afdZmdcghXwt2oVj2a
-z2J6UN6jj+NT/Toh0g/6j7Fze8e0Daws3noZQFlo2sXBJ3eP043Za37jCMQj
-3bFLrBYeUquclrl49XvbDIKo3nQTbll4t3aCyiv/FTCMftp4F+u/9Uk+RyeD
-v17OAz3XI2rhRWDGbmCFF3cScnGAd46A6EaHWb9NrsOe56Im6FXRzqcJWbqe
-nOELhlhR1uxjKkSVjFk=
-'
+wrong 'First, change all occurrences of "goats" to "sheep."   
+ Then, change all occurrences of "sheep" to "goats."'
+wrong 'First, change all occurrences of "goats" to "sheep."   
+ Then, change all occurrences of "sheep" to "goats."   
+Last, change all occurrences of "foxes" to "sheep."'
+right 'First, change all occurrences of "goats" to "foxes."   
+ Then, change all occurrences of "sheep" to "goats."   
+Last, change all occurrences of "foxes" to "sheep."'
+wrong 'First, change all occurrences of "goats" to "foxes."   
+ Then, change all occurrences of "foxes" to "sheep."   
+Last, change all occurrences of "sheep" to "goats."'
+
+markdown <<MARKDOWN
+A programmer completes the user manual for a video game she has developed and realizes she has reversed the roles of goats and sheep throughout the text. Consider the programmer's goal of changing all occurrences of "goats" to "sheep" and all occurrences of "sheep" to "goats." The programmer will use the fact that the word "foxes" does not appear anywhere in the original text.
+
+Which of the following algorithms can be used to accomplish the programmer's goal?
+MARKDOWN
+
+allow_multiple_attempts true

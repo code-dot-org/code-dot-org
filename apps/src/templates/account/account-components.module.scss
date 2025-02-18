@@ -1,0 +1,57 @@
+.bannerContainer {
+  text-align: center;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 64px;
+}
+
+.iconContainer img {
+  width: 60px;
+  height: 60px;
+}
+
+.titleContainer {
+  margin-top: 24px;
+}
+
+.titleDesc {
+  margin: 10px 0 0 0 !important;
+}
+
+.cardIcon {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: #0093A4;
+}
+
+.cardContent {
+  margin-block: 1.25rem;
+  line-height: 1.4;
+
+  .iconList {
+    margin: 1.5rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+
+    .icon {
+      font-size: 1rem;
+    }
+
+    li {
+      font-size: 1rem;
+      list-style-type: none;
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+}
+
+.button {
+  width: 100%;
+}

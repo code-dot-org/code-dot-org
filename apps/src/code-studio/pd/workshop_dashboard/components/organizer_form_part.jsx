@@ -1,6 +1,7 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class OrganizerFormPart extends React.Component {
   static propTypes = {
@@ -8,13 +9,13 @@ export default class OrganizerFormPart extends React.Component {
     organizerId: PropTypes.number,
     organizerName: PropTypes.string,
     onChange: PropTypes.func,
-    readOnly: PropTypes.bool
+    readOnly: PropTypes.bool,
   };
 
   state = {
     loading: true,
     potentialOrganizers: null,
-    error: false
+    error: false,
   };
 
   UNSAFE_componentWillMount() {
@@ -22,19 +23,17 @@ export default class OrganizerFormPart extends React.Component {
   }
 
   load() {
-    let url = `/api/v1/pd/workshops/${
-      this.props.workshopId
-    }/potential_organizers`;
+    let url = `/api/v1/pd/workshops/${this.props.workshopId}/potential_organizers`;
 
     $.ajax({
       method: 'GET',
       url: url,
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(data => {
         this.setState({
           loading: false,
-          potentialOrganizers: data
+          potentialOrganizers: data,
         });
       })
       .error(() => {
@@ -66,11 +65,12 @@ export default class OrganizerFormPart extends React.Component {
           <Col sm={8}>
             {this.state.potentialOrganizers && (
               <select
+                id="organizer-selector"
                 className="form-control"
                 value={this.props.organizerId}
                 onChange={this.props.onChange}
                 disabled={this.props.readOnly}
-                style={this.props.readOnly && styles.readOnlyInput}
+                style={this.props.readOnly ? styles.readOnlyInput : {}}
               >
                 {organizerOptions}
               </select>
@@ -95,9 +95,9 @@ const styles = {
   readOnlyInput: {
     backgroundColor: 'inherit',
     cursor: 'default',
-    border: 'none'
+    border: 'none',
   },
   error: {
-    color: 'red'
-  }
+    color: 'red',
+  },
 };

@@ -3,18 +3,20 @@
 
 - unless app == 'external'
   .buttons{class: @level.properties['submittable'] == 'true' ? 'submittable' : nil}
-    - if local_assigns[:previous_button]
+    - if local_assigns[:previous_page_button]
       %a.btn.btn-large.btn-primary.previousPageButton
         =t('previous_page')
-    - if local_assigns[:next_button]
+    - if local_assigns[:next_level_link]
+      -# In the case where a level cannot be retried, we dynamically hide the submit button and show this button
+      %a{href: local_assigns[:next_link_level], class: 'btn btn-large btn-primary next-lesson nextLevelButton', style: !!local_assigns[:show_next_page_link] ? nil : 'display:none'}
+        =t('next_level')
+    - if local_assigns[:next_page_button]
       %a.btn.btn-large.btn-primary.nextPageButton
         =t('next_page')
-    - elsif local_assigns[:continue_button]
-      %a.btn.btn-large.btn-primary.next-lesson.submitButton
-        =t('continue')
     - else
-      %a.btn.btn-large.btn-primary.next-lesson.submitButton
+      %a.btn.btn-large.btn-primary.next-lesson.submitButton{style: !!local_assigns[:show_next_page_link] ? 'display:none' : nil}
         =t('submit')
+      -# This button is unhidden in _dialog.js if the user has already submitted
       - if @level.properties['submittable'] && !Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
         %a.btn.btn-large.btn-primary.unsubmitButton{style: 'display: none'}
           =t('unsubmit')

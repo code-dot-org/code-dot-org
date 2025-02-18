@@ -23,3 +23,5 @@ teacher_markdown <<MARKDOWN
 * IOC-1.D: Explain how bias exists in computing innovations.
 :::
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,20 +1,23 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import msg from '@cdo/locale';
-import javalabMsg from '@cdo/javalab/locale';
-import onClickOutside from 'react-onclickoutside';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
-import style from './javalab-settings.module.scss';
-import JavalabButton from './JavalabButton';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import onClickOutside from 'react-onclickoutside';
+import {connect} from 'react-redux';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+import javalabMsg from '@cdo/javalab/locale';
+import msg from '@cdo/locale';
+
 import {DisplayTheme} from './DisplayTheme';
+import JavalabButton from './JavalabButton';
 import {
   decreaseEditorFontSize,
   increaseEditorFontSize,
-  setDisplayTheme
-} from './javalabRedux';
-import CloseOnEscape from './components/CloseOnEscape';
+  setDisplayTheme,
+} from './redux/viewRedux';
+
+import style from './javalab-settings.module.scss';
 
 /**
  * Displays the settings options for JavaLab.
@@ -28,11 +31,11 @@ export class UnconnectedJavalabSettings extends Component {
     decreaseEditorFontSize: PropTypes.func.isRequired,
     canIncreaseFontSize: PropTypes.bool.isRequired,
     canDecreaseFontSize: PropTypes.bool.isRequired,
-    editorFontSize: PropTypes.number.isRequired
+    editorFontSize: PropTypes.number.isRequired,
   };
 
   state = {
-    dropdownOpen: false
+    dropdownOpen: false,
   };
 
   expandDropdown = () => {
@@ -96,7 +99,7 @@ export class UnconnectedJavalabSettings extends Component {
       decreaseEditorFontSize,
       canIncreaseFontSize,
       canDecreaseFontSize,
-      editorFontSize
+      editorFontSize,
     } = this.props;
 
     return (
@@ -163,14 +166,14 @@ export class UnconnectedJavalabSettings extends Component {
 
 export default connect(
   state => ({
-    displayTheme: state.javalab.displayTheme,
-    canIncreaseFontSize: state.javalab.canIncreaseFontSize,
-    canDecreaseFontSize: state.javalab.canDecreaseFontSize,
-    editorFontSize: state.javalab.editorFontSize
+    displayTheme: state.javalabView.displayTheme,
+    canIncreaseFontSize: state.javalabView.canIncreaseFontSize,
+    canDecreaseFontSize: state.javalabView.canDecreaseFontSize,
+    editorFontSize: state.javalabView.editorFontSize,
   }),
   dispatch => ({
     setDisplayTheme: displayTheme => dispatch(setDisplayTheme(displayTheme)),
     increaseEditorFontSize: () => dispatch(increaseEditorFontSize()),
-    decreaseEditorFontSize: () => dispatch(decreaseEditorFontSize())
+    decreaseEditorFontSize: () => dispatch(decreaseEditorFontSize()),
   })
 )(onClickOutside(UnconnectedJavalabSettings));

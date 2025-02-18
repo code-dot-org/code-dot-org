@@ -156,7 +156,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
   # update emails are sent by the system if there is no regional partner or if the regional partner
   # has not set the decision email flag to SENT_BY_PARTNER
   def update_emails_sent_by_system
-    !(object&.regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_PARTNER)
+    object&.regional_partner&.applications_decision_emails != RegionalPartner::SENT_BY_PARTNER
   end
 
   def meets_scholarship_criteria
@@ -187,6 +187,7 @@ class Api::V1::Pd::ApplicationSerializer < ActiveModel::Serializer
       title_i_status: stats.title_i_status,
       rural_status: yes_no_string(stats.rural_school?),
       school_type: school.school_type.try(:titleize),
+      school_last_census_status: school.census_for_year(object.census_year)&.teaches_cs,
       frl_eligible_percent: percent_string(stats.frl_eligible_total, stats.students_total),
       urm_percent: percent_string(urm_total, stats.students_total),
       students_total: stats.students_total,

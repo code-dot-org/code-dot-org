@@ -18,20 +18,23 @@
   DaemonMemoryUtilizationAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
+<%    unless rack_env?(:adhoc) -%>
       AlarmActions:
         - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%= rack_env?(:production) ? 'Urgent' : 'LowPriority'%>"
-      AlarmDescription: Send page if daemon memory utilization exceeds 87% for 5 minutes
+<%    end -%>
+      AlarmDescription: Daemon memory utilization exceeded 87% for 5 minutes
       AlarmName: <%="#{stack_name}_daemon_high_memory_utilization" %>
       ComparisonOperator: GreaterThanThreshold
       Dimensions:
         - {Name: InstanceId, Value: !Ref <%=daemon%>}
+        - {Name: Environment, Value: <%= environment %>}
       EvaluationPeriods: 7
-      MetricName: MemoryUtilization
-      Namespace: 'System/Linux'
+      MetricName: mem_used_percent
+      Namespace: CWAgent
       Period: 60
       Statistic: Maximum
       Threshold: 87
-      TreatMissingData: missing
+      TreatMissingData: breaching
 <% if environment == :production -%>
   # Detect problems with the bin/cron/deliver_poste_messages scheduled job by monitoring outbound emails sent by AWS SES.
   OutboundEmailAlarm:
@@ -52,3 +55,36 @@
       TreatMissingData: breaching
 <%  end -%>
 
+  # ---------------------------------------------
+  # Team Alerting SNS Topics
+  # 
+  # These topics are created in each environment
+  # and will be subscribed to by alerting tools
+  # like PagerDuty, Slack (Chatbot) or others.
+  #
+  # Unmanaged topics that could be migrated here:
+  #   - CDO-LowPriority
+  #   - CDO-WorkdayUrgent
+  #   - CDO-Urgent
+  #
+  # ---------------------------------------------
+
+  InfraLowPriority:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      DisplayName: Infra-LowPriority
+
+  InfraWorkdayUrgent:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      DisplayName: Infra-WorkdayUrgent
+
+  InfraUrgent:
+    Type: 'AWS::SNS::Topic'
+    Properties:
+      DisplayName: Infra-Urgent
+
+  StudentLearningWorkdayUrgent:
+      Type: 'AWS::SNS::Topic'
+      Properties:
+        DisplayName: StudentLearning-WorkdayUrgent

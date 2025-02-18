@@ -20,3 +20,5 @@ wrong 'Use of emojis to rate "Happiness Moments". '
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

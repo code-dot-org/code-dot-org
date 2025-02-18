@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "ڈانس پارٹی", body: "ایک ڈانس پارٹی کو کوڈ کریں! جس میں Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney'کے \"Encanto,\" کی موسیقی اور مزید فیچرڈ ہیں!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "نظم کا آرٹ", body: "اس آور آف کوڈ کی سرگرمی میں ایک کلاسک نظم میں آرٹ اور اینیمیشن شامل کریں۔!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "آرٹسٹ", body: "آرٹسٹ کے ساتھ شاندار تصاویر اور ڈیزائن بنائیں!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "انفینیٹی پلے لیب", body: "ایک کہانی بنانے یا ڈزنی انفینٹی کریکٹرز پر مشتمل ایک گیم بنانے کے لیے پلے لیب کا استعمال کریں۔", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

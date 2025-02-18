@@ -23,3 +23,5 @@ DISPLAY (data)
 
 *(Note: you may use the AP pseudocode quick reference guide to look up the behavior of INSERT)*
 MARKDOWN
+
+allow_multiple_attempts true

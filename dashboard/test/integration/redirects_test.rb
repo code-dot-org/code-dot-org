@@ -36,24 +36,42 @@ class RedirectsTest < ActionDispatch::IntegrationTest
 
   test 'redirects cartoon network quick links' do
     get '/flappy/lang/ar'
+    assert_redirected_to '/flappy/1?set_locale=ar-SA&lang=ar-SA'
+    follow_redirect!
     assert_redirected_to '/flappy/1?lang=ar-SA'
+    assert_equal 'ar-SA', cookies[:language_]
 
     get '/playlab/lang/ar'
+    assert_redirected_to '/s/playlab/lessons/1/levels/1?set_locale=ar-SA&lang=ar-SA'
+    follow_redirect!
     assert_redirected_to '/s/playlab/lessons/1/levels/1?lang=ar-SA'
+    assert_equal 'ar-SA', cookies[:language_]
 
     get '/artist/lang/ar'
+    assert_redirected_to '/s/artist/lessons/1/levels/1?set_locale=ar-SA&lang=ar-SA'
+    follow_redirect!
     assert_redirected_to '/s/artist/lessons/1/levels/1?lang=ar-SA'
+    assert_equal 'ar-SA', cookies[:language_]
   end
 
   test 'redirects lang parameter' do
     get '/lang/es'
+    assert_redirected_to '/?set_locale=es&lang=es'
+    follow_redirect!
     assert_redirected_to '/?lang=es'
+    assert_equal 'es-ES', cookies[:language_]
 
     get '/s/frozen/lang/es'
+    assert_redirected_to '/s/frozen?set_locale=es&lang=es'
+    follow_redirect!
     assert_redirected_to '/s/frozen?lang=es'
+    assert_equal 'es-ES', cookies[:language_]
 
     get '/s/course1/lessons/1/levels/1/lang/es'
+    assert_redirected_to '/s/course1/lessons/1/levels/1?set_locale=es&lang=es'
+    follow_redirect!
     assert_redirected_to '/s/course1/lessons/1/levels/1?lang=es'
+    assert_equal 'es-ES', cookies[:language_]
   end
 
   test 'redirects urls with stage and puzzle to lessons and levels' do
@@ -116,13 +134,6 @@ class RedirectsTest < ActionDispatch::IntegrationTest
       follow_redirect!
     end
     assert_includes e.message, 'No route matches'
-  end
-
-  test 'old script id paths redirect to named paths' do
-    %w(2:Hour%20of%20Code 4:events 7:jigsaw).map {|s| s.split ':'}.each do |before, after|
-      get "/s/#{before}"
-      assert_redirected_to "/s/#{after}"
-    end
   end
 
   test 'redirects weblab code studio share link to codeprojects' do

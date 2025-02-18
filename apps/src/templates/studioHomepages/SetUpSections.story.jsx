@@ -1,30 +1,33 @@
-import React from 'react';
-import SetUpSections from './SetUpSections';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+import {Provider} from 'react-redux';
 
-export default storybook =>
-  storybook
-    .storiesOf('Homepages/Teachers/SetUpSections', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Set Up Message for Sections - no sections yet',
-        description: `Information box if the teacher doesn't have any sections yet`,
-        story: () => (
-          <SetUpSections
-            beginEditingSection={action('beginEditingSection')}
-            hasSections={false}
-          />
-        )
-      },
-      {
-        name: 'Set Up Message for Sections - already has section',
-        description: `Information box if the teacher does have sections already`,
-        story: () => (
-          <SetUpSections
-            beginEditingSection={action('beginEditingSection')}
-            hasSections={true}
-          />
-        )
-      }
-    ]);
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import SetUpSections, {UnconnectedSetUpSections} from './SetUpSections';
+
+export default {
+  component: SetUpSections,
+};
+
+const Template = args => (
+  <Provider store={reduxStore()}>
+    <UnconnectedSetUpSections
+      beginEditingSection={action('beginEditingSection')}
+      asyncLoadComplete={true}
+      {...args}
+    />
+  </Provider>
+);
+
+// Information box if the teacher doesn't have any sections yet.
+export const NoSectionsYet = Template.bind({});
+NoSectionsYet.args = {
+  hasSections: false,
+};
+
+// Information box if the teacher does have sections already.
+export const AlreadyHasSection = Template.bind({});
+AlreadyHasSection.args = {
+  hasSections: true,
+};

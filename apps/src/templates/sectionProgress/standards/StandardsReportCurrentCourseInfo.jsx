@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {scriptDataPropType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import {unitDataPropType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import {cstaStandardsURL} from './standardsConstants';
 
 export default class StandardsReportCurrentCourseInfo extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
     unitDescription: PropTypes.string.isRequired,
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
-    numLessonsInUnit: PropTypes.number
+    numLessonsInUnit: PropTypes.number,
   };
 
   getLinkToOverview() {
@@ -35,7 +37,7 @@ export default class StandardsReportCurrentCourseInfo extends Component {
           <p>{this.props.unitDescription} </p>
           <SafeMarkdown
             markdown={i18n.mapsToCSTAStandards({
-              cstaLink: cstaStandardsURL
+              cstaLink: cstaStandardsURL,
             })}
           />
         </div>
@@ -68,25 +70,25 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    width: '100%'
+    width: '100%',
   },
   classProgress: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 30
+    marginLeft: 30,
   },
   courseOverview: {
-    width: '75%'
+    width: '75%',
   },
   scriptLink: {
-    color: color.teal
+    color: color.teal,
   },
   statsRow: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   lessonNote: {
-    marginTop: 10
-  }
+    marginTop: 10,
+  },
 };

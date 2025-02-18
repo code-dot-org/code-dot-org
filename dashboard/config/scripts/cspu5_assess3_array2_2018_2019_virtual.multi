@@ -27,3 +27,5 @@ Going through the code line by line:
 * _b_ is set to the value of index i+1, which is at data[5] = 2
 * a + b = 6
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,21 +1,23 @@
 import React from 'react';
-import ProgressTableLevelBubble from './ProgressTableLevelBubble';
-import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
-import color from '@cdo/apps/util/color';
+
 import {BubbleSize} from '@cdo/apps/templates/progress/BubbleFactory';
+import color from '@cdo/apps/util/color';
+import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 
 const statuses = [
   LevelStatus.not_tried,
   LevelStatus.attempted,
   LevelStatus.passed,
-  LevelStatus.perfect
+  LevelStatus.perfect,
 ];
 const assessmentStatuses = [
   LevelStatus.not_tried,
   LevelStatus.attempted,
   LevelStatus.submitted,
   LevelStatus.completed_assessment,
-  LevelStatus.perfect
+  LevelStatus.perfect,
 ];
 
 const wrapperStyle = {
@@ -24,186 +26,150 @@ const wrapperStyle = {
   backgroundColor: color.background_gray,
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
 };
 
-function wrapped(component) {
-  return <div style={wrapperStyle}>{component}</div>;
-}
+const SingleTemplate = args => (
+  <div style={wrapperStyle}>
+    <ProgressTableLevelBubble {...args} />
+  </div>
+);
 
-function wrapMultiple(components) {
-  return (
-    <div style={{...wrapperStyle, width: null, height: null}}>
-      {components.map(component => component)}
-    </div>
-  );
-}
+export const LockedBubble = SingleTemplate.bind({});
+LockedBubble.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.level,
+  isLocked: true,
+  title: '3',
+  url: '/foo/bar',
+};
 
-export default storybook => {
-  storybook
-    .storiesOf('SectionProgress/ProgressTableLevelBubble', module)
-    .addStoryTable(
-      [
-        {
-          name: `locked bubble`,
-          story: () =>
-            wrapped(
-              <ProgressTableLevelBubble
-                levelStatus={LevelStatus.not_tried}
-                levelKind={LevelKind.level}
-                isLocked={true}
-                title={'3'}
-                url={'/foo/bar'}
-              />
-            )
-        }
-      ]
-        .concat(
-          statuses.map(status => ({
-            name: `regular bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.level}
-                  title={'3'}
-                  url={'/foo/bar'}
-                />
-              )
-          }))
-        )
-        .concat(
-          statuses.map(status => ({
-            name: `concept bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.level}
-                  title={'3'}
-                  url={'/foo/bar'}
-                  isConcept={true}
-                />
-              )
-          }))
-        )
-        .concat(
-          assessmentStatuses.map(status => ({
-            name: `assessment bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.assessment}
-                  title={'3'}
-                  url={'/foo/bar'}
-                />
-              )
-          }))
-        )
-        .concat(
-          statuses.slice(1).map(status => ({
-            name: `paired bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.level}
-                  title={'3'}
-                  url={'/foo/bar'}
-                  isPaired={true}
-                />
-              )
-          }))
-        )
-        .concat(
-          statuses.map(status => ({
-            name: `bonus bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.level}
-                  title={'3'}
-                  url={'/foo/bar'}
-                  isBonus={true}
-                />
-              )
-          }))
-        )
-        .concat(
-          statuses.map(status => ({
-            name: `unplugged bubble status: ${status}`,
-            story: () =>
-              wrapped(
-                <ProgressTableLevelBubble
-                  levelStatus={status}
-                  levelKind={LevelKind.level}
-                  title={'3'}
-                  url={'/foo/bar'}
-                  isUnplugged={true}
-                />
-              )
-          }))
-        )
-        .concat([
-          {
-            name: 'letter bubbles',
-            story: () =>
-              wrapMultiple([
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.perfect}
-                  bubbleSize={BubbleSize.letter}
-                  title={'a'}
-                  url={'/foo/bar'}
-                  key={1}
-                />,
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.attempted}
-                  bubbleSize={BubbleSize.letter}
-                  title={'b'}
-                  url={'/foo/bar'}
-                  key={2}
-                />,
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.not_tried}
-                  bubbleSize={BubbleSize.letter}
-                  title={'c'}
-                  url={'/foo/bar'}
-                  key={3}
-                />
-              ])
-          }
-        ])
-        .concat([
-          {
-            name: 'dot bubbles',
-            story: () =>
-              wrapMultiple([
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.perfect}
-                  isConcept={true}
-                  bubbleSize={BubbleSize.dot}
-                  title={'a'}
-                  url={'/foo/bar'}
-                  key={1}
-                />,
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.attempted}
-                  bubbleSize={BubbleSize.dot}
-                  title={'b'}
-                  url={'/foo/bar'}
-                  key={2}
-                />,
-                <ProgressTableLevelBubble
-                  levelStatus={LevelStatus.not_tried}
-                  bubbleSize={BubbleSize.dot}
-                  title={'c'}
-                  url={'/foo/bar'}
-                  key={3}
-                />
-              ])
-          }
-        ])
-    );
+LockedBubble.argTypes = {
+  levelStatus: {control: 'select', options: statuses},
+};
+
+export const BubbleStatus = SingleTemplate.bind({});
+BubbleStatus.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.level,
+  title: '3',
+  url: '/foo/bar',
+};
+
+export const ConceptBubbleStatus = SingleTemplate.bind({});
+ConceptBubbleStatus.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.level,
+  title: '3',
+  url: '/foo/bar',
+  isConcept: true,
+};
+
+export const AssessmentBubbleStatus = SingleTemplate.bind({});
+AssessmentBubbleStatus.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.assessment,
+  title: '3',
+  url: '/foo/bar',
+};
+
+AssessmentBubbleStatus.argTypes = {
+  levelStatus: {control: 'select', options: assessmentStatuses},
+};
+
+export const BonusBubbleStatus = SingleTemplate.bind({});
+BonusBubbleStatus.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.level,
+  title: '3',
+  url: '/foo/bar',
+  isBonus: true,
+};
+
+const pairedBubbleStatuses = [...statuses].slice(1);
+
+export const PairedBubbleStatus = SingleTemplate.bind({});
+PairedBubbleStatus.args = {
+  levelStatus: pairedBubbleStatuses[0],
+  levelKind: LevelKind.level,
+  title: '3',
+  url: '/foo/bar',
+  isPaired: true,
+};
+
+PairedBubbleStatus.argTypes = {
+  levelStatus: {control: 'select', options: pairedBubbleStatuses},
+};
+
+export const UnpluggedBubbleStatus = SingleTemplate.bind({});
+UnpluggedBubbleStatus.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.level,
+  title: '3',
+  url: '/foo/bar',
+  isUnplugged: true,
+};
+
+export const LetterBubbles = () => (
+  <div style={{...wrapperStyle, width: null, height: null}}>
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.perfect}
+      bubbleSize={BubbleSize.letter}
+      title={'a'}
+      url={'/foo/bar'}
+      key={1}
+    />
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.attempted}
+      bubbleSize={BubbleSize.letter}
+      title={'b'}
+      url={'/foo/bar'}
+      key={2}
+    />
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.not_tried}
+      bubbleSize={BubbleSize.letter}
+      title={'c'}
+      url={'/foo/bar'}
+      key={3}
+    />
+  </div>
+);
+
+LetterBubbles.argTypes = {};
+
+export const DotBubbles = () => (
+  <div style={{...wrapperStyle, width: null, height: null}}>
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.perfect}
+      isConcept={true}
+      bubbleSize={BubbleSize.dot}
+      title={'a'}
+      url={'/foo/bar'}
+      key={1}
+    />
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.attempted}
+      bubbleSize={BubbleSize.dot}
+      title={'b'}
+      url={'/foo/bar'}
+      key={2}
+    />
+    <ProgressTableLevelBubble
+      levelStatus={LevelStatus.not_tried}
+      bubbleSize={BubbleSize.dot}
+      title={'c'}
+      url={'/foo/bar'}
+      key={3}
+    />
+  </div>
+);
+
+DotBubbles.argTypes = {};
+
+export default {
+  component: ProgressTableLevelBubble,
+  argTypes: {
+    levelStatus: {control: 'select', options: statuses},
+  },
 };

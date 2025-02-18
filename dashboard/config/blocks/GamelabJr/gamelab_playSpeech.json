@@ -2,7 +2,6 @@
   "category": "World",
   "config": {
     "func": "playSpeech",
-    "docFunc": "gamelab_playSpeech",
     "blockText": "play speech {SOUND}",
     "args": [
       {
@@ -10,6 +9,7 @@
         "type": "String",
         "field": true
       }
-    ]
+    ],
+    "style": "default"
   }
 }

@@ -1,0 +1,81 @@
+name 'sp-pl-DS-teacher-Codap'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data Visualization 
+
+
+
+#### There are many ways to visualize data. If you have time to discuss with your class, you may wish to ask what they notice the differences are between the bar charts and the dot plots and when they might use each. 
+
+---
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+  <td style="text-align: center; padding-bottom: 10px">
+    <img src="https://images.code.org/c8e2e1a6ca32b6e987d8033a4b3e93f1-image-1731425512254.png" alt="Dot Plot Image" width="200">
+  </td>
+  <td style="text-align: center; padding-bottom: 10px;">
+    <img src="https://images.code.org/0c3faaf47fecefab31d4eb9ea5011a61-image-1731425456148.png" alt="Bar Chart Image" width="200">
+  </td>
+  <td style="text-align: center; padding-bottom: 10px">
+    <img src="https://images.code.org/b5dd1ce9a5e6b3d8122a87a21efc7ab0-image-1731425622735.png" alt="Scatter Plot Image" width="200">
+  </td>
+</tr>
+  <tr>
+    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Dot Plot</b></th>
+    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Bar Chart</b></th>
+    <td style="font-size: 18pt; color: #0093A4; text-align: center;"><b>Scatter Plot</b></th>
+  </tr>
+  <tr>
+    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
+      <ul>
+        <li style="font-size: 14pt">Shows individual data points, making it easy to count.</li>
+        <li style="font-size: 14pt">Great for comparing small datasets.</li>
+        <li style="font-size: 14pt">Useful for spotting outliers.</li>
+      </ul>
+    </td>
+    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
+      <ul>
+        <li style="font-size: 14pt">Ideal for comparing quantities across categories.</li>
+        <li style="font-size: 14pt">Clearly shows differences between groups.</li>
+        <li style="font-size: 14pt">Easy to read and interpret.</li>
+      </ul>
+    </td>
+    <td style="padding: 5px; font-size: 16pt; text-align: left; vertical-align: top;">
+      <ul>
+        <li style="font-size: 14pt">Displays relationships between two variables.</li>
+        <li style="font-size: 14pt">Helps identify correlations, patterns, or clusters in data.</li>
+        <li style="font-size: 14pt">Useful for spotting trends.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+##
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/984c5b8d41d2e371f98ff81b9af4c7a5-image-1724350333310.png" style="float: left; height: 205px; clear: both; margin: 0 30px 20px 0;">
+
+<div style="background-color: #dccbea; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 10px 10px 1px 10px;">
+
+
+<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+<p style="font-size: 16px; line-height: 1.5; margin-left: 10px; margin-right: 30px;">The CODAP website brings data to life and is a great interactive tool. Using the Getting Started tutorials might help struggling learners catch on.
+</p>
+<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
+</p>
+</div>
+
+  <div style="clear: both;"></div>
+
+
+
+
+## Let's continue to data cleaning and interpretation!
+
+
+MARKDOWN

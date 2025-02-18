@@ -1,0 +1,22 @@
+@import '@cdo/apps/mixins.scss';
+@import 'color.scss';
+
+.container {
+  display: inline-block;
+}
+
+.tooltip {
+  max-width: 200px;
+  line-height: 20px;
+  white-space: normal;
+}
+
+.projectTemplateIcon {
+  padding-bottom: 3px;
+  opacity: 1;
+}
+
+.projectTemplateButton {
+  @include remove-button-styles;
+  margin-right: 5px;
+}

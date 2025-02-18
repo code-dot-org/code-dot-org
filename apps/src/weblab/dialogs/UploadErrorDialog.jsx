@@ -1,9 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
+import {reload} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 import weblabI18n from '@cdo/weblab/locale';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import {reload} from '@cdo/apps/utils';
 
 export default function UploadErrorDialog({isOpen, handleClose, ...props}) {
   return (
@@ -22,5 +23,5 @@ export default function UploadErrorDialog({isOpen, handleClose, ...props}) {
 
 UploadErrorDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  handleClose: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
 };

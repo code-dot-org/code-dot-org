@@ -1,18 +1,28 @@
 import _ from 'lodash';
+
+import {
+  updatePointerBlockImage,
+  updatePointerBlockWarning,
+} from '@cdo/apps/blockly/addons/cdoSpritePointer';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
+
+import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
+import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
+import MetricsReporter from './metrics/MetricsReporter';
 import xml from './xml';
 
+const styleTypes = Object.keys(cdoBlockStyles);
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
-const DEFAULT_COLOR = [184, 1.0, 0.74];
 
 /**
  * Create the xml for a level's toolbox
  * @param {string} blocks The xml of the blocks to go in the toolbox
  */
-exports.createToolbox = function(blocks) {
+exports.createToolbox = function (blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
-const appendBlocks = function(toolboxDom, blockTypes) {
+const appendBlocks = function (toolboxDom, blockTypes) {
   const root = toolboxDom.firstChild;
   blockTypes.forEach(blockName => {
     const block = toolboxDom.createElement('block');
@@ -23,7 +33,7 @@ const appendBlocks = function(toolboxDom, blockTypes) {
 };
 exports.appendBlocks = appendBlocks;
 
-exports.appendBlocksByCategory = function(toolboxXml, blocksByCategory) {
+exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
   const parser = new DOMParser();
   const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
   if (!toolboxDom.querySelector('category')) {
@@ -62,8 +72,9 @@ exports.appendBlocksByCategory = function(toolboxXml, blocksByCategory) {
  * @param {string} values.type Type of the value input
  * @param {string} values.titleName Name of the title block
  * @param {string} values.titleValue Input value
+ * @param {string} id Block Id, primarily for tests
  */
-exports.blockOfType = function(type, titles, values) {
+exports.blockOfType = function (type, titles, values, id) {
   let inputText = '';
   if (titles) {
     for (let key in titles) {
@@ -74,20 +85,19 @@ exports.blockOfType = function(type, titles, values) {
     for (let key in values) {
       inputText += `<value name="${key}">
         <block type="${values[key].type}">
-          <title name="${values[key].titleName}">${
-        values[key].titleValue
-      }</title>
+          <title name="${values[key].titleName}">${values[key].titleValue}</title>
         </block>
       </value>`;
     }
   }
-  return `<block type="${type}">${inputText}</block>`;
+  const blockIdAttr = id ? ` id="${id}"` : '';
+  return `<block type="${type}"${blockIdAttr}>${inputText}</block>`;
 };
 
 /*
  * Creates an XML node for an individual block. See blockOfType for params
  */
-exports.blockAsXmlNode = function(type, inputs = {}) {
+exports.blockAsXmlNode = function (type, inputs = {}) {
   return xml.parseElement(
     exports.blockOfType(type, inputs.titles, inputs.values)
   ).firstChild;
@@ -100,7 +110,7 @@ exports.blockAsXmlNode = function(type, inputs = {}) {
  * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
  * @param {string} child Xml for the child block
  */
-exports.blockWithNext = function(type, titles, child) {
+exports.blockWithNext = function (type, titles, child) {
   var titleText = '';
   if (titles) {
     for (var key in titles) {
@@ -122,7 +132,7 @@ exports.blockWithNext = function(type, titles, child) {
  * Give a list of types, returns the xml assuming each block is a child of
  * the previous block.
  */
-exports.blocksFromList = function(types) {
+exports.blocksFromList = function (types) {
   if (types.length === 1) {
     return this.blockOfType(types[0]);
   }
@@ -133,7 +143,7 @@ exports.blocksFromList = function(types) {
 /**
  * Create the xml for a category in a toolbox
  */
-exports.createCategory = function(name, blocks, custom) {
+exports.createCategory = function (name, blocks, custom) {
   return (
     '<category name="' +
     name +
@@ -148,8 +158,8 @@ exports.createCategory = function(name, blocks, custom) {
 /**
  * Generate a simple block with a plain title and next/previous connectors.
  */
-exports.generateSimpleBlock = function(blockly, generator, options) {
-  ['name', 'title', 'tooltip', 'functionName'].forEach(function(param) {
+exports.generateSimpleBlock = function (blockly, generator, options) {
+  ['name', 'title', 'tooltip', 'functionName'].forEach(function (param) {
     if (!options[param]) {
       throw new Error('generateSimpleBlock requires param "' + param + '"');
     }
@@ -164,10 +174,14 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
 
   blockly.Blocks[name] = {
     helpUrl: helpUrl,
-    init: function() {
+    init: function () {
       // Note: has a fixed HSV.  Could make this customizable if need be
-      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      var input = this.appendDummyInput();
+      Blockly.cdoUtils.handleColorAndStyle(
+        this,
+        BlockColors.DEFAULT,
+        BlockStyles.DEFAULT
+      );
+      var input = this.appendEndRowInput();
       if (title) {
         input.appendField(title);
       }
@@ -177,10 +191,10 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(tooltip);
-    }
+    },
   };
 
-  generator[name] = function() {
+  generator[name] = function () {
     // Generate JavaScript for putting dirt on to a tile.
     return functionName + "('block_id_" + this.id + "');\n";
   };
@@ -191,7 +205,7 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
  * @param blockDOM {Element}
  * @returns {*}
  */
-exports.domToBlock = function(blockDOM) {
+exports.domToBlock = function (blockDOM) {
   return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
 };
 
@@ -201,7 +215,7 @@ exports.domToBlock = function(blockDOM) {
  * @param blockDOMString
  * @returns {*}
  */
-exports.domStringToBlock = function(blockDOMString) {
+exports.domStringToBlock = function (blockDOMString) {
   return exports.domToBlock(xml.parseElement(blockDOMString).firstChild);
 };
 
@@ -210,7 +224,7 @@ exports.domStringToBlock = function(blockDOMString) {
  * block inserted in front of the first non-function block.  If we already have
  * this block, does nothing.
  */
-exports.forceInsertTopBlock = function(input, blockType) {
+exports.forceInsertTopBlock = function (input, blockType) {
   input = input || '';
 
   if (blockType === null || input.indexOf(blockType) !== -1) {
@@ -227,6 +241,7 @@ exports.forceInsertTopBlock = function(input, blockType) {
   topBlock.setAttribute('type', blockType);
   topBlock.setAttribute('movable', 'false');
   topBlock.setAttribute('deletable', 'false');
+  topBlock.setAttribute('id', 'topBlock');
 
   var numChildren = root.childNodes ? root.childNodes.length : 0;
 
@@ -251,13 +266,7 @@ exports.forceInsertTopBlock = function(input, blockType) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    var next;
-    if (/^functional/.test(blockType)) {
-      next = doc.createElement('functional_input');
-      next.setAttribute('name', 'ARG1');
-    } else {
-      next = doc.createElement('next');
-    }
+    var next = doc.createElement('next');
     next.appendChild(firstBlock);
     topBlock.appendChild(next);
   }
@@ -271,148 +280,10 @@ exports.forceInsertTopBlock = function(input, blockType) {
 };
 
 /**
- * Generate the xml for a block for the calc app.
- * @param {string} type Type for this block
- * @param {number[]|string[]} args List of args, where each arg is either the
- *   xml for a child block, a number, or the name of a variable.
- */
-exports.calcBlockXml = function(type, args) {
-  var str = '<block type="' + type + '" inline="false">';
-  for (var i = 1; i <= args.length; i++) {
-    str += '<functional_input name="ARG' + i + '">';
-    var arg = args[i - 1];
-    if (typeof arg === 'number') {
-      arg =
-        '<block type="functional_math_number"><title name="NUM">' +
-        arg +
-        '</title></block>';
-    } else if (/^<block/.test(arg)) {
-      // we have xml, dont make any changes
-    } else {
-      // we think we have a variable
-      arg = exports.calcBlockGetVar(arg);
-    }
-    str += arg;
-    str += '</functional_input>';
-  }
-  str += '</block>';
-
-  return str;
-};
-
-/**
- * @returns the xml for a functional_parameters_get block with the given
- *   variableName
- */
-exports.calcBlockGetVar = function(variableName) {
-  return (
-    '' +
-    '<block type="functional_parameters_get" uservisible="false">' +
-    '  <mutation>' +
-    '    <outputtype>Number</outputtype>' +
-    '  </mutation>' +
-    '  <title name="VAR">' +
-    variableName +
-    '</title>' +
-    '</block>'
-  );
-};
-
-/**
- * Generate the xml for a math block (either calc or eval apps).
- * @param {string} type Type for this block
- * @param {Object.<string,string>} inputs Dictionary mapping input name to the
-     xml for that input
- * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
- */
-exports.mathBlockXml = function(type, inputs, titles) {
-  var str = '<block type="' + type + '" inline="false">';
-  for (var title in titles) {
-    str += '<title name="' + title + '">' + titles[title] + '</title>';
-  }
-
-  for (var input in inputs) {
-    str +=
-      '<functional_input name="' +
-      input +
-      '">' +
-      inputs[input] +
-      '</functional_input>';
-  }
-
-  str += '</block>';
-
-  return str;
-};
-
-/**
- * Generate xml for a functional definition
- * @param {string} name The name of the function
- * @param {string} outputType Function's output type
- * @param {Object<string, string>[]} argList Name and type for each arg
- * @param {string} blockXml Xml for the blocks that actually define the function
- */
-exports.functionalDefinitionXml = function(
-  name,
-  outputType,
-  argList,
-  blockXml
-) {
-  var mutation = '<mutation>';
-  argList.forEach(function(argInfo) {
-    mutation +=
-      '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
-  });
-  mutation += '<outputtype>' + outputType + '</outputtype></mutation>';
-
-  return (
-    '<block type="functional_definition" inline="false">' +
-    mutation +
-    '<field name="NAME">' +
-    name +
-    '</field>' +
-    '<functional_input name="STACK">' +
-    blockXml +
-    '</functional_input>' +
-    '</block>'
-  );
-};
-
-/**
- * Generate xml for a calling a functional function
- * @param {string} name The name of the function
- * @param {Object<string, string>[]} argList Name and type for each arg
- */
-exports.functionalCallXml = function(name, argList, inputContents) {
-  if (argList.length !== inputContents.length) {
-    throw new Error('must define contents for each arg');
-  }
-
-  var mutation = '<mutation name="' + name + '">';
-  argList.forEach(function(argInfo) {
-    mutation +=
-      '<arg name="' + argInfo.name + '" type="' + argInfo.type + '"></arg>';
-  });
-  mutation += '</mutation>';
-
-  var contents = '';
-  inputContents.forEach(function(blockXml, index) {
-    contents +=
-      '<functional_input name="ARG' +
-      index +
-      '">' +
-      blockXml +
-      '</functional_input>';
-  });
-
-  return '<block type="functional_call">' + mutation + contents + '</block>';
-};
-
-/**
  * Removes all the deletable, movable, and uservisible attributes from the
  * blocks in blocksDom.
  */
-exports.cleanBlocks = function(blocksDom) {
+exports.cleanBlocks = function (blocksDom) {
   xml.visitAll(blocksDom, block => {
     if (!block.getAttribute) {
       return;
@@ -425,7 +296,7 @@ exports.cleanBlocks = function(blocksDom) {
  * Adds any functions from functionsXml to blocksXml. If a function with the
  * same id is already present in blocksXml, it won't be added again.
  */
-exports.appendNewFunctions = function(blocksXml, functionsXml) {
+exports.appendNewFunctions = function (blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
   const sharedFunctionsDom = xml.parseElement(functionsXml);
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
@@ -453,7 +324,13 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/field[@id="${name}"]`,
+        // Ignore namespaces. Find blocks of type e.g. behavior_definition
+        // Shared behavior name will either be in the mutation (Google Blockly)
+        // or the name field/title (CDO Blockly)
+        `//*[local-name()="block" and @type="${type}"]/*` +
+          `[self::*[local-name()="mutation" and @behaviorId="${name}"] or ` +
+          `self::*[(local-name()="title" or local-name()="field") and (@id="${name}" or .="${name}")]
+        ]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -546,14 +423,31 @@ const LABELED_INPUT_PARTS_REGEX = /(.*?)({([^}]*)}|\n|$)/m;
  * Finds the input config for the given input name, and removes it from args.
  * @param {InputConfig[]} args List of configs to search through
  * @param {string} inputName name of input to find and remove
+ * @param {string} blockText original block text used for metrics reporting in the case of a missing input
  * @returns InputConfig the input config with name `inputName`
  */
-const findAndRemoveInputConfig = (args, inputName) => {
-  const argIndex = args.findIndex(arg => arg.name === inputName);
-  if (argIndex !== -1) {
-    return args.splice(argIndex, 1)[0];
+const findAndRemoveInputConfig = (args, inputName, blockText) => {
+  if (args.length === 0) {
+    MetricsReporter.logWarning({
+      event: 'BLOCK_MISSING_INPUT',
+      message: `${inputName} not found in args. No args remaining.`,
+      blockText,
+    });
+    return null;
   }
-  throw new Error(`${inputName} not found in args`);
+
+  let argIndex = args.findIndex(arg => arg.name === inputName);
+  if (argIndex === -1) {
+    // In the case of a missing input, default to the first available arg.
+    // We're assuming that the order of the inputs in args matches the order in the block text.
+    argIndex = 0;
+    MetricsReporter.logWarning({
+      event: 'BLOCK_MISSING_INPUT',
+      message: `${inputName} not found in args. Defaulting to ${args[argIndex].name}`,
+      blockText,
+    });
+  }
+  return args.splice(argIndex, 1)[0];
 };
 
 /**
@@ -568,7 +462,7 @@ const findAndRemoveInputConfig = (args, inputName) => {
  *
  * @returns {LabeledInputConfig[]} a list of labeled inputs
  */
-const determineInputs = function(text, args, strictTypes = []) {
+const determineInputs = function (text, args, strictTypes = []) {
   const tokens = text.match(LABELED_INPUTS_REGEX);
   if (tokens.length && tokens[tokens.length - 1] === '') {
     tokens.pop();
@@ -578,7 +472,14 @@ const determineInputs = function(text, args, strictTypes = []) {
     const label = parts[1];
     const inputName = parts[3];
     if (inputName) {
-      const arg = findAndRemoveInputConfig(args, inputName);
+      const arg = findAndRemoveInputConfig(args, inputName, text);
+      if (arg === null) {
+        // If no valid arg was found, just use the label.
+        return {
+          mode: DUMMY_INPUT,
+          label,
+        };
+      }
       const strict = arg.strict || strictTypes.includes(arg.type);
       let mode;
       if (arg.options) {
@@ -605,7 +506,7 @@ const determineInputs = function(text, args, strictTypes = []) {
         options: arg.options,
         assignment: arg.assignment,
         defer: arg.defer,
-        customOptions: arg.customOptions
+        customOptions: arg.customOptions,
       };
       Object.keys(labeledInput).forEach(key => {
         if (labeledInput[key] === undefined) {
@@ -616,7 +517,7 @@ const determineInputs = function(text, args, strictTypes = []) {
     } else {
       return {
         mode: DUMMY_INPUT,
-        label
+        label,
       };
     }
   });
@@ -624,14 +525,17 @@ const determineInputs = function(text, args, strictTypes = []) {
     .filter(arg => arg.statement)
     .map(arg => ({
       mode: STATEMENT_INPUT,
-      name: arg.name
+      name: arg.name,
     }));
   inputs.push(...statementInputs);
   args = args.filter(arg => !arg.statement);
 
   if (args.length > 0) {
-    console.warn('Unexpected args in block definition:');
-    console.warn(args);
+    MetricsReporter.logWarning({
+      event: 'BLOCK_UNEXPECTED_ARGS',
+      args,
+      blockText: text,
+    });
   }
   return inputs;
 };
@@ -659,7 +563,7 @@ const STANDARD_INPUT_TYPES = {
         inputConfig.name,
         Blockly.JavaScript.ORDER_COMMA
       );
-    }
+    },
   },
   [STATEMENT_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
@@ -668,7 +572,7 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       const code = Blockly.JavaScript.statementToCode(block, inputConfig.name);
       return `function () {\n${code}}`;
-    }
+    },
   },
   [INLINE_DUMMY_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -686,15 +590,15 @@ const STANDARD_INPUT_TYPES = {
     },
     generateCode(block, inputConfig) {
       return null;
-    }
+    },
   },
   [DUMMY_INPUT]: {
     addInputRow(blockly, block, inputConfig) {
-      return block.appendDummyInput();
+      return block.appendEndRowInput();
     },
     generateCode(block, inputConfig) {
       return null;
-    }
+    },
   },
   [DROPDOWN_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -707,7 +611,8 @@ const STANDARD_INPUT_TYPES = {
     generateCode(block, inputConfig) {
       let code = block.getFieldValue(inputConfig.name);
       if (
-        inputConfig.type === Blockly.BlockValueType.STRING &&
+        (inputConfig.type === Blockly.BlockValueType.STRING ||
+          code === EMPTY_OPTION) &&
         !code.startsWith('"') &&
         !code.startsWith("'")
       ) {
@@ -715,40 +620,13 @@ const STANDARD_INPUT_TYPES = {
         code = JSON.stringify(code);
       }
       return code;
-    }
+    },
   },
   [VARIABLE_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       // Make sure the variable name gets declared at the top of the program
-      block.getVars = function() {
-        return {
-          [Blockly.Variables.DEFAULT_CATEGORY]: [
-            block.getFieldValue(inputConfig.name)
-          ]
-        };
-      };
-
-      // The following functions make sure that the variable naming/renaming options work for this block
-      block.renameVar = function(oldName, newName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.setTitleValue(newName, inputConfig.name);
-        }
-      };
-      block.removeVar = function(oldName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.dispose(true, true);
-        }
-      };
-      block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function(newValue, name) {
-        if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue);
-        }
-        block.superSetTitleValue(newValue, name);
+      block.getVars = function () {
+        return [block.getFieldValue(inputConfig.name)];
       };
 
       // Add the variable field to the block
@@ -760,7 +638,7 @@ const STANDARD_INPUT_TYPES = {
       return Blockly.JavaScript.translateVarName(
         block.getFieldValue(inputConfig.name)
       );
-    }
+    },
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -777,11 +655,11 @@ const STANDARD_INPUT_TYPES = {
         code = JSON.stringify(code);
       }
       return code;
-    }
-  }
+    },
+  },
 };
 
-const groupInputsByRow = function(inputs, inputTypes = STANDARD_INPUT_TYPES) {
+const groupInputsByRow = function (inputs, inputTypes = STANDARD_INPUT_TYPES) {
   const inputRows = [];
   let lastGroup = [];
   inputRows.push(lastGroup);
@@ -812,7 +690,7 @@ exports.groupInputsByRow = groupInputsByRow;
  *   their definitions,
  * @param {boolean} inline Whether inputs are being rendered inline
  */
-const interpolateInputs = function(
+const interpolateInputs = function (
   blockly,
   block,
   inputRows,
@@ -845,7 +723,7 @@ const interpolateInputs = function(
 exports.interpolateInputs = interpolateInputs;
 
 /**
- * Create a block generator that creats blocks that directly map to a javascript
+ * Create a block generator that creates blocks that directly map to a javascript
  * function call, method call, or other (hopefully simple) expression.
  *
  * @params {Blockly} blockly The Blockly object provided to install()
@@ -858,7 +736,7 @@ exports.interpolateInputs = interpolateInputs;
  * @returns {function} A function that takes a bunch of block properties and
  *   adds a block to the blockly.Blocks object. See param documentation below.
  */
-exports.createJsWrapperBlockCreator = function(
+exports.createJsWrapperBlockCreator = function (
   blockly,
   strictTypes,
   defaultObjectType,
@@ -870,7 +748,7 @@ exports.createJsWrapperBlockCreator = function(
 
   const inputTypes = {
     ...STANDARD_INPUT_TYPES,
-    ...customInputTypes
+    ...customInputTypes,
   };
 
   /**
@@ -933,7 +811,8 @@ exports.createJsWrapperBlockCreator = function(
       simpleValue,
       extraArgs,
       callbackParams,
-      miniToolboxBlocks
+      miniToolboxBlocks,
+      docFunc,
     },
     helperCode,
     pool
@@ -977,6 +856,23 @@ exports.createJsWrapperBlockCreator = function(
     if (inline === undefined) {
       inline = true;
     }
+
+    if (style && !styleTypes.includes(style)) {
+      // Attempt to guess the intended styles based on the first three letters.
+      const bestGuess =
+        styleTypes[
+          styleTypes.findIndex(type =>
+            type.startsWith(style.toLowerCase().slice(0, 3))
+          )
+        ];
+      throw new Error(
+        `"${style}" is not a valid style for ${name || func}. ` +
+          (bestGuess
+            ? `Did you mean "${bestGuess}"?`
+            : `Choose one of [${styleTypes.sort().join(', ')}]`)
+      );
+    }
+
     args = args || [];
     if (args.filter(arg => arg.statement).length > 1 && inline) {
       console.warn('blocks with multiple statement inputs cannot be inlined');
@@ -993,11 +889,15 @@ exports.createJsWrapperBlockCreator = function(
     const blockName = `${pool}_${name || func}`;
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
       // If the eventloop block doesn't explicitly list its statement inputs,
-      // just tack one onto the end
-      args.push({
+      // just tack one onto the end.
+      let argsCopy = [...args];
+      // argsCopy is used to avoid a 'TypeError: Cannot add property 2, object is not extensible'
+      // that occurs for lab2 labs since `levelProperties` for lab2 is stored in Redux.
+      argsCopy.push({
         name: 'DO',
-        statement: true
+        statement: true,
       });
+      args = argsCopy;
     }
     const inputs = [...args];
     if (methodCall && !thisObject) {
@@ -1006,7 +906,7 @@ exports.createJsWrapperBlockCreator = function(
       inputs.push({
         name: 'THIS',
         type: thisType,
-        strict: strictTypes.includes(thisType)
+        strict: strictTypes.includes(thisType),
       });
     }
     const inputConfigs = determineInputs(blockText, inputs, strictTypes);
@@ -1016,20 +916,10 @@ exports.createJsWrapperBlockCreator = function(
     }
 
     blockly.Blocks[blockName] = {
-      helpUrl: '',
-      init: function() {
-        // Styles should be used over hard-coded colors in Google Blockly blocks
-        if (style && this.setStyle) {
-          this.setStyle(style);
-        } else if (color) {
-          Blockly.cdoUtils.setHSV(this, ...color);
-        } else if (!returnType) {
-          if (this.setStyle) {
-            this.setStyle('default');
-          } else {
-            Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
-          }
-        }
+      helpUrl: getHelpUrl(docFunc), // optional param
+      init: function () {
+        // Apply style or color to block as needed, based on Blockly version.
+        Blockly.cdoUtils.handleColorAndStyle(this, color, style, returnType);
 
         if (returnType) {
           this.setOutput(
@@ -1047,117 +937,74 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
+        // Boolean constant to store when we show mini-toolbox.
         // Use window.appOptions, not global appOptions, because the levelbuilder
         // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
-        // there
-        if (
+        // there.
+        const showMiniToolbox =
           miniToolboxBlocks &&
-          (!window.appOptions || window.appOptions.level.miniToolbox)
-        ) {
-          var toggle = new Blockly.FieldIcon('+');
-          if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
-            toggle.setReadOnly();
-          }
+          (!window.appOptions || window.appOptions.level.miniToolbox);
 
-          var miniToolboxXml = '<xml>';
-          miniToolboxBlocks.forEach(block => {
-            miniToolboxXml += `\n <block type="${block}"></block>`;
-          });
-          miniToolboxXml += '\n</xml>';
-          // Block.isMiniFlyoutOpen is used in the blockly repo to track whether or not the horizontal flyout is open.
-          this.isMiniFlyoutOpen = false;
-          // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
-          Blockly.cdoUtils.bindBrowserEvent(
-            toggle.fieldGroup_,
-            'mousedown',
-            this,
-            () => {
-              if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
-                return;
-              }
+        let flyoutToggleButton;
+        if (showMiniToolbox) {
+          flyoutToggleButton =
+            Blockly.customBlocks.initializeMiniToolbox.bind(this)(
+              miniToolboxBlocks
+            );
+        }
 
-              if (this.isMiniFlyoutOpen) {
-                toggle.setValue('+');
-              } else {
-                toggle.setValue('-');
-              }
-              this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
-              this.render();
-              // If the mini flyout just opened, make sure mini-toolbox blocks are updated with the right thumbnails.
-              // This has to happen after render() because some browsers don't render properly if the elements are not
-              // visible. The root cause is that getComputedTextLength returns 0 if a text element is not visible, so
-              // the thumbnail image overlaps the label in Firefox, Edge, and IE.
-              if (this.isMiniFlyoutOpen) {
-                let miniToolboxBlocks = this.miniFlyout.blockSpace_.topBlocks_;
-                let rootInputBlocks = this.getConnections_(true /* all */)
-                  .filter(function(connection) {
-                    return connection.type === Blockly.INPUT_VALUE;
-                  })
-                  .map(function(connection) {
-                    return connection.targetBlock();
-                  });
-                miniToolboxBlocks.forEach(function(block, index) {
-                  block.shadowBlockValue_(rootInputBlocks[index]);
+        // We only set up block shadowing for blocks that have a type in spriteLabPointers.
+        if (Object.keys(spriteLabPointers).includes(this.type)) {
+          // saveExtraState is used to serialize the image source block ID.
+          this.saveExtraState = function () {
+            return {
+              imageSourceId: this.imageSourceId,
+            };
+          };
+
+          // loadExtraState is used to deserialize the image source block ID.
+          // We use this id to set the initial pointer block image.
+          this.loadExtraState = function (state) {
+            this.imageSourceId = state['imageSourceId'];
+            if (this.imageSourceId) {
+              updatePointerBlockImage(
+                this,
+                spriteLabPointers,
+                this.imageSourceId
+              );
+              const imageSourceBlock = Blockly.getMainWorkspace()?.getBlockById(
+                this.imageSourceId
+              );
+              if (imageSourceBlock) {
+                const imageSourceBlockWorkspace = imageSourceBlock.workspace;
+                imageSourceBlockWorkspace.addChangeListener(event => {
+                  onBlockImageSourceChange(event, this);
                 });
               }
             }
-          );
+          };
 
-          this.appendDummyInput()
-            .appendField(toggle, 'toggle')
-            .appendField(' ');
-
-          this.initMiniFlyout(miniToolboxXml);
+          // When the block's parent workspace changes, we check to see if
+          // we need to update the shadowed block image or warning text.
+          this.onchange = function (event) {
+            onBlockImageSourceChange(event, this);
+            updatePointerBlockWarning(this, spriteLabPointers);
+          };
         }
 
-        // These blocks should not be loaded into a Google Blockly level.
-        // In the event that they are, skip this so the page doesn't crash.
-        if (this.setBlockToShadow) {
-          // Set block to shadow for preview field if needed
-          switch (this.type) {
-            case 'gamelab_clickedSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_spriteClicked' &&
-                  root.getConnections_()[1] &&
-                  root.getConnections_()[1].targetBlock()
-              );
-              break;
-            case 'gamelab_newSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_whenSpriteCreated' &&
-                  root.getConnections_()[1] &&
-                  root.getConnections_()[1].targetBlock()
-              );
-              break;
-            case 'gamelab_subjectSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_checkTouching' &&
-                  root.getConnections_()[1] &&
-                  root.getConnections_()[1].targetBlock()
-              );
-              break;
-            case 'gamelab_objectSpritePointer':
-              this.setBlockToShadow(
-                root =>
-                  root.type === 'gamelab_checkTouching' &&
-                  root.getConnections_()[2] &&
-                  root.getConnections_()[2].targetBlock()
-              );
-              break;
-            default:
-              // Not a pointer block, so no block to shadow
-              break;
-          }
-        }
         interpolateInputs(blockly, this, inputRows, inputTypes, inline);
         this.setInputsInline(inline);
-      }
+
+        if (showMiniToolbox) {
+          Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
+            miniToolboxBlocks,
+            flyoutToggleButton
+          );
+        }
+      },
     };
 
-    generator[blockName] = function() {
+    generator[blockName] = function () {
       let prefix = '';
       const values = args
         .map(arg => {
@@ -1194,7 +1041,7 @@ exports.createJsWrapperBlockCreator = function(
         if (returnType !== undefined) {
           return [
             code,
-            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence,
           ];
         } else {
           return code + ';\n';
@@ -1242,7 +1089,7 @@ exports.createJsWrapperBlockCreator = function(
         if (returnType !== undefined) {
           return [
             `${prefix}${valueExpression}`,
-            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence
+            orderPrecedence === undefined ? ORDER_NONE : orderPrecedence,
           ];
         } else {
           return `${prefix}${valueExpression}`;
@@ -1260,10 +1107,10 @@ exports.createJsWrapperBlockCreator = function(
   };
 };
 
-exports.installCustomBlocks = function({
+exports.installCustomBlocks = function ({
   blockly,
   blockDefinitions,
-  customInputTypes
+  customInputTypes,
 }) {
   const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
     blockly,
@@ -1271,7 +1118,7 @@ exports.installCustomBlocks = function({
       // Strict Types
       blockly.BlockValueType.SPRITE,
       blockly.BlockValueType.BEHAVIOR,
-      blockly.BlockValueType.LOCATION
+      blockly.BlockValueType.LOCATION,
     ],
     blockly.BlockValueType.SPRITE,
     customInputTypes
@@ -1291,21 +1138,6 @@ exports.installCustomBlocks = function({
     }
   });
 
-  // TODO: extract Sprite-Lab-specific logic.
-  if (
-    blockly.Blocks.gamelab_location_variable_set &&
-    blockly.Blocks.gamelab_location_variable_get
-  ) {
-    Blockly.Variables.registerGetter(
-      Blockly.BlockValueType.LOCATION,
-      'gamelab_location_variable_get'
-    );
-    Blockly.Variables.registerSetter(
-      Blockly.BlockValueType.LOCATION,
-      'gamelab_location_variable_set'
-    );
-  }
-
   return blocksByCategory;
 };
 
@@ -1317,8 +1149,51 @@ exports.installCustomBlocks = function({
  * @param  {string[][]| string[]} dropdownOptions
  * @returns {string[][]} Sanitized array of dropdownOptions, ensuring that both a first and second value exist
  */
-const sanitizeOptions = function(dropdownOptions) {
+const sanitizeOptions = function (dropdownOptions) {
   return dropdownOptions.map(option =>
     option.length === 1 ? [option[0], option[0]] : option
   );
 };
+
+const getHelpUrl = function (docFunc) {
+  if (!docFunc) {
+    return '';
+  }
+  // Documentation is only available for Sprite Lab.
+  return `/docs/spritelab/${docFunc}`;
+};
+
+// On change event for a block that shadows an image source block.
+// On an event, checks if the block image should change, and update it.
+function onBlockImageSourceChange(event, block) {
+  const imagePreview =
+    block.inputList && block.inputList[0] && block.inputList[0].fieldRow[1];
+  if (!imagePreview) {
+    return;
+  }
+  if (event.type === Blockly.Events.BLOCK_DRAG && event.blockId === block.id) {
+    // If this is a start event, prevent image changes.
+    // If it is an end event, allow image changes again.
+    imagePreview.setAllowImageChange(!event.isStart);
+  }
+  if (
+    (event.type === Blockly.Events.BLOCK_CREATE &&
+      event.blockId === block.id) ||
+    (event.type === Blockly.Events.BLOCK_CHANGE && event.blockId === block.id)
+  ) {
+    // We can skip the following events:
+    // This block's create event, as we handle setting the image on block creation
+    // in src/p5lab/spritelab/blocks.
+    // This block's change event, as that means we just changed the image due to
+    // some other event.
+    return;
+  }
+  if (
+    imagePreview.shouldAllowImageChange() &&
+    (event.type === Blockly.Events.BLOCK_CREATE ||
+      event.type === Blockly.Events.BLOCK_CHANGE ||
+      event.type === Blockly.Events.BLOCK_DRAG)
+  ) {
+    updatePointerBlockImage(block, spriteLabPointers);
+  }
+}

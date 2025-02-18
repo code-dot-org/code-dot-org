@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Maze < Grid
@@ -134,5 +135,9 @@ class Maze < Grid
       </category>
       #{common_blocks(type)}
     XML
+  end
+
+  def validated?
+    true
   end
 end

@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef, useCallback} from 'react';
-import {TwoColumnActionBlock} from './TwoColumnActionBlock';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
-import Button from '@cdo/apps/templates/Button';
-import color from '../../util/color';
-import shapes from './shapes';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-// MarketingAnnouncementBanner is a wrapper around SpecialAnnouncementActionBlock
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+
+import color from '../../util/color';
+
+import shapes from './shapes';
+import TwoColumnActionBlock from './TwoColumnActionBlock';
+
+// MarketingAnnouncementBanner is a wrapper around TwoColumnActionBlock
 // which adds a button to dismiss the banner.
 const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   const [displayBanner, setDisplayBanner] = useState(true);
@@ -42,7 +45,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
         if (variant === '') {
           setActiveExperimentId(experimentId);
         }
-      }
+      },
     });
   }, []);
 
@@ -52,7 +55,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       bannerId = activeExperimentId;
     }
     return `display-announcement-${bannerId}`;
-  }, [activeExperimentId]);
+  }, [activeExperimentId, announcement.id]);
 
   const onDismiss = () => {
     const bannerKey = getLocalStorageBannerKey();
@@ -69,9 +72,9 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
         event: eventLabel,
         data_json: JSON.stringify({
           banner_title: bannerRef.current.querySelector(
-            '#two-column-action-block--sub-heading'
-          ).innerText
-        })
+            '.two-column-action-block--sub-heading'
+          ).innerText,
+        }),
       },
       {includeUserId: true}
     );
@@ -95,7 +98,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       : 'marketing-announcement-banner-btn',
     url: announcement.buttonUrl,
     text: announcement.buttonText,
-    onClick: () => logEvent('cta_button_clicked')
+    onClick: () => logEvent('cta_button_clicked'),
   };
 
   return (
@@ -103,7 +106,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       id="marketing-announcement-banner"
       style={{
         ...styles.container,
-        display: bannerDisplayStyle
+        display: bannerDisplayStyle,
       }}
     >
       {/* ID is used for easier targeting in Google Optimize */}
@@ -113,7 +116,6 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
           subHeading={announcement.title}
           description={announcement.body}
           buttons={[button]}
-          backgroundColor={announcement.backgroundColor}
           marginBottom={marginBottom}
         />
       </div>
@@ -130,21 +132,22 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
 
 const styles = {
   container: {
-    position: 'relative'
+    position: 'relative',
+    marginTop: '16px',
   },
   dismissButtonStyle: {
     position: 'absolute',
     top: '6px',
-    right: '10px',
-    color: color.white,
-    fontSize: '22px',
-    fontWeight: 'bold'
-  }
+    right: '6px',
+    color: color.neutral_dark40,
+    fontSize: '24px',
+    fontWeight: '300',
+  },
 };
 
 MarketingAnnouncementBanner.propTypes = {
   announcement: shapes.specialAnnouncement,
-  marginBottom: PropTypes.string
+  marginBottom: PropTypes.string,
 };
 
 export default MarketingAnnouncementBanner;

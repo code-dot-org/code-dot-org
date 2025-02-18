@@ -22,3 +22,5 @@ public class ClubMember {
 
 Which of the following correctly implements the subclass `ClubSponsor` with a method called `donate()`?
 MARKDOWN
+
+allow_multiple_attempts true

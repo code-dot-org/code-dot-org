@@ -1,0 +1,46 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T16:52:21.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Draw the images in the **Asset Manager** in your scene.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method to draw each image in the 1D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">images</code>.\r\n\r\nYou can choose where you want to draw the images and the size of the images.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>, instantiate an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene</code> object with the 1D array of images, and call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method.\r\n\r\n⚠️ **Don't forget!** Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Theater.playScenes(yourSceneObject)</code> method to play the scene.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Scene</code> class in the <strong>Documentation</strong> tab ⬆️ for help with drawing images in a scene.\r\n</div>\r\n\r\n<details style=\"background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;\">\r\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">🔦 How can I animate the images?</summary>\r\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\r\n\t\t<p>Try using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> or <code style=\"background-color: #ececec; color: black; font-weight: bold;\">clear()</code> methods to turn your scene into an animation!</p>\r\n\r\n* Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">pause()</code> method after drawing each image or after drawing a set of images.\r\n\r\n* Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">clear()</code> method to clear the scene before drawing another image if you don't want the previous image to still display in the scene.\r\n    </div>\r\n</details>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "TheaterRunner.java": {
+        "text": "import org.code.theater.*;\n\npublic class TheaterRunner {\n  public static void main(String[] args) {\n\n    String[] emojis = {\"laughing.png\", \"smiling.png\", \"surprised.png\", \"cool.png\"};\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Instantiate an ImageScene object, then call the drawScene() method.\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "ImageScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Represents a scene of images\n */\npublic class ImageScene extends Scene {\n\n  private String[] images;      // The 1D array of images to display in the scene\n\n  /*\n   * Initializes images to the specified 1D array of images\n   */\n  public ImageScene(String[] images) {\n    this.images = images;\n  }\n\n  /*\n   * Draws each images in the 1D array images in the scene\n   */\n  public void drawScene() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Draw each image in the 1D array images in the scene. You choose where\n     * you want to draw the images and the size of the images.\n     * -----------------------------------------------------------------------------\n     */\n\n\n    \n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "display_name": "Draw Emoji Images",
+    "bubble_choice_description": "Draw the emoji images in your scene.",
+    "thumbnail_url": "https://images.code.org/8aab9f65ce9e11545eb041c52e9de04c-cool.png",
+    "starter_assets": {
+      "pizza.png": "849a94b6-3543-45cd-96c0-5458289f5a50.png",
+      "burger.png": "035fb68c-42a6-496e-9372-8f78789123f3.png",
+      "sushi.png": "bef4596a-4064-4574-9635-760fcc7d0759.png",
+      "curry.png": "1d78713e-8e09-40ad-9edf-285f012418bb.png",
+      "laughing.png": "cc71b36f-861b-4f3f-ab93-7fd06dd52837.png",
+      "smiling.png": "58daa98f-703a-4a90-8924-2b67f9e208e9.png",
+      "surprised.png": "762533c8-e3da-4f4c-8886-fb50a12e5a97.png",
+      "cool.png": "7dfe3d94-b0a0-4587-a703-ae6b7b8abd9d.png"
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T16:52:21.036+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L4a_2025\\\"\"],\"cloned_from\":\"CSA U4L1-L4a_2025\"}]"
+}]]></config>
+</Javalab>

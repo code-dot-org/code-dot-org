@@ -1,451 +1,894 @@
 hour-of-code:
-  id: 1545
+  id: 353
   key: hour-of-code
   display_name: hour-of-code
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &1 2022-04-22 05:12:58.000000000 Z
-    zone: &2 !ruby/object:ActiveSupport::TimeZone
+    utc: 2022-04-13 23:51:28.000000000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
       name: Etc/UTC
-    time: *1
+    time: 2022-04-13 23:51:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *3
-  category: other
+    utc: 2022-04-13 23:51:28.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:28.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels:
+  header:
+  image:
+  cs_topic:
+  school_subject:
+  device_compatibility:
+  description:
+  professional_learning_program:
+  video:
+  published_date:
+  self_paced_pl_course_offering_id:
 events:
-  id: 1495
+  id: 319
   key: events
   display_name: events
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &4 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *4
+    utc: 2022-04-13 23:51:27.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:27.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &5 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *5
-  category: other
+    utc: 2022-04-13 23:51:27.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:27.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels:
+  header:
+  image:
+  cs_topic:
+  school_subject:
+  device_compatibility:
+  description:
+  professional_learning_program:
+  video:
+  published_date:
+  self_paced_pl_course_offering_id:
 jigsaw:
-  id: 1572
+  id: 202
   key: jigsaw
   display_name: Jigsaw
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &6 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *6
+    utc: 2021-11-11 11:54:58.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:54:58.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &7 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *7
-  category: other
+    utc: 2024-04-22 22:49:31.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels: K,1,2
+  header:
+  image: https://images.code.org/8fb543a9ed9f0fe3ed538e6d1bf5e189-Jigsaw2.png
+  cs_topic: digital_literacy
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Give students an idea of what to expect — mouse skills, lab manners,
+    completing puzzles, and more — when they head to the computer lab.
+  professional_learning_program:
+  video:
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2015-01-01 19:00:00.000000000 Z
+    zone: *1
+    time: 2015-01-01 19:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 648
 hourofcode:
-  id: 1590
+  id: 199
   key: hourofcode
   display_name: Classic Maze
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &8 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *8
+    utc: 2021-11-11 11:54:52.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:54:52.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &9 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *9
-  category: hoc
+    utc: 2024-04-22 22:49:31.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative: HOC
+  grade_levels: '2,3,4,5,6,7,8,9,10,11,12'
+  header: favorites
+  image: https://images.code.org/cfb05c65499db4c5faafca537f6a6044-classic maze.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"incompatible"}'
+  description: Try the basics of computer science with characters from Angry Birds,
+    Plants vs. Zombies, and Scrat from Ice Age!
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/bQilo5ecSX4/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=bQilo5ecSX4&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2013-12-01 19:00:00.000000000 Z
+    zone: *1
+    time: 2013-12-01 19:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 648
 starwars:
-  id: 1479
+  id: 219
   key: starwars
-  display_name: 'Star Wars: Building a Galaxy With Code (Javascript)'
+  display_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &10 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *10
+    utc: 2021-11-11 11:55:55.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:55:55.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &11 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *11
-  category: hoc
+    utc: 2024-04-22 22:49:31.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative: HOC
+  grade_levels: '6,7,8,9,10,11,12'
+  header: popular_media
+  image: https://images.code.org/b9845378bf9c6cb8e60b4bd614ef50d1-Starwars.png
+  cs_topic: games_and_animations,programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"not_recommended","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Use JavaScript to learn to program droids, and create your own Star
+    Wars game in a galaxy far, far away.
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/vNjiHkQQl6A/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=vNjiHkQQl6A&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2015-12-01 19:00:00.000000000 Z
+    zone: *1
+    time: 2015-12-01 19:00:00.000000000 Z
+  self_paced_pl_course_offering_id:
 frozen:
-  id: 1500
+  id: 191
   key: frozen
   display_name: Code with Anna and Elsa
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &12 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *12
+    utc: 2021-11-11 11:54:48.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:54:48.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &13 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *13
-  category: hoc
+    utc: 2024-04-22 22:49:31.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative: HOC
+  grade_levels: '2,3,4,5,6,7,8,9,10,11,12'
+  header: popular_media
+  image: https://images.code.org/f88534ee3652b3c55610069622d36b76-Frozen Tutorial.png
+  cs_topic: art_and_design,programming
+  school_subject: ''
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Join Anna and Elsa as they explore the magic and beauty of ice with
+    code! Create snowflakes and patterns as you ice-skate and make a winter wonderland.
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/H1-paxNG4kw/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=H1-paxNG4kw&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2014-12-01 19:00:00.000000000 Z
+    zone: *1
+    time: 2014-12-01 19:00:00.000000000 Z
+  self_paced_pl_course_offering_id:
 playlab:
-  id: 1564
+  id: 209
   key: playlab
   display_name: Play Lab
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &14 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *14
+    utc: 2021-11-11 11:55:35.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:55:35.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &15 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *15
-  category: hoc
+    utc: 2024-04-22 22:49:31.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative: HOC
+  grade_levels: '2,3,4,5,6,7,8,9,10,11,12'
+  header: labs_and_skills
+  image: https://images.code.org/8dd458f3fe1de6488e2426fa5fa34f74-playlab.png
+  cs_topic: games_and_animations,programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Make your own stories and games with basic block code. Add speech bubbles
+    and backgrounds, score points, and more—let's play and learn!
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/nVsZyQIZyPc/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=nVsZyQIZyPc&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2021-05-27 16:00:00.000000000 Z
+    zone: *1
+    time: 2021-05-27 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 648
 artist:
-  id: 1537
+  id: 160
   key: artist
   display_name: Artist
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &16 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *16
+    utc: 2021-11-11 11:46:18.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:46:18.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &17 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *17
-  category: hoc
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative: HOC
+  grade_levels: '2,3,4,5,6,7,8,9,10,11,12'
+  header: favorites
+  image: https://images.code.org/08d5be7ac5fddcc011e87acbb13b70e3-Artist.png
+  cs_topic: art_and_design,programming
+  school_subject: ''
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: In this activity, students use programming blocks to create images
+    of increasing complexity.
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/ws8rmHcqXeM/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=ws8rmHcqXeM&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2015-01-01 19:00:00.000000000 Z
+    zone: *1
+    time: 2015-01-01 19:00:00.000000000 Z
+  self_paced_pl_course_offering_id:
 algebra:
-  id: 1536
+  id: 156
   key: algebra
   display_name: Computer Science in Algebra
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &18 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *18
+    utc: 2021-11-11 11:45:59.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:45:59.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &19 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *19
-  category: math
+    utc: 2023-07-28 03:13:45.000000000 Z
+    zone: *1
+    time: 2023-07-28 03:13:45.000000000 Z
   is_featured: false
-  assignable: true
+  assignable: false
+  curriculum_type:
+  marketing_initiative:
+  grade_levels: '6,7,8'
+  header:
+  image: https://images.code.org/2eca236c5eee8b057b68b86606cece7b-CS in Algebra.png
+  cs_topic: programming
+  school_subject: math
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"not_recommended","mobile":"incompatible","no_device":"incompatible"}'
+  description:
+  professional_learning_program:
+  video:
+  published_date:
+  self_paced_pl_course_offering_id:
 flappy:
-  id: 1760
+  id: 190
   key: flappy
   display_name: Flappy Code
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &20 2022-04-22 05:13:00.000000000 Z
-    zone: *2
-    time: *20
+    utc: 2021-11-11 11:54:47.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:54:47.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &21 2022-04-22 05:13:00.000000000 Z
-    zone: *2
-    time: *21
-  category: hoc
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative: HOC
+  grade_levels: '2,3,4,5,6,7,8,9,10,11,12'
+  header: popular_media
+  image: https://images.code.org/25430e22ea0dcc7086ce618600498df5-flappy.png
+  cs_topic: games_and_animations,programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Create a game using basic block code in this introductory computer
+    science activity.
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/VQ4lo6Huylc/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=VQ4lo6Huylc&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2014-02-26 19:00:00.000000000 Z
+    zone: *1
+    time: 2014-02-26 19:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 648
 20-hour:
-  id: 1453
+  id: 151
   key: 20-hour
   display_name: Accelerated Intro to CS Course
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &22 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *22
+    utc: 2021-11-11 11:45:24.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:45:24.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &23 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *23
-  category: twenty_hour
+    utc: 2024-04-22 22:49:29.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:29.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type: Course
+  marketing_initiative:
+  grade_levels: '4,5,6,7,8'
+  header: express
+  image: https://images.code.org/06319e2e67e4cb08b20ae238dfe47ee3-20hour.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Let's go! This accelerated course covers core computer science and
+    programming concepts.
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2013-12-01 19:00:00.000000000 Z
+    zone: *1
+    time: 2013-12-01 19:00:00.000000000 Z
+  self_paced_pl_course_offering_id:
 course1:
-  id: 1596
+  id: 165
   key: course1
   display_name: Course 1
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &24 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *24
+    utc: 2021-11-11 11:46:41.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:46:41.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &25 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *25
-  category: csf_international
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels: K,1
+  header:
+  image: https://images.code.org/b29bfb9e72b11e5df15213379ddc2c49-course1.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: There's no I in Team! In this course, students create programs that
+    help them learn to collaborate with others and persist through difficult tasks.
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2014-08-01 16:00:00.000000000 Z
+    zone: *1
+    time: 2014-08-01 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id:
 course2:
-  id: 1563
+  id: 166
   key: course2
   display_name: Course 2
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &26 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *26
+    utc: 2021-11-11 11:46:46.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:46:46.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &27 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *27
-  category: csf_international
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels: '2,3,4,5'
+  header:
+  image: https://images.code.org/8c42006d8a9c466a95b53448b92fe14c-Course 2.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: In this course, students create programs to solve problems, as well
+    as interactive games or stories to share.
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2014-08-01 16:00:00.000000000 Z
+    zone: *1
+    time: 2014-08-01 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id:
 course3:
-  id: 1531
+  id: 167
   key: course3
   display_name: Course 3
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &28 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *28
+    utc: 2021-11-11 11:46:51.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:46:51.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &29 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *29
-  category: csf_international
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels: '3,4,5'
+  header:
+  image: https://images.code.org/d2eda1e6c959ce48a385c3f20cad19e2-Course 3.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Students dive deeper into programming topics introduced in previous
+    courses to create flexible solutions to more complex problems.
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2014-08-01 16:00:00.000000000 Z
+    zone: *1
+    time: 2014-08-01 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id:
 course4:
-  id: 1470
+  id: 168
   key: course4
   display_name: Course 4
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &30 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *30
+    utc: 2021-11-11 11:46:55.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:46:55.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &31 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *31
-  category: csf_international
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels: '4,5'
+  header:
+  image: https://images.code.org/266d9e2c86055943e57c4590edfe8df8-course4.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: 'In this course, students learn to tackle increasingly complex puzzles
+    and combine several concepts when solving challenges. '
+  professional_learning_program:
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2016-05-06 16:00:00.000000000 Z
+    zone: *1
+    time: 2016-05-06 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id:
 cspunit1:
-  id: 1577
+  id: 374
   key: cspunit1
   display_name: cspunit1
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &32 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *32
+    utc: 2022-04-13 23:51:28.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &33 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *33
-  category: other
+    utc: 2022-04-13 23:51:28.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:28.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels:
+  header:
+  image:
+  cs_topic:
+  school_subject:
+  device_compatibility:
+  description:
+  professional_learning_program:
+  video:
+  published_date:
+  self_paced_pl_course_offering_id:
 cspunit2:
-  id: 1606
+  id: 392
   key: cspunit2
   display_name: cspunit2
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &34 2022-04-22 05:12:59.000000000 Z
-    zone: *2
-    time: *34
+    utc: 2022-04-13 23:51:28.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &35 2022-04-22 05:12:59.000000000 Z
-    zone: *2
-    time: *35
-  category: other
+    utc: 2022-04-13 23:51:28.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:28.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels:
+  header:
+  image:
+  cs_topic:
+  school_subject:
+  device_compatibility:
+  description:
+  professional_learning_program:
+  video:
+  published_date:
+  self_paced_pl_course_offering_id:
 cspunit3:
-  id: 1683
+  id: 454
   key: cspunit3
   display_name: cspunit3
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &36 2022-04-22 05:12:59.000000000 Z
-    zone: *2
-    time: *36
+    utc: 2022-04-13 23:51:28.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &37 2022-04-22 05:12:59.000000000 Z
-    zone: *2
-    time: *37
-  category: other
+    utc: 2022-04-13 23:51:28.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:28.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels:
+  header:
+  image:
+  cs_topic:
+  school_subject:
+  device_compatibility:
+  description:
+  professional_learning_program:
+  video:
+  published_date:
+  self_paced_pl_course_offering_id:
 cspunit4:
-  id: 1727
+  id: 484
   key: cspunit4
   display_name: cspunit4
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &38 2022-04-22 05:13:00.000000000 Z
-    zone: *2
-    time: *38
+    utc: 2022-04-13 23:51:29.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:29.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &39 2022-04-22 05:13:00.000000000 Z
-    zone: *2
-    time: *39
-  category: other
+    utc: 2022-04-13 23:51:29.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:29.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels:
+  header:
+  image:
+  cs_topic:
+  school_subject:
+  device_compatibility:
+  description:
+  professional_learning_program:
+  video:
+  published_date:
+  self_paced_pl_course_offering_id:
 cspunit5:
-  id: 1750
+  id: 502
   key: cspunit5
   display_name: cspunit5
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &40 2022-04-22 05:13:00.000000000 Z
-    zone: *2
-    time: *40
+    utc: 2022-04-13 23:51:29.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:29.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &41 2022-04-22 05:13:00.000000000 Z
-    zone: *2
-    time: *41
-  category: other
+    utc: 2022-04-13 23:51:29.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:29.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels:
+  header:
+  image:
+  cs_topic:
+  school_subject:
+  device_compatibility:
+  description:
+  professional_learning_program:
+  video:
+  published_date:
+  self_paced_pl_course_offering_id:
 cspunit6:
-  id: 1458
+  id: 292
   key: cspunit6
   display_name: cspunit6
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &42 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *42
+    utc: 2022-04-13 23:51:27.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:27.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &43 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *43
-  category: other
+    utc: 2022-04-13 23:51:27.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:27.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels:
+  header:
+  image:
+  cs_topic:
+  school_subject:
+  device_compatibility:
+  description:
+  professional_learning_program:
+  video:
+  published_date:
+  self_paced_pl_course_offering_id:
 allthethingscourse:
-  id: 1609
+  id: 394
   key: allthethingscourse
   display_name: allthethingscourse
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &44 2022-04-22 05:12:59.000000000 Z
-    zone: *2
-    time: *44
+    utc: 2022-04-13 23:51:28.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &45 2022-04-22 05:12:59.000000000 Z
-    zone: *2
-    time: *45
-  category: other
+    utc: 2022-04-13 23:51:28.000000000 Z
+    zone: *1
+    time: 2022-04-13 23:51:28.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type:
+  marketing_initiative:
+  grade_levels:
+  header:
+  image:
+  cs_topic:
+  school_subject:
+  device_compatibility:
+  description:
+  professional_learning_program:
+  video:
+  published_date:
+  self_paced_pl_course_offering_id:
 coursea:
-  id: 1779
+  id: 169
   key: coursea
-  display_name: Course A
+  display_name: 'CS Fundamentals: Course A'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &46 2022-04-22 05:13:01.000000000 Z
-    zone: *2
-    time: *46
+    utc: 2021-11-11 11:46:58.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:46:58.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &47 2022-04-22 05:13:01.000000000 Z
-    zone: *2
-    time: *47
-  category: csf
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type: Course
+  marketing_initiative: CSF
+  grade_levels: K,1
+  header: csf
+  image: https://images.code.org/7c1ab52fc93a420c05e4beaaabe234c3-Course A.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: In this course, students work with others, investigate problem-solving
+    techniques, and learn to program using commands like loops and events.
+  professional_learning_program: https://code.org/professional-development-workshops
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-07-10 16:00:00.000000000 Z
+    zone: *1
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 courseb:
-  id: 1443
+  id: 170
   key: courseb
-  display_name: Course B
+  display_name: 'CS Fundamentals: Course B'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &48 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *48
+    utc: 2021-11-11 11:47:17.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:47:17.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &49 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *49
-  category: csf
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type: Course
+  marketing_initiative: CSF
+  grade_levels: '1,2'
+  header: csf
+  image: https://images.code.org/a695bfd633b89cb1ffd49ce7dfc2731a-Course B.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Students continue learning programming basics, as well as persistence
+    and critical thinking. At the end of the course, students can create games in
+    Play Lab!
+  professional_learning_program: https://code.org/professional-development-workshops
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-07-10 16:00:00.000000000 Z
+    zone: *1
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 coursec:
-  id: 1489
+  id: 171
   key: coursec
-  display_name: Course C
+  display_name: 'CS Fundamentals: Course C'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &50 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *50
+    utc: 2021-11-11 11:47:31.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:47:31.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &51 2022-04-22 05:12:57.000000000 Z
-    zone: *2
-    time: *51
-  category: csf
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type: Course
+  marketing_initiative: CSF
+  grade_levels: '2,3'
+  header: csf
+  image: https://images.code.org/c3cf934b9335645a2ee31ef84b6b7dcb-Course C.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: In this course, students create programs with sequencing, loops, and
+    events. They also investigate problem-solving techniques and build interactive
+    games.
+  professional_learning_program: https://code.org/professional-development-workshops
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-07-10 16:00:00.000000000 Z
+    zone: *1
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 coursed:
-  id: 1548
+  id: 172
   key: coursed
-  display_name: Course D
+  display_name: 'CS Fundamentals: Course D'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &52 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *52
+    utc: 2021-11-11 11:47:51.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:47:51.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &53 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *53
-  category: csf
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type: Course
+  marketing_initiative: CSF
+  grade_levels: '3,4'
+  header: csf
+  image: https://images.code.org/4d8ce599ad686237c78ef95f573f0685-Course D.png
+  cs_topic: art_and_design,games_and_animations,programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: This course covers concepts like loops and events from earlier courses,
+    before moving on to algorithms, conditionals, and more.
+  professional_learning_program: https://code.org/professional-development-workshops
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-07-10 16:00:00.000000000 Z
+    zone: *1
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 coursee:
-  id: 1549
+  id: 173
   key: coursee
-  display_name: Course E
+  display_name: 'CS Fundamentals: Course E'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &54 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *54
+    utc: 2021-11-11 11:48:16.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:48:16.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &55 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *55
-  category: csf
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type: Course
+  marketing_initiative: CSF
+  grade_levels: '4,5'
+  header: csf
+  image: https://images.code.org/7542c01e86c59dcc40beb1f67bac727e-Course E.png
+  cs_topic: art_and_design,app_design,games_and_animations,internet,programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Get to know the Sprite Lab programming environment in this course!
+    By the end, students will use code to create a game or drawing.
+  professional_learning_program: https://code.org/professional-development-workshops
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-07-10 16:00:00.000000000 Z
+    zone: *1
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 coursef:
-  id: 1619
+  id: 174
   key: coursef
-  display_name: Course F
+  display_name: 'CS Fundamentals: Course F'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &56 2022-04-22 05:12:59.000000000 Z
-    zone: *2
-    time: *56
+    utc: 2021-11-11 11:48:45.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:48:45.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &57 2022-04-22 05:12:59.000000000 Z
-    zone: *2
-    time: *57
-  category: csf
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type: Course
+  marketing_initiative: CSF
+  grade_levels: '5'
+  header: csf
+  image: https://images.code.org/8da9900cd5e57362d775845ae9d3407d-Course F.png
+  cs_topic: art_and_design,app_design,games_and_animations,internet,programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: 'Decisions, decisions! This course teaches students about variables,
+    as they''re given greater autonomy and choices while creating an interactive project. '
+  professional_learning_program: https://code.org/professional-development-workshops
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-07-10 16:00:00.000000000 Z
+    zone: *1
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 express:
-  id: 1598
+  id: 188
   key: express
-  display_name: Express Course
+  display_name: 'CS Fundamentals: Express Course'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &58 2022-04-22 05:12:59.000000000 Z
-    zone: *2
-    time: *58
+    utc: 2021-11-11 11:54:15.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:54:15.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &59 2022-04-22 05:12:59.000000000 Z
-    zone: *2
-    time: *59
-  category: csf
+    utc: 2024-04-22 22:49:30.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type: Course
+  marketing_initiative: CSF
+  grade_levels: '3,4,5,6,7,8'
+  header: express
+  image: https://images.code.org/aaee14231592a91f7ca063867bc7454c-ExpressCourse.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Let your students learn computer science at their own pace! Learn to
+    create computer programs, develop problem-solving skills, and work through fun
+    challenges.
+  professional_learning_program: https://code.org/professional-development-workshops
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-07-10 16:00:00.000000000 Z
+    zone: *1
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 pre-express:
-  id: 1583
+  id: 214
   key: pre-express
-  display_name: Pre-reader Express
+  display_name: 'CS Fundamentals: Pre-reader Express'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &60 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *60
+    utc: 2021-11-11 11:55:40.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:55:40.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &61 2022-04-22 05:12:58.000000000 Z
-    zone: *2
-    time: *61
-  category: csf
+    utc: 2024-04-22 22:49:31.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
+  curriculum_type: Course
+  marketing_initiative: CSF
+  grade_levels: K,1,2,3
+  header: express
+  image: https://images.code.org/cbb2fee0082642565bca8e3d917b1284-pre-express.png
+  cs_topic: programming
+  school_subject:
+  device_compatibility: '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}'
+  description: Let your pre-reader students learn computer science at their own pace!
+    Learn to create computer programs, solve problems, and work through fun challenges.
+  professional_learning_program: https://code.org/professional-development-workshops
+  video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
+  published_date: !ruby/object:ActiveSupport::TimeWithZone
+    utc: 2023-07-10 16:00:00.000000000 Z
+    zone: *1
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251

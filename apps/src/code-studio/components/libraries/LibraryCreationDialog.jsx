@@ -1,23 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import {hideLibraryCreationDialog} from '../shareDialogRedux';
-import i18n from '@cdo/locale';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Dialog, {Body} from '@cdo/apps/legacySharedComponents/Dialog';
+import {Heading1, Heading2} from '@cdo/apps/legacySharedComponents/Headings';
+import {getStore} from '@cdo/apps/redux';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
-import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
-import Spinner from '../../pd/components/spinner';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {findProfanity} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import Spinner from '../../../sharedComponents/Spinner';
+import {hideLibraryCreationDialog} from '../shareDialogRedux';
+
+import LibraryClientApi from './LibraryClientApi';
+import loadLibrary from './libraryLoader';
+import LibraryPublisher from './LibraryPublisher';
 import PublishSuccessDisplay from './PublishSuccessDisplay';
 import ShareTeacherLibraries from './ShareTeacherLibraries';
-import LibraryPublisher from './LibraryPublisher';
-import loadLibrary from './libraryLoader';
-import LibraryClientApi from './LibraryClientApi';
-import {getStore} from '@cdo/apps/redux';
-import {findProfanity} from '@cdo/apps/utils';
-import Button from '@cdo/apps/templates/Button';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const DEFAULT_COPY_BUTTON_TEXT = i18n.copyId();
 
@@ -32,7 +35,7 @@ export const DialogState = {
   UNPUBLISHED: 'unpublished',
   SHARE_TEACHER_LIBRARIES: 'share_teacher_libraries',
   CODE_PROFANITY: 'code_profanity',
-  ERROR: 'error'
+  ERROR: 'error',
 };
 
 /**
@@ -52,7 +55,7 @@ class LibraryCreationDialog extends React.Component {
 
     // From Redux
     dialogIsOpen: PropTypes.bool.isRequired,
-    onClose: PropTypes.func.isRequired
+    onClose: PropTypes.func.isRequired,
   };
 
   state = {
@@ -61,7 +64,7 @@ class LibraryCreationDialog extends React.Component {
     libraryDetails: {},
     libraryClientApi: new LibraryClientApi(this.props.channelId),
     errorMessage: '',
-    copyButtonText: DEFAULT_COPY_BUTTON_TEXT
+    copyButtonText: DEFAULT_COPY_BUTTON_TEXT,
   };
 
   componentDidUpdate(prevProps) {
@@ -82,7 +85,7 @@ class LibraryCreationDialog extends React.Component {
   onLibraryLoaded = async libraryDetails => {
     const defaultNewState = {
       dialogState: DialogState.DONE_LOADING,
-      libraryDetails
+      libraryDetails,
     };
 
     try {
@@ -92,8 +95,8 @@ class LibraryCreationDialog extends React.Component {
           dialogState: DialogState.CODE_PROFANITY,
           errorMessage: i18n.libraryCodeProfanity({
             profanityCount: profaneWords.length,
-            profaneWords: profaneWords.join(', ')
-          })
+            profaneWords: profaneWords.join(', '),
+          }),
         });
       } else {
         this.setState(defaultNewState);
@@ -151,7 +154,7 @@ class LibraryCreationDialog extends React.Component {
         onPublishSuccess={libraryName =>
           this.setState({
             dialogState: DialogState.PUBLISHED,
-            libraryName: libraryName
+            libraryName: libraryName,
           })
         }
         onUnpublishSuccess={() =>
@@ -274,37 +277,37 @@ export class UnpublishSuccessDisplay extends React.Component {
 const styles = {
   libraryBoundary: {
     padding: 10,
-    width: '90%'
+    width: '90%',
   },
   centerContent: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   info: {
     fontSize: 12,
     fontStyle: 'italic',
-    lineHeight: 1.2
+    lineHeight: 1.2,
   },
   idInfo: {
-    marginBottom: 10
+    marginBottom: 10,
   },
   copyBtn: {
     margin: '0 15px',
     ':hover': {
-      cursor: 'copy'
-    }
-  }
+      cursor: 'copy',
+    },
+  },
 };
 
 export const UnconnectedLibraryCreationDialog = LibraryCreationDialog;
 
 export default connect(
   state => ({
-    dialogIsOpen: state.shareDialog.libraryDialogIsOpen
+    dialogIsOpen: state.shareDialog.libraryDialogIsOpen,
   }),
   dispatch => ({
     onClose() {
       dispatch(hideLibraryCreationDialog());
-    }
+    },
   })
 )(LibraryCreationDialog);

@@ -8,3 +8,5 @@ MARKDOWN
 wrong 'An is-a relationship. The MusicArtist class should be a subclass of the Song class.'
 wrong 'An is-a relationship. The Song class should be a subclass of the MusicArtist class.'
 right 'A has-a relationship. The Song class has a MusicArtist attribute.'
+
+allow_multiple_attempts true

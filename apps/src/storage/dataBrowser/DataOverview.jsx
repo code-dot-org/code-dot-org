@@ -3,16 +3,20 @@
  * existing data tables with controls to edit/delete, and a control to add
  * a new data table.
  */
-import {DataView, WarningType} from '../constants';
-import FirebaseStorage from '../firebaseStorage';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {changeView, showWarning} from '../redux/data';
 import {connect} from 'react-redux';
+
+import {DataView, WarningType} from '../constants';
+import {changeView, showWarning} from '../redux/data';
+import {storageBackend} from '../storage';
+
 import DataBrowser from './DataBrowser';
 import DataLibraryPane from './DataLibraryPane';
+import {refreshCurrentDataView} from './loadDataForView';
+
 import style from './data-overview.module.scss';
-import classNames from 'classnames';
 
 class DataOverview extends React.Component {
   static propTypes = {
@@ -22,13 +26,16 @@ class DataOverview extends React.Component {
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
-    onViewChange: PropTypes.func.isRequired
+    onViewChange: PropTypes.func.isRequired,
   };
 
   onTableAdd = tableName => {
-    FirebaseStorage.createTable(
+    storageBackend().createTable(
       tableName,
-      () => this.props.onViewChange(DataView.TABLE, tableName),
+      () => {
+        refreshCurrentDataView();
+        this.props.onViewChange(DataView.TABLE, tableName);
+      },
       error => {
         if (
           error.type &&
@@ -68,7 +75,7 @@ class DataOverview extends React.Component {
 export default connect(
   state => ({
     view: state.data.view,
-    tableListMap: state.data.tableListMap || {}
+    tableListMap: state.data.tableListMap || {},
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
@@ -76,6 +83,6 @@ export default connect(
     },
     onViewChange(view, tableName) {
       dispatch(changeView(view, tableName));
-    }
+    },
   })
 )(DataOverview);

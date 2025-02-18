@@ -30,3 +30,5 @@ karel.turnLeft();
 The effect of this code is that the Painter `karel` is now:
 
 MARKDOWN
+
+allow_multiple_attempts true

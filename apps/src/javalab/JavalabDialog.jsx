@@ -1,7 +1,9 @@
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
+
 import {DisplayTheme} from './DisplayTheme';
 
 export default class JavalabDialog extends Component {
@@ -16,7 +18,7 @@ export default class JavalabDialog extends Component {
     confirmButtonText: PropTypes.string,
     closeButtonText: PropTypes.string,
     showSpinner: PropTypes.bool,
-    disableButtons: PropTypes.bool
+    disableButtons: PropTypes.bool,
   };
 
   render() {
@@ -30,7 +32,7 @@ export default class JavalabDialog extends Component {
       confirmButtonText,
       closeButtonText,
       showSpinner,
-      disableButtons
+      disableButtons,
     } = this.props;
     return (
       <BaseDialog
@@ -39,7 +41,7 @@ export default class JavalabDialog extends Component {
         handleClose={handleClose}
         style={{
           ...styles.dialog,
-          ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
+          ...(displayTheme === DisplayTheme.DARK && styles.darkDialog),
         }}
         useUpdatedStyles
         hideCloseButton
@@ -59,7 +61,7 @@ export default class JavalabDialog extends Component {
                   ...styles.button,
                   ...(displayTheme === DisplayTheme.DARK
                     ? styles.darkButton
-                    : styles.lightCancel)
+                    : styles.lightCancel),
                 }}
                 onClick={handleClose}
                 disabled={disableButtons}
@@ -74,7 +76,7 @@ export default class JavalabDialog extends Component {
                   ...styles.button,
                   ...(displayTheme === DisplayTheme.DARK
                     ? styles.darkButton
-                    : styles.lightConfirm)
+                    : styles.lightConfirm),
                 }}
                 onClick={handleConfirm}
                 disabled={disableButtons}
@@ -94,42 +96,42 @@ const styles = {
     textAlign: 'left',
     padding: 20,
     color: color.black,
-    width: 500
+    width: 500,
   },
   darkDialog: {
     backgroundColor: color.dark_slate_gray,
-    color: color.white
+    color: color.white,
   },
   buttons: {
     display: 'flex',
     justifyContent: 'flex-end',
-    paddingBottom: '10px'
+    paddingBottom: '10px',
   },
   button: {
     textAlign: 'center',
     padding: '5px 16px 5px 16px',
-    fontSize: 14
+    fontSize: 14,
   },
   darkButton: {
     backgroundColor: color.darkest_gray,
-    color: 'white'
+    color: 'white',
   },
   lightConfirm: {
     backgroundColor: color.orange,
-    color: color.white
+    color: color.white,
   },
   lightCancel: {
     backgroundColor: color.lightest_gray,
-    color: color.black
+    color: color.black,
   },
   message: {
     whiteSpace: 'normal',
     lineHeight: '18px',
-    padding: 12
+    padding: 12,
   },
   spinner: {
     textAlign: 'center',
     fontSize: 16,
-    padding: '10px'
-  }
+    padding: '10px',
+  },
 };

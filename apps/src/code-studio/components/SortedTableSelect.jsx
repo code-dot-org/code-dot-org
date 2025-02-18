@@ -1,16 +1,17 @@
-import React from 'react';
+import {orderBy} from 'lodash';
 import PropTypes from 'prop-types';
+import React from 'react';
 import * as Table from 'reactabular-table';
-import {Heading1} from '@cdo/apps/lib/ui/Headings';
-import color from '@cdo/apps/util/color';
+import * as sort from 'sortabular';
+
+import {Heading1} from '@cdo/apps/legacySharedComponents/Headings';
 import {
   tableLayoutStyles,
-  sortableOptions
+  sortableOptions,
 } from '@cdo/apps/templates/tables/tableConstants';
-import i18n from '@cdo/locale';
-import {orderBy} from 'lodash';
-import * as sort from 'sortabular';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const PADDING = 20;
 const TABLE_WIDTH = 300;
@@ -19,8 +20,8 @@ const CHECKBOX_CELL_WIDTH = 50;
 const DEFAULT_SORT = {
   1: {
     direction: 'asc',
-    position: 0
-  }
+    position: 0,
+  },
 };
 
 export default class SortedTableSelect extends React.Component {
@@ -28,7 +29,7 @@ export default class SortedTableSelect extends React.Component {
     rowData: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired
+        name: PropTypes.string.isRequired,
       })
     ).isRequired,
     onRowChecked: PropTypes.func.isRequired,
@@ -39,12 +40,12 @@ export default class SortedTableSelect extends React.Component {
     titleText: PropTypes.string,
     children: PropTypes.node,
     onSelectAll: PropTypes.func,
-    tableDescriptionText: PropTypes.string
+    tableDescriptionText: PropTypes.string,
   };
 
   state = {
     sortingColumns: DEFAULT_SORT,
-    selectedOption: undefined
+    selectedOption: undefined,
   };
 
   areAllSelected = () => {
@@ -89,19 +90,19 @@ export default class SortedTableSelect extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.checkboxCell
-            }
-          }
+              ...styles.checkboxCell,
+            },
+          },
         },
         cell: {
           formatters: [this.selectedRowFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.checkboxCell
-            }
-          }
-        }
+              ...styles.checkboxCell,
+            },
+          },
+        },
       },
       {
         property: 'name',
@@ -109,19 +110,19 @@ export default class SortedTableSelect extends React.Component {
           label: i18n.name(),
           props: {
             style: {
-              ...tableLayoutStyles.headerCell
-            }
+              ...tableLayoutStyles.headerCell,
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           props: {
             style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
-      }
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
+      },
     ];
   };
 
@@ -151,10 +152,10 @@ export default class SortedTableSelect extends React.Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -166,7 +167,7 @@ export default class SortedTableSelect extends React.Component {
       optionsDescriptionText,
       titleText,
       children,
-      tableDescriptionText
+      tableDescriptionText,
     } = this.props;
 
     const sortingColumns = this.getSortingColumns();
@@ -179,7 +180,7 @@ export default class SortedTableSelect extends React.Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(rowData);
     return (
       <div className="ui-test-sortable-table-select">
@@ -217,33 +218,33 @@ export default class SortedTableSelect extends React.Component {
 const styles = {
   checkboxCell: {
     width: CHECKBOX_CELL_WIDTH,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   checkbox: {
-    margin: 0
+    margin: 0,
   },
   container: {
-    display: 'flex'
+    display: 'flex',
   },
   table: {
     width: TABLE_WIDTH,
-    margin: 2
+    margin: 2,
   },
   leftColumn: {
-    width: TABLE_WIDTH
+    width: TABLE_WIDTH,
   },
   rightColumn: {
     flex: 1,
-    paddingLeft: PADDING
+    paddingLeft: PADDING,
   },
   infoText: {
     paddingTop: PADDING / 4,
-    paddingBottom: PADDING / 2
+    paddingBottom: PADDING / 2,
   },
   label: {
-    paddingTop: PADDING / 2
+    paddingTop: PADDING / 2,
   },
   italics: {
-    color: color.purple
-  }
+    color: color.purple,
+  },
 };

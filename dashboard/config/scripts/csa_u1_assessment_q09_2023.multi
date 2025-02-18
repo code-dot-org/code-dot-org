@@ -13,3 +13,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Inheritance represents an is-a relationship. For example, `PainterPlus` is a `Painter` or `Dog` is a `Pet`.
 MARKDOWN
+
+allow_multiple_attempts true

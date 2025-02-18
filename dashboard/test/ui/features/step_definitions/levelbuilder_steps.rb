@@ -26,8 +26,8 @@ Given(/^I enter a temp unit name$/) do
   @temp_script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
   puts "temp unit name: #{@temp_script_name}"
   steps %{
-    And element ".familyNameInput" is visible
-    And I press keys "#{@temp_script_name}" for element ".familyNameInput"
+    And element "input[name='script[name]']" is visible
+    And I press keys "#{@temp_script_name}" for element "input[name='script[name]']"
   }
 end
 
@@ -152,6 +152,13 @@ Given(/^I wait for the temp data doc page to load$/) do
   steps %{
     And I wait until I am on "http://studio.code.org/data_docs/#{@temp_data_doc_key}"
     And I wait until element "#view-data-doc" is visible
+  }
+end
+
+Given(/^I wait for the temp data doc edit page to load$/) do
+  steps %{
+    And I wait until I am on "http://studio.code.org/data_docs/#{@temp_data_doc_key}/edit"
+    And I wait until element "#edit-data-doc" is visible
   }
 end
 

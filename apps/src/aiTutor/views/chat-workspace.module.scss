@@ -1,0 +1,76 @@
+@import 'color.scss';
+@import 'font';
+
+$message-editor-height: 100px;
+$default-spacing: 2px;
+
+.chatWorkspace {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+}
+
+.userChatMessageEditor {
+  padding: 1% 1%;
+  margin: 10px 2%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: $message-editor-height;
+  box-sizing: border-box;
+}
+
+.waitingForResponse {
+  width: 50px;
+}
+
+.message {
+  padding: 10px 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.userMessage {
+  background-color: $lightest_cyan;
+}
+
+.assistantMessage {
+  background-color: $lightest_gray;
+  flex-grow: 1;
+}
+
+.profaneMessage {
+  background-color: $lightest_red;
+}
+
+.piiMessage {
+  background-color: $lightest_yellow;
+}
+
+.messageHeaderContainer {
+  margin: 5px 0 5px 0;
+}
+
+.aiTutorMarkdown {
+  pre, code {
+    // Color copied for consistency with bootstrap styles auto-applied to SafeMarkdown component
+    background-color: #f7f7f9;
+    color: $light_primary_700;
+  }
+}
+
+.feedbackIcons {
+  height: 36px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.feedbackDetails {
+  width: 90%;
+}
+
+.feedbackButton {
+  margin-right: 5px;
+}

@@ -20,8 +20,9 @@
 #
 # Indexes
 #
-#  fk_rails_951bceb7e3              (school_district_id)
-#  index_school_infos_on_school_id  (school_id)
+#  fk_rails_951bceb7e3                                            (school_district_id)
+#  index_school_infos_on_school_id                                (school_id)
+#  index_school_infos_on_school_name_and_country_and_school_type  (school_name,country,school_type)
 #
 
 class SchoolInfo < ApplicationRecord
@@ -32,6 +33,7 @@ class SchoolInfo < ApplicationRecord
     SCHOOL_TYPE_HOMESCHOOL = "homeschool".freeze,
     SCHOOL_TYPE_AFTER_SCHOOL = "afterschool".freeze,
     SCHOOL_TYPE_ORGANIZATION = "organization".freeze,
+    SCHOOL_TYPE_NO_SCHOOL_SETTING = "noSchoolSetting".freeze,
     SCHOOL_TYPE_OTHER = "other".freeze
   ].freeze
 
@@ -89,24 +91,7 @@ class SchoolInfo < ApplicationRecord
 
   def sync_from_schools
     # If a SchoolInfo is linked to a School then the SchoolInfo pulls its data from the School
-    # It seems like there is some code that is passing in mismatched data at times.
-    # As of Nov. 2, 2017 there were 7 rows in school_infos with non-null school_id and conflicting
-    # data between schools and school_infos. Until we better understand what is causing that we don't want
-    # to flat out fail if we get conflicting inputs. Instead we overwrite the passed in fields with what
-    # is on the School and report the mismatch to HoneyBadger.
     unless school.nil? && school_id.nil?
-      original = {}
-      original[:country] = country
-      original[:school_type] = school_type
-      original[:state] = state
-      original[:zip] = zip
-      original[:school_district_id] = school_district_id
-      original[:school_district_other] = school_district_other
-      original[:school_district_name] = school_district_name
-      original[:school_other] = school_other
-      original[:school_name] = school_name
-      original[:full_address] = full_address
-
       self.country = 'US' # Everything in SCHOOLS is a US school
       self.school_type = school.school_type
       self.state = school.state
@@ -118,21 +103,6 @@ class SchoolInfo < ApplicationRecord
       self.school_name = nil
       self.full_address = nil
       self.validation_type = VALIDATION_FULL
-
-      # Report if we are overriding a non-nil value that was originally passed in
-      something_overwritten = original.map {|key, value| value && value != self[key]}.reduce {|acc, b| acc || b}
-      if something_overwritten
-        Honeybadger.notify(
-          error_message: "Overwriting passed in data for new SchoolInfo",
-          error_class: "SchoolInfo.sync_from_schools",
-          context: {
-            original_input: original,
-            school_id: school.id
-          }
-        )
-        # Don't interrupt callback chain by returning false
-        return nil
-      end
     end
   end
 
@@ -150,24 +120,17 @@ class SchoolInfo < ApplicationRecord
   end
 
   def validate_zip
-    if zip
-      errors.add(:zip, 'Invalid zip code') unless zip > 0 && zip < 100_000
+    if zip && !(zip > 0 && zip < 100_000)
+      errors.add(:zip, 'Invalid zip code')
     end
   end
 
-  # Validate records in the newer data format (see school_info_test.rb for details).
-  # The following states are valid (from the spec at https://goo.gl/Gw57rL):
-  #
-  # Country “USA” + charter + State + District + School name [selected]
-  # Country “USA” + charter + State + District + zip + School name “other” [typed]
-  # Country “USA” + charter + State + District “other” [typed] + zip + School name [typed]
-  # Country “USA” + private + State + zip + School name [typed]
-  # Country “USA” + public + State + District + School name [selected]
-  # Country “USA” + public + State + District + zip + School name “other” [typed]
-  # Country “USA” + public + State + District “other” [typed] + zip + School name [typed]
-  # Country “USA” + other + State + zip + School name [typed]
-  # Non-USA Country + any school type + address + school name
-  #
+  # Validate records
+  # Non-US schools require country and school name
+  # US nces schools sync required data from the `schools` table
+  # US non-nces schools (not found in `schools` table) require country (US), zip and school_name
+  # US non-school settings have school_type = noSchoolSetting and require country (US) and zip
+
   # This method reports errors if the record has a country and is invalid.
   def validate_with_country
     return unless country && should_check_for_full_validation?
@@ -175,10 +138,7 @@ class SchoolInfo < ApplicationRecord
   end
 
   def validate_non_us
-    errors.add(:school_type, "is required") unless school_type
-    errors.add(:school_type, "is invalid") unless SCHOOL_TYPES.include? school_type
     errors.add(:school_name, "is required") unless school_name
-    errors.add(:full_address, "is required") unless full_address
 
     errors.add(:state, "is forbidden") if state
     errors.add(:zip, "is forbidden") if zip
@@ -190,10 +150,28 @@ class SchoolInfo < ApplicationRecord
   end
 
   def validate_us
+    # The right side of this expression should not be necessary, but there are a ton
+    # of legacy tests in school_info_test.rb that will fail without it. Rather than deleting
+    # the old tests, we decided to keep them until all of the front end components that update
+    # school_info are refactored to send the appropriate data. See "Validate records" comment
+    # above to understand the required data for nces and non-nces schools
+    if school || (school_type && school_type != SCHOOL_TYPE_NO_SCHOOL_SETTING)
+      validate_nces_school
+    else
+      validate_non_nces_school
+    end
+  end
+
+  def validate_nces_school
     errors.add(:school_type, "is required") unless school_type
     errors.add(:school_type, "is invalid") unless SCHOOL_TYPES.include? school_type
     validate_private_other if [SCHOOL_TYPE_PRIVATE, SCHOOL_TYPE_OTHER].include? school_type
     validate_public_charter if [SCHOOL_TYPE_PUBLIC, SCHOOL_TYPE_CHARTER].include? school_type
+  end
+
+  def validate_non_nces_school
+    errors.add(:zip, "is required") unless zip
+    errors.add(:school_name, "is required") unless school_name || school_type == SCHOOL_TYPE_NO_SCHOOL_SETTING
   end
 
   def validate_private_other
@@ -318,6 +296,7 @@ class SchoolInfo < ApplicationRecord
       SchoolInfo::SCHOOL_TYPE_AFTER_SCHOOL,
       SchoolInfo::SCHOOL_TYPE_ORGANIZATION,
       SchoolInfo::SCHOOL_TYPE_OTHER,
+      SchoolInfo::SCHOOL_TYPE_NO_SCHOOL_SETTING,
     ].include?(school_type)
 
     # Given we got past above cases, school name is sufficient

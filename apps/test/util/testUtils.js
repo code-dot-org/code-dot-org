@@ -1,17 +1,26 @@
-import React from 'react';
 import $ from 'jquery';
-import sinon from 'sinon';
-const project = require('@cdo/apps/code-studio/initApp/project');
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 const assets = require('@cdo/apps/code-studio/assets');
+const project = require('@cdo/apps/code-studio/initApp/project');
 export {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,
   allowConsoleErrors,
-  allowConsoleWarnings
+  allowConsoleWarnings,
 } from './throwOnConsole';
 export {clearTimeoutsBetweenTests} from './clearTimeoutsBetweenTests';
 
-export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
+/**
+ * Temporarily support switching between mocha 'before' and jest 'beforeAll'.
+ *
+ * todo: Remove this code when Karma is fully removed
+ */
+export function setExternalGlobals(
+  beforeFunc = typeof beforeAll === 'function' ? beforeAll : before,
+  afterFunc = typeof afterAll === 'function' ? afterAll : after
+) {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
@@ -61,12 +70,7 @@ export function generateArtistAnswer(generatedCode) {
  * @returns {boolean} True if mochify was launched with debug flag
  */
 export function debugMode() {
-  return (
-    location.search
-      .substring(1)
-      .split('&')
-      .indexOf('debug') !== -1
-  );
+  return location.search.substring(1).split('&').indexOf('debug') !== -1;
 }
 
 /**
@@ -84,13 +88,13 @@ export function dragToVisualization(type, left, top) {
   var mousedown = $.Event('mousedown', {
     which: 1,
     pageX: screenOffset.left,
-    pageY: screenOffset.top
+    pageY: screenOffset.top,
   });
   element.trigger(mousedown);
 
   var drag = $.Event('mousemove', {
     pageX: $('#visualization').offset().left + left,
-    pageY: $('#visualization').offset().top + top
+    pageY: $('#visualization').offset().top + top,
   });
   $(document).trigger(drag);
 
@@ -122,13 +126,13 @@ export function dragToVisualization(type, left, top) {
   var halfWidth = $('.draggingParent').width() / 2;
   var drag2 = $.Event('mousemove', {
     pageX: $('#visualization').offset().left + left + halfWidth,
-    pageY: $('#visualization').offset().top + top
+    pageY: $('#visualization').offset().top + top,
   });
   $(document).trigger(drag2);
 
   var mouseup = $.Event('mouseup', {
     pageX: $('#visualization').offset().left + left + halfWidth,
-    pageY: $('#visualization').offset().top + top
+    pageY: $('#visualization').offset().top + top,
   });
   $(document).trigger(mouseup);
 }
@@ -156,7 +160,7 @@ export function createMouseEvent(type, clientX, clientY) {
     shiftKey: false,
     metaKey: false,
     button: 0,
-    relatedTarget: undefined
+    relatedTarget: undefined,
   };
   if (typeof document.createEvent === 'function') {
     evt = document.createEvent('MouseEvents');
@@ -259,7 +263,7 @@ function zeroPadLeft(string, desiredWidth) {
 
 const originalWindowValues = {};
 export function replaceOnWindow(key, newValue) {
-  if (originalWindowValues.hasOwnProperty(key)) {
+  if (Object.prototype.hasOwnProperty.call(originalWindowValues, key)) {
     throw new Error(
       `Can't replace 'window.${key}' - it's already been replaced.`
     );
@@ -269,7 +273,7 @@ export function replaceOnWindow(key, newValue) {
 }
 
 export function restoreOnWindow(key) {
-  if (!originalWindowValues.hasOwnProperty(key)) {
+  if (!Object.prototype.hasOwnProperty.call(originalWindowValues, key)) {
     throw new Error(`Can't restore 'window.${key}' - it wasn't replaced.`);
   }
   window[key] = originalWindowValues[key];
@@ -303,8 +307,8 @@ export function sandboxDocumentBody(runOncePerTest = true) {
     beforeEach(storeBody);
     afterEach(restoreBody);
   } else {
-    before(storeBody);
-    after(restoreBody);
+    beforeAll(storeBody);
+    afterAll(restoreBody);
   }
 }
 
@@ -397,8 +401,8 @@ export function enforceDocumentBodyCleanup(
  */
 export function stubWindowDashboard(value) {
   let originalDashboard;
-  before(() => (originalDashboard = window.dashboard));
-  after(() => (window.dashboard = originalDashboard));
+  beforeAll(() => (originalDashboard = window.dashboard));
+  afterAll(() => (window.dashboard = originalDashboard));
   beforeEach(() => (window.dashboard = value));
 }
 
@@ -418,7 +422,7 @@ export function stubWindowDashboard(value) {
  */
 export function stubWindowPegasus(value) {
   let originalPegasus;
-  before(() => (originalPegasus = window.pegasus));
-  after(() => (window.pegasus = originalPegasus));
+  beforeAll(() => (originalPegasus = window.pegasus));
+  afterAll(() => (window.pegasus = originalPegasus));
   beforeEach(() => (window.pegasus = value));
 }

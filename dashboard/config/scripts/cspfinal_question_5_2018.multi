@@ -7,3 +7,5 @@ wrong 'Yes, public key encryption is secure because it transmits credit card inf
 markdown <<MARKDOWN
 A coffee shop is considering accepting orders and payments through their phone app and have decided to use public key encryption to encrypt their customers’ credit card information. Is this a secure form of payment?
 MARKDOWN
+
+allow_multiple_attempts true

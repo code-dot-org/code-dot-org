@@ -3,8 +3,8 @@
  */
 require('../utils'); // Provides Function.prototype.inherits
 var NetSimConstants = require('./NetSimConstants');
-var NetSimUtils = require('./NetSimUtils');
 var NetSimSlider = require('./NetSimSlider');
+var NetSimUtils = require('./NetSimUtils');
 
 /**
  * Generator and controller for packet size slider/selector
@@ -13,7 +13,7 @@ var NetSimSlider = require('./NetSimSlider');
  * @param {function} sliderStopCallback
  * @constructor
  */
-var NetSimMemoryControl = (module.exports = function(
+var NetSimMemoryControl = (module.exports = function (
   rootDiv,
   sliderChangeCallback,
   sliderStopCallback
@@ -24,7 +24,7 @@ var NetSimMemoryControl = (module.exports = function(
     value: Infinity,
     min: NetSimConstants.BITS_PER_BYTE,
     max: NetSimConstants.BITS_PER_MEGABYTE,
-    upperBoundInfinite: true
+    upperBoundInfinite: true,
   });
 
   // Auto-render, unlike our base class
@@ -39,6 +39,6 @@ NetSimMemoryControl.inherits(NetSimSlider.LogarithmicSlider);
  * @returns {string} - localized string representation of value
  * @override
  */
-NetSimMemoryControl.prototype.valueToLabel = function(val) {
+NetSimMemoryControl.prototype.valueToLabel = function (val) {
   return NetSimUtils.bitsToLocalizedRoundedBytesize(val);
 };

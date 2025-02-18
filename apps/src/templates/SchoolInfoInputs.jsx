@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census/SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '@cdo/apps/templates/CountryAutocompleteDropdown';
-import SchoolTypeDropdown from '@cdo/apps/templates/SchoolTypeDropdown';
-import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
+import SchoolTypeDropdown from '@cdo/apps/templates/SchoolTypeDropdown';
 import i18n from '@cdo/locale';
 
 export const SCHOOL_TYPES_HAVING_NCES_SEARCH = ['charter', 'private', 'public'];
@@ -13,7 +15,7 @@ export const SCHOOL_TYPES_HAVING_NAMES = [
   'private',
   'public',
   'afterschool',
-  'organization'
+  'organization',
 ];
 
 export default class SchoolInfoInputs extends Component {
@@ -34,7 +36,7 @@ export default class SchoolInfoInputs extends Component {
     fieldNames: PropTypes.object,
     showErrors: PropTypes.bool,
     showRequiredIndicator: PropTypes.bool,
-    styles: PropTypes.object
+    styles: PropTypes.object,
   };
 
   static defaultProps = {
@@ -54,8 +56,8 @@ export default class SchoolInfoInputs extends Component {
       schoolName: 'user[school_info_attributes][school_name]',
       schoolState: 'user[school_info_attributes][school_state]',
       schoolZip: 'user[school_info_attributes][school_zip]',
-      googleLocation: 'user[school_info_attributes][full_address]'
-    }
+      googleLocation: 'user[school_info_attributes][full_address]',
+    },
   };
 
   constructor() {
@@ -125,6 +127,10 @@ export default class SchoolInfoInputs extends Component {
 
     return (
       <div style={{width: 600, ...this.props.styles}}>
+        <Heading2 visualAppearance={'heading-lg'}>
+          {i18n.censusHeading()}
+        </Heading2>
+        <BodyTwoText>{i18n.schoolInfoInterstitialTitle()}</BodyTwoText>
         <CountryAutocompleteDropdown
           onChange={this.props.onCountryChange}
           value={this.props.country}

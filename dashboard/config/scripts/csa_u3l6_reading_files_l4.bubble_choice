@@ -1,0 +1,9 @@
+name 'CSA U3L6 Reading Files-L4'
+display_name 'Reading and Processing Files'
+description 'Practice reading data from text files and writing algorithms to process the data.'
+
+sublevels
+level 'CSA U3L6 Reading Files-L4a'
+level 'CSA U3L6 Reading Files-L4b'
+level 'CSA U3L6 Reading Files-L4c'
+level 'CSA U3L6 Reading Files-L4d'

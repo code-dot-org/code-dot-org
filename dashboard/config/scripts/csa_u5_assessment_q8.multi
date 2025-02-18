@@ -40,3 +40,5 @@ Which of the following best describes what is returned by the `calculate` method
 
 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -15,12 +16,21 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "show_calendar": true,
+      "supported_locales": [
+        "fa-AF",
+        "fa-IR",
+        "ko-KR",
+        "sq-AL",
+        "ar-SA"
+      ],
       "tts": true,
-      "version_year": "2022"
+      "version_year": "2022",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-11-17 16:57:03 UTC",
+    "serialized_at": "2025-01-09 15:59:59 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -21336,6 +21346,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

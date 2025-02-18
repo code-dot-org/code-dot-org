@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import i18n from '@cdo/locale';
 
 export default class DownloadParentLetter extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
     buttonMetricsCategory: PropTypes.oneOf(
       Object.values(ParentLetterButtonMetricsCategory)
-    )
+    ),
   };
 
   onDownloadParentLetter = () => {
@@ -24,8 +25,8 @@ export default class DownloadParentLetter extends Component {
         event: 'download-parent-letter-button',
         data_json: JSON.stringify({
           sectionId: this.props.sectionId,
-          entryPoint: this.props.buttonMetricsCategory
-        })
+          entryPoint: this.props.buttonMetricsCategory,
+        }),
       },
       {includeUserId: true}
     );
@@ -33,9 +34,9 @@ export default class DownloadParentLetter extends Component {
 
   render() {
     return (
-      <div style={styles.button}>
+      <div style={styles.container}>
         <Button
-          __useDeprecatedTag
+          style={styles.buttonWithoutMargin}
           onClick={this.onDownloadParentLetter}
           target="_blank"
           color={Button.ButtonColor.gray}
@@ -48,7 +49,11 @@ export default class DownloadParentLetter extends Component {
 }
 
 const styles = {
-  button: {
-    marginLeft: 5
-  }
+  container: {
+    marginLeft: 5,
+    marginBottom: 5,
+  },
+  buttonWithoutMargin: {
+    margin: 0,
+  },
 };

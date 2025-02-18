@@ -1,0 +1,23 @@
+name 'unplugged_move it move it_markdown'
+title 'unplugged move it move it'
+
+markdown <<MARKDOWN
+##Move It Move It
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/42bb6c35b0ba86274a1a0b5d4949cbb5-image-1719876412736.26.49 PM.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>This is an Unplugged Activity! </strong>
+</h4>
+
+> Ask your teacher for these handouts:
+> - **<a href="https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view" target="_blank">Feeling Faces</a>**
+> - **<a href="https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit" target="_blank">Map Activity</a>**
+> - **<a href="https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit" target="_blank">Worksheet</a>**
+
+</div>
+
+
+MARKDOWN

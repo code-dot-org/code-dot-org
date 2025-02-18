@@ -2,16 +2,17 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import color from '@cdo/apps/util/color';
+
 import {
   configMicrobit,
   configCircuitPlayground,
-  getMakerBlocks
-} from '@cdo/apps/lib/kits/maker/dropletConfig';
+  getMakerBlocks,
+} from '@cdo/apps/maker/dropletConfig';
+import color from '@cdo/apps/util/color';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
-$(document).ready(function() {
-  $('#level_makerlab_enabled').change(function() {
+$(document).ready(function () {
+  $('#level_makerlab_enabled').change(function () {
     // Get the set of blocks for the Maker Category, the Circuit Category, and the Micro:bit category
 
     // Setting block values to null to match the expected behavior in code_functions.
@@ -54,11 +55,11 @@ $(document).ready(function() {
 
   const styles = {
     optgroup: {
-      color: color.light_gray
+      color: color.light_gray,
     },
     option: {
-      color: color.black
-    }
+      color: color.black,
+    },
   };
 
   const data = getScriptData('applabOptions');
@@ -70,7 +71,9 @@ $(document).ready(function() {
   );
   class DataLibrary extends React.Component {
     state = {
-      value: data.data_library_tables ? data.data_library_tables.split(',') : []
+      value: data.data_library_tables
+        ? data.data_library_tables.split(',')
+        : [],
     };
 
     handleChange = event => {

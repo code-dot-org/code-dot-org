@@ -1,22 +1,25 @@
 /** A single list item representing an animation. */
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
 import color from '@cdo/apps/util/color';
-import * as shapes from '../shapes';
+
+import {P5LabInterfaceMode} from '../constants';
 import {
   setAnimationName,
   cloneAnimation,
   deleteAnimation,
   setAnimationFrameDelay,
   setAnimationLooping,
-  isNameUnique
+  isNameUnique,
 } from '../redux/animationList';
 import {selectAnimation, selectBackground} from '../redux/animationTab';
+import * as shapes from '../shapes';
+
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
-import _ from 'lodash';
-import {P5LabInterfaceMode} from '../constants';
 
 /**
  * A single list item representing an animation.  Displays an animated
@@ -42,7 +45,7 @@ class AnimationListItem extends React.Component {
     style: PropTypes.object,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
     isSpriteLab: PropTypes.bool.isRequired,
-    labType: PropTypes.string.isRequired
+    labType: PropTypes.string.isRequired,
   };
 
   getAnimationProps(props) {
@@ -56,7 +59,8 @@ class AnimationListItem extends React.Component {
     this.state = {
       frameDelay: frameDelay,
       name: name,
-      isNameValid: true
+      isNameValid: true,
+      isFocused: false,
     };
   }
 
@@ -68,7 +72,7 @@ class AnimationListItem extends React.Component {
     if (this.props.isSelected && !nextProps.isSelected) {
       this.setState({
         name: this.getAnimationProps(this.props).name,
-        isNameValid: true
+        isNameValid: true,
       });
     }
   }
@@ -83,6 +87,14 @@ class AnimationListItem extends React.Component {
       );
     }, 200);
   }
+
+  onFocus = () => {
+    this.setState({isFocused: true});
+  };
+
+  onBlur = () => {
+    this.setState({isFocused: false});
+  };
 
   onSelect = () => {
     if (this.props.interfaceMode === P5LabInterfaceMode.BACKGROUND) {
@@ -181,19 +193,17 @@ class AnimationListItem extends React.Component {
   };
 
   render() {
-    const {
-      allAnimationsSingleFrame,
-      isSelected,
-      isSpriteLab,
-      labType,
-      style
-    } = this.props;
+    const {allAnimationsSingleFrame, isSpriteLab, labType, style, isSelected} =
+      this.props;
+
     const animationProps = Object.assign(
       {},
       this.getAnimationProps(this.props),
       {frameDelay: this.state.frameDelay}
     );
-    const name = this.state.name;
+
+    const {name, isFocused} = this.state;
+
     let animationName;
     if (isSelected) {
       let invalidNameStyle = this.state.isNameValid
@@ -219,12 +229,19 @@ class AnimationListItem extends React.Component {
     const arrowStyle = isSelected ? styles.rightArrow : {};
 
     return (
-      <button style={tileStyle} onClick={this.onSelect} type="button">
+      <button
+        style={tileStyle}
+        onClick={this.onSelect}
+        onFocus={this.onFocus}
+        onBlur={this.onBlur}
+        type="button"
+      >
         <div style={arrowStyle} />
         <ListItemThumbnail
           ref="thumbnail"
           animationProps={animationProps}
           isSelected={isSelected}
+          isFocused={isFocused}
           singleFrameAnimation={allAnimationsSingleFrame}
         />
         {!isSpriteLab && animationName}
@@ -262,10 +279,10 @@ const styles = {
     position: 'relative',
 
     border: 0,
-    margin: '5px 0 0 0'
+    margin: '5px 0 0 0',
   },
   selectedTile: {
-    backgroundColor: color.purple
+    backgroundColor: color.purple,
   },
   nameLabel: {
     marginLeft: 4,
@@ -274,12 +291,12 @@ const styles = {
     textAlign: 'center',
     userSelect: 'none',
     overflow: 'hidden',
-    fontSize: '13px'
+    fontSize: '13px',
   },
   nameInputWrapper: {
     marginLeft: 5,
     marginRight: 5,
-    marginTop: 4
+    marginTop: 4,
   },
   nameInput: {
     width: '100%',
@@ -287,7 +304,7 @@ const styles = {
     padding: 0,
     textAlign: 'center',
     border: 'none',
-    borderRadius: 9
+    borderRadius: 9,
   },
   rightArrow: {
     width: 0,
@@ -297,8 +314,8 @@ const styles = {
     borderLeft: '10px solid ' + color.purple,
     position: 'absolute',
     right: '-10px',
-    top: 80
-  }
+    top: 80,
+  },
 };
 export default connect(
   state => ({
@@ -306,7 +323,7 @@ export default connect(
     columnWidth: state.animationTab.columnSizes[0],
     allAnimationsSingleFrame:
       state.pageConstants.allAnimationsSingleFrame || false,
-    isSpriteLab: state.pageConstants.isBlockly
+    isSpriteLab: state.pageConstants.isBlockly,
   }),
   dispatch => {
     return {
@@ -330,7 +347,7 @@ export default connect(
       },
       setAnimationFrameDelay(animationKey, frameDelay) {
         dispatch(setAnimationFrameDelay(animationKey, frameDelay));
-      }
+      },
     };
   }
 )(AnimationListItem);

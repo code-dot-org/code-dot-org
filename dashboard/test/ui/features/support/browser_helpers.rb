@@ -13,13 +13,18 @@ module BrowserHelpers
     expect(text).to eq(expected_html)
   end
 
-  def element_has_i18n_text(selector, language, loc_key)
+  def element_has_i18n_text(selector, language, loc_key, rtl: false)
     loc_key.gsub!('\"', '"')
     # grab text from the browser, replacing non-breaking spaces with regular ones
-    text = @browser.execute_script("return $(\"#{selector}\").text().replace(/\u00a0/g, ' ');")
+    text = @browser.execute_script("return $(\"#{selector}\").text().replace(/\u00a0/g, ' ');").strip
     # Get localized text from server
     response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_i18n_t?key=#{loc_key}&locale=#{language}")).parsed_response
-    text.should eq response
+    # RTL text can include the RLM character, which can be safely ignored here
+    if rtl
+      text.should include response.strip
+    else
+      text.should eq response.strip
+    end
   end
 
   # This function checks that the text within the given selector matches the
@@ -117,8 +122,8 @@ module BrowserHelpers
       JS
       )
     end
-  rescue => err
-    puts "DEBUG: Unable to install js error recorder; #{err}"
+  rescue => exception
+    puts "DEBUG: Unable to install js error recorder; #{exception}"
   end
 
   def check_window_for_js_errors(check_reason_description)
@@ -132,13 +137,13 @@ module BrowserHelpers
         end
       end
     end
-  rescue => err
+  rescue => exception
     # We're not currently failing any tests based on JS errors showing up, so
     # this is just a debugging tool.
     # We're getting intermittent timing errors that have to do with SauceLabs
     # going away before we can check for JS errors.
     # We don't want that to cause test runs to fail, so ignore exceptions for now.
-    puts "DEBUG: Unable to check window for JS errors; #{err}"
+    puts "DEBUG: Unable to check window for JS errors; #{exception}"
   end
 
   def wait

@@ -5,17 +5,17 @@ import {launchAsync} from '@microsoft/immersive-reader-sdk';
  * @returns {Promise<unknown>} { token: <auth_token>, subdomain: <azure_subdomain> }
  */
 function getTokenAndSubdomainAsync() {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     $.ajax({
       url: '/api/immersive_reader_token',
       type: 'GET',
-      success: function(data) {
+      success: function (data) {
         if (data.error) {
           reject(data.error);
         } else {
           resolve(data);
         }
-      }
+      },
     });
   });
 }
@@ -29,7 +29,7 @@ function getTokenAndSubdomainAsync() {
  */
 export default function handleLaunchImmersiveReader(locale, title, text) {
   getTokenAndSubdomainAsync()
-    .then(function(response) {
+    .then(function (response) {
       const token = response.token;
       const subdomain = response.subdomain;
       const data = {
@@ -37,13 +37,13 @@ export default function handleLaunchImmersiveReader(locale, title, text) {
         chunks: [
           {
             content: sanitizeText(text),
-            lang: locale
-          }
-        ]
+            lang: locale,
+          },
+        ],
       };
       launchAsync(token, subdomain, data, {uiZIndex: 2113});
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.error(error);
     });
 }

@@ -6,19 +6,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {lessonType} from './progressTypes';
-import HiddenForSectionToggle from './HiddenForSectionToggle';
-import LessonLock from './LessonLock';
+
 import {
   toggleHiddenLesson,
-  isLessonHiddenForSection
+  isLessonHiddenForSection,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import Button from '../Button';
-import TeacherInfoBox from './TeacherInfoBox';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
+import HiddenForSectionToggle from './HiddenForSectionToggle';
+import LessonLock from './LessonLock';
+import {lessonType} from './progressTypes';
 import SendLesson from './SendLesson';
+import TeacherInfoBox from './TeacherInfoBox';
 
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
@@ -33,7 +35,7 @@ class ProgressLessonTeacherInfo extends React.Component {
     unitName: PropTypes.string.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenLesson: PropTypes.func.isRequired,
-    lockableAuthorized: PropTypes.bool
+    lockableAuthorized: PropTypes.bool,
   };
 
   constructor(props) {
@@ -51,7 +53,7 @@ class ProgressLessonTeacherInfo extends React.Component {
         study: 'hidden-lessons',
         study_group: 'v0',
         event: value,
-        data_json: JSON.stringify(this.firehoseData())
+        data_json: JSON.stringify(this.firehoseData()),
       },
       {includeUserId: true}
     );
@@ -63,7 +65,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       script_name: unitName,
       section_id: section && section.id,
       lesson_id: lesson.id,
-      lesson_name: lesson.name
+      lesson_name: lesson.name,
     };
   }
 
@@ -75,7 +77,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       hasNoSections,
       lockableAuthorized,
       unitId,
-      lesson
+      lesson,
     } = this.props;
 
     const sectionId = (section && section.id.toString()) || '';
@@ -150,7 +152,7 @@ class ProgressLessonTeacherInfo extends React.Component {
           <div
             style={{
               marginBottom: !!showHiddenForSectionToggle ? '0px' : '10px',
-              ...styles.buttonContainer
+              ...styles.buttonContainer,
             }}
           >
             <Button
@@ -182,7 +184,7 @@ const styles = {
     marginRight: '15px',
     marginLeft: '15px',
     // Have to set line height to 0 to remove additional 5px bottom margin
-    lineHeight: '0px'
+    lineHeight: '0px',
   },
   // Setting 0px margin here intentionally to override styling
   button: {
@@ -190,8 +192,8 @@ const styles = {
     margin: '0px',
     paddingLeft: 0,
     paddingRight: 0,
-    boxShadow: 'none'
-  }
+    boxShadow: 'none',
+  },
 };
 
 export const UnconnectedProgressLessonTeacherInfo = ProgressLessonTeacherInfo;
@@ -207,11 +209,11 @@ export default connect(
     lockableAuthorized: state.lessonLock.lockableAuthorized,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
-      state.teacherSections.sectionIds.length === 0
+      state.teacherSections.sectionIds.length === 0,
   }),
   dispatch => ({
     toggleHiddenLesson(unitName, sectionId, lessonId, hidden) {
       dispatch(toggleHiddenLesson(unitName, sectionId, lessonId, hidden));
-    }
+    },
   })
 )(ProgressLessonTeacherInfo);

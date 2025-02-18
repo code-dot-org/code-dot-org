@@ -92,7 +92,7 @@ def storage_encrypt_channel_id(storage_id, project_id)
 end
 
 def get_storage_id
-  @user_storage_id ||= storage_id_for_current_user || storage_id_from_cookie || create_storage_id_cookie
+  @get_storage_id ||= storage_id_for_current_user || storage_id_from_cookie || create_storage_id_cookie
 end
 
 def storage_id_cookie_name
@@ -163,7 +163,9 @@ end
 
 # All operations to the user_project_storage_ids table listed below
 def user_storage_ids_table
+  # rubocop:disable CustomCops/DashboardDbUsage
   DASHBOARD_DB[:user_project_storage_ids]
+  # rubocop:enable CustomCops/DashboardDbUsage
 end
 
 # Returns first user storage ID row matching query

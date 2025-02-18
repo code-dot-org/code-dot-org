@@ -1,6 +1,10 @@
-import {commands as locationCommands} from './locationCommands';
-import {commands as behaviorCommands} from './behaviorCommands';
 import * as utils from '@cdo/apps/p5lab/utils';
+
+import {APP_HEIGHT} from '../../constants';
+import {layoutSpriteGroup} from '../../layoutUtils';
+
+import {commands as behaviorCommands} from './behaviorCommands';
+import {commands as locationCommands} from './locationCommands';
 
 export const commands = {
   countByAnimation(spriteArg) {
@@ -35,6 +39,8 @@ export const commands = {
         return sprite.getAnimationLabel();
       } else if (prop === 'y') {
         return 400 - sprite.y;
+      } else if (prop === 'velocityY') {
+        return -sprite.velocityY;
       } else {
         return sprite[prop];
       }
@@ -64,6 +70,10 @@ export const commands = {
     return this.addSprite({animation, location});
   },
 
+  makeNewGroupSprite(animation, group, location) {
+    return this.addSprite({animation, group, location});
+  },
+
   makeNumSprites(numSprites, animation) {
     if (this.reachedSpriteMax()) {
       return;
@@ -74,8 +84,28 @@ export const commands = {
     for (let i = 0; i < maxAllowedNewSprites; i++) {
       this.addSprite({
         animation,
-        location: locationCommands.randomLocation()
+        location: locationCommands.randomLocation(),
       });
+    }
+  },
+
+  makeEnvironmentSprites(animation, group, bitmap) {
+    // The scale is determined based on the app height (400) and the number of rows in the array.
+    // For example, with a 4x4 grid, the scale is 100 and the sprites are 100x100.
+    const scale = APP_HEIGHT / bitmap.length;
+    for (let i = 0; i < bitmap.length; i++) {
+      for (let j = 0; j < bitmap[0].length; j++) {
+        // Array values are either 0 or 1. Create a sprite for each 1.
+        if (bitmap[j][i]) {
+          // Sprite x/y coordinates represent the center of the sprite.
+          // To position the sprites, we offset x and y by half of the scale.
+          const location = {
+            x: scale / 2 + scale * i,
+            y: scale / 2 + scale * j,
+          };
+          this.addSprite({animation, group, location, scale, minimumScale: 1});
+        }
+      }
     }
   },
 
@@ -90,7 +120,7 @@ export const commands = {
       burst: behaviorCommands.burstFunc,
       pop: behaviorCommands.popFunc,
       rain: behaviorCommands.rainFunc,
-      spiral: behaviorCommands.spiralFunc
+      spiral: behaviorCommands.spiralFunc,
     };
     //Makes sure that same-frame multiple spiral effects start at a different angles
     const spiralRandomizer = utils.randomInt(0, 359);
@@ -105,7 +135,7 @@ export const commands = {
             direction: utils.randomInt(0, 359),
             rotation: utils.randomInt(0, 359),
             delay: utils.randomInt(1, 21),
-            lifetime: 60
+            lifetime: 60,
           };
           break;
         }
@@ -117,9 +147,9 @@ export const commands = {
             direction: utils.randomInt(225, 315),
             location: {
               x: utils.randomInt(0, 400),
-              y: utils.randomInt(450, 500)
+              y: utils.randomInt(450, 500),
             },
-            lifetime: 60
+            lifetime: 60,
           };
           break;
         }
@@ -130,10 +160,10 @@ export const commands = {
             scale: 50,
             location: {
               x: utils.randomInt(0, 400),
-              y: utils.randomInt(-125, -25)
+              y: utils.randomInt(-125, -25),
             },
             rotation: utils.randomInt(-10, 10),
-            lifetime: 60
+            lifetime: 60,
           };
           break;
         }
@@ -144,17 +174,18 @@ export const commands = {
             initialAngle:
               (i * 360) / numSprites - 180 * ((i + 1) % 2) + spiralRandomizer,
             delay: (i * 30) / numSprites,
-            lifetime: 90
+            lifetime: 90,
           };
           break;
         }
         default:
       }
+      spriteOptions.group = 'effects';
       const spriteId = this.addSprite(spriteOptions);
       const sprite = this.getSpriteArray({id: spriteId})[0];
       this.addBehavior(sprite, {
         func: behaviorFuncs[effectName].apply(this),
-        name: effectName
+        name: effectName,
       });
     }
   },
@@ -173,5 +204,14 @@ export const commands = {
         );
       sprite.scale *= sprite.baseScale;
     });
-  }
+  },
+
+  makeNewSpriteGroup(numSprites, animation, layout) {
+    let spriteGroup = [];
+    for (let i = 0; i < numSprites; i++) {
+      const id = this.addSprite({animation});
+      spriteGroup = spriteGroup.concat(this.getSpriteArray({id}));
+    }
+    layoutSpriteGroup(spriteGroup, layout, this.p5);
+  },
 };

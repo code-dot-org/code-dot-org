@@ -1,0 +1,39 @@
+name 'sp-pl-Code-w-AI-prompt_guide_24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Prompting Guide 
+
+#### Now that you are familiar with an LLM, let’s dive into some prompting best practices. 
+
+#### Take some time to read over the  <a href="https://docs.google.com/document/d/10bo49TaCHgA-UZ_nOHRKRbXFCC9F7g2646dfnFP0vjs/edit#heading=h.2irny8ojv9hy" target="blank" rel="noopener noreferrer"> AI Chatbot Prompting Guide Handout</a> 
+
+
+#### Then, return to the Chatbot of your choice (<a href="https://chat.openai.com/" target="blank" rel="noopener noreferrer">ChatGPT</a>, <a href="https://www.bing.com/chat" target="blank" rel="noopener noreferrer"> Copilot</a>, <a href="https://gemini.google.com" target="blank" rel="noopener noreferrer"> Gemini</a> ) and practice using the elevated prompt format:
+
+<br>
+
+<p style="font-size: 28px; font-weight: bold; text-align: center;">
+  Acting as a [<span style="color: #8C52BA;">ROLE</span>] perform [<span style="color: #0093A4;">TASK</span>] in [<span style="color: orange;">FORMAT</span>]
+</p>
+
+<br>
+
+---
+## Example prompts 
+
+#### Here is a list of example prompts you can explore. Feel free to play around and be as creative as possible when chatting. 
+
+
+- #### Acting as a Creative Director  perform  a social media post caption in 30 words or less promoting a new product launch, using a humorous tone.
+
+- #### Acting as a Party Planner  perform  a themed party brainstorming list with 3 unique themes, decorations, and activity ideas for a [age group] birthday party.
+
+- #### Acting as a Historical Figure perform a diary entry in character detailing the events of a specific day from their perspective.
+
+- #### Acting as a Scientist perform a short educational video script explaining a scientific concept for a specific age group (e.g., elementary school, high school).
+
+#### ***Spend about 10 minutes practicing with the elevated prompts.*** 
+
+MARKDOWN

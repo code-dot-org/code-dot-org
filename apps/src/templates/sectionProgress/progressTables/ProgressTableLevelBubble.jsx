@@ -1,17 +1,19 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {LevelKind} from '@cdo/apps/util/sharedConstants';
+import React from 'react';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
   BasicBubble,
   BubbleLink,
   BubbleSize,
   getBubbleContent,
   getBubbleClassNames,
-  getBubbleShape
+  getBubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import CachedElement from '@cdo/apps/util/CachedElement';
+import {LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
 import {levelProgressStyle} from '../../progress/progressStyles';
 
 /**
@@ -40,11 +42,11 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
     bubbleSize: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
     title: PropTypes.string,
     url: PropTypes.string,
-    reviewState: PropTypes.oneOf(Object.keys(ReviewStates))
+    reviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
   };
 
   static defaultProps = {
-    bubbleSize: BubbleSize.full
+    bubbleSize: BubbleSize.full,
   };
 
   constructor(props) {
@@ -80,7 +82,7 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
       isBonus,
       isPaired,
       title,
-      bubbleSize
+      bubbleSize,
     } = this.props;
     const content = getBubbleContent(
       isLocked,
@@ -151,7 +153,7 @@ export default class ProgressTableLevelBubble extends React.PureComponent {
       isBonus,
       isPaired,
       title,
-      bubbleSize
+      bubbleSize,
     } = this.props;
 
     // sacrificing key readability for every little performance boost ("sts")

@@ -1,40 +1,62 @@
-import React from 'react';
-import {UnconnectedLoginTypePicker as LoginTypePicker} from './LoginTypePicker';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+import {Provider} from 'react-redux';
+
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
+
+import {UnconnectedLoginTypePicker as LoginTypePicker} from './LoginTypePicker';
 
 export default {
-  title: 'LoginTypePicker',
-  component: LoginTypePicker
+  component: LoginTypePicker,
 };
 
-const Template = args => (
-  <LoginTypePicker
-    title="New section"
-    handleImportOpen={action('handleImportOpen')}
-    setLoginType={action('setLoginType')}
-    handleCancel={action('handleCancel')}
-    {...args}
-  />
+const store = getStore();
+registerReducers({currentUser});
+store.dispatch(
+  setInitialData({
+    id: 1,
+    user_type: 'teacher',
+    us_state_code: 'CO',
+  })
 );
 
-export const Basic = Template.bind({});
+const Template = (withCpaExperience, args) => {
+  return (
+    <Provider store={store}>
+      <LoginTypePicker
+        title="New section"
+        handleImportOpen={action('handleImportOpen')}
+        setLoginType={action('setLoginType')}
+        handleCancel={action('handleCancel')}
+        {...args}
+      />
+    </Provider>
+  );
+};
 
-export const Google = Template.bind({});
+export const Basic = Template.bind({}, false);
+
+export const BasicWithCPAWarning = Template.bind({}, true);
+
+export const Google = Template.bind({}, false);
 Google.args = {
-  providers: ['google_classroom']
+  providers: ['google_classroom'],
 };
 
-export const Clever = Template.bind({});
+export const Clever = Template.bind({}, false);
 Clever.args = {
-  providers: ['clever']
+  providers: ['clever'],
 };
 
-export const Microsoft = Template.bind({});
+export const Microsoft = Template.bind({}, false);
 Microsoft.args = {
-  providers: ['microsoft_classroom']
+  providers: ['microsoft_classroom'],
 };
 
-export const Multiple = Template.bind({});
+export const Multiple = Template.bind({}, false);
 Multiple.args = {
-  providers: ['google_classroom', 'clever']
+  providers: ['google_classroom', 'clever'],
 };

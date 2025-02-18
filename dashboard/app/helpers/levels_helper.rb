@@ -2,7 +2,6 @@ require 'cdo/script_config'
 require 'cdo/redcarpet/inline'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
-require 'firebase_token_generator'
 require 'image_size'
 require 'cdo/firehose'
 require 'cdo/languages'
@@ -16,7 +15,9 @@ module LevelsHelper
   include NotesHelper
   include AzureTextToSpeech
 
-  def build_script_level_path(script_level, params = {})
+  # Builds the `/s/` deprecated paths
+  def build_script_level_path_deprecated(script_level, params = {})
+    params ||= {}
     if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
     elsif script_level.script.name == Unit::FLAPPY_NAME
@@ -38,6 +39,35 @@ module LevelsHelper
       script_lesson_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
     else
       script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
+    end
+  end
+
+  def build_script_level_path(script_level, params = {}, course_name: nil, unit_position: nil)
+    params ||= {}
+    # if course_name is not defined, then this is a deprecated /s/ URL
+    return build_script_level_path_deprecated(script_level, params) unless course_name && unit_position
+    # /courses/.../units/...
+    if script_level.script.name == Unit::HOC_NAME
+      hoc_chapter_path(script_level.chapter, params)
+    elsif script_level.script.name == Unit::FLAPPY_NAME
+      flappy_chapter_path(script_level.chapter, params)
+    elsif params[:puzzle_page]
+      if script_level.lesson.numbered_lesson?
+        puzzle_page_course_unit_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
+      else
+        puzzle_page_course_unit_lockable_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
+      end
+    elsif params[:sublevel_position]
+      sublevel_course_unit_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params[:sublevel_position])
+      # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
+      # not include the '/lockable/' piece added in this elsif case
+    elsif !script_level.lesson.numbered_lesson?
+      course_unit_lockable_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params)
+    elsif script_level.bonus
+      query_params = params.merge(level_name: script_level.level.name)
+      course_unit_lesson_extras_path(course_name, unit_position, script_level.lesson, query_params)
+    else
+      course_unit_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params)
     end
   end
 
@@ -82,6 +112,28 @@ module LevelsHelper
     signed_url.sub!('cdo-p5-replay-source.s3.amazonaws.com', 'dance-api.code.org')
 
     view_options(signed_replay_log_url: signed_url)
+  end
+
+  def get_project_and_version_id(level_id, script_id)
+    result = {project_id: nil, version_id: nil}
+
+    user_storage_id = storage_id_for_user_id(current_user.id)
+    return result unless user_storage_id
+
+    level = Level.find(level_id)
+    return result unless level
+
+    channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
+    return result unless channel_token
+
+    _owner_id, result[:project_id] = storage_decrypt_channel_id(channel_token.channel)
+    source_data = SourceBucket.new.get(channel_token.channel, "main.json")
+
+    if source_data[:status] == 'FOUND'
+      result[:version_id] = source_data[:version_id]
+    end
+
+    result
   end
 
   # If given a user, find the channel associated with the given level/user.
@@ -231,7 +283,8 @@ module LevelsHelper
     )
 
     # Enable backpack for levels with a backpack option (currently all non-standalone Javalab),
-    # and get the backpack channel token if it exists
+    # and get the backpack channel token if it exists.
+    # Backpack is used in lab2 apps also but app_options is only used by legacy labs.
     backpack_enabled = !!(@level.is_a?(Javalab) &&
       (ProjectsController::STANDALONE_PROJECTS["javalab"]["name"] != @level.name) &&
       (@user || current_user))
@@ -240,7 +293,7 @@ module LevelsHelper
 
     if backpack_enabled
       user_id = @user&.id || current_user&.id
-      backpack = Backpack.find_by_user_id(user_id)
+      backpack = Backpack.find_by(user_id: user_id, game_id: @level.game_id)
       view_options(backpack_channel: backpack&.channel)
     end
 
@@ -255,7 +308,8 @@ module LevelsHelper
       view_options(
         lesson_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,
-        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @lesson)
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @lesson),
+        current_script_level_url: @script_level.path,
       )
     end
 
@@ -316,7 +370,9 @@ module LevelsHelper
     end
 
     @app_options =
-      if @level.is_a? Blockly
+      if @level.uses_lab2?
+        lab2_options
+      elsif @level.is_a? Blockly
         blockly_options
       elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
         non_blockly_puzzle_options
@@ -350,7 +406,7 @@ module LevelsHelper
     @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
 
     @app_options[:dialog] = {
-      skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
+      skipSound: !!@level.properties['options'].try(:[], 'skip_sound'),
       preTitle: @level.properties['pre_title'],
       fallbackResponse: @fallback_response.to_json,
       callback: @callback,
@@ -393,7 +449,7 @@ module LevelsHelper
         end
       end
       @app_options[:experiments] =
-        Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
+        Experiment.get_all_enabled(user: current_user, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
       @app_options[:muteMusic] = current_user.mute_music?
       @app_options[:displayTheme] = current_user.display_theme
@@ -436,19 +492,15 @@ module LevelsHelper
       }
   end
 
-  # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses:
-  #  1. Setting the blocklyVersion view_option, usually configured by a URL parameter.
-  #  2. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
-  #     have fully transitioned to Google Blockly.
-  #  3. The disable_google_blockly DCDO flag, which contains an array of strings corresponding to model class names.
-  #     This option will override #2 as an "emergency switch" to go back to CDO Blockly.
+  # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses.
+  # In priority order they are:
+  # 1. Setting the blocklyVersion view_option, usually configured by a URL parameter (not persistent across levels).
+  # 2. All Blockly levels now default to using Google Blockly.
+
   def use_google_blockly
     return true if view_options[:blocklyVersion]&.downcase == 'google'
     return false if view_options[:blocklyVersion]&.downcase == 'cdo'
-    return false unless @level.uses_google_blockly?
-
-    # Only check DCDO flag if level type uses Google Blockly to avoid performance hit.
-    DCDO.get('disable_google_blockly', []).map(&:downcase).exclude?(@level.class.to_s.downcase)
+    return true
   end
 
   # Options hash for Widget
@@ -537,10 +589,6 @@ module LevelsHelper
       sublevelCallback: @sublevel_callback,
     }
 
-    if @game&.owns_footer_for_share? || @legacy_share_style
-      app_options[:copyrightStrings] = build_copyright_strings
-    end
-
     app_options
   end
 
@@ -573,19 +621,6 @@ module LevelsHelper
     app_options[:unsubmitUrl] = level_view_options(@level.id)[:unsubmit_url]
 
     app_options
-  end
-
-  def firebase_options
-    fb_options = {}
-
-    if @level.game.use_firebase?
-      fb_options[:firebaseName] = CDO.firebase_name
-      fb_options[:firebaseAuthToken] = firebase_auth_token
-      fb_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
-      fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
-    end
-
-    fb_options
   end
 
   def azure_speech_service_options
@@ -674,7 +709,6 @@ module LevelsHelper
     app_options[:legacyShareStyle] = true if @legacy_share_style
     app_options[:isMobile] = true if browser.mobile?
     app_options[:labUserId] = lab_user_id if @game == Game.applab || @game == Game.gamelab
-    app_options.merge!(firebase_options)
     app_options[:canResetAbuse] = true if current_user&.permission?(UserPermission::PROJECT_VALIDATOR)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:isTooYoung] = !current_user.nil? && current_user.under_13? && current_user.terms_version.nil?
@@ -686,9 +720,7 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
-    use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
-    app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
+    app_options[:useRestrictedSongs] = @game.use_restricted_songs?
     app_options[:isStartMode] = @is_start_mode || false
 
     if params[:blocks]
@@ -711,30 +743,29 @@ module LevelsHelper
     # Request-dependent option
     if request
       app_options[:isUS] = request.location.try(:country_code) == 'US' ||
-          (!Rails.env.production? && request.location.try(:country_code) == 'RD')
+        (!Rails.env.production? && request.location.try(:country_code) == 'RD')
     end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:isUS]
-
-    if @game&.owns_footer_for_share? || @legacy_share_style
-      app_options[:copyrightStrings] = build_copyright_strings
-    end
 
     app_options
   end
 
-  def build_copyright_strings
-    # These would ideally also go in _javascript_strings.html right now, but it can't
-    # deal with params.
-    {
-      thank_you: ERB::Util.url_encode(I18n.t('footer.thank_you')),
-      help_from_html: I18n.t('footer.help_from_html'),
-      art_from_html: ERB::Util.url_encode(I18n.t('footer.art_from_html', current_year: Time.now.year)),
-      code_from_html: ERB::Util.url_encode(I18n.t('footer.code_from_html')),
-      powered_by_aws: I18n.t('footer.powered_by_aws'),
-      trademark: ERB::Util.url_encode(I18n.t('footer.trademark', current_year: Time.now.year)),
-      built_on_github: I18n.t('footer.built_on_github'),
-      google_copyright: ERB::Util.url_encode(I18n.t('footer.google_copyright'))
-    }
+  def lab2_options
+    raise ArgumentError.new("#{@level} is not a Lab2 level") unless @level.uses_lab2?
+    app_options = {channel: view_options[:channel], level_id: @level.id}
+    level_options = level_view_options(@level.id)
+    # Add edit_blocks to app_options if it exists in level_options
+    if level_options[:edit_blocks]
+      app_options[:edit_blocks] = level_options[:edit_blocks]
+    end
+    # Also pass through if we are in exemplar edit or view mode.
+    if level_options[:is_editing_exemplar] || level_options[:is_viewing_exemplar]
+      app_options[:is_editing_exemplar] = level_options[:is_editing_exemplar] || false
+      app_options[:is_viewing_exemplar] = level_options[:is_viewing_exemplar] || false
+    end
+    app_options[:share] = level_options[:share] if level_options[:share]
+    app_options[:public_caching] = @public_caching
+    app_options.camelize_keys
   end
 
   def match_answer_as_image(path, width)
@@ -746,8 +777,8 @@ module LevelsHelper
   def match_answer_as_embedded_blockly(path)
     # '.start_blocks' takes the XML from the start_blocks of the specified level.
     ext = File.extname(path)
-    base_level = File.basename(path, ext)
-    level = Level.find_by(name: base_level)
+    level_name = Policies::LevelFiles.level_name_from_path(path)
+    level = Level.find_by(name: level_name)
     block_type = ext.slice(1..-1)
     options = {
       readonly: true,
@@ -759,26 +790,34 @@ module LevelsHelper
       nonGlobal: true,
     }
     app = level.game.app
+    # We can safely treat this string as HTML-safe because it's constructed
+    # from levelbuilder-provided data, not user- or translator-provided.
+    # rubocop:disable Rails/OutputSafety
     blocks = content_tag(:xml, level.blocks_to_embed(level.properties[block_type]).html_safe)
+    # rubocop:enable Rails/OutputSafety
 
     unless @blockly_loaded
       @blockly_loaded = true
       blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
-      content_tag(:style, '.blocklySvg { background: none; }') +
-      content_tag(:script, '', src: webpack_asset_path('js/blockly.js')) +
-      content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")) +
-      content_tag(:script, '', src: webpack_asset_path('js/common.js')) +
-      content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/#{app}_locale.js")) +
-      content_tag(:script, '', src: webpack_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
-      content_tag(:script, '', src: webpack_asset_path('js/embedBlocks.js'))
+        content_tag(:style, '.blocklySvg { background: none; }') +
+        content_tag(:script, '', src: webpack_asset_path('js/blockly.js')) +
+        content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/blockly_locale.js"))
+
+      # This file is generated by Webpack's SplitChunksPlugin,
+      # which we only use when optimizing our webpack build (ie, non-development environments).
+      blocks += content_tag(:script, '', src: webpack_asset_path('js/common.js')) if CDO.optimize_webpack_assets
+
+      blocks += content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/#{app}_locale.js")) +
+        content_tag(:script, '', src: webpack_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
+        content_tag(:script, '', src: webpack_asset_path('js/embedBlocks.js'))
     end
 
     blocks
   end
 
   def match_answer_as_iframe(path, width)
-    base_level = File.basename(path, '.level')
-    level = Level.find_by(name: base_level)
+    level_name = Policies::LevelFiles.level_name_from_path(path)
+    level = Level.find_by(name: level_name)
     content_tag(
       :div,
       content_tag(
@@ -805,7 +844,11 @@ module LevelsHelper
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
     @@markdown_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
+    # We can safely treat this string as HTML-safe because the markdown
+    # renderer is configured to filter out any non-markdown-standard HTML.
+    # rubocop:disable Rails/OutputSafety
     @@markdown_renderer.render(text).html_safe
+    # rubocop:enable Rails/OutputSafety
   end
 
   def level_title
@@ -882,58 +925,6 @@ module LevelsHelper
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
-  # Assign a firebase authentication token based on the firebase shared secret,
-  # plus either the dashboard user id or the rails session id. This is
-  # sufficient for rate limiting, since it uniquely identifies users.
-  #
-  # Today, anyone can edit the data in any channel, so this meets our current needs.
-  # In the future, if we need to assign special privileges to channel owners,
-  # we could include the storage_id associated with the user id (if one exists).
-  def firebase_shared_auth_token
-    return nil unless CDO.firebase_shared_secret
-
-    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
-    payload = {
-      uid: user_or_session_id,
-      is_dashboard_user: !!current_user,
-      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
-    }
-    options = {}
-    # Provides additional debugging information to the browser when
-    # security rules are evaluated.
-    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
-
-    # TODO(dave): cache token generator across requests
-    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_shared_secret)
-    generator.create_token(payload, options)
-  end
-
-  # Assign a firebase authentication token based on the firebase secret,
-  # plus either the dashboard user id or the rails session id. This is
-  # sufficient for rate limiting, since it uniquely identifies users.
-  #
-  # Today, anyone can edit the data in any channel, so this meets our current needs.
-  # In the future, if we need to assign special privileges to channel owners,
-  # we could include the storage_id associated with the user id (if one exists).
-  def firebase_auth_token
-    return nil unless CDO.firebase_secret
-
-    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
-    payload = {
-      uid: user_or_session_id,
-      is_dashboard_user: !!current_user,
-      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
-    }
-    options = {}
-    # Provides additional debugging information to the browser when
-    # security rules are evaluated.
-    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
-
-    # TODO(dave): cache token generator across requests
-    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_secret)
-    generator.create_token(payload, options)
-  end
-
   # If this is a restricted level (i.e., applab), the user is under 13, and the
   # user has no teacher that has accepted our (August 2016) terms of service,
   # redirect with a flash alert.
@@ -941,34 +932,41 @@ module LevelsHelper
   # redirect.
   # @return [boolean] whether a (privacy) redirect happens.
   def redirect_under_13_without_tos_teacher(level)
+    error_message = under_13_without_tos_teacher?(level)
+    return false unless error_message
+
+    if error_message == I18n.t("errors.messages.too_young")
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: "redirect_under_13",
+          event: "student_with_no_teacher_redirected",
+          user_id: current_user.id,
+          data_json: {
+            game: level.game.name
+          }.to_json
+        }
+      )
+    end
+    redirect_to '/', flash: {alert: error_message}
+    return true
+  end
+
+  def under_13_without_tos_teacher?(level)
     # Note that Game.applab includes both App Lab and Maker Toolkit.
     return false unless level.game == Game.applab || level.game == Game.gamelab || level.game == Game.weblab
 
     if current_user&.under_13? && current_user.terms_version.nil?
       if current_user.teachers.any?
-        error_message = I18n.t("errors.messages.teacher_must_accept_terms")
+        return I18n.t("errors.messages.teacher_must_accept_terms")
       else
-        error_message = I18n.t("errors.messages.too_young")
-        FirehoseClient.instance.put_record(
-          :analysis,
-          {
-            study: "redirect_under_13",
-            event: "student_with_no_teacher_redirected",
-            user_id: current_user.id,
-            data_json: {
-              game: level.game.name
-            }.to_json
-          }
-        )
+        return I18n.t("errors.messages.too_young")
       end
-      redirect_to '/', flash: {alert: error_message}
-      return true
     end
 
     pairings.each do |paired_user|
       if paired_user.under_13? && paired_user.terms_version.nil?
-        redirect_to '/', flash: {alert: I18n.t("errors.messages.pair_programmer")}
-        return true
+        return I18n.t("errors.messages.pair_programmer")
       end
     end
 
@@ -997,7 +995,7 @@ module LevelsHelper
   #   is higher resolution
   # @returns [LevelSourceImage] A level source image, or nil if one was not
   # created or found.
-  def find_or_create_level_source_image(level_image, level_source, upgrade=false)
+  def find_or_create_level_source_image(level_image, level_source, upgrade = false)
     level_source_image = nil
     # Store the image only if the image is set, and either the image has not been
     # saved or the saved image is smaller than the provided image

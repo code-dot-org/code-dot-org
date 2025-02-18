@@ -1,0 +1,34 @@
+name 'csa-se-github-scavenger-hunt-pt2'
+title 'GitHub Scavenger Hunt'
+
+markdown <<MARKDOWN
+# GitHub Scavenger Hunt
+
+## Creating a Branch
+
+A **branch** is a *separate line* of development. You can use branches to **isolate** your work when you're developing a new feature or fixing a bug.
+
+1. In the bottom left corner, you should see the **main**. This indicates that you are currently on the **main branch**.
+
+2. Click on **main**, which opens options in the command palette.
+
+   * **+ Create new branch...** will create a new branch from the current branch you are working on (in this case, **main**).
+   
+   * **+ Create branch from...** will create a new branch from some other branch in the repo.
+
+    We want to create a new branch from **main**. Since we're already on the **main branch**, select the **+ Create new branch...** option.
+
+3. Enter a name for the new branch.
+
+<div style="border: 3px solid #007ACC; border-radius: 5px; font-size: 1em; line-height: 1.4; padding: 10px 20px 20px 20px; margin-top: 25px; margin-bottom: 25px;">
+<strong><h3>By the way . . .</h3></strong>
+Branch naming is important because it helps your team understand what is being worked on. Here are some best practices for naming branches:
+<br><br>
+<ul style="font-size: 1em; line-height: 1.4">
+<li><strong>Keep it short:</strong> Branch names should be short. Long branch names can be difficult to remember and tedious to type.</li><br>
+<li><strong>Use dashes or underscores:</strong> If your branch name is more than one word, separate words with dashes or underscores for readability.</li><br>
+<li><strong>Lowercase:</strong> It's best to stick to lowercase, as Git is case-sensitive. Using lowercase can avoid confusion.</li><br>
+<li><strong>Describe the work:</strong> The branch name should give an idea about what the changes involve.</li>
+</ul>
+</div>
+MARKDOWN

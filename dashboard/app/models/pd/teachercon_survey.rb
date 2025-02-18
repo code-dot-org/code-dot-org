@@ -129,8 +129,8 @@ class Pd::TeacherconSurvey < ApplicationRecord
     hash = sanitized_form_data_hash
 
     # validate conditional required fields
-    if DISAGREES.include?(hash.try(:[], :personal_learning_needs_met))
-      add_key_error(:how_could_improve) unless hash.key?(:how_could_improve)
+    if DISAGREES.include?(hash.try(:[], :personal_learning_needs_met)) && !hash.key?(:how_could_improve)
+      add_key_error(:how_could_improve)
     end
 
     super

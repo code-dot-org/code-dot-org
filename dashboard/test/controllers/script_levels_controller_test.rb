@@ -10,16 +10,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    seed_deprecated_unit_fixtures
+
     @student = create :student
     @young_student = create :young_student
     @teacher = create :teacher
     @facilitator = create :facilitator
     @levelbuilder = create(:levelbuilder)
     @project_validator = create :project_validator
-    @section = create :section, user_id: @teacher.id
+    @section_owner = create :teacher
+    @section = create :section, user: @section_owner
+    create :section_instructor, instructor: @teacher, section: @section
     Follower.create!(section_id: @section.id, student_user_id: @student.id, user: @teacher)
 
-    @pl_section = create :section, user_id: @facilitator.id
+    @pl_section_owner = create :facilitator
+    @pl_section = create :section, user: @pl_section_owner
+    create :section_instructor, instructor: @facilitator, section: @pl_section
     Follower.create!(section_id: @pl_section.id, student_user_id: @teacher.id, user: @facilitator)
 
     @custom_script = create(:script, name: 'laurel', hideable_lessons: true)
@@ -49,6 +55,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     @script = @custom_script
     @script_level = @custom_s1_l1
+    @level = @script_level.level
 
     in_development_unit = create(:script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     in_development_lesson_group = create(:lesson_group, script: in_development_unit)
@@ -60,7 +67,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     pilot_lesson = create(:lesson, script: pilot_script, lesson_group: pilot_lesson_group)
     @pilot_script_level = create :script_level, script: pilot_script, lesson: pilot_lesson
     @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
-    pilot_section = create :section, user: @pilot_teacher, script: pilot_script
+    @pilot_section_owner = create :teacher, pilot_experiment: 'pilot-experiment'
+    pilot_section = create :section, user: @pilot_section_owner, script: pilot_script
+    create :section_instructor, instructor: @pilot_teacher, section: pilot_section
     @pilot_student = create(:follower, section: pilot_section).student_user
 
     pilot_pl_script = create(:script, pilot_experiment: 'pl-pilot-experiment', instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
@@ -68,7 +77,9 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     pilot_pl_lesson = create(:lesson, script: pilot_pl_script, lesson_group: pilot_pl_lesson_group)
     @pilot_pl_script_level = create :script_level, script: pilot_pl_script, lesson: pilot_pl_lesson
     @pilot_instructor = create :facilitator, pilot_experiment: 'pl-pilot-experiment'
-    pilot_pl_section = create :section, user: @pilot_instructor, script: pilot_pl_script
+    @pilot_section_owner = create :facilitator, pilot_experiment: 'pl-pilot-experiment'
+    pilot_pl_section = create :section, user: @pilot_section_owner, script: pilot_pl_script
+    create :section_instructor, instructor: @pilot_instructor, section: pilot_pl_section
     @pilot_participant = create :teacher
     create(:follower, section: pilot_pl_section, student_user: @pilot_participant)
 
@@ -86,6 +97,37 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   teardown do
     AzureTextToSpeech.unstub(:get_voices)
+  end
+
+  test "should return level_properties " do
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+    script_level = create(
+      :script_level,
+      lesson: lesson,
+      script: script,
+      levels: [level]
+    )
+
+    get :level_properties, params: script_level_params(script_level)
+    assert_response :success
+
+    body = JSON.parse(response.body)
+
+    assert_equal body["id"], level.id
+    assert_equal body["levelData"], {"hello" => "there"}
+    assert_equal body["other"], "other"
+    assert_equal body["preloadAssetList"], nil
+    assert_equal body["type"], "Maze"
+    assert_equal body["appName"], "maze"
+    assert_equal body["useRestrictedSongs"], false
+    assert_equal body["sharedBlocks"], []
+    assert_equal body["usesProjects"], false
+    assert_equal body["exampleSolutions"], []
+    assert_equal body["helpVideos"], []
+    assert_match Regexp.new("^/s/bogus-script-[0-9]+"), body["finishUrl"]
   end
 
   test 'should show script level for csp1-2020 lockable lesson with lesson plan' do
@@ -167,6 +209,27 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal @script_level, assigns(:script_level)
   end
 
+  test 'should show script level by script name' do
+    params = {
+      script_id: @script_level.script.name,
+      lesson_position: @script_level.lesson.absolute_position,
+      id: @script_level.position
+    }
+    get :show, params: params
+    assert_response :success
+  end
+
+  test 'should not show script level by script id' do
+    params = {
+      script_id: @script_level.script.id,
+      lesson_position: @script_level.lesson.absolute_position,
+      id: @script_level.position
+    }
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: params
+    end
+  end
+
   test 'should make script level pages uncachable by default' do
     get_show_script_level_page(@script_level)
 
@@ -235,6 +298,40 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "should not get show of ECSPD if not signed in" do
     get :show, params: {script_id: 'ECSPD', lesson_position: 1, id: 1}
     assert_redirected_to_sign_in
+  end
+
+  test "should not fetch partial peer review matches" do
+    user = create(:user)
+    level = create(:free_response, :with_script, peer_reviewable: true)
+    script_level = level.script_levels.first
+    level_source = create(:level_source)
+    create(:user_level, user: user, script: script_level.script, level: level, level_source: level_source)
+
+    peer_review_params = {
+      submitter: user,
+      script: script_level.script,
+      level: level,
+      level_source: level_source
+    }
+
+    # A "valid" PeerReview in this context is one that has both a reviewer and
+    # data; we want to ignore reviews that only have one or the other.
+    valid_peer_review = create(:peer_review, :reviewed, **peer_review_params)
+
+    # no data
+    create(:peer_review, :reviewed, data: nil, **peer_review_params)
+
+    # no reviewer
+    create(:peer_review, **peer_review_params)
+
+    sign_in user
+    get :show, params: {
+      script_id: script_level.script,
+      lesson_position: script_level.lesson.relative_position,
+      id: script_level.position,
+    }
+    assert_response :success
+    assert_equal [valid_peer_review], assigns(:peer_reviews)
   end
 
   test "should render sublevel for BubbleChoice script_level with sublevel_position param" do
@@ -518,8 +615,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1'
     }
     assert_response :success
-    assert_not_empty assigns(:level).related_videos
-    assert_not_nil assigns(:view_options)[:autoplay_video]
+    refute_empty assigns(:level).related_videos
+    refute_nil assigns(:view_options)[:autoplay_video]
   end
 
   test 'should have autoplay video when never_autoplay_video is false on level' do
@@ -533,8 +630,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1'
     }
     assert_response :success
-    assert_not_empty assigns(:level).related_videos
-    assert_not_nil assigns(:view_options)[:autoplay_video]
+    refute_empty assigns(:level).related_videos
+    refute_nil assigns(:view_options)[:autoplay_video]
   end
 
   test 'should not have autoplay video when never_autoplay_video is true on level' do
@@ -548,7 +645,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1'
     }
     assert_response :success
-    assert_not_empty assigns(:level).related_videos
+    refute_empty assigns(:level).related_videos
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
@@ -564,7 +661,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1'
     }
     assert_response :success
-    assert_not_empty assigns(:level).related_videos
+    refute_empty assigns(:level).related_videos
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
@@ -581,7 +678,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1'
     }
     assert_response :success
-    assert_not_empty assigns(:level).related_videos
+    refute_empty assigns(:level).related_videos
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
@@ -936,8 +1033,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response 200
     # Ensure storage_id is set to empty value and domain is correct
     cookie_header = response.header['Set-Cookie']
-    assert cookie_header.include?("#{storage_id_cookie_name}=;")
-    assert cookie_header.include?("domain=.test.host;")
+    assert_includes(cookie_header, "#{storage_id_cookie_name}=;")
+    assert_includes(cookie_header, "domain=.test.host;")
   end
 
   test "show with the reset param should not create a new storage_id cookie when logged in" do
@@ -947,7 +1044,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_response 302
     # Ensure storage_id is not being set
     cookie_header = response.header['Set-Cookie']
-    refute cookie_header.include?("#{storage_id_cookie_name}=")
+    refute_includes(cookie_header, "#{storage_id_cookie_name}=")
   end
 
   test "show with the reset param should not reset session when logged in" do
@@ -1017,7 +1114,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: script_level.position
     }
 
-    assert(@response.body.include?('Drag a \"move\" block and snap it below the other block'))
+    assert_includes(@response.body, 'Drag a \"move\" block and snap it below the other block')
   end
 
   test 'should render title for puzzle in custom script' do
@@ -1032,22 +1129,22 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test 'end of HoC for a user is HOC endpoint' do
     stubs(:current_user).returns(@student)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Unit.find_by_name(Unit::HOC_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is HOC endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/hourofcode', script_completion_redirect(Unit.find_by_name(Unit::HOC_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/hourofcode', Unit.find_by_name(Unit::HOC_NAME).finish_url)
   end
 
   test 'post script redirect is frozen endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/frozen', script_completion_redirect(Unit.find_by_name(Unit::FROZEN_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/frozen', Unit.find_by_name(Unit::FROZEN_NAME).finish_url)
   end
 
   test 'post script redirect is starwars endpoint' do
     stubs(:current_user).returns(nil)
-    assert_equal('//test.code.org/api/hour/finish/starwars', script_completion_redirect(Unit.find_by_name(Unit::STARWARS_NAME)))
+    assert_equal('//test.code.org/api/hour/finish/starwars', Unit.find_by_name(Unit::STARWARS_NAME).finish_url)
   end
 
   test "show redirects admins to root" do
@@ -1069,12 +1166,12 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   # test 'end of HoC has wrapup video in response' do
   #   get :show, {script_id: Unit::HOC_NAME, chapter: '20'}
-  #   assert(@response.body.include?('hoc_wrapup'))
+  #   assert_includes(@response.body, 'hoc_wrapup')
   # end
 
   # test 'end of HoC for signed-in users has no wrapup video, does have lesson change info' do
   #   get :show, {script_id: Unit::HOC_NAME, chapter: '20'}
-  #   assert(!@response.body.include?('hoc_wrapup'))
+  #   refute_includes(@response.body, 'hoc_wrapup')
   #   assert(@response.body.include?('/s/1/level/show?chapter=next'))
   # end
 
@@ -1643,7 +1740,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     script = create(:script)
     lesson_group = create(:lesson_group, script: script)
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    experiment = create :single_section_experiment, section: @section
+    experiment = create :single_section_experiment, section: @section, script: script
     level = create :maze, name: 'maze 1'
     level2 = create :maze, name: 'maze 2'
     get_show_script_level_page(
@@ -1928,7 +2025,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1',
     }
     assert_response :success
-    assert_not_nil assigns(:view_options)[:is_challenge_level]
+    refute_nil assigns(:view_options)[:is_challenge_level]
   end
 
   test "should not indicate non-challenge levels as challenge levels" do
@@ -2181,28 +2278,28 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     params: -> {script_level_params(@pilot_script_level)},
     name: 'student cannot view pilot script level'
   ) do
-    assert response.body.include? no_access_msg
+    assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
                               params: -> {script_level_params(@pilot_pl_script_level)},
                               name: 'participant cannot view pilot script level'
   ) do
-    assert response.body.include? no_access_msg
+    assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'teacher without pilot access cannot view pilot script level'
   ) do
-    assert response.body.include? no_access_msg
+    assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :facilitator,
                               params: -> {script_level_params(@pilot_script_level)},
                               name: 'instructor without pilot access cannot view pilot script level'
   ) do
-    assert response.body.include? no_access_msg
+    assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
@@ -2248,14 +2345,14 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                               params: -> {script_level_params(@in_development_script_level)},
                               name: 'student cannot view in_development script level'
   ) do
-    assert response.body.include? no_access_msg
+    assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
                               params: -> {script_level_params(@in_development_script_level)},
                               name: 'teacher access cannot view in_development script level'
   ) do
-    assert response.body.include? no_access_msg
+    assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
@@ -2273,7 +2370,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                               params: -> {script_level_params(@pl_script_level)},
                               name: 'student cannot view pl script level'
   ) do
-    assert response.body.include? no_access_msg
+    assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,

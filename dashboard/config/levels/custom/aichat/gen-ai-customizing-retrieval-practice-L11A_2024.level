@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:57:15.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Laptop Support Chatbot\r\n\r\nGreg isn't very great with technology - he keeps calling you for help fixing his brand new Sony laptop. You've decided to create a chatbot for him to talk to instead. The chatbot needs to provide precise, up-to-date troubleshooting steps that reflect the latest technical guidelines.\r\n\r\n### Do This\r\n\r\nSearch for a recently released laptop and find sources to use for specific troubleshooting steps. For example: you may find details on the company support website, or on tech support forums run by other computer repair companies.\r\n\r\nDesign a chatbot that offers tech support on this specific laptop.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "display_name": "Laptop Support Chatbot",
+    "bubble_choice_description": "Greg isn't very great with technology - he keeps calling you for help fixing his brand new Sony laptop. You've decided to create a chatbot for him to talk to instead.",
+    "thumbnail_url": "https://images.code.org/c143a86b32b97329bce0204a65949dfe-Lesson 7 - Level 11A- Laptop Tech Support Chatbot.png",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:57:15.435+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L11A\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L11A\"}]"
+}]]></config>
+</Aichat>

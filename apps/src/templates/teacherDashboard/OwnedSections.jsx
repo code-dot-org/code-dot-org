@@ -1,18 +1,23 @@
 /** @file Reusable widget to display and manage sections owned by the
  *        current user. */
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import _ from 'lodash';
-import OwnedSectionsTable from './OwnedSectionsTable';
-import Button from '@cdo/apps/templates/Button';
-import {beginEditingSection} from './teacherSectionsRedux';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import LtiFeedbackBanner from '@cdo/apps/simpleSignUp/lti/feedback/LtiFeedbackBanner';
 import styleConstants from '@cdo/apps/styleConstants';
-import {recordOpenEditSectionDetails} from './sectionHelpers';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
+import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
+
 import {recordImpression} from './impressionHelpers';
+import OwnedPlSectionsTable from './OwnedPlSectionsTable';
+import OwnedSectionsTable from './OwnedSectionsTable';
+import {recordOpenEditSectionDetails} from './sectionHelpers';
+import {beginEditingSection} from './teacherSectionsRedux';
 
 class OwnedSections extends React.Component {
   static propTypes = {
@@ -21,11 +26,11 @@ class OwnedSections extends React.Component {
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
 
     // redux provided
-    beginEditingSection: PropTypes.func.isRequired
+    beginEditingSection: PropTypes.func.isRequired,
   };
 
   state = {
-    viewHidden: false
+    viewHidden: false,
   };
 
   constructor(props) {
@@ -58,30 +63,44 @@ class OwnedSections extends React.Component {
 
   toggleViewHidden = () => {
     this.setState({
-      viewHidden: !this.state.viewHidden
+      viewHidden: !this.state.viewHidden,
     });
   };
 
-  render() {
+  ownedSectionsTable = showHidden => {
     const {isPlSections, sectionIds, hiddenSectionIds} = this.props;
+    const sectionsToShow = showHidden
+      ? hiddenSectionIds
+      : _.without(sectionIds, ...hiddenSectionIds);
+
+    return isPlSections ? (
+      <OwnedPlSectionsTable
+        sectionIds={sectionsToShow}
+        onEdit={this.onEditSection}
+      />
+    ) : (
+      <OwnedSectionsTable
+        sectionIds={sectionsToShow}
+        onEdit={this.onEditSection}
+      />
+    );
+  };
+
+  render() {
+    const {sectionIds, hiddenSectionIds} = this.props;
     const {viewHidden} = this.state;
 
     const hasSections = sectionIds.length > 0;
-    const visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
 
     return (
-      <div
-        className={
-          isPlSections ? 'uitest-owned-pl-sections' : 'uitest-owned-sections'
-        }
-      >
+      <div>
         {hasSections && (
           <div>
-            <OwnedSectionsTable
-              isPlSections={isPlSections}
-              sectionIds={visibleSectionIds}
-              onEdit={this.onEditSection}
+            <GlobalEditionWrapper
+              component={LtiFeedbackBanner}
+              componentId="LtiFeedbackBanner"
             />
+            {this.ownedSectionsTable(false)}
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
                 <Button
@@ -105,11 +124,7 @@ class OwnedSections extends React.Component {
                 <div style={styles.hiddenSectionDesc}>
                   {i18n.archivedSectionsTeacherDescription()}
                 </div>
-                <OwnedSectionsTable
-                  isPlSections={isPlSections}
-                  sectionIds={hiddenSectionIds}
-                  onEdit={this.onEditSection}
-                />
+                {this.ownedSectionsTable(true)}
               </div>
             )}
           </div>
@@ -122,31 +137,28 @@ class OwnedSections extends React.Component {
 const styles = {
   button: {
     marginBottom: 20,
-    float: 'right'
+    float: 'right',
   },
   buttonContainer: {
     width: styleConstants['content-width'],
     textAlign: 'right',
     paddingTop: 10,
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   hiddenSectionLabel: {
     fontSize: 18,
     paddingBottom: 10,
-    color: color.charcoal
+    color: color.charcoal,
   },
   hiddenSectionDesc: {
     fontSize: 14,
     lineHeight: '22px',
     paddingBottom: 10,
-    color: color.charcoal
-  }
+    color: color.charcoal,
+  },
 };
 export const UnconnectedOwnedSections = OwnedSections;
 
-export default connect(
-  () => ({}),
-  {
-    beginEditingSection
-  }
-)(OwnedSections);
+export default connect(() => ({}), {
+  beginEditingSection,
+})(OwnedSections);

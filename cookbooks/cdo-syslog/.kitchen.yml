@@ -16,7 +16,6 @@ platforms:
     pid_one_command: /bin/systemd
   run_list:
   - recipe[apt]
-  - recipe[sudo-user]
   attributes:
     cdo-syslog:
       syslog_size: 256

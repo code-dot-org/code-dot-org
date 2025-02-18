@@ -15,7 +15,7 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
   end
 
   test 'localized_property can return localized data' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {
@@ -38,7 +38,7 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
   end
 
   test 'localized_property can return partially-localized data' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       "data" => {

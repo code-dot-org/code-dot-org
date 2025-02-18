@@ -1,10 +1,10 @@
-/* globals appOptions */
 /** @file Droplet-friendly command definitions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
-import i18n from '@cdo/locale';
-import Sounds from '@cdo/apps/Sounds';
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
+import Sounds from '@cdo/apps/Sounds';
+import i18n from '@cdo/locale';
+
+import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
@@ -106,7 +106,7 @@ export const commands = {
       forceHTML5: forceHTML5,
       allowHTML5Mobile: true,
       callback: validCallback && opts.callback,
-      onEnded: validOnEnded && opts.onEnded
+      onEnded: validOnEnded && opts.onEnded,
     });
   },
 
@@ -201,10 +201,10 @@ export const commands = {
       locale: voices[language].locale,
       authenticityToken,
       onFailure: message => outputWarning(message + '\n'),
-      onComplete: validOnComplete ? onComplete : null
+      onComplete: validOnComplete ? onComplete : null,
     });
     azureTTS.enqueueAndPlay(promise);
-  }
+  },
 };
 
 /**
@@ -216,6 +216,6 @@ export const executors = {
     executeCmd(null, 'playSound', {url, loop, callback}),
   stopSound: url => executeCmd(null, 'stopSound', {url}),
   playSpeech: (text, gender, language = 'English', onComplete) =>
-    executeCmd(null, 'playSpeech', {text, gender, language, onComplete})
+    executeCmd(null, 'playSpeech', {text, gender, language, onComplete}),
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?

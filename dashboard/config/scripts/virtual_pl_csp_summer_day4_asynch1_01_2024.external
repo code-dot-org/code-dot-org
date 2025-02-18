@@ -1,0 +1,27 @@
+name 'virtual-pl-csp-summer-day4-asynch1-01-2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Day 4, Asynchronous Part 1
+
+#### Welcome! In this asynchronous module, you will continue exploring your identity and bias. You will also spend time working through Unit 3, Lesson 7 to prepare for tomorrow's TLOs. 
+
+<img src="https://images.code.org/99e778891490b2bf2b137546a1163dc7-Screenshot 2023-10-17 at 1.19.07 PM.png" alt="Image of the first step in the debugging process: Describe your problem" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 20px;">
+
+## In this module, you will:
+
+* ##### Applying your knowledge of identity and bias.
+* ##### Learn about the debugging process.
+* ##### Use the tools within App Lab to support debugging.
+
+### **Suggested time:** 45 minutes
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+
+
+MARKDOWN

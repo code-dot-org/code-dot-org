@@ -1,0 +1,9 @@
+name 'CSA U2L10-L7 Practice_pilot-2025'
+display_name 'Practice: The Food Truck'
+description 'Import your `Dessert` subclass and write a `toString()` method to return a `String` containing the values assigned to its instance variables.'
+
+sublevels
+level 'CSA U2L10-L7a_pilot-2025'
+level 'CSA U2L10-L7b_pilot-2025'
+level 'CSA U2L10-L7c_pilot-2025'
+level 'CSA U2L10-L7d_pilot-2025'

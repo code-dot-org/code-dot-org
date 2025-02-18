@@ -1,6 +1,7 @@
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 import queryString from 'query-string';
-import firehoseClient from './lib/util/firehose';
+
+import firehoseClient from './metrics/firehose';
 
 function project() {
   return require('./code-studio/initApp/project');
@@ -16,14 +17,14 @@ function apiPath(endpoint, channelId, path) {
 
 function ajaxInternal(method, path, success, error, data) {
   var xhr = new XMLHttpRequest();
-  xhr.addEventListener('load', function() {
+  xhr.addEventListener('load', function () {
     if (xhr.status >= 400) {
       error && error(xhr);
       return;
     }
     success(xhr);
   });
-  xhr.addEventListener('error', function() {
+  xhr.addEventListener('error', function () {
     error && error(xhr);
   });
 
@@ -58,7 +59,7 @@ class CollectionsApi {
   }
 
   ajax(method, file, success, error, data, params = []) {
-    error = error || function() {};
+    error = error || function () {};
     if (!window.dashboard && !this.getProjectId()) {
       error({status: 'No dashboard'});
       return;
@@ -77,7 +78,7 @@ class CollectionsApi {
   }
 
   getFile(file, version, success, error, data) {
-    error = error || function() {};
+    error = error || function () {};
     if (!window.dashboard && !this.getProjectId()) {
       error({status: 'No dashboard'});
       return;
@@ -101,7 +102,7 @@ class CollectionsApi {
     path +=
       '?' +
       queryString.stringify({
-        version: versionId
+        version: versionId,
       });
     return ajaxInternal('PUT', path, success, error);
   }
@@ -115,7 +116,7 @@ class CollectionsApi {
               study: 'weblab_loading_investigation',
               study_group: 'empty_manifest',
               event: 'error_uploading_starter_files',
-              project_id: this.getProjectId()
+              project_id: this.getProjectId(),
             },
             {includeUserId: true}
           );
@@ -158,7 +159,7 @@ class AssetsApi extends CollectionsApi {
       '?' +
       queryString.stringify({
         src_channel: sourceProjectId,
-        src_files: JSON.stringify(assetFilenames)
+        src_files: JSON.stringify(assetFilenames),
       });
     return ajaxInternal('POST', path, success, error);
   }
@@ -270,7 +271,7 @@ class FilesApi extends CollectionsApi {
     path +=
       '?' +
       queryString.stringify({
-        version: versionId
+        version: versionId,
       });
     return ajaxInternal('PUT', path, success, error);
   }
@@ -279,7 +280,7 @@ class FilesApi extends CollectionsApi {
     var path = this.basePath(newFilename);
     var params = {
       src: oldFilename,
-      delete: oldFilename
+      delete: oldFilename,
     };
     if (project().filesVersionId) {
       params['files-version'] = project().filesVersionId;
@@ -514,5 +515,5 @@ module.exports = {
   starterAssets: new StarterAssetsApi(),
   files: new FilesApi('files'),
   sources: new CollectionsApi('sources'),
-  channels: new CollectionsApi('channels')
+  channels: new CollectionsApi('channels'),
 };

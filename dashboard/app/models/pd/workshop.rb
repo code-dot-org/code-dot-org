@@ -2,27 +2,33 @@
 #
 # Table name: pd_workshops
 #
-#  id                  :integer          not null, primary key
-#  organizer_id        :integer          not null
-#  location_name       :string(255)
-#  location_address    :string(255)
-#  processed_location  :text(65535)
-#  course              :string(255)      not null
-#  subject             :string(255)
-#  capacity            :integer          not null
-#  notes               :text(65535)
-#  section_id          :integer
-#  started_at          :datetime
-#  ended_at            :datetime
-#  created_at          :datetime
-#  updated_at          :datetime
-#  processed_at        :datetime
-#  deleted_at          :datetime
-#  regional_partner_id :integer
-#  on_map              :boolean
-#  funded              :boolean
-#  funding_type        :string(255)
-#  properties          :text(65535)
+#  id                     :integer          not null, primary key
+#  organizer_id           :integer          not null
+#  location_name          :string(255)
+#  location_address       :string(255)
+#  processed_location     :text(65535)
+#  course                 :string(255)      not null
+#  subject                :string(255)
+#  capacity               :integer          not null
+#  notes                  :text(65535)
+#  section_id             :integer
+#  started_at             :datetime
+#  ended_at               :datetime
+#  created_at             :datetime
+#  updated_at             :datetime
+#  processed_at           :datetime
+#  deleted_at             :datetime
+#  regional_partner_id    :integer
+#  on_map                 :boolean
+#  funded                 :boolean
+#  funding_type           :string(255)
+#  properties             :text(65535)
+#  module                 :string(255)
+#  name                   :string(255)
+#  participant_group_type :string(255)
+#  description            :text(65535)
+#  registration_link      :text(65535)
+#  hidden                 :boolean
 #
 # Indexes
 #
@@ -48,8 +54,12 @@ class Pd::Workshop < ApplicationRecord
 
   has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
 
+  has_and_belongs_to_many :course_offerings, join_table: :course_offerings_pd_workshops, foreign_key: 'pd_workshop_id'
+
   serialized_attrs [
     'fee',
+    'grades',
+    'prereq',
 
     # Indicates that this workshop will be conducted virtually, which triggers
     # a different, virtual-specific post-workshop survey.
@@ -128,6 +138,14 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
+  # Whether enrollment in this workshop requires an application
+  def require_application?
+    courses = [COURSE_CSP, COURSE_CSD, COURSE_CSA]
+    subjects = ACADEMIC_YEAR_SUBJECTS.push(SUBJECT_SUMMER_WORKSHOP)
+    courses.include?(course) && subjects.include?(subject) &&
+      regional_partner && regional_partner.link_to_partner_application.blank?
+  end
+
   def self.organized_by(organizer)
     where(organizer_id: organizer.id)
   end
@@ -141,7 +159,13 @@ class Pd::Workshop < ApplicationRecord
     user_id_where_clause = base_query.where(pd_enrollments: {user_id: teacher.id})
     email_where_clause = base_query.where(pd_enrollments: {email: teacher.email})
 
-    user_id_where_clause.or(email_where_clause).distinct
+    alternate_email = teacher.alternate_email
+    if alternate_email.present?
+      alternate_email_where_clause = base_query.where(pd_enrollments: {email: alternate_email})
+      user_id_where_clause.or(email_where_clause).or(alternate_email_where_clause).distinct
+    else
+      user_id_where_clause.or(email_where_clause).distinct
+    end
   end
 
   def self.exclude_summer
@@ -192,10 +216,12 @@ class Pd::Workshop < ApplicationRecord
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
 
-  scope :in_year, ->(year) do
-    scheduled_start_on_or_after(Date.new(year)).
-    scheduled_start_on_or_before(Date.new(year + 1))
-  end
+  scope(
+    :in_year, lambda do |year|
+      scheduled_start_on_or_after(Date.new(year)).
+        scheduled_start_on_or_before(Date.new(year + 1))
+    end
+   )
 
   # Filters to workshops that are scheduled on or after today and have not yet ended
   scope :future, -> {scheduled_start_on_or_after(Time.zone.today).where(ended_at: nil)}
@@ -250,11 +276,11 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def self.scheduled_start_in_days(days)
-    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MIN(start)) = ?)", Date.today + days.days)
+    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MIN(start)) = ?)", Time.zone.today + days.days)
   end
 
   def self.scheduled_end_in_days(days)
-    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MAX(end)) = ?)", Date.today + days.days)
+    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MAX(end)) = ?)", Time.zone.today + days.days)
   end
 
   # Filters by date the workshop actually ended, regardless of scheduled session times.
@@ -277,7 +303,7 @@ class Pd::Workshop < ApplicationRecord
   # @return [Pd::Workshop, nil]
   def self.nearest
     joins(:sessions).
-      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Time.zone.today}')) AS day_diff").
       order("day_diff ASC").
       first
   end
@@ -287,7 +313,7 @@ class Pd::Workshop < ApplicationRecord
   # @return [Pd::Workshop, nil]
   def self.with_nearest_attendance_by(teacher)
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).
-      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Time.zone.today}')) AS day_diff").
       order("day_diff").
       first
   end
@@ -444,35 +470,43 @@ class Pd::Workshop < ApplicationRecord
     errors = []
     scheduled_start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
-        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
+        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days})
         email.deliver_now
-      rescue => e
-        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
+
+        # Also send to the user's alternate summer email if they entered it in their application and it's for a summer workshop.
+        if enrollment.workshop&.subject == SUBJECT_SUMMER_WORKSHOP
+          alt_summer_email = enrollment.user&.alternate_email
+          if alt_summer_email.present?
+            Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days}, to_email: alt_summer_email).deliver_now
+          end
+        end
+      rescue => exception
+        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
       end
 
       workshop.facilitators.each do |facilitator|
         next if facilitator == workshop.organizer
         begin
           Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
-        rescue => e
-          errors << "facilitator #{facilitator.id} - #{e.message}"
+        rescue => exception
+          errors << "facilitator #{facilitator.id} - #{exception.message}"
         end
       end
 
       begin
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
-      rescue => e
-        errors << "organizer workshop #{workshop.id} - #{e.message}"
+      rescue => exception
+        errors << "organizer workshop #{workshop.id} - #{exception.message}"
       end
 
       # send pre-workshop email for CSA, CSD, CSP facilitators 10 days before the workshop only
-      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA)
+      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA || workshop.course == COURSE_CSF)
       workshop.facilitators.each do |facilitator|
         next unless facilitator.email
         begin
           Pd::WorkshopMailer.facilitator_pre_workshop(facilitator, workshop).deliver_now
-        rescue => e
-          errors << "pre email for facilitator #{facilitator.id} - #{e.message}"
+        rescue => exception
+          errors << "pre email for facilitator #{facilitator.id} - #{exception.message}"
         end
       end
     end
@@ -485,8 +519,8 @@ class Pd::Workshop < ApplicationRecord
     errors = []
     should_have_ended.each do |workshop|
       Pd::WorkshopMailer.organizer_should_close_reminder(workshop).deliver_now
-    rescue => e
-      errors << "organizer should close workshop #{workshop.id} - #{e.message}"
+    rescue => exception
+      errors << "organizer should close workshop #{workshop.id} - #{exception.message}"
     end
     raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
   end
@@ -505,9 +539,9 @@ class Pd::Workshop < ApplicationRecord
 
         email = Pd::WorkshopMailer.teacher_follow_up(enrollment)
         email.deliver_now
-      rescue => e
-        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
-        Honeybadger.notify(e,
+      rescue => exception
+        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
+        Honeybadger.notify(exception,
           error_message: 'Failed to send follow up email to teacher',
           context: {pd_enrollment_id: enrollment.id}
         )
@@ -517,11 +551,33 @@ class Pd::Workshop < ApplicationRecord
     raise "Failed to send follow up: #{errors.join(', ')}" unless errors.empty?
   end
 
+  def self.send_teacher_pre_work_csa
+    # Collect errors, but do not stop batch. Rethrow all errors below.
+    errors = []
+    scheduled_start_in_days(20).select {|ws| ws.course == COURSE_CSA && ws.subject == Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP}.each do |workshop|
+      workshop.enrollments.each do |enrollment|
+        Pd::WorkshopMailer.teacher_pre_workshop_csa(enrollment).deliver_now
+
+        # Also send to the user's alternate summer email if they entered it in their application.
+        alt_summer_email = enrollment.user&.alternate_email
+        if alt_summer_email.present?
+          Pd::WorkshopMailer.teacher_pre_workshop_csa(enrollment, to_email: alt_summer_email).deliver_now
+        end
+      rescue => exception
+        errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
+      end
+    rescue => exception
+      errors << "teacher workshop #{workshop.id} - #{exception.message}"
+    end
+    raise "Failed to send CSA pre-work: #{errors.join(', ')}" unless errors.empty?
+  end
+
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
     send_follow_up_after_days(30)
+    send_teacher_pre_work_csa
   end
 
   # Updates enrollments with resolved users.
@@ -536,7 +592,7 @@ class Pd::Workshop < ApplicationRecord
   # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
     # FiT workshops should not send exit surveys
-    return if SUBJECT_FIT == subject || COURSE_FACILITATOR == course || COURSE_ADMIN_COUNSELOR == course
+    return if subject == SUBJECT_FIT || course == COURSE_FACILITATOR || course == COURSE_ADMIN_COUNSELOR
 
     resolve_enrolled_users
 
@@ -554,7 +610,7 @@ class Pd::Workshop < ApplicationRecord
 
   # Send Post-surveys to facilitators of CSD and CSP workshops
   def send_facilitator_post_surveys
-    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA
+    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA || course == COURSE_CSF || course == COURSE_BUILD_YOUR_OWN
       facilitators.each do |facilitator|
         next unless facilitator.email
 
@@ -583,9 +639,9 @@ class Pd::Workshop < ApplicationRecord
             result = Geocoder.search(location_address).try(:first)
           end
         end
-      rescue StandardError => e
+      rescue StandardError => exception
         # Log geocoding errors to honeybadger but don't fail
-        Honeybadger.notify(e,
+        Honeybadger.notify(exception,
           error_message: 'Error geocoding workshop location_address',
           context: {
             pd_workshop_id: id,
@@ -646,7 +702,7 @@ class Pd::Workshop < ApplicationRecord
 
   # @return [Boolean] true if a Code Studio account is required for attendance, otherwise false.
   def account_required_for_attendance?
-    ![Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include?(course)
+    [Pd::Workshop::COURSE_ADMIN_COUNSELOR, Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].exclude?(course)
   end
 
   def workshop_starting_date
@@ -658,6 +714,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def workshop_date_range_string
+    return I18n.t('not_applicable_abbreviation') if sessions.empty?
     if workshop_starting_date == workshop_ending_date
       workshop_starting_date.strftime('%B %e, %Y')
     else
@@ -681,7 +738,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Get all teachers who have attended all sessions of this workshop.
-  def teachers_attending_all_sessions(filter_by_cdo_scholarship=false)
+  def teachers_attending_all_sessions(filter_by_cdo_scholarship: false)
     teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher).compact
 
     # Filter attendances to only scholarship teachers
@@ -780,8 +837,6 @@ class Pd::Workshop < ApplicationRecord
   def survey_responses
     if teachercon?
       Pd::TeacherconSurvey.where(pd_enrollment: enrollments)
-    elsif local_summer?
-      Pd::LocalSummerWorkshopSurvey.where(pd_enrollment: enrollments)
     else
       raise 'Not supported for this workshop type'
     end
@@ -805,8 +860,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def pre_survey?
-    # CSP for returning teachers does not have a pre-survey.
-    return false if subject == SUBJECT_CSP_FOR_RETURNING_TEACHERS
+    return false if [SUBJECT_CSP_FOR_RETURNING_TEACHERS, SUBJECT_CSA_CAPSTONE].include?(subject)
     PRE_SURVEY_BY_COURSE.key? course
   end
 
@@ -890,5 +944,28 @@ class Pd::Workshop < ApplicationRecord
 
   def user_attended?(user)
     attending_teachers.include?(user)
+  end
+
+  def summarize_for_my_pl_page
+    {
+      id: id,
+      course: course_name,
+      subject: subject,
+      dates: workshop_date_range_string,
+      location: location_address,
+      sessions: sessions,
+      location_name: location_name,
+      location_address: location_address,
+      on_map: on_map,
+      funded: funded,
+      virtual: virtual?,
+      enrolled_teacher_count: enrollments ? enrollments.count : 0,
+      capacity: capacity,
+      facilitators: facilitators,
+      organizer: organizer,
+      enrollment_code: enrollments&.first&.code,
+      status: state,
+      course_offerings: course_offerings,
+    }
   end
 end

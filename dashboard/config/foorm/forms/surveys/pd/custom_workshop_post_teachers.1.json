@@ -1,0 +1,478 @@
+{
+  "logoPosition": "right",
+  "title": "Satisfaction Survey for Code.org's Professional Development Workshop",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro_text",
+          "html": "<p><strong>Well done, you've completed Code.org's professional development workshop!</strong></p><p>This survey asks questions about your experience today. Your feedback is crucial to ensuring we best serve educators through continual program improvement.</p><p><strong>Privacy and Confidentiality</strong></p><ul><li>Your individual responses here are completely <strong>confidential</strong>.</li><li>Your identity will <strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li><li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li><li>Your <strong>de-identified</strong> responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li></ul>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "pd_content",
+          "title": "What content was the focus of the PD workshop you participated in?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "ai_101",
+              "text": "AI 101"
+            },
+            {
+              "value": "csb",
+              "text": "Teaching Computer Science Basics"
+            },
+            {
+              "value": "csc",
+              "text": "Teaching Computer Science Connections (CSC)"
+            },
+            {
+              "value": "csd",
+              "text": "Teaching CS Discoveries (CSD)"
+            },
+            {
+              "value": "csf",
+              "text": "Teaching Computer Science Fundamentals (CSF)"
+            },
+            {
+              "value": "k5_game_design",
+              "text": "Teaching Elementary Game Design"
+            },
+            {
+              "value": "k5_maker_microbit",
+              "text": "Teaching micro:bit Maker Module for Elementary"
+            },
+            {
+              "value": "csd_1_problem_solving_process",
+              "text": "CSD Unit 1 - Problem Solving in Computing"
+            },
+            {
+              "value": "csd_2_web_development",
+              "text": "CSD Unit 2 - Web Development"
+            },
+            {
+              "value": "csd_3_interactive_animations_games",
+              "text": "CSD Unit 3 - Interactive Animations and Games"
+            },
+            {
+              "value": "csd_4_design_process",
+              "text": "CSD Unit 4 - The Design Process"
+            },
+            {
+              "value": "csd_5_data_society",
+              "text": "CSD Unit 5 - Data and Society"
+            },
+            {
+              "value": "csd_6_maker_circuit_playground",
+              "text": "CSD Unit 6 - Creating Apps with Devices (Circuit Playground)"
+            },
+            {
+              "value": "csd_6_maker_microbit",
+              "text": "CSD Unit 6 - Creating Apps with Devices (micro:bit)"
+            },
+            {
+              "value": "csd_7_maker_microbit",
+              "text": "CSD Unit 7 - AI and Machine Learning"
+            },
+            {
+              "value": "not_sure",
+              "text": "I'm not sure"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "workshop_date",
+          "title": "Please enter the date of the workshop you attended",
+          "isRequired": true,
+          "inputType": "date",
+          "min": "2023-10-24",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "radiogroup",
+          "name": "cdo_teaching_experience",
+          "title": "Which of the following options best captures your previous experience using Code.org in the classroom?",
+          "choices": [
+            {
+              "value": "cs_teaching",
+              "text": " I use Code.org to teach a computer science course"
+            },
+            {
+              "value": "co_curricular_teaching",
+              "text": " I use Code.org to introduce computer science when teaching other content"
+            },
+            {
+              "value": "hoc",
+              "text": "My students have done Hour of Code activities"
+            },
+            {
+              "value": "not_used",
+              "text": "I have not used Code.org in my classroom yet"
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "overall_success",
+          "title": "How much do you agree or disagree with the following statements about the workshop overall?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "more_prepared",
+              "visibleIf": "{pd_content}<>'ai_101'",
+              "text": "I feel more prepared to teach the material covered in this workshop than before I came."
+            },
+            {
+              "value": "love",
+              "visibleIf": "{pd_content}<>'ai_101'",
+              "text": "I am planning to teach this curriculum."
+            },
+            {
+              "value": "know_where_to_get_help",
+              "visibleIf": "{pd_content}<>'ai_101'",
+              "text": "I know where to go if I need help preparing to teach this material."
+            },
+            {
+              "value": "intention_to_apply_in_classroom",
+              "visibleIf": "{pd_content} anyof ['ai_101']",
+              "text": "I plan to incorporate into my teaching practices what I learned in this workshop."
+            },
+            {
+              "value": "motivated_learn_cs_in_education",
+              "visibleIf": "{pd_content} anyof ['ai_101']",
+              "text": "This workshop motivated me to continue learning about computer science in education."
+            },
+            {
+              "value": "suitable_for_my_level",
+              "text": "This professional development was suitable for my level of experience with teaching Computer Science."
+            },
+            {
+              "value": "recommend_to_others",
+              "text": "I would recommend this professional development to others."
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "barriers_implementation",
+          "title": "What do you perceive to be the most significant challenges in teaching this computer science curriculum in your classroom?",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "none",
+              "text": "I don't anticipate any barriers"
+            },
+            {
+              "value": "teacher_preparation",
+              "text": "I would like more preparation before teaching this content in my classroom"
+            },
+            {
+              "value": "time",
+              "text": "I have limited time to adopt new curriculum"
+            },
+            {
+              "value": "support_admin",
+              "text": "I don't have enough support from my school's administration"
+            },
+            {
+              "value": "student_interest",
+              "text": "My students don’t seem interested in computer science"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "likelihood_other_pd",
+          "title": "How likely would you be to attend workshops in the future that cover other areas of Code.org computer science curriculum?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not Interested",
+          "maxRateDescription": "Very interested"
+        },
+        {
+          "type": "comment",
+          "name": "open_questions_implementation",
+          "title": "Do you have any questions about implementing this curriculum in your classroom that were not answered during this workshop?",
+          "rows": 3,
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback_FR",
+          "title": "Is there anything else you’d like to tell us about your experience at this workshop?",
+          "rows": 3
+        },
+        {
+          "type": "html",
+          "name": "demographics_space",
+          "html": "\n<p></p>"
+        },
+        {
+          "type": "html",
+          "name": "last_text",
+          "html": "\n<p></p><b><font size=3>Lastly, we would like to know a little about you, your background, and if we can stay in touch with you.</p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "teacher_role",
+          "title": "Which best describes you?",
+          "choices": [
+            {
+              "value": "classroom_teacher",
+              "text": "Classroom teacher"
+            },
+            {
+              "value": "subject_area",
+              "text": "Subject area teacher"
+            },
+            {
+              "value": "cs_teacher",
+              "text": "Computer Science teacher"
+            },
+            {
+              "value": "stem_teacher",
+              "text": "STEM / Technology teacher"
+            },
+            {
+              "value": "Librarian",
+              "text": "Librarian / school media specialist"
+            },
+            {
+              "value": "District_media_specialist",
+              "text": "District media specialist"
+            },
+            {
+              "value": "school_admin",
+              "text": "School administrator"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "teacher_role_other",
+          "visibleIf": "{teacher_role} = 'other'",
+          "title": "What other role best describes you?"
+        },
+        {
+          "type": "checkbox",
+          "name": "grade",
+          "title": "At what grade levels are you teaching this year?",
+          "description": "(Select all that apply)",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024",
+          "choices": [
+            {
+              "value": "k",
+              "text": "Kindergarten"
+            },
+            {
+              "value": "1",
+              "text": "1st grade"
+            },
+            {
+              "value": "2",
+              "text": "2nd grade"
+            },
+            {
+              "value": "3",
+              "text": "3rd grade"
+            },
+            {
+              "value": "4",
+              "text": "4th grade"
+            },
+            {
+              "value": "5",
+              "text": "5th grade"
+            },
+            {
+              "value": "6",
+              "text": "6th grade"
+            },
+            {
+              "value": "7",
+              "text": "7th grade"
+            },
+            {
+              "value": "8",
+              "text": "8th grade"
+            },
+            {
+              "value": "9",
+              "text": "9th grade"
+            },
+            {
+              "value": "10",
+              "text": "10th grade"
+            },
+            {
+              "value": "11",
+              "text": "11th grade"
+            },
+            {
+              "value": "12",
+              "text": "12th grade"
+            },
+            {
+              "value": "12up",
+              "text": "Above 12th grade"
+            },
+            {
+              "value": "na",
+              "text": "N/A"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "teach_courses",
+          "visibleIf": "{teacher_role} <> 'classroom_teacher' and {teacher_role} <> 'cs_teacher' and {teacher_role} <> 'stem_teacher'",
+          "title": "What courses or subjects do you teach?",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "none",
+              "text": "None"
+            },
+            {
+              "value": "math",
+              "text": "Math"
+            },
+            {
+              "value": "english",
+              "text": "English"
+            },
+            {
+              "value": "history",
+              "text": "History"
+            },
+            {
+              "value": "art",
+              "text": "Art (visual or performing)"
+            },
+            {
+              "value": "science",
+              "text": "Science (any area)"
+            },
+            {
+              "value": "social_studies",
+              "text": "Social Studies"
+            },
+            {
+              "value": "world_languages",
+              "text": "World Language"
+            },
+            {
+              "value": "business",
+              "text": "Business"
+            },
+            {
+              "value": "library",
+              "text": "Library"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "teach_other_courses_other",
+          "visibleIf": "{teach_other_courses} = 'other'",
+          "title": "What other courses do you teach?",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission_quote",
+          "title": "I give Code.org permission to quote my written feedback from today for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes_with_name",
+              "text": "Yes, I give permission to quote me and use my name."
+            },
+            {
+              "value": "yes_anon",
+              "text": "Yes, I give permission to quote me, but I want to be anonymous."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give permission to quote me."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "can_contact",
+          "title": "Would you be open to participate in a follow-up discussion to provide direct feedback about Computer Science professional learning?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "contact_email",
+          "visibleIf": "{can_contact} = 'yes'",
+          "title": "Please enter the email address where we can contact you to gather additional feedback about Computer Science professional learning."
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

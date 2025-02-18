@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
+
+import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailController';
 
 $(document).ready(() => {
   const dismissButton = document.getElementById('not_now');
@@ -13,13 +14,13 @@ $(document).ready(() => {
     link: $('#link_your_email'),
     onSuccessCallback: () => {
       banner.style.display = 'none';
-    }
+    },
   });
 
   dismissButton.onclick = () => {
     $.ajax({
       type: 'POST',
-      url: '/api/v1/users/me/dismiss_parent_email_banner'
+      url: '/api/v1/users/me/dismiss_parent_email_banner',
     }).done(() => {
       banner.style.display = 'none';
     });

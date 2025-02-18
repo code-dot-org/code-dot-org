@@ -1,14 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
-import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import {combineReducers, createStore} from 'redux';
+
 import responsive, {
   setResponsiveSize,
-  ResponsiveSize
+  ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
 import styleConstants from '@cdo/apps/styleConstants';
+import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
 const store = createStore(combineReducers({responsive}));
 store.dispatch(setResponsiveSize(ResponsiveSize.lg));
@@ -21,6 +21,7 @@ function wrapperWithProps(short, subheading, description) {
         subHeadingText={subheading}
         description={description}
         short={short}
+        backgroundUrl="/shared/images/banners/courses-hero-student.jpg"
       />
     </Provider>
   );
@@ -35,7 +36,7 @@ describe('HeaderBanner', () => {
           <div
             style={{
               minHeight: 140,
-              maxWidth: styleConstants['content-width']
+              maxWidth: styleConstants['content-width'],
             }}
           >
             <div>
@@ -58,7 +59,7 @@ describe('HeaderBanner', () => {
           <div
             style={{
               minHeight: 140,
-              maxWidth: styleConstants['content-width']
+              maxWidth: styleConstants['content-width'],
             }}
           >
             <div>
@@ -83,7 +84,7 @@ describe('HeaderBanner', () => {
           <div
             style={{
               minHeight: 260,
-              maxWidth: styleConstants['content-width']
+              maxWidth: styleConstants['content-width'],
             }}
           >
             <div>

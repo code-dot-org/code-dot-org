@@ -15,10 +15,10 @@ module Honeybadger
 
     Dir.chdir(dashboard_dir) do
       system(
-        'bundle exec honeybadger deploy '\
-          "--environment=#{environment} "\
-          "--revision=#{revision} "\
-          "--user=#{environment} "\
+        'bundle exec honeybadger deploy ' \
+          "--environment=#{environment} " \
+          "--revision=#{revision} " \
+          "--user=#{environment} " \
           "--api-key=#{CDO.dashboard_honeybadger_api_key}"
       )
     end
@@ -34,7 +34,7 @@ module Honeybadger
   # stdout - captured stdout from the command
   # stderr - captured stderr from the command
   def self.notify_command_error(command, status, stdout, stderr)
-    return if stderr.to_s.empty? && status == 0
+    return if status == 0
 
     error_message, backtrace = parse_exception_dump stderr
 
@@ -60,7 +60,7 @@ module Honeybadger
   def self.notify_cronjob_error(opts)
     # Configure and start Honeybadger
     Honeybadger.configure do |config|
-      config.env = ENV['RACK_ENV']
+      config.env = ENV.fetch('RACK_ENV', nil)
       config.api_key = CDO.cronjobs_honeybadger_api_key
       config.logging.path = "STDOUT"
       config.logging.level = "ERROR"
@@ -79,7 +79,7 @@ module Honeybadger
   def self.parse_exception_dump(error)
     return if error.to_s.empty?
 
-    # Unhandled Ruby exceptions are dumped to STDERR in the following format:
+    # Unhandled Ruby exceptions are dumped to $stderr in the following format:
     #   file:number:in `method': message
     #     from file:number:in `method'
     #     from ...

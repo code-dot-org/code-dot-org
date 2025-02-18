@@ -1,11 +1,12 @@
 /** @file Static instructions for the Eve character in the crypto widget */
 import React from 'react';
+
 import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {
   Step,
   SubStep,
   Heading,
-  Subheading
+  Subheading,
 } from './NumberedSteps';
 
 export default function EveInstructions() {

@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+
 import {actions, selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
+import color from '@cdo/apps/util/color';
 
 class PauseButton extends React.Component {
   static propTypes = {
@@ -14,11 +15,11 @@ class PauseButton extends React.Component {
     setArrowButtonDisabled: PropTypes.func.isRequired,
     isPaused: PropTypes.bool.isRequired,
     isAttached: PropTypes.bool.isRequired,
-    isRunning: PropTypes.bool.isRequired
+    isRunning: PropTypes.bool.isRequired,
   };
 
   state = {
-    pauseStart: 0
+    pauseStart: 0,
   };
 
   togglePause = () => {
@@ -30,13 +31,13 @@ class PauseButton extends React.Component {
   render() {
     const buttonStyle = {
       ...styles.button,
-      ...(this.props.marginRight && {marginRight: this.props.marginRight})
+      ...(this.props.marginRight && {marginRight: this.props.marginRight}),
     };
     const iconStyle = {
       ...styles.icon,
       ...(this.props.isAttached && styles.inactiveColor),
       ...(this.props.isRunning && styles.runningColor),
-      ...(this.props.isPaused && styles.pausedColor)
+      ...(this.props.isPaused && styles.pausedColor),
     };
 
     return (
@@ -66,40 +67,40 @@ class PauseButton extends React.Component {
 const styles = {
   icon: {
     lineHeight: 'inherit',
-    fontSize: 48
+    fontSize: 48,
   },
   container: {
     width: 40,
     height: 40,
     lineHeight: '40px',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   button: {
     minWidth: 0,
     padding: 0,
     borderRadius: '100%',
-    backgroundColor: color.white
+    backgroundColor: color.white,
   },
   inactiveColor: {
-    color: '#C7C7C7'
+    color: '#C7C7C7',
   },
   runningColor: {
-    color: color.cyan
+    color: color.cyan,
   },
   pausedColor: {
-    color: color.orange
-  }
+    color: color.orange,
+  },
 };
 
 export default connect(
   state => ({
     isAttached: selectors.isAttached(state),
     isPaused: selectors.isPaused(state),
-    isRunning: selectors.isRunning(state)
+    isRunning: selectors.isRunning(state),
   }),
   {
     togglePause: actions.togglePause,
-    setArrowButtonDisabled
+    setArrowButtonDisabled,
   }
 )(PauseButton);

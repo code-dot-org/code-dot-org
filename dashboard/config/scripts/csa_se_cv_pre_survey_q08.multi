@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-Pre-Survey-Q08'
+
+question 'How motivated are you to continue learning computer science?'
+
+right 'Not at all motivated: I do not feel motivated to continue learning computer science.'
+right 'Slightly motivated: I have some interest in computer science, but I lack a strong drive to continue learning.'
+right 'Moderately motivated: I am interested in continuing my learning in computer science, but there are times when my motivation wanes.'
+right 'Mostly motivated: I am quite eager to keep learning computer science, although there might be occasional moments when my motivation dips.'
+right 'Very motivated: I am extremely eager and enthusiastic about continuing my learning journey in computer science.'
+
+allow_multiple_attempts false

@@ -1,27 +1,28 @@
+import $ from 'jquery';
 import _ from 'lodash';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   sectionCode,
   sectionName,
-  asyncLoadSectionData
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import $ from 'jquery';
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const ParentLetterButtonMetricsCategory = {
   ABOVE_TABLE: 'above-table',
-  BELOW_TABLE: 'below-table'
+  BELOW_TABLE: 'below-table',
 };
 
 export const PrintLoginCardsButtonMetricsCategory = {
   MANAGE_STUDENTS: 'manage-students',
-  LOGIN_INFO: 'section-login-info'
+  LOGIN_INFO: 'section-login-info',
 };
 
 // Response from server after adding a new student to the section.
 export const AddStatus = {
   SUCCESS: 'success',
   FAIL: 'fail',
-  FULL: 'full'
+  FULL: 'full',
 };
 
 // Types of rows in studentData/editingData
@@ -30,7 +31,7 @@ export const AddStatus = {
 export const RowType = {
   ADD: 'addRow',
   NEW_STUDENT: 'newStudentRow',
-  STUDENT: 'studentRow'
+  STUDENT: 'studentRow',
 };
 
 // Constants around moving students to another section.
@@ -39,13 +40,13 @@ export const TransferStatus = {
   SUCCESS: 'success',
   FAIL: 'fail',
   FULL: 'full',
-  PENDING: 'pending'
+  PENDING: 'pending',
 };
 
 // Type of student transfer - whether students are being moved (and subsequently removed from current section) or copied to new section
 export const TransferType = {
   MOVE_STUDENTS: 'moveStudents',
-  COPY_STUDENTS: 'copyStudents'
+  COPY_STUDENTS: 'copyStudents',
 };
 
 /** Initial state for manageStudents.transferData redux store.
@@ -60,7 +61,7 @@ export const blankStudentTransfer = {
   sectionId: null,
   otherTeacher: false,
   otherTeacherSection: '',
-  copyStudents: true
+  copyStudents: true,
 };
 
 /** Initial state for manageStudents.transferStatus redux store.
@@ -75,7 +76,7 @@ export const blankStudentTransferStatus = {
   type: null,
   error: null,
   numStudents: 0,
-  sectionDisplay: ''
+  sectionDisplay: '',
 };
 
 // This doesn't get used to make a server call, but does
@@ -96,7 +97,8 @@ const blankAddRow = {
   loginType: '',
   sharingDisabled: true,
   isEditing: true,
-  rowType: RowType.ADD
+  rowType: RowType.ADD,
+  usState: null,
 };
 
 // New student row is created after a list of students have been
@@ -111,7 +113,8 @@ const blankNewStudentRow = {
   loginType: '',
   sharingDisabled: true,
   isEditing: true,
-  rowType: RowType.NEW_STUDENT
+  rowType: RowType.NEW_STUDENT,
+  usState: null,
 };
 
 /** Initial state for the manageStudents redux store.
@@ -133,11 +136,13 @@ const initialState = {
   addStatus: {status: null, numStudents: null},
   transferData: {...blankStudentTransfer},
   transferStatus: {...blankStudentTransferStatus},
-  isLoadingStudents: true
+  isLoadingStudents: true,
+  usState: null,
 };
 
 const SET_LOGIN_TYPE = 'manageStudents/SET_LOGIN_TYPE';
 const SET_STUDENTS = 'manageStudents/SET_STUDENTS';
+const SET_SECTION_INFO = 'manageStudents/SET_SECTION_INFO';
 const START_EDITING_STUDENT = 'manageStudents/START_EDITING_STUDENT';
 const CANCEL_EDITING_STUDENT = 'manageStudents/CANCEL_EDITING_STUDENT';
 const REMOVE_STUDENT = 'manageStudents/REMOVE_STUDENT';
@@ -152,6 +157,7 @@ const ADD_STUDENT_FULL = 'manageStudents/ADD_STUDENT_FULL';
 const ADD_MULTIPLE_ROWS = 'manageStudents/ADD_MULTIPLE_ROWS';
 const SET_SHOW_SHARING_COLUMN = 'manageStudents/SET_SHOW_SHARING_COLUMN';
 const EDIT_ALL = 'manageStudents/EDIT_ALL';
+const BULK_SET = 'manageStudents/BULK_SET';
 const UPDATE_ALL_SHARE_SETTING = 'manageStudents/UPDATE_ALL_SHARE_SETTING';
 const SET_SHARING_DEFAULT = 'manageStudents/SET_SHARING_DEFAULT';
 const UPDATE_STUDENT_TRANSFER = 'manageStudents/UPDATE_STUDENT_TRANSFER';
@@ -168,55 +174,59 @@ export const startLoadingStudents = () => ({type: START_LOADING_STUDENTS});
 export const finishLoadingStudents = () => ({type: FINISH_LOADING_STUDENTS});
 
 export const setLoginType = loginType => ({type: SET_LOGIN_TYPE, loginType});
-export const setStudents = (studentData, sectionId) => ({
+export const setStudents = studentData => ({
   type: SET_STUDENTS,
   studentData,
-  sectionId
+});
+export const setSectionInfo = sectionId => ({
+  type: SET_SECTION_INFO,
+  sectionId,
 });
 export const startEditingStudent = studentId => ({
   type: START_EDITING_STUDENT,
-  studentId
+  studentId,
 });
 export const cancelEditingStudent = studentId => ({
   type: CANCEL_EDITING_STUDENT,
-  studentId
+  studentId,
 });
 export const removeStudent = studentId => ({type: REMOVE_STUDENT, studentId});
 export const setSecretImage = (studentId, image) => ({
   type: SET_SECRET_IMAGE,
   studentId,
-  image
+  image,
 });
 export const setSecretWords = (studentId, words) => ({
   type: SET_SECRET_WORDS,
   studentId,
-  words
+  words,
 });
 export const editStudent = (studentId, studentData) => ({
   type: EDIT_STUDENT,
   studentId,
-  studentData
+  studentData,
 });
 export const setSharingDefault = studentId => ({
   type: SET_SHARING_DEFAULT,
-  studentId
+  studentId,
 });
 export const editAll = () => ({type: EDIT_ALL});
+export const bulkSet = studentData => ({type: BULK_SET, studentData});
 export const updateAllShareSetting = disable => ({
   type: UPDATE_ALL_SHARE_SETTING,
-  disable
+  disable,
 });
 export const startSavingStudent = studentId => ({
   type: START_SAVING_STUDENT,
-  studentId
+  studentId,
 });
 export const saveStudentSuccess = studentId => ({
   type: SAVE_STUDENT_SUCCESS,
-  studentId
+  studentId,
 });
 export const updateStudentTransfer = transferData => ({
   type: UPDATE_STUDENT_TRANSFER,
-  transferData
+  transferData,
 });
 export const cancelStudentTransfer = () => ({type: CANCEL_STUDENT_TRANSFER});
 export const transferStudentsSuccess = (
@@ -227,14 +237,14 @@ export const transferStudentsSuccess = (
   type: TRANSFER_STUDENTS_SUCCESS,
   transferType,
   numStudents,
-  sectionDisplay
+  sectionDisplay,
 });
 export const transferStudentsFailure = error => ({
   type: TRANSFER_STUDENTS_FAILURE,
-  error
+  error,
 });
 export const transferStudentsPending = () => ({
-  type: TRANSFER_STUDENTS_PENDING
+  type: TRANSFER_STUDENTS_PENDING,
 });
 export const transferStudentsFull = (
   {sectionCapacity, numStudents, sectionCode, sectionStudentCount},
@@ -245,19 +255,19 @@ export const transferStudentsFull = (
   numStudents,
   sectionStudentCount,
   sectionCode,
-  verb: copy ? 'copy' : 'move'
+  verb: copy ? 'copy' : 'move',
 });
 export const addStudentsSuccess = (numStudents, rowIds, studentData) => ({
   type: ADD_STUDENT_SUCCESS,
   numStudents,
   rowIds,
-  studentData
+  studentData,
 });
 export const addStudentsFailure = (numStudents, error, studentIds) => ({
   type: ADD_STUDENT_FAILURE,
   numStudents,
   error,
-  studentIds
+  studentIds,
 });
 export const addStudentsFull = (
   {sectionCapacity, numStudents, sectionCode, sectionStudentCount},
@@ -268,16 +278,16 @@ export const addStudentsFull = (
   numStudents,
   sectionStudentCount,
   sectionCode,
-  studentIds
+  studentIds,
 });
 export const addMultipleRows = studentData => ({
   type: ADD_MULTIPLE_ROWS,
-  studentData
+  studentData,
 });
 
 export const setShowSharingColumn = visible => ({
   type: SET_SHOW_SHARING_COLUMN,
-  visible
+  visible,
 });
 
 export const handleShareSetting = disable => {
@@ -376,26 +386,23 @@ export const addStudents = studentIds => {
 };
 
 // Creates a new RowType.NEW_STUDENT for each name in the array.
-export const addMultipleAddRows = studentNames => {
+export const addMultipleAddRows = studentDataArray => {
   return (dispatch, getState) => {
-    let studentData = {};
-    for (let i = 0; i < studentNames.length; i++) {
-      // Do not add rows with no name
-      if (studentNames[i] === '') {
-        continue;
-      }
+    const studentData = studentDataArray
+      .filter(data => data.name)
+      .reduce((accumulator, data) => {
+        const newId = addRowIdCounter--;
 
-      // Create a new uniqueId for the newStudentRow
-      const newId = addRowIdCounter;
-      addRowIdCounter = addRowIdCounter - 1;
-
-      // Create student data for each student name.
-      studentData[newId] = {
-        ...blankNewStudentRow,
-        name: studentNames[i],
-        id: newId
-      };
-    }
+        return {
+          ...accumulator,
+          [newId]: {
+            ...blankNewStudentRow,
+            name: data.name,
+            familyName: data.familyName,
+            id: newId,
+          },
+        };
+      }, {});
     dispatch(addMultipleRows(studentData));
   };
 };
@@ -414,7 +421,7 @@ export const transferStudents = onComplete => {
       sectionId: newSectionId,
       otherTeacher,
       otherTeacherSection,
-      copyStudents
+      copyStudents,
     } = state.manageStudents.transferData;
     let newSectionCode;
 
@@ -476,26 +483,26 @@ export default function manageStudents(state = initialState, action) {
         studentData: {
           [addRowId]: {
             ...blankAddRow,
-            loginType: action.loginType
-          }
+            loginType: action.loginType,
+          },
         },
         editingData: {
           [addRowId]: {
             ...blankAddRow,
-            loginType: action.loginType
-          }
-        }
+            loginType: action.loginType,
+          },
+        },
       };
     }
     return {
       ...state,
       loginType: action.loginType,
-      ...addRowInitialization
+      ...addRowInitialization,
     };
   }
   if (action.type === SET_STUDENTS) {
     let studentData = {
-      ...action.studentData
+      ...action.studentData,
     };
     if (
       state.loginType === SectionLoginType.word ||
@@ -503,7 +510,7 @@ export default function manageStudents(state = initialState, action) {
     ) {
       studentData[addRowId] = {
         ...blankAddRow,
-        loginType: state.loginType
+        loginType: state.loginType,
       };
     }
     return {
@@ -511,7 +518,12 @@ export default function manageStudents(state = initialState, action) {
       studentData: studentData,
       addStatus: {status: null, numStudents: null},
       isLoadingStudents: false,
-      sectionId: action.sectionId
+    };
+  }
+  if (action.type === SET_SECTION_INFO) {
+    return {
+      ...state,
+      sectionId: action.sectionId,
     };
   }
   if (action.type === START_EDITING_STUDENT) {
@@ -521,16 +533,16 @@ export default function manageStudents(state = initialState, action) {
         ...state.studentData,
         [action.studentId]: {
           ...state.studentData[action.studentId],
-          isEditing: true
-        }
+          isEditing: true,
+        },
       },
       editingData: {
         ...state.editingData,
         [action.studentId]: {
           ...state.studentData[action.studentId],
-          id: action.studentId
-        }
-      }
+          id: action.studentId,
+        },
+      },
     };
   }
   if (action.type === CANCEL_EDITING_STUDENT) {
@@ -540,10 +552,10 @@ export default function manageStudents(state = initialState, action) {
         ...state.studentData,
         [action.studentId]: {
           ...state.studentData[action.studentId],
-          isEditing: false
-        }
+          isEditing: false,
+        },
       },
-      editingData: _.omit(state.editingData, action.studentId)
+      editingData: _.omit(state.editingData, action.studentId),
     };
   }
   if (action.type === START_SAVING_STUDENT) {
@@ -553,16 +565,16 @@ export default function manageStudents(state = initialState, action) {
         ...state.studentData,
         [action.studentId]: {
           ...state.studentData[action.studentId],
-          isSaving: true
-        }
+          isSaving: true,
+        },
       },
       editingData: {
         ...state.editingData,
         [action.studentId]: {
           ...state.editingData[action.studentId],
-          isSaving: true
-        }
-      }
+          isSaving: true,
+        },
+      },
     };
   }
   if (action.type === SAVE_STUDENT_SUCCESS) {
@@ -575,25 +587,25 @@ export default function manageStudents(state = initialState, action) {
           ...state.editingData[action.studentId],
           isEditing: false,
           isSaving: false,
-          rowType: RowType.STUDENT
-        }
+          rowType: RowType.STUDENT,
+        },
       },
-      editingData: _.omit(state.editingData, action.studentId)
+      editingData: _.omit(state.editingData, action.studentId),
     };
   }
   if (action.type === ADD_STUDENT_FAILURE) {
     let newState = {
       ...state,
-      addStatus: {status: AddStatus.FAIL, numStudents: action.numStudents}
+      addStatus: {status: AddStatus.FAIL, numStudents: action.numStudents},
     };
     for (let i = 0; i < action.studentIds.length; i++) {
       newState.studentData[action.studentIds[i]] = {
         ...state.studentData[action.studentIds[i]],
-        isSaving: false
+        isSaving: false,
       };
       newState.editingData[action.studentIds[i]] = {
         ...state.editingData[action.studentIds[i]],
-        isSaving: false
+        isSaving: false,
       };
     }
     return newState;
@@ -607,17 +619,17 @@ export default function manageStudents(state = initialState, action) {
         numStudents: action.numStudents,
         sectionCapacity: action.sectionCapacity,
         sectionCode: action.sectionCode,
-        sectionStudentCount: action.sectionStudentCount
-      }
+        sectionStudentCount: action.sectionStudentCount,
+      },
     };
     for (let i = 0; i < action.studentIds.length; i++) {
       newState.studentData[action.studentIds[i]] = {
         ...state.studentData[action.studentIds[i]],
-        isSaving: false
+        isSaving: false,
       };
       newState.editingData[action.studentIds[i]] = {
         ...state.editingData[action.studentIds[i]],
-        isSaving: false
+        isSaving: false,
       };
     }
     return newState;
@@ -630,17 +642,17 @@ export default function manageStudents(state = initialState, action) {
         ...action.studentData,
         [addRowId]: {
           ...blankAddRow,
-          loginType: state.loginType
-        }
+          loginType: state.loginType,
+        },
       },
       editingData: {
         ..._.omit(state.editingData, action.rowIds),
         [addRowId]: {
           ...blankAddRow,
-          loginType: state.loginType
-        }
+          loginType: state.loginType,
+        },
       },
-      addStatus: {status: AddStatus.SUCCESS, numStudents: action.numStudents}
+      addStatus: {status: AddStatus.SUCCESS, numStudents: action.numStudents},
     };
     return newState;
   }
@@ -655,9 +667,9 @@ export default function manageStudents(state = initialState, action) {
         [action.studentId]: {
           ...state.editingData[action.studentId],
           id: action.studentId,
-          sharingDisabled: sharingDisabled
-        }
-      }
+          sharingDisabled: sharingDisabled,
+        },
+      },
     };
   }
   if (action.type === EDIT_STUDENT) {
@@ -668,28 +680,41 @@ export default function manageStudents(state = initialState, action) {
         [action.studentId]: {
           ...state.editingData[action.studentId],
           ...action.studentData,
-          id: action.studentId
-        }
-      }
+          id: action.studentId,
+        },
+      },
     };
   }
   if (action.type === EDIT_ALL) {
     let newState = {
-      ...state
+      ...state,
     };
     for (const studentKey in state.studentData) {
       const student = state.studentData[studentKey];
       newState.studentData[student.id].isEditing = true;
       newState.editingData[student.id] = {
         ...newState.studentData[student.id],
-        ...state.editingData[student.id]
+        ...state.editingData[student.id],
+      };
+    }
+    return newState;
+  }
+  if (action.type === BULK_SET) {
+    let newState = {...state};
+    for (const studentKey in state.studentData) {
+      const student = state.studentData[studentKey];
+      newState.studentData[student.id].isEditing = true;
+      newState.editingData[student.id] = {
+        ...newState.studentData[student.id],
+        ...state.editingData[student.id],
+        ...action.studentData,
       };
     }
     return newState;
   }
   if (action.type === UPDATE_ALL_SHARE_SETTING) {
     let newState = {
-      ...state
+      ...state,
     };
     for (const studentKey in state.studentData) {
       const student = state.studentData[studentKey];
@@ -704,9 +729,9 @@ export default function manageStudents(state = initialState, action) {
         ...state.studentData,
         [action.studentId]: {
           ...state.studentData[action.studentId],
-          secretPicturePath: action.image
-        }
-      }
+          secretPicturePath: action.image,
+        },
+      },
     };
   }
   if (action.type === SET_SECRET_WORDS) {
@@ -716,9 +741,9 @@ export default function manageStudents(state = initialState, action) {
         ...state.studentData,
         [action.studentId]: {
           ...state.studentData[action.studentId],
-          secretWords: action.words
-        }
-      }
+          secretWords: action.words,
+        },
+      },
     };
   }
   if (action.type === REMOVE_STUDENT) {
@@ -730,7 +755,7 @@ export default function manageStudents(state = initialState, action) {
     return {
       ...state,
       studentData: _.omit(state.studentData, studentId),
-      editingData: _.omit(state.editingData, studentId)
+      editingData: _.omit(state.editingData, studentId),
     };
   }
   if (action.type === ADD_MULTIPLE_ROWS) {
@@ -738,18 +763,18 @@ export default function manageStudents(state = initialState, action) {
       ...state,
       studentData: {
         ...state.studentData,
-        ...action.studentData
+        ...action.studentData,
       },
       editingData: {
         ...state.editingData,
-        ...action.studentData
-      }
+        ...action.studentData,
+      },
     };
   }
   if (action.type === SET_SHOW_SHARING_COLUMN) {
     return {
       ...state,
-      showSharingColumn: !!action.visible
+      showSharingColumn: !!action.visible,
     };
   }
 
@@ -758,10 +783,10 @@ export default function manageStudents(state = initialState, action) {
       ...state,
       transferData: {
         ...state.transferData,
-        ...action.transferData
+        ...action.transferData,
       },
       // clear any previous status if transfer data has changed
-      transferStatus: blankStudentTransferStatus
+      transferStatus: blankStudentTransferStatus,
     };
   }
   if (action.type === CANCEL_STUDENT_TRANSFER) {
@@ -770,8 +795,8 @@ export default function manageStudents(state = initialState, action) {
       transferData: blankStudentTransfer,
       transferStatus: {
         ...state.transferStatus,
-        error: null
-      }
+        error: null,
+      },
     };
   }
   if (action.type === TRANSFER_STUDENTS_SUCCESS) {
@@ -782,8 +807,8 @@ export default function manageStudents(state = initialState, action) {
         status: TransferStatus.SUCCESS,
         type: action.transferType,
         numStudents: action.numStudents,
-        sectionDisplay: action.sectionDisplay
-      }
+        sectionDisplay: action.sectionDisplay,
+      },
     };
   }
   if (action.type === TRANSFER_STUDENTS_FULL) {
@@ -796,8 +821,8 @@ export default function manageStudents(state = initialState, action) {
         numStudents: action.numStudents,
         sectionCode: action.sectionCode,
         sectionStudentCount: action.sectionStudentCount,
-        verb: action.verb
-      }
+        verb: action.verb,
+      },
     };
   }
   if (action.type === TRANSFER_STUDENTS_FAILURE) {
@@ -806,8 +831,8 @@ export default function manageStudents(state = initialState, action) {
       transferStatus: {
         ...state.transferStatus,
         status: TransferStatus.FAIL,
-        error: action.error
-      }
+        error: action.error,
+      },
     };
   }
   if (action.type === TRANSFER_STUDENTS_PENDING) {
@@ -815,20 +840,20 @@ export default function manageStudents(state = initialState, action) {
       ...state,
       transferStatus: {
         ...state.transferStatus,
-        status: TransferStatus.PENDING
-      }
+        status: TransferStatus.PENDING,
+      },
     };
   }
   if (action.type === START_LOADING_STUDENTS) {
     return {
       ...state,
-      isLoadingStudents: true
+      isLoadingStudents: true,
     };
   }
   if (action.type === FINISH_LOADING_STUDENTS) {
     return {
       ...state,
-      isLoadingStudents: false
+      isLoadingStudents: false,
     };
   }
 
@@ -852,10 +877,12 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
     studentLookup[student.id] = {
       id: student.id,
       name: student.name,
+      familyName: student.family_name,
       username: student.username,
       email: student.email,
       age: student.age || '',
       gender: student.gender || '',
+      genderTeacherInput: student.gender_teacher_input || '',
       secretWords: student.secret_words,
       secretPicturePath: student.secret_picture_path,
       loginType: loginType,
@@ -866,7 +893,15 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       isEditing: false,
       isSaving: false,
       rowType: RowType.STUDENT,
-      userType: student.user_type
+      userType: student.user_type,
+      atRiskAgeGatedDate: student.at_risk_age_gated_date
+        ? new Date(student.at_risk_age_gated_date)
+        : null,
+      childAccountComplianceState: student.child_account_compliance_state,
+      latestPermissionRequestSentAt:
+        student.latest_permission_request_sent_at &&
+        new Date(student.latest_permission_request_sent_at),
+      usState: student.us_state,
     };
   }
   return studentLookup;
@@ -884,19 +919,20 @@ const updateStudentOnServer = (updatedStudentInfo, sectionId, onComplete) => {
     student: {
       id: updatedStudentInfo.id,
       name: updatedStudentInfo.name,
+      family_name: updatedStudentInfo.familyName,
       age: updatedStudentInfo.age,
       gender: updatedStudentInfo.gender,
-      sharing_disabled: updatedStudentInfo.sharingDisabled
-    }
+      gender_teacher_input: updatedStudentInfo.genderTeacherInput,
+      sharing_disabled: updatedStudentInfo.sharingDisabled,
+      us_state: updatedStudentInfo.usState,
+    },
   };
   $.ajax({
-    url: `/dashboardapi/sections/${sectionId}/students/${
-      dataToUpdate.student.id
-    }`,
+    url: `/dashboardapi/sections/${sectionId}/students/${dataToUpdate.student.id}`,
     method: 'PATCH',
     type: 'json',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(dataToUpdate)
+    data: JSON.stringify(dataToUpdate),
   })
     .done(data => {
       onComplete(null, data);
@@ -913,19 +949,22 @@ const addStudentOnServer = (updatedStudentsInfo, sectionId, onComplete) => {
     studentsToAdd[i] = {
       editing: true,
       name: updatedStudentsInfo[i].name,
+      family_name: updatedStudentsInfo[i].familyName,
       age: updatedStudentsInfo[i].age,
       gender: updatedStudentsInfo[i].gender,
-      sharing_disabled: updatedStudentsInfo[i].sharingDisabled
+      gender_teacher_input: updatedStudentsInfo[i].genderTeacherInput,
+      sharing_disabled: updatedStudentsInfo[i].sharingDisabled,
+      us_state: updatedStudentsInfo[i].usState,
     };
   }
   const students = {
-    students: studentsToAdd
+    students: studentsToAdd,
   };
   $.ajax({
     url: `/dashboardapi/sections/${sectionId}/students/bulk_add`,
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(students)
+    data: JSON.stringify(students),
   })
     .done(data => {
       onComplete(null, data);
@@ -947,13 +986,13 @@ const transferStudentsOnServer = (
     student_ids: studentIds,
     current_section_code: currentSectionCode,
     new_section_code: newSectionCode,
-    stay_enrolled_in_current_section: stayEnrolledInCurrentSection
+    stay_enrolled_in_current_section: stayEnrolledInCurrentSection,
   };
   $.ajax({
     url: '/dashboardapi/sections/transfers',
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(payload)
+    data: JSON.stringify(payload),
   })
     .done(data => {
       onComplete(null, data);
@@ -966,26 +1005,53 @@ const transferStudentsOnServer = (
 export const loadSectionStudentData = sectionId => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
+    let oldSectionId = state.sectionId;
 
-    // Don't load data if it's already stored in redux.
-    const alreadyHaveStudentData = state.sectionId === sectionId;
-
-    if (!alreadyHaveStudentData) {
+    // Load data only if section Id doesn't already match
+    if (state.sectionId !== sectionId) {
+      // Set section ID to indicate student data for current section.
+      dispatch(setSectionInfo(sectionId));
       dispatch(startLoadingStudents());
       $.ajax({
         method: 'GET',
         url: `/dashboardapi/sections/${sectionId}/students`,
-        dataType: 'json'
-      }).done(studentData => {
-        const convertedStudentData = convertStudentServerData(
-          studentData,
-          state.loginType,
-          sectionId
-        );
-        dispatch(setStudents(convertedStudentData, sectionId));
-      });
+        dataType: 'json',
+      })
+        .done(studentData => {
+          const convertedStudentData = convertStudentServerData(
+            studentData,
+            state.loginType,
+            sectionId
+          );
+          dispatch(setStudents(convertedStudentData));
+        })
+        .fail(() => {
+          // revert to old section ID in case of failure to backend call
+          dispatch(setSectionInfo(oldSectionId));
+          dispatch(finishLoadingStudents());
+        });
     } else {
       dispatch(finishLoadingStudents());
     }
   };
+};
+
+/**
+ * Filters an array of students by the presence of an 'atRiskAgeGatedDate' property.
+ *
+ * @param {Array} students - The array of students to filter.
+ * @returns {Array} - An array of students that have the 'atRiskAgeGatedDate' property.
+ */
+export const filterAgeGatedStudents = students => {
+  return students.filter(student => student.atRiskAgeGatedDate);
+};
+
+/**
+ * Returns the at-risk age gated date for the selected students.
+ *
+ * @param {Array} students - The array of student objects.
+ * @returns {Date} The at-risk age gated date for the selected students, or undefined if no students are found or no at-risk date is available.
+ */
+export const selectAtRiskAgeGatedDate = students => {
+  return filterAgeGatedStudents(students)[0]?.atRiskAgeGatedDate;
 };

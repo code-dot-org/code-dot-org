@@ -1,0 +1,15 @@
+name 'data-science-ch1-lesson9-level2-choice'
+display_name 'CODAP Level'
+description '###Create data visualizations based on Micahs room
+![](https://images.code.org/e503d0c8fd92c01092fde14e26a20538-image-1721755864008.png)'
+
+sublevels
+level 'data-science-ch1-lesson9-level2a'
+level 'data-science-ch1-lesson9-level2b'
+level 'data-science-ch1-lesson9-level2c'
+level 'data-science-ch1-lesson9-level2d'
+level 'data-science-ch1-lesson9-level2e'
+level 'data-science-ch1-lesson9-level2f'
+markdown <<MARKDOWN
+![](https://images.code.org/e503d0c8fd92c01092fde14e26a20538-image-1721755864008.png)
+MARKDOWN

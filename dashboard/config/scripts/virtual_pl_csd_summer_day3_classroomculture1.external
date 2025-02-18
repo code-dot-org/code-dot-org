@@ -1,0 +1,29 @@
+name 'virtual-pl-csd-summer-day3-ClassroomCulture1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Classroom culture
+
+#### In a CS Discoveries classroom, students are expected to solve problems that don’t have clear answers, work together with their peers, and play an active role in their learning. For some students, this might be a new way of learning. The culture that is created within the classroom from the start is crucial in helping students feel like they belong in CS and in setting students up for success throughout the course.
+
+## What does a classroom with a positive culture look like?
+
+* #### What do you see?
+* #### What do you hear?
+* #### What are the students doing?
+* #### What is the teacher doing?
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+## **Task:** Create an Artifact
+
+#### Create an artifact that represents a positive classroom culture. Your artifact might be a collage of images, a word cloud, a drawing, a poem, or anything else that creatively expresses your vision of a positive classroom culture. 
+
+* #### **Step 1:** Claim a slide from "Classroom Culture Artifacts" section of the shared slide deck. 
+* #### **Step 2:** Create an artifact to represent a positive classroom environment and add it to your slide. (You can either create the artifact directly on the slide of take a picture and add it to your slide.) 
+
+
+MARKDOWN

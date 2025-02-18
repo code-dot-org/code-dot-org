@@ -1,10 +1,12 @@
 import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+
 import DialogFooter from './DialogFooter';
-import Button from '../Button';
 
 export default {
   name: 'DialogFooter',
-  component: DialogFooter
+  component: DialogFooter,
 };
 
 const OneButtonTemplate = args => (

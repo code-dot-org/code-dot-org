@@ -1,9 +1,10 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ImageInput from '@cdo/apps/lib/levelbuilder/code-docs-editor/ImageInput';
 
-$(document).ready(function() {
+import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
+
+$(document).ready(function () {
   const imageUrlInput = $('input#level_thumbnail_url');
 
   ReactDOM.render(

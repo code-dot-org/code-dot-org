@@ -1,0 +1,17 @@
+name 'virtual-pl-csd-summer-day1-async24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Discussion
+
+<br>
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### **What discussion strategies besides Think-Pair-Share do you currently use in your classroom?** 
+
+#### Take a moment to return to your cohort's slide deck and submit an answer to this question on a virtual post-it. Review the responses from other people in your cohort to see their thoughts.
+<br>
+
+![](https://images.code.org/65f5df1f5cad4e5c2e85cac387818cb1-image-1684293643971.20.42 PM.png)
+MARKDOWN

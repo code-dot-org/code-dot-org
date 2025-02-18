@@ -35,12 +35,15 @@
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "nav.header."
   hamburger_options[:page_mode] = request.cookies['pm']
+  hamburger_options[:dashboard] = true
+  hamburger_options[:ge_region] = request.ge_region
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
   header_contents_options[:language] = request.language
   header_contents_options[:loc_prefix] = "nav.header."
   header_contents_options[:page_mode] = request.cookies['pm']
+  header_contents_options[:ge_region] = request.ge_region
 
   should_show_progress = (script_level || @lesson_extras) && !@is_code_reviewing
 
@@ -57,6 +60,7 @@
   user_header_options[:session_pairings] = session[:pairings]
   user_header_options[:loc_prefix] = 'nav.user.'
   user_header_options[:level] = level
+  user_header_options[:ge_region] = request.ge_region
 
   require 'cdo/hamburger'
 
@@ -67,14 +71,14 @@
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
 
 %div{class: header_class}
-  .navbar-static-top.header{dir: "ltr"}
+  .navbar-static-top.header
     .container{style: "width: 100%; display: flex; justify-content: space-between; height: 50px;"}
       .header_left
         .header_logo
           - if current_user
-            = link_to(image_tag('logo.svg', alt: I18n.t(:code_org_logo_alt)), '/home', {id: "logo_home_link"})
+            = link_to(image_tag('logo.svg', alt: I18n.t(:code_org_logo_alt)), home_path, {id: "logo_home_link"})
           - else
-            = link_to(image_tag('logo.svg', alt: I18n.t(:code_org_logo_alt)), CDO.code_org_url, {id: "logo_home_link"})
+            = link_to(image_tag('logo.svg', alt: I18n.t(:code_org_logo_alt)), CDO.code_org_url(ge_region: request.ge_region), {id: "logo_home_link"})
 
       .header_middle{dir: locale_dir}
         - if should_show_progress || level
@@ -83,7 +87,7 @@
         - else
           .headerlinks.hide_on_tablet
             - Hamburger.get_header_contents(header_contents_options).each do |entry|
-              %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
+              %a.headerlink{id: entry[:id], href: entry[:url], class: entry[:class]}= entry[:title]
 
       .header_right
         - if !@hide_sign_in_option && signin_button_enabled
@@ -146,13 +150,13 @@
       #{lesson_group_data.to_json},
       #{lesson_data.to_json},
       #{user_progress},
-      "#{script_level&.level_id || -1}",
+      "#{@level&.id || script_level&.level_id || -1}",
       #{puzzle_page},
       #{signed_in},
       #{lesson_extras_enabled || 'null'},
       #{script_name_data.to_json},
       #{!script_level}
-    )
+    );
     //]]>
 
 - elsif @is_code_reviewing
@@ -163,7 +167,7 @@
 
 - elsif level
   :javascript
-    dashboard.header.buildProjectInfoOnly()
+    dashboard.header.buildProjectInfoOnly("#{@level.id}")
 
 -# If the page is cached, the sign-in button / user menu must be loaded separately
 -# by the client.

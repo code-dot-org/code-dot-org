@@ -1,4 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
+
 var blockUtils = require('@cdo/apps/block_utils');
 
 // Bee level in which we have a flower with zero nectar
@@ -12,7 +13,7 @@ var levelDef = {
     [2, 1, 1, 1, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 1, 1, 0, 0, 0, 0],
-    [0, 0, 1, 1, 0, 0, 0, 0]
+    [0, 0, 1, 1, 0, 0, 0, 0],
   ],
   startDirection: 1, // Direction.EAST,
   initialDirt: [
@@ -23,9 +24,9 @@ var levelDef = {
     [0, 98, 1, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
-  flowerType: 'redWithNectar'
+  flowerType: 'redWithNectar',
 };
 
 module.exports = {
@@ -37,9 +38,9 @@ module.exports = {
       description: 'Get nectar',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function() {
+      customValidator: function () {
         return Maze.controller.subtype.nectars_.length === 1;
       },
       xml:
@@ -47,20 +48,20 @@ module.exports = {
         blockUtils.blocksFromList([
           'maze_moveForward',
           'maze_moveForward',
-          'maze_nectar'
+          'maze_nectar',
         ]) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: "Can't get nectar from zero nectar flower",
       expected: {
         result: false,
-        testResult: TestResults.APP_SPECIFIC_FAIL
+        testResult: TestResults.APP_SPECIFIC_FAIL,
       },
       xml:
         '<xml>' +
         blockUtils.blocksFromList(['maze_moveForward', 'maze_nectar']) +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

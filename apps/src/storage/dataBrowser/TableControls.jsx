@@ -2,14 +2,17 @@
  * @overview Component containing UI controls for modifying the table, including
  * import, export, adding a new column, and deleting the entire table.
  */
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import msg from '@cdo/locale';
+
 import ConfirmDeleteButton from './ConfirmDeleteButton';
 import ConfirmImportButton from './ConfirmImportButton';
 import VisualizerModal from './dataVisualizer/VisualizerModal';
-import PropTypes from 'prop-types';
-import React from 'react';
-import msg from '@cdo/locale';
+
 import dataStyles from './data-styles.module.scss';
-import classNames from 'classnames';
 import style from './table-controls.module.scss';
 
 class TableControls extends React.Component {
@@ -19,7 +22,7 @@ class TableControls extends React.Component {
     exportCsv: PropTypes.func.isRequired,
     importCsv: PropTypes.func.isRequired,
     tableName: PropTypes.string.isRequired,
-    readOnly: PropTypes.bool.isRequired
+    readOnly: PropTypes.bool.isRequired,
   };
 
   render() {

@@ -43,9 +43,8 @@ export default class UniqueSounds {
       // For each current sound, either add it to outputSounds in its
       // previous position, or track it in newSounds.
       for (let currentUniqueSound of currentUniqueSounds) {
-        const previousIndex = this.previousUniqueSounds.indexOf(
-          currentUniqueSound
-        );
+        const previousIndex =
+          this.previousUniqueSounds.indexOf(currentUniqueSound);
         if (previousIndex !== -1) {
           outputSounds[previousIndex] = currentUniqueSound;
         } else {

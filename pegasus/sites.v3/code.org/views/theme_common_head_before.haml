@@ -1,4 +1,8 @@
 - @header['social'].each_pair do |property, content|
+  -# Sets the description name attribute for SEO
+  -# Uses the same og:description from social_metadata.rb
+  - if property == "og:description"
+    %meta{name: "description", content: content}
   %meta{property:property, content:content}
 
 - if @header['noindex']
@@ -10,6 +14,10 @@
 %link{rel:'apple-touch-icon', href:'/images/apple-touch-icon-precomposed.png'}
 
 %script{src:'https://www.googleoptimize.com/optimize.js?id=OPT-KBX3C3L'}
+
+%script{'data-statsig-api-client-key' => CDO.safe_statsig_api_client_key}
+%script{'data-managed-test-server' => "#{CDO.running_web_application? && CDO.test_system?}"}
+%script{'data-ge-region' => request.ge_region.to_s}
 
 =view :fonts
 -if @header['style_min'] && request.site == 'code.org'

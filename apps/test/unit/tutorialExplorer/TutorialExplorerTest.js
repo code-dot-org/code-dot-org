@@ -1,13 +1,12 @@
 /** @file Tests for tutorialExplorer.js */
 
-var assert = require('assert');
 import TutorialExplorer from '@cdo/apps/tutorialExplorer/tutorialExplorer';
 import {
   orgNameCodeOrg,
-  orgNameMinecraft
+  orgNameMinecraft,
 } from '@cdo/apps/tutorialExplorer/util';
 
-describe('TutorialExplorer filterTutorials tests', function() {
+describe('TutorialExplorer filterTutorials tests', function () {
   const longOrgName = 'them-012345678901234567890123456789';
   const tutorials = [
     {
@@ -19,7 +18,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_subject: 'english,history',
       tags_activity_type: '',
       displayweight: 2,
-      popularityrank: 2
+      popularityrank: 2,
     },
     {
       name: 'tut2',
@@ -30,7 +29,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_subject: 'english,history',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 3
+      popularityrank: 3,
     },
     {
       name: 'tut3',
@@ -41,7 +40,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_subject: 'english,history',
       tags_activity_type: '',
       displayweight: 9,
-      popularityrank: 4
+      popularityrank: 4,
     },
     {
       name: 'tut4',
@@ -51,7 +50,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_platform: 'browser,ipad,android',
       tags_subject: 'english,history',
       displayweight: 5,
-      popularityrank: 1
+      popularityrank: 1,
     },
     {
       name: 'tut5',
@@ -62,7 +61,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_subject: 'english,history,science',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 5
+      popularityrank: 5,
     },
     {
       name: 'tut6',
@@ -73,7 +72,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_subject: 'english,history',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 6
+      popularityrank: 6,
     },
     {
       name: 'tut7',
@@ -83,7 +82,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_platform: 'browser,ipad',
       tags_subject: 'english,history,science',
       displayweight: 5,
-      popularityrank: 7
+      popularityrank: 7,
     },
     {
       name: 'tut8',
@@ -94,7 +93,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_subject: 'english,history,science',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 8
+      popularityrank: 8,
     },
     {
       name: 'tut9',
@@ -104,8 +103,8 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_platform: 'browser,ipad',
       tags_subject: '',
       displayweight: 5,
-      popularityrank: 9
-    }
+      popularityrank: 9,
+    },
   ];
   const specTutorials = [
     {
@@ -117,7 +116,7 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_subject: 'art',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 9
+      popularityrank: 9,
     },
     {
       name: 'special',
@@ -128,159 +127,159 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tags_subject: 'math',
       tags_activity_type: '',
       displayweight: 5,
-      popularityrank: 10
-    }
+      popularityrank: 10,
+    },
   ];
   const tutorialsWithSpec = tutorials.concat(specTutorials);
 
-  it('no filter, but do-not-show works', function() {
+  it('no filter, but do-not-show works', function () {
     const props = {
       filters: {},
       locale: 'en-us',
       sortBy: 'displayweight',
       orgname: 'all',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, tutorials.length - 1);
+    expect(filtered.length).toEqual(tutorials.length - 1);
   });
 
-  it('no filter, but do-not-show and orgname work', function() {
+  it('no filter, but do-not-show and orgname work', function () {
     const props = {
       filters: {},
       locale: 'en-us',
       sortBy: 'displayweight',
       orgName: 'code',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 4);
-    assert.equal(filtered[0].name, 'tut3');
-    assert.equal(filtered[1].name, 'tut2');
-    assert.equal(filtered[2].name, 'tut4');
-    assert.equal(filtered[3].name, 'tut1');
+    expect(filtered.length).toEqual(4);
+    expect(filtered[0].name).toEqual('tut3');
+    expect(filtered[1].name).toEqual('tut2');
+    expect(filtered[2].name).toEqual('tut4');
+    expect(filtered[3].name).toEqual('tut1');
   });
 
-  it('filter on platform', function() {
+  it('filter on platform', function () {
     const props = {
       filters: {
-        platform: ['mac']
+        platform: ['mac'],
       },
       locale: 'en-us',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 1);
-    assert.equal(filtered[0].name, 'tut2');
+    expect(filtered.length).toEqual(1);
+    expect(filtered[0].name).toEqual('tut2');
   });
 
-  it('filter on platform and subject', function() {
+  it('filter on platform and subject', function () {
     const props = {
       filters: {
         platform: ['iphone'],
-        subject: ['science']
+        subject: ['science'],
       },
       locale: 'en-us',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 1);
-    assert.equal(filtered[0].name, 'tut5');
+    expect(filtered.length).toEqual(1);
+    expect(filtered[0].name).toEqual('tut5');
   });
 
-  it('filter on platform, no locale provided', function() {
+  it('filter on platform, no locale provided', function () {
     const props = {
       filters: {
-        platform: ['iphone']
+        platform: ['iphone'],
       },
       locale: null,
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 2);
-    assert.equal(filtered[0].name, 'tut5');
-    assert.equal(filtered[1].name, 'tut6');
+    expect(filtered.length).toEqual(2);
+    expect(filtered[0].name).toEqual('tut5');
+    expect(filtered[1].name).toEqual('tut6');
   });
 
-  it('filter on subject and language, use hideFilters', function() {
+  it('filter on subject and language, use hideFilters', function () {
     const props = {
       filters: {
-        subject: ['history']
+        subject: ['history'],
       },
       hideFilters: {
-        platform: ['android']
+        platform: ['android'],
       },
       locale: 'gr-gr',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 2);
-    assert.equal(filtered[0].name, 'tut3');
-    assert.equal(filtered[1].name, 'tut1');
+    expect(filtered.length).toEqual(2);
+    expect(filtered[0].name).toEqual('tut3');
+    expect(filtered[1].name).toEqual('tut1');
   });
 
-  it('filter on subject and language, sort by displayweight', function() {
+  it('filter on subject and language, sort by displayweight', function () {
     const props = {
       filters: {
-        subject: ['history']
+        subject: ['history'],
       },
       locale: 'gr-gr',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 3);
-    assert.equal(filtered[0].name, 'tut3');
-    assert.equal(filtered[1].name, 'tut4');
-    assert.equal(filtered[2].name, 'tut1');
+    expect(filtered.length).toEqual(3);
+    expect(filtered[0].name).toEqual('tut3');
+    expect(filtered[1].name).toEqual('tut4');
+    expect(filtered[2].name).toEqual('tut1');
   });
 
-  it('filter on subject and language, sort by popularityrank', function() {
+  it('filter on subject and language, sort by popularityrank', function () {
     const props = {
       filters: {
-        subject: ['history']
+        subject: ['history'],
       },
       locale: 'gr-gr',
-      sortByFieldName: 'popularityrank'
+      sortByFieldName: 'popularityrank',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 3);
-    assert.equal(filtered[0].name, 'tut4');
-    assert.equal(filtered[1].name, 'tut1');
-    assert.equal(filtered[2].name, 'tut3');
+    expect(filtered.length).toEqual(3);
+    expect(filtered[0].name).toEqual('tut4');
+    expect(filtered[1].name).toEqual('tut1');
+    expect(filtered[2].name).toEqual('tut3');
   });
 
-  it('show only one language', function() {
+  it('show only one language', function () {
     const props = {
       filters: {},
       locale: 'gr-gr',
       specificLocale: true,
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorials, props);
 
-    assert.equal(filtered.length, 2);
-    assert.equal(filtered[0].name, 'tut3');
-    assert.equal(filtered[1].name, 'tut4');
+    expect(filtered.length).toEqual(2);
+    expect(filtered[0].name).toEqual('tut3');
+    expect(filtered[1].name).toEqual('tut4');
   });
 
-  it('shows Minecraft as Codeorg tutorial', function() {
+  it('shows Minecraft as Codeorg tutorial', function () {
     const tutorialsWithMinecraft = tutorials.concat([
       {
         name: 'minecraft',
@@ -290,15 +289,15 @@ describe('TutorialExplorer filterTutorials tests', function() {
         tags_platform: 'browser,ipad',
         tags_subject: '',
         displayweight: 5,
-        popularityrank: 9
-      }
+        popularityrank: 9,
+      },
     ]);
 
     const props = {
       filters: {},
       orgName: orgNameCodeOrg,
       locale: 'en-us',
-      sortByFieldName: 'displayweight'
+      sortByFieldName: 'displayweight',
     };
 
     const filtered = TutorialExplorer.filterTutorials(
@@ -306,35 +305,34 @@ describe('TutorialExplorer filterTutorials tests', function() {
       props
     );
 
-    assert.equal(filtered.length, 1);
-    assert.equal(filtered[0].name, 'minecraft');
+    expect(filtered.length).toEqual(1);
+    expect(filtered[0].name).toEqual('minecraft');
   });
 
-  it('get unique orgnames', function() {
-    const uniqueOrgNames = TutorialExplorer.getUniqueOrgNamesFromTutorials(
-      tutorials
-    );
+  it('get unique orgnames', function () {
+    const uniqueOrgNames =
+      TutorialExplorer.getUniqueOrgNamesFromTutorials(tutorials);
 
-    assert.equal(uniqueOrgNames.length, 3);
-    assert.equal(uniqueOrgNames[0], 'code');
-    assert.equal(uniqueOrgNames[1], 'tech');
-    assert.equal(uniqueOrgNames[2], longOrgName);
+    expect(uniqueOrgNames.length).toEqual(3);
+    expect(uniqueOrgNames[0]).toEqual('code');
+    expect(uniqueOrgNames[1]).toEqual('tech');
+    expect(uniqueOrgNames[2]).toEqual(longOrgName);
   });
 
-  it('get tutorials by search term', function() {
+  it('get tutorials by search term', function () {
     const props = {
       filters: {},
       locale: 'en-us',
       sortBy: 'displayweight',
       orgname: 'all',
       sortByFieldName: 'displayweight',
-      searchTerm: 'spec'
+      searchTerm: 'spec',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorialsWithSpec, props);
-    assert.equal(filtered.length, 2);
-    assert.equal(filtered[0].name, 'specific');
-    assert.equal(filtered[1].name, 'special');
+    expect(filtered.length).toEqual(2);
+    expect(filtered[0].name).toEqual('specific');
+    expect(filtered[1].name).toEqual('special');
 
     props.searchTerm = 'specific';
 
@@ -342,8 +340,8 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tutorialsWithSpec,
       props
     );
-    assert.equal(filtered2.length, 1);
-    assert.equal(filtered2[0].name, 'specific');
+    expect(filtered2.length).toEqual(1);
+    expect(filtered2[0].name).toEqual('specific');
 
     props.searchTerm = 'dinosaur';
 
@@ -351,24 +349,24 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tutorialsWithSpec,
       props
     );
-    assert.equal(filtered3.length, 0);
+    expect(filtered3.length).toEqual(0);
   });
 
-  it('get tutorials by search term and subject filter', function() {
+  it('get tutorials by search term and subject filter', function () {
     const props = {
       filters: {
-        subject: ['math']
+        subject: ['math'],
       },
       locale: 'en-us',
       sortBy: 'displayweight',
       orgname: 'code',
       sortByFieldName: 'displayweight',
-      searchTerm: 'spec'
+      searchTerm: 'spec',
     };
 
     const filtered = TutorialExplorer.filterTutorials(tutorialsWithSpec, props);
-    assert.equal(filtered.length, 1);
-    assert.equal(filtered[0].name, 'special');
+    expect(filtered.length).toEqual(1);
+    expect(filtered[0].name).toEqual('special');
 
     props.searchTerm = 'specific';
 
@@ -376,6 +374,6 @@ describe('TutorialExplorer filterTutorials tests', function() {
       tutorialsWithSpec,
       props
     );
-    assert.equal(filtered2.length, 0);
+    expect(filtered2.length).toEqual(0);
   });
 });

@@ -1,9 +1,10 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import ProjectUpdatedAt from './ProjectUpdatedAt';
+
 import headerVignetteStyles from './HeaderVignette';
-import $ from 'jquery';
+import ProjectUpdatedAt from './ProjectUpdatedAt';
 
 class ScriptName extends React.Component {
   static propTypes = {
@@ -13,7 +14,7 @@ class ScriptName extends React.Component {
     showProjectUpdatedAt: PropTypes.bool,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   getFullWidth() {
@@ -121,23 +122,27 @@ const styles = {
   headerContainer: {
     position: 'relative',
     overflow: 'hidden',
-    height: 40
+    height: 40,
   },
   headerInner: {
-    position: 'absolute'
+    position: 'absolute',
+    display: 'flex',
+    alignItems: 'center',
   },
   scriptLinkWithUpdatedAt: {
-    display: 'block'
+    display: 'block',
   },
   outerContainer: {
-    textAlign: 'right'
+    textAlign: 'end',
   },
   containerWithUpdatedAt: {
     verticalAlign: 'bottom',
-    display: 'inline-block'
-  }
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'end',
+  },
 };
 
 export default connect(state => ({
-  showProjectUpdatedAt: state.project.showProjectUpdatedAt
+  showProjectUpdatedAt: state.project.showProjectUpdatedAt,
 }))(ScriptName);

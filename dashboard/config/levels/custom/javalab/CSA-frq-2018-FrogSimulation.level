@@ -1,0 +1,25 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-07-04T15:48:27.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "FrogSimulation.java": {
+        "text": "public class FrogSimulation \n{ \n  /** Distance, in inches, from the starting position to the goal. */ \n  private int goalDistance; \n  \n  /** Maximum number of hops allowed to reach the goal. */ \n  private int maxHops; \n  \n  /** Constructs a FrogSimulation where dist is the distance, in inches, from the starting \n    * position to the goal, and numHops is the maximum number of hops allowed to reach the goal. \n    * Precondition: dist > 0; numHops > 0 \n    */ \n  public FrogSimulation(int dist, int numHops) \n  { goalDistance = dist; maxHops = numHops; } \n  \n  /** Returns an integer representing the distance, in inches, to be moved when the frog hops. */ \n  private int hopDistance() \n  { /* implementation not shown */ } \n  \n  /** Simulates a frog attempting to reach the goal as described in part (a). \n    * Returns true if the frog successfully reached or passed the goal during the simulation; \n    * false otherwise. \n    */ \n  public boolean simulate() \n  { /* to be implemented in part (a) */ } \n  \n  /** Runs num simulations and returns the proportion of simulations in which the frog \n    * successfully reached or passed the goal. \n    * Precondition: num > 0 \n    */ \n  public double runSimulations(int num) \n  { /* to be implemented in part (b) */ } \n\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "encrypted_exemplar_sources": "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\nrAVHtn40eWyGOxpt5QbobhDkIJ0W\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-07-04 15:48:32 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-07-04 15:52:54 +0000\",\"changed\":[],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-07-04 15:52:55 +0000\",\"changed\":[],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-07-04 15:53:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-07-04 15:54:46 +0000\",\"changed\":[],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

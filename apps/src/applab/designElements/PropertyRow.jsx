@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '../../util/color';
-import * as rowStyle from './rowStyle';
-import * as elementUtils from './elementUtils';
 import * as utils from '../../utils';
+
+import * as elementUtils from './elementUtils';
+import * as rowStyle from './rowStyle';
 
 const LockState = utils.makeEnum('LOCKED', 'UNLOCKED');
 
@@ -16,25 +18,25 @@ export default class PropertyRow extends React.Component {
     lockState: PropTypes.oneOf([
       LockState.LOCKED,
       LockState.UNLOCKED,
-      undefined
+      undefined,
     ]),
     isMultiLine: PropTypes.bool,
     handleChange: PropTypes.func,
     handleLockChange: PropTypes.func,
-    isIdRow: PropTypes.bool
+    isIdRow: PropTypes.bool,
   };
 
   static LockState = LockState;
 
   state = {
     value: this.props.initialValue,
-    isValidValue: true
+    isValidValue: true,
   };
 
   UNSAFE_componentWillReceiveProps(newProps) {
     this.setState({
       value: newProps.initialValue,
-      isValidValue: true
+      isValidValue: true,
     });
   }
 
@@ -49,7 +51,7 @@ export default class PropertyRow extends React.Component {
     const options = {
       allowCodeElements: true,
       allowDesignElements: false,
-      allowDesignPrefix: false
+      allowDesignPrefix: false,
     };
     return elementUtils.isIdAvailable(value, options);
   }
@@ -74,7 +76,7 @@ export default class PropertyRow extends React.Component {
     isValidValue = utils.valueOr(isValidValue, true);
     this.setState({
       value: value,
-      isValidValue: isValidValue
+      isValidValue: isValidValue,
     });
     if (isValidValue) {
       this.props.handleChange(value);
@@ -103,11 +105,11 @@ export default class PropertyRow extends React.Component {
       rowStyle.maxWidth,
       {
         backgroundColor: color.light_purple,
-        paddingBottom: 10
+        paddingBottom: 10,
       }
     );
     const inputStyle = Object.assign({}, rowStyle.input, {
-      backgroundColor: this.state.isValidValue ? null : '#ffcccc'
+      backgroundColor: this.state.isValidValue ? null : '#ffcccc',
     });
 
     let inputElement;
@@ -138,7 +140,7 @@ export default class PropertyRow extends React.Component {
     }
 
     const lockStyle = {
-      marginLeft: '5px'
+      marginLeft: '5px',
     };
 
     let lockIcon;

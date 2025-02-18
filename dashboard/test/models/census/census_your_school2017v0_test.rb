@@ -8,11 +8,11 @@ class Census::CensusYourSchool2017v0Test < ActiveSupport::TestCase
 
   test "census 2017 v0 submission missing email" do
     submission = build :census_your_school2017v1, submitter_email_address: nil
-    assert_not submission.valid?, submission.errors.full_messages
+    refute submission.valid?, submission.errors.full_messages
   end
 
   test "census 2017 v0 submission missing role" do
     submission = build :census_your_school2017v1, submitter_role: nil
-    assert_not submission.valid?, submission.errors.full_messages
+    refute submission.valid?, submission.errors.full_messages
   end
 end

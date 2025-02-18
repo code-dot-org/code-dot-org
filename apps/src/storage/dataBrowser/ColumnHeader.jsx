@@ -1,21 +1,24 @@
 /**
  * @overview Component for adding a new column to the specified table.
  */
-import ColumnMenu from './ColumnMenu';
-import Dialog from '../../templates/Dialog';
-import FontAwesome from '../../templates/FontAwesome';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import Dialog from '../../legacySharedComponents/Dialog';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
-import dataStyles from './data-styles.module.scss';
 import {valueOr} from '../../utils';
-import classNames from 'classnames';
+
+import ColumnMenu from './ColumnMenu';
+
 import style from './column-header.module.scss';
+import dataStyles from './data-styles.module.scss';
 
 const INITIAL_STATE = {
   newName: undefined,
   hasEnteredText: false,
-  isDialogOpen: false
+  isDialogOpen: false,
 };
 
 class ColumnHeader extends React.Component {
@@ -29,7 +32,7 @@ class ColumnHeader extends React.Component {
     isEditing: PropTypes.bool.isRequired,
     isPending: PropTypes.bool.isRequired,
     readOnly: PropTypes.bool,
-    renameColumn: PropTypes.func.isRequired
+    renameColumn: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -58,7 +61,7 @@ class ColumnHeader extends React.Component {
   handleChange = event => {
     this.setState({
       newName: event.target.value,
-      hasEnteredText: true
+      hasEnteredText: true,
     });
   };
 
@@ -120,8 +123,8 @@ class ColumnHeader extends React.Component {
       ...{
         display: this.props.isEditing ? null : 'none',
         backgroundColor: this.isInputValid() ? null : color.lightest_red,
-        minWidth: 80
-      }
+        minWidth: 80,
+      },
     };
     return (
       <th

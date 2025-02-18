@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 /**
  * Creates a sinon fake server that can respond to API requests about
@@ -14,14 +14,14 @@ export default function fakeWorkshopServer(workshop) {
   server.respondWith('GET', `/api/v1/pd/workshops/${workshop.id}`, [
     200,
     {'Content-Type': 'application/json'},
-    JSON.stringify(workshop)
+    JSON.stringify(workshop),
   ]);
 
   // Enrollments load request
   server.respondWith('GET', `/api/v1/pd/workshops/${workshop.id}/enrollments`, [
     200,
     {'Content-Type': 'application/json'},
-    JSON.stringify([])
+    JSON.stringify([]),
   ]);
 
   return server;

@@ -12,3 +12,4 @@ wrong 'Descriptive names makes it easier for other programmers to understand the
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

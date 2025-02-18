@@ -75,7 +75,7 @@ module GitUtils
     `git rev-parse HEAD`.strip
   end
 
-  def self.git_revision_short(project_directory=Dir.pwd)
+  def self.git_revision_short(project_directory = Dir.pwd)
     return nil if project_directory.nil?
     # Cron jobs execute as root and may not be in the current project directory, preventing git commands from working.
     # Eventually other (or all) GitUtils methods may need to explicitly change to the project root, but currently
@@ -93,7 +93,7 @@ module GitUtils
   def self.get_branch_commit_merges(commit)
     commit_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/commits/#{commit}").read)
     commit_json['commit']['message'].match(/from code-dot-org\/(.*)\n\n/)[1]
-  rescue => _
+  rescue
     nil
   end
 
@@ -106,11 +106,11 @@ module GitUtils
   end
 
   def self.pr_base_branch_or_default_no_origin
-    circle_pr_branch_base_no_origin || current_branch_base_no_origin
+    ci_pr_base_branch_no_origin || current_branch_base_no_origin
   end
 
-  def self.circle_pr_branch_base_no_origin
-    ENV['DRONE_TARGET_BRANCH']
+  def self.ci_pr_base_branch_no_origin
+    ENV.fetch('CI_BASE_BRANCH', nil)
   end
 
   # Given a branch name, returns its likely base branch / merge destination
@@ -121,8 +121,8 @@ module GitUtils
     when 'test'
       'origin/production'
     else # levelbuilder, feature branches, etc.
-      # In Continuous Integration (Drone) builds, use the base branch of the Pull Request, which might be staging-next.
-      CDO.ci ? "origin/#{circle_pr_branch_base_no_origin}" : 'origin/staging'
+      # In CI builds, use the base branch of the Pull Request, which might be staging-next.
+      CDO.ci ? "origin/#{ci_pr_base_branch_no_origin}" : 'origin/staging'
     end
   end
 

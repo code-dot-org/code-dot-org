@@ -1,6 +1,6 @@
 name 'CSA U4L5-L6_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Accessing Random Elements from a 1D Array'
+description 'Use `Math.random()` to access random elements from a 1D array in various scenarios.'
 
 sublevels
 level 'CSA U4L5-L6a_2023'

@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Button from '@cdo/apps/templates/Button';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import i18n from '@cdo/locale';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import {getCurrentQuestion, QuestionType} from './sectionAssessmentsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import i18n from '@cdo/locale';
+
 import {matchDetailsQuestionPropType} from './assessmentDataShapes';
+import {getCurrentQuestion, QuestionType} from './sectionAssessmentsRedux';
 
 class MatchDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    questionAndAnswers: matchDetailsQuestionPropType
+    questionAndAnswers: matchDetailsQuestionPropType,
   };
 
   render() {
@@ -82,19 +84,19 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   instructions: {
-    marginTop: 20
+    marginTop: 20,
   },
   answers: {
     float: 'left',
-    width: 250
-  }
+    width: 250,
+  },
 };
 
 export const UnconnectedMatchDetailsDialog = MatchDetailsDialog;
 
 export default connect(state => ({
-  questionAndAnswers: getCurrentQuestion(state)
+  questionAndAnswers: getCurrentQuestion(state),
 }))(MatchDetailsDialog);

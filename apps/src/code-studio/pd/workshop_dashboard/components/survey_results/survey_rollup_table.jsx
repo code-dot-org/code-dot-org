@@ -1,13 +1,14 @@
-import React from 'react';
-import {Table} from 'react-bootstrap';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import {COURSE_CSF} from '../../workshopConstants';
 
 const questionCategories = [
   'facilitator_effectiveness',
   'teacher_engagement',
-  'overall_success'
+  'overall_success',
 ];
 
 export class SurveyRollupTable extends React.Component {
@@ -15,7 +16,7 @@ export class SurveyRollupTable extends React.Component {
     courseName: PropTypes.string.isRequired,
     rollups: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
-    facilitators: PropTypes.object.isRequired
+    facilitators: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -24,7 +25,7 @@ export class SurveyRollupTable extends React.Component {
     this.categoryDenominator = {
       facilitator_effectiveness: 7,
       teacher_engagement: props.courseName === COURSE_CSF ? 5 : 7,
-      overall_success: 7
+      overall_success: 7,
     };
   }
 
@@ -42,7 +43,7 @@ export class SurveyRollupTable extends React.Component {
       orderedRows.push({
         key: category,
         label: _.startCase(category),
-        isCategory: true
+        isCategory: true,
       });
 
       let question_found = false;
@@ -52,7 +53,7 @@ export class SurveyRollupTable extends React.Component {
           orderedRows.push({
             key: question_name,
             label: questions[question_name],
-            category: category
+            category: category,
           });
         }
       });
@@ -101,7 +102,7 @@ export class SurveyRollupTable extends React.Component {
           this.props.rollups[scenario_key].workshop_id,
           this.props.rollups[scenario_key].course_name,
           this.props.facilitators
-        ) || scenario_key.toString
+        ) || scenario_key.toString,
     }));
   }
 

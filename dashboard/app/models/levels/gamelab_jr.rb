@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class GamelabJr < Gamelab
@@ -36,6 +37,7 @@ class GamelabJr < Gamelab
     blockly_variables
     instructions_icon
     standalone_app_name
+    enable_big_playspace
   )
 
   def shared_blocks
@@ -43,11 +45,23 @@ class GamelabJr < Gamelab
   end
 
   def self.standalone_app_names
-    [['Sprite Lab', 'spritelab'], ['Story', 'story'], ['Science', 'science']]
+    [
+      ['Sprite Lab', 'spritelab'],
+      ['Story', 'story'],
+      ['Science', 'science'],
+      ['Adaptations', 'adaptations'],
+      ['Ecosystems', 'ecosystems'],
+      ['Sprite Lab (Game Design)', 'game_design'],
+      ['Transformers', 'transformers']
+    ]
   end
 
   def standalone_app_name_or_default
     return standalone_app_name || 'spritelab'
+  end
+
+  def project_type
+    return standalone_app_name_or_default
   end
 
   def self.create_from_level_builder(params, level_params)
@@ -86,7 +100,7 @@ class GamelabJr < Gamelab
       <category name="Variables" custom="VARIABLE" />
       <category name="Functions" custom="PROCEDURE" />
       <category name="World" />
-      <category name="Sprites" custom="Sprite" />
+      <category name="Sprites" />
       <category name="Groups" />
       <category name="Events" />
       <category name="Math">

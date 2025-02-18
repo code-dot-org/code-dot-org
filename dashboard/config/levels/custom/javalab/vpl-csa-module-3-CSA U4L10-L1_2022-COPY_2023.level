@@ -1,0 +1,41 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2023-08-01T16:21:49.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "<p style=\"color:red;\"><strong>This level is a copy from Unit 4, Lesson 10, Level 1.   Follow the directions below to understand what students will do in this level.</strong></p>  \r\n\r\n##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. Run the program several times to observe the results. What do you notice about the output?\r\n\r\n2. In `APExamScene.java`(#e7e8ea), look at the `countRanges()`(#e7e8ea) method. What do you notice about the code?\r\n\r\n3. Look at the values in the `percentages.txt`(#e7e8ea) file. Is the `if`(#e7e8ea) statement ever `true`(#e7e8ea) in the `countRanges()`(#e7e8ea) method?\r\n\r\n4. In `APExamScene.java`(#e7e8ea), change the values in each condition in the `countRanges()`(#e7e8ea) method. Run the program after each change. How does this change the output?\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://code.org/promote/ap)!*",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    FileReader myFileReader = new FileReader(\"states.txt\");\n    String[] states = myFileReader.getStringData(50);\n\n    myFileReader.setFile(\"percentages.txt\");\n    int[] percentages = myFileReader.getIntData(50);\n\n    APExamScene myScene = new APExamScene(states, percentages);\n\n    int[] values = myScene.countRanges();\n    myScene.createScene(values);\n\n    Theater.playScenes(myScene);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\n/*\n * Reads data from a file\n */\npublic class FileReader {\n\n  private Scanner fileReader;   // The Scanner object to read the file\n  private File myFile;          // The File object containing the data\n\n  /*\n   * Constructor to create a FileReader with\n   * the specified filename to read\n   */\n  public FileReader(String filename) {\n    setFile(filename);\n  }\n\n  /*\n   * Sets the file to the specified filename\n   */\n  public void setFile(String filename) {\n    myFile = new File(filename);\n    fileReader = createScanner(myFile);\n  }\n\n  /*\n   * Returns a Scanner object to read the file\n   * or notifies the user if the file is not found\n   */\n  public Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  /*\n   * Returns an int array containing the values in the file\n   */\n  public int[] getIntData(int numValues) {\n    int[] values = new int[numValues];\n    \n    for (int index = 0; index < values.length; index++) {\n      if (fileReader.hasNextInt()) {\n        values[index] = fileReader.nextInt();\n      }\n    }\n\n    fileReader.close();\n    return values;\n  }\n\n  /*\n   * Returns a double array containing the values in the file\n   */\n  public double[] getDoubleData(int numValues) {\n    double[] values = new double[numValues];\n    \n    for (int index = 0; index < values.length; index++) {\n      if (fileReader.hasNextDouble()) {\n        values[index] = fileReader.nextDouble();\n      }\n    }\n\n    fileReader.close();\n    return values;\n  }\n\n  /*\n   * Returns a String array containing the values in the file\n   */\n  public String[] getStringData(int numValues) {\n    String[] values = new String[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (fileReader.hasNextLine()) {\n        values[index] = fileReader.nextLine();\n      }\n    }\n\n    fileReader.close();\n    return values;\n  }\n  \n}",
+        "isVisible": true
+      },
+      "APExamScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Creates a scene to visualize AP Exam data\n */\npublic class APExamScene extends Scene {\n\n  private String[] states;   // The list of states\n  private int[] data;        // The data for each state\n\n  /*\n   * Constructor to create an APExamScene\n   * with specified arrays of states and data\n   */\n  public APExamScene(String[] states, int[] data) {\n    this.states = states;\n    this.data = data;\n  }\n\n  /*\n   * Returns an array containing the number of\n   * states meeting each criteria\n   */\n  public int[] countRanges() {\n    int[] counts = new int[4];\n\n    for (int index = 0; index < data.length; index++) {\n      if (data[index] >= 75) {\n        counts[0]++;\n      }\n      else if (data[index] >= 50) {\n        counts[1]++;\n      }\n      else if (data[index] >= 25) {\n        counts[2]++;\n      }\n      else {\n        counts[3]++;\n      }\n    }\n\n    return counts;\n  }\n\n  /*\n   * Creates a scene that visualizes the\n   * number of states meeting specific criteria\n   */\n  public void createScene(int[] counts) {\n    String[] colors = {\"green\", \"orange\", \"yellow\", \"red\"};\n\n    for (int index = 0; index < counts.length; index++) {\n      int randomX = (int)(Math.random() * 300);\n      int randomY = (int)(Math.random() * 300);\n      setFillColor(colors[index]);\n      drawEllipse(randomX, randomY, counts[index] * 5, counts[index] * 5);\n      pause(0.2);\n    }\n  }\n  \n}",
+        "isVisible": true
+      },
+      "states.txt": {
+        "text": "Alaska\nAlabama\nArkansas\nArizona\nCalifornia\nColorado\nConnecticut\nDistrict of Columbia\nDelaware\nFlorida\nGeorgia\nHawaii\nIowa\nIdaho\nIllinois\nIndiana\nKansas\nKentucky\nLouisiana\nMassachusetts\nMaryland\nMaine\nMichigan\nMinnesota\nMissouri\nMississippi\nMontana\nNorth Carolina\nNorth Dakota\nNebraska\nNew Hampshire\nNew Jersey\nNew Mexico\nNevada\nNew York\nOhio\nOklahoma\nOregon\nPennsylvania\nRhode Island\nSouth Carolina\nSouth Dakota\nTennessee\nTexas\nUtah\nVirginia\nVermont\nWashington\nWisconsin\nWest Virginia\nWyoming",
+        "isVisible": true
+      },
+      "percentages.txt": {
+        "text": "14\n38\n20\n26\n33\n38\n51\n32\n46\n31\n31\n39\n24\n14\n30\n24\n35\n44\n23\n48\n52\n27\n33\n25\n33\n23\n12\n23\n20\n32\n32\n49\n17\n50\n33\n24\n20\n18\n38\n56\n25\n8\n24\n27\n16\n34\n18\n38\n25\n27\n31",
+        "isVisible": true
+      }
+    },
+    "name_suffix": "_2023"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-08-01T16:21:49.640+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-module-3-CSA U4L10-L1_2022-COPY\\\"\"],\"cloned_from\":\"vpl-csa-module-3-CSA U4L10-L1_2022-COPY\"}]"
+}]]></config>
+</Javalab>

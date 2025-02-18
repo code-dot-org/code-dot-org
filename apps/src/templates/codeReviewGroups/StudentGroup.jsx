@@ -1,7 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {Droppable} from 'react-beautiful-dnd';
+
 import color from '@cdo/apps/util/color';
+
 import Student from './Student';
 
 // A StudentGroup is a component that
@@ -14,7 +16,7 @@ export default function StudentGroup({
   droppableId,
   members,
   dropAreaStyle,
-  showEmptyGroupPlaceholder
+  showEmptyGroupPlaceholder,
 }) {
   // TO DO: add header with group name and trash icon to remove a group.
   // https://codedotorg.atlassian.net/browse/CSA-1027
@@ -55,21 +57,21 @@ StudentGroup.propTypes = {
   droppableId: PropTypes.string.isRequired,
   members: PropTypes.array.isRequired,
   dropAreaStyle: PropTypes.object,
-  showEmptyGroupPlaceholder: PropTypes.bool.isRequired
+  showEmptyGroupPlaceholder: PropTypes.bool.isRequired,
 };
 
 const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? color.lightest_gray : color.white
+  background: isDraggingOver ? color.lightest_gray : color.white,
 });
 
 const GRAY_BORDER = `1px solid ${color.lighter_gray}`;
 
 const styles = {
   studentList: {
-    border: GRAY_BORDER
+    border: GRAY_BORDER,
   },
   emptyGroup: {
     paddingBottom: 53,
-    border: GRAY_BORDER
-  }
+    border: GRAY_BORDER,
+  },
 };

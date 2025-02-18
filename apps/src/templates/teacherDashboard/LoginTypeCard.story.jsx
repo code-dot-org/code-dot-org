@@ -1,10 +1,11 @@
-import React from 'react';
-import LoginTypeCard from './LoginTypeCard';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import LoginTypeCard from './LoginTypeCard';
 
 export default {
   name: 'LoginTypeCard',
-  component: LoginTypeCard
+  component: LoginTypeCard,
 };
 
 export const WithSubtitle = () => (

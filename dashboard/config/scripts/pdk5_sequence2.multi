@@ -13,3 +13,4 @@ wrong 'dropdown'
 markdown <<MARKDOWN
 The blocks you saw in the toolbox of the last puzzle were the kind of blocks that are used throughout Course 1. When students move on to Courses 2 and beyond, the blocks start to look different. Answer the vocabulary question on this page and then try out your sequencing skills on the next page to see what the blocks looks like in Courses 2 and beyond.
 MARKDOWN
+allow_multiple_attempts true

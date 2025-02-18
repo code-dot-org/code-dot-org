@@ -1,29 +1,45 @@
 # HTTP Cache configuration.
-#
+
 # Provides application-specific cache configuration used by all our various
 # HTTP cache layers.
-#
+
 # Note that this implementation does include some Varnish-specific logic; we no
 # longer use Varnish and so no longer rely on that logic. We could consider
 # removing our support for Varnish and simplifying this implementation.
-#
+
 # `pegasus` and `dashboard` keys each return a Hash in the following format:
-#
-# - `behaviors`: Array of behaviors. For a given HTTP request, `behaviors` is searched in-order until the first matching `path` is found. If no `path` matches the request, the `default` behavior is used.
-#   - `path`: Path string to match this behavior against.  A single `*`-wildcard is required, either an extension-wildcard `/*.jpg` or path-wildcard `/api/*`.
-#     - `path` can be a String or an Array. If it is an Array, a separate behavior will be generated for each element.
-#     - Paths match the CloudFront [path pattern](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesPathPattern) syntax, with additional restrictions:
+
+# - `behaviors`: Array of behaviors. For a given HTTP request, `behaviors` is searched
+#    in-order until the first matching `path` is found. If no `path` matches the
+#    request, the `default` behavior is used.
+#   - `path`: Path string to match this behavior against.  A single `*`-wildcard is
+#      required, either an extension-wildcard `/*.jpg` or path-wildcard `/api/*`.
+#     - `path` can be a String or an Array. If it is an Array, a separate behavior will
+#       be generated for each element.
+#     - Paths match the CloudFront
+#       [path pattern](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesPathPattern)
+#       syntax, with additional restrictions:
 #       - `?` and `&` characters are not allowed.
 #       - Only a single `*` wildcard is allowed at the start or end of the path pattern.
-#   - `headers` (CloudFront-only): Cache objects based on additional HTTP request headers.  To include all headers (which disables caching entirely for the path), pass `['*']`.  To include no additional request headers in the cache key, pass `[]`.
+#   - `headers` (CloudFront-only): Cache objects based on additional HTTP request headers.
+#      To include all headers (which disables caching entirely for the path), pass `['*']`.
+#      To include no additional request headers in the cache key, pass `[]`.
 #     - Note: Objects are already cached based on the `Host` header by default.
-#     - Note: `headers` is currently only used by CloudFront, while Varnish caches objects based on the `Vary` HTTP response header.
+#     - Note: `headers` is currently only used by CloudFront, while Varnish caches objects
+#       based on the `Vary` HTTP response header.
 #   - `query`: (boolean) Forward query strings to the origin. (default `true`)
-#   - `cookies`: An allowlist array of HTTP cookie keys to pass to the origin and include in the cache key.  To allowlist all cookies for the path, pass `'all'`.  To strip all cookies for the path, pass `'none'`.
-#   - `proxy` (Varnish-only): If specified, proxy all requests matching this path to the specified origin. (Currently either `'dashboard'` or `'pegasus'`)
-#     - Note: paths are not rewritten, so e.g., a GET request to `server1.code.org/here/abc` configured with the behavior `{path: '/here/*' proxy: 'dashboard' }` will proxy its request to `server1-studio.code.org/here/abc`.
-#     - Note: `proxy` is not yet implemented in CloudFront.  (Proxies will still work correctly when passed through to Varnish.)
-# - `default`: Default behavior if no other path patterns are matched.  Uses the same syntax as `behaviors` except `path` is not required.
+#   - `cookies`: An allowlist array of HTTP cookie keys to pass to the origin and include
+#     in the cache key.  To allowlist all cookies for the path, pass `'all'`.  To strip all
+#     cookies for the path, pass `'none'`.
+#   - `proxy` (Varnish-only): If specified, proxy all requests matching this path to the
+#      specified origin. (Currently either `'dashboard'` or `'pegasus'`)
+#     - Note: paths are not rewritten, so e.g., a GET request to `server1.code.org/here/abc`
+#       configured with the behavior `{path: '/here/*' proxy: 'dashboard' }` will proxy its
+#       request to `server1-studio.code.org/here/abc`.
+#     - Note: `proxy` is not yet implemented in CloudFront.  (Proxies will still work correctly
+#       when passed through to Varnish.)
+# - `default`: Default behavior if no other path patterns are matched.  Uses the same syntax
+#    as `behaviors` except `path` is not required.
 class HttpCache
   # Paths for files that are always cached based on their extension.
   STATIC_ASSET_EXTENSION_PATHS = %w(css js mp3 jpg png).map {|ext| "/*.#{ext}"}.freeze
@@ -31,13 +47,13 @@ class HttpCache
   # Language header and cookie are needed to separately cache language-specific pages.
   LANGUAGE_HEADER = %w(Accept-Language).freeze
   COUNTRY_HEADER = %w(CloudFront-Viewer-Country).freeze
-  ALLOWLISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER
+  # Header which lets a client request a response format.
+  ACCEPT_HEADER = %w(Accept).freeze
+  ALLOWLISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER + ACCEPT_HEADER
 
   DEFAULT_COOKIES = [
     # Language drop-down selection.
     'language_',
-    # Offline experiment flag, to allow users into the pilot
-    'offline_pilot',
     # Experiment flag used to debug the onetrust cookie experience.
     'onetrust_cookie_scripts',
     # Page mode, for A/B experiments and feature-flag rollouts.
@@ -46,9 +62,10 @@ class HttpCache
 
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script
+  # TODO TEACH-1634 support the /courses/ path
   UNCACHED_UNIT_LEVEL_PATHS = [
-    '/s/dance/lessons/1/levels/13',
     '/s/dance-2019/lessons/1/levels/10',
+    '/s/dance-ai-2023/lessons/1/levels/10',
     '/s/poem-art-2021/lessons/1/levels/9',
     '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
     '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
@@ -68,13 +85,12 @@ class HttpCache
     starwarsblocks
     mc
     frozen
-    gumball
     minecraft
     hero
     sports
     basketball
-    dance
     dance-2019
+    dance-ai-2023
     oceans
     poem-art-2021
     hello-world-food-2021
@@ -83,6 +99,7 @@ class HttpCache
     hello-world-emoji-2021
     hello-world-space-2022
     hello-world-soccer-2022
+    music-jam-2024
     outbreak
   ).map do |script_name|
     # Most scripts use the default route pattern.
@@ -119,6 +136,22 @@ class HttpCache
     assumed_identity = "_assumed_identity#{env_suffix}"
     default_cookies = DEFAULT_COOKIES + [user_type, limit_project_types, assumed_identity]
 
+    # Allows mocking of DCDO settings via cookies. See: Rack::CookieDCDO
+    if CDO.use_cookie_dcdo
+      require 'cdo/rack/cookie_dcdo'
+      default_cookies << Rack::CookieDCDO::KEY
+    end
+
+    # Allows Geolocation to be altered via cookies. See: Rack::GeolocationOverride
+    if CDO.use_geolocation_override
+      require 'cdo/rack/geolocation_override'
+      default_cookies << Rack::GeolocationOverride::KEY
+    end
+
+    # Allows setting of Global Edition Region via cookies. See: Rack::GlobalEdition
+    require 'cdo/rack/global_edition'
+    default_cookies << Rack::GlobalEdition::REGION_KEY
+
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [
       'hour_of_code',
@@ -130,8 +163,10 @@ class HttpCache
       'rack.session',
       'remember_user_token',
       '__profilin', # Used by rack-mini-profiler
+      'statsig_stable_id',
       session_key,
       storage_id,
+      'new_sign_up_user_type',
     ].concat(default_cookies)
 
     {
@@ -164,15 +199,14 @@ class HttpCache
               /v3/*
               /private*
             ) +
-            # TODO: Collapse these paths into /private to simplify Pegasus caching config.
-            %w(
-              /amazon-future-engineer*
-              /review-hociyskvuwa*
-              /manage-professional-development-workshops*
-              /professional-development-workshop-surveys*
-              /pd-program-registration*
-              /poste*
-            ),
+              # TODO: Collapse these paths into /private to simplify Pegasus caching config.
+              %w(
+                /amazon-future-engineer*
+                /manage-professional-development-workshops*
+                /professional-development-workshop-surveys*
+                /pd-program-registration*
+                /poste*
+              ),
             headers: ALLOWLISTED_HEADERS,
             cookies: allowlisted_cookies
           },

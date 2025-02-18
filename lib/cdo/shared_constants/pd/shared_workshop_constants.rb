@@ -7,6 +7,7 @@ module Pd
       COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_FACILITATOR = 'Facilitator'.freeze,
       COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
+      COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
     ].freeze
 
     ARCHIVED_COURSES = [
@@ -28,12 +29,14 @@ module Pd
     SUBJECT_TEACHER_CON = 'Code.org TeacherCon'.freeze
 
     # Academic Year Workshop subjects shared between CSA, CSD, and CSP
-    SUBJECT_WORKSHOP_1 = 'Academic Year Workshop 1'.freeze
-    SUBJECT_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze
-    SUBJECT_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze
-    SUBJECT_WORKSHOP_4 = 'Academic Year Workshop 4'.freeze
-    SUBJECT_WORKSHOP_1_2 = 'Academic Year Workshop 1 + 2'.freeze
-    SUBJECT_WORKSHOP_3_4 = 'Academic Year Workshop 3 + 4'.freeze
+    ACADEMIC_YEAR_SUBJECTS = [
+      SUBJECT_WORKSHOP_1 = 'Academic Year Workshop 1'.freeze,
+      SUBJECT_WORKSHOP_2 = 'Academic Year Workshop 2'.freeze,
+      SUBJECT_WORKSHOP_3 = 'Academic Year Workshop 3'.freeze,
+      SUBJECT_WORKSHOP_4 = 'Academic Year Workshop 4'.freeze,
+      SUBJECT_WORKSHOP_1_2 = 'Academic Year Workshop 1 + 2'.freeze,
+      SUBJECT_WORKSHOP_3_4 = 'Academic Year Workshop 3 + 4'.freeze
+    ]
 
     # Note: the original intent of this constant is to put subjects
     # in here that will be used explicitly in JS code.
@@ -52,7 +55,8 @@ module Pd
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL1: SUBJECT_ADMIN_COUNSELOR_SLP_CALL1 = 'SLP Quarterly Call 1'.freeze,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL2: SUBJECT_ADMIN_COUNSELOR_SLP_CALL2 = 'SLP Quarterly Call 2'.freeze,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL3: SUBJECT_ADMIN_COUNSELOR_SLP_CALL3 = 'SLP Quarterly Call 3'.freeze,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4: SUBJECT_ADMIN_COUNSELOR_SLP_CALL4 = 'SLP Quarterly Call 4'.freeze
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4: SUBJECT_ADMIN_COUNSELOR_SLP_CALL4 = 'SLP Quarterly Call 4'.freeze,
+      SUBJECT_CUSTOM_WORKSHOP: SUBJECT_CUSTOM_WORKSHOP = 'Custom Workshop'.freeze
     }
 
     SUBJECTS = {
@@ -96,6 +100,7 @@ module Pd
         SUBJECT_CSA_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
         SUBJECT_CSA_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
         SUBJECT_CSA_FIT = SUBJECT_FIT,
+        SUBJECT_CSA_CAPSTONE = 'Capstone'.freeze
       ],
       COURSE_CSD => [
         SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
@@ -107,7 +112,7 @@ module Pd
         SUBJECT_CSD_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
         SUBJECT_CSD_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
         SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
-        SUBJECT_CSD_FIT = SUBJECT_FIT,
+        SUBJECT_CSD_FIT = SUBJECT_FIT
       ],
       COURSE_CSF => [
         SUBJECT_CSF_101,
@@ -127,6 +132,20 @@ module Pd
 
     VIRTUAL_ONLY_SUBJECTS = [
       SUBJECT_VIRTUAL_KICKOFF
+    ].freeze
+
+    CSD_CUSTOM_WORKSHOP_MODULES = [
+      CS_BASICS_FOR_K5_TEACHERS = 'Computer Science Basics for K-5 Teachers'.freeze,
+      CS_FUNDAMENTALS_MAKER_MICROBIT = 'CS Fundamentals Maker with micro:bit'.freeze,
+      ARTIFICIAL_INTELLIGENCE_AND_MACHINE_LEARNING = 'Teaching Artificial Intelligence and Machine Learning'.freeze,
+      CIRCUIT_PLAYGROUND = 'Teaching Creating Apps with Devices (Circuit Playground)'.freeze,
+      MICRO_BIT = 'Teaching Creating Apps with Devices (micro:bit)'.freeze,
+      TEACHING_CS_CONNECTIONS = 'Teaching CS Connections'.freeze,
+      TEACHING_DATA_AND_SOCIETY = 'Teaching Data and Society'.freeze,
+      TEACHING_DESIGN_PROCESS = 'Teaching Design Process'.freeze,
+      INTERACTIVE_ANIMATIONS_AND_GAMES = 'Teaching Interactive Animations and Games'.freeze,
+      PROBLEM_SOLVING_AND_COMPUTING = 'Teaching Problem Solving and Computing'.freeze,
+      WEB_DEVELOPMENT = 'Teaching Web Development'.freeze,
     ].freeze
 
     NOT_FUNDED_SUBJECTS = [
@@ -222,7 +241,8 @@ module Pd
         LEGACY_SUBJECT_CSD_VIRTUAL_5 = 'Virtual Workshop 5'.freeze,
         LEGACY_SUBJECT_CSD_VIRTUAL_6 = 'Virtual Workshop 6'.freeze,
         LEGACY_SUBJECT_CSD_VIRTUAL_7 = 'Virtual Workshop 7'.freeze,
-        LEGACY_SUBJECT_CSD_VIRTUAL_8 = 'Virtual Workshop 8'.freeze
+        LEGACY_SUBJECT_CSD_VIRTUAL_8 = 'Virtual Workshop 8'.freeze,
+        SUBJECT_CSD_CUSTOM_WORKSHOP = SUBJECT_CUSTOM_WORKSHOP
       ]
     }.freeze
 
@@ -270,5 +290,107 @@ module Pd
       'CSP',
       'CSA'
     ]
+
+    PARTICIPANT_GROUP_TYPES = [
+      'District',
+      'Multi-district',
+      'Regional',
+      'National',
+      'Facilitator',
+      'Train the trainer'
+    ].freeze
+
+    PD_SESSION_FORMATS = [
+      {value: 'in_person', label: 'In-Person', enum_value: 0},
+      {value: 'virtual', label: 'Digital', enum_value: 1}
+    ].freeze
+
+    SESSION_FIELDS = {
+      start: {
+        required: true
+      },
+      end: {
+        required: true
+      },
+      session_format: {
+        required: true,
+        options: PD_SESSION_FORMATS
+      },
+      location_name: {
+        required: false
+      },
+      location_address: {
+        required: false
+      },
+      meeting_link: {
+        required: false
+      },
+    }
+
+    COMMON_COURSE_FIELDS = {
+      name: {
+        required: true
+      },
+      capacity: {
+        required: true
+      },
+      notes: {
+        required: false
+      },
+      suppress_email: {
+        required: false
+      },
+      regional_partner_id: {
+        required: false
+      },
+      organizer_id: {
+        required: false
+      },
+      facilitators: {
+        required: false
+      },
+    }
+
+    WORKSHOP_COURSE_CONFIGS = [
+      {
+        slug: COURSE_CSF.parameterize(separator: "_"),
+        label: COURSE_CSF,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSF].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_CSP.parameterize(separator: "_"),
+        label: COURSE_CSP,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSP].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_CSD.parameterize(separator: "_"),
+        label: COURSE_CSD,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSD].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_CSA.parameterize(separator: "_"),
+        label: COURSE_CSA,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_ADMIN_COUNSELOR.parameterize(separator: "_"),
+        label: COURSE_ADMIN_COUNSELOR,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
+        label: COURSE_BUILD_YOUR_OWN,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(
+          course_offerings: {required: true},
+          participant_group_type: {required: true, options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
+        )
+      }
+    ].freeze
   end
 end

@@ -1,6 +1,7 @@
 /** @file Textbox that only allows positive integer values, used in crypto widget */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '../util/color';
 
 export default class IntegerTextbox extends React.Component {
@@ -9,7 +10,7 @@ export default class IntegerTextbox extends React.Component {
     value: PropTypes.number,
     disabled: PropTypes.bool,
     color: PropTypes.string,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   onChange = event => {
@@ -30,7 +31,7 @@ export default class IntegerTextbox extends React.Component {
       backgroundColor: backgroundColor || 'white',
       borderColor: color.light_gray,
       borderStyle: 'solid',
-      borderWidth: 1
+      borderWidth: 1,
     };
 
     return (

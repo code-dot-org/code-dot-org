@@ -1,52 +1,52 @@
-import {expect} from '../../../util/reconfiguredChai';
-import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
-import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/validationCommands';
 import {commands as worldCommands} from '@cdo/apps/p5lab/spritelab/commands/worldCommands';
 import {MAX_NUM_TEXTS} from '@cdo/apps/p5lab/spritelab/constants';
+import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
+
+import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 
 describe('Validation Commands', () => {
   let coreLibrary;
 
-  beforeEach(function() {
+  beforeEach(function () {
     const p5Wrapper = createP5Wrapper();
     coreLibrary = new CoreLibrary(p5Wrapper.p5);
   });
 
   it('getTitle', () => {
-    expect(commands.getTitle.apply(coreLibrary)).to.deep.equal({
+    expect(commands.getTitle.apply(coreLibrary)).toEqual({
       title: undefined,
-      subtitle: undefined
+      subtitle: undefined,
     });
     worldCommands.showTitleScreen.apply(coreLibrary, [
       'my title',
-      'my subtitle'
+      'my subtitle',
     ]);
-    expect(commands.getTitle.apply(coreLibrary)).to.deep.equal({
+    expect(commands.getTitle.apply(coreLibrary)).toEqual({
       title: 'my title',
-      subtitle: 'my subtitle'
+      subtitle: 'my subtitle',
     });
     worldCommands.hideTitleScreen.apply(coreLibrary);
-    expect(commands.getTitle.apply(coreLibrary)).to.deep.equal({
+    expect(commands.getTitle.apply(coreLibrary)).toEqual({
       title: undefined,
-      subtitle: undefined
+      subtitle: undefined,
     });
   });
 
   it('getPrintLog', () => {
-    expect(commands.getPrintLog.apply(coreLibrary)).to.deep.equal([]);
+    expect(commands.getPrintLog.apply(coreLibrary)).toEqual([]);
     worldCommands.printText.apply(coreLibrary, ['first']);
-    expect(commands.getPrintLog.apply(coreLibrary)).to.deep.equal(['first']);
+    expect(commands.getPrintLog.apply(coreLibrary)).toEqual(['first']);
     worldCommands.printText.apply(coreLibrary, ['second']);
-    expect(commands.getPrintLog.apply(coreLibrary)).to.deep.equal([
-      'first',
-      'second'
-    ]);
-    worldCommands.printText.apply(coreLibrary, ['third']);
-    expect(commands.getPrintLog.apply(coreLibrary)).to.deep.equal([
+    expect(commands.getPrintLog.apply(coreLibrary)).toEqual([
       'first',
       'second',
-      'third'
+    ]);
+    worldCommands.printText.apply(coreLibrary, ['third']);
+    expect(commands.getPrintLog.apply(coreLibrary)).toEqual([
+      'first',
+      'second',
+      'third',
     ]);
   });
 
@@ -59,22 +59,20 @@ describe('Validation Commands', () => {
       }
       // expectedArray contains numbers from 111 to 1100 (last MAX_NUM_TEXTS numbers)
     }
-    expect(commands.getPrintLog.apply(coreLibrary)).to.deep.equal(
-      expectedArray
-    );
+    expect(commands.getPrintLog.apply(coreLibrary)).toEqual(expectedArray);
   });
 
   it('getPromptVars', () => {
-    expect(commands.getPromptVars.apply(coreLibrary)).to.deep.equal({});
+    expect(commands.getPromptVars.apply(coreLibrary)).toEqual({});
     worldCommands.setPrompt.apply(coreLibrary, [
       'prompt text',
       'myVar1',
-      () => {}
+      () => {},
     ]);
     worldCommands.setPrompt.apply(coreLibrary, [
       'prompt text',
       'myVar2',
-      () => {}
+      () => {},
     ]);
     worldCommands.setPromptWithChoices.apply(coreLibrary, [
       'prompt text',
@@ -82,7 +80,7 @@ describe('Validation Commands', () => {
       'a',
       'b',
       'c',
-      () => {}
+      () => {},
     ]);
     worldCommands.setPromptWithChoices.apply(coreLibrary, [
       'prompt text',
@@ -90,13 +88,13 @@ describe('Validation Commands', () => {
       1,
       2,
       3,
-      () => {}
+      () => {},
     ]);
-    expect(commands.getPromptVars.apply(coreLibrary)).to.deep.equal({
+    expect(commands.getPromptVars.apply(coreLibrary)).toEqual({
       myVar1: null,
       myVar2: null,
       myVar3: null,
-      myVar4: null
+      myVar4: null,
     });
     coreLibrary.onPromptAnswer('myVar2', 'my answer');
     coreLibrary.onPromptAnswer('myVar3', 2);

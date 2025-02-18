@@ -6,7 +6,14 @@ require_relative '../deployment'
 def main
   dirs = [deploy_dir('lib'), deploy_dir('shared/middleware'), deploy_dir('dashboard/legacy')]
   dirs += [pegasus_dir] if CDO.dashboard_enable_pegasus
-  rerun = "rerun -p '**/*.{rb,ru,yml}' -d '#{dirs.join(',')}' -i '**/migrations/*.rb' -i 'test/**/*.rb' #{ARGV.join(' ')} --"
+  rerun = ['rerun']
+  rerun << "-p '**/*.{rb,ru,yml}'"
+  rerun << "-d '#{dirs.join(',')}'"
+  rerun << "-i '**/migrations/*.rb'"
+  rerun << "-i 'test/**/*.rb'"
+  rerun << "-i '**/public/fonts'"
+  rerun << "#{ARGV.join(' ')} --"
+  rerun = rerun.join(' ')
   pids = []
 
   unless CDO.use_my_apps
@@ -15,8 +22,11 @@ def main
     pids.push spawn("rerun -x -d #{apps_dir}/src --background -n apps-watcher -- rake package:apps")
   end
 
+  thin_args = "-a #{CDO.dashboard_host} -p #{CDO.dashboard_port}"
+  thin_args += " --ssl" if CDO.rack_env == :development && CDO.https_development
+
   Dir.chdir(dashboard_dir) do
-    system "RAILS_ENV=#{CDO.rack_env} bundle exec #{rerun} thin start -a #{CDO.dashboard_host} -p #{CDO.dashboard_port}"
+    system "RAILS_ENV=#{CDO.rack_env} bundle exec #{rerun} thin start #{thin_args}"
   end
 
   pids.each do |pid|

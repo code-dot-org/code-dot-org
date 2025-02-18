@@ -1,6 +1,6 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 
 describe('LessonAgenda', () => {
@@ -17,21 +17,21 @@ describe('LessonAgenda', () => {
               key: 'section-1',
               displayName: 'Making programs',
               duration: 20,
-              scriptLevels: []
+              scriptLevels: [],
             },
             {
               key: 'section-2',
               displayName: '',
               duration: 0,
-              scriptLevels: [{id: 10}]
+              scriptLevels: [{id: 10}],
             },
             {
               key: 'section-3',
               duration: 10,
               displayName: 'Non Programming Progression',
-              scriptLevels: []
-            }
-          ]
+              scriptLevels: [],
+            },
+          ],
         },
         {
           key: 'activity-2',
@@ -42,32 +42,32 @@ describe('LessonAgenda', () => {
               key: 'section-4',
               duration: 0,
               displayName: 'Section 4',
-              scriptLevels: [{id: 11}]
+              scriptLevels: [{id: 11}],
             },
             {
               key: 'section-5',
               duration: 0,
               displayName: '',
-              scriptLevels: []
+              scriptLevels: [],
             },
             {
               key: 'section-6',
               duration: 0,
               displayName: 'Section 6',
-              scriptLevels: []
-            }
-          ]
-        }
-      ]
+              scriptLevels: [],
+            },
+          ],
+        },
+      ],
     };
   });
 
   it('Display correct information for agenda', () => {
     const wrapper = shallow(<LessonAgenda {...defaultProps} />);
 
-    expect(wrapper.text()).to.include('Main Activity (20 minutes)');
-    expect(wrapper.text()).to.include('Making programs');
-    expect(wrapper.text()).to.include('Non Programming Progression');
-    expect(wrapper.text()).to.include('2nd Activity (30 minutes)');
+    expect(wrapper.text()).toContain('Main Activity (20 minutes)');
+    expect(wrapper.text()).toContain('Making programs');
+    expect(wrapper.text()).toContain('Non Programming Progression');
+    expect(wrapper.text()).toContain('2nd Activity (30 minutes)');
   });
 });

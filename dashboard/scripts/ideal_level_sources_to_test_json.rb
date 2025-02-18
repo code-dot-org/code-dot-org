@@ -12,9 +12,9 @@ LEVEL_TYPES_WITH_ILS = %w(Craft Studio Karel Eval Maze Calc Blockly StudioEC Art
 
 def main
   levels_to_test = Level.
-      where(type: LEVEL_TYPES_WITH_ILS).
-      where.not(ideal_level_source_id: nil).
-      all.reject {|level| level.try(:free_play) || !level.is_a?(Blockly) || !level.custom?}
+    where(type: LEVEL_TYPES_WITH_ILS).
+    where.not(ideal_level_source_id: nil).
+    all.reject {|level| level.try(:free_play) || !level.is_a?(Blockly) || !level.custom?}
 
   level_hashes = levels_to_test.map do |level|
     level_hash = {

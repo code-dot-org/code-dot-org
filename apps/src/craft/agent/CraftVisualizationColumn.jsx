@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-var msg = require('@cdo/locale');
 
-var GameButtons = require('../../templates/GameButtons').default;
-import ArrowButtons from '../../templates/ArrowButtons';
-var BelowVisualization = require('../../templates/BelowVisualization');
-import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
-var CraftVisualizationColumn = function(props) {
+import ArrowButtons from '../../templates/ArrowButtons';
+import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
+
+var msg = require('@cdo/locale');
+
+var BelowVisualization = require('../../templates/BelowVisualization');
+var GameButtons = require('../../templates/GameButtons').default;
+
+var CraftVisualizationColumn = function (props) {
   return (
     <span>
       <ProtectedVisualizationDiv>
@@ -38,7 +41,7 @@ var CraftVisualizationColumn = function(props) {
 };
 
 CraftVisualizationColumn.propTypes = {
-  showFinishButton: PropTypes.bool.isRequired
+  showFinishButton: PropTypes.bool.isRequired,
 };
 
 module.exports = CraftVisualizationColumn;

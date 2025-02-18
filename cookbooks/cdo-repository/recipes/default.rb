@@ -46,3 +46,42 @@ git git_path do
   user node[:user]
   group node[:user]
 end
+
+# The staging server requires a special worktree at a hardcoded location in
+# order to successfully run the `deploy_to_levelbuilder` and
+# `merge_lb_to_staging` scripts.
+if node.chef_environment == 'staging'
+  worktree_path = File.join(home_path, 'deploy-management-repo')
+
+  execute 'create worktree for managing deployment scripts' do
+    command "git worktree add #{worktree_path}"
+    cwd git_path
+    user node[:user]
+    group node[:user]
+    not_if {File.exist? worktree_path}
+  end
+end
+
+# Create sparse checkout of staging content directories on production-daemon
+# for the purpose of content seeding.
+if node['cdo-apps']['daemon'] && %w[production].include?(node.chef_environment)
+  worktree_path = File.join(home_path, 'staging')
+
+  execute 'create worktree for managing deployment scripts' do
+    command "git worktree add #{worktree_path}"
+    cwd git_path
+    user node[:user]
+    group node[:user]
+    not_if {File.exist? worktree_path}
+  end
+
+  # TODO: implement a sparse checkout for added assurance that staging code
+  # is not making its way into production.
+
+  # execute 'initiate sparse checkout of staging worktree' do
+  #   command "git sparse-checkout dashboard/config"
+  #   cwd worktree_path
+  #   user node[:user]
+  #   group node[:user]
+  # end
+end

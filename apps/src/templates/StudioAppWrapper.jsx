@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
 import FixZoomHelper from '@cdo/apps/templates/FixZoomHelper';
 import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';
 import RotateContainer from '@cdo/apps/templates/RotateContainer';
-import {connect} from 'react-redux';
 import StudioAppIdleTimer from '@cdo/apps/templates/StudioAppIdleTimer';
 
 /**
@@ -15,7 +16,7 @@ class StudioAppWrapper extends React.Component {
     assetUrl: PropTypes.func.isRequired,
     isEmbedView: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   requiresLandscape() {
@@ -43,5 +44,5 @@ export const UnconnectedStudioAppWrapper = StudioAppWrapper;
 export default connect(state => ({
   assetUrl: state.pageConstants.assetUrl,
   isEmbedView: state.pageConstants.isEmbedView,
-  isShareView: state.pageConstants.isShareView
+  isShareView: state.pageConstants.isShareView,
 }))(StudioAppWrapper);

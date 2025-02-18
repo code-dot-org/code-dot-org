@@ -1,23 +1,24 @@
-import React, {Component} from 'react';
-import i18n from '@cdo/locale';
+import moment from 'moment/moment';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import React, {Component} from 'react';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
+import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
+import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
 import {
   teacherFeedbackShape,
-  rubricShape
+  rubricShape,
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
-import moment from 'moment/moment';
-import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 export class ReadonlyTeacherFeedback extends Component {
   static propTypes = {
     rubric: rubricShape,
     visible: PropTypes.bool.isRequired,
-    latestFeedback: teacherFeedbackShape
+    latestFeedback: teacherFeedbackShape,
   };
 
   getLatestReviewState() {
@@ -87,8 +88,8 @@ const styles = {
   timeStudent: {
     fontStyle: 'italic',
     fontSize: 12,
-    color: color.cyan
-  }
+    color: color.cyan,
+  },
 };
 
 export default ReadonlyTeacherFeedback;

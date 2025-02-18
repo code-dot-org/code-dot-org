@@ -6,3 +6,5 @@ right 'frog'
 wrong 'giraffe'
 wrong 'It\’s impossible to tell from this information.'
 
+
+allow_multiple_attempts true

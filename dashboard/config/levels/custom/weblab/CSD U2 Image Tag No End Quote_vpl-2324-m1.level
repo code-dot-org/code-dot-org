@@ -1,0 +1,39 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2023-08-17T21:28:59.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "start_sources": "{\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h1>Alex turns 14!<\\/h1>\\r\\n    <p>Please join me on July 25th to celebrate my birthday! There will be music, cake, and games. Hope to see you there!<\\/p> \\r\\n    <img src=\\\"Balloons.jpg \\r\\n              alt=\\\"colorful balloons\\\">\\r\\n    <p>Photo by pcst from FreeImages<\\/p>\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    },\r\n{\r\n      \"name\": \"Balloons.jpg\",\r\n      \"url\": \"https://images.code.org/7293d9f2a32b97e55e8f7f278b1b81ed-image-1564083298291.jpg\"\r\n    }\r\n  ]\r\n}",
+    "instructions_important": "false",
+    "long_instructions": "\r\n# Debug: Missing Image\r\n\r\nSomeone has submitted a bug report on this web page. Can you fix the bug?\r\n\r\nWhat I expected to happen | What happened instead\r\n----------|----------\r\nThere is an image of balloons | There is no image\r\n# Do This\r\n1) Find and fix the problem that is causing the bug.",
+    "hide_share_and_remix": "true",
+    "submittable": "false",
+    "encrypted_examples": "f+hIWPaBnvMY22yCfVXG3glllNzell4LZD9GLHNj31BBNDEjuR4TOGICSQ5V\nt7xO17ZFlbkWnUjSeIlutP/2fw==\n",
+    "parent_level_id": 18897,
+    "name_suffix": "_vpl-2324-m1",
+    "reference_links": [
+      "/courses/csd-2022/guides/creative-commons-search",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/style-sheets",
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/images-in-html",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "display_name": "Debug the missing image",
+    "bubble_choice_description": "Use your debugging skills to figure out why the image is not appearing.",
+    "thumbnail_url": "https://images.code.org/21f43e73cace17175ff2815cab98f0dc-image-1564092347166.JPG",
+    "validation_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-17T21:28:59.930+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag No End Quote_2023\\\"\"],\"cloned_from\":\"CSD U2 Image Tag No End Quote_2023\"}]"
+}]]></config>
+</Weblab>

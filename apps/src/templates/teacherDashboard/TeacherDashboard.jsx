@@ -1,34 +1,46 @@
-import React, {useEffect, useRef} from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import {Route, Switch} from 'react-router-dom';
-import TeacherDashboardNavigation, {
-  TeacherDashboardPath
-} from './TeacherDashboardNavigation';
-import TeacherDashboardHeader from './TeacherDashboardHeader';
-import StatsTableWithData from './StatsTableWithData';
-import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
+import React, {useEffect, useRef} from 'react';
+import {Navigate, Route, Routes, useLocation} from 'react-router-dom';
+
+import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
 import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionProjectsListWithData';
-import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
-import EmptySection from './EmptySection';
-import _ from 'lodash';
-import firehoseClient from '../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
+
+import firehoseClient from '../../metrics/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import i18n from '@cdo/locale';
+import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+
+import EmptySectionV1 from './EmptySectionV1';
+import StatsTableWithData from './StatsTableWithData';
+import TeacherDashboardHeader from './TeacherDashboardHeader';
+import TeacherDashboardNavigation, {
+  TEACHER_DASHBOARD_PATHS,
+} from './TeacherDashboardNavigation';
+
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
+
+const applyV1TeacherDashboardWidth = children => {
+  return <div className={dashboardStyles.dashboardPage}>{children}</div>;
+};
 
 function TeacherDashboard({
   studioUrlPrefix,
   sectionId,
   sectionName,
   studentCount,
-  coursesWithProgress,
-  location
+  anyStudentHasProgress,
+  showAITutorTab,
+  sectionProviderName,
 }) {
+  let location = useLocation();
+
   const usePrevious = value => {
     const ref = useRef();
     useEffect(() => {
@@ -44,6 +56,7 @@ function TeacherDashboard({
       if (prevLocation) {
         action(location, prevLocation);
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [prevLocation]);
   };
 
@@ -58,34 +71,35 @@ function TeacherDashboard({
         event: 'click_new_tab',
         data_json: JSON.stringify({
           section_id: sectionId,
-          new_tab: newTab
-        })
+          new_tab: newTab,
+        }),
       },
       {includeUserId: true}
     );
     if (newTab === 'progress') {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-        sectionId: sectionId
+        sectionId: sectionId,
       });
     }
   });
 
-  // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
-  const emptyOrInvalidPath = !Object.values(TeacherDashboardPath).includes(
+  // Select a default tab if current path doesn't match one of the paths in our TEACHER_DASHBOARD_PATHS type.
+  const emptyOrInvalidPath = !Object.values(TEACHER_DASHBOARD_PATHS).includes(
     location.pathname
   );
   if (emptyOrInvalidPath && studentCount === 0) {
     // Default to the Manage Students tab if section has 0 students.
-    location.pathname = TeacherDashboardPath.manageStudents;
+    location.pathname = TEACHER_DASHBOARD_PATHS.manageStudents;
   } else if (emptyOrInvalidPath) {
     // Default to the Progress tab if section otherwise.
-    location.pathname = TeacherDashboardPath.progress;
+    location.pathname = TEACHER_DASHBOARD_PATHS.progress;
   }
 
   // Include header components unless we are on the /login_info or /standards_report page.
   const includeHeader =
-    location.pathname !== TeacherDashboardPath.loginInfo &&
-    location.pathname !== TeacherDashboardPath.standardsReport;
+    location.pathname !== TEACHER_DASHBOARD_PATHS.loginInfo &&
+    location.pathname !== TEACHER_DASHBOARD_PATHS.standardsReport &&
+    location.pathname !== TEACHER_DASHBOARD_PATHS.navTestV2;
 
   return (
     <div>
@@ -96,62 +110,123 @@ function TeacherDashboard({
             components using Connect/Redux. Library we could use to fix issue:
             https://github.com/supasate/connected-react-router */}
           <TeacherDashboardHeader />
-          <TeacherDashboardNavigation />
+          <TeacherDashboardNavigation showAITutorTab={showAITutorTab} />
         </div>
       )}
-      <Switch>
+      <Routes>
         <Route
-          path={TeacherDashboardPath.manageStudents}
-          component={props => (
+          path={TEACHER_DASHBOARD_PATHS.manageStudents}
+          element={applyV1TeacherDashboardWidth(
             <ManageStudents studioUrlPrefix={studioUrlPrefix} />
           )}
         />
         <Route
-          path={TeacherDashboardPath.loginInfo}
-          component={props => (
-            <SectionLoginInfo studioUrlPrefix={studioUrlPrefix} />
+          path={TEACHER_DASHBOARD_PATHS.loginInfo}
+          element={applyV1TeacherDashboardWidth(
+            <SectionLoginInfo
+              studioUrlPrefix={studioUrlPrefix}
+              sectionProviderName={sectionProviderName}
+            />
           )}
         />
         <Route
-          path={TeacherDashboardPath.standardsReport}
-          component={props => <StandardsReport />}
-        />
-        {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
-        {studentCount === 0 && (
-          <Route component={props => <EmptySection sectionId={sectionId} />} />
-        )}
-        <Route
-          path={TeacherDashboardPath.projects}
-          component={props => (
-            <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-          )}
+          path={TEACHER_DASHBOARD_PATHS.standardsReport}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+            />
+          }
         />
         <Route
-          path={TeacherDashboardPath.stats}
-          component={props => <StatsTableWithData />}
+          path={TEACHER_DASHBOARD_PATHS.projects}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              // Don't show no curriculum assigned error for projects tab.
+              hasCurriculumAssigned={true}
+              element={applyV1TeacherDashboardWidth(
+                <SectionProjectsListWithData
+                  studioUrlPrefix={studioUrlPrefix}
+                />
+              )}
+            />
+          }
         />
-        {coursesWithProgress.length === 0 && (
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.stats}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.progress}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={
+                <GlobalEditionWrapper
+                  component={SectionProgressSelector}
+                  componentId="SectionProgressSelector"
+                  props={{
+                    isInV1Navigaton: true,
+                  }}
+                />
+              }
+              showProgressPageHeader={true}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.textResponses}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TextResponses />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.assessments}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )}
+            />
+          }
+        />
+        {showAITutorTab && (
           <Route
-            component={() => (
-              <div style={styles.text}>
-                <SafeMarkdown markdown={i18n.noProgressSection()} />
-              </div>
-            )}
+            path={TEACHER_DASHBOARD_PATHS.aiTutorChatMessages}
+            element={
+              <EmptySectionV1
+                hasStudents={studentCount > 0}
+                hasCurriculumAssigned={anyStudentHasProgress}
+                element={applyV1TeacherDashboardWidth(
+                  <TutorTab sectionId={sectionId} />
+                )}
+              />
+            }
           />
         )}
+        {/* '/roster' is the new URL for '/manage_students' in TeacherNavigationRouter. We should redirect to manage students if a user somehow gets sent `/roster' */}
         <Route
-          path={TeacherDashboardPath.progress}
-          component={props => <SectionProgress />}
+          path="/roster"
+          element={
+            <Navigate to={TEACHER_DASHBOARD_PATHS.manageStudents} replace />
+          }
         />
-        <Route
-          path={TeacherDashboardPath.textResponses}
-          component={props => <TextResponses />}
-        />
-        <Route
-          path={TeacherDashboardPath.assessments}
-          component={props => <SectionAssessments sectionName={sectionName} />}
-        />
-      </Switch>
+      </Routes>
     </div>
   );
 }
@@ -161,18 +236,9 @@ TeacherDashboard.propTypes = {
   sectionId: PropTypes.number.isRequired,
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
-  coursesWithProgress: PropTypes.array.isRequired,
-
-  // Provided by React router in parent.
-  location: PropTypes.object.isRequired
-};
-
-const styles = {
-  text: {
-    fontStyle: 'italic',
-    textAlign: 'center',
-    paddingTop: 10
-  }
+  anyStudentHasProgress: PropTypes.bool.isRequired,
+  showAITutorTab: PropTypes.bool,
+  sectionProviderName: PropTypes.string,
 };
 
 export default TeacherDashboard;

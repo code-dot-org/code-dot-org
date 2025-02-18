@@ -1,17 +1,17 @@
-const studioApp = require('../../StudioApp').singleton;
-
-import ResultsHandler from './resultsHandler';
-import {TestResults} from '../../constants.js';
-const getStore = require('../../redux').getStore;
-
 import experiments from '@cdo/apps/util/experiments';
-import mazeMsg from '../locale';
 
+import {TestResults} from '../../constants.js';
+import mazeMsg from '../locale';
 import {
   setCollectorMinRequired,
   resetCollectorCurrentCollected,
-  setCollectorCurrentCollected
+  setCollectorCurrentCollected,
 } from '../redux';
+
+import ResultsHandler from './resultsHandler';
+
+const getStore = require('../../redux').getStore;
+const studioApp = require('../../StudioApp').singleton;
 
 const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;
@@ -160,13 +160,13 @@ export default class CollectorHandler extends ResultsHandler {
         return mazeMsg.collectorCollectedNotEnough({goal: this.minCollected_});
       case COLLECTED_ENOUGH_BUT_NOT_ALL:
         return mazeMsg.collectorCollectedSome({
-          count: this.getLastTotalCollected()
+          count: this.getLastTotalCollected(),
         });
       case true:
         // Remove this case when we turn the bubble dialog on for everyone
         if (!experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
           return mazeMsg.collectorCollectedEverything({
-            count: this.getPotentialMaxCollected()
+            count: this.getPotentialMaxCollected(),
           });
         } else {
           return super.getMessage(terminationValue);

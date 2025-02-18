@@ -1,17 +1,18 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@cdo/apps/templates/Button';
+import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import color from '@cdo/apps/util/color';
 
 export default class AddDefaultSprite extends React.Component {
   static propTypes = {
-    onAdd: PropTypes.func.isRequired
+    onAdd: PropTypes.func.isRequired,
   };
 
   state = {
     spriteName: '',
     spriteCategory: '',
-    displaySuccess: false
+    displaySuccess: false,
   };
 
   handleNameChange = event => {
@@ -58,20 +59,20 @@ export default class AddDefaultSprite extends React.Component {
         />
         <Button
           text="Add to start"
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           onClick={() => this.handleSpriteAdd(true)}
           size={Button.ButtonSize.narrow}
         />
         <Button
           text="Add to end"
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           onClick={() => this.handleSpriteAdd(false)}
           size={Button.ButtonSize.narrow}
         />
         <i
           style={{
             ...styles.checkmark,
-            visibility: displaySuccess ? 'visible' : 'hidden'
+            visibility: displaySuccess ? 'visible' : 'hidden',
           }}
           className="fa fa-check"
           aria-hidden="true"
@@ -87,10 +88,10 @@ const styles = {
     borderColor: color.dark_slate_gray,
     display: 'flex',
     justifyContent: 'flex-start',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   addSpriteLabel: {
-    padding: 10
+    padding: 10,
   },
   checkmark: {
     color: color.light_green,
@@ -98,6 +99,6 @@ const styles = {
     left: 5,
     lineHeight: '25px',
     position: 'relative',
-    top: 7
-  }
+    top: 7,
+  },
 };

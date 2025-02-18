@@ -1,0 +1,21 @@
+name 'virtual-pl-csd-summer-day1-async20'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pair Programming
+
+<br>
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### **What potential benefits do you see with this strategy? What potential challenges do you see?** 
+
+#### Take a moment to return to your cohort's slide deck and submit an answer to this question on a virtual post-it. Review the responses from other people in your cohort to see their thoughts.
+<br>
+
+![](https://images.code.org/34d6340e45ddec1fcb80f2a584b1c566-image-1684291970624.52.44 PM.png)
+
+<img src="https://images.code.org/ed1c067606ddc55ebe59bcb9af138209-image-1684268171621.png" alt="A clipboard with paper on it and a magnifying glass next to it. This icon is used to signal a resource for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### If you'd like to hear more from CS Discoveries teachers about how they enact pair programming in their classrooms, watch our <a href="https://www.youtube.com/watch?v=L3XJjVG8Fnw" target="blank"> Teacher Tips - Ideas on Pair Programming </a> video.
+MARKDOWN

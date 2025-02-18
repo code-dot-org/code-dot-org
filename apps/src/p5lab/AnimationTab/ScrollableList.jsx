@@ -1,7 +1,8 @@
 /** @file Vertical scrolling list */
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import styles from './scrollable-list.module.scss';
 
 /**
@@ -13,7 +14,7 @@ class ScrollableList extends React.Component {
     className: PropTypes.string,
     style: PropTypes.object,
     children: PropTypes.node,
-    onScroll: PropTypes.func
+    onScroll: PropTypes.func,
   };
 
   render() {

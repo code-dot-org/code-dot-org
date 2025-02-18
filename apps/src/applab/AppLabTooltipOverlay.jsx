@@ -2,12 +2,14 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
+import {ellipsify} from '../utils';
+
+import {ApplabInterfaceMode} from './constants';
 import {getId} from './designElements/elementUtils';
 import {draggedElementDropPoint} from './gridUtils';
-import {connect} from 'react-redux';
-import {ApplabInterfaceMode} from './constants';
-import {ellipsify} from '../utils';
 
 const ELEMENT_ID_TEXT_MAX_CHAR = 12;
 
@@ -20,11 +22,11 @@ export class AppLabTooltipOverlay extends React.Component {
     mouseY: PropTypes.number,
     // Provided by redux
     isInDesignMode: PropTypes.bool.isRequired,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   state = {
-    hoveredControlId: null
+    hoveredControlId: null,
   };
 
   componentDidMount() {
@@ -37,7 +39,7 @@ export class AppLabTooltipOverlay extends React.Component {
 
   onMouseMove = event => {
     this.setState({
-      hoveredControlId: this.getHoveredControlId(event.target)
+      hoveredControlId: this.getHoveredControlId(event.target),
     });
   };
 
@@ -102,7 +104,7 @@ export class AppLabTooltipOverlay extends React.Component {
 }
 export default connect(state => ({
   isRtl: state.isRtl,
-  isInDesignMode: state.interfaceMode === ApplabInterfaceMode.DESIGN
+  isInDesignMode: state.interfaceMode === ApplabInterfaceMode.DESIGN,
 }))(AppLabTooltipOverlay);
 
 /**

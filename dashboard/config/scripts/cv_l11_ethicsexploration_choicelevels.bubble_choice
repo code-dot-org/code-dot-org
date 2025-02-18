@@ -1,0 +1,17 @@
+name 'CV_L11_EthicsExploration_ChoiceLevels'
+display_name 'Ethics Exploration'
+description 'Choose one of the Computer Vision technologies (facial recognition, autonomous vehicles, or health and medicine) and select ONE source option for that technology from the options below:'
+
+sublevels
+level 'CV_L11_FacialRecSource1_Link'
+level 'CV_L11_FacialRecSource2_Link'
+level 'CV_L11_FacialRecSource3_Link'
+level 'CV_L11_FacialRecSource4_Link'
+level 'CV_L11_AutonVehSource1_Link'
+level 'CV_L11_AutonVehSource2_Link'
+level 'CV_L11_AutonVehSource3_Link'
+level 'CV_L11_AutonVehSource4_Link'
+level 'CV_L11_HealthMedSource1_Link'
+level 'CV_L11_HealthMedSource2_Link'
+level 'CV_L11_HealthMedSource3_Link'
+level 'CV_L11_HealthMedSource4_Link'

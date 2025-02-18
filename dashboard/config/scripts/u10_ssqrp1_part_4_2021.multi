@@ -13,3 +13,5 @@ wrong 'A popular, large grocery store.'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

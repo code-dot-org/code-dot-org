@@ -4,7 +4,6 @@ free_play_level_urls = {
     'Dance Party' => 'http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true&no_redirect=true',
     'Artist' => 'http://studio.code.org/s/20-hour/lessons/5/levels/10?noautoplay=true&no_redirect=true',
     'Bounce' => 'http://studio.code.org/s/course3/lessons/15/levels/10?noautoplay=true&no_redirect=true',
-    'CS in Algebra' => 'http://studio.code.org/s/algebra/lessons/1/levels/2?noautoplay=true&no_redirect=true',
     'Flappy' => 'http://studio.code.org/flappy/10?noautoplay=true&no_redirect=true',
     'Sprite Lab' => 'http://studio.code.org/s/coursee-2019/lessons/9/levels/6?noautoplay=true&no_redirect=true'
   },
@@ -23,7 +22,7 @@ free_play_level_urls = {
 When /^I check that the (blockly|droplet|minecraft) free play level for "([^"]*)" shows the finish button for (small|mobile) screens/i do |level_type, level_name, screen_type|
   individual_steps <<-STEPS
     And I set up the #{level_type} free play level for "#{level_name}"
-    #{screen_type == 'small' ? 'And I change the browser window size to 1366 by 636' : ''}
+    #{screen_type == 'small' ? 'And I change the browser window size to 1366 by 727' : ''}
     #{level_type == 'minecraft' ? 'And I wait until the Minecraft game is loaded' : ''}
     And I press "runButton"
     And I check that selector "button:contains('Finish')" is in the viewport
@@ -33,8 +32,7 @@ end
 When /^I set up the (blockly|droplet|minecraft) free play level for "([^"]*)"/i do |level_type, level_name|
   individual_steps <<-STEPS
     And I am on "#{free_play_level_urls[level_type][level_name]}"
-    And I rotate to landscape
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I bypass the age dialog
     And I close the instructions overlay if it exists
   STEPS

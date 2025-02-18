@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Bounce < Grid
@@ -52,7 +53,7 @@ class Bounce < Grid
     # the bounce and basketball skins can only have retro or basketball themes
     sport_theme_non_sport_skin = (
       %(bounce basketball).include?(skin) &&
-      !%(retro basketball).include?(theme)
+      %(retro basketball).exclude?(theme)
     )
 
     errors.add(:theme, "#{skin} skin and #{theme} theme are incompatible") if
@@ -94,8 +95,12 @@ class Bounce < Grid
     {'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell['tileType'])}}.to_json}
   end
 
-  def uses_google_blockly?
-    true
+  def project_type
+    if skin == 'sports' || skin == 'basketball'
+      skin
+    else
+      'bounce'
+    end
   end
 
   def toolbox(type)

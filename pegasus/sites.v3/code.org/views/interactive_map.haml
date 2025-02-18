@@ -1,10 +1,10 @@
 - require 'state_abbr'
 
 - advocacy_variation ||= false
-- fill_color = '#0094a3'
-- stroke_color = 'white'
-- hover_color = '#59cad3'
-- click_color = '#ffa400'
+- fill_color ||= '#0094a3'
+- stroke_color ||= 'white'
+- hover_color ||= '#59cad3'
+- click_color ||= '#ffa400'
 
 #state-list.phone-feature
   - if advocacy_variation
@@ -40,9 +40,8 @@
     Computer science students graduated into the workforce last year
 
     .summary-button
-      %a{href: 'https://code.org/advocacy/landscape.pdf', target: '_blank'}
-        %button
-          See a summary of state efforts
+      %a.link-button{href: 'https://advocacy.code.org/stateofcs/', target: '_blank'}
+        See a summary of state efforts
 
   %p#sources
     %span

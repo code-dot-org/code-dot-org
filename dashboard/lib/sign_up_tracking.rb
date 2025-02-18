@@ -45,98 +45,161 @@ module SignUpTracking
     DCDO.get('sign_up_split_test', 0)
   end
 
-  def self.log_load_sign_up(session)
-    event_name = new_sign_up_experience?(session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
+  def self.log_load_sign_up(request)
+    this_session = request.session
+    event_name = new_sign_up_experience?(this_session) ? 'load-new-sign-up-page' : 'load-sign-up-page'
     FirehoseClient.instance.put_record(
       :analysis,
       {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
         event: event_name,
-        data_string: session[:sign_up_uid]
+        data_string: this_session[:sign_up_uid]
       }
     )
+
+    Metrics::Events.log_event(
+      request: request,
+      event_name: event_name,
+      metadata: {
+        study: STUDY_NAME,
+        study_group: study_group(this_session),
+      },
+      )
   end
 
-  def self.log_begin_sign_up(user, session)
-    return unless user && session
+  def self.log_begin_sign_up(user, request)
+    return unless user && request
+    this_session = request.session
     result = user.errors.empty? ? 'success' : 'error'
     tracking_data = {
       study: STUDY_NAME,
-      study_group: study_group(session),
+      study_group: study_group(this_session),
       event: "begin-sign-up-#{result}",
-      data_string: session[:sign_up_uid],
+      data_string: this_session[:sign_up_uid],
       data_json: {
         errors: user.errors&.full_messages
       }.to_json
     }
     FirehoseClient.instance.put_record(:analysis, tracking_data)
+
+    Metrics::Events.log_event(
+      request: request,
+      event_name: "begin-sign-up-#{result}",
+      metadata: {
+        study: STUDY_NAME,
+        study_group: study_group(this_session),
+      },
+      )
   end
 
-  def self.log_load_finish_sign_up(session, provider)
+  def self.log_load_finish_sign_up(request, provider)
+    this_session = request.session
     FirehoseClient.instance.put_record(
       :analysis,
       {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
         event: "#{provider}-load-finish-sign-up-page",
-        data_string: session[:sign_up_uid]
+        data_string: this_session[:sign_up_uid]
       }
     )
+
+    Metrics::Events.log_event(
+      request: request,
+      event_name: "#{provider}-load-finish-sign-up",
+      metadata: {
+        study: STUDY_NAME,
+        study_group: study_group(this_session),
+      },
+      )
   end
 
-  def self.log_cancel_finish_sign_up(session, provider)
+  def self.log_cancel_finish_sign_up(request, provider)
+    this_session = request.session
     FirehoseClient.instance.put_record(
       :analysis,
       {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
         event: "#{provider}-cancel-finish-sign-up",
-        data_string: session[:sign_up_uid]
+        data_string: this_session[:sign_up_uid]
       }
     )
+
+    Metrics::Events.log_event(
+      request: request,
+      event_name: "#{provider}-cancel-finish-sign-up",
+      metadata: {
+        study: STUDY_NAME,
+        study_group: study_group(this_session),
+      },
+      )
   end
 
-  def self.log_oauth_callback(provider, session)
-    return unless provider && session
-    if session[:sign_up_tracking_expiration]&.future?
+  def self.log_oauth_callback(provider, request)
+    return unless provider && request
+    this_session = request.session
+    event_name = this_session[:sign_up_tracking_expiration]&.future? ? "#{provider}-signup-callback" : "#{provider}-callback"
+
+    if this_session[:sign_up_tracking_expiration]&.future?
       FirehoseClient.instance.put_record(
         :analysis,
         {
           study: STUDY_NAME,
-          study_group: study_group(session),
+          study_group: study_group(this_session),
           event: "#{provider}-callback",
-          data_string: session[:sign_up_uid]
+          data_string: this_session[:sign_up_uid]
         }
       )
     end
+
+    Metrics::Events.log_event(
+      request: request,
+      event_name: event_name,
+      metadata: {
+        study: STUDY_NAME,
+        study_group: study_group(this_session),
+      },
+      )
   end
 
-  def self.log_sign_in(user, session, request)
-    return unless user && session && request
+  def self.log_sign_in(user, request)
+    return unless user && request
+    this_session = request.session
     provider = request.env['omniauth.auth'].provider.to_s
-    if session[:sign_up_tracking_expiration]&.future?
+    if this_session[:sign_up_tracking_expiration]&.future?
       tracking_data = {
         study: STUDY_NAME,
-        study_group: study_group(session),
+        study_group: study_group(this_session),
         event: "#{provider}-sign-in",
-        data_string: session[:sign_up_uid]
+        data_string: this_session[:sign_up_uid]
       }
       FirehoseClient.instance.put_record(:analysis, tracking_data)
+
+      Metrics::Events.log_event(
+        request: request,
+        event_name: "#{provider}-sign-in",
+        metadata: {
+          study: STUDY_NAME,
+          study_group: study_group(this_session),
+        },
+        )
     end
-    end_sign_up_tracking session
+    end_sign_up_tracking this_session
   end
 
-  def self.log_sign_up_result(user, session)
-    return unless user && session
-    sign_up_type = session[:sign_up_type]
+  def self.log_sign_up_result(user, request)
+    return unless user && request
+    this_session = request.session
+    sign_up_type = this_session[:sign_up_type]
     sign_up_type ||= user.email ? 'email' : 'other'
     result = user.persisted? ? 'success' : 'error'
     tracking_data = {
       study: STUDY_NAME,
-      study_group: study_group(session),
+      study_group: study_group(this_session),
       event: "#{sign_up_type}-sign-up-#{result}",
-      data_string: session[:sign_up_uid],
+      data_string: this_session[:sign_up_uid],
       data_json: {
         detail: user.slice(*USER_ATTRIBUTES_OF_INTEREST),
         errors: user.errors&.full_messages
@@ -144,59 +207,15 @@ module SignUpTracking
     }
     FirehoseClient.instance.put_record(:analysis, tracking_data)
 
-    end_sign_up_tracking session if user.persisted?
-  end
+    Metrics::Events.log_event(
+      request: request,
+      event_name: "#{sign_up_type}-sign-up-#{result}",
+      metadata: {
+        study: STUDY_NAME,
+        study_group: study_group(this_session),
+      },
+      )
 
-  # @param flow [String] The account signup flow the user is starting e.g. "email_signup",
-  # "section_signup"
-  def self.log_gender_input_type_started(session, gender_input_type, locale, flow)
-    # We don't need new tracking events if they user has already started the flow recently.
-    return if session[:gender_input_flow] == flow && session[:gender_input_uid_expiration]&.future?
-    # Identifier for tracking events for a single user.
-    session[:gender_input_uid] = SecureRandom.uuid.to_s
-    session[:gender_input_uid_expiration] = 30.minutes.from_now
-    session[:gender_input_flow] = flow
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'gender-input-type',
-        study_group: 'v2',
-        event: 'input_seen',
-        data_string: session[:gender_input_uid],
-        data_json: {
-          input_type: gender_input_type,
-          locale: locale,
-          flow: flow
-        }.to_json
-      }
-    )
-  end
-
-  def self.log_gender_input_type_account_created(session, gender, gender_input_type, locale, flow, user)
-    # Limit the gender to 100 characters, this should be sufficient for all languages.
-    gender = gender&.truncate(100, omission: '')
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'gender-input-type',
-        study_group: 'v2',
-        event: 'account_created',
-        data_string: session[:gender_input_uid],
-        data_json: {
-          input_type: gender_input_type,
-          gender: gender,
-          locale: locale,
-          flow: flow,
-          user_type: user&.user_type,
-          age: user&.age,
-          user_id: user&.id
-        }.to_json
-      }
-    )
-    # This is the last event for creating an account, so delete the tracking information.
-    session.delete(:gender_input_uid)
-    session.delete(:gender_input_uid_expiration)
-    session.delete(:gender_input_type)
-    session.delete(:gender_input_flow)
+    end_sign_up_tracking this_session if user.persisted?
   end
 end

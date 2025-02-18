@@ -10,13 +10,29 @@ class Projects
   class NotFound < Sinatra::NotFound
   end
 
+  class ValidationError < StandardError
+  end
+
+  class PublishError < StandardError
+  end
+
   def initialize(storage_id)
     @storage_id = storage_id
 
     @table = Projects.table
   end
 
-  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true)
+  #### NOTE: This references the Rails model (Project, singular)
+  #### rather than this middleware class (Projects, plural)
+  #### such that we can make use of model associations managed by Rails.
+  def get_rails_project(project_id)
+    Project.find(project_id)
+  end
+
+  def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
+    validate_thumbnail_url(nil, value['thumbnailUrl'])
+
+    project_type = type || level&.project_type
     timestamp = DateTime.now
     row = {
       storage_id: @storage_id,
@@ -25,7 +41,7 @@ class Projects
       updated_at: timestamp,
       updated_ip: ip,
       abuse_score: 0,
-      project_type: type,
+      project_type: project_type,
       published_at: published_at,
       remix_parent_id: remix_parent_id,
       skip_content_moderation: false,
@@ -93,6 +109,8 @@ class Projects
       raise ProfanityPrivacyError.new(share_failure.content) if share_failure
     end
 
+    validate_thumbnail_url(channel_id, value['thumbnailUrl'])
+
     row = {
       value: value.to_json,
       updated_at: DateTime.now,
@@ -113,8 +131,15 @@ class Projects
       project_type: type,
       published_at: DateTime.now,
     }
-    update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
-    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+
+    project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
+    raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
+
+    rails_project = get_rails_project(project_id)
+    raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
+    raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
+
+    project_query_result.update(row)
 
     project = @table.where(id: project_id).first
     Projects.get_published_project_data(project, channel_id).merge(
@@ -229,13 +254,23 @@ class Projects
     return true
   end
 
-  def increment_abuse(channel_id, amount = 10)
+  def increment_abuse(channel_id, amount, override_frozen = false)
     _owner, project_id = storage_decrypt_channel_id(channel_id)
 
     row = @table.where(id: project_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
+    # If the project is frozen then it is an active featured project or a curriculum exemplar.
+    # Do not update the abuse score of a frozen project unless override_frozen is true.
+    # This flag is set to true if the current_user is a project validator or if the project's
+    # thumbnail image was flagged by image moderation.
+    increment_amount =
+      if JSON.parse(row[:value])['frozen'] && !override_frozen
+        0
+      else
+        amount
+      end
 
-    new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
+    new_score = row[:abuse_score] + increment_amount
 
     update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
@@ -253,15 +288,6 @@ class Projects
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     0
-  end
-
-  def buffer_abuse_score(channel_id)
-    buffered_abuse_score = -50
-    # Reset to 0 first so projects that are featured,
-    # unfeatured, then re-featured don't have super low
-    # abuse scores.
-    reset_abuse(channel_id)
-    increment_abuse(channel_id, buffered_abuse_score)
   end
 
   def content_moderation_disabled?(channel_id)
@@ -294,7 +320,7 @@ class Projects
   end
 
   def to_a
-    @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |row|
+    @table.where(storage_id: @storage_id).exclude(state: 'deleted').filter_map do |row|
       channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])
       begin
         Projects.merged_row_value(
@@ -305,19 +331,26 @@ class Projects
       rescue JSON::ParserError
         nil
       end
-    end.compact
+    end
   end
 
-  # Find the encrypted channel token for most recent project of the given type.
-  def most_recent(key)
+  # Find the encrypted channel token for most recent project of the given level type.
+  def most_recent(key, include_hidden = false)
     row = @table.where(storage_id: @storage_id).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).find do |i|
       parsed = JSON.parse(i[:value])
-      !parsed['hidden'] && !parsed['frozen'] && parsed['level'].split('/').last == key
+      (include_hidden || !parsed['hidden']) && !parsed['frozen'] && parsed['level'].split('/').last == key
     rescue
       # Malformed channel, or missing level.
     end
 
     storage_encrypt_channel_id(row[:storage_id], row[:id]) if row
+  end
+
+  # Find the encrypted channel token for most recent project of the given project_type.
+  def most_recent_project_type(type)
+    row = @table.where(storage_id: @storage_id, project_type: type).exclude(state: 'deleted').order(Sequel.desc(:updated_at)).first
+    return nil unless row
+    JSON.parse(row[:value])['id']
   end
 
   # Returns the row value with 'id' and 'isOwner' merged from input params, and
@@ -332,6 +365,7 @@ class Projects
         updatedAt: row[:updated_at],
         publishedAt: row[:published_at],
         projectType: row[:project_type],
+        frozen: JSON.parse(row[:value])['frozen'],
       }
     )
   end
@@ -411,8 +445,6 @@ class Projects
     return project_src.in_restricted_share_mode?
   end
 
-  private
-
   #
   # Discovering a channel's project type is a real mess.  We don't usually
   # need to do this because the project type is usually part of the URL,
@@ -423,7 +455,7 @@ class Projects
   # @returns [String] The discovered project type, or 'unknown' if the type
   #   can't be determined with given information.
   #
-  def project_type_from_merged_row(row)
+  private def project_type_from_merged_row(row)
     # We can derive channel project type from a few places.
     #
     # 1. The `project_type` column in the projects table.
@@ -448,5 +480,22 @@ class Projects
     # Others have no content on S3, and may be just-created stub projects.
     # Report these as 'unknown'.
     'unknown'
+  end
+
+  private def validate_thumbnail_url(channel_id, thumbnail_url)
+    return true unless thumbnail_url
+    raise ValidationError unless valid_thumbnail_url?(thumbnail_url)
+    true
+  end
+
+  # valid thumbnail URLs are typically of the format:
+  # /v3/files/<channel_id>/.metadata/thumbnail.png
+  # I observed thumbnail URLs of remixed projects having having the channel ID of the parent project,
+  # so we assert on the start/end of the URL.
+  # We also use placeholder thumbnail images in a couple of labs (dance, flappy),
+  # so accepting those as valid as well
+  private def valid_thumbnail_url?(thumbnail_url)
+    (thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')) ||
+      thumbnail_url.start_with?('/blockly/media')
   end
 end

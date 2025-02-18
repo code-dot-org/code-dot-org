@@ -1,0 +1,9 @@
+name 'CSA-UserInput-L4_pilot-2025'
+display_name 'Practice: Working with Text Files'
+description 'Use what you learned about the `Scanner` and `File` class to read and process data from a text file.'
+
+sublevels
+level 'CSA U2L5-L4a_pilot-2025'
+level 'CSA U2L5-L4b_pilot-2025'
+level 'CSA U2L5-L4c_pilot-2025'
+level 'CSA U2L5-L4d_pilot-2025'

@@ -1,0 +1,11 @@
+name 'CSA-CV-L3-Survey-Q01'
+
+question 'How well did this lesson assist your understanding of utilizing GitHub Copilot to incorporate a computer vision model into an existing Java program?'
+
+right 'Not at all: I do not feel that the lesson helped me understand how to utilize GitHub Copilot to incorporate a computer vision model into an existing Java program.'
+right 'Somewhat: The lesson provided a basic understanding, but I\'m still unsure about how to incorporate a computer vision model using GitHub Copilot.'
+right 'Moderately: The lesson was moderately helpful, and I now have a fair understanding, though I would still need further clarification on some aspects.'
+right 'Quite Well: I learned a lot from the lesson, feel quite confident about most aspects, but there are still a few areas I\'d like to explore further.'
+right 'Extremely Well: The lesson was very effective, and I am now fully confident about using GitHub Copilot to incorporate a computer vision model into an existing Java program.'
+
+allow_multiple_attempts false

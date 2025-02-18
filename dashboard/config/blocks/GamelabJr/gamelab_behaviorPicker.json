@@ -1,0 +1,17 @@
+{
+  "category": "Behaviors",
+  "config": {
+    "name": "behaviorPicker",
+    "blockText": "{BEHAVIOR}",
+    "returnType": "Behavior",
+    "expression": "VALUE",
+    "docFunc": "spritelab_adding-and-removing-behaviors",
+    "style": "behavior_blocks",
+    "args": [
+      {
+        "name": "BEHAVIOR",
+        "customInput": "behaviorPicker"
+      }
+    ]
+  }
+}

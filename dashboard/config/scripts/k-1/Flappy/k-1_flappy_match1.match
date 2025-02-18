@@ -11,3 +11,4 @@ answer '/script_assets/k_1_images/flappy_images/end.png'
 
 question '/script_assets/k_1_images/flappy_images/pass_obstacle.png'
 answer '/script_assets/k_1_images/flappy_images/score.png'
+allow_multiple_attempts true

@@ -1,0 +1,28 @@
+name 'VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2_-csd_CSD-PL-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching Web Development 
+
+#### Welcome! This professional learning module is designed help you prepare to teach Code.org's Web Development unit. 
+
+<img src="https://images.code.org/ae6e31d8e69e19574391f6383909d33a-image-1647895577237.45.59 PM.png" alt="A snippet of HTML that shows header files." style="border-radius:40px; float: right; padding-right: 10px; height: 275px; clear: both; margin: 20px 20px 0px 20px;">
+
+## **Take the Pre-Survey**
+
+#### Code.org values and is responsive to feedback. Please fill out this short pre-survey to  tell us about who you are and how we can best support you.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
+<br><br>
+
+### **In this module, you will:**
+
+* #### Get an introduction to Web Development.
+* #### Practice key concepts included in the unit.
+* #### Engage with Web Lab.
+* #### Explore end-of-chapter projects.
+<br>
+
+#### **Suggested time:** 90 minutes
+MARKDOWN

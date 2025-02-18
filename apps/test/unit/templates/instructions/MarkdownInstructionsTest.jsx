@@ -1,13 +1,14 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {setExternalGlobals} from '../../../util/testUtils';
+
 import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
-describe('MarkdownInstructions', function() {
-  before(setExternalGlobals);
+import {setExternalGlobals} from '../../../util/testUtils';
 
-  it('standard case had top padding and no left margin', function() {
+describe('MarkdownInstructions', function () {
+  setExternalGlobals();
+
+  it('standard case had top padding and no left margin', function () {
     const wrapper = shallow(
       <MarkdownInstructions
         markdown="md"
@@ -18,15 +19,15 @@ describe('MarkdownInstructions', function() {
     );
 
     const containerElement = wrapper.find('.instructions-markdown').first();
-    expect(containerElement.props().style.paddingTop).to.equal(19);
-    expect(containerElement.props().style.marginBottom).to.equal(35);
-    expect(containerElement.props().style.marginLeft).to.equal(undefined);
+    expect(containerElement.props().style.paddingTop).toBe(19);
+    expect(containerElement.props().style.marginBottom).toBe(35);
+    expect(containerElement.props().style.marginLeft).toBeUndefined();
 
     const markdownElement = wrapper.find('EnhancedSafeMarkdown').first();
-    expect(markdownElement.props().markdown).to.equal('md');
+    expect(markdownElement.props().markdown).toBe('md');
   });
 
-  it('inTopPane has no top padding', function() {
+  it('inTopPane has no top padding', function () {
     const wrapper = shallow(
       <MarkdownInstructions
         markdown="md"
@@ -35,6 +36,6 @@ describe('MarkdownInstructions', function() {
       />
     );
     const element = wrapper.find('.instructions-markdown').first();
-    expect(element.props().style.paddingTop).to.equal(0);
+    expect(element.props().style.paddingTop).toBe(0);
   });
 });

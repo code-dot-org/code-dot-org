@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {sources as sourcesApi} from '../clientApi';
+
 import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import * as utils from '../utils';
-import i18n from '@cdo/locale';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {sources as sourcesApi} from '../clientApi';
+import * as utils from '../utils';
 
 const DEFAULT_FILE_NAME = 'main.json';
 
@@ -19,7 +21,7 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
     handleClearPuzzle: PropTypes.func.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
-    isOpen: PropTypes.bool.isRequired
+    isOpen: PropTypes.bool.isRequired,
   };
 
   /**
@@ -44,7 +46,7 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
       statusMessage: '',
       showSpinner: true,
       confirmingClearPuzzle: false,
-      isOpen: true
+      isOpen: true,
     };
 
     sourcesApi.ajax(
@@ -117,8 +119,8 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
           currentUrl: window.location.href,
           shareUrl: project.getShareUrl(),
           isProjectTemplateLevel: this.props.isProjectTemplateLevel,
-          currentSourceVersionId: project.getCurrentSourceVersionId()
-        })
+          currentSourceVersionId: project.getCurrentSourceVersionId(),
+        }),
       },
       {includeUserId: true}
     );
@@ -143,7 +145,7 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
         <div
           style={{
             ...{margin: '1em 0', textAlign: 'center'},
-            ...styles.defaultBody
+            ...styles.defaultBody,
           }}
         >
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
@@ -175,7 +177,7 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
           onClick={this.onCancelClearPuzzle}
           color={Button.ButtonColor.gray}
           text={i18n.versionHistory_clearProgress_cancel()}
-        />
+        />,
       ];
     } else {
       title = i18n.versionHistory_header();
@@ -274,7 +276,7 @@ function VersionWithCommit(props) {
         onClick={props.onChoose}
         text={i18n.restore()}
         color={Button.ButtonColor.teal}
-      />
+      />,
     ];
   }
 
@@ -291,7 +293,7 @@ function VersionWithCommit(props) {
           }
         >
           {label({
-            timestamp: getLastModifiedTimestamp(props.lastModified)
+            timestamp: getLastModifiedTimestamp(props.lastModified),
           })}
         </p>
         {props.comment && <p style={styles.comment}>{props.comment}</p>}
@@ -309,25 +311,25 @@ VersionWithCommit.propTypes = {
   isLatest: PropTypes.bool,
   comment: PropTypes.string,
   onChoose: PropTypes.func,
-  rowColor: PropTypes.string
+  rowColor: PropTypes.string,
 };
 
 const styles = {
   label: {
     margin: '10px 0 10px 10px',
     fontSize: 14,
-    color: color.charcoal
+    color: color.charcoal,
   },
   comment: {
     margin: '0 0 10px 10px',
     fontStyle: 'italic',
     fontSize: 14,
-    color: color.charcoal
+    color: color.charcoal,
   },
   versionHistoryBody: {
     overflowY: 'auto',
     maxHeight: 300,
-    margin: '1em 0'
+    margin: '1em 0',
   },
-  defaultBody: {color: color.charcoal}
+  defaultBody: {color: color.charcoal},
 };

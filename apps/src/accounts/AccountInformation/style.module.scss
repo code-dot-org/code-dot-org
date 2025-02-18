@@ -1,0 +1,17 @@
+@import '@cdo/apps/componentLibrary/common/styles/primitiveColors.css';
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
+
+.accountForm {
+  label {
+    &.emailInput {
+      margin-bottom: 0.5rem;
+    }
+
+    &.verifiedTeacher {
+      font-weight: bold;
+      color: var(--sentiment-success-50);
+      margin: 0;
+    }
+  }
+}

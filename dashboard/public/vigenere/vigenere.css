@@ -1,3 +1,80 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5837d28352e2314d6e72df00ee9ef2d38d1d5a26e7999fdd26ffd31d6f9f4a3f
-size 1408
+.vigenere textarea, .vigenere input, .vigenere .textarea {
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.vigenere .btn-group .btn {
+  margin-right: 0;
+}
+
+.vigenere #left-column fieldset {
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+
+.vigenere #inputs {
+  margin-top: -10px;
+}
+
+.vigenere .legend {
+  border-bottom: 1px solid #5b6770;
+}
+
+.vigenere form {
+  margin-bottom: 0;
+}
+
+.vigenere p.textarea {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  border: 1px solid black;
+  padding: 4px 6px;
+  background-color: #e7e8ea;
+  color: black;
+}
+
+.vigenere #keyword-display mark, .vigenere .highlight.key {
+  background-color: #59b9dc;
+}
+.vigenere #input-display mark, .vigenere .highlight.plaintext {
+  background-color: #ffc459;
+}
+.vigenere #output-display mark, .vigenere .highlight.ciphertext {
+  background-color: #d1d567;
+}
+
+.vigenere td.highlight {
+  background-color: #AAAAFF;
+}
+
+.vigenere input[type=range] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.vigenere table{
+  height: 560px;
+  max-width: 560px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+.vigenere th, .vigenere td {
+  text-align: center;
+  vertical-align: middle;
+  font-family: monospace;
+  font-size: 12px;
+  padding: 0px;
+}
+
+.vigenere th {
+  color: black;
+  background-color: #949ca2;
+  font-weight: bold;
+}
+.vigenere td {
+  border: solid 1px #FFFFFF;
+  background-color: #e7e8ea;
+}

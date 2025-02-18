@@ -1,13 +1,14 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
+
+import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
 import StylizedBaseDialog, {
-  FooterButton
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+  FooterButton,
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import ExampleImage from '@cdo/apps/templates/instructions/ExampleImage';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
-import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
+import i18n from '@cdo/locale';
 
 export function InstructionsDialog(props) {
   function body() {
@@ -56,7 +57,7 @@ InstructionsDialog.propTypes = {
   imgUrl: PropTypes.string,
   instructions: PropTypes.string,
   isBlockly: PropTypes.bool,
-  handleClose: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
 };
 
 export default connect(
@@ -67,19 +68,19 @@ export default connect(
     instructions:
       state.instructions.longInstructions ||
       state.instructions.shortInstructions,
-    isBlockly: state.pageConstants.isBlockly
+    isBlockly: state.pageConstants.isBlockly,
   }),
   dispatch => ({
-    handleClose: () => dispatch(closeDialog())
+    handleClose: () => dispatch(closeDialog()),
   })
 )(InstructionsDialog);
 
 const styles = {
   title: {
-    fontSize: 24
+    fontSize: 24,
   },
   imgContainer: {
     display: 'flex',
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 };

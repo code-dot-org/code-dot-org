@@ -1,29 +1,42 @@
 /* eslint-disable react/no-danger */
-import React from 'react';
 import PropTypes from 'prop-types';
-
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import * as applabConstants from './constants';
-import Dialog, {Body, Buttons, Confirm, Cancel} from '../templates/Dialog';
+
 import AssetThumbnail, {
-  styles as assetThumbnailStyles
+  styles as assetThumbnailStyles,
 } from '../code-studio/components/AssetThumbnail';
+import Dialog, {
+  Body,
+  Buttons,
+  Confirm,
+  Cancel,
+} from '../legacySharedComponents/Dialog';
+import Sounds from '../Sounds';
 import MultiCheckboxSelector, {
-  styles as multiCheckboxStyles
+  styles as multiCheckboxStyles,
 } from '../templates/MultiCheckboxSelector';
 import color from '../util/color';
-import {toggleImportScreen, importIntoProject} from './redux/screens';
+
+import * as applabConstants from './constants';
 import {
   importableAssetShape,
   importableScreenShape,
-  importableProjectShape
+  importableProjectShape,
 } from './import';
-import Sounds from '../Sounds';
+import {toggleImportScreen, importIntoProject} from './redux/screens';
 
 const SCALE = 0.1;
 const MARGIN = 10;
 const ICON_HEIGHT = applabConstants.APP_HEIGHT * SCALE;
+
+export const IMPORT_FAILURE_MESSAGE = `
+  Cannot import the following screens because their IDs or
+  contained design element IDs are already used in your existing
+  project. Fix the IDs in either project so they aren't
+  duplicated between the two projects before trying to import the following.
+`;
 
 // TODO: possibly refactor AssetRow to make it work here instead of
 // or with this component
@@ -31,7 +44,7 @@ class AssetListItemUnwrapped extends React.Component {
   static propTypes = {
     asset: importableAssetShape,
     projectId: PropTypes.string,
-    soundPlayer: PropTypes.object
+    soundPlayer: PropTypes.object,
   };
 
   render() {
@@ -67,7 +80,7 @@ function quotedCommaJoin(strings) {
 
 class ScreenListItemUnwrapped extends React.Component {
   static propTypes = {
-    screen: importableScreenShape
+    screen: importableScreenShape,
   };
 
   render() {
@@ -76,7 +89,7 @@ class ScreenListItemUnwrapped extends React.Component {
       <div
         style={[
           styles.screenListItem,
-          !screen.canBeImported && styles.disabledScreenListItem
+          !screen.canBeImported && styles.disabledScreenListItem,
         ]}
       >
         <div style={styles.miniScreenWrapper}>
@@ -101,7 +114,7 @@ class ScreenListItemUnwrapped extends React.Component {
             )}
           {screen.conflictingIds.length > 0 && (
             <p style={styles.warning}>
-              Uses existing element IDs:{' '}
+              Uses existing element or screen IDs:{' '}
               {quotedCommaJoin(screen.conflictingIds)}.
             </p>
           )}
@@ -117,14 +130,14 @@ export class ImportScreensDialog extends React.Component {
     ...Dialog.propTypes,
     project: importableProjectShape,
     onImport: PropTypes.func.isRequired,
-    isImporting: PropTypes.bool
+    isImporting: PropTypes.bool,
   };
 
   static defaultProps = {isImporting: false};
 
   state = {
     selectedScreens: [],
-    selectedAssets: []
+    selectedAssets: [],
   };
 
   componentDidMount() {
@@ -206,13 +219,7 @@ export class ImportScreensDialog extends React.Component {
             {nonImportableScreens.length > 0 && (
               <div style={styles.section}>
                 <h2 style={multiCheckboxStyles.header}>Cannot Import</h2>
-                <p style={styles.subtext}>
-                  Cannot import the following screens because they contain
-                  design elements with IDs already used in your existing
-                  project. Fix the IDs in either project so they aren't
-                  duplicated across different screens before trying to import
-                  the following.
-                </p>
+                <p style={styles.subtext}>{IMPORT_FAILURE_MESSAGE}</p>
                 <ul style={multiCheckboxStyles.list}>
                   {nonImportableScreens.map(screen => (
                     <li key={screen.id} style={multiCheckboxStyles.listItem}>
@@ -233,41 +240,41 @@ export class ImportScreensDialog extends React.Component {
 // TODO: ditch color and fontSize in favor of more unified style components when they exist.
 const styles = {
   section: {
-    marginTop: MARGIN * 2
+    marginTop: MARGIN * 2,
   },
   warning: {
     color: color.red,
     fontSize: 'smaller',
-    margin: 0
+    margin: 0,
   },
   subtext: {
-    color: color.black
+    color: color.black,
   },
   screenListItem: {
     display: 'flex',
     alignItems: 'center',
-    color: color.black
+    color: color.black,
   },
   disabledScreenListItem: {
-    color: color.light_gray
+    color: color.light_gray,
   },
   assetListItem: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   assetThumbnail: {
     margin: 0,
     height: ICON_HEIGHT,
     width: ICON_HEIGHT,
-    color: color.black
+    color: color.black,
   },
   assetThumbnailIcon: {
     fontSize: 25,
     margin: 0,
-    lineHeight: '' + ICON_HEIGHT + 'px'
+    lineHeight: '' + ICON_HEIGHT + 'px',
   },
   assetListItemText: {
-    marginLeft: MARGIN
+    marginLeft: MARGIN,
   },
   miniScreenWrapper: {
     display: 'inline-block',
@@ -275,7 +282,7 @@ const styles = {
     height: ICON_HEIGHT,
     border: assetThumbnailStyles.wrapper.border,
     position: 'relative',
-    marginRight: MARGIN
+    marginRight: MARGIN,
   },
   miniScreen: {
     display: 'inline-block',
@@ -283,21 +290,21 @@ const styles = {
     left: 0,
     transform: `scale(${SCALE})`,
     transformOrigin: 'top left',
-    width: applabConstants.APP_WIDTH
+    width: applabConstants.APP_WIDTH,
   },
   checkbox: {
-    marginRight: MARGIN
+    marginRight: MARGIN,
   },
   selectAllCheckbox: {
     marginRight: MARGIN,
     position: 'relative',
-    bottom: 4
+    bottom: 4,
   },
   scrollable: {
     overflow: 'hidden',
     overflowY: 'scroll',
-    maxHeight: '400px'
-  }
+    maxHeight: '400px',
+  },
 };
 
 export default connect(
@@ -306,7 +313,7 @@ export default connect(
       state.screens.isImportingScreen &&
       state.screens.importProject.fetchedProject
     ),
-    project: state.screens.importProject.importableProject
+    project: state.screens.importProject.importableProject,
   }),
   dispatch => ({
     onImport(projectId, screens, assets) {
@@ -314,6 +321,6 @@ export default connect(
     },
     handleClose() {
       dispatch(toggleImportScreen(false));
-    }
+    },
   })
 )(ImportScreensDialog);

@@ -1,16 +1,34 @@
-/* global dashboard appOptions */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {Provider} from 'react-redux';
+
 import Attachments from '@cdo/apps/code-studio/components/Attachments';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
+import {getStore} from '@cdo/apps/redux';
+import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
-  const data = getScriptData('freeresponse');
+  const scriptData = getScriptData('freeresponse');
 
-  $('.free-response > .markdown-container').each(function() {
+  $('#summaryEntryPoint').each(function () {
+    const container = this;
+    const store = getStore();
+
+    ReactDOM.render(
+      <Provider store={store}>
+        <InstructorsOnly>
+          <SummaryEntryPoint scriptData={scriptData} />
+        </InstructorsOnly>
+      </Provider>,
+      container
+    );
+  });
+
+  $('.free-response > .markdown-container').each(function () {
     const container = this;
     if (!container.dataset.markdown) {
       return;
@@ -27,9 +45,9 @@ $(document).ready(() => {
   }
 
   const attachmentsMountPoint = document.querySelector('#free-response-upload');
-  const attachmentsProps = data.attachments_props;
+  const attachmentsProps = scriptData.attachments_props;
   if (attachmentsMountPoint && attachmentsProps) {
-    dashboard.project.getCurrentId = function() {
+    dashboard.project.getCurrentId = function () {
       return appOptions.channel;
     };
 

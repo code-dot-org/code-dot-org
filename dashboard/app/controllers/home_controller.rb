@@ -17,18 +17,28 @@ class HomeController < ApplicationController
   # The terms_and_privacy page gets loaded in an iframe on the signup page, so skip
   # clearing the sign up tracking variables
   skip_before_action :clear_sign_up_session_vars, only: [:terms_and_privacy]
+  skip_before_action :initialize_statsig_stable_id, only: [:health_check]
 
   def set_locale
-    set_locale_cookie(params[:locale]) if params[:locale]
     redirect_path = if params[:i18npath]
                       "/#{params[:i18npath]}"
                     elsif params[:user_return_to]
-                      URI.parse(params[:user_return_to].to_s).path
+                      redirect_uri = URI.parse(params[:user_return_to].to_s)
+                      redirect_uri.query.present? ? "#{redirect_uri.path}?#{redirect_uri.query}" : redirect_uri.path
                     else
                       '/'
                     end
-    # Query parameter for browser cache to be avoided and load new locale
-    redirect_path = "#{redirect_path}?lang=#{params[:locale]}" if params[:locale]
+
+    if params[:locale]
+      redirect_uri = URI(redirect_path)
+      redirect_params = URI.decode_www_form(redirect_uri.query.to_s).to_h
+      redirect_params[VarnishEnvironment::LOCALE_PARAM_KEY] = params[:locale]
+      # Query parameter for browser cache to be avoided and load new locale
+      redirect_params['lang'] = params[:locale].split('|').first
+      redirect_uri.query = URI.encode_www_form(redirect_params)
+      redirect_path = redirect_uri.to_s
+    end
+
     redirect_to redirect_path
   rescue URI::InvalidURIError
     redirect_to '/'
@@ -50,16 +60,16 @@ class HomeController < ApplicationController
   # Note: the student will be redirected to the course or script in which they
   # most recently made progress, which may not be an assigned course or script.
   # Signed in student or teacher, without an assigned course/script: redirect to /home
-  # Signed out: redirect to /courses
+  # Signed out: redirect to /users/sign_in
   def index
     if current_user
       if should_redirect_to_script_overview?
         redirect_to script_path(current_user.most_recently_assigned_script)
       else
-        redirect_to '/home'
+        redirect_to home_path
       end
     else
-      redirect_to '/courses'
+      redirect_to '/users/sign_in'
     end
   end
 
@@ -68,6 +78,10 @@ class HomeController < ApplicationController
   def home
     authenticate_user!
     init_homepage
+    if current_user.teacher? && Experiment.enabled?(user: current_user, experiment_name: 'teacher-homepage-v2')
+      redirect_to '/teacher_dashboard/home'
+      return
+    end
     render 'home/index'
   end
 
@@ -77,28 +91,26 @@ class HomeController < ApplicationController
     render partial: 'home/tos_and_privacy'
   end
 
-  private
-
   # Determine where student should be redirected upon logging in:
   # true (redirect to script overview page) - if the user is a student && can access the script
   #   they were most recently assigned && they either have no recorded recent progress, their most
   #   recent progress was in the most recently assigned script, or they were assigned the script
   #   more recently than their last progress in another section.
   # false (redirect to student homepage) - otherwise.
-  def should_redirect_to_script_overview?
+  private def should_redirect_to_script_overview?
     current_user.student? &&
-    current_user.can_access_most_recently_assigned_script? &&
-    current_user.most_recent_assigned_script_in_live_section? &&
-    (
-      !current_user.user_script_with_most_recent_progress ||
-      current_user.most_recent_progress_in_recently_assigned_script? ||
-      current_user.last_assignment_after_most_recent_progress?
-    )
+      current_user.can_access_most_recently_assigned_script? &&
+      current_user.most_recent_assigned_script_in_live_section? &&
+      (
+        !current_user.user_script_with_most_recent_progress ||
+        current_user.most_recent_progress_in_recently_assigned_script? ||
+        current_user.last_assignment_after_most_recent_progress?
+      )
   end
 
   # Set all local variables needed to render the signed-in homepage.
   # @raise if called when the user is not signed in.
-  def init_homepage
+  private def init_homepage
     raise 'init_homepage can only be called when there is a current_user' unless current_user
 
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
@@ -115,12 +127,11 @@ class HomeController < ApplicationController
     current_user_permissions = UserPermission.where(user_id: current_user.id).pluck(:permission)
     @homepage_data[:showStudentAsVerifiedTeacherWarning] = current_user.student? && current_user_permissions.include?(UserPermission::AUTHORIZED_TEACHER)
 
-    # DCDO Flag - show/hide Lock Section field - Can/Will be overwritten by DCDO.
-    @homepage_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
-
     @force_race_interstitial = params[:forceRaceInterstitial]
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
     @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
+    @show_school_info_interstitial = params[:showSchoolInfoInterstitial]
+    @show_section_creation_celebration_dialog = params[:showSectionCreationDialog]
 
     student_sections = current_user.sections_as_student.map(&:summarize_without_students)
 
@@ -168,11 +179,11 @@ class HomeController < ApplicationController
       end
 
       unless current_user.donor_teacher_banner_dismissed
-        donor_banner_name = current_user.school_donor_name
+        afe_eligible = current_user&.school_info&.school&.afe_high_needs?
       end
 
-      donor_banner_name ||= params[:forceDonorTeacherBanner]
-      show_census_banner = !!(!donor_banner_name && current_user.show_census_teacher_banner?)
+      afe_eligible ||= params[:forceAFEBanner]
+      show_census_banner = !!current_user.show_census_teacher_banner?
 
       # The following cookies are used by marketing to create personalized experiences for teachers, such as displaying
       # specific banner content.
@@ -181,44 +192,42 @@ class HomeController < ApplicationController
       end
 
       @homepage_data[:isTeacher] = true
-      @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
       @homepage_data[:joined_student_sections] = current_user&.sections_as_student_participant&.map(&:summarize_without_students)
       @homepage_data[:joined_pl_sections] = current_user&.sections_as_pl_participant&.map(&:summarize_without_students)
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
       @homepage_data[:hiddenScripts] = current_user.get_hidden_unit_ids
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
-      @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
+      @homepage_data[:showFinishTeacherApplication] = has_incomplete_open_application?
       @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
-      @homepage_data[:donorBannerName] = donor_banner_name
-      @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
+      @homepage_data[:afeEligible] = afe_eligible
+      @homepage_data[:specialAnnouncement] = Announcements.get_localized_announcement_for_page("/home")
       @homepage_data[:showIncubatorBanner] = show_incubator_banner?
 
       if show_census_banner
-        teachers_school = current_user.school_info.school
+        teachers_school = current_user.school_info_school
         school_stats = SchoolStatsByYear.where(school_id: teachers_school.id).order(school_year: :desc).first
 
         @homepage_data[:censusQuestion] = school_stats.try(:has_high_school_grades?) ? "how_many_20_hours" : "how_many_10_hours"
         @homepage_data[:currentSchoolYear] = current_census_year
+        @homepage_data[:existingSchoolInfo] = {
+          id: teachers_school.id,
+          name: teachers_school.name,
+          country: 'US',
+          zip: teachers_school.zip,
+          type: teachers_school.school_type,
+        }
         @homepage_data[:ncesSchoolId] = teachers_school.id
         @homepage_data[:teacherName] = current_user.name
         @homepage_data[:teacherId] = current_user.id
         @homepage_data[:teacherEmail] = current_user.email
-      elsif donor_banner_name
-        @homepage_data[:teacherId] = current_user.id
       end
     else
       @homepage_data[:isTeacher] = false
       @homepage_data[:sections] = student_sections
       @homepage_data[:studentId] = current_user.id
-    end
-
-    if current_user.school_donor_name
-      donor_footer_options = {}
-      donor_footer_options[:donorName] = current_user.school_donor_name
-      donor_footer_options[:logos] = Dir.glob("app/assets/images/donor_logos/#{current_user.school_donor_name}/*").sort
-
-      @homepage_data[:donorFooterOptions] = donor_footer_options
+      @homepage_data[:studentSpecialAnnouncement] = Announcements.get_localized_announcement_for_page("/student-home")
+      @homepage_data[:parentalPermissionBanner] = helpers.parental_permission_banner_data(current_user, request)
     end
   end
 end

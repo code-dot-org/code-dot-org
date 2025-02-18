@@ -16,3 +16,5 @@ teacher_markdown <<MARKDOWN
 <a href="https://studio.code.org/docs/concepts/ai-lab/using-data-with-categorical-features/" target="blank" rel="noopener noreferrer">Click here</a> to learn more about  using data to select features in AI Lab. 
 
 MARKDOWN
+
+allow_multiple_attempts true

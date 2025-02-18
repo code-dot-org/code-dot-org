@@ -1,0 +1,215 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2024-10-30T17:20:22.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "background": "music-black",
+    "finish_dialog": "hoc2024",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Loops\r\n\r\nLoops will repeat the code is inside it for a certain number of times. \r\n\r\n",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024",
+      "showSoundFilters": true,
+      "toolbox": {
+        "includeAi": true,
+        "type": "category",
+        "addFunctionCalls": true
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "packId": "default",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "repeat_simple2",
+                  "id": "repeat_simple2",
+                  "fields": {
+                    "times": 2
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "Ulh`Ft2pK!J:Qw[5emjL",
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "tazf@MI]2lf0u2*uR/IG",
+                              "fields": {
+                                "sound": "electro/crackle"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "773TB^gs!p-W,$A~K`T+",
+                                  "fields": {
+                                    "sound": "electro/wormhole"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "UplOH;{k9WYYB5(4uIW[",
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "play_sound_at_current_location_simple2",
+                            "fields": {
+                              "sound": "electro/drum_beat_strobe"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "4=LqGM;W9JZ4x;IDh5N=",
+                                "fields": {
+                                  "sound": "electro/drum_beat_tom"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "QxMa*i?y97R_%oaAnMZ?",
+                                    "fields": {
+                                      "sound": "electro/bass_synth_candy"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "repeat_simple2",
+                          "id": "emGow4gHo~^e}9s+eCUr",
+                          "fields": {
+                            "times": 2
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sounds_together",
+                                "id": "bEz*(2.y(OMF!0U%u!;i",
+                                "inputs": {
+                                  "code": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "CR*|?X2v4E/qItyXmj86",
+                                      "fields": {
+                                        "sound": "electro/drum_beat_strobe"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "MaDHNWpsVx%]=2Mus8gf",
+                                          "fields": {
+                                            "sound": "electro/bass_synth_chips"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "}7`qkDjn%)env[Wp,vd/",
+                                              "fields": {
+                                                "sound": "electro/guitar_shine"
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sounds_together",
+                                    "id": "H0PC_y0ygVz,z~.6DV!b",
+                                    "inputs": {
+                                      "code": {
+                                        "block": {
+                                          "type": "set_effect_at_current_location_simple2",
+                                          "id": "{9|E.`g|:{dgb2,eaBMA",
+                                          "fields": {
+                                            "effects_name": "<field name=\"effects_name\">delay</field>",
+                                            "effects_value": "<field name=\"effects_value\">medium</field>"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "G;lVLymwAVUc1ygpdRO$",
+                                              "fields": {
+                                                "sound": "electro/drum_beat_strobe"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "b~d40pTwb.`3t`RV/]wM",
+                                                  "fields": {
+                                                    "sound": "electro/bass_synth_hammer"
+                                                  },
+                                                  "next": {
+                                                    "block": {
+                                                      "type": "play_sound_at_current_location_simple2",
+                                                      "id": ".[e.A;M.@yib`LZ~GiIf",
+                                                      "fields": {
+                                                        "sound": "electro/synth_wiggle"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "name_suffix": "_final",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "true",
+    "display_name": "Loops in Music Lab ",
+    "bubble_choice_description": "Learn how to repeat sounds over and over. ",
+    "thumbnail_url": "https://images.code.org/cbbed00d189b0adaeb809e56add507a1-Screen Shot 2024-10-30 at 10.23.37 AM.png",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-10-30T17:20:22.809+00:00\",\"changed\":[\"cloned from \\\"music-jam-jam\\\"\"],\"cloned_from\":\"music-jam-jam\"},{\"changed_at\":\"2024-10-30 17:24:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-30 17:25:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-30 17:40:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-30 17:40:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-30 17:41:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-30 17:42:02 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-10-30 17:46:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

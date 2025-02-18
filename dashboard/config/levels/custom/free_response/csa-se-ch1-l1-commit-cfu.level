@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2023-06-01T20:11:54.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "title": "Looking at the repo so far",
+    "long_instructions": "Go to the repo on GitHub.\r\n\r\nNext to main, you should now see that there are additional branches. Click the **main** button to see the branches, and select the branch you created.\r\n\r\n* What's different about this branch and the **main** branch?\r\n\r\n* What does the commit message represent? Why is it important?",
+    "height": "100",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-01T20:11:54.320+00:00\",\"changed\":[\"cloned from \\\"csa-se-ch1-l1-repo-cfu\\\"\"],\"cloned_from\":\"csa-se-ch1-l1-repo-cfu\"},{\"changed_at\":\"2023-06-01 20:15:36 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

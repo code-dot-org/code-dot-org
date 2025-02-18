@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Olá Mundo: Espaço", body: "Crie cenas intergalácticas com personagens e sons que farão você dizer, \"Olá mundo!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "Crie um sistema solar que realmente arrasa, aprendendo sobre música, astronomia e codificação no processo!", "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "Guerra nas Estrelas", body: "Aprenda a programar androides e crie seu próprio jogo Guerra nas Estrelas em uma galáxia distante, muito distante.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "Nesta aventura de codificação on-line, você guiará o submarino Subby por desafios subaquáticas.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

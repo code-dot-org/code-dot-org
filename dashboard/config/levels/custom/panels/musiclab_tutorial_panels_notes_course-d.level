@@ -1,0 +1,39 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-05-29T18:18:44.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "level_data": {
+      "panels": [
+        {
+          "imageUrl": "https://images.code.org/d988bb05ff85d96f14ba4579560a1025-trigger1.gif",
+          "text": "Did you know you can play live music, too? First, code your trigger block with the sound you want it to play."
+        },
+        {
+          "imageUrl": "https://images.code.org/43f611a97466086325a2a8945026b73c-trigger2.gif",
+          "text": "Then, use the *trigger* to add new sounds to your song in real-time."
+        }
+      ]
+    },
+    "name_suffix": "_course-d",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/0a0b0ba1b4c005b864617b0afbc03f1c-piano block.gif",
+        "text": "###Compose your own melody!\n\nUse the **play notes** block to compose your own melody.",
+        "key": "musiclab_intro_panels_trigger_pdx-5586b57a-0a71-4d94-bdd7-125e9d4af278"
+      },
+      {
+        "imageUrl": "https://images.code.org/c3abb296896bc97893751c38b83c2b45-beat block (1).gif",
+        "text": "###Compose your own beats!\n\nUse the **play drums** block to compose your own beats.\n\nHave fun!",
+        "key": "musiclab_intro_panels_trigger_pdx-7930c016-c450-4b4a-9c73-641b2ea86a37"
+      }
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-29T18:18:44.239+00:00\",\"changed\":[\"cloned from \\\"musiclab_tutorial_panels_notes_express\\\"\"],\"cloned_from\":\"musiclab_tutorial_panels_notes_express\"}]"
+}]]></config>
+</Panels>

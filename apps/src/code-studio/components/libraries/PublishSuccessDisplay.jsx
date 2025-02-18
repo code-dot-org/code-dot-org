@@ -1,15 +1,17 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {Heading2} from '@cdo/apps/legacySharedComponents/Headings';
 import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import {Heading2} from '@cdo/apps/lib/ui/Headings';
+
 import LibraryIdCopier from './LibraryIdCopier';
 
 export default class PublishSuccessDisplay extends React.Component {
   static propTypes = {
     libraryName: PropTypes.string.isRequired,
     channelId: PropTypes.string.isRequired,
-    onShareTeacherLibrary: PropTypes.func
+    onShareTeacherLibrary: PropTypes.func,
   };
 
   render = () => {
@@ -41,6 +43,6 @@ export default class PublishSuccessDisplay extends React.Component {
 const styles = {
   centerContent: {
     display: 'flex',
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 };

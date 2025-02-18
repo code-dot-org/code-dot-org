@@ -1,3 +1,7 @@
+import {APP_HEIGHT} from '../../constants';
+import {layoutSpriteGroup} from '../../layoutUtils';
+import {createSpriteCollider} from '../../utils';
+
 import {commands as behaviorCommands} from './behaviorCommands';
 
 function move(coreLibrary, spriteArg, distance) {
@@ -76,7 +80,10 @@ export const commands = {
           sprite.scale = 0;
         }
       },
-      y: sprite => (sprite.y -= val)
+      y: sprite => (sprite.y -= val),
+      velocityY: sprite => {
+        sprite.velocityY -= val;
+      },
     };
     sprites.forEach(sprite => {
       if (specialCases[prop]) {
@@ -87,12 +94,30 @@ export const commands = {
     });
   },
 
+  collide(collisionType, spriteArg, targetArg) {
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
+
+    sprites.forEach(sprite => {
+      targets.forEach(target => sprite[collisionType](target));
+    });
+  },
+
   edgesDisplace(spriteArg) {
     if (!this.p5.edges) {
       this.p5.createEdgeSprites();
     }
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => this.p5.edges.displace(sprite));
+  },
+
+  // Causes the sprite to stop moving when it hits an edge sprite.
+  edgesCollide(spriteArg) {
+    if (!this.p5.edges) {
+      this.p5.createEdgeSprites();
+    }
+    let sprites = this.getSpriteArray(spriteArg);
+    sprites.forEach(sprite => sprite.collide(this.p5.edges));
   },
 
   glideTo(spriteArg, location) {
@@ -107,7 +132,7 @@ export const commands = {
       sprite.glideTargets.push(location);
       this.addBehavior(sprite, {
         func: behaviorCommands.glideFunc.apply(this),
-        name: 'glide'
+        name: 'glide',
       });
     });
   },
@@ -118,6 +143,11 @@ export const commands = {
       return false;
     }
     return sprites.every(sprite => sprite.getAnimationLabel() === costumeName);
+  },
+
+  layoutSprites(costume, layout) {
+    const group = this.getSpriteArray({costume});
+    layoutSpriteGroup(group, layout, this.p5);
   },
 
   isKeyPressed(key) {
@@ -148,6 +178,32 @@ export const commands = {
           touching = true;
         }
       });
+    });
+    return touching;
+  },
+
+  isDirectlyAbove(spriteArg, targetArg) {
+    let sprites = this.getSpriteArray(spriteArg);
+    let targets = this.getSpriteArray(targetArg);
+    let touching = false;
+    sprites.forEach(sprite => {
+      const spriteCollider = createSpriteCollider(sprite);
+      if (spriteCollider.bottom >= APP_HEIGHT) {
+        touching = true;
+      } else {
+        for (const target of targets) {
+          const targetCollider = createSpriteCollider(target);
+
+          if (
+            spriteCollider.bottom === targetCollider.top &&
+            spriteCollider.left <= targetCollider.right &&
+            spriteCollider.right >= targetCollider.left
+          ) {
+            touching = true;
+            break;
+          }
+        }
+      }
     });
     return touching;
   },
@@ -188,7 +244,7 @@ export const commands = {
       North: sprite => (sprite.y -= distance),
       East: sprite => (sprite.x += distance),
       South: sprite => (sprite.y += distance),
-      West: sprite => (sprite.x -= distance)
+      West: sprite => (sprite.x -= distance),
     };
     if (!dirs[direction]) {
       console.error('invalid direction: ' + direction);
@@ -237,12 +293,12 @@ export const commands = {
         if (val) {
           this.addBehavior(sprite, {
             func: behaviorCommands.draggableFunc.apply(this),
-            name: 'draggable'
+            name: 'draggable',
           });
         } else {
           this.removeBehavior(sprite, {
             func: behaviorCommands.draggableFunc.apply(this),
-            name: 'draggable'
+            name: 'draggable',
           });
         }
       },
@@ -251,7 +307,8 @@ export const commands = {
       scale: sprite => sprite.setScale(val / 100),
       width: sprite =>
         (sprite.width = (sprite.animation.getWidth() * val) / 100),
-      y: sprite => (sprite.y = 400 - val)
+      y: sprite => (sprite.y = 400 - val),
+      velocityY: sprite => (sprite.velocityY = -val),
     };
     sprites.forEach(sprite => {
       if (specialCases[prop]) {
@@ -302,5 +359,5 @@ export const commands = {
         sprite.direction -= degrees;
       }
     });
-  }
+  },
 };

@@ -1,0 +1,12 @@
+name 'vpl-csd-2023-m1-randomnumbersoverview'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Unit 3 Review
+
+## Random Numbers
+
+##### Lesson 6 introduces students to the randomNumbers() block. In the following activity you will practice using this block by completing an activity that your students will complete in Lesson 6 of Interactive Animations and Games. Remember if you get stuck, check out the resources in the Help and Tips tab. If you are still stuck, you can reference the sample solution found in the Teacher Panel on the right hand side of your screen. (The sample solutions are only available for verified teacher accounts.)
+MARKDOWN

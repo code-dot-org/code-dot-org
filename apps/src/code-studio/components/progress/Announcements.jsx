@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import {
   announcementShape,
-  VisibilityType
+  VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
-import Notification from '@cdo/apps/templates/Notification';
-import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Notification from '@cdo/apps/sharedComponents/Notification';
+import i18n from '@cdo/locale';
 
 export default class Announcements extends Component {
   static propTypes = {
     announcements: PropTypes.arrayOf(announcementShape).isRequired,
     width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    firehoseAnalyticsData: PropTypes.object
+    firehoseAnalyticsData: PropTypes.object,
   };
 
   /*

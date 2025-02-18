@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color', 'font';
 @import "bootstrap-sass/assets/stylesheets/bootstrap/mixins/buttons";
 @import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "mixins";
@@ -29,8 +29,7 @@
 // TODO: Remove this once Dashboard is upgraded to Bootstrap 3
 #workshop-container,
 #application-container,
-#application-header,
-#enroll-form {
+#application-header {
   @import "bootstrap-sass/assets/stylesheets/bootstrap"; /* stylelint-disable-line no-invalid-position-at-import-rule */
   @include buttons;
   @include user-selects(auto);
@@ -51,8 +50,8 @@
   }
 
   a:not(.btn) {
+    @include main-font-bold;
     color: $purple;
-    font-family: "Gotham 7r", sans-serif;
     &:hover {
       color: $purple;
     }
@@ -164,9 +163,8 @@ form .form-required-field {
   }
 
   #regional-partner-mini-contact-popup-link-container {
+    @include main-font-bold;
     display: inline-block;
-    font-family: "Gotham 7r", sans-serif;
-    font-weight: normal;
     color: #0094ca;
     cursor: pointer;
   }
@@ -210,10 +208,9 @@ form .form-required-field {
 //Keep styling consistent when we use react-bootstrap
 //components in TeacherApplication
 .control-label {
+  @include main-font-regular;
   font-size: 13px;
   line-height: 18px;
-  font-weight: bold;
-  font-family: "Gotham 4r", sans-serif;
 }
 
 #application-container .form-group {

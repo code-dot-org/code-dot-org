@@ -1,18 +1,20 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap';
+import React from 'react';
+import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import {
+  Courses,
+  ActiveCourses,
+  ArchivedCourses,
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import {
   Facilitator,
   Organizer,
   PermissionPropType,
   ProgramManager,
-  WorkshopAdmin
+  WorkshopAdmin,
 } from '../permission';
-import {
-  Courses,
-  ActiveCourses,
-  ArchivedCourses
-} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 /**
  * A dropdown used on the Workshop form for selecting a course.
@@ -27,7 +29,7 @@ export default function CourseSelect({
   readOnly,
   inputStyle,
   validation,
-  onChange
+  onChange,
 }) {
   const allowedCourses = getAllowedCourses(
     permission,
@@ -65,7 +67,7 @@ CourseSelect.propTypes = {
   readOnly: PropTypes.bool,
   inputStyle: PropTypes.object,
   validation: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 export function getAllowedCourses(permission, facilitatorCourses, course) {

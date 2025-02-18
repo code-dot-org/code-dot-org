@@ -14,6 +14,14 @@
    * @type {string}
    */
 %>
+<%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var flavor = locals.flavor;
+var body = locals.body;
+var title = locals.title;
+%>
 <div class="alert netsim-alert <%= flavor %> fade in">
   <button type="button" class="netsim-alert-button close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
   <% if (title) { %><strong><%= title %></strong><% } %>

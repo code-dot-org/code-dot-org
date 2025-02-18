@@ -57,6 +57,8 @@ class Lesson < ApplicationRecord
   has_many :lessons_opportunity_standards,  dependent: :destroy
   has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
 
+  has_one :rubric, dependent: :destroy
+
   self.table_name = 'stages'
 
   serialized_attrs %w(
@@ -64,6 +66,7 @@ class Lesson < ApplicationRecord
     student_overview
     unplugged
     creative_commons_license
+    background
     assessment
     purpose
     preparation
@@ -85,9 +88,11 @@ class Lesson < ApplicationRecord
   # absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  validates_uniqueness_of :key, scope: :script_id, case_sensitive: true, message: ->(object, _data) do
-    "lesson with key #{object.key.inspect} is already taken within unit #{object.script&.name.inspect}"
-  end
+  validates_uniqueness_of(
+    :key, scope: :script_id, case_sensitive: true, message: lambda do |object, _data|
+      "lesson with key #{object.key.inspect} is already taken within unit #{object.script&.name.inspect}"
+    end
+  )
 
   include CodespanOnlyMarkdownHelper
 
@@ -166,7 +171,7 @@ class Lesson < ApplicationRecord
   end
 
   def has_lesson_pdf?
-    return false if Unit.unit_in_category?('csf', script.name) && ['2017', '2018'].include?(script.version_year)
+    return false if script.csf? && ['2017', '2018'].include?(script.version_year)
 
     !!has_lesson_plan
   end
@@ -255,7 +260,7 @@ class Lesson < ApplicationRecord
 
   def student_lesson_plan_pdf_url
     if script.is_migrated && script.include_student_lesson_plans && has_lesson_plan
-      Services::CurriculumPdfs.get_lesson_plan_url(self, true)
+      Services::CurriculumPdfs.get_lesson_plan_url(self, student_facing: true)
     end
   end
 
@@ -296,7 +301,9 @@ class Lesson < ApplicationRecord
         description_teacher: description_teacher,
         unplugged: unplugged,
         lessonEditPath: get_uncached_edit_path,
-        lessonStartUrl: start_url
+        lessonStartUrl: start_url,
+        duration: total_lesson_duration,
+        background: background,
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -342,7 +349,7 @@ class Lesson < ApplicationRecord
     # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
     # has sufficient permissions or not. therefore, use a different path
     # when editing lesson plans in hoc scripts.
-    has_lesson_plan && !ScriptConfig.hoc_scripts.include?(script.name) ?
+    has_lesson_plan && ScriptConfig.hoc_scripts.exclude?(script.name) ?
       script_lesson_edit_path(script, self) :
       edit_lesson_path(id: id)
   end
@@ -418,6 +425,7 @@ class Lesson < ApplicationRecord
       lockable: lockable,
       hasLessonPlan: has_lesson_plan,
       creativeCommonsLicense: creative_commons_license,
+      background: background,
       purpose: purpose,
       preparation: preparation,
       announcements: announcements,
@@ -429,7 +437,8 @@ class Lesson < ApplicationRecord
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
-      lessonPath: get_uncached_show_path
+      lessonPath: get_uncached_show_path,
+      rubric: rubric,
     }
   end
 
@@ -478,6 +487,24 @@ class Lesson < ApplicationRecord
     }
   end
 
+  def summarize_for_lesson_materials(user)
+    {
+      id: id,
+      unit: script.summarize_for_lesson_show,
+      position: relative_position,
+      key: key,
+      name: localized_name,
+      resources: resources_for_lesson_plan(user&.verified_instructor?),
+      lessonPlanPdfUrl: lesson_plan_pdf_url,
+      lessonPlanHtmlUrl: lesson_plan_html_url,
+      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
+      standardsUrl: standards_script_path(script),
+      vocabularyUrl: vocab_script_path(script),
+      hasLessonPlan: has_lesson_plan,
+      isLockable: lockable?,
+    }
+  end
+
   def summarize_for_student_lesson_plan
     all_resources = resources_for_lesson_plan(false)
     {
@@ -502,6 +529,16 @@ class Lesson < ApplicationRecord
       displayName: localized_name,
       link: is_student ? script_lesson_student_path(script, self) : script_lesson_path(script, self),
       position: relative_position
+    }
+  end
+
+  def summarize_for_rubric_edit
+    {
+      id: id,
+      unitName: script.title_for_display,
+      lessonNumber: relative_position,
+      lessonName: name,
+      levels: levels
     }
   end
 
@@ -592,12 +629,12 @@ class Lesson < ApplicationRecord
     end
     next_level = next_level_for_lesson_extras(user)
     next_level ?
-      build_script_level_path(next_level) : script_completion_redirect(script)
+      build_script_level_path(next_level) : script_completion_redirect(user, script)
   end
 
   def next_level_number_for_lesson_extras(user)
     next_level = next_level_for_lesson_extras(user)
-    next_level ? next_level.lesson.relative_position : nil
+    next_level&.lesson&.relative_position
   end
 
   # Updates this lesson's lesson_activities to match the activities represented
@@ -631,13 +668,13 @@ class Lesson < ApplicationRecord
   def update_objectives(objectives)
     return unless objectives
 
-    self.objectives = objectives.map do |objective|
+    self.objectives = objectives.filter_map do |objective|
       next nil if objective['description'].blank?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
-    end.compact
+    end
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to
@@ -888,15 +925,13 @@ class Lesson < ApplicationRecord
 
   def report_bug_url(request)
     message = "Bug in Lesson #{name}\n#{request.url}\n#{request.user_agent}\n"
-    "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
+    "https://support.code.org/hc/en-us/requests/new?&tf_description=#{CGI.escape(message)}"
   end
-
-  private
 
   # Finds the LessonActivity by id, or creates a new one if id is not specified.
   # @param activity [Hash]
   # @returns [LessonActivity]
-  def fetch_activity(activity)
+  private def fetch_activity(activity)
     if activity['id']
       lesson_activity = lesson_activities.find(activity['id'])
       return lesson_activity if lesson_activity

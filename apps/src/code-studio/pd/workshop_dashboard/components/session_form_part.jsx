@@ -3,13 +3,25 @@
  * Sets date, startTime, and endTime for the session.
  */
 import _ from 'lodash';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import moment from 'moment';
-import {Row, Col, Button, FormGroup, HelpBlock} from 'react-bootstrap';
-import TimeSelect from './time_select';
-import DatePicker from './date_picker';
+// eslint-disable-next-line no-restricted-imports
+import {
+  Row,
+  Col,
+  Button,
+  FormGroup,
+  FormControl,
+  HelpBlock,
+} from 'react-bootstrap';
+
+import {PdSessionFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
+
+import DatePicker from './date_picker';
+import TimeSelect from './time_select';
 
 const MIN_TIME = moment('7:00am', TIME_FORMAT);
 const MAX_TIME = moment('7:00pm', TIME_FORMAT);
@@ -19,13 +31,14 @@ export default class SessionFormPart extends React.Component {
     session: PropTypes.shape({
       date: PropTypes.string,
       startTime: PropTypes.string,
-      endTime: PropTypes.string
+      endTime: PropTypes.string,
+      format: PropTypes.string,
     }).isRequired,
     onAdd: PropTypes.func,
     onRemove: PropTypes.func,
     shouldValidate: PropTypes.bool,
     readOnly: PropTypes.bool,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   handleDateChange = date => {
@@ -38,6 +51,9 @@ export default class SessionFormPart extends React.Component {
   };
   handleEndTimeChange = time => {
     this.handleChange('endTime', time);
+  };
+  handleFormatChange = e => {
+    this.handleChange('format', e.target.value);
   };
   handleChange = (fieldName, value) => {
     const updatedSession = _.set(
@@ -133,10 +149,14 @@ export default class SessionFormPart extends React.Component {
       style.endTime = 'error';
       help.endTime = 'Must end after it starts.';
     }
+    if (!this.props.session.format) {
+      style.format = 'error';
+      help.format = 'Required.';
+    }
 
     return (
       <Row>
-        <Col sm={4}>
+        <Col sm={3}>
           <FormGroup validationState={style.date}>
             <DatePicker
               date={date}
@@ -147,7 +167,7 @@ export default class SessionFormPart extends React.Component {
             <HelpBlock>{help.date}</HelpBlock>
           </FormGroup>
         </Col>
-        <Col sm={3}>
+        <Col sm={2}>
           <FormGroup validationState={style.startTime}>
             <TimeSelect
               id="startTime-select"
@@ -160,7 +180,7 @@ export default class SessionFormPart extends React.Component {
             <HelpBlock>{help.startTime}</HelpBlock>
           </FormGroup>
         </Col>
-        <Col sm={3}>
+        <Col sm={2}>
           <FormGroup validationState={style.endTime}>
             <TimeSelect
               id="endTime-select"
@@ -173,6 +193,27 @@ export default class SessionFormPart extends React.Component {
             <HelpBlock>{help.endTime}</HelpBlock>
           </FormGroup>
         </Col>
+        <Col sm={3}>
+          <FormGroup validationState={style.format}>
+            <FormControl
+              componentClass="select"
+              id="format"
+              name="format"
+              value={this.props.session.format}
+              onChange={this.handleFormatChange}
+              disabled={this.props.readOnly}
+              style={this.props.readOnly ? styles.readOnlyInput : undefined}
+            >
+              <option value={''}>Select an option</option>
+              {PdSessionFormats.map(({value, label}) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </FormControl>
+            <HelpBlock>{help.format}</HelpBlock>
+          </FormGroup>
+        </Col>
         <Col sm={2}>
           {this.renderAddButton()}
           {this.renderRemoveButton()}
@@ -181,3 +222,11 @@ export default class SessionFormPart extends React.Component {
     );
   }
 }
+
+const styles = {
+  readOnlyInput: {
+    backgroundColor: 'inherit',
+    cursor: 'default',
+    border: 'none',
+  },
+};

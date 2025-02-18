@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import msg from '@cdo/locale';
-import GetColumnParamPicker, {ParamType} from './GetColumnParamPicker';
+
 import {getFirstParam} from '../dropletUtils';
 import {stripEncapsulatingDoubleQuotes} from '../utils';
+
+import GetColumnParamPicker, {ParamType} from './GetColumnParamPicker';
 
 function openModal(type, callback, table) {
   const modalDiv = document.createElement('div');
@@ -24,7 +27,7 @@ function openModal(type, callback, table) {
 }
 
 export function getTables() {
-  return function() {
+  return function () {
     return [
       {
         text: msg.choosePrefix(),
@@ -32,8 +35,8 @@ export function getTables() {
           '<span class="chooseAssetDropdownOption">' +
           msg.choosePrefix() +
           '</a>',
-        click: callback => openModal(ParamType.TABLE, callback)
-      }
+        click: callback => openModal(ParamType.TABLE, callback),
+      },
     ];
   };
 }
@@ -47,7 +50,7 @@ function getTableNameFromColumnSocket(socket, editor) {
 }
 
 export function getColumns() {
-  return function(editor) {
+  return function (editor) {
     const tableName = getTableNameFromColumnSocket(this, editor);
     return [
       {
@@ -56,12 +59,12 @@ export function getColumns() {
           '<span class="chooseAssetDropdownOption">' +
           msg.choosePrefix() +
           '</a>',
-        click: callback => openModal(ParamType.COLUMN, callback, tableName)
-      }
+        click: callback => openModal(ParamType.COLUMN, callback, tableName),
+      },
     ];
   };
 }
 
 export var __TestInterface = {
-  getTableNameFromColumnSocket: getTableNameFromColumnSocket
+  getTableNameFromColumnSocket: getTableNameFromColumnSocket,
 };

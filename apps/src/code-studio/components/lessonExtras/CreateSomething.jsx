@@ -1,4 +1,5 @@
 import React from 'react';
+
 import msg from '@cdo/locale';
 
 export default class CreateSomething extends React.Component {
@@ -11,22 +12,22 @@ export default class CreateSomething extends React.Component {
         img: '/shared/images/courses/logo_tall_artist.jpg',
         title: msg.playzoneArtistTitle(),
         className: 'artist',
-        description: msg.playzoneArtistDescription()
+        description: msg.playzoneArtistDescription(),
       },
       {
         href: '/projects/playlab/new',
         img: '/shared/images/courses/logo_tall_playlab.jpg',
         title: msg.playzonePlaylabTitle(),
         className: 'playlab',
-        description: msg.playzonePlaylabDescription()
+        description: msg.playzonePlaylabDescription(),
       },
       {
         href: '/projects',
         img: '/shared/images/courses/logo_tall_applab.png',
         title: msg.playzoneProjectsTitle(),
         className: 'projects',
-        description: msg.playzoneProjectsDescription()
-      }
+        description: msg.playzoneProjectsDescription(),
+      },
     ];
   }
 
@@ -61,6 +62,6 @@ export default class CreateSomething extends React.Component {
 const styles = {
   courseblockContainer: {
     width: 720,
-    paddingTop: 20
-  }
+    paddingTop: 20,
+  },
 };

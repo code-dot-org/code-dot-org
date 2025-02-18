@@ -1,14 +1,16 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {expect} from '../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import MarketingAnnouncementBanner from '@cdo/apps/templates/studioHomepages/MarketingAnnouncementBanner';
-import * as utils from '@cdo/apps/utils';
-import sinon from 'sinon';
 import {createStore, combineReducers} from 'redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import MarketingAnnouncementBanner from '@cdo/apps/templates/studioHomepages/MarketingAnnouncementBanner';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   announcement: {
@@ -18,9 +20,9 @@ const DEFAULT_PROPS = {
     body: 'Descriptive information..',
     buttonUrl: '/takemehere',
     buttonText: 'Click me',
-    buttonId: 'announcement-button'
+    buttonId: 'announcement-button',
   },
-  marginBottom: '20px'
+  marginBottom: '20px',
 };
 
 const store = createStore(combineReducers({isRtl, responsive}));
@@ -101,8 +103,8 @@ describe('MarketingAnnouncementBanner', () => {
       study_group: 'homepage_banner',
       event: 'close_button_clicked',
       data_json: JSON.stringify({
-        banner_title: 'Announcement Title'
-      })
+        banner_title: 'Announcement Title',
+      }),
     });
 
     utils.tryGetLocalStorage.restore();
@@ -121,8 +123,8 @@ describe('MarketingAnnouncementBanner', () => {
       study_group: 'homepage_banner',
       event: 'cta_button_clicked',
       data_json: JSON.stringify({
-        banner_title: 'Announcement Title'
-      })
+        banner_title: 'Announcement Title',
+      }),
     });
 
     utils.tryGetLocalStorage.restore();

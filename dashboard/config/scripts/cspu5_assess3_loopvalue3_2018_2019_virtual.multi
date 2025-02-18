@@ -26,3 +26,5 @@ Going through the code line by line:
 * However, _a_ will equal 2 on the 1st loop, 4 on the 2nd loop, and 6 on the 3rd loop but it will never equal 5
 * Therefore, it will never exit the while loop and instead, an infinite loop is created
 MARKDOWN
+
+allow_multiple_attempts true

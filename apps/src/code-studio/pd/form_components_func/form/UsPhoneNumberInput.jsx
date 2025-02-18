@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
+
 import UsPhoneNumberInputComponent from '../../form_components/UsPhoneNumberInput';
 import {getValidationState, FormContext} from '../FormComponent';
 /**
@@ -21,5 +22,5 @@ export const UsPhoneNumberInput = props => {
 };
 UsPhoneNumberInput.propTypes = {
   // the name of the input
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 };

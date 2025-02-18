@@ -92,6 +92,16 @@ module ScriptConstants
       EXPRESS_2022_NAME = 'express-2022'.freeze,
       PRE_READER_EXPRESS_2022_NAME = 'pre-express-2022'.freeze,
     ],
+    csf_2023: [
+      COURSEA_2023_NAME = 'coursea-2023'.freeze,
+      COURSEB_2023_NAME = 'courseb-2023'.freeze,
+      COURSEC_2023_NAME = 'coursec-2023'.freeze,
+      COURSED_2023_NAME = 'coursed-2023'.freeze,
+      COURSEE_2023_NAME = 'coursee-2023'.freeze,
+      COURSEF_2023_NAME = 'coursef-2023'.freeze,
+      EXPRESS_2023_NAME = 'express-2023'.freeze,
+      PRE_READER_EXPRESS_2023_NAME = 'pre-express-2023'.freeze,
+    ],
     csc_2021: [
       POETRY_2021_NAME = 'poetry-2021'.freeze,
       AI_ETHICS_2021_NAME = 'ai-ethics-2021'.freeze,
@@ -106,6 +116,8 @@ module ScriptConstants
       # with code_s matching the script name (in quotes) in this list.
 
       nil,
+      MUSIC_JAM_2024 = 'music-jam-2024'.freeze, # 2024 hour of code
+      DANCE_AI_2023 = 'dance-ai-2023'.freeze, # 2023 hour of code
       POEM_ART_2021_NAME = 'poem-art-2021'.freeze, # 2021 hour of code
       HELLO_WORLD_FOOD_2021_NAME = 'hello-world-food-2021'.freeze, # 2021 hour of code
       HELLO_WORLD_ANIMALS_2021_NAME = 'hello-world-animals-2021'.freeze, # 2021 hour of code
@@ -121,6 +133,8 @@ module ScriptConstants
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
+      MINECRAFT_AI_NAME = 'generation-ai'.freeze,
+      MINECRAFT_SHOW_NAME = 'show-must-go-on'.freeze,
       APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
       FROZEN_NAME = 'frozen'.freeze,
@@ -135,16 +149,27 @@ module ScriptConstants
       HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
       TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
       BASKETBALL_NAME = 'basketball'.freeze,
-      SPORTS_NAME = 'sports'.freeze,
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
+      HOW_AI_WORKS_2023_NAME = 'how-ai-works-2023'.freeze,
+      AI_ETHICS_2023_NAME = 'ai-ethics-2023'.freeze,
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
       COURSE2_NAME = 'course2'.freeze,
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
+    ],
+    csd_2023: [
+      CSD1_2023_NAME = 'csd1-2023'.freeze,
+      CSD2_2023_NAME = 'csd2-2023'.freeze,
+      CSD3_2023_NAME = 'csd3-2023'.freeze,
+      CSD4_2023_NAME = 'csd4-2023'.freeze,
+      CSD5_2023_NAME = 'csd5-2023'.freeze,
+      CSD6A_2023_NAME = 'csd6a-2023'.freeze,
+      CSD6B_2023_NAME = 'csd6b-2023'.freeze,
+      CSD7_2023_NAME = 'csd7-2023'.freeze,
     ],
     csd_2022: [
       CSD1_2022_NAME = 'csd1-2022'.freeze,
@@ -205,15 +230,41 @@ module ScriptConstants
       MINECRAFT_NAME,
       MINECRAFT_DESIGNER_NAME,
       MINECRAFT_HERO_NAME,
-      MINECRAFT_AQUATIC_NAME
+      MINECRAFT_AQUATIC_NAME,
+      MINECRAFT_AI_NAME,
+      MINECRAFT_SHOW_NAME,
     ],
   }.freeze
 
+  TRANSLATEABLE_CSC_UNITS = [
+    POETRY_2023_NAME = 'poetry-2023'.freeze,
+    CSC_BOOKCOVERS_2023_NAME = 'csc-bookcovers-2023'.freeze,
+    CSC_STARQUILTS_2023_NAME = 'csc-starquilts-2023'.freeze,
+    CSC_ECOSYSTEMS_2023_NAME = 'csc-ecosystems-2023'.freeze,
+    CSC_ADAPTATIONS_2023_NAME = 'csc-adaptations-2023'.freeze,
+    CSC_TIMECAPSULE_2023_NAME = 'csc-timecapsule-2023'.freeze,
+    CSC_MAPPINGLANDMARKS_2023_NAME = 'csc-mappinglandmarks-2023'.freeze,
+  ].freeze
+
+  TRANSLATABLE_PD_PL_UNITS = [
+    K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
+    K5_ONLINEPD_2023 = 'k5-onlinepd-2023'.freeze,
+    K5_ONLINEPD = 'K5-OnlinePD'.freeze,
+    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
+    SELF_PACED_PL_K5_2024_1 = 'self-paced-pl-k5-2024-1'.freeze,
+    SELF_PACED_PL_K5_2024_2 = 'self-paced-pl-k5-2024-2'.freeze,
+  ].freeze
+
   ADDITIONAL_I18N_UNITS = [
+    ALLTHETHINGS = 'allthethings'.freeze,
     APPLAB_1HOUR = 'applab-1hour'.freeze,
     APPLAB_2HOUR = 'applab-2hour'.freeze,
+    COMPUTER_VISION = 'computer-vision'.freeze,
+    CSD2_2024 = 'csd2-2024'.freeze,
     CSD_POST_SURVEY = 'csd-post-survey'.freeze,
     DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
+    EXPLORING_GEN_AI = 'exploring-gen-ai2-2024'.freeze,
+    FOUNDATIONS_GEN_AI = 'foundations-gen-ai-2024'.freeze,
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
     HELLO_WORLD_FOOD = 'hello-world-food'.freeze,
@@ -221,17 +272,17 @@ module ScriptConstants
     HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze,
     HELLO_WORLD_RETRO = 'hello-world-retro'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
+    K5_UNPLUGGED = 'k5-unplugged'.freeze,
+    MUSIC_INTRO_2024 = 'music-intro-2024'.freeze,
+    MUSIC_ONBOARD = 'music-onboard'.freeze,
+    MUSIC_TUTORIAL_2024 = 'music-tutorial-2024'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
     OUTBREAK = 'outbreak'.freeze,
     PIXELATION = 'pixelation'.freeze,
     POEM_ART = 'poem-art'.freeze,
     POETRY_HOC3 = 'poetry-hoc3'.freeze,
-    VIGENERE = 'vigenere'.freeze,
-    K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
-    K5_ONLINEPD = 'K5-OnlinePD'.freeze,
-    KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
-    ALLTHETHINGS = 'allthethings'.freeze
+    VIGENERE = 'vigenere'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -269,6 +320,31 @@ module ScriptConstants
 
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
+  TRANSLATEABLE_UNITS = [
+    *CATEGORIES[:csd],
+    *CATEGORIES[:csd_2018],
+    *CATEGORIES[:csd_2019],
+    *CATEGORIES[:csd_2021],
+    *CATEGORIES[:csd_2022],
+    *CATEGORIES[:csd_2023],
+
+    *CATEGORIES[:csf],
+    *CATEGORIES[:csf_2018],
+    *CATEGORIES[:csf_2019],
+    *CATEGORIES[:csf_2020],
+    *CATEGORIES[:csf_2021],
+    *CATEGORIES[:csf_2022],
+    *CATEGORIES[:csf_2023],
+    *CATEGORIES[:csf_international],
+
+    *CATEGORIES[:hoc],
+    *CATEGORIES[:twenty_hour],
+    *ADDITIONAL_I18N_UNITS,
+    *TRANSLATEABLE_CSC_UNITS,
+    *TRANSLATABLE_PD_PL_UNITS,
+    JIGSAW_NAME,
+  ].freeze
+
   def self.csf_next_course_recommendation(course_name)
     # These course names without years in them should be mapped statically to their recommendation.
     static_mapping = {
@@ -285,6 +361,7 @@ module ScriptConstants
     # next prefix based on constant mapping, then add the year to the recommended prefix.
     # Example: coursea-2019 becomes prefix: coursea, year: 2019.
     # coursea maps to courseb, so return courseb-2019.
+    applab_courses = %w(coursef express)
     CSF_COURSE_PATTERNS.each do |r|
       match_data = r.match(course_name)
       next unless match_data
@@ -292,7 +369,7 @@ module ScriptConstants
       prefix = match_data[1]
       year = match_data[2]
 
-      return "applab-intro" if %w(coursef express).include?(prefix)
+      return "applab-intro" if applab_courses.include?(prefix)
 
       prefix_mapping = {
         "coursea" => "courseb",
@@ -309,22 +386,11 @@ module ScriptConstants
     return nil
   end
 
-  def self.i18n?(script)
-    ScriptConstants.unit_in_category?(:csf_international, script) ||
-      ScriptConstants.unit_in_category?(:csf, script) ||
-      ScriptConstants.unit_in_category?(:csf_2018, script) ||
-      ScriptConstants.unit_in_category?(:csf_2019, script) ||
-      ScriptConstants.unit_in_category?(:csf_2020, script) ||
-      ScriptConstants.unit_in_category?(:csf_2021, script) ||
-      ScriptConstants.unit_in_category?(:csf_2022, script) ||
-      ScriptConstants.unit_in_category?(:csd, script) ||
-      ScriptConstants.unit_in_category?(:csd_2018, script) ||
-      ScriptConstants.unit_in_category?(:csd_2019, script) ||
-      ScriptConstants.unit_in_category?(:csd_2021, script) ||
-      ScriptConstants.unit_in_category?(:csd_2022, script) ||
-      ScriptConstants.unit_in_category?(:twenty_hour, script) ||
-      ScriptConstants.unit_in_category?(:hoc, script) ||
-      JIGSAW_NAME == script ||
-      ADDITIONAL_I18N_UNITS.include?(script)
+  # Checks if the unit is translatable
+  #
+  # @param unit_name [String] the Unit name
+  # @return [true, false]
+  def self.i18n?(unit_name)
+    TRANSLATEABLE_UNITS.include?(unit_name)
   end
 end

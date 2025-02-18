@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-04-19T20:40:24.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Ethical Considerations\r\n\r\n#### What is the single most important ethical consideration that you feel needs to be made when a new Computer Vision technology is introduced? Why do you feel that way?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20662,
+    "name_suffix": "_2024",
+    "allow_multiple_attempts": "false",
+    "teacher_markdown": "This question aims to personalize the ethical considerations of computer vision technologies, prompting students to reflect on and articulate their values and priorities. The goal is to foster a deeper understanding of the diverse ethical dimensions these technologies entail, such as privacy, consent, transparency, and accountability. By identifying and discussing the most pressing ethical issue from their perspective, students can explore the rationale behind ethical guidelines and the potential consequences of overlooking these considerations.\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-19T20:40:24.932+00:00\",\"changed\":[\"cloned from \\\"CV_L11_Reflection_2\\\"\"],\"cloned_from\":\"CV_L11_Reflection_2\"},{\"changed_at\":\"2024-04-19 20:40:47 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

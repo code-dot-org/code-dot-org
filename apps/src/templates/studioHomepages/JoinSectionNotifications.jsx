@@ -1,7 +1,10 @@
 /** @file Notifications showing results of the join/leave section operation. */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Notification from '@cdo/apps/templates/Notification';
+
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import Notification from '@cdo/apps/sharedComponents/Notification';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
 export default function JoinSectionNotifications({
@@ -9,10 +12,18 @@ export default function JoinSectionNotifications({
   result,
   name,
   id,
-  sectionCapacity
+  sectionCapacity,
+  showingPlSections,
+  joiningPlSection,
 }) {
   if (action === 'join' && result === 'success') {
-    return <JoinSectionSuccessNotification sectionName={name} />;
+    return (
+      <JoinSectionSuccessNotification
+        sectionName={name}
+        showingPlSections={showingPlSections}
+        joiningPlSection={joiningPlSection}
+      />
+    );
   } else if (action === 'leave' && result === 'success') {
     return (
       <LeaveSectionSuccessNotification sectionName={name} sectionId={id} />
@@ -44,19 +55,56 @@ JoinSectionNotifications.propTypes = {
   result: PropTypes.string,
   name: PropTypes.string,
   id: PropTypes.string,
-  sectionCapacity: PropTypes.number
+  sectionCapacity: PropTypes.number,
+  showingPlSections: PropTypes.bool,
+  joiningPlSection: PropTypes.bool,
 };
 
-const JoinSectionSuccessNotification = ({sectionName}) => (
-  <Notification
-    type="success"
-    notice={i18n.sectionsNotificationSuccess()}
-    details={i18n.sectionsNotificationJoinSuccess({sectionName})}
-    dismissible={true}
-  />
-);
+const JoinSectionSuccessNotification = ({
+  sectionName,
+  showingPlSections,
+  joiningPlSection,
+}) => {
+  let notificationMessage = null;
+  if (showingPlSections && !joiningPlSection) {
+    // Notify user if they are joining a non-PL section on the My PL page so they'll have to
+    // go to the Teacher Homepage if they want to view it.
+    notificationMessage = (
+      <SafeMarkdown
+        markdown={i18n.sectionsNotificationJoinSuccessForNonPlWrongPage({
+          sectionName: sectionName,
+          teacherHomepageUrl: studio('/home'),
+        })}
+      />
+    );
+  } else if (!showingPlSections && joiningPlSection) {
+    // Notify user if they are joining a Professional Learning section not on the My PL page
+    // so they'll have to go to the My PL page if they want to view it.
+    notificationMessage = (
+      <SafeMarkdown
+        markdown={i18n.sectionsNotificationJoinSuccessForPlWrongPage({
+          sectionName: sectionName,
+          myPlUrl: studio('/my-professional-learning'),
+        })}
+      />
+    );
+  } else {
+    notificationMessage = i18n.sectionsNotificationJoinSuccess({sectionName});
+  }
+
+  return (
+    <Notification
+      type="success"
+      notice={i18n.sectionsNotificationSuccess()}
+      details={notificationMessage}
+      dismissible={true}
+    />
+  );
+};
 JoinSectionSuccessNotification.propTypes = {
-  sectionName: PropTypes.string.isRequired
+  sectionName: PropTypes.string.isRequired,
+  showingPlSections: PropTypes.bool,
+  joiningPlSection: PropTypes.bool,
 };
 
 const LeaveSectionSuccessNotification = ({sectionName, sectionId}) => (
@@ -79,7 +127,7 @@ const JoinSectionNotFoundNotification = ({sectionId}) => (
   />
 );
 JoinSectionNotFoundNotification.propTypes = {
-  sectionId: PropTypes.string.isRequired
+  sectionId: PropTypes.string.isRequired,
 };
 
 const JoinSectionFullNotification = ({sectionId, sectionCapacity}) => (
@@ -88,14 +136,14 @@ const JoinSectionFullNotification = ({sectionId, sectionCapacity}) => (
     notice={i18n.sectionsNotificationFailure()}
     details={i18n.sectionsNotificationJoinFull({
       sectionId,
-      sectionCapacity
+      sectionCapacity,
     })}
     dismissible={true}
   />
 );
 JoinSectionFullNotification.propTypes = {
   sectionId: PropTypes.string.isRequired,
-  sectionCapacity: PropTypes.number.isRequired
+  sectionCapacity: PropTypes.number.isRequired,
 };
 
 const JoinSectionRestrictedNotification = ({sectionId}) => (
@@ -107,7 +155,7 @@ const JoinSectionRestrictedNotification = ({sectionId}) => (
   />
 );
 JoinSectionRestrictedNotification.propTypes = {
-  sectionId: PropTypes.string.isRequired
+  sectionId: PropTypes.string.isRequired,
 };
 
 const JoinSectionFailNotification = ({sectionId}) => (
@@ -137,7 +185,7 @@ const JoinSectionParticipantNotification = ({sectionId}) => (
     type="failure"
     notice={i18n.sectionsNotificationFailure()}
     details={i18n.sectionsNotificationCantBeParticipant({
-      sectionId
+      sectionId,
     })}
     dismissible={true}
   />

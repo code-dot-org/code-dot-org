@@ -1,11 +1,13 @@
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
 
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 const DEFAULT_PROPS = {
-  uploadsEnabled: true
+  uploadsEnabled: true,
 };
 
 describe('AssetManager', () => {
@@ -14,7 +16,7 @@ describe('AssetManager', () => {
   beforeEach(() => {
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
-    xhr.onCreate = function(xhr) {
+    xhr.onCreate = function (xhr) {
       requests.push(xhr);
     };
   });
@@ -87,10 +89,10 @@ describe('AssetManager', () => {
               filename: 'name.jpg',
               category: 'image',
               size: 100,
-              versionId: 'asldfklsakdfj'
-            }
+              versionId: 'asldfklsakdfj',
+            },
           ],
-          filesVersionId: 'fake-version'
+          filesVersionId: 'fake-version',
         })
       );
 

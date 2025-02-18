@@ -17,6 +17,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def authorized_teacher_access
+    return unless (user = current_user)
+    user.permission = UserPermission::AUTHORIZED_TEACHER
+    user.save!
+    head :ok
+  end
+
   def plc_reviewer_access
     return unless (user = current_user)
     user.permission = UserPermission::PLC_REVIEWER
@@ -68,7 +75,13 @@ class TestController < ApplicationController
     return unless (user = current_user)
     script = Unit.find_by_name(params.require(:script_name))
 
-    Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    render json: {section_code: section.code}
+  end
+
+  def create_student_section_with_name
+    return unless (user = current_user)
+    Section.create!(name: params[:section_name], user: user, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     head :ok
   end
 
@@ -77,19 +90,24 @@ class TestController < ApplicationController
     script = Unit.find_by_name(params.require(:script_name))
     course = UnitGroup.find_by_name(params.require(:course_name))
 
-    name = "Fake User"
-    email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
-    password = name + "password"
-    attributes = {
-      name: name,
-      email: email,
-      password: password,
-      user_type: "teacher",
-      age: "21+"
-    }
-    fake_user = User.create!(attributes)
+    teacher_email = params[:teacher_email]
+    if teacher_email
+      teacher_user = User.find_by_email(teacher_email)
+    else
+      name = "Fake User"
+      email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+      password = name + "password"
+      attributes = {
+        name: name,
+        email: email,
+        password: password,
+        user_type: "teacher",
+        age: "21+"
+      }
+      teacher_user = User.create!(attributes)
+    end
 
-    section = Section.create(name: "New Section", user: fake_user, script_id: script.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create(name: "New Section", user: teacher_user, script_id: script.id, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
@@ -99,19 +117,24 @@ class TestController < ApplicationController
     return unless (user = current_user)
     script = Unit.find_by_name(params.require(:script_name))
 
-    name = "Fake User"
-    email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
-    password = name + "password"
-    attributes = {
-      name: name,
-      email: email,
-      password: password,
-      user_type: "teacher",
-      age: "21+"
-    }
-    fake_user = User.create!(attributes)
+    teacher_email = params[:teacher_email]
+    if teacher_email
+      teacher_user = User.find_by_email(teacher_email)
+    else
+      name = "Fake User"
+      email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+      password = name + "password"
+      attributes = {
+        name: name,
+        email: email,
+        password: password,
+        user_type: "teacher",
+        age: "21+"
+      }
+      teacher_user = User.create!(attributes)
+    end
 
-    section = Section.create(name: "New Section", user: fake_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create(name: "New Section", user: teacher_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
@@ -192,7 +215,7 @@ class TestController < ApplicationController
   end
 
   # Use the same data from pd_teacher_application_hash_common
-  # We can't use the factory directly because FactoryGirl is not available on prod
+  # We can't use the factory directly because FactoryBot is not available on prod
   def teacher_form_data
     {
       school: School.first.id,
@@ -222,6 +245,7 @@ class TestController < ApplicationController
       previous_yearlong_cdo_pd: ['CS in Science'],
       enough_course_hours: Pd::Application::TeacherApplication.options[:enough_course_hours].first,
       program: 'csp',
+      will_teach: 'Yes',
       csp_which_grades: ['11', '12'],
       csp_how_offer: 'As an AP course',
       csd_which_grades: ['6', '7'],
@@ -229,13 +253,13 @@ class TestController < ApplicationController
       csa_how_offer: 'As an AP course',
       csa_phone_screen: 'Yes',
       csa_already_know: 'Yes',
-      replace_existing: 'No, this course will be added to the schedule in addition to an existing computer science course'
+      pay_fee: 'Yes, my school/district would be able to pay the full program fee.'
     }
   end
 
   def create_teacher_application
     return unless (user = current_user)
-    regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}")
+    regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}", is_active: true)
 
     RegionalPartnerProgramManager.create!(program_manager_id: user.id, regional_partner_id: regional_partner.id)
 
@@ -254,13 +278,12 @@ class TestController < ApplicationController
     form_data = teacher_form_data.merge(
       first_name: teacher_name,
       last_name: 'Test',
+      regional_partner_id: regional_partner.id,
       program: Pd::Application::TeacherApplication::PROGRAMS[:csp]
     ).to_json
     application = Pd::Application::TeacherApplication.create!(
       user: teacher,
       form_data: form_data,
-      regional_partner_id: regional_partner.id,
-      course: 'csp',
       status: 'unreviewed'
     )
 
@@ -269,7 +292,7 @@ class TestController < ApplicationController
 
   def create_applications
     %w(csd csp csa).each do |course|
-      (Pd::Application::TeacherApplication.statuses).each do |status|
+      Pd::Application::TeacherApplication.statuses.each do |status|
         teacher_email = "#{course}_#{status}@code.org"
         teacher = User.find_or_create_teacher(
           {name: "#{course} #{status}", email: teacher_email}, nil, nil
@@ -311,6 +334,97 @@ class TestController < ApplicationController
     Pd::Application::TeacherApplication.find(params[:application_id].to_i).destroy
     User.find(params[:teacher_id].to_i).destroy
     User.find_by(name: params[:pm_name]).destroy
+    head :ok
+  end
+
+  def delete_workshop
+    Pd::Workshop.find_by_id(params[:workshop_id]).destroy
+    head :ok
+  end
+
+  def create_pilot
+    name = params.require(:pilot_name)
+    Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)
+    head :ok
+  end
+
+  def set_single_user_experiment
+    SingleUserExperiment.find_or_create_by!(
+      min_user_id: current_user.id,
+      name: params[:experiment_name]
+    )
+    head :ok
+  end
+
+  def set_single_section_experiment
+    SingleSectionExperiment.find_or_create_by!(
+      name: params[:experiment_name],
+      section: current_user.sections.first,
+      script: Unit.find_by(name: params[:script_name])
+    )
+    head :ok
+  end
+
+  def get_validate_rubric_ai_config
+    AiRubricConfig.validate_ai_config
+    render plain: 'OK'
+  end
+
+  def complete_unit
+    unit_name = params.require(:unit_name)
+    unit = Unit.find_by!(name: unit_name)
+    UserScript.create!(user: current_user, script: unit, completed_at: Time.now)
+    head :ok
+  end
+
+  # Creates the user and signs them in.
+  def create_user
+    user_params = params.require(:user)
+    user_opts = user_params.permit(
+      :user_type,
+      :email,
+      :password,
+      :password_confirmation,
+      :name,
+      :age,
+      :username,
+      :terms_of_service_version,
+      :sign_in_count,
+      :parent_email_preference_opt_in_required,
+      :parent_email_preference_opt_in,
+      :parent_email_preference_email,
+      :parent_email_preference_request_ip,
+      :parent_email_preference_source,
+      :provider,
+      :email_preference_opt_in,
+      :email_preference_form_kind,
+      :email_preference_request_ip,
+      :email_preference_source,
+      :created_at,
+      :country_code,
+      :us_state,
+      :user_provided_us_state,
+      :data_transfer_agreement_accepted,
+      :data_transfer_agreement_request_ip,
+      :data_transfer_agreement_kind,
+      :data_transfer_agreement_source,
+      :data_transfer_agreement_at,
+    )
+    if user_params[:sso]
+      user = User.new(**user_opts)
+      User.initialize_new_oauth_user(user, OmniAuth::AuthHash.new({provider: user_params[:sso], uid: user_params[:uid], info: {name: user_params[:name]}}), user_params)
+      user.save!
+    else
+      user = User.create!(**user_opts)
+    end
+    sign_in user
+    head :ok
+  end
+
+  # Accepts a parental request that was submitted by the current user
+  def accept_parental_request
+    permission_request = ParentalPermissionRequest.find_by(user: current_user)
+    Services::ChildAccount.grant_permission_request!(permission_request)
     head :ok
   end
 end

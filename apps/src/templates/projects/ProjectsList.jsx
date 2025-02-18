@@ -1,15 +1,16 @@
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
-import orderBy from 'lodash/orderBy';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
 
 import commonMsg from '@cdo/locale';
 
-import wrappedSortable from '../tables/wrapped_sortable';
 import {ImageWithStatus} from '../ImageWithStatus';
-import {PROJECT_TYPE_MAP} from './projectTypeMap';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import {PROJECT_TYPE_MAP} from './projectTypeMap';
 
 const THUMBNAIL_SIZE = 50;
 
@@ -19,7 +20,7 @@ export const COLUMNS = {
   PROJECT_NAME: 1,
   STUDENT_NAME: 2,
   APP_TYPE: 3,
-  LAST_EDITED: 4
+  LAST_EDITED: 4,
 };
 
 /** @enum {number} */
@@ -27,7 +28,7 @@ export const COLUMNS_WITHOUT_THUMBNAILS = {
   PROJECT_NAME: 0,
   STUDENT_NAME: 1,
   APP_TYPE: 2,
-  LAST_EDITED: 3
+  LAST_EDITED: 3,
 };
 
 const typeFormatter = type => {
@@ -53,7 +54,7 @@ class ProjectsList extends React.Component {
     showProjectThumbnails: PropTypes.bool.isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string.isRequired
+    studioUrlPrefix: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -65,9 +66,9 @@ class ProjectsList extends React.Component {
       sortingColumns: {
         [sortingColumn]: {
           direction: 'desc',
-          position: 0
-        }
-      }
+          position: 0,
+        },
+      },
     };
   }
 
@@ -84,10 +85,10 @@ class ProjectsList extends React.Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -105,9 +106,7 @@ class ProjectsList extends React.Component {
     const type = encodeURIComponent(rowData.type);
     const channel = encodeURIComponent(rowData.channel);
 
-    const url = `${
-      this.props.studioUrlPrefix
-    }/projects/${type}/${channel}/view`;
+    const url = `${this.props.studioUrlPrefix}/projects/${type}/${channel}/view`;
     return (
       <a
         href={url}
@@ -136,12 +135,12 @@ class ProjectsList extends React.Component {
     const thumbnailColumn = {
       property: 'thumbnailUrl',
       header: {
-        props: {style: tableLayoutStyles.headerCell}
+        props: {style: tableLayoutStyles.headerCell},
       },
       cell: {
         formatters: [thumbnailFormatter],
-        props: {style: tableLayoutStyles.cell}
-      }
+        props: {style: tableLayoutStyles.cell},
+      },
     };
     const standardColumns = [
       {
@@ -149,48 +148,48 @@ class ProjectsList extends React.Component {
         header: {
           label: commonMsg.projectName(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.nameFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
+          props: {style: tableLayoutStyles.cell},
+        },
       },
       {
         property: 'studentName',
         header: {
           label: commonMsg.studentName(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
-          props: {style: tableLayoutStyles.cell}
-        }
+          props: {style: tableLayoutStyles.cell},
+        },
       },
       {
         property: 'type',
         header: {
           label: commonMsg.projectType(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [typeFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
+          props: {style: tableLayoutStyles.cell},
+        },
       },
       {
         property: 'updatedAt',
         header: {
           label: commonMsg.lastEdited(),
           props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.dateFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
-      }
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
     ];
 
     return this.props.showProjectThumbnails
@@ -211,7 +210,7 @@ class ProjectsList extends React.Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(this.props.projectsData);
 
     return (
@@ -233,14 +232,14 @@ const styles = {
     border: '1px solid gray',
     width: THUMBNAIL_SIZE,
     minWidth: THUMBNAIL_SIZE,
-    padding: 0
+    padding: 0,
   },
   thumbnailWrapper: {
     height: THUMBNAIL_SIZE,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 export default ProjectsList;

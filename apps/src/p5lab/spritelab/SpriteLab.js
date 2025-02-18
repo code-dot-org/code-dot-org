@@ -1,15 +1,18 @@
+import React from 'react';
+
+import {getStore} from '@cdo/apps/redux';
+import Sounds from '@cdo/apps/Sounds';
 import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/spritelab/locale';
-import P5Lab from '../P5Lab';
-import {P5LabType} from '../constants';
-import Sounds from '@cdo/apps/Sounds';
-import {getStore} from '@cdo/apps/redux';
-import {clearConsole} from '../redux/textConsole';
-import {clearPrompts, popPrompt} from '../redux/spritelabInput';
-import CoreLibrary from './CoreLibrary';
-import React from 'react';
-import {singleton as studioApp} from '../../StudioApp';
+
 import {closeWorkspaceAlert} from '../../code-studio/projectRedux';
+import {singleton as studioApp} from '../../StudioApp';
+import {P5LabType} from '../constants';
+import P5Lab from '../P5Lab';
+import {clearPrompts, popPrompt} from '../redux/spritelabInput';
+import {clearConsole} from '../redux/textConsole';
+
+import CoreLibrary from './CoreLibrary';
 
 export default class SpriteLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -30,7 +33,7 @@ export default class SpriteLab extends P5Lab {
       console.warn('cannot create SpriteLab library without p5 instance');
       return;
     }
-    return new CoreLibrary(args.p5);
+    return new CoreLibrary(args.p5, this.JSInterpreter);
   }
 
   async preloadSpriteImages_() {
@@ -43,7 +46,7 @@ export default class SpriteLab extends P5Lab {
   preloadLabAssets() {
     return Promise.all([
       this.preloadSpriteImages_(),
-      this.p5Wrapper.preloadBackgrounds()
+      this.p5Wrapper.preloadBackgrounds(),
     ]);
   }
 
@@ -109,7 +112,7 @@ export default class SpriteLab extends P5Lab {
         'div',
         {},
         this.getMsg().workspaceAlertError({
-          error: msg || ''
+          error: msg || '',
         })
       ),
       true /* bottom */
@@ -133,7 +136,7 @@ export default class SpriteLab extends P5Lab {
   setupReduxSubscribers(store) {
     super.setupReduxSubscribers(store);
     let state = {};
-    store.subscribe(function() {
+    store.subscribe(function () {
       const lastState = state;
       state = store.getState();
 

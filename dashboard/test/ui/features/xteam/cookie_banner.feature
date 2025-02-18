@@ -5,7 +5,6 @@ Scenario Outline: Show cookie banner, dismiss it and confirm it's dismissed
   When I open my eyes to test "<test_name>"
   And I am on "<url>?show_cookie_banner_on_test=true"
   And I dismiss the language selector
-  And I rotate to landscape
   And I wait to see "#accept-cookies"
   Then I see no difference for "initial load with cookie banner"
 

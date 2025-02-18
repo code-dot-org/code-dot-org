@@ -10,3 +10,5 @@ right 'option 4'
 right 'option 5'
 right 'option 6'
 right 'option 7'
+
+allow_multiple_attempts true

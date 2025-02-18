@@ -1,14 +1,16 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import msg from '@cdo/locale';
+
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('VersionRow', () => {
   const MINIMUM_PROPS = {
     versionId: 'abcdef',
-    lastModified: new Date()
+    lastModified: new Date(),
   };
 
   it('renders preview and restore buttons for a non-latest version', () => {

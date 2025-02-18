@@ -14,6 +14,12 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
     assert_equal 1, lesson.programming_expressions.length
   end
 
+  test 'programming expression in lesson cannot be destroyed' do
+    lesson = create :lesson
+    programming_expression = create :programming_expression, lessons: [lesson]
+    refute programming_expression.destroy
+  end
+
   class KeyConstraintTests < ActiveSupport::TestCase
     setup do
       @programming_environment = create :programming_environment

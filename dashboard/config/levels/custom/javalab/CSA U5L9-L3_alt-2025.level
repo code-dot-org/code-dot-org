@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:26:05.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">anotherEdgeDetection()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImagePlus</code> class. How is this method similar and different from the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">detectEdges()</code> method?\r\n\r\nAdd the following code to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nscene.drawImageWithAltEdges(donutEdges);\r\n</pre>\r\n\r\nExperiment with different values for the edge distance in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawImageWithAltEdges()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene</code> class. You can try increasing or decreasing the value to see how it affects the edge detection.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U5L9-Manipulations PBT_alt-2025",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:26:05.544+00:00\",\"changed\":[\"cloned from \\\"CSA U5L9-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L9-L3_pilot-2025\"}]"
+}]]></config>
+</Javalab>

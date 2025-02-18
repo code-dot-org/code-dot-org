@@ -10,7 +10,8 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Spinner from '../../components/spinner';
+
+import Spinner from '../../../../sharedComponents/Spinner';
 
 export default class WorkshopTableLoader extends React.Component {
   static propTypes = {
@@ -18,12 +19,12 @@ export default class WorkshopTableLoader extends React.Component {
     queryParams: PropTypes.object,
     canDelete: PropTypes.bool, // When true, sets child prop onDelete to this.handleDelete
     children: PropTypes.element.isRequired, // Require exactly 1 child component.
-    hideNoWorkshopsMessage: PropTypes.bool // Should we show "no workshops found" if no workshops are found?
+    hideNoWorkshopsMessage: PropTypes.bool, // Should we show "no workshops found" if no workshops are found?
   };
 
   state = {
     loading: true,
-    workshops: null
+    workshops: null,
   };
 
   UNSAFE_componentWillMount() {
@@ -65,11 +66,11 @@ export default class WorkshopTableLoader extends React.Component {
     this.loadRequest = $.ajax({
       method: 'GET',
       url: url,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
         loading: false,
-        workshops: data
+        workshops: data,
       });
     });
   };
@@ -86,7 +87,7 @@ export default class WorkshopTableLoader extends React.Component {
   handleDelete = workshopId => {
     this.deleteRequest = $.ajax({
       method: 'DELETE',
-      url: '/api/v1/pd/workshops/' + workshopId
+      url: '/api/v1/pd/workshops/' + workshopId,
     }).done(() => {
       this.load();
     });
@@ -96,7 +97,11 @@ export default class WorkshopTableLoader extends React.Component {
     if (this.state.loading) {
       return (
         // While reloading, preserve the height of the previous child component so the refresh is smoother.
-        <div style={{height: this.childHeight}}>
+        <div
+          style={{height: this.childHeight}}
+          // eslint-disable-next-line react/forbid-dom-props
+          data-testid={'enrolled-workshops-loader'}
+        >
           <Spinner />
         </div>
       );
@@ -114,7 +119,7 @@ export default class WorkshopTableLoader extends React.Component {
       <div ref={el => (this.childElement = el)}>
         {React.cloneElement(this.props.children, {
           workshops: this.state.workshops,
-          onDelete: this.props.canDelete ? this.handleDelete : null
+          onDelete: this.props.canDelete ? this.handleDelete : null,
         })}
       </div>
     );

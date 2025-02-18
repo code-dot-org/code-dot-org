@@ -1,32 +1,32 @@
 ECS Support Legacy:
-  id: 3
+  id: 104
   name: ECS Support Legacy
-  properties: '{"family_name":"ECS Support Legacy","version_year":"unversioned"}'
+  properties: "{}"
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &1 2020-09-11 00:59:30.000000000 Z
-    zone: &2 !ruby/object:ActiveSupport::TimeZone
+    utc: 2021-11-11 11:45:40.000000000 Z
+    zone: &1 !ruby/object:ActiveSupport::TimeZone
       name: Etc/UTC
-    time: *1
+    time: 2021-11-11 11:45:40.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &3 2022-04-22 05:13:17.000000000 Z
-    zone: *2
-    time: *3
+    utc: 2024-04-22 22:49:40.000000000 Z
+    zone: *1
+    time: 2024-04-22 22:49:40.000000000 Z
   published_state: beta
   instruction_type: teacher_led
   instructor_audience: teacher
   participant_audience: student
 allthethingscourse:
-  id: 25
+  id: 129
   name: allthethingscourse
   properties: '{"family_name":"allthethingscourse","version_year":"unversioned"}'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &4 2020-09-11 01:47:52.000000000 Z
-    zone: *2
-    time: *4
+    utc: 2021-11-11 11:57:04.000000000 Z
+    zone: *1
+    time: 2021-11-11 11:57:04.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: &5 2022-04-08 22:56:30.000000000 Z
-    zone: *2
-    time: *5
+    utc: 2022-04-14 00:02:11.000000000 Z
+    zone: *1
+    time: 2022-04-14 00:02:11.000000000 Z
   published_state: beta
   instruction_type: teacher_led
   instructor_audience: teacher

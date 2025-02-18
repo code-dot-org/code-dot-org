@@ -1,9 +1,11 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {TestableCodeWorkspaceContainer as CodeWorkspaceContainer} from '@cdo/apps/templates/CodeWorkspaceContainer';
 import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('CodeWorkspaceContainer', () => {
   let wrapper;
@@ -11,7 +13,7 @@ describe('CodeWorkspaceContainer', () => {
   const MINIMUM_PROPS = {
     hidden: false,
     isRtl: false,
-    noVisualization: false
+    noVisualization: false,
   };
 
   beforeEach(() => {
@@ -99,7 +101,7 @@ describe('CodeWorkspaceContainer', () => {
     expect(wrapper).to.have.style('marginLeft', '0px');
 
     wrapper.setProps({
-      noVisualization: true
+      noVisualization: true,
     });
     expect(wrapper).to.have.style('left', '0px');
     expect(wrapper).to.have.style('right', '0px');

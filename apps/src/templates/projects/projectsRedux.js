@@ -1,12 +1,16 @@
 /** @file Redux actions and reducer for the Projects Gallery */
-import {combineReducers} from 'redux';
+
 import $ from 'jquery';
 import _ from 'lodash';
-import {Galleries, MAX_PROJECTS_PER_CATEGORY} from './projectConstants';
-import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
-import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
-import {channels as channelsApi} from '../../clientApi';
+import {combineReducers} from 'redux';
+
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+
+import {channels as channelsApi} from '../../clientApi';
+
+import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
+import {Galleries} from './projectConstants';
+import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 
 // Action types
 
@@ -30,16 +34,17 @@ const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 const SAVE_SUCCESS = 'projects/SAVE_SUCCESS';
 const SAVE_FAILURE = 'project/SAVE_FAILURE';
 const UNSET_NAME_FAILURE = 'project/UNSET_NAME_FAILURE';
+const SET_CAPTCHA_KEY = 'projects/SET_CAPTCHA_KEY';
 
 // Action creators
 
 /**
  * Select a gallery to display on the projects page.
  * @param {string} projectType Default: 'PUBLIC'
- * @returns {{type: string, projectType: string}}
+ * @returns {{type: string, galleryType: string}}
  */
-export function selectGallery(projectType = Galleries.PUBLIC) {
-  return {type: TOGGLE_GALLERY, projectType};
+export function selectGallery(galleryType = Galleries.PUBLIC) {
+  return {type: TOGGLE_GALLERY, galleryType};
 }
 
 /**
@@ -122,6 +127,10 @@ export function unsetNameFailure(projectId) {
   return {type: UNSET_NAME_FAILURE, projectId};
 }
 
+export function setCaptchaKey(captchaSiteKey) {
+  return {type: SET_CAPTCHA_KEY, captchaSiteKey};
+}
+
 // Reducers
 
 const initialSelectedGalleryState = Galleries.PUBLIC;
@@ -129,7 +138,22 @@ const initialSelectedGalleryState = Galleries.PUBLIC;
 function selectedGallery(state = initialSelectedGalleryState, action) {
   switch (action.type) {
     case TOGGLE_GALLERY:
-      return action.projectType;
+      return action.galleryType;
+    default:
+      return state;
+  }
+}
+
+const initialCaptchaState = {
+  captchaSiteKey: '',
+};
+
+function captcha(state = initialCaptchaState, action) {
+  switch (action.type) {
+    case SET_CAPTCHA_KEY:
+      return {
+        captchaSiteKey: action.captchaSiteKey,
+      };
     default:
       return state;
   }
@@ -144,7 +168,7 @@ const initialProjectListState = {
   artist: [],
   dance: [],
   poetry: [],
-  thebadguys: []
+  thebadguys: [],
 };
 
 function projectLists(state = initialProjectListState, action) {
@@ -157,7 +181,7 @@ function projectLists(state = initialProjectListState, action) {
       const {projects, projectType} = action;
       return {
         ...state,
-        [projectType]: _.unionBy(state[projectType], projects, 'channel')
+        [projectType]: _.unionBy(state[projectType], projects, 'channel'),
       };
     }
     case PREPEND_PROJECTS: {
@@ -165,7 +189,7 @@ function projectLists(state = initialProjectListState, action) {
       const {projects, projectType} = action;
       return {
         ...state,
-        [projectType]: _.unionBy(projects, state[projectType], 'channel')
+        [projectType]: _.unionBy(projects, state[projectType], 'channel'),
       };
     }
     default:
@@ -186,7 +210,7 @@ const initialHasOlderProjects = {
   artist: true,
   minecraft: true,
   events: true,
-  k1: true
+  k1: true,
 };
 
 function hasOlderProjects(state = initialHasOlderProjects, action) {
@@ -194,7 +218,7 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
     case SET_HAS_OLDER_PROJECTS:
       return {
         ...state,
-        [action.projectType]: action.hasOlderProjects
+        [action.projectType]: action.hasOlderProjects,
       };
     default:
       return state;
@@ -203,7 +227,7 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
 
 const initialPersonalProjectsList = {
   projects: [],
-  isLoading: false
+  isLoading: false,
 };
 
 function personalProjectsList(state = initialPersonalProjectsList, action) {
@@ -211,12 +235,12 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
     case SET_PERSONAL_PROJECTS_LIST:
       return {
         ...state,
-        projects: action.personalProjectsList
+        projects: action.personalProjectsList,
       };
     case SET_LOADING_PERSONAL_PROJECTS_LIST:
       return {
         ...state,
-        isLoading: action.isLoading
+        isLoading: action.isLoading,
       };
     case UPDATE_PERSONAL_PROJECT_DATA:
       var projectsList = [...state.projects];
@@ -227,7 +251,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
 
       return {
         ...state,
-        projects: projectsList
+        projects: projectsList,
       };
     case PUBLISH_SUCCESS:
       if (!state.projects?.length) {
@@ -243,17 +267,17 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       var updatedProjects = [...state.projects];
       updatedProjects[publishedProjectIndex] = {
         ...updatedProjects[publishedProjectIndex],
-        publishedAt: action.lastPublishedAt
+        publishedAt: action.lastPublishedAt,
       };
 
       return {
         ...state,
-        projects: updatedProjects
+        projects: updatedProjects,
       };
     case UNPUBLISH_REQUEST:
       return {
         ...state,
-        isUnpublishPending: true
+        isUnpublishPending: true,
       };
     case UNPUBLISH_SUCCESS:
       var unpublishedChannel = action.projectId;
@@ -265,17 +289,17 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       var newProjects = [...state.projects];
       newProjects[unpublishedProjectIndex] = {
         ...newProjects[unpublishedProjectIndex],
-        publishedAt: null
+        publishedAt: null,
       };
 
       return {
         ...state,
-        projects: newProjects
+        projects: newProjects,
       };
     case UNPUBLISH_FAILURE:
       return {
         ...state,
-        isUnpublishPending: false
+        isUnpublishPending: false,
       };
     case DELETE_SUCCESS:
       var deletedChannel = action.projectId;
@@ -289,7 +313,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
 
       return {
         ...state,
-        projects: projects
+        projects: projects,
       };
     case START_RENAMING_PROJECT:
       var projectToRename = action.projectId;
@@ -303,12 +327,12 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       updatedEditing[projectToRenameIndex] = {
         ...updatedEditing[projectToRenameIndex],
         isEditing: true,
-        updatedName: updatedEditing[projectToRenameIndex].name
+        updatedName: updatedEditing[projectToRenameIndex].name,
       };
 
       return {
         ...state,
-        projects: updatedEditing
+        projects: updatedEditing,
       };
     case UPDATE_PROJECT_NAME:
       var projectBeingRenamed = action.projectId;
@@ -321,12 +345,12 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
 
       projectsWithRename[projectBeingRenamedIndex] = {
         ...projectsWithRename[projectBeingRenamedIndex],
-        updatedName: action.updatedName
+        updatedName: action.updatedName,
       };
 
       return {
         ...state,
-        projects: projectsWithRename
+        projects: projectsWithRename,
       };
     case CANCEL_RENAMING_PROJECT:
       var projectNoLongerBeingRenamed = action.projectId;
@@ -339,11 +363,11 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
 
       updatedNotEditing[projectNoLongerBeingRenamedIndex] = {
         ...updatedNotEditing[projectNoLongerBeingRenamedIndex],
-        isEditing: false
+        isEditing: false,
       };
       return {
         ...state,
-        projects: updatedNotEditing
+        projects: updatedNotEditing,
       };
     case SAVE_SUCCESS:
       var recentlySavedProjectId = action.projectId;
@@ -361,12 +385,12 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         name: recentlySavedProject.updatedName,
         isSaving: false,
         isEditing: false,
-        updatedAt: action.lastUpdatedAt
+        updatedAt: action.lastUpdatedAt,
       };
 
       return {
         ...state,
-        projects: savedProjects
+        projects: savedProjects,
       };
     case SAVE_FAILURE:
       var saveAttemptProjectId = action.projectId;
@@ -382,7 +406,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       unsavedProjects[saveAttemptProjectIndex] = {
         ...saveAttemptProject,
         isSaving: false,
-        isEditing: false
+        isEditing: false,
       };
 
       if (action.projectNameFailure) {
@@ -393,7 +417,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
 
       return {
         ...state,
-        projects: unsavedProjects
+        projects: unsavedProjects,
       };
     case UNSET_NAME_FAILURE:
       var nameFailureProjectId = action.projectId;
@@ -408,12 +432,12 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
 
       nameFailureProjects[nameFailureProjectIndex] = {
         ...nameFailureProject,
-        projectNameFailure: undefined
+        projectNameFailure: undefined,
       };
 
       return {
         ...state,
-        projects: nameFailureProjects
+        projects: nameFailureProjects,
       };
     default:
       return state;
@@ -424,7 +448,8 @@ const reducer = combineReducers({
   selectedGallery,
   projectLists,
   hasOlderProjects,
-  personalProjectsList
+  personalProjectsList,
+  captcha,
 });
 export default reducer;
 
@@ -432,8 +457,8 @@ export const setPublicProjects = () => {
   return dispatch => {
     $.ajax({
       method: 'GET',
-      url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
-      dataType: 'json'
+      url: `/api/v1/projects/gallery/public/all`,
+      dataType: 'json',
     }).done(projectLists => {
       dispatch(setProjectLists(projectLists));
     });
@@ -446,7 +471,7 @@ export const setPersonalProjects = () => {
     $.ajax({
       method: 'GET',
       url: '/api/v1/projects/personal',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(personalProjectsList => {
         dispatch(setPersonalProjectsList(personalProjectsList));
@@ -463,7 +488,7 @@ const fetchProjectToUpdate = (projectId, onComplete) => {
     url: `/v3/channels/${projectId}`,
     method: 'GET',
     type: 'json',
-    contentType: 'application/json;charset=UTF-8'
+    contentType: 'application/json;charset=UTF-8',
   })
     .done(data => {
       onComplete(null, data);
@@ -483,7 +508,7 @@ export function unpublishProject(projectId) {
         () => {
           dispatch({
             type: UNPUBLISH_SUCCESS,
-            projectId: projectId
+            projectId: projectId,
           });
           resolve();
         },
@@ -509,7 +534,7 @@ export const updateProjectLibrary = (projectId, newData) => {
           method: 'POST',
           type: 'json',
           contentType: 'application/json;charset=UTF-8',
-          data: JSON.stringify(updatedData)
+          data: JSON.stringify(updatedData),
         });
         // the channels api returns `channel` as `id` but our redux object
         // expects `channel`. Adding that here.
@@ -544,7 +569,7 @@ const updateProjectNameOnServer = project => {
       method: 'POST',
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(project)
+      data: JSON.stringify(project),
     })
       .done(data => {
         dispatch(saveSuccess(project.id, data.updatedAt));
@@ -566,8 +591,4 @@ export const saveProjectName = (projectId, updatedName) => {
       }
     });
   };
-};
-
-export const remix = (projectId, projectType) => {
-  window.location = `/projects/${projectType}/${projectId}/remix`;
 };

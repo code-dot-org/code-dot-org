@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
-import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
-import FilterSet from '@cdo/apps/tutorialExplorer/filterSet';
+
 import FilterGroup from '@cdo/apps/tutorialExplorer/filterGroup';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
+import FilterSet from '@cdo/apps/tutorialExplorer/filterSet';
+import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
+
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const FAKE_ON_USER_INPUT = () => {};
 const FAKE_ORG_NAME = 'fake org name';
@@ -23,22 +25,22 @@ const DEFAULT_PROPS = {
       name: 'group-1',
       text: 'Group 1',
       entries: [],
-      singleEntry: false
+      singleEntry: false,
     },
     {
       name: 'group-2',
       text: 'Group 2',
       entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
-      singleEntry: false
-    }
+      singleEntry: false,
+    },
   ],
   selection: {
     'group-1': [],
-    'group-2': ['xyzzy']
+    'group-2': ['xyzzy'],
   },
   onUserInputFilter: FAKE_ON_USER_INPUT,
   onUserInputOrgName: FAKE_ON_ORG_NAME,
-  onUserInputSortBy: FAKE_ON_SORT_BY
+  onUserInputSortBy: FAKE_ON_SORT_BY,
 };
 
 describe('FilterSet', () => {
@@ -85,8 +87,8 @@ describe('FilterSet', () => {
             text: 'Group 1',
             entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
             singleEntry: false,
-            display: false
-          }
+            display: false,
+          },
         ]}
       />
     );
@@ -104,8 +106,8 @@ describe('FilterSet', () => {
             text: 'Group 1',
             entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
             singleEntry: false,
-            headerOnDesktop: true
-          }
+            headerOnDesktop: true,
+          },
         ]}
       />
     );
@@ -123,8 +125,8 @@ describe('FilterSet', () => {
             text: 'Group 1',
             entries: [{name: 'byzanz'}, {name: 'frobozz'}, {name: 'xyzzy'}],
             singleEntry: false,
-            headerOnDesktop: true
-          }
+            headerOnDesktop: true,
+          },
         ]}
       />
     );

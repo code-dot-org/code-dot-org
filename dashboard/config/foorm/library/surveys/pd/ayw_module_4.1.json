@@ -14,31 +14,34 @@
               "visible": "false"
             },
             {
-              "visibleIf": "{workshop_course}='CS Principles' or ({workshop_course}='CS Discoveries' and {workshop_id} <> '11840' and {workshop_id} <> '12271' and {workshop_id} <> '12121' and {workshop_id} <> '12594')",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
               "type": "rating",
               "name": "better_prepared_unit4",
               "title": "I feel better prepared to teach Unit 4 after attending this workshop.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "natalia_comment": "NATALIA's NOTE: removed for CSP - 09/25/2023."
             },
             {
-              "visibleIf": "{workshop_course}='CS Principles'",
+              "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='CS Discoveries'",
               "type": "rating",
               "name": "better_prepared_unit5",
-              "title": "I feel prepared to teach Unit 5 (I feel prepared to teach concepts such as lists, loops and traversals). ",
+              "title": "I feel prepared to teach Unit 5 after attending this workshop. ",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "natalia_comment": "NATALIA's NOTE: added for CSD - 09/25/2023."
             },
             {
               "visibleIf": "{workshop_course}='CS Principles'",
               "type": "rating",
               "name": "better_prepared_unit6",
-              "title": "I feel prepared to teach Unit 6 (I feel prepared to teach concepts such as algorithms, their efficiency, and the characteristics and uses of different types of algorithms).",
+              "title": "After attending this workshop, I feel prepared to teach Unit 6 (I feel prepared to teach concepts such as lists, loops and traversals).",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "natalia_comment": "NATALIA'S NOTE: Changed text for Unit 6-CSP - 09/25/2023 - Previous text in parenthesis: (I feel prepared to teach concepts such as algorithms, their efficiency, and the characteristics and uses of different types of algorithms)"
             },
             {
               "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '11840' or {workshop_id} = '12271' or {workshop_id} = '12121' or {workshop_id} = '12594')",
@@ -47,7 +50,8 @@
               "title": "I had opportunities to discuss CS Discoveries course implementation roadblocks and successes with peers during this module.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "natalia_comment": "NATALIA'S NOTE: This question was only applicable to the 2022 CSD pilot, leaving it to preserve the data"
             },
             {
               "visibleIf": "{workshop_course}='CS Discoveries or {workshop_course}='CS Principles'",
@@ -59,13 +63,14 @@
               "maxRateDescription": "Strongly agree"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "visibleIf": "{workshop_course}='CS Principles' and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
               "type": "html",
               "name": "question6",
-              "html": "<br/><br>The following two questions refer to <strong> using data to address barriers and opportunities to promote equity in your CS classroom:</strong>"
+              "html": "<br/><br>The following two questions refer to <strong> using data to address barriers and opportunities to promote equity in your CS classroom:</strong>",
+              "natalia_comment": "NATALIA's NOTE: removed for CSD and added conditional logic to hide for FL RPs - 09/25/2023."
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "visibleIf": "{workshop_course}='CS Principles' and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
               "type": "rating",
               "name": "understand_how_to_use_data",
               "indent": 3,
@@ -76,7 +81,7 @@
               "maxRateDescription": "Strongly agree"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries'  or {workshop_course}='CS Principles'",
+              "visibleIf": "{workshop_course}='CS Principles' and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
               "type": "rating",
               "name": "motivated_to_use_data",
               "indent": 3,
@@ -179,19 +184,20 @@
               "visibleIf": "{workshop_course}='CS Principles' or ({workshop_course}='CS Discoveries' and {workshop_id} <> '11840' and {workshop_id} <> '12271' and {workshop_id} <> '12121' and {workshop_id} <> '12594')",
               "type": "rating",
               "name": "strategies_ensure_inclusion_m4",
-              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom fosters a sense of belonging.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
             },
             {
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visible": false,
               "type": "rating",
               "name": "prepared_to_do_formative_assessment",
               "title": "As a result of this workshop, I am better prepared to utilize formative assessments in the CS Discoveries curriculum to support learning.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "natalia_comment": "NATALIA's NOTE: removed for CSD by changing the display logic in the visibleIf statement- 09/25/2023."
             },
             {
               "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '11840' or {workshop_id} = '12271' or {workshop_id} = '12121' or {workshop_id} = '12594')",
@@ -230,7 +236,7 @@
               "maxRateDescription": "Strongly agree"
             },
             {
-              "visibleIf": "{workshop_course}='CS Principles'",
+              "visibleIf": "{workshop_course}='CS Principles' and {workshop_agenda}<>'module4' and {workshop_agenda}<>'module3_4'",
               "type": "rating",
               "name": "understand_role_of_asssessment",
               "title": "I understand the role of assessments as opportunities to provide feedback to promote continuous growth.",

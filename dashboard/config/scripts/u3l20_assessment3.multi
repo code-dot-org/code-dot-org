@@ -9,3 +9,4 @@ right 'conditionals'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

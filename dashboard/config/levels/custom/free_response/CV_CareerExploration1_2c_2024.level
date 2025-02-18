@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-26T20:02:44.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Maria Than Interview",
+    "display_name": "Maria Than",
+    "bubble_choice_description": "Just a year into her graphic design degree, Maria Than felt lost, low and ready to drop out. That all changed when a university lecturer introduced her to augmented reality – and the rest, as she says, is history.",
+    "thumbnail_url": "https://images.code.org/4a90ef5a80e9761533d24025d9f5483c-1c_1.png",
+    "height": "150",
+    "placeholder": "What do you notice? What do you wonder?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "##How would you describe what you do?\r\nIn my design practice, I am the co-founder as well as creative and tech producer at Ricebox Studio, which I run alongside three of my friends – Anna Tsuda, Safiya Ahmed and Bristy Azmi. We’re called Ricebox because all four of us are from different Asian backgrounds (Japanese, Indian, Bengali, Vietnamese) and rice is our common cultural staple! Our mission is to use creative tech and design for social good, and we start conversations on important topics like sustainability and racism through alternative methods of communication. I’m also a part-time digital designer at Child Rights International Network (CRIN), where I work alongside policymakers and researchers to advocate for children’s rights in creative and accessible ways.\r\n\r\n##What are you working on lately?\r\nBeing a designer... built up my understanding of the current discussions and initiatives surrounding social issues on an international scale. That’s informed Ricebox projects like MUCChase – the AR treasure hunt about fast fashion and sustainability that we developed for the Responsive Fashion Institute – and On Your Side UK, the UK’s first national helpline service for East and Southeast Asian victims of hate crimes and racism, which we shaped the user experience and user interface for.\r\n\r\nMeanwhile, my personal ‘sandbox’ of solo projects has really expanded my practice too... creative tech has allowed me to try out new techniques for fun, such as 3D-scanning when creating a video for the musician SpiderPlant. My personal experience as an augmented reality (AR) Instagram filter designer has also fed into how I use AR within storytelling and activism, especially at Ricebox Studio.\r\n\r\n![](https://images.code.org/0929f6903497f2b8d8a1adff428a075d-image-1719434122475.png)\r\n\r\n##Would you say you need any specific training for what you do?\r\nYes and no. I graduated with a BA in Graphic Design, which taught me essential design principles, approaches to conceptual development and ways of pitching to clients. However, my skills in creative technologies were really a mix of formal and informal training.\r\n\r\nAR was self-taught – in fact, the majority of AR designers I know did not undergo formal training; we all used YouTube tutorials, plus we swapped advice and troubleshooting tips on Facebook groups.\r\n\r\nGenerative AI, programming, web development and physical computing were a mix. I started off trying to learn it all on my own, but it was an absolute car crash! I lacked diligence, was so confused and had a messy approach to troubleshooting, so I took to learning from people and enrolling in online courses instead. "
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-26 20:02:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 20:37:03 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-02 00:04:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,10 @@
+name 'gen-ai-foundations-studentsurvey-premodule-q5'
+question 'Which of the following do you expect will make learning difficult in Exploring Generative AI? (Choose top 2)'
+right 'Understanding complex concepts'
+right 'Keeping up with assignments'
+right 'Working on group projects'
+right 'Lack of interest in the topic'
+right 'No challenges'
+type 'multi2'
+
+allow_multiple_attempts true

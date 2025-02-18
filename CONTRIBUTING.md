@@ -12,6 +12,10 @@ You can start setting up with these next steps:
 
 2. Get your local development build working by following our [SETUP](SETUP.md). Fork our repo and make sure to merge our staging branch into yours **WEEKLY** as we do update frequently.
 
+## Architectural Tenets
+
+Please review and adhere to our [Architectural Tenets](ARCHITECTURE.md#architectural-tenets). This is not intended to be a full or current list of technical choices you should follow, instead its a small set of core decisions that you should be familiar with and should not change frequently.
+
 ## Code Style
 
 Please make sure your code conforms to our [style guide](STYLEGUIDE.md).  We have implemented linting to help you with this:
@@ -31,7 +35,7 @@ Please test your changes before submitting them to us!
 
 ### Manual testing
 
-We support recent versions of Firefox, Chrome, Internet Explorer, Edge, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in [IE9](docs/testing-ie9.md), iOS and Android if it's a risk. [Sauce Labs](https://saucelabs.com/manual) lets you run manual tests in these browsers remotely.
+We support recent versions of Firefox, Chrome, Edge, iOS Safari and the Android browsers ([full list of supported browsers and versions](https://support.code.org/hc/en-us/articles/202591743)). Be sure to try your feature out in iOS and Android if it's a risk. [Sauce Labs](https://saucelabs.com/manual) lets you run manual tests in these browsers remotely.
 
 ### Unit tests
 

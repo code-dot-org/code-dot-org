@@ -1,8 +1,14 @@
 /** @file controls below a dialog to delete animations */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Dialog, {Buttons, Cancel, Confirm} from '@cdo/apps/templates/Dialog';
+
+import Dialog, {
+  Buttons,
+  Cancel,
+  Confirm,
+} from '@cdo/apps/legacySharedComponents/Dialog';
 import i18n from '@cdo/locale';
+
 import {P5LabType} from '../constants';
 
 export default class DeleteAnimationDialog extends React.Component {
@@ -10,7 +16,7 @@ export default class DeleteAnimationDialog extends React.Component {
     onDelete: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
     isOpen: PropTypes.bool.isRequired,
-    labType: PropTypes.string.isRequired
+    labType: PropTypes.string.isRequired,
   };
 
   render() {

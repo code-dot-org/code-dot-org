@@ -5,3 +5,4 @@ right 'Yes, I took a class.'
 right 'Yes, some activities, but not a full class.'
 right 'Not sure.'
 right 'Definitely not.'
+allow_multiple_attempts true

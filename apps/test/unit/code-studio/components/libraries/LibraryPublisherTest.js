@@ -1,12 +1,14 @@
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import LibraryPublisher, {
-  PublishState
-} from '@cdo/apps/code-studio/components/libraries/LibraryPublisher';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
-import sinon from 'sinon';
+import LibraryPublisher, {
+  PublishState,
+} from '@cdo/apps/code-studio/components/libraries/LibraryPublisher';
+
+import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('LibraryPublisher', () => {
@@ -25,11 +27,11 @@ describe('LibraryPublisher', () => {
   const libraryName = 'libraryName';
   const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
 
-  before(() => {
+  beforeAll(() => {
     replaceOnWindow('dashboard', {
       project: {
-        setLibraryDetails: () => {}
-      }
+        setLibraryDetails: () => {},
+      },
     });
     sinon
       .stub(window.dashboard.project, 'setLibraryDetails')
@@ -40,7 +42,7 @@ describe('LibraryPublisher', () => {
     publishSpy = sinon.stub(libraryClientApi, 'publish');
   });
 
-  after(() => {
+  afterAll(() => {
     libraryParser.suggestName.restore();
     libraryParser.sanitizeName.restore();
     restoreOnWindow('dashboard');
@@ -54,7 +56,7 @@ describe('LibraryPublisher', () => {
       libraryDescription: defaultDescription,
       selectedFunctions: defaultSelectedFunctions,
       sourceFunctionList: sourceFunctionList,
-      librarySource: librarySource
+      librarySource: librarySource,
     };
     onPublishSuccess = sinon.stub();
     onUnpublishSuccess = sinon.stub();
@@ -67,7 +69,7 @@ describe('LibraryPublisher', () => {
       libraryDetails,
       libraryClientApi,
       unpublishProjectLibrary,
-      findProfanity
+      findProfanity,
     };
   });
 
@@ -84,24 +86,18 @@ describe('LibraryPublisher', () => {
       );
 
       expect(wrapper.state().libraryName).to.equal(libraryName);
-      expect(
-        wrapper
-          .find('input')
-          .first()
-          .props().value
-      ).to.equal(libraryName);
+      expect(wrapper.find('input').first().props().value).to.equal(libraryName);
     });
 
     it('filters invalid functions from selectedFunctions', () => {
-      libraryDetails.sourceFunctionList = libraryDetails.sourceFunctionList.concat(
-        [
+      libraryDetails.sourceFunctionList =
+        libraryDetails.sourceFunctionList.concat([
           {functionName: 'invalidFunc', comment: ''},
-          {functionName: 'validFunc', comment: 'hey'}
-        ]
-      );
+          {functionName: 'validFunc', comment: 'hey'},
+        ]);
       libraryDetails.selectedFunctions = {
         invalidFunc: true,
-        validFunc: true
+        validFunc: true,
       };
       let wrapper = shallow(
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
@@ -113,7 +109,7 @@ describe('LibraryPublisher', () => {
     it('disables checkbox for items without comments', () => {
       libraryDetails.sourceFunctionList.push({
         functionName: 'bar',
-        comment: ''
+        comment: '',
       });
       let wrapper = shallow(
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
@@ -125,12 +121,11 @@ describe('LibraryPublisher', () => {
     });
 
     it('disables checkbox for functions with duplicate names', () => {
-      libraryDetails.sourceFunctionList = libraryDetails.sourceFunctionList.concat(
-        [
+      libraryDetails.sourceFunctionList =
+        libraryDetails.sourceFunctionList.concat([
           {functionName: 'duplicate', comment: 'first dup!'},
-          {functionName: 'duplicate', comment: 'another dup!'}
-        ]
-      );
+          {functionName: 'duplicate', comment: 'another dup!'},
+        ]);
       let wrapper = shallow(
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
@@ -143,11 +138,11 @@ describe('LibraryPublisher', () => {
     it('checks checkboxes of selected functions', () => {
       libraryDetails.sourceFunctionList.push({
         functionName: 'bar',
-        comment: 'comment'
+        comment: 'comment',
       });
       libraryDetails.sourceFunctionList.push({
         functionName: 'baz',
-        comment: ''
+        comment: '',
       });
       libraryDetails.selectedFunctions = {bar: true, baz: true};
       let wrapper = shallow(
@@ -183,13 +178,13 @@ describe('LibraryPublisher', () => {
       server.respondWith('POST', `/profanity/find`, [
         status,
         {'Content-Type': 'application/json'},
-        JSON.stringify(serverData)
+        JSON.stringify(serverData),
       ]);
     };
 
     it('is disabled when no functions are checked', async () => {
       wrapper.setState({
-        libraryDescription: description
+        libraryDescription: description,
       });
 
       await wrapper.instance().validateAndPublish();
@@ -199,7 +194,7 @@ describe('LibraryPublisher', () => {
 
     it('is disabled when description is unset', async () => {
       wrapper.setState({
-        selectedFunctions: selectedFunctions
+        selectedFunctions: selectedFunctions,
       });
 
       await wrapper.instance().validateAndPublish();
@@ -216,7 +211,7 @@ describe('LibraryPublisher', () => {
 
       wrapper.setState({
         selectedFunctions: selectedFunctions,
-        libraryDescription: description
+        libraryDescription: description,
       });
       wrapper.instance().resetErrorMessage();
 
@@ -227,7 +222,7 @@ describe('LibraryPublisher', () => {
       stubFindProfanityRequest(200, ['fart']);
       wrapper.setState({
         libraryDescription: description,
-        selectedFunctions: selectedFunctions
+        selectedFunctions: selectedFunctions,
       });
       const publishSpy = sinon.spy(wrapper.instance(), 'publish');
 
@@ -241,7 +236,7 @@ describe('LibraryPublisher', () => {
       stubFindProfanityRequest(200, null);
       wrapper.setState({
         libraryDescription: description,
-        selectedFunctions: selectedFunctions
+        selectedFunctions: selectedFunctions,
       });
       const publishSpy = sinon.spy(wrapper.instance(), 'publish');
 
@@ -254,7 +249,7 @@ describe('LibraryPublisher', () => {
       stubFindProfanityRequest(500, null);
       wrapper.setState({
         libraryDescription: description,
-        selectedFunctions: selectedFunctions
+        selectedFunctions: selectedFunctions,
       });
       const publishSpy = sinon.spy(wrapper.instance(), 'publish');
 
@@ -266,12 +261,12 @@ describe('LibraryPublisher', () => {
     describe('with valid input', () => {
       it('sets error state when publish fails', async () => {
         publishSpy.callsArgWith(1, {
-          message: ''
+          message: '',
         });
         sinon.stub(console, 'warn');
         wrapper.setState({
           libraryDescription: description,
-          selectedFunctions: selectedFunctions
+          selectedFunctions: selectedFunctions,
         });
 
         await wrapper.instance().validateAndPublish();
@@ -285,12 +280,12 @@ describe('LibraryPublisher', () => {
 
       it('sets error state if library is too long', async () => {
         publishSpy.callsArgWith(1, {
-          message: 'httpStatusCode: 413; status: error; error: '
+          message: 'httpStatusCode: 413; status: error; error: ',
         });
         sinon.stub(console, 'warn');
         wrapper.setState({
           libraryDescription: description,
-          selectedFunctions: selectedFunctions
+          selectedFunctions: selectedFunctions,
         });
 
         await wrapper.instance().validateAndPublish();
@@ -300,11 +295,70 @@ describe('LibraryPublisher', () => {
         console.warn.restore();
       });
 
+      it('sets error state if library contains PII', async () => {
+        publishSpy.callsArgWith(1, {
+          message: 'httpStatusCode: 400; status: error; error: Bad request',
+          cause: {pIIWords: ['123-456-7890']},
+        });
+        sinon.stub(console, 'warn');
+        wrapper.setState({
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions,
+        });
+
+        await wrapper.instance().validateAndPublish();
+
+        expect(wrapper.state().publishState).to.equal(PublishState.PII_INPUT);
+        expect(wrapper.state().pIIWords).to.deep.equal(['123-456-7890']);
+
+        console.warn.restore();
+      });
+
+      it('sets generic error state if error has null cause', async () => {
+        publishSpy.callsArgWith(1, {
+          message: 'httpStatusCode: 400; status: error; error: Bad request',
+          cause: null,
+        });
+        sinon.stub(console, 'warn');
+        wrapper.setState({
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions,
+        });
+
+        await wrapper.instance().validateAndPublish();
+
+        expect(wrapper.state().publishState).to.equal(
+          PublishState.ERROR_PUBLISH
+        );
+
+        console.warn.restore();
+      });
+
+      it('sets generic error state if error has another cause', async () => {
+        publishSpy.callsArgWith(1, {
+          message: 'httpStatusCode: 400; status: error; error: Bad request',
+          cause: {profaneWords: ['fart']},
+        });
+        sinon.stub(console, 'warn');
+        wrapper.setState({
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions,
+        });
+
+        await wrapper.instance().validateAndPublish();
+
+        expect(wrapper.state().publishState).to.equal(
+          PublishState.ERROR_PUBLISH
+        );
+
+        console.warn.restore();
+      });
+
       it('calls onPublishSuccess when it succeeds', async () => {
         publishSpy.callsArg(2);
         wrapper.setState({
           libraryDescription: description,
-          selectedFunctions: selectedFunctions
+          selectedFunctions: selectedFunctions,
         });
 
         await wrapper.instance().validateAndPublish();
@@ -327,7 +381,7 @@ describe('LibraryPublisher', () => {
 
         wrapper.setState({
           libraryDescription: description,
-          selectedFunctions: selectedFunctions
+          selectedFunctions: selectedFunctions,
         });
 
         await wrapper.instance().validateAndPublish();
@@ -389,7 +443,7 @@ describe('LibraryPublisher', () => {
       const duplicateFunction = {functionName: 'duplicate', comment: 'comment'};
       libraryDetails.sourceFunctionList = [
         {...duplicateFunction},
-        {...duplicateFunction}
+        {...duplicateFunction},
       ];
       let wrapper = shallow(
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
@@ -414,7 +468,7 @@ describe('LibraryPublisher', () => {
       libraryDetails.sourceFunctionList = [
         {functionName: 'foo', comment: 'comment'},
         {functionName: 'bar', comment: 'comment'},
-        {functionName: 'invalidFunc'}
+        {functionName: 'invalidFunc'},
       ];
     });
 
@@ -440,7 +494,7 @@ describe('LibraryPublisher', () => {
       libraryDetails.sourceFunctionList = [
         {functionName: 'foo', comment: 'comment'},
         {functionName: 'bar', comment: 'comment'},
-        {functionName: 'invalidFunc'}
+        {functionName: 'invalidFunc'},
       ];
     });
 

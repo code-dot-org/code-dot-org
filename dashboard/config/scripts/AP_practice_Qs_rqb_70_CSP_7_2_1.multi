@@ -27,3 +27,5 @@ Learning Objective: **7.2.1** and Essential Knowledge statements: **7.2.1A**
  (D) The answer is correct.  A smart thermostat can learn from its user\'s preferences and set the temperature accordingly.   The keyboard learns what words the user normally uses and suggests words to type next.  A shopping site learns to recommend products a user is more likely to buy based on previous purchases.  
 
 MARKDOWN
+
+allow_multiple_attempts true

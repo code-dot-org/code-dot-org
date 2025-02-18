@@ -1,20 +1,19 @@
 Feature: Dance Party
   # This test relies on CloudFront signed cookies to access /restricted/ on the
-  # test machine, but uses SoundLibraryApi for access in CircleCI.
+  # test machine, but uses SoundLibraryApi for access in CI.
   Scenario: Restricted audio content is protected
     When I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does not contain "placeholder for testing"
 
     When I am on "http://studio.code.org/s/dance/lessons/1/levels/1"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does contain "placeholder for testing"
 
   @no_mobile
   Scenario: Can toggle run/reset in Dance Party
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/2?noautoplay=true"
-    And I rotate to landscape
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
     And I select age 10 in the age dialog
@@ -34,8 +33,7 @@ Feature: Dance Party
   @no_mobile
   Scenario: Can get to level success in Dance Party
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true"
-    And I rotate to landscape
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
     And I select age 10 in the age dialog
@@ -48,37 +46,45 @@ Feature: Dance Party
   @no_mobile
   Scenario: Dance Party 12 loads
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/12?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
   Scenario: Dance Party 8 runs new set tint block
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/8?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I select age 10 in the age dialog
     And I close the instructions overlay if it exists
     # drag the "set tint" block from the toolbox to below "after 4 measures"
-    And I drag Google Blockly block "14" to block "5"
+    And I drag block "setTint" to block "bottomChangeMove"
     And I press "runButton"
     And I wait until element ".congrats" is visible
 
   @as_student
   @no_mobile
+  @no_safari
   Scenario: Dance Party Share
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
-    And I rotate to landscape
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait for the song selector to load
     And element "#song_selector" has value "cheapthrills_sia"
 
     When I navigate to the shared version of my project
     And element ".signInOrAgeDialog" is hidden
+    # We run/reset here once before checking the number of sprites below which helps
+    # resolve some not fully understood test flakiness related to Dance Party's "preview mode".
+    # The level used in this test (Dance Party 2018, level 13) does not use preview mode but
+    # when the level is shared via `project.getShareUrl`, the standalone Dance project level
+    # does use preview mode.
+
     Then I click selector "#runButton" once I see it
-    Then I wait until element "#runButton" is not visible
-
-    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10"
-
     Then I click selector "#resetButton" once I see it
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
+
+    # Next check that correct number of sprites are displayed when program is run.
+    Then I click selector "#runButton"
+    Then I wait until element "#runButton" is not visible
+    Then evaluate JavaScript expression "window.__DanceTestInterface.getSprites().length === 10"
+    Then I click selector "#resetButton" once I see it
 
     And I select the "How it Works (View Code)" small footer item to load a new page
     And I wait for the song selector to load
@@ -96,8 +102,7 @@ Feature: Dance Party
   @no_mobile
   Scenario: Dance Party can share while logged out
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
-    And I rotate to landscape
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
     When I navigate to the shared version of my project
     Then I wait until element "#runButton" is visible

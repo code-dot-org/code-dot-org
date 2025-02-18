@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NewCourseForm from '@cdo/apps/lib/levelbuilder/course-editor/NewCourseForm';
+
+import NewCourseForm from '@cdo/apps/levelbuilder/course-editor/NewCourseForm';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {

@@ -9,3 +9,5 @@ question 'local variable'
 answer 'where a variable can be used'
 question 'instance variable'
 answer 'a variable declared and accessible within a specific block of code'
+
+allow_multiple_attempts true

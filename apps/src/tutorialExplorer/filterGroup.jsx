@@ -4,8 +4,9 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import FilterGroupContainer from './filterGroupContainer';
+
 import FilterChoice from './filterChoice';
+import FilterGroupContainer from './filterGroupContainer';
 
 export default class FilterGroup extends React.Component {
   static propTypes = {
@@ -14,7 +15,7 @@ export default class FilterGroup extends React.Component {
     filterEntries: PropTypes.array.isRequired,
     selection: PropTypes.array.isRequired,
     onUserInput: PropTypes.func.isRequired,
-    singleEntry: PropTypes.bool.isRequired
+    singleEntry: PropTypes.bool.isRequired,
   };
 
   render() {

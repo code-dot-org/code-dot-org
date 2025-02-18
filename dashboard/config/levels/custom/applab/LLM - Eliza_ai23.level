@@ -1,0 +1,46 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2023-07-31T20:43:43.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "skin": "applab",
+    "validation_enabled": "false",
+    "embed": "true",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "start_blocks": "// Define a set of patterns and corresponding responses\r\nvar patterns = [\r\n  {\r\n    pattern: /^$/,\r\n    response: \"I can't help you if you don't talk to me. How can I help you today?\"\r\n  },\r\n  {\r\n    pattern: /I need (.*)/,\r\n    response: \"Why do you need that?\"\r\n  },\r\n  {\r\n    pattern: /I feel(.*)/,\r\n    response: \"Why do you feel like that?\"\r\n  },\r\n  {\r\n    pattern: /I felt(.*)/,\r\n    response: \"Why did you feel like that?\"\r\n  },\r\n  {\r\n    pattern: /My (.*) hurts/,\r\n    response: \"Tell me more about your pain.\"\r\n  },\r\n  {\r\n    pattern: /(.*) mother(.*)/,\r\n    response: \"Tell me more about your relationship with your mother.\"\r\n  },\r\n  {\r\n    pattern: /(.*) father(.*)/,\r\n    response: \"Tell me more about your relationship with your father.\"\r\n  },\r\n  {\r\n    pattern: /quit/,\r\n    response: \"Thank you for talking with me. Goodbye!\"\r\n  },\r\n  {\r\n    pattern: /(.*)don't know(.*)/,\r\n    response: \"Hmm. Let's explore. What happened today?\"    \r\n  },\r\n  {\r\n    pattern: /(.*)/,\r\n    response: \"Please go on.\"\r\n  }\r\n];\r\n\r\n// Function to process user input and generate Eliza's response\r\nfunction elizaResponse(input) {\r\n  for (var i = 0; i < patterns.length; i++) {\r\n    var pattern = patterns[i].pattern;\r\n    var response = patterns[i].response;\r\n    var match = input.match(pattern);\r\n    if (match) {\r\n      return response;\r\n    }\r\n  }\r\n}\r\n\r\nvar userInput = prompt(\"Hello! How can I help you today?\");\r\nwhile (userInput !== \"quit\") {\r\n  var elizaReply = elizaResponse(userInput.trim());\r\n  userInput = prompt(elizaReply);\r\n}",
+    "never_autoplay_video": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "text_mode_at_start": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "libraries_enabled": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><div contenteditable=\"false\" class=\"textArea\" id=\"conversation\" style=\"height: 100px; border-style: solid; background-color: rgb(242, 242, 242); color: rgb(77, 87, 95); border-color: rgb(255, 255, 255); border-radius: 2px; border-width: 1px; font-family: Arial, Helvetica, sans-serif; padding: 5px 15px; position: absolute; left: 0px; top: -3px; margin: 0px; font-size: 18px;\">Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.</div></div></div>",
+    "fail_on_lint_errors": "false",
+    "widget_mode": "false",
+    "ai_enabled": "false",
+    "long_instructions": "# Eliza\r\n\r\nEliza was the name of a program that modeled a therapist who  encourages clients to talk. Eliza did not learn from a lot of text like a Large Language Model. Instead, it had ready-made responses for things people might say to it. It felt “real” to many.\r\nThis version of Eliza does not have very many responses pre-programmed, but will give you an idea of what talking to a chatbot that did not involve machine learning can be like.",
+    "display_name": "Voice Simulator",
+    "teacher_markdown": "You may want students to figure out what Eliza's patterns are for themselves, but for your reference, here are the patterns:\r\n* No response\r\n* I feel\r\n* I felt\r\n* My ____ hurts\r\n* Anything with the term \"mother\" or \"father\"\r\n* Anything with \"don't know\"",
+    "name_suffix": "_ai23",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2023-07-31T20:43:43.459+00:00\",\"changed\":[\"cloned from \\\"LLM - Eliza\\\"\"],\"cloned_from\":\"LLM - Eliza\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

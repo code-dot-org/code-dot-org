@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import {
+  QUESTION_CHARACTER_LIMIT,
+  matchDataPropType,
+} from './assessmentDataShapes';
 import MatchAssessmentsOverviewTable from './MatchAssessmentsOverviewTable';
 import {
   getMatchSectionSummary,
   countSubmissionsForCurrentAssessment,
   ALL_STUDENT_FILTER,
-  setQuestionIndex
+  setQuestionIndex,
 } from './sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import {
-  QUESTION_CHARACTER_LIMIT,
-  matchDataPropType
-} from './assessmentDataShapes';
-import i18n from '@cdo/locale';
 
 class MatchAssessmentsOverviewContainer extends Component {
   static propTypes = {
@@ -21,7 +23,7 @@ class MatchAssessmentsOverviewContainer extends Component {
     totalStudentSubmissions: PropTypes.number,
     studentId: PropTypes.number,
     openDialog: PropTypes.func.isRequired,
-    setQuestionIndex: PropTypes.func.isRequired
+    setQuestionIndex: PropTypes.func.isRequired,
   };
 
   selectQuestion = index => {
@@ -34,7 +36,7 @@ class MatchAssessmentsOverviewContainer extends Component {
       questionAnswerData,
       totalStudentCount,
       totalStudentSubmissions,
-      studentId
+      studentId,
     } = this.props;
 
     return (
@@ -44,7 +46,7 @@ class MatchAssessmentsOverviewContainer extends Component {
             <h2>
               {i18n.matchQuestionsOverview({
                 numSubmissions: totalStudentSubmissions,
-                numStudents: totalStudentCount
+                numStudents: totalStudentCount,
               })}
             </h2>
             {questionAnswerData.map((question, index) => (
@@ -78,22 +80,23 @@ const styles = {
   text: {
     font: 10,
     paddingTop: 20,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
 };
 
-export const UnconnectedMatchAssessmentsOverviewContainer = MatchAssessmentsOverviewContainer;
+export const UnconnectedMatchAssessmentsOverviewContainer =
+  MatchAssessmentsOverviewContainer;
 
 export default connect(
   state => ({
     questionAnswerData: getMatchSectionSummary(state),
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
     totalStudentCount: state.teacherSections.selectedStudents.length,
-    studentId: state.sectionAssessments.studentId
+    studentId: state.sectionAssessments.studentId,
   }),
   dispatch => ({
     setQuestionIndex(questionIndex) {
       dispatch(setQuestionIndex(questionIndex));
-    }
+    },
   })
 )(MatchAssessmentsOverviewContainer);

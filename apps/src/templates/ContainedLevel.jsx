@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 
 class ContainedLevel extends Component {
@@ -9,7 +10,7 @@ class ContainedLevel extends Component {
   // copied elsewhere.
 
   static propTypes = {
-    hidden: PropTypes.bool
+    hidden: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -30,11 +31,11 @@ class ContainedLevel extends Component {
 
 const styles = {
   main: {
-    marginBottom: '10px'
+    marginBottom: '10px',
   },
   hidden: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 };
 
 export default ContainedLevel;

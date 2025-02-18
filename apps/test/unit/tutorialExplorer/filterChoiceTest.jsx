@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
+
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const TEST_GROUP_NAME = 'Mansfield Park';
 const TEST_NAME = 'Persuasion';
@@ -13,7 +15,7 @@ const DEFAULT_PROPS = {
   name: TEST_NAME,
   selected: false,
   text: TEST_TEXT,
-  singleEntry: false
+  singleEntry: false,
 };
 
 describe('FilterChoice', () => {
@@ -68,8 +70,8 @@ describe('FilterChoice', () => {
 
     wrapper.find('input').simulate('change', {
       target: {
-        checked: testNewCheckedValue
-      }
+        checked: testNewCheckedValue,
+      },
     });
 
     expect(callback).to.have.been.calledOnce.and.calledWith(

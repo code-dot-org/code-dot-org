@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Ailab < Level
@@ -50,7 +51,7 @@ class Ailab < Level
     return default_value if default_value.nil?
 
     parsed_default_value = JSON.parse(default_value)
-    parsed_default_value.keys.each do |prop|
+    parsed_default_value.each_key do |prop|
       parsed_default_value[prop] = I18n.t(
         prop,
         scope: [:data, 'dynamic_instructions', name],
@@ -78,7 +79,7 @@ class Ailab < Level
     options = Rails.cache.fetch("#{cache_key}/#{I18n.locale}/non_blockly_puzzle_level_options/v2") do
       level_prop = {}
 
-      properties.keys.each do |dashboard|
+      properties.each_key do |dashboard|
         apps_prop_name = dashboard.camelize(:lower)
         # Select value from properties json
         # Don't override existing valid (non-nil/empty) values
@@ -93,7 +94,7 @@ class Ailab < Level
       level_prop['teacherMarkdown'] = nil
 
       # Don't set nil values
-      level_prop.reject! {|_, value| value.nil?}
+      level_prop.compact!
     end
     options.freeze
   end

@@ -1,7 +1,6 @@
 require 'active_support/core_ext/string' # Get String#underscore
 require 'aws-sdk-s3'
 require 'logger'
-require 'cdo/metrics_helper'
 
 #
 # In the past, we've committed build outputs into our git repo. This has various
@@ -23,7 +22,7 @@ class S3Packaging
     @package_name = package_name
     @source_location = source_location
     @target_location = target_location
-    @logger = Logger.new(STDOUT)
+    @logger = Logger.new($stdout)
     regenerate_commit_hash
   end
 
@@ -44,8 +43,8 @@ class S3Packaging
     rescue Aws::S3::Errors::NoSuchKey
       @logger.info "Package does not exist on S3. If you have made local changes to #{@package_name}, you need to set build_#{@package_name.underscore} and use_my_#{@package_name.underscore} to true in locals.yml"
       return false
-    rescue Exception => e
-      @logger.info "update_from_s3 failed: #{e.message}"
+    rescue Exception => exception
+      @logger.info "update_from_s3 failed: #{exception.message}"
       return false
     end
     return true
@@ -71,17 +70,6 @@ class S3Packaging
     @logger.info "Decompressed"
   end
 
-  private def s3_key
-    "#{@package_name}/#{@commit_hash}.tar.gz"
-  end
-
-  # The hash of the package at the given location (or nil if there is no package there)
-  private def target_commit_hash(location)
-    filename = "#{location}/commit_hash"
-    return nil unless File.exist?(filename)
-    File.read(filename)
-  end
-
   # Creates a zipped package of the provided assets folder
   # @param sub_path [String] Path to built assets, relative to source_location
   # @param expected_commit_hash [String] optional, when specified an error will be raised
@@ -93,7 +81,7 @@ class S3Packaging
     regenerate_commit_hash
 
     if expected_commit_hash && expected_commit_hash != commit_hash
-      raise "#{@package_name} contents changed unexpectedly. "\
+      raise "#{@package_name} contents changed unexpectedly. " \
         "Expected commit hash #{expected_commit_hash}, got #{commit_hash}"
     end
 
@@ -110,21 +98,32 @@ class S3Packaging
 
   def log_bundle_size
     stats = JSON.parse(File.read(@source_location + '/build/package/js/stats.json'))
-    Metrics.write_batch_metric(
-      stats['assets'].map do |asset|
+    @logger.info(
+      stats['assets'].filter_map do |asset|
         next nil unless asset['name'].end_with? '.js'
         {
           name: 'bundle_size',
           metadata: asset['name'],
           value: asset['size'],
         }
-      end.compact
+      end
     )
-  rescue => e
+  rescue => exception
     # Just log and continue
     warn 'Failed to log bundle size with error:'
-    warn e
+    warn exception
     warn 'Proceeding with build...'
+  end
+
+  private def s3_key
+    "#{@package_name}/#{@commit_hash}.tar.gz"
+  end
+
+  # The hash of the package at the given location (or nil if there is no package there)
+  private def target_commit_hash(location)
+    filename = "#{location}/commit_hash"
+    return nil unless File.exist?(filename)
+    File.read(filename)
   end
 
   private def ensure_updated_package

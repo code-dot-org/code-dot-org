@@ -1,0 +1,26 @@
+name 'PLPLIntro to Events_1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+
+# Events
+
+#### Events are important because they allow students to create interactive code. Students will use event blocks in every course, and this module supports student mastery of the concept.
+
+<img src="https://images.code.org/2833861c428a9ee5635ab570fa0143b6-image-1719342487864.08.01 PM.png" alt="ALT TEXT"  style="width: 250px; float:right; margin-left: 10px;"> 
+
+## In this lesson, you will:
+
+* #### Learn about events and event-based programming.
+* #### Practice using events with different types of event blocks.
+* #### Create an interactive program using events.
+
+
+### **Suggested time:** 20 minutes
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+MARKDOWN

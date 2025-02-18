@@ -1,11 +1,12 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import i18n from '@cdo/locale';
-import _ from 'lodash';
 
 export default class LessonAgenda extends Component {
   static propTypes = {
-    activities: PropTypes.array.isRequired
+    activities: PropTypes.array.isRequired,
   };
 
   render() {
@@ -28,22 +29,22 @@ export default class LessonAgenda extends Component {
                 } (${activity.duration} ${i18n.minutes()})`}</a>
               )}
               {activity.duration === 0 && (
-                <a href={`#activity-${activity.key}`}>{`${
-                  activity.displayName
-                }`}</a>
+                <a
+                  href={`#activity-${activity.key}`}
+                >{`${activity.displayName}`}</a>
               )}
             </li>
             {activity.activitySections.map(section => (
               <li style={{marginLeft: 15}} key={section.key}>
                 {section.duration > 0 && (
-                  <a href={`#section-${section.key}`}>{`${
-                    section.displayName
-                  }`}</a>
+                  <a
+                    href={`#activity-section-${section.key}`}
+                  >{`${section.displayName}`}</a>
                 )}
                 {section.duration === 0 && (
-                  <a href={`#section-${section.key}`}>{`${
-                    section.displayName
-                  }`}</a>
+                  <a
+                    href={`#activity-section-${section.key}`}
+                  >{`${section.displayName}`}</a>
                 )}
               </li>
             ))}

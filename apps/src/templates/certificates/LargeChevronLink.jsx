@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import FontAwesome from '../FontAwesome';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 
 class LargeChevronLink extends Component {
   static propTypes = {
     linkText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -32,38 +35,38 @@ class LargeChevronLink extends Component {
 
 const styles = {
   link: {
-    textDecoration: 'none'
+    textDecoration: 'none',
   },
   linkBox: {
     marginTop: 10,
     marginBottom: 10,
-    width: '100%'
+    width: '100%',
   },
   linkText: {
     fontSize: 20,
     lineHeight: '22px',
-    fontFamily: 'Gotham 5r',
-    color: color.teal,
+    ...fontConstants['main-font-semi-bold'],
+    color: color.light_secondary_500,
     clear: 'both',
     display: 'inline',
     fontWeight: 'bold',
     marginLeft: 15,
-    marginRight: 15
+    marginRight: 15,
   },
   chevron: {
     display: 'inline',
-    color: color.teal,
+    color: color.light_secondary_500,
     fontSize: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   left: {
-    float: 'left'
+    float: 'left',
   },
   right: {
-    float: 'right'
-  }
+    float: 'right',
+  },
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(LargeChevronLink);

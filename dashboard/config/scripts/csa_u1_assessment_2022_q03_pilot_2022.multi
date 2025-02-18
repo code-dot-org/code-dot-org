@@ -17,3 +17,5 @@ while (myPainter.canMove()) {
 
 After the loop has terminated, which of the following MUST be true?
 MARKDOWN
+
+allow_multiple_attempts true

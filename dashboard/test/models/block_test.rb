@@ -58,10 +58,10 @@ class BlockTest < ActiveSupport::TestCase
     new_block = create :block
     File.delete old_block.file_path
 
-    Block.load_records('config/blocks/fakeLevelType/*.json')
+    Block.load_records(blob: 'config/blocks/fakeLevelType/*.json')
 
     assert_nil Block.find_by(name: old_block.name)
-    assert_not_nil Block.find_by(name: new_block.name)
+    refute_nil Block.find_by(name: new_block.name)
   end
 
   test 'Renaming a block deletes the old files' do
@@ -74,7 +74,7 @@ class BlockTest < ActiveSupport::TestCase
     block.name = block.name + '_the_great'
     block.save
 
-    assert Block.for(block.pool).any? {|b| b[:name] == block.name}
+    assert(Block.for(block.pool).any? {|b| b[:name] == block.name})
     refute File.exist? old_file_path
     refute File.exist? old_js_path
   end
@@ -94,7 +94,7 @@ class BlockTest < ActiveSupport::TestCase
   end
 
   test 'always includes blocks from the default pool' do
-    assert Block.for.any? {|b| b[:pool] == Block::DEFAULT_POOL}
+    assert(Block.for.any? {|b| b[:pool] == Block::DEFAULT_POOL})
   end
 
   test 'file_path works for unmodified and modified blocks' do

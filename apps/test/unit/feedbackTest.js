@@ -1,8 +1,10 @@
-import {assert} from '../util/reconfiguredChai';
-import sinon from 'sinon';
-import FeedbackUtils from '@cdo/apps/feedback';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {TestResults} from '@cdo/apps/constants';
+import FeedbackUtils from '@cdo/apps/feedback';
 import msg from '@cdo/locale';
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('FeedbackUtils', () => {
   describe('getFeedbackMessage', () => {
@@ -24,11 +26,11 @@ describe('FeedbackUtils', () => {
           options = {
             feedbackType: TestResults.FREE_PLAY,
             level: {
-              validationEnabled: true
+              validationEnabled: true,
             },
             appStrings: {
-              reinfFeedbackMsg: "You're finished!"
-            }
+              reinfFeedbackMsg: "You're finished!",
+            },
           };
 
           sinon.stub(msg, 'finalStage').callsFake(() => finalStageMsg);
@@ -106,7 +108,7 @@ describe('FeedbackUtils', () => {
 
           it('returns next stage message if lesson completed', () => {
             options.response = {
-              lesson_changing: {previous: {name: 'Lesson Name'}}
+              lesson_changing: {previous: {name: 'Lesson Name'}},
             };
             assert.equal(
               feedbackUtils.getFeedbackMessage(options),

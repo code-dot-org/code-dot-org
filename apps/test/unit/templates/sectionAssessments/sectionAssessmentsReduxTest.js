@@ -1,4 +1,4 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import sectionAssessments, {
   setAssessmentResponses,
   setSurveys,
@@ -28,12 +28,10 @@ import sectionAssessments, {
   getCurrentQuestion,
   getStudentAnswersForCurrentQuestion,
   setFeedback,
-  doesCurrentCourseUseFeedback,
   getExportableFeedbackData,
   isCurrentScriptCSD,
-  notStartedFakeTimestamp
+  notStartedFakeTimestamp,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});
@@ -43,14 +41,13 @@ describe('sectionAssessmentsRedux', () => {
       const currentState = {
         studentId: 489,
         assessmentResponsesByScript: {
-          1: [{question: 'a question', puzzle: 2}]
-        }
+          1: [{question: 'a question', puzzle: 2}],
+        },
       };
       const action = setScriptId(2);
       const nextState = sectionAssessments(currentState, action);
-      assert.deepEqual(nextState.studentId, 0);
-      assert.deepEqual(
-        nextState.assessmentResponsesByScript,
+      expect(nextState.studentId).toEqual(0);
+      expect(nextState.assessmentResponsesByScript).toEqual(
         currentState.assessmentResponsesByScript
       );
     });
@@ -64,7 +61,7 @@ describe('sectionAssessmentsRedux', () => {
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData =
         nextState.assessmentResponsesByScript[scriptId];
-      assert.deepEqual(actualAssessmentData, assessmentData);
+      expect(actualAssessmentData).toEqual(assessmentData);
     });
   });
 
@@ -75,7 +72,7 @@ describe('sectionAssessmentsRedux', () => {
       const action = setSurveys(scriptId, surveyData);
       const nextState = sectionAssessments(initialState, action);
       const actualSurveyData = nextState.surveysByScript[scriptId];
-      assert.deepEqual(actualSurveyData, surveyData);
+      expect(actualSurveyData).toEqual(surveyData);
     });
   });
 
@@ -90,17 +87,17 @@ describe('sectionAssessmentsRedux', () => {
             123: {
               type: 'Multi',
               question_text: 'A question',
-              answers: [{text: 'answer 1', correct: true}]
-            }
-          }
-        }
+              answers: [{text: 'answer 1', correct: true}],
+            },
+          },
+        },
       };
       const action = setAssessmentQuestions(scriptId, assessmentData);
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData =
         nextState.assessmentQuestionsByScript[scriptId];
-      assert.deepEqual(actualAssessmentData, assessmentData);
-      assert.deepEqual(nextState.assessmentId, 139);
+      expect(actualAssessmentData).toEqual(assessmentData);
+      expect(nextState.assessmentId).toEqual(139);
     });
   });
 
@@ -118,7 +115,7 @@ describe('sectionAssessmentsRedux', () => {
             lessonName: 'Lesson 5: Creating Functions',
             lessonNum: '5',
             studentName: 'Student',
-            timestamp: '03/20/19 at 02:34:22'
+            timestamp: '03/20/19 at 02:34:22',
           },
           151: {
             comment:
@@ -130,14 +127,14 @@ describe('sectionAssessmentsRedux', () => {
             lessonName: 'Lesson 4: Using Simple Commands',
             lessonNum: '4',
             studentName: 'Student',
-            timestamp: '03/21/19 at 11:54:17'
-          }
-        }
+            timestamp: '03/21/19 at 11:54:17',
+          },
+        },
       ];
       const action = setFeedback(scriptId, feedbackData);
       const nextState = sectionAssessments(initialState, action);
       const actualFeedbackData = nextState.feedbackByScript[scriptId];
-      assert.deepEqual(actualFeedbackData, feedbackData);
+      expect(actualFeedbackData).toEqual(feedbackData);
     });
   });
 
@@ -145,7 +142,7 @@ describe('sectionAssessmentsRedux', () => {
     it('sets the id of the current assessment in view', () => {
       const action = setAssessmentId(456);
       const nextState = sectionAssessments(initialState, action);
-      assert.deepEqual(nextState.assessmentId, 456);
+      expect(nextState.assessmentId).toEqual(456);
     });
   });
 
@@ -153,7 +150,7 @@ describe('sectionAssessmentsRedux', () => {
     it('sets the id of the current student in view', () => {
       const action = setStudentId(777);
       const nextState = sectionAssessments(initialState, action);
-      assert.deepEqual(nextState.studentId, 777);
+      expect(nextState.studentId).toEqual(777);
     });
   });
 
@@ -161,7 +158,7 @@ describe('sectionAssessmentsRedux', () => {
     it('sets the index of the current question in view', () => {
       const action = setQuestionIndex(2);
       const nextState = sectionAssessments(initialState, action);
-      assert.deepEqual(nextState.questionIndex, 2);
+      expect(nextState.questionIndex).toEqual(2);
     });
   });
 
@@ -169,7 +166,7 @@ describe('sectionAssessmentsRedux', () => {
     it('sets isLoading to true', () => {
       const action = startLoadingAssessments();
       const nextState = sectionAssessments(initialState, action);
-      assert.isTrue(nextState.isLoading);
+      expect(nextState.isLoading).toBe(true);
     });
   });
 
@@ -177,12 +174,12 @@ describe('sectionAssessmentsRedux', () => {
     it('sets isLoading to false', () => {
       const action = finishLoadingAssessments();
       const nextState = sectionAssessments(initialState, action);
-      assert.isFalse(nextState.isLoading);
+      expect(nextState.isLoading).toBe(false);
     });
   });
 
   describe('getCurrentScriptAssessmentList', () => {
-    it('gets a list of assessments - script is not csd or csp', () => {
+    it('gets a list of assessments - teacher feedback disabled', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
@@ -190,37 +187,37 @@ describe('sectionAssessmentsRedux', () => {
             {
               id: 321,
               name: 'fake-name',
-              units: [{id: 123, key: 'csf'}]
-            }
-          ]
+              units: [{id: 123, key: 'csx', is_feedback_enabled: false}],
+            },
+          ],
         },
         sectionAssessments: {
           ...initialState,
           assessmentQuestionsByScript: {
             123: {
               7: {id: 7, name: 'Assessment 7'},
-              8: {id: 8, name: 'Assessment 8'}
+              8: {id: 8, name: 'Assessment 8'},
             },
             456: {
               4: {id: 4, name: 'Assessment 4'},
-              5: {id: 5, name: 'Assessment 5'}
-            }
+              5: {id: 5, name: 'Assessment 5'},
+            },
           },
           surveysByScript: {
             123: {
-              9: {lesson_name: 'Survey 9'}
-            }
-          }
-        }
+              9: {lesson_name: 'Survey 9'},
+            },
+          },
+        },
       };
       const result = getCurrentScriptAssessmentList(rootState);
-      assert.deepEqual(result.length, 3);
-      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
-      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
-      assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
+      expect(result.length).toEqual(3);
+      expect(result[0]).toEqual({id: 7, name: 'Assessment 7'});
+      expect(result[1]).toEqual({id: 8, name: 'Assessment 8'});
+      expect(result[2]).toEqual({id: 9, name: 'Survey 9'});
     });
 
-    it('gets a list of assessments - script is csd or csp', () => {
+    it('gets a list of assessments - teacher feedback enabled', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
@@ -228,37 +225,37 @@ describe('sectionAssessmentsRedux', () => {
             {
               id: 321,
               name: 'fake-name',
-              units: [{id: 123, key: 'csd'}]
-            }
-          ]
+              units: [{id: 123, key: 'csx', is_feedback_enabled: true}],
+            },
+          ],
         },
         sectionAssessments: {
           ...initialState,
           assessmentQuestionsByScript: {
             123: {
               7: {id: 7, name: 'Assessment 7'},
-              8: {id: 8, name: 'Assessment 8'}
+              8: {id: 8, name: 'Assessment 8'},
             },
             456: {
               4: {id: 4, name: 'Assessment 4'},
-              5: {id: 5, name: 'Assessment 5'}
-            }
+              5: {id: 5, name: 'Assessment 5'},
+            },
           },
           surveysByScript: {
             123: {
-              9: {lesson_name: 'Survey 9'}
-            }
-          }
-        }
+              9: {lesson_name: 'Survey 9'},
+            },
+          },
+        },
       };
       const result = getCurrentScriptAssessmentList(rootState);
-      assert.deepEqual(result.length, 4);
-      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
-      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
-      assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
-      assert.deepEqual(result[3], {
+      expect(result.length).toEqual(4);
+      expect(result[0]).toEqual({id: 7, name: 'Assessment 7'});
+      expect(result[1]).toEqual({id: 8, name: 'Assessment 8'});
+      expect(result[2]).toEqual({id: 9, name: 'Survey 9'});
+      expect(result[3]).toEqual({
         id: 0,
-        name: 'All teacher feedback in this unit'
+        name: 'All teacher feedback in this unit',
       });
     });
   });
@@ -268,16 +265,16 @@ describe('sectionAssessmentsRedux', () => {
       it('returns a string of letters', () => {
         const answerArray = [
           {text: 'answer1', correct: false},
-          {text: 'answer2', correct: true}
+          {text: 'answer2', correct: true},
         ];
-        assert.deepEqual(getCorrectAnswer(answerArray), 'B');
+        expect(getCorrectAnswer(answerArray)).toEqual('B');
       });
     });
 
     describe('indexesToAnswerString', () => {
       it('returns a string of letters', () => {
-        assert.deepEqual(indexesToAnswerString([0, 2]), 'A, C');
-        assert.deepEqual(indexesToAnswerString([1]), 'B');
+        expect(indexesToAnswerString([0, 2])).toEqual('A, C');
+        expect(indexesToAnswerString([1])).toEqual('B');
       });
     });
   });
@@ -288,8 +285,8 @@ describe('sectionAssessmentsRedux', () => {
       rootState = {
         sectionAssessments: initialState,
         unitSelection: {
-          scriptId: 3
-        }
+          scriptId: 3,
+        },
       };
     });
 
@@ -299,10 +296,9 @@ describe('sectionAssessmentsRedux', () => {
 
     describe('getMultipleChoiceStructureForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
-        const result = getMultipleChoiceStructureForCurrentAssessment(
-          rootState
-        );
-        assert.deepEqual(result, []);
+        const result =
+          getMultipleChoiceStructureForCurrentAssessment(rootState);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects of questionStructurePropType', () => {
@@ -320,29 +316,28 @@ describe('sectionAssessmentsRedux', () => {
                     {
                       answers: [
                         {correct: false, text: 'answer 1'},
-                        {correct: true, text: 'answer 2'}
+                        {correct: true, text: 'answer 2'},
                       ],
                       question_text: 'What is a variable?',
                       type: 'Multi',
                       level_id: 456,
-                      question_index: 0
-                    }
-                  ]
-                }
-              }
-            }
-          }
+                      question_index: 0,
+                    },
+                  ],
+                },
+              },
+            },
+          },
         };
-        const result = getMultipleChoiceStructureForCurrentAssessment(
-          stateWithAssessment
-        );
-        assert.deepEqual(result, [
+        const result =
+          getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
+        expect(result).toEqual([
           {
             correctAnswer: 'B',
             id: 456,
             questionNumber: 1,
-            question: 'What is a variable?'
-          }
+            question: 'What is a variable?',
+          },
         ]);
       });
     });
@@ -350,7 +345,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getMatchStructureForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getMatchStructureForCurrentAssessment(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects of matchQuestionPropType', () => {
@@ -371,25 +366,24 @@ describe('sectionAssessmentsRedux', () => {
                       question: 'Can you match these things?',
                       question_index: 0,
                       answers: [{text: 'answer 1'}, {text: 'answer 2'}],
-                      options: [{text: 'option 1'}, {text: 'option 2'}]
-                    }
-                  ]
-                }
-              }
-            }
-          }
+                      options: [{text: 'option 1'}, {text: 'option 2'}],
+                    },
+                  ],
+                },
+              },
+            },
+          },
         };
-        const result = getMatchStructureForCurrentAssessment(
-          stateWithAssessment
-        );
-        assert.deepEqual(result, [
+        const result =
+          getMatchStructureForCurrentAssessment(stateWithAssessment);
+        expect(result).toEqual([
           {
             id: 456,
             questionNumber: 1,
             question: 'Can you match these things?',
             answers: [{text: 'answer 1'}, {text: 'answer 2'}],
-            options: [{text: 'option 1'}, {text: 'option 2'}]
-          }
+            options: [{text: 'option 1'}, {text: 'option 2'}],
+          },
         ]);
       });
     });
@@ -397,7 +391,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getStudentMCResponsesForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getStudentMCResponsesForCurrentAssessment(rootState);
-        assert.deepEqual(result, {});
+        expect(result).toEqual({});
       });
 
       it('returns an array of objects of studentWithMCResponsesPropType', () => {
@@ -417,28 +411,27 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: [3],
                           status: 'incorrect',
-                          type: 'Multi'
+                          type: 'Multi',
                         },
                         {
                           student_result: 'Hi',
                           status: '',
-                          type: 'FreeResponse'
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
+                          type: 'FreeResponse',
+                        },
+                      ],
+                    },
+                  },
+                },
+              },
+            },
+          },
         };
-        const result = getStudentMCResponsesForCurrentAssessment(
-          stateWithAssessment
-        );
-        assert.deepEqual(result, {
+        const result =
+          getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
+        expect(result).toEqual({
           id: 1,
           name: 'Saira',
-          studentResponses: [{responses: 'D', isCorrect: false}]
+          studentResponses: [{responses: 'D', isCorrect: false}],
         });
       });
     });
@@ -446,7 +439,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getStudentMatchResponsesForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getStudentMatchResponsesForCurrentAssessment(rootState);
-        assert.deepEqual(result, {});
+        expect(result).toEqual({});
       });
 
       it('returns an array of objects of studentWithMatchResponsesPropType', () => {
@@ -466,33 +459,32 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: [3],
                           status: 'incorrect',
-                          type: 'Multi'
+                          type: 'Multi',
                         },
                         {
                           student_result: 'Hi',
                           status: '',
-                          type: 'FreeResponse'
+                          type: 'FreeResponse',
                         },
                         {
                           student_result: [0, 1],
                           status: ['submitted', 'submitted'],
-                          type: 'Match'
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
+                          type: 'Match',
+                        },
+                      ],
+                    },
+                  },
+                },
+              },
+            },
+          },
         };
-        const result = getStudentMatchResponsesForCurrentAssessment(
-          stateWithAssessment
-        );
-        assert.deepEqual(result, {
+        const result =
+          getStudentMatchResponsesForCurrentAssessment(stateWithAssessment);
+        expect(result).toEqual({
           id: 1,
           name: 'Saira',
-          studentResponses: [{responses: [0, 1]}]
+          studentResponses: [{responses: [0, 1]}],
         });
       });
     });
@@ -500,7 +492,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getAssessmentsFreeResponseResults', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getAssessmentsFreeResponseResults(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects representing free response questions', () => {
@@ -516,11 +508,11 @@ describe('sectionAssessmentsRedux', () => {
                     {
                       type: 'FreeResponse',
                       question_text: 'Can you say hello?',
-                      question_index: 0
-                    }
-                  ]
-                }
-              }
+                      question_index: 0,
+                    },
+                  ],
+                },
+              },
             },
             assessmentResponsesByScript: {
               3: {
@@ -532,23 +524,23 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: 'Hello world',
                           status: '',
-                          type: 'FreeResponse'
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
+                          type: 'FreeResponse',
+                        },
+                      ],
+                    },
+                  },
+                },
+              },
+            },
+          },
         };
         const result = getAssessmentsFreeResponseResults(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             questionText: 'Can you say hello?',
             questionNumber: 1,
-            responses: [{id: 1, name: 'Saira', response: 'Hello world'}]
-          }
+            responses: [{id: 1, name: 'Saira', response: 'Hello world'}],
+          },
         ]);
       });
 
@@ -566,11 +558,11 @@ describe('sectionAssessmentsRedux', () => {
                     {
                       type: 'FreeResponse',
                       question_text: 'Can you say hello?',
-                      question_index: 0
-                    }
-                  ]
-                }
-              }
+                      question_index: 0,
+                    },
+                  ],
+                },
+              },
             },
             assessmentResponsesByScript: {
               3: {
@@ -582,11 +574,11 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: 'Hello world',
                           status: '',
-                          type: 'FreeResponse'
-                        }
-                      ]
-                    }
-                  }
+                          type: 'FreeResponse',
+                        },
+                      ],
+                    },
+                  },
                 },
                 2: {
                   student_name: 'Sarah',
@@ -596,23 +588,23 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: 'Hi',
                           status: '',
-                          type: 'FreeResponse'
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
+                          type: 'FreeResponse',
+                        },
+                      ],
+                    },
+                  },
+                },
+              },
+            },
+          },
         };
         const result = getAssessmentsFreeResponseResults(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             questionText: 'Can you say hello?',
             questionNumber: 1,
-            responses: [{id: 1, name: 'Saira', response: 'Hello world'}]
-          }
+            responses: [{id: 1, name: 'Saira', response: 'Hello world'}],
+          },
         ]);
       });
     });
@@ -620,7 +612,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getSurveyFreeResponseQuestions', () => {
       it('returns an empty array when no surveys in redux', () => {
         const result = getSurveyFreeResponseQuestions(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects representing free response questions', () => {
@@ -638,32 +630,32 @@ describe('sectionAssessmentsRedux', () => {
                       type: 'free_response',
                       question_index: 0,
                       question: 'question1',
-                      results: [{result: 'Im not sure'}]
+                      results: [{result: 'Im not sure'}],
                     },
                     {
                       type: 'free_response',
                       question_index: 1,
                       question: 'question2',
-                      results: [{result: 'Im very sure'}]
-                    }
-                  ]
-                }
-              }
-            }
-          }
+                      results: [{result: 'Im very sure'}],
+                    },
+                  ],
+                },
+              },
+            },
+          },
         };
         const result = getSurveyFreeResponseQuestions(stateWithSurvey);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             questionText: 'question1',
             questionNumber: 1,
-            answers: [{index: 0, response: 'Im not sure'}]
+            answers: [{index: 0, response: 'Im not sure'}],
           },
           {
             questionText: 'question2',
             questionNumber: 2,
-            answers: [{index: 0, response: 'Im very sure'}]
-          }
+            answers: [{index: 0, response: 'Im very sure'}],
+          },
         ]);
       });
     });
@@ -671,7 +663,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getMultipleChoiceSurveyResults', () => {
       it('returns an empty array when no surveys in redux', () => {
         const result = getMultipleChoiceSurveyResults(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects representing free response questions', () => {
@@ -690,33 +682,33 @@ describe('sectionAssessmentsRedux', () => {
                       question_index: 0,
                       question: 'question1',
                       answer_texts: ['agree', 'disagree'],
-                      results: [{answer_index: 0}]
+                      results: [{answer_index: 0}],
                     },
                     {
                       type: 'multi',
                       question_index: 1,
                       question: 'question2',
                       answer_texts: ['agree', 'disagree'],
-                      results: [{answer_index: 1}]
-                    }
-                  ]
-                }
-              }
-            }
-          }
+                      results: [{answer_index: 1}],
+                    },
+                  ],
+                },
+              },
+            },
+          },
         };
         const result = getMultipleChoiceSurveyResults(stateWithSurvey);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             id: 0,
             questionNumber: 1,
             question: 'question1',
             answers: [
               {multipleChoiceOption: 'A', percentAnswered: 100, text: 'agree'},
-              {multipleChoiceOption: 'B', percentAnswered: 0, text: 'disagree'}
+              {multipleChoiceOption: 'B', percentAnswered: 0, text: 'disagree'},
             ],
             notAnswered: 0,
-            totalAnswered: 1
+            totalAnswered: 1,
           },
           {
             id: 1,
@@ -727,12 +719,12 @@ describe('sectionAssessmentsRedux', () => {
               {
                 multipleChoiceOption: 'B',
                 percentAnswered: 100,
-                text: 'disagree'
-              }
+                text: 'disagree',
+              },
             ],
             notAnswered: 0,
-            totalAnswered: 1
-          }
+            totalAnswered: 1,
+          },
         ]);
       });
     });
@@ -744,12 +736,12 @@ describe('sectionAssessmentsRedux', () => {
           unitSelection: {
             scriptId: 2,
             coursesWithProgress: [
-              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csd'}]}
-            ]
-          }
+              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csd'}]},
+            ],
+          },
         };
         const result = isCurrentScriptCSD(state);
-        assert.deepEqual(result, true);
+        expect(result).toEqual(true);
       });
 
       it('returns false when the current script is not CSD', () => {
@@ -758,42 +750,12 @@ describe('sectionAssessmentsRedux', () => {
           unitSelection: {
             scriptId: 2,
             coursesWithProgress: [
-              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csf'}]}
-            ]
-          }
+              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csf'}]},
+            ],
+          },
         };
         const result = isCurrentScriptCSD(state);
-        assert.deepEqual(result, false);
-      });
-    });
-
-    describe('doesCurrentCourseUseFeedback', () => {
-      it('returns true when the current script is CSD or CSP', () => {
-        const state = {
-          ...rootState,
-          unitSelection: {
-            scriptId: 2,
-            coursesWithProgress: [
-              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csd'}]}
-            ]
-          }
-        };
-        const result = doesCurrentCourseUseFeedback(state);
-        assert.deepEqual(result, true);
-      });
-
-      it('returns false when the current script is not CSD or CSP', () => {
-        const state = {
-          ...rootState,
-          unitSelection: {
-            scriptId: 2,
-            coursesWithProgress: [
-              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csf'}]}
-            ]
-          }
-        };
-        const result = doesCurrentCourseUseFeedback(state);
-        assert.deepEqual(result, false);
+        expect(result).toEqual(false);
       });
     });
 
@@ -806,13 +768,13 @@ describe('sectionAssessmentsRedux', () => {
             assessmentId: 123,
             surveysByScript: {
               3: {
-                123: {}
-              }
-            }
-          }
+                123: {},
+              },
+            },
+          },
         };
         const result = isCurrentAssessmentSurvey(stateWithSurvey);
-        assert.deepEqual(result, true);
+        expect(result).toEqual(true);
       });
 
       it('returns false when the current assessment is not a survey', () => {
@@ -823,20 +785,20 @@ describe('sectionAssessmentsRedux', () => {
             assessmentId: 123,
             surveysByScript: {
               3: {
-                234: {}
-              }
-            }
-          }
+                234: {},
+              },
+            },
+          },
         };
         const result = isCurrentAssessmentSurvey(stateWithSurvey);
-        assert.deepEqual(result, false);
+        expect(result).toEqual(false);
       });
     });
 
     describe('getMultipleChoiceSectionSummary', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getMultipleChoiceSectionSummary(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects of multipleChoiceDataPropType', () => {
@@ -858,8 +820,8 @@ describe('sectionAssessmentsRedux', () => {
                       question_index: 0,
                       answers: [
                         {correct: true, text: 'answer 1'},
-                        {correct: false, text: 'answer 2'}
-                      ]
+                        {correct: false, text: 'answer 2'},
+                      ],
                     },
                     {
                       level_id: 789,
@@ -868,8 +830,8 @@ describe('sectionAssessmentsRedux', () => {
                       question_index: 1,
                       answers: [
                         {correct: false, text: 'answer 1'},
-                        {correct: true, text: 'answer 2'}
-                      ]
+                        {correct: true, text: 'answer 2'},
+                      ],
                     },
                     {
                       level_id: 910,
@@ -878,12 +840,12 @@ describe('sectionAssessmentsRedux', () => {
                       question_index: 1,
                       answers: [
                         {correct: false, text: 'answer 1'},
-                        {correct: true, text: 'answer 2'}
-                      ]
-                    }
-                  ]
-                }
-              }
+                        {correct: true, text: 'answer 2'},
+                      ],
+                    },
+                  ],
+                },
+              },
             },
             assessmentResponsesByScript: {
               3: {
@@ -896,12 +858,12 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: [0],
                           status: 'incorrect',
-                          type: 'Multi'
+                          type: 'Multi',
                         },
-                        {student_result: [1], status: 'correct', type: 'Multi'}
-                      ]
-                    }
-                  }
+                        {student_result: [1], status: 'correct', type: 'Multi'},
+                      ],
+                    },
+                  },
                 },
                 2: {
                   student_name: 'Rebecca',
@@ -913,75 +875,75 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: [],
                           status: 'unsubmitted',
-                          type: 'Multi'
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
+                          type: 'Multi',
+                        },
+                      ],
+                    },
+                  },
+                },
+              },
+            },
+          },
         };
         const result = getMultipleChoiceSectionSummary(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             answers: [
               {
                 isCorrect: true,
                 multipleChoiceOption: 'A',
-                numAnswered: 2
+                numAnswered: 2,
               },
               {
                 isCorrect: false,
                 multipleChoiceOption: 'B',
-                numAnswered: 0
-              }
+                numAnswered: 0,
+              },
             ],
             id: 456,
             notAnswered: 0,
             question: 'What is a variable?',
             questionNumber: 1,
-            totalAnswered: 2
+            totalAnswered: 2,
           },
           {
             answers: [
               {
                 isCorrect: false,
                 multipleChoiceOption: 'A',
-                numAnswered: 1
+                numAnswered: 1,
               },
               {
                 isCorrect: true,
                 multipleChoiceOption: 'B',
-                numAnswered: 1
-              }
+                numAnswered: 1,
+              },
             ],
             id: 789,
             notAnswered: 0,
             question: 'What is a boolean?',
             questionNumber: 2,
-            totalAnswered: 2
+            totalAnswered: 2,
           },
           {
             answers: [
               {
                 isCorrect: false,
                 multipleChoiceOption: 'A',
-                numAnswered: 0
+                numAnswered: 0,
               },
               {
                 isCorrect: true,
                 multipleChoiceOption: 'B',
-                numAnswered: 1
-              }
+                numAnswered: 1,
+              },
             ],
             id: 910,
             notAnswered: 1,
             question: 'What is an int?',
             questionNumber: 2,
-            totalAnswered: 2
-          }
+            totalAnswered: 2,
+          },
         ]);
       });
     });
@@ -989,7 +951,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getMatchSectionSummary', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getMatchSectionSummary(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects of matchDataPropType', () => {
@@ -1010,7 +972,7 @@ describe('sectionAssessmentsRedux', () => {
                       question: 'Can you match these things?',
                       question_index: 0,
                       answers: [{text: 'answer 1'}, {text: 'answer 2'}],
-                      options: [{text: 'option 1'}, {text: 'option 2'}]
+                      options: [{text: 'option 1'}, {text: 'option 2'}],
                     },
                     {
                       level_id: 789,
@@ -1018,7 +980,7 @@ describe('sectionAssessmentsRedux', () => {
                       question: 'Do some matching!',
                       question_index: 1,
                       answers: [{text: 'answer 1'}, {text: 'answer 2'}],
-                      options: [{text: 'option 1'}, {text: 'option 2'}]
+                      options: [{text: 'option 1'}, {text: 'option 2'}],
                     },
                     {
                       level_id: 910,
@@ -1026,11 +988,11 @@ describe('sectionAssessmentsRedux', () => {
                       question: 'Matchy Match',
                       question_index: 2,
                       answers: [{text: 'answer 1'}, {text: 'answer 2'}],
-                      options: [{text: 'option 1'}, {text: 'option 2'}]
-                    }
-                  ]
-                }
-              }
+                      options: [{text: 'option 1'}, {text: 'option 2'}],
+                    },
+                  ],
+                },
+              },
             },
             assessmentResponsesByScript: {
               3: {
@@ -1042,21 +1004,21 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: [0, 1],
                           status: ['submitted', 'submitted'],
-                          type: 'Match'
+                          type: 'Match',
                         },
                         {
                           student_result: [null, null],
                           status: ['unsubmitted', 'unsubmitted'],
-                          type: 'Match'
+                          type: 'Match',
                         },
                         {
                           student_result: [null, 1],
                           status: ['unsubmitted', 'submitted'],
-                          type: 'Match'
-                        }
-                      ]
-                    }
-                  }
+                          type: 'Match',
+                        },
+                      ],
+                    },
+                  },
                 },
                 2: {
                   student_name: 'Rebecca',
@@ -1066,28 +1028,28 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: [0, 1],
                           status: ['submitted', 'submitted'],
-                          type: 'Match'
+                          type: 'Match',
                         },
                         {
                           student_result: [1, 0],
                           status: ['submitted', 'submitted'],
-                          type: 'Match'
+                          type: 'Match',
                         },
                         {
                           student_result: [null, 1],
                           status: ['unsubmitted', 'submitted'],
-                          type: 'Match'
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
+                          type: 'Match',
+                        },
+                      ],
+                    },
+                  },
+                },
+              },
+            },
+          },
         };
         const result = getMatchSectionSummary(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             id: 456,
             question: 'Can you match these things?',
@@ -1102,14 +1064,14 @@ describe('sectionAssessmentsRedux', () => {
                   {
                     isCorrect: true,
                     answer: 'answer 1',
-                    numAnswered: 2
+                    numAnswered: 2,
                   },
                   {
                     isCorrect: false,
                     answer: 'answer 2',
-                    numAnswered: 0
-                  }
-                ]
+                    numAnswered: 0,
+                  },
+                ],
               },
               {
                 option: 'option 2',
@@ -1120,16 +1082,16 @@ describe('sectionAssessmentsRedux', () => {
                   {
                     isCorrect: false,
                     answer: 'answer 1',
-                    numAnswered: 0
+                    numAnswered: 0,
                   },
                   {
                     isCorrect: true,
                     answer: 'answer 2',
-                    numAnswered: 2
-                  }
-                ]
-              }
-            ]
+                    numAnswered: 2,
+                  },
+                ],
+              },
+            ],
           },
           {
             id: 789,
@@ -1145,14 +1107,14 @@ describe('sectionAssessmentsRedux', () => {
                   {
                     isCorrect: true,
                     answer: 'answer 1',
-                    numAnswered: 0
+                    numAnswered: 0,
                   },
                   {
                     isCorrect: false,
                     answer: 'answer 2',
-                    numAnswered: 1
-                  }
-                ]
+                    numAnswered: 1,
+                  },
+                ],
               },
               {
                 option: 'option 2',
@@ -1163,16 +1125,16 @@ describe('sectionAssessmentsRedux', () => {
                   {
                     isCorrect: false,
                     answer: 'answer 1',
-                    numAnswered: 1
+                    numAnswered: 1,
                   },
                   {
                     isCorrect: true,
                     answer: 'answer 2',
-                    numAnswered: 0
-                  }
-                ]
-              }
-            ]
+                    numAnswered: 0,
+                  },
+                ],
+              },
+            ],
           },
           {
             id: 910,
@@ -1188,14 +1150,14 @@ describe('sectionAssessmentsRedux', () => {
                   {
                     isCorrect: true,
                     answer: 'answer 1',
-                    numAnswered: 0
+                    numAnswered: 0,
                   },
                   {
                     isCorrect: false,
                     answer: 'answer 2',
-                    numAnswered: 0
-                  }
-                ]
+                    numAnswered: 0,
+                  },
+                ],
               },
               {
                 option: 'option 2',
@@ -1206,17 +1168,17 @@ describe('sectionAssessmentsRedux', () => {
                   {
                     isCorrect: false,
                     answer: 'answer 1',
-                    numAnswered: 0
+                    numAnswered: 0,
                   },
                   {
                     isCorrect: true,
                     answer: 'answer 2',
-                    numAnswered: 2
-                  }
-                ]
-              }
-            ]
-          }
+                    numAnswered: 2,
+                  },
+                ],
+              },
+            ],
+          },
         ]);
       });
     });
@@ -1224,11 +1186,11 @@ describe('sectionAssessmentsRedux', () => {
     describe('countSubmissionsForCurrentAssessment', () => {
       it('returns zero with no assessmentId', () => {
         const state = {
-          sectionAssessments: {}
+          sectionAssessments: {},
         };
 
         const totalSubmissions = countSubmissionsForCurrentAssessment(state);
-        assert.deepEqual(totalSubmissions, 0);
+        expect(totalSubmissions).toEqual(0);
       });
 
       it('returns totals for an assessment', () => {
@@ -1242,9 +1204,9 @@ describe('sectionAssessmentsRedux', () => {
                 123: {
                   id: 123,
                   name: 'name',
-                  questions: []
-                }
-              }
+                  questions: [],
+                },
+              },
             },
             assessmentResponsesByScript: {
               3: {
@@ -1252,27 +1214,26 @@ describe('sectionAssessmentsRedux', () => {
                   student_name: 'Saira',
                   responses_by_assessment: {
                     123: {
-                      level_results: []
-                    }
-                  }
+                      level_results: [],
+                    },
+                  },
                 },
                 2: {
                   student_name: 'Rebecca',
                   responses_by_assessment: {
                     123: {
-                      level_results: []
-                    }
-                  }
-                }
-              }
-            }
-          }
+                      level_results: [],
+                    },
+                  },
+                },
+              },
+            },
+          },
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(
-          stateWithAssessment
-        );
-        assert.deepEqual(totalSubmissions, 2);
+        const totalSubmissions =
+          countSubmissionsForCurrentAssessment(stateWithAssessment);
+        expect(totalSubmissions).toEqual(2);
       });
 
       it('returns totals for a survey', () => {
@@ -1291,26 +1252,25 @@ describe('sectionAssessmentsRedux', () => {
                       question_index: 0,
                       question: 'question1',
                       answer_texts: [{text: 'agree'}, {text: 'disagree'}],
-                      results: [{answer_index: 0}]
+                      results: [{answer_index: 0}],
                     },
                     {
                       type: 'multi',
                       question_index: 1,
                       question: 'question2',
                       answer_texts: [{text: 'agree'}, {text: 'disagree'}],
-                      results: [{answer_index: 1}]
-                    }
-                  ]
-                }
-              }
-            }
-          }
+                      results: [{answer_index: 1}],
+                    },
+                  ],
+                },
+              },
+            },
+          },
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(
-          stateWithSurvey
-        );
-        assert.deepEqual(totalSubmissions, 1);
+        const totalSubmissions =
+          countSubmissionsForCurrentAssessment(stateWithSurvey);
+        expect(totalSubmissions).toEqual(1);
       });
 
       it('returns 0 for 0 survey submissions', () => {
@@ -1323,17 +1283,16 @@ describe('sectionAssessmentsRedux', () => {
               3: {
                 123: {
                   lesson_name: 'name',
-                  levelgroup_results: []
-                }
-              }
-            }
-          }
+                  levelgroup_results: [],
+                },
+              },
+            },
+          },
         };
 
-        const totalSubmissions = countSubmissionsForCurrentAssessment(
-          stateWithSurvey
-        );
-        assert.deepEqual(totalSubmissions, 0);
+        const totalSubmissions =
+          countSubmissionsForCurrentAssessment(stateWithSurvey);
+        expect(totalSubmissions).toEqual(0);
       });
     });
 
@@ -1354,52 +1313,52 @@ describe('sectionAssessmentsRedux', () => {
                       question_index: 0,
                       question: 'question1',
                       answer_texts: ['agree', 'disagree'],
-                      results: [{answer_index: 0}]
+                      results: [{answer_index: 0}],
                     },
                     {
                       type: 'multi',
                       question_index: 1,
                       question: 'question2',
                       answer_texts: ['agree', 'disagree'],
-                      results: [{answer_index: 1}]
-                    }
-                  ]
-                }
-              }
-            }
-          }
+                      results: [{answer_index: 1}],
+                    },
+                  ],
+                },
+              },
+            },
+          },
         };
 
         const csvData = getExportableSurveyData(stateWithSurvey);
-        assert.deepEqual(csvData, [
+        expect(csvData).toEqual([
           {
             answer: 'agree',
             numberAnswered: 1,
             questionNumber: 1,
             questionText: 'question1',
-            lesson: 'name'
+            lesson: 'name',
           },
           {
             answer: 'disagree',
             numberAnswered: 0,
             questionNumber: 1,
             questionText: 'question1',
-            lesson: 'name'
+            lesson: 'name',
           },
           {
             answer: 'agree',
             numberAnswered: 0,
             questionNumber: 2,
             questionText: 'question2',
-            lesson: 'name'
+            lesson: 'name',
           },
           {
             answer: 'disagree',
             numberAnswered: 1,
             questionNumber: 2,
             questionText: 'question2',
-            lesson: 'name'
-          }
+            lesson: 'name',
+          },
         ]);
       });
     });
@@ -1416,9 +1375,9 @@ describe('sectionAssessmentsRedux', () => {
                 123: {
                   id: 123,
                   name: 'name',
-                  questions: []
-                }
-              }
+                  questions: [],
+                },
+              },
             },
             assessmentResponsesByScript: {
               3: {
@@ -1432,13 +1391,13 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: [],
                           status: 'unsubmitted',
-                          type: 'Multi'
-                        }
+                          type: 'Multi',
+                        },
                       ],
                       lesson: 'lesson 1',
-                      timestamp: '1'
-                    }
-                  }
+                      timestamp: '1',
+                    },
+                  },
                 },
                 2: {
                   student_name: 'Rebecca',
@@ -1450,28 +1409,28 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: [1],
                           status: 'incorrect',
-                          type: 'Multi'
-                        }
+                          type: 'Multi',
+                        },
                       ],
                       lesson: 'lesson 1',
-                      timestamp: '1'
-                    }
-                  }
-                }
-              }
-            }
-          }
+                      timestamp: '1',
+                    },
+                  },
+                },
+              },
+            },
+          },
         };
 
         const csvData = getExportableAssessmentData(stateWithAssessment);
-        assert.deepEqual(csvData, [
+        expect(csvData).toEqual([
           {
             correct: 'correct',
             question: 1,
             response: 'A',
             lesson: 'lesson 1',
             studentName: 'Saira',
-            timestamp: '1'
+            timestamp: '1',
           },
           {
             correct: 'correct',
@@ -1479,7 +1438,7 @@ describe('sectionAssessmentsRedux', () => {
             response: 'B',
             lesson: 'lesson 1',
             studentName: 'Saira',
-            timestamp: '1'
+            timestamp: '1',
           },
           {
             correct: 'unsubmitted',
@@ -1487,7 +1446,7 @@ describe('sectionAssessmentsRedux', () => {
             response: '',
             lesson: 'lesson 1',
             studentName: 'Saira',
-            timestamp: '1'
+            timestamp: '1',
           },
           {
             correct: 'correct',
@@ -1495,7 +1454,7 @@ describe('sectionAssessmentsRedux', () => {
             response: 'A',
             lesson: 'lesson 1',
             studentName: 'Rebecca',
-            timestamp: '1'
+            timestamp: '1',
           },
           {
             correct: 'correct',
@@ -1503,7 +1462,7 @@ describe('sectionAssessmentsRedux', () => {
             response: 'B',
             lesson: 'lesson 1',
             studentName: 'Rebecca',
-            timestamp: '1'
+            timestamp: '1',
           },
           {
             correct: 'incorrect',
@@ -1511,8 +1470,8 @@ describe('sectionAssessmentsRedux', () => {
             response: 'B',
             lesson: 'lesson 1',
             studentName: 'Rebecca',
-            timestamp: '1'
-          }
+            timestamp: '1',
+          },
         ]);
       });
     });
@@ -1522,7 +1481,7 @@ describe('sectionAssessmentsRedux', () => {
         const stateWithFeedback = {
           ...rootState,
           unitSelection: {
-            scriptId: 2
+            scriptId: 2,
           },
           sectionAssessments: {
             ...rootState.sectionAssessments,
@@ -1537,7 +1496,7 @@ describe('sectionAssessmentsRedux', () => {
                   performanceLevelDetails: 'A loop is in the code',
                   performance: 'performanceLevel1',
                   comment: 'Nice job using loops!',
-                  timestamp: '03/21/19 at 12:17:17 PM'
+                  timestamp: '03/21/19 at 12:17:17 PM',
                 },
                 40: {
                   studentName: 'Anne',
@@ -1548,7 +1507,7 @@ describe('sectionAssessmentsRedux', () => {
                   performanceLevelDetails: '',
                   performance: '',
                   comment: '',
-                  timestamp: '05/08/18 at 6:21:11 AM'
+                  timestamp: '05/08/18 at 6:21:11 AM',
                 },
                 52: {
                   studentName: 'Mike',
@@ -1561,7 +1520,7 @@ describe('sectionAssessmentsRedux', () => {
                   performance: 'performanceLevel3',
                   comment:
                     'There are at least 3 more variables you could be using.',
-                  timestamp: '03/21/19 at 12:17:17 PM'
+                  timestamp: '03/21/19 at 12:17:17 PM',
                 },
                 61: {
                   studentName: 'Anne',
@@ -1572,15 +1531,15 @@ describe('sectionAssessmentsRedux', () => {
                   performanceLevelDetails: 'You uses no variables',
                   performance: 'performanceLevel4',
                   comment: "Why didn't you use variables?",
-                  timestamp: '03/21/19 at 12:21:17 PM'
-                }
-              }
-            }
-          }
+                  timestamp: '03/21/19 at 12:21:17 PM',
+                },
+              },
+            },
+          },
         };
 
         const csvData = getExportableFeedbackData(stateWithFeedback);
-        assert.deepEqual(csvData, [
+        expect(csvData).toEqual([
           {
             studentName: 'Mike',
             lessonNum: '4',
@@ -1590,7 +1549,7 @@ describe('sectionAssessmentsRedux', () => {
             performanceLevelDetails: 'A loop is in the code',
             performance: 'performanceLevel1',
             comment: 'Nice job using loops!',
-            timestamp: '03/21/19 at 12:17:17 PM'
+            timestamp: '03/21/19 at 12:17:17 PM',
           },
           {
             studentName: 'Anne',
@@ -1601,7 +1560,7 @@ describe('sectionAssessmentsRedux', () => {
             performanceLevelDetails: '',
             performance: '',
             comment: '',
-            timestamp: '05/08/18 at 6:21:11 AM'
+            timestamp: '05/08/18 at 6:21:11 AM',
           },
           {
             studentName: 'Mike',
@@ -1613,7 +1572,7 @@ describe('sectionAssessmentsRedux', () => {
               'You have some variables but are still missing out on their amazingness',
             performance: 'performanceLevel3',
             comment: 'There are at least 3 more variables you could be using.',
-            timestamp: '03/21/19 at 12:17:17 PM'
+            timestamp: '03/21/19 at 12:17:17 PM',
           },
           {
             studentName: 'Anne',
@@ -1624,8 +1583,8 @@ describe('sectionAssessmentsRedux', () => {
             performanceLevelDetails: 'You uses no variables',
             performance: 'performanceLevel4',
             comment: "Why didn't you use variables?",
-            timestamp: '03/21/19 at 12:21:17 PM'
-          }
+            timestamp: '03/21/19 at 12:21:17 PM',
+          },
         ]);
       });
     });
@@ -1635,10 +1594,10 @@ describe('sectionAssessmentsRedux', () => {
         const result = getStudentsMCandMatchSummaryForCurrentAssessment({
           ...rootState,
           teacherSections: {
-            selectedStudents: []
-          }
+            selectedStudents: [],
+          },
         });
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects of studentOverviewDataPropType', () => {
@@ -1649,9 +1608,9 @@ describe('sectionAssessmentsRedux', () => {
             selectedStudents: [
               {
                 name: 'Issac',
-                id: 99
-              }
-            ]
+                id: 99,
+              },
+            ],
           },
           sectionAssessments: {
             ...rootState.sectionAssessments,
@@ -1668,18 +1627,17 @@ describe('sectionAssessmentsRedux', () => {
                       match_count: 4,
                       submitted: true,
                       timestamp: date,
-                      url: 'code.org'
-                    }
-                  }
-                }
-              }
-            }
-          }
+                      url: 'code.org',
+                    },
+                  },
+                },
+              },
+            },
+          },
         };
-        const result = getStudentsMCandMatchSummaryForCurrentAssessment(
-          stateWithAssessment
-        );
-        assert.deepEqual(result, [
+        const result =
+          getStudentsMCandMatchSummaryForCurrentAssessment(stateWithAssessment);
+        expect(result).toEqual([
           {
             id: 2,
             name: 'Ilulia',
@@ -1690,15 +1648,15 @@ describe('sectionAssessmentsRedux', () => {
             isSubmitted: true,
             inProgress: false,
             submissionTimeStamp: date,
-            url: 'code.org'
+            url: 'code.org',
           },
           {
             id: 99,
             name: 'Issac',
             isSubmitted: false,
             inProgress: false,
-            submissionTimeStamp: notStartedFakeTimestamp
-          }
+            submissionTimeStamp: notStartedFakeTimestamp,
+          },
         ]);
       });
     });
@@ -1710,9 +1668,9 @@ describe('sectionAssessmentsRedux', () => {
           selectedStudents: [
             {
               name: 'Issac',
-              id: 99
-            }
-          ]
+              id: 99,
+            },
+          ],
         },
         sectionAssessments: {
           ...rootState.sectionAssessments,
@@ -1730,25 +1688,24 @@ describe('sectionAssessmentsRedux', () => {
                     match_count: 4,
                     submitted: true,
                     timestamp: '2018-06-12 04:53:36 UTC',
-                    url: 'code.org'
-                  }
-                }
-              }
-            }
-          }
-        }
+                    url: 'code.org',
+                  },
+                },
+              },
+            },
+          },
+        },
       };
-      const result = getStudentsMCandMatchSummaryForCurrentAssessment(
-        stateWithAssessment
-      );
-      assert.deepEqual(result, [
+      const result =
+        getStudentsMCandMatchSummaryForCurrentAssessment(stateWithAssessment);
+      expect(result).toEqual([
         {
           id: 99,
           name: 'Issac',
           isSubmitted: false,
           inProgress: false,
-          submissionTimeStamp: notStartedFakeTimestamp
-        }
+          submissionTimeStamp: notStartedFakeTimestamp,
+        },
       ]);
     });
 
@@ -1768,19 +1725,18 @@ describe('sectionAssessmentsRedux', () => {
                     {
                       question: 'What is a variable?',
                       type: 'multi',
-                      answer_texts: ['a']
-                    }
-                  ]
-                }
-              }
-            }
-          }
+                      answer_texts: ['a'],
+                    },
+                  ],
+                },
+              },
+            },
+          },
         };
 
         const question = getCurrentQuestion(stateWithSurvey);
-        assert.deepEqual('What is a variable?', question.question);
-        assert.deepEqual(
-          [{text: 'a', correct: false, letter: 'A'}],
+        expect('What is a variable?').toEqual(question.question);
+        expect([{text: 'a', correct: false, letter: 'A'}]).toEqual(
           question.answers
         );
       });
@@ -1800,30 +1756,30 @@ describe('sectionAssessmentsRedux', () => {
                     {
                       question_text: 'What is a variable?',
                       type: 'Multi',
-                      answers: [{text: 'b', correct: false}]
+                      answers: [{text: 'b', correct: false}],
                     },
                     {
                       question_text: 'What is a function?',
                       type: 'Multi',
-                      answers: [{text: 'a', correct: true}]
+                      answers: [{text: 'a', correct: true}],
                     },
                     {
                       type: 'Match',
                       question: 'Can you match these things?',
                       answers: [{text: 'answer 1'}, {text: 'answer 2'}],
-                      options: [{text: 'option 1'}, {text: 'option 2'}]
-                    }
-                  ]
-                }
-              }
-            }
-          }
+                      options: [{text: 'option 1'}, {text: 'option 2'}],
+                    },
+                  ],
+                },
+              },
+            },
+          },
         };
 
         const question = getCurrentQuestion(stateWithAssessment);
-        assert.deepEqual(question.question, 'What is a function?');
-        assert.deepEqual(question.answers, [
-          {text: 'a', correct: true, letter: 'A'}
+        expect(question.question).toEqual('What is a function?');
+        expect(question.answers).toEqual([
+          {text: 'a', correct: true, letter: 'A'},
         ]);
       });
 
@@ -1842,29 +1798,29 @@ describe('sectionAssessmentsRedux', () => {
                     {
                       question_text: 'What is a variable?',
                       type: 'Multi',
-                      answers: [{text: 'b', correct: false}]
+                      answers: [{text: 'b', correct: false}],
                     },
                     {
                       question_text: 'What is a function?',
                       type: 'Multi',
-                      answers: [{text: 'a', correct: true}]
+                      answers: [{text: 'a', correct: true}],
                     },
                     {
                       type: 'Match',
                       question: 'Can you match these things?',
                       answers: [{text: 'answer 1'}, {text: 'answer 2'}],
-                      options: [{text: 'option 1'}, {text: 'option 2'}]
-                    }
-                  ]
-                }
-              }
-            }
-          }
+                      options: [{text: 'option 1'}, {text: 'option 2'}],
+                    },
+                  ],
+                },
+              },
+            },
+          },
         };
 
         const question = getCurrentQuestion(stateWithAssessment);
-        assert.deepEqual(question.question, 'Can you match these things?');
-        assert.deepEqual(question.answers, ['answer 1', 'answer 2']);
+        expect(question.question).toEqual('Can you match these things?');
+        expect(question.answers).toEqual(['answer 1', 'answer 2']);
       });
 
       it('returns an empty answers array if answers is undefined', () => {
@@ -1882,18 +1838,18 @@ describe('sectionAssessmentsRedux', () => {
                     {
                       question_text: 'What is a variable?',
                       type: 'Multi',
-                      answers: undefined
-                    }
-                  ]
-                }
-              }
-            }
-          }
+                      answers: undefined,
+                    },
+                  ],
+                },
+              },
+            },
+          },
         };
 
         const question = getCurrentQuestion(stateWithAssessment);
-        assert.deepEqual(question.question, 'What is a variable?');
-        assert.deepEqual(question.answers, []);
+        expect(question.question).toEqual('What is a variable?');
+        expect(question.answers).toEqual([]);
       });
     });
 
@@ -1908,15 +1864,15 @@ describe('sectionAssessmentsRedux', () => {
             surveysByScript: {
               3: {
                 123: {
-                  lesson_name: 'name'
-                }
-              }
-            }
-          }
+                  lesson_name: 'name',
+                },
+              },
+            },
+          },
         };
 
         const answers = getStudentAnswersForCurrentQuestion(stateWithSurvey);
-        assert.deepEqual(answers, []);
+        expect(answers).toEqual([]);
       });
 
       it('returns an array of answers for an assessment', () => {
@@ -1936,27 +1892,26 @@ describe('sectionAssessmentsRedux', () => {
                         {
                           student_result: [3],
                           status: 'incorrect',
-                          type: 'Multi'
+                          type: 'Multi',
                         },
                         {
                           student_result: 'Hi',
                           status: '',
-                          type: 'FreeResponse'
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
+                          type: 'FreeResponse',
+                        },
+                      ],
+                    },
+                  },
+                },
+              },
+            },
+          },
         };
 
-        const answers = getStudentAnswersForCurrentQuestion(
-          stateWithAssessment
-        );
-        assert.deepEqual(answers, [
-          {id: 1, name: 'Saira', answer: 'D', correct: false}
+        const answers =
+          getStudentAnswersForCurrentQuestion(stateWithAssessment);
+        expect(answers).toEqual([
+          {id: 1, name: 'Saira', answer: 'D', correct: false},
         ]);
       });
     });

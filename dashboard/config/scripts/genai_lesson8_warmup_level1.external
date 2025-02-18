@@ -1,0 +1,11 @@
+name 'genai-lesson8-warmup-level1'
+title 'Warm Up'
+markdown <<MARKDOWN
+###**What animal do you see in the picture below?**
+
+![](https://images.code.org/c01850b4e1e1c08534113288d911a129-image-1721150012072.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Discussion Goal: This image is an optical illusion - some students may see a duck, while others will see a rabbit. Students who see the duck will think the animal is facing to the left, with the two long appenges acting as the beak. Students who see the rabbit will think the animal is facing to the right, with the two long appendages acting as the ears. Once students know how to view the image, they may find themselves switching back and forth in how they view the image. In the class discussion, both views are correct and let students surface that there are two different ways to view the image before pointing it out explicitly.
+MARKDOWN

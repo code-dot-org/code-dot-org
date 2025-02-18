@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import i18n from '@cdo/locale';
+
 import HeaderBanner from '../HeaderBanner';
-import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 
 class Incubator extends Component {
   render() {
@@ -11,7 +16,7 @@ class Incubator extends Component {
           subHeadingText="Try something new"
           backgroundUrl="/shared/images/banners/banner-incubator.png"
           imageUrl="/shared/images/banners/banner-incubator-image.png"
-          short={true}
+          imgStyling={{maxHeight: '160px'}}
         />
         <div className="main" style={{maxWidth: 970, margin: '0 auto'}}>
           <div style={{margin: '40px 0'}}>
@@ -34,18 +39,36 @@ class Incubator extends Component {
           </div>
 
           <TwoColumnActionBlock
-            imageUrl={
-              '/shared/images/teacher-announcement/incubator-musiclab.png'
-            }
-            subHeading={'Music Lab'}
-            description={
-              'Make music with code! Try mixing and matching beats, bass, and other sounds to make your own songs.'
-            }
+            imageUrl="/shared/images/teacher-announcement/incubator-codebridge-python.png"
+            subHeading={i18n.incubator_codebridge_python_title()}
+            description={<span>{i18n.incubator_codebridge_python_desc()}</span>}
+            marginBottom="20px"
             buttons={[
               {
-                url: '/musiclab',
-                text: 'Try it out!'
-              }
+                url: '/s/codebridge-ascii/reset',
+                text: i18n.incubator_codebridge_python_ascii_button(),
+              },
+              {
+                url: '/projects/pythonlab/new',
+                text: i18n.incubator_codebridge_python_project_button(),
+                color: Button.ButtonColor.neutralDark,
+              },
+            ]}
+          />
+          <TwoColumnActionBlock
+            imageUrl="shared/images/teacher-announcement/incubator-genai-graphic.png"
+            subHeading={i18n.incubator_genai_title()}
+            description={<span>{i18n.incubator_genai_desc()}</span>}
+            marginBottom="20px"
+            buttons={[
+              {
+                url: '/courses/exploring-gen-ai-2024',
+                text: i18n.incubator_genai_course_button(),
+              },
+              {
+                url: pegasus('/curriculum/generative-ai'),
+                text: i18n.incubator_genai_marketing_button(),
+              },
             ]}
           />
         </div>

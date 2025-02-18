@@ -1,7 +1,6 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
-import {expect, assert} from '../../../util/reconfiguredChai';
+
 import BubbleChoice from '@cdo/apps/code-studio/components/BubbleChoice';
 import * as utils from '@cdo/apps/utils';
 
@@ -14,7 +13,7 @@ const fakeSublevels = [
     description: 'Sublevel 1 is lots of fun',
     position: 1,
     letter: 'a',
-    status: 'perfect'
+    status: 'perfect',
   },
   {
     id: '2',
@@ -24,8 +23,8 @@ const fakeSublevels = [
     description: 'Sublevel 2 has cool stuff to do',
     position: 2,
     letter: 'b',
-    status: 'not_tried'
-  }
+    status: 'not_tried',
+  },
 ];
 
 const DEFAULT_PROPS = {
@@ -39,41 +38,41 @@ const DEFAULT_PROPS = {
     script_url: '/s/script',
     name: 'Bubble Choice',
     type: 'BubbleChoice',
-    teacher_markdown: 'Students should work on which ever bubble they like'
-  }
+    teacher_markdown: 'Students should work on which ever bubble they like',
+  },
 };
 
 describe('BubbleChoice', () => {
   it('renders correct number of sublevels', () => {
     const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
-    assert.equal(2, wrapper.find('SublevelCard').length);
+    expect(2).toEqual(wrapper.find('SublevelCard').length);
   });
 
   describe('back and finish buttons', () => {
     beforeEach(() => {
-      sinon.stub(utils, 'navigateToHref');
+      jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      utils.navigateToHref.restore();
+      utils.navigateToHref.mockRestore();
     });
 
     it('redirect to previous/next levels', () => {
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
 
       // 4 buttons - 2 "back" and 2 "continue/finish"
-      assert.equal(4, wrapper.find('button').length);
+      expect(4).toEqual(wrapper.find('button').length);
 
       const backButton = wrapper.find('button').at(0);
       backButton.simulate('click');
-      expect(utils.navigateToHref).to.have.been.calledWith(
+      expect(utils.navigateToHref).toHaveBeenCalledWith(
         DEFAULT_PROPS.level.previous_level_url + window.location.search
       );
 
       const finishButton = wrapper.find('button').at(1);
-      assert.equal('Finish', finishButton.text());
+      expect('Finish').toEqual(finishButton.text());
       finishButton.simulate('click');
-      expect(utils.navigateToHref).to.have.been.calledWith(
+      expect(utils.navigateToHref).toHaveBeenCalledWith(
         DEFAULT_PROPS.level.redirect_url + window.location.search
       );
     });
@@ -82,23 +81,23 @@ describe('BubbleChoice', () => {
       const level = {
         ...DEFAULT_PROPS.level,
         previous_level_url: null,
-        redirect_url: null
+        redirect_url: null,
       };
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
 
       // 4 buttons - 2 "back" and 2 "continue/finish"
-      assert.equal(4, wrapper.find('button').length);
+      expect(4).toEqual(wrapper.find('button').length);
 
       const backButton = wrapper.find('button').at(0);
       backButton.simulate('click');
-      expect(utils.navigateToHref).to.have.been.calledWith(
+      expect(utils.navigateToHref).toHaveBeenCalledWith(
         DEFAULT_PROPS.level.script_url + window.location.search
       );
 
       const finishButton = wrapper.find('button').at(1);
-      assert.equal('Finish', finishButton.text());
+      expect('Finish').toEqual(finishButton.text());
       finishButton.simulate('click');
-      expect(utils.navigateToHref).to.have.been.calledWith(
+      expect(utils.navigateToHref).toHaveBeenCalledWith(
         DEFAULT_PROPS.level.script_url + window.location.search
       );
     });
@@ -107,28 +106,28 @@ describe('BubbleChoice', () => {
       const level = {
         ...DEFAULT_PROPS.level,
         previous_level_url: null,
-        script_url: null
+        script_url: null,
       };
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
       const buttons = wrapper.find('button');
 
-      assert.equal(2, buttons.length);
-      assert.notEqual('Back', buttons.at(0).text());
-      assert.notEqual('Back', buttons.at(1).text());
+      expect(2).toEqual(buttons.length);
+      expect('Back').not.toEqual(buttons.at(0).text());
+      expect('Back').not.toEqual(buttons.at(1).text());
     });
 
     it('hides finish button if no redirect or script url', () => {
       const level = {
         ...DEFAULT_PROPS.level,
         redirect_url: null,
-        script_url: null
+        script_url: null,
       };
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
       const buttons = wrapper.find('button');
 
-      assert.equal(2, buttons.length);
-      assert.notEqual('Finish', buttons.at(0).text());
-      assert.notEqual('Finish', buttons.at(1).text());
+      expect(2).toEqual(buttons.length);
+      expect('Finish').not.toEqual(buttons.at(0).text());
+      expect('Finish').not.toEqual(buttons.at(1).text());
     });
   });
 });

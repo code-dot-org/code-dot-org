@@ -1,0 +1,50 @@
+@import 'color.scss';
+
+.chordPanelContainer {
+  background-color: $neutral_dark;
+  align-items: center;
+  padding: 5px;
+  user-select: none;
+
+  .optionsRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    .dropdown {
+      width: 48%;
+      font-size: 12px;
+    }
+  }
+
+  .noteGridContainer {
+    position: relative;
+    width: 315px;
+    margin: 10px 0;
+    height: 110px;
+    border-radius: 4px;
+    background-color: $neutral_dark90;
+
+    .gridNote {
+      position: absolute;
+      background-color: $light_cyan;
+      border-radius: 3px;
+    }
+  }
+
+  .controlsRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+
+    .dropdown {
+      width: 100%;
+      font-size: 12px;
+      margin: 0 30px;
+    }
+  }
+}

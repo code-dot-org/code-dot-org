@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+
+# During the pilot/prototyping phase of development for AI Tutor we want to
+# avoid storing student chat messages (AiTutorInteractions) any longer than
+# is necessary for analysis to prevent storing excess student PII. This deletes
+# any AiTutorInteraction older than 30 days. Once AI Tutor is fully launched
+# and we have an approved long-term deletion/obfuscation policy we will
+# disable this cron job. See: https://codedotorg.atlassian.net/browse/CT-372.
+def main
+  ninety_days_ago = Time.now - 90.days
+  AiTutorInteraction.where('created_at < ?', ninety_days_ago).destroy_all
+end
+
+main

@@ -1,17 +1,17 @@
-import {expect} from '../../util/reconfiguredChai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
+
+import {reducers} from '@cdo/apps/applab/redux/applab';
+import ScreenSelector from '@cdo/apps/applab/ScreenSelector';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
-import ScreenSelector from '@cdo/apps/applab/ScreenSelector';
-import {reducers} from '@cdo/apps/applab/redux/applab';
-import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import commonReducers from '@cdo/apps/redux/commonReducers';
+import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
 describe('The ScreenSelector component', () => {
   beforeEach(() => {
@@ -38,28 +38,28 @@ describe('The ScreenSelector component', () => {
   it('renders a select element on pages with design mode', () => {
     getStore().dispatch(
       setPageConstants({
-        hasDesignMode: true
+        hasDesignMode: true,
       })
     );
-    expect(render().find('select')).to.have.length(1);
+    expect(render().find('select')).toHaveLength(1);
   });
 
   it('will be hidden on pages without design mode', () => {
     getStore().dispatch(
       setPageConstants({
-        hasDesignMode: false
+        hasDesignMode: false,
       })
     );
-    expect(render().find('select')).to.have.length(0);
+    expect(render().find('select')).toHaveLength(0);
   });
 
   it('will not be hidden on readonly pages', () => {
     getStore().dispatch(
       setPageConstants({
         hasDesignMode: true,
-        isReadOnlyWorkspace: true
+        isReadOnlyWorkspace: true,
       })
     );
-    expect(render().find('select')).to.have.length(1);
+    expect(render().find('select')).toHaveLength(1);
   });
 });

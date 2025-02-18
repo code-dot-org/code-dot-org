@@ -15,12 +15,9 @@ module Pd::Payment
           Pd::Workshop::COURSE_CS_IN_A,
           Pd::Workshop::COURSE_CS_IN_S
         ].include?(workshop.course)
-
-        return PaymentCalculatorCounselorAdmin if [
-          Pd::Workshop::COURSE_COUNSELOR,
-          Pd::Workshop::COURSE_ADMIN
-        ].include?(workshop.course)
       else
+        return PaymentCalculatorCounselorAdmin if workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
+
         # TODO: elijah remove this condition once we stop funded these legacy
         # programs
         return PaymentCalculatorDistrict if [

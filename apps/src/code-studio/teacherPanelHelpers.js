@@ -1,8 +1,10 @@
-import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TeacherPanel from './components/progress/teacherPanel/TeacherPanel';
+import {Provider} from 'react-redux';
+
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+
+import TeacherPanel from './components/progress/teacherPanel/TeacherPanel';
 
 /**
  * Render our teacher panel that shows up on our course overview page.

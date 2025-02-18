@@ -1,0 +1,26 @@
+name 'gen-ai-humanities-research-L1'
+title 'Using a Search Engine'
+submittable 'true'
+anonymous 'false'
+
+page
+text 'gen-ai-humanities-research-quotes-instructions'
+text 'gen-ai-humanities-research-quote1'
+level 'gen-ai-humanities-research-L1a'
+level 'gen-ai-humanities-research-L1a-2'
+level 'gen-ai-humanities-research-L1a-3'
+
+text 'gen-ai-humanities-research-quote2'
+level 'gen-ai-humanities-research-L1b'
+level 'gen-ai-humanities-research-L1b-2'
+level 'gen-ai-humanities-research-L1b-3'
+
+text 'gen-ai-humanities-research-quote3'
+level 'gen-ai-humanities-research-L1c'
+level 'gen-ai-humanities-research-L1c-2'
+level 'gen-ai-humanities-research-L1c-3'
+
+text 'gen-ai-humanities-research-quote4'
+level 'gen-ai-humanities-research-L1d'
+level 'gen-ai-humanities-research-L1d-2'
+level 'gen-ai-humanities-research-L1d-3'

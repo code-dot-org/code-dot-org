@@ -1,20 +1,19 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {assert, expect} from '../../../util/reconfiguredChai';
+
 import ParticipantTypePicker from '@cdo/apps/templates/teacherDashboard/ParticipantTypePicker';
 
 describe('ParticipantTypePicker', () => {
   let defaultProps, setParticipantType, handleCancel;
 
   beforeEach(() => {
-    setParticipantType = sinon.spy();
-    handleCancel = sinon.spy();
+    setParticipantType = jest.fn();
+    handleCancel = jest.fn();
     defaultProps = {
       title: 'Create a new section',
       setParticipantType,
       handleCancel,
-      availableParticipantTypes: ['student']
+      availableParticipantTypes: ['student'],
     };
   });
 
@@ -25,7 +24,7 @@ describe('ParticipantTypePicker', () => {
         availableParticipantTypes={['student', 'teacher', 'facilitator']}
       />
     );
-    assert.equal(wrapper.find('ParticipantTypeCard').length, 3);
+    expect(wrapper.find('ParticipantTypeCard').length).toEqual(3);
   });
 
   it('clicking on a card calls setParticipantType', () => {
@@ -36,10 +35,7 @@ describe('ParticipantTypePicker', () => {
       />
     );
 
-    wrapper
-      .find('ParticipantTypeCard')
-      .at(0)
-      .simulate('click');
-    expect(setParticipantType).to.have.been.calledOnce;
+    wrapper.find('ParticipantTypeCard').at(0).simulate('click');
+    expect(setParticipantType).toHaveBeenCalledTimes(1);
   });
 });

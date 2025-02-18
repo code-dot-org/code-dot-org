@@ -1,11 +1,13 @@
+import _ from 'lodash';
+
+import {valueOr} from '../utils';
+
 import Collidable from './collidable';
 import * as constants from './constants';
-import _ from 'lodash';
 import {ShakeActor} from './spriteActions';
 import Studio from './studio';
 import StudioAnimation from './StudioAnimation';
 import StudioSpriteSheet from './StudioSpriteSheet';
-import {valueOr} from '../utils';
 
 const Direction = constants.Direction;
 const NextTurn = constants.NextTurn;
@@ -58,15 +60,15 @@ export default class Item extends Collidable {
           animations: [
             {
               type: 'direction',
-              count: 8
+              count: 8,
             },
             {
               type: 'idle',
-              count: 1
-            }
-          ]
+              count: 1,
+            },
+          ],
         }),
-        animationFrameDuration: this.getAnimationFrameDuration()
+        animationFrameDuration: this.getAnimationFrameDuration(),
       })
     );
   }
@@ -167,7 +169,7 @@ export default class Item extends Collidable {
       var dirUnit = Direction.getUnitVector(this.dir);
       var destVector = {
         x: this.destGridX * Studio.SQUARE_SIZE + Studio.HALF_SQUARE - center.x,
-        y: this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE - center.y
+        y: this.destGridY * Studio.SQUARE_SIZE + Studio.HALF_SQUARE - center.y,
       };
       // Take the dot product of dirUnit and destVector to see if continuing to
       // move in that direction will bring the item any closer to its
@@ -198,7 +200,7 @@ export default class Item extends Collidable {
         {row: -1, col: 0},
         {row: +1, col: 0},
         {row: 0, col: -1},
-        {row: 0, col: +1}
+        {row: 0, col: +1},
       ];
 
       for (
@@ -299,7 +301,7 @@ export default class Item extends Collidable {
         candidates = _.shuffle(candidates);
 
         // then sort everything based on score.
-        candidates.sort(function(a, b) {
+        candidates.sort(function (a, b) {
           return b.score - a.score;
         });
 
@@ -474,7 +476,7 @@ export default class Item extends Collidable {
     this.animation_.redrawCenteredAt(
       {
         x: this.x + this.renderOffset.x,
-        y: this.y + this.renderOffset.y
+        y: this.y + this.renderOffset.y,
       },
       Studio.tickCount
     );
@@ -483,7 +485,7 @@ export default class Item extends Collidable {
   getCenterPos() {
     return {
       x: this.x,
-      y: this.y
+      y: this.y,
     };
   }
 
@@ -497,7 +499,7 @@ export default class Item extends Collidable {
     const standstillBehaviors = [
       constants.BEHAVIOR_STOP,
       constants.BEHAVIOR_WATCH_ACTOR,
-      constants.BEHAVIOR_GRID_ALIGNED
+      constants.BEHAVIOR_GRID_ALIGNED,
     ];
     return !standstillBehaviors.includes(this.activity);
   }
@@ -508,7 +510,7 @@ export default class Item extends Collidable {
 
     return {
       x: this.x + speed * unit.x,
-      y: this.y + speed * unit.y
+      y: this.y + speed * unit.y,
     };
   }
 

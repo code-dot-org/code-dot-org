@@ -1,0 +1,17 @@
+name 'course_c_maker_calming_leds_coursee'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+<h2 style="text-align: center;">Calming LEDs</h2>
+
+<div style="text-align: center;">
+<p>
+Now you’re ready to code  <b>loops</b> for the micro:bit.
+Ask your teacher for the micro:bit project link! </p>
+</div>
+
+
+<img src="https://images.code.org/4d006ae98d51d657db8c1844deb07354-image-1702577392443.png" style="display: block; margin: auto; width: 30%">
+
+MARKDOWN

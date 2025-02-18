@@ -1,0 +1,39 @@
+name 'gen-ai-humanities-L1C'
+title 'Crafting Prompts'
+display_name 'Grammar and Style Correction'
+bubble_choice_description 'Improve the grammar and style of the following sentence: "Running fast the dog through the park chasing the frisbee."'
+thumbnail_url 'https://images.code.org/f57d871ed26469a8626b1fd1fd816726-image-1719501302687.png'
+
+markdown <<MARKDOWN
+## Grammar and Style Correction
+
+**Task:** Improve the grammar and style of the following sentence: "Running fast the dog through the park chasing the frisbee."
+
+### Steps
+
+1. **Understanding the task:** You will be crafting a prompt that asks an AI tool to correct the grammar and improve the style of a given sentence.
+
+   Think about the specific grammatical issues in the sentence and what improvements are needed for better readability.
+
+2. **Crafting your prompt:** Start by identifying the grammatical errors in the sentence. For example, it lacks proper sentence structure and subject-verb agreement.
+
+   Consider how to clearly ask the AI to focus on these specific issues to improve the sentence.
+
+3. **Writing your prompt:** Write a prompt that is clear and specific. Here is an example to get you started:
+
+> Improve the grammar and style of the following sentence: 'Running fast the dog through the park chasing the frisbee.' Ensure the sentence has correct subject-verb agreement and flows smoothly
+
+4. **Using the AI tool:** Enter your prompt into the AI tool, and review the response. Assess whether it meets your expectations and addresses the grammatical issues.
+
+5. **Evaluate the response:** Consider the following questions when evaluating the AI's response:
+
+   * Does the sentence have correct grammar and subject-verb agreement?
+   
+   * Is the sentence clear and easy to read?
+   
+   * Has the overall style and flow of the sentence improved?
+
+6. **Refining your prompt:** If the AI's response is not as expected, think about how you can improve your prompt. You might need to add more detail or be more specific about what you want.
+
+   Adjust your prompt and try again until you get a satisfactory response.
+MARKDOWN

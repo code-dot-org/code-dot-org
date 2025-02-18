@@ -1,18 +1,22 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
-import onClickOutside from 'react-onclickoutside';
 import classNames from 'classnames';
-import JavalabButton from './JavalabButton';
-import msg from '@cdo/locale';
-import javalabMsg from '@cdo/javalab/locale';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import onClickOutside from 'react-onclickoutside';
 import {connect} from 'react-redux';
-import moduleStyles from './backpack.module.scss';
-import {DisplayTheme} from './DisplayTheme';
-import {makeEnum} from '@cdo/apps/utils';
-import JavalabDialog from './JavalabDialog';
+
+import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
-import CloseOnEscape from './components/CloseOnEscape';
+import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
+import javalabMsg from '@cdo/javalab/locale';
+import msg from '@cdo/locale';
+
+import {DisplayTheme} from './DisplayTheme';
+import JavalabButton from './JavalabButton';
+import JavalabDialog from './JavalabDialog';
+
+import moduleStyles from './backpack.module.scss';
 
 const Dialog = makeEnum(
   'IMPORT_WARNING',
@@ -31,11 +35,12 @@ class Backpack extends Component {
     isButtonDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
-    backpackApi: PropTypes.object.isRequired,
     sources: PropTypes.object.isRequired,
     validation: PropTypes.object.isRequired,
-    backpackEnabled: PropTypes.bool
+    backpackEnabled: PropTypes.bool,
   };
+
+  static contextType = BackpackAPIContext;
 
   state = {
     dropdownOpen: false,
@@ -46,7 +51,7 @@ class Backpack extends Component {
     openDialog: null,
     fileImportMessage: '',
     fileDeleteMessage: '',
-    isDeleting: false
+    isDeleting: false,
   };
 
   expandDropdown = () => {
@@ -54,11 +59,11 @@ class Backpack extends Component {
       dropdownOpen: true,
       backpackLoadError: false,
       selectedFiles: [],
-      backpackFilenames: []
+      backpackFilenames: [],
     });
-    if (this.props.backpackApi.hasBackpack()) {
+    if (this.context.hasBackpack()) {
       this.setState({backpackFilesLoading: true});
-      this.props.backpackApi.getFileList(
+      this.context.getFileList(
         this.onFileListLoadError,
         this.onFileListLoadSuccess
       );
@@ -86,14 +91,14 @@ class Backpack extends Component {
       fileDeleteMessage: this.getFileListMessage(
         javalabMsg.fileDeleteConfirm(),
         selectedFiles
-      )
+      ),
     });
   };
 
   handleDelete = () => {
     const {selectedFiles} = this.state;
     this.setState({isDeleting: true});
-    this.props.backpackApi.deleteFiles(
+    this.context.deleteFiles(
       selectedFiles,
       (_, failedFileList) => this.onDeleteFailed(failedFileList, selectedFiles),
       this.collapseDropdown
@@ -107,7 +112,7 @@ class Backpack extends Component {
         javalabMsg.fileDeleteError(),
         failedFileList
       ),
-      isDeleting: false
+      isDeleting: false,
     });
     const {backpackFilenames, selectedFiles} = this.state;
     // remove correctly deleted files from backpackFilenames and selectedFiles
@@ -126,7 +131,7 @@ class Backpack extends Component {
       );
       this.setState({
         backpackFilenames: newBackpackFilenames,
-        selectedFiles: newSelectedFiles
+        selectedFiles: newSelectedFiles,
       });
     }
   };
@@ -134,7 +139,7 @@ class Backpack extends Component {
   importFiles = selectedFiles => {
     let failedServerImportFiles = [];
     selectedFiles.forEach(filename => {
-      this.props.backpackApi.fetchFile(
+      this.context.fetchFile(
         filename,
         () => failedServerImportFiles.push(filename),
         fileContents =>
@@ -156,7 +161,7 @@ class Backpack extends Component {
         javalabMsg.fileImportWarning(),
         files,
         javalabMsg.fileImportWarningConfirm()
-      )
+      ),
     });
   };
 
@@ -169,7 +174,7 @@ class Backpack extends Component {
           ? javalabMsg.fileImportError()
           : javalabMsg.fileImportServerError(),
         files
-      )
+      ),
     });
   };
 
@@ -208,7 +213,7 @@ class Backpack extends Component {
       dropdownOpen: false,
       fileImportMessage: '',
       openDialog: null,
-      isDeleting: false
+      isDeleting: false,
     });
   };
 
@@ -229,7 +234,7 @@ class Backpack extends Component {
   onFileListLoadError = () => {
     this.setState({
       backpackLoadError: true,
-      backpackFilesLoading: false
+      backpackFilesLoading: false,
     });
   };
 
@@ -237,7 +242,7 @@ class Backpack extends Component {
     this.setState({
       backpackFilenames: filenames,
       backpackFilesLoading: false,
-      backpackLoadError: false
+      backpackLoadError: false,
     });
   };
 
@@ -246,13 +251,13 @@ class Backpack extends Component {
     const filenameIndex = this.state.selectedFiles.indexOf(filename);
     if (event.target.checked && filenameIndex < 0) {
       this.setState({
-        selectedFiles: [...this.state.selectedFiles, filename]
+        selectedFiles: [...this.state.selectedFiles, filename],
       });
     } else if (!event.target.checked && filenameIndex >= 0) {
       const newFileList = [...this.state.selectedFiles];
       newFileList.splice(filenameIndex, 1);
       this.setState({
-        selectedFiles: newFileList
+        selectedFiles: newFileList,
       });
     }
   };
@@ -294,7 +299,7 @@ class Backpack extends Component {
       openDialog,
       fileImportMessage,
       fileDeleteMessage,
-      isDeleting
+      isDeleting,
     } = this.state;
 
     const showFiles =
@@ -308,6 +313,9 @@ class Backpack extends Component {
 
     const backpackIcon = (
       <i style={{marginRight: 8, fontSize: 13}}>
+        {/* TODO: [Phase 2] This is legacy style of backpack image.
+         Once we move to new styles, make sure to use backpack_neutraldark.png instead to match colors
+         More info here: https://github.com/code-dot-org/code-dot-org/pull/50895 */}
         <img
           src="/blockly/media/javalab/backpack.png"
           alt="backpack icon"
@@ -326,12 +334,13 @@ class Backpack extends Component {
           icon={backpackIcon}
           onClick={this.toggleDropdown}
           headerHasFocus
+          isLegacyStyles
           isRtl={false}
           label={javalabMsg.backpackLabel()}
           leftJustified
           isDisabled={isButtonDisabled}
           style={{
-            ...(dropdownOpen && styles.dropdownOpenButton)
+            ...(dropdownOpen && styles.dropdownOpenButton),
           }}
         />
         {dropdownOpen && (
@@ -464,14 +473,13 @@ class Backpack extends Component {
 
 const styles = {
   dropdownOpenButton: {
-    backgroundColor: color.cyan
-  }
+    backgroundColor: color.cyan,
+  },
 };
 
 export const UnconnectedBackpack = Backpack;
 export default connect(state => ({
-  backpackApi: state.javalab.backpackApi,
-  sources: state.javalab.sources,
-  validation: state.javalab.validation,
-  backpackEnabled: state.javalab.backpackEnabled
+  sources: state.javalabEditor.sources,
+  validation: state.javalabEditor.validation,
+  backpackEnabled: state.javalab.backpackEnabled,
 }))(onClickOutside(UnconnectedBackpack));

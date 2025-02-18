@@ -31,34 +31,35 @@ class UnitGroup < ApplicationRecord
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
-  has_many :default_unit_group_units, -> {where(experiment_name: nil).order(:position)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :default_unit_group_units, -> {order(:position)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_units, through: :default_unit_group_units, source: :script
-  has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  scope :with_associated_models, -> do
-    includes(
-      [
-        :plc_course,
-        :default_unit_group_units,
-        :alternate_unit_group_units,
-        {
-          course_version: {
-            course_offering: :course_versions
+  scope(
+    :with_associated_models, lambda do
+      includes(
+        [
+          :plc_course,
+          :default_unit_group_units,
+          {
+            course_version: {
+              course_offering: :course_versions
+            }
           }
-        }
-      ]
-    )
-  end
+        ]
+      )
+    end
+  )
 
   def cached
     return self unless UnitGroup.should_cache?
     self.class.get_from_cache(id)
   end
 
+  validates_presence_of :link
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def skip_name_format_validation
@@ -103,8 +104,8 @@ class UnitGroup < ApplicationRecord
     published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def self.file_path(name)
-    Rails.root.join("config/courses/#{name}.course")
+  def self.file_path(name, root_path = Rails.root)
+    root_path.join("config/courses/#{name}.course")
   end
 
   def self.load_from_path(path)
@@ -124,7 +125,7 @@ class UnitGroup < ApplicationRecord
 
   def self.seed_from_hash(hash)
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
-    unit_group.update_scripts(hash['script_names'], hash['alternate_units'])
+    unit_group.update_scripts(hash['script_names'])
     unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
     unit_group.instruction_type = hash['instruction_type'] || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
@@ -142,10 +143,10 @@ class UnitGroup < ApplicationRecord
 
     unit_group.save!
     unit_group
-  rescue Exception => e
+  rescue Exception => exception
     # print filename for better debugging
-    new_e = Exception.new("in course: #{hash['name']}: #{e.message}")
-    new_e.set_backtrace(e.backtrace)
+    new_e = Exception.new("in course: #{hash['name']}: #{exception.message}")
+    new_e.set_backtrace(exception.backtrace)
     raise new_e
   end
 
@@ -165,7 +166,6 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
-        alternate_units: summarize_alternate_units,
         published_state: published_state,
         instruction_type: instruction_type,
         participant_audience: participant_audience,
@@ -177,26 +177,13 @@ class UnitGroup < ApplicationRecord
     ) + "\n"
   end
 
-  def summarize_alternate_units
-    alternates = alternate_unit_group_units.all
-    return nil if alternates.empty?
-    alternates.map do |ugu|
-      {
-        experiment_name: ugu.experiment_name,
-        alternate_script: ugu.script.name,
-        default_script: ugu.default_script.name
-      }
-    end
-  end
-
   # This method updates both our localizeable strings related to this course, and
   # the set of units that are in the course, then writes out our serialization
   # @param units [Array<String>] - Updated list of names of units in this course
-  # @param alternate_units [Array<Hash>] Updated list of alternate units in this course
   # @param course_strings[Hash{String => String}]
-  def persist_strings_and_units_changes(units, alternate_units, course_strings)
+  def persist_strings_and_units_changes(units, course_strings)
     UnitGroup.update_strings(name, course_strings)
-    update_scripts(units, alternate_units) if units
+    update_scripts(units) if units
     save!
   end
 
@@ -207,24 +194,19 @@ class UnitGroup < ApplicationRecord
   end
 
   # @param new_units [Array<String>]
-  # @param alternate_units [Array<Hash>] An array of hashes containing fields
-  #   'alternate_script', 'default_script' and 'experiment_name'. Optional.
-  def update_scripts(new_units, alternate_units = nil)
-    alternate_units ||= []
+  def update_scripts(new_units)
     new_units = new_units.reject(&:empty?)
     new_units_objects = new_units.map {|s| Unit.find_by_name!(s)}
     # we want to delete existing unit group units that aren't in our new list
     units_to_remove = default_unit_group_units.map(&:script) - new_units_objects
-    units_to_remove -= alternate_units.map {|hash| Unit.find_by_name!(hash['alternate_script'])}
 
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
-    if new_units_objects.any? do |s|
+    unaddable_unit_names = new_units_objects.select do |s|
       s.unit_group != self && s.prevent_course_version_change?
-    end
-      raise 'Cannot add units that have resources or vocabulary'
-    end
+    end.map(&:name)
+    raise "Cannot add units that have resources or vocabulary: #{unaddable_unit_names}" if unaddable_unit_names.any?
 
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
@@ -236,23 +218,6 @@ class UnitGroup < ApplicationRecord
         unit.write_script_json
       end
       unit_group_unit.update!(position: index + 1)
-    end
-
-    alternate_units.each do |hash|
-      alternate_unit = Unit.find_by_name!(hash['alternate_script'])
-      default_unit = Unit.find_by_name!(hash['default_script'])
-      # alternate units should have the same position as the unit they replace.
-      position = default_unit_group_units.find_by(script: default_unit).position
-      unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: alternate_unit) do |ugu|
-        ugu.position = position
-        ugu.experiment_name = hash['experiment_name']
-        ugu.default_script = default_unit
-      end
-      unit_group_unit.update!(
-        position: position,
-        experiment_name: hash['experiment_name'],
-        default_script: default_unit
-      )
     end
 
     units_to_remove.each do |unit|
@@ -277,13 +242,6 @@ class UnitGroup < ApplicationRecord
 
   def self.family_names
     CourseVersion.course_offering_keys('UnitGroup')
-  end
-
-  # @param user [User]
-  # @returns [Boolean] Whether the user has any experiment enabled which is
-  #   associated with an alternate unit group unit.
-  def self.has_any_course_experiments?(user)
-    Experiment.any_enabled?(user: user, experiment_names: UnitGroupUnit.experiments)
   end
 
   # A course that the general public can assign. Has been soft or
@@ -372,73 +330,17 @@ class UnitGroup < ApplicationRecord
     course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  # If a user has no experiments enabled, return the default set of units.
-  # If a user has an experiment enabled corresponding to an alternate unit in
-  # this course, use the alternate unit in place of the default unit with
-  # the same position.
+  # return the default set of units.
   # If the unit is in development, hide it from everyone but levelbuilders.
   # @param user [User]
   def units_for_user(user)
     # @return [Array<Unit>]
     units = default_unit_group_units.map do |ugu|
-      Unit.get_from_cache(select_unit_group_unit(user, ugu).script_id)
+      Unit.get_from_cache(ugu.script_id)
     end
     units.compact.reject do |unit|
       unit.in_development? && !user&.permission?(UserPermission::LEVELBUILDER)
     end
-  end
-
-  # Return an alternate unit group unit associated with the specified default
-  # unit group unit (or the default unit group unit itself) by evaluating these
-  # rules in order:
-  #
-  # 1. If the user is a teacher, and they have a course experiment enabled,
-  # show the corresponding alternate unit group unit.
-  #
-  # 2. If the user is in a section assigned to this course: show an alternate
-  # unit group unit if any section's teacher is in a corresponding course
-  # experiment, otherwise show the default unit group unit.
-  #
-  # 3. If the user is a student and has progress in an alternate unit group unit,
-  # show the alternate unit group unit.
-  #
-  # 4. Otherwise, show the default unit group unit.
-  #
-  # @param user [User|nil]
-  # @param default_unit_group_unit [UnitGroupUnit]
-  # @return [UnitGroupUnit]
-  def select_unit_group_unit(user, unit_group_unit)
-    return unit_group_unit unless user
-
-    alternates = alternate_unit_group_units.to_a.select {|unit| unit.default_script_id == unit_group_unit.script_id}
-    return unit_group_unit if alternates.empty?
-
-    if user.teacher?
-      alternates.each do |ugu|
-        return ugu if SingleUserExperiment.enabled?(user: user, experiment_name: ugu.experiment_name)
-      end
-    end
-
-    course_sections = user.sections_as_student.where(unit_group: self).to_a
-    unless course_sections.empty?
-      alternates.each do |ugu|
-        course_sections.each do |section|
-          return ugu if SingleUserExperiment.enabled?(user: section.teacher, experiment_name: ugu.experiment_name)
-        end
-      end
-      return unit_group_unit
-    end
-
-    if user.student?
-      alternates.each do |ugu|
-        # include hidden units when iterating over user units.
-        user.user_scripts.each do |us|
-          return ugu if ugu.script == us.script
-        end
-      end
-    end
-
-    unit_group_unit
   end
 
   # @param user [User]
@@ -459,14 +361,16 @@ class UnitGroup < ApplicationRecord
   end
 
   # @param user [User]
+  # @param locale_code [String] Locale code for user or request. Optional.
   # @return [Boolean] Whether the user can view the course.
-  def can_view_version?(user = nil)
+  def can_view_version?(user = nil, locale_code = 'en-us')
     return false unless Ability.new(user).can?(:read, self)
 
     latest_course_version = UnitGroup.latest_stable_version(family_name)
-    is_latest = latest_course_version == self
+    latest_in_locale = UnitGroup.latest_stable_version(family_name, locale: locale_code)
+    is_latest = latest_course_version == self || latest_in_locale == self
 
-    # All users can see the latest course version.
+    # All users can see the latest course version in English and in their locale.
     return true if is_latest
 
     # Restrictions only apply to participants and logged out users.
@@ -478,14 +382,45 @@ class UnitGroup < ApplicationRecord
   end
 
   # @param family_name [String] The family name for a course family.
+  # @param locale [String] User or request locale. Optional.
   # @return [UnitGroup] Returns the latest stable version in a course family.
-  def self.latest_stable_version(family_name)
+  def self.latest_stable_version(family_name, locale: 'en-us')
     return nil if family_name.blank?
 
-    all_courses.select do |course|
+    stable_course_versions = all_courses.select do |course|
       course.family_name == family_name &&
         course.published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
-    end.max_by(&:version_year)
+    end.sort_by(&:version_year).reverse
+
+    # Only select stable, supported UnitGroups (ignore supported locales if locale is an English-speaking locale).
+    locale_str = locale&.to_s
+    if locale_str&.start_with?('en')
+      stable_course_versions.first
+    else
+      stable_course_versions.find do |cv|
+        cv.default_unit_group_units.all? {|unit_group_unit| unit_group_unit.script.supported_locales&.include?(locale_str)}
+      end
+    end
+  end
+
+  def supported_locale_codes
+    locales = default_unit_group_units.first&.script&.supported_locales || []
+    locales = locales.filter do |locale|
+      default_unit_group_units.all? do |unit_group_unit|
+        unit_group_unit.script.supported_locales&.include?(locale)
+      end
+    end
+    locales += ['en-US']
+    locales.sort.uniq
+  end
+
+  def supported_locale_names
+    supported_locale_codes.map {|l| Unit.locale_native_name_map[l] || l}.uniq
+  end
+
+  def self.locale_native_name_map
+    locales = Dashboard::Application::LOCALES.select {|_, data| data.is_a?(Hash)}
+    locales.reduce({}) {|acc, (locale_code, data)| acc.merge({locale_code => data[:native]})}
   end
 
   # @param family_name [String] The family name for a course family.
@@ -504,7 +439,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user has progress in this course.
   def has_progress?(user)
-    return nil unless user
+    return false unless user
     user_unit_ids = user.user_scripts.pluck(:script_id)
     default_unit_group_units.any? {|ugu| user_unit_ids.include?(ugu.script_id)}
   end
@@ -512,7 +447,7 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user has progress on another version of this course.
   def has_older_version_progress?(user)
-    return nil unless user && family_name && version_year
+    return false unless user && family_name && version_year
     user_unit_ids = user.user_scripts.pluck(:script_id)
 
     UnitGroup.all_courses.any? do |course|
@@ -525,13 +460,12 @@ class UnitGroup < ApplicationRecord
 
   # returns whether a unit in this course has version_warning_dismissed.
   def has_dismissed_version_warning?(user)
-    return nil unless user
+    return false unless user
     unit_ids = default_units.pluck(:id)
     user.
       user_scripts.
       where(script_id: unit_ids).
-      select(&:version_warning_dismissed).
-      any?
+      any?(&:version_warning_dismissed)
   end
 
   @@course_cache = nil
@@ -601,6 +535,12 @@ class UnitGroup < ApplicationRecord
     !!pilot_experiment
   end
 
+  # Wrapper function to help with assignable course logic
+  # @return [CourseVersion]
+  def get_course_version
+    course_version
+  end
+
   def has_pilot_experiment?(user)
     return false unless pilot_experiment
     SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
@@ -640,6 +580,10 @@ class UnitGroup < ApplicationRecord
   end
   # rubocop:enable Naming/PredicateName
 
+  def single_unit_course?
+    default_units.one?
+  end
+
   def has_migrated_unit?
     !!default_units[0]&.is_migrated?
   end
@@ -653,5 +597,9 @@ class UnitGroup < ApplicationRecord
       student_resources.any? ||
       default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
+  end
+
+  def duration_in_minutes
+    default_units.sum(&:duration_in_minutes)
   end
 end

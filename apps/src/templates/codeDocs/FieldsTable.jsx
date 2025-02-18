@@ -1,10 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import i18n from '@cdo/locale';
+import React from 'react';
 import * as Table from 'reactabular-table';
-import color from '@cdo/apps/util/color';
+
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 const descriptionFormatter = description => {
   if (description) {
@@ -28,13 +29,13 @@ export default function FieldsTable({fields}) {
           style: {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCell,
-            width: '15%'
-          }
-        }
+            width: '15%',
+          },
+        },
       },
       cell: {
-        props: {style: tableLayoutStyles.cell}
-      }
+        props: {style: tableLayoutStyles.cell},
+      },
     },
     {
       property: 'name',
@@ -44,13 +45,13 @@ export default function FieldsTable({fields}) {
           style: {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCell,
-            width: '15%'
-          }
-        }
+            width: '15%',
+          },
+        },
       },
       cell: {
-        props: {style: tableLayoutStyles.cell}
-      }
+        props: {style: tableLayoutStyles.cell},
+      },
     },
     {
       property: 'description',
@@ -60,15 +61,15 @@ export default function FieldsTable({fields}) {
           style: {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCell,
-            width: '55%'
-          }
-        }
+            width: '55%',
+          },
+        },
       },
       cell: {
         formatters: [descriptionFormatter],
-        props: {style: tableLayoutStyles.cell}
-      }
-    }
+        props: {style: tableLayoutStyles.cell},
+      },
+    },
   ];
 
   return (
@@ -84,15 +85,15 @@ export default function FieldsTable({fields}) {
 }
 
 FieldsTable.propTypes = {
-  fields: PropTypes.arrayOf(PropTypes.object)
+  fields: PropTypes.arrayOf(PropTypes.object),
 };
 
 const styles = {
   headerCell: {
     backgroundColor: color.teal,
-    color: color.white
+    color: color.white,
   },
   table: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 };

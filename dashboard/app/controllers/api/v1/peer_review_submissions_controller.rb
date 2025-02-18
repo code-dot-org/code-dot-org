@@ -94,8 +94,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
       where(submitter_id: enrollments.map(&:user_id)).
       pluck(:submitter_id, :script_id, :level_id, :created_at).
       group_by {|pr| pr[0..2]}. # group by [submitter_id, script_id, level_id]
-      map {|k, prs| [k, prs.map {|pr| pr[3]}]}. # only keep :created_at in values
-      to_h
+      transform_values {|prs| prs.map {|pr| pr[3]}} # only keep :created_at in values
 
     enrollments.each do |enrollment|
       peer_review_submissions = Hash.new
@@ -142,9 +141,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     send_as_csv_attachment response_body, "#{course_unit.name}_peer_review_report.csv"
   end
 
-  private
-
-  def result_to_status(result)
+  private def result_to_status(result)
     case result
     when ActivityConstants::REVIEW_ACCEPTED_RESULT
       'Accepted'

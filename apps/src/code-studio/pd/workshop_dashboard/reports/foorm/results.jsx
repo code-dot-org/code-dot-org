@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Tab, Tabs} from 'react-bootstrap';
-import SectionResults from './section_results';
+import {Tab, Tabs} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import SurveyRollupTableFoorm from '../../components/survey_results/survey_rollup_table_foorm';
+
+import SectionResults from './section_results';
 
 const GENERAL = 'general';
 const FACILITATOR = 'facilitator';
@@ -14,7 +16,7 @@ export default class Results extends React.Component {
     thisWorkshop: PropTypes.object.isRequired,
     workshopTabs: PropTypes.arrayOf(PropTypes.string).isRequired,
     courseName: PropTypes.string,
-    workshopRollups: PropTypes.object
+    workshopRollups: PropTypes.object,
   };
 
   render() {
@@ -24,9 +26,10 @@ export default class Results extends React.Component {
           <Tab
             eventKey={i + 1}
             key={i}
-            title={`${workshopTab} (${this.props.thisWorkshop[workshopTab][
-              GENERAL
-            ]['response_count'] || 0})`}
+            title={`${workshopTab} (${
+              this.props.thisWorkshop[workshopTab][GENERAL]['response_count'] ||
+              0
+            })`}
           >
             <br />
             <h3>General Questions</h3>
@@ -64,21 +67,22 @@ export default class Results extends React.Component {
             />
           </Tab>
         )}
-        {this.props.workshopRollups && this.props.workshopRollups[FACILITATOR] && (
-          /* Keys here are +1 to general rollup tab */
-          <Tab
-            eventKey={this.props.workshopTabs.length + 2}
-            key={this.props.workshopTabs.length + 1}
-            title="Facilitator Rollups"
-          >
-            <SurveyRollupTableFoorm
-              workshopRollups={this.props.workshopRollups[FACILITATOR]}
-              courseName={this.props.courseName}
-              isPerFacilitator={true}
-              facilitators={this.props.facilitators}
-            />
-          </Tab>
-        )}
+        {this.props.workshopRollups &&
+          this.props.workshopRollups[FACILITATOR] && (
+            /* Keys here are +1 to general rollup tab */
+            <Tab
+              eventKey={this.props.workshopTabs.length + 2}
+              key={this.props.workshopTabs.length + 1}
+              title="Facilitator Rollups"
+            >
+              <SurveyRollupTableFoorm
+                workshopRollups={this.props.workshopRollups[FACILITATOR]}
+                courseName={this.props.courseName}
+                isPerFacilitator={true}
+                facilitators={this.props.facilitators}
+              />
+            </Tab>
+          )}
       </Tabs>
     );
   }

@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import msg from '@cdo/locale';
-import color from '../util/color';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import {getStore} from '@cdo/apps/redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import msg from '@cdo/locale';
+
+import color from '../util/color';
 
 export const ParamType = {
   TABLE: 'TABLE',
-  COLUMN: 'COLUMN'
+  COLUMN: 'COLUMN',
 };
 
 export default class GetColumnParamPicker extends React.Component {
@@ -15,19 +18,15 @@ export default class GetColumnParamPicker extends React.Component {
     param: PropTypes.oneOf(Object.values(ParamType)).isRequired,
     table: PropTypes.string,
     onClose: PropTypes.func.isRequired,
-    onChoose: PropTypes.func.isRequired
+    onChoose: PropTypes.func.isRequired,
   };
 
   state = {columns: []};
 
   componentDidMount() {
     if (this.props.param === ParamType.COLUMN) {
-      const reduxState = getStore().getState();
       Applab.storage
-        .getColumnsForTable(
-          this.props.table,
-          reduxState.data.tableListMap[this.props.table]
-        )
+        .getColumnsForTable(this.props.table)
         .then(columns => this.setState({columns: columns}));
     }
   }
@@ -84,15 +83,15 @@ export default class GetColumnParamPicker extends React.Component {
 const styles = {
   title: {
     paddingLeft: '15px',
-    fontFamily: "'Gotham 7r', sans-serif",
-    color: color.teal
+    ...fontConstants['main-font-bold'],
+    color: color.teal,
   },
   option: {
     paddingLeft: '30px',
-    fontFamily: "'Gotham 7r', sans-serif",
-    color: color.purple
+    ...fontConstants['main-font-bold'],
+    color: color.purple,
   },
   error: {
-    padding: '30px'
-  }
+    padding: '30px',
+  },
 };

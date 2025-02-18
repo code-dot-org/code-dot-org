@@ -1,5 +1,6 @@
-import {expect} from '../../../util/reconfiguredChai';
 import library from '@cdo/apps/applab/designElements/library';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const {elements, ElementType} = library;
 const dropdown = elements[ElementType.DROPDOWN];
@@ -16,7 +17,7 @@ function getValue(e) {
   return dropdown.readProperty(e, 'value');
 }
 
-describe('Applab designElements/dropdown component', function() {
+describe('Applab designElements/dropdown component', function () {
   let e;
 
   beforeEach(() => {

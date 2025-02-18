@@ -1,0 +1,18 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{charset: "UTF-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %title= t('nav.user.loading')
+
+    :javascript
+        (function() {
+          var email = "#{@form_data[:email]}";
+          var oauthType = "#{@form_data[:provider]}";
+          sessionStorage.setItem('email', email);
+          sessionStorage.setItem('oauthType', oauthType);
+          window.location.href = "#{new_sign_up_url}";
+        })();
+
+  %body
+    %p=t('nav.user.loading')

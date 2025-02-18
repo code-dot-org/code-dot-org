@@ -1,0 +1,26 @@
+name 'AI Fish Bias Outcome'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# How AI Used Data
+
+##Fish Characteristics 
+![](https://images.code.org/3f052aa0cd94abab607278827fc16483-image-1719507512814.png)
+
+#### You may have noticed that if you clicked on the “i” on the results page, you can see what characteristics determined <b>how AI used your data input</b>. 
+
+
+## Example: Emma's Angry Fish
+![](https://images.code.org/9addf71c703b7cc69b45a7c9bc9ee2c3-image-1720632803614.33.19 AM.png)
+#### Here you can clearly see that “color” was the most important feature followed closely by “body”. Most of the fish that AI predicted were Angry were red and/or triangular.
+## Consider This: 
+
+#### Would someone else’s results look exactly the same as yours? Why or why not?  
+
+
+
+<div style="clear:both"/>
+
+
+MARKDOWN

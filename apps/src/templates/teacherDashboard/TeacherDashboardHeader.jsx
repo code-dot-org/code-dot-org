@@ -1,53 +1,65 @@
-import FontAwesome from './../FontAwesome';
-import React from 'react';
-import {connect} from 'react-redux';
-import Notification, {NotificationType} from '../Notification';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {
-  switchToSection,
-  recordSwitchToSection,
-  recordOpenEditSectionDetails
-} from './sectionHelpers';
+import Link from '@code-dot-org/component-library/link';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import SmallChevronLink from '../SmallChevronLink';
-import {ReloadAfterEditSectionDialog} from './EditSectionDialog';
-import {
-  beginEditingSection,
-  getAssignmentName,
-  sortedSectionsList
-} from './teacherSectionsRedux';
-import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import Button from '../Button';
-import DropdownButton from '../DropdownButton';
-import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
+import React, {useState} from 'react';
+import {connect} from 'react-redux';
 
-class TeacherDashboardHeader extends React.Component {
-  static propTypes = {
-    sections: PropTypes.arrayOf(sectionShape).isRequired,
-    selectedSection: sectionShape.isRequired,
-    openEditSectionDialog: PropTypes.func.isRequired,
-    assignmentName: PropTypes.string
+import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {getStore} from '@cdo/apps/redux';
+import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import Notification, {
+  NotificationType,
+} from '../../sharedComponents/Notification';
+import DropdownButton from '../DropdownButton';
+import {
+  convertStudentDataToArray,
+  filterAgeGatedStudents,
+  loadSectionStudentData,
+} from '../manageStudents/manageStudentsRedux';
+import {AgeGatedStudentsBanner} from '../policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
+
+import {switchToSection, recordSwitchToSection} from './sectionHelpers';
+import {beginEditingSection} from './teacherSectionsRedux';
+import {sortedSectionsList} from './teacherSectionsReduxSelectors';
+
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
+
+function TeacherDashboardHeader({
+  sections,
+  selectedSection,
+  isRtl,
+  ageGatedStudentsCount,
+  sectionId,
+  loadSectionStudentData,
+}) {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const currentUser = getStore().getState().currentUser;
+  const inUSA =
+    ['US', 'RD'].includes(currentUser.countryCode) || !!currentUser.usStateCode;
+  const showAgeGatedStudentsBanner =
+    inUSA && currentUser.isTeacher && ageGatedStudentsCount > 0;
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
   };
 
-  constructor(props) {
-    super(props);
-    this.getDropdownOptions = this.getDropdownOptions.bind(this);
-  }
-  getDropdownOptions(optionMetricName) {
-    let self = this;
+  React.useEffect(() => {
+    loadSectionStudentData(sectionId);
+  }, [loadSectionStudentData, sectionId]);
 
-    let options = self.props.sections.map(function(section, i) {
+  const getDropdownOptions = optionMetricName => {
+    let options = sections.map(function (section, i) {
       let optionOnClick = () => {
-        switchToSection(section.id, self.props.selectedSection.id);
-        recordSwitchToSection(
-          section.id,
-          self.props.selectedSection.id,
-          optionMetricName
-        );
+        switchToSection(section.id, selectedSection.id);
+        recordSwitchToSection(section.id, selectedSection.id, optionMetricName);
       };
       let icon = undefined;
-      if (section.id === self.props.selectedSection.id) {
+      if (section.id === selectedSection.id) {
         icon = <FontAwesome icon="check" />;
       }
       return (
@@ -57,11 +69,11 @@ class TeacherDashboardHeader extends React.Component {
       );
     });
     return options;
-  }
+  };
 
-  lockedSectionNotification = ({restrictSection, loginType}) =>
+  const lockedSectionNotification = ({restrictSection, loginType}) =>
     restrictSection &&
-    (loginType !==
+    loginType !==
       (SectionLoginType.google_classroom || SectionLoginType.clever) && (
       <Notification
         type={NotificationType.failure}
@@ -69,9 +81,9 @@ class TeacherDashboardHeader extends React.Component {
         details={i18n.manageStudentsNotificationLockedDetails({loginType})}
         dismissable={false}
       />
-    ));
+    );
 
-  progressNotSavingNotification() {
+  const progressNotSavingNotification = () => {
     return (
       <Notification
         type={NotificationType.failure}
@@ -87,109 +99,138 @@ class TeacherDashboardHeader extends React.Component {
         dismissable={false}
       />
     );
-  }
+  };
+  /**
+   * Returns the URL to the correct section to be edited
+   */
+  const editRedirectUrl = sectionId => {
+    return '/sections/' + sectionId + '/edit';
+  };
 
-  render() {
-    return (
-      <div>
-        <SmallChevronLink
+  const getAgeGatedStudentsUsState = () => {
+    if (ageGatedStudentsCount > 0) {
+      const ageGatedStudents = filterAgeGatedStudents(
+        convertStudentDataToArray(
+          getStore().getState().manageStudents.studentData
+        )
+      );
+      return ageGatedStudents[0].usState;
+    }
+
+    return null;
+  };
+
+  return (
+    <div className={dashboardStyles.headerContainer}>
+      <div className={dashboardStyles.headerLink}>
+        <a
           href="/home#classroom-sections"
-          text={i18n.viewAllSections()}
-          iconBefore
+          className={dashboardStyles.headerLinkChevron}
+        >
+          <FontAwesome
+            icon="chevron-left"
+            className={isRtl ? 'fa-flip-horizontal' : undefined}
+            style={{textDecoration: 'none'}}
+            aria-label={i18n.viewAllSections()}
+          />
+        </a>
+        <Link type="primary" size="s" href="/home#classroom-sections">
+          {i18n.viewAllSections()}
+        </Link>
+      </div>
+      {lockedSectionNotification({
+        restrictSection: selectedSection.restrictSection,
+        loginType: selectedSection.loginType,
+      })}
+      {selectedSection.postMilestoneDisabled && progressNotSavingNotification()}
+      {showAgeGatedStudentsBanner && (
+        <AgeGatedStudentsBanner
+          toggleModal={toggleModal}
+          modalOpen={modalOpen}
+          ageGatedStudentsCount={ageGatedStudentsCount}
+          ageGatedStudentsUsState={getAgeGatedStudentsUsState()}
         />
-        <this.lockedSectionNotification
-          restrictSection={this.props.selectedSection.restrictSection}
-          loginType={this.props.selectedSection.loginType}
-        />
-        {this.props.selectedSection.postMilestoneDisabled && (
-          <this.progressNotSavingNotification />
-        )}
-        <div style={styles.header}>
-          <div>
-            <h1>{this.props.selectedSection.name}</h1>
-            {this.props.assignmentName && (
-              <div id="assignment-name">
-                <span style={styles.sectionPrompt}>
-                  {i18n.assignedToWithColon()}{' '}
-                </span>
-                {this.props.assignmentName}
-              </div>
-            )}
-          </div>
-          <div style={styles.rightColumn}>
-            <div style={styles.buttonSection}>
-              <Button
-                __useDeprecatedTag
-                onClick={() => {
-                  this.props.openEditSectionDialog(
-                    this.props.selectedSection.id
-                  );
-                  recordOpenEditSectionDetails(
-                    this.props.selectedSection.id,
-                    'dashboard_header'
-                  );
-                }}
-                icon="gear"
-                size="narrow"
-                color="gray"
-                text={i18n.editSectionDetails()}
-                style={styles.buttonWithMargin}
-              />
-              <DropdownButton
-                size="narrow"
-                color="gray"
-                text={i18n.switchSection()}
-              >
-                {this.getDropdownOptions('from_button_switch_section')}
-              </DropdownButton>
+      )}
+      <div className={dashboardStyles.header}>
+        <div>
+          <h1>{selectedSection.name}</h1>
+          {selectedSection.courseDisplayName && (
+            <div
+              id="assignment-name"
+              className={dashboardStyles.headerCurriculum}
+            >
+              <span>{i18n.assignedToWithColon()} </span>
+              {selectedSection.courseDisplayName}
             </div>
+          )}
+        </div>
+        <div className={dashboardStyles.headerRightColumn}>
+          <div className={dashboardStyles.headerButtonSection}>
+            <Button
+              __useDeprecatedTag
+              href={editRedirectUrl(selectedSection.id)}
+              className="edit-section-details-link"
+              icon="gear"
+              size="narrow"
+              color="gray"
+              text={i18n.editSectionDetails()}
+              style={styles.buttonWithMargin}
+            />
+            <DropdownButton
+              size="narrow"
+              color="gray"
+              text={i18n.switchSection()}
+            >
+              {getDropdownOptions('from_button_switch_section')}
+            </DropdownButton>
           </div>
         </div>
-        <ReloadAfterEditSectionDialog />
       </div>
-    );
-  }
+    </div>
+  );
 }
 
+TeacherDashboardHeader.propTypes = {
+  sections: PropTypes.arrayOf(sectionShape).isRequired,
+  selectedSection: sectionShape.isRequired,
+  openEditSectionDialog: PropTypes.func.isRequired,
+  isRtl: PropTypes.bool,
+  ageGatedStudentsCount: PropTypes.number,
+  sectionId: PropTypes.number,
+  loadSectionStudentData: PropTypes.func,
+};
+
 const styles = {
-  sectionPrompt: {
-    fontWeight: 'bold'
-  },
-  header: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginBottom: '5px'
-  },
-  rightColumn: {
-    display: 'flex',
-    flexDirection: 'column-reverse'
-  },
-  buttonSection: {
-    display: 'flex'
-  },
   buttonWithMargin: {
-    marginRight: '5px'
-  }
+    margin: 0,
+    marginInlineEnd: 5,
+  },
 };
 
 export const UnconnectedTeacherDashboardHeader = TeacherDashboardHeader;
 
 export default connect(
-  state => {
+  state => ({
     // In most cases, filtering out hidden sections is done on the backend.
     // However in this case, we need hidden sections in the redux tree in case
     // the selected section is hidden.
-    let sections = sortedSectionsList(state.teacherSections.sections).filter(
+    sections: sortedSectionsList(state.teacherSections.sections).filter(
       section => !section.hidden
-    );
-    let selectedSectionId = state.teacherSections.selectedSectionId;
-    let selectedSection = state.teacherSections.sections[selectedSectionId];
-    let assignmentName = getAssignmentName(state, selectedSectionId);
-    return {sections, selectedSection, assignmentName};
-  },
+    ),
+    selectedSection:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId],
+    isRtl: state.isRtl,
+    sectionId: state.teacherSections.selectedSectionId,
+    ageGatedStudentsCount: filterAgeGatedStudents(
+      convertStudentDataToArray(state.manageStudents.studentData)
+    ).length,
+  }),
   dispatch => {
     return {
-      openEditSectionDialog: id => dispatch(beginEditingSection(id))
+      openEditSectionDialog: id => dispatch(beginEditingSection(id)),
+      loadSectionStudentData: sectionId => {
+        dispatch(loadSectionStudentData(sectionId));
+      },
     };
   }
 )(TeacherDashboardHeader);

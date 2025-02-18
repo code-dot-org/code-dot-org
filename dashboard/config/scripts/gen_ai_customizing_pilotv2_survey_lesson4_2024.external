@@ -1,0 +1,13 @@
+name 'gen-ai-customizing-pilotv2-survey-lesson4_2024'
+title 'Lesson 1 Survey'
+description ''
+
+markdown <<MARKDOWN
+# You finished the lesson! Whoooo!!!!
+
+#### Please do us a favor and complete a quick survey! 
+
+#### Your answers go to the people who write these lessons - one of your suggestions could make it into these lessons!
+
+## Here is the survey link: [https://bit.ly/create-pilot-lesson-4](https://bit.ly/create-pilot-lesson-4)
+MARKDOWN

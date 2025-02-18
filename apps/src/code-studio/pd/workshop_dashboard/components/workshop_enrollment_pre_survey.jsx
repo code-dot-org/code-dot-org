@@ -1,10 +1,11 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
-import {Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {Chart} from 'react-google-charts';
-import {workshopEnrollmentStyles} from '../workshop_enrollment_styles';
+
 import {enrollmentShape} from '../types';
+import {workshopEnrollmentStyles} from '../workshop_enrollment_styles';
 
 export default class WorkshopEnrollmentPreSurvey extends React.Component {
   constructor(props) {
@@ -59,9 +60,7 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
       <div style={styles.containerDiv}>
         <Table condensed striped>
           <caption>
-            {`On the pre-survey, attendees indicate where they predict they will be in the curriculum on ${
-              this.props.workshopDate
-            }.`}
+            {`On the pre-survey, attendees indicate where they predict they will be in the curriculum on ${this.props.workshopDate}.`}
           </caption>
           <thead>
             <tr>
@@ -107,7 +106,7 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
               title: '# of Attendees Teaching Each Lesson',
               legend: {position: 'none'},
               hAxis: {title: 'Units and Lessons'},
-              vAxis: {title: '# of Attendees'}
+              vAxis: {title: '# of Attendees'},
             }}
           />
         )}
@@ -119,11 +118,11 @@ export default class WorkshopEnrollmentPreSurvey extends React.Component {
 const styles = {
   ...workshopEnrollmentStyles,
   containerDiv: {
-    overflowY: 'hidden'
-  }
+    overflowY: 'hidden',
+  },
 };
 
 WorkshopEnrollmentPreSurvey.propTypes = {
   enrollments: PropTypes.arrayOf(enrollmentShape).isRequired,
-  workshopDate: PropTypes.string.isRequired
+  workshopDate: PropTypes.string.isRequired,
 };

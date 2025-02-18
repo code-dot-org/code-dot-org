@@ -1,0 +1,82 @@
+name 'SP-PL-DS-UnitStructure-w-lessons'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course Structure
+
+## Role of the Teacher
+
+#### All lessons within the Data Science unit are intended to be **facilitated by a teacher**. These lessons are **not designed as self-paced experiences for students** to work through at their own pace.
+
+
+## Lessons
+#### The lessons are designed for **45-minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
+
+### **Lesson Components**
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm Up</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Each lesson starts with a brief warm-up, offering a shared experience to highlight the need for the lesson's skills and concepts. 
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💃 Activity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Students spend most of their time on lesson activities, exploring new computing concepts. These activities are scaffolded to provide just-in-time support, helping students build the knowledge and skills needed for computing.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🏁 Wrap Up</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Every lesson ends with a wrap-up, allowing students to reflect on key skills and concepts. 
+</p></div>
+</details>
+
+### **Lesson Types**
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💻 Programming Lessons</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+#### Programming lessons teach new concepts and skills through computer-based activities. Students often work in groups or as a class, with teachers actively facilitating sense-making and formative assessments. 
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Non-Programming Lessons</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Non-programming lessons emphasize process skills and computing concepts, mostly through offline activities guided by an activity sheet. They include opportunities for group collaboration, discussion, and individual reflection, with some online components.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">👩‍💻 Project Lessons</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### ***Mini-projects*** let students apply their learning in an open-ended way, practicing new skills. These flexible projects appear throughout the unit and can be adjusted based on available class time.
+
+#### ***Projects*** are multi-day, open-ended lessons at the end of each unit, where students use learned skills to plan, create, and reflect.
+</p></div>
+</details>
+
+
+MARKDOWN

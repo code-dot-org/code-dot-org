@@ -4,13 +4,12 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
   Background:
     Given I am on "http://studio.code.org/reset_session"
 
-  @no_circle
+  @no_ci
   Scenario Outline: Temporarily circle disabled simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     And I am a student
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
-    When I rotate to landscape
     And I close the instructions overlay if it exists
     Then I see no difference for "initial load"
     And I close my eyes
@@ -18,14 +17,13 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     Examples:
       | url                                                               | test_name                  |
       | http://code.org/                                                  | code.org homepage          |
-      | https://studio.code.org/s/allthethings/lessons/13/levels/3?noautoplay=true | embedded blocks     |
+      | https://studio.code.org/s/allthethings/lessons/13/levels/1?noautoplay=true | embedded blocks     |
 
   Scenario Outline: Logged out simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
     And I dismiss the language selector
-    When I rotate to landscape
     Then I see no difference for "initial load"
     And I close my eyes
     Examples:
@@ -33,13 +31,12 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
       | http://studio.code.org/                           | logged out studio homepage |
       | http://studio.code.org/s/allthethings             | logged out script progress |
 
-  @no_circle
+  @no_ci
   Scenario Outline: Temporarily eyes disabled simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
     And I dismiss the language selector
-    When I rotate to landscape
     Then I see no difference for "initial load"
     And I close my eyes
     Examples:

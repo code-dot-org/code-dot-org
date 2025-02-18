@@ -1,9 +1,11 @@
-import PropTypes from 'prop-types';
 import $ from 'jquery';
-import designMode from './designMode';
-import * as elementUtils from './designElements/elementUtils';
-import * as applabConstants from './constants';
+import PropTypes from 'prop-types';
+
 import {assets as assetsApi} from '../clientApi';
+
+import * as applabConstants from './constants';
+import * as elementUtils from './designElements/elementUtils';
+import designMode from './designMode';
 
 let DATA_PREFIX_REGEX = applabConstants.DATA_URL_PREFIX_REGEX;
 
@@ -14,20 +16,20 @@ export const importableScreenShape = PropTypes.shape({
   assetsToImport: PropTypes.arrayOf(PropTypes.string).isRequired,
   conflictingIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   html: PropTypes.string.isRequired,
-  canBeImported: PropTypes.bool.isRequired
+  canBeImported: PropTypes.bool.isRequired,
 });
 
 export const importableAssetShape = PropTypes.shape({
   filename: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  willReplace: PropTypes.bool.isRequired
+  willReplace: PropTypes.bool.isRequired,
 });
 
 export const importableProjectShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   screens: PropTypes.arrayOf(importableScreenShape).isRequired,
-  otherAssets: PropTypes.arrayOf(importableAssetShape).isRequired
+  otherAssets: PropTypes.arrayOf(importableAssetShape).isRequired,
 });
 
 /**
@@ -38,11 +40,24 @@ function getImportableScreen(dom) {
   const id = dom.id;
   const willReplace = designMode.getAllScreenIds().includes(id);
   const conflictingIds = [];
+
+  // Catch edge case where the ID of the imported screen
+  // conflicts with an existing element ID.
+  if (!willReplace && !elementUtils.isIdAvailable(id)) {
+    conflictingIds.push(id);
+  }
+
   Array.from(dom.children).forEach(child => {
     if (!elementUtils.isIdAvailable(child.id)) {
-      var existingElement = elementUtils.getPrefixedElementById(child.id);
+      const existingElement = elementUtils.getPrefixedElementById(child.id);
       if (existingElement) {
-        const existingElementScreen = $(existingElement).parents('.screen')[0];
+        let existingElementScreen = $(existingElement).parents('.screen')[0];
+
+        // Catch edge case where the found existingElement is a screen itself,
+        // rather than a child element.
+        if ($(existingElement).hasClass('screen')) {
+          existingElementScreen = existingElement;
+        }
         if (elementUtils.getId(existingElementScreen) !== id) {
           conflictingIds.push(child.id);
         }
@@ -74,7 +89,7 @@ function getImportableScreen(dom) {
     assetsToImport,
     conflictingIds,
     html: dom.outerHTML,
-    canBeImported: conflictingIds.length === 0
+    canBeImported: conflictingIds.length === 0,
   };
 }
 
@@ -108,13 +123,13 @@ export function getImportableProject(project) {
     .map(asset => ({
       filename: asset.filename,
       category: asset.category,
-      willReplace: !!existingAssetNames[asset.filename]
+      willReplace: !!existingAssetNames[asset.filename],
     }));
   return {
     id: channel.id,
     name: channel.name,
     screens,
-    otherAssets
+    otherAssets,
   };
 }
 

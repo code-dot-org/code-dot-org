@@ -1,11 +1,13 @@
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {
   TheaterSignalType,
   InputMessageType,
-  InputMessage
+  InputMessage,
 } from '@cdo/apps/javalab/constants';
 import Theater from '@cdo/apps/javalab/theater/Theater';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Theater', () => {
   let theater,
@@ -73,11 +75,11 @@ describe('Theater', () => {
     const url = 'url';
     const audioData = {
       value: TheaterSignalType.AUDIO_URL,
-      detail: {url: url}
+      detail: {url: url},
     };
     const visualData = {
       value: TheaterSignalType.VISUAL_URL,
-      detail: {url: url}
+      detail: {url: url},
     };
     imageElement.style = {};
     theater.handleSignal(audioData);
@@ -93,8 +95,8 @@ describe('Theater', () => {
     const getImageSignal = {
       value: TheaterSignalType.GET_IMAGE,
       detail: {
-        prompt: prompt
-      }
+        prompt: prompt,
+      },
     };
 
     theater.handleSignal(getImageSignal);
@@ -120,8 +122,8 @@ describe('Theater', () => {
       value: TheaterSignalType.GET_IMAGE,
       detail: {
         prompt: 'prompt',
-        uploadUrl: uploadUrl
-      }
+        uploadUrl: uploadUrl,
+      },
     });
 
     theater.onPhotoPrompterFileSelected(photoFile);
@@ -145,8 +147,8 @@ describe('Theater', () => {
       value: TheaterSignalType.GET_IMAGE,
       detail: {
         prompt: 'prompt',
-        uploadUrl: 'upload.url'
-      }
+        uploadUrl: 'upload.url',
+      },
     });
     theater.onPhotoPrompterFileSelected(new File([], 'file'));
     sinon.assert.calledOnce(uploadFile);

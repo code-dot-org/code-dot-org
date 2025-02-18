@@ -18,3 +18,11 @@ get '*' do |uri|
   update_actionview_assigns
   pass
 end
+
+# Redirects hourofcode.com/promote and /promote/resources to /resources
+['/promote', '/promote/resources'].each do |path|
+  get path do
+    only_for 'hourofcode.com'
+    redirect resolve_url('/resources')
+  end
+end

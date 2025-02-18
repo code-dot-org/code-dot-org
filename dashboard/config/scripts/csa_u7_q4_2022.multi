@@ -29,3 +29,5 @@ Which of the following code segments should replace *missing code* so that the `
 
 ![](https://images.code.org/5374388289a31d94140d00b4858952c2-image-1634927695520.png)
 MARKDOWN
+
+allow_multiple_attempts true

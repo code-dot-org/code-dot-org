@@ -69,7 +69,7 @@ class ProgrammingMethod < ApplicationRecord
       examples: parsed_examples,
       syntax: syntax,
       externalLink: external_link,
-      canHaveOverload: !programming_class.programming_methods.any? {|m| m.overload_of == key},
+      canHaveOverload: programming_class.programming_methods.none? {|m| m.overload_of == key},
       overloadOf: overload_of
     }
   end
@@ -89,17 +89,15 @@ class ProgrammingMethod < ApplicationRecord
     }
   end
 
-  private
-
-  def parsed_parameters
+  private def parsed_parameters
     parameters.blank? ? [] : JSON.parse(parameters)
   end
 
-  def parsed_examples
+  private def parsed_examples
     examples.blank? ? [] : JSON.parse(examples)
   end
 
-  def validate_overload
+  private def validate_overload
     # No overload is always valid
     return if overload_of.blank?
     if overload_of == key
@@ -118,7 +116,7 @@ class ProgrammingMethod < ApplicationRecord
     end
   end
 
-  def get_overloads
+  private def get_overloads
     Rails.cache.fetch("programming_methods/#{id}/get_overloads", force: !Unit.should_cache?) do
       ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).to_a
     end

@@ -1,5 +1,6 @@
 require 'active_support/core_ext/numeric/time'
 require 'cdo/aws/s3'
+require 'cdo/web_purify'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
@@ -18,6 +19,11 @@ class FilesApi < Sinatra::Base
   end
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
+
+  # Can set this to an empty array if we do not want aichat checked for profanity.
+  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', [])
+
+  DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES = 0.3
 
   def get_bucket_impl(endpoint)
     case endpoint
@@ -221,7 +227,11 @@ class FilesApi < Sinatra::Base
   #
   def get_file(endpoint, encrypted_channel_id, filename, code_projects_domain_root_route = false, cache_duration: nil)
     # We occasionally serve HTML files through theses APIs - we don't want NewRelic JS inserted...
-    NewRelic::Agent.ignore_enduser rescue nil
+    begin
+      NewRelic::Agent.ignore_enduser
+    rescue
+      nil
+    end
 
     buckets = get_bucket_impl(endpoint).new
     cache_duration ||= buckets.cache_duration_seconds
@@ -382,7 +392,7 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def put_file(endpoint, encrypted_channel_id, filename, body)
+  def put_file(endpoint, encrypted_channel_id, filename, body, project_type = nil)
     not_authorized unless owns_channel?(encrypted_channel_id)
     file_type = File.extname(filename)
     buckets = get_bucket_impl(endpoint).new
@@ -401,31 +411,43 @@ class FilesApi < Sinatra::Base
 
     # sources only supports one file (main.json) and we checked max_file_size above,
     # so there's no need to check if we've exceeded the max total app size for the sources bucket.
-    unless 'sources' == endpoint
+    unless endpoint == 'sources'
       app_size = buckets.app_size(encrypted_channel_id)
       quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
     end
 
     # Block libraries with PII/profanity from being published.
+    # Block main.json file from aichat lab flagged with profanity from being saved.
     #
     # Javalab's "backpack" feature uses libraries to allow students to share code
     # between their own projects -- skip this check for .java files, since in this use case
     # the files are only being used by a single user.
-    if endpoint == 'libraries' && file_type != '.java'
+    if (endpoint == 'libraries' && file_type != '.java') || profanity_project_type?(project_type)
       begin
-        share_failure = ShareFiltering.find_failure(body, request.locale)
-      rescue OpenURI::HTTPError => e
-        return file_too_large(endpoint) if e.message == "414 Request-URI Too Large"
+        if profanity_project_type?(project_type)
+          locale_code = request.locale.to_s.split('-').first
+          share_failure = find_project_profanity(project_type, body, locale_code)
+        else
+          share_failure = ShareFiltering.find_failure(body, request.locale)
+        end
+      rescue StandardError => exception
+        return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
+        details = exception.message.empty? ? nil : exception.message
+        return json_bad_request(details)
       end
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      return bad_request if share_failure && share_failure[:type] != "address"
+      if share_failure && share_failure[:type] != ShareFiltering::FailureType::ADDRESS
+        details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
+        details = {details_key => [share_failure.content]}
+        return json_bad_request(details)
+      end
     end
 
     # Don't allow project to be saved if it contains non-UTF-8 characters (causing error / project to not load when opened).
-    if 'sources' == endpoint
+    if endpoint == 'sources'
       body_json = JSON.parse(body)
       source = body_json["source"]
       html = body_json["html"]
@@ -472,9 +494,18 @@ class FilesApi < Sinatra::Base
     if source.is_a?(Hash)
       # Iterate over each file
       source.each_key do |key|
-        # Multi-file source structure:
-        # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
-        return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
+        if source[key].is_a?(Hash) && source[key]["text"].is_a?(String)
+          # Multi-file source structure, used in Java Lab
+          # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
+          return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
+        elsif key == "files"
+          # Nested file source structure for lab2 labs such as Python Lab and Web Lab 2 is
+          # {files: {filename: {contents: "...<code here>...",...}}, folders: {id: {id: <id>, name: <folder_name>,...}}}
+          source[key].each_key do |file|
+            return false unless source[key][file]["contents"]&.force_encoding("UTF-8")&.valid_encoding?
+          end
+        end
+        # TODO: do we need to validate folders?
       end
       return true
     end
@@ -532,8 +563,9 @@ class FilesApi < Sinatra::Base
     # this prevents us from rejecting large files based on the Content-Length
     # header.
     body = request.body.read
+    project_type = params[:projectType]
 
-    put_file(endpoint, encrypted_channel_id, filename, body)
+    put_file(endpoint, encrypted_channel_id, filename, body, project_type)
   end
 
   # POST /v3/assets/<channel-id>/
@@ -645,7 +677,14 @@ class FilesApi < Sinatra::Base
 
     filename.downcase! if endpoint == 'files'
     begin
-      get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
+      versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
+      return versions.to_json if owns_channel?(encrypted_channel_id)
+
+      owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+      owner_user_id = user_id_for_storage_id(owner_storage_id)
+      return versions.to_json if teaches_student?(owner_user_id)
+
+      return versions.select {|version| version[:isLatest]}.to_json
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       bad_request
     end
@@ -988,7 +1027,7 @@ class FilesApi < Sinatra::Base
     s3_prefix = "#{METADATA_PATH}/#{filename}"
     file = get_file('files', encrypted_channel_id, s3_prefix)
 
-    if THUMBNAIL_FILENAME == filename
+    if filename == THUMBNAIL_FILENAME
       project = Projects.new(get_storage_id)
       project_type = project.project_type_from_channel_id(encrypted_channel_id)
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)
@@ -997,8 +1036,8 @@ class FilesApi < Sinatra::Base
 
         case rating
         when :adult, :racy
-          # Incrementing abuse score by 15 to differentiate from manually reported projects
-          new_score = project.increment_abuse(encrypted_channel_id, 15)
+          # Incrementing abuse score by 15 to differentiate from manually reported projects.
+          new_score = project.increment_abuse(encrypted_channel_id, 15, true) # Automatic moderation can be applied to frozen projects.
           FileBucket.new.replace_abuse_score(encrypted_channel_id, s3_prefix, new_score)
           response.headers['x-cdo-content-rating'] = rating.to_s
           cache_for 1.hour
@@ -1039,21 +1078,45 @@ class FilesApi < Sinatra::Base
     no_content
   end
 
-  private
-
   #
   # Returns the (parsed) manifest associated with the given encrypted_channel_id.
   #
-  def get_manifest(bucket, encrypted_channel_id)
+  private def get_manifest(bucket, encrypted_channel_id)
     bucket.get_manifest(encrypted_channel_id)
   end
 
-  def moderate_type?(project_type)
+  private def moderate_type?(project_type)
     MODERATE_THUMBNAILS_FOR_PROJECT_TYPES.include?(project_type)
   end
 
-  def moderate_channel?(encrypted_channel_id)
+  private def moderate_channel?(encrypted_channel_id)
     project = Projects.new(get_storage_id)
     !project.content_moderation_disabled?(encrypted_channel_id)
+  end
+
+  private def profanity_project_type?(project_type)
+    LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
+  end
+
+  private def get_toxicity_threshold_user_sources
+    DCDO.get("aichat_toxicity_threshold_user_sources", DEFAULT_TOXICITY_THRESHOLD_USER_SOURCES)
+  end
+
+  private def find_project_profanity(project_type, body, locale_code)
+    # Currently, only AI Chat is checked for profanity
+    if project_type == 'aichat'
+      source = JSON.parse(body)['source']
+      source_json = JSON.parse(source)
+      text = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
+      # Nothing to check if there is no system prompt or retrieval
+      return nil if text.blank?
+      # Use AWS Comprehend to check AI Chat contents for toxicity.
+      # get_toxicity returns an object with the following fields:
+      # text: string, toxicity: number, and max_category {name: string, score: number}
+      comprehend_response = AichatComprehendHelper.get_toxicity(text, locale_code)
+      if comprehend_response[:toxicity] >= get_toxicity_threshold_user_sources
+        return ShareFailure.new(ShareFiltering::FailureType::PROFANITY, comprehend_response)
+      end
+    end
   end
 end

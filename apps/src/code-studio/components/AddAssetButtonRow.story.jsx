@@ -1,6 +1,7 @@
-import React from 'react';
-import AddAssetButtonRow from './AddAssetButtonRow';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import AddAssetButtonRow from './AddAssetButtonRow';
 
 const mockApi = {
   getUploadUrl: () => {
@@ -11,12 +12,11 @@ const mockApi = {
   },
   wrapUploadStartCallback: f => {
     return f;
-  }
+  },
 };
 
 export default {
-  title: 'AddAssetButtonRow',
-  component: AddAssetButtonRow
+  component: AddAssetButtonRow,
 };
 
 // Template
@@ -36,10 +36,10 @@ const Template = args => (
 // Stories
 export const JustButtons = Template.bind({});
 JustButtons.args = {
-  statusMessage: ''
+  statusMessage: '',
 };
 
 export const ButtonsWithStatus = Template.bind({});
 ButtonsWithStatus.args = {
-  statusMessage: 'This is a status message'
+  statusMessage: 'This is a status message',
 };

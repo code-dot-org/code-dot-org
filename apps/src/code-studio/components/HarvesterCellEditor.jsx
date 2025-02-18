@@ -3,9 +3,10 @@
  * @see @code-dot-org/maze/src/harvesterCell
  */
 
-import React from 'react';
-import CellEditor from './CellEditor';
 import {cells} from '@code-dot-org/maze';
+import React from 'react';
+
+import CellEditor from './CellEditor';
 
 const HarvesterCell = cells.HarvesterCell;
 
@@ -19,7 +20,7 @@ export default class PlanterCellEditor extends CellEditor {
         {super.renderFields(values)}
 
         <label htmlFor="possibleFeatures">Possible Features:</label>
-        {Object.keys(HarvesterCell.FeatureType).map(function(type) {
+        {Object.keys(HarvesterCell.FeatureType).map(function (type) {
           var value = HarvesterCell.FeatureType[type];
           return (
             <label className="checkbox" key={type}>

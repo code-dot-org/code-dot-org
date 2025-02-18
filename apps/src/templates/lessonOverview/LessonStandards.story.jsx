@@ -1,13 +1,14 @@
 import React from 'react';
-import LessonStandards, {ExpandMode} from './LessonStandards';
+
 import {
   cspStandards,
-  cstaStandards
+  cstaStandards,
 } from '../../../test/unit/templates/lessonOverview/sampleStandardsData.js';
 
+import LessonStandards, {ExpandMode} from './LessonStandards';
+
 export default {
-  title: 'LessonStandards',
-  component: LessonStandards
+  component: LessonStandards,
 };
 
 export const WithParentCategory = () => (

@@ -1,0 +1,48 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-06-03T22:50:39.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "level_data": {
+      "panels": [
+        {
+          "imageUrl": "https://studio.code.org/shared/images/teacher-announcement/incubator-projectbeats.png",
+          "text": "#### ✨Welcome to Project Beats! ✨ \n\nYou can mix, remix, and even perform music using code. \n\n Let's make some music! 🚀"
+        },
+        {
+          "imageUrl": "https://images.code.org/3d375b9245cee110eba6b393c22510e3-drag a block.gif",
+          "text": "Connect a block under 'when run' in your Workspace. \n\n Drag it back to delete it."
+        },
+        {
+          "imageUrl": "https://images.code.org/b845c84c59e5f0d4b8531d0f89e11d25-choose a sound.gif",
+          "text": "Click on the sound name to access the sound library. \n\nChoose any sound you like!"
+        }
+      ]
+    },
+    "name_suffix": "_coursee",
+    "panels": [
+      {
+        "imageUrl": "https://images.code.org/846388521fe0f07f2577b346a7ba51d9-musiclab-big-banner-image.png",
+        "text": "#### ✨ Welcome to Music Lab ✨ \n\nGet ready to make music with code! \n\n\n",
+        "key": "musiclab_intro_panels_start_v2-415ec56a-f841-421b-adff-b680e8d4ca35"
+      },
+      {
+        "text": "####Using the tutorial\n\n<p style=\"color: black;\"><span style=\"color: #009EB0;\">→</span> 1. Read the instructions.</p>\n\n<p style=\"color: black;\"><span style=\"color: #ED6060;\">→</span> 2.  Drag blocks into the workspace.</p>\n\n<p style=\"color: black;\"><span style=\"color: #FFA400;\">→</span> 3.  Press ▶ Run to start your song.</p>\n\n<p style=\"color: black;\"><span style=\"color: #9660BF;\">→</span>  4. Press Continue for the next level.</p>\n\n\n",
+        "imageUrl": "https://images.code.org/139f3e38ff4c27559c9be3470ed54819-general (3).gif",
+        "key": "musiclab_intro_panels_start_v2-d2e2064a-8f39-452f-81f5-aab175d5a165"
+      },
+      {
+        "imageUrl": "https://images.code.org/1e2594de35f17668394b32b160e88db3-choose sound.gif",
+        "text": "###Change the sound\n\nClick on the sound block to access the sound library. \n\nChoose any sound you like!",
+        "key": "musiclab_intro_panels_start_v2-623c36d1-b475-414b-8e2f-da7d27012391"
+      }
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-03T22:50:39.482+00:00\",\"changed\":[\"cloned from \\\"music_lab_intro_panels_start2_course-d\\\"\"],\"cloned_from\":\"music_lab_intro_panels_start2_course-d\"}]"
+}]]></config>
+</Panels>

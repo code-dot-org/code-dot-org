@@ -1,0 +1,21 @@
+name 'game_variables_match_condition_course-e'
+title 'Match the code to the animation'
+height '200'
+question '![](https://images.code.org/c2bc23e6741cf4d56429e9afbceb2c06-image-1715379511851.jpg)'
+answer '![](https://images.code.org/be7a48af8f98a58601bbc77616896ff9-image-1715379516509.jpg)'
+question '![](https://images.code.org/3ab41f167b6994734714071c9ae25b4c-image-1715379524754.jpg)'
+answer '![](https://images.code.org/924ce0f736d18092eafbb5ce51e6c0f1-image-1715379529970.jpg)'
+question '![](https://images.code.org/d41816d671e9b82d3cf764802e29dc1e-image-1715379533515.jpg)'
+answer '![](https://images.code.org/cdddd2dd3a55ba22e88da5c9c33a63e1-image-1715379537572.jpg)'
+
+markdown <<MARKDOWN
+Look at these coding blocks using conditionals. Match the correct code to the picture.
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

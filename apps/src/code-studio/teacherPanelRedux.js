@@ -1,42 +1,61 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 
+import {getCurrentLevel} from './progressReduxSelectors';
+
 const SET_LEVELS_WITH_PROGRESS = 'progress/SET_LEVELS_WITH_PROGRESS';
 const SET_LOADING_LEVELS_WITH_PROGRESS =
   'progress/SET_LOADING_LEVELS_WITH_PROGRESS';
+const SET_LOADED_LEVELS_WITH_PROGRESS =
+  'progress/SET_LOADED_LEVELS_WITH_PROGRESS';
 
 const initialState = {
   isLoadingLevelsWithProgress: false,
-  levelsWithProgress: []
+  hasLoadedLevelsWithProgress: false,
+  levelsWithProgress: [],
 };
 
 export default function reducer(state = initialState, action) {
   if (action.type === SET_LEVELS_WITH_PROGRESS) {
     return {
       ...state,
-      levelsWithProgress: action.levelsWithProgress
+      levelsWithProgress: action.levelsWithProgress,
     };
   }
 
   if (action.type === SET_LOADING_LEVELS_WITH_PROGRESS) {
     return {
       ...state,
-      isLoadingLevelsWithProgress: action.isLoading
+      isLoadingLevelsWithProgress: action.isLoading,
+    };
+  }
+
+  if (action.type === SET_LOADED_LEVELS_WITH_PROGRESS) {
+    return {
+      ...state,
+      hasLoadedLevelsWithProgress: true,
     };
   }
 
   return state;
 }
 
-const setLevelsWithProgress = levelsWithProgress => ({
+// exported only for testing
+export const setLevelsWithProgress = levelsWithProgress => ({
   type: SET_LEVELS_WITH_PROGRESS,
-  levelsWithProgress
+  levelsWithProgress,
 });
 
 const setLoadingLevelsWithProgress = isLoading => ({
   type: SET_LOADING_LEVELS_WITH_PROGRESS,
-  isLoading
+  isLoading,
 });
+
+const setLoadedLevelsWithProgress = () => ({
+  type: SET_LOADED_LEVELS_WITH_PROGRESS,
+});
+
+export const setLoadedLevelsWithProgressForTest = setLoadedLevelsWithProgress;
 
 export const loadLevelsWithProgress = () => (dispatch, getState) => {
   const state = getState();
@@ -49,17 +68,16 @@ export const loadLevelsWithProgress = () => (dispatch, getState) => {
 
   const queryParams = getLevelProgressQueryParams(state);
 
-  const baseUrl = `/api/teacher_panel_progress/${
-    state.teacherSections.selectedSectionId
-  }`;
+  const baseUrl = `/api/teacher_panel_progress/${state.teacherSections.selectedSectionId}`;
 
   return $.ajax({
     url: baseUrl + '?' + queryString.stringify(queryParams),
-    method: 'GET'
+    method: 'GET',
   })
     .done(data => {
       dispatch(setLevelsWithProgress(data));
       dispatch(setLoadingLevelsWithProgress(false));
+      dispatch(setLoadedLevelsWithProgress());
     })
     .fail(err => {
       console.log(
@@ -74,12 +92,14 @@ const getLevelProgressQueryParams = state => {
     return {
       lesson_id: state.progress.currentLessonId,
       is_lesson_extras: true,
-      script_id: state.progress.scriptId
+      script_id: state.progress.scriptId,
     };
   } else {
+    const currentLevel = getCurrentLevel(state);
+    // If we are on a sublevel, use the level ID of the main (parent) level
     return {
       script_id: state.progress.scriptId,
-      level_id: state.progress.currentLevelId
+      level_id: currentLevel?.parentLevelId || state.progress.currentLevelId,
     };
   }
 };

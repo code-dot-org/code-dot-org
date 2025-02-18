@@ -1,0 +1,22 @@
+name 'CSD_Lesson2WrapUp_self-paced-unit2_CSD-PL-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrap Up: Build a Website with HTML
+
+## Great job! 🎉
+
+#### So far, you've learned the basics of HTML and how to add structure, text, and images to a web page. The skills you've learned thus far will take you through Unit 2, Lesson 8. You learned how to:
+
+* #### Use Web Lab.
+* #### Add structure to a web page using HTML.
+* #### Add images to a web page.
+
+## Up Next
+
+#### In the next section of this professional learning module, you'll learn more about **CSS**, which will allow you to style elements on a web page.
+
+#### Click continue to keep going!
+
+MARKDOWN

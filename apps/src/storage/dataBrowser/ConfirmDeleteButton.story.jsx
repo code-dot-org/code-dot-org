@@ -1,10 +1,10 @@
-import React from 'react';
-import ConfirmDeleteButton from './ConfirmDeleteButton';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import ConfirmDeleteButton from './ConfirmDeleteButton';
 
 export default {
-  title: 'ConfirmDeleteButton',
-  component: ConfirmDeleteButton
+  component: ConfirmDeleteButton,
 };
 
 const Template = args => <ConfirmDeleteButton {...args} />;
@@ -14,5 +14,5 @@ BasicExample.args = {
   title: 'Delete table?',
   body: 'Are you sure you want to delete the table?',
   buttonText: 'Delete table',
-  onConfirmDelete: action('delete table')
+  onConfirmDelete: action('delete table'),
 };

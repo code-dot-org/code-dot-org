@@ -1,11 +1,12 @@
 import React from 'react';
-import TopCourse from './TopCourse';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
 
+import TopCourse from './TopCourse';
+
 export default {
-  title: 'TopCourse',
-  component: TopCourse
+  component: TopCourse,
 };
 
 //
@@ -27,7 +28,7 @@ Standard.args = {
   assignableName: 'CSP 1',
   lessonName: 'Lesson 1: Intro to CSP',
   linkToOverview: 'studio.code.org/s/csp1-2021',
-  linkToLesson: 'studio.code.org/s/csp1-2021/lessons/1'
+  linkToLesson: 'studio.code.org/s/csp1-2021/lessons/1',
 };
 
 export const ProfessionalLearning = Template.bind({});
@@ -36,5 +37,5 @@ ProfessionalLearning.args = {
   lessonName: 'What to teach when in CSD',
   linkToOverview: 'studio.code.org/s/self-paced-pl-csd1-2021',
   linkToLesson: 'studio.code.org/s/self-paced-pl-csd1-2021/lessons/1',
-  isProfessionalLearningCourse: true
+  isProfessionalLearningCourse: true,
 };

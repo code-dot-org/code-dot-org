@@ -1,23 +1,24 @@
+import $ from 'jquery';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import {UnconnectedTopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
-import $ from 'jquery';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
-import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
-import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
-import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
-import _ from 'lodash';
-import styleConstants from '@cdo/apps/styleConstants';
 import {connect} from 'react-redux';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
+import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import styleConstants from '@cdo/apps/styleConstants';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
+import {UnconnectedTopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
+import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {windowOpen} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 const VIDEO_WIDTH = 670;
 const VIDEO_HEIGHT = 375;
@@ -30,7 +31,7 @@ class LevelDetailsDialog extends Component {
     scriptLevel: PropTypes.object.isRequired,
     handleClose: PropTypes.func.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -42,7 +43,7 @@ class LevelDetailsDialog extends Component {
       selectedLevel,
       scriptLevel,
       height: MAX_LEVEL_HEIGHT,
-      maxHeight: MAX_LEVEL_HEIGHT
+      maxHeight: MAX_LEVEL_HEIGHT,
     };
   }
 
@@ -85,7 +86,7 @@ class LevelDetailsDialog extends Component {
       return (
         <SafeMarkdown
           markdown={i18n.levelGroupDetailsDialogText({
-            buttonText: i18n.seeFullLevel()
+            buttonText: i18n.seeFullLevel(),
           })}
         />
       );
@@ -162,7 +163,7 @@ class LevelDetailsDialog extends Component {
           mainStyle={{paddingBottom: 5, position: 'static'}}
           containerStyle={{
             overflowY: 'auto',
-            height: this.state.height - HEADER_HEIGHT
+            height: this.state.height - HEADER_HEIGHT,
           }}
           setInstructionsRenderedHeight={height =>
             this.setState({height: Math.min(height, MAX_LEVEL_HEIGHT)})
@@ -182,7 +183,7 @@ class LevelDetailsDialog extends Component {
       return (
         <SafeMarkdown
           markdown={i18n.noLevelPreviewAvailable({
-            buttonText: i18n.seeFullLevel()
+            buttonText: i18n.seeFullLevel(),
           })}
           openExternalLinksInNewTab
         />
@@ -217,14 +218,14 @@ class LevelDetailsDialog extends Component {
         study_group: 'teacher-lesson-plan',
         event: 'click-see-full-level',
         data_json: JSON.stringify({
-          scriptLevelId: scriptLevel.id
-        })
+          scriptLevelId: scriptLevel.id,
+        }),
       },
       {
         includeUserId: true,
         callback: () => {
           windowOpen(url, 'noopener', 'noreferrer');
-        }
+        },
       }
     );
   };
@@ -250,7 +251,7 @@ class LevelDetailsDialog extends Component {
       clonedScriptLevel.highlighted = true;
       this.setState({
         selectedLevel: clickedObject.level,
-        scriptLevel: clonedScriptLevel
+        scriptLevel: clonedScriptLevel,
       });
     } else {
       // A sublevel was clicked so find the cloned version of the sublevel and set highlighted to true
@@ -260,7 +261,7 @@ class LevelDetailsDialog extends Component {
       clonedNewSelected.highlighted = true;
       this.setState({
         selectedLevel: clonedNewSelected,
-        scriptLevel: clonedScriptLevel
+        scriptLevel: clonedScriptLevel,
       });
     }
   };
@@ -328,17 +329,17 @@ class LevelDetailsDialog extends Component {
 const styles = {
   sublevelCards: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   scrollContainer: {
     maxHeight: '60vh',
-    overflow: 'auto'
-  }
+    overflow: 'auto',
+  },
 };
 
 export const UnconnectedLevelDetailsDialog = LevelDetailsDialog;
 
 export default connect(state => ({
   viewAs: state.viewAs,
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(LevelDetailsDialog);

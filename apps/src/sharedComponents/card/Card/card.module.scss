@@ -1,0 +1,12 @@
+@import "color.scss";
+
+.cardContainer {
+  display: flex;
+  flex-flow: column;
+  width: 410px;
+  background-color: $white;
+  padding: 30px;
+  gap: 16px;
+  border-radius: 4px;
+  border: 1px solid #D4D5D7
+}

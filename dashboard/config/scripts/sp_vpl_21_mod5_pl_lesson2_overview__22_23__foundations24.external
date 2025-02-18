@@ -1,0 +1,19 @@
+name 'SP-VPL-21-mod5-PL-lesson2-overview_-22_23_-foundations24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Train a Machine Learning Model
+
+#### In the next section of this professional learning module, you will be introduced to AI Lab and have the opportunity to practice training your first machine learning model.
+</p></div>
+
+### **You will:**
+
+* #### Train a machine learning model using AI Lab.
+<br>
+
+#### **Suggested time:** 30 minutes
+
+
+MARKDOWN

@@ -10,15 +10,18 @@ theme: responsive
 
 - ನಿಮ್ಮ ಶಾಲೆಗೆ ಕನಿಷ್ಠ 15 MBit/sec ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವನ್ನು ನಾವು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ.
 - ನಾವು ಬೆಂಬಲಿಸುವ ಚಿಕ್ಕ ಪರದೆಯ ಗಾತ್ರ 1024 x 728 px ಆಗಿದೆ.
-- ನಮ್ಮ ಮಧ್ಯಮ ಮತ್ತು ಪ್ರೌಢಶಾಲಾ ಹಂತದ ಕೋರ್ಸ್‌ಗಳಿಗಾಗಿ ನಿಮಗೆ ಮೌಸ್ (ಅಥವಾ ಟಚ್‌ಪ್ಯಾಡ್) ಮತ್ತು ಕೀಬೋರ್ಡ್‌ನೊಂದಿಗೆ ಡೆಸ್ಕ್‌ಟಾಪ್ ಅಥವಾ ಲ್ಯಾಪ್‌ಟಾಪ್ ಕಂಪ್ಯೂಟರ್ ಅಗತ್ಯವಿದೆ: CS ಡಿಸ್ಕವರಿಗಳು, CS ತತ್ವಗಳು ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ. ಈ ಕೋರ್ಸ್‌ಗಳಿಗೆ ಹೆಚ್ಚಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಮತ್ತು ಮೊಬೈಲ್ ಸಾಧನಗಳು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ. ಸಾಧನ-ನಿರ್ದಿಷ್ಟ ವಿನಾಯಿತಿಗಳಿಗಾಗಿ ಕೆಳಗಿನ "ಮೊಬೈಲ್ ಮತ್ತು ಟ್ಯಾಬ್ಲೆಟ್ ಬೆಂಬಲ ವಿವರಗಳು" ನೋಡಿ.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. ಸಾಧನ-ನಿರ್ದಿಷ್ಟ ವಿನಾಯಿತಿಗಳಿಗಾಗಿ ಕೆಳಗಿನ "ಮೊಬೈಲ್ ಮತ್ತು ಟ್ಯಾಬ್ಲೆಟ್ ಬೆಂಬಲ ವಿವರಗಳು" ನೋಡಿ.
 - ಎಲ್ಲಾ ಇತರ ವಿಷಯಗಳು, ಉದಾಹರಣೆಗೆ K-5 ಕೋರ್ಸ್‌ಗಳು (ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್) ಮತ್ತು ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳು ಎಲ್ಲಾ ಇತರ ಆಧುನಿಕ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಮತ್ತು ಲ್ಯಾಪ್‌ಟಾಪ್ ಅಥವಾ ಡೆಸ್ಕ್‌ಟಾಪ್ ಕಂಪ್ಯೂಟರ್‌ಗಳ ಜೊತೆಗೆ iPad ಗಳು ಮತ್ತು Chromebook ಗಳಲ್ಲಿ ಹೊಂದಿಕೊಳ್ಳುತ್ತವೆ.
 - ಮೊಬೈಲ್ ಸಾಧನ ಬೆಂಬಲ ವಿವರಗಳಿಗಾಗಿ ಹುಡುಕುತ್ತಿರುವಿರಾ? ಈ ಕೆಳಗೆ ಓದಿ.
 
 ## ಕನಿಷ್ಠ ಬೆಂಬಲಿತ ಬ್ರೌಸರ್‌ಗಳು ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು
 
+ಜುಲೈ 2024 ರಲ್ಲಿ ಪ್ರಾರಂಭವಾಗಿ, ಬ್ರೌಸರ್ಗಳು ಮತ್ತು ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್ಗಳಿಗೆ ಅಗತ್ಯವಿರುವ ಕನಿಷ್ಠ ಆವೃತ್ತಿಗಳನ್ನು ನಾವು ನವೀಕರಿಸುತ್ತೇವೆ. ಹಳೆಯ ಆವೃತ್ತಿಗಳು ಇನ್ನೂ ಕಾರ್ಯನಿರ್ವಹಿಸಬಹುದಾದರೂ, ಹಳೆಯ ಆವೃತ್ತಿಗಳಲ್ಲಿ ದೋಷ ಪರಿಹಾರಗಳಿಗಾಗಿ ವಿನಂತಿಗಳನ್ನು ಬೆಂಬಲಿಸಲು ನಮಗೆ ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           ಬ್ರೌಸರ್
@@ -39,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          ಬ್ರೌಸರ್ ಜುಲೈ '24
+        </th>
+        <tr>
+          <td>ಕ್ರೋಮ್ 103.x</td>
+        </tr>
+        <tr>
+          <td>ಸಫಾರಿ 14.x</td>
+        </tr>
+        <tr>
+          <td>ಮೊಬೈಲ್ ಸಫಾರಿ 14.x</td>
+        </tr>
+        <tr>
+          <td>ಎಡ್ಜ್ 119.x</td>
+        </tr>
+        <tr>
+          <td>ಫೈರ್ಫಾಕ್ಸ್ 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           ಪ್ಲಾಟ್ಫಾರಂ
@@ -61,33 +86,55 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          ಪ್ಲಾಟ್ಫಾರ್ಮ್ ಜುಲೈ '24
+        </th>
+        <tr>
+          <td>ಮ್ಯಾಕೋಸ್ 10.15</td>
+        </tr>
+        <tr>
+          <td>ಐಒಎಸ್ 15.x</td>
+        </tr>
+        <tr>
+          <td>ವಿಂಡೋಸ್ 8</td>
+        </tr>
+        <tr>
+          <td>ಆಂಡ್ರಾಯ್ಡ್ 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## ಅನ್‌ಬ್ಲಾಕ್ ಮಾಡಬೇಕಿರುವ ಸೈಟ್‌ಗಳು
 
 ಎಲ್ಲಾ Code.org ವಿಷಯದೊಂದಿಗೆ ಉತ್ತಮ ಅನುಭವಕ್ಕಾಗಿ, ಕೆಳಗಿನ ಸೈಟ್‌ಗಳನ್ನು ಅನುಮತಿಸಲಾಗಿದೆ ಮತ್ತು ನಿರ್ಬಂಧಿಸಲಾಗಿಲ್ಲ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ನಿಮ್ಮ ಶಾಲೆ ಅಥವಾ ಜಿಲ್ಲೆಯ ಐಟಿ ಇಲಾಖೆಯೊಂದಿಗೆ ಸಮಾಲೋಚಿಸಲು ನಾವು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ.
 
-| ಆದ್ಯತೆ                                                            | URL                                                                                                        |
-| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **ಅಗತ್ಯವಿದೆ**                                                     | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **ಆಯ್ಕೆಗಳು**                                                      | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **YouTube ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊಗಳನ್ನು ಬಳಸಲು (ವರ್ಧಿತ ಗೌಪ್ಯತೆ ಮೋಡ್)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Code.org ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊಗಳನ್ನು ಬಳಸಲು**                      | `https://videos.code.org`                                                                                  |
-| **ಇಂಟರ್ನೆಟ್ ಸಿಮ್ಯುಲೇಟರ್ ಅನ್ನು ಬಳಸಲು**                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **ವೆಬ್ ಲ್ಯಾಬ್ ಬಳಸಲು**                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Google ಕ್ಲಾಸ್‌ರೂಮ್ ಹಂಚಿಕೆ ಬಟನ್ ಬಳಸಲು**                          | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                       | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| ಆದ್ಯತೆ                                                                                                               | URL                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **ಅಗತ್ಯವಿದೆ**                                                                                                        | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **ಕ್ಯಾಪ್ಚಾ ವ್ಯವಸ್ಥೆಗಳು ಸ್ವಯಂಚಾಲಿತ ಮೋಸದ (“ಬೋಟ್”) ಚಟುವಟಿಕೆಯಿಂದ ನಿಮ್ಮ ಬಳಕೆಯನ್ನು ಪ್ರತ್ಯೇಕಿಸಬಹುದು ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **ಆಯ್ಕೆಗಳು**                                                                                                         | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **YouTube ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊಗಳನ್ನು ಬಳಸಲು (ವರ್ಧಿತ ಗೌಪ್ಯತೆ ಮೋಡ್)**                                                    | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Code.org ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊಗಳನ್ನು ಬಳಸಲು**                                                                         | `https://videos.code.org`                                                                                  |
+| **ಇಂಟರ್ನೆಟ್ ಸಿಮ್ಯುಲೇಟರ್ ಅನ್ನು ಬಳಸಲು**                                                                                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **ವೆಬ್ ಲ್ಯಾಬ್ ಬಳಸಲು**                                                                                                | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Google ಕ್ಲಾಸ್‌ರೂಮ್ ಹಂಚಿಕೆ ಬಟನ್ ಬಳಸಲು**                                                                             | `https://apis.google.com`                                                                                  |
 
 ## ಮೊಬೈಲ್ ಮತ್ತು ಟ್ಯಾಬ್ಲೆಟ್ ಬೆಂಬಲ ವಿವರಗಳು
 
-ಎಲ್ಲಾ CS ಡಿಸ್ಕವರಿಗಳು, CS ತತ್ವಗಳು ಮತ್ತು ಅಪ್ಲಿಕೇಶನ್ ಲ್ಯಾಬ್ ಕೋರ್ಸ್‌ಗಳಿಗೆ ಪರಿಚಯವು ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಅಥವಾ ಮೊಬೈಲ್ ಸಾಧನಗಳೊಂದಿಗೆ ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ - ಸಂಪೂರ್ಣ ಕೀಬೋರ್ಡ್ ಮತ್ತು ಮೌಸ್ (ಅಥವಾ ಮ್ಯಾಕ್‌ಬುಕ್ಸ್‌ನಲ್ಲಿರುವಂತೆ ಟಚ್‌ಪ್ಯಾಡ್) ಅಗತ್ಯವಿದೆ. ಕೆಳಗಿನ ವಿನಾಯಿತಿಗಳೊಂದಿಗೆ ಹೆಚ್ಚಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ:
+ಎಲ್ಲಾ ಸಿಎಸ್ ಡಿಸ್ಕವರಿ, ಸಿಎಸ್ ಪ್ರಿನ್ಸಿಪಲ್ಸ್, ಸಿಎಸ್ ಎ, ಮತ್ತು ಇಂಟ್ರೋ ಟು ಆಪ್ ಲ್ಯಾಬ್ ಕೋರ್ಸ್ಗಳು ಮಾತ್ರೆಗಳು ಅಥವಾ ಮೊಬೈಲ್ ಸಾಧನಗಳೊಂದಿಗೆ ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ - ಪೂರ್ಣ ಕೀಬೋರ್ಡ್ ಮತ್ತು ಮೌಸ್ (ಅಥವಾ ಟಚ್ಪ್ಯಾಡ್) ಅಗತ್ಯವಿದೆ. ಕೆಳಗಿನ ವಿನಾಯಿತಿಗಳೊಂದಿಗೆ ಹೆಚ್ಚಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ:
 
 - ಬಾಹ್ಯ ಕೀಬೋರ್ಡ್‌ನೊಂದಿಗೆ ಮೈಕ್ರೋಸಾಫ್ಟ್ ಸರ್ಫೇಸ್ ಪ್ರೊ
 - iPad ಚಾಲನೆಯಲ್ಲಿರುವ iPadOS 13.4 ಅಥವಾ ನಂತರದ ಕೀಬೋರ್ಡ್ ಮತ್ತು ಬಾಹ್ಯ ಮೌಸ್ ಅಥವಾ ಟಚ್‌ಪ್ಯಾಡ್‌ನೊಂದಿಗೆ
 
-ಎಲ್ಲಾ ಇತರ ವಿಷಯಗಳು, ಉದಾಹರಣೆಗೆ K-5 ಕೋರ್ಸ್‌ಗಳು (ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್) ಮತ್ತು ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳು ಎಲ್ಲಾ ಇತರ ಆಧುನಿಕ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಮತ್ತು ಲ್ಯಾಪ್‌ಟಾಪ್ ಅಥವಾ ಡೆಸ್ಕ್‌ಟಾಪ್ ಕಂಪ್ಯೂಟರ್‌ಗಳ ಜೊತೆಗೆ iPad ಗಳು ಮತ್ತು Chromebook ಗಳಲ್ಲಿ ಹೊಂದಿಕೊಳ್ಳುತ್ತವೆ.
+ಕೆ-5 ಕೋರ್ಸ್ಗಳು (ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್) ಮತ್ತು ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳಂತಹ ಎಲ್ಲಾ ಇತರ ವಿಷಯಗಳು ಐಪ್ಯಾಡ್ಗಳು ಮತ್ತು ಇತರ ಆಧುನಿಕ ಮಾತ್ರೆಗಳು ಮತ್ತು ಲ್ಯಾಪ್ಟಾಪ್ ಅಥವಾ ಡೆಸ್ಕ್ಟಾಪ್ ಕಂಪ್ಯೂಟರ್ಗಳಲ್ಲಿ ಹೊಂದಿಕೊಳ್ಳುತ್ತವೆ.
 
 ### ಮೊಬೈಲ್ ಫೋನ್
 
@@ -101,7 +148,17 @@ Code.org ಮತ್ತು ನಮ್ಮ [ಆನ್‌ಲೈನ್ ಕಲಿಕೆ 
 
 ನೀವು Code.org ನ ಆನ್‌ಲೈನ್ ಕೋರ್ಸ್‌ಗಳನ್ನು ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು, ನೀವು ಹೋಗಲು ಉತ್ತಮವಾಗಿರುವಿರಿ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಕೆಳಗಿನ ವೀಡಿಯೊದ ಪ್ಲೇಬ್ಯಾಕ್ ಅನ್ನು ಪರೀಕ್ಷಿಸಿ.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 ಪಠ್ಯಕ್ರಮದ ಉದ್ದಕ್ಕೂ ಬಳಸುವ ಪ್ಲೇಯರ್ ಇದು. ಇದು YouTube ಮೂಲಕ ವೀಡಿಯೊವನ್ನು ತೋರಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತದೆ ಮತ್ತು YouTube ಅನ್ನು ನಿರ್ಬಂಧಿಸಿದರೆ, ಬದಲಿಗೆ ನಮ್ಮ "ಫಾಲ್‌ಬ್ಯಾಕ್" ಪ್ಲೇಯರ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು Code.org ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊವನ್ನು ತೋರಿಸುತ್ತದೆ.
 

@@ -7,18 +7,20 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import ApplicationLoader from './application_loader';
+
 import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
+
+import ApplicationLoader from './application_loader';
 
 export default class DetailViewRedirect extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
-      applicationId: PropTypes.string.isRequired
-    }).isRequired
+      applicationId: PropTypes.string.isRequired,
+    }).isRequired,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   handleApplicationLoaded = applicationData => {

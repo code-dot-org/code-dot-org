@@ -16,7 +16,7 @@ var NetSimNodeFactory = module.exports;
  * @throws when a row doesn't have a mappable node type.
  * @return {Array.<NetSimNode>} nodes for the rows
  */
-NetSimNodeFactory.nodesFromRows = function(shard, nodeRows) {
+NetSimNodeFactory.nodesFromRows = function (shard, nodeRows) {
   return nodeRows.map(NetSimNodeFactory.nodeFromRow.bind(this, shard));
 };
 
@@ -28,7 +28,7 @@ NetSimNodeFactory.nodesFromRows = function(shard, nodeRows) {
  * @throws when the row doesn't have a mappable node type.
  * @return {NetSimNode} node for the rows
  */
-NetSimNodeFactory.nodeFromRow = function(shard, nodeRow) {
+NetSimNodeFactory.nodeFromRow = function (shard, nodeRow) {
   if (nodeRow.type === NodeType.CLIENT) {
     var NetSimClientNode = require('./NetSimClientNode');
     return new NetSimClientNode(shard, nodeRow);

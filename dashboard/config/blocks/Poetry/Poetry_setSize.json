@@ -2,7 +2,7 @@
   "category": "Poetry - Sprites",
   "config": {
     "func": "setSize",
-    "docFunc": "gamelab_setProp_dropdown",
+    "docFunc": "gamelab_setProp",
     "style": "sprite_blocks",
     "blockText": "set {SPRITE} size to {VAL}",
     "args": [

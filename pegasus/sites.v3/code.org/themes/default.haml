@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    = render inline: File.read(deploy_dir('shared/haml/onetrust_cookie_scripts.haml')), type: :haml
+    = render inline: File.read(deploy_dir('shared/haml/onetrust_cookie_scripts.haml')), type: :haml, locals: {domain: 'code.org'}
 
     =view :theme_common_head_before
 
@@ -10,5 +10,6 @@
 
     =view :theme_common_head_after
   %body
+    =view :theme_common_google_tag_manager
     =body
     =view :theme_common_body_after

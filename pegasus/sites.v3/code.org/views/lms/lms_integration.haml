@@ -1,0 +1,12 @@
+.action-block.action-block--two-col.white
+  .media-wrapper.col-50
+    %img{src: provider == 'Schoology' ? "/images/lms/integrationSchoology.png" : "/images/lms/integrationCanvas.png", alt: ""}
+  .text-wrapper.col-50
+    %p.overline
+      =hoc_s("lms_page.get_started.top_label")
+    %h3=hoc_s("lms_partner_page.ready.title", locals: {website: provider})
+    %p=hoc_s("lms_partner_page.ready.list_01", markdown: :inline)
+    %p=hoc_s("lms_partner_page.ready.list_02", markdown: :inline)
+    %a.link-button.has-external-link{href: provider == 'Schoology' ? "https://support.code.org/hc/en-us/articles/26677867056525-Getting-started-with-the-Code-org-Integration-for-Schoology" : "https://support.code.org/hc/en-us/articles/25938131265677-Getting-started-with-the-Code-org-Integration-for-Canvas", target: "_blank", rel: "noopener noreferrer"}
+      = hoc_s("lms_page.get_started.call_to_action")
+  .clear

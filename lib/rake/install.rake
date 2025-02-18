@@ -8,10 +8,8 @@ namespace :install do
   timed_task_with_logging :hooks do
     files = %w(
       pre-commit
-      post-commit
       post-checkout
       post-merge
-      pre-push
     )
     git_path = ".git/hooks"
 
@@ -44,6 +42,8 @@ namespace :install do
     if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
+        RakeUtils.python_venv_install
+
         puts CDO.dashboard_db_writer
         if ENV['CI']
           # Prepare for dashboard unit tests to run. We can't seed UI test data
@@ -66,12 +66,22 @@ namespace :install do
     end
   end
 
+  desc 'Install I18n libs'
+  timed_task_with_logging :i18n do
+    if RakeUtils.local_environment?
+      Dir.chdir(bin_dir('i18n')) do
+        RakeUtils.install_npm
+      end
+    end
+  end
+
   tasks = []
   tasks << :hooks if rack_env?(:development)
   tasks << :locals_yml if rack_env?(:development)
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
+  tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end
 desc 'Install all OS dependencies.'

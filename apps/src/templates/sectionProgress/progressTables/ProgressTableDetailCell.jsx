@@ -1,26 +1,28 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {
-  levelType,
-  studentLevelProgressType
-} from '@cdo/apps/templates/progress/progressTypes';
+
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {
   BubbleSize,
-  getBubbleUrl
+  getBubbleUrl,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 import {lessonHasLevels} from '@cdo/apps/templates/progress/progressHelpers';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+import {
+  levelType,
+  studentLevelProgressType,
+} from '@cdo/apps/templates/progress/progressTypes';
 import color from '@cdo/apps/util/color';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import _ from 'lodash';
+
+import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 
 export default class ProgressTableDetailCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
     levels: PropTypes.arrayOf(levelType).isRequired,
-    studentProgress: PropTypes.objectOf(studentLevelProgressType).isRequired
+    studentProgress: PropTypes.objectOf(studentLevelProgressType).isRequired,
   };
 
   constructor(props) {
@@ -41,8 +43,8 @@ export default class ProgressTableDetailCell extends React.Component {
         data_json: JSON.stringify({
           student_id: this.props.studentId,
           section_id: this.props.sectionId,
-          level_id: levelId
-        })
+          level_id: levelId,
+        }),
       },
       {includeUserId: true}
     );
@@ -121,17 +123,17 @@ const styles = {
   container: {
     ...progressStyles.flexBetween,
     position: 'relative',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   background: {
     height: 10,
     backgroundColor: color.lighter_gray,
     position: 'absolute',
     left: 10,
-    right: 10
+    right: 10,
   },
   sublevelContainer: {
     position: 'relative',
-    display: 'inline-block'
-  }
+    display: 'inline-block',
+  },
 };

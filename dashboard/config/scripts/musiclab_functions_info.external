@@ -1,0 +1,77 @@
+name 'MusicLab-functions-info'
+skip_dialog true
+markdown <<MARKDOWN
+# Functions
+
+
+
+<table style="width: 100%; margin: auto;">
+<tr style="border-bottom: 1px solid black;">
+    <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/03707b4dbece73d7970dfefd10fc43cd-image-1736454374683.png" alt="Three people bunched together under a heart" style="width: 80px; height: 80px;"></td>
+    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">What is a Function?</td>
+    <td style="font-size: 18px; padding: 20px 0;">Imagine you’re writing down a cookie recipe in a cookbook. The recipe outlines the exact steps to bake cookies, but just writing it down doesn’t actually make the cookies. 
+<br>
+<br>
+A function is like a <b>reusable block of instructions</b>. You define the instructions once, and you can "call" them whenever you need them..</td>
+  </tr>
+  <tr style="border-bottom: 1px solid black;">
+    <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/03707b4dbece73d7970dfefd10fc43cd-image-1736454374683.png" alt="Three people bunched together under a heart" style="width: 80px; height: 80px;"></td>
+    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">Defining a Function</td>
+    <td style="font-size: 18px; padding: 20px 0;">The recipe is simply a set of instructions that can be reused whenever you want to bake cookies. You’re creating a set of instructions for a specific task (like baking cookies), but nothing happens until you actually decide to use the recipe. <br> 
+    <br> 
+    Defining a function means you're <b>writing the set of instructions</b>(steps) that the function will perform. Think of it like creating a recipe that tells you what to do.</td>
+  </tr>
+  <tr style="border-bottom: 1px solid black;">
+    <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/985e8511f3ff59863698c4eca63e7e29-image-1736454372720.png" alt="Four puzzle pieces fitting together" style="width: 80px; height: 80px;"></td>
+    <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">Calling a Function</td>
+    <td style="font-size: 18px; padding: 20px 0;">Now, let’s say you decide to bake cookies today. You open the cookbook, look at the recipe, gather your ingredients (like chocolate chips and flour), and follow the steps in the recipe.
+<br>
+<br>
+This is like calling a function. When you "call" the recipe, you’re providing the specific ingredients (inputs) needed and letting the instructions guide you to create the final result (output—in this case, cookies). You can reuse the recipe as many times as you want, with different ingredients, to bake different types of cookies.
+<br>
+<br> Calling a function means you’re telling the computer, "Hey, do the steps I defined in this function!" It’s like opening your recipe book and saying, "Time to make this dish!".</td>
+  </tr>
+
+</table>
+
+
+
+## Why Use Functions?
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 0 auto; max-width: 1200px;">
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 20px; width: 100%;">
+    <!-- Top Row -->
+    <div style="text-align: center; background-color: #F7F8FA; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+      <img src="https://images.code.org/03707b4dbece73d7970dfefd10fc43cd-image-1736454374683.png" alt="Three people bunched together under a heart" style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 16pt; font-weight: bold;">Reusability:</p>
+      <ul style="text-align: left; font-size: 14pt;">
+        You don’t need to write a new cookie recipe every time you want cookies. Similarly, in programming, you don’t have to rewrite instructions for the same task—you can use the function over and over.
+       
+      </ul>
+    </div>
+    <div style="text-align: center; background-color: #F7F8FA; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+      <img src="https://images.code.org/985e8511f3ff59863698c4eca63e7e29-image-1736454372720.png" alt="Four puzzle pieces fitting together" style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 16pt; font-weight: bold;"> Flexibility:</p>
+      <ul style="text-align: left; font-size: 14pt;">
+       You can adapt the same recipe for different flavors. For example, one day, you might use chocolate chips and walnuts; another day, raisins and oatmeal. In programming, this is like providing different inputs to a function to achieve slightly different results.
+      </ul>
+    </div>
+    <div style="text-align: center; background-color: #F7F8FA; border-radius: 10px; padding: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+      <img src="https://images.code.org/56ec5f8bdeccf4e9a0ffb986ce283449-image-1736454514965.png" alt="An illuminated light bulb with a yellow brain in place of the glass." style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 16pt; font-weight: bold;">Efficiency:</p>
+      <ul style="text-align: left; font-size: 14pt;">
+  Instead of cluttering your kitchen (or program) with scattered instructions every time you want to bake, you keep the recipe (or function) in one place, making it easier to follow and reuse.
+      </ul>
+    </div>
+  </div>
+</div>
+  
+
+
+#### If you imagine your kitchen as a whole program, you might have other recipes, like a recipe for brownies or a recipe for bread. Each recipe is like a separate function, focused on a specific task. When you want to bake something, you simply pick the recipe (function) you need, provide the ingredients, and follow the steps.
+
+#### So, <b>defining functions is like creating recipes</b>, and <b>calling functions is like actually using those recipes </b> to make something!
+
+
+MARKDOWN

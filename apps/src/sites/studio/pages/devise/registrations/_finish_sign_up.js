@@ -1,51 +1,41 @@
 import $ from 'jquery';
-import i18n from '@cdo/locale';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import {SELECT_COUNTRY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {SchoolDataInputsContainer} from '@cdo/apps/templates/SchoolDataInputsContainer';
 import experiments from '@cdo/apps/util/experiments';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import trackEvent from '@cdo/apps/util/trackEvent';
+import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
   '#school-info-section',
   '#email-preference-radio',
-  '#teacher-gdpr'
+  '#teacher-gdpr',
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
-  '#gender-dropdown',
+  '#gender-field',
   '#age-dropdown',
+  '#us-state-dropdown',
   '#student-consent',
   '#parent-email-container',
-  '#student-gdpr'
+  '#student-gdpr',
 ];
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('signup');
-const {usIp, signUpUID} = scriptData;
+const {usIp, signUpUID, isLTI} = scriptData;
 
 // User type buttons
 const teacherButton = document.getElementById('select-user-type-teacher');
 const studentButton = document.getElementById('select-user-type-student');
-
-// Auto-fill country and countryCode if we detect a US IP address.
-let schoolData = {
-  country: usIp ? 'United States' : '',
-  countryCode: usIp ? 'US' : ''
-};
-
-// Keep track of whether the current user is in the U.S. or not (for regional partner email sharing)
-let isInUnitedStates = schoolData.countryCode === 'US';
-
-// Track whether clearer user type buttons rollout is enabled
-const inClearerUserTypeRollout = experiments.isEnabled(
-  experiments.CLEARER_SIGN_UP_USER_TYPE
-);
 
 let userInRegionalPartnerVariant = experiments.isEnabled(
   experiments.OPT_IN_EMAIL_REG_PARTNER
@@ -57,30 +47,21 @@ $(document).ready(() => {
   init();
 
   function init() {
-    if (inClearerUserTypeRollout) {
-      // If in variant, toggle large buttons
+    let hiddenUserType = $('#user_user_type').attr('type') === 'hidden';
+    if (!hiddenUserType) {
       document.getElementById('select-user-type-original').style.cssText =
         'display:none;';
       document.getElementById('select-user-type-variant').style.cssText =
         'display:flex;';
       document.getElementById('signup-select-user-type-label').style.cssText =
         'width:135px;';
-    } else {
-      // Otherwise (also the default), keep original dropdown
-      document.getElementById('select-user-type-variant').style.cssText =
-        'display:none;';
-      document.getElementById('select-user-type-original').style.cssText =
-        'display:flex;';
-      document.getElementById('signup-select-user-type-label').style.cssText =
-        'width:220px;';
     }
     setUserType(user_type);
-    renderSchoolInfo();
     renderParentSignUpSection();
   }
 
   let alreadySubmitted = false;
-  $('.finish-signup').submit(function() {
+  $('.finish-signup').submit(function () {
     // prevent multiple submission. We want to do this to defend against
     // attempting to create multiple accounts, and it's valid to simply disable
     // after the first attempt here since this form is submitted via HTML and
@@ -91,38 +72,68 @@ $(document).ready(() => {
 
     alreadySubmitted = true;
     // Clean up school data and set age for teachers.
+    let has_school = false;
+    let has_marketing_value = false;
+    const has_display_name = $('input[name="user[name]"]')?.val() !== '';
     if (user_type === 'teacher') {
       cleanSchoolInfo();
       $('#user_age').val('21+');
+      // If the school association flow has a school, update to true
+      if ($('select[name="user[school_info_attributes][school_id]"]')?.val()) {
+        has_school = true;
+      }
+      // Check if either of the marketing opt in/out radio buttons are selected
+      if (
+        $('input[id="user_email_preference_opt_in_yes"]')?.is(':checked') ||
+        $('input[id="user_email_preference_opt_in_no"]')?.is(':checked')
+      ) {
+        has_marketing_value = true;
+      }
     }
-    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT);
+    const sourceString = isLTI ? 'LTI' : '';
+
+    // Log to Statsig and Amplitude
+    analyticsReporter.sendEvent(
+      EVENTS.SIGN_UP_FINISHED_EVENT,
+      {
+        'user type': user_type,
+        'has school': has_school,
+        'has marketing value selected': has_marketing_value,
+        'has display name': has_display_name,
+        source: sourceString,
+      },
+      PLATFORMS.BOTH
+    );
+
+    // Log to Google Analytics
+    trackEvent('sign_up', 'sign_up_success', {
+      value: user_type,
+    });
   });
 
   function cleanSchoolInfo() {
-    // The country set in our form is the long-form string name of the country.
-    // We want it to be the 2-letter country code, so we change the value on form submission.
-    const countryInputEl = $(
-      'input[name="user[school_info_attributes][country]"]'
+    // Clear school_id and zip if the searched school is not found.
+    const newSchoolIdEl = $(
+      'select[name="user[school_info_attributes][school_id]"]'
     );
-    countryInputEl.val(schoolData.countryCode);
+    if (Object.values(NonSchoolOptions).includes(newSchoolIdEl.val())) {
+      newSchoolIdEl.val('');
+      $('input[name="user[school_info_attributes][school_zip]"]').val('');
+    }
 
-    // Clear school_id if the searched school is not found.
-    if (schoolData.ncesSchoolId === '-1') {
-      const schoolIdEl = $(
-        'input[name="user[school_info_attributes][school_id]"]'
-      );
-      schoolIdEl.val('');
+    // Clear country if not selected
+    const countryEl = $('select[name="user[school_info_attributes][country]"]');
+    if (countryEl.val() === SELECT_COUNTRY) {
+      countryEl.val('');
     }
   }
 
-  $('#user_parent_email_preference_opt_in_required').change(function() {
+  $('#user_parent_email_preference_opt_in_required').change(function () {
     // If the user_type is currently blank, switch the user_type to 'student' because that is the only user_type which
     // allows the parent sign up section of the form.
     if (user_type === '') {
       setUserType('student');
-      $('#user_user_type')
-        .val('student')
-        .change();
+      $('#user_user_type').val('student').change();
     }
     renderParentSignUpSection();
   });
@@ -139,7 +150,7 @@ $(document).ready(() => {
   }
 
   // Keep if sign-up user type experiment favors original (just func. below)
-  $('#user_user_type').change(function() {
+  $('#user_user_type').change(function () {
     var value = $(this).val();
     setUserType(value);
   });
@@ -164,14 +175,17 @@ $(document).ready(() => {
       // Show student fields by default.
       switchToStudent();
     }
-    if (inClearerUserTypeRollout) {
-      styleSelectedUserTypeButton(new_user_type);
-    }
+    styleSelectedUserTypeButton(new_user_type);
     user_type = new_user_type;
   }
 
   // Style selected user type button to show it has been clicked
   function styleSelectedUserTypeButton(value) {
+    // For LTI, the user type is implied from the LMS so the buttons will not appear
+    if (!teacherButton || !studentButton) {
+      return;
+    }
+
     if (value === 'teacher') {
       teacherButton.classList.add('select-user-type-button-selected');
       studentButton.classList.remove('select-user-type-button-selected');
@@ -184,7 +198,8 @@ $(document).ready(() => {
   function switchToTeacher() {
     fadeInFields(TEACHER_ONLY_FIELDS);
     hideFields(STUDENT_ONLY_FIELDS);
-    toggleVisShareEmailRegPartner(isInUnitedStates);
+    toggleVisShareEmailRegPartner(usIp);
+    renderSchoolInfo();
   }
 
   function switchToStudent() {
@@ -198,11 +213,15 @@ $(document).ready(() => {
       study: 'account-sign-up-v5',
       study_group: 'experiment-v4',
       event: 'select-' + type,
-      data_string: signUpUID
+      data_string: signUpUID,
     });
-    analyticsReporter.sendEvent(EVENTS.ACCOUNT_TYPE_PICKED_EVENT, {
-      'account type': type
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.ACCOUNT_TYPE_PICKED_EVENT,
+      {
+        'account type': type,
+      },
+      PLATFORMS.BOTH
+    );
   }
 
   function fadeInFields(fields) {
@@ -226,59 +245,11 @@ $(document).ready(() => {
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
       ReactDOM.render(
-        <div style={{padding: 10}}>
-          <h5>{i18n.schoolInformationHeader()}</h5>
-          <hr />
-          <SchoolInfoInputs
-            schoolType={schoolData.schoolType}
-            country={schoolData.country}
-            ncesSchoolId={schoolData.ncesSchoolId}
-            schoolName={schoolData.schoolName}
-            schoolCity={schoolData.schoolCity}
-            schoolState={schoolData.schoolState}
-            schoolZip={schoolData.schoolZip}
-            schoolLocation={schoolData.schoolLocation}
-            useLocationSearch={schoolData.useLocationSearch}
-            onCountryChange={onCountryChange}
-            onSchoolTypeChange={onSchoolTypeChange}
-            onSchoolChange={onSchoolChange}
-            onSchoolNotFoundChange={onSchoolNotFoundChange}
-            showRequiredIndicator={false}
-            styles={{width: 580}}
-          />
+        <div style={{padding: 22}}>
+          <SchoolDataInputsContainer usIp={usIp} />
         </div>,
         schoolInfoMountPoint
       );
     }
-  }
-
-  function onCountryChange(_, event) {
-    if (event) {
-      schoolData.country = event.value;
-      schoolData.countryCode = event.label;
-    }
-    isInUnitedStates = schoolData.countryCode === 'US';
-    toggleVisShareEmailRegPartner(isInUnitedStates);
-    renderSchoolInfo();
-  }
-
-  function onSchoolTypeChange(event) {
-    schoolData.schoolType = event ? event.target.value : '';
-    renderSchoolInfo();
-  }
-
-  function onSchoolChange(_, event) {
-    schoolData.ncesSchoolId = event ? event.value : '';
-    renderSchoolInfo();
-  }
-
-  function onSchoolNotFoundChange(field, event) {
-    if (event) {
-      schoolData = {
-        ...schoolData,
-        [field]: event.target.value
-      };
-    }
-    renderSchoolInfo();
   }
 });

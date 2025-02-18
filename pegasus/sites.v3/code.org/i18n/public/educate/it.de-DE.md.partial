@@ -10,15 +10,18 @@ theme: responsive
 
 - Wir empfehlen Ihrer Schule eine Internetverbindung mit mindestens 15 MB/s.
 - Wir unterstützen eine Bildschirmgröße ab 1024 x 728 Pixel.
-- Unsere Kurse für die Mittel- und Oberstufe CS Discoveries, CS Principles und Intro to App Lab setzen einen Desktop- oder Laptop-Computer und eine Maus (oder einem Touchpad) und eine Tastatur voraus. Diese Kurse sind in den meisten Fällen nicht für Tablets oder mobile Geräte ausgelegt. Die Ausnahmen finden Sie hier unter "Informationen zu mobilen Geräte und Tablets".
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Die Ausnahmen finden Sie hier unter "Informationen zu mobilen Geräte und Tablets".
 - Alle anderen Inhalte wie die Kurse und Aktivitäten für die 5. Klasse (Grundlagen der Informatik) und Hour of Code können auf iPads und Chromebooks und auf allen anderen modernen Tablets oder Desktop-Computern durchgeführt werden.
 - Sie wünschen weitere Informationen zur Unterstützung mobiler Geräte? Bitte hier lesen.
 
 ## Mindestvoraussetzung für Browser und Plattformen
 
+Ab Juli 2024 werden wir die für Browser und Betriebssysteme erforderlichen Mindestversionen aktualisieren. Obwohl die alten Versionen möglicherweise noch funktionieren, können wir Anfragen nach Bugfixes in den älteren Versionen nicht unterstützen.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -39,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser Juli '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x für Mobilgeräte</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Plattform
@@ -61,33 +86,55 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Plattform Juli '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8 x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Nicht gesperrte Websites
 
 Wir empfehlen Ihnen, mit der IT-Abteilung Ihrer Schule oder der Stadt zu sprechen, damit die folgenden Websites zugelassen und nicht gesperrt werden.
 
-| Priorität                                                                    | URL                                                                                                        |
-| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **Erforderlich**                                                             | `https://code.org`<br/>`https://*.code.org`                                                          |
-| **Optional**                                                                 | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
-| **Website der auf YouTube gehosteten Videos (erweiterter Datenschutzmodus)** | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
-| **Websites der von Code.org gehosteten Videos**                              | `https://videos.code.org`                                                                                  |
-| **Website des Internetsimulators**                                           | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
-| **Website von Web Lab**                                                      | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
-| **Verwendung der Schaltfläche Teilen von Google Classroom**                  | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                  | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
+| Priorität                                                                                                                             | URL                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| **Erforderlich**                                                                                                                      | `https://code.org`<br/>`https://*.code.org`                                                          |
+| **Um sicherzustellen, dass CAPTCHA-Systeme Ihre Nutzung von automatisierten betrügerischen Aktivitäten („Bot“) unterscheiden können** | `https://www.google.com/recaptcha/api.js`                                                                  |
+| **Optional**                                                                                                                          | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                              |
+| **Website der auf YouTube gehosteten Videos (erweiterter Datenschutzmodus)**                                                          | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*` |
+| **Websites der von Code.org gehosteten Videos**                                                                                       | `https://videos.code.org`                                                                                  |
+| **Website des Internetsimulators**                                                                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
+| **Website von Web Lab**                                                                                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
+| **Verwendung der Schaltfläche Teilen von Google Classroom**                                                                           | `https://apis.google.com`                                                                                  |
 
 ## Informationen zu mobilen Geräten und Tablets
 
-Die Kurse CS Discoveries, CS Principles und Intro to App Lab sind nicht mit Tablets oder mobilen Geräten kompatibel. Sie benötigen eine vollwertige Tastatur und eine Maus (oder ein Touchpad z. B. bei MacBooks). Tablets werden nur in folgenden Ausnahmefällen unterstützt:
+Alle CS Discoveries-, CS Principles-, CS A- und Intro to App Lab-Kurse sind nicht mit Tablets oder Mobilgeräten kompatibel. Eine vollständige Tastatur und Maus (oder ein Touchpad) sind erforderlich. Tablets werden nur in folgenden Ausnahmefällen unterstützt:
 
 - Microsoft Surface Pro mit externer Tastatur
 - iPad mit iPadOS 13.4 oder höher mit einer externen Tastatur und Maus oder Touchpad
 
-Alle anderen Inhalte wie die Kurse und Aktivitäten für die 5. Klasse (Grundlagen der Informatik) und Hour of Code können auf iPads und Chromebooks und auf allen anderen modernen Tablets oder Desktop-Computern durchgeführt werden.
+Alle anderen Inhalte wie K-5-Kurse (Grundlagen der Informatik) und Hour of Code-Aktivitäten sind auf iPads und anderen modernen Tablets sowie Laptop- oder Desktop-Computern kompatibel.
 
 ### Mobiltelefone
 
@@ -101,7 +148,17 @@ Wir betten die Videos mit [YouTube](https://www.youtube.com) in Code.org und uns
 
 Testen Sie die Wiedergabe des Videos unten, bevor Sie die Online-Kurse von Code.org beginnen, um zu sehen, ob alles funktioniert.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 Das ist der Player, der währende des gesamten Lehrplans verwendet wird. Er wird versuchen, das Video über YouTube wiederzugeben, und wenn YouTube gesperrt ist, wird das von Code.org gehostete Video mit unserem eigenen Player angezeigt.
 

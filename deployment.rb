@@ -44,6 +44,10 @@ def apps_dir(*dirs)
   deploy_dir('apps', *dirs)
 end
 
+def python_dir(*dirs)
+  deploy_dir('python', *dirs)
+end
+
 def tools_dir(*dirs)
   deploy_dir('tools', *dirs)
 end
@@ -58,6 +62,10 @@ end
 
 def dashboard_legacy_dir(*dirs)
   deploy_dir('dashboard', 'legacy', *dirs)
+end
+
+def frontend_dir(*dirs)
+  deploy_dir('frontend', *dirs)
 end
 
 def pegasus_dir(*paths)
@@ -76,8 +84,8 @@ def lib_dir(*dirs)
   deploy_dir('lib', *dirs)
 end
 
-def bin_i18n_dir(*dirs)
-  deploy_dir('bin/i18n', *dirs)
+def bin_dir(*dirs)
+  deploy_dir('bin', *dirs)
 end
 
 def shared_constants_dir(*dirs)

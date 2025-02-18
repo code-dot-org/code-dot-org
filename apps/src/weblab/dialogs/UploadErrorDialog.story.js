@@ -1,10 +1,10 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
 import UploadErrorDialog from './UploadErrorDialog';
 
 export default {
-  title: 'UploadErrorDialog',
-  component: UploadErrorDialog
+  component: UploadErrorDialog,
 };
 
 const Template = args => (

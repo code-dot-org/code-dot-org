@@ -1,17 +1,19 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import {TextLink} from '@dsco_/link';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from '@cdo/apps/util/color';
-import javalabMsg from '@cdo/javalab/locale';
-import {stringifyQueryParams} from '@cdo/apps/utils';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import color from '@cdo/apps/util/color';
+import {stringifyQueryParams} from '@cdo/apps/utils';
+import javalabMsg from '@cdo/javalab/locale';
 
 export const codeReviewTimelineElementType = {
   CREATED: 'created',
   COMMIT: 'commit',
-  CODE_REVIEW: 'codeReview'
+  CODE_REVIEW: 'codeReview',
 };
 
 // This component represents elements on the code review and commit timeline. There are 3 types of elements:
@@ -29,7 +31,7 @@ const CodeReviewTimelineElement = ({
   isLast,
   projectVersionId,
   viewAsCodeReviewer,
-  children
+  children,
 }) => {
   const params = queryParams();
   params['version'] = projectVersionId;
@@ -90,7 +92,8 @@ CodeReviewTimelineElement.propTypes = {
     .isRequired,
   isLast: PropTypes.bool,
   projectVersionId: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
+  viewAsCodeReviewer: PropTypes.bool,
 };
 
 // Helper to render the eyeball
@@ -106,7 +109,7 @@ const EyeballLink = ({versionHref}) => {
   );
 };
 EyeballLink.propTypes = {
-  versionHref: PropTypes.string
+  versionHref: PropTypes.string,
 };
 
 // Helper to render the dot
@@ -119,7 +122,7 @@ const TimelineDot = ({color, hasCheck}) => {
 };
 TimelineDot.propTypes = {
   color: PropTypes.string.isRequired,
-  hasCheck: PropTypes.bool
+  hasCheck: PropTypes.bool,
 };
 
 // Helper to render the lines
@@ -128,14 +131,14 @@ const TimelineLine = ({height, marginRight = '0px', marginLeft = '0px'}) => {
     borderLeft: lineStyle,
     height: height,
     marginRight: marginRight,
-    marginLeft: marginLeft
+    marginLeft: marginLeft,
   };
   return <div style={style} />;
 };
 TimelineLine.propTypes = {
   height: PropTypes.string.isRequired,
   marginRight: PropTypes.string,
-  marginLeft: PropTypes.string
+  marginLeft: PropTypes.string,
 };
 
 const lineStyle = `3px solid ${color.charcoal}`;
@@ -143,29 +146,29 @@ const dotHeight = 20;
 
 const styles = {
   element: {
-    display: 'flex'
+    display: 'flex',
   },
   eyeColumn: {
-    width: '21px'
+    width: '21px',
   },
   eyeIcon: {
     color: color.light_gray,
-    fontSize: '20px'
+    fontSize: '20px',
   },
   reviewEye: {
-    marginTop: '20px'
+    marginTop: '20px',
   },
   timeline: {
     display: 'flex',
     flexDirection: 'column',
     margin: '0 10px 0 16px',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   codeReviewTimeline: {
     display: 'flex',
     flexDirection: 'column',
     marginLeft: '11px',
-    width: '100%'
+    width: '100%',
   },
   dot: {
     width: dotHeight,
@@ -174,24 +177,23 @@ const styles = {
     zIndex: 1,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   check: {
     color: color.white,
-    paddingTop: '2px'
+    paddingTop: '2px',
   },
   createdText: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontStyle: 'italic'
+    ...fontConstants['main-font-semi-bold-italic'],
   },
   commitChild: {
     padding: '0 0 25px 20px',
-    marginLeft: '-20px'
-  }
+    marginLeft: '-20px',
+  },
 };
 
 export const UnconnectedCodeReviewTimelineElement = CodeReviewTimelineElement;
 
 export default connect(state => ({
-  viewAsCodeReviewer: state.pageConstants.isCodeReviewing
+  viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
 }))(CodeReviewTimelineElement);

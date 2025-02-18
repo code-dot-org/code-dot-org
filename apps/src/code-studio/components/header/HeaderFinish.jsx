@@ -1,14 +1,15 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import headerVignetteStyles from './HeaderVignette';
-import $ from 'jquery';
 
 export default class HeaderFinish extends React.Component {
   static propTypes = {
     lessonData: PropTypes.object,
     width: PropTypes.number,
     setDesiredWidth: PropTypes.func,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   getFullWidth() {
@@ -77,22 +78,22 @@ const styles = {
   headerContainer: {
     position: 'relative',
     overflow: 'hidden',
-    height: 18
+    height: 18,
   },
   headerInner: {
-    position: 'absolute'
+    position: 'absolute',
   },
   scriptLinkWithUpdatedAt: {
-    display: 'block'
+    display: 'block',
   },
   outerContainer: {
-    textAlign: 'right'
+    textAlign: 'right',
   },
   containerWithUpdatedAt: {
     verticalAlign: 'bottom',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    display: 'inline-block'
-  }
+    display: 'inline-block',
+  },
 };

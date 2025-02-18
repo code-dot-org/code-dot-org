@@ -1,0 +1,55 @@
+@import 'color.scss';
+
+.consoleContainer {
+  color: $white;
+  overflow: hidden;
+  height: 100%;
+  white-space: pre;
+  background-color: $black;
+}
+
+.consoleV2 {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.errorLine {
+  color: $lightest_red;
+}
+
+.popOutGraph {
+  position: fixed;
+  left: 30%;
+  bottom: 30%;
+  z-index: 2000;
+  width: 600px;
+}
+
+.disabledInfoIcon {
+  padding: 12px;
+  color: $white;
+  font-size: 16px;
+}
+
+.consoleHeader {
+  height: 40px;
+  min-height: 40px;
+
+  & > div {
+    height: 40px;
+  }
+}
+
+.controlButton {
+  margin: 8px 8px 8px 4px;
+}
+
+.controlButtons {
+  display: flex;
+}
+
+.disabledButtonTooltipContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

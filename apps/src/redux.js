@@ -25,10 +25,12 @@
  * @file The global redux store - "There can be only one"
  */
 
+import {configureStore} from '@reduxjs/toolkit';
 import Immutable from 'immutable';
-import experiments from './util/experiments';
 import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
+
+import experiments from './util/experiments';
 
 if (process.env.NODE_ENV !== 'production') {
   var createLogger = require('redux-logger');
@@ -37,28 +39,32 @@ if (process.env.NODE_ENV !== 'production') {
 let reduxStore;
 let globalReducers = {};
 
+let __oldReduxStore;
+let __oldGlobalReducers;
+
+// These are exported for use in Typescript unit tests.
+export const stubRedux = function () {
+  if (__oldReduxStore) {
+    throw new Error(
+      'Redux store has already been stubbed. Did you forget to call restore?'
+    );
+  }
+  __oldReduxStore = reduxStore;
+  __oldGlobalReducers = globalReducers;
+  reduxStore = null;
+  globalReducers = {};
+};
+
+export const restoreRedux = function () {
+  reduxStore = __oldReduxStore;
+  globalReducers = __oldGlobalReducers;
+  __oldReduxStore = null;
+  __oldGlobalReducers = null;
+};
+
 if (IN_UNIT_TEST) {
-  let __oldReduxStore;
-  let __oldGlobalReducers;
-
-  module.exports.stubRedux = function() {
-    if (__oldReduxStore) {
-      throw new Error(
-        'Redux store has already been stubbed. Did you forget to call restore?'
-      );
-    }
-    __oldReduxStore = reduxStore;
-    __oldGlobalReducers = globalReducers;
-    reduxStore = null;
-    globalReducers = {};
-  };
-
-  module.exports.restoreRedux = function() {
-    reduxStore = __oldReduxStore;
-    globalReducers = __oldGlobalReducers;
-    __oldReduxStore = null;
-    __oldGlobalReducers = null;
-  };
+  module.exports.stubRedux = stubRedux;
+  module.exports.restoreRedux = restoreRedux;
 }
 
 if (IN_STORYBOOK || IN_UNIT_TEST) {
@@ -87,9 +93,7 @@ export function getStore() {
  */
 function createStoreWithReducers() {
   return createStore(
-    Object.keys(globalReducers).length > 0
-      ? redux.combineReducers(globalReducers)
-      : s => s
+    Object.keys(globalReducers).length > 0 ? globalReducers : s => s
   );
 }
 
@@ -131,7 +135,8 @@ function createStore(reducer, initialState) {
   // You have to manually enable debugging, both to keep the logger out
   // of production bundles, and because it causes a lot of console noise and
   // makes our unit tests fail. To enable, append ?enableExperiments=reduxLogging
-  // to your url
+  // to your url. This will also enable logging if there is a non-immutable or non-serializable
+  // value in the redux store, with some ignores already set up (see below).
   var enableReduxDebugging = experiments.isEnabled(experiments.REDUX_LOGGING);
   if (process.env.NODE_ENV !== 'production' && enableReduxDebugging) {
     var reduxLogger = createLogger({
@@ -150,26 +155,60 @@ function createStore(reducer, initialState) {
         }
 
         return newState;
-      }
+      },
     });
 
-    // load with dev tools extension, if present
-    // https://github.com/zalmoxisus/redux-devtools-extension#12-advanced-store-setup
-    const composeEnhancers =
-      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-        trace: true
-      }) || redux.compose;
-
-    return redux.createStore(
-      reducer,
-      initialState,
-      composeEnhancers(redux.applyMiddleware(reduxThunk, reduxLogger))
-    );
+    return configureStore({
+      reducer: reducer,
+      preloadedState: initialState,
+      middleware: getDefaultMiddleware =>
+        // the default middleware includes redux thunk, immutability check,
+        // and serializability check. Some of our store does not pass these checks,
+        // so we are ignoring them for now. We only enable this in dev mode
+        // because it causes console errors if something fails the check, and
+        // can potentially cause a page crash (in the case of the JS Interpreter and the
+        // immutability check).
+        getDefaultMiddleware({
+          immutableCheck: {
+            ignoredPaths: ['jsInterpreter', 'jsdebugger'],
+          },
+          serializableCheck: {
+            ignoredActionPaths: [
+              'blob',
+              'jsdebugger',
+              'observer',
+              'jsInterpreter',
+              'runApp',
+              'props.showNextHint',
+              'props.assetUrl',
+              'props.exportApp',
+              'payload.getChanges',
+            ],
+            ignoredPaths: [
+              'hiddenLesson',
+              'blob',
+              'pageConstants',
+              'observer',
+              'watchedExpressions',
+              'instructions',
+              'runApp',
+              'jsdebugger',
+              /animationList\.propsByKey.*\.blob/,
+              'maker',
+              'data',
+              'screens',
+              'header.getLevelBuilderChanges',
+              'getChanges',
+            ],
+          },
+        }).concat(reduxLogger),
+    });
   }
 
-  return redux.createStore(
-    reducer,
-    initialState,
-    redux.applyMiddleware(reduxThunk)
-  );
+  return configureStore({
+    reducer: reducer,
+    preloadedState: initialState,
+    middleware: [reduxThunk],
+    devTools: process.env.NODE_ENV === 'development', // only enable devTools in development
+  });
 }

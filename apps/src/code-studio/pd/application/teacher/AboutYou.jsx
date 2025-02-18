@@ -1,23 +1,25 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
+import {FormGroup, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import {
   PageLabels,
   SectionHeaders,
-  TextFields
+  TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
-import {FormGroup, Row, Col} from 'react-bootstrap';
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
+
+import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
+import {FormContext} from '../../form_components_func/FormComponent';
 import {LabeledCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {
   LabeledInput,
-  LabeledLargeInput
+  LabeledLargeInput,
 } from '../../form_components_func/labeled/LabeledInput';
-import {LabeledUsPhoneNumberInput} from '../../form_components_func/labeled/LabeledUsPhoneNumberInput';
+import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
-import {FormContext} from '../../form_components_func/FormComponent';
+import {LabeledUsPhoneNumberInput} from '../../form_components_func/labeled/LabeledUsPhoneNumberInput';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 
 const AboutYou = props => {
   const {accountEmail, data} = props;
@@ -41,11 +43,7 @@ const AboutYou = props => {
               <LabeledInput name="lastName" controlWidth={{md: 12}} />
             </Col>
           </Row>
-          <LabeledInput
-            name="accountEmail"
-            value={accountEmail}
-            readOnly={true}
-          />
+          <LabeledInput name="accountEmail" value={accountEmail} readOnly />
           <LabeledInput name="alternateEmail" required={false} />
           <LabeledUsPhoneNumberInput name="phone" />
 
@@ -61,7 +59,7 @@ const AboutYou = props => {
           <LabeledCheckBoxesWithAdditionalTextFields
             name="howHeard"
             textFieldMap={{
-              [TextFields.otherWithText]: 'other'
+              [TextFields.otherWithText]: 'other',
             }}
             required={false}
           />
@@ -72,7 +70,7 @@ const AboutYou = props => {
 };
 AboutYou.propTypes = {
   data: PropTypes.object.isRequired,
-  accountEmail: PropTypes.string.isRequired
+  accountEmail: PropTypes.string.isRequired,
 };
 
 AboutYou.associatedFields = [...Object.keys(PageLabels.aboutYou)];

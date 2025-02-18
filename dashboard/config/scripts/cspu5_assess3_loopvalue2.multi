@@ -1,17 +1,29 @@
 name 'cspu5_assess3_loopValue2'
-encrypted 'TDuQixDBxaLudkqB0gcIlPdjMEGnp4gHSoSLkYXGvLgQa5UdVvxokBTaRAvV
-u4hhWMDKozeQweFjQgC3sVLkd095bF6+YMOs8vL+gDToNCCIOY84JqqE+1on
-+Ge42PGJ5N8E/Vyt3xgyknpdPsyVyWgA13L/jlptNRwu1AtfPDUmR0o886wU
-+e03LZbCTNFetEDa4auIw0ONmHqnet9RpLkbzAnWrJTpKJ0azMQwr0QuJEeL
-1paKGEipTzbjSVWT462k4lwmsi2c9aAOJAyvZmBTgHK3T3xCI+5vuyKm/NCA
-UhAGrpEqbqZXH6nZ5AEBDwJWhjQrH9t55GMKpTdUo4QWGxxEoJUemzei5xtq
-N3CZkuRTyqSfpwpYqXVKPdwcZoa8dPSVR3H9e3YAivs/m3FLdvV6m855NzPl
-S/pDT4y1fOnG8qHV6RySwufjDxUjTizbH2TpR5tmSPHnr8jOUMnul2ElBpvN
-yvfdTsUapekAW4Ni9DpQgNVDt6hXaBl/Ag5FMQqAcFWPy1a5koBcX5K2DUFV
-fRp5oCOyrCSky+O5D+mct4LKZoqi88//T9msctdAGe0OUEnjzKO5TQ1awHxw
-73VPna8DOKTHwzn6Iqnxdj3FzEqmL3jMjAI92hRM2dbcv0no+oPnCOuKQjxR
-kDvIdxlrTwlMFRGKrmEN9HaIs9xOYAgIfAfqtnjKTD5uBSu3iLaRx4C0eQQ1
-czKwnSH3+ZqDr0Q3c/ZYpGExknJ+pTynXCl8Sx/0da3HI0Or63xgk7ZCLzM9
-jhfKeyP6Zq5LOk2ZhFSlwmZvQajQZKYHCknZmtMkIPDSoCF13BOHjb+45KGC
-YBF57R1iTPoCmw==
-'
+wrong '6'
+right '5'
+wrong '4'
+wrong '0'
+wrong 'Infinite loop'
+
+markdown <<MARKDOWN
+What will be displayed as a result of the code below executing? 
+
+    var a = 5; 
+    while (a < 5) {
+      a = a - 1;
+    }
+    console.log(a);
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 11**
+
+Going through the code line by line:
+
+* The var _a_ is set to the value of 5
+* The while loop will run as long as _a_ is less than 5
+* However, since 5 is not less than 5, it will not enter the loop
+* The value of _a_ is then displayed, which equals 5
+MARKDOWN
+
+allow_multiple_attempts true

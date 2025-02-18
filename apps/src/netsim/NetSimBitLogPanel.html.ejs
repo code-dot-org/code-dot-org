@@ -1,4 +1,14 @@
 <%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+  var functionName = locals.functionName;
+  var binary = locals.binary;
+  var enabledEncodings = locals.enabledEncodings;
+  var chunkSize = locals.chunkSize;
+  var showReadWireButton = locals.showReadWireButton;
+%>
+<%
   var i18n = require('@cdo/netsim/locale');
   var NetSimConstants = require('./NetSimConstants');
   var DataConverters = require('./DataConverters');

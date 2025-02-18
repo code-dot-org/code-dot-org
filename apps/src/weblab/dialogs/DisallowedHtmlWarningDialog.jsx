@@ -1,12 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import commonI18n from '@cdo/locale';
-import weblabI18n from '@cdo/weblab/locale';
+import React from 'react';
+
 import StylizedBaseDialog, {
-  FooterButton
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+  FooterButton,
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
+import commonI18n from '@cdo/locale';
+import weblabI18n from '@cdo/weblab/locale';
 
 export default function DisallowedHtmlWarningDialog({
   isOpen,
@@ -20,7 +21,7 @@ export default function DisallowedHtmlWarningDialog({
       <SafeMarkdown
         markdown={weblabI18n.disallowedHtml({
           filename,
-          disallowedTags: disallowedTags.join(', ')
+          disallowedTags: disallowedTags.join(', '),
         })}
       />
       <SupportArticleMarkdown />
@@ -49,5 +50,5 @@ DisallowedHtmlWarningDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   filename: PropTypes.string.isRequired,
   disallowedTags: PropTypes.arrayOf(PropTypes.string).isRequired,
-  handleClose: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
 };

@@ -1,7 +1,11 @@
+# We had previously manually added a repository here to install nginx, but
+# nginx is distributed by default in Ubuntu 20+ so we no longer need to do so.
+# Instead, we remove that addition from any persistent managed servers which
+# currently have it.
+#
+# TODO infra: remove this once all existing servers have been cleaned up.
 apt_repository 'nginx' do
-  uri          'ppa:nginx/development'
-  distribution 'trusty'
-  retries 3
+  action :remove
 end
 
 apt_package 'nginx'
@@ -12,7 +16,7 @@ apt_package 'nginx'
   # (in case OS doesn't automatically remove them, e.g., due to an aborted process)
   file socket_path do
     action :delete
-    not_if {::File.socket?(socket_path)}
+    not_if {File.socket?(socket_path)}
   end
   node.override['cdo-secrets']["#{app}_sock"] = socket_path
 end

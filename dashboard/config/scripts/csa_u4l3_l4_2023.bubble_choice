@@ -1,6 +1,6 @@
 name 'CSA U4L3-L4_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Using Constants'
+description 'Use a constant to declare and initialize a constant value for different scenarios.'
 
 sublevels
 level 'CSA U4L3-L4a_2023'

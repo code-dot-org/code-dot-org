@@ -1,6 +1,9 @@
 require 'cdo/activity_constants'
 require 'cdo/share_filtering'
 require 'cdo/firehose'
+require 'cdo/web_purify'
+require 'policies/ai'
+require 'metrics/events'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -21,7 +24,7 @@ class ActivitiesController < ApplicationController
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
     script_name = ''
 
     if params[:script_level_id]
@@ -54,10 +57,11 @@ class ActivitiesController < ApplicationController
       if @level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
-        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_filtering_error
+        rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
           # If WebPurify or Geocoder fail, the program will be allowed, and we
           # retain the share_filtering_error to log it alongside the level_source
           # ID below.
+          share_filtering_error = exception
         end
       end
 
@@ -117,6 +121,23 @@ class ActivitiesController < ApplicationController
       else
         track_progress_in_session
       end
+
+      # If a student is submitting work on an AI-enabled level, and their teachers haven't opted-out, trigger the AI evaluation job.
+      is_ai_enabled = current_user && Policies::Ai.ai_rubrics_enabled_for_script_level?(current_user, @script_level)
+      is_level_ai_enabled = AiRubricConfig.ai_enabled?(@script_level)
+      if is_ai_enabled && is_level_ai_enabled && params[:submitted] == 'true'
+        metadata = {
+          'studentId' => current_user.id,
+          'unitName' => @script_level.script.name,
+          'levelName' => @level.name,
+        }
+        Metrics::Events.log_event(
+          user: current_user,
+          event_name: 'TA Rubric Student AI Level Submitted',
+          metadata: metadata,
+        )
+        EvaluateRubricJob.perform_later(user_id: current_user.id, requester_id: current_user.id, script_level_id: @script_level.id)
+      end
     end
 
     render json: milestone_response(
@@ -135,18 +156,16 @@ class ActivitiesController < ApplicationController
     log_milestone(@level_source, params)
   end
 
-  private
-
-  def milestone_logger
+  private def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
   end
 
-  def track_progress_for_user
+  private def track_progress_for_user
     authorize! :create, Activity
     authorize! :create, UserLevel
 
     test_result = params[:testResult].to_i
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
 
     lines = params[:lines].to_i
 
@@ -158,11 +177,11 @@ class ActivitiesController < ApplicationController
       test_result: test_result,
       attempt: params[:attempt].to_i,
       lines: lines,
-      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
+      time: params[:time].to_i.clamp(0, MAX_INT_MILESTONE),
       level_source_id: @level_source.try(:id)
     }
 
-    allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
+    allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: false)
     if allow_activity_writes
       @activity = Activity.new(attributes).tap(&:atomic_save!)
     end
@@ -177,10 +196,11 @@ class ActivitiesController < ApplicationController
         submitted: params[:submitted] == 'true',
         level_source_id: @level_source.try(:id),
         pairing_user_ids: pairing_user_ids,
+        locale: locale,
         time_spent: time_since_last_milestone
       )
 
-      is_sublevel = !@script_level.levels.include?(@level)
+      is_sublevel = @script_level.levels.exclude?(@level)
 
       # The level might belong to more than one bubble choice parent level.
       # Find the one that's in this script.
@@ -196,6 +216,7 @@ class ActivitiesController < ApplicationController
           submitted: false,
           level_source_id: nil,
           pairing_user_ids: pairing_user_ids,
+          locale: locale,
           time_spent: time_since_last_milestone
         )
       end
@@ -215,7 +236,7 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def track_progress_in_session
+  private def track_progress_in_session
     # track scripts
     if @script_level.try(:script).try(:id)
       test_result = params[:testResult].to_i
@@ -229,11 +250,11 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def log_milestone(level_source, params)
+  private def log_milestone(level_source, params)
     log_string = 'Milestone Report:'
     log_string +=
       if current_user || session.id
-        "\t#{(current_user ? current_user.id.to_s : ('s:' + session.id.to_s))}"
+        "\t#{current_user ? current_user.id.to_s : ('s:' + session.id.to_s)}"
       else
         "\tanon"
       end

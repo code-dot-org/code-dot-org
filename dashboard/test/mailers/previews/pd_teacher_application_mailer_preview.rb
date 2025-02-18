@@ -1,6 +1,6 @@
 # This can be viewed on non-production environments at /rails/mailers/pd_teacher_application_mailer
 class PdTeacherApplicationMailerPreview < ActionMailer::Preview
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
   include Pd::Application::ActiveApplicationModels
 
   %w(
@@ -17,10 +17,10 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     registration_reminder
     declined
   ).each do |mail_type|
-    define_method "#{mail_type}__with_partner".to_sym do
+    define_method :"#{mail_type}__with_partner" do
       Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true, is_awaiting_admin_approval: false)
     end
-    define_method "#{mail_type}__without_partner".to_sym do
+    define_method :"#{mail_type}__without_partner" do
       Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: false, is_awaiting_admin_approval: false)
     end
   end
@@ -34,9 +34,7 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     Pd::Application::TeacherApplicationMailer.send :confirmation, build_application(matched: false, is_awaiting_admin_approval: true)
   end
 
-  private
-
-  def build_application(matched: true, is_awaiting_admin_approval: true, partner_contact_info: true)
+  private def build_application(matched: true, is_awaiting_admin_approval: true, partner_contact_info: true)
     # Build user explicitly (instead of create) so it's not saved
     school_info = build :school_info, school: School.first
     user = build :teacher, email: 'rubeus@hogwarts.co.uk', school_info: school_info

@@ -1,7 +1,8 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import RollupUnitEntry from '@cdo/apps/templates/courseRollupPages/RollupUnitEntry';
+
 import {courseData} from './rollupTestData';
 
 describe('RollupUnitEntry', () => {
@@ -9,13 +10,13 @@ describe('RollupUnitEntry', () => {
   beforeEach(() => {
     defaultProps = {
       objectToRollUp: 'Vocabulary',
-      unit: courseData.units[0]
+      unit: courseData.units[0],
     };
   });
 
   it('renders correct number of lesson', () => {
     const wrapper = mount(<RollupUnitEntry {...defaultProps} />);
 
-    expect(wrapper.find('RollupLessonEntry').length).to.equal(2);
+    expect(wrapper.find('RollupLessonEntry').length).toBe(2);
   });
 });

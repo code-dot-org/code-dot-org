@@ -1,0 +1,71 @@
+@import 'breakpoints';
+
+// Overrides the text align so this
+// works with LTR and RTL languages
+#homepage #hero #actions {
+  .curriculum-banner-hero {
+    text-align: initial;
+  }
+}
+
+.curriculum-banner-hero.homepage {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 1rem;
+
+    .text-wrapper {
+      width: 60%;
+
+      @media (max-width: $width-sm) {
+        width: 100%;
+        text-align: center;
+      }
+
+      h1, p {
+        color: var(--neutral_white);
+      }
+
+      h1 {
+        margin: 0;
+
+        @media (max-width: $width-md) {
+          font-size: 2.875em;
+        }
+      }
+
+      p {
+        font-size: 1.4em;
+        line-height: 1.5;
+        margin: 1em 0;
+        text-wrap: balance;
+
+        @media (max-width: $width-md) {
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    figure {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      flex: 1;
+
+      img {
+        width: 100%;
+        margin-inline-start: -1rem;
+
+        @media (max-width: $width-sm) {
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}

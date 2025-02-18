@@ -2,11 +2,11 @@
  * An eslint formatter which extends the default formatter to customize the
  * messages for certain rules.
  *
- * @see https://github.com/eslint/eslint/blob/v4.19.1/docs/developer-guide/working-with-custom-formatters.md
+ * @see https://eslint.org/docs/latest/extend/custom-formatters
  */
 
-const eslint = require('eslint');
-const defaultFormatter = eslint.CLIEngine.getFormatter();
+const {ESLint} = require('eslint');
+const eslint = new ESLint();
 
 /**
  * Provide a mapping from eslint ruleId to the override for that rule. Right
@@ -16,7 +16,7 @@ const defaultFormatter = eslint.CLIEngine.getFormatter();
  * This could easily be updated in the future to map to either a function or a
  * string.
  *
- * @see https://github.com/eslint/eslint/blob/v4.19.1/docs/developer-guide/working-with-custom-formatters.md#the-message-object
+ * @see https://eslint.org/docs/latest/extend/custom-formatters#the-message-object
  * @type {Object.<string, function>}
  */
 const RULE_MESSAGE_OVERRIDES = {
@@ -32,10 +32,10 @@ const RULE_MESSAGE_OVERRIDES = {
 /**
  * Format eslint results with custom messages
  *
- * @param results - https://github.com/eslint/eslint/blob/v4.19.1/docs/developer-guide/working-with-custom-formatters.md#the-result-object
+ * @param results - https://eslint.org/docs/latest/extend/custom-formatters#the-result-object
  * @returns {string}
  */
-module.exports = (results = []) => {
+module.exports = async (results = []) => {
   // first, preprocess results to adjust messages as desired
   results.forEach(result => {
     result.messages.forEach(messageObject => {
@@ -47,5 +47,6 @@ module.exports = (results = []) => {
   });
 
   // then pass modified results array to the existing formatter
-  return defaultFormatter(results);
+  const defaultFormatter = await eslint.loadFormatter();
+  return defaultFormatter.format(results);
 };

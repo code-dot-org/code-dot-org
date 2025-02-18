@@ -1,0 +1,35 @@
+@import 'color.scss';
+
+.predictSummaryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.responses {
+  display: flex;
+}
+
+.responseIcon {
+  padding-right: 4px;
+
+  :global(.fa) {
+    vertical-align: middle;
+    font-size: 16px;
+  }
+}
+
+.responseCount {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.responseLabel {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.studentResponsesButton {
+  width: 100%;
+}

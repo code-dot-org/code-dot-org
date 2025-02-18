@@ -1,0 +1,23 @@
+name 'VPL-CSD-PILOT-S22-CI-mod5-lesson3-PSPwithData_CSD_PL_23_-foundations24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Problem Solving with Data
+
+<img src="https://images.code.org/17b98c589b7c240abfb88ad026b93d2b-image-1707520567591.16.03%E2%80%AFPM.png" alt="The problem solving process" style="float: left; height: 250px; clear: both; margin: 10px 10px 10px 10px;">
+
+#### Throughout Chapter 2 of the Data and Society unit, students will use the Problem Solving Process to solve data problems. In <a href="https://studio.code.org/s/csd5-2024/lessons/9" target="blank" rel="noopener noreferrer">Lesson 9</a>, they will with making a decision about whether a city should build a library, pet shelter, or fire department. Students map their decision-making to the problem solving process that they have been using throughout the course, comparing the general problem solving process to its specific application to data problems.
+
+#### Students will learn that it’s not just about having an opinion about what should be built, they will need to use data  to help decide what the city needs most.
+
+<div style="clear:both"/>
+
+## Structuring Data
+
+#### Later, students learn that raw data must be interpreted in some way to help people use it to make decisions. Students engage in both visualization and cleaning of data, and they see how data can be misinterpreted if it is not cleaned properly. Students also see how data must be structured in particular ways to be used by a computer.
+
+
+#### Up next: explore structuring data with the pizza party problem!
+
+MARKDOWN

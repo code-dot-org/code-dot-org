@@ -164,19 +164,13 @@ class Plc::UserCourseEnrollmentsControllerTest < ActionController::TestCase
     assert_redirected_to_sign_in
   end
 
-  test 'Can navigate to specific course with underscored url' do
+  test 'index includes users enrolled courses' do
     other_course = create(:plc_course, name: 'Other Course', id: Plc::Course.maximum(:id).next)
     create(:plc_user_course_enrollment, user: @admin, plc_course: other_course)
 
-    get :index, params: {course: 'test-course'}
-    assert_select '.course_title', 'Test Course'
-
-    @controller = Plc::UserCourseEnrollmentsController.new
-    get :index, params: {course: 'other-course'}
-    assert_select '.course_title', 'Other Course'
-
-    @controller = Plc::UserCourseEnrollmentsController.new
     get :index
-    assert_select '.course_title', 2
+    response = assigns(:summarized_course_enrollments)
+    assert response[0][:courseName] == 'Test Course'
+    assert response[1][:courseName] == 'Other Course'
   end
 end

@@ -3,7 +3,7 @@
   # non-persistent servers. All times are UTC.
   #
   # None of these schedules, unless specifically noted, needs to change for
-  # dayling savings time.
+  # daylight savings time.
   #
   # CRONJOB TIME SYNTAX: https://help.ubuntu.com/community/CronHowto
 
@@ -58,7 +58,6 @@
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'sync_dropbox')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'check_invalid_staging_filenames')
-      cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'run_server_generate_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'0 14,15 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
@@ -78,13 +77,9 @@
       cronjob at:'20 9 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_levelbuilder')
     end
 
-    if node.chef_environment == 'test' && node.name == 'staging-next'
-      cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dtsn')
-    end
-
     if node.chef_environment == 'test' && node.name == 'test' # 'real' test only
       # This should be run shortly after the commit_content job run on levelbuilder.
-      cronjob at:'*/2 * * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_test')
+      cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'deploy_to_test')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'snapshot')
     end
 
@@ -94,6 +89,10 @@
     end
 
 
+    # To facilitate the Ubuntu 20 upgrade, temporarily disable all cronjobs on
+    # the production daemon but still write them to the crontab. We can then
+    # easily reenable them on just the old server, so that we still have jobs
+    # running while the new server is under construction.
     if node.chef_environment == 'production' # production daemon
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
       cronjob at:'0 16 * * *', do:dashboard_dir('bin','scheduled_pd_application_emails')
@@ -101,7 +100,6 @@
       cronjob at:'*/5 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
       cronjob at:'*/30 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
       cronjob at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'process_foorm_data')
-      cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
@@ -114,10 +112,17 @@
       cronjob at:'31 16 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
       cronjob at:'5 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
       cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'spotify')
-      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'covid19')
-      cronjob at:'00 02 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
+      cronjob at:'00 23 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
       cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
+      cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'send_permission_email_reminders')
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'monitor_projects')
+      cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'cleanup_mvp_ai_tutor_interactions')
+      cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'delete_old_ai_chat_data')
+
+      # Send warning emails to teachers about their sections with CAP affected students
+      # every Wednesday at 12:00 AM EST (04:00 AM UTC)
+      cronjob at:'0 4 * * 3', do:"#{deploy_dir('bin', 'cron', 'perform_job')} CAP::TeacherSectionsWarningJob"
 
       # RDS backup window is 05:17-05:47 UTC, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
@@ -125,7 +130,7 @@
 
     # 'daemons' in all environments.
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
-    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'mysql-metrics')
+    cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
 
     # background tasks that adhoc instances don't need to run.
     unless node.chef_environment == 'adhoc'
@@ -144,11 +149,6 @@
   # cronjobs that run on all instances in all environments go here:
 
   cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
-
-  # report memory and disk space utilization to CloudWatch every minute
-  # we do not use the cronjob helper method because this should not execute with
-  # bundle.
-  $crontab << "*/1 * * * * /usr/local/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron#{node['cdo-apps']['daemon'] ? '' : ' --auto-scaling'}"
 %>
 #
 # node: <%= node.name %>

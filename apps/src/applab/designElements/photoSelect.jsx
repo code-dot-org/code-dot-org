@@ -1,24 +1,27 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PropertyRow from './PropertyRow';
+
+import i18n from '@cdo/applab/locale';
+
+import designMode from '../designMode';
+import themeValues from '../themeValues';
+
 import BooleanPropertyRow from './BooleanPropertyRow';
+import BorderProperties from './BorderProperties';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
-import ZOrderRow from './ZOrderRow';
+import * as elementUtils from './elementUtils';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
-import BorderProperties from './BorderProperties';
-import themeValues from '../themeValues';
-import * as elementUtils from './elementUtils';
-import designMode from '../designMode';
 import elementLibrary from './library';
-import i18n from '@cdo/applab/locale';
+import PropertyRow from './PropertyRow';
+import ZOrderRow from './ZOrderRow';
 
 class PhotoChooserProperties extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onDepthChange: PropTypes.func.isRequired
+    onDepthChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -27,47 +30,47 @@ class PhotoChooserProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={i18n.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <PropertyRow
-          desc={'width (px)'}
+          desc={i18n.designElementProperty_widthPx()}
           isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
-          desc={'height (px)'}
+          desc={i18n.designElementProperty_heightPx()}
           isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
-          desc={'x position (px)'}
+          desc={i18n.designElementProperty_xPositionPx()}
           isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
-          desc={'y position (px)'}
+          desc={i18n.designElementProperty_yPositionPx()}
           isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <ColorPickerPropertyRow
-          desc={'background color'}
+          desc={i18n.designElementProperty_backgroundColor()}
           initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
         <ColorPickerPropertyRow
-          desc={'icon color'}
+          desc={i18n.designElementProperty_iconColor()}
           initialValue={element.style.color || '#000000'}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <PropertyRow
-          desc={'icon size (px)'}
+          desc={i18n.designElementProperty_iconSizePx()}
           isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
@@ -88,7 +91,7 @@ class PhotoChooserProperties extends React.Component {
           )}
         />
         <BooleanPropertyRow
-          desc={'hidden'}
+          desc={i18n.designElementProperty_hidden()}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
@@ -105,14 +108,14 @@ class PhotoChooserEvents extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
-    onInsertEvent: PropTypes.func.isRequired
+    onInsertEvent: PropTypes.func.isRequired,
   };
 
   getPhotoSelectedEventCode() {
     const id = elementUtils.getId(this.props.element);
     const commands = [
       `console.log("${id} photo selected!");`,
-      `console.log(getImageURL("${id}"));`
+      `console.log(getImageURL("${id}"));`,
     ];
     const callback = `function( ) {\n\t${commands.join('\n\t')}\n}`;
     return `onEvent("${id}", "change", ${callback});`;
@@ -129,7 +132,7 @@ class PhotoChooserEvents extends React.Component {
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={i18n.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}
@@ -150,7 +153,7 @@ export default {
   EventTab: PhotoChooserEvents,
   themeValues: themeValues.photoSelect,
 
-  create: function() {
+  create: function () {
     const element = document.createElement('label');
     element.setAttribute('class', 'img-upload fa fa-camera');
     element.style.margin = '0';
@@ -178,10 +181,10 @@ export default {
     element.appendChild(newInput);
     return element;
   },
-  onDeserialize: function(element, updateProperty) {
+  onDeserialize: function (element, updateProperty) {
     // Disable image upload events unless running
     $(element).on('click', () => {
       element.childNodes[0].disabled = !Applab.isRunning();
     });
-  }
+  },
 };

@@ -1,5 +1,6 @@
+import turtleImageSrc from '../../static/applab/723-location-arrow-toolbar-48px-centered.png';
+
 import applabCommands from './commands';
-import turtleImageSrc from '!!url-loader!../../static/applab/723-location-arrow-toolbar-48px-centered.png';
 
 var applabTurtle = {};
 export default applabTurtle;
@@ -10,14 +11,14 @@ var TURTLE_WIDTH = 24;
 var TURTLE_HEIGHT = 24;
 var TURTLE_ROTATION_OFFSET = -45;
 
-applabTurtle.getTurtleContext = function() {
+applabTurtle.getTurtleContext = function () {
   var canvas = document.getElementById('turtleCanvas');
 
   if (!canvas) {
     // If there is not yet a turtleCanvas, create it:
     applabCommands.createCanvas({
       elementId: 'turtleCanvas',
-      turtleCanvas: true
+      turtleCanvas: true,
     });
     canvas = document.getElementById('turtleCanvas');
 
@@ -27,7 +28,7 @@ applabTurtle.getTurtleContext = function() {
     turtleImage.src = turtleImageSrc;
     turtleImage.id = 'turtleImage';
     applabTurtle.updateTurtleImage(turtleImage);
-    turtleImage.ondragstart = function() {
+    turtleImage.ondragstart = function () {
       return false;
     };
     Applab.activeScreen().appendChild(turtleImage);
@@ -36,7 +37,7 @@ applabTurtle.getTurtleContext = function() {
   return canvas.getContext('2d');
 };
 
-applabTurtle.updateTurtleImage = function(turtleImage) {
+applabTurtle.updateTurtleImage = function (turtleImage) {
   if (!turtleImage) {
     turtleImage = document.getElementById('turtleImage');
   }
@@ -49,7 +50,7 @@ applabTurtle.updateTurtleImage = function(turtleImage) {
   turtleImage.style.webkitTransform = transform;
 };
 
-applabTurtle.turtleSetVisibility = function(visible) {
+applabTurtle.turtleSetVisibility = function (visible) {
   // call this first to ensure there is a turtle (in case this is the first API)
   applabTurtle.getTurtleContext();
   var turtleImage = document.getElementById('turtleImage');

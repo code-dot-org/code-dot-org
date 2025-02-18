@@ -37,3 +37,5 @@ if (**a < b**) {
 **III.** a = 10, b = 20, c = 30
 
 MARKDOWN
+
+allow_multiple_attempts true

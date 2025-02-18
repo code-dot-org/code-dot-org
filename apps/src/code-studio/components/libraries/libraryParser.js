@@ -37,7 +37,7 @@ function createDropletConfig(functions, libraryName) {
       func: currentFunction.functionName,
       category: 'Functions',
       comment: currentFunction.comment,
-      type: 'either'
+      type: 'either',
     };
 
     if (currentFunction.parameters && currentFunction.parameters.length > 0) {
@@ -70,9 +70,7 @@ export function createLibraryClosure(json) {
   let exportedFunctions = [];
   exportedFunctions = json.functions.map(name => `${name}: ${name}`);
   let functionsInClosure = exportedFunctions.join(',');
-  return `var ${json.name} = (function() {${
-    json.source
-  };\nreturn {${functionsInClosure}}})();`;
+  return `var ${json.name} = (function() {${json.source};\nreturn {${functionsInClosure}}})();`;
 }
 
 /**
@@ -141,7 +139,7 @@ export function createLibraryJson(
     description: libraryDescription,
     functions: functions,
     dropletConfig: config,
-    source: code
+    source: code,
   });
 }
 
@@ -179,5 +177,5 @@ export default {
   createLibraryJson,
   suggestName,
   sanitizeName,
-  createLibraryClosure
+  createLibraryClosure,
 };

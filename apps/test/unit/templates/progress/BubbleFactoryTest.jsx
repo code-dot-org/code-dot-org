@@ -1,5 +1,6 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+
 import {
   BasicBubble,
   BubbleShape,
@@ -8,13 +9,15 @@ import {
   getBubbleContent,
   getBubbleShape,
   getBubbleUrl,
-  unitTestExports
+  unitTestExports,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import {fakeLevel} from '@cdo/apps/templates/progress/progressTestHelpers';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import {fakeLevel} from '@cdo/apps/templates/progress/progressTestHelpers';
+import {currentLocation} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
+
+import {updateQueryParam} from '../../../../src/code-studio/utils';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('BubbleFactory', () => {
   describe('BasicBubble', () => {
@@ -23,7 +26,7 @@ describe('BubbleFactory', () => {
       size: BubbleSize.dot,
       progressStyle: {},
       classNames: '',
-      children: <div />
+      children: <div />,
     };
 
     const setUp = (overrideProps = {}) => {
@@ -35,7 +38,7 @@ describe('BubbleFactory', () => {
       const bubbleSize = BubbleSize.full;
       const wrapper = setUp({
         size: bubbleSize,
-        shape: BubbleShape.diamond
+        shape: BubbleShape.diamond,
       });
       expect(wrapper.find(unitTestExports.DiamondContainer)).to.have.length(1);
       expect(
@@ -47,7 +50,7 @@ describe('BubbleFactory', () => {
       const child = <div>some child</div>;
       const wrapper = setUp({
         shape: BubbleShape.diamond,
-        children: child
+        children: child,
       });
       expect(wrapper.contains(child)).to.be.true;
     });
@@ -56,7 +59,7 @@ describe('BubbleFactory', () => {
       const child = <div>some child</div>;
       const wrapper = setUp({
         shape: BubbleShape.circle,
-        children: child
+        children: child,
       });
       expect(wrapper.contains(child)).to.be.true;
     });
@@ -65,7 +68,7 @@ describe('BubbleFactory', () => {
   describe('BubbleTooltip', () => {
     const DEFAULT_PROPS = {
       level: fakeLevel(),
-      children: <div />
+      children: <div />,
     };
 
     const setUp = (overrideProps = {}) => {
@@ -101,7 +104,7 @@ describe('BubbleFactory', () => {
       const testLevel = fakeLevel({
         isUnplugged: false,
         name: undefined,
-        progressionDisplayName: progressionName
+        progressionDisplayName: progressionName,
       });
       const wrapper = setUp({level: testLevel});
       expect(wrapper.find('TooltipWithIcon').props().text).to.contain(
@@ -112,7 +115,7 @@ describe('BubbleFactory', () => {
     it('tooltipText includes a level number if the level has one', () => {
       const levelNumber = 1;
       const testLevel = fakeLevel({
-        levelNumber
+        levelNumber,
       });
       const wrapper = setUp({level: testLevel});
       expect(wrapper.find('TooltipWithIcon').props().text).to.contain(
@@ -121,14 +124,17 @@ describe('BubbleFactory', () => {
     });
 
     it('passes icon for the level to TooltipWithIcon', () => {
-      const getIconStub = sinon.stub(progressHelpers, 'getIconForLevel');
+      const getIconStub = jest
+        .spyOn(progressHelpers, 'getIconForLevel')
+        .mockClear()
+        .mockImplementation();
       const icon = 'test-icon';
-      getIconStub.returns(icon);
+      getIconStub.mockReturnValue(icon);
 
       const wrapper = setUp();
       expect(wrapper.find('TooltipWithIcon').props().icon).to.equal(icon);
 
-      getIconStub.restore();
+      getIconStub.mockRestore();
     });
   });
 
@@ -139,7 +145,7 @@ describe('BubbleFactory', () => {
       isBonus = false,
       isPaired = false,
       title,
-      bubbleSize
+      bubbleSize,
     }) => {
       return mount(
         getBubbleContent(
@@ -230,6 +236,26 @@ describe('BubbleFactory', () => {
     it('if there is a sectionId append the section_id to the url', () => {
       const bubbleUrl = getBubbleUrl('a-url', 1, 2);
       expect(bubbleUrl).to.equal('a-url?section_id=2&user_id=1');
+    });
+
+    it('if input url has levelname as a query parameter', () => {
+      const bubbleUrl = getBubbleUrl(
+        '//localhost-studio.code.org:3000/s/coursec-2024/lessons/3/extras?level_name=courseC_maze_programming_challenge2_2024',
+        1,
+        2
+      );
+      expect(bubbleUrl).to.equal(
+        '//localhost-studio.code.org:3000/s/coursec-2024/lessons/3/extras?level_name=courseC_maze_programming_challenge2_2024&section_id=2&user_id=1'
+      );
+    });
+
+    it('removes version param if it exists even if other params are preserved', () => {
+      const levelUrl = 'http://a-level-url.com';
+      updateQueryParam('version', '456lmnop');
+      expect(currentLocation().search).to.include('version=456lmnop');
+      const preserveQueryParams = true;
+      const bubbleUrl = getBubbleUrl(levelUrl, null, null, preserveQueryParams);
+      expect(bubbleUrl).to.not.include('version=456lmnop');
     });
   });
 

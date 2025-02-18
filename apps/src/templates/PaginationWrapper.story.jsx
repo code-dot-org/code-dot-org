@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PaginationWrapper from './PaginationWrapper';
 
 class StorybookHarness extends React.Component {
@@ -18,8 +19,7 @@ class StorybookHarness extends React.Component {
 }
 
 export default {
-  title: 'PaginationWrapper',
-  component: PaginationWrapper
+  component: PaginationWrapper,
 };
 
 const Template = args => {
@@ -28,5 +28,5 @@ const Template = args => {
 
 export const BasicExample = Template.bind({});
 BasicExample.args = {
-  currentPage: 1
+  currentPage: 1,
 };

@@ -7,21 +7,23 @@
  *        /csd_facilitators
  *        /csp_facilitators
  */
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Button, FormGroup, ControlLabel, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import Select from 'react-select';
+
 import 'react-select/dist/react-select.css';
-import {SelectStyleProps} from '../constants';
-import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
+import Spinner from '../../../sharedComponents/Spinner';
 import RegionalPartnerDropdown, {
-  RegionalPartnerPropType
+  RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
-import QuickViewTable from './quick_view_table';
-import Spinner from '../components/spinner';
-import $ from 'jquery';
+import {SelectStyleProps} from '../constants';
+
+import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
 import {getApplicationStatuses} from './constants';
-import {Button, FormGroup, ControlLabel, Row, Col} from 'react-bootstrap';
+import QuickViewTable from './quick_view_table';
 
 export class QuickView extends React.Component {
   static propTypes = {
@@ -30,12 +32,12 @@ export class QuickView extends React.Component {
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
-      role: PropTypes.string.isRequired
-    })
+      role: PropTypes.string.isRequired,
+    }),
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -44,7 +46,7 @@ export class QuickView extends React.Component {
     this.state = {
       loading: true,
       applications: null,
-      filter: ''
+      filter: '',
     };
     this.loadRequest = null;
   }
@@ -59,7 +61,7 @@ export class QuickView extends React.Component {
     const statusList = getApplicationStatuses();
     this.statuses = Object.keys(statusList).map(v => ({
       value: v,
-      label: statusList[v]
+      label: statusList[v],
     }));
     this.statuses.unshift({value: '', label: 'All statuses'});
 
@@ -83,11 +85,11 @@ export class QuickView extends React.Component {
     this.loadRequest = $.ajax({
       method: 'GET',
       url: this.getJsonUrl(regionalPartnerFilterValue),
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
         loading: false,
-        applications: data
+        applications: data,
       });
       this.loadRequest = null;
     });
@@ -99,7 +101,7 @@ export class QuickView extends React.Component {
     )}`;
   getApiParams = regionalPartnerFilterValue => ({
     role: this.props.route.role,
-    regional_partner_value: regionalPartnerFilterValue
+    regional_partner_value: regionalPartnerFilterValue,
   });
   getJsonUrl = regionalPartnerFilterValue =>
     this.getApiUrl('', regionalPartnerFilterValue);
@@ -176,15 +178,15 @@ export class QuickView extends React.Component {
 
 const styles = {
   button: {
-    margin: '20px 20px 20px auto'
+    margin: '20px 20px 20px auto',
   },
   select: {
-    width: 250
-  }
+    width: 250,
+  },
 };
 
 export default connect(state => ({
   regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
   showRegionalPartnerDropdown:
-    state.regionalPartners.regionalPartners.length > 1
+    state.regionalPartners.regionalPartners.length > 1,
 }))(QuickView);

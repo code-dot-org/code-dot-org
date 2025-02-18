@@ -4,20 +4,29 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
+        "ca-ES",
         "cs-CZ",
         "de-DE",
         "es-ES",
         "es-MX",
+        "fa-IR",
+        "fil-PH",
         "fr-FR",
         "hi-IN",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
         "kn-IN",
         "mr-IN",
         "ms-MY",
@@ -27,14 +36,22 @@
         "ro-RO",
         "ru-RU",
         "sk-SK",
+        "ta-IN",
+        "th-TH",
+        "tr-TR",
+        "uk-UA",
+        "ur-PK",
+        "vi-VN",
+        "zh-CN",
         "zh-TW"
       ],
       "tts": true,
-      "version_year": "2021"
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-09-09 16:37:14 UTC",
+    "serialized_at": "2025-01-09 16:05:20 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -11243,5 +11260,14 @@
         "opportunity_standard.shortcode": "3-5-ETS1-1"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

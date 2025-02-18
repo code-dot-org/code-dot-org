@@ -1,27 +1,16 @@
 name 'CB_Question_1'
-encrypted 'UtsgR8QZGyk2C4Yq8R8ON5JLlf9itbvdxoGzXKjiFcUgG80bVWbKrrktsetp
-LsCKux3grxjzVrM+auQuehl9oeC/2noeGQGxT5UbLvgAh6akxNWELRpOEee0
-nAtZXg1Ua2j7G0mfJjBcG3pr9YPMz0c+04Ky6blLSJExGhVm8U/ayp9bT77u
-S811r74no0YsCEFOhP+L6hvm87YnwPNRjcuf8TsSVBOSAiNoLVsPCcTh5LK/
-oVXaX8z3VjEnqyUXzcLEvWe4tFWW10bKwr21HV67CCdEqHePa5kOFTTI3pSO
-tKRxxOO8wjejT7jw3HzzTIbxQZPf1koWTTeL/j5U43hSWbUjxZyINroS0i45
-WHqa2LNmOiHKG3jCI5E0AbTybHXGlrffkf3U7rBa5GYoKsEnqywCCITR2rqw
-6HDj+E6xQHJ0yIQznIdtceCAY9nlFUlABsHnu4VMx70FcBHDSnizj8G1GwSr
-DzSWObiPQNJoZqmH1magYjqmi/+H7OJEVxDYUzs8BX0Q0RhRfKNYQdyOFrtB
-GGJhRuiM20pWXWh2aleCxcutHuoy3/CuL+7sygmax8xQGWe16YScBZIoVm/n
-wI3njAKlpt59kVXYmtgzr/tQ0EI7UxhJ/xWf8OPz327r+9frl0/6a4KOAy06
-XR+5sXnRfGVM+1MbmolTc8nFJJB1DgjwVxNr9+fgNFopUV/eDReZAD2GcHYD
-pLhCwQoPxb/WxTMyeRxvmRMivy0nb13lTVl8i+k/nn2pCNt/X4EKgxvKkEa5
-Vik4LD8xK8nPkUIYCilG6i0km/nXF9Nudu+yZPSSecjnkopsUXBPoFHI0cZn
-jFS9hQKg8kTECqvqRyR5jWXx/MUbFD1Ojwp4Dk5gbFe4QsnMqsyfsCojZr1p
-nC3jo+N5tlA/mk0r/zDzZddokgq8Rm9N/iebJFLFtu1RRuQRy8isoAnbHKK3
-MTIQAWEOVwGg0pvp2o6T6wRWJPX/PQWP+IZWKl+A304p+PAlz8BIbUWTA32S
-CPriLRquhWXZ0r+qb6B9LTueuXvBGPnLPB096uBuDToLdgfM8HdtN61Pj+10
-QaoDKfLDbBzvTnWKl9tQxKSTrwHGki49obxVW4sihUjTg7TZjrfkFg8KbnOs
-xN6xp6J8SeAr9aqXL9Gc5Zi9KvkkslE3aERpnNjNrNETObHllHJIPCdsfTwH
-2o2APR+5IkMsBP4u91ppceS6T5OojUzJxQwwd+0yek4DiJ/LjD4Yp+Bx4Cjr
-zhvoYxjp+7+YU4/uxEWxgF8smvFoumL8W3Gqzhr/6rTy5W3lO8LNdFnS4pfj
-B2WExyaP2g8tp2X2hLu1txc0gy//AUHfDhYJ/G9vbOi9Mf19qdOiO+hPelPy
-GXSmiJYBFLyiC9Y6wVy2Z88XdyXnKxJMDMolYs4hOeG8DWY9/xwASCd2KMq4
-iItdl6TKxnU=
-'
+
+wrong '2 times as many values can be represented.'
+wrong '32 times as many values can be represented.'
+right '2^32 times as many values can be represented.'
+wrong '32^2 times as many values can be represented.'
+
+markdown <<MARKDOWN
+A video-streaming Web site uses 32-bit integers to count the number of times each video has been played. In anticipation of some videos being played more times than can be represented with 32 bits, the Web site is planning to change to 64-bit integers for the counter. Which of the following best describes the result of using 64-bit integers instead of 32-bit integers?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Every time you add a single bit to a binary number, you multiply by 2 the number of numbers you can represent. So for example, a 2-bit number can represent 4 numbers (0 - 3), and a 3-bit number can represent 8 numbers (0 - 7). So if you're going from a 32-bit to a 64-bit number, you are multiplying the number of numbers you can represent by 2, 32 times, so 2^32 is the correct answer.
+MARKDOWN
+
+allow_multiple_attempts true

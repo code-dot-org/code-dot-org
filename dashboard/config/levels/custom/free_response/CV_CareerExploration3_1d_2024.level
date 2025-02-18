@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-27T21:44:50.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Career Spotlight: Home Healthcare Aides",
+    "long_instructions": "##What do they do?\r\nHome health and personal care aides typically do the following:\r\n\r\n* Assist clients in their daily personal tasks, such as bathing or dressing\r\n* Perform housekeeping tasks, such as laundry, washing dishes, and vacuuming\r\n* Help to organize a client’s schedule and plan appointments\r\n* Arrange transportation to doctors’ offices or other outings\r\n* Shop for groceries and prepare meals to meet a client’s dietary specifications\r\n* Keep clients engaged in their social networks and communities\r\n\r\nHome health aides may provide some basic health-related services—such as checking a client’s pulse, temperature, and respiration rate—depending on the state in which they work. They also may help with simple prescribed exercises and with giving medications. Occasionally, they change bandages or dressings, give massages, care for skin, or help with braces and artificial limbs. \r\n\r\n##How much do they make?\r\nThe median annual wage for home health and personal care aides was $33,530 in May 2023. The median wage is the wage at which half the workers in an occupation earned more than that amount and half earned less. The lowest 10 percent earned less than $23,910, and the highest 10 percent earned more than $42,450.\r\n\r\n##What is the job outlook?\r\nEmployment of home health and personal care aides is projected to grow 22 percent from 2022 to 2032, much faster than the average for all occupations.\r\n\r\nAbout 684,600 openings for home health and personal care aides are projected each year, on average, over the decade. Many of those openings are expected to result from the need to replace workers who transfer to different occupations or exit the labor force, such as to retire.\r\n\r\n##Explore further\r\nTimer permitting, click this link to explore the career more in-depth: [More Information and Statistics about Home Healthcare Aides](https://www.bls.gov/ooh/healthcare/home-health-aides-and-personal-care-aides.htm#tab-1).\r\n\r\n*As you read about this profession, note any observations and wonderings in the box below:*\r\n",
+    "thumbnail_url": "https://images.code.org/eb47c024b9febd4c9d99eb6e54293def-3_3_Aide.png",
+    "height": "150",
+    "placeholder": "What do you notice about this profession? What do you wonder?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Home Healthcare Aide",
+    "bubble_choice_description": "Home health and personal care aides monitor the condition of people with disabilities or chronic illnesses and help them with daily living activities.\r\n\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-27T21:44:50.724+00:00\",\"changed\":[\"cloned from \\\"CV_CareerExploration3_1c_2024\\\"\"],\"cloned_from\":\"CV_CareerExploration3_1c_2024\"},{\"changed_at\":\"2024-06-27 21:47:58 +0000\",\"changed\":[\"title\",\"long_instructions\",\"thumbnail_url\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,24 @@
+{
+  "name": "data-science-2024",
+  "script_names": [
+    "intro-to-data-science-2024",
+    "data-science-with-python-2024"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "data-science",
+    "has_numbered_units": true,
+    "has_verified_resources": true,
+    "pilot_experiment": "data-science-pilot-2024",
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

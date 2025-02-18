@@ -2,6 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "changePropEachBy",
+    "docFunc": "gamelab_changePropBy",
     "blockText": "change {GROUP} {PROPERTY} by {VAL}",
     "args": [
       {

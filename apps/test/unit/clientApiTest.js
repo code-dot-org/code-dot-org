@@ -1,7 +1,9 @@
-import sinon from 'sinon';
-import {expect, assert} from '../util/reconfiguredChai';
-const project = require('@cdo/apps/code-studio/initApp/project');
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {expect, assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 var clientApi = require('@cdo/apps/clientApi');
+const project = require('@cdo/apps/code-studio/initApp/project');
 
 describe('clientApi module', () => {
   var xhr, requests;
@@ -10,7 +12,7 @@ describe('clientApi module', () => {
     sinon.stub(project, 'getCurrentId').returns('some-project');
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
-    xhr.onCreate = function(xhr) {
+    xhr.onCreate = function (xhr) {
       requests.push(xhr);
     };
   });
@@ -100,7 +102,11 @@ describe('clientApi module', () => {
 
     describe('getStarterAssets', () => {
       it('makes an ajax request to the correct url', () => {
-        clientApi.starterAssets.getStarterAssets(levelName, () => {}, () => {});
+        clientApi.starterAssets.getStarterAssets(
+          levelName,
+          () => {},
+          () => {}
+        );
 
         expect(requests).to.have.length(1);
         expect(requests[0].method).to.equal('GET');

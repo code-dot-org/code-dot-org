@@ -1,8 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import FontAwesome from '../FontAwesome';
+import React from 'react';
+
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
 import StudentGroup from './StudentGroup';
 
 export default function CodeReviewGroup({
@@ -10,7 +13,7 @@ export default function CodeReviewGroup({
   members,
   name,
   onNameUpdate,
-  onDelete
+  onDelete,
 }) {
   const handleNameUpdate = event => {
     onNameUpdate(droppableId, event.target.value);
@@ -48,31 +51,31 @@ CodeReviewGroup.propTypes = {
   members: PropTypes.array.isRequired,
   name: PropTypes.string.isRequired,
   onNameUpdate: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired
+  onDelete: PropTypes.func.isRequired,
 };
 
 const styles = {
   groupContainer: {
     paddingBottom: 20,
-    paddingLeft: 5
+    paddingLeft: 5,
   },
   headerContainer: {
     display: 'flex',
     justifyContent: 'space-between',
     border: `1px solid ${color.lighter_gray}`,
     background: color.lightest_gray,
-    padding: '9px 12px'
+    padding: '9px 12px',
   },
   nameInput: {
     padding: '5px 12px',
     borderRadius: 4,
     border: `1px solid ${color.lighter_gray}`,
-    width: '210px'
+    width: '210px',
   },
   deleteButtonContainer: {
     display: 'flex',
     border: `1px solid ${color.dark_charcoal}`,
     borderRadius: 4,
-    margin: 0
-  }
+    margin: 0,
+  },
 };

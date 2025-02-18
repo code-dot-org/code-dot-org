@@ -27,7 +27,7 @@ def update_script_level_ids_based_on_assignment
 
         # All scripts assigned by the teacher that gave the feedback
         scripts_assigned_by_feedback_giver =
-          student_sections_taught_by_feedback_giver.map(&:script).compact
+          student_sections_taught_by_feedback_giver.filter_map(&:script)
 
         # The associated script levels in any of the scripts assigned by the feedback giver
         candidate_script_levels = associated_script_levels.where(

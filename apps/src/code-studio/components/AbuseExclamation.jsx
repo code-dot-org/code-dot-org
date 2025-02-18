@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import AbuseError from './AbuseError';
 import AlertExclamation from './AlertExclamation';
 
@@ -16,7 +17,7 @@ export default function AbuseExclamation({i18n, isOwner}) {
   const textStyle = {
     fontSize: 18,
     lineHeight: '24px',
-    padding: 5
+    padding: 5,
   };
 
   return (
@@ -34,7 +35,7 @@ AbuseExclamation.propTypes = {
     tos: PropTypes.string.isRequired,
     contact_us: PropTypes.string.isRequired,
     edit_project: PropTypes.string.isRequired,
-    go_to_code_studio: PropTypes.string.isRequired
+    go_to_code_studio: PropTypes.string.isRequired,
   }).isRequired,
-  isOwner: PropTypes.bool.isRequired
+  isOwner: PropTypes.bool.isRequired,
 };

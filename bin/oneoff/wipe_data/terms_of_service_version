@@ -4,11 +4,9 @@
 
 require_relative '../../../dashboard/config/environment'
 
-begin
-  User.
-    with_deleted.
-    where.not(terms_of_service_version: nil).
-    find_each do |user|
-      user.update(terms_of_service_version: nil)
-    end
-end
+User.
+  with_deleted.
+  where.not(terms_of_service_version: nil).
+  find_each do |user|
+    user.update(terms_of_service_version: nil)
+  end

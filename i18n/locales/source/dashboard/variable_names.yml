@@ -37,6 +37,7 @@ en:
       color: color
       controllerHeight: controllerHeight
       controllerWidth: controllerWidth
+      count: count
       counter: counter
       counter2: counter2
       currentActor: currentActor
@@ -48,6 +49,7 @@ en:
       enemy_speed: enemy_speed
       energy: energy
       firstName: firstName
+      fishCaught: fishCaught
       footlength: footlength
       gather: gather
       green1: green1
@@ -96,7 +98,7 @@ en:
       speed: speed
       startX: startX
       startY: startY
-      stopped-left: stopped-left
+      test_var: test_var
       time: time
       type: type
       variable: variable

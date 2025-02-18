@@ -1,0 +1,39 @@
+name 'VPL-CSD-PILOT-S22-CI-mod2-HTML-overview_-csd_CSD-PL-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# HTML Overview
+
+## What is HTML?
+
+#### HTML stands for **Hypertext Markup Language**. HTML is used to add structure to the content of a web page.
+
+<img src="https://images.code.org/54d360f639aa018f68e6248b002cc6f0-image-1711567903864.31.37 PM.png" alt="Building materials pictured with the text Words, Images, and Headers underneath. A simple house pictured with the word HTML underneath.">
+
+#### You can think of coding a web page like building a house. The words, images, headers, and other elements on your web page are like the building materials you use for construction. HTML takes those elements and structures them neatly to build a simple house.
+
+## What is an HTML Element?
+
+<img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png" style="float: right;  height: 200px; clear: both; margin: 0 20px 20px 0;">
+
+#### An HTML element is a piece of a website that is marked by a start tag and sometimes closed with an end tag. The element also includes the content inside the tags.
+<br><br><br><br>
+
+## What is an HTML Tag?
+
+#### An HTML tag is the special set of characters that tells the computer where the start or end of an HTML element is and what type it is.
+
+
+* #### `<!DOCTYPE html>` - Tells the computer that this is a document written in HTML.
+* #### `<html>` - Indicates the beginning of your code written in HTML.
+* #### `<head>` - Contains information (sometimes called "metadata") about your web page.
+* #### `<body>` - Contains all the main content of your web page.
+* #### `<p>` - Defines a paragraph of written text.
+
+#### As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. 
+
+### **Up Next**
+
+#### In the next level, you'll have a chance to practice using HTML in Web Lab. You can always return to this level for reference!
+MARKDOWN

@@ -1,30 +1,31 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
-import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
-import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
-import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
-import {
-  teacherFeedbackShape,
-  rubricShape
-} from '@cdo/apps/templates/instructions/teacherFeedback/types';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
+import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
+import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
+import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
 import teacherFeedbackStyles from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackStyles';
+import {
+  teacherFeedbackShape,
+  rubricShape,
+} from '@cdo/apps/templates/instructions/teacherFeedback/types';
+import i18n from '@cdo/locale';
 
 const ErrorType = {
   NoError: 'NoError',
   Load: 'Load',
-  Save: 'Save'
+  Save: 'Save',
 };
 
 export class EditableTeacherFeedback extends Component {
@@ -36,11 +37,13 @@ export class EditableTeacherFeedback extends Component {
     teacher: PropTypes.number,
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
+    allowUnverified: PropTypes.bool.isRequired,
     //Provided by Redux
     verifiedInstructor: PropTypes.bool,
     selectedSectionId: PropTypes.number,
     updateUserProgress: PropTypes.func.isRequired,
-    canHaveFeedbackReviewState: PropTypes.bool
+    canHaveFeedbackReviewState: PropTypes.bool,
+    scriptName: PropTypes.string,
   };
 
   constructor(props) {
@@ -49,7 +52,7 @@ export class EditableTeacherFeedback extends Component {
     this.studentId = queryString.parse(window.location.search).user_id;
     this.onRubricChange = this.onRubricChange.bind(this);
 
-    const {latestFeedback} = this.props;
+    const {latestFeedback, allowUnverified, verifiedInstructor} = this.props;
 
     this.state = {
       comment: latestFeedback?.comment || '',
@@ -58,18 +61,46 @@ export class EditableTeacherFeedback extends Component {
       reviewState: latestFeedback?.review_state || null,
       reviewStateUpdated: false,
       submitting: false,
-      errorState: ErrorType.NoError
+      errorState: ErrorType.NoError,
+      allowEditing: verifiedInstructor || allowUnverified,
     };
   }
+
+  determineCurriculumUmbrella = () => {
+    const {scriptName} = this.props;
+    const csfCourses = [
+      'coursea',
+      'courseb',
+      'coursec',
+      'coursed',
+      'coursee',
+      'coursef',
+    ];
+    if (scriptName.includes('csd')) {
+      return 'csd';
+    } else if (scriptName.includes('csp')) {
+      return 'csp';
+    } else if (scriptName.includes('csa')) {
+      return 'csa';
+    } else if (csfCourses.some(course => scriptName.includes(course))) {
+      return 'csf';
+    } else {
+      return scriptName;
+    }
+  };
 
   componentDidMount = () => {
     window.addEventListener('beforeunload', this.onUnload);
     if (this.props.rubric) {
-      analyticsReporter.sendEvent(EVENTS.RUBRIC_LEVEL_VIEWED_EVENT, {
-        sectionId: this.props.selectedSectionId,
-        unitId: this.props.serverScriptId,
-        levelId: this.props.serverLevelId
-      });
+      analyticsReporter.sendEvent(
+        EVENTS.RUBRIC_LEVEL_VIEWED_EVENT,
+        {
+          sectionId: this.props.selectedSectionId,
+          unitId: this.props.serverScriptId,
+          levelId: this.props.serverLevelId,
+        },
+        PLATFORMS.BOTH
+      );
     }
   };
 
@@ -97,7 +128,7 @@ export class EditableTeacherFeedback extends Component {
 
     this.setState({
       reviewState: newState,
-      reviewStateUpdated: oldState !== newState
+      reviewStateUpdated: oldState !== newState,
     });
   };
 
@@ -113,8 +144,8 @@ export class EditableTeacherFeedback extends Component {
           level_id: this.props.serverLevelId,
           old_state: this.getLatestReviewState(),
           new_state: this.state.reviewState,
-          section_id: this.props.selectedSectionId
-        })
+          section_id: this.props.selectedSectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -127,6 +158,15 @@ export class EditableTeacherFeedback extends Component {
     } else {
       this.setState({performance: value});
     }
+    analyticsReporter.sendEvent(
+      EVENTS.RUBRIC_ACTIVITY,
+      {
+        sectionId: this.props.selectedSectionId,
+        unitId: this.props.serverScriptId,
+        levelId: this.props.serverLevelId,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   onSubmitFeedback = () => {
@@ -139,7 +179,7 @@ export class EditableTeacherFeedback extends Component {
       level_id: this.props.serverLevelId,
       teacher_id: this.props.teacher,
       performance: this.state.performance,
-      analytics_section_id: this.props.selectedSectionId
+      analytics_section_id: this.props.selectedSectionId,
     };
 
     updateTeacherFeedback(payload, this.props.token)
@@ -155,30 +195,31 @@ export class EditableTeacherFeedback extends Component {
           latestFeedback: data,
           reviewStateUpdated: false,
           submitting: false,
-          errorState: ErrorType.NoError
+          errorState: ErrorType.NoError,
         });
       })
       .fail(() => {
         this.setState({
           errorState: ErrorType.Save,
-          submitting: false
+          submitting: false,
         });
       });
-    analyticsReporter.sendEvent(EVENTS.FEEDBACK_SUBMITTED, {
-      sectionId: this.props.selectedSectionId,
-      unitId: this.props.serverScriptId,
-      levelId: this.props.serverLevelId,
-      isRubric: this.props.rubric
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.FEEDBACK_SUBMITTED,
+      {
+        sectionId: this.props.selectedSectionId,
+        unitId: this.props.serverScriptId,
+        levelId: this.props.serverLevelId,
+        isRubric: this.props.rubric,
+        curriculumUmbrella: this.determineCurriculumUmbrella(),
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   didFeedbackChange = () => {
-    const {
-      latestFeedback,
-      comment,
-      performance,
-      reviewStateUpdated
-    } = this.state;
+    const {latestFeedback, comment, performance, reviewStateUpdated} =
+      this.state;
 
     if (latestFeedback) {
       const commentChanged = comment !== latestFeedback.comment;
@@ -207,8 +248,7 @@ export class EditableTeacherFeedback extends Component {
   }
 
   renderSubmitFeedbackButton() {
-    const {latestFeedback, submitting, errorState} = this.state;
-    const {verifiedInstructor} = this.props;
+    const {latestFeedback, submitting, errorState, allowEditing} = this.state;
 
     const buttonText = latestFeedback ? i18n.update() : i18n.saveAndShare();
 
@@ -216,7 +256,7 @@ export class EditableTeacherFeedback extends Component {
       !this.didFeedbackChange() ||
       submitting ||
       errorState === ErrorType.Load ||
-      !verifiedInstructor;
+      !allowEditing;
 
     return (
       <div style={styles.button}>
@@ -234,11 +274,12 @@ export class EditableTeacherFeedback extends Component {
   }
 
   render() {
-    const {verifiedInstructor, rubric, visible} = this.props;
+    const {rubric, visible} = this.props;
 
-    const {comment, performance, latestFeedback, errorState} = this.state;
+    const {comment, performance, latestFeedback, errorState, allowEditing} =
+      this.state;
 
-    const placeholderWarning = verifiedInstructor
+    const placeholderWarning = allowEditing
       ? i18n.feedbackPlaceholder()
       : i18n.feedbackPlaceholderNonVerified();
 
@@ -295,12 +336,12 @@ export class EditableTeacherFeedback extends Component {
 
 const styles = {
   button: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   errorIcon: {
     color: 'red',
-    margin: 10
-  }
+    margin: 10,
+  },
 };
 
 export const UnconnectedEditableTeacherFeedback = EditableTeacherFeedback;
@@ -311,12 +352,15 @@ export default connect(
       state.verifiedInstructor && state.verifiedInstructor.isVerified,
     selectedSectionId: state.teacherSections?.selectedSectionId,
     canHaveFeedbackReviewState:
-      state.pageConstants && state.pageConstants.canHaveFeedbackReviewState
+      state.pageConstants && state.pageConstants.canHaveFeedbackReviewState,
+    scriptName: state.progress.scriptName,
   }),
   dispatch => ({
     updateUserProgress(userId) {
       dispatch(queryUserProgress(userId));
       dispatch(loadLevelsWithProgress());
-    }
-  })
+    },
+  }),
+  null,
+  {forwardRef: true}
 )(EditableTeacherFeedback);

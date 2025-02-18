@@ -2,32 +2,35 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import announcementReducer, {
-  addAnnouncement
+  addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import clientState from '@cdo/apps/code-studio/clientState';
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
+import {getStore} from '@cdo/apps/code-studio/redux';
+import {
+  setVerified,
+  setVerifiedResources,
+} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {registerReducers} from '@cdo/apps/redux';
+import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
+import {
+  setUserSignedIn,
+  setUserRoleInCourse,
+  CourseRoles,
+} from '@cdo/apps/templates/currentUserRedux';
 import {
   pageTypes,
   selectSection,
   setPageType,
-  setSections
+  setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {registerReducers} from '@cdo/apps/redux';
-import {
-  setUserSignedIn,
-  setUserRoleInCourse,
-  CourseRoles
-} from '@cdo/apps/templates/currentUserRedux';
-import {
-  setVerified,
-  setVerifiedResources
-} from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 $(document).ready(showCourseOverview);
 
@@ -102,9 +105,32 @@ function showCourseOverview() {
         redirectToCourseUrl={scriptData.redirect_to_course_url}
         showAssignButton={courseSummary.show_assign_button}
         userId={userId}
+        userType={scriptData.user_type}
+        participantAudience={courseSummary.participant_audience}
       />
     </Provider>,
     document.getElementById('course_overview')
   );
   tooltipifyVocabulary();
+  displayDifferentiationChat(scriptData);
+}
+
+function displayDifferentiationChat(scriptData) {
+  const aiDiffFabMountPoint = document.getElementById(
+    'ai-differentiation-fab-mount-point'
+  );
+
+  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <AiDiffFloatingActionButton
+          context={AiDiffContext.COURSE}
+          scriptId={scriptData.course_summary.id}
+          scriptName={scriptData.course_summary.name}
+          unitDisplayName={scriptData.course_summary.title}
+        />
+      </Provider>,
+      aiDiffFabMountPoint
+    );
+  }
 }

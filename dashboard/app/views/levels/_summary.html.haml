@@ -1,0 +1,74 @@
+:ruby
+  levels =
+    if @level.is_a?(LevelGroup)
+      @level.levels
+    else
+      [@level.contained_levels.any? ? @level.contained_levels.first : @level]
+    end
+
+  in_level_group ||= @level.is_a?(LevelGroup)
+  last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
+  left_align = local_assigns[:left_align]
+  level_id = @level.id
+
+  responses = @responses&.map do |response_group|
+    filtered_responses = response_group.map do |response|
+      {
+        user_id: response.user_id,
+        text: response.level_source&.data,
+        student_display_name: response.user&.name,
+        student_family_name: response.user&.family_name
+      }
+    end
+    filtered_responses.filter { |r| !!r[:text] } # Remove empty responses.
+  end
+
+  answer_is_visible = Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
+
+  teacher_markdown = if levels[0].respond_to?(:solution) && levels[0].solution.present? && answer_is_visible
+    levels[0].solution
+  end
+
+  js_data = {
+    levels: levels.map do |level|
+      {
+        properties: level.localized_properties,
+        height: level.respond_to?(:height) ? level.height : nil,
+        type: level.type,
+        id: level.id,
+        name: level.name
+      }
+    end,
+    level_id: level_id,
+    in_level_group: in_level_group,
+    last_attempt: last_attempt,
+    left_align: left_align,
+    responses: responses,
+    answer_is_visible: answer_is_visible,
+    teacher_markdown: teacher_markdown,
+    reportingData: {
+      lessonName: @script_level.lesson.name,
+      lessonId: @script_level.lesson.id,
+      unitName: @script.name,
+      unitId: @script.id,
+      curriculumUmbrella: @script.curriculum_umbrella
+    }
+  }
+
+#summary-content.container
+  #summary-top-links
+
+  #level-question
+    - if levels[0].predict_level?
+      #predict-question
+
+  #summary-responses
+    - if levels[0].predict_level?
+      #summary-predict-correct-answer.hide
+
+  #summary-feedback-banner
+
+  #summary-teacher-instructions
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/levels/_summary.js'), data: {summary: js_data.to_json}}

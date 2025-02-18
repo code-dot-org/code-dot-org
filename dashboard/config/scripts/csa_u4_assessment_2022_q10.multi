@@ -25,3 +25,5 @@ public static int smallest(int x, int y, int z) {
 
 Which of the following identifies the conditions in which `smallest` may not work as intended?
 MARKDOWN
+
+allow_multiple_attempts true

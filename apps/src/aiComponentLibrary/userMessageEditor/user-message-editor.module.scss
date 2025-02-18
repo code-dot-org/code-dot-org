@@ -1,0 +1,24 @@
+$message-editor-height: 60px;
+
+.textArea {
+    width: 80%;
+    box-sizing: border-box;
+    resize: none;
+    margin: 0;
+    flex: 1;
+}
+
+.editorContainer {
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    height: $message-editor-height;
+    box-sizing: border-box;
+    gap: 5px;
+}
+
+.centerSingleItemContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

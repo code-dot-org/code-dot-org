@@ -1,20 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
-import ChatBubble from './ChatBubble';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
-import {convertXmlToBlockly} from './utils';
-import VideoThumbnail from '../VideoThumbnail';
-import {videoDataShape} from '../types';
+
+import firehoseClient from '@cdo/apps/metrics/firehose';
+
+import EmbeddedWorkspace from '../EmbeddedWorkspace';
 import SafeMarkdown from '../SafeMarkdown';
+import {videoDataShape} from '../types';
+import VideoThumbnail from '../VideoThumbnail';
+
+import ChatBubble from './ChatBubble';
+import {convertXmlToBlockly} from './utils';
 
 class InlineHint extends React.Component {
   static propTypes = {
     block: PropTypes.object, // XML
     borderColor: PropTypes.string,
+    backgroundColor: PropTypes.string,
     markdown: PropTypes.string.isRequired,
     video: videoDataShape,
     ttsUrl: PropTypes.string,
@@ -24,7 +28,7 @@ class InlineHint extends React.Component {
     isBlockly: PropTypes.bool,
     isMinecraft: PropTypes.bool,
     isRtl: PropTypes.bool,
-    skinId: PropTypes.string
+    skinId: PropTypes.string,
   };
 
   componentDidMount() {
@@ -38,7 +42,7 @@ class InlineHint extends React.Component {
       {
         study: 'hint-videos',
         event: 'click',
-        data_string: this.props.video.key
+        data_string: this.props.video.key,
       },
       {includeUserId: true}
     );
@@ -48,6 +52,7 @@ class InlineHint extends React.Component {
     return (
       <ChatBubble
         borderColor={this.props.borderColor}
+        backgroundColor={this.props.backgroundColor}
         textToSpeechEnabled={this.props.textToSpeechEnabled}
         ttsUrl={this.props.ttsUrl}
         ttsMessage={this.props.ttsMessage}
@@ -56,7 +61,7 @@ class InlineHint extends React.Component {
       >
         <SafeMarkdown markdown={this.props.markdown} />
         {this.props.block && (
-          <ReadOnlyBlockSpace
+          <EmbeddedWorkspace
             block={this.props.block}
             isRtl={this.props.isRtl}
           />
@@ -78,5 +83,5 @@ export default connect(state => ({
   isMinecraft: state.pageConstants.isMinecraft,
   skinId: state.pageConstants.skinId,
   textToSpeechEnabled:
-    state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1
+    state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
 }))(Radium(InlineHint));

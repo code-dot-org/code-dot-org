@@ -1,0 +1,11 @@
+name 'gen-ai-humanities-research-L1c-2'
+
+question 'After verifying:'
+right 'Real'
+right 'Fake'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

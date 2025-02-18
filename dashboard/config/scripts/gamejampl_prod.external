@@ -1,0 +1,28 @@
+name 'GamejamPL_prod'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Game Jam!
+
+##### You've made it to the game jam! 
+
+
+<img src="https://images.code.org/24767ec289c26417833bb9beaa9efc40-image-1718727783434.22.44 AM.png" alt="pixelated cartoon snail" style="border-radius:40px; float: right; padding-right: 20px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+
+## In this module, you will:
+
+* ##### Learn about game jams and why they are used. 
+* ##### Use a randomizer to create a theme for a game.
+* ##### Review materials students will use in the game jam process. 
+
+
+### **Suggested time:** 10 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+MARKDOWN

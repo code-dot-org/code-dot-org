@@ -1,0 +1,15 @@
+name 'Data Sci U2 Post Q6_2024-pilot'
+
+question 'Suppose you are working with purely categorical data, but one of the columns has a few `NaN` values. You don\’t have a lot of data, so you want to preserve what you have. If you still want to use this column in your analysis, what\’s a good method to handle these missing values?'
+
+right 'Use `fillna()` to fill in missing values with the mode of each category.'
+wrong 'Use `dropna()` to get rid of all missing values in the dataset.'
+wrong 'Use `fillna()` to fill in all missing data with the value 0.'
+wrong 'Use `dropna()` to remove any rows containing missing data.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

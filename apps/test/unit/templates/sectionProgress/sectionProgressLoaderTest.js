@@ -1,10 +1,12 @@
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import _ from 'lodash';
-import {loadScriptProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
-import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import * as redux from '@cdo/apps/redux';
+import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
+import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const serverScriptResponse = {
   csf: true,
@@ -17,7 +19,7 @@ const serverScriptResponse = {
   path: 'test/url',
   lessons: [{id: 11, levels: [{id: '2000'}, {id: '2001'}]}],
   title: 'Course B',
-  version_year: '2020'
+  version_year: '2020',
 };
 
 const timeInSeconds = 321;
@@ -25,102 +27,102 @@ const serverProgressResponse = {
   pagination: {
     page: 1,
     per: 20,
-    total_pages: 1
+    total_pages: 1,
   },
   student_last_updates: {
     100: null,
     101: timeInSeconds,
-    102: timeInSeconds + 1
+    102: timeInSeconds + 1,
   },
   student_progress: {
     100: {},
     101: {
-      '2000': {
+      2000: {
         locked: true,
         status: 'not_tried',
         result: -1,
         paired: false,
         time_spent: undefined,
         teacher_feedback_review_state: undefined,
-        last_progress_at: 12345
+        last_progress_at: 12345,
       },
-      '2001': {
+      2001: {
         status: 'perfect',
         result: 30,
         paired: true,
         time_spent: 12345,
         teacher_feedback_review_state: undefined,
-        last_progress_at: 12345
-      }
+        last_progress_at: 12345,
+      },
     },
     102: {
-      '2000': {
+      2000: {
         status: 'perfect',
         result: 100,
         paired: false,
         time_spent: 6789,
         teacher_feedback_review_state: undefined,
-        last_progress_at: 6789
-      }
-    }
-  }
+        last_progress_at: 6789,
+      },
+    },
+  },
 };
 
 const firstServerProgressResponse = {
   pagination: {
     page: 1,
     per: 2,
-    total_pages: 2
+    total_pages: 2,
   },
   student_last_updates: {
     100: null,
-    101: timeInSeconds
+    101: timeInSeconds,
   },
   student_progress: {
     100: {},
     101: {
-      '2000': {
+      2000: {
         status: 'not_tried',
         locked: true,
         result: -1,
         paired: false,
         time_spent: undefined,
         teacher_feedback_review_state: undefined,
-        last_progress_at: 12345
+        last_progress_at: 12345,
       },
-      '2001': {
+      2001: {
         status: 'perfect',
         result: 30,
         paired: true,
         time_spent: 12345,
         teacher_feedback_review_state: undefined,
-        last_progress_at: 12345
-      }
-    }
-  }
+        last_progress_at: 12345,
+      },
+    },
+  },
 };
 
 const secondServerProgressResponse = {
   pagination: {
     page: 2,
     per: 2,
-    total_pages: 2
+    total_pages: 2,
   },
   student_last_updates: {
-    102: timeInSeconds + 1
+    102: timeInSeconds + 1,
   },
   student_progress: {
     102: {
-      '2000': {
+      2000: {
         status: 'perfect',
         result: 100,
         paired: false,
         time_spent: 6789,
         teacher_feedback_review_state: undefined,
-        last_progress_at: 6789
-      }
-    }
-  }
+        last_progress_at: 6789,
+      },
+    },
+  },
 };
 
 const fullExpectedResult = {
@@ -136,14 +138,14 @@ const fullExpectedResult = {
       path: 'test/url',
       lessons: [{id: 11, levels: [{id: '2000'}, {id: '2001'}]}],
       title: 'Course B',
-      version_year: '2020'
-    }
+      version_year: '2020',
+    },
   },
   studentLevelProgressByUnit: {
     123: {
       100: {},
       101: {
-        '2000': {
+        2000: {
           pages: null,
           status: 'not_tried',
           locked: true,
@@ -151,9 +153,11 @@ const fullExpectedResult = {
           paired: false,
           timeSpent: undefined,
           teacherFeedbackReviewState: undefined,
-          lastTimestamp: 12345
+          teacherFeedbackNew: false,
+          teacherFeedbackCommented: false,
+          lastTimestamp: 12345,
         },
-        '2001': {
+        2001: {
           pages: null,
           status: 'perfect',
           locked: false,
@@ -161,11 +165,13 @@ const fullExpectedResult = {
           paired: true,
           timeSpent: 12345,
           teacherFeedbackReviewState: undefined,
-          lastTimestamp: 12345
-        }
+          teacherFeedbackNew: false,
+          teacherFeedbackCommented: false,
+          lastTimestamp: 12345,
+        },
       },
       102: {
-        '2000': {
+        2000: {
           pages: null,
           status: 'perfect',
           locked: false,
@@ -173,15 +179,17 @@ const fullExpectedResult = {
           paired: false,
           timeSpent: 6789,
           teacherFeedbackReviewState: undefined,
-          lastTimestamp: 6789
-        }
-      }
-    }
+          teacherFeedbackNew: false,
+          teacherFeedbackCommented: false,
+          lastTimestamp: 6789,
+        },
+      },
+    },
   },
   studentLessonProgressByUnit: {
     123: {
       100: {
-        11: null
+        11: null,
       },
       101: {
         11: {
@@ -189,8 +197,8 @@ const fullExpectedResult = {
           imperfectPercent: 0,
           completedPercent: 50,
           timeSpent: 12345,
-          lastTimestamp: 12345
-        }
+          lastTimestamp: 12345,
+        },
       },
       102: {
         11: {
@@ -198,18 +206,18 @@ const fullExpectedResult = {
           imperfectPercent: 0,
           completedPercent: 50,
           timeSpent: 6789,
-          lastTimestamp: 6789
-        }
-      }
-    }
+          lastTimestamp: 6789,
+        },
+      },
+    },
   },
   studentLastUpdateByUnit: {
     123: {
-      '100': null,
-      '101': timeInSeconds,
-      '102': timeInSeconds + 1
-    }
-  }
+      100: null,
+      101: timeInSeconds,
+      102: timeInSeconds + 1,
+    },
+  },
 };
 
 describe('sectionProgressLoader.loadScript', () => {
@@ -244,15 +252,15 @@ describe('sectionProgressLoader.loadScript', () => {
             isRefreshingProgress: true,
             studentLevelProgressByUnit: [true],
             unitDataByUnit: [true],
-            currentView: 0
+            currentView: 0,
           },
           teacherSections: {
-            sections: {}
-          }
+            sections: {},
+          },
         };
-      }
+      },
     });
-    expect(loadScriptProgress(0)).to.be.undefined;
+    expect(loadUnitProgress(0)).to.be.undefined;
     expect(startLoadingProgressStub).to.have.not.been.called;
     expect(startRefreshingProgressStub).to.have.not.been.called;
   });
@@ -288,26 +296,26 @@ describe('sectionProgressLoader.loadScript', () => {
             sectionProgress: {
               studentLevelProgressByUnit: [true],
               unitDataByUnit: [true],
-              currentView: 0
+              currentView: 0,
             },
             teacherSections: {
               selectedSectionId: selectedSectionId,
               sections: {
-                [selectedSectionId]: {}
+                [selectedSectionId]: {},
               },
-              selectedStudents: [{id: 1}]
-            }
+              selectedStudents: [{id: 1}],
+            },
           };
         },
-        dispatch: () => {}
+        dispatch: () => {},
       });
       fetchStub.returns({
         then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, {})
-        })
+          then: sinon.stub().callsArgWith(0, {}),
+        }),
       });
 
-      loadScriptProgress(0, selectedSectionId);
+      loadUnitProgress(0, selectedSectionId);
       expect(startLoadingProgressStub).to.have.not.been.called;
       expect(startRefreshingProgressStub).to.have.been.calledOnce;
       expect(addDataByUnitStub).to.have.been.calledOnce;
@@ -324,38 +332,38 @@ describe('sectionProgressLoader.loadScript', () => {
               studentLevelProgressByUnit: [],
               studentLessonProgressByUnit: [],
               unitDataByUnit: [],
-              currentView: 0
+              currentView: 0,
             },
             teacherSections: {
               selectedSectionId: selectedSectionId,
               sections: {
-                [selectedSectionId]: {}
+                [selectedSectionId]: {},
               },
-              selectedStudents: new Array(30) // this is 1.5 * NUM_STUDENTS_PER_PAGE in sectionProgressLoaders
-            }
+              selectedStudents: new Array(30), // this is 1.5 * NUM_STUDENTS_PER_PAGE in sectionProgressLoaders
+            },
           };
         },
-        dispatch: () => {}
+        dispatch: () => {},
       });
 
       sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
       addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
       fetchStub.onCall(0).returns({
         then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, serverScriptResponse)
-        })
+          then: sinon.stub().callsArgWith(0, serverScriptResponse),
+        }),
       });
       fetchStub.onCall(1).returns({
         then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, firstServerProgressResponse)
-        })
+          then: sinon.stub().callsArgWith(0, firstServerProgressResponse),
+        }),
       });
       fetchStub.onCall(2).returns({
         then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, secondServerProgressResponse)
-        })
+          then: sinon.stub().callsArgWith(0, secondServerProgressResponse),
+        }),
       });
-      loadScriptProgress(123, selectedSectionId);
+      loadUnitProgress(123, selectedSectionId);
       expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
       progressHelpers.processedLevel.restore();
     });
@@ -370,20 +378,20 @@ describe('sectionProgressLoader.loadScript', () => {
               sectionProgress: {
                 studentLevelProgressByUnit: [],
                 unitDataByUnit: [],
-                currentView: 0
+                currentView: 0,
               },
               teacherSections: {
                 selectedSectionId: selectedSectionId,
                 sections: {
                   [selectedSectionId]: {
-                    lessonExtras: lessonExtras
-                  }
+                    lessonExtras: lessonExtras,
+                  },
                 },
-                selectedStudents: [{id: 1}]
-              }
+                selectedStudents: [{id: 1}],
+              },
             };
           },
-          dispatch: () => {}
+          dispatch: () => {},
         });
       });
 
@@ -391,11 +399,11 @@ describe('sectionProgressLoader.loadScript', () => {
         addDataByUnitStub = sinon.stub(sectionProgress, 'addDataByUnit');
         fetchStub.returns({
           then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, {})
-          })
+            then: sinon.stub().callsArgWith(0, {}),
+          }),
         });
 
-        loadScriptProgress(0, selectedSectionId);
+        loadUnitProgress(0, selectedSectionId);
         expect(startLoadingProgressStub).to.have.been.calledOnce;
         expect(startRefreshingProgressStub).to.have.not.been.called;
         expect(addDataByUnitStub).to.have.been.calledOnce;
@@ -407,11 +415,11 @@ describe('sectionProgressLoader.loadScript', () => {
         sinon.stub(progressHelpers, 'processedLevel').returns('success');
         addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
         const serverResponse = {
-          lessons: [{levels: ['fail']}]
+          lessons: [{levels: ['fail']}],
         };
         const expectedResult = {
           unitDataByUnit: {
-            '0': {
+            0: {
               csf: false,
               isCsd: undefined,
               isCsp: undefined,
@@ -422,25 +430,25 @@ describe('sectionProgressLoader.loadScript', () => {
               path: undefined,
               lessons: [{levels: ['success']}],
               title: undefined,
-              version_year: undefined
-            }
+              version_year: undefined,
+            },
           },
-          studentLevelProgressByUnit: {'0': {}},
-          studentLessonProgressByUnit: {'0': {}},
-          studentLastUpdateByUnit: {'0': {}}
+          studentLevelProgressByUnit: {0: {}},
+          studentLessonProgressByUnit: {0: {}},
+          studentLastUpdateByUnit: {0: {}},
         };
 
         fetchStub.onCall(0).returns({
           then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, serverResponse)
-          })
+            then: sinon.stub().callsArgWith(0, serverResponse),
+          }),
         });
         fetchStub.onCall(1).returns({
           then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, {})
-          })
+            then: sinon.stub().callsArgWith(0, {}),
+          }),
         });
-        loadScriptProgress(0, selectedSectionId);
+        loadUnitProgress(0, selectedSectionId);
         expect(addDataByUnitStub).to.have.been.calledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });
@@ -450,15 +458,15 @@ describe('sectionProgressLoader.loadScript', () => {
         addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
         fetchStub.onCall(0).returns({
           then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, serverScriptResponse)
-          })
+            then: sinon.stub().callsArgWith(0, serverScriptResponse),
+          }),
         });
         fetchStub.onCall(1).returns({
           then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, serverProgressResponse)
-          })
+            then: sinon.stub().callsArgWith(0, serverProgressResponse),
+          }),
         });
-        loadScriptProgress(123, selectedSectionId);
+        loadUnitProgress(123, selectedSectionId);
         expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });
@@ -473,15 +481,15 @@ describe('sectionProgressLoader.loadScript', () => {
 
         fetchStub.onCall(0).returns({
           then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, scriptResponse)
-          })
+            then: sinon.stub().callsArgWith(0, scriptResponse),
+          }),
         });
         fetchStub.onCall(1).returns({
           then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, serverProgressResponse)
-          })
+            then: sinon.stub().callsArgWith(0, serverProgressResponse),
+          }),
         });
-        loadScriptProgress(123, selectedSectionId);
+        loadUnitProgress(123, selectedSectionId);
         expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });
@@ -501,15 +509,15 @@ describe('sectionProgressLoader.loadScript', () => {
 
         fetchStub.onCall(0).returns({
           then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, scriptResponse)
-          })
+            then: sinon.stub().callsArgWith(0, scriptResponse),
+          }),
         });
         fetchStub.onCall(1).returns({
           then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, serverProgressResponse)
-          })
+            then: sinon.stub().callsArgWith(0, serverProgressResponse),
+          }),
         });
-        loadScriptProgress(123, selectedSectionId);
+        loadUnitProgress(123, selectedSectionId);
         expect(addDataByUnitStub).to.have.been.calledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });

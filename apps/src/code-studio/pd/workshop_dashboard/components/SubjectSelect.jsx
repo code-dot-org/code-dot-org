@@ -1,6 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap';
+import React from 'react';
+import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 /**
@@ -15,7 +16,7 @@ export default function SubjectSelect({
   readOnly,
   inputStyle,
   validation,
-  onChange
+  onChange,
 }) {
   return (
     <FormGroup validationState={validation.style.subject}>
@@ -47,5 +48,5 @@ SubjectSelect.propTypes = {
   readOnly: PropTypes.bool,
   inputStyle: PropTypes.object,
   validation: PropTypes.object,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };

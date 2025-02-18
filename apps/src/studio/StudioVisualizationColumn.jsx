@@ -1,17 +1,20 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-var msg = require('@cdo/locale');
 
-var GameButtons = require('../templates/GameButtons').default;
-var BelowVisualization = require('../templates/BelowVisualization');
-import ArrowButtons from '../templates/ArrowButtons';
-import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import VisualizationOverlay from '../templates/VisualizationOverlay';
-import CrosshairOverlay from '../templates/CrosshairOverlay';
-import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
-var StudioVisualizationColumn = function(props) {
+import ArrowButtons from '../templates/ArrowButtons';
+import CrosshairOverlay from '../templates/CrosshairOverlay';
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
+import VisualizationOverlay from '../templates/VisualizationOverlay';
+
+var msg = require('@cdo/locale');
+
+var BelowVisualization = require('../templates/BelowVisualization');
+var GameButtons = require('../templates/GameButtons').default;
+
+var StudioVisualizationColumn = function (props) {
   return (
     <span>
       <ProtectedVisualizationDiv>
@@ -30,7 +33,7 @@ var StudioVisualizationColumn = function(props) {
         {props.finishButton && (
           <div id="share-cell" className="share-cell-none">
             <button type="button" id="finishButton" className="share">
-              <img src="/blockly/media/1x1.gif" />
+              <img src="/blockly/media/1x1.gif" alt="" />
               {msg.finish()}
             </button>
           </div>
@@ -43,7 +46,7 @@ var StudioVisualizationColumn = function(props) {
 
 StudioVisualizationColumn.propTypes = {
   finishButton: PropTypes.bool.isRequired,
-  isRtl: PropTypes.bool
+  isRtl: PropTypes.bool,
 };
 
 module.exports = StudioVisualizationColumn;

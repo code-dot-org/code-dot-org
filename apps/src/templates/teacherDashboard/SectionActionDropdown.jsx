@@ -1,28 +1,33 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '../../util/color';
-import {sortableSectionShape} from './shapes.jsx';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
-import i18n from '@cdo/locale';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {
-  sectionCode,
-  sectionName,
-  removeSection,
-  toggleSectionHidden,
-  importOrUpdateRoster
-} from './teacherSectionsRedux';
 import {connect} from 'react-redux';
-import PrintCertificates from './PrintCertificates';
-import FontAwesome from '../FontAwesome';
-import BaseDialog from '../BaseDialog';
-import Button from '../Button';
-import DialogFooter from './DialogFooter';
-import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
+
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
+import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
+import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import color from '../../util/color';
+import BaseDialog from '../BaseDialog';
+import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
+
+import DialogFooter from './DialogFooter';
+import PrintCertificates from './PrintCertificates';
+import {sortableSectionShape} from './shapes.jsx';
+import {
+  removeSectionOrThrow,
+  toggleSectionHidden,
+  importOrUpdateRoster,
+} from './teacherSectionsRedux';
+import {sectionCode, sectionName} from './teacherSectionsReduxSelectors';
 
 class SectionActionDropdown extends Component {
   static propTypes = {
@@ -30,16 +35,16 @@ class SectionActionDropdown extends Component {
     sectionData: sortableSectionShape.isRequired,
 
     //Provided by redux
-    removeSection: PropTypes.func.isRequired,
+    removeSectionOrThrow: PropTypes.func.isRequired,
     toggleSectionHidden: PropTypes.func.isRequired,
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
     updateRoster: PropTypes.func.isRequired,
-    setRosterProvider: PropTypes.func
+    setRosterProvider: PropTypes.func,
   };
 
   state = {
-    deleting: false
+    deleting: false,
   };
 
   componentDidMount() {
@@ -54,14 +59,14 @@ class SectionActionDropdown extends Component {
   }
 
   onConfirmDelete = () => {
-    const {removeSection} = this.props;
+    const {removeSectionOrThrow} = this.props;
     const section = this.props.sectionData;
     $.ajax({
       url: `/dashboardapi/sections/${section.id}`,
-      method: 'DELETE'
+      method: 'DELETE',
     })
       .done(() => {
-        removeSection(section.id);
+        removeSectionOrThrow(section.id);
       })
       .fail((jqXhr, status) => {
         // We may want to handle this more cleanly in the future, but for now this
@@ -71,21 +76,65 @@ class SectionActionDropdown extends Component {
       });
   };
 
-  onClickEdit = () => {
-    this.props.handleEdit(this.props.sectionData.id);
+  /**
+   * Returns the URL to the correct section to be edited
+   */
+  editRedirectUrl = (sectionId, isPl) => {
+    let editSectionUrl;
+    if (showV2TeacherDashboard()) {
+      editSectionUrl = teacherDashboardUrl(sectionId, '/settings');
+    } else {
+      editSectionUrl = '/sections/' + sectionId + '/edit';
+    }
+    editSectionUrl += isPl ? '?redirectToPage=my-professional-learning' : '';
+    return editSectionUrl;
+  };
+
+  /**
+   * Creates the pop-up for the section to be edited
+   */
+  onClickEditPopUp = () => {
+    return this.props.handleEdit(this.props.sectionData.id);
   };
 
   onClickHideShow = () => {
+    const hideShowEvent = this.props.sectionData.hidden
+      ? EVENTS.SECTION_TABLE_RESTORE_SECTION_CLICKED
+      : EVENTS.SECTION_TABLE_ARCHIVE_SECTION_CLICKED;
+    analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.BOTH);
     this.props.toggleSectionHidden(this.props.sectionData.id);
   };
 
   onClickSync = () => {
+    const {loginType} = this.props.sectionData;
+
+    switch (loginType) {
+      case OAuthSectionTypes.google_classroom:
+        analyticsReporter.sendEvent(
+          EVENTS.SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
+        break;
+      case OAuthSectionTypes.clever:
+        analyticsReporter.sendEvent(
+          EVENTS.SECTION_TABLE_SYNC_CLEVER_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
+        break;
+    }
     // Section code is the course ID, without the G- or C- prefix.
     const courseId = this.props.sectionCode.replace(/^[GC]-/, '');
     this.props.updateRoster(courseId, this.props.sectionName);
   };
 
   onRequestDelete = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_TABLE_DELETE_SECTION_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
     this.setState({deleting: true});
   };
 
@@ -100,20 +149,48 @@ class SectionActionDropdown extends Component {
       <span>
         <QuickActionsCell type={'header'}>
           <PopUpMenu.Item
-            onClick={this.onClickEdit}
+            href={this.editRedirectUrl(
+              sectionData.id,
+              sectionData.grades?.includes('pl')
+            )}
             className="edit-section-details-link"
+            hrefOnClick={() => {
+              analyticsReporter.sendEvent(
+                EVENTS.SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED,
+                {},
+                PLATFORMS.BOTH
+              );
+            }}
           >
             {i18n.editSectionDetails()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/progress')}
             className="view-progress-link"
+            hrefOnClick={() => {
+              analyticsReporter.sendEvent(
+                EVENTS.SECTION_TABLE_VIEW_PROGRESS_CLICKED,
+                {},
+                PLATFORMS.BOTH
+              );
+            }}
           >
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
-            href={teacherDashboardUrl(sectionData.id, '/manage_students')}
+            href={
+              showV2TeacherDashboard()
+                ? teacherDashboardUrl(sectionData.id, '/roster')
+                : teacherDashboardUrl(sectionData.id, '/manage_students')
+            }
             className="manage-students-link"
+            hrefOnClick={() => {
+              analyticsReporter.sendEvent(
+                EVENTS.SECTION_TABLE_MANAGE_STUDENTS_CLICKED,
+                {},
+                PLATFORMS.BOTH
+              );
+            }}
           >
             {i18n.manageStudents()}
           </PopUpMenu.Item>
@@ -122,6 +199,17 @@ class SectionActionDropdown extends Component {
               <PopUpMenu.Item
                 href={teacherDashboardUrl(sectionData.id, '/login_info')}
                 className="print-login-link"
+                hrefOnClick={() => {
+                  const loginInstructionsEvent =
+                    sectionData.loginType === SectionLoginType.email
+                      ? EVENTS.SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED
+                      : EVENTS.SECTION_TABLE_PRINT_LOGIN_CARDS_CLICKED;
+                  analyticsReporter.sendEvent(
+                    loginInstructionsEvent,
+                    {},
+                    PLATFORMS.BOTH
+                  );
+                }}
               >
                 {sectionData.loginType === SectionLoginType.email
                   ? i18n.joinInstructions()
@@ -188,7 +276,7 @@ class SectionActionDropdown extends Component {
 
 const styles = {
   xIcon: {
-    paddingRight: 5
+    paddingRight: 5,
   },
   heading: {
     borderTopWidth: 0,
@@ -198,8 +286,8 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.default_text,
     paddingBottom: 20,
-    marginBottom: 30
-  }
+    marginBottom: 30,
+  },
 };
 
 export const UnconnectedSectionActionDropdown = SectionActionDropdown;
@@ -207,12 +295,12 @@ export const UnconnectedSectionActionDropdown = SectionActionDropdown;
 export default connect(
   (state, props) => ({
     sectionCode: sectionCode(state, props.sectionData.id),
-    sectionName: sectionName(state, props.sectionData.id)
+    sectionName: sectionName(state, props.sectionData.id),
   }),
   {
-    removeSection,
+    removeSectionOrThrow,
     toggleSectionHidden,
     updateRoster: importOrUpdateRoster,
-    setRosterProvider
+    setRosterProvider,
   }
 )(SectionActionDropdown);

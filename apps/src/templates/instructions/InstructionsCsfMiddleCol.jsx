@@ -1,19 +1,24 @@
+import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import SafeMarkdown from '../SafeMarkdown';
+
+import ChatBubble from './ChatBubble';
 import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
-import ChatBubble from './ChatBubble';
-import LegacyButton from '../LegacyButton';
-import i18n from '@cdo/locale';
-import SafeMarkdown from '../SafeMarkdown';
-import {scrollTo, shouldDisplayChatTips} from './utils';
-import color from '../../util/color';
 import Instructions from './Instructions';
+import {scrollTo, shouldDisplayChatTips} from './utils';
 
 var instructions = require('../../redux/instructions');
+const VERY_LIGHT_BLUE_COLOR = '#f0ffff';
+const VERY_LIGHT_YELLOW_COLOR = '#fffff0';
 
 class InstructionsCsfMiddleCol extends React.Component {
   static propTypes = {
@@ -34,7 +39,7 @@ class InstructionsCsfMiddleCol extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     feedback: PropTypes.shape({
       message: PropTypes.string.isRequired,
-      isFailure: PropTypes.bool
+      isFailure: PropTypes.bool,
     }),
     collapsed: PropTypes.bool.isRequired,
     hints: PropTypes.arrayOf(
@@ -42,7 +47,7 @@ class InstructionsCsfMiddleCol extends React.Component {
         hintId: PropTypes.string.isRequired,
         markdown: PropTypes.string.isRequired,
         block: PropTypes.object, // XML
-        video: PropTypes.string
+        video: PropTypes.string,
       })
     ).isRequired,
     showNextHint: PropTypes.func.isRequired,
@@ -54,7 +59,7 @@ class InstructionsCsfMiddleCol extends React.Component {
     longInstructions: PropTypes.string,
     clearFeedback: PropTypes.func.isRequired,
     hideOverlay: PropTypes.func.isRequired,
-    setInstructionsRenderedHeight: PropTypes.func.isRequired
+    setInstructionsRenderedHeight: PropTypes.func.isRequired,
   };
 
   componentDidUpdate(prevProps) {
@@ -168,9 +173,14 @@ class InstructionsCsfMiddleCol extends React.Component {
           {this.props.overlayVisible && (
             <div>
               <hr />
-              <LegacyButton type="primary" onClick={this.closeOverlay}>
-                {i18n.dialogOK()}
-              </LegacyButton>
+              <Button
+                color={buttonColors.purple}
+                text={i18n.dialogOK()}
+                onClick={this.closeOverlay}
+                size="m"
+                type="primary"
+                aria-label={i18n.dialogOK()}
+              />
             </div>
           )}
         </ChatBubble>
@@ -179,7 +189,8 @@ class InstructionsCsfMiddleCol extends React.Component {
           this.props.hints.map(hint => (
             <InlineHint
               key={hint.hintId}
-              borderColor={color.yellow}
+              borderColor={color.light_info_500}
+              backgroundColor={VERY_LIGHT_BLUE_COLOR}
               markdown={hint.markdown}
               ttsUrl={hint.ttsUrl}
               ttsMessage={hint.ttsMessage}
@@ -197,7 +208,12 @@ class InstructionsCsfMiddleCol extends React.Component {
         {this.props.feedback && !this.props.collapsed && (
           <InlineFeedback
             key={this.props.feedback.message}
-            borderColor={this.props.isMinecraft ? color.white : color.charcoal}
+            borderColor={
+              this.props.isMinecraft
+                ? color.white
+                : color.product_caution_default
+            }
+            backgroundColor={VERY_LIGHT_YELLOW_COLOR}
             message={this.props.feedback.message}
             isMinecraft={this.props.isMinecraft}
             skinId={this.props.skinId}
@@ -206,7 +222,8 @@ class InstructionsCsfMiddleCol extends React.Component {
         )}
         {this.props.shouldDisplayHintPrompt() && (
           <HintPrompt
-            borderColor={color.yellow}
+            borderColor={color.light_info_500}
+            backgroundColor={VERY_LIGHT_BLUE_COLOR}
             onConfirm={this.showHint}
             onDismiss={this.props.dismissHintPrompt}
             isMinecraft={this.props.isMinecraft}
@@ -222,16 +239,16 @@ class InstructionsCsfMiddleCol extends React.Component {
 const styles = {
   instructions: {
     padding: '5px 0',
-    minWidth: 40
+    minWidth: 40,
   },
   instructionsWithTips: {
     width: 'calc(100% - 20px)',
-    float: 'right'
+    float: 'right',
   },
   instructionsWithTipsRtl: {
     width: 'calc(100% - 20px)',
-    float: 'left'
-  }
+    float: 'left',
+  },
 };
 
 export const UnconnectedInstructionsCsfMiddleCol = InstructionsCsfMiddleCol;
@@ -256,12 +273,12 @@ export default connect(
         state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1,
       shortInstructions: state.instructions.shortInstructions,
       shortInstructions2: state.instructions.shortInstructions2,
-      longInstructions: state.instructions.longInstructions
+      longInstructions: state.instructions.longInstructions,
     };
   },
   function propsFromDispatch(dispatch) {
     return {
-      hideOverlay: function() {
+      hideOverlay: function () {
         dispatch(instructions.hideOverlay());
       },
       setInstructionsRenderedHeight(height) {
@@ -269,9 +286,9 @@ export default connect(
       },
       clearFeedback() {
         dispatch(instructions.setFeedback(null));
-      }
+      },
     };
   },
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(InstructionsCsfMiddleCol);

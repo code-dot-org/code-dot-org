@@ -1,7 +1,8 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Alert from '@cdo/apps/templates/alert';
-import $ from 'jquery';
+
+import Alert from '@cdo/apps/legacySharedComponents/alert';
 
 export default class WorkspaceAlert extends React.Component {
   static propTypes = {
@@ -9,7 +10,7 @@ export default class WorkspaceAlert extends React.Component {
     children: PropTypes.element.isRequired,
     onClose: PropTypes.func.isRequired,
     isBlockly: PropTypes.bool,
-    displayBottom: PropTypes.bool
+    displayBottom: PropTypes.bool,
   };
 
   render() {
@@ -48,6 +49,6 @@ export default class WorkspaceAlert extends React.Component {
 const styles = {
   alertContainer: {
     position: 'absolute',
-    right: 0
-  }
+    right: 0,
+  },
 };

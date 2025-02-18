@@ -1,13 +1,14 @@
-import {assert} from '../util/reconfiguredChai';
-var testUtils = require('./../util/testUtils');
-
 import instructions, {
   toggleInstructionsCollapsed,
   setInstructionsRenderedHeight,
   setInstructionsMaxHeightAvailable,
   setInstructionsMaxHeightNeeded,
-  determineInstructionsConstants
+  determineInstructionsConstants,
 } from '@cdo/apps/redux/instructions';
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+var testUtils = require('./../util/testUtils');
 
 const ENGLISH_LOCALE = 'en_us';
 
@@ -28,7 +29,7 @@ describe('instructions', () => {
       // start collapsed
       initialState = {
         isCollapsed: false,
-        longInstructions: 'foo'
+        longInstructions: 'foo',
       };
       newState = reducer(initialState, toggleInstructionsCollapsed());
       assert.strictEqual(newState.isCollapsed, true);
@@ -36,7 +37,7 @@ describe('instructions', () => {
       // start uncollapsed
       initialState = {
         isCollapsed: true,
-        longInstructions: 'foo'
+        longInstructions: 'foo',
       };
       newState = reducer(initialState, toggleInstructionsCollapsed());
       assert.strictEqual(newState.isCollapsed, false);
@@ -49,7 +50,7 @@ describe('instructions', () => {
       initialState = {
         isCollapsed: false,
         shortInstructions: 'short',
-        longInstructions: undefined
+        longInstructions: undefined,
       };
       newState = reducer(initialState, toggleInstructionsCollapsed());
       assert.strictEqual(newState.isCollapsed, true);
@@ -61,14 +62,14 @@ describe('instructions', () => {
         isCollapsed: false,
         renderedHeight: 0,
         expandedHeight: 0,
-        allowResize: true
+        allowResize: true,
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
       assert.deepEqual(newState, {
         isCollapsed: false,
         renderedHeight: 200,
         expandedHeight: 200,
-        allowResize: true
+        allowResize: true,
       });
     });
 
@@ -77,13 +78,13 @@ describe('instructions', () => {
       initialState = {
         isCollapsed: false,
         renderedHeight: 0,
-        expandedHeight: 0
+        expandedHeight: 0,
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
       assert.deepEqual(newState, {
         isCollapsed: false,
         renderedHeight: 0,
-        expandedHeight: 0
+        expandedHeight: 0,
       });
     });
 
@@ -93,14 +94,14 @@ describe('instructions', () => {
         isCollapsed: true,
         renderedHeight: 0,
         expandedHeight: 0,
-        allowResize: true
+        allowResize: true,
       };
       newState = reducer(initialState, setInstructionsRenderedHeight(200));
       assert.deepEqual(newState, {
         isCollapsed: true,
         renderedHeight: 200,
         expandedHeight: 0,
-        allowResize: true
+        allowResize: true,
       });
     });
 
@@ -108,12 +109,12 @@ describe('instructions', () => {
       var initialState, newState;
       initialState = {
         maxNeededHeight: 0,
-        allowResize: true
+        allowResize: true,
       };
       newState = reducer(initialState, setInstructionsMaxHeightNeeded(200));
       assert.deepEqual(newState, {
         maxNeededHeight: 200,
-        allowResize: true
+        allowResize: true,
       });
     });
 
@@ -123,14 +124,14 @@ describe('instructions', () => {
         maxAvailableHeight: Infinity,
         renderedHeight: 0,
         expandedHeight: 0,
-        allowResize: true
+        allowResize: true,
       };
       newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
       assert.deepEqual(newState, {
         maxAvailableHeight: 300,
         renderedHeight: 0,
         expandedHeight: 0,
-        allowResize: true
+        allowResize: true,
       });
     });
 
@@ -140,14 +141,14 @@ describe('instructions', () => {
         maxAvailableHeight: Infinity,
         renderedHeight: 400,
         expandedHeight: 400,
-        allowResize: true
+        allowResize: true,
       };
       newState = reducer(initialState, setInstructionsMaxHeightAvailable(300));
       assert.deepEqual(newState, {
         maxAvailableHeight: 300,
         renderedHeight: 300,
         expandedHeight: 300,
-        allowResize: true
+        allowResize: true,
       });
     });
   });
@@ -165,14 +166,14 @@ describe('instructions', () => {
           determineInstructionsConstants({
             level: {
               shortInstructions: 'non-markdown',
-              longInstructions: 'markdown'
+              longInstructions: 'markdown',
             },
             skin: {},
             locale,
             noInstructionsWhenCollapsed,
             showInstructionsInTopPane,
             hasContainedLevels,
-            overlayVisible
+            overlayVisible,
           })
         );
 
@@ -185,14 +186,14 @@ describe('instructions', () => {
         const result = determineInstructionsConstants({
           level: {
             shortInstructions: 'non-markdown',
-            longInstructions: undefined
+            longInstructions: undefined,
           },
           skin: {},
           ENGLISH_LOCALE,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane,
           hasContainedLevels,
-          overlayVisible
+          overlayVisible,
         });
 
         assert.equal(result.longInstructions, 'non-markdown');
@@ -203,14 +204,14 @@ describe('instructions', () => {
         const result = determineInstructionsConstants({
           level: {
             shortInstructions: 'non-markdown',
-            longInstructions: undefined
+            longInstructions: undefined,
           },
           skin: {},
           ENGLISH_LOCALE,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane,
           hasContainedLevels,
-          overlayVisible
+          overlayVisible,
         });
 
         assert.equal(result.shortInstructions, undefined);
@@ -219,14 +220,14 @@ describe('instructions', () => {
         const result2 = determineInstructionsConstants({
           level: {
             shortInstructions: undefined,
-            longInstructions: 'markdown'
+            longInstructions: 'markdown',
           },
           skin: {},
           ENGLISH_LOCALE,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane,
           hasContainedLevels,
-          overlayVisible
+          overlayVisible,
         });
 
         assert.equal(result2.shortInstructions, undefined);
@@ -235,14 +236,14 @@ describe('instructions', () => {
         const result3 = determineInstructionsConstants({
           level: {
             shortInstructions: 'non-markdown',
-            longInstructions: 'markdown'
+            longInstructions: 'markdown',
           },
           skin: {},
           ENGLISH_LOCALE,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane,
           hasContainedLevels,
-          overlayVisible
+          overlayVisible,
         });
 
         assert.equal(result3.shortInstructions, undefined);
@@ -261,13 +262,13 @@ describe('instructions', () => {
           const result = determineInstructionsConstants({
             level: {
               shortInstructions: 'non-markdown',
-              longInstructions: 'markdown'
+              longInstructions: 'markdown',
             },
             skin: {},
             locale,
             noInstructionsWhenCollapsed,
             showInstructionsInTopPane,
-            hasContainedLevels
+            hasContainedLevels,
           });
           assert.deepEqual(result, {
             noInstructionsWhenCollapsed,
@@ -283,7 +284,7 @@ describe('instructions', () => {
             referenceLinks: undefined,
             muteBackgroundMusic: undefined,
             unmuteBackgroundMusic: undefined,
-            programmingEnvironment: undefined
+            programmingEnvironment: undefined,
           });
         });
       });
@@ -295,14 +296,14 @@ describe('instructions', () => {
           const result = determineInstructionsConstants({
             level: {
               shortInstructions: 'non-markdown',
-              longInstructions: 'non-markdown'
+              longInstructions: 'non-markdown',
             },
             skin: {},
             ENGLISH_LOCALE,
             noInstructionsWhenCollapsed,
             showInstructionsInTopPane,
             hasContainedLevels,
-            overlayVisible
+            overlayVisible,
           });
           assert.deepEqual(result, {
             noInstructionsWhenCollapsed,
@@ -318,25 +319,28 @@ describe('instructions', () => {
             referenceLinks: undefined,
             muteBackgroundMusic: undefined,
             unmuteBackgroundMusic: undefined,
-            programmingEnvironment: undefined
+            programmingEnvironment: undefined,
           });
         }
       );
 
       it('sets long instructions if we have an inputOutputTable', () => {
-        const inputOutputTable = [[15, 5], [20, 10]];
+        const inputOutputTable = [
+          [15, 5],
+          [20, 10],
+        ];
         const result = determineInstructionsConstants({
           level: {
             shortInstructions: 'non-markdown',
             longInstructions: undefined,
-            inputOutputTable
+            inputOutputTable,
           },
           skin: {},
           ENGLISH_LOCALE,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane,
           hasContainedLevels,
-          overlayVisible
+          overlayVisible,
         });
         assert.equal(result.longInstructions, 'non-markdown');
 
@@ -344,14 +348,14 @@ describe('instructions', () => {
           level: {
             shortInstructions: 'non-markdown',
             longInstructions: 'markdown',
-            inputOutputTable
+            inputOutputTable,
           },
           skin: {},
           ENGLISH_LOCALE,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane,
           hasContainedLevels,
-          overlayVisible
+          overlayVisible,
         });
         assert.equal(result2.longInstructions, 'markdown');
       });
@@ -361,18 +365,18 @@ describe('instructions', () => {
           level: {
             shortInstructions: 'Instructions with [image1]',
             instructions2: 'Instructions with [image2]',
-            longInstructions: undefined
+            longInstructions: undefined,
           },
           skin: {
             instructions2ImageSubstitutions: {
               image1: '/image1.png',
-              image2: '/image2.png'
-            }
+              image2: '/image2.png',
+            },
           },
           ENGLISH_LOCALE,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane,
-          overlayVisible
+          overlayVisible,
         });
 
         assert(
@@ -388,13 +392,13 @@ describe('instructions', () => {
       it('instructions outputs levelVideos data when it is associated with the given level', () => {
         const result = determineInstructionsConstants({
           level: {
-            levelVideos: ['notEmpty']
+            levelVideos: ['notEmpty'],
           },
           skin: {},
           ENGLISH_LOCALE,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane,
-          overlayVisible
+          overlayVisible,
         });
 
         assert.deepEqual(result, {
@@ -411,20 +415,20 @@ describe('instructions', () => {
           referenceLinks: undefined,
           muteBackgroundMusic: undefined,
           unmuteBackgroundMusic: undefined,
-          programmingEnvironment: undefined
+          programmingEnvironment: undefined,
         });
       });
 
       it('instructions outputs mapReference data when it is associated with the given level', () => {
         const result = determineInstructionsConstants({
           level: {
-            mapReference: '/test/abc.html'
+            mapReference: '/test/abc.html',
           },
           skin: {},
           ENGLISH_LOCALE,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane,
-          overlayVisible
+          overlayVisible,
         });
 
         assert.deepEqual(result, {
@@ -441,20 +445,20 @@ describe('instructions', () => {
           referenceLinks: undefined,
           muteBackgroundMusic: undefined,
           unmuteBackgroundMusic: undefined,
-          programmingEnvironment: undefined
+          programmingEnvironment: undefined,
         });
       });
 
       it('instructions outputs referenceLinks data when it is associated with the given level', () => {
         const result = determineInstructionsConstants({
           level: {
-            referenceLinks: ['/test/alpha.html', '/test/beta.html']
+            referenceLinks: ['/test/alpha.html', '/test/beta.html'],
           },
           skin: {},
           ENGLISH_LOCALE,
           noInstructionsWhenCollapsed,
           showInstructionsInTopPane,
-          overlayVisible
+          overlayVisible,
         });
 
         assert.deepEqual(result, {
@@ -471,7 +475,7 @@ describe('instructions', () => {
           referenceLinks: ['/test/alpha.html', '/test/beta.html'],
           muteBackgroundMusic: undefined,
           unmuteBackgroundMusic: undefined,
-          programmingEnvironment: undefined
+          programmingEnvironment: undefined,
         });
       });
     });

@@ -1,0 +1,26 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-07-10T17:06:36.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "video_key": "elementary_machine_learning",
+    "display_name": "Video: Machine Learning",
+    "video_rounded_corners": true,
+    "video_full_width": true,
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19646,
+    "name_suffix": "_2024",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#Lesson 2: Training AI"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T17:06:36.441+00:00\",\"changed\":[\"cloned from \\\"Oceans_Video_Elementary_Machine_Learning_2024\\\"\"],\"cloned_from\":\"Oceans_Video_Elementary_Machine_Learning_2024\"},{\"changed_at\":\"2024-07-10 17:07:18 +0000\",\"changed\":[],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

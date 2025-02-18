@@ -1,15 +1,21 @@
 import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import queryString from 'query-string';
-import clientState from './clientState';
-import DisabledBubblesModal from './DisabledBubblesModal';
-import DisabledBubblesAlert from './DisabledBubblesAlert';
-import {getStore} from './redux';
-import {setViewType, ViewType} from './viewAsRedux';
-import {getHiddenLessons} from './hiddenLessonRedux';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
+import {
+  setUserRoleInCourse,
+  CourseRoles,
+} from '@cdo/apps/templates/currentUserRedux';
+import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import clientState from './clientState';
+import DisabledBubblesAlert from './components/DisabledBubblesAlert';
+import DisabledBubblesModal from './components/DisabledBubblesModal';
+import {getHiddenLessons} from './hiddenLessonRedux';
 import {
   initProgress,
   overwriteResults,
@@ -18,17 +24,14 @@ import {
   setIsAge13Required,
   setLessonExtrasEnabled,
   queryUserProgress as reduxQueryUserProgress,
-  useDbProgress
+  useDbProgress,
 } from './progressRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {getStore} from './redux';
 import {renderTeacherPanel} from './teacherPanelHelpers';
-import {
-  setUserRoleInCourse,
-  CourseRoles
-} from '@cdo/apps/templates/currentUserRedux';
+import {setViewType, ViewType} from './viewAsRedux';
 
 var progress = module.exports;
+export default progress;
 
 function showDisabledBubblesModal() {
   const div = $('<div>');
@@ -40,7 +43,7 @@ function showDisabledBubblesModal() {
 /**
  * If milestone posts are disabled, show an alert about progress not being tracked.
  */
-progress.showDisabledBubblesAlert = function() {
+progress.showDisabledBubblesAlert = function () {
   const store = getStore();
   const {postMilestoneDisabled} = store.getState().progress;
   if (!postMilestoneDisabled) {
@@ -52,7 +55,7 @@ progress.showDisabledBubblesAlert = function() {
     left: 0,
     right: 0,
     top: 45,
-    zIndex: 1000
+    zIndex: 1000,
   });
   $(document.body).append(div);
 
@@ -78,7 +81,7 @@ progress.showDisabledBubblesAlert = function() {
  *   page level.
  * @returns {Promise<void>}
  */
-progress.generateLessonProgress = function(
+progress.generateLessonProgress = function (
   scriptData,
   lessonGroupData,
   lessonData,
@@ -92,17 +95,18 @@ progress.generateLessonProgress = function(
 ) {
   const store = getStore();
 
-  const {name, disablePostMilestone, age_13_required} = scriptData;
+  const {name, displayName, disablePostMilestone, age_13_required} = scriptData;
 
   initializeStoreWithProgress(
     store,
     {
       name,
+      displayName,
       lessonGroups: lessonGroupData,
       lessons: [lessonData],
       disablePostMilestone,
       age_13_required,
-      id: lessonData.script_id
+      id: lessonData.script_id,
     },
     currentLevelId,
     false,
@@ -173,33 +177,33 @@ function getLevelProgress(signedIn, progressData, scriptName) {
       return Promise.resolve({
         usingDbProgress: true,
         levelResults: extractLevelResults(progressData),
-        unitProgress: progressData.progress
+        unitProgress: progressData.progress,
       });
     case false:
       // User is not signed in, return a resolved promise with progress data
       // retrieved from session storage
       return Promise.resolve({
         usingDbProgress: false,
-        levelResults: clientState.levelProgress(scriptName)
+        levelResults: clientState.levelProgress(scriptName),
       });
     case null:
       // We do not know if user is signed in or not, send a request to the server
       // to find out if the user is signed in and retrieve progress information
       return $.ajax({
         url: `/api/user_progress/${scriptName}`,
-        data: {user_id: clientState.queryParams('user_id')}
+        data: {user_id: clientState.queryParams('user_id')},
       })
         .then(data => {
           if (data.signedIn) {
             return {
               usingDbProgress: true,
               levelResults: extractLevelResults(data),
-              unitProgress: data.progress
+              unitProgress: data.progress,
             };
           } else {
             return {
               usingDbProgress: false,
-              levelResults: clientState.levelProgress(scriptName)
+              levelResults: clientState.levelProgress(scriptName),
             };
           }
         })
@@ -234,20 +238,31 @@ function extractLevelResults(userProgressResponse) {
  * @param {boolean} scriptData.age_13_required
  * Fetch and store progress for the course overview page.
  */
-progress.initCourseProgress = function(scriptData) {
+progress.initCourseProgress = function (
+  scriptData,
+  shouldRenderTeacherPanel = true
+) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
-  queryUserProgress(store, scriptData, null);
+  queryUserProgress(store, scriptData, null, shouldRenderTeacherPanel);
 };
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
-progress.initViewAs = function(store, isSignedInUser, isInstructor) {
+progress.initViewAs = function (store, isSignedInUser, isInstructor) {
+  progress.initViewAsWithoutStore(store.dispatch, isSignedInUser, isInstructor);
+};
+
+progress.initViewAsWithoutStore = function (
+  dispatch,
+  isSignedInUser,
+  isInstructor
+) {
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
   if (isInstructor) {
     initialViewAs = ViewType.Instructor;
-    store.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+    dispatch(setUserRoleInCourse(CourseRoles.Instructor));
   }
 
   // If current user is signed out or an instructor, allow the
@@ -257,10 +272,10 @@ progress.initViewAs = function(store, isSignedInUser, isInstructor) {
     initialViewAs = query.viewAs || initialViewAs;
   }
 
-  store.dispatch(setViewType(initialViewAs));
+  dispatch(setViewType(initialViewAs));
 };
 
-progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
+progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
   const store = getStore();
   return $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
@@ -273,7 +288,12 @@ progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
  * as appropriate. If the user is not signed in, level progress data is populated
  * from session storage.
  */
-function queryUserProgress(store, scriptData, currentLevelId) {
+function queryUserProgress(
+  store,
+  scriptData,
+  currentLevelId,
+  shouldRenderTeacherPanel = true
+) {
   const userId = clientState.queryParams('user_id');
   store.dispatch(reduxQueryUserProgress(userId)).then(data => {
     const onOverviewPage = !currentLevelId;
@@ -290,8 +310,8 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       );
     }
 
-    const postMilestoneDisabled = store.getState().progress
-      .postMilestoneDisabled;
+    const postMilestoneDisabled =
+      store.getState().progress.postMilestoneDisabled;
     if (data.signedIn && postMilestoneDisabled) {
       showDisabledBubblesModal();
     }
@@ -300,11 +320,12 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       (data.isInstructor || data.teacherViewingStudent) &&
       !data.deeperLearningCourse
     ) {
-      const pageType = currentLevelId
-        ? pageTypes.level
-        : pageTypes.scriptOverview;
-
-      renderTeacherPanel(store, scriptData.id, scriptData.name, pageType);
+      if (shouldRenderTeacherPanel) {
+        const pageType = currentLevelId
+          ? pageTypes.level
+          : pageTypes.scriptOverview;
+        renderTeacherPanel(store, scriptData.id, scriptData.name, pageType);
+      }
     }
   });
 }
@@ -336,7 +357,8 @@ function initializeStoreWithProgress(
   isFullProgress,
   saveAnswersBeforeNavigation = false,
   isLessonExtras = false,
-  currentPageNumber
+  currentPageNumber,
+  displayName
 ) {
   store.dispatch(
     initProgress({
@@ -348,6 +370,7 @@ function initializeStoreWithProgress(
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
+      scriptDisplayName: scriptData.displayName,
       unitTitle: scriptData.title,
       unitDescription: scriptData.description,
       unitStudentDescription: scriptData.studentDescription,
@@ -355,7 +378,7 @@ function initializeStoreWithProgress(
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
       isLessonExtras: isLessonExtras,
-      currentPageNumber: currentPageNumber
+      currentPageNumber: currentPageNumber,
     })
   );
 

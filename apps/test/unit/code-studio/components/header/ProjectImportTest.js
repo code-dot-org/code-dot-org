@@ -1,12 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
-import {shallow} from 'enzyme';
-
-import {expect} from '../../../../util/reconfiguredChai';
-import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ProjectImport from '@cdo/apps/code-studio/components/header/ProjectImport';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('ProjectImport', () => {
   let wrapper, showImportPopupStub;
@@ -14,12 +14,12 @@ describe('ProjectImport', () => {
   beforeEach(() => {
     replaceOnWindow('Craft', {
       showImportFromShareLinkPopup: () => {},
-      showErrorMessagePopup: () => {}
+      showErrorMessagePopup: () => {},
     });
     replaceOnWindow('dashboard', {
       project: {
-        getSourceForChannel: () => {}
-      }
+        getSourceForChannel: () => {},
+      },
     });
 
     showImportPopupStub = sinon.stub(
@@ -47,8 +47,8 @@ describe('ProjectImport', () => {
     // stub a fake, nonresolving promise
     ajaxStub.returns({
       done: () => ({
-        error: () => {}
-      })
+        error: () => {},
+      }),
     });
     wrapper.simulate('click');
     expect(ajaxStub.calledOnce).to.be.true;

@@ -1,24 +1,28 @@
 /** @file Root component for Public Key Cryptography widget */
 import PropTypes from 'prop-types';
 import React from 'react';
-import CharacterPanel from './CharacterPanel';
-import EqualColumns from './EqualColumns';
-import Alice from './Alice';
-import AliceInstructions from './AliceInstructions';
-import Eve from './Eve';
-import EveInstructions from './EveInstructions';
-import Bob from './Bob';
-import BobInstructions from './BobInstructions';
-import ModuloClock from './ModuloClock';
-import color from '../util/color';
-import FontAwesome from '../templates/FontAwesome';
-import WidgetContinueButton from '../templates/WidgetContinueButton';
-import StartOverButton from './StartOverButton';
-import ToggleGroup from '../templates/ToggleGroup';
+import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import {Provider} from 'react-redux';
+import fontConstants from '@cdo/apps/fontConstants';
+
+import FontAwesome from '../legacySharedComponents/FontAwesome';
+import ToggleGroup from '../templates/ToggleGroup';
+import WidgetContinueButton from '../templates/WidgetContinueButton';
+import color from '../util/color';
+
+import Alice from './Alice';
+import AliceInstructions from './AliceInstructions';
+import Bob from './Bob';
+import BobInstructions from './BobInstructions';
+import CharacterPanel from './CharacterPanel';
+import EqualColumns from './EqualColumns';
+import Eve from './Eve';
+import EveInstructions from './EveInstructions';
+import ModuloClock from './ModuloClock';
+import StartOverButton from './StartOverButton';
 
 // Magic strings for view modes
 const ALICE_VIEW = 'alice';
@@ -28,19 +32,19 @@ const ALL_VIEW = 'all';
 
 const style = {
   root: {
-    fontFamily: `"Gotham 4r", sans-serif`,
-    marginTop: 10
+    ...fontConstants['main-font-regular'],
+    marginTop: 10,
   },
   characterViewWrapper: {
     clear: 'both',
-    marginTop: 10
+    marginTop: 10,
   },
   noCharacterSelected: {
     textAlign: 'center',
     padding: '100px 0',
     fontSize: 'x-large',
-    color: color.light_gray
-  }
+    color: color.light_gray,
+  },
 };
 
 /** Root component for Public Key Cryptography widget */
@@ -48,7 +52,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
   state = {
     animating: false,
     publicModulus: null,
-    selectedCharacter: null
+    selectedCharacter: null,
   };
 
   setSelectedCharacter = selectedCharacter =>
@@ -191,7 +195,7 @@ export default class PublicKeyCryptographyWidget extends React.Component {
     const store = createStore(
       combineReducers({
         isRtl,
-        responsive
+        responsive,
       })
     );
     return (
@@ -238,10 +242,10 @@ const CharacterSelect = props => (
 );
 CharacterSelect.propTypes = {
   selectedCharacter: PropTypes.string,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 const characterSelectTextStyle = {
   lineHeight: '26px',
   verticalAlign: 'baseline',
-  marginRight: 8
+  marginRight: 8,
 };

@@ -1,7 +1,9 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+
 import TextResponsesTable from '@cdo/apps/templates/textResponses/TextResponsesTable';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const responses = [
   {
@@ -11,7 +13,7 @@ const responses = [
     lesson: 'Lesson 1',
     studentId: 1,
     studentName: 'Student A',
-    url: 'http://fake.url'
+    url: 'http://fake.url',
   },
   {
     puzzle: 3,
@@ -20,7 +22,7 @@ const responses = [
     lesson: 'Lesson 1',
     studentId: 3,
     studentName: 'Student C',
-    url: 'http://fake.url'
+    url: 'http://fake.url',
   },
   {
     puzzle: 1,
@@ -29,8 +31,8 @@ const responses = [
     lesson: 'Lesson 1',
     studentId: 2,
     studentName: 'Student B',
-    url: 'http://fake.url'
-  }
+    url: 'http://fake.url',
+  },
 ];
 const sectionId = 1;
 

@@ -1,0 +1,765 @@
+{
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/1/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Creativity + Code\n\n#### **Welcome to the exciting world of coding, where creativity knows no bounds!**\n\n#### This professional learning module invites you to discover the possibilities of coding for creativity. With a focus on simple basics, we'll guide you through the process of crafting engaging animations that can later be enhanced into stories and interactive games. \n\n<img src=\"https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png\" alt=\"Image of a cartoon octopus holding a microphone and wearing a hat\" style=\"border-radius:40px; float: right; padding-right: 75px; height: 275px; clear: both; margin: 0 0px 0px 0;\">\n\n## Take the pre-survey\n\n##### Code.org values and is responsive to feedback. Please fill out <a href=\"https://studio.code.org/form/k5_selfpaced_pl_presurvey?survey_data[survey_variable]=csb\" target=\"blank\" rel=\"noopener noreferrer\">this short pre-survey</a> to  tell us about who you are and how we can best support you.\n\n<a class=\"btn btn-large btn-primary\" href=\"https://studio.code.org/form/k5_selfpaced_pl_presurvey?survey_data[survey_variable]=csb\" target=\"blank\" rel=\"noopener noreferrer\">Take the pre-survey</a>\n\n## In this module, you will:\n\n* #### Identify and explain fundamental CS concepts, including sprites, events and behaviors. \n* #### Demonstrate the application of event-based programming.\n* #### Create a program using sprites, events, and behaviors.\n\n### **Suggested time:** 60 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/1/levels/2": {
+    "display_name": "This is Sprite Lab",
+    "long_instructions": "## Event-based programming\n\n<br> \n\n<img src=\"https://images.code.org/4a84d3fe7921bb66fbf838d2a02cbe00-image-1702409135129.png\" alt=\"Image Sprite Lab characters\" width=\"250px\" style=\"border-radius:10px; float:right; margin: 0 20px 0px 40px;\">\n\n#### You will begin your journey in Sprite Lab. **Sprite Lab** is a block-based programming environment that allows students to create simple animations and games with objects and characters.\n\n#### Sprite Lab uses  a type of coding called **event-based programming**. Instead of just following a strict sequence of instructions, the flow of an **event-based program** is determined by events such as user actions, like clicking a button.\n\n#### _This approach is commonly found in interactive applications like video games._"
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/2/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Overview of Sprite Lab\n\n<img src=\"https://images.code.org/944d3cc9866f6a0be9962d9683338083-image-1699374347870.png\" alt=\"pink cartoon octopus with paintbrush and differnt tools\" width=\"275px\" style=\"border-radius:10px; float:right; margin: 0 75px 40px 75px;\">\n\n\n#### The next lesson will provide you with the basics to get you started on your program using Sprite Lab.\n\n## You will:\n\n* #### Learn about sprites and how to add them to your program.\n* #### Get acquainted with the costume feature to change the look of your sprite.\n* #### Add a background to your program. \n* #### Learn how to customize sprites and backgrounds.\n\n## Let's Get Started with sprites! \n\n### **Suggested time:** 15 minutes\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/2/levels/2": {
+    "short_instructions": "Match the bunny's fur to its environment.",
+    "long_instructions": "<p style = \"font-size: 18px;\">\n<i><b>Note:</b> The size of the instruction box can be adjusted by dragging the <img src=\"https://images.code.org/ce33cce5f5b67b04dbe8ebbc174fd370-image-1698852127857.png\" alt=\"Three grey circles to show the icon that adjusts the size of the instruction box.\" width=\"30px\" style=\"border-radius:10px margin: 0 10px 5px 0px;\"> symbol on the bottom of the box.</i> </p>\n\n<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \">A <strong>sprite</strong> is a digital character or object that can move and do things in a computer program.\n<br>\n<strong>Costumes</strong> make coding more creative and allow sprites to have different appearances.\n<br>\n<br>\nUsing a <b>background</b> is way to enhance the stage of your program and can be adjusted based on events to enhance your program. \n<br>\n<br>\nPractice adding a sprite and background and changing the costume in this lesson from the <strong>CS Connections Animal Adaptations</strong> curriculum.\n</p>\n</div>\n\n<br>\n\n#### **Rabbits have adapted different fur colors to blend into new environments.**\n\n-   #### Drag and connect a <code style=\"color:black; background-color:#B3B2FB\">set background</code> block under <code style=\"color:black; background-color:#FFBD46\">when run</code>\n-   #### Drag and connect a <code style=\"color:black; background-color:#F79EA5\">new sprite</code> block to your code\n-   #### **Change** the sprite costume to model the adaptation by using the drop down arrow to toggle to the desired costume.\n    <br>\n\n<p style = \"font-size: 16px;\"> \n<b><i>Press the <code style=\"color:black; background-color:#FFBD46\">run</code> button under the stage on the left side of your screen to test your code.</i></b></p>\n\n* * *\n\n**Bonus:** Try modeling the adaptation in another environment. (Change the background and costume)",
+    "authored_hints": {
+      "change costume dropdown": "Click the dropdown menu to choose a new sprite costume. \n\n[][0]"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/2/levels/3": {
+    "short_instructions": "Add a new sprite and change it's location.",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> While adding your sprite, you may have noticed the <strong>X,Y coordinates</strong> in the play space. Note that this grid is different from coordinate grids you may have seen in math class. In this grid, the <strong> bottom left corner </strong> is the starting point, marked as <strong> 0,0.</strong>\n As your characters move to the right, the X number gets bigger, and as they go up, the Y number gets bigger. \n<br>\n<br>\nPractice moving the sprite to set locations. \n    \n</p>\n</div>\n\n<br>\n\n#### **Rabbits have _adapted_ the color of their fur to blend into their environment and hide from predators.**\n\n-   #### Add a <code style=\"color:black; background-color:#F79EA5\">make new sprite</code> block to your code.\n    <img src=\"https://images.code.org/51ad72f6ba72c16b8094566622e310ab-image-1683905416875.gif\" style=\"width: 20%; float: right; padding-top: 20px\">\n-   #### Click the <code style=\"color:black; background-color:#EBD546\">location pin</code> to move the sprite to a hiding place.\n-   #### Add a new sprite as close as you can to the following location: **(95,75)**\n-   #### Add another new sprite as close as you can to the following location: **(300,100)**\n-   #### Press <code style=\"color:black; background-color:#FFBD46\">Run</code> when you are finished.",
+    "authored_hints": {
+      "change_location": "To change a sprite's location, click the pin on the location block, then click where you want it to go.\n\n[][0]",
+      "add_sprite": "Click and drag a `make new sprite` block and connect it under `when run`. \n\n[blockly block][0]"
+    },
+    "callouts": {
+      "hello_world_say": "Use this block to make sprites speak.",
+      "hello_world_make_sprite": "Use this block to create a sprite."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/2/levels/4": {
+    "short_instructions": "Show the elephant's adaptation in size with the set size block. ",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> Let’s learn how to make your program more engaging and creative with the <code style=\"color:black; background-color:#5ED5DD\">say</code> block. The <code style=\"color:black; background-color:#5ED5DD\">say</code> block is a way for your sprite to \"speak\" bringing your programs to life with words, messages, or even silly comments. \n<br>\n\n</p>\n</div>\n\n<br>\n\n#### **Elephants have evolved to be much larger than their main predators, the lion.**\n\n-   #### <code style=\"color:black; background-color:#5ED5DD\">set the size</code>  of the elephant sprite.\n-   #### Add a <code style=\"color:black; background-color:#5ED5DD\">say</code> block that explains the elephant's adaptation.\n-   #### Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to test your code.\n\n#### **Hint:** You must add a sprite before you can use the <code style=\"color:black; background-color:#5ED5DD\">say</code> block. Make sure the sprite in the <code style=\"color:black; background-color:#5ED5DD\">say</code> block matches the sprite you added.",
+    "authored_hints": {
+      "change_size": "Use this block to change the size of your sprite. You can click on the number to enter your own. \n\n[blockly block][0]"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/2/levels/5": {
+    "long_instructions": "## Uploading your own images\n\n#### An exciting way to enhance the creativity of your project is to upload your own images. You can upload images from your computers to customize your projects with your own sprites and backgrounds using the upload feature.\n\n<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 16px; \"> <B>Teacher Tip:</B> Notice that a <b><i>safety prompt</i></b> and check box appear when using the upload feature. This  reminds you and your students about online privacy to ensure students are aware they should not share any identifiable information, like their full name or address, in any of their photos.\n     \n</p>\n</div>\n\n<br>\n\n#### **Note:** Images must be smaller than 100 Kb before trying to upload.\n\n#### Checkout this video to see how to upload your own images."
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/2/levels/6": {
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> This level is an example from the <b> Coding Interactive Maps</b> module from the CS Connections curriculum. In it, students will practice uploading a custom feature to their maps.     \n</p>\n</div>\n <br>\n\n#### **Customize your sprite costume and background**\n\n#### Try it!  Use the upload feature to add images for a **sprite costume** and a **background** from your computer.\n\n<br>\n\n-   #### Click on the **costumes tab** on the top left of your screen to get started.\n\n-   #### Then, click on the <img src=\"https://images.code.org/5bef29976311104297491976743b803f-image-1706112983755.png\" alt=\"New Costume icon.\" width=\"40px\" style=\"border-radius:10px margin: 0 10px 5px 0px;\"> **new costume icon** to explore the library of sprites or add your own!\n\n-   #### Run the code, then wait for the \"Finish\" button to appear to continue on.\n\n[][0]",
+    "behavior_names": {
+      "moving NESW with arrow keys": "moving NESW with arrow keys",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/2/levels/7": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "You can add a custom sprite by uploading an image in the costume tab. ",
+          "correct": true
+        },
+        {
+          "text": "You cannot change the location of a sprite.",
+          "correct": false
+        },
+        {
+          "text": "A sprite and background are the same thing.",
+          "correct": false
+        },
+        {
+          "text": "It is not possible to customize the look of a sprite.",
+          "correct": false
+        },
+        {
+          "text": "You can change the look of a sprite by changing its costume.",
+          "correct": true
+        }
+      ],
+      "questions": [
+        {
+          "text": "Pick the two statements that are true about sprites in Sprite Lab:"
+        }
+      ],
+      "title": "Check for Understanding: Sprites and Backgrounds"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/3/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Programming with Events\n\n#### Now that you have set up your program with the background and sprites, you will learn how to make your program interactive.\n\n<img src=\"https://images.code.org/777a7b74cb2c3607d956c0c672d04f6f-image-1679964913802.png\" alt=\"Image of a cartoon octopus holding a microphone and wearing a hat singing\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this lesson, you will:\n\n* #### Learn about events and event-based programming.\n* #### Practice using events with different types of event blocks.\n* #### Create an interactive program using events.\n* #### Debug a program to make it work properly.\n\n\n### **Suggested time:** 20 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/3/levels/2": {
+    "long_instructions": "## What are Events?\n\n<img src=\"https://images.code.org/5b9e6d9e0450554f00956f6347a37f90-image-1704404653488.png\" alt=\"Image of the block code of an event handler\" width=\"350px\" style=\"border-radius:10px; float:right; margin: 0 0 0px 40px;\">\n\n#### <b>Events </b> are actions that cause something to happen. In code, events allow user interaction, like the arrow button being clicked to cause a sprite to move.\n\n#### An <b>event block</b> is a block that, when triggered, causes a specific chunk of code to run. In Sprite Lab, these blocks are green. You will notice event blocks are _not connected_ to the main section of your code.\n\n#### <i>This video is part of Code.org's Hello World! Visit <a href=\"https://code.org/helloworld\" target=\"blank\">Hello World! </a>for more information.</i>"
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/3/levels/3": {
+    "display_name": "Fish Schools",
+    "short_instructions": "We can also stop a sprite's behavior.",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<i>The lessons in this part of the module come from our <b>Computer Science Connections: Animal Adaptations</b> curriculum.</i><br><br>\n<b>Teacher tip: </b> Students sometimes get confused that the <b>event block </b>is not connected to the main code. Remind your students that events are separate segments of code that <i>wait</i> for a certain event to happen to be initiated.\n</p>\n</div>\n\n<br>\n\n<p style = \"font-size: 16px;\">\n<b> The first type of event we will practice with is a <code style=\"color:black; background-color:#6AF36C\">when sprite clicked</code> block. This will trigger certain actions to happen when the Sprite is clicked.</b> </p>\n\n#### **Note:** _Behaviors will continue until you code it to stop._\n\n-   #### Set up a new event <code style=\"color:black; background-color:#6AF36C\">when sprite clicked</code>.\n-   #### Add a <code style=\"color:black; background-color:#5ED5DD\">sprite stops</code> block to the event.\n-   #### Click <code style=\"color:black; background-color:#FFBD46\">Run</code> then **click on the sprite** to stop the behavior.\n\n* * *\n\n#### **Bonus:** Program another sprite to **begin** and **stop** behaviors when clicked.",
+    "authored_hints": {
+      "hint1": "Your `when clicked` event should look like this: \n[blockly block][0]"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping",
+      "wandering2": "wandering2",
+      "moving east2": "moving east2",
+      "spinning left2": "spinning left2",
+      "spinning right2": "spinning right2",
+      "shrinking2": "shrinking2",
+      "growing2": "growing2",
+      "moving south2": "moving south2",
+      "swimming left and right2": "swimming left and right2",
+      "moving north2": "moving north2",
+      "jittering2": "jittering2",
+      "moving west2": "moving west2",
+      "patrolling2": "patrolling2",
+      "moving with arrow keys2": "moving with arrow keys2",
+      "driving with arrow keys2": "driving with arrow keys2",
+      "fluttering2": "fluttering2",
+      "wobbling2": "wobbling2",
+      "moving west and looping2": "moving west and looping2",
+      "moving east and looping2": "moving east and looping2",
+      "moving north and looping2": "moving north and looping2",
+      "moving south and looping2": "moving south and looping2"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/3/levels/4": {
+    "display_name": "Timed Events",
+    "short_instructions": "Code the giraffe’s evolution over time from a small neck to a long neck so it can reach the leaves in the trees.",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> Another type of event is a  <code style=\"color:black; background-color:#6AF36C\">when __ pressed</code> event. This event causes the sprite to react based on an assigned keyboard button being pressed. For example, you can program the sprite to move to the right every time the right arrow button is pressed. \n<br>\n\n</p>\n</div>\n<br>\n\n#### **Giraffes have adapted to have very long necks so they can reach the leaves in tall trees.**\n\n-   #### Add a new <code style=\"color:black; background-color:#6AF36C\">when up pressed</code> event anywhere in the workspace.\n-   #### Connect a <code style=\"color:black; background-color:#5ED5DD\">change costume</code> block under the new event.\n-   #### Click <code style=\"color:black; background-color:#FFBD46\">Run</code> then press the **up arrow** to test it!",
+    "authored_hints": {
+      "first_event_hint": "Does your `event`(#6AF36C) use the short neck giraffe? \n\nDoes the costume change from **short to long neck**?\n\nThe change costume block should look like this:\n[blockly block][0]"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/3/levels/5": {
+    "short_instructions": "Code the octopus to change color when it moves to the sea grass or coral.",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> A third type of event is <code style=\"color:black; background-color:#6AF36C\">when sprite touches</code>. This event is used when sprites are in motion. The event will be triggered when the sprites locations match. \n<br>\n\n</div>\n\n<br>\n\n<img src=\"https://images.code.org/0bc859afe4e0556491d4fee0dbf072f3-image-1676503090043.png\" style=\"width: 15%; float: right; padding-top: 20px\">\n\n#### **Octopuses change color to be camouflaged in their environment!**\n\n-   #### Add a `when sprite touches`(#6AF36C) event anywhere in the workspace.\n\n-   #### Connect a `change costume`(#5ED5DD) block so it changes color to blend in.\n\n-   #### Click `Run`(#FFBD46) then use **arrow keys** to move the octopus to the plant.\n\n#### **Hint:** Pay close attention to the sprites selected in the code blocks. Make sure the sprites correctly match.\n\n* * *\n\n#### **_Bonus:_** Add another `when sprite touches`(#6AF36C) event with code to model the octopus changing color to blend in with other parts of the environment.",
+    "authored_hints": {
+      "new event": "Make sure to choose the correct sprite costumes in your event. \n\n[blockly block][0]"
+    },
+    "callouts": {
+      "hello_world_behavior_blocks": "Use this block with one of the behaviors below."
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping",
+      "wandering2": "wandering2",
+      "moving east2": "moving east2",
+      "spinning left2": "spinning left2",
+      "spinning right2": "spinning right2",
+      "shrinking2": "shrinking2",
+      "growing2": "growing2",
+      "moving south2": "moving south2",
+      "swimming left and right2": "swimming left and right2",
+      "moving north2": "moving north2",
+      "jittering2": "jittering2",
+      "moving west2": "moving west2",
+      "patrolling2": "patrolling2",
+      "moving with arrow keys2": "moving with arrow keys2",
+      "driving with arrow keys2": "driving with arrow keys2",
+      "fluttering2": "fluttering2",
+      "wobbling2": "wobbling2",
+      "moving west and looping2": "moving west and looping2",
+      "moving east and looping2": "moving east and looping2",
+      "moving north and looping2": "moving north and looping2",
+      "moving south and looping2": "moving south and looping2"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/3/levels/6": {
+    "long_instructions": "## Debugging\n\n#### In computer science, **debugging** refers to finding and fixing problems in computer programs. It's like being a detective for computers. Look at the code and figure out what's going wrong so you can make the program work just the way you want it to. Bugs, or **problems in our code**, are common and expected. Don't feel bad if your code doesn't work correctly the first time. Coding and debugging help build **persistence**.\n\n## Vocabulary\n\n<img style=\" float: left; width:10%;\" src=\"https://images.code.org/3168407cff8a2336f81a99ef14c40fe6-image-1699468057611.png\" alt = \"icon of a bug from the ecosystems module\" />\n\n#### **Bug** - Part of a program that does not work correctly.\n\n#### **Debugging** - Finding and fixing problems in an algorithm or program.\n\n#### **Persistence** - Not giving up.\n\n<br>\n\n#### Watch the video below to learn more about debugging."
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/3/levels/7": {
+    "short_instructions": "Code the octopus to change color when it moves to the sea grass or coral.",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n \n<b>Teacher Tip:</b> Encourage your students to share common <i>bugs</i> they have experienced with their code. Build discussions around debugging strategies. \n\n</p>\n</div>\n<br>\n\n<img src=\"https://images.code.org/0bc859afe4e0556491d4fee0dbf072f3-image-1676503090043.png\" style=\"width: 15%; float: right; padding-top: 20px\">\n\n#### **Octopuses change color to be camouflaged in their environment!**\n\n-   #### Debug this code so that the octopus changes color when it touches one of the sea plants.\n\n* * *\n\n#### **_Bonus:_** Add another `when sprite touches`(#6AF36C) event with code to model the octopus changing color to blend in with other parts of the environment.",
+    "authored_hints": {
+      "new event": "Make sure to choose the correct sprite costumes in your event. \n\n[blockly block][0]"
+    },
+    "callouts": {
+      "hello_world_behavior_blocks": "Use this block with one of the behaviors below."
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping",
+      "wandering2": "wandering2",
+      "moving east2": "moving east2",
+      "spinning left2": "spinning left2",
+      "spinning right2": "spinning right2",
+      "shrinking2": "shrinking2",
+      "growing2": "growing2",
+      "moving south2": "moving south2",
+      "swimming left and right2": "swimming left and right2",
+      "moving north2": "moving north2",
+      "jittering2": "jittering2",
+      "moving west2": "moving west2",
+      "patrolling2": "patrolling2",
+      "moving with arrow keys2": "moving with arrow keys2",
+      "driving with arrow keys2": "driving with arrow keys2",
+      "fluttering2": "fluttering2",
+      "wobbling2": "wobbling2",
+      "moving west and looping2": "moving west and looping2",
+      "moving east and looping2": "moving east and looping2",
+      "moving north and looping2": "moving north and looping2",
+      "moving south and looping2": "moving south and looping2"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/3/levels/8": {
+    "display_name": "Timed Events",
+    "short_instructions": "Use an event to create a model of the glowing fireflies at night.",
+    "long_instructions": " <div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> When planning for code, it’s important to think about how users will interact with the code. Practice using the different event blocks to complete this coding challenge.    \n</p>\n</div>\n\n</p>\n</div>\n<br>\n\n#### **Fireflies have developed a special chemical inside their bodies that creates a glow called _bioluminescence_.**\n\n#### Create a model of the glowing fireflies at night. Use the event block to change the background to night and make the firelflies glow!\n\n-   #### Add a new <code style=\"color:black; background-color:#6AF36C\">when down pressed</code> event.\n-   #### Add <code style=\"color:black; background-color:#B3B2FB\">set background</code> and <code style=\"color:black; background-color:#5ED5DD\">change sprite costume</code>.\n-   #### Click <code style=\"color:black; background-color:#FFBD46\">Run</code> then the **down arrow**.\n\n* * *\n\n#### **Bonus:** Add another event that changes the background back to daytime and the fireflies stop glowing.",
+    "authored_hints": {
+      "event_hint": "Make sure to add a `set background` block and a `change costume` block under your event. \n\nDon't forget to press the down arrow to trigger your event! \n\n[blockly block][0]"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/3/levels/9": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "The event block is attached to the main section of your code.",
+          "correct": false
+        },
+        {
+          "text": "Events make it impossible to have interactive code.",
+          "correct": false
+        },
+        {
+          "text": "You can only put one event block in your code.",
+          "correct": false
+        },
+        {
+          "text": "Events allow code to respond to certain actions, like pressing a button.",
+          "correct": true
+        }
+      ],
+      "questions": [
+        {
+          "text": "Which of the following is true regarding events in sprite lab?"
+        }
+      ],
+      "title": "Check for Understanding: Events"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/4/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Programming with Behaviors\n\n#### So far you have learned to set up your program with sprites and backgrounds and how to use events to make your program interactive. In this lesson, you will learn how to animate your sprite using behaviors.\n\n<img src=\"https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png\" alt=\"Image of a cartoon octopus holding a microphone and wearing a hat\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this lesson, you will:\n\n* #### Learn about using behavior blocks in your program.\n* #### Practice using different behavior blocks.\n* #### Create an interactive program using behaviors.\n* #### Combine your knowledge of events and behaviors to make a creative program.\n\n\n### **Suggested time:** 15 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/4/levels/2": {
+    "display_name": "How to Make a Sprite",
+    "long_instructions": "#### Take a look at how you can make your code more creative using behavior blocks in Sprite Lab."
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/4/levels/3": {
+    "short_instructions": "Let's learn to animate sprites using behaviors. ",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> <b>Teacher Tip:</b> A common <i>bug</i> when students program behaviors is not matching the sprite in a behavior block to a sprite that exists. Be sure students create a sprite before they try to code a behavior and double check that the <b>sprites match in the dropdown boxes.</b>       \n</p>\n</div>\n\n<br>\n\n#### **Animate sprites with a behavior. Behaviors are actions that happen over and over while the program runs.**\n\n-   #### Use a new <code style=\"color:black; background-color:#5ED5DD\">sprite begins</code> block to animate one of the sprites.\n-   #### Then choose a <code style=\"color:black; background-color:#6AF36C\">behavior</code> from the list to add to make your sprite start moving.\n-   #### Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to see the sprite begin the behavior.\n\n* * *\n\n#### **Bonus:** Add some more behaviors to your program!",
+    "authored_hints": {
+      "storyboard_behavior_example": "Use a `sprite begins` behavior block. Click on the dropdown menu to choose a new behavior.\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "hello_world_behavior_blocks": "Use this block with one of the behaviors below."
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping",
+      "wandering2": "wandering2",
+      "moving east2": "moving east2",
+      "spinning left2": "spinning left2",
+      "spinning right2": "spinning right2",
+      "shrinking2": "shrinking2",
+      "growing2": "growing2",
+      "moving south2": "moving south2",
+      "swimming left and right2": "swimming left and right2",
+      "moving north2": "moving north2",
+      "jittering2": "jittering2",
+      "moving west2": "moving west2",
+      "patrolling2": "patrolling2",
+      "moving with arrow keys2": "moving with arrow keys2",
+      "driving with arrow keys2": "driving with arrow keys2",
+      "fluttering2": "fluttering2",
+      "wobbling2": "wobbling2",
+      "moving west and looping2": "moving west and looping2",
+      "moving east and looping2": "moving east and looping2",
+      "moving north and looping2": "moving north and looping2",
+      "moving south and looping2": "moving south and looping2"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/4/levels/4": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Behavior Blocks\n\n#### Behavior blocks animate sprites. These are special blocks that allow sprites to complete specific actions. The behavior blocks make it easier for beginning coders to use more complex actions. \n \n\n## Let's take a look at this *growing* behavior.\n\n#### By adding the 'sprite begins' block, after run is pressed, the sprite will slowly get bigger. \n\n\n<img src=\"https://images.code.org/72569b194a488784e90945a2f87e6b48-image-1705006395844.gif\" alt= \"moving playspace and workspace window size\" style=\"float: left; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n\n<div style=\"clear:both\"/>\n\n<hr style=\"clear:both\">\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/4/levels/5": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Behavior Blocks\n\n## Let's see what is behind the scenes of this coding block.\n\n#### When you click on the blue edit tile, you can see that this behavior block has a continuous loop that changes the size of the sprite by 1. \n\n\n<img src=\"https://images.code.org/e6858a2e04e3d1ff107186536807208b-image-1704382549974.png\" alt=\" image of code for growing behavior\" style=\"float: left; height: 150px; clear: both; margin: 0 20px 20px 0;\">\n\n<img src=\"https://images.code.org/97dfd04cd1cc4afb577e16c0bad7935b-image-1704382594532.png\" alt=\" image of code for growing behavior\" style=\"float: left; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n\n<div style=\"clear:both\"/>\n\n<hr style=\"clear:both\">\n\n#### In summary, the behavior blocks help simplify complex code and easily animate our programs. \n\n\n<div style=\"clear:both\"/>\n\n\n## Let's explore behavior blocks on the next level.  \n\n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/4/levels/6": {
+    "display_name": "Timed Events",
+    "short_instructions": "Code the first move in the bird's silly dance. ",
+    "long_instructions": "#### **Dancing is a behavior many animals do to get attention or show they're the boss.**\n\n-   #### First, choose your <code style=\"color:black; background-color:#B3B2FB\">background</code> environment and bird costume for your <code style=\"color:black; background-color:#F79EA5\">sprite</code>.\n-   #### Then, add a <code style=\"color:black; background-color:#5ED5DD\">sprite begins</code> behavior block and choose a <code style=\"color:black; background-color:#6AF36C\">behavior</code> for the bird's first dance move.\n-   #### Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to see the start of the dance!\n\n#### **Hint:** Make sure the bird you selected in the new sprite block matches the bird in the behavior block.",
+    "authored_hints": {
+      "dance": "You can choose any behavior from the drop down list. \n<br>\n[][0]"
+    },
+    "behavior_names": {
+      "walk with arrow keys": "walk with arrow keys",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "jittering": "jittering",
+      "patrolling": "patrolling",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "moving south": "moving south",
+      "moving north": "moving north",
+      "moving west": "moving west",
+      "moving with arrow keys": "moving with arrow keys",
+      "swimming left and right": "swimming left and right",
+      "driving with arrow keys": "driving with arrow keys"
+    },
+    "behavior_descriptions": {
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/4/levels/7": {
+    "short_instructions": "Add an event to trigger the thrid move in the bird's dance. ",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> <b>Teacher Tip:</b> Remind students that behaviors do not stop until you tell them to with your code.    \n</p>\n</div>\n\n#### **Add another dance move with an event!**\n\n#### _(This is the code from your previous levels.)_\n\n-   #### Add a <code style=\"color:black; background-color:#6AF36C\">when right pressed</code> event.\n-   #### Connect a <code style=\"color:black; background-color:#5ED5DD\">sprite begins</code> block and choose a <code style=\"color:black; background-color:#6AF36C\">behavior</code>  to the new event.\n-   #### Press <code style=\"color:black; background-color:#FFBD46\">Run</code> and then **press the right arrow** to change the bird's dance moves.\n\n* * *\n\n#### **Bonus:** Add more events that trigger different dance move behaviors!\n\n[][0]",
+    "authored_hints": {
+      "event": "The new <code style=\"color:black; background-color:#6AF36C\">when right pressed</code> event can be placed anywhere in the workspace. ",
+      "event 2": "Be sure to choose a new behavior that is triggered by the event.\n\n[][0]"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
+    "behavior_descriptions": {
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "change the size of a sprite": "change the size of a sprite",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/4/levels/8": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Sprite"
+        },
+        {
+          "text": "Costume"
+        },
+        {
+          "text": "Background"
+        },
+        {
+          "text": "Event"
+        },
+        {
+          "text": "Behaviors"
+        }
+      ],
+      "markdown": "Drag the correct answer to the middle column to match the vocabulary with the definition. \n",
+      "questions": [
+        {
+          "text": "Digital character in a program"
+        },
+        {
+          "text": "Changes the look of a sprite"
+        },
+        {
+          "text": "Sets the scene for the program"
+        },
+        {
+          "text": "Makes something happen in a program based on an action like pressing a button"
+        },
+        {
+          "text": "Simplifies complex code to animate programs"
+        }
+      ],
+      "title": "Check for Understanding: Behaviors"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/4/levels/9": {
+    "long_instructions": "## Let's Create!\n\n#### It's time for you to put everything you've learned together and unleash your **creativity!**\n\n#### Sprite Lab offers limitless possibilities to innovate and create, inspiring students to think outside the box and express themselves with code.\n\n* * *\n\n#### Watch this video to refresh your understanding of Sprite Lab's features, empowering you to craft your own unique adventure with code."
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/4/levels/10": {
+    "short_instructions": "It's time to create whatever you want!",
+    "long_instructions": "<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> Congratulations! You have learned the basics of <b>event-based programming</b> and now it's time to review what you know and start creating!\n<br> \n<b>Note:</b> The previous levels were customized to help you learn. This level gives you access to all of the features in <b>Sprite Lab.</b> Have fun exploring and trying out what the blocks do.   \n</p>\n</div>\n\n<br>\n\n### **Use this level to practice creating with code.**\n\n#### _Not sure what to create? Some ideas could be a birthday card for a friend, recreating a scene from your favorite book or movie, or an all about me tutorial showcasing your favorite things!_\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/cbCRwipEkaXhe.AzOSYwavvMApEYUkCa/category_food/face_pizza.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/up6b2tgqAjH6fxO6bKFn7O0CrgtxSkFz/category_animals/cuteanimals_bear.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/hKXwNDtCaVI4G0Ow.udOCdsMRnK77A48/category_emoji/emoji_19.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/O1HNS9DSfUZLw6lzWIkyCTLChPoDOJhz/category_retro/retrocreature_18.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\n</div>\n\n* * *\n\n#### **Here are some reminders to help you get started with your project:**\n\n-   [ ] #### Begin by adding a <code style=\"color:black; background-color:#B3B2FB\">set background</code> block\n    ##### _Remember, you can access the full background library by clicking 'backgrounds' and then the 'new background' icon._\n-   [ ] #### Add one or more <code style=\"color:black; background-color:#F79EA5\">new sprites</code> to your code.\n    ##### _Don't forget, you can access the full sprite library by clicking 'costumes' and then the 'new costume' icon._\n-   [ ] #### Add <code style=\"color:green; background-color:#7DF9FF\">behavior</code>  blocks to make your sprites come to life.\n-   [ ] #### Try adding more features to your project to make it even better.\n-   [ ] #### Press the _Share_ button above to send your project to some friends!",
+    "callouts": {
+      "costumes_tab": "Click here to add costumes to your project."
+    },
+    "placeholder_texts": {
+      "6cd3556deb0da54bca060b4c39479839": "Hello, world!"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-2/lessons/5/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Next Steps\n\n#### Thank you for completing **CS Basics: Creativity with Code.** Now that you've learned some basic computer science skills, check out some of our curriculum and professional learning offerings to continue your journey!\n\n## Teach CS in your class\n\n#### Explore some of these curriculum options to get started teaching CS in your class right away.\n\n<a href = \"https://code.org/educate/csc\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/3f623ba6e5151732099b3441225f5a66-image-1706037967333.jpg\" alt=\"thumbnail for the CS Connections curriculum \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 40px;\"></a>\n\n<a href = \"https://code.org/educate/csf\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/1d4bfa99f2282f9972713f289f03ec08-image-1706037638798.jpg\" alt=\"thumbnail for the CS Fundamentals curriculum \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 20px;\"></a>\n\n<a href = \"https://code.org/oceans\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/bc294ba333174bf92e8f9bb60380a5b3-image-1706038353939.png\" alt=\"thumbnail for the CS Connections self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 50px 40px 20px;\"></a>\n\n## Continue learning \n#### Learn more about teaching CS with these self-paced professional learning modules. \n\n<a href = \"https://studio.code.org/s/self-paced-pl-csc-2023\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/b4ca41cd43376f374fc5408d76241e59-image-1706300331462.png\" alt=\"thumbnail for the CS Connections self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 40px;\"></a>\n\n<a href = \"https://studio.code.org/s/k5-onlinepd-2023\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/c35579aa157b3605228885e325ddb03d-image-1706299786558.png\" alt=\"thumbnail for the CS Fundamentals self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 20px;\"></a>\n\n<a href = \"https://images.code.org/eab8b38416b81b495275cd83372e9c9d-image-1706220671094.jpg\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/1bcbd2c06e0956971485522eff921d49-image-1706299155070.png\" alt=\"thumbnail for the CS Basicss self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 50px 50px 20px;\"></a>\n\n<br>\n\n<p>\n\n## Help us make this module better!\n\n#### Code.org values and is responsive to feedback. Please fill out this <a href=\"https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit2\" target=\"blank\" rel=\"noopener noreferrer\">short survey</a> to provide your feedback on this module.\n\n<a class=\"btn btn-large btn-primary\" href=\"https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit2\" target=\"blank\" rel=\"noopener noreferrer\">Take the survey</a>\n\n\n## Stay connected \n\n* #### Continue participating in the <a href=\"https://forum.code.org/\" target=\"blank\" rel=\"noopener noreferrer\">Code.org teacher forum</a>. \n\n* #### Connect with <a href=\"http://twitter.com/teachcode\" target=\"blank\" rel=\"noopener noreferrer\">@teachcode</a> on Twitter.\n\n* #### Join the <a href=\"https://www.csteachers.org/\" target=\"blank\" rel=\"noopener noreferrer\">Computer Science Teachers Association (CSTA)</a>. \n\n<br>\n</p>\n\n\n"
+    }
+  }
+}

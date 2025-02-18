@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+
 import msg from '@cdo/locale';
-import trackEvent from '../../util/trackEvent';
 
 class CodeWritten extends React.Component {
   static propTypes = {
     numLinesWritten: PropTypes.number.isRequired,
     children: PropTypes.node,
-    useChallengeStyles: PropTypes.bool
+    useChallengeStyles: PropTypes.bool,
   };
 
   render() {
@@ -19,7 +19,9 @@ class CodeWritten extends React.Component {
         className="lines-of-code-message"
         style={useChallengeStyles ? styles.challengeLineCounts : null}
       >
-        {msg.numLinesOfCodeWritten({numLines: numLinesWritten})}
+        {numLinesWritten > 0
+          ? msg.numLinesOfCodeWritten({numLines: numLinesWritten})
+          : null}
       </p>
     );
 
@@ -29,12 +31,10 @@ class CodeWritten extends React.Component {
         style={useChallengeStyles ? styles.details : null}
       >
         <summary
-          role="button"
           style={{
             ...styles.summary,
-            ...(useChallengeStyles ? styles.challengeSummary : {})
+            ...(useChallengeStyles ? styles.challengeSummary : {}),
           }}
-          onClick={() => trackEvent('showCode', 'click', 'dialog')}
         >
           <b>{msg.showGeneratedCode()}</b>
         </summary>
@@ -58,19 +58,19 @@ const styles = {
     fontWeight: 'normal',
     outline: 'none',
     padding: 5,
-    display: 'list-item'
+    display: 'list-item',
   },
   challengeLineCounts: {
-    fontSize: 16
+    fontSize: 16,
   },
   challengeSummary: {
     fontColor: 'black',
     fontSize: 14,
-    marginLeft: 40
+    marginLeft: 40,
   },
   details: {
-    textAlign: 'left'
-  }
+    textAlign: 'left',
+  },
 };
 
 export default Radium(CodeWritten);

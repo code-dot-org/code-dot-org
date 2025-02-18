@@ -1,16 +1,18 @@
-import {assert} from '../util/reconfiguredChai';
-import {setupTestBlockly} from './util/testBlockly';
 import {parseElement} from '@cdo/apps/xml';
 
-var requiredBlockUtils = require('@cdo/apps/required_block_utils');
-var blockUtils = require('@cdo/apps/block_utils');
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
-describe('blockUtils', function() {
-  beforeEach(function() {
+import {setupTestBlockly} from './util/testBlockly';
+
+var blockUtils = require('@cdo/apps/block_utils');
+var requiredBlockUtils = require('@cdo/apps/required_block_utils');
+
+describe('blockUtils', function () {
+  beforeEach(function () {
     setupTestBlockly();
   });
 
-  it('can create a block from XML', function() {
+  it('can create a block from XML', function () {
     var blockXMLString =
       '<block type="math_number"><field name="NUM">10</field></block>';
     assert(Blockly.mainBlockSpace.getBlockCount() === 0);
@@ -20,7 +22,7 @@ describe('blockUtils', function() {
     assert(Blockly.cdoUtils.getBlockFields(newBlock).length === 1);
   });
 
-  it('can create a block from XML and remove it from the workspace', function() {
+  it('can create a block from XML and remove it from the workspace', function () {
     var blockXMLString =
       '<block type="math_number"><field name="NUM">10</field></block>';
     assert(Blockly.mainBlockSpace.getBlockCount() === 0);
@@ -31,12 +33,12 @@ describe('blockUtils', function() {
   });
 });
 
-describe('requiredBlockUtils', function() {
-  beforeEach(function() {
+describe('requiredBlockUtils', function () {
+  beforeEach(function () {
     setupTestBlockly();
   });
 
-  it('can recognize matching titles in blocks', function() {
+  it('can recognize matching titles in blocks', function () {
     var blockUserString =
       '<block type="math_number"><field name="NUM">10</field></block>';
     var blockUser = blockUtils.domStringToBlock(blockUserString);
@@ -48,7 +50,7 @@ describe('requiredBlockUtils', function() {
     assert(requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
   });
 
-  it('can recognize non-matching titles in blocks', function() {
+  it('can recognize non-matching titles in blocks', function () {
     var blockUser = blockUtils.domStringToBlock(
       '<block type="block_with_3_titles"><field name="A">10</field></block>'
     );
@@ -59,7 +61,7 @@ describe('requiredBlockUtils', function() {
     assert(!requiredBlockUtils.blocksMatch(blockUser, blockRequired));
   });
 
-  it('can recognize matching entire blocks', function() {
+  it('can recognize matching entire blocks', function () {
     var blockUser = blockUtils.domStringToBlock(
       '<block type="block_with_3_titles"><field name="A">10</field></block>'
     );
@@ -69,7 +71,7 @@ describe('requiredBlockUtils', function() {
     assert(requiredBlockUtils.blocksMatch(blockUser, blockRequired));
   });
 
-  it('can recognize mismatching block types', function() {
+  it('can recognize mismatching block types', function () {
     var blockUser = blockUtils.domStringToBlock(
       '<block type="logic_boolean"></block>'
     );
@@ -79,7 +81,7 @@ describe('requiredBlockUtils', function() {
     assert(!requiredBlockUtils.blocksMatch(blockUser, blockRequired));
   });
 
-  it('can recognize matching titles in blocks with multiple titles', function() {
+  it('can recognize matching titles in blocks with multiple titles', function () {
     var blockUser = blockUtils.domStringToBlock(
       '<block type="block_with_3_titles"><field name="A">1</field><field name="B">2</field><field name="C">3</field></block>'
     );
@@ -89,7 +91,7 @@ describe('requiredBlockUtils', function() {
     assert(requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
   });
 
-  it('can recognize mis-matching titles in blocks with differing Aber of titles', function() {
+  it('can recognize mis-matching titles in blocks with differing Aber of titles', function () {
     var blockUser = blockUtils.domStringToBlock(
       '<block type="block_with_3_titles"><field name="A">1</field></block>'
     );
@@ -100,7 +102,7 @@ describe('requiredBlockUtils', function() {
     assert(!requiredBlockUtils.blockFieldsMatch(blockRequired, blockUser));
   });
 
-  it('can recognize mis-matching titles in with multiple titles', function() {
+  it('can recognize mis-matching titles in with multiple titles', function () {
     var blockUser = blockUtils.domStringToBlock(
       '<block type="block_with_3_titles"><field name="A">1</field><field name="B">2</field></block>'
     );
@@ -110,7 +112,7 @@ describe('requiredBlockUtils', function() {
     assert(!requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
   });
 
-  it('can recognize matching blocks with mismatched ignored attributes', function() {
+  it('can recognize matching blocks with mismatched ignored attributes', function () {
     var blockUser = parseElement(
       '<block type="block_with_3_titles" deletable="false"><field name="A">1</field><field name="B">2</field></block>'
     );
@@ -126,7 +128,7 @@ describe('requiredBlockUtils', function() {
     );
   });
 
-  it('can recognize non-matching blocks with mismatched ignorarable attributes', function() {
+  it('can recognize non-matching blocks with mismatched ignorarable attributes', function () {
     var blockUser = parseElement(
       '<block type="block_with_3_titles" inputcount="3"><field name="A">1</field><field name="B">2</field></block>'
     );
@@ -142,7 +144,7 @@ describe('requiredBlockUtils', function() {
     );
   });
 
-  it('can recognize matching blocks with mismatched ignored ignorarable attributes', function() {
+  it('can recognize matching blocks with mismatched ignored ignorarable attributes', function () {
     var blockUser = parseElement(
       '<block type="block_with_3_titles" inputcount="3"><field name="A">1</field><field name="B">2</field></block>'
     );
@@ -158,7 +160,7 @@ describe('requiredBlockUtils', function() {
     );
   });
 
-  it('can recognize matching blocks with unspecified children', function() {
+  it('can recognize matching blocks with unspecified children', function () {
     var blockUser = parseElement(
       '<block type="block_with_3_titles" inputcount="2"><field name="A">1</field><field name="B">2</field></block>'
     );
@@ -174,7 +176,7 @@ describe('requiredBlockUtils', function() {
     );
   });
 
-  it('can recognize non-matching blocks with specified children', function() {
+  it('can recognize non-matching blocks with specified children', function () {
     var blockUser = parseElement(
       '<block type="block_with_3_titles" inputcount="2"><field name="A">1</field><field name="B">2</field></block>'
     );
@@ -190,7 +192,7 @@ describe('requiredBlockUtils', function() {
     );
   });
 
-  it('can recognize non-matching blocks with missing children', function() {
+  it('can recognize non-matching blocks with missing children', function () {
     var blockUser = parseElement(
       '<block type="block_with_3_titles" inputcount="2"></block>'
     );
@@ -207,30 +209,30 @@ describe('requiredBlockUtils', function() {
   });
 });
 
-describe('forceInsertTopBlock', function() {
-  it('no blocks', function() {
+describe('forceInsertTopBlock', function () {
+  it('no blocks', function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml = '';
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"/></xml>';
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"/></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
     assert(result === expected, msg);
 
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"/></xml>';
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"/></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
     assert(result === expected, msg);
   });
 
-  it('single block', function() {
+  it('single block', function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml = '<block type="foo"/>';
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       withoutXml +
       '</next></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
@@ -239,21 +241,21 @@ describe('forceInsertTopBlock', function() {
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       withoutXml +
       '</next></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
     assert(result === expected, msg);
   });
 
-  it('two unattached blocks', function() {
+  it('two unattached blocks', function () {
     var withXml, withoutXml, result, expected, msg;
     var block1 = '<block type="foo"/>';
     var block2 = '<block type="foo2"/>';
     withoutXml = block1 + block2;
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       block1 +
       '</next></block>' +
       block2 +
@@ -264,7 +266,7 @@ describe('forceInsertTopBlock', function() {
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       block1 +
       '</next></block>' +
       block2 +
@@ -273,12 +275,12 @@ describe('forceInsertTopBlock', function() {
     assert(result === expected, msg);
   });
 
-  it('two attached blocks', function() {
+  it('two attached blocks', function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml = '<block type="foo"><next><block type="foo2"/></next></block>';
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       withoutXml +
       '</next></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
@@ -287,21 +289,21 @@ describe('forceInsertTopBlock', function() {
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       withoutXml +
       '</next></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
     assert(result === expected, msg);
   });
 
-  it('two function blocks', function() {
+  it('two function blocks', function () {
     var withXml, withoutXml, result, expected, msg;
     var block1 = '<block type="procedures_defnoreturn"/>';
     var block2 = '<block type="procedures_defnoreturn"/>';
     withoutXml = block1 + block2;
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"/>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"/>' +
       block1 +
       block2 +
       '</xml>';
@@ -311,7 +313,7 @@ describe('forceInsertTopBlock', function() {
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"/>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"/>' +
       block1 +
       block2 +
       '</xml>';
@@ -319,7 +321,7 @@ describe('forceInsertTopBlock', function() {
     assert(result === expected, msg);
   });
 
-  it('already has a when_run', function() {
+  it('already has a when_run', function () {
     var withXml, withoutXml, result, expected, msg;
     withoutXml =
       '<block type="when_run" movable="false" deletable="false"><next><block type="foo"/></next></block>';
@@ -331,29 +333,6 @@ describe('forceInsertTopBlock', function() {
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected = withXml;
-    msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
-    assert(result === expected, msg);
-  });
-
-  it('insert functional_compute', function() {
-    var withXml, withoutXml, result, expected, msg;
-    withoutXml = '<block type="foo"/>';
-    result = blockUtils.forceInsertTopBlock(withoutXml, 'functional_compute');
-    expected =
-      '<xml><block type="functional_compute" movable="false" deletable="false">' +
-      '<functional_input name="ARG1">' +
-      withoutXml +
-      '</functional_input></block></xml>';
-    msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
-    assert(result === expected, msg);
-
-    withXml = '<xml>' + withoutXml + '</xml>';
-    result = blockUtils.forceInsertTopBlock(withXml, 'functional_compute');
-    expected =
-      '<xml><block type="functional_compute" movable="false" deletable="false">' +
-      '<functional_input name="ARG1">' +
-      withoutXml +
-      '</functional_input></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
     assert(result === expected, msg);
   });

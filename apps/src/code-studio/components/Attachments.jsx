@@ -1,9 +1,8 @@
-/* eslint-disable react/no-is-mounted */
-/* global dashboard */
-
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import {assets as assetsApi} from '@cdo/apps/clientApi';
+
 import assetListStore from '../assets/assetListStore';
 
 /**
@@ -12,7 +11,7 @@ import assetListStore from '../assets/assetListStore';
 export default class Attachments extends React.Component {
   static propTypes = {
     readonly: PropTypes.bool,
-    showUnderageWarning: PropTypes.bool
+    showUnderageWarning: PropTypes.bool,
   };
 
   state = {loaded: false};
@@ -42,7 +41,7 @@ export default class Attachments extends React.Component {
       'document',
       this.setState.bind(this, {loaded: true}),
       {
-        showUnderageWarning: this.props.showUnderageWarning
+        showUnderageWarning: this.props.showUnderageWarning,
       }
     );
   };
@@ -92,7 +91,7 @@ export default class Attachments extends React.Component {
 const styles = {
   button: {
     float: 'left',
-    marginRight: '5px'
+    marginRight: '5px',
   },
   attachment: {
     background: '#08c',
@@ -101,6 +100,6 @@ const styles = {
     padding: '0 5px',
     margin: '4px 4px 4px 0',
     float: 'left',
-    fontSize: '0.8em'
-  }
+    fontSize: '0.8em',
+  },
 };

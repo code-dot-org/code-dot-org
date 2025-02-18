@@ -20,3 +20,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 The `Painter` object needs to turn right after moving three spaces. To turn right, the `Painter` object must turn left three times. The `Painter` class does not have a `turnRight()` method.
 MARKDOWN
+
+allow_multiple_attempts true

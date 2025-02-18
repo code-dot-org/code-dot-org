@@ -1,12 +1,12 @@
-import QuestionAveragesTable from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/question_averages_table';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from 'chai';
-import {shallow} from 'enzyme';
+
+import QuestionAveragesTable from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/question_averages_table';
 
 describe('Question Averages Table', () => {
   const questions = [
     {text: 'Question 1', key: 'question_1', score_base: '5'},
-    {text: 'Question 2', key: 'question_2', score_base: '5'}
+    {text: 'Question 2', key: 'question_2', score_base: '5'},
   ];
   const allMyWorkshopsData = {question_1: 5, question_2: 4};
   const allWorkshopsData = {question_1: 4.1, question_2: 3.1};
@@ -18,7 +18,7 @@ describe('Question Averages Table', () => {
       elements.map(element => {
         return element.text();
       })
-    ).to.deep.equal(values);
+    ).toEqual(values);
   };
 
   it('Renders table for a single facilitator view', () => {
@@ -40,32 +40,30 @@ describe('Question Averages Table', () => {
       '',
       'This workshop',
       'All my Workshop type',
-      'All workshops'
+      'All workshops',
     ]);
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(0)
-        .find('td'),
-      ['Question 1', '4.5 / 5', '5 / 5', '4.1 / 5']
-    );
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(1)
-        .find('td'),
-      ['Question 2', '3.2 / 5', '4 / 5', '3.1 / 5']
-    );
-    expect(questionAveragesTable.find('tbody tr').length).to.equal(2);
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(0).find('td'), [
+      'Question 1',
+      '4.5 / 5',
+      '5 / 5',
+      '4.1 / 5',
+    ]);
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(1).find('td'), [
+      'Question 2',
+      '3.2 / 5',
+      '4 / 5',
+      '3.1 / 5',
+    ]);
+    expect(questionAveragesTable.find('tbody tr').length).toBe(2);
   });
 
   it('Renders table for multiple facilitator view', () => {
     const thisWorkshopData = {
       question_1: {
         'Facilitator 1': 2,
-        'Facilitator 2': 2.5
+        'Facilitator 2': 2.5,
       },
-      question_2: 4.9
+      question_2: 4.9,
     };
 
     const questionAveragesTable = shallow(
@@ -86,22 +84,24 @@ describe('Question Averages Table', () => {
       'Facilitator 1',
       'Facilitator 2',
       'All my Workshop type',
-      'All workshops'
+      'All workshops',
     ]);
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(0)
-        .find('td'),
-      ['Question 1', '', '2 / 5', '2.5 / 5', '5 / 5', '4.1 / 5']
-    );
-    assertRowEquals(
-      questionAveragesTable
-        .find('tbody tr')
-        .at(1)
-        .find('td'),
-      ['Question 2', '4.9 / 5', '', '', '4 / 5', '3.1 / 5']
-    );
-    expect(questionAveragesTable.find('tbody tr').length).to.equal(2);
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(0).find('td'), [
+      'Question 1',
+      '',
+      '2 / 5',
+      '2.5 / 5',
+      '5 / 5',
+      '4.1 / 5',
+    ]);
+    assertRowEquals(questionAveragesTable.find('tbody tr').at(1).find('td'), [
+      'Question 2',
+      '4.9 / 5',
+      '',
+      '',
+      '4 / 5',
+      '3.1 / 5',
+    ]);
+    expect(questionAveragesTable.find('tbody tr').length).toBe(2);
   });
 });

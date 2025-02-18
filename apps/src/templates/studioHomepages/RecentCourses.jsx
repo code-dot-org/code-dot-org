@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import i18n from '@cdo/locale';
+
+import styleConstants from '../../styleConstants';
 import ContentContainer from '../ContentContainer';
+
 import CourseCard from './CourseCard';
-import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
+import SetUpCourses from './SetUpCourses';
+import shapes from './shapes';
 import TopCourse from './TopCourse';
 import ViewFeedback from './ViewFeedback';
-import styleConstants from '../../styleConstants';
-import i18n from '@cdo/locale';
-import shapes from './shapes';
 
 const contentWidth = styleConstants['content-width'];
 
@@ -18,13 +21,13 @@ export default class RecentCourses extends Component {
     topCourse: shapes.topCourse,
     isTeacher: PropTypes.bool.isRequired,
     hasFeedback: PropTypes.bool.isRequired,
-    isProfessionalLearningCourse: PropTypes.bool
+    isProfessionalLearningCourse: PropTypes.bool,
   };
 
   static defaultProps = {
     courses: [],
     isTeacher: false,
-    hasFeedback: false
+    hasFeedback: false,
   };
 
   render() {
@@ -33,7 +36,7 @@ export default class RecentCourses extends Component {
       topCourse,
       isTeacher,
       hasFeedback,
-      isProfessionalLearningCourse
+      isProfessionalLearningCourse,
     } = this.props;
     const topFourCourses = courses.slice(0, 4);
     const moreCourses = courses.slice(4);
@@ -94,6 +97,6 @@ const styles = {
     width: contentWidth,
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+  },
 };

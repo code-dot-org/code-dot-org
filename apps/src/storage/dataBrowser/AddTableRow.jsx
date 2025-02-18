@@ -1,17 +1,22 @@
-import FirebaseStorage from '../firebaseStorage';
-import PendingButton from '../../templates/PendingButton';
-import PropTypes from 'prop-types';
-import React from 'react';
-import {castValue} from './dataUtils';
-import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import msg from '@cdo/locale';
+
+import PendingButton from '../../legacySharedComponents/PendingButton';
+import {storageBackend} from '../storage';
+
+import {castValue} from './dataUtils';
+import {refreshCurrentDataView} from './loadDataForView';
+
+import dataStyles from './data-styles.module.scss';
 
 const INITIAL_STATE = {
   isAdding: false,
   // An object whose keys are column names and values are the raw user input.
-  newInput: {}
+  newInput: {},
 };
 
 class AddTableRow extends React.Component {
@@ -19,14 +24,14 @@ class AddTableRow extends React.Component {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired,
     showError: PropTypes.func.isRequired,
-    hideError: PropTypes.func.isRequired
+    hideError: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
 
   handleChange(columnName, event) {
     const newInput = Object.assign({}, this.state.newInput, {
-      [columnName]: event.target.value
+      [columnName]: event.target.value,
     });
     this.setState({newInput});
   }
@@ -38,10 +43,13 @@ class AddTableRow extends React.Component {
         castValue(inputString, /* allowUnquotedStrings */ false)
       );
       this.setState({isAdding: true});
-      FirebaseStorage.createRecord(
+      storageBackend().createRecord(
         this.props.tableName,
         record,
-        () => this.setState(INITIAL_STATE),
+        () => {
+          refreshCurrentDataView();
+          this.setState(INITIAL_STATE);
+        },
         msg => console.warn(msg)
       );
     } catch (e) {

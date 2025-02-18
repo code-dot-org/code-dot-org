@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class LevelGroup < DSLDefined
@@ -35,6 +36,7 @@ class LevelGroup < DSLDefined
       title 'title of the assessment here'
       submittable 'true'
       anonymous 'false'
+      activity_guide_level 'false'
 
       page
       level 'level1'
@@ -181,8 +183,8 @@ class LevelGroup < DSLDefined
       level.clone_sublevels_with_suffix(get_levels_and_texts_by_page, suffix)
       level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
       level
-    rescue Exception => e
-      raise e, "Failed to clone LevelGroup #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
+    rescue Exception => exception
+      raise exception, "Failed to clone LevelGroup #{name.inspect} as #{new_name.inspect}. Message:\n#{exception.message}", exception.backtrace
     end
   end
 
@@ -225,11 +227,11 @@ class LevelGroup < DSLDefined
     # Go through each sublevel
     script_level.level.levels.map do |sublevel|
       question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
-                      sublevel.properties.try(:[], "long_instructions")
+        sublevel.properties.try(:[], "long_instructions")
 
       # Go through each student, and make sure to shuffle their results for additional
       # anonymity.
-      results = section.students.map do |student|
+      results = section.students.filter_map do |student|
         # Skip student if they haven't submitted for this LevelGroup.
         user_level = UserLevel.find_by(
           user: student,
@@ -239,7 +241,7 @@ class LevelGroup < DSLDefined
         next unless user_level.try(:submitted)
 
         get_sublevel_result(sublevel, student.last_attempt(sublevel).try(:level_source).try(:data))
-      end.compact.shuffle
+      end.shuffle
 
       answers = sublevel.properties.try(:[], "answers")
       answer_texts = answers.map {|answer| answer["text"]} if answers

@@ -1,0 +1,379 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T15:09:13.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayPainter</code> class declares an instance variable for a 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> values to store the paint colors an <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayPainter</code> object can use to paint with. The constructor initializes the 1D array to store the number of values specified by the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">numPainterColors</code>.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayPainter</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">toString()</code> method to return a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> containing the text <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Number of Paint Colors: \"</code> followed by the length of the 1D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">paintColors</code>.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">NeighborhoodRunner.java</code>, print the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ArrayPainter</code> object.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with accessing the length of a 1D array.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "csa_view_mode": "neighborhood",
+    "reference_links": [
+      "/courses/csa-2023/guides/one-dimensional-arrays"
+    ],
+    "display_name": "Paint Colors",
+    "bubble_choice_description": "Get the length of a 1D array that stores the paint colors an `ArrayPainter` object can use to paint with.",
+    "thumbnail_url": "https://images.code.org/76123ffdbe1bd7a6544406b0cdec8bd3-Screenshot 2023-01-13 142514.png",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ],
+      [
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        }
+      ]
+    ],
+    "encrypted_validation": "o7yQ3e399OohFBEo5QSD4f1H0EWTM2dBUjvGDs8EtDwIn7V7U1lUSew53QYj\nJEt5x/qAfoTr2CVJTjxm8p53vv8n2FDhhX+YQdknCcfxsN6fBQFTr5FAYP81\nyOX2MK/Tl2xZ+EIZx2NiDePqR+djrCDl4f0iGmKyEMZfsOsJoM3efsgjg2eY\nGfYIIB703lT21rgO8lCZ9ZyZ3sgWSCcYoVWbLfIX07T5YhHmT41UgWAb+KIh\nSQ0YtnXEhFKwJGfP8JpfaqeopodkjxOz9fh8m2wCCQTTgXqwDR/paeVhvkJg\nxDmV6UOuZSPdPX7IUTfmJru3ZU3dtQ51gYjoToCpPEN2Ffdg74EiEm2PYKf2\nZZ2UHUrIrlTLAdEC0qTPM8dVHKSTdYcnbnzqW2/loMfyUL3RETLzCwyH5+f8\n8vN/xogX2Ixc/4dx5pu7EtRw9Mm9z/TUNWrjaagbIILBr0t1ILkFYMFWMwo/\n9e92m1rHOImeKtpgvX8QaUau3ZbYxWBpUe1btH9KRxpaBrcioAcd+7Sl6PMr\nYj93shW63xVzSQzcCSAv3ddFjYJr5vxkHsqSA1fSU2VlHX00WD4jqOROL+Ls\nIl12N0reU0Pf1gnOL+hSzOjtHOyW3J4Lui2B6CoO92WdEkFLKC6WqumTg39h\nqTf9LA/g2ScdfHYH2gWTPVtN9TmW9+2s8+Tz+NEgn3ruwnMyZdiM1ZtRZU+L\nkXasEyaOFAAykwALrzuYIrQ2k5oKl+tabq2c0g757vIA8WyKjpdMEcigvfvv\nFPQTRZeN2NSdrJDnvWT2rOBoIkgIB4QvAU4Z2CY7/diOu8IK8S/6fSUoHa75\nUp12uwaFWPdBL7WwKYj5fK20jUCh08/gLf+OfwarZWrPW/CvyFBGkKYx1Zfk\nHFWLjIp1XojSHbv7j4HI9Z4MsK+nh25XiCBoxfIs6xMKOoFQkqqLTeYk9JiO\nwQEpVXjuG1sR/yQl9fUi3d1gFSHL28o4frkfICWdhUw7DqL+/qhJHKOez1LA\n3NVykbzZoxijSGHdxKPeOn9DfIwwQYJS6tzEXjiXXVxzoyoXccBxE03hp5UH\nzV/Gw65LdBLzed9RQJDNd1TI5PfHTufo19lJf/CxVjlrJX0pC+zfwZQb5UIU\nnL+IUgg7qpVR/hTVd8Fsvi04HG6O0uvWlWjyI/4oaUMdxDt68OoIwLgXvSzn\nstFVSsffqwk+DWM7fJu9Hz79f4bnWeJidnZ4WT2mp31rQj7ewoK2THzK7Qal\nJeyXdR1iYTyaRF91NANVguNgftGIvjlYpdgEXCYsMvhtERMZat1K0Km+HRqb\nX6zi16HbeGCrpwr1umkB9rWiAfpoWLQj4XuqGrNQO+F1RHn7mlpas3Io0mIN\n+FvY4MsXKFmJ+VJ5fBgOYww/4wPNDGv2dWX/Wp/6KYZOFSWxs4zp8ARjQtSy\nVVyRYOD2qjQChPBgOuhvqpMcypEwl/jJrqJnj3rj16QG2nXuYAwq+PusrRld\nrvK8uJZSjDPtzlKxXoFAY3jelaQgg1OCGGGEhqOK4PXyiw7kA1k/lRyDTN23\nDpsULUACl//Rm2a+Md83CAmPpjYI+KvYUJ35Zn/3sTRSgHe65X1F3OVcFZ0U\nJp2tuJlhnifisZHkK54IH7JkpGRsFrraGeEVRqrDBjql\n",
+    "encrypted_exemplar_sources": "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\nsTXG3mK/VvgT7sfMaONC7XXEonOx/AzUQ87C\n",
+    "start_sources": {
+      "NeighborhoodRunner.java": {
+        "text": "import org.code.neighborhood.*;\n\npublic class NeighborhoodRunner {\n  public static void main(String[] args) {\n\n    ArrayPainter bruce = new ArrayPainter(2, 4, \"south\", 20, 10);\n    \n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Print the ArrayPainter object.\n     * -----------------------------------------------------------------------------\n     */   \n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "ArrayPainter.java": {
+        "text": "import org.code.neighborhood.*;\n\n/*\n * Represents a Painter that has a 1D array of paint colors\n */\npublic class ArrayPainter extends Painter {\n\n  private String[] paintColors;    // The 1D array of paint colors\n\n  /*\n   * Sets the x, y, direction, and paint to default values and\n   * initializes paintColors to store two paint colors\n   */\n  public ArrayPainter() {\n    paintColors = new String[2];\n  }\n\n  /*\n   * Sets x, y, direction, and paint to the specified values and initializes\n   * paintColors to store the specified number of paint colors\n   */\n  public ArrayPainter(int x, int y, String direction, int paint, int numPaintColors) {\n    super(x, y, direction, paint);\n    paintColors = new String[numPaintColors];\n  }\n\n  /*\n   * Returns a String containing the number of paint colors in the 1D array paintColors\n   */\n  public String toString() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Return a String containing the text \"Number of Paint Colors: \" followed\n     * by the length of the 1D array paintColors.\n     * -----------------------------------------------------------------------------\n     */\n    \n    return \"\";\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "video_key": "csa_one_dimensional_arrays",
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T15:09:13.695+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L6d_2025\\\"\"],\"cloned_from\":\"CSA U3L1-L6d_2025\"}]"
+}]]></config>
+</Javalab>

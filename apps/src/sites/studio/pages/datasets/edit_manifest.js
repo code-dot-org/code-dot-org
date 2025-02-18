@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import data, {setLibraryManifest} from '@cdo/apps/storage/redux/data';
-import {getStore, registerReducers} from '@cdo/apps/redux';
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import ManifestEditor from '@cdo/apps/storage/levelbuilder/ManifestEditor';
 
-$(document).ready(function() {
+import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import ManifestEditor from '@cdo/apps/storage/levelbuilder/ManifestEditor';
+import data, {setLibraryManifest} from '@cdo/apps/storage/redux/data';
+import getScriptData from '@cdo/apps/util/getScriptData';
+
+$(document).ready(function () {
   const manifest = getScriptData('libraryManifest');
   registerReducers({data});
   const store = getStore();
@@ -20,7 +21,7 @@ $(document).ready(function() {
   );
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
   initializeCodeMirror(codeMirrorArea, 'application/json', {
-    callback: onChange
+    callback: onChange,
   });
 });
 

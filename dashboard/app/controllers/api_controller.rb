@@ -5,16 +5,10 @@ class ApiController < ApplicationController
   layout false
   include LevelsHelper
 
-  private def query_clever_service(endpoint)
-    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
-    begin
-      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
-      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
-      yield JSON.parse(response)['data']
-    rescue RestClient::ExceptionWithResponse => e
-      render status: e.response.code, json: {error: e.response.body}
-    end
-  end
+  GOOGLE_AUTH_SCOPES = [
+    Google::Apis::ClassroomV1::AUTH_CLASSROOM_COURSES_READONLY,
+    Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
+  ].freeze
 
   # Calls Azure Cognitive Services in order to get a temporary OAuth token with access to the Immersive Reader API.
   # Requires the following configurations
@@ -50,9 +44,9 @@ class ApiController < ApplicationController
         subdomain: subdomain,
       }
       render json: response
-    rescue RestClient::Exception => e
+    rescue RestClient::Exception => exception
       Honeybadger.notify(
-        e,
+        exception,
         error_message: "Failed to retrieve OAuth token from Azure for use with the Immersive Reader API.",
         context: {
           client_id: tenant_id,
@@ -61,9 +55,9 @@ class ApiController < ApplicationController
         }
       )
       render status: :failed_dependency, json: {error: 'Unable to get token from Azure.'}
-    rescue JSON::JSONError => e
+    rescue JSON::JSONError => exception
       Honeybadger.notify(
-        e,
+        exception,
         error_message: "Failed to parse response from Azure when trying to get OAuth token for use with the Immersive Reader API.",
         context: {
           client_id: tenant_id,
@@ -106,33 +100,6 @@ class ApiController < ApplicationController
     end
   end
 
-  GOOGLE_AUTH_SCOPES = [
-    Google::Apis::ClassroomV1::AUTH_CLASSROOM_COURSES_READONLY,
-    Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
-  ].freeze
-
-  private def query_google_classroom_service
-    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)
-    client = Signet::OAuth2::Client.new(
-      authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
-      token_credential_uri:  'https://www.googleapis.com/oauth2/v3/token',
-      client_id: CDO.dashboard_google_key,
-      client_secret: CDO.dashboard_google_secret,
-      refresh_token: tokens[:oauth_refresh_token],
-      access_token: tokens[:oauth_token],
-      expires_at: tokens[:oauth_token_expiration],
-      scope: GOOGLE_AUTH_SCOPES,
-    )
-    service = Google::Apis::ClassroomV1::ClassroomService.new
-    service.authorization = client
-
-    begin
-      yield service
-    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => error
-      render status: :forbidden, json: {error: error}
-    end
-  end
-
   def google_classrooms
     return head :forbidden unless current_user
     query_google_classroom_service do |service|
@@ -158,6 +125,11 @@ class ApiController < ApplicationController
 
       section = GoogleClassroomSection.from_service(course_id, current_user.id, students, course_name)
 
+      # If a teacher passes the criteria for becoming verified, upgrade them here
+      if section && Policies::User.verified_teacher_candidate?(current_user)
+        current_user.verify_teacher!
+      end
+
       render json: section.summarize
     end
   end
@@ -178,7 +150,8 @@ class ApiController < ApplicationController
     updates = params.require(:updates)
     updates.to_a.each do |item|
       # Convert string-boolean parameters to boolean
-      %i(locked readonly_answers).each {|val| item[val] = JSONValue.value(item[val])}
+      item[:locked] = JSONValue.value(item[:locked])
+      item[:readonly_answers] = JSONValue.value(item[:readonly_answers])
 
       user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
@@ -216,7 +189,7 @@ class ApiController < ApplicationController
       return
     end
 
-    data = current_user.sections.each_with_object({}) do |section, section_hash|
+    data = current_user.sections_instructed.each_with_object({}) do |section, section_hash|
       next if section.hidden
       script = load_script(section)
 
@@ -231,6 +204,13 @@ class ApiController < ApplicationController
     end
 
     render json: data
+  end
+
+  use_reader_connection_for_route(:section)
+  def section
+    section = load_section
+
+    render json: section.selected_section_summarize.merge(section.concise_summarize)
   end
 
   use_reader_connection_for_route(:section_progress)
@@ -269,14 +249,14 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
       student_levels = script_levels.map do |script_level|
-        user_levels = script_level.level_ids.map do |id|
+        user_levels = script_level.level_ids.filter_map do |id|
           contained_levels = Unit.cache_find_level(id).contained_levels
           if contained_levels.any?
             level_map[contained_levels.first.id]
           else
             level_map[id]
           end
-        end.compact
+        end
         user_levels_ids = user_levels.map(&:id)
         level_class = (best_activity_css_class user_levels).dup
         paired = (paired_user_level_ids & user_levels_ids).any?
@@ -308,6 +288,11 @@ class ApiController < ApplicationController
     }
 
     render json: data
+  end
+
+  def show_courses_with_progress
+    section = load_section
+    render json: CourseVersion.courses_for_unit_selector(section.participant_unit_ids)
   end
 
   use_reader_connection_for_route(:section_level_progress)
@@ -391,7 +376,7 @@ class ApiController < ApplicationController
   # Get /api/teacher_panel_section
   def teacher_panel_section
     prevent_caching
-    teacher_sections = current_user&.sections&.where(hidden: false)
+    teacher_sections = current_user&.sections_instructed&.where(hidden: false)
 
     if teacher_sections.blank?
       head :no_content
@@ -426,6 +411,60 @@ class ApiController < ApplicationController
     script = Unit.get_from_cache(params[:script])
     standards = script.standards
     render json: standards
+  end
+
+  def lesson_materials
+    unit_id = params[:unit_id]
+    script = Unit.get_from_cache(unit_id)
+    render json: script.summarize_for_lesson_materials_view(current_user)
+  end
+
+  def course_summary
+    course_name = params[:course_name]
+    unit_group = UnitGroup.get_from_cache(course_name)
+
+    # When the url of a course family is requested, redirect to a specific course version.
+    if !unit_group && UnitGroup.family_names.include?(params[:course_name])
+      unit_group = UnitGroup.latest_stable_version(params[:course_name])
+      if unit_group
+        redirect_path = url_for(action: params[:action], course_name: unit_group.name)
+        redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+        redirect_to "#{redirect_path}#{redirect_query_string}"
+      end
+    end
+
+    render json: {is_verified_instructor: current_user.try(:verified_instructor?) || false,
+                  course_summary: unit_group.summarize(current_user, for_edit: false, locale_code: request.locale),
+                  hidden_scripts: current_user.try(:get_hidden_unit_ids, unit_group),
+                  redirect_to_course_url: unit_group.redirect_to_course_url(current_user),
+                  show_version_warning: unit_group.has_older_version_progress?(current_user) && !unit_group.has_dismissed_version_warning?(current_user)}
+  end
+
+  def unit_summary
+    unit_name = params[:unit_name]
+    unit = Unit.get_from_cache(unit_name)
+
+    redirect_unit_url = unit.redirect_to_unit_url(current_user, locale: request.locale)
+
+    additional_script_data = {
+      is_instructor: unit.can_be_instructor?(current_user),
+      is_verified_instructor: current_user&.verified_instructor?,
+      locale: Unit.locale_english_name_map[request.locale],
+      locale_code: request.locale,
+      course_link: unit.course_link(params[:section_id]),
+      course_title: unit.course_title || I18n.t('view_all_units'),
+      course_name: unit.unit_group&.name,
+      redirect_unit_url: redirect_unit_url,
+    }
+
+    if unit.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: unit.plc_course_unit.plc_course)
+      plc_breadcrumb = {unit_name: unit.plc_course_unit.unit_name, course_view_path: course_path(unit.plc_course_unit.plc_course.unit_group)}
+    end
+
+    render json: {
+      unitData: unit.summarize(true, current_user, false, request.locale).merge(additional_script_data),
+      plcBreadcrumb: plc_breadcrumb
+    }
   end
 
   use_reader_connection_for_route(:user_progress)
@@ -513,43 +552,6 @@ class ApiController < ApplicationController
     render json: response
   end
 
-  # Gets progress-related app_options for the given script and level for the
-  # given user. This code is analogous to parts of LevelsHelper#app_options.
-  # TODO: Eliminate this logic from LevelsHelper#app_options or refactor methods
-  # to share code.
-  private def progress_app_options(script, level, user)
-    response = {}
-
-    user_level = user.last_attempt(level, script)
-    level_source = user_level.try(:level_source).try(:data)
-
-    if user_level
-      response[:lastAttempt] = {
-        timestamp: user_level.updated_at.to_datetime.to_milliseconds,
-        source: level_source
-      }
-
-      # Pairing info
-      is_navigator = user_level.navigator?
-      if is_navigator
-        driver = user_level.driver
-        driver_level_source_id = user_level.driver_level_source_id
-      end
-
-      response[:isNavigator] = is_navigator
-      if driver
-        response[:pairingDriver] = driver.name
-        if driver_level_source_id
-          response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
-        elsif level.channel_backed?
-          response[:pairingChannelId] = get_channel_for(level, script.id, driver)
-        end
-      end
-    end
-
-    response
-  end
-
   # GET /api/example_solutions/:script_level_id/:level_id
   def example_solutions
     script_level = Unit.cache_find_script_level params[:script_level_id].to_i
@@ -567,7 +569,7 @@ class ApiController < ApplicationController
     data = section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
-      text_response_levels.map do |level_hash|
+      text_response_levels.filter_map do |level_hash|
         last_attempt = student.last_attempt_for_any(level_hash[:levels])
         response = last_attempt.try(:level_source).try(:data)
         next unless response
@@ -579,7 +581,7 @@ class ApiController < ApplicationController
           response: response,
           url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
         }
-      end.compact
+      end
     end.flatten
 
     render json: data
@@ -620,15 +622,83 @@ class ApiController < ApplicationController
     )
   end
 
-  private
+  private def query_clever_service(endpoint)
+    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
+    begin
+      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
+      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
+      yield JSON.parse(response)['data']
+    rescue RestClient::ExceptionWithResponse => exception
+      render status: exception.response.code, json: {error: exception.response.body}
+    end
+  end
 
-  def load_section
+  private def query_google_classroom_service
+    tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::GOOGLE)
+    client = Signet::OAuth2::Client.new(
+      authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
+      token_credential_uri:  'https://www.googleapis.com/oauth2/v3/token',
+      client_id: CDO.dashboard_google_key,
+      client_secret: CDO.dashboard_google_secret,
+      refresh_token: tokens[:oauth_refresh_token],
+      access_token: tokens[:oauth_token],
+      expires_at: tokens[:oauth_token_expiration],
+      scope: GOOGLE_AUTH_SCOPES,
+    )
+    service = Google::Apis::ClassroomV1::ClassroomService.new
+    service.authorization = client
+
+    begin
+      yield service
+    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => exception
+      render status: :forbidden, json: {error: exception}
+    end
+  end
+
+  # Gets progress-related app_options for the given script and level for the
+  # given user. This code is analogous to parts of LevelsHelper#app_options.
+  # TODO: Eliminate this logic from LevelsHelper#app_options or refactor methods
+  # to share code.
+  private def progress_app_options(script, level, user)
+    response = {}
+
+    user_level = user.last_attempt(level, script)
+    level_source = user_level.try(:level_source).try(:data)
+
+    if user_level
+      response[:lastAttempt] = {
+        timestamp: user_level.updated_at.to_datetime.to_milliseconds,
+        source: level_source
+      }
+
+      # Pairing info
+      is_navigator = user_level.navigator?
+      if is_navigator
+        driver = user_level.driver
+        driver_level_source_id = user_level.driver_level_source_id
+      end
+
+      response[:isNavigator] = is_navigator
+      if driver
+        response[:pairingDriver] = driver.name
+        if driver_level_source_id
+          response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
+        elsif level.channel_backed?
+          response[:pairingChannelId] = get_channel_for(level, script.id, driver)
+        end
+      end
+    end
+
+    response
+  end
+
+  private def load_section
     section = Section.find(params[:section_id])
     authorize! :read, section
     section
   end
 
-  def load_script(section=nil)
+  private def load_script(section = nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     script = Unit.get_from_cache(script_id) if script_id

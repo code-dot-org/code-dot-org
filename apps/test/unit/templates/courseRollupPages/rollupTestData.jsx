@@ -16,15 +16,15 @@ export const courseData = {
             {
               key: 'key',
               word: 'word',
-              definition: 'definition'
-            }
+              definition: 'definition',
+            },
           ],
           programmingExpressions: [
             {
               name: 'playSound',
               syntax: 'playSound',
-              link: 'studio.code.org/docs/applab/playSound'
-            }
+              link: 'studio.code.org/docs/applab/playSound',
+            },
           ],
           preparation: '- One',
           standards: [
@@ -36,8 +36,8 @@ export const courseData = {
               categoryDescription: 'Algorithms & Programming',
               shortcode: '1B-AP-09',
               description:
-                'Create programs that use variables to store and modify data.'
-            }
+                'Create programs that use variables to store and modify data.',
+            },
           ],
           resources: {
             Teacher: [
@@ -45,8 +45,8 @@ export const courseData = {
                 key: 'teacher-resource',
                 name: 'Teacher Resource',
                 url: 'fake.url',
-                type: 'Slides'
-              }
+                type: 'Slides',
+              },
             ],
             Student: [
               {
@@ -54,10 +54,10 @@ export const courseData = {
                 name: 'Student Resource',
                 url: 'fake.url',
                 download_url: 'download.fake.url',
-                type: 'Activity Guide'
-              }
-            ]
-          }
+                type: 'Activity Guide',
+              },
+            ],
+          },
         },
         {
           key: 'l2',
@@ -68,15 +68,15 @@ export const courseData = {
             {
               key: 'key',
               word: 'word',
-              definition: 'definition'
-            }
+              definition: 'definition',
+            },
           ],
           programmingExpressions: [
             {
               name: 'playSound',
               syntax: 'playSound',
-              link: 'studio.code.org/docs/applab/playSound'
-            }
+              link: 'studio.code.org/docs/applab/playSound',
+            },
           ],
           preparation: '- One',
           standards: [
@@ -88,8 +88,8 @@ export const courseData = {
               categoryDescription: 'Algorithms & Programming',
               shortcode: '1B-AP-09',
               description:
-                'Create programs that use variables to store and modify data.'
-            }
+                'Create programs that use variables to store and modify data.',
+            },
           ],
           resources: {
             Teacher: [
@@ -97,8 +97,8 @@ export const courseData = {
                 key: 'teacher-resource',
                 name: 'Teacher Resource',
                 url: 'fake.url',
-                type: 'Slides'
-              }
+                type: 'Slides',
+              },
             ],
             Student: [
               {
@@ -106,12 +106,12 @@ export const courseData = {
                 name: 'Student Resource',
                 url: 'fake.url',
                 download_url: 'download.fake.url',
-                type: 'Activity Guide'
-              }
-            ]
-          }
-        }
-      ]
+                type: 'Activity Guide',
+              },
+            ],
+          },
+        },
+      ],
     },
     {
       name: 'unit-2',
@@ -127,7 +127,7 @@ export const courseData = {
           programmingExpressions: [],
           standards: [],
           preparation: null,
-          resources: {}
+          resources: {},
         },
         {
           key: 'l4',
@@ -138,15 +138,15 @@ export const courseData = {
             {
               key: 'key',
               word: 'word',
-              definition: 'definition'
-            }
+              definition: 'definition',
+            },
           ],
           programmingExpressions: [
             {
               name: 'playSound',
               syntax: 'playSound',
-              link: 'studio.code.org/docs/applab/playSound'
-            }
+              link: 'studio.code.org/docs/applab/playSound',
+            },
           ],
           preparation: '- One',
           standards: [
@@ -158,8 +158,8 @@ export const courseData = {
               categoryDescription: 'Algorithms & Programming',
               shortcode: '1B-AP-09',
               description:
-                'Create programs that use variables to store and modify data.'
-            }
+                'Create programs that use variables to store and modify data.',
+            },
           ],
           resources: {
             Teacher: [
@@ -167,8 +167,8 @@ export const courseData = {
                 key: 'teacher-resource',
                 name: 'Teacher Resource',
                 url: 'fake.url',
-                type: 'Slides'
-              }
+                type: 'Slides',
+              },
             ],
             Student: [
               {
@@ -176,12 +176,12 @@ export const courseData = {
                 name: 'Student Resource',
                 url: 'fake.url',
                 download_url: 'download.fake.url',
-                type: 'Activity Guide'
-              }
-            ]
-          }
-        }
-      ]
-    }
-  ]
+                type: 'Activity Guide',
+              },
+            ],
+          },
+        },
+      ],
+    },
+  ],
 };

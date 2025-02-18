@@ -3,6 +3,7 @@
   "config": {
     "style": "world_blocks",
     "func": "setBackground",
+    "docFunc": "gamelab_setBackground",
     "blockText": "set background color {COLOR}",
     "args": [
       {

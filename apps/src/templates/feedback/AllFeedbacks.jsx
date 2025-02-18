@@ -1,7 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import LevelFeedback from '@cdo/apps/templates/feedback/LevelFeedback';
 import i18n from '@cdo/locale';
+
 import {levelFeedbackShape} from './types';
 
 function AllFeedbacks({feedbacksByLevel}) {
@@ -20,12 +22,12 @@ function AllFeedbacks({feedbacksByLevel}) {
 
 const styles = {
   header: {
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };
 
 AllFeedbacks.propTypes = {
-  feedbacksByLevel: PropTypes.arrayOf(levelFeedbackShape)
+  feedbacksByLevel: PropTypes.arrayOf(levelFeedbackShape),
 };
 
 export default AllFeedbacks;

@@ -1,20 +1,23 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '@cdo/apps/util/color';
-import ReactTooltip from 'react-tooltip';
-import ProgressBubbleSet from './ProgressBubbleSet';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {levelWithProgressType, lessonType} from './progressTypes';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import FocusAreaIndicator from './FocusAreaIndicator';
-import _ from 'lodash';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import FocusAreaIndicator from './FocusAreaIndicator';
+import ProgressBubbleSet from './ProgressBubbleSet';
 import {
   lessonIsLockedForAllStudents,
   lessonIsLockedForUser,
-  lessonIsVisible
+  lessonIsVisible,
 } from './progressHelpers';
+import {levelWithProgressType, lessonType} from './progressTypes';
 
 function SummaryProgressRow({
   dark,
@@ -23,7 +26,7 @@ function SummaryProgressRow({
   lessonIsHiddenForStudents,
   lessonIsLockedForUser,
   lessonIsLockedForAllStudents,
-  viewAs
+  viewAs,
 }) {
   // The parent component filters out hidden SummaryProgressRows from the student view,
   // this check is just to ensure it won't be rendered if it should be hidden for students
@@ -51,13 +54,13 @@ function SummaryProgressRow({
       className="uitest-summary-progress-row"
       style={{
         ...(dark ? styles.darkRow : styles.lightRow),
-        ...(displayDashedBorder && styles.dashedBorder)
+        ...(displayDashedBorder && styles.dashedBorder),
       }}
     >
       <td
         style={{
           ...styles.col1,
-          ...(isLockedForUser && styles.fadedCol)
+          ...(isLockedForUser && styles.fadedCol),
         }}
       >
         <div style={styles.colText}>
@@ -70,7 +73,7 @@ function SummaryProgressRow({
                 icon={showAsLocked ? 'lock' : 'unlock'}
                 style={{
                   ...styles.icon,
-                  ...(!showAsLocked && styles.unlockedIcon)
+                  ...(!showAsLocked && styles.unlockedIcon),
                 }}
               />
               {!showAsLocked && viewAs === ViewType.Instructor && (
@@ -105,7 +108,7 @@ function SummaryProgressRow({
       <td
         style={{
           ...styles.col2,
-          ...(isLockedForUser && styles.fadedCol)
+          ...(isLockedForUser && styles.fadedCol),
         }}
       >
         {levels.length === 0 ? (
@@ -133,19 +136,19 @@ SummaryProgressRow.propTypes = {
   viewAs: PropTypes.oneOf(Object.keys(ViewType)),
   lessonIsHiddenForStudents: PropTypes.bool.isRequired,
   lessonIsLockedForUser: PropTypes.func.isRequired,
-  lessonIsLockedForAllStudents: PropTypes.func.isRequired
+  lessonIsLockedForAllStudents: PropTypes.func.isRequired,
 };
 
 export const styles = {
   lightRow: {
-    backgroundColor: color.table_light_row
+    backgroundColor: color.table_light_row,
   },
   darkRow: {
-    backgroundColor: color.table_dark_row
+    backgroundColor: color.table_dark_row,
   },
   dashedBorder: {
     borderStyle: 'dashed',
-    borderWidth: 2
+    borderWidth: 2,
   },
   col1: {
     width: 200,
@@ -159,43 +162,43 @@ export const styles = {
     paddingRight: 20,
     borderRightWidth: 1,
     borderRightColor: color.border_light_gray,
-    borderRightStyle: 'solid'
+    borderRightStyle: 'solid',
   },
   col2: {
     position: 'relative',
     width: '100%',
     paddingLeft: 20,
-    paddingRight: 20
+    paddingRight: 20,
   },
   // When we set our opacity on the row element instead of on individual tds,
   // there are weird interactions with our tooltips in Chrome, and borders end
   // up disappearing.
   fadedCol: {
-    opacity: 0.6
+    opacity: 0.6,
   },
   colText: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 12,
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    textOverflow: 'ellipsis',
   },
   icon: {
     marginRight: 5,
     fontSize: 12,
-    color: color.cyan
+    color: color.cyan,
   },
   unlockedIcon: {
-    color: color.orange
+    color: color.orange,
   },
   focusAreaMargin: {
     // Our focus area indicator is absolutely positioned. Add a margin when it's
     // there so that it wont overlap dots.
-    marginRight: 130
+    marginRight: 130,
   },
   opaque: {
-    opacity: 1
-  }
+    opacity: 1,
+  },
 };
 
 export const UnconnectedSummaryProgressRow = SummaryProgressRow;
@@ -209,5 +212,5 @@ export default connect((state, ownProps) => ({
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
     lessonIsLockedForUser(lesson, levels, state, viewAs),
   lessonIsLockedForAllStudents: lessonId =>
-    lessonIsLockedForAllStudents(lessonId, state)
+    lessonIsLockedForAllStudents(lessonId, state),
 }))(SummaryProgressRow);

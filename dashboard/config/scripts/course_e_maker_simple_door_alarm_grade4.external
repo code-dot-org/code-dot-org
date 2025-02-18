@@ -1,0 +1,30 @@
+name 'course_e_maker_simple_door_alarm_grade4'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+<h2 style="text-align: center;">Simple Door Alarm</h2>
+
+<div style="text-align: center;">
+<p>
+Now you’re ready to code <b>conditionals</b> for the micro:bit.
+Ask your teacher for the micro:bit project link! </p>
+</div>
+
+<img src="https://images.code.org/b11d29752fc1a54f326de780b03eb920-image-1702578559795.png" style="display: block; margin: auto; width: 30%">
+
+<h2 style="text-align: center;">JuiceMind Quiz</h2>
+
+<div style="text-align: center;">
+<p>
+When you finish coding your project, click the image below to take an assessment in JuiceMind!</p>
+</div>
+
+<a href="https://play.juicemind.com/join" target="_blank"> 
+<img src="https://images.code.org/50cf80120b2bc0fbd0adc73a1e8ec18d-image-1708117911828.gif" style="display: block; margin: auto; width: 20%">
+</a>
+
+<div style="text-align: center;">
+<p><strong>Click the picture above.</strong></p>
+</div>
+MARKDOWN

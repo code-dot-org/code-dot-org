@@ -1,17 +1,12 @@
-%select{:onchange=>"setLanguageCookie(this.value); location.reload(true);", :style=>'color: black'}
-  -DB[:cdo_languages].where(supported_codeorg_b: 1).each do |i|
-    -selected = I18n.locale.to_s == i[:locale_s]
-    %option{value:i[:locale_s], selected:selected}= i[:native_name_s]
+:ruby
+  require 'cdo/global_edition'
+  require 'cdo/i18n'
+  require 'varnish_environment'
 
-:javascript
-  function setLanguageCookie(value)
-  {
-    var c_name = 'language_';
-    var exdays = 5000;
-    var date = new Date();
-    date.setTime(date.getTime()+(exdays*60*60*24*1000));
-    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
-    var domainName = "#{request.site}";
-    c_value += "; domain=." + escape(domainName) + "; path=/";
-    document.cookie=c_name + "=" + c_value;
-  }
+  selected = I18n.locale.to_s
+  options = request.ge_region ? Cdo::GlobalEdition.region_locale_options(request.ge_region) : Cdo::I18n.locale_options
+
+%form{method: :post, action: request.fullpath, 'accept-charset': 'UTF-8'}
+  %select.default{name: VarnishEnvironment::LOCALE_PARAM_KEY, onchange: 'this.form.submit();', style: 'color: black; width: 100%; max-width: 162.5px;'}
+    - options.each do |name, value|
+      %option{value: value, selected: value == selected}= name

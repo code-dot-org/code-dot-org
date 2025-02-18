@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {editStudent} from './manageStudentsRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
+
 import color from '../../util/color';
+
+import {editStudent} from './manageStudentsRedux';
 
 class ManageStudentsSharingCell extends Component {
   static propTypes = {
@@ -15,12 +18,12 @@ class ManageStudentsSharingCell extends Component {
     checked: PropTypes.bool,
     editedValue: PropTypes.bool,
     //Provided by redux
-    editStudent: PropTypes.func
+    editStudent: PropTypes.func,
   };
 
   changeSharing = e => {
     this.props.editStudent(this.props.id, {
-      sharingDisabled: this.props.editedValue
+      sharingDisabled: this.props.editedValue,
     });
   };
 
@@ -83,12 +86,12 @@ class ManageStudentsSharingCell extends Component {
 
 const styles = {
   checkboxIcon: {
-    color: color.lighter_gray
+    color: color.lighter_gray,
   },
   checkbox: {
     height: 20,
-    width: 20
-  }
+    width: 20,
+  },
 };
 
 export const UnconnectedManageStudentsSharingCell = ManageStudentsSharingCell;
@@ -98,6 +101,6 @@ export default connect(
   dispatch => ({
     editStudent(id, studentInfo) {
       dispatch(editStudent(id, studentInfo));
-    }
+    },
   })
 )(ManageStudentsSharingCell);

@@ -1,15 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
 import {uniqueId} from 'lodash';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import i18n from '@cdo/locale';
+import React from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {currentLocation, makeEnum} from '@cdo/apps/utils';
-import TooltipWithIcon from './TooltipWithIcon';
+import i18n from '@cdo/locale';
+
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
 import {flex, font, marginLeftRight, marginTopBottom} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
+import TooltipWithIcon from './TooltipWithIcon';
 import './styles.scss';
 
 export const BubbleSize = makeEnum('dot', 'letter', 'full');
@@ -31,7 +33,7 @@ export function BasicBubble({
   size,
   progressStyle,
   classNames,
-  children
+  children,
 }) {
   const bubbleStyle = mainBubbleStyle(shape, size, progressStyle);
   if (shape === BubbleShape.diamond) {
@@ -56,7 +58,7 @@ BasicBubble.propTypes = {
   size: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
   progressStyle: PropTypes.object,
   classNames: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 /**
@@ -83,7 +85,7 @@ DiamondContainer.propTypes = {
   size: PropTypes.oneOf(Object.values(BubbleSize)).isRequired,
   bubbleStyle: PropTypes.object,
   classNames: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export function BubbleLink({url, onClick, children, a11y_description}) {
@@ -103,7 +105,7 @@ BubbleLink.propTypes = {
   url: PropTypes.string,
   onClick: PropTypes.func,
   children: PropTypes.element.isRequired,
-  a11y_description: PropTypes.string
+  a11y_description: PropTypes.string,
 };
 
 function getTooltipTextForLevel(level) {
@@ -139,7 +141,7 @@ BasicTooltip.propTypes = {
   icon: PropTypes.string,
   text: PropTypes.string,
   includeAssessmentIcon: PropTypes.bool,
-  children: PropTypes.element
+  children: PropTypes.element,
 };
 
 export function BubbleTooltip({level, children}) {
@@ -155,7 +157,7 @@ export function BubbleTooltip({level, children}) {
 }
 BubbleTooltip.propTypes = {
   level: levelWithProgressType.isRequired,
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
 };
 
 /**
@@ -210,17 +212,31 @@ export function getBubbleUrl(
   if (!levelUrl) {
     return null;
   }
-  const params = preserveQueryParams
+  const current_loc_query_params = preserveQueryParams
     ? queryString.parse(currentLocation().search)
     : {};
+
+  // We want to preserve all of the queryParams EXCEPT version because navigating
+  // between levels backed by different projects or between a project level and
+  // a non-project level puts the user in an error state since the version id doesn't
+  // exist.
+  delete current_loc_query_params.version;
+
+  const level_url_query_params =
+    levelUrl.split('?').length > 1
+      ? queryString.parse(levelUrl.split('?')[1])
+      : {};
+  const params = {...current_loc_query_params, ...level_url_query_params};
+
   if (sectionId) {
     params.section_id = sectionId;
   }
   if (studentId) {
     params.user_id = studentId;
   }
+
   if (Object.keys(params).length) {
-    return `${levelUrl}?${queryString.stringify(params)}`;
+    return `${levelUrl.split('?')[0]}?${queryString.stringify(params)}`;
   }
   return levelUrl;
 }
@@ -238,32 +254,32 @@ const bubbleSizes = {
   [BubbleShape.circle]: {
     [BubbleSize.dot]: 13,
     [BubbleSize.letter]: 20,
-    [BubbleSize.full]: 34
+    [BubbleSize.full]: 34,
   },
   [BubbleShape.diamond]: {
     [BubbleSize.dot]: 10,
-    [BubbleSize.full]: 26
+    [BubbleSize.full]: 26,
   },
-  [BubbleShape.pill]: {}
+  [BubbleShape.pill]: {},
 };
 
 const circleMargins = {
   [BubbleSize.dot]: 2,
   [BubbleSize.letter]: 3,
-  [BubbleSize.full]: 2
+  [BubbleSize.full]: 2,
 };
 
 const bubbleBorderRadii = {
   [BubbleShape.circle]: {
     [BubbleSize.dot]: bubbleSizes[BubbleShape.circle][BubbleSize.dot],
     [BubbleSize.letter]: bubbleSizes[BubbleShape.circle][BubbleSize.letter],
-    [BubbleSize.full]: bubbleSizes[BubbleShape.circle][BubbleSize.full]
+    [BubbleSize.full]: bubbleSizes[BubbleShape.circle][BubbleSize.full],
   },
   [BubbleShape.diamond]: {
     [BubbleSize.dot]: 2,
-    [BubbleSize.full]: 4
+    [BubbleSize.full]: 4,
   },
-  [BubbleShape.pill]: {}
+  [BubbleShape.pill]: {},
 };
 
 /**
@@ -281,12 +297,12 @@ export const bubbleContainerWidths = {
     2 * circleMargins[BubbleSize.letter],
   [BubbleSize.full]:
     bubbleSizes[BubbleShape.circle][BubbleSize.full] +
-    2 * circleMargins[BubbleSize.full]
+    2 * circleMargins[BubbleSize.full],
 };
 
 const fontSizes = {
   [BubbleSize.letter]: SMALL_FONT,
-  [BubbleSize.full]: LARGE_FONT
+  [BubbleSize.full]: LARGE_FONT,
 };
 
 const bubbleStyles = {
@@ -297,21 +313,21 @@ const bubbleStyles = {
     boxSizing: 'border-box',
     letterSpacing: -0.11,
     position: 'relative',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   pill: {
     borderRadius: 20,
     fontSize: SMALL_FONT,
-    padding: '6px 10px'
+    padding: '6px 10px',
   },
   diamond: {
     ...marginTopBottom(6),
     transform: 'rotate(45deg)',
-    padding: 2
+    padding: 2,
   },
   diamondContentTransform: {
-    transform: 'rotate(-45deg)'
-  }
+    transform: 'rotate(-45deg)',
+  },
 };
 
 /**
@@ -322,7 +338,7 @@ function mainBubbleStyle(shape, size, progressStyle) {
   return {
     ...bubbleStyles.main,
     ...shapeSizeStyle(shape, size),
-    ...progressStyle
+    ...progressStyle,
   };
 }
 
@@ -331,7 +347,7 @@ function diamondContainerStyle(size) {
   return {
     ...flex,
     width: containerWidth,
-    height: containerWidth
+    height: containerWidth,
   };
 }
 
@@ -351,12 +367,12 @@ function shapeSizeStyle(shape, size) {
     fontSize: fontSize,
     lineHeight: `${fontSize}px`,
     ...(shape === BubbleShape.circle && marginLeftRight(circleMargins[size])),
-    ...(shape === BubbleShape.diamond && bubbleStyles.diamond)
+    ...(shape === BubbleShape.diamond && bubbleStyles.diamond),
   };
 }
 
 export const unitTestExports = {
   DiamondContainer,
   bubbleStyles,
-  mainBubbleStyle
+  mainBubbleStyle,
 };

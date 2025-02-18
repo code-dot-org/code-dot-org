@@ -1,0 +1,83 @@
+name 'VPL-CSD-Summer-CI-CSD U2-Mini-ProjectsOverview_-csd_CSD-PL-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit 2 - Web Development Mini-Projects 
+
+#### Mini-Projects act as checkpoints in the CS Discoveries and cover the subset of skills students have seen so far in the unit. They are designed for one to two days of implementation as a way to check in with how well students understand the course content so far. We recommend using these opportunities for formative assessment.
+
+#### Both of the Unit 2 - Web Development mini-project are located in Chapter 1: 
+
+* #### <a href="https://studio.code.org/s/csd2-2024/lessons/5" target="blank" rel="noopener noreferrer">Lesson 5: Mini-Project: HTML Web Page</a>
+* #### <a href="https://studio.code.org/s/csd2-2024/lessons/10" target="blank" rel="noopener noreferrer">Lesson 10: Mini-Project: Adding Style to a Web Page</a>
+
+## Pacing Recommendation
+
+#### Both mini-projects have multiple implementation options for your students. Before leading these lessons, make sure to choose the option that you feel is best suited to your students' readiness and needs. You may decide to extend these projects past one to two days as a way to support or challenge students, which could allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up.
+
+<img src="https://images.code.org/9b225e92954a51390a8a56b03d5305b2-image-1711660695636.18.11 PM.png" alt="A pacing calendar with the mini-project lessons pointed to with teal arrows">
+
+## Overview of Mini-Projects
+
+##### Click the dropdown arrows below to view mini-project overviews.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 18px; font-weight: bold;">🔎 Lesson 5: Mini-Project - HTML Web Page</summary>
+<div style="margin-top: 20px; margin-left: 5px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+<img src="https://images.code.org/f2108ed3a2d96b39f16b34b00fa627f2-image-1711662091546.41.27 PM.png" alt="A basic web page called Denzel's Delights with recipes for pastries" width="300px" style="float:left; margin-left:20px;  padding-right: 30px;">
+
+#### <a href="https://studio.code.org/s/csd2-2024/lessons/5" target="blank" rel="noopener noreferrer" >Lesson Plan</a>
+
+#### **Question of the Day:** How can I use HTML to design and build a web page for a user?
+
+#### **Students will be able to:** 
+* #### Build a webpage using HTML.
+* #### Design a webpage based on user needs.
+* #### Write readable code.
+
+#### **Lesson Overview:**
+
+#### In this mini-project, students use what they have learned to create a web page for a user. Students begin their project by using the Problem Solving Process to help them design a web page for a user. As they determine what content to include on the web page for their user, they will identify which tags they will use to implement their design. Students then build their user’s web page in Web Lab. Optionally, after engaging in a formal feedback process, they may change their web pages based on feedback before reflecting on their process. The lesson also includes an optional review of the HTML students have learned ‌before building the web page.
+
+#### **Mini-Project Options:**
+
+* #### **Option 1:** This version has detailed user descriptions with the potential topic headings already underlined and information they should include already highlighted for them. The students can look over what has been underlined and highlighted and make their design layout from there. Choose this option if your time is limited or if you have students who might need more support.
+	* #### <a href="https://docs.google.com/document/d/1N_WaufN75hFmLlxuP5bn5sUYHxMOTRfXvgBDV07Ufvw/edit?usp=sharing" target="blank" rel="noopener noreferrer">Option 1 Activity Guide</a>
+
+* #### **Option 2:** This version has detailed user descriptions with the first three potential topic headings already underlined as a starting point for the students. The remaining topic headings and the information that should be included for each topic are left up to the student to decide as the web developer. Choose this option if you have at least 2 days (1 day for planning and design and 1 day for building the webpage) or if your students would benefit from the extra challenge and web developer experience.
+	* #### <a href="https://docs.google.com/document/d/1M3O2VKNkrp5B1gzqLo21LI0N7iAxJde7ftpczjWDxtA/edit?usp=sharing" target="blank" rel="noopener noreferrer">Option 2 Activity Guide</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 18px; font-weight: bold;">🔎 Lesson 10: Mini-Project - Adding Style to a Web Page</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+<img src="https://images.code.org/8aa1fe63ed2c4affa4d365a9b4ace64e-image-1711662246769.44.04 PM.png" alt="A colorfully styles web page called Denzel's Delights with recipes for pastries" width="250px" style="float:left; margin-left:20px; padding-right: 30px; margin-top: 20px; margin-bottom:40px;">
+
+#### <a href="https://studio.code.org/s/csd2-2024/lessons/10" target="blank" rel="noopener noreferrer" >Lesson Plan</a>
+
+#### **Students will be able to:** 
+* #### Style a webpage based on user needs
+* #### Style a webpage using CSS
+* #### Write readable code
+
+#### **Question of the Day:** How can I use CSS to style a web page for a user?
+
+#### **Lesson Overview:**
+
+#### In this mini-project, students use what they have learned to style a web page for a user. Students begin their project using the Problem Solving Process to help them determine how they will style a web page for a user. Students then style their users' web pages in Web Lab. Optionally, after engaging in a formal feedback process, they may change their web pages based on feedback before reflecting on their process. The lesson also includes an optional review of the HTML and CSS students learned ‌before styling the web page.
+
+#### **Mini-Project Options:**
+
+* #### **Option 1:** Students who were present for Lesson 5 find the same user for whom they already built a web page. Their code will be carried over so that they can style it in Lesson 10.
+
+* #### **Option 2:** Students who were *not* present for Lesson 10 will select a new user. The basic content and HTML will already be provided for them.
+
+</p></div>
+</details>
+
+<div style="clear:both"/>
+MARKDOWN

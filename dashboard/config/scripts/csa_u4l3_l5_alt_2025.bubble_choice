@@ -1,0 +1,9 @@
+name 'CSA U4L3-L5_alt-2025'
+display_name 'Practice: Using Math.pow()'
+description 'Exponents are used in a variety of situations, such as calculating growth or spread over time. Use the `Math.pow()` method to create programs for some of these common scenarios!'
+
+sublevels
+level 'CSA U4L3-L5a_alt-2025'
+level 'CSA U4L3-L5b_alt-2025'
+level 'CSA U4L3-L5c_alt-2025'
+level 'CSA U4L3-L5d_alt-2025'

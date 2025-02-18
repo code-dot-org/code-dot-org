@@ -30,3 +30,5 @@ MysteryClass m = new MysteryClass();
 m.mystery();
 ```
 MARKDOWN
+
+allow_multiple_attempts true

@@ -45,7 +45,7 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
 
     assert_equal TeacherFeedback.all.count, 4
     sign_in student
-    assert_queries 19 do
+    assert_queries 21 do
       get :index
       assert_response :success
     end
@@ -95,9 +95,7 @@ class TeacherFeedbacksControllerTest < ActionController::TestCase
     assert_equal awaiting_review_for_level_vals, [true, false, false]
   end
 
-  private
-
-  def get_all_response_feedback_data
+  private def get_all_response_feedback_data
     assert_select 'script[data-feedback]', 1
     feedback_data = JSON.parse(css_select('script[data-feedback]').first.attribute('data-feedback').to_s)
     feedback_data['all_feedbacks_by_level']

@@ -1,19 +1,21 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {CSVLink} from 'react-csv';
+import {connect} from 'react-redux';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   getExportableFeedbackData,
-  isCurrentScriptCSD
+  isCurrentScriptCSD,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {CSVLink} from 'react-csv';
-import Button from '@cdo/apps/templates/Button';
-import moduleStyles from '@cdo/apps/templates/button.module.scss';
-import classNames from 'classnames';
 import color from '@cdo/apps/util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
+import moduleStyles from '@cdo/apps/legacySharedComponents/button.module.scss';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},
@@ -26,7 +28,7 @@ const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.reviewState(), key: 'reviewStateLabel'},
   {label: i18n.feedback(), key: 'comment'},
   {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'},
-  {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'}
+  {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'},
 ];
 
 const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
@@ -37,7 +39,7 @@ const CSV_FEEDBACK_NO_RUBRIC_HEADERS = [
   {label: i18n.reviewState(), key: 'reviewStateLabel'},
   {label: i18n.feedback(), key: 'comment'},
   {label: i18n.dateUpdatedByTeacher(), key: 'timestamp'},
-  {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'}
+  {label: i18n.dateSeenByStudent(), key: 'studentSeenFeedback'},
 ];
 
 /*
@@ -53,7 +55,7 @@ class FeedbackDownload extends Component {
     // provided by redux
     exportableFeedbackData: PropTypes.array.isRequired,
     scriptName: PropTypes.string.isRequired,
-    isCurrentScriptCSD: PropTypes.bool
+    isCurrentScriptCSD: PropTypes.bool,
   };
 
   constructor(props) {
@@ -71,12 +73,8 @@ class FeedbackDownload extends Component {
   }
 
   render() {
-    const {
-      sectionName,
-      exportableFeedbackData,
-      scriptName,
-      onClickDownload
-    } = this.props;
+    const {sectionName, exportableFeedbackData, scriptName, onClickDownload} =
+      this.props;
 
     // These allow the CSVLink to be styled as a button
     let className = classNames(
@@ -92,7 +90,7 @@ class FeedbackDownload extends Component {
           filename={i18n.feedbackDownloadFileName({
             sectionName: sectionName,
             scriptName: scriptName,
-            date: new Date().toDateString()
+            date: new Date().toDateString(),
           })}
           data={exportableFeedbackData}
           headers={this.headers}
@@ -106,7 +104,7 @@ class FeedbackDownload extends Component {
           <SafeMarkdown
             markdown={i18n.feedbackDownloadOverview({
               sectionName: sectionName,
-              scriptName: scriptName
+              scriptName: scriptName,
             })}
           />
           <p>
@@ -122,12 +120,12 @@ class FeedbackDownload extends Component {
 const styles = {
   icon: {
     color: color.purple,
-    paddingRight: 5
+    paddingRight: 5,
   },
   buttonContainer: {
     padding: '12px 24px',
-    lineHeight: '10px'
-  }
+    lineHeight: '10px',
+  },
 };
 
 export const UnconnectedFeedbackDownload = FeedbackDownload;
@@ -135,5 +133,5 @@ export const UnconnectedFeedbackDownload = FeedbackDownload;
 export default connect(state => ({
   exportableFeedbackData: getExportableFeedbackData(state),
   scriptName: getSelectedScriptFriendlyName(state),
-  isCurrentScriptCSD: isCurrentScriptCSD(state)
+  isCurrentScriptCSD: isCurrentScriptCSD(state),
 }))(FeedbackDownload);

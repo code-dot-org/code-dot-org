@@ -5,14 +5,15 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import ApplicationLoader from './application_loader';
 import FormDataEdit from './form_data_edit';
 
 export default class AdminEditView extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
-      applicationId: PropTypes.string.isRequired
-    }).isRequired
+      applicationId: PropTypes.string.isRequired,
+    }).isRequired,
   };
 
   renderApplication = ({applicationData}) => (

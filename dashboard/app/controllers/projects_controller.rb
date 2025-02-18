@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level, :can_publish_age_status, :submission_status, :submit]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
@@ -22,9 +22,12 @@ class ProjectsController < ApplicationController
   # @option {Boolean|nil} :login_required Whether you must be logged in to
   #   access this project type. Default: false.
   # @option {String|nil} :default_image_url If present, set this as the
+  #   thumbnail image url when creating a project of this type.
   # @option {Boolean|nil} :i18n If present, include this level in the i18n sync
-  # thumbnail image url when creating a project of this type.
   STANDALONE_PROJECTS = {
+    adaptations: {
+      name: 'New Adaptations Project'
+    },
     artist: {
       name: 'New Artist Project',
       i18n: true
@@ -72,6 +75,8 @@ class ProjectsController < ApplicationController
       # We do not currently generate thumbnails for flappy, so specify a
       # placeholder image here. This allows flappy projects to show up in the
       # public gallery, and to be published from the share dialog.
+      #
+      # NOTE: if changing this URL, update project thumbnail URL validation as well
       default_image_url: '/blockly/media/flappy/placeholder.jpg',
     },
     minecraft_codebuilder: {
@@ -111,6 +116,7 @@ class ProjectsController < ApplicationController
     },
     dance: {
       name: 'New Dance Lab Project',
+      # NOTE: if changing this URL, update project thumbnail URL validation as well
       default_image_url: '/blockly/media/dance/placeholder.png',
       i18n: true
     },
@@ -147,6 +153,10 @@ class ProjectsController < ApplicationController
       name: 'New Java Lab Project',
       login_required: true
     },
+    music: {
+      name: 'New Music Lab Project',
+      i18n: true
+    },
     poetry: {
       name: 'New Poetry Project'
     },
@@ -164,10 +174,33 @@ class ProjectsController < ApplicationController
     },
     time_capsule: {
       name: 'New Time Capsule Project'
+    },
+    ecosystems: {
+      name: 'New Ecosystems Project'
+    },
+    game_design: {
+      name: 'New Game Design Project'
+    },
+    pythonlab: {
+      name: 'New Python Lab Project'
+    },
+    transformers: {
+      name: 'New Transformers Project'
     }
+    # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
+
+  PROJECT_SUBMISSION_ERROR_MAP = {
+    PROJECT_SUBMISSION_STATUS[:ALREADY_SUBMITTED] => "Once submitted, a project cannot be submitted again.",
+    PROJECT_SUBMISSION_STATUS[:PROJECT_TYPE_NOT_ALLOWED] => "Submission disabled because project type is not allowed in the featured project gallery.",
+    PROJECT_SUBMISSION_STATUS[:NOT_PROJECT_OWNER] => "Submission disabled for user account because non-owner.",
+    PROJECT_SUBMISSION_STATUS[:SHARING_DISABLED] => "Submission disabled for user account because sharing disabled.",
+    PROJECT_SUBMISSION_STATUS[:RESTRICTED_SHARE_MODE] => "Submission disabled because project is in restricted share mode.",
+    PROJECT_SUBMISSION_STATUS[:OWNER_TOO_NEW] => "Submission disabled because user's account has not existed for required time period.",
+    PROJECT_SUBMISSION_STATUS[:PROJECT_TOO_NEW] => "Submission disabled because project has not existed for required time period."
+  }
 
   # GET /projects/:tab_name
   # Where a valid :tab_name is (nil|public|libraries)
@@ -178,7 +211,6 @@ class ProjectsController < ApplicationController
     end
 
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
-    @limited_gallery = limited_gallery?
     @current_tab = params[:tab_name]
     @project_count_millions = PROJECT_COUNT_MILLIONS
   end
@@ -197,11 +229,17 @@ class ProjectsController < ApplicationController
   end
 
   def combine_projects_and_featured_projects_data
-    projects = "#{CDO.dashboard_db_name}__projects".to_sym
+    projects = :"#{CDO.dashboard_db_name}__projects"
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
       select(*project_and_featured_project_fields).
       join(projects, id: :storage_app_id, state: 'active').all
     extract_data_for_tables(project_featured_project_combo_data)
+  end
+
+  def get_featured_project_status(featured_at, unfeatured_at)
+    return SharedConstants::FEATURED_PROJECT_STATUS.archived if featured_at && unfeatured_at
+    return SharedConstants::FEATURED_PROJECT_STATUS.active if featured_at
+    SharedConstants::FEATURED_PROJECT_STATUS.bookmarked
   end
 
   def extract_data_for_tables(project_featured_project_combo_data)
@@ -209,6 +247,7 @@ class ProjectsController < ApplicationController
     project_featured_project_combo_data.each do |project_details|
       project_details_value = JSON.parse(project_details[:value])
       channel = storage_encrypt_channel_id(project_details[:storage_id], project_details[:id])
+      status = get_featured_project_status(project_details[:featured_at], project_details[:unfeatured_at])
       featured_project_row = {
         projectName: project_details_value['name'],
         channel: channel,
@@ -218,21 +257,28 @@ class ProjectsController < ApplicationController
         thumbnailUrl: project_details_value['thumbnailUrl'],
         featuredAt: project_details[:featured_at],
         unfeaturedAt: project_details[:unfeatured_at],
+        status: status
       }
       @featured_project_table_rows << featured_project_row
     end
-    sort_projects(@featured_project_table_rows)
+    sort_featured_projects(@featured_project_table_rows)
   end
 
   # @param [Array {Hash}] Each hash is data for a row in the featured projects tables.
-  # The rows are sorted into two arrays: featured or unfeatured, based on
-  # on whether the project is currently featured or not.
-  def sort_projects(featured_project_table_rows)
-    @featured = []
-    @unfeatured = []
+  # The rows are sorted into three arrays: active, archived, or bookmarked.
+  def sort_featured_projects(featured_project_table_rows)
+    @active = []
+    @archived = []
+    @bookmarked = []
     featured_project_table_rows.each do |row|
-      featured = row[:unfeaturedAt].nil? && !row[:featuredAt].nil?
-      featured ? @featured << row : @unfeatured << row
+      status = get_featured_project_status(row[:featuredAt], row[:unfeaturedAt])
+      if status == SharedConstants::FEATURED_PROJECT_STATUS.archived
+        @archived << row
+      elsif status == SharedConstants::FEATURED_PROJECT_STATUS.active
+        @active << row
+      else
+        @bookmarked << row
+      end
     end
   end
 
@@ -280,21 +326,76 @@ class ProjectsController < ApplicationController
     )
   end
 
+  # GET /projects(/script/:script_id)/level/:level_id(/user/:user_id)
+  # Given a level_id and the current user (or signed out user), get the existing project
+  # or create a new project for that level and user. If a script_id is provided, get or
+  # create the project for that level, script and user.
+  # If a user_id is provided, get but do not create the project for that level, script and
+  # user_id; this is used for Lab2 levels when a teacher views a student's work, and the
+  # relevant permission is verified here.
+  # Returns json: {channel: <encrypted-channel-token>}
+  def get_or_create_for_level
+    script_id = params[:script_id]
+    script_level_id = params[:script_level_id]
+    level = Level.find(params[:level_id])
+    user_id = params[:user_id]
+
+    error_message = under_13_without_tos_teacher?(level)
+    return render(status: :forbidden, json: {error: error_message}) if error_message
+
+    # If viewing another user's work, ensure that we have permission.
+    if user_id
+      # If a script level ID was provided, ensure it matches the level ID.
+      if script_level_id
+        script_level = ScriptLevel.cache_find(script_level_id.to_i)
+        same_level = script_level.oldest_active_level.id == level.id
+        is_sublevel = ParentLevelsChildLevel.exists?(child_level_id: level.id, parent_level_id: script_level.oldest_active_level.id)
+        return render(status: :forbidden, json: {error: "Access denied."}) unless same_level || is_sublevel
+      else
+        script_level = level.script_levels.find_by_script_id(script_id)
+      end
+      user = User.find(user_id)
+      unless can?(:view_as_user, script_level, user)
+        return render(status: :forbidden, json: {error: "Access denied."})
+      end
+
+      # And return early if the level has not been started.
+      script = Unit.get_from_cache(script_id)
+      unless level_started?(level, script, user)
+        return render(status: :ok, json: {started: false})
+      end
+
+      user_storage_id = storage_id_for_user_id(user_id)
+
+      # Find the channel for the user and level, if it exists.
+      channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
+    else
+      # get_storage_id works for signed out users as well; it uses the cookie to determine
+      # the storage id.
+      user_storage_id = get_storage_id
+
+      # Find the channel for the user and level if it exists, or create a new one.
+      channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
+    end
+
+    # We can limit channel updates during periods of high use using the updateChannelOnSave flag.
+    script_name = !script_id.nil? && Unit.find(script_id)&.name
+    reduce_channel_updates = script_name ?
+                              !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script_name}, default: true) :
+                              false
+
+    render(status: :ok, json: {channel: channel_token.channel, reduceChannelUpdates: reduce_channel_updates})
+  end
+
   def weblab_footer
     render partial: 'projects/weblab_footer'
   end
 
-  private def initial_data
-    data = {
-      name: 'Untitled Project',
-      level: polymorphic_url([params[:key].to_sym, :project_projects])
-    }
-    default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
-    data[:thumbnailUrl] = default_image_url if default_image_url
-    data
-  end
-
   def show
+    if @level.deprecated?
+      return render 'errors/deprecated_course'
+    end
+
     if params.key?(:nosource)
       # projects can optionally be embedded without making their source
       # available. to keep people from just twiddling the url to get to the
@@ -308,9 +409,13 @@ class ProjectsController < ApplicationController
       params[:channel_id] = params[:channel_id].tr(cipher, alphabet)
     end
 
+    redirect_for_lab2 = redirect_edit_view_for_lab2
+    return redirect_for_lab2 if redirect_for_lab2
+
     iframe_embed = params[:iframe_embed] == true
     iframe_embed_app_and_code = params[:iframe_embed_app_and_code] == true
     sharing = iframe_embed || params[:share] == true
+    set_lab2_responsive_view_options(sharing)
     readonly = params[:readonly] == true
     if iframe_embed || iframe_embed_app_and_code
       # explicitly set security related headers so that this page can actually
@@ -334,7 +439,7 @@ class ProjectsController < ApplicationController
       full_width: true,
       callouts: [],
       channel: params[:channel_id],
-      no_footer: sharing || iframe_embed_app_and_code,
+      no_footer: sharing || iframe_embed_app_and_code || @game&.no_footer?,
       code_studio_logo: sharing && !iframe_embed,
       no_header: sharing || iframe_embed_app_and_code,
       small_footer: !iframe_embed_app_and_code && !sharing && (@game&.uses_small_footer? || @level&.enable_scrolling?),
@@ -345,6 +450,8 @@ class ProjectsController < ApplicationController
       disallowed_html_tags: disallowed_html_tags,
       blocklyVersion: params[:blocklyVersion]
     )
+
+    @body_classes = @level.properties['background']
 
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
@@ -412,20 +519,69 @@ class ProjectsController < ApplicationController
     redirect_to action: 'edit', channel_id: new_channel_id
   end
 
-  private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab javalab).include? project_type
+  # GET /projects/:project_type/:channel_id/submission_status
+  def submission_status
+    _, project_id = storage_decrypt_channel_id(params[:channel_id])
+    project = Project.find_by(id: project_id)
+    begin
+      authorize! :submission_status, project
+    rescue CanCan::AccessDenied => exception
+      return render status: :forbidden, json: {error: exception.message}
+    end
+    status = project.submission_status
+    render(status: :ok, json: {status: status})
   end
 
-  private def uses_animation_bucket?(project_type)
-    %w(gamelab spritelab).include? project_type
+  # POST /projects/:project_type/:channel_id/submit
+  def submit
+    submission_description = params[:submissionDescription]
+    channel_id = params[:channel_id]
+    project_type = params[:project_type]
+    return render status: :bad_request, json: {error: "Project description is required for submission."} if submission_description.empty?
+    _, project_id = storage_decrypt_channel_id(channel_id)
+    project = Project.find_by(id: project_id)
+    begin
+      authorize! :submit, project
+    rescue CanCan::AccessDenied => exception
+      Honeybadger.notify(
+        "Project submission error: #{exception.message}",
+        context: {
+          message:  "Project submission failed due to unauthorized submission status - user unexpectedly bypassed submission_status restriction in the share dialog and attempted to submit project."
+        }
+      )
+      return render status: :forbidden, json: {error: PROJECT_SUBMISSION_ERROR_MAP[project.submission_status]}
+    end
+    # Publish the project, i.e., make it public.
+    begin
+      storage_id, _ = storage_decrypt_channel_id(channel_id)
+      Projects.new(storage_id).publish(channel_id, project_type, current_user)
+    rescue Projects::PublishError => exception
+      Honeybadger.notify(
+        exception.message,
+        context: {
+          message: "Project publish failed - user unexpectedly bypassed submission_status restriction in the share dialog and project submit authorization restrictions and attempted to publish project."
+        }
+      )
+      return render(status: :forbidden, json: {error: exception.message})
+    end
+    # TODO: Store submission_description in our database.
+    # Send ZenDesk ticket with user/project info and submission description.
+    send_project_submission(current_user.name || '', current_user.username || '', project_type, channel_id, submission_description)
   end
 
-  private def uses_file_bucket?(project_type)
-    %w(weblab).include? project_type
-  end
+  def can_publish_age_status
+    project = Project.find_by_channel_id(params[:channel_id])
+    unless project.apply_project_age_publish_limits?
+      return render json: {
+        project_existed_long_enough_to_publish: true,
+        user_existed_long_enough_to_publish: true
+      }
+    end
 
-  private def uses_starter_assets?(project_type)
-    %w(javalab applab).include? project_type
+    render json: {
+      project_existed_long_enough_to_publish: project.existed_long_enough_to_publish?,
+      user_existed_long_enough_to_publish: project.owner_existed_long_enough_to_publish?
+    }
   end
 
   def export_create_channel
@@ -452,12 +608,16 @@ class ProjectsController < ApplicationController
     render json: {channel_id: new_channel_id}
   end
 
+  def datablock_storage_options
+    {}
+  end
+
   def export_config
     return if redirect_under_13_without_tos_teacher(@level)
     if params[:script_call]
-      render js: "#{params[:script_call]}(#{firebase_options.to_json});"
+      render js: "#{params[:script_call]}(#{datablock_storage_options.to_json});"
     else
-      render json: firebase_options
+      render json: datablock_storage_options
     end
   end
 
@@ -466,43 +626,43 @@ class ProjectsController < ApplicationController
     @game = @level.game
   end
 
-  # Due to risk of inappropriate content, we can hide non-featured Applab
-  # and Gamelab projects via DCDO. Internally, project_validators should
-  # always have access to all Applab and Gamelab projects, even if there is a
-  # limited gallery for others.
-  def limited_gallery?
-    dcdo_flag = DCDO.get('image_moderation', {})['limited_project_gallery']
-    limited_project_gallery = dcdo_flag.nil? ? true : dcdo_flag
-    project_validator = current_user&.permission? UserPermission::PROJECT_VALIDATOR
-    !project_validator && limited_project_gallery
-  end
-
-  private
-
-  # @param iframe_embed [Boolean] Whether the project view event was via iframe.
-  # @param sharing [Boolean] Whether the project view event was via share page.
-  # @returns [String] A string representing the project view event type.
-  def project_view_event_type(iframe_embed, sharing)
-    if iframe_embed
-      'iframe_embed'
-    elsif sharing
-      'share'
-    else
-      'view'
+  # GET /projects/:channel_id/extra_links
+  # Get the extra links for the project for use by project validators.
+  # This is used by lab2 levels that cannot use the haml 'extra links' box since
+  # this box will not refresh when changing levels.
+  def extra_links
+    src_channel_id = params[:channel_id]
+    if src_channel_id == "undefined"
+      return render json: {message: 'No channel id provided.'}, status: :ok
     end
-  end
+    project_info = {}
+    owner_info = {}
+    owner_info['storage_id'], project_info['id'] = storage_decrypt_channel_id(src_channel_id)
+    project_info['sources_link'] = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_info['storage_id']}/#{project_info['id']}/"
+    # For legacy labs, other links are displayed.
+    # App Lab includes assets, Gamelab includes animations, and Weblab includes files.
+    # Follow-up includes adding links other than sources for lab2 labs.
+    owner_info['name'] = User.find_channel_owner(src_channel_id).try(:username)
+    project_info['is_featured_project'] = FeaturedProject.exists?(storage_app_id: project_info['id'])
 
-  def get_from_cache(key)
-    if Unit.should_cache?
-      @@project_level_cache[key] ||= Level.find_by_key(key)
-    else
-      Level.find_by_key(key)
+    project = Project.find_by_channel_id(src_channel_id)
+    remix_ancestry = Projects.remix_ancestry(src_channel_id, depth: 5)
+    project_info['remix_ancestry'] = []
+    project_type = project.project_type
+    if remix_ancestry.present?
+      remix_ancestry.each do |channel_id|
+        project_info['remix_ancestry'] << "/projects/#{project_type}/#{channel_id}/view"
+      end
     end
-  end
-
-  # For certain actions, check a special permission before proceeding.
-  def authorize_load_project!
-    authorize! :load_project, params[:key]
+    if project_info['is_featured_project']
+      featured_project = FeaturedProject.find_by project_id: project_info['id']
+      project_info['featured_status'] = featured_project.status
+    else
+      project_info['featured_status'] = 'n/a'
+    end
+    project_info['abuse_score'] = project['abuse_score']
+    project_info['is_published_project'] = project['published_at'] ? 'yes' : 'no'
+    return render json: {owner_info: owner_info, project_info: project_info}
   end
 
   # Automatically catch authorization exceptions on any methods in this controller
@@ -517,5 +677,133 @@ class ProjectsController < ApplicationController
       # Not logged in and trying to reach a forbidden page - redirect to sign in.
       authenticate_user!
     end
+  end
+
+  private def initial_data
+    data = {
+      name: 'Untitled Project',
+      level: polymorphic_url([params[:key].to_sym, :project_projects])
+    }
+    default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
+    data[:thumbnailUrl] = default_image_url if default_image_url
+    data
+  end
+
+  private def uses_asset_bucket?(project_type)
+    %w(applab makerlab gamelab spritelab javalab).include? project_type
+  end
+
+  private def uses_animation_bucket?(project_type)
+    projects_that_use_animations = ['gamelab']
+    poetry_subtypes = Poetry.standalone_app_names.map {|item| item[1]}
+    spritelab_subtypes = GamelabJr.standalone_app_names.map {|item| item[1]}
+    projects_that_use_animations.concat(poetry_subtypes)
+    projects_that_use_animations.concat(spritelab_subtypes)
+    projects_that_use_animations.include?(project_type)
+  end
+
+  private def uses_file_bucket?(project_type)
+    %w(weblab).include? project_type
+  end
+
+  private def uses_starter_assets?(project_type)
+    %w(javalab applab).include? project_type
+  end
+
+  # @param iframe_embed [Boolean] Whether the project view event was via iframe.
+  # @param sharing [Boolean] Whether the project view event was via share page.
+  # @returns [String] A string representing the project view event type.
+  private def project_view_event_type(iframe_embed, sharing)
+    if iframe_embed
+      'iframe_embed'
+    elsif sharing
+      'share'
+    else
+      'view'
+    end
+  end
+
+  private def get_from_cache(key)
+    if Unit.should_cache?
+      @@project_level_cache[key] ||= Level.find_by_key(key)
+    else
+      Level.find_by_key(key)
+    end
+  end
+
+  # For certain actions, check a special permission before proceeding.
+  private def authorize_load_project!
+    authorize! :load_project, params[:key]
+  end
+
+  # Redirect to the correct view/edit page for Lab2 projects. If a project owner is on a /view
+  # page, redirect to /edit. If a non-owner is on an /edit page, redirect to /view.
+  # For legacy (non-Lab2) labs, this is handled on the front-end.
+  private def redirect_edit_view_for_lab2
+    return nil unless @level.uses_lab2?
+
+    project = Projects.new(get_storage_id).get(params[:channel_id])
+    is_owner = project[:isOwner]
+    is_frozen = project[:frozen]
+
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && request.path.ends_with?('/view') && !is_frozen
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if is_frozen && request.path.ends_with?('/edit')
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && request.path.ends_with?('/edit')
+  end
+
+  private def set_lab2_responsive_view_options(sharing)
+    return nil unless @level.uses_lab2?
+
+    # If the user is on the play view '/projects/channel_id', set `response_content`.`
+    if sharing == true
+      view_options(responsive_content: true)
+    end
+  end
+
+  # Temporary - will be replaced with storing in database.
+  private def send_project_submission(name, username, project_type, channel_id, description)
+    unless Rails.env.development? || Rails.env.test?
+      subject = 'Featured project gallery submission'
+      response = HTTParty.post(
+        'https://codeorg.zendesk.com/api/v2/tickets.json',
+        headers: {"Content-Type" => "application/json", "Accept" => "application/json"},
+        body: {
+          ticket: {
+            requester: {
+              name: username
+            },
+            subject: subject,
+            comment: {
+              body: [
+                "name: #{name}",
+                "user name: #{username}",
+                "project url: https://studio.code.org/projects/#{project_type}/#{channel_id}",
+                "project description: #{description}",
+                "project type: #{project_type}"
+              ].join("\n")
+            },
+            tags: ['project_submission', project_type]
+          }
+        }.to_json,
+        basic_auth: {username: 'dev@code.org/token', password: Dashboard::Application.config.zendesk_dev_token}
+      )
+      raise ZendeskError.new(response.code, response.body) unless response.success?
+    end
+  end
+end
+
+# Temporary - will be removed once project submission is stored in database.
+class ZendeskError < StandardError
+  attr_reader :error_details
+
+  def initialize(code, error_details)
+    @error_details = error_details
+    super("Zendesk failed with response code: #{code}")
+  end
+
+  def to_honeybadger_context
+    {
+      details: JSON.parse(@error_details)
+    }
   end
 end

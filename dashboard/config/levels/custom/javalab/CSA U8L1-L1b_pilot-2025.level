@@ -1,0 +1,46 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T21:01:22.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "BandRunner.java": {
+        "text": "public class BandRunner {\n  public static void main(String[] args) {\n\n    BandArtist oneDirection = new BandArtist(\"One Direction\", 40098648,\n      new String[]{\"Zayn\", \"Niall\", \"Louis\", \"Liam\", \"Harry\"});\n    SoloArtist zayn = new SoloArtist(\"Zayn Malik\", 19218530);\n    SoloArtist niall = new SoloArtist(\"Niall Horan\", 14067863);\n    SoloArtist louis = new SoloArtist(\"Louis Tomlinson\", 3660858);\n    SoloArtist liam = new SoloArtist(\"Liam Payne\", 6067392);\n    SoloArtist harry = new SoloArtist(\"Harry Styles\", 70632017);\n    \n    Artist[] allArtists = {oneDirection, zayn, niall, louis, liam, harry};\n    \n\n    System.out.println(\"---------- Before Sort ----------\");\n    for (Artist a : allArtists) {\n      System.out.println(a);\n    }\n\n    System.out.println(\"---------- After Sort ----------\");\n    Artist.sortMonthlyListeners(allArtists);\n    for (Artist a : allArtists) {\n      System.out.println(a);\n    }\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Artist.java": {
+        "text": "public class Artist {\n\n  private String name;\n  private int monthlylisteners;\n\n  public Artist(String name, int monthlylisteners) {\n    this.name = name;\n    this.monthlylisteners = monthlylisteners;\n  }\n\n  public String getName() {\n    return name;\n  }\n\n  public int getMonthlyListeners() {\n    return monthlylisteners;\n  }\n  \n  public String toString() {\n    return name + \"'s monthly listeners on Spotify: \" +  String.format(\"%,d\", monthlylisteners);\n  }\n\n  public static void sortMonthlyListeners(Artist[] artistArray) {\n    for (int index = 0; index < artistArray.length; index++) {\n      int current = index;\n      int currentMonthlyListeners = artistArray[current].getMonthlyListeners();\n\n      for (int next = index + 1; next < artistArray.length; next++) {\n        int nextMonthlyListeners = artistArray[next].getMonthlyListeners();\n\n        if (nextMonthlyListeners > currentMonthlyListeners) {\n          current = next;\n          currentMonthlyListeners = artistArray[current].getMonthlyListeners();\n        }\n      }\n\n      Artist temp = artistArray[current];\n      artistArray[current] = artistArray[index];\n      artistArray[index] = temp;\n    }\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "BandArtist.java": {
+        "text": "public class BandArtist extends Artist {\n\n  private String[] members;\n\n  public BandArtist(String name, int monthlylisteners, String[] members) {\n    super(name, monthlylisteners);\n    this.members = members;\n  }\n\n  public String[] getMembers() {\n    return members;\n  }\n\n  public String toString() {\n    String result = \"\";\n    \n    if (members.length > 0) {\n      result += members[0];\n    }\n    for (int i = 1; i < members.length; i++) {\n      result += \", \" + members[i];\n    }\n\n    return getName() + \"'s (\" + result + \") monthly listeners on Spotify: \" +  String.format(\"%,d\", getMonthlyListeners());\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "SoloArtist.java": {
+        "text": "public class SoloArtist extends Artist {\n\n  public SoloArtist(String name, int monthlylisteners) {\n    super(name, monthlylisteners);\n  }\n  \n  public String toString() {\n    return getName() + \"'s (solo) monthly listeners on Spotify: \" +  String.format(\"%,d\", getMonthlyListeners());\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 3
+      }
+    },
+    "display_name": "One Direction Popularity",
+    "bubble_choice_description": "An example project that analyzes the popularity of the members of One Direction.",
+    "thumbnail_url": "https://images.code.org/13f681cc9f60cafe9c18dac826068d1d-optionB.jpg",
+    "encrypted_exemplar_sources": "0Hij3adwKq2lYqR8lBOHyQLKQqikFGc3p2Dhi0A0x+Quw2JAsvuWxYB9rDKt\n+7qhS4hJUV6Avw2MgGNryeEDNujhNQgNKDT3Lc4WjD4MZ047nXJBwnTVo94I\nhhlPRaohtC89UZtwn/xAH1MxNHs0L/r5wx8YMbFC84ppkPCjjmCkUu5x2tOZ\ndgbaTynejKjv4F4jVnNOhk4DCpIUR4xCkCf1hZwWL+7Au+SQdOrMCW0FHY2K\n6pZbPB8tnWxFrP3Z4JGTzuM3scAbDgt37JSB8CBo3nd/kaVtrJFs4KCiOAPX\nV4nfSUrVlZdisUmafU+3L0P5PLhGbbiNrG8IChnxPNPeFK4Vpi2Yl0WYqR/X\ngfl6XL0VS8A4H2W9AI5nlG3dqV2OK4f+g/Qs61ZGQJhvoPI9CSFxQIgjtIHm\nFLMOMUKwtCShlhRrzhZn6znH4wmKk5wE+QoBiaXprJZ1sxqCP5lye97D4BM2\nlSlDMZX8YFI1E2QoCl3/MjnYECeBJAL9lWeW5ZyNhYwXbPAmfuu7gA05YZDM\n46kI2dAq7k9Ely0fxAtQCWNqVSIevRxf4b3I04156Pe/Fx8Xcx0Yd+AaPs3e\npNoZZspaW1SF2E80ZO1WTGMcPaPqOf3pFR2bHT7FK5bxpnKtdzofpcFav2ZS\nPc0w9dtnnLTzmsvDZkyzeh1gU/Gx5SICh+OwrpcXL9HCg7ftNbZomgEvwpWI\nW9EhA1plplTO3pnRKeeNmd0U0SC1pp4hFmho4+QkVDBdlkLogQi4TOdnqExf\nT5MqmNUr2uhjoDvQcPRWw04XEXIqVPQwvsAfRdIAxKWAk+Sg6Yj9yaqoNOD+\n3VP6jhn1iE6rUaALoqjZZOS58E/wwWGcnpwEv/WpTjVHIK80ci0MjjrQ1W+2\nSYDOixhbkPVsqenafCxOQmSZcX7Yp2TSlSymugSHB7Dm7LTLAhxZYPTV2V+M\nK1/tP/7T+3fLmguKo3ZbXF04VatREhXKbnJLrrrifLcWORgS36aRYbK94CNM\nc8XqKznaXSr0KD+0No3aRA6RhZtve/7cyYYhAfWJGxbrg2nPHU+Hdcqo/2s4\nIurRM7f3M+WKpIJoNndu6Y7w0IZAgqst2kxnNevynHs709dEHDg7UIiSGAbh\nA7XflBE3N59dAUzfYt5saqkSn2ZReKSD5A9j+aNzockp6KA/qZFZ49EN8UFX\n92kTQMhqBsvl5srDsGw/xMO6Xw50DhWeUQrxlbGP3cN+SAEzPlxCeU9a1Toy\nD28M1zeCK3j08gFrE34tb+mOXnFTdV906+p6rJ6cPRW3r17zLcLD0hOdwNHL\nT8kzleLlG5CE5n5a2uwv7tuRhm+4WdB2u9h5MNCxe963eUZUGNMFBNKbVl2T\nt1i3zGHi2RcDpznPJiM9ijRxBso+ErH+Ow+PgI91qtef3MZteVOD+brBVY90\n3+140mCqc7F/e0vxzLl55Fdb5SjHvlbJeXe0lMvMZKrXBNRLCcg8o05c2303\nWzlnl4fJ8Nx7cUm1CsUVcUIDWJqS/mTVyd8ofFaNuLUFq+YS/xJKUXhAYViJ\nkSS2hVrxucLaXi/N3thEknPbGKKY1+P3ia3IIxTNkQHLmM1W0KiZd8KFR1Vi\n62aCdfhUyitv+q9ZvcW7djatixbunFk9trZfvuAGVFlfquwlaLwzXL4QbkP4\nmrKt9XhEsYgF19dyKhczKvzuqdxZjiAwYjpy2/67nrGcW/yr6/AnrOOGOEW5\nuS2Nql5bYiCX2t0ViqBXJWrN63pM+ztaLlTzqUqs9YHBqs65cFbMfkYD/OOR\nd5xe9ClZ4U+bURvst/kkpbl/wDldhfIPnclCdnJUFLt7xN0Oz//8q3dxAnpi\n3tEds/lQcwtZhsnRsPYIYwVlEXj8Sxvb4n/IBhKMaBrkC1UeVSU+/xZbz0p1\nSz11qMI/Nl203hOY3jDlrHmUzZqKznkw+iT/AKOVHddzyPNSOZ3dxC4Uc/MY\ncE6ckq3rd9TfIQ2HVHZTapygs2negxQ+VKq5G7WJ6ZDZ3DVsq2gvbnj7OoOk\nAD7skzJOF9Qhmljqo1ifPdLE5AhZgnlzt3vK/8QMCknaFf1GeC7+0mXp2D+Z\n9ur6w/qBpXCZHQSheLbOENvo8PpADw3mmGrSyoT9cmsotkLGG5U9h4Fv8uqr\n5ynmDk5cZ/S6TrmMLcIjhWp+FtEnjjWfn63KFCVxX+pTlI6wm74OId/e0euN\nz+eiERNJl32wjkKniqO4Jh45evEatPWTZEs4SY7+3Ic5mfQf5TAmlYx1nZWb\n6OyM7ooiPPeCVg2eEmFyrNN2mvIimPLp/WOTXAkqa66TtwF+5trBj2DSxuat\nIGuSnK+smJYPtrTmxXpLhbg40bB6ElcfUkLxmksnVn36tyZ99Z+NTOkDW1sn\nX7mte/18q6meNrRTuUSzNR3VdwWs2jubvg4xEMhl92BiJIEj0ItyfuHtqHpq\ngg2D/UaAIoxQRK39/EDd764PljbDwXweBnefIMzsqCgf9C/ghIFoasCn5Z1X\nuFZ9U91mGcNr3DEltLhiI3skyGK/Gm4dKTkvbm/Tdbmazh8Gkb8KPe6uZcHI\nIvdXxsc0un7ys77v2AEom5A/IsrcQ2MbJlxfCrkPCLR5WRt0AKAzKgRT6DIF\nzjaxSzAqO3tT76V5FdOaCn+aHORKmG4mI2MdHQwRkoGNyX6ieAMS9n+zFGo/\nYLZ1BCOfDLtP3lfIcoI70IXEsM+R3ir6pp1SN1RhjJD8W43xIYLjWK9JbyhE\n/u3WH+gr3m687KO4l0AeE+JllRsDBU8fGd/iHGa7jjtg+PaiEbZXuUhRLv1k\nPkxLYDYInqs7oTM4azVbZYwaW7BKxPsXeC0dtcWpOhI6BxL6gSbqCZwa7Ivs\nd3nCYoAFWANAiVgTK73w8nR/ZE7dawrp4MCcIpLeGjtkJ7UYHBBcYAy4LqLe\nGJH8MYk+JqzisKDuHetT+aHIsQD6EKY4305jeisp+a+ZrmPuIg0mDC1cs5VC\n3XZE7dE4Q8IcosdBvTq0lqIr73PqFm66vnpvdu31gaJxgM9KzBLtZ3fZWtUK\nKWUZQp4hvmCT2yeL76ElVQcmSyaYSsQCcZUvxGwXot6Ug0QDbEg6zuczMzkF\nWAA6eMSZ/Tf5BFvlhMrC7KCSPk32lW3atBO/8JM1VIA317o0wWRHjqjBie/l\nmhsDJtI9LwhLsMhXwVVzuDPqeDwdR6YfYQZzfStfRRTpmGvK4lr3B9JGB9Wx\n9yBY+pbWEmBvAEpbD++saHgVqFOqAVtOx5h4GSDpnrDV5YwAB9pwTvKtmReg\n2CfiVx3eBWAhHvzNtJHRbc9wMd1suRitJxt2NZ6kKI9IiaaY2v3xx1zPxLDX\n5OLnKITEvfVEmyJdazmptr+si5hskVwTs6ivU+lWnNZfFXNQrEZqar8RXFt1\nKX+drmQJwdkYK6a5jYQNOeWjGWVOyTKncpmYaJ3fhT6bb3xkjl+4+5VDTeUt\nVKMRVpSFiDWUfP6fXwXLBejdN+Qx1Ze/HEpddpsRyTpHyTVwJfuC73J8UA2Q\n9ofaSD3Eh1g2P4p3c2pgSmb0U2WS+2OOvdcXbo2U00aox84CJM8MmDMDrtiS\neJW0eSYpfnzVoPv+GnNBnkedfQ89DYgxVfLmMrhLqHBQIsJjTFkjBr01g29N\n0Q/ItHlaIlypU8juvq95VwvOZedb1H5+Ta+qlafhc3lQfz734Perfd3TzL6G\nYwhJSrhGo9Rz+F+5NMf8paNSZYyapR/P1ONjRfhlyahUK3cOnKiqWdR7Pw9W\nOkTcHM6RwP0MaDjd+kWSEVoq56hrKfaVkuKryXflHAJQXiSup3+u4UTbz8gO\nCJzWrVpsl2j3cr2NXRoqGtj29mdD0DktW2QNOTa9Ncn7pH+605CWIglem0M8\nT2qHQ+v12VIgrIlEpjGXOgA3aAe15IAIH5t3d4y2rBIbpFXFxbFJxIR3NVjy\nwKJJ/AkzJQO94UAJGZNA8DflTJHJo61HNbJ76E4VrhWoKzOQOuQIGEpErzpO\n/z3cB9OtlEQzpEtD370sOIES0eGID3h0N2ZBABrDW82FL21C8QBYO2D16i7m\nLgWC5jfgKjiGneqKG5K+LUVmawVWrSnX5Xus9l+PqNuJ3EUOX8Ni486Gj/ov\ndI6B+JvmQQHfuBqL+JulMBqCyn3P2OgRmHGKp3HNpdGYrVvW+Mj9INkhchbV\nst1vkF22Ol2V+NrQS31oNcrcMLzLBAY8idHDH/lAroYGeBypeesbgQV9o9yF\nfwL680Qvi+xPIIhQehBC5PgWxcPP\n",
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T21:01:22.288+00:00\",\"changed\":[\"cloned from \\\"CSA U8L1-L1b_2025\\\"\"],\"cloned_from\":\"CSA U8L1-L1b_2025\"}]"
+}]]></config>
+</Javalab>

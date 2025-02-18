@@ -1,0 +1,23 @@
+name 'unplugged_the big event jr._markdown_unplugged'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##The Big Event Jr. 
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/8fc76dafac39c168006e68b857d520fb-image-1719875000970.03.18 PM.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>This is an Unplugged Activity! </strong>
+</h4>
+
+> Ask your teacher for these handouts:
+> - **<a href="https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view" target="_blank">Feeling Faces</a>**
+> - **<a href="https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit" target="_blank">The Big Event</a>**
+> - **<a href="https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit" target="_blank">Controller Image</a>**
+
+</div>
+
+
+MARKDOWN

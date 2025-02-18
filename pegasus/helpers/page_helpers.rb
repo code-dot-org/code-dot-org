@@ -50,21 +50,16 @@ end
 # Returns a CSS Media Query string matching devices with 'retina' displays.
 # Ref: https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/
 # Setting `is_retina` to `false` matches non-retina displays.
-def css_retina?(is_retina = true)
+def css_retina?(is_retina: true)
   css_query_parts = ['-webkit-min-device-pixel-ratio: 2', 'min-resolution: 192dpi']
-  css_query_parts.map {|q| "#{!is_retina ? 'not all and ' : ''}(#{q})"}.join(', ')
+  css_query_parts.map {|q| "#{is_retina ? '' : 'not all and '}(#{q})"}.join(', ')
 end
 
 # Returns a concatenated, minified CSS string from all CSS files in the given paths,
 # along with a digest of same.
 def combine_css(*paths)
-  # Special case in which we want advocacy.code.org to receive styling from code.org.
-  # We still serve up the combined CSS from advocacy.code.org, rather than reach across to code.org,
-  # to avoid CORS errors for the web font that is included in this combined CSS.
-  request_site = request.site == "advocacy.code.org" ? "code.org" : request.site
-
-  files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request_site, path, '*.css'))}.flatten
-  css = files.sort_by(&File.method(:basename)).map do |i|
+  files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request.site, path, '*.css'))}.flatten
+  css = files.sort_by {|file| File.basename(file)}.map do |i|
     File.read(i)
   end.join("\n\n")
   css_min = Sass::Engine.new(css,

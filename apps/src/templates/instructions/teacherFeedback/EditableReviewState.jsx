@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 // EditableReviewState displays a checkbox which can be in one of 3 states:
 // 1. Checked - meaning the teacher has requested the student to keep working
@@ -14,7 +16,7 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 class EditableReviewState extends Component {
   static propTypes = {
     latestReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
-    onReviewStateChange: PropTypes.func
+    onReviewStateChange: PropTypes.func,
   };
 
   checkbox = null;
@@ -23,7 +25,7 @@ class EditableReviewState extends Component {
     super(props);
 
     this.state = {
-      reviewState: props.latestReviewState
+      reviewState: props.latestReviewState,
     };
   }
 
@@ -98,29 +100,28 @@ class EditableReviewState extends Component {
 const styles = {
   keepWorking: {
     display: 'inline-flex',
-    margin: '0 20px'
+    margin: '0 20px',
   },
   checkbox: {
     width: '16px',
     height: '16px',
-    marginTop: '2px'
+    marginTop: '2px',
   },
   label: {
     fontSize: '13px',
     color: color.charcoal,
-    margin: '0 8px'
+    margin: '0 8px',
   },
   keepWorkingText: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'bold'
+    ...fontConstants['main-font-semi-bold'],
   },
   awaitingReviewText: {
     fontStyle: 'italic',
-    margin: '0 3px'
+    margin: '0 3px',
   },
   tooltipContent: {
-    maxWidth: '250px'
-  }
+    maxWidth: '250px',
+  },
 };
 
 export default EditableReviewState;

@@ -15,8 +15,8 @@ export default project => {
               '"/><div><button id="unfreeze" class="btn btn-default btn-sm">Unfreeze</button><div></span>'
           )
         );
-        $('#unfreeze').click(function() {
-          project.unfreeze(function() {
+        $('#unfreeze').click(function () {
+          project.unfreeze(function () {
             window.location.reload();
           });
         });
@@ -26,8 +26,8 @@ export default project => {
             '<button id="freeze" class="btn btn-default btn-sm">Freeze for use as an exemplar &#x2744;</button>'
           )
         );
-        $('#freeze').click(function() {
-          project.freeze(function() {
+        $('#freeze').click(function () {
+          project.freeze(function () {
             window.location.reload();
           });
         });
@@ -39,38 +39,22 @@ export default project => {
     $('#unpublished_warning').show();
   }
 
-  if ($('#feature_project').length && project.isProjectLevel()) {
-    $('#feature_project').click(function() {
-      var url = `/featured_projects/${project.getCurrentId()}/feature`;
+  if ($('#bookmark_project').length && project.isProjectLevel()) {
+    $('#bookmark_project').click(function () {
+      var url = `/featured_projects/${project.getCurrentId()}/bookmark`;
       $.ajax({
         url: url,
         type: 'PUT',
         dataType: 'json',
-        success: function(data) {
-          $('#unfeature_project').show();
-          $('#feature_project').hide();
+        success: function (data) {
+          $('#is_bookmarked_featured_project').show();
+          $('#bookmark_project').hide();
         },
-        error: function(data) {
-          alert("Shucks. Something went wrong - this project wasn't featured.");
-        }
-      });
-    });
-
-    $('#unfeature_project').click(function() {
-      var url = `/featured_projects/${project.getCurrentId()}/unfeature`;
-      $.ajax({
-        url: url,
-        type: 'PUT',
-        dataType: 'json',
-        success: function(data) {
-          $('#unfeature_project').hide();
-          $('#feature_project').show();
-        },
-        error: function(data) {
+        error: function (data) {
           alert(
-            'Shucks. Something went wrong - this project is still featured.'
+            "Shucks. Something went wrong - this project wasn't bookmarked."
           );
-        }
+        },
       });
     });
   }
@@ -83,11 +67,8 @@ export default project => {
     var privateOrProfane = project.hasPrivacyProfanityViolation();
     var abuseScore = project.getAbuseScore();
     $('.admin-abuse-score').text(abuseScore);
-    $('#admin-abuse-reset').click(function() {
+    $('#admin-abuse-reset').click(function () {
       project.adminResetAbuseScore(0);
-    });
-    $('#admin-abuse-buffer').click(function() {
-      project.adminResetAbuseScore(-50);
     });
     var abusive = project.exceedsAbuseThreshold();
     if (sharingDisabled || privateOrProfane || abusive) {
@@ -129,14 +110,14 @@ export default project => {
     }
   }
 
-  $('#disable-auto-moderation').click(async function() {
+  $('#disable-auto-moderation').click(async function () {
     await project.disableAutoContentModeration();
     $('#disable-auto-moderation').hide();
     $('#moderation-explanation').hide();
     $('#enable-auto-moderation').show();
   });
 
-  $('#enable-auto-moderation').click(async function() {
+  $('#enable-auto-moderation').click(async function () {
     await project.enableAutoContentModeration();
     $('#disable-auto-moderation').show();
     $('#moderation-explanation').show();

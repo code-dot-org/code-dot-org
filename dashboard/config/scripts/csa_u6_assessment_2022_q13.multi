@@ -23,3 +23,5 @@ public static ArrayList<Integer> removeOdds(ArrayList<Integer> inventories) {
 
 Which of the following best explains why the code segment does not work as intended?
 MARKDOWN
+
+allow_multiple_attempts true

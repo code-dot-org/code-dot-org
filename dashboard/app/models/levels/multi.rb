@@ -22,6 +22,7 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 require "csv"
@@ -35,6 +36,7 @@ class Multi < Match
       question 'Question'
       wrong 'wrong answer'
       right 'right answer'
+      allow_multiple_attempts false
     RUBY
   end
 
@@ -75,5 +77,9 @@ class Multi < Match
         questionText: question_text
       }
     )
+  end
+
+  def validated?
+    true
   end
 end

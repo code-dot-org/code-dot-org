@@ -1,0 +1,30 @@
+name 'Trace Code Execution'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Trace Code Execution?
+
+#### Students should manually or using a debugger trace their code's execution line by line to understand its behavior and identify where it deviates from the expected outcome.
+
+<img src="https://images.code.org/4e37cf72816a90a1abccaf66d623b4ad-image-1704408444176.23.19 PM.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+
+## What does that mean? 
+
+##### Imagine you’re building a tower with blocks. Each block has a number on it, and you want to know how tall the tower will be when you stack all the blocks.
+
+Let’s say you start with 5 blocks. You want to keep track of what happens each time you add a block to the tower. So, every time you pick up a block, you say out loud, “I’m adding block number 5!” Then you add it to the tower. Next, you say, “Now I’m adding block number 4!” and so on until you’re out of blocks.
+
+In the end, you look at the tower and count how tall it is. You’ve kept track of every step by talking out loud, so you know exactly how you built the tower.
+
+In coding, tracing is like saying out loud what you’re doing in each step, so you can understand how your code is working, just like how you understood building the tower by keeping track of each block.
+
+
+### **Suggested time:** 5 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN

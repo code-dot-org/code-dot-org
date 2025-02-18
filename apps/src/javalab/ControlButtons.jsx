@@ -1,9 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
 import JavalabButton from './JavalabButton';
 import JavalabSettings from './JavalabSettings';
+
 import style from './control-buttons.module.scss';
 
 export default function ControlButtons({
@@ -19,7 +22,7 @@ export default function ControlButtons({
   showTestButton,
   isSubmittable,
   isSubmitted,
-  finishButtonTooltipText
+  finishButtonTooltipText,
 }) {
   /* The ids of these buttons are relied on in other parts of the codebase.
    * All of them are relied on for UI tests
@@ -94,5 +97,5 @@ ControlButtons.propTypes = {
   showTestButton: PropTypes.bool,
   isSubmittable: PropTypes.bool,
   isSubmitted: PropTypes.bool,
-  finishButtonTooltipText: PropTypes.string
+  finishButtonTooltipText: PropTypes.string,
 };

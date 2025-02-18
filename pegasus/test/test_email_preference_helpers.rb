@@ -4,6 +4,7 @@ require_relative '../helpers/email_preference_helpers'
 require_relative 'sequel_test_case'
 require 'timecop'
 
+# rubocop:disable CustomCops/DashboardDbUsage
 class EmailPreferenceHelperTest < SequelTestCase
   def test_upsert_new_email_preference_with_valid_attributes_creates_email_preference
     EmailPreferenceHelper.upsert!(
@@ -31,8 +32,8 @@ class EmailPreferenceHelperTest < SequelTestCase
       source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
       form_kind: nil
     )
-  rescue StandardError => error
-    assert_equal 'Email does not appear to be a valid e-mail address', error.message
+  rescue StandardError => exception
+    assert_equal 'Email does not appear to be a valid e-mail address', exception.message
     assert_nil Dashboard.db[:email_preferences].where(email: 'amidala@naboo').first
   else
     fail "Expected an email validation error."
@@ -46,8 +47,8 @@ class EmailPreferenceHelperTest < SequelTestCase
       source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
       form_kind: nil
     )
-  rescue StandardError => error
-    assert_equal 'Opt In is required', error.message
+  rescue StandardError => exception
+    assert_equal 'Opt In is required', exception.message
     assert_nil Dashboard.db[:email_preferences].where(email: 'test_without_opt_in@example.net').first
   else
     fail "Expected an Opt In validation error."
@@ -61,8 +62,8 @@ class EmailPreferenceHelperTest < SequelTestCase
       source: 'Where have all the cowboys gone?',
       form_kind: nil
     )
-  rescue StandardError => error
-    assert_equal 'Source is not included in the list', error.message
+  rescue StandardError => exception
+    assert_equal 'Source is not included in the list', exception.message
     assert_nil Dashboard.db[:email_preferences].where(email: 'test_invalid_source@example.net').first
   else
     fail 'Expected a source validation error.'
@@ -76,8 +77,8 @@ class EmailPreferenceHelperTest < SequelTestCase
       source: EmailPreferenceHelper::ACCOUNT_SIGN_UP,
       form_kind: nil
     )
-  rescue StandardError => error
-    assert_equal 'IP Address is required', error.message
+  rescue StandardError => exception
+    assert_equal 'IP Address is required', exception.message
     assert_nil Dashboard.db[:email_preferences].where(email: 'test_without_ip_address@example.net').first
   else
     fail 'Expected an IP Address error.'
@@ -186,3 +187,4 @@ class EmailPreferenceHelperTest < SequelTestCase
     refute_equal updated_email_preference[:form_kind], another_email_preference[:form_kind]
   end
 end
+# rubocop:enable CustomCops/DashboardDbUsage

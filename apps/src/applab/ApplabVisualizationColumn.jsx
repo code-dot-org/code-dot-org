@@ -1,19 +1,24 @@
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
+
+import * as dom from '../dom';
+import BelowVisualization from '../templates/BelowVisualization';
+import CompletionButton from '../templates/CompletionButton';
 import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
-import * as color from '../util/color';
-import {getAppWidth, APP_HEIGHT} from './constants';
-import React from 'react';
-import PropTypes from 'prop-types';
-import Visualization from './Visualization';
-import CompletionButton from '../templates/CompletionButton';
-import PlaySpaceHeader from './PlaySpaceHeader';
-import PhoneFrame from './PhoneFrame';
-import BelowVisualization from '../templates/BelowVisualization';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-import {connect} from 'react-redux';
-import classNames from 'classnames';
-import i18n from '@cdo/locale';
-import * as dom from '../dom';
+import * as color from '../util/color';
+
+import {getAppWidth, APP_HEIGHT} from './constants';
+import PhoneFrame from './PhoneFrame';
+import PlaySpaceHeader from './PlaySpaceHeader';
+import ValidationButton from './ValidationButton';
+import Visualization from './Visualization';
 
 class ApplabVisualizationColumn extends React.Component {
   static propTypes = {
@@ -34,7 +39,7 @@ class ApplabVisualizationColumn extends React.Component {
     pinWorkspaceToBottom: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool,
     awaitingContainedResponse: PropTypes.bool.isRequired,
-    widgetMode: PropTypes.bool
+    widgetMode: PropTypes.bool,
   };
 
   getClassNames() {
@@ -44,7 +49,7 @@ class ApplabVisualizationColumn extends React.Component {
       widgetMode,
       hideSource,
       pinWorkspaceToBottom,
-      isShareView
+      isShareView,
     } = this.props;
     const chromelessShare = dom.isMobile() && !dom.isIPad();
 
@@ -59,7 +64,7 @@ class ApplabVisualizationColumn extends React.Component {
       // feel too bad about copying it here, where it should really live...
       chromelessShare: chromelessShare && isShareView,
       wireframeShare: !chromelessShare && isShareView,
-      widgetWidth: widgetMode
+      widgetWidth: widgetMode,
     });
   }
 
@@ -82,7 +87,7 @@ class ApplabVisualizationColumn extends React.Component {
       nonResponsiveWidth,
       isReadOnlyWorkspace,
       isEditingProject,
-      widgetMode
+      widgetMode,
     } = this.props;
 
     const maxWidth = !isResponsive ? {maxWidth: nonResponsiveWidth} : {};
@@ -95,7 +100,7 @@ class ApplabVisualizationColumn extends React.Component {
           appWidth={getAppWidth(this.props)}
           appHeight={APP_HEIGHT}
         />
-      )
+      ),
     ];
     // Share view still uses image for phone frame. Would eventually like it to
     // use same code
@@ -139,6 +144,9 @@ class ApplabVisualizationColumn extends React.Component {
         <GameButtons noRunResetButton={playspacePhoneFrame}>
           {/* This div is used to control whether or not our finish button is centered*/}
           <div style={this.getCompletionButtonSyle()}>
+            {experiments.isEnabled(experiments.CSP_VALIDATION_VIA_AI) && (
+              <ValidationButton />
+            )}
             <CompletionButton />
           </div>
         </GameButtons>
@@ -155,20 +163,20 @@ class ApplabVisualizationColumn extends React.Component {
 
 const styles = {
   completion: {
-    display: 'inline'
+    display: 'inline',
   },
   phoneFrameCompletion: {
     display: 'block',
     width: '100%',
     marginLeft: 'auto',
     marginRight: 'auto',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   resetButtonWrapper: {
     position: 'absolute',
     bottom: 5,
     textAlign: 'center',
-    width: '100%'
+    width: '100%',
   },
   resetButton: {
     display: 'inline-block',
@@ -177,11 +185,11 @@ const styles = {
     marginLeft: 5,
     position: 'relative',
     left: 2,
-    bottom: 2
+    bottom: 2,
   },
   containedInstructions: {
-    marginTop: 10
-  }
+    marginTop: 10,
+  },
 };
 
 export const UnconnectedApplabVisualizationColumn = ApplabVisualizationColumn;
@@ -199,5 +207,5 @@ export default connect(state => ({
   isPaused: state.runState.isDebuggerPaused,
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-  widgetMode: state.pageConstants.widgetMode
+  widgetMode: state.pageConstants.widgetMode,
 }))(ApplabVisualizationColumn);

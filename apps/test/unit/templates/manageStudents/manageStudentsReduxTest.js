@@ -1,5 +1,11 @@
-import {assert} from '../../../util/reconfiguredChai';
-import {sectionLoginFactory} from '../../../factories/sectionLogin';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 import manageStudents, {
   setLoginType,
   setStudents,
@@ -30,13 +36,17 @@ import manageStudents, {
   transferStudentsSuccess,
   transferStudentsFailure,
   addStudentsFull,
-  transferStudentsFull
+  transferStudentsFull,
+  loadSectionStudentData,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+
+import {sectionLoginFactory} from '../../../factories/sectionLogin';
+import {assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const sectionLoginData = {
   1: sectionLoginFactory.build({id: 1, name: 'StudentNameA', sectionId: 53}),
   2: sectionLoginFactory.build({id: 2, name: 'StudentNameC', sectionId: 53}),
-  3: sectionLoginFactory.build({id: 3, name: 'StudentNameD', sectionId: 53})
+  3: sectionLoginFactory.build({id: 3, name: 'StudentNameD', sectionId: 53}),
 };
 
 const expectedBlankRow = {
@@ -45,10 +55,11 @@ const expectedBlankRow = {
   age: '',
   gender: '',
   username: '',
+  usState: null,
   loginType: '',
   sharingDisabled: true,
   isEditing: true,
-  rowType: RowType.ADD
+  rowType: RowType.ADD,
 };
 
 describe('manageStudentsRedux', () => {
@@ -62,16 +73,16 @@ describe('manageStudentsRedux', () => {
         studentData: {
           0: {
             ...expectedBlankRow,
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
         editingData: {
           0: {
             ...expectedBlankRow,
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
-        sectionId: 10
+        sectionId: 10,
       };
       const startEditingStudentAction = startEditingStudent(0);
       const editingState = manageStudents(
@@ -101,16 +112,16 @@ describe('manageStudentsRedux', () => {
         studentData: {
           0: {
             ...expectedBlankRow,
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
         editingData: {
           0: {
             ...expectedBlankRow,
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
-        sectionId: 10
+        sectionId: 10,
       };
       const startEditingStudentAction = startEditingStudent(0);
       const editingState = manageStudents(
@@ -184,7 +195,7 @@ describe('manageStudentsRedux', () => {
 
       const state = {
         ...initialState,
-        showSharingColumn: true
+        showSharingColumn: true,
       };
 
       action = setShowSharingColumn(true);
@@ -204,7 +215,7 @@ describe('manageStudentsRedux', () => {
         sectionId: 2,
         otherTeacher: false,
         otherTeacherSection: '',
-        copyStudents: false
+        copyStudents: false,
       };
       const action = updateStudentTransfer(transferData);
       const nextState = manageStudents(initialState, action);
@@ -217,14 +228,14 @@ describe('manageStudentsRedux', () => {
         type: TransferType.MOVE_STUDENTS,
         error: null,
         numStudents: 2,
-        sectionDisplay: 'ABCDEF'
+        sectionDisplay: 'ABCDEF',
       };
       const transferData = {
         studentIds: [0, 1, 3],
         sectionId: 2,
         otherTeacher: false,
         otherTeacherSection: '',
-        copyStudents: false
+        copyStudents: false,
       };
       const {type, numStudents, sectionDisplay} = transferStatus;
       const successAction = transferStudentsSuccess(
@@ -250,7 +261,7 @@ describe('manageStudentsRedux', () => {
         sectionId: 2,
         otherTeacher: false,
         otherTeacherSection: '',
-        copyStudents: false
+        copyStudents: false,
       };
       const updateAction = updateStudentTransfer(transferData);
       const stateAfterUpdating = manageStudents(initialState, updateAction);
@@ -284,7 +295,7 @@ describe('manageStudentsRedux', () => {
         type: TransferType.MOVE_STUDENTS,
         error: null,
         numStudents: 3,
-        sectionDisplay: 'ABCDEF'
+        sectionDisplay: 'ABCDEF',
       };
       const {type, numStudents, sectionDisplay} = transferStatus;
       const action = transferStudentsSuccess(type, numStudents, sectionDisplay);
@@ -298,7 +309,7 @@ describe('manageStudentsRedux', () => {
       const transferStatus = {
         ...blankStudentTransferStatus,
         status: TransferStatus.FAIL,
-        error: 'student already exists in new section'
+        error: 'student already exists in new section',
       };
       const action = transferStudentsFailure(transferStatus.error);
       const nextState = manageStudents(initialState, action);
@@ -314,7 +325,7 @@ describe('manageStudentsRedux', () => {
         sectionCapacity: 500,
         sectionCode: 'ABCEDF',
         sectionStudentCount: 500,
-        numStudents: 1
+        numStudents: 1,
       };
       const action = transferStudentsFull(
         {...transferStatus, type: TransferType.MOVE_STUDENTS},
@@ -323,7 +334,7 @@ describe('manageStudentsRedux', () => {
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.transferStatus, {
         ...transferStatus,
-        verb: 'copy'
+        verb: 'copy',
       });
     });
     it('sets the correct transferStatus status and error from a "Copy" action', () => {
@@ -333,13 +344,13 @@ describe('manageStudentsRedux', () => {
         sectionCapacity: 500,
         sectionCode: 'ABCEDF',
         sectionStudentCount: 500,
-        numStudents: 1
+        numStudents: 1,
       };
       const action = transferStudentsFull(transferStatus, true);
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.transferStatus, {
         ...transferStatus,
-        verb: 'copy'
+        verb: 'copy',
       });
     });
     it('sets the correct transferStatus status and error from a "Move" action', () => {
@@ -349,13 +360,13 @@ describe('manageStudentsRedux', () => {
         sectionCapacity: 500,
         sectionCode: 'ABCEDF',
         sectionStudentCount: 500,
-        numStudents: 1
+        numStudents: 1,
       };
       const action = transferStudentsFull(transferStatus, false);
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.transferStatus, {
         ...transferStatus,
-        verb: 'move'
+        verb: 'move',
       });
     });
   });
@@ -373,14 +384,14 @@ describe('manageStudentsRedux', () => {
       const action = setStudents(sectionLoginData);
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.studentData, {
-        ...sectionLoginData
+        ...sectionLoginData,
       });
     });
 
     it('sets student data and an empty row for picture section', () => {
       const startingState = {
         ...initialState,
-        loginType: 'picture'
+        loginType: 'picture',
       };
       const action = setStudents(sectionLoginData);
       const nextState = manageStudents(startingState, action);
@@ -388,8 +399,8 @@ describe('manageStudentsRedux', () => {
         ...sectionLoginData,
         [0]: {
           ...expectedBlankRow,
-          loginType: 'picture'
-        }
+          loginType: 'picture',
+        },
       });
     });
 
@@ -401,21 +412,23 @@ describe('manageStudentsRedux', () => {
         5: {
           id: 1,
           name: 'StudentName5',
+          familyName: 'FamName5',
           username: 'student5',
           userType: 'student',
+          usState: 'CO',
           age: 14,
           gender: 'f',
           loginType: 'email',
           secretWords: 'wizard',
           secretPictureName: 'wizard',
           secretPicturePath: '/wizard.jpg',
-          sectionId: 53
-        }
+          sectionId: 53,
+        },
       };
       const setStudents2 = setStudents(newSectionData);
       const finalState = manageStudents(nextState, setStudents2);
       assert.deepEqual(finalState.studentData, {
-        ...newSectionData
+        ...newSectionData,
       });
     });
   });
@@ -541,27 +554,48 @@ describe('manageStudentsRedux', () => {
   });
 
   describe('editStudent', () => {
-    it('sets editingData to new updated values', () => {
-      // Set up a student that is in the editing state.
-      const setStudentsAction = setStudents(sectionLoginData);
-      const nextState = manageStudents(initialState, setStudentsAction);
-      const startEditingStudentAction = startEditingStudent(1);
-      const editingState = manageStudents(nextState, startEditingStudentAction);
+    // Set up a student that is in the editing state.
+    const setStudentsAction = setStudents(sectionLoginData);
+    const nextState = manageStudents(initialState, setStudentsAction);
+    const startEditingStudentAction = startEditingStudent(1);
+    let editingState;
 
+    beforeEach(() => {
+      editingState = manageStudents(nextState, startEditingStudentAction);
+    });
+
+    it('sets editingData to new updated values', () => {
       // Edit name, age, and gender and verify data is updated.
       const editStudentNameAction = editStudent(1, {name: 'New name'});
       const stateWithName = manageStudents(editingState, editStudentNameAction);
       assert.deepEqual(stateWithName.editingData[1], {
         ...sectionLoginData[1],
-        name: 'New name'
+        name: 'New name',
+      });
+
+      const editStudentFamilyNameAction = editStudent(1, {
+        familyName: 'New fam name',
+      });
+      const stateWithFamilyName = manageStudents(
+        stateWithName,
+        editStudentFamilyNameAction
+      );
+      assert.deepEqual(stateWithFamilyName.editingData[1], {
+        ...sectionLoginData[1],
+        name: 'New name',
+        familyName: 'New fam name',
       });
 
       const editStudentAgeAction = editStudent(1, {age: 13});
-      const stateWithAge = manageStudents(stateWithName, editStudentAgeAction);
+      const stateWithAge = manageStudents(
+        stateWithFamilyName,
+        editStudentAgeAction
+      );
       assert.deepEqual(stateWithAge.editingData[1], {
         ...sectionLoginData[1],
         name: 'New name',
-        age: 13
+        familyName: 'New fam name',
+        age: 13,
       });
 
       const editStudentGenderAction = editStudent(1, {gender: 'm'});
@@ -572,12 +606,13 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(stateWithGender.editingData[1], {
         ...sectionLoginData[1],
         name: 'New name',
+        familyName: 'New fam name',
         age: 13,
-        gender: 'm'
+        gender: 'm',
       });
 
       const editStudentShareSettingAction = editStudent(1, {
-        sharingDisabled: true
+        sharingDisabled: true,
       });
       const stateWithShareSetting = manageStudents(
         stateWithGender,
@@ -586,9 +621,24 @@ describe('manageStudentsRedux', () => {
       assert.deepEqual(stateWithShareSetting.editingData[1], {
         ...sectionLoginData[1],
         name: 'New name',
+        familyName: 'New fam name',
         age: 13,
         gender: 'm',
-        sharingDisabled: true
+        sharingDisabled: true,
+      });
+    });
+
+    it('sets usState to student state', () => {
+      const expectedUsSate = 'CO';
+
+      const state = manageStudents(
+        editingState,
+        editStudent(1, {usState: expectedUsSate})
+      );
+
+      assert.deepEqual(state.editingData[1], {
+        ...sectionLoginData[1],
+        usState: expectedUsSate,
       });
     });
   });
@@ -645,27 +695,39 @@ describe('manageStudentsRedux', () => {
           4: {
             id: 4,
             name: 'original student',
-            isEditing: true
-          }
+            isEditing: true,
+          },
         },
         editingData: {
           4: {
             id: 4,
             name: 'original student',
-            isEditing: true
-          }
-        }
+            isEditing: true,
+          },
+        },
       };
       const action = addMultipleRows({
-        '-1': {id: -1, name: 'student -1', isEditing: true},
-        '-2': {id: -2, name: 'student -2', isEditing: true}
+        '-1': {id: -1, name: 'student -1', familyName: '', isEditing: true},
+        '-2': {id: -2, name: 'student -2', familyName: '', isEditing: true},
+        '-3': {
+          id: -3,
+          name: 'student -3',
+          familyName: 'family -3',
+          isEditing: true,
+        },
       });
       const nextState = manageStudents(startingState, action);
 
       const expectedData = {
-        '-1': {id: -1, name: 'student -1', isEditing: true},
-        '-2': {id: -2, name: 'student -2', isEditing: true},
-        '4': {id: 4, name: 'original student', isEditing: true}
+        '-1': {id: -1, name: 'student -1', familyName: '', isEditing: true},
+        '-2': {id: -2, name: 'student -2', familyName: '', isEditing: true},
+        '-3': {
+          id: -3,
+          name: 'student -3',
+          familyName: 'family -3',
+          isEditing: true,
+        },
+        4: {id: 4, name: 'original student', isEditing: true},
       };
       assert.deepEqual(nextState.studentData, expectedData);
       assert.deepEqual(nextState.editingData, expectedData);
@@ -678,11 +740,11 @@ describe('manageStudentsRedux', () => {
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.studentData[0], {
         ...expectedBlankRow,
-        loginType: 'word'
+        loginType: 'word',
       });
       assert.deepEqual(nextState.editingData[0], {
         ...expectedBlankRow,
-        loginType: 'word'
+        loginType: 'word',
       });
     });
 
@@ -691,11 +753,11 @@ describe('manageStudentsRedux', () => {
       const nextState = manageStudents(initialState, action);
       assert.deepEqual(nextState.studentData[0], {
         ...expectedBlankRow,
-        loginType: 'picture'
+        loginType: 'picture',
       });
       assert.deepEqual(nextState.editingData[0], {
         ...expectedBlankRow,
-        loginType: 'picture'
+        loginType: 'picture',
       });
     });
 
@@ -706,31 +768,33 @@ describe('manageStudentsRedux', () => {
         studentData: {
           0: {
             ...expectedBlankRow,
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
         editingData: {
           0: {
             ...expectedBlankRow,
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
-        sectionId: 10
+        sectionId: 10,
       };
 
       const studentDataToAdd = {
         id: 111,
         name: 'new student',
+        familyName: 'fam name',
         age: 17,
         gender: 'f',
+        usState: 'CO',
         secretPicturePath: '/wizard.jpg',
         loginType: 'picture',
-        isEditing: false
+        isEditing: false,
       };
 
       // Add student
       const addStudentSuccessAction = addStudentsSuccess(1, -10, {
-        111: studentDataToAdd
+        111: studentDataToAdd,
       });
       const addedStudentState = manageStudents(
         initialState,
@@ -739,18 +803,18 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[0], {
         ...expectedBlankRow,
-        loginType: 'picture'
+        loginType: 'picture',
       });
       assert.deepEqual(addedStudentState.studentData[0], {
         ...expectedBlankRow,
-        loginType: 'picture'
+        loginType: 'picture',
       });
       assert.deepEqual(addedStudentState.studentData[111], {
-        ...studentDataToAdd
+        ...studentDataToAdd,
       });
       assert.deepEqual(addedStudentState.addStatus, {
         status: AddStatus.SUCCESS,
-        numStudents: 1
+        numStudents: 1,
       });
     });
 
@@ -761,27 +825,28 @@ describe('manageStudentsRedux', () => {
         studentData: {
           0: {
             ...expectedBlankRow,
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
         editingData: {
           0: {
             ...expectedBlankRow,
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
-        sectionId: 10
+        sectionId: 10,
       };
 
       const studentsDataToAdd = {
         111: {
           id: 111,
           name: 'new student a',
+          familyName: 'fam a',
           age: 17,
           gender: 'f',
           secretPicturePath: '/wizard.jpg',
           loginType: 'picture',
-          isEditing: false
+          isEditing: false,
         },
         112: {
           id: 112,
@@ -790,8 +855,8 @@ describe('manageStudentsRedux', () => {
           gender: 'm',
           secretPicturePath: '/wizard.jpg',
           loginType: 'picture',
-          isEditing: false
-        }
+          isEditing: false,
+        },
       };
 
       // Add student
@@ -807,21 +872,21 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[0], {
         ...expectedBlankRow,
-        loginType: 'picture'
+        loginType: 'picture',
       });
       assert.deepEqual(addedStudentState.studentData[0], {
         ...expectedBlankRow,
-        loginType: 'picture'
+        loginType: 'picture',
       });
       assert.deepEqual(addedStudentState.studentData[111], {
-        ...studentsDataToAdd[111]
+        ...studentsDataToAdd[111],
       });
       assert.deepEqual(addedStudentState.studentData[112], {
-        ...studentsDataToAdd[112]
+        ...studentsDataToAdd[112],
       });
       assert.deepEqual(addedStudentState.addStatus, {
         status: AddStatus.SUCCESS,
-        numStudents: 2
+        numStudents: 2,
       });
     });
 
@@ -831,17 +896,17 @@ describe('manageStudentsRedux', () => {
         studentData: {
           0: {
             ...expectedBlankRow,
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
         editingData: {
           0: {
             ...expectedBlankRow,
             name: 'editing name',
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
-        sectionId: 10
+        sectionId: 10,
       };
 
       // Add student fails
@@ -853,15 +918,15 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[0], {
         ...initialState.editingData[0],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[0], {
         ...initialState.studentData[0],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.addStatus, {
         status: AddStatus.FAIL,
-        numStudents: 1
+        numStudents: 1,
       });
     });
 
@@ -869,37 +934,38 @@ describe('manageStudentsRedux', () => {
       const studentInfo = {
         0: {
           ...expectedBlankRow,
-          loginType: 'picture'
+          loginType: 'picture',
         },
         1: {
           ...expectedBlankRow,
           id: 1,
           loginType: 'picture',
-          name: 'new name'
+          name: 'new name',
         },
         2: {
           ...expectedBlankRow,
           id: 2,
           loginType: 'picture',
-          name: 'new name'
-        }
+          name: 'new name',
+        },
       };
       const initialState = {
         loginType: 'picture',
         studentData: {
-          ...studentInfo
+          ...studentInfo,
         },
         editingData: {
-          ...studentInfo
+          ...studentInfo,
         },
-        sectionId: 10
+        sectionId: 10,
       };
 
       // Add student fails
-      const addStudentFailureAction = addStudentsFailure(2, 'error info', [
-        1,
-        2
-      ]);
+      const addStudentFailureAction = addStudentsFailure(
+        2,
+        'error info',
+        [1, 2]
+      );
       const addedStudentState = manageStudents(
         initialState,
         addStudentFailureAction
@@ -907,23 +973,23 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[1], {
         ...initialState.editingData[1],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.editingData[2], {
         ...initialState.editingData[2],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[1], {
         ...initialState.studentData[1],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[2], {
         ...initialState.studentData[2],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.addStatus, {
         status: AddStatus.FAIL,
-        numStudents: 2
+        numStudents: 2,
       });
     });
 
@@ -933,17 +999,17 @@ describe('manageStudentsRedux', () => {
         studentData: {
           0: {
             ...expectedBlankRow,
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
         editingData: {
           0: {
             ...expectedBlankRow,
             name: 'editing name',
-            loginType: 'picture'
-          }
+            loginType: 'picture',
+          },
         },
-        sectionId: 10
+        sectionId: 10,
       };
 
       // Add student to full section
@@ -952,7 +1018,7 @@ describe('manageStudentsRedux', () => {
           sectionCapacity: 500,
           numStudents: 1,
           sectionCode: 'ABCEDF',
-          sectionStudentCount: 500
+          sectionStudentCount: 500,
         },
         [0]
       );
@@ -963,18 +1029,18 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[0], {
         ...initialState.editingData[0],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[0], {
         ...initialState.studentData[0],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.addStatus, {
         status: AddStatus.FULL,
         numStudents: 1,
         sectionCapacity: 500,
         sectionCode: 'ABCEDF',
-        sectionStudentCount: 500
+        sectionStudentCount: 500,
       });
     });
 
@@ -982,30 +1048,30 @@ describe('manageStudentsRedux', () => {
       const studentInfo = {
         0: {
           ...expectedBlankRow,
-          loginType: 'picture'
+          loginType: 'picture',
         },
         1: {
           ...expectedBlankRow,
           id: 1,
           loginType: 'picture',
-          name: 'new name'
+          name: 'new name',
         },
         2: {
           ...expectedBlankRow,
           id: 2,
           loginType: 'picture',
-          name: 'new name'
-        }
+          name: 'new name',
+        },
       };
       const initialState = {
         loginType: 'picture',
         studentData: {
-          ...studentInfo
+          ...studentInfo,
         },
         editingData: {
-          ...studentInfo
+          ...studentInfo,
         },
-        sectionId: 10
+        sectionId: 10,
       };
 
       // Add students to a full section
@@ -1014,7 +1080,7 @@ describe('manageStudentsRedux', () => {
           sectionCapacity: 500,
           numStudents: 2,
           sectionCode: 'ABCEDF',
-          sectionStudentCount: 500
+          sectionStudentCount: 500,
         },
         [1, 2]
       );
@@ -1025,27 +1091,145 @@ describe('manageStudentsRedux', () => {
 
       assert.deepEqual(addedStudentState.editingData[1], {
         ...initialState.editingData[1],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.editingData[2], {
         ...initialState.editingData[2],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[1], {
         ...initialState.studentData[1],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.studentData[2], {
         ...initialState.studentData[2],
-        isSaving: false
+        isSaving: false,
       });
       assert.deepEqual(addedStudentState.addStatus, {
         status: AddStatus.FULL,
         numStudents: 2,
         sectionCapacity: 500,
         sectionCode: 'ABCEDF',
-        sectionStudentCount: 500
+        sectionStudentCount: 500,
       });
+    });
+  });
+
+  describe('load student data', () => {
+    const successResponse = (body = {}) => [
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify(body),
+    ];
+
+    const mockStudentData = [
+      {
+        id: 229,
+        name: 'new student',
+        username: 'coder_abc',
+        family_name: 'fam name',
+        age: 17,
+        sharing_disabled: true,
+        has_ever_signed_in: false,
+        ai_tutor_access_denied: false,
+        at_risk_age_gated: false,
+        child_account_compliance_state: null,
+        latest_permission_request_sent_at: null,
+        depends_on_this_section_for_login: true,
+      },
+    ];
+
+    let store, server;
+
+    let state = () => store.getState().manageStudents;
+
+    beforeEach(function () {
+      server = sinon.fakeServer.create();
+
+      stubRedux();
+      registerReducers({manageStudents: manageStudents});
+      store = getStore();
+    });
+
+    afterEach(function () {
+      server.restore();
+      restoreRedux();
+    });
+
+    it('loadSectionStudentData fetches student info from server', async () => {
+      let store = getStore();
+      let sectionId = 1;
+
+      // assert initial state
+      assert.equal(state().sectionId, null);
+      assert.deepEqual(state().studentData, {});
+      assert.equal(state().isLoadingStudents, true);
+
+      server.respondWith(
+        'GET',
+        `/dashboardapi/sections/${sectionId}/students`,
+        successResponse(mockStudentData)
+      );
+
+      store.dispatch(loadSectionStudentData(sectionId));
+
+      // assert section Id is set before getting response from server
+      assert.equal(state().sectionId, sectionId);
+
+      server.respond();
+      assert.equal(state().isLoadingStudents, false);
+      assert.equal(Object.keys(state().studentData).length, 1);
+    });
+
+    it('loadSectionStudentData is idempotent in fetching student info from server', async () => {
+      let store = getStore();
+      let sectionId = 1;
+
+      // assert initial state
+      assert.equal(state().sectionId, null);
+      assert.deepEqual(state().studentData, {});
+      assert.equal(state().isLoadingStudents, true);
+
+      server.respondWith(
+        'GET',
+        `/dashboardapi/sections/${sectionId}/students`,
+        successResponse(mockStudentData)
+      );
+
+      // send two events to load student data
+      store.dispatch(loadSectionStudentData(sectionId));
+      store.dispatch(loadSectionStudentData(sectionId));
+
+      server.respond();
+
+      // Assert only one request was made to set student data to ensure idempotency.
+      assert.equal(server.requests.length, 1);
+
+      assert.equal(state().sectionId, sectionId);
+      assert.equal(state().isLoadingStudents, false);
+      assert.equal(Object.keys(state().studentData).length, 1);
+    });
+
+    it('loadSectionStudentData failure fetching student info from server', async () => {
+      let store = getStore();
+      let sectionId = 1;
+
+      // assert initial state
+      assert.equal(state().sectionId, null);
+      assert.deepEqual(state().studentData, {});
+      assert.equal(state().isLoadingStudents, true);
+
+      server.respondWith(
+        'GET',
+        `/dashboardapi/sections/${sectionId}/students`,
+        [404, {}, '']
+      );
+
+      store.dispatch(loadSectionStudentData(sectionId));
+      server.respond();
+
+      assert.equal(state().sectionId, null);
+      assert.equal(state().isLoadingStudents, false);
     });
   });
 });

@@ -1,5 +1,6 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
 import {UnconnectedPublishDialog as PublishDialog} from './PublishDialog';
 
 const PROJECT_ID = 'MY_PROJECT_ID';
@@ -11,7 +12,7 @@ const publishDialogDefaultProps = {
   projectId: PROJECT_ID,
   projectType: PROJECT_TYPE,
   onConfirmPublish: action('publish'),
-  onClose: action('close')
+  onClose: action('close'),
 };
 
 const Template = overrides => (
@@ -22,10 +23,9 @@ export const DialogOpen = Template.bind({});
 
 export const DialogOpenPublishPending = Template.bind({});
 DialogOpenPublishPending.args = {
-  isPublishPending: true
+  isPublishPending: true,
 };
 
 export default {
-  title: 'PublishDialog',
-  component: PublishDialog
+  component: PublishDialog,
 };

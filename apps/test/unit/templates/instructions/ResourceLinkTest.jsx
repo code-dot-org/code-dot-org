@@ -1,8 +1,7 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import ResourceLink from '@cdo/apps/templates/instructions/ResourceLink';
-import sinon from 'sinon';
 
 describe('ResourceLink', () => {
   it('opens reference in new tab if openReferenceInNewTab is set', () => {
@@ -14,9 +13,12 @@ describe('ResourceLink', () => {
         openReferenceInNewTab
       />
     );
-    const windowOpenStub = sinon.stub(window, 'open');
+    const windowOpenStub = jest
+      .spyOn(window, 'open')
+      .mockClear()
+      .mockImplementation();
     wrapper.instance().selectResource({preventDefault: () => {}});
-    expect(windowOpenStub.callCount).to.equal(1);
-    sinon.restore();
+    expect(windowOpenStub).toHaveBeenCalledTimes(1);
+    jest.restoreAllMocks();
   });
 });

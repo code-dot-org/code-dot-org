@@ -25,7 +25,22 @@ use Rack::SslEnforcer,
   # The only exception is in :development, where no HTTP-cache layer is present.
   only_environments: 'development',
   # Only HTTPS-redirect in development when `https_development` is true.
-  ignore: lambda {|request| !request.ssl? && !CDO.https_development}
+  ignore: ->(request) {!request.ssl? && !CDO.https_development}
+
+if CDO.use_cookie_dcdo
+  # Enables the setting of DCDO via cookies for testing purposes.
+  require 'cdo/rack/cookie_dcdo'
+  use Rack::CookieDCDO
+end
+
+if CDO.use_geolocation_override
+  # Apply the remote_addr middleware to allow pretending to be at a particular IP
+  require 'cdo/rack/geolocation_override'
+  use Rack::GeolocationOverride
+end
+
+require 'cdo/rack/global_edition'
+use Rack::GlobalEdition
 
 require 'varnish_environment'
 use VarnishEnvironment

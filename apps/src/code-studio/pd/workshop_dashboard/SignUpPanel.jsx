@@ -1,5 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import WorkshopPanel from './WorkshopPanel';
 
 /**
@@ -8,13 +9,11 @@ import WorkshopPanel from './WorkshopPanel';
 export default class SignUpPanel extends React.Component {
   static propTypes = {
     workshopId: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-      .isRequired
+      .isRequired,
   };
 
   render() {
-    const signupUrl = `${location.origin}/pd/workshops/${
-      this.props.workshopId
-    }/enroll`;
+    const signupUrl = `${location.origin}/pd/workshops/${this.props.workshopId}/enroll`;
 
     return (
       <WorkshopPanel header="Your workshop sign-up link:">

@@ -1,10 +1,9 @@
-import {expect} from 'chai';
 import Permission, {
   WorkshopAdmin,
   Facilitator,
   Organizer,
   ProgramManager,
-  Partner
+  Partner,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 
 const permissionTypes = [
@@ -12,7 +11,7 @@ const permissionTypes = [
   Facilitator,
   Organizer,
   ProgramManager,
-  Partner
+  Partner,
 ];
 
 describe('Permission class', () => {
@@ -26,9 +25,9 @@ describe('Permission class', () => {
   const expectExactPermissions = (...expectedPermissions) => {
     permissionTypes.forEach(permissionType => {
       if (expectedPermissions.includes(permissionType)) {
-        expect(permission.has(permissionType)).to.be.true;
+        expect(permission.has(permissionType)).toBe(true);
       } else {
-        expect(permission.has(permissionType)).to.be.false;
+        expect(permission.has(permissionType)).toBe(false);
       }
     });
   };

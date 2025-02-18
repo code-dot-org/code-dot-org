@@ -1,0 +1,40 @@
+name 'VPL-CSD-PILOT-S22-CI-mod2-ImagesInHTML_-csd_CSD-PL-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Images in HTML
+
+#### The *image* tag allows you to add images to your page. You might notice that this tag looks a little different than those you've seen before. Unlike paragraph, header, or list tags, the image tag *doesn't require a closing tag*. All of the information needed to display your image is contained within the tag itself.
+
+## Image Source and Alternate Text
+
+#### In order to tell the browser which file to use, extra information (called an attribute) is added to the image tag inside the brackets. The attribute **src** stands for source and tells the name of the image, and the attribute **alt** describes the image.
+
+<img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/img_tag.png" style="padding-left: 150px; max-width: 500px; margin-top: 20px; margin-bottom: 20px;" alt="An img tab broken down by its elements">
+
+[diagram_nums]
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">🔎 (1) What does the <strong>img</strong> do?</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:16px">The tag used to insert an image in a webpage uses the abbreviation <strong>img</strong>. This is considered a <i>self closing</i> tag, since it doesn't need to wrap text as many other tags do. </p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">🔎 (2) What is the <strong>src</strong> for?</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:16px;">The <strong>src</strong> attribute is short for <strong>source</strong>. This tells the tag which image to load. In this case, the page will look for an image with the filename "dog.jpg" in the same directory as the page. <br><br> Image file names include extensions that tell the computer which type of image they are working with. Common extensions are .jpg, .jpeg, and .png. The <strong>src</strong> attribute needs to point to the <strong>exact</strong> filename of the image you want to use. That means you need to pay attention to spelling, capitalization, and the file extension. Make sure to put quotation marks around your image filename. </p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">🔎 (3) What is the <strong>alt</strong> for?</summary>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style="font-size:16px;">The <strong>alt</strong> attribute is short for <strong>alternative text</strong>. While you won't see this text on your web page, it provides a backup in case your image doesn't download properly or for visually impaired users. In this example, if your browser failed to load the image you would see, <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/broken_image.png" style="height: 50px;"> </p></div>
+</details>
+
+
+
+[/diagram_nums]
+
+MARKDOWN

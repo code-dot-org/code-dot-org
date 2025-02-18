@@ -5,6 +5,10 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   include ApplicationHelper
   include LevelsHelper
 
+  setup_all do
+    seed_deprecated_unit_fixtures
+  end
+
   setup do
     @teacher = create(:teacher)
     @student = create(:student)

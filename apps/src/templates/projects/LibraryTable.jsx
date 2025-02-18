@@ -1,25 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {unpublishProjectLibrary} from './projectsRedux';
-import PersonalProjectsNameCell from './PersonalProjectsNameCell';
-import Button from '@cdo/apps/templates/Button';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import color from '@cdo/apps/util/color';
 import {reload} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+import {unpublishProjectLibrary} from './projectsRedux';
 
 export const COLUMNS = {
   LIBRARY_NAME: 0,
   PROJECT_NAME: 1,
   DESCRIPTION: 2,
   LAST_PUBLISHED: 3,
-  ACTIONS: 4
+  ACTIONS: 4,
 };
 
 const CELL_WIDTH = 250;
@@ -53,17 +56,17 @@ class LibraryTable extends React.Component {
   static propTypes = {
     // Provided by Redux
     personalProjectsList: PropTypes.array,
-    unpublishProjectLibrary: PropTypes.func.isRequired
+    unpublishProjectLibrary: PropTypes.func.isRequired,
   };
 
   state = {
     sortingColumns: {
       [COLUMNS.LAST_PUBLISHED]: {
         direction: 'desc',
-        position: 0
-      }
+        position: 0,
+      },
     },
-    unpublishFailedChannel: null
+    unpublishFailedChannel: null,
   };
 
   getSortingColumns = () => {
@@ -78,10 +81,10 @@ class LibraryTable extends React.Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -94,19 +97,19 @@ class LibraryTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.headerCellName
-            }
+              ...styles.headerCellName,
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.cellName
-            }
-          }
-        }
+              ...styles.cellName,
+            },
+          },
+        },
       },
       {
         property: 'name',
@@ -115,20 +118,20 @@ class LibraryTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.headerCellName
-            }
+              ...styles.headerCellName,
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [projectNameFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.cellName
-            }
-          }
-        }
+              ...styles.cellName,
+            },
+          },
+        },
       },
       {
         property: 'libraryDescription',
@@ -137,20 +140,20 @@ class LibraryTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.headerCellName
-            }
+              ...styles.headerCellName,
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [descriptionFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.cellName
-            }
-          }
-        }
+              ...styles.cellName,
+            },
+          },
+        },
       },
       {
         property: 'libraryPublishedAt',
@@ -159,20 +162,20 @@ class LibraryTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...styles.headerCellName
-            }
+              ...styles.headerCellName,
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [dateFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.cellName
-            }
-          }
-        }
+              ...styles.cellName,
+            },
+          },
+        },
       },
       {
         property: 'actions',
@@ -181,9 +184,9 @@ class LibraryTable extends React.Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader
-            }
-          }
+              ...tableLayoutStyles.unsortableHeader,
+            },
+          },
         },
         cell: {
           formatters: [this.actionsFormatter],
@@ -191,11 +194,11 @@ class LibraryTable extends React.Component {
             style: {
               ...tableLayoutStyles.cell,
               ...styles.cellName,
-              ...styles.centeredCell
-            }
-          }
-        }
-      }
+              ...styles.centeredCell,
+            },
+          },
+        },
+      },
     ];
   };
 
@@ -203,7 +206,7 @@ class LibraryTable extends React.Component {
     return (
       <Button
         text={i18n.unpublish()}
-        color={Button.ButtonColor.orange}
+        color={Button.ButtonColor.brandSecondaryDefault}
         onClick={() => {
           this.setState({unpublishFailedChannel: null});
           this.props.unpublishProjectLibrary(rowData.channel, error => {
@@ -239,7 +242,7 @@ class LibraryTable extends React.Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: _.orderBy
+      sort: _.orderBy,
     })(libraries);
 
     const hasLibraries = libraries.length > 0;
@@ -268,7 +271,7 @@ class LibraryTable extends React.Component {
             <h1>{i18n.unpublishFailureTitle()}</h1>
             <p style={styles.dialogBody}>
               {i18n.unpublishFailureBody({
-                libraryName: unpublishFailedLibrary.name
+                libraryName: unpublishFailedLibrary.name,
               })}
             </p>
           </BaseDialog>
@@ -282,45 +285,45 @@ const styles = {
   headerCellName: {
     borderWidth: '0px 1px 1px 0px',
     borderColor: color.border_light_gray,
-    padding: 15
+    padding: 15,
   },
   cellName: {
     borderWidth: '1px 1px 1px 0px',
     borderColor: color.border_light_gray,
     padding: 15,
-    width: CELL_WIDTH
+    width: CELL_WIDTH,
   },
   truncateText: {
     width: CELL_WIDTH,
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   centeredCell: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   dialog: {
-    padding: '0 15px 8px 15px'
+    padding: '0 15px 8px 15px',
   },
   dialogBody: {
     fontSize: 18,
-    color: color.charcoal
+    color: color.charcoal,
   },
   noLibraries: {
     fontSize: 14,
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };
 
 export const UnconnectedLibraryTable = LibraryTable;
 
 export default connect(
   state => ({
-    personalProjectsList: state.projects.personalProjectsList.projects
+    personalProjectsList: state.projects.personalProjectsList.projects,
   }),
   dispatch => ({
     unpublishProjectLibrary(channelId, onComplete, libraryApi) {
       dispatch(unpublishProjectLibrary(channelId, onComplete, libraryApi));
-    }
+    },
   })
 )(LibraryTable);

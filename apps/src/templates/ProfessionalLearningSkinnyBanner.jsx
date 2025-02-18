@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+
 import './professionalLearningSkinnyBanner.scss';
 import bgDesktop from './images/superhero-banner-bg.png';
 import bgTablet from './images/superhero-banner-half-blue.png';
@@ -7,7 +9,7 @@ import bgTablet from './images/superhero-banner-half-blue.png';
 export default function ProfessionalLearningSkinnyBanner() {
   const headerText = 'Help students become superheroes!';
   const text =
-    'Our Professional Learning program helps you teach computer science!';
+    'Join our highly supportive Professional Learning Program for middle and high school educators.';
 
   return (
     <aside className="professional-learning-banner">

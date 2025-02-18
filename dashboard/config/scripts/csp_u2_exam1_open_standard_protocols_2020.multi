@@ -10,3 +10,5 @@ right ‘The protocols of the Internet are open and used by all devices connecte
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

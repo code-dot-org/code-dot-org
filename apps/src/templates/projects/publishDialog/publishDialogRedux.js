@@ -1,5 +1,6 @@
+import {AllPublishableProjectTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import {channels as channelsApi} from '../../../clientApi';
-import {AllPublishableProjectTypes} from '../../../util/sharedConstants';
 
 // Action types
 
@@ -18,7 +19,7 @@ const initialState = {
   projectType: null,
   isPublishPending: false,
   lastPublishedAt: null,
-  lastPublishedProjectData: null
+  lastPublishedProjectData: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -28,17 +29,17 @@ export default function reducer(state = initialState, action) {
         ...state,
         isOpen: true,
         projectId: action.projectId,
-        projectType: action.projectType
+        projectType: action.projectType,
       };
     case HIDE_PUBLISH_DIALOG:
       return {
         ...state,
-        isOpen: false
+        isOpen: false,
       };
     case PUBLISH_REQUEST:
       return {
         ...state,
-        isPublishPending: true
+        isPublishPending: true,
       };
     case PUBLISH_SUCCESS:
       // Keep projectId and projectType fields, as these may be used by
@@ -48,12 +49,12 @@ export default function reducer(state = initialState, action) {
         isOpen: false,
         isPublishPending: false,
         lastPublishedAt: action.lastPublishedAt,
-        lastPublishedProjectData: action.lastPublishedProjectData
+        lastPublishedProjectData: action.lastPublishedProjectData,
       };
     case PUBLISH_FAILURE:
       return {
         ...state,
-        isPublishPending: false
+        isPublishPending: false,
       };
     default:
       return state;
@@ -96,7 +97,7 @@ export function publishProject(projectId, projectType) {
           dispatch({
             type: PUBLISH_SUCCESS,
             lastPublishedAt: data.publishedAt,
-            lastPublishedProjectData: data
+            lastPublishedProjectData: data,
           });
           resolve();
         },

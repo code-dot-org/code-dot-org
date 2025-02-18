@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Dialog, {Body, Buttons, Confirm} from '../templates/Dialog';
+import Dialog, {Body, Buttons, Confirm} from '../legacySharedComponents/Dialog';
 import color from '../util/color';
+
 import {fetchProject, toggleImportScreen} from './redux/screens';
 
 const initialState = {url: ''};
@@ -13,7 +14,7 @@ export class ImportProjectDialog extends React.Component {
     ...Dialog.propTypes,
     onImport: PropTypes.func.isRequired,
     isFetching: PropTypes.bool,
-    error: PropTypes.bool
+    error: PropTypes.bool,
   };
 
   state = {...initialState};
@@ -70,19 +71,19 @@ const styles = {
   urlInputWrapper: {
     display: 'flex',
     alignItems: 'stretch',
-    width: '100%'
+    width: '100%',
   },
   urlInput: {
-    width: 'inherit'
+    width: 'inherit',
   },
   // TODO: ditch these styles in favor of standardized typography components
   // once they exist
   instructions: {
-    color: color.black
+    color: color.black,
   },
   errorText: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };
 
 export default connect(
@@ -91,7 +92,7 @@ export default connect(
       state.screens.isImportingScreen &&
       !state.screens.importProject.fetchedProject,
     isFetching: state.screens.importProject.isFetchingProject,
-    error: state.screens.importProject.errorFetchingProject
+    error: state.screens.importProject.errorFetchingProject,
   }),
   dispatch => ({
     onImport(url) {
@@ -99,6 +100,6 @@ export default connect(
     },
     handleClose() {
       dispatch(toggleImportScreen(false));
-    }
+    },
   })
 )(ImportProjectDialog);

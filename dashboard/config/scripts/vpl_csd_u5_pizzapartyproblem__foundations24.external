@@ -1,0 +1,28 @@
+name 'VPL-CSD-U5-PizzaPartyProblem_-foundations24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pizza Party Problem
+
+<img src="https://images.code.org/a8ed3428bcc3b8f19534363a66ea7235-image-1707775987408.12.29 PM.png" alt="The app showing the pizza party data in a bar chart" style="float: right; height: 400px; clear: both; margin: 10px 10px 10px 10px;">
+
+## Key Observations 
+
+#### The app in the previous level is part of a larger activity that students will complete using an <a href="https://docs.google.com/document/d/1edTTFHTHp4uxIi1CrHvvfEfFCZacCB5BXNfL1uaBf-E/edit?usp=sharing" target="blank" rel="noopener noreferrer">Activity Guide</a>. You can find an exemplar of the Activity Guide at <a href="https://docs.google.com/document/d/1lKk4xwVAwst0t5dLICDg64HVaJGVaJm5Ldzix2Ydock/edit?usp=sharing" target="blank" rel="noopener noreferrer">this link</a>. Notice that many of the questions are open to interpretation and don't have one clear answer.
+<br> 
+
+#### During this full activity, students should notice: 
+
+* #### The computer used all the answers in the chart, even the ones that were irrelevant. 
+* #### The computer didn’t correct any spelling or fix any differences in capitalization. For example, “Cheese” and “cheese” appear as two separate rows on the chart.
+* #### Some data, such as minor misspellings, is easily "cleaned" into an appropriate category. Other data, such as "I will be absent", needs to be removed from the set entirely.
+
+#### In the end, students should realize that constraining a user's choices can help with this - for example, by using multiple choice rather than a write-in answer. They may also bring up ignoring capitalization so “cheese” and “Cheese” are interpreted by the computer as the same result.
+
+## Big Idea of Lesson 10
+
+#### When we work with large amounts of data, we want to automate as much of the Problem Solving Process as we can. Because computers can't make the same connections that people can, that means that people have to help organize data in a way that computers can understand it. That means either cleaning the data, or collecting data in a way that makes sure it's clean when we get it.
+
+
+MARKDOWN

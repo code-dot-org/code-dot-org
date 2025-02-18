@@ -1,30 +1,27 @@
-@import "color.scss", "font.scss", "breakpoints.scss";
+@import "color", "font", "breakpoints", "typography";
 
 .maker-skinny-banner {
   box-sizing: content-box;
   height: 130px;
   overflow: hidden;
-  padding: 0 0 0 1em;
+  padding: 0 0 0 1rem;
   background: #00736E;
   position: relative;
 
   @media screen and (max-width: $width-md) {
-    padding: 0 1.5em;
+    padding: 0 2rem;
   }
 
-  @media screen and (max-width: $width-sm) {
-    height: 230px;
-    padding: 1.5em 1.15em 0.5em;
-    margin: 3em auto 0;
-  }
-
-  @media screen and (max-width: $width-xs) {
-    height: 260px;
+  @media screen and (max-width: 546px) {
+    height: auto;
+    padding: 1rem 2rem;
+    margin: 3rem auto 0;
   }
 
   a:hover,
   a:active,
-  a:visited {
+  a:visited,
+  a:link {
     text-decoration: none;
   }
 
@@ -39,12 +36,14 @@
     @media screen and (max-width: $width-md) {
       width: 72%;
       margin: 0;
+      padding: 0.5rem 0;
     }
 
-    @media screen and (max-width: $width-sm) {
+    @media screen and (max-width: 546px) {
       justify-content: center;
       width: 100%;
-      margin-top: -1em;
+      margin-top: -1rem;
+      gap: 1rem;
     }
   }
 
@@ -55,7 +54,7 @@
       display: none;
     }
 
-    @media screen and (max-width: $width-sm) {
+    @media screen and (max-width: 546px) {
       display: block;
       position: relative;
       top: -8px;
@@ -68,85 +67,49 @@
     @media screen and (max-width: $width-md) {
       position: absolute;
       z-index: 0;
+      bottom: 0;
       right: 0;
     }
 
-    @media screen and (max-width: $width-sm) {
-      display: none;
-    }
-  }
-
-  // There's a mysterious <p> tag being added around
-  // the right image on https://code.org/circuitplayground.
-  // This aligns it correctly to the bottom of the container.
-  p img {
-    margin-bottom: -32px;
-
-    @media screen and (max-width: $width-md) {
-      position: absolute;
-      right: 0;
-      top: 22px;
-      z-index: 0;
-    }
-
-    @media screen and (max-width: $width-sm) {
+    @media screen and (max-width: 546px) {
       display: none;
     }
   }
 
   .text-wrapper {
-    color: white;
-    width: 370px;
+    color: var(--neutral_white);
     text-align: center;
+    max-width: 450px;
 
     @media screen and (max-width: $width-md) {
-      margin: 0 0 -0.5em;
+      margin: 0 0 -0.5rem;
       text-align: left;
     }
 
-    @media screen and (max-width: $width-sm) {
+    @media screen and (max-width: 546px) {
       text-align: center;
     }
 
     h1 {
-      font-family: $gotham-bold;
-      font-size: 1.65em;
-      color: $white;
+      @include heading-sm;
+      color: var(--neutral_white);
       margin: 0 auto 4px;
-
-      @media screen and (max-width: $width-sm) {
-        font-size: 1.45em;
-      }
     }
 
     p {
-      font-family: $gotham-regular;
-      font-size: 1.15em;
+      @include body-two;
       margin-bottom: 0;
-
-      @media screen and (max-width: $width-sm) {
-        font-size: 1em;
-      }
+      color: var(--neutral_white);
     }
   }
 
   button {
-    height: unset;
-    font-family: $gotham-bold;
-    font-size: 16px;
-    color: white;
     background: #4E1598;
     border-color: #4E1598;
     margin: 0;
-    padding: 0.65em 1.5em;
-    border-radius: 4px;
 
-    @media screen and (max-width: $width-md) {
-      padding: 0.5em 1em;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      margin-top: 1em;
+    @media screen and (max-width: 546px) {
+      margin-top: 1rem;
     }
   }
 }

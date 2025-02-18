@@ -16,6 +16,6 @@ module.exports = {
   custom: {
     requiredBlocks: [],
     freePlay: false,
-    toolbox: createToolbox(moveForwardBlock + turnLeftBlock + turnRightBlock)
-  }
+    toolbox: createToolbox(moveForwardBlock + turnLeftBlock + turnRightBlock),
+  },
 };

@@ -1,16 +1,18 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
 import moment from 'moment';
-import javalabMsg from '@cdo/javalab/locale';
-import color from '@cdo/apps/util/color';
-import msg from '@cdo/locale';
-import {reviewCommentShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
-import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
+import PropTypes from 'prop-types';
+import React, {useState, useEffect} from 'react';
+import {connect} from 'react-redux';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
+import {reviewCommentShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
+import msg from '@cdo/locale';
 import '@cdo/apps/templates/instructions/codeReviewV2/comment.scss';
 
 const FLASH_ERROR_TIME_MS = 5000;
@@ -21,9 +23,9 @@ function Comment({
   onDelete,
   viewAsTeacher,
   currentUserId,
-  viewingAsOwner
+  viewingAsOwner,
 }) {
-  const isMounted = useRef(false);
+  const isMounted = React.useRef(false);
   const [isCommentResolved, setIsCommentResolved] = useState(
     comment.isResolved
   );
@@ -56,7 +58,7 @@ function Comment({
         <span
           style={{
             ...styles.teacherName,
-            ...styles.name
+            ...styles.name,
           }}
         >
           {commenterName}
@@ -99,7 +101,7 @@ function Comment({
       menuItems.push({
         onClick: toggleHideResolved,
         text: hideResolved ? msg.show() : msg.hide(),
-        iconClass: hideResolved ? 'eye' : 'eye-slash'
+        iconClass: hideResolved ? 'eye' : 'eye-slash',
       });
     }
     if (viewingAsOwner) {
@@ -110,7 +112,7 @@ function Comment({
         text: isCommentResolved
           ? javalabMsg.markIncomplete()
           : javalabMsg.markComplete(),
-        iconClass: isCommentResolved ? 'circle-o' : 'check-circle'
+        iconClass: isCommentResolved ? 'circle-o' : 'check-circle',
       });
     }
     if (viewAsTeacher) {
@@ -118,7 +120,7 @@ function Comment({
       menuItems.push({
         onClick: deleteCodeReviewComment,
         text: javalabMsg.delete(),
-        iconClass: 'trash'
+        iconClass: 'trash',
       });
     }
 
@@ -164,7 +166,7 @@ function Comment({
     <div
       style={{
         ...styles.commentContainer,
-        ...(isCommentResolved && styles.lessVisible)
+        ...(isCommentResolved && styles.lessVisible),
       }}
     >
       <div style={styles.commentHeaderContainer}>
@@ -195,6 +197,7 @@ function Comment({
                     '/blockly/media/templates/instructions/codeReview/ellipsis.svg'
                   }
                   style={{height: '3px', display: 'flex'}}
+                  alt=""
                 />
               }
             >
@@ -209,7 +212,7 @@ function Comment({
           style={{
             ...styles.comment,
             ...(isFromTeacher && styles.commentFromTeacher),
-            ...(isCommentResolved && styles.lessVisibleBackgroundColor)
+            ...(isCommentResolved && styles.lessVisibleBackgroundColor),
           }}
         >
           <SafeMarkdown markdown={commentText} className="comment-content" />
@@ -229,67 +232,67 @@ Comment.propTypes = {
   viewingAsOwner: PropTypes.bool.isRequired,
   // Populated by Redux
   viewAsTeacher: PropTypes.bool,
-  currentUserId: PropTypes.number
+  currentUserId: PropTypes.number,
 };
 
 export const UnconnectedComment = Comment;
 export default connect(
   state => ({
     viewAsTeacher: state.viewAs === ViewType.Instructor,
-    currentUserId: state.currentUser?.userId
+    currentUserId: state.currentUser?.userId,
   }),
   {ViewType}
 )(Comment);
 
 const styles = {
   name: {
-    fontFamily: '"Gotham 5r"'
+    ...fontConstants['main-font-semi-bold'],
   },
   iconName: {
-    marginLeft: '20px'
+    marginLeft: '20px',
   },
   teacherName: {
-    color: color.default_blue
+    color: color.default_blue,
   },
   nameSuffix: {
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   check: {
     position: 'absolute',
     lineHeight: '18px',
-    fontSize: '15px'
+    fontSize: '15px',
   },
   comment: {
     clear: 'both',
     backgroundColor: color.lightest_gray,
     padding: '10px 12px',
-    borderRadius: 8
+    borderRadius: 8,
   },
   commentContainer: {
-    marginBottom: '25px'
+    marginBottom: '25px',
   },
   commentFromTeacher: {
-    backgroundColor: color.lightest_cyan
+    backgroundColor: color.lightest_cyan,
   },
   lessVisible: {color: color.light_gray},
   lessVisibleBackgroundColor: {backgroundColor: color.background_gray},
   timestamp: {
     fontStyle: 'italic',
-    margin: '0 5px'
+    margin: '0 5px',
   },
   commentHeaderContainer: {
     marginBottom: '5px',
     position: 'relative',
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   rightAlignedCommentHeaderSection: {display: 'flex'},
   error: {
     backgroundColor: color.red,
     color: color.white,
     margin: '5px 0',
-    padding: '10px 12px'
+    padding: '10px 12px',
   },
   text: {padding: '0 5px'},
-  icon: {fontSize: '18px'}
+  icon: {fontSize: '18px'},
 };

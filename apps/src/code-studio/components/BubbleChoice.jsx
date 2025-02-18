@@ -1,10 +1,12 @@
 import React from 'react';
-import i18n from '@cdo/locale';
+
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
 import SublevelCard from './SublevelCard';
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 
 export default class BubbleChoice extends React.Component {
   static propTypes = {level: levelType};
@@ -69,19 +71,19 @@ export default class BubbleChoice extends React.Component {
 const styles = {
   h2: {
     color: color.charcoal,
-    padding: '10px 0'
+    padding: '10px 0',
   },
   btn: {
     color: color.white,
     backgroundColor: color.lighter_gray,
-    borderColor: color.lighter_gray
+    borderColor: color.lighter_gray,
   },
   btnOrange: {
     backgroundColor: color.orange,
-    borderColor: color.orange
+    borderColor: color.orange,
   },
   cards: {
     display: 'flex',
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+  },
 };

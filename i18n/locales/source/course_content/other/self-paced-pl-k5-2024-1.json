@@ -1,0 +1,438 @@
+{
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/1/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Introduction to Coding: Empowering Teachers \n\n\n#### Start your journey to master key K-5 computer science concepts, empowering you to be confident and comfortable with coding. \n\n<img src=\"https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png\" alt=\"Image of a cartoon octopus holding a microphone and wearing a hat\" style=\"border-radius:40px; float: right; padding-right: 75px; height: 275px; clear: both; margin: 0 0px 0px 0;\">\n\n## Take the pre-survey\n\n##### Code.org values and is responsive to feedback. Please fill out <a href=\"https://studio.code.org/form/k5_selfpaced_pl_presurvey?survey_data[survey_variable]=csb\" target=\"blank\" rel=\"noopener noreferrer\">this short pre-survey</a> to  tell us about who you are and how we can best support you.\n\n<a class=\"btn btn-large btn-primary\" href=\"https://studio.code.org/form/k5_selfpaced_pl_presurvey?survey_data[survey_variable]=csb\" target=\"blank\" rel=\"noopener noreferrer\">Take the pre-survey</a>\n\n## In this module, you will:\n\n* #### Identify and explain fundamental CS concepts. \n* #### Demonstrate the application of algorithms, sequences, loops, and conditionals.\n* #### Write code to solve puzzles using algorithms, sequences, loops, and conditionals.\n\n### **Suggested time:**  60 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/1/levels/2": {
+    "long_instructions": "## What is Computer Science?\n\n#### The Computer Science Teacher Association (CSTA) defines computer science as, “The study of computers and **algorithmic processes**, including their principles, their **hardware and software designs**, their implementation, and their impact on society.”\n\n## Computer Science is more than coding\n\n#### Computer science is like the big umbrella that covers all the theories, experiments, and the nuts and bolts of how computers work. Think of **coding** as a special tool in this big kit—it's all about getting hands-on and **writing programs to fix specific problems**. While **every coder dips into the pool of computer science, not everyone studying computer science decides to pick up coding** as their thing.\n\n<br>\n\n#### In this module, you will breakdown **foundational concepts in coding** and practice building these skills with **block code** in Maze lab.\n\n## Watch the video below to learn more about Computer Science in everyday life."
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/1/levels/3": {
+    "dsls": {
+      "markdown": "# Navigating This Course \n\n#### This course includes levels from the <a href=\"https://code.org/educate/csf\" target=\"blank\" rel=\"noopener noreferrer\"> Computer Science Fundamentals</a> and <a href=\"https://code.org/educate/csc\" target=\"blank\" rel=\"noopener noreferrer\"> Computer Science Connections</a>  curriculum. Here are some helpful tips for <b>navigating the puzzle pages:</b>\n<br>\n\n![](https://images.code.org/aa85c84930266ead1076dc36904da8ee-image-1706120813304.png)\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/2/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Block-Based Coding\n\n#### This lesson covers practicing block-based coding basics, building on your understanding of computer science and its everyday applications.\n\n<img src=\"https://images.code.org/4e37cf72816a90a1abccaf66d623b4ad-image-1704408444176.23.19 PM.png\" alt=\"Image of a cartoon octopus holding a microphone and wearing a hat\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this lesson, you will:\n\n* #### Learn about block based programming.\n* #### Practice connecting, taking apart, and trashing blocks. \n* #### Use blocks from the toolbox.\n\n\n### **Suggested time:** 5 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/2/levels/2": {
+    "dsls": {
+      "markdown": "# Introducing Block-Based Programming \n<IMG SRC=\"https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJvd25rcnZqa2Q1aGVqeGFqMTB6aGdlNGkwNmtyc2ZsZHUyNWd3byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fyaVEgUF9g8xYLRNau/giphy.gif\">.\n## What is Block-Based Programming? \n\n####**Block-based programming** is like building with digital blocks! Block-based programming simplifies coding for early learners through a visual, **drag-and-drop** interface, eliminating the need for writing exact words or symbols. \n\n## Why Use Block-Based Programming?\n#### Block-based programming is great for beginners, making coding fun and easy with drag-and-drop methods. It's a good start for learning basic programming concepts, helping to **smoothly transition** to more advanced, text-based coding later.\n\n\n\n##Let's get started. \n\n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/2/levels/3": {
+    "short_instructions": "For this puzzle, snap the blocks together and press \"▶ Run\"!",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Blocks must be connected</b> in order for the code to run. Blocks connect together like puzzle pieces. \n<br>\n<b>Teacher Tip:</b> Helping students learn to check that all blocks are connected can really improve their problem-solving skills, especially when they find their code isn't working.\n</p>\n</div>\n\n<p>\nTo get Scrat to the acorn, snap the <xml><block type=\"maze_moveEast\" block-text=\"move East\"/></xml> block to the bottom of the <xml><block type=\"when_run\" block-text=\"when run\"/></xml> block, then press \"▶ Run\"!",
+    "authored_hints": {
+      "1": "If Scrat isn't doing what you want, make sure both of the blocks have been fully clicked together, then click \"Run\" again.",
+      "2": "Don't be afraid to make a mistake! Try something, and if it doesn't work, try something else!"
+    },
+    "callouts": {
+      "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/2/levels/4": {
+    "short_instructions": "Add a `North` block to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
+    "long_instructions": "<i><b>Note:</b> The size of the instruction box can be adjusted by dragging the <img src=\"https://images.code.org/ce33cce5f5b67b04dbe8ebbc174fd370-image-1698852127857.png\" alt=\"Three grey circles to show the icon that adjusts the size of the instruction box.\" width=\"30px\" style=\"border-radius:10px margin: 0 10px 5px 0px;\"> symbol on the bottom of the box.</i>\n\n<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nThe \"Blocks\" section to the left of the workspace is called the <b>toolbox</b>. When coding, you will drag blocks from the tool box and drop them into the workspace.\n<br>\n<br>\n The <b> orange</b> \"Step\" button beside the \"▶ Run\" runs <b> one step of the code at a time.</b>   \n<br>\n<br>\n<b>Teacher Tip:</b> \nThe \"Step\" button is a great tool to break the code into smaller, friendlier pieces. It's like having a guide to walk you through each part, step by step, which can be super helpful if you're finding things a bit tricky. \n</div>\n<p>\n\nGrab a [blockly block][0] block from the toolbox and add it to the bottom of the other blocks to finish this code, then click \"▶ Run\".",
+    "authored_hints": {
+      "1": "Your code should look like this:\n\n[blockly block][0]"
+    },
+    "callouts": {
+      "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/2/levels/5": {
+    "short_instructions": "Drag the extra block back to the toolbox to throw it away.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nTo <b>move blocks</b>  or <b>trash blocks</b>, click and drag the selected block(s) to a new location in the workspace or into the toolbox to trash them. \n<br>\n<br>\n<b>Teacher tip:</b> You might have to <b>detach blocks several times</b> because any blocks below the one you choose will stay connected. \n</p>\n</div>\n<p>\nThere's an extra block at the end of this code! Drag it back to the toolbox to throw it away.",
+    "authored_hints": {
+      "1": "Your code should look like this:\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/2/levels/6": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/dfc7109546af0df9d69749cc10558cee-image-1704408741789.23.52 PM.png)",
+          "correct": false
+        },
+        {
+          "text": "![](https://images.code.org/ee78582f0e74476d685d6b59f600e021-image-1704408747017.24.13 PM.png)",
+          "correct": false
+        },
+        {
+          "text": "![](https://images.code.org/8125c6d64d222b3e6754e2ba1e47c208-image-1704408760672.21.50 PM.png)",
+          "correct": false
+        },
+        {
+          "text": "https://images.code.org/4e37cf72816a90a1abccaf66d623b4ad-image-1704408444176.23.19 PM.png",
+          "correct": true
+        }
+      ],
+      "questions": [
+        {
+          "text": "In the following examples, identify which option correctly shows all the blocks connected in a proper sequence."
+        }
+      ],
+      "title": "Check for Understanding: Using Blocks"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/3/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Algorithms and Sequencing\n\n#### This lesson will teach you about algorithms and sequencing, building on your understanding of computer science and its everyday applications.\n\n<img src=\"https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png\" alt=\"Image of a cartoon octopus holding a microphone and wearing a hat\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this lesson, you will:\n\n* #### Practice coding using blocks.\n* #### Create a program using algorithms and sequencing.\n\n\n### **Suggested time:** 15 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/3/levels/2": {
+    "short_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nNow that you are comfortable moving the blocks to the workspace, let's try a specific task.\n<br>\n<br>\n<b>Teacher Tip:</b> If your students are new to coding, simplify the task into small steps. Demonstrate counting Laurel's moves and adding the matching code.\n</p>\n</div>\n\nMove Laurel to the treasure, then use the [blockly block][0] block to pick it up.  ",
+    "authored_hints": {
+      "courseC_collector_prog2_a": "You can use four [blockly block][0] blocks or use the [blockly block][1] block to make your program shorter.",
+      "courseC_collector_prog2_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/3/levels/3": {
+    "dsls": {
+      "markdown": "# Algorithms\n####Congratulations! You used an algorithm to get Laurel to the treasure!\n\n## What is an algorithm? \n\n####**Algorithms** are **lists of steps** to complete a task. Programs are algorithms written as code for a computer to execute. An analogy is using a recipe to bake cookies. Each step of a recipe is like each step of code you give the computer to execute. \n\n##Let's create another algorithm.\n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/3/levels/4": {
+    "short_instructions": "Order these blocks to collect the treasure and solve the puzzle.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \n<b>Teacher Tip:</b> If your students stuggle with orientation, review right and left before the lesson. Explain that Laurel moves based on how <b>she is oriented</b>.  \n</p>\n</div>\n\n_\"Sequence matters!\"_ \n\nThe blocks you need are already in the workspace, but not connected.\\\nOrder these blocks to collect the treasure and solve the puzzle.",
+    "authored_hints": {
+      "courseC_collector_prog3_a": "The program will only run the blocks that are connected to the [blockly block][0] block.",
+      "courseC_collector_prog3_b": "Try using the \"Step\" button to run your code one line at a time.  Do you see where the code goes wrong?",
+      "courseC_collector_prog3_c": "If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/3/levels/5": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/e251519c1526060949112f7912479be9-image-1704478055689.07.22 AM.png)",
+          "correct": false
+        },
+        {
+          "text": "![](https://images.code.org/1e3702bfeab49e0981cc17cab32a8d0c-image-1704478767232.19.09 AM.png)",
+          "correct": false
+        },
+        {
+          "text": "![](https://images.code.org/2ca0a2cfd2b4ed65f9713bae99ad8ebe-image-1704478830919.20.15 AM.png)",
+          "correct": false
+        },
+        {
+          "text": "![](https://images.code.org/1a0a287cff3f9d0352fe6b366a7e0db2-image-1704478335711.11.54 AM.png)",
+          "correct": true
+        }
+      ],
+      "questions": [
+        {
+          "text": "Which code will get Laurel to collect all the treasure?\" \n![](https://images.code.org/ba1fb110e77732dda3c79b31fe4915f6-image-1704477796790.03.04 AM.png)"
+        }
+      ],
+      "title": "Check for Understanding: Algorithms"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/3/levels/6": {
+    "dsls": {
+      "markdown": "# Sequence\n####Notice how the computer followed your instructions **in sequence** - a set order - to lead Laurel to the treasure.\n## What is a sequence?\n\n####**Sequencing** is a **control structure** and describes the process of ordering steps in a linear manner. It's like when you're making a sandwich. You put the bread, then the filling, then another slice of bread. In algorithms, sequencing is the basic order of instructions, **telling the computer what to do step by step**. \n\n##What is a control structure?\n####A **control structure** is like a set of traffic signals for computer programs. It tells the computer how to move through the steps of the program. Think of it like a recipe: you don't always follow the steps in the exact same order every time, and sometimes you repeat steps. \n\n## Let's practice some more sequencing. \n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/3/levels/7": {
+    "short_instructions": "Put these blocks in order to collect all of the treasure and solve the puzzle.",
+    "long_instructions": "_Oh no!_\n\nThese blocks are in the wrong order. Can you help Laurel collect the treasure by correcting the sequence of the algorithm? ",
+    "authored_hints": {
+      "courseC_collector_prog4_a": "If you get stuck, try writing out the steps on a piece of paper.",
+      "courseC_collector_prog4_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.",
+      "courseC_collector_prog4_c": "Try this option for a path."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/3/levels/8": {
+    "long_instructions": "## Great job! You just debugged a program!\n\n#### Watch the video below to learn more about debugging."
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/3/levels/9": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# What is debugging?\n\n\n####**Debugging** in computer science is about finding and fixing bugs, or errors, in code, much like being a computer detective. It's normal for code to have bugs on the first try, so don't worry. Remember, coding and debugging teach **persistence**, which means trying different solutions until you get it right.\n\n##Vocabulary\n<img style=\" float: left; width:10%;\" src=\"https://images.code.org/3168407cff8a2336f81a99ef14c40fe6-image-1699468057611.png\" alt = \"icon of a bug from the ecosystems module\" />\n\n#### **Bug** - Part of a program that does not work correctly.\n\n#### **Debugging** - Finding and fixing problems in an algorithm or program.\n\n#### **Persistence** - Not giving up.\n#### *Persistence works best when you try things many different ways, many different times.*\n\n\n## Let's try debugging again. \n\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/3/levels/10": {
+    "short_instructions": "These blocks are in the wrong order. Can you fix them?",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nHelp Laurel collect all of the treasure by debugging the code. \n</p>\n</div>\n\n_\"Help me collect each bit of treasure!\"_\n\n<font> These blocks are in the wrong order. Can you fix them? </font>",
+    "authored_hints": {
+      "courseC_collector_prog5_a": "\"Does it work at the first step?\nDoes it work at the second step? \nWhere do things go wrong?\"",
+      "courseC_collector_prog5_b": "If you fixed one bug and the program still doesn't work, use the steps above to find more bugs.",
+      "courseC_collector_prog5_c": "If you get stuck, try writing out the steps on a piece of paper.",
+      "courseC_collector_prog5_d": "Follow the path to collect the treasure."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/4/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Loops\n\n#### So far you have learned how to use block based coding to create algorithms and sequences. In this lesson, you will learn how to code with loops.\n\n<img src=\"https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png\" alt=\"Image of a cartoon octopus holding a microphone and wearing a hat\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this lesson, you will:\n\n* #### Learn about how loops simplify code and enhance efficiency.\n* #### Practice using loop blocks.\n* #### Create programs using loops.\n\n\n### **Suggested time:** 10 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/4/levels/2": {
+    "short_instructions": "Move to the hole and fill it with six shovelfuls of dirt, using the `fill` block.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nHelp the farmer fill the hole six times by using the <code style=\"color:plantinum; background-color:#E5E4E3\">fill</code> block. How might you use the new <code style=\"color:plantinum; background-color:#E5E4E3\">repeat</code> block?\n\n</p>\n</div>\n\nMove to the hole and fill it with six shovelfuls of dirt, using the `fill` block.\n   ",
+    "authored_hints": {
+      "courseD_farmer_while2_a": "You will only need to move once to get to the hole.",
+      "courseD_farmer_while2_b": "You will need the `fill 1` block six times. Can you use a loop to make this simpler?"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/4/levels/3": {
+    "long_instructions": "## Loops\n\n<img src=\"https://images.code.org/fda16953be5c0131a9f06c7e39403653-image-1706029373696.02.48 AM.png\" alt=\"Image of a pink repeat ??? times do block\" style=\"border-radius:40px; float: right; padding-right: 75px; height: 100px; clear: both; margin: 0 0px 0px 0;\"> \n\n#### In the previous level, you may have noticed the repeat block. The repeat block allows us to repeat the same lines of code a set number of times. In computer science, this is called a **loop**.\n\n## What are loops?\n\n#### **Loops** are like continuously stirring soup until it's perfect. They allow a computer to **repeat tasks until a specific condition is met**, like saying, 'Do this until I say stop.' You'll get to practice using loops in upcoming levels.\n\n## To learn more about loops, watch the video below."
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/4/levels/4": {
+    "short_instructions": "Use as few blocks as possible to solve this puzzle.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nNow that you've seen how a loop can simplify code, use a loop to program the farmer to <b>remove 10 mounds</b>  of dirt. \n</p>\n</div>\n \n\n_\"Move to the pile of dirt and tell me how many shovelfuls to remove.\"_\n\nUse as few blocks as possible to solve this puzzle.",
+    "authored_hints": {
+      "courseD_farmer_while3_a": "A loop can help you simplify your code here.",
+      "courseD_farmer_while3_b": "You shouldn't need any `turn` blocks to get to the pile."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/4/levels/5": {
+    "short_instructions": "Move to the pile of dirt and use the `remove` block to remove it.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nUsing a loop and fewer blocks, can you simplify the code?\n<br>\n<br>\n<b>Teacher Tip:</b> You can use this example to explain how loops make code more efficient. \n</p>\n</div>\n\n_\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"_  \n\nMove to the pile of dirt and use the `remove` block to remove it.",
+    "authored_hints": {
+      "courseD_farmer_while1_a": "You will need to move forward four times to get to the pile. Can you use a `repeat` loop for this?",
+      "courseD_farmer_while1_b": "Use the `remove 1` block when you are standing on the pile of dirt to remove it."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/4/levels/6": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Loops are a repeating set of instructions.",
+          "correct": true
+        },
+        {
+          "text": "It is mandatory for every computer program to contain at least one loop.",
+          "correct": false
+        },
+        {
+          "text": "A loop can only run a maximum of five times.",
+          "correct": false
+        },
+        {
+          "text": "Loops cannot be used in an algorithm.",
+          "correct": false
+        },
+        {
+          "text": "Loops let the computer do something over and over again until a certain condition is met.",
+          "correct": true
+        }
+      ],
+      "questions": [
+        {
+          "text": "Pick the two statements that are true about loops:"
+        }
+      ],
+      "title": "Check for Understanding: Loops"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/5/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Conditionals\n\n#### So far you have learned how to use algorithms, sequences, and loops. In this lesson, you will learn how to code with conditionals.\n\n<img src=\"https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png\" alt=\"Image of a cartoon octopus holding a microphone and wearing a hat\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this lesson, you will:\n\n* #### Learn about how conditionals allow computers to make decisions.\n* #### Practice using conditional blocks.\n* #### Create programs using conditionals.\n\n\n### **Suggested time:** 10 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/5/levels/2": {
+    "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; \"> \nLook at the code below. Notice the new block. What do you think this code will do when it runs? \n</p>\n</div>\n</p>\n\n_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
+    "authored_hints": {
+      "courseD_bee_conditionals1_a": "You will need to use an `if` block to check to see if there is a flower beneath the cloud before you try to get nectar."
+    },
+    "contained levels": [
+      {
+        "dsls": {
+          "answers": [
+            {
+              "text": "The bee will move to the cloud and try to get nectar, no matter what. ",
+              "correct": false,
+              "feedback": "Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
+            },
+            {
+              "text": "The bee will move to the cloud and only try to get nectar if there is a flower underneath.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The bee will move to the cloud and then do nothing, no matter what. ",
+              "correct": false,
+              "feedback": "Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud."
+            },
+            {
+              "text": "The bee will not reach the cloud. ",
+              "correct": false,
+              "feedback": "Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
+            }
+          ],
+          "questions": [
+            {
+              "text": "There is a cloud blocking our view. The cloud will disappear once we click \"Run\". There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below. What do you think will happen after you click \"Run\"?"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/5/levels/3": {
+    "long_instructions": "## Conditionals\n\n#### The previous level contained an \"if\" block. This block allowed the bee to collect nectar **IF** there was a flower. Otherwise, the code continued. This type of control structure is called a conditional.\n\n## Defining Conditionals\n\n#### **Conditionals** are decision points in an algorithm, like answering a question: \"**If** it's raining, **then** take an umbrella.\" They guide the computer's choices using \"**if** this, **then** that.\" You'll practice these with \"if\" blocks.\n\n## Watch the video below to learn more about conditionals."
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/5/levels/4": {
+    "short_instructions": "Get all of the nectar using as few blocks as possible.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nComputers can be programmed to make choices with conditionals! Using the blocks in the workspace, program the bee to collect nectar. \n<br> \n<Br>\n<b>Hint:</b> Loops can help simplify code. Try stacking multiple blocks in the loop. \n</p>\n</div>\n</p>\n\nIn this puzzle, you know that every flower has exactly one nectar, but the flowers aren't spaced evenly.\n\nGet all of the nectar using as few blocks as possible.",
+    "authored_hints": {
+      "courseD_bee_conditionals4_a": "You can still treat every space as if there is a cloud over it, even though you can see the whole path.",
+      "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. "
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/5/levels/5": {
+    "short_instructions": "Check underneath every cloud to see if it is hiding a flower before you get nectar.  ",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nHelp the bee <b>collect all of the nectar</b> by debugging the code. \n<br>\n<br>\n<b>Teacher Tip:</b> Encourage students to build their persistence skills. Debugging may take multiple attempts. \n</p>\n</div>\n</p>\n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar _once_.  \n\nRemember: Not all clouds hide the same thing!",
+    "authored_hints": {
+      "courseD_bee_conditionals2_a": "Sometimes a flower will be there, sometimes it won't.  If you want your code to run in both cases, make sure to use an `if` statement.",
+      "courseD_bee_conditionals2_c": "You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds."
+    },
+    "callouts": {
+      "4_5_Bee_Conditionals_2_1": "Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/5/levels/6": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "She always smiles when she is happy.",
+          "correct": false
+        },
+        {
+          "text": "If it is raining, then take an umbrella.",
+          "correct": true
+        },
+        {
+          "text": "If you complete your work by 5 PM, then you can watch a movie; otherwise, you need to continue working.",
+          "correct": true
+        },
+        {
+          "text": "Every time I go to the beach, I find seashells.",
+          "correct": false
+        },
+        {
+          "text": "If you have a membership card, then you get a 10% discount.",
+          "correct": true
+        }
+      ],
+      "questions": [
+        {
+          "text": "Pick the statements that are conditional statements"
+        }
+      ],
+      "title": "Conditional Statements"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/6/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Woohoo! \n\n#### You have learned how to use algorithms, sequences, loops, and conditionals. \n\n<img src=\"https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png\" alt=\"Image of a cartoon octopus holding a microphone and wearing a hat\" style=\"border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;\">\n\n\n## In this lesson, you will:\n\n* #### Check your understanding of computer science vocabulary.\n* #### Create programs using algorithms, sequences, loops and conditionals.\n\n\n\n### **Suggested time:** 15 minutes\n\n\n## Let's get started!\n\n<div style=\"clear:both\"/>\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/6/levels/2": {
+    "dsls": {
+      "markdown": "# Putting It All Together \n####Great job learning the foundations of coding and computer science. Let's review: An **algorithm** is like a recipe, providing step-by-step instructions for solving a problem. \n\n## Control Structures\n\n#### You learned about 3 types of control structures to use in algorithms. \n\n* #### **Sequences**  are the ordered sets of instructions within an algorithm.\n* #### **Loops** repeat tasks and make code efficient.\n* #### **Conditionals** allow for decision- making based on condititons. \n\n#### Together, they open endless coding possibilities.\n\n"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/6/levels/3": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "Algorithm"
+        },
+        {
+          "text": "Sequences"
+        },
+        {
+          "text": "Loops"
+        },
+        {
+          "text": "Conditionals"
+        },
+        {
+          "text": "Computer Science"
+        }
+      ],
+      "questions": [
+        {
+          "text": "Step-by-step instructions for solving a problem"
+        },
+        {
+          "text": "A type of control structure that uses an ordered sets of instructions within an algorithm"
+        },
+        {
+          "text": "A type of control structure that uses repetition in code. This streamlines and enhances efficiency"
+        },
+        {
+          "text": " A type of control structure that enables programs to take different paths based on specific conditions"
+        },
+        {
+          "text": "The art and science of telling computers what to do by instructing computers how to comprehend and solve problems"
+        }
+      ],
+      "title": "Check for Understanding: Matching Terms"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/6/levels/4": {
+    "short_instructions": "Help the bee collect all of the nectar. \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nApply what you've learned: Program the bee with an algorithm, loop, and conditional to collect nectar.\n</p>\n</div>\n</p>\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar *once*.",
+    "authored_hints": {
+      "courseD_bee_conditionals3_a": "Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.",
+      "courseD_bee_conditionals3_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/6/levels/5": {
+    "short_instructions": "Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!",
+    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \nUse all of the concepts that you have learned to program the bee to make honey using an algorithm, loop, and conditional.\n<br>\n<br>\n<b>Teacher Tip:</b> If your students encounter challenging levels, you can hold a whole class discussion to problem solve as a group. \n\n</div> \n</p>\n\n_\"Now I just want to make honey.\"_\n\nSome of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud! If there is a honeycomb, the bee will only need to make honey _once_.",
+    "authored_hints": {
+      "courseD_bee_conditionals6_a": "Make sure to use an `if` statement to check for honeycomb beneath each cloud.",
+      "courseD_bee_conditionals6_b": "In this case, you do not need to check for flowers under the clouds.",
+      "courseD_bee_conditionals6_c": "Is there a loop you can use to make your code simpler?",
+      "courseD_bee_conditionals6_d": "Click on \"See a solution\" beneath the run button if you need help solving this puzzle.  "
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/6/levels/6": {
+    "dsls": {
+      "answers": [
+        {
+          "text": "![](https://images.code.org/48005305853ba3049afe8378433b511d-image-1704484312741.50.04 AM.png)"
+        },
+        {
+          "text": "![](https://images.code.org/e29c671b3ca2cfe477c04e3b79f86498-image-1704484237298.45.58 AM.png)"
+        },
+        {
+          "text": "![](https://images.code.org/c8a383541f22fba6cd93f333990044e2-image-1704484266754.46.20 AM.png)"
+        }
+      ],
+      "questions": [
+        {
+          "text": "Conditional"
+        },
+        {
+          "text": "Sequence"
+        },
+        {
+          "text": "Loop"
+        }
+      ],
+      "title": "Check for Understanding: Terminology Matching"
+    }
+  },
+  "https://studio.code.org/s/self-paced-pl-k5-2024-1/lessons/7/levels/1": {
+    "dsls": {
+      "content1": "description here",
+      "markdown": "# Next Steps\n\n## Click the `continue` button below to complete this course and learn more foundational skills in the next unit, <a href=\"https://studio.code.org/s/self-paced-pl-k5-2024-2\" target=\"blank\" rel=\"noopener noreferrer\"> CS Basics: Creativity with Code</a>. \n\n#or \n\n## Teach CS in your class\n\n#### Check out some of these curriculum options to get started teaching CS in your class right away.\n\n<a href = \"https://code.org/educate/csc\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/3f623ba6e5151732099b3441225f5a66-image-1706037967333.jpg\" alt=\"thumbnail for the CS Connections curriculum \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 40px;\"></a>\n\n<a href = \"https://code.org/educate/csf\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/1d4bfa99f2282f9972713f289f03ec08-image-1706037638798.jpg\" alt=\"thumbnail for the CS Fundamentals curriculum \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 20px;\"></a>\n\n<a href = \"https://code.org/oceans\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/bc294ba333174bf92e8f9bb60380a5b3-image-1706038353939.png\" alt=\"thumbnail for the CS Connections self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 50px 40px 20px;\"></a>\n\n## Continue learning \n#### Learn more about teaching CS with these self-paced professional learning modules. \n\n<a href = \"https://studio.code.org/s/self-paced-pl-csc-2023\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/b4ca41cd43376f374fc5408d76241e59-image-1706300331462.png\" alt=\"thumbnail for the CS Connections self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 40px;\"></a>\n\n<a href = \"https://studio.code.org/s/k5-onlinepd-2023\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/c35579aa157b3605228885e325ddb03d-image-1706299786558.png\" alt=\"thumbnail for the CS Fundamentals self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 40px 40px 20px;\"></a>\n\n<a href = \"https://studio.code.org/s/self-paced-pl-k5-2024-2\" target=\"blank\" rel=\"noopener noreferrer\"><img src=\"https://images.code.org/f87d09a84961fe74d8a15583d28f7dcf-image-1706301123382.png\" alt=\"thumbnail for the CS Connections self-paced professional learniing module \" width=\"240px\" style=\"border-radius:5px; float:left; margin: 20px 50px 50px 20px;\"></a>\n\n<br>\n\n<p>\n\n##Help us make this module better!\n\n#### Code.org values and is responsive to feedback. Please fill out this <a href=\"https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit1\" target=\"blank\" rel=\"noopener noreferrer\">short survey</a> to provide your feedback on this module.\n\n<a class=\"btn btn-large btn-primary\" href=\"https://studio.code.org/form/csb_selfpaced_pl_postsurvey?survey_data[survey_variable]=unit1\">Take the survey</a>\n\n\n## Stay connected \n\n* #### Continue participating in the <a href=\"https://forum.code.org/\" target=\"blank\" rel=\"noopener noreferrer\">Code.org teacher forum</a>. \n\n* #### Connect with <a href=\"http://twitter.com/teachcode\" target=\"blank\" rel=\"noopener noreferrer\">@teachcode</a> on Twitter.\n\n* #### Join the <a href=\"https://www.csteachers.org/\" target=\"blank\" rel=\"noopener noreferrer\">Computer Science Teachers Association (CSTA)</a>. \n\n<br>\n</p>\n\n\n"
+    }
+  }
+}

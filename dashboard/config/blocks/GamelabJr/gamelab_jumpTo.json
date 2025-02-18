@@ -13,6 +13,7 @@
         "name": "LOCATION",
         "type": "Location"
       }
-    ]
+    ],
+    "style": "default"
   }
 }

@@ -7,7 +7,7 @@ const initialState = {
   buttonsAreVisible: false,
   buttonsAreDisabled: true,
   swipeOverlayHasBeenDismissed: false,
-  swipeOverlayDismissAction: ''
+  swipeOverlayDismissAction: '',
 };
 
 export default function arrowDisplay(state, action) {
@@ -16,23 +16,23 @@ export default function arrowDisplay(state, action) {
     case SET_ARROW_BUTTONS_VISIBLE:
       return {
         ...currentState,
-        buttonsAreVisible: true
+        buttonsAreVisible: true,
       };
     case SET_ARROW_BUTTONS_HIDDEN:
       return {
         ...currentState,
-        buttonsAreVisible: false
+        buttonsAreVisible: false,
       };
     case SET_ARROW_BUTTONS_DISABLED:
       return {
         ...currentState,
-        buttonsAreDisabled: action.isDisabled
+        buttonsAreDisabled: action.isDisabled,
       };
     case DISMISS_SWIPE_OVERLAY:
       return {
         ...currentState,
         swipeOverlayHasBeenDismissed: true,
-        swipeOverlayDismissAction: action.dismissAction
+        swipeOverlayDismissAction: action.dismissAction,
       };
     default:
       return currentState;

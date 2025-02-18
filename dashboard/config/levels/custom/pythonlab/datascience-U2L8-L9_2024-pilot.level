@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-30T17:44:19.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Enhancing the Stacked Bar Chart: Step 3\r\n\r\nEnhance the visual appeal and readability of the bar chart.\r\n\r\n## Do This\r\n\r\n1. Adjust the `xticks` rotation to customize and improve its readability.\r\n   - _Make sure you remove the comment from the previous level so you can see the result._ \r\n2. Discuss with your partner:\r\n   - How do the changes you made improve the clarity and impact of the stacked bar chart? \r\n   - Which modification do you think was most effective?\r\n\r\n\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "project_template_level_name": "datascience-U2L8-L7-9templ_2024-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30T17:44:19.193+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L8-L8_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L8-L8_2024-pilot\"},{\"changed_at\":\"2024-08-30 17:45:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

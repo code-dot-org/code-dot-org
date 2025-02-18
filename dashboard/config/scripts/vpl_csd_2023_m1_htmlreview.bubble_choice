@@ -1,0 +1,11 @@
+name 'vpl-csd-2023-m1-HTMLReview'
+display_name 'HTML Review'
+description 'This level is the same as Unit 2, Lesson 4, Level 1 in the curriculum. Use the choice levels to review HTML elements and their syntax.'
+sublevels
+level 'CSD Web Dev bubble choice p tag_2023'
+level 'CSD Web Dev bubble choice p tag 2_2023'
+level 'CSD Web Dev choice level p tag 3_2023'
+level 'CSD Web Dev choice level headings 1_2023'
+level 'CSD Web Dev choice level headings 2_2023'
+level 'CSD Web Dev choice level list 1_2023'
+level 'CSD Web Dev bubble choice br tag_2023'

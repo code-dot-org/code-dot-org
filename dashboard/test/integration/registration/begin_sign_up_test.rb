@@ -22,7 +22,20 @@ module RegistrationsControllerTests
       }
       post '/users/begin_sign_up', params: params
 
-      assert_redirected_to new_user_registration_path
+      assert_template 'new'
+    end
+
+    test 'persists user attributes on success - POST flow' do
+      params = {
+        user: {
+          email: 'myemail@example.com',
+          password: 'mypassword',
+          password_confirmation: 'mypassword'
+        }
+      }
+      post '/users/begin_sign_up', params: params
+
+      assert_template 'new'
     end
 
     test 'renders signup page with error if email is empty' do

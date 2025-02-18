@@ -29,7 +29,8 @@ module InfraTestTopic
     timezone_name = 'US/Pacific'
 
     timezone = TZInfo::Timezone.get(timezone_name)
-    offset_in_hours = timezone.current_period.utc_total_offset_rational.numerator
+    offset_in_seconds = timezone.observed_utc_offset
+    offset_in_hours = offset_in_seconds / 3600
     offset = format '%+.2d:00', offset_in_hours
 
     Time.now.getlocal(offset)

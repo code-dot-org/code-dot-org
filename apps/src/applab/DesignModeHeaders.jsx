@@ -1,14 +1,16 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
-import msg from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
+import msg from '@cdo/locale';
+
+import SettingsCog from '../code-studio/components/SettingsCog';
 import commonStyles from '../commonStyles';
-import color from '../util/color';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
-import SettingsCog from '../lib/ui/SettingsCog';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
-import classNames from 'classnames';
+import color from '../util/color';
 
 export default class DesignModeHeaders extends React.Component {
   static propTypes = {
@@ -19,7 +21,7 @@ export default class DesignModeHeaders extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     showMakerToggle: PropTypes.bool.isRequired,
-    autogenerateML: PropTypes.func
+    autogenerateML: PropTypes.func,
   };
 
   onToggleToolbox = () => this.props.onToggleToolbox();
@@ -31,17 +33,18 @@ export default class DesignModeHeaders extends React.Component {
       padding: 0,
       margin: 0,
       top: 0,
-      left: 8,
+      left: this.props.isRtl ? '' : 8,
+      right: this.props.isRtl ? 8 : '',
       border: 'none',
       boxShadow: 'none',
       backgroundColor: 'transparent',
       lineHeight: styleConstants['workspace-headers-height'] + 'px',
       fontSize: 18,
       cursor: 'pointer',
-      color: this.props.isRunning ? color.dark_charcoal : color.lighter_purple,
+      color: color.neutral_white,
       ':hover': {
-        color: color.white
-      }
+        color: color.neutral_dark20,
+      },
     };
 
     if (collapse) {
@@ -56,7 +59,7 @@ export default class DesignModeHeaders extends React.Component {
       <button
         className="hide-toolbox-icon"
         type="button"
-        style={[commonStyles.hidden, this.chevronStyle(true)]}
+        style={[commonStyles.hidden, this.chevronStyle(!this.props.isRtl)]}
         onClick={this.onToggleToolbox}
       >
         <i className="fa fa-chevron-circle-right" />
@@ -68,7 +71,7 @@ export default class DesignModeHeaders extends React.Component {
     return (
       <button
         type="button"
-        style={[commonStyles.hidden, this.chevronStyle(false)]}
+        style={[commonStyles.hidden, this.chevronStyle(this.props.isRtl)]}
         className="show-toolbox-icon"
       >
         <i className="fa fa-chevron-circle-right" />
@@ -82,34 +85,37 @@ export default class DesignModeHeaders extends React.Component {
         display: this.props.isToolboxVisible ? 'flex' : 'none',
         justifyContent: 'space-between',
         width: 270,
-        borderRight: '1px solid gray',
-        float: 'left'
+        borderLeft: this.props.isRtl ? '1px solid gray' : '',
+        borderRight: this.props.isRtl ? '' : '1px solid gray',
+        float: this.props.isRtl ? 'right' : 'left',
       },
       showToolboxHeader: {
-        float: 'left',
+        float: this.props.isRtl ? 'right' : 'left',
         display: this.props.isToolboxVisible ? 'none' : 'flex',
         justifyContent: 'space-between',
-        paddingLeft: 10
+        paddingLeft: this.props.isRtl ? '' : 10,
+        paddingRight: this.props.isRtl ? 10 : '',
       },
       showToolboxClickable: {
-        marginLeft: 18,
+        marginLeft: this.props.isRtl ? '' : 18,
+        marginRight: this.props.isRtl ? 18 : '',
         ':hover': {
-          color: color.white
-        }
+          color: color.white,
+        },
       },
       iconContainer: {
-        float: 'right',
+        float: this.props.isRtl ? 'left' : 'right',
         marginRight: 10,
         marginLeft: 10,
-        height: '100%'
+        height: '100%',
       },
       assetsIcon: {
         fontSize: 18,
-        verticalAlign: 'middle'
+        verticalAlign: 'middle',
       },
       runningVersionHistoryButton: {
-        color: color.dark_charcoal
-      }
+        color: color.dark_charcoal,
+      },
     };
 
     const hasFocus = !this.props.isRunning;

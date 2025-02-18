@@ -1,5 +1,6 @@
 require 'json'
 require_relative 'http_cache'
+require_relative '../state_abbr'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
@@ -10,6 +11,8 @@ require_relative 'http_cache'
 # result in changes to these other files.
 
 module SharedConstants
+  DEFAULT_LOCALE = 'en-US'.freeze
+
   # Used to communicate different types of levels
   LEVEL_KIND = OpenStruct.new(
     {
@@ -39,6 +42,18 @@ module SharedConstants
     }
   ).freeze
 
+  USER_LEVEL_INTERACTIONS = OpenStruct.new(
+    {
+      click_continue: "click_continue",
+      click_finish: "click_finish",
+      click_help_and_tips: "click_help_and_tips",
+      click_keep_working: "click_keep_working",
+      click_run: "click_run",
+      click_submit: "click_submit",
+      click_validate: "click_validate",
+    }
+  ).freeze
+
   # The set of valid login types for a section
   SECTION_LOGIN_TYPE = OpenStruct.new(
     {
@@ -47,6 +62,7 @@ module SharedConstants
       email: 'email',
       google_classroom: 'google_classroom',
       clever: 'clever',
+      lti_v1: 'lti_v1',
     }
   )
 
@@ -100,6 +116,8 @@ module SharedConstants
     poetry
     poetry_hoc
     thebadguys
+    music
+    pythonlab
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
@@ -124,6 +142,19 @@ module SharedConstants
     ALWAYS_PUBLISHABLE_PROJECT_TYPES + CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES + RESTRICTED_PUBLISH_PROJECT_TYPES
 
   ALL_PROJECT_TYPES = ALL_PUBLISHABLE_PROJECT_TYPES + UNPUBLISHABLE_PROJECT_TYPES
+
+  # The status of a featured project based on it's `featured_at` and `unfeatured_at` properties
+  FEATURED_PROJECT_STATUS = OpenStruct.new(
+    {
+      active: 'active',
+      bookmarked: 'bookmarked',
+      archived: 'archived',
+    }
+  )
+
+  FEATURED_PROJECT_CONSTANTS = OpenStruct.new(
+    {MAX_REQUESTS_PER_CATEGORY: 15}
+  )
 
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
@@ -196,7 +227,6 @@ module SharedConstants
       "readRecords": null,
       "updateRecord": null,
       "deleteRecord": null,
-      "onRecordEvent": null,
       "getUserId": null,
       "drawChart": null,
       "drawChartFromRecords": null,
@@ -335,11 +365,9 @@ module SharedConstants
       "isPressed": null,
       "holdtime": null,
       "soundSensor.value": null,
-      "soundSensor.getAveragedValue": null,
       "soundSensor.setScale": null,
       "soundSensor.threshold": null,
       "lightSensor.value": null,
-      "lightSensor.getAveragedValue": null,
       "lightSensor.setScale": null,
       "lightSensor.threshold": null,
       "tempSensor.F": null,
@@ -358,7 +386,6 @@ module SharedConstants
       "onBoardEvent": null,
       "isPressed": null,
       "lightSensor.value": null,
-      "lightSensor.getAveragedValue": null,
       "lightSensor.setScale": null,
       "lightSensor.threshold": null,
       "compass.getHeading": null
@@ -596,5 +623,224 @@ module SharedConstants
     ERROR: 3,
     # An unhandleable error that results in a program crash.
     FATAL: 4
+  }.freeze
+
+  RUBRIC_UNDERSTANDING_LEVELS = OpenStruct.new(
+    {
+      EXTENSIVE: 3,
+      CONVINCING: 2,
+      LIMITED: 1,
+      NONE: 0,
+    }
+  ).freeze
+
+  # These reflect the 'status' of an AI rubric evaluation
+  RUBRIC_AI_EVALUATION_STATUS = {
+    # Queued as a job
+    QUEUED: 0,
+    # Job is running
+    RUNNING: 1,
+    # Succeeded
+    SUCCESS: 2,
+    # General failure (along with anything larger)
+    FAILURE: 1000,
+    # PII Failure
+    PII_VIOLATION: 1001,
+    # Profanity Failure
+    PROFANITY_VIOLATION: 1002,
+    # Request Too Large
+    REQUEST_TOO_LARGE: 1003,
+    # Student exceeded max number of evaluations per project
+    STUDENT_LIMIT_EXCEEDED: 1004,
+    # Teacher exceeded max number of evaluations per student per project
+    TEACHER_LIMIT_EXCEEDED: 1005,
+  }.freeze
+
+  RUBRIC_AI_EVALUATION_LIMITS = {
+    # Maximum number of evaluations we will automatically run for a student per project
+    STUDENT_LIMIT: 10,
+
+    # Maximum number of evaluations a teacher can request for a rubric per student
+    TEACHER_LIMIT: 10
+  }
+
+  EMAIL_LINKS = OpenStruct.new(
+    {
+      PRIVACY_POLICY_URL: "https://code.org/privacy",
+      CONTACT_US_URL: "https://code.org/contact",
+      TOS_URL: "https://code.org/tos",
+      STUDENT_PRIVACY_PLEDGE_URL: "https://studentprivacypledge.org/signatories/",
+      COMMON_SENSE_MEDIA_URL: "https://privacy.commonsense.org/evaluation/code.org",
+      CDO_SUPPORT_MAILTO: "mailto:support@code.org",
+    }
+  ).freeze
+
+  CHILD_ACCOUNT_COMPLIANCE_STATES = OpenStruct.new(
+    {
+      GRACE_PERIOD: 'p',
+      LOCKED_OUT: 'l',
+      PERMISSION_GRANTED: 'g'
+    }
+  ).freeze
+
+  VOICES = {
+    en_us: {
+      VOICE: 'sharon22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    es_es: {
+      VOICE: 'ines22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    es_mx: {
+      VOICE: 'rosa22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    it_it: {
+      VOICE: 'vittorio22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+    pt_br: {
+      VOICE: 'marcia22k',
+      SPEED: 180,
+      SHAPE: 100,
+    },
+  }.freeze
+  CENSUS_CONSTANTS = OpenStruct.new(
+    {CURRENT_CENSUS_SCHOOL_YEAR: 2024}
+  )
+
+  CAP_LINKS = OpenStruct.new(
+    PARENTAL_CONSENT_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/15465423491085-How-do-I-obtain-parent-or-guardian-permission-for-student-accounts',
+  )
+
+  LMS_LINKS = OpenStruct.new(
+    {
+      INTEGRATION_GUIDE_URL: 'https://support.code.org/hc/en-us/articles/23120014459405-Learning-Management-System-LMS-and-Single-Sign-On-SSO-Integrations-and-Support-for-Code-org',
+      INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
+      ROSTER_SYNC_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System',
+      ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
+      # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation
+      SUPPORTED_METHODS_URL: 'https://github.com/code-dot-org/code-dot-org/blob/staging/docs/lti-integration.md#option-2-manual-entry',
+    }
+  ).freeze
+
+  # Current song manifest file name for Dance Party. Note that different manifests
+  # can be tested using query params (?manifest=...), but once this value is updated
+  # the default manifest will change for all users.
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v4.json'
+
+  # We should always specify a version for the LLM so the results don't unexpectedly change.
+  # reference: https://platform.openai.com/docs/models/gpt-3-5
+  AI_TUTOR_CHAT_MODEL_VERSION = 'gpt-4o-2024-05-13'
+  AICHAT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+
+  # These reflect the 'status' of an AI Interaction,
+  # and are used in both AI Tutor and AI Chat.
+  AI_INTERACTION_STATUS = {
+    ERROR: 'error',
+    PII_VIOLATION: 'pii_violation',
+    PROFANITY_VIOLATION: 'profanity_violation',
+    USER_INPUT_TOO_LARGE: 'user_input_too_large',
+    OK: 'ok',
+    UNKNOWN: 'unknown',
+  }.freeze
+
+  AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
+
+  AI_TUTOR_TYPES = {
+    COMPILATION: 'compilation',
+    VALIDATION: 'validation',
+    GENERAL_CHAT: 'general_chat',
+    COMPLETION: 'completion',
+  }.freeze
+
+  USER_TYPES = OpenStruct.new(
+    STUDENT: 'student',
+    TEACHER: 'teacher',
+  ).freeze
+
+  NON_SCHOOL_OPTIONS = OpenStruct.new(
+    SELECT_A_SCHOOL: 'selectASchool',
+    CLICK_TO_ADD: 'clickToAdd',
+    NO_SCHOOL_SETTING: 'noSchoolSetting'
+  ).freeze
+
+  AI_REQUEST_EXECUTION_STATUS = {
+    # The request has been created but has not yet been processed.
+    NOT_STARTED: 0,
+    # The request has been queued for processing.
+    QUEUED: 1,
+    # The request is currently being processed.
+    RUNNING: 2,
+    # The request was successfully processed.
+    SUCCESS: 3,
+    # The request failed to process for an unexpected reason.
+    FAILURE: 1000,
+    # Profanity detected in the user's input.
+    USER_PROFANITY: 1001,
+    # PII detected in the user's input.
+    USER_PII: 1002,
+    # Profanity detected in the model's output.
+    MODEL_PROFANITY: 1003,
+    # PII detected in the model's output.
+    MODEL_PII: 1004,
+    # The user input request exceeded the maximum token size allowed.
+    USER_INPUT_TOO_LARGE: 1005
+  }
+
+  AI_CHAT_MODEL_IDS = {
+    ARITHMO: "gen-ai-arithmo2-mistral-7b",
+    BIOMISTRAL: "gen-ai-biomistral-7b",
+    MISTRAL: "gen-ai-mistral-7b-inst-v01",
+    KAREN: "gen-ai-karen-creative-mistral-7b",
+    PIRATE: "gen-ai-mistral-pirate-7b",
+    CHATGPT: "gpt-4o-mini",
+  }
+
+  AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
+
+  AI_CHAT_TEACHER_FEEDBACK = {
+    # The teacher flagged a message that our system did not flag as inappropriate.
+    CLEAN_DISAGREE: 'clean_disagree',
+    # The teacher agreed with our system's flagging of a message as inappropriate.
+    PROFANITY_AGREE: 'profanity_agree',
+    # The teacher disagreed with our system's flagging of a message as inappropriate.
+    PROFANITY_DISAGREE: 'profanity_disagree',
+  }
+
+  US_STATES = STATE_ABBR_WITH_DC_HASH.merge(DC: 'Washington, D.C.').sort_by(&:last).to_h.freeze
+
+  PROJECT_SUBMISSION_STATUS = {
+    CAN_SUBMIT: 'can_submit',
+    ALREADY_SUBMITTED: 'already_submitted',
+    PROJECT_TYPE_NOT_ALLOWED: 'project_type_not_allowed',
+    RESTRICTED_SHARE_MODE: 'restricted_share_mode',
+    SHARING_DISABLED: 'sharing_disabled',
+    OWNER_TOO_NEW: 'owner_too_new',
+    PROJECT_TOO_NEW: 'project_too_new',
+  }
+
+  EDUCATOR_ROLES = [
+    {value: "classroom_teacher", category: 'educator'},
+    {value: "stem_tech_teacher", category: 'educator'},
+    {value: "subject_area_teacher", category: 'educator'},
+    {value: "librarian_media_specialist", category: 'educator'},
+    {value: "homeschool_teacher", category: 'educator'},
+    {value: "school_admin", category: "admin"},
+    {value: "district_admin", category: "admin"},
+    {value: "parent", category: 'other'},
+    {value: "other", category: 'other'}
+  ].freeze
+
+  AI_DIFF_CONTEXT = {
+    LESSON: "lesson",
+    UNIT: "unit",
+    COURSE: "course",
+    GENERAL: "general"
   }.freeze
 end

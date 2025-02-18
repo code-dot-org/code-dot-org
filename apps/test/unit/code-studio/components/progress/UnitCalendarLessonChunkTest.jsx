@@ -1,9 +1,9 @@
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import ReactTooltip from 'react-tooltip';
+
 import UnitCalendarLessonChunk from '@cdo/apps/code-studio/components/progress/UnitCalendarLessonChunk';
 import color from '@cdo/apps/util/color';
-import ReactTooltip from 'react-tooltip';
 
 const sampleLessonChunk = {
   id: 1,
@@ -15,7 +15,7 @@ const sampleLessonChunk = {
   isStart: true,
   isEnd: true,
   isMajority: true,
-  url: 'https://www.google.com/'
+  url: 'https://www.google.com/',
 };
 
 describe('UnitCalendarLessonChunk', () => {
@@ -25,19 +25,17 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          assessment: true
+          assessment: true,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
       />
     );
 
-    assert.propertyVal(
-      wrapper.find('a').prop('style'),
-      'border',
+    expect(wrapper.find('a').prop('style')['border']).toBe(
       '2px solid ' + color.purple
     );
-    assert.propertyVal(wrapper.find('a').prop('style'), 'color', '#333');
+    expect(wrapper.find('a').prop('style')['color']).toBe('#333');
   });
 
   it('is purple background with white text when is assessment and being hovered', () => {
@@ -46,24 +44,20 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          assessment: true
+          assessment: true,
         }}
         isHover={true}
         handleHover={() => console.log('hover')}
       />
     );
 
-    assert.propertyVal(
-      wrapper.find('a').prop('style'),
-      'border',
+    expect(wrapper.find('a').prop('style')['border']).toBe(
       '2px solid ' + color.purple
     );
-    assert.propertyVal(
-      wrapper.find('a').prop('style'),
-      'backgroundColor',
+    expect(wrapper.find('a').prop('style')['backgroundColor']).toBe(
       color.purple
     );
-    assert.propertyVal(wrapper.find('a').prop('style'), 'color', 'white');
+    expect(wrapper.find('a').prop('style')['color']).toBe('white');
   });
 
   it('is teal border with grey text when is assessment', () => {
@@ -72,19 +66,17 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          assessment: false
+          assessment: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
       />
     );
 
-    assert.propertyVal(
-      wrapper.find('a').prop('style'),
-      'border',
+    expect(wrapper.find('a').prop('style')['border']).toBe(
       '2px solid ' + color.teal
     );
-    assert.propertyVal(wrapper.find('a').prop('style'), 'color', '#333');
+    expect(wrapper.find('a').prop('style')['color']).toBe('#333');
   });
 
   it('is teal background with white text when is assessment and being hovered', () => {
@@ -93,24 +85,18 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          assessment: false
+          assessment: false,
         }}
         isHover={true}
         handleHover={() => console.log('hover')}
       />
     );
 
-    assert.propertyVal(
-      wrapper.find('a').prop('style'),
-      'border',
+    expect(wrapper.find('a').prop('style')['border']).toBe(
       '2px solid ' + color.teal
     );
-    assert.propertyVal(
-      wrapper.find('a').prop('style'),
-      'backgroundColor',
-      color.teal
-    );
-    assert.propertyVal(wrapper.find('a').prop('style'), 'color', color.white);
+    expect(wrapper.find('a').prop('style')['backgroundColor']).toBe(color.teal);
+    expect(wrapper.find('a').prop('style')['color']).toBe(color.white);
   });
 
   it('has dashed left border when not isStart', () => {
@@ -119,18 +105,14 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          isStart: false
+          isStart: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
       />
     );
 
-    assert.propertyVal(
-      wrapper.find('a').prop('style'),
-      'borderLeftStyle',
-      'dashed'
-    );
+    expect(wrapper.find('a').prop('style')['borderLeftStyle']).toBe('dashed');
   });
 
   it('has dashed right border when not isEnd', () => {
@@ -139,18 +121,14 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          isEnd: false
+          isEnd: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
       />
     );
 
-    assert.propertyVal(
-      wrapper.find('a').prop('style'),
-      'borderRightStyle',
-      'dashed'
-    );
+    expect(wrapper.find('a').prop('style')['borderRightStyle']).toBe('dashed');
   });
 
   it('does not show title if isMajority false', () => {
@@ -159,7 +137,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          isMajority: false
+          isMajority: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
@@ -168,7 +146,7 @@ describe('UnitCalendarLessonChunk', () => {
 
     expect(
       wrapper.containsMatchingElement(<div>{sampleLessonChunk.title}</div>)
-    ).to.be.false;
+    ).toBe(false);
   });
 
   it('shows lesson number with tooltip if small chunk', () => {
@@ -177,7 +155,7 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          duration: 30
+          duration: 30,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
@@ -188,14 +166,14 @@ describe('UnitCalendarLessonChunk', () => {
       wrapper.containsMatchingElement(
         <div>{sampleLessonChunk.lessonNumber}</div>
       )
-    ).to.be.true;
+    ).toBe(true);
     expect(
       wrapper.containsMatchingElement(
         <ReactTooltip>
           <div>{sampleLessonChunk.title}</div>
         </ReactTooltip>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('hides assessment icon if not assessment', () => {
@@ -204,19 +182,14 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          assessment: false
+          assessment: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
       />
     );
 
-    assert.propertyVal(
-      wrapper
-        .find('FontAwesome')
-        .at(0)
-        .prop('style'),
-      'visibility',
+    expect(wrapper.find('FontAwesome').at(0).prop('style')['visibility']).toBe(
       'hidden'
     );
   });
@@ -227,19 +200,14 @@ describe('UnitCalendarLessonChunk', () => {
         minuteWidth={1}
         lessonChunk={{
           ...sampleLessonChunk,
-          unplugged: false
+          unplugged: false,
         }}
         isHover={false}
         handleHover={() => console.log('hover')}
       />
     );
 
-    assert.propertyVal(
-      wrapper
-        .find('FontAwesome')
-        .at(1)
-        .prop('style'),
-      'visibility',
+    expect(wrapper.find('FontAwesome').at(1).prop('style')['visibility']).toBe(
       'hidden'
     );
   });

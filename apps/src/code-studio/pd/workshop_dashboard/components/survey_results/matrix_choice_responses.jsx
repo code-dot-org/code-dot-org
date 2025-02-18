@@ -2,9 +2,10 @@
 // It will split the matrix into individual questions and display them with
 // the title "matrix title -> question title"
 
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
+
 import ChoiceResponses from './choice_responses.jsx';
 
 export default class MatrixChoiceResponses extends React.Component {
@@ -13,7 +14,7 @@ export default class MatrixChoiceResponses extends React.Component {
     question: PropTypes.object.isRequired,
     section: PropTypes.string.isRequired,
     questionId: PropTypes.string.isRequired,
-    facilitators: PropTypes.object
+    facilitators: PropTypes.object,
   };
 
   // facilitator responses are in form {facilitator1: {question1: <answer>,...}, facilitator2: {...}}
@@ -51,9 +52,7 @@ export default class MatrixChoiceResponses extends React.Component {
             }
             const numRespondents = answer.num_respondents;
             let possibleAnswersMap = question['columns'];
-            let parsedQuestionName = `${question['title']} -> ${
-              question['rows'][innerQuestionId]
-            }`;
+            let parsedQuestionName = `${question['title']} -> ${question['rows'][innerQuestionId]}`;
             return (
               <ChoiceResponses
                 perFacilitator={section === 'facilitator'}

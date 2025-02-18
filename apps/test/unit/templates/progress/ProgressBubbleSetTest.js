@@ -1,20 +1,19 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import {UnconnectedProgressBubbleSet as ProgressBubbleSet} from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
 const defaultProps = {
   levels: fakeLevels(5),
   disabled: false,
-  lessonExtrasEnabled: true
+  lessonExtrasEnabled: true,
 };
 
 describe('ProgressBubbleSet', () => {
   it('we have a bubble for each level', () => {
     const wrapper = shallow(<ProgressBubbleSet {...defaultProps} />);
-    assert.equal(
-      wrapper.find('ProgressBubble').length,
+    expect(wrapper.find('ProgressBubble').length).toEqual(
       defaultProps.levels.length
     );
   });
@@ -22,14 +21,14 @@ describe('ProgressBubbleSet', () => {
   it('renders a disabled ProgressBubble if this.props.disabled is true', () => {
     const additionalProps = {
       levels: fakeLevels(1),
-      disabled: true
+      disabled: true,
     };
     const wrapper = shallow(
       <ProgressBubbleSet {...defaultProps} {...additionalProps} />
     );
-    assert.equal(wrapper.find('ProgressBubble').length, 1);
+    expect(wrapper.find('ProgressBubble').length).toEqual(1);
     const progressBubble = wrapper.find('ProgressBubble').at(0);
-    assert.equal(progressBubble.prop('disabled'), true);
+    expect(progressBubble.prop('disabled')).toEqual(true);
   });
 
   it('renders an enabled ProgressBubble if this.props.lessonExtrasEnabled is true and level is bonus', () => {
@@ -38,8 +37,8 @@ describe('ProgressBubbleSet', () => {
     const wrapper = shallow(
       <ProgressBubbleSet {...defaultProps} levels={[bonusLevel]} />
     );
-    assert.equal(wrapper.find('ProgressBubble').length, 1);
+    expect(wrapper.find('ProgressBubble').length).toEqual(1);
     const progressBubble = wrapper.find('ProgressBubble').at(0);
-    assert.equal(progressBubble.prop('disabled'), false);
+    expect(progressBubble.prop('disabled')).toEqual(false);
   });
 });

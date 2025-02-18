@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-03T23:12:02.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "<img style=\"width:40%; float: right; margin: 10px; border: solid 2px black\" src=\"https://images.code.org/5f30ad2b376c2f53f1c4b46e0b173a50-image-1714967571111.png\" />\r\n\r\n# Predict (Part 2)\r\n\r\n#### What would you expect to happen when you interact with this chatbot?\r\n\r\n#### What's a question you might ask, and what answer would you expect?\r\n\r\n> **Try to predict how this chatbot will behave when you ask it questions. What is a question you could ask it, and how would you expect it to answer?** Write a 1-2 sentence response. _There is no wrong answer - it's just your prediction_.\r\n>\r\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "2022",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "placeholder": "What do you think will happen?"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-03T23:12:02.825+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L1\"},{\"changed_at\":\"2024-05-06 03:44:47 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\",\"placeholder\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 03:53:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 03:46:03 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 03:59:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 04:00:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-13 03:26:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-13 03:26:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

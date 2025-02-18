@@ -1,14 +1,15 @@
+import {utils as mazeUtils} from '@code-dot-org/maze';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import {
   SquareType,
   WallTypeMask,
   WallCoordRowMask,
   WallCoordRowShift,
   WallCoordColMask,
-  WallCoordColShift
+  WallCoordColShift,
 } from '@cdo/apps/studio/constants';
-import {utils as mazeUtils} from '@code-dot-org/maze';
 
 const CELL_WIDTH = 48;
 const CELL_HEIGHT = 38;
@@ -16,7 +17,7 @@ const CELL_HEIGHT = 38;
 const studioTiles = {
   [SquareType.OPEN]: 'none',
   [SquareType.SPRITEFINISH]: 'goal',
-  [SquareType.SPRITESTART]: 'sprite'
+  [SquareType.SPRITESTART]: 'sprite',
 };
 
 // This list is duplicated in StudioCellEditor. See comment there for
@@ -49,7 +50,7 @@ const studioAvatarList = [
   'soccergirl',
   'soccerboy',
   'tennisgirl',
-  'tennisboy'
+  'tennisboy',
 ];
 
 const karelTiles = ['border', 'path', 'start', 'end', 'obstacle'];
@@ -58,7 +59,7 @@ const beeConditions = [
   'flower-or-hive',
   'flower-or-nothing',
   'hive-or-nothing',
-  'flower-hive-or-nothing'
+  'flower-hive-or-nothing',
 ];
 const beeFeatures = ['hive', 'flower'];
 
@@ -73,7 +74,7 @@ class Cell extends React.Component {
     onMouseOver: PropTypes.func.isRequired,
     onMouseUp: PropTypes.func.isRequired,
     skin: PropTypes.string.isRequired,
-    highlighted: PropTypes.bool
+    highlighted: PropTypes.bool,
   };
 
   render() {
@@ -120,8 +121,9 @@ class Cell extends React.Component {
         tdStyle.backgroundImage =
           "url('/blockly/media/skins/hoc2015x/tiles_background1.png')";
         tdStyle.backgroundSize = '800% 800%';
-        tdStyle.backgroundPosition = `-${x * CELL_WIDTH}px -${y *
-          CELL_HEIGHT}px`;
+        tdStyle.backgroundPosition = `-${x * CELL_WIDTH}px -${
+          y * CELL_HEIGHT
+        }px`;
       }
     } else if (this.props.skin === 'bounce') {
       const images = [
@@ -131,7 +133,7 @@ class Cell extends React.Component {
         'paddle',
         'paddle',
         'ball',
-        'obstacle'
+        'obstacle',
       ];
       if (cell.tileType_) {
         const image = images[Math.log2(cell.tileType_)];
@@ -174,6 +176,12 @@ class Cell extends React.Component {
           this.props.row,
           this.props.col
         )}
+        /* 
+          This functionality would be complex to implement via keyboard action, is only used by levelbuilders, 
+          and is only used on for level editing of old level types,
+          so disabling the rule here for now in order to re-enable this linting rule more broadly.
+        */
+        /* eslint-disable-next-line jsx-a11y/mouse-events-have-key-events */
         onMouseOver={this.props.onMouseOver.bind(
           null,
           this.props.row,
@@ -199,7 +207,7 @@ export default class Grid extends React.Component {
     selectedCol: PropTypes.number,
     skin: PropTypes.string.isRequired,
     onSelectionChange: PropTypes.func.isRequired,
-    setCopiedCells: PropTypes.func.isRequired
+    setCopiedCells: PropTypes.func.isRequired,
   };
 
   state = {};
@@ -211,7 +219,7 @@ export default class Grid extends React.Component {
   beginDrag = (row, col) => {
     this.setState({
       dragging: true,
-      dragStart: {row, col}
+      dragStart: {row, col},
     });
   };
 
@@ -223,7 +231,7 @@ export default class Grid extends React.Component {
   moveDrag = (row, col) => {
     if (this.state.dragging) {
       this.setState({
-        dragCurrent: {row, col}
+        dragCurrent: {row, col},
       });
     }
   };
@@ -237,7 +245,7 @@ export default class Grid extends React.Component {
     this.setState({
       dragging: false,
       dragStart: null,
-      dragCurrent: null
+      dragCurrent: null,
     });
 
     if (!dragStart || (dragStart.row === row && dragStart.col === col)) {

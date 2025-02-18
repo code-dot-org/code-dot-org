@@ -1,30 +1,31 @@
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {QuickView} from '@cdo/apps/code-studio/pd/application_dashboard/quick_view';
 import QuickViewTable from '@cdo/apps/code-studio/pd/application_dashboard/quick_view_table';
-import {expect} from 'chai';
-import sinon from 'sinon';
 
 describe('Quick View', () => {
   const fakeRouter = {
-    createHref() {}
+    createHref() {},
   };
 
   const context = {
-    router: fakeRouter
+    router: fakeRouter,
   };
 
   const routeProps = {
     path: 'csf_facilitators',
     applicationType: 'CSF Facilitators',
-    role: 'csf_facilitators'
+    role: 'csf_facilitators',
   };
 
   const regionalPartnerFilter = {value: 1, label: 'A Great Organization'};
 
   describe('Initially', () => {
     let quickView;
-    before(() => {
+    beforeAll(() => {
       quickView = shallow(
         <QuickView
           regionalPartnerFilter={regionalPartnerFilter}
@@ -58,12 +59,12 @@ describe('Quick View', () => {
         applicant_name: 'Clare Constantine',
         district_name: null,
         school_name: null,
-        status: 'unreviewed'
-      }
+        status: 'unreviewed',
+      },
     ];
     let server;
     let quickView;
-    before(() => {
+    beforeAll(() => {
       server = sinon.fakeServer.create();
       server.respondWith(
         'GET',
@@ -71,7 +72,7 @@ describe('Quick View', () => {
         [
           200,
           {'Content-Type': 'application/json'},
-          JSON.stringify(applicationsData)
+          JSON.stringify(applicationsData),
         ]
       );
 
@@ -86,7 +87,7 @@ describe('Quick View', () => {
       server.respond();
       quickView.update();
     });
-    after(() => {
+    afterAll(() => {
       server.restore();
     });
 

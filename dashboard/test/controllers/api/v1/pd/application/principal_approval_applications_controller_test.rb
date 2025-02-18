@@ -8,6 +8,7 @@ module Api::V1::Pd::Application
     self.use_transactional_test_case = true
 
     setup_all do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
       @teacher_application = create TEACHER_APPLICATION_FACTORY, application_guid: SecureRandom.uuid
       @test_params = {
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY, :approved_yes),
@@ -48,37 +49,11 @@ module Api::V1::Pd::Application
       @teacher_application.reload
       expected_principal_fields = {
         principal_approval: 'Yes',
-        principal_schedule_confirmed: "Yes, I plan to include this course in the #{@teacher_application.year} master schedule",
         principal_free_lunch_percent: '50.00%',
         principal_underrepresented_minority_percent: '52.00%',
-        principal_wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
-        principal_pay_fee: 'Yes, my school would be able to pay the full program fee.'
       }
       actual_principal_fields = @teacher_application.sanitized_form_data_hash.slice(*expected_principal_fields.keys)
       assert_equal expected_principal_fields, actual_principal_fields
-    end
-
-    test 'application update contains replaced courses' do
-      teacher_application = create TEACHER_APPLICATION_FACTORY, application_guid: SecureRandom.uuid
-
-      test_params = {
-        application_guid: teacher_application.application_guid,
-        form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY).merge(
-          {
-            replace_course: 'Yes'
-          }.stringify_keys
-        )
-      }
-
-      assert_creates(PRINCIPAL_APPROVAL_APPLICATION_CLASS) do
-        put :create, params: test_params
-        assert_response :success
-      end
-
-      assert_equal(
-        'Yes',
-        teacher_application.reload.sanitized_form_data_hash[:principal_wont_replace_existing_course]
-      )
     end
 
     test 'application update includes Other fields' do
@@ -89,10 +64,6 @@ module Api::V1::Pd::Application
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY,
           do_you_approve: "Other:",
           do_you_approve_other: "this is the other for do you approve",
-          committed_to_master_schedule: "Other:",
-          committed_to_master_schedule_other: "this is the other for master schedule",
-          replace_course: "I don't know (Please Explain):",
-          replace_course_other: "this is the other for replace course"
         )
       }
 
@@ -103,8 +74,6 @@ module Api::V1::Pd::Application
 
       expected_principal_fields = {
         principal_approval: "Other: this is the other for do you approve",
-        principal_schedule_confirmed: "Other: this is the other for master schedule",
-        principal_wont_replace_existing_course: "I don't know (Please Explain): this is the other for replace course",
       }
       actual_principal_fields = teacher_application.reload.sanitized_form_data_hash.select do |k, _|
         expected_principal_fields.key?(k)
@@ -115,7 +84,7 @@ module Api::V1::Pd::Application
 
     test 'Sends principal approval received emails on successful create' do
       ADMIN_APPROVAL_EMAILS.each do |email_type|
-        TEACHER_APPLICATION_CLASS.any_instance.expects(:queue_email).with(email_type, deliver_now: true)
+        TEACHER_APPLICATION_CLASS.any_instance.expects(:send_pd_application_email).with(email_type)
       end
 
       put :create, params: @test_params

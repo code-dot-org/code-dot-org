@@ -1,26 +1,28 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Button from '@cdo/apps/templates/Button';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import i18n from '@cdo/locale';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import MultipleChoiceByQuestionTable from './MultipleChoiceByQuestionTable';
 import {
   getCurrentQuestion,
   getStudentAnswersForCurrentQuestion,
-  QuestionType
+  QuestionType,
 } from './sectionAssessmentsRedux';
-import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import MultipleChoiceByQuestionTable from './MultipleChoiceByQuestionTable';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 class MultipleChoiceDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
     questionAndAnswers: PropTypes.object,
-    studentAnswers: PropTypes.array
+    studentAnswers: PropTypes.array,
   };
 
   render() {
@@ -86,35 +88,36 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   instructions: {
-    marginTop: 20
+    marginTop: 20,
   },
   answers: {
     float: 'left',
-    width: 550
+    width: 550,
   },
   icon: {
-    color: color.level_perfect
+    color: color.level_perfect,
   },
   iconSpace: {
     width: 40,
-    float: 'left'
+    float: 'left',
   },
   answerBlock: {
-    width: '100%'
+    width: '100%',
   },
   answerLetter: {
     width: 30,
     float: 'left',
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 };
 
-export const UnconnectedMultipleChoiceDetailsDialog = MultipleChoiceDetailsDialog;
+export const UnconnectedMultipleChoiceDetailsDialog =
+  MultipleChoiceDetailsDialog;
 
 export default connect(state => ({
   questionAndAnswers: getCurrentQuestion(state),
-  studentAnswers: getStudentAnswersForCurrentQuestion(state)
+  studentAnswers: getStudentAnswersForCurrentQuestion(state),
 }))(MultipleChoiceDetailsDialog);

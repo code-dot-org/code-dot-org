@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import * as elementUtils from './designElements/elementUtils.js';
 
 export default class ElementSelect extends React.Component {
   static propTypes = {
     onChangeElement: PropTypes.func.isRequired,
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
-    selected: PropTypes.instanceOf(HTMLElement)
+    selected: PropTypes.instanceOf(HTMLElement),
   };
 
   handleChange = e => {
@@ -24,7 +25,7 @@ export default class ElementSelect extends React.Component {
           onChange={this.handleChange}
           style={{width: '150px'}}
         >
-          {this.props.elementIdList.map(function(id) {
+          {this.props.elementIdList.map(function (id) {
             return <option key={id}>{id}</option>;
           })}
         </select>

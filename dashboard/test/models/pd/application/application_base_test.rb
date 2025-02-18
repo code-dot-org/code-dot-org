@@ -8,6 +8,10 @@ module Pd::Application
 
     freeze_time
 
+    setup do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
+    end
+
     test 'required fields' do
       application = ApplicationBase.new
       refute application.valid?
@@ -218,7 +222,7 @@ module Pd::Application
         application = create :pd_teacher_application, status: 'incomplete'
         assert_nil application.applied_at
 
-        tomorrow = Date.tomorrow.to_time
+        tomorrow = Time.zone.tomorrow.to_time
         next_day = tomorrow + 1.day
 
         Timecop.freeze(tomorrow) do
@@ -263,32 +267,18 @@ module Pd::Application
       assert_nil application.instance_variable_get(:@full_answers)
     end
 
-    test 'queue_email creates an associated unsent Email record' do
+    test 'send_pd_application_email sends email and creates an associated sent Email record' do
       application = create TEACHER_APPLICATION_FACTORY
 
-      application.expects(:deliver_email).never
+      application.expects(:deliver_email).once
       assert_creates Email do
-        application.queue_email :test_email
+        application.send_pd_application_email :test_email
       end
       email = Email.last
       assert_equal application, email.application
       assert_equal 'test_email', email.email_type
       assert_equal application.status, email.application_status
-      assert_nil email.sent_at
-    end
-
-    test 'queue_email with deliver_now sends email and creates an associated sent Email record' do
-      application = create TEACHER_APPLICATION_FACTORY
-
-      application.expects(:deliver_email)
-      assert_creates Email do
-        application.queue_email :test_email, deliver_now: true
-      end
-      email = Email.last
-      assert_equal application, email.application
-      assert_equal 'test_email', email.email_type
-      assert_equal application.status, email.application_status
-      assert_not_nil email.sent_at
+      refute_nil email.sent_at
     end
 
     test 'record status change with user' do
@@ -306,7 +296,7 @@ module Pd::Application
 
       assert_equal(
         [expected_entry],
-        (application.sanitize_status_timestamp_change_log)
+        application.sanitize_status_timestamp_change_log
       )
 
       application.update(status: 'approved')
@@ -357,12 +347,13 @@ module Pd::Application
 
       # program manager but no contact_name or contact_email
       program_manager = (create :regional_partner_program_manager, regional_partner: partner).program_manager
-      assert_equal "\"#{program_manager.name}\" <#{program_manager.email}>", application.formatted_partner_contact_email
+      assert_includes application.formatted_partner_contact_email, program_manager.name
+      assert_includes application.formatted_partner_contact_email, program_manager.email
 
       # name and email
       partner.contact_name = 'We Teach Code'
       partner.contact_email = 'we_teach_code@ex.net'
-      assert_equal "\"We Teach Code\" <we_teach_code@ex.net>", application.formatted_partner_contact_email
+      assert_equal "We Teach Code <we_teach_code@ex.net>", application.formatted_partner_contact_email
     end
 
     test 'formatted_applicant_email uses user account email' do
@@ -370,61 +361,21 @@ module Pd::Application
 
       assert application.user.email.present?
 
-      formatted_email = "\"#{application.applicant_full_name}\" <#{application.user.email}>"
-      assert_equal formatted_email, application.formatted_applicant_email
+      assert_includes application.formatted_applicant_email, application.user.email
+      assert_includes application.formatted_applicant_email, application.applicant_full_name
     end
 
-    test 'formatted_applicant_email uses alternate email if no user account email' do
+    test 'formatted_applicant_email raises error if no user email' do
       teacher_without_email = create :teacher, :with_school_info, :demigrated
       teacher_without_email.update_attribute(:email, '')
       teacher_without_email.update_attribute(:hashed_email, '')
-
-      application = create :pd_teacher_application, user: teacher_without_email
-
-      assert teacher_without_email.email.blank?
-
-      formatted_alternate_email = "\"#{application.applicant_full_name}\" <#{application.sanitized_form_data_hash[:alternate_email]}>"
-      assert_equal formatted_alternate_email, application.formatted_applicant_email
-    end
-
-    test 'formatted_applicant_email raises error if no user email or alternate email' do
-      teacher_without_email = create :teacher, :with_school_info, :demigrated
-      teacher_without_email.update_attribute(:email, '')
-      teacher_without_email.update_attribute(:hashed_email, '')
-      application_hash_without_email = build :pd_teacher_application_hash, alternate_email: ''
+      application_hash_without_email = build :pd_teacher_application_hash
       application_without_email = create :pd_teacher_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
 
       assert teacher_without_email.email.blank?
-      assert application_without_email.sanitized_form_data_hash[:alternate_email].blank?
       assert_raises_matching("invalid email address for application #{application_without_email.id}") do
         application_without_email.formatted_applicant_email
       end
-    end
-
-    test 'deleting an application also deletes its unsent emails' do
-      # Create two applications, each with sent and unsent email
-      application_a = create TEACHER_APPLICATION_FACTORY
-      application_b = create TEACHER_APPLICATION_FACTORY
-      [application_a, application_b].each do |application|
-        application.stubs(:deliver_email)
-        application.queue_email :test_email
-        application.queue_email :test_email, deliver_now: true
-        assert_equal 2, application.emails.count
-        assert_equal 1, application.emails.unsent.count
-      end
-
-      # Destroy one of the applications
-      application_a.destroy
-
-      # Unsent email for that application was destroyed
-      assert_equal 0, application_a.emails.unsent.count
-      # Sent email for that application was not destroyed
-      assert_equal 1, application_a.emails.count
-      # Email for the other application was not destroyed
-      assert_equal 2, application_b.emails.count
-    ensure
-      application_a.emails.destroy_all
-      application_b.emails.destroy_all
     end
   end
 end

@@ -34,7 +34,6 @@ module Pd::Application
           requiredFields: TEACHER_APPLICATION_CLASS.camelize_required_fields,
           accountEmail: current_user.email,
           apiEndpoint: '/api/v1/pd/application/teacher',
-          userId: current_user.id,
           schoolId: current_user.school_info&.school&.id,
           applicationId: @application_id,
           savedStatus: @saved_status,

@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T21:21:43.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Add the following method to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">CityTemps</code> class:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\npublic static ArrayList&lt;Integer&gt; mystery3(ArrayList&lt;Integer&gt; list1, ArrayList&lt;Integer&gt; list2) {\r\n  ArrayList&lt;Integer&gt; temp = new ArrayList&lt;Integer&gt;();\r\n\r\n  for (Integer i : list1) {\r\n    if (!list2.contains(i)) {\r\n      temp.add(i);\r\n    }\r\n  }\r\n\r\n  for (Integer i : list2) {\r\n    if (!list1.contains(i)) {\r\n      temp.add(i);\r\n    }\r\n  }\r\n\r\n  return temp;\r\n}\r\n</pre>\r\n\r\nCall the method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">CityRunner</code> class. What does this method do?",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U8L7-Multiple Lists PBT_pilot-2025",
+    "teacher_markdown": "Students realize that this method returns a new `ArrayList` containing the elements that appear in exactly one of the lists.",
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T21:21:43.682+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-L4_2025\\\"\"],\"cloned_from\":\"CSA U8L7-L4_2025\"}]"
+}]]></config>
+</Javalab>

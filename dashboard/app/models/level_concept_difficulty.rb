@@ -26,7 +26,7 @@ class LevelConceptDifficulty < ApplicationRecord
   include ConceptDifficulties
   belongs_to :level
 
-  def serializable_hash(options=nil)
+  def serializable_hash(options = nil)
     super.compact.delete_if do |key, _|
       %w(id level_id updated_at created_at).include? key
     end

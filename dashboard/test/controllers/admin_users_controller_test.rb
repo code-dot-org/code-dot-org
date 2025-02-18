@@ -147,6 +147,21 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert @deleted_student.deleted?
   end
 
+  test 'should delete a user' do
+    sign_in @admin
+    user_to_delete = create :student
+    post :delete_user, params: {user_id: user_to_delete.id}
+    assert user_to_delete.reload.deleted?
+  end
+
+  test 'should not delete a user if not an admin' do
+    sign_in @not_admin
+    user_to_delete = create :student
+    post :delete_user, params: {user_id: user_to_delete.id}
+    assert_response :forbidden
+    refute user_to_delete.reload.deleted?
+  end
+
   generate_admin_only_tests_for :manual_pass_form
 
   test 'manual_pass adds user_level with manual pass' do
@@ -475,7 +490,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_select 'td', text: duplicate_user1.id.to_s
     assert_select(
       '.alert-success',
-      "More than one User matches email address.  Showing first result.  "\
+      "More than one User matches email address.  Showing first result.  " \
       "Matching User IDs - #{duplicate_user1.id},#{duplicate_user2.id}",
     )
   end

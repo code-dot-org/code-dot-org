@@ -1,8 +1,14 @@
 import $ from 'jquery';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 $(document).ready(() => {
+  analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT, {}, PLATFORMS.BOTH);
+
+  window.location.href =
+    'https://studio.code.org/users/new_sign_up/account_type';
+
   document
     .getElementById('signup_form_submit')
     .addEventListener('click', () => {
@@ -24,7 +30,11 @@ $(document).ready(() => {
 });
 
 function logUserLoginType(loginType) {
-  analyticsReporter.sendEvent(EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT, {
-    'user login type': loginType
-  });
+  analyticsReporter.sendEvent(
+    EVENTS.SIGN_UP_LOGIN_TYPE_PICKED_EVENT,
+    {
+      'user login type': loginType,
+    },
+    PLATFORMS.BOTH
+  );
 }

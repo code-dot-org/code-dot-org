@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import SoundListEntry from './SoundListEntry';
+
 import {searchAssets} from '../assets/searchAssets';
 import soundLibrary from '../soundLibrary.json';
+
+import SoundListEntry from './SoundListEntry';
 
 /**
  * A component for managing sounds from soundLibrary.json.
@@ -13,7 +15,7 @@ export default class SoundList extends React.Component {
     search: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     selectedSound: PropTypes.object.isRequired,
-    soundsRegistry: PropTypes.object.isRequired
+    soundsRegistry: PropTypes.object.isRequired,
   };
 
   getMatches(searchQuery) {
@@ -58,6 +60,6 @@ const styles = {
   root: {
     height: 315,
     overflowY: 'scroll',
-    clear: 'both'
-  }
+    clear: 'both',
+  },
 };

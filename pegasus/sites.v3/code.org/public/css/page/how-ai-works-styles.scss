@@ -1,0 +1,38 @@
+// Custom styles for code.org/ai/how-ai-works
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import "breakpoints";
+
+// Hero banner
+.hero-banner-basic {
+  background: url("/images/banners/banner-bg-maze-dots-light.png") center repeat;
+  background-color: #132535;
+
+  .text-wrapper {
+    width: 60%;
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    width: 30%;
+    text-align: center;
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+      margin-top: 2rem;
+    }
+
+    img {
+      height: 250px;
+      width: auto;
+
+      @media screen and (max-width: $width-sm) {
+        height: 220px;
+        margin-left: 2em;
+      }
+    }
+  }
+}

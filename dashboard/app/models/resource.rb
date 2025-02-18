@@ -95,6 +95,9 @@ class Resource < ApplicationRecord
       key: key,
       name: get_localized_property(:name),
       url: get_localized_property(:url),
+      # used by lesson materials page
+      downloadUrl: download_url,
+      # used by lesson plan page and others
       download_url: download_url,
       audience: audience || 'All',
       type: get_localized_property(:type)
@@ -146,9 +149,7 @@ class Resource < ApplicationRecord
     end
   end
 
-  private
-
-  def generate_key_from_name
+  private def generate_key_from_name
     # This is a litte silly, but we want to replace all characters in the
     # string that DON'T match our formatting regex, so rather than doing
     # something simple like gsub (which can only do positive matches) we have

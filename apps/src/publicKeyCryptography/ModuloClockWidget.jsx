@@ -2,12 +2,16 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
+import WidgetContinueButton from '../templates/WidgetContinueButton';
 import color from '../util/color';
-import ModuloClock from './ModuloClock';
+
+import {GoButton} from './cryptographyFields';
 import IntegerDropdown from './IntegerDropdown';
 import IntegerTextbox from './IntegerTextbox';
-import {GoButton} from './cryptographyFields';
-import WidgetContinueButton from '../templates/WidgetContinueButton';
+import ModuloClock from './ModuloClock';
 import {AnyChildren} from './types';
 
 const style = {
@@ -15,27 +19,27 @@ const style = {
     display: 'block',
     maxWidth: 800,
     margin: 'auto',
-    fontFamily: `"Gotham 4r", sans-serif`
+    ...fontConstants['main-font-regular'],
   },
   h1: {
-    fontSize: 38.5
+    fontSize: 38.5,
   },
   balancePadding: {
     display: 'inline-block',
     width: 60,
-    visibility: 'hidden'
+    visibility: 'hidden',
   },
   LabelBelow: {
     root: {
       display: 'inline-block',
       verticalAlign: 'top',
-      lineHeight: '30px'
+      lineHeight: '30px',
     },
     label: {
       color: color.charcoal,
-      textAlign: 'center'
-    }
-  }
+      textAlign: 'center',
+    },
+  },
 };
 
 /** Root component for Public Key Cryptography widget */
@@ -44,7 +48,7 @@ export default class ModuloClockWidget extends React.Component {
     dividend: 247,
     modulus: 37,
     speed: 1,
-    animating: false
+    animating: false,
   };
 
   onDividendChange = dividend => this.setState({dividend});
@@ -128,5 +132,5 @@ function LabelBelow(props) {
 }
 LabelBelow.propTypes = {
   label: PropTypes.string.isRequired,
-  children: AnyChildren
+  children: AnyChildren,
 };

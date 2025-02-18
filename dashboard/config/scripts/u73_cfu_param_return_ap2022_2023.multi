@@ -20,3 +20,5 @@ The procedure below will be called twice with two numbers provided as arguments 
 
 ![](https://images.code.org/fa3cc8947cc809fbd0441d0cda3fcbb0-image-1575580814510.15.01 PM.png)
 MARKDOWN
+
+allow_multiple_attempts true

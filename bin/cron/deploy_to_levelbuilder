@@ -91,10 +91,10 @@ def main
     branch_name: branch_name,
     base_branch: 'origin/levelbuilder'
   )
-rescue Exception => e
+rescue Exception => exception
   ChatClient.message(
     'levelbuilder',
-    "<@#{DevelopersTopic.dotd}> EXCEPTION: #{e.message}",
+    "<@#{DevelopersTopic.dotd}> EXCEPTION: #{exception.message}",
     color: 'red'
   )
   DevelopersTopic.set_dtl TOPIC_DTL_FAILED

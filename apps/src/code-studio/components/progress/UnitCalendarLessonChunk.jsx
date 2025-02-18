@@ -1,23 +1,25 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import ReactTooltip from 'react-tooltip';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ReactTooltip from 'react-tooltip';
 
 class UnitCalendarLessonChunk extends Component {
   static propTypes = {
     minuteWidth: PropTypes.number.isRequired,
     lessonChunk: unitCalendarLessonChunk,
     isHover: PropTypes.bool,
-    handleHover: PropTypes.func.isRequired
+    handleHover: PropTypes.func.isRequired,
   };
 
   handleMouseEnter = () => {
     this.props.handleHover(this.props.lessonChunk.id);
   };
 
-  handleMouseOut = () => {
+  handleMouseLeave = () => {
     this.props.handleHover('');
   };
 
@@ -33,7 +35,7 @@ class UnitCalendarLessonChunk extends Component {
       isEnd,
       isMajority,
       url,
-      lessonNumber
+      lessonNumber,
     } = this.props.lessonChunk;
 
     const chunkWidth = Math.floor(minuteWidth * duration) - 10;
@@ -50,7 +52,7 @@ class UnitCalendarLessonChunk extends Component {
         ? styles.instructionalHover
         : styles.instructional),
       ...(isStart ? styles.isStart : styles.isNotStart),
-      ...(isEnd ? styles.isEnd : styles.isNotEnd)
+      ...(isEnd ? styles.isEnd : styles.isNotEnd),
     };
 
     let displayTitle = smallChunk ? lessonNumber : title;
@@ -64,47 +66,30 @@ class UnitCalendarLessonChunk extends Component {
         data-tip
         href={url}
         onMouseEnter={this.handleMouseEnter}
-        onMouseOut={this.handleMouseOut}
+        onMouseLeave={this.handleMouseLeave}
+        onFocus={this.handleMouseEnter}
+        onBlur={this.handleMouseLeave}
       >
         {isMajority && (
-          <div
-            style={styles.boxContent}
-            onMouseEnter={this.handleMouseEnter}
-            onMouseOut={this.handleMouseOut}
-          >
+          <div style={styles.boxContent}>
             {(assessment || unplugged) && (
-              <div
-                key={`lesson-${id}`}
-                style={styles.iconSection}
-                onMouseEnter={this.handleMouseEnter}
-                onMouseOut={this.handleMouseOut}
-              >
+              <div key={`lesson-${id}`} style={styles.iconSection}>
                 <FontAwesome
                   icon="check-circle"
                   style={{
                     color: isHover ? color.white : color.purple,
-                    visibility: assessment ? 'visible' : 'hidden'
+                    visibility: assessment ? 'visible' : 'hidden',
                   }}
-                  onMouseEnter={this.handleMouseEnter}
-                  onMouseOut={this.handleMouseOut}
                 />
                 <FontAwesome
                   icon="scissors"
                   style={{
-                    visibility: unplugged ? 'visible' : 'hidden'
+                    visibility: unplugged ? 'visible' : 'hidden',
                   }}
-                  onMouseEnter={this.handleMouseEnter}
-                  onMouseOut={this.handleMouseOut}
                 />
               </div>
             )}
-            <div
-              style={styles.titleText}
-              onMouseEnter={this.handleMouseEnter}
-              onMouseOut={this.handleMouseOut}
-            >
-              {displayTitle}
-            </div>
+            <div style={styles.titleText}>{displayTitle}</div>
           </div>
         )}
         {smallChunk && (
@@ -126,46 +111,46 @@ const styles = {
     margin: 5,
     color: '#333',
     textDecorationLine: 'none',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   boxContent: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontFamily: '"Gotham 4r", sans-serif',
-    height: '100%'
+    ...fontConstants['main-font-regular'],
+    height: '100%',
   },
   assessment: {
-    border: '2px solid ' + color.purple
+    border: '2px solid ' + color.purple,
   },
   assessmentHover: {
     border: '2px solid ' + color.purple,
     backgroundColor: color.purple,
-    color: 'white'
+    color: 'white',
   },
   instructional: {
-    border: '2px solid ' + color.teal
+    border: '2px solid ' + color.teal,
   },
   instructionalHover: {
     border: '2px solid ' + color.teal,
     backgroundColor: color.teal,
-    color: color.white
+    color: color.white,
   },
   isNotStart: {
-    borderLeftStyle: 'dashed'
+    borderLeftStyle: 'dashed',
   },
   isStart: {
-    borderLeftStyle: 'solid'
+    borderLeftStyle: 'solid',
   },
   isNotEnd: {
-    borderRightStyle: 'dashed'
+    borderRightStyle: 'dashed',
   },
   isEnd: {
-    borderRightStyle: 'solid'
+    borderRightStyle: 'solid',
   },
   titleText: {
-    width: '100%'
+    width: '100%',
   },
   iconSection: {
     display: 'flex',
@@ -175,8 +160,8 @@ const styles = {
     paddingLeft: 2,
     paddingTop: 2,
     paddingBottom: 2,
-    boxSizing: 'border-box'
-  }
+    boxSizing: 'border-box',
+  },
 };
 
 export default UnitCalendarLessonChunk;

@@ -1,0 +1,36 @@
+name 'SP-PL - DataScience Overview-module'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Module Overview
+
+## What's included in this module?
+
+<img src="https://images.code.org/29853488a851de70a5c2e34c9e6f16aa-image-1707522795571.53.06 PM.png" style="float: right; height: 200px; clear: both; margin: 10px 10px 10px 10px; border-radius: 30px" alt="A young student in a library smiles while holding a laptop open to the camera.">
+
+#### This professional learning module is made up of **four lessons:**
+
+### 🏘️ **Lesson 1- Introduction to Teaching Data Science** - ⭐️ You're here!
+#### This lesson provides an introduction to the Data Science course and professional learning module. It offers a brief overview of key data science concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the course. *10 minutes*
+
+### 🖥️ **Lesson 2- Overview of Unit 1: Introduction to Data Science**
+#### This lesson focuses on building skills in data analysis and visualization using tools like CODAP. You will explore how to transform raw data into meaningful visualizations while addressing ethical considerations, such as data privacy and bias. *30 minutes*
+
+### 📊 **Unit 2: Data Science and Python**
+
+#### This unit is divided into two lessons. 
+
+#### **Lesson 3- Part 1: Introduction to Python, Pandas, and Matplotlib**
+#### Learn how to guide students through Python basics, data manipulation using Pandas, and creating visualizations with Matplotlib. This part builds foundational skills in programming and data analysis. *45 minutes*
+
+#### **Lesson 4- Part 2: Advanced Data Science Concepts**
+#### Delve into advanced topics such as cleaning data, analyzing datasets, and creating custom visualizations. Students will develop the skills to communicate insights effectively through a real-world, data-driven project. *35 minutes*
+
+
+
+## Engaging with This Module
+
+#### Feel free to complete as much or as little of this module as is useful for you and your students! Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. You'll be able to give Code.org your feedback on the last level of this module.
+
+MARKDOWN

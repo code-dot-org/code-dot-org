@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b74d6cd4f74425b776c6f644a790d39311120c4fc70ac2488baf60facebeebc2
-size 656
+// Match the functionality of pre-manifest.js-controlled Sprokets; ie, include
+// only the application.{css.js} files and images, but not the other files in
+// the javascripts and stylesheets directories.
+// See https://github.com/rails/sprockets/blob/main/UPGRADING.md#manifestjs
+//
+//= link application.css
+//= link application.js
+//= link_tree ../images
+
+//= link_tree ../../../public/blockly/js
+//= link_tree ../../../public/blockly/css .css
+//= link_directory ../stylesheets/levels .css
+//= link jquery.handsontable.full.css
+//= link emulate-print-media.js
+//= link jquery.handsontable.full.js
+//= link_directory ../../../public/blockly/video-js .css
+//= link font-awesome.css

@@ -22,3 +22,5 @@ public boolean mystery(int[] nums) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

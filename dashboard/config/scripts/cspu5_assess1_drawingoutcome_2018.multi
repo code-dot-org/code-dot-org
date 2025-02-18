@@ -29,3 +29,5 @@ Going through the code line by line:
 
 After lines 5-7 are repeated four times, a square is drawn with a small circle at each corner. Note that the dots drawn are a lot smaller than the length of the square.
 MARKDOWN
+
+allow_multiple_attempts true

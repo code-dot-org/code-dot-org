@@ -4,3 +4,5 @@ wrong '4', feedback: 'Incorrect. The bee collects 2 nectar in a loop moving forw
 right '8', feedback: 'Correct!'
 wrong '10', feedback: 'Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
 wrong '12', feedback: 'Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+
+allow_multiple_attempts false

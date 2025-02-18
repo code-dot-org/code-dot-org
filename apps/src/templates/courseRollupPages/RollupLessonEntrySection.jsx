@@ -1,20 +1,23 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import LessonStandards, {
+  ExpandMode,
+} from '@cdo/apps/templates/lessonOverview/LessonStandards';
+import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import LessonStandards, {
-  ExpandMode
-} from '@cdo/apps/templates/lessonOverview/LessonStandards';
+
 import StyledCodeBlock from '../lessonOverview/StyledCodeBlock';
+
 import {lessonShape} from './rollupShapes';
 
 export default class RollupLessonEntrySection extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    lesson: lessonShape
+    lesson: lessonShape,
   };
 
   render() {
@@ -127,18 +130,18 @@ const styles = {
   main: {
     width: '100%',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   object: {
     backgroundColor: color.lightest_gray,
     color: color.charcoal,
     border: 'solid 1px' + color.charcoal,
-    padding: '0px 10px'
+    padding: '0px 10px',
   },
   entries: {
     color: color.charcoal,
     border: 'solid 1px' + color.charcoal,
     padding: 10,
-    height: '100%'
-  }
+    height: '100%',
+  },
 };

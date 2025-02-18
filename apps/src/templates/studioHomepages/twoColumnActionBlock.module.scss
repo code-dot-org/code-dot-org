@@ -1,0 +1,51 @@
+@import 'color';
+
+$breakpoint: 993px;
+
+.container {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.actionBlockWrapper {
+  background: $light_gray_50;
+  border: 1px solid $light_gray_200;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+
+  @media screen and (max-width: $breakpoint) {
+    flex-wrap: wrap;
+  }
+
+  .image {
+    margin: 1.25rem;
+    width: calc(50% - 1.25rem);
+
+    @media (max-width: $breakpoint) {
+      display: none;
+    }
+  }
+
+  .contentWrapper {
+    width: 50%;
+    padding-block: 1.25rem 1.5rem;
+    padding-inline: 0 1.5rem;
+
+    @media screen and (max-width: $breakpoint) {
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+    }
+  }
+
+  .buttonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+
+    &VerticalButtons {
+      flex-direction: column;
+    }
+  }
+}

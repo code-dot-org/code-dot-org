@@ -319,9 +319,7 @@ class Foorm::FormTest < ActiveSupport::TestCase
     form.save
   end
 
-  private
-
-  def get_csv_string(expected_values)
+  private def get_csv_string(expected_values)
     CSV.generate do |csv|
       expected_values.each {|row| csv << row}
     end

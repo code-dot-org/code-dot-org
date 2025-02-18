@@ -1,0 +1,27 @@
+name 'CSA U7L4-L7_alt-2025'
+title 'Check for Understanding'
+
+wrong '`private int getUPC()`'
+wrong '`private void getUPC()`'
+right '`public int getUPC()`'
+wrong '`public void getUPC()`'
+wrong '`public void getUPC(int x)`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following class definition.
+
+```
+public class Barcode {
+  private int UPC;
+  // constructor not shown
+}
+```
+
+Which of the following is a correct header for a method of the `Barcode` class that would return the value of the `private` instance variable `UPC` so that it can be used in a class other than `Barcode`?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+To make the value of the `private` instance variable `UPC` accessible in a class other than `Barcode`, a `public` method that returns the value should be created. Option C, `public int getUPC()`, is a correct header for this method.
+MARKDOWN

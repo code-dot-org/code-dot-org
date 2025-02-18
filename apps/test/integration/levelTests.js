@@ -3,39 +3,45 @@
  * Tests collections are specified in .js files in the solutions directory.
  * To extract the xml for a test from a workspace, run the following code in
  * your console:
- * Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));
+ * Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
  */
 
 // todo - should we also have tests around which blocks to show as part of the
 // feedback when a user gets the puzzle wrong?
 
-import {assert} from '../util/reconfiguredChai';
-import sinon from 'sinon';
-import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 import jQuery from 'jquery';
-var tickWrapper = require('./util/tickWrapper');
-import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
-import runState from '@cdo/apps/redux/runState';
-import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import progress from '@cdo/apps/code-studio/progressRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
-import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
-import FirebaseStorage from '@cdo/apps/storage/firebaseStorage';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
-import loadSource from './util/loadSource';
+import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
+import progress from '@cdo/apps/code-studio/progressRedux';
 import projectRedux from '@cdo/apps/code-studio/projectRedux';
+import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
+import runState from '@cdo/apps/redux/runState';
+import {
+  isInitialized as isStorageInitialized,
+  storageBackend,
+} from '@cdo/apps/storage/storage';
+import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 
-var wrappedEventListener = require('./util/wrappedEventListener');
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import loadSource from './util/loadSource';
+import {setupBlocklyFrame} from './util/testBlockly';
+
+var testUtils = require('../util/testUtils');
+
 var testCollectionUtils = require('./util/testCollectionUtils');
+var tickWrapper = require('./util/tickWrapper');
+var wrappedEventListener = require('./util/wrappedEventListener');
 
 window.appOptions = {};
 window.jQuery = jQuery;
 window.$ = jQuery;
-
-var testUtils = require('../util/testUtils');
-import {setupBlocklyFrame} from './util/testBlockly';
 
 const defaultTimeout = 20000;
 
@@ -58,12 +64,12 @@ var example = {
       // this is passed to report
       expected: {
         result: true, // expected result value
-        testResult: 10 // expected testResult value
+        testResult: 10, // expected testResult value
       },
       // a function that returns a level definition on demand. this allows for
       // per test level definitions (dont need a collection levelId/levelDefinition
       // if taking this approach)
-      delayLoadLevelDefinition: function() {},
+      delayLoadLevelDefinition: function () {},
 
       // xml to be used for startBlocks. set to string 'startBlocks' if you want
       // to use the xml from the level itself
@@ -72,51 +78,51 @@ var example = {
       // "/v3/assets/". Set this to "/base/test/integration/assets/" and add
       // files to apps/test/assets if you need requests for assets to succeed.
       assetPathPrefix: '',
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         // optional function called at puzzle finish (i.e. when BlocklyApps.report
         // is called.
         return true; // test fails if it returns false
       },
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // optional function called after puzzle loads, but before execution
         // starts
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
 
-describe('Level tests', function() {
+describe('Level tests', function () {
   var originalRender;
   var clock, tickInterval;
 
   testUtils.setExternalGlobals();
 
-  before(function(done) {
+  before(function (done) {
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
     loadSource('/base/lib/ace/src-noconflict/ace.js')
-      .then(function() {
+      .then(function () {
         return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js');
       })
-      .then(function() {
+      .then(function () {
         return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js');
       })
-      .then(function() {
+      .then(function () {
         return loadSource('/base/lib/droplet/droplet-full.js');
       })
-      .then(function() {
+      .then(function () {
         return loadSource('/base/lib/tooltipster/jquery.tooltipster.js');
       })
-      .then(function() {
+      .then(function () {
         return loadSource('/base/lib/phaser/phaser.js');
       })
-      .then(function() {
+      .then(function () {
         assert(window.droplet, 'droplet in global namespace');
         done();
       });
   });
 
-  beforeEach(function() {
+  beforeEach(function () {
     // Recreate our redux store so that we have a fresh copy
     stubRedux();
     registerReducers({
@@ -127,10 +133,10 @@ describe('Level tests', function() {
       currentUser,
       arrowDisplay,
       project: projectRedux,
-      ...jsDebuggerReducers
+      ...jsDebuggerReducers,
     });
 
-    tickInterval = window.setInterval(function() {
+    tickInterval = window.setInterval(function () {
       if (clock) {
         clock.tick(100); // fake 100 ms for every real 1ms
       }
@@ -150,7 +156,7 @@ describe('Level tests', function() {
     // For some reason, svg rendering is taking a long time in phantomjs. None
     // of these tests depend on that rendering actually happening.
     originalRender = Blockly.BlockSvg.prototype.render;
-    Blockly.BlockSvg.prototype.render = function() {
+    Blockly.BlockSvg.prototype.render = function () {
       this.block_.rendered = true;
     };
 
@@ -161,7 +167,7 @@ describe('Level tests', function() {
       Object.defineProperty(Studio, 'Globals', {
         value: {},
         writable: true,
-        configurable: true
+        configurable: true,
       });
     }
 
@@ -177,7 +183,7 @@ describe('Level tests', function() {
 
   testCollectionUtils.getCollections().forEach(runTestCollection);
 
-  afterEach(function() {
+  afterEach(function () {
     // Main blockspace doesn't always exist (i.e. edit-code)
     if (Blockly.mainBlockSpace) {
       Blockly.mainBlockSpace.clear();
@@ -211,12 +217,9 @@ describe('Level tests', function() {
       window.Studio.interpreter = null;
     }
 
-    // Firebase is only used by Applab tests, but we don't have a reliable way
-    // to test for the app type here because window.Applab is always defined
-    // because loadApplab is always required (the same is true for other app
-    // types). Therefore, rely on FirebaseStorage to defensively reset itself.
-
-    FirebaseStorage.resetForTesting();
+    if (isStorageInitialized) {
+      storageBackend().resetForTesting();
+    }
 
     LegacyDialog.prototype.hide.restore();
     LegacyDialog.prototype.show.restore();
@@ -237,8 +240,8 @@ function runTestCollection(item) {
 
   var app = testCollection.app;
 
-  describe(path, function() {
-    testCollection.tests.forEach(function(testData, index) {
+  describe(path, function () {
+    testCollection.tests.forEach(function (testData, index) {
       var dataItem = require('./util/data')(app);
 
       // todo - maybe change the name of expected to make it clear what type of
@@ -246,7 +249,7 @@ function runTestCollection(item) {
       // and our getMissingBlocks tests (and likely also other things
       // in the future)
       if (testData.expected) {
-        it(testData.description, function(done) {
+        it(testData.description, function (done) {
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
             this.timeout(testData.timeout);

@@ -1,15 +1,18 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
+
 import color from '../util/color';
-import elementLibrary from './designElements/library';
-import DeleteElementButton from './designElements/DeleteElementButton';
-import ElementSelect from './ElementSelect';
-import DuplicateElementButton from './designElements/DuplicateElementButton';
+
 import CopyElementToScreenButton from './designElements/CopyElementToScreenButton';
+import DeleteElementButton from './designElements/DeleteElementButton';
+import DuplicateElementButton from './designElements/DuplicateElementButton';
+import elementLibrary from './designElements/library';
 import RestoreThemeDefaultsButton from './designElements/RestoreThemeDefaultsButton';
 import designMode from './designMode';
+import ElementSelect from './ElementSelect';
 
 let nextKey = 0;
 
@@ -25,7 +28,8 @@ export default class DesignProperties extends React.Component {
     onRestoreThemeDefaults: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
     onInsertEvent: PropTypes.func.isRequired,
-    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired
+    screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    isRtl: PropTypes.bool.isRequired,
   };
 
   state = {selectedTab: TabType.PROPERTIES};
@@ -93,7 +97,7 @@ export default class DesignProperties extends React.Component {
       borderStyle: 'solid',
       boxSizing: 'border-box',
       height: tabHeight,
-      padding: '0 10px'
+      padding: '0 10px',
     };
 
     /** @constant {Object} */
@@ -104,14 +108,14 @@ export default class DesignProperties extends React.Component {
         borderRightWidth: 1,
         borderBottomWidth: 0,
         borderLeftWidth: 0,
-        float: 'left'
+        float: 'left',
       }),
       inactiveTab: Object.assign({}, baseTabStyle, {
         borderTopWidth: 1,
         borderRightWidth: 1,
         borderBottomWidth: 1,
         borderLeftWidth: 0,
-        float: 'left'
+        float: 'left',
       }),
       // This tab should fill the remaining horizontal space.
       emptyTab: Object.assign({}, baseTabStyle, {
@@ -119,16 +123,16 @@ export default class DesignProperties extends React.Component {
         borderRightWidth: 0,
         borderBottomWidth: 1,
         borderLeftWidth: 0,
-        width: '100%'
+        width: '100%',
       }),
       workspaceDescription: {
         height: 28,
-        overflow: 'hidden'
+        overflow: 'hidden',
       },
       workspaceDescriptionText: {
         overflow: 'hidden',
         textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap'
+        whiteSpace: 'nowrap',
       },
       workspaceTabs: {
         borderColor: borderColor,
@@ -136,14 +140,14 @@ export default class DesignProperties extends React.Component {
         borderTopWidth: 0,
         borderRightWidth: 0,
         borderBottomWidth: 0,
-        borderLeftWidth: 1
+        borderLeftWidth: 1,
       },
       tabLabel: {
         lineHeight: tabHeight + 'px',
         WebkitUserSelect: 'none',
         MozUserSelect: 'none',
         msUserSelect: 'none',
-        userSelect: 'none'
+        userSelect: 'none',
       },
       workspaceBody: {
         height: 'calc(100% - 83px)',
@@ -154,17 +158,17 @@ export default class DesignProperties extends React.Component {
         borderRightWidth: 1,
         borderBottomWidth: 1,
         borderLeftWidth: 1,
-        backgroundColor: bgColor
+        backgroundColor: bgColor,
       },
       activeBody: {
         height: '100%',
-        overflowY: 'scroll'
+        overflowY: 'scroll',
       },
       inactiveBody: {
         display: 'none',
         height: '100%',
-        overflowY: 'scroll'
-      }
+        overflowY: 'scroll',
+      },
     };
 
     return (
@@ -188,7 +192,9 @@ export default class DesignProperties extends React.Component {
             className="hover-pointer"
             onClick={this.handleTabClick.bind(this, TabType.PROPERTIES)}
           >
-            <span style={styles.tabLabel}>PROPERTIES</span>
+            <span style={styles.tabLabel}>
+              {applabMsg.designWorkspace_propertiesTab()}
+            </span>
           </div>
           <div
             id="eventsTab"
@@ -200,7 +206,9 @@ export default class DesignProperties extends React.Component {
             className="hover-pointer"
             onClick={this.handleTabClick.bind(this, TabType.EVENTS)}
           >
-            <span style={styles.tabLabel}>EVENTS</span>
+            <span style={styles.tabLabel}>
+              {applabMsg.designWorkspace_eventsTab()}
+            </span>
           </div>
           <div id="emptyTab" style={styles.emptyTab}>
             <ElementSelect
@@ -223,7 +231,7 @@ export default class DesignProperties extends React.Component {
                seen to be two completely different tables. Otherwise the defaultValues
                in inputs don't update correctly. */}
             <div key={key}>
-              <div style={{float: 'right'}}>
+              <div style={{float: this.props.isRtl ? 'left' : 'right'}}>
                 {!isOnlyScreen && (
                   <DeleteElementButton
                     shouldConfirm={isScreen}
@@ -278,6 +286,6 @@ export default class DesignProperties extends React.Component {
  */
 const TabType = {
   PROPERTIES: 'properties',
-  EVENTS: 'events'
+  EVENTS: 'events',
 };
 DesignProperties.TabType = TabType;

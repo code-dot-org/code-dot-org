@@ -23,4 +23,20 @@ class InitialSectionCreationInterstitialHelperTest < ActiveSupport::TestCase
 
     assert InitialSectionCreationInterstitialHelper.show?(@teacher)
   end
+
+  test 'does not show the dialog if the teacher is an LTI user' do
+    @teacher = create :teacher, :with_lti_auth
+    @teacher.update(sign_in_count: 1)
+
+    refute InitialSectionCreationInterstitialHelper.show?(@teacher)
+  end
+
+  test 'does not show the dialog if gdpr dialog is showing' do
+    eu_country_code = 'FR'
+    eu_request = ActionDispatch::Request.new({'HTTP_CLOUDFRONT_VIEWER_COUNTRY' => eu_country_code.downcase})
+    @teacher = create :teacher
+    @teacher.update(sign_in_count: 1)
+
+    refute InitialSectionCreationInterstitialHelper.show?(@teacher, eu_request.gdpr?)
+  end
 end

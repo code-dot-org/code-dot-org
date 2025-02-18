@@ -1,8 +1,6 @@
 require 'net/http'
 require 'uri'
 
-SSL_HOSTNAME_MISMATCH_REGEX = /does not match the server certificate/
-
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
   def render_proxied_url(
@@ -36,7 +34,7 @@ module ProxyHelper
     end
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
-    path = (url.path.empty?) ? '/' : url.path
+    path = url.path.empty? ? '/' : url.path
     query = url.query || ''
 
     # Limit how long in seconds we're willing to wait.
@@ -79,8 +77,8 @@ module ProxyHelper
     end
   rescue URI::InvalidURIError
     render_error_response 400, "Invalid URI #{location}"
-  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH => e
-    render_error_response 400, "Network error #{e.class} #{e.message}"
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH => exception
+    render_error_response 400, "Network error #{exception.class} #{exception.message}"
   rescue OpenSSL::SSL::SSLError
     render_error_response 400, "Remote host SSL certificate error"
   rescue EOFError
@@ -110,7 +108,7 @@ module ProxyHelper
 
     http = Net::HTTP.new(url.host, url.port)
     http.use_ssl = url.scheme == 'https'
-    path = (url.path.empty?) ? '/' : url.path
+    path = url.path.empty? ? '/' : url.path
     query = url.query || ''
 
     # Limit how long in seconds we're willing to wait.
@@ -127,8 +125,8 @@ module ProxyHelper
     end
   rescue URI::InvalidURIError
     return 400, "Invalid URI #{location}"
-  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => e
-    return 400, "Network error #{e.class} #{e.message}"
+  rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET => exception
+    return 400, "Network error #{exception.class} #{exception.message}"
   end
 
   def dashboard_ip_address
@@ -136,11 +134,9 @@ module ProxyHelper
   end
   module_function :dashboard_ip_address
 
-  private
-
   # Returns true if the url's hostname ends in one of the allowed suffixes.
   # If allowed_hostname_suffixes is nil, all hostnames are allowed.
-  def allowed_hostname?(url, allowed_hostname_suffixes)
+  private def allowed_hostname?(url, allowed_hostname_suffixes)
     return true unless allowed_hostname_suffixes
     return false unless url.hostname
     hostname = url.hostname.downcase
@@ -151,24 +147,27 @@ module ProxyHelper
 
   # Renders an error response with the given HTTP status, setting headers to
   # ensure that the response will not be cached by clients or proxies.
-  def render_error_response(status, text)
+  private def render_error_response(status, text)
     prevent_caching
     render plain: text, status: status
   end
 
   # Do not permit proxying to a server on our own private network, unless it is our own dashboard IP Address (we
   # sometimes proxy to ourselves, which is an internal IP address on development / continuous integration environments).
-  def allowed_ip_address?(hostname)
+  private def allowed_ip_address?(hostname)
     host_ip_address = IPAddr.new(IPSocket.getaddress(hostname))
     public_ip_address?(host_ip_address) || host_ip_address == ProxyHelper.dashboard_ip_address
   end
 
-  def public_ip_address?(ip_address)
+  private def public_ip_address?(ip_address)
     return (
       !ip_address.link_local? &&
       !ip_address.loopback? &&
       !ip_address.private? &&
+      # IPAddr doesn't have an exclude? method
+      # rubocop:disable Rails/NegateInclude
       !IPAddr.new('0.0.0.0/8').include?(ip_address)
+      # rubocop:enable Rails/NegateInclude
     )
   end
 end

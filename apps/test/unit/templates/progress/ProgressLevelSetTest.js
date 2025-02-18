@@ -1,13 +1,13 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import {UnconnectedProgressLevelSet as ProgressLevelSet} from '@cdo/apps/templates/progress/ProgressLevelSet';
 import {
   fakeLevels,
-  fakeLevel
+  fakeLevel,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
-describe('ProgressLevelSet', function() {
+describe('ProgressLevelSet', function () {
   it('has a pill and no bubbles for a single level', () => {
     const wrapper = shallow(
       <ProgressLevelSet
@@ -17,9 +17,9 @@ describe('ProgressLevelSet', function() {
       />
     );
 
-    assert.equal(wrapper.find('Connect(ProgressPill)').length, 1);
-    assert.equal(wrapper.find('Connect(ProgressBubbleSet)').length, 0);
-    assert.equal(wrapper.find('Connect(ProgressPill)').props().text, '1');
+    expect(wrapper.find('Connect(ProgressPill)').length).toEqual(1);
+    expect(wrapper.find('Connect(ProgressBubbleSet)').length).toEqual(0);
+    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual('1');
   });
 
   it('has a pill and no link for a single level with an onBubbleClick prop', () => {
@@ -32,10 +32,10 @@ describe('ProgressLevelSet', function() {
       />
     );
 
-    assert.equal(wrapper.find('Connect(ProgressPill)').length, 1);
-    assert.equal(wrapper.find('Connect(ProgressBubbleSet)').length, 0);
-    assert.equal(wrapper.find('Connect(ProgressPill)').props().text, '1');
-    assert.isUndefined(wrapper.find('a').props().href);
+    expect(wrapper.find('Connect(ProgressPill)').length).toEqual(1);
+    expect(wrapper.find('Connect(ProgressBubbleSet)').length).toEqual(0);
+    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual('1');
+    expect(wrapper.find('a').props().href).not.toBeDefined();
   });
 
   it('has a pill and bubbles when we have multiple levels', () => {
@@ -47,9 +47,9 @@ describe('ProgressLevelSet', function() {
       />
     );
 
-    assert.equal(wrapper.find('Connect(ProgressPill)').length, 1);
-    assert.equal(wrapper.find('Connect(ProgressBubbleSet)').length, 1);
-    assert.equal(wrapper.find('Connect(ProgressPill)').props().text, '1-3');
+    expect(wrapper.find('Connect(ProgressPill)').length).toEqual(1);
+    expect(wrapper.find('Connect(ProgressBubbleSet)').length).toEqual(1);
+    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual('1-3');
   });
 
   it('renders a pill with no text when first level is unplugged', () => {
@@ -62,7 +62,7 @@ describe('ProgressLevelSet', function() {
         disabled={false}
       />
     );
-    assert.equal(wrapper.find('Connect(ProgressPill)').props().text, '');
+    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual('');
   });
 
   it('renders a pill with no text when last level is unplugged', () => {
@@ -75,7 +75,7 @@ describe('ProgressLevelSet', function() {
         disabled={false}
       />
     );
-    assert.equal(wrapper.find('Connect(ProgressPill)').props().text, '');
+    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual('');
   });
 
   it('renders a pill with unplugged text when only level is unplugged', () => {
@@ -84,13 +84,12 @@ describe('ProgressLevelSet', function() {
         name={undefined}
         levels={[fakeLevel({isUnplugged: true})].map(level => ({
           ...level,
-          name: undefined
+          name: undefined,
         }))}
         disabled={false}
       />
     );
-    assert.equal(
-      wrapper.find('Connect(ProgressPill)').props().text,
+    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual(
       'Unplugged Activity'
     );
   });

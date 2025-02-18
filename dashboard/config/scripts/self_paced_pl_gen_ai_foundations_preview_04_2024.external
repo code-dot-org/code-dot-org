@@ -1,0 +1,70 @@
+name 'self-paced-pl-gen-ai-foundations-preview-04_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Neural Networks
+
+## Lesson Highlight: Neural Networks Activity
+
+<img src="https://images.code.org/1d9eec2b4cd7ddb50ccb82d71d2223ec-96bdfbaafb6aedb4c412eb366a21876d-Slide22.PNG" alt="system prompt with role, goal, tone, and restriction" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
+
+#### During **Lesson 6: Neural Networks**, students help a computer design meals for an elementary school cafeteria.
+
+#### Students represent food choices with a network. On the left side, we have our inputs - in this case, avocados, ice cream, raisins, and peanuts. On the right side, we have our output states: accept or reject.
+
+#### Students then add in a **hidden layer** to their neural networks to represent different relationships and decisions such as food combinations such as avocado and ice cream.
+
+#### The final component of the neural network is **weights**. When the network combines the weights at the end, it can look at the total weight and use that to make a final decision as to whether or not to accept or reject a set of inputs. For example, we can add lower weights to the “just avocados” and “just ice-cream” connections, and a higher weight to the “both” connection.
+
+#### Since the hidden layers are “activated” by previous layers, it can feel similar to how our brains work and how some neurons can activate other neurons to create chain-reactions and complex thoughts. 
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; clear: both;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Students will be drawing their own neural network and iterating on the design. This means students will be doing some trial and error, which will involve lots of erasing. If your classroom has them available, consider using whiteboards for this activity instead of the activity guide so students can quickly and easily erase their work as the lesson progresses.
+</p>
+</div>
+
+
+## Lesson Previews
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 6: Understanding Neural Networks</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/7e9e9ff029f9565eab47c16df53bf09a-9175c2239629ca34f7ab994bfe50d5e5-Slide13.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How do neural networks make decisions?
+
+#### **Lesson Overview:**
+
+#### This lesson introduces neural networks through a hands-on activity where students create a lunch recommender for a school cafeteria. It starts with an exercise involving two mad-libs that use the same words in different orders, highlighting how word relations and grammar influence word choice. Students then work together to build a neural network model for the cafeteria's lunch choices, learning about key concepts like hidden layers and weights. The lesson concludes by tying these ideas back to language, prompting students to think about how words can change meaning in different contexts or phrases.
+
+#### **Students will be able to:**
+* #### Construct a neural network to represent a situation and make decisions based on inputs
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/6" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 7: Neural Networks: How They're Trained</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/a90293f9e7829237a6227a4f6d27b98e-fe2e2e60300e167e2250dccd19095212-Slide20.PNG" alt="system prompt with role, goal, tone, and restriction" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How are neural networks trained to represent relationships between words?
+
+#### **Lesson Overview:**
+
+#### This lesson explores supervised learning and its role in teaching neural networks language structure. Starting with a game, students learn through trial and error and use their past outcomes to inform future decisions. They then extend this approach to engaging in conversations in a fictional language, initially facing more failures but gradually improving as they identify patterns. This process illustrates how neural networks adjust their behavior based on new data. The lesson concludes with a reflection on whether this process signifies true "intelligence" or merely a sophisticated rule-following system.
+
+#### **Students will be able to:**
+* #### Use trial-and-error and past data to increase their accuracy in a supervised learning process
+
+### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/7" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
+</p></div>
+</details>
+
+
+MARKDOWN

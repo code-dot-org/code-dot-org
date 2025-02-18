@@ -1,5 +1,7 @@
+require 'cdo/sequel'
+
 class AddMultiAuthViewToReportingDb < ActiveRecord::Migration[5.0]
-  DASHBOARD_REPORTING_DB_WRITER = sequel_connect(CDO.dashboard_reporting_db_writer, CDO.dashboard_reporting_db_reader)
+  DASHBOARD_REPORTING_DB_WRITER = Cdo::Sequel.database_connection_pool(CDO.dashboard_reporting_db_writer, CDO.dashboard_reporting_db_reader)
   def up
     # Unfortunately, it looks like there's no good way to do this without manually selecting *all* the
     # fields from the users table, fiddling the ones we want to change

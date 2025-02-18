@@ -1,6 +1,6 @@
 name 'CSA U4L10-L7_2023'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Practice: Multi-Selection with The Theater'
+description 'Use multi-selection statements to create interesting visuals and animations using The Theater.'
 
 sublevels
 level 'CSA U4L10-L7a_2023'

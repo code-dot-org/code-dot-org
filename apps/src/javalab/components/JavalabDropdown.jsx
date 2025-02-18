@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
 import style from './javalab-dropdown.module.scss';
 
 /**
@@ -24,7 +25,7 @@ export default class JavalabDropdown extends Component {
         }
       });
     },
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   // filter removes null elements

@@ -1,34 +1,36 @@
-import React from 'react';
-import {UnconnectedCreateStandardsReportDialog as CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import {action} from '@storybook/addon-actions';
-import {createStore, combineReducers} from 'redux';
+import React from 'react';
 import {Provider} from 'react-redux';
-import sectionStandardsProgress from './sectionStandardsProgressRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import {createStore, combineReducers} from 'redux';
 
-export default storybook => {
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+
+import {UnconnectedCreateStandardsReportDialog as CreateStandardsReportDialog} from './CreateStandardsReportDialog';
+import sectionStandardsProgress from './sectionStandardsProgressRedux';
+
+export default {
+  component: CreateStandardsReportDialog,
+};
+
+export const Overview = () => {
   const store = createStore(
     combineReducers({
       sectionStandardsProgress,
       sectionProgress,
-      unitSelection
+      unitSelection,
     })
   );
 
-  return storybook
-    .storiesOf('Standards/CreateStandardsReportDialog', module)
-    .add('overview', () => {
-      return (
-        <Provider store={store}>
-          <CreateStandardsReportDialog
-            isOpen
-            handleConfirm={action('Confirm')}
-            handleClose={action('Close')}
-            handleNext={action('Next')}
-            onCommentChange={action('Comment')}
-          />
-        </Provider>
-      );
-    });
+  return (
+    <Provider store={store}>
+      <CreateStandardsReportDialog
+        isOpen
+        handleConfirm={action('Confirm')}
+        handleClose={action('Close')}
+        handleNext={action('Next')}
+        onCommentChange={action('Comment')}
+      />
+    </Provider>
+  );
 };

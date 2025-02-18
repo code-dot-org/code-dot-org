@@ -74,7 +74,8 @@ ${CHEF_CLIENT} -v
 
 # Replace root certificates in the installation of OpenSSL embedded in Chef client with a newer list from our repository
 # that we periodically obtain and commit to our repository from https://curl.se/docs/caextract.html
-curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/${BRANCH}/cookbooks/cacert.pem
+# TODO: change this to not pull from GitHub. Commenting out for now. Expected to become outdated in the near future.
+# curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/${BRANCH}/cookbooks/cacert.pem
 
 mkdir -p /etc/chef
 CLIENT_RB=/etc/chef/client.rb
@@ -88,7 +89,9 @@ if '${LOCAL_MODE}' == '1'
   local_mode true
 else
   validation_client_name   'code-dot-org-validator'
-  chef_server_url          'https://api.chef.io/organizations/code-dot-org'
+  chef_server_url          'https://code-org.saas.chef.io/organizations/code-dot-org'
+  chef_license             'accept'
+  validation_key           '/etc/chef/validation.pem'
 end
 RUBY
 

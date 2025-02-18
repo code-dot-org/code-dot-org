@@ -1,9 +1,10 @@
 /** Pagination controls */
-import React, {Component} from 'react';
+import {Pagination} from '@react-bootstrap/pagination';
 import PropTypes from 'prop-types';
 import Radium, {Style} from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
+
 import color from '../util/color';
-import {Pagination} from '@react-bootstrap/pagination';
 
 /**
  * Pagination control for navigating between pages of a list.
@@ -13,7 +14,7 @@ class PaginationWrapper extends Component {
     totalPages: PropTypes.number.isRequired,
     currentPage: PropTypes.number.isRequired,
     onChangePage: PropTypes.func.isRequired,
-    label: PropTypes.string
+    label: PropTypes.string,
   };
 
   render() {
@@ -27,20 +28,20 @@ class PaginationWrapper extends Component {
             padding: 0,
             margin: 0,
             li: {
-              display: 'inline'
+              display: 'inline',
             },
             a: {
               float: 'left',
               paddingLeft: 12,
               textDecoration: 'none',
-              color: color.cyan
+              color: color.cyan,
             },
             '.active a': {
-              color: color.default_text
+              color: color.default_text,
             },
             'a:hover': {
-              color: color.default_text
-            }
+              color: color.default_text,
+            },
           }}
         />
         {this.props.label && (
@@ -60,8 +61,8 @@ class PaginationWrapper extends Component {
 
 const styles = {
   label: {
-    float: 'left'
-  }
+    float: 'left',
+  },
 };
 
 export default Radium(PaginationWrapper);

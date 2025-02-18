@@ -1,7 +1,6 @@
-import React from 'react';
-import {expect} from 'chai';
-import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
+import React from 'react';
+
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 
 describe('TeacherApplication', () => {
@@ -9,7 +8,6 @@ describe('TeacherApplication', () => {
     apiEndpoint: '/path/to/endpoint',
     options: {},
     accountEmail: 'user@email.com',
-    userId: 1
   };
 
   describe('getInitialData', () => {
@@ -27,54 +25,55 @@ describe('TeacherApplication', () => {
     it('has no initial data if there is nothing in session storage, no school id, and no form data', () => {
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal({});
+      ).toEqual({});
     });
     it('has saved form data if nothing in session storage and no school id', () => {
       teacherApplication.mergeProps({savedFormData});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal(parsedData);
+      ).toEqual(parsedData);
     });
     it('has saved form data and school id if nothing in session storage', () => {
       teacherApplication.mergeProps({savedFormData, schoolId});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal({
+      ).toEqual({
         ...parsedData,
-        school: schoolId
+        school: schoolId,
       });
     });
     it('overwrites existing school id if the saved form data has school id', () => {
       teacherApplication.mergeProps({
         savedFormData: `{"school": "16"}`,
-        schoolId
+        schoolId,
       });
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal({school: '16'});
+      ).toEqual({school: '16'});
     });
     it('has only saved form data and no school id if session storage has school info', () => {
-      sinon
-        .stub(window.sessionStorage, 'getItem')
-        .withArgs('TeacherApplication')
-        .returns(JSON.stringify({data: {school: '25'}}));
+      sessionStorage.setItem(
+        'TeacherApplication',
+        JSON.stringify({data: {school: '25'}})
+      );
+
       teacherApplication.mergeProps({savedFormData, schoolId});
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal(parsedData);
-      window.sessionStorage.getItem.restore();
+      ).toEqual(parsedData);
+      sessionStorage.removeItem('TeacherApplication');
     });
     it('includes saved form data even if partial saving is not allowed', () => {
       teacherApplication.mergeProps({
         savedFormData,
         schoolId,
-        allowPartialSaving: false
+        allowPartialSaving: false,
       });
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
-      ).to.deep.equal({
+      ).toEqual({
         ...parsedData,
-        school: schoolId
+        school: schoolId,
       });
     });
   });

@@ -4,7 +4,7 @@
   "category": "Sprites",
   "category_key": "sprites",
   "block_name": "gamelab_setAnimation",
-  "content": "Changes the costume of a sprite or group of sprites.\r\n\r\nThis block can make a sprite look different without changing its location or properties. ",
+  "content": "Changes the costume of a sprite or group of sprites.\n\nThis block can make a sprite look different without changing its location or properties. ",
   "examples": [
     {
       "name": "Example 1",
@@ -12,7 +12,7 @@
       "app": "https://studio.code.org/projects/spritelab/Vy5_BjpcgKP221KLELwqS1Djv1AhpCvKH9Eq20m8JR4",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 463
+      "embed_app_with_code_height": "400"
     },
     {
       "name": "Example 2",
@@ -20,7 +20,7 @@
       "app": "https://studio.code.org/projects/spritelab/ohjuE1RU581tK0JXi7zgUu3f6wOONUXVbRdBFeM8gTw",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 555
+      "embed_app_with_code_height": "400"
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/changecostume.PNG",

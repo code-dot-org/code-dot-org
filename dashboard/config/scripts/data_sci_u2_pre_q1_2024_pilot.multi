@@ -1,0 +1,9 @@
+name 'Data Sci U2 Pre Q1_2024-pilot'
+
+
+question 'Which of the following best describes the characteristics of a strong research question?'
+wrong 'It is broad, open-ended, and lacks specificity, making it adaptable to various interpretations.'
+right 'It is specific, clear, and measurable, providing a focused direction for research and enabling precise data collection and analysis.'
+wrong 'It combines general topics without going into specifics, thus allowing for flexibility in research design.'
+wrong 'It can be answered with a simple yes or no, making it straightforward and easy to address.'
+allow_multiple_attempts false

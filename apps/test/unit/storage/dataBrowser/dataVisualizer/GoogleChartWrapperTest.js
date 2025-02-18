@@ -1,9 +1,8 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
-import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
+
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
+import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import GoogleChartWrapper from '@cdo/apps/storage/dataBrowser/dataVisualizer/GoogleChartWrapper';
 
 describe('GoogleChartWrapper', () => {
@@ -11,10 +10,13 @@ describe('GoogleChartWrapper', () => {
     let spy;
     beforeEach(() => {
       GoogleChart.lib = {};
-      spy = sinon.stub(GoogleChart.prototype, 'drawChart');
+      spy = jest
+        .spyOn(GoogleChart.prototype, 'drawChart')
+        .mockClear()
+        .mockImplementation();
     });
     afterEach(() => {
-      spy.restore();
+      spy.mockRestore();
     });
 
     it('can show a bar chart', () => {
@@ -24,7 +26,7 @@ describe('GoogleChartWrapper', () => {
             {category1: 'red', category2: 1, category3: 10},
             {category1: 'blue', category2: 1, category3: 20},
             {category1: 'red', category2: 3, category3: 10},
-            {category1: 'green', category2: 4, category3: 10}
+            {category1: 'green', category2: 4, category3: 10},
           ]}
           numericColumns={['category2', 'category3']}
           chartType={ChartType.BAR_CHART}
@@ -36,26 +38,26 @@ describe('GoogleChartWrapper', () => {
       const expectedChartData = [
         {category1: 'blue', count: 1},
         {category1: 'green', count: 1},
-        {category1: 'red', count: 2}
+        {category1: 'red', count: 2},
       ];
       const expectedChartOptions = {
         title: 'Title',
         legend: {position: 'none'},
         hAxis: {
           title: 'category1',
-          format: '#.#'
+          format: '#.#',
         },
         vAxis: {
           title: 'Count',
-          format: '#.#'
-        }
+          format: '#.#',
+        },
       };
 
-      expect(spy).to.have.been.calledOnce;
-      expect(spy.getCalls()[0].args).to.deep.equal([
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(spy.mock.calls[0]).toEqual([
         expectedChartData,
         ['category1', 'count'],
-        expectedChartOptions
+        expectedChartOptions,
       ]);
     });
 
@@ -64,7 +66,7 @@ describe('GoogleChartWrapper', () => {
         {category1: 'red', category2: 1, category3: 10},
         {category1: 'blue', category2: 1, category3: 20},
         {category1: 'red', category2: 3, category3: 10},
-        {category1: 'green', category2: 4, category3: 10}
+        {category1: 'green', category2: 4, category3: 10},
       ];
       const expectedChartOptions = {
         title: 'Title',
@@ -72,13 +74,13 @@ describe('GoogleChartWrapper', () => {
         hAxis: {
           title: 'category2',
           format: '#.#',
-          titleTextStyle: {italic: false}
+          titleTextStyle: {italic: false},
         },
         vAxis: {
           title: 'Count',
           format: '#.#',
-          titleTextStyle: {italic: false}
-        }
+          titleTextStyle: {italic: false},
+        },
       };
 
       mount(
@@ -92,11 +94,11 @@ describe('GoogleChartWrapper', () => {
         />
       );
 
-      expect(spy).to.have.been.calledOnce;
-      expect(spy.getCalls()[0].args).to.deep.equal([
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(spy.mock.calls[0]).toEqual([
         expectedChartData,
         ['category2'],
-        {...expectedChartOptions, histogram: {bucketSize: '2'}}
+        {...expectedChartOptions, histogram: {bucketSize: '2'}},
       ]);
     });
 
@@ -105,19 +107,19 @@ describe('GoogleChartWrapper', () => {
         {category1: 'red', category2: 1, category3: 10},
         {category1: 'blue', category2: 1, category3: 20},
         {category1: 'red', category2: 3, category3: 10},
-        {category1: 'green', category2: 4, category3: 10}
+        {category1: 'green', category2: 4, category3: 10},
       ];
       const expectedChartOptions = {
         title: 'Title',
         legend: {position: 'none'},
         hAxis: {
           title: 'category2',
-          format: '#.#'
+          format: '#.#',
         },
         vAxis: {
           title: 'category3',
-          format: '#.#'
-        }
+          format: '#.#',
+        },
       };
 
       mount(
@@ -130,11 +132,11 @@ describe('GoogleChartWrapper', () => {
           chartTitle="Title"
         />
       );
-      expect(spy).to.have.been.calledOnce;
-      expect(spy.getCalls()[0].args).to.deep.equal([
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(spy.mock.calls[0]).toEqual([
         expectedChartData,
         ['category2', 'category3'],
-        expectedChartOptions
+        expectedChartOptions,
       ]);
     });
   });

@@ -9,7 +9,7 @@ class Slack
     green: 'good',
     yellow: 'warning',
     red: 'danger',
-    purple: '#7665a0'
+    purple: '#8c52ba'
   }.freeze
 
   CHANNEL_MAP = {
@@ -31,6 +31,10 @@ class Slack
     'infra-honeybadger' => 'C55JZ1BPZ',
     'levelbuilder' => 'C0T10H2HY',
     'server-operations' => 'C0CCSS3PX'
+  }.freeze
+
+  USER_GROUP_ID_MAP = {
+    'teacher-tools-on-call': 'S07FB3XSAR5'
   }.freeze
 
   SLACK_TOKEN = CDO.methods.include?(:slack_token) ? CDO.slack_token.freeze : nil
@@ -59,7 +63,7 @@ class Slack
 
   # @param channel_name [String] The channel to fetch the topic.
   # @return [String | nil] The existing topic, nil if not found.
-  def self.get_topic(channel_name, use_channel_map = false)
+  def self.get_topic(channel_name, use_channel_map: false)
     if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
       channel_name = CHANNEL_MAP[channel_name]
     end
@@ -77,7 +81,7 @@ class Slack
   # @param use_channel_map [Boolean] Whether to look up channel_name in
   #   CHANNEL_MAP.
   # @return [Boolean] Whether the topic was successfully updated.
-  def self.update_topic(channel_name, new_topic, use_channel_map = false)
+  def self.update_topic(channel_name, new_topic, use_channel_map: false)
     if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
       channel_name = CHANNEL_MAP[channel_name]
     end
@@ -118,9 +122,9 @@ class Slack
   # @return [Boolean] Whether the text was posted to Slack successfully.
   # WARNING: This function mutates params.
   # NOTE: This function utilizes an incoming webhook, not the Slack token
-  def self.message(text, params={})
+  def self.message(text, params = {})
     return false unless CDO.slack_endpoint
-    params[:channel] = "\##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
+    params[:channel] = "##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
     slackified_text = slackify text
 
     payload =
@@ -163,21 +167,18 @@ class Slack
     return !!result
   end
 
-  # @param room [String] Channel name or id to post the snippet.
-  # @param text [String] Snippet text.
-  def self.snippet(room, text)
-    # omit leading '#' when passing channel names to this API
-    channel = CHANNEL_MAP[room] || room
-    result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.encode_www_form_component(text)}")
-    return !!result
-  end
-
   # @param name [String] Name of the Slack channel to join.
   def self.join_room(name)
     channel = get_channel_id(name)
     return false unless channel
     result = post_to_slack("https://slack.com/api/conversations.join", {"channel" => channel})
     return !!result
+  end
+
+  # @param message [String] the message to update to tag the user_group
+  # @param user_group [String] slack user group to be tagged for notification
+  def self.tag_user_group(message, user_group)
+    "<!subteam^#{USER_GROUP_ID_MAP[user_group&.to_sym]}> #{message}"
   end
 
   # Returns the channel ID for the channel with the requested channel_name.
@@ -254,10 +255,10 @@ class Slack
         Honeybadger.notify_cronjob_error opts
         response = false
       end
-    rescue Exception => error
+    rescue Exception => exception
       opts = {
         error_class: "Slack integration [error]",
-        error_message: error,
+        error_message: exception,
         context: {url: url, payload: payload}
       }
       Honeybadger.notify_cronjob_error opts

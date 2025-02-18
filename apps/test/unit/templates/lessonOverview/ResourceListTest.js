@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
-import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ResourceList', () => {
   it('displays resources in bulleted list', () => {
@@ -16,15 +18,15 @@ describe('ResourceList', () => {
             name: 'Student Resource',
             url: 'fake.url',
             download_url: 'download.fake.url',
-            type: 'Activity Guide'
+            type: 'Activity Guide',
           },
           {
             key: 'all-resource',
             name: 'All Resource',
             url: 'fake.url',
             download_url: 'download.fake.url',
-            type: 'Activity Guide'
-          }
+            type: 'Activity Guide',
+          },
         ]}
         pageType="teacher-lesson-plan"
       />
@@ -41,18 +43,13 @@ describe('ResourceList', () => {
             name: 'Student Resource',
             url: 'fake.url',
             download_url: 'download.fake.url',
-            type: 'Activity Guide'
-          }
+            type: 'Activity Guide',
+          },
         ]}
         pageType="teacher-lesson-plan"
       />
     );
-    expect(
-      wrapper
-        .find('li')
-        .at(0)
-        .contains('Download')
-    ).to.true;
+    expect(wrapper.find('li').at(0).contains('Download')).to.true;
   });
 
   it('displays resource without download link', () => {
@@ -63,18 +60,13 @@ describe('ResourceList', () => {
             key: 'student-resource',
             name: 'Student Resource',
             url: 'fake.url',
-            type: 'Activity Guide'
-          }
+            type: 'Activity Guide',
+          },
         ]}
         pageType="teacher-lesson-plan"
       />
     );
-    expect(
-      wrapper
-        .find('li')
-        .at(0)
-        .contains('Download')
-    ).to.false;
+    expect(wrapper.find('li').at(0).contains('Download')).to.false;
   });
 
   it('sends amplitude event when resource is clicked', () => {
@@ -87,8 +79,8 @@ describe('ResourceList', () => {
             name: 'Student Resource',
             url: 'https://docs.google.com/document/d/fake/url',
             download_url: 'download.fake.url',
-            type: 'Activity Guide'
-          }
+            type: 'Activity Guide',
+          },
         ]}
         pageType="teacher-lesson-plan"
       />

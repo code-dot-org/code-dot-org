@@ -1,0 +1,174 @@
+@import 'color.scss';
+@import 'font.scss';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
+
+$message-border-radius: 8px;
+$user-color: $light_gray_100;
+$assistant-color: $brand_primary_light;
+$bot-container-size: 32px;
+$icon-message-gap: 8px;
+$icon-overlay-padding-right: 8px;
+
+%message {
+  @extend %markdown-styles;
+  display: flex;
+  padding: 12px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  border-start-start-radius: $message-border-radius;
+  border-start-end-radius: $message-border-radius;
+}
+
+%markdown-styles {
+  h1 {
+    @include heading-xxl;
+  }
+  h2 {
+    @include heading-xl;
+  }
+  h3 {
+    @include heading-lg;
+  }
+  h4 {
+    @include heading-md;
+  }
+  h5 {
+    @include heading-sm;
+  }
+  h6 {
+    @include heading-xs;
+  }
+
+  ul,
+  ol,
+  li {
+    font-size: 0.875rem;
+  }
+
+  p {
+    @include body-three;
+    margin: 0;
+  }
+}
+
+.messageWithChildren {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.message-user {
+  @extend %message;
+  background-color: $user_color;
+  border-end-start-radius: $message-border-radius;
+  border-end-end-radius: 0;
+}
+
+.message-assistant {
+  @extend %message;
+  background-color: $assistant-color;
+  border-end-start-radius: 0;
+  border-end-end-radius: $message-border-radius;
+  overflow-x: auto;
+}
+
+%message-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.message-container-assistant {
+  @extend %message-container;
+  justify-content: flex-start;
+}
+
+.message-container-user {
+  @extend %message-container;
+  justify-content: flex-end;
+}
+
+%container {
+  display: flex;
+  flex-direction: row;
+  gap: $icon-message-gap;
+}
+
+.container-assistant {
+  @extend %container;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.container-user {
+  @extend %container;
+  justify-content: flex-end;
+}
+
+.botIconContainer {
+  flex: 0 0 $bot-container-size;
+  height: $bot-container-size;
+  width: $bot-container-size;
+  background: $light-black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.botIconContainerWithOverlay {
+  position: relative;
+  display: flex;
+  padding-right: $icon-overlay-padding-right;
+  padding-top: 3px;
+}
+
+.footer {
+  margin-left: $bot-container-size + $icon-message-gap;
+}
+
+.footerWithOverlay {
+  margin-left: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;
+}
+
+.botIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.botOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 2px 3px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 58px;
+  background: $ai_rubric_cyan;
+  border-width: 1px;
+  border-color: $background_gray;
+  border-style: solid;
+
+  span {
+    @include main-font-medium;
+    color: $light-black;
+    font-size: 8px;
+    font-style: normal;
+    line-height: 100%;
+    text-transform: uppercase;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.danger {
+  background-color: $light_negative_100;
+}
+
+.warning {
+  background-color: $light_caution_100;
+}

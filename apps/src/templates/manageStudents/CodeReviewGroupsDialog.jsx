@@ -1,13 +1,16 @@
-import React, {useState, useEffect, useCallback} from 'react';
 import PropTypes from 'prop-types';
-import Button from '@cdo/apps/templates/Button';
+import React, {useState, useEffect, useCallback} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
+import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import {addDroppableIdToGroups} from '../codeReviewGroups/CodeReviewGroupsUtils';
+
 import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
-import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
+import {addDroppableIdToGroups} from '../codeReviewGroups/CodeReviewGroupsUtils';
 
 // Width taken from UI mocks (meant to fit in a minimum screen width of 1024px with some extra space)
 const DIALOG_WIDTH = 934;
@@ -16,18 +19,18 @@ const SUBMIT_STATES = {
   DEFAULT: 'default',
   SUBMITTING: 'submitting',
   SUCCESS: 'success',
-  ERROR: 'error'
+  ERROR: 'error',
 };
 
 const LOADING_STATES = {
   LOADING: 'loading',
   LOADED: 'loaded',
-  ERROR: 'error'
+  ERROR: 'error',
 };
 
 export default function CodeReviewGroupsDialog({
   buttonContainerStyle,
-  dataApi
+  dataApi,
 }) {
   const [groups, setGroups] = useState([]);
   const [groupsHaveChanged, setGroupsHaveChanged] = useState(false);
@@ -72,7 +75,10 @@ export default function CodeReviewGroupsDialog({
     switch (submitStatus) {
       case SUBMIT_STATES.SUCCESS:
         return (
-          <span style={styles.successMessageContainer}>
+          <span
+            style={styles.successMessageContainer}
+            id="uitest-code-review-groups-save-confirm"
+          >
             <i className={'fa fa-check fa-lg'} style={styles.checkIcon} />
             {i18n.codeReviewGroupsSaveSuccess()}
           </span>
@@ -113,6 +119,7 @@ export default function CodeReviewGroupsDialog({
         setLoadingStatus(LOADING_STATES.LOADED);
       })
       .fail(() => setLoadingStatus(LOADING_STATES.ERROR));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submitNewGroups = () => {
@@ -158,26 +165,26 @@ export default function CodeReviewGroupsDialog({
 
 CodeReviewGroupsDialog.propTypes = {
   dataApi: PropTypes.object.isRequired,
-  buttonContainerStyle: PropTypes.object
+  buttonContainerStyle: PropTypes.object,
 };
 
 const styles = {
   buttonContainer: {
-    marginLeft: 5
+    marginLeft: 5,
   },
   checkIcon: {
-    padding: 5
+    padding: 5,
   },
   successMessageContainer: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.level_perfect
+    ...fontConstants['main-font-semi-bold'],
+    color: color.level_perfect,
   },
   errorMessageContainer: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red
+    ...fontConstants['main-font-semi-bold'],
+    color: color.red,
   },
   button: {
     boxShadow: 'inset 0 2px 0 0 rgba(255, 255, 255, 0.8)',
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 };

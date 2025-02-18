@@ -1,5 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 /**
@@ -12,7 +13,7 @@ export default function CraftDialog({
   handleClose,
   id,
   className,
-  children
+  children,
 }) {
   return (
     <BaseDialog
@@ -31,9 +32,9 @@ CraftDialog.propTypes = {
   handleClose: PropTypes.func.isRequired,
   id: PropTypes.string,
   className: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 CraftDialog.defaultProps = {
-  className: 'minecraft dash_modal craft-popup'
+  className: 'minecraft dash_modal craft-popup',
 };

@@ -1,8 +1,15 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import {showFrozenProjectInfoDialog} from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
+
 import {tableLayoutStyles} from '../tables/tableConstants';
+
 import {updateProjectName} from './projectsRedux';
+
+import moduleStyles from './personal-projects-name-cell.module.scss';
 
 class PersonalProjectsNameCell extends Component {
   static propTypes = {
@@ -11,11 +18,17 @@ class PersonalProjectsNameCell extends Component {
     projectName: PropTypes.string.isRequired,
     isEditing: PropTypes.bool,
     updatedName: PropTypes.string,
-    updateProjectName: PropTypes.func.isRequired
+    updateProjectName: PropTypes.func.isRequired,
+    isFrozen: PropTypes.bool,
+    showFrozenProjectInfoDialog: PropTypes.func,
   };
 
   onChangeName = e => {
     this.props.updateProjectName(this.props.projectId, e.target.value);
+  };
+
+  showFrozenProjectInfo = () => {
+    this.props.showFrozenProjectInfoDialog();
   };
 
   render() {
@@ -24,31 +37,49 @@ class PersonalProjectsNameCell extends Component {
       projectType,
       projectName,
       updatedName,
-      isEditing
+      isEditing,
+      isFrozen,
     } = this.props;
     const url = `/projects/${projectType}/${projectId}/edit`;
 
     return (
       <div>
         {!isEditing && (
-          <a
-            style={tableLayoutStyles.link}
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ui-projects-table-project-name"
-          >
-            {projectName}
-          </a>
+          <div>
+            <a
+              style={tableLayoutStyles.link}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ui-projects-table-project-name"
+            >
+              {projectName}
+            </a>
+            {isFrozen && (
+              <button
+                type="button"
+                className={moduleStyles.infoButton}
+                onClick={this.showFrozenProjectInfo}
+              >
+                <FontAwesomeV6Icon
+                  iconName="circle-exclamation"
+                  iconStyle="solid"
+                  title="project-info-icon"
+                  className={moduleStyles.infoIcon}
+                />
+              </button>
+            )}
+          </div>
         )}
         {isEditing && (
           <div>
             <input
               required
-              style={styles.inputBox}
+              className={moduleStyles.inputBox}
               value={updatedName}
               onChange={this.onChangeName}
-              className="ui-project-rename-input"
+              name="ui-project-rename-input"
+              id="ui-project-rename-input"
             />
           </div>
         )}
@@ -57,17 +88,14 @@ class PersonalProjectsNameCell extends Component {
   }
 }
 
-const styles = {
-  inputBox: {
-    width: 225
-  }
-};
-
 export default connect(
   state => ({}),
   dispatch => ({
     updateProjectName(projectId, updatedName) {
       dispatch(updateProjectName(projectId, updatedName));
-    }
+    },
+    showFrozenProjectInfoDialog() {
+      dispatch(showFrozenProjectInfoDialog());
+    },
   })
 )(PersonalProjectsNameCell);

@@ -5,22 +5,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
+
 import {actions, selectors} from './redux';
-import trackEvent from '../../../util/trackEvent';
 
 export default connect(
   state => ({
     isAttached: selectors.isAttached(state),
     isPaused: selectors.isPaused(state),
     isEditWhileRun: selectors.isEditWhileRun(state),
-    canRunNext: selectors.canRunNext(state)
+    canRunNext: selectors.canRunNext(state),
   }),
   {
     stepIn: actions.stepIn,
     stepOver: actions.stepOver,
     stepOut: actions.stepOut,
-    togglePause: actions.togglePause
+    togglePause: actions.togglePause,
   }
 )(
   class DebugButtons extends React.Component {
@@ -36,44 +37,24 @@ export default connect(
       isPaused: PropTypes.bool.isRequired,
       isEditWhileRun: PropTypes.bool.isRequired,
       isAttached: PropTypes.bool.isRequired,
-      canRunNext: PropTypes.bool.isRequired
+      canRunNext: PropTypes.bool.isRequired,
     };
 
     // Wrap button actions to add tracking of presses to investigate student use
     // userInteracted tracks if the user has open/adjusted the debug console
     togglePause = () => {
-      trackEvent(
-        'debug_commands',
-        'debug_button_press',
-        this.props.userInteracted
-      );
       this.props.togglePause();
     };
 
     stepIn = () => {
-      trackEvent(
-        'debug_commands',
-        'debug_button_press',
-        this.props.userInteracted
-      );
       this.props.stepIn();
     };
 
     stepOut = () => {
-      trackEvent(
-        'debug_commands',
-        'debug_button_press',
-        this.props.userInteracted
-      );
       this.props.stepOut();
     };
 
     stepOver = () => {
-      trackEvent(
-        'debug_commands',
-        'debug_button_press',
-        this.props.userInteracted
-      );
       this.props.stepOver();
     };
 
@@ -97,7 +78,11 @@ export default connect(
               style={{display: canRunNext ? 'none' : 'inline-block'}}
               disabled={!isAttached}
             >
-              <img src="/blockly/media/1x1.gif" className="pause-btn icon21" />
+              <img
+                src="/blockly/media/1x1.gif"
+                className="pause-btn icon21"
+                alt=""
+              />
               {i18n.pause()}
             </button>
             {
@@ -113,6 +98,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="continue-btn icon21"
+                alt=""
               />
               {i18n.continue()}
             </button>
@@ -130,6 +116,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-over-btn icon21"
+                alt=""
               />
               {i18n.stepOver()}
             </button>
@@ -145,6 +132,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-out-btn icon21"
+                alt=""
               />
               {i18n.stepOut()}
             </button>
@@ -162,6 +150,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-in-btn icon21"
+                alt=""
               />
               {i18n.stepIn()}
             </button>

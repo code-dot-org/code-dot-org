@@ -1,10 +1,15 @@
 name 'U2L02 Assessment 4'
-encrypted 'zH0Wh02a87lPiC2NMq0wZc4Z7z3YvPFm9AOn7kJA681hJedB1sWqFGW/YJy6
-WM3b/OqNijY0IIp+r3jqDZHGDusFr1NzpFnXL8QqICMORmzpX+SaW9f2gpuh
-rwSc0mhsiYbDpc7Jfvtn/FAXvZa9Fi9gFMk6OA7lIBzV2klD5cmRs+ZgDisr
-W/I69YjDU/QvmAARXNnPU6J02RlK1VjMT5CherYKouWHd+Myu8fDNGSRBFi7
-pxNFzCo84ecl/ogMKWZgMlNVapJ/cNSbC7uQQK4AXXYXZ5Zqp7scfofVT3m0
-MIFXkr947wGnATsbkz6UVMQ+iT8CWaLShZWygOlxmIj2ulIgg23pBBdSxFHt
-4uNp6efzHRThupJGmyJtcZfoRBni/1k/WKsEqvP7BI0sdnJJAdASinXtuHrB
-eXoaqoI=
-'
+title 'The Need For Addressing'
+question 'Which of the following information is not necessary in your protocol to play battleship?'
+wrong 'Grid Coordinates'
+wrong 'From'
+wrong 'To'
+right 'Time of Day'
+
+teacher_markdown <<MARKDOWN
+Answer:
+
+- Time
+MARKDOWN
+
+allow_multiple_attempts true

@@ -1,22 +1,24 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import UnitCalendarDialog from './UnitCalendarDialog';
+import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
+import UnitCalendarDialog from './UnitCalendarDialog';
 
 export default class UnitCalendarButton extends React.Component {
   static propTypes = {
     lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired,
     weeklyInstructionalMinutes: PropTypes.number,
-    scriptId: PropTypes.number.isRequired
+    scriptId: PropTypes.number.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      isDialogOpen: false
+      isDialogOpen: false,
     };
   }
 
@@ -28,8 +30,8 @@ export default class UnitCalendarButton extends React.Component {
         study_group: 'unit_calendar',
         event: 'open_unit_calendar',
         data_json: JSON.stringify({
-          script_id: this.props.scriptId
-        })
+          script_id: this.props.scriptId,
+        }),
       },
       {includeUserId: true}
     );
@@ -68,6 +70,6 @@ export default class UnitCalendarButton extends React.Component {
 const styles = {
   button: {
     margin: 0,
-    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)'
-  }
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+  },
 };

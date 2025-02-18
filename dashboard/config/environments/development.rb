@@ -20,7 +20,6 @@ Dashboard::Application.configure do
   config.hosts << "localhost.code.org"
   config.hosts << "localhost.hourofcode.com"
   config.hosts << "localhost.codeprojects.org"
-  config.hosts << "localhost-advocacy.code.org"
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -65,10 +64,6 @@ Dashboard::Application.configure do
 
   # skip precompiling of all assets on the first request for any asset.
   config.assets.check_precompiled_asset = false
-
-  # Whether or not to skip script preloading. Setting this to true
-  # significantly speeds up server startup time
-  config.skip_script_preload = true
 
   # Set to :debug to see everything in the log.
   config.log_level = :debug

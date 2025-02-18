@@ -1,0 +1,23 @@
+name 'virtual-pl-csd-summer-day4-ContentWrapUp2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Content Wrap Up
+
+#### Despite the fact that TLOs are done, you may still have areas of the curriculum that you'd like to continue learning about. Let's take a moment to process the learning you've done so far, and what's left to do.
+
+## Key Takeaways
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+#### Jot down your answers to the following questions in your journal:
+<br>
+
+* #### What computer science concepts are you feeling good about?
+* #### What computer science concepts still bring you anxiety?
+* #### What are your next steps to prepare for the school year?
+
+
+
+MARKDOWN

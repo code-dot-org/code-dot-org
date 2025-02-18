@@ -1,0 +1,36 @@
+#!/bin/bash
+
+USAGE="
+Opens a VSCode tunnel into a live drone build, for interactive debugging.
+
+Usage: bin/drone/vscode ec2-34-201-165-204.us-west-2.compute.amazonaws.com
+
+Establishing a tunnel:
+  1. You'll have to login to GitHub and auth, watch the terminal for a URL + code
+  2. When you get 'Open this link in your browser' to vscode.dev, you can either:
+    - open in the browser
+    - OR, use the VSCode tunnels extension, if you're signed into GitHub in VSCode in
+      the Remote Explorer you can referesh and you shoudl see a tunnel (named a hex code)
+  3. You can open terminals, editors etc in VSCode: you are editing the remote drone instance
+
+See bin/drone/shell for more info on flags and ssh setup
+"
+
+# Print USAGE if --help or ARGC != 1
+if [ "$1" = "--help" ] || [ "$#" -ne 1 ]; then
+  cat <<< "$USAGE"
+  exit 1
+fi
+
+source "$(dirname "$0")/shell"
+
+drone-shell "$@" <<- 'CMDS'
+  cd ~
+  curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
+  tar -xzf vscode_cli.tar.gz
+  ln -s /drone/src ~/drone
+  cd $DRONE_WORKSPACE
+  ~/code tunnel user login --provider github
+  ~/code tunnel --accept-server-license-terms --random-name
+  exit
+CMDS

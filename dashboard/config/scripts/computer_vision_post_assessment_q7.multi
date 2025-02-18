@@ -1,0 +1,12 @@
+name 'Computer-Vision-Post-Assessment-Q7'
+title 'Computer Vision Post-Assessment'
+
+question 'Assess the following scenario and propose a possible reason why the user is not getting the result that they want–
+
+A computer vision system was trained using the COCOS dataset in order to perform object recognition. Upon testing, a user noticed that it was not able to properly identify the candy bar that she was holding up.'
+wrong 'The lighting conditions in the room are too bright, causing the system to malfunction'
+wrong 'The computer vision system needs higher resolution images to correctly identify small objects like a candy bar'
+right 'The COCO dataset may not include specific categories or images of the particular candy bar, leading to poor recognition performance'
+wrong 'The camera being used is incompatible with the computer vision system, resulting in faulty image capture'
+
+allow_multiple_attempts false

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: “Festa de ball”, body: “Codi d'una festa de ball! Amb Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gómez, música de Disney \"Encanto,\” i molt més!”, image: "/images/hoc2022-dance-party.png“, url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: “Poema Art”, body: “Afegiu art i animació a un poema clàssic en aquesta activitat de l'Hora del Codi!”, image: "/shared/images/courses/logo_tall_poem-art.jpg“, url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: “Artista”, body: “Dibuixa fotos i dissenys bonics amb l'artista!”, image: "/shared/images/courses/logo_tall_artist.jpg “, url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: “Infinity Play Lab”, body: “Utilitza Play Lab per crear una història o joc protagonitzat per personatges de Disney Infinity.“, image: "/shared/images/courses/logo_tall_infinity.jpg“, url: "https://studio.code.org/s/infinity/reset" }}

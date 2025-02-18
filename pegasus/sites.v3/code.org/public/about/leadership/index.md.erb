@@ -15,16 +15,11 @@ style_min: true
 
 <%= view :about_headshots, people:DB[:cdo_leaders].where(kind_s:'LT') %>
 
+## Education Leadership Council
+
+<%= view :about_headshots, people:DB[:cdo_leaders].where(kind_s:'council') %>
+
 ## We're grateful for the advice and help of so many leaders over the years:
 
-### From Tech
+<%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'grateful') %>
 
-<%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'advisor') %>
-
-### From Education
-
-<%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'education') %>
-
-### From our [Diversity Advisory Council](/about/diversity-council)
-
-<%= view :about_people, people:DB[:cdo_team].where(kind_s:'diversity_council_short') %>

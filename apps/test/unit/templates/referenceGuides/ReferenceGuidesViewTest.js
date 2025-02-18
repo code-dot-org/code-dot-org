@@ -1,6 +1,6 @@
-import React from 'react';
 import {isolateComponent} from 'isolate-react';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import ReferenceGuideView from '@cdo/apps/templates/referenceGuides/ReferenceGuideView';
 
 describe('ReferenceGuideView', () => {
@@ -10,7 +10,7 @@ describe('ReferenceGuideView', () => {
       content: 'markdown text',
       position: 0,
       key: 'guide',
-      parent_reference_guide_key: null
+      parent_reference_guide_key: null,
     };
     const wrapper = isolateComponent(
       <ReferenceGuideView
@@ -19,9 +19,7 @@ describe('ReferenceGuideView', () => {
         baseUrl={'fgsfds'}
       />
     );
-    expect(wrapper.findOne('h1').content()).to.equal(
-      referenceGuide.display_name
-    );
+    expect(wrapper.findOne('h1').content()).toBe(referenceGuide.display_name);
   });
 
   it('reference guide shows content', () => {
@@ -30,7 +28,7 @@ describe('ReferenceGuideView', () => {
       content: 'markdown text',
       position: 0,
       key: 'guide',
-      parent_reference_guide_key: null
+      parent_reference_guide_key: null,
     };
     const wrapper = isolateComponent(
       <ReferenceGuideView
@@ -39,7 +37,7 @@ describe('ReferenceGuideView', () => {
         baseUrl={'fgsfds'}
       />
     );
-    expect(wrapper.findOne('ReferenceGuide').props.referenceGuide).to.equal(
+    expect(wrapper.findOne('ReferenceGuide').props.referenceGuide).toBe(
       referenceGuide
     );
   });
@@ -50,7 +48,7 @@ describe('ReferenceGuideView', () => {
       content: 'content 3',
       key: 'guide3',
       position: 0,
-      parent_reference_guide_key: 'guide1'
+      parent_reference_guide_key: 'guide1',
     };
     // guide1
     /// guide3
@@ -63,14 +61,14 @@ describe('ReferenceGuideView', () => {
         content: 'content 1',
         key: 'guide1',
         position: 0,
-        parent_reference_guide_key: null
+        parent_reference_guide_key: null,
       },
       {
         display_name: 'display name 2',
         content: 'content 2',
         key: 'guide2',
         position: 1,
-        parent_reference_guide_key: null
+        parent_reference_guide_key: null,
       },
       referenceGuide,
       {
@@ -78,15 +76,15 @@ describe('ReferenceGuideView', () => {
         content: 'content 4',
         key: 'guide4',
         position: 0,
-        parent_reference_guide_key: 'guide2'
+        parent_reference_guide_key: 'guide2',
       },
       {
         display_name: 'display name 5',
         content: 'content 5',
         key: 'guide5',
         position: 0,
-        parent_reference_guide_key: 'guide3'
-      }
+        parent_reference_guide_key: 'guide3',
+      },
     ];
     const wrapper = isolateComponent(
       <ReferenceGuideView
@@ -96,15 +94,15 @@ describe('ReferenceGuideView', () => {
       />
     );
     const bar = wrapper.findOne('NavigationBar');
-    expect(bar.props.children.length).to.equal(2);
-    expect(bar.props.children[0].key).to.equal('guide1');
-    expect(bar.props.children[1].key).to.equal('guide2');
+    expect(bar.props.children.length).toBe(2);
+    expect(bar.props.children[0].key).toBe('guide1');
+    expect(bar.props.children[1].key).toBe('guide2');
 
     // renders first category item
-    expect(bar.props.children[0].props.children[0].props.text).to.include(
+    expect(bar.props.children[0].props.children[0].props.text).toContain(
       'display name 3'
     );
-    expect(bar.props.children[0].props.children[1].props.text).to.include(
+    expect(bar.props.children[0].props.children[1].props.text).toContain(
       'display name 5'
     );
   });

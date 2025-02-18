@@ -1,15 +1,16 @@
+import {TextLink} from '@dsco_/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import {TextLink} from '@dsco_/link';
-import FontAwesome from './FontAwesome';
+
+import FontAwesome from '../legacySharedComponents/FontAwesome';
 
 export function SmallChevronLink({
   href,
   text,
   iconBefore = false,
   isRtl = false,
-  style = {margin: '10px 0'}
+  style = {margin: '10px 0'},
 }) {
   return (
     <div style={style}>
@@ -36,9 +37,9 @@ SmallChevronLink.propTypes = {
   style: PropTypes.object,
 
   // Provided by redux
-  isRtl: PropTypes.bool
+  isRtl: PropTypes.bool,
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(SmallChevronLink);

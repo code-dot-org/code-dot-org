@@ -1,3 +1,17 @@
+import _ from 'lodash';
+
+import logToCloud from '@cdo/apps/logToCloud';
+import {getStore} from '@cdo/apps/redux';
+import {
+  processedLevel,
+  processServerSectionProgress,
+  lessonProgressForSection,
+} from '@cdo/apps/templates/progress/progressHelpers';
+import {
+  fetchStandardsCoveredForScript,
+  fetchStudentLevelScores,
+} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+
 import {ViewType} from './sectionProgressConstants';
 import {
   startLoadingProgress,
@@ -5,27 +19,18 @@ import {
   finishLoadingProgress,
   addDataByUnit,
   startRefreshingProgress,
-  finishRefreshingProgress
+  finishRefreshingProgress,
 } from './sectionProgressRedux';
-import {
-  processedLevel,
-  processServerSectionProgress,
-  lessonProgressForSection
-} from '@cdo/apps/templates/progress/progressHelpers';
-import {
-  fetchStandardsCoveredForScript,
-  fetchStudentLevelScores
-} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import {getStore} from '@cdo/apps/redux';
-import _ from 'lodash';
-import logToCloud from '@cdo/apps/logToCloud';
 
 const NUM_STUDENTS_PER_PAGE = 20;
 
-export function loadScriptProgress(scriptId, sectionId) {
+export function loadUnitProgress(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().teacherSections.sections[sectionId];
   const students = getStore().getState().teacherSections.selectedStudents;
+  const startTime = new Date().getTime();
+  let progressLatencyMs = -1;
+  let structureLatencyMs = -1;
 
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
@@ -43,28 +48,29 @@ export function loadScriptProgress(scriptId, sectionId) {
     getStore().dispatch(startLoadingProgress());
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressStarted, {
       sectionId,
-      scriptId
+      scriptId,
     });
   }
 
-  let sectionProgress = {
+  const sectionProgress = {
     unitDataByUnit: {},
     studentLevelProgressByUnit: {},
     studentLessonProgressByUnit: {},
-    studentLastUpdateByUnit: {}
+    studentLastUpdateByUnit: {},
   };
 
   // Get the script data
   const scriptRequest = fetch(`/dashboardapi/script_structure/${scriptId}`, {
-    credentials: 'include'
+    credentials: 'include',
   })
     .then(response => response.json())
     .then(scriptData => {
+      structureLatencyMs = new Date().getTime() - startTime;
       sectionProgress.unitDataByUnit = {
         [scriptId]: postProcessDataByScript(
           scriptData,
           sectionData.lessonExtras
-        )
+        ),
       };
 
       if (
@@ -78,41 +84,42 @@ export function loadScriptProgress(scriptId, sectionId) {
   const numPages = Math.ceil(students.length / NUM_STUDENTS_PER_PAGE);
 
   const requests = _.range(1, numPages + 1).map(currentPage => {
-    const url = `/dashboardapi/section_level_progress/${
-      sectionData.id
-    }?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
+    const url = `/dashboardapi/section_level_progress/${sectionData.id}?script_id=${scriptId}&page=${currentPage}&per=${NUM_STUDENTS_PER_PAGE}`;
     return fetch(url, {credentials: 'include'})
       .then(response => response.json())
       .then(data => {
+        progressLatencyMs = new Date().getTime() - startTime;
         sectionProgress.studentLevelProgressByUnit = {
           [scriptId]: {
             ...sectionProgress.studentLevelProgressByUnit[scriptId],
-            ...processServerSectionProgress(data.student_progress)
-          }
+            ...processServerSectionProgress(data.student_progress),
+          },
         };
         sectionProgress.studentLastUpdateByUnit = {
           [scriptId]: {
             ...sectionProgress.studentLastUpdateByUnit[scriptId],
-            ...data.student_last_updates
-          }
+            ...data.student_last_updates,
+          },
         };
       });
   });
 
   // Combine and transform the data
   requests.push(scriptRequest);
-  Promise.all(requests).then(() => {
+  return Promise.all(requests).then(() => {
     logToCloud.addPageAction(logToCloud.PageAction.LoadScriptProgressFinished, {
       sectionId,
-      scriptId
+      scriptId,
+      progressLatencyMs,
+      structureLatencyMs,
     });
 
     sectionProgress.studentLessonProgressByUnit = {
       ...sectionProgress.studentLessonProgressByUnit,
       [scriptId]: lessonProgressForSection(
-        sectionProgress.studentLevelProgressByUnit[scriptId],
+        sectionProgress.studentLevelProgressByUnit[scriptId] || [],
         sectionProgress.unitDataByUnit[scriptId].lessons
-      )
+      ),
     };
     getStore().dispatch(addDataByUnit(sectionProgress));
     getStore().dispatch(finishLoadingProgress());
@@ -126,7 +133,7 @@ export function loadScriptProgress(scriptId, sectionId) {
 }
 
 function postProcessDataByScript(scriptData, includeBonusLevels) {
-  // Filter to match scriptDataPropType
+  // Filter to match unitDataPropType
   const filteredScriptData = {
     id: scriptData.id,
     csf: !!scriptData.csf,
@@ -138,7 +145,7 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
     lessons: scriptData.lessons,
     family_name: scriptData.family_name,
     version_year: scriptData.version_year,
-    name: scriptData.name
+    name: scriptData.name,
   };
   if (!filteredScriptData.lessons) {
     return filteredScriptData;
@@ -147,7 +154,7 @@ function postProcessDataByScript(scriptData, includeBonusLevels) {
     ...filteredScriptData,
     lessons: filteredScriptData.lessons.map(lesson =>
       postProcessLessonData(lesson, includeBonusLevels)
-    )
+    ),
   };
 }
 
@@ -157,6 +164,6 @@ function postProcessLessonData(lesson, includeBonusLevels) {
     : lesson.levels.filter(level => !level.bonus);
   return {
     ...lesson,
-    levels: levels.map(level => processedLevel(level))
+    levels: levels.map(level => processedLevel(level)),
   };
 }

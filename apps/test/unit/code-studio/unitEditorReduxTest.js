@@ -1,5 +1,6 @@
-import {expect, assert} from '../../util/reconfiguredChai';
+import _ from 'lodash';
 import {combineReducers} from 'redux';
+
 import reducers, {
   addGroup,
   addLesson,
@@ -8,9 +9,8 @@ import reducers, {
   updateLessonGroupField,
   removeGroup,
   emptyNonUserFacingGroup,
-  mapLessonGroupDataForEditor
-} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import _ from 'lodash';
+  mapLessonGroupDataForEditor,
+} from '@cdo/apps/levelbuilder/unit-editor/unitEditorRedux';
 
 const getInitialState = () => ({
   lessonGroups: [
@@ -34,17 +34,17 @@ const getInitialState = () => ({
               inactiveIds: [],
               ids: ['2001'],
               kind: 'puzzle',
-              position: 1
+              position: 1,
             },
             {
               activeId: '2002',
               inactiveIds: [],
               ids: ['2002'],
               kind: 'puzzle',
-              position: 2
-            }
+              position: 2,
+            },
           ],
-          hasLessonPlan: true
+          hasLessonPlan: true,
         },
         {
           id: 101,
@@ -52,7 +52,7 @@ const getInitialState = () => ({
           name: 'B',
           position: 2,
           levels: [],
-          hasLessonPlan: false
+          hasLessonPlan: false,
         },
         {
           id: 102,
@@ -60,9 +60,9 @@ const getInitialState = () => ({
           name: 'C',
           position: 3,
           levels: [],
-          hasLessonPlan: true
-        }
-      ]
+          hasLessonPlan: true,
+        },
+      ],
     },
     {
       id: 2,
@@ -77,7 +77,7 @@ const getInitialState = () => ({
           name: 'D',
           position: 1,
           levels: [],
-          hasLessonPlan: true
+          hasLessonPlan: true,
         },
         {
           id: 105,
@@ -85,7 +85,7 @@ const getInitialState = () => ({
           name: 'E',
           position: 2,
           levels: [],
-          hasLessonPlan: true
+          hasLessonPlan: true,
         },
         {
           id: 106,
@@ -93,11 +93,11 @@ const getInitialState = () => ({
           name: 'F',
           position: 3,
           levels: [],
-          hasLessonPlan: false
-        }
-      ]
-    }
-  ]
+          hasLessonPlan: false,
+        },
+      ],
+    },
+  ],
 });
 
 const reducer = combineReducers(reducers);
@@ -111,33 +111,35 @@ describe('unitEditorRedux reducer tests', () => {
       initialState.lessonGroups
     );
 
-    expect(mappedLessonGroups.length).to.equal(2);
-    expect(mappedLessonGroups[0].lessons.length).to.equal(3);
+    expect(mappedLessonGroups.length).toBe(2);
+    expect(mappedLessonGroups[0].lessons.length).toBe(3);
   });
 
   it('add group', () => {
-    const nextState = reducer(initialState, addGroup(2, 'key', 'Display Name'))
-      .lessonGroups;
-    assert.equal(nextState[nextState.length - 1].displayName, 'Display Name');
-    assert.equal(nextState[nextState.length - 1].userFacing, true);
+    const nextState = reducer(
+      initialState,
+      addGroup(2, 'key', 'Display Name')
+    ).lessonGroups;
+    expect(nextState[nextState.length - 1].displayName).toEqual('Display Name');
+    expect(nextState[nextState.length - 1].userFacing).toEqual(true);
   });
 
   it('remove group', () => {
     // Remove lesson group when there are 2 lessons groups
     let nextState = reducer(initialState, removeGroup(1));
     let lessonGroups = nextState.lessonGroups;
-    assert.equal(lessonGroups.length, 1);
-    assert.equal(lessonGroups[0].position, 1);
-    assert.equal(lessonGroups[0].key, 'lg-key-2');
+    expect(lessonGroups.length).toEqual(1);
+    expect(lessonGroups[0].position).toEqual(1);
+    expect(lessonGroups[0].key).toEqual('lg-key-2');
 
     // Remove lesson group when there is only one lesson group left
     // a non-user facing lesson group should be added
     nextState = reducer(nextState, removeGroup(1));
     lessonGroups = nextState.lessonGroups;
-    assert.equal(lessonGroups.length, 1);
-    assert.equal(lessonGroups[0].key, emptyNonUserFacingGroup.key);
-    assert.equal(lessonGroups[0].position, 1);
-    assert.equal(lessonGroups[0].userFacing, false);
+    expect(lessonGroups.length).toEqual(1);
+    expect(lessonGroups[0].key).toEqual(emptyNonUserFacingGroup.key);
+    expect(lessonGroups[0].position).toEqual(1);
+    expect(lessonGroups[0].userFacing).toEqual(false);
   });
 
   it('add lesson', () => {
@@ -145,45 +147,57 @@ describe('unitEditorRedux reducer tests', () => {
       initialState,
       addLesson(1, 'lesson-new', 'New Lesson 2')
     ).lessonGroups;
-    assert.deepEqual(nextState[0].lessons.map(s => s.name), [
+    expect(nextState[0].lessons.map(s => s.name)).toEqual([
       'A',
       'B',
       'C',
-      'New Lesson 2'
+      'New Lesson 2',
     ]);
   });
 
   describe('reorderLesson', () => {
     it('move lesson up within first lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(1, 3, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['a', 'c', 'b']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(1, 3, 2)
+      ).lessonGroups;
+      expect(nextState[0].lessons.map(l => l.key)).toEqual(['a', 'c', 'b']);
     });
     it('move lesson down within first lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(1, 1, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['b', 'a', 'c']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(1, 1, 2)
+      ).lessonGroups;
+      expect(nextState[0].lessons.map(l => l.key)).toEqual(['b', 'a', 'c']);
     });
     it('move lesson to same position within first lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(1, 2, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[0].lessons.map(l => l.key), ['a', 'b', 'c']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(1, 2, 2)
+      ).lessonGroups;
+      expect(nextState[0].lessons.map(l => l.key)).toEqual(['a', 'b', 'c']);
     });
 
     it('move lesson up within second lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(2, 3, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[1].lessons.map(l => l.key), ['d', 'f', 'e']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(2, 3, 2)
+      ).lessonGroups;
+      expect(nextState[1].lessons.map(l => l.key)).toEqual(['d', 'f', 'e']);
     });
     it('move lesson to same position within second lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(2, 2, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[1].lessons.map(l => l.key), ['d', 'e', 'f']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(2, 2, 2)
+      ).lessonGroups;
+      expect(nextState[1].lessons.map(l => l.key)).toEqual(['d', 'e', 'f']);
     });
     it('move lesson down within second lesson group', () => {
-      const nextState = reducer(initialState, reorderLesson(2, 1, 2))
-        .lessonGroups;
-      assert.deepEqual(nextState[1].lessons.map(l => l.key), ['e', 'd', 'f']);
+      const nextState = reducer(
+        initialState,
+        reorderLesson(2, 1, 2)
+      ).lessonGroups;
+      expect(nextState[1].lessons.map(l => l.key)).toEqual(['e', 'd', 'f']);
     });
   });
 
@@ -196,14 +210,20 @@ describe('unitEditorRedux reducer tests', () => {
           key: 'x',
           displayName: 'X',
           position: 1,
-          lessons: [{id: 101, position: 1}, {id: 102, position: 2}]
+          lessons: [
+            {id: 101, position: 1},
+            {id: 102, position: 2},
+          ],
         },
         {
           key: 'y',
           displayName: 'Y',
           position: 2,
-          lessons: [{id: 103, position: 1}, {id: 104, position: 2}]
-        }
+          lessons: [
+            {id: 103, position: 1},
+            {id: 104, position: 2},
+          ],
+        },
       ];
       initialState.lessonGroups = initialLessonGroups;
     });
@@ -217,58 +237,52 @@ describe('unitEditorRedux reducer tests', () => {
       let expectedState = _.cloneDeep(initialLessonGroups);
       expectedState[0].description = 'Overview of the lesson group';
 
-      assert.deepEqual(expectedState, state.lessonGroups);
+      expect(expectedState).toEqual(state.lessonGroups);
     });
 
     describe('set lesson group', () => {
       it('moves unique lesson group to the end of the script', () => {
         let state = reducer(initialState, setLessonGroup(2, 1, 2));
-        assert.deepEqual(
-          [
-            {
-              key: 'x',
-              displayName: 'X',
-              position: 1,
-              lessons: [{id: 101, position: 1}]
-            },
-            {
-              key: 'y',
-              displayName: 'Y',
-              position: 2,
-              lessons: [
-                {id: 103, position: 1},
-                {id: 104, position: 2},
-                {id: 102, position: 3}
-              ]
-            }
-          ],
-          state.lessonGroups
-        );
+        expect([
+          {
+            key: 'x',
+            displayName: 'X',
+            position: 1,
+            lessons: [{id: 101, position: 1}],
+          },
+          {
+            key: 'y',
+            displayName: 'Y',
+            position: 2,
+            lessons: [
+              {id: 103, position: 1},
+              {id: 104, position: 2},
+              {id: 102, position: 3},
+            ],
+          },
+        ]).toEqual(state.lessonGroups);
       });
 
       it('groups with others in same lesson group', () => {
         const newState = reducer(initialState, setLessonGroup(2, 2, 1));
-        assert.deepEqual(
-          [
-            {
-              key: 'x',
-              displayName: 'X',
-              position: 1,
-              lessons: [
-                {id: 101, position: 1},
-                {id: 102, position: 2},
-                {id: 104, position: 3}
-              ]
-            },
-            {
-              key: 'y',
-              displayName: 'Y',
-              position: 2,
-              lessons: [{id: 103, position: 1}]
-            }
-          ],
-          newState.lessonGroups
-        );
+        expect([
+          {
+            key: 'x',
+            displayName: 'X',
+            position: 1,
+            lessons: [
+              {id: 101, position: 1},
+              {id: 102, position: 2},
+              {id: 104, position: 3},
+            ],
+          },
+          {
+            key: 'y',
+            displayName: 'Y',
+            position: 2,
+            lessons: [{id: 103, position: 1}],
+          },
+        ]).toEqual(newState.lessonGroups);
       });
     });
   });

@@ -16,3 +16,5 @@ banana.x = 60;
 apple.x = banana.x + 30;
 banana.x = 80;</pre>
 MARKDOWN
+
+allow_multiple_attempts true

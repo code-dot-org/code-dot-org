@@ -1,0 +1,27 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T21:58:52.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Complete the **Division** and **Double Division** sections of the <a href=\"https://docs.google.com/document/d/1CgaHKiovheEDfNGWpv2tF3LttGBbGvssM0_MiF4R5eY/edit?usp=sharing\" target=\"_blank\">**Investigating Casting**</a> activity guide by making and testing your predictions on this level.\r\n\r\nReturn to this level to complete the **Printing** and **More Printing** sections on your activity guide.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "DivisionRunner.java": {
+        "text": "public class DivisionRunner {\n  public static void main(String[] args) {\n\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T21:58:52.774+00:00\",\"changed\":[\"cloned from \\\"CSA U4L4-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L4-L2_pilot-2025\"}]"
+}]]></config>
+</Javalab>

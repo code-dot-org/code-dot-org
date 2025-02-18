@@ -12,3 +12,4 @@ answer 'The number of "turtle moves" it takes to complete the task'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

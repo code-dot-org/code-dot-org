@@ -1,0 +1,24 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-05-06T17:17:48.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_weblab_intro_2",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Intro to Web Lab - Part 1",
+    "parent_level_id": 19997,
+    "name_suffix": "_CSD-PL-24",
+    "long_instructions": "#### In the last lesson, you watched a video called, \"Intro to Web Lab - Part 1\". This is the second part in the Intro to Web Lab series.\r\n\r\n#### Like the last one, this video is included in <a href=\"https://studio.code.org/s/csd2-2024/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Unit 2, Lesson 2</a> to introduce students to Hypertext Markup Language (HTML). As you watch the video, consider the following:\r\n\r\n* #### How can I support my students in remembering or referring to common HTML syntax in my classroom?",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-06T17:17:48.085+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-U2-SelfPaced-Intro to HTML\\\"\"],\"cloned_from\":\"VPL-CSD-U2-SelfPaced-Intro to HTML\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

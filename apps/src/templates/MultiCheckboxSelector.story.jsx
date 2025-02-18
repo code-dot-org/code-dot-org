@@ -1,13 +1,19 @@
+import {action} from '@storybook/addon-actions';
 import PropTypes from 'prop-types';
 import React from 'react';
-import MultiCheckboxSelector from './MultiCheckboxSelector';
-import {action} from '@storybook/addon-actions';
 
-const ItemComponent = function({item}) {
+import MultiCheckboxSelector from './MultiCheckboxSelector';
+
+export default {
+  component: MultiCheckboxSelector,
+};
+
+const ItemComponent = function ({item}) {
   return <strong>{item}</strong>;
 };
 ItemComponent.propTypes = {item: PropTypes.string};
-const ComplexItemComponent = function({style, screen}) {
+
+const ComplexItemComponent = function ({style, screen}) {
   return (
     <div style={style}>
       <h2>{screen.name}</h2>
@@ -19,83 +25,63 @@ ComplexItemComponent.propTypes = {
   style: PropTypes.object,
   screen: PropTypes.shape({
     id: PropTypes.string,
-    name: PropTypes.string
-  })
+    name: PropTypes.string,
+  }),
 };
 
-export default storybook => {
-  storybook.storiesOf('MultiCheckboxSelector', module).addStoryTable([
-    {
-      name: 'with some selected',
-      story: () => (
-        <MultiCheckboxSelector
-          header="Some Items"
-          items={['one', 'two', 'three']}
-          selected={['two']}
-          onChange={action('onChange')}
-        >
-          <ItemComponent />
-        </MultiCheckboxSelector>
-      )
-    },
-    {
-      name: 'with all selected',
-      story: () => (
-        <MultiCheckboxSelector
-          header="Some Items"
-          items={['one', 'two', 'three']}
-          selected={['two', 'one', 'three']}
-          onChange={action('onChange')}
-        >
-          <ItemComponent />
-        </MultiCheckboxSelector>
-      )
-    },
-    {
-      name: 'with complex item component',
-      story: () => (
-        <MultiCheckboxSelector
-          header="Some Items"
-          items={[
-            {id: 'one', name: 'Item the First'},
-            {id: 'two', name: 'Item the Second!'}
-          ]}
-          itemPropName="screen"
-          selected={[]}
-          onChange={action('onChange')}
-        >
-          <ComplexItemComponent
-            style={{border: '1px solid black', padding: 10}}
-          />
-        </MultiCheckboxSelector>
-      )
-    },
-    {
-      name: 'disabled',
-      story: () => (
-        <MultiCheckboxSelector
-          header="Some Items"
-          items={['one', 'two', 'three']}
-          selected={['two']}
-          onChange={action('onChange')}
-          disabled={true}
-        >
-          <ItemComponent />
-        </MultiCheckboxSelector>
-      )
-    },
-    {
-      name: 'no header',
-      story: () => (
-        <MultiCheckboxSelector
-          noHeader={true}
-          items={['one', 'two', 'three']}
-          selected={['two']}
-          onChange={action('onChange')}
-        >
-          <ItemComponent />
-        </MultiCheckboxSelector>
-      )
-    }
-  ]);
+const ItemComponentTemplate = args => (
+  <MultiCheckboxSelector {...args}>
+    <ItemComponent />
+  </MultiCheckboxSelector>
+);
+
+const ComplexComponentTemplate = args => (
+  <MultiCheckboxSelector {...args}>
+    <ComplexItemComponent style={{border: '1px solid black', padding: 10}} />
+  </MultiCheckboxSelector>
+);
+
+export const WithSomeSelected = ItemComponentTemplate.bind({});
+WithSomeSelected.args = {
+  header: 'Some Items',
+  items: ['one', 'two', 'three'],
+  selected: ['two'],
+  onChange: action('onChange'),
+};
+
+export const WithAllSelected = ItemComponentTemplate.bind({});
+WithAllSelected.args = {
+  header: 'Some Items',
+  items: ['one', 'two', 'three'],
+  selected: ['one', 'two', 'three'],
+  onChange: action('onChange'),
+};
+
+export const WithComplexItemComponent = ComplexComponentTemplate.bind({});
+WithComplexItemComponent.args = {
+  header: 'Some Items',
+  itemPropName: 'screen',
+  items: [
+    {id: 'one', name: 'Item the First'},
+    {id: 'two', name: 'Item the Second!'},
+  ],
+  selected: [],
+  onChange: action('onChange'),
+};
+
+export const DisabledMultiCheckboxSelector = ItemComponentTemplate.bind({});
+DisabledMultiCheckboxSelector.args = {
+  header: 'Some Items',
+  items: ['one', 'two', 'three'],
+  selected: ['two'],
+  onChange: action('onChange'),
+  disabled: true,
+};
+
+export const NoHeaderMultiCheckboxSelector = ItemComponentTemplate.bind({});
+NoHeaderMultiCheckboxSelector.args = {
+  noHeader: true,
+  items: ['one', 'two', 'three'],
+  selected: ['two'],
+  onChange: action('onChange'),
 };

@@ -4,13 +4,14 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import i18n from '@cdo/tutorialExplorer/locale';
 
 export default class ToggleAllTutorialsButton extends React.Component {
   static propTypes = {
     showAllTutorials: PropTypes.func.isRequired,
     hideAllTutorials: PropTypes.func.isRequired,
-    showingAllTutorials: PropTypes.bool
+    showingAllTutorials: PropTypes.bool,
   };
 
   render() {
@@ -42,6 +43,6 @@ const styles = {
     clear: 'both',
     textAlign: 'center',
     paddingTop: 30,
-    paddingBottom: 30
-  }
+    paddingBottom: 30,
+  },
 };

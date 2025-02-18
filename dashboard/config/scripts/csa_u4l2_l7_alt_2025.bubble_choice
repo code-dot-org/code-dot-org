@@ -1,0 +1,9 @@
+name 'CSA U4L2-L7_alt-2025'
+display_name 'Practice: Writing Static Methods'
+description 'Write static methods to perform behaviors that do not require object state.'
+
+sublevels
+level 'CSA U4L2-L7a_alt-2025'
+level 'CSA U4L2-L7b_alt-2025'
+level 'CSA U4L2-L7c_alt-2025'
+level 'CSA U4L2-L7d_alt-2025'

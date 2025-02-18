@@ -1,0 +1,17 @@
+name 'sp-pl-CV_empathize_24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Empathize 
+
+<img src="https://images.code.org/31f82b29e95599733f544c58d4d41f4d-image-1714577787767.png" alt="AI bot with a directional sign" width="250px" style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
+
+#### The empathizing stage is the foundational first step in the design thinking process, primarily focused on **gaining a deep understanding of the users for whom you are designing.** 
+
+#### This stage is crucial because it ensures that the solutions developed are tailored to the real needs and desires of the users, rather than being based solely on quantitative data or assumptions. 
+
+#### Ultimately, empathizing helps create more impactful, meaningful solutions that genuinely resonate with the user base.
+
+
+MARKDOWN

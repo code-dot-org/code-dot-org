@@ -1,10 +1,9 @@
 /* Tests for music/utils/UniqueSounds.js */
 
-var assert = require('assert');
 import UniqueSounds from '@cdo/apps/music/utils/UniqueSounds';
 
-describe('Music uniqueSounds tests', function() {
-  it('adding one new sound puts it at end', function() {
+describe('Music uniqueSounds tests', function () {
+  it('adding one new sound puts it at end', function () {
     const uniqueSounds = new UniqueSounds();
 
     const songDataEvents1 = [{id: 'sound1'}, {id: 'sound2'}];
@@ -22,11 +21,11 @@ describe('Music uniqueSounds tests', function() {
     // end.
     const desiredOutput2 = ['sound1', 'sound2', 'sound3'];
 
-    assert.deepEqual(uniqueSounds1, desiredOutput1);
-    assert.deepEqual(uniqueSounds2, desiredOutput2);
+    expect(uniqueSounds1).toEqual(desiredOutput1);
+    expect(uniqueSounds2).toEqual(desiredOutput2);
   });
 
-  it('replacing a sound reuses the old row', function() {
+  it('replacing a sound reuses the old row', function () {
     const uniqueSounds = new UniqueSounds();
 
     const songDataEvents1 = [{id: 'sound1'}, {id: 'sound2'}, {id: 'sound3'}];
@@ -44,11 +43,11 @@ describe('Music uniqueSounds tests', function() {
     // should replace the old one.
     const desiredOutput2 = ['sound1', 'sound4', 'sound3'];
 
-    assert.deepEqual(uniqueSounds1, desiredOutput1);
-    assert.deepEqual(uniqueSounds2, desiredOutput2);
+    expect(uniqueSounds1).toEqual(desiredOutput1);
+    expect(uniqueSounds2).toEqual(desiredOutput2);
   });
 
-  it('deleting an early entry shifts later entries up', function() {
+  it('deleting an early entry shifts later entries up', function () {
     const uniqueSounds = new UniqueSounds();
 
     const songDataEvents1 = [{id: 'sound1'}, {id: 'sound2'}, {id: 'sound3'}];
@@ -64,7 +63,7 @@ describe('Music uniqueSounds tests', function() {
     // We removed sound1 and expect that the later sounds are shifted up.
     const desiredOutput2 = ['sound2', 'sound3'];
 
-    assert.deepEqual(uniqueSounds1, desiredOutput1);
-    assert.deepEqual(uniqueSounds2, desiredOutput2);
+    expect(uniqueSounds1).toEqual(desiredOutput1);
+    expect(uniqueSounds2).toEqual(desiredOutput2);
   });
 });

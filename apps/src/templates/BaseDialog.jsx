@@ -1,6 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import i18n from '@cdo/locale';
+
 import {BASE_DIALOG_WIDTH} from '../constants';
+import color from '../util/color';
 
 /**
  * BaseDialog
@@ -34,7 +39,7 @@ export default class BaseDialog extends React.Component {
     soundPlayer: PropTypes.object,
     overflow: PropTypes.string,
     // Temporary prop until AnimationPickerBody is redesigned
-    backdropStyle: PropTypes.object
+    backdropStyle: PropTypes.object,
   };
 
   componentDidMount() {
@@ -88,17 +93,17 @@ export default class BaseDialog extends React.Component {
       bodyStyle = {
         ...bodyStyle,
         width: '90%',
-        marginLeft: '-45%'
+        marginLeft: '-45%',
       };
     }
     if (this.props.fullHeight) {
       bodyStyle = {
         ...bodyStyle,
-        height: '80%'
+        height: '80%',
       };
       modalBodyStyle = {
         ...modalBodyStyle,
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
       };
     }
 
@@ -117,31 +122,22 @@ export default class BaseDialog extends React.Component {
       modalBodyStyle = {
         background: '#fff',
         height: this.props.fixedHeight,
-        maxHeight: !this.props.fixedHeight && '80vh',
+        maxHeight: !this.props.fixedHeight && '85vh',
         overflowX: overflowX,
         overflowY: overflowY,
-        borderRadius: 4
+        borderRadius: 4,
       };
       if (this.props.useFlexbox) {
         modalBodyStyle = {
           ...modalBodyStyle,
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
         };
       }
       bodyStyle = {
         ...bodyStyle,
         width: this.props.fixedWidth || BASE_DIALOG_WIDTH,
-        marginLeft: -this.props.fixedWidth / 2 || -350
-      };
-      xCloseStyle = {
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        padding: 10,
-        color: '#ddd',
-        cursor: 'pointer',
-        fontSize: 24
+        marginLeft: -this.props.fixedWidth / 2 || -350,
       };
     } else if (this.props.noModalStyles) {
       modalClassNames = '';
@@ -152,9 +148,19 @@ export default class BaseDialog extends React.Component {
       ...bodyStyle,
       ...(this.props.hideBackdrop && {
         position: 'initial',
-        marginLeft: 0
+        marginLeft: 0,
       }),
-      ...this.props.style
+      ...this.props.style,
+    };
+    xCloseStyle = {
+      position: 'absolute',
+      top: 0,
+      insetInlineEnd: 0,
+      padding: 0,
+      color: color.neutral_dark30,
+      cursor: 'pointer',
+      fontSize: 24,
+      border: 'none',
     };
 
     modalBodyClassNames = [modalBodyClassNames, this.props.bodyClassName]
@@ -174,22 +180,16 @@ export default class BaseDialog extends React.Component {
           id={this.props.bodyId}
           className={modalBodyClassNames}
         >
-          {!this.props.uncloseable &&
-            !this.props.hideCloseButton &&
-            (this.props.useUpdatedStyles ? (
-              <i
-                id="x-close"
-                className="fa fa-times"
-                style={xCloseStyle}
-                onClick={this.closeDialog}
-              />
-            ) : (
-              <div
-                id="x-close"
-                className="x-close"
-                onClick={this.closeDialog}
-              />
-            ))}
+          {!this.props.uncloseable && !this.props.hideCloseButton && (
+            <Button
+              id="x-close"
+              onClick={this.closeDialog}
+              icon="fa-solid fa-xmark"
+              style={xCloseStyle}
+              color="white"
+              aria-label={i18n.closeDialog()}
+            />
+          )}
           {this.props.children}
         </div>
       </div>

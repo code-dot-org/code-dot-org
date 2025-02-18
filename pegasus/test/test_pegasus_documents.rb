@@ -1,6 +1,7 @@
 require_relative './test_helper'
 require_relative '../router'
 require 'cdo/rack/request'
+require 'varnish_environment'
 require 'shared_resources'
 require 'parallel'
 require 'open3'
@@ -23,7 +24,7 @@ class PegasusTest < Minitest::Test
       "#{page[:site]}#{page[:uri]}"
     end
     CDO.log.info "Found #{documents.length} Pegasus documents."
-    assert_operator documents.length, :>, 2000
+    assert_operator documents.length, :>, 100
   end
 
   # All documents expected to return 200 status-codes, with the following exceptions:
@@ -33,12 +34,13 @@ class PegasusTest < Minitest::Test
       code.org/congrats
       code.org/educate
       code.org/educate/weblab-test
-      code.org/review-hociyskvuwa
       code.org/teach
       code.org/student
     ],
     301 => %w[
-      csedweek.org/resource_kit
+      code.org/dance
+      code.org/minecraft
+      code.org/naipi
     ]
   }
 
@@ -47,6 +49,7 @@ class PegasusTest < Minitest::Test
     'text/plain' => %w[
       code.org/health_check
       code.org/robots.txt
+      hourofcode.com/us/health_check
     ]
   }
 
@@ -56,19 +59,15 @@ class PegasusTest < Minitest::Test
     code.org
     code.org/about
     code.org/about/jobs
-    code.org/athletes
     code.org/congrats
     code.org/educate/curriculum/elementary-school
     code.org/educate/curriculum/high-school
     code.org/educate/curriculum/middle-school
-    code.org/educate/resources/inspire
     code.org/educate/resources/videos
     code.org/learn/robotics
     code.org/minecraft
-    code.org/playlab
     code.org/promote
     code.org/starwars
-    code.org/leaderboards
     code.org/page_mode
   ]
 
@@ -76,8 +75,8 @@ class PegasusTest < Minitest::Test
     all_documents = app.helpers.all_documents.reject do |page|
       # 'Splat' documents not yet handled.
       page[:uri].end_with?('/splat', '/splat.fetch') ||
-      # Private routes not yet handled.
-      page[:uri].start_with?('/private')
+        # Private routes not yet handled.
+        page[:uri].start_with?('/private')
     end
 
     tidy = system('which tidy >/dev/null 2>&1')
@@ -85,7 +84,9 @@ class PegasusTest < Minitest::Test
 
     # Disconnect databases before forking parallel processes.
     DB.disconnect
+    # rubocop:disable CustomCops/DashboardDbUsage
     DASHBOARD_DB.disconnect
+    # rubocop:enable CustomCops/DashboardDbUsage
 
     results = Parallel.map(all_documents) do |page|
       site = page[:site]
@@ -93,7 +94,7 @@ class PegasusTest < Minitest::Test
 
       # If this site isn't a live host, use an inherited site instead.
       unless live_host?(site)
-        site = inherited_sites(site).select(&method(:live_host?)).last
+        site = inherited_sites(site).select {|inherited_site| live_host?(inherited_site)}.last
       end
 
       url = "#{site}#{uri}"
@@ -102,14 +103,16 @@ class PegasusTest < Minitest::Test
       begin
         attempts = 3
         loop do
+          # rubocop:disable CustomCops/DashboardDbUsage
           queries = capture_queries(DB, DASHBOARD_DB) {get(uri)}
+          # rubocop:enable CustomCops/DashboardDbUsage
           break if queries.empty? || (attempts -= 1).zero?
         end
-      rescue Exception => e
+      rescue Exception => exception
         # Filter backtrace from current location.
-        index = e.backtrace.index(caller(2..2).first)
-        e.set_backtrace(e.backtrace[0..index - 1])
-        next "[#{url}] Render failed:\n#{e}\n#{e.backtrace.join("\n")}"
+        index = exception.backtrace.index(caller(2..2).first)
+        exception.set_backtrace(exception.backtrace[0..index - 1])
+        next "[#{url}] Render failed:\n#{exception}\n#{exception.backtrace.join("\n")}"
       end
       response = last_response
       status = response.status
@@ -165,10 +168,8 @@ class PegasusTest < Minitest::Test
     end
   end
 
-  private
-
   # @return [Array<String>] sites configured with the provided site as their 'base'.
-  def inherited_sites(site)
+  private def inherited_sites(site)
     Documents.load_configs_in(app.helpers.content_dir).
       select {|_, config| config[:base] == site}.
       keys
@@ -176,14 +177,16 @@ class PegasusTest < Minitest::Test
 
   # If a given host isn't 'live', it won't correctly render requests routed to it as expected.
   # @return [Boolean] whether the host matches the result returned by `request.site`.
-  def live_host?(host)
+  private def live_host?(host)
     Rack::Request.new({'HTTP_HOST' => host}).site == host
   end
 
   # Runs `tidy` in a subprocess to validate HTML content.
   # @return [Array, nil] error messages, or `nil` if no errors.
-  def validate(body)
-    cmd = 'tidy -q -e'
+  private def validate(body)
+    # `--new-blocklevel-tags` ignores unknown tags, allowing us to use custom tags like `<swiper-container>`.
+    # `<swiper-container>` and `<swiper-slide>` are used by the `swiper` library.
+    cmd = 'tidy -q -e --new-blocklevel-tags swiper-container,swiper-slide'
     status, result = nil
     Open3.popen3(cmd) do |stdin, _stdout, stderr, wait_thread|
       stdin.puts body

@@ -172,7 +172,12 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_publish_and_unpublish_channel
-    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+    stub_project_age(true, true)
+
+    stub_user = {
+      name: ' xavier',
+      birthday: 14.years.ago.to_datetime
+    }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     start = DateTime.now - 1
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -232,7 +237,9 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_publish_permissions
-    # only whitelisted project types can be published
+    stub_project_age(true, true)
+
+    # only allow listed project types can be published
 
     # over 13 and sharing is disabled
     stub_user = {
@@ -312,7 +319,41 @@ class ChannelsTest < Minitest::Test
     assert_cannot_publish('foo')
   end
 
+  def test_cannot_publish_if_account_too_new
+    stub_project_age(true, false)
+
+    stub_user = {
+      name: 'xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    assert_cannot_publish('applab', channel_id)
+  end
+
+  def test_cannot_publish_if_project_too_new
+    stub_project_age(false, true)
+
+    stub_user = {
+      name: ' xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    assert_cannot_publish('applab', channel_id)
+  end
+
   def test_restricted_publish_permissions
+    stub_project_age(true, true)
+
     # sprite lab projects require talking to S3
     AWS::S3.stubs :create_client
 
@@ -403,12 +444,19 @@ class ChannelsTest < Minitest::Test
 
     # These hidden and frozen projects should be skipped when considering most_recent
     post '/v3/channels', {hidden: true, level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    hidden_channel_id = last_response.location.split('/').last
+
+    Timecop.travel 1
+
     post '/v3/channels', {frozen: true, level: 'projects/xyz'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
 
     user_storage_id = storage_decrypt_id CGI.unescape @session.cookie_jar[storage_id_cookie_name]
 
     assert_equal abc_channel_id, Projects.new(user_storage_id).most_recent('abc')
     assert_equal xyz_channel_id, Projects.new(user_storage_id).most_recent('xyz')
+
+    # Includes hidden projects if include_hidden is true
+    assert_equal hidden_channel_id, Projects.new(user_storage_id).most_recent('abc', include_hidden: true)
   ensure
     Timecop.return
   end
@@ -449,13 +497,37 @@ class ChannelsTest < Minitest::Test
     assert_equal 'gamelab', Projects.table.where(id: storage_app_id).first[:project_type]
   end
 
-  private
+  def test_update_with_good_thumbnail_url_succeeds
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
 
-  def timestamp(time)
+    post "/v3/channels/#{channel_id}", {thumbnailUrl: "/v3/files/#{channel_id}/.metadata/thumbnail.png"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.successful?
+  end
+
+  def test_update_with_bad_thumbnail_url_fails
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    post "/v3/channels/#{channel_id}", {thumbnailUrl: "bad.com"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert_equal 400, last_response.status
+  end
+
+  def test_create_with_good_thumbnail_url_succeeds
+    post '/v3/channels', {thumbnailUrl: '/v3/files/parentChannelId123/.metadata/thumbnail.png'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?
+  end
+
+  def test_create_with_bad_thumbnail_fails
+    post '/v3/channels', {thumbnailUrl: "bad.com"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert_equal 400, last_response.status
+  end
+
+  private def timestamp(time)
     time.strftime('%Y-%m-%d %H:%M:%S.%L')
   end
 
-  def assert_can_publish(project_type)
+  private def assert_can_publish(project_type)
     start = 1.second.ago
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
@@ -475,7 +547,7 @@ class ChannelsTest < Minitest::Test
     assert_equal result['projectType'], project_type
   end
 
-  def assert_cannot_publish(project_type, channel_id = nil)
+  private def assert_cannot_publish(project_type, channel_id = nil)
     unless channel_id
       post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
       channel_id = last_response.location.split('/').last
@@ -491,14 +563,23 @@ class ChannelsTest < Minitest::Test
     assert_nil result['publishedAt']
   end
 
-  def assert_cannot_unpublish(channel_id)
+  private def assert_cannot_unpublish(channel_id)
     post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.client_error?
   end
 
-  def stub_project_body(should_restrict_share)
+  private def stub_project_body(should_restrict_share)
     sample_project = StringIO.new
     sample_project.puts "{\"inRestrictedShareMode\": #{should_restrict_share}}"
     SourceBucket.any_instance.stubs(:get).returns({body: sample_project})
+  end
+
+  private def stub_project_age(project_old_enough, user_old_enough, apply_publish_limits = true)
+    test_project = mock
+    test_project.stubs(:existed_long_enough_to_publish?).returns(project_old_enough)
+    test_project.stubs(:owner_existed_long_enough_to_publish?).returns(user_old_enough)
+    test_project.stubs(:apply_project_age_publish_limits?).returns(apply_publish_limits)
+
+    Projects.any_instance.stubs(:get_rails_project).returns(test_project)
   end
 end

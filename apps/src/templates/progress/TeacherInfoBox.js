@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '@cdo/apps/util/color';
 
 const styles = {
@@ -8,7 +9,7 @@ const styles = {
     verticalAlign: 'top',
     width: 200,
     height: '100%',
-    borderRadius: 2
+    borderRadius: 2,
   },
   inner: {
     backgroundColor: color.lightest_cyan,
@@ -16,8 +17,8 @@ const styles = {
     borderWidth: 1,
     borderColor: color.cyan,
     borderStyle: 'solid',
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 };
 
 /**
@@ -34,7 +35,7 @@ const TeacherInfoBox = ({children}) => {
   );
 };
 TeacherInfoBox.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default TeacherInfoBox;

@@ -1,16 +1,18 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {
   UnconnectedLibraryCreationDialog as LibraryCreationDialog,
   DialogState,
   LoadingDisplay,
   UnpublishSuccessDisplay,
-  ErrorDisplay
+  ErrorDisplay,
 } from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
-import PublishSuccessDisplay from '@cdo/apps/code-studio/components/libraries/PublishSuccessDisplay.jsx';
 import LibraryPublisher from '@cdo/apps/code-studio/components/libraries/LibraryPublisher.jsx';
+import PublishSuccessDisplay from '@cdo/apps/code-studio/components/libraries/PublishSuccessDisplay.jsx';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('LibraryCreationDialog', () => {
   describe('UI', () => {
@@ -77,14 +79,14 @@ describe('LibraryCreationDialog', () => {
       server.respondWith('POST', `/profanity/find`, [
         status,
         {'Content-Type': 'application/json'},
-        JSON.stringify(serverData)
+        JSON.stringify(serverData),
       ]);
     };
 
     it('displays an error if profanity is found in library code', async () => {
       stubFindProfanityRequest(200, ['fart']);
       const library = {
-        librarySource: 'function fart() {};'
+        librarySource: 'function fart() {};',
       };
       const wrapper = shallow(
         <LibraryCreationDialog

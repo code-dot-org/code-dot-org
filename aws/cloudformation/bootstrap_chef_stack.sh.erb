@@ -78,7 +78,7 @@ KEY=$(aws s3 cp $CURRENT/key.pem - | replace_newline)
 
 <% if database && !rack_env?(:production) -%>
 apt-get install -y  jq
-DB_SECRET_NAME=${DatabaseSecret}
+DB_SECRET_NAME=${DatabaseSecretAdmin}
 DB_SECRET=$(aws --region $REGION secretsmanager get-secret-value --secret-id $DB_SECRET_NAME --version-stage AWSCURRENT | jq -r ".SecretString")
 DB_USERNAME=$(echo $DB_SECRET | jq -r ".username")
 DB_PASSWORD=$(echo $DB_SECRET | jq -r ".password")
@@ -90,8 +90,6 @@ mkdir -p $(dirname $FIRST_BOOT)
 cat <<JSON > $FIRST_BOOT
 {
   "cdo-nginx": {
-    "dashboard_hostname": "$DASHBOARD_DOMAIN_NAME",
-    "pegasus_hostname": "$PEGASUS_DOMAIN_NAME",
 <% unless load_balancer -%>
     "ssl_cert": {
       "content": "$CERT"
@@ -101,8 +99,10 @@ cat <<JSON > $FIRST_BOOT
     },
     "ssl_key": {
       "content": "$KEY"
-    }
+    },
 <% end -%>
+    "dashboard_hostname": "$DASHBOARD_DOMAIN_NAME",
+    "pegasus_hostname": "$PEGASUS_DOMAIN_NAME"
   },
   "cdo-repository": {
     <% if commit %>
@@ -113,6 +113,7 @@ cat <<JSON > $FIRST_BOOT
   },
   "cdo-secrets": {
 <% if frontends -%>
+    "session_store_server": "rediss://${SessionStoreGroup.PrimaryEndPoint.Address}:${SessionStoreGroup.PrimaryEndPoint.Port}",
     "memcached_endpoint": "${Memcached.ConfigurationEndpoint.Address}:${Memcached.ConfigurationEndpoint.Port}",
     "redis_primary": "${GeocoderGroup.PrimaryEndPoint.Address}:${GeocoderGroup.PrimaryEndPoint.Port}",
     "redis_read_addresses": "${GeocoderGroup.ReadEndPoint.Addresses}",
@@ -133,11 +134,6 @@ cat <<JSON > $FIRST_BOOT
 <% end -%>
     "stack_name": "$STACK"
   },
-<% if database && !rack_env?(:production) -%>
-  "cdo-mysql": {
-    "rds_proxy": "${DBProxy.Endpoint}"
-  },
-<% end -%>
 <% if CDO.chef_local_mode -%>
   "omnibus_updater": {
     "version": "$CHEF_VERSION"
@@ -158,7 +154,8 @@ sudo -u ubuntu bash -c "aws s3 cp <%=bootstrap_script_path%> - | sudo bash -s --
 
 # Ensure Chef Client is using an up to date TLS/SSL root certificate store (that we periodically fetch from a trusted
 # source (Mozilla via curl.se) and commit to our repository).
-sudo curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/${!BRANCH}/cookbooks/cacert.pem
+# TODO: change this to not pull from GitHub. Commenting out for now. Expected to become outdated in the near future.
+# sudo curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/${!BRANCH}/cookbooks/cacert.pem
 
 CHEF_CDO_APP=<%=CdoApp::CHEF_BIN%>
 cat <<SH > $CHEF_CDO_APP

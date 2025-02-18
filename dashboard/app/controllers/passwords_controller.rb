@@ -13,34 +13,31 @@ class PasswordsController < Devise::PasswordsController
     super
   end
 
-  protected
-
-  def after_sending_reset_password_instructions_path_for(resource_name)
+  protected def after_sending_reset_password_instructions_path_for(resource_name)
     if current_user.try(:admin)
       new_user_password_path
     else
+      flash[:notice] = I18n.t('password.reset_form.confirmation')
       new_session_path(resource_name) if is_navigational_format?
     end
   end
 
-  private
-
-  def show_reset_url_if_admin
+  private def show_reset_url_if_admin
     return unless current_user.try(:admin?)
     if raw_token = resource.try(:raw_token)
       url = edit_password_url(resource, reset_password_token: raw_token)
-      flash[:notice] = "Reset password link sent to user. You may also send this link directly: <a href='#{url}'>#{url}</a>".html_safe
-    elsif resource.child_users
-      notice = "Reset password link sent to user. You may also send the link directly:<br>"
-      resource.child_users.each do |user|
-        url = edit_password_url(user, reset_password_token: user.raw_token)
-        notice += "#{ActionController::Base.helpers.sanitize(user.username)}: <a href='#{url}'>#{url}</a><br>"
-      end
-      flash[:notice] = notice.html_safe
+      # We can safely treat this string as HTML-safe because we can trust
+      # Devise's edit_password_url method not to inject HTML
+      # rubocop:disable Rails/OutputSafety
+      flash[:notice] = "Reset password link sent to user if email was used to reset. You may also send this link directly: <a href='#{url}'>#{url}</a>".html_safe
+      # rubocop:enable Rails/OutputSafety
+    else
+      flash.delete(:notice)
+      flash[:alert] = "User does not have an email authentication option or does not exist."
     end
   end
 
-  def require_no_or_admin_authentication
+  private def require_no_or_admin_authentication
     return if current_user.try(:admin?) # allow admins
     require_no_authentication
   end

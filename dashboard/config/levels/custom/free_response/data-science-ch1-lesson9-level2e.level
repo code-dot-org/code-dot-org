@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-23T17:25:54.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Dataset 5: Areas Cleaned Each Day Over 1 Month",
+    "display_name": "Dataset #5",
+    "long_instructions": "####This dataset recorded which area of the room Micah cleaned or straightened up each day over one month.\r\n\r\n![](https://images.code.org/c04bb7641bc31c5a3223b421f116181d-image-1721325127418.png)\r\n\r\n####Do This\r\n#####1. Click on the link below to open up Dataset #5 in CODAP.\r\n#####2. Follow the instructions in your activity guide to create the desired visualization.\r\n#####3. Discuss and answer the questions in your activity guide with your partner.\r\n\r\n###[Dataset #5](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FI725LgwpBJS2EL8ItI1i%2Ffile.json )\r\n",
+    "bubble_choice_description": "What areas did Micah clean each day over one month?",
+    "thumbnail_url": "https://images.code.org/2c4ca629869588e1a90edff036707733-number-5.png",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "\r\n![](https://images.code.org/1188382cb6306104fa9ed895933944f3-image-1721762849034.png)"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-23 17:25:59 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-23 19:27:37 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

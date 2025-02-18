@@ -1,12 +1,11 @@
-import trackEvent from '../util/trackEvent';
 import {
   getChannelIdFromUrl,
-  userAlreadyReportedAbuse
+  userAlreadyReportedAbuse,
 } from '@cdo/apps/reportAbuse';
 
-export const initHamburger = function() {
-  $(document).ready(function() {
-    $('#hamburger-icon').click(function(e) {
+export const initHamburger = function () {
+  $(document).ready(function () {
+    $('#hamburger-icon').click(function (e) {
       $(this).toggleClass('active');
       $('#hamburger').removeClass('user-is-tabbing');
       $('#help-button').removeClass('user-is-tabbing');
@@ -16,7 +15,7 @@ export const initHamburger = function() {
 
     // allows users to toggle help menu by pressing return
     // while tabbing through elements
-    $('#hamburger').on('keypress', function(e) {
+    $('#hamburger').on('keypress', function (e) {
       if (
         e.type === 'keypress' &&
         e.which === 13 &&
@@ -29,7 +28,7 @@ export const initHamburger = function() {
       }
     });
 
-    $(document).on('keypress keydown click', function(e) {
+    $(document).on('keypress keydown click', function (e) {
       var hamburger = $('#hamburger');
 
       // If we didn't click the hamburger itself, and also nothing inside it,
@@ -60,22 +59,18 @@ export const initHamburger = function() {
       }
     });
 
-    $('.hamburger-expandable-item').each(function() {
-      $(this).on('keypress click', function(e) {
+    $('.hamburger-expandable-item').each(function () {
+      $(this).on('keypress click', function (e) {
         if ((e.type === 'keypress' && e.which === 13) || e.type === 'click') {
           $('#' + $(this).attr('id') + '-items').slideToggle();
-          $(this)
-            .find('.arrow-down')
-            .toggle();
-          $(this)
-            .find('.arrow-up')
-            .toggle();
+          $(this).find('.arrow-down').toggle();
+          $(this).find('.arrow-up').toggle();
           e.preventDefault();
         }
       });
     });
 
-    $('#help-icon').click(function(e) {
+    $('#help-icon').click(function (e) {
       $(this).toggleClass('active');
       $('#hamburger').removeClass('user-is-tabbing');
       $('#help-button').removeClass('user-is-tabbing');
@@ -85,33 +80,12 @@ export const initHamburger = function() {
 
     // allows users to toggle help menu by pressing return
     // while tabbing through elements
-    $('#help-button').on('keypress', function(e) {
+    $('#help-button').on('keypress', function (e) {
       if (e.type === 'keypress' && e.which === 13) {
         $(this).toggleClass('active');
         $('#help-button #help-contents').slideToggle();
         e.preventDefault();
       }
-    });
-
-    $('#help-icon #report-bug').click(function() {
-      trackEvent('help_ui', 'report-bug', 'hamburger');
-    });
-
-    $('#help-icon #support').click(function() {
-      trackEvent('help_ui', 'support', 'hamburger');
-    });
-
-    // This item is not in the hamburger, but actually in the studio footer.
-    $('.footer #support').click(function() {
-      trackEvent('help_ui', 'support', 'studio_footer');
-    });
-
-    // This item is not in the hamburger, but actually in the pegasus footers for
-    // desktop and mobile.
-    $('#pagefooter #support').each(function() {
-      $(this).click(function() {
-        trackEvent('help_ui', 'support', 'studio_footer');
-      });
     });
 
     const channelId = getChannelIdFromUrl(location.href);

@@ -1,9 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
-import sinon from 'sinon';
 import commonI18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ModelManagerDialog', () => {
   afterEach(() => {
@@ -27,7 +29,7 @@ describe('ModelManagerDialog', () => {
       // Ensure there are no models.
       wrapper.setState({
         isModelListPending: false,
-        models: []
+        models: [],
       });
 
       // Get the main modal.
@@ -44,7 +46,7 @@ describe('ModelManagerDialog', () => {
         aiTrainedModels: 'i18n-header',
         import: 'i18n-import',
         importingWithEllipsis: 'i18n-importing',
-        delete: 'i18n-delete'
+        delete: 'i18n-delete',
       };
 
       for (const key in i18n) {
@@ -65,18 +67,18 @@ describe('ModelManagerDialog', () => {
         isModelListPending: false,
         selectedModel: {
           id: '0',
-          name: 'Model 1'
+          name: 'Model 1',
         },
         models: [
           {
             id: '0',
-            name: 'Model 1'
+            name: 'Model 1',
           },
           {
             id: '1',
-            name: 'Model 2'
-          }
-        ]
+            name: 'Model 2',
+          },
+        ],
       });
 
       // Get the main modal.
@@ -98,7 +100,7 @@ describe('ModelManagerDialog', () => {
         aiTrainedModelsDeleteModelMessage: 'i18n-delete-message',
         no: 'i18n-no',
         delete: 'i18n-delete',
-        deletingWithEllipsis: 'i18n-deleting'
+        deletingWithEllipsis: 'i18n-deleting',
       };
 
       for (const key in i18n) {
@@ -131,7 +133,7 @@ describe('ModelManagerDialog', () => {
 
     it('is used within the delete confirmation modal to display the delete model failure message', () => {
       let i18n = {
-        aiTrainedModelsDeleteModelFailed: 'i18n-delete-fail'
+        aiTrainedModelsDeleteModelFailed: 'i18n-delete-fail',
       };
 
       for (const key in i18n) {
@@ -158,18 +160,18 @@ describe('ModelManagerDialog', () => {
         isModelListPending: false,
         selectedModel: {
           id: '0',
-          name: 'Model 1'
+          name: 'Model 1',
         },
         models: [
           {
             id: '0',
-            name: 'Model 1'
+            name: 'Model 1',
           },
           {
             id: '1',
-            name: 'Model 2'
-          }
-        ]
+            name: 'Model 2',
+          },
+        ],
       });
 
       // Get the delete confirm modal.
@@ -183,7 +185,7 @@ describe('ModelManagerDialog', () => {
       let headers = {'Content-Type': 'application/json'};
       let response = JSON.stringify({
         id: '0',
-        status: 'failure'
+        status: 'failure',
       });
 
       lastRequest.respond(200, headers, response);

@@ -9,3 +9,5 @@ markdown <<MARKDOWN
 Which of the following BEST describes how protocols on the Internet (e.g. IP, TCP, HTTP) make use of abstraction to accomplish their respective purposes?
 
 MARKDOWN
+
+allow_multiple_attempts true

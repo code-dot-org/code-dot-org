@@ -1,0 +1,18 @@
+{
+  "tables": [
+    {
+      "name": "100 Birds of the World",
+      "docUrl": "https://studio.code.org/data_docs/100-birds/",
+      "current": false,
+      "published": true,
+      "description": "Data and images about 100 different species of birds around the world"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Animals",
+      "datasets": ["100 Birds of the World"],
+      "published": true
+    }
+  ]
+}

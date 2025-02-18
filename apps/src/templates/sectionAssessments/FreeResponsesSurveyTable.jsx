@@ -1,31 +1,33 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import i18n from '@cdo/locale';
-import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
+
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
 
 export const COLUMNS = {
-  RESPONSE: 0
+  RESPONSE: 0,
 };
 
 const freeResponsesDataPropType = PropTypes.shape({
-  response: PropTypes.string
+  response: PropTypes.string,
 });
 
 class FreeResponsesSurveyTable extends Component {
   static propTypes = {
-    freeResponses: PropTypes.arrayOf(freeResponsesDataPropType)
+    freeResponses: PropTypes.arrayOf(freeResponsesDataPropType),
   };
 
   state = {
     [COLUMNS.RESPONSE]: {
       direction: 'desc',
-      position: 0
-    }
+      position: 0,
+    },
   };
 
   getSortingColumns = () => {
@@ -39,10 +41,10 @@ class FreeResponsesSurveyTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -63,13 +65,13 @@ class FreeResponsesSurveyTable extends Component {
         property: 'response',
         header: {
           label: i18n.response(),
-          props: {style: tableLayoutStyles.headerCell}
+          props: {style: tableLayoutStyles.headerCell},
         },
         cell: {
           formatters: [this.studentResponseColumnFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
-      }
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
     ];
     return dataColumns;
   };
@@ -87,7 +89,7 @@ class FreeResponsesSurveyTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(this.props.freeResponses);
 
     return (
@@ -101,8 +103,8 @@ class FreeResponsesSurveyTable extends Component {
 
 const styles = {
   noResponse: {
-    color: color.lighter_gray
-  }
+    color: color.lighter_gray,
+  },
 };
 
 export default FreeResponsesSurveyTable;

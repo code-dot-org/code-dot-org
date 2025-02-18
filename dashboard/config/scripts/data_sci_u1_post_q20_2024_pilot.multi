@@ -1,0 +1,15 @@
+name 'Data Sci U1 Post Q20_2024-pilot'
+
+question 'In what scenario would using a heat map be more advantageous than other types of visualizations, and why?'
+
+right 'When you need to compare categorical data across multiple categories, as heat maps can show intensity or frequency effectively.'
+wrong 'When showing the distribution of a single variable over time, as it provides a detailed temporal view.'
+wrong 'When displaying proportions of a whole, as it clearly shows part-to-whole relationships.'
+wrong 'When illustrating relationships between two continuous variables, as it shows correlation patterns clearly.'
+
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+
+MARKDOWN

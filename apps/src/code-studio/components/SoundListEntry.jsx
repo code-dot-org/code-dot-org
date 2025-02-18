@@ -1,8 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
+import firehoseClient from '@cdo/apps/metrics/firehose';
+
 import * as color from '../../util/color';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * Component for a single sound tile in the Sound Library.
@@ -13,7 +15,7 @@ class SoundListEntry extends React.Component {
     assetChosen: PropTypes.func.isRequired,
     soundMetadata: PropTypes.object.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    soundsRegistry: PropTypes.object.isRequired
+    soundsRegistry: PropTypes.object.isRequired,
   };
 
   state = {isPlaying: false};
@@ -48,7 +50,7 @@ class SoundListEntry extends React.Component {
           study: 'sound-dialog-2',
           study_group: 'library-tab',
           event: 'play-library-sound',
-          data_json: this.props.soundMetadata.sourceUrl
+          data_json: this.props.soundMetadata.sourceUrl,
         },
         {includeUserId: true}
       );
@@ -59,7 +61,7 @@ class SoundListEntry extends React.Component {
             this.setState({isPlaying: false});
           }
           this.props.soundsRegistry.muteURLs();
-        }
+        },
       });
     }
   };
@@ -107,31 +109,31 @@ const styles = {
     margin: 5,
     padding: 6,
     border: 'solid 0px',
-    borderRadius: 5
+    borderRadius: 5,
   },
   selected: {
-    backgroundColor: color.lighter_purple
+    backgroundColor: color.lighter_purple,
   },
   notSelected: {
-    backgroundColor: color.white
+    backgroundColor: color.white,
   },
   icon: {
     float: 'left',
-    padding: '6px 10px 6px 2px'
+    padding: '6px 10px 6px 2px',
   },
   metadata: {
     float: 'left',
     width: 175,
     overflow: 'hidden',
-    textOverflow: 'ellipsis'
+    textOverflow: 'ellipsis',
   },
   soundName: {
-    fontSize: 14
+    fontSize: 14,
   },
   time: {
     color: color.charcoal,
-    fontSize: 11
-  }
+    fontSize: 11,
+  },
 };
 
 export default Radium(SoundListEntry);
@@ -139,7 +141,7 @@ export default Radium(SoundListEntry);
 // Adapted from: http://stackoverflow.com/questions/6312993/javascript-seconds-to-time-string-with-format-hhmmss
 // Convert a number, numSeconds, into a string formatted as MM:SS or "Less than 1 second"
 // if the time is 0 seconds
-const getTimeString = function(numSeconds) {
+const getTimeString = function (numSeconds) {
   const sec_num = parseInt(numSeconds, 10);
   const hours = Math.floor(sec_num / 3600);
   let minutes = Math.floor((sec_num - hours * 3600) / 60);

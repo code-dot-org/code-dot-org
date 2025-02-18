@@ -1,26 +1,27 @@
 import React from 'react';
-import MiniViewTopRow from './MiniViewTopRow';
-import progress from '@cdo/apps/code-studio/progressRedux';
 import {Provider} from 'react-redux';
+
+import progress from '@cdo/apps/code-studio/progressRedux';
 import {reduxStore} from '@cdo/storybook/decorators';
+
+import MiniViewTopRow from './MiniViewTopRow';
 
 const initialState = {
   progress: {
     lessonGroups: [],
     lessons: [
       {
-        levels: []
-      }
+        levels: [],
+      },
     ],
     focusAreaLessonIds: [],
     isSummaryView: false,
-    deeperLearningCourse: false
-  }
+    deeperLearningCourse: false,
+  },
 };
 
 export default {
-  title: 'MiniViewTopRow',
-  component: MiniViewTopRow
+  component: MiniViewTopRow,
 };
 
 // Template
@@ -34,5 +35,5 @@ const Template = args => (
 
 export const Default = Template.bind({});
 Default.args = {
-  scriptName: 'course1'
+  scriptName: 'course1',
 };

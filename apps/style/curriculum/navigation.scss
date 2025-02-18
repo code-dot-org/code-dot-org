@@ -2,10 +2,11 @@
 @import "font";
 
 .nav-bar {
+  @include main-font-bold;
+
   margin-right: 5px;
   min-width: 200px;
   font-size: 14px;
-  font-family: $gotham-extra-bold;
 
   .category {
     padding-left: 10px;

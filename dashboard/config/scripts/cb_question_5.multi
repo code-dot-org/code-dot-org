@@ -1,25 +1,22 @@
 name 'CB_Question_5'
-encrypted 'pUdZupRMxlew6j8tjgwfzR/1x6npdaY9vhH4vhxBmW9UG82qx2c5S+3Gd7fq
-4W80yWfX97four5/YS7SmbiZokIW8yZG48LyIJKbsiUt/fJIBOeS8fx/1EuT
-X8t3r+XUNF6wzQPlJNzlQDuNU26RTs/RpC+I8zH8JJ6fW2moGxTcWfFjD6H/
-fDipXIYOKor4h1mEK6KOcFtyWQUYtkfPpChwLZIqB++cbn67nFTwGJD3EkCA
-6+5IyC9Xib0P5LyT+MtvYfTcBjm5T7foVRIfDexieZTgxbXA8wwmvjoQNHXL
-f2Q77L3na2/yaI+zMZE5NQAfPFel+iimkGZ5uOiga4Jw+ii4JNytx93L5jYG
-/h+LhGMa1h1E1zwK8lXBSHsx7mVIOdlGMRcn3P663YkrgX+M50JN/wWVhGYs
-o3+JT5Ce4dEiPiICWCVnECgL4lZWdoCSFHqDM0jUA3kh68ksm2Z8e00gxELd
-ck7VSceVZTCvQD0xvF/yN0iPbxXZrt+Gp+ZKr6HHiFAaRfgs/3szHOqRrMG4
-oXXci4GCi/VIcvT2NvdvfkhfWL/8blSgXpSAbRKGKATrPwApFoxcnMvc5RJm
-dJ2IZe9gjv7ZwLLlZkrX5pA9u7K6Scxtt2/REItALrCdIiCCZtLHXgp1TwB/
-390jT/SUah8kqJYqkq0wtm2CmYxPwrgPoMYb5fwGpeEDosALzMyKD9RFT43e
-4HV2GO0KAsapEapuHHo0B5MYzqq2nkn3sWsneYMFQlXCF2BlsXa2vn6N/Asb
-Kt1ZF8zX6+EywGu760A5CU6eZcNlPf4sIc6YPBTwJYqxdqHGyTeWjnjqKlBM
-AnWzFfLxLbumyZ1hPfyDo5FStC12EBtUfnd75ZoIy25zHwKSHR+YCEn5JNa3
-s5Op4QMvek7Zx24OMUN7gjxjqpF1LCuGEYvKwYth4LG51Qg/0i6190ks286u
-355BCCdZUuRFOLeQ9W/6cEAQGCWMIpZiF65xgwrNBu9DOXQ+VGEtNYR0Rej0
-dI9NhpczuKj8GirE6Rhsk7XppHrYlyJl0Ib1DeOybu3ozXhtTRp46drt2gHm
-74LYMfRRuKIJMVakOMWYQORPi7BHGNlsP2JbtyZDVDXxeAQwFO4Lvw8NxPFa
-Rba55wu1BULz2LA5eAP2q8FxRO0CNDzHXKE2+5vYmWjBgtjkm1Ym50GrBVRJ
-AdoN+yp6zqvs0StCU1BgZKzARvTvPE7ZRIt8KCpCT7nFzPGKLDwmHtAT3edl
-ymxH5kQisOE4V2XSAatw46gB5QrLIon+VLwi+tDKBBtNJHqIH5iDHWykr4pQ
-m1Rdfyg+pKDZ71blWs5v9MeikILI21ls44pcZEPA0FkfLA==
-'
+height '160'
+layout 'wrap'
+
+right 'https://images.code.org/8ff706d9e361250b48562ee85868062e-image-1461450837040.PNG'
+wrong 'https://images.code.org/43aabf471cc0e6d71145e6d25b73f311-image-1461450860910.PNG'
+wrong 'https://images.code.org/9af0bf7af6603aa6e849fb9644f4e294-image-1461450901827.PNG'
+wrong 'https://images.code.org/4a158d464dcaf49e4d0d7a93a776a9ce-image-1461450922059.PNG'
+
+markdown <<MARKDOWN
+The following question uses a robot in a grid of squares. The robot is represented as a triangle, which is initially in the bottom left square of the grid and facing right.
+
+<img src="https://images.code.org/25690ccf4ff3a20e906bae05b9496b4b-image-1461450623860.PNG" width="150">
+
+Consider the following code segment, which moves the robot in the grid.
+
+<img src="https://images.code.org/f8b49bb48e4a98168c048a7b460dc1bd-image-1461450698655.PNG" width="250">
+
+Which of the following shows the location of the robot after running the code segment?
+MARKDOWN
+
+allow_multiple_attempts true

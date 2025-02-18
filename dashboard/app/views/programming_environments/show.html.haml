@@ -1,5 +1,5 @@
 %link{href: asset_path('css/curriculum_navigation.css'), rel: 'stylesheet', type: 'text/css'}
-%script{src: webpack_asset_path('js/blockly.js')}
+%script{src: webpack_asset_path('js/googleblockly.js')}
 %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
 %script{src: webpack_asset_path('js/programming_environments/show.js'), data: {programmingEnvironment: @programming_environment.summarize_for_show.to_json, customBlocksConfig: Block.for(@programming_environment.block_pool_name).to_json, categoriesForNavigation: @programming_environment_categories.to_json}}
 #container

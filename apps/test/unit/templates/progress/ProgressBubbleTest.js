@@ -1,19 +1,20 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
-import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import color from '@cdo/apps/util/color';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
   BasicBubble,
   BubbleLink,
   BubbleSize,
-  BubbleShape
+  BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import color from '@cdo/apps/util/color';
 import * as utils from '@cdo/apps/utils';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const defaultProps = {
   level: {
@@ -24,9 +25,9 @@ const defaultProps = {
     url: '/foo/bar',
     name: 'level_name',
     progression: 'progression_name',
-    progressionDisplayName: 'progression_display_name'
+    progressionDisplayName: 'progression_display_name',
   },
-  disabled: false
+  disabled: false,
 };
 
 const fakeSectionId = 123456;
@@ -43,7 +44,7 @@ function getBasicBubble(
   const props = {
     ...defaultProps,
     ...propOverrides,
-    level: {...defaultProps.level, ...levelOverrides, status: status}
+    level: {...defaultProps.level, ...levelOverrides, status: status},
   };
   const wrapper = mount(<ProgressBubble {...props} />);
   return wrapper.find(BasicBubble);
@@ -71,7 +72,7 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          url: ''
+          url: '',
         }}
       />
     );
@@ -91,7 +92,7 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          letter: 'a'
+          letter: 'a',
         }}
       />
     );
@@ -188,7 +189,7 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          name: ''
+          name: '',
         }}
       />
     );
@@ -206,7 +207,7 @@ describe('ProgressBubble', () => {
           ...defaultProps.level,
           display_name: 'Display Name',
           name: 'display_name',
-          isSublevel: true
+          isSublevel: true,
         }}
       />
     );
@@ -228,7 +229,7 @@ describe('ProgressBubble', () => {
         smallBubble={false}
         level={{
           ...defaultProps.level,
-          teacherFeedbackReviewState: ReviewStates.keepWorking
+          teacherFeedbackReviewState: ReviewStates.keepWorking,
         }}
       />
     );
@@ -245,7 +246,7 @@ describe('ProgressBubble', () => {
         smallBubble={true}
         level={{
           ...defaultProps.level,
-          teacherFeedbackReviewState: ReviewStates.keepWorking
+          teacherFeedbackReviewState: ReviewStates.keepWorking,
         }}
       />
     );
@@ -260,7 +261,7 @@ describe('ProgressBubble', () => {
         level={{
           ...defaultProps.level,
           kind: LevelKind.assessment,
-          teacherFeedbackReviewState: ReviewStates.keepWorking
+          teacherFeedbackReviewState: ReviewStates.keepWorking,
         }}
       />
     );
@@ -276,7 +277,7 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.assessment
+          kind: LevelKind.assessment,
         }}
       />
     );
@@ -292,7 +293,7 @@ describe('ProgressBubble', () => {
         smallBubble={true}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.assessment
+          kind: LevelKind.assessment,
         }}
       />
     );
@@ -322,18 +323,21 @@ describe('ProgressBubble', () => {
 
   describe('href', () => {
     it('links to the level url', () => {
-      sinon.stub(utils, 'currentLocation').returns({search: ''});
+      jest
+        .spyOn(utils, 'currentLocation')
+        .mockClear()
+        .mockReturnValue({search: ''});
       const wrapper = mount(
         <ProgressBubble
           {...defaultProps}
           level={{
             ...defaultProps.level,
-            url: '/my/test/url'
+            url: '/my/test/url',
           }}
         />
       );
       assert.equal(wrapper.find('a').prop('href'), '/my/test/url');
-      utils.currentLocation.restore();
+      utils.currentLocation.mockRestore();
     });
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
@@ -362,20 +366,22 @@ describe('ProgressBubble', () => {
     });
 
     it('preserves the queryparams of the current location', () => {
-      sinon
-        .stub(utils, 'currentLocation')
-        .returns({search: `section_id=${fakeSectionId}&user_id=559`});
+      jest
+        .spyOn(utils, 'currentLocation')
+        .mockClear()
+        .mockReturnValue({search: `section_id=${fakeSectionId}&user_id=559`});
       const wrapper = mount(<ProgressBubble {...defaultProps} />);
       const href = wrapper.find('a').prop('href');
       assert.include(href, `section_id=${fakeSectionId}`);
       assert.include(href, 'user_id=559');
-      utils.currentLocation.restore();
+      utils.currentLocation.mockRestore();
     });
 
     it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
-      sinon
-        .stub(utils, 'currentLocation')
-        .returns({search: 'section_id=212&user_id=559'});
+      jest
+        .spyOn(utils, 'currentLocation')
+        .mockClear()
+        .mockReturnValue({search: 'section_id=212&user_id=559'});
       const wrapper = mount(
         <ProgressBubble {...defaultProps} selectedSectionId={fakeSectionId} />
       );
@@ -383,7 +389,7 @@ describe('ProgressBubble', () => {
       assert.notInclude(href, 'section_id=212');
       assert.include(href, `section_id=${fakeSectionId}`);
       assert.include(href, 'user_id=559');
-      utils.currentLocation.restore();
+      utils.currentLocation.mockRestore();
     });
   });
 

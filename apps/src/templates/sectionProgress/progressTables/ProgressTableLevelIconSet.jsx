@@ -1,22 +1,24 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {levelType} from '@cdo/apps/templates/progress/progressTypes';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from '@cdo/apps/util/color';
+import React from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
+import color from '@cdo/apps/util/color';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import ProgressTableLevelSpacer from './ProgressTableLevelSpacer';
 
 const styles = {
   icon: {
     color: color.charcoal,
-    fontSize: 20
+    fontSize: 20,
   },
   unpluggedPlaceholderContainer: {
     height: 0,
-    opacity: 0
-  }
+    opacity: 0,
+  },
 };
 
 /**
@@ -56,7 +58,7 @@ function LevelIcon({icon, isUnplugged}) {
 }
 LevelIcon.propTypes = {
   icon: PropTypes.string.isRequired,
-  isUnplugged: PropTypes.bool
+  isUnplugged: PropTypes.bool,
 };
 
 /**
@@ -75,11 +77,11 @@ export default function ProgressTableLevelIconSet({levels}) {
     return {
       node: icon,
       nodeStyle: styles.icon,
-      sublevelCount: level.sublevels?.length
+      sublevelCount: level.sublevels?.length,
     };
   });
   return <ProgressTableLevelSpacer items={items} />;
 }
 ProgressTableLevelIconSet.propTypes = {
-  levels: PropTypes.arrayOf(levelType)
+  levels: PropTypes.arrayOf(levelType),
 };

@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 export default function JobBoard({jobsByDepartment}) {
   const renderDepartment = department => {
@@ -33,5 +33,5 @@ export default function JobBoard({jobsByDepartment}) {
 }
 
 JobBoard.propTypes = {
-  jobsByDepartment: PropTypes.object.isRequired
+  jobsByDepartment: PropTypes.object.isRequired,
 };

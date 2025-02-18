@@ -1,7 +1,8 @@
 /** List item placeholder for adding a new item */
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import style from './new-list-item.module.scss';
 
 /**
@@ -11,7 +12,7 @@ import style from './new-list-item.module.scss';
 class NewListItem extends React.Component {
   static propTypes = {
     label: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   };
 
   render() {

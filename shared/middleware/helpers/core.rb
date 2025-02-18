@@ -2,7 +2,7 @@ def dont_cache
   cache_control(:private, :must_revalidate, max_age: 0)
 end
 
-def cache_for(seconds, proxy_seconds=nil)
+def cache_for(seconds, proxy_seconds = nil)
   proxy_seconds ||= seconds / 2
   cache_control(:public, max_age: seconds, s_maxage: proxy_seconds)
 end
@@ -37,8 +37,8 @@ def not_authorized
   halt(401, "Not authorized\n")
 end
 
-def forbidden
-  halt(403, "Forbidden\n")
+def forbidden(msg = "Forbidden\n")
+  halt(403, msg)
 end
 
 def not_found

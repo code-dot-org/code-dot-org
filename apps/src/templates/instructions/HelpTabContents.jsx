@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import VideoThumbnail from '../VideoThumbnail';
+
 import {videoDataShape} from '../types';
+import VideoThumbnail from '../VideoThumbnail';
+
 import NetworkResourceLink from './NetworkResourceLink';
 
 export default class HelpTabContents extends Component {
@@ -9,7 +11,7 @@ export default class HelpTabContents extends Component {
     videoData: videoDataShape,
     mapReference: PropTypes.string,
     referenceLinks: PropTypes.array,
-    openReferenceLinksInNewTab: PropTypes.bool
+    openReferenceLinksInNewTab: PropTypes.bool,
   };
 
   render() {
@@ -45,6 +47,6 @@ export default class HelpTabContents extends Component {
 
 const styles = {
   referenceArea: {
-    marginTop: 20
-  }
+    marginTop: 20,
+  },
 };

@@ -1,23 +1,28 @@
 /**
  * @overview Component for detailed view of a data table.
  */
-import TableControls from './TableControls';
-import {DataView, WarningType} from '../constants';
-import DataTable from './DataTable';
-import FirebaseStorage from '../firebaseStorage';
-import FontAwesome from '../../templates/FontAwesome';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {changeView, showWarning, tableType} from '../redux/data';
-import dataStyles from './data-styles.module.scss';
 import {connect} from 'react-redux';
-import TableDescription from './TableDescription';
-import classNames from 'classnames';
-import style from './data-table-view.module.scss';
+
 import msg from '@cdo/locale';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import {DataView, WarningType} from '../constants';
+import {changeView, showWarning, tableType} from '../redux/data';
+import {storageBackend} from '../storage';
+
+import DataTable from './DataTable';
+import {refreshCurrentDataView} from './loadDataForView';
+import TableControls from './TableControls';
+import TableDescription from './TableDescription';
+
+import dataStyles from './data-styles.module.scss';
+import style from './data-table-view.module.scss';
+
 const INITIAL_STATE = {
-  showDebugView: false
+  showDebugView: false,
 };
 
 class DataTableView extends React.Component {
@@ -33,7 +38,7 @@ class DataTableView extends React.Component {
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
-    onViewChange: PropTypes.func.isRequired
+    onViewChange: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -46,10 +51,11 @@ class DataTableView extends React.Component {
   }
 
   importCsv = (csvData, onComplete) => {
-    FirebaseStorage.importCsv(
+    storageBackend().importCsv(
       this.props.tableName,
       csvData,
       () => {
+        refreshCurrentDataView();
         this.setState(INITIAL_STATE);
         onComplete();
       },
@@ -65,18 +71,14 @@ class DataTableView extends React.Component {
   };
 
   exportCsv = () => {
-    const isSharedTable =
-      this.props.tableListMap[this.props.tableName] === tableType.SHARED;
-    const tableName = encodeURIComponent(this.props.tableName);
-    const channelId = isSharedTable ? 'shared' : Applab.channelId;
-    location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
+    location.href = storageBackend().exportCsvUrl(this.props.tableName);
   };
 
   /** Delete all rows, but preserve the columns. */
   clearTable = () => {
-    FirebaseStorage.clearTable(
+    storageBackend().clearTable(
       this.props.tableName,
-      () => {},
+      refreshCurrentDataView,
       msg => console.warn(msg)
     );
   };
@@ -99,13 +101,13 @@ class DataTableView extends React.Component {
       tableName,
       onViewChange,
       libraryManifest,
-      isRtl
+      isRtl,
     } = this.props;
     const visible = DataView.TABLE === view;
     const debugDataStyle = {
       ...{
-        display: this.state.showDebugView ? '' : 'none'
-      }
+        display: this.state.showDebugView ? '' : 'none',
+      },
     };
     const readOnly = tableListMap[tableName] === tableType.SHARED;
 
@@ -172,7 +174,7 @@ export default connect(
     tableRecords: state.data.tableRecords || [],
     tableName: state.data.tableName || '',
     tableListMap: state.data.tableListMap || {},
-    libraryManifest: state.data.libraryManifest || {}
+    libraryManifest: state.data.libraryManifest || {},
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
@@ -180,6 +182,6 @@ export default connect(
     },
     onViewChange(view) {
       dispatch(changeView(view));
-    }
+    },
   })
 )(DataTableView);

@@ -1,0 +1,12 @@
+name 'k5_ai_final_choice_level'
+display_name 'End of Module Project'
+description 'You have reached the end of the AI course. Choose a project to work on. The projects are ranked from Easy (🌶️) to Difficult (🌶️🌶️🌶️).'
+
+sublevels
+level 'k5_ai_final_choice_level_letter_to_principal'
+level 'k5_ai_final_choice_level_make_a_poster'
+level 'k5_ai_final_choice_level_share_your_voice'
+level 'k5_ai_final_choice_level_sprite_lab'
+level 'k5_ai_final_choice_level_poetry_lab'
+
+

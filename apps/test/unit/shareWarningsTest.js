@@ -1,15 +1,18 @@
-var testUtils = require('../util/testUtils');
-import {assert, expect} from '../util/reconfiguredChai';
+import * as utils from '@cdo/apps/utils';
+
+import {assert, expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 var ReactDOM = require('react-dom');
 var sinon = require('sinon');
 
 var shareWarnings = require('@cdo/apps/shareWarnings');
-import * as utils from '@cdo/apps/utils';
 
-describe('shareWarnings', function() {
+var testUtils = require('../util/testUtils');
+
+describe('shareWarnings', function () {
   testUtils.setExternalGlobals();
 
-  describe('checkSharedAppWarnings function', function() {
+  describe('checkSharedAppWarnings function', function () {
     beforeEach(() => {
       localStorage.removeItem('is13Plus');
       localStorage.removeItem('dataAlerts');
@@ -33,7 +36,7 @@ describe('shareWarnings', function() {
         dialog = checkSharedAppWarnings({
           channelId: 'some-channel',
           isSignedIn: false,
-          hasDataAPIs: () => true
+          hasDataAPIs: () => true,
         });
       });
 
@@ -53,7 +56,7 @@ describe('shareWarnings', function() {
         dialog.props.handleClose();
         dialog = checkSharedAppWarnings({
           channelId: 'some-channel',
-          isSignedIn: false
+          isSignedIn: false,
         });
         assert.isFalse(dialog.props.promptForAge);
       });
@@ -65,7 +68,7 @@ describe('shareWarnings', function() {
           channelId: 'some-channel',
           isSignedIn: false,
           isOwner: true,
-          hasDataAPIs: () => true
+          hasDataAPIs: () => true,
         });
         assert.isFalse(dialog.props.showStoreDataAlert);
       });
@@ -75,14 +78,14 @@ describe('shareWarnings', function() {
           channelId: 'some-channel',
           isSignedIn: false,
           isOwner: false,
-          hasDataAPIs: () => true
+          hasDataAPIs: () => true,
         });
         assert.isTrue(dialog.props.showStoreDataAlert);
         dialog.props.handleClose();
         dialog = checkSharedAppWarnings({
           channelId: 'some-channel',
           isSignedIn: false,
-          hasDataAPIs: () => true
+          hasDataAPIs: () => true,
         });
         assert.isFalse(dialog.props.showStoreDataAlert);
       });
@@ -92,7 +95,7 @@ describe('shareWarnings', function() {
         checkSharedAppWarnings({
           channelId: 'some-channel',
           isSignedIn: false,
-          onWarningsComplete
+          onWarningsComplete,
         });
         assert.isTrue(onWarningsComplete.calledOnce);
       });
@@ -102,7 +105,7 @@ describe('shareWarnings', function() {
         var dialog = checkSharedAppWarnings({
           channelId: 'some-channel',
           isSignedIn: false,
-          onTooYoung
+          onTooYoung,
         });
         assert.isFalse(onTooYoung.calledOnce);
         dialog.props.handleTooYoung();
@@ -114,7 +117,7 @@ describe('shareWarnings', function() {
           channelId: 'some-channel',
           hasDataAPIs: () => true,
           isSignedIn: true,
-          isTooYoung: true
+          isTooYoung: true,
         });
 
         expect(utils.navigateToHref).to.have.been.calledOnce;
@@ -127,7 +130,7 @@ describe('shareWarnings', function() {
           hasDataAPIs: () => true,
           isSignedIn: true,
           isTooYoung: true,
-          onTooYoung
+          onTooYoung,
         });
         expect(onTooYoung).to.have.been.calledOnce;
         expect(utils.navigateToHref).not.to.have.been.called;

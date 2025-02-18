@@ -1,6 +1,7 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
+require 'cdo/python_venv'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
@@ -12,7 +13,7 @@ namespace :lint do
 
   desc 'Lints Haml code with haml-lint.'
   timed_task_with_logging :haml do
-    RakeUtils.bundle_exec 'haml-lint dashboard pegasus'
+    RakeUtils.bundle_exec 'haml-lint dashboard pegasus shared'
   end
 
   desc 'Lints SCSS code with scss-lint.'
@@ -27,7 +28,7 @@ namespace :lint do
       # as apps dependencies by yarn.  Ensure they are up-to-date before
       # linting.
       ChatClient.log 'Installing <b>apps</b> dependencies...'
-      RakeUtils.npm_install
+      RakeUtils.yarn_install
 
       ChatClient.log 'Linting <b>apps</b> JavaScript...'
       RakeUtils.system 'npm run lint'
@@ -39,7 +40,15 @@ namespace :lint do
     end
   end
 
-  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript]
+  # lint python:
+  desc 'Lints Python code.'
+  timed_task_with_logging :python do
+    Dir.chdir(python_dir) do
+      PythonVenv.lint
+    end
+  end
+
+  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript, :python]
 end
 desc 'Lints all code.'
 timed_task_with_logging lint: ['lint:all']

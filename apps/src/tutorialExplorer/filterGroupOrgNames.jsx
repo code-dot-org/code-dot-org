@@ -3,15 +3,17 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import i18n from '@cdo/tutorialExplorer/locale';
+
 import FilterGroupContainer from './filterGroupContainer';
 import {TutorialsOrgName} from './util';
-import i18n from '@cdo/tutorialExplorer/locale';
 
 export default class FilterGroupOrgNames extends React.Component {
   static propTypes = {
     orgName: PropTypes.string.isRequired,
     uniqueOrgNames: PropTypes.arrayOf(PropTypes.string).isRequired,
-    onUserInput: PropTypes.func.isRequired
+    onUserInput: PropTypes.func.isRequired,
   };
 
   handleChangeOrgName = event => {
@@ -60,6 +62,6 @@ const styles = {
     width: '100%',
     marginTop: 10,
     height: 26,
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 };

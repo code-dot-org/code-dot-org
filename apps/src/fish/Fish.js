@@ -1,10 +1,14 @@
+import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FishView from './FishView';
 import {Provider} from 'react-redux';
-import {getStore} from '../redux';
-import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
+
+import {getStore} from '../redux';
+
+import FishView from './FishView';
 import fishMsg from './locale';
 
 /**
@@ -21,7 +25,7 @@ const MOBILE_PORTRAIT_WIDTH = 600;
  * An instantiable Fish class
  */
 
-const Fish = function() {
+const Fish = function () {
   this.skin = null;
   this.level = null;
 
@@ -32,14 +36,14 @@ const Fish = function() {
 /**
  * Inject the studioApp singleton.
  */
-Fish.prototype.injectStudioApp = function(studioApp) {
+Fish.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
 };
 
 /**
  * Initialize this WebLab instance.  Called on page load.
  */
-Fish.prototype.init = function(config) {
+Fish.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error('Fish requires a StudioApp');
   }
@@ -83,7 +87,7 @@ Fish.prototype.init = function(config) {
     channelId: config.channel,
     noVisualization: true,
     visualizationInWorkspace: true,
-    isProjectLevel: !!config.level.isProjectLevel
+    isProjectLevel: !!config.level.isProjectLevel,
   });
 
   ReactDOM.render(
@@ -95,7 +99,7 @@ Fish.prototype.init = function(config) {
 };
 
 // Called by the fish app when it wants to go to the next level.
-Fish.prototype.onContinue = function() {
+Fish.prototype.onContinue = function () {
   const onReportComplete = result => {
     this.studioApp_.onContinue();
   };
@@ -108,13 +112,14 @@ Fish.prototype.onContinue = function() {
     program: '',
     onComplete: result => {
       onReportComplete(result);
-    }
+    },
   });
 };
 
-Fish.prototype.initMLActivities = function() {
-  const {mode} = this.level;
+Fish.prototype.initMLActivities = function () {
+  const {mode, guides} = this.level;
   const onContinue = this.onContinue.bind(this);
+  const textToSpeechLocale = queryParams('tts');
 
   // Set up initial state
   const canvas = document.getElementById('activity-canvas');
@@ -129,10 +134,12 @@ Fish.prototype.initMLActivities = function() {
     canvas,
     backgroundCanvas,
     appMode: mode,
+    guides,
+    textToSpeechLocale,
     onContinue,
     registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
     playSound: this.studioApp_.playAudio.bind(this.studioApp_),
-    i18n: fishMsg
+    i18n: fishMsg,
   });
 };
 

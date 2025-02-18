@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 import FormController from '../form_components/FormController';
+
 import PreWorkshopQuestions from './PreWorkshopQuestions';
 
 export default class PreWorkshopSurvey extends FormController {
@@ -18,7 +19,7 @@ export default class PreWorkshopSurvey extends FormController {
     return {
       ...super.getPageProps(),
       workshopDate: this.props.workshopDate,
-      unitsAndLessons: this.props.unitsAndLessons
+      unitsAndLessons: this.props.unitsAndLessons,
     };
   }
 
@@ -28,7 +29,7 @@ export default class PreWorkshopSurvey extends FormController {
   serializeFormData() {
     return {
       ...super.serializeFormData(),
-      pd_enrollment_code: this.props.pdEnrollmentCode
+      pd_enrollment_code: this.props.pdEnrollmentCode,
     };
   }
 
@@ -45,5 +46,5 @@ PreWorkshopSurvey.propTypes = {
   ...FormController.propTypes,
   pdEnrollmentCode: PropTypes.string.isRequired,
   workshopDate: PropTypes.string.isRequired,
-  unitsAndLessons: PropTypes.array.isRequired
+  unitsAndLessons: PropTypes.array.isRequired,
 };

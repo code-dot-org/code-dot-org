@@ -3,3 +3,4 @@ question 'Is this computer science course required for you?'
 right 'Yes'
 right 'No'
 right 'I don\'t know'
+allow_multiple_attempts true

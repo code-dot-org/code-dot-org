@@ -1,6 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {Row, Col, Panel} from 'react-bootstrap';
+import React from 'react';
+import {Row, Col, Panel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 /**
  * Simple wrapper component for a chunk of related content when
@@ -9,7 +9,7 @@ import {Row, Col, Panel} from 'react-bootstrap';
 export default class WorkshopPanel extends React.Component {
   static propTypes = {
     header: PropTypes.node,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   render() {

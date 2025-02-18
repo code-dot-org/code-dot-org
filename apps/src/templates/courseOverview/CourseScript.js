@@ -1,22 +1,25 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
-import Button from '../Button';
-import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
-import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
-import Assigned from '@cdo/apps/templates/Assigned';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
 import {
   isScriptHiddenForSection,
-  toggleHiddenScript
+  toggleHiddenScript,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import MultipleAssignButton from '../MultipleAssignButton';
+
+import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 
 class CourseScript extends Component {
   static propTypes = {
@@ -29,13 +32,29 @@ class CourseScript extends Component {
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
     showAssignButton: PropTypes.bool,
+    participantAudience: PropTypes.string,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
     hiddenLessonState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+  };
+
+  state = {
+    confirmationMessageOpen: false,
+  };
+
+  onReassignConfirm = () => {
+    this.setState({
+      confirmationMessageOpen: true,
+    });
+    setTimeout(() => {
+      this.setState({
+        confirmationMessageOpen: false,
+      });
+    }, 15000);
   };
 
   onClickHiddenToggle = value => {
@@ -49,8 +68,8 @@ class CourseScript extends Component {
         script_id: id,
         data_json: JSON.stringify({
           script_name: name,
-          section_id: selectedSectionId
-        })
+          section_id: selectedSectionId,
+        }),
       },
       {useProgressScriptId: false}
     );
@@ -71,8 +90,10 @@ class CourseScript extends Component {
       courseOfferingId,
       courseVersionId,
       sectionsForDropdown,
-      showAssignButton
+      showAssignButton,
+      participantAudience,
     } = this.props;
+    const {confirmationMessageOpen} = this.state;
 
     const isHidden = isScriptHiddenForSection(
       hiddenLessonState,
@@ -99,7 +120,7 @@ class CourseScript extends Component {
       <div
         style={{
           ...styles.main,
-          ...(isHidden && styles.hidden)
+          ...(isHidden && styles.hidden),
         }}
         className="uitest-CourseScript"
         data-visibility={isHidden ? 'hidden' : 'visible'}
@@ -113,33 +134,34 @@ class CourseScript extends Component {
             <Button
               __useDeprecatedTag
               text={i18n.goToUnit()}
-              href={`/s/${name}${location.search}`}
+              href={
+                location.pathname.includes('teacher_dashboard')
+                  ? `/teacher_dashboard/sections/${selectedSectionId}/unit/${name}`
+                  : `/s/${name}${location.search}`
+              }
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />
             {isAssigned && viewAs === ViewType.Participant && <Assigned />}
-            {isAssigned &&
-              viewAs === ViewType.Instructor &&
-              selectedSectionId && (
-                <UnassignSectionButton
-                  courseName={title}
-                  sectionId={selectedSectionId}
-                  buttonLocationAnalytics={'course-overview-unit'}
-                />
-              )}
-            {!isAssigned &&
-              viewAs === ViewType.Instructor &&
+            {confirmationMessageOpen && (
+              <span style={styles.confirmText}>{i18n.assignSuccess()}</span>
+            )}
+            {viewAs === ViewType.Instructor &&
               showAssignButton &&
               selectedSection && (
-                <AssignButton
-                  sectionId={selectedSection.id}
-                  scriptId={id}
-                  courseId={courseId}
-                  courseOfferingId={courseOfferingId}
-                  courseVersionId={courseVersionId}
-                  assignmentName={title}
-                  sectionName={selectedSection.name}
-                />
+                <div className={styles.assignButton}>
+                  <MultipleAssignButton
+                    courseOfferingId={courseOfferingId}
+                    courseVersionId={courseVersionId}
+                    courseId={courseId}
+                    scriptId={id}
+                    assignmentName={title}
+                    reassignConfirm={this.onReassignConfirm}
+                    isAssigningCourse={false}
+                    isStandAloneUnit={false}
+                    participantAudience={participantAudience}
+                  />
+                </div>
               )}
           </span>
         </div>
@@ -165,18 +187,18 @@ const styles = {
     borderColor: color.border_gray,
     borderStyle: 'solid',
     borderRadius: 2,
-    marginBottom: 12
+    marginBottom: 12,
   },
   content: {
-    padding: 20
+    padding: 20,
   },
   description: {
     marginTop: 20,
-    marginBottom: 20
+    marginBottom: 20,
   },
   title: {
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif'
+    ...fontConstants['main-font-semi-bold'],
   },
   // TODO: share better with ProgressLesson
   hidden: {
@@ -185,12 +207,16 @@ const styles = {
     marginTop: 0,
     marginBottom: 12,
     marginLeft: 0,
-    marginRight: 0
+    marginRight: 0,
   },
   flex: {
     display: 'flex',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
+  confirmText: {
+    marginLeft: 5,
+    marginRight: 5,
+  },
 };
 export const UnconnectedCourseScript = CourseScript;
 
@@ -207,7 +233,7 @@ export default connect(
     hiddenLessonState: state.hiddenLesson,
     hasNoSections:
       state.teacherSections.sectionsAreLoaded &&
-      state.teacherSections.sectionIds.length === 0
+      state.teacherSections.sectionIds.length === 0,
   }),
   {toggleHiddenScript}
 )(CourseScript);

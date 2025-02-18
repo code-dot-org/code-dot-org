@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "你好世界：太空", body: "用角色和声音创建星际场景，让你说，\"你好世界！\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "创造一个真正摇滚的太阳系，在这个过程中学习音乐、天文学和编程！", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "星球大战", body: "学习编程机器人，在遥远的星系创造你自己的星球大战游戏。", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "在这个在线编程冒险中，你将带潜艇Subby通过水下挑战。", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

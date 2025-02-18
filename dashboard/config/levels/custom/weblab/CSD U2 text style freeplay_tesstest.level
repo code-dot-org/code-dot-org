@@ -1,0 +1,36 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2023-07-12T18:01:21.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "long_instructions": "# Add to your HTML Webpage\r\n\r\nUse your new knowledge to add to the HTML project you started in the HTML Web Page Mini-Project. The webpage you created for that lesson has been transferred below - add some CSS to it!",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "parent_level_id": 18346,
+    "name_suffix": "_tesstest",
+    "reference_links": [
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags"
+    ],
+    "map_reference": "/courses/csd-2022/guides/style-sheets",
+    "video_key": "csd_weblab_css_2",
+    "submittable": "false",
+    "encrypted": "false",
+    "display_name": "Add to your Web Page!",
+    "mini_rubric": "false",
+    "bubble_choice_description": "Add CSS to the web page you made for your HTML Mini-Project",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \"\\r\\n\"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "thumbnail_url": "https://images.code.org/43720c5e1c8367e30b7f1a2f8ef06af7-image-1562867963667.JPG",
+    "project_template_level_name": "CSD web html project template_tesstest",
+    "validation_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-07-12T18:01:21.148+00:00\",\"changed\":[\"cloned from \\\"CSD U2 text style freeplay_2023\\\"\"],\"cloned_from\":\"CSD U2 text style freeplay_2023\"}]"
+}]]></config>
+</Weblab>

@@ -25,16 +25,15 @@ env = {
 node.default['cdo-apps']['bundle_env'] = env
 directory(env['BUNDLE_APP_CONFIG']) {owner user; group user}
 
-# Export bundler environment to global config ($HOME/.bundle/config).
+# Export bundler environment to project root config ($HOME/$REPO/.bundle/config).
 # Used in case we run 'bundle' manually without the provided environment.
-# TODO disabled for now because it breaks cookbooks/ 'bundle install' from CI script.
-# directory("#{home}/.bundle") { owner user; group user }
-#
-# file "#{home}/.bundle/config" do
-#   owner user
-#   group user
-#   content env.to_yaml
-# end
+directory("#{root}/.bundle") {owner user; group user}
+
+file "#{root}/.bundle/config" do
+  owner user
+  group user
+  content env.to_yaml
+end
 
 execute 'bundle-install' do
   command 'bundle install'

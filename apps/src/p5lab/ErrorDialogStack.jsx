@@ -1,16 +1,18 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
 import PropTypes from 'prop-types';
 import React from 'react';
-import * as actions from './redux/errorDialogStack';
 import {connect} from 'react-redux';
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import msg from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import * as animationActions from './redux/animationList';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+
 import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import firehoseClient from '@cdo/apps/metrics/firehose';
+import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import msg from '@cdo/locale';
+
+import * as animationActions from './redux/animationList';
+import * as actions from './redux/errorDialogStack';
 
 /**
  * Renders error dialogs in sequence, given a stack of errors.
@@ -22,7 +24,7 @@ class ErrorDialogStack extends React.Component {
     dismissError: PropTypes.func.isRequired,
     deleteAnimation: PropTypes.func,
     animationList: PropTypes.object,
-    isSpriteLab: PropTypes.bool.isRequired
+    isSpriteLab: PropTypes.bool.isRequired,
   };
 
   handleDeleteChoice(key) {
@@ -35,8 +37,8 @@ class ErrorDialogStack extends React.Component {
         project_id: getCurrentId(),
         data_json: JSON.stringify({
           version: this.props.animationList.propsByKey[key].version,
-          animationName: this.props.animationList.propsByKey[key].name
-        })
+          animationName: this.props.animationList.propsByKey[key].name,
+        }),
       },
       {includeUserId: true}
     );
@@ -54,8 +56,8 @@ class ErrorDialogStack extends React.Component {
         project_id: getCurrentId(),
         data_json: JSON.stringify({
           version: this.props.animationList.propsByKey[key].version,
-          animationName: this.props.animationList.propsByKey[key].name
-        })
+          animationName: this.props.animationList.propsByKey[key].name,
+        }),
       },
       {includeUserId: true}
     );
@@ -124,17 +126,17 @@ export default connect(
     return {
       errors: state.errorDialogStack,
       animationList: state.animationList,
-      isSpriteLab: state.pageConstants.isBlockly
+      isSpriteLab: state.pageConstants.isBlockly,
     };
   },
   function propsFromDispatch(dispatch) {
     return {
-      dismissError: function() {
+      dismissError: function () {
         dispatch(actions.dismissError());
       },
-      deleteAnimation: function(key, isSpriteLab) {
+      deleteAnimation: function (key, isSpriteLab) {
         dispatch(animationActions.deleteAnimation(key, isSpriteLab));
-      }
+      },
     };
   }
 )(ErrorDialogStack);

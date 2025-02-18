@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import {assert} from './reconfiguredChai';
+
+import {assert} from './reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 /**
  * Uses jQuery to locate an element matching the given selector and check that
@@ -35,7 +36,7 @@ export function assertHidden(selector) {
  */
 export function assertOwnProperty(obj, propertyName) {
   assert(
-    obj.hasOwnProperty(propertyName),
+    Object.prototype.hasOwnProperty.call(obj, propertyName),
     'Expected ' +
       obj.constructor.name +
       " to have a property '" +

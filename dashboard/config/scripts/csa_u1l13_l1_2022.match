@@ -14,3 +14,4 @@ answer 'consists of a name and parameter list'
 
 question 'constructor signature'
 answer 'the first line of the constructor which includes the `public` keyword, the constructor name, and the values to specify when an object is created'
+allow_multiple_attempts true

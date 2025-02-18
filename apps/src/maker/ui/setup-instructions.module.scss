@@ -1,0 +1,30 @@
+@import 'color.scss';
+
+.listWithImage {
+  display: grid;
+  grid-template: 1fr / 2fr 1fr;
+  justify-items: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.imageContainer img {
+  max-height: 160px;
+}
+
+li p {
+  margin-bottom: 0;
+}
+
+.troubleshootList {
+  list-style-type: "⚠️ ";
+}
+
+figure {
+  margin: 10px;
+  margin-inline-start: 0;
+  padding: 8px;
+  border-radius: 4px;
+  background: $neutral_light;
+  border: 1px solid $neutral_dark20;
+}

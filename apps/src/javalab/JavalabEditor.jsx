@@ -1,5 +1,35 @@
+import {java} from '@codemirror/lang-java';
+import {EditorState, Compartment} from '@codemirror/state';
+import {EditorView} from '@codemirror/view';
+import classNames from 'classnames';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
+import {Tab, Nav, NavItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
+
+import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
+import {hasQueryParam} from '@cdo/apps/code-studio/utils';
+import {editorConfig} from '@cdo/apps/lab2/views/components/editor/editorConfig';
+import {
+  darkMode,
+  lightMode,
+} from '@cdo/apps/lab2/views/components/editor/editorThemes';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+import javalabMsg from '@cdo/javalab/locale';
+import i18n from '@cdo/locale';
+
+import {DisplayTheme} from './DisplayTheme';
+import JavalabEditorDialogManager from './JavalabEditorDialogManager';
+import JavalabEditorHeader from './JavalabEditorHeader';
+import JavalabEditorTabMenu from './JavalabEditorTabMenu';
+import JavalabFileExplorer from './JavalabFileExplorer';
+import {
+  getDefaultFileContents,
+  getTabKey,
+  isJavaFile,
+} from './JavalabFileHelper';
 import {
   setSource,
   sourceTextUpdated,
@@ -8,8 +38,6 @@ import {
   sourceFileOrderUpdated,
   renameFile,
   removeFile,
-  setRenderedHeight,
-  setEditorColumnHeight,
   setEditTabKey,
   setActiveTabKey,
   setOrderedTabKeys,
@@ -20,36 +48,12 @@ import {
   clearRenameFileError,
   setNewFileError,
   clearNewFileError,
-  setRenameFileError
-} from './javalabRedux';
-import {DisplayTheme} from './DisplayTheme';
-import PropTypes from 'prop-types';
-import {EditorView} from '@codemirror/view';
-import {editorSetup} from './editorSetup';
-import {EditorState, Compartment} from '@codemirror/state';
-import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
-import classNames from 'classnames';
-import {Tab, Nav, NavItem} from 'react-bootstrap';
+  setRenameFileError,
+} from './redux/editorRedux';
+import {setRenderedHeight, setEditorColumnHeight} from './redux/viewRedux';
+import {JavalabEditorDialog} from './types';
+
 import style from './javalab-editor.module.scss';
-import JavalabEditorTabMenu from './JavalabEditorTabMenu';
-import JavalabFileExplorer from './JavalabFileExplorer';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import _ from 'lodash';
-import i18n from '@cdo/locale';
-import javalabMsg from '@cdo/javalab/locale';
-import {
-  getDefaultFileContents,
-  getTabKey,
-  isJavaFile
-} from './JavalabFileHelper';
-import {darkMode, lightMode} from './editorThemes';
-import {hasQueryParam} from '@cdo/apps/code-studio/utils';
-import JavalabEditorDialogManager, {
-  JavalabEditorDialog
-} from './JavalabEditorDialogManager';
-import JavalabEditorHeader from './JavalabEditorHeader';
-import {java} from '@codemirror/lang-java';
-import CloseOnEscape from './components/CloseOnEscape';
 
 // This is the height of the "editor" header and the file tabs combined
 const HEADER_OFFSET = 63;
@@ -95,7 +99,7 @@ class JavalabEditor extends React.Component {
     clearNewFileError: PropTypes.func.isRequired,
     setRenameFileError: PropTypes.func.isRequired,
     clearRenameFileError: PropTypes.func.isRequired,
-    editorFontSize: PropTypes.number.isRequired
+    editorFontSize: PropTypes.number.isRequired,
   };
 
   constructor(props) {
@@ -136,7 +140,7 @@ class JavalabEditor extends React.Component {
       showMenu: false,
       contextTarget: null,
       menuPosition: {},
-      fileToDelete: null
+      fileToDelete: null,
     };
   }
 
@@ -155,7 +159,7 @@ class JavalabEditor extends React.Component {
 
       Object.keys(this.editors).forEach(editorKey => {
         this.editors[editorKey].dispatch({
-          effects: this.editorModeConfigCompartment.reconfigure(newStyle)
+          effects: this.editorModeConfigCompartment.reconfigure(newStyle),
         });
       });
     }
@@ -169,8 +173,8 @@ class JavalabEditor extends React.Component {
             ),
             this.editorReadOnlyCompartment.reconfigure(
               EditorState.readOnly.of(this.props.isReadOnlyWorkspace)
-            )
-          ]
+            ),
+          ],
         });
       });
     }
@@ -180,7 +184,7 @@ class JavalabEditor extends React.Component {
         this.editors[editorKey].dispatch({
           effects: this.fontSizeCompartment.reconfigure(
             this.getFontSizeTheme(this.props.editorFontSize)
-          )
+          ),
         });
       });
     }
@@ -202,13 +206,9 @@ class JavalabEditor extends React.Component {
   }
 
   createEditor(key, doc) {
-    const {
-      displayTheme,
-      isReadOnlyWorkspace,
-      fileMetadata,
-      editorFontSize
-    } = this.props;
-    const extensions = [...editorSetup];
+    const {displayTheme, isReadOnlyWorkspace, fileMetadata, editorFontSize} =
+      this.props;
+    const extensions = [...editorConfig];
 
     extensions.push(
       displayTheme === DisplayTheme.DARK
@@ -240,18 +240,18 @@ class JavalabEditor extends React.Component {
     this.editors[key] = new EditorView({
       state: EditorState.create({
         doc: doc,
-        extensions: extensions
+        extensions: extensions,
       }),
       parent: this._codeMirrors[key],
-      dispatch: this.dispatchEditorChange(key)
+      dispatch: this.dispatchEditorChange(key),
     });
   }
 
   getFontSizeTheme(fontSize) {
     return EditorView.theme({
       '&': {
-        fontSize: `${fontSize}px`
-      }
+        fontSize: `${fontSize}px`,
+      },
     });
   }
 
@@ -283,7 +283,7 @@ class JavalabEditor extends React.Component {
     this.props.sourceVisibilityUpdated(this.props.fileMetadata[key], isVisible);
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -294,7 +294,7 @@ class JavalabEditor extends React.Component {
     );
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -307,7 +307,7 @@ class JavalabEditor extends React.Component {
     return {
       onContextMenu: e => {
         this.openTabContextMenu(key, e);
-      }
+      },
     };
   }
 
@@ -316,12 +316,12 @@ class JavalabEditor extends React.Component {
       this.props.setActiveTabKey(key);
       this.setState({
         showMenu: false,
-        contextTarget: null
+        contextTarget: null,
       });
       // scroll the new editor to whatever its current selection is.
       // If this editor has no selection it will stay at the top of the file.
       this.editors[key].dispatch({
-        scrollIntoView: true
+        scrollIntoView: true,
       });
       // It takes a second for the editor to show up. We can't
       // focus on it until it is visible, so we set a delay to focus
@@ -348,8 +348,8 @@ class JavalabEditor extends React.Component {
         contextTarget: key,
         menuPosition: {
           top: `${boundingRect.bottom}px`,
-          left: `${boundingRect.left}px`
-        }
+          left: `${boundingRect.left}px`,
+        },
       });
     }
   }
@@ -361,7 +361,7 @@ class JavalabEditor extends React.Component {
     this.props.openEditorDialog(JavalabEditorDialog.RENAME_FILE);
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -369,7 +369,7 @@ class JavalabEditor extends React.Component {
   cancelTabMenu() {
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -400,7 +400,7 @@ class JavalabEditor extends React.Component {
     // closes the tab menu if it is open
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -411,7 +411,7 @@ class JavalabEditor extends React.Component {
     this.setState({
       showMenu: false,
       contextTarget: null,
-      fileToDelete: this.state.contextTarget
+      fileToDelete: this.state.contextTarget,
     });
   }
 
@@ -449,7 +449,7 @@ class JavalabEditor extends React.Component {
       renameFile,
       closeEditorDialog,
       setRenameFileError,
-      clearRenameFileError
+      clearRenameFileError,
     } = this.props;
     newFilename = newFilename.trim();
     if (!this.validateFileName(newFilename, setRenameFileError)) {
@@ -474,11 +474,11 @@ class JavalabEditor extends React.Component {
     // change syntax highlighting if there was a change from non-java to java or vice-versa
     if (isJavaFile(newFilename) && !isJavaFile(oldFilename)) {
       this.editors[editTabKey].dispatch({
-        effects: this.languageCompartment.reconfigure(java())
+        effects: this.languageCompartment.reconfigure(java()),
       });
     } else if (!isJavaFile(newFilename) && isJavaFile(oldFilename)) {
       this.editors[editTabKey].dispatch({
-        effects: this.languageCompartment.reconfigure([])
+        effects: this.languageCompartment.reconfigure([]),
       });
     }
 
@@ -496,7 +496,7 @@ class JavalabEditor extends React.Component {
       setAllEditorMetadata,
       closeEditorDialog,
       setNewFileError,
-      clearNewFileError
+      clearNewFileError,
     } = this.props;
     filename = filename.trim();
     if (!this.validateFileName(filename, setNewFileError)) {
@@ -538,7 +538,7 @@ class JavalabEditor extends React.Component {
       orderedTabKeys,
       activeTabKey,
       removeFile,
-      setAllEditorMetadata
+      setAllEditorMetadata,
     } = this.props;
     // find tab in list
     const indexToRemove = orderedTabKeys.indexOf(fileToDelete);
@@ -569,7 +569,7 @@ class JavalabEditor extends React.Component {
     this.setState({
       showMenu: false,
       contextTarget: null,
-      fileToDelete: null
+      fileToDelete: null,
     });
   }
 
@@ -587,7 +587,7 @@ class JavalabEditor extends React.Component {
       }
       const editor = this.editors[editorKey];
       editor.dispatch({
-        changes: {from: 0, to: editor.state.doc.length, insert: fileContents}
+        changes: {from: 0, to: editor.state.doc.length, insert: fileContents},
       });
       const tabOrder = orderedTabKeys.indexOf(editorKey);
       this.props.setSource(filename, fileContents, tabOrder);
@@ -635,7 +635,7 @@ class JavalabEditor extends React.Component {
     // closes the tab menu if it is open
     this.setState({
       showMenu: false,
-      contextTarget: null
+      contextTarget: null,
     });
   }
 
@@ -661,7 +661,7 @@ class JavalabEditor extends React.Component {
       fileMetadata,
       activeTabKey,
       editTabKey,
-      codeOwnersName
+      codeOwnersName,
     } = this.props;
 
     const showOpenCodeReviewWarning =
@@ -673,7 +673,7 @@ class JavalabEditor extends React.Component {
       top: this.state.menuPosition.top,
       left: this.state.menuPosition.left,
       backgroundColor: '#F0F0F0',
-      zIndex: 1000
+      zIndex: 1000,
     };
     return (
       <CloseOnEscape handleClose={this.cancelTabMenu}>
@@ -770,7 +770,7 @@ class JavalabEditor extends React.Component {
                   {isViewingOwnProject
                     ? javalabMsg.editingDisabledUnderReview()
                     : javalabMsg.codeReviewingPeer({
-                        peerName: codeOwnersName
+                        peerName: codeOwnersName,
                       })}
                 </div>
               )}
@@ -820,20 +820,20 @@ class JavalabEditor extends React.Component {
 
 export default connect(
   state => ({
-    sources: state.javalab.sources,
-    validation: state.javalab.validation,
-    displayTheme: state.javalab.displayTheme,
+    sources: state.javalabEditor.sources,
+    validation: state.javalabEditor.validation,
+    displayTheme: state.javalabView.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isReadOnlyWorkspace: state.javalab.isReadOnlyWorkspace,
     hasOpenCodeReview: state.javalab.hasOpenCodeReview,
     isViewingOwnProject: state.pageConstants.isViewingOwnProject,
     codeOwnersName: state.pageConstants.codeOwnersName,
-    fileMetadata: state.javalab.fileMetadata,
-    orderedTabKeys: state.javalab.orderedTabKeys,
-    activeTabKey: state.javalab.activeTabKey,
-    lastTabKeyIndex: state.javalab.lastTabKeyIndex,
-    editTabKey: state.javalab.editTabKey,
-    editorFontSize: state.javalab.editorFontSize
+    fileMetadata: state.javalabEditor.fileMetadata,
+    orderedTabKeys: state.javalabEditor.orderedTabKeys,
+    activeTabKey: state.javalabEditor.activeTabKey,
+    lastTabKeyIndex: state.javalabEditor.lastTabKeyIndex,
+    editTabKey: state.javalabEditor.editTabKey,
+    editorFontSize: state.javalabView.editorFontSize,
   }),
   dispatch => ({
     setSource: (filename, source, tabOrder) =>
@@ -874,6 +874,6 @@ export default connect(
     setNewFileError: error => dispatch(setNewFileError(error)),
     clearNewFileError: () => dispatch(clearNewFileError()),
     setRenameFileError: error => dispatch(setRenameFileError(error)),
-    clearRenameFileError: () => dispatch(clearRenameFileError())
+    clearRenameFileError: () => dispatch(clearRenameFileError()),
   })
 )(JavalabEditor);

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import ProjectCard from './ProjectCard';
 
 const projectProp = PropTypes.shape({
@@ -11,7 +12,7 @@ const projectProp = PropTypes.shape({
   studentAgeRange: PropTypes.string,
   studentName: PropTypes.string,
   type: PropTypes.string,
-  updatedAt: PropTypes.date
+  updatedAt: PropTypes.date,
 });
 
 export default class ProjectCardRow extends React.Component {
@@ -19,14 +20,14 @@ export default class ProjectCardRow extends React.Component {
     projects: PropTypes.arrayOf(projectProp).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
-    isDetailView: PropTypes.bool
+    isDetailView: PropTypes.bool,
   };
 
   render() {
     return (
-      <div style={styles.row}>
+      <div role="list" style={styles.row}>
         {this.props.projects.map(project => (
-          <div key={project.channel} style={styles.card}>
+          <div role="listitem" key={project.channel} style={styles.card}>
             <ProjectCard
               projectData={project}
               showFullThumbnail={this.props.showFullThumbnail}
@@ -44,11 +45,11 @@ const styles = {
   card: {
     display: 'inline-block',
     paddingTop: 10,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   row: {
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+  },
 };

@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T20:05:01.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA-frq-2023-WeatherData",
+    "long_instructions": "##WeatherData FRQ (Part B)\r\n\r\nWrite the `longestHeatWave` method, which returns the length of the longest heat wave found in the `temperatures` instance variable. A heat wave is a sequence of two or more consecutive days with a daily high temperature greater than the parameter `threshold`. The `temperatures` instance variable is guaranteed to contain at least one heat wave based on the `threshold` parameter. \r\n\r\nFor example, consider the following contents of `temperatures`. \r\n\r\n![](https://images.code.org/06dfddee92fe21be4b42ca5cdea87560-image-1687362326437.45.21 AM.png)\r\n\r\nIn the following sample contents of temperatures, all heat waves based on the `threshold` temperature of `100.5` are shaded. The method call `longestHeatWave(100.5)` would return `3`, which is the length of the longest heat wave. \r\n\r\n![](https://images.code.org/dd28fb5e94eddacad98bdf7450ab9bd7-image-1687362304574.45.00 AM.png)\r\n\r\nIn the following sample contents of `temperatures`, all heat waves based on the `threshold` temperature of `95.2` are shaded. The method call `longestHeatWave(95.2)` would return `4`, which is the length of the longest heat wave. \r\n\r\n![](https://images.code.org/fc245344a6f5eb7acc174e944246cc90-image-1687362283805.44.37 AM.png)\r\n\r\nComplete method `longestHeatWave`.\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 20:05:03 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

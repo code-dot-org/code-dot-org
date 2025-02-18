@@ -37,7 +37,7 @@ def load_manipulated_image(path, mode, width, height, scale = nil)
   ilist
 end
 
-def process_image(path, ext_names, language=nil, site=nil)
+def process_image(path, ext_names, language = nil, site = nil)
   extname = File.extname(path).downcase
   return nil unless ext_names.include?(extname)
   image_format = extname[1..]

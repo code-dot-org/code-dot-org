@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2024-08-02T21:56:25.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "For each of the following data values, determine which data type – `int`, `double`, `boolean`, or `String` – should be used to represent the value in Java. Explain your answer.\r\n\r\n1. Population of a country\r\n\r\n2. Shoe size\r\n\r\n3. Phone number",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "1Zt25FA/L6WJLL03UxW7KmMAl3Nj4O0TVGpS21sEOLmibSl9pwhWqg6MhKFK\n/PgFYX5x6jqj6Sv7448EEaRzVfbd1iS6ZEEzKLyZgE5BBsLoJZv8/JyFyyA9\nUAbct+2tkesmCBztSKmO7ExEzDL/xD4GQEFZl3EpSu0UTHYjZAhpE/9YzhLD\ng+idanTQwDsYAs2cLdrR2m/DuFRJBear9Yd/hO/hyr+Vk1j/o8rGPh8IODYb\n0XVZndrwoupZdB4e6Cc3mOwGyBaIltDEcIHpoHjStz/ib/mHvpaJhohowaLQ\n6LznvV4T4Ld/kDaLcCCrVEVHsO1xOkb+feR+lR3xaiFrBVifd9DVdnEEGgeD\n02xdx/fnGIr44fSWdn/dZyIEfz10lJF+qg1iwhuiKlhu2VuYSm69jrEAM+Q2\nCHlQQLwhsc5Qx5z5x6Z/kNaD3+HxuOKJdVcr6kV3zZ/Ed+ZHrYg5Mrj6bQ90\nMDAKMmTvRJvuCckvEy3fmS64kVjk684yQmgDCL8jvJqns8BYZvGsaJWVIHQA\nS2a+69TiUVwABMmuOx7p3w5FC5gSFnjgtUm2OPlm01V3fRIkzaECJ7RcGWUZ\nvEmNGpe35dQnwt0NmBxT5iWAu19XOUe75Bdx+XqD+k0mJmEAILvFz2aYiY6J\nUgyaBjd5sJIEa1UhrODt4kKZLDLds7IZbvrWKsEOgp9T\n",
+    "allow_multiple_attempts": "true",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T21:56:25.977+00:00\",\"changed\":[\"cloned from \\\"CSA U2L6-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L6-L3_pilot-2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,7 +1,9 @@
-import msg from '@cdo/locale';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import msg from '@cdo/locale';
+
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
 /**
@@ -14,7 +16,7 @@ class CompletionButton extends Component {
     isProjectLevel: PropTypes.bool.isRequired,
     isSubmittable: PropTypes.bool.isRequired,
     isSubmitted: PropTypes.bool.isRequired,
-    playspacePhoneFrame: PropTypes.bool
+    playspacePhoneFrame: PropTypes.bool,
   };
 
   render() {
@@ -48,7 +50,7 @@ class CompletionButton extends Component {
           className="share"
           style={[this.props.playspacePhoneFrame && styles.phoneFrameButton]}
         >
-          <img src="/blockly/media/1x1.gif" />
+          <img src="/blockly/media/1x1.gif" alt="" />
           {contents}
         </button>
       </ProtectedStatefulDiv>
@@ -65,8 +67,8 @@ const styles = {
   // 105px looks better than 11px so I'm going with that.
   phoneFrameButton: {
     minWidth: 105,
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 };
 
 export const UnconnectedCompletionButton = CompletionButton;
@@ -75,7 +77,7 @@ export default connect(state => ({
   isProjectLevel: state.pageConstants.isProjectLevel,
   isSubmittable: state.pageConstants.isSubmittable,
   isSubmitted: state.pageConstants.isSubmitted,
-  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
 }))(CompletionButton);
 
 export {styles};

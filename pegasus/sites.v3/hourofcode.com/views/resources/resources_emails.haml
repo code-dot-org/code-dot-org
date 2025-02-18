@@ -1,0 +1,60 @@
+:ruby
+  emails = [
+    {
+      title: hoc_s("hoc_resources.emails.generic.title"),
+      subject: hoc_s("hoc_resources.emails.generic.subject", markdown: :inline),
+      body_01: hoc_s("hoc_resources.emails.generic.body_01"),
+      body_02: hoc_s("hoc_resources.emails.generic.body_02"),
+      body_03: hoc_s("hoc_resources.emails.generic.body_03", markdown: :inline, locals:{campaign_date_year: campaign_date("year"), campaign_date_full: campaign_date("full")}),
+      body_04: hoc_s("hoc_resources.emails.generic.body_04", markdown: :inline, locals:{hoc_url: "https://hourofcode.com"}),
+    },
+    {
+      title: hoc_s("hoc_resources.emails.parents.title"),
+      subject: hoc_s("hoc_resources.emails.parents.subject", markdown: :inline),
+      body_01: hoc_s("hoc_resources.emails.parents.body_01"),
+      body_02: hoc_s("hoc_resources.emails.parents.body_02"),
+      body_03: hoc_s("hoc_resources.emails.parents.body_03", markdown: :inline, locals:{campaign_date_full: campaign_date("full")}),
+      body_04: hoc_s("hoc_resources.emails.parents.body_04"),
+      body_05: hoc_s("hoc_resources.emails.parents.body_05", markdown: :inline, locals:{hoc_url: "https://hourofcode.com"}),
+      body_06: hoc_s("hoc_resources.emails.parents.body_06"),
+    },
+    {
+      title: hoc_s("hoc_resources.emails.press.title"),
+      subject: hoc_s("hoc_resources.emails.press.subject", markdown: :inline),
+      body_01: hoc_s("hoc_resources.emails.press.body_01"),
+      body_02: hoc_s("hoc_resources.emails.press.body_02"),
+      body_03: hoc_s("hoc_resources.emails.press.body_03", markdown: :inline, locals:{campaign_date_full: campaign_date("full")}),
+      body_04: hoc_s("hoc_resources.emails.press.body_04"),
+      body_05: hoc_s("hoc_resources.emails.press.body_05"),
+      body_06: hoc_s("hoc_resources.emails.press.body_06"),
+    },
+    {
+      title: hoc_s("hoc_resources.emails.politician.title"),
+      subject: hoc_s("hoc_resources.emails.politician.subject", markdown: :inline),
+      body_01: hoc_s("hoc_resources.emails.politician.body_01"),
+      body_02: hoc_s("hoc_resources.emails.politician.body_02"),
+      body_03: hoc_s("hoc_resources.emails.politician.body_03"),
+    },
+  ]
+
+%h2.overline-one.centered
+  =hoc_s("hoc_resources.sections.emails")
+%h3.heading-xl.centered
+  =hoc_s("hoc_resources.emails.heading")
+%p.body-two.centered
+  =hoc_s("hoc_resources.emails.desc")
+
+.carousel-wrapper
+  %swiper-container.emails{navigation: "true", "navigation-next-el": ".nav-next-emails", "navigation-prev-el": ".nav-prev-emails", pagination: "true", init: "false"}
+    - emails.each do |email|
+      %swiper-slide
+        .action-block.action-block--one-col
+          %h3= email[:title]
+          %p= email[:subject]
+          - (1..6).each do |i|
+            - body_key = :"body_#{format('%02d', i)}"
+            - if email[body_key]
+              %p= email[body_key]
+
+  %button.swiper-nav-prev.nav-prev-emails
+  %button.swiper-nav-next.nav-next-emails

@@ -4,15 +4,54 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "show_calendar": true,
+      "supported_locales": [
+        "ar-SA",
+        "bg-BG",
+        "cs-CZ",
+        "de-DE",
+        "es-ES",
+        "es-MX",
+        "fa-IR",
+        "fr-FR",
+        "he-IL",
+        "hi-IN",
+        "hu-HU",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "nl-NL",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK",
+        "sq-AL",
+        "ta-IN",
+        "th-TH",
+        "tr-TR",
+        "uk-UA",
+        "ur-PK",
+        "vi-VN",
+        "zh-CN",
+        "zh-TW"
+      ],
       "tts": true,
-      "version_year": "2021"
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "poem-art",
-    "serialized_at": "2022-05-12 17:13:13 UTC",
+    "serialized_at": "2025-01-09 16:44:08 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -633,6 +672,18 @@
   ],
   "resources": [
     {
+      "name": "“The Forest for the Trees” by Rena Priest",
+      "url": "https://poets.org/lesson-plan/teach-poem-forest-trees-rena-priest",
+      "key": "_the_forest_for_the_trees_by_rena_priest",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_the_forest_for_the_trees_by_rena_priest"
+      }
+    },
+    {
       "name": "HoC Poem Art",
       "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
       "key": "list_of_poems",
@@ -694,6 +745,12 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Poem Art",
+        "resource.key": "_the_forest_for_the_trees_by_rena_priest"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Poem Art",
@@ -902,6 +959,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

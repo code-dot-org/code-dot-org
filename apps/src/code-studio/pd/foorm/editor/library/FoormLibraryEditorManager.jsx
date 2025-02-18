@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
+
 import FoormEntityEditor from '../components/FoormEntityEditor';
 import FoormEntityLoadButtons from '../components/FoormEntityLoadButtons';
 import {
@@ -11,8 +12,9 @@ import {
   setHasJSONError,
   setHasLintError,
   setLastSavedQuestions,
-  setLibraryData
+  setLibraryData,
 } from '../foormEditorRedux';
+
 import FoormLibrarySaveBar from './FoormLibrarySaveBar';
 
 const JSONErrorMessage =
@@ -49,14 +51,14 @@ class FoormLibraryEditorManager extends React.Component {
     setHasJSONError: PropTypes.func,
     setHasLintError: PropTypes.func,
     setLastSavedQuestions: PropTypes.func,
-    setLibraryData: PropTypes.func
+    setLibraryData: PropTypes.func,
   };
 
   state = {
     showCodeMirror: false,
     hasLoadError: false,
     forceRerenderKey: 0,
-    previewQuestions: null
+    previewQuestions: null,
   };
 
   getLibraryChoices() {
@@ -66,7 +68,7 @@ class FoormLibraryEditorManager extends React.Component {
 
       return {
         metadata: libraryNameAndVersion,
-        text: `${libraryName}, version ${libraryVersion}`
+        text: `${libraryName}, version ${libraryVersion}`,
       };
     });
   }
@@ -79,7 +81,7 @@ class FoormLibraryEditorManager extends React.Component {
 
         return {
           metadata: libraryQuestionAndType,
-          text: `${libraryQuestionName} (${libraryQuestionType})`
+          text: `${libraryQuestionName} (${libraryQuestionType})`,
         };
       }
     );
@@ -93,17 +95,17 @@ class FoormLibraryEditorManager extends React.Component {
 
     $.ajax({
       url: `/foorm/libraries/${libraryId}/question_names`,
-      type: 'get'
+      type: 'get',
     })
       .done(result => {
         this.props.setFetchableLibraryQuestions(result);
         this.setState({
-          hasLoadError: false
+          hasLoadError: false,
         });
       })
       .fail(() => {
         this.setState({
-          hasLoadError: true
+          hasLoadError: true,
         });
       });
   }
@@ -114,24 +116,24 @@ class FoormLibraryEditorManager extends React.Component {
     this.resetSaveStatus();
     $.ajax({
       url: `/foorm/library_questions/${libraryQuestionId}`,
-      type: 'get'
+      type: 'get',
     })
       .done(result => {
         this.updateLibraryQuestionData(result);
         this.setState({
           showCodeMirror: true,
-          hasLoadError: false
+          hasLoadError: false,
         });
       })
       .fail(() => {
         this.updateLibraryQuestionData({
           question: {},
           name: null,
-          id: null
+          id: null,
         });
         this.setState({
           showCodeMirror: true,
-          hasLoadError: true
+          hasLoadError: true,
         });
       });
   }
@@ -140,9 +142,9 @@ class FoormLibraryEditorManager extends React.Component {
   updateLibraryQuestionPreview() {
     this.setState({
       previewQuestions: {
-        elements: [this.props.questions]
+        elements: [this.props.questions],
       },
-      forceRerenderKey: this.state.forceRerenderKey + 1
+      forceRerenderKey: this.state.forceRerenderKey + 1,
     });
   }
 
@@ -152,7 +154,7 @@ class FoormLibraryEditorManager extends React.Component {
     this.props.setLibraryData({
       name: null,
       version: null,
-      id: null
+      id: null,
     });
     this.initializeLibraryQuestion(true);
   }
@@ -162,13 +164,13 @@ class FoormLibraryEditorManager extends React.Component {
     this.updateLibraryQuestionData({
       question: {},
       name: null,
-      id: null
+      id: null,
     });
 
     this.resetSaveStatus();
     this.setState({
       hasLoadError: false,
-      showCodeMirror: showCodeMirror
+      showCodeMirror: showCodeMirror,
     });
   }
 
@@ -291,12 +293,12 @@ class FoormLibraryEditorManager extends React.Component {
 
 const styles = {
   surveyTitle: {
-    marginBottom: 0
+    marginBottom: 0,
   },
   loadError: {
     fontWeight: 'bold',
-    padding: '1em'
-  }
+    padding: '1em',
+  },
 };
 
 export const UnconnectedFoormLibraryEditorManager = FoormLibraryEditorManager;
@@ -310,7 +312,7 @@ export default connect(
     libraryId: state.foorm.libraryId,
     libraryName: state.foorm.libraryName,
     libraryQuestionName: state.foorm.libraryQuestionName,
-    hasJSONError: state.foorm.hasJSONError
+    hasJSONError: state.foorm.hasJSONError,
   }),
   dispatch => ({
     setFetchableLibraryQuestions: libraryQuestionsMetadata =>
@@ -323,6 +325,6 @@ export default connect(
     setHasLintError: hasLintError => dispatch(setHasLintError(hasLintError)),
     setLastSavedQuestions: libraryQuestion =>
       dispatch(setLastSavedQuestions(libraryQuestion)),
-    setLibraryData: libraryData => dispatch(setLibraryData(libraryData))
+    setLibraryData: libraryData => dispatch(setLibraryData(libraryData)),
   })
 )(FoormLibraryEditorManager);

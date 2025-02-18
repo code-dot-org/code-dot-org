@@ -1,9 +1,11 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+
+import {assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const sectionId = 11;
 
@@ -29,12 +31,7 @@ describe('PrintCertificates', () => {
 
   it('has trigger to open /certificates', () => {
     assert.equal(wrapper.find('div').length, 2);
-    assert(
-      wrapper
-        .find('div')
-        .last()
-        .contains('Print Certificates')
-    );
+    assert(wrapper.find('div').last().contains('Print Certificates'));
   });
 
   it('loads student names', finish => {
@@ -44,7 +41,7 @@ describe('PrintCertificates', () => {
         const mockResponse = JSON.stringify([
           {name: 'Student A'},
           {name: 'Student B'},
-          {name: 'Student C'}
+          {name: 'Student C'},
         ]);
         request.respond(
           200,
@@ -58,16 +55,13 @@ describe('PrintCertificates', () => {
       assert.deepEqual(wrapper.state('names'), [
         'Student A',
         'Student B',
-        'Student C'
+        'Student C',
       ]);
       finish();
     };
 
     assert.deepEqual(wrapper.state('names'), []);
-    wrapper
-      .find('div')
-      .last()
-      .simulate('click');
+    wrapper.find('div').last().simulate('click');
     sinon.restore();
   });
 });

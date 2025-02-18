@@ -1,29 +1,60 @@
-@import "./theme/tokens-dark";
+@import 'color.scss';
 
 // Constants
 $timeline-area-height: 200px;
-$default-border-radius: 4px;
-$default-spacing: 5px;
+$default-border-radius: 0;
+$default-spacing: 2px;
 
-.container {
+.musicLab {
   position: relative;
-  background-color: black;
-  color: white;
+  background-color: $dark_black;
   width: 100%;
   height: 100%;
-  padding: 0;
+  padding: 2px 0;
   box-sizing: border-box;
   border-radius: $default-border-radius;
   overflow: hidden;
   user-select: none;
   display: flex;
   flex-direction: column;
+  gap: $default-spacing;
+}
+
+.workArea {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  max-height: calc(100% - $timeline-area-height);
+  gap: $default-spacing;
+  overflow: hidden;
+  &.toolboxMode {
+    max-height: 100%; // Allow the work area to take full height
+  }
+}
+
+.playArea {
+  width: 100%;
+  height: $timeline-area-height;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: $default-spacing;
+
+  .controlsArea {
+    width: 220px;
+    height: 100%;
+  }
+
+  .timelineArea {
+    width: calc(100% - 220px);
+    height: 100%;
+  }
 }
 
 .instructionsArea {
   display: flex;
-  color: white;
-  background-color: black;
+  color: $neutral_light;
+  background-color: $dark_black;
   border-radius: $default-border-radius;
   padding: 0;
   box-sizing: border-box;
@@ -31,7 +62,6 @@ $default-spacing: 5px;
   &.instructionsTop {
     flex-direction: row;
     height: 90px;
-    margin-bottom: $default-spacing;
     width: 100%;
   }
 
@@ -39,34 +69,12 @@ $default-spacing: 5px;
     flex-direction: column;
     height: 100%;
     width: 20%;
-
-    &.instructionsLeft {
-      margin-right: $default-spacing;
-    }
-
-    &.instructionsRight {
-      margin-left: $default-spacing;
-    }
   }
 }
 
 .shareArea {
   &.shareTop {
     margin-left: $default-spacing * 2;
-  }
-}
-
-.middleArea {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  max-height: calc(100% - $timeline-area-height);
-
-  .topButtonsContainer {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    z-index: 10;
   }
 }
 
@@ -77,17 +85,20 @@ $default-spacing: 5px;
   position: relative;
 }
 
-.timelineArea {
-  width: 100%;
-  height: $timeline-area-height;
-  box-sizing: border-box;
+.panelContainerHeader {
+  margin-bottom: 2px;
+}
+
+.advancedControlsContainer {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+}
+
+.warningBanner {
   display: flex;
-
-  &.timelineBottom {
-    flex-direction: column;
-  }
-
-  &.timelineTop {
-    flex-direction: column-reverse;
-  }
+  z-index: 99;
+  background-color: $light_yellow;
+  padding: 5px;
+  color: $black;
 }

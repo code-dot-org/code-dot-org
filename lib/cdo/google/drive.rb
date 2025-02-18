@@ -1,5 +1,6 @@
+require 'json'
+require 'stringio'
 require 'google_drive'
-require 'cdo/chat_client'
 
 module Google
   class Drive
@@ -9,7 +10,7 @@ module Google
       def initialize(session, file)
         @session = session
         @file = file
-        $log.debug "Google Drive file opened (key: #{@file.key})"
+        CDO.log.debug "Google Drive file opened (key: #{@file.key})"
       end
 
       def raw_file
@@ -37,22 +38,22 @@ module Google
       @session
     end
 
-    def initialize(params={})
-      $log.debug 'Establishing Google Drive session'
-      @session = if params[:service_account_key]
-                   GoogleDrive::Session.from_service_account_key params[:service_account_key]
-                 else
-                   GoogleDrive.saved_session(deploy_dir('.gdrive_session'))
-                 end
+    def initialize(service_account_key = CDO.gdrive_export_secret.to_json)
+      CDO.log.debug 'Establishing Google Drive session'
+      raise "Google Authentication Key not provided." if service_account_key.nil?
+      @session = GoogleDrive::Session.from_service_account_key StringIO.new(service_account_key)
     end
 
     def file(path)
       file = @session.file_by_title(path_to_title_array(path))
       return nil if file.nil?
       Google::Drive::File.new(@session, file)
-    rescue GoogleDrive::Error => e
-      ChatClient.log "<p>Error syncing <b>#{path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'
-      return nil
+    end
+
+    def file_by_id(id)
+      file = @session.file_by_id(id)
+      return nil if file.nil?
+      Google::Drive::File.new(@session, file)
     end
 
     def folder(path)
@@ -66,21 +67,21 @@ module Google
       target_name = ::File.basename(target_path)
       target_folder = ::File.dirname(target_path)
 
-      $log.debug "Uploading '#{src_path}' as '/#{temp_name}'"
+      CDO.log.debug "Uploading '#{src_path}' as '/#{temp_name}'"
       file = @session.upload_from_file(src_path, temp_name)
 
-      $log.debug "Moving '/#{temp_name}' to '#{target_folder}/#{temp_name}'"
+      CDO.log.debug "Moving '/#{temp_name}' to '#{target_folder}/#{temp_name}'"
       folder = self.folder(target_folder)
       folder.add(file)
       @session.root_collection.remove(file)
 
       existing_file = self.file(target_path)
       unless existing_file.nil?
-        $log.debug "Removing existing '#{target_path}'"
+        CDO.log.debug "Removing existing '#{target_path}'"
         folder.remove(existing_file.raw_file)
       end
 
-      $log.debug "Renaming '#{temp_name}' to '#{target_name}' in '#{target_folder}'"
+      CDO.log.debug "Renaming '#{temp_name}' to '#{target_name}' in '#{target_folder}'"
       file.title = target_name
     end
 
@@ -123,6 +124,28 @@ module Google
       end
     end
 
+    # Updates an existing worksheet (tab) in Google Sheets document with new data or creates a new one
+    #
+    # @param spreadsheet_name [String] the Google Sheets document name
+    # @param worksheet_name [String] the Google Sheets document worksheet (tab) name
+    # @param rows [Array.<Array.<String>>] the worksheet rows data
+    def update_worksheet(spreadsheet_name, worksheet_name, rows)
+      spreadsheet = @session.spreadsheet_by_title(spreadsheet_name)
+      worksheet = spreadsheet&.worksheet_by_title(worksheet_name)
+
+      return add_sheet_to_spreadsheet(rows, spreadsheet_name, worksheet_name) unless worksheet
+
+      existing_rows = worksheet.rows
+      new_rows = rows - existing_rows
+      next_row_idx = existing_rows.size.next
+
+      new_rows.each_slice(BATCH_UPDATE_SIZE) do |new_rows_batch|
+        worksheet.update_cells(next_row_idx, 1, new_rows_batch)
+        worksheet.save
+        next_row_idx += new_rows_batch.size
+      end
+    end
+
     # Returns an ACL object for a spreadsheet document
     # @param [String] document_key
     # @return [GoogleDrive::Acl] ACL object that contains an array of GoogleDrive::AclEntry
@@ -132,9 +155,7 @@ module Google
       document.acl
     end
 
-    private
-
-    def path_to_title_array(path)
+    private def path_to_title_array(path)
       titles = path.split(::File::SEPARATOR).map {|x| x == '' ? ::File::SEPARATOR : x}
       titles.unshift 'Pegasus'
       titles

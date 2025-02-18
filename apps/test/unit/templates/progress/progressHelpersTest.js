@@ -1,11 +1,6 @@
-import {assert} from '../../../util/reconfiguredChai';
 import Immutable from 'immutable';
-import {
-  fakeLesson,
-  fakeLevels,
-  fakeProgressForLevels
-} from '@cdo/apps/templates/progress/progressTestHelpers';
-import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
+
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   lessonIsVisible,
   lessonIsLockedForUser,
@@ -14,9 +9,14 @@ import {
   lessonLocked,
   lessonProgressForSection,
   isLevelAssessment,
-  lessonIsAllAssessment
+  lessonIsAllAssessment,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  fakeLesson,
+  fakeLevels,
+  fakeProgressForLevels,
+} from '@cdo/apps/templates/progress/progressTestHelpers';
+import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 describe('progressHelpers', () => {
   describe('lessonIsVisible', () => {
@@ -26,39 +26,35 @@ describe('progressHelpers', () => {
 
     const state = {
       teacherSections: {
-        selectedSectionId: '11'
+        selectedSectionId: '11',
       },
       hiddenLesson: Immutable.fromJS({
         lessonsBySection: {
-          '11': {'3': true}
-        }
-      })
+          11: {3: true},
+        },
+      }),
     };
 
     it('returns false for hidden lessons while viewing as participant', () => {
-      assert.strictEqual(
-        lessonIsVisible(hiddenLesson, state, ViewType.Participant),
+      expect(lessonIsVisible(hiddenLesson, state, ViewType.Participant)).toBe(
         false
       );
     });
 
     it('returns true for hidden lessons while viewing as an instructor ', () => {
-      assert.strictEqual(
-        lessonIsVisible(hiddenLesson, state, ViewType.Instructor),
+      expect(lessonIsVisible(hiddenLesson, state, ViewType.Instructor)).toBe(
         true
       );
     });
 
     it('returns true for non-hidden lessons while viewing as a participant', () => {
-      assert.strictEqual(
-        lessonIsVisible(visibleLesson, state, ViewType.Participant),
+      expect(lessonIsVisible(visibleLesson, state, ViewType.Participant)).toBe(
         true
       );
     });
 
     it('returns true for non-hidden lessons while viewing as an instructor', () => {
-      assert.strictEqual(
-        lessonIsVisible(visibleLesson, state, ViewType.Instructor),
+      expect(lessonIsVisible(visibleLesson, state, ViewType.Instructor)).toBe(
         true
       );
     });
@@ -67,13 +63,12 @@ describe('progressHelpers', () => {
       const localState = {
         ...state,
         lessonLock: {
-          lockableAuthorized: true
-        }
+          lockableAuthorized: true,
+        },
       };
-      assert.strictEqual(
-        lessonIsVisible(lockableLesson, localState, ViewType.Instructor),
-        true
-      );
+      expect(
+        lessonIsVisible(lockableLesson, localState, ViewType.Instructor)
+      ).toBe(true);
     });
   });
 
@@ -83,76 +78,72 @@ describe('progressHelpers', () => {
     const unlockedLevels = fakeLevels(3);
     const lockedLevels = fakeLevels(3).map((level, index) => ({
       ...level,
-      isLocked: index === 2 // lock last level in level group
+      isLocked: index === 2, // lock last level in level group
     }));
 
     const state = {
       currentUser: {
-        userId: 1
+        userId: 1,
       },
       lessonLock: {
-        lockableAuthorized: true
-      }
+        lockableAuthorized: true,
+      },
     };
 
     it('returns false for non-lockable lesson', () => {
-      assert.strictEqual(
+      expect(
         lessonIsLockedForUser(
           nonLockableLesson,
           unlockedLevels,
           state,
           ViewType.Participant
-        ),
-        false
-      );
+        )
+      ).toBe(false);
     });
 
     it('returns true for lockable lesson for signed out user', () => {
       const localState = {
         ...state,
         currentUser: {
-          userId: null
-        }
+          userId: null,
+        },
       };
-      assert.strictEqual(
+      expect(
         lessonIsLockedForUser(
           lockableLesson,
           unlockedLevels,
           localState,
           ViewType.Participant
-        ),
-        true
-      );
+        )
+      ).toBe(true);
     });
 
     it('returns true for lockable lesson for non-verified instructor', () => {
       const localState = {
         ...state,
         lessonLock: {
-          lockableAuthorized: false
-        }
+          lockableAuthorized: false,
+        },
       };
-      assert.strictEqual(
+      expect(
         lessonIsLockedForUser(
           lockableLesson,
           unlockedLevels,
           localState,
           ViewType.Instructor
-        ),
-        true
-      );
+        )
+      ).toBe(true);
     });
 
     it('returns true for lockable lesson for lessonLocked', () => {
-      assert.strictEqual(
+      expect(
         lessonIsLockedForUser(
           lockableLesson,
           lockedLevels,
           state,
           ViewType.Participant
-        ),
-        true
-      );
+        )
+      ).toBe(true);
     });
   });
 
@@ -162,7 +153,7 @@ describe('progressHelpers', () => {
 
     const stateForSelectedSection = sectionId => ({
       teacherSections: {
-        selectedSectionId: sectionId
+        selectedSectionId: sectionId,
       },
       lessonLock: {
         lessonsBySectionId: {
@@ -170,54 +161,42 @@ describe('progressHelpers', () => {
             [lockedLessonId]: [
               {
                 locked: true,
-                name: 'student1'
+                name: 'student1',
               },
               {
                 locked: true,
-                name: 'student2'
-              }
+                name: 'student2',
+              },
             ],
             [unlockedLessonId]: [
               {
                 locked: true,
-                name: 'student1'
+                name: 'student1',
               },
               {
                 locked: false,
-                name: 'student2'
-              }
-            ]
-          }
-        }
-      }
+                name: 'student2',
+              },
+            ],
+          },
+        },
+      },
     });
 
     it('returns false when we have no selected section', () => {
       const state = stateForSelectedSection(null);
-      assert.strictEqual(
-        lessonIsLockedForAllStudents(lockedLessonId, state),
-        false
-      );
-      assert.strictEqual(
-        lessonIsLockedForAllStudents(unlockedLessonId, state),
-        false
-      );
+      expect(lessonIsLockedForAllStudents(lockedLessonId, state)).toBe(false);
+      expect(lessonIsLockedForAllStudents(unlockedLessonId, state)).toBe(false);
     });
 
     it('returns false when the selected section has an unlocked student', () => {
       const state = stateForSelectedSection(11);
-      assert.strictEqual(
-        lessonIsLockedForAllStudents(unlockedLessonId, state),
-        false
-      );
+      expect(lessonIsLockedForAllStudents(unlockedLessonId, state)).toBe(false);
     });
 
     it('returns true when the selected section has no unlocked students', () => {
       const state = stateForSelectedSection(11);
-      assert.strictEqual(
-        lessonIsLockedForAllStudents(lockedLessonId, state),
-        true
-      );
+      expect(lessonIsLockedForAllStudents(lockedLessonId, state)).toBe(true);
     });
   });
 
@@ -225,30 +204,30 @@ describe('progressHelpers', () => {
     it('returns true when we only have a level group and it is locked', () => {
       const levels = fakeLevels(3).map((level, index) => ({
         ...level,
-        isLocked: index === 2 // lock last level in level group
+        isLocked: index === 2, // lock last level in level group
       }));
-      assert.strictEqual(true, lessonLocked(levels));
+      expect(true).toBe(lessonLocked(levels));
     });
 
     describe('level group preceeded by another level', () => {
       // simulate case where we have a single level, followed by a 3 page level group
       const baseLevels = fakeLevels(4).map((level, index) => ({
         ...level,
-        kind: index === 0 ? LevelKind.puzzle : LevelKind.assessment
+        kind: index === 0 ? LevelKind.puzzle : LevelKind.assessment,
       }));
 
       it('returns true when level group is locked', () => {
         // lock last level in level group
         const levels = baseLevels.map((level, index) => ({
           ...level,
-          isLocked: index === 3 // lock last level in level group
+          isLocked: index === 3, // lock last level in level group
         }));
 
-        assert.strictEqual(true, lessonLocked(levels));
+        expect(true).toBe(lessonLocked(levels));
       });
 
       it('returns false when level group is not locked', () => {
-        assert.strictEqual(false, lessonLocked(baseLevels));
+        expect(false).toBe(lessonLocked(baseLevels));
       });
     });
   });
@@ -256,49 +235,49 @@ describe('progressHelpers', () => {
   describe('isLevelAssessment', () => {
     it('returns true if level kind is assessment', () => {
       const level = {
-        kind: LevelKind.assessment
+        kind: LevelKind.assessment,
       };
-      assert.equal(isLevelAssessment(level), true);
+      expect(isLevelAssessment(level)).toEqual(true);
     });
 
     it('returns false if level kind is something other than assessment', () => {
       const level = {
-        kind: LevelKind.puzzle
+        kind: LevelKind.puzzle,
       };
-      assert.equal(isLevelAssessment(level), false);
+      expect(isLevelAssessment(level)).toEqual(false);
     });
   });
 
   describe('getIconForLevel', () => {
     it('strips fa- from level.icon if one is provided', () => {
       const level = {
-        icon: 'fa-file-text'
+        icon: 'fa-file-text',
       };
-      assert.equal(getIconForLevel(level), 'file-text');
+      expect(getIconForLevel(level)).toEqual('file-text');
     });
 
     it('uses desktop icon if no icon on level', () => {
       const level = {};
-      assert.equal(getIconForLevel(level), 'desktop');
+      expect(getIconForLevel(level)).toEqual('desktop');
     });
 
     it('uses scissors icon if unplugged level', () => {
       const level1 = {isUnplugged: true};
-      assert.equal(getIconForLevel(level1), 'scissors');
+      expect(getIconForLevel(level1)).toEqual('scissors');
     });
 
     it('uses flag-checkered icon if bonus level', () => {
       const level = {bonus: true};
-      assert.equal(getIconForLevel(level), 'flag-checkered');
+      expect(getIconForLevel(level)).toEqual('flag-checkered');
     });
 
     it('throws if icon is invalid', () => {
-      assert.throws(function() {
+      expect(function () {
         const level = {
-          icon: 'asdf'
+          icon: 'asdf',
         };
         getIconForLevel(level);
-      }, /Unknown iconType: /);
+      }).toThrow();
     });
   });
 
@@ -308,14 +287,14 @@ describe('progressHelpers', () => {
       levels[0].kind = LevelKind.assessment;
       levels[1].kind = LevelKind.assessment;
       levels[2].kind = LevelKind.assessment;
-      assert.equal(lessonIsAllAssessment(levels), true);
+      expect(lessonIsAllAssessment(levels)).toEqual(true);
     });
     it('returns false if not all the levels are of kind assessment', () => {
       const levels = fakeLevels(3);
       levels[0].kind = LevelKind.unplugged;
       levels[1].kind = LevelKind.puzzle;
       levels[2].kind = LevelKind.assessment;
-      assert.equal(lessonIsAllAssessment(levels), false);
+      expect(lessonIsAllAssessment(levels)).toEqual(false);
     });
   });
 
@@ -346,7 +325,7 @@ describe('progressHelpers', () => {
         studentProgress,
         levels
       );
-      assert.equal(studentLessonProgress, null);
+      expect(studentLessonProgress).toEqual(null);
     });
 
     it('returns null if all levels are bonus', () => {
@@ -359,7 +338,7 @@ describe('progressHelpers', () => {
         studentProgress,
         levels
       );
-      assert.equal(studentLessonProgress, null);
+      expect(studentLessonProgress).toEqual(null);
     });
 
     it('returns null if some levels are bonus and the rest are untried', () => {
@@ -372,7 +351,7 @@ describe('progressHelpers', () => {
         studentProgress,
         levels
       );
-      assert.equal(studentLessonProgress, null);
+      expect(studentLessonProgress).toEqual(null);
     });
 
     it('summarizes all completed levels', () => {
@@ -386,12 +365,12 @@ describe('progressHelpers', () => {
         studentProgress,
         levels
       );
-      assert.deepEqual(studentLessonProgress, {
+      expect(studentLessonProgress).toEqual({
         incompletePercent: 0,
         imperfectPercent: 0,
         completedPercent: 100,
         timeSpent: 0,
-        lastTimestamp: 0
+        lastTimestamp: 0,
       });
     });
 
@@ -405,12 +384,12 @@ describe('progressHelpers', () => {
         studentProgress,
         levels
       );
-      assert.deepEqual(studentLessonProgress, {
+      expect(studentLessonProgress).toEqual({
         incompletePercent: 100,
         imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 0,
-        lastTimestamp: 0
+        lastTimestamp: 0,
       });
     });
 
@@ -429,12 +408,12 @@ describe('progressHelpers', () => {
         studentProgress,
         levels
       );
-      assert.deepEqual(studentLessonProgress, {
+      expect(studentLessonProgress).toEqual({
         incompletePercent: 50,
         imperfectPercent: 12.5,
         completedPercent: 37.5,
         timeSpent: 0,
-        lastTimestamp: 0
+        lastTimestamp: 0,
       });
     });
 
@@ -451,12 +430,12 @@ describe('progressHelpers', () => {
         studentProgress,
         levels
       );
-      assert.deepEqual(studentLessonProgress, {
+      expect(studentLessonProgress).toEqual({
         incompletePercent: 100,
         imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 3,
-        lastTimestamp: 0
+        lastTimestamp: 0,
       });
     });
 
@@ -473,12 +452,12 @@ describe('progressHelpers', () => {
         studentProgress,
         levels
       );
-      assert.deepEqual(studentLessonProgress, {
+      expect(studentLessonProgress).toEqual({
         incompletePercent: 100,
         imperfectPercent: 0,
         completedPercent: 0,
         timeSpent: 0,
-        lastTimestamp: 2
+        lastTimestamp: 2,
       });
     });
   });

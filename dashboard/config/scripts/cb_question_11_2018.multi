@@ -8,3 +8,5 @@ wrong 'When the problem cannot be solved in a reasonable time and an exact solut
 markdown <<MARKDOWN
 Under which of the following conditions is it most beneficial to use a heuristic approach to solve a problem?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -35,14 +35,14 @@ export function queryParams(name) {
  * Updates a query parameter in the URL via pushState (i.e. doesn't force a
  * reload).
  * @param {string} param - Name of the query parameter to modify
- * @param {string} value - New value (or undefined to remove)
+ * @param {string | undefined} value - New value (or undefined to remove)
  * @param {boolean} useReplaceState - optional param if you wish to use replaceState
  *   instead of pushState
  */
 export function updateQueryParam(param, value, useReplaceState = false) {
   const newString = queryString.stringify({
     ...queryString.parse(windowLocation.search),
-    [param]: value
+    [param]: value,
   });
 
   let newLocation = windowLocation.pathname;
@@ -78,8 +78,5 @@ export function environmentSpecificCookieName(name) {
  * @returns {string} The root domain name for the host name
  */
 export function getRootDomainFromHostname(hostname) {
-  return hostname
-    .split('.')
-    .slice(-2)
-    .join('.');
+  return hostname.split('.').slice(-2).join('.');
 }

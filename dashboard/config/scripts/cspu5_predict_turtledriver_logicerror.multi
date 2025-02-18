@@ -19,3 +19,5 @@ Once again we've introduced an error or two (a logical error this time) for you 
 * **Reflect** - were you right?  Why or why not?
 
 MARKDOWN
+
+allow_multiple_attempts true

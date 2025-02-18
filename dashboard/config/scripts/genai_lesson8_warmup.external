@@ -1,0 +1,10 @@
+name 'genai-lesson8-warmup'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Warm Up
+###What animal do you see in the picture below?
+
+![](https://images.code.org/a9a8561cc49677310f0b5aea3f378414-image-1727381911744.png)
+MARKDOWN

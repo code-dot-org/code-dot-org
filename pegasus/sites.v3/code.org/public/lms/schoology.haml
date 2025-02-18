@@ -1,0 +1,31 @@
+---
+title: Integrate with Schoology
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/lms-styles.css", rel: "stylesheet"}
+
+- provider_name = "Schoology"
+
+%section.hero-banner-basic.bg-neutral-dark
+  = view :"lms/lms_partner_top_header", provider: provider_name
+
+%section.alternating-rows
+  =view :"lms/lms_alternating_rows", provider: provider_name
+
+%section#integration.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s("lms_partner_page.ready.heading", locals: {website: provider_name})
+    = view :"lms/lms_integration", provider: provider_name
+
+%section
+  .wrapper
+    %h2.centered
+      =hoc_s("lms_page.additional_resources.heading")
+    %p.centered
+      =hoc_s("lms_page.additional_resources.desc")
+    = view :"lms/lms_additional_resources"
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::SCHOOLOGY_PAGE_VISITED_EVENT

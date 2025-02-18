@@ -1,10 +1,5 @@
 import {createUuid} from '@cdo/apps/utils';
 
-export const UploadType = {
-  SPRITE: 'Sprite',
-  METADATA: 'Metadata'
-};
-
 /* Returns the animation manifest of either GameLab or SpriteLab in the specified locale
  * @param appType {String} "gamelab" or "spritelab"
  * @param locale {String} language locale, defaults to 'en_us'
@@ -35,17 +30,15 @@ export function uploadDefaultListMetadata(metadata, environment) {
     {
       method: 'POST',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
       },
-      body: JSON.stringify(metadata)
+      body: JSON.stringify(metadata),
     }
   )
     .then(response => {
       if (!response.ok) {
         throw new Error(
-          `Default Sprite Metadata Upload Error(${response.status}: ${
-            response.statusText
-          })`
+          `Default Sprite Metadata Upload Error(${response.status}: ${response.statusText})`
         );
       }
       return Promise.resolve();
@@ -102,7 +95,7 @@ export function generateAnimationMetadataForFile(fileObject) {
           metadata.name,
           '.png'
         ),
-        sourceSize: png.source_size
+        sourceSize: png.source_size,
       };
       return Promise.resolve(combinedMetadata);
     })
@@ -159,7 +152,15 @@ function getStandardizedAliases(metadata) {
 function getStandardizedCategories(metadata) {
   // If the animation doesn't have a category, place it in a section for
   // level-specific/hidden-from-library animations.
-  return metadata.categories || ['level_animations'];
+  // Animations that are level-specific and NOT backgrounds are costumes and
+  // either do not have the `categories` property or have categories assigned to [""]
+  const categories = metadata.categories;
+  const isLevelAnimationCostume =
+    categories === undefined || categories[0] === '';
+  if (isLevelAnimationCostume) {
+    return ['level_costumes'];
+  }
+  return categories;
 }
 
 // Generates the json animation manifest for the level_animations folder
@@ -183,11 +184,11 @@ export function generateLevelAnimationsManifest() {
       let manifestJson = {
         '//': [
           'Animation Library Manifest',
-          'GENERATED FILE: DO NOT MODIFY DIRECTLY'
+          'GENERATED FILE: DO NOT MODIFY DIRECTLY',
         ],
         metadata: metadataNoAliases,
         categories: categoryMap,
-        aliases: aliasMap
+        aliases: aliasMap,
       };
 
       return JSON.stringify(manifestJson);
@@ -217,9 +218,9 @@ export function uploadAnimationToAnimationLibrary(destination, imageData) {
   return fetch(`/api/v1/animation-library` + destination, {
     method: 'POST',
     headers: {
-      'Content-Type': 'image/png'
+      'Content-Type': 'image/png',
     },
-    body: imageData
+    body: imageData,
   })
     .then(response => {
       if (!response.ok) {
@@ -242,9 +243,9 @@ export function uploadMetadataToAnimationLibrary(destination, jsonData) {
   return fetch(`/api/v1/animation-library` + destination, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: jsonData
+    body: jsonData,
   })
     .then(response => {
       if (!response.ok) {

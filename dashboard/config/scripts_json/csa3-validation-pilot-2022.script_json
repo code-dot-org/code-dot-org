@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-08-23 20:26:19 UTC",
+    "serialized_at": "2024-11-19 01:15:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3836,6 +3837,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L1_pilot-2022"
+        ],
         "progression": "Investigate: 1D Arrays"
       },
       "bonus": false,
@@ -3858,6 +3862,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L2_pilot-2022"
+        ],
         "progression": "Using 1D Arrays"
       },
       "bonus": false,
@@ -3880,6 +3887,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L3_pilot-2022"
+        ],
         "progression": "Using 1D Arrays"
       },
       "bonus": false,
@@ -3902,6 +3912,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3924,6 +3937,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L1_pilot-2022"
+        ],
         "progression": "Predict: Modifying Values"
       },
       "bonus": false,
@@ -3946,6 +3962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L2_pilot-2022"
+        ],
         "progression": "Investigate: 1D Array Elements"
       },
       "bonus": false,
@@ -3968,6 +3987,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L3_pilot-2022"
+        ],
         "progression": "Investigate: 1D Array Elements"
       },
       "bonus": false,
@@ -3990,6 +4012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L4_pilot-2022"
+        ],
         "progression": "Modifying Values"
       },
       "bonus": false,
@@ -4012,6 +4037,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L5_pilot-2022"
+        ],
         "progression": "Modifying Values"
       },
       "bonus": false,
@@ -4034,6 +4062,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4056,6 +4087,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L1_pilot-2022"
+        ],
         "progression": "Using for Loops"
       },
       "bonus": false,
@@ -4078,6 +4112,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L2_pilot-2022"
+        ],
         "progression": "Using for Loops"
       },
       "bonus": false,
@@ -4100,6 +4137,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L3_pilot-2022"
+        ],
         "progression": "Using for Loops"
       },
       "bonus": false,
@@ -4122,6 +4162,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L4 CR_pilot-2022"
+        ],
         "progression": "Code Review: Using for Loops"
       },
       "bonus": false,
@@ -4144,6 +4187,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4166,6 +4212,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L1_pilot-2022"
+        ],
         "progression": "Predict: Finding Elements"
       },
       "bonus": false,
@@ -4188,6 +4237,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L2_pilot-2022"
+        ],
         "progression": "Investigate: Exploring Algorithms"
       },
       "bonus": false,
@@ -4210,6 +4262,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L3_pilot-2022"
+        ],
         "progression": "Writing Algorithms with Arrays"
       },
       "bonus": false,
@@ -4232,6 +4287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L4 CR_pilot-2022"
+        ],
         "progression": "Code Review: Writing Algorithms with Arrays"
       },
       "bonus": false,
@@ -4254,6 +4312,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4276,6 +4337,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L1_pilot-2022"
+        ],
         "progression": "Predict: Enhanced for Loops"
       },
       "bonus": false,
@@ -4298,6 +4362,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L2_pilot-2022"
+        ],
         "progression": "Investigate: Enhanced for Loops"
       },
       "bonus": false,
@@ -4320,6 +4387,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L3_pilot-2022"
+        ],
         "progression": "Using Enhanced for Loops"
       },
       "bonus": false,
@@ -4342,6 +4412,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L4_pilot-2022"
+        ],
         "progression": "Using Enhanced for Loops"
       },
       "bonus": false,
@@ -4364,6 +4437,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L5_pilot-2022"
+        ],
         "progression": "Using Enhanced for Loops"
       },
       "bonus": false,
@@ -4386,6 +4462,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4408,6 +4487,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L1_pilot-2022"
+        ],
         "progression": "Predict: Static Variables"
       },
       "bonus": false,
@@ -4430,6 +4512,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L2_pilot-2022"
+        ],
         "progression": "Investigate: Constants"
       },
       "bonus": false,
@@ -4452,6 +4537,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L3_pilot-2022"
+        ],
         "progression": "Using Static Variables and Constants"
       },
       "bonus": false,
@@ -4474,6 +4562,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L4_pilot-2022"
+        ],
         "progression": "Using Static Variables and Constants"
       },
       "bonus": false,
@@ -4496,6 +4587,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L5_pilot-2022"
+        ],
         "progression": "Using Static Variables and Constants"
       },
       "bonus": false,
@@ -4518,6 +4612,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4540,6 +4637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L1_pilot-2022"
+        ],
         "progression": "Predict: Arrays of Objects"
       },
       "bonus": false,
@@ -4562,6 +4662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L2_pilot-2022"
+        ],
         "progression": "Investigate: Polymorphism"
       },
       "bonus": false,
@@ -4584,6 +4687,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L3_pilot-2022"
+        ],
         "progression": "Using Polymorphism"
       },
       "bonus": false,
@@ -4606,6 +4712,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L4_pilot-2022"
+        ],
         "progression": "Using Polymorphism"
       },
       "bonus": false,
@@ -4628,6 +4737,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4650,6 +4762,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L1_pilot-2022"
+        ],
         "progression": "Predict: Reading a File"
       },
       "bonus": false,
@@ -4672,6 +4787,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L2_pilot-2022"
+        ],
         "progression": "Investigate: Accessing Pairs"
       },
       "bonus": false,
@@ -4694,6 +4812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L3_pilot-2022"
+        ],
         "progression": "Finding Minimum and Maximum Values"
       },
       "bonus": false,
@@ -4716,6 +4837,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L4_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4738,6 +4862,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L1_pilot-2022"
+        ],
         "progression": "Predict: In the Wrong Order"
       },
       "bonus": false,
@@ -4760,6 +4887,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L2_pilot-2022"
+        ],
         "progression": "Reversing a 1D Array"
       },
       "bonus": false,
@@ -4782,6 +4912,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L3_pilot-2022"
+        ],
         "progression": "Reversing a 1D Array"
       },
       "bonus": false,
@@ -4804,6 +4937,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L4_pilot-2022"
+        ],
         "progression": "Reversing a 1D Array"
       },
       "bonus": false,
@@ -4826,6 +4962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L5 CR_pilot-2022"
+        ],
         "progression": "Code Review: Reversing a 1D Array"
       },
       "bonus": false,
@@ -4848,6 +4987,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L6_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4870,6 +5012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L1_pilot-2022"
+        ],
         "progression": "Predict: Nested Loops"
       },
       "bonus": false,
@@ -4892,6 +5037,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L2_pilot-2022"
+        ],
         "progression": "Finding Duplicates"
       },
       "bonus": false,
@@ -4914,6 +5062,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L3_pilot-2022"
+        ],
         "progression": "Finding Duplicates"
       },
       "bonus": false,
@@ -4936,6 +5087,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L4 CR_pilot-2022"
+        ],
         "progression": "Code Review: Finding Duplicates"
       },
       "bonus": false,
@@ -4958,6 +5112,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L5_pilot-2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4980,6 +5137,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L11-L1_pilot-2022"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -5002,6 +5162,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L12-L1_pilot-2022"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -5024,6 +5187,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L12-L2_pilot-2022"
+        ],
         "progression": "Code Review: Data for Social Good Project"
       },
       "bonus": false,
@@ -5046,6 +5212,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L13-L1_pilot-2022"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -5068,6 +5237,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa3_pilot-2022"
+        ],
         "progression": "Unit 3 Survey"
       },
       "bonus": false,
@@ -5090,6 +5262,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 3 Assessment 2022_pilot-2022"
+        ],
         "progression": "Unit 3 Assessment"
       },
       "bonus": false,
@@ -5112,6 +5287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox_pilot-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5133,6 +5311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox_pilot-2022"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -5155,6 +5336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox_pilot-2022"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -8165,6 +8349,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

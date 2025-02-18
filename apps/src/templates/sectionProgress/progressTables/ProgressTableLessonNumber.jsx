@@ -1,10 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import ReactTooltip from 'react-tooltip';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from '@cdo/apps/util/color';
+import React from 'react';
+import ReactTooltip from 'react-tooltip';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import * as progressStyles from '@cdo/apps/templates/progress/progressStyles';
+import color from '@cdo/apps/util/color';
 import './progressTableStyles.scss';
 
 const LessonArrow = () => {
@@ -25,7 +26,7 @@ class ProgressTableLessonNumber extends React.Component {
     highlighted: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
     includeArrow: PropTypes.bool,
-    isAssessment: PropTypes.bool
+    isAssessment: PropTypes.bool,
   };
 
   tooltipId() {
@@ -75,24 +76,24 @@ const styles = {
     ...progressStyles.font,
     color: color.charcoal,
     ':hover': {
-      cursor: 'pointer'
+      cursor: 'pointer',
     },
     textAlign: 'center',
     height: '100%',
-    padding: '0px 10px'
+    padding: '0px 10px',
   },
   highlight: {
     backgroundColor: color.teal,
     color: color.white,
-    fontSize: 18
+    fontSize: 18,
   },
   icon: {
-    paddingRight: 5
-  }
+    paddingRight: 5,
+  },
 };
 
 export const unitTestExports = {
-  LessonArrow
+  LessonArrow,
 };
 
 export default Radium(ProgressTableLessonNumber);

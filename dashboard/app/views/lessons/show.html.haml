@@ -3,12 +3,16 @@
 %link{href: asset_path('css/lessons.css'), rel: 'stylesheet', type: 'text/css'}
 %script{src: webpack_asset_path('js/lessons/show.js'),
         data: {lesson: @lesson_data.to_json, customBlocksConfig: Block.for('GamelabJr').to_json}}
-%script{src: webpack_asset_path('js/blockly.js')}
+%script{src: webpack_asset_path('js/googleblockly.js')}
 %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
 
 = render partial: 'shared/emulate_print_media'
 
 #show-container
+
+/ Supply the FAB mount-point for the differentiation if allowed by the current user and this lesson
+- if Policies::Ai.ai_differentiation_enabled?(current_user) && Policies::Ai.ai_differentiation_enabled_for_lesson?(@lesson)
+  %div#ai-differentiation-fab-mount-point
 
 - if can? :edit, @lesson
   = render layout: 'shared/extra_links' do
@@ -20,4 +24,3 @@
           #copy-lesson-button
       - else
         %li= link_to 'Edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", script_lesson_path(@lesson.script, @lesson)).to_s
-

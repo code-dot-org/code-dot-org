@@ -1,0 +1,29 @@
+:ruby
+  list_items = [
+    {
+      icon: "fa-solid fa-globe",
+      heading: hoc_s("computer_vision_page.why.real_world.title"),
+      desc: hoc_s("computer_vision_page.why.real_world.desc"),
+    },
+    {
+      icon: "fa-solid fa-lightbulb-gear",
+      heading: hoc_s("computer_vision_page.why.innovative.title"),
+      desc: hoc_s("computer_vision_page.why.innovative.desc"),
+    },
+    {
+      icon: "fa-solid fa-smile",
+      heading: hoc_s("computer_vision_page.why.ethical.title"),
+      desc: hoc_s("computer_vision_page.why.ethical.desc"),
+    },
+  ]
+
+%ul.steps-list.three-col
+  - list_items.each do |list_item|
+    %li
+      .icon-wrapper
+        %span
+          %i{class: list_item[:icon]}
+      %h3
+        = list_item[:heading]
+      %p
+        = list_item[:desc]

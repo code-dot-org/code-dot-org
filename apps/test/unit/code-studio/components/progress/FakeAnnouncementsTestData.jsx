@@ -1,5 +1,5 @@
-import {NotificationType} from '@cdo/apps/templates/Notification';
 import {VisibilityType} from '@cdo/apps/code-studio/announcementsRedux';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 
 export const fakeTeacherAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
@@ -7,7 +7,7 @@ export const fakeTeacherAnnouncement = {
   details: 'Teachers are the best',
   link: '/foo/bar/teacher',
   type: NotificationType.information,
-  visibility: VisibilityType.teacher
+  visibility: VisibilityType.teacher,
 };
 
 export const fakeTeacherAnnouncementWithDismissibleAndButtonText = {
@@ -18,7 +18,7 @@ export const fakeTeacherAnnouncementWithDismissibleAndButtonText = {
   type: NotificationType.information,
   visibility: VisibilityType.teacher,
   dismissible: false,
-  buttonText: 'Push the button'
+  buttonText: 'Push the button',
 };
 
 export const fakeStudentAnnouncement = {
@@ -27,7 +27,7 @@ export const fakeStudentAnnouncement = {
   details: 'Students are the best',
   link: '/foo/bar/student',
   type: NotificationType.information,
-  visibility: VisibilityType.student
+  visibility: VisibilityType.student,
 };
 
 export const fakeTeacherAndStudentAnnouncement = {
@@ -36,7 +36,7 @@ export const fakeTeacherAndStudentAnnouncement = {
   details: 'More detail here',
   link: '/foo/bar/teacherAndStudent',
   type: NotificationType.information,
-  visibility: VisibilityType.teacherAndStudent
+  visibility: VisibilityType.teacherAndStudent,
 };
 
 export const fakeOldTeacherAnnouncement = {
@@ -44,5 +44,5 @@ export const fakeOldTeacherAnnouncement = {
   notice: 'Notice - Teacher',
   details: 'Teachers are the best',
   link: '/foo/bar/teacher',
-  type: NotificationType.information
+  type: NotificationType.information,
 };

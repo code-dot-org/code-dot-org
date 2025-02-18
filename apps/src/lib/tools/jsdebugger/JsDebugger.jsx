@@ -2,32 +2,31 @@
  * A React component for our JavaScript debugger UI. Returns a connected component
  * so this can only be used in cases where we have a redux store.
  */
+import classNames from 'classnames';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
-import $ from 'jquery';
+
 import i18n from '@cdo/locale';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import classNames from 'classnames';
+
 import dom from '../../../dom';
-import commonStyles from '../../../common-styles.module.scss';
-import styles from './js-debugger.module.scss';
-import Watchers from '../../../templates/watchers/Watchers';
-import PaneHeader, {
-  PaneSection,
-  PaneButton
-} from '../../../templates/PaneHeader';
-import SpeedSlider from '../../../templates/SpeedSlider';
-import FontAwesome from '../../../templates/FontAwesome';
+import FontAwesome from '../../../legacySharedComponents/FontAwesome';
 import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
-import * as utils from '../../../utils';
 import {
   add as addWatchExpression,
-  remove as removeWatchExpression
+  remove as removeWatchExpression,
 } from '../../../redux/watchedExpressions';
-import DebugConsole from './DebugConsole';
-import DebugButtons from './DebugButtons';
+import PaneHeader, {
+  PaneSection,
+  PaneButton,
+} from '../../../templates/PaneHeader';
+import SpeedSlider from '../../../templates/SpeedSlider';
+import * as utils from '../../../utils';
 
+import DebugButtons from './DebugButtons';
+import DebugConsole from './DebugConsole';
 import {
   // actions
   clearLog,
@@ -38,8 +37,12 @@ import {
   isAttached,
   isOpen,
   canRunNext,
-  getCommandHistory
+  getCommandHistory,
 } from './redux';
+import Watchers from './Watchers';
+
+import styles from './js-debugger.module.scss';
+import commonStyles from '../../../common-styles.module.scss';
 
 const debugAreaTransitionValue = 'height 0.4s';
 
@@ -78,7 +81,7 @@ class JsDebugger extends React.Component {
     // passed from above
     onSlideShut: PropTypes.func,
     onSlideOpen: PropTypes.func,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   constructor(props) {
@@ -89,7 +92,7 @@ class JsDebugger extends React.Component {
       openedHeight: 120,
       consoleWidth: 0,
       // For Google Analytics to see if student has opened the debugger
-      userInteracted: false
+      userInteracted: false,
     };
   }
 
@@ -100,8 +103,9 @@ class JsDebugger extends React.Component {
     }
     let commandsWidth = 0;
     if (document.getElementById('debug-commands-header')) {
-      commandsWidth = document.getElementById('debug-commands-header')
-        .offsetWidth;
+      commandsWidth = document.getElementById(
+        'debug-commands-header'
+      ).offsetWidth;
     }
     let watchersWidth = 0;
     if (document.getElementById('debug-watch-header')) {
@@ -223,14 +227,13 @@ class JsDebugger extends React.Component {
 
   slideShut() {
     const closedHeight =
-      $(this.root)
-        .find('#debug-area-header')
-        .height() + $(this._debugResizeBar).height();
+      $(this.root).find('#debug-area-header').height() +
+      $(this._debugResizeBar).height();
     this.setState({
       transitionType: 'closing',
       open: false,
       openedHeight: $(this.root).height(),
-      closedHeight
+      closedHeight,
     });
     this.props.onSlideShut && this.props.onSlideShut(closedHeight);
   }
@@ -238,7 +241,7 @@ class JsDebugger extends React.Component {
   slideOpen() {
     this.setState({
       open: true,
-      transitionType: 'opening'
+      transitionType: 'opening',
     });
     this.props.onSlideOpen && this.props.onSlideOpen(this.state.openedHeight);
   }
@@ -290,11 +293,11 @@ class JsDebugger extends React.Component {
       this.props.open();
       this.setState({
         open: true,
-        openedHeight: height
+        openedHeight: height,
       });
     } else {
       this.setState({
-        openedHeight: height
+        openedHeight: height,
       });
     }
   };
@@ -383,8 +386,8 @@ class JsDebugger extends React.Component {
    *  Handle mouse moves while dragging the debug resize bar.
    */
   onMouseMoveWatchersResizeBar = event => {
-    const watchers = this._watchers.getWrappedInstance();
-    const watchersRect = watchers.scrollableContainer.getBoundingClientRect();
+    const watchersRect =
+      this._watchers.scrollableContainer.getBoundingClientRect();
     const movement = watchersRect.left - event.clientX;
     const newDesiredWidth = watchersRect.width + movement;
     const newWatchersWidth = Math.max(
@@ -394,9 +397,8 @@ class JsDebugger extends React.Component {
 
     const watchersResizeRect = this._watchersResizeBar.getBoundingClientRect();
     const watchersResizeRight = newWatchersWidth - watchersResizeRect.width / 2;
-    watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
-    this._debugConsole.getWrappedInstance().root.style.right =
-      newWatchersWidth + 'px';
+    this._watchers.scrollableContainer.style.width = newWatchersWidth + 'px';
+    this._debugConsole.root.style.right = newWatchersWidth + 'px';
     this._watchersResizeBar.style.right = watchersResizeRight + 'px';
 
     const headerLBorderWidth = 1;
@@ -415,13 +417,8 @@ class JsDebugger extends React.Component {
   };
 
   render() {
-    const {
-      appType,
-      isAttached,
-      canRunNext,
-      isRunning,
-      debugButtons
-    } = this.props;
+    const {appType, isAttached, canRunNext, isRunning, debugButtons} =
+      this.props;
     const hasFocus = this.props.isDebuggerPaused && !this.props.isEditWhileRun;
 
     const canShowDebugSprites = appType === 'gamelab';
@@ -444,7 +441,7 @@ class JsDebugger extends React.Component {
         style={[
           {transition: debugAreaTransitionValue},
           this.props.style,
-          {height}
+          {height},
         ]}
         onTransitionEnd={this.onTransitionEnd}
         ref={root => (this.root = root)}
@@ -644,7 +641,7 @@ export default connect(
     isOpen: isOpen(state),
     isAttached: isAttached(state),
     canRunNext: canRunNext(state),
-    commandHistory: getCommandHistory(state)
+    commandHistory: getCommandHistory(state),
   }),
   {
     setStepSpeed,
@@ -653,6 +650,6 @@ export default connect(
     removeWatchExpression,
     clearLog,
     open,
-    close
+    close,
   }
 )(Radium(JsDebugger));

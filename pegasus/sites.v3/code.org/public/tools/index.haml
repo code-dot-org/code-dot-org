@@ -1,0 +1,47 @@
+---
+title: Tools
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/tools-styles.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.grid-container.justify-space-between.align-items-center.gap-4.wider-text
+    .text-wrapper
+      %h1.white
+        =hoc_s("tools_page.heading")
+      %p.body-two.white
+        =hoc_s("tools_page.desc")
+    %figure
+      %img{src: "/images/tools/super-nova.png", alt: "", style: "width: 100%; border-radius: 4px"}
+
+%section
+  .wrapper
+    %h2=hoc_s("tools_page.labs.heading")
+    %p=hoc_s("tools_page.labs.desc")
+    = view :"tools/tools_lab_list"
+
+%section.tools-el.bg-neutral-light
+  .wrapper
+    %h2=hoc_s("tools_page.tools_el.heading")
+    %p=hoc_s("tools_page.tools_el.desc")
+    %div.content-wrapper.flex-container.justify-space-between.wrap-reverse.gap-2
+      = view :"tools/tools_empower_learning"
+      %figure.rounded-corners
+
+%section.widgets
+  .wrapper.centered
+    %p.header-overline=hoc_s("tools_page.widgets.overline")
+    %h2=hoc_s("tools_page.widgets.heading")
+    %p=hoc_s("tools_page.widgets.desc")
+    = view :"tools/tools_widgets"
+
+= view :section_divider_line
+
+%section
+  .wrapper.centered
+    %h2=hoc_s("tools_page.additional_resources.heading")
+    = view :"tools/tools_additional_resources"
+
+= view :swiper_page_tools

@@ -1,15 +1,18 @@
 import $ from 'jquery';
-import React from 'react';
 import PropTypes from 'prop-types';
-import PaneHeader, {PaneButton} from '@cdo/apps/templates/PaneHeader';
-import InstructionsTab from '@cdo/apps/templates/instructions/InstructionsTab';
-import BackgroundMusicMuteButton from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
+import React from 'react';
+
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import BackgroundMusicMuteButton from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
 import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
-import {TabType} from './TopInstructions';
+import InstructionsTab from '@cdo/apps/templates/instructions/InstructionsTab';
+import PaneHeader, {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';
-import color from '../../util/color';
+
 import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+
+import {TabType} from './TopInstructions';
 
 function TopInstructionsHeader(props) {
   const {
@@ -18,9 +21,10 @@ function TopInstructionsHeader(props) {
     isCSDorCSP,
     displayHelpTab,
     displayFeedback,
-    levelHasRubric,
+    levelHasMiniRubric,
     displayDocumentationTab,
     displayReviewTab,
+    displayTaRubricTab,
     isViewingAsTeacher,
     hasBackgroundMusic,
     fetchingData,
@@ -31,7 +35,9 @@ function TopInstructionsHeader(props) {
     handleDocumentationTabClick,
     handleReviewTabClick,
     handleTeacherOnlyTabClick,
+    handleTaRubricTabClick,
     handleClickCollapser,
+    isOldPurpleColor,
     isMinecraft,
     dynamicInstructions,
     ttsLongInstructionsUrl,
@@ -43,7 +49,7 @@ function TopInstructionsHeader(props) {
     isViewingAsInstructorInTraining,
     isEmbedView,
     isCollapsed,
-    collapsible
+    collapsible,
   } = props;
 
   const showContainedLevelAnswer =
@@ -54,12 +60,14 @@ function TopInstructionsHeader(props) {
     ...(isRtl
       ? styles.collapserIcon.showHideButtonRtl
       : styles.collapserIcon.showHideButtonLtr),
-    ...(teacherOnly && styles.collapserIcon.teacherOnlyColor)
+    ...(!isOldPurpleColor && styles.collapserIcon.rebrandPhase1StylesColor),
+    ...(teacherOnly && styles.collapserIcon.teacherOnlyColor),
   };
 
   return (
     <PaneHeader
       hasFocus={false}
+      isOldPurpleColor={isOldPurpleColor}
       teacherOnly={teacherOnly}
       isMinecraft={isMinecraft}
     >
@@ -90,13 +98,14 @@ function TopInstructionsHeader(props) {
         <div
           style={{
             ...styles.helpTabs,
-            ...(isRtl ? styles.helpTabsRtl : styles.helpTabsLtr)
+            ...(isRtl ? styles.helpTabsRtl : styles.helpTabsLtr),
           }}
         >
           <InstructionsTab
             className="uitest-instructionsTab"
             onClick={handleInstructionTabClick}
             selected={tabSelected === TabType.INSTRUCTIONS}
+            isLegacyTextColor={isOldPurpleColor}
             text={i18n.instructions()}
             teacherOnly={teacherOnly}
             isMinecraft={isMinecraft}
@@ -107,18 +116,20 @@ function TopInstructionsHeader(props) {
               className="uitest-helpTab"
               onClick={handleHelpTabClick}
               selected={tabSelected === TabType.RESOURCES}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.helpTips()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />
           )}
-          {isCSDorCSP && displayFeedback && (!fetchingData || teacherOnly) && (
+          {displayFeedback && (!fetchingData || teacherOnly) && (
             <InstructionsTab
               className="uitest-feedback"
               onClick={handleCommentTabClick}
               selected={tabSelected === TabType.COMMENTS}
-              text={levelHasRubric ? i18n.rubric() : i18n.feedback()}
+              isLegacyTextColor={isOldPurpleColor}
+              text={levelHasMiniRubric ? i18n.rubric() : i18n.feedback()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
@@ -128,6 +139,7 @@ function TopInstructionsHeader(props) {
             <InstructionsTab
               onClick={handleDocumentationTabClick}
               selected={tabSelected === TabType.DOCUMENTATION}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.documentation()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
@@ -139,8 +151,21 @@ function TopInstructionsHeader(props) {
               className="uitest-reviewTab"
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
+              isLegacyTextColor={isOldPurpleColor}
               text={i18n.review()}
               teacherOnly={teacherOnly}
+              isMinecraft={isMinecraft}
+              isRtl={isRtl}
+            />
+          )}
+          {displayTaRubricTab && (
+            <InstructionsTab
+              className="uitest-taRubricTab"
+              onClick={handleTaRubricTabClick}
+              selected={tabSelected === TabType.TA_RUBRIC}
+              isLegacyTextColor={isOldPurpleColor}
+              text={i18n.rubric()}
+              teacherOnly={false}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />
@@ -175,9 +200,11 @@ function TopInstructionsHeader(props) {
               src={ttsLongInstructionsUrl}
               style={{
                 ...styles.audio,
-                ...(isRtl ? styles.audioRTL : styles.audioLTR)
+                ...(isRtl ? styles.audioRTL : styles.audioLTR),
               }}
               autoplayTriggerElementId="codeApp"
+              isRoundedVolumeIcon
+              isLegacyStyles={isOldPurpleColor}
             />
           )}
       </div>
@@ -190,42 +217,42 @@ const styles = {
     color: color.default_text,
     display: 'flex',
     width: '100%',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   audioRTL: {
     wrapper: {
-      order: 5
-    }
+      order: 5,
+    },
   },
   audio: {
     button: {
       height: 24,
       marginTop: '3px',
-      marginBottom: '3px'
+      marginBottom: '3px',
     },
     buttonImg: {
-      lineHeight: '24px',
+      lineHeight: '20px',
       fontSize: 15,
-      paddingLeft: 12
-    }
+      paddingLeft: 12,
+    },
   },
   audioLTR: {
     wrapper: {
-      order: 5
-    }
+      order: 5,
+    },
   },
   helpTabs: {
     paddingTop: 6,
     width: '100%',
     boxSizing: 'border-box',
     display: 'flex',
-    minWidth: 100
+    minWidth: 100,
   },
   helpTabsLtr: {
-    paddingLeft: 30
+    paddingLeft: 30,
   },
   helpTabsRtl: {
-    paddingRight: 30
+    paddingRight: 30,
   },
   collapserIcon: {
     showHideButton: {
@@ -237,28 +264,31 @@ const styles = {
       fontSize: 18,
       ':hover': {
         cursor: 'pointer',
-        color: color.white
-      }
+        color: color.white,
+      },
     },
     showHideButtonLtr: {
-      left: 8
+      left: 8,
     },
     showHideButtonRtl: {
-      right: 8
+      right: 8,
+    },
+    rebrandPhase1StylesColor: {
+      color: color.white,
     },
     teacherOnlyColor: {
       color: color.lightest_cyan,
       ':hover': {
         cursor: 'pointer',
-        color: color.default_text
-      }
-    }
+        color: color.default_text,
+      },
+    },
   },
   documentationButton: {
     order: 4,
     whiteSpace: 'nowrap',
-    minWidth: 'fit-content'
-  }
+    minWidth: 'fit-content',
+  },
 };
 
 TopInstructionsHeader.propTypes = {
@@ -267,9 +297,10 @@ TopInstructionsHeader.propTypes = {
   isCSDorCSP: PropTypes.bool,
   displayHelpTab: PropTypes.bool,
   displayFeedback: PropTypes.bool,
-  levelHasRubric: PropTypes.bool,
+  levelHasMiniRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
+  displayTaRubricTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
   hasBackgroundMusic: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
@@ -280,7 +311,9 @@ TopInstructionsHeader.propTypes = {
   handleDocumentationTabClick: PropTypes.func.isRequired,
   handleReviewTabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
+  handleTaRubricTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
+  isOldPurpleColor: PropTypes.bool,
   isMinecraft: PropTypes.bool.isRequired,
   dynamicInstructions: PropTypes.object,
   ttsLongInstructionsUrl: PropTypes.string,
@@ -292,7 +325,7 @@ TopInstructionsHeader.propTypes = {
   isViewingAsInstructorInTraining: PropTypes.bool,
   isEmbedView: PropTypes.bool.isRequired,
   isCollapsed: PropTypes.bool.isRequired,
-  collapsible: PropTypes.bool.isRequired
+  collapsible: PropTypes.bool.isRequired,
 };
 
 export default TopInstructionsHeader;

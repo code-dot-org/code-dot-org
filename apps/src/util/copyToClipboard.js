@@ -1,3 +1,9 @@
+/**
+ * Copies a string to the clipboard. Includes a fallback for legacy browsers.
+ * @param {string} str - Text to copy to the clipboard.
+ * @param {function} onSuccess - Callback function to call on success.
+ * @param {function} onFailure - Callback function to call on failure.
+ */
 export default function copyToClipboard(
   str,
   onSuccess = null,

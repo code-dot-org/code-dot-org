@@ -1,16 +1,20 @@
 import _ from 'lodash';
-import {expect, assert} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
-import * as utils from '@cdo/apps/utils';
-import project from '@cdo/apps/code-studio/initApp/project';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {CP_API} from '@cdo/apps/maker/boards/circuitPlayground/PlaygroundConstants';
+import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/locale';
-import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+
+import {expect, assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('project.js', () => {
   let sourceHandler;
+
+  window.dashboard = {...window.dashboard, project};
 
   const setData = project.__TestInterface.setCurrentData;
   const setSources = project.__TestInterface.setCurrentSources;
@@ -196,19 +200,9 @@ describe('project.js', () => {
       expect(project.getStandaloneApp()).to.equal('applab');
     });
 
-    it('for calc', () => {
-      window.appOptions.app = 'calc';
-      expect(project.getStandaloneApp()).to.equal('calc');
-    });
-
     it('for dance', () => {
       window.appOptions.app = 'dance';
       expect(project.getStandaloneApp()).to.equal('dance');
-    });
-
-    it('for eval', () => {
-      window.appOptions.app = 'eval';
-      expect(project.getStandaloneApp()).to.equal('eval');
     });
 
     it('for flappy', () => {
@@ -343,39 +337,39 @@ describe('project.js', () => {
     });
   });
 
-  describe('project.getProjectUrl', function() {
+  describe('project.getProjectUrl', function () {
     let stubUrl;
     let url;
 
-    beforeEach(function() {
+    beforeEach(function () {
       stubUrl = sinon.stub(project, 'getUrl').callsFake(() => url);
     });
 
-    afterEach(function() {
+    afterEach(function () {
       stubUrl.restore();
     });
 
-    it('typical url', function() {
+    it('typical url', function () {
       url = 'http://url';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with ending slashes', function() {
+    it('with ending slashes', function () {
       url = 'http://url//';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with query string', function() {
+    it('with query string', function () {
       url = 'http://url?query';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
     });
 
-    it('with hash', function() {
+    it('with hash', function () {
       url = 'http://url#hash';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with ending slashes, query, and hash', function() {
+    it('with ending slashes, query, and hash', function () {
       url = 'http://url/?query#hash';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
     });
@@ -388,20 +382,20 @@ describe('project.js', () => {
     const ORIGINS = [
       {
         studio: 'https://studio.code.org',
-        codeProjects: 'https://codeprojects.org'
+        codeProjects: 'https://codeprojects.org',
       },
       {
         studio: 'https://test-studio.code.org',
-        codeProjects: 'https://test.codeprojects.org'
+        codeProjects: 'https://test.codeprojects.org',
       },
       {
         studio: 'https://staging-studio.code.org',
-        codeProjects: 'https://staging.codeprojects.org'
+        codeProjects: 'https://staging.codeprojects.org',
       },
       {
         studio: 'http://localhost-studio.code.org:3000',
-        codeProjects: 'http://localhost.codeprojects.org:3000'
-      }
+        codeProjects: 'http://localhost.codeprojects.org:3000',
+      },
     ];
 
     const NORMAL_APP_TYPES = ['artist', 'playlab', 'applab', 'gamelab'];
@@ -584,7 +578,7 @@ describe('project.js', () => {
         libraryName: 'my name',
         libraryDescription: 'my description',
         latestLibraryVersion: '123456',
-        libraryPublishedAt: new Date()
+        libraryPublishedAt: new Date(),
       };
       setData(lib);
       let currentProject = project.__TestInterface.getCurrent();
@@ -592,7 +586,7 @@ describe('project.js', () => {
 
       project.setLibraryDetails({
         libraryDescription: 'new description',
-        latestLibraryVersion: undefined
+        latestLibraryVersion: undefined,
       });
 
       currentProject = project.__TestInterface.getCurrent();
@@ -742,7 +736,7 @@ describe('project.js', () => {
       window.appOptions.channel = 'mychannel';
       sinon.stub(utils, 'currentLocation').returns({
         pathname: '/projects/artist/mychannel',
-        search: ''
+        search: '',
       });
       sinon.stub(project, 'getStandaloneApp').returns('artist');
       server = sinon.createFakeServer({autoRespond: true});
@@ -924,7 +918,7 @@ describe('project.js', () => {
 
       const projectData = {
         id: STUB_CHANNEL_ID,
-        isOwner: true
+        isOwner: true,
       };
       project.updateCurrentData_(null, projectData);
     });
@@ -1063,6 +1057,7 @@ describe('project.js', () => {
 
       // change getLevelSource stub to simulate changing source code
       const getLevelSourceStub = sinon.stub();
+      getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
       sourceHandler.getLevelSource = getLevelSourceStub;
@@ -1084,6 +1079,7 @@ describe('project.js', () => {
 
       // change getLevelSource stub to simulate changing source code
       const getLevelSourceStub = sinon.stub();
+      getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
       sourceHandler.getLevelSource = getLevelSourceStub;
@@ -1105,8 +1101,8 @@ describe('project.js', () => {
 function replaceAppOptions() {
   replaceOnWindow('appOptions', {
     level: {
-      isProjectLevel: true
-    }
+      isProjectLevel: true,
+    },
   });
 }
 
@@ -1125,7 +1121,7 @@ function stubGetChannelsWithNotFound(server) {
     xhr.respond(
       404,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       'channel `channel_id` not found'
     );
@@ -1137,7 +1133,7 @@ function stubGetChannels(server) {
     xhr.respond(
       200,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       JSON.stringify({
         createdAt: '2018-10-22T21:59:43.000-07:00',
@@ -1148,7 +1144,7 @@ function stubGetChannels(server) {
         migratedToS3: true,
         name: 'artist project',
         id: 'kmz3weHzTpZTbRWrHRzMJA',
-        projectType: 'artist'
+        projectType: 'artist',
       })
     );
   });
@@ -1159,7 +1155,7 @@ function stubPostChannels(server) {
     xhr.respond(
       200,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       JSON.stringify({
         createdAt: '2018-10-22T21:59:43.000-07:00',
@@ -1170,7 +1166,7 @@ function stubPostChannels(server) {
         migratedToS3: true,
         name: 'Remix: allthethings-artist-project-backed',
         id: 'kmz3weHzTpZTbRWrHRzMJA',
-        projectType: 'artist'
+        projectType: 'artist',
       })
     );
   });
@@ -1181,14 +1177,14 @@ function stubGetMainJson(server) {
     xhr.respond(
       200,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       JSON.stringify({
         filename: 'main.json',
         category: 'json',
         size: 0,
         versionId: 12345,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       })
     );
   });
@@ -1205,7 +1201,7 @@ function stubGetSourcesWithNotFound(server) {
     xhr.respond(
       404,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       'source for `channel_id` not found'
     );
@@ -1217,14 +1213,14 @@ function stubPutMainJson(server) {
     xhr.respond(
       200,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       JSON.stringify({
         filename: 'main.json',
         category: 'json',
         size: 0,
         versionId: 12345,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       })
     );
   });
@@ -1246,6 +1242,10 @@ function createStubSourceHandler() {
     getSelectedPoem: sinon.stub(),
     prepareForRemix: sinon.stub().resolves(),
     setInitialLibrariesList: sinon.stub(),
-    getLibrariesList: sinon.stub()
+    getLibrariesList: sinon.stub(),
+    setInRestrictedShareMode: sinon.stub(),
+    inRestrictedShareMode: sinon.stub(),
+    setTeacherHasConfirmedUploadWarning: sinon.stub(),
+    teacherHasConfirmedUploadWarning: sinon.stub(),
   };
 }

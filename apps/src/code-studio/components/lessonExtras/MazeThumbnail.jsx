@@ -1,12 +1,17 @@
+import {utils, MazeMap, drawMap} from '@code-dot-org/maze';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
-import skins from '@cdo/apps/maze/skins';
+
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import {utils, MazeMap, drawMap} from '@code-dot-org/maze';
+import skins from '@cdo/apps/maze/skins';
+import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+
 import color from '../../../util/color';
 
 const getSubtypeForSkin = utils.getSubtypeForSkin;
+
+// Size of each edge of (unscaled) square thumbnail, in pixels.
+const SIZE = 400;
 
 export default class MazeThumbnail extends React.Component {
   static propTypes = {
@@ -14,16 +19,16 @@ export default class MazeThumbnail extends React.Component {
     mazeSummary: PropTypes.shape({
       level: PropTypes.shape({
         startDirection: PropTypes.number.isRequired,
-        flowerType: PropTypes.string
+        flowerType: PropTypes.string,
       }).isRequired,
       map: PropTypes.array,
       serializedMaze: PropTypes.array,
-      skin: PropTypes.string.isRequired
-    })
+      skin: PropTypes.string.isRequired,
+    }),
   };
 
   static defaultProps = {
-    scale: 1
+    scale: 1,
   };
 
   componentDidMount() {
@@ -32,7 +37,7 @@ export default class MazeThumbnail extends React.Component {
     const Type = getSubtypeForSkin(this.props.mazeSummary.skin);
     const subtype = new Type(Maze, {
       skin,
-      level: this.props.mazeSummary.level
+      level: this.props.mazeSummary.level,
     });
 
     Maze.map = this.props.mazeSummary.serializedMaze
@@ -53,7 +58,7 @@ export default class MazeThumbnail extends React.Component {
   }
 
   render() {
-    const scale = (this.props.size || 400) / 400;
+    const scale = (this.props.size || SIZE) / SIZE;
     return (
       <div
         style={{
@@ -61,19 +66,19 @@ export default class MazeThumbnail extends React.Component {
           height: this.props.size,
           display: 'inline-block',
           overflow: 'hidden',
-          border: `1px solid ${color.lighter_gray}`
+          border: `1px solid ${color.lighter_gray}`,
         }}
       >
         <div
           style={{
             transform: `scale(${scale})`,
-            ...styles.wrapper
+            ...styles.wrapper,
           }}
         >
           <ProtectedStatefulDiv>
             <svg
-              width="400"
-              height="400"
+              width={SIZE}
+              height={SIZE}
               ref={c => {
                 this.svg = c;
               }}
@@ -89,21 +94,21 @@ const styles = {
   wrapper: {
     display: 'inline-block',
     position: 'relative',
-    transformOrigin: '0 0'
+    transformOrigin: document.dir === 'rtl' ? `${SIZE}px 0` : '0 0',
   },
   overlay: {
-    width: 400,
-    height: 400,
+    width: SIZE,
+    height: SIZE,
     backgroundColor: 'rgba(0, 255, 0, 0.3)',
     position: 'absolute',
     top: 0,
     left: 0,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   check: {
     fontSize: 350,
     lineHeight: '400px',
     color: '#fff',
-    opacity: 0.8
-  }
+    opacity: 0.8,
+  },
 };

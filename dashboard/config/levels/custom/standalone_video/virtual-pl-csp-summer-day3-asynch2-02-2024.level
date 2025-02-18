@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-05-10T15:33:34.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_CSP_SummerAsync_U3ConnectionsConclusions",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "long_instructions": "<img src=\"https://images.code.org/9df1a7b659aba5907457cec20dd907a8-Screenshot 2023-10-19 at 12.26.39 PM.png\" alt=\"A clipboard with the words TO DO on it. This icon is used to signal an action item for participants.\" width=\"30px\" style=\"border-radius:10px; float:left; margin: 0px 10px 5px 0px;\">\r\n\r\n#### After watching a video of what we did not go over in Unit 2, you will relate the content to the CED. The Course and Exam Description (CED) binder contains the course framework. The framework includes two essential components: computational thinking practices and course content. Much of CSP Unit 2 aligns with the standards in Big Idea 4, Computer Systems and Networks. The content has been sequenced, paced, and scaffolded to build students' understanding and their ability to transfer and apply knowledge and skills to new contexts.\r\n---\r\n\r\n### Learn More:\r\n<img src=\"https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png\" alt=\"A clipboard with the words TO DO on it. This icon is used to signal an action item for participants.\" width=\"30px\" style=\"border-radius:10px; float:left; margin: 0px 10px 5px 0px;\">\r\n\r\n#### Watch the Unit 2: Conclusions and Connections (14:44) video."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-10T15:33:34.989+00:00\",\"changed\":[\"cloned from \\\"virtual-pl-csd-summer-day3-UnderstandingContext3_3_video\\\"\"],\"cloned_from\":\"virtual-pl-csd-summer-day3-UnderstandingContext3_3_video\"}]"
+}]]></config>
+</StandaloneVideo>

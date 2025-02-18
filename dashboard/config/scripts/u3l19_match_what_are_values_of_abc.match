@@ -17,3 +17,5 @@ answer '16'
 answer '12'
 answer '10'
 answer '15'
+
+allow_multiple_attempts true

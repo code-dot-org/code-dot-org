@@ -1,13 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {DragDropContext} from 'react-beautiful-dnd';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {DragDropContext} from 'react-beautiful-dnd';
+
+import AssignedStudentsPanel from './AssignedStudentsPanel';
 import {
   DROPPABLE_ID_UNASSIGNED,
-  generateNewGroup
+  generateNewGroup,
 } from './CodeReviewGroupsUtils';
 import UnassignedStudentsPanel from './UnassignedStudentsPanel';
-import AssignedStudentsPanel from './AssignedStudentsPanel';
 
 // Provides "drag and drop context" that allows us to drag
 // code review group members between groups as teachers arrange their students into code review groups.
@@ -49,7 +50,7 @@ export default function CodeReviewGroupsManager({groups, setGroups}) {
 
     const updatedAssignedGroups = getAssignedGroups().map(group => ({
       ...group,
-      members: []
+      members: [],
     }));
     setGroups([...updatedAssignedGroups, updatedUnassignedGroup]);
   };
@@ -96,7 +97,7 @@ export default function CodeReviewGroupsManager({groups, setGroups}) {
 
       const updatedGroups = updateGroups(groups, [
         result.updatedSource,
-        result.updatedDest
+        result.updatedDest,
       ]);
 
       setGroups(updatedGroups);
@@ -125,7 +126,7 @@ export default function CodeReviewGroupsManager({groups, setGroups}) {
 
 CodeReviewGroupsManager.propTypes = {
   groups: PropTypes.array.isRequired,
-  setGroups: PropTypes.func.isRequired
+  setGroups: PropTypes.func.isRequired,
 };
 
 // Reorders members in a group if member dragged elsewhere in the same group.
@@ -172,6 +173,6 @@ const updateGroups = (groups, changedGroups) => {
 
 const styles = {
   dragAndDropContainer: {
-    display: 'flex'
-  }
+    display: 'flex',
+  },
 };

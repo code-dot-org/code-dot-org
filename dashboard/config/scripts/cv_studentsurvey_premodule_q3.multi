@@ -1,0 +1,9 @@
+name 'cv-studentsurvey-premodule-q3'
+question 'What are you most hoping to learn or achieve in the Computer Vision unit? (**Choose no more than two.**)'
+right 'Understand how computers and AI interpret visual information'
+right 'Complete a project (like creating an app or game)'
+right 'Learn about the ethical implications of AI'
+right 'Explore potential careers in computer vision and AI'
+type 'multi2'
+
+allow_multiple_attempts true

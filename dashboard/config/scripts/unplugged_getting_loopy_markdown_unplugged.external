@@ -1,0 +1,22 @@
+name 'unplugged_getting loopy_markdown_unplugged'
+title 'getting loopy markdown'
+
+markdown <<MARKDOWN
+##Getting Loopy
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/571c404ce88bdc1c467e4d1a46524c5c-image-1719876647563.30.44 PM.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>This is an Unplugged Activity! </strong>
+</h4>
+
+> Ask your teacher for these handouts:
+> - **<a href="https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit" target="_blank">Worksheet</a>**
+> - **<a href="https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit" target="_blank">Assessment</a>**
+
+</div>
+
+
+MARKDOWN

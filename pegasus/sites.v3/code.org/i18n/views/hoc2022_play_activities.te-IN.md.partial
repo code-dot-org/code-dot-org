@@ -1,7 +1,0 @@
-{{featured_tutorial, title: “హలో వరల్డ్: సాకర్”, body: “మీరు సాకర్ పిచ్ పైన ఇంటరాక్టివ్ సన్నివేశాలను కోడ్ చేస్తున్నప్పుడు మీరు జట్టు కెప్టెన్ గా ఉంటారు. గోఓఓఓఓల్!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "క్రీడలు", body: "ఒక బాస్కెట్‌బాల్ ఆట చేయండి లేదా క్రీడల వ్యాప్తంగా కలిపి మరియు జత చేయండి.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
-{{ featured_tutorial, title: "ఫ్లాప్పీ కోడ్", body: "10 నిముషాల కంటే తక్కువలో మీ స్వంత ఆటను వ్రాయాలనుకుంటున్నారా? మా ఫ్లాప్పీ కోడ్ ట్యుటోరియల్ ప్రయత్నించండి!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "Minecraft అవర్ ఆఫ్ కోడ్", body: "Minecraft ఒక సరికొత్త బ్రాండ్ కార్యక్రమంతో అవర్ ఆఫ్ కోడ్ కోసం తిరిగి వచ్చింది! కోడ్ తో Minecraft ద్వారా ప్రయాణం.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

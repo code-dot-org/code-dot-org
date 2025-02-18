@@ -8,9 +8,36 @@ Given(/^block "([^"]*)" is at a ((?:blockly )?)location "([^"]*)"$/) do |block, 
   @locations[identifier] = BlocklyHelpers::Point.new(x, y)
 end
 
+When /^I add a "([^"]*)" block with id "([^"]*)" to workspace$/ do |type, id|
+  script = <<~JS
+    Blockly.serialization.blocks.append({
+      "type": "#{type}",
+      "id": "#{id}"
+    }, Blockly.getMainWorkspace());
+  JS
+
+  @browser.execute_script(script)
+end
+
 When(/^I click block "([^"]*)"$/) do |block|
   id_selector = get_id_selector
   @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
+end
+
+# This helps click on a field in Google Blockly. It always picks the first element from the list generated
+# by the selector.
+When(/^I click block field "([^"]*)"$/) do |selector|
+  steps "Then I click block field \"#{selector}\" number 0"
+end
+
+# This helps click on a field in Google Blockly.
+When(/^I click block field "([^"]*)" number (\d+)$/) do |selector, index|
+  code = <<~CODE
+    $("#{selector}")[#{index}].dispatchEvent(new PointerEvent('pointerdown', {bubbles: true}));
+    $("#{selector}")[#{index}].dispatchEvent(new PointerEvent('pointerup', {bubbles: true}));
+  CODE
+
+  @browser.execute_script(code)
 end
 
 # Note: this is an offset relative to the current position of the block
@@ -29,8 +56,23 @@ When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
   @browser.execute_script code
 end
 
-When /^I drag block matching selector "([^"]*)" to block matching selector "([^"]*)"$/ do |from, to|
-  code = generate_selector_drag_code(from, to, 0, 30)
+When /^I connect block "([^"]*)" to block "([^"]*)"$/ do |from, to|
+  code = connect_block(from, to)
+  @browser.execute_script code
+end
+
+When /^I connect block "([^"]*)" inside block "([^"]*)"$/ do |from, to|
+  code = connect_block_statement(from, to)
+  @browser.execute_script code
+end
+
+When /^I move block "([^"]*)" to jigsaw ghost$/ do |id|
+  code = move_block_to_jigsaw_ghost(id)
+  @browser.execute_script code
+end
+
+When /^I delete block "([^"]*)"$/ do |id|
+  code = delete_block(id)
   @browser.execute_script code
 end
 
@@ -52,6 +94,11 @@ end
 When /^I drag block "([^"]*)" into first position in repeat block "([^"]*)"$/ do |from, to|
   code = generate_drag_code(get_block_id(from), get_block_id(to), 35, 50)
   @browser.execute_script code
+end
+
+When /^I drag block number (\d+) to offset "([^"]*), ([^"]*)"$/ do |index, dx, dy|
+  block_selector = get_indexed_blockly_draggable_selector(index.to_i)
+  drag_indexed_block_to_offset(block_selector, dx, dy)
 end
 
 Then /^block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
@@ -83,34 +130,44 @@ Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
   @browser.execute_script("Blockly.#{block_space_name}.scrollTo(0, #{scrollable_height})")
 end
 
+# This function only works for Google Blockly
+Then /^I scroll the main blockspace to block "(.*?)"$/ do |block_id|
+  @browser.execute_script("Blockly.mainBlockSpace.centerOnBlock('#{block_id}')")
+end
+
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
-  id_selector = get_id_selector
   block_id = get_block_id(block)
 
   # Check block existence, blockly-way
   steps "Then block \"#{block}\" has not been deleted"
 
-  # Check block position is within visible blockspace
-  # Get block dimensions
-  block_left = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().left")
-  block_right = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().right")
-  block_top = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().top")
-  block_bottom = @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\")[0].getBoundingClientRect().bottom")
+  script = <<-JS
+    const workspace = Blockly.getMainWorkspace();
+    const block = workspace.getBlockById('#{block_id}');
+    const boundingRect = block.getBoundingRectangle();
+    const viewMetrics = workspace.getMetricsManager().getViewMetrics();
+    const toolboxWidth = workspace.getToolbox() ? workspace.getToolbox().getWidth() : 0;
 
-  # Get blockspace dimensions
-  # blockspaceRect includes the toolbox on the left, but not the headers on the top.
-  block_space_left = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().left')
-  block_space_right = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().right')
-  block_space_top = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().top')
-  block_space_bottom = @browser.execute_script('return Blockly.mainBlockSpaceEditor.svg_.getBoundingClientRect().bottom')
-  toolbox_width = @browser.execute_script('return Blockly.mainBlockSpaceEditor.getToolboxWidth()')
+    return {
+      blockLeft: boundingRect.left,
+      blockRight: boundingRect.right,
+      blockTop: boundingRect.top,
+      blockBottom: boundingRect.bottom,
+      viewLeft: viewMetrics.left + toolboxWidth,
+      viewRight: viewMetrics.left + viewMetrics.width,
+      viewTop: viewMetrics.top,
+      viewBottom: viewMetrics.top + viewMetrics.height
+    };
+  JS
 
-  # Minimum part of block (in pixels) that must be within workspace to be 'visible'
+  dimensions = @browser.execute_script(script)
+
   block_margin = 10
-  expect(block_bottom).to be > block_space_top + block_margin
-  expect(block_top).to be < block_space_bottom - block_margin
-  expect(block_left).to be < block_space_right - block_margin
-  expect(block_right).to be > block_space_left + block_margin + toolbox_width
+
+  expect(dimensions["blockBottom"]).to be > dimensions["viewTop"] + block_margin
+  expect(dimensions["blockTop"]).to be < dimensions["viewBottom"] - block_margin
+  expect(dimensions["blockLeft"]).to be < dimensions["viewRight"] - block_margin
+  expect(dimensions["blockRight"]).to be > dimensions["viewLeft"] + block_margin
 end
 
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
@@ -140,21 +197,21 @@ end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle$/ do
   clear_main_block_space
-  blocks_xml = '<xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
+  blocks_xml = '<xml><block type="flappy_whenClick" deletable="false" id="whenClick"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false" id="whenCollideGround"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
 And /^I've initialized the workspace with an auto\-positioned flappy puzzle with extra newlines$/ do
   clear_main_block_space
-  blocks_xml = '\n\n    <xml><block type="flappy_whenClick" deletable="false"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
+  blocks_xml = '\n\n    <xml><block type="flappy_whenClick" deletable="false" id="whenClick"><next><block type="flappy_flap_height"><title name="VALUE">Flappy.FlapHeight.NORMAL</title><next><block type="flappy_playSound"><title name="VALUE">"sfx_wing"</title></block></next></block></next></block><block type="flappy_whenCollideGround" deletable="false" id="whenCollideGround"><next><block type="flappy_endGame"></block></next></block><block type="when_run" deletable="false"><next><block type="flappy_setSpeed"><title name="VALUE">Flappy.LevelSpeed.NORMAL</title></block></next></block><block type="flappy_whenCollideObstacle" deletable="false"><next><block type="flappy_endGame"></block></next></block><block type="flappy_whenEnterObstacle" deletable="false"><next><block type="flappy_incrementPlayerScore"></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
 
 And /^I've initialized the workspace with a manually\-positioned playlab puzzle$/ do
   clear_main_block_space
-  blocks_xml = '<xml><block type="studio_whenArrow" x="20"><title name="VALUE">up</title><next><block type="studio_move"><title name="DIR">1</title></block></next></block><block type="studio_whenArrow" y="20"><title name="VALUE">down</title><next><block type="studio_move"><title name="DIR">2</title></block></next></block><block type="studio_whenArrow" x="20" y="20"><title name="VALUE">left</title><next><block type="studio_move"><title name="DIR">4</title></block></next></block><block type="studio_whenArrow"><title name="VALUE">right</title><next><block type="studio_move"><title name="DIR">8</title></block></next></block></xml>'
+  blocks_xml = '<xml><block type="studio_whenArrow" x="20" id="whenUp"><title name="VALUE">up</title><next><block type="studio_move"><title name="DIR">1</title></block></next></block><block type="studio_whenArrow" y="20" id="whenDown"><title name="VALUE">down</title><next><block type="studio_move"><title name="DIR">2</title></block></next></block><block type="studio_whenArrow" x="20" y="20" id="whenLeft"><title name="VALUE">left</title><next><block type="studio_move"><title name="DIR">4</title></block></next></block><block type="studio_whenArrow" id="whenRight"><title name="VALUE">right</title><next><block type="studio_move"><title name="DIR">8</title></block></next></block></xml>'
   arranged_blocks_xml = @browser.execute_script("return __TestInterface.arrangeBlockPosition('" + blocks_xml + "', {});")
   @browser.execute_script("__TestInterface.loadBlocks('" + arranged_blocks_xml + "');")
 end
@@ -185,6 +242,23 @@ Then(/^the workspace has "(.*?)" blocks of type "(.*?)"$/) do |n, type|
   code = "return Blockly.mainBlockSpace.getAllBlocks().reduce(function (a, b) { return a + (b.type === '" + type + "' ? 1 : 0) }, 0)"
   result = @browser.execute_script(code)
   expect(result).to eq(n.to_i)
+end
+
+Then(/^all blocks render with no unknown blocks$/) do
+  code = <<~CODE
+    return Blockly.Workspace.getAll().map(workspace => {
+      const hasUnknownBlock = workspace.getAllBlocks().some(block => !!block.unknownBlock);
+      if (hasUnknownBlock) {
+        // element ID has name of block that is failing to render
+        return workspace.getParentSvg().parentElement.id;
+      } else {
+        return null;
+      }
+    });
+  CODE
+
+  result = @browser.execute_script(code)
+  expect(result.compact.empty?).to eq(true), "Blocks named: #{result.compact.join(', ')} unable to render"
 end
 
 Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
@@ -236,11 +310,11 @@ Then /^the modal function editor is open$/ do
   expect(modal_dialog_visible).to eq(true)
 end
 
-When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do |block_id, value, title|
+When(/^I set block "([^"]*)" to have a value of "(.*?)" for field "(.*?)"$/) do |block_id, value, field_name|
   script = "
-    Blockly.mainBlockSpace.getAllBlocks().forEach(function (b) {
-      if (b.id === #{get_block_id(block_id)}) {
-        b.setTitleValue('#{value}', '#{title}');
+    Blockly.getMainWorkspace().getAllBlocks().forEach(function (b) {
+      if (b.id === '#{get_block_id(block_id)}') {
+        b.setFieldValue('#{value}', '#{field_name}');
       }
     });"
   puts script
@@ -261,10 +335,102 @@ Then(/^the project matches my memorized code$/) do
   expect(current_block_xml).to eq(memorized_code)
 end
 
+Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
+  script = "
+    $('#{selector}').simulate('pointerdown')
+    $('#{selector}').simulate('pointerup')
+  "
+  @browser.execute_script(script)
+end
+
+# This only works for Google Blockly
+Then(/^I click block field that is number (.*?) in the list of blocks and number (.*?) in the field row$/) do |n1, n2|
+  script = "
+    Blockly.mainBlockSpace.getAllBlocks()[#{n1.to_i}].inputList[0].fieldRow[#{n2.to_i}].onClick()
+  "
+  @browser.execute_script(script)
+end
+
+# This only works for Google Blockly
+Then(/^the open flyout has (.*?) blocks$/) do |n|
+  script = "return Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length"
+  expect(@browser.execute_script(script)).to eq(n.to_i)
+end
+
+# This only works for Google Blockly
+Then(/^the function editor workspace has (\d+) blocks$/) do |n|
+  script = "return Blockly.getFunctionEditorWorkspace().getAllBlocks().length"
+  expect(@browser.execute_script(script)).to eq(n)
+end
+
 def current_block_xml
   @browser.execute_script <<-JS
     return __TestInterface.getBlockXML();
   JS
+end
+
+When /^I move block "([^"]*)" to (top|left|bottom|right) edge of workspace$/ do |block, edge|
+  block_id = get_block_id(block)
+  script = <<-JS
+    const workspace = Blockly.getMainWorkspace();
+    const viewMetrics = workspace.getMetricsManager().getViewMetrics();
+    const block = workspace.getBlockById('#{block_id}');
+    const boundingRect = block.getBoundingRectangle();
+
+    const blockWidth = boundingRect.right - boundingRect.left;
+    const blockHeight = boundingRect.bottom - boundingRect.top;
+
+    let x, y;
+
+    switch ('#{edge}') {
+      case 'left':
+        x = viewMetrics.left - blockWidth / 2;
+        y = boundingRect.top; // Maintain current top position
+        break;
+      case 'right':
+        x = viewMetrics.left + viewMetrics.width - blockWidth / 2;
+        y = boundingRect.top; // Maintain current top position
+        break;
+      case 'top':
+        x = boundingRect.left; // Maintain current left position
+        y = viewMetrics.top - blockHeight / 2;
+        break;
+      case 'bottom':
+        x = boundingRect.left; // Maintain current left position
+        y = viewMetrics.top + viewMetrics.height - blockHeight / 2;
+        break;
+    }
+
+    block.moveTo(new Blockly.utils.Coordinate(x, y));
+  JS
+  @browser.execute_script(script)
+end
+
+When(/^I show the editor of field "([^"]*)" of block "([^"]*)"$/) do |field, block|
+  block_id = get_block_id(block)
+  script = <<-JS
+    var workspace = Blockly.getMainWorkspace();
+    workspace.hideChaff();
+    var selectedBlock = workspace.getBlockById('#{block_id}');
+    Blockly.common.setSelected(selectedBlock);
+    selectedBlock.getField('#{field}').showEditor();
+  JS
+  @browser.execute_script(script)
+end
+When(/^I change the field "([^"]*)" editor value to "(\d*)"$/) do |field, val|
+  @browser.execute_script("Blockly.selected.getField('#{field}').setEditorValue_(#{val})")
+end
+
+When(/^I change the field "([^"]*)" dropdown to "(\d*)"$/) do |field, val|
+  @browser.execute_script("Blockly.selected.getField('#{field}').setValue('#{val}')")
+  # Refresh the dropdown
+  @browser.execute_script("Blockly.selected.getField('#{field}').showEditor()")
+end
+
+When(/^I update the field "([^"]*)" dropdown to "(\d*)"$/) do |field, val|
+  @browser.execute_script("Blockly.selected.getField('#{field}').setValue('#{val}')")
+  # Refresh the dropdown
+  @browser.execute_script("Blockly.selected.workspace.hideChaff()")
 end
 
 def clear_main_block_space

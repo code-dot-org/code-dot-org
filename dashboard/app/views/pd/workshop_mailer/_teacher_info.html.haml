@@ -14,11 +14,12 @@ Teacher Info:
     %td Email:
     %td
       = @enrollment.email
-  %tr
-    %td District:
-    %td
-      = @enrollment.school_district_name
-  %tr
-    %td School:
-    %td
-      = @enrollment.school_name
+  - if @enrollment.school_district_name && @enrollment.school_name
+    %tr
+      %td District:
+      %td
+        = @enrollment.school_district_name
+    %tr
+      %td School:
+      %td
+        = @enrollment.school_name

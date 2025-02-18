@@ -13,3 +13,4 @@ right 'agents interact with both their environment and other agents'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

@@ -4,21 +4,22 @@
  * renderApplication to render the loaded application data.
  */
 
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Spinner from '../components/spinner';
-import $ from 'jquery';
+
+import Spinner from '../../../sharedComponents/Spinner';
 
 export default class ApplicationLoader extends React.Component {
   static propTypes = {
     applicationId: PropTypes.string.isRequired,
     onApplicationLoaded: PropTypes.func,
     renderApplication: PropTypes.func,
-    loadRawFormData: PropTypes.bool
+    loadRawFormData: PropTypes.bool,
   };
 
   state = {
-    loading: true
+    loading: true,
   };
 
   UNSAFE_componentWillMount() {
@@ -46,12 +47,12 @@ export default class ApplicationLoader extends React.Component {
 
     this.loadRequest = $.ajax({
       method: 'GET',
-      url
+      url,
     })
       .done(applicationData => {
         this.setState({
           applicationData,
-          loading: false
+          loading: false,
         });
 
         if (this.props.onApplicationLoaded) {
@@ -61,7 +62,7 @@ export default class ApplicationLoader extends React.Component {
       .fail(() => {
         this.setState({
           applicationData: null,
-          loading: false
+          loading: false,
         });
       });
   };
@@ -78,7 +79,7 @@ export default class ApplicationLoader extends React.Component {
     } else if (this.props.renderApplication) {
       return this.props.renderApplication({
         applicationData: this.state.applicationData,
-        handleUpdate: this.handleUpdate
+        handleUpdate: this.handleUpdate,
       });
     } else {
       return null;

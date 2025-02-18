@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 
 /**
  * A div DOM element that will never update its contents unless canUpdate
@@ -16,11 +16,12 @@ class ProtectedStatefulDiv extends React.Component {
   static propTypes = {
     contentFunction: PropTypes.func,
     children: PropTypes.node,
-    canUpdate: PropTypes.bool
+    canUpdate: PropTypes.bool,
+    canUnmount: PropTypes.bool,
   };
 
   static defaultProps = {
-    canUpdate: false
+    canUpdate: false,
   };
 
   shouldComponentUpdate() {
@@ -41,7 +42,7 @@ class ProtectedStatefulDiv extends React.Component {
     // when using the storybook styleguide, we don't really need to protect
     // anything, and actually we want to unmount/remount stuff all the time
     // when the page is hot-reloaded
-    if (!IN_STORYBOOK) {
+    if (!IN_STORYBOOK && !this.props.canUnmount) {
       throw new Error('Unmounting a ProtectedStatefulDiv is not allowed.');
     }
   }
@@ -53,7 +54,8 @@ class ProtectedStatefulDiv extends React.Component {
           'contentFunction',
           'radiumConfigContext',
           'styleKeeperContext',
-          'canUpdate'
+          'canUpdate',
+          'canUnmount',
         ])}
         ref="root"
       />

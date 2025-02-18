@@ -1,14 +1,17 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {unitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import i18n from '@cdo/locale';
+
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import orderBy from 'lodash/orderBy';
+import wrappedSortable from '../tables/wrapped_sortable';
+
 import {textResponsePropType} from './textReponsesDataApi';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
@@ -16,7 +19,7 @@ const TABLE_COLUMN_WIDTHS = {
   lesson: TABLE_WIDTH / 5,
   puzzle: TABLE_WIDTH / 6,
   question: TABLE_WIDTH / 5,
-  response: TABLE_WIDTH / 4
+  response: TABLE_WIDTH / 4,
 };
 const RESPONSE_CHARACTER_LIMIT = 100;
 
@@ -25,14 +28,14 @@ class TextResponsesTable extends Component {
     responses: PropTypes.arrayOf(textResponsePropType),
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool,
-    scriptName: PropTypes.string
+    scriptName: PropTypes.string,
   };
 
   state = {};
 
   studentNameFormatter = (name, {rowData}) => {
     const {sectionId, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(
+    const studentUrl = unitUrlForStudent(
       sectionId,
       scriptName,
       rowData.studentId
@@ -91,19 +94,19 @@ class TextResponsesTable extends Component {
             className: 'uitest-name-header',
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.name}
-            }
+              ...{width: TABLE_COLUMN_WIDTHS.name},
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.studentNameFormatter],
           props: {
             style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'lesson',
@@ -112,18 +115,18 @@ class TextResponsesTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.lesson}
-            }
+              ...{width: TABLE_COLUMN_WIDTHS.lesson},
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           props: {
             style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'puzzle',
@@ -132,18 +135,18 @@ class TextResponsesTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.puzzle}
-            }
+              ...{width: TABLE_COLUMN_WIDTHS.puzzle},
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           props: {
             style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'question',
@@ -152,18 +155,18 @@ class TextResponsesTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.question}
-            }
+              ...{width: TABLE_COLUMN_WIDTHS.question},
+            },
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           props: {
             style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'response',
@@ -172,19 +175,19 @@ class TextResponsesTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.response}
-            }
-          }
+              ...{width: TABLE_COLUMN_WIDTHS.response},
+            },
+          },
         },
         cell: {
           formatters: [this.responseFormatter],
           props: {
             style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
-      }
+              ...tableLayoutStyles.cell,
+            },
+          },
+        },
+      },
     ];
   };
 
@@ -197,10 +200,10 @@ class TextResponsesTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -235,7 +238,7 @@ class TextResponsesTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(responses);
 
     /**

@@ -1,14 +1,17 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import queryString from 'query-string';
+import React, {Component} from 'react';
+
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import PopUpMenu from '../../lib/ui/PopUpMenu';
-import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
-import {sectionForDropdownShape} from './shapes';
-import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+
+import PopUpMenu from '../../sharedComponents/PopUpMenu';
 import {reload} from '../../utils';
-import queryString from 'query-string';
+
+import {sectionForDropdownShape} from './shapes';
+import TeacherSectionSelectorMenuItem from './TeacherSectionSelectorMenuItem';
 
 export default class TeacherSectionSelector extends Component {
   static propTypes = {
@@ -21,12 +24,12 @@ export default class TeacherSectionSelector extends Component {
     courseOfferingId: PropTypes.number,
     courseOfferingParticipantType: PropTypes.string,
     courseVersionId: PropTypes.number,
-    unitId: PropTypes.number
+    unitId: PropTypes.number,
   };
 
   state = {
     isMenuOpen: false,
-    targetPoint: {top: 0, left: 0}
+    targetPoint: {top: 0, left: 0},
   };
 
   handleMouseDown = e => {
@@ -34,9 +37,12 @@ export default class TeacherSectionSelector extends Component {
     e.preventDefault();
   };
 
-  handleClick = () => {
+  handleClick = e => {
+    e.stopPropagation();
     if (!this.state.isMenuOpen) {
       this.openMenu();
+    } else {
+      this.closeMenu();
     }
   };
 
@@ -49,11 +55,11 @@ export default class TeacherSectionSelector extends Component {
     const rect = this.select.getBoundingClientRect();
     const targetPoint = {
       top: rect.bottom + window.pageYOffset,
-      left: rect.left + window.pageXOffset
+      left: rect.left + window.pageXOffset,
     };
     this.setState({
       isMenuOpen: true,
-      targetPoint
+      targetPoint,
     });
   }
 
@@ -76,14 +82,14 @@ export default class TeacherSectionSelector extends Component {
       selectedSection,
       courseOfferingId,
       courseVersionId,
-      unitId
+      unitId,
     } = this.props;
     const menuOffset = {x: 0, y: 0};
     const value = selectedSection ? selectedSection.id : '';
     const queryParams = queryString.stringify({
       courseOfferingId,
       courseVersionId,
-      unitId
+      unitId,
     });
 
     return (
@@ -134,7 +140,7 @@ const styles = {
   select: {
     height: 34,
     width: 300,
-    marginBottom: 0
+    marginBottom: 0,
   },
   addNewSection: {
     borderTop: `1px solid ${color.charcoal}`,
@@ -142,6 +148,6 @@ const styles = {
     paddingBottom: 8,
     paddingLeft: 20,
     paddingRight: 12,
-    width: 268
-  }
+    width: 268,
+  },
 };

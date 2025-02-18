@@ -8,6 +8,7 @@ require_relative '../../dashboard/config/environment'
 # there were two categories that needed additional investigation, and those are
 # reflected here.  As it turned out, we discovered one email from each of these
 # two categories that needed to be resent.
+# rubocop:disable Metrics/CollectionLiteralLength
 
 $send_no_workshop_yet = %w(
   36044807
@@ -284,6 +285,7 @@ $send_no_principal_approval_no_workshop_yet = %w(
   36089553
   36017024
 )
+# rubocop:enable Metrics/CollectionLiteralLength
 
 # Conditional: send if assigned or enrolled workshop hasn't happened
 def get_ids_for_no_workshop_yet
@@ -324,7 +326,11 @@ def get_ids_for_no_workshop_yet
 
     # Let's see if there is an enrollment that hasn't happened...
 
-    Pd::Enrollment.where(email: contact_email).all.each do |enrollment|
+    enrollments = user.alternate_email.present? ?
+      Pd::Enrollment.where(email: contact_email).or(Pd::Enrollment.where(email: user.alternate_email)).all :
+      Pd::Enrollment.where(email: contact_email).all
+
+    enrollments.each do |enrollment|
       enrollment_id = enrollment.pd_workshop_id
 
       puts "  found an enrollment!"

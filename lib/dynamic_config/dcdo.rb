@@ -9,18 +9,6 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class DCDOBase < DynamicConfigBase
-  # Adds a listener whose on_change() method will be invoked at least
-  # once whenever the configuration changes. The on_change() method
-  # will be invoked on an arbitrary thread and must not block.
-  def add_change_listener(listener)
-    @datastore_cache.add_change_listener(listener)
-  end
-
-  # Updates the cached configuration, for testing only.
-  def update_cache_for_test
-    @datastore_cache.update_cache
-  end
-
   # Factory method for creating DCDOBase objects
   # @returns [DCDOBase]
   def self.create
@@ -41,12 +29,36 @@ class DCDOBase < DynamicConfigBase
     # 'my-new-feature': DCDO.get('my-new-feature', false)
     {
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
-      clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
-      'csa-homepage-banner-2022': DCDO.get('csa-homepage-banner-2022', false),
-      'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
-      'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true),
+      'pl-teacher-application-off-season': DCDO.get('pl_teacher_application', false),
+      'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
+      'curriculum-launch-2024': DCDO.get('curriculum-launch-2024', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
-      'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false)
+      gender: DCDO.get('gender', false),
+      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
+      # Whether to allow the user to toggle between the v1 and v2 progress tables.
+      'progress-table-v2-enabled': DCDO.get('progress-table-v2-enabled', false),
+      # Whether to show the v1 or v2 progress table by default.
+      'progress-table-v2-default-v2': DCDO.get('progress-table-v2-default-v2', false),
+      # Whether to allow users with `progress_table_v2_closed_beta` user preference to toggle between v1 and v2.
+      'progress-table-v2-closed-beta-enabled': DCDO.get('progress-table-v2-closed-beta-enabled', false),
+      # Whether the scholarship dropdown is locked on the application dashboard.
+      'scholarship-dropdown-locked': DCDO.get('scholarship-dropdown-locked', true),
+      hoc_mode: DCDO.get('hoc_mode', false),
+      # Whether to show the marketing banners for the AI Teacher Assistant launch. Can be removed later.
+      'ai-teaching-assistant-launch': DCDO.get('ai-teaching-assistant-launch', false),
+      'progress-table-v2-metadata-enabled': DCDO.get('progress-table-v2-metadata-enabled', false),
+      'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
+      'disable-try-new-progress-view-modal': DCDO.get('disable-try-new-progress-view-modal', false),
+      'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
+      'cfu-pin-hide-enabled': DCDO.get('cfu-pin-hide-enabled', false),
+      'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', false),
+      'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
+      # Enabled locales for browser text to speech. Set to an empty array to disable all languages, or true to enable all.
+      'browser-tts-button-enabled-locales': DCDO.get('browser-tts-button-enabled-locales', ['en-US']),
+      'lab2-submit-project-enabled': DCDO.get('lab2-submit-project-enabled', true),
+      'cdo-blockly-usage': DCDO.get('cdo-blockly-usage', false),
+      # TODO ACQ-3074 - Remove this after the Exploring Gen AI launch
+      'exploring-gen-ai-launch': DCDO.get('exploring-gen-ai-launch', false),
     }
   end
 end

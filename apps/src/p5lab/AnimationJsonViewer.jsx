@@ -1,21 +1,23 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+
+import Dialog, {Body} from '@cdo/apps/legacySharedComponents/Dialog';
+
 import {hideAnimationJson} from './actions';
 
 const style = {
   pre: {
     maxHeight: '75vh',
-    overflowY: 'auto'
-  }
+    overflowY: 'auto',
+  },
 };
 
 class AnimationJsonViewer extends React.Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     content: PropTypes.string,
-    handleClose: PropTypes.func.isRequired
+    handleClose: PropTypes.func.isRequired,
   };
 
   render() {
@@ -31,6 +33,6 @@ class AnimationJsonViewer extends React.Component {
 export default connect(
   state => state.animationJsonViewer,
   dispatch => ({
-    handleClose: () => dispatch(hideAnimationJson())
+    handleClose: () => dispatch(hideAnimationJson()),
   })
 )(AnimationJsonViewer);

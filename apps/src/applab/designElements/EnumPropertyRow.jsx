@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import * as rowStyle from './rowStyle';
 
 export default class EnumPropertyRow extends React.Component {
@@ -9,11 +10,11 @@ export default class EnumPropertyRow extends React.Component {
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
     desc: PropTypes.node,
-    containerStyle: PropTypes.object
+    containerStyle: PropTypes.object,
   };
 
   state = {
-    selectedValue: this.props.initialValue
+    selectedValue: this.props.initialValue,
   };
 
   handleChange = event => {
@@ -25,7 +26,7 @@ export default class EnumPropertyRow extends React.Component {
     const {options, displayOptions = [], desc} = this.props;
     const {selectedValue} = this.state;
 
-    const renderedOptions = options.map(function(option, index) {
+    const renderedOptions = options.map(function (option, index) {
       return (
         <option key={index} value={option}>
           {displayOptions[index] || option}

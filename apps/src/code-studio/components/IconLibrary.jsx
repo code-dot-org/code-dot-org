@@ -1,22 +1,24 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import IconList from './IconList';
-import SearchBar from '@cdo/apps/templates/SearchBar';
+
+import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
 import i18n from '@cdo/locale';
+
+import IconList from './IconList';
 
 /**
  * A component for managing icons.
  */
 export default class IconLibrary extends React.Component {
   static propTypes = {
-    assetChosen: PropTypes.func.isRequired
+    assetChosen: PropTypes.func.isRequired,
   };
 
   state = {search: ''};
 
   search = e => {
     this.setState({
-      search: e.target.value.toLowerCase().replace(/[^-a-z0-9]/g, '')
+      search: e.target.value.toLowerCase().replace(/[^-a-z0-9]/g, ''),
     });
   };
 

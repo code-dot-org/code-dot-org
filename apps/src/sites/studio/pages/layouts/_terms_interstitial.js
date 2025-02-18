@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
-$(document).ready(function() {
-  $('#user_terms_of_service_version').on('change', function(event) {
+$(document).ready(function () {
+  $('#user_terms_of_service_version').on('change', function (event) {
     if ($(this).is(':checked')) {
       $('#accept-terms-submit')
         .prop('disabled', false)
@@ -13,29 +13,29 @@ $(document).ready(function() {
     }
   });
 
-  $('#edit_user').submit(function(event) {
+  $('#edit_user').submit(function (event) {
     event.preventDefault();
     $.ajax({
       type: 'POST',
       url: $(this).attr('action'),
       data: $(this).serialize(),
       dataType: 'json',
-      complete: function(data) {
+      complete: function (data) {
         $('#implicit-terms-modal').modal('hide');
         location.reload();
-      }
+      },
     });
   });
 
-  $('#later-link').click(function() {
+  $('#later-link').click(function () {
     $('#implicit-terms-modal').modal('hide');
   });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
   var printLink = $('#print-terms');
   if (printLink) {
-    printLink.click(function() {
+    printLink.click(function () {
       var item = $('#print-frame')[0];
       item.contentWindow.print();
     });
@@ -55,7 +55,7 @@ function getCookie(key) {
   return keyValue ? keyValue[2] : null;
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
   var already_shown = !!getCookie('hide_tos');
   if (!already_shown) {
     $('#implicit-terms-modal').modal('show');

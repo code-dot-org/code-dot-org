@@ -15,3 +15,5 @@ boolean a = true && ((5 / 4) % 3 == 2);
 
 Which of the following assigns the same value to `b` as the value stored in `a`?
 MARKDOWN
+
+allow_multiple_attempts true

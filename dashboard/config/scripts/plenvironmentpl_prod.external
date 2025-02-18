@@ -1,0 +1,54 @@
+name 'PLenvironmentPL_prod'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Game Mechanics and Use-Modify-Create
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmtyOGp0aTRpanNjaHU3dnpjZ2p4Mm0ybWZteDF3ZXVra2c1dzJveSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/MOSebUr4rvZS0/giphy.gif" alt="ALT TEXT"  style="width: 300px; float:center; margin-left: 10px;"> 
+
+##What are game mechanics? 
+#### Game Mechanics define how the game works and what determines success or failure in the game.
+
+## Why are game mechanics important?
+#### Mechanics define the core interactions and experiences, making the game enjoyable, challenging, and replayable.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Game Mechanics Example: Tetris</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### **The <b>game mechanics</b> of Tetris include:** 
+* #### **Tetrominoes**: The various shapes that fall and must be arranged.
+* #### **Falling Blocks**: Tetrominoes continuously descend from the top of the playing field.
+* #### **Rotation**: Players can rotate tetrominoes to fit them into gaps.
+* #### **Movement**: Players can move tetrominoes left or right as they fall.
+* #### **Line Clearing**: Completed horizontal lines of blocks are cleared from the playing field.
+* #### **Scoring**: Points are awarded for each line cleared, with bonuses for clearing multiple lines at once.
+* #### **Increasing Difficulty**: The speed at which tetrominoes fall increases as the game progresses.
+* #### **Game Over**: The game ends when the stack of tetrominoes reaches the top of the playing field and no more moves are possible.
+
+<br>
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">Applying Pedagogy: Use-Modify-Create </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+
+* #### In this lesson, students begin by <b>using</b> four pre-created games. 
+
+* #### Then, they will practice coding with variables by <b>modifying</b> and building on existing code.
+
+* ####  To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to <b>create</b> a game. 
+
+
+
+## 
+
+
+MARKDOWN

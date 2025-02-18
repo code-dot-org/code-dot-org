@@ -10,7 +10,7 @@
 // cleanup jshint errors (cpirich)
 // add rgba support (davidsbailey)
 // cleanup eslint errors (bbuchanan)
-export default function(color_string) {
+export default function (color_string) {
   this.ok = false;
 
   // strip any leading #
@@ -167,7 +167,7 @@ export default function(color_string) {
     white: 'ffffff',
     whitesmoke: 'f5f5f5',
     yellow: 'ffff00',
-    yellowgreen: '9acd32'
+    yellowgreen: '9acd32',
   };
   for (var key in simple_colors) {
     if (color_string === key) {
@@ -181,44 +181,44 @@ export default function(color_string) {
     {
       re: /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/,
       example: ['rgb(123, 234, 45)', 'rgb(255,234,245)'],
-      process: function(bits) {
+      process: function (bits) {
         return [parseInt(bits[1]), parseInt(bits[2]), parseInt(bits[3])];
-      }
+      },
     },
     {
       re: /^rgba\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*((?:\d+(?:\.\d+)?)|(?:\.\d+))\s*\)$/,
       example: ['rgba(123, 234, 45, .33)', 'rgba(255,234,245,1)'],
-      process: function(bits) {
+      process: function (bits) {
         return [
           parseInt(bits[1]),
           parseInt(bits[2]),
           parseInt(bits[3]),
-          parseInt(bits[4])
+          parseInt(bits[4]),
         ];
-      }
+      },
     },
     {
       re: /^([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/,
       example: ['#00ff00', '336699'],
-      process: function(bits) {
+      process: function (bits) {
         return [
           parseInt(bits[1], 16),
           parseInt(bits[2], 16),
-          parseInt(bits[3], 16)
+          parseInt(bits[3], 16),
         ];
-      }
+      },
     },
     {
       re: /^([0-9a-f]{1})([0-9a-f]{1})([0-9a-f]{1})$/,
       example: ['#fb0', 'f0f'],
-      process: function(bits) {
+      process: function (bits) {
         return [
           parseInt(bits[1] + bits[1], 16),
           parseInt(bits[2] + bits[2], 16),
-          parseInt(bits[3] + bits[3], 16)
+          parseInt(bits[3] + bits[3], 16),
         ];
-      }
-    }
+      },
+    },
   ];
 
   // search through the definitions to find a match
@@ -243,15 +243,15 @@ export default function(color_string) {
   this.a = this.a < 0 ? 0 : this.a > 1 || isNaN(this.a) ? 1 : this.a;
 
   // some getters
-  this.toRGB = function() {
+  this.toRGB = function () {
     return 'rgb(' + this.r + ', ' + this.g + ', ' + this.b + ')';
   };
-  this.toRGBA = function() {
+  this.toRGBA = function () {
     return (
       'rgba(' + this.r + ', ' + this.g + ', ' + this.b + ', ' + this.a + ')'
     );
   };
-  this.toHex = function() {
+  this.toHex = function () {
     var r = this.r.toString(16);
     var g = this.g.toString(16);
     var b = this.b.toString(16);

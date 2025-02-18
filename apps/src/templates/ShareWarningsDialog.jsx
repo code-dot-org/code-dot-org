@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import color from '../util/color';
+
 import ShareWarnings from './ShareWarnings';
 
 /**
@@ -11,13 +13,13 @@ class ShareWarningsDialog extends Component {
     promptForAge: PropTypes.bool.isRequired,
     showStoreDataAlert: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,
-    handleTooYoung: PropTypes.func.isRequired
+    handleTooYoung: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      modalIsOpen: this.props.promptForAge || this.props.showStoreDataAlert
+      modalIsOpen: this.props.promptForAge || this.props.showStoreDataAlert,
     };
   }
 
@@ -46,7 +48,7 @@ class ShareWarningsDialog extends Component {
 
     const mainStyle = {
       ...styles.main,
-      width: window.screen.width < 500 ? '80%' : undefined
+      width: window.screen.width < 500 ? '80%' : undefined,
     };
 
     return (
@@ -79,7 +81,7 @@ const styles = {
     borderRadius: '4px',
     outline: 'none',
     padding: '20px',
-    zIndex: 1050 // based off of behavior in dashboard's dialog.js
+    zIndex: 1050, // based off of behavior in dashboard's dialog.js
     // width handle in render
   },
   overlay: {
@@ -90,8 +92,8 @@ const styles = {
     left: 0,
     bottom: 0,
     right: 0,
-    zIndex: 1040 // based off of behavior in dashboard's dialog.js
-  }
+    zIndex: 1040, // based off of behavior in dashboard's dialog.js
+  },
 };
 
 export default ShareWarningsDialog;

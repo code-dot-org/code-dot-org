@@ -6,7 +6,6 @@ class UrlConverter
   HOUROFCODE_COM_REGEX = /#{'//hourofcode.com'}(?=$|\/)/
   CSEDWEEK_ORG_REGEX = /#{'//csedweek.org'}(?=$|\/)/
   DASHBOARD_REGEX = /#{'//studio.code.org'}(?=$|\/)/
-  ADVOCACY_REGEX = /#{'//advocacy.code.org'}(?=$|\/)/
 
   # For reference, a 'host' is a domain and (optionally) port without a protocol.
   # Examples: code.org, studio.code.org, localhost-studio.code.org:3000
@@ -17,22 +16,19 @@ class UrlConverter
     @pegasus_host = pegasus_host
     @hourofcode_host = hourofcode_host
     @csedweek_host = csedweek_host
-    @advocacy_host = advocacy_host
   end
 
   # An 'origin' is a protocol, domain, and (optional) port.  This method may
   # replace all three.
   def replace_origin(url)
-    if @dashboard_host
-      raise 'Should not use learn.code.org' unless LEARN_CODE_ORG_REGEX.match(url).nil?
+    if @dashboard_host && !LEARN_CODE_ORG_REGEX.match(url).nil?
+      raise 'Should not use learn.code.org'
     end
 
     if @hourofcode_host && HOUROFCODE_COM_REGEX =~ url
       url = url.gsub(HOUROFCODE_COM_REGEX, "//" + @hourofcode_host)
     elsif @csedweek_host && CSEDWEEK_ORG_REGEX =~ url
       url = url.gsub(CSEDWEEK_ORG_REGEX, "//" + @csedweek_host)
-    elsif @advocacy_host && ADVOCACY_REGEX =~ url
-      url = url.gsub(ADVOCACY_REGEX, "//" + @advocacy_host)
     elsif @dashboard_host && DASHBOARD_REGEX =~ url
       url = url.gsub(DASHBOARD_REGEX, "//" + @dashboard_host)
     elsif @pegasus_host

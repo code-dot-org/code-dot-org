@@ -1,14 +1,16 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect, assert} from '../../../../util/reconfiguredChai';
-import {UnconnectedEditableTeacherFeedback as EditableTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
-import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
-import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
-import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
-import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import sinon from 'sinon';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
+import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
+import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
+import {UnconnectedEditableTeacherFeedback as EditableTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
+import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
+
+import {expect, assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   user: 5,
@@ -22,7 +24,9 @@ const DEFAULT_PROPS = {
   verifiedInstructor: true,
   selectedSectionId: 789,
   canHaveFeedbackReviewState: true,
-  updateUserProgress: () => {}
+  allowUnverified: false,
+  scriptName: 'csa1-2022',
+  updateUserProgress: () => {},
 };
 
 const RUBRIC = {
@@ -30,7 +34,7 @@ const RUBRIC = {
   performanceLevel1: 'exceeded expectations',
   performanceLevel2: 'met expectations',
   performanceLevel3: 'approaches expectations',
-  performanceLevel4: 'no evidence of trying'
+  performanceLevel4: 'no evidence of trying',
 };
 
 const FEEDBACK = {
@@ -39,7 +43,7 @@ const FEEDBACK = {
   id: 5,
   level_id: 123,
   performance: null,
-  student_id: 1
+  student_id: 1,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -128,7 +132,7 @@ describe('EditableTeacherFeedback', () => {
   describe('with previous feedback given', () => {
     it('displays EditableFeedbackStatus if latestFeedback exists', () => {
       const latestFeedback = {
-        student_seen_feedback: new Date()
+        student_seen_feedback: new Date(),
       };
 
       const wrapper = setUp({latestFeedback});
@@ -140,7 +144,7 @@ describe('EditableTeacherFeedback', () => {
     it('displays the rubric if there is a rubric', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        performance: 'performanceLevel2'
+        performance: 'performanceLevel2',
       };
 
       const wrapper = setUp({rubric: RUBRIC, latestFeedback: latestFeedback});
@@ -165,11 +169,11 @@ describe('EditableTeacherFeedback', () => {
     it('does not render EditableReviewState if not canHaveFeedbackReviewState', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        review_state: ReviewStates.completed
+        review_state: ReviewStates.completed,
       };
       const wrapper = setUp({
         latestFeedback,
-        canHaveFeedbackReviewState: false
+        canHaveFeedbackReviewState: false,
       });
 
       const keepWorkingComponent = wrapper.find(EditableReviewState);
@@ -179,7 +183,7 @@ describe('EditableTeacherFeedback', () => {
     it('renders EditableReviewState with expected props (completed)', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        review_state: ReviewStates.completed
+        review_state: ReviewStates.completed,
       };
       const wrapper = setUp({latestFeedback});
 
@@ -193,7 +197,7 @@ describe('EditableTeacherFeedback', () => {
     it('renders EditableReviewState with expected props (awaitingReview)', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        is_awaiting_teacher_review: true
+        is_awaiting_teacher_review: true,
       };
       const wrapper = setUp({latestFeedback});
 

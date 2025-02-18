@@ -1,0 +1,19 @@
+name 'self-paced-pl-gen-ai-foundations_08_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 8: Attention Is All You Need
+
+<img src="https://images.code.org/d84e29dc1d036a5fd755e0f1ca039ffa-image-1715268406186.png" alt="cat from the pixel activity" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px; transform: scaleX(-1);">
+
+#### This lesson explores language ambiguity and the importance of context. Students brainstorm words with multiple meanings, create sentences to clarify them, and connect this to how **attention** updates word meanings in language models.
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> XXX  
+</p>
+</div>
+
+
+MARKDOWN

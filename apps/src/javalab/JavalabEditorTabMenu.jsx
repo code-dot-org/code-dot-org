@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import JavalabDropdown from './components/JavalabDropdown';
-import javalabMsg from '@cdo/javalab/locale';
+import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
+
+import javalabMsg from '@cdo/javalab/locale';
+
+import JavalabDropdown from './components/JavalabDropdown';
 
 /**
  * A menu with a set of clickable file options that calls the cancel handler if you
@@ -20,7 +22,7 @@ export class JavalabEditorTabMenu extends Component {
     fileIsVisible: PropTypes.bool,
     fileIsValidation: PropTypes.bool,
     activeTabKey: PropTypes.string,
-    orderedTabKeys: PropTypes.array
+    orderedTabKeys: PropTypes.array,
   };
 
   dropdownElements = () => {
@@ -34,13 +36,13 @@ export class JavalabEditorTabMenu extends Component {
       fileIsVisible,
       fileIsValidation,
       activeTabKey,
-      orderedTabKeys
+      orderedTabKeys,
     } = this.props;
 
     let elements = [
       <button onClick={renameFromTabMenu} key="rename" type="button">
         {javalabMsg.rename()}
-      </button>
+      </button>,
     ];
     const tabsLength = orderedTabKeys.length;
     const index = orderedTabKeys.indexOf(activeTabKey);

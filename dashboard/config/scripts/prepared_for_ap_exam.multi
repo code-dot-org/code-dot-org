@@ -8,3 +8,5 @@ right 'Slightly disagree'
 right 'Disagree'
 right 'Strongly disagree'
 right 'I did not take the AP exam'
+
+allow_multiple_attempts true

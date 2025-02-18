@@ -1,6 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import {ChartType, ignoreMissingValues} from '../dataUtils';
+
 import CrossTabChart from './CrossTabChart';
 import GoogleChartWrapper from './GoogleChartWrapper';
 
@@ -12,7 +14,7 @@ class DataVisualizer extends React.Component {
     bucketSize: PropTypes.string,
     chartTitle: PropTypes.string,
     selectedColumn1: PropTypes.string,
-    selectedColumn2: PropTypes.string
+    selectedColumn2: PropTypes.string,
   };
 
   render() {
@@ -21,7 +23,7 @@ class DataVisualizer extends React.Component {
         <CrossTabChart
           records={ignoreMissingValues(this.props.records, [
             this.props.selectedColumn1,
-            this.props.selectedColumn2
+            this.props.selectedColumn2,
           ])}
           numericColumns={this.props.numericColumns}
           chartTitle={this.props.chartTitle}

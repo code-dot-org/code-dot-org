@@ -4,16 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "other",
+      "curriculum_umbrella": "Other",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "invasive-species-cs4all",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "cs4all-invasive-species",
-    "serialized_at": "2022-10-25 16:11:43 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2024-11-19 01:14:40 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -2993,6 +2994,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -1,0 +1,10 @@
+name 'CSA-SE-CV-Pre-Assessment-Q07'
+
+question 'When using a code-generating AI tool to modify solutions, which of the following is NOT a proper strategy?'
+
+right 'Use the AI tool to generate all the code and then copy and paste it without understanding it.'
+wrong 'Adjust and modify the generated code to fit your specific problem context.'
+wrong 'Understand how the AI-generated code functions and relates to the problem at hand.'
+wrong 'Test the AI-generated code thoroughly before implementing it.'
+
+allow_multiple_attempts false

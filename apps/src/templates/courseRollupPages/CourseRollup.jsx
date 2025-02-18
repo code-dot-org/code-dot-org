@@ -1,33 +1,35 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import RollupUnitEntry from './RollupUnitEntry';
+
 import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
 import {courseShape} from './rollupShapes';
+import RollupUnitEntry from './RollupUnitEntry';
 
 export default class CourseRollup extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    course: courseShape
+    course: courseShape,
   };
 
   getPageTitle() {
     if (this.props.objectToRollUp === 'Vocabulary') {
       return i18n.rollupTitleVocab({
-        title: this.props.course.title
+        title: this.props.course.title,
       });
     } else if (this.props.objectToRollUp === 'Resources') {
       return i18n.rollupTitleResources({
-        title: this.props.course.title
+        title: this.props.course.title,
       });
     } else if (this.props.objectToRollUp === 'Standards') {
       return i18n.rollupTitleStandards({
-        title: this.props.course.title
+        title: this.props.course.title,
       });
     } else if (this.props.objectToRollUp === 'Code') {
       return i18n.rollupTitleCode({
-        title: this.props.course.title
+        title: this.props.course.title,
       });
     }
   }
@@ -58,12 +60,12 @@ export default class CourseRollup extends Component {
 
 const styles = {
   h1: {
-    color: color.teal
+    color: color.teal,
   },
   navLink: {
     fontSize: 14,
     lineHeight: '22px',
     color: color.purple,
-    margin: '10px 0px'
-  }
+    margin: '10px 0px',
+  },
 };

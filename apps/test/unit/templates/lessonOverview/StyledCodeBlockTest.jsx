@@ -1,8 +1,8 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import StyledCodeBlock, {
-  buildProgrammingExpressionMarkdown
+  buildProgrammingExpressionMarkdown,
 } from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
 describe('StyledCodeBlock', () => {
@@ -11,19 +11,19 @@ describe('StyledCodeBlock', () => {
       const input = {
         color: '#c0ffee',
         link: 'https://example.com',
-        syntax: 'test_block(x,y)'
+        syntax: 'test_block(x,y)',
       };
       const expected = '[`test_block(x,y)`(#c0ffee)](https://example.com)';
-      expect(buildProgrammingExpressionMarkdown(input)).to.equal(expected);
+      expect(buildProgrammingExpressionMarkdown(input)).toBe(expected);
     });
 
     it('builds a regular code block when not given a color', () => {
       const input = {
         link: 'https://example.com',
-        syntax: 'test_block(x,y)'
+        syntax: 'test_block(x,y)',
       };
       const expected = '[`test_block(x,y)`](https://example.com)';
-      expect(buildProgrammingExpressionMarkdown(input)).to.equal(expected);
+      expect(buildProgrammingExpressionMarkdown(input)).toBe(expected);
     });
   });
 
@@ -33,12 +33,12 @@ describe('StyledCodeBlock', () => {
         programmingExpression={{
           syntax: 'playSound',
           color: '#000000',
-          link: '/docs/applab/playSound'
+          link: '/docs/applab/playSound',
         }}
       />
     );
 
-    expect(wrapper.find('SafeMarkdown').props().markdown).to.equal(
+    expect(wrapper.find('SafeMarkdown').props().markdown).toBe(
       '[`playSound`(#000000)](/docs/applab/playSound)'
     );
   });
@@ -49,12 +49,12 @@ describe('StyledCodeBlock', () => {
         programmingExpression={{
           syntax: 'playSound',
           color: null,
-          link: '/docs/applab/playSound'
+          link: '/docs/applab/playSound',
         }}
       />
     );
 
-    expect(wrapper.find('SafeMarkdown').props().markdown).to.equal(
+    expect(wrapper.find('SafeMarkdown').props().markdown).toBe(
       '[`playSound`](/docs/applab/playSound)'
     );
   });
@@ -66,13 +66,13 @@ describe('StyledCodeBlock', () => {
           syntax: 'playSound',
           color: null,
           link: '/docs/spritelab/playSound',
-          blockName: 'playSound'
+          blockName: 'playSound',
         }}
       />
     );
 
     const blockLink = wrapper.find('EmbeddedBlock');
-    expect(blockLink.props().link).to.equal('/docs/spritelab/playSound');
-    expect(blockLink.props().blockName).to.equal('playSound');
+    expect(blockLink.props().link).toBe('/docs/spritelab/playSound');
+    expect(blockLink.props().blockName).toBe('playSound');
   });
 });

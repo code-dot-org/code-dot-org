@@ -1,7 +1,8 @@
 /** @file Utility methods common to toolkits that use the Droplet editor to let
  * students write and execute JavaScript. */
-import RGBColor from './rgbcolor.js';
 import i18n from '@cdo/locale';
+
+import RGBColor from './rgbcolor.js';
 
 export const OPTIONAL = true;
 
@@ -82,7 +83,7 @@ export function apiValidateType(
           6,
           9,
           10,
-          12
+          12,
         ];
         var reservedPins = ['A2', 'A3', 'A7', 1, 9, 10];
         if (isMicroBitBoard) {

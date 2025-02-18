@@ -668,6 +668,32 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
   end
 
+  test 'verified teacher can access main javabuilder' do
+    verified_teacher = create :authorized_teacher
+    assert Ability.new(verified_teacher).can? :use_unrestricted_javabuilder, :javabuilder_session
+  end
+
+  test 'student of verified teacher in CSA section can access main javabuilder' do
+    teacher = create :authorized_teacher
+    csa_script = create :csa_script
+    section = create(:section, user: teacher, login_type: 'word', script: csa_script)
+    student = create(:follower, section: section).student_user
+
+    assert Ability.new(student).can? :use_unrestricted_javabuilder, :javabuilder_session
+  end
+
+  test 'unverified teacher cannot access main javabuilder' do
+    teacher = create :teacher
+    refute Ability.new(teacher).can? :use_unrestricted_javabuilder, :javabuilder_session
+  end
+
+  test 'student in section of unverified teacher cannot access main javabuilder' do
+    student = create :student
+    section = create :section
+    create :follower, section: section, student_user: student
+    refute Ability.new(student).can? :use_unrestricted_javabuilder, :javabuilder_session
+  end
+
   test 'student in same CSA code review enabled section and code review group as student seeking code review can view as peer' do
     # We enable read only access to other student work only on Javalab levels
     javalab_script_level = create :script_level,
@@ -828,6 +854,16 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(student_1).can? :view_as_user_for_code_review, @login_required_script_level, student_2
   end
 
+  test 'levelbuilders cannot view as peer on non-Javalab levels' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    levelbuilder = create :levelbuilder
+    student = create :student
+
+    assert Ability.new(levelbuilder).can? :view_as_user, @login_required_script_level, student
+    refute Ability.new(levelbuilder).can? :view_as_user_for_code_review, @login_required_script_level, student
+  end
+
   test 'only the project owner can create a code review on that project' do
     skip 'tests that create a project'
     project_owner = create :student
@@ -907,9 +943,60 @@ class AbilityTest < ActiveSupport::TestCase
     refute Ability.new(program_manager).can? :destroy, incomplete_application
   end
 
-  private
+  test 'users with AI_TUTOR_ACCESS permission can access Open AI chat completion endpoint' do
+    ai_tutor_access_user = create :ai_tutor_access
+    assert Ability.new(ai_tutor_access_user).can? :chat_completion, :openai_chat
+  end
 
-  def put_students_in_section_and_code_review_group(students, section)
+  test 'users with ai tutor access through section enablement can access Open AI chat completion endpoint' do
+    student = create :student_with_ai_tutor_access
+    assert Ability.new(student).can? :chat_completion, :openai_chat
+  end
+
+  test 'user without ai tutor access cannot access Open AI chat completion endpoint' do
+    student = create :student_without_ai_tutor_access
+    refute Ability.new(student).can? :chat_completion, :openai_chat
+  end
+
+  test 'teacher meeting AI Chat access requirements can perform AI Chat actions' do
+    teacher = create :teacher
+    teacher.stubs(:teacher_can_access_ai_chat?).returns(true)
+    [:start_chat_completion, :chat_request].each do |action|
+      assert Ability.new(teacher).can? action, :aichat_request
+    end
+    assert Ability.new(teacher).can? :log_chat_event, :aichat_event
+    assert Ability.new(teacher).can? :student_chat_history, :aichat_event
+  end
+
+  test 'teacher not meeting AI Chat access requirements cannot perform AI Chat actions' do
+    teacher = create :teacher
+    teacher.stubs(:teacher_can_access_ai_chat?).returns(false)
+    [:start_chat_completion, :chat_request].each do |action|
+      refute Ability.new(teacher).can? action, :aichat_request
+    end
+    refute Ability.new(teacher).can? :log_chat_event, :aichat_event
+    refute Ability.new(teacher).can? :student_chat_history, :aichat_event
+  end
+
+  test 'student meeting AI Chat access requirements can perform AI Chat actions' do
+    student = create :student
+    student.stubs(:student_can_access_ai_chat?).returns(true)
+    [:start_chat_completion, :chat_request].each do |action|
+      assert Ability.new(student).can? action, :aichat_request
+    end
+    assert Ability.new(student).can? :log_chat_event, :aichat_event
+  end
+
+  test 'student not meeting AI Chat access requirements cannot perform AI Chat actions' do
+    student = create :student
+    student.stubs(:student_can_access_ai_chat?).returns(false)
+    [:start_chat_completion, :chat_request].each do |action|
+      refute Ability.new(student).can? action, :aichat_request
+    end
+    refute Ability.new(student).can? :log_chat_event, :aichat_event
+  end
+
+  private def put_students_in_section_and_code_review_group(students, section)
     code_review_group = create :code_review_group, section: section
     students.each do |student|
       follower = create :follower, student_user: student, section: section

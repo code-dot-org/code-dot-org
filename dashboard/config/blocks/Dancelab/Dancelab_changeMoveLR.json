@@ -3,7 +3,7 @@
   "config": {
     "func": "changeMoveLR",
     "blockText": "{SPRITE} do {MOVE} {DIR} forever",
-    "style": "dance_blocks",
+    "style": "lab_blocks",
     "args": [
       {
         "name": "SPRITE",

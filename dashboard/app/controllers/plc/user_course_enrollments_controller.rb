@@ -2,9 +2,11 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
   load_and_authorize_resource except: :create
   authorize_resource only: :create
 
+  PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
   def index
-    @user_course_enrollments = @user_course_enrollments.where(user: current_user) if @user_course_enrollments
-    render 'index', locals: {user_course_enrollments: @user_course_enrollments}
+    @summarized_course_enrollments = @user_course_enrollments.map(&:summarize).sort_by do |enrollment|
+      PLC_COURSE_ORDERING.index(enrollment[:courseName]) || PLC_COURSE_ORDERING.size
+    end
   end
 
   def group_view
@@ -48,9 +50,7 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     redirect_to action: :new, notice: notice_string
   end
 
-  private
-
-  def listify_first_ten(user_list)
+  private def listify_first_ten(user_list)
     result = ': '
     if user_list.length > 10
       result = '. The first 10 are: '
@@ -60,12 +60,12 @@ class Plc::UserCourseEnrollmentsController < ApplicationController
     result
   end
 
-  def listify(user_list)
+  private def listify(user_list)
     user_list.map {|user| "<li>#{user}</li>"}.join
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def user_course_enrollment_params
+  private def user_course_enrollment_params
     params.permit(:user_emails, :plc_course_id, :course)
   end
 end

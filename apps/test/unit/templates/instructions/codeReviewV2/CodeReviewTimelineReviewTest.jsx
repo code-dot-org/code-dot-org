@@ -1,17 +1,19 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedCodeReviewTimelineReview as CodeReviewTimelineReview} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
-import CodeReviewTimelineElement, {
-  codeReviewTimelineElementType
-} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
-import javalabMsg from '@cdo/javalab/locale';
-import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import * as utils from '@cdo/apps/code-studio/utils';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
-import sinon from 'sinon';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
-import * as utils from '@cdo/apps/code-studio/utils';
+import CodeReviewTimelineElement, {
+  codeReviewTimelineElementType,
+} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
+import {UnconnectedCodeReviewTimelineReview as CodeReviewTimelineReview} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
+import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
+import javalabMsg from '@cdo/javalab/locale';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_REVIEW = {
   id: 1,
@@ -28,7 +30,7 @@ const DEFAULT_REVIEW = {
       commenterName: 'Steve',
       commenterId: 987,
       createdAt: '2022-03-31T04:58:42.000Z',
-      isResolved: false
+      isResolved: false,
     },
     {
       id: 124,
@@ -36,9 +38,9 @@ const DEFAULT_REVIEW = {
       commenterName: 'Karen',
       commenterId: 654,
       createdAt: '2022-03-31T04:58:42.000Z',
-      isResolved: false
-    }
-  ]
+      isResolved: false,
+    },
+  ],
 };
 
 const DEFAULT_PROPS = {
@@ -48,7 +50,7 @@ const DEFAULT_PROPS = {
   closeReview: () => {},
   toggleResolveComment: () => {},
   deleteCodeReviewComment: () => {},
-  currentUserId: 1
+  currentUserId: 1,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -105,7 +107,7 @@ describe('CodeReviewTimelineReview', () => {
     const wrapper = setUp({
       review: review,
       currentUserId: 1,
-      closeReview: closeReviewStub
+      closeReview: closeReviewStub,
     });
     const closeButton = wrapper.find('Button');
     closeButton.simulate('click');
@@ -125,7 +127,7 @@ describe('CodeReviewTimelineReview', () => {
     const wrapper = setUp({
       review: review,
       currentUserId: 1,
-      closeReview: closeReviewStub
+      closeReview: closeReviewStub,
     });
     const closeButton = wrapper.find('Button');
     closeButton.simulate('click');
@@ -203,7 +205,7 @@ describe('CodeReviewTimelineReview', () => {
     const review = {
       ...DEFAULT_REVIEW,
       isOpen: true,
-      ownerId: 1
+      ownerId: 1,
     };
     const wrapper = setUp({review: review, currentUserId: 1});
     expect(wrapper.find(CodeReviewCommentEditor)).to.have.length(0);

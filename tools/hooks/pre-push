@@ -1,3 +1,0 @@
-#!/bin/bash -e
-trap "echo 'Add --no-verify to skip Git pre-push hook.'" ERR
-

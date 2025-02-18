@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap';
+import {FormGroup, ControlLabel, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Select from 'react-select';
+
+import {STATES} from '../../../geographyConstants';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
-import {STATES} from '../../../geographyConstants';
+
 import {SchoolInfoPropType} from './constants';
 
 const VALIDATION_STATE_ERROR = 'error';
@@ -13,20 +15,20 @@ const SCHOOL_TYPES = {
   PUBLIC: 'Public school',
   PRIVATE: 'Private school',
   CHARTER: 'Charter school',
-  OTHER: 'Other'
+  OTHER: 'Other',
 };
 
 export default class CustomSchoolInfo extends React.Component {
   static propTypes = {
     school_info: SchoolInfoPropType,
     onSchoolInfoChange: PropTypes.func.isRequired,
-    errors: PropTypes.object
+    errors: PropTypes.object,
   };
 
   handleSchoolStateChange = selection => {
     const school_info = {
       ...this.props.school_info,
-      ...{school_state: selection.value}
+      ...{school_state: selection.value},
     };
     this.props.onSchoolInfoChange({school_info});
   };
@@ -63,7 +65,10 @@ export default class CustomSchoolInfo extends React.Component {
           required={true}
           onChange={this.handleSchoolInfoChange}
           validationState={
-            this.props.errors.hasOwnProperty('school_name')
+            Object.prototype.hasOwnProperty.call(
+              this.props.errors,
+              'school_name'
+            )
               ? VALIDATION_STATE_ERROR
               : null
           }
@@ -79,7 +84,10 @@ export default class CustomSchoolInfo extends React.Component {
             this.props.school_info ? this.props.school_info.school_type : null
           }
           validationState={
-            this.props.errors.hasOwnProperty('school_type')
+            Object.prototype.hasOwnProperty.call(
+              this.props.errors,
+              'school_type'
+            )
               ? VALIDATION_STATE_ERROR
               : null
           }
@@ -98,7 +106,10 @@ export default class CustomSchoolInfo extends React.Component {
               required={true}
               onChange={this.handleSchoolDistrictChange}
               validationState={
-                this.props.errors.hasOwnProperty('school_district_name')
+                Object.prototype.hasOwnProperty.call(
+                  this.props.errors,
+                  'school_district_name'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -110,7 +121,10 @@ export default class CustomSchoolInfo extends React.Component {
             <FormGroup
               id="school_state"
               validationState={
-                this.props.errors.hasOwnProperty('school_state')
+                Object.prototype.hasOwnProperty.call(
+                  this.props.errors,
+                  'school_state'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -137,7 +151,10 @@ export default class CustomSchoolInfo extends React.Component {
               required={true}
               onChange={this.handleSchoolInfoChange}
               validationState={
-                this.props.errors.hasOwnProperty('school_zip')
+                Object.prototype.hasOwnProperty.call(
+                  this.props.errors,
+                  'school_zip'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }

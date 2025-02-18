@@ -1,0 +1,13 @@
+name 'Test Contained Retriable Multi'
+title 'Contained Multi'
+description 'Here is some information.'
+question 'What is 1 + 1?'
+wrong '0', feedback: 'No, that is 1 - 1.'
+wrong '1', feedback: 'No, that is 1 * 1.'
+right '2', feedback: 'Yes, you are a genius!'
+wrong '4', feedback: 'No, that is not even close.'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Test **markdown** _here_
+MARKDOWN

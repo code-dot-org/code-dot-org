@@ -1,14 +1,16 @@
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioHomepages/JoinSection';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   enrolledInASection: false,
   isTeacher: false,
   updateSections: () => {},
-  updateSectionsResult: () => {}
+  updateSectionsResult: () => {},
 };
 
 describe('JoinSection', () => {
@@ -55,11 +57,11 @@ describe('JoinSection', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({
         sections: [{code: 'ABCDEF'}],
-        result: 'success'
-      })
+        result: 'success',
+      }),
     ]);
 
-    const updateSections = sinon.spy(function() {
+    const updateSections = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).to.equal('');
 
@@ -82,11 +84,11 @@ describe('JoinSection', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({
         sections: [{code: 'ABCDEF'}],
-        result: 'success'
-      })
+        result: 'success',
+      }),
     ]);
 
-    const updateSections = sinon.spy(function() {
+    const updateSections = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).to.equal('');
 
@@ -109,11 +111,11 @@ describe('JoinSection', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({
         sections: [{code: 'ABCDEF'}],
-        result: 'success'
-      })
+        result: 'success',
+      }),
     ]);
 
-    const updateSections = sinon.spy(function() {
+    const updateSections = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).to.equal('');
 
@@ -154,11 +156,11 @@ describe('JoinSection', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({
         sections: [{code: 'ABCDEF'}],
-        result: 'failed'
-      })
+        result: 'failed',
+      }),
     ]);
 
-    const updateSectionsResult = sinon.spy(function() {
+    const updateSectionsResult = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).to.equal('');
 
@@ -182,10 +184,10 @@ describe('JoinSection', () => {
     server.respondWith('POST', '/api/v1/sections/ABCDEF/join', [
       422,
       {'Content-Type': 'application/json'},
-      ''
+      '',
     ]);
 
-    const updateSectionsResult = sinon.spy(function() {
+    const updateSectionsResult = sinon.spy(function () {
       expect(wrapper.state()).to.deep.equal({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).to.equal('');
 

@@ -22,11 +22,15 @@
 #  index_levels_on_game_id    (game_id)
 #  index_levels_on_level_num  (level_num)
 #  index_levels_on_name       (name)
+#  index_levels_on_type       (type)
 #
 
 class Dancelab < GamelabJr
   serialized_attrs %w(
     default_song
+    song_selection
+    uses_lab2
+    uses_preview
   )
 
   def self.skins
@@ -54,16 +58,12 @@ class Dancelab < GamelabJr
     )
   end
 
-  def uses_google_blockly?
-    true
-  end
-
   def common_blocks(type)
   end
 
   # Used by levelbuilders to set a default song on a Dance Party level.
   def self.hoc_songs
-    manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: 'hoc_song_meta/songManifest2022.json')[:body].read
+    manifest_json = AWS::S3.create_client.get_object(bucket: 'cdo-sound-library', key: "hoc_song_meta/#{DANCE_SONG_MANIFEST_FILENAME}")[:body].read
     manifest = JSON.parse(manifest_json)
     manifest['songs'].map do |song|
       name = song['text']

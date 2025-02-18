@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
+import React, {Component} from 'react';
+
 import msg from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import color from '../../util/color';
 
 /**
  * A button for toggling the collapse state of instructions in CSF
@@ -14,7 +16,7 @@ class CollapserButton extends Component {
     isRtl: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
     collapsed: PropTypes.bool.isRequired,
-    isMinecraft: PropTypes.bool.isRequired
+    isMinecraft: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -31,9 +33,10 @@ class CollapserButton extends Component {
         {this.props.isMinecraft ? (
           <img
             src="/blockly/media/1x1.gif"
+            alt=""
             className={[
               this.props.collapsed ? 'more-btn' : 'less-btn',
-              'toggle26'
+              'toggle26',
             ].join(' ')}
           />
         ) : (
@@ -52,7 +55,7 @@ class CollapserButton extends Component {
               style={{
                 opacity: this.props.collapsed ? 1 : 0,
                 gridRow: 1,
-                gridColumn: 1
+                gridColumn: 1,
               }}
             >
               {msg.more()}
@@ -61,7 +64,7 @@ class CollapserButton extends Component {
               style={{
                 opacity: this.props.collapsed ? 0 : 1,
                 gridRow: 1,
-                gridColumn: 1
+                gridColumn: 1,
               }}
             >
               {msg.less()}
@@ -75,16 +78,25 @@ class CollapserButton extends Component {
 
 const styles = {
   collapseButton: {
-    backgroundColor: color.cyan,
-    color: color.white,
-    whiteSpace: 'nowrap'
+    backgroundColor: color.neutral_white,
+    border: `2px solid ${color.neutral_dark}`,
+    color: color.neutral_dark,
+    whiteSpace: 'nowrap',
+    ':hover': {
+      backgroundColor: color.neutral_dark20,
+      boxShadow: 'none',
+    },
+    ':focus': {
+      backgroundColor: color.neutral_dark20,
+      boxShadow: 'none',
+    },
   },
   collapseIcon: {
-    marginRight: 5
+    marginRight: 5,
   },
   collapseIconRtl: {
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };
 
 export default Radium(CollapserButton);

@@ -4,19 +4,20 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '../../util/color';
 
 const breadcrumbStyle = {
   container: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   icon: {
     margin: 5,
-    color: color.charcoal
+    color: color.charcoal,
   },
   currentPage: {
-    color: color.orange
-  }
+    color: color.orange,
+  },
 };
 
 export default class PlcHeader extends React.Component {
@@ -24,7 +25,7 @@ export default class PlcHeader extends React.Component {
     unit_name: PropTypes.string,
     unit_view_path: PropTypes.string,
     course_view_path: PropTypes.string,
-    page_name: PropTypes.string
+    page_name: PropTypes.string,
   };
 
   render() {

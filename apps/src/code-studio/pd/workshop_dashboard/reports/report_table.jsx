@@ -1,27 +1,28 @@
 /**
  * Report Table
  */
+import {orderBy} from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {orderBy} from 'lodash';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
+
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import color from '@cdo/apps/util/color';
 
 export default class ReportTable extends React.Component {
   static propTypes = {
     columns: PropTypes.array.isRequired,
-    rows: PropTypes.array.isRequired
+    rows: PropTypes.array.isRequired,
   };
 
   state = {
     sortingColumns: {
       workshop_id: {
         direction: 'asc',
-        position: 0
-      }
-    }
+        position: 0,
+      },
+    },
   };
 
   getSortingColumns = () => this.state.sortingColumns || {};
@@ -33,22 +34,22 @@ export default class ReportTable extends React.Component {
       sortingOrder: {
         FIRST: 'asc',
         asc: 'desc',
-        desc: 'asc'
+        desc: 'asc',
       },
-      selectedColumn
+      selectedColumn,
     });
 
     this.setState({
       sortingColumns: sort.byColumn({
-        sortingColumns
-      })
+        sortingColumns,
+      }),
     });
   };
 
   getSortableTransform() {
     return wrappedSortable(this.getSortingColumns, this.onSort, {
       container: {whiteSpace: 'nowrap'},
-      default: {color: color.light_gray}
+      default: {color: color.light_gray},
     });
   }
 
@@ -71,7 +72,7 @@ export default class ReportTable extends React.Component {
     // Since there may not be a unique id per row, add a rowKey based on pre-sorted index.
     const rows = this.props.rows.map((row, i) => ({
       ...row,
-      rowKey: i + 1
+      rowKey: i + 1,
     }));
 
     const columns = this.applyHeaderTransforms(this.props.columns);
@@ -79,7 +80,7 @@ export default class ReportTable extends React.Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(rows);
 
     return (
@@ -98,6 +99,6 @@ export default class ReportTable extends React.Component {
 
 const styles = {
   container: {
-    overflowX: 'auto'
-  }
+    overflowX: 'auto',
+  },
 };

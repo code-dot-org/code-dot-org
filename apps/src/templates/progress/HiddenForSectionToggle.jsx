@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button from '../Button';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import i18n from '@cdo/locale';
 
 /**
  * A component that provides a toggle that goes between visible and hidden that
@@ -14,7 +15,7 @@ class HiddenForSectionToggle extends React.Component {
     disabled: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     // Redux
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   render() {
@@ -24,7 +25,7 @@ class HiddenForSectionToggle extends React.Component {
     const mainStyle = {
       ...styles.main,
       ...(disabled && styles.disabled),
-      ...(isRtl ? styles.reverseButtons : null)
+      ...(isRtl ? styles.reverseButtons : null),
     };
 
     return (
@@ -53,10 +54,10 @@ class HiddenForSectionToggle extends React.Component {
 const styles = {
   main: {
     wrap: 'nowrap',
-    margin: '5px 15px'
+    margin: '5px 15px',
   },
   disabled: {
-    opacity: 0.5
+    opacity: 0.5,
   },
   button: {
     display: 'inline-block',
@@ -64,24 +65,24 @@ const styles = {
     paddingRight: 0,
     boxSizing: 'border-box',
     width: '50%',
-    margin: '5px 0px'
+    margin: '5px 0px',
   },
   leftButton: {
     borderTopRightRadius: 0,
-    borderBottomRightRadius: 0
+    borderBottomRightRadius: 0,
   },
   rightButton: {
     borderTopLeftRadius: 0,
-    borderBottomLeftRadius: 0
+    borderBottomLeftRadius: 0,
   },
   reverseButtons: {
     display: 'flex',
-    flexDirection: 'row-reverse'
-  }
+    flexDirection: 'row-reverse',
+  },
 };
 
 export const UnconnectedHiddenForSectionToggle = HiddenForSectionToggle;
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(HiddenForSectionToggle);

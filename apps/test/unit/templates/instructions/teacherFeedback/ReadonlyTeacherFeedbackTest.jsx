@@ -1,16 +1,16 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import ReadonlyTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/ReadonlyTeacherFeedback';
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
+import ReadonlyTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/ReadonlyTeacherFeedback';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 const DEFAULT_PROPS = {
   rubric: null,
   visible: true,
-  latestFeedback: null
+  latestFeedback: null,
 };
 
 const RUBRIC = {
@@ -18,7 +18,7 @@ const RUBRIC = {
   performanceLevel1: 'exceeded expectations',
   performanceLevel2: 'met expectations',
   performanceLevel3: 'approaches expectations',
-  performanceLevel4: 'no evidence of trying'
+  performanceLevel4: 'no evidence of trying',
 };
 
 const FEEDBACK = {
@@ -27,7 +27,7 @@ const FEEDBACK = {
   id: 5,
   level_id: 123,
   performance: null,
-  student_id: 1
+  student_id: 1,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -38,101 +38,101 @@ const setUp = (overrideProps = {}) => {
 describe('ReadonlyTeacherFeedback', () => {
   it('does not display tab content if it is not currently visible', () => {
     const wrapper = setUp({visible: false});
-    expect(wrapper.isEmptyRender()).to.be.true;
+    expect(wrapper.isEmptyRender()).toBe(true);
   });
 
   describe('without previous feedback given', () => {
     it('does not display last updated', () => {
       const wrapper = setUp({
-        rubric: RUBRIC
+        rubric: RUBRIC,
       });
-      expect(wrapper.find('#ui-test-feedback-time')).to.have.length(0);
+      expect(wrapper.find('#ui-test-feedback-time')).toHaveLength(0);
     });
 
     it('displays rubric with expected props if there is a rubric', () => {
       const wrapper = setUp({
-        rubric: RUBRIC
+        rubric: RUBRIC,
       });
       const rubric = wrapper.find(Rubric);
-      expect(rubric).to.have.length(1);
-      expect(rubric.props().rubric).to.equal(RUBRIC);
-      expect(rubric.props().isEditable).to.equal(false);
+      expect(rubric).toHaveLength(1);
+      expect(rubric.props().rubric).toBe(RUBRIC);
+      expect(rubric.props().isEditable).toBe(false);
     });
 
     it('does not display the comment area', () => {
       const wrapper = setUp({
-        rubric: RUBRIC
+        rubric: RUBRIC,
       });
-      expect(wrapper.find(Comment)).to.have.lengthOf(0);
+      expect(wrapper.find(Comment)).toHaveLength(0);
     });
 
     it('does not display ReadOnlyReviewState', () => {
       const wrapper = setUp({
-        rubric: RUBRIC
+        rubric: RUBRIC,
       });
-      expect(wrapper.find(ReadOnlyReviewState)).to.have.lengthOf(0);
+      expect(wrapper.find(ReadOnlyReviewState)).toHaveLength(0);
     });
   });
 
   describe('with previous feedback given', () => {
     it('does not render rubric if there is no rubric for the level', () => {
       const wrapper = setUp({
-        latestFeedback: FEEDBACK
+        latestFeedback: FEEDBACK,
       });
-      expect(wrapper.find(Rubric)).to.have.lengthOf(0);
+      expect(wrapper.find(Rubric)).toHaveLength(0);
     });
 
     it('renders rubric with expected props if there is a rubric for the level', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        performance: 'performanceLevel2'
+        performance: 'performanceLevel2',
       };
 
       const wrapper = setUp({
         rubric: RUBRIC,
-        latestFeedback
+        latestFeedback,
       });
 
       const rubric = wrapper.find(Rubric);
-      expect(rubric).to.have.length(1);
-      expect(rubric.props().rubric).to.equal(RUBRIC);
-      expect(rubric.props().performance).to.equal('performanceLevel2');
-      expect(rubric.props().isEditable).to.equal(false);
+      expect(rubric).toHaveLength(1);
+      expect(rubric.props().rubric).toBe(RUBRIC);
+      expect(rubric.props().performance).toBe('performanceLevel2');
+      expect(rubric.props().isEditable).toBe(false);
     });
 
     it('renders the comment with expected props if there is a comment', () => {
       const wrapper = setUp({
-        latestFeedback: FEEDBACK
+        latestFeedback: FEEDBACK,
       });
       const confirmCommentArea = wrapper.find(Comment).first();
-      expect(confirmCommentArea.props().isEditable).to.equal(false);
-      expect(confirmCommentArea.props().comment).to.equal('Good work!');
+      expect(confirmCommentArea.props().isEditable).toBe(false);
+      expect(confirmCommentArea.props().comment).toBe('Good work!');
     });
 
     it('does not render a comment if no comment was given with feedback', () => {
       const latestFeedback = {
         ...FEEDBACK,
         comment: '',
-        performance: 'performanceLevel2'
+        performance: 'performanceLevel2',
       };
 
       const wrapper = setUp({
         rubric: RUBRIC,
-        latestFeedback
+        latestFeedback,
       });
 
-      expect(wrapper.find(Comment)).to.have.lengthOf(0);
+      expect(wrapper.find(Comment)).toHaveLength(0);
     });
 
     it('renders ReadOnlyReviewState with expected props - keepWorking', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        review_state: ReviewStates.keepWorking
+        review_state: ReviewStates.keepWorking,
       };
       const wrapper = setUp({latestFeedback});
       const reviewState = wrapper.find(ReadOnlyReviewState);
-      expect(reviewState).to.have.lengthOf(1);
-      expect(reviewState.props().latestReviewState).to.equal(
+      expect(reviewState).toHaveLength(1);
+      expect(reviewState.props().latestReviewState).toBe(
         ReviewStates.keepWorking
       );
     });
@@ -140,12 +140,12 @@ describe('ReadonlyTeacherFeedback', () => {
     it('renders ReadOnlyReviewState with expected props - awaiting Review', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        is_awaiting_teacher_review: true
+        is_awaiting_teacher_review: true,
       };
       const wrapper = setUp({latestFeedback});
       const reviewState = wrapper.find(ReadOnlyReviewState);
-      expect(reviewState).to.have.lengthOf(1);
-      expect(reviewState.props().latestReviewState).to.equal(
+      expect(reviewState).toHaveLength(1);
+      expect(reviewState.props().latestReviewState).toBe(
         ReviewStates.awaitingReview
       );
     });
@@ -156,11 +156,11 @@ describe('ReadonlyTeacherFeedback', () => {
 
       const latestFeedback = {
         created_at: yesterday,
-        comment: 'Great!'
+        comment: 'Great!',
       };
 
       const wrapper = setUp({latestFeedback});
-      expect(wrapper.text().includes('Last updated a day ago')).to.be.true;
+      expect(wrapper.text().includes('Last updated a day ago')).toBe(true);
     });
   });
 });

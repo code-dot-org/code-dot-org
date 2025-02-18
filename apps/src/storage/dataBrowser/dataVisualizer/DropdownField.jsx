@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import msg from '@cdo/locale';
+import React from 'react';
+
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
+import msg from '@cdo/locale';
 
 class DropdownField extends React.Component {
   static propTypes = {
@@ -11,7 +12,7 @@ class DropdownField extends React.Component {
     disabledOptions: PropTypes.array,
     getDisplayNameForOption: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    inlineLabel: PropTypes.bool
+    inlineLabel: PropTypes.bool,
   };
 
   render() {
@@ -20,14 +21,14 @@ class DropdownField extends React.Component {
           ...rowStyle.description,
           float: 'left',
           marginTop: '5px',
-          paddingRight: '5px'
+          paddingRight: '5px',
         }
       : rowStyle.description;
 
     const containerStyle = {
       paddingLeft: this.props.inlineLabel ? 10 : 20,
       float: 'left',
-      marginBottom: 8
+      marginBottom: 8,
     };
 
     return (

@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+
 import {ImagePreview} from '@cdo/apps/templates/instructions/AniGifPreview';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ImagePreview', () => {
   it('renders normal size if noVisualization is false', () => {
@@ -18,7 +20,7 @@ describe('ImagePreview', () => {
         id="ani-gif-preview-wrapper"
         style={{
           display: 'inline-block',
-          position: 'relative'
+          position: 'relative',
         }}
       >
         <div
@@ -26,7 +28,7 @@ describe('ImagePreview', () => {
           onClick={onClickCallback}
           style={{
             cursor: 'pointer',
-            backgroundImage: "url('example.gif')"
+            backgroundImage: "url('example.gif')",
           }}
         />
       </div>
@@ -47,7 +49,7 @@ describe('ImagePreview', () => {
         id="ani-gif-preview-wrapper"
         style={{
           display: 'inline-block',
-          position: 'relative'
+          position: 'relative',
         }}
       >
         <div
@@ -58,7 +60,7 @@ describe('ImagePreview', () => {
             backgroundImage: "url('example2.gif')",
             width: 240,
             height: 180,
-            backgroundSize: '240px 180px'
+            backgroundSize: '240px 180px',
           }}
         />
       </div>

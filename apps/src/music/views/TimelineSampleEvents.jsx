@@ -1,29 +1,29 @@
 import PropTypes from 'prop-types';
-import React, {useRef, useContext} from 'react';
+import React, {useRef} from 'react';
+import {useSelector} from 'react-redux';
+
 import UniqueSounds from '../utils/UniqueSounds';
-import {PlayerUtilsContext} from '../context';
+
 import TimelineElement from './TimelineElement';
 
 /**
  * Renders timeline events, organized by unique sample ID.
  */
 const TimelineSampleEvents = ({
-  currentPlayheadPosition,
+  paddingOffset,
   barWidth,
-  eventVerticalSpace,
-  getEventHeight
+  getEventHeight,
+  getEventVerticalSpace,
 }) => {
-  const playerUtils = useContext(PlayerUtilsContext);
-  const soundEvents = playerUtils.getPlaybackEvents();
+  const soundEvents = useSelector(state => state.music.playbackEvents);
 
   const uniqueSoundsRef = useRef(new UniqueSounds());
   // Let's cache the value of getUniqueSounds() so that the various helpers
   // we call during render don't need to recalculate it.  This also ensures
   // that we recalculate unique sounds, even when there are no entries to
   // render.
-  const currentUniqueSounds = uniqueSoundsRef.current.getUniqueSounds(
-    soundEvents
-  );
+  const currentUniqueSounds =
+    uniqueSoundsRef.current.getUniqueSounds(soundEvents);
 
   const getVerticalOffsetForEventId = id => {
     return (
@@ -35,20 +35,20 @@ const TimelineSampleEvents = ({
     return currentUniqueSounds.indexOf(id);
   };
 
+  const eventHeight = getEventHeight(currentUniqueSounds.length);
+  const eventVerticalSpace = getEventVerticalSpace(eventHeight);
+
   return (
     <>
       {soundEvents.map((eventData, index) => (
         <TimelineElement
           key={index}
-          soundId={eventData.id}
+          eventData={eventData}
           barWidth={barWidth}
-          height={
-            getEventHeight(currentUniqueSounds.length) - eventVerticalSpace
-          }
-          top={20 + getVerticalOffsetForEventId(eventData.id)}
-          left={barWidth * (eventData.when - 1)}
+          height={eventHeight - eventVerticalSpace}
+          top={32 + getVerticalOffsetForEventId(eventData.id)}
+          left={paddingOffset + barWidth * (eventData.when - 1)}
           when={eventData.when}
-          currentPlayheadPosition={currentPlayheadPosition}
         />
       ))}
     </>
@@ -56,10 +56,10 @@ const TimelineSampleEvents = ({
 };
 
 TimelineSampleEvents.propTypes = {
-  currentPlayheadPosition: PropTypes.number.isRequired,
+  paddingOffset: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
-  eventVerticalSpace: PropTypes.number.isRequired,
-  getEventHeight: PropTypes.func.isRequired
+  getEventHeight: PropTypes.func.isRequired,
+  getEventVerticalSpace: PropTypes.func.isRequired,
 };
 
 export default TimelineSampleEvents;

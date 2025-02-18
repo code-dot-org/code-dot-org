@@ -10,18 +10,18 @@ namespace :adhoc do
     require 'cdo/cloud_formation/cdo_app'
     @cfn = AWS::CloudFormation.new(
       stack: (@template = Cdo::CloudFormation::CdoApp.new(
-        filename: ENV['TEMPLATE'],
+        filename: ENV.fetch('TEMPLATE', nil),
         stack_name: ENV['STACK_NAME'].dup,
-        branch: ENV['BRANCH'] || ENV['branch'],
-        database: ENV['DATABASE'],
-        frontends: ENV['FRONTENDS'],
-        cdn_enabled: ENV['CDN_ENABLED'],
-        alarms: ENV['ALARMS']
+        branch: ENV['BRANCH'] || ENV.fetch('branch', nil),
+        database: ENV.fetch('DATABASE', nil),
+        frontends: ENV.fetch('FRONTENDS', nil),
+        cdn_enabled: ENV.fetch('CDN_ENABLED', nil),
+        alarms: ENV.fetch('ALARMS', nil)
       )),
       log: CDO.log,
-      verbose: ENV['VERBOSE'],
-      quiet: ENV['QUIET'],
-      import_resources: ENV['IMPORT_RESOURCES'],
+      verbose: ENV.fetch('VERBOSE', nil),
+      quiet: ENV.fetch('QUIET', nil),
+      import_resources: ENV.fetch('IMPORT_RESOURCES', nil),
     )
   end
 

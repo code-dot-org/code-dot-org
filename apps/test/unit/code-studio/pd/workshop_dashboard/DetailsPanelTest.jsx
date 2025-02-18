@@ -1,8 +1,8 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert} from 'chai';
-import sinon from 'sinon';
 import {Factory} from 'rosie';
+
 import DetailsPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/DetailsPanel';
 import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import './workshopFactory';
@@ -17,7 +17,7 @@ describe('DetailsPanel', () => {
 
   it('shows an edit button when the workshop is in "Not Started" state', () => {
     const wrapper = shallowDetailsPanel({
-      workshop: Factory.build('workshop', {state: 'Not Started'})
+      workshop: Factory.build('workshop', {state: 'Not Started'}),
     });
     const editButton = wrapper
       .find('Connect(WorkshopForm)')
@@ -29,7 +29,7 @@ describe('DetailsPanel', () => {
   it('does not show an edit button when the workshop is not in "Not Started" state', () => {
     States.filter(s => 'Not Started' !== s).forEach(state => {
       const wrapper = shallowDetailsPanel({
-        workshop: Factory.build('workshop', {state})
+        workshop: Factory.build('workshop', {state}),
       });
       const editButton = wrapper
         .find('Connect(WorkshopForm)')
@@ -41,7 +41,7 @@ describe('DetailsPanel', () => {
 
   it('shows an editable WorkshopForm in edit mode', () => {
     const wrapper = shallowDetailsPanel({
-      view: 'edit'
+      view: 'edit',
     });
     const workshopForm = wrapper.find('Connect(WorkshopForm)');
     assert.isOk(workshopForm, 'WorkshopForm was rendered');
@@ -50,7 +50,7 @@ describe('DetailsPanel', () => {
 
   it('edit mode includes a save button in the header', () => {
     const wrapper = shallowDetailsPanel({
-      view: 'edit'
+      view: 'edit',
     });
     const headerSaveButton = findHeaderButton(wrapper, 'Save');
     assert.isTrue(headerSaveButton.exists(), 'Save button is present');
@@ -60,7 +60,7 @@ describe('DetailsPanel', () => {
     States.forEach(state => {
       const wrapper = shallowDetailsPanel({
         workshop: Factory.build('workshop', {state}),
-        isWorkshopAdmin: true
+        isWorkshopAdmin: true,
       });
       const headerEditButton = findHeaderButton(wrapper, 'Edit');
       assert.isTrue(headerEditButton.exists(), 'Edit button is present');
@@ -71,10 +71,10 @@ describe('DetailsPanel', () => {
     return shallow(
       <DetailsPanel
         workshop={Factory.build('workshop')}
-        onWorkshopSaved={sinon.spy()}
+        onWorkshopSaved={jest.fn()}
         {...props}
       />,
-      {context: {router: {push: sinon.spy()}}}
+      {context: {router: {push: jest.fn()}}}
     );
   }
 

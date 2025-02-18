@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
-import createResourcesReducer, {
-  initResources
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {Provider} from 'react-redux';
+
 import {getStore} from '@cdo/apps/code-studio/redux';
+import CourseEditor from '@cdo/apps/levelbuilder/course-editor/CourseEditor';
+import createResourcesReducer, {
+  initResources,
+} from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {registerReducers} from '@cdo/apps/redux';
 
 $(document).ready(showCourseEditor);
@@ -16,7 +17,7 @@ function showCourseEditor() {
 
   registerReducers({
     resources: createResourcesReducer('teacherResource'),
-    studentResources: createResourcesReducer('studentResource')
+    studentResources: createResourcesReducer('studentResource'),
   });
   const store = getStore();
   store.dispatch(
@@ -80,6 +81,9 @@ function showCourseEditor() {
         coursePath={courseEditorData.course_summary.course_path}
         courseOfferingEditorLink={
           courseEditorData.course_summary.course_offering_edit_path
+        }
+        isMissingRequiredDeviceCompatibilities={
+          courseEditorData.missing_required_device_compatibilities
         }
       />
     </Provider>,

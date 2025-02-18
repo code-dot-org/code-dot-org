@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import msg from '@cdo/locale';
-import color from '../../util/color';
+
 import SafeMarkdown from '../../templates/SafeMarkdown';
+import color from '../../util/color';
 
 class DataEntryError extends React.Component {
   static propTypes = {
-    isVisible: PropTypes.bool.isRequired
+    isVisible: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -26,17 +28,17 @@ class DataEntryError extends React.Component {
 const styles = {
   container: {
     height: 40,
-    paddingTop: 12
+    paddingTop: 12,
   },
   visible: {
     background: color.lighter_yellow,
     paddingLeft: 12,
     paddingRight: 12,
-    paddingBottom: 0
+    paddingBottom: 0,
   },
   bottom: {
-    paddingBottom: 8
-  }
+    paddingBottom: 8,
+  },
 };
 
 export default DataEntryError;

@@ -37,3 +37,5 @@ Going through this code line by line:
 
 Display `val` which should be the largest of the 3.
 MARKDOWN
+
+allow_multiple_attempts true

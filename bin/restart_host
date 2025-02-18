@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "Restarting $1 ..."
-ssh -o UserKnownHostsFile=/dev/null -n $1 "sudo service dashboard upgrade > /dev/null && sudo service pegasus upgrade > /dev/null && free -t | grep 'buffers/cache' | awk '{print \$4/(\$3+\$4) * 100}'"
+ssh -o UserKnownHostsFile=/dev/null -n $1 "sudo systemctl restart dashboard > /dev/null && sudo systemctl restart pegasus > /dev/null && free -t | grep 'buffers/cache' | awk '{print \$4/(\$3+\$4) * 100}'"

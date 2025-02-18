@@ -5,7 +5,7 @@
  * @deprecated Use EventEmitter instead, which you can import from the events module.
  *             See https://nodejs.org/api/events.html
  */
-var ObservableEventDEPRECATED = (module.exports = function() {
+var ObservableEventDEPRECATED = (module.exports = function () {
   /**
    * Objects observing this.
    * @type {Array}
@@ -20,7 +20,7 @@ var ObservableEventDEPRECATED = (module.exports = function() {
  *        Will receive any arguments passed to notifyObservers.
  * @returns {Object} key - used to unregister from observable
  */
-ObservableEventDEPRECATED.prototype.register = function(onNotify) {
+ObservableEventDEPRECATED.prototype.register = function (onNotify) {
   var key = {toCall: onNotify};
   Object.freeze(key);
   this.observerList_.push(key);
@@ -32,7 +32,7 @@ ObservableEventDEPRECATED.prototype.register = function(onNotify) {
  * @param {Object} keyObj - Key generated when registering
  * @returns {boolean} - Whether an unregistration actually occurred
  */
-ObservableEventDEPRECATED.prototype.unregister = function(keyObj) {
+ObservableEventDEPRECATED.prototype.unregister = function (keyObj) {
   for (var i = 0; i < this.observerList_.length; i++) {
     if (keyObj === this.observerList_[i]) {
       this.observerList_.splice(i, 1);
@@ -48,9 +48,9 @@ ObservableEventDEPRECATED.prototype.unregister = function(keyObj) {
  * @param {...} Any arguments, which are passed through to the observing
  *              functions.
  */
-ObservableEventDEPRECATED.prototype.notifyObservers = function() {
+ObservableEventDEPRECATED.prototype.notifyObservers = function () {
   var args = Array.prototype.slice.call(arguments, 0);
-  this.observerList_.forEach(function(observer) {
+  this.observerList_.forEach(function (observer) {
     observer.toCall.apply(undefined, args);
   });
 };

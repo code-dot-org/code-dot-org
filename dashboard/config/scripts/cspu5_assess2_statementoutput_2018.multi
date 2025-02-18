@@ -25,3 +25,5 @@ Below is a key that states the other possibilities that are not correct to this 
 * \\newLine - newLine is not a valid command
 * \\nl - nl is not a valid command
 MARKDOWN
+
+allow_multiple_attempts true
