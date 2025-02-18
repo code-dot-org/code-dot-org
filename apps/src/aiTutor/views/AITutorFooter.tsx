@@ -3,7 +3,7 @@ import React, {useCallback} from 'react';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {AITutorTypes as ActionType} from '@cdo/apps/aiTutor/types';
-import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -18,13 +18,6 @@ interface AITutorFooterProps {
   renderAITutor: boolean;
 }
 
-// Helper function to extract active file contents from a MultiFileSource
-const getActiveFileContents = (multiFileSource: MultiFileSource): string => {
-  const filesArray: ProjectFile[] = Object.values(multiFileSource.files);
-  const activeFile = filesArray.find(file => file.active);
-  return activeFile ? activeFile.contents : '';
-};
-
 const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
   const isWaitingForChatResponse = useAppSelector(
     state => state.aiTutor.isWaitingForChatResponse
@@ -32,10 +25,10 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
 
   const level = useAppSelector(state => state.aiTutor.level);
 
-  // For Pythonlab, these selectors will be used and we are guaranteed that source is a MultiFileSource
+  // For PythonLab
   const pythonLabSource = useAppSelector(
     state => state.lab2Project?.projectSources?.source
-  ) as MultiFileSource | undefined;
+  );
 
   // For JavaLab
   const javaLabSources = useAppSelector(state => state.javalabEditor.sources);
@@ -47,10 +40,14 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
   );
 
   let studentCode: string = '';
+
+  // TODO: For both JavaLab and PythonLab, we are only considering the active file contents,
+  // Ticket to improve: https://codedotorg.atlassian.net/browse/CT-1058
   if (level?.type === 'Pythonlab') {
-    // TODO: For both JavaLab and PythonLab, we are only considering the active file contents,
-    // Ticket to improve: https://codedotorg.atlassian.net/browse/CT-1058
-    studentCode = pythonLabSource ? getActiveFileContents(pythonLabSource) : '';
+    // String sources should only be used for non-multifile labs (i.e., not Pythonlab)
+    if (typeof pythonLabSource !== 'string' && pythonLabSource) {
+      studentCode = getActiveFileForSource(pythonLabSource)?.contents || '';
+    }
   } else if (level?.type === 'Javalab') {
     studentCode = javaLabSources[fileMetadata[activeTabKey]].text;
   }
