@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-05 22:05:19 UTC",
+    "serialized_at": "2025-02-12 21:13:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -117,6 +117,61 @@
         "activity_section.key": "714bff6c-48bb-461f-ac60-bf4420ecaa8f",
         "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
       }
+    },
+    {
+      "key": "3e89504d-e83f-48ff-9231-50b7299e4f20",
+      "position": 6,
+      "properties": {
+        "progression_name": "Parson Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e89504d-e83f-48ff-9231-50b7299e4f20",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
+    },
+    {
+      "key": "736700cb-6048-4af2-a184-223076e62ad5",
+      "position": 7,
+      "properties": {
+        "progression_name": "Hotspot Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "736700cb-6048-4af2-a184-223076e62ad5",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
+    },
+    {
+      "key": "db9cb6b8-9658-4ebb-83a6-89a45959d841",
+      "position": 8,
+      "properties": {
+        "progression_name": "Rubric Experiment"
+      },
+      "seeding_key": {
+        "activity_section.key": "db9cb6b8-9658-4ebb-83a6-89a45959d841",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
+    },
+    {
+      "key": "28602bac-3c71-4f8a-aae9-345cd6f1cdd5",
+      "position": 9,
+      "properties": {
+        "progression_name": "Genre Mashup Proof of Concept"
+      },
+      "seeding_key": {
+        "activity_section.key": "28602bac-3c71-4f8a-aae9-345cd6f1cdd5",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
+    },
+    {
+      "key": "0ba126a3-b095-43ed-a9ee-1e3d5713adad",
+      "position": 10,
+      "properties": {
+        "progression_name": "Storytelling Proof of Concept"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ba126a3-b095-43ed-a9ee-1e3d5713adad",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
     }
   ],
   "script_levels": [
@@ -126,6 +181,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-simple-template"
+        ],
         "progression": "Simple Mode Template"
       },
       "bonus": false,
@@ -148,6 +206,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-advanced-template"
+        ],
         "progression": "Advanced Mode Template"
       },
       "bonus": false,
@@ -170,6 +231,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-simple-testlibrary1"
+        ],
         "progression": "Simple Mode Libraries (Launch + Curriculum)"
       },
       "bonus": false,
@@ -192,6 +256,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-simple-testlibrary2"
+        ],
         "progression": "Simple Mode Libraries (Launch + Curriculum)"
       },
       "bonus": false,
@@ -214,6 +281,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-simple-toolbox-experiment1"
+        ],
         "progression": "Toolbox Experiments"
       },
       "bonus": false,
@@ -236,6 +306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-simple-toolbox-experiment2"
+        ],
         "progression": "Drumeo Experiment"
       },
       "bonus": false,
@@ -250,6 +323,172 @@
       },
       "level_keys": [
         "music-lab-simple-toolbox-experiment2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-simple-parson-experiment"
+        ],
+        "progression": "Parson Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-parson-experiment"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "3e89504d-e83f-48ff-9231-50b7299e4f20"
+      },
+      "level_keys": [
+        "music-lab-simple-parson-experiment"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-simple-parson-experiment2"
+        ],
+        "progression": "Parson Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-parson-experiment2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "3e89504d-e83f-48ff-9231-50b7299e4f20"
+      },
+      "level_keys": [
+        "music-lab-simple-parson-experiment2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-simple-hotspot-screenshot"
+        ],
+        "progression": "Hotspot Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-hotspot-screenshot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "736700cb-6048-4af2-a184-223076e62ad5"
+      },
+      "level_keys": [
+        "music-lab-simple-hotspot-screenshot"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab-hotspot-functions-test"
+        ],
+        "progression": "Hotspot Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab-hotspot-functions-test"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "736700cb-6048-4af2-a184-223076e62ad5"
+      },
+      "level_keys": [
+        "musiclab-hotspot-functions-test"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Rubric Experiment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-rubric-experiment"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "db9cb6b8-9658-4ebb-83a6-89a45959d841"
+      },
+      "level_keys": [
+        "music-lab-simple-rubric-experiment"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Genre Mashup Proof of Concept"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-storytelling"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "28602bac-3c71-4f8a-aae9-345cd6f1cdd5"
+      },
+      "level_keys": [
+        "music-lab-simple-storytelling"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Storytelling Proof of Concept"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-storytelling2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "0ba126a3-b095-43ed-a9ee-1e3d5713adad"
+      },
+      "level_keys": [
+        "music-lab-simple-storytelling2"
       ]
     }
   ],
@@ -324,6 +563,90 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "714bff6c-48bb-461f-ac60-bf4420ecaa8f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-parson-experiment",
+        "script_level.level_keys": [
+          "music-lab-simple-parson-experiment"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "3e89504d-e83f-48ff-9231-50b7299e4f20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-parson-experiment2",
+        "script_level.level_keys": [
+          "music-lab-simple-parson-experiment2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "3e89504d-e83f-48ff-9231-50b7299e4f20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-hotspot-screenshot",
+        "script_level.level_keys": [
+          "music-lab-simple-hotspot-screenshot"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "736700cb-6048-4af2-a184-223076e62ad5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab-hotspot-functions-test",
+        "script_level.level_keys": [
+          "musiclab-hotspot-functions-test"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "736700cb-6048-4af2-a184-223076e62ad5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-rubric-experiment",
+        "script_level.level_keys": [
+          "music-lab-simple-rubric-experiment"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "db9cb6b8-9658-4ebb-83a6-89a45959d841"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-storytelling",
+        "script_level.level_keys": [
+          "music-lab-simple-storytelling"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "28602bac-3c71-4f8a-aae9-345cd6f1cdd5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-storytelling2",
+        "script_level.level_keys": [
+          "music-lab-simple-storytelling2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "0ba126a3-b095-43ed-a9ee-1e3d5713adad"
       }
     }
   ],

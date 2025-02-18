@@ -1,0 +1,44 @@
+@use '@/components/common/styles/mixins' as mixins;
+
+// Common link styles
+a.link {
+  margin-top: 0;
+}
+
+// Link sizes
+a.link-size {
+  &-l {
+    gap: 0.5rem;
+  }
+
+  &-m {
+    gap: 0.5rem;
+  }
+
+  &-s {
+    gap: 0.375rem;
+  }
+
+  &-xs {
+    gap: 0.25rem;
+  }
+}
+
+// Link marginBottom styles
+a.link-margin-bottom {
+  &-none {
+    @include mixins.common-margin-bottom-none;
+  }
+
+  &-xs {
+    @include mixins.common-margin-bottom-xs;
+  }
+
+  &-s {
+    @include mixins.common-margin-bottom-s;
+  }
+
+  &-m {
+    @include mixins.common-margin-bottom-m;
+  }
+}

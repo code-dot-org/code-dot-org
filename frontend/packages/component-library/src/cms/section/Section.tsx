@@ -4,26 +4,32 @@ import {HTMLAttributes, ReactNode} from 'react';
 import {ComponentSizeXSToL} from '@/common/types';
 import moduleStyles from './section.module.scss';
 
-export type SectionBackgroundColor =
+export type SectionBackground =
   | 'primary'
   | 'secondary'
   | 'dark'
   | 'brandLightPrimary'
-  | 'brandLightSecondary';
+  | 'brandLightSecondary'
+  | 'patternDark'
+  | 'patternPrimary';
 
-export const sectionBackgroundColors: {
-  [key in SectionBackgroundColor]: SectionBackgroundColor;
+export const sectionBackground: {
+  [key in SectionBackground]: SectionBackground;
 } = {
   primary: 'primary',
   secondary: 'secondary',
   dark: 'dark',
   brandLightPrimary: 'brandLightPrimary',
   brandLightSecondary: 'brandLightSecondary',
+  patternDark: 'patternDark',
+  patternPrimary: 'patternPrimary',
 };
 
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   /** Background color */
-  backgroundColor?: SectionBackgroundColor;
+  background?: SectionBackground;
+  /** Background image */
+  backgroundImageUrl?: string;
   /** Vertical padding */
   padding?: Exclude<ComponentSizeXSToL, 'xs' | 's'>;
   /** Section content */
@@ -44,7 +50,8 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
  * Acts as a container for section content in the Contentful CMS.
  */
 const Section: React.FC<SectionProps> = ({
-  backgroundColor = 'primary',
+  background = 'primary',
+  backgroundImageUrl,
   padding = 'l',
   children,
   className,
@@ -54,11 +61,18 @@ const Section: React.FC<SectionProps> = ({
     <section
       className={classNames(
         moduleStyles.section,
-        moduleStyles[`section-${backgroundColor}`],
-        moduleStyles[`section-${padding}`],
+        moduleStyles[`section-background-${background}`],
+        moduleStyles[`section-padding-${padding}`],
         className,
       )}
       {...HTMLAttributes}
+      style={{
+        ...(backgroundImageUrl && {
+          backgroundImage: `url(${backgroundImageUrl})`,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '18rem',
+        }),
+      }}
     >
       <div className={classNames(moduleStyles.container)}>{children}</div>
     </section>

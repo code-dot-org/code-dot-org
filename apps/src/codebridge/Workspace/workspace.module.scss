@@ -52,13 +52,19 @@
 
 .workspaceHeader {
   border-bottom: 1px solid $light_gray_800;
-  margin-bottom: 0;
 }
 
 .centerHeaderContent {
   display: flex;
   justify-content: center;
   gap: 4px;
+  overflow: hidden;
+
+  &Text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .lockedFilesBanner {
@@ -69,5 +75,15 @@
   display: flex;
   justify-content: flex-end;
   gap: 4px;
-  margin: 4px;
+}
+
+.buttonSkip {
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

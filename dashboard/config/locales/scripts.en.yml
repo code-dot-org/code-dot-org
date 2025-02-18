@@ -11291,7 +11291,7 @@ en:
               display_name: 'Part II:  Concepts in Courses A - F'
             k5_next_steps_1:
               display_name: 'Part III:  Next Steps'
-          title: Teaching Computer Science Fundamentals ('23-'24)
+          title: Teaching Computer Science Fundamentals
           description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
@@ -19827,6 +19827,22 @@ en:
               name: Decomposing Adventure Game (Lesson 12)
             lesson-22:
               name: Variables with AI Tutor
+            lesson-23:
+              name: Lesson 5 - Variables and Data Flow
+            lesson-24:
+              name: Lesson 6 - Working with Objects
+            lesson-25:
+              name: Lesson 7 - Functions and Parameters
+            lesson-26:
+              name: Lesson 9 - Intro to Loops
+            lesson-27:
+              name: Lesson 10 - Conditionals
+            lesson-28:
+              name: Lesson 12 - Decomposing a Pixel Image
+            lesson-29:
+              name: Lesson 13 - Two-Way & Nested Selection
+            lesson-30:
+              name: Lesson 14 - Pixels of Me Project
           lesson_groups:
             lessonGroup-2:
               display_name: console-only levels
@@ -20008,3 +20024,32 @@ en:
           description_short: ''
           description: "##### Welcome! This module prepares teachers for Code.org's Programming with Music Lab curriculum. Programming with Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards. "
           student_description: "##### Welcome! This module prepares teachers for Code.org's Programming with Music Lab curriculum. Programming with Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards. "
+        ui-test-single-unit-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-single-unit-2025
+          title: Single Unit 2025
+          description_audience: ''
+          description_short: This is the short overview for Single Unit 2025.
+          description: This is the teacher overview for Single Unit 2025.
+          student_description: This is the student overview for Single Unit 2025.
+        ui-test-single-unit-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-single-unit-2026
+          title: Single Unit 2026
+          description_audience: ''
+          description_short: This is the short overview for Single Unit 2026.
+          description: This is the teacher overview for Single Unit 2026.
+          student_description: This is the student overview for Single Unit 2026.
+        sandbox-teaching-getting-started1:
+          lessons:
+            lesson-1:
+              name: Welcome to Code.org
+          lesson_groups: {}
+          name: sandbox-teaching-getting-started1
+          title: Getting Started Sandbox (Updated)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

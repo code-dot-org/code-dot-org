@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, {useContext} from 'react';
 
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
 
 import {ThemeContext} from '../ThemeWrapper';
 
@@ -36,6 +37,7 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   headerClassName,
 }) => {
   const {theme} = useContext(ThemeContext);
+  const capitalizedTheme = capitalizeFirstLetter(theme);
 
   return (
     <div
@@ -50,43 +52,47 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
         <div
           className={classNames(
             'panelContainerHeader',
-            moduleStyles['panelContainerHeader-' + theme],
+            moduleStyles.panelContainerHeader,
+            moduleStyles[`panelContainerHeader${capitalizedTheme}`],
             headerClassName
           )}
         >
-          {leftHeaderContent && (
-            <div
-              className={classNames(
-                'panelContainerHeaderItemLeft',
-                moduleStyles.panelContainerHeaderItem,
-                moduleStyles.panelContainerHeaderItemLeft
-              )}
-            >
-              {leftHeaderContent}
-            </div>
-          )}
+          <div
+            className={classNames(
+              'panelContainerHeaderItemLeft',
+              moduleStyles.panelContainerHeaderItem,
+              moduleStyles.panelContainerHeaderItemLeft
+            )}
+          >
+            {leftHeaderContent}
+          </div>
+
           <Heading2
             className={classNames(
               'panelContainerHeaderItemText',
               moduleStyles.panelContainerHeaderItem,
-              moduleStyles['panelContainerHeaderItem-' + theme],
-              moduleStyles.panelContainerHeaderItemText
+              moduleStyles.panelContainerHeaderItemCenter
             )}
             visualAppearance={'body-three'}
           >
-            {headerContent}
-          </Heading2>
-          {rightHeaderContent && (
-            <div
+            <span
               className={classNames(
-                'panelContainerHeaderItemRight',
-                moduleStyles.panelContainerHeaderItem,
-                moduleStyles.panelContainerHeaderItemRight
+                moduleStyles.panelContainerHeaderItemText,
+                moduleStyles[`panelContainerHeaderItemText${capitalizedTheme}`]
               )}
             >
-              {rightHeaderContent}
-            </div>
-          )}
+              {headerContent}
+            </span>
+          </Heading2>
+          <div
+            className={classNames(
+              'panelContainerHeaderItemRight',
+              moduleStyles.panelContainerHeaderItem,
+              moduleStyles.panelContainerHeaderItemRight
+            )}
+          >
+            {rightHeaderContent}
+          </div>
         </div>
       )}
       {children}

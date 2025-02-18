@@ -33,8 +33,8 @@ Feature: Curriculum Catalog Page
     And I see no difference for "Curriculum Catalog: All Offerings in Spanish"
 
     Then I click selector "#topic-dropdown-button"
-    And I wait until element "span:contains(Alfabetización digital)" is visible
-    Then I click selector "span:contains(Alfabetización digital)"
+    And I wait until element "span:contains(Alfabetización Digital)" is visible
+    Then I click selector "span:contains(Alfabetización Digital)"
     And I wait until element "h4:contains(Inteligencia Artificial para Océanos)" is not visible
     And I see no difference for "Curriculum Catalog: One Offering in Spanish"
 

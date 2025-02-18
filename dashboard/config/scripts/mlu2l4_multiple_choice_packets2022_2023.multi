@@ -1,14 +1,14 @@
 name 'MLU2L4 Multiple Choice packets2022_2023'
 title 'Defining and Calling Functions'
 description ''
-question 'A student shows you the code below and says their code is not working. What is the student\'s next step here?'
+question 'A student shows you the code below and says their code is not working. What is the issue?'
 
 
 
 wrong 'They did not put enough blocks in the chorus.'
 wrong 'They did not define the function.'
 wrong 'They did not name the function.'
-right 'They did not call the function in the main code.'
+right 'They did not call the function in the main code. The Chrous block should be connected to the When Run block.'
 allow_multiple_attempts true
 markdown <<MARKDOWN
 ![](https://images.code.org/bd49c730fe0853f7ab078e76a34adcb5-image-1738109086635.04.40 PM.png)
