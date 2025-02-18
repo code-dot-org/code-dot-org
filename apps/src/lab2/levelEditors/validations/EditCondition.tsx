@@ -87,8 +87,12 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
                     Sequence:
                   </label>
                   {JSON.parse(condition.value as string)['sequence'].map(
-                    (value: string) => {
-                      return <div>{value}</div>;
+                    (value: string | string[]) => {
+                      return Array.isArray(value) ? (
+                        <div>{value.join(', ')}</div>
+                      ) : (
+                        <div>{value}</div>
+                      );
                     }
                   )}
                 </div>

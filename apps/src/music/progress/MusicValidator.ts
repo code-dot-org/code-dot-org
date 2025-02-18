@@ -401,13 +401,23 @@ export default class MusicValidator extends Validator {
 
     let lastMeasure = 0;
     for (const step of value['sequence']) {
-      const foundEvent = playbackEvents.find(
-        event => event.id === step && event.when > lastMeasure
-      );
-      if (!foundEvent) {
-        return false;
+      const stepArray = !Array.isArray(step) ? [step] : step;
+
+      let currentMeasure = 0;
+      for (const sound of stepArray) {
+        const foundEvent = playbackEvents.find(
+          event =>
+            event.id === sound &&
+            ((!currentMeasure && event.when > lastMeasure) ||
+              (currentMeasure && event.when === currentMeasure))
+        );
+        if (foundEvent) {
+          currentMeasure = foundEvent.when;
+        } else {
+          return false;
+        }
       }
-      lastMeasure = foundEvent.when;
+      lastMeasure = currentMeasure;
     }
 
     return true;
