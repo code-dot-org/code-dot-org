@@ -143,6 +143,48 @@ const sections = [
     ],
   },
   {
+    id: 13,
+    location: '/v2/sections/13',
+    name: 'My Single-Unit Course Section',
+    courseVersionName: 'Single Unit Course 2026',
+    course_display_name: 'Single Unit Course',
+    login_type: 'picture',
+    participant_type: 'student',
+    grades: ['11'],
+    code: 'FPNZLN',
+    lesson_extras: false,
+    tts_autoplay_enabled: false,
+    pairing_allowed: true,
+    sharing_disabled: false,
+    course_offering_id: 10,
+    course_version_id: 14,
+    course: {
+      lesson_extras_available: true,
+      text_to_speech_enabled: false,
+      course_offering_id: 10,
+      unit_id: 18,
+      version_id: 14,
+    },
+    unitName: 'Single Unit 2026',
+    unit_id: 18,
+    isAssignedStandaloneCourse: false,
+    is_assigned_single_unit_course: true,
+    script: {id: 18, name: 'Single Unit 2026'},
+    createdAt: createdAt,
+    studentCount: 1,
+    hidden: false,
+    restrict_section: false,
+    post_milestone_disabled: false,
+    section_instructors: [
+      {
+        id: 2,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+    ],
+  },
+  {
     id: 307,
     location: '/v2/sections/307',
     name: 'My Third Section',
@@ -246,15 +288,21 @@ describe('teacherSectionsRedux', () => {
     it('adds an id for each section', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);
-      assert.deepEqual(nextState.sectionIds, [11, 12, 307]);
+      assert.deepEqual(nextState.sectionIds, [11, 12, 13, 307]);
     });
 
     it('groups our sections by id', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);
-      assert.deepEqual(Object.keys(nextState.sections), ['11', '12', '307']);
+      assert.deepEqual(Object.keys(nextState.sections), [
+        '11',
+        '12',
+        '13',
+        '307',
+      ]);
       assert.strictEqual(nextState.sections[11].id, 11);
       assert.strictEqual(nextState.sections[12].id, 12);
+      assert.strictEqual(nextState.sections[13].id, 13);
       assert.strictEqual(nextState.sections[307].id, 307);
     });
 
@@ -1732,6 +1780,10 @@ describe('teacherSectionsRedux', () => {
           name: 'My Third Section',
         },
         {
+          id: 13,
+          name: 'My Single-Unit Course Section',
+        },
+        {
           id: 12,
           name: 'My Other Section',
         },
@@ -1749,7 +1801,7 @@ describe('teacherSectionsRedux', () => {
       const sectionState = reducer(initialState, setSections(sections));
       const state = reducer(sectionState, setCourseOfferings(courseOfferings));
 
-      const data = getSectionRows({teacherSections: state}, [11, 12]);
+      const data = getSectionRows({teacherSections: state}, [11, 12, 13]);
       const expected = [
         {
           id: 11,
@@ -1767,6 +1819,7 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           assignmentNames: ['CS Discoveries 2017'],
           assignmentPaths: ['/courses/csd-2017'],
+          isAssignedSingleUnitCourse: undefined,
         },
         {
           id: 12,
@@ -1784,6 +1837,25 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           assignmentNames: ['Course A'],
           assignmentPaths: ['/s/coursea-2017'],
+          isAssignedSingleUnitCourse: undefined,
+        },
+        {
+          id: 13,
+          name: 'My Single-Unit Course Section',
+          courseVersionName: 'Single Unit Course 2026',
+          courseDisplayName: 'Single Unit Course',
+          loginType: 'picture',
+          loginTypeName: undefined,
+          studentCount: 1,
+          code: 'FPNZLN',
+          courseOfferingsAreLoaded: true,
+          grades: ['11'],
+          participantType: 'student',
+          providerManaged: false,
+          hidden: false,
+          assignmentNames: ['Single Unit Course 2026'],
+          assignmentPaths: ['/courses/single-unit-course-2026'],
+          isAssignedSingleUnitCourse: true,
         },
       ];
       assert.deepEqual(data, expected);

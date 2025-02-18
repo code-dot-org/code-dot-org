@@ -531,6 +531,9 @@ const EVENTS = {
 
   // Sign in callout on CSF and CSC levels
   LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
+
+  // Lab2
+  LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
 };
 
 const EVENT_GROUP_NAMES = {

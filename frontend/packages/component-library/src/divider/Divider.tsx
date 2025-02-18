@@ -35,8 +35,8 @@ const Divider: React.FC<DividerProps> = ({
   <hr
     className={classNames(
       moduleStyles.divider,
-      moduleStyles[`divider-${color}`],
-      moduleStyles[`divider-${margin}`],
+      moduleStyles[`divider-color-${color}`],
+      moduleStyles[`divider-margin-${margin}`],
       className,
     )}
   />

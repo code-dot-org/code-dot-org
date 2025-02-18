@@ -42,3 +42,17 @@ export enum Visibility {
   READONLY = 'readonly',
   EDITABLE = 'editable',
 }
+
+export type AichatContext = {
+  currentLevelId: number | null;
+  scriptId: number | null;
+  channelId: string | undefined;
+};
+
+export enum ViewMode {
+  EDIT = 'edit-mode',
+  PRESENTATION = 'presentation-mode',
+}
+
+// The type of save action being performed (customization update, publish, model card save, etc).
+export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';

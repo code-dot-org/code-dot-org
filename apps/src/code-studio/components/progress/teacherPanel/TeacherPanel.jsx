@@ -201,7 +201,10 @@ class TeacherPanel extends React.Component {
       hasSections && unitHasLockableLessons && viewAs === ViewType.Instructor;
 
     return (
-      <TeacherPanelContainer logToFirehose={this.logToFirehose}>
+      <TeacherPanelContainer
+        className={moduleStyles.teacherPanelContainer}
+        logToFirehose={this.logToFirehose}
+      >
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle
