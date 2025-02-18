@@ -221,17 +221,17 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       {experiments.isEnabled('ai-differentiation') && (
         <AiDiffFloatingActionButton
           context={
-            selectedSection.courseId || selectedSection.unitId
+            selectedSection?.courseId || selectedSection?.unitId
               ? AiDiffContext.COURSE
               : AiDiffContext.GENERAL
           }
           scriptId={
-            selectedSection.courseId
-              ? selectedSection.courseId
-              : selectedSection.unitId
+            selectedSection?.courseId
+              ? selectedSection?.courseId
+              : selectedSection?.unitId
           }
-          scriptName={selectedSection.courseVersionName}
-          unitDisplayName={selectedSection.courseDisplayName}
+          scriptName={selectedSection?.courseVersionName}
+          unitDisplayName={selectedSection?.courseDisplayName}
         />
       )}
     </nav>
