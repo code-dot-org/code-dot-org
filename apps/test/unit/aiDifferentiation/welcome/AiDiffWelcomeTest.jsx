@@ -73,32 +73,43 @@ describe('AiDiffWelcome', () => {
     );
 
     fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
+    console.log('lfm1');
     fireEvent.click(screen.getByRole('button', {name: 'Plan'}));
+    console.log('lfm2');
     fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+    console.log('lfm3');
 
     expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
+    console.log('lfm4');
 
     const input = screen.getByRole('textbox');
     fireEvent.change(input, {target: {value: 'Test'}});
     fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
 
+    console.log('lfm5');
     await waitFor(
       () =>
         expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled(),
       {timeout: 100}
     );
+    console.log('lfm6');
     fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+    console.log('lfm7');
 
     screen.getByText('You’re on your way to becoming an AI all-star!');
 
     screen.getByText('Continue your learning journey');
+    console.log('lfm8');
 
     fireEvent.click(screen.getByRole('button', {name: 'Finish'}));
+    console.log('lfm9');
 
     await waitFor(
       () => expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false),
       {timeout: 100}
     );
+    console.log('lfm10');
+    return;
   });
 
   test('End page buttons work correctly', async () => {
@@ -129,6 +140,7 @@ describe('AiDiffWelcome', () => {
       screen.getByRole('button', {name: 'Practice another skill'})
     );
     screen.getByText('Pick a skill to practice');
+    return;
   });
 
   test('Back button works correctly', () => {
