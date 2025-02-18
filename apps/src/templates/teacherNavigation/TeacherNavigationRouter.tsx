@@ -105,17 +105,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     sectionProviderName(state, state.teacherSections.selectedSectionId)
   );
 
-  useEffect(() => {
-    if (
-      window.location.pathname.includes('ai_tutor') &&
-      !selectedSection.courseVersionName.includes('csa')
-    ) {
-      window.location.replace(
-        `/teacher_dashboard/sections/${selectedSection.id}/progress`
-      );
-    }
-  }, [selectedSection]);
-
   const routes = React.useMemo(
     () => (
       <Route path="/">
@@ -316,13 +305,20 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             <Route
               path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
               element={
-                <ElementOrEmptyPage
-                  showNoStudents={studentCount === 0}
-                  showNoCurriculumAssigned={false}
-                  element={applyV1TeacherDashboardWidth(
-                    <TutorTab sectionId={sectionId || 0} />
-                  )}
-                />
+                showAITutorTab ? (
+                  <ElementOrEmptyPage
+                    showNoStudents={studentCount === 0}
+                    showNoCurriculumAssigned={false}
+                    element={applyV1TeacherDashboardWidth(
+                      <TutorTab sectionId={sectionId || 0} />
+                    )}
+                  />
+                ) : (
+                  <Navigate
+                    to={TEACHER_NAVIGATION_PATHS.progress}
+                    replace={true}
+                  />
+                )
               }
             />
           </Route>
