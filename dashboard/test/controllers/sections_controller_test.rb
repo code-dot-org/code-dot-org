@@ -58,7 +58,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "valid log_in wih picture" do
+  test "valid log_in with picture" do
     assert_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are updated
       post :log_in, params: {
         id: @picture_section.code,
@@ -70,7 +70,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
-  test "invalid log_in wih picture" do
+  test "invalid log_in with picture" do
     assert_no_difference '@picture_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
       post :log_in, params: {
         id: @picture_section.code,
@@ -98,7 +98,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to section_path(id: @picture_section.code)
   end
 
-  test "valid log_in wih word" do
+  test "valid log_in with word" do
     assert_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are updated
       post :log_in, params: {
         id: @word_section.code,
@@ -110,7 +110,19 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to '/'
   end
 
-  test "invalid log_in wih word" do
+  test "valid log_in with word without spaces" do
+    assert_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are updated
+      post :log_in, params: {
+        id: @word_section.code,
+        user_id: @word_user_1.id,
+        secret_words: @word_user_1.secret_words.delete(' ')
+      }
+    end
+
+    assert_redirected_to '/'
+  end
+
+  test "invalid log_in with word" do
     assert_no_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are not updated
       post :log_in, params: {
         id: @word_section.code,

@@ -5,6 +5,7 @@ import {throttle} from 'lodash';
 import React, {useCallback, useEffect, useMemo} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
+import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
 import ResizeBar, {
   RESIZE_BAR_SIZE_PX,
 } from '@cdo/apps/lab2/views/components/ResizeBar';
@@ -41,6 +42,11 @@ const HorizontalLayout: React.FunctionComponent = () => {
     axis: 'x',
     initial: INITIAL_INFO_PANEL_WIDTH,
     min: MIN_LEFT_PANEL_WIDTH,
+    onResizeStart: () =>
+      logOnResize('pythonlab', {
+        layout: 'horizontal',
+        resizeBar: 'instructions',
+      }),
   });
   const {
     position: rawOutputHeight,
@@ -51,6 +57,8 @@ const HorizontalLayout: React.FunctionComponent = () => {
     initial: INITIAL_OUTPUT_HEIGHT,
     min: MIN_OUTPUT_HEIGHT,
     reverse: true,
+    onResizeStart: () =>
+      logOnResize('pythonlab', {layout: 'horizontal', resizeBar: 'console'}),
   });
 
   const adjustRightPanelWidth = useCallback(() => {

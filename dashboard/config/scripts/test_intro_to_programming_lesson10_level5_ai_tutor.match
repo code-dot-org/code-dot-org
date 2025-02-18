@@ -1,18 +1,18 @@
 name 'test-intro-to-programming-lesson10-level5-ai-tutor'
 title 'Check for Understanding'
-description 'Match each condition with what it is checking for.'
-height '50'
+description 'Olivia is writing a program with conditionals. Match each condition with when Olivia would use it.'
+height '75'
 
 question '`painter.is_on_bucket()`'
-answer 'The painter is standing on a bucket.'
+answer 'Olivia needs the Painter to collect all the paint.'
 question '`painter.can_move(\'south\')`'
-answer 'The painter could move south without hitting an obstacle.'
+answer 'The Painter is moving east and Olivia wants to check if there are any obstacles to the Painter\'s right.'
 question '`painter.is_facing_east()`'
-answer 'The painter is facing toward the right on the screen.'
+answer 'Olivia want the Painter to move if it is facing toward the right on the screen.'
 question '`painter.is_on_paint()`'
-answer 'The painter is standing on a painted square.'
+answer 'Olivia wants the Painter to scrape up paint.'
 question '`painter.can_move()`'
-answer 'The painter can move forward in the direction it is currently facing.'
+answer 'Olivia wants the Painter to move forward in the direction it is currently facing if there\'s no obstacle.'
 
 
 
