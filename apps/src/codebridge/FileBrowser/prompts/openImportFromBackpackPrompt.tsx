@@ -28,58 +28,65 @@ export const openImportFromBackpackPrompt = async ({
 }: OpenImportFromBackpackPromptArgsType) => {
   backpackApi.getFileList(
     () => {
-      console.log('onError');
+      console.log('Error in getting backpack file list.');
     },
     async (filenames: string[]) => {
-      console.log('filenames', filenames);
-      const savedFilesInBackpack: GenericDropdownProps['items'] = filenames.map(
-        filename => ({value: filename, text: filename})
-      );
-      const results = await dialogControl?.showDialog({
-        type: DialogType.GenericDropdown,
-        title: 'Files Saved in Backpack',
-        dropdownLabel: '',
-        confirmText: 'Import',
-        items: savedFilesInBackpack,
-        selectedValue: savedFilesInBackpack[0].value,
-        neutralText: 'Delete file from backpack',
-        validateInput: (fileName: string) =>
-          validateFileName({
-            fileName,
-            folderId: DEFAULT_FOLDER_ID,
-            projectFiles,
-            isStartMode: false,
-            validationFile,
-            customErrorMessage:
-              'This backpack file has the same name as an existing file in the root folder of your project and will overwrite the existing file if you import.',
-          }),
-      });
+      if (filenames.length === 0) {
+        dialogControl?.showDialog({
+          type: DialogType.GenericAlert,
+          title: 'Files Saved in Backpack',
+          message: 'Files saved to your backpack will appear here.',
+        });
+      } else {
+        const savedFilesInBackpack: GenericDropdownProps['items'] =
+          filenames.map(filename => ({value: filename, text: filename}));
+        const results = await dialogControl?.showDialog({
+          type: DialogType.GenericDropdown,
+          title: 'Files Saved in Backpack',
+          dropdownLabel: '',
+          confirmText: 'Import',
+          items: savedFilesInBackpack,
+          selectedValue: savedFilesInBackpack[0].value,
+          neutralText: 'Delete file from backpack',
+          validateInput: (fileName: string) =>
+            validateFileName({
+              fileName,
+              folderId: DEFAULT_FOLDER_ID,
+              projectFiles,
+              isStartMode: false,
+              validationFile,
+              customErrorMessage:
+                'This backpack file has the same name as an existing file in the root folder of your project and will overwrite the existing file if you import.',
+            }),
+        });
 
-      if (results.type === 'cancel') {
-        return;
-      }
-      const selectedBackpackFileName = extractUserInput(results, true);
-      if (results.type === 'confirm') {
-        backpackApi.fetchFile(
-          selectedBackpackFileName,
-          () => {
-            console.log('fetchFile - onError');
-          },
-          (fileContent: string) => {
-            console.log('fileContent', fileContent);
-            newFile({
-              fileName: selectedBackpackFileName,
-              contents: fileContent,
-            });
-          }
-        );
-      } else if (results.type === 'neutral') {
-        console.log('delete file from backpack');
-        backpackApi.deleteFiles(
-          [selectedBackpackFileName],
-          () => console.log('deleteFiles - onError'),
-          () => console.log(`deleted file ${selectedBackpackFileName}`)
-        );
+        if (results.type === 'cancel') {
+          return;
+        }
+        const selectedBackpackFileName = extractUserInput(results, true);
+        if (results.type === 'confirm') {
+          backpackApi.fetchFile(
+            selectedBackpackFileName,
+            () => {
+              console.log('fetchFile - onError');
+            },
+            (fileContent: string) => {
+              console.log('fileContent', fileContent);
+              newFile({
+                fileName: selectedBackpackFileName,
+                contents: fileContent,
+              });
+            }
+          );
+        } else if (results.type === 'neutral') {
+          console.log('delete file from backpack');
+          backpackApi.deleteFiles(
+            [selectedBackpackFileName],
+            () =>
+              console.log(`Error in deleting file ${selectedBackpackFileName}`),
+            () => console.log(`Deleted file ${selectedBackpackFileName}`)
+          );
+        }
       }
     }
   );
