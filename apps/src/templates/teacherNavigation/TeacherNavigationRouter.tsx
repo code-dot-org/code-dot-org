@@ -105,6 +105,17 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     sectionProviderName(state, state.teacherSections.selectedSectionId)
   );
 
+  useEffect(() => {
+    if (
+      window.location.pathname.includes('ai_tutor') &&
+      !selectedSection.courseVersionName.includes('csa')
+    ) {
+      window.location.replace(
+        `/teacher_dashboard/sections/${selectedSection.id}/progress`
+      );
+    }
+  }, [selectedSection]);
+
   const routes = React.useMemo(
     () => (
       <Route path="/">
@@ -307,7 +318,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               element={
                 <ElementOrEmptyPage
                   showNoStudents={studentCount === 0}
-                  showNoCurriculumAssigned={!anyStudentHasProgress}
+                  showNoCurriculumAssigned={false}
                   element={applyV1TeacherDashboardWidth(
                     <TutorTab sectionId={sectionId || 0} />
                   )}

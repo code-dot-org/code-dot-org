@@ -76,14 +76,6 @@ const TeacherNavigationBar: React.FC<{
 
   const performanceSectionTitle = getSectionHeader(i18n.performance());
 
-  if (
-    window.location.pathname.includes('ai_tutor') &&
-    !selectedSection.courseVersionName.includes('csa')
-  ) {
-    window.location.replace(
-      `/teacher_dashboard/sections/${selectedSection.id}/progress`
-    );
-  }
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
     showAITutorTab && selectedSection?.courseVersionName?.includes('csa')
       ? [
