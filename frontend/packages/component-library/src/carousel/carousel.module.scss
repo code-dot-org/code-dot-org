@@ -24,62 +24,70 @@
 }
 
 // Navigation button styles
-.swiperNavPrev,
-.swiperNavNext {
-  position: absolute;
-  cursor: pointer;
-  border: none;
-  border-radius: 100%;
-  background: var(--background-neutral-tertiary);
-  min-width: 3rem;
-  height: 3rem;
-  @include transition-all;
+.navArrowWrapper {
+  // Hide arrows when screen size is <1024px
+  @media (max-width: 1024px) {
+    display: none;
+  }
 
-  // Arrow styles
-  & > i {
-    font-size: 1.5rem;
-    color: var(--text-neutral-tertiary);
+  .swiperNavPrev,
+  .swiperNavNext {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    background: var(--background-neutral-tertiary);
+    min-width: 3rem;
+    height: 3rem;
     @include transition-all;
-  }
 
-  // Hover styles
-  &:hover {
-    background: var(--background-neutral-quaternary);
-
+    // Arrow styles
     & > i {
-      color: var(--text-neutral-primary);
+      font-size: 1.5rem;
+      color: var(--text-neutral-tertiary);
+      @include transition-all;
+    }
+
+    // Hover styles
+    &:hover {
+      background: var(--background-neutral-quaternary);
+
+      & > i {
+        color: var(--text-neutral-primary);
+      }
+    }
+
+    // Focus styles
+    &:focus {
+      @include focus-styles;
+    }
+
+    // Hide focus outline on mouse click
+    &:focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    // Disabled styles
+    &:disabled {
+      background: var(--background-neutral-secondary);
+      cursor: not-allowed;
+
+      & > i {
+        color: var(--text-neutral-disabled);
+      }
     }
   }
 
-  // Focus styles
-  &:focus {
-    @include focus-styles;
+  // Move navigation buttons
+  // outside of the container
+  .swiperNavPrev {
+    left: -4rem;
   }
 
-  // Hide focus outline on mouse click
-  &:focus:not(:focus-visible) {
-    outline: none;
+  .swiperNavNext {
+    right: -4rem;
   }
-
-  // Disabled styles
-  &:disabled {
-    background: var(--background-neutral-secondary);
-    cursor: not-allowed;
-
-    & > i {
-      color: var(--text-neutral-disabled);
-    }
-  }
-}
-
-// Move navigation buttons
-// outside of the container
-.swiperNavPrev {
-  left: -4rem;
-}
-
-.swiperNavNext {
-  right: -4rem;
 }
 
 // Pagination styles
@@ -91,8 +99,10 @@
     @include transition-all;
 
     // Hover styles
-    &:hover {
-      background: var(--background-neutral-quaternary);
+    @media (min-width: 1024px) {
+      &:hover {
+        background: var(--background-neutral-quaternary);
+      }
     }
 
     // Focus styles
@@ -120,7 +130,7 @@
   &:has(figcaption) {
     .swiperNavPrev,
     .swiperNavNext {
-      margin-top: -1.875rem;
+      top: 34%;
     }
   }
 }
