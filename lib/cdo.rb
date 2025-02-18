@@ -34,10 +34,16 @@ module Cdo
         "#{root}/config.yml.erb"
       )
 
-      defaults = render("#{root}/config.yml.erb").first
-      to_h.each_key do |key|
-        raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
+      configured_properties = to_h.keys.map(&:to_sym)
+      default_properties = render("#{root}/config.yml.erb").first.keys
+      unknown_properties = configured_properties - default_properties
+      unless unknown_properties.empty?
+        raise <<~ERROR
+          Property or properties "#{unknown_properties.join(', ')}" defined in the environment without a default specified in `config.yml.erb`.
+          Likely this is a former configuration value which has been removed from `config.yml.erb` but still exists in your `locals.yml`.
+        ERROR
       end
+
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
       freeze_config
     end
@@ -51,7 +57,10 @@ module Cdo
     end
 
     def i18n_backend
-      CDO_I18N_BACKEND
+      @i18n_backend ||=
+        # Because loading i18n files is super-slow, lazy load them in development.
+        # To load all locales for testing, add "lazy_load_i18n: false" to +locals.yml+ config
+        CDO.lazy_load_i18n ? Cdo::I18n::LazyLoadableBackend.new(lazy_load: true) : Cdo::I18n::SimpleBackend.new
     end
 
     def canonical_hostname(domain)
@@ -115,17 +124,22 @@ module Cdo
       site_host('code.org')
     end
 
-    def site_url(domain, path = '', scheme = '')
+    def site_url(domain, path = '', scheme = '', ge_region: nil)
       path = '/' + path unless path.empty? || path[0] == '/'
+
+      if ge_region && Cdo::GlobalEdition.target_host?(canonical_hostname(domain))
+        path = Cdo::GlobalEdition.path(ge_region, path)
+      end
+
       "#{scheme}//#{site_host(domain)}#{path}"
     end
 
     def studio_url(path = '', scheme = '', ge_region: nil)
-      site_url('studio.code.org', path, scheme)
+      site_url('studio.code.org', path, scheme, ge_region: ge_region)
     end
 
     def code_org_url(path = '', scheme = '', ge_region: nil)
-      site_url('code.org', path, scheme)
+      site_url('code.org', path, scheme, ge_region: ge_region)
     end
 
     def hourofcode_url(path = '', scheme = '', locale: nil)

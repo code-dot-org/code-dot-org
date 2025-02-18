@@ -1,12 +1,11 @@
+import {
+  CheckboxDropdown,
+  CheckboxDropdownProps,
+} from '@code-dot-org/component-library/dropdown';
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React, {useState} from 'react';
 import '@testing-library/jest-dom';
-
-import {
-  CheckboxDropdown,
-  CheckboxDropdownProps,
-} from '@cdo/apps/componentLibrary/dropdown';
 
 const allOptions = [
   {value: 'option-1', label: 'option1'},

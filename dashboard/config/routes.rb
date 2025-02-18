@@ -10,7 +10,9 @@ Dashboard::Application.routes.draw do
   # Redirect old sign up flow to new sign up flow
   get "/users/sign_up", to: redirect("/users/new_sign_up/account_type")
 
-  # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
+  # Redirect studio.code.org/sections/teacher_dashboard/first_section/*location to the teacher's most recent section
+  # on teacher dashboard, where *location is one of the following: courses, calendar, progress, or materials.
+  get '/teacher_dashboard/sections/first_section/*location', to: "teacher_dashboard#redirect_to_newest_section"
   get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section_progress"
 
   # Redirect enable and disable experiments to most recent section
@@ -26,6 +28,7 @@ Dashboard::Application.routes.draw do
   constraints host: /^(?!#{CDO.codeprojects_hostname})/ do
     # React-router will handle sub-routes on the client.
     resource :teacher_dashboard, only: [] do
+      get :home, controller: :teacher_dashboard, action: :show
       resources :sections, only: %i[show], param: :section_id, controller: :teacher_dashboard do
         member do
           get :parent_letter
@@ -82,7 +85,8 @@ Dashboard::Application.routes.draw do
 
     resources :images, only: [:new]
 
-    get "/ai_tutor/tester", to: "ai_tutor#tester"
+    get "/ai_iteration/tools", to: "ai_iteration#tools"
+    get "/student_code_sample/:num_samples/:script_id/:level_id", to: "student_code_sample#fetch_student_code_samples"
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
@@ -227,6 +231,7 @@ Dashboard::Application.routes.draw do
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
       get '/lockout', to: 'sessions#lockout'
+      delete '/expire_other', to: 'sessions#expire_other'
       get '/users/existing_account', to: 'registrations#existing_account'
       get '/users/edit', to: 'registrations#edit'
     end
@@ -388,6 +393,60 @@ Dashboard::Application.routes.draw do
     # these routes use course_course_name to match generated routes below that are nested within courses
     get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all', as: :edit_all_reference_guides
 
+    # Repeated routes to support Unit routes in both /s/ and /courses/xxx/unit/y
+    unit_routes = lambda do
+      get 'reset', to: 'script_levels#reset'
+      get 'next', to: 'script_levels#next'
+      get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
+      post 'toggle_hidden', to: 'script_levels#toggle_hidden'
+
+      member do
+        get 'vocab'
+        get 'resources'
+        get 'code'
+        get 'standards'
+        get 'instructions'
+        get 'get_rollup_resources'
+      end
+
+      resources :lessons, only: [:show], param: 'position', format: false do
+        get 'student', to: 'lessons#student_lesson_plan'
+        get 'extras', to: 'script_levels#lesson_extras', format: false
+        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
+        get 'edit', to: 'lessons#edit_with_lesson_position'
+
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          member do
+            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+            get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # Get the level's properties via JSON.
+            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
+          end
+        end
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          # This route is defined in a separate resources, below the one above,
+          # because of how our assert_routing tests and Rails routing
+          # precedence work with multiple routes that point to the same action,
+          # with only a static path (no dynamic parts like 'path/:id').
+          get 'summary', on: :member, to: 'script_levels#show', as: 'summary', format: false, defaults: {view: 'summary'}
+        end
+      end
+
+      resources :lockable_lessons, only: [], path: "/lockable", param: 'position', format: false do
+        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          member do
+            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+          end
+        end
+      end
+
+      get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+      post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
+
+      get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
+    end
+
     resources :courses, param: 'course_name' do
       member do
         get 'vocab'
@@ -398,6 +457,8 @@ Dashboard::Application.routes.draw do
       end
 
       resources :reference_guides, param: 'key', path: 'guides'
+
+      resources :units, controller: 'scripts', param: 'position', &unit_routes
     end
 
     resources :potential_teachers, only: [:create]
@@ -488,67 +549,7 @@ Dashboard::Application.routes.draw do
     get '/s/:script_name/lockable/:position/puzzle', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels')
     get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels/%{all}')
 
-    resources :scripts, path: '/s/' do
-      # /s/xxx/reset
-      get 'reset', to: 'script_levels#reset'
-      get 'next', to: 'script_levels#next'
-      get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
-      post 'toggle_hidden', to: 'script_levels#toggle_hidden'
-
-      member do
-        get 'vocab'
-        get 'resources'
-        get 'code'
-        get 'standards'
-        get 'instructions'
-        get 'get_rollup_resources'
-      end
-
-      # /s/xxx/lessons/yyy
-      resources :lessons, only: [:show], param: 'position', format: false do
-        get 'student', to: 'lessons#student_lesson_plan'
-        get 'extras', to: 'script_levels#lesson_extras', format: false
-        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-        get 'edit', to: 'lessons#edit_with_lesson_position'
-
-        # /s/xxx/lessons/yyy/levels/zzz
-        resources :script_levels, only: [:show], path: "/levels", format: false do
-          member do
-            # /s/xxx/lessons/yyy/levels/zzz/page/ppp
-            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
-            # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
-            get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
-            # Get the level's properties via JSON.
-            # /s/xxx/lessons/yyy/levels/zzz/level_properties
-            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
-          end
-        end
-        resources :script_levels, only: [:show], path: "/levels", format: false do
-          # This route is defined in a separate resources, below the one above,
-          # because of how our assert_routing tests and Rails routing
-          # precedence work with multiple routes that point to the same action,
-          # with only a static path (no dynamic parts like 'path/:id').
-          # /s/xxx/lessons/yyy/levels/zzz/summary
-          get 'summary', on: :member, to: 'script_levels#show', as: 'summary', format: false, defaults: {view: 'summary'}
-        end
-      end
-
-      # /s/xxx/lockable/yyy/levels/zzz
-      resources :lockable_lessons, only: [], path: "/lockable", param: 'position', format: false do
-        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-        resources :script_levels, only: [:show], path: "/levels", format: false do
-          member do
-            # /s/xxx/lockable/yyy/levels/zzz/page/ppp
-            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
-          end
-        end
-      end
-
-      get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
-      post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
-
-      get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
-    end
+    resources :scripts, path: '/s/', &unit_routes
 
     get '/certificate_images/:filename', to: 'certificate_images#show'
 
@@ -975,6 +976,7 @@ Dashboard::Application.routes.draw do
         post 'users/has_seen_ai_assessments_announcement', to: 'users#post_has_seen_ai_assessments_announcement'
         post 'users/disable_lti_roster_sync', to: 'users#post_disable_lti_roster_sync'
         post 'users/:user_id/ai_tutor_access', to: 'users#update_ai_tutor_access'
+        post 'users/has_completed_ai_differentiation_welcome', to: 'users#post_has_completed_ai_differentiation_welcome'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
@@ -1180,7 +1182,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    get '/backpacks/channel', to: 'backpacks#get_channel'
+    get '/backpacks/channel/:app_type', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
@@ -1202,9 +1204,10 @@ Dashboard::Application.routes.draw do
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 
-    post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
-    post '/aichat/submit_teacher_feedback', to: 'aichat#submit_teacher_feedback'
-    get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
+    post '/aichat_events/log_chat_event', to: 'aichat_events#log_chat_event'
+    post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
+    get '/aichat_events/student_chat_history', to: 'aichat_events#student_chat_history'
+
     get '/aichat/user_has_access', to: 'aichat#user_has_access'
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 

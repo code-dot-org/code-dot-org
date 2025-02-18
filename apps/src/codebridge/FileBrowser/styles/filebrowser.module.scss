@@ -4,11 +4,17 @@
   height: 100%;
   background-color: $light_gray_950;
   color: $white;
+  overflow: hidden;
 }
 
 .fileBrowserHeader {
-  background-color: $light_gray_950;
+  background-color: $light_gray_950 !important;
   border-bottom: 1px solid #54595E;
+}
+
+.fileBrowserContents {
+  overflow-y: auto;
+  scrollbar-color: $light_gray_500 $light_gray_950;
 }
 
 .file-browser ul {

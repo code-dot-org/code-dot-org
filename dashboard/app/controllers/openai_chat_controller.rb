@@ -1,6 +1,8 @@
 class OpenaiChatController < ApplicationController
-  include OpenaiChatHelper
   authorize_resource class: false
+
+  API_KEY = CDO.openai_student_learning_api_key
+  MODEL = SharedConstants::AI_TUTOR_CHAT_MODEL_VERSION
 
   # POST /openai/chat_completion
   def chat_completion
@@ -24,8 +26,11 @@ class OpenaiChatController < ApplicationController
 
     messages = prepend_system_prompt(system_prompt, params[:messages])
 
-    response = OpenaiChatHelper.request_chat_completion(messages)
-    chat_completion_return_message = OpenaiChatHelper.get_chat_completion_response_message(response)
+    response = client.request_chat_completion(messages)
+    response_body = JSON.parse(response.body)
+    response_body = response_body['choices'][0]['message'] if response.code == 200
+    chat_completion_return_message =  {status: response.code, json: response_body}
+
     # We currently allow PII flagged content through to OpenAI because false positives were impacting user experience.
     # We send the flagged content along in the request so we can log it for analysis.
     chat_completion_return_message[:json][:safety_status] = filter_result.type if filter_result
@@ -35,6 +40,10 @@ class OpenaiChatController < ApplicationController
 
   def has_required_messages_param?
     params[:messages].present?
+  end
+
+  private def client
+    OpenaiChatHelper::Client.new(API_KEY, MODEL)
   end
 
   private def prepend_system_prompt(system_prompt, messages)

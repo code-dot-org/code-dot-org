@@ -1,9 +1,9 @@
-import React from 'react';
-
 import {
   SimpleDropdown,
   SimpleDropdownProps,
-} from '@cdo/apps/componentLibrary/dropdown';
+} from '@code-dot-org/component-library/dropdown';
+import React from 'react';
+
 import currentLocale from '@cdo/apps/util/currentLocale';
 
 import './style.scss';

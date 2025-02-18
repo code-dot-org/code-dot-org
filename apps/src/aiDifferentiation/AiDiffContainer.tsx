@@ -5,37 +5,51 @@ import Draggable, {DraggableEventHandler} from 'react-draggable';
 import Button from '@cdo/apps/componentLibrary/button';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
+import {useAppSelector} from '../util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '../utils';
 
 import AiDiffChat from './AiDiffChat';
+import AiDiffWelcome from './welcome/AiDiffWelcome';
 
 import style from './ai-differentiation.module.scss';
 
 const AI_DIFF_POSITION_X = 'aiDiffPositionX';
 const AI_DIFF_POSITION_Y = 'aiDiffPositionY';
 
+// TODO: Update to support i18n
 const AI_DIFF_HEADER_TEXT = 'AI Teaching Assistant';
 
 interface AiDiffContainerProps {
   closeTutor?: () => void;
+  context: string;
   open: boolean;
-  lessonId: number;
-  lessonName: string;
+  scriptId: number;
+  scriptName: string;
   unitDisplayName: string;
+  disableWelcome?: boolean;
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
+  context,
   open,
-  lessonId,
-  lessonName,
+  scriptId,
+  scriptName,
   unitDisplayName,
+  // TODO(lfm): remove this when welcome is ready to be shown.
+  disableWelcome = true,
 }) => {
+  const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
+
   const [positionX, setPositionX] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_X, 0)) || 0
   );
   const [positionY, setPositionY] = useState(
     parseInt(tryGetSessionStorage(AI_DIFF_POSITION_Y, 0)) || 0
+  );
+
+  const hasCompletedAiDifferentiationWelcome = useAppSelector(
+    state => state.currentUser.hasCompletedAiDifferentiationWelcome
   );
 
   useEffect(() => {
@@ -91,12 +105,27 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             />
           </div>
         </div>
-        <AiDiffChat
-          closeTutor={closeTutor}
-          lessonId={lessonId}
-          lessonName={lessonName}
-          unitDisplayName={unitDisplayName}
-        />
+
+        <div className={style.fabBackground}>
+          {!disableWelcome &&
+          !hasCompletedAiDifferentiationWelcome &&
+          showWelcomeExperience ? (
+            <AiDiffWelcome
+              setShowWelcomeExperience={setShowWelcomeExperience}
+              context={context}
+              scriptId={scriptId}
+              scriptName={scriptName}
+              unitDisplayName={unitDisplayName}
+            />
+          ) : (
+            <AiDiffChat
+              context={context}
+              scriptId={scriptId}
+              scriptName={scriptName}
+              unitDisplayName={unitDisplayName}
+            />
+          )}
+        </div>
       </div>
     </Draggable>
   );

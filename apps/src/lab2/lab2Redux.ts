@@ -80,6 +80,8 @@ export interface LabState {
   validationState: ValidationState;
   // Level properties for the current level.
   levelProperties: LevelProperties | undefined;
+  // Script id for the current level.
+  scriptId: number | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
   // If this lab is blocked because abuse score >= 15.
@@ -96,6 +98,7 @@ const initialState: LabState = {
   initialSources: undefined,
   validationState: getInitialValidationState(),
   levelProperties: undefined,
+  scriptId: undefined,
   isShareView: undefined,
   isBlocked: undefined,
   overrideValidations: undefined,
@@ -141,6 +144,8 @@ export const setUpWithLevel = createAsyncThunk<
     const levelProperties = await loadLevelProperties(
       payload.levelPropertiesPath
     );
+
+    thunkAPI.dispatch(setScriptId(payload.scriptId));
 
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -316,13 +321,15 @@ export const isLabLoading = (state: {lab: LabState}) =>
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
-  const isEditingExemplarMode = getAppOptionsEditingExemplar();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isViewingExemplar = getAppOptionsViewingExemplar();
 
   // Exemplar and block edit modes do not have a channel.
-  if (isEditMode || isEditingExemplarMode) {
+  if (isEditMode || isEditingExemplar) {
     return false;
+  } else if (isViewingExemplar) {
+    return true;
   }
-
   // Otherwise, we are in read only mode if we are not the owner of the channel,
   // the level is frozen, the level is a read only predict level, the level has been submitted.
   // or this is a lab that should be read only while running and the code is currently running.
@@ -384,6 +391,9 @@ const labSlice = createSlice({
     },
     setChannel(state, action: PayloadAction<Channel | undefined>) {
       state.channel = action.payload;
+    },
+    setScriptId(state, action: PayloadAction<number | undefined>) {
+      state.scriptId = action.payload;
     },
     setValidationState(state, action: PayloadAction<ValidationState>) {
       state.validationState = {...action.payload};
@@ -636,6 +646,7 @@ export const {
   setValidationState,
   setIsShareView,
   setOverrideValidations,
+  setScriptId,
   onLevelChange,
   setPermissions,
 } = labSlice.actions;

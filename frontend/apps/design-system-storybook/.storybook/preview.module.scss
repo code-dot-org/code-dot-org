@@ -1,1 +1,11 @@
 @import '@code-dot-org/component-library-styles/font-awesome.scss';
+@import '@code-dot-org/component-library-styles/font.scss';
+
+// Figtree, Noto, and Noto Fallbacks
+@import 'https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans+Arabic:wght@100..900&family=Noto+Sans+Armenian:wght@100..900&family=Noto+Sans+Bengali:wght@100..900&family=Noto+Sans+Devanagari:wght@100..900&family=Noto+Sans+Georgian:wght@100..900&family=Noto+Sans+Hebrew:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+Kannada:wght@100..900&family=Noto+Sans+Khmer:wght@100..900&family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+Sinhala:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans+Tamil:wght@100..900&family=Noto+Sans+Telugu:wght@100..900&family=Noto+Sans+Thaana:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=block';
+
+// Force Barlow to load in Storybook's manager (font faces do not load in preview)
+html {
+  font-family: 'Barlow Semi Condensed Semibold', 'Barlow Semi Condensed Medium',
+    sans-serif;
+}

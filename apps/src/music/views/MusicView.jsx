@@ -16,7 +16,11 @@ import {
   setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {setExtraCopyrightContent} from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
@@ -55,6 +59,8 @@ import {
   setShowInstructions,
   setInstructionsPosition,
   addPlaybackEvents,
+  setLastMeasure,
+  updateLastMeasure,
   addOrderedFunctions,
   clearPlaybackEvents,
   clearOrderedFunctions,
@@ -109,6 +115,8 @@ class UnconnectedMusicView extends React.Component {
     clearPlaybackEvents: PropTypes.func,
     clearOrderedFunctions: PropTypes.func,
     addPlaybackEvents: PropTypes.func,
+    setLastMeasure: PropTypes.func,
+    updateLastMeasure: PropTypes.func,
     addOrderedFunctions: PropTypes.func,
     currentlyPlayingBlockIds: PropTypes.array,
     setIsLoading: PropTypes.func,
@@ -283,6 +291,8 @@ class UnconnectedMusicView extends React.Component {
     // In start mode, we always show the full toolbox for the given block mode.
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+    const isEditingExemplar = getAppOptionsEditingExemplar();
+    const isViewingExemplar = getAppOptionsViewingExemplar();
 
     // Music Lab supports two types of toolbox configuration in levels:
     // The toolbox property is a simple list of block types and categories.
@@ -341,6 +351,8 @@ class UnconnectedMusicView extends React.Component {
         levelToolbox,
         levelToolboxDefinition
       );
+    } else if (isEditingExemplar || isViewingExemplar) {
+      this.loadCode(this.getExemplarSources() || this.getStartSources());
     } else if (this.getStartSources() || initialSources) {
       const startSources = this.getStartSources();
       let codeToLoad = startSources;
@@ -506,6 +518,10 @@ class UnconnectedMusicView extends React.Component {
     }
   };
 
+  getExemplarSources = () => {
+    return this.props.levelProperties?.exemplarSources;
+  };
+
   onBlockSpaceChange = e => {
     // A drag event can leave the blocks in a temporarily unusable state,
     // e.g. when a disabled variable is dragged into a slot, it can still
@@ -561,6 +577,16 @@ class UnconnectedMusicView extends React.Component {
       }
     }
 
+    // Remove any procedures that do not have definitions.
+    // This prevents extra call blocks from showing in the toolbox.
+    if (e.type === Blockly.Events.FINISHED_LOADING) {
+      const workspace = this.musicBlocklyWorkspace.workspace;
+      const procedureMap = workspace.getProcedureMap();
+      procedureMap
+        .getProcedures()
+        .filter(p => !Blockly.Procedures.getDefinition(p.getName(), workspace))
+        .forEach(p => procedureMap.delete(p.id));
+    }
     // Update undo status when blocks change.
     this.props.setUndoStatus({
       canUndo: this.musicBlocklyWorkspace.canUndo(),
@@ -625,10 +651,8 @@ class UnconnectedMusicView extends React.Component {
     this.sequencer.clear(this.getPlaybackEvents().length);
     this.musicBlocklyWorkspace.executeTrigger(id, triggerStartPosition);
     const playbackEvents = this.sequencer.getPlaybackEvents();
-    this.props.addPlaybackEvents({
-      events: playbackEvents,
-      lastMeasure: this.sequencer.getLastMeasure(),
-    });
+    this.props.addPlaybackEvents(playbackEvents);
+    this.props.updateLastMeasure(this.sequencer.getLastMeasure());
     this.props.addOrderedFunctions({
       orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
@@ -663,10 +687,8 @@ class UnconnectedMusicView extends React.Component {
 
     this.sequencer.clear();
     this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);
-    this.props.addPlaybackEvents({
-      events: this.sequencer.getPlaybackEvents(),
-      lastMeasure: this.sequencer.getLastMeasure(),
-    });
+    this.props.addPlaybackEvents(this.sequencer.getPlaybackEvents());
+    this.props.setLastMeasure(this.sequencer.getLastMeasure());
     this.props.addOrderedFunctions({
       orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
@@ -879,6 +901,8 @@ const MusicView = connect(
     clearOrderedFunctions: () => dispatch(clearOrderedFunctions()),
     addPlaybackEvents: playbackEvents =>
       dispatch(addPlaybackEvents(playbackEvents)),
+    setLastMeasure: number => dispatch(setLastMeasure(number)),
+    updateLastMeasure: number => dispatch(updateLastMeasure(number)),
     addOrderedFunctions: orderedFunctions =>
       dispatch(addOrderedFunctions(orderedFunctions)),
     setIsLoading: isLoading => dispatch(setIsLoading(isLoading)),

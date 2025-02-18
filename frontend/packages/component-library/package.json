@@ -180,6 +180,7 @@
       "import": "./dist/esm/link/index.mjs",
       "require": "./dist/cjs/link/index.js"
     },
+    "./link/index.css": "./dist/esm/link/index.css",
     "./modal": {
       "types": {
         "import": "./dist/esm/modal/index.d.mts",
@@ -204,6 +205,15 @@
       "import": "./dist/esm/radioButton/index.mjs",
       "require": "./dist/cjs/radioButton/index.js"
     },
+    "./cms/section": {
+      "types": {
+        "import": "./dist/esm/cms/section/index.d.mts",
+        "require": "./dist/cjs/cms/section/index.d.ts"
+      },
+      "import": "./dist/esm/cms/section/index.mjs",
+      "require": "./dist/cjs/cms/section/index.js"
+    },
+    "./cms/section/index.css": "./dist/esm/cms/section/index.css",
     "./segmentedButtons": {
       "types": {
         "import": "./dist/esm/segmentedButtons/index.d.mts",
@@ -268,7 +278,16 @@
       "import": "./dist/esm/typography/index.mjs",
       "require": "./dist/cjs/typography/index.js"
     },
-    "./typography/index.css": "./dist/esm/typography/index.css"
+    "./typography/index.css": "./dist/esm/typography/index.css",
+    "./video": {
+      "types": {
+        "import": "./dist/esm/video/index.d.mts",
+        "require": "./dist/cjs/video/index.d.ts"
+      },
+      "import": "./dist/esm/video/index.mjs",
+      "require": "./dist/cjs/video/index.js"
+    },
+    "./video/index.css": "./dist/esm/video/index.css"
   },
   "main": "components/index.ts",
   "files": [

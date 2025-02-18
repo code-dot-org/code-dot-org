@@ -1,3 +1,4 @@
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -7,7 +8,6 @@ import {
   setUnitSummaryReduxData,
   UnitSummaryResponse,
 } from '@cdo/apps/code-studio/components/progress/UnitSummaryUtils';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {

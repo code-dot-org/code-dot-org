@@ -354,6 +354,11 @@ class Ability
       can :extra_links, ProjectsController
     end
 
+    if user.persisted? && user.can_use_ai_iteration_tools?
+      can [:tools], :ai_iteration
+      can [:fetch_student_code_samples], :student_code_sample
+    end
+
     # In order to accommodate the possibility of there being no database, we
     # need to check that the user is persisted before checking the user
     # permissions.
@@ -494,18 +499,20 @@ class Ability
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
 
-      can [:log_chat_event, :find_toxicity], :aichat do
+      can :find_toxicity, :aichat do
+        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
+      end
+
+      can :log_chat_event, :aichat_event do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
 
       # Additional logic that confirms that a given teacher should have access
-      # to a given student's chat history is in aichat_controller.
-      can :student_chat_history, :aichat do
+      # to a given student's chat history is in aichat_events_controller.
+      can [:student_chat_history, :submit_teacher_feedback], :aichat_event do
         user.teacher_can_access_ai_chat?
       end
-      can :submit_teacher_feedback, :aichat do
-        user.teacher_can_access_ai_chat?
-      end
+
       can :user_has_access, :aichat
     end
 
