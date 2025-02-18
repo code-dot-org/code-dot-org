@@ -17,6 +17,7 @@ import {
   BLOCKLY_THEME,
   NAVIGATION_CURSOR_TYPES,
   DARK_THEME_SUFFIX,
+  BLOCK_TYPES,
 } from '../constants';
 import {ExtendedBlockSvg} from '../types';
 import {getBaseName, isDarkTheme} from '../utils';
@@ -265,6 +266,13 @@ const registerAllBlocksUneditable = function (weight: number) {
       if (scope.workspace) {
         scope.workspace
           .getAllBlocks()
+          // In toolbox mode, category blocks should remain editable.
+          .filter(
+            b =>
+              !(
+                [BLOCK_TYPES.category, BLOCK_TYPES.categoryDynamic] as string[]
+              ).includes(b.type)
+          )
           .forEach(block => block.setEditable(false));
       }
     },
