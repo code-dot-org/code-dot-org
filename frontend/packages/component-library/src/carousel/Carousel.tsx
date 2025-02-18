@@ -15,6 +15,8 @@ import moduleStyles from './carousel.module.scss';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 export interface CarouselProps extends HTMLAttributes<HTMLElement> {
+  /** Show navigation arrows */
+  showNavArrows?: boolean;
   /** Carousel content */
   children?: ReactNode;
 }
@@ -34,6 +36,7 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
  */
 const Carousel: React.FC<CarouselProps> = ({
   children,
+  showNavArrows = true,
   className,
   ...HTMLAttributes
 }: CarouselProps) => {
@@ -43,22 +46,16 @@ const Carousel: React.FC<CarouselProps> = ({
       {...HTMLAttributes}
     >
       <div className={classNames(moduleStyles.carousel)}>
-        {/* Prev button */}
-        <button
-          className={classNames(moduleStyles.swiperNavPrev, 'swiperNavPrev')}
-        >
-          <FontAwesomeV6Icon iconName="arrow-left" />
-        </button>
         {/* Swiper carousel */}
         <Swiper
-          className={moduleStyles.carousel}
+          className={className}
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={24}
           slidesPerView={2}
-          edgeSwipeThreshold={24}
           navigation={{
             nextEl: '.swiperNavNext',
             prevEl: '.swiperNavPrev',
+            enabled: showNavArrows,
           }}
           pagination={{
             clickable: true,
@@ -67,18 +64,34 @@ const Carousel: React.FC<CarouselProps> = ({
         >
           {Array.isArray(children)
             ? children.map((child, index) => (
-                <SwiperSlide key={index} className={moduleStyles.slide}>
+                <SwiperSlide key={index} className={className}>
                   {child}
                 </SwiperSlide>
               ))
             : children}
         </Swiper>
-        {/* Next button */}
-        <button
-          className={classNames(moduleStyles.swiperNavNext, 'swiperNavNext')}
-        >
-          <FontAwesomeV6Icon iconName="arrow-right" />
-        </button>
+        {showNavArrows && (
+          <>
+            {/* Previous button */}
+            <button
+              className={classNames(
+                moduleStyles.swiperNavPrev,
+                'swiperNavPrev',
+              )}
+            >
+              <FontAwesomeV6Icon iconName="arrow-left" />
+            </button>
+            {/* Next button */}
+            <button
+              className={classNames(
+                moduleStyles.swiperNavNext,
+                'swiperNavNext',
+              )}
+            >
+              <FontAwesomeV6Icon iconName="arrow-right" />
+            </button>
+          </>
+        )}
       </div>
       {/* Pagination */}
       <div

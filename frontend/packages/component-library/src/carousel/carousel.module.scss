@@ -11,17 +11,22 @@
   --swiper-pagination-bullet-horizontal-gap: 0.25rem;
 }
 
+.carouselWrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 // Carousel common styles
 .carousel {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1rem;
 }
 
 // Navigation button styles
 .swiperNavPrev,
 .swiperNavNext {
+  position: absolute;
   cursor: pointer;
   border: none;
   border-radius: 100%;
@@ -65,6 +70,16 @@
       color: var(--text-neutral-disabled);
     }
   }
+}
+
+// Move navigation buttons
+// outside of the container
+.swiperNavPrev {
+  left: -4rem;
+}
+
+.swiperNavNext {
+  right: -4rem;
 }
 
 // Pagination styles
