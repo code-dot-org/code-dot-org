@@ -1329,7 +1329,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "# Do This:\r\n\r\n**Write a program to paint the inside of the three wall structures *different* colors.**\r\n\r\n- Use the functions you created today along with any new functions that would help your program be efficient.",
+    "long_instructions": "## Do This:\r\n\r\n**Write a program to paint the inside of the three wall structures *different* colors.**\r\n\r\n- Use the functions you created today along with any new functions that would help your program be efficient.\r\n- Don't forget to add comments to your program to explain the purpose of your functions and code segments.",
     "start_sources": {
       "files": {
         "0": {
@@ -1350,6 +1350,6 @@
     "bubble_choice_description": "Write a program to paint the inside of the three walls *different* colors.",
     "thumbnail_url": "https://images.code.org/38cf5cd35abd4f74e2beb3e82c5eb550-Screenshot 2025-01-22 143119.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22T22:03:49.029+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson7-level7a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson7-level7a\"},{\"changed_at\":\"2025-01-22 22:17:02 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:17:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:32:44 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 22:54:33 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-22T22:03:49.029+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson7-level7a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson7-level7a\"},{\"changed_at\":\"2025-01-22 22:17:02 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:17:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:32:44 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 22:54:33 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-14 17:56:58 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 02:34:24 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

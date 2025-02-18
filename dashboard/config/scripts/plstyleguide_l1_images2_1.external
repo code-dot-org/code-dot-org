@@ -1,0 +1,36 @@
+name 'PLStyleGuide_L1_Images2.1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Images and Accessibility
+
+## Images of Text
+
+* #### Avoid images of text wherever possible to aid in international translation and accessibility.
+* #### Certain images with text may not be converted to text easily. In this case, include the image text in the alt text. For example:
+
+<div style="text-align:center; margin:10px">
+    <img src="https://images.code.org/17b98c589b7c240abfb88ad026b93d2b-image-1707520567591.16.03 PM.png" alt="A diagram of the Problem Solving Process shows the four steps: Define, Prepare, Try, and Reflect." style="display:block; margin:auto; width:300px;">
+    <p style="font-size:10pt; margin-top:10px;"><b>Alt Text:</b> A diagram of the Problem Solving Process shows the four steps: Define, Prepare, Try, and Reflect.</p>
+</div>
+
+## Annotated Images
+
+#### Certain images will need to include arrows, circles, squares, etc. placed on top of them to highlight or demonstrate key points. For these types of images, keep the following in mind:
+
+* #### Any superimposed shape or text should be high-contrast compared to its background. Use a <a href="https://webaim.org/resources/contrastchecker/" target="blank" rel="noopener noreferrer">WCAG Contrast Checker</a> to ensure you've chosen accessible color pairings.
+* #### Ensure that the superimposed shape is thick enough to be easily seen by the user.
+* #### In the alt text, note what is being emphasized.
+* #### Avoid highlighting more than a few items on an image at once.
+
+### **Example**
+
+<div style="text-align:center; margin:10px 0px 20px 0px">
+    <img src="https://images.code.org/1b335b1fb6c2542dbfa417a1ca776f1d-image-1710872179771.16.15 AM.png" alt="A Game Lab level with the debug console circled in teal." style="width:100%;">
+</div>
+
+* #### The above image uses teal against a white, light purple, and gray background for contrast.
+* #### The square is 8px in Google Slides for visibility.
+* #### The alt text reads, "A Game Lab level with the debug console circled in teal."
+MARKDOWN

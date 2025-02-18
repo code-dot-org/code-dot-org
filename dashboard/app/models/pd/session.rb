@@ -2,16 +2,19 @@
 #
 # Table name: pd_sessions
 #
-#  id             :integer          not null, primary key
-#  pd_workshop_id :integer
-#  start          :datetime         not null
-#  end            :datetime         not null
-#  created_at     :datetime
-#  updated_at     :datetime
-#  deleted_at     :datetime
-#  code           :string(255)
-#  session_format :integer
-#  time_zone      :string(255)
+#  id               :integer          not null, primary key
+#  pd_workshop_id   :integer
+#  start            :datetime         not null
+#  end              :datetime         not null
+#  created_at       :datetime
+#  updated_at       :datetime
+#  deleted_at       :datetime
+#  code             :string(255)
+#  session_format   :integer
+#  time_zone        :string(255)
+#  meeting_link     :text(65535)
+#  location_name    :string(255)
+#  location_address :string(255)
 #
 # Indexes
 #
