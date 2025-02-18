@@ -1,7 +1,10 @@
 // import codebridgeI18n from '@cdo/apps/codebridge/locale';
 // import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {validateFileName} from '@codebridge/utils';
 
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {
   DialogType,
   DialogControlInterface,
@@ -15,12 +18,16 @@ type OpenImportFromBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   backpackApi: BackpackContextType;
   newFile: NewFileFunction;
+  projectFiles: MultiFileSource['files'];
+  validationFile?: ProjectFile;
 };
 
 export const openImportFromBackpackPrompt = async ({
   dialogControl,
   backpackApi,
   newFile,
+  projectFiles,
+  validationFile,
 }: OpenImportFromBackpackPromptArgsType) => {
   backpackApi.getFileList(
     () => {
@@ -39,6 +46,16 @@ export const openImportFromBackpackPrompt = async ({
         items: savedFilesInBackpack,
         selectedValue: savedFilesInBackpack[0].value,
         neutralText: 'Delete file from backpack',
+        validateInput: (fileName: string) =>
+          validateFileName({
+            fileName,
+            folderId: DEFAULT_FOLDER_ID,
+            projectFiles,
+            isStartMode: false,
+            validationFile,
+            customErrorMessage:
+              'This backpack file has the same name as an existing file in your project and will overwrite the existing file if you import.',
+          }),
       });
 
       if (results.type === 'cancel') {

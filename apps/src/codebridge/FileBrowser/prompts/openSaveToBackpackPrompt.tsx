@@ -28,6 +28,7 @@ export const openSaveToBackpackPrompt = async ({
         filename => ({value: filename, text: filename})
       );
       console.log('savedFilesInBackpack', savedFilesInBackpack);
+      // Check if filename is a duplicate.
       const results = await dialogControl?.showDialog({
         type: DialogType.GenericConfirmation,
         title: 'Save to backpack',

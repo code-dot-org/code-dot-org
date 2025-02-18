@@ -7,6 +7,7 @@ import React from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import experiments from '@cdo/apps/util/experiments';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   useFileUploader,
@@ -22,6 +23,10 @@ export const FileBrowserHeaderPopUpButton = () => {
     source,
     config: {validMimeTypes},
   } = useCodebridgeContext();
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
+  );
+
   const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(source.files);
 
@@ -60,7 +65,11 @@ export const FileBrowserHeaderPopUpButton = () => {
             iconName="backpack"
             labelText="Import from backpack"
             clickHandler={() =>
-              openImportFromBackpackPrompt({backpackApi: backpackApi})
+              openImportFromBackpackPrompt({
+                backpackApi: backpackApi,
+                projectFiles: source.files,
+                validationFile: validationFile,
+              })
             }
           />
         )}
