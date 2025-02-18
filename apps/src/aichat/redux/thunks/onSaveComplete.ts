@@ -11,7 +11,7 @@ import {
   setSavedAiCustomizations,
   setViewMode,
 } from '../slice';
-import {findChangedProperties, getNewMessageId} from '../utils';
+import {findChangedProperties, getNewRemoveId} from '../utils';
 
 import {addChatEvent} from './addChatEvent';
 import {sendAnalytics} from './sendAnalytics';
@@ -43,7 +43,7 @@ export const onSaveComplete =
     changedProperties.forEach(property => {
       const typedProperty = property as keyof AiCustomizations;
       const modelUpdate = {
-        id: getNewMessageId(),
+        removeId: getNewRemoveId(),
         updatedField: typedProperty,
         updatedValue: currentAiCustomizations[typedProperty],
         timestamp: Date.now(),

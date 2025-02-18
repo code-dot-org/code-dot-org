@@ -37,7 +37,7 @@ import {
   setViewMode,
   updateAiCustomization,
 } from '../redux';
-import {getNewMessageId} from '../redux/utils';
+import {getNewRemoveId} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
@@ -48,7 +48,7 @@ import PresentationView from './presentation/PresentationView';
 import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
-  id: getNewMessageId(),
+  removeId: getNewRemoveId(),
   text: aichatI18n.modelResetNotification(),
   notificationType: 'success',
   timestamp: Date.now(),
@@ -116,7 +116,6 @@ const AichatView: React.FunctionComponent = () => {
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'LOAD_LEVEL',
-        hideForParticipants: true,
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
@@ -218,7 +217,6 @@ const AichatView: React.FunctionComponent = () => {
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'CLEAR_CHAT',
-        hideForParticipants: true,
       })
     );
     dispatch(

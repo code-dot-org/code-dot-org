@@ -71,11 +71,19 @@
     height: 100%;
 
     .timelineElement {
+      margin: 0;
+      padding: 0;
       position: absolute;
       box-sizing: border-box;
       border-radius: 8px;
       border-width: 2px;
       border-style: solid;
+
+      &:focus-visible {
+        outline: 1px solid $light_white;
+        outline-offset: 2px;
+        border-radius: 0.375rem;
+      }
 
       &Playing {
         box-shadow: 0 0 10px rgba(255 255 255 / 0.5);
