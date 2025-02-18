@@ -245,6 +245,70 @@ const registerAllBlocksUndeletable = function (weight: number) {
   );
 };
 
+const registerAllBlocksUneditable = function (weight: number) {
+  const workspaceBlocksUneditableOption = {
+    displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      return 'Make ALL Blocks Uneditable';
+    },
+    preconditionFn: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      if (Blockly.isStartMode || Blockly.isToolboxMode) {
+        if (
+          scope.workspace?.getAllBlocks().every(block => !block.isEditable())
+        ) {
+          return MenuOptionStates.DISABLED;
+        }
+        return MenuOptionStates.ENABLED;
+      }
+      return MenuOptionStates.HIDDEN;
+    },
+    callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      if (scope.workspace) {
+        scope.workspace
+          .getAllBlocks()
+          .forEach(block => block.setEditable(false));
+      }
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'workspaceBlocksUneditable',
+    weight,
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(
+    workspaceBlocksUneditableOption
+  );
+};
+
+const registerAllBlocksUnmovable = function (weight: number) {
+  const workspaceBlocksUnmovableOption = {
+    displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      return 'Make ALL Blocks Unmovable';
+    },
+    preconditionFn: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      if (Blockly.isStartMode) {
+        if (
+          scope.workspace?.getAllBlocks().every(block => !block.isMovable())
+        ) {
+          return MenuOptionStates.DISABLED;
+        }
+        return MenuOptionStates.ENABLED;
+      }
+      return MenuOptionStates.HIDDEN;
+    },
+    callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
+      if (scope.workspace) {
+        scope.workspace
+          .getAllBlocks()
+          .forEach(block => block.setMovable(false));
+      }
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'workspaceBlocksUnMovable',
+    weight,
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(
+    workspaceBlocksUnmovableOption
+  );
+};
+
 const registerKeyboardNavigation = function (weight: number) {
   const keyboardNavigationOption = {
     displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
@@ -596,4 +660,6 @@ function registerCustomWorkspaceOptions() {
   registerAllCursors(nextWeight++, NAVIGATION_CURSOR_TYPES);
   registerThemes(nextWeight++, themes);
   registerAllBlocksUndeletable(nextWeight++);
+  registerAllBlocksUneditable(nextWeight++);
+  registerAllBlocksUnmovable(nextWeight++);
 }
