@@ -1,8 +1,8 @@
+import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
-import Button from '@cdo/apps/componentLibrary/button';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {useAppSelector} from '../util/reduxHooks';
