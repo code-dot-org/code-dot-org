@@ -108,7 +108,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
           : desiredWidth !== undefined
           ? desiredWidth
           : DEFAULT_MINI_APP_SIZE;
-        const sliderHeight = 60;
+        const sliderHeight = 37;
         // The original visualization is rendered at 800x800.
         const originalVisualizationWidth = 800;
         const headerSize = 40;

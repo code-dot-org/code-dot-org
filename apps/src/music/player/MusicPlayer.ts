@@ -99,6 +99,10 @@ export default class MusicPlayer {
     return this.bpm;
   }
 
+  getKey(): Key {
+    return this.key;
+  }
+
   setBpm(bpm: number) {
     this.audioPlayer.setBpm(bpm);
   }

@@ -11,11 +11,12 @@ import {
   AiCustomizations,
   AichatContext,
   AichatModelCustomizations,
-  ChatCompletionApiResponse,
   ChatEvent,
-  ChatMessage,
   DetectToxicityResponse,
   FeedbackValue,
+  PendingChatMessage,
+  ServerChatEvent,
+  CompletedChatMessage,
 } from './types';
 import {extractFieldsToCheckForToxicity} from './utils';
 
@@ -47,13 +48,13 @@ interface UserHasAichatAccessResponse {
  * and assistant message if successful.
  */
 export async function postAichatCompletionMessage(
-  newMessage: ChatMessage,
-  storedMessages: ChatMessage[],
+  newMessage: PendingChatMessage,
+  storedMessages: CompletedChatMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
   // Configurable for testing
   maxPollingTimeMs = MAX_POLLING_TIME_MS
-): Promise<ChatCompletionApiResponse> {
+): Promise<CompletedChatMessage[]> {
   const aichatModelCustomizations: AichatModelCustomizations = {
     selectedModelId: aiCustomizations.selectedModelId,
     temperature: aiCustomizations.temperature,
@@ -125,13 +126,13 @@ export async function getStudentChatHistory(
   studentUserId: number,
   levelId: number,
   scriptId: number | null
-): Promise<ChatEvent[]> {
+): Promise<ServerChatEvent[]> {
   const params: Record<string, string> = {
     studentUserId: studentUserId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
   };
-  const response = await HttpClient.fetchJson<ChatEvent[]>(
+  const response = await HttpClient.fetchJson<ServerChatEvent[]>(
     paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );
 
@@ -172,12 +173,12 @@ export interface GetChatRequestResponse {
  * Perform chat completion by initiating an asynchronous request and polling for the response.
  */
 async function postChatCompletionAsyncPolling(
-  newMessage: ChatMessage,
-  storedMessages: ChatMessage[],
+  newMessage: PendingChatMessage,
+  storedMessages: CompletedChatMessage[],
   aichatModelCustomizations: AichatModelCustomizations,
   aichatContext: AichatContext,
   maxPollingTimeMs = MAX_POLLING_TIME_MS
-): Promise<ChatCompletionApiResponse> {
+): Promise<CompletedChatMessage[]> {
   const payload = {
     newMessage,
     storedMessages,
@@ -228,23 +229,20 @@ async function postChatCompletionAsyncPolling(
     throw new Error('Chat completion request timed out');
   }
 
-  return {
-    messages: getUpdatedMessages(
-      newMessage,
-      modelResponse,
-      executionStatus
-    ).map(message => ({...message, requestId})),
-  };
+  return getUpdatedMessages(newMessage, modelResponse, executionStatus).map(
+    message => ({...message, requestId})
+  );
 }
 
 /**
  * Get the updated user and assistant message based on the status of the chat completion request.
+ * Returns a {@link CompletedChatMessage} without a request ID (added by the caller).
  */
 function getUpdatedMessages(
-  userMessage: ChatMessage,
+  userMessage: PendingChatMessage,
   modelResponse: string,
   executionStatus: ValueOf<typeof AiRequestExecutionStatus>
-): ChatMessage[] {
+) {
   switch (executionStatus) {
     case AiRequestExecutionStatus.SUCCESS:
       return [

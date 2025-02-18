@@ -3,7 +3,7 @@ require 'cdo/aws/metrics'
 # Provides functionality to detect toxicity in user input and model output used in the AI Chat Lab.
 # Uses various services to check for profanity and toxicity based on DCDO settings.
 module AichatSafetyHelper
-  API_KEY = CDO.openai_aichat_safety_api_key
+  API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
   class ToxicityDetector

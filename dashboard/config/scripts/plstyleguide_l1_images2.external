@@ -1,0 +1,17 @@
+name 'PLStyleGuide_L1_Images2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Images and Accessibility
+
+## Alt Text
+
+#### Regular images + decorative images
+
+## Images of Text
+
+## Images in Grayscale
+
+## Images with Overlaid Icons or Text
+MARKDOWN
