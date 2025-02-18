@@ -1,0 +1,189 @@
+@import '../../../mixins.scss';
+@import 'color.scss';
+
+$colors-simple: #2980b9, #16a085, #2ecc71, #f1c40f, #f39c12, #d35400, #e74c3c;
+$colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
+  #55efc4;
+$cell-width: 25px;
+$cell-height: 18px;
+$row-gap: 4px;
+$display-rows: 9;
+$peek-height: 5px;
+
+:export {
+  cellWidth: $cell-width;
+  cellHeight: $cell-height;
+  rowGap: $row-gap;
+  displayRows: $display-rows;
+  peekHeight: $peek-height;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  user-select: none;
+  color-scheme: dark;
+  background-color: $neutral_dark;
+}
+
+.controlRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .left {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.flexAutoWidth {
+  flex: 0 0 auto;
+}
+
+%sequence-editor {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-right: 16px;
+  padding-left: 4px;
+}
+
+.sequence-editor-drums {
+  @extend %sequence-editor;
+  overflow: hidden;
+}
+
+.sequence-editor-simple,
+.sequence-editor-chromatic {
+  @extend %sequence-editor;
+  max-height: ($cell-height + $row-gap) * $display-rows + ($peek-height * 2);
+}
+
+.pitchRow {
+  display: flex;
+  gap: 4px;
+  align-items: stretch;
+
+  @for $i from 1 through 22 {
+    &:nth-child(#{$i}) {
+      .cell-outer-simple > .innerCell.selected,
+      .cell-outer-simple:hover > .innerCell.selected,
+      .label,
+      .cell-outer:hover > .label {
+        background-color: nth($colors-simple, (22 - $i) % 7 + 1);
+      }
+    }
+  }
+
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
+      .cell-outer-drums > .innerCell.selected,
+      .cell-outer-drums:hover > .innerCell.selected {
+        background-color: nth($colors-drums, 8 - $i + 1);
+      }
+    }
+  }
+}
+
+.cellRow {
+  display: flex;
+}
+
+%cell-outer,
+.cell-outer {
+  @include remove-button-styles;
+  padding: calc($row-gap / 2);
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    .innerCell {
+      transform: scale(1.2);
+      background-color: $neutral_dark40;
+      z-index: 1;
+    }
+  }
+
+  &:active {
+    .innerCell {
+      transform: scale(1);
+    }
+  }
+
+  .innerCell {
+    width: $cell-width;
+    height: $cell-height;
+    background-color: $neutral_dark80;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+
+    &.preview {
+      background-color: $neutral_dark70;
+    }
+
+    &.selected,
+    &.selected:hover {
+      background-color: $brand_primary_default;
+      &.preview {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .label,
+  %label {
+    font-size: 12px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $neutral_light;
+  }
+
+  .textLabel {
+    @extend %label;
+    width: 100px;
+    justify-content: flex-start;
+    background-color: transparent;
+    transition: opacity 0.2s ease;
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.7;
+      transform: none;
+      background-color: transparent;
+    }
+  }
+
+  .keyLabel {
+    @extend %label;
+    background-color: $neutral_light;
+    color: $neutral_dark;
+    border-radius: 0 2px 2px 0;
+
+    &.blackKey {
+      background-color: black;
+      color: $neutral_light;
+    }
+  }
+}
+
+.cell-outer-simple {
+  @extend %cell-outer;
+}
+
+.cell-outer-chromatic {
+  @extend %cell-outer;
+}
+
+.cell-outer-drums {
+  @extend %cell-outer;
+}
+
+.spacer {
+  width: 4px;
+}

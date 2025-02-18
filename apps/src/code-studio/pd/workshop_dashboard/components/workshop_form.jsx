@@ -4,7 +4,7 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import $ from 'jquery';
 import _ from 'lodash';
-import moment from 'moment-timezone';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 /* eslint-disable no-restricted-imports */
@@ -260,47 +260,26 @@ export class WorkshopForm extends React.Component {
       return {
         id: session.id,
         format: session.session_format,
-        date: moment
-          .utc(session.start)
-          .tz(session.time_zone || 'UTC')
-          .format(DATE_FORMAT),
-        startTime: moment
-          .utc(session.start)
-          .tz(session.time_zone || 'UTC')
-          .format(TIME_FORMAT),
-        endTime: moment
-          .utc(session.end)
-          .tz(session.time_zone || 'UTC')
-          .format(TIME_FORMAT),
-        timeZone: session.time_zone,
+        date: moment.utc(session.start).format(DATE_FORMAT),
+        startTime: moment.utc(session.start).format(TIME_FORMAT),
+        endTime: moment.utc(session.end).format(TIME_FORMAT),
       };
     });
   }
 
   // Convert from [date, startTime, endTime] to [start, end] and merge destroyedSessions
   prepareSessionsForApi(sessions, destroyedSessions) {
-    const editing = Boolean(this.props.workshop);
     return sessions
       .map(session => {
-        const timeZone = editing
-          ? session.timeZone
-          : Intl.DateTimeFormat().resolvedOptions().timeZone;
         return {
           id: session.id,
           session_format: session.format,
           start: moment
-            .tz(
-              `${session.date} ${session.startTime}`,
-              DATETIME_FORMAT,
-              timeZone
-            )
-            .utc()
-            .toISOString(),
+            .utc(session.date + ' ' + session.startTime, DATETIME_FORMAT)
+            .format(),
           end: moment
-            .tz(`${session.date} ${session.endTime}`, DATETIME_FORMAT, timeZone)
-            .utc()
-            .toISOString(),
-          time_zone: timeZone,
+            .utc(session.date + ' ' + session.endTime, DATETIME_FORMAT)
+            .format(),
         };
       })
       .concat(
@@ -311,21 +290,6 @@ export class WorkshopForm extends React.Component {
           };
         })
       );
-  }
-
-  get workshopTimezone() {
-    const {workshop} = this.props;
-    const existingTimezone = workshop?.sessions?.[0]?.time_zone;
-    // handle editing legacy sessions stored without timezone offset
-    if (!existingTimezone && workshop) {
-      return 'local';
-    }
-    // a new session is created using the user's local timezone
-    const sessionTz =
-      existingTimezone ||
-      Intl.DateTimeFormat().resolvedOptions().timeZone ||
-      'UTC';
-    return moment.tz(sessionTz).format('z');
   }
 
   // Convert from [id, name, email] to an array of ids.
@@ -1156,7 +1120,7 @@ export class WorkshopForm extends React.Component {
       <Grid>
         <form>
           <Row>
-            <Col sm={4}>All workshop times are {this.workshopTimezone}:</Col>
+            <Col sm={4}>All workshop times are local:</Col>
           </Row>
           <SessionListFormPart
             sessions={this.state.sessions}

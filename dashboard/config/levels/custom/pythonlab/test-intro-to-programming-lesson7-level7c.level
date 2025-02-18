@@ -761,7 +761,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "# Do This:\r\n\r\n**Write a program to paint a diagonal line from the top left to the bottom right.**\r\n\r\n- Use the functions you created today along with any ***new*** functions that would help your program be efficient.",
+    "long_instructions": "## Do This:\r\n\r\n**Write a program to paint a diagonal line from the top left to the bottom right.**\r\n\r\n- Use the functions you created today along with any ***new*** functions that would help your program be efficient.\r\n- Don't forget to add comments to your program to explain the purpose of your functions and code segments.",
     "start_sources": {
       "files": {
         "0": {
@@ -782,6 +782,6 @@
     "bubble_choice_description": "Write a program to paint a diagonal line.",
     "thumbnail_url": "https://images.code.org/ba55a63c300ee519f966a56805c33b07-Screenshot 2025-01-22 142943.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22T22:17:42.982+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson7-level7b\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson7-level7b\"},{\"changed_at\":\"2025-01-22 22:27:20 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:27:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:30:41 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 22:57:10 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-22T22:17:42.982+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson7-level7b\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson7-level7b\"},{\"changed_at\":\"2025-01-22 22:27:20 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:27:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 22:30:41 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-31 22:57:10 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-14 17:57:23 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 02:34:35 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

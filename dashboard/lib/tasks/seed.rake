@@ -77,7 +77,8 @@ namespace :seed do
     ui-test-csa-family-script
     ui-test-teacher-pl-course
     ui-test-facilitator-pl-course
-    ui-test-single-unit
+    ui-test-single-unit-2025
+    ui-test-single-unit-2026
   ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     20-hour
@@ -300,7 +301,7 @@ namespace :seed do
     %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
-    %w(ui-test-course-2017 ui-test-course-2019 ui-test-single-unit-course).each do |course_name|
+    %w(ui-test-course-2017 ui-test-course-2019 ui-test-single-unit-course-2025 ui-test-single-unit-course-2026).each do |course_name|
       UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
@@ -410,7 +411,7 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
-    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course).each do |course_offering_name|
+    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course ui-test-single-unit-course).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end

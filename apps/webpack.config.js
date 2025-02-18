@@ -206,6 +206,7 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/lab2/locale'),
     localeDoNotImport('@cdo/music/locale'),
     localeDoNotImport('@cdo/netsim/locale'),
+    localeDoNotImport('@cdo/pythonlab/locale'),
     localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
     localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
     localeDoNotImport('@cdo/standaloneVideo/locale'),

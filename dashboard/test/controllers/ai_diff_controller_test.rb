@@ -62,8 +62,9 @@ class AiDiffControllerTest < ActionController::TestCase
     sign_in @teacher
 
     post :chat_completion, params: {
+      context: "lesson",
       inputText: "Hello!",
-      lessonId: @lesson.id,
+      contextId: @lesson.id,
       sessionId: @session_id,
       isPreset: false
     }
@@ -75,8 +76,9 @@ class AiDiffControllerTest < ActionController::TestCase
     sign_in @teacher_sans_experiment
 
     post :chat_completion, params: {
+      context: "lesson",
       inputText: "Hello!",
-      lessonId: @lesson.id,
+      contextId: @lesson.id,
       unitDisplayName: @unit_display_name,
       sessionId: @session_id,
       isPreset: false
@@ -92,8 +94,9 @@ class AiDiffControllerTest < ActionController::TestCase
     sign_in student
 
     post :chat_completion, params: {
+      context: "lesson",
       inputText: "Hello!",
-      lessonId: @lesson.id,
+      contextId: @lesson.id,
       unitDisplayName: @unit_display_name,
       sessionId: @session_id,
       isPreset: false
@@ -108,8 +111,9 @@ class AiDiffControllerTest < ActionController::TestCase
     assert_equal 0, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
 
     post :chat_completion, params: {
+      context: "lesson",
       inputText: "Hello!",
-      lessonId: @lesson.id,
+      contextId: @lesson.id,
       unitDisplayName: @unit_display_name,
       isPreset: false
     }
@@ -134,8 +138,9 @@ class AiDiffControllerTest < ActionController::TestCase
     assert_equal 0, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
 
     post :chat_completion, params: {
+      context: "lesson",
       inputText: "Hello!",
-      lessonId: @lesson.id,
+      contextId: @lesson.id,
       unitDisplayName: @unit_display_name,
       session_id: nil,
       isPreset: false
@@ -157,12 +162,68 @@ class AiDiffControllerTest < ActionController::TestCase
 
   test "returns success when experiment is enabled and session_id is present" do
     sign_in @teacher
-
     @thread = create(:aichat_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: @lesson.id)
 
     post :chat_completion, params: {
+      context: "lesson",
       inputText: "Hello!",
-      lessonId: @lesson.id,
+      contextId: @lesson.id,
+      unitDisplayName: @unit_display_name,
+      sessionId: @session_id,
+      isPreset: false
+    }
+
+    assert_equal 1, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
+    thread = AichatThread.where(user_id: @teacher.id, external_id: @session_id).first
+    assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
+    assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+
+    assert_equal 2, thread.aichat_messages.count
+
+    json_response = JSON.parse(response.body)
+    assert_response :success
+    assert_equal @session_id, json_response["session_id"]
+    assert_equal "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", json_response["chat_message_text"]
+    assert_equal "assistant", json_response["role"]
+  end
+
+  test "returns success with unit context and session_id set" do
+    sign_in @teacher
+
+    @thread = create(:aichat_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: @unit_in_course.id, level_id: nil)
+
+    post :chat_completion, params: {
+      context: "unit",
+      inputText: "Hello!",
+      contextId: @unit_in_course.id,
+      unitDisplayName: @unit_display_name,
+      sessionId: @session_id,
+      isPreset: false
+    }
+
+    assert_equal 1, AichatThread.where(user_id: @teacher.id, external_id: @session_id).count
+    thread = AichatThread.where(user_id: @teacher.id, external_id: @session_id).first
+    assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :user, content: "Hello!", is_preset: false).count
+    assert_equal 1, AichatMessage.where(aichat_thread_id: thread.id, external_id: @session_id, role: :assistant, content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", is_preset: false).count
+
+    assert_equal 2, thread.aichat_messages.count
+
+    json_response = JSON.parse(response.body)
+    assert_response :success
+    assert_equal @session_id, json_response["session_id"]
+    assert_equal "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", json_response["chat_message_text"]
+    assert_equal "assistant", json_response["role"]
+  end
+
+  test "returns success with course context and session_id set" do
+    sign_in @teacher
+
+    @thread = create(:aichat_thread, external_id: @session_id, user: @teacher, llm_version: AiDiffBedrockHelper::MODEL_ID, unit_id: nil, level_id: nil)
+
+    post :chat_completion, params: {
+      context: "course",
+      inputText: "Hello!",
+      contextId: @unit_group.id,
       unitDisplayName: @unit_display_name,
       sessionId: @session_id,
       isPreset: false

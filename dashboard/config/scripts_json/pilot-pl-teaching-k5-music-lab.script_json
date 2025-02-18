@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-07 23:06:07 UTC",
+    "serialized_at": "2025-02-10 22:22:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -229,6 +229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLself-paced-pl-k5-2-intro_2024_Melissa_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -250,6 +253,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLOPD-K5-PLVid_2023_K5CSConcepts_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -271,6 +277,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLPLGuide_L1_Opening2_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -292,6 +301,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ML-Panel Levels_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -313,6 +325,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLmusic-coding-intro-seq-panel_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -334,6 +349,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLPLPLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL_prod_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -355,6 +373,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -376,6 +397,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "songwriterstoolbox-pl_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -397,6 +421,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-career1-panel_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -418,6 +445,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-sound_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -439,6 +469,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-two_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -460,6 +493,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLmusic-coding-intro-seq-panel_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -481,6 +517,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-together1_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -502,6 +541,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-ingro-loop1_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -523,6 +565,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ML-Loops_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -544,6 +589,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-5sounds_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -565,6 +613,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLmusic-coding-intro-seq-panel-rests_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -586,6 +637,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-loop-beat_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -607,6 +661,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-layer_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -628,6 +685,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLmusic-coding-intro-drop-panel_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -649,6 +709,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-drop2_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -670,6 +733,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-drop3_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -691,6 +757,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-make_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -712,6 +781,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLpl-k5-2-behaviors -intro_2024_K5block_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -733,6 +805,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -754,6 +829,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLmusic-coding-intro-functions-need_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -775,6 +853,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLmusic-coding-intro-functions-panel_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -796,6 +877,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MusicLab-functions-info_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -817,6 +901,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-call_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -838,6 +925,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-define_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -859,6 +949,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLmusic-coding-intro-functions-panel2_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -880,6 +973,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLU2L4 Multiple Choice packets2022_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -901,27 +997,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "MLfunctionsdebug_1"
-        ],
-        "lesson.key": "Producer Power",
-        "lesson_group.key": "",
-        "script.name": "pilot-pl-teaching-k5-music-lab",
-        "activity_section.key": "990f82f3-c095-49be-925a-58051d5b793d"
-      },
-      "level_keys": [
-        "MLfunctionsdebug_1"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-beat_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -938,11 +1016,14 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 12,
-      "activity_section_position": 12,
+      "chapter": 34,
+      "position": 11,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-layer_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -959,11 +1040,14 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 13,
-      "activity_section_position": 13,
+      "chapter": 35,
+      "position": 12,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MusicLab-functions_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -980,11 +1064,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sound-designers-studio-PL_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1001,11 +1088,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-career3-pamel_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1022,11 +1112,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-try_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1043,11 +1136,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-scenes-panel_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1064,11 +1160,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-sound_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1085,11 +1184,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-function_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1106,11 +1208,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLmusic-coding-intro-event-functions_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1127,11 +1232,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-review-panel_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1148,11 +1256,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ML-next-steps_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1169,11 +1280,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLpl-k5-2_PLexperiences_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1568,18 +1682,6 @@
         "level.key": "MLU2L4 Multiple Choice packets2022_1",
         "script_level.level_keys": [
           "MLU2L4 Multiple Choice packets2022_1"
-        ],
-        "lesson.key": "Producer Power",
-        "lesson_group.key": "",
-        "script.name": "pilot-pl-teaching-k5-music-lab",
-        "activity_section.key": "990f82f3-c095-49be-925a-58051d5b793d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "MLfunctionsdebug_1",
-        "script_level.level_keys": [
-          "MLfunctionsdebug_1"
         ],
         "lesson.key": "Producer Power",
         "lesson_group.key": "",

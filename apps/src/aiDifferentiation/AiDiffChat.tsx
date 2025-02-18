@@ -15,7 +15,7 @@ import {ChatItem, ChatPrompt} from './types';
 
 import style from './ai-differentiation.module.scss';
 
-const INITIAL_CHAT_MESSAGE = `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`;
+const INITIAL_CHAT_MESSAGE = `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`;
 
 export const EXPLAIN_CONCEPT_PROMPT = {
   label: 'Explain a concept',
@@ -51,8 +51,9 @@ const SUGGESTED_PROMPTS = [
 const AI_DIFF_CHAT_MESSAGE_ENDPOINT = '/ai_diff/chat_completion';
 
 interface AiDiffChatProps {
-  lessonId: number;
-  lessonName: string;
+  context: string;
+  scriptId: number;
+  scriptName: string;
   unitDisplayName: string;
   chatResponseCallback?: () => void;
   initialChatMessage?: string;
@@ -61,8 +62,9 @@ interface AiDiffChatProps {
 }
 
 const AiDiffChat: React.FC<AiDiffChatProps> = ({
-  lessonId,
-  lessonName,
+  context,
+  scriptId,
+  scriptName,
   unitDisplayName,
   chatResponseCallback = () => {},
   initialChatMessage = INITIAL_CHAT_MESSAGE,
@@ -71,11 +73,12 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
 }) => {
   const reportingData = React.useMemo(() => {
     return {
-      lessonId: lessonId,
-      lessonName: lessonName,
+      chatContext: context,
+      scriptId: scriptId,
+      scriptName: scriptName,
       unitName: unitDisplayName,
     };
-  }, [lessonId, lessonName, unitDisplayName]);
+  }, [context, scriptId, scriptName, unitDisplayName]);
 
   const [sessionId, setSessionId] = useState(null);
 
@@ -136,8 +139,9 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
       }
 
       const body = JSON.stringify({
+        context: context,
         inputText: prompt,
-        lessonId: lessonId,
+        contextId: scriptId,
         unitDisplayName: unitDisplayName,
         sessionId: sessionId,
         isPreset: isPreset,
@@ -174,7 +178,14 @@ const AiDiffChat: React.FC<AiDiffChatProps> = ({
           chatResponseCallback();
         });
     },
-    [lessonId, unitDisplayName, sessionId, chatResponseCallback, sendChatEvent]
+    [
+      context,
+      scriptId,
+      unitDisplayName,
+      sessionId,
+      chatResponseCallback,
+      sendChatEvent,
+    ]
   );
 
   // Scroll to bottom of content when a new message comes in

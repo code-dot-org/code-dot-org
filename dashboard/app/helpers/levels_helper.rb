@@ -15,7 +15,8 @@ module LevelsHelper
   include NotesHelper
   include AzureTextToSpeech
 
-  def build_script_level_path(script_level, params = {})
+  # Builds the `/s/` deprecated paths
+  def build_script_level_path_deprecated(script_level, params = {})
     params ||= {}
     if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
@@ -38,6 +39,35 @@ module LevelsHelper
       script_lesson_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
     else
       script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
+    end
+  end
+
+  def build_script_level_path(script_level, params = {}, course_name: nil, unit_position: nil)
+    params ||= {}
+    # if course_name is not defined, then this is a deprecated /s/ URL
+    return build_script_level_path_deprecated(script_level, params) unless course_name && unit_position
+    # /courses/.../units/...
+    if script_level.script.name == Unit::HOC_NAME
+      hoc_chapter_path(script_level.chapter, params)
+    elsif script_level.script.name == Unit::FLAPPY_NAME
+      flappy_chapter_path(script_level.chapter, params)
+    elsif params[:puzzle_page]
+      if script_level.lesson.numbered_lesson?
+        puzzle_page_course_unit_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
+      else
+        puzzle_page_course_unit_lockable_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params[:puzzle_page], params)
+      end
+    elsif params[:sublevel_position]
+      sublevel_course_unit_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params[:sublevel_position])
+      # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
+      # not include the '/lockable/' piece added in this elsif case
+    elsif !script_level.lesson.numbered_lesson?
+      course_unit_lockable_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params)
+    elsif script_level.bonus
+      query_params = params.merge(level_name: script_level.level.name)
+      course_unit_lesson_extras_path(course_name, unit_position, script_level.lesson, query_params)
+    else
+      course_unit_lesson_script_level_path(course_name, unit_position, script_level.lesson, script_level, params)
     end
   end
 
@@ -253,7 +283,8 @@ module LevelsHelper
     )
 
     # Enable backpack for levels with a backpack option (currently all non-standalone Javalab),
-    # and get the backpack channel token if it exists
+    # and get the backpack channel token if it exists.
+    # Backpack is used in lab2 apps also but app_options is only used by legacy labs.
     backpack_enabled = !!(@level.is_a?(Javalab) &&
       (ProjectsController::STANDALONE_PROJECTS["javalab"]["name"] != @level.name) &&
       (@user || current_user))
@@ -262,7 +293,7 @@ module LevelsHelper
 
     if backpack_enabled
       user_id = @user&.id || current_user&.id
-      backpack = Backpack.find_by_user_id(user_id)
+      backpack = Backpack.find_by(user_id: user_id, game_id: @level.game_id)
       view_options(backpack_channel: backpack&.channel)
     end
 
