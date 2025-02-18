@@ -51,7 +51,7 @@ const AITutorFooter: React.FC<AITutorFooterProps> = ({renderAITutor}) => {
     // TODO: For PythonLab, we are only considering the active file contents,
     // but this seems to get us parity with JavaLab. We may need to revisit this.
     studentCode = pythonLabSource ? getActiveFileContents(pythonLabSource) : '';
-  } else {
+  } else if (level?.type === 'Javalab') {
     studentCode = javaLabSources[fileMetadata[activeTabKey]].text;
   }
 
