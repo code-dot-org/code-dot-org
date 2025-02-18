@@ -91,28 +91,30 @@ export default class BackpackClientApi {
   }
 
   /**
-   * Save files to the backpack
+   * Save a pythonlab file to the backpack
+   * @param {String} filename
+   * @param {ProjectFile} fileContents ProjectFile
+   * @param {Function} onError Function to call if file fails to save
+   * @param {Function} onSuccess Function to call if file saves.
    */
   savePythonlabFile(filename, fileContents) {
     const fileObject = {[filename]: fileContents};
 
     const onError = () => {
+      // TODO: Add error handling.
       console.log('onError');
-    };
-    const onSuccess = () => {
-      console.log('onSuccess');
     };
     this.updateFilesHelper(
       this.fileUploadsInProgress,
       [filename],
       onError,
-      onSuccess,
+      () => {},
       () =>
         this.saveFilesHelper(
           fileObject,
           [filename],
           onError,
-          onSuccess,
+          () => {},
           'pythonlab'
         )
     );

@@ -1,5 +1,3 @@
-// import codebridgeI18n from '@cdo/apps/codebridge/locale';
-// import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {validateFileName} from '@codebridge/utils';
@@ -12,7 +10,6 @@ import {
 } from '@cdo/apps/lab2/views/dialogs';
 import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-// import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenImportFromBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
@@ -54,7 +51,7 @@ export const openImportFromBackpackPrompt = async ({
             isStartMode: false,
             validationFile,
             customErrorMessage:
-              'This backpack file has the same name as an existing file in your project and will overwrite the existing file if you import.',
+              'This backpack file has the same name as an existing file in the root folder of your project and will overwrite the existing file if you import.',
           }),
       });
 
@@ -87,16 +84,3 @@ export const openImportFromBackpackPrompt = async ({
     }
   );
 };
-
-//   backpackApi.fetchFile(
-//     'main.py',
-//     () => {
-//       console.log('onError');
-//     },
-//     (fileContent: unknown) => {
-//       console.log('fileContent', fileContent);
-//     }
-//   );
-// };
-
-//   sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_OPEN_BACKPACK);

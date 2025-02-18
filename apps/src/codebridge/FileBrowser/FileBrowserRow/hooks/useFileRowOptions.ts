@@ -102,7 +102,6 @@ export const useFileRowOptions = (
       },
     ];
 
-    // Conditionally add the "Save to backpack" option
     if (experiments.isEnabled(experiments.PYTHONLAB_BACKPACK)) {
       options.push({
         condition: true,

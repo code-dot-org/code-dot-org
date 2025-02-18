@@ -1,5 +1,3 @@
-// import codebridgeI18n from '@cdo/apps/codebridge/locale';
-// import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {
   DialogType,
@@ -7,8 +5,6 @@ import {
   TypedDialogProps,
 } from '@cdo/apps/lab2/views/dialogs';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-
-// import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
 type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
@@ -26,7 +22,7 @@ export const openSaveToBackpackPrompt = async ({
       console.log('onError');
     },
     async (filenames: string[]) => {
-      // Check if filename is a duplicate of a file in backpack.
+      // Check if filename is a duplicate of a saved file in backpack.
       const isDuplicateFileName = filenames.includes(file.name);
       const fileNameCopy = `${file.name.split('.')[0]}_copy.py`;
       const dialog = isDuplicateFileName
@@ -59,7 +55,7 @@ export const openSaveToBackpackPrompt = async ({
         language: 'py',
         open: true,
         active: false,
-      };
+      } as ProjectFile;
       backpackApi.savePythonlabFile(selectedFileName, fileContents);
     }
   );
