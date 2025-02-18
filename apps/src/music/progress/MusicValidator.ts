@@ -5,7 +5,11 @@ import {
   ValidationResult,
   Validator,
 } from '@cdo/apps/lab2/progress/ProgressManager';
-import {Condition, ConditionType} from '@cdo/apps/lab2/types';
+import {
+  Condition,
+  ConditionType,
+  ConditionValueJson,
+} from '@cdo/apps/lab2/types';
 
 import {
   BlockTypes,
@@ -396,7 +400,7 @@ export default class MusicValidator extends Validator {
     }
   }
 
-  private checkConditionPlayedSoundsInSequence(value: {sequence: [string]}) {
+  private checkConditionPlayedSoundsInSequence(value: ConditionValueJson) {
     const playbackEvents = this.getPlaybackEvents();
 
     let lastMeasure = 0;
@@ -431,7 +435,7 @@ export default class MusicValidator extends Validator {
       if (
         conditions[0].value &&
         this.checkConditionPlayedSoundsInSequence(
-          JSON.parse(conditions[0].value as string)
+          conditions[0].value as ConditionValueJson
         )
       ) {
         console.log(conditions);

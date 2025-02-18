@@ -2,7 +2,7 @@ import React from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
-import {Condition, ConditionType} from '../../types';
+import {Condition, ConditionType, ConditionValueJson} from '../../types';
 
 import moduleStyles from './edit-validations.module.scss';
 
@@ -29,6 +29,7 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
   });
 
   const isNumeric = currentConditionType?.valueType === 'number';
+  const isJson = currentConditionType?.valueType === 'json';
   const hasValue = currentConditionType?.valueType !== undefined;
 
   return (
@@ -67,16 +68,23 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
               type={isNumeric ? 'number' : 'text'}
               name="conditionValue"
               id="conditionValue"
-              value={condition.value}
+              value={
+                isJson
+                  ? JSON.stringify(condition.value)
+                  : (condition.value as string)
+              }
               onChange={e => {
                 condition.value = isNumeric
                   ? parseInt(e.target.value)
+                  : isJson && e.target.value
+                  ? JSON.parse(e.target.value)
                   : e.target.value;
                 onConditionChange(condition, index);
               }}
             />
 
             {hasValue &&
+              isJson &&
               condition.name === 'played_sounds_in_sequence' &&
               condition.value && (
                 <div className={moduleStyles.sequence}>
@@ -86,12 +94,12 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
                   >
                     Sequence:
                   </label>
-                  {JSON.parse(condition.value as string)['sequence'].map(
-                    (value: string | string[]) => {
+                  {(condition.value as ConditionValueJson)?.sequence?.map(
+                    (value: string | string[], index: number) => {
                       return Array.isArray(value) ? (
-                        <div>{value.join(', ')}</div>
+                        <div key={index}>{value.join(' & ')}</div>
                       ) : (
-                        <div>{value}</div>
+                        <div key={index}>{value}</div>
                       );
                     }
                   )}
