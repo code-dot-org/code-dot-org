@@ -1,8 +1,11 @@
 // import codebridgeI18n from '@cdo/apps/codebridge/locale';
 // import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {ProjectFile} from '@cdo/apps/lab2/types';
-import {DialogType, DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
-import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
+import {
+  DialogType,
+  DialogControlInterface,
+  TypedDialogProps,
+} from '@cdo/apps/lab2/views/dialogs';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 
 // import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -23,44 +26,41 @@ export const openSaveToBackpackPrompt = async ({
       console.log('onError');
     },
     async (filenames: string[]) => {
-      console.log('filenames', filenames);
-      const savedFilesInBackpack: GenericDropdownProps['items'] = filenames.map(
-        filename => ({value: filename, text: filename})
+      // Check if filename is a duplicate of a file in backpack.
+      const isDuplicateFileName = filenames.includes(file.name);
+      const fileNameCopy = `${file.name.split('.')[0]}_copy.py`;
+      const dialog = isDuplicateFileName
+        ? {
+            type: DialogType.GenericConfirmation,
+            title: 'Save to backpack',
+            message: `This project file has the same name as an existing saved file in your backpack. Do you want to rename to ${fileNameCopy} or replace the existing backpack file?`,
+            confirmText: 'Replace',
+            neutralText: 'Rename',
+          }
+        : {
+            type: DialogType.GenericConfirmation,
+            title: 'Save to backpack',
+            message: `You are about to save ${file.name} to your backpack.`,
+            confirmText: 'Save to backpack',
+          };
+      const results = await dialogControl?.showDialog(
+        dialog as TypedDialogProps
       );
-      console.log('savedFilesInBackpack', savedFilesInBackpack);
-      // Check if filename is a duplicate.
-      const results = await dialogControl?.showDialog({
-        type: DialogType.GenericConfirmation,
-        title: 'Save to backpack',
-        message: `You are about to save ${file.name} to your backpack`,
-      });
 
-      if (results.type !== 'confirm') {
+      if (results.type === 'cancel') {
         return;
       }
+      const selectedFileName =
+        results.type === 'confirm' ? file.name : fileNameCopy;
       const fileContents = {
-        name: file.name,
+        name: selectedFileName,
         contents: file.contents,
         folderId: '0',
         language: 'py',
         open: true,
         active: false,
       };
-      backpackApi.savePythonlabFile(file.name, fileContents);
-      console.log('results', results);
+      backpackApi.savePythonlabFile(selectedFileName, fileContents);
     }
   );
 };
-
-//   backpackApi.fetchFile(
-//     'main.py',
-//     () => {
-//       console.log('onError');
-//     },
-//     (fileContent: unknown) => {
-//       console.log('fileContent', fileContent);
-//     }
-//   );
-// };
-
-//   sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_OPEN_BACKPACK);
