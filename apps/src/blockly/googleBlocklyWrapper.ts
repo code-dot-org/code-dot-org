@@ -909,6 +909,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.addChangeListener(updateBlockLimits);
     }
 
+    // In toolbox mode, automatically clean up the workspace as blocks are moved.
+    if (blocklyWrapper.isToolboxMode) {
+      workspace.addChangeListener(event => {
+        if (event.type === GoogleBlockly.Events.MOVE) {
+          workspace.cleanUp();
+        }
+      });
+    }
     // When either the main workspace or the toolbox workspace viewport
     // changes, adjust any callouts so they stay pointing to the appropriate
     // location.
