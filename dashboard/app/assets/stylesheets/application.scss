@@ -1472,6 +1472,7 @@ body.iframe_embed_app_and_code {
   }
 
   .video_link {
+    display: block;
     margin: 6px 0;
     color: $brand_secondary_default;
     text-decoration: underline;
