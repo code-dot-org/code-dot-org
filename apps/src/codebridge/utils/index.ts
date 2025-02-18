@@ -9,6 +9,7 @@ export * from './findFile';
 export * from './findFolder';
 export * from './getEmptyProject';
 export * from './getErrorMessage';
+export * from './getFileNameCopy';
 export * from './getFolderLineage';
 export * from './getFolderPath';
 export * from './getOpenFiles';

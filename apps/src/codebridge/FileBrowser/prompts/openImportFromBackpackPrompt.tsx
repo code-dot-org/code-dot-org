@@ -1,6 +1,6 @@
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {validateFileName} from '@codebridge/utils';
+import {validateFileName, getFileNameCopy} from '@codebridge/utils';
 
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {
@@ -44,7 +44,7 @@ export const openImportFromBackpackPrompt = async ({
           type: DialogType.GenericDropdown,
           title: 'Files Saved in Backpack',
           dropdownLabel: '',
-          confirmText: 'Import',
+          confirmText: 'Import to project',
           items: savedFilesInBackpack,
           selectedValue: savedFilesInBackpack[0].value,
           neutralText: 'Delete file from backpack',
@@ -55,9 +55,9 @@ export const openImportFromBackpackPrompt = async ({
               projectFiles,
               isStartMode: false,
               validationFile,
-              customErrorMessage: `This backpack file has the same name as an existing file in the root folder of your project so will be imported as ${
-                fileName.split('.')[0]
-              }_copy.py`,
+              customErrorMessage: `This backpack file has the same name as an existing file in the root folder of your project so will be imported as ${getFileNameCopy(
+                fileName
+              )}`,
             }),
         });
 
@@ -74,7 +74,7 @@ export const openImportFromBackpackPrompt = async ({
             validationFile,
           });
           const selectedBackpackFileNameCopy = validationError
-            ? `${selectedBackpackFileName.split('.')[0]}_copy.py`
+            ? getFileNameCopy(selectedBackpackFileName)
             : undefined;
 
           backpackApi.fetchFile(
