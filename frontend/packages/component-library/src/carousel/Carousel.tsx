@@ -15,6 +15,8 @@ import moduleStyles from './carousel.module.scss';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 export interface CarouselProps extends HTMLAttributes<HTMLElement> {
+  /** Carousel custom className (required) */
+  carouselName: string;
   /** Show navigation arrows */
   showNavArrows?: boolean;
   /** Carousel content */
@@ -33,10 +35,12 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
  *
  * Design System: Carousel Component.
  * A container for carousel content including Action Blocks, Videos, and Images.
+ * Uses Swiper.js for carousel functionality: https://swiperjs.com/swiper-api.
  */
 const Carousel: React.FC<CarouselProps> = ({
-  children,
+  carouselName = 'carousel-01',
   showNavArrows = true,
+  children,
   className,
   ...HTMLAttributes
 }: CarouselProps) => {
@@ -45,21 +49,28 @@ const Carousel: React.FC<CarouselProps> = ({
       className={classNames(moduleStyles.carouselWrapper, className)}
       {...HTMLAttributes}
     >
-      <div className={classNames(moduleStyles.carousel)}>
+      <div className={classNames(moduleStyles.carousel, carouselName)}>
         {/* Swiper carousel */}
         <Swiper
-          className={className}
           modules={[Navigation, Pagination, A11y]}
+          autoHeight={false}
+          allowTouchMove={false}
           spaceBetween={24}
-          slidesPerView={2}
           navigation={{
-            nextEl: '.swiperNavNext',
-            prevEl: '.swiperNavPrev',
+            nextEl: `.${carouselName}-next`,
+            prevEl: `.${carouselName}-prev`,
             enabled: showNavArrows,
           }}
           pagination={{
             clickable: true,
-            el: '.swiperPagination',
+            el: `.${carouselName}-pagination`,
+          }}
+          breakpoints={{
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            },
           }}
         >
           {Array.isArray(children)
@@ -71,12 +82,12 @@ const Carousel: React.FC<CarouselProps> = ({
             : children}
         </Swiper>
         {showNavArrows && (
-          <>
+          <div className={moduleStyles.navArrowWrapper}>
             {/* Previous button */}
             <button
               className={classNames(
                 moduleStyles.swiperNavPrev,
-                'swiperNavPrev',
+                `${carouselName}-prev`,
               )}
             >
               <FontAwesomeV6Icon iconName="arrow-left" />
@@ -85,19 +96,19 @@ const Carousel: React.FC<CarouselProps> = ({
             <button
               className={classNames(
                 moduleStyles.swiperNavNext,
-                'swiperNavNext',
+                `${carouselName}-next`,
               )}
             >
               <FontAwesomeV6Icon iconName="arrow-right" />
             </button>
-          </>
+          </div>
         )}
       </div>
       {/* Pagination */}
       <div
         className={classNames(
           moduleStyles.swiperPagination,
-          'swiperPagination',
+          `${carouselName}-pagination`,
         )}
       ></div>
     </div>
