@@ -18,6 +18,8 @@ jest.mock('@react-pdf/renderer', () => {
   };
 });
 
+jest.mock('react-dom-confetti', () => () => <div>confetti</div>);
+
 const DEFAULT_PROPS = {
   setShowWelcomeExperience: () => {},
   context: 'some-context',
@@ -95,12 +97,13 @@ describe('AiDiffWelcome', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Finish'}));
 
+    screen.getByText('confetti');
+
     await waitFor(
       () => expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false),
       {timeout: 100}
     );
-    return;
-  }, 15000);
+  });
 
   test('End page buttons work correctly', async () => {
     render(<AiDiffWelcome {...DEFAULT_PROPS} />);
@@ -120,6 +123,8 @@ describe('AiDiffWelcome', () => {
     );
     fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
 
+    screen.getByText('confetti');
+
     expect(
       screen.getByRole('link', {
         name: 'Take Code.org’s self-paced AI 101 professional learning course',
@@ -130,8 +135,7 @@ describe('AiDiffWelcome', () => {
       screen.getByRole('button', {name: 'Practice another skill'})
     );
     screen.getByText('Pick a skill to practice');
-    return;
-  }, 15000);
+  });
 
   test('Back button works correctly', () => {
     render(<AiDiffWelcome {...DEFAULT_PROPS} />);
@@ -160,5 +164,5 @@ describe('AiDiffWelcome', () => {
     await waitFor(() =>
       expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false)
     );
-  }, 15000);
+  });
 });
