@@ -28,6 +28,9 @@
     "typecheck": "turbo typecheck"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "dependencies": {
+    "swiper": "^11.2.3"
+  },
   "devDependencies": {
     "@storybook/test-runner": "^0.19.1",
     "prettier": "3.3.3",
@@ -38,8 +41,5 @@
   "packageManager": "yarn@4.6.0",
   "engines": {
     "node": ">=20"
-  },
-  "dependencies": {
-    "swiper": "^11.2.3"
   }
 }

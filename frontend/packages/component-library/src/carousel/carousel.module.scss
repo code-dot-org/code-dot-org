@@ -25,7 +25,6 @@
 
 // Navigation button styles
 .navArrowWrapper {
-
   // Hide arrows when screen size is <1024px
   @media (max-width: 1024px) {
     display: none;
@@ -86,7 +85,7 @@
     left: -4rem;
 
     // Flips the button for RTL languages
-    html[dir="rtl"] & {
+    html[dir='rtl'] & {
       left: unset;
       right: -4rem;
       transform: scaleX(-1);
@@ -97,7 +96,7 @@
     right: -4rem;
 
     // Flips the button for RTL languages
-    html[dir="rtl"] & {
+    html[dir='rtl'] & {
       right: unset;
       left: -4rem;
       transform: scaleX(-1);
