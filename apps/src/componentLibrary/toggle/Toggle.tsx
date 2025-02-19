@@ -21,7 +21,7 @@ export interface ToggleProps extends HTMLAttributes<HTMLInputElement> {
   /** The value attribute specifies the value of an input element. */
   value?: string;
   /** Toggle label*/
-  label?: string | React.ReactNode;
+  label?: string;
   /** Is Toggle disabled */
   disabled?: boolean;
   /** Toggle switch placement */
