@@ -205,7 +205,7 @@ CarouselWithCustomSlidesPerView.parameters = {
   docs: {
     description: {
       story:
-        'This carousel shows three slides per view, and three slides per group. This can be changed with the `slidesPerView` and `slidesPerGroup` props. These can be changed to be as little as one slide per view and group to show one individual slide at a time.',
+        'This carousel shows three slides per view, and three slides per group. This can be changed with the `slidesPerView` and `slidesPerGroup` props. These can be changed to be as little as one slide per view and group to show one individual slide at a time. All carousels will show one slide at a time on mobile, and two slides per view and group when screen size is >= 768px. This prop applies to screens that are >= 1024px only.',
     },
   },
 };
