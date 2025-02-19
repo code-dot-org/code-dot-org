@@ -1,8 +1,10 @@
 import Button from '@code-dot-org/component-library/button';
+import Tags from '@code-dot-org/component-library/tags';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
+import i18n from '@cdo/locale';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {useAppSelector} from '../util/reduxHooks';
@@ -89,6 +91,13 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
             </div>
             <span className={style.aiDiffHeaderText}>
               {AI_DIFF_HEADER_TEXT}
+            </span>
+            <span>
+              <Tags
+                tagsList={[{label: i18n.experiment()}]}
+                size="s"
+                className={style.headerTag}
+              />
             </span>
           </div>
           <div className={style.aiDiffHeaderRightSide}>
