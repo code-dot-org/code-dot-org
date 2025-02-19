@@ -36,7 +36,7 @@ const basicSlideTemplate = (index: number) => (
 const SingleTemplate: StoryFn<CarouselProps> = componentArg => (
   <div
     style={{maxWidth: '800px', margin: '0 auto'}}
-    key={componentArg.carouselName}
+    key={componentArg.uniqueClassName}
   >
     <Carousel {...componentArg} />
   </div>
@@ -47,11 +47,11 @@ const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
     {args.components?.map(componentArg => (
       <div
         style={{maxWidth: '800px', margin: '0 auto', marginBlock: '2rem'}}
-        key={componentArg.carouselName}
+        key={componentArg.uniqueClassName}
       >
         <Carousel
           {...componentArg}
-          key={componentArg.carouselName}
+          key={componentArg.uniqueClassName}
           children={componentArg.children}
         />
       </div>
@@ -64,7 +64,7 @@ const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
 //
 export const DefaultCarousel = SingleTemplate.bind({});
 DefaultCarousel.args = {
-  carouselName: 'default-carousel',
+  uniqueClassName: 'default-carousel',
   children: Array.from({length: 6}, (_, index) =>
     basicSlideTemplate(index + 1),
   ),
@@ -73,7 +73,7 @@ DefaultCarousel.parameters = {
   docs: {
     description: {
       story:
-        "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content. **Note:** Pagination dots are not showing here, but are showing in the documentation example above, or in the Default Carousel standalone story page. This is because both carousels share the same `carouselName` prop that is used on the pagination `el` prop in the Swiper component. This will work as expected outside of Storybook Docs.",
+        "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content. **Note:** Pagination dots are not showing here, but are showing in the documentation example above, or in the Default Carousel standalone story page. This is because both carousels share the same `uniqueClassName` prop that is used on the pagination `el` prop in the Swiper component. This will work as expected outside of Storybook Docs.",
     },
   },
 };
@@ -114,7 +114,7 @@ DefaultCarousel.play = async ({
 
 export const CarouselWithoutNavArrows = SingleTemplate.bind({});
 CarouselWithoutNavArrows.args = {
-  carouselName: 'carousel-without-nav-arrows',
+  uniqueClassName: 'carousel-without-nav-arrows',
   showNavArrows: false,
   children: Array.from({length: 6}, (_, index) =>
     basicSlideTemplate(index + 1),
@@ -151,7 +151,7 @@ CarouselWithoutNavArrows.play = async ({
 
 export const CarouselWithTouchMove = SingleTemplate.bind({});
 CarouselWithTouchMove.args = {
-  carouselName: 'carousel-with-touch-move',
+  uniqueClassName: 'carousel-with-touch-move',
   allowTouchMove: true,
   children: Array.from({length: 6}, (_, index) =>
     basicSlideTemplate(index + 1),
@@ -202,7 +202,7 @@ CarouselWithTouchMove.play = async ({
 
 export const CarouselWithCustomSlidesPerView = SingleTemplate.bind({});
 CarouselWithCustomSlidesPerView.args = {
-  carouselName: 'carousel-with-3-slides',
+  uniqueClassName: 'carousel-with-3-slides',
   slidesPerView: 3,
   slidesPerGroup: 3,
   children: Array.from({length: 6}, (_, index) =>
@@ -261,7 +261,7 @@ export const ActionBlockCarousel = MultipleTemplate.bind({});
 ActionBlockCarousel.args = {
   components: [
     {
-      carouselName: 'action-block-carousel',
+      uniqueClassName: 'action-block-carousel',
       children: 'COMING SOON',
     },
   ],
@@ -278,7 +278,7 @@ export const VideoCarousels = MultipleTemplate.bind({});
 VideoCarousels.args = {
   components: [
     {
-      carouselName: 'video-carousel-with-captions',
+      uniqueClassName: 'video-carousel-with-captions',
       children: [
         <Video
           videoTitle="Generative AI: Input & Pre-training"
@@ -303,7 +303,7 @@ VideoCarousels.args = {
       ],
     },
     {
-      carouselName: 'video-carousel-no-captions',
+      uniqueClassName: 'video-carousel-no-captions',
       children: [
         <Video
           videoTitle="Generative AI: Input & Pre-training"
@@ -370,7 +370,7 @@ export const ImageCarousel = MultipleTemplate.bind({});
 ImageCarousel.args = {
   components: [
     {
-      carouselName: 'image-carousel',
+      uniqueClassName: 'image-carousel',
       children: [
         <img
           src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png"

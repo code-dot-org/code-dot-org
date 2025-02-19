@@ -15,8 +15,8 @@ import moduleStyles from './carousel.module.scss';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 export interface CarouselProps extends HTMLAttributes<HTMLElement> {
-  /** Carousel custom className (required) */
-  carouselName: string;
+  /** Unique className (required) */
+  uniqueClassName: string;
   /** Number of slides per view */
   slidesPerView?: number;
   /** Number of slides per group */
@@ -46,7 +46,7 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
  * Uses Swiper.js for carousel functionality: https://swiperjs.com/swiper-api.
  */
 const Carousel: React.FC<CarouselProps> = ({
-  carouselName = 'carousel-01',
+  uniqueClassName = 'carousel-01',
   showNavArrows = true,
   slidesPerView = 2,
   slidesPerGroup = 2,
@@ -61,7 +61,7 @@ const Carousel: React.FC<CarouselProps> = ({
       className={classNames(moduleStyles.carouselWrapper, className)}
       {...HTMLAttributes}
     >
-      <div className={classNames(moduleStyles.carousel, carouselName)}>
+      <div className={classNames(moduleStyles.carousel, uniqueClassName)}>
         {/* Swiper carousel */}
         <Swiper
           modules={[Navigation, Pagination, A11y]}
@@ -69,13 +69,13 @@ const Carousel: React.FC<CarouselProps> = ({
           autoHeight={autoHeight}
           spaceBetween={24}
           navigation={{
-            nextEl: `.${carouselName}-next`,
-            prevEl: `.${carouselName}-prev`,
+            nextEl: `.${uniqueClassName}-next`,
+            prevEl: `.${uniqueClassName}-prev`,
             enabled: showNavArrows,
           }}
           pagination={{
             clickable: true,
-            el: `.${carouselName}-pagination`,
+            el: `.${uniqueClassName}-pagination`,
           }}
           breakpoints={{
             // when window width is >= 768px
@@ -93,7 +93,7 @@ const Carousel: React.FC<CarouselProps> = ({
           {Array.isArray(children)
             ? children.map((child, index) => (
                 <SwiperSlide
-                  key={`${carouselName}-${index.toString()}`}
+                  key={`${uniqueClassName}-${index.toString()}`}
                   className={className}
                 >
                   {child}
@@ -107,7 +107,7 @@ const Carousel: React.FC<CarouselProps> = ({
             <button
               className={classNames(
                 moduleStyles.swiperNavPrev,
-                `${carouselName}-prev`,
+                `${uniqueClassName}-prev`,
               )}
             >
               <FontAwesomeV6Icon iconName="arrow-left" />
@@ -116,7 +116,7 @@ const Carousel: React.FC<CarouselProps> = ({
             <button
               className={classNames(
                 moduleStyles.swiperNavNext,
-                `${carouselName}-next`,
+                `${uniqueClassName}-next`,
               )}
             >
               <FontAwesomeV6Icon iconName="arrow-right" />
@@ -128,7 +128,7 @@ const Carousel: React.FC<CarouselProps> = ({
       <div
         className={classNames(
           moduleStyles.swiperPagination,
-          `${carouselName}-pagination`,
+          `${uniqueClassName}-pagination`,
         )}
       ></div>
     </div>
