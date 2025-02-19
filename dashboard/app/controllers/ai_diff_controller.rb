@@ -3,8 +3,9 @@ class AiDiffController < ApplicationController
   authorize_resource class: false
 
   # params are
+  # context:
   # inputText:
-  # lessonId:
+  # contextId:
   # unitDisplayName:
   # sessionId:
   # isPreset:
@@ -17,15 +18,14 @@ class AiDiffController < ApplicationController
     session_id = params[:sessionId].presence
 
     response_body = get_response_body(session_id)
-
     # get or create thread obj
     begin
       @thread = AichatThread.find_or_create_by!(
         user_id: current_user.id,
         external_id: response_body[:session_id],
         llm_version: AiDiffBedrockHelper::MODEL_ID,
-        unit_id: @unit.id,
-        level_id: @lesson.id,
+        unit_id: @unit&.id,
+        level_id: @lesson&.id,
       )
     rescue StandardError => exception
       return render status: :bad_request, json: {error: exception.message}
@@ -64,18 +64,30 @@ class AiDiffController < ApplicationController
     # TODO: Check for profanity/ PII in input text
 
     # get lesson info for prompt generation
-    @lesson = Lesson.find_by(id: params[:lessonId])
 
-    lesson_name = @lesson.name
-    lesson_num = @lesson.relative_position
+    case params[:context]
+    when SharedConstants::AI_DIFF_CONTEXT[:LESSON]
+      @lesson = Lesson.find_by(id: params[:contextId])
+      @unit = Unit.find_by(id: @lesson&.script_id)
+      @unit_group = @unit&.unit_groups&.first
+    when SharedConstants::AI_DIFF_CONTEXT[:UNIT]
+      @unit = Unit.find_by(id: params[:contextId])
+      @unit_group = @unit&.unit_groups&.first
+    when SharedConstants::AI_DIFF_CONTEXT[:COURSE]
+      @unit_group = UnitGroup.find_by(id: params[:contextId]) #should this be a course offering instead?
+    end
 
-    @unit = Unit.find_by(id: @lesson.script_id)
-    @unit_group = @unit.unit_groups.first
-    course_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
-    full_unit_name = format("%{course_name} %{unit_name}", course_name: course_name, unit_name: params[:unitDisplayName])
+    lesson_name = @lesson&.name
+    lesson_num = @lesson&.relative_position
 
-    bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], lesson_name, lesson_num, full_unit_name, session_id)
+    unit_num = @unit&.unit_group_units&.first&.position
 
+    course_name = @unit_group.name
+
+    course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name)
+
+    bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_name, session_id)
     #TODO: check for profanity/PII in model response
 
     {
@@ -88,7 +100,7 @@ class AiDiffController < ApplicationController
 
   private def has_required_params?
     begin
-      params.require([:inputText, :lessonId, :unitDisplayName, :isPreset])
+      params.require([:context, :inputText, :contextId, :unitDisplayName, :isPreset])
     rescue ActionController::ParameterMissing
       return false
     end

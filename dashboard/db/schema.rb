@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_01_29_162309) do
+ActiveRecord::Schema.define(version: 2025_02_14_202758) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -192,8 +192,9 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.integer "storage_app_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "game_id"
     t.index ["storage_app_id"], name: "index_backpacks_on_storage_app_id", unique: true
-    t.index ["user_id"], name: "index_backpacks_on_user_id", unique: true
+    t.index ["user_id", "game_id"], name: "index_backpacks_on_user_id_and_game_id", unique: true
   end
 
   create_table "blocks", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -492,10 +493,7 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.integer "course_id", null: false
     t.integer "script_id", null: false
     t.integer "position", null: false
-    t.string "experiment_name", comment: "If present, the SingleTeacherExperiment with this name must be enabled in order for a teacher or their students to see this script."
-    t.integer "default_script_id", comment: "If present, indicates the default script which this script will replace when the corresponding experiment is enabled. Should be null for default scripts (those that show up without experiments)."
     t.index ["course_id"], name: "index_course_scripts_on_course_id"
-    t.index ["default_script_id"], name: "index_course_scripts_on_default_script_id"
     t.index ["script_id"], name: "index_course_scripts_on_script_id"
   end
 
@@ -1417,6 +1415,9 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.string "code"
     t.integer "session_format"
     t.string "time_zone"
+    t.text "meeting_link"
+    t.string "location_name"
+    t.string "location_address"
     t.index ["code"], name: "index_pd_sessions_on_code", unique: true
     t.index ["pd_workshop_id"], name: "index_pd_sessions_on_pd_workshop_id"
   end
@@ -1542,6 +1543,9 @@ ActiveRecord::Schema.define(version: 2025_01_29_162309) do
     t.string "module"
     t.string "name"
     t.string "participant_group_type"
+    t.text "description"
+    t.text "registration_link"
+    t.boolean "hidden"
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id"
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id"
   end

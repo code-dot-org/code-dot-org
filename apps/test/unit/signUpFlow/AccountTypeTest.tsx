@@ -3,6 +3,15 @@ import React from 'react';
 
 import AccountType from '@cdo/apps/signUpFlow/AccountType';
 import locale from '@cdo/apps/signUpFlow/locale';
+import {OAUTH_LOGIN_TYPE_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
+import {navigateToHref} from '@cdo/apps/utils';
+
+jest.mock('@cdo/apps/utils', () => ({
+  ...jest.requireActual('@cdo/apps/utils'),
+  navigateToHref: jest.fn(),
+}));
+
+const navigateToHrefMock = navigateToHref as jest.Mock;
 
 describe('SelectAccountType', () => {
   function renderDefault() {
@@ -18,12 +27,20 @@ describe('SelectAccountType', () => {
     // Renders student card title, one item from the list, and button
     screen.getByText(locale.im_a_student());
     screen.getByText(locale.save_projects_and_progress());
-    screen.getByText(locale.sign_up_as_a_student());
+    const studentButton = screen.getByText(locale.sign_up_as_a_student());
 
     // Renders teacher card title, one item from the list, and button
     screen.getByText(locale.im_a_teacher());
     screen.getByText(locale.create_classroom_sections());
-    screen.getByText(locale.sign_up_as_a_teacher());
+    const teacherButton = screen.getByText(locale.sign_up_as_a_teacher());
+
+    // Both buttons default to sending the user to the login type selection page
+    fireEvent.click(studentButton);
+    fireEvent.click(teacherButton);
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/login_type'
+    );
+    expect(navigateToHrefMock).toHaveBeenCalledTimes(2);
   });
 
   it('renders free curriculum popup dialog', () => {
@@ -48,5 +65,23 @@ describe('SelectAccountType', () => {
     expect(
       screen.queryByText(locale.our_commitment_to_free_curriculum())
     ).toBeNull();
+  });
+
+  it('buttons send user to the finish signup pages if login type already selected through oauth', () => {
+    sessionStorage.setItem(OAUTH_LOGIN_TYPE_SESSION_KEY, 'google_oauth2');
+
+    renderDefault();
+
+    fireEvent.click(screen.getByText(locale.sign_up_as_a_student()));
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/finish_student_account'
+    );
+
+    fireEvent.click(screen.getByText(locale.sign_up_as_a_teacher()));
+    expect(navigateToHrefMock).toHaveBeenCalledWith(
+      '/users/new_sign_up/finish_teacher_account'
+    );
+
+    sessionStorage.clear();
   });
 });

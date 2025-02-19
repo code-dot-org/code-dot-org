@@ -129,6 +129,7 @@ export function getSectionRows(state, sectionIds) {
       'grades',
       'providerManaged',
       'hidden',
+      'isAssignedSingleUnitCourse',
     ]),
     assignmentNames: assignmentNames(courseOfferings, sections[id]),
     assignmentPaths: assignmentPaths(courseOfferings, sections[id]),

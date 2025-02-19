@@ -107,6 +107,11 @@ const EVENTS = {
 
   // Workshop enrollment
   WORKSHOP_ENROLLMENT_COMPLETED_EVENT: 'Workshop Enrollment Completed',
+  WORKSHOP_ADD_SESSION_TO_CALENDAR_CLICK_EVENT:
+    'Workshop Add Session to Calendar Clicked',
+
+  // Workshop session attendance
+  WORKSHOP_ATTENDANCE_MARKED_EVENT: 'Workshop Attendance Marked',
 
   // PD Application flow
   TEACHER_APP_VISITED_EVENT: '6-12 Teacher Application Visited',
@@ -526,6 +531,9 @@ const EVENTS = {
 
   // Sign in callout on CSF and CSC levels
   LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
+
+  // Lab2
+  LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
 };
 
 const EVENT_GROUP_NAMES = {

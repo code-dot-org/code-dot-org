@@ -133,7 +133,7 @@
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
-    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\n##### If students struggle, use the timeline at the bottom to show that each [repeat](#clickable=repeat-block-field-workspace) plays for one measure.\r\n___\r\n\r\n\r\n####<i class=\"fa-solid fa-repeat\"></i> Loop the beat\r\n1. Drag a drum [sound](#clickable=play-sound-block) into the [repeat loop](#clickable=id-up-left:repeat_simple2).\r\n2. Change the number of [times](#clickable=repeat-block-field-workspace) keep the beat going.",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\n##### If students struggle, use the timeline at the bottom to show that each [sound](#clickable=play-sound-block) is two measures long. The [repeat](#clickable=repeat-block-field-workspace) loop determines how many times the [sound](#clickable=play-sound-block) will play in a row. \r\n___\r\n\r\n\r\n####<i class=\"fa-solid fa-repeat\"></i> Loop the beat\r\n1. Drag a drum [sound](#clickable=play-sound-block) into the [repeat loop](#clickable=id-up-left:repeat_simple2).\r\n2. Change the number of [times](#clickable=repeat-block-field-workspace) keep the beat going.",
     "validations": [
       {
         "key": "music-coding-intro-loop-beat_bf0ed4a4-3139-4a89-b2c9-860c44654230",
@@ -234,7 +234,7 @@
     "name_suffix": "_1",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:00.935+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-loop-beat\\\"\"],\"cloned_from\":\"music-coding-intro-loop-beat\"},{\"changed_at\":\"2025-01-15 18:58:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-23 22:34:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-07T23:37:00.935+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-loop-beat\\\"\"],\"cloned_from\":\"music-coding-intro-loop-beat\"},{\"changed_at\":\"2025-01-15 18:58:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-01-23 22:34:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-02-07 22:11:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

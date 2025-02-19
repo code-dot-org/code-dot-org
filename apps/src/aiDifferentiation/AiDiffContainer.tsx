@@ -1,8 +1,8 @@
+import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
-import Button from '@cdo/apps/componentLibrary/button';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import {useAppSelector} from '../util/reduxHooks';
@@ -21,21 +21,20 @@ const AI_DIFF_HEADER_TEXT = 'AI Teaching Assistant';
 
 interface AiDiffContainerProps {
   closeTutor?: () => void;
+  context: string;
   open: boolean;
-  lessonId: number;
-  lessonName: string;
+  scriptId: number;
+  scriptName: string;
   unitDisplayName: string;
-  disableWelcome?: boolean;
 }
 
 const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
+  context,
   open,
-  lessonId,
-  lessonName,
+  scriptId,
+  scriptName,
   unitDisplayName,
-  // TODO(lfm): remove this when welcome is ready to be shown.
-  disableWelcome = true,
 }) => {
   const [showWelcomeExperience, setShowWelcomeExperience] = useState(true);
 
@@ -105,19 +104,19 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         </div>
 
         <div className={style.fabBackground}>
-          {!disableWelcome &&
-          !hasCompletedAiDifferentiationWelcome &&
-          showWelcomeExperience ? (
+          {!hasCompletedAiDifferentiationWelcome && showWelcomeExperience ? (
             <AiDiffWelcome
               setShowWelcomeExperience={setShowWelcomeExperience}
-              lessonId={lessonId}
-              lessonName={lessonName}
+              context={context}
+              scriptId={scriptId}
+              scriptName={scriptName}
               unitDisplayName={unitDisplayName}
             />
           ) : (
             <AiDiffChat
-              lessonId={lessonId}
-              lessonName={lessonName}
+              context={context}
+              scriptId={scriptId}
+              scriptName={scriptName}
               unitDisplayName={unitDisplayName}
             />
           )}

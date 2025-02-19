@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-29 15:24:07 UTC",
+    "serialized_at": "2025-02-07 20:25:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3003,7 +3003,7 @@
   "resources": [
     {
       "name": "[KEY] Exploring Exam Expectations",
-      "url": "https://docs.google.com/document/d/1kS5ye7NOhH3Vt5bC_H9XxAgPlrBekNtj6clyo4lv0sk/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1MgKBDsT7_jDtor2T2_WYf89j0VH7RGzJVZYvXv9E3o0/edit?tab=t.0",
       "key": "_key_exploring_exam_expectations",
       "properties": {
         "audience": "Verified Teacher",
@@ -3124,7 +3124,7 @@
     },
     {
       "name": "Course and Exam Description",
-      "url": "https://docs.google.com/document/d/13plMgDK_6RDMdtAs52nP8R9obQf9i4RM6UsdhD0GnRU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1UXJYtTDf1ezh9xtcfsJOj6qsxnn0cqNJq-pyIQdQCRE/edit?tab=t.0#heading=h.dmg4wiv1dp5",
       "key": "course_and_exam_description",
       "properties": {
         "audience": "Student",
@@ -3149,7 +3149,7 @@
     },
     {
       "name": "Exploring Exam Expectations",
-      "url": "https://docs.google.com/document/d/1EvdhrUznF3Vso_egZc569A85oq4l1L9VPLWPtGcFfUo/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/140rF2QC2Z_zNx7g53oyxmrVOJMtae8yAx_LT9-Edywo/edit?tab=t.0",
       "key": "exploring_exam_expectations",
       "properties": {
         "audience": "Student",
@@ -3398,7 +3398,7 @@
     },
     {
       "name": "MCQ Study Plan",
-      "url": "https://docs.google.com/document/u/4/d/1gQr19A9ovGHWqK6F8bHklnTWKYLBaaHNYsLdqvBPzsQ/edit",
+      "url": "https://docs.google.com/document/d/1dD6sb2dRvnCY4Q1l8aaOwaRP62N2RaZHfcpMJmLFLGk/edit?tab=t.0",
       "key": "mcq_study_plan",
       "properties": {
         "audience": "Student",
