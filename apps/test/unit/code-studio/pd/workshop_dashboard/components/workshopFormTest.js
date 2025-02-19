@@ -319,7 +319,6 @@ describe('WorkshopForm test', () => {
       });
 
       assert(wrapper.find('#funded').exists());
-      assert(wrapper.find('#virtual').exists());
       assert(wrapper.find('#suppress_email').exists());
     });
   });
@@ -441,51 +440,7 @@ describe('WorkshopForm test', () => {
       target: {name: 'subject', value: 'District'},
     });
 
-    assert(wrapper.find('#virtual').exists());
     assert(wrapper.find('#suppress_email').exists());
-  });
-
-  it('CSD, CSP, or CSA course with virtual subject locks virtual field to true', () => {
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([WorkshopAdmin])}
-            facilitatorCourses={[]}
-            today={getFakeToday(false)}
-            readOnly={false}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const courseField = wrapper.find('#course').first();
-
-    ['CS Principles', 'CS Discoveries', 'Computer Science A'].forEach(
-      courseName => {
-        courseField.simulate('change', {
-          target: {name: 'course', value: courseName},
-        });
-
-        const subjectField = wrapper.find('#subject').first();
-
-        // Selecting 'Virtual Workshop Kickoff' should make virtual field set to 'regional'
-        // (a.k.a. 'Yes, this is a regional virtual workshop.') and be disabled.
-        subjectField.simulate('change', {
-          target: {name: 'subject', value: 'Virtual Workshop Kickoff'},
-        });
-        expect(wrapper.find('#virtual').first().props().value).to.equal(
-          'regional'
-        );
-        assert(wrapper.find('#virtual').first().props().disabled);
-
-        // Changing subject from 'Virtual Workshop Kickoff' should make virtual field enabled again.
-        subjectField.simulate('change', {
-          target: {name: 'subject', value: 'Academic Year Workshop 1'},
-        });
-        assert(!wrapper.find('#virtual').first().props().disabled);
-      }
-    );
   });
 
   it('CSD, CSP, or CSA course with Teacher Con or Facilitator Weekend subject locks reminder field to false, otherwise unlocked and true', () => {
@@ -560,11 +515,6 @@ describe('WorkshopForm test', () => {
     subjectField.simulate('change', {
       target: {name: 'subject', value: 'Welcome'},
     });
-
-    assert(wrapper.find('#virtual').exists());
-    expect(wrapper.find('#virtual').first().props().value).to.equal(
-      'in_person'
-    );
 
     assert(wrapper.find('#suppress_email').exists());
     assert(wrapper.find('#suppress_email').first().props().value);
@@ -704,153 +654,6 @@ describe('WorkshopForm test', () => {
     );
 
     expect(wrapper.find('OrganizerFormPart')).to.have.lengthOf(0);
-  });
-
-  it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {
-    const cspSummerWorkshopStartSoon = Factory.build(
-      'csp summer workshop starting within a month'
-    );
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([ProgramManager])}
-            facilitatorCourses={[]}
-            workshop={cspSummerWorkshopStartSoon}
-            today={getFakeToday(false)}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const virtualFormController = wrapper.find('#virtual').first();
-    assert(virtualFormController.props().disabled);
-  });
-
-  it('virtual field enabled for ws-admin for CSP/CSA summer workshop within a month of starting', () => {
-    const cspSummerWorkshopStartSoon = Factory.build(
-      'csp summer workshop starting within a month'
-    );
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([WorkshopAdmin])}
-            facilitatorCourses={[]}
-            workshop={cspSummerWorkshopStartSoon}
-            today={getFakeToday(false)}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const virtualFormController = wrapper.find('#virtual').first();
-    assert(!virtualFormController.props().disabled);
-  });
-
-  it('virtual field enabled for non-ws-admin for non-CSP/CSA summer workshop within a month of starting', () => {
-    const csdSummerWorkshopStartSoon = Factory.build(
-      'csd summer workshop starting within a month'
-    );
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([ProgramManager])}
-            facilitatorCourses={[]}
-            workshop={csdSummerWorkshopStartSoon}
-            today={getFakeToday(false)}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const virtualFormController = wrapper.find('#virtual').first();
-    assert(!virtualFormController.props().disabled);
-  });
-
-  it('virtual field enabled for non-ws-admin for CSP/CSA non-summer workshop within a month of starting', () => {
-    const cspAYW1WorkshopStartSoon = Factory.build(
-      'csp ayw1 workshop starting within a month'
-    );
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([ProgramManager])}
-            facilitatorCourses={[]}
-            workshop={cspAYW1WorkshopStartSoon}
-            today={getFakeToday(false)}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const virtualFormController = wrapper.find('#virtual').first();
-    assert(!virtualFormController.props().disabled);
-  });
-
-  it('virtual field enabled for non-ws-admin for CSP/CSA summer workshop over a month from starting', () => {
-    const cspSummerWorkshopStartOverMonth = Factory.build(
-      'csp summer workshop starting in over a month'
-    );
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([ProgramManager])}
-            facilitatorCourses={[]}
-            workshop={cspSummerWorkshopStartOverMonth}
-            today={getFakeToday(false)}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const virtualFormController = wrapper.find('#virtual').first();
-    assert(!virtualFormController.props().disabled);
-  });
-
-  it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting and close to year turnover', () => {
-    const cspSummerWorkshopStartSoon = Factory.build(
-      'csp summer workshop starting within month of endOfYearFakeToday'
-    );
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([ProgramManager])}
-            facilitatorCourses={[]}
-            workshop={cspSummerWorkshopStartSoon}
-            today={getFakeToday(true)}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const virtualFormController = wrapper.find('#virtual').first();
-    assert(virtualFormController.props().disabled);
-  });
-
-  it('virtual field enabled for non-ws-admin for CSP/CSA summer workshop over a month from starting and close to year turnover', () => {
-    const cspSummerWorkshopStartOverMonth = Factory.build(
-      'csp summer workshop starting in over a month from endOfYearFakeToday'
-    );
-    const wrapper = mount(
-      <Provider store={store}>
-        <MemoryRouter>
-          <WorkshopForm
-            permission={new Permission([ProgramManager])}
-            facilitatorCourses={[]}
-            workshop={cspSummerWorkshopStartOverMonth}
-            today={getFakeToday(true)}
-          />
-        </MemoryRouter>
-      </Provider>
-    );
-
-    const virtualFormController = wrapper.find('#virtual').first();
-    assert(!virtualFormController.props().disabled);
   });
 
   it('does not show module options when CSD and custom workshop subject are not selected', () => {

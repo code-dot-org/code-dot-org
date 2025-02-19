@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-17 21:03:14 UTC",
+    "serialized_at": "2025-02-19 00:05:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -315,6 +315,18 @@
       }
     },
     {
+      "key": "4f8447ed-0446-4f8a-b25a-268e93c5d437",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f8447ed-0446-4f8a-b25a-268e93c5d437",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet"
+      }
+    },
+    {
       "key": "051b61cb-2205-4d76-9522-28d416a60af0",
       "position": 1,
       "properties": {
@@ -436,6 +448,16 @@
       "seeding_key": {
         "activity_section.key": "1bb0ff85-e77b-477d-bbe2-311a01e12ef4",
         "lesson_activity.key": "98f904e0-0a95-459c-b8c3-e89898e99e08"
+      }
+    },
+    {
+      "key": "96c8e298-17a8-489f-a16a-4dbcbca61ff2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "96c8e298-17a8-489f-a16a-4dbcbca61ff2",
+        "lesson_activity.key": "4f8447ed-0446-4f8a-b25a-268e93c5d437"
       }
     },
     {
@@ -908,6 +930,48 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-lesson11-level1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "96c8e298-17a8-489f-a16a-4dbcbca61ff2"
+      },
+      "level_keys": [
+        "test-networks-internet-lesson11-level1"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-networks-internet-lesson11-level2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "96c8e298-17a8-489f-a16a-4dbcbca61ff2"
+      },
+      "level_keys": [
+        "test-networks-internet-lesson11-level2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-networks-internet-matching-template1"
         ],
@@ -928,7 +992,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -953,7 +1017,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -978,7 +1042,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1003,7 +1067,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1028,7 +1092,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -1053,7 +1117,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1078,7 +1142,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -1103,7 +1167,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -1128,7 +1192,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1153,7 +1217,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -1178,7 +1242,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -1203,7 +1267,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -1228,7 +1292,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -1253,7 +1317,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -1278,7 +1342,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -1303,7 +1367,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -1328,7 +1392,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -1508,6 +1572,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "6-12-networks-and-the-internet",
         "activity_section.key": "1bb0ff85-e77b-477d-bbe2-311a01e12ef4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-lesson11-level1",
+        "script_level.level_keys": [
+          "test-networks-internet-lesson11-level1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "96c8e298-17a8-489f-a16a-4dbcbca61ff2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-networks-internet-lesson11-level2",
+        "script_level.level_keys": [
+          "test-networks-internet-lesson11-level2"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "6-12-networks-and-the-internet",
+        "activity_section.key": "96c8e298-17a8-489f-a16a-4dbcbca61ff2"
       }
     },
     {

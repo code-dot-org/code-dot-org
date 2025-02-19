@@ -8,39 +8,39 @@ Background:
   And element ".nextPageButton" is visible
 
 Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
-  When element ".level-group-content:nth(0) .multi-question" contains text "Which arrow gets"
+  When element ".level-group-content:eq(0) .multi-question" contains text "Which arrow gets"
 
   # Enter answers to all three multis on the first page.
-  And I press ".level-group-content:nth(0) .answerbutton[index=2]" using jQuery
-  And I press ".level-group-content:nth(1) .answerbutton[index=1]" using jQuery
+  And I press ".level-group-content:eq(0) .answerbutton[index=2]" using jQuery
+  And I press ".level-group-content:eq(1) .answerbutton[index=1]" using jQuery
   # Pressing 1, 2, 0 should result in 2, 0 being selected.
-  And I press ".level-group-content:nth(2) .answerbutton[index=1]" using jQuery
-  And I press ".level-group-content:nth(2) .answerbutton[index=2]" using jQuery
-  And I press ".level-group-content:nth(2) .answerbutton[index=0]" using jQuery
+  And I press ".level-group-content:eq(2) .answerbutton[index=1]" using jQuery
+  And I press ".level-group-content:eq(2) .answerbutton[index=2]" using jQuery
+  And I press ".level-group-content:eq(2) .answerbutton[index=0]" using jQuery
 
   And I press ".nextPageButton" using jQuery to load a new page
   And I wait to see ".level-group-content"
   And check that the URL contains "/page/2"
-  And element ".level-group-content:nth(0) .multi-question" contains text "Which step should go"
+  And element ".level-group-content:eq(0) .multi-question" contains text "Which step should go"
 
   # Enter no answers on the second page.
 
   And I press ".nextPageButton" using jQuery to load a new page
   And I wait to see ".level-group-content"
   And check that the URL contains "/page/3"
-  And element ".level-group-content:nth(0) .multi-question" contains text "Which repeat block"
+  And element ".level-group-content:eq(0) .multi-question" contains text "Which repeat block"
 
   # Enter answers to only the first multi on the third page.
-  And I press ".level-group-content:nth(0) .answerbutton[index=2]" using jQuery
+  And I press ".level-group-content:eq(0) .answerbutton[index=2]" using jQuery
 
   And I wait until jQuery Ajax requests are finished
 
   # Go back to the first page to see that correct options are selected.
   Then I am on "http://studio.code.org/s/allthethings/lessons/23/levels/2/page/1?noautoplay=true"
-  And element ".level-group-content:nth(0) #checked_2" is visible
-  And element ".level-group-content:nth(1) #checked_1" is visible
-  And element ".level-group-content:nth(2) #checked_2" is visible
-  And element ".level-group-content:nth(2) #checked_0" is visible
+  And element ".level-group-content:eq(0) #checked_2" is visible
+  And element ".level-group-content:eq(1) #checked_1" is visible
+  And element ".level-group-content:eq(2) #checked_2" is visible
+  And element ".level-group-content:eq(2) #checked_0" is visible
 
   Then I reload the page
   And I wait to see ".react_stage"
@@ -88,33 +88,33 @@ Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
   And I verify progress for lesson 23 level 4 is "attempted_assessment"
 
 Scenario: optional free play level
-  When element ".level-group-content:nth(0) .multi-question" contains text "Which arrow gets"
+  When element ".level-group-content:eq(0) .multi-question" contains text "Which arrow gets"
 
   # Enter answers to all three multis on the first page.
-  And I press ".level-group-content:nth(0) .answerbutton[index=2]" using jQuery
-  And I press ".level-group-content:nth(1) .answerbutton[index=1]" using jQuery
+  And I press ".level-group-content:eq(0) .answerbutton[index=2]" using jQuery
+  And I press ".level-group-content:eq(1) .answerbutton[index=1]" using jQuery
   # The last question requires 2 boxes to be checked.
-  And I press ".level-group-content:nth(2) .answerbutton[index=0]" using jQuery
-  And I press ".level-group-content:nth(2) .answerbutton[index=1]" using jQuery
+  And I press ".level-group-content:eq(2) .answerbutton[index=0]" using jQuery
+  And I press ".level-group-content:eq(2) .answerbutton[index=1]" using jQuery
 
   And I press ".nextPageButton" using jQuery to load a new page
   And I wait to see ".level-group-content"
   And check that the URL contains "/page/2"
-  And element ".level-group-content:nth(0) .multi-question" contains text "Which step should go"
+  And element ".level-group-content:eq(0) .multi-question" contains text "Which step should go"
 
   # Answer all three multis on page 2, but not the markdown or free response.
-  And I press ".level-group-content:nth(0) .answerbutton[index=2]" using jQuery
-  And I press ".level-group-content:nth(1) .answerbutton[index=1]" using jQuery
-  And I press ".level-group-content:nth(2) .answerbutton[index=0]" using jQuery
+  And I press ".level-group-content:eq(0) .answerbutton[index=2]" using jQuery
+  And I press ".level-group-content:eq(1) .answerbutton[index=1]" using jQuery
+  And I press ".level-group-content:eq(2) .answerbutton[index=0]" using jQuery
 
   And I press ".nextPageButton" using jQuery to load a new page
   And I wait to see ".level-group-content"
   And check that the URL contains "/page/3"
-  And element ".level-group-content:nth(0) .multi-question" contains text "Which repeat block"
+  And element ".level-group-content:eq(0) .multi-question" contains text "Which repeat block"
 
   # Answer both multis on page 3.
-  And I press ".level-group-content:nth(0) .answerbutton[index=2]" using jQuery
-  And I press ".level-group-content:nth(1) .answerbutton[index=1]" using jQuery
+  And I press ".level-group-content:eq(0) .answerbutton[index=2]" using jQuery
+  And I press ".level-group-content:eq(1) .answerbutton[index=1]" using jQuery
 
   # Verify the bubble status and submit dialog message show incomplete
 
