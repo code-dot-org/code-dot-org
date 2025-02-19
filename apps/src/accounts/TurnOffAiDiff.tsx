@@ -1,7 +1,10 @@
+import Toggle from '@code-dot-org/component-library/toggle';
+import {
+  BodyTwoText,
+  Heading5,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-import {BodyTwoText, Heading5} from '@cdo/apps/componentLibrary/typography';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {setAiDifferentiationEnabled} from '@cdo/apps/templates/currentUserRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
