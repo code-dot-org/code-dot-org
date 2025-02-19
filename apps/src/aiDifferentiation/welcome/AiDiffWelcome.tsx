@@ -16,7 +16,7 @@ import Confetti from 'react-dom-confetti';
 
 import HttpClient from '@cdo/apps/util/HttpClient';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
-import aiBotConfetti from '@cdo/static/ai-bot-confetti.png';
+import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
 import AiDiffChat, {
@@ -79,6 +79,8 @@ const optionButton = (
       )}
       onClick={onClick}
       type="button"
+      id="uitest-ai-diff-option"
+      aria-label={title}
     >
       <FontAwesomeV6Icon
         iconName={iconName}
@@ -110,14 +112,14 @@ const getStartedPage = (onClick: () => void) => {
             className={style.botScanning}
             alt={'AI Teaching Assistant'}
           />
-          <Heading1 className={style.getStartedTitle}>
-            AI Teaching Assistant
-          </Heading1>
-          <BodyOneText className={style.getStartedSubtitle}>
-            Empowering teachers. Enhancing learning.
-          </BodyOneText>
+          <Heading1>AI Teaching Assistant</Heading1>
+          <BodyOneText>Empowering teachers. Enhancing learning.</BodyOneText>
         </div>
-        <Button onClick={onClick} text="Get Started" />
+        <Button
+          onClick={onClick}
+          id="uitest-ai-diff-get-started"
+          text="Get Started"
+        />
       </div>
     </div>
   );
@@ -126,7 +128,12 @@ const getStartedPage = (onClick: () => void) => {
 const progressBarHeader = (percentage: number, onBack: () => void) => {
   return (
     <div className={style.progressBarHeader}>
-      <button className={style.headerBackButton} type="button" onClick={onBack}>
+      <button
+        className={style.headerBackButton}
+        type="button"
+        onClick={onBack}
+        aria-label="Back"
+      >
         <FontAwesomeV6Icon
           iconName="arrow-left"
           className={style.headerBackIcon}
@@ -175,6 +182,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             onClick={() => setCurrentWelcomeState(nextState)}
             text="Continue"
             disabled={continueDisabled}
+            id="uitest-ai-diff-continue"
           />
           <Link
             className={style.skipLink}
@@ -182,6 +190,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             text="Skip the tutorial"
             size="xs"
             type="secondary"
+            id="uitest-ai-diff-skip"
           />
         </div>
       );
@@ -241,8 +250,8 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             <Confetti active={confettiActive} />
           </div>
           <img
-            src={aiBotConfetti}
-            className={style.botConfetti}
+            src={aiBotHappy}
+            className={style.botHappy}
             alt={'Congratulations!'}
           />
           <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
@@ -276,11 +285,15 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             <img
               src={ai101Thumnail}
               className={style.ai101Thumbnail}
-              alt={'AI 101 professional learning course'}
+              alt={''}
             />
           </a>
         </div>
-        <Button onClick={() => updateShowWelcomeExperience()} text="Finish" />
+        <Button
+          onClick={() => updateShowWelcomeExperience()}
+          text="Finish"
+          id="uitest-ai-diff-finish"
+        />
       </div>
     );
   }, [updateShowWelcomeExperience, confettiActive]);

@@ -1,6 +1,6 @@
 name 'test-intro-to-programming-lesson13-level6'
-display_name 'Conditionals Choice Level'
-description 'Pick one of the levels below. Use conditionals to control the painter.'
+display_name 'Practice'
+description 'Pick one of the levels below.'
 
 sublevels
 level 'test-intro-to-programming-lesson13-level6a'
