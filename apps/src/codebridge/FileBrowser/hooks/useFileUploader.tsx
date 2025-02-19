@@ -6,19 +6,21 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {
   useFileUploader as useLab2FileUploader,
   analyticsEvents,
+  FileUploaderProps,
 } from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useCodebridgeContext} from '../../codebridgeContext';
-import {DEFAULT_FOLDER_ID} from '../../constants';
 import {isDuplicateFileName} from '../../utils';
 
-export const useFileUploader: Exclude<
-  typeof useLab2FileUploader,
-  'sendAnalyticsEvent'
-> = args => {
+type UseFileUploaderArgs = Exclude<FileUploaderProps, 'sendAnalyticsEvent'>;
+
+export const useFileUploader = (
+  args: UseFileUploaderArgs,
+  folderId: string
+) => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const {source} = useCodebridgeContext();
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -54,7 +56,7 @@ export const useFileUploader: Exclude<
       if (
         isDuplicateFileName({
           fileName,
-          folderId: DEFAULT_FOLDER_ID,
+          folderId,
           projectFiles: source.files,
           isStartMode,
           validationFile,
@@ -64,7 +66,7 @@ export const useFileUploader: Exclude<
       }
       return undefined;
     },
-    [source.files, isStartMode, validationFile]
+    [folderId, source.files, isStartMode, validationFile]
   );
 
   return useLab2FileUploader({

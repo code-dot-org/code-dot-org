@@ -8,7 +8,7 @@ export const enum analyticsEvents {
   UPLOAD_UNACCEPTED_FILE = 'UPLOAD_UNACCEPTED_FILE',
 }
 
-type FileUploaderProps = {
+export type FileUploaderProps = {
   children?: React.ReactNode;
   callback: (
     filename: string,
