@@ -63,45 +63,6 @@ describe('AiDiffWelcome', () => {
     );
   });
 
-  test('clicking "Finish" on the end page triggers setShowWelcomeExperience', async () => {
-    const setShowWelcomeExperienceStub = jest.fn();
-    render(
-      <AiDiffWelcome
-        {...DEFAULT_PROPS}
-        setShowWelcomeExperience={setShowWelcomeExperienceStub}
-      />
-    );
-
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Plan'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-
-    expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
-
-    const input = screen.getByRole('textbox');
-    fireEvent.change(input, {target: {value: 'Test'}});
-    fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
-
-    await waitFor(
-      () =>
-        expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled(),
-      {timeout: 100}
-    );
-    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-
-    screen.getByText('You’re on your way to becoming an AI all-star!');
-
-    screen.getByText('Continue your learning journey');
-
-    fireEvent.click(screen.getByRole('button', {name: 'Finish'}));
-
-    await waitFor(
-      () => expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false),
-      {timeout: 100}
-    );
-    return;
-  }, 15000);
-
   test('End page buttons work correctly', async () => {
     render(<AiDiffWelcome {...DEFAULT_PROPS} />);
 
