@@ -71,7 +71,7 @@ DefaultCarousel.parameters = {
   docs: {
     description: {
       story:
-        "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content. **Note:** Pagination dots are not showing here, but are showing in the documentation example above, or in the Default Carousel standalone story page. This is because both carousels share the same `uniqueClassName` prop that is used on the pagination `el` prop in the Swiper component. This will work as expected outside of Storybook Docs.",
+        "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content. **Note:** Pagination dots are not showing here, but are showing in the documentation example above, or in the Default Carousel standalone story page. This is because both carousels share the same `uniqueClassName` prop that is used on the pagination `el` prop in the Swiper component. This is due to Storybook duplicating the first story example, and this will work as expected outside of Storybook Docs.",
     },
   },
 };
@@ -155,7 +155,7 @@ CarouselWithTouchMove.parameters = {
   docs: {
     description: {
       story:
-        'This carousel allows slides to be moved by dragging/touching using the `allowTouchMove` prop. This is disabled by default and should not be used with Video carousels.',
+        'This carousel allows slides to be moved by dragging/touching using the `allowTouchMove` prop. This is disabled by default and should not be used with Video carousels since it impedes the video player controls.',
     },
   },
 };
