@@ -5,5 +5,25 @@
 }
 
 .sectionList {
+  display: flex;
+  flex-direction: column;
   padding: 12px 0;
+  gap: 16px;
+}
+
+.sectionCardWrapper {
+  border: 1px solid $neutral_dark20;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: $neutral_light;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionCardHeader {
+  height: 28px;
+}
+
+.sectionCardCode {
+  height: 22px;
 }
