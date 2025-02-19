@@ -77,7 +77,11 @@ const TeacherNavigationBar: React.FC<{
   const performanceSectionTitle = getSectionHeader(i18n.performance());
 
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    showAITutorTab && selectedSection?.courseVersionName?.includes('csa')
+    showAITutorTab &&
+    (selectedSection?.courseVersionName?.includes('csa') ||
+      selectedSection?.courseVersionName?.includes(
+        'programming-fundamentals-aitutor-2024'
+      ))
       ? [
           'progress',
           'assessments',

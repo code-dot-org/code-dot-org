@@ -1582,7 +1582,8 @@ class User < ApplicationRecord
   end
 
   def can_view_student_ai_chat_messages?
-    sections.any?(&:assigned_csa?) &&
+    course_version_names = ['programming-fundamentals-aitutor-2024']
+    (sections.any?(&:assigned_csa?) || sections.any? {|s| course_version_names.include?(s.course_version_name)}) &&
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 
