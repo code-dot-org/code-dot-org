@@ -53,6 +53,7 @@ export const usePrompts = () => {
     newFile,
     renameFile,
     renameFolder,
+    saveFile,
   } = useCodebridgeContext();
 
   const sendCodebridgeAnalyticsEvent = useCallback(
@@ -136,6 +137,7 @@ export const usePrompts = () => {
     globalOpenImportFromBackpackPrompt,
     {
       newFile,
+      saveFile,
       dialogControl,
     } satisfies PAFunctionArgs<typeof globalOpenImportFromBackpackPrompt>
   );

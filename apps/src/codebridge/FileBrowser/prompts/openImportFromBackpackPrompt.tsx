@@ -1,4 +1,7 @@
-import {NewFileFunction} from '@codebridge/codebridgeContext/types';
+import {
+  NewFileFunction,
+  SaveFileFunction,
+} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {validateFileName, getFileNameWithNumberSuffix} from '@codebridge/utils';
 
@@ -15,6 +18,7 @@ type OpenImportFromBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   backpackApi: BackpackContextType;
   newFile: NewFileFunction;
+  saveFile: SaveFileFunction;
   projectFiles: MultiFileSource['files'];
   validationFile?: ProjectFile;
 };
@@ -23,6 +27,7 @@ export const openImportFromBackpackPrompt = async ({
   dialogControl,
   backpackApi,
   newFile,
+  saveFile,
   projectFiles,
   validationFile,
 }: OpenImportFromBackpackPromptArgsType) => {
@@ -78,21 +83,21 @@ export const openImportFromBackpackPrompt = async ({
               message: `This backpack file has the same name as an existing file in the root folder of your project. Would you like to replace ${selectedBackpackFileName} with the file from your backpack or import the backpack file as ${newFileName}?`,
               confirmText: 'Replace existing file',
               neutralText: `Import as ${newFileName}`,
-              handleConfirm: () => {},
-              handleNeutral: () => {},
+              handleConfirm: () =>
+                fetchFileContentSaveFile(
+                  selectedBackpackFileName,
+                  projectFiles
+                ),
+              handleNeutral: () =>
+                fetchFileContentCreateNewFile(
+                  selectedBackpackFileName,
+                  newFileName
+                ),
             });
           } else {
-            backpackApi.fetchFile(
+            fetchFileContentCreateNewFile(
               selectedBackpackFileName,
-              () => {
-                console.log('Error in fetching file.');
-              },
-              (fileContent: string) => {
-                newFile({
-                  fileName: selectedBackpackFileName,
-                  contents: fileContent,
-                });
-              }
+              selectedBackpackFileName
             );
           }
         } else if (results.type === 'neutral') {
@@ -108,11 +113,53 @@ export const openImportFromBackpackPrompt = async ({
       }
     }
   );
-  const handleDelete = async (selectedBackpackFileName: string) => {
+  const handleDelete = async (filename: string) => {
     backpackApi.deleteFiles(
-      [selectedBackpackFileName],
-      () => console.log(`Error in deleting file ${selectedBackpackFileName}`),
-      () => console.log(`Deleted file ${selectedBackpackFileName}`)
+      [filename],
+      () => console.log(`Error in deleting file ${filename}`),
+      () => console.log(`Deleted file ${filename}`)
+    );
+  };
+
+  const fetchFileContentCreateNewFile = (
+    fileName: string,
+    newFileName: string
+  ) => {
+    backpackApi.fetchFile(
+      fileName,
+      () => {
+        console.log('Error in fetching file.');
+      },
+      (fileContent: string) => {
+        newFile({
+          fileName: newFileName,
+          contents: fileContent,
+        });
+      }
+    );
+  };
+
+  const fetchFileContentSaveFile = (
+    fileName: string,
+    projectFiles: MultiFileSource['files']
+  ) => {
+    backpackApi.fetchFile(
+      fileName,
+      () => {
+        console.log('Error in fetching file.');
+      },
+      (fileContent: string) => {
+        // Get file id of original file.
+        let selectedFileId;
+        for (const fileId in projectFiles) {
+          if (projectFiles[fileId].name === fileName) {
+            selectedFileId = fileId;
+          }
+        }
+        if (selectedFileId) {
+          saveFile(selectedFileId, fileContent);
+        }
+      }
     );
   };
 };
