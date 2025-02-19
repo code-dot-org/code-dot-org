@@ -105,10 +105,9 @@ export const openImportFromBackpackPrompt = async ({
           ) {
             newFileName = getFileNameWithNumberSuffix(newFileName);
           }
-          // If the backpack file has the same name as an existing project file, show another
-          // dialog to either replace (overwrite) the exisiting project file or import the backpack
+          // If the backpack file has the same name as an existing project file, show a second
+          // dialog that prompts user to replace/overwrite or import the backpack
           // file with a different name (newFileName).
-          // Otherwise, fetch backpack file and import to project.
           if (newFileName !== selectedBackpackFileName) {
             dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
@@ -125,11 +124,11 @@ export const openImportFromBackpackPrompt = async ({
                 ),
             });
           } else {
+            // Fetch backpack file and import to project.
             fetchFileContentAndProcess(selectedBackpackFileName);
           }
         } else if (results.type === 'neutral') {
-          // User selects to delete selected file from backpack.
-          // Open confirm delete dialog.
+          // User selects to delete file from backpack. Open confirm delete dialog.
           dialogControl?.showDialog({
             type: DialogType.GenericConfirmation,
             title: 'Delete from backpack',

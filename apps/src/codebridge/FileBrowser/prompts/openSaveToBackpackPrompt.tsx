@@ -65,7 +65,12 @@ export const openSaveToBackpackPrompt = async ({
         open: true,
         active: false,
       } as ProjectFile;
-      backpackApi.savePythonlabFile(selectedFileName, fileContents);
+      backpackApi.savePythonlabFile(
+        selectedFileName,
+        fileContents,
+        handleError(`Error in saving pythonlab file ${selectedFileName}`),
+        () => {}
+      );
     }
   );
 };

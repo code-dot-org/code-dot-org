@@ -4,8 +4,8 @@
  * If the original filename ends with a number (e.g., "file_1.py"), the function
  * increments the number (e.g., "file_2.py").
  * If there is no number suffix is present, it appends "_1" before the file extension.
- * (e.g., "file.py" → "file_1.py").
- * @param filename - the original filename which includes file extension
+ * (e.g., "file.py" -> "file_1.py").
+ * @param filename - the original filename which includes the file extension
  * @returns new file name with number suffix
  */
 export const getFileNameWithNumberSuffix = (filename: string) => {
