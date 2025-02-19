@@ -30,6 +30,14 @@
   flex: 0 0 242px;
   background-color: $light_gray_50;
   height: auto;
+
+  .sectionHeader {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 16px;
+    padding-top: 20px;
+    color: var(--text-neutral-quaternary);
+  }
 }
 
 .sidebarContent {
@@ -107,14 +115,6 @@
       color: var(--text-neutral-primary);
     }
   }
-}
-
-.sectionHeader {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 16px;
-  padding-top: 20px;
-  color: var(--text-neutral-quaternary);
 }
 
 .navLink {
