@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class RobotsControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
-
   test 'renders plaintext' do
     set_env :production
     post :index
@@ -14,7 +12,7 @@ class RobotsControllerTest < ActionController::TestCase
     set_env :production
     post :index
     assert_response :success
-    let(:lines) { response.body.lines(chomp: true) }
+    let(:lines) {response.body.lines(chomp: true)}
     expect(lines).to include('User-agent: *')
   end
 
@@ -22,7 +20,7 @@ class RobotsControllerTest < ActionController::TestCase
     set_env :levelbuilder
     post :index
     assert_response :success
-    let(:lines) { response.body.lines(chomp: true) }
+    let(:lines) {response.body.lines(chomp: true)}
     expect(lines).to include('Disallow: /')
   end
 
@@ -30,7 +28,7 @@ class RobotsControllerTest < ActionController::TestCase
     set_env :production
     post :index
     assert_response :success
-    let(:lines) { response.body.lines(chomp: true) }
+    let(:lines) {response.body.lines(chomp: true)}
     expect(lines).to include('Allow: /$')
     expect(lines).to include('Disallow: /projects/')
   end
