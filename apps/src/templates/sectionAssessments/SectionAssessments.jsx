@@ -4,7 +4,10 @@ import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {
+  asyncLoadCoursesWithProgress,
+  setScriptId,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   asyncLoadAssessments,
@@ -73,6 +76,7 @@ class SectionAssessments extends Component {
     studentId: PropTypes.number,
     setStudentId: PropTypes.func,
     studentList: PropTypes.array,
+    asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
   };
 
   state = {
@@ -177,6 +181,11 @@ class SectionAssessments extends Component {
       matchDetailDialogOpen: false,
     });
   };
+
+  componentDidMount() {
+    // Load courses to enable student links to course page
+    this.props.asyncLoadCoursesWithProgress();
+  }
 
   render() {
     const {
@@ -386,6 +395,9 @@ export default connect(
     },
     setStudentId(studentId) {
       dispatch(setStudentId(studentId));
+    },
+    asyncLoadCoursesWithProgress() {
+      dispatch(asyncLoadCoursesWithProgress());
     },
   })
 )(SectionAssessments);

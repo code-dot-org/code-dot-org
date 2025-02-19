@@ -1,196 +1,232 @@
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import {getSelectedUnitName} from '@cdo/apps/redux/unitSelectionRedux';
+import {
+  asyncLoadCoursesWithProgress,
+  getSelectedUnitName,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import {unitUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
 
-class StatsTable extends Component {
-  static propTypes = {
-    sectionId: PropTypes.number.isRequired,
-    students: PropTypes.array.isRequired,
-    studentsCompletedLevelCount: PropTypes.object,
+const familyNameFormatter = familyName => {
+  return <span className="uitest-family-name-cell">{familyName}</span>;
+};
 
-    // Provided by redux.
-    scriptName: PropTypes.string,
-    participantType: PropTypes.string,
+const familyNameColumn = sortable => {
+  return {
+    property: 'familyName',
+    header: {
+      label: i18n.familyName(),
+      props: {
+        className: 'uitest-family-name-header',
+        style: {
+          ...tableLayoutStyles.headerCell,
+        },
+      },
+      transforms: [sortable],
+    },
+    cell: {
+      formatters: [familyNameFormatter],
+      props: {
+        style: {
+          ...tableLayoutStyles.cell,
+        },
+      },
+    },
   };
+};
 
-  state = {};
+const completedLevelsCountColumn = sortable => {
+  return {
+    property: 'completedLevelsCount',
+    header: {
+      label: i18n.completedLevels(),
+      props: {
+        style: {
+          ...tableLayoutStyles.headerCell,
+          ...styles.rightAlignText,
+        },
+      },
+      transforms: [sortable],
+    },
+    cell: {
+      props: {
+        style: {
+          ...tableLayoutStyles.cell,
+          ...styles.rightAlignText,
+        },
+      },
+    },
+  };
+};
 
-  studentsWithCompletedLevelCount = () => {
-    const {students, studentsCompletedLevelCount} = this.props;
+const nameFormatter = (name, {rowData}, _rowInd, extraData) => {
+  if (extraData === undefined) {
+    return <span className="uitest-display-name-cell">{name}</span>;
+  }
+  const {scriptName, sectionId} = extraData;
+  const studentUrl = unitUrlForStudent(sectionId, scriptName, rowData.id);
+
+  if (studentUrl) {
+    return (
+      <a
+        className="uitest-display-name-cell"
+        style={tableLayoutStyles.link}
+        href={studentUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {name}
+      </a>
+    );
+  } else {
+    return <span className="uitest-display-name-cell">{name}</span>;
+  }
+};
+
+function StatsTable({
+  sectionId,
+  students,
+  studentsCompletedLevelCount,
+  scriptName,
+  participantType,
+  asyncLoadCoursesWithProgress,
+}) {
+  React.useEffect(() => {
+    // Load courses to enable student links to course page
+    asyncLoadCoursesWithProgress();
+  }, [asyncLoadCoursesWithProgress]);
+
+  const [sortingColumns, setSortingColumns] = React.useState(undefined);
+
+  const studentsWithCompletedLevelCount = React.useCallback(() => {
     return (students || []).map(student => ({
       ...student,
       completedLevelsCount: studentsCompletedLevelCount[student.id] || 0,
     }));
-  };
+  }, [students, studentsCompletedLevelCount]);
 
-  nameFormatter = (name, {rowData}) => {
-    const {sectionId, scriptName} = this.props;
-    const studentUrl = unitUrlForStudent(sectionId, scriptName, rowData.id);
+  const getSortingColumns = React.useCallback(() => {
+    return sortingColumns || {};
+  }, [sortingColumns]);
 
-    if (studentUrl) {
-      return (
-        <a
-          className="uitest-display-name-cell"
-          style={tableLayoutStyles.link}
-          href={studentUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {name}
-        </a>
-      );
-    } else {
-      return <span className="uitest-display-name-cell">{name}</span>;
-    }
-  };
+  const getColumns = React.useCallback(
+    sortable => {
+      const columns = [nameColumn(sortable)];
 
-  familyNameFormatter = familyName => {
-    return <span className="uitest-family-name-cell">{familyName}</span>;
-  };
+      // Only include family name in non-PL sections
+      if (participantType === 'student') {
+        columns.push(familyNameColumn(sortable));
+      }
 
-  getSortingColumns = () => {
-    return this.state.sortingColumns || {};
-  };
+      columns.push(completedLevelsCountColumn(sortable));
 
-  getColumns = sortable => {
-    const columns = [this.nameColumn(sortable)];
+      return columns;
+    },
+    [nameColumn, participantType]
+  );
 
-    // Only include family name in non-PL sections
-    if (this.props.participantType === 'student') {
-      columns.push(this.familyNameColumn(sortable));
-    }
+  React.useEffect(() => {
+    console.log('lfm0', scriptName, sectionId, {scriptName, sectionId});
+  }, [scriptName, sectionId]);
 
-    columns.push(this.completedLevelsCountColumn(sortable));
-
-    return columns;
-  };
-
-  nameColumn(sortable) {
-    return {
-      property: 'name',
-      header: {
-        label: i18n.name(),
-        props: {
-          className: 'uitest-display-name-header',
-          style: {
-            ...tableLayoutStyles.headerCell,
+  const nameColumn = React.useCallback(
+    sortable => {
+      console.log('lfm1', scriptName, sectionId, {scriptName, sectionId});
+      return {
+        property: 'name',
+        header: {
+          label: i18n.name(),
+          props: {
+            className: 'uitest-display-name-header',
+            style: {
+              ...tableLayoutStyles.headerCell,
+            },
+          },
+          transforms: [sortable],
+        },
+        cell: {
+          formatters: [nameFormatter],
+          formatExtraData: {scriptName, sectionId},
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+            },
           },
         },
-        transforms: [sortable],
-      },
-      cell: {
-        formatters: [this.nameFormatter],
-        props: {
-          style: {
-            ...tableLayoutStyles.cell,
-          },
-        },
-      },
-    };
-  }
-
-  familyNameColumn(sortable) {
-    return {
-      property: 'familyName',
-      header: {
-        label: i18n.familyName(),
-        props: {
-          className: 'uitest-family-name-header',
-          style: {
-            ...tableLayoutStyles.headerCell,
-          },
-        },
-        transforms: [sortable],
-      },
-      cell: {
-        formatters: [this.familyNameFormatter],
-        props: {
-          style: {
-            ...tableLayoutStyles.cell,
-          },
-        },
-      },
-    };
-  }
-
-  completedLevelsCountColumn(sortable) {
-    return {
-      property: 'completedLevelsCount',
-      header: {
-        label: i18n.completedLevels(),
-        props: {
-          style: {
-            ...tableLayoutStyles.headerCell,
-            ...styles.rightAlignText,
-          },
-        },
-        transforms: [sortable],
-      },
-      cell: {
-        props: {
-          style: {
-            ...tableLayoutStyles.cell,
-            ...styles.rightAlignText,
-          },
-        },
-      },
-    };
-  }
+      };
+    },
+    [scriptName, sectionId]
+  );
 
   // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = selectedColumn => {
-    this.setState({
-      sortingColumns: sort.byColumn({
-        sortingColumns: this.state.sortingColumns,
-        // Custom sortingOrder removes 'no-sort' from the cycle
-        sortingOrder: {
-          FIRST: 'asc',
-          asc: 'desc',
-          desc: 'asc',
-        },
-        selectedColumn,
-      }),
-    });
-  };
+  const onSort = React.useCallback(
+    selectedColumn => {
+      setSortingColumns(
+        sort.byColumn({
+          sortingColumns: sortingColumns,
+          // Custom sortingOrder removes 'no-sort' from the cycle
+          sortingOrder: {
+            FIRST: 'asc',
+            asc: 'desc',
+            desc: 'asc',
+          },
+          selectedColumn,
+        })
+      );
+    },
+    [sortingColumns]
+  );
 
-  render() {
+  const columns = React.useMemo(() => {
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
-      this.getSortingColumns,
-      this.onSort,
+      getSortingColumns,
+      onSort,
       sortableOptions
     );
-    const columns = this.getColumns(sortable);
-    const sortingColumns = this.getSortingColumns();
+    return getColumns(sortable);
+  }, [getColumns, getSortingColumns, onSort]);
 
-    const sortedRows = sort.sorter({
-      columns,
-      sortingColumns,
-      sort: orderBy,
-    })(this.studentsWithCompletedLevelCount());
+  const sortedRows = React.useMemo(
+    () =>
+      sort.sorter({
+        columns,
+        sortingColumns,
+        sort: orderBy,
+      })(studentsWithCompletedLevelCount()),
+    [columns, sortingColumns, studentsWithCompletedLevelCount]
+  );
 
-    return (
-      <Table.Provider
-        columns={columns}
-        style={styles.table}
-        id="uitest-stats-table"
-      >
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
-      </Table.Provider>
-    );
-  }
+  return (
+    <Table.Provider
+      columns={columns}
+      style={styles.table}
+      id="uitest-stats-table"
+    >
+      <Table.Header />
+      <Table.Body rows={sortedRows} rowKey="id" />
+    </Table.Provider>
+  );
 }
+
+StatsTable.propTypes = {
+  sectionId: PropTypes.number.isRequired,
+  students: PropTypes.array.isRequired,
+  studentsCompletedLevelCount: PropTypes.object,
+
+  // Provided by redux.
+  scriptName: PropTypes.string,
+  participantType: PropTypes.string,
+  asyncLoadCoursesWithProgress: PropTypes.func.isRequired,
+};
 
 const styles = {
   table: {
@@ -202,9 +238,16 @@ const styles = {
 };
 
 export const UnconnectedStatsTable = StatsTable;
-export default connect(state => ({
-  scriptName: getSelectedUnitName(state),
-  participantType:
-    state.teacherSections.sections[state.teacherSections.selectedSectionId]
-      .participantType,
-}))(StatsTable);
+export default connect(
+  state => ({
+    scriptName: getSelectedUnitName(state),
+    participantType:
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+        .participantType,
+  }),
+  dispatch => ({
+    asyncLoadCoursesWithProgress() {
+      dispatch(asyncLoadCoursesWithProgress());
+    },
+  })
+)(StatsTable);
