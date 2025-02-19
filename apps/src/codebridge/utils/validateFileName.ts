@@ -6,13 +6,12 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {isDuplicateFileName, DuplicateFileError} from './isDuplicateFileName';
 import {isValidFileName} from './isValidFileName';
 
-export type ValidateFileNameArgs = {
+type ValidateFileNameArgs = {
   fileName: string;
   folderId: FolderId;
   projectFiles: MultiFileSource['files'];
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
-  customErrorMessage?: string;
 };
 
 /**
@@ -34,7 +33,6 @@ export const validateFileName = ({
   projectFiles,
   isStartMode,
   validationFile,
-  customErrorMessage,
 }: ValidateFileNameArgs) => {
   if (!fileName.length) {
     return;
@@ -58,9 +56,6 @@ export const validateFileName = ({
   });
 
   if (duplicateFileError) {
-    if (customErrorMessage) {
-      return customErrorMessage;
-    }
     if (duplicateFileError === DuplicateFileError.DUPLICATE_SUPPORT_FILE) {
       return codebridgeI18n.duplicateSupportFileError({fileName});
     } else {

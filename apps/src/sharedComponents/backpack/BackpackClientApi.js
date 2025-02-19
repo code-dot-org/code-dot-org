@@ -65,7 +65,6 @@ export default class BackpackClientApi {
     // Only fetch channel id if we don't yet have it.
     if (!this.channelId) {
       this.fetchChannelId(() => {
-        console.log('Fetched channel id:', this.channelId);
         fetchFiles();
       });
     } else {

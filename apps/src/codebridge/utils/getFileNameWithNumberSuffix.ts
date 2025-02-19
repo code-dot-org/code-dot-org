@@ -1,4 +1,13 @@
-// Returns the filename with a '_' and a number appended to the name and includes file extension.
+/**
+ * Returns a new filename by appending or incrementing a number suffix and
+ * includes file extension.
+ * If the original filename ends with a number (e.g., "file_1.py"), the function
+ * increments the number (e.g., "file_2.py").
+ * If there is no number suffix is present, it appends "_1" before the file extension.
+ * (e.g., "file.py" → "file_1.py").
+ * @param filename - the original filename which includes file extension
+ * @returns new file name with number suffix
+ */
 export const getFileNameWithNumberSuffix = (filename: string) => {
   const parts = filename.split('.');
   const originalName = parts[0];

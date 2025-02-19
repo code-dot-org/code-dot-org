@@ -19,10 +19,12 @@ export const openSaveToBackpackPrompt = async ({
   backpackApi,
   file,
 }: OpenSaveToBackpackPromptArgsType) => {
+  const handleError = (message: string) => () => {
+    // TODO: send analytics / add logging.
+    console.error(message);
+  };
   backpackApi.getFileList(
-    () => {
-      console.log('onError');
-    },
+    handleError('Error in getting backpack file list.'),
     async (filenames: string[]) => {
       // Check if filename is a duplicate of a saved file in backpack.
       const isDuplicateFileName = filenames.includes(file.name);
