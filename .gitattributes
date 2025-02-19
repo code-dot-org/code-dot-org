@@ -39,6 +39,7 @@ apps/i18n/tts_keys/** !text !filter !merge !diff
 dashboard/app/assets/javascripts/** !text !filter !merge !diff
 dashboard/app/assets/stylesheets/** !text !filter !merge !diff
 dashboard/config/locales/**/*en.yml !text !filter !merge !diff
+dashboard/config/locales/**/*en.json !text !filter !merge !diff
 i18n/locales/source/** !text !filter !merge !diff
 pegasus/cache/i18n/en-US.json !text !filter !merge !diff
 pegasus/sites.v3/hourofcode.com/i18n/en.yml !text !filter !merge !diff

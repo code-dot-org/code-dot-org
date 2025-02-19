@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-17 16:53:20 UTC",
+    "serialized_at": "2025-02-18 21:08:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1053,6 +1053,28 @@
     {
       "chapter": 16,
       "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wearable Troubleshooting Scenario"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-troubleshoot-choiceA"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "2af2a495-d86e-4b2f-a523-dfcd7201284c"
+      },
+      "level_keys": [
+        "computer-systems-troubleshoot-choiceA"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1073,8 +1095,30 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 3,
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Other Hardware Troubleshooting Scenarios"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-troubleshoot"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "d74a226b-adfb-46fe-a715-ab42ed9a0191"
+      },
+      "level_keys": [
+        "computer-systems-troubleshoot"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1095,8 +1139,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 4,
+      "chapter": 20,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1117,7 +1161,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1142,7 +1186,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1167,7 +1211,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1192,7 +1236,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1217,7 +1261,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1242,7 +1286,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1267,7 +1311,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -1292,7 +1336,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1317,7 +1361,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1342,7 +1386,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -1367,7 +1411,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -1392,7 +1436,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -1417,7 +1461,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -1442,7 +1486,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1467,7 +1511,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1492,7 +1536,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1517,7 +1561,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1542,7 +1586,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -1567,7 +1611,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1592,7 +1636,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1617,7 +1661,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1825,9 +1869,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-troubleshoot-choiceA",
+        "script_level.level_keys": [
+          "computer-systems-troubleshoot-choiceA"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "2af2a495-d86e-4b2f-a523-dfcd7201284c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson3-scenario-choice",
         "script_level.level_keys": [
           "computer-systems-lesson3-scenario-choice"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "d74a226b-adfb-46fe-a715-ab42ed9a0191"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-troubleshoot",
+        "script_level.level_keys": [
+          "computer-systems-troubleshoot"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",

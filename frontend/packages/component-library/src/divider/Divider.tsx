@@ -1,14 +1,14 @@
 import classNames from 'classnames';
 import {HTMLAttributes} from 'react';
 
-import {ComponentSizeXSToL} from './../common/types';
+import {SpacingNoneToL} from './../common/types';
 import moduleStyles from './divider.module.scss';
 
 export interface DividerProps extends HTMLAttributes<HTMLElement> {
   /** Divider Color */
   color?: 'primary' | 'strong';
   /** Divider Margin */
-  margin?: 'none' | ComponentSizeXSToL;
+  margin?: SpacingNoneToL;
   /** Divider custom className */
   className?: string;
 }

@@ -4,6 +4,7 @@ import {TypedUseSelectorHook, useSelector} from 'react-redux';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {LabProps} from '@cdo/apps/lab2/types';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {registerReducers} from '@cdo/apps/redux';
@@ -38,7 +39,7 @@ registerReducers(reducers);
  * Renders the Lab2 version of Dance Lab. This separate container
  * allows us to support both Lab2 and legacy Dance.
  */
-const DanceView: React.FunctionComponent = () => {
+const DanceView: React.FunctionComponent<LabProps> = () => {
   const dispatch = useAppDispatch();
 
   const useRestrictedSongs = useTypedSelector(

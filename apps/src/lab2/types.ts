@@ -248,7 +248,7 @@ export interface Lab2EntryPoint {
    * component using a dynamic import. See `pythonlab/entrypoint.tsx` for an
    * example.
    */
-  view: LazyExoticComponent<ComponentType>;
+  view: LazyExoticComponent<ComponentType<LabProps>>;
   /**
    * Display theme for this lab. This will likely be configured by user
    * preferences eventually, but for now this is fixed for each lab. Defaults
@@ -361,4 +361,9 @@ export interface ParentLevelPathLink {
   path: string;
   kind: string;
   position: string;
+}
+
+export interface LabProps {
+  initialSources?: ProjectSources;
+  levelProperties: LevelProperties;
 }
