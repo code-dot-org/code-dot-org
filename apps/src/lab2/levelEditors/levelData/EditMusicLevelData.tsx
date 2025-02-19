@@ -307,9 +307,9 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
         />
       </CollapsibleSection>
       <hr />
-      {JSON_FIELDS.map(([fieldName, fieldLabel]) => {
+      {JSON_FIELDS.map(([fieldName, fieldLabel], index) => {
         return (
-          <>
+          <div key={index}>
             {fieldName === 'startSources' && (
               <div>
                 {
@@ -330,7 +330,7 @@ const EditMusicLevelData: React.FunctionComponent<EditMusicLevelDataProps> = ({
               />
             </CollapsibleSection>
             <hr />
-          </>
+          </div>
         );
       })}
       <CollapsibleSection headerContent="Edit Level Data JSON">
