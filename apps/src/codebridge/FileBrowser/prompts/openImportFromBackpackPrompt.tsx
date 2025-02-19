@@ -67,28 +67,39 @@ export const openImportFromBackpackPrompt = async ({
           ) {
             newFileName = getFileNameWithNumberSuffix(newFileName);
           }
-          const selectedBackpackFileNameCopy =
-            newFileName !== selectedBackpackFileName ? newFileName : undefined;
+          const isDuplicateFileName = newFileName !== selectedBackpackFileName;
 
-          backpackApi.fetchFile(
-            selectedBackpackFileName,
-            () => {
-              console.log('Error in fetching file.');
-            },
-            (fileContent: string) => {
-              newFile({
-                fileName:
-                  selectedBackpackFileNameCopy || selectedBackpackFileName,
-                contents: fileContent,
-              });
-            }
-          );
+          // If duplicate, show another dialog to either replace or rename.
+          // If not a duplicate file name, fetch file.
+          if (isDuplicateFileName) {
+            dialogControl?.showDialog({
+              type: DialogType.GenericConfirmation,
+              title: 'Import from backpack',
+              message: `This backpack file has the same name as an existing file in the root folder of your project. Would you like to replace ${selectedBackpackFileName} with the file from your backpack or import the backpack file as ${newFileName}?`,
+              confirmText: 'Replace existing file',
+              neutralText: `Import as ${newFileName}`,
+              handleConfirm: () => {},
+              handleNeutral: () => {},
+            });
+          } else {
+            backpackApi.fetchFile(
+              selectedBackpackFileName,
+              () => {
+                console.log('Error in fetching file.');
+              },
+              (fileContent: string) => {
+                newFile({
+                  fileName: selectedBackpackFileName,
+                  contents: fileContent,
+                });
+              }
+            );
+          }
         } else if (results.type === 'neutral') {
-          console.log('delete file from backpack');
           // Open confirm delete dialog.
           dialogControl?.showDialog({
             type: DialogType.GenericConfirmation,
-            title: 'Save to backpack',
+            title: 'Delete from backpack',
             message: `You are about to delete ${selectedBackpackFileName} to your backpack.`,
             confirmText: 'Delete',
             handleConfirm: () => handleDelete(selectedBackpackFileName),
