@@ -4,6 +4,8 @@ Dashboard::Application.routes.draw do
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
+  get '/robots.txt' => 'robots#index'
+
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
