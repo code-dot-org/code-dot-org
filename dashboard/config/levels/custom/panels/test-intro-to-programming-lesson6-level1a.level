@@ -16,21 +16,29 @@
       },
       {
         "text": "#Create a Painter\n- painter  = Painter()\n\n**You can name the painter anything you choose.**\n- bob = Painter()\n- juanita = Painter()\n\nAll of the examples do the same thing. They add a Painter object to your The Neighborhood! You can even create multiple Painter objects.",
-        "imageUrl": "",
-        "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380"
-      },
-      {
-        "text": "#Methods the Painter can do include:\n\n- move()\n- turn_left()\n- paint()",
-        "imageUrl": "",
-        "key": "test-intro-to-programming-lesson6-level1a-21e28908-745a-4f0a-a496-0467aef4bb96"
+        "imageUrl": "https://images.code.org/2ee39ca300a2f6050341ce458d8a71d8-Screenshot 2025-02-18 at 3.48.17 PM.png",
+        "key": "test-intro-to-programming-lesson6-level1a-91cac369-0d9d-46ec-a0a9-e5f5c4ac7380",
+        "layout": "text-bottom-right"
       },
       {
         "text": "#Attributes the Painter has include:\n\n- x position\n- y position\n- direction\n- paint",
-        "imageUrl": "",
-        "key": "test-intro-to-programming-lesson6-level1a-ad3c826c-5ace-4c82-b5b8-f60855fec0ea"
+        "imageUrl": "https://images.code.org/27fee3781efb593a8adbdb7932c48206-Screenshot 2025-02-18 at 3.35.02 PM.png",
+        "key": "test-intro-to-programming-lesson6-level1a-ad3c826c-5ace-4c82-b5b8-f60855fec0ea",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "#Methods the Painter can do include:\n\n- move()\n- turn_left()\n- paint()",
+        "imageUrl": "https://images.code.org/3a6e5972f2c4f6a85a450b4fcca81a67-Screenshot 2025-02-18 at 3.37.31 PM.png",
+        "key": "test-intro-to-programming-lesson6-level1a-21e28908-745a-4f0a-a496-0467aef4bb96",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Explore the `painter.py` file in the next level. Afterwards, `painter.py` will be hidden but its methods will still be accessible from `main.py`.",
+        "imageUrl": "https://images.code.org/408db8672b4c2217d5f0dd6f7688eb11-Screenshot 2025-02-18 at 3.44.16 PM.png",
+        "key": "test-intro-to-programming-lesson6-level1a-d23a254a-f81d-4f7e-b3b7-d493c832fc1a"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-22 21:10:39 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 23:56:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:35:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:36:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:41:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:42:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:43:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:44:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-28 03:12:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 02:03:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-22 21:10:39 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-22 23:56:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:35:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:36:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:41:02 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:42:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:43:17 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-25 00:44:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-28 03:12:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 02:03:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-02-18 22:35:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 22:36:28 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 22:37:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 22:44:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 22:45:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 22:46:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 22:47:58 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 22:48:31 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 22:51:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

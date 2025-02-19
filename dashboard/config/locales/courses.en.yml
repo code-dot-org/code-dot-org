@@ -1246,6 +1246,30 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        computer-systems-and-devices-2024:
+          title: "[PILOT] Computer Systems and Devices"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        programming-fundamentals-2024:
+          title: "[PILOT] Programming Fundamentals"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        networks-and-the-internet-2024:
+          title: "[PILOT] Networks and the Internet"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        programming-fundamentals-aitutor-2024:
+          title: "[PILOT] Programming Fundamentals (with AI Tutor)"
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
         ui-test-single-unit-course-2025:
           title: Single Unit Course 2025
           description_short: This is the short description for Single-Unit Course 2025.

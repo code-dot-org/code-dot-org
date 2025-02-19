@@ -8,7 +8,7 @@ right 'Green line'
 allow_multiple_attempts true
 
 markdown <<MARKDOWN
-What will the Painter paint if the `user_number` is `5` and the `user_color` is `green`?
+What will the `Painter` paint if the `user_number` is `5` and the `user_color` is `green`?
 ```
 if user_number == 5:
    if user_color == "red":
