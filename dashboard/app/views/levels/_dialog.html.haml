@@ -1,9 +1,6 @@
 / This partial contains general logic+view for displaying modal dialogs and handling submit button interactions.
 - app = local_assigns[:app]
 
-- if app == 'free_response' && @level.stay_on_level?
-  %div{style: 'display: none;', class: 'levelCompletedMessage'}
-    Congrats! Stay on this page until your teacher instructs you to move on
 - unless app == 'external'
   .buttons{class: @level.properties['submittable'] == 'true' ? 'submittable' : nil}
     - if local_assigns[:previous_page_button]

@@ -72,7 +72,6 @@ $(document).ready(() => {
         if (appOptions.stayOnLevel) {
           $('.response').attr('disabled', true);
           $('.nextLevelButton').show();
-          $('.levelCompletedMessage').show();
         } else if (!willRedirect) {
           $('.submitButton').attr('disabled', false);
         }

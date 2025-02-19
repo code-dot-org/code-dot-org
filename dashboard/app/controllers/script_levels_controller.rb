@@ -611,7 +611,6 @@ class ScriptLevelsController < ApplicationController
     }
 
     @next_level_link = @script_level.next_level_or_redirect_path_for_user(current_user)
-    puts @next_level_link.inspect
 
     render 'levels/show', formats: [:html]
   end
