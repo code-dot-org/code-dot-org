@@ -136,7 +136,7 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
       {validation.conditions.map((condition, index) => {
         return (
           <>
-            <div className={moduleStyles.row} key={`${index}-condition`}>
+            <div key={`${index}-condition`}>
               <EditCondition
                 condition={condition}
                 conditionTypes={conditionTypes}

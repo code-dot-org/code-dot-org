@@ -300,10 +300,6 @@ export interface Condition {
   value?: string | number | object;
 }
 
-export interface ConditionValueJson {
-  sequence: [string | [string]];
-}
-
 export interface ConditionType {
   name: string;
   valueType?: 'string' | 'number' | 'json';

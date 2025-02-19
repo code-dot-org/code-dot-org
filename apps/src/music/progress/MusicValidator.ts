@@ -5,11 +5,7 @@ import {
   ValidationResult,
   Validator,
 } from '@cdo/apps/lab2/progress/ProgressManager';
-import {
-  Condition,
-  ConditionType,
-  ConditionValueJson,
-} from '@cdo/apps/lab2/types';
+import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 
 import {
   BlockTypes,
@@ -28,6 +24,10 @@ import {MusicConditions} from './MusicConditions';
 
 export interface ConditionNames {
   [key: string]: ConditionType;
+}
+
+interface SequenceConditionValueJson {
+  sequence: [string | [string]];
 }
 
 export default class MusicValidator extends Validator {
@@ -400,11 +400,20 @@ export default class MusicValidator extends Validator {
     }
   }
 
-  private checkConditionPlayedSoundsInSequence(value: ConditionValueJson) {
+  // Checks whether sounds have been played in the specified sequence.
+  //
+  // The sequence can look something like this:
+  //   { sequence: ["sound1", ["sound2", "sound3"], "sound4"]}
+  //
+  // Which means that sound1 should be followed by sound2 and sound3 simultaneously
+  // followed by sound 4.
+  private checkConditionPlayedSoundsInSequence(
+    value: SequenceConditionValueJson
+  ) {
     const playbackEvents = this.getPlaybackEvents();
 
     let lastMeasure = 0;
-    for (const step of value['sequence']) {
+    for (const step of value.sequence) {
       const stepArray = !Array.isArray(step) ? [step] : step;
 
       let currentMeasure = 0;
@@ -424,23 +433,19 @@ export default class MusicValidator extends Validator {
       lastMeasure = currentMeasure;
     }
 
-    return true;
+    return this.player.getCurrentPlayheadPosition() >= lastMeasure;
   }
 
   conditionsMet(conditions: Condition[]): boolean {
     if (
       conditions.length > 0 &&
-      conditions[0].name === MusicConditions.PLAYED_SOUNDS_IN_SEQUENCE.name
+      conditions[0].name === MusicConditions.PLAYED_SOUNDS_IN_SEQUENCE.name &&
+      conditions[0].value &&
+      this.checkConditionPlayedSoundsInSequence(
+        conditions[0].value as SequenceConditionValueJson
+      )
     ) {
-      if (
-        conditions[0].value &&
-        this.checkConditionPlayedSoundsInSequence(
-          conditions[0].value as ConditionValueJson
-        )
-      ) {
-        console.log(conditions);
-        return true;
-      }
+      return true;
     }
 
     return this.conditionsChecker.checkRequirementConditions(conditions);

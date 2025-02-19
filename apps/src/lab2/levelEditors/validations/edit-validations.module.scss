@@ -67,6 +67,7 @@
 .deleteConditionButton {
   @extend %delete-button;
   margin: 0 10px;
+  margin-left: auto;
 }
 
 .deleteValidationButton {
@@ -79,8 +80,6 @@
   color: $neutral_light;
 }
 
-.sequence {
-  background-color: #eee;
-  padding: 10px;
-  border-radius: 5px;
+.jsonEditor {
+  margin-bottom: 20px;
 }
