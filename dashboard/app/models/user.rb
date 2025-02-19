@@ -2621,7 +2621,7 @@ class User < ApplicationRecord
 
       user_proficiency.save!
     end
-  end  
+  end
 
   # This method is meant to indicate a user has made progress (i.e. made a milestone
   # post on a particular level) in a script
