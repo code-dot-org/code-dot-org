@@ -19,7 +19,10 @@ import {
   isPredictAnswerLocked,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {setIsValidating} from '@cdo/apps/lab2/redux/systemRedux';
+import {
+  setHasValidated,
+  setIsValidating,
+} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
@@ -173,6 +176,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       onRun(true, dispatch, source).finally(() =>
         dispatch(setIsValidating(false))
       );
+      dispatch(setHasValidated(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
