@@ -114,16 +114,18 @@ header.build = function (
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
-  $(document).ready(function () {
+
+
+  function renderHeaderMiddle() {
     ReactDOM.render(
-      <Provider store={getStore()}>
-        <HeaderMiddle
-          scriptNameData={scriptNameData}
-          lessonData={lessonData}
-          scriptData={scriptData}
-        />
-      </Provider>,
-      document.querySelector('.header_level')
+        <Provider store={getStore()}>
+          <HeaderMiddle
+              scriptNameData={scriptNameData}
+              lessonData={lessonData}
+              scriptData={scriptData}
+          />
+        </Provider>,
+        document.querySelector('.header_level')
     );
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
@@ -144,14 +146,35 @@ header.build = function (
       });
 
       ReactDOM.render(
-        <SignInCalloutWrapper />,
-        document.querySelector('.signin_callout_wrapper')
+          <SignInCalloutWrapper />,
+          document.querySelector('.signin_callout_wrapper')
       );
     }
+  }
+
+  function mountMiddle() {
+    const container = document.querySelector('.header_level');
+    console.log(`============ mount middle ${container}`)
+
+    if (container) {
+      renderHeaderMiddle();
+    } else {
+      setTimeout(mountMiddle, 100);
+    }
+  }
+
+  $(document).ready(() => {
+    console.log(`============ middle`)
+    mountMiddle();
   });
 };
 
 header.buildProjectInfoOnly = function (currentLevelId) {
+  const container = document.querySelector('.header_level');
+  if (!container) {
+    setTimeout(header.buildProjectInfoOnly, 100);
+    return;
+  }
   const store = getStore();
 
   // Store the current level ID in the progressRedux store.
@@ -168,6 +191,11 @@ header.buildProjectInfoOnly = function (currentLevelId) {
 // When viewing the level page in code review mode, we want to show only the
 // lesson information (which is displayed by the ScriptName component).
 header.buildScriptNameOnly = function (scriptNameData) {
+  const container = document.querySelector('.header_level');
+  if (!container) {
+    setTimeout(header.buildProjectInfoOnly, 100);
+    return;
+  }
   ReactDOM.render(
     <Provider store={getStore()}>
       <HeaderMiddle scriptNameData={scriptNameData} scriptNameOnly={true} />

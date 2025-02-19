@@ -172,6 +172,15 @@
       "import": "./dist/esm/fontAwesomeV6Icon/index.mjs",
       "require": "./dist/cjs/fontAwesomeV6Icon/index.js"
     },
+    "./header": {
+      "types": {
+        "import": "./dist/esm/header/index.d.mts",
+        "require": "./dist/cjs/header/index.d.ts"
+      },
+      "import": "./dist/esm/header/index.mjs",
+      "require": "./dist/cjs/header/index.js"
+    },
+    "./header/index.css": "./dist/esm/header/index.css",
     "./link": {
       "types": {
         "import": "./dist/esm/link/index.d.mts",

@@ -1,0 +1,37 @@
+.main {
+    background-color: #0093a4;
+    margin: 0;
+    padding: 0.25rem 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.logo {
+    width: 42px;
+}
+
+.link_list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    gap: 2rem;
+}
+
+.link_list li {
+    padding: 0;
+    text-indent: 0;
+    list-style: none;
+    color: #ffffff;
+}
+
+.link_list li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    cursor: pointer;
+}
