@@ -181,7 +181,7 @@ class ActivitiesController < ApplicationController
       level_source_id: @level_source.try(:id)
     }
 
-    allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: true)
+    allow_activity_writes = Gatekeeper.allows('activities', where: {script_name: @script_level.script.name}, default: false)
     if allow_activity_writes
       @activity = Activity.new(attributes).tap(&:atomic_save!)
     end

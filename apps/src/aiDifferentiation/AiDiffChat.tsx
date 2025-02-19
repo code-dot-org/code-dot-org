@@ -15,7 +15,7 @@ import {ChatItem, ChatPrompt} from './types';
 
 import style from './ai-differentiation.module.scss';
 
-const INITIAL_CHAT_MESSAGE = `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`;
+const INITIAL_CHAT_MESSAGE = `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`;
 
 export const EXPLAIN_CONCEPT_PROMPT = {
   label: 'Explain a concept',

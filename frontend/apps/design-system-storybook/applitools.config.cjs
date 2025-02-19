@@ -6,7 +6,7 @@
 const {execSync} = require('child_process');
 
 // Used in DevContainers, see `.devcontainer/frontend/Dockerfile`
-const isDocker = !!process.env.IS_DOCKER;
+const isDocker = !!process.env.IS_DOCKER || !!process.env.CI;
 
 /**
  * @returns Current git commit
@@ -24,6 +24,7 @@ module.exports = {
     {width: 1200, height: 800, name: 'chrome'},
     {width: 1200, height: 800, name: 'firefox'},
   ],
+  storybookStaticDir: 'dist/component-library-storybook',
   runInDocker: isDocker,
   puppeteerOptions: {
     args: isDocker
