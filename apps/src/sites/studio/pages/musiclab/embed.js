@@ -11,6 +11,7 @@ $(document).ready(function () {
     document.querySelector('script[data-projects]').dataset.projects
   );
 
+  console.log({projects});
   ReactDOM.render(
     <Provider store={getStore()}>
       <MiniMusicPlayer projects={projects} libraryName="launch2024" />

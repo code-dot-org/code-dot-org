@@ -209,6 +209,7 @@ export interface LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
+  exemplarValidation?: ExemplarValidation;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -232,6 +233,13 @@ interface VideoData extends VideoLevelData {
   key?: string;
   enable_fallback?: boolean;
   autoplay?: boolean;
+}
+
+// Exemplar validation for a level.
+export interface ExemplarValidation {
+  enabled: boolean;
+  successMessage?: string;
+  failureMessage?: string;
 }
 
 // Python Lab specific property
