@@ -1,4 +1,5 @@
 import type {Meta, StoryFn} from '@storybook/react';
+import {within, expect} from '@storybook/test';
 
 import Carousel, {CarouselProps} from '../index';
 
@@ -10,8 +11,8 @@ export default {
   component: Carousel,
 } as Meta;
 
-// Create a slide
-const slideTemplate = (index: number) => (
+// Create a basic slide
+const basicSlideTemplate = (index: number) => (
   <div
     style={{
       height: '250px',
@@ -30,7 +31,7 @@ const slideTemplate = (index: number) => (
 );
 
 //
-// TEMPLATE
+// TEMPLATES
 //
 const SingleTemplate: StoryFn<CarouselProps> = componentArg => (
   <div
@@ -64,46 +65,144 @@ const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
 export const DefaultCarousel = SingleTemplate.bind({});
 DefaultCarousel.args = {
   carouselName: 'default-carousel',
-  children: Array.from({length: 6}, (_, index) => slideTemplate(index + 1)),
+  children: Array.from({length: 6}, (_, index) =>
+    basicSlideTemplate(index + 1),
+  ),
 };
 DefaultCarousel.parameters = {
   docs: {
     description: {
       story:
-        "This is the default carousel with navigation buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100%. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content. **Note:** Pagination dots are not showing here, but are showing in the documentation example above, or in the Default Carousel standalone story page. This is because both carousels share the same `carouselName` prop that is used on the pagination `el` prop in the Swiper component. This should show as expected outside of Storybook Docs.",
+        "This is the default carousel with navigation buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100%. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content. **Note:** Pagination dots are not showing here, but are showing in the documentation example above, or in the Default Carousel standalone story page. This is because both carousels share the same `carouselName` prop that is used on the pagination `el` prop in the Swiper component. This will work as expected outside of Storybook Docs.",
     },
   },
+};
+DefaultCarousel.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = canvas.queryByLabelText('Previous slide');
+  const navArrowNext = canvas.queryByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
+  const slides = [
+    'This is slide 1',
+    'This is slide 2',
+    'This is slide 3',
+    'This is slide 4',
+    'This is slide 5',
+    'This is slide 6',
+  ];
+
+  // check that the navigation arrows are showing
+  expect(navArrowPrev).toBeInTheDocument();
+  expect(navArrowNext).toBeInTheDocument();
+
+  // check that the pagination dots are showing
+  paginationDots.forEach(async dotLabel => {
+    const dot = await canvas.findByLabelText(dotLabel);
+    expect(dot).toBeInTheDocument();
+  });
+
+  // check if slide content is in the carousel
+  slides.forEach(async slideText => {
+    const heading = await canvas.findByText(slideText);
+    expect(heading).toBeInTheDocument();
+  });
 };
 
 export const CarouselWithoutNavArrows = SingleTemplate.bind({});
 CarouselWithoutNavArrows.args = {
   carouselName: 'carousel-without-nav-arrows',
   showNavArrows: false,
-  children: Array.from({length: 6}, (_, index) => slideTemplate(index + 1)),
+  children: Array.from({length: 6}, (_, index) =>
+    basicSlideTemplate(index + 1),
+  ),
 };
 CarouselWithoutNavArrows.parameters = {
   docs: {
     description: {
       story:
-        'This carousel does not show navigation arrows on the outside of the container.',
+        'This carousel does not show navigation arrows on the outside of the container, but will always show pagination dots. Arrows are also automatically hidden when the screen size is < 1024px.',
     },
   },
 };
+CarouselWithoutNavArrows.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = canvas.queryByLabelText('Previous slide');
+  const navArrowNext = canvas.queryByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
 
-export const CarouselWithThreeSlidesPerView = SingleTemplate.bind({});
-CarouselWithThreeSlidesPerView.args = {
+  // check that the navigation arrows are not showing
+  expect(navArrowPrev).not.toBeInTheDocument();
+  expect(navArrowNext).not.toBeInTheDocument();
+
+  // check that the pagination dots are showing
+  paginationDots.forEach(async dotLabel => {
+    const dot = await canvas.findByLabelText(dotLabel);
+    expect(dot).toBeInTheDocument();
+  });
+};
+
+export const CarouselWithCustomSlidesPerView = SingleTemplate.bind({});
+CarouselWithCustomSlidesPerView.args = {
   carouselName: 'carousel-with-3-slides',
   slidesPerView: 3,
   slidesPerGroup: 3,
-  children: Array.from({length: 6}, (_, index) => slideTemplate(index + 1)),
+  children: Array.from({length: 6}, (_, index) =>
+    basicSlideTemplate(index + 1),
+  ),
 };
-CarouselWithoutNavArrows.parameters = {
+CarouselWithCustomSlidesPerView.parameters = {
   docs: {
     description: {
       story:
-        'This carousel does not show navigation arrows on the outside of the container.',
+        'This carousel shows three slides per view, and three slides per group. This can be changed with the `slidesPerView` and `slidesPerGroup` props. These can be changed to be as little as one slide per view and group to show one individual slide at a time.',
     },
   },
+};
+CarouselWithCustomSlidesPerView.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = canvas.queryByLabelText('Previous slide');
+  const navArrowNext = canvas.queryByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2'];
+  const paginationDotThree = canvas.queryByLabelText('Go to slide 3');
+  const slides = [
+    'This is slide 1',
+    'This is slide 2',
+    'This is slide 3',
+    'This is slide 4',
+    'This is slide 5',
+    'This is slide 6',
+  ];
+
+  // check that the navigation arrows are showing
+  expect(navArrowPrev).toBeInTheDocument();
+  expect(navArrowNext).toBeInTheDocument();
+
+  // check that two pagination dots are showing
+  paginationDots.forEach(async dotLabel => {
+    const dot = await canvas.findByLabelText(dotLabel);
+    expect(dot).toBeInTheDocument();
+  });
+
+  // check that the third pagination dot is not showing
+  expect(paginationDotThree).not.toBeInTheDocument();
+
+  // check if slide content is in the carousel
+  slides.forEach(async slideText => {
+    const heading = await canvas.findByText(slideText);
+    expect(heading).toBeInTheDocument();
+  });
 };
 
 // TODO - Add Action Block carousel when Action Block component is ready
@@ -124,11 +223,11 @@ ActionBlockCarousel.parameters = {
   },
 };
 
-export const VideoCarousel = MultipleTemplate.bind({});
-VideoCarousel.args = {
+export const VideoCarousels = MultipleTemplate.bind({});
+VideoCarousels.args = {
   components: [
     {
-      carouselName: 'video-carousel-with-arrows',
+      carouselName: 'video-carousel-with-captions',
       children: [
         <Video
           videoTitle="Generative AI: Input & Pre-training"
@@ -153,7 +252,7 @@ VideoCarousel.args = {
       ],
     },
     {
-      carouselName: 'video-carousel-no-arrows',
+      carouselName: 'video-carousel-no-captions',
       children: [
         <Video
           videoTitle="Generative AI: Input & Pre-training"
@@ -179,13 +278,41 @@ VideoCarousel.args = {
     },
   ],
 };
-VideoCarousel.parameters = {
+VideoCarousels.parameters = {
   docs: {
     description: {
       story:
         'Videos carousels can show or hide captions based on the `showCaption` prop on the `Video` component. There are margins applied between carousels so this displays nicely in Storybook, but this is not a part of the component itself.',
     },
   },
+};
+VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = await canvas.findAllByLabelText('Previous slide');
+  const navArrowNext = await canvas.findAllByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2'];
+  const videoTitles = [
+    'Generative AI: Input & Pre-training',
+    'Generative AI: Storage & Embeddings',
+    'Generative AI: Processing & Neural Networks',
+    'Generative AI: Attention',
+  ];
+
+  // check that the navigation arrows are showing on both carousels
+  navArrowPrev.forEach(prevArrow => expect(prevArrow).toBeInTheDocument());
+  navArrowNext.forEach(nextArrow => expect(nextArrow).toBeInTheDocument());
+
+  // check that the pagination dots are showing on both carousels
+  paginationDots.forEach(async dotLabel => {
+    const dots = await canvas.findAllByLabelText(dotLabel);
+    dots.forEach(dot => expect(dot).toBeInTheDocument());
+  });
+
+  // check that videos are visible in both carousels
+  videoTitles.forEach(async videoTitle => {
+    const videos = await canvas.findAllByTitle(videoTitle);
+    videos.forEach(video => expect(video).toBeVisible());
+  });
 };
 
 export const ImageCarousel = MultipleTemplate.bind({});
@@ -197,24 +324,47 @@ ImageCarousel.args = {
         <img
           src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png"
           style={{width: '100%'}}
-          alt=""
+          alt="Slide 1"
         />,
         <img
           src="https://code.org/images/cs-stats/Slide2_STEM_CS.png"
           style={{width: '100%'}}
-          alt=""
+          alt="Slide 2"
         />,
         <img
           src="https://code.org/images/cs-stats/Slide_Students_Like_CS.png"
           style={{width: '100%'}}
-          alt=""
+          alt="Slide 3"
         />,
         <img
           src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png"
           style={{width: '100%'}}
-          alt=""
+          alt="Slide 4"
         />,
       ],
     },
   ],
+};
+ImageCarousel.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = canvas.getByLabelText('Previous slide');
+  const navArrowNext = canvas.getByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2'];
+  const imageSlides = ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'];
+
+  // check that the navigation arrows are showing
+  expect(navArrowPrev).toBeInTheDocument();
+  expect(navArrowNext).toBeInTheDocument();
+
+  // check that the pagination dots are showing
+  paginationDots.forEach(async dotLabel => {
+    const dots = await canvas.findAllByLabelText(dotLabel);
+    dots.forEach(dot => expect(dot).toBeInTheDocument());
+  });
+
+  // check that images are visible in carousel
+  imageSlides.forEach(async imageSlide => {
+    const images = await canvas.findAllByAltText(imageSlide);
+    images.forEach(image => expect(image).toBeVisible());
+  });
 };
