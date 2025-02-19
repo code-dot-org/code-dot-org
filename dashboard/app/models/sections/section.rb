@@ -643,7 +643,13 @@ class Section < ApplicationRecord
       'foundations-gen-ai-2024',
       'customizing-llms-2024'
     ].include?(script&.name) ||
-      unit_group&.name == 'exploring-gen-ai-2024'
+      [
+       'exploring-gen-ai-2024',
+       'computer-systems-and-devices-2024',
+       'programming-fundamentals-2024',
+       'programming-fundamentals-aitutor-2024',
+       'networks-and-the-internet-2024'
+      ].include?(unit_group&.name)
   end
 
   def reset_code_review_groups(new_groups)
