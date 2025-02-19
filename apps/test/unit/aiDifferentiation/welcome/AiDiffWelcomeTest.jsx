@@ -157,12 +157,18 @@ describe('AiDiffWelcome', () => {
       />
     );
 
+    screen.debug();
+
     fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
+    screen.debug();
 
     fireEvent.click(screen.getByRole('link', {name: 'Skip the tutorial'}));
+    screen.debug();
 
-    await waitFor(() =>
-      expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false)
+    await waitFor(
+      () => expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false),
+      {timeout: 100}
     );
+    screen.debug();
   });
 });
