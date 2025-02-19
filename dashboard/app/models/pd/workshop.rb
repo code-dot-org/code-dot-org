@@ -26,6 +26,9 @@
 #  module                 :string(255)
 #  name                   :string(255)
 #  participant_group_type :string(255)
+#  description            :text(65535)
+#  registration_link      :text(65535)
+#  hidden                 :boolean
 #
 # Indexes
 #
@@ -55,6 +58,8 @@ class Pd::Workshop < ApplicationRecord
 
   serialized_attrs [
     'fee',
+    'grades',
+    'prereq',
 
     # Indicates that this workshop will be conducted virtually, which triggers
     # a different, virtual-specific post-workshop survey.

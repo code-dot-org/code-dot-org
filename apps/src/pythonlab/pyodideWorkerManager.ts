@@ -61,7 +61,10 @@ const setUpPyodideWorker = () => {
         consoleManager?.writeConsoleMessage(message);
         break;
       case 'run_complete':
-        consoleManager?.writeSystemMessage('Program completed.', appName);
+        consoleManager?.writeSystemMessage(
+          pythonlabI18n.programCompleted(),
+          appName
+        );
         delete callbacks[id];
         onSuccess(event.data);
         break;
@@ -205,7 +208,7 @@ const restartPyodideIfProgramIsRunning = () => {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-    consoleManager?.writeSystemMessage('Program stopped.', appName);
+    consoleManager?.writeSystemMessage(pythonlabI18n.programStopped(), appName);
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');

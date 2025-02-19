@@ -21,6 +21,16 @@
   flex-direction: column;
   align-items: stretch;
   text-align: center;
+
+  & h1 {
+    color: $light_white;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    color: var(--brand-aqua-50, #3CFFF7)
+  }
 }
 
 
@@ -30,16 +40,6 @@
   object-fit: cover;
   object-position: top left;
   align-self: center;
-}
-
-.getStartedTitle {
-  color: $light_white;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.getStartedSubtitle {
-  color: var(--brand-aqua-50, #3CFFF7)
 }
 
 .selectOption {
@@ -137,6 +137,10 @@
   &:active {
     border: 2px solid $light_gray_200 !important;
   }
+
+  &:hover {
+    background-color: #E4E6E9 !important;
+  }
 }
 
 .optionRowWithPic {
@@ -169,6 +173,10 @@
   margin-right: 12px;
   margin-bottom: 12px;
   gap: 8px;
+
+  & p {
+    margin-bottom: 0;
+  }
 }
 
 .optionWithPicTop {
@@ -177,10 +185,11 @@
   margin-right: 12px;
   margin-bottom: 12px;
   display: flex;
-}
 
-.optionTitle {
-  margin-bottom: 0;
+  & p {
+    margin-bottom: 0;
+    text-align: start;
+  }
 }
 
 .optionDescription {
@@ -189,7 +198,7 @@
 
 .selectedOption {
   border: 4px solid #3CFFF7;
-  width: calc(100% + 8px);
+  width: calc(100% + 6px);
 
   &:active {
     border: 4px solid #3CFFF7 !important;
@@ -221,16 +230,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 36px 36px 36px;
+  margin: 0 36px 16px 36px;
+  text-align: center;
+
+  & h3 {
+    margin-bottom: 4px;
+  }
+
+  & h6 {
+    color: $neutral_dark80;
+    margin-bottom: 0;
+  }
 }
 
-.endPageSubTitle {
-  margin-top: 16px;
-  color: $neutral_dark80;
-}
 
-.botConfetti {
-  width: 132px;
+.botHappy {
+  width: 94px;
 }
 
 .confetti {
