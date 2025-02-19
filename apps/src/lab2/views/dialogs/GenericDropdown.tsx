@@ -2,7 +2,7 @@ import {
   SimpleDropdown,
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect} from 'react';
 
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
@@ -19,7 +19,6 @@ export type GenericDropdownProps = Pick<GenericDialogProps, 'title'> & {
   confirmText?: string;
   neutralText?: string;
   handleNeutral?: () => void;
-  validateInput?: (option: string) => string | undefined;
 };
 
 type GenericDropdownBodyProps = {
@@ -28,19 +27,11 @@ type GenericDropdownBodyProps = {
   selectedValue: SimpleDropdownProps['selectedValue'];
   items: SimpleDropdownProps['items'];
   handleInputChange: (newInput: string) => void;
-  errorMessage?: string;
 };
 
 const GenericDropdownBody: React.FunctionComponent<
   GenericDropdownBodyProps
-> = ({
-  message,
-  dropdownLabel,
-  handleInputChange,
-  items,
-  selectedValue,
-  errorMessage,
-}) => {
+> = ({message, dropdownLabel, handleInputChange, items, selectedValue}) => {
   return (
     <>
       {message && <BodyTwoText>{message}</BodyTwoText>}
@@ -53,7 +44,6 @@ const GenericDropdownBody: React.FunctionComponent<
           handleInputChange(e.target.value);
         }}
         labelText={dropdownLabel}
-        errorMessage={errorMessage}
       />
     </>
   );
@@ -63,32 +53,24 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
   title,
   message,
   handleConfirm,
+  handleNeutral,
   handleCancel,
   selectedValue,
   items,
   dropdownLabel,
   confirmText,
   neutralText,
-  handleNeutral,
-  validateInput = () => undefined,
 }) => {
   const {promiseArgs, setPromiseArgs} = useDialogControl();
-  const [errorMessage, setErrorMessage] = useState<string | undefined>(
-    undefined
-  );
 
   const handleInputChange = useCallback(
     (newInput: string | undefined) => {
       setPromiseArgs(newInput);
-      setErrorMessage(validateInput(newInput ?? ''));
     },
-    [setPromiseArgs, validateInput]
+    [setPromiseArgs]
   );
 
-  useEffect(
-    () => handleInputChange(selectedValue),
-    [handleInputChange, selectedValue]
-  );
+  useEffect(() => handleInputChange(selectedValue), []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const buttons = {
     confirm: {
@@ -112,7 +94,6 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
           selectedValue={promiseArgs as string}
           items={items}
           handleInputChange={handleInputChange}
-          errorMessage={errorMessage}
         />
       }
       buttons={buttons}

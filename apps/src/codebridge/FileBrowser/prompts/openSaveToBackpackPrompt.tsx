@@ -1,4 +1,4 @@
-import {getFileNameCopy} from '@codebridge/utils';
+import {getFileNameWithNumberSuffix} from '@codebridge/utils';
 
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {
@@ -26,7 +26,7 @@ export const openSaveToBackpackPrompt = async ({
     async (filenames: string[]) => {
       // Check if filename is a duplicate of a saved file in backpack.
       const isDuplicateFileName = filenames.includes(file.name);
-      const fileNameCopy = getFileNameCopy(file.name);
+      const fileNameCopy = getFileNameWithNumberSuffix(file.name);
       const dialog = isDuplicateFileName
         ? {
             type: DialogType.GenericConfirmation,

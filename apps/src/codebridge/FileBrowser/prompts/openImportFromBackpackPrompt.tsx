@@ -1,6 +1,6 @@
 import {NewFileFunction} from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {validateFileName, getFileNameCopy} from '@codebridge/utils';
+import {validateFileName, getFileNameWithNumberSuffix} from '@codebridge/utils';
 
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {
@@ -48,17 +48,6 @@ export const openImportFromBackpackPrompt = async ({
           items: savedFilesInBackpack,
           selectedValue: savedFilesInBackpack[0].value,
           neutralText: 'Delete file from backpack',
-          validateInput: (fileName: string) =>
-            validateFileName({
-              fileName,
-              folderId: DEFAULT_FOLDER_ID,
-              projectFiles,
-              isStartMode: false,
-              validationFile,
-              customErrorMessage: `This backpack file has the same name as an existing file in the root folder of your project so will be imported as ${getFileNameCopy(
-                fileName
-              )}`,
-            }),
         });
 
         if (results.type === 'cancel') {
@@ -66,16 +55,20 @@ export const openImportFromBackpackPrompt = async ({
         }
         const selectedBackpackFileName = extractUserInput(results, true);
         if (results.type === 'confirm') {
-          const validationError = validateFileName({
-            fileName: selectedBackpackFileName,
-            folderId: DEFAULT_FOLDER_ID,
-            projectFiles,
-            isStartMode: false,
-            validationFile,
-          });
-          const selectedBackpackFileNameCopy = validationError
-            ? getFileNameCopy(selectedBackpackFileName)
-            : undefined;
+          let newFileName = selectedBackpackFileName;
+          while (
+            validateFileName({
+              fileName: newFileName,
+              folderId: DEFAULT_FOLDER_ID,
+              projectFiles,
+              isStartMode: false,
+              validationFile,
+            })
+          ) {
+            newFileName = getFileNameWithNumberSuffix(newFileName);
+          }
+          const selectedBackpackFileNameCopy =
+            newFileName !== selectedBackpackFileName ? newFileName : undefined;
 
           backpackApi.fetchFile(
             selectedBackpackFileName,
