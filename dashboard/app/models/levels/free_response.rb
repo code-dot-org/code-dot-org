@@ -76,6 +76,6 @@ class FreeResponse < Level
   end
 
   def stay_on_level?
-    !!try(:stay_on_level_after_submit)
+    !!try(:stay_on_level_after_submit)&.to_bool
   end
 end
