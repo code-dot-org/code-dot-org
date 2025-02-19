@@ -1,5 +1,6 @@
 import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 
 import AiDiffWelcome from '@cdo/apps/aiDifferentiation/welcome/AiDiffWelcome';
 
@@ -157,18 +158,16 @@ describe('AiDiffWelcome', () => {
       />
     );
 
-    screen.debug();
-
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
-    screen.debug();
-
-    fireEvent.click(screen.getByRole('link', {name: 'Skip the tutorial'}));
-    screen.debug();
+    await act(async () => {
+      fireEvent.click(await screen.findByRole('button', {name: 'Get Started'}));
+      fireEvent.click(
+        await screen.findByRole('link', {name: 'Skip the tutorial'})
+      );
+    });
 
     await waitFor(
       () => expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false),
       {timeout: 100}
     );
-    screen.debug();
   });
 });
