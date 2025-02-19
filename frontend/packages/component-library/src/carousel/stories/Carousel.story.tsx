@@ -73,7 +73,7 @@ DefaultCarousel.parameters = {
   docs: {
     description: {
       story:
-        "This is the default carousel with navigation buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100%. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content. **Note:** Pagination dots are not showing here, but are showing in the documentation example above, or in the Default Carousel standalone story page. This is because both carousels share the same `carouselName` prop that is used on the pagination `el` prop in the Swiper component. This will work as expected outside of Storybook Docs.",
+        "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content. **Note:** Pagination dots are not showing here, but are showing in the documentation example above, or in the Default Carousel standalone story page. This is because both carousels share the same `carouselName` prop that is used on the pagination `el` prop in the Swiper component. This will work as expected outside of Storybook Docs.",
     },
   },
 };
@@ -124,7 +124,7 @@ CarouselWithoutNavArrows.parameters = {
   docs: {
     description: {
       story:
-        'This carousel does not show navigation arrows on the outside of the container, but will always show pagination dots. Arrows are also automatically hidden when the screen size is < 1024px.',
+        'This carousel does not show navigation arrow buttons, but will always show pagination dots. Navigation arrow buttons are also automatically hidden when the screen size is < 1024px.',
     },
   },
 };
@@ -146,6 +146,57 @@ CarouselWithoutNavArrows.play = async ({
   paginationDots.forEach(async dotLabel => {
     const dot = await canvas.findByLabelText(dotLabel);
     expect(dot).toBeInTheDocument();
+  });
+};
+
+export const CarouselWithTouchMove = SingleTemplate.bind({});
+CarouselWithTouchMove.args = {
+  carouselName: 'carousel-with-touch-move',
+  allowTouchMove: true,
+  children: Array.from({length: 6}, (_, index) =>
+    basicSlideTemplate(index + 1),
+  ),
+};
+CarouselWithTouchMove.parameters = {
+  docs: {
+    description: {
+      story:
+        'This carousel allows slides to be moved by dragging/touching using the `allowTouchMove` prop. This is disabled by default and should not be used with Video carousels.',
+    },
+  },
+};
+CarouselWithTouchMove.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = canvas.queryByLabelText('Previous slide');
+  const navArrowNext = canvas.queryByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
+  const slides = [
+    'This is slide 1',
+    'This is slide 2',
+    'This is slide 3',
+    'This is slide 4',
+    'This is slide 5',
+    'This is slide 6',
+  ];
+
+  // check that the navigation arrows are showing
+  expect(navArrowPrev).toBeInTheDocument();
+  expect(navArrowNext).toBeInTheDocument();
+
+  // check that the pagination dots are showing
+  paginationDots.forEach(async dotLabel => {
+    const dot = await canvas.findByLabelText(dotLabel);
+    expect(dot).toBeInTheDocument();
+  });
+
+  // check if slide content is in the carousel
+  slides.forEach(async slideText => {
+    const heading = await canvas.findByText(slideText);
+    expect(heading).toBeInTheDocument();
   });
 };
 
@@ -205,7 +256,7 @@ CarouselWithCustomSlidesPerView.play = async ({
   });
 };
 
-// TODO - Add Action Block carousel when Action Block component is ready
+// TODO CMS-360 - Add Action Block carousel when Action Block component is ready
 export const ActionBlockCarousel = MultipleTemplate.bind({});
 ActionBlockCarousel.args = {
   components: [

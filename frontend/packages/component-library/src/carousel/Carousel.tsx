@@ -21,6 +21,10 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   slidesPerView?: number;
   /** Number of slides per group */
   slidesPerGroup?: number;
+  /** Allow touch move */
+  allowTouchMove?: boolean;
+  /** Auto height */
+  autoHeight?: boolean;
   /** Show navigation arrows */
   showNavArrows?: boolean;
   /** Carousel content */
@@ -46,6 +50,8 @@ const Carousel: React.FC<CarouselProps> = ({
   showNavArrows = true,
   slidesPerView = 2,
   slidesPerGroup = 2,
+  allowTouchMove = false,
+  autoHeight = false,
   children,
   className,
   ...HTMLAttributes
@@ -59,8 +65,8 @@ const Carousel: React.FC<CarouselProps> = ({
         {/* Swiper carousel */}
         <Swiper
           modules={[Navigation, Pagination, A11y]}
-          autoHeight={false}
-          allowTouchMove={false}
+          allowTouchMove={allowTouchMove}
+          autoHeight={autoHeight}
           spaceBetween={24}
           navigation={{
             nextEl: `.${carouselName}-next`,
