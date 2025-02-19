@@ -31,10 +31,42 @@ export const openImportFromBackpackPrompt = async ({
   projectFiles,
   validationFile,
 }: OpenImportFromBackpackPromptArgsType) => {
+  const handleError = (message: string) => () => {
+    // TODO: send analytics / add logging.
+    console.error(message);
+  };
+  // Delete a file from the backpack.
+  const handleDelete = async (filename: string) => {
+    backpackApi.deleteFiles(
+      [filename],
+      handleError(`Error in deleting file ${filename}`),
+      () => console.log(`Deleted file ${filename}`)
+    );
+  };
+
+  // Fetch file content from backpack and then update or create a project file.
+  const fetchFileContentAndProcess = (
+    fileName: string,
+    newFileName?: string
+  ) => {
+    backpackApi.fetchFile(
+      fileName,
+      handleError(`Error in fetching file ${fileName}`),
+      (fileContent: string) => {
+        if (newFileName) {
+          newFile({fileName: newFileName, contents: fileContent});
+        } else {
+          const fileId = Object.keys(projectFiles).find(
+            id => projectFiles[id].name === fileName
+          );
+          if (fileId) saveFile(fileId, fileContent);
+        }
+      }
+    );
+  };
+
   backpackApi.getFileList(
-    () => {
-      console.log('Error in getting backpack file list.');
-    },
+    handleError('Error in getting backpack file list.'),
     async (filenames: string[]) => {
       if (filenames.length === 0) {
         dialogControl?.showDialog({
@@ -45,6 +77,7 @@ export const openImportFromBackpackPrompt = async ({
       } else {
         const savedFilesInBackpack: GenericDropdownProps['items'] =
           filenames.map(filename => ({value: filename, text: filename}));
+
         const results = await dialogControl?.showDialog({
           type: DialogType.GenericDropdown,
           title: 'Files Saved in Backpack',
@@ -55,10 +88,10 @@ export const openImportFromBackpackPrompt = async ({
           neutralText: 'Delete file from backpack',
         });
 
-        if (results.type === 'cancel') {
-          return;
-        }
+        if (results.type === 'cancel') return;
+
         const selectedBackpackFileName = extractUserInput(results, true);
+        // Import backpack file to project.
         if (results.type === 'confirm') {
           let newFileName = selectedBackpackFileName;
           while (
@@ -72,40 +105,35 @@ export const openImportFromBackpackPrompt = async ({
           ) {
             newFileName = getFileNameWithNumberSuffix(newFileName);
           }
-          const isDuplicateFileName = newFileName !== selectedBackpackFileName;
-
-          // If duplicate, show another dialog to either replace or rename.
-          // If not a duplicate file name, fetch file.
-          if (isDuplicateFileName) {
+          // If the backpack file has the same name as an existing project file, show another
+          // dialog to either replace (overwrite) the exisiting project file or import the backpack
+          // file with a different name (newFileName).
+          // Otherwise, fetch backpack file and import to project.
+          if (newFileName !== selectedBackpackFileName) {
             dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
               title: 'Import from backpack',
-              message: `This backpack file has the same name as an existing file in the root folder of your project. Would you like to replace ${selectedBackpackFileName} with the file from your backpack or import the backpack file as ${newFileName}?`,
+              message: `Would you like to replace the current file with this file or import this file as ${newFileName}?`,
               confirmText: 'Replace existing file',
               neutralText: `Import as ${newFileName}`,
               handleConfirm: () =>
-                fetchFileContentSaveFile(
-                  selectedBackpackFileName,
-                  projectFiles
-                ),
+                fetchFileContentAndProcess(selectedBackpackFileName),
               handleNeutral: () =>
-                fetchFileContentCreateNewFile(
+                fetchFileContentAndProcess(
                   selectedBackpackFileName,
                   newFileName
                 ),
             });
           } else {
-            fetchFileContentCreateNewFile(
-              selectedBackpackFileName,
-              selectedBackpackFileName
-            );
+            fetchFileContentAndProcess(selectedBackpackFileName);
           }
         } else if (results.type === 'neutral') {
+          // User selects to delete selected file from backpack.
           // Open confirm delete dialog.
           dialogControl?.showDialog({
             type: DialogType.GenericConfirmation,
             title: 'Delete from backpack',
-            message: `You are about to delete ${selectedBackpackFileName} to your backpack.`,
+            message: `You are about to delete ${selectedBackpackFileName} from your backpack.`,
             confirmText: 'Delete',
             handleConfirm: () => handleDelete(selectedBackpackFileName),
           });
@@ -113,53 +141,4 @@ export const openImportFromBackpackPrompt = async ({
       }
     }
   );
-  const handleDelete = async (filename: string) => {
-    backpackApi.deleteFiles(
-      [filename],
-      () => console.log(`Error in deleting file ${filename}`),
-      () => console.log(`Deleted file ${filename}`)
-    );
-  };
-
-  const fetchFileContentCreateNewFile = (
-    fileName: string,
-    newFileName: string
-  ) => {
-    backpackApi.fetchFile(
-      fileName,
-      () => {
-        console.log('Error in fetching file.');
-      },
-      (fileContent: string) => {
-        newFile({
-          fileName: newFileName,
-          contents: fileContent,
-        });
-      }
-    );
-  };
-
-  const fetchFileContentSaveFile = (
-    fileName: string,
-    projectFiles: MultiFileSource['files']
-  ) => {
-    backpackApi.fetchFile(
-      fileName,
-      () => {
-        console.log('Error in fetching file.');
-      },
-      (fileContent: string) => {
-        // Get file id of original file.
-        let selectedFileId;
-        for (const fileId in projectFiles) {
-          if (projectFiles[fileId].name === fileName) {
-            selectedFileId = fileId;
-          }
-        }
-        if (selectedFileId) {
-          saveFile(selectedFileId, fileContent);
-        }
-      }
-    );
-  };
 };
