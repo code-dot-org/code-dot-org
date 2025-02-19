@@ -105,7 +105,7 @@ DefaultCarousel.play = async ({
     expect(dot).toBeInTheDocument();
   });
 
-  // check if slide content is in the carousel
+  // check that slides are in the carousel
   slides.forEach(async slideText => {
     const heading = await canvas.findByText(slideText);
     expect(heading).toBeInTheDocument();
@@ -193,7 +193,7 @@ CarouselWithTouchMove.play = async ({
     expect(dot).toBeInTheDocument();
   });
 
-  // check if slide content is in the carousel
+  // check that slides are in the carousel
   slides.forEach(async slideText => {
     const heading = await canvas.findByText(slideText);
     expect(heading).toBeInTheDocument();
@@ -249,7 +249,7 @@ CarouselWithCustomSlidesPerView.play = async ({
   // check that the third pagination dot is not showing
   expect(paginationDotThree).not.toBeInTheDocument();
 
-  // check if slide content is in the carousel
+  // check that slides are in the carousel
   slides.forEach(async slideText => {
     const heading = await canvas.findByText(slideText);
     expect(heading).toBeInTheDocument();

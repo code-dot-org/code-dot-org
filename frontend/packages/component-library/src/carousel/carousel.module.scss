@@ -11,12 +11,12 @@
   --swiper-pagination-bullet-horizontal-gap: 0.25rem;
 }
 
+// Carousel common styles
 .carouselWrapper {
   max-width: 100%;
   margin: 0 auto;
 }
 
-// Carousel common styles
 .carousel {
   position: relative;
   display: flex;
@@ -25,6 +25,7 @@
 
 // Navigation button styles
 .navArrowWrapper {
+
   // Hide arrows when screen size is <1024px
   @media (max-width: 1024px) {
     display: none;
