@@ -5,7 +5,6 @@ import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
   useFileUploader,
@@ -22,16 +21,11 @@ export const FileBrowserHeaderPopUpButton = () => {
   } = useCodebridgeContext();
   const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(source.files);
-  const validationFile = useAppSelector(
-    state => state.lab.levelProperties?.validationFile
-  );
 
   const {startFileUpload, FileUploaderComponent} = useFileUploader({
     callback: handleFileUpload,
     errorCallback: uploadErrorCallback,
     validMimeTypes,
-    source,
-    validationFile,
   });
   return (
     <>
