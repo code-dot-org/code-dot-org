@@ -212,6 +212,7 @@ export default class MusicBlocklyWorkspace {
     addToolboxBlocksToWorkspace(toolbox.contents, workspace);
 
     validateBlockCategories(workspace);
+    workspace.cleanUp();
     workspace.addChangeListener(e => {
       if (e.type === Blockly.Events.BLOCK_MOVE) {
         validateBlockCategories(workspace);

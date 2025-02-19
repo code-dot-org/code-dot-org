@@ -32,8 +32,10 @@ export default class BackpackClientApi {
     if (!this.hasBackpack()) {
       onError();
     }
+    // Cache bust suffix ensures we always get the latest version of the file.
+    const cacheBustSuffix = `?t=${Date.now()}`;
     this.backpackApi.fetch(
-      this.channelId + '/' + filename,
+      this.channelId + '/' + filename + cacheBustSuffix,
       (error, data) => {
         if (error) {
           onError();

@@ -94,3 +94,11 @@ export const getDefaultCodebridgeContext = () => {
   };
   return context;
 };
+
+export const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
+  jest.spyOn(document, 'querySelector').mockReturnValue({
+    dataset: {
+      appoptions: JSON.stringify(innerAppOptions),
+    },
+  } as unknown as Element);
+};
