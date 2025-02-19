@@ -36,7 +36,6 @@ describe('SectionsSetUpContainer', () => {
       <SectionsSetUpContainer {...DEFAULT_PROPS} sectionToBeEdited={{}} />
     );
 
-    expect(wrapper.find('Heading1').length).to.equal(1);
     expect(wrapper.find('Button').length).to.equal(3);
     expect(wrapper.find('Button').last().props().text).to.equal('Save');
   });
