@@ -24,13 +24,13 @@ import moduleStyles from './lab-views-renderer.module.scss';
 const hideExtraLinks = queryParams('hide-extra-links') === 'true';
 
 const LabViewsRenderer: React.FunctionComponent = () => {
-  const currentAppName = useAppSelector(
-    state => state.lab.levelProperties?.appName
-  );
-  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
-  const exemplarSources = useAppSelector(
-    state => state.lab.levelProperties?.exemplarSources
-  );
+  const levelProperties = useAppSelector(state => state.lab.levelProperties);
+  const initialSources = useAppSelector(state => state.lab.initialSources);
+
+  const currentAppName = levelProperties?.appName;
+  const exemplarSources = levelProperties?.exemplarSources;
+  const levelId = levelProperties?.id;
+
   const isBlocked = useAppSelector(state => state.lab.isBlocked);
   const isProjectValidator = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.PROJECT_VALIDATOR)
@@ -69,7 +69,10 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     <ProgressContainer key={currentAppName} appType={currentAppName}>
       <div id={`lab2-${currentAppName}`} className={moduleStyles.labContainer}>
         <Suspense fallback={<Loading isLoading={true} />}>
-          <LabView />
+          <LabView
+            levelProperties={levelProperties}
+            initialSources={initialSources}
+          />
         </Suspense>
         {!hideExtraLinks && levelId && <ExtraLinks levelId={levelId} />}
       </div>
