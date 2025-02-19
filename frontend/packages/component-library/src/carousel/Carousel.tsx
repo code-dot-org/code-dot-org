@@ -17,6 +17,10 @@ import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
 export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   /** Carousel custom className (required) */
   carouselName: string;
+  /** Number of slides per view */
+  slidesPerView?: number;
+  /** Number of slides per group */
+  slidesPerGroup?: number;
   /** Show navigation arrows */
   showNavArrows?: boolean;
   /** Carousel content */
@@ -40,6 +44,8 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
 const Carousel: React.FC<CarouselProps> = ({
   carouselName = 'carousel-01',
   showNavArrows = true,
+  slidesPerView = 2,
+  slidesPerGroup = 2,
   children,
   className,
   ...HTMLAttributes
@@ -71,11 +77,19 @@ const Carousel: React.FC<CarouselProps> = ({
               slidesPerView: 2,
               slidesPerGroup: 2,
             },
+            // when window width is >= 1024px
+            1024: {
+              slidesPerView: slidesPerView,
+              slidesPerGroup: slidesPerGroup,
+            },
           }}
         >
           {Array.isArray(children)
             ? children.map((child, index) => (
-                <SwiperSlide key={index} className={className}>
+                <SwiperSlide
+                  key={`${carouselName}-${index.toString()}`}
+                  className={className}
+                >
                   {child}
                 </SwiperSlide>
               ))

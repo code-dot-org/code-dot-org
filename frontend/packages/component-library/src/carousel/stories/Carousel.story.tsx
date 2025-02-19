@@ -10,10 +10,12 @@ export default {
   component: Carousel,
 } as Meta;
 
+// Create a slide
 const slideTemplate = (index: number) => (
   <div
     style={{
       height: '250px',
+      width: '100%',
       background: '#EEE',
       display: 'flex',
       alignItems: 'center',
@@ -30,19 +32,25 @@ const slideTemplate = (index: number) => (
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<CarouselProps> = args => (
-  <div style={{width: '800px', margin: '0 auto'}}>
-    <Carousel {...args} />
+const SingleTemplate: StoryFn<CarouselProps> = componentArg => (
+  <div
+    style={{maxWidth: '800px', margin: '0 auto'}}
+    key={componentArg.carouselName}
+  >
+    <Carousel {...componentArg} />
   </div>
 );
 
 const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
   <>
-    {args.components?.map((componentArg, index) => (
-      <div style={{width: '800px', margin: '0 auto', marginBlock: '2rem'}}>
+    {args.components?.map(componentArg => (
+      <div
+        style={{maxWidth: '800px', margin: '0 auto', marginBlock: '2rem'}}
+        key={componentArg.carouselName}
+      >
         <Carousel
-          key={index}
           {...componentArg}
+          key={componentArg.carouselName}
           children={componentArg.children}
         />
       </div>
@@ -82,6 +90,22 @@ CarouselWithoutNavArrows.parameters = {
   },
 };
 
+export const CarouselWithThreeSlidesPerView = SingleTemplate.bind({});
+CarouselWithThreeSlidesPerView.args = {
+  carouselName: 'carousel-with-3-slides',
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  children: Array.from({length: 6}, (_, index) => slideTemplate(index + 1)),
+};
+CarouselWithoutNavArrows.parameters = {
+  docs: {
+    description: {
+      story:
+        'This carousel does not show navigation arrows on the outside of the container.',
+    },
+  },
+};
+
 // TODO - Add Action Block carousel when Action Block component is ready
 export const ActionBlockCarousel = MultipleTemplate.bind({});
 ActionBlockCarousel.args = {
@@ -104,7 +128,7 @@ export const VideoCarousel = MultipleTemplate.bind({});
 VideoCarousel.args = {
   components: [
     {
-      carouselName: 'video-carousel',
+      carouselName: 'video-carousel-with-arrows',
       children: [
         <Video
           videoTitle="Generative AI: Input & Pre-training"
@@ -129,7 +153,7 @@ VideoCarousel.args = {
       ],
     },
     {
-      carouselName: 'image-carousel',
+      carouselName: 'video-carousel-no-arrows',
       children: [
         <Video
           videoTitle="Generative AI: Input & Pre-training"
@@ -159,7 +183,7 @@ VideoCarousel.parameters = {
   docs: {
     description: {
       story:
-        'Videos carousels can show or hide captions. There are bottom margins applied between carousels so this displays nicely in Storybook. This is not a part of the component itself.',
+        'Videos carousels can show or hide captions based on the `showCaption` prop on the `Video` component. There are margins applied between carousels so this displays nicely in Storybook, but this is not a part of the component itself.',
     },
   },
 };
