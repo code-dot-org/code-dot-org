@@ -972,6 +972,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     rimraf: "npm:^6.0.1"
+    swiper: "npm:^11.2.4"
     tsup: "npm:^8.3.5"
     typescript-eslint: "npm:^8.15.0"
   peerDependencies:
@@ -1023,7 +1024,6 @@ __metadata:
     "@storybook/test-runner": "npm:^0.19.1"
     prettier: "npm:3.3.3"
     rimraf: "npm:^6.0.1"
-    swiper: "npm:^11.2.3"
     turbo: "npm:^2.3.0"
     typescript: "npm:5.5.4"
   languageName: unknown
@@ -15640,10 +15640,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:^11.2.3":
-  version: 11.2.3
-  resolution: "swiper@npm:11.2.3"
-  checksum: 10c0/7759f377a13e104a97a4d653647eba2008851b4b7da8bddcbcc90914621447c8f8f26e28138a2edb492ddcc77bc1697f3e0378354bd6e069a36fd3902de6c453
+"swiper@npm:^11.2.4":
+  version: 11.2.4
+  resolution: "swiper@npm:11.2.4"
+  checksum: 10c0/911c405a2d7feae9ac59d8b6683c40e50f6f5be8ca5c5e44673647c37e319a564417b813dc79a09da034e8fe927b2883253fe72cd8efecfcc09247f669fd5a30
   languageName: node
   linkType: hard
 

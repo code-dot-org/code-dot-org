@@ -310,7 +310,8 @@
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "swiper": "^11.2.4"
   },
   "devDependencies": {
     "@code-dot-org/component-library-styles": "workspace:*",
