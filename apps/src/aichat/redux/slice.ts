@@ -6,7 +6,6 @@ import {ModalTypes} from '../constants';
 import {
   AiCustomizations,
   ChatEvent,
-  ChatMessage,
   LevelAichatSettings,
   ModelCardInfo,
   SaveType,
@@ -14,8 +13,10 @@ import {
   Visibility,
   isModelUpdate,
   isNotification,
-  isChatMessage,
   FeedbackValue,
+  ServerChatEvent,
+  isCompletedChatMessage,
+  PendingChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -48,7 +49,10 @@ const aichatSlice = createSlice({
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
     },
-    setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
+    setStudentChatHistory: (
+      state,
+      action: PayloadAction<ServerChatEvent[]>
+    ) => {
       state.studentChatHistory = action.payload;
     },
     setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
@@ -74,7 +78,7 @@ const aichatSlice = createSlice({
         message => message.id === action.payload.id
       );
 
-      if (messageToUpdate && isChatMessage(messageToUpdate)) {
+      if (messageToUpdate && isCompletedChatMessage(messageToUpdate)) {
         messageToUpdate.teacherFeedback = action.payload.feedback;
       }
     },
@@ -82,7 +86,10 @@ const aichatSlice = createSlice({
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
     },
-    setChatMessagePending: (state, action: PayloadAction<ChatMessage>) => {
+    setChatMessagePending: (
+      state,
+      action: PayloadAction<PendingChatMessage>
+    ) => {
       state.chatMessagePending = action.payload;
     },
     clearChatMessagePending: state => (state.chatMessagePending = undefined),
@@ -214,7 +221,7 @@ const aichatSlice = createSlice({
 // List keys of chat events to look through when removing a message.
 const messageListKeys = ['chatEventsPast', 'chatEventsCurrent'] as const;
 
-const getUpdateMessageLocation = (id: number, state: AichatState) => {
+const getUpdateMessageLocation = (removeId: number, state: AichatState) => {
   for (const messageListKey of messageListKeys) {
     const messageList = state[messageListKey];
 
@@ -225,8 +232,8 @@ const getUpdateMessageLocation = (id: number, state: AichatState) => {
     // and start a new session, see clearChatMessages.
     const itemToRemovePosition = messageList.findIndex(
       message =>
-        (isModelUpdate(message) && message.id === id) ||
-        (isNotification(message) && message.id === id)
+        (isModelUpdate(message) && message.removeId === removeId) ||
+        (isNotification(message) && message.removeId === removeId)
     );
 
     if (itemToRemovePosition >= 0) {

@@ -1,0 +1,16 @@
+{
+  "source": {
+    "files": {
+      "0": {
+        "id": "0",
+        "name": "main.py",
+        "language": "py",
+        "contents": "print('Hello world!')",
+        "folderId": "0",
+        "active": true,
+        "open": true
+      }
+    },
+    "folders": {}
+  }
+}

@@ -68,7 +68,9 @@
   margin-right: 4px;
 }
 
-.button-kebab {
+// This is duplicated to ensure it takes specificity over the default
+// button styles. Specifically so that the display is none by default.
+.button-kebab.button-kebab {
   display: none;
   height: 20px;
   width: 20px;
