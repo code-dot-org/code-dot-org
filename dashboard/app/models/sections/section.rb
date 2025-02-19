@@ -637,6 +637,8 @@ class Section < ApplicationRecord
   end
 
   def assigned_ai_chat?
+    # Our generative AI courses have scripts that can be assigned individually,
+    # whereas CS and AI Foundations (CSAIF) does not.
     gen_ai_scripts = %w[
       exploring-gen-ai1-2024
       exploring-gen-ai2-2024
