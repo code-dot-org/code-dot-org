@@ -1,9 +1,8 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
-import {isDuplicateFileName} from '@codebridge/utils';
+import {validateFileName as validateCodebridgeFileName} from '@codebridge/utils';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {
   useFileUploader as useLab2FileUploader,
@@ -52,18 +51,13 @@ export const useFileUploader = (
 
   const validateFileName = useCallback(
     (fileName: string) => {
-      if (
-        isDuplicateFileName({
-          fileName,
-          folderId,
-          projectFiles: source.files,
-          isStartMode,
-          validationFile,
-        })
-      ) {
-        return codebridgeI18n.duplicateFileError({fileName});
-      }
-      return undefined;
+      return validateCodebridgeFileName({
+        fileName,
+        folderId,
+        projectFiles: source.files,
+        isStartMode,
+        validationFile,
+      });
     },
     [folderId, source.files, isStartMode, validationFile]
   );
