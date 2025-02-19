@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Links
 
-#### Links are naturally set to be underlined and in a different color in Level Builder. Do not change these settings.
+#### Links are naturally set in a different color in Level Builder. Do not change these settings.
 
 ## Link Settings
 

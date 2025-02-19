@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
 import {getNoteName} from '../utils/Notes';
 import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
-import TunePanel, {TunePanelProps} from '../views/TunePanel';
+import InstrumentGrid from '../views/InstrumentGrid';
 
 const color = require('@cdo/apps/util/color');
 const experiments = require('@cdo/apps/util/experiments');
@@ -21,7 +21,7 @@ interface FieldTuneOptions {
 
 /**
  * A custom field that renders the tune selection UI, used in the
- * "play_tune" block. The UI is rendered by {@link TunePanel}.
+ * "play_tune" block. The UI is rendered by {@link InstrumentGrid}.
  */
 export default class FieldTune extends GoogleBlockly.Field {
   static fromJson(_options: GoogleBlockly.FieldConfig) {
@@ -186,9 +186,12 @@ export default class FieldTune extends GoogleBlockly.Field {
     }
 
     ReactDOM.render(
-      React.createElement<TunePanelProps>(TunePanel, {
-        initValue: this.getValue(),
+      React.createElement(InstrumentGrid, {
+        // Make a copy of the value object so that we don't overwrite Blockly's data.
+        initialValue: JSON.parse(JSON.stringify(this.getValue())),
+        editorType: 'notes',
         onChange: this.onValueChange,
+        lengthMeasures: 1,
       }),
       this.newDiv
     );

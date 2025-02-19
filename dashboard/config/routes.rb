@@ -393,6 +393,60 @@ Dashboard::Application.routes.draw do
     # these routes use course_course_name to match generated routes below that are nested within courses
     get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all', as: :edit_all_reference_guides
 
+    # Repeated routes to support Unit routes in both /s/ and /courses/xxx/unit/y
+    unit_routes = lambda do
+      get 'reset', to: 'script_levels#reset'
+      get 'next', to: 'script_levels#next'
+      get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
+      post 'toggle_hidden', to: 'script_levels#toggle_hidden'
+
+      member do
+        get 'vocab'
+        get 'resources'
+        get 'code'
+        get 'standards'
+        get 'instructions'
+        get 'get_rollup_resources'
+      end
+
+      resources :lessons, only: [:show], param: 'position', format: false do
+        get 'student', to: 'lessons#student_lesson_plan'
+        get 'extras', to: 'script_levels#lesson_extras', format: false
+        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
+        get 'edit', to: 'lessons#edit_with_lesson_position'
+
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          member do
+            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+            get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # Get the level's properties via JSON.
+            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
+          end
+        end
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          # This route is defined in a separate resources, below the one above,
+          # because of how our assert_routing tests and Rails routing
+          # precedence work with multiple routes that point to the same action,
+          # with only a static path (no dynamic parts like 'path/:id').
+          get 'summary', on: :member, to: 'script_levels#show', as: 'summary', format: false, defaults: {view: 'summary'}
+        end
+      end
+
+      resources :lockable_lessons, only: [], path: "/lockable", param: 'position', format: false do
+        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          member do
+            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
+          end
+        end
+      end
+
+      get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
+      post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
+
+      get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
+    end
+
     resources :courses, param: 'course_name' do
       member do
         get 'vocab'
@@ -403,6 +457,8 @@ Dashboard::Application.routes.draw do
       end
 
       resources :reference_guides, param: 'key', path: 'guides'
+
+      resources :units, controller: 'scripts', param: 'position', &unit_routes
     end
 
     resources :potential_teachers, only: [:create]
@@ -493,67 +549,7 @@ Dashboard::Application.routes.draw do
     get '/s/:script_name/lockable/:position/puzzle', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels')
     get '/s/:script_name/lockable/:position/puzzle/(*all)', to: redirect(path: '/s/%{script_name}/lockable/%{position}/levels/%{all}')
 
-    resources :scripts, path: '/s/' do
-      # /s/xxx/reset
-      get 'reset', to: 'script_levels#reset'
-      get 'next', to: 'script_levels#next'
-      get 'hidden_lessons', to: 'script_levels#hidden_lesson_ids'
-      post 'toggle_hidden', to: 'script_levels#toggle_hidden'
-
-      member do
-        get 'vocab'
-        get 'resources'
-        get 'code'
-        get 'standards'
-        get 'instructions'
-        get 'get_rollup_resources'
-      end
-
-      # /s/xxx/lessons/yyy
-      resources :lessons, only: [:show], param: 'position', format: false do
-        get 'student', to: 'lessons#student_lesson_plan'
-        get 'extras', to: 'script_levels#lesson_extras', format: false
-        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-        get 'edit', to: 'lessons#edit_with_lesson_position'
-
-        # /s/xxx/lessons/yyy/levels/zzz
-        resources :script_levels, only: [:show], path: "/levels", format: false do
-          member do
-            # /s/xxx/lessons/yyy/levels/zzz/page/ppp
-            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
-            # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
-            get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
-            # Get the level's properties via JSON.
-            # /s/xxx/lessons/yyy/levels/zzz/level_properties
-            get '(sublevel/:sublevel_position)/level_properties', to: 'script_levels#level_properties'
-          end
-        end
-        resources :script_levels, only: [:show], path: "/levels", format: false do
-          # This route is defined in a separate resources, below the one above,
-          # because of how our assert_routing tests and Rails routing
-          # precedence work with multiple routes that point to the same action,
-          # with only a static path (no dynamic parts like 'path/:id').
-          # /s/xxx/lessons/yyy/levels/zzz/summary
-          get 'summary', on: :member, to: 'script_levels#show', as: 'summary', format: false, defaults: {view: 'summary'}
-        end
-      end
-
-      # /s/xxx/lockable/yyy/levels/zzz
-      resources :lockable_lessons, only: [], path: "/lockable", param: 'position', format: false do
-        get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
-        resources :script_levels, only: [:show], path: "/levels", format: false do
-          member do
-            # /s/xxx/lockable/yyy/levels/zzz/page/ppp
-            get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
-          end
-        end
-      end
-
-      get 'preview-assignments', to: 'plc/enrollment_evaluations#preview_assignments', as: 'preview_assignments'
-      post 'confirm_assignments', to: 'plc/enrollment_evaluations#confirm_assignments', as: 'confirm_assignments'
-
-      get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
-    end
+    resources :scripts, path: '/s/', &unit_routes
 
     get '/certificate_images/:filename', to: 'certificate_images#show'
 

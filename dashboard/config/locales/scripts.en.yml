@@ -14986,7 +14986,7 @@ en:
             lesson-4:
               name: Level Types
             lesson-5:
-              name: " READ ME"
+              name: Component Library
             lesson-6:
               name: Color
             lesson-7:
@@ -19827,6 +19827,22 @@ en:
               name: Decomposing Adventure Game (Lesson 12)
             lesson-22:
               name: Variables with AI Tutor
+            lesson-23:
+              name: Lesson 5 - Variables and Data Flow
+            lesson-24:
+              name: Lesson 6 - Working with Objects
+            lesson-25:
+              name: Lesson 7 - Functions and Parameters
+            lesson-26:
+              name: Lesson 9 - Intro to Loops
+            lesson-27:
+              name: Lesson 10 - Conditionals
+            lesson-28:
+              name: Lesson 12 - Decomposing a Pixel Image
+            lesson-29:
+              name: Lesson 13 - Two-Way & Nested Selection
+            lesson-30:
+              name: Lesson 14 - Pixels of Me Project
           lesson_groups:
             lessonGroup-2:
               display_name: console-only levels
@@ -20033,6 +20049,114 @@ en:
           lesson_groups: {}
           name: sandbox-teaching-getting-started1
           title: Getting Started Sandbox (Updated)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csad-pilot-preassessment-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: csad-pilot-preassessment-2024
+          title: Pre-Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csad-pilot-content-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: csad-pilot-content-2024
+          title: Computer Systems and Devices
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csad-pilot-postassessment-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: csad-pilot-postassessment-2024
+          title: Post-Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-pilot-preassessment-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: pf-pilot-preassessment-2024
+          title: Pre-Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-pilot-content-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: pf-pilot-content-2024
+          title: Programming Fundamentals
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-pilot-postassessment-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: pf-pilot-postassessment-2024
+          title: Post-Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-aitutor-pilot-preassessment-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: pf-aitutor-pilot-preassessment-2024
+          title: Pre-Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-aitutor-pilot-content-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: pf-aitutor-pilot-content-2024
+          title: Programming Fundamentals
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pf-aitutor-pilot-postassessment-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: pf-aitutor-pilot-postassessment-2024
+          title: Post-Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        nati-pilot-preassessment-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: nati-pilot-preassessment-2024
+          title: Pre-Assessment
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        nati-pilot-content-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: nati-pilot-content-2024
+          title: Networks and the Internet
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        nati-pilot-postassessment-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: nati-pilot-postassessment-2024
+          title: Post-Assessment
           description_audience: ''
           description_short: ''
           description: ''

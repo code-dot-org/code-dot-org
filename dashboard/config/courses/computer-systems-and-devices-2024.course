@@ -1,0 +1,23 @@
+{
+  "name": "computer-systems-and-devices-2024",
+  "script_names": [
+    "csad-pilot-preassessment-2024",
+    "csad-pilot-content-2024",
+    "csad-pilot-postassessment-2024"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "computer-systems-and-devices",
+    "has_numbered_units": true,
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

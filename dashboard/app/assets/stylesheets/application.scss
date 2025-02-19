@@ -23,7 +23,6 @@
  * Shared
  *= require fonts/barlow-semi-condensed
  *= require fonts/figtree
- *= require fonts/metropolis
  *= require fonts/noto-sans
  *= require user-menu
  *= require buttons
@@ -4196,7 +4195,7 @@ a {
       animation: clickable-text-glow-keyframes 2s ease-in-out;
 
       &:hover {
-        color: $light_primary_500;
+        color: $light_primary_700;
       }
     }
   }

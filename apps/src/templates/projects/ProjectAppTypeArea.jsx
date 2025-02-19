@@ -1,9 +1,9 @@
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
