@@ -85,14 +85,23 @@ export const openImportFromBackpackPrompt = async ({
           );
         } else if (results.type === 'neutral') {
           console.log('delete file from backpack');
-          backpackApi.deleteFiles(
-            [selectedBackpackFileName],
-            () =>
-              console.log(`Error in deleting file ${selectedBackpackFileName}`),
-            () => console.log(`Deleted file ${selectedBackpackFileName}`)
-          );
+          // Open confirm delete dialog.
+          dialogControl?.showDialog({
+            type: DialogType.GenericConfirmation,
+            title: 'Save to backpack',
+            message: `You are about to delete ${selectedBackpackFileName} to your backpack.`,
+            confirmText: 'Delete',
+            handleConfirm: () => handleDelete(selectedBackpackFileName),
+          });
         }
       }
     }
   );
+  const handleDelete = async (selectedBackpackFileName: string) => {
+    backpackApi.deleteFiles(
+      [selectedBackpackFileName],
+      () => console.log(`Error in deleting file ${selectedBackpackFileName}`),
+      () => console.log(`Deleted file ${selectedBackpackFileName}`)
+    );
+  };
 };
