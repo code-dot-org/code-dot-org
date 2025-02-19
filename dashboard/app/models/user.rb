@@ -252,7 +252,6 @@ class User < ApplicationRecord
 
   validate :educator_role_allowed_for_teacher, on: :create
 
-  belongs_to :studio_person, optional: true
   has_many :hint_view_requests
 
   # courses a facilitator is able to teach
@@ -365,177 +364,6 @@ class User < ApplicationRecord
 
   validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
     self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
-  end
-
-  def save_email_preference
-    if teacher?
-      EmailPreference.upsert!(
-        email: email,
-        opt_in: email_preference_opt_in.casecmp?("yes"),
-        ip_address: email_preference_request_ip,
-        source: email_preference_source,
-        form_kind: email_preference_form_kind,
-      )
-    end
-  end
-
-  # Enables/disables email notifications for the parent.
-  def save_parent_email_preference
-    if student? && parent_email.present?
-      EmailPreference.upsert!(
-        email: parent_email,
-        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
-        ip_address: parent_email_preference_request_ip,
-        source: parent_email_preference_source,
-        form_kind: nil
-      )
-    end
-  end
-
-  # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
-  def save_email_reg_partner_preference
-    user = User.find_by_email_or_hashed_email(email)
-    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
-      user.share_teacher_email_regional_partner_opt_in = DateTime.now
-      user.save!
-    end
-  end
-
-  # Puts teachers directly into the progress table v2 view when new account is created.
-  def save_show_progress_table_v2
-    if teacher?
-      self.show_progress_table_v2 = true
-    end
-  end
-
-  # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
-  # based on the passed attributes.
-  # @param school_info_attr the attributes to set and check
-  # @return [Boolean] true if we should reject (ignore and skip writing) the record,
-  # false if we should accept and write it
-  def preprocess_school_info(school_info_attr)
-    # Suppress validation - all parts of this form are optional when accesssed through the registration form
-    school_info_attr[:validation_type] = SchoolInfo::VALIDATION_NONE unless school_info_attr.nil?
-    # students are never asked to fill out this data, so silently reject it for them
-    student? || deduplicate_school_info(school_info_attr, self)
-  end
-
-  # takes a new school info object collected somewhere (e.g., PD enrollment) and compares to
-  # a user's current school information.
-  # overwrites if:
-  # new school info object has a NCES school ID associated with it
-  # old school info object doesn't have a NCES school ID associated with it
-  # @param new_school_info a school_info object to compare to the user current school information.
-  def update_school_info(new_school_info)
-    if new_school_info.complete?
-      self.school_info_id = new_school_info.id
-      save(validate: false)
-    end
-  end
-
-  def update_and_add_users_school_infos
-    last_school = user_school_infos.find_by(end_date: nil)
-    current_time = DateTime.now
-    if last_school
-      last_school.end_date = current_time
-      last_school.save!
-    end
-    UserSchoolInfo.create(
-      user: self,
-      school_info: school_info,
-      start_date: last_school ? current_time : created_at,
-      last_confirmation_date: current_time
-    )
-  end
-
-  def complete_school_info
-    # Check user_school_infos count to verify if new or existing user
-    # If user_school_infos count == 0, new user
-    # If user_school_infos count > 0, existing user
-    if user_school_infos.count > 0 && !school_info&.complete?
-      errors.add(:school_info_id, "cannot add new school id")
-    end
-  end
-
-  belongs_to :invited_by, polymorphic: true, optional: true
-
-  validate :admins_must_be_teachers_without_followeds
-
-  def admins_must_be_teachers_without_followeds
-    if admin
-      errors.add(:admin, 'must be a teacher') unless teacher?
-      errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
-    end
-  end
-
-  def email
-    return read_attribute(:email) unless migrated?
-    primary_contact_info.try(:email) || ''
-  end
-
-  def hashed_email
-    return read_attribute(:hashed_email) unless migrated?
-    primary_contact_info.try(:hashed_email) || ''
-  end
-
-  def alternate_email
-    latest_accepted_app = Pd::Application::TeacherApplication.where(user: self, status: 'accepted').order(application_year: :desc).first
-    latest_accepted_app&.sanitized_form_data_hash&.dig(:alternate_email)
-  end
-
-  # assign a course to a facilitator that is qualified to teach it
-  def course_as_facilitator=(course)
-    courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
-  end
-
-  def delete_course_as_facilitator(course)
-    courses_as_facilitator.find_by(course: course).try(:destroy)
-  end
-
-  # Given a user_id, username, or email, attempts to find the relevant user
-  def self.from_identifier(identifier)
-    (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
-      where(username: identifier).first ||
-      find_by_email_or_hashed_email(identifier)
-  rescue ActiveModel::RangeError
-    # Given too large of a user id this can produce a range error
-    # @see https://app.honeybadger.io/projects/3240/faults/44740400
-    nil
-  end
-
-  def self.find_or_create_teacher(params, invited_by_user, permission = nil)
-    user = User.find_by_email_or_hashed_email(params[:email])
-
-    if user
-      user.update!(params.merge(user_type: TYPE_TEACHER))
-    else
-      # initialize new users with name and school
-      if params[:ops_first_name] || params[:ops_last_name]
-        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
-      end
-      params[:school] ||= params[:ops_school]
-      params[:user_type] = TYPE_TEACHER
-      params[:age] ||= 21
-
-      # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
-      # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
-      ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
-        raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
-      end
-      user = User.invite!(attributes: params)
-      user.update!(invited_by: invited_by_user)
-    end
-
-    if permission
-      user.permission = permission
-      user.save!
-    end
-
-    user
-  end
-
-  def self.find_or_create_facilitator(params, invited_by_user)
-    find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
@@ -818,6 +646,177 @@ class User < ApplicationRecord
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
   validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
   validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
+
+  def save_email_preference
+    if teacher?
+      EmailPreference.upsert!(
+        email: email,
+        opt_in: email_preference_opt_in.casecmp?("yes"),
+        ip_address: email_preference_request_ip,
+        source: email_preference_source,
+        form_kind: email_preference_form_kind,
+      )
+    end
+  end
+
+  # Enables/disables email notifications for the parent.
+  def save_parent_email_preference
+    if student? && parent_email.present?
+      EmailPreference.upsert!(
+        email: parent_email,
+        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
+        ip_address: parent_email_preference_request_ip,
+        source: parent_email_preference_source,
+        form_kind: nil
+      )
+    end
+  end
+
+  # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
+  def save_email_reg_partner_preference
+    user = User.find_by_email_or_hashed_email(email)
+    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
+      user.share_teacher_email_regional_partner_opt_in = DateTime.now
+      user.save!
+    end
+  end
+
+  # Puts teachers directly into the progress table v2 view when new account is created.
+  def save_show_progress_table_v2
+    if teacher?
+      self.show_progress_table_v2 = true
+    end
+  end
+
+  # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
+  # based on the passed attributes.
+  # @param school_info_attr the attributes to set and check
+  # @return [Boolean] true if we should reject (ignore and skip writing) the record,
+  # false if we should accept and write it
+  def preprocess_school_info(school_info_attr)
+    # Suppress validation - all parts of this form are optional when accesssed through the registration form
+    school_info_attr[:validation_type] = SchoolInfo::VALIDATION_NONE unless school_info_attr.nil?
+    # students are never asked to fill out this data, so silently reject it for them
+    student? || deduplicate_school_info(school_info_attr, self)
+  end
+
+  # takes a new school info object collected somewhere (e.g., PD enrollment) and compares to
+  # a user's current school information.
+  # overwrites if:
+  # new school info object has a NCES school ID associated with it
+  # old school info object doesn't have a NCES school ID associated with it
+  # @param new_school_info a school_info object to compare to the user current school information.
+  def update_school_info(new_school_info)
+    if new_school_info.complete?
+      self.school_info_id = new_school_info.id
+      save(validate: false)
+    end
+  end
+
+  def update_and_add_users_school_infos
+    last_school = user_school_infos.find_by(end_date: nil)
+    current_time = DateTime.now
+    if last_school
+      last_school.end_date = current_time
+      last_school.save!
+    end
+    UserSchoolInfo.create(
+      user: self,
+      school_info: school_info,
+      start_date: last_school ? current_time : created_at,
+      last_confirmation_date: current_time
+    )
+  end
+
+  def complete_school_info
+    # Check user_school_infos count to verify if new or existing user
+    # If user_school_infos count == 0, new user
+    # If user_school_infos count > 0, existing user
+    if user_school_infos.count > 0 && !school_info&.complete?
+      errors.add(:school_info_id, "cannot add new school id")
+    end
+  end
+
+  belongs_to :invited_by, polymorphic: true, optional: true
+
+  validate :admins_must_be_teachers_without_followeds
+
+  def admins_must_be_teachers_without_followeds
+    if admin
+      errors.add(:admin, 'must be a teacher') unless teacher?
+      errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
+    end
+  end
+
+  def email
+    return read_attribute(:email) unless migrated?
+    primary_contact_info.try(:email) || ''
+  end
+
+  def hashed_email
+    return read_attribute(:hashed_email) unless migrated?
+    primary_contact_info.try(:hashed_email) || ''
+  end
+
+  def alternate_email
+    latest_accepted_app = Pd::Application::TeacherApplication.where(user: self, status: 'accepted').order(application_year: :desc).first
+    latest_accepted_app&.sanitized_form_data_hash&.dig(:alternate_email)
+  end
+
+  # assign a course to a facilitator that is qualified to teach it
+  def course_as_facilitator=(course)
+    courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
+  end
+
+  def delete_course_as_facilitator(course)
+    courses_as_facilitator.find_by(course: course).try(:destroy)
+  end
+
+  # Given a user_id, username, or email, attempts to find the relevant user
+  def self.from_identifier(identifier)
+    (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
+      where(username: identifier).first ||
+      find_by_email_or_hashed_email(identifier)
+  rescue ActiveModel::RangeError
+    # Given too large of a user id this can produce a range error
+    # @see https://app.honeybadger.io/projects/3240/faults/44740400
+    nil
+  end
+
+  def self.find_or_create_teacher(params, invited_by_user, permission = nil)
+    user = User.find_by_email_or_hashed_email(params[:email])
+
+    if user
+      user.update!(params.merge(user_type: TYPE_TEACHER))
+    else
+      # initialize new users with name and school
+      if params[:ops_first_name] || params[:ops_last_name]
+        params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
+      end
+      params[:school] ||= params[:ops_school]
+      params[:user_type] = TYPE_TEACHER
+      params[:age] ||= 21
+
+      # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
+      # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
+      ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
+        raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
+      end
+      user = User.invite!(attributes: params)
+      user.update!(invited_by: invited_by_user)
+    end
+
+    if permission
+      user.permission = permission
+      user.save!
+    end
+
+    user
+  end
+
+  def self.find_or_create_facilitator(params, invited_by_user)
+    find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
+  end
 
   def requires_email?
     provider_changed? && provider.nil? && encrypted_password_changed? && encrypted_password.present?
@@ -2769,40 +2768,54 @@ class User < ApplicationRecord
     CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
   end
 
+  # Private Methods
+
+  ## Validation & Callback Helpers
+  private def educator_role_allowed_for_teacher
+    return if educator_role.blank?
+    errors.add(:educator_role, "can only be assigned to teachers") unless teacher?
+  end
+
+  private def enforce_age_or_state_update
+    user_before_update = User.new(attributes.merge(changed_attributes))
+    potentially_locked = Policies::ChildAccount.underage?(user_before_update)
+
+    if potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(user_before_update)
+      if us_state_changed? && !RequestStore.store[:current_user]&.teacher?
+        errors.add(:us_state, I18n.t('activerecord.errors.models.user.attributes.lockout_flow'))
+      end
+      errors.add(:age, I18n.t('activerecord.errors.models.user.attributes.lockout_flow')) if birthday_changed?
+    end
+  end
+
+  private def normalize_parent_email
+    self.parent_email = nil if parent_email.blank?
+  end
+
   private def should_check_age_or_state_update?
     return false unless student?
     return false unless %w[US RD].include? country_code
     birthday_changed? || us_state_changed?
   end
 
-  private def enforce_age_or_state_update
-    # Create copy of user to mock the user's state before an update.
-    user_before_update = User.new(attributes.merge(changed_attributes))
-    potentially_locked = Policies::ChildAccount.underage?(user_before_update)
-    # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
-    if potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(user_before_update)
-      # Only teachers can update the US State of CAP covered students
-      if us_state_changed? && !RequestStore.store[:current_user]&.teacher?
-        errors.add(:us_state,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow'))
-      end
-      errors.add(:age,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow')) if birthday_changed?
+  private def validate_parent_email
+    errors.add(:parent_email) unless parent_email.nil? ||
+      Cdo::EmailValidator.email_address?(parent_email)
+  end
+
+  private def validate_us_state
+    if us_state.blank?
+      errors.add(:us_state, :blank)
+      return
+    end
+    unless User.us_state_dropdown_options.include?(us_state)
+      errors.add(:us_state, :invalid)
     end
   end
 
-  private def educator_role_allowed_for_teacher
-    return if educator_role.blank?
-
-    unless teacher?
-      errors.add(:educator_role, "can only be assigned to teachers")
-    end
-  end
-
+  ## Feature-Flag Checks
   private def ai_tutor_feature_globally_disabled?
     DCDO.get('ai-tutor-disabled', false)
-  end
-
-  private def permission_for_ai_tutor?
-    permission?(UserPermission::AI_TUTOR_ACCESS)
   end
 
   private def in_ai_tutor_experiment_with_enabled_section?
@@ -2810,38 +2823,21 @@ class User < ApplicationRecord
       sections_as_student.any?(&:ai_tutor_enabled)
   end
 
-  # Called before_destroy.
-  # Soft-deletes any projects and other channel-backed progress belonging to
-  # this user.  Unfeatures any featured projects belonging to this user.
-  private def soft_delete_channels
-    return unless user_storage_id
-
-    project = Projects.new(user_storage_id)
-    project_ids = project.get_all_project_ids
-
-    # Unfeature any featured projects owned by the user
-    FeaturedProject.
-      where(project_id: project_ids, unfeatured_at: nil).
-      where.not(featured_at: nil).
-      update_all(unfeatured_at: Time.now)
-
-    # Soft-delete all of the user's projects
-    project.soft_delete_all
+  private def permission_for_ai_tutor?
+    permission?(UserPermission::AI_TUTOR_ACCESS)
   end
 
+  ## Account & User Information
   private def account_age_in_years
     ((Time.now - created_at.to_time) / 1.year).round
   end
 
-  # Returns a list of all grades that the teacher currently has sections for
-  private def grades_being_taught
-    @grades_being_taught ||= sections_instructed.map(&:grades).flatten.uniq
-  end
-
-  # Returns a list of all curriculums that the teacher currently has sections for
-  # ex: ["csf", "csd"]
   private def curriculums_being_taught
     @curriculums_being_taught ||= sections_instructed.filter_map {|section| section.script&.curriculum_umbrella}.uniq
+  end
+
+  private def grades_being_taught
+    @grades_being_taught ||= sections_instructed.map(&:grades).flatten.uniq
   end
 
   private def has_attended_pd?
@@ -2852,24 +2848,8 @@ class User < ApplicationRecord
     @school_stats ||= school_info_school&.most_recent_school_stats
   end
 
-  private def hidden_lesson_ids(sections)
-    return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
-  end
-
-  private def hidden_unit_ids(sections)
-    return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
-  end
-
-  # This method will extract a list of hidden ids by section. The type of ids depends
-  # on the input. If hidden_lessons is true, id is expected to be a unit id and
-  # we look for lessons that are hidden. If hidden_lessons is false, id is expected
-  # to be a course_id, and we look for hidden units.
-  # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
-  #   if we're looking for hidden units.
-  # @return {Hash<string,number[]>
+  ## Hidden Content Logic
   private def get_instructor_hidden_ids(hidden_lessons)
-    # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
     sections_instructed.each do |section|
       hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
@@ -2877,11 +2857,6 @@ class User < ApplicationRecord
     hidden_by_section
   end
 
-  # This method method will go through each of the sections in which we're a member
-  # and determine which lessons/units should be hidden
-  # @param {boolean} hidden_lessons - True if we're looking for hidden lessons, false
-  #   if we're looking for hidden units.
-  # @return {number[]} Set of lesson/unit ids that should be hidden
   private def get_participant_hidden_ids(assign_id, hidden_lessons)
     sections = sections_as_student
     return [] if sections.empty?
@@ -2892,42 +2867,34 @@ class User < ApplicationRecord
     end
 
     if assigned_sections.empty?
-      # if we have no sections matching this assignment, we consider a lesson/unit
-      # hidden if any of our sections hides it
       return (hidden_lessons ? hidden_lesson_ids(sections) : hidden_unit_ids(sections)).uniq
     else
-      # if we do have sections matching this assignment, we consider a lesson/unit
-      # hidden only if it is hidden in every one of the sections the student belongs
-      # to that match this assignment
       all_ids = hidden_lessons ? hidden_lesson_ids(assigned_sections) : hidden_unit_ids(assigned_sections)
-
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       return counts.select {|_, val| val == assigned_sections.length}.keys
     end
   end
 
-  private def normalize_parent_email
-    self.parent_email = nil if parent_email.blank?
+  private def hidden_lesson_ids(sections)
+    sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
   end
 
-  # Parent email is not required, but if it is present, it must be a
-  # well-formed email address.
-  private def validate_parent_email
-    errors.add(:parent_email) unless parent_email.nil? ||
-      Cdo::EmailValidator.email_address?(parent_email)
+  private def hidden_unit_ids(sections)
+    sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
   end
 
-  # Verifies that the serialized attribute "us_state" is a 2 character string
-  # representing a US State or "??" which represents a "N/A" kind of response.
-  private def validate_us_state
-    # us_state must be selected.
-    if us_state.blank?
-      errors.add(:us_state, :blank)
-      return
-    end
-    # Report an error if an invalid value was submitted (probably tampering).
-    unless User.us_state_dropdown_options.include?(us_state)
-      errors.add(:us_state, :invalid)
-    end
+  ## Cleanup & Deletion Methods
+  private def soft_delete_channels
+    return unless user_storage_id
+
+    project = Projects.new(user_storage_id)
+    project_ids = project.get_all_project_ids
+
+    FeaturedProject.
+      where(project_id: project_ids, unfeatured_at: nil).
+      where.not(featured_at: nil).
+      update_all(unfeatured_at: Time.now)
+
+    project.soft_delete_all
   end
 end
