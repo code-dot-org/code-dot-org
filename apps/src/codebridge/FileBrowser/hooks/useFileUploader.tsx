@@ -1,3 +1,5 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {isDuplicateFileName} from '@codebridge/utils';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import {useCallback} from 'react';
 
@@ -11,9 +13,6 @@ import {
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import {useCodebridgeContext} from '../../codebridgeContext';
-import {isDuplicateFileName} from '../../utils';
 
 type UseFileUploaderArgs = Exclude<FileUploaderProps, 'sendAnalyticsEvent'>;
 
