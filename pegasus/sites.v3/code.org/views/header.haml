@@ -24,17 +24,5 @@
 
 =inline_css 'hamburger.css'
 
-%nav.main
-  .left
-    -# rubocop:disable CustomCops/DashboardDbUsage
-    %a{href: current_user ? CDO.studio_url("/home") : CDO.code_org_url}
-      %img.logo{src: '/images/logo.svg', alt: I18n.t(:code_org_logo_alt)}
-    -# rubocop:enable CustomCops/DashboardDbUsage
-    %ul#headerlinks
-      - Hamburger.get_header_contents(header_contents_options).each do |entry|
-        %li{class: entry[:class]}
-          %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
-  .right
-    = view :sign_in_or_user
-    = view :help_button, hamburger_options
-    = view :hamburger, hamburger_options
+%nav.main{id: 'cdo-header'}
+%script{src: webpack_asset_path('js/layouts/_header.js'), 'data-ot-ignore' => ''}
