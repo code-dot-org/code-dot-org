@@ -7,10 +7,10 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**PCPartPicker** is an online tool that helps you plan and build custom PCs by letting you choose compatible parts, compare prices, and check for potential issues like power requirements or compatibility conflicts.\r\n\r\nUse this website to explore the myriad options available when building a computer system!",
+    "long_instructions": "## PCPartPicker\r\n\r\n**PCPartPicker** is an online tool that helps you plan and build custom PCs by letting you choose compatible parts, compare prices, and check for potential issues like power requirements or compatibility conflicts.\r\n\r\nUse this website to explore the myriad options available when building a computer system!",
     "link_title": "PCPartPicker",
     "url": "https://pcpartpicker.com/list/"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-24 19:18:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-24 19:19:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-24 19:42:58 +0000\",\"changed\":[\"url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-24 19:18:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-24 19:19:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-24 19:42:58 +0000\",\"changed\":[\"url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-16 22:48:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </ExternalLink>

@@ -12,6 +12,41 @@ markdown <<MARKDOWN
 
 #### **You will:**
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code.org Teacher Onboarding</title>
+</head>
+<body>
+
+    <h1>🚀 Code.org Teacher Onboarding Checklist</h1>
+
+    <div>
+        ✅ Get an introduction to Code.org's mission.
+    </div>
+
+    <div>
+        ✅ Learn how to navigate the Code.org website and teacher tools.
+    </div>
+
+    <div>
+        ✅ Set up a classroom section.
+    </div>
+
+    <div>
+        ✅ Locate and use course lesson plans and teacher resources.
+    </div>
+
+    <div>
+        ✅ Learn how to access support while teaching Code.org curricula.
+    </div>
+
+</body>
+</html>
+
+
 
 * #### Get an introduction to Code.org’s mission.
 * #### Learn how to navigate the Code.org website and teacher tools.
