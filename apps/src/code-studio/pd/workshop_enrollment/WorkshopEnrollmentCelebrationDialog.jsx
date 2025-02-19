@@ -5,9 +5,9 @@ import Typography, {
   Heading6,
   BodyTwoText,
 } from '@code-dot-org/component-library/typography';
+import moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import moment from 'moment-timezone';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
