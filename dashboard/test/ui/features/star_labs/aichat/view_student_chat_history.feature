@@ -31,7 +31,7 @@ Background:
   And I click selector "#uitest-update-customizations"
   Then I wait until element ".uitest-aichat-chat-alert" contains text "Temperature has been updated to 0.7"
 
-Scenario: Teacher views student chat histor
+Scenario: Teacher views student chat history and interacts with student model
   # Teacher can view chat history and provide feedback on messages flagged as inappropriate.
   Given I sign in as "Simone"
   And I am on "http://studio.code.org/s/customizing-llms-2024/lessons/2/levels/9"
@@ -42,7 +42,9 @@ Scenario: Teacher views student chat histor
   And I wait until element ".student-table" is visible
   And I click selector "#teacher-panel-container tr:eq(1)"
   And I dismiss the teacher panel
-  When I click selector ".uitest-clean-feedback-footer button[aria-label='flag']"
+  And I wait to see ".uitest-is-loading-overlay"
+  And I wait until element ".uitest-is-loading-overlay" is not visible
+  When I click selector ".uitest-clean-feedback-footer button[aria-label='flag']" once I see it
   Then I wait until element ".uitest-clean-feedback-footer button[aria-label='unflag']" is visible
   Then element ".uitest-chat-message" contains text "This message has been flagged by our content moderation policy."
   When I click selector "[aria-label='show message']"
