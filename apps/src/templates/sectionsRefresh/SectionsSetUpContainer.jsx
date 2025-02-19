@@ -354,12 +354,13 @@ export default function SectionsSetUpContainer({
     );
   };
 
-  // TODO: this will probably eventually be a setting on the course similar to textToSpeechEnabled
-  // currently we're working towards piloting in Javalab in CSA only.
+  // TODO: This will probably eventually be a setting on the course similar to textToSpeechEnabled
+  // The ticket to track that work is https://codedotorg.atlassian.net/browse/CT-1063
   const aiTutorAllowedForCourse = section =>
-    ['Data Science *', 'Computer Science A'].includes(
-      section?.course?.displayName
-    );
+    [
+      '[PILOT] Programming Fundamentals (AI Tutor)',
+      'Computer Science A',
+    ].includes(section?.course?.displayName);
 
   const renderAdvancedSettings = () => {
     const aiTutorAvailable =
