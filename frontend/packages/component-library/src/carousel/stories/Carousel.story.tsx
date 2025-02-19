@@ -12,7 +12,7 @@ export default {
 } as Meta;
 
 // Create a basic slide
-const basicSlideTemplate = (index: number) => (
+const createBasicSlide = (index: number) => (
   <div
     style={{
       height: '250px',
@@ -65,9 +65,7 @@ const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
 export const DefaultCarousel = SingleTemplate.bind({});
 DefaultCarousel.args = {
   uniqueClassName: 'default-carousel',
-  children: Array.from({length: 6}, (_, index) =>
-    basicSlideTemplate(index + 1),
-  ),
+  children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
 };
 DefaultCarousel.parameters = {
   docs: {
@@ -116,9 +114,7 @@ export const CarouselWithoutNavArrows = SingleTemplate.bind({});
 CarouselWithoutNavArrows.args = {
   uniqueClassName: 'carousel-without-nav-arrows',
   showNavArrows: false,
-  children: Array.from({length: 6}, (_, index) =>
-    basicSlideTemplate(index + 1),
-  ),
+  children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
 };
 CarouselWithoutNavArrows.parameters = {
   docs: {
@@ -153,9 +149,7 @@ export const CarouselWithTouchMove = SingleTemplate.bind({});
 CarouselWithTouchMove.args = {
   uniqueClassName: 'carousel-with-touch-move',
   allowTouchMove: true,
-  children: Array.from({length: 6}, (_, index) =>
-    basicSlideTemplate(index + 1),
-  ),
+  children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
 };
 CarouselWithTouchMove.parameters = {
   docs: {
@@ -205,9 +199,7 @@ CarouselWithCustomSlidesPerView.args = {
   uniqueClassName: 'carousel-with-3-slides',
   slidesPerView: 3,
   slidesPerGroup: 3,
-  children: Array.from({length: 6}, (_, index) =>
-    basicSlideTemplate(index + 1),
-  ),
+  children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
 };
 CarouselWithCustomSlidesPerView.parameters = {
   docs: {
