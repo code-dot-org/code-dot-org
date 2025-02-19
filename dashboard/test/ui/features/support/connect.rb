@@ -18,7 +18,7 @@ def single_session?
   $browser_config['mobile'] || $single_session
 end
 
-def saucelabs_browser(test_run_name)
+def saucelabs_browser(test_run_name, http_client: nil)
   raise 'Please define CDO.saucelabs_username' if CDO.saucelabs_username.blank?
   raise 'Please define CDO.saucelabs_authkey'  if CDO.saucelabs_authkey.blank?
 
@@ -39,7 +39,11 @@ def saucelabs_browser(test_run_name)
   capabilities['sauce:options'] ||= {}
   capabilities['sauce:options'].merge!(sauce_options)
 
-  browser = SeleniumBrowser.remote(SAUCELABS_SELENIUM_URL, capabilities: capabilities)
+  browser = SeleniumBrowser.remote(
+    SAUCELABS_SELENIUM_URL,
+    capabilities: capabilities,
+    http_client: http_client
+  )
   return browser
 end
 
@@ -52,22 +56,22 @@ end
 
 def get_browser(test_run_name)
   browser = nil
+  $http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
   if ENV['CI'] == 'true' # TODO: only on first try
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
-      SeleniumBrowser.remote(CI_SELENIUM_URL) # TODO: headless?
+      SeleniumBrowser.remote(CI_SELENIUM_URL, http_client: $http_client) # TODO: headless?
     end
   elsif ENV['TEST_LOCAL'] == 'true'
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
-      saucelabs_browser(test_run_name)
+      saucelabs_browser(test_run_name, http_client: $http_client)
     end
     $session_id = browser.session_id
     visual_log_url = "https://saucelabs.com/tests/#{$session_id}"
     puts "visual log on sauce labs: <a href='#{visual_log_url}'>#{visual_log_url}</a>"
   end
-  $http_client = browser.bridge.http
 
   # Time to wait for page loads to complete (default 5 minutes).
   browser.manage.timeouts.page_load = 2.minutes

@@ -2,7 +2,7 @@ require 'selenium/webdriver'
 
 module SeleniumBrowser
   def self.webdriver_options_object(browser: :chrome, headless: true)
-    options = Selenium::WebDriver::Options.send(browser, 'window-size=1280,1024')
+    options = Selenium::WebDriver::Options.send(browser, args: ['window-size=1280,1024'])
     options.add_argument('headless') if headless # TODO: firefox support?
     #options.headless! if headless
     return options
@@ -11,15 +11,15 @@ module SeleniumBrowser
   def self.local(browser: :chrome, headless: true)
     browser = browser.to_sym
     options = webdriver_options_object(browser: browser, headless: headless)
-    return Selenium::WebDriver.for(browser, options)
+    return Selenium::WebDriver.for(browser, options: options)
   end
 
-  def self.remote(url, capabilities: nil, options: nil)
+  def self.remote(url, capabilities: nil, options: nil, http_client: nil)
     if capabilities.nil? && options.nil?
       options = webdriver_options_object(browser: :chrome) # TODO: headless?
     end
 
-    http_client = SeleniumBrowser::Client.new(read_timeout: 2.minutes)
+    http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
     return http_client.with_read_timeout(5.minutes) do
       Selenium::WebDriver.for(:remote,
         url: url,
