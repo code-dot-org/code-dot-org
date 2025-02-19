@@ -154,12 +154,12 @@
 .header {
   display: flex;
   flex-direction: column;
-}
 
-.headerSectionName {
-  margin-bottom: 0;
-  margin-top: 0;
-  color: $light_primary_500;
+  .headerSectionName {
+    margin-bottom: 0;
+    margin-top: 0;
+    color: $light_primary_500;
+  }
 }
 
 .skeletonHeaderSectionName {
