@@ -1,7 +1,7 @@
 require 'selenium/webdriver'
 
 module SeleniumBrowser
-  def self.webdriver_options_object(browser: :chrome, headless: true)
+  def self.webdriver_options_object(browser: :chrome, headless: false)
     options = Selenium::WebDriver::Options.send(browser, args: ['window-size=1280,1024'])
     options.add_argument('headless') if headless
     return options
