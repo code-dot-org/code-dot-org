@@ -7,6 +7,8 @@ import {
 import {ProjectFolder} from '@codebridge/types';
 import React from 'react';
 
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {FolderRowIcon} from './FolderRowIcon';
 import {FolderRowName} from './FolderRowName';
 import {useFolderRowOptions} from './hooks';
@@ -29,9 +31,13 @@ export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
   enableMenu,
 }) => {
   const {
-    source: {files},
+    source,
     config: {validMimeTypes},
   } = useCodebridgeContext();
+  const validationFile = useAppSelector(
+    state => state.lab.levelProperties?.validationFile
+  );
+  const files = source.files;
 
   const handleFileUpload = useHandleFileUpload(files);
   const fileUploadErrorCallback = useFileUploadErrorCallback();
@@ -39,6 +45,8 @@ export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
     callback: handleFileUpload,
     errorCallback: fileUploadErrorCallback,
     validMimeTypes,
+    source,
+    validationFile,
   });
   const {toggleOpenFolder} = useCodebridgeContext();
   const dropdownOptions = useFolderRowOptions(item, startFileUpload);

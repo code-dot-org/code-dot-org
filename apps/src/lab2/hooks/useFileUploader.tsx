@@ -1,6 +1,11 @@
 import React, {useCallback, useMemo, useRef} from 'react';
 
+import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {isDuplicateFileName} from '@cdo/apps/codebridge/utils';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -16,6 +21,8 @@ type FileUploaderProps = {
     callbackArgs?: unknown
   ) => void;
   errorCallback: (error: string, callbackArgs?: unknown) => void;
+  source: MultiFileSource;
+  validationFile: ProjectFile | undefined;
   multiple?: boolean;
   validMimeTypes?: string[];
   sendAnalyticsEvent?: (
@@ -85,11 +92,14 @@ export const useFileUploader = ({
   callback,
   errorCallback,
   validMimeTypes,
+  source,
+  validationFile,
   sendAnalyticsEvent = () => {},
   multiple = true,
 }: FileUploaderProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const callbackArgs = useRef<unknown>();
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const changeHandler = useCallback(() => {
     Array.from(inputRef.current?.files || []).forEach(file => {
@@ -104,6 +114,22 @@ export const useFileUploader = ({
         );
         return;
       }
+      if (
+        isDuplicateFileName({
+          fileName: file.name,
+          folderId: DEFAULT_FOLDER_ID,
+          projectFiles: source.files,
+          isStartMode,
+          validationFile,
+        })
+      ) {
+        errorCallback(
+          codebridgeI18n.duplicateFileError({fileName: file.name}),
+          callbackArgs.current
+        );
+        return;
+      }
+
       const reader = new FileReader();
       if (file.type.match(/^text/)) {
         reader.readAsText(file);
@@ -135,7 +161,15 @@ export const useFileUploader = ({
         }
       };
     });
-  }, [callback, errorCallback, validMimeTypes, sendAnalyticsEvent]);
+  }, [
+    validMimeTypes,
+    source.files,
+    isStartMode,
+    validationFile,
+    sendAnalyticsEvent,
+    errorCallback,
+    callback,
+  ]);
 
   return useMemo(
     () => ({
