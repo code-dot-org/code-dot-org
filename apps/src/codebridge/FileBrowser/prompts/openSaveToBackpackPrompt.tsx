@@ -26,7 +26,12 @@ export const openSaveToBackpackPrompt = async ({
     async (filenames: string[]) => {
       // Check if filename is a duplicate of a saved file in backpack.
       const isDuplicateFileName = filenames.includes(file.name);
-      const fileNameCopy = getFileNameWithNumberSuffix(file.name);
+
+      let fileNameCopy = file.name;
+      while (filenames.includes(fileNameCopy)) {
+        fileNameCopy = getFileNameWithNumberSuffix(fileNameCopy);
+      }
+
       const dialog = isDuplicateFileName
         ? {
             type: DialogType.GenericConfirmation,

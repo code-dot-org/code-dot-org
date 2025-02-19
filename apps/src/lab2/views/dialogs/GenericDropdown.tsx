@@ -70,7 +70,10 @@ const GenericDropdown: React.FunctionComponent<GenericDropdownProps> = ({
     [setPromiseArgs]
   );
 
-  useEffect(() => handleInputChange(selectedValue), []); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(
+    () => handleInputChange(selectedValue),
+    [handleInputChange, selectedValue]
+  );
 
   const buttons = {
     confirm: {
