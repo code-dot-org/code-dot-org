@@ -192,6 +192,14 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     }
   );
 
+  const aiContext = () => {
+    if (selectedSection?.courseId && selectedSection?.unitId)
+      return AiDiffContext.COURSE;
+    if (selectedSection?.courseId) return AiDiffContext.COURSE;
+    if (selectedSection?.unitId) return AiDiffContext.UNIT;
+    return AiDiffContext.GENERAL;
+  };
+
   return (
     <nav className={styles.sidebarContainer} id="ui-test-teacher-sidebar">
       <div className={styles.sidebarContent}>
@@ -220,11 +228,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       </div>
       {experiments.isEnabled('ai-differentiation') && (
         <AiDiffFloatingActionButton
-          context={
-            selectedSection?.courseId || selectedSection?.unitId
-              ? AiDiffContext.COURSE
-              : AiDiffContext.GENERAL
-          }
+          context={aiContext()}
           scriptId={
             selectedSection?.courseId
               ? selectedSection?.courseId
