@@ -3,9 +3,10 @@
  * can put a text header and subheader over that banner image.
  */
 
-import Typography from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import Typography from '@cdo/apps/componentLibrary/typography';
 
 import style from './header-banner.module.scss';
 

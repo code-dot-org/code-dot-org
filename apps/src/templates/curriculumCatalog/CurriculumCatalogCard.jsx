@@ -3,10 +3,6 @@ import {
   buttonColors,
   LinkButton,
 } from '@code-dot-org/component-library/button';
-import {
-  BodyThreeText,
-  Heading4,
-} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
 import PropTypes from 'prop-types';
@@ -14,6 +10,7 @@ import React, {useEffect, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {connect} from 'react-redux';
 
+import {BodyThreeText, Heading4} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';

@@ -1,13 +1,10 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
-import {
-  BodyTwoText,
-  Heading2,
-} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 
+import {BodyTwoText, Heading2} from '@cdo/apps/componentLibrary/typography';
 import {
   SELECT_COUNTRY,
   US_COUNTRY_CODE,

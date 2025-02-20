@@ -1,12 +1,10 @@
 // Use this component if a dashboard page has a header banner with no image.
 // Adapted from the HeaderBanner component.
 
-import {
-  Heading1,
-  BodyOneText,
-} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import {Heading1, BodyOneText} from '@cdo/apps/componentLibrary/typography';
 
 import style from './header-banner-no-image.module.scss';
 

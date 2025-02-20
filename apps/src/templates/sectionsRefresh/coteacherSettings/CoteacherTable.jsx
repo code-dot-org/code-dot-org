@@ -1,12 +1,9 @@
-import {
-  StrongText,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
+import {StrongText, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import i18n from '@cdo/locale';
 

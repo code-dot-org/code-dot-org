@@ -1,13 +1,10 @@
-import {
-  BodyTwoText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,

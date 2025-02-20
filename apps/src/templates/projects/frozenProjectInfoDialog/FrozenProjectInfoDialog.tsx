@@ -1,7 +1,7 @@
-import Typography from '@code-dot-org/component-library/typography';
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
