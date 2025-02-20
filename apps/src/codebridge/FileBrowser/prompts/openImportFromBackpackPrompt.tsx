@@ -116,16 +116,19 @@ export const openImportFromBackpackPrompt = async ({
               confirmText: 'Replace existing file',
               neutralText: `Import as ${newFileName}`,
               handleConfirm: () =>
-                fetchFileContentAndProcess(selectedBackpackFileName),
+                fetchFileContentAndProcess(selectedBackpackFileName), // Update existing project file.
               handleNeutral: () =>
                 fetchFileContentAndProcess(
                   selectedBackpackFileName,
                   newFileName
-                ),
+                ), // Fetch backpack file content and import new file with numeric suffix.
             });
           } else {
-            // Fetch backpack file and import to project.
-            fetchFileContentAndProcess(selectedBackpackFileName);
+            // Fetch backpack file content and import new file to project - not a duplicate file name.
+            fetchFileContentAndProcess(
+              selectedBackpackFileName,
+              selectedBackpackFileName
+            );
           }
         } else if (results.type === 'neutral') {
           // User selects to delete file from backpack. Open confirm delete dialog.
