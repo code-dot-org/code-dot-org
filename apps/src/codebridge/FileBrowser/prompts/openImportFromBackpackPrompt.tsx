@@ -3,7 +3,12 @@ import {
   SaveFileFunction,
 } from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {validateFileName, getFileNameWithNumberSuffix} from '@codebridge/utils';
+import {
+  validateFileName,
+  getFileNameWithNumberSuffix,
+  isDuplicateFileName,
+  DuplicateFileError,
+} from '@codebridge/utils';
 
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {
@@ -57,7 +62,9 @@ export const openImportFromBackpackPrompt = async ({
           newFile({fileName: newFileName, contents: fileContent});
         } else {
           const fileId = Object.keys(projectFiles).find(
-            id => projectFiles[id].name === fileName
+            id =>
+              projectFiles[id].name === fileName &&
+              projectFiles[id].folderId === DEFAULT_FOLDER_ID
           );
           if (fileId) saveFile(fileId, fileContent);
         }
@@ -95,27 +102,29 @@ export const openImportFromBackpackPrompt = async ({
         // Import backpack file to project.
         if (results.type === 'confirm') {
           let newFileName = selectedBackpackFileName;
-          let validateError = validateFileName({
-            fileName: newFileName,
-            folderId: DEFAULT_FOLDER_ID,
-            projectFiles,
-            isStartMode: false,
-            validationFile,
-          });
-          const isSupportFileName = validateError?.includes('support code');
-          while (validateError) {
-            newFileName = getFileNameWithNumberSuffix(newFileName);
-            validateError = validateFileName({
+          const isSupportFileName =
+            isDuplicateFileName({
+              fileName: selectedBackpackFileName,
+              folderId: DEFAULT_FOLDER_ID,
+              projectFiles,
+              isStartMode: false,
+            }) === DuplicateFileError.DUPLICATE_SUPPORT_FILE;
+
+          while (
+            validateFileName({
               fileName: newFileName,
               folderId: DEFAULT_FOLDER_ID,
               projectFiles,
               isStartMode: false,
               validationFile,
-            });
+            })
+          ) {
+            newFileName = getFileNameWithNumberSuffix(newFileName);
           }
           if (isSupportFileName) {
             // The user wants to import a file that has the same name as a hidden support file.
             // Automatically import file renamed with numeric suffix.
+            // TODO: display message that file was renamed because it duplicated a support file.
             fetchFileContentAndProcess(selectedBackpackFileName, newFileName);
             return;
           }
