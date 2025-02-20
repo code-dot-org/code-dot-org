@@ -387,8 +387,7 @@ class Section < ApplicationRecord
   # This is placed into the redux store as `teacherSections.sections` for all sections a teacher has access to.
   def concise_summarize
     ActiveRecord::Base.connected_to(role: :reading) do
-      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).
-               map {|si| {id: si.id, status: si.status, instructorName: si.instructor_name, instructorEmail: si.instructor_email}}.as_json
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
 
       {
         id: id,
@@ -504,8 +503,7 @@ class Section < ApplicationRecord
         students.unscope(:order).distinct(&:id)
       num_students = unique_students.size
 
-      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).
-             map {|si| {id: si.id, status: si.status, instructorName: si.instructor_name, instructorEmail: si.instructor_email}}.as_json
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
       primary_instructor = {
         email: teacher.email,
         name: teacher.name,

@@ -189,7 +189,12 @@ export const sectionFromServerSection = serverSection => ({
     : null,
   isAssignedCSA: serverSection.is_assigned_csa,
   participantType: serverSection.participant_type,
-  sectionInstructors: serverSection.sectionInstructors,
+  sectionInstructors: serverSection.sectionInstructors?.map(instructor => ({
+    id: instructor?.id,
+    status: instructor?.status,
+    instructorEmail: instructor?.instructor_email,
+    instructorName: instructor?.instructor_name,
+  })),
   primaryInstructor: serverSection.primaryInstructor,
   syncEnabled: serverSection.sync_enabled,
   aiTutorEnabled: serverSection.ai_tutor_enabled,

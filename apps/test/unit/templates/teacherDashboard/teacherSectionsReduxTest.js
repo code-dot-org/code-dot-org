@@ -90,8 +90,8 @@ const sections = [
       {
         id: 1,
         status: 'accepted',
-        instructorName: 'teacher',
-        instructorEmail: 'teacher@code.org',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
       },
     ],
     primaryInstructor: {
@@ -136,14 +136,14 @@ const sections = [
       {
         id: 2,
         status: 'accepted',
-        instructorName: 'teacher',
-        instructorEmail: 'teacher@code.org',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
       },
       {
         id: 3,
         status: 'invited',
-        instructorName: 'coteacher',
-        instructorEmail: 'coteacher@code.org',
+        instructor_name: 'coteacher',
+        instructor_email: 'coteacher@code.org',
       },
     ],
     primaryInstructor: {
@@ -189,8 +189,8 @@ const sections = [
       {
         id: 2,
         status: 'accepted',
-        instructorName: 'teacher',
-        instructorEmail: 'teacher@code.org',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
       },
     ],
     primaryInstructor: {
@@ -228,8 +228,8 @@ const sections = [
       {
         id: 4,
         status: 'accepted',
-        instructorName: 'teacher',
-        instructorEmail: 'teacher@code.org',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
       },
     ],
     primaryInstructor: {
@@ -884,8 +884,8 @@ describe('teacherSectionsRedux', () => {
             {
               id: 1,
               status: 'accepted',
-              instructorName: 'teacher',
-              instructorEmail: 'teacher@code.org',
+              instructor_name: 'teacher',
+              instructor_email: 'teacher@code.org',
             },
           ],
           primaryInstructor: {
