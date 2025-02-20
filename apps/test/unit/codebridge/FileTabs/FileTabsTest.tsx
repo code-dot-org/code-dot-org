@@ -49,6 +49,8 @@ describe('FileTabs', () => {
     );
   }
 
+  // Timeout increased to 10 seconds for these tests because sometimes
+  // userEvent seems to take a while on drone/staging.
   it('activates an inactive tab on click', async () => {
     renderDefault();
     const defaultOpenFile = context.source.files['2'];
@@ -61,7 +63,7 @@ describe('FileTabs', () => {
     const user = userEvent.setup();
     await user.click(tab);
     expect(context.setActiveFile).toHaveBeenCalledWith(file.id);
-  });
+  }, 10000);
 
   it('can close a tab', async () => {
     renderDefault();
@@ -71,5 +73,5 @@ describe('FileTabs', () => {
     const user = userEvent.setup();
     await user.click(closeButton);
     expect(context.closeFile).toHaveBeenCalledWith('1');
-  });
+  }, 10000);
 });
