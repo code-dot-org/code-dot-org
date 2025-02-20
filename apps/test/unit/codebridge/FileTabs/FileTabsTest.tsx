@@ -54,10 +54,8 @@ describe('FileTabs', () => {
       defaultOpenFile.name
     );
     const file = context.source.files['1'];
-    expect(screen.getByRole('tab', {selected: false})).toHaveTextContent(
-      file.name
-    );
-    const tab = screen.getByText(file.name);
+    const tab = screen.getByRole('tab', {selected: false});
+    expect(tab).toHaveTextContent(file.name);
     fireEvent.click(tab);
     expect(context.setActiveFile).toHaveBeenCalledWith(file.id);
   });
