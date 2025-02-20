@@ -4,6 +4,7 @@ import Output from '@codebridge/Workspace/Output';
 import React, {useCallback, useEffect} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
+import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
 import ResizeBar, {
   RESIZE_BAR_SIZE_PX,
 } from '@cdo/apps/lab2/views/components/ResizeBar';
@@ -32,6 +33,8 @@ const VerticalLayout: React.FunctionComponent = () => {
     axis: 'x',
     initial: INITIAL_INFO_PANEL_WIDTH,
     min: MIN_INFO_PANEL_WIDTH,
+    onResizeStart: () =>
+      logOnResize('pythonlab', {layout: 'vertical', resizeBar: 'instructions'}),
   });
   const {
     position: rawOutputWidth,
@@ -42,6 +45,8 @@ const VerticalLayout: React.FunctionComponent = () => {
     initial: INITIAL_OUTPUT_WIDTH,
     min: MIN_OUTPUT_WIDTH,
     reverse: true,
+    onResizeStart: () =>
+      logOnResize('pythonlab', {layout: 'vertical', resizeBar: 'console'}),
   });
 
   const adjustWidths = useCallback(() => {

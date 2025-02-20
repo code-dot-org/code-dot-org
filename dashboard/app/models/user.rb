@@ -1225,11 +1225,14 @@ class User < ApplicationRecord
     return if params[:secret_words].blank?
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
-    User.joins(:sections_as_student).find_by(
+    user = User.joins(:sections_as_student).find_by(
       id: params[:user_id],
-      secret_words: params[:secret_words],
       followers: {section: section}
     )
+
+    return unless user&.valid_secret_words?(params[:secret_words])
+
+    user
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
@@ -1596,7 +1599,7 @@ class User < ApplicationRecord
 
   def student_can_access_ai_chat?
     teachers.any?(&:teacher_can_access_ai_chat?) &&
-      sections_as_student.any?(&:assigned_gen_ai?)
+      sections_as_student.any?(&:assigned_ai_chat?)
   end
 
   def has_aichat_access?
@@ -1691,7 +1694,7 @@ class User < ApplicationRecord
   end
 
   def valid_secret_words?(words)
-    words == secret_words
+    words.delete(' ') == secret_words.delete(' ')
   end
 
   # override the default devise password to support old and new style hashed passwords
