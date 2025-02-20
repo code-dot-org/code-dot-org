@@ -43,7 +43,7 @@ describe('TurnOffAiDiff', () => {
       i18n.aiTeachingAssistantSettingsStatus({status: 'enabled'})
     );
     const toggle = screen.getByRole('checkbox', {
-      name: 'Chat functionality for AI Teaching Assistant is enabled',
+      name: 'Chat functionality for AI Teaching Assistant Chat is enabled',
     });
     expect(toggle).toBeChecked();
   });
