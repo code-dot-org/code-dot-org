@@ -14,11 +14,11 @@ class SectionsController < ApplicationController
     existing_section = Section.find_by(
       id: params[:id]
     )
-    #
-    # if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
-    #   redirect_to "/teacher_dashboard/sections/#{params[:id]}/settings"
-    #   return
-    # end
+
+    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
+      redirect_to "/teacher_dashboard/sections/#{params[:id]}/settings"
+      return
+    end
 
     @section = existing_section.attributes
 
