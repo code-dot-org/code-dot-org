@@ -5,16 +5,22 @@ import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
 } from '@cdo/apps/aiTutor/types';
+import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {genericCompilation, genericValidation} from '../constants';
+import {
+  genericCompilation,
+  genericValidation,
+  genericError,
+} from '../constants';
 import {askAITutor} from '../redux/aiTutorRedux';
 
 const QuickActions = {
   [ActionType.COMPILATION]: genericCompilation,
   [ActionType.VALIDATION]: genericValidation,
+  [ActionType.GENERIC_ERROR]: genericError,
 };
 
 const AITutorSuggestedPrompts: React.FunctionComponent = () => {
@@ -75,6 +81,10 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
           studentInput = QuickActions[ActionType.VALIDATION];
           suggestedPromptType = EVENTS.AI_TUTOR_SUGGESTED_PROMPT_VALIDATION;
           break;
+        case ActionType.GENERIC_ERROR:
+          studentInput = QuickActions[ActionType.GENERIC_ERROR];
+          suggestedPromptType = EVENTS.AI_TUTOR_SUGGESTED_PROMPT_GENERIC_ERROR;
+          break;
       }
 
       const chatContext = {
@@ -105,6 +115,11 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
       label: QuickActions[ActionType.VALIDATION],
       onClick: () => handleClick(ActionType.VALIDATION),
       show: showValidationOption,
+    },
+    {
+      label: QuickActions[ActionType.GENERIC_ERROR],
+      onClick: () => handleClick(ActionType.GENERIC_ERROR),
+      show: showGenericErrorOption,
     },
   ];
 
