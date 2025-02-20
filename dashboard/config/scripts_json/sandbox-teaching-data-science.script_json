@@ -6,11 +6,12 @@
     "properties": {
       "content_area": "other",
       "curriculum_umbrella": "Other",
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-05 17:37:26 UTC",
+    "serialized_at": "2025-02-19 18:51:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

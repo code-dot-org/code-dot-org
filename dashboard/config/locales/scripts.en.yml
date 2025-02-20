@@ -19012,8 +19012,28 @@ en:
           title: Teaching Data Science
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.
+
+            #### The Data Science unit is part of the ***Computer Science and AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.
+
+            #### The Data Science unit is part of the ***Computer Science and AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs.
         foundations-gen-ai-2024:
           lessons: {}
           lesson_groups: {}
@@ -20057,16 +20077,46 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csad-pilot-preassessment-2024
-          title: Pre-Assessment
+          title: 'Computer Systems and Systems: Pre-Assessment'
           description_audience: ''
           description_short: ''
           description: ''
           student_description: ''
         csad-pilot-content-2024:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Introduction to Computer Systems
+            lesson-2:
+              name: Hardware
+            lesson-3:
+              name: Troubleshooting and Optimizing Hardware
+            lesson-4:
+              name: Software and Operating Systems
+            lesson-5:
+              name: Build a Computer System
+            lesson-6:
+              name: Data in Computer Systems
+            lesson-7:
+              name: Processing Data in a System
+            lesson-8:
+              name: How AI Uses Data
+            lesson-9:
+              name: IoT and Emerging Technologies
+            lesson-10:
+              name: User Testing
+            lesson-11:
+              name: Just Because We Can, Should We?
+            lesson-12:
+              name: Nobel in AI Project
+            lesson-13:
+              name: Troubleshooting and Optimizing Software
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: End-of-Unit Project
           name: csad-pilot-content-2024
-          title: Computer Systems and Devices
+          title: 'Computer Systems and Devices: Content'
           description_audience: ''
           description_short: ''
           description: ''
@@ -20075,7 +20125,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csad-pilot-postassessment-2024
-          title: Post-Assessment
+          title: 'Computer Systems and Devices: Post-Assessment'
           description_audience: ''
           description_short: ''
           description: ''
@@ -20138,16 +20188,38 @@ en:
           lessons: {}
           lesson_groups: {}
           name: nati-pilot-preassessment-2024
-          title: Pre-Assessment
+          title: 'Networks and the Internet: Pre-Assessment'
           description_audience: ''
           description_short: ''
           description: ''
           student_description: ''
         nati-pilot-content-2024:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Introduction to the Internet
+            lesson-2:
+              name: Sending Bits
+            lesson-3:
+              name: IP Addresses
+            lesson-4:
+              name: Routers and Redundancy
+            lesson-5:
+              name: Packets
+            lesson-6:
+              name: HTTP and DNS
+            lesson-7:
+              name: The Internet's Hidden Barriers
+            lesson-8:
+              name: Internet Access Advocacy Campaign Project
+            lesson-9:
+              name: Network Security
+            lesson-10:
+              name: Emerging Technologies
+            lesson-11:
+              name: Network Security Risk Assessment Project
           lesson_groups: {}
           name: nati-pilot-content-2024
-          title: Networks and the Internet
+          title: 'Networks and the Internet: Content'
           description_audience: ''
           description_short: ''
           description: ''
@@ -20156,8 +20228,37 @@ en:
           lessons: {}
           lesson_groups: {}
           name: nati-pilot-postassessment-2024
-          title: Post-Assessment
+          title: 'Networks and the Internet: Post-Assessment'
           description_audience: ''
           description_short: ''
           description: ''
           student_description: ''
+        introduction-to-teaching-data-science-pilot:
+          lessons: {}
+          lesson_groups: {}
+          name: introduction-to-teaching-data-science-pilot
+          title: Teaching Data Science [Pilot]
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.
+
+            #### The Data Science unit is part of the ***Computer Science and AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.
+
+            #### The Data Science unit is part of the ***Computer Science and AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs.

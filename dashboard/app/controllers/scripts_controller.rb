@@ -2,6 +2,7 @@ require 'cdo/i18n'
 
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
+  include TeacherDashboardUtils
 
   before_action :require_levelbuilder_mode, except: [:show, :vocab, :resources, :code, :standards, :edit, :update, :new, :create]
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
@@ -26,7 +27,7 @@ class ScriptsController < ApplicationController
       return
     end
 
-    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
+    if TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
       if request.query_parameters.include? "user_id"
         redirect_query_string = request.query_string.sub("user_id=#{request.query_parameters[:user_id]}", "").sub("&&", "&")
         if redirect_query_string.empty?
