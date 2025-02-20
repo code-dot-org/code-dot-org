@@ -15,8 +15,8 @@ import moduleStyles from './carousel.module.scss';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon/FontAwesomeV6Icon';
 
 export interface CarouselProps extends HTMLAttributes<HTMLElement> {
-  /** Unique className (required) */
-  uniqueClassName: string;
+  /** Unique identifier for the carousel instance */
+  carouselId?: string;
   /** Number of slides per view */
   slidesPerView?: number;
   /** Number of slides per group */
@@ -31,22 +31,8 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   children?: ReactNode;
 }
 
-/**
- * ## Production-ready Checklist:
- *  * (✔) implementation of component approved by design team;
- *  * (✔) has storybook, covered with stories and documentation;
- *  * (✘) has tests: test every prop, every state and every interaction that's js related;
- *  * (see ./__tests__/Section.test.tsx)
- *  * (✔) passes accessibility checks;
- *
- * ### Status: ```Ready for dev```
- *
- * Design System: Carousel Component.
- * A container for carousel content including Action Blocks, Videos, and Images.
- * Uses Swiper.js for carousel functionality: https://swiperjs.com/swiper-api.
- */
-const Carousel: React.FC<CarouselProps> = ({
-  uniqueClassName = 'carousel-01',
+const SwiperCarousel: React.FC<CarouselProps> = ({
+  carouselId,
   showNavArrows = true,
   slidesPerView = 2,
   slidesPerGroup = 2,
@@ -61,7 +47,7 @@ const Carousel: React.FC<CarouselProps> = ({
       className={classNames(moduleStyles.carouselWrapper, className)}
       {...HTMLAttributes}
     >
-      <div className={classNames(moduleStyles.carousel, uniqueClassName)}>
+      <div className={classNames(moduleStyles.carousel, className)}>
         {/* Swiper carousel */}
         <Swiper
           modules={[Navigation, Pagination, A11y]}
@@ -69,13 +55,13 @@ const Carousel: React.FC<CarouselProps> = ({
           autoHeight={autoHeight}
           spaceBetween={24}
           navigation={{
-            nextEl: `.${uniqueClassName}-next`,
-            prevEl: `.${uniqueClassName}-prev`,
+            nextEl: `.${carouselId}-next`,
+            prevEl: `.${carouselId}-prev`,
             enabled: showNavArrows,
           }}
           pagination={{
             clickable: true,
-            el: `.${uniqueClassName}-pagination`,
+            el: `.${carouselId}-pagination`,
           }}
           breakpoints={{
             // when window width is >= 768px
@@ -93,7 +79,7 @@ const Carousel: React.FC<CarouselProps> = ({
           {Array.isArray(children)
             ? children.map((child, index) => (
                 <SwiperSlide
-                  key={`${uniqueClassName}-${index.toString()}`}
+                  key={`${carouselId}-${index.toString()}`}
                   className={className}
                 >
                   {child}
@@ -107,7 +93,7 @@ const Carousel: React.FC<CarouselProps> = ({
             <button
               className={classNames(
                 moduleStyles.swiperNavPrev,
-                `${uniqueClassName}-prev`,
+                `${carouselId}-prev`,
               )}
             >
               <FontAwesomeV6Icon iconName="arrow-left" />
@@ -116,7 +102,7 @@ const Carousel: React.FC<CarouselProps> = ({
             <button
               className={classNames(
                 moduleStyles.swiperNavNext,
-                `${uniqueClassName}-next`,
+                `${carouselId}-next`,
               )}
             >
               <FontAwesomeV6Icon iconName="arrow-right" />
@@ -128,11 +114,33 @@ const Carousel: React.FC<CarouselProps> = ({
       <div
         className={classNames(
           moduleStyles.swiperPagination,
-          `${uniqueClassName}-pagination`,
+          `${carouselId}-pagination`,
         )}
       ></div>
     </div>
   );
+};
+
+/**
+ * ## Production-ready Checklist:
+ *  * (✔) implementation of component approved by design team;
+ *  * (✔) has storybook, covered with stories and documentation;
+ *  * (✘) has tests: test every prop, every state and every interaction that's js related;
+ *  * (see ./__tests__/Section.test.tsx)
+ *  * (✔) passes accessibility checks;
+ *
+ * ### Status: ```Ready for dev```
+ *
+ * Design System: Carousel Component.
+ * A container for carousel content including Action Blocks, Videos, and Images.
+ * Uses Swiper.js for carousel functionality: https://swiperjs.com/swiper-api.
+ */
+const Carousel: React.FC<CarouselProps> = props => {
+  // Generate a unique identifier for each carousel instance
+  // to target the carousel navigation elements.
+  // Identifiers must start with a letter, so prepend 'id-'.
+  const uuid = 'id-' + crypto.randomUUID();
+  return <SwiperCarousel {...props} carouselId={uuid} />;
 };
 
 export default Carousel;

@@ -34,24 +34,21 @@ const createBasicSlide = (index: number) => (
 // TEMPLATES
 //
 const SingleTemplate: StoryFn<CarouselProps> = componentArg => (
-  <div
-    style={{maxWidth: '800px', margin: '0 auto'}}
-    key={componentArg.uniqueClassName}
-  >
-    <Carousel {...componentArg} />
+  <div style={{maxWidth: '800px', margin: '0 auto'}}>
+    <Carousel {...componentArg} key={componentArg.carouselId} />
   </div>
 );
 
 const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
   <>
-    {args.components?.map(componentArg => (
+    {args.components?.map((componentArg, index) => (
       <div
         style={{maxWidth: '800px', margin: '0 auto', marginBlock: '2rem'}}
-        key={componentArg.uniqueClassName}
+        key={index}
       >
         <Carousel
           {...componentArg}
-          key={componentArg.uniqueClassName}
+          key={componentArg.carouselId}
           children={componentArg.children}
         />
       </div>
@@ -64,7 +61,6 @@ const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
 //
 export const DefaultCarousel = SingleTemplate.bind({});
 DefaultCarousel.args = {
-  uniqueClassName: 'default-carousel',
   children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
 };
 DefaultCarousel.parameters = {
@@ -112,7 +108,6 @@ DefaultCarousel.play = async ({
 
 export const CarouselWithoutNavArrows = SingleTemplate.bind({});
 CarouselWithoutNavArrows.args = {
-  uniqueClassName: 'carousel-without-nav-arrows',
   showNavArrows: false,
   children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
 };
@@ -147,7 +142,6 @@ CarouselWithoutNavArrows.play = async ({
 
 export const CarouselWithTouchMove = SingleTemplate.bind({});
 CarouselWithTouchMove.args = {
-  uniqueClassName: 'carousel-with-touch-move',
   allowTouchMove: true,
   children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
 };
@@ -196,7 +190,6 @@ CarouselWithTouchMove.play = async ({
 
 export const CarouselWithCustomSlidesPerView = SingleTemplate.bind({});
 CarouselWithCustomSlidesPerView.args = {
-  uniqueClassName: 'carousel-with-3-slides',
   slidesPerView: 3,
   slidesPerGroup: 3,
   children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
@@ -253,7 +246,6 @@ export const ActionBlockCarousel = MultipleTemplate.bind({});
 ActionBlockCarousel.args = {
   components: [
     {
-      uniqueClassName: 'action-block-carousel',
       children: 'COMING SOON',
     },
   ],
@@ -270,7 +262,6 @@ export const VideoCarousels = MultipleTemplate.bind({});
 VideoCarousels.args = {
   components: [
     {
-      uniqueClassName: 'video-carousel-with-captions',
       children: [
         <Video
           videoTitle="Generative AI: Input & Pre-training"
@@ -295,7 +286,6 @@ VideoCarousels.args = {
       ],
     },
     {
-      uniqueClassName: 'video-carousel-no-captions',
       children: [
         <Video
           videoTitle="Generative AI: Input & Pre-training"
@@ -362,7 +352,6 @@ export const ImageCarousel = MultipleTemplate.bind({});
 ImageCarousel.args = {
   components: [
     {
-      uniqueClassName: 'image-carousel',
       children: [
         <img
           src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png"
