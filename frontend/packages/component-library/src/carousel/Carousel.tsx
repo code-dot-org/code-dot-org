@@ -31,8 +31,22 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   slides: {id: string; slide: ReactNode}[];
 }
 
-const SwiperCarousel: React.FC<CarouselProps> = ({
-  carouselId,
+/**
+ * ## Production-ready Checklist:
+ *  * (✔) implementation of component approved by design team;
+ *  * (✔) has storybook, covered with stories and documentation;
+ *  * (✘) has tests: test every prop, every state and every interaction that's js related;
+ *  * (see ./__tests__/Section.test.tsx)
+ *  * (✔) passes accessibility checks;
+ *
+ * ### Status: ```Ready for dev```
+ *
+ * Design System: Carousel Component.
+ * A container for carousel content including Action Blocks, Videos, and Images.
+ * Uses Swiper.js for carousel functionality: https://swiperjs.com/swiper-api.
+ */
+const Carousel: React.FC<CarouselProps> = ({
+  carouselId = 'id-' + crypto.randomUUID(),
   showNavArrows = true,
   slidesPerView = 2,
   slidesPerGroup = 2,
@@ -60,13 +74,13 @@ const SwiperCarousel: React.FC<CarouselProps> = ({
           autoHeight={autoHeight}
           spaceBetween={slideGap}
           navigation={{
-            nextEl: `.${carouselId}-next`,
-            prevEl: `.${carouselId}-prev`,
+            nextEl: `#${carouselId}-next`,
+            prevEl: `#${carouselId}-prev`,
             enabled: showNavArrows,
           }}
           pagination={{
             clickable: true,
-            el: `.${carouselId}-pagination`,
+            el: `#${carouselId}-pagination`,
           }}
           breakpoints={{
             // when window width is tablet
@@ -91,19 +105,15 @@ const SwiperCarousel: React.FC<CarouselProps> = ({
           <div className={moduleStyles.navArrowWrapper}>
             {/* Previous button */}
             <button
-              className={classNames(
-                moduleStyles.swiperNavPrev,
-                `${carouselId}-prev`,
-              )}
+              id={`${carouselId}-prev`}
+              className={classNames(moduleStyles.swiperNavPrev)}
             >
               <FontAwesomeV6Icon iconName="arrow-left" />
             </button>
             {/* Next button */}
             <button
-              className={classNames(
-                moduleStyles.swiperNavNext,
-                `${carouselId}-next`,
-              )}
+              id={`${carouselId}-next`}
+              className={classNames(moduleStyles.swiperNavNext)}
             >
               <FontAwesomeV6Icon iconName="arrow-right" />
             </button>
@@ -112,35 +122,11 @@ const SwiperCarousel: React.FC<CarouselProps> = ({
       </div>
       {/* Pagination */}
       <div
-        className={classNames(
-          moduleStyles.swiperPagination,
-          `${carouselId}-pagination`,
-        )}
+        id={`${carouselId}-pagination`}
+        className={classNames(moduleStyles.swiperPagination)}
       ></div>
     </div>
   );
-};
-
-/**
- * ## Production-ready Checklist:
- *  * (✔) implementation of component approved by design team;
- *  * (✔) has storybook, covered with stories and documentation;
- *  * (✘) has tests: test every prop, every state and every interaction that's js related;
- *  * (see ./__tests__/Section.test.tsx)
- *  * (✔) passes accessibility checks;
- *
- * ### Status: ```Ready for dev```
- *
- * Design System: Carousel Component.
- * A container for carousel content including Action Blocks, Videos, and Images.
- * Uses Swiper.js for carousel functionality: https://swiperjs.com/swiper-api.
- */
-const Carousel: React.FC<CarouselProps> = props => {
-  // Generate a unique identifier for each carousel instance
-  // to target the carousel navigation elements.
-  // Identifiers must start with a letter, so prepend 'id-'.
-  const uuid = 'id-' + crypto.randomUUID();
-  return <SwiperCarousel {...props} carouselId={uuid} />;
 };
 
 export default Carousel;
