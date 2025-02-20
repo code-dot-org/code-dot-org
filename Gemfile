@@ -379,3 +379,6 @@ gem "csv"
 gem "async", "~> 1.32"
 
 gem "webrick", "~> 1.9"
+
+# Automatically include all rails engines
+Dir[File.join(Bundler.root.to_s, 'engines/*/')].each {|f| gemspec path: f}

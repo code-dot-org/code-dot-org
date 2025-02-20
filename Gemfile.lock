@@ -88,6 +88,12 @@ GIT
   specs:
     full-name-splitter (0.1.2)
 
+PATH
+  remote: engines/marketing
+  specs:
+    maketing (0.0.0)
+      contentful
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -305,6 +311,9 @@ GEM
       fiber-annotation
       fiber-local
       json
+    contentful (2.17.1)
+      http (> 0.8, < 6.0)
+      multi_json (~> 1)
     crack (0.4.5)
       rexml
     crass (1.0.6)
@@ -645,9 +654,6 @@ GEM
       actionpack (>= 4.2)
       omniauth (~> 2.0)
     open-uri (0.1.0)
-      stringio
-      time
-      uri
     open_uri_redirections (0.2.1)
     orm_adapter (0.5.0)
     os (1.1.4)
@@ -887,7 +893,6 @@ GEM
       ip3country (~> 0.2.1)
       user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
-    stringio (3.1.1)
     strscan (3.1.0)
     sysexits (1.2.0)
     syslog (0.1.2)
@@ -900,8 +905,6 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
-    time (0.3.0)
-      date
     timecop (0.8.1)
     timeout (0.3.2)
     timers (4.3.5)
@@ -923,7 +926,6 @@ GEM
     unf_ext (0.0.7.4)
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)
-    uri (0.13.0)
     user_agent_parser (2.15.0)
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
@@ -1049,6 +1051,7 @@ DEPENDENCIES
   loofah (~> 2.19.1)
   mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
+  maketing!
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer

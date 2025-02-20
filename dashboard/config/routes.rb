@@ -1,6 +1,7 @@
 # For documentation see, e.g., http://guides.rubyonrails.org/routing.html.
 
 Dashboard::Application.routes.draw do
+  mount Marketing::Engine => '/marketing'
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
 
