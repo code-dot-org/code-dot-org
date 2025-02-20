@@ -37,15 +37,38 @@ import {BlockConfig} from './types';
  */
 export function setUpBlocklyForMusicLab() {
   backupFunctionDefinitons();
+
+  if (Blockly.Extensions.isRegistered(DEFAULT_TRACK_NAME_EXTENSION)) {
+    Blockly.Extensions.unregister(DEFAULT_TRACK_NAME_EXTENSION);
+  }
   Blockly.Extensions.register(
     DEFAULT_TRACK_NAME_EXTENSION,
     getDefaultTrackNameExtension()
   );
 
+  if (Blockly.Extensions.isRegistered(FIELD_EFFECTS_EXTENSION)) {
+    Blockly.Extensions.unregister(FIELD_EFFECTS_EXTENSION);
+  }
   Blockly.Extensions.register(FIELD_EFFECTS_EXTENSION, effectsFieldExtension);
+
+  if (Blockly.Extensions.isRegistered(FIELD_SOUNDS_VALIDATOR)) {
+    Blockly.Extensions.unregister(FIELD_SOUNDS_VALIDATOR);
+  }
   Blockly.Extensions.register(FIELD_SOUNDS_VALIDATOR, fieldSoundsValidator);
+
+  if (Blockly.Extensions.isRegistered(FIELD_PATTERNS_VALIDATOR)) {
+    Blockly.Extensions.unregister(FIELD_PATTERNS_VALIDATOR);
+  }
   Blockly.Extensions.register(FIELD_PATTERNS_VALIDATOR, fieldPatternsValidator);
+
+  if (Blockly.Extensions.isRegistered(PLAY_MULTI_MUTATOR)) {
+    Blockly.Extensions.unregister(PLAY_MULTI_MUTATOR);
+  }
   Blockly.Extensions.registerMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
+
+  if (Blockly.Extensions.isRegistered(NEXT_CONNECTION_MUTATOR)) {
+    Blockly.Extensions.unregister(NEXT_CONNECTION_MUTATOR);
+  }
   Blockly.Extensions.registerMutator(
     NEXT_CONNECTION_MUTATOR,
     nextConnectionMutator

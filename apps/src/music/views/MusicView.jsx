@@ -352,6 +352,9 @@ class UnconnectedMusicView extends React.Component {
         levelToolboxDefinition
       );
     } else if (isEditingExemplar || isViewingExemplar) {
+      const exemplarPackId = this.getExemplarSources()?.packId;
+      this.library.setCurrentPackId(exemplarPackId);
+      this.props.setPackId(exemplarPackId);
       this.loadCode(this.getExemplarSources() || this.getStartSources());
     } else if (this.getStartSources() || initialSources) {
       const startSources = this.getStartSources();

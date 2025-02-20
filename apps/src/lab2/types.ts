@@ -118,6 +118,7 @@ export type FolderId = string;
 // Note that if it changes files_api.has_valid_encoding? may need to be updated to correctly validate
 // the new structure.
 export interface MultiFileSource {
+  packId?: string;
   folders: Record<FolderId, ProjectFolder>;
   files: Record<FileId, ProjectFile>;
   openFiles?: FileId[];

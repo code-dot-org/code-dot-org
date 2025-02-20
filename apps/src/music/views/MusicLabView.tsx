@@ -24,6 +24,7 @@ import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import AppConfig from '../appConfig';
 import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
+import {DEFAULT_PACK} from '../constants';
 import musicI18n from '../locale';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
@@ -33,9 +34,11 @@ import {
   setCurrentPlayheadPosition,
   showCallout,
 } from '../redux/musicRedux';
+import {MusicLevelData} from '../types';
 
 import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
+import ExemplarPlayerView from './ExemplarPlayerView';
 import HeaderButtons from './HeaderButtons';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 import useUpdateAnalytics from './hooks/useUpdateAnalytics';
@@ -109,6 +112,18 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   );
   const lastMeasure = useAppSelector(state => state.music.lastMeasure);
 
+  const exemplarSources = useAppSelector(
+    state => state.lab.levelProperties?.exemplarSources
+  );
+  const currentPackId = useAppSelector(
+    state => state.music.packId || DEFAULT_PACK
+  );
+  const library = useAppSelector(
+    state =>
+      (state.lab.levelProperties?.levelData as MusicLevelData | undefined)
+        ?.library || 'launch2024'
+  );
+
   const progressManager = useContext(ProgressManagerContext);
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -137,7 +152,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       });
     } else if (isEditingExemplar) {
       header.showLevelBuilderSaveButton(
-        () => ({exemplar_sources: blocklyWorkspace.getCode()}),
+        () => ({
+          exemplar_sources: {
+            ...blocklyWorkspace.getCode(),
+            packId: currentPackId,
+          },
+        }),
         'Levelbuilder: Edit Exemplar',
         `/levels/${levelId}/update_exemplar_code`
       );
@@ -152,6 +172,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     }
   }, [
     blocklyWorkspace,
+    currentPackId,
     isStartMode,
     isEditingExemplar,
     isToolboxMode,
@@ -280,11 +301,25 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               }
               handleInstructionsTextClick={onInstructionsTextClick}
             />
+            {exemplarSources && !isEditingExemplar && !isViewingExemplar && (
+              <ExemplarPlayerView
+                source={exemplarSources}
+                packId={exemplarSources.packId || DEFAULT_PACK}
+                libraryName={library}
+              />
+            )}
           </PanelContainer>
         </div>
       );
     },
-    [hideHeaders, onInstructionsTextClick]
+    [
+      hideHeaders,
+      exemplarSources,
+      isEditingExemplar,
+      isViewingExemplar,
+      library,
+      onInstructionsTextClick,
+    ]
   );
 
   const renderPlayArea = useCallback(

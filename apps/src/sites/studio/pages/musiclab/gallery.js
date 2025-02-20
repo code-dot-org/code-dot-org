@@ -9,7 +9,6 @@ $(document).ready(function () {
     document.querySelector('script[data-channelids]').dataset.channelids
   );
 
-  console.log({channelIds});
   ReactDOM.render(
     <MiniMusicPlayer projects={channelIds} libraryName="launch2024" />,
     document.getElementById('musiclab-container')
