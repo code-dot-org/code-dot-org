@@ -1,0 +1,14 @@
+%h1.control-legend.collapsed{data: {toggle: "collapse", target: "#exemplar-settings-container"}}
+  Exemplar Settings
+
+- if @level.is_a?(Music)
+  %p Exemplars for Music Lab are defined using Blockly. See "Extra Links"
+
+#exemplar-settings-container.in.collapse
+  #exemplar-settings-editor
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_exemplar.js'),
+        data: {appname: @level.game&.app,
+               exemplarsources: (@level.properties['encrypted_exemplar_sources']).to_json,
+               exemplarsettings: (@level.properties['exemplar_settings'] || {playerEnabled: false, validationEnabled: false}).to_json}}

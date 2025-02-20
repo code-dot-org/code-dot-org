@@ -115,6 +115,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const exemplarSources = useAppSelector(
     state => state.lab.levelProperties?.exemplarSources
   );
+  const exemplarSettings = useAppSelector(
+    state => state.lab.levelProperties?.exemplarSettings
+  );
   const currentPackId = useAppSelector(
     state => state.music.packId || DEFAULT_PACK
   );
@@ -301,19 +304,24 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               }
               handleInstructionsTextClick={onInstructionsTextClick}
             />
-            {exemplarSources && !isEditingExemplar && !isViewingExemplar && (
-              <ExemplarPlayerView
-                source={exemplarSources}
-                packId={exemplarSources.packId || DEFAULT_PACK}
-                libraryName={library}
-              />
-            )}
+            {exemplarSettings?.playerEnabled &&
+              exemplarSources &&
+              !isEditingExemplar &&
+              !isViewingExemplar && (
+                <ExemplarPlayerView
+                  source={exemplarSources}
+                  packId={exemplarSources.packId || DEFAULT_PACK}
+                  libraryName={library}
+                  title={exemplarSettings.playerTitle || 'Example'}
+                />
+              )}
           </PanelContainer>
         </div>
       );
     },
     [
       hideHeaders,
+      exemplarSettings,
       exemplarSources,
       isEditingExemplar,
       isViewingExemplar,

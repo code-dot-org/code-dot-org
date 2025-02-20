@@ -1,14 +1,11 @@
-import {
-  BodyThreeText,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
-import {AppName, Source} from '../../types';
+import {AppName} from '../../types';
 
-import moduleStyles from './edit-validations.module.scss';
+import moduleStyles from '../validations/edit-validations.module.scss';
 
 const AppSupport: {[key in AppName]?: boolean} = {
   music: true,
@@ -21,13 +18,13 @@ interface ExemplarValidation {
 }
 interface ExemplarValidationProps {
   initialExemplarValidation: ExemplarValidation;
-  exemplarSources: Source;
+  exemplarDefined: boolean;
   appName: AppName;
 }
 
 const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
   initialExemplarValidation,
-  exemplarSources,
+  exemplarDefined,
   appName,
 }) => {
   const [exemplarValidation, setExemplarValidation] =
@@ -62,17 +59,14 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
               An additional layer of validation is available for levels with
               exemplar sources.
               <br />
-              This validation and its associated feedback occur <i>after</i>
-              any other validations, listed above. If checked, the student's
+              This validation and its associated feedback occur <i>after</i> any
+              other validations, listed above. If checked, the student's
               timeline must match the exemplar's timeline.
             </BodyThreeText>
           </div>
-          {!exemplarSources && (
+          {!exemplarDefined && (
             <div className={moduleStyles.row}>
-              <BodyTwoText>
-                This level does not have an exemplar. To add one, use Extra
-                Links.
-              </BodyTwoText>
+              <em>This level does not have an exemplar.</em>
             </div>
           )}
           <div className={moduleStyles.row}>
@@ -83,7 +77,7 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
               type="checkbox"
               id="validateExemplar"
               name="validateExemplar"
-              disabled={!exemplarSources}
+              disabled={!exemplarDefined}
               checked={!!exemplarValidation.enabled}
               onChange={newValue => {
                 setExemplarValidation({
@@ -102,8 +96,8 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
               id="successMessage"
               name="successMessage"
               className={moduleStyles.callout}
-              value={exemplarValidation.successMessage}
-              disabled={!exemplarSources || !exemplarValidation.enabled}
+              value={exemplarValidation.successMessage ?? ''}
+              disabled={!exemplarDefined || !exemplarValidation.enabled}
               onChange={newValue => {
                 setExemplarValidation({
                   ...exemplarValidation,
@@ -121,8 +115,8 @@ const ExemplarValidation: React.FunctionComponent<ExemplarValidationProps> = ({
               id="failureMessage"
               name="failureMessage"
               className={moduleStyles.callout}
-              value={exemplarValidation.failureMessage}
-              disabled={!exemplarSources || !exemplarValidation.enabled}
+              value={exemplarValidation.failureMessage ?? ''}
+              disabled={!exemplarDefined || !exemplarValidation.enabled}
               onChange={newValue => {
                 setExemplarValidation({
                   ...exemplarValidation,

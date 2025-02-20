@@ -9,7 +9,7 @@ import {Source} from '../../lab2/types';
 import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
-import {BlockMode} from '../constants';
+import {BlockMode, DEFAULT_PACK} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
@@ -20,12 +20,14 @@ interface ExemplarPlayerViewProps {
   source: Source;
   packId: string;
   libraryName: string;
+  title: string;
 }
 
 const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   source,
   packId,
   libraryName,
+  title,
 }) => {
   const playerRef = useRef<MusicPlayer | null>(null);
   if (playerRef.current === null) {
@@ -59,9 +61,9 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     analyticsReporter.current.setUserProperties(userId, userType, signInState);
   }, [userId, userType, signInState]);
 
-  // This is the main function that is called when a song is played in the mini player
-  // Loads code from the server, compiles the song, executes it to generate events,
-  // and then plays the events.
+  // This is the main function that is called when a song is played in the exemplar
+  // player oads code from the server, compiles the song, executes it to generate
+  // events, and then plays the events.
   // Optimization: cache code and/or compiled song after played once.
   const onPlaySong = useCallback(async (source: Source, packId: string) => {
     installFunctionBlocks(BlockMode.SIMPLE2);
@@ -151,14 +153,13 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
             isPlaying && moduleStyles.packPlaying
           )}
         >
-          {packId && packDetails?.image && (
-            <img
-              className={moduleStyles.packImage}
-              src={packDetails.image}
-              alt=""
-              draggable={false}
-            />
-          )}
+          <img
+            className={moduleStyles.packImage}
+            // The exemplar player always uses the default pack image to reduce distraction.
+            src={getPackDetails(DEFAULT_PACK)?.image}
+            alt=""
+            draggable={false}
+          />
         </div>
 
         <div className={moduleStyles.control}>
@@ -170,7 +171,7 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
         </div>
 
         <div className={moduleStyles.body}>
-          <div className={moduleStyles.name}>{'Example'}</div>
+          <div className={moduleStyles.name}>{title}</div>
           {packDetails && (
             <div className={moduleStyles.details}>
               {packDetails.name} &bull; {packDetails.artist}

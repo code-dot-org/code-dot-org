@@ -8,6 +8,4 @@
   %script{src: webpack_asset_path('js/levels/editors/fields/_validations.js'),
         data: {validations: (@level.properties['validations'] || @level.properties.dig('level_data', 'validations') || []).to_json,
                levelname: @level.name,
-               appname: @level.game&.app,
-               exemplarvalidation: (@level.properties['exemplar_validation'] || {enabled: false}).to_json,
-               exemplarsources: (@level.properties['exemplar_sources']).to_json}}
+               appname: @level.game&.app}}
