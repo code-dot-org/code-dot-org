@@ -485,7 +485,7 @@ class SectionTest < ActiveSupport::TestCase
         code_review_expires_at: nil,
         is_assigned_csa: false,
         participant_type: 'student',
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructorName: section.teacher.name, instructorEmail: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
       }
@@ -530,7 +530,7 @@ class SectionTest < ActiveSupport::TestCase
         code_review_expires_at: nil,
         is_assigned_csa: false,
         participant_type: 'student',
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructorName: section.teacher.name, instructorEmail: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
       }
@@ -579,8 +579,8 @@ class SectionTest < ActiveSupport::TestCase
         code_review_expires_at: nil,
         is_assigned_csa: false,
         participant_type: 'student',
-        sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
-                             {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
+        sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructorName: section.teacher.name, instructorEmail: section.teacher.email},
+                             {id: coteacher_section_instructor.id, status: "invited", instructorName: nil, instructorEmail: coteacher_user.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
       }
@@ -628,7 +628,7 @@ class SectionTest < ActiveSupport::TestCase
         code_review_expires_at: nil,
         is_assigned_csa: false,
         participant_type: 'student',
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructorName: section.teacher.name, instructorEmail: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
       }
@@ -669,7 +669,7 @@ class SectionTest < ActiveSupport::TestCase
         code_review_expires_at: nil,
         is_assigned_csa: false,
         participant_type: 'student',
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructorName: section.teacher.name, instructorEmail: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
       }
@@ -729,7 +729,8 @@ class SectionTest < ActiveSupport::TestCase
           lesson_extras_available: nil,
           text_to_speech_enabled: nil,
           unit_id: section.unit_group ? section.script_id : nil,
-        }
+        },
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, lti_roster_sync_enabled: nil},
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -760,7 +761,8 @@ class SectionTest < ActiveSupport::TestCase
           lesson_extras_available: script.lesson_extras_available,
           text_to_speech_enabled: script.text_to_speech_enabled?,
           unit_id: section.unit_group ? section.script_id : nil,
-        }
+        },
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, lti_roster_sync_enabled: nil},
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -860,7 +862,8 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_single_unit_course: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructorName: section.teacher.name, instructorEmail: section.teacher.email}],
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, lti_roster_sync_enabled: nil},
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
@@ -917,7 +920,8 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_single_unit_course: nil,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructorName: section.teacher.name, instructorEmail: section.teacher.email}],
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, lti_roster_sync_enabled: nil},
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
@@ -978,8 +982,9 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_single_unit_course: nil,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
-                             {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
+        sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructorName: section.teacher.name, instructorEmail: section.teacher.email},
+                             {id: coteacher_section_instructor.id, status: "invited", instructorName: nil, instructorEmail: coteacher_user.email}],
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, lti_roster_sync_enabled: nil},
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
@@ -1039,7 +1044,8 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_single_unit_course: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructorName: section.teacher.name, instructorEmail: section.teacher.email}],
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, lti_roster_sync_enabled: nil},
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
@@ -1092,7 +1098,8 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_single_unit_course: nil,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructorName: section.teacher.name, instructorEmail: section.teacher.email}],
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, lti_roster_sync_enabled: nil},
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
