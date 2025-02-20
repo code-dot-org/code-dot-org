@@ -54,7 +54,11 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
   }
 
   return (
-    <div className={moduleStyles.editorContainer}>
+    <div
+      className={moduleStyles.editorContainer}
+      role="tabpanel"
+      id="codebridge-editor"
+    >
       {file ? (
         <CodeEditor
           key={`${file.id}/${1}`}

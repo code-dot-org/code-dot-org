@@ -62,7 +62,7 @@ export const FileTabs = React.memo(() => {
   }
 
   return (
-    <div className={moduleStyles.fileTabs}>
+    <div className={moduleStyles.fileTabs} role="tablist">
       <DndContext
         onDragEnd={handleDragEnd}
         onDragStart={handleDragStart}
