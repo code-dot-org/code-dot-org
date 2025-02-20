@@ -11,6 +11,7 @@ def main
       updated_temperature = (current_temperature.to_f / 2).round(1)
       level.properties['aichat_settings']['initialCustomizations']['temperature'] = updated_temperature
       level.save!
+      puts "updated level #{level.id} temperature from #{current_temperature} to #{updated_temperature}"
     end
   end
 end
