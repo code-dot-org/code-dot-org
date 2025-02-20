@@ -10,6 +10,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 
+import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
   selectSection,
@@ -267,10 +268,19 @@ describe('TeacherNavigationBar', () => {
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
   });
 
-  test('AI Tutor tab diplayed when teacher has access and section has CSA assigned', async () => {
+  test('AI Tutor tab diplayed when teacher has access, is in correct section, and DCDO flag is set', async () => {
+    DCDO.set('ai-tutor-teacher-nav-v2', true);
     renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
     await screen.findByText('Course Content');
 
     screen.getByText('AI Tutor');
+  });
+
+  test('AI Tutor tab not diplayed when DCDO flag is false', async () => {
+    DCDO.set('ai-tutor-teacher-nav-v2', false);
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(screen.queryByText('AI Tutor')).toBeNull();
   });
 });

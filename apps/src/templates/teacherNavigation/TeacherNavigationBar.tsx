@@ -11,6 +11,7 @@ import {
 } from 'react-router-dom';
 
 import Typography from '@cdo/apps/componentLibrary/typography';
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
@@ -81,7 +82,8 @@ const TeacherNavigationBar: React.FC<{
     (selectedSection?.courseVersionName?.includes('csa') ||
       selectedSection?.courseVersionName?.includes(
         'programming-fundamentals-aitutor-2024'
-      ))
+      )) &&
+    DCDO.get('ai-tutor-teacher-nav-v2', false)
       ? [
           'progress',
           'assessments',
