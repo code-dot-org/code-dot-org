@@ -979,6 +979,7 @@ __metadata:
     classnames: ^2.5.1
     react: ">=16"
     react-dom: ">=16"
+    swiper: ^11.0.5
   languageName: unknown
   linkType: soft
 
@@ -15641,8 +15642,8 @@ __metadata:
   linkType: hard
 
 "swiper@npm:^11.0.5":
-  version: 11.0.5
-  resolution: "swiper@npm:11.0.5"
+  version: 11.2.4
+  resolution: "swiper@npm:11.2.4"
   checksum: 10c0/911c405a2d7feae9ac59d8b6683c40e50f6f5be8ca5c5e44673647c37e319a564417b813dc79a09da034e8fe927b2883253fe72cd8efecfcc09247f669fd5a30
   languageName: node
   linkType: hard
