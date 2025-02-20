@@ -73,12 +73,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
-}
 
-.labelText {
-  height: 22px;
-  line-height: 22px;
-  margin-bottom: 0;
+  .labelText {
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
 }
 
 .fontAwesomeIcon {

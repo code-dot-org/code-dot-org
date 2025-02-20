@@ -353,7 +353,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "#Do This:\r\n\r\n1. Add a painter object\r\n#\r\n- Add methods to move the painter to the cone\r\n\t- **Hint:** Use your pseudocode on the Activity Guide for task 2: A to C\r\n#\r\n- **Discuss:** How does your pseudocode compare to the Python code needed? \r\n\t- What is the same?\r\n\t- What is different?",
+    "long_instructions": "## Do This:\r\n1. Create a `Painter` object.\r\n2. Add methods to move the `Painter` to the cone.\r\n\t- **Hint:** Use your pseudocode on the activity guide for Task 2: A to C.\r\n    \r\n---\r\n###AI Tutor Support\r\n\r\n::: details [**Not sure how to create and move a Painter?**]\r\nAsk AI: \r\n- How do I create a `Painter` object in Python?\r\n- Which method makes the Painter move forward?\r\n:::\r\n\r\n::: details [**Stuck on getting to the cone?**]\r\nAsk AI:\r\n- How do I move the Painter multiple steps?\r\n- How do I get the Painter to turn around?\r\n:::\r\n",
     "start_sources": {
       "files": {
         "0": {
@@ -372,6 +372,6 @@
     "display_name": "Practice Moving A to C",
     "thumbnail_url": "https://images.code.org/73eae11fbbbf93ae1535faa7fac73bf7-practiceAtoC.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-14T04:16:56.240+00:00\",\"changed\":[\"cloned from \\\"4test-intro-to-programming-lesson6-level6\\\"\"],\"cloned_from\":\"4test-intro-to-programming-lesson6-level6\"},{\"changed_at\":\"2025-02-14 04:16:59 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-14T04:16:56.240+00:00\",\"changed\":[\"cloned from \\\"4test-intro-to-programming-lesson6-level6\\\"\"],\"cloned_from\":\"4test-intro-to-programming-lesson6-level6\"},{\"changed_at\":\"2025-02-14 04:16:59 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 21:50:33 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 22:36:50 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

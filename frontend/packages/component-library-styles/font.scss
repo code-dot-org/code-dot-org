@@ -127,10 +127,10 @@ $black-font-weight: 900;
 
 // The CSS Variable for Barlow is defined in the marketing font loader as a custom font face cannot be defined
 // on Next.js. Rather, a CSS variable was added to reference to the CSS Module for the respective Barlow variation.
-$barlowSemiCondensed-semibold: var(--font-barlow-semi-condensed-semi-bold), 'Barlow Semi Condensed Semibold',
-  $noto-sans-fonts, sans-serif;
-$barlowSemiCondensed-medium: var(--font-barlow-semi-condensed-medium), 'Barlow Semi Condensed Medium', $noto-sans-fonts,
-  sans-serif;
+$barlowSemiCondensed-semibold: var(--font-barlow-semi-condensed-semi-bold),
+  'Barlow Semi Condensed Semibold', $noto-sans-fonts, sans-serif;
+$barlowSemiCondensed-medium: var(--font-barlow-semi-condensed-medium),
+  'Barlow Semi Condensed Medium', $noto-sans-fonts, sans-serif;
 
 /*
    Font Awesome S3 Bucket URLs

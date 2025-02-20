@@ -1,4 +1,4 @@
-@import 'primitiveColors.scss';
+@use 'colors.scss';
 @import 'font.scss';
 
 /* This file is being copied and adopted to shared/css/typography.scss
@@ -93,7 +93,7 @@ html {
 */
 
 @mixin heading-common {
-  color: var(--neutral-base-black);
+  color: var(--text-neutral-primary);
   margin: 0 0 0.5em 0;
 }
 
@@ -142,7 +142,7 @@ html {
 // Paragraph styles
 @mixin paragraph-common {
   @include main-font-regular;
-  color: var(--neutral-base-black);
+  color: var(--text-neutral-primary);
   margin-bottom: 1em;
 }
 

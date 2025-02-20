@@ -1,0 +1,25 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-02-19T23:17:09.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "uses_lab2": true,
+    "background": "music-black",
+    "encrypted": "false",
+    "video_key": "csaif-pilot-music-producer",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "video_full_width": true,
+    "name_suffix": "_1",
+    "display_name": "Music Producer",
+    "bubble_choice_description": "Learn how this music producer decreased the load on his CPU. "
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-19T23:17:09.239+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-video-hold_1\\\"\"],\"cloned_from\":\"music-coding-intro-functions-video-hold_1\"},{\"changed_at\":\"2025-02-19 23:21:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 00:45:49 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 00:51:48 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 00:54:53 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
