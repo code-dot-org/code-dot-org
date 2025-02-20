@@ -62,7 +62,8 @@ export default class BackpackClientApi {
       });
     };
 
-    // Only fetch channel id if we don't yet have it.
+    // Only fetch channel id if we don't yet have it. Javalab includes backpack channel_id
+    // in appOptions but lab2 labs (e.g., pythonlab) do not use appOptions.
     if (!this.channelId) {
       this.fetchChannelId(() => {
         fetchFiles();

@@ -59,12 +59,17 @@ export const openImportFromBackpackPrompt = async ({
           const fileId = Object.keys(projectFiles).find(
             id => projectFiles[id].name === fileName
           );
-          if (fileId) saveFile(fileId, fileContent);
+          if (fileId) {
+            const projectFile = projectFiles.fileId;
+            console.log('projectFile', projectFile);
+            saveFile(fileId, fileContent);
+          }
         }
       }
     );
   };
 
+  // TODO: Adding a waiting UI (spinner) while waiting for backpack list retrieval.
   backpackApi.getFileList(
     handleError('Error in getting backpack file list.'),
     async (filenames: string[]) => {
