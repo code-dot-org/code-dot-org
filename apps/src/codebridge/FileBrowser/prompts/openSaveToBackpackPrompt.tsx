@@ -1,3 +1,4 @@
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getFileNameWithNumberSuffix} from '@codebridge/utils';
 
 import {ProjectFile} from '@cdo/apps/lab2/types';
@@ -60,7 +61,7 @@ export const openSaveToBackpackPrompt = async ({
       const fileContents = {
         name: selectedFileName,
         contents: file.contents,
-        folderId: '0',
+        folderId: DEFAULT_FOLDER_ID,
         language: 'py',
         open: true,
         active: false,

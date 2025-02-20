@@ -39,7 +39,6 @@ const GenericDropdownBody: React.FunctionComponent<
         items={items}
         selectedValue={selectedValue}
         onChange={e => {
-          console.log('OC : ', e.target.value, e);
           handleInputChange(e.target.value);
         }}
         labelText={dropdownLabel}
