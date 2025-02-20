@@ -1,5 +1,12 @@
 import Link from '@code-dot-org/component-library/link';
 import Toggle from '@code-dot-org/component-library/toggle';
+import {
+  BodyTwoText,
+  BodyThreeText,
+  Heading3,
+  Heading4,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -7,13 +14,6 @@ import React, {useEffect, useState, useMemo, useCallback} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import {
-  BodyTwoText,
-  BodyThreeText,
-  Heading3,
-  Heading4,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';

@@ -636,14 +636,26 @@ class Section < ApplicationRecord
     script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
   end
 
-  def assigned_gen_ai?
-    [
-      'exploring-gen-ai1-2024',
-      'exploring-gen-ai2-2024',
-      'foundations-gen-ai-2024',
-      'customizing-llms-2024'
-    ].include?(script&.name) ||
-      unit_group&.name == 'exploring-gen-ai-2024'
+  def assigned_ai_chat?
+    # Our generative AI courses have scripts that can be assigned individually,
+    # whereas CS and AI Foundations (CSAIF) does not.
+    gen_ai_scripts = %w[
+      exploring-gen-ai1-2024
+      exploring-gen-ai2-2024
+      foundations-gen-ai-2024
+      customizing-llms-2024
+    ]
+    gen_ai_course = 'exploring-gen-ai-2024'
+
+    csaif_courses = %w[
+      computer-systems-and-devices-2024
+      programming-fundamentals-2024
+      programming-fundamentals-aitutor-2024
+      networks-and-the-internet-2024
+    ]
+
+    gen_ai_scripts.include?(script&.name) ||
+      (csaif_courses + [gen_ai_course]).include?(unit_group&.name)
   end
 
   def reset_code_review_groups(new_groups)

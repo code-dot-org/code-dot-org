@@ -68,9 +68,9 @@
   margin-right: 4px;
 }
 
-// This is duplicated to ensure it takes specificity over the default
-// button styles. Specifically so that the display is none by default.
-.button-kebab.button-kebab {
+// Using button to increase specificity of this class
+// (this allows it to take precedence over the component library button styles)
+button.button-kebab {
   display: none;
   height: 20px;
   width: 20px;

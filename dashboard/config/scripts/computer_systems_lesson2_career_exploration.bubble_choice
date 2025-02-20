@@ -1,0 +1,9 @@
+name 'computer-systems-lesson2-career-exploration'
+display_name 'Career Exploration'
+description 'Choice level description needed here.'
+
+sublevels
+level 'computer-systems-lesson2-career-exploration_A'
+level 'computer-systems-lesson2-career-exploration_B'
+level 'computer-systems-lesson2-career-exploration_C'
+level 'computer-systems-lesson2-career-exploration_D'

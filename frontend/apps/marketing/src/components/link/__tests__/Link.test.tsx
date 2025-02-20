@@ -4,9 +4,7 @@ import {render, screen} from '@testing-library/react';
 describe('Link Component', () => {
   const defaultProps = {
     href: 'https://example.com',
-    color: 'purple',
     size: 'm',
-    bottomMargin: 'none',
     isLinkExternal: false,
     children: 'Test Link',
   } as LinkProps;
@@ -25,9 +23,7 @@ describe('Link Component', () => {
     render(<Link {...defaultProps} />);
     const linkElement = screen.getByRole('link');
     expect(linkElement).toHaveClass('link');
-    expect(linkElement).toHaveClass('link-purple');
-    expect(linkElement).toHaveClass('link-m');
-    expect(linkElement).toHaveClass('link-bottomMargin-none');
+    expect(linkElement).toHaveClass('link-size-m');
   });
 
   it('renders external link icon when isLinkExternal is true', () => {
@@ -44,10 +40,5 @@ describe('Link Component', () => {
   it('opens external links in a new tab', () => {
     render(<Link {...defaultProps} isLinkExternal={true} />);
     expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
-  });
-
-  it('applies custom class name when provided', () => {
-    render(<Link {...defaultProps} className="custom-class" />);
-    expect(screen.getByRole('link')).toHaveClass('custom-class');
   });
 });

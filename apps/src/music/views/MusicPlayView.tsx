@@ -1,8 +1,11 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {
+  Heading2,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
 import React, {memo, useCallback, useContext, useMemo} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';

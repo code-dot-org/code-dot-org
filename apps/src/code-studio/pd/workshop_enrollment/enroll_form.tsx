@@ -8,10 +8,10 @@ import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropd
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButtonsGroup} from '@code-dot-org/component-library/radioButton';
 import TextField from '@code-dot-org/component-library/textField';
+import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React, {Fragment, ReactNode, useMemo, useState} from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {useSchoolInfo} from '@cdo/apps/schoolInfo/hooks/useSchoolInfo';
 import {buildSchoolData} from '@cdo/apps/schoolInfo/utils/buildSchoolData';

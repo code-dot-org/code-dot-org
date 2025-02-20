@@ -5,6 +5,9 @@ import {
   VisualAppearance,
 } from '@code-dot-org/component-library/typography';
 import React, {ReactNode} from 'react';
+import classNames from 'classnames';
+
+import moduleStyles from './paragraph.module.scss';
 
 type ParagraphVisualAppearance = Extract<
   VisualAppearance,
@@ -27,16 +30,14 @@ const Paragraph: React.FunctionComponent<ParagraphProps> = ({
   isStrong,
   children,
   className,
-}) => {
-  return (
-    <Typography
-      className={className}
-      semanticTag="p"
-      visualAppearance={visualAppearance}
-    >
-      {isStrong ? <StrongText>{children}</StrongText> : children}
-    </Typography>
-  );
-};
+}) => (
+  <Typography
+    semanticTag="p"
+    visualAppearance={visualAppearance}
+    className={classNames(moduleStyles.paragraph, className)}
+  >
+    {isStrong ? <StrongText>{children}</StrongText> : children}
+  </Typography>
+);
 
 export default Paragraph;

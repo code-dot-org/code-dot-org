@@ -30,11 +30,14 @@ export const FileBrowserHeaderPopUpButton = () => {
   const uploadErrorCallback = useFileUploadErrorCallback();
   const handleFileUpload = useHandleFileUpload(source.files);
 
-  const {startFileUpload, FileUploaderComponent} = useFileUploader({
-    callback: handleFileUpload,
-    errorCallback: uploadErrorCallback,
-    validMimeTypes,
-  });
+  const {startFileUpload, FileUploaderComponent} = useFileUploader(
+    {
+      callback: handleFileUpload,
+      errorCallback: uploadErrorCallback,
+      validMimeTypes,
+    },
+    DEFAULT_FOLDER_ID
+  );
 
   const backpackApi = useBackpackAPIContext();
   return (

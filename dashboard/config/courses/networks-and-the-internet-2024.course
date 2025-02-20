@@ -11,7 +11,6 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "networks-and-the-internet",
-    "has_numbered_units": true,
     "version_year": "2024"
   },
   "resources": [
