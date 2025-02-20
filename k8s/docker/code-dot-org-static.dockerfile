@@ -16,8 +16,4 @@ COPY --chown=${UID} --link apps/i18n apps/i18n
 # Disabled dashboard/config/locales
 # COPY --chown=${UID} --link dashboard/config/locales dashboard/config/locales
 
-# Disable pegasus
-# COPY --chown=${UID} --link pegasus/sites.v3 pegasus/sites.v3
-# COPY --chown=${UID} --link pegasus/sites pegasus/sites
-
 LABEL org.opencontainers.image.source="https://github.com/code-dot-org/code-dot-org"
