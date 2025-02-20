@@ -25,13 +25,14 @@ const FileTab = ({file}: FileTabProps) => {
     [moduleStyles.active]: isActive,
   });
 
-  const handleClose = (id: string) => {
-    console.log('in handleClose');
-    closeFile(id);
-  };
-
   return (
-    <div className={className} key={file.id}>
+    <div
+      className={className}
+      key={file.id}
+      aria-selected={isActive}
+      role="tab"
+      aria-controls="codebridge-editor"
+    >
       <div
         className={moduleStyles.label}
         onClick={() => setActiveFile(file.id)}
@@ -44,7 +45,7 @@ const FileTab = ({file}: FileTabProps) => {
         <span>{file.name}</span>
       </div>
       <CloseButton
-        onClick={() => handleClose(file.id)}
+        onClick={() => closeFile(file.id)}
         color={'light'}
         aria-label={codebridgeI18n.closeFile()}
         className={classNames(moduleStyles.closeButton, {

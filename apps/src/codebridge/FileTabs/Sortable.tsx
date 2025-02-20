@@ -5,18 +5,16 @@ import React from 'react';
 interface SortableProps {
   id: string;
   isDragging: boolean;
-  isActive: boolean;
   children: React.ReactNode;
 }
 
 const Sortable: React.FunctionComponent<SortableProps> = ({
   id,
   isDragging,
-  isActive,
   children,
 }) => {
   const {attributes, listeners, setNodeRef, transform, transition} =
-    useSortable({id, attributes: {role: 'tab'}});
+    useSortable({id});
 
   const style = {
     transform: CSS.Transform.toString(transform),
@@ -25,14 +23,7 @@ const Sortable: React.FunctionComponent<SortableProps> = ({
   };
 
   return (
-    <div
-      ref={setNodeRef}
-      style={style}
-      {...attributes}
-      {...listeners}
-      aria-selected={isActive}
-      aria-controls="codebridge-editor"
-    >
+    <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
       {children}
     </div>
   );

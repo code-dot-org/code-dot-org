@@ -23,8 +23,6 @@ import {
 } from '@dnd-kit/sortable';
 import React, {useState} from 'react';
 
-import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
-
 import FileTab from './FileTab';
 import Sortable from './Sortable';
 
@@ -32,7 +30,6 @@ import moduleStyles from './styles/fileTabs.module.scss';
 
 export const FileTabs = React.memo(() => {
   const {source, rearrangeFiles, setActiveFile} = useCodebridgeContext();
-  const activeFile = getActiveFileForSource(source);
 
   const files = getOpenFiles(source);
 
@@ -64,7 +61,7 @@ export const FileTabs = React.memo(() => {
     // Handle drag start only if the file is in the list of open files.
     // This can get called when the close button is clicked, and we want to ignore
     // it in this case.
-    if (files.find(f => f.id === event.active.id)) {
+    if (source.files[event.active.id as string].open) {
       setDraggingFileId(event.active.id as string);
       setActiveFile(event.active.id as string);
     }
@@ -81,12 +78,7 @@ export const FileTabs = React.memo(() => {
       >
         <SortableContext items={files} strategy={horizontalListSortingStrategy}>
           {files.map(f => (
-            <Sortable
-              id={f.id}
-              key={f.id}
-              isDragging={f.id === draggingFileId}
-              isActive={activeFile?.id === f.id}
-            >
+            <Sortable id={f.id} key={f.id} isDragging={f.id === draggingFileId}>
               <FileTab file={f} />
             </Sortable>
           ))}
