@@ -1,21 +1,21 @@
 {
   "name": "@code-dot-org/component-library-styles",
   "version": "0.0.0-alpha.0",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/component-library-styles/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/component-library-styles"
+  },
+  "license": "SEE LICENSE IN LICENSE",
   "type": "module",
   "files": [
     "*.scss"
   ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
-  },
-  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/component-library-styles/#readme",
-  "license": "SEE LICENSE IN LICENSE",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
-    "directory": "frontend/packages/component-library-styles"
-  },
-  "bugs": {
-    "url": "https://github.com/code-dot-org/code-dot-org/issues"
   }
 }

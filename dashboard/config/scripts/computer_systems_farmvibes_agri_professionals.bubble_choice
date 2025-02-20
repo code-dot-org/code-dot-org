@@ -1,6 +1,6 @@
 name 'computer-systems-farmvibes-agri-professionals'
 display_name 'Industry Professional for FarmVibes.AI'
-description '#### <br /> See how farmers, researchers, and agricultural experts use AI to optimize crop management, predict weather, and improve sustainability. Choose a professional to interview and learn how technology is shaping the future of farming.'
+description 'See how farmers, researchers, and agricultural experts use AI to optimize crop management, predict weather, and improve sustainability. Choose a professional to interview and learn how technology is shaping the future of farming.'
 
 sublevels
 level 'computer-systems-farmer-india-aichat'

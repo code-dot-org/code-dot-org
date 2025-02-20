@@ -3,6 +3,7 @@
 // Common link styles
 a.link {
   margin-top: 0;
+  margin-bottom: 1em;
 }
 
 // Link sizes
@@ -21,24 +22,5 @@ a.link-size {
 
   &-xs {
     gap: 0.25rem;
-  }
-}
-
-// Link marginBottom styles
-a.link-margin-bottom {
-  &-none {
-    @include mixins.common-margin-bottom-none;
-  }
-
-  &-xs {
-    @include mixins.common-margin-bottom-xs;
-  }
-
-  &-s {
-    @include mixins.common-margin-bottom-s;
-  }
-
-  &-m {
-    @include mixins.common-margin-bottom-m;
   }
 }

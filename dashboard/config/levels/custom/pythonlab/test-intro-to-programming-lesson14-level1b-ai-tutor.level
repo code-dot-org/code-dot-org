@@ -761,14 +761,14 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "# Do This:\r\n1. Add your code to the workspace. \r\n#\r\n2. Click Run and observe the outcome.\r\n    - Keep revising and testing your code until it runs as expected.\r\n",
+    "long_instructions": "# Do This:\r\n1. Add your code to the workspace. \r\n2. Click Run and observe the outcome.\r\n    - Keep revising and testing your code until it runs as expected.\r\n\r\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!\r\n",
     "start_sources": {
       "files": {
         "0": {
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "from neighborhood import Painter\n\n# Create a new Painter object below\n\n\n# Define your functions below\n\n\n# Add your code and call your functions below ",
+          "contents": "from neighborhood import Painter\n# ADD import custom BELOW\n\n\n# Create a new Painter object below\n\n\n# ADD DEFINITIONS FOR NEW FUNCTIONS IN custom.py\n\n# Add your code and call your functions below \n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -781,6 +781,6 @@
     "display_name": "12 x 12 Grid",
     "thumbnail_url": "https://images.code.org/59f5c75c367162744774e53eeec17fb5-Screenshot 2025-02-10 at 2.50.45 PM.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-14T04:42:15.400+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson14-level1b\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson14-level1b\"},{\"changed_at\":\"2025-02-14 04:42:39 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-14T04:42:15.400+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson14-level1b\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson14-level1b\"},{\"changed_at\":\"2025-02-14 04:42:39 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 19:01:31 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 19:02:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 19:02:10 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

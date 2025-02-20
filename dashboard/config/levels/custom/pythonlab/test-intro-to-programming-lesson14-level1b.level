@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-02-10T19:02:45.000Z",
   "level_num": "custom",
@@ -760,14 +761,14 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "# Do This:\r\n1. Add your code to the workspace. \r\n#\r\n2. Click Run and observe the outcome.\r\n    - Keep revising and testing your code until it runs as expected.\r\n",
+    "long_instructions": "## Do This:\r\n1. Add your code to the workspace. \r\n2. Click Run and observe the outcome.\r\n    - Keep revising and testing your code until it runs as expected.\r\n\r\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!\r\n",
     "start_sources": {
       "files": {
         "0": {
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "from neighborhood import Painter\n\n# Create a new Painter object below\n\n\n# Define your functions below\n\n\n# Add your code and call your functions below ",
+          "contents": "from neighborhood import Painter\n# ADD import custom BELOW\n\n\n# Create a new Painter object below\n\n\n# ADD DEFINITIONS FOR NEW FUNCTIONS IN custom.py\n\n# Add your code and call your functions below \n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -780,7 +781,6 @@
     "display_name": "12 x 12 Grid",
     "thumbnail_url": "https://images.code.org/59f5c75c367162744774e53eeec17fb5-Screenshot 2025-02-10 at 2.50.45 PM.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-10T19:02:45.689+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson14-level1a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson14-level1a\"},{\"changed_at\":\"2025-02-10 19:02:49 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-10 21:15:49 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-10 21:16:50 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-10 21:51:18 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-10T19:02:45.689+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson14-level1a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson14-level1a\"},{\"changed_at\":\"2025-02-10 19:02:49 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-10 21:15:49 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-10 21:16:50 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-10 21:51:18 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-17 22:30:43 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-02-19 19:01:32 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 19:02:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 19:02:09 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
