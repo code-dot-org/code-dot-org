@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-02-19T18:31:04.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Skill Building",
+    "long_instructions": "## Geochart\r\n\r\n#### CODAP has the ability to let you see where cases are located on a map!  \r\n\r\n<p style=\"font-size:16pt;\"> <a href=\"https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FunWqudZ0UC51dAoB4JNP%2Ffile.json\" target=\"blank\" rel=\"noopener noreferrer\">CODAP Link</a>\r\n</p>\r\n\r\n## **Do This**\r\n#### 1. Click on the **“Map”** icon in the top toolbar. \r\n#### 2. Find the location of the two *fastest roller coasters* on the map. \r\n#### 3. Use the “**+**” icon to **zoom in and find out** what city and state these two fastest roller coasters are located in.\r\n#### 4. Find the location of the two *slowest roller coasters* on the map. \r\n#### 5. Use the “**+**” icon to zoom in and find out what city and state these two slowest roller coasters are located in.\r\n\r\n---\r\n\r\n<details><summary style=\"font-size: 18px;\"><strong>🔎 Show Me How 🔎</strong></summary> <img src=\"https://images.code.org/d285b329767f0bee0b747d474b972ce4-image-1731531527600.gif\">\r\n</details>\r\n\r\n<div style=\"clear:both;\"></div>\r\n<br>\r\n<br>\r\n",
+    "teacher_markdown": "Students should be able to see the following: \r\n\r\n- fastest roller coaster is located in Sandusky, Ohio \r\n- 2nd fastest is located in Valencia, California \r\n- Slowest roller coaster is located in Rochester New York\r\n- 2nd slowest is located in Erie, Pennsylvania",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "thumbnail_url": "https://images.code.org/cf5c92466c074e7279d35586aa72329d-geochartMap.png",
+    "display_name": "Geochart",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-02-19T18:31:04.054+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-geochart\\\"\"],\"cloned_from\":\"sp-pl-DS-geochart\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

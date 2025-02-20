@@ -363,7 +363,10 @@ export interface ParentLevelPathLink {
   position: string;
 }
 
-export interface LabProps {
-  initialSources?: ProjectSources;
-  levelProperties: LevelProperties;
+export interface LabProps<
+  T extends LevelProperties = LevelProperties,
+  U extends ProjectSources = ProjectSources
+> {
+  levelProperties: T;
+  initialSources?: U;
 }
