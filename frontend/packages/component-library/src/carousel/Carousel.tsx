@@ -28,7 +28,7 @@ export interface CarouselProps extends HTMLAttributes<HTMLElement> {
   /** Show navigation arrows */
   showNavArrows?: boolean;
   /** Carousel content */
-  children?: ReactNode;
+  slides: {id: string; slide: ReactNode}[];
 }
 
 const SwiperCarousel: React.FC<CarouselProps> = ({
@@ -38,7 +38,7 @@ const SwiperCarousel: React.FC<CarouselProps> = ({
   slidesPerGroup = 2,
   allowTouchMove = false,
   autoHeight = false,
-  children,
+  slides,
   className,
   ...HTMLAttributes
 }: CarouselProps) => {
@@ -76,16 +76,11 @@ const SwiperCarousel: React.FC<CarouselProps> = ({
             },
           }}
         >
-          {Array.isArray(children)
-            ? children.map((child, index) => (
-                <SwiperSlide
-                  key={`${carouselId}-${index.toString()}`}
-                  className={className}
-                >
-                  {child}
-                </SwiperSlide>
-              ))
-            : children}
+          {slides.map(({id, slide}) => (
+            <SwiperSlide key={id} className={className}>
+              {slide}
+            </SwiperSlide>
+          ))}
         </Swiper>
         {showNavArrows && (
           <div className={moduleStyles.navArrowWrapper}>

@@ -61,13 +61,16 @@ const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
 //
 export const DefaultCarousel = SingleTemplate.bind({});
 DefaultCarousel.args = {
-  children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
+  slides: Array.from({length: 6}, (_, index) => ({
+    id: `default-slide-${index + 1}`,
+    slide: createBasicSlide(index + 1),
+  })),
 };
 DefaultCarousel.parameters = {
   docs: {
     description: {
       story:
-        "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content. **Note:** Pagination dots are not showing here, but are showing in the documentation example above, or in the Default Carousel standalone story page. This is because both carousels share the same `uniqueClassName` prop that is used on the pagination `el` prop in the Swiper component. This is due to Storybook duplicating the first story example, and this will work as expected outside of Storybook Docs.",
+        "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content.",
     },
   },
 };
@@ -109,7 +112,10 @@ DefaultCarousel.play = async ({
 export const CarouselWithoutNavArrows = SingleTemplate.bind({});
 CarouselWithoutNavArrows.args = {
   showNavArrows: false,
-  children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
+  slides: Array.from({length: 6}, (_, index) => ({
+    id: `default-slide-${index + 1}`,
+    slide: createBasicSlide(index + 1),
+  })),
 };
 CarouselWithoutNavArrows.parameters = {
   docs: {
@@ -143,7 +149,10 @@ CarouselWithoutNavArrows.play = async ({
 export const CarouselWithTouchMove = SingleTemplate.bind({});
 CarouselWithTouchMove.args = {
   allowTouchMove: true,
-  children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
+  slides: Array.from({length: 6}, (_, index) => ({
+    id: `default-slide-${index + 1}`,
+    slide: createBasicSlide(index + 1),
+  })),
 };
 CarouselWithTouchMove.parameters = {
   docs: {
@@ -192,7 +201,10 @@ export const CarouselWithCustomSlidesPerView = SingleTemplate.bind({});
 CarouselWithCustomSlidesPerView.args = {
   slidesPerView: 3,
   slidesPerGroup: 3,
-  children: Array.from({length: 6}, (_, index) => createBasicSlide(index + 1)),
+  slides: Array.from({length: 6}, (_, index) => ({
+    id: `default-slide-${index + 1}`,
+    slide: createBasicSlide(index + 1),
+  })),
 };
 CarouselWithCustomSlidesPerView.parameters = {
   docs: {
@@ -243,13 +255,6 @@ CarouselWithCustomSlidesPerView.play = async ({
 
 // TODO CMS-360 - Add Action Block carousel when Action Block component is ready
 export const ActionBlockCarousel = MultipleTemplate.bind({});
-ActionBlockCarousel.args = {
-  components: [
-    {
-      children: 'COMING SOON',
-    },
-  ],
-};
 ActionBlockCarousel.parameters = {
   docs: {
     description: {
@@ -262,51 +267,91 @@ export const VideoCarousels = MultipleTemplate.bind({});
 VideoCarousels.args = {
   components: [
     {
-      children: [
-        <Video
-          videoTitle="Generative AI: Input & Pre-training"
-          youTubeId="JO9MgO1Zp3E"
-          showCaption={true}
-        />,
-        <Video
-          videoTitle="Generative AI: Storage & Embeddings"
-          youTubeId="s1fhxAVpYx8"
-          showCaption={true}
-        />,
-        <Video
-          videoTitle="Generative AI: Processing & Neural Networks"
-          youTubeId="Z7Mes_Ej69Y"
-          showCaption={true}
-        />,
-        <Video
-          videoTitle="Generative AI: Attention"
-          youTubeId="2RdK6k45koY"
-          showCaption={true}
-        />,
+      slides: [
+        {
+          id: 'video-slide-1',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Input & Pre-training"
+              youTubeId="JO9MgO1Zp3E"
+              showCaption={true}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-2',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Storage & Embeddings"
+              youTubeId="s1fhxAVpYx8"
+              showCaption={true}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-3',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Processing & Neural Networks"
+              youTubeId="Z7Mes_Ej69Y"
+              showCaption={true}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-4',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Attention"
+              youTubeId="2RdK6k45koY"
+              showCaption={true}
+            />
+          ),
+        },
       ],
     },
     {
-      children: [
-        <Video
-          videoTitle="Generative AI: Input & Pre-training"
-          youTubeId="JO9MgO1Zp3E"
-          showCaption={false}
-        />,
-        <Video
-          videoTitle="Generative AI: Storage & Embeddings"
-          youTubeId="s1fhxAVpYx8"
-          showCaption={false}
-        />,
-        <Video
-          videoTitle="Generative AI: Processing & Neural Networks"
-          youTubeId="Z7Mes_Ej69Y"
-          showCaption={false}
-        />,
-        <Video
-          videoTitle="Generative AI: Attention"
-          youTubeId="2RdK6k45koY"
-          showCaption={false}
-        />,
+      slides: [
+        {
+          id: 'video-slide-5',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Input & Pre-training"
+              youTubeId="JO9MgO1Zp3E"
+              showCaption={true}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-6',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Storage & Embeddings"
+              youTubeId="s1fhxAVpYx8"
+              showCaption={true}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-7',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Processing & Neural Networks"
+              youTubeId="Z7Mes_Ej69Y"
+              showCaption={true}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-8',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Attention"
+              youTubeId="2RdK6k45koY"
+              showCaption={true}
+            />
+          ),
+        },
       ],
     },
   ],
@@ -348,32 +393,48 @@ VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
   });
 };
 
-export const ImageCarousel = MultipleTemplate.bind({});
+export const ImageCarousel = SingleTemplate.bind({});
 ImageCarousel.args = {
-  components: [
+  slides: [
     {
-      children: [
+      id: 'image-slide-1',
+      slide: (
         <img
           src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png"
           style={{width: '100%'}}
           alt="Slide 1"
-        />,
+        />
+      ),
+    },
+    {
+      id: 'image-slide-2',
+      slide: (
         <img
           src="https://code.org/images/cs-stats/Slide2_STEM_CS.png"
           style={{width: '100%'}}
           alt="Slide 2"
-        />,
+        />
+      ),
+    },
+    {
+      id: 'image-slide-3',
+      slide: (
         <img
           src="https://code.org/images/cs-stats/Slide_Students_Like_CS.png"
           style={{width: '100%'}}
           alt="Slide 3"
-        />,
+        />
+      ),
+    },
+    {
+      id: 'image-slide-4',
+      slide: (
         <img
           src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png"
           style={{width: '100%'}}
           alt="Slide 4"
-        />,
-      ],
+        />
+      ),
     },
   ],
 };
