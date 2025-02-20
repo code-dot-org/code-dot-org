@@ -4,7 +4,6 @@ import React from 'react';
 import {
   CodebridgeContextProvider,
   CodebridgeContextType,
-  useSourceUtilities,
 } from '@cdo/apps/codebridge';
 import {FileTabs} from '@cdo/apps/codebridge/FileTabs';
 
@@ -55,6 +54,9 @@ describe('FileTabs', () => {
       defaultOpenFile.name
     );
     const file = context.source.files['1'];
+    expect(screen.getByRole('tab', {selected: false})).toHaveTextContent(
+      file.name
+    );
     const tab = screen.getByText(file.name);
     fireEvent.click(tab);
     expect(context.setActiveFile).toHaveBeenCalledWith(file.id);
