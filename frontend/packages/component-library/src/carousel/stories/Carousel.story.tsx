@@ -313,42 +313,42 @@ VideoCarousels.args = {
     {
       slides: [
         {
-          id: 'video-slide-5',
+          id: 'video-slide-no-caption-1',
           slide: (
             <Video
               videoTitle="Generative AI: Input & Pre-training"
               youTubeId="JO9MgO1Zp3E"
-              showCaption={true}
+              showCaption={false}
             />
           ),
         },
         {
-          id: 'video-slide-6',
+          id: 'video-slide-no-caption-6',
           slide: (
             <Video
               videoTitle="Generative AI: Storage & Embeddings"
               youTubeId="s1fhxAVpYx8"
-              showCaption={true}
+              showCaption={false}
             />
           ),
         },
         {
-          id: 'video-slide-7',
+          id: 'video-slide-no-caption-7',
           slide: (
             <Video
               videoTitle="Generative AI: Processing & Neural Networks"
               youTubeId="Z7Mes_Ej69Y"
-              showCaption={true}
+              showCaption={false}
             />
           ),
         },
         {
-          id: 'video-slide-8',
+          id: 'video-slide-no-caption-8',
           slide: (
             <Video
               videoTitle="Generative AI: Attention"
               youTubeId="2RdK6k45koY"
-              showCaption={true}
+              showCaption={false}
             />
           ),
         },
