@@ -20,8 +20,8 @@
 }
 
 // Label colors
-body .label.label-black,
-body .label.label-gray {
+.label.label-black,
+.label.label-gray {
   .labelText {
     color: var(--text-neutral-primary);
   }
@@ -47,7 +47,7 @@ body .label.label-gray {
   }
 }
 
-body .label.label-white {
+.label.label-white {
   .labelText {
     color: var(--text-neutral-inverse);
   }
