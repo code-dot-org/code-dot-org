@@ -59,11 +59,7 @@ export const openImportFromBackpackPrompt = async ({
           const fileId = Object.keys(projectFiles).find(
             id => projectFiles[id].name === fileName
           );
-          if (fileId) {
-            const projectFile = projectFiles.fileId;
-            console.log('projectFile', projectFile);
-            saveFile(fileId, fileContent);
-          }
+          if (fileId) saveFile(fileId, fileContent);
         }
       }
     );
@@ -99,16 +95,29 @@ export const openImportFromBackpackPrompt = async ({
         // Import backpack file to project.
         if (results.type === 'confirm') {
           let newFileName = selectedBackpackFileName;
-          while (
-            validateFileName({
+          let validateError = validateFileName({
+            fileName: newFileName,
+            folderId: DEFAULT_FOLDER_ID,
+            projectFiles,
+            isStartMode: false,
+            validationFile,
+          });
+          const isSupportFileName = validateError?.includes('support code');
+          while (validateError) {
+            newFileName = getFileNameWithNumberSuffix(newFileName);
+            validateError = validateFileName({
               fileName: newFileName,
               folderId: DEFAULT_FOLDER_ID,
               projectFiles,
               isStartMode: false,
               validationFile,
-            })
-          ) {
-            newFileName = getFileNameWithNumberSuffix(newFileName);
+            });
+          }
+          if (isSupportFileName) {
+            // The user wants to import a file that has the same name as a hidden support file.
+            // Automatically import file renamed with numeric suffix.
+            fetchFileContentAndProcess(selectedBackpackFileName, newFileName);
+            return;
           }
           // If the backpack file has the same name as an existing project file, show a second
           // dialog that prompts user to replace/overwrite or import the backpack
