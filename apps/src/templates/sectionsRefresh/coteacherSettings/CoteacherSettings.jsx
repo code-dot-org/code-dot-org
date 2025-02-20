@@ -31,7 +31,7 @@ const getInitialCoteachers = (sectionInstructors, primaryTeacher) => {
   if (!primaryTeacher) {
     return sectionInstructors;
   }
-  return sectionInstructors.filter(
+  return [...sectionInstructors].filter(
     instructor => instructor.instructorEmail !== primaryTeacher.email
   );
 };
@@ -54,7 +54,7 @@ export default function CoteacherSettings({
   const coteachers = useMemo(() => {
     const unsaved = coteachersToAdd.map(email => ({instructorEmail: email}));
 
-    const sortedSaved = savedCoteachers.sort(
+    const sortedSaved = [...savedCoteachers].sort(
       (a, b) => statusSortValue(a) - statusSortValue(b)
     );
     return [...unsaved, ...sortedSaved];

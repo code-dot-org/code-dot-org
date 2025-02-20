@@ -387,7 +387,7 @@ class Section < ApplicationRecord
   # This is placed into the redux store as `teacherSections.sections` for all sections a teacher has access to.
   def concise_summarize
     ActiveRecord::Base.connected_to(role: :reading) do
-      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json.map {|si| si.transform_keys {|key| key.to_s.camelize(:lower)}}
 
       {
         id: id,
@@ -437,6 +437,12 @@ class Section < ApplicationRecord
 
       selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
 
+      primary_instructor = {
+        email: teacher.email,
+        name: teacher.name,
+        lti_roster_sync_enabled: teacher&.properties&.[]("lti_roster_sync_enabled")
+      }
+
       {
         id: id,
         name: name,
@@ -455,7 +461,8 @@ class Section < ApplicationRecord
           text_to_speech_enabled: script.try(:text_to_speech_enabled?),
         },
         any_student_has_progress: any_student_has_progress?,
-        is_assigned_single_unit_course: unit_group&.single_unit_course?
+        is_assigned_single_unit_course: unit_group&.single_unit_course?,
+        primaryInstructor: primary_instructor,
       }
     end
   end
