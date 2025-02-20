@@ -30,14 +30,6 @@
   flex: 0 0 242px;
   background-color: $light_gray_50;
   height: auto;
-
-  .sectionHeader {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 16px;
-    padding-top: 20px;
-    color: var(--text-neutral-quaternary);
-  }
 }
 
 .sidebarContent {
@@ -117,6 +109,14 @@
   }
 }
 
+.sectionHeader {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 16px;
+  padding-top: 20px;
+  color: var(--text-neutral-quaternary);
+}
+
 .navLink {
   display: inline-block;
   background-color: $purple;
@@ -154,12 +154,12 @@
 .header {
   display: flex;
   flex-direction: column;
+}
 
-  .headerSectionName {
-    margin-bottom: 0;
-    margin-top: 0;
-    color: $light_primary_500;
-  }
+.headerSectionName {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: $light_primary_500;
 }
 
 .skeletonHeaderSectionName {

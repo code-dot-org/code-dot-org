@@ -1,13 +1,13 @@
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import {
   Heading2,
   BodyOneText,
   BodyThreeText,
   BodyFourText,
-} from '@code-dot-org/component-library/typography';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
-import React from 'react';
-
+} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import styles from './twoColumnActionBlock.module.scss';
