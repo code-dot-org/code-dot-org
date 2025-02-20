@@ -1284,6 +1284,7 @@
   "exampleSolution": "Example Solution {number}",
   "expand": "Expand",
   "expandAll": "Expand all student rows",
+  "experiment": "Experiment",
   "explainCourseAssignmentsLearnMore": " Learn what happens when you assign a course.",
   "explainTtsAutoplay": "For Chrome, Internet Explorer, and Edge browsers only: When this setting is on, level instructions will be automatically read aloud to students using text-to-speech each time they open a level. This makes it easier for students who are not yet fluent readers to complete lessons.",
   "explainTtsAutoplayToolTip": "For Chrome, Internet Explorer, and Edge browsers only: When this setting is on, level instructions will be automatically read aloud to students using text-to-speech each time they open a level. This makes it easier for students who are not yet fluent readers to complete lessons. Not available in all courses.",

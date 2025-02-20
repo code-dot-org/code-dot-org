@@ -1,4 +1,6 @@
-import DSCOSection, {SectionProps} from '@code-dot-org/component-library/cms/section';
+import DSCOSection, {
+  SectionProps,
+} from '@code-dot-org/component-library/cms/section';
 
 // Import the background image used in the pattern backgrounds on Contentful
 import bgPatternImage from '@public/images/bg-pattern-lines.png';
