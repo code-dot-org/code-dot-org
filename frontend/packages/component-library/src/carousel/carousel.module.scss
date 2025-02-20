@@ -42,6 +42,11 @@
     height: 3rem;
     @include transition-all;
 
+    // Flips the buttons for RTL languages
+    html[dir='rtl'] & {
+      transform: scaleX(-1);
+    }
+
     // Arrow styles
     & > i {
       font-size: 1.5rem;
@@ -59,13 +64,8 @@
     }
 
     // Focus styles
-    &:focus {
+    &:focus-visible {
       @include focus-styles;
-    }
-
-    // Hide focus outline on mouse click
-    &:focus:not(:focus-visible) {
-      outline: none;
     }
 
     // Disabled styles
@@ -82,25 +82,11 @@
   // Move navigation buttons
   // outside of the container
   .swiperNavPrev {
-    left: -4rem;
-
-    // Flips the button for RTL languages
-    html[dir='rtl'] & {
-      left: unset;
-      right: -4rem;
-      transform: scaleX(-1);
-    }
+    inset-inline-start: -4rem;
   }
 
   .swiperNavNext {
-    right: -4rem;
-
-    // Flips the button for RTL languages
-    html[dir='rtl'] & {
-      right: unset;
-      left: -4rem;
-      transform: scaleX(-1);
-    }
+    inset-inline-end: -4rem;
   }
 }
 
@@ -120,13 +106,8 @@
     }
 
     // Focus styles
-    &:focus {
+    &:focus-visible {
       @include focus-styles;
-    }
-
-    // Hide focus outline on mouse click
-    &:focus:not(:focus-visible) {
-      outline: none;
     }
   }
 }
@@ -136,7 +117,7 @@
 // contains videos with a caption
 .carousel {
   figcaption {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
   }
 
   // Center navigation buttons on the video
