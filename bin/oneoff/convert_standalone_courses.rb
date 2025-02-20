@@ -1,12 +1,12 @@
 #!/usr/bin/env ruby
 
 require_relative '../../dashboard/config/environment'
+require 'fileutils'
 
 # This script is used to convert standalone courses to UnitGroups.
 
-def convert_standalone_course(unit_name)
-  # Find all standalone courses
-  existing_unit  = Unit.find_by_name(unit_name)
+def convert_standalone_course(existing_unit, verbose = false, check = true)
+  # Find existing Unit and create new UnitGroup
   new_unit_group = UnitGroup.new(
     name: existing_unit.name,
     family_name: existing_unit.family_name,
@@ -14,42 +14,50 @@ def convert_standalone_course(unit_name)
     instruction_type: existing_unit.instruction_type,
     instructor_audience: existing_unit.instructor_audience,
     participant_audience: existing_unit.participant_audience,
-    has_numbered_units: true
+    has_numbered_units: false
   )
   unless new_unit_group.save
     puts "Conversion failed for #{unit_name}: #{new_unit_group.errors.full_messages.join(', ')}"
     return false
   end
 
-  # puts "Initial info"
-  # puts "Existing unit: #{existing_unit.inspect}"
-  # puts
-  if existing_unit.course_version.nil?
+  # Get existing Unit's course version
+  course_version = existing_unit.course_version
+  if course_version.nil?
     puts "Existing Unit's course version not found: #{unit_name}"
     return
   end
+  original_course_version_id = course_version.id
+
+  if verbose
+    puts "Initial info"
+    puts "Existing unit: #{existing_unit.inspect}"
+    puts "Existing course_version: #{existing_unit.course_version.inspect}"
+  end
 
   # Point existing CourseVersion to the new UnitGroup
-  course_version = existing_unit.course_version
-  original_course_version_id = course_version.id
-  # puts "Existing course_version: #{existing_unit.course_version.inspect}"
   course_version.update!(content_root: new_unit_group)
 
   # Clear "course" settings from the unit
-  dupe_unit = existing_unit.dup
-  published_state = existing_unit.published_state
+  unit_copy = existing_unit.dup
   existing_unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
 
-  # Add existing unit to new unit group
-  new_unit_group.update_scripts([existing_unit.name])
+  i18n_params = {
+    "title" => existing_unit.localized_title || '',
+  }
+
+  # Add existing unit to new unit group and update strings
+  Dir.chdir(Rails.root) do
+    new_unit_group.persist_strings_and_units_changes([existing_unit.name], i18n_params)
+  end
 
   # Publish the new unit group
-  new_unit_group.update!(published_state: published_state)
+  new_unit_group.update!(published_state: unit_copy.published_state)
 
-  run_checks(new_unit_group, existing_unit, course_version, dupe_unit, original_course_version_id)
+  run_checks(new_unit_group, existing_unit, course_version, unit_copy, original_course_version_id, verbose) if check
 end
 
-def run_checks(new_unit_group, existing_unit, course_version, dupe_unit, original_course_version_id)
+def run_checks(new_unit_group, existing_unit, course_version, dupe_unit, original_course_version_id, verbose)
   checks = {
     "New UnitGroup is valid" => new_unit_group.valid?,
     "Existing unit is valid" => existing_unit.valid?,
@@ -71,16 +79,16 @@ def run_checks(new_unit_group, existing_unit, course_version, dupe_unit, origina
   # Determine if all checks passed
   all_passed = checks.values.all?
   unless all_passed
-    puts "Failing Unit: #{dupe_unit.name}"
+    puts "Incorrect Unit: #{dupe_unit.name}"
     failing_checks = checks.select {|_, result| !result}
     failing_checks.each {|description, result| puts "#{description}: #{result}"}
   end
 
-  # puts "View the new unitgroup here: http://localhost-studio.code.org:3000/courses/#{new_unit_group.name}"
+  puts "View the new UnitGroup here: http://localhost-studio.code.org:3000/courses/#{new_unit_group.name}" if verbose
   all_passed
 end
 
-def convert_standalone_courses
+def main
   # Temporarily remove readonly attributes
   # original_readonly = CourseVersion.readonly_attributes
   # CourseVersion.readonly_attributes = []
@@ -92,7 +100,7 @@ def convert_standalone_courses
   init_standalone_courses = Unit.all.filter(&:is_course?)
   init_count = init_standalone_courses.count
   init_standalone_courses.each do |standalone_unit|
-    convert_standalone_course(standalone_unit.name)
+    convert_standalone_course(standalone_unit)
   end
 
   puts "Units Converted: #{init_count - Unit.all.count(&:is_course?)}"
@@ -102,6 +110,4 @@ def convert_standalone_courses
   Rails.configuration.converting_standalone_courses = false
 end
 
-def main
-  convert_standalone_courses
-end
+main if __FILE__ == $0
