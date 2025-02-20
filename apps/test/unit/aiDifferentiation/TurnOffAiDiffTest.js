@@ -38,7 +38,6 @@ describe('TurnOffAiDiff', () => {
       </Provider>
     );
 
-    console.log('done');
     screen.getByText('AI Teaching Assistant Chat Settings');
     screen.getByLabelText(
       i18n.aiTeachingAssistantSettingsStatus({status: 'enabled'})
