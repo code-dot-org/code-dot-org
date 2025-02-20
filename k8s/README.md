@@ -51,7 +51,7 @@ Your first skaffold run will:
 
 Once setup is done, the command to start dashboard is:
 ```
-`skaffold dev`
+skaffold dev
 ```
 
 Then open: http://localhost-studio.code.org:13000
