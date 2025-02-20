@@ -14,16 +14,38 @@
 .sectionCardWrapper {
   border: 1px solid $neutral_dark20;
   border-radius: 4px;
-  padding: 16px;
   background-color: $neutral_light;
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+}
+
+.sectionCardHeader {
+  padding: 16px;
+  border-bottom: 1px solid $neutral_dark20;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+.sectionCardHeaderLeft {
   display: flex;
   flex-direction: column;
 }
 
-.sectionCardHeader {
+.sectionCardHeaderRight {
+  display: flex;
+}
+
+.sectionCardHeaderText {
   height: 28px;
 }
 
 .sectionCardCode {
   height: 22px;
+
+  a {
+    color: $light_primary_500;
+  }
 }
