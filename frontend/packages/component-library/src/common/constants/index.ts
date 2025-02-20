@@ -16,12 +16,13 @@ export const componentSizes: Record<ComponentSizeXSToL, ComponentSizeXSToL> = {
 /**
  *  This is the map of component size to body text size (visualAppearance)
  */
-export const componentSizeToBodyTextSizeMap: Record<string, VisualAppearance> = {
-  [componentSizes.l]: 'body-one',
-  [componentSizes.m]: 'body-two',
-  [componentSizes.s]: 'body-three',
-  [componentSizes.xs]: 'body-four',
-} as const;
+export const componentSizeToBodyTextSizeMap: Record<string, VisualAppearance> =
+  {
+    [componentSizes.l]: 'body-one',
+    [componentSizes.m]: 'body-two',
+    [componentSizes.s]: 'body-three',
+    [componentSizes.xs]: 'body-four',
+  } as const;
 
 export const dropdownColors: {[key in DropdownColor]: DropdownColor} = {
   white: 'white',

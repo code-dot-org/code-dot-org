@@ -74,7 +74,7 @@ const Label: React.FunctionComponent<LabelProps> = ({
 
     return (
       <div className={classNames(classes)}>
-        {icon && <FontAwesomeV6Icon {...icon}/>}
+        {icon && <FontAwesomeV6Icon {...icon} />}
         {text && <span>{text}</span>}
       </div>
     );
