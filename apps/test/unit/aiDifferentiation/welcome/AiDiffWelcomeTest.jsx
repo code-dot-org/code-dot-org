@@ -1,6 +1,5 @@
 import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
-import {act} from 'react-dom/test-utils';
 
 import AiDiffWelcome from '@cdo/apps/aiDifferentiation/welcome/AiDiffWelcome';
 
@@ -53,9 +52,7 @@ describe('AiDiffWelcome', () => {
   });
 
   test('selecting an option and clicking "Continue" transitions to practice page', () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} />);
-
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
+    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'select_option'} />);
 
     fireEvent.click(screen.getByRole('button', {name: 'Plan'}));
 
@@ -66,20 +63,14 @@ describe('AiDiffWelcome', () => {
     );
   });
 
-  test('clicking "Finish" on the end page triggers setShowWelcomeExperience', async () => {
-    const setShowWelcomeExperienceStub = jest.fn();
-    render(
-      <AiDiffWelcome
-        {...DEFAULT_PROPS}
-        setShowWelcomeExperience={setShowWelcomeExperienceStub}
-      />
+  test('practice page buttons work correctly', async () => {
+    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'practice'} />);
+
+    await waitFor(
+      () =>
+        expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled(),
+      {timeout: 100}
     );
-
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Plan'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-
-    expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
 
     const input = screen.getByRole('textbox');
     fireEvent.change(input, {target: {value: 'Test'}});
@@ -92,6 +83,18 @@ describe('AiDiffWelcome', () => {
     );
     fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
 
+    screen.getByText('You’re on your way to becoming an AI all-star!');
+  });
+
+  test('clicking "Finish" on the end page triggers setShowWelcomeExperience', async () => {
+    const setShowWelcomeExperienceStub = jest.fn();
+    render(
+      <AiDiffWelcome
+        {...DEFAULT_PROPS}
+        setShowWelcomeExperience={setShowWelcomeExperienceStub}
+        firstState={'end_page'}
+      />
+    );
     screen.getByText('You’re on your way to becoming an AI all-star!');
 
     screen.getByText('Continue your learning journey');
@@ -107,22 +110,7 @@ describe('AiDiffWelcome', () => {
   });
 
   test('End page buttons work correctly', async () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} />);
-
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Plan'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
-
-    expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
-
-    const input = screen.getByRole('textbox');
-    fireEvent.change(input, {target: {value: 'Test'}});
-    fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
-
-    await waitFor(() =>
-      expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled()
-    );
-    fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'end_page'} />);
 
     screen.getByText('confetti');
 
@@ -139,9 +127,7 @@ describe('AiDiffWelcome', () => {
   });
 
   test('Back button works correctly', () => {
-    render(<AiDiffWelcome {...DEFAULT_PROPS} />);
-
-    fireEvent.click(screen.getByRole('button', {name: 'Get Started'}));
+    render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'select_option'} />);
 
     fireEvent.click(screen.getByRole('button', {name: 'Back'}));
     screen.getByText('AI Teaching Assistant');
@@ -155,15 +141,11 @@ describe('AiDiffWelcome', () => {
       <AiDiffWelcome
         {...DEFAULT_PROPS}
         setShowWelcomeExperience={setShowWelcomeExperienceStub}
+        firstState={'select_option'}
       />
     );
 
-    await act(async () => {
-      fireEvent.click(await screen.findByRole('button', {name: 'Get Started'}));
-      fireEvent.click(
-        await screen.findByRole('link', {name: 'Skip the tutorial'})
-      );
-    });
+    fireEvent.click(screen.getByRole('link', {name: 'Skip the tutorial'}));
 
     await waitFor(
       () => expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false),

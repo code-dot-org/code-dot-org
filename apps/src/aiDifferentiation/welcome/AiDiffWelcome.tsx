@@ -47,6 +47,7 @@ interface AiDiffWelcomeProps {
   scriptId: number;
   scriptName: string;
   unitDisplayName: string;
+  firstState?: WelcomeState;
 }
 
 const SUGGESTED_PROMPTS_FOR_SELECTION: {
@@ -150,9 +151,11 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   scriptId,
   scriptName,
   unitDisplayName,
+  // This should only be used for testing purposes
+  firstState = 'get_started',
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
-    React.useState<WelcomeState>('get_started');
+    React.useState<WelcomeState>(firstState);
 
   const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
     React.useState(true);
@@ -289,6 +292,8 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
+      // Default to something so we don't just show a blank page
+      setSelectedOption('plan');
       return null;
     }
     const {initialMessage, suggestedPrompts} =
