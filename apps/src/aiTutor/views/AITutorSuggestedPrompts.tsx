@@ -26,38 +26,80 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
 
   const level = useAppSelector(state => state.aiTutor.level);
 
-  const sources = useAppSelector(state => state.javalabEditor.sources);
+  // PythonLab
+  const pythonLabSource = useAppSelector(
+    state => state.lab2Project?.projectSources?.source
+  );
+
+  // TODO: hasError is not actually implemented properly yet
+  const hasPythonLabError = useAppSelector(state => state.lab2System.hasError);
+  const hasRunOrTestedPythonLabCode = useAppSelector(
+    state => state.lab2System.hasRun || state.lab2System.hasValidated
+  );
+  const isPythonLabRunning = useAppSelector(
+    state => state.lab2System.isRunning
+  );
+  const {hasConditions, satisfied} = useAppSelector(
+    state => state.lab.validationState
+  );
+  const pythonLabValidationPassed = !hasConditions || satisfied;
+
+  // For JavaLab
+  const javaLabSources = useAppSelector(state => state.javalabEditor.sources);
   const fileMetadata = useAppSelector(
     state => state.javalabEditor.fileMetadata
   );
   const activeTabKey = useAppSelector(
     state => state.javalabEditor.activeTabKey
   );
-  const studentCode = sources[fileMetadata[activeTabKey]].text;
 
-  const hasCompilationError = useAppSelector(
+  const hasJavaLabCompilationError = useAppSelector(
     state => state.javalabEditor.hasCompilationError
   );
-  const hasRunOrTestedCode = useAppSelector(
+  const hasRunOrTestedJavaLabCode = useAppSelector(
     state => state.javalab.hasRunOrTestedCode
   );
-  const isRunning = useAppSelector(state => state.javalab.isRunning);
-  const validationPassed = useAppSelector(
+  const isJavaLabRunning = useAppSelector(state => state.javalab.isRunning);
+  const javaLabValidationPassed = useAppSelector(
     state => state.javalab.validationPassed
   );
 
-  const dispatch = useAppDispatch();
+  function getOptionsByLabType(labType: string) {
+    if (labType === 'Pythonlab') {
+      const studentCode =
+        typeof pythonLabSource !== 'string' && pythonLabSource
+          ? getActiveFileForSource(pythonLabSource)?.contents || ''
+          : '';
+      const showGenericErrorOption =
+        !isPythonLabRunning &&
+        hasRunOrTestedPythonLabCode &&
+        (!pythonLabValidationPassed || hasPythonLabError) &&
+        !isWaitingForChatResponse;
+      return {studentCode, showGenericErrorOption};
+    } else if (labType === 'Javalab') {
+      const studentCode = javaLabSources[fileMetadata[activeTabKey]].text;
+      const showCompilationOption =
+        !isJavaLabRunning &&
+        hasRunOrTestedJavaLabCode &&
+        hasJavaLabCompilationError &&
+        !isWaitingForChatResponse;
+      const showValidationOption =
+        hasRunOrTestedJavaLabCode &&
+        !hasJavaLabCompilationError &&
+        !javaLabValidationPassed &&
+        !isWaitingForChatResponse;
+      return {studentCode, showCompilationOption, showValidationOption};
+    }
+    return {};
+  }
 
-  const showCompilationOption =
-    !isRunning &&
-    hasRunOrTestedCode &&
-    hasCompilationError &&
-    !isWaitingForChatResponse;
-  const showValidationOption =
-    hasRunOrTestedCode &&
-    !hasCompilationError &&
-    !validationPassed &&
-    !isWaitingForChatResponse;
+  const labOptions = level?.type ? getOptionsByLabType(level.type) : {};
+  const studentCode: string = labOptions.studentCode || '';
+  const showCompilationOption = labOptions.showCompilationOption || false;
+  const showValidationOption = labOptions.showValidationOption || false;
+  const showGenericErrorOption = labOptions.showGenericErrorOption || false;
+
+  const dispatch = useAppDispatch();
 
   const handleClick = useCallback(
     (actionType: AITutorTypesValue) => {
