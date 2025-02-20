@@ -15,6 +15,7 @@ import {
   setIsRunning,
   setIsValidating,
   setHasValidated,
+  setHasError,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -60,6 +61,7 @@ const ControlButtons: React.FunctionComponent = () => {
     dispatch(setIsRunning(false));
     dispatch(setIsValidating(false));
     dispatch(setHasValidated(false));
+    dispatch(setHasError(false));
   }, [dispatch]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, resetStatus);
@@ -67,6 +69,8 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
+      // TODO: Remove this
+      dispatch(setHasError(false));
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName);
       logUserLevelInteraction({
         levelId: levelId,
@@ -77,6 +81,7 @@ const ControlButtons: React.FunctionComponent = () => {
         dispatch(setIsRunning(false))
       );
       dispatch(setHasRun(true));
+      dispatch(setHasError(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
