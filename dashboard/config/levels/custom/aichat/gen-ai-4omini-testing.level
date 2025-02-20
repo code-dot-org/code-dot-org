@@ -14,7 +14,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": "0.5",
+        "temperature": 0.5,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -45,6 +45,6 @@
     },
     "name_suffix": "_2024"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-05T21:15:56.293+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L2_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L2_2024\"},{\"changed_at\":\"2025-02-05 21:16:21 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"project_template_level_name\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-05T21:15:56.293+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project2-L2_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-project2-L2_2024\"},{\"changed_at\":\"2025-02-05 21:16:21 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"project_template_level_name\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 17:50:55 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-12 17:51:10 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

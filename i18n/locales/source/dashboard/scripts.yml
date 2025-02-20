@@ -10713,7 +10713,7 @@ en:
               display_name: 'Part II:  Concepts in Courses A - F'
             k5_next_steps_1:
               display_name: 'Part III:  Next Steps'
-          title: Teaching Computer Science Fundamentals ('23-'24)
+          title: Teaching Computer Science Fundamentals
           description: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
@@ -18053,7 +18053,7 @@ en:
               name: Experimenting with shorter sounds
           lesson_groups:
             lessonGroup-3:
-              display_name: New progression
+              display_name: Intro to Programming with Music Lab
             lessonGroup-2:
               display_name: Original progression
           name: pilot-elem-music-lab
@@ -18569,8 +18569,18 @@ en:
           description: ''
           student_description: ''
         kt-test-123:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: kt-test-123-lesson1
+            lesson-2:
+              name: kt-test-123-lesson2
           lesson_groups: {}
+          name: kt-test-123
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         dan-test:
           lessons: {}
           lesson_groups: {}
@@ -18582,7 +18592,7 @@ en:
               name: Next Steps
           lesson_groups: {}
           name: sandbox-pl-teaching-k5-music-lab
-          title: Teaching K-5 Music Lab (Sandbox)
+          title: Teaching Programming with Music Lab (Sandbox)
           description_audience: ''
           description_short: ''
           description: ''
@@ -18647,11 +18657,35 @@ en:
               name: 'Lesson 13: Two-Way & Nested Selection'
             lesson-19:
               name: 'Lesson 14: Pixels of Me Project'
+            lesson-20:
+              name: 'Two-Way and Nested Selection (Lesson 13) '
+            lesson-21:
+              name: Decomposing Adventure Game (Lesson 12)
+            lesson-22:
+              name: Variables with AI Tutor
+            lesson-23:
+              name: Lesson 5 - Variables and Data Flow
+            lesson-24:
+              name: Lesson 6 - Working with Objects
+            lesson-25:
+              name: Lesson 7 - Functions and Parameters
+            lesson-26:
+              name: Lesson 9 - Intro to Loops
+            lesson-27:
+              name: Lesson 10 - Conditionals
+            lesson-28:
+              name: Lesson 12 - Decomposing a Pixel Image
+            lesson-29:
+              name: Lesson 13 - Two-Way & Nested Selection
+            lesson-30:
+              name: Lesson 14 - Pixels of Me Project
           lesson_groups:
             lessonGroup-2:
               display_name: console-only levels
             lessonGroup-3:
               display_name: Regular Lessons/Levels
+            lessonGroup-4:
+              display_name: AI Tutor Investigation
           name: 6-12-intro-to-programming-python
           title: 6-12 Intro to Programming (Python) Playground
           description_audience: ''
@@ -18696,8 +18730,40 @@ en:
           description: ''
           student_description: ''
         6-12-networks-and-the-internet:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: Introduction to the Internet
+            lesson-3:
+              name: Sending Bits
+            lesson-4:
+              name: IP Addresses
+            lesson-5:
+              name: Routers and Redundancy
+            lesson-6:
+              name: Packets
+            lesson-7:
+              name: HTTP and DNS
+            lesson-8:
+              name: The Digital Devide & Net Neutrality
+            lesson-9:
+              name: Internet Access Advocacy Campaign Project
+            lesson-10:
+              name: Network Security
+            lesson-11:
+              name: Emerging Technologies
+            lesson-12:
+              name: Network Security Risk Assessment Project
+            lesson-13:
+              name: Template Levels
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Level Templates for Cloning
           name: 6-12-networks-and-the-internet
           title: 6-12 Networks and the Internet Playground
           description_audience: ''
@@ -18774,3 +18840,52 @@ en:
           student_description: "This unit focuses on using Python to analyze and interpret real-world data sets. You learn how to use libraries like Pandas and Matplotlib to explore, manipulate, and visualize data, creating custom visualizations such as stacked bar charts and pie charts. Throughout the unit, you refine your programming and analytical skills to uncover insights from complex datasets. The unit ends with a project that allows you to apply your learning to a community or school-based issue, presenting your findings through a combination of data visualizations and Python code.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary> \n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n-   Formulate data questions and create data collection plans. \n-   Write and run simple Python programs focusing on data science applications. \n-   Explore, manipulate, and analyze data using Pandas. \n-   Create and customize data visualizations with Matplotlib. \n-   Clean and filter datasets to ensure data integrity and uncover insights. \n-   Perform statistical analysis using key Pandas functions and interpret the results. \n-   Use advanced filtering techniques in Pandas to refine and analyze data. \n    </div> \n    </details>"
           description_short: Students learn to leverage Python and popular data science libraries for data analysis, enhancing their data interpretation skills through programming.
           description_audience: ''
+        musiclab-6-12-playground:
+          lessons:
+            lesson-1:
+              name: Templates and Experiments
+          lesson_groups: {}
+          name: musiclab-6-12-playground
+          title: 6-12 Music Lab Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pilot-pl-teaching-k5-music-lab:
+          lessons: {}
+          lesson_groups: {}
+          name: pilot-pl-teaching-k5-music-lab
+          title: 'Teaching Programming with Music Lab '
+          description_audience: ''
+          description_short: ''
+          description: "##### Welcome! This module prepares teachers for Code.org's Programming with Music Lab curriculum. Programming with Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards."
+          student_description: "##### Welcome! This module prepares teachers for Code.org's Programming with Music Lab curriculum. Programming with Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards."
+        ui-test-single-unit-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-single-unit-2025
+          title: Single Unit 2025
+          description_audience: ''
+          description_short: This is the short overview for Single Unit 2025.
+          description: This is the teacher overview for Single Unit 2025.
+          student_description: This is the student overview for Single Unit 2025.
+        ui-test-single-unit-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-single-unit-2026
+          title: Single Unit 2026
+          description_audience: ''
+          description_short: This is the short overview for Single Unit 2026.
+          description: This is the teacher overview for Single Unit 2026.
+          student_description: This is the student overview for Single Unit 2026.
+        sandbox-teaching-getting-started1:
+          lessons:
+            lesson-1:
+              name: Welcome to Code.org
+          lesson_groups: {}
+          name: sandbox-teaching-getting-started1
+          title: Getting Started Sandbox (Updated)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

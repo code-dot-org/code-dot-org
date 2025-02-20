@@ -321,13 +321,15 @@ export const isLabLoading = (state: {lab: LabState}) =>
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
-  const isEditingExemplarMode = getAppOptionsEditingExemplar();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isViewingExemplar = getAppOptionsViewingExemplar();
 
   // Exemplar and block edit modes do not have a channel.
-  if (isEditMode || isEditingExemplarMode) {
+  if (isEditMode || isEditingExemplar) {
     return false;
+  } else if (isViewingExemplar) {
+    return true;
   }
-
   // Otherwise, we are in read only mode if we are not the owner of the channel,
   // the level is frozen, the level is a read only predict level, the level has been submitted.
   // or this is a lab that should be read only while running and the code is currently running.
@@ -647,9 +649,7 @@ export const {
   setScriptId,
   onLevelChange,
   setPermissions,
+  setChannel,
 } = labSlice.actions;
-
-// These should not be set outside of the lab slice.
-const {setChannel} = labSlice.actions;
 
 export default labSlice.reducer;

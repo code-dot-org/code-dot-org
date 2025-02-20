@@ -173,7 +173,12 @@ const SetupCustomization: React.FunctionComponent = () => {
         {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
           <>
-            <div className={styles.horizontalFlexContainer}>
+            <div
+              className={classNames(
+                styles.horizontalFlexContainer,
+                'uitest-temperature-container'
+              )}
+            >
               <FieldLabel
                 id="temperature"
                 label={aichatI18n.technicalInfoHeader_temperature()}

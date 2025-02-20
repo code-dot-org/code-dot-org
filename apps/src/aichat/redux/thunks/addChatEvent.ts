@@ -7,17 +7,17 @@ import {
   ChatEvent,
   isModelUpdate,
   isNotification,
+  isUserActionEvent,
 } from '../../types';
 import {addEventToChatEventsCurrent} from '../slice';
 
-// This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace) if visible, i.e.,
-// hideForParticipants != true. Then it logs the event to the backend for all chat events except notifications
-// with includeInHistory != true.
+// This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace) if visible.
+// Then it logs the event to the backend for all chat events except notifications with includeInHistory != true.
 export const addChatEvent =
   <T extends ChatEvent>(chatEvent: T) =>
   (dispatch: AppDispatch, getState: () => RootState) => {
-    // Only visible chat events added to chatEventsCurrent.
-    if (!chatEvent.hideForParticipants) {
+    // User action events are hidden from participants and only displayed in teacher view of student chat history.
+    if (!isUserActionEvent(chatEvent)) {
       dispatch(addEventToChatEventsCurrent(chatEvent));
     }
     // Log chat event to backend.

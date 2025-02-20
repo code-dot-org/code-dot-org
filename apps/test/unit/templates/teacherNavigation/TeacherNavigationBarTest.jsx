@@ -12,6 +12,9 @@ import {
 
 import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 import teacherSections, {
   selectSection,
   setSections,
@@ -24,12 +27,21 @@ import {
   TEACHER_NAVIGATION_BASE_URL,
   TEACHER_NAVIGATION_SECTIONS_URL,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 const LocationElement = () => {
   const location = useLocation();
   return <div>{location.pathname} path</div>;
 };
+
+// Needed to mock out the PDFDownloadLink component in the AiDiffContainer
+jest.mock('@react-pdf/renderer', () => ({
+  PDFDownloadLink: () => null,
+  StyleSheet: {
+    create: () => null,
+  },
+}));
 
 describe('TeacherNavigationBar', () => {
   const sections = [
@@ -90,8 +102,16 @@ describe('TeacherNavigationBar', () => {
     store = getStore();
     registerReducers({
       teacherSections,
+      currentUser,
     });
     store.dispatch(setSections(serverSections));
+    store.dispatch(
+      setInitialData({
+        id: 1,
+        name: 'test_user',
+        has_completed_ai_differentiation_welcome: true,
+      })
+    );
 
     loadSelectedSectionSpy = jest
       .spyOn(selectedSectionLoader, 'asyncLoadSelectedSection')
@@ -169,6 +189,10 @@ describe('TeacherNavigationBar', () => {
       </Provider>
     );
   };
+
+  beforeEach(() => {
+    window.HTMLElement.prototype.scrollIntoView = () => {};
+  });
 
   afterEach(() => {
     jest.restoreAllMocks();
@@ -282,5 +306,27 @@ describe('TeacherNavigationBar', () => {
     await screen.findByText('Course Content');
 
     expect(screen.queryByText('AI Tutor')).toBeNull();
+  });
+
+  test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {
+    // mock experiment is enabled
+    experiments.isEnabled = jest.fn(() => false);
+    renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
+
+    expect(
+      screen.queryByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
+    ).toBeNull();
+  });
+
+  test('renders AiDiffFloatingActionButton component', async () => {
+    // mock experiment is enabled
+    experiments.isEnabled = jest.fn(() => true);
+    renderDefault(13, `/teacher_dashboard/sections/13/unit/csd3-2022`);
+
+    const chatButton = await screen.findByRole('button', {
+      name: i18n.openOrCloseTeachingAssistant(),
+    });
+    fireEvent.click(chatButton);
+    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
   });
 });

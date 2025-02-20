@@ -60,14 +60,14 @@
   border-style: solid;
 }
 
-.aiBotHeader{
-  position:relative;
+.aiBotHeader {
+  position: relative;
   padding-right: 12px;
   padding-top: 3px;
 }
 
 .taOverlayHeader {
-  position:absolute;
+  position: absolute;
   top: 0;
   right: 0;
   display: flex;
@@ -116,6 +116,18 @@
   .aiBotOutlineIcon {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  .headerTag {
+    margin-left: 4px;
+
+    div {
+      background-color: $neutral_dark80;
+
+      span {
+        color: $neutral_white;
+      }
+    }
   }
 }
 
@@ -227,17 +239,16 @@
   left: 10px;
   bottom: 48px;
 
-  height: 55px;
-  width: 55px;
-  background-size: 55px;
+  height: 66px;
+  width: 66px;
+  background-size: 66px;
   padding: 0;
+  background-color: transparent;
 
   border-width: 0;
-  border-radius: 30px;
 
   img {
     opacity: 1;
-    border-radius: 30px;
   }
 }
 

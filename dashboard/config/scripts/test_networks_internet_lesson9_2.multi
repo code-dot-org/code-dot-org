@@ -1,0 +1,12 @@
+name 'test-networks-internet-lesson9-2'
+title 'Check for Understanding'
+
+wrong 'Regular software updates'
+right 'Phishing awareness training'
+wrong 'Two-factor authentication'
+wrong 'Strong password policy'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A company has been targeted by phishing attacks. Which of the following is the most effective defense strategy?
+MARKDOWN

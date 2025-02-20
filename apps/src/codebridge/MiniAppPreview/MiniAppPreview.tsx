@@ -11,8 +11,7 @@ import NeighborhoodPreview from './NeighborhoodPreview';
 import moduleStyles from './mini-app-preview.module.scss';
 
 const MiniAppPreview: React.FunctionComponent = () => {
-  const {config, labConfig} = useCodebridgeContext();
-  const isHorizontal = config.activeLayout === 'horizontal';
+  const {labConfig} = useCodebridgeContext();
 
   const miniApp = labConfig?.miniApp?.name;
 
@@ -24,11 +23,7 @@ const MiniAppPreview: React.FunctionComponent = () => {
       id="codebridge-preview"
       headerContent={codebridgeI18n.preview()}
       leftHeaderContent={<ControlButtons />}
-      className={
-        isHorizontal
-          ? moduleStyles.previewContainerHorizontal
-          : moduleStyles.previewContainerVertical
-      }
+      className={moduleStyles.previewContainer}
       headerClassName={moduleStyles.previewHeader}
     >
       {miniAppComponent}

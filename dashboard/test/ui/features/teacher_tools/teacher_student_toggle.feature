@@ -15,7 +15,7 @@ Scenario: Toggle on Multi Level
   Then I open the progress drop down of the current page
   And I see no difference for "progress dropdown for teacher"
 
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
   And I wait to see ".header_popup_link"
   Then I open the progress drop down of the current page
   And I wait until element ".user-stats-block:contains(Jigsaw)" is visible
@@ -29,7 +29,7 @@ Scenario: Toggle on Hidden Maze Level
   Then I sign in as "Teacher_Arya"
   Then I am on "http://studio.code.org/s/allthethings"
   And I wait to see ".uitest-togglehidden"
-  Then I click selector ".uitest-togglehidden:nth(1) div:contains('Hidden')"
+  Then I click selector ".uitest-togglehidden:eq(1) div:contains('Hidden')"
   Then I am on "http://studio.code.org/s/allthethings/lessons/2/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I see no difference for "page load"
@@ -60,7 +60,7 @@ Scenario: Toggle on Lockable Level
   And I see no difference for "view as teacher while locked"
 
   # Click the first student
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
   And I wait until element "#level-body" is visible
   And element "#level-body" contains text "This survey is anonymous"
   And element "#locked-lesson" is not visible
@@ -82,7 +82,7 @@ Scenario: Toggle on Lockable Level
   And element "#locked-lesson" is not visible
 
   # Click the first student
-  And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
+  And I click selector "#teacher-panel-container tr:eq(1)" to load a new page
   And I wait until element "#level-body" is visible
   And element "#level-body" contains text "This survey is anonymous"
   And element "#locked-lesson" is not visible

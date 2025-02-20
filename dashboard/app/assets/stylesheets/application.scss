@@ -21,8 +21,8 @@
  *= require_directory ./lti
  *
  * Shared
- *= require barlow-semi-condensed-font
- *= require fonts/metropolis
+ *= require fonts/barlow-semi-condensed
+ *= require fonts/figtree
  *= require fonts/noto-sans
  *= require user-menu
  *= require buttons
@@ -76,6 +76,7 @@ body.oceans-blue {
 
 body.music-black, body.background-dark {
   background-color: $dark_black;
+  color: $neutral_light;
 }
 
 body.background-dark, body.background-light {
@@ -4194,7 +4195,7 @@ a {
       animation: clickable-text-glow-keyframes 2s ease-in-out;
 
       &:hover {
-        color: $light_primary_500;
+        color: $light_primary_700;
       }
     }
   }
