@@ -4,11 +4,12 @@ import React from 'react';
 import {
   CodebridgeContextProvider,
   CodebridgeContextType,
+  useSourceUtilities,
 } from '@cdo/apps/codebridge';
 import {FileTabs} from '@cdo/apps/codebridge/FileTabs';
 
 import {getDefaultCodebridgeContext} from '../test_utils';
-import '@testing-library/jest-native';
+import '@testing-library/jest-dom';
 
 const context: CodebridgeContextType = {
   ...getDefaultCodebridgeContext(),
@@ -35,6 +36,7 @@ const context: CodebridgeContextType = {
     },
     folders: {},
   },
+  setActiveFile: jest.fn(),
 };
 
 describe('FileTabs', () => {
@@ -55,7 +57,6 @@ describe('FileTabs', () => {
     const file = context.source.files['1'];
     const tab = screen.getByText(file.name);
     fireEvent.click(tab);
-    const activeTab = screen.getByRole('tab', {selected: true});
-    expect(activeTab).toHaveTextContent(file.name);
+    expect(context.setActiveFile).toHaveBeenCalledWith(file.id);
   });
 });
