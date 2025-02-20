@@ -440,7 +440,7 @@ class Section < ApplicationRecord
       primary_instructor = {
         email: teacher.email,
         name: teacher.name,
-        lti_roster_sync_enabled: teacher&.properties&.[]("lti_roster_sync_enabled")
+        ltiRosterSyncEnabled: teacher&.properties&.[]("lti_roster_sync_enabled")
       }
 
       {
@@ -503,7 +503,12 @@ class Section < ApplicationRecord
         students.unscope(:order).distinct(&:id)
       num_students = unique_students.size
 
-      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json.map {|si| si.transform_keys {|key| key.to_s.camelize(:lower)}}
+      primary_instructor = {
+        email: teacher.email,
+        name: teacher.name,
+        ltiRosterSyncEnabled: teacher&.properties&.[]("lti_roster_sync_enabled")
+      }
 
       at_risk_student = at_risk_age_gated_student
 
@@ -518,6 +523,7 @@ class Section < ApplicationRecord
         createdAt: created_at,
         teacherName: teacher.name,
         sectionInstructors: serialized_section_instructors,
+        primaryInstructor: primary_instructor,
         linkToProgress: "#{base_url}#{id}/progress",
         assignedTitle: title,
         linkToAssigned: link_to_assigned,
