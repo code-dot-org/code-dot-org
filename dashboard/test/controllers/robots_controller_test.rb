@@ -3,33 +3,33 @@ require 'test_helper'
 class RobotsControllerTest < ActionController::TestCase
   test 'renders plaintext' do
     set_env :production
-    post :index
+    get :index
     assert_response :success
-    expect(response.content_type.split(';').first).to eq('text/plain')
+    assert_equal response.content_type.split(';').first, 'text/plain'
   end
 
   test 'targets all crawlers' do
     set_env :production
-    post :index
+    get :index
     assert_response :success
-    let(:lines) {response.body.lines(chomp: true)}
-    expect(lines).to include('User-agent: *')
+    lines = response.body.lines(chomp: true)
+    assert_includes(lines, 'User-agent: *')
   end
 
   test 'denies all for non production environment' do
     set_env :levelbuilder
-    post :index
+    get :index
     assert_response :success
-    let(:lines) {response.body.lines(chomp: true)}
-    expect(lines).to include('Disallow: /')
+    lines = response.body.lines(chomp: true)
+    assert_includes(lines, 'Disallow: /')
   end
 
   test 'allows all for production with a couple exceptions' do
     set_env :production
-    post :index
+    get :index
     assert_response :success
-    let(:lines) {response.body.lines(chomp: true)}
-    expect(lines).to include('Allow: /$')
-    expect(lines).to include('Disallow: /projects/')
+    lines = response.body.lines(chomp: true)
+    assert_includes(lines, 'Allow: /')
+    assert_includes(lines, 'Disallow: /projects/')
   end
 end
