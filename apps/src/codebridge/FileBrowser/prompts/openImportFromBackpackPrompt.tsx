@@ -4,7 +4,6 @@ import {
 } from '@codebridge/codebridgeContext/types';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {
-  validateFileName,
   getFileNameWithNumberSuffix,
   isDuplicateFileName,
   DuplicateFileError,
@@ -101,25 +100,25 @@ export const openImportFromBackpackPrompt = async ({
         const selectedBackpackFileName = extractUserInput(results, true);
         // Import backpack file to project.
         if (results.type === 'confirm') {
+          let isDuplicateName = isDuplicateFileName({
+            fileName: selectedBackpackFileName,
+            folderId: DEFAULT_FOLDER_ID,
+            projectFiles,
+            isStartMode: false,
+            validationFile,
+          });
           const isSupportFileName =
-            isDuplicateFileName({
-              fileName: selectedBackpackFileName,
-              folderId: DEFAULT_FOLDER_ID,
-              projectFiles,
-              isStartMode: false,
-              validationFile,
-            }) === DuplicateFileError.DUPLICATE_SUPPORT_FILE;
+            isDuplicateName === DuplicateFileError.DUPLICATE_SUPPORT_FILE;
           let newFileName = selectedBackpackFileName;
-          while (
-            validateFileName({
+          while (isDuplicateName) {
+            newFileName = getFileNameWithNumberSuffix(newFileName);
+            isDuplicateName = isDuplicateFileName({
               fileName: newFileName,
               folderId: DEFAULT_FOLDER_ID,
               projectFiles,
               isStartMode: false,
               validationFile,
-            })
-          ) {
-            newFileName = getFileNameWithNumberSuffix(newFileName);
+            });
           }
           if (isSupportFileName) {
             // The user wants to import a file that has the same name as a hidden support file.
