@@ -42,6 +42,11 @@ const SwiperCarousel: React.FC<CarouselProps> = ({
   className,
   ...HTMLAttributes
 }: CarouselProps) => {
+  // Constants for carousel configuration
+  const slideGap = 20;
+  const breakpointTablet = 768;
+  const breakpointDesktop = 1024;
+
   return (
     <div
       className={classNames(moduleStyles.carouselWrapper, className)}
@@ -53,7 +58,7 @@ const SwiperCarousel: React.FC<CarouselProps> = ({
           modules={[Navigation, Pagination, A11y]}
           allowTouchMove={allowTouchMove}
           autoHeight={autoHeight}
-          spaceBetween={24}
+          spaceBetween={slideGap}
           navigation={{
             nextEl: `.${carouselId}-next`,
             prevEl: `.${carouselId}-prev`,
@@ -64,13 +69,13 @@ const SwiperCarousel: React.FC<CarouselProps> = ({
             el: `.${carouselId}-pagination`,
           }}
           breakpoints={{
-            // when window width is >= 768px
-            768: {
+            // when window width is tablet
+            [breakpointTablet]: {
               slidesPerView: 2,
               slidesPerGroup: 2,
             },
-            // when window width is >= 1024px
-            1024: {
+            // when window width is desktop
+            [breakpointDesktop]: {
               slidesPerView: slidesPerView,
               slidesPerGroup: slidesPerGroup,
             },
