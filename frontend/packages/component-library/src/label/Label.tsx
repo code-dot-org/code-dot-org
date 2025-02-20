@@ -29,10 +29,10 @@ export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   /** Label size */
   size?: (typeof labelSizes)[keyof typeof labelSizes];
   /** Label helper section data */
-  helper?: {
-    icon?: FontAwesomeV6IconProps;
-    text?: ReactNode;
-  };
+  helper?: Partial<{
+    icon: FontAwesomeV6IconProps;
+    text: ReactNode;
+  }>;
   /** Label error message */
   error?: ReactNode;
 }
@@ -59,42 +59,54 @@ const Label: React.FunctionComponent<LabelProps> = ({
   size = labelSizes.m,
   ...HTMLAttrs
 }) => {
-  const helperSection = useMemo(() => {
-    const classes = [moduleStyles.labelHelperSection];
-    let icon = helper?.icon;
-    let text = helper?.text;
-
-    if (error) {
-      classes.push(moduleStyles.labelErrorSection);
-      icon = {iconName: 'circle-exclamation'};
-      text = error;
-    }
-
-    if (!icon && !text) return;
-
-    return (
-      <div className={classNames(classes)}>
-        {icon && <FontAwesomeV6Icon {...icon} />}
-        {text && <span>{text}</span>}
-      </div>
-    );
-  }, [helper, error]);
-
-  return (
-    <label
-      {...HTMLAttrs}
-      className={classNames(
+  const className = useMemo(
+    () =>
+      classNames(
         moduleStyles.label,
         moduleStyles[`label-${color}`],
         moduleStyles[`label-${size}`],
         HTMLAttrs.className,
-      )}
-    >
-      {text && <span className={moduleStyles.labelText}>{text}</span>}
+      ),
+    [color, size, HTMLAttrs.className],
+  );
 
+  const textSection = useMemo(
+    () => text && <span className={moduleStyles.labelText}>{text}</span>,
+    [text],
+  );
+
+  const errorSection = useMemo(
+    () =>
+      error && (
+        <div
+          className={classNames(
+            moduleStyles.labelHelperSection,
+            moduleStyles.labelErrorSection,
+          )}
+        >
+          <FontAwesomeV6Icon iconName="circle-exclamation" />
+          <span>{error}</span>
+        </div>
+      ),
+    [error],
+  );
+
+  const helperSection = useMemo(
+    () =>
+      (helper?.icon || helper?.text) && (
+        <div className={moduleStyles.labelHelperSection}>
+          {helper?.icon && <FontAwesomeV6Icon {...helper.icon} />}
+          {helper?.text && <span>{helper.text}</span>}
+        </div>
+      ),
+    [helper],
+  );
+
+  return (
+    <label {...HTMLAttrs} className={className}>
+      {textSection}
       {children}
-
-      {helperSection}
+      {errorSection || helperSection}
     </label>
   );
 };
