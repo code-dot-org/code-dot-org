@@ -101,15 +101,15 @@ export const openImportFromBackpackPrompt = async ({
         const selectedBackpackFileName = extractUserInput(results, true);
         // Import backpack file to project.
         if (results.type === 'confirm') {
-          let newFileName = selectedBackpackFileName;
           const isSupportFileName =
             isDuplicateFileName({
               fileName: selectedBackpackFileName,
               folderId: DEFAULT_FOLDER_ID,
               projectFiles,
               isStartMode: false,
+              validationFile,
             }) === DuplicateFileError.DUPLICATE_SUPPORT_FILE;
-
+          let newFileName = selectedBackpackFileName;
           while (
             validateFileName({
               fileName: newFileName,
