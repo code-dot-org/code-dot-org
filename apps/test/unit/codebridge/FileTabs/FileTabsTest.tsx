@@ -1,4 +1,5 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import {
@@ -36,6 +37,7 @@ const context: CodebridgeContextType = {
     folders: {},
   },
   setActiveFile: jest.fn(),
+  closeFile: jest.fn(),
 };
 
 describe('FileTabs', () => {
@@ -56,7 +58,18 @@ describe('FileTabs', () => {
     const file = context.source.files['1'];
     const tab = screen.getByRole('tab', {selected: false});
     expect(tab).toHaveTextContent(file.name);
-    fireEvent.click(tab);
+    const user = userEvent.setup();
+    await user.click(tab);
     expect(context.setActiveFile).toHaveBeenCalledWith(file.id);
+  });
+
+  it('can close a tab', async () => {
+    renderDefault();
+    const closeButton = screen.getByRole('button', {
+      name: 'close file file1.py',
+    });
+    const user = userEvent.setup();
+    await user.click(closeButton);
+    expect(context.closeFile).toHaveBeenCalledWith('1');
   });
 });
