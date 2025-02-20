@@ -31,7 +31,7 @@ export interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   /** Label helper section data */
   helper?: {
     icon?: FontAwesomeV6IconProps;
-    text: ReactNode;
+    text?: ReactNode;
   };
   /** Label error message */
   error?: ReactNode;
@@ -70,7 +70,7 @@ const Label: React.FunctionComponent<LabelProps> = ({
       text = error;
     }
 
-    if (!text) return;
+    if (!icon && !text) return;
 
     return (
       <div className={classNames(classes)}>
