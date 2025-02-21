@@ -8,13 +8,13 @@ export default {
 } as Meta;
 
 const defaultArgs = {
+  label: 'Label text',
   children: <input type="text" value="Child component" />,
 };
 
 const defaultComponents: FormFieldWrapperProps[] = [
   {
     ...defaultArgs,
-    label: 'Label text',
   },
   {
     ...defaultArgs,
@@ -45,12 +45,6 @@ const MultipleTemplate: StoryFn<{
 export const Default = SingleTemplate.bind({});
 Default.args = {
   ...defaultArgs,
-};
-
-export const WithLabel = SingleTemplate.bind({});
-WithLabel.args = {
-  ...defaultArgs,
-  label: 'FormFieldWrapper label',
 };
 
 export const WithHelperMessage = SingleTemplate.bind({});
