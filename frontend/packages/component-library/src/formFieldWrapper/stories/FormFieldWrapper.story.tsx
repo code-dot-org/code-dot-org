@@ -69,8 +69,13 @@ export const WithDisabledChildElement = MultipleTemplate.bind({});
 WithDisabledChildElement.args = {
   components: defaultComponents.map(component => ({
     ...component,
-    children: <input type="text" value="Disabled child field" disabled />,
+    children: <input type="text" disabled />,
   })),
+};
+WithDisabledChildElement.parameters = {
+  backgrounds: {
+    default: 'dark',
+  },
 };
 
 export const Sizes = MultipleTemplate.bind({});
