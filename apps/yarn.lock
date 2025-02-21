@@ -3682,12 +3682,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/keyboard-experiment@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "@blockly/keyboard-experiment@npm:0.0.1"
+"@blockly/keyboard-experiment@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@blockly/keyboard-experiment@npm:0.0.3"
   peerDependencies:
     blockly: ^11.1.0
-  checksum: 10/f293da46256de87998b9104da94d4bf27abdfd4a80958ed94843d4cb2980038a82f0f95f9ff552148f883680a3d02e34f32195583d5f1fe95b8384ea5581f279
+  checksum: 06486b3e6c36c57f18d0ddfd41dec01f1cf5f25692167fc93c7a654c9470a904e012dd951f771f76b0bcadc993f398cb6d86f4b21ae3d934f57db7f2dfe64e3a
   languageName: node
   linkType: hard
 
@@ -10120,28 +10120,28 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blockly-mooc@workspace:."
   dependencies:
-    "@amplitude/analytics-browser": "npm:^1.5.4"
-    "@babel/core": "npm:^7.26.0"
-    "@babel/eslint-parser": "npm:7.25.9"
-    "@babel/plugin-proposal-object-rest-spread": "npm:^7.20.7"
-    "@babel/plugin-proposal-optional-chaining": "npm:^7.21.0"
-    "@babel/plugin-syntax-dynamic-import": "npm:^7.8.3"
-    "@babel/plugin-transform-class-properties": "npm:^7.25.9"
-    "@babel/plugin-transform-classes": "npm:^7.25.9"
-    "@babel/plugin-transform-regenerator": "npm:^7.25.9"
-    "@babel/polyfill": "npm:^7.12.1"
-    "@babel/preset-env": "npm:^7.26.0"
-    "@babel/preset-react": "npm:^7.25.9"
-    "@blockly/block-shareable-procedures": "npm:~5.0.9"
-    "@blockly/field-bitmap": "npm:^5.0.9"
-    "@blockly/field-colour": "npm:^5.0.9"
-    "@blockly/field-grid-dropdown": "npm:~5.0.9"
-    "@blockly/keyboard-experiment": "npm:^0.0.1"
-    "@blockly/keyboard-navigation": "npm:~0.6.9"
-    "@blockly/plugin-cross-tab-copy-paste": "npm:~6.0.9"
-    "@blockly/plugin-scroll-options": "npm:~6.0.9"
-    "@blockly/theme-dark": "npm:7.0.7"
-    "@blockly/theme-highcontrast": "npm:6.0.7"
+    "@amplitude/analytics-browser": ^1.5.4
+    "@babel/core": ^7.26.0
+    "@babel/eslint-parser": 7.25.9
+    "@babel/plugin-proposal-object-rest-spread": ^7.20.7
+    "@babel/plugin-proposal-optional-chaining": ^7.21.0
+    "@babel/plugin-syntax-dynamic-import": ^7.8.3
+    "@babel/plugin-transform-class-properties": ^7.25.9
+    "@babel/plugin-transform-classes": ^7.25.9
+    "@babel/plugin-transform-regenerator": ^7.25.9
+    "@babel/polyfill": ^7.12.1
+    "@babel/preset-env": ^7.26.0
+    "@babel/preset-react": ^7.25.9
+    "@blockly/block-shareable-procedures": ~5.0.9
+    "@blockly/field-bitmap": ^5.0.9
+    "@blockly/field-colour": ^5.0.9
+    "@blockly/field-grid-dropdown": ~5.0.9
+    "@blockly/keyboard-experiment": ^0.0.3
+    "@blockly/keyboard-navigation": ~0.6.9
+    "@blockly/plugin-cross-tab-copy-paste": ~6.0.9
+    "@blockly/plugin-scroll-options": ~6.0.9
+    "@blockly/theme-dark": 7.0.7
+    "@blockly/theme-highcontrast": 6.0.7
     "@cdo/interpreted": "link:../dashboard/config/libraries"
     "@code-dot-org/artist": "npm:0.2.1"
     "@code-dot-org/blockly": "npm:4.0.14"
