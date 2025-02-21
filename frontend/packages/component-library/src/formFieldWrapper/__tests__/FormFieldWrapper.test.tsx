@@ -41,35 +41,35 @@ describe('Design System - FormFieldWrapper', () => {
   });
 
   it('renders helper section when helper props are provided', () => {
-    const helperText = 'Helper text';
+    const helperMessage = 'Helper text';
 
-    renderFormFieldWrapper({helper: {text: helperText}});
+    renderFormFieldWrapper({helperMessage});
 
-    expect(screen.getByText(helperText)).toBeInTheDocument();
-    expect(screen.getByText(helperText).closest('div')).toHaveClass(
+    expect(screen.getByText(helperMessage)).toBeInTheDocument();
+    expect(screen.getByText(helperMessage).closest('div')).toHaveClass(
       'formFieldWrapperHelper',
     );
   });
 
   it('renders error section when error prop is provided', () => {
-    const error = 'Test error message';
+    const errorMessage = 'Test error message';
 
-    renderFormFieldWrapper({error});
+    renderFormFieldWrapper({errorMessage});
 
-    expect(screen.getByText(error)).toBeInTheDocument();
-    expect(screen.getByText(error).closest('div')).toHaveClass(
+    expect(screen.getByText(errorMessage)).toBeInTheDocument();
+    expect(screen.getByText(errorMessage).closest('div')).toHaveClass(
       'formFieldWrapperError',
     );
   });
 
   it('renders error section over helper section when both props are provided', () => {
-    const error = 'Test error message';
-    const helperText = 'Helper text';
+    const errorMessage = 'Test error message';
+    const helperMessage = 'Helper text';
 
-    renderFormFieldWrapper({error, helper: {text: helperText}});
+    renderFormFieldWrapper({errorMessage, helperMessage});
 
-    expect(screen.getByText(error)).toBeInTheDocument();
-    expect(screen.queryByText(helperText)).not.toBeInTheDocument();
+    expect(screen.getByText(errorMessage)).toBeInTheDocument();
+    expect(screen.queryByText(helperMessage)).not.toBeInTheDocument();
   });
 
   it('renders with correct color class', () => {
