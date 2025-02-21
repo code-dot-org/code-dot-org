@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react';
-import Section, {SectionProps, sectionBackgroundColors} from '../Section';
+import Section, {SectionProps, sectionBackground} from '../Section';
 
 describe('Section Component', () => {
   const renderComponent = (props: Partial<SectionProps> = {}) => {
@@ -19,7 +19,7 @@ describe('Section Component', () => {
 
   it('changes background color based on props', () => {
     const {rerender} = renderComponent({
-      backgroundColor: sectionBackgroundColors.secondary,
+      background: sectionBackground.secondary,
     });
 
     // check if background color is light gray
@@ -29,7 +29,7 @@ describe('Section Component', () => {
 
     // change background color to light teal
     rerender(
-      <Section backgroundColor="brandLightPrimary">
+      <Section background="brandLightPrimary">
         <div>This is content.</div>
       </Section>,
     );

@@ -34,9 +34,15 @@
 .consoleHeader {
   height: 40px;
   min-height: 40px;
+
+  & > div {
+    height: 40px;
+  }
 }
 
-.controlButton {
+// Using button to increase specificity of this class
+// (this allows it to take precedence over the component library button styles)
+button.controlButton {
   margin: 8px 8px 8px 4px;
 }
 

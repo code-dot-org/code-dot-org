@@ -1,6 +1,6 @@
 name 'computer-systems-oura-medical-professionals'
 display_name 'Industry Professional for Oura Ring 4'
-description '#### <br /> Discover how the Oura Ring helps professionals track sleep, heart rate, and body temperature to improve health and wellness. Select a role and interview an expert to learn how AI-driven wearables support their work.'
+description 'Discover how the Oura Ring helps professionals track sleep, heart rate, and body temperature to improve health and wellness. Select a role and interview an expert to learn how AI-driven wearables support their work.'
 
 sublevels
 level 'computer-systems-sleepspecialist-advisor-aichat'

@@ -3,8 +3,7 @@ import React, {useEffect, useState} from 'react';
 
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import taIcon from '@cdo/static/ai-bot-tag-TA.png';
-import aiFabIcon from '@cdo/static/ai-fab-background.png';
+import aiFabWithIcon from '@cdo/static/ai-bot-ta.png';
 
 import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
@@ -19,14 +18,16 @@ import style from './ai-differentiation.module.scss';
  */
 
 interface AiDiffFloatingActionButtonProps {
-  lessonId: number;
-  lessonName: string;
+  context: string;
+  scriptId: number;
+  scriptName: string;
   unitDisplayName: string;
 }
 
 const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
-  lessonId,
-  lessonName,
+  context,
+  scriptId,
+  scriptName,
   unitDisplayName,
 }) => {
   const sessionStorageKey = 'AiDiffFabOpenStateKey';
@@ -39,17 +40,17 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     JSON.parse(tryGetSessionStorage(sessionStorageKey, false)) || false
   );
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
-  const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
 
-  const showPulse = isFirstSession && isFabImageLoaded && isTaImageLoaded;
+  const showPulse = isFirstSession && isFabImageLoaded;
   const classes = showPulse
     ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
 
   const handleClick = () => {
     const eventData = {
-      lessonId: lessonId,
-      lessonName: lessonName,
+      aiDiffChatContext: context,
+      scriptId: scriptId,
+      scriptName: scriptName,
       unitName: unitDisplayName,
     };
     const eventName = isOpen
@@ -74,25 +75,16 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       >
         <img
           alt="AI bot"
-          src={aiFabIcon}
+          src={aiFabWithIcon}
           onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
         />
       </button>
-      <div
-        className={style.taOverlay}
-        style={{backgroundImage: `url(${taIcon})`}}
-      >
-        <img
-          src={taIcon}
-          alt="TA overlay"
-          onLoad={() => !isTaImageLoaded && setIsTaImageLoaded(true)}
-        />
-      </div>
       <AiDiffContainer
         open={isOpen}
+        context={context}
         closeTutor={handleClick}
-        lessonId={lessonId}
-        lessonName={lessonName}
+        scriptId={scriptId}
+        scriptName={scriptName}
         unitDisplayName={unitDisplayName}
       />
     </div>

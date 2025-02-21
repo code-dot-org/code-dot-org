@@ -9,7 +9,7 @@
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
     "long_instructions": "####<i class=\"fa-duotone fa-solid fa-swords\"></i> Design the battle tune! \r\n1. Add sounds into the [battle](#clickable=id:battle_function) function. \r\n2. **Call** the battle function under the trigger.\r\n2. Press [Run](#clickable=run-button) then trigger your new tune.",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
     "level_data": {
@@ -30,6 +30,7 @@
                 "block": {
                   "type": "repeat_simple2",
                   "id": "repeat_simple2",
+                  "deletable": false,
                   "extraState": {
                     "disableNextConnection": true
                   },
@@ -41,6 +42,7 @@
                       "block": {
                         "type": "procedures_callnoreturn",
                         "id": "p9|uoJJYV?FZ]SPtsS_P",
+                        "deletable": false,
                         "movable": false,
                         "extraState": {
                           "name": "background",
@@ -57,6 +59,7 @@
               "id": "RGSJBj`n#VPl7]2uP}=H",
               "x": 30,
               "y": 210,
+              "deletable": false,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger1</field>",
                 "trigger_start": "<field name=\"trigger_start\">immediately</field>"
@@ -67,9 +70,10 @@
               "id": "Ws$-#EhC5(^n)?Vh3Q#d",
               "x": 330,
               "y": 30,
+              "deletable": false,
               "extraState": {
                 "procedureId": "}g/7xv0|iv~WsP5{h^5|",
-                "initialDeleteConfig": true,
+                "initialDeleteConfig": false,
                 "initialEditConfig": true,
                 "initialMoveConfig": true
               },
@@ -91,6 +95,7 @@
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "myVqMPQ$[a]6_^uNJ8[H",
+                          "deletable": false,
                           "movable": false,
                           "extraState": {
                             "disableNextConnection": false
@@ -102,6 +107,7 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "play_sound_at_current_location_simple2",
+                              "deletable": false,
                               "movable": false,
                               "extraState": {
                                 "disableNextConnection": true
@@ -123,9 +129,10 @@
               "id": "6i43VA{gez=Vb]R##YgD",
               "x": 330,
               "y": 210,
+              "deletable": false,
               "extraState": {
                 "procedureId": "X~GDbRUYHxxcNZ?iXd!]",
-                "initialDeleteConfig": true,
+                "initialDeleteConfig": false,
                 "initialEditConfig": true,
                 "initialMoveConfig": true
               },
@@ -156,7 +163,8 @@
           ],
           "Control": [
             "play_sounds_together",
-            "repeat_simple2"
+            "repeat_simple2",
+            "triggered_at_simple2"
           ],
           "Play": [
             "play_sound_at_current_location_simple2"
@@ -192,7 +200,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-12-05 19:10:32 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:11:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:17:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:17:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:25:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:27:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:37:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:38:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 21:52:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 21:56:07 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-06 22:21:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 22:22:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:54:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:55:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:56:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-12-05 19:10:32 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:11:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:17:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 19:17:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-05 20:25:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:27:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:37:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-17 23:38:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-12-18 21:52:14 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-12-18 21:56:07 +0000\",\"changed\":[\"long_instructions\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-06 22:21:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 22:22:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:54:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:55:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-07 20:56:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-14 19:29:06 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 23:04:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-18 23:13:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

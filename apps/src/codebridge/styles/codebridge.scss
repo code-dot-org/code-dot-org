@@ -35,3 +35,10 @@
   font-size: 33px;
   stroke-width: 2;
 }
+
+// Make the footer only as wide as it needs to be
+#page-small-footer {
+  .small-footer-base {
+    width: min-content;
+  }
+}

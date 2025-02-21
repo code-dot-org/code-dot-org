@@ -7,6 +7,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
+import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@react-pdf/renderer', () => {
   return {
@@ -20,8 +21,9 @@ jest.mock('@react-pdf/renderer', () => {
 const DEFAULT_PROPS = {
   closeTutor: () => {},
   open: true,
-  lessonId: 2,
-  lessonName: 'test_lesson',
+  scriptId: 2,
+  context: AiDiffContext.LESSON,
+  scriptName: 'test_lesson',
   unitDisplayName: 'test unit name',
 };
 
@@ -60,6 +62,7 @@ describe('AiDiffContainer', () => {
   it('visible when open', () => {
     renderDefault();
     expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
+    screen.getByText('Experiment');
   });
 
   it('moves rubric container when user clicks and drags component', () => {

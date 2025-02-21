@@ -9,6 +9,7 @@ import React, {useCallback, useEffect} from 'react';
 
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {LabProps} from '@cdo/apps/lab2/types';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -37,7 +38,7 @@ import {
   setViewMode,
   updateAiCustomization,
 } from '../redux';
-import {getNewMessageId} from '../redux/utils';
+import {getNewRemoveId} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
@@ -48,14 +49,14 @@ import PresentationView from './presentation/PresentationView';
 import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
-  id: getNewMessageId(),
+  removeId: getNewRemoveId(),
   text: aichatI18n.modelResetNotification(),
   notificationType: 'success',
   timestamp: Date.now(),
   includeInChatHistory: true,
 });
 
-const AichatView: React.FunctionComponent = () => {
+const AichatView: React.FunctionComponent<LabProps> = () => {
   const dispatch = useAppDispatch();
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
@@ -116,7 +117,6 @@ const AichatView: React.FunctionComponent = () => {
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'LOAD_LEVEL',
-        hideForParticipants: true,
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
@@ -218,7 +218,6 @@ const AichatView: React.FunctionComponent = () => {
       addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'CLEAR_CHAT',
-        hideForParticipants: true,
       })
     );
     dispatch(

@@ -9,7 +9,7 @@ import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useState} from 'react';
 
-import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {useSource} from '../codebridge/hooks/useSource';
 
@@ -150,7 +150,7 @@ const defaultSource: MultiFileSource = {
 
 const defaultProject: ProjectSources = {source: defaultSource};
 
-const Weblab2View = () => {
+const Weblab2View: React.FC<LabProps> = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {source, setProject, startSources, projectVersion} =
     useSource(defaultProject);

@@ -1,14 +1,14 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {
+  Heading3,
+  Heading5,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {
-  Heading3,
-  Heading5,
-  BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
