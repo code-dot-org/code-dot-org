@@ -6,7 +6,7 @@
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
-} from '@/components/carousel';
+} from '@/components/carousels/videoCarousel';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
