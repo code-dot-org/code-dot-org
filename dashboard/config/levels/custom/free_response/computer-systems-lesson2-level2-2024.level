@@ -7,8 +7,8 @@
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
-    "title": "Career Connections",
-    "long_instructions": "## Career Connection\r\n\r\n* What did you learn about the role of this hardware component in a career?",
+    "title": "Career Hardware Needs",
+    "long_instructions": "## Reflection:\r\n\r\nHow does the hardware used in this career impact the professional's ability to work efficiently, and what would happen if they had weaker or outdated components?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -16,9 +16,9 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "height": "100"
+    "height": "200"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-20T01:10:21.232+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level12-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level12-2024\"},{\"changed_at\":\"2025-02-20 01:11:37 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-02-20T01:10:21.232+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson1-level12-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson1-level12-2024\"},{\"changed_at\":\"2025-02-20 01:11:37 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 15:15:28 +0000\",\"changed\":[\"title\",\"long_instructions\",\"height\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-20 15:16:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

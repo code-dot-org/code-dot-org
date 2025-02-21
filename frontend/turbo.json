@@ -16,16 +16,27 @@
       "dependsOn": ["lint", "test", "build"]
     },
     "lint": {
-      "dependsOn": ["^lint", "prettier", "typecheck", "//#format"]
+      "dependsOn": ["^lint", "prettier", "stylelint", "typecheck", "//#format"]
     },
     "lint:fix": {
-      "dependsOn": ["^lint:fix", "prettier:fix", "//#format:fix"]
+      "dependsOn": [
+        "^lint:fix",
+        "prettier:fix",
+        "stylelint:fix",
+        "//#format:fix"
+      ]
     },
     "prettier": {
       "dependsOn": ["^prettier"]
     },
     "prettier:fix": {
       "dependsOn": ["^prettier:fix"]
+    },
+    "stylelint": {
+      "dependsOn": ["^stylelint"]
+    },
+    "stylelint:fix": {
+      "dependsOn": ["^stylelint:fix"]
     },
     "typecheck": {
       "dependsOn": ["^typecheck"]

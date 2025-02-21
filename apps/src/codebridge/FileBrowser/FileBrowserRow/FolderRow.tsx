@@ -35,11 +35,14 @@ export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
 
   const handleFileUpload = useHandleFileUpload(files);
   const fileUploadErrorCallback = useFileUploadErrorCallback();
-  const {startFileUpload, FileUploaderComponent} = useFileUploader({
-    callback: handleFileUpload,
-    errorCallback: fileUploadErrorCallback,
-    validMimeTypes,
-  });
+  const {startFileUpload, FileUploaderComponent} = useFileUploader(
+    {
+      callback: handleFileUpload,
+      errorCallback: fileUploadErrorCallback,
+      validMimeTypes,
+    },
+    item.id
+  );
   const {toggleOpenFolder} = useCodebridgeContext();
   const dropdownOptions = useFolderRowOptions(item, startFileUpload);
 

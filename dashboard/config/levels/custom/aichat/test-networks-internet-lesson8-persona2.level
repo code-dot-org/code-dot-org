@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "### Meet Lisa \r\nLisa is a small business owner. She runs a farm in a rural area of the USA. \r\n",
+    "long_instructions": "# Meet Lisa \r\nLisa is a small business owner. She runs a farm in a rural area of the USA. \r\n\r\n---\r\n\r\n## Information About Lisa:\r\n\r\n- Runs an organic farm and wants to sell her produce online.\r\n- Lives in a rural town where Internet speeds are slow and unreliable.\r\n- Competes with bigger businesses that can afford high-speed Internet.\r\n- Struggles to process online orders and market her farm on social media.\r\n\r\n\r\n---\r\n\r\n## Example Interactions:\r\n\r\n- \"How do you access the Internet?\"\r\n- \"What do you use the Internet for?\"\r\n- \"What challenges do you face when accessing or using the Internet?\"\r\n- \"What would be a realistic solution to your Internet challenges?\"\r\n\r\n**Record your answers in your Activity Guide**\r\n\r\n",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -37,10 +37,10 @@
       },
       "visibilities": {
         "selectedModelId": "hidden",
-        "temperature": "editable",
-        "systemPrompt": "readonly",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
         "retrievalContexts": "hidden",
-        "modelCardInfo": "editable"
+        "modelCardInfo": "hidden"
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
@@ -53,6 +53,6 @@
     "bubble_choice_description": "Lisa is a small business owner in a rural area.\r\n",
     "thumbnail_url": "https://images.code.org/f128c1f787591e63a0edd3f8e5406810-Lisa.webp"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-10T19:13:39.446+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson8-persona1\\\"\"],\"cloned_from\":\"test-networks-internet-lesson8-persona1\"},{\"changed_at\":\"2025-02-10 19:16:58 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:21:25 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:37:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:29:56 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:30:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:35:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-10T19:13:39.446+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson8-persona1\\\"\"],\"cloned_from\":\"test-networks-internet-lesson8-persona1\"},{\"changed_at\":\"2025-02-10 19:16:58 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:21:25 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:37:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:29:56 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:30:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:35:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-21 00:57:41 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 01:02:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

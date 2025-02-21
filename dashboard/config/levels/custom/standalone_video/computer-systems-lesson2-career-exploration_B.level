@@ -15,10 +15,11 @@
     "video_full_width": true,
     "name_suffix": "_1",
     "display_name": "Music Producer",
-    "bubble_choice_description": "Learn how this music producer decreased the load on his CPU. "
+    "bubble_choice_description": "Learn how this music producer decreased the load on his CPU.",
+    "thumbnail_url": "https://images.code.org/4a09ab805c2409ff94f76c7b3fabc816-Icon Template (6).png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-19T23:17:09.239+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-video-hold_1\\\"\"],\"cloned_from\":\"music-coding-intro-functions-video-hold_1\"},{\"changed_at\":\"2025-02-19 23:21:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 00:45:49 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 00:51:48 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 00:54:53 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-02-19T23:17:09.239+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-video-hold_1\\\"\"],\"cloned_from\":\"music-coding-intro-functions-video-hold_1\"},{\"changed_at\":\"2025-02-19 23:21:42 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 00:45:49 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 00:51:48 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 00:54:53 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 15:05:20 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-20 15:09:46 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

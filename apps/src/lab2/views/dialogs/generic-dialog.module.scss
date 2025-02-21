@@ -39,7 +39,8 @@
     .innerButtonContainer {
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
+      justify-content: space-between;
+      gap: 10px;
     }
   }
 }

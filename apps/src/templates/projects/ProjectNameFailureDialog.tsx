@@ -1,7 +1,7 @@
 import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {Heading3} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
