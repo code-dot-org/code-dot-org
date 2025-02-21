@@ -22,6 +22,7 @@ class RobotsControllerTest < ActionController::TestCase
     assert_response :success
     lines = response.body.lines(chomp: true)
     assert_includes(lines, 'Disallow: /')
+    refute_includes(lines, 'Allow:')
   end
 
   test 'allows all for production with a couple exceptions' do

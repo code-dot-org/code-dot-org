@@ -11,7 +11,7 @@ class RobotsController < ApplicationController
   ].to_set.freeze
 
   def index
-    if rack_env == :production
+    if rack_env?(:production)
       render plain: [
         'User-agent: *',
         'Allow: /',
