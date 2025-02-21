@@ -1,0 +1,8 @@
+@use '@/components/common/styles/mixins' as mixins;
+
+p {
+  // Common paragraph styles
+  &.paragraph {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,465 @@
+import type {Meta, StoryFn} from '@storybook/react';
+import {within, expect} from '@storybook/test';
+
+import Carousel, {CarouselProps} from '../index';
+
+import {Heading2} from '@/typography';
+import Video from '../../video/Video';
+
+export default {
+  title: 'DesignSystem/Carousel',
+  component: Carousel,
+} as Meta;
+
+// Create a basic slide
+const createBasicSlide = (index: number) => (
+  <div
+    style={{
+      height: '250px',
+      width: '100%',
+      background: '#EEE',
+      display: 'flex',
+      alignItems: 'center',
+      textAlign: 'center',
+    }}
+    key={index}
+  >
+    <div style={{margin: '0 auto'}}>
+      <Heading2>This is slide {index.toString()}</Heading2>
+    </div>
+  </div>
+);
+
+//
+// TEMPLATES
+//
+const SingleTemplate: StoryFn<CarouselProps> = componentArg => (
+  <div style={{maxWidth: '800px', margin: '0 auto'}}>
+    <Carousel {...componentArg} key={componentArg.carouselId} />
+  </div>
+);
+
+const MultipleTemplate: StoryFn<{components: CarouselProps[]}> = args => (
+  <>
+    {args.components?.map((componentArg, index) => (
+      <div
+        style={{maxWidth: '800px', margin: '0 auto', marginBlock: '2rem'}}
+        key={index}
+      >
+        <Carousel
+          {...componentArg}
+          key={componentArg.carouselId}
+          children={componentArg.children}
+        />
+      </div>
+    ))}
+  </>
+);
+
+//
+// STORIES
+//
+export const DefaultCarousel = SingleTemplate.bind({});
+DefaultCarousel.args = {
+  slides: Array.from({length: 6}, (_, index) => ({
+    id: `default-slide-${index + 1}`,
+    slide: createBasicSlide(index + 1),
+  })),
+};
+DefaultCarousel.parameters = {
+  docs: {
+    description: {
+      story:
+        "This is the default carousel with navigation arrow buttons and pagination. Carousels are inside a 800px container so we can see the navigation arrow buttons in Storybook, but the default width of the carousel is 100% to fit whatever container it lives in. Navigation arrow buttons are on the outside of the container so the carousel content is the same width as the rest of the pages's content.",
+    },
+  },
+};
+DefaultCarousel.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = canvas.queryByLabelText('Previous slide');
+  const navArrowNext = canvas.queryByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
+  const slides = [
+    'This is slide 1',
+    'This is slide 2',
+    'This is slide 3',
+    'This is slide 4',
+    'This is slide 5',
+    'This is slide 6',
+  ];
+
+  // check that the navigation arrows are showing
+  expect(navArrowPrev).toBeInTheDocument();
+  expect(navArrowNext).toBeInTheDocument();
+
+  // check that the pagination dots are showing
+  paginationDots.forEach(async dotLabel => {
+    const dot = await canvas.findByLabelText(dotLabel);
+    expect(dot).toBeInTheDocument();
+  });
+
+  // check that slides are in the carousel
+  slides.forEach(async slideText => {
+    const heading = await canvas.findByText(slideText);
+    expect(heading).toBeInTheDocument();
+  });
+};
+
+export const CarouselWithoutNavArrows = SingleTemplate.bind({});
+CarouselWithoutNavArrows.args = {
+  showNavArrows: false,
+  slides: Array.from({length: 6}, (_, index) => ({
+    id: `default-slide-${index + 1}`,
+    slide: createBasicSlide(index + 1),
+  })),
+};
+CarouselWithoutNavArrows.parameters = {
+  docs: {
+    description: {
+      story:
+        'This carousel does not show navigation arrow buttons, but will always show pagination dots. Navigation arrow buttons are also automatically hidden when the screen size is < 1024px.',
+    },
+  },
+};
+CarouselWithoutNavArrows.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = canvas.queryByLabelText('Previous slide');
+  const navArrowNext = canvas.queryByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
+
+  // check that the navigation arrows are not showing
+  expect(navArrowPrev).not.toBeInTheDocument();
+  expect(navArrowNext).not.toBeInTheDocument();
+
+  // check that the pagination dots are showing
+  paginationDots.forEach(async dotLabel => {
+    const dot = await canvas.findByLabelText(dotLabel);
+    expect(dot).toBeInTheDocument();
+  });
+};
+
+export const CarouselWithTouchMove = SingleTemplate.bind({});
+CarouselWithTouchMove.args = {
+  allowTouchMove: true,
+  slides: Array.from({length: 6}, (_, index) => ({
+    id: `default-slide-${index + 1}`,
+    slide: createBasicSlide(index + 1),
+  })),
+};
+CarouselWithTouchMove.parameters = {
+  docs: {
+    description: {
+      story:
+        'This carousel allows slides to be moved by dragging/touching using the `allowTouchMove` prop. This is disabled by default and should not be used with Video carousels since it impedes the video player controls.',
+    },
+  },
+};
+CarouselWithTouchMove.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = canvas.queryByLabelText('Previous slide');
+  const navArrowNext = canvas.queryByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2', 'Go to slide 3'];
+  const slides = [
+    'This is slide 1',
+    'This is slide 2',
+    'This is slide 3',
+    'This is slide 4',
+    'This is slide 5',
+    'This is slide 6',
+  ];
+
+  // check that the navigation arrows are showing
+  expect(navArrowPrev).toBeInTheDocument();
+  expect(navArrowNext).toBeInTheDocument();
+
+  // check that the pagination dots are showing
+  paginationDots.forEach(async dotLabel => {
+    const dot = await canvas.findByLabelText(dotLabel);
+    expect(dot).toBeInTheDocument();
+  });
+
+  // check that slides are in the carousel
+  slides.forEach(async slideText => {
+    const heading = await canvas.findByText(slideText);
+    expect(heading).toBeInTheDocument();
+  });
+};
+
+export const CarouselWithCustomSlidesPerView = SingleTemplate.bind({});
+CarouselWithCustomSlidesPerView.args = {
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  slides: Array.from({length: 6}, (_, index) => ({
+    id: `default-slide-${index + 1}`,
+    slide: createBasicSlide(index + 1),
+  })),
+};
+CarouselWithCustomSlidesPerView.parameters = {
+  docs: {
+    description: {
+      story:
+        'This carousel shows three slides per view, and three slides per group. This can be changed with the `slidesPerView` and `slidesPerGroup` props. These can be changed to be as little as one slide per view and group to show one individual slide at a time. All carousels will show one slide at a time on mobile, and two slides per view and group when screen size is >= 768px. This prop applies to screens that are >= 1024px only.',
+    },
+  },
+};
+CarouselWithCustomSlidesPerView.play = async ({
+  canvasElement,
+}: {
+  canvasElement: HTMLElement;
+}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = canvas.queryByLabelText('Previous slide');
+  const navArrowNext = canvas.queryByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2'];
+  const paginationDotThree = canvas.queryByLabelText('Go to slide 3');
+  const slides = [
+    'This is slide 1',
+    'This is slide 2',
+    'This is slide 3',
+    'This is slide 4',
+    'This is slide 5',
+    'This is slide 6',
+  ];
+
+  // check that the navigation arrows are showing
+  expect(navArrowPrev).toBeInTheDocument();
+  expect(navArrowNext).toBeInTheDocument();
+
+  // check that two pagination dots are showing
+  paginationDots.forEach(async dotLabel => {
+    const dot = await canvas.findByLabelText(dotLabel);
+    expect(dot).toBeInTheDocument();
+  });
+
+  // check that the third pagination dot is not showing
+  expect(paginationDotThree).not.toBeInTheDocument();
+
+  // check that slides are in the carousel
+  slides.forEach(async slideText => {
+    const heading = await canvas.findByText(slideText);
+    expect(heading).toBeInTheDocument();
+  });
+};
+
+// TODO CMS-360 - Add Action Block carousel when Action Block component is ready
+export const ActionBlockCarousel = MultipleTemplate.bind({});
+ActionBlockCarousel.parameters = {
+  docs: {
+    description: {
+      story: 'COMING SOON',
+    },
+  },
+};
+
+export const VideoCarousels = MultipleTemplate.bind({});
+VideoCarousels.args = {
+  components: [
+    {
+      slides: [
+        {
+          id: 'video-slide-1',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Input & Pre-training"
+              youTubeId="JO9MgO1Zp3E"
+              showCaption={true}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-2',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Storage & Embeddings"
+              youTubeId="s1fhxAVpYx8"
+              showCaption={true}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-3',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Processing & Neural Networks"
+              youTubeId="Z7Mes_Ej69Y"
+              showCaption={true}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-4',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Attention"
+              youTubeId="2RdK6k45koY"
+              showCaption={true}
+            />
+          ),
+        },
+      ],
+    },
+    {
+      slides: [
+        {
+          id: 'video-slide-no-caption-1',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Input & Pre-training"
+              youTubeId="JO9MgO1Zp3E"
+              showCaption={false}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-no-caption-6',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Storage & Embeddings"
+              youTubeId="s1fhxAVpYx8"
+              showCaption={false}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-no-caption-7',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Processing & Neural Networks"
+              youTubeId="Z7Mes_Ej69Y"
+              showCaption={false}
+            />
+          ),
+        },
+        {
+          id: 'video-slide-no-caption-8',
+          slide: (
+            <Video
+              videoTitle="Generative AI: Attention"
+              youTubeId="2RdK6k45koY"
+              showCaption={false}
+            />
+          ),
+        },
+      ],
+    },
+  ],
+};
+VideoCarousels.parameters = {
+  docs: {
+    description: {
+      story:
+        'Videos carousels can show or hide captions based on the `showCaption` prop on the `Video` component. There are margins applied between carousels so this displays nicely in Storybook, but this is not a part of the component itself.',
+    },
+  },
+  // Turning this off because this test is very flaky
+  eyes: {include: false},
+};
+VideoCarousels.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = await canvas.findAllByLabelText('Previous slide');
+  const navArrowNext = await canvas.findAllByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2'];
+  const videoTitles = [
+    'Generative AI: Input & Pre-training',
+    'Generative AI: Storage & Embeddings',
+    'Generative AI: Processing & Neural Networks',
+    'Generative AI: Attention',
+  ];
+
+  // check that the navigation arrows are showing on both carousels
+  navArrowPrev.forEach(prevArrow => expect(prevArrow).toBeInTheDocument());
+  navArrowNext.forEach(nextArrow => expect(nextArrow).toBeInTheDocument());
+
+  // check that the pagination dots are showing on both carousels
+  paginationDots.forEach(async dotLabel => {
+    const dots = await canvas.findAllByLabelText(dotLabel);
+    dots.forEach(dot => expect(dot).toBeInTheDocument());
+  });
+
+  // check that videos are visible in both carousels
+  videoTitles.forEach(async videoTitle => {
+    const videos = await canvas.findAllByTitle(videoTitle);
+    videos.forEach(video => expect(video).toBeVisible());
+  });
+};
+
+export const ImageCarousel = SingleTemplate.bind({});
+ImageCarousel.args = {
+  slides: [
+    {
+      id: 'image-slide-1',
+      slide: (
+        <img
+          src="https://code.org/images/cs-stats/Slide1_Schools_Teach.png"
+          style={{width: '100%'}}
+          alt="Slide 1"
+        />
+      ),
+    },
+    {
+      id: 'image-slide-2',
+      slide: (
+        <img
+          src="https://code.org/images/cs-stats/Slide2_STEM_CS.png"
+          style={{width: '100%'}}
+          alt="Slide 2"
+        />
+      ),
+    },
+    {
+      id: 'image-slide-3',
+      slide: (
+        <img
+          src="https://code.org/images/cs-stats/Slide_Students_Like_CS.png"
+          style={{width: '100%'}}
+          alt="Slide 3"
+        />
+      ),
+    },
+    {
+      id: 'image-slide-4',
+      slide: (
+        <img
+          src="https://code.org/images/cs-stats/Slide3_Diversity_K12.png"
+          style={{width: '100%'}}
+          alt="Slide 4"
+        />
+      ),
+    },
+  ],
+};
+ImageCarousel.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
+  const canvas = within(canvasElement);
+  const navArrowPrev = canvas.getByLabelText('Previous slide');
+  const navArrowNext = canvas.getByLabelText('Next slide');
+  const paginationDots = ['Go to slide 1', 'Go to slide 2'];
+  const imageSlides = ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'];
+
+  // check that the navigation arrows are showing
+  expect(navArrowPrev).toBeInTheDocument();
+  expect(navArrowNext).toBeInTheDocument();
+
+  // check that the pagination dots are showing
+  paginationDots.forEach(async dotLabel => {
+    const dots = await canvas.findAllByLabelText(dotLabel);
+    dots.forEach(dot => expect(dot).toBeInTheDocument());
+  });
+
+  // check that images are visible in carousel
+  imageSlides.forEach(async imageSlide => {
+    const images = await canvas.findAllByAltText(imageSlide);
+    images.forEach(image => expect(image).toBeVisible());
+  });
+};

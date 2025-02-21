@@ -7,44 +7,39 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/8f8f1dae36b39433164cf3752db52472-image-1628784411625.jpg" alt="Two students laughing next to a laptop" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0; ">
 
+<br> 
+
 #### This free self-paced professional learning experience is designed for users brand new to Code.org’s platform who want an overview of the teacher experience.
 <br>
+<br>
+<br>
+<br>
 
-#### **You will:**
+## **You will:**
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code.org Teacher Onboarding</title>
-</head>
-<body>
 
-    <h1>🚀 Code.org Teacher Onboarding Checklist</h1>
 
-    <div>
+   <div>
         ✅ Get an introduction to Code.org's mission.
     </div>
-
-    <div>
+   <div>
         ✅ Learn how to navigate the Code.org website and teacher tools.
     </div>
 
-    <div>
+   <div>
         ✅ Set up a classroom section.
     </div>
 
-    <div>
+   <div>
         ✅ Locate and use course lesson plans and teacher resources.
     </div>
 
-    <div>
+   <div>
         ✅ Learn how to access support while teaching Code.org curricula.
     </div>
 
-</body>
-</html>
+
+
 
 
 

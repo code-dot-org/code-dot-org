@@ -1,0 +1,131 @@
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/mixins.scss';
+
+:root {
+  // Swiper CSS custom properties
+  // See docs here: https://swiperjs.com/swiper-api#pagination
+  --swiper-pagination-color: var(--background-brand-teal-primary);
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-bullet-inactive-color: var(--background-neutral-tertiary);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 0.25rem;
+}
+
+// Carousel common styles
+.carouselWrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+// Navigation button styles
+.navArrowWrapper {
+  // Hide arrows when screen size is <1024px
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  .swiperNavPrev,
+  .swiperNavNext {
+    position: absolute;
+    top: 40%;
+    cursor: pointer;
+    border: none;
+    border-radius: 100%;
+    background: var(--background-neutral-tertiary);
+    min-width: 3rem;
+    height: 3rem;
+    @include transition-all;
+
+    // Flips the buttons for RTL languages
+    html[dir='rtl'] & {
+      transform: scaleX(-1);
+    }
+
+    // Arrow styles
+    & > i {
+      font-size: 1.5rem;
+      color: var(--text-neutral-tertiary);
+      @include transition-all;
+    }
+
+    // Hover styles
+    &:hover {
+      background: var(--background-neutral-quaternary);
+
+      & > i {
+        color: var(--text-neutral-primary);
+      }
+    }
+
+    // Focus styles
+    &:focus-visible {
+      @include focus-styles;
+    }
+
+    // Disabled styles
+    &:disabled {
+      background: var(--background-neutral-secondary);
+      cursor: not-allowed;
+
+      & > i {
+        color: var(--text-neutral-disabled);
+      }
+    }
+  }
+
+  // Move navigation buttons
+  // outside of the container
+  .swiperNavPrev {
+    inset-inline-start: -4rem;
+  }
+
+  .swiperNavNext {
+    inset-inline-end: -4rem;
+  }
+}
+
+// Pagination styles
+.swiperPagination {
+  text-align: center;
+  margin-top: 1.5rem;
+
+  :global(.swiper-pagination-bullet) {
+    @include transition-all;
+
+    // Hover styles
+    @media (min-width: 1024px) {
+      &:hover {
+        background: var(--background-neutral-quaternary);
+      }
+    }
+
+    // Focus styles
+    &:focus-visible {
+      @include focus-styles;
+    }
+  }
+}
+
+// Video styles
+// Applies certain styles if carousel
+// contains videos with a caption
+.carousel {
+  figcaption {
+    margin-bottom: 0;
+  }
+
+  // Center navigation buttons on the video
+  // and remove extra space added by the caption
+  &:has(figcaption) {
+    .swiperNavPrev,
+    .swiperNavNext {
+      top: 34%;
+    }
+  }
+}

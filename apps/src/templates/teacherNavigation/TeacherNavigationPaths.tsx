@@ -26,6 +26,10 @@ export const TEACHER_NAVIGATION_PATHS = {
 const getAbsolutePath = (name: string) =>
   `${TEACHER_NAVIGATION_SECTIONS_URL}/${SPECIFIC_SECTION_BASE_URL}/${name}`;
 
+export const TEACHER_NAVIGATION_PATH_NAMES = Object.fromEntries(
+  Object.keys(TEACHER_NAVIGATION_PATHS).map(key => [key, key])
+);
+
 export const LABELED_TEACHER_NAVIGATION_PATHS = {
   home: {
     url: TEACHER_NAVIGATION_PATHS.home,

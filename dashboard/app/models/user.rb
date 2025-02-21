@@ -207,6 +207,7 @@ class User < ApplicationRecord
     seen_ta_scores_map
     roster_synced
     educator_role
+    ai_differentiation_enabled
     has_completed_ai_differentiation_welcome
   )
 
@@ -1599,7 +1600,7 @@ class User < ApplicationRecord
 
   def student_can_access_ai_chat?
     teachers.any?(&:teacher_can_access_ai_chat?) &&
-      sections_as_student.any?(&:assigned_gen_ai?)
+      sections_as_student.any?(&:assigned_ai_chat?)
   end
 
   def has_aichat_access?
@@ -1671,6 +1672,14 @@ class User < ApplicationRecord
 
   def sort_by_family_name?
     !!sort_by_family_name
+  end
+
+  def ai_differentiation_enabled?
+    if ai_differentiation_enabled.nil?
+      return true
+    else
+      return !!ai_differentiation_enabled
+    end
   end
 
   def generate_username

@@ -33,6 +33,11 @@ export const VideoWithCaption: Story = {
     youTubeId: 'nKIu9yen5nc',
     showCaption: true,
   },
+  parameters: {
+    eyes: {
+      ignoreRegions: [{selector: '.ytp-impression-link'}],
+    },
+  },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
     await new Promise(resolve => setTimeout(resolve, 1000));
