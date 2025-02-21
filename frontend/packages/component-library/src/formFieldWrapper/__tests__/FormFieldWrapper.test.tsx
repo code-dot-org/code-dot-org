@@ -77,7 +77,9 @@ describe('Design System - FormFieldWrapper', () => {
 
     renderFormFieldWrapper({color});
 
-    expect(queryFormFieldWrapperEl()).toHaveClass(`formFieldWrapper-${color}`);
+    expect(queryFormFieldWrapperEl()).toHaveClass(
+      `formFieldWrapper-color-${color}`,
+    );
   });
 
   it('renders with correct size class', () => {
@@ -85,18 +87,22 @@ describe('Design System - FormFieldWrapper', () => {
 
     renderFormFieldWrapper({size});
 
-    expect(queryFormFieldWrapperEl()).toHaveClass(`formFieldWrapper-${size}`);
+    expect(queryFormFieldWrapperEl()).toHaveClass(
+      `formFieldWrapper-size-${size}`,
+    );
   });
 
   it('renders with default color class when no color is provided', () => {
     renderFormFieldWrapper();
 
-    expect(queryFormFieldWrapperEl()).toHaveClass('formFieldWrapper-black');
+    expect(queryFormFieldWrapperEl()).toHaveClass(
+      'formFieldWrapper-color-black',
+    );
   });
 
   it('renders with default size class when no size is provided', () => {
     renderFormFieldWrapper();
 
-    expect(queryFormFieldWrapperEl()).toHaveClass('formFieldWrapper-m');
+    expect(queryFormFieldWrapperEl()).toHaveClass('formFieldWrapper-size-m');
   });
 });
