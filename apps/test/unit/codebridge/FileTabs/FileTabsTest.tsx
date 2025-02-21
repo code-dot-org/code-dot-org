@@ -53,13 +53,8 @@ describe('FileTabs', () => {
   // userEvent seems to take a while on drone/staging.
   it('activates an inactive tab on click', async () => {
     renderDefault();
-    const defaultOpenFile = context.source.files['2'];
-    expect(screen.getByRole('tab', {selected: true})).toHaveTextContent(
-      defaultOpenFile.name
-    );
     const file = context.source.files['1'];
-    const tab = screen.getByRole('tab', {selected: false});
-    expect(tab).toHaveTextContent(file.name);
+    const tab = screen.getByText(file.name);
     const user = userEvent.setup();
     await user.click(tab);
     expect(context.setActiveFile).toHaveBeenCalledWith(file.id);

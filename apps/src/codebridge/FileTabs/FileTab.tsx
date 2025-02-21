@@ -30,10 +30,6 @@ const FileTab = ({file}: FileTabProps) => {
       <div
         className={moduleStyles.label}
         onClick={() => setActiveFile(file.id)}
-        aria-selected={isActive}
-        role="tab"
-        aria-controls="codebridge-editor"
-        tabIndex={0}
       >
         <FontAwesomeV6Icon
           iconName={iconName}
