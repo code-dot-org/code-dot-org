@@ -12,17 +12,19 @@
   min-width: 18.75rem;
   margin: 0;
 
-  .formFieldWrapperLabel {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.125rem;
-    margin: 0;
-  }
-
+  .formFieldWrapperLabel,
   .formFieldWrapperHelper {
     display: flex;
     align-items: baseline;
+    margin: 0;
+  }
+
+  .formFieldWrapperLabel {
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .formFieldWrapperHelper {
     align-self: stretch;
   }
 }
