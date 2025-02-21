@@ -15,7 +15,7 @@ class RobotsController < ApplicationController
       render plain: [
         'User-agent: *',
         'Allow: /',
-        DISALLOWED_ROUTES.map {|path| "Disallow: #{path}$"}
+        DISALLOWED_ROUTES.map {|path| "Disallow: #{path}"}
       ].join("\n")
     else
       render plain: [
