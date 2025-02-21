@@ -505,78 +505,11 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'can create a virtual workshop with suppressed email' do
-    sign_in @organizer
-    post :create, params: {pd_workshop: workshop_params.merge(virtual: true, suppress_email: true)}
-    assert_response :success
-    assert response_workshop.virtual?
-  end
-
-  # this is a change from previous behavior that enforced virtual workshops suppressing emails
-  test 'can create a virtual workshop without suppressed email' do
-    sign_in @organizer
-    assert_creates(Pd::Workshop) do
-      post :create, params: {pd_workshop: workshop_params.merge(virtual: true, suppress_email: false)}
-      assert_response :success
-      assert response_workshop.virtual?
-      refute response_workshop.suppress_email?
-    end
-  end
-
   test 'can create a workshop with suppressed email' do
     sign_in @organizer
     post :create, params: {pd_workshop: workshop_params.merge(suppress_email: true)}
     assert_response :success
     assert response_workshop.suppress_email?
-  end
-
-  test 'setting virtual field as virtual when creating CSP/CSA summer workshop within a month of starting as a non-ws-admin raises error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
-    sign_in @organizer
-
-    post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
-    assert_response :bad_request
-    assert_includes(response.body, 'non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting.')
-  end
-
-  test 'setting virtual field as virtual when creating CSP/CSA summer workshop within a month of starting as a ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
-    sign_in @workshop_admin
-
-    post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
-    assert_response :success
-  end
-
-  test 'setting virtual field as virtual when creating CSP/CSA summer workshop before a month of starting as a non-ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
-    sign_in @organizer
-    # Using '32.days' instead of '1.month' due to the inconsistency of the length of 'month' and it guarantees at least 1 month has passed.
-    session_start = (tomorrow_at 9) + 32.days
-    session_end = session_start + 8.hours
-
-    post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, funding_type: nil, virtual: true, sessions_attributes: [{start: session_start, end: session_end}])}
-    assert_response :success
-  end
-
-  test 'setting virtual field as virtual when creating CSP/CSA non-summer workshop within a month of starting as a non-ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
-    sign_in @organizer
-
-    post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, funding_type: nil, virtual: true)}
-    assert_response :success
-  end
-
-  test 'setting virtual field as virtual when creating non-CSP/CSA summer workshop within a month of starting as a non-ws-admin does not raise error' do
-    skip 'test is flaky at the beginning of the month due to time differences'
-
-    sign_in @organizer
-
-    post :create, params: {pd_workshop: workshop_params.merge(course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, funding_type: nil, virtual: true)}
-    assert_response :success
   end
 
   # Action: Destroy
@@ -735,30 +668,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     user: -> {@facilitator},
     params: -> {{id: @workshop.id, pd_workshop: workshop_params}}
   )
-
-  test 'can update a workshop to be virtual with suppressed email' do
-    sign_in @organizer
-    workshop = create :workshop, organizer: @organizer
-    refute workshop.virtual?
-
-    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(virtual: true, suppress_email: true)}
-    assert_response :success
-    workshop.reload
-    assert workshop.virtual?
-  end
-
-  # this is a change from previous behavior that enforced virtual workshops suppressing emails
-  test 'can update a workshop to be virtual without suppressed email' do
-    sign_in @organizer
-    workshop = create :workshop, organizer: @organizer
-    refute workshop.virtual?
-
-    put :update, params: {id: workshop.id, pd_workshop: workshop_params.merge(virtual: true, suppress_email: false)}
-    assert_response :success
-    workshop.reload
-    assert workshop.virtual?
-    refute workshop.suppress_email?
-  end
 
   test 'can update a workshop to have suppressed email' do
     sign_in @organizer

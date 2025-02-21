@@ -29,6 +29,18 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    color: {
+      displayName: 'Color',
+      type: 'Text',
+      defaultValue: 'primary',
+      group: 'style',
+      validations: {
+        in: [
+          {value: 'primary', displayName: 'Primary'},
+          {value: 'secondary', displayName: 'Secondary'},
+        ],
+      },
+    },
     children: {
       displayName: 'Content',
       type: 'Text',

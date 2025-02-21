@@ -1,5 +1,6 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import Tags from '@code-dot-org/component-library/tags';
+import Typography from '@code-dot-org/component-library/typography';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
 import {
@@ -11,7 +12,6 @@ import {
 } from 'react-router-dom';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import Typography from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
@@ -25,6 +25,7 @@ import {selectedSectionSelector} from '../teacherDashboard/teacherSectionsReduxS
 import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import {
   LABELED_TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_PATH_NAMES,
   TEACHER_NAVIGATION_PATHS,
 } from './TeacherNavigationPaths';
 
@@ -158,6 +159,19 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     }
   };
 
+  const isOptionSelected = React.useCallback(
+    (key: string) => {
+      return (
+        currentPathName === key ||
+        (currentPathName === TEACHER_NAVIGATION_PATH_NAMES.courseOverview &&
+          key === TEACHER_NAVIGATION_PATH_NAMES.unitOverview) ||
+        (currentPathName === TEACHER_NAVIGATION_PATH_NAMES.unitOverview &&
+          key === TEACHER_NAVIGATION_PATH_NAMES.courseOverview)
+      );
+    },
+    [currentPathName]
+  );
+
   const getSidebarOptionsForSection = (
     sidebarKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[]
   ) => {
@@ -167,7 +181,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     return sidebarKeys.map(key => (
       <SidebarOption
         key={'ui-test-sidebar-' + key}
-        isSelected={currentPathName === key}
+        isSelected={isOptionSelected(key)}
         sectionId={selectedSection.id}
         courseVersionName={selectedSection.courseVersionName}
         unitName={selectedSection.unitName}

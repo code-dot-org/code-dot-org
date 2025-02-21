@@ -3771,6 +3771,7 @@ __metadata:
     classnames: ^2.5.1
     react: ">=16"
     react-dom: ">=16"
+    swiper: ^11.0.5
   languageName: node
   linkType: soft
 
