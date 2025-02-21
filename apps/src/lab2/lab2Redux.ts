@@ -156,13 +156,11 @@ export const setUpWithLevel = createAsyncThunk<
     const levelProperties = await loadLevelProperties(
       payload.levelPropertiesPath
     );
-    console.log('****levelProperties', levelProperties);
     thunkAPI.dispatch(setScriptId(payload.scriptId));
 
     // TODO: Workaround for AI Tutor for now
     // Massage levelProperties to match aiTutor's format
     const aiTutorLevel = mapLevelPropertiesToAITutorLevel(levelProperties);
-    console.log('setting level', aiTutorLevel);
     thunkAPI.dispatch(setLevel(aiTutorLevel));
 
     Lab2Registry.getInstance()
