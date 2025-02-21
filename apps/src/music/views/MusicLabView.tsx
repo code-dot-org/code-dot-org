@@ -313,6 +313,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   packId={exemplarSources.packId || DEFAULT_PACK}
                   libraryName={library}
                   title={exemplarSettings.playerTitle || 'Example'}
+                  labSetPlaying={setPlaying}
                 />
               )}
           </PanelContainer>
@@ -327,6 +328,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       isViewingExemplar,
       library,
       onInstructionsTextClick,
+      setPlaying,
     ]
   );
 

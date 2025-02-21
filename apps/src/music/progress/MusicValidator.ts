@@ -30,6 +30,7 @@ export default class MusicValidator extends Validator {
   constructor(
     private readonly getIsPlaying: () => boolean,
     private readonly getPlaybackEvents: () => PlaybackEvent[],
+    private readonly getExemplarPlaybackEvents: () => PlaybackEvent[],
     private readonly getValidationTimeout: () => number,
     private readonly player: MusicPlayer,
     private readonly getPlayingTriggers: () => PlayingTrigger[],
@@ -38,6 +39,9 @@ export default class MusicValidator extends Validator {
     )
   ) {
     super();
+    // TODO: Validate that playback events match between student and exemplar.
+    // Perform this operation if exemplarSettings.validationEnabled is true.
+    console.log([this.getPlaybackEvents(), this.getExemplarPlaybackEvents()]);
   }
 
   shouldCheckConditions() {

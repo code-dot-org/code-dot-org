@@ -133,6 +133,7 @@ class UnconnectedMusicView extends React.Component {
     isPlayView: PropTypes.bool,
     blockMode: PropTypes.string,
     playbackEvents: PropTypes.array,
+    exemplarPlaybackEvents: PropTypes.array,
     validationState: PropTypes.object,
   };
 
@@ -153,6 +154,7 @@ class UnconnectedMusicView extends React.Component {
     this.musicValidator = new MusicValidator(
       this.getIsPlaying,
       this.getPlaybackEvents,
+      this.getExemplarPlaybackEvents,
       this.getValidationTimeout,
       this.player,
       this.getPlayingTriggers
@@ -467,6 +469,9 @@ class UnconnectedMusicView extends React.Component {
     return this.props.playbackEvents;
   };
 
+  getExemplarPlaybackEvents = () => {
+    return this.props.exemplarPlaybackEvents;
+  };
   getPlayingTriggers = () => {
     return this.playingTriggers;
   };
@@ -883,6 +888,7 @@ const MusicView = connect(
     startingPlayheadPosition: state.music.startingPlayheadPosition,
     isPlayView: state.lab.isShareView,
     playbackEvents: state.music.playbackEvents,
+    exemplarPlaybackEvents: state.music.exemplarPlaybackEvents,
     validationState: state.lab.validationState,
   }),
   dispatch => ({
