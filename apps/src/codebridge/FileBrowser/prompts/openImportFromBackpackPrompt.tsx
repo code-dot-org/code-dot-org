@@ -9,6 +9,7 @@ import {
   DuplicateFileError,
 } from '@codebridge/utils';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {
   DialogType,
@@ -78,8 +79,8 @@ export const openImportFromBackpackPrompt = async ({
       if (filenames.length === 0) {
         dialogControl?.showDialog({
           type: DialogType.GenericAlert,
-          title: 'Files Saved in Backpack',
-          message: 'Files saved to your backpack will appear here.',
+          title: codebridgeI18n.filesInBackpackTitle(),
+          message: codebridgeI18n.filesInBackpackMessage(),
         });
       } else {
         const savedFilesInBackpack: GenericDropdownProps['items'] =
@@ -87,12 +88,12 @@ export const openImportFromBackpackPrompt = async ({
 
         const results = await dialogControl?.showDialog({
           type: DialogType.GenericDropdown,
-          title: 'Files Saved in Backpack',
+          title: codebridgeI18n.filesInBackpackTitle(),
           dropdownLabel: '',
-          confirmText: 'Import to project',
+          confirmText: codebridgeI18n.importToProject(),
           items: savedFilesInBackpack,
           selectedValue: savedFilesInBackpack[0].value,
-          neutralText: 'Delete file from backpack',
+          neutralText: codebridgeI18n.deleteFileBackpack(),
         });
 
         if (results.type === 'cancel') return;
@@ -125,9 +126,13 @@ export const openImportFromBackpackPrompt = async ({
             // Give the user to import with a new name or cancel the import.
             dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
-              title: 'Import from backpack',
-              message: `This file already exists in the level's support code. Would you like to import it as ${newFileName}?`,
-              confirmText: `Import as ${newFileName}`,
+              title: codebridgeI18n.importFromBackpackTitle(),
+              message: codebridgeI18n.importFromBackpackDuplicateSupportMessage(
+                {
+                  newFileName,
+                }
+              ),
+              confirmText: codebridgeI18n.importAsNewName({newFileName}),
               handleConfirm: () =>
                 fetchFileContentAndProcess(
                   selectedBackpackFileName,
@@ -142,10 +147,12 @@ export const openImportFromBackpackPrompt = async ({
           if (newFileName !== selectedBackpackFileName) {
             dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
-              title: 'Import from backpack',
-              message: `Would you like to replace the current file with this file or import this file as ${newFileName}?`,
-              confirmText: 'Replace existing file',
-              neutralText: `Import as ${newFileName}`,
+              title: codebridgeI18n.importFromBackpackTitle(),
+              message: codebridgeI18n.importFromBackpackDuplicateMessage({
+                newFileName,
+              }),
+              confirmText: codebridgeI18n.replaceFile(),
+              neutralText: codebridgeI18n.importAsNewName({newFileName}),
               handleConfirm: () =>
                 fetchFileContentAndProcess(selectedBackpackFileName), // Update existing project file.
               handleNeutral: () =>
@@ -165,9 +172,11 @@ export const openImportFromBackpackPrompt = async ({
           // User selects to delete file from backpack. Open confirm delete dialog.
           dialogControl?.showDialog({
             type: DialogType.GenericConfirmation,
-            title: 'Delete from backpack',
-            message: `You are about to delete ${selectedBackpackFileName} from your backpack.`,
-            confirmText: 'Delete',
+            title: codebridgeI18n.deleteFromBackpackTitle(),
+            message: codebridgeI18n.deleteFromBackpackConfirm({
+              selectedBackpackFileName,
+            }),
+            confirmText: codebridgeI18n.delete(),
             handleConfirm: () => handleDelete(selectedBackpackFileName),
           });
         }
