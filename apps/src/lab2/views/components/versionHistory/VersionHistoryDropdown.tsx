@@ -293,6 +293,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
           ref={menuRef}
           role="dialog"
           style={dropdownStyleProps}
+          aria-modal="true"
         >
           <div className={moduleStyles.versionHistoryHeader}>
             <Heading6 className={moduleStyles.versionHistoryTitle}>
