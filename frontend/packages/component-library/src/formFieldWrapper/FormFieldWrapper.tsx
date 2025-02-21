@@ -44,7 +44,7 @@ const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
   helper,
   color = 'black',
   size = 'm',
-  ...HTMLAttrs
+  ...HTMLAttributes
 }) => {
   const errorSection = useMemo(
     () =>
@@ -75,12 +75,12 @@ const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
 
   return (
     <div
-      {...HTMLAttrs}
+      {...HTMLAttributes}
       className={classNames(
         moduleStyles.formFieldWrapper,
         moduleStyles[`formFieldWrapper-${color}`],
         moduleStyles[`formFieldWrapper-${size}`],
-        HTMLAttrs.className,
+        HTMLAttributes.className,
       )}
     >
       {label ? (
