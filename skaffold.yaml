@@ -1,0 +1,121 @@
+apiVersion: skaffold/v4beta11
+kind: Config
+build:
+  artifacts:
+  - image: code-dot-org
+    sync:
+      infer:
+        # rerun watching
+        # /app/src/lib, /app/src/shared/middleware, /app/src/dashboard/legacy, /app/src/pegasus for **/*.{rb,ru,yml} (ignoring **/migrations/*.rb,test/**/*.rb)\
+        - '**/*.rb'
+        - '**/*.ru'
+        - '**/*.yml'
+        - '**/*.js'
+        - '**/*.jsx'
+        - '**/*.json'
+    custom:
+      buildCommand: |
+        k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org.dockerfile \
+          --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
+          --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
+          --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC"
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org.dockerfile
+    requires:
+    - image: code-dot-org-core
+      alias: CODE_DOT_ORG_CORE
+    - image: code-dot-org-db-seed
+      alias: CODE_DOT_ORG_DB_SEED
+    - image: code-dot-org-static
+      alias: CODE_DOT_ORG_STATIC
+  - image: code-dot-org-core
+    custom:
+      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-core.dockerfile
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org-core.dockerfile
+  - image: code-dot-org-static
+    custom:
+      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-static.dockerfile
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org-static.dockerfile
+  - image: code-dot-org-db-seed
+    custom:
+      buildCommand: k8s/bin/docker-buildx.sh -f k8s/docker/code-dot-org-db-seed.dockerfile
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org-db-seed.dockerfile
+
+deploy:
+  helm:
+    releases:
+      - name: dashboard
+        chartPath: ./k8s/helm
+        setValueTemplates:
+          image: "{{.IMAGE_FULLY_QUALIFIED_code_dot_org}}"
+          # skaffold sync only works when the user is root 😤:
+          # https://github.com/GoogleContainerTools/skaffold/issues/2479
+          # If we find a solution, we can drop this override along with
+          # changing ARGS in code-dot-org-core.dockerfile itself:
+          user.username: root
+          user.uid: 0
+          user.gid: 0
+          user.home: /home/root
+
+profiles:
+
+- name: production
+  patches:
+    - op: add
+      path: /deploy/helm/releases/0/valueFiles
+      value: k8s/helm/production.values.yml
+
+- name: test
+  patches:
+    - op: add
+      path: /deploy/helm/releases/0/valueFiles
+      value: k8s/helm/test.values.yml
+
+- name: development
+  activation:
+    - command: dev
+    - kubeContext: docker-desktop
+  patches:
+    - op: add
+      path: /deploy/helm/releases/0/valueFiles
+      value: k8s/helm/development.values.yml
+    # These have to be patches vs in values.yml because they are templated:
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/development.hostPaths.home
+      value: '{{ cmd "sh" "-c" "echo $HOME" }}'
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/development.hostPaths.skaffoldStorage
+      value: '{{ cmd "sh" "-c" "echo $PWD/skaffoldStorage" }}'
+
+- name: seed
+  patches:
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/command
+      value: ["rake", "dashboard:setup_db"]
+
+- name: build
+  patches:
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/command
+      value: ["rake", "build"]
+
+- name: zsh
+  patches:
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/command
+      value: ["zsh"]
+
+portForward:
+- resourceType: Service
+  resourceName: dashboard
+  port: 3000
+- resourceType: Service
+  resourceName: dashboard-db
+  port: 3306

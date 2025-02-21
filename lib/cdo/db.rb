@@ -1,7 +1,7 @@
 require 'cdo/sequel'
 require 'sequel'
 require 'cdo/cache'
-require pegasus_dir 'data/static_models'
+require 'cdo/pegasus/static_models'
 
 # rubocop:disable CustomCops/PegasusDbUsage
 PEGASUS_DB = Cdo::Sequel.database_connection_pool CDO.pegasus_db_writer, CDO.pegasus_db_reader

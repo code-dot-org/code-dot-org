@@ -777,7 +777,7 @@ class Unit < ApplicationRecord
       # order by version year descending.
       # This SQL string is not at risk for injection vulnerabilites because
       # it's just a hardcoded string, so it's safe to wrap in Arel.sql
-      order(Arel.sql("properties -> '$.version_year' DESC"))&.
+      order(Arel.sql("JSON_EXTRACT(properties, '$.version_year') DESC"))&.
       first
   end
 
@@ -873,7 +873,7 @@ class Unit < ApplicationRecord
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
-    Unit.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
+    Unit.where("JSON_EXTRACT(properties, '$.curriculum_umbrella') = ?", curriculum_umbrella).pluck(:name)
   end
 
   def has_standards_associations?
@@ -1061,7 +1061,7 @@ class Unit < ApplicationRecord
       # select only units in the same unit family.
       where(family_name: family_name).
       # select only older versions.
-      where("properties -> '$.version_year' < ?", version_year).
+      where("JSON_EXTRACT(properties, '$.version_year') < ?", version_year).
       # exclude the current unit.
       where.not(id: id).
       # select only units which the user has progress in.

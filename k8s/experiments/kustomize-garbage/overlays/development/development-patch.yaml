@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard
+spec:
+  selector:
+    matchLabels:
+      app: dashboard
+  template:
+    metadata:
+      labels:
+        app: dashboard
+    spec:
+      containers:
+        - name: dashboard
+          env:
+            - name: RAILS_ENV
+              value: "development"
+          volumeMounts:
+            - name: dev-config-volume
+              mountPath: /etc/dev-config
+      volumes:
+        - name: dev-config-volume
+          configMap:
+            name: development-config

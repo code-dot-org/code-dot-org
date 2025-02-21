@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: dashboard
+        env:
+          - name: RAILS_ENV
+            value: "development"
+          - name: RACK_ENV
+            value: "development"
+        volumeMounts:
+          - mountPath: /code-dot-org/locals.yml
+            name: dashboard-locals
+            subPath: locals.yml
+          - mountPath: /home/user/.aws
+            name: dot-aws
+          - mountPath: /home/user/.config/gcloud
+            name: dot-config-gcloud
+        securityContext:
+          allowPrivilegeEscalation: true
+      volumes:
+        - name: dashboard-locals
+          configMap:
+            name: dashboard-locals
+        - name: dot-aws
+          persistentVolumeClaim:
+            claimName: dot-aws
+        - name: dot-config-gcloud
+          persistentVolumeClaim:
+            claimName: dot-config-gcloud

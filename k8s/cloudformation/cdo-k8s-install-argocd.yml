@@ -1,0 +1,143 @@
+
+  # === Bootstrap Cluster ===
+  # Install ArgoCD which will install everything else
+
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'code-dot-org kubernetes cluster aka cdo-k8s'
+
+Parameters:
+  ClusterName:
+    Type: String
+    Default: "code-dot-org"
+    Description: "The name of the EKS cluster, canonically code-dot-org. Prefix it with your stack name for dev and testing, e.g.: my-stack-code-dot-org"
+
+Resources:
+  # InstallArgoCDCustomResource:
+  #   Type: Custom::InstallArgoCD
+  #   Properties:
+  #     ServiceToken: !GetAtt InstallArgoCDLambda.Arn
+  #     ClusterName: !Ref EKSCluster
+  #     Region: !Ref AWS::Region
+
+  InstallArgoCDLambda:
+    Type: AWS::Lambda::Function
+    # DependsOn: EKSCluster
+    Properties:
+      FunctionName: InstallArgoCDLambda
+      Handler: index.handler
+      Runtime: nodejs20.x
+      Role: !GetAtt InstallArgoCDLambdaExecutionRole.Arn
+      Timeout: 120  # Timeout set to 120 seconds (2 minutes)
+      Code:
+        ZipFile: |
+          import { EKSClient, DescribeClusterCommand } from '@aws-sdk/client-eks';
+          import { STSClient, GetCallerIdentityCommand } from '@aws-sdk/client-sts';
+          import { execSync } from 'child_process';
+          import fs from 'fs';
+
+          async function installKubeCtl() {
+            try {
+              execSync('curl --version'); // Check if `curl` is available
+
+              // Download kubectl to /tmp directory
+              execSync('curl -Lo /tmp/kubectl "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"');
+              execSync('chmod +x /tmp/kubectl');
+
+              // Add /tmp to the PATH so kubectl can be found
+              process.env.PATH = `/tmp:${process.env.PATH}`;
+            } catch (error) {
+              console.error('Failed to download or install kubectl:', error);
+              throw new Error('kubectl installation failed');
+            }
+          }
+
+          async function setupKubeConfig(clusterName, region) {
+            const eksClient = new EKSClient({ region });
+
+            // Describe the cluster to get endpoint and certificate
+            const command = new DescribeClusterCommand({ name: clusterName });
+            const { cluster } = await eksClient.send(command);
+
+            if (!cluster || !cluster.endpoint || !cluster.certificateAuthority || !cluster.certificateAuthority.data) {
+              throw new Error('Failed to retrieve cluster information');
+            }
+
+            const endpoint = cluster.endpoint;
+            const certificateAuthorityData = cluster.certificateAuthority.data;
+
+            // Save the certificate authority data to a file in /tmp
+            const certFilePath = `/tmp/eks-ca.crt`;
+            fs.writeFileSync(certFilePath, Buffer.from(certificateAuthorityData, 'base64'));
+
+            // Define a custom kubeconfig path in /tmp
+            const kubeconfigPath = '/tmp/kubeconfig';
+            process.env.KUBECONFIG = kubeconfigPath;
+
+            // Configure kubectl with the retrieved endpoint and certificate, using the custom KUBECONFIG
+            execSync(`kubectl config set-cluster ${clusterName} --server=${endpoint} --certificate-authority=${certFilePath}`);
+            execSync(`kubectl config set-context ${clusterName} --cluster=${clusterName} --user=aws`);
+            execSync(`kubectl config use-context ${clusterName}`);
+
+            // Generate the authentication token
+            const stsClient = new STSClient({ region });
+            const identityCommand = new GetCallerIdentityCommand({});
+            const callerIdentity = await stsClient.send(identityCommand);
+            const token = `STS.${callerIdentity.Account}`;
+
+            // Set credentials in kubectl configuration
+            execSync(`kubectl config set-credentials aws --token=${token}`);
+          }
+
+          function verifyKubeConfigCredentials() {
+            execSync('kubectl cluster-info');
+          }
+
+          export const handler = async function(event) {
+            const clusterName = event.ResourceProperties.ClusterName;
+            const region = event.ResourceProperties.Region;
+
+            await installKubeCtl();
+            await setupKubeConfig(clusterName, region);
+
+            // Create the ArgoCD namespace if it doesn't already exist
+            execSync(
+              'kubectl get namespace argocd || kubectl create namespace argocd'
+            );
+
+            // Install ArgoCD
+            execSync(
+              'kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml',
+              { stdio: 'inherit' }
+            );
+
+            return { status: 'ArgoCD Installed' };
+          };
+      Tags:
+        - Key: Name
+          Value: !Sub "${AWS::StackName}-install-argocd-lambda"
+
+  InstallArgoCDLambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: LambdaArgoCDPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - eks:DescribeCluster  # Needed to get cluster details like endpoint and certificate
+                Resource: !Sub "arn:${AWS::Partition}:eks:${AWS::Region}:${AWS::AccountId}:cluster/${ClusterName}"
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: "*"

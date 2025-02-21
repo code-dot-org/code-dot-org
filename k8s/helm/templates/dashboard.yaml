@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "dashboard.fullname" . }}
+  labels:
+    {{- include "dashboard.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "dashboard.selectorLabels" . | nindent 4 }}
+  ports:
+    - protocol: TCP
+      port: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "dashboard.fullname" . }}
+  labels:
+    {{- include "dashboard.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.autoscaling.replicasWhenAutoscaleDisabled }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "dashboard.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "dashboard.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+      - name: dashboard
+        image: "{{.Values.image}}"
+        command: {{ .Values.command | toJson }}
+        # command: ["zsh"]
+        env:
+          - name: RAILS_ENV
+            value: {{ .Values.environment }}
+          - name: RACK_ENV
+            value: {{ .Values.environment }}
+        ports:
+        - containerPort: 3000
+        tty: true # dashboard stdout logging assumes a tty
+        volumeMounts:
+        {{- if eq .Values.environment "development" }}
+        # These allow us to re-use our aws / aws-google login from our local machine.
+        - mountPath: {{ .Values.user.home }}/.aws
+          name: dot-aws
+        - mountPath: {{ .Values.user.home }}/.config/gcloud
+          name: dot-config-gcloud
+        {{- end }}
+        - mountPath: /code-dot-org/locals.yml
+          name: dashboard-locals
+          subPath: locals.yml
+        securityContext:
+          allowPrivilegeEscalation: {{ if eq .Values.environment "development" }}true{{ else }}false{{ end }}
+      volumes:
+        - name: dashboard-locals
+          configMap:
+            name: dashboard-locals
+        {{- if eq .Values.environment "development" }}
+        - name: dot-aws
+          persistentVolumeClaim:
+            claimName: dot-aws
+        - name: dot-config-gcloud
+          persistentVolumeClaim:
+            claimName: dot-config-gcloud
+        {{- end }}
+            
+      securityContext:
+        runAsUser: {{ .Values.user.uid }}
+        runAsGroup: {{ .Values.user.gid }}
+        fsGroup: {{ .Values.user.gid }}

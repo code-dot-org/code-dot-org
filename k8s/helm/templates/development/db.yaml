@@ -1,0 +1,49 @@
+{{- if eq .Values.environment "development" }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "dashboard.fullname" . }}-db
+  labels:
+    app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
+spec:
+  ports:
+    - protocol: TCP
+      port: 3306
+  selector:
+    app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "dashboard.fullname" . }}-db
+spec:
+  serviceName: {{ include "dashboard.fullname" . }}-db
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
+    spec:
+      containers:
+      - name: db
+        image: mysql:8
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+          value: "yes"
+        volumeMounts:
+        - name: mysql-data
+          mountPath: /var/lib/mysql/
+  volumeClaimTemplates:
+  - metadata:
+      name: mysql-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 1Gi
+{{- end }}

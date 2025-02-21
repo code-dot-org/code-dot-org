@@ -1,0 +1,4 @@
+environment: production
+autoscaling.enabled: true
+autoscaling.minReplicas: 1
+autoscaling.maxReplicas: 10

@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dot-config-gcloud
+  labels:
+    app: dashboard
+spec:
+  resources:
+    requests:
+      storage: 5Mi
+  accessModes:
+    - ReadWriteMany
+  storageClassName: hostpath
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: dot-config-gcloud
+  labels:
+    app: dashboard
+spec:
+  capacity:
+    storage: 5Mi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: /path/to/your/home/.config/gcloud
+  claimRef:
+    name: dot-config-gcloud
+    namespace: default

@@ -72,7 +72,17 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate', '~> 3.1.1'
-  gem 'aws-google', '~> 0.2.0'
+
+  # gem 'aws-google', '~> 0.2.0'
+
+  # FIXME @snickell before merge: push to branch on code-dot-org/aws-google and update here once perms added
+  gem 'aws-google', '>= 0.2.2', github: 'code-dot-org/aws-google', branch: 'cli-only-auth'
+
+  # gem 'aws-google', '>= 0.2.0', github: 'code-dot-org/aws-google', branch: 'darin/update-aws-sdk'
+
+  # Enable interactive repl on `/__better_errors`
+  gem 'binding_of_caller'
+
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.

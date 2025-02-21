@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: dashboard
+        env:
+          - name: RAILS_ENV
+            value: "production"
+          - name: RACK_ENV
+            value: "production"
+        securityContext:
+          allowPrivilegeEscalation: false

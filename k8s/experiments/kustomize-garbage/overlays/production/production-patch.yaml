@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard
+spec:
+  selector:
+    matchLabels:
+      app: dashboard
+  template:
+    metadata:
+      labels:
+        app: dashboard
+    spec:
+      containers:
+        - name: dashboard
+          env:
+            - name: RAILS_ENV
+              value: "production"
+          volumeMounts:
+            - name: prod-config-volume
+              mountPath: /etc/prod-config
+      volumes:
+        - name: prod-config-volume
+          configMap:
+            name: production-config

@@ -104,3 +104,6 @@ npm-debug.log
 # python venv:
 .venv
 .pdm-python
+
+skaffold-build-tags.json
+skaffoldStorage/

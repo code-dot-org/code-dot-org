@@ -1,0 +1,33 @@
+# In development, this allows us to re-use our AWS config from our local machine.
+{{- if eq .Values.environment "development" }}
+apiVersion: v1 
+kind: PersistentVolumeClaim 
+metadata:   
+  name: dot-aws
+  labels:
+    app: dashboard
+spec:
+  resources:
+    requests:
+      storage: 5Mi  
+  accessModes:
+    - ReadWriteMany
+  storageClassName: hostpath
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: dot-aws
+  labels:
+    app: dashboard
+spec:
+  capacity:
+    storage: 5Mi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: {{ .Values.development.hostPaths.home }}/.aws
+  claimRef:
+    name: dot-aws
+    namespace: {{ .Release.Namespace }}
+{{- end }}

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: locals-config
+data:
+  # Add your local configuration data here
+  exampleKey: exampleValue

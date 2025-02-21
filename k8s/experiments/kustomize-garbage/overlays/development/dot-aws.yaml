@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dot-aws
+  labels:
+    app: dashboard
+spec:
+  resources:
+    requests:
+      storage: 5Mi
+  accessModes:
+    - ReadWriteMany
+  storageClassName: hostpath
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: dot-aws
+  labels:
+    app: dashboard
+spec:
+  capacity:
+    storage: 5Mi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: /path/to/your/home/.aws
+  claimRef:
+    name: dot-aws
+    namespace: default
