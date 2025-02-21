@@ -10,7 +10,8 @@ describe('Design System - FormFieldWrapper', () => {
     render(<FormFieldWrapper {...props} />);
   };
 
-  const queryFormFieldWrapperEl = () => document.querySelector('.formFieldWrapper');
+  const queryFormFieldWrapperEl = () =>
+    document.querySelector('.formFieldWrapper');
 
   it('renders with the provided label', () => {
     const label = 'Test Label';
