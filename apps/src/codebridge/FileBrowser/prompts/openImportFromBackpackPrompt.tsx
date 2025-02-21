@@ -126,7 +126,7 @@ export const openImportFromBackpackPrompt = async ({
             // Give the user to import with a new name or cancel the import.
             dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
-              title: codebridgeI18n.importFromBackpackTitle(),
+              title: codebridgeI18n.importFromBackpack(),
               message: codebridgeI18n.importFromBackpackDuplicateSupportMessage(
                 {
                   newFileName,
@@ -147,7 +147,7 @@ export const openImportFromBackpackPrompt = async ({
           if (newFileName !== selectedBackpackFileName) {
             dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
-              title: codebridgeI18n.importFromBackpackTitle(),
+              title: codebridgeI18n.importFromBackpack(),
               message: codebridgeI18n.importFromBackpackDuplicateMessage({
                 newFileName,
               }),
@@ -172,7 +172,7 @@ export const openImportFromBackpackPrompt = async ({
           // User selects to delete file from backpack. Open confirm delete dialog.
           dialogControl?.showDialog({
             type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.deleteFromBackpackTitle(),
+            title: codebridgeI18n.deleteFromBackpack(),
             message: codebridgeI18n.deleteFromBackpackConfirm({
               selectedBackpackFileName,
             }),

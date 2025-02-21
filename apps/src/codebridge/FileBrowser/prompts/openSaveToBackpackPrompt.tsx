@@ -39,7 +39,7 @@ export const openSaveToBackpackPrompt = async ({
       const dialog = isDuplicateFileName
         ? {
             type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.saveToBackpackTitle(),
+            title: codebridgeI18n.saveToBackpack(),
             message: codebridgeI18n.saveToBackpackDuplicateMessage({
               newFileName: fileNameCopy,
             }),
@@ -48,7 +48,7 @@ export const openSaveToBackpackPrompt = async ({
           }
         : {
             type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.saveToBackpackTitle(),
+            title: codebridgeI18n.saveToBackpack(),
             message: codebridgeI18n.saveToBackpackMessage({
               fileName: file.name,
             }),
