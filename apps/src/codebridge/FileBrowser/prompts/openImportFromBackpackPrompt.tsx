@@ -122,9 +122,18 @@ export const openImportFromBackpackPrompt = async ({
           }
           if (isSupportFileName) {
             // The user wants to import a file that has the same name as a hidden support file.
-            // Automatically import file renamed with numeric suffix.
-            // TODO: display message that file was renamed because it duplicated a support file.
-            fetchFileContentAndProcess(selectedBackpackFileName, newFileName);
+            // Give the user to import with a new name or cancel the import.
+            dialogControl?.showDialog({
+              type: DialogType.GenericConfirmation,
+              title: 'Import from backpack',
+              message: `This file already exists in the level's support code. Would you like to import it as ${newFileName}?`,
+              confirmText: `Import as ${newFileName}`,
+              handleConfirm: () =>
+                fetchFileContentAndProcess(
+                  selectedBackpackFileName,
+                  newFileName
+                ), // Fetch backpack file content and import new file with numeric suffix.
+            });
             return;
           }
           // If the backpack file has the same name as an existing project file, show a second
