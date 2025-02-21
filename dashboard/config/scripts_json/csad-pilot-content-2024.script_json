@@ -1,0 +1,2281 @@
+{
+  "script": {
+    "name": "csad-pilot-content-2024",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "Foundations of CS and AI",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "version_year": "2024",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-02-20 22:24:57 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "csad-pilot-content-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "End-of-Unit Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Computer Systems",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do computer systems solve problems and impact the world around us?**\n\nIn this lesson, students will explore how computing roles and innovations address real-world challenges in various industries. Through team activities, AI simulations, and collaborative discussions, students will investigate a selected innovation, assign professional roles, and reflect on the impact of computing systems on solving industry-specific problems.",
+        "preparation": "* Print copies of the Computer Innovations and Careers activity guide (one for each student)",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do computer systems solve problems and impact the world around us?**\n\nIn this lesson, you will discover how computing roles contribute to solving real-world challenges. You'll explore an industry, investigate an innovation, and work with your team to understand how different roles come together to create impactful solutions."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Hardware",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Troubleshooting and Optimizing Hardware",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Software and Operating Systems",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Troubleshooting and Optimizing Software",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Build a Computer System",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can we design computational systems that balance user needs, budget, and performance?**\n\nStudents will recall important hardware components needed to create a computer system. They will analyze the needs of a fictional user to plan a computer build for the user using an AI Assistant to research and select the right components.",
+        "preparation": "* Print copies of the Build a Computer System activity guide (one for each pair of students)",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can we design computational systems that balance user needs, budget, and performance?**\n\nIn this lesson, you will analyze the needs of a fictional user to plan a computer build for the user. You will use an AI Assistant to research and select the right components."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Data in Computer Systems",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Processing Data in a System",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "**How can we process data to find patterns and solve problems?**\n\nIn this lesson, students will explore how computational tasks like sorting, filtering, and aggregating can uncover patterns and solve problems using a library dataset. Students will begin with a quick hands-on activity to introduce these concepts, then apply them systematically to real-world data about library books. Through guided examples, independent practice, and reflective discussions, students will understand how computational tools make data analysis more efficient and impactful.",
+        "preparation": "- Gather **index cards** (one per student) or an equivalent number of small pieces of paper.\n- Collect enough **UNO cards** for each group of 4 students to have 20–25 cards.\n    - *(Optional)* Print and cut out the provided UNO cards if physical cards aren’t available. Prepare enough for each group of four students.\n- Print copies of the Processing Library Data activity guide (one for each student).",
+        "student_overview": "**How can we process data to find patterns and solve problems?**\n\nIn this lesson, you’ll explore how to process data using computational tasks like sorting, filtering, and aggregating. You’ll work with a library dataset to uncover patterns and solve challenges, learning how computers organize and analyze large amounts of information."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "How AI Uses Data",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "IoT and Emerging Technologies",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "User Testing",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Just Because We Can, Should We?",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Nobel in AI Project",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "9498c943-2634-41f7-a84a-30e96cca2105",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9498c943-2634-41f7-a84a-30e96cca2105",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "f766d4a4-ca3d-46f7-bfca-114563604110",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f766d4a4-ca3d-46f7-bfca-114563604110",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "8c4602ba-171f-4efc-9398-f1ce00754dae",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c4602ba-171f-4efc-9398-f1ce00754dae",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "fab12dd7-8d11-4123-a39b-e67ba0083f33",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fab12dd7-8d11-4123-a39b-e67ba0083f33",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "8b6d2f27-6ac1-4470-a89e-f54cbeae0e57",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8b6d2f27-6ac1-4470-a89e-f54cbeae0e57",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "dc174765-fc1e-4b64-95ef-0cbfb4fffeac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc174765-fc1e-4b64-95ef-0cbfb4fffeac",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "4b53bd0e-7b76-49a2-97bf-cd455215fb68",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b53bd0e-7b76-49a2-97bf-cd455215fb68",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "a9220a21-94f4-4860-b65c-2ff45acc28d6",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a9220a21-94f4-4860-b65c-2ff45acc28d6",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "23eca6d4-4b61-46fb-a3ef-711c13b7f32b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "23eca6d4-4b61-46fb-a3ef-711c13b7f32b",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "71dec560-ccd5-447c-baab-708cb9b4b2f6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "71dec560-ccd5-447c-baab-708cb9b4b2f6",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "5146c402-1782-4511-bec6-03a4170d45ce",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5146c402-1782-4511-bec6-03a4170d45ce",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "f88e8ef0-4c64-4d5e-8c36-f88de62fe03c",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f88e8ef0-4c64-4d5e-8c36-f88de62fe03c",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "75005b55-6ad4-4824-87fb-7f8952eebea7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75005b55-6ad4-4824-87fb-7f8952eebea7",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "7f17e81c-5804-4920-bdc7-10154afbe23a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f17e81c-5804-4920-bdc7-10154afbe23a",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "915cad23-79c1-4dcf-87a1-b8f8472ff7de",
+      "position": 1,
+      "properties": {
+        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *computer system*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What are some examples of computing systems you use in everyday life?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Computer systems are everywhere in daily life, from smartphones and gaming consoles to self-checkout kiosks, smart home devices, and even AI-powered cars. This discussion helps students recognize how these systems process and respond to data in different ways. (e.g. *\"A smartwatch is a computer system because it tracks my steps and syncs data to my phone.\"*)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle to come up with examples, prompt them with real-world scenarios:\n* *\"Think about something you use daily that connects to the Internet or processes data.\"*\n* *\"Have you used self-checkout at a store? That’s a computer system!\"*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "915cad23-79c1-4dcf-87a1-b8f8472ff7de",
+        "lesson_activity.key": "9498c943-2634-41f7-a84a-30e96cca2105"
+      }
+    },
+    {
+      "key": "c89e69fe-cc7c-47ad-8805-32380d9d370a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Computer Innovations and Careers activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "c89e69fe-cc7c-47ad-8805-32380d9d370a",
+        "lesson_activity.key": "9498c943-2634-41f7-a84a-30e96cca2105"
+      }
+    },
+    {
+      "key": "a123e54d-1438-4957-8bc9-58b83dca4d4a",
+      "position": 3,
+      "properties": {
+        "description": "Let’s explore how computing drives computing innovation in different industries worldwide. In groups, you'll examine the computing innovation map and choose an innovation to investigate. Be prepared to share your findings!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a123e54d-1438-4957-8bc9-58b83dca4d4a",
+        "lesson_activity.key": "9498c943-2634-41f7-a84a-30e96cca2105"
+      }
+    },
+    {
+      "key": "3ef5f00c-f231-41db-8abc-5d5d80432d3e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. Students should open the Computer Innovation Map, and click on the markers to explore innovations in medicine, agriculture, education, and fashion. The markers have videos and descriptions to learn about each innovation. Students should select one innovation to investigate, then complete the first page of their activity guide.",
+        "progression_name": "Pick an Innovation"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ef5f00c-f231-41db-8abc-5d5d80432d3e",
+        "lesson_activity.key": "9498c943-2634-41f7-a84a-30e96cca2105"
+      }
+    },
+    {
+      "key": "34f63961-730c-4072-93ce-2c2b6a7f439c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "34f63961-730c-4072-93ce-2c2b6a7f439c",
+        "lesson_activity.key": "9498c943-2634-41f7-a84a-30e96cca2105"
+      }
+    },
+    {
+      "key": "67464926-1d4a-4b25-9028-5a2725dcd3fd",
+      "position": 1,
+      "properties": {
+        "description": "Innovations exist to solve real-world problems for people in different industries. To truly understand your chosen innovation, you’ll interview professionals in that field. Learn about their work, the challenges they face, and how computing helps them. This will help you see why your innovation is important and how it’s making their job easier, faster, or more effective. Remember, innovation starts with people—it’s *their* needs that drive new ideas.",
+        "duration": "10",
+        "name": "Exploring Innovations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "67464926-1d4a-4b25-9028-5a2725dcd3fd",
+        "lesson_activity.key": "f766d4a4-ca3d-46f7-bfca-114563604110"
+      }
+    },
+    {
+      "key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2. Levels 2 through 9 have several industry professionals they can interview in different industries. Student should choose the level that matches their selected innovation and complete the Industry Interviews section of their activity guide.",
+        "progression_name": "Industry Interviews"
+      },
+      "seeding_key": {
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e",
+        "lesson_activity.key": "f766d4a4-ca3d-46f7-bfca-114563604110"
+      }
+    },
+    {
+      "key": "28d353a2-d485-4b83-b252-ad3123e62ebc",
+      "position": 3,
+      "properties": {
+        "description": "So far, you’ve explored how industry professionals use computing innovations and the challenges they face. Now, let’s shift to the technical roles—the engineers, developers, and designers who build and refine these innovations. These experts work closely with industry professionals to gather feedback, test solutions, and ensure the technology meets real-world needs. Next, you’ll watch career videos to learn about these roles, then conduct an AI interview with a professional to understand their impact on innovation.",
+        "duration": "15",
+        "name": "Defining Roles and Developing Innovations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "28d353a2-d485-4b83-b252-ad3123e62ebc",
+        "lesson_activity.key": "f766d4a4-ca3d-46f7-bfca-114563604110"
+      }
+    },
+    {
+      "key": "009679d2-a20e-4ad1-bec1-49b576efef45",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students each choose one of the roles (Hardware Engineer, Software Engineer, Product Designer) within their group - each group should have only one person serving that role.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 1, Level 10. Each student selects the option with their assigned technical role. They watch a short video to introduce them to the skills and responsibilities for their selected role.",
+        "progression_name": "Exploring Technical Roles"
+      },
+      "seeding_key": {
+        "activity_section.key": "009679d2-a20e-4ad1-bec1-49b576efef45",
+        "lesson_activity.key": "f766d4a4-ca3d-46f7-bfca-114563604110"
+      }
+    },
+    {
+      "key": "c659f9da-cdf7-480c-87a3-58081f0c6d8e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students will share their observations about the career they explored in a whole class discussion.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What stood out to you about the career you explored?*\n- **Round Robin Sharing**: Invite students to share one insight about their chosen career. If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to encourage students to reflect on the skills and tools used in different computing careers and to connect these insights to their own interests. (e.g., *\"I didn’t realize product designers help decide how apps and websites look and feel!\"*).\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 1, Level 11. Student use AI chat to research how their assigned role contributes to building their selected innovation and record their findings on page 3 their activity guide.",
+        "progression_name": "Your Role in Innovation"
+      },
+      "seeding_key": {
+        "activity_section.key": "c659f9da-cdf7-480c-87a3-58081f0c6d8e",
+        "lesson_activity.key": "f766d4a4-ca3d-46f7-bfca-114563604110"
+      }
+    },
+    {
+      "key": "f46cc8de-97c3-4a2c-99fa-f3d26d2a73de",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** In their groups, students take turns sharing how their role contributes to building their selected innovation and record notes in the Your Role in Innovation section of their activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "f46cc8de-97c3-4a2c-99fa-f3d26d2a73de",
+        "lesson_activity.key": "f766d4a4-ca3d-46f7-bfca-114563604110"
+      }
+    },
+    {
+      "key": "69890191-c8d4-465c-af95-1553e4ef6604",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair student groups with another student group (ideally one with a different selected innovation) to share their findings.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 12 to complete the reflection questions.",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The reflection questions on Level 12 can be used to assess students' understanding of different career pathways in computing and how computer systems and people work together to solve problems."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "69890191-c8d4-465c-af95-1553e4ef6604",
+        "lesson_activity.key": "8c4602ba-171f-4efc-9398-f1ce00754dae"
+      }
+    },
+    {
+      "key": "278c0aea-077d-44c9-95ab-c9de12199cde",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "278c0aea-077d-44c9-95ab-c9de12199cde",
+        "lesson_activity.key": "fab12dd7-8d11-4123-a39b-e67ba0083f33"
+      }
+    },
+    {
+      "key": "ab4ae58a-07d5-43d5-b881-479d7973ca61",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ab4ae58a-07d5-43d5-b881-479d7973ca61",
+        "lesson_activity.key": "8b6d2f27-6ac1-4470-a89e-f54cbeae0e57"
+      }
+    },
+    {
+      "key": "f3d81911-5bc6-4f17-ac44-9f39db1cc288",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f3d81911-5bc6-4f17-ac44-9f39db1cc288",
+        "lesson_activity.key": "dc174765-fc1e-4b64-95ef-0cbfb4fffeac"
+      }
+    },
+    {
+      "key": "4d8c6ffd-f5ee-4b97-b871-7531191f26f8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students into groups of 4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each student a blank piece of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write \"Input\", \"Output\", \"Storage\", and \"Internal Components\" on separate pieces of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students participate in a round-robin activity where they brainstorm an idea quickly, and pass their paper to the left. They start by writing one hardware example under the category heading on their paper and circle their example on the paper. They then pass their paper to the left and repeat this process, adding as many examples as possible in the time given. If a student cannot think of an example, they can skip and pass the paper.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students work, encourage them to keep coming up with examples. If a group appears stuck, encourage them to switch papers. The time will go fast, and the idea is to brainstorm as quickly as possible.\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This activity should be fun and fast-paced. Encourage students to write what is on their mind, even if it might not be 100% correct. They can revise and refine their contributions between rounds. There is a teacher resource available with a list of hardware suggestions to assist as needed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d8c6ffd-f5ee-4b97-b871-7531191f26f8",
+        "lesson_activity.key": "4b53bd0e-7b76-49a2-97bf-cd455215fb68"
+      }
+    },
+    {
+      "key": "16f78642-a24e-47a7-b4c5-2bcfc0418490",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "16f78642-a24e-47a7-b4c5-2bcfc0418490",
+        "lesson_activity.key": "4b53bd0e-7b76-49a2-97bf-cd455215fb68"
+      }
+    },
+    {
+      "key": "918930ad-98be-494a-9858-741c16d5d75d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Could you make a working computer from all of the hardware that your group has listed, or are there important components missing?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students collaboratively analyze the list of computer hardware components generated during the activity to determine if they have all the essential parts needed to build a functioning computer. They identify any missing components and explain why each component is critical to the computer's operation. This discussion aims to deepen their understanding of computer architecture and enhance their critical thinking and communication skills.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students redistribute the papers. Students choose one of the components on the paper from Round One and write a definition, description, analogy, or make a fast sketch that explains what this component is or what it does within a computer system. They then pass papers to the left and repeat the process.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students work, encourage them to keep coming up with contributions. If a group member appears stuck, encourage them to switch papers.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is the importance of this hardware component in a computer system? Are there descriptions, analogies, or images you might add to further explain the component?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion seeks to help them recall prior learning and discuss the work that they have created as a group.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "918930ad-98be-494a-9858-741c16d5d75d",
+        "lesson_activity.key": "4b53bd0e-7b76-49a2-97bf-cd455215fb68"
+      }
+    },
+    {
+      "key": "cb48d2b2-5f4f-402d-a52c-327d12163591",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *build*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students should spend a few minutes exploring PCPartPicker by clicking the blue buttons to explore different components, using the filtering options available on the left-hand side of the screen, or even exploring builds that other users have shared. ",
+        "progression_name": "PCPartPicker"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb48d2b2-5f4f-402d-a52c-327d12163591",
+        "lesson_activity.key": "a9220a21-94f4-4860-b65c-2ff45acc28d6"
+      }
+    },
+    {
+      "key": "09d203f9-8ddc-46f8-a8b9-311b11cb35e9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Show students how to click the buttons and search components. Point out the different ways to filter - price, manufacturer, specifications, etc.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "[**PCPartPicker.com**](http://pcpartpicker.com/) is a great resource to choose components, add them in a visual UI, and to check for compatibility issues. If this website is unavailable, there are also plenty of guides on sample builds that are available online. Here are some examples:\n\n- [**Best PC builds for gaming 2025**](https://www.tomshardware.com/best-picks/best-pc-builds-gaming) from Tom's Hardware\n\n- [**Want a Better PC? Try Building Your Own**](https://www.wired.com/story/how-to-build-a-pc/) by Wired\n\n- [**How to Build a PC: The Ultimate Beginner's Guide**](https://www.pcmag.com/how-to/how-to-build-a-pc-the-ultimate-beginners-guide) by PCMag\n\n- [**The TBG DIY PC Build Guides**](https://techbuyersguru.com/tbg-diy-pc-build-guides/) by the Tech Buyer's Guru"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "09d203f9-8ddc-46f8-a8b9-311b11cb35e9",
+        "lesson_activity.key": "a9220a21-94f4-4860-b65c-2ff45acc28d6"
+      }
+    },
+    {
+      "key": "72d33ef3-d40c-415d-bb63-28626db7bc26",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "72d33ef3-d40c-415d-bb63-28626db7bc26",
+        "lesson_activity.key": "a9220a21-94f4-4860-b65c-2ff45acc28d6"
+      }
+    },
+    {
+      "key": "d8844c08-6f71-4ff2-b166-d50512058ba5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you notice about this website? What do you wonder about this website?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might notice that this website helps users build a computer by allowing them to choose a list of compatible parts; it shows prices for different components which makes it easier to budget; there is a section for completed builds that users have shared; and there are warnings that pop up if incompatible parts are selected. Students might wonder: *What are all of the specifications for? What is the difference between brands and manufacturers? Why are some parts more expensive than others?*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Place students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Build a Computer System activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 2. Students should select a user that they want to design a computer system for and complete the User Profile section of the activity guide.",
+        "progression_name": "Computer Build User Profiles"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8844c08-6f71-4ff2-b166-d50512058ba5",
+        "lesson_activity.key": "a9220a21-94f4-4860-b65c-2ff45acc28d6"
+      }
+    },
+    {
+      "key": "af6f685a-a64f-4234-b02a-67f42b5c0343",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 6, Level 3. Students should complete their activity guide using the PCPartPicker website and the Computer Build Assistant.",
+        "progression_name": "Computer Build Assistant"
+      },
+      "seeding_key": {
+        "activity_section.key": "af6f685a-a64f-4234-b02a-67f42b5c0343",
+        "lesson_activity.key": "a9220a21-94f4-4860-b65c-2ff45acc28d6"
+      }
+    },
+    {
+      "key": "0677bb42-37bf-4fb2-98ee-cde98bd229c3",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students who are stuck, help craft questions for the AI chatbot with students, ask leading questions to get them to consider the needs of their chosen user.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Build a Computer System activity guide can be used to check students' ability to justify computer system design decisions."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0677bb42-37bf-4fb2-98ee-cde98bd229c3",
+        "lesson_activity.key": "a9220a21-94f4-4860-b65c-2ff45acc28d6"
+      }
+    },
+    {
+      "key": "cb4da0fd-0823-44ab-8dea-8e3464365ee8",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cb4da0fd-0823-44ab-8dea-8e3464365ee8",
+        "lesson_activity.key": "a9220a21-94f4-4860-b65c-2ff45acc28d6"
+      }
+    },
+    {
+      "key": "06651152-74a3-4661-a705-a084ab60bea9",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one decision that you had to make in your build to align with your user's needs or preferences?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share how they considered and prioritized needs and preferences while working on their build."
+      },
+      "seeding_key": {
+        "activity_section.key": "06651152-74a3-4661-a705-a084ab60bea9",
+        "lesson_activity.key": "a9220a21-94f4-4860-b65c-2ff45acc28d6"
+      }
+    },
+    {
+      "key": "050029b5-3282-40b9-92c3-b6fda10628c4",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4. Students should write a news headline that summarizes something important that they learned or a key takeaway from their experience creating their computer build.\n",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The News Headline Check for Understanding can be used to assess students' ability to explain the roles of hardware, software, and operating systems in executing tasks."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "050029b5-3282-40b9-92c3-b6fda10628c4",
+        "lesson_activity.key": "23eca6d4-4b61-46fb-a3ef-711c13b7f32b"
+      }
+    },
+    {
+      "key": "c475ed09-bee8-44ce-9c44-df8b0b887410",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c475ed09-bee8-44ce-9c44-df8b0b887410",
+        "lesson_activity.key": "71dec560-ccd5-447c-baab-708cb9b4b2f6"
+      }
+    },
+    {
+      "key": "dce3a111-f39f-488d-9e12-33a13d090d26",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students 20 to 25 UNO cards.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you don't have UNO cards, there are digital card templates you can print and cut out for the activity. You can also use regular playing cards as an alternative. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dce3a111-f39f-488d-9e12-33a13d090d26",
+        "lesson_activity.key": "5146c402-1782-4511-bec6-03a4170d45ce"
+      }
+    },
+    {
+      "key": "a3b84abc-22e0-4dcd-8303-ab9d408c9985",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a3b84abc-22e0-4dcd-8303-ab9d408c9985",
+        "lesson_activity.key": "5146c402-1782-4511-bec6-03a4170d45ce"
+      }
+    },
+    {
+      "key": "ddccd8bf-fd07-4f18-8df7-7cb7d025b010",
+      "position": 3,
+      "properties": {
+        "description": "Your task is to sort the cards in ascending order by number. Take your time and focus on organizing your deck.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ddccd8bf-fd07-4f18-8df7-7cb7d025b010",
+        "lesson_activity.key": "5146c402-1782-4511-bec6-03a4170d45ce"
+      }
+    },
+    {
+      "key": "b1126a33-99e0-4a32-b333-125c7f5f84d1",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students sort their cards by number in ascending order.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after sorting?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal**: Listen for responses like, \"The cards were easier to analyze,\" or \"It helped us quickly identify the highest and lowest values.\""
+      },
+      "seeding_key": {
+        "activity_section.key": "b1126a33-99e0-4a32-b333-125c7f5f84d1",
+        "lesson_activity.key": "5146c402-1782-4511-bec6-03a4170d45ce"
+      }
+    },
+    {
+      "key": "1744f32f-5c65-4296-9ced-65d6db711624",
+      "position": 5,
+      "properties": {
+        "description": "Now, choose one color and filter your deck to include only the cards of that color. Set aside any cards that don't match.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1744f32f-5c65-4296-9ced-65d6db711624",
+        "lesson_activity.key": "5146c402-1782-4511-bec6-03a4170d45ce"
+      }
+    },
+    {
+      "key": "5ec8cc93-958e-44ae-870b-d273a1f11cad",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students will choose one color and filter their deck to include only the cards of that color, setting aside the others.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after filtering?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for responses like, \"We could focus on a specific group of cards,\" or \"It showed which colors had more or fewer cards.\""
+      },
+      "seeding_key": {
+        "activity_section.key": "5ec8cc93-958e-44ae-870b-d273a1f11cad",
+        "lesson_activity.key": "5146c402-1782-4511-bec6-03a4170d45ce"
+      }
+    },
+    {
+      "key": "2014c132-4fb1-43ca-bd60-826e8abdbf4b",
+      "position": 7,
+      "properties": {
+        "description": "Now, count how many cards you have for each color. Record the totals for red, blue, yellow, and green.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2014c132-4fb1-43ca-bd60-826e8abdbf4b",
+        "lesson_activity.key": "5146c402-1782-4511-bec6-03a4170d45ce"
+      }
+    },
+    {
+      "key": "26ec52f7-d560-4df7-a46a-78c7f728c52a",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will count how many cards they have for each color and record the totals for red, blue, yellow, and green.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after counting?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal**: Listen for insights like, \"Red and blue cards made up most of the deck,\" or \"It helped us see which colors were more common.\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "26ec52f7-d560-4df7-a46a-78c7f728c52a",
+        "lesson_activity.key": "5146c402-1782-4511-bec6-03a4170d45ce"
+      }
+    },
+    {
+      "key": "827d90c2-4f15-4c8a-a8fc-09673b321e77",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Processing Library Data activity guide.",
+        "duration": "20",
+        "name": "Processing Library Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "827d90c2-4f15-4c8a-a8fc-09673b321e77",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "e7c66749-7e19-4375-b56b-9e95a0759775",
+      "position": 2,
+      "properties": {
+        "description": "Imagine you’re a librarian who needs to make decisions quickly, like recommending books to visitors or identifying which books are rarely checked out. You can’t rely on manual sorting all the time, especially when dealing with thousands of records. That’s where computer systems and computational tasks come in. Today, we’ll work with a dataset about a library’s book collection and use computational processes to uncover patterns and make data-driven decisions, just like a computer system would. In this activity, you’ll analyze a dataset step by step, just like a computer system processes data. We’ll use a flowchart to break the problem into clear steps. Let’s walk through an example together to get started.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e7c66749-7e19-4375-b56b-9e95a0759775",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "7b8aebd9-fb2d-48f4-9711-c024549572f7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to open Lesson 8, Level 1. Walk students through solving the first choice level using the following steps:\n- **Define the goal:** A new visitor wants to know the hottest books to start reading.\n- **Identify the relevant data:** Popularity Score column.\n- **Choose the action (verb):** Sort.\n- **Apply the action:** Use the spreadsheet to **sort** by descending order of Popularity Score.\n- **Describe the output:** Sort by descending order of Popularity Score.\n- **Describe the output:** The books are now listed from most popular to least popular.\n- **Reflect on insights**: This helps the library highlight the most popular books to new visitors.",
+        "progression_name": "Processing Library Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b8aebd9-fb2d-48f4-9711-c024549572f7",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "3b4049a3-d5a3-4269-bed9-6a273d12a29a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Model filling out the Madlib template on chart paper or the board for the first scenario: “The system needs to [show the hottest books to visitors]. To do this, it will [Sort] the [Popularity Score column] by [descending order]. The system will then produce [a list of books ranked by popularity] so that [visitors know the best books to start with].”"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b4049a3-d5a3-4269-bed9-6a273d12a29a",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "7b689fb1-03ec-4f6d-9f28-97ffdfa24323",
+      "position": 5,
+      "properties": {
+        "description": "Now it’s your turn! Work with your partner to complete three library data choice levels. For each scenario, follow the steps we just practiced: define the goal, choose the action, identify the relevant data, apply the action, describe the output, and reflect on the insights. Don’t forget to complete the flowchart and Madlib template for each level!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7b689fb1-03ec-4f6d-9f28-97ffdfa24323",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "85c6a492-adaa-4716-b5aa-6051f45af4d6",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students complete the remaining library data choice levels in Lesson 8, Level 1. They use their activity guide to write down the steps for three of the choice levels, and fill out the Madlib template to summarize their process and results for three of the choice levels level."
+      },
+      "seeding_key": {
+        "activity_section.key": "85c6a492-adaa-4716-b5aa-6051f45af4d6",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "142ba136-fea3-45cd-883a-c7221cbc9b1f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**:\n- Observe students as they work through the scenarios.\n- Check that students are filling out their flowchart worksheets and Madlib templates correctly.\n- Provide guidance or clarification if students are stuck on any step.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to think back to the UNO card activity. Remind them how sorting, filtering, and aggregating helped them see patterns and make decisions with their cards. They can apply the same strategies to the library dataset."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "142ba136-fea3-45cd-883a-c7221cbc9b1f",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "5885dd2b-5a72-4974-b20b-7791b68de3ba",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5885dd2b-5a72-4974-b20b-7791b68de3ba",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "aa2b8f8d-29cd-4531-a92f-038bd25e4777",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have completed their scenarios, lead a review as a class. Ask student pairs to share their answers, focusing on the flowchart steps and the Madlib templates. Highlight and clarify any differences or commonalities in their findings."
+      },
+      "seeding_key": {
+        "activity_section.key": "aa2b8f8d-29cd-4531-a92f-038bd25e4777",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "e92dd3e9-b34e-40b5-96b0-74cace151b2b",
+      "position": 10,
+      "properties": {
+        "description": "Let’s take some time to reflect on what you’ve learned. You’ll answer three free-response questions to compare the benefits and limitations of manual and computational data processing. Think about how the tools and methods we used today improve efficiency, accuracy, and help us handle larger datasets.",
+        "duration": "10",
+        "name": "Reflection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e92dd3e9-b34e-40b5-96b0-74cace151b2b",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "c2399cd5-702e-4830-a8db-75e3993b0f8d",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to respond to the reflection questions on Levels 2, 3, and 4.",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2399cd5-702e-4830-a8db-75e3993b0f8d",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
+      "key": "e701d697-900c-4b4d-b862-635b827ba641",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or small piece of paper."
+      },
+      "seeding_key": {
+        "activity_section.key": "e701d697-900c-4b4d-b862-635b827ba641",
+        "lesson_activity.key": "f88e8ef0-4c64-4d5e-8c36-f88de62fe03c"
+      }
+    },
+    {
+      "key": "75ba5d08-8e9f-430b-acde-d7f014bb66c6",
+      "position": 2,
+      "properties": {
+        "description": "We’re going to watch a short video that connects what we’ve learned today to a real-world example. While you watch, think about the questions on the screen and take notes. You’ll answer all three questions as your exit ticket.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "75ba5d08-8e9f-430b-acde-d7f014bb66c6",
+        "lesson_activity.key": "f88e8ef0-4c64-4d5e-8c36-f88de62fe03c"
+      }
+    },
+    {
+      "key": "470388e3-eab1-4609-ad18-8016c91c6a12",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video**: Show the video \"This AI coach can show tennis players how to up their game\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students watch the video carefully and answer the questions on their index card."
+      },
+      "seeding_key": {
+        "activity_section.key": "470388e3-eab1-4609-ad18-8016c91c6a12",
+        "lesson_activity.key": "f88e8ef0-4c64-4d5e-8c36-f88de62fe03c"
+      }
+    },
+    {
+      "key": "24b7e3fa-0718-4f03-8306-b0a637356343",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "24b7e3fa-0718-4f03-8306-b0a637356343",
+        "lesson_activity.key": "75005b55-6ad4-4824-87fb-7f8952eebea7"
+      }
+    },
+    {
+      "key": "4f2b290c-8674-4dbe-be8a-e02b97496208",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4f2b290c-8674-4dbe-be8a-e02b97496208",
+        "lesson_activity.key": "7f17e81c-5804-4920-bdc7-10154afbe23a"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level1-2024"
+        ],
+        "progression": "Pick an Innovation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level1-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "3ef5f00c-f231-41db-8abc-5d5d80432d3e"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level1-2024"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level2-2024"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level2-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level2-2024"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level3-2024"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level3-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level3-2024"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level4-2024"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level4-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level4-2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level5-2024"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level5-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level5-2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level6-2024"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level6-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level6-2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level7-2024"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level7-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level7-2024"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level8-2024"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level8-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level8-2024"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level9-2024"
+        ],
+        "progression": "Industry Interviews"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level9-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level9-2024"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level10-2024"
+        ],
+        "progression": "Exploring Technical Roles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level10-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "009679d2-a20e-4ad1-bec1-49b576efef45"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level10-2024"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level11-2024"
+        ],
+        "progression": "Your Role in Innovation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level11-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "c659f9da-cdf7-480c-87a3-58081f0c6d8e"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level11-2024"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level12-2024"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level12-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "69890191-c8d4-465c-af95-1553e4ef6604"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level12-2024"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-career-exploration"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson2-career-exploration"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "278c0aea-077d-44c9-95ab-c9de12199cde"
+      },
+      "level_keys": [
+        "computer-systems-lesson2-career-exploration"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level2-2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson2-level2-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "278c0aea-077d-44c9-95ab-c9de12199cde"
+      },
+      "level_keys": [
+        "computer-systems-lesson2-level2-2024"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level1-2024"
+        ],
+        "progression": "PCPartPicker"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level1-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "cb48d2b2-5f4f-402d-a52c-327d12163591"
+      },
+      "level_keys": [
+        "computer-systems-lesson6-level1-2024"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level2-2024"
+        ],
+        "progression": "Computer Build User Profiles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level2-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "d8844c08-6f71-4ff2-b166-d50512058ba5"
+      },
+      "level_keys": [
+        "computer-systems-lesson6-level2-2024"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level3-2024"
+        ],
+        "progression": "Computer Build Assistant"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level3-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "af6f685a-a64f-4234-b02a-67f42b5c0343"
+      },
+      "level_keys": [
+        "computer-systems-lesson6-level3-2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level4-2024"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level4-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "050029b5-3282-40b9-92c3-b6fda10628c4"
+      },
+      "level_keys": [
+        "computer-systems-lesson6-level4-2024"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level1-2024"
+        ],
+        "progression": "Processing Library Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level1-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "7b8aebd9-fb2d-48f4-9711-c024549572f7"
+      },
+      "level_keys": [
+        "computer-systems-lesson8-level1-2024"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level2-2024"
+        ],
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level2-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "c2399cd5-702e-4830-a8db-75e3993b0f8d"
+      },
+      "level_keys": [
+        "computer-systems-lesson8-level2-2024"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level3-2024"
+        ],
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level3-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "c2399cd5-702e-4830-a8db-75e3993b0f8d"
+      },
+      "level_keys": [
+        "computer-systems-lesson8-level3-2024"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level4-2024"
+        ],
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level4-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "c2399cd5-702e-4830-a8db-75e3993b0f8d"
+      },
+      "level_keys": [
+        "computer-systems-lesson8-level4-2024"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level1-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level1-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "3ef5f00c-f231-41db-8abc-5d5d80432d3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level2-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level2-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level3-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level3-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level4-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level4-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level5-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level5-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level6-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level6-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level7-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level7-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level8-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level8-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level9-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level9-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "94944e8c-06eb-463d-8b6a-ffd89aeb7f6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level10-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level10-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "009679d2-a20e-4ad1-bec1-49b576efef45"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level11-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level11-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "c659f9da-cdf7-480c-87a3-58081f0c6d8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson1-level12-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level12-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "69890191-c8d4-465c-af95-1553e4ef6604"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson2-career-exploration",
+        "script_level.level_keys": [
+          "computer-systems-lesson2-career-exploration"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "278c0aea-077d-44c9-95ab-c9de12199cde"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson2-level2-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson2-level2-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "278c0aea-077d-44c9-95ab-c9de12199cde"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson6-level1-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level1-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "cb48d2b2-5f4f-402d-a52c-327d12163591"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson6-level2-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level2-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "d8844c08-6f71-4ff2-b166-d50512058ba5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson6-level3-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level3-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "af6f685a-a64f-4234-b02a-67f42b5c0343"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson6-level4-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level4-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "050029b5-3282-40b9-92c3-b6fda10628c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson8-level1-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level1-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "7b8aebd9-fb2d-48f4-9711-c024549572f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson8-level2-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level2-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "c2399cd5-702e-4830-a8db-75e3993b0f8d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson8-level3-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level3-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "c2399cd5-702e-4830-a8db-75e3993b0f8d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson8-level4-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level4-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "c2399cd5-702e-4830-a8db-75e3993b0f8d"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[KEY] Computer Innovations and Careers",
+      "url": "https://docs.google.com/document/d/17DeraVp683PTsNxzdQaORhUhmA9OAYPAl9wB8dPMIuM/edit?usp=sharing",
+      "key": "_key_computer_innovations_and_careers",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_computer_innovations_and_careers"
+      }
+    },
+    {
+      "name": "[KEY] Processing Library Data",
+      "url": "https://docs.google.com/document/d/1tEMbuvWzG8wpZMprMWU7R3yCpnZi94AnQPojEjiTUec/edit?usp=sharing",
+      "key": "_key_processing_library_data",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_processing_library_data"
+      }
+    },
+    {
+      "name": "Build a Computer System",
+      "url": "https://docs.google.com/document/d/1HaOTj31J9bhujOWbGkBP3ki0tPUwnZiG2T6JJSppczE/edit?usp=sharing",
+      "key": "build_a_computer_system",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "build_a_computer_system"
+      }
+    },
+    {
+      "name": "Build a Computer System",
+      "url": "https://docs.google.com/presentation/d/1M-OgZVPYJkQqTWNqUw61rqQ5fOROGlk0kUuWs0IEoyc/view",
+      "key": "build_a_computer_system_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "build_a_computer_system_1"
+      }
+    },
+    {
+      "name": "Computer Innovations and Careers",
+      "url": "https://docs.google.com/document/d/1cEQFriaJ_fgCw3Dx7umOgE96Vwh7e6us4sp255MyizE/edit?usp=sharing",
+      "key": "computer_innovations_and_careers",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "computer_innovations_and_careers"
+      }
+    },
+    {
+      "name": "Computing Innovation Map",
+      "url": "https://www.google.com/maps/d/u/1/viewer?mid=1wpU-4sxapqN7ksztqtEdVEcKtbhCcA0",
+      "key": "computing_innovation_map",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "computing_innovation_map"
+      }
+    },
+    {
+      "name": "Hardware Components",
+      "url": "https://docs.google.com/document/d/1Lqtsetwfnt3OnqHNolO8of2SlelI26LHefexVw1UC44/edit?usp=sharing",
+      "key": "hardware_components",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "hardware_components"
+      }
+    },
+    {
+      "name": "Introduction to Computer Systems",
+      "url": "https://docs.google.com/presentation/d/1k-qieHMGe9J5uJIdp3tPLyfE-lgDEGHAO8iXjaSwSJA/view",
+      "key": "introduction_to_computer_systems",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_computer_systems"
+      }
+    },
+    {
+      "name": "Library Books Dataset",
+      "url": "https://docs.google.com/spreadsheets/d/1ArYkmUcYwbXz-hQkyIon2t87WZbLEOFfUaOFj5jZdE4/edit?usp=sharing",
+      "key": "library_books_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "library_books_dataset"
+      }
+    },
+    {
+      "name": "Processing Data in a System",
+      "url": "https://docs.google.com/presentation/d/1HZNwDSndGgsfpxZo9WszU60AezONYde-EvVVQMN4vzw/view",
+      "key": "processing_data_in_a_system",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "processing_data_in_a_system"
+      }
+    },
+    {
+      "name": "Processing Library Data",
+      "url": "https://docs.google.com/document/d/1XzYTHgCSkDFogdTEkddYqgm6heBQ2s-pYSlcNkJNZYs/edit?tab=t.0",
+      "key": "processing_library_data",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "processing_library_data"
+      }
+    },
+    {
+      "name": "UNO Cards",
+      "url": "https://drive.google.com/file/d/1GmineBV7vVU9pcMpF31g6zgkYjXPaiQ_/view?usp=sharing",
+      "key": "uno_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "uno_cards"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_computer_innovations_and_careers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "computer_innovations_and_careers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "computing_innovation_map"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "introduction_to_computer_systems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "build_a_computer_system"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "build_a_computer_system_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "hardware_components"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_processing_library_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "library_books_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "processing_data_in_a_system"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "processing_library_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "uno_cards"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "computer_system",
+      "word": "computer system",
+      "definition": "a combination of hardware and software components that work together to input, process, store, and output information",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_system"
+      }
+    },
+    {
+      "key": "pc_build",
+      "word": "PC build",
+      "definition": "a custom-assembled computer made from individually selected parts, designed specifically for gaming, work, or other tasks",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pc_build"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "computer_system"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "pc_build"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "0520e9ab-0a47-47bc-927d-03214f7f4df3",
+      "properties": {
+        "description": "Identify career pathways in computing"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "0520e9ab-0a47-47bc-927d-03214f7f4df3"
+      }
+    },
+    {
+      "key": "40cde4df-3267-4db4-86fe-5468cb5a48c2",
+      "properties": {
+        "description": "Describe different ways data can be analyzed"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "40cde4df-3267-4db4-86fe-5468cb5a48c2"
+      }
+    },
+    {
+      "key": "456d4884-3e84-4170-be58-6ade6a98a6bd",
+      "properties": {
+        "description": "Describe innovations in computing in different disciplines"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "456d4884-3e84-4170-be58-6ade6a98a6bd"
+      }
+    },
+    {
+      "key": "8deb4e54-354b-4b56-a94e-9f0f54c1c5fb",
+      "properties": {
+        "description": "Justify computer system design decisions based on the resources available and intended use of the system"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "8deb4e54-354b-4b56-a94e-9f0f54c1c5fb"
+      }
+    },
+    {
+      "key": "bc83e2ba-8ac8-43d0-8fe0-f97bd4a2651c",
+      "properties": {
+        "description": "Explain how computer systems and people work together to solve problems"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "bc83e2ba-8ac8-43d0-8fe0-f97bd4a2651c"
+      }
+    },
+    {
+      "key": "bc8ab89e-65a6-4ab7-b820-1bae4064a5c7",
+      "properties": {
+        "description": "Explain the roles of hardware, software, and operating systems in executing tasks"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "bc8ab89e-65a6-4ab7-b820-1bae4064a5c7"
+      }
+    },
+    {
+      "key": "cdad80bb-f0b8-4962-81f3-d57dd5110dbd",
+      "properties": {
+        "description": "Decompose problems into actionable steps that define the goal, data, process, and desired outcome"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "cdad80bb-f0b8-4962-81f3-d57dd5110dbd"
+      }
+    }
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

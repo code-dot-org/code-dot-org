@@ -27,6 +27,13 @@ gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we u
 gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
+# Compile Sprockets assets concurrently in `assets:precompile`.
+# TODO: update to Sprockets 4.x mainline, which includes this change but also
+# other breaking changes from 3.x
+# Ref: https://github.com/rails/sprockets/pull/469
+# Ref: https://github.com/rails/sprockets/blob/main/UPGRADING.md#manifestjs
+gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
+
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 3.0'

@@ -1,10 +1,10 @@
+import {Heading2} from '@code-dot-org/component-library/typography';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import ReactTooltip from 'react-tooltip';
 
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 import * as utils from '../../../utils';

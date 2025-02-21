@@ -1,6 +1,6 @@
 name 'computer-systems-smartboard-edu-professionals'
 display_name 'Industry Professional for SMART Boards'
-description '#### <br /> See how interactive digital whiteboards are changing the way teachers, students, and administrators collaborate in classrooms. Choose a role and conduct an interview to understand how SMART Boards support modern education.'
+description 'See how interactive digital whiteboards are changing the way teachers, students, and administrators collaborate in classrooms. Choose a role and conduct an interview to understand how SMART Boards support modern education.'
 
 sublevels
 level 'computer-systems-teacher-smartboard-aichat'

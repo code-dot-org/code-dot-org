@@ -6,7 +6,9 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useResizable} from 'react-resizable-layout';
 
 import Console from '@cdo/apps/codebridge/Console/Console';
+import {logOnResize} from '@cdo/apps/lab2/utils/logOnResize';
 import ResizeBar from '@cdo/apps/lab2/views/components/ResizeBar';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import CodebridgeRegistry from '../CodebridgeRegistry';
 import {MiniApps} from '../constants';
@@ -40,6 +42,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
   // In vertical mode, consoleSize is the height of the console.
   // In horizontal mode, consoleSize is the width of the console.
   const [consoleSize, setConsoleSize] = useState<number | undefined>(undefined);
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const {
     position: miniAppSize,
@@ -51,6 +54,11 @@ const Output: React.FunctionComponent<OutputProps> = ({
     min: MIN_MINI_APP_SIZE,
     max: MAX_MINI_APP_SIZE,
     containerRef: resizeContainerRef,
+    onResizeStart: () =>
+      logOnResize(appName, {
+        layout: config.activeLayout || '',
+        resizeBar: 'neighborhood',
+      }),
   });
 
   const [adjustedMiniAppSize, setAdjustedMiniAppSize] =
@@ -108,7 +116,7 @@ const Output: React.FunctionComponent<OutputProps> = ({
           : desiredWidth !== undefined
           ? desiredWidth
           : DEFAULT_MINI_APP_SIZE;
-        const sliderHeight = 60;
+        const sliderHeight = 37;
         // The original visualization is rendered at 800x800.
         const originalVisualizationWidth = 800;
         const headerSize = 40;

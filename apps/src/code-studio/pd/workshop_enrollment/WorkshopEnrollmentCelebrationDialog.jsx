@@ -1,13 +1,13 @@
 import Button from '@code-dot-org/component-library/button';
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
-
 import Typography, {
   Heading2,
   Heading3,
   Heading6,
   BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';

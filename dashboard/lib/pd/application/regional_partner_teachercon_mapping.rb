@@ -38,7 +38,7 @@ module Pd::Application
       Pd::Workshop.
         in_year(year).
         where(course: course, subject: subject).
-        where('location_address like ?', "%#{city}%").
+        where('pd_workshops.location_address like ?', "%#{city}%").
         first
     end
   end
