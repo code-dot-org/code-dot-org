@@ -158,7 +158,6 @@ export const setUpWithLevel = createAsyncThunk<
     );
     thunkAPI.dispatch(setScriptId(payload.scriptId));
 
-    // TODO: Workaround for AI Tutor for now
     // Massage levelProperties to match aiTutor's format
     const aiTutorLevel = mapLevelPropertiesToAITutorLevel(levelProperties);
     thunkAPI.dispatch(setLevel(aiTutorLevel));
