@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-20 01:39:39 UTC",
+    "serialized_at": "2025-02-20 22:24:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -61,9 +61,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**How do computer systems solve problems and impact the world around us?**\n\nIn this lesson, students will explore how computing roles and innovations address real-world challenges in various industries. Through team activities, AI simulations, and collaborative discussions, students will investigate a selected innovation, assign professional roles, and reflect on the impact of computing systems on solving industry-specific problems.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do computer systems solve problems and impact the world around us?**\n\nIn this lesson, students will explore how computing roles and innovations address real-world challenges in various industries. Through team activities, AI simulations, and collaborative discussions, students will investigate a selected innovation, assign professional roles, and reflect on the impact of computing systems on solving industry-specific problems.",
         "preparation": "* Print copies of the Computer Innovations and Careers activity guide (one for each student)",
-        "student_overview": "**How do computer systems solve problems and impact the world around us?**\n\nIn this lesson, you will discover how computing roles contribute to solving real-world challenges. You'll explore an industry, investigate an innovation, and work with your team to understand how different roles come together to create impactful solutions."
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do computer systems solve problems and impact the world around us?**\n\nIn this lesson, you will discover how computing roles contribute to solving real-world challenges. You'll explore an industry, investigate an innovation, and work with your team to understand how different roles come together to create impactful solutions."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -79,6 +79,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -94,6 +96,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -109,6 +113,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -139,9 +145,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**How can we design computational systems that balance user needs, budget, and performance?**\n\nStudents will recall important hardware components needed to create a computer system. They will analyze the needs of a fictional user to plan a computer build for the user using an AI Assistant to research and select the right components.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can we design computational systems that balance user needs, budget, and performance?**\n\nStudents will recall important hardware components needed to create a computer system. They will analyze the needs of a fictional user to plan a computer build for the user using an AI Assistant to research and select the right components.",
         "preparation": "* Print copies of the Build a Computer System activity guide (one for each pair of students)",
-        "student_overview": "**How can we design computational systems that balance user needs, budget, and performance?**\n\nIn this lesson, you will analyze the needs of a fictional user to plan a computer build for the user. You will use an AI Assistant to research and select the right components."
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How can we design computational systems that balance user needs, budget, and performance?**\n\nIn this lesson, you will analyze the needs of a fictional user to plan a computer build for the user. You will use an AI Assistant to research and select the right components."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -157,6 +163,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -220,6 +228,8 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***",
+        "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -309,6 +319,30 @@
       "seeding_key": {
         "lesson_activity.key": "fab12dd7-8d11-4123-a39b-e67ba0083f33",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "8b6d2f27-6ac1-4470-a89e-f54cbeae0e57",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8b6d2f27-6ac1-4470-a89e-f54cbeae0e57",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "dc174765-fc1e-4b64-95ef-0cbfb4fffeac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc174765-fc1e-4b64-95ef-0cbfb4fffeac",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024"
       }
@@ -416,6 +450,18 @@
       "seeding_key": {
         "lesson_activity.key": "75005b55-6ad4-4824-87fb-7f8952eebea7",
         "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "7f17e81c-5804-4920-bdc7-10154afbe23a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7f17e81c-5804-4920-bdc7-10154afbe23a",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024"
       }
@@ -586,6 +632,26 @@
       "seeding_key": {
         "activity_section.key": "278c0aea-077d-44c9-95ab-c9de12199cde",
         "lesson_activity.key": "fab12dd7-8d11-4123-a39b-e67ba0083f33"
+      }
+    },
+    {
+      "key": "ab4ae58a-07d5-43d5-b881-479d7973ca61",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ab4ae58a-07d5-43d5-b881-479d7973ca61",
+        "lesson_activity.key": "8b6d2f27-6ac1-4470-a89e-f54cbeae0e57"
+      }
+    },
+    {
+      "key": "f3d81911-5bc6-4f17-ac44-9f39db1cc288",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f3d81911-5bc6-4f17-ac44-9f39db1cc288",
+        "lesson_activity.key": "dc174765-fc1e-4b64-95ef-0cbfb4fffeac"
       }
     },
     {
@@ -1029,6 +1095,16 @@
         "activity_section.key": "24b7e3fa-0718-4f03-8306-b0a637356343",
         "lesson_activity.key": "75005b55-6ad4-4824-87fb-7f8952eebea7"
       }
+    },
+    {
+      "key": "4f2b290c-8674-4dbe-be8a-e02b97496208",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4f2b290c-8674-4dbe-be8a-e02b97496208",
+        "lesson_activity.key": "7f17e81c-5804-4920-bdc7-10154afbe23a"
+      }
     }
   ],
   "script_levels": [
@@ -1362,6 +1438,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level2-2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {

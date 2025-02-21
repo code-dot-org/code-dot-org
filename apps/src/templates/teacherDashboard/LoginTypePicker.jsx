@@ -4,6 +4,7 @@
  * manage their own accounts via email/oauth, or to sync students with an
  * external service like Microsoft Classroom or Clever.
  */
+import Typography from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -13,7 +14,6 @@ import {
   LmsLoginTypeNames,
   LmsLoginInstructionUrls,
 } from '@cdo/apps/accounts/constants';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {Heading3} from '@cdo/apps/legacySharedComponents/Headings';
