@@ -209,6 +209,7 @@ export interface LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
+  aiTutorAvailable?: boolean | undefined;
 }
 
 // Level configuration data used by project-backed labs that don't require

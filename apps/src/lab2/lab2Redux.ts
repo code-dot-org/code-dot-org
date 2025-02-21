@@ -24,6 +24,7 @@ import {
 } from '@cdo/apps/templates/currentUserRedux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import {setLevel} from '../aiTutor/redux/aiTutorRedux';
 import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
 import {
   setProjectUpdatedAt,
@@ -55,6 +56,17 @@ import {
   Validation,
 } from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
+
+const mapLevelPropertiesToAITutorLevel = (levelProperties: LevelProperties) => {
+  return {
+    id: levelProperties.id,
+    type: '', // TODO: Map the type directly from levelProperties
+    aiTutorAvailable: !!levelProperties.aiTutorAvailable,
+    hasValidation: false, // TODO: If there are validations, set to true
+    isAssessment: false, // TODO: Add to levelProperties
+    progressionType: 'other', // TODO
+  };
+};
 
 interface PageError {
   errorMessage: string;
@@ -144,8 +156,14 @@ export const setUpWithLevel = createAsyncThunk<
     const levelProperties = await loadLevelProperties(
       payload.levelPropertiesPath
     );
-
+    console.log('****levelProperties', levelProperties);
     thunkAPI.dispatch(setScriptId(payload.scriptId));
+
+    // TODO: Workaround for AI Tutor for now
+    // Massage levelProperties to match aiTutor's format
+    const aiTutorLevel = mapLevelPropertiesToAITutorLevel(levelProperties);
+    console.log('setting level', aiTutorLevel);
+    thunkAPI.dispatch(setLevel(aiTutorLevel));
 
     Lab2Registry.getInstance()
       .getMetricsReporter()
