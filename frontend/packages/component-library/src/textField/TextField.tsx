@@ -111,8 +111,8 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
             [moduleStyles.hasError]: errorMessage,
           },
           moduleStyles.textField,
-          moduleStyles[`textField-${color}`],
-          moduleStyles[`textField-${size}`],
+          moduleStyles[`textField-color-${color}`],
+          moduleStyles[`textField-size-${size}`],
         )}
         {...HTMLAttributes}
         aria-disabled={disabled || HTMLAttributes['aria-disabled']}

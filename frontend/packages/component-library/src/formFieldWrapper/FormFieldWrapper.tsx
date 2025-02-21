@@ -78,8 +78,8 @@ const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
       {...HTMLAttributes}
       className={classNames(
         moduleStyles.formFieldWrapper,
-        moduleStyles[`formFieldWrapper-${color}`],
-        moduleStyles[`formFieldWrapper-${size}`],
+        moduleStyles[`formFieldWrapper-color-${color}`],
+        moduleStyles[`formFieldWrapper-size-${size}`],
         HTMLAttributes.className,
       )}
     >
