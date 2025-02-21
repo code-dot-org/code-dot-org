@@ -15,13 +15,12 @@ export interface FormFieldWrapperProps extends HTMLAttributes<HTMLDivElement> {
   size?: Exclude<ComponentSizeXSToL, 'xs'>;
   /** FormFieldWrapper label */
   label?: ReactNode;
-  /** FormFieldWrapper helper section */
-  helper?: Partial<{
-    icon: FontAwesomeV6IconProps;
-    text: ReactNode;
-  }>;
+  /** FormFieldWrapper helper message */
+  helperMessage?: ReactNode;
+  /** FormFieldWrapper helper icon */
+  helperIcon?: FontAwesomeV6IconProps;
   /** FormFieldWrapper error message */
-  error?: ReactNode;
+  errorMessage?: ReactNode;
 }
 
 /**
@@ -40,15 +39,16 @@ export interface FormFieldWrapperProps extends HTMLAttributes<HTMLDivElement> {
 const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
   children,
   label,
-  error,
-  helper,
+  helperMessage,
+  helperIcon,
+  errorMessage,
   color = 'black',
   size = 'm',
   ...HTMLAttributes
 }) => {
   const errorSection = useMemo(
     () =>
-      error && (
+      errorMessage && (
         <div
           className={classNames(
             moduleStyles.formFieldWrapperHelper,
@@ -56,21 +56,21 @@ const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
           )}
         >
           <FontAwesomeV6Icon iconName="circle-exclamation" />
-          <span>{error}</span>
+          <span>{errorMessage}</span>
         </div>
       ),
-    [error],
+    [errorMessage],
   );
 
   const helperSection = useMemo(
     () =>
-      (helper?.icon || helper?.text) && (
+      helperMessage && (
         <div className={moduleStyles.formFieldWrapperHelper}>
-          {helper?.icon && <FontAwesomeV6Icon {...helper.icon} />}
-          {helper?.text && <span>{helper.text}</span>}
+          {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
+          {<span>{helperMessage}</span>}
         </div>
       ),
-    [helper],
+    [helperMessage, helperIcon],
   );
 
   return (

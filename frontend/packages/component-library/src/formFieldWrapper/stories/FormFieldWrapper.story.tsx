@@ -18,11 +18,12 @@ const defaultComponents: FormFieldWrapperProps[] = [
   },
   {
     ...defaultArgs,
-    helper: {text: 'Helper message', icon: {iconName: 'tag'}},
+    helperMessage: 'Helper message',
+    helperIcon: {iconName: 'tag'},
   },
   {
     ...defaultArgs,
-    error: 'Error message',
+    errorMessage: 'Error message',
   },
 ];
 
@@ -50,19 +51,20 @@ Default.args = {
 export const WithHelperMessage = SingleTemplate.bind({});
 WithHelperMessage.args = {
   ...defaultArgs,
-  helper: {text: 'Helper message'},
+  helperMessage: 'Helper message',
 };
 
 export const WithHelperIconAndMessage = SingleTemplate.bind({});
 WithHelperIconAndMessage.args = {
   ...defaultArgs,
-  helper: {text: 'Helper message', icon: {iconName: 'tag'}},
+  helperMessage: 'Helper message',
+  helperIcon: {iconName: 'tag'},
 };
 
 export const WithError = SingleTemplate.bind({});
 WithError.args = {
   ...defaultArgs,
-  error: 'Error message',
+  errorMessage: 'Error message',
 };
 
 export const WithDisabledChildElement = MultipleTemplate.bind({});
@@ -85,19 +87,22 @@ Sizes.args = {
       ...defaultArgs,
       size: 's',
       label: 'S Label text',
-      helper: {text: 'S Helper message', icon: {iconName: 'tag'}},
+      helperMessage: 'S Helper message',
+      helperIcon: {iconName: 'tag'},
     },
     {
       ...defaultArgs,
       size: 'm',
       label: 'M Label text',
-      helper: {text: 'M Helper message', icon: {iconName: 'tag'}},
+      helperMessage: 'M Helper message',
+      helperIcon: {iconName: 'tag'},
     },
     {
       ...defaultArgs,
       size: 'l',
       label: 'L Label text',
-      helper: {text: 'L Helper message', icon: {iconName: 'tag'}},
+      helperMessage: 'L Helper message',
+      helperIcon: {iconName: 'tag'},
     },
   ],
 };
