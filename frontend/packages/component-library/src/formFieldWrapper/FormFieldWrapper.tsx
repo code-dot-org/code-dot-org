@@ -9,6 +9,8 @@ import moduleStyles from './formFieldWrapper.module.scss';
 export interface FormFieldWrapperProps extends HTMLAttributes<HTMLDivElement> {
   /** FormFieldWrapper children */
   children?: ReactNode;
+  /** FormFieldWrapper Custom class name */
+  className?: string;
   /** FormFieldWrapper color */
   color?: 'black' | 'gray' | 'white';
   /** FormFieldWrapper size */
@@ -38,6 +40,7 @@ export interface FormFieldWrapperProps extends HTMLAttributes<HTMLDivElement> {
  */
 const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
   children,
+  className,
   label,
   helperMessage,
   helperIcon,
@@ -80,7 +83,7 @@ const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
         moduleStyles.formFieldWrapper,
         moduleStyles[`formFieldWrapper-color-${color}`],
         moduleStyles[`formFieldWrapper-size-${size}`],
-        HTMLAttributes.className,
+        className,
       )}
     >
       {label ? (
