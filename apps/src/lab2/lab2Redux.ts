@@ -57,16 +57,16 @@ import {
 } from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
 
-const mapLevelPropertiesToAITutorLevel = (levelProperties: LevelProperties) => {
-  return {
-    id: levelProperties.id,
-    type: '', // TODO: Map the type directly from levelProperties
-    aiTutorAvailable: !!levelProperties.aiTutorAvailable,
-    hasValidation: false, // TODO: If there are validations, set to true
-    isAssessment: false, // TODO: Add to levelProperties
-    progressionType: 'other', // TODO
-  };
-};
+const mapLevelPropertiesToAITutorLevel = (
+  levelProperties: LevelProperties
+) => ({
+  id: levelProperties.id,
+  type: levelProperties.type || '',
+  aiTutorAvailable: !!levelProperties.aiTutorAvailable,
+  hasValidation: !!levelProperties.hasValidation,
+  isAssessment: !!levelProperties.isAssessment,
+  progressionType: levelProperties.progressionType || '',
+});
 
 interface PageError {
   errorMessage: string;
