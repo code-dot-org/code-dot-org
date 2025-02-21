@@ -25,6 +25,7 @@ type OpenImportFromBackpackPromptArgsType = {
   saveFile: SaveFileFunction;
   projectFiles: MultiFileSource['files'];
   validationFile?: ProjectFile;
+  setLoading: (loading: boolean) => void;
 };
 
 export const openImportFromBackpackPrompt = async ({
@@ -34,6 +35,7 @@ export const openImportFromBackpackPrompt = async ({
   saveFile,
   projectFiles,
   validationFile,
+  setLoading,
 }: OpenImportFromBackpackPromptArgsType) => {
   const handleError = (message: string) => () => {
     // TODO: send analytics / add logging.
@@ -70,11 +72,11 @@ export const openImportFromBackpackPrompt = async ({
       }
     );
   };
-
-  // TODO: Adding a waiting UI (spinner) while waiting for backpack list retrieval.
+  setLoading(true);
   backpackApi.getFileList(
     handleError('Error in getting backpack file list.'),
     async (filenames: string[]) => {
+      setLoading(false);
       if (filenames.length === 0) {
         dialogControl?.showDialog({
           type: DialogType.GenericAlert,

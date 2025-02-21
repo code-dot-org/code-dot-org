@@ -2,7 +2,7 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
-import React from 'react';
+import React, {useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
@@ -17,6 +17,7 @@ import {
 } from './hooks';
 
 export const FileBrowserHeaderPopUpButton = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const {openNewFilePrompt, openNewFolderPrompt, openImportFromBackpackPrompt} =
     usePrompts();
   const {
@@ -43,40 +44,47 @@ export const FileBrowserHeaderPopUpButton = () => {
   return (
     <>
       <FileUploaderComponent />
-      <PopUpButton iconName="plus" alignment="left" id="uitest-files-plus">
-        <PopUpButtonOption
-          iconName="plus"
-          labelText={codebridgeI18n.newFolder()}
-          clickHandler={() =>
-            openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})
-          }
-        />
-        <PopUpButtonOption
-          iconName="plus"
-          labelText={codebridgeI18n.newFile()}
-          clickHandler={() => openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})}
-          id="uitest-new-file"
-        />
-
-        <PopUpButtonOption
-          iconName="upload"
-          labelText={codebridgeI18n.uploadFile()}
-          clickHandler={() => startFileUpload()}
-        />
-        {experiments.isEnabled(experiments.PYTHONLAB_BACKPACK) && (
+      {isLoading ? (
+        <i className="fa fa-spinner fa-spin" />
+      ) : (
+        <PopUpButton iconName="plus" alignment="left" id="uitest-files-plus">
           <PopUpButtonOption
-            iconName="backpack"
-            labelText="Import from backpack"
+            iconName="plus"
+            labelText={codebridgeI18n.newFolder()}
             clickHandler={() =>
-              openImportFromBackpackPrompt({
-                backpackApi: backpackApi,
-                projectFiles: source.files,
-                validationFile: validationFile,
-              })
+              openNewFolderPrompt({parentId: DEFAULT_FOLDER_ID})
             }
           />
-        )}
-      </PopUpButton>
+          <PopUpButtonOption
+            iconName="plus"
+            labelText={codebridgeI18n.newFile()}
+            clickHandler={() =>
+              openNewFilePrompt({folderId: DEFAULT_FOLDER_ID})
+            }
+            id="uitest-new-file"
+          />
+
+          <PopUpButtonOption
+            iconName="upload"
+            labelText={codebridgeI18n.uploadFile()}
+            clickHandler={() => startFileUpload()}
+          />
+          {experiments.isEnabled(experiments.PYTHONLAB_BACKPACK) && (
+            <PopUpButtonOption
+              iconName="backpack"
+              labelText="Import from backpack"
+              clickHandler={() =>
+                openImportFromBackpackPrompt({
+                  backpackApi: backpackApi,
+                  projectFiles: source.files,
+                  validationFile: validationFile,
+                  setLoading: setIsLoading,
+                })
+              }
+            />
+          )}
+        </PopUpButton>
+      )}
     </>
   );
 };
