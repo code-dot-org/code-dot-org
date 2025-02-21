@@ -25,6 +25,8 @@ markdown <<MARKDOWN
     <p style="font-size:14pt;margin-top:10px;">This color combo does not.</p>
 </div>
 
+#### Watch a <a href="https://www.loom.com/share/571ca43e3fc542a8957223a429981692?sid=8ec753ee-20fa-42ab-bc46-cd96ca266763" target="blank" rel="noopener noreferrer">Loom video explaining how to check contrast</a> for more.
+
 ## Redundant Signaling
 
 #### Avoid using color as the only signal for users. Use a combination of elements (color, shape, text, size) instead.

@@ -48,7 +48,7 @@ class Policies::Ai
     return false unless user.teacher?
 
     # An individual opt-out can be supplied here if implemented
-    true
+    user.ai_differentiation_enabled
   end
 
   def self.ai_differentiation_enabled_for_unit?(unit_or_unit_group)

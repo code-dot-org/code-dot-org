@@ -5,4 +5,15 @@ p {
   &.paragraph {
     margin-top: 0;
   }
+
+  // Paragraph colors
+  &.paragraph-color {
+    &-primary {
+      color: var(--text-neutral-primary);
+    }
+
+    &-secondary {
+      color: var(--text-neutral-secondary);
+    }
+  }
 }

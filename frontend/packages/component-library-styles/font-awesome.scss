@@ -3,6 +3,8 @@
    This file will be replaced by the long term font solution: https://codedotorg.atlassian.net/browse/ACQ-2799
  */
 @import 'font.scss';
+
+/* stylelint-disable import-notation */
 @import url($font-awesome-core-url);
 @import url($font-awesome-brands-url);
 @import url($font-awesome-solid-url);

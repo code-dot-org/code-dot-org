@@ -7,7 +7,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "serialized_maze": [
@@ -353,7 +353,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "## Do This:\r\n1. Add your code to the workspace.\r\n2. Click Run and observe the outcome.\r\n    - Keep revising and testing your code until it runs as expected.\r\n\r\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions!\r\n",
+    "long_instructions": "## Do This:\r\n1. Add your code to the workspace.\r\n2. Click Run and observe the outcome.\r\n    - Keep revising and testing your code until it runs as expected.\r\n\r\n**Reminder:** Make sure you import your `custom.py` file and save it to your backpack after adding any new functions! \r\n\r\n---\r\n###AI Tutor Support\r\n\r\n::: details [**Need support?**]\r\n- If you're unsure **which functions you will need to define in order to create your pattern**, ask AI to help you break down your design into different functions.\r\n- If you're **running into errors in your code**, ask AI for debugging help.\r\n:::\r\n\r\n",
     "start_sources": {
       "files": {
         "0": {
@@ -373,6 +373,6 @@
     "display_name": "8 x 8 Grid",
     "thumbnail_url": "https://images.code.org/432d6a406f66d3b237b873ff4378048a-Screenshot 2025-02-10 at 2.50.41 PM.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-14T04:42:10.643+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson14-level1a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson14-level1a\"},{\"changed_at\":\"2025-02-14 04:42:41 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 18:59:16 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 19:00:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 19:00:28 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-14T04:42:10.643+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson14-level1a\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson14-level1a\"},{\"changed_at\":\"2025-02-14 04:42:41 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 18:59:16 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 19:00:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 19:00:28 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 18:53:55 +0000\",\"changed\":[\"ai_tutor_available\",\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
