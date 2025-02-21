@@ -33,7 +33,9 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
-          <FontAwesomeV6Icon iconName="ellipsis-vertical" />
+          <button type="button">
+            <FontAwesomeV6Icon iconName="ellipsis-vertical" />
+          </button>
         </div>
       </div>
     </div>
