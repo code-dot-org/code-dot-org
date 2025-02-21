@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-01-13T22:28:32.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -15,7 +14,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 1,
+        "temperature": 0.5,
         "systemPrompt": "Your job is to help people focus on only the most important details to address in order to plan a specific kind of event. Respond only to questions about planning the event. \n\nStep 1: After the user's first message, ask what type of event the student is planning and what details they think are most important.\n\nFinally: Tell the user if there are any details they missed and need to include. Also tell the user if there are any details that are not key details and should be taken out. Explain your answers in full sentences.",
         "retrievalContexts": [
 
@@ -49,6 +48,7 @@
     "display_name": "Troubleshooting Bot",
     "bubble_choice_description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected."
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-01-13T22:28:32.991+00:00\",\"changed\":[\"cloned from \\\"emma-test-ai-chatbot-computersystems-1\\\"\"],\"cloned_from\":\"emma-test-ai-chatbot-computersystems-1\"},{\"changed_at\":\"2025-01-13 22:28:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:28:43 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-14 22:32:35 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-16 18:48:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-16 18:49:51 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-16 18:50:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 18:32:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-23 18:35:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-01-30 23:47:38 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
