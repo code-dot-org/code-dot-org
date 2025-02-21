@@ -23,6 +23,16 @@ export default class PythonValidator extends Validator {
     return true;
   }
 
+  // Exemplar validation is not supported in Python Lab.
+  shouldValidateWithExemplar(): boolean {
+    return false;
+  }
+
+  // Exemplar validation is not supported in Python Lab.
+  getExemplarValidationResults(): {satisfied: boolean; message: string} {
+    throw new Error('Exemplar validation is not supported in Python Lab');
+  }
+
   // No-op, conditions are reported to pythonValidationTracker.
   checkConditions(): void {}
 

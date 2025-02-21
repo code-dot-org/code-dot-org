@@ -6,6 +6,11 @@ import {Condition, Validation} from '@cdo/apps/lab2/types';
 // Abstract class that validates a set of conditions. How
 // the validation works is up to the implementor.
 export abstract class Validator {
+  abstract shouldValidateWithExemplar(): boolean;
+  abstract getExemplarValidationResults(): {
+    satisfied: boolean;
+    message: string;
+  };
   abstract shouldCheckConditions(): boolean;
   abstract shouldCheckNextConditionsOnly(): boolean;
   abstract checkConditions(): void;
@@ -110,6 +115,16 @@ export default class ProgressManager {
             this.currentValidationState.satisfied = validation.next;
             this.currentValidationState.message = validation.message;
             this.currentValidationState.callout = validation.callout;
+            if (this.currentValidationState.satisfied && validation.next) {
+              if (this.validator.shouldValidateWithExemplar()) {
+                const exemplarValidationResults =
+                  this.validator.getExemplarValidationResults();
+                this.currentValidationState.satisfied =
+                  exemplarValidationResults.satisfied;
+                this.currentValidationState.message =
+                  exemplarValidationResults.message;
+              }
+            }
             this.onProgressChange();
           }
           return;

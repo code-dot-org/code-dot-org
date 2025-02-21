@@ -5,7 +5,7 @@ import {
   ValidationResult,
   Validator,
 } from '@cdo/apps/lab2/progress/ProgressManager';
-import {Condition, ConditionType} from '@cdo/apps/lab2/types';
+import {Condition, ConditionType, ExemplarSettings} from '@cdo/apps/lab2/types';
 
 import {
   BlockTypes,
@@ -34,14 +34,29 @@ export default class MusicValidator extends Validator {
     private readonly getValidationTimeout: () => number,
     private readonly player: MusicPlayer,
     private readonly getPlayingTriggers: () => PlayingTrigger[],
+    private readonly exemplarSettings: ExemplarSettings,
     private readonly conditionsChecker: ConditionsChecker = new ConditionsChecker(
       Object.values(MusicConditions).map(condition => condition.name)
     )
   ) {
     super();
-    // TODO: Validate that playback events match between student and exemplar.
-    // Perform this operation if exemplarSettings.validationEnabled is true.
-    console.log([this.getPlaybackEvents(), this.getExemplarPlaybackEvents()]);
+  }
+
+  shouldValidateWithExemplar(): boolean {
+    return this.exemplarSettings?.validationEnabled ?? false;
+  }
+
+  getExemplarValidationResults(): {satisfied: boolean; message: string} {
+    if (!this.shouldValidateWithExemplar()) {
+      throw new Error('Attempted to validated with exemplar when disabled.');
+    }
+    const satisfied = this.validatePlaybackEventsEquivalent();
+    return {
+      satisfied,
+      message: satisfied
+        ? this.exemplarSettings.validationSuccessMessage || 'Great job!'
+        : this.exemplarSettings.validationFailureMessage || 'Not quite!',
+    };
   }
 
   shouldCheckConditions() {
@@ -417,5 +432,28 @@ export default class MusicValidator extends Validator {
 
   getValidationResults(): ValidationResult[] | undefined {
     return undefined;
+  }
+
+  // Validates that both playback event arrays are equivalent based on id, type, and when.
+  validatePlaybackEventsEquivalent(): boolean {
+    const studentEvents = this.getPlaybackEvents();
+    const exemplarEvents = this.getExemplarPlaybackEvents();
+
+    if (studentEvents.length !== exemplarEvents.length) {
+      return false;
+    }
+
+    // Function to generate a unique key for an event.
+    const eventKey = (event: PlaybackEvent): string =>
+      `${event.id}|${event.type}|${event.when}`;
+
+    // Create sorted arrays of keys for both sets of events.
+    const sortedEventKeys = studentEvents.map(eventKey).sort();
+    const sortedExemplarKeys = exemplarEvents.map(eventKey).sort();
+
+    // Compare the sorted keys element-by-element.
+    return sortedEventKeys.every(
+      (key, index) => key === sortedExemplarKeys[index]
+    );
   }
 }
