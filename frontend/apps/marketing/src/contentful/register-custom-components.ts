@@ -4,6 +4,9 @@
  * Note: This file must be imported both server-side and client-side to ensure Contentful is able to map on both rendering modes.
  */
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
+import VideoCarousel, {
+  VideoCarouselContentfulComponentDefinition,
+} from '@/components/carousel';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
@@ -27,6 +30,10 @@ import {
 defineComponents(
   [
     {component: Button, definition: ButtonContentfulComponentDefinition},
+    {
+      component: VideoCarousel,
+      definition: VideoCarouselContentfulComponentDefinition,
+    },
     {
       component: Divider,
       definition: DividerContentfulComponentDefinition,
