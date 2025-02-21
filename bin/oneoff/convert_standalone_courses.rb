@@ -17,14 +17,14 @@ def convert_standalone_course(existing_unit, verbose = false, check = true)
     has_numbered_units: false
   )
   unless new_unit_group.save
-    puts "Conversion failed for #{unit_name}: #{new_unit_group.errors.full_messages.join(', ')}"
+    puts "Conversion failed for #{existing_unit.name}: #{new_unit_group.errors.full_messages.join(', ')}"
     return false
   end
 
   # Get existing Unit's course version
   course_version = existing_unit.course_version
   if course_version.nil?
-    puts "Existing Unit's course version not found: #{unit_name}"
+    puts "Existing Unit's course version not found: #{existing_unit.name}"
     return
   end
   original_course_version_id = course_version.id
@@ -38,13 +38,17 @@ def convert_standalone_course(existing_unit, verbose = false, check = true)
   # Point existing CourseVersion to the new UnitGroup
   course_version.update!(content_root: new_unit_group)
 
+  i18n_params = {
+    "title" => existing_unit.localized_title || '',
+    "description_short" => existing_unit.summarize_i18n_for_edit[:descriptionShort] || '',
+    "description_student" => existing_unit.localized_student_description || '',
+    "description_teacher" => existing_unit.localized_description || '',
+    "version_title" => existing_unit.version_year || ''
+  }
+
   # Clear "course" settings from the unit
   unit_copy = existing_unit.dup
   existing_unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
-
-  i18n_params = {
-    "title" => existing_unit.localized_title || '',
-  }
 
   # Add existing unit to new unit group and update strings
   Dir.chdir(Rails.root) do
