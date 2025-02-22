@@ -18,7 +18,6 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({children}) => {
   return (
     <Carousel
       slides={children.map(child => ({id: child.id, slide: child.child}))}
-      className={''}
     />
   );
 };
