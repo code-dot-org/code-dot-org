@@ -15,12 +15,5 @@ export const VideoCarouselContentfulComponentDefinition: ComponentDefinition = {
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
   children: true,
-  variables: {
-    showNavArrows: {
-      displayName: 'Show nav arrows',
-      type: 'Boolean',
-      defaultValue: true,
-      group: 'style',
-    },
-  },
+  variables: {},
 };
