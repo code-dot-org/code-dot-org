@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-20 15:16:42 UTC",
+    "serialized_at": "2025-02-21 21:00:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -712,6 +712,17 @@
         "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0",
         "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe"
       }
+    },
+    {
+      "key": "a35690e2-5c17-4c77-a29a-613476d338d2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2",
+        "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe"
+      }
     }
   ],
   "script_levels": [
@@ -1046,6 +1057,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson2-processing-components"
+        ],
         "progression": "Processing Components"
       },
       "bonus": false,
@@ -1068,6 +1082,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-pcbuilder"
+        ],
         "progression": "Connecting Components"
       },
       "bonus": false,
@@ -1090,6 +1107,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-career-exploration"
+        ],
         "progression": "Career Hardware Needs"
       },
       "bonus": false,
@@ -1112,6 +1132,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level2-2024"
+        ],
         "progression": "Career Hardware Needs"
       },
       "bonus": false,
@@ -1781,51 +1804,23 @@
     {
       "chapter": 44,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "computer-systems-lesson12-scenario-2"
-        ],
-        "progression": "AI and Emerging Technologies Ethics Roleplaying"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson12-scenario-2"
+          "computer-systems-lesson12-cfu"
         ],
         "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices",
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
+        "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2"
       },
       "level_keys": [
-        "computer-systems-lesson12-scenario-2"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "computer-systems-lesson12-scenario-3"
-        ],
-        "progression": "AI and Emerging Technologies Ethics Roleplaying"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson12-scenario-3"
-        ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "",
-        "script.name": "6-12-computer-systems-and-devices",
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
-      },
-      "level_keys": [
-        "computer-systems-lesson12-scenario-3"
+        "computer-systems-lesson12-cfu"
       ]
     }
   ],
@@ -2348,26 +2343,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson12-scenario-2",
+        "level.key": "computer-systems-lesson12-cfu",
         "script_level.level_keys": [
-          "computer-systems-lesson12-scenario-2"
+          "computer-systems-lesson12-cfu"
         ],
         "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices",
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson12-scenario-3",
-        "script_level.level_keys": [
-          "computer-systems-lesson12-scenario-3"
-        ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "",
-        "script.name": "6-12-computer-systems-and-devices",
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
+        "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2"
       }
     }
   ],

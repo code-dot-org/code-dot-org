@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-20 03:11:55 UTC",
+    "serialized_at": "2025-02-21 19:31:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -165,6 +165,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -210,6 +211,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -383,6 +385,30 @@
       "seeding_key": {
         "lesson_activity.key": "af790b59-1eec-48e0-8ddf-f429800e8a78",
         "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024"
       }
@@ -1411,6 +1437,26 @@
         "activity_section.key": "7746349b-e6c8-4a3b-af79-b1434f8b2f5f",
         "lesson_activity.key": "af790b59-1eec-48e0-8ddf-f429800e8a78"
       }
+    },
+    {
+      "key": "759712ef-cfa8-41e5-8a88-30f1dc2222b1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "759712ef-cfa8-41e5-8a88-30f1dc2222b1",
+        "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb"
+      }
+    },
+    {
+      "key": "027a4d73-7039-4544-bcca-e60190794ae2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "027a4d73-7039-4544-bcca-e60190794ae2",
+        "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594"
+      }
     }
   ],
   "script_levels": [
@@ -1420,6 +1466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level1-2024"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -1442,6 +1491,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level2-2024"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -1464,6 +1516,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level3-2024"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -1486,6 +1541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson4-level1-2024"
+        ],
         "progression": "Internet Simulator and Networks Diagram Analysis"
       },
       "bonus": false,
@@ -1508,6 +1566,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson4-level2-2024"
+        ],
         "progression": "Internet Simulator and Networks Diagram Analysis"
       },
       "bonus": false,
@@ -1530,6 +1591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level1-2024"
+        ],
         "progression": "Internet Simulator: Packets"
       },
       "bonus": false,
@@ -1552,6 +1616,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level2-2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1743,6 +1810,19 @@
       }
     },
     {
+      "name": "Networks and the Internet Unit Guide",
+      "url": "https://docs.google.com/document/d/1zTfZ1CxCdX1Kk-n195UEn2Fu_SVZ9RJO0sPJ5nGDCTE/edit?usp=sharing",
+      "key": "networks_and_the_internet_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "networks_and_the_internet_unit_guide"
+      }
+    },
+    {
       "name": "Packets and Protocols",
       "url": "https://docs.google.com/document/d/1Kv3ohVDHlzFqtNr6G8dUOQ3pDXgVhe366w3JxGGeufE/edit?usp=sharing",
       "key": "packets_and_protocols",
@@ -1845,6 +1925,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "introduction_to_the_internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "networks_and_the_internet_unit_guide"
       }
     },
     {

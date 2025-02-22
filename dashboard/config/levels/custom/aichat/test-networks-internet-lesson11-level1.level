@@ -6,7 +6,7 @@
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# AI Threat Detection Chatbot \r\n\r\nThis chatbot is a cybersecurity expert AI assistant trained to provide security analysis based on different scenarios you give it.\r\n\r\n## Do This:\r\n\r\n1. Choose a card from your Threat Detected! card deck. \r\n2. Ask the chatbot:\r\n   - How did AI detect this threat?\r\n   - What mitigation strategy does AI recommend?\r\n   - How would this threat have been handled without AI?\r\n3. Use your \"Threat Detection Notetaker\" and answer the prompts. ",
+    "long_instructions": "# AI Threat Detection  \r\n\r\nThis chatbot is a cybersecurity expert AI assistant trained to provide security analysis based on different scenarios you give it.\r\n\r\n## Do This:\r\n\r\n1. Choose a card from your Threat Detected! card deck. \r\n2. Ask the chatbot:\r\n   - How did AI detect this threat?\r\n   - What mitigation strategy does AI recommend?\r\n   - How would this threat have been handled without AI?\r\n3. Use your \"Threat Detection Notetaker\" and answer the prompts. ",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -33,7 +33,7 @@
       },
       "visibilities": {
         "selectedModelId": "hidden",
-        "temperature": "editable",
+        "temperature": "hidden",
         "systemPrompt": "hidden",
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
@@ -46,6 +46,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-18T22:15:12.655+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-ai-chat-template1\\\"\"],\"cloned_from\":\"test-networks-internet-ai-chat-template1\"},{\"changed_at\":\"2025-02-18 22:53:48 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-18 22:56:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-18T22:15:12.655+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-ai-chat-template1\\\"\"],\"cloned_from\":\"test-networks-internet-ai-chat-template1\"},{\"changed_at\":\"2025-02-18 22:53:48 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-18 22:56:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-02-21 17:36:56 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 17:38:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
