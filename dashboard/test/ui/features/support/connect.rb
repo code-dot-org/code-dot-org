@@ -61,6 +61,13 @@ def get_browser(test_run_name)
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       SeleniumBrowser.remote(CI_SELENIUM_URL, http_client: $http_client) # TODO: headless?
     end
+    # based on https://github.com/SeleniumHQ/selenium/blob/selenium-4.25.0/rb/lib/selenium/webdriver/common/driver_extensions/has_network_interception.rb#L35
+    browser.intercept do |request, &continue|
+      if request.url.start_with?('http://localhost-studio.code.org')
+        request.url.sub!('http://localhost-studio.code.org', 'http://ui-tests')
+      end
+      continue.call(request)
+    end
   elsif ENV['TEST_LOCAL'] == 'true'
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)

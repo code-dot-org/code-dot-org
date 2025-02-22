@@ -152,7 +152,6 @@ services:
     ports:
       - 6379
   - name: selenium-chrome
-    hostname: selenium-chrome
     image: selenium/standalone-chrome:132.0
     environment:
       SE_VNC_PORT: 5910

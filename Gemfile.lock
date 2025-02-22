@@ -835,6 +835,8 @@ GEM
     scss_lint (0.60.0)
       sass (~> 3.5, >= 3.5.5)
     sd_notify (0.1.1)
+    selenium-devtools (0.130.0)
+      selenium-webdriver (~> 4.2)
     selenium-webdriver (4.25.0)
       base64 (~> 0.2)
       logger (~> 1.4)
@@ -1114,6 +1116,7 @@ DEPENDENCIES
   scenic-mysql_adapter
   scss_lint
   sd_notify
+  selenium-devtools (~> 0.130)
   selenium-webdriver (~> 4.6)
   sequel (~> 5.29)
   simplecov (~> 0.22.0)
