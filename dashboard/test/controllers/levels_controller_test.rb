@@ -85,7 +85,24 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
 
     body = JSON.parse(response.body)
-    assert_equal({"id" => level.id, "levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false, "sharedBlocks" => [], "usesProjects" => false, "exemplarSources" => nil, "helpVideos" => [], "baseAssetUrl" => "/blockly/"}, body)
+    expected_body = {
+      "id" => 4335,
+      "levelData" => {"hello" => "there"},
+      "other" => "other",
+      "preloadAssetList" => nil,
+      "type" => "Maze",
+      "appName" => "maze",
+      "useRestrictedSongs" => false,
+      "sharedBlocks" => [],
+      "usesProjects" => false,
+      "exemplarSources" => nil,
+      "helpVideos" => [],
+      "baseAssetUrl" => "/blockly/",
+      "hasValidation" => true,
+      "isAssessment" => nil,
+      "progressionType" => nil
+    }
+    assert_equal(expected_body, body)
   end
 
   test "should get filtered levels with just page param" do
