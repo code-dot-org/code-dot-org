@@ -23,3 +23,10 @@ export type newFolderPromptType = (parentId?: FolderId) => void;
 export type renameFilePromptType = (fileId: FileId) => void;
 export type renameFolderPromptType = (folderId: FolderId) => void;
 export type setFileType = (fileId: FileId, type: ProjectFileType) => void;
+
+export enum BackpackErrorType {
+  FETCH_FILE = 'fetch_file',
+  FETCH_FILE_LIST = 'fetch_file_list',
+  DELETE_FILE = 'delete_file',
+  SAVE_FILE = 'save_file',
+}

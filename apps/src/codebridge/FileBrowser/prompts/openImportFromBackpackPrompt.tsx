@@ -9,6 +9,7 @@ import {
   DuplicateFileError,
 } from '@codebridge/utils';
 
+import {BackpackErrorType} from '@cdo/apps/codebridge/FileBrowser/types';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {
   DialogType,
@@ -35,15 +36,26 @@ export const openImportFromBackpackPrompt = async ({
   projectFiles,
   validationFile,
 }: OpenImportFromBackpackPromptArgsType) => {
-  const handleError = (message: string) => () => {
+  const handleError = (message: string, errorType: BackpackErrorType) => () => {
     // TODO: send analytics / add logging.
     console.error(message);
+    if (errorType === BackpackErrorType.DELETE_FILE) {
+      dialogControl?.showDialog({
+        type: DialogType.GenericAlert,
+        title: 'Files Saved in Backpack',
+        message:
+          'There was an error in deleting the selected backpack file. Please try again.',
+      });
+    }
   };
   // Delete a file from the backpack.
   const handleDelete = async (filename: string) => {
     backpackApi.deleteFiles(
       [filename],
-      handleError(`Error in deleting file ${filename}`),
+      handleError(
+        `Error in deleting file ${filename}`,
+        BackpackErrorType.DELETE_FILE
+      ),
       () => console.log(`Deleted file ${filename}`)
     );
   };
@@ -55,7 +67,10 @@ export const openImportFromBackpackPrompt = async ({
   ) => {
     backpackApi.fetchFile(
       fileName,
-      handleError(`Error in fetching file ${fileName}`),
+      handleError(
+        `Error in fetching file ${fileName}`,
+        BackpackErrorType.FETCH_FILE
+      ),
       (fileContent: string) => {
         if (newFileName) {
           newFile({fileName: newFileName, contents: fileContent});
@@ -73,7 +88,10 @@ export const openImportFromBackpackPrompt = async ({
 
   // TODO: Adding a waiting UI (spinner) while waiting for backpack list retrieval.
   backpackApi.getFileList(
-    handleError('Error in getting backpack file list.'),
+    handleError(
+      'Error in getting backpack file list.',
+      BackpackErrorType.FETCH_FILE_LIST
+    ),
     async (filenames: string[]) => {
       if (filenames.length === 0) {
         dialogControl?.showDialog({
