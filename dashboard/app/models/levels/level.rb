@@ -749,6 +749,38 @@ class Level < ApplicationRecord
     end
   end
 
+  def localized_exemplar_settings
+    exemplar = level.exemplar_settings
+    if should_localize?
+      exemplar_clone = exemplar.clone
+
+      exemplar_clone['validationSuccessMessage'] = I18n.t(
+        'exemplar.validationSuccessMessage',
+        scope: [:data, :exemplar, name],
+        default: exemplar_clone['validationSuccessMessage'],
+        smart: true
+      )
+
+      exemplar_clone['validationFailureMessage'] = I18n.t(
+        'exemplar.validationFailureMessage',
+        scope: [:data, :exemplar, name],
+        default: exemplar_clone['validationFailureMessage'],
+        smart: true
+      )
+
+      exemplar_clone['playerTitle'] = I18n.t(
+        'exemplar.playerTitle',
+        scope: [:data, :exemplar, name],
+        default: exemplar_clone['playerTitle'],
+        smart: true
+      )
+
+      exemplar_clone
+    else
+      exemplar
+    end
+  end
+
   def localized_panels
     if should_localize?
       panels_clone = panels.map(&:clone)
