@@ -117,3 +117,20 @@ div.row:hover .button-kebab {
   width: auto;
   min-width: 100px;
 }
+
+.alertIcon {
+  color: $red;
+  font-size: 1rem;
+}
+
+.backpackErrorContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backpackErrorMessage {
+  color: $white;
+  font-size: 1rem;
+}
+

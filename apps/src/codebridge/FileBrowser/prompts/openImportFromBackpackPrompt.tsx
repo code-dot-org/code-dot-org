@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   NewFileFunction,
   SaveFileFunction,
@@ -8,6 +9,7 @@ import {
   isDuplicateFileName,
   DuplicateFileError,
 } from '@codebridge/utils';
+import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
@@ -18,6 +20,8 @@ import {
 } from '@cdo/apps/lab2/views/dialogs';
 import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+
+import moduleStyles from '@cdo/apps/codebridge/FileBrowser/styles/filebrowser.module.scss';
 
 type OpenImportFromBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
@@ -36,12 +40,21 @@ export const openImportFromBackpackPrompt = async ({
   projectFiles,
   validationFile,
 }: OpenImportFromBackpackPromptArgsType) => {
-  const handleError = (message: string) => () => {
+  const handleError = (title: string, message: string) => () => {
     // TODO: send analytics / add logging.
+    const bodyComponent = (
+      <div className={moduleStyles.backpackErrorContainer}>
+        <FontAwesomeV6Icon
+          iconName="circle-exclamation"
+          className={moduleStyles.alertIcon}
+        />
+        <span className={moduleStyles.backpackErrorMessage}>{message}</span>
+      </div>
+    );
     dialogControl?.showDialog({
       type: DialogType.GenericAlert,
-      title: 'Files saved in backpack',
-      message,
+      title,
+      bodyComponent,
     });
   };
   // Delete a file from the backpack.
@@ -49,7 +62,8 @@ export const openImportFromBackpackPrompt = async ({
     backpackApi.deleteFiles(
       [filename],
       handleError(
-        `There was an error in deleting file ${filename}. Please try again.`
+        'Delete from Backpack',
+        `There was an error in deleting file ${filename}. Please press OK to close this window and try again.`
       ),
       () => console.log(`Deleted file ${filename}`)
     );
@@ -63,7 +77,8 @@ export const openImportFromBackpackPrompt = async ({
     backpackApi.fetchFile(
       fileName,
       handleError(
-        `There was an error in fetching file ${fileName}. Please try again.`
+        codebridgeI18n.importFromBackpack(),
+        `There was an error in fetching file ${fileName}. Please press OK to close this window and try again.`
       ),
       (fileContent: string) => {
         if (newFileName) {
@@ -83,7 +98,8 @@ export const openImportFromBackpackPrompt = async ({
   // TODO: Adding a waiting UI (spinner) while waiting for backpack list retrieval.
   backpackApi.getFileList(
     handleError(
-      'There was an error in getting backpack file list. Please try again.'
+      codebridgeI18n.filesInBackpackTitle(),
+      'There was an error in getting the Backpack file list. Please press OK to close this window and try again.'
     ),
     async (filenames: string[]) => {
       if (filenames.length === 0) {
