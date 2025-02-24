@@ -1,0 +1,121 @@
+#!/usr/bin/env bundle exec ruby
+
+# Outputs min/max/mean build duration for successful drone builds in the past week
+# you must have the drone CLI command installed, and be logged in to drone.
+#
+# Example: bin/drone/stats --ago="1 month" --only-successful=false --only-stages="ui,unit"
+
+require "json"
+require "time"
+require "active_support/time"
+require "optparse"
+require "parallel"
+
+options = {ago: 1.week, json: false, only_successful: true, only_stages: nil, verbose: nil}
+OptionParser.new do |opts|
+  opts.on("--verbose", 'Output more information') do
+    options[:verbose] = true
+  end
+  opts.on("--json", 'Output successful builds in JSON format') do
+    options[:json] = true
+    options[:verbose] = false
+  end
+  opts.on("--ago=DURATION", 'Oldest build of interest, e.g. `--ago="6 days"`') do |ago_str|
+    num, unit = ago_str.split
+    options[:ago] = num.to_i.public_send(unit.downcase)
+  end
+  opts.on("--only-successful=true", 'Filter to only successful drone builds (default: true)') do |only_successful|
+    options[:only_successful] = [nil, "1", "true"].include? only_successful
+  end
+  opts.on("--only-stages=STAGES", 'Only process some drone stages, e.g. `--only-stages="unit,ui"`') do |stages|
+    options[:only_stages] = stages.split(",").map(&:strip)
+  end
+end.parse!
+
+OLDEST_BUILD_OF_INTEREST = options[:ago].ago # default: 1.week.ago
+oldest_build_seen = Time.now
+
+MAX_DRONE_CLI_PAGE_NUM = 200
+drone_page_num = 1
+build_stages = []
+
+while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
+  raise "Exceeded max drone CLI --page limit (#{MAX_DRONE_CLI_PAGE_NUM})" if drone_page_num > MAX_DRONE_CLI_PAGE_NUM
+
+  cmd = "drone build ls code-dot-org/code-dot-org #{options[:only_successful] ? "--status success" : ""} --limit 10000 --page #{drone_page_num} --format '{{ .Number }}'"
+  build_nums = `#{cmd}`.strip.lines.map(&:strip).reject(&:empty?).map(&:to_i)
+
+  new_build_stages = Parallel.flat_map(build_nums, in_threads: 32) do |build_num|
+    info_cmd = "drone build info code-dot-org/code-dot-org #{build_num} --format '{{ range .Stages }}{{ .Name }} {{ .Started }} {{ .Stopped }}\n{{ end }}'"
+    stages_output = `#{info_cmd}`.strip
+
+    stages_output.lines.map(&:strip).reject(&:empty?).map do |line|
+      stage_name, started, finished = line.split
+      started = started.to_i
+      finished = finished.to_i
+      next if finished.zero? || started.zero?
+      next if options[:only_stages] && !options[:only_stages].include?(stage_name)
+
+      {
+        build_num: build_num,
+        finished: Time.at(finished),
+        duration_mins: ((finished - started) / 60.0).round(2),
+        stage_name: stage_name,
+      }
+    end
+  end.compact
+
+  raise "No new build stages found, is --only-stages set correctly?" if new_build_stages.empty?
+
+  new_build_stages.each {|s| puts s.inspect} if options[:verbose]
+  build_stages += new_build_stages
+
+  oldest_build_seen = new_build_stages.map {|s| s[:finished]}.min
+  drone_page_num += 1
+end
+
+def descriptive_statistics(data)
+  data = data.sort
+  quartile = ->(quartile_num) {data[(data.length * quartile_num / 4.0).round]}
+  {
+    count: data.size,
+    p_0: data.min,
+    p_25: quartile.call(1),
+    p_50: quartile.call(2),
+    p_75: quartile.call(3),
+    p_100: data.max,
+    sum: data.sum,
+    mean: data.sum / data.size.to_f,
+  }
+end
+
+def print_stats_for(build_stages, stage_name, options)
+  stats = descriptive_statistics(build_stages.map {|build| build[:duration_mins]})
+  options_desc = options.reject {|key, value| key == :json || value.nil?}
+  puts
+  puts "#{stage_name} build stage duration stats, #{options_desc}:"
+  unitless_keys = [:count]
+  stats.each do |key, value|
+    puts "  #{key.to_s.ljust(6)}: #{value.round} #{"mins" unless unitless_keys.include? key}"
+  end
+end
+
+def print_duration_stats(build_stages, options)
+  puts
+  puts "## Per-stage drone build duration stats ##"
+  build_stages.group_by {|s| s[:stage_name]}.each do |stage_name, stages|
+    print_stats_for(stages, stage_name, options)
+  end
+  puts
+
+  puts
+  puts "## Overall drone build duration stats ##"
+  print_stats_for(build_stages, options[:only_stages] ? options[:only_stages].join(", ").to_s : "ALL", options)
+  puts
+end
+
+if options[:json]
+  puts JSON.pretty_generate(build_stages)
+else
+  print_duration_stats(build_stages, options)
+end
