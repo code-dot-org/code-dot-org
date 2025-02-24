@@ -434,26 +434,32 @@ export default class MusicValidator extends Validator {
     return undefined;
   }
 
-  // Validates that both playback event arrays are equivalent based on id, type, and when.
+  // Validates that both playback event arrays are equivalent based on id, type, and starting measure.
   validatePlaybackEventsEquivalent(): boolean {
-    const studentEvents = this.getPlaybackEvents();
+    const studentEvents = [...this.getPlaybackEvents()];
     const exemplarEvents = this.getExemplarPlaybackEvents();
 
     if (studentEvents.length !== exemplarEvents.length) {
       return false;
     }
 
-    // Function to generate a unique key for an event.
-    const eventKey = (event: PlaybackEvent): string =>
-      `${event.id}|${event.type}|${event.when}`;
+    // For each exemplar event, find a matching student event.
+    return exemplarEvents.every(exemplar => {
+      const matchIndex = studentEvents.findIndex(
+        event =>
+          event.id === exemplar.id &&
+          event.type === exemplar.type &&
+          event.when === exemplar.when
+      );
 
-    // Create sorted arrays of keys for both sets of events.
-    const sortedEventKeys = studentEvents.map(eventKey).sort();
-    const sortedExemplarKeys = exemplarEvents.map(eventKey).sort();
+      if (matchIndex === -1) {
+        // No matching event found.
+        return false;
+      }
 
-    // Compare the sorted keys element-by-element.
-    return sortedEventKeys.every(
-      (key, index) => key === sortedExemplarKeys[index]
-    );
+      // Remove the matched event to prevent double matching.
+      studentEvents.splice(matchIndex, 1);
+      return true;
+    });
   }
 }
