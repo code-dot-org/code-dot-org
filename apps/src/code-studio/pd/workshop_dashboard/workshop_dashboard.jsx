@@ -161,7 +161,7 @@ const WithParamsAndLocation = ({component: Component, ...props}) => {
   return <Component {...props} params={params} location={location} />;
 };
 
-WithParamsAndLocation.propTypes = {component: PropTypes.element};
+WithParamsAndLocation.propTypes = {component: PropTypes.element.isRequired};
 
 const WorkshopDashboard = ({
   permissionList,
