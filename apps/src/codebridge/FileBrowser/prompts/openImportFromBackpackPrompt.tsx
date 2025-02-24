@@ -74,7 +74,7 @@ export const openImportFromBackpackPrompt = async ({
 
   dialogControl?.showDialog({
     type: DialogType.PendingDialog,
-    title: 'Files Saved in Backpack',
+    title: codebridgeI18n.filesInBackpackTitle(),
   });
   backpackApi.getFileList(
     handleError('Error in getting backpack file list.'),

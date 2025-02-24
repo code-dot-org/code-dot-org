@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useContext} from 'react';
 
 import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
@@ -49,9 +50,10 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
       ) : null}
       {bodyComponent || <BodyTwoText>{message}</BodyTwoText>}
       <div className={moduleStyles.spinnerContainer}>
-        <i
-          className="fa fa-spinner fa-spin"
-          style={{fontSize: '36px', color: '#ffffff'}}
+        <FontAwesomeV6Icon
+          iconName="spinner"
+          animationType="spin"
+          className={moduleStyles.spinnerIcon}
         />
       </div>
       <BodyTwoText>{message}</BodyTwoText>
