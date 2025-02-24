@@ -82,10 +82,11 @@ while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
 
   raise "No new build stages found, is --only-stages set correctly?" if new_build_stages.empty?
 
+  oldest_build_seen = new_build_stages.map {|s| s[:finished]}.min
+  new_build_stages.select! {|s| s[:finished] >= OLDEST_BUILD_OF_INTEREST}
   new_build_stages.each {|s| puts s.inspect} if options[:verbose]
   build_stages += new_build_stages
 
-  oldest_build_seen = new_build_stages.map {|s| s[:finished]}.min
   drone_page_num += 1
 end
 
