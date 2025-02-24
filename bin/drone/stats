@@ -45,6 +45,9 @@ def drone_api_get(path)
   JSON.parse res.body, symbolize_names: true
 end
 
+# Terminal control code to clear the current line
+TERMINAL_CLEAR_LINE="\r\e[K"
+
 OPTIONS_NOT_TO_OUTPUT_TO_TABLE = [:json]
 
 OLDEST_BUILD_OF_INTEREST = options[:ago].ago
@@ -64,26 +67,26 @@ while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
     build_info = drone_api_get("builds/#{build_num}")
 
     build_info[:stages].map do |stage|
-      next if stage[:stopped].zero? || stage[:started].zero?
       next if options[:only_stages] && !options[:only_stages].include?(stage[:name])
       {
-        build_num: build_num,
-        finished: Time.at(stage[:stopped]),
-        duration_mins: ((stage[:stopped] - stage[:started]) / 60.0).round(2),
-        stage_name: stage[:name],
+        **stage, # see: https://docs.drone.io/api/builds/build_info/
+        build_num: build_info[:number],
+        build: build_info,
+        date: Time.at(stage[:stopped]),
       }
     end
   end.compact
 
   raise "No new build stages found, is --only-stages set correctly?" if new_build_stages.empty?
 
-  oldest_build_seen = new_build_stages.map {|s| s[:finished]}.min
-  new_build_stages.select! {|s| s[:finished] >= OLDEST_BUILD_OF_INTEREST}
-  new_build_stages.each {|s| puts s.inspect} if options[:verbose]
-  build_stages += new_build_stages
+  oldest_build_seen = new_build_stages.map {|s| s[:date]}.min
+  new_build_stages.select! {|s| s[:date] >= OLDEST_BUILD_OF_INTEREST}
+  print("#{TERMINAL_CLEAR_LINE}Processed builds back to #{oldest_build_seen}") if $stdout.tty?
 
+  build_stages += new_build_stages
   drone_page_num += 1
 end
+puts(TERMINAL_CLEAR_LINE) if $stdout.tty?
 
 def descriptive_statistics(data, units: nil, round: nil)
   raise "All values must be numeric" unless data.all?(Numeric)
@@ -125,14 +128,15 @@ def compute_stats_for(all_build_stages, options, units: nil, round: nil, &data_s
   options_filtered = options.reject {|key, value| OPTIONS_NOT_TO_OUTPUT_TO_TABLE.include?(key) || value.nil?}.inspect.tr('"', "'")
 
   stats_for = lambda do |stage_name, build_stages|
+    data = build_stages.map(&data_selector).compact
     {
       stage_name: stage_name,
-      **descriptive_statistics(build_stages.map(&data_selector), units: units, round: round),
+      **descriptive_statistics(data, units: units, round: round),
       options: options_filtered,
     }
   end
 
-  duration_stats = all_build_stages.group_by {|s| s[:stage_name]}.map do |stage_name, subset_of_stages|
+  duration_stats = all_build_stages.group_by {|stage| stage[:name]}.map do |stage_name, subset_of_stages|
     stats_for.call(stage_name, subset_of_stages)
   end
 
@@ -141,7 +145,14 @@ def compute_stats_for(all_build_stages, options, units: nil, round: nil, &data_s
 end
 
 def write_duration_stats_table(build_stages, options)
-  duration_mins_stats = compute_stats_for(build_stages, options, units: "minutes", round: 2) {|build_stage| build_stage[:duration_mins]}
+  duration_mins_stats = compute_stats_for(build_stages, options, units: "minutes", round: 2) do |stage|
+    # We don't want to generate durations for stages that are still ongoing
+    next if stage[:stopped].zero? || stage[:started].zero?
+
+    # Compute duration in minutes from unix timestamps
+    # for valid fields of stage, see: https://docs.drone.io/api/builds/build_info/
+    ((stage[:stopped] - stage[:started]) / 60.0).round(2)
+  end
   write_stats_table("drone-duration-stats.tsv", duration_mins_stats)
 end
 
