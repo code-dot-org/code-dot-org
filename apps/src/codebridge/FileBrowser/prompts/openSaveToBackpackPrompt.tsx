@@ -46,7 +46,7 @@ export const openSaveToBackpackPrompt = async ({
   backpackApi.getFileList(
     handleError(
       codebridgeI18n.importFromBackpack(),
-      `There was an error in getting the Backpack file list. Close this window and try again.`
+      `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`
     ),
     async (filenames: string[]) => {
       // Check if filename is a duplicate of a saved file in backpack.
@@ -96,8 +96,8 @@ export const openSaveToBackpackPrompt = async ({
         selectedFileName,
         fileContents,
         handleError(
-          codebridgeI18n.importFromBackpack(),
-          `There was an error in saving ${selectedFileName}. Close this window and try again.`
+          codebridgeI18n.saveToBackpack(),
+          `${codebridgeI18n.saveToBackpackError({selectedFileName})} ${codebridgeI18n.closeWindowTryAgain()}`
         ),
         () => {}
       );

@@ -59,27 +59,29 @@ export const openImportFromBackpackPrompt = async ({
     });
   };
   // Delete a file from the backpack.
-  const handleDelete = async (filename: string) => {
+  const handleDelete = async (selectedFileName: string) => {
     backpackApi.deleteFiles(
-      [filename],
+      [selectedFileName],
       handleError(
-        'Delete from Backpack',
-        `There was an error in deleting ${filename}. Close this window and try again.`
+        codebridgeI18n.deleteFromBackpack(),
+        `${codebridgeI18n.deleteFromBackpackError(
+          {selectedFileName},
+        )} ${codebridgeI18n.closeWindowTryAgain()}`
       ),
-      () => console.log(`Deleted file ${filename}`)
+      () => {}
     );
   };
 
   // Fetch file content from backpack and then update or create a project file.
   const fetchFileContentAndProcess = (
-    fileName: string,
+    selectedFileName: string,
     newFileName?: string
   ) => {
     backpackApi.fetchFile(
-      fileName,
+      selectedFileName,
       handleError(
         codebridgeI18n.importFromBackpack(),
-        `There was an error in fetching ${fileName}. Close this window and try again.`
+        `${codebridgeI18n.getBackpackFileError({selectedFileName})} ${codebridgeI18n.closeWindowTryAgain()}`
       ),
       (fileContent: string) => {
         if (newFileName) {
@@ -87,7 +89,7 @@ export const openImportFromBackpackPrompt = async ({
         } else {
           const fileId = Object.keys(projectFiles).find(
             id =>
-              projectFiles[id].name === fileName &&
+              projectFiles[id].name === selectedFileName &&
               projectFiles[id].folderId === DEFAULT_FOLDER_ID
           );
           if (fileId) saveFile(fileId, fileContent);
@@ -100,7 +102,7 @@ export const openImportFromBackpackPrompt = async ({
   backpackApi.getFileList(
     handleError(
       codebridgeI18n.filesInBackpackTitle(),
-      'There was an error in getting the Backpack file list. Close this window and try again.'
+      `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`
     ),
     async (filenames: string[]) => {
       if (filenames.length === 0) {
