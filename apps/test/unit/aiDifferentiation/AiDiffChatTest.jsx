@@ -42,7 +42,6 @@ describe('AiDiffChat', () => {
 
   beforeEach(() => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
-    // window.location = {href: 'http://test-for-code.org'};
     sessionStorage.clear();
     fetchStub = jest
       .spyOn(HttpClient, 'post')
