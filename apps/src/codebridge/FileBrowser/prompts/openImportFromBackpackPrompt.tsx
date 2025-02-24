@@ -9,7 +9,6 @@ import {
   DuplicateFileError,
 } from '@codebridge/utils';
 
-import {BackpackErrorType} from '@cdo/apps/codebridge/FileBrowser/types';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {
   DialogType,
@@ -36,9 +35,8 @@ export const openImportFromBackpackPrompt = async ({
   projectFiles,
   validationFile,
 }: OpenImportFromBackpackPromptArgsType) => {
-  const handleError = (message: string, errorType: BackpackErrorType) => () => {
+  const handleError = (message: string) => () => {
     // TODO: send analytics / add logging.
-    console.log('TODO: send analytics/log error: ', errorType);
     dialogControl?.showDialog({
       type: DialogType.GenericAlert,
       title: 'Files saved in backpack',
@@ -50,8 +48,7 @@ export const openImportFromBackpackPrompt = async ({
     backpackApi.deleteFiles(
       [filename],
       handleError(
-        `There was an error in deleting file ${filename}. Please try again.`,
-        BackpackErrorType.DELETE_FILE
+        `There was an error in deleting file ${filename}. Please try again.`
       ),
       () => console.log(`Deleted file ${filename}`)
     );
@@ -65,8 +62,7 @@ export const openImportFromBackpackPrompt = async ({
     backpackApi.fetchFile(
       fileName,
       handleError(
-        `There was an error in fetching file ${fileName}. Please try again.`,
-        BackpackErrorType.FETCH_FILE
+        `There was an error in fetching file ${fileName}. Please try again.`
       ),
       (fileContent: string) => {
         if (newFileName) {
@@ -86,8 +82,7 @@ export const openImportFromBackpackPrompt = async ({
   // TODO: Adding a waiting UI (spinner) while waiting for backpack list retrieval.
   backpackApi.getFileList(
     handleError(
-      'There was an error in getting backpack file list. Please try again.',
-      BackpackErrorType.FETCH_FILE_LIST
+      'There was an error in getting backpack file list. Please try again.'
     ),
     async (filenames: string[]) => {
       if (filenames.length === 0) {
