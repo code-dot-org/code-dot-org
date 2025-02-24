@@ -38,20 +38,19 @@ export const openImportFromBackpackPrompt = async ({
 }: OpenImportFromBackpackPromptArgsType) => {
   const handleError = (message: string, errorType: BackpackErrorType) => () => {
     // TODO: send analytics / add logging.
-    if (errorType === BackpackErrorType.DELETE_FILE) {
-      dialogControl?.showDialog({
-        type: DialogType.GenericAlert,
-        title: 'Files saved in backpack',
-        message,
-      });
-    }
+    console.log('TODO: send analytics/log error: ', errorType);
+    dialogControl?.showDialog({
+      type: DialogType.GenericAlert,
+      title: 'Files saved in backpack',
+      message,
+    });
   };
   // Delete a file from the backpack.
   const handleDelete = async (filename: string) => {
     backpackApi.deleteFiles(
       [filename],
       handleError(
-        `Error in deleting file ${filename}`,
+        `There was an error in deleting file ${filename}. Please try again.`,
         BackpackErrorType.DELETE_FILE
       ),
       () => console.log(`Deleted file ${filename}`)
@@ -66,7 +65,7 @@ export const openImportFromBackpackPrompt = async ({
     backpackApi.fetchFile(
       fileName,
       handleError(
-        `Error in fetching file ${fileName}`,
+        `There was an error in fetching file ${fileName}. Please try again.`,
         BackpackErrorType.FETCH_FILE
       ),
       (fileContent: string) => {
@@ -87,7 +86,7 @@ export const openImportFromBackpackPrompt = async ({
   // TODO: Adding a waiting UI (spinner) while waiting for backpack list retrieval.
   backpackApi.getFileList(
     handleError(
-      'Error in getting backpack file list.',
+      'There was an error in getting backpack file list. Please try again.',
       BackpackErrorType.FETCH_FILE_LIST
     ),
     async (filenames: string[]) => {
