@@ -28,8 +28,8 @@ class CourseVersion < ApplicationRecord
   has_many :vocabularies
   has_many :reference_guides
 
-  attr_readonly :content_root_type
-  attr_readonly :content_root_id
+  # attr_readonly :content_root_type
+  # attr_readonly :content_root_id
 
   KEY_CHAR_RE = /[a-z0-9\-]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
