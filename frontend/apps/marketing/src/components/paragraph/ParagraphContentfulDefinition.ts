@@ -13,7 +13,7 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
     imageUrl:
       'https://images.ctfassets.net/90t6bu6vlf76/5qoQl0G7ZKxKCI8VYBaCzl/19a21cd2fbb6b037c397fcbc417f70b1/component_paragraph_tooltip.png',
   },
-  builtInStyles: ['cfTextAlign', 'cfTextUnderline', 'cfWidth'],
+  builtInStyles: ['cfTextAlign'],
   variables: {
     visualAppearance: {
       displayName: 'Visual Appearance',
@@ -26,6 +26,18 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
           {value: 'body-two', displayName: 'Body M'},
           {value: 'body-three', displayName: 'Body S'},
           {value: 'body-four', displayName: 'Body XS'},
+        ],
+      },
+    },
+    color: {
+      displayName: 'Color',
+      type: 'Text',
+      defaultValue: 'primary',
+      group: 'style',
+      validations: {
+        in: [
+          {value: 'primary', displayName: 'Primary'},
+          {value: 'secondary', displayName: 'Secondary'},
         ],
       },
     },

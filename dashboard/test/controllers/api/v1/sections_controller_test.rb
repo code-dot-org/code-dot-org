@@ -45,8 +45,11 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     CourseOffering.add_course_offering(@csp_unit_group)
     @csp_unit_group.reload
     @csp_script = create(:script, name: 'csp1', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @csp_script2 = create(:script, name: 'csp2', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
+    create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script2, position: 2)
     @csp_script.reload
+    @csp_script2.reload
 
     @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@csp_unit_group_soft_launched)

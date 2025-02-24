@@ -1,8 +1,8 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useEffect, useMemo, useState} from 'react';
 
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {MazeCell} from '@cdo/apps/lab2/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 

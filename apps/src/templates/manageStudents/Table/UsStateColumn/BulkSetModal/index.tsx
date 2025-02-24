@@ -1,9 +1,9 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Heading4} from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 import {ControlLabel, Fade, FormControl, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
-import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import {STATE_CODES} from '@cdo/apps/geographyConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';

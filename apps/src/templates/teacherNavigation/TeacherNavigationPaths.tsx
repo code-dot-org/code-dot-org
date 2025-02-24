@@ -20,12 +20,23 @@ export const TEACHER_NAVIGATION_PATHS = {
   courseOverview: 'courses/:courseVersionName?',
   unitOverview: 'unit/:unitName?',
   settings: 'settings',
+  home: 'home',
 };
 
 const getAbsolutePath = (name: string) =>
   `${TEACHER_NAVIGATION_SECTIONS_URL}/${SPECIFIC_SECTION_BASE_URL}/${name}`;
 
+export const TEACHER_NAVIGATION_PATH_NAMES = Object.fromEntries(
+  Object.keys(TEACHER_NAVIGATION_PATHS).map(key => [key, key])
+);
+
 export const LABELED_TEACHER_NAVIGATION_PATHS = {
+  home: {
+    url: TEACHER_NAVIGATION_PATHS.home,
+    absoluteUrl: TEACHER_NAVIGATION_PATHS.home,
+    label: i18n.teacherHomePage(),
+    icon: null,
+  },
   progress: {
     url: TEACHER_NAVIGATION_PATHS.progress,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.progress),
@@ -80,8 +91,8 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.aiTutorChatMessages,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiTutorChatMessages),
     // this is not part of the navigation sidebar so it doesn't need a label or icon
-    label: null,
-    icon: null,
+    label: i18n.aiTutor(),
+    icon: 'messages',
   },
   lessonMaterials: {
     url: TEACHER_NAVIGATION_PATHS.lessonMaterials,

@@ -8,7 +8,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
 import aichatI18n from '../../locale';
-import {submitTeacherFeedback} from '../../redux/aichatRedux';
+import {submitTeacherFeedback} from '../../redux';
 import {FeedbackValue} from '../../types';
 
 import moduleStyles from './teacher-feedback-footer.module.scss';
@@ -70,7 +70,7 @@ const CleanFeedbackFooter: React.FC<Props> = ({
           teacherFlagged && moduleStyles.selected
         )}
         ariaLabel={
-          teacherFlagged ? aichatI18n.aria_flag() : aichatI18n.aria_unflag()
+          teacherFlagged ? aichatI18n.aria_unflag() : aichatI18n.aria_flag()
         }
       />
     </WithTooltip>
@@ -83,7 +83,8 @@ const CleanFeedbackFooter: React.FC<Props> = ({
     <div
       className={classNames(
         moduleStyles.teacherFeedbackContainer,
-        isAssistant && moduleStyles.leftAlign
+        isAssistant && moduleStyles.leftAlign,
+        'uitest-clean-feedback-footer'
       )}
     >
       {footerElements}

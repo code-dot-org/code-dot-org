@@ -13,6 +13,8 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
@@ -48,16 +50,22 @@ export const useFileRowOptions = (
     config: {editableFileTypes},
   } = useCodebridgeContext();
 
-  const {openConfirmDeleteFile, openMoveFilePrompt, openRenameFilePrompt} =
-    usePrompts();
+  const backpackApi = useBackpackAPIContext();
+
+  const {
+    openConfirmDeleteFile,
+    openMoveFilePrompt,
+    openRenameFilePrompt,
+    openSaveToBackpackPrompt,
+  } = usePrompts();
 
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const isLocked = !isStartMode && file.type === ProjectFileType.LOCKED_STARTER;
 
-  const dropdownOptions = useMemo(
-    () => [
+  const dropdownOptions = useMemo(() => {
+    const options = [
       {
         condition:
           !isLocked &&
@@ -92,20 +100,31 @@ export const useFileRowOptions = (
         labelText: codebridgeI18n.deleteFile(),
         clickHandler: () => openConfirmDeleteFile({file}),
       },
-    ],
-    [
-      appName,
-      editableFileTypes,
-      file,
-      isLocked,
-      isStartMode,
-      openConfirmDeleteFile,
-      openMoveFilePrompt,
-      openRenameFilePrompt,
-      projectFiles,
-      projectFolders,
-    ]
-  );
+    ];
+
+    if (experiments.isEnabled(experiments.PYTHONLAB_BACKPACK)) {
+      options.push({
+        condition: true,
+        iconName: 'backpack',
+        labelText: codebridgeI18n.saveToBackpack(),
+        clickHandler: () => openSaveToBackpackPrompt({file, backpackApi}),
+      });
+    }
+    return options;
+  }, [
+    appName,
+    backpackApi,
+    editableFileTypes,
+    file,
+    isLocked,
+    isStartMode,
+    openConfirmDeleteFile,
+    openMoveFilePrompt,
+    openRenameFilePrompt,
+    openSaveToBackpackPrompt,
+    projectFiles,
+    projectFolders,
+  ]);
 
   const startModeFileOptions = useStartModeFileRowOptions(
     file,

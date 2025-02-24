@@ -22,7 +22,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
      ```sh
      ruby --version     # --> ruby 3.0.5
-     node --version     # --> v18.16.0
+     node --version     # --> v20.18.3
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
      ```
@@ -376,13 +376,6 @@ If you want to make JavaScript changes and have them take effect locally, you'll
 
 This configures dashboard to rebuild apps whenever you run `bundle exec rake build` and to use the version that you built yourself.  See the documentation in that directory for faster ways to build and iterate.
 
-## Enabling internationalization(i18n) / translations
-If you want to enable the ability to switch Code.org to display different languages:
-1. Edit `locals.yml` and enable the following options:
-   ```
-   # code-dot-org/locals.yml
-   load_locales: true
-   ```
 ## Editor configuration
 
 We enforce linting rules for all our code, and we recommend you set up your editor to integrate with that linting.

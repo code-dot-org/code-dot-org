@@ -1,0 +1,12 @@
+experimental: true
+contact: Seth Nickell
+description: |
+  Use skaffold + kubernetes for local dev and eventually production deployment
+cleanup:
+  howToCleanup: |
+    - Delete skaffold.yaml
+    - Delete the k8s/ directory
+  whenToCleanup: |
+    If its >=2026, we're not using skaffold or kukbernetes for local dev or
+    for deploying production k8s clusters, and the last commit in this directory
+    was more than 6 mos ago.

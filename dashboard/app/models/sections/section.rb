@@ -487,6 +487,8 @@ class Section < ApplicationRecord
         course_version_name = script.name
       end
 
+      selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
+
       # Remove ordering from scope when not including full
       # list of students, in order to improve query performance.
       unique_students = include_students ?
@@ -531,9 +533,9 @@ class Section < ApplicationRecord
         unit_id: unit_group ? script_id : nil,
         course_id: course_id,
         script: {
-          id: script_id,
-          name: script.try(:name),
-          project_sharing: script.try(:project_sharing)
+          id: selected_unit&.id,
+          name: selected_unit&.name,
+          project_sharing: selected_unit&.project_sharing
         },
         studentCount: num_students,
         grades: grades,
@@ -542,6 +544,7 @@ class Section < ApplicationRecord
         students: include_students ? unique_students.map(&:summarize) : nil,
         restrict_section: restrict_section,
         is_assigned_csa: assigned_csa?,
+        is_assigned_single_unit_course: unit_group&.single_unit_course?,
         # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
         post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
         code_review_expires_at: code_review_expires_at,
@@ -633,14 +636,26 @@ class Section < ApplicationRecord
     script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
   end
 
-  def assigned_gen_ai?
-    [
-      'exploring-gen-ai1-2024',
-      'exploring-gen-ai2-2024',
-      'foundations-gen-ai-2024',
-      'customizing-llms-2024'
-    ].include?(script&.name) ||
-      unit_group&.name == 'exploring-gen-ai-2024'
+  def assigned_ai_chat?
+    # Our generative AI courses have scripts that can be assigned individually,
+    # whereas CS and AI Foundations (CSAIF) does not.
+    gen_ai_scripts = %w[
+      exploring-gen-ai1-2024
+      exploring-gen-ai2-2024
+      foundations-gen-ai-2024
+      customizing-llms-2024
+    ]
+    gen_ai_course = 'exploring-gen-ai-2024'
+
+    csaif_courses = %w[
+      computer-systems-and-devices-2024
+      programming-fundamentals-2024
+      programming-fundamentals-aitutor-2024
+      networks-and-the-internet-2024
+    ]
+
+    gen_ai_scripts.include?(script&.name) ||
+      (csaif_courses + [gen_ai_course]).include?(unit_group&.name)
   end
 
   def reset_code_review_groups(new_groups)

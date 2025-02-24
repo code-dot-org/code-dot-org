@@ -5,11 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Making Curriculum Accessible
 
+#### Check out the list of resources to make our curriculum more accessible below, or explore some alternative curricula! 
+
 <img src="https://images.code.org/53df156bec9daf72d26843b7e4383867-image-1736277993148.25.45 AM.png" alt="A high schooler smiles radiantly." style="border-radius:20px; float: right; height: 200px; clear: both; margin: 20px 20px 0px 20px;">
 
 ## Accommodations
 
-#### While implementing our curriculum, you may find that your students need accommodations to make learning accessible to them. Check out the following list of help articles that may assist in this process.
+#### While implementing our curriculum, you may find that your students need accommodations to make learning accessible to them. **Choose the help article that you think might benefit your students the most to explore.**
 
 * #### <a href="https://support.code.org/hc/en-us/articles/15802388622861-Code-org-Instruction-Panel-Immersive-Reading-Support" target="blank" rel="noopener noreferrer">Code.org Instruction Panel: Immersive Reading Support</a> (for students who need instructions read aloud)
 * #### <a href="https://support.code.org/hc/en-us/articles/15187510110733-Using-Keyboard-Navigation-for-Block-Based-Coding-Levels" target="blank" rel="noopener noreferrer">Using Keyboard Navigation for Block-Based Coding Levels</a>

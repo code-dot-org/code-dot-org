@@ -1,18 +1,17 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-01-31T06:13:47.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
     "display_name": "Curriculum Specialist",
-    "long_instructions": "## Dr. Mark Richardson, Curriculum Specialist 📘\r\n<br/>\r\n\r\n<p style=\"font-size:16px\"><strong>📍 Location:</strong> Toronto, Canada </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🏛️ Workplace:</strong> National Education Board </p><br/>\r\n\r\n<p style=\"font-size:16px\">💼<strong> Expertise:</strong> Educational technology, curriculum design, STEM education </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🔍 How I Use AI:</strong> \"Scholarlab Simulations helps align virtual lab experiences with national STEM curriculum standards. It ensures students across different schools have access to high-quality, interactive science education.\" </p>\r\n\r\n\r\n\r\n---\r\n\r\n\r\n\r\n## Do This:\r\n\r\n<ol style=\"font-size:16px\">\r\n<li>Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:</li>\r\n\t<ul style=\"font-size:16px\">\r\n    \t<li>Key roles and responsibilities</li>\r\n\t\t<li>Key challenges</li>\r\n\t\t<li>How computing supports their work</li>\r\n\t\t<li>How your chosen innovation helps their job</li>\r\n    </ul>\r\n<br/>\r\n<li>Summarize key insights in your activity guide.</li>\r\n</ol>\r\n",
+    "long_instructions": "## Dr. Mark Richardson, Curriculum Specialist\r\n\r\n**Location:** Toronto, Canada\r\n\r\n**Workplace:** National Education Board\r\n\r\n**Expertise:** Educational technology, curriculum design, STEM education\r\n\r\n**How I Use AI:** \"Scholarlab Simulations helps align virtual lab experiences with national STEM curriculum standards. It ensures students across different schools have access to high-quality, interactive science education.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.5,
+        "temperature": 0.3,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -44,6 +43,7 @@
     },
     "thumbnail_url": "https://images.code.org/36666694edabe06fe9e25a1b7f5932d4-Pasted Graphic 46.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T06:13:47.452+00:00\",\"changed\":[\"cloned from \\\"computer-systems-teacher-edu-aichat\\\"\"],\"cloned_from\":\"computer-systems-teacher-edu-aichat\"},{\"changed_at\":\"2025-01-31 06:14:31 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 16:10:35 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 16:11:18 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-31T06:13:47.452+00:00\",\"changed\":[\"cloned from \\\"computer-systems-teacher-edu-aichat\\\"\"],\"cloned_from\":\"computer-systems-teacher-edu-aichat\"},{\"changed_at\":\"2025-01-31 06:14:31 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 16:10:35 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 16:11:18 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-16 20:14:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

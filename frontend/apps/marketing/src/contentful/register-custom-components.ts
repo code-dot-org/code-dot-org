@@ -3,15 +3,23 @@
  *
  * Note: This file must be imported both server-side and client-side to ensure Contentful is able to map on both rendering modes.
  */
+import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
 import Heading, {
   HeadingContentfulComponentDefinition,
 } from '@/components/heading';
+import Link, {LinkContentfulComponentDefinition} from '@/components/link';
+import Overline, {
+  OverlineContentfulComponentDefinition,
+} from '@/components/overline';
 import Paragraph, {
   ParagraphContentfulComponentDefinition,
 } from '@/components/paragraph';
+import Section, {
+  SectionContentfulComponentDefinition,
+} from '@/components/section';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 import {
@@ -21,6 +29,7 @@ import {
 
 defineComponents(
   [
+    {component: Button, definition: ButtonContentfulComponentDefinition},
     {
       component: Divider,
       definition: DividerContentfulComponentDefinition,
@@ -33,8 +42,20 @@ defineComponents(
       definition: HeadingContentfulComponentDefinition,
     },
     {
+      component: Link,
+      definition: LinkContentfulComponentDefinition,
+    },
+    {component: Overline, definition: OverlineContentfulComponentDefinition},
+    {
       component: Paragraph,
       definition: ParagraphContentfulComponentDefinition,
+    },
+    {
+      component: Section,
+      definition: SectionContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Video,
@@ -45,9 +66,6 @@ defineComponents(
     },
   ],
   {
-    enabledBuiltInComponents: [
-      CONTENTFUL_COMPONENTS.heading.id, // Remove this once Heading component is implemented
-      CONTENTFUL_COMPONENTS.image.id,
-    ],
+    enabledBuiltInComponents: [CONTENTFUL_COMPONENTS.image.id],
   },
 );

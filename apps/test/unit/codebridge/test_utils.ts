@@ -60,7 +60,7 @@ export const getDefaultCodebridgeContext = () => {
       PreviewComponents: undefined,
       languageMapping: {},
       labeledGridLayouts: undefined,
-      activeGridLayout: undefined,
+      activeLayout: undefined,
       showFileBrowser: false,
       validMimeTypes: undefined,
     },
@@ -93,4 +93,12 @@ export const getDefaultCodebridgeContext = () => {
     startSources: {source: smallProject},
   };
   return context;
+};
+
+export const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
+  jest.spyOn(document, 'querySelector').mockReturnValue({
+    dataset: {
+      appoptions: JSON.stringify(innerAppOptions),
+    },
+  } as unknown as Element);
 };

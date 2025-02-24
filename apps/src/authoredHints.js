@@ -76,7 +76,6 @@ export default class AuthoredHints {
       time: new Date().getTime() - this.studioApp_.initTime,
       attempt: this.studioApp_.attempts,
       testResult: this.studioApp_.lastTestResult,
-      activityId: response && response.activity_id,
       levelSourceId: response && response.level_source_id,
     });
   }
