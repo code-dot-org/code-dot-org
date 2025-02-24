@@ -62,7 +62,7 @@ describe('SectionList', () => {
     );
   }
 
-  it('renders list of teacher sections', async () => {
+  it('renders list of teacher section cards', async () => {
     renderComponent();
     await screen.findByText('Class Sections');
     screen.getByText('Period 1');
