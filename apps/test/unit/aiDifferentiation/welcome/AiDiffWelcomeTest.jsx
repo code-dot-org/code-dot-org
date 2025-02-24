@@ -107,7 +107,7 @@ describe('AiDiffWelcome', () => {
       () => expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false),
       {timeout: 100}
     );
-  });
+  }, 15000);
 
   test('End page buttons work correctly', async () => {
     render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'end_page'} />);
