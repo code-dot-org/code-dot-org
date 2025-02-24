@@ -101,24 +101,29 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
   useEffect(() => {
     if (isOpen && !previousIsOpen.current && selectedVersion !== '') {
-      // We only do anything here if we just re-opened the dropdown.
       // If we are currently viewing an old version (this happens if
-      // the user x'd out of the dropdown, but did not cancel), scroll to the selected version.
-      // Wait a tick to ensure the selected version is rendered before scrolling to it.
-      // Otherwise, reset the selected version to the latest version.
-      // (we likely just restored the project to some version, so we should be viewing the latest version)
-      if (viewingOldVersion) {
-        setTimeout(() => {
-          const selectedVersionComponent =
-            document.getElementById(selectedVersion);
-          if (selectedVersionComponent) {
-            selectedVersionComponent.scrollIntoView({behavior: 'instant'});
-          }
-        }, 0);
-      } else {
+      // the user x'd out of the dropdown, but did not cancel), focus the selected version,
+      // otherwise focus the latest version and set the selected version to the latest version.
+      // We explicitly focus because we are using a react portal, and we need to ensure the focus
+      // goes to the correct element.
+      // Wait a tick to ensure the selected version is rendered before focusing it.
+      const versionId = viewingOldVersion ? selectedVersion : latestVersion;
+      if (!viewingOldVersion) {
         setSelectedVersion(latestVersion);
       }
+      if (versionId) {
+        setTimeout(() => {
+          const selectedVersionButton =
+            document.querySelector<HTMLInputElement>(
+              `input[type="radio"][name="${versionId}"]`
+            );
+          if (selectedVersionButton) {
+            selectedVersionButton.focus();
+          }
+        }, 0);
+      }
     }
+
     previousIsOpen.current = isOpen;
   }, [isOpen, selectedVersion, latestVersion, viewingOldVersion]);
 
