@@ -65,15 +65,20 @@ describe('RouterContext', () => {
     testPath = '/test-path';
     expectedPath = baseName + testPath; // '/app/test-path'
   });
+
+  const renderDefault = ({baseName, ...props}) => {
+    render(
+      <MemoryRouter>
+        <RouterProvider basename={baseName}>
+          <TestComponent {...props} />
+        </RouterProvider>
+      </MemoryRouter>
+    );
+  };
+
   describe('createHref', () => {
     it('works with basename', () => {
-      render(
-        <MemoryRouter>
-          <RouterProvider basename={baseName}>
-            <TestComponent hrefPath={testPath} />
-          </RouterProvider>
-        </MemoryRouter>
-      );
+      renderDefault({baseName, hrefPath: testPath});
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
         'href',
@@ -84,13 +89,8 @@ describe('RouterContext', () => {
     it('handles missing leading slashes', () => {
       baseName = 'app';
       testPath = 'test-path';
-      render(
-        <MemoryRouter>
-          <RouterProvider basename={baseName}>
-            <TestComponent hrefPath={testPath} />
-          </RouterProvider>
-        </MemoryRouter>
-      );
+
+      renderDefault({baseName, hrefPath: testPath});
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
         'href',
@@ -101,13 +101,8 @@ describe('RouterContext', () => {
     it('handles extra leading slashes', () => {
       baseName = '///app';
       testPath = '/////test-path';
-      render(
-        <MemoryRouter>
-          <RouterProvider basename={baseName}>
-            <TestComponent hrefPath={testPath} />
-          </RouterProvider>
-        </MemoryRouter>
-      );
+
+      renderDefault({baseName, hrefPath: testPath});
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
         'href',
@@ -118,13 +113,8 @@ describe('RouterContext', () => {
     it('handles trailing slashes', () => {
       baseName = '/app/';
       testPath = '/test-path/';
-      render(
-        <MemoryRouter>
-          <RouterProvider basename={baseName}>
-            <TestComponent hrefPath={testPath} />
-          </RouterProvider>
-        </MemoryRouter>
-      );
+
+      renderDefault({baseName, hrefPath: testPath});
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
         'href',
@@ -135,13 +125,8 @@ describe('RouterContext', () => {
     it('handles multiple trailing slashes', () => {
       baseName = '/app////';
       testPath = '/test-path//////';
-      render(
-        <MemoryRouter>
-          <RouterProvider basename={baseName}>
-            <TestComponent hrefPath={testPath} />
-          </RouterProvider>
-        </MemoryRouter>
-      );
+
+      renderDefault({baseName, hrefPath: testPath});
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
         'href',
@@ -152,13 +137,8 @@ describe('RouterContext', () => {
     it('handles multiple slash basename and path', () => {
       baseName = '/app/test/';
       testPath = '/path/works/fine';
-      render(
-        <MemoryRouter>
-          <RouterProvider basename={baseName}>
-            <TestComponent hrefPath={testPath} />
-          </RouterProvider>
-        </MemoryRouter>
-      );
+
+      renderDefault({baseName, hrefPath: testPath});
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
         'href',
@@ -169,13 +149,7 @@ describe('RouterContext', () => {
 
   describe('push', () => {
     it('calls navigate correctly', () => {
-      render(
-        <MemoryRouter>
-          <RouterProvider>
-            <TestComponent pushPath={testPath} />
-          </RouterProvider>
-        </MemoryRouter>
-      );
+      renderDefault({pushPath: testPath});
 
       const button = screen.getByRole('button', {name: /navigate/i});
 
@@ -187,13 +161,7 @@ describe('RouterContext', () => {
 
   describe('replace', () => {
     it('calls navigate correctly', () => {
-      render(
-        <MemoryRouter>
-          <RouterProvider>
-            <TestComponent replacePath={testPath} />
-          </RouterProvider>
-        </MemoryRouter>
-      );
+      renderDefault({replacePath: testPath});
 
       const button = screen.getByRole('button', {name: /replace/i});
 
@@ -205,13 +173,7 @@ describe('RouterContext', () => {
 
   describe('goBack', () => {
     it('calls navigate correctly', () => {
-      render(
-        <MemoryRouter>
-          <RouterProvider>
-            <TestComponent />
-          </RouterProvider>
-        </MemoryRouter>
-      );
+      renderDefault({});
 
       const button = screen.getByRole('button', {name: /back/i});
 
