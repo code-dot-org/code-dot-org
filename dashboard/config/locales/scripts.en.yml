@@ -20169,11 +20169,27 @@ en:
               name: Two-Way and Nested Selection
             lesson-13:
               name: Pixels of Me Project
+            lesson-14:
+              name: Working with Objects
+            lesson-15:
+              name: Functions and Parameters
+            lesson-16:
+              name: Debugging Strategies
+            lesson-17:
+              name: Introduction to Loops
+            lesson-18:
+              name: Conditional Statements
+            lesson-19:
+              name: Decomposition
+            lesson-20:
+              name: Two-Way and Nested Selection
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: End-of-Unit Project
+            lessonGroup-4:
+              display_name: Console-Only
           name: pf-pilot-content-2024
           title: 'Programming Fundamentals: Content'
           description_audience: ''
@@ -20193,16 +20209,20 @@ en:
           lessons: {}
           lesson_groups: {}
           name: pf-aitutor-pilot-preassessment-2024
-          title: Pre-Assessment
+          title: 'Programming Fundamentals: Pre-Assessment'
           description_audience: ''
           description_short: ''
           description: ''
           student_description: ''
         pf-aitutor-pilot-content-2024:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: End-of-Unit Project
           name: pf-aitutor-pilot-content-2024
-          title: Programming Fundamentals
+          title: 'Programming Fundamentals: Content'
           description_audience: ''
           description_short: ''
           description: ''
@@ -20211,7 +20231,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: pf-aitutor-pilot-postassessment-2024
-          title: Post-Assessment
+          title: 'Programming Fundamentals: Post-Assessment'
           description_audience: ''
           description_short: ''
           description: ''
@@ -20299,6 +20319,28 @@ en:
           lesson_groups: {}
           name: 6-12-csd-music-lab
           title: 6-12 CSD Music Lab Playground
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csaif-pl-cyber:
+          lessons:
+            lesson-1:
+              name: Introduction to Cybersecruity
+            lesson-2:
+              name: Cybersecurity and Global Impacts
+          lesson_groups: {}
+          name: sandbox-csaif-pl-cyber
+          title: Cybersecurity and Global Impacts PL
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csaif-pl-networks:
+          lessons: {}
+          lesson_groups: {}
+          name: sandbox-csaif-pl-networks
+          title: Networks and the Internet PL
           description_audience: ''
           description_short: ''
           description: ''

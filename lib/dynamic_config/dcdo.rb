@@ -59,6 +59,7 @@ class DCDOBase < DynamicConfigBase
       'cdo-blockly-usage': DCDO.get('cdo-blockly-usage', false),
       # TODO ACQ-3074 - Remove this after the Exploring Gen AI launch
       'exploring-gen-ai-launch': DCDO.get('exploring-gen-ai-launch', false),
+      'ai-tutor-teacher-nav-v2': DCDO.get('ai-tutor-teacher-nav-v2', true),
     }
   end
 end

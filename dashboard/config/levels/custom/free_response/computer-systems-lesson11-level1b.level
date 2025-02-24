@@ -1,6 +1,5 @@
 <FreeResponse>
   <config><![CDATA[{
-  "published": true,
   "game_id": 52,
   "created_at": "2025-01-31T18:08:10.000Z",
   "level_num": "custom",
@@ -16,9 +15,11 @@
     "skip_dialog": true,
     "skip_sound": true,
     "display_name": "Smart Bike Helmet",
-    "thumbnail_url": "https://images.code.org/4d322af5e2fae854097c5dbf178aad61-bikehelmet.png"
+    "thumbnail_url": "https://images.code.org/4d322af5e2fae854097c5dbf178aad61-bikehelmet.png",
+    "bubble_choice_description": "A new smart helmet for cyclists includes built-in turn signals and safety features, but early adopters have raised concerns about visibility, battery life, and false emergency alerts."
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T18:08:10.890+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson11-level1a\\\"\"],\"cloned_from\":\"computer-systems-lesson11-level1a\"},{\"changed_at\":\"2025-01-31 18:09:21 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-31T18:08:10.890+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson11-level1a\\\"\"],\"cloned_from\":\"computer-systems-lesson11-level1a\"},{\"changed_at\":\"2025-01-31 18:09:21 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"thumbnail_url\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-02-22 00:33:18 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

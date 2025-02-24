@@ -10,25 +10,30 @@
     "offer_browser_tts": "true",
     "panels": [
       {
-        "text": "Scenario 1: Should Smart Sensors in Classrooms Monitor Student Engagement?\n\nSome schools are considering using AI-driven smart cameras and motion sensors to track student attention and engagement in class. The system analyzes facial expressions, eye movement, and body posture to determine if students are focused.",
-        "imageUrl": "",
+        "text": "# AI Ethics Roleplay\n\nYou and your group will evaluate the ethical use of computing system technologies through the viewpoint of different roles or personas.",
+        "imageUrl": "https://images.code.org/7ed884a785962d36f729618a52716a2b-golden-stones-on-scales-on-marble-table-and-dark-b-2024-11-18-07-15-54-utc.jpg",
         "key": "undefined-ae4d7072-fc5f-4cfa-9fb4-dd5c9540d2ea",
-        "layout": "text-top-center"
+        "layout": "text-top-left"
       },
       {
-        "text": "Discussion Questions:\n\n* How accurate is AI at detecting student engagement?\n* Could this technology unfairly label certain students as “disengaged”?\n* Who owns and has access to student engagement data?\n* How might constant surveillance impact students’ mental health and willingness to participate in class?\n* Are there better alternatives for improving engagement that don’t rely on AI monitoring?",
-        "imageUrl": "",
-        "key": "undefined-3b8137d9-fcb7-43b7-8302-60cb3bf5ae98",
-        "layout": "text-bottom-center"
-      },
-      {
-        "text": "Scenario Roles:\n* High School Student\n* High School Teacher\n* School Administrator\n* Tech Company Representative",
-        "imageUrl": "",
+        "text": "# Step 1 Take on the roll\n- Review the scenario with your group.\n- Understand the values and pressures of your assigned role.",
+        "imageUrl": "https://images.code.org/7b093a027b5be78539d4069d92973e32-people-employees-icons-on-wooden-blocks-business-2024-10-11-02-59-12-utc.jpg",
         "key": "undefined-96e1ca3b-ed52-4eaa-b731-18f40f537e1a",
-        "layout": "text-top-center"
+        "layout": "text-top-right"
+      },
+      {
+        "text": "# Step 2 Discuss\n- Answer the discussion questions from your role's perspective\n- Record main ideas, questions, and insights to digital sticky notes \n",
+        "imageUrl": "https://images.code.org/3bda10340cbe09f65232faea746eea8e-painted-light-bulb-with-word-idea-and-colored-blan-2023-11-27-05-17-12-utc.jpg",
+        "key": "undefined-3b8137d9-fcb7-43b7-8302-60cb3bf5ae98",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "# Propose a decision \n- Work with your group to create a proposal that addresses the scenario. \n- Your goal is to find a solution that feels fair to all roles.\n- Be ready to explain how your proposal considers each perspective.\n",
+        "imageUrl": "https://images.code.org/916cf5d643122f2099f30b6bec11aa74-balance-scale-placed-on-top-of-a-green-paper-cutou-2024-10-28-22-26-31-utc.jpg",
+        "key": "computer-systems-lesson12-scenario-1-5babb39a-56a8-4610-bf06-154f025b2367"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-11 18:14:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-11 18:14:48 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 16:59:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 17:00:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 17:00:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 17:04:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 17:11:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 20:56:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 20:58:36 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 20:59:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -1,0 +1,19 @@
+@use '@/components/common/styles/mixins' as mixins;
+
+// Overline common styles
+p {
+  &.overline {
+    margin-top: 0;
+  }
+
+  // Overline colors
+  &.overline-color {
+    &-primary {
+      color: var(--text-brand-teal-primary);
+    }
+
+    &-secondary {
+      color: var(--text-neutral-quaternary);
+    }
+  }
+}

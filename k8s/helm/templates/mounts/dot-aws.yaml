@@ -1,0 +1,32 @@
+# In development, this allows us to re-use our AWS config from our local machine.
+{{- if .Values.localDev.mounts.mountDotAWS }}
+apiVersion: v1 
+kind: PersistentVolumeClaim 
+metadata:   
+  name: {{ include "cdo.fullname" (merge (dict "component" "dot-aws") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "dot-aws") .) | nindent 4 }}
+spec:
+  resources:
+    requests:
+      storage: 5Mi  
+  accessModes:
+    - ReadWriteMany
+  storageClassName: hostpath
+  volumeName: {{ include "cdo.fullname" (merge (dict "component" "dot-aws") .) }}
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ include "cdo.fullname" (merge (dict "component" "dot-aws") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "dot-aws") .) | nindent 4 }}
+spec:
+  capacity:
+    storage: 5Mi
+  accessModes:
+    - ReadWriteMany
+  storageClassName: hostpath
+  hostPath:
+    path: {{ .Values.localDev.mounts.hostPaths.home }}/.aws
+{{- end }}
