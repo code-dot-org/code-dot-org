@@ -1,7 +1,7 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
-import {BrowserRouter} from 'react-router-dom';
+import {MemoryRouter} from 'react-router-dom';
 
 import {
   RouterContext,
@@ -68,11 +68,11 @@ describe('RouterContext', () => {
   describe('createHref', () => {
     it('works with basename', () => {
       render(
-        <BrowserRouter>
+        <MemoryRouter>
           <RouterProvider basename={baseName}>
             <TestComponent hrefPath={testPath} />
           </RouterProvider>
-        </BrowserRouter>
+        </MemoryRouter>
       );
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
@@ -85,11 +85,11 @@ describe('RouterContext', () => {
       baseName = 'app';
       testPath = 'test-path';
       render(
-        <BrowserRouter>
+        <MemoryRouter>
           <RouterProvider basename={baseName}>
             <TestComponent hrefPath={testPath} />
           </RouterProvider>
-        </BrowserRouter>
+        </MemoryRouter>
       );
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
@@ -102,11 +102,11 @@ describe('RouterContext', () => {
       baseName = '///app';
       testPath = '/////test-path';
       render(
-        <BrowserRouter>
+        <MemoryRouter>
           <RouterProvider basename={baseName}>
             <TestComponent hrefPath={testPath} />
           </RouterProvider>
-        </BrowserRouter>
+        </MemoryRouter>
       );
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
@@ -119,11 +119,11 @@ describe('RouterContext', () => {
       baseName = '/app/';
       testPath = '/test-path/';
       render(
-        <BrowserRouter>
+        <MemoryRouter>
           <RouterProvider basename={baseName}>
             <TestComponent hrefPath={testPath} />
           </RouterProvider>
-        </BrowserRouter>
+        </MemoryRouter>
       );
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
@@ -136,11 +136,11 @@ describe('RouterContext', () => {
       baseName = '/app////';
       testPath = '/test-path//////';
       render(
-        <BrowserRouter>
+        <MemoryRouter>
           <RouterProvider basename={baseName}>
             <TestComponent hrefPath={testPath} />
           </RouterProvider>
-        </BrowserRouter>
+        </MemoryRouter>
       );
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
@@ -153,11 +153,11 @@ describe('RouterContext', () => {
       baseName = '/app/test/';
       testPath = '/path/works/fine';
       render(
-        <BrowserRouter>
+        <MemoryRouter>
           <RouterProvider basename={baseName}>
             <TestComponent hrefPath={testPath} />
           </RouterProvider>
-        </BrowserRouter>
+        </MemoryRouter>
       );
 
       expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
@@ -170,11 +170,11 @@ describe('RouterContext', () => {
   describe('push', () => {
     it('calls navigate correctly', () => {
       render(
-        <BrowserRouter>
+        <MemoryRouter>
           <RouterProvider>
             <TestComponent pushPath={testPath} />
           </RouterProvider>
-        </BrowserRouter>
+        </MemoryRouter>
       );
 
       const button = screen.getByRole('button', {name: /navigate/i});
@@ -188,11 +188,11 @@ describe('RouterContext', () => {
   describe('replace', () => {
     it('calls navigate correctly', () => {
       render(
-        <BrowserRouter>
+        <MemoryRouter>
           <RouterProvider>
             <TestComponent replacePath={testPath} />
           </RouterProvider>
-        </BrowserRouter>
+        </MemoryRouter>
       );
 
       const button = screen.getByRole('button', {name: /replace/i});
@@ -206,11 +206,11 @@ describe('RouterContext', () => {
   describe('goBack', () => {
     it('calls navigate correctly', () => {
       render(
-        <BrowserRouter>
+        <MemoryRouter>
           <RouterProvider>
             <TestComponent />
           </RouterProvider>
-        </BrowserRouter>
+        </MemoryRouter>
       );
 
       const button = screen.getByRole('button', {name: /back/i});
