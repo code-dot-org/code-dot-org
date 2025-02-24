@@ -34,13 +34,13 @@ const TurnOffAiDiff: React.FC = () => {
   const [hasAIDiffAccess, setHasAIDiffAccess] = React.useState(startingState);
 
   const handleToggle = () => {
-    dispatch(setAiDifferentiationEnabled(!hasAIDiffAccess));
-    new UserPreferences().setAiDifferentiationEnabled(!hasAIDiffAccess);
-    setHasAIDiffAccess(!hasAIDiffAccess);
     analyticsReporter.sendEvent(EVENTS.AI_DIFF_CHAT_TOGGLED, {
       'user id': currentUserId,
       state: !hasAIDiffAccess ? 'on' : 'off',
     });
+    dispatch(setAiDifferentiationEnabled(!hasAIDiffAccess));
+    new UserPreferences().setAiDifferentiationEnabled(!hasAIDiffAccess);
+    setHasAIDiffAccess(!hasAIDiffAccess);
   };
 
   const dispatch = useAppDispatch();
