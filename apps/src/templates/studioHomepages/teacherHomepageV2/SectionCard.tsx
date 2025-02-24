@@ -1,3 +1,4 @@
+import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   Heading5,
@@ -33,9 +34,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
-          <button type="button">
-            <FontAwesomeV6Icon iconName="ellipsis-vertical" />
-          </button>
+          {/* <Button isIconOnly={true} icon={iconName={"ellipsis-vertical"}} /> */}
         </div>
       </div>
     </div>

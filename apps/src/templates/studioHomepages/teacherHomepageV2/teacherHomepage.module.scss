@@ -36,6 +36,23 @@
 
 .sectionCardHeaderRight {
   display: flex;
+
+  button {
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+    font-size: 14px;
+    padding: 0;
+    background-color: $neutral_light;
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $light_gray_200;
+      border: none;
+    }
+  }
 }
 
 .sectionCardHeaderText {
@@ -48,10 +65,4 @@
   a {
     color: $light_primary_500;
   }
-}
-
-.sectionHeaderButton {
-  width: 32px;
-  height: 32px;
-  margin: auto;
 }
