@@ -47,26 +47,22 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const buttonContainerRef = useRef<HTMLDivElement>(null);
 
-  // const closeLoadMenu = useCallback(() => {
-  //   console.log('line 51, setting load error to false');
-  //   setIsVersionHistoryOpen(false);
-  //   setLoadError(false);
-  // }, []);
-
-  const loadMenuRef = useOutsideClick<HTMLDivElement>(() => {
-    console.log('use outside click');
+  const closeLoadMenu = useCallback(() => {
     setIsVersionHistoryOpen(false);
     setLoadError(false);
+  }, []);
+
+  const loadMenuRef = useOutsideClick<HTMLDivElement>(() => {
+    closeLoadMenu();
   });
 
-  // const loadMenuStyles = usePositionPortalDropdown(
-  //   loadMenuRef.current,
-  //   buttonContainerRef.current,
-  //   loading || loadError,
-  //   'right',
-  //   'loading dropdown'
-  // );
-  console.log({currentLoadMenu: loadMenuRef.current});
+  const loadMenuStyles = usePositionPortalDropdown(
+    loadMenuRef.current,
+    buttonContainerRef.current,
+    loading || loadError,
+    'right',
+    'loading dropdown'
+  );
 
   // The version history button is generally disabled in read only mode with two exceptions:
   // if the user is viewing an old version of the project, or if this is a teacher viewing
@@ -82,13 +78,11 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         return;
       }
       if (loadError) {
-        console.log('line 83, setting load error to false');
         setLoadError(false);
         return;
       }
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       if (!projectManager) {
-        console.log('line 89, setting load error to true');
         setLoadError(true);
         return;
       }
@@ -99,11 +93,9 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           .then(versionList => {
             setVersionList(versionList);
             setIsVersionHistoryOpen(true);
-            console.log('line 100, setting loading to false');
             setLoading(false);
           })
           .catch(() => {
-            console.log('line 104, setting load error to true');
             setLoadError(true);
             setLoading(false);
           });
@@ -121,7 +113,6 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
     size: 'xs',
     className: darkModeStyles.tooltipLeft,
   };
-  console.log({loading, loadError});
 
   return (
     <div ref={buttonContainerRef}>
@@ -138,22 +129,22 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           className={darkModeStyles.tertiaryButton}
         />
       </WithTooltip>
-      {(loading || loadError) && (
+      {createPortal(
         <div
           className={moduleStyles.versionHistoryDropdown}
           ref={loadMenuRef}
-          //style={loadMenuStyles}
+          style={loadMenuStyles}
         >
-          {/* <div className={moduleStyles.versionHistoryHeader}>
-              <Heading6 className={moduleStyles.versionHistoryTitle}>
-                {commonI18n.versionHistory_header()}
-              </Heading6>
-              <CloseButton
-                onClick={closeLoadMenu}
-                aria-label={lab2I18n.closeVersionHistory()}
-                id={'close-load-menu-button'}
-              />
-            </div> */}
+          <div className={moduleStyles.versionHistoryHeader}>
+            <Heading6 className={moduleStyles.versionHistoryTitle}>
+              {commonI18n.versionHistory_header()}
+            </Heading6>
+            <CloseButton
+              onClick={closeLoadMenu}
+              aria-label={lab2I18n.closeVersionHistory()}
+              id={'close-load-menu-button'}
+            />
+          </div>
           {loading && (
             <div
               className={classNames(
@@ -173,7 +164,8 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
               />
             </div>
           )}
-        </div>
+        </div>,
+        document.body
       )}
       <VersionHistoryDropdown
         versionList={versionList}

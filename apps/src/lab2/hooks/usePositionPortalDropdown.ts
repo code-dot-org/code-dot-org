@@ -15,7 +15,6 @@ export const usePositionPortalDropdown = (
   useEffect(() => {
     const updateDropdownPositionIfShown = () => {
       if (isOpen) {
-        console.log({label, menuRef, parentRef});
         if (parentRef && menuRef) {
           const dropdownRect = menuRef.getBoundingClientRect();
           const parentRect = parentRef.getBoundingClientRect();
@@ -46,10 +45,9 @@ export const usePositionPortalDropdown = (
   // it should be in based on its own width and the size of the button.
   // We do this to avoid the dropdown appearing in the wrong place momentarily.
   const styles: React.CSSProperties = {
-    visibility: updatedStyles ? 'visible' : 'hidden',
+    visibility: updatedStyles && isOpen ? 'visible' : 'hidden',
     ...dropdownStyles,
   };
-  console.log(`styles for: ${label}: ${JSON.stringify(styles)}`);
 
   return styles;
 };
