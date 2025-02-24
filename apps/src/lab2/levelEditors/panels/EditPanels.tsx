@@ -1,14 +1,14 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import classNames from 'classnames';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
-
 import {
   BodyThreeText,
   Heading3,
   Heading5,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 import PanelsView from '@cdo/apps/panels/PanelsView';

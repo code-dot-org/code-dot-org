@@ -1,12 +1,11 @@
 import {LinkButton} from '@code-dot-org/component-library/button';
-import PropTypes from 'prop-types';
-import React from 'react';
-
 import {
   Heading2,
   OverlineTwoText,
   BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import styles from './actionBlocksWrapper.module.scss';
 

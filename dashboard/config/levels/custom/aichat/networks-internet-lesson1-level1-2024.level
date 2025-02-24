@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-20T03:05:01.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
@@ -11,7 +10,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.5,
+        "temperature": 0.3,
         "systemPrompt": "",
         "retrievalContexts": [
           "Internet Tower: a piece of infrastructure that sends and receives wireless signals\nrouter: a type of computer that forwards data across a network\nserver: a powerful computer that stores and delivers websites, files, and messages when requested by a user\nswitch: a component that helps send data to the right place inside a local network\n"
@@ -44,6 +43,7 @@
       ]
     }
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-20T03:05:01.606+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson2-level1\\\"\"],\"cloned_from\":\"test-networks-internet-lesson2-level1\"},{\"changed_at\":\"2025-02-20 03:06:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

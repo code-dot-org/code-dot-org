@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-12T19:28:38.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -15,7 +14,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 1,
+        "temperature": 0.5,
         "systemPrompt": "You are an all purpose bot designed to help students with a coding project where they code a pixel image. They might ask you to help them brainstorm an idea for their image, break down the coding tasks into subtasks, or help debug their code.\n\nAt no point should you provide them with code. Instead, ask guiding questions to help them debug their code.\n",
         "retrievalContexts": [
 
@@ -49,6 +48,7 @@
     "display_name": "Troubleshooting Bot",
     "bubble_choice_description": "This chatbot is meant to help people troubleshoot their device when it stops working as expected."
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-12T19:28:38.523+00:00\",\"changed\":[\"cloned from \\\"emma-test-ai-chatbot-python-1\\\"\"],\"cloned_from\":\"emma-test-ai-chatbot-python-1\"},{\"changed_at\":\"2025-02-12 19:28:42 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-12 19:35:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-12 19:38:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-12 19:40:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

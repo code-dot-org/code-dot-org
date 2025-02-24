@@ -1,8 +1,8 @@
 import {Button} from '@code-dot-org/component-library/button';
+import Typography from '@code-dot-org/component-library/typography';
 import $ from 'jquery';
 import React, {useState} from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';

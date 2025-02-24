@@ -1,12 +1,12 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import PropTypes from 'prop-types';
-import React, {useContext, useState} from 'react';
-
 import {
   BodyFourText,
   StrongText,
   EmText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import PropTypes from 'prop-types';
+import React, {useContext, useState} from 'react';
+
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';

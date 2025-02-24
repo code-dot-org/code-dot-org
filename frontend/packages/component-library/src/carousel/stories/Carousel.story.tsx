@@ -448,18 +448,18 @@ ImageCarousel.play = async ({canvasElement}: {canvasElement: HTMLElement}) => {
   const imageSlides = ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'];
 
   // check that the navigation arrows are showing
-  expect(navArrowPrev).toBeInTheDocument();
-  expect(navArrowNext).toBeInTheDocument();
+  await expect(navArrowPrev).toBeInTheDocument();
+  await expect(navArrowNext).toBeInTheDocument();
 
   // check that the pagination dots are showing
-  paginationDots.forEach(async dotLabel => {
+  for (const dotLabel of paginationDots) {
     const dots = await canvas.findAllByLabelText(dotLabel);
     dots.forEach(dot => expect(dot).toBeInTheDocument());
-  });
+  }
 
   // check that images are visible in carousel
-  imageSlides.forEach(async imageSlide => {
+  for (const imageSlide of imageSlides) {
     const images = await canvas.findAllByAltText(imageSlide);
     images.forEach(image => expect(image).toBeVisible());
-  });
+  }
 };
