@@ -3,7 +3,7 @@
 # Outputs min/max/mean build duration for successful drone builds in the past week
 # you must have the drone CLI command installed, and be logged in to drone.
 #
-# Example: bin/drone/stats --ago="1 month" --only-successful=false --only-stages="ui,unit"
+# Example: bin/drone/stats --ago="1 month" --only-successful=false --only-stages="ui,unit" --csv
 
 require "json"
 require "time"
@@ -31,11 +31,26 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-# To help keep options that affect output near data, we output options as a column in the table.
 OPTIONS_NOT_TO_OUTPUT_TO_TABLE = [:json]
 
 OLDEST_BUILD_OF_INTEREST = options[:ago].ago
 oldest_build_seen = Time.now
+
+# This template is used to output JSON from the `drone info` command: https://pkg.go.dev/text/template
+# If you want to add more stats, you may need to modify this template to fetch more values.
+# Valid values can be discovered by looking up the drone info rest apis values: https://docs.drone.io/api/builds/build_info/
+DRONE_INFO_JSON_TEMPLATE = <<-GOLANG_TEMPLATE
+  [
+  {{- range $i, $stage := .Stages }}
+    {{- if $i }},{{ end }}
+    {
+      "name": "{{$stage.Name}}",
+      "started":{{$stage.Started}},
+      "stopped":{{$stage.Stopped}}
+    }
+  {{- end }}
+  ]
+GOLANG_TEMPLATE
 
 MAX_DRONE_CLI_PAGE_NUM = 200
 drone_page_num = 1
@@ -44,25 +59,23 @@ build_stages = []
 while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
   raise "Exceeded max drone CLI --page limit (#{MAX_DRONE_CLI_PAGE_NUM})" if drone_page_num > MAX_DRONE_CLI_PAGE_NUM
 
-  cmd = "drone build ls code-dot-org/code-dot-org #{options[:only_successful] ? "--status success" : ""} --limit 10000 --page #{drone_page_num} --format '{{ .Number }}'"
-  build_nums = `#{cmd}`.strip.lines.map(&:strip).reject(&:empty?).map(&:to_i)
+  drone_ls_cmd = "drone build ls code-dot-org/code-dot-org #{options[:only_successful] ? "--status success" : ""} --limit 10000 --page #{drone_page_num} --format '{{ .Number }}'"
+  build_nums = `#{drone_ls_cmd}`.strip.lines.map(&:strip).reject(&:empty?).map(&:to_i)
 
-  new_build_stages = Parallel.flat_map(build_nums, in_threads: 32) do |build_num|
-    info_cmd = "drone build info code-dot-org/code-dot-org #{build_num} --format '{{ range .Stages }}{{ .Name }} {{ .Started }} {{ .Stopped }}\n{{ end }}'"
-    stages_output = `#{info_cmd}`.strip
+  new_build_stages = Parallel.flat_map(build_nums, in_threads: 1) do |build_num|
+    drone_info_cmd = "drone build info code-dot-org/code-dot-org #{build_num} --format '#{DRONE_INFO_JSON_TEMPLATE}'"
+    drone_info_cmd_output = `#{drone_info_cmd}`
 
-    stages_output.lines.map(&:strip).reject(&:empty?).map do |line|
-      stage_name, started, finished = line.split
-      started = started.to_i
-      finished = finished.to_i
-      next if finished.zero? || started.zero?
-      next if options[:only_stages] && !options[:only_stages].include?(stage_name)
-
+    # We've hacked DRONE_INFO_JSON_TEMPLATE to output a JSON array, if you want
+    # to add more kinds of stats, you might need to hack its output
+    JSON.parse(drone_info_cmd_output, symbolize_names: true).map do |stage|
+      next if stage[:stopped].zero? || stage[:started].zero?
+      next if options[:only_stages] && !options[:only_stages].include?(stage[:name])
       {
         build_num: build_num,
-        finished: Time.at(finished),
-        duration_mins: ((finished - started) / 60.0).round(2),
-        stage_name: stage_name,
+        finished: Time.at(stage[:stopped]),
+        duration_mins: ((stage[:stopped] - stage[:started]) / 60.0).round(2),
+        stage_name: stage[:name],
       }
     end
   end.compact
@@ -95,18 +108,12 @@ def descriptive_statistics(data, units: nil, round: nil)
 end
 
 def to_justified_tsv_str(hash)
-  # Determine max width for each column
   col_names = hash.first.keys
-  col_widths = col_names.map do |col|
-    [col.to_s.length, *hash.map {|row| row[col].to_s.length}].max
-  end
+  col_widths = col_names.map {|col| [col.to_s.length, *hash.map {|row| row[col].to_s.length}].max}
 
-  # Write CSV to console with justified columns
   CSV.generate(col_sep: "\t", force_quotes: false) do |csv|
     csv << col_names.map.with_index {|col, i| col.to_s.ljust(col_widths[i])}
-    hash.each do |row|
-      csv << row.values.map.with_index {|val, i| val.to_s.ljust(col_widths[i])}
-    end
+    hash.each {|row| csv << row.values.map.with_index {|val, i| val.to_s.ljust(col_widths[i])}}
   end
 end
 
@@ -119,39 +126,26 @@ def write_stats_table(filename, data)
 end
 
 def compute_stats_for(all_build_stages, options, units: nil, round: nil, &data_selector)
-  # We filter the options hash to be appropriate for outputting as a table column
-  # that means keeping it relatively short, but containing data-relevant flags
-  options_filtered = options.
-    reject {|key, value| OPTIONS_NOT_TO_OUTPUT_TO_TABLE.include?(key) || value.nil?}.
-    inspect.tr('"', "'")
+  options_filtered = options.reject {|key, value| OPTIONS_NOT_TO_OUTPUT_TO_TABLE.include?(key) || value.nil?}.inspect.tr('"', "'")
 
   stats_for = lambda do |stage_name, build_stages|
     {
       stage_name: stage_name,
-      **descriptive_statistics(
-        build_stages.map(&data_selector),
-        units: units,
-        round: round,
-      ),
+      **descriptive_statistics(build_stages.map(&data_selector), units: units, round: round),
       options: options_filtered,
     }
   end
 
-  # First do stats for each stage_name, each will be a row in the table
   duration_stats = all_build_stages.group_by {|s| s[:stage_name]}.map do |stage_name, subset_of_stages|
     stats_for.call(stage_name, subset_of_stages)
   end
 
-  # Now run stats for all stage_names together, this will be the final row
   all_stage_name_label = options[:only_stages] ? options[:only_stages].join("+") : "ALL"
-  duration_stats <<  stats_for.call(all_stage_name_label, all_build_stages)
+  duration_stats << stats_for.call(all_stage_name_label, all_build_stages)
 end
 
 def write_duration_stats_table(build_stages, options)
-  duration_mins_stats = compute_stats_for(build_stages, options, units: "minutes", round: 2) do |build_stage|
-    # Select which field of a build_stage to use as the data field for stats
-    build_stage[:duration_mins]
-  end
+  duration_mins_stats = compute_stats_for(build_stages, options, units: "minutes", round: 2) {|build_stage| build_stage[:duration_mins]}
   write_stats_table("drone-duration-stats.tsv", duration_mins_stats)
 end
 
