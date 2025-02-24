@@ -126,9 +126,4 @@ export const White: Story = {
     ...component,
     color: 'white',
   })),
-  parameters: {
-    backgrounds: {
-      default: 'dark',
-    },
-  },
 };
