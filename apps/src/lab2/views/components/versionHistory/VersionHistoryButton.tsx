@@ -7,7 +7,7 @@ import {
 } from '@code-dot-org/component-library/tooltip';
 import {Heading6} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import {usePositionPortalDropdown} from '@cdo/apps/lab2/hooks/usePositionPortalDropdown';
@@ -88,23 +88,33 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
       }
       if (!isVersionHistoryOpen) {
         setLoading(true);
-        projectManager
-          .getVersionList()
-          .then(versionList => {
-            setVersionList(versionList);
-            setIsVersionHistoryOpen(true);
-            setLoading(false);
-          })
-          .catch(() => {
-            setLoadError(true);
-            setLoading(false);
-          });
+        setTimeout(() => {
+          projectManager
+            .getVersionList()
+            .then(versionList => {
+              setVersionList(versionList);
+              setIsVersionHistoryOpen(true);
+              setLoading(false);
+            })
+            .catch(() => {
+              setLoadError(true);
+              setLoading(false);
+            });
+        }, 0);
       } else {
         setIsVersionHistoryOpen(false);
       }
     },
     [isVersionHistoryOpen, loadError, loading]
   );
+
+  useEffect(() => {
+    if (loading || loadError) {
+      const closeButton = document.getElementById('close-load-menu-button');
+      console.log(`going to try to focus on ${closeButton}`);
+      setTimeout(() => closeButton?.focus(), 0);
+    }
+  }, [loading, loadError, loadMenuStyles]);
 
   const tooltipProps: TooltipProps = {
     text: commonI18n.versionHistory_header(),

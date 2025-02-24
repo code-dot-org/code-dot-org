@@ -293,6 +293,7 @@ export default class ProjectManager {
   }
 
   async getVersionList() {
+    throw new Error();
     return await this.sourcesStore.getVersionList(this.channelId);
   }
 
