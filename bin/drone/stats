@@ -1,16 +1,12 @@
 #!/usr/bin/env bundle exec ruby
 
-# Outputs min/max/mean build duration for successful drone builds in the past week
-# you must have the drone CLI command installed, and be logged in to drone.
-#
-# Example: bin/drone/stats --ago="1 month" --only-successful=false --only-stages="ui,unit" --csv
-
 require "json"
 require "time"
 require "active_support/time"
 require "optparse"
 require "parallel"
 require "csv"
+require 'httparty'
 
 options = {ago: 1.week, json: false, only_successful: true, only_stages: nil, verbose: nil}
 OptionParser.new do |opts|
@@ -31,44 +27,43 @@ OptionParser.new do |opts|
   end
 end.parse!
 
+def drone_api_get(path)
+  drone_url = "https://drone.cdn-code.org"
+  url = "#{drone_url}/api/repos/code-dot-org/code-dot-org/#{path}"
+  drone_token = ENV.fetch('DRONE_TOKEN', nil)
+  raise "Env var DRONE_TOKEN must be set to 'Your Personal Token' from #{drone_url}/account" if drone_token.nil?
+
+  res = HTTParty.get(
+    url,
+    headers: {
+      "Authorization" => "Bearer #{ENV.fetch('DRONE_TOKEN', nil)}",
+      "Content-Type" => "application/json",
+    },
+    format: :plain,
+  )
+  raise "#{res.code} #{res.message} - GET request to #{url} failed" unless res.success?
+  JSON.parse res.body, symbolize_names: true
+end
+
 OPTIONS_NOT_TO_OUTPUT_TO_TABLE = [:json]
 
 OLDEST_BUILD_OF_INTEREST = options[:ago].ago
 oldest_build_seen = Time.now
-
-# This template is used to output JSON from the `drone info` command: https://pkg.go.dev/text/template
-# If you want to add more stats, you may need to modify this template to fetch more values.
-# Valid values can be discovered by looking up the drone info rest apis values: https://docs.drone.io/api/builds/build_info/
-DRONE_INFO_JSON_TEMPLATE = <<-GOLANG_TEMPLATE
-  [
-  {{- range $i, $stage := .Stages }}
-    {{- if $i }},{{ end }}
-    {
-      "name": "{{$stage.Name}}",
-      "started":{{$stage.Started}},
-      "stopped":{{$stage.Stopped}}
-    }
-  {{- end }}
-  ]
-GOLANG_TEMPLATE
-
-MAX_DRONE_CLI_PAGE_NUM = 200
+MAX_DRONE_PAGE_NUM = 200
 drone_page_num = 1
 build_stages = []
 
 while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
-  raise "Exceeded max drone CLI --page limit (#{MAX_DRONE_CLI_PAGE_NUM})" if drone_page_num > MAX_DRONE_CLI_PAGE_NUM
+  raise "Exceeded hardcoded max drone API page limit (#{MAX_DRONE_PAGE_NUM})" if drone_page_num > MAX_DRONE_PAGE_NUM
 
-  drone_ls_cmd = "drone build ls code-dot-org/code-dot-org #{options[:only_successful] ? "--status success" : ""} --limit 10000 --page #{drone_page_num} --format '{{ .Number }}'"
-  build_nums = `#{drone_ls_cmd}`.strip.lines.map(&:strip).reject(&:empty?).map(&:to_i)
+  builds = drone_api_get("builds?page=#{drone_page_num}").
+    select {|build| options[:only_successful] ? build[:status] == "success" : true}
+  build_nums = builds.map {|build| build[:number]}
 
-  new_build_stages = Parallel.flat_map(build_nums, in_threads: 1) do |build_num|
-    drone_info_cmd = "drone build info code-dot-org/code-dot-org #{build_num} --format '#{DRONE_INFO_JSON_TEMPLATE}'"
-    drone_info_cmd_output = `#{drone_info_cmd}`
+  new_build_stages = Parallel.flat_map(build_nums, in_threads: 32) do |build_num|
+    build_info = drone_api_get("builds/#{build_num}")
 
-    # We've hacked DRONE_INFO_JSON_TEMPLATE to output a JSON array, if you want
-    # to add more kinds of stats, you might need to hack its output
-    JSON.parse(drone_info_cmd_output, symbolize_names: true).map do |stage|
+    build_info[:stages].map do |stage|
       next if stage[:stopped].zero? || stage[:started].zero?
       next if options[:only_stages] && !options[:only_stages].include?(stage[:name])
       {
