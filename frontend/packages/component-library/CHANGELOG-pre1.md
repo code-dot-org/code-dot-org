@@ -563,7 +563,6 @@ component/entity. All of that Changelogs will be combined into one in this file 
 - added tests
 - added storybook
 - component is now `Ready for Dev`
-- wrapped `TextField` component
 - Initial release
 
 ## componentLibrary/link
@@ -805,6 +804,10 @@ component/entity. All of that Changelogs will be combined into one in this file 
 - Initial release
 
 ## `componentLibrary/textField`
+
+## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/64075)
+
+- wrapped in `FormFieldWrapper` component
 
 ## [0.4.0](https://github.com/code-dot-org/code-dot-org/pull/62723)
 
