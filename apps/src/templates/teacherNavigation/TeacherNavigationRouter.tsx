@@ -103,8 +103,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     [selectedSection]
   );
 
-  console.log(sectionHasAITutor);
-
   const studentCount = useAppSelector(
     state => state.teacherSections.selectedStudents.length
   );
