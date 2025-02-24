@@ -38,13 +38,11 @@ export const openImportFromBackpackPrompt = async ({
 }: OpenImportFromBackpackPromptArgsType) => {
   const handleError = (message: string, errorType: BackpackErrorType) => () => {
     // TODO: send analytics / add logging.
-    console.error(message);
     if (errorType === BackpackErrorType.DELETE_FILE) {
       dialogControl?.showDialog({
         type: DialogType.GenericAlert,
-        title: 'Files Saved in Backpack',
-        message:
-          'There was an error in deleting the selected backpack file. Please try again.',
+        title: 'Files saved in backpack',
+        message,
       });
     }
   };
@@ -178,6 +176,7 @@ export const openImportFromBackpackPrompt = async ({
             message: `You are about to delete ${selectedBackpackFileName} from your backpack.`,
             confirmText: 'Delete',
             handleConfirm: () => handleDelete(selectedBackpackFileName),
+            destructive: true,
           });
         }
       }
