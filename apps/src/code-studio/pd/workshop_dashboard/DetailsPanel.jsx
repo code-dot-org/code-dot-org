@@ -4,6 +4,7 @@ import React from 'react';
 import {Row, Col, ButtonToolbar, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import ConfirmationDialog from '../components/confirmation_dialog';
+import {RouterContext} from '../RouterContext';
 
 import WorkshopForm from './components/workshop_form';
 import WorkshopPanel from './WorkshopPanel';
@@ -25,6 +26,8 @@ export default class DetailsPanel extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
   };
+
+  static contextType = RouterContext;
 
   state = {
     showAdminEditConfirmation: false,

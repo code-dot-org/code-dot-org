@@ -12,6 +12,7 @@ import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 
 import Spinner from '../../../../sharedComponents/Spinner';
+import {RouterContext} from '../../RouterContext';
 import SessionTime from '../components/session_time';
 import {
   PermissionPropType,
@@ -27,6 +28,8 @@ export class WorkshopAttendance extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
   };
+
+  static contextType = RouterContext;
 
   static propTypes = {
     permission: PermissionPropType.isRequired,

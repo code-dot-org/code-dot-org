@@ -43,6 +43,7 @@ import color from '@cdo/apps/util/color';
 
 import Spinner from '../../../../sharedComponents/Spinner';
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
+import {RouterContext} from '../../RouterContext';
 import {
   PermissionPropType,
   WorkshopAdmin,
@@ -86,6 +87,8 @@ export class WorkshopForm extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
   };
+
+  static contextType = RouterContext;
 
   static propTypes = {
     permission: PermissionPropType.isRequired,

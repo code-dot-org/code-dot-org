@@ -11,6 +11,7 @@ import * as sort from 'sortabular';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import color from '@cdo/apps/util/color';
 
+import {RouterContext} from '../../RouterContext';
 import {workshopShape} from '../types.js';
 import {shouldShowSurveyResults} from '../workshop_summary_utils';
 
@@ -40,6 +41,8 @@ export default class WorkshopTable extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
   };
+
+  static contextType = RouterContext;
 
   static defaultProps = {
     workshops: undefined,

@@ -12,6 +12,7 @@ import {
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import ConfirmationDialog from '../../components/confirmation_dialog';
+import {RouterContext} from '../../RouterContext';
 import {PermissionPropType} from '../permission';
 import {shouldUseFoormSurvey} from '../workshop_summary_utils';
 
@@ -19,6 +20,8 @@ export class WorkshopManagement extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
   };
+
+  static contextType = RouterContext;
 
   static propTypes = {
     permission: PermissionPropType.isRequired,
