@@ -130,12 +130,9 @@ const HeaderWrapper = () => {
   const {router} = useContext(RouterContext);
   const {pathname} = useLocation();
   const params = useParams();
-  let breadcrumbs = '';
-  routeConfigs.forEach(config => {
-    if (matchPath(config.path, pathname)) {
-      breadcrumbs = config.breadcrumbs;
-    }
-  });
+  const breadcrumbs = routeConfigs.find(config =>
+    matchPath(config.path, pathname)
+  )?.breadcrumbs;
 
   // Create routes structure that Header expects
   const routes = [
