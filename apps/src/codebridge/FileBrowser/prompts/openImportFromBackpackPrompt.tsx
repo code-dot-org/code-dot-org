@@ -46,6 +46,7 @@ export const openImportFromBackpackPrompt = async ({
       <div className={moduleStyles.backpackErrorContainer}>
         <FontAwesomeV6Icon
           iconName="circle-exclamation"
+          iconStyle="regular"
           className={moduleStyles.alertIcon}
         />
         <span className={moduleStyles.backpackErrorMessage}>{message}</span>
@@ -63,7 +64,7 @@ export const openImportFromBackpackPrompt = async ({
       [filename],
       handleError(
         'Delete from Backpack',
-        `There was an error in deleting file ${filename}. Please press OK to close this window and try again.`
+        `There was an error in deleting ${filename}. Close this window and try again.`
       ),
       () => console.log(`Deleted file ${filename}`)
     );
@@ -78,7 +79,7 @@ export const openImportFromBackpackPrompt = async ({
       fileName,
       handleError(
         codebridgeI18n.importFromBackpack(),
-        `There was an error in fetching file ${fileName}. Please press OK to close this window and try again.`
+        `There was an error in fetching ${fileName}. Close this window and try again.`
       ),
       (fileContent: string) => {
         if (newFileName) {
@@ -99,7 +100,7 @@ export const openImportFromBackpackPrompt = async ({
   backpackApi.getFileList(
     handleError(
       codebridgeI18n.filesInBackpackTitle(),
-      'There was an error in getting the Backpack file list. Please press OK to close this window and try again.'
+      'There was an error in getting the Backpack file list. Close this window and try again.'
     ),
     async (filenames: string[]) => {
       if (filenames.length === 0) {
