@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {ReactNode, useMemo, HTMLAttributes} from 'react';
+import {ReactNode, HTMLAttributes} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -49,53 +49,41 @@ const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
   color = 'black',
   size = 'm',
   ...HTMLAttributes
-}) => {
-  const errorSection = useMemo(
-    () =>
-      errorMessage && (
-        <div
-          className={classNames(
-            moduleStyles.formFieldWrapperHelper,
-            moduleStyles.formFieldWrapperError,
-          )}
-        >
-          <FontAwesomeV6Icon iconName="circle-exclamation" />
-          <span>{errorMessage}</span>
-        </div>
-      ),
-    [errorMessage],
-  );
+}) => (
+  <label
+    className={classNames(
+      moduleStyles.formFieldWrapper,
+      moduleStyles[`formFieldWrapper-color-${color}`],
+      moduleStyles[`formFieldWrapper-size-${size}`],
+      className,
+    )}
+    {...HTMLAttributes}
+  >
+    {label && (
+      <span className={moduleStyles.formFieldWrapperLabel}>{label}</span>
+    )}
 
-  const helperSection = useMemo(
-    () =>
-      helperMessage && (
-        <div className={moduleStyles.formFieldWrapperHelper}>
-          {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
-          {<span>{helperMessage}</span>}
-        </div>
-      ),
-    [helperMessage, helperIcon],
-  );
+    {children}
 
-  return (
-    <label
-      className={classNames(
-        moduleStyles.formFieldWrapper,
-        moduleStyles[`formFieldWrapper-color-${color}`],
-        moduleStyles[`formFieldWrapper-size-${size}`],
-        className,
-      )}
-      {...HTMLAttributes}
-    >
-      {label && (
-        <span className={moduleStyles.formFieldWrapperLabel}>{label}</span>
-      )}
+    {!errorMessage && helperMessage && (
+      <div className={moduleStyles.formFieldWrapperHelper}>
+        {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
+        {<span>{helperMessage}</span>}
+      </div>
+    )}
 
-      {children}
-
-      {errorSection || helperSection}
-    </label>
-  );
-};
+    {errorMessage && (
+      <div
+        className={classNames(
+          moduleStyles.formFieldWrapperHelper,
+          moduleStyles.formFieldWrapperError,
+        )}
+      >
+        <FontAwesomeV6Icon iconName="circle-exclamation" />
+        <span>{errorMessage}</span>
+      </div>
+    )}
+  </label>
+);
 
 export default FormFieldWrapper;
