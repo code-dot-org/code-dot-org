@@ -555,6 +555,17 @@ component/entity. All of that Changelogs will be combined into one in this file 
 - added storybook
 - added tests
 
+## `componentLibrary/formFieldWrapper`
+
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/64075)
+
+- implemented component
+- added tests
+- added storybook
+- component is now `Ready for Dev`
+- wrapped `TextField` component
+- Initial release
+
 ## componentLibrary/link
 
 ## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/62863)
