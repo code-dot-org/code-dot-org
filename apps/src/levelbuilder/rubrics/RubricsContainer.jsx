@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
-
 import {
   BodyThreeText,
   BodyTwoText,
   Heading1,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 

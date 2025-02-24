@@ -1,9 +1,9 @@
 import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
+import {Heading1} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useState, useEffect} from 'react';
 import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {Heading1} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';

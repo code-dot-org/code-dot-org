@@ -1,7 +1,7 @@
+import {StrongText} from '@code-dot-org/component-library/typography';
 import PropTypes from 'prop-types';
 import React, {useCallback, useMemo, useState} from 'react';
 
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import AddCoteacher from './AddCoteacher';

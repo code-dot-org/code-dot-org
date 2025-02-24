@@ -1,6 +1,7 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getFileNameWithNumberSuffix} from '@codebridge/utils';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {
   DialogType,
@@ -38,16 +39,20 @@ export const openSaveToBackpackPrompt = async ({
       const dialog = isDuplicateFileName
         ? {
             type: DialogType.GenericConfirmation,
-            title: 'Save to backpack',
-            message: `This project file has the same name as an existing saved file in your backpack. Do you want to rename to ${fileNameCopy} or replace the existing backpack file?`,
-            confirmText: 'Replace',
-            neutralText: 'Rename',
+            title: codebridgeI18n.saveToBackpack(),
+            message: codebridgeI18n.saveToBackpackDuplicateMessage({
+              newFileName: fileNameCopy,
+            }),
+            confirmText: codebridgeI18n.replace(),
+            neutralText: codebridgeI18n.renameFile(),
           }
         : {
             type: DialogType.GenericConfirmation,
-            title: 'Save to backpack',
-            message: `You are about to save ${file.name} to your backpack.`,
-            confirmText: 'Save to backpack',
+            title: codebridgeI18n.saveToBackpack(),
+            message: codebridgeI18n.saveToBackpackMessage({
+              fileName: file.name,
+            }),
+            confirmText: codebridgeI18n.saveToBackpack(),
           };
       const results = await dialogControl?.showDialog(
         dialog as TypedDialogProps

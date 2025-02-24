@@ -305,19 +305,26 @@
     "postpack": "clean-package restore",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
+    "release": "release-it --preRelease=alpha",
+    "stylelint": "stylelint src/**/*.{css,scss,sass}",
+    "stylelint:fix": "yarn run stylelint --fix",
     "test": "jest",
     "typecheck": "tsc --noEmit"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "dependencies": {
     "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@code-dot-org/changelogs": "workspace:*",
     "@code-dot-org/component-library-styles": "workspace:*",
     "@code-dot-org/lint-config": "workspace:*",
     "@contentful/experiences-sdk-react": "^1.24.0",
     "@eslint/js": "^9.15.0",
-    "@monoweave/cli": "^1.11.1",
+    "@release-it/conventional-changelog": "^10.0.0",
     "@swc/core": "^1.9.3",
     "@swc/jest": "^0.2.37",
     "@testing-library/dom": "^10.4.0",
@@ -331,7 +338,6 @@
     "@types/react-dom": "^18.3.1",
     "classnames": "^2.5.1",
     "clean-package": "^2.2.0",
-    "conventional-changelog-conventionalcommits": "^7.0.2",
     "esbuild-sass-plugin": "^3.3.1",
     "eslint": "^9.15.0",
     "eslint-plugin-jest": "^28.9.0",
@@ -347,7 +353,9 @@
     "prettier": "3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "release-it": "^18.1.2",
     "rimraf": "^6.0.1",
+    "stylelint": "^16.14.1",
     "swiper": "^11.0.5",
     "tsup": "^8.3.5",
     "typescript-eslint": "^8.15.0"

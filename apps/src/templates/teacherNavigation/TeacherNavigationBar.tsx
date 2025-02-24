@@ -1,5 +1,6 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import Tags from '@code-dot-org/component-library/tags';
+import Typography from '@code-dot-org/component-library/typography';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
 import {
@@ -11,7 +12,7 @@ import {
 } from 'react-router-dom';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
@@ -31,7 +32,9 @@ import {
 
 import styles from './teacher-navigation.module.scss';
 
-const TeacherNavigationBar: React.FunctionComponent = () => {
+const TeacherNavigationBar: React.FC<{
+  showAITutorTab: boolean;
+}> = showAITutorTab => {
   const sections = useAppSelector(state => state.teacherSections.sections);
 
   const [sectionArray, setSectionArray] = useState<
@@ -77,8 +80,23 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   }
 
   const performanceSectionTitle = getSectionHeader(i18n.performance());
+
   const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
-    ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+    showAITutorTab &&
+    (selectedSection?.courseVersionName?.includes('csa') ||
+      selectedSection?.courseVersionName?.includes(
+        'programming-fundamentals-aitutor-2024'
+      )) &&
+    DCDO.get('ai-tutor-teacher-nav-v2', false)
+      ? [
+          'progress',
+          'assessments',
+          'projects',
+          'stats',
+          'textResponses',
+          'aiTutorChatMessages',
+        ]
+      : ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
 
   const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
   const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =

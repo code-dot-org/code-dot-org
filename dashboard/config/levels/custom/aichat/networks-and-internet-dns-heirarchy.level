@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-17T19:10:39.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
@@ -10,7 +9,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.3,
+        "temperature": 0.2,
         "systemPrompt": "",
         "retrievalContexts": [
           ""
@@ -45,6 +44,7 @@
     "bubble_choice_description": "You're an IT Help Desk agent helping Maya troubleshoot her wearable issue.",
     "thumbnail_url": "https://images.code.org/89dedc50b8a51f3d5453955f74e4ae61-Icon Template.png"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-17T19:10:39.095+00:00\",\"changed\":[\"cloned from \\\"computer-systems-troubleshoot-choiceA\\\"\"],\"cloned_from\":\"computer-systems-troubleshoot-choiceA\"},{\"changed_at\":\"2025-02-17 19:40:08 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-17 19:47:27 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-17 19:52:52 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

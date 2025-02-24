@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-10T18:34:38.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -15,7 +14,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": "0.5",
+        "temperature": 0.3,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -53,6 +52,7 @@
     "bubble_choice_description": "Diego is a 16-year-old high school student living in an urban area.",
     "thumbnail_url": "https://images.code.org/ae982f8de628b812c3b37b34a590f3b8-Diego.webp"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-10T18:34:38.507+00:00\",\"changed\":[\"cloned from \\\"gen-ai-jamila-fun\\\"\"],\"cloned_from\":\"gen-ai-jamila-fun\"},{\"changed_at\":\"2025-02-10 18:35:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 18:56:17 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:04:14 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:05:10 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:41:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:08:28 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:32:42 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:34:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-20 19:22:40 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 19:25:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 19:30:08 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 00:56:07 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 00:58:24 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 01:02:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

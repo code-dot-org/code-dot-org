@@ -6,9 +6,16 @@ export function defaultLintFix(stagedFiles) {
   return [`eslint --fix ${files}`, `prettier --write ${files}`];
 }
 
+export function styleLintFix(stagedFiles) {
+  const files = stagedFiles.join(' ');
+
+  return [`stylelint --fix ${files}`];
+}
+
 /**
  * @type {import('lint-staged').Configuration}
  */
 export default {
   [`**/${DEFAULT_EXTENSIONS_GLOB}`]: defaultLintFix,
+  '**/*.{css,sass,scss}': styleLintFix,
 };
