@@ -60,8 +60,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [selectedVersion, setSelectedVersion] = useState('');
-  const [updatedStyles, setUpdatedStyles] = useState(false);
-  const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
   const locale = currentLocale();
   const menuRef = useOutsideClick<HTMLDivElement>(() => {
     closeDropdown();
@@ -81,13 +79,12 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
   const dialogControl = useDialogControl();
-  usePositionPortalDropdown(
+  const dropdownStyles = usePositionPortalDropdown(
     menuRef?.current,
     buttonRef,
-    setDropdownStyles,
-    setUpdatedStyles,
     isOpen,
-    'right'
+    'right',
+    'main dropdown'
   );
 
   const dateFormatter = useMemo(() => {
@@ -264,21 +261,13 @@ const VersionHistoryDropdown: React.FunctionComponent<
     closeDropdown();
   }, [closeDropdown, dispatch, isLatestVersion, selectedVersion]);
 
-  // We wait to make the dropdown visible until we've calculated the position
-  // it should be in based on its own width and the size of the button.
-  // We do this to avoid the dropdown appearing in the wrong place momentarily.
-  const dropdownStyleProps: React.CSSProperties = {
-    visibility: updatedStyles ? 'visible' : 'hidden',
-    ...dropdownStyles,
-  };
-
   return isOpen
     ? createPortal(
         <div
           className={moduleStyles.versionHistoryDropdown}
           ref={menuRef}
           role="dialog"
-          style={dropdownStyleProps}
+          style={dropdownStyles}
           aria-modal="true"
         >
           <div className={moduleStyles.versionHistoryHeader}>

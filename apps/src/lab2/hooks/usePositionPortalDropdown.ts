@@ -1,19 +1,21 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const TOP_PADDING = 5;
 
 export const usePositionPortalDropdown = (
   menuRef: HTMLElement | null,
   parentRef: HTMLElement | null,
-  setStyles: (styles: React.CSSProperties) => void,
-  setUpdatedStyles: (hasUpdated: boolean) => void,
   isOpen: boolean,
-  alignment: 'right' | 'left'
+  alignment: 'right' | 'left',
+  label?: string
 ) => {
+  const [updatedStyles, setUpdatedStyles] = useState(false);
+  const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
   // Effect to update dropdown position when it is shown.
   useEffect(() => {
     const updateDropdownPositionIfShown = () => {
       if (isOpen) {
+        console.log({label, menuRef, parentRef});
         if (parentRef && menuRef) {
           const dropdownRect = menuRef.getBoundingClientRect();
           const parentRect = parentRef.getBoundingClientRect();
@@ -23,7 +25,7 @@ export const usePositionPortalDropdown = (
             alignment === 'right'
               ? parentRect.right - dropdownRect.width + window.scrollX
               : parentRect.left + window.scrollX;
-          setStyles({
+          setDropdownStyles({
             top,
             left,
           });
@@ -38,5 +40,16 @@ export const usePositionPortalDropdown = (
     return () => {
       window.removeEventListener('resize', updateDropdownPositionIfShown);
     };
-  }, [alignment, isOpen, menuRef, parentRef, setStyles, setUpdatedStyles]);
+  }, [alignment, isOpen, label, menuRef, parentRef]);
+
+  // We wait to make the dropdown visible until we've calculated the position
+  // it should be in based on its own width and the size of the button.
+  // We do this to avoid the dropdown appearing in the wrong place momentarily.
+  const styles: React.CSSProperties = {
+    visibility: updatedStyles ? 'visible' : 'hidden',
+    ...dropdownStyles,
+  };
+  console.log(`styles for: ${label}: ${JSON.stringify(styles)}`);
+
+  return styles;
 };
