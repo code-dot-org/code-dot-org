@@ -1,5 +1,4 @@
-// import Button from '@code-dot-org/component-library/button';
-// import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Button from '@code-dot-org/component-library/button';
 import {
   Heading5,
   OverlineOneText,
@@ -17,6 +16,10 @@ interface SectionCardProps {
 }
 
 export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
+  const onDropdownButtonClick = () => {
+    // open dropdown modal
+  };
+
   return (
     <div className={styles.sectionCardWrapper}>
       <div className={styles.sectionCardHeader}>
@@ -34,7 +37,16 @@ export const SectionCard: React.FC<SectionCardProps> = ({section}) => {
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
-          {/* <Button isIconOnly={true} icon={iconName={"ellipsis-vertical"}} /> */}
+          <Button
+            isIconOnly
+            icon={{iconName: 'ellipsis-vertical'}}
+            onClick={onDropdownButtonClick}
+            color={'gray'}
+            type={'tertiary'}
+            size={'s'}
+            className={styles.dropdownButton}
+            ariaLabel={i18n.sectionOptionsDropdown()}
+          />
         </div>
       </div>
     </div>
