@@ -12,14 +12,6 @@
   min-width: 18.75rem;
   margin: 0;
 
-  .formFieldWrapperLabel {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.125rem;
-    margin: 0;
-  }
-
   .formFieldWrapperHelper {
     display: flex;
     align-items: baseline;
@@ -31,7 +23,7 @@
 .formFieldWrapper.formFieldWrapper-color {
   &-black,
   &-gray {
-    .formFieldWrapperLabelText {
+    .formFieldWrapperLabel {
       color: var(--text-neutral-primary);
     }
 
@@ -45,7 +37,7 @@
 
     // Disabled styles
     &:has(:disabled) {
-      .formFieldWrapperLabelText {
+      .formFieldWrapperLabel {
         color: var(--text-neutral-disabled);
       }
 
@@ -57,7 +49,7 @@
   }
 
   &-white {
-    .formFieldWrapperLabelText {
+    .formFieldWrapperLabel {
       color: var(--text-neutral-inverse);
     }
 
@@ -68,7 +60,7 @@
 
     // Disabled styles
     &:has(:disabled) {
-      .formFieldWrapperLabelText {
+      .formFieldWrapperLabel {
         color: var(--text-neutral-tertiary);
       }
 
@@ -83,7 +75,7 @@
 // FromFieldWrapper sizes
 .formFieldWrapper-size {
   &-l {
-    .formFieldWrapperLabelText {
+    .formFieldWrapperLabel {
       @include label-one;
       margin-bottom: 0;
     }
@@ -96,7 +88,7 @@
   }
 
   &-m {
-    .formFieldWrapperLabelText {
+    .formFieldWrapperLabel {
       @include label-two;
       margin-bottom: 0;
     }
@@ -109,7 +101,7 @@
   }
 
   &-s {
-    .formFieldWrapperLabelText {
+    .formFieldWrapperLabel {
       @include label-three;
       margin-bottom: 0;
     }

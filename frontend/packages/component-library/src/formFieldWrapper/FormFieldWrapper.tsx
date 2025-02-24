@@ -6,7 +6,8 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
 import moduleStyles from './formFieldWrapper.module.scss';
 
-export interface FormFieldWrapperProps extends HTMLAttributes<HTMLDivElement> {
+export interface FormFieldWrapperProps
+  extends HTMLAttributes<HTMLLabelElement> {
   /** FormFieldWrapper children */
   children?: ReactNode;
   /** FormFieldWrapper Custom class name */
@@ -77,28 +78,23 @@ const FormFieldWrapper: React.FunctionComponent<FormFieldWrapperProps> = ({
   );
 
   return (
-    <div
-      {...HTMLAttributes}
+    <label
       className={classNames(
         moduleStyles.formFieldWrapper,
         moduleStyles[`formFieldWrapper-color-${color}`],
         moduleStyles[`formFieldWrapper-size-${size}`],
         className,
       )}
+      {...HTMLAttributes}
     >
-      {label ? (
-        <label className={moduleStyles.formFieldWrapperLabel}>
-          <span className={moduleStyles.formFieldWrapperLabelText}>
-            {label}
-          </span>
-          {children}
-        </label>
-      ) : (
-        children
+      {label && (
+        <span className={moduleStyles.formFieldWrapperLabel}>{label}</span>
       )}
 
+      {children}
+
       {errorSection || helperSection}
-    </div>
+    </label>
   );
 };
 

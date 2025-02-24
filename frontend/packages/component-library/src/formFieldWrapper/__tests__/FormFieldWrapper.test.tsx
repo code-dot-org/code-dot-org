@@ -28,18 +28,6 @@ describe('Design System - FormFieldWrapper', () => {
     expect(childrenEl).toHaveClass('formFieldWrapper');
   });
 
-  it('renders children inside <label> when label prop is provided', () => {
-    const label = 'Test Label';
-    const children = 'Content';
-
-    renderFormFieldWrapper({label, children});
-
-    const childrenEl = screen.getByText(children);
-    expect(childrenEl).toBeInTheDocument();
-    expect(childrenEl).toHaveClass('formFieldWrapperLabel');
-    expect(childrenEl).toHaveTextContent(label + children);
-  });
-
   it('renders helper section when helper props are provided', () => {
     const helperMessage = 'Helper text';
 
