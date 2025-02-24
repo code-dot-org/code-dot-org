@@ -7,7 +7,9 @@ export type GenericConfirmationDialogProps = Required<
 > & {
   handleConfirm?: () => void;
   handleCancel?: () => void;
+  handleNeutral?: () => void;
   confirmText?: string;
+  neutralText?: string;
   destructive?: boolean;
 };
 
@@ -23,23 +25,25 @@ const GenericConfirmationDialog: React.FunctionComponent<
   message,
   handleConfirm,
   handleCancel,
+  handleNeutral,
   confirmText,
   destructive,
-}) => (
-  <GenericDialog
-    title={title}
-    message={message}
-    buttons={{
-      confirm: {
-        callback: handleConfirm,
-        text: confirmText,
-        destructive: destructive,
-      },
-      cancel: {
-        callback: handleCancel,
-      },
-    }}
-  />
-);
+  neutralText,
+}) => {
+  const buttons = {
+    confirm: {
+      callback: handleConfirm,
+      text: confirmText,
+      destructive: destructive,
+    },
+    cancel: {
+      callback: handleCancel,
+    },
+    ...(neutralText
+      ? {neutral: {text: neutralText, callback: () => handleNeutral?.()}}
+      : {}),
+  };
+  return <GenericDialog title={title} message={message} buttons={buttons} />;
+};
 
 export default GenericConfirmationDialog;

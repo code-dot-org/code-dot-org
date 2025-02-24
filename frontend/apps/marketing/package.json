@@ -23,9 +23,14 @@
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "start": "next start",
+    "stylelint": "stylelint src/**/*.{css,scss,sass}",
+    "stylelint:fix": "yarn run stylelint --fix",
     "test": "jest"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
   "dependencies": {
     "@code-dot-org/component-library": "workspace:*",
     "@contentful/experiences-sdk-react": "^1.30.3",
@@ -48,6 +53,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "3.3.3",
+    "stylelint": "^16.14.1",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   },

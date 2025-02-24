@@ -3,7 +3,7 @@
 //
 //
 // Here's a script you can run in your browser console
-// (it will only work in broswer console cause node.js doesn't support DOMParser api)
+// (it will only work in browser console cause node.js doesn't support DOMParser api)
 // to generate this list:
 //
 // ```javascript

@@ -32,8 +32,10 @@ export default class BackpackClientApi {
     if (!this.hasBackpack()) {
       onError();
     }
+    // Cache bust suffix ensures we always get the latest version of the file.
+    const cacheBustSuffix = `?t=${Date.now()}`;
     this.backpackApi.fetch(
-      this.channelId + '/' + filename,
+      this.channelId + '/' + filename + cacheBustSuffix,
       (error, data) => {
         if (error) {
           onError();
@@ -46,18 +48,29 @@ export default class BackpackClientApi {
   }
 
   getFileList(onError, onSuccess) {
-    if (!this.hasBackpack()) {
+    if (!this.hasBackpack() && this.appType === 'javalab') {
       onError();
     }
-    this.backpackApi.fetch(this.channelId, (error, data) => {
-      if (error) {
-        onError(error);
-      } else {
-        const filenames = [];
-        data.forEach(fileData => filenames.push(fileData['filename']));
+    const fetchFiles = () => {
+      this.backpackApi.fetch(this.channelId, (error, data) => {
+        if (error) {
+          onError(error);
+          return;
+        }
+        const filenames = data.map(fileData => fileData.filename);
         onSuccess(filenames);
-      }
-    });
+      });
+    };
+
+    // Only fetch channel id if we don't yet have it. Javalab includes backpack channel_id
+    // in appOptions but lab2 labs (e.g., pythonlab) do not use appOptions.
+    if (!this.channelId) {
+      this.fetchChannelId(() => {
+        fetchFiles();
+      });
+    } else {
+      fetchFiles();
+    }
   }
 
   /**
@@ -76,6 +89,31 @@ export default class BackpackClientApi {
       onError,
       onSuccess,
       () => this.saveFilesHelper(filesJson, filenames, onError, onSuccess)
+    );
+  }
+
+  /**
+   * Save a pythonlab file to the backpack
+   * @param {String} filename
+   * @param {ProjectFile} fileContents ProjectFile
+   * @param {Function} onError Function to call if file fails to save
+   * @param {Function} onSuccess Function to call if file saves.
+   */
+  savePythonlabFile(filename, fileContents, onError, onSuccess) {
+    const fileObject = {[filename]: fileContents};
+    this.updateFilesHelper(
+      this.fileUploadsInProgress,
+      [filename],
+      onError,
+      onSuccess,
+      () =>
+        this.saveFilesHelper(
+          fileObject,
+          [filename],
+          onError,
+          () => {},
+          'pythonlab'
+        )
     );
   }
 
@@ -127,11 +165,14 @@ export default class BackpackClientApi {
     }
   }
 
-  saveFilesHelper(filesJson, filenames, onError, onSuccess) {
+  saveFilesHelper(filesJson, filenames, onError, onSuccess, appType) {
     this.fileUploadsInProgress = [...filenames];
     this.fileUploadsFailed = [];
     filenames.forEach(filename => {
-      const fileContents = filesJson[filename].text;
+      const fileContents =
+        appType === 'pythonlab'
+          ? filesJson[filename].contents
+          : filesJson[filename].text;
       // write file with REQUEST_RETRY_COUNT failure retries
       this.writeSingleFileToBackpack(
         filename,

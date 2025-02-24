@@ -1,0 +1,10 @@
+name 'programming-fundamentals-lesson5-level7-2023'
+display_name 'Practice with Painting'
+description 'Choose one of the practice options below. Then, try out the Bonus if there is time!'
+
+sublevels
+level 'programming-fundamentals-lesson5-level7a-2023'
+level 'programming-fundamentals-lesson5-level7b-2023'
+level 'programming-fundamentals-lesson5-level7c-2023'
+
+

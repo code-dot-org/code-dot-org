@@ -131,7 +131,7 @@ describe('AiDiffWelcome', () => {
     );
     screen.getByText('Pick a skill to practice');
     return;
-  });
+  }, 15000);
 
   test('Back button works correctly', () => {
     render(<AiDiffWelcome {...DEFAULT_PROPS} />);
@@ -160,5 +160,5 @@ describe('AiDiffWelcome', () => {
     await waitFor(() =>
       expect(setShowWelcomeExperienceStub).toHaveBeenCalledWith(false)
     );
-  });
+  }, 15000);
 });

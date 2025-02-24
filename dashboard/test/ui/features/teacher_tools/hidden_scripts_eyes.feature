@@ -7,7 +7,7 @@ Scenario: Hidden Scripts
   Then I sign in as "Teacher_bobby"
   Then I am on "http://studio.code.org/courses/allthethingscourse"
   And I wait to see ".uitest-togglehidden"
-  Then I click selector ".uitest-togglehidden:nth(0) div:contains('Hidden')"
+  Then I click selector ".uitest-togglehidden:eq(0) div:contains('Hidden')"
   And I see no difference for "teacher overview with hidden script"
   Then I sign in as "bobby"
   And I am on "http://studio.code.org/courses/allthethingscourse"

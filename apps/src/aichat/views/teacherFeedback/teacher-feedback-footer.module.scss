@@ -1,28 +1,11 @@
-@import '@cdo/apps/componentLibrary/common/styles/colors.css';
-
-@mixin icon-button($background, $selected, $active) {
-  i {
-    color: var(--text-neutral-tertiary);
-  }
-
-  &.selected i, &:hover i {
-    color: $selected;
-  }
-
-  &:hover {
-    background-color: $background;
-  }
-
-  &:active i {
-    color: $active;
-  }
-}
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@cdo/apps/mixins.scss';
 
 .teacherFeedbackContainer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  
+
   button.icon-button-affirmative {
     @include icon-button(var(--background-success-light), var(--text-success-primary), var(--text-success-secondary));
   }

@@ -353,7 +353,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "long_instructions": "#Do This: \r\n1. Add `painter = Painter()` to create a Painter object\r\n    - Hint: Look at the the code comments\r\n    - Press Run to test your code\r\n    - *Discuss: Did the painter object appear where you expected it to?*\r\n#\r\n-  Add `painter.move()` to make the painter move forward\r\n    - *Discuss: Which direction do you expect the painter to move?*\r\n    - Press Run to test your code\r\n#\r\n-  Add more `painter.move()` methods to move the painter to the cone.\r\n\t- Press Run",
+    "long_instructions": "## Do This: \r\n1. Add `painter = Painter()` to create a `Painter` object.\r\n    - Hint: Look at the the code comments.\r\n    - Press Run to test your code.\r\n    - *Discuss: Did the `Painter` object appear where you expected it to?*\r\n2. Add `painter.move()` to make the `Painter` move forward.\r\n    - *Discuss: Which direction do you expect the `Painter` to move?*\r\n    - Press Run to test your code.\r\n3. Add more `painter.move()` methods to move the `Painter` to the cone.\r\n\t- Press Run to test your code.\r\n    \r\n---\r\n###AI Tutor Support\r\n\r\n::: details [**Not sure how to create a Painter?**]\r\nAsk AI: \r\n- What does `painter = Painter()` do?\r\n- Why do I need to create an object before calling `painter.move()`?\r\n:::\r\n\r\n::: details [**Confused about movement?**]\r\nAsk AI:\r\n- Which direction does the Painter start facing?\r\n- How do I move the Painter forward multiple times?\r\n:::\r\n",
     "start_sources": {
       "files": {
         "0": {
@@ -370,6 +370,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-02-14T04:16:05.987+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-level1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-level1\"},{\"changed_at\":\"2025-02-14 04:16:13 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-14T04:16:05.987+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson6-level1\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson6-level1\"},{\"changed_at\":\"2025-02-14 04:16:13 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 21:44:56 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-19 22:22:38 +0000\",\"changed\":[\"serialized_maze\",\"predict_settings\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>
