@@ -1,4 +1,7 @@
-- @page_title = @script.localized_title
+- if @script.unit_groups.length == 1 && @script.unit_groups.scripts.length == 1
+  - @page_title = "Course: #{@script.localized_title}"
+- else
+  - @page_title = "Unit: #{@script.localized_title}"
 
 %link{href: asset_path('css/scripts.css'), rel: 'stylesheet', type: 'text/css'}
 
