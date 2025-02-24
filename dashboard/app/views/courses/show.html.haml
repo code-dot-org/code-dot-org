@@ -1,4 +1,5 @@
-- @page_title = "Course: #{@unit_group.localized_title}"
+- @page_title = I18n.t("data.course.name.#{@unit_group.name}.title", default: @unit_group.name)
+- @page_description = I18n.t("data.course.name.#{@unit_group.name}.description_short", default: '').truncate(200, separator: '.', omission: '.')
 
 %link{href: asset_path('css/courses.css'), rel: 'stylesheet', type: 'text/css'}
 
