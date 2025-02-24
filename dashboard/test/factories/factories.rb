@@ -521,6 +521,8 @@ FactoryBot.define do
         ao = user.authentication_options.find_by(credential_type: AuthenticationOption::EMAIL)
         ao&.destroy
         user.save
+        # Reload to ensure that further uses of the pre-loaded user don't see the now-destroyed auth option
+        user.reload
       end
     end
 
