@@ -13,6 +13,8 @@ import {
   DATE_ORDER_DESC,
 } from '@cdo/apps/code-studio/pd/constants';
 
+import {RouterContext} from '../RouterContext';
+
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {
   PermissionPropType,
@@ -52,6 +54,8 @@ export class WorkshopIndex extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
   };
+
+  static contextType = RouterContext;
 
   handleNewWorkshopClick = () => {
     this.context.router.push('/workshops/new');

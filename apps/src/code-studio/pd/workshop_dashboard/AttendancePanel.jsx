@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
+import {RouterContext} from '../RouterContext';
+
 import {DATE_FORMAT} from './workshopConstants';
 import WorkshopPanel from './WorkshopPanel';
 
@@ -18,6 +20,8 @@ export default class AttendancePanel extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
   };
+
+  static contextType = RouterContext;
 
   getSessionAttendanceLink(session) {
     const url = this.getSessionAttendanceUrl(session);

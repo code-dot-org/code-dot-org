@@ -18,6 +18,7 @@ import {
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
 
+import {RouterContext} from '../../RouterContext';
 import DatePicker from '../components/date_picker';
 
 import {
@@ -36,6 +37,8 @@ export default class ReportView extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
   };
+
+  static contextType = RouterContext;
 
   static propTypes = {
     location: PropTypes.object,

@@ -7,6 +7,7 @@ import {Checkbox, Button} from 'react-bootstrap'; // eslint-disable-line no-rest
 import {connect} from 'react-redux';
 
 import Spinner from '../../../../sharedComponents/Spinner';
+import {RouterContext} from '../../RouterContext';
 import {PermissionPropType, WorkshopAdmin} from '../permission';
 
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
@@ -28,6 +29,8 @@ export class WorkshopSummaryReport extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
   };
+
+  static contextType = RouterContext;
 
   state = {
     loading: true,

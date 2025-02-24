@@ -37,6 +37,7 @@ import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
 import {SelectStyleProps, DATE_ORDER_ASC, DATE_ORDER_DESC} from '../constants';
+import {RouterContext} from '../RouterContext';
 
 import DatePicker from './components/date_picker';
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
@@ -76,6 +77,8 @@ export class WorkshopFilter extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
   };
+
+  static contextType = RouterContext;
 
   state = {
     facilitatorsLoading: true,
@@ -279,7 +282,7 @@ export class WorkshopFilter extends React.Component {
       organizer_id: urlParams.organizer_id,
       teacher_email: urlParams.teacher_email,
       only_attended: urlParams.only_attended,
-      regional_partner_id: this.props.regionalPartnerFilter.value,
+      regional_partner_id: this.props.regionalPartnerFilter?.value,
     });
   }
 
