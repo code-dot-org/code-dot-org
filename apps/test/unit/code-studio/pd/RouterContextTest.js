@@ -148,6 +148,23 @@ describe('RouterContext', () => {
         expectedPath
       );
     });
+
+    it('handles multiple slash basename and path', () => {
+      baseName = '/app/test/';
+      testPath = '/path/works/fine';
+      render(
+        <BrowserRouter>
+          <RouterProvider basename={baseName}>
+            <TestComponent hrefPath={testPath} />
+          </RouterProvider>
+        </BrowserRouter>
+      );
+
+      expect(screen.getByRole('link', {name: /link/i})).toHaveAttribute(
+        'href',
+        '/app/test/path/works/fine'
+      );
+    });
   });
 
   describe('push', () => {
