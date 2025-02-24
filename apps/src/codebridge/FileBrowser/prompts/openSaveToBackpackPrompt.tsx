@@ -1,5 +1,7 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getFileNameWithNumberSuffix} from '@codebridge/utils';
+import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {ProjectFile} from '@cdo/apps/lab2/types';
@@ -9,6 +11,8 @@ import {
   TypedDialogProps,
 } from '@cdo/apps/lab2/views/dialogs';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+
+import moduleStyles from '@cdo/apps/codebridge/FileBrowser/styles/filebrowser.module.scss';
 
 type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
@@ -21,12 +25,29 @@ export const openSaveToBackpackPrompt = async ({
   backpackApi,
   file,
 }: OpenSaveToBackpackPromptArgsType) => {
-  const handleError = (message: string) => () => {
+  const handleError = (title: string, message: string) => () => {
     // TODO: send analytics / add logging.
-    console.error(message);
+    const bodyComponent = (
+      <div className={moduleStyles.backpackErrorContainer}>
+        <FontAwesomeV6Icon
+          iconName="circle-exclamation"
+          iconStyle="regular"
+          className={moduleStyles.alertIcon}
+        />
+        <span className={moduleStyles.backpackErrorMessage}>{message}</span>
+      </div>
+    );
+    dialogControl?.showDialog({
+      type: DialogType.GenericAlert,
+      title,
+      bodyComponent,
+    });
   };
   backpackApi.getFileList(
-    handleError('Error in getting backpack file list.'),
+    handleError(
+      codebridgeI18n.importFromBackpack(),
+      `There was an error in getting the Backpack file list. Close this window and try again.`
+    ),
     async (filenames: string[]) => {
       // Check if filename is a duplicate of a saved file in backpack.
       const isDuplicateFileName = filenames.includes(file.name);
@@ -74,7 +95,10 @@ export const openSaveToBackpackPrompt = async ({
       backpackApi.savePythonlabFile(
         selectedFileName,
         fileContents,
-        handleError(`Error in saving pythonlab file ${selectedFileName}`),
+        handleError(
+          codebridgeI18n.importFromBackpack(),
+          `There was an error in saving ${selectedFileName}. Close this window and try again.`
+        ),
         () => {}
       );
     }
