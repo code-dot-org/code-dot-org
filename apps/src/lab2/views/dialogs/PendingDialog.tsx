@@ -56,7 +56,6 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
           className={moduleStyles.spinnerIcon}
         />
       </div>
-      <BodyTwoText>{message}</BodyTwoText>
     </div>
   );
 };
