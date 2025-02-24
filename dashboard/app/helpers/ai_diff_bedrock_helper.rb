@@ -3,6 +3,7 @@ module AiDiffBedrockHelper
   TEMP = 0.5
   MODEL_ID = 'anthropic.claude-3-sonnet-20240229-v1:0'
   MODEL_ARN = 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0'
+  # TODO: extract this to a secret or other centralized parameter once KB is deployed via cloudformation.
   KB_ID = 'ODWSNBOEZG'
   RETRIEVAL_LIMIT = 10
 
