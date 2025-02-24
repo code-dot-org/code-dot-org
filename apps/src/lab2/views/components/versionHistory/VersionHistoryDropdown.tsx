@@ -9,6 +9,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {createPortal} from 'react-dom';
 
 import {sendCodebridgeAnalyticsEvent} from '@cdo/apps/codebridge/utils/analyticsReporterHelper';
+import {usePositionPortalDropdown} from '@cdo/apps/lab2/hooks/usePositionPortalDropdown';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -40,7 +41,6 @@ interface VersionHistoryDropdownProps {
 }
 
 const INITIAL_VERSION_ID = 'initial-version';
-const TOP_PADDING = 5;
 
 /**
  * Dropdown that displays a list of versions for the current project.
@@ -81,6 +81,14 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
 
   const dialogControl = useDialogControl();
+  usePositionPortalDropdown(
+    menuRef?.current,
+    buttonRef,
+    setDropdownStyles,
+    setUpdatedStyles,
+    isOpen,
+    'right'
+  );
 
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
@@ -126,33 +134,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
     previousIsOpen.current = isOpen;
   }, [isOpen, selectedVersion, latestVersion, viewingOldVersion]);
-
-  // Effect to update dropdown position when it is shown.
-  useEffect(() => {
-    const updateDropdownPositionIfShown = () => {
-      if (isOpen) {
-        if (buttonRef && menuRef.current) {
-          const dropdownRect = menuRef.current.getBoundingClientRect();
-          const buttonRect = buttonRef.getBoundingClientRect();
-          const top =
-            buttonRect.top + buttonRect.height + TOP_PADDING + window.scrollY;
-          const left = buttonRect.right - dropdownRect.width + window.scrollX;
-          setDropdownStyles({
-            top,
-            left,
-          });
-          setUpdatedStyles(true);
-        }
-      }
-    };
-
-    updateDropdownPositionIfShown();
-
-    window.addEventListener('resize', updateDropdownPositionIfShown);
-    return () => {
-      window.removeEventListener('resize', updateDropdownPositionIfShown);
-    };
-  }, [buttonRef, isOpen, menuRef]);
 
   const successfulRestoreCleanUp = useCallback(
     (sources: ProjectSources) => {
