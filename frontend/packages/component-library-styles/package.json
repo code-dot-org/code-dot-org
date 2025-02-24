@@ -2,9 +2,6 @@
   "name": "@code-dot-org/component-library-styles",
   "version": "0.0.0-alpha.0",
   "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/component-library-styles/#readme",
-  "bugs": {
-    "url": "https://github.com/code-dot-org/code-dot-org/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code-dot-org/code-dot-org.git",
@@ -15,6 +12,16 @@
   "files": [
     "*.scss"
   ],
+  "scripts": {
+    "release": "release-it --preRelease=alpha"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "devDependencies": {
+    "release-it": "^18.1.2"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   }

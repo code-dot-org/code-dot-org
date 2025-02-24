@@ -11,7 +11,7 @@
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "programming-fundamentals-aitutor",
-    "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2024"
   },
   "resources": [

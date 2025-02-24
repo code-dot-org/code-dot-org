@@ -66,7 +66,7 @@ export const FileBrowserHeaderPopUpButton = () => {
         {experiments.isEnabled(experiments.PYTHONLAB_BACKPACK) && (
           <PopUpButtonOption
             iconName="backpack"
-            labelText="Import from backpack"
+            labelText={codebridgeI18n.importFromBackpack()}
             clickHandler={() =>
               openImportFromBackpackPrompt({
                 backpackApi: backpackApi,

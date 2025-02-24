@@ -15,31 +15,5 @@ module Pd::Application
       return nil if regional_partner.nil?
       REGIONAL_PARTNER_TC_MAPPING[regional_partner.name]
     end
-
-    def find_teachercon_workshop(course:, city:, year: THIS_YEAR)
-      find_scheduled_workshop(
-        course: course,
-        subject: Pd::Workshop::SUBJECT_TEACHER_CON,
-        city: city,
-        year: year
-      )
-    end
-
-    def find_fit_workshop(course:, city:, year: THIS_YEAR)
-      find_scheduled_workshop(
-        course: course,
-        subject: Pd::Workshop::SUBJECT_FIT,
-        city: city,
-        year: year
-      )
-    end
-
-    def find_scheduled_workshop(course:, subject:, city:, year: THIS_YEAR)
-      Pd::Workshop.
-        in_year(year).
-        where(course: course, subject: subject).
-        where('pd_workshops.location_address like ?', "%#{city}%").
-        first
-    end
   end
 end

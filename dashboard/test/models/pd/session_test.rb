@@ -22,6 +22,13 @@ class Pd::SessionTest < ActiveSupport::TestCase
     assert_equal 'End must occur after the start.', session.errors.full_messages[0]
   end
 
+  test 'valid_meeting_link_format validation error' do
+    session = build :pd_session, meeting_link: 'bad/url here'
+    refute session.valid?
+    assert_equal 1, session.errors.messages.count
+    assert_equal 'Meeting link is not a valid URL', session.errors.full_messages[0]
+  end
+
   test 'formatted_date' do
     session = build :pd_session, start: DateTime.new(2016, 3, 1, 9).in_time_zone
     assert_equal '2016-03-01', session.formatted_date
