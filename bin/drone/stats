@@ -10,12 +10,11 @@ require "time"
 require "active_support/time"
 require "optparse"
 require "parallel"
+require "csv"
 
 options = {ago: 1.week, json: false, only_successful: true, only_stages: nil, verbose: nil}
 OptionParser.new do |opts|
-  opts.on("--verbose", 'Output more information') do
-    options[:verbose] = true
-  end
+  opts.on("--verbose", 'Output more information') {options[:verbose] = true}
   opts.on("--json", 'Output successful builds in JSON format') do
     options[:json] = true
     options[:verbose] = false
@@ -32,7 +31,10 @@ OptionParser.new do |opts|
   end
 end.parse!
 
-OLDEST_BUILD_OF_INTEREST = options[:ago].ago # default: 1.week.ago
+# To help keep options that affect output near data, we output options as a column in the table.
+OPTIONS_NOT_TO_OUTPUT_TO_TABLE = [:json]
+
+OLDEST_BUILD_OF_INTEREST = options[:ago].ago
 oldest_build_seen = Time.now
 
 MAX_DRONE_CLI_PAGE_NUM = 200
@@ -74,48 +76,87 @@ while oldest_build_seen >= OLDEST_BUILD_OF_INTEREST
   drone_page_num += 1
 end
 
-def descriptive_statistics(data)
+def descriptive_statistics(data, units: nil, round: nil)
+  raise "All values must be numeric" unless data.all?(Numeric)
   data = data.sort
-  quartile = ->(quartile_num) {data[(data.length * quartile_num / 4.0).round]}
+  quartile = ->(quartile_num) {data[(data.length * quartile_num / 4.0).floor]}
+  format = round ? ->(v) {v.round(round)} : ->(v) {v}
   {
     count: data.size,
-    p_0: data.min,
-    p_25: quartile.call(1),
-    p_50: quartile.call(2),
-    p_75: quartile.call(3),
-    p_100: data.max,
-    sum: data.sum,
-    mean: data.sum / data.size.to_f,
+    **(units.nil? ? {} : {units: units}),
+    mean: format.call(data.sum / data.size.to_f),
+    sum: format.call(data.sum),
+    p_0: format.call(data.min),
+    p_25: format.call(quartile.call(1)),
+    p_50: format.call(quartile.call(2)),
+    p_75: format.call(quartile.call(3)),
+    p_100: format.call(data.max),
   }
 end
 
-def print_stats_for(build_stages, stage_name, options)
-  stats = descriptive_statistics(build_stages.map {|build| build[:duration_mins]})
-  options_desc = options.reject {|key, value| key == :json || value.nil?}
-  puts
-  puts "#{stage_name} build stage duration stats, #{options_desc}:"
-  unitless_keys = [:count]
-  stats.each do |key, value|
-    puts "  #{key.to_s.ljust(6)}: #{value.round} #{"mins" unless unitless_keys.include? key}"
+def to_justified_tsv_str(hash)
+  # Determine max width for each column
+  col_names = hash.first.keys
+  col_widths = col_names.map do |col|
+    [col.to_s.length, *hash.map {|row| row[col].to_s.length}].max
+  end
+
+  # Write CSV to console with justified columns
+  CSV.generate(col_sep: "\t", force_quotes: false) do |csv|
+    csv << col_names.map.with_index {|col, i| col.to_s.ljust(col_widths[i])}
+    hash.each do |row|
+      csv << row.values.map.with_index {|val, i| val.to_s.ljust(col_widths[i])}
+    end
   end
 end
 
-def print_duration_stats(build_stages, options)
+def write_stats_table(filename, data)
+  tsv = to_justified_tsv_str(data)
+  puts "## #{filename} ##"
+  puts tsv
   puts
-  puts "## Per-stage drone build duration stats ##"
-  build_stages.group_by {|s| s[:stage_name]}.each do |stage_name, stages|
-    print_stats_for(stages, stage_name, options)
-  end
-  puts
+  File.write(filename, tsv)
+end
 
-  puts
-  puts "## Overall drone build duration stats ##"
-  print_stats_for(build_stages, options[:only_stages] ? options[:only_stages].join(", ").to_s : "ALL", options)
-  puts
+def compute_stats_for(all_build_stages, options, units: nil, round: nil, &data_selector)
+  # We filter the options hash to be appropriate for outputting as a table column
+  # that means keeping it relatively short, but containing data-relevant flags
+  options_filtered = options.
+    reject {|key, value| OPTIONS_NOT_TO_OUTPUT_TO_TABLE.include?(key) || value.nil?}.
+    inspect.tr('"', "'")
+
+  stats_for = lambda do |stage_name, build_stages|
+    {
+      stage_name: stage_name,
+      **descriptive_statistics(
+        build_stages.map(&data_selector),
+        units: units,
+        round: round,
+      ),
+      options: options_filtered,
+    }
+  end
+
+  # First do stats for each stage_name, each will be a row in the table
+  duration_stats = all_build_stages.group_by {|s| s[:stage_name]}.map do |stage_name, subset_of_stages|
+    stats_for.call(stage_name, subset_of_stages)
+  end
+
+  # Now run stats for all stage_names together, this will be the final row
+  all_stage_name_label = options[:only_stages] ? options[:only_stages].join("+") : "ALL"
+  duration_stats <<  stats_for.call(all_stage_name_label, all_build_stages)
+end
+
+def write_duration_stats_table(build_stages, options)
+  duration_mins_stats = compute_stats_for(build_stages, options, units: "minutes", round: 2) do |build_stage|
+    # Select which field of a build_stage to use as the data field for stats
+    build_stage[:duration_mins]
+  end
+  write_stats_table("drone-duration-stats.tsv", duration_mins_stats)
 end
 
 if options[:json]
   puts JSON.pretty_generate(build_stages)
 else
-  print_duration_stats(build_stages, options)
+  write_duration_stats_table(build_stages, options)
 end
