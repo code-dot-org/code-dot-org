@@ -5,7 +5,7 @@ import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import {AppName} from '../../types';
 
-import moduleStyles from '../validations/edit-validations.module.scss';
+import moduleStyles from './exemplar-settings.module.scss';
 
 const AppSupport: {[key in AppName]?: boolean} = {
   music: true,
@@ -52,7 +52,7 @@ const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
         name="level[exemplar_settings]"
         value={JSON.stringify(exemplarSettings)}
       />
-      <div className={moduleStyles.validation}>
+      <div className={moduleStyles.section}>
         <CollapsibleSection
           initiallyCollapsed={false}
           headerContent="Exemplar Validation"
@@ -132,7 +132,7 @@ const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
           </div>
         </CollapsibleSection>
       </div>
-      <div className={moduleStyles.validation}>
+      <div className={moduleStyles.section}>
         <CollapsibleSection
           initiallyCollapsed={false}
           headerContent="Exemplar Player"
