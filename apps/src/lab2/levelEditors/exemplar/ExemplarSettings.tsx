@@ -62,9 +62,14 @@ const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
               An additional layer of validation is available for levels with
               exemplar sources.
               <br />
-              This validation and its associated feedback occur <i>after</i> any
-              other validations, listed above. If checked, the student's
-              timeline must match the exemplar's timeline.
+              If checked, the playback events on the student’s timeline must
+              match those on the exemplar’s timeline. If condition-based
+              validations are defined (in the section above), they will be
+              checked first. Exemplar validation cannot check code organization
+              (such as loops or functions) - use condition-based validation in
+              combination with exemplar validation to achieve this. The student
+              cannot pass the level unless all timeline events match exactly,
+              even if they have satisfied all other condition-based validations.
             </BodyThreeText>
           </div>
           {!exemplarDefined && (
