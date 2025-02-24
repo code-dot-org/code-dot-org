@@ -5,6 +5,7 @@ export const RouterContext = createContext({
   router: {
     push: (_: string) => {},
     replace: (_: string) => {},
+    goBack: () => {},
     createHref: (_: string) => {},
   },
 });
@@ -16,11 +17,13 @@ export const RouterProvider = ({basename = '', ...props}) => {
 
   const push = useNavigate();
   const replace = (path: string) => push(path, {replace: true});
+  const goBack = () => push(-1);
   const createHref = (path = '') => cleanSlashes(basename, path);
 
   const router = {
     push,
     replace,
+    goBack,
     createHref,
   };
 

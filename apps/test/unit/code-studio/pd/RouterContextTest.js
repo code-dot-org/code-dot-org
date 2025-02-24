@@ -26,10 +26,14 @@ const TestComponent = ({pushPath, replacePath, hrefPath}) => {
     router.replace(replacePath);
   };
 
+  const handleGoBack = () => {
+    router.goBack();
+  };
+
   const href = router.createHref(hrefPath);
 
   return (
-    <div>
+    <>
       <a href={href}>Link</a>
       <button type="button" onClick={handleNav}>
         Navigate
@@ -37,7 +41,10 @@ const TestComponent = ({pushPath, replacePath, hrefPath}) => {
       <button type="button" onClick={handleReplace}>
         Replace
       </button>
-    </div>
+      <button type="button" onClick={handleGoBack}>
+        Back
+      </button>
+    </>
   );
 };
 
@@ -147,7 +154,7 @@ describe('RouterContext', () => {
     it('calls navigate correctly', () => {
       render(
         <BrowserRouter>
-          <RouterProvider basename={baseName}>
+          <RouterProvider>
             <TestComponent pushPath={testPath} />
           </RouterProvider>
         </BrowserRouter>
@@ -165,7 +172,7 @@ describe('RouterContext', () => {
     it('calls navigate correctly', () => {
       render(
         <BrowserRouter>
-          <RouterProvider basename={baseName}>
+          <RouterProvider>
             <TestComponent replacePath={testPath} />
           </RouterProvider>
         </BrowserRouter>
@@ -176,6 +183,24 @@ describe('RouterContext', () => {
       fireEvent.click(button);
 
       expect(mockNavigate).toHaveBeenCalledWith(testPath, {replace: true});
+    });
+  });
+
+  describe('goBack', () => {
+    it('calls navigate correctly', () => {
+      render(
+        <BrowserRouter>
+          <RouterProvider>
+            <TestComponent />
+          </RouterProvider>
+        </BrowserRouter>
+      );
+
+      const button = screen.getByRole('button', {name: /back/i});
+
+      fireEvent.click(button);
+
+      expect(mockNavigate).toHaveBeenCalledWith(-1);
     });
   });
 });
