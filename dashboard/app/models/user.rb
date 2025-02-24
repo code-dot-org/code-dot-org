@@ -244,7 +244,7 @@ class User < ApplicationRecord
 
   scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
 
-  after_create_commit :migrate_to_multi_auth
+  after_create :migrate_to_multi_auth
 
   validates_presence_of :user_type
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
