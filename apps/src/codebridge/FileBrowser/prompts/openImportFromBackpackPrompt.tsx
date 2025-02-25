@@ -1,4 +1,3 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   NewFileFunction,
   SaveFileFunction,
@@ -11,6 +10,7 @@ import {
 } from '@codebridge/utils';
 import React from 'react';
 
+import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {
@@ -20,8 +20,6 @@ import {
 } from '@cdo/apps/lab2/views/dialogs';
 import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
-
-import moduleStyles from '@cdo/apps/codebridge/FileBrowser/styles/filebrowser.module.scss';
 
 type OpenImportFromBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
@@ -42,16 +40,7 @@ export const openImportFromBackpackPrompt = async ({
 }: OpenImportFromBackpackPromptArgsType) => {
   const handleError = (title: string, message: string) => () => {
     // TODO: send analytics / add logging.
-    const bodyComponent = (
-      <div className={moduleStyles.backpackErrorContainer}>
-        <FontAwesomeV6Icon
-          iconName="circle-exclamation"
-          iconStyle="regular"
-          className={moduleStyles.alertIcon}
-        />
-        <span className={moduleStyles.backpackErrorMessage}>{message}</span>
-      </div>
-    );
+    const bodyComponent = <BackpackErrorAlertBody message={message} />;
     dialogControl?.showDialog({
       type: DialogType.GenericAlert,
       title,
