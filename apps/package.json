@@ -281,6 +281,7 @@
     "messageformat": "2.3.0",
     "ml-knn": "^3.0.0",
     "moment": "^2.29.4",
+    "moment-timezone": "^0.5.47",
     "object-fit-images": "^3.2.3",
     "papaparse": "^5.4.1",
     "path-browserify": "^1.0.1",

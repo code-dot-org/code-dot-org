@@ -11,6 +11,7 @@ import GenericConfirmationDialog from './GenericConfirmationDialog';
 import GenericDialog from './GenericDialog';
 import GenericDropdown from './GenericDropdown';
 import GenericPrompt from './GenericPrompt';
+import PendingDialog from './PendingDialog';
 import SkipDialog from './SkipDialog';
 import StartOverDialog from './StartOverDialog';
 import {
@@ -35,6 +36,7 @@ const DialogViews = {
   [DialogType.GenericDialog]: GenericDialog,
   [DialogType.GenericDropdown]: GenericDropdown,
   [DialogType.GenericPrompt]: GenericPrompt,
+  [DialogType.PendingDialog]: PendingDialog,
 };
 
 interface DialogManagerProps {

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-23 21:06:35 UTC",
+    "serialized_at": "2025-02-24 21:59:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -543,6 +543,31 @@
       }
     },
     {
+      "key": "450c2de6-21c8-4744-a6fd-1a094dae080d",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
       "key": "371bd62b-6740-488b-8dfc-6c2ef104adf4",
       "position": 1,
       "properties": {
@@ -633,6 +658,31 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "e238dc16-70be-45c0-b981-8f5addde1d08",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "fa188a31-82b6-452c-804e-8ec13a8071f8",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa188a31-82b6-452c-804e-8ec13a8071f8",
         "lesson.key": "lesson-11",
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024"
@@ -784,6 +834,17 @@
       },
       "seeding_key": {
         "activity_section.key": "9c7464bf-2684-4ebf-9e6b-c776f52204ed",
+        "lesson_activity.key": "d76f2de1-3774-4361-9cb3-fed0f8108e6e"
+      }
+    },
+    {
+      "key": "02ed652c-8e10-46f9-a693-0685c72d3b17",
+      "position": 11,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "02ed652c-8e10-46f9-a693-0685c72d3b17",
         "lesson_activity.key": "d76f2de1-3774-4361-9cb3-fed0f8108e6e"
       }
     },
@@ -1180,6 +1241,17 @@
       }
     },
     {
+      "key": "66f95018-9554-4d79-8a7b-f3c976350519",
+      "position": 22,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "66f95018-9554-4d79-8a7b-f3c976350519",
+        "lesson_activity.key": "58b697ee-0333-4fd8-abb3-50d3f2c7a621"
+      }
+    },
+    {
       "key": "c2cdecc4-2ccd-43c3-97c1-97fa3cd2c86f",
       "position": 1,
       "properties": {
@@ -1259,6 +1331,17 @@
       },
       "seeding_key": {
         "activity_section.key": "66b2938d-be51-4c3f-857c-17ff355d59aa",
+        "lesson_activity.key": "1d21d9bc-e673-443a-9228-6e55228e6b47"
+      }
+    },
+    {
+      "key": "17ecc762-6907-4f99-a281-40af9a483e06",
+      "position": 5,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "17ecc762-6907-4f99-a281-40af9a483e06",
         "lesson_activity.key": "1d21d9bc-e673-443a-9228-6e55228e6b47"
       }
     },
@@ -1475,6 +1558,17 @@
       },
       "seeding_key": {
         "activity_section.key": "497e24a6-cb9d-4a64-bed6-6ee2c5cbad08",
+        "lesson_activity.key": "b5f9e655-62fd-4e07-9cc4-db72717adfb2"
+      }
+    },
+    {
+      "key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e",
+      "position": 11,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e",
         "lesson_activity.key": "b5f9e655-62fd-4e07-9cc4-db72717adfb2"
       }
     },
@@ -1753,6 +1847,17 @@
       }
     },
     {
+      "key": "a52ca956-f95f-44a4-b893-d7d908e25e11",
+      "position": 17,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a52ca956-f95f-44a4-b893-d7d908e25e11",
+        "lesson_activity.key": "b9ba2a1f-7384-4306-b564-95cb79888207"
+      }
+    },
+    {
       "key": "7746349b-e6c8-4a3b-af79-b1434f8b2f5f",
       "position": 1,
       "properties": {
@@ -1977,6 +2082,17 @@
       }
     },
     {
+      "key": "46df5465-284b-438a-a58c-9b99194c830b",
+      "position": 12,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "46df5465-284b-438a-a58c-9b99194c830b",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
       "key": "a54f96be-5c71-4590-8c87-b6eed7e26b67",
       "position": 1,
       "properties": {
@@ -2173,6 +2289,17 @@
       }
     },
     {
+      "key": "06a0a0c3-2775-45f8-8240-20f30ab78f89",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "06a0a0c3-2775-45f8-8240-20f30ab78f89",
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529"
+      }
+    },
+    {
       "key": "ce648c4c-33f2-4807-a8dd-810d66ca13a6",
       "position": 1,
       "properties": {
@@ -2197,6 +2324,37 @@
       "seeding_key": {
         "activity_section.key": "759712ef-cfa8-41e5-8a88-30f1dc2222b1",
         "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb"
+      }
+    },
+    {
+      "key": "f1214cd3-7763-4de4-8c08-1ee26b473ca9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f1214cd3-7763-4de4-8c08-1ee26b473ca9",
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d"
+      }
+    },
+    {
+      "key": "928bacbf-1b9b-41a9-a7e3-5a349ee545ee",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "928bacbf-1b9b-41a9-a7e3-5a349ee545ee",
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d"
+      }
+    },
+    {
+      "key": "41aa0f5b-7ae6-44d5-8ce8-b0d59785985e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "41aa0f5b-7ae6-44d5-8ce8-b0d59785985e",
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c"
       }
     },
     {
@@ -2302,10 +2460,21 @@
       }
     },
     {
+      "key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a",
+      "position": 6,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a",
+        "lesson_activity.key": "e0498937-2059-4bc3-9394-b15848626c25"
+      }
+    },
+    {
       "key": "69d94bbf-ac38-40a0-8e3b-95daf76ecc6f",
       "position": 1,
       "properties": {
-        "description": "i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a quick minute to jot down their thoughts on the Question of the Day. Encourage students to include at least one specific example from any of today’s activities.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a quick minute to jot down their thoughts on the Question of the Day. Encourage students to include at least one specific example from any of today’s activities.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2457,6 +2626,17 @@
       }
     },
     {
+      "key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96",
+      "position": 7,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96",
+        "lesson_activity.key": "41e63e92-fd5f-412a-a862-3ab61104bb12"
+      }
+    },
+    {
       "key": "df7201f3-79da-4c95-8af0-92658fc5a6cd",
       "position": 1,
       "properties": {
@@ -2485,6 +2665,37 @@
       "seeding_key": {
         "activity_section.key": "027a4d73-7039-4544-bcca-e60190794ae2",
         "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594"
+      }
+    },
+    {
+      "key": "3cb19fde-d3a7-4a68-bb4e-f44f0a1865d2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3cb19fde-d3a7-4a68-bb4e-f44f0a1865d2",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "8075ad57-f9e8-455f-a005-e32c6d0b5993",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8075ad57-f9e8-455f-a005-e32c6d0b5993",
+        "lesson_activity.key": "fa188a31-82b6-452c-804e-8ec13a8071f8"
       }
     }
   ],
@@ -2566,6 +2777,50 @@
     },
     {
       "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson1-level4-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "02ed652c-8e10-46f9-a693-0685c72d3b17"
+      },
+      "level_keys": [
+        "networks-lesson1-level4-2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson2-level1-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "66f95018-9554-4d79-8a7b-f3c976350519"
+      },
+      "level_keys": [
+        "networks-lesson2-level1-2024"
+      ]
+    },
+    {
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2587,7 +2842,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2609,7 +2864,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2631,7 +2886,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2653,7 +2908,29 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson3-level5-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "17ecc762-6907-4f99-a281-40af9a483e06"
+      },
+      "level_keys": [
+        "networks-lesson3-level5-2024"
+      ]
+    },
+    {
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2678,7 +2955,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -2703,7 +2980,29 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson4-level3-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e"
+      },
+      "level_keys": [
+        "networks-lesson4-level3-2024"
+      ]
+    },
+    {
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2728,7 +3027,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2753,7 +3052,29 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson5-level3-2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a52ca956-f95f-44a4-b893-d7d908e25e11"
+      },
+      "level_keys": [
+        "networks-lesson5-level3-2024"
+      ]
+    },
+    {
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2775,7 +3096,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2797,7 +3118,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2819,7 +3140,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -2841,7 +3162,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
@@ -2863,7 +3184,29 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson6-level6-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "46df5465-284b-438a-a58c-9b99194c830b"
+      },
+      "level_keys": [
+        "networks-lesson6-level6-2024"
+      ]
+    },
+    {
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2885,7 +3228,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2907,7 +3250,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2929,7 +3272,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2951,7 +3294,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2973,7 +3316,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2995,7 +3338,51 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson7-level7-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "06a0a0c3-2775-45f8-8240-20f30ab78f89"
+      },
+      "level_keys": [
+        "networks-lesson7-level7-2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson8-level1-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "928bacbf-1b9b-41a9-a7e3-5a349ee545ee"
+      },
+      "level_keys": [
+        "networks-lesson8-level1-2024"
+      ]
+    },
+    {
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3017,7 +3404,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3039,7 +3426,29 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson9-level3-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a"
+      },
+      "level_keys": [
+        "networks-lesson9-level3-2024"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3061,7 +3470,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3080,6 +3489,50 @@
       },
       "level_keys": [
         "networks-internet-lesson10-level2-2024"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson10-level3-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96"
+      },
+      "level_keys": [
+        "networks-lesson10-level3-2024"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson11-level1-2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8"
+      },
+      "level_keys": [
+        "networks-lesson11-level1-2024"
       ]
     }
   ],
@@ -3118,6 +3571,30 @@
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024",
         "activity_section.key": "66687984-58fa-4120-bb62-cbb4d7a19cfb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson1-level4-2024",
+        "script_level.level_keys": [
+          "networks-lesson1-level4-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "02ed652c-8e10-46f9-a693-0685c72d3b17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson2-level1-2024",
+        "script_level.level_keys": [
+          "networks-lesson2-level1-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "66f95018-9554-4d79-8a7b-f3c976350519"
       }
     },
     {
@@ -3170,6 +3647,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "networks-lesson3-level5-2024",
+        "script_level.level_keys": [
+          "networks-lesson3-level5-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "17ecc762-6907-4f99-a281-40af9a483e06"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson4-level1-2024",
         "script_level.level_keys": [
           "networks-internet-lesson4-level1-2024"
@@ -3194,6 +3683,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "networks-lesson4-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson4-level3-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson5-level1-2024",
         "script_level.level_keys": [
           "networks-internet-lesson5-level1-2024"
@@ -3214,6 +3715,18 @@
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024",
         "activity_section.key": "dabdb7ac-a19c-462f-af78-ef090cd46ccb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson5-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson5-level3-2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a52ca956-f95f-44a4-b893-d7d908e25e11"
       }
     },
     {
@@ -3274,6 +3787,18 @@
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024",
         "activity_section.key": "0e347c49-e5d3-462f-afb0-d303cc4aab8c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson6-level6-2024",
+        "script_level.level_keys": [
+          "networks-lesson6-level6-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "46df5465-284b-438a-a58c-9b99194c830b"
       }
     },
     {
@@ -3350,6 +3875,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "networks-lesson7-level7-2024",
+        "script_level.level_keys": [
+          "networks-lesson7-level7-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "06a0a0c3-2775-45f8-8240-20f30ab78f89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson8-level1-2024",
+        "script_level.level_keys": [
+          "networks-lesson8-level1-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "928bacbf-1b9b-41a9-a7e3-5a349ee545ee"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson9-level1-2024",
         "script_level.level_keys": [
           "networks-internet-lesson9-level1-2024"
@@ -3374,6 +3923,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "networks-lesson9-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson9-level3-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson10-level1-2024",
         "script_level.level_keys": [
           "networks-internet-lesson10-level1-2024"
@@ -3394,6 +3955,30 @@
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024",
         "activity_section.key": "ed46a64a-1524-4d9e-8a7a-54a492db96c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson10-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson10-level3-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson11-level1-2024",
+        "script_level.level_keys": [
+          "networks-lesson11-level1-2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8"
       }
     }
   ],

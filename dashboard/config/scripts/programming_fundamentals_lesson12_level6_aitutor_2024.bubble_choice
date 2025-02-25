@@ -1,0 +1,16 @@
+name 'programming-fundamentals-lesson12-level6-aitutor-2024'
+display_name 'Conditionals Practice'
+description 'Pick one of the levels below. Use conditionals to control the painter.'
+
+sublevels
+level 'programming-fundamentals-lesson12-level6a-aitutor-2024'
+level 'programming-fundamentals-lesson12-level6b-aitutor-2024'
+level 'programming-fundamentals-lesson12-level6c-aitutor-2024'
+level 'programming-fundamentals-lesson12-level6d-aitutor-2024'
+
+
+
+
+
+
+

@@ -20030,6 +20030,8 @@ en:
           lessons:
             lesson-1:
               name: Templates and Experiments
+            lesson-2:
+              name: Assessments
           lesson_groups: {}
           name: musiclab-6-12-playground
           title: 6-12 Music Lab Playground
@@ -20133,7 +20135,9 @@ en:
           description: ''
           student_description: ''
         pf-pilot-preassessment-2024:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Programming Fundamentals Pre-Assessment
           lesson_groups: {}
           name: pf-pilot-preassessment-2024
           title: 'Programming Fundamentals: Pre-Assessment'
@@ -20189,7 +20193,7 @@ en:
             lessonGroup-3:
               display_name: End-of-Unit Project
             lessonGroup-4:
-              display_name: Console-Only
+              display_name: Alternate Level Progressions (Console)
           name: pf-pilot-content-2024
           title: 'Programming Fundamentals: Content'
           description_audience: ''
@@ -20197,10 +20201,12 @@ en:
           description: ''
           student_description: ''
         pf-pilot-postassessment-2024:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Programming Fundamentals Post-Assessment
           lesson_groups: {}
           name: pf-pilot-postassessment-2024
-          title: 'Programming Fundamentals: Post-Assessment'
+          title: 'Programming Fundamentals: End-of-Unit Assessment'
           description_audience: ''
           description_short: ''
           description: ''
@@ -20221,6 +20227,8 @@ en:
               display_name: Content
             lessonGroup-3:
               display_name: End-of-Unit Project
+            lessonGroup-4:
+              display_name: Alternate Level Progressions (Console)
           name: pf-aitutor-pilot-content-2024
           title: 'Programming Fundamentals: Content'
           description_audience: ''
