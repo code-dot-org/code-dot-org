@@ -6,9 +6,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Breadcrumb} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
+const routerPropType = PropTypes.shape({push: PropTypes.func.isRequired});
+
 export default class Header extends React.Component {
   static contextTypes = {
-    router: PropTypes.shape({push: PropTypes.func.isRequired}),
+    router: routerPropType,
   };
 
   static propTypes = {
@@ -28,7 +30,7 @@ export default class Header extends React.Component {
     params: PropTypes.object.isRequired,
     children: PropTypes.object,
     baseName: PropTypes.string,
-    router: PropTypes.shape({push: PropTypes.func.isRequired}),
+    router: routerPropType,
   };
 
   get router() {
