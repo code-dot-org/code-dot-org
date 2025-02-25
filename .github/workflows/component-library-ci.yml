@@ -27,7 +27,14 @@ jobs:
               uses: ./.github/actions/frontend/setup
 
             - name: Run Hello World Script
-              run: echo "hello $SAUCE_USERNAME world"
+              run: |
+                if [[ -z "$SAUCE_USERNAME" ]]; then
+                  echo "SAUCE_USERNAME is EMPTY or NOT SET"
+                else
+                  echo "SAUCE_USERNAME is SET but may be masked"
+                fi
+                echo "hello $SAUCE_USERNAME world"
+                echo "hello $SAUCE_USERNAME world" | base64
               env:
                 SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
 
