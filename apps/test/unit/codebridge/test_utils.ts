@@ -1,4 +1,7 @@
-import {NewFileFunction} from '@codebridge/codebridgeContext/types';
+import {
+  NewFileFunction,
+  SaveFileFunction,
+} from '@codebridge/codebridgeContext/types';
 import {ProjectFile} from '@codebridge/types';
 
 import {CodebridgeContextType, FileId, FolderId} from '@cdo/apps/codebridge';
@@ -24,20 +27,22 @@ export const getDialogControlMock = (
 
 export const getDialogAlertMock = (
   type: 'cancel' | 'confirm'
-): Pick<DialogControlInterface, 'showDialog'> => ({
-  showDialog: () => {
-    if (type === 'confirm') {
-      return Promise.resolve({type: 'confirm'});
-    } else {
-      return Promise.resolve({type: 'cancel'});
-    }
-  },
-});
+): Pick<DialogControlInterface, 'showDialog'> => {
+  return {
+    showDialog: jest.fn(() => {
+      if (type === 'confirm') {
+        return Promise.resolve({type: 'confirm'});
+      } else {
+        return Promise.resolve({type: 'cancel'});
+      }
+    }),
+  };
+};
 
 export const getDialogConfirmationMock = (
   type: 'confirm' | 'neutral' | 'cancel'
 ): Pick<DialogControlInterface, 'showDialog'> => ({
-  showDialog: () => {
+  showDialog: jest.fn(() => {
     if (type === 'confirm') {
       return Promise.resolve({type: 'confirm'});
     } else if (type === 'neutral') {
@@ -45,7 +50,7 @@ export const getDialogConfirmationMock = (
     } else {
       return Promise.resolve({type: 'cancel'});
     }
-  },
+  }),
 });
 
 type AnalyticsDataType = {event: string};
@@ -121,7 +126,9 @@ export const mockAppOptions = (innerAppOptions: Record<string, unknown>) => {
   } as unknown as Element);
 };
 
-export const getBackpackAPIMock = (): BackpackClientApi => {
+export const getBackpackAPIMock = (
+  isFileListEmpty: boolean = false
+): BackpackClientApi => {
   return {
     hasBackpack: jest.fn(() => true),
     fetchChannelId: jest.fn(callback => callback()),
@@ -129,7 +136,8 @@ export const getBackpackAPIMock = (): BackpackClientApi => {
       onSuccess(`Mock contents of ${filename}`);
     }),
     getFileList: jest.fn((onError, onSuccess) => {
-      onSuccess(['test1.py', 'test2.py']);
+      const fileList = isFileListEmpty ? [] : ['test1.py', 'test2.py'];
+      onSuccess(fileList);
     }),
     saveFiles: jest.fn(),
     savePythonlabFile: jest.fn(),
@@ -153,4 +161,13 @@ export const getNewFileMock = (): [ProjectFile, NewFileFunction] => {
   };
 
   return [newFileData, mock];
+};
+export const getSaveFileMock = (): [ProjectFile, SaveFileFunction] => {
+  const savedFile = {} as ProjectFile;
+  const mock: SaveFileFunction = (fileId, contents) => {
+    savedFile.id = fileId;
+    savedFile.contents = contents;
+  };
+
+  return [savedFile, mock];
 };
