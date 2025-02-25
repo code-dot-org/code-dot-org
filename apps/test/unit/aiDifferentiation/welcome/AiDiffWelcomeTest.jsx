@@ -18,6 +18,17 @@ jest.mock('@react-pdf/renderer', () => {
   };
 });
 
+jest.mock('@cdo/apps/aiDifferentiation/AiDiffChat', () => {
+  return function MockAiDiffChat(props) {
+    return (
+      // eslint-disable-next-line react/prop-types
+      <button onClick={props.chatResponseCallback} type="button">
+        ai chat mocked
+      </button>
+    );
+  };
+});
+
 jest.mock('react-dom-confetti', () => () => <div>confetti</div>);
 
 const DEFAULT_PROPS = {
@@ -58,29 +69,18 @@ describe('AiDiffWelcome', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
 
-    screen.getByText(
-      'Lets iterate together! What would you like to change? Below are some of the tasks I can help you with.'
-    );
+    screen.getByText('ai chat mocked');
   });
 
   test('practice page buttons work correctly', async () => {
     render(<AiDiffWelcome {...DEFAULT_PROPS} firstState={'practice'} />);
 
-    await waitFor(
-      () =>
-        expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled(),
-      {timeout: 100}
-    );
+    expect(screen.getByRole('button', {name: 'Continue'})).toBeDisabled();
 
-    const input = screen.getByRole('textbox');
-    fireEvent.change(input, {target: {value: 'Test'}});
-    fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+    // Click a button that simulates getting a chat response
+    fireEvent.click(screen.getByText('ai chat mocked'));
 
-    await waitFor(
-      () =>
-        expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled(),
-      {timeout: 100}
-    );
+    expect(screen.getByRole('button', {name: 'Continue'})).toBeEnabled();
     fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
 
     screen.getByText('You’re on your way to becoming an AI all-star!');
