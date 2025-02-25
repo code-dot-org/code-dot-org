@@ -154,7 +154,7 @@ export const openImportFromBackpackPrompt = async ({
           }
           if (isSupportFileName) {
             // The user wants to import a file that has the same name as a hidden support file.
-            // Give the user to import with a new name or cancel the import.
+            // Give the user a choice to import with a new name or cancel the import.
             dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
               title: codebridgeI18n.importFromBackpack(),
