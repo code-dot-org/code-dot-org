@@ -40,7 +40,7 @@ import workshopDashboardReducers, {
   setFacilitatorCourses,
 } from './reducers';
 import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
-import {ResultsLoader as DailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
+import DailySurveyResultsLoader from './reports/local_summer_workshop_daily_survey/results_loader';
 import ReportView from './reports/report_view';
 import Workshop from './workshop';
 import WorkshopFilter from './workshop_filter';
