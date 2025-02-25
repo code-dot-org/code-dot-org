@@ -52,15 +52,18 @@ export class WorkshopIndex extends React.Component {
 
   static contextType = RouterContext;
 
-  handleNewWorkshopClick = () => {
+  handleNewWorkshopClick = e => {
+    e.preventDefault();
     this.context.router.push('/workshops/new');
   };
 
-  handleAttendanceReportsClick = () => {
+  handleAttendanceReportsClick = e => {
+    e.preventDefault();
     this.context.router.push('/reports');
   };
 
-  handleLegacySurveySummariesClick = () => {
+  handleLegacySurveySummariesClick = e => {
+    e.preventDefault();
     this.context.router.push('/legacy_survey_summaries');
   };
 
@@ -105,18 +108,25 @@ export class WorkshopIndex extends React.Component {
           {canCreate && (
             <Button
               className="btn-primary"
+              href={this.context.router.createHref('/workshops/new')}
               onClick={this.handleNewWorkshopClick}
             >
               New Workshop
             </Button>
           )}
           {canSeeAttendanceReports && (
-            <Button onClick={this.handleAttendanceReportsClick}>
+            <Button
+              href={this.context.router.createHref('/reports')}
+              onClick={this.handleAttendanceReportsClick}
+            >
               Attendance Reports
             </Button>
           )}
           {canSeeLegacySurveySummaries && (
-            <Button onClick={this.handleLegacySurveySummariesClick}>
+            <Button
+              href={this.context.router.createHref('/legacy_survey_summaries')}
+              onClick={this.handleLegacySurveySummariesClick}
+            >
               Legacy Facilitator Survey Summaries
             </Button>
           )}
