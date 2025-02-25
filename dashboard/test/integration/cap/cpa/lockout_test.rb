@@ -67,6 +67,9 @@ module CAP
 
           context 'when student provider is Google' do
             before do
+              # Remove the email option that a student defaults to
+              student.authentication_options.first.destroy!
+              student.reload
               create(:google_authentication_option, user: student)
             end
 
@@ -187,6 +190,9 @@ module CAP
 
           context 'when student provider is Google' do
             before do
+              # Remove the email option that a student defaults to
+              student.authentication_options.first.destroy!
+              student.reload
               create(:google_authentication_option, user: student)
             end
 
