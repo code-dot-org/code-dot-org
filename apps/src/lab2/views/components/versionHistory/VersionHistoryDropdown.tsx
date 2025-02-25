@@ -1,6 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import Tags from '@code-dot-org/component-library/tags';
 import {Heading6} from '@code-dot-org/component-library/typography';
@@ -353,7 +354,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
             moduleStyles.loadingVersionSpinner
           )}
         >
-          <i className="fa fa-spinner fa-spin" />
+          <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
         </div>
       )}
       {listLoadError && (
