@@ -10,7 +10,7 @@ Welcome to the Code.org Design System Component Library! This repository contain
 
 ## Introduction
 
-The component library provides a collection of reusable components, styles, and guidelines to help you build consistent and accessible user interfaces. It aims to improve the development process by offering a unified design language and reducing the need for redundant code.
+The component library provides a collection of reusable components, styles, and guidelines to help you build consistent and accessible user interfaces. It aims to improve the development process by offering a unified design language and reducing the need for redundant code...
 
 ## Usage
 
