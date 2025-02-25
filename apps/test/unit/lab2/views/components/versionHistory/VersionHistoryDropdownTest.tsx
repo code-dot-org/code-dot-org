@@ -6,6 +6,8 @@ import {Store} from 'redux';
 
 import progress from '@cdo/apps/code-studio/progressRedux';
 import lab from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import lab2Project, {
   setViewingOldVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -29,6 +31,7 @@ describe('VersionHistoryButton', () => {
   let store: Store;
   const closeDropdown = jest.fn();
   const setSelectedVersion = jest.fn();
+  let mockedProjectManager: jest.Mocked<ProjectManager>;
 
   beforeEach(() => {
     stubRedux();
@@ -37,6 +40,11 @@ describe('VersionHistoryButton', () => {
       progress,
       lab,
     });
+    mockedProjectManager = {
+      loadSources: jest.fn(() => Promise.resolve('')),
+      flushSave: jest.fn(),
+    } as unknown as jest.Mocked<ProjectManager>;
+    Lab2Registry.getInstance().setProjectManager(mockedProjectManager);
 
     store = getStore();
   });
@@ -76,6 +84,8 @@ describe('VersionHistoryButton', () => {
     await waitFor(() => {
       expect(setSelectedVersion).toHaveBeenCalledWith('2');
     });
+
+    expect(mockedProjectManager.loadSources).toHaveBeenCalled();
   });
 
   it('selects selected version on load if viewing an old version', async () => {
@@ -99,5 +109,14 @@ describe('VersionHistoryButton', () => {
 
     const versionInput = getByDisplayValue('2') as HTMLInputElement;
     expect(versionInput.checked).toBe(true);
+  });
+
+  it('resets project and closes dropdown on cancel', async () => {
+    const {getByRole} = renderDefault();
+    const cancelButton = getByRole('button', {name: 'Cancel'});
+    const user = userEvent.setup();
+    await user.click(cancelButton);
+    expect(mockedProjectManager.loadSources).toHaveBeenCalled();
+    expect(closeDropdown).toHaveBeenCalled();
   });
 });
