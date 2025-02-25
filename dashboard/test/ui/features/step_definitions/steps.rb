@@ -92,6 +92,7 @@ def navigate_to(url)
     with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
       root = @browser.find_element(css: ':root')
       @browser.navigate.to url
+      puts "@browser.navigate.to #{url.inspect}"
       # Wait until the document has actually changed
       if root
         wait_until do

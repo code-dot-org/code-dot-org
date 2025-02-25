@@ -61,11 +61,19 @@ def get_browser(test_run_name)
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       SeleniumBrowser.remote(CI_SELENIUM_URL, http_client: $http_client) # TODO: headless?
     end
+    # based on https://github.com/code-dot-org/code-dot-org/blob/158ed7c6a7f1d5ab8cfadd0e24ac5f11b83ca391/lib/cdo/sauce_connect.rb#L29
+    domains_to_redirect = [
+      %q(.*\.code.org),
+      %q(.*\.csedweek.org),
+      %q(.*\.hourofcode.com),
+      %q(.*\.codeprojects.org),
+    ]
+    domain_redirection_re = /^https?:\/\/(#{domains_to_redirect.join('|')})/
     # based on https://github.com/SeleniumHQ/selenium/blob/selenium-4.25.0/rb/lib/selenium/webdriver/common/driver_extensions/has_network_interception.rb#L35
     browser.intercept do |request, &continue|
-      if request.url.start_with?('http://localhost-studio.code.org')
-        request.url.sub!('http://localhost-studio.code.org', 'http://ui-tests')
-      end
+      puts "request.url before intercept: #{request.url.inspect}"
+      request.url.sub!(domain_redirection_re, 'http://ui-tests')
+      puts "request.url after intercept: #{request.url.inspect}"
       continue.call(request)
     end
   elsif ENV['TEST_LOCAL'] == 'true'
