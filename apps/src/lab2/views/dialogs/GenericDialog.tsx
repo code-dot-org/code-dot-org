@@ -31,19 +31,28 @@ type GenericDialogTitleProps =
       titleComponent?: never;
     };
 
-export type GenericDialogProps = GenericDialogTitleProps & {
-  message?: string;
-  bodyComponent?: React.ReactNode;
-  buttons?: {
-    [key in ButtonType]?: {
-      text?: string;
-      callback?: dialogCallback;
-      disabled?: boolean;
-      destructive?: boolean;
+export type GenericDialogBodyProps =
+  | {
+      message?: never;
+      bodyComponent?: React.ReactNode;
+    }
+  | {
+      message?: string;
+      bodyComponent?: never;
     };
+
+export type GenericDialogProps = GenericDialogTitleProps &
+  GenericDialogBodyProps & {
+    buttons?: {
+      [key in ButtonType]?: {
+        text?: string;
+        callback?: dialogCallback;
+        disabled?: boolean;
+        destructive?: boolean;
+      };
+    };
+    getButtonCallback?: typeof defaultGetButtonCallback;
   };
-  getButtonCallback?: typeof defaultGetButtonCallback;
-};
 
 import moduleStyles from './generic-dialog.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
@@ -140,7 +149,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
           <Heading3>{title}</Heading3>
         ) : null}
 
-        {bodyComponent || (message && <BodyTwoText>{message}</BodyTwoText>)}
+        {bodyComponent || <BodyTwoText>{message}</BodyTwoText>}
         <div className={moduleStyles.buttonContainer}>
           <div className={moduleStyles.outerButtonContainer}>
             {buttons?.cancel ? (
