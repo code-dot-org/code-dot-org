@@ -345,7 +345,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       :registration_link,
       :prereq,
       :hidden,
-      :grades
+      :grades,
+      :time_zone
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner

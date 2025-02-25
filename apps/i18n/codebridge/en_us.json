@@ -47,6 +47,7 @@
   "makeStarter": "Make starter file",
   "makeSupport": "Make support file",
   "makeValidation": "Make validation file",
+  "manageFiles": "Manage Files",
   "moveFile": "Move",
   "moveFolder": "Move",
   "moveFilePrompt": "Please enter your destination folder",

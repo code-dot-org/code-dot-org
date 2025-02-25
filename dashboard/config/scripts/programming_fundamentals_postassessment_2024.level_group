@@ -1,0 +1,28 @@
+name 'programming-fundamentals-postassessment-2024'
+title 'Programming Fundamentals Post-Assessment'
+
+submittable 'true'
+anonymous 'false'
+activity_guide_level 'false'
+
+page
+text 'programming-fundamentals-postassessment-intro-2024'
+level 'programming-fundamentals-postassessment-question1-2024'
+level 'programming-fundamentals-postassessment-question2-2024'
+level 'programming-fundamentals-postassessment-question3-2024'
+level 'programming-fundamentals-postassessment-question4-2024'
+level 'programming-fundamentals-postassessment-question5-2024'
+
+page
+level 'programming-fundamentals-postassessment-question6-2024'
+level 'programming-fundamentals-postassessment-question7-2024'
+level 'programming-fundamentals-postassessment-question8-2024'
+level 'programming-fundamentals-postassessment-question9-2024'
+level 'programming-fundamentals-postassessment-question10-2024'
+
+page
+level 'programming-fundamentals-postassessment-question11-2024'
+level 'programming-fundamentals-postassessment-question12-2024'
+level 'programming-fundamentals-postassessment-question13-2024'
+level 'programming-fundamentals-postassessment-question14-2024'
+level 'programming-fundamentals-postassessment-question15-2024'

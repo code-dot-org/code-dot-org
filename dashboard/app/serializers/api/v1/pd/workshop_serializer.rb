@@ -5,7 +5,7 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
     :enrollment_code, :pre_workshop_survey_url, :attended, :on_map, :funded, :funding_type, :ready_to_close?,
     :workshop_starting_date, :date_and_location_name, :regional_partner_name, :regional_partner_id,
     :scholarship_workshop?, :can_delete, :created_at, :virtual?, :suppress_email, :third_party_provider, :course_offerings, :module,
-    :participant_group_type, :description, :registration_link, :prereq, :hidden, :grades
+    :participant_group_type, :description, :registration_link, :prereq, :hidden, :grades, :time_zone
 
   def sessions
     object.sessions.map do |session|
