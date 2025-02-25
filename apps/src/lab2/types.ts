@@ -239,10 +239,10 @@ interface VideoData extends VideoLevelData {
 // Exemplar settings for a level.
 export interface ExemplarSettings {
   playerEnabled: boolean;
-  playerTitle?: string;
+  playerTitle: string;
   validationEnabled: boolean;
-  validationSuccessMessage?: string;
-  validationFailureMessage?: string;
+  validationSuccessMessage: string;
+  validationFailureMessage: string;
 }
 
 // Python Lab specific property

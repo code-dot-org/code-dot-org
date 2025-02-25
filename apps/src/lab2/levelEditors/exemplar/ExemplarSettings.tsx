@@ -13,10 +13,10 @@ const AppSupport: {[key in AppName]?: boolean} = {
 
 interface ExemplarSettings {
   playerEnabled: boolean;
-  playerTitle?: string;
+  playerTitle: string;
   validationEnabled: boolean;
-  validationSuccessMessage?: string;
-  validationFailureMessage?: string;
+  validationSuccessMessage: string;
+  validationFailureMessage: string;
 }
 
 interface ExemplarSettingsProps {
@@ -25,14 +25,23 @@ interface ExemplarSettingsProps {
   appName: AppName;
 }
 
+const defaultExemplarSettings: ExemplarSettings = {
+  playerTitle: 'Example',
+  validationSuccessMessage: '',
+  validationFailureMessage: '',
+  playerEnabled: false,
+  validationEnabled: false,
+};
+
 const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
   initialExemplarSettings,
   exemplarDefined,
   appName,
 }) => {
-  const [exemplarSettings, setExemplarSettings] = useState<ExemplarSettings>(
-    initialExemplarSettings
-  );
+  const [exemplarSettings, setExemplarSettings] = useState<ExemplarSettings>({
+    ...defaultExemplarSettings,
+    ...initialExemplarSettings,
+  });
 
   const appSupported = AppSupport[appName];
 
@@ -184,7 +193,7 @@ const ExemplarSettings: React.FunctionComponent<ExemplarSettingsProps> = ({
               id="title"
               name="title"
               className={moduleStyles.callout}
-              value={exemplarSettings.playerTitle ?? 'Example'}
+              value={exemplarSettings.playerTitle}
               disabled={!exemplarDefined || !exemplarSettings.playerEnabled}
               onChange={newValue => {
                 setExemplarSettings({

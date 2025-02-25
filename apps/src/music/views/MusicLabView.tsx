@@ -15,6 +15,7 @@ import {
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import {BlocklySource} from '@cdo/apps/lab2/types';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -114,7 +115,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
   const exemplarSources = useAppSelector(
     state => state.lab.levelProperties?.exemplarSources
-  );
+  ) as BlocklySource | undefined;
   const exemplarSettings = useAppSelector(
     state => state.lab.levelProperties?.exemplarSettings
   );
@@ -312,7 +313,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   source={exemplarSources}
                   packId={exemplarSources.packId || DEFAULT_PACK}
                   libraryName={library}
-                  title={exemplarSettings.playerTitle || 'Example'}
+                  title={exemplarSettings.playerTitle}
                   labSetPlaying={setPlaying}
                 />
               )}

@@ -54,8 +54,8 @@ export default class MusicValidator extends Validator {
     return {
       satisfied,
       message: satisfied
-        ? this.exemplarSettings.validationSuccessMessage || 'Great job!'
-        : this.exemplarSettings.validationFailureMessage || 'Not quite!',
+        ? this.exemplarSettings.validationSuccessMessage
+        : this.exemplarSettings.validationFailureMessage,
     };
   }
 
