@@ -47,7 +47,7 @@ export const FileBrowserHeaderPopUpButton = () => {
         iconName="plus"
         alignment="left"
         id="uitest-files-plus"
-        ariaLabel={codebridgeI18n.fileOptions()}
+        ariaLabel={codebridgeI18n.manageFiles()}
       >
         <PopUpButtonOption
           iconName="plus"

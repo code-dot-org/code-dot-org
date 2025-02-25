@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-24 03:41:14 UTC",
+    "serialized_at": "2025-02-25 06:00:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -223,6 +223,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "**How do IoT systems transform everyday objects into “smart” devices, and what challenges arise with their use?**\n\nIn this lesson, students learn about the Internet of Things and how internet-connected devices can automate tasks, collect real-time data, and improve efficiencies. However, they also raise concerns about security, privacy, and data ownership.",
+        "preparation": "- Print copies of The Internet of Things activity guide (one for each student)\n- Print copies of The Transmission of Data Unit Guide (one for each student)",
+        "student_overview": "**How do IoT systems transform everyday objects into “smart” devices, and what challenges arise with their use?**\n\nLearn about the Internet of Things— the ways that simple devices all around us are powering up, getting connected to larger networks, and making our lives more interesting and efficient. While these innovations hold promise, they also contain both security and privacy implications that can’t be overlooked."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -256,6 +259,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "**What are the decisions made for us without us?**\n\nIn this activity, students will engage with several different scenarios in which different ethical approaches to AI and computing systems might exist. Students will roleplay the scenario from the perspective different stakeholders, ultimately using this experience in empathy to craft ethical guidelines for AI and emerging technologies.",
+        "preparation": "- Prepare several half-sheets of paper\n- Make an editable class copy of the FigJam or slide",
+        "student_overview": "**What are the decisions made for us without us?**\n\nYou will take be asked to role play several different personas throughout today’s activity, trying to create a set of ethical guidelines for AI and emerging technologies. By examining how these technologies manifest in real-world scenarios, you will be asked to construct your own personal guidelines and expectations."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -658,6 +664,48 @@
       }
     },
     {
+      "key": "d96e72c1-d0a6-4e1e-af71-61d94a1243f5",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d96e72c1-d0a6-4e1e-af71-61d94a1243f5",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "9d500142-e1d5-4266-a833-f59d74dfa14e",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9d500142-e1d5-4266-a833-f59d74dfa14e",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "8e72682c-7167-41c5-9de7-8a8e24051421",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8e72682c-7167-41c5-9de7-8a8e24051421",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
       "key": "7f17e81c-5804-4920-bdc7-10154afbe23a",
       "position": 1,
       "properties": {
@@ -700,12 +748,79 @@
       }
     },
     {
+      "key": "fa8bfc3c-5061-469b-b5c7-2bd34e394fba",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa8bfc3c-5061-469b-b5c7-2bd34e394fba",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "b279dfe1-1b84-4771-9f95-59848fc4357a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "191453c9-3b4b-45d8-8329-3edcb65b8add",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "191453c9-3b4b-45d8-8329-3edcb65b8add",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
       "key": "4d13e97e-3e23-4475-a336-1af04f2f2c82",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
         "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "5222bf02-796b-4e2a-8867-1762a253e8cd",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5222bf02-796b-4e2a-8867-1762a253e8cd",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024"
+      }
+    },
+    {
+      "key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f",
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csad-pilot-content-2024"
@@ -866,6 +981,17 @@
       },
       "seeding_key": {
         "activity_section.key": "69890191-c8d4-465c-af95-1553e4ef6604",
+        "lesson_activity.key": "8c4602ba-171f-4efc-9398-f1ce00754dae"
+      }
+    },
+    {
+      "key": "17ac40f6-ab62-4eb5-9908-21f81c8314ec",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "17ac40f6-ab62-4eb5-9908-21f81c8314ec",
         "lesson_activity.key": "8c4602ba-171f-4efc-9398-f1ce00754dae"
       }
     },
@@ -1088,10 +1214,27 @@
       "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 2, Level 4 to complete Levels 4 and 5. Each student will select a career option—gamer, music producer, content creator, or graphic designer. They will watch a short video where the professional explains how a specific hardware component (GPU, CPU, SSD, or RAM) impacts their work.",
-        "progression_name": "Career Hardware Needs"
+        "progression_name": "Career Hardware Needs",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use responses to this reflection question to see how well students grasp the importance of different hardware components. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9fc9c339-a585-4966-884f-38365521c02d",
+        "lesson_activity.key": "b5c63e32-e5b6-4ebc-9aa5-a4367f230105"
+      }
+    },
+    {
+      "key": "2c2958c5-050b-45f3-9448-dd56af3338a9",
+      "position": 15,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c2958c5-050b-45f3-9448-dd56af3338a9",
         "lesson_activity.key": "b5c63e32-e5b6-4ebc-9aa5-a4367f230105"
       }
     },
@@ -1138,7 +1281,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "From these online resources, students should realize that the issue seems to be centered around either the***power level***or***storage capacity***, so they should be able to eliminate options that aren’t related to either of these categories. Model this for students for this scenario if you feel like your students would benefit from understanding how to use deductive reasoning to eliminate options they may have written down on their activity guides. Remind them about how this process is similar to the Guess Who? Warm-up activity."
+            "markdown": "From these online resources, students should realize that the issue seems to be centered around either the ***power level*** or ***storage capacity***, so they should be able to eliminate options that aren’t related to either of these categories. Model this for students for this scenario if you feel like your students would benefit from understanding how to use deductive reasoning to eliminate options they may have written down on their activity guides. Remind them about how this process is similar to the Guess Who? Warm-up activity."
           }
         ]
       },
@@ -1173,7 +1316,7 @@
       "key": "ab36f1d2-02b4-4d7f-9efe-9ae423a6b4c3",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 3, Level 2. Guide students through troubleshooting Maya’s wearable as a class:\n- Use this [**example script**](http://putlinkhere.com) for the demo.\n- Model how to ask logical questions to gather information and eliminate incorrect causes.\n- Reference the activity guide to pull information from self, a neighbor, and online resources.\n- Show how to use deductive reasoning to propose and test a solution.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 3, Level 2. Guide students through troubleshooting Maya’s wearable as a class:\n- Use this [**example script**](https://docs.google.com/document/d/1EYYl4pCvx9htfz1RpXylU3SZpaUf_K_dlkUNeNPZMmQ/edit?usp=sharing) for the demo.\n- Model how to ask logical questions to gather information and eliminate incorrect causes.\n- Reference the activity guide to pull information from self, a neighbor, and online resources.\n- Show how to use deductive reasoning to propose and test a solution.",
         "progression_name": "Troubleshooting Maya's Wearable"
       },
       "seeding_key": {
@@ -1237,6 +1380,17 @@
       },
       "seeding_key": {
         "activity_section.key": "d2f4e156-5caa-408a-a661-979816e45dbc",
+        "lesson_activity.key": "46ce91b4-1330-4d28-896e-844b11283109"
+      }
+    },
+    {
+      "key": "6f473594-731a-47b6-b368-016befeededd",
+      "position": 11,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f473594-731a-47b6-b368-016befeededd",
         "lesson_activity.key": "46ce91b4-1330-4d28-896e-844b11283109"
       }
     },
@@ -1350,6 +1504,17 @@
       },
       "seeding_key": {
         "activity_section.key": "98dd11d7-28d4-43e9-8367-27640e06c4c7",
+        "lesson_activity.key": "a8868a21-1a73-4fda-a988-c89e910be198"
+      }
+    },
+    {
+      "key": "2a41510e-152a-480b-a0be-3d25facb20b2",
+      "position": 7,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a41510e-152a-480b-a0be-3d25facb20b2",
         "lesson_activity.key": "a8868a21-1a73-4fda-a988-c89e910be198"
       }
     },
@@ -1515,6 +1680,17 @@
       }
     },
     {
+      "key": "b31db3d4-1d44-435f-8219-8cac1689f551",
+      "position": 9,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551",
+        "lesson_activity.key": "2fb2e33e-2059-4da7-a118-e5f682bc10fb"
+      }
+    },
+    {
       "key": "91bc4ab2-c2fb-45f2-85f2-936fd28261bb",
       "position": 1,
       "properties": {
@@ -1671,6 +1847,17 @@
       }
     },
     {
+      "key": "964b9b2d-ec08-42d4-bfb9-9017a88fb0fb",
+      "position": 9,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "964b9b2d-ec08-42d4-bfb9-9017a88fb0fb",
+        "lesson_activity.key": "a9220a21-94f4-4860-b65c-2ff45acc28d6"
+      }
+    },
+    {
       "key": "050029b5-3282-40b9-92c3-b6fda10628c4",
       "position": 1,
       "properties": {
@@ -1719,6 +1906,17 @@
       },
       "seeding_key": {
         "activity_section.key": "3e7c4562-82a1-442b-9e0a-8e75cffcb6c1",
+        "lesson_activity.key": "7606a98c-2082-4165-adf8-202c66f1bf5a"
+      }
+    },
+    {
+      "key": "d01f77c8-c7b2-4244-8ec8-a833709051eb",
+      "position": 3,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d01f77c8-c7b2-4244-8ec8-a833709051eb",
         "lesson_activity.key": "7606a98c-2082-4165-adf8-202c66f1bf5a"
       }
     },
@@ -1965,6 +2163,17 @@
       }
     },
     {
+      "key": "a4fa394e-7aa4-4ce1-9d7f-8afd4fd4b6fc",
+      "position": 12,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4fa394e-7aa4-4ce1-9d7f-8afd4fd4b6fc",
+        "lesson_activity.key": "3d1f84be-d0ec-4e72-b558-d2291e9b509f"
+      }
+    },
+    {
       "key": "e701d697-900c-4b4d-b862-635b827ba641",
       "position": 1,
       "properties": {
@@ -2096,6 +2305,17 @@
       }
     },
     {
+      "key": "8424dc72-16d9-41d3-8570-e0a458e3fb15",
+      "position": 7,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "8424dc72-16d9-41d3-8570-e0a458e3fb15",
+        "lesson_activity.key": "0051b775-a409-423c-88a9-a970c41786e7"
+      }
+    },
+    {
       "key": "f81c8a2a-5e24-45c8-a8da-764c7d999d8a",
       "position": 1,
       "properties": {
@@ -2110,6 +2330,142 @@
       "seeding_key": {
         "activity_section.key": "f81c8a2a-5e24-45c8-a8da-764c7d999d8a",
         "lesson_activity.key": "f5769da0-8f98-4648-a852-fc3ab6dab48c"
+      }
+    },
+    {
+      "key": "06c5cee0-8e89-4d32-918c-75404d886439",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video (0:00 - 1:48).\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some other examples of IoT devices you've heard about or used?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Get students to realize they interact with IoT devices and systems in different parts of their lives. For example, a smartwatch tracks your steps and sends the information to an app on your phone, or a smart thermostat adjusts the temperature in your home based on the weather outside.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "06c5cee0-8e89-4d32-918c-75404d886439",
+        "lesson_activity.key": "d96e72c1-d0a6-4e1e-af71-61d94a1243f5"
+      }
+    },
+    {
+      "key": "7c2cd77d-35bf-4897-8f9e-e0fcad3fa0cd",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7c2cd77d-35bf-4897-8f9e-e0fcad3fa0cd",
+        "lesson_activity.key": "d96e72c1-d0a6-4e1e-af71-61d94a1243f5"
+      }
+    },
+    {
+      "key": "7054b8c4-2a72-42b1-911c-e45e1aa79b9e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Internet of Things (IoT)*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "7054b8c4-2a72-42b1-911c-e45e1aa79b9e",
+        "lesson_activity.key": "d96e72c1-d0a6-4e1e-af71-61d94a1243f5"
+      }
+    },
+    {
+      "key": "183a172d-6ef3-455e-86bb-fe299a9fb53c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Internet of Things activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce examples of standalone devices, such as pedometers or digital thermometers. Then give students examples of IoT devices, such as an Alexa speaker or a Ring camera.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one pair of devices and respond to the first question on the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are different ways that you might connect a device in order to communicate data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This should be a quick whole-class discussion to activate prior knowledge before reviewing some of the different methods that IoT devices communicate to the internet.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Transmission of Data Unit Guide.",
+        "duration": "15",
+        "name": "Exploring IoT Systems, Hardware, and Privacy Concerns"
+      },
+      "seeding_key": {
+        "activity_section.key": "183a172d-6ef3-455e-86bb-fe299a9fb53c",
+        "lesson_activity.key": "9d500142-e1d5-4266-a833-f59d74dfa14e"
+      }
+    },
+    {
+      "key": "1b19233a-b977-422b-85ba-f7e378a813d7",
+      "position": 2,
+      "properties": {
+        "description": "Once a device has data, it must be transmitted in some fashion to be processed. One way to determine what transmission system is best for a given IoT device is to gauge the range that the data needs to travel.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1b19233a-b977-422b-85ba-f7e378a813d7",
+        "lesson_activity.key": "9d500142-e1d5-4266-a833-f59d74dfa14e"
+      }
+    },
+    {
+      "key": "734542dd-8db2-4fa7-99f1-d9497bd67f37",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Introduce the examples for short-range communications.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the corresponding section of their unit guide. For each of the examples presented, have students brainstorm a device or two that uses that communication protocol.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the examples for short-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the examples for medium-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the examples for long-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the examples for long-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to finish the remaining two questions on their activity guide:\n- How might the device transmit data, if at all?\n- What privacy risks might this device introduce?\n- With internet connectivity, how might a device’s functionality change?\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to respond to the question.",
+        "progression_name": "Security, Privacy, and Data Ownership",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This level can be used to assess students' ability to analyze the privacy and ethical implications of IoT systems."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "734542dd-8db2-4fa7-99f1-d9497bd67f37",
+        "lesson_activity.key": "9d500142-e1d5-4266-a833-f59d74dfa14e"
+      }
+    },
+    {
+      "key": "f2357d1a-db80-4045-9ac6-4e599a91de45",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f2357d1a-db80-4045-9ac6-4e599a91de45",
+        "lesson_activity.key": "9d500142-e1d5-4266-a833-f59d74dfa14e"
+      }
+    },
+    {
+      "key": "c889648d-af1a-4c40-a7d1-4acb9e765a16",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each student make a copy of the Smart Classroom Template.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Design a Smart Classroom activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the steps students need to take to complete the activity. Refer to the example that is in the template.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Give One, Get One to share the innovation they developed. Students should share the innovation as well as the data it collects, how it transmits that information, and any privacy or security concerns that might exist.",
+        "duration": "20",
+        "name": "Design a Smart Classroom",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "During a Give One, Get One activity, students should wander the classroom while the music is playing, find a partner, share their smart classroom innovation, and listen to the innovation proposed by their partner. While the music is still playing, students should repeat the exercise with a new partner. If there is extra time, possible differentiations for this activity include giving one piece of feedback to their partner, and leading the activity into a class discussion where some students share a refined version of their idea with the class based on partner discussion and feedback."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Smart Classroom activity can be used to assess students' understanding of various types of IoT systems, the hardware needed for these systems, and their applications in real-world contexts."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c889648d-af1a-4c40-a7d1-4acb9e765a16",
+        "lesson_activity.key": "9d500142-e1d5-4266-a833-f59d74dfa14e"
+      }
+    },
+    {
+      "key": "66e42a1b-5196-466a-8a9a-dc12b862008f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Give a recommendation to someone thinking about designing their home using smart devices. What are some things they should consider?*\n- *What will be easier or safer?*\n- *What will be more challenging or dangerous?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal of this discussion is to help students think critically about the benefits and challenges of designing a smart home. Encourage them to balance convenience and security in their recommendations by considering factors such as privacy risks, data security, and device compatibility. Guide students to explore how smart devices can enhance safety, such as through security cameras and alarms, while also introducing potential risks like hacking and data breaches. Additionally, prompt them to think about long-term costs, reliability, and ethical implications, helping them develop well-rounded recommendations for someone considering a smart home."
+      },
+      "seeding_key": {
+        "activity_section.key": "66e42a1b-5196-466a-8a9a-dc12b862008f",
+        "lesson_activity.key": "8e72682c-7167-41c5-9de7-8a8e24051421"
+      }
+    },
+    {
+      "key": "b3aa6e01-5d49-45ab-a0b6-648896e2033c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3aa6e01-5d49-45ab-a0b6-648896e2033c",
+        "lesson_activity.key": "8e72682c-7167-41c5-9de7-8a8e24051421"
       }
     },
     {
@@ -2351,6 +2707,17 @@
       }
     },
     {
+      "key": "da833670-fd36-48c8-9032-a7e7e480b255",
+      "position": 17,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "da833670-fd36-48c8-9032-a7e7e480b255",
+        "lesson_activity.key": "894571e9-beab-4d44-8397-488fdddf2150"
+      }
+    },
+    {
       "key": "c7e7842b-cfbf-42c8-a07a-274397463e20",
       "position": 1,
       "properties": {
@@ -2362,6 +2729,214 @@
       }
     },
     {
+      "key": "74f6c2f8-d421-4ada-ae63-8eeffcc5c406",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the video \"Ethics and AI: Privacy and the Future of Work\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to consider the questions posed here as they watch the video.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "74f6c2f8-d421-4ada-ae63-8eeffcc5c406",
+        "lesson_activity.key": "fa8bfc3c-5061-469b-b5c7-2bd34e394fba"
+      }
+    },
+    {
+      "key": "b4a63911-2967-408b-b43b-74bd2d591e6c",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b4a63911-2967-408b-b43b-74bd2d591e6c",
+        "lesson_activity.key": "fa8bfc3c-5061-469b-b5c7-2bd34e394fba"
+      }
+    },
+    {
+      "key": "6c84e17c-98ec-426c-bc2a-f9278891afe0",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What computer system in the video might raise ethical concerns for some people? What are those concerns?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to recognize that artificial intelligence and robotics—particularly systems designed to collect personal data or replace human workers—can raise ethical concerns regarding privacy, job displacement, and the broader social impact of technology. Encourage them to explore how these concerns might differ among various stakeholders and emphasize the importance of transparency, responsible data handling, and dignity in AI-driven solutions."
+      },
+      "seeding_key": {
+        "activity_section.key": "6c84e17c-98ec-426c-bc2a-f9278891afe0",
+        "lesson_activity.key": "fa8bfc3c-5061-469b-b5c7-2bd34e394fba"
+      }
+    },
+    {
+      "key": "32f53228-86f7-4169-905f-a4ecb839e324",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to either the class FigJam or slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Assign each group a distinct role – there are four roles per scenario. Direct students to Lesson 12, Level 1 to review the scenario with their group.",
+        "duration": "20",
+        "name": "Role Playing",
+        "progression_name": "AI and Emerging Technologies Ethics Roleplaying"
+      },
+      "seeding_key": {
+        "activity_section.key": "32f53228-86f7-4169-905f-a4ecb839e324",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "a626e6f5-d021-42f3-ac73-5be5b77309a3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the FigJam or slide that corresponds to the Scenario and Role that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The students' goal is to think and respond from the perspective of the role which they are assigned—considering their concerns, responsibilities, and priorities. As students think about their role’s perspective, they can use the information provided to consider:\n- What does this role value most in this situation?\n- What pressures or responsibilities influence my decisions?\n- How might I react to different arguments from other roles?\n- What personal experiences, beliefs, or priorities shape my viewpoint?\n\nEven if students don’t personally agree with the role’s stance, encourage them to try to think like their role and defend their position as convincingly as possible. The goal isn’t to win a debate—it’s to deeply understand different perspectives on ethics, privacy, and technology in education."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a626e6f5-d021-42f3-ac73-5be5b77309a3",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "bb65bec9-1253-411f-a69a-eba57f19a4a8",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bb65bec9-1253-411f-a69a-eba57f19a4a8",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "116f67dc-3050-494b-bcf1-86d0930c817c",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Remind students that their proposal should reflect a compromise between roles, not just one perspective. Encourage students to justify their ideas and challenge each other’s assumptions respectfully.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups present their proposals and discuss differences in approaches.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If groups struggle to agree, prompt them to identify common ground or adjust their proposal to better address concerns. Ask groups to consider whose interests are best served by their proposal and who might still have concerns."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "116f67dc-3050-494b-bcf1-86d0930c817c",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "b207f3f0-76d3-4a83-8fda-64fa0518b214",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b207f3f0-76d3-4a83-8fda-64fa0518b214",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "d6026756-7bb3-44e7-9b4d-70b345c26f3b",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an insight or highlight from your group's roleplaying experience.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal with this discussion is to allow students to share their learning and ethical explorations with the class, and to talk through their personal thoughts about the ethical considerations of the scenario apart from the role that had been assumed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Student guidelines could address fairness, transparency, privacy, or another important ethical concern. Example: \"AI systems should be transparent about how they make decisions to ensure accountability.\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d6026756-7bb3-44e7-9b4d-70b345c26f3b",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "93ef8e31-6c7c-44a0-a34c-0f6e1d6319bf",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "93ef8e31-6c7c-44a0-a34c-0f6e1d6319bf",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "be362356-ad6e-4ca1-8b78-a1b72e4ca847",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Based on your discussion, students should identify a key ethical value or rule that should guide the responsible use of technology. They should write this on a half-sheet of paper.",
+        "duration": "15",
+        "name": "AI Guidelines"
+      },
+      "seeding_key": {
+        "activity_section.key": "be362356-ad6e-4ca1-8b78-a1b72e4ca847",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "bea1ce52-2c41-451f-aa1f-7757b6342e8e",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 2. Students will work through one of the scenarios on Levels 2 and 3, following a similar pattern: they will review the scenario, roleplay one of the roles that are offered, reflect on their learning with the class, and write an ethical guideline about AI and emerging technologies that is synthesized from their discussions.",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "bea1ce52-2c41-451f-aa1f-7757b6342e8e",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "a48f6ac5-7fa3-4cef-bc61-0826f810d744",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students hang up the ethical guidelines that they have developed around the classroom or in the hallway. They should wander around and read what other classmates have written as a result of their learning and conversations.",
+        "progression_name": "Student Survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can have students vote for their top three ethical guidelines – by having them write a plus or star on the ethical guideline, or with the use of stickers. This can lead to an interesting conversation in which the top three guidelines are reviewed and discussed as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a48f6ac5-7fa3-4cef-bc61-0826f810d744",
+        "lesson_activity.key": "b279dfe1-1b84-4771-9f95-59848fc4357a"
+      }
+    },
+    {
+      "key": "7fd92a00-75f7-4a9c-b282-e90e35734132",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7fd92a00-75f7-4a9c-b282-e90e35734132",
+        "lesson_activity.key": "191453c9-3b4b-45d8-8329-3edcb65b8add"
+      }
+    },
+    {
+      "key": "2e0c6754-ca45-411e-aeee-50461a3f09e2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which guideline do you personally believe is the most important?*\n- *If only one could be universally adopted, which would you choose and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Allow students to synthesize their learning for the day and to advocate for their own personal ethical points of view as a capstone activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "2e0c6754-ca45-411e-aeee-50461a3f09e2",
+        "lesson_activity.key": "191453c9-3b4b-45d8-8329-3edcb65b8add"
+      }
+    },
+    {
+      "key": "1d5e3b01-c0c0-452a-8dc3-ebbdf6dff6d9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d5e3b01-c0c0-452a-8dc3-ebbdf6dff6d9",
+        "lesson_activity.key": "191453c9-3b4b-45d8-8329-3edcb65b8add"
+      }
+    },
+    {
       "key": "e37dff16-d6bf-4364-bd4d-9a7ce36ad515",
       "position": 1,
       "properties": {
@@ -2369,6 +2944,37 @@
       "seeding_key": {
         "activity_section.key": "e37dff16-d6bf-4364-bd4d-9a7ce36ad515",
         "lesson_activity.key": "4d13e97e-3e23-4475-a336-1af04f2f2c82"
+      }
+    },
+    {
+      "key": "cbd24455-be93-4ac3-ad9a-8deaaa26a425",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cbd24455-be93-4ac3-ad9a-8deaaa26a425",
+        "lesson_activity.key": "5222bf02-796b-4e2a-8867-1762a253e8cd"
+      }
+    },
+    {
+      "key": "686d3ac1-c346-46b5-b902-511679203dc7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "686d3ac1-c346-46b5-b902-511679203dc7",
+        "lesson_activity.key": "5222bf02-796b-4e2a-8867-1762a253e8cd"
+      }
+    },
+    {
+      "key": "0a5e0dec-874a-4527-b75b-94b96635551e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0a5e0dec-874a-4527-b75b-94b96635551e",
+        "lesson_activity.key": "e57cf173-47bf-47c8-8f23-4ef609f40b4f"
       }
     }
   ],
@@ -2675,6 +3281,28 @@
     },
     {
       "chapter": 13,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level13-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "17ac40f6-ab62-4eb5-9908-21f81c8314ec"
+      },
+      "level_keys": [
+        "computer-systems-lesson1-level13-2024"
+      ]
+    },
+    {
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2696,7 +3324,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2718,7 +3346,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2740,7 +3368,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2762,7 +3390,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 2,
       "assessment": true,
@@ -2784,7 +3412,29 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson2-level6-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "2c2958c5-050b-45f3-9448-dd56af3338a9"
+      },
+      "level_keys": [
+        "computer-systems-lesson2-level6-2024"
+      ]
+    },
+    {
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2806,7 +3456,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2828,7 +3478,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2850,7 +3500,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -2872,7 +3522,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -2894,7 +3544,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -2916,7 +3566,29 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson3-level7-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "6f473594-731a-47b6-b368-016befeededd"
+      },
+      "level_keys": [
+        "computer-systems-lesson3-level7-2024"
+      ]
+    },
+    {
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2938,7 +3610,29 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson4-level2-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "2a41510e-152a-480b-a0be-3d25facb20b2"
+      },
+      "level_keys": [
+        "computer-systems-lesson4-level2-2024"
+      ]
+    },
+    {
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2960,7 +3654,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2982,7 +3676,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3004,7 +3698,29 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson5-level4-2024"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551"
+      },
+      "level_keys": [
+        "computer-systems-lesson5-level4-2024"
+      ]
+    },
+    {
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3029,7 +3745,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3054,7 +3770,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3079,8 +3795,30 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 36,
       "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level5-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "964b9b2d-ec08-42d4-bfb9-9017a88fb0fb"
+      },
+      "level_keys": [
+        "computer-systems-lesson6-level5-2024"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -3104,7 +3842,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3126,7 +3864,29 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson7-level2-2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "d01f77c8-c7b2-4244-8ec8-a833709051eb"
+      },
+      "level_keys": [
+        "computer-systems-lesson7-level2-2024"
+      ]
+    },
+    {
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3151,7 +3911,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3176,7 +3936,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -3201,7 +3961,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -3226,7 +3986,29 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 44,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level5-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "a4fa394e-7aa4-4ce1-9d7f-8afd4fd4b6fc"
+      },
+      "level_keys": [
+        "computer-systems-lesson8-level5-2024"
+      ]
+    },
+    {
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3248,7 +4030,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3270,7 +4052,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3292,7 +4074,73 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 48,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson9-level4-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "8424dc72-16d9-41d3-8570-e0a458e3fb15"
+      },
+      "level_keys": [
+        "computer-systems-lesson9-level4-2024"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Security, Privacy, and Data Ownership"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson10-level1-2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "734542dd-8db2-4fa7-99f1-d9497bd67f37"
+      },
+      "level_keys": [
+        "computer-systems-lesson10-level1-2023"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson10-level2-2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "b3aa6e01-5d49-45ab-a0b6-648896e2033c"
+      },
+      "level_keys": [
+        "computer-systems-lesson10-level2-2023"
+      ]
+    },
+    {
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3314,7 +4162,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3336,7 +4184,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3358,7 +4206,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3380,7 +4228,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3399,6 +4247,116 @@
       },
       "level_keys": [
         "computer-systems-lesson11-level5-2024"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson11-level6-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "da833670-fd36-48c8-9032-a7e7e480b255"
+      },
+      "level_keys": [
+        "computer-systems-lesson11-level6-2024"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI and Emerging Technologies Ethics Roleplaying"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson12-level1-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "32f53228-86f7-4169-905f-a4ecb839e324"
+      },
+      "level_keys": [
+        "computer-systems-lesson12-level1-2023"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson12-level2-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "bea1ce52-2c41-451f-aa1f-7757b6342e8e"
+      },
+      "level_keys": [
+        "computer-systems-lesson12-level2-2023"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson12-level3-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "1d5e3b01-c0c0-452a-8dc3-ebbdf6dff6d9"
+      },
+      "level_keys": [
+        "computer-systems-lesson12-level3-2023"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level1-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "686d3ac1-c346-46b5-b902-511679203dc7"
+      },
+      "level_keys": [
+        "computer-systems-lesson13-level1-2024"
       ]
     }
   ],
@@ -3549,6 +4507,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-lesson1-level13-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson1-level13-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "17ac40f6-ab62-4eb5-9908-21f81c8314ec"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson2-level1-2023",
         "script_level.level_keys": [
           "computer-systems-lesson2-level1-2023"
@@ -3605,6 +4575,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
         "activity_section.key": "9fc9c339-a585-4966-884f-38365521c02d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson2-level6-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson2-level6-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "2c2958c5-050b-45f3-9448-dd56af3338a9"
       }
     },
     {
@@ -3681,6 +4663,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-lesson3-level7-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson3-level7-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "6f473594-731a-47b6-b368-016befeededd"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson4-level1-2023",
         "script_level.level_keys": [
           "computer-systems-lesson4-level1-2023"
@@ -3689,6 +4683,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
         "activity_section.key": "27080514-4c97-4164-9139-cc8f263c8883"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson4-level2-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson4-level2-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "2a41510e-152a-480b-a0be-3d25facb20b2"
       }
     },
     {
@@ -3729,6 +4735,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-lesson5-level4-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson5-level4-2024"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "b31db3d4-1d44-435f-8219-8cac1689f551"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson6-level1-2024",
         "script_level.level_keys": [
           "computer-systems-lesson6-level1-2024"
@@ -3765,6 +4783,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-lesson6-level5-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson6-level5-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "964b9b2d-ec08-42d4-bfb9-9017a88fb0fb"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson6-level4-2024",
         "script_level.level_keys": [
           "computer-systems-lesson6-level4-2024"
@@ -3785,6 +4815,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
         "activity_section.key": "746d2b43-c0d0-463c-931b-979c85709807"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson7-level2-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson7-level2-2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "d01f77c8-c7b2-4244-8ec8-a833709051eb"
       }
     },
     {
@@ -3837,6 +4879,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-lesson8-level5-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level5-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "a4fa394e-7aa4-4ce1-9d7f-8afd4fd4b6fc"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson9-level1-2024",
         "script_level.level_keys": [
           "computer-systems-lesson9-level1-2024"
@@ -3869,6 +4923,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
         "activity_section.key": "d849d6a4-6142-4978-a4f0-26cfcd68f899"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson9-level4-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson9-level4-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "8424dc72-16d9-41d3-8570-e0a458e3fb15"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson10-level1-2023",
+        "script_level.level_keys": [
+          "computer-systems-lesson10-level1-2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "734542dd-8db2-4fa7-99f1-d9497bd67f37"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson10-level2-2023",
+        "script_level.level_keys": [
+          "computer-systems-lesson10-level2-2023"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "b3aa6e01-5d49-45ab-a0b6-648896e2033c"
       }
     },
     {
@@ -3929,6 +5019,66 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csad-pilot-content-2024",
         "activity_section.key": "758566a5-373a-41f6-a150-86c169c656ea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson11-level6-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson11-level6-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "da833670-fd36-48c8-9032-a7e7e480b255"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson12-level1-2023",
+        "script_level.level_keys": [
+          "computer-systems-lesson12-level1-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "32f53228-86f7-4169-905f-a4ecb839e324"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson12-level2-2023",
+        "script_level.level_keys": [
+          "computer-systems-lesson12-level2-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "bea1ce52-2c41-451f-aa1f-7757b6342e8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson12-level3-2023",
+        "script_level.level_keys": [
+          "computer-systems-lesson12-level3-2023"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "1d5e3b01-c0c0-452a-8dc3-ebbdf6dff6d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson13-level1-2024",
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level1-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csad-pilot-content-2024",
+        "activity_section.key": "686d3ac1-c346-46b5-b902-511679203dc7"
       }
     }
   ],
@@ -4106,6 +5256,18 @@
       }
     },
     {
+      "name": "FigJam template",
+      "url": "https://www.figma.com/board/dTC7I157Jr8yxZq6cglYrk/AI-and-Emerging-Technologies-Roleplay?node-id=0-1&t=shPGkZFSCaS8bcF2-1",
+      "key": "figjam_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "figjam_template"
+      }
+    },
+    {
       "name": "Guess Who? Device Edition",
       "url": "https://docs.google.com/document/d/1WHQ70QDVp4FG2TJEN7GRA3nRfmb2WWuyIW3zRBFFR3k/edit?usp=sharing",
       "key": "guess_who_device_edition",
@@ -4205,6 +5367,30 @@
       }
     },
     {
+      "name": "IoT and Emerging Technologies",
+      "url": "https://docs.google.com/presentation/d/1389pJoeNUtr_2wwYbZvvahmoahgVFbhxPyVXGrqFLbw/view",
+      "key": "iot_and_emerging_technologies",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "iot_and_emerging_technologies"
+      }
+    },
+    {
+      "name": "Just Because We Can, Should We?",
+      "url": "https://docs.google.com/presentation/d/1SG3PQzb-KUZcnFrOSHf8DxTYINtJ0uUy-25uLdWWkI4/view",
+      "key": "just_because_we_can_should_we_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "just_because_we_can_should_we_"
+      }
+    },
+    {
       "name": "Library Books Dataset",
       "url": "https://docs.google.com/spreadsheets/d/1ArYkmUcYwbXz-hQkyIon2t87WZbLEOFfUaOFj5jZdE4/edit?usp=sharing",
       "key": "library_books_dataset",
@@ -4267,6 +5453,30 @@
       }
     },
     {
+      "name": "Slide Template",
+      "url": "https://docs.google.com/presentation/d/1Akl28SCAO4jirah8PNAh_CpiHVemESY5UBbhFLN_KLc/edit?usp=sharing",
+      "key": "slide_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "slide_template"
+      }
+    },
+    {
+      "name": "Smart Classroom Template",
+      "url": "https://docs.google.com/presentation/d/1poFCcIbGmOJY-nevkh99yXwAlU11aES1vt8y90uH_Jg/edit?usp=sharing",
+      "key": "smart_classroom_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "smart_classroom_template"
+      }
+    },
+    {
       "name": "Software and Operating Systems",
       "url": "https://docs.google.com/presentation/d/1zZWrNkGt9AO122tn8OmzmLvGRFsTUVGcXcY51nDv0GI/view",
       "key": "software_and_operating_systems",
@@ -4288,6 +5498,44 @@
       },
       "seeding_key": {
         "resource.key": "station_activity_cards"
+      }
+    },
+    {
+      "name": "Technology Ethics Roleplaying Discussion Guide",
+      "url": "https://docs.google.com/document/d/1PZ_e2m9wDqctgwZCiTo6CZYu1yPVxAdl1yhJVfry5aI/edit?usp=sharing",
+      "key": "technology_ethics_roleplaying_discussion_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "technology_ethics_roleplaying_discussion_guide"
+      }
+    },
+    {
+      "name": "The Internet of Things",
+      "url": "https://docs.google.com/document/d/1cZJnnd-3-69q9_3oIDWskQhu6vI-7nRJgYhH5wL7DxE/edit?usp=sharing",
+      "key": "the_internet_of_things",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_of_things"
+      }
+    },
+    {
+      "name": "The Transmission of Data Unit Guide",
+      "url": "https://docs.google.com/document/d/1bzL6dqzq3Ez5cGVmyRbb-a-xTh83KsSUtoXzxAFoFq8/edit?usp=sharing",
+      "key": "the_transmission_of_data_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_transmission_of_data_unit_guide"
       }
     },
     {
@@ -4389,6 +5637,18 @@
       "seeding_key": {
         "resource.key": "user_testing_unit_guide"
       }
+    },
+    {
+      "name": "What is IoT?",
+      "url": "https://www.youtube.com/watch?v=6mBO2vqLv38",
+      "key": "what_is_iot_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "what_is_iot_"
+      }
     }
   ],
   "lessons_resources": [
@@ -4438,6 +5698,30 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "user_testing_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "figjam_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "just_because_we_can_should_we_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "slide_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "technology_ethics_roleplaying_discussion_guide"
       }
     },
     {
@@ -4613,6 +5897,36 @@
         "lesson.key": "lesson-8",
         "resource.key": "uno_cards"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "iot_and_emerging_technologies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "smart_classroom_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "the_internet_of_things"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "the_transmission_of_data_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "what_is_iot_"
+      }
     }
   ],
   "scripts_resources": [
@@ -4673,6 +5987,16 @@
       }
     },
     {
+      "key": "ethics",
+      "word": "ethics",
+      "definition": "a guide for responsible choices about emerging technologies, ensuring privacy, consent, and safety for everyone",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ethics"
+      }
+    },
+    {
       "key": "field_programmable_gate_array_fpga_",
       "word": "Field Programmable Gate Array (FPGA)",
       "definition": "a processor you can customize for specific tasks",
@@ -4710,6 +6034,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "input_devices"
+      }
+    },
+    {
+      "key": "internet_of_things_iot_",
+      "word": "Internet of Things (IoT)",
+      "definition": "a network of smart devices that connect and share data over the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "internet_of_things_iot_"
       }
     },
     {
@@ -4781,6 +6115,16 @@
       "seeding_key": {
         "vocabulary.key": "troubleshooting"
       }
+    },
+    {
+      "key": "user_testing",
+      "word": "User Testing",
+      "definition": "A process where real people try a product, give feedback, and help improve it before it’s released.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user_testing"
+      }
     }
   ],
   "lessons_vocabularies": [
@@ -4788,6 +6132,18 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "computer_system"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "ethics"
       }
     },
     {
@@ -4879,6 +6235,12 @@
         "lesson.key": "lesson-7",
         "vocabulary.key": "graphics_processing_unit_gpu_"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "internet_of_things_iot_"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -4913,6 +6275,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "2ad60fb9-b24b-4bcf-9a81-bf7f83c1c0fc"
+      }
+    },
+    {
+      "key": "2f79c879-a30a-4895-9467-659cd5772441",
+      "properties": {
+        "description": "Analyze the privacy and ethical implications of IoT systems, such as data privacy, accessibility, and security"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "2f79c879-a30a-4895-9467-659cd5772441"
       }
     },
     {
@@ -5036,6 +6408,16 @@
       }
     },
     {
+      "key": "7581fc36-787a-4cc2-bb78-e72b641d4c03",
+      "properties": {
+        "description": "Develop ethical guidelines for the responsible design and development of AI and emerging technologies"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "7581fc36-787a-4cc2-bb78-e72b641d4c03"
+      }
+    },
+    {
       "key": "8deb4e54-354b-4b56-a94e-9f0f54c1c5fb",
       "properties": {
         "description": "Justify computer system design decisions based on the resources available and intended use of the system"
@@ -5056,6 +6438,16 @@
       }
     },
     {
+      "key": "a3a66cf7-5969-4b7b-ad0c-3400a7dd7232",
+      "properties": {
+        "description": "Describe various types of IoT systems, the hardware needed for these systems, and their applications in real-world contexts"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "a3a66cf7-5969-4b7b-ad0c-3400a7dd7232"
+      }
+    },
+    {
       "key": "aee92ee0-4147-4643-a0d7-5fdaea7d9ce0",
       "properties": {
         "description": "Describe how data is used in AI systems and its role in decision-making"
@@ -5063,6 +6455,16 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "aee92ee0-4147-4643-a0d7-5fdaea7d9ce0"
+      }
+    },
+    {
+      "key": "b7bd7d2e-11e9-4573-a83d-dc0d54c77d34",
+      "properties": {
+        "description": "Compare standalone software to internet-connected software in terms of functionality and implications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "b7bd7d2e-11e9-4573-a83d-dc0d54c77d34"
       }
     },
     {
@@ -5093,6 +6495,16 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "objective.key": "cdad80bb-f0b8-4962-81f3-d57dd5110dbd"
+      }
+    },
+    {
+      "key": "df1fc506-875c-47ed-91da-31a8828d50a3",
+      "properties": {
+        "description": "Evaluate the ethical implications of real-world examples of emerging technologies, including those that incorporate AI"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "df1fc506-875c-47ed-91da-31a8828d50a3"
       }
     },
     {

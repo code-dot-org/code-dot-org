@@ -1,6 +1,6 @@
+import {Heading4} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
-import {Heading4} from '@cdo/apps/componentLibrary/typography';
 import {SectionMap} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
