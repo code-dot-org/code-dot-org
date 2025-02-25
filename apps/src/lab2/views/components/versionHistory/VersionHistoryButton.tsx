@@ -29,6 +29,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
 }) => {
   const [isVersionHistoryOpen, setIsVersionHistoryOpen] = useState(false);
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
+  const [selectedVersion, setSelectedVersion] = useState('');
   const [loading, setLoading] = useState(false);
   const [loadError, setLoadError] = useState(false);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
@@ -37,8 +38,6 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const buttonContainerRef = useRef<HTMLDivElement>(null);
-
-  console.log({isVersionHistoryOpen, loading, loadError});
 
   // The version history button is generally disabled in read only mode with two exceptions:
   // if the user is viewing an old version of the project, or if this is a teacher viewing
@@ -56,23 +55,21 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         return;
       }
       if (!isVersionHistoryOpen) {
-        console.log('opening?');
         setLoading(true);
-        //setTimeout(() => {
-        projectManager
-          .getVersionList()
-          .then(versionList => {
-            setVersionList(versionList);
-            setIsVersionHistoryOpen(true);
-            setLoading(false);
-          })
-          .catch(() => {
-            setLoadError(true);
-            setLoading(false);
-          });
-        //}, 0);
+        setTimeout(() => {
+          projectManager
+            .getVersionList()
+            .then(versionList => {
+              setVersionList(versionList);
+              setIsVersionHistoryOpen(true);
+              setLoading(false);
+            })
+            .catch(() => {
+              setLoadError(true);
+              setLoading(false);
+            });
+        }, 2000);
       } else {
-        console.log('closing?');
         setIsVersionHistoryOpen(false);
         setLoadError(false);
         setLoading(false);
@@ -82,7 +79,6 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   );
 
   const closeVersionHistory = useCallback(() => {
-    console.log('in closeVersionHistory');
     setIsVersionHistoryOpen(false);
     setLoadError(false);
     setLoading(false);
@@ -111,16 +107,20 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           className={darkModeStyles.tertiaryButton}
         />
       </WithTooltip>
-      <VersionHistoryDropdown
-        versionList={versionList}
-        updatedSourceCallback={updatedSourceCallback}
-        startSources={startSources}
-        closeDropdown={closeVersionHistory}
-        listLoaded={isVersionHistoryOpen}
-        buttonRef={buttonContainerRef.current}
-        listLoadError={loadError}
-        listLoading={loading}
-      />
+      {(isVersionHistoryOpen || loadError || loading) && (
+        <VersionHistoryDropdown
+          versionList={versionList}
+          updatedSourceCallback={updatedSourceCallback}
+          startSources={startSources}
+          closeDropdown={closeVersionHistory}
+          listLoaded={isVersionHistoryOpen}
+          buttonRef={buttonContainerRef}
+          listLoadError={loadError}
+          listLoading={loading}
+          selectedVersion={selectedVersion}
+          setSelectedVersion={setSelectedVersion}
+        />
+      )}
     </div>
   );
 };
