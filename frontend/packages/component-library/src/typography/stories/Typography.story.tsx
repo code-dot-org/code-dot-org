@@ -33,7 +33,7 @@ const headingComponents: TypographyProps[] = [
   {
     semanticTag: 'h1',
     visualAppearance: 'heading-xxl',
-    children: 'This is a Typography Component. (H1) Hello!',
+    children: 'This is a Typography Component. (H1) ',
   },
   {
     semanticTag: 'h2',
