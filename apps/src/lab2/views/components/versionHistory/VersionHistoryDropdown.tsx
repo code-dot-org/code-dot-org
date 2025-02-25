@@ -84,7 +84,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
     state => state.lab2Project.viewingOldVersion
   );
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const isOpen = listLoaded || listLoading || listLoadError;
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
 
   // If this is a teacher viewing a student's project, we hide the restore button,
@@ -170,6 +169,14 @@ const VersionHistoryDropdown: React.FunctionComponent<
     setSelectedVersion,
   ]);
 
+  useEffect(() => {
+    // If we are on the loading screen or load error screen, focus the close button.
+    if (listLoadError || listLoading) {
+      const closeButton = document.getElementById('close-version-history');
+      closeButton?.focus();
+    }
+  }, [listLoadError, listLoading]);
+
   const handleOutsideClick = useCallback(
     (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -184,17 +191,13 @@ const VersionHistoryDropdown: React.FunctionComponent<
   // the dropdown.
   // Remove the event listener when the dropdown is closed.
   useEffect(() => {
-    if (isOpen) {
-      // We want to defer adding the close handler until the next tick of the event loop,
-      // otherwise it'll fire immediately and re-close the pop up.
-      setTimeout(
-        () => document.addEventListener('click', handleOutsideClick),
-        0
-      );
-    } else {
+    // We want to defer adding the close handler until the next tick of the event loop,
+    // otherwise it'll fire immediately and re-close the pop up.
+    setTimeout(() => document.addEventListener('click', handleOutsideClick), 0);
+    return () => {
       document.removeEventListener('click', handleOutsideClick);
-    }
-  }, [handleOutsideClick, isOpen]);
+    };
+  }, [handleOutsideClick]);
 
   const successfulRestoreCleanUp = useCallback(
     (sources: ProjectSources) => {
@@ -340,6 +343,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         <CloseButton
           onClick={closeDropdown}
           aria-label={lab2I18n.closeVersionHistory()}
+          id={'close-version-history'}
         />
       </div>
       {listLoading && (

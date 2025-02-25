@@ -27,7 +27,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   startSources,
   updatedSourceCallback,
 }) => {
-  const [isVersionHistoryOpen, setIsVersionHistoryOpen] = useState(false);
+  const [isVersionListLoaded, setIsVersionListLoaded] = useState(false);
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   const [selectedVersion, setSelectedVersion] = useState('');
   const [loading, setLoading] = useState(false);
@@ -54,32 +54,30 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         setLoadError(true);
         return;
       }
-      if (!isVersionHistoryOpen) {
+      if (!isVersionListLoaded) {
         setLoading(true);
-        setTimeout(() => {
-          projectManager
-            .getVersionList()
-            .then(versionList => {
-              setVersionList(versionList);
-              setIsVersionHistoryOpen(true);
-              setLoading(false);
-            })
-            .catch(() => {
-              setLoadError(true);
-              setLoading(false);
-            });
-        }, 2000);
+        projectManager
+          .getVersionList()
+          .then(versionList => {
+            setVersionList(versionList);
+            setIsVersionListLoaded(true);
+            setLoading(false);
+          })
+          .catch(() => {
+            setLoadError(true);
+            setLoading(false);
+          });
       } else {
-        setIsVersionHistoryOpen(false);
+        setIsVersionListLoaded(false);
         setLoadError(false);
         setLoading(false);
       }
     },
-    [isVersionHistoryOpen]
+    [isVersionListLoaded]
   );
 
   const closeVersionHistory = useCallback(() => {
-    setIsVersionHistoryOpen(false);
+    setIsVersionListLoaded(false);
     setLoadError(false);
     setLoading(false);
   }, []);
@@ -107,13 +105,13 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           className={darkModeStyles.tertiaryButton}
         />
       </WithTooltip>
-      {(isVersionHistoryOpen || loadError || loading) && (
+      {(isVersionListLoaded || loadError || loading) && (
         <VersionHistoryDropdown
           versionList={versionList}
           updatedSourceCallback={updatedSourceCallback}
           startSources={startSources}
           closeDropdown={closeVersionHistory}
-          listLoaded={isVersionHistoryOpen}
+          listLoaded={isVersionListLoaded}
           buttonRef={buttonContainerRef}
           listLoadError={loadError}
           listLoading={loading}
