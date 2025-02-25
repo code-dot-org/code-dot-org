@@ -1,18 +1,17 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-01-31T06:22:08.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
     "display_name": "Elementary School Teacher",
-    "long_instructions": "## Rachel Thompson, Elementary School Teacher 🍎\r\n<br/>\r\n\r\n<p style=\"font-size:16px\"><strong>📍 Location:</strong> New York City, USA </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🏫 Workplace:</strong> Bright Horizons Elementary </p><br/>\r\n\r\n<p style=\"font-size:16px\">💼<strong> Expertise:</strong> Interactive teaching, early childhood education, digital learning tools </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🔍 How I Use AI:</strong> \"The SMART Board helps me make lessons interactive and engaging. My students love using the touchscreen to solve math problems, play educational games, and collaborate on projects. It’s a fantastic tool for making learning more hands-on and fun!\" </p>\r\n\r\n\r\n---\r\n\r\n\r\n\r\n## Do This:\r\n\r\n<ol style=\"font-size:16px\">\r\n<li>Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:</li>\r\n\t<ul style=\"font-size:16px\">\r\n    \t<li>Key roles and responsibilities</li>\r\n\t\t<li>Key challenges</li>\r\n\t\t<li>How computing supports their work</li>\r\n\t\t<li>How your chosen innovation helps their job</li>\r\n    </ul>\r\n<br/>\r\n<li>Summarize key insights in your activity guide.</li>\r\n</ol>\r\n",
+    "long_instructions": "## Rachel Thompson, Elementary School Teacher\r\n\r\n**Location:** New York City, USA\r\n\r\n**Workplace:** Bright Horizons Elementary\r\n\r\n**Expertise:** Interactive teaching, early childhood education, digital learning tools\r\n\r\n**How I Use AI:** \"The SMART Board helps me make lessons interactive and engaging. My students love using the touchscreen to solve math problems, play educational games, and collaborate on projects. It's a fantastic tool for making learning more hands-on and fun!\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.5,
+        "temperature": 0.3,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -44,6 +43,7 @@
     },
     "thumbnail_url": "https://images.code.org/bf82842327b71f5192cd137e13cbfae4-Pasted Graphic 41.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T06:22:08.455+00:00\",\"changed\":[\"cloned from \\\"computer-systems-coordinator-edu-aichat\\\"\"],\"cloned_from\":\"computer-systems-coordinator-edu-aichat\"},{\"changed_at\":\"2025-01-31 06:23:24 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 16:05:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-31T06:22:08.455+00:00\",\"changed\":[\"cloned from \\\"computer-systems-coordinator-edu-aichat\\\"\"],\"cloned_from\":\"computer-systems-coordinator-edu-aichat\"},{\"changed_at\":\"2025-01-31 06:23:24 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 16:05:07 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-16 20:17:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

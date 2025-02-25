@@ -1,0 +1,20 @@
+name: "Install & Setup Frontend Directory"
+description: "Setup for the frontend directory"
+
+runs:
+  using: composite
+  steps:
+    - name: Enable Corepack before setting up Node
+      shell: bash
+      run: corepack enable
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version-file: ".nvmrc"
+        cache: "yarn"
+        cache-dependency-path: 'frontend/yarn.lock'
+
+    - name: Install dependencies
+      shell: bash
+      run: yarn install
+      working-directory: ./frontend

@@ -20,7 +20,7 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1
   def show
-    script = Unit.get_from_cache(params[:script_id])
+    script = get_unit(params)
     return render :forbidden unless script.is_migrated
 
     if script.is_deprecated
@@ -33,7 +33,12 @@ class LessonsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @lesson
     return render :forbidden unless can?(:read, @lesson)
 
-    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
+    lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
+
+    @page_title = "#{t('lesson_plan')}: #{lesson_data[:displayName]}"
+    @page_description = lesson_data[:overview].truncate(200, separator: '.', omission: '.')
+
+    @lesson_data = lesson_data
   end
 
   # GET /lessons/2345
@@ -44,7 +49,7 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
-    script = Unit.get_from_cache(params[:script_id])
+    script = get_unit(params)
     return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
 
     @lesson = script.lessons.find do |l|
@@ -59,7 +64,7 @@ class LessonsController < ApplicationController
 
   # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
   def edit_with_lesson_position
-    script = Unit.get_from_cache(params[:script_id])
+    script = get_unit(params)
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
@@ -164,7 +169,7 @@ class LessonsController < ApplicationController
 
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
-    script = Unit.get_from_cache(request.params[:script_id])
+    script = get_unit(params)
     script && ScriptConfig.allows_public_caching_for_script(script.name) &&
       !ScriptConfig.uncached_script_level_path?(request.path)
   end
@@ -232,5 +237,20 @@ class LessonsController < ApplicationController
       environment = ProgrammingEnvironment.find_by!(name: e['programmingEnvironmentName'])
       ProgrammingExpression.find_by!(programming_environment: environment, key: e['key'])
     end
+  end
+
+  private def get_unit(params)
+    # /s/.../lessons/... URL
+    return Unit.get_from_cache(params[:script_id]) if params[:script_id]
+    # /courses/.../unit/.../lessons/...
+    course_name = params[:course_course_name]
+    if course_name
+      course = UnitGroup.get_from_cache(course_name)
+      unit_position = params[:unit_position]
+      raise ActiveRecord::RecordNotFound unless course && unit_position
+      unit_group_unit = UnitGroupUnit.find_by(course_id: course.id, position: unit_position)
+      return Unit.get_from_cache(unit_group_unit.script_id) if unit_group_unit
+    end
+    raise ActiveRecord::RecordNotFound
   end
 end

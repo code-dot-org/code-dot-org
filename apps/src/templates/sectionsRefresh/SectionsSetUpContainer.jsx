@@ -1,3 +1,7 @@
+import {
+  BodyTwoText,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState, useCallback, useRef} from 'react';
@@ -5,11 +9,6 @@ import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
-import {
-  BodyTwoText,
-  Heading1,
-  Heading3,
-} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -354,12 +353,17 @@ export default function SectionsSetUpContainer({
     );
   };
 
+  // TODO: This will probably eventually be a setting on the course similar to textToSpeechEnabled
+  // The ticket to track that work is https://codedotorg.atlassian.net/browse/CT-1063
+  const aiTutorAllowedForCourse = section =>
+    [
+      '[PILOT] Programming Fundamentals (AI Tutor)',
+      'Computer Science A',
+    ].includes(section?.course?.displayName);
+
   const renderAdvancedSettings = () => {
-    // TODO: this will probably eventually be a setting on the course similar to textToSpeechEnabled
-    // currently we're working towards piloting in Javalab in CSA only.
     const aiTutorAvailable =
-      canEnableAITutor &&
-      sections[0].course.displayName === 'Computer Science A';
+      canEnableAITutor && aiTutorAllowedForCourse(sections[0]);
 
     return renderExpandableSection(
       'uitest-expandable-settings',
@@ -418,25 +422,18 @@ export default function SectionsSetUpContainer({
 
   return (
     <form id={FORM_ID}>
-      <div className={moduleStyles.containerWithMarginTop}>
-        <Heading1>
-          {isNewSection
-            ? i18n.setUpClassSectionsHeader()
-            : i18n.editSectionDetails()}
-        </Heading1>
-        {isNewSection && (
-          <>
-            <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
-              {i18n.setUpClassSectionsSubheader()}
-            </BodyTwoText>
-            <BodyTwoText>
-              <a onClick={onURLClick} className={moduleStyles.textPopUp}>
-                {i18n.setUpClassSectionsSubheaderLink()}
-              </a>
-            </BodyTwoText>
-          </>
-        )}
-      </div>
+      {isNewSection && (
+        <>
+          <BodyTwoText className={moduleStyles.noMarginBottomParagraph}>
+            {i18n.setUpClassSectionsSubheader()}
+          </BodyTwoText>
+          <BodyTwoText>
+            <a onClick={onURLClick} className={moduleStyles.textPopUp}>
+              {i18n.setUpClassSectionsSubheaderLink()}
+            </a>
+          </BodyTwoText>
+        </>
+      )}
 
       {renderChildAccountPolicyNotification()}
 

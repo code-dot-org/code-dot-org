@@ -36,13 +36,6 @@ const MultipleTemplate: StoryObj<{
 }> = {
   render: args => (
     <>
-      <p>
-        {args.components.some(componentArg => componentArg.margin)
-          ? '* Gray background exists to show spacing, it will not appear with component *'
-          : "* Margins on this screen do not represent Component's margins, and are only added to improve storybook view *"}
-      </p>
-
-      <p>Multiple Dividers:</p>
       <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
         {args.components?.map((componentArg, index) => (
           <div
@@ -92,6 +85,14 @@ export const GroupOfDividersWithMargin: StoryObj<{
       {color: 'primary', margin: 'm'},
       {color: 'primary', margin: 'l'},
     ],
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Gray background exists to show margin, it will not appear with component.',
+      },
+    },
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);

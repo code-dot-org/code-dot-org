@@ -8,7 +8,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
     "level_data": {
@@ -41,60 +41,31 @@
           "languageVersion": 0,
           "blocks": [
             {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 34,
+              "y": 34,
+              "deletable": false,
+              "movable": false
+            },
+            {
               "type": "triggered_at_simple2",
-              "id": "IF`z{bw{e*6/VdHdAYkB",
-              "x": 70,
-              "y": 50,
+              "id": "A_,Nc1vDrke|UN=sgvdQ",
+              "x": 30,
+              "y": 190,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger1</field>",
-                "trigger_start": "<field name=\"trigger_start\">immediately</field>"
-              },
-              "next": {
-                "block": {
-                  "type": "play_chord_at_current_location_simple2",
-                  "id": "play_chord_at_current_location_simple2",
-                  "extraState": {
-                    "disableNextConnection": false
-                  },
-                  "fields": {
-                    "chord": {
-                      "notes": [
-
-                      ],
-                      "playStyle": "arpeggio-up",
-                      "instrument": "piano"
-                    }
-                  }
-                }
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
               }
             },
             {
               "type": "triggered_at_simple2",
-              "id": "0t,1=PlFAWcJX-OB!#kH",
-              "x": 330,
-              "y": 50,
+              "id": "9nw}_AwilC+v)R/fG+L_",
+              "x": 30,
+              "y": 330,
               "fields": {
                 "trigger": "<field name=\"trigger\">trigger2</field>",
                 "trigger_start": "<field name=\"trigger_start\">immediately</field>"
-              },
-              "next": {
-                "block": {
-                  "type": "play_pattern_at_current_location_simple2",
-                  "id": "play_pattern_at_current_location_simple2",
-                  "extraState": {
-                    "disableNextConnection": false
-                  },
-                  "fields": {
-                    "pattern": {
-                      "instrument": "drums",
-                      "length": 1,
-                      "events": [
-
-                      ],
-                      "ai": false
-                    }
-                  }
-                }
               }
             }
           ]
@@ -177,7 +148,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-06T22:15:46.030+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects\\\"\"],\"cloned_from\":\"music-coding-intro-effects\"},{\"changed_at\":\"2025-02-06 22:17:17 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 22:18:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-06T22:15:46.030+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects\\\"\"],\"cloned_from\":\"music-coding-intro-effects\"},{\"changed_at\":\"2025-02-06 22:17:17 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-06 22:18:32 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-14 19:30:27 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 21:53:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-20 21:54:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

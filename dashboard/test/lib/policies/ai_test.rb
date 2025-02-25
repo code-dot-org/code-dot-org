@@ -125,11 +125,19 @@ class Policies::AiTest < ActiveSupport::TestCase
       _(ai_differentiation_enabled?).must_equal false
     end
 
-    context 'when the user is a teacher' do
-      let(:user_type) {'teacher'}
+    context 'when the user is a teache and has enabled access to ai diff' do
+      let(:user) {build_stubbed(:user, user_type: 'teacher', ai_differentiation_enabled: true)}
 
       it 'returns true' do
         _(ai_differentiation_enabled?).must_equal true
+      end
+    end
+
+    context 'when the user is a teacher and has disabled access to ai diff' do
+      let(:user) {build_stubbed(:user, user_type: 'teacher', ai_differentiation_enabled: false)}
+
+      it 'returns true' do
+        _(ai_differentiation_enabled?).must_equal false
       end
     end
   end
@@ -144,27 +152,15 @@ class Policies::AiTest < ActiveSupport::TestCase
 
     let(:unit_input) {unit}
 
-    let(:unit_differentiation_allowlist) {[]}
-    let(:unit_group_differentiation_allowlist) {[]}
-
-    around do |test|
-      Policies::Ai.stub_const(:UNIT_DIFFERENTIATION_ALLOWLIST, unit_differentiation_allowlist) do
-        Policies::Ai.stub_const(:UNIT_GROUP_DIFFERENTIATION_ALLOWLIST, unit_group_differentiation_allowlist) do
-          test.call
-        end
-      end
-    end
-
     context 'the unit is an actual unit' do
-      context 'the unit name is in the allow list' do
-        let(:unit_differentiation_allowlist) {[unit_name]}
-
+      context 'the unit name is stable' do
+        let(:unit) {build(:unit, name: unit_name, published_state: 'stable')}
         it 'returns true' do
           _(ai_differentiation_enabled_for_unit?).must_equal true
         end
       end
 
-      context 'the unit name is not in the allow list' do
+      context 'the unit is not stable' do
         it 'returns false' do
           _(ai_differentiation_enabled_for_unit?).must_equal false
         end
@@ -174,15 +170,14 @@ class Policies::AiTest < ActiveSupport::TestCase
     context 'the unit is a unit group' do
       let(:unit_input) {unit_group}
 
-      context 'the unit group name is in the allow list' do
-        let(:unit_group_differentiation_allowlist) {[unit_group_name]}
-
+      context 'the unit group is stable' do
+        let(:unit_group) {build(:unit_group, name: unit_group_name, published_state: 'stable')}
         it 'returns true' do
           _(ai_differentiation_enabled_for_unit?).must_equal true
         end
       end
 
-      context 'the unit group name is not in the allow list' do
+      context 'the unit group is not stable' do
         it 'returns false' do
           _(ai_differentiation_enabled_for_unit?).must_equal false
         end
@@ -197,40 +192,23 @@ class Policies::AiTest < ActiveSupport::TestCase
     let(:unit) {build(:unit, name: unit_name)}
     let(:lesson) {build(:lesson, script: unit)}
 
-    let(:mock_allowlist) {true}
-    let(:unit_differentiation_allowlist) {[]}
-
-    around do |test|
-      if mock_allowlist
-        Policies::Ai.stub_const(:UNIT_DIFFERENTIATION_ALLOWLIST, unit_differentiation_allowlist) do
-          test.call
-        end
-      else
-        test.call
-      end
-    end
-
-    context 'the unit name of the lesson is in the allow list' do
-      let(:unit_differentiation_allowlist) {[unit_name]}
-
+    context 'the unit of the lesson is stable' do
+      let(:unit) {build(:unit, name: unit_name, published_state: 'stable')}
       it 'returns true' do
         _(ai_differentiation_enabled_for_lesson?).must_equal true
       end
     end
 
-    context 'the unit name is not in the allow list' do
+    context 'the unit is not stable' do
       it 'returns false' do
         _(ai_differentiation_enabled_for_lesson?).must_equal false
       end
     end
 
     context 'the lesson belongs to a real unit we are specifically allowing' do
-      # Use the real list
-      let(:mock_allowlist) {false}
-
       ['csd3-2023'].each do |real_unit_name|
         context(real_unit_name) do
-          let(:unit_name) {real_unit_name}
+          let(:unit) {build(:unit, name: real_unit_name, published_state: 'stable')}
 
           it 'returns true' do
             _(ai_differentiation_enabled_for_lesson?).must_equal true

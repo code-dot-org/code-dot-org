@@ -1,18 +1,17 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-01-31T05:52:35.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
     "display_name": "Sleep Specialist",
-    "long_instructions": "## Dr. Elena Rossi, Sleep Specialist 😴\r\n<br/>\r\n\r\n<p style=\"font-size:16px\"><strong>📍 Location:</strong> Milan, Italy </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🏥 Workplace:</strong> Center for Sleep Research </p><br/>\r\n\r\n<p style=\"font-size:16px\">💼<strong> Expertise:</strong> Sleep disorders, circadian rhythms, wearable health technology </p><br/>\r\n\r\n<p style=\"font-size:16px\"><strong>🔍 How I Use AI:</strong> \"The Oura Ring allows me to track my patients’ sleep patterns outside the clinic. By analyzing heart rate variability and temperature trends, I can identify sleep disorders and recommend personalized improvements for better rest.\" </p>\r\n\r\n\r\n---\r\n\r\n\r\n\r\n## Do This:\r\n\r\n<ol style=\"font-size:16px\">\r\n<li>Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:</li>\r\n\t<ul style=\"font-size:16px\">\r\n    \t<li>Key roles and responsibilities</li>\r\n\t\t<li>Key challenges</li>\r\n\t\t<li>How computing supports their work</li>\r\n\t\t<li>How your chosen innovation helps their job</li>\r\n    </ul>\r\n<br/>\r\n<li>Summarize key insights in your activity guide.</li>\r\n</ol>\r\n",
+    "long_instructions": "## Dr. Elena Rossi, Sleep Specialist\r\n\r\n**Location:** Milan, Italy\r\n\r\n**Workplace:** Center for Sleep Research\r\n\r\n**Expertise:** Sleep disorders, circadian rhythms, wearable health technology\r\n\r\n**How I Use AI:** \"The Oura Ring allows me to track my patients' sleep patterns outside the clinic. By analyzing heart rate variability and temperature trends, I can identify sleep disorders and recommend personalized improvements for better rest.\"\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n1. Use AI Chat to conduct the interview and take notes on their responses. Ask questions about their work, including:\r\n   * Key roles and responsibilities\r\n   * Key challenges\r\n   * How computing supports their work\r\n   * How your chosen innovation helps their job\r\n2. Summarize key insights in your activity guide.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.5,
+        "temperature": 0.3,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -44,6 +43,7 @@
     },
     "thumbnail_url": "https://images.code.org/b98305f9121f8240bf88313876b4ae72-Pasted Graphic 17.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-01-31T05:52:34.995+00:00\",\"changed\":[\"cloned from \\\"computer-systems-farmer-advisor-aichat\\\"\"],\"cloned_from\":\"computer-systems-farmer-advisor-aichat\"},{\"changed_at\":\"2025-01-31 05:53:35 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 14:49:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-01-31T05:52:34.995+00:00\",\"changed\":[\"cloned from \\\"computer-systems-farmer-advisor-aichat\\\"\"],\"cloned_from\":\"computer-systems-farmer-advisor-aichat\"},{\"changed_at\":\"2025-01-31 05:53:35 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-01-31 14:49:49 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-02-16 20:08:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -62,6 +62,15 @@ class ScriptsControllerTest < ActionController::TestCase
     end
   end
 
+  test 'show includes correct SEO data' do
+    get :show, params: {
+      id: Unit::TWENTY_HOUR_NAME,
+    }
+    assert_response :ok
+    assert_includes(@response.body, "<title>Unit: Accelerated Intro to CS Course - Code.org [test]</title>")
+    assert_includes(@response.body, "<meta property=\"description\" content=\"This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!\" />")
+  end
+
   test "should get show of hoc" do
     get :show, params: {id: Unit::HOC_NAME}
     assert_response :success

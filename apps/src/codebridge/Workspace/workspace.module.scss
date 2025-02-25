@@ -76,3 +76,14 @@
   justify-content: flex-end;
   gap: 4px;
 }
+
+.buttonSkip {
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+
+  span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,10 +1,13 @@
+import {
+  BodyTwoText,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {
   CourseOfferingCurriculumTypes as curriculumTypes,
   ParticipantAudience,
@@ -147,7 +150,9 @@ export default function CurriculumQuickAssign({
 
       if (!curriculumTypes) {
         // hoc and pl have no curriculum types and just have a list of curriculum in filteredCourseOfferings
-        return filteredCourseOfferings[audience];
+        return Object.values(filteredCourseOfferings[audience]).flatMap(
+          courseSection => Object.values(courseSection)
+        );
       }
 
       // return a flattened array of all courses for the given audience
@@ -190,7 +195,7 @@ export default function CurriculumQuickAssign({
     if (!filteredCourseOfferings) return;
     if (!isNewSection) {
       const determineSelectedCourseOffering = () => {
-        const selection = getSelectedCourseOffering(filteredCourseOfferings);
+        const selection = getSelectedCourseOffering();
 
         if (selection) {
           setSelectedCourseOffering(selection.course);
@@ -206,7 +211,6 @@ export default function CurriculumQuickAssign({
       }
       isNewSection && setIsLoading(false);
     }
-    // added all these dependencies given the eslint warning
   }, [
     filteredCourseOfferings,
     isNewSection,

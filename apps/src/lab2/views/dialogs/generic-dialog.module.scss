@@ -39,7 +39,20 @@
     .innerButtonContainer {
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
+      justify-content: space-between;
+      gap: 10px;
     }
   }
+}
+
+.spinnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.spinnerIcon {
+  font-size: 36px;
+  color: $white;
 }

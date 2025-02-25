@@ -1,12 +1,12 @@
 import {Button} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import React, {useCallback} from 'react';
-
 import {
   BodyFourText,
   BodyTwoText,
   StrongText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import React, {useCallback} from 'react';
+
 import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 

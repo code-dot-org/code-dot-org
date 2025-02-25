@@ -149,6 +149,10 @@ export default class SessionFormPart extends React.Component {
       style.endTime = 'error';
       help.endTime = 'Must end after it starts.';
     }
+    if (!this.props.session.format) {
+      style.format = 'error';
+      help.format = 'Required.';
+    }
 
     return (
       <Row>
@@ -190,22 +194,24 @@ export default class SessionFormPart extends React.Component {
           </FormGroup>
         </Col>
         <Col sm={3}>
-          <FormGroup>
+          <FormGroup validationState={style.format}>
             <FormControl
               componentClass="select"
               id="format"
               name="format"
-              value={this.props.session.format}
+              value={this.props.session.format ?? ''}
               onChange={this.handleFormatChange}
               disabled={this.props.readOnly}
               style={this.props.readOnly ? styles.readOnlyInput : undefined}
             >
+              <option value={''}>Select an option</option>
               {PdSessionFormats.map(({value, label}) => (
                 <option key={value} value={value}>
                   {label}
                 </option>
               ))}
             </FormControl>
+            <HelpBlock>{help.format}</HelpBlock>
           </FormGroup>
         </Col>
         <Col sm={2}>

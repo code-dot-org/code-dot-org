@@ -729,7 +729,8 @@ class SectionTest < ActiveSupport::TestCase
           lesson_extras_available: nil,
           text_to_speech_enabled: nil,
           unit_id: section.unit_group ? section.script_id : nil,
-        }
+        },
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -760,7 +761,8 @@ class SectionTest < ActiveSupport::TestCase
           lesson_extras_available: script.lesson_extras_available,
           text_to_speech_enabled: script.text_to_speech_enabled?,
           unit_id: section.unit_group ? section.script_id : nil,
-        }
+        },
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -857,9 +859,11 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
+        is_assigned_single_unit_course: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
@@ -913,9 +917,11 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
+        is_assigned_single_unit_course: nil,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
@@ -973,10 +979,12 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
+        is_assigned_single_unit_course: nil,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
                              {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
@@ -1033,9 +1041,11 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
+        is_assigned_single_unit_course: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
@@ -1085,9 +1095,11 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
+        is_assigned_single_unit_course: nil,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
+        primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
         sync_enabled: nil,
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
@@ -1132,6 +1144,24 @@ class SectionTest < ActiveSupport::TestCase
 
     assert summarized_section[:script][:project_sharing]
     assert summarized_section[:sharing_disabled]
+  end
+
+  test 'summarize: section with a single-unit course assigned' do
+    single_unit_course = create :single_unit_course
+    single_unit = single_unit_course.default_units.first
+    section = create :section, unit_group: single_unit_course
+    CourseOffering.add_course_offering(single_unit_course)
+
+    summarized_section = section.summarize
+    expected_script_info = {
+      id: single_unit.id,
+      name: single_unit.name,
+      project_sharing: single_unit.project_sharing
+    }
+
+    assert_equal single_unit_course.id, summarized_section[:course_id]
+    assert_equal expected_script_info, summarized_section[:script]
+    assert_equal true, summarized_section[:is_assigned_single_unit_course]
   end
 
   test 'can_join_section_as_participant? returns correct response based on permissions' do

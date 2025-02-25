@@ -44,11 +44,13 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       render :missing_application
     elsif current_user.teacher? && current_user.email.blank?
       render '/pd/application/teacher_application/no_teacher_email'
+    elsif @workshop.enrollments.any? {|enrollment| enrollment.user_id == current_user.id}
+      @user_email = current_user.email
+      render :already_enrolled
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       @enrollment.full_name = current_user.name
       @enrollment.email = current_user.email
-      @enrollment.email_confirmation = current_user.email
 
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
       session_info_for_calendar = @workshop.sessions.map(&:session_info_for_calendar)
@@ -88,8 +90,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
               course_url: @workshop.course_url,
               fee: @workshop.fee,
               properties: nil,
-              virtual: @workshop.virtual,
               location_name: @workshop.friendly_location,
+              virtual: @workshop.virtual?,
               course_offerings: @workshop.course_offerings
             }
           ),

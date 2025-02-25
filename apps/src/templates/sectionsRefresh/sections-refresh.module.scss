@@ -2,10 +2,6 @@
 @import 'font.scss';
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 
-.containerWithMarginTop {
-  margin-top: 40px;
-}
-
 .withBorderTop {
   border-top: 1px solid $neutral_dark20;
 }

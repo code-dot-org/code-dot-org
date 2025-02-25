@@ -60,7 +60,7 @@ const ValidationButton: React.FunctionComponent = () => {
   return (
     <>
       <Button
-        color="purple"
+        color="white"
         text="Check my code"
         type="secondary"
         onClick={onClick}

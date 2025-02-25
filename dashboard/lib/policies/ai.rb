@@ -1,21 +1,4 @@
 class Policies::Ai
-  # Units that enable the Differentiation feature
-  UNIT_DIFFERENTIATION_ALLOWLIST = %w[
-    csd3-2023
-    interactive-games-animations-2023
-    focus-on-creativity3-2023
-    focus-on-coding3-2023
-    interactive-games-animations-2024
-    focus-on-creativity3-2024
-    focus-on-coding3-2024
-  ]
-
-  # UnitGroups that enable the Differentiation feature
-  UNIT_GROUP_DIFFERENTIATION_ALLOWLIST = %w[
-    csd-2023
-    csd-2024
-  ]
-
   # Whether or not AI rubric features (AI TA) are enabled.
   def self.ai_rubrics_enabled?(user)
     return false if user.nil?
@@ -48,23 +31,15 @@ class Policies::Ai
     return false unless user.teacher?
 
     # An individual opt-out can be supplied here if implemented
-    true
+    user.ai_differentiation_enabled
   end
 
   def self.ai_differentiation_enabled_for_unit?(unit_or_unit_group)
-    # Checks the allowlists of specifically enabled units for this feature
-    return true if UNIT_DIFFERENTIATION_ALLOWLIST.include?(unit_or_unit_group&.name) && unit_or_unit_group.is_a?(Unit)
-    return true if UNIT_GROUP_DIFFERENTIATION_ALLOWLIST.include?(unit_or_unit_group&.name) && unit_or_unit_group.is_a?(UnitGroup)
-
-    # Otherwise, disabled
-    false
+    # Documents are added to KB for all stable units.
+    !!unit_or_unit_group.stable?
   end
 
   def self.ai_differentiation_enabled_for_lesson?(lesson)
-    # Currently, all lessons of an allowed unit will allow ai differentiation features
-    return true if ai_differentiation_enabled_for_unit?(lesson&.script)
-
-    # Otherwise, disabled
-    false
+    ai_differentiation_enabled_for_unit?(lesson&.script)
   end
 end

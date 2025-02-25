@@ -26,6 +26,9 @@
 #  module                 :string(255)
 #  name                   :string(255)
 #  participant_group_type :string(255)
+#  description            :text(65535)
+#  registration_link      :text(65535)
+#  hidden                 :boolean
 #
 # Indexes
 #
@@ -43,7 +46,7 @@ class Pd::Workshop < ApplicationRecord
   belongs_to :organizer, class_name: 'User', optional: true
   has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
 
-  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id', inverse_of: :workshop
   accepts_nested_attributes_for :sessions, allow_destroy: true
 
   has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
@@ -55,10 +58,9 @@ class Pd::Workshop < ApplicationRecord
 
   serialized_attrs [
     'fee',
-
-    # Indicates that this workshop will be conducted virtually, which triggers
-    # a different, virtual-specific post-workshop survey.
-    'virtual',
+    'grades',
+    'prereq',
+    'time_zone',
 
     # Allows a workshop to be associated with a third party
     # organization.
@@ -74,6 +76,8 @@ class Pd::Workshop < ApplicationRecord
     'suppress_email'
   ]
 
+  before_validation :sanitize_time_zone
+
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
@@ -83,7 +87,6 @@ class Pd::Workshop < ApplicationRecord
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
-  validate :friday_institute_workshops_must_be_virtual
   validate :virtual_only_subjects_must_be_virtual
   validate :not_funded_subjects_must_not_be_funded
 
@@ -101,7 +104,7 @@ class Pd::Workshop < ApplicationRecord
 
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
-      unless sessions.map {|session| session.start.to_datetime.to_date}.uniq.length == sessions.length
+      unless sessions.map {|session| session.start_time.to_date}.uniq.length == sessions.length
         errors.add(:sessions, 'must start on separate days.')
       end
     else
@@ -121,16 +124,18 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  def friday_institute_workshops_must_be_virtual
-    if friday_institute? && !virtual?
-      errors.add :properties, 'Friday Institute workshops must be virtual'
-    end
-  end
-
   def virtual_only_subjects_must_be_virtual
     if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
       errors.add :properties, "Workshops with the subject #{subject} must be virtual"
     end
+  end
+
+  def virtual?
+    sessions.any? {|session| session.session_format == "virtual"}
+  end
+
+  def sanitize_time_zone
+    self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : nil
   end
 
   # Whether enrollment in this workshop requires an application

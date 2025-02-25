@@ -4,7 +4,7 @@
 # This module is structured very similarly to the AichatSagemakerHelper module,
 # which manages AI Chat lab's interaction with models that use AWS Sagemaker.
 module AichatOpenaiHelper
-  API_KEY = CDO.openai_chat_completion_api_key
+  API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id)
@@ -15,9 +15,10 @@ module AichatOpenaiHelper
       level_id
     )
 
+    # We expose a temperature scale of 0.1-1 to users of AI Chat Lab, but OpenAI's API allows a scale of 0-2.
     request_chat_completion(
       messages,
-      aichat_model_customizations['temperature']
+      aichat_model_customizations['temperature'].to_f * 2
     )
   end
 

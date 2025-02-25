@@ -1,14 +1,5 @@
 @import 'color.scss';
-.previewContainerHorizontal {
-  width: 400px;
-  min-width: 400px;
-  border-right: 5px solid $light_gray_800;
-  background-color: $light_black;
-}
-
-.previewContainerVertical {
-  height: auto;
-  padding-bottom: 10px;
+.previewContainer {
   background-color: $light_black;
 }
 

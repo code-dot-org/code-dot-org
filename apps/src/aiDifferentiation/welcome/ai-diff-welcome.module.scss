@@ -21,6 +21,16 @@
   flex-direction: column;
   align-items: stretch;
   text-align: center;
+
+  & h1 {
+    color: $light_white;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  & p {
+    color: var(--brand-aqua-50, #3CFFF7)
+  }
 }
 
 
@@ -30,16 +40,6 @@
   object-fit: cover;
   object-position: top left;
   align-self: center;
-}
-
-.getStartedTitle {
-  color: $light_white;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-
-.getStartedSubtitle {
-  color: var(--brand-aqua-50, #3CFFF7)
 }
 
 .selectOption {
@@ -53,8 +53,55 @@
 .selectOptionPage {
   display: flex;
   flex-direction: column;
-  margin: 48px 56px 20px 56px;
+  margin: 0;
   align-items: center;
+  height: 100%;
+}
+
+.selectOptionContent {
+  margin: 0 56px 24px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progressBarHeader {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+  align-items: center;
+}
+
+.headerBackButton {
+  min-width: 32px;
+  font-size: 14px;
+  margin-inline-start: 16px;
+  border: 0;
+  margin: 0;
+  line-height: 0px;
+  padding: 8px;
+  background-color: $light_white;
+
+  &:active {
+    border: 0 !important;
+  }
+}
+
+.progressBar {
+  height: 12px;
+  width: 100%;
+  background-color: #eaebeb;
+  border-radius: 100px;
+  margin-inline-end: 56px;
+  margin-inline-start: 24px;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: 100px;
+  background-color: $light_affirmative_500;
 }
 
 .selectOptionSubtitle {
@@ -74,6 +121,7 @@
   width: calc(100% - 40px);
   text-align: end;
   align-self: center;
+  margin-top: auto;
 }
 
 .optionRow {
@@ -88,6 +136,10 @@
 
   &:active {
     border: 2px solid $light_gray_200 !important;
+  }
+
+  &:hover {
+    background-color: #E4E6E9 !important;
   }
 }
 
@@ -121,6 +173,10 @@
   margin-right: 12px;
   margin-bottom: 12px;
   gap: 8px;
+
+  & p {
+    margin-bottom: 0;
+  }
 }
 
 .optionWithPicTop {
@@ -129,10 +185,11 @@
   margin-right: 12px;
   margin-bottom: 12px;
   display: flex;
-}
 
-.optionTitle {
-  margin-bottom: 0;
+  & p {
+    margin-bottom: 0;
+    text-align: start;
+  }
 }
 
 .optionDescription {
@@ -141,7 +198,7 @@
 
 .selectedOption {
   border: 4px solid #3CFFF7;
-  width: calc(100% + 8px);
+  width: calc(100% + 6px);
 
   &:active {
     border: 4px solid #3CFFF7 !important;
@@ -156,6 +213,12 @@
   align-content: stretch;
 }
 
+.practiceContent {
+  height: calc(100% - 123px);
+  max-height: calc(100% - 123px);
+  border-top: 2px solid $neutral_gray10;
+}
+
 .endPage {
   display: flex;
   flex-direction: column;
@@ -167,16 +230,28 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 36px 36px 36px;
+  margin: 0 36px 16px 36px;
+  text-align: center;
+
+  & h3 {
+    margin-bottom: 4px;
+  }
+
+  & h6 {
+    color: $neutral_dark80;
+    margin-bottom: 0;
+  }
 }
 
-.endPageSubTitle {
-  margin-top: 16px;
-  color: $neutral_dark80;
+
+.botHappy {
+  width: 94px;
 }
 
-.botConfetti {
-  width: 132px;
+.confetti {
+  position: relative;
+  left: 0;
+  top: 500px;
 }
 
 .endPage a {

@@ -291,6 +291,7 @@ const EVENTS = {
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
   AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',
   AI_DIFF_CHAT_EVENT: 'AI Differentiation Message Event',
+  AI_DIFF_CHAT_TOGGLED: 'AI Differentiation Chat Toggled on/off',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -531,6 +532,11 @@ const EVENTS = {
 
   // Sign in callout on CSF and CSC levels
   LEVEL_SIGN_IN_CALLOUT_SHOWN: 'Level Sign In Callout Shown',
+
+  // Lab2
+  LAB2_RESIZE_DRAG_START: 'Resize bar dragged in lab2',
+
+  // AI Teaching Assistant - Differentiation
 };
 
 const EVENT_GROUP_NAMES = {

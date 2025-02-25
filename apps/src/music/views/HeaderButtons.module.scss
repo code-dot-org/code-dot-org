@@ -72,5 +72,13 @@
     width: initial;
     padding: 0 11px;
     gap: 9px;
+    flex-shrink: 1;
+    white-space: nowrap;
+    overflow: hidden;
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }

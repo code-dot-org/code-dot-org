@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-02-07T22:54:48.000Z",
   "level_num": "custom",
@@ -15,7 +16,7 @@
         "fadeInOverPrevious": true
       },
       {
-        "text": "Songwriters use use **measures** to to carefully time each sound in their song.",
+        "text": "Songwriters use **measures** to to carefully time each sound in their song.",
         "imageUrl": "https://images.code.org/9159691ac887e71f2938ea8d72fc113f-repeatWaves.png",
         "key": "music-coding-intro-seq-panel-d41fd16c-480c-4da2-a69c-6eee3f56814f",
         "layout": "text-top-right",
@@ -42,7 +43,6 @@
     "offer_browser_tts": "true",
     "name_suffix": "_1"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-02-07T22:54:48.977+00:00\",\"changed\":[\"cloned from \\\"PLmusic-coding-intro-seq-panel-rests\\\"\"],\"cloned_from\":\"PLmusic-coding-intro-seq-panel-rests\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-02-07T22:54:48.977+00:00\",\"changed\":[\"cloned from \\\"PLmusic-coding-intro-seq-panel-rests\\\"\"],\"cloned_from\":\"PLmusic-coding-intro-seq-panel-rests\"},{\"changed_at\":\"2025-02-18 21:09:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

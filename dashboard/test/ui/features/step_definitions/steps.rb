@@ -1019,6 +1019,12 @@ Then /^I see (\d*) of jquery selector (.*)$/ do |num, selector|
   expect(@browser.execute_script("return $(\"#{selector}\").length;")).to eq(num.to_i)
 end
 
+Then /^I wait until I see (\d*) of jquery selector (.*)$/ do |num, selector|
+  wait_until do
+    @browser.execute_script("return $(\"#{selector}\").length;") == num.to_i
+  end
+end
+
 Then /^I wait until I (don't )?see selector "(.*)"$/ do |negation, selector|
   wait_until do
     @browser.execute_script("return $(\"#{selector}:visible\").length != 0;") == negation.nil?

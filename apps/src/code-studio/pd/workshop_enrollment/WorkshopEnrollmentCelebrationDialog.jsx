@@ -1,70 +1,54 @@
 import Button from '@code-dot-org/component-library/button';
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
-
 import Typography, {
   Heading2,
   Heading3,
   Heading6,
   BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
+} from '@code-dot-org/component-library/typography';
+import moment from 'moment-timezone';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
+import {getSessionDate, getSessionTimes} from '../sessionDateUtils';
+
 import style from '@cdo/apps/code-studio/pd/professional_learning_landing/landingPage.module.scss';
 
 const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
 
-const MonthNames = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-
-// Ensures the given value is two digits long (padded with a '0' if necessary)
-// so that time intervals are always two digits long.
-const zeroPad = value => {
-  return value.toString().padStart(2, '0');
-};
-
 const generateDateText = session => {
-  const date = new Date(session.start);
-  return `${
-    MonthNames[date.getMonth()]
-  } ${date.getDate()}, ${date.getFullYear()}`;
+  return getSessionDate({
+    session,
+    format: 'MMMM D, YYYY',
+    isLocal: session.is_local,
+  });
 };
 
 const generateTimeText = session => {
-  const start = new Date(session.start);
-  const end = new Date(session.end);
+  const {startTime, endTime} = getSessionTimes({
+    session,
+    format: 'h:mmA',
+    isLocal: session.is_local,
+  });
 
-  const startTimeText = start
-    .toLocaleString('utc', {
-      hour: 'numeric',
-      minute: 'numeric',
-      hour12: true,
-    })
-    .replaceAll(' ', '');
-  const endTimeText = end
-    .toLocaleString('utc', {
-      hour: 'numeric',
-      minute: 'numeric',
-      hour12: true,
-    })
-    .replaceAll(' ', '');
+  return `${startTime} - ${endTime}`;
+};
 
-  return `${startTimeText} - ${endTimeText}`;
+export const getStartAndEndUTCStrings = ({session, format}) => {
+  // legacy sessions: stored in local time, format without 'Z'
+  // new sessions: already in UTC, format with 'Z'
+  const startTime = session.is_local
+    ? moment.utc(session.start).format(format)
+    : moment.utc(session.start).format(`${format}[Z]`);
+  const endTime = session.is_local
+    ? moment.utc(session.end).format(format)
+    : moment.utc(session.end).format(`${format}[Z]`);
+
+  return {startTime, endTime};
 };
 
 export const buildAppleCalendarLink = (
@@ -72,27 +56,24 @@ export const buildAppleCalendarLink = (
   workshopTitle,
   workshopLocation
 ) => {
+  const format = 'YYYYMMDDTHHmmss';
+  const [firstSession] = workshopSessions;
+  const {startTime: firstSessionStart} = getStartAndEndUTCStrings({
+    session: firstSession,
+    format,
+  });
   let icsFileContent = [
     'BEGIN:VCALENDAR',
     'VERSION:2.0',
     'CALSCALE:GREGORIAN',
-    `PRODID:${workshopTitle}${workshopSessions[0].start}/ics`,
+    `PRODID:${workshopTitle} ${firstSessionStart}/ics`,
   ];
 
   workshopSessions.forEach(session => {
-    const start = new Date(session.start);
-    const end = new Date(session.end);
-    // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
-    // as January, so the month needs to be offset by 1.
-    const date = `${start.getFullYear()}${zeroPad(
-      start.getMonth() + 1
-    )}${zeroPad(start.getDate())}`;
-    const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
-      start.getMinutes()
-    )}00`;
-    const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
-      end.getMinutes()
-    )}00`;
+    const {startTime, endTime} = getStartAndEndUTCStrings({
+      session,
+      format,
+    });
 
     icsFileContent.push(
       'BEGIN:VEVENT',
@@ -120,25 +101,19 @@ export const buildGoogleCalendarLink = (
   workshopTitle,
   workshopLocation
 ) => {
-  const start = new Date(session.start);
-  const end = new Date(session.end);
-  // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
-  // as January, so the month needs to be offset by 1.
-  const date = `${start.getFullYear()}${zeroPad(start.getMonth() + 1)}${zeroPad(
-    start.getDate()
-  )}`;
-  const startTime = `${date}T${zeroPad(start.getHours())}${zeroPad(
-    start.getMinutes()
-  )}00`;
-  const endTime = `${date}T${zeroPad(end.getHours())}${zeroPad(
-    end.getMinutes()
-  )}00`;
+  const baseUrl = 'https://www.google.com/calendar/render?action=TEMPLATE';
+  const format = 'YYYYMMDDTHHmmss';
+  const {startTime, endTime} = getStartAndEndUTCStrings({
+    session,
+    format,
+  });
+  const params = new URLSearchParams({
+    text: workshopTitle,
+    dates: `${startTime}/${endTime}`,
+    location: workshopLocation,
+  });
 
-  return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
-    workshopTitle
-  )}&location=${encodeURIComponent(
-    workshopLocation
-  )}&dates=${encodeURIComponent(startTime)}/${encodeURIComponent(endTime)}`;
+  return `${baseUrl}&${params.toString()}`;
 };
 
 export const buildOutlookCalendarLink = (
@@ -146,27 +121,21 @@ export const buildOutlookCalendarLink = (
   workshopTitle,
   workshopLocation
 ) => {
-  const start = new Date(session.start);
-  const end = new Date(session.end);
-  // Calendars parse a month of '01' as January, while Javascript's Date class parses a month of '00'
-  // as January, so the month needs to be offset by 1.
-  const date = `${start.getFullYear()}-${zeroPad(
-    start.getMonth() + 1
-  )}-${zeroPad(start.getDate())}`;
-  const startTime = `${date}T${zeroPad(start.getHours())}:${zeroPad(
-    start.getMinutes()
-  )}:00`;
-  const endTime = `${date}T${zeroPad(end.getHours())}:${zeroPad(
-    end.getMinutes()
-  )}:00`;
+  const baseUrl =
+    'https://outlook.live.com/calendar/action/compose?rru=addevent';
+  const format = 'YYYY-MM-DDTHH:mm:ss';
+  const {startTime, endTime} = getStartAndEndUTCStrings({
+    session,
+    format,
+  });
+  const params = new URLSearchParams({
+    subject: workshopTitle,
+    location: workshopLocation,
+    startdt: startTime,
+    enddt: endTime,
+  });
 
-  return `https://outlook.live.com/calendar/action/compose?rru=addevent&subject=${encodeURIComponent(
-    workshopTitle
-  )}&location=${encodeURIComponent(
-    workshopLocation
-  )}&startdt=${encodeURIComponent(startTime)}&enddt=${encodeURIComponent(
-    endTime
-  )}`;
+  return `${baseUrl}&${params.toString()}`;
 };
 
 export default function WorkshopEnrollmentCelebrationDialog({

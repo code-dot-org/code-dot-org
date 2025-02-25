@@ -1,0 +1,18 @@
+RAILS_ENV: development
+healthChecks:
+  enabled: true
+services:
+  redis:
+    enabled: true
+  mysql:
+    enabled: true
+  minio:
+    enabled: true
+    username: local-development
+    password: allstudents
+localDev:
+  mounts:
+    mountDotAWS: true
+    mountDotConfigGcloud: true
+user:
+  allowSudo: true

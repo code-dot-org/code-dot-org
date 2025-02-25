@@ -10,7 +10,11 @@ import {
 } from '@cdo/apps/lab2/constants';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -109,9 +113,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+  const isViewingExemplar = getAppOptionsViewingExemplar();
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
   const blockMode = useSelector(getBlockMode);
 
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   // Pass music validator to Progress Manager
   useEffect(() => {
     if (progressManager && appName === 'music') {
@@ -128,6 +135,12 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         };
         return {level_data: updatedLevelData};
       });
+    } else if (isEditingExemplar) {
+      header.showLevelBuilderSaveButton(
+        () => ({exemplar_sources: blocklyWorkspace.getCode()}),
+        'Levelbuilder: Edit Exemplar',
+        `/levels/${levelId}/update_exemplar_code`
+      );
     } else if (isToolboxMode) {
       header.showLevelBuilderSaveButton(() => {
         const updatedLevelData = {
@@ -137,7 +150,14 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         return {level_data: updatedLevelData};
       }, 'Levelbuilder: Edit toolbox blocks');
     }
-  }, [blocklyWorkspace, isStartMode, isToolboxMode, levelData]);
+  }, [
+    blocklyWorkspace,
+    isStartMode,
+    isEditingExemplar,
+    isToolboxMode,
+    levelData,
+    levelId,
+  ]);
 
   // Use the Lab2 generic prompt for Blockly prompt dialogs.
   const showGenericPrompt = useCallback(
@@ -369,6 +389,22 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 {projectTemplateLevel
                   ? WARNING_BANNER_MESSAGES.TEMPLATE
                   : WARNING_BANNER_MESSAGES.STANDARD}
+              </div>
+            )}
+            {isEditingExemplar && (
+              <div
+                id="toolboxModeWarningBanner"
+                className={moduleStyles.warningBanner}
+              >
+                {WARNING_BANNER_MESSAGES.EXEMPLAR_MODE}
+              </div>
+            )}
+            {isViewingExemplar && (
+              <div
+                id="toolboxModeWarningBanner"
+                className={moduleStyles.warningBanner}
+              >
+                {WARNING_BANNER_MESSAGES.VIEWING_EXEMPLAR}
               </div>
             )}
             {isToolboxMode && (

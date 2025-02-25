@@ -2,16 +2,19 @@
 #
 # Table name: pd_sessions
 #
-#  id             :integer          not null, primary key
-#  pd_workshop_id :integer
-#  start          :datetime         not null
-#  end            :datetime         not null
-#  created_at     :datetime
-#  updated_at     :datetime
-#  deleted_at     :datetime
-#  code           :string(255)
-#  session_format :integer
-#  time_zone      :string(255)
+#  id               :integer          not null, primary key
+#  pd_workshop_id   :integer
+#  start            :datetime         not null
+#  end              :datetime         not null
+#  created_at       :datetime
+#  updated_at       :datetime
+#  deleted_at       :datetime
+#  code             :string(255)
+#  session_format   :integer
+#  time_zone        :string(255)
+#  meeting_link     :text(65535)
+#  location_name    :string(255)
+#  location_address :string(255)
 #
 # Indexes
 #
@@ -33,10 +36,11 @@ class Pd::Session < ApplicationRecord
   validates_presence_of :start, :end
   validate :starts_and_ends_on_the_same_day
   validate :starts_before_ends
+  validate :valid_meeting_link_format, if: :meeting_link?
 
   def starts_and_ends_on_the_same_day
     return unless start && self.end
-    unless start.to_datetime.to_date == self.end.to_datetime.to_date
+    unless start_time.to_date == end_time.to_date
       errors.add(:end, 'must occur on the same day as the start.')
     end
   end
@@ -48,34 +52,58 @@ class Pd::Session < ApplicationRecord
     end
   end
 
+  def valid_meeting_link_format
+    unless valid_url?(meeting_link)
+      errors.add(:meeting_link, "is not a valid URL")
+    end
+  end
+
+  def start_time
+    start.in_time_zone(workshop.time_zone || 'UTC')
+  end
+
+  def end_time
+    self.end.in_time_zone(workshop.time_zone || 'UTC')
+  end
+
   def formatted_date
-    start.to_date.iso8601
+    start_time.to_date.iso8601
+  end
+
+  def tz_abbreviation
+    return '' if workshop.time_zone.blank? || start.blank?
+
+    time_zone_obj = ActiveSupport::TimeZone[workshop.time_zone]
+    return '' unless time_zone_obj
+
+    time_zone_obj.tzinfo.period_for_utc(start).abbreviation.to_s
   end
 
   def formatted_date_with_start_and_end_times
-    start_time = start.strftime('%l:%M%P').strip
-    end_time = self.end.strftime('%l:%M%P').strip
+    formatted_start = start_time.strftime('%l:%M%P').strip
+    formatted_end = end_time.strftime('%l:%M%P').strip
 
-    "#{formatted_date}, #{start_time}-#{end_time}"
+    "#{formatted_date}, #{formatted_start}-#{formatted_end} #{tz_abbreviation}".strip
   end
 
   def session_info_for_calendar
     {
       id: id,
-      start: start,
-      end: self.end
+      start: start_time.utc.iso8601,
+      end: end_time.utc.iso8601,
+      is_local: workshop.time_zone.blank?
     }
   end
 
   def start_date_us_format
-    start.strftime('%b %d %Y').strip
+    start_time.strftime('%b %d %Y').strip
   end
 
   def start_date_with_start_and_end_times_us_format
-    start_time = start.strftime('%l:%M%P').strip
-    end_time = self.end.strftime('%l:%M%P').strip
+    formatted_start = start_time.strftime('%l:%M%P').strip
+    formatted_end = end_time.strftime('%l:%M%P').strip
 
-    "#{start_date_us_format}, #{start_time} - #{end_time}"
+    "#{start_date_us_format}, #{formatted_start} - #{formatted_end} #{tz_abbreviation}".strip
   end
 
   def hours
@@ -117,6 +145,13 @@ class Pd::Session < ApplicationRecord
 
   def too_soon_for_link?
     workshop.started_at.nil? || start - 48.hours > Time.zone.now
+  end
+
+  def valid_url?(url)
+    uri = URI.parse(url)
+    uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
+  rescue URI::InvalidURIError
+    false
   end
 
   private def unused_random_code

@@ -1138,7 +1138,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'workshops not suppressing reminders by default will suppress_reminders once suppress_email is set' do
     workshop = build :workshop
 
-    workshop.virtual = false
     refute workshop.suppress_reminders?
 
     workshop.suppress_email = true
@@ -1521,7 +1520,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = build :workshop
 
     # Non-virtual workshops may suppress email or not
-    workshop.virtual = false
     workshop.suppress_email = false
     assert workshop.valid?
 
@@ -1529,7 +1527,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
 
     # Virtual workshops may suppress email or not (change from previous behavior)
-    workshop.virtual = true
+    workshop.sessions.first.session_format = 'virtual'
     workshop.suppress_email = false
     assert workshop.valid?
 
@@ -1552,7 +1550,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop = build :pd_workshop,
       course: COURSE_CSP,
       subject: SUBJECT_CSP_WORKSHOP_1,
-      virtual: false,
       suppress_email: true
 
     assert workshop.valid?
@@ -1560,16 +1557,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.subject = VIRTUAL_ONLY_SUBJECTS.first
     refute workshop.valid?
 
-    workshop.virtual = true
-    assert workshop.valid?
-  end
-
-  test 'friday_institute workshops must be virtual' do
-    workshop = build :workshop, third_party_provider: 'friday_institute', virtual: false
-    refute workshop.valid?
-
-    workshop.virtual = true
-    workshop.suppress_email = true
+    workshop.sessions.first.session_format = 'virtual'
     assert workshop.valid?
   end
 
@@ -1646,6 +1634,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'workshop date range string is NA when no sessions' do
     workshop = create :workshop, num_sessions: 0
     assert_equal 'N/A', workshop.workshop_date_range_string
+  end
+
+  test 'bad time_zone value results in nil' do
+    workshop = create :workshop, time_zone: 'Bad/Zone'
+    assert_equal nil, workshop.time_zone
   end
 
   private def session_on_day(day_offset)

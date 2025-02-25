@@ -106,6 +106,14 @@ class CoursesControllerTest < ActionController::TestCase
     assert_template 'courses/show'
   end
 
+  test "show includes correct SEO data" do
+    get :show, params: {course_name: @unit_group_regular.name}
+
+    assert_response :ok
+    assert_includes(@response.body, "<title>non-plc-course - Code.org [test]</title>")
+    assert_includes(@response.body, "<meta property=\"description\" content=\"\" />")
+  end
+
   test "show: non existant course throws" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {course_name: 'nosuchcourse'}
@@ -382,18 +390,6 @@ class CoursesControllerTest < ActionController::TestCase
 
     get :show, params: {course_name: 'experiment-course'}
     assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}"
-  end
-
-  test "show: teacher in teacher-local-nav-v2 experiment is redirected to teacher dashboard unit overview if single-unit course is in a section" do
-    experiment_single_unit_course = create :single_unit_course
-    experiment_teacher = create :teacher
-    experiment_section = create :section, user: experiment_teacher, unit_group: experiment_single_unit_course
-    SingleUserExperiment.find_or_create_by!(min_user_id: experiment_teacher.id, name: 'teacher-local-nav-v2')
-
-    sign_in experiment_teacher
-
-    get :show, params: {course_name: experiment_single_unit_course.name}
-    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_single_unit_course.default_units.first.name}"
   end
 
   no_access_msg = "You don&#39;t have access to this course."

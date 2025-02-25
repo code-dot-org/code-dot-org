@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   include VersionRedirectOverrider
+  include TeacherDashboardUtils
 
   before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
@@ -30,23 +31,6 @@ class CoursesController < ApplicationController
   end
 
   def show
-    if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.course_id == @unit_group.id} && (Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false))
-      section_id = params[:section_id] || current_user.sections_instructed.select {|s| s.course_id == @unit_group.id}.last.id
-      if section_id
-        if @unit_group.single_unit_course?
-          redirect_to "/teacher_dashboard/sections/#{section_id}/unit/#{@unit_group.default_units.first.name}"
-          return
-        else
-          redirect_to "/teacher_dashboard/sections/#{section_id}/courses/#{@unit_group.name}"
-          return
-        end
-      end
-    end
-    if (!params[:section_id] && current_user&.last_section_id) && !(Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false))
-      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
-      return
-    end
-
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
     if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
@@ -60,9 +44,24 @@ class CoursesController < ApplicationController
       return
     end
 
+    if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.course_id == @unit_group.id} && TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
+      section_id = params[:section_id] || current_user.sections_instructed.select {|s| s.course_id == @unit_group.id}.last.id
+      if section_id
+        redirect_to "/teacher_dashboard/sections/#{section_id}/courses/#{@unit_group.name}"
+        return
+      end
+    end
+    if !params[:section_id] && current_user&.last_section_id && !TeacherDashboardUtils.can_redirect_to_teacher_dashboard?(current_user)
+      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      return
+    end
+
     @sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
 
     @locale_code = request.locale
+
+    @page_title = @unit_group.localized_title
+    @page_description = I18n.t("data.course.name.#{@unit_group.name}.description_short", default: '').truncate(200, separator: '.', omission: '.')
 
     render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
   end

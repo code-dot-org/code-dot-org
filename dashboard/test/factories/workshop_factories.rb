@@ -16,6 +16,7 @@ FactoryBot.define do
   factory :workshop, class: 'Pd::Workshop', aliases: [:pd_workshop] do
     transient do
       num_sessions {1}
+      virtual {false}
       num_facilitators {0}
       sessions_from {Time.zone.today + 9.hours} # Start time of the first session, then one per day after that.
       each_session_hours {6}
@@ -74,7 +75,8 @@ FactoryBot.define do
           params = [{
             workshop: workshop,
             start: evaluator.sessions_from + i.days,
-            duration_hours: evaluator.each_session_hours
+            duration_hours: evaluator.each_session_hours,
+            session_format: evaluator.virtual ? 'virtual' : 'in_person'
           }]
           params.prepend :with_assigned_code if evaluator.assign_session_code
           workshop.sessions << build(:pd_session, *params)
