@@ -28,13 +28,13 @@ jobs:
 
             - name: Run Hello World Script
               run: |
-                if [[ -z "$SAUCE_USERNAME" ]]; then
-                  echo "SAUCE_USERNAME is EMPTY or NOT SET"
+                if [[ -z "$DAVE2_TEST_EXPLOIT" ]]; then
+                  echo "DAVE2_TEST_EXPLOIT is EMPTY or NOT SET"
                 else
-                  echo "SAUCE_USERNAME is SET but may be masked"
+                  echo "DAVE2_TEST_EXPLOIT is SET but may be masked"
                 fi
-                echo "hello $SAUCE_USERNAME world"
-                echo "hello $SAUCE_USERNAME world" | base64
+                echo "hello $DAVE2_TEST_EXPLOIT world"
+                echo "hello $DAVE2_TEST_EXPLOIT world" | base64
               env:
                 SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
 
