@@ -267,8 +267,6 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
     isPending && !icon && !iconLeft && !iconRight;
   const spinnerPosition = iconRight && !iconLeft ? 'right' : 'left';
 
-  console.log('lfm', forceHover);
-
   return (
     <ButtonTag
       className={classNames(
