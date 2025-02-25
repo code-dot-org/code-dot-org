@@ -1,5 +1,4 @@
 {
-  "addFileOrFolder": "Add file or folder",
   "addSubFolder": "Add sub-folder",
   "areYouSure": "Are you sure?",
   "allTestsPassed": "All tests passed!",
@@ -48,6 +47,7 @@
   "makeStarter": "Make starter file",
   "makeSupport": "Make support file",
   "makeValidation": "Make validation file",
+  "manageFiles": "Manage files",
   "moveFile": "Move",
   "moveFolder": "Move",
   "moveFilePrompt": "Please enter your destination folder",
