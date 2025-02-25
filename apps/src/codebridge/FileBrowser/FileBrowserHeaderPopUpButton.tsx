@@ -43,7 +43,12 @@ export const FileBrowserHeaderPopUpButton = () => {
   return (
     <>
       <FileUploaderComponent />
-      <PopUpButton iconName="plus" alignment="left" id="uitest-files-plus">
+      <PopUpButton
+        iconName="plus"
+        alignment="left"
+        id="uitest-files-plus"
+        ariaLabel={codebridgeI18n.fileOptions()}
+      >
         <PopUpButtonOption
           iconName="plus"
           labelText={codebridgeI18n.newFolder()}

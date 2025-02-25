@@ -100,7 +100,10 @@ export const openImportFromBackpackPrompt = async ({
     );
   };
 
-  // TODO: Adding a waiting UI (spinner) while waiting for backpack list retrieval.
+  dialogControl?.showDialog({
+    type: DialogType.PendingDialog,
+    title: codebridgeI18n.filesInBackpackTitle(),
+  });
   backpackApi.getFileList(
     handleError(
       codebridgeI18n.filesInBackpackTitle(),

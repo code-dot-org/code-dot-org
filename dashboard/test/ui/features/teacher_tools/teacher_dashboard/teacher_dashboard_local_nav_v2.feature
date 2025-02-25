@@ -18,7 +18,8 @@ Feature: Using the V2 teacher dashboard local navigation
 
     Given I click selector "#ui-test-teacher-sidebar a:contains('Settings')" once I see it
     And I wait until element "#uitest-spinner" is not visible
-    And I wait until element "h1:contains('Edit Section Details')" is visible
+    And I wait until element "h1:contains('Settings')" is visible
+    And I wait until element "h2:contains('Class Section')" is visible
 
     And I press the first "input[name='grades[]']" element
 

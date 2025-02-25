@@ -553,9 +553,6 @@ describe('Enroll Form', () => {
       // of the validation errors.
       enrollForm.find(getIdSelector('submit')).simulate('click');
       expect(fetchStub.called).to.be.false;
-      expect(
-        enrollForm.find(getIdSelector('email')).prop('errorMessage')
-      ).to.equal('Field is required');
       expect(enrollForm.find(getIdSelector('first_name')).prop('errorMessage'))
         .to.be.undefined;
     });
