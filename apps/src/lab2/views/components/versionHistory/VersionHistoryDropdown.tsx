@@ -336,6 +336,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
       role="dialog"
       style={dropdownStyles}
       aria-modal="true"
+      aria-label={lab2I18n.versionHistoryList()}
     >
       <div className={moduleStyles.versionHistoryHeader}>
         <Heading6 className={moduleStyles.versionHistoryTitle}>
