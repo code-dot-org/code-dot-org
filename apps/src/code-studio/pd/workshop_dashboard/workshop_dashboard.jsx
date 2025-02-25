@@ -161,7 +161,9 @@ const WithParamsAndLocation = ({component: Component, ...props}) => {
   return <Component {...props} params={params} location={location} />;
 };
 
-WithParamsAndLocation.propTypes = {component: PropTypes.element.isRequired};
+WithParamsAndLocation.propTypes = {
+  component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
+};
 
 const WorkshopDashboard = ({
   permissionList,
