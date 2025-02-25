@@ -52,6 +52,7 @@ describe('VersionHistoryButton', () => {
     store = getStore();
     mockedProjectManager = {
       getVersionList: jest.fn(() => Promise.resolve(SAMPLE_VERSION_LIST)),
+      restoreSources: jest.fn(() => Promise.resolve('')),
     } as unknown as jest.Mocked<ProjectManager>;
     Lab2Registry.getInstance().setProjectManager(mockedProjectManager);
     // Set up the channel so we are not in read only mode (isOwner = true)
@@ -86,7 +87,6 @@ describe('VersionHistoryButton', () => {
     // We use the functions returned from render because the dialog is rendered to document.body,
     // so we can't use screen.getByRole, etc.
     getByRole('dialog', {name: 'Version History List'});
-    // We are using the DSCO radio button, getByText is the only query that works.
     // Initial version should always be the bottom option in the list.
     // We look for initial version rather than one of the dated versions to avoid issues with time zones.
     getByText('Initial version');
@@ -115,5 +115,48 @@ describe('VersionHistoryButton', () => {
     // so we can't use screen.getByRole, etc.
     getByRole('dialog', {name: 'Version History List'});
     getByRole('alert');
+  });
+
+  it('selects latest version on load', async () => {
+    const {getByDisplayValue} = renderDefault();
+    const button = await screen.findByRole('button', {name: 'Version History'});
+
+    const user = userEvent.setup();
+    await act(async () => {
+      user.click(button);
+    });
+    await waitFor(() =>
+      expect(mockedProjectManager.getVersionList).toHaveBeenCalled()
+    );
+
+    // 3 is the latest version in the sample version list.
+    const latestVersion = getByDisplayValue('3') as HTMLInputElement;
+    expect(latestVersion.checked).toBe(true);
+  });
+
+  it('restores selected version on restore', async () => {
+    const {getByDisplayValue, getByRole, queryByRole} = renderDefault();
+
+    const button = await screen.findByRole('button', {name: 'Version History'});
+
+    const user = userEvent.setup();
+    await act(async () => {
+      user.click(button);
+    });
+    await waitFor(() =>
+      expect(mockedProjectManager.getVersionList).toHaveBeenCalled()
+    );
+
+    const versionInput = getByDisplayValue('2') as HTMLInputElement;
+    await user.click(versionInput);
+
+    const restoreButton = getByRole('button', {name: 'Restore'});
+    await act(async () => {
+      user.click(restoreButton);
+    });
+    await waitFor(() =>
+      expect(mockedProjectManager.restoreSources).toHaveBeenCalledWith('2')
+    );
+    expect(queryByRole('dialog', {name: 'Version History List'})).toBeNull();
   });
 });
