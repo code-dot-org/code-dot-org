@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-20 15:16:42 UTC",
+    "serialized_at": "2025-02-24 01:15:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -32,27 +33,12 @@
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Introduction",
+      "key": "lesson-2",
+      "name": "Career Pathways and Computing Concepts",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "6-12-computer-systems-and-devices"
-      }
-    },
-    {
-      "key": "lesson-2",
-      "name": "Career Pathways and Computing Concepts",
-      "absolute_position": 2,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -64,10 +50,10 @@
     {
       "key": "lesson-3",
       "name": "Hardware",
-      "absolute_position": 3,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -79,10 +65,10 @@
     {
       "key": "lesson-4",
       "name": "Troubleshooting and Optimizing Hardware",
-      "absolute_position": 4,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -94,10 +80,10 @@
     {
       "key": "lesson-5",
       "name": "Software and Operating Systems",
-      "absolute_position": 5,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -109,10 +95,10 @@
     {
       "key": "lesson-6",
       "name": "Troubleshooting and Optimizing Software",
-      "absolute_position": 6,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -124,10 +110,10 @@
     {
       "key": "lesson-7",
       "name": "Build a Computer System",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -139,10 +125,10 @@
     {
       "key": "lesson-8",
       "name": "Data in Computer Systems",
-      "absolute_position": 8,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -154,10 +140,10 @@
     {
       "key": "lesson-9",
       "name": "Processing Data in a System",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -169,10 +155,10 @@
     {
       "key": "lesson-10",
       "name": "How AI uses Data",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -184,10 +170,10 @@
     {
       "key": "lesson-11",
       "name": "IoT and Emerging Technologies",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -199,10 +185,10 @@
     {
       "key": "lesson-12",
       "name": "User Testing",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -214,10 +200,10 @@
     {
       "key": "lesson-13",
       "name": "Just because we can, should we?",
-      "absolute_position": 13,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -229,10 +215,10 @@
     {
       "key": "lesson-14",
       "name": "Nobel in AI Project",
-      "absolute_position": 14,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -243,18 +229,6 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "578d7b5a-5d37-40e7-8b46-a087d775d184",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "578d7b5a-5d37-40e7-8b46-a087d775d184",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "6-12-computer-systems-and-devices"
-      }
-    },
     {
       "key": "72e86093-d3d3-43c7-b7fc-ca7d6270fafa",
       "position": 1,
@@ -416,16 +390,6 @@
     }
   ],
   "activity_sections": [
-    {
-      "key": "ad366991-5a85-44ff-a67d-5bf608b056fc",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "ad366991-5a85-44ff-a67d-5bf608b056fc",
-        "lesson_activity.key": "578d7b5a-5d37-40e7-8b46-a087d775d184"
-      }
-    },
     {
       "key": "21d9d2a0-4d74-4122-88be-7f55fee8a340",
       "position": 1,
@@ -663,9 +627,32 @@
       "key": "1c384a06-ee3a-4b73-a01c-2b5380ba950f",
       "position": 1,
       "properties": {
+        "progression_name": "Explore an AI Model"
       },
       "seeding_key": {
         "activity_section.key": "1c384a06-ee3a-4b73-a01c-2b5380ba950f",
+        "lesson_activity.key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6"
+      }
+    },
+    {
+      "key": "8b6956ac-14cc-4a7f-9337-4b0274b3548e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Processing Unit Battle"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b6956ac-14cc-4a7f-9337-4b0274b3548e",
+        "lesson_activity.key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6"
+      }
+    },
+    {
+      "key": "12f73108-ac3e-40b3-9fd0-624b66cbf482",
+      "position": 3,
+      "properties": {
+        "progression_name": "Determine AI Hardware"
+      },
+      "seeding_key": {
+        "activity_section.key": "12f73108-ac3e-40b3-9fd0-624b66cbf482",
         "lesson_activity.key": "1ca93810-ebe2-497f-83a8-38fab4f0d8a6"
       }
     },
@@ -710,6 +697,17 @@
       },
       "seeding_key": {
         "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0",
+        "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe"
+      }
+    },
+    {
+      "key": "a35690e2-5c17-4c77-a29a-613476d338d2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2",
         "lesson_activity.key": "d736e951-0a96-4679-8fc8-6337351c8ebe"
       }
     }
@@ -1046,6 +1044,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-computer-systems-lesson2-processing-components"
+        ],
         "progression": "Processing Components"
       },
       "bonus": false,
@@ -1068,6 +1069,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-pcbuilder"
+        ],
         "progression": "Connecting Components"
       },
       "bonus": false,
@@ -1090,6 +1094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-career-exploration"
+        ],
         "progression": "Career Hardware Needs"
       },
       "bonus": false,
@@ -1112,6 +1119,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level2-2024"
+        ],
         "progression": "Career Hardware Needs"
       },
       "bonus": false,
@@ -1607,6 +1617,72 @@
       "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore an AI Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson9-models"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "1c384a06-ee3a-4b73-a01c-2b5380ba950f"
+      },
+      "level_keys": [
+        "computer-systems-lesson9-models"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Processing Unit Battle"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson9-battle"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8b6956ac-14cc-4a7f-9337-4b0274b3548e"
+      },
+      "level_keys": [
+        "computer-systems-lesson9-battle"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Determine AI Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson9-aichat"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "12f73108-ac3e-40b3-9fd0-624b66cbf482"
+      },
+      "level_keys": [
+        "computer-systems-lesson9-aichat"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1629,7 +1705,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1654,7 +1730,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1679,7 +1755,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1704,7 +1780,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1729,7 +1805,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -1754,7 +1830,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1779,53 +1855,28 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "computer-systems-lesson12-scenario-2"
+          "computer-systems-lesson12-cfu"
         ],
-        "progression": "AI and Emerging Technologies Ethics Roleplaying"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "computer-systems-lesson12-scenario-2"
+          "computer-systems-lesson12-cfu"
         ],
         "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices",
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
+        "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2"
       },
       "level_keys": [
-        "computer-systems-lesson12-scenario-2"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "computer-systems-lesson12-scenario-3"
-        ],
-        "progression": "AI and Emerging Technologies Ethics Roleplaying"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "computer-systems-lesson12-scenario-3"
-        ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "",
-        "script.name": "6-12-computer-systems-and-devices",
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
-      },
-      "level_keys": [
-        "computer-systems-lesson12-scenario-3"
+        "computer-systems-lesson12-cfu"
       ]
     }
   ],
@@ -2264,6 +2315,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-lesson9-models",
+        "script_level.level_keys": [
+          "computer-systems-lesson9-models"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "1c384a06-ee3a-4b73-a01c-2b5380ba950f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson9-battle",
+        "script_level.level_keys": [
+          "computer-systems-lesson9-battle"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "8b6956ac-14cc-4a7f-9337-4b0274b3548e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson9-aichat",
+        "script_level.level_keys": [
+          "computer-systems-lesson9-aichat"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "6-12-computer-systems-and-devices",
+        "activity_section.key": "12f73108-ac3e-40b3-9fd0-624b66cbf482"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-lesson10-level1-frq",
         "script_level.level_keys": [
           "computer-systems-lesson10-level1-frq"
@@ -2348,26 +2435,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "computer-systems-lesson12-scenario-2",
+        "level.key": "computer-systems-lesson12-cfu",
         "script_level.level_keys": [
-          "computer-systems-lesson12-scenario-2"
+          "computer-systems-lesson12-cfu"
         ],
         "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "6-12-computer-systems-and-devices",
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "computer-systems-lesson12-scenario-3",
-        "script_level.level_keys": [
-          "computer-systems-lesson12-scenario-3"
-        ],
-        "lesson.key": "lesson-13",
-        "lesson_group.key": "",
-        "script.name": "6-12-computer-systems-and-devices",
-        "activity_section.key": "7fce3fbd-4fce-48c7-a0f1-43010e446ca0"
+        "activity_section.key": "a35690e2-5c17-4c77-a29a-613476d338d2"
       }
     }
   ],

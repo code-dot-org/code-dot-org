@@ -1,4 +1,9 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import {
+  BodyFourText,
+  BodyThreeText,
+  BodyTwoText,
+} from '@code-dot-org/component-library/typography';
 import React, {useCallback, useState} from 'react';
 
 import {modelDescriptions} from '@cdo/apps/aichat/constants';
@@ -18,11 +23,6 @@ import {
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
-import {
-  BodyFourText,
-  BodyThreeText,
-  BodyTwoText,
-} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';

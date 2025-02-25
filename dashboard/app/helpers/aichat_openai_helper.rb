@@ -15,9 +15,10 @@ module AichatOpenaiHelper
       level_id
     )
 
+    # We expose a temperature scale of 0.1-1 to users of AI Chat Lab, but OpenAI's API allows a scale of 0-2.
     request_chat_completion(
       messages,
-      aichat_model_customizations['temperature'].to_f
+      aichat_model_customizations['temperature'].to_f * 2
     )
   end
 

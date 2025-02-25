@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-21 02:47:56 UTC",
+    "serialized_at": "2025-02-21 17:21:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -48,6 +48,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "pf-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Console-Only"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "pf-pilot-content-2024"
       }
     }
@@ -274,6 +286,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "assessment": true,
         "overview": "**How can I represent something about myself using programming and art?**\n\nIn this project, students design and code a pixel image that represents some aspect of them. They use computational thinking to break their design into subtasks, such as defining functions, coding loops, and using selection statements. They can use AI for brainstorming and debugging and then further refine their ideas through peer feedback and reflection. The project culminates in a gallery walk in which students show off their work.",
         "preparation": "- Print copies of the Pixels of Me Project Planning Guide (one for each student)",
         "student_overview": "**How can I represent something about myself using programming and art?**\n\nUse Python to code a pixel image that represents. Apply your computational thinking skills to design, refine, and showcase your work."
@@ -281,6 +294,111 @@
       "seeding_key": {
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "pf-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Working with Objects",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pf-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Functions and Parameters",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pf-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Debugging Strategies",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pf-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Introduction to Loops",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pf-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Conditional Statements",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pf-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-19",
+      "name": "Decomposition",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-19",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "pf-pilot-content-2024"
+      }
+    },
+    {
+      "key": "lesson-20",
+      "name": "Two-Way and Nested Selection",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "pf-pilot-content-2024"
       }
     }
@@ -932,7 +1050,8 @@
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Career Exploration activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before students start working, explain that careers can often be grouped based on the kind of work involved: working with People, working with Ideas, or working with Things. Explain to students that they'll use these categories throughout the activity to explore different computing careers and make connections to necessary skills and technologies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the activity. Explain that students analyze a fictional persona’s social media to determine their interests and skills in order to match them to computing careers that might align with that persona’s skills and interests. For example, a persona might enjoy doing escape rooms which could mean they enjoy working with others or that they enjoy problem solving. Students then get help from a chatbot to brainstorm ways that emerging technologies could be used with that career.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students into groups of two.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. \n- **Level 1:** Students choose one of the four personas and analyze the traits and match them to careers in Part 1 of their activity guide. \n- **Level 2:** Students use the information on the level to match their persona from Level 1 to a category, potential careers, and emerging technologies. \n- **Level 3:** Students use an AI Chatbot to explore more emerging technologies for their persona’s matched career. \n- **Level 4:** Students complete a Check for Understanding.",
         "duration": "25",
-        "name": "Career Persona Exploration"
+        "name": "Career Persona Exploration",
+        "progression_name": "Career Persona Exploration"
       },
       "seeding_key": {
         "activity_section.key": "445a98eb-8cee-4f50-b49f-d56d976ccaf2",
@@ -1184,7 +1303,8 @@
       "key": "46987068-8704-4291-b527-a2ce90029ded",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will work with their partner to plan a school event (e.g., fundraiser, dance, talent show). Allow students to either select from a provided list or come up with their own school or community-related event.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2 Level 1. Students will use the AI chatbot to assist with completing the Decomposition section of the Planning a School Event activity guide."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will work with their partner to plan a school event (e.g., fundraiser, dance, talent show). Allow students to either select from a provided list or come up with their own school or community-related event.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2 Level 1. Students will use the AI chatbot to assist with completing the Decomposition section of the Planning a School Event activity guide.",
+        "progression_name": "Decomposition"
       },
       "seeding_key": {
         "activity_section.key": "46987068-8704-4291-b527-a2ce90029ded",
@@ -1223,6 +1343,7 @@
       "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once students have finished brainstorming their task list, have students pair up with another pair who chose the same (or a similar) event. Direct each pair to read through the other pair’s tasks before providing feedback.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around and observe students as they give each other feedback. Ask guiding questions like, \"What tasks might you want to add to your own list\" and \"What tasks should be broken up into separate tasks?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did breaking the event into smaller tasks make it easier to plan?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate that planning the event became easier because they were able to see all of the tasks that they would need to accomplish.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 and Level 3. \n- **Level 2**: Students will use the AI chatbot to assist with completing the Abstraction section of the Planning a School Event activity guide.\n- **Level 3:** Check for Understanding",
+        "progression_name": "Abstraction",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1298,7 +1419,8 @@
       "key": "37339893-7089-46df-9efb-f49d09d425d9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 on Code Studio to answer the warm-up question."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 on Code Studio to answer the warm-up question.",
+        "progression_name": "Steps to Create a Playlist"
       },
       "seeding_key": {
         "activity_section.key": "37339893-7089-46df-9efb-f49d09d425d9",
@@ -1483,7 +1605,8 @@
       "key": "70ec4237-ade1-4761-a80d-9735280da772",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that their task is to design an algorithm using the algorithm design steps. Let students know that they will use sticky notes for their steps and decisions points - one color for the steps or processes and one color for decision points.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Levels 2 through 6 to pick one of the scenarios to work with and design an algorithm for. "
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that their task is to design an algorithm using the algorithm design steps. Let students know that they will use sticky notes for their steps and decisions points - one color for the steps or processes and one color for decision points.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Levels 2 through 6 to pick one of the scenarios to work with and design an algorithm for. ",
+        "progression_name": "Scenario Choices"
       },
       "seeding_key": {
         "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772",
@@ -1552,7 +1675,8 @@
       "key": "f0ec938b-f23d-4652-8d02-ad4ab8b988ad",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 on Code Studio to answer the Check for Understanding questions.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 7 on Code Studio to answer the Check for Understanding questions.",
+        "progression_name": "Check for Understanding",
         "tips": [
           {
             "type": "teachingTip",
@@ -1727,6 +1851,7 @@
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share if the output was what they expected, then explain that the reason the program doesn't print out \"name loves pizza\" is because **name** is a variable that stores the string \"Rylee\". Click through the animated slide to explain the following:\n- A *variable* is a named storage location in memory that can hold data and be changed during program execution. Students can think of it as a container that holds data. They can use variables to store different types of information, such as numbers, strings, lists, and more.\n- Assignment operators like = update values of variables. Other assignment operators include += and -=\n- Arithmetic operators like +, -, x, ÷ perform mathematical calculations on numbers. For example, + adds values together. Using the + sign can also be a way to combine text. This is called string concatenation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to predict what will appear in console when the user clicks \"Run\".\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If students are struggling, ask the following questions to help them think about the code: *\"What data types are being used in this program?\" \"What might happen this time when we combine integers using +?\" \"How does updating num_pets change the output?\"*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share if the output was what they expected.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to learn how to use Python Lab.",
         "duration": "10",
         "name": "Investigate and Modify",
+        "progression_name": "Using Python Lab",
         "tips": [
           {
             "type": "teachingTip",
@@ -1753,7 +1878,8 @@
       "key": "b61912ca-715b-417e-9b09-d61d58cec3e7",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 4, Level 2 to complete Levels 2 through 5.\n- **Level 2:** Students update the values stored in string variables.\n- **Level 3:** Students create a Boolean variable and print it out.\n- **Level 4:** Students modify an integer value stored in a variable.\n- **Level 5:** Students answer a Check for Understanding question."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 4, Level 2 to complete Levels 2 through 5.\n- **Level 2:** Students update the values stored in string variables.\n- **Level 3:** Students create a Boolean variable and print it out.\n- **Level 4:** Students modify an integer value stored in a variable.\n- **Level 5:** Students answer a Check for Understanding question.",
+        "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
         "activity_section.key": "b61912ca-715b-417e-9b09-d61d58cec3e7",
@@ -1810,7 +1936,8 @@
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 6 to practice creating variables and printing the values stored in them.",
         "duration": "10",
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "509ede65-8f65-4771-951c-625e80769670",
@@ -1970,7 +2097,8 @@
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to learn about the The Neighborhood and the `Painter`.\n- **Level 1:** Students read through information in the panels\n- **Level 2:** Students explore the main.py and painter.py files",
         "duration": "10",
-        "name": "Python Lab"
+        "name": "Python Lab",
+        "progression_name": "The Neighborhood and the Painter"
       },
       "seeding_key": {
         "activity_section.key": "1315975e-1265-4274-a801-229566b48f73",
@@ -2008,7 +2136,8 @@
       "key": "b6d3fc1a-a555-49f3-b6f5-2f67b1bf169c",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> Transition:** Direct students to complete Levels 3 and 4.\n- **Level 3:** Students add a `Painter` object and four `painter.move()` methods.\n- **Level 4:** Students run the code and discuss the purpose of the paint can. Then they uncomment all of the commented code to observe how the `Painter` takes the paint from the paint can and then paints one square at a time."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> Transition:** Direct students to complete Levels 3, 4, and 5.\n- **Level 3:** Students add a `Painter` object and four `painter.move()` methods.\n- **Level 4:** Students run the code and discuss the purpose of the paint can. Then they uncomment all of the commented code to observe how the `Painter` takes the paint from the paint can and then paints one square at a time.\n- **Level 5:** Students complete a Check for Understanding.",
+        "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
         "activity_section.key": "b6d3fc1a-a555-49f3-b6f5-2f67b1bf169c",
@@ -2073,9 +2202,10 @@
       "key": "cf39e546-43c4-4a35-a4e3-8102775f1494",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 4 and 5.\n- **Level 4:** Students choose a level to practice moving the `Painter`.\n- **Level 5:** Students choose a level to practice painting with the `Painter`.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 6 and 7.\n- **Level 6:** Students choose a level to practice moving the `Painter`.\n- **Level 7:** Students choose a level to practice painting with the `Painter`.",
         "duration": "10",
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "cf39e546-43c4-4a35-a4e3-8102775f1494",
@@ -2182,6 +2312,7 @@
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to predict the program's outcome, then run the program to compare their predictions to the actual outcome.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check if students predict that the program will move the painter 3 times, paint blue and then move forward 3 times again. If students are stuck, ask guiding questions like, \"What’s happening inside the `move_fast()` function?\" Or \"How is this different from the `Painter` methods you’ve used before?\" ",
         "duration": "5",
         "name": "Predict",
+        "progression_name": "Predict and Run",
         "tips": [
           {
             "type": "teachingTip",
@@ -2248,7 +2379,8 @@
       "key": "a315f367-94bf-47c2-9631-3d1fc5d5fc9f",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that when we define functions that we know we will want to reuse, we can save them in a separate file (`custom.py`) instead of rewriting them every time. In Python Lab, we can import `custom.py` as a separate file and use its functions inside `main.py`. This helps keep our code organized and allows us to reuse functions we’ve already written.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>** Do This:** Point out that the function in `custom.py` uses a parameter (`painter`), meaning it can work with different objects. When calling the function in `main.py`, we pass in an actual object (e.g., `bob`). This allows us to reuse the same function for multiple objects without rewriting it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that when we import `custom.py` into Python Lab, we can call its functions inside `main.py` using dot notation. For example, `custom.turn_right(bob)` tells Python that the `turn_right` function is located in `custom.py` and should be used with the object `bob`. Without dot notation, Python wouldn't know where to find `turn_right`.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> Transition:** Direct students to complete Levels 2 through 5.\n- **Level 2:** Students create and test a `turn_right()` function.\n- **Level 3:** Students create and test a `turn_around()` function.\n- **Level 4:** Students refactor repeated code into a `paint_line(color)` function.\n- **Level 5:** Students answer a Check for Understanding question."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that when we define functions that we know we will want to reuse, we can save them in a separate file (`custom.py`) instead of rewriting them every time. In Python Lab, we can import `custom.py` as a separate file and use its functions inside `main.py`. This helps keep our code organized and allows us to reuse functions we’ve already written.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i>** Do This:** Point out that the function in `custom.py` uses a parameter (`painter`), meaning it can work with different objects. When calling the function in `main.py`, we pass in an actual object (e.g., `bob`). This allows us to reuse the same function for multiple objects without rewriting it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that when we import `custom.py` into Python Lab, we can call its functions inside `main.py` using dot notation. For example, `custom.turn_right(bob)` tells Python that the `turn_right` function is located in `custom.py` and should be used with the object `bob`. Without dot notation, Python wouldn't know where to find `turn_right`.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> Transition:** Direct students to complete Levels 2 through 5.\n- **Level 2:** Students create and test a `turn_right()` function.\n- **Level 3:** Students create and test a `turn_around()` function.\n- **Level 4:** Students refactor repeated code into a `paint_line(color)` function.\n- **Level 5:** Students answer a Check for Understanding question.",
+        "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
         "activity_section.key": "a315f367-94bf-47c2-9631-3d1fc5d5fc9f",
@@ -2343,6 +2475,7 @@
       "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *comment* and explain what they are used for:\n- Explain code’s purpose by describing what the code is meant to do.\n- Improve readability by making your code easier for others (and yourself) to understand later.\n- Support collaboration by allowing team members to quickly understand your code.\nAll of which aid in debugging code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the TAG feedback protocol and explain to students that they will be using this TAG protocol to give and receive feedback on the first practice level 6. Ensure students have a sticky note to write their TAG feedback on for a classmate.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 6 to complete Levels 6 through 7.\n- **Level 6:** Students practice combining functions to create a unique pattern and will give TAG feedback to a peer.\n- **Level 7:** Students choose a Neighborhood layout and write a program using the functions they’ve created to complete a task efficiently",
+        "progression_name": "Practice",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2608,6 +2741,7 @@
       "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students in pairs for pair programming. Make sure students are aware that for Levels 2 and 3, one student should be on the Investigate and Modify level while the other will be on Level 4 using the AI Chatbot.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 3 with their partner.\n- **Level 1:** Use code tracing and printing values to debug the error.\n- **Level 2:** Use the error message clarification strategy (and AI Chatbot on Level 4) to debug the error.\n- **Level 3:** Ask questions with the AI Chatbot on Level 4 on to help you understand the errors.\n- **Level 4:** AI Chatbot exists on this level for students to use with the debugging strategies on Levels 2 and 3.\n- **Level 5:** Students complete a Check for Understanding.",
+        "progression_name": "Investigate and Modify",
         "tips": [
           {
             "type": "teachingTip",
@@ -2621,8 +2755,30 @@
       }
     },
     {
-      "key": "24eb6735-6fa9-4509-8358-371c2beb18b8",
+      "key": "9aee6624-c4f2-4c14-918a-207322c3e9a8",
       "position": 14,
+      "properties": {
+        "progression_name": "Debugging Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "9aee6624-c4f2-4c14-918a-207322c3e9a8",
+        "lesson_activity.key": "c411a20f-f57a-4e84-b657-f9257759c94f"
+      }
+    },
+    {
+      "key": "6ca242b0-211c-4e85-9986-c6417e2b2fec",
+      "position": 15,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ca242b0-211c-4e85-9986-c6417e2b2fec",
+        "lesson_activity.key": "c411a20f-f57a-4e84-b657-f9257759c94f"
+      }
+    },
+    {
+      "key": "24eb6735-6fa9-4509-8358-371c2beb18b8",
+      "position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -2632,7 +2788,7 @@
     },
     {
       "key": "a324170e-4c08-4097-a61c-1d61e031b078",
-      "position": 15,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered about the strategies from the modifications they made to the code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what a syntax error is and use the slide to go over a couple examples.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain what a logic error is and use the slide to show an example where the function would run without crashing, but it moves before painting instead of painting first, which is a logic error because the code runs but doesn’t do what was expected."
       },
@@ -2643,11 +2799,12 @@
     },
     {
       "key": "7ff4975d-72ac-4025-ae83-5d86ed7b49be",
-      "position": 16,
+      "position": 18,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 6 to complete at least one of the debugging practice choices.",
         "duration": "10",
-        "name": "Debugging Practice"
+        "name": "Debugging Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "7ff4975d-72ac-4025-ae83-5d86ed7b49be",
@@ -2656,7 +2813,7 @@
     },
     {
       "key": "db8fb2cd-0bbb-47db-8a88-e2e298a2dc09",
-      "position": 17,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the practice level, remind them to document their experiences in their Unit Guide and to consult their Debugging Strategies Handout or the AI Chatbot if needed. ",
         "tips": [
@@ -2726,7 +2883,8 @@
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 1 on Code Studio to write their prediction for the program's outcome, then have students run the program to compare their predictions to the actual outcome.",
         "duration": "5",
-        "name": "Predict"
+        "name": "Predict",
+        "progression_name": "Predict and Run"
       },
       "seeding_key": {
         "activity_section.key": "26a77a1e-89e3-4465-a926-97b96b583e39",
@@ -2766,7 +2924,8 @@
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the steps for coding a `while` loop. Emphasize that a `while` loop simplifies repeated code and makes the program more efficient. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to complete Levels 2 through 5.\n- **Level 2:** Students define a new `move_and_paint()` function which contains a `while painter.can_move()` loop.\n- **Level 3:** Refactor repetitive code into a `while painter.is_on_bucket()` loop inside a `collect_paint()` function.\n- **Level 4:** Refactor repetitive code into a `while painter.has_paint()` loop inside a `paint_line()` function.\n- **Level 5:** Check for understanding multiple choice question",
         "duration": "10",
-        "name": "Investigate and Modify"
+        "name": "Investigate and Modify",
+        "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
         "activity_section.key": "63c20cb2-b258-441b-88d2-59609ed811da",
@@ -2815,9 +2974,10 @@
       "key": "c1c70ee0-570d-4e11-af7e-fce6ea9289e9",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 6 to complete one of the challenges.**",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 6 to complete one of the challenges.",
         "duration": "10",
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "c1c70ee0-570d-4e11-af7e-fce6ea9289e9",
@@ -2897,7 +3057,7 @@
       "key": "779fbe11-4bf8-4ea4-970a-97f905f410ab",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the definition and components of an algorithm. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which component of an algorithm did you just experience when you either stood or stayed seated?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that they demonstrate selection.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that algorithms use sequencing, iteration, and selection. So far, we’ve explored sequencing (step-by-step) and iteration (repeating tasks). Today, we’ll focus on **selection**, where a program makes decisions using conditions. In Python, we use **if statements** for selection—let’s see how this works with our `Painter`!\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the definition and components of an algorithm. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which component of an algorithm did you just experience when you either stood or stayed seated?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that they demonstrate selection.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that algorithms use sequencing, iteration, and selection. So far, we’ve explored sequencing (step-by-step) and iteration (repeating tasks). Today, we’ll focus on selection, where a program makes decisions using conditions. In Python, we use **if statements** for selection—let’s see how this works with our `Painter`!\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "779fbe11-4bf8-4ea4-970a-97f905f410ab",
@@ -2966,7 +3126,8 @@
       "key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that conditionals *allow programs to make decisions* by checking if something is true before running certain code. Explain that methods like `can_move()` help check conditions *before executing actions* by returning a boolean, true or false. Code inside the `if` statement only runs if the condition is true—otherwise, it is skipped.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 through 5.\n- **Level 1:** Students explore how `can_move()` and function parameters can control movement and painting decisions. \n- **Level 2:** Students use `is_on_paint()` and `can_move()` inside conditionals to modify the `Painter`’s behavior.\n- **Level 3:** Students complete missing `if` statements** to control movement and painting based on the `Painter`’s facing direction.\n- **Level 4:** Students implement nested `if` statements to paint a diagonal pattern while controlling movement.\n- **Level 5:** Students complete a check for understanding."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that conditionals *allow programs to make decisions* by checking if something is true before running certain code. Explain that methods like `can_move()` help check conditions *before executing actions* by returning a boolean, true or false. Code inside the `if` statement only runs if the condition is true—otherwise, it is skipped.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 through 5.\n- **Level 1:** Students explore how `can_move()` and function parameters can control movement and painting decisions. \n- **Level 2:** Students use `is_on_paint()` and `can_move()` inside conditionals to modify the `Painter`’s behavior.\n- **Level 3:** Students complete missing `if` statements** to control movement and painting based on the `Painter`’s facing direction.\n- **Level 4:** Students implement nested `if` statements to paint a diagonal pattern while controlling movement.\n- **Level 5:** Students complete a Check for Understanding.",
+        "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
         "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0",
@@ -3034,6 +3195,7 @@
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce *conditional statement*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the syntax for conditional statements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that conditionals allow programs to make decisions by checking if something is true before running certain code. Explain that methods like `can_move()` help check conditions before executing actions by returning a boolean, true or false. Code inside the `if` statement only runs if the condition is true—otherwise, it is skipped.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the `Painter` methods students can use with conditional statements.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 6 to practice using conditionals.",
         "duration": "15",
         "name": "Practice",
+        "progression_name": "Practice",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3309,7 +3471,8 @@
       "key": "c975fa70-0dac-4b14-b914-74f0db8fb2f0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this activity, the focus is on designing algorithms to recreate a pixel image, rather than collecting paint. Since the exact amount of paint needed is unknown, there are no paint buckets in this level. Instead, students will use `painter.set_paint(amount)` to set the amount of paint directly in their programs, ensuring they have enough to complete their image efficiently.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1 to convert their pseudocode into Python and create their pixel image."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this activity, the focus is on designing algorithms to recreate a pixel image, rather than collecting paint. Since the exact amount of paint needed is unknown, there are no paint buckets in this level. Instead, students will use `painter.set_paint(amount)` to set the amount of paint directly in their programs, ensuring they have enough to complete their image efficiently.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1 to convert their pseudocode into Python and create their pixel image.",
+        "progression_name": "My Pixel Image"
       },
       "seeding_key": {
         "activity_section.key": "c975fa70-0dac-4b14-b914-74f0db8fb2f0",
@@ -3402,7 +3565,8 @@
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 1 to write their prediction for the program's outcome Then have students run the program to compare their predictions to the actual outcome.",
         "duration": "5",
-        "name": "Predict"
+        "name": "Predict",
+        "progression_name": "Predict and Run"
       },
       "seeding_key": {
         "activity_section.key": "8d1ca628-8798-423c-9f4b-0bd5f88a19c2",
@@ -3451,9 +3615,10 @@
       "key": "e694232f-b971-4032-82c2-7456dc8cccac",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 12, Level 2 t complete Levels 2, 3, and 4.\n- **Level 2:** Students use user input to set the paint amount \n- **Level 3:** Students add a missing else statement to their conditional.\n- **Level 4:** Students modify the current conditional statement to be a nested conditional statement. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 12, Level 2 to complete Levels 2 through 5.\n- **Level 2:** Students use user input to set the paint amount \n- **Level 3:** Students add a missing else statement to their conditional.\n- **Level 4:** Students modify the current conditional statement to be a nested conditional statement. \n- **Level 5:** Students complete a Check for Understanding.",
         "duration": "10",
-        "name": "Investigate and Modify"
+        "name": "Investigate and Modify",
+        "progression_name": "Investigate and Modify"
       },
       "seeding_key": {
         "activity_section.key": "e694232f-b971-4032-82c2-7456dc8cccac",
@@ -3493,7 +3658,8 @@
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on the value of taking in user input. They should be able to articulate that taking user input makes the program more interactive and customizable. Then have students reflect on how adding in nested conditionals, especially ones that rely on user input to determine the condition, lead to more possibilities for different outcomes and increased customization of the final drawing.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the animated slide to explain how an `if/else` conditional works. Highlight the fact that one of the blocks *will* run. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the animated slide to explain how a nested conditional works. While the example on the slide shows a conditional nested in the `if` block, point out the fact that a conditional can be nested in either the `if` block or the `else` block.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the animated slide to explain how an equality operator works. \n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 6 to complete one of the challenges.",
         "duration": "15",
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "a367df0e-652a-4998-bd53-99dfdbc17242",
@@ -3652,7 +3818,8 @@
       "key": "bf315139-39af-497a-b53e-6eb3cc95937a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to select the corresponding grid size that they selected in their project planning guide."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to select the corresponding grid size that they selected in their project planning guide.",
+        "progression_name": "Pixels of Me Project"
       },
       "seeding_key": {
         "activity_section.key": "bf315139-39af-497a-b53e-6eb3cc95937a",
@@ -3869,10 +4036,2082 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Persona Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson1-level1-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "445a98eb-8cee-4f50-b49f-d56d976ccaf2"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson1-level1-2024"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Persona Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson1-level2-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "445a98eb-8cee-4f50-b49f-d56d976ccaf2"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson1-level2-2024"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Persona Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson1-level3-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "445a98eb-8cee-4f50-b49f-d56d976ccaf2"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson1-level3-2024"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Career Persona Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson1-level4-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "445a98eb-8cee-4f50-b49f-d56d976ccaf2"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson1-level4-2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Decomposition"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson2-level1-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "46987068-8704-4291-b527-a2ce90029ded"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson2-level1-2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Abstraction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson2-level2-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "37bbd37c-f736-4f4b-899f-e041906f81bb"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson2-level2-2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Abstraction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson2-level3-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "37bbd37c-f736-4f4b-899f-e041906f81bb"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson2-level3-2024"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Steps to Create a Playlist"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level1-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "37339893-7089-46df-9efb-f49d09d425d9"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson3-level1-2024"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level2-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson3-level2-2024"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level3-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson3-level3-2024"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level4-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson3-level4-2024"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level5-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson3-level5-2024"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario Choices"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level6-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson3-level6-2024"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level7-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "f0ec938b-f23d-4652-8d02-ad4ab8b988ad"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson3-level7-2024"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Python Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level1-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70687f9e-b22b-4509-a41d-1ae975910655"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson4-level1-2024"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level2-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b61912ca-715b-417e-9b09-d61d58cec3e7"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson4-level2-2024"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level3-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b61912ca-715b-417e-9b09-d61d58cec3e7"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson4-level3-2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level4-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b61912ca-715b-417e-9b09-d61d58cec3e7"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson4-level4-2024"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level5-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b61912ca-715b-417e-9b09-d61d58cec3e7"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson4-level5-2024"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level6-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "509ede65-8f65-4771-951c-625e80769670"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson4-level6-2024"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Neighborhood and the Painter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level1-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "1315975e-1265-4274-a801-229566b48f73"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson5-level1-2023"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Neighborhood and the Painter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level2-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "1315975e-1265-4274-a801-229566b48f73"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson5-level2-2023"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level3-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b6d3fc1a-a555-49f3-b6f5-2f67b1bf169c"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson5-level3-2023"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level4-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b6d3fc1a-a555-49f3-b6f5-2f67b1bf169c"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson5-level4-2023"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level5-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b6d3fc1a-a555-49f3-b6f5-2f67b1bf169c"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson5-level5-2023"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level6-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "cf39e546-43c4-4a35-a4e3-8102775f1494"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson5-level6-2023"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level7-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "cf39e546-43c4-4a35-a4e3-8102775f1494"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson5-level7-2023"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level1-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "f83c7af2-f38b-4cc6-adb6-656d852efa02"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-level1-2024"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level2-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "a315f367-94bf-47c2-9631-3d1fc5d5fc9f"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-level2-2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level3-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "a315f367-94bf-47c2-9631-3d1fc5d5fc9f"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-level3-2024"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level4-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "a315f367-94bf-47c2-9631-3d1fc5d5fc9f"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-level4-2024"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level5-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "a315f367-94bf-47c2-9631-3d1fc5d5fc9f"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-level5-2024"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level6-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e018e36e-743b-4185-a72f-35db4ce99b51"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-level6-2024"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level7-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e018e36e-743b-4185-a72f-35db4ce99b51"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-level7-2024"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level1-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b701b73b-8a0c-4cf9-9bbc-0b51b1b482df"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson7-level1-2024"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level2-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b701b73b-8a0c-4cf9-9bbc-0b51b1b482df"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson7-level2-2024"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level3-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b701b73b-8a0c-4cf9-9bbc-0b51b1b482df"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson7-level3-2024"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level4-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "9aee6624-c4f2-4c14-918a-207322c3e9a8"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson7-level4-2024"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level5-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "6ca242b0-211c-4e85-9986-c6417e2b2fec"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson7-level5-2024"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level6-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "7ff4975d-72ac-4025-ae83-5d86ed7b49be"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson7-level6-2024"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level1-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "26a77a1e-89e3-4465-a926-97b96b583e39"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson8-level1-2024"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level2-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "63c20cb2-b258-441b-88d2-59609ed811da"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson8-level2-2024"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level3-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "63c20cb2-b258-441b-88d2-59609ed811da"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson8-level3-2024"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level4-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "63c20cb2-b258-441b-88d2-59609ed811da"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson8-level4-2024"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level5-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "63c20cb2-b258-441b-88d2-59609ed811da"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson8-level5-2024"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level6-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "c1c70ee0-570d-4e11-af7e-fce6ea9289e9"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson8-level6-2024"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level1-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson9-level1-2024"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level2-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson9-level2-2024"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level3-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson9-level3-2024"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level4-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson9-level4-2024"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level5-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson9-level5-2024"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level6-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "1f40a038-e0dd-47ae-a0a2-711066e0664d"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson9-level6-2024"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "My Pixel Image"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson11-level1-2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "c975fa70-0dac-4b14-b914-74f0db8fb2f0"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson11-level1-2024"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level1-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "8d1ca628-8798-423c-9f4b-0bd5f88a19c2"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson12-level1-2024"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level2-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e694232f-b971-4032-82c2-7456dc8cccac"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson12-level2-2024"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level3-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e694232f-b971-4032-82c2-7456dc8cccac"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson12-level3-2024"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level4-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e694232f-b971-4032-82c2-7456dc8cccac"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson12-level4-2024"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Investigate and Modify"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level5-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e694232f-b971-4032-82c2-7456dc8cccac"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson12-level5-2024"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level6-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "a367df0e-652a-4998-bd53-99dfdbc17242"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson12-level6-2024"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Pixels of Me Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson13-level1-2024"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "bf315139-39af-497a-b53e-6eb3cc95937a"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson13-level1-2024"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Pixels of Me Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson13-level2-2024"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "bf315139-39af-497a-b53e-6eb3cc95937a"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson13-level2-2024"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson1-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson1-level1-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "445a98eb-8cee-4f50-b49f-d56d976ccaf2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson1-level2-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson1-level2-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "445a98eb-8cee-4f50-b49f-d56d976ccaf2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson1-level3-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson1-level3-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "445a98eb-8cee-4f50-b49f-d56d976ccaf2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson1-level4-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson1-level4-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "445a98eb-8cee-4f50-b49f-d56d976ccaf2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson2-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson2-level1-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "46987068-8704-4291-b527-a2ce90029ded"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson2-level2-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson2-level2-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "37bbd37c-f736-4f4b-899f-e041906f81bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson2-level3-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson2-level3-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "37bbd37c-f736-4f4b-899f-e041906f81bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson3-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level1-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "37339893-7089-46df-9efb-f49d09d425d9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson3-level2-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level2-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson3-level3-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level3-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson3-level4-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level4-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson3-level5-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level5-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson3-level6-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level6-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70ec4237-ade1-4761-a80d-9735280da772"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson3-level7-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson3-level7-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "f0ec938b-f23d-4652-8d02-ad4ab8b988ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson4-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level1-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "70687f9e-b22b-4509-a41d-1ae975910655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson4-level2-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level2-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b61912ca-715b-417e-9b09-d61d58cec3e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson4-level3-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level3-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b61912ca-715b-417e-9b09-d61d58cec3e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson4-level4-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level4-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b61912ca-715b-417e-9b09-d61d58cec3e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson4-level5-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level5-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b61912ca-715b-417e-9b09-d61d58cec3e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson4-level6-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-level6-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "509ede65-8f65-4771-951c-625e80769670"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson5-level1-2023",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level1-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "1315975e-1265-4274-a801-229566b48f73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson5-level2-2023",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level2-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "1315975e-1265-4274-a801-229566b48f73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson5-level3-2023",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level3-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b6d3fc1a-a555-49f3-b6f5-2f67b1bf169c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson5-level4-2023",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level4-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b6d3fc1a-a555-49f3-b6f5-2f67b1bf169c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson5-level5-2023",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level5-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b6d3fc1a-a555-49f3-b6f5-2f67b1bf169c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson5-level6-2023",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level6-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "cf39e546-43c4-4a35-a4e3-8102775f1494"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson5-level7-2023",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-level7-2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "cf39e546-43c4-4a35-a4e3-8102775f1494"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level1-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "f83c7af2-f38b-4cc6-adb6-656d852efa02"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-level2-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level2-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "a315f367-94bf-47c2-9631-3d1fc5d5fc9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-level3-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level3-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "a315f367-94bf-47c2-9631-3d1fc5d5fc9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-level4-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level4-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "a315f367-94bf-47c2-9631-3d1fc5d5fc9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-level5-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level5-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "a315f367-94bf-47c2-9631-3d1fc5d5fc9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-level6-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level6-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e018e36e-743b-4185-a72f-35db4ce99b51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-level7-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-level7-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e018e36e-743b-4185-a72f-35db4ce99b51"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson7-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level1-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b701b73b-8a0c-4cf9-9bbc-0b51b1b482df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson7-level2-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level2-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b701b73b-8a0c-4cf9-9bbc-0b51b1b482df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson7-level3-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level3-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "b701b73b-8a0c-4cf9-9bbc-0b51b1b482df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson7-level4-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level4-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "9aee6624-c4f2-4c14-918a-207322c3e9a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson7-level5-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level5-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "6ca242b0-211c-4e85-9986-c6417e2b2fec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson7-level6-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level6-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "7ff4975d-72ac-4025-ae83-5d86ed7b49be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson8-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level1-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "26a77a1e-89e3-4465-a926-97b96b583e39"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson8-level2-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level2-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "63c20cb2-b258-441b-88d2-59609ed811da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson8-level3-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level3-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "63c20cb2-b258-441b-88d2-59609ed811da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson8-level4-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level4-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "63c20cb2-b258-441b-88d2-59609ed811da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson8-level5-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level5-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "63c20cb2-b258-441b-88d2-59609ed811da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson8-level6-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-level6-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "c1c70ee0-570d-4e11-af7e-fce6ea9289e9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson9-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level1-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson9-level2-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level2-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson9-level3-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level3-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson9-level4-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level4-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson9-level5-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level5-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "42877ee2-9f2c-4f04-b348-e0884f22c5e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson9-level6-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-level6-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "1f40a038-e0dd-47ae-a0a2-711066e0664d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson11-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson11-level1-2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "c975fa70-0dac-4b14-b914-74f0db8fb2f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson12-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level1-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "8d1ca628-8798-423c-9f4b-0bd5f88a19c2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson12-level2-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level2-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e694232f-b971-4032-82c2-7456dc8cccac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson12-level3-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level3-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e694232f-b971-4032-82c2-7456dc8cccac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson12-level4-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level4-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e694232f-b971-4032-82c2-7456dc8cccac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson12-level5-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level5-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "e694232f-b971-4032-82c2-7456dc8cccac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson12-level6-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-level6-2024"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "a367df0e-652a-4998-bd53-99dfdbc17242"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson13-level1-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson13-level1-2024"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "bf315139-39af-497a-b53e-6eb3cc95937a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson13-level2-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson13-level2-2024"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "pf-pilot-content-2024",
+        "activity_section.key": "bf315139-39af-497a-b53e-6eb3cc95937a"
+      }
+    }
   ],
   "resources": [
     {
