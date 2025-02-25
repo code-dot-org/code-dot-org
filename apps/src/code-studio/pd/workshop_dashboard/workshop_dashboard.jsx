@@ -4,17 +4,7 @@
 import PropTypes from 'prop-types';
 import React, {useContext, useEffect} from 'react';
 import {Provider} from 'react-redux';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-  useLocation,
-  useParams,
-  matchPath,
-  Outlet,
-  useSearchParams,
-} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate, Outlet} from 'react-router-dom';
 import {createStore, combineReducers} from 'redux';
 
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
@@ -30,6 +20,7 @@ import regionalPartnerReducers, {
   getInitialRegionalPartnerFilter,
 } from '../components/regional_partners_reducers';
 import {RouterContext, RouterProvider} from '../RouterContext';
+import {WithRouterProps} from '../WithRouterProps';
 
 import WorkshopAttendance from './attendance/workshop_attendance';
 import LegacySurveySummaries from './legacy_survey_summaries.jsx';
@@ -116,37 +107,13 @@ const routeConfigs = [
   },
 ];
 
-const WithRouterProps = ({component: Component, ...props}) => {
-  const params = useParams();
-  const location = useLocation();
-  const [search] = useSearchParams();
-  location.query = Object.fromEntries(search.entries());
-
-  // TODO: remove once ApplicationDashboard is refactored to react-router-dom
-  // https://codedotorg.atlassian.net/browse/ACQ-3128
-  const breadcrumbs = routeConfigs.find(config =>
-    matchPath(config.path, location.pathname)
-  )?.breadcrumbs;
-  // Create routes structure that Header expects
-  const routes = [
-    {}, // First route is not used
-    {breadcrumbs},
-  ];
-  return (
-    <Component {...props} params={params} location={location} routes={routes} />
-  );
-};
-
-WithRouterProps.propTypes = {
-  component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
-};
-
 const HeaderWrapper = () => {
   const {router} = useContext(RouterContext);
   return (
     <>
       <WithRouterProps
         component={Header}
+        routeConfigs={routeConfigs}
         baseName="Workshop Dashboard"
         router={router}
       />
