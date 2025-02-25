@@ -334,6 +334,12 @@ module Pd
       capacity: {
         required: true
       },
+      grades: {
+        required: true
+      },
+      description: {
+        required: true
+      },
       notes: {
         required: false
       },
@@ -347,6 +353,18 @@ module Pd
         required: false
       },
       facilitators: {
+        required: false
+      },
+      fee: {
+        required: false
+      },
+      prereq: {
+        required: false
+      },
+      hidden: {
+        required: false
+      },
+      registration_link: {
         required: false
       },
     }

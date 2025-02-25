@@ -1,0 +1,24 @@
+name 'csaif_pl_module_overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Module Overview
+
+## What's included in this module?
+
+<img src="https://images.code.org/29853488a851de70a5c2e34c9e6f16aa-image-1707522795571.53.06 PM.png" style="float: right; height: 200px; clear: both; margin: 10px 10px 10px 10px; border-radius: 30px" alt="A young student in a library smiles while holding a laptop open to the camera.">
+
+#### This professional learning module is made up of **two lessons:**
+
+### **Lesson 1- Introduction to Teaching Cybersecurity and Global Impacts**
+#### ⭐️ You're here! This lesson provides an introduction to the Cybersecurity and Global unit and professional learning module. It offers a brief overview of key cybersecurity concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the unit. *10 minutes*
+
+### **Lesson 2- Lesson Exploration**
+#### This lesson focuses on exploring the content of the Cybersecurity and Global Impacts Unit. You'll get the opportunity to engage with key concepts, activities, and projects from the Unit. *50 minutes*
+
+## Engaging with This Module
+
+#### Feel free to complete as much or as little of this module as is useful for you and your students! Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. You'll be able to give Code.org your feedback on the last level of this module.
+
+MARKDOWN

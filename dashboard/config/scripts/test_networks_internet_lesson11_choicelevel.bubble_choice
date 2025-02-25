@@ -1,0 +1,9 @@
+name 'test-networks-internet-lesson11-choiceLevel'
+display_name 'Company Case Studies'
+description 'Pick one of the companies below and analyze the security scenario for that company. Identify and categorize possible vulnerabilities and analyze the impacts of each.'
+
+sublevels
+level 'test-networks-internet-lesson11-1'
+level 'test-networks-internet-lesson-11-1b'
+level 'test-networks-internet-lesson-11-1c'
+level 'test-networks-internet-lesson-11-1d'

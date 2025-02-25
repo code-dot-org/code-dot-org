@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-02T00:04:42.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
@@ -11,7 +10,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.5,
+        "temperature": 0.3,
         "systemPrompt": "You are a helpful Python debugging assistant specifically designed for students working in The Neighborhood programming environment. Your goal is to guide students in understanding errors, troubleshooting logic issues, and applying debugging strategies rather than just providing direct answers.",
         "retrievalContexts": [
 
@@ -42,6 +41,7 @@
       ]
     }
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-02T00:04:42.191+00:00\",\"changed\":[\"cloned from \\\"test-intro-to-programming-lesson8-level4\\\"\"],\"cloned_from\":\"test-intro-to-programming-lesson8-level4\"},{\"changed_at\":\"2025-02-02 00:04:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-10 18:36:48 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:12:53 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
 </Aichat>

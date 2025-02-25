@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-20 03:11:55 UTC",
+    "serialized_at": "2025-02-24 21:59:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -84,6 +84,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "**Why do devices on the Internet need addresses?**\n\nIn this lesson, students explore how IP addresses enable communication across networks by acting as unique identifiers for devices. They trace the flow of data through a network, identify issues caused by duplicate IP addresses, and examine how AI optimizes network traffic and reliability.",
+        "preparation": "- Print copies of the IP Addressing and Visualizing activity guide (one for each student)",
+        "student_overview": "**Why do devices on the Internet need addresses?**\n\nWhen you stream a video or visit a website, your device needs a way to send and receive information reliably. In this lesson, you have an opportunity to follow how data moves through a network, see what happens when two devices share an IP address, and discover ways in which AI can help keep the Internet running smoothly."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -135,6 +138,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**How do websites find their way to your browser using DNS and HTTP?**\n\nThis lesson explores how DNS (Domain Name System) and HTTP (HyperText Transfer Protocol) work together to connect devices across the Internet. Students engage in hands-on activities, including an IP address collection exercise, a DNS query simulation, and an HTTP request exploration, to understand how devices locate websites and retrieve web content. Through discussions, chatbot interactions, and network monitoring exercises, students analyze how DNS translates domain names into IP addresses and how HTTP requests enable seamless access to online resources.",
+        "preparation": "- Check that all student devices can open Developer Tools > Network Tab for HTTP observation\n- Print and cut out IP Address Labels for the warm-up activity\n- Print IP Address Collection Activity Guide (one for each student)\n- Print DNS Hierarchy Handout (one for each student)",
+        "student_overview": "**How do websites find their way to your browser using DNS and HTTP?**\n\nThe Internet depends on DNS to translate website names into IP addresses and HTTP to request and load web pages. In this lesson, you interact with simulations and tools to explore how these protocols help devices communicate and deliver web content efficiently."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -150,6 +156,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**Who has access to the Internet and who is left behind?**\n\nThis lesson explores the hidden barriers to Internet access, focusing on the digital divide and net neutrality. Students analyze real-world data from Pew Research to identify disparities in Internet access and engage in a case study simulation where they interact with personas facing digital accessibility challenges. Through discussions, data interpretation, and chatbot interactions, students connect these issues to education, employment, and civic participation, considering solutions to promote equitable Internet access.",
+        "preparation": "- Print copies of the Internet Access IRL activity guide.",
+        "student_overview": "**Who has access to the Internet and who is left behind?**\n\nThe Internet is not equally accessible to everyone. In this lesson, you explore why some people have better Internet access than others, how this affects daily life, and what can be done to make online access more fair and inclusive."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -165,6 +174,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -180,6 +190,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "**What vulnerabilities exist in networks, and what strategies can mitigate their impact?**\n\nIn this lesson, students take on the role of cybersecurity analysts to investigate real-world network security threats and identify effective defenses. Through an interactive simulation, they explore vulnerabilities such as phishing, weak passwords, default credentials, and social engineering. After investigating each vulnerability, students propose a mitigation strategy that can be applied in a real-world context.",
+        "preparation": "- Preview Level 1 to familiarize yourself with the scenarios, decision points, and key takeaways",
+        "student_overview": "**What vulnerabilities exist in networks, and what strategies can mitigate their impact?**\n\nIn this less, you step into the role of a cyber security analyst in order to investigate real-world network security threats and determine how to defend against them. Through an interactive simulation, you explore common security vulnerabilities—phishing, weak passwords, default credentials, and social engineering—and propose defensive strategies  to help protect against future attacks."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -195,6 +208,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "**What makes AI effective at enhancing network security, and how does it compare to traditional methods?**\n\nThis lesson explores how AI enhances cybersecurity by detecting and responding to threats in real time. Through a hands-on simulation and discussions, students analyze how AI compares to traditional security methods and consider the challenges of implementing AI-driven solutions. The lesson encourages students to think critically about AI’s benefits, limitations, and role in network security.",
+        "preparation": "- Print and cut out Threat Detected! Cards (one set for each pair of students)\n- Print AI Threat Detection Notetaker Activity Guide (one for each pair of students)",
+        "student_overview": "**What makes AI effective at enhancing network security, and how does it compare to traditional methods?**\n\nAI is transforming cybersecurity by detecting threats faster than traditional methods. In this lesson, you investigate how AI-powered tools improve security, their challenges, and how they compare to human decision-making in threat detection."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -210,6 +226,7 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -304,6 +321,48 @@
       }
     },
     {
+      "key": "222bb803-3ffa-4325-8e50-592e16ef75a2",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "222bb803-3ffa-4325-8e50-592e16ef75a2",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "1d21d9bc-e673-443a-9228-6e55228e6b47",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d21d9bc-e673-443a-9228-6e55228e6b47",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "d4df1b3b-1253-462f-9c1f-0b7277e24457",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d4df1b3b-1253-462f-9c1f-0b7277e24457",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
       "key": "a10e9b9c-71f3-4fa0-a10a-95318f72405e",
       "position": 1,
       "properties": {
@@ -383,6 +442,248 @@
       "seeding_key": {
         "lesson_activity.key": "af790b59-1eec-48e0-8ddf-f429800e8a78",
         "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "c804b45a-de0d-4348-b799-24de1183c27f",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c804b45a-de0d-4348-b799-24de1183c27f",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "b5a5744e-96af-4b78-b7fd-71b4478f97fb",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5a5744e-96af-4b78-b7fd-71b4478f97fb",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "c32eae8c-6753-46f4-a5cd-bf534c99c846",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c32eae8c-6753-46f4-a5cd-bf534c99c846",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "8076a8f8-8837-402a-a5d7-fe93158e7529",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "0ebf68b1-bbe4-4ae0-8e8b-bbd4deae89a6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ebf68b1-bbe4-4ae0-8e8b-bbd4deae89a6",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "450c2de6-21c8-4744-a6fd-1a094dae080d",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "371bd62b-6740-488b-8dfc-6c2ef104adf4",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "371bd62b-6740-488b-8dfc-6c2ef104adf4",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "e0498937-2059-4bc3-9394-b15848626c25",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0498937-2059-4bc3-9394-b15848626c25",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "05c77d84-e74e-49e8-80b7-320b53047be0",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "05c77d84-e74e-49e8-80b7-320b53047be0",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "94df1681-a42a-4558-ade3-90da1ca709b6",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "94df1681-a42a-4558-ade3-90da1ca709b6",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "41e63e92-fd5f-412a-a862-3ab61104bb12",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41e63e92-fd5f-412a-a862-3ab61104bb12",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "47cc1f8f-9d15-47f6-84d2-72fb93f8517d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47cc1f8f-9d15-47f6-84d2-72fb93f8517d",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "e238dc16-70be-45c0-b981-8f5addde1d08",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024"
+      }
+    },
+    {
+      "key": "fa188a31-82b6-452c-804e-8ec13a8071f8",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa188a31-82b6-452c-804e-8ec13a8071f8",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024"
       }
@@ -533,6 +834,17 @@
       },
       "seeding_key": {
         "activity_section.key": "9c7464bf-2684-4ebf-9e6b-c776f52204ed",
+        "lesson_activity.key": "d76f2de1-3774-4361-9cb3-fed0f8108e6e"
+      }
+    },
+    {
+      "key": "02ed652c-8e10-46f9-a693-0685c72d3b17",
+      "position": 11,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "02ed652c-8e10-46f9-a693-0685c72d3b17",
         "lesson_activity.key": "d76f2de1-3774-4361-9cb3-fed0f8108e6e"
       }
     },
@@ -929,6 +1241,17 @@
       }
     },
     {
+      "key": "66f95018-9554-4d79-8a7b-f3c976350519",
+      "position": 22,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "66f95018-9554-4d79-8a7b-f3c976350519",
+        "lesson_activity.key": "58b697ee-0333-4fd8-abb3-50d3f2c7a621"
+      }
+    },
+    {
       "key": "c2cdecc4-2ccd-43c3-97c1-97fa3cd2c86f",
       "position": 1,
       "properties": {
@@ -947,6 +1270,127 @@
       "seeding_key": {
         "activity_section.key": "c2cdecc4-2ccd-43c3-97c1-97fa3cd2c86f",
         "lesson_activity.key": "e0201c42-f401-4730-8b0c-ac8998a0ccee"
+      }
+    },
+    {
+      "key": "b8c69ac5-8a1c-4bad-9288-fc185bd7de50",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Imagine you were in a room with 5 other people, all with the same name as you. What might happen when you start communicating?*\n- *How could you solve these problems?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students recognize the challenges of communication without unique identifiers. They may share examples like: \n- Struggling to get the right person’s attention\n- Multiple people responding at once\n- Needing a system to avoid mixups\n\nThis discussion sets the groundwork for the connection to devices needing unique addresses to communicate over the Internet.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After the discussion, explain that just like names can cause confusion, devices need unique IP addresses to communicate clearly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "b8c69ac5-8a1c-4bad-9288-fc185bd7de50",
+        "lesson_activity.key": "222bb803-3ffa-4325-8e50-592e16ef75a2"
+      }
+    },
+    {
+      "key": "a67a4fda-1abe-4c02-8e33-b2714112c94e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the IP Addressing and Visualizing Networks activity guide. Ensure that each pair has access to at least three different colored pens (or pencils, highlighters, etc.) for visualizing AI driven solutions in later scenarios. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to assign the correct IP addresses to the devices on the Network Diagram of their handout.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are correctly labeling devices based on the routing table. Watch for students mistakenly assigning the same IP to multiple devices or skipping octets.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click on the animated slide to display the prompts:\n- *Why do devices on a network need unique IP addresses?*\n- *What might happen if two devices had the same IP address? How could this impact communication?*\n- *How does the router know where to send data packets when multiple devices are connected to it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand why unique IP addresses are essential for clear and reliable communication within a network. Guide students to draw parallels to real-world addressing systems (e.g., postal addresses, phone numbers) and discuss how unique identifiers prevent confusion. Encourage them to consider the consequences of duplicate IP addresses, such as misdirected or lost data, similar to multiple people sharing the same phone number. Additionally, students should connect this concept to the routing table, recognizing how routers use IP addresses to efficiently direct network traffic. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *IP address*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 through 4 to illustrate the flow of information in each level’s scenario on their network diagrams by connecting devices, drawing arrows, and using colors for AI solutions.\n- **Level 1:** Students illustrate the flow of information in a local network scenario.\n- **Level 2:** Students illustrate the flow of information in a scenario with a local network that is connected to an ISP.**\nLevel 3:\n- **Level 3:** Students illustrate the flow of information in a scenario involving requesting and receiving data from a website server.\n- **Level 4:** Students illustrate the flow of information in three scenarios involving AI-based solutions for network efficiency.",
+        "name": "IP Addressing and Visualizing Networks",
+        "progression_name": "IP Addressing and Visualizing"
+      },
+      "seeding_key": {
+        "activity_section.key": "a67a4fda-1abe-4c02-8e33-b2714112c94e",
+        "lesson_activity.key": "1d21d9bc-e673-443a-9228-6e55228e6b47"
+      }
+    },
+    {
+      "key": "86aeef43-6a9f-4187-b12e-fccb3b25f644",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students explore the scenarios, encourage them to actively interact with the network diagram handout by drawing arrows. ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This activity can serve as an informal formative assessment as the teacher circulates and listens to student discussions. Listen for students explaining routing and IP addressing correctly, check that students are correctly applying lines, labels, and colors, and ask a few students to walk through their network diagrams to ensure they understand the flow of data."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "86aeef43-6a9f-4187-b12e-fccb3b25f644",
+        "lesson_activity.key": "1d21d9bc-e673-443a-9228-6e55228e6b47"
+      }
+    },
+    {
+      "key": "29642c2f-abd5-4248-9c2f-d0fa65a4a97c",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "29642c2f-abd5-4248-9c2f-d0fa65a4a97c",
+        "lesson_activity.key": "1d21d9bc-e673-443a-9228-6e55228e6b47"
+      }
+    },
+    {
+      "key": "66b2938d-be51-4c3f-857c-17ff355d59aa",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click on the animated slide to display the prompts.\n- *How do IP addresses enable communication between devices on different networks, even across the globe?*\n- *What are some advantages of using AI to assist with routing compared to traditional methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that IP addresses allow devices to communicate globally by providing unique identifiers that routers use to forward data. Encourage them to connect these identifiers to real-world identifiers they are already familiar with like address numbers on homes. Students also are able to explain ways in which AI can improve routing efficiency, such as detected congestion, resolving IP conflicts, and adjusting traffic in real time. "
+      },
+      "seeding_key": {
+        "activity_section.key": "66b2938d-be51-4c3f-857c-17ff355d59aa",
+        "lesson_activity.key": "1d21d9bc-e673-443a-9228-6e55228e6b47"
+      }
+    },
+    {
+      "key": "17ecc762-6907-4f99-a281-40af9a483e06",
+      "position": 5,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "17ecc762-6907-4f99-a281-40af9a483e06",
+        "lesson_activity.key": "1d21d9bc-e673-443a-9228-6e55228e6b47"
+      }
+    },
+    {
+      "key": "a643da34-4714-4084-8a77-2ba6a1adf5ca",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"The Internet: IP Addresses & DNS\" (0:00–3:23).",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a643da34-4714-4084-8a77-2ba6a1adf5ca",
+        "lesson_activity.key": "d4df1b3b-1253-462f-9c1f-0b7277e24457"
+      }
+    },
+    {
+      "key": "0f6ab6e4-7528-4214-b191-237fbe79ae65",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0f6ab6e4-7528-4214-b191-237fbe79ae65",
+        "lesson_activity.key": "d4df1b3b-1253-462f-9c1f-0b7277e24457"
+      }
+    },
+    {
+      "key": "e1663f75-e179-4860-913d-60e691aeacb8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to briefly share their thoughts why devices on the Internet need addresses before individually writing their own response to the Question of the Day in their Unit Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to go beyond basic definitions by making connections to today’s activities."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Question of the Day effectively assesses the lesson objectives if students provide responses that explain:\n- Why unique IP addresses are necessary for devices to communicate reliably\n- How routers use IP addresses to direct traffic (at a high level)\n- An example from the lesson, such as how AI improves network efficiency"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e1663f75-e179-4860-913d-60e691aeacb8",
+        "lesson_activity.key": "d4df1b3b-1253-462f-9c1f-0b7277e24457"
       }
     },
     {
@@ -1114,6 +1558,17 @@
       },
       "seeding_key": {
         "activity_section.key": "497e24a6-cb9d-4a64-bed6-6ee2c5cbad08",
+        "lesson_activity.key": "b5f9e655-62fd-4e07-9cc4-db72717adfb2"
+      }
+    },
+    {
+      "key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e",
+      "position": 11,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e",
         "lesson_activity.key": "b5f9e655-62fd-4e07-9cc4-db72717adfb2"
       }
     },
@@ -1392,6 +1847,17 @@
       }
     },
     {
+      "key": "a52ca956-f95f-44a4-b893-d7d908e25e11",
+      "position": 17,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a52ca956-f95f-44a4-b893-d7d908e25e11",
+        "lesson_activity.key": "b9ba2a1f-7384-4306-b564-95cb79888207"
+      }
+    },
+    {
       "key": "7746349b-e6c8-4a3b-af79-b1434f8b2f5f",
       "position": 1,
       "properties": {
@@ -1411,6 +1877,826 @@
         "activity_section.key": "7746349b-e6c8-4a3b-af79-b1434f8b2f5f",
         "lesson_activity.key": "af790b59-1eec-48e0-8ddf-f429800e8a78"
       }
+    },
+    {
+      "key": "2637c8d6-536d-4d7e-bfbe-35f030afd411",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** As students enter class hand each of them a single IP address. Also give each student a copy of the IP Address Collection activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to the students that today we're going to finish our study of the layers of the Internet and learn about two final protocols and we’re going to just hop right in! Inform students that when they walked into the room you handed each student a slip of paper - this is their IP address. Remind students that we know that in order to communicate on the internet you need to know the IP address of the other computer and that so far we've let you ask one another's addresses when communicating on the Internet Simulator, but this can be tricky.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students’ goal is to create a list of every one of your classmates IP addresses. The only rules:\n- They may walk around the room\n- They may share information with classmates\n- They may talk and share information with only ONE classmate at a time\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are working, circulate quietly through the room and do the following:\n- Approach a student and silently take their IP address slip away from them.\n- Give that person a new IP address slip (or a re-used IP address).\n- Repeat the above two steps as many times as you can, as you circulate the room.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This quick unplugged activity helps students understand why the DNS exists in the first place. With devices joining the internet all the time it's impossible for each device to keep track of each other device's IP address.\n\nThis activity can be done very quickly, typically in about 3 minutes, before students start to see the core challenge. If students start running away from you that's a good sign they've seen what makes this activity tricky!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2637c8d6-536d-4d7e-bfbe-35f030afd411",
+        "lesson_activity.key": "c804b45a-de0d-4348-b799-24de1183c27f"
+      }
+    },
+    {
+      "key": "37f4ea28-33cb-49b6-bbdb-8051ef2b5704",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37f4ea28-33cb-49b6-bbdb-8051ef2b5704",
+        "lesson_activity.key": "c804b45a-de0d-4348-b799-24de1183c27f"
+      }
+    },
+    {
+      "key": "4a471171-0fa0-48e9-a3bf-c3ce74cbf3e9",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4a471171-0fa0-48e9-a3bf-c3ce74cbf3e9",
+        "lesson_activity.key": "c804b45a-de0d-4348-b799-24de1183c27f"
+      }
+    },
+    {
+      "key": "cd3377b3-ba4b-4a7f-b6b7-20c29454c7c6",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts.\n- *Why do you think I was switching IP addresses?*\n- *If IP addresses can change, is there a better way for everyone to know everyone else’s IP address?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The main takeaways from the discussion are:\n- Devices are joining and leaving the Internet all the time. IP addresses don't stay constant. If you go to a coffee shop or restart your browser your device might be assigned a new IP address.\n- If IP addresses are switching, it's very hard for each computer to keep an accurate list.\n- It would make more sense if there were one system that kept track of all that information\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce DNS to students.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "cd3377b3-ba4b-4a7f-b6b7-20c29454c7c6",
+        "lesson_activity.key": "c804b45a-de0d-4348-b799-24de1183c27f"
+      }
+    },
+    {
+      "key": "a18ddc93-c0d3-4841-a1dd-35e2e4d285c7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the goal and rules for the Internet Simulator DNS task and answer any questions they may have before transitioning to the computer. Let students know that their task will allow them to see how DNS solves the problem of having to keep track of IP addresses using GET requests to automatically retrieve these addresses. \n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to use GET requests to obtain at least two classmates’ IP addresses and have a quick conversation.",
+        "duration": "15",
+        "name": "Internet Simulator: DNS Queries",
+        "progression_name": "Internet Simulator: DNS Queries"
+      },
+      "seeding_key": {
+        "activity_section.key": "a18ddc93-c0d3-4841-a1dd-35e2e4d285c7",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "5a1ef943-475d-4c54-aa2d-294ba6787bb0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure that students are correctly sending GET requisitions and using retrieved IP addresses.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students shouldn’t need more than 5 minutes in order to gain insight into how DNS uses GET requests to solve the problem of keeping track of IP addresses and resolving human-readable usernames (or domain names) into IP addresses. Once you feel that your students have grasped this concept, you can move on the debrief and discuss DNS."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5a1ef943-475d-4c54-aa2d-294ba6787bb0",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "1951d0e2-835f-4764-bdd4-d3fa0ba01c2f",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1951d0e2-835f-4764-bdd4-d3fa0ba01c2f",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "df2c217b-6e54-4d9b-b1b7-fd346e515cef",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts.\n- *What problem does DNS solve?*\n- *What did you notice about how GET requests work to retrieve information?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for answers that point out how DNS converts human-friendly usernames (or domain names) into machine-readable IP addresses and that GET requests structure how information is requested. DNS makes our lives easier by automatically handling the translation of names to IP addresses—just like a phone book.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video “The Internet: IP Addresses & DNS” from 4:10 to the end of the video. Have students focus on how DNS translates domain names and how the system scales.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "df2c217b-6e54-4d9b-b1b7-fd346e515cef",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "b2637b46-72e3-4dba-a1f5-a892ad8890b8",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b2637b46-72e3-4dba-a1f5-a892ad8890b8",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "91c472bd-58da-4cb0-b201-65bbeea65b5a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the DNS Hierarchy handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that while the video gave a good summary of how DNS works, the reality of the process has many more layers! Their job is to quickly work with a DNS chatbot to fill in some missing information about the entire DNS Hierarchy and its process.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 2 to chat with the DNS Hierarchy chatbot to help them fill in the missing components in their handout.",
+        "duration": "10",
+        "name": "The DNS Hierarchy",
+        "progression_name": "DNS Hierarchy Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "91c472bd-58da-4cb0-b201-65bbeea65b5a",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "c98ad804-457a-41cc-835b-126175a3e2b8",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure that students are using the suggested prompts to ask the chatbot for the missing information.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students shouldn’t need more than 5-8 minutes in order to interact with the chatbot to fill in their handout. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c98ad804-457a-41cc-835b-126175a3e2b8",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "3c63c973-9a40-4d67-829d-be016a22bbdd",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3c63c973-9a40-4d67-829d-be016a22bbdd",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "b2ed6529-e356-4d04-9d64-6c2928ad644a",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts.\n- *What problem does DNS solve?*\n- *What did you notice about how GET requests work to retrieve information?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for answers that point out how DNS converts human-friendly usernames (or domain names) into machine-readable IP addresses and that GET requests structure how information is requested. DNS makes our lives easier by automatically handling the translation of names to IP addresses—just like a phone book.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts:\n- *What do you notice about the DNS hierarchy?*\n- *What do you wonder about how it the hierarchy works?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Emphasize to students that this distributed hierarchy ensures scalability and efficiency, allowing DNS to handle billions of requests daily. Facilitate a discussion to clarify roles and highlight key points:\n- Recursive Resolver starts the process and queries other servers.\n- Root Servers guide the request to the correct TLD server.\n- TLD Servers handle requests for .com, .org, etc., and direct them to the Authoritative Server.\n- Authoritative Servers provide the IP address."
+      },
+      "seeding_key": {
+        "activity_section.key": "b2ed6529-e356-4d04-9d64-6c2928ad644a",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "0e347c49-e5d3-462f-afb0-d303cc4aab8c",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.",
+        "duration": "10",
+        "name": "HTTP Preview and Inspect Tool Exploration",
+        "progression_name": "HTTP Requests Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e347c49-e5d3-462f-afb0-d303cc4aab8c",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "12d0238d-bd52-4c03-b19e-0c8691894dff",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to user their Unit Guide to record observations about types of files that are being loaded and why it might be important for the browser to request only the files it needs.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to help students open the Inspect Tool, navigate to the Network tab, and identify different file types and status codes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, ask students to share their observations with the class, including the types of files that were being loaded and why it is important for the browser to request only the files it needs. Draw out key takeaways such as DNS resolves the domain name into an IP address so HTTP knows where to send requests and how HTTP retrieves content in smaller pieces, ensuring efficiency and scalability."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Levels 4 and 5 can be used to formatively assess the learning objectives. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "12d0238d-bd52-4c03-b19e-0c8691894dff",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "46df5465-284b-438a-a58c-9b99194c830b",
+      "position": 12,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "46df5465-284b-438a-a58c-9b99194c830b",
+        "lesson_activity.key": "e3a20eda-088b-4920-bf4c-4baf4368a5aa"
+      }
+    },
+    {
+      "key": "a54f96be-5c71-4590-8c87-b6eed7e26b67",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a quick minute to jot down their thoughts on the Question of the Day. Encourage students to include at least one specific example from any of today’s activities.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to briefly share in one or two sentences how websites find their way to your browser using DNS and HTTP. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to small-group conversations and if time permits, call on two or three groups to share their key insights with the class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to build on each other’s ideas instead of just repeating the same answer. "
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Question of the Day effectively assesses the lesson objectives if students provide responses that explain:\n- how DNS resolves domain names into IP addresses.\n- the function of HTTP in requesting web pages."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a54f96be-5c71-4590-8c87-b6eed7e26b67",
+        "lesson_activity.key": "b5a5744e-96af-4b78-b7fd-71b4478f97fb"
+      }
+    },
+    {
+      "key": "073c3fbc-98d3-4be2-8f9b-3b943c6461a3",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "073c3fbc-98d3-4be2-8f9b-3b943c6461a3",
+        "lesson_activity.key": "b5a5744e-96af-4b78-b7fd-71b4478f97fb"
+      }
+    },
+    {
+      "key": "dc7e5a79-0ff7-4482-bdd0-ccf60ac31636",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do websites use DNS and HTTP to load in your browser?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for answers that synthesize the process: DNS translates domain names into IP addresses, and HTTP uses GET requests to retrieve content from servers, working together to bring websites to life."
+      },
+      "seeding_key": {
+        "activity_section.key": "dc7e5a79-0ff7-4482-bdd0-ccf60ac31636",
+        "lesson_activity.key": "b5a5744e-96af-4b78-b7fd-71b4478f97fb"
+      }
+    },
+    {
+      "key": "fa7db066-f7a0-4494-9de1-e4a9b0ed86ef",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the Four Corners upcoming activity to students. Make sure to point out which corner will be **Yes**, **No**, **Maybe**, and **Undecided**.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the first scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner to share why their group chose their position.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage critical thinking about fairness, competition, and access on the Internet as well as cost barriers, freedom of information, or business interests."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fa7db066-f7a0-4494-9de1-e4a9b0ed86ef",
+        "lesson_activity.key": "c32eae8c-6753-46f4-a5cd-bf534c99c846"
+      }
+    },
+    {
+      "key": "357f67f5-f47a-4151-a52c-5e58d7ca4092",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "357f67f5-f47a-4151-a52c-5e58d7ca4092",
+        "lesson_activity.key": "c32eae8c-6753-46f4-a5cd-bf534c99c846"
+      }
+    },
+    {
+      "key": "88584961-b4c0-4dbb-a3a6-95704807493b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the second scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner who was not a spokesperson for scenario #1 to share why their group chose their position.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the third scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner who was not a spokesperson for the previous two scenarios to share why their group chose their position.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce Net Neutrality to students and that all of the scenarios relate to net neutrality. Explain to students that this means that without net neutrality, Internet Service Providers (ISPs) can prioritize, slow down or even block websites and companies can pay for faster access creating advantages for some and barriers for others. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Net neutrality impacts who has access to fast, reliable Internet and who is left behind. If an ISP charges extra for faster speeds, who might struggle to afford it? How could this deepen the digital divide? Encourage students to think about these questions throughout the lesson. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "88584961-b4c0-4dbb-a3a6-95704807493b",
+        "lesson_activity.key": "c32eae8c-6753-46f4-a5cd-bf534c99c846"
+      }
+    },
+    {
+      "key": "4a6d5784-72cd-4712-823d-14fdf52c393d",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4a6d5784-72cd-4712-823d-14fdf52c393d",
+        "lesson_activity.key": "c32eae8c-6753-46f4-a5cd-bf534c99c846"
+      }
+    },
+    {
+      "key": "5ec8639d-566b-41c3-9c8b-b743b208606d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "5ec8639d-566b-41c3-9c8b-b743b208606d",
+        "lesson_activity.key": "c32eae8c-6753-46f4-a5cd-bf534c99c846"
+      }
+    },
+    {
+      "key": "371cab51-0d7d-4e44-be5b-6817c47012fc",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students in groups of two. Make sure students have their Unit Guides out and turned to Lesson 7 to record their observations in the next activity.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 5 to investigate the data from the Pew Research Center about Internet Access and discuss the questions with their partner.\n- **Level 1:** Students explore internet use over time.\n- **Level 2:** Students explore home broadband use by income.\n- **Level 3:** Students explore internet use by community type.\n- **Level 4:** Students explore internet use by age.\n- **Level 5:** Students explore smartphone dependency by education.",
+        "duration": "15",
+        "name": "Digital Divide Data Analysis",
+        "progression_name": "Pew Research Center: Internet Access"
+      },
+      "seeding_key": {
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc",
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529"
+      }
+    },
+    {
+      "key": "ab362d4b-903e-4dd3-b8c0-229a3ee4e077",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to record their observations in their Unit Guides as they discuss the questions on each level."
+      },
+      "seeding_key": {
+        "activity_section.key": "ab362d4b-903e-4dd3-b8c0-229a3ee4e077",
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529"
+      }
+    },
+    {
+      "key": "ea92961c-e1e6-4798-89a5-4fb0d33e763d",
+      "position": 3,
+      "properties": {
+        "description": "Now that we understand net neutrality, let’s explore the bigger picture: Who actually has access to the Internet? Together, we will look at the data from Pew Research and think about who benefits most and who gets left behind. I will put the graphs up on the board. You will also have a version of these graphs on your own computer so you can see them more clearly. ",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In each level, students will have the opportunity to look at the interactive version of each graph by clicking on the link within each level. If time allows, encourage students to open the link in a new tab and use the “find” tool on their browser to quickly find the graph on the report page. Hovering over each data point will give them more information about the graph. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ea92961c-e1e6-4798-89a5-4fb0d33e763d",
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529"
+      }
+    },
+    {
+      "key": "f52831b7-bb56-4e65-8f0c-c897a356bcf3",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f52831b7-bb56-4e65-8f0c-c897a356bcf3",
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529"
+      }
+    },
+    {
+      "key": "e29a95c5-018b-4222-83f6-cbbf42ed8bec",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about Internet access across different groups (e.g., income, geography, age)?*\n- *How might these disparities impact education, employment, or civic participation?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that Internet access is not distributed equally and that disparities exist based on income, geography, education, and age. Encourage students to connect these inequalities to opportunities in education, employment, and civic engagement, considering how limited access can reinforce existing societal divides. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the digital divide to students."
+      },
+      "seeding_key": {
+        "activity_section.key": "e29a95c5-018b-4222-83f6-cbbf42ed8bec",
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529"
+      }
+    },
+    {
+      "key": "713e946d-b188-4ac6-9089-4f90f2678a8e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Internet Access IRL activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6 to choose one of the AI Chatbot personas that has been affected by the digital divide.",
+        "duration": "15",
+        "name": "Case Studies with AI Chatbot",
+        "progression_name": "Choose a Persona"
+      },
+      "seeding_key": {
+        "activity_section.key": "713e946d-b188-4ac6-9089-4f90f2678a8e",
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529"
+      }
+    },
+    {
+      "key": "74530f7f-5555-4638-9d69-e17032b1655d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for student discussions about access barriers (e.g., cost, availability, slow speeds). Prompt students to think whether the persona's experience compares to their own.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you learn about your persona?*\n- *How does this connect to the disparities we saw in the Pew Research data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal of this discussion is to help students connect real-world technology access disparities to the personas they explored and the data from Pew Research. Students should recognize how limited access to the Internet affects different aspects of life, including education, jobs, healthcare, and civic participation. Finally, encourage them to think critically about possible solutions, including the role of policies like net neutrality in shaping digital equity."
+      },
+      "seeding_key": {
+        "activity_section.key": "74530f7f-5555-4638-9d69-e17032b1655d",
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529"
+      }
+    },
+    {
+      "key": "06a0a0c3-2775-45f8-8240-20f30ab78f89",
+      "position": 8,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "06a0a0c3-2775-45f8-8240-20f30ab78f89",
+        "lesson_activity.key": "8076a8f8-8837-402a-a5d7-fe93158e7529"
+      }
+    },
+    {
+      "key": "ce648c4c-33f2-4807-a8dd-810d66ca13a6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a short response to the Question of the Day and then have student pair up to share responses. ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Question of the Day effectively assesses the lesson objectives if students provide responses that explain:\n- the impact of the digital divide on different populations and potential solutions to address it.\n- Net neutrality and digital divide issues shape opportunities in education, jobs, and civic life."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ce648c4c-33f2-4807-a8dd-810d66ca13a6",
+        "lesson_activity.key": "0ebf68b1-bbe4-4ae0-8e8b-bbd4deae89a6"
+      }
+    },
+    {
+      "key": "759712ef-cfa8-41e5-8a88-30f1dc2222b1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "759712ef-cfa8-41e5-8a88-30f1dc2222b1",
+        "lesson_activity.key": "c3e6d692-fa81-4ea6-b217-23ba5198b6eb"
+      }
+    },
+    {
+      "key": "f1214cd3-7763-4de4-8c08-1ee26b473ca9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f1214cd3-7763-4de4-8c08-1ee26b473ca9",
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d"
+      }
+    },
+    {
+      "key": "928bacbf-1b9b-41a9-a7e3-5a349ee545ee",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "928bacbf-1b9b-41a9-a7e3-5a349ee545ee",
+        "lesson_activity.key": "450c2de6-21c8-4744-a6fd-1a094dae080d"
+      }
+    },
+    {
+      "key": "41aa0f5b-7ae6-44d5-8ce8-b0d59785985e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "41aa0f5b-7ae6-44d5-8ce8-b0d59785985e",
+        "lesson_activity.key": "3f88828b-4bc4-474b-b75c-6c8498c93d9c"
+      }
+    },
+    {
+      "key": "75fc097e-7279-448f-971f-fc0a8dc6ea7d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video “The Internet: Packets, Routing, and Reliability”",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "75fc097e-7279-448f-971f-fc0a8dc6ea7d",
+        "lesson_activity.key": "371bd62b-6740-488b-8dfc-6c2ef104adf4"
+      }
+    },
+    {
+      "key": "c22aae23-64fd-4b81-93c5-561b4ac0d6d5",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c22aae23-64fd-4b81-93c5-561b4ac0d6d5",
+        "lesson_activity.key": "371bd62b-6740-488b-8dfc-6c2ef104adf4"
+      }
+    },
+    {
+      "key": "987f8ce2-06dd-493e-8e97-609732522d06",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What vulnerabilities allowed the hacker to breach Acme Corporation’s network?*\n- *What could Acme have done to prevent the attack?*\n- *What impact did the attack have on Acme, and how do you think it could impact their customers?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that multiple security failures—including weak passwords, social engineering, and multi-factor authentication (MFA) fatigue—enabled the hacker to breach Acme Corporation’s network. Guide students to identify how better security practices, such as stronger password policies, improved multi-factor authentication, and offline backups, could have prevented the attack. Encourage students to consider the broader consequences, including financial loss, reputational damage, and compromised customer data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "987f8ce2-06dd-493e-8e97-609732522d06",
+        "lesson_activity.key": "371bd62b-6740-488b-8dfc-6c2ef104adf4"
+      }
+    },
+    {
+      "key": "4513c6b6-9ad5-40d8-ab3d-f0e555845b79",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs or small groups of three. Make sure students have their Unit Guide out and opened to Lesson 9.",
+        "name": "Network Defense",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Identify, Defend, Reflect! activity is an interactive game in which students will use a clickable slideshow that will navigate them through various network vulnerabilities. The goals of the activity are to:\n- Discover common network vulnerabilities\n- Investigate key details of those vulnerabilities\n- Identify appropriate defenses in network vulnerability scenarios\n\nThe game is covers four common network vulnerabilities. Each should take about 7 minutes to complete. We recommend modeling the first vulnerability to demonstrate how to interact with the slideshow."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4513c6b6-9ad5-40d8-ab3d-f0e555845b79",
+        "lesson_activity.key": "e0498937-2059-4bc3-9394-b15848626c25"
+      }
+    },
+    {
+      "key": "96a1dac7-d46f-4945-aae7-4bab141983d9",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "96a1dac7-d46f-4945-aae7-4bab141983d9",
+        "lesson_activity.key": "e0498937-2059-4bc3-9394-b15848626c25"
+      }
+    },
+    {
+      "key": "39261de1-b1bc-46e6-8d94-657ce9f29ec4",
+      "position": 3,
+      "properties": {
+        "description": "Today, you'll step into the role of a cybersecurity analyst, investigating real-world security threats and deciding how to defend against them. Follow the instructions in the interactive slide deck, record your observations in your Unit Guide, and think critically about how to protect networks from cyber attacks",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "39261de1-b1bc-46e6-8d94-657ce9f29ec4",
+        "lesson_activity.key": "e0498937-2059-4bc3-9394-b15848626c25"
+      }
+    },
+    {
+      "key": "79ac9e9d-a535-4a9e-8a4f-b0ea5b9a4b13",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 9, Level 1. Lead the class through a demonstration of the first “round” of the interactive slide show. Walk them through one scenario and model how to navigate through the slides and record notes in the unit guide. Then, release students to work with their partners to complete the remaining scenarios. ",
+        "progression_name": "Identify, Defend, Reflect!"
+      },
+      "seeding_key": {
+        "activity_section.key": "79ac9e9d-a535-4a9e-8a4f-b0ea5b9a4b13",
+        "lesson_activity.key": "e0498937-2059-4bc3-9394-b15848626c25"
+      }
+    },
+    {
+      "key": "25e5edd3-016a-44b5-ac58-74c401ae8d71",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the slides, check that students are following the instructions and recording observations. Listen for discussions between partners—are they just clicking through, or are they analyzing the scenarios. When students are selecting defenses, ask probing questions about what made them choose certain options.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you were a cybersecurity analyst for Cybershield Inc., which mitigation strategy would you prioritize implementing first, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students think critically about the mitigation strategies they encountered in the interactive slideshow. They discuss the importance of a variety of mitigation strategies and the consequences of not having those strategies in place.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 2 to complete the Check for Understanding.",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "25e5edd3-016a-44b5-ac58-74c401ae8d71",
+        "lesson_activity.key": "e0498937-2059-4bc3-9394-b15848626c25"
+      }
+    },
+    {
+      "key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a",
+      "position": 6,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a",
+        "lesson_activity.key": "e0498937-2059-4bc3-9394-b15848626c25"
+      }
+    },
+    {
+      "key": "69d94bbf-ac38-40a0-8e3b-95daf76ecc6f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a quick minute to jot down their thoughts on the Question of the Day. Encourage students to include at least one specific example from any of today’s activities.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Question of the Day effectively assesses the lesson objectives if students provide responses that explain:\n- common network security vulnerabilities.\n- solutions to mitigate security risks."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "69d94bbf-ac38-40a0-8e3b-95daf76ecc6f",
+        "lesson_activity.key": "05c77d84-e74e-49e8-80b7-320b53047be0"
+      }
+    },
+    {
+      "key": "d7440d94-07fe-416c-9aa9-5f6c1ff942dd",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d7440d94-07fe-416c-9aa9-5f6c1ff942dd",
+        "lesson_activity.key": "05c77d84-e74e-49e8-80b7-320b53047be0"
+      }
+    },
+    {
+      "key": "8640aa0a-b3b3-41b4-9b98-50159f6564e7",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Label the four corners of the room: Phishing, Weak Passwords, Social Engineering, Default Credentials. Instruct students to go to the corner that relates to the one vulnerability they mentioned in their question of the day answer. Have students share their answers and compare mitigation strategies. If time allows, have one person from each group share one takeaway from their discussion with the class.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8640aa0a-b3b3-41b4-9b98-50159f6564e7",
+        "lesson_activity.key": "05c77d84-e74e-49e8-80b7-320b53047be0"
+      }
+    },
+    {
+      "key": "12f3e877-afb6-44d1-8098-7bd88b9565d5",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the video “AI-Based, Real-Time Threat Detection” to students. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does detecting threats in real time improve network security compared to delayed detection? What challenges might companies face when adopting AI-driven security tools like Morpheus? How could these challenges be addressed?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**This discussion prepares students to think critically about the role of AI in modern cybersecurity and its real-world applications. Students analyze how real-time threat detection improves network security, contrasting AI-driven tools with traditional methods that often detect threats too late. Encourage students to consider how faster detection helps prevent breaches and limits damage. Guide them to recognize the challenges organizations face when implementing AI security tools, such as cost, training, or false positives, and how these barriers can be addressed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ensure students are making connections between AI’s strengths and challenges. Ask questions like,*“What happens if AI misidentifies a threat?”*or*“Why might some organizations be hesitant to rely on AI security tools?”*"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "12f3e877-afb6-44d1-8098-7bd88b9565d5",
+        "lesson_activity.key": "94df1681-a42a-4558-ade3-90da1ca709b6"
+      }
+    },
+    {
+      "key": "fdd90f9c-8199-40d2-a99d-add2503088dd",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fdd90f9c-8199-40d2-a99d-add2503088dd",
+        "lesson_activity.key": "94df1681-a42a-4558-ade3-90da1ca709b6"
+      }
+    },
+    {
+      "key": "7b0279f6-188a-400b-830f-91fe3ca8bc35",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that today, they are diving into one of the most cutting-edge topics in cybersecurity—how AI is revolutionizing network security. Every second, massive amounts of data are moving through networks, and cyber threats are evolving just as quickly. Traditional security methods struggle to keep up, but AI is changing the game by detecting threats in real time before they cause damage. As they explore AI-driven security tools today, encourage students to think critically about whether AI is the ultimate solution, or does it have its own risks and challenges.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "7b0279f6-188a-400b-830f-91fe3ca8bc35",
+        "lesson_activity.key": "94df1681-a42a-4558-ade3-90da1ca709b6"
+      }
+    },
+    {
+      "key": "bd132e53-2629-460b-aa96-8c08e567e244",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each pair of students a copy of the Threat Detected! Cards and the AI Threat Detection Notetaker activity guide.",
+        "name": "AI Threat Detection"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd132e53-2629-460b-aa96-8c08e567e244",
+        "lesson_activity.key": "41e63e92-fd5f-412a-a862-3ab61104bb12"
+      }
+    },
+    {
+      "key": "ba10deb5-4f6e-4435-a596-d54b1308c28d",
+      "position": 2,
+      "properties": {
+        "description": "Today, you will act as security analysts, using an AI threat detection system to investigate and respond to security threats. Your goal is to evaluate how AI-based security tools work compared to traditional detection methods. Work with your partner to complete this activity. You will receive one set of AI Threat Detection Cards and you will each have your own Threat Detection Notetaker to fill out individually.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ba10deb5-4f6e-4435-a596-d54b1308c28d",
+        "lesson_activity.key": "41e63e92-fd5f-412a-a862-3ab61104bb12"
+      }
+    },
+    {
+      "key": "975bfcf2-fe53-4c8d-9380-a221fd806d73",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will act as security analysts interacting with an AI threat detection system to analyze and respond to network vulnerabilities. Review the steps for drawing a Threat Detected card, discussing the scenario with the AI Chatbot, recording the results of the discussion on the Activity Guide, and then drawing a new card to repeat the process.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 10, Level 1 to interact with the threat detection chatbot and complete their activity guide. ",
+        "progression_name": "Threat Detection Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "975bfcf2-fe53-4c8d-9380-a221fd806d73",
+        "lesson_activity.key": "41e63e92-fd5f-412a-a862-3ab61104bb12"
+      }
+    },
+    {
+      "key": "ed46a64a-1524-4d9e-8a7a-54a492db96c0",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Give students at least 20 minutes to complete as many threat cards as possible in that time. Then, direct student to move on to Level 2 to complete a check for understanding. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Circulate and listen for students who assume AI is always accurate. If students trust the AI’s responses without question, ask: ‘Could AI ever misidentify a threat? How would that impact security?’ Ensure students also consider limitations like false positives, AI bias, and the need for human oversight.",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, display anonymous student responses for the check for understanding on Level 2 and go over misconceptions or ask students what similarities and differences they notice about the responses."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Level 2 can be used to formatively assess the learning objectives."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ed46a64a-1524-4d9e-8a7a-54a492db96c0",
+        "lesson_activity.key": "41e63e92-fd5f-412a-a862-3ab61104bb12"
+      }
+    },
+    {
+      "key": "1f287d75-2bc8-4d58-a3c4-41f5bce0f1aa",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1f287d75-2bc8-4d58-a3c4-41f5bce0f1aa",
+        "lesson_activity.key": "41e63e92-fd5f-412a-a862-3ab61104bb12"
+      }
+    },
+    {
+      "key": "9d4ee7bc-9c3f-4dd8-b346-aade0343c76a",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of four. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to choose one scenario from their activity and discuss with their group how AI detected the threat and how that compared to traditional methods.**\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Encourage students to move beyond ‘AI is faster’ as their key argument. Ask: ‘Does AI replace human analysts completely? What tasks might still require human decision-making?’ Look for responses that mention AI’s adaptability, scalability, and data processing power while recognizing that human oversight is still necessary.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What patterns did you notice in AI’s responses to each threat?*\n- *How did AI improve security compared to traditional methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students analyze patterns in AI’s responses to security threats and evaluate its strengths and weaknesses. Encourage them to consider what AI does well (speed, data analysis, automation) and where it struggles (bias, detecting new types of threats, false positives). Guide them to recognize that AI is a tool, not a replacement for human decision-making in cybersecurity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain to students that the next slides will have a statement about AI and cybersecurity. Students will hold a thumbs up for True, thumbs down for False, or thumbs sideways for unsure. Once students have held up their answer, you will reveal the correct answer and explain why.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: AI is powerful, but it’s not perfect—some scams still slip through. Hackers continuously adapt their methods, and AI can sometimes generate false positives or miss subtle attacks. Human judgement should be the first line of defense. Remind students that if they are unsure whether something is a scam, take a step back and cross-check with a trusted source, like speaking to the person who sent the message in person.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Social engineering works because it looks convincing—attackers impersonate real people, use familiar logos, and create a sense of urgency. Remind students to always examine the sender details, such as looking to see if the email address matches the school or company’s domain. Other ways you can tell are any red flags, like urgent requests, odd grammar, or messages that ask for personal information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Even responding to a scam email can be dangerous—attackers confirm active accounts based on responses and might target students again. Remind students that when in doubt, use this approach: ‘STOP-THINK-VERIFY’ before interacting with any suspicious message. Never respond to a message with any personal information before verifying that it is actually the person they say they are. The best way to do this is to ask the person in real life."
+      },
+      "seeding_key": {
+        "activity_section.key": "9d4ee7bc-9c3f-4dd8-b346-aade0343c76a",
+        "lesson_activity.key": "41e63e92-fd5f-412a-a862-3ab61104bb12"
+      }
+    },
+    {
+      "key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96",
+      "position": 7,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96",
+        "lesson_activity.key": "41e63e92-fd5f-412a-a862-3ab61104bb12"
+      }
+    },
+    {
+      "key": "df7201f3-79da-4c95-8af0-92658fc5a6cd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs or small groups of three.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to briefly share their thoughts about what makes AI effective at enhancing network security and how it compares to traditional methods before individually writing their own response to the Question of the Day in their Unit Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to go beyond basic thoughts such as “it’s faster” by making connections to today’s activities."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Question of the Day effectively assesses the lesson objectives if students provide responses that explain:\n- the role of AI in real-time threat detection.\n- An example of AI-based solutions to network security challenges."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "df7201f3-79da-4c95-8af0-92658fc5a6cd",
+        "lesson_activity.key": "47cc1f8f-9d15-47f6-84d2-72fb93f8517d"
+      }
+    },
+    {
+      "key": "027a4d73-7039-4544-bcca-e60190794ae2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "027a4d73-7039-4544-bcca-e60190794ae2",
+        "lesson_activity.key": "f9b55c13-ef1c-437f-865d-ac0b0dad1594"
+      }
+    },
+    {
+      "key": "3cb19fde-d3a7-4a68-bb4e-f44f0a1865d2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3cb19fde-d3a7-4a68-bb4e-f44f0a1865d2",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8",
+        "lesson_activity.key": "e238dc16-70be-45c0-b981-8f5addde1d08"
+      }
+    },
+    {
+      "key": "8075ad57-f9e8-455f-a005-e32c6d0b5993",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8075ad57-f9e8-455f-a005-e32c6d0b5993",
+        "lesson_activity.key": "fa188a31-82b6-452c-804e-8ec13a8071f8"
+      }
     }
   ],
   "script_levels": [
@@ -1420,6 +2706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level1-2024"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -1442,6 +2731,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level2-2024"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -1464,6 +2756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level3-2024"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -1482,10 +2777,167 @@
     },
     {
       "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson1-level4-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "02ed652c-8e10-46f9-a693-0685c72d3b17"
+      },
+      "level_keys": [
+        "networks-lesson1-level4-2024"
+      ]
+    },
+    {
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson2-level1-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "66f95018-9554-4d79-8a7b-f3c976350519"
+      },
+      "level_keys": [
+        "networks-lesson2-level1-2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "IP Addressing and Visualizing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson3-level1-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a67a4fda-1abe-4c02-8e33-b2714112c94e"
+      },
+      "level_keys": [
+        "networks-internet-lesson3-level1-2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "IP Addressing and Visualizing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson3-level2-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a67a4fda-1abe-4c02-8e33-b2714112c94e"
+      },
+      "level_keys": [
+        "networks-internet-lesson3-level2-2024"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "IP Addressing and Visualizing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson3-level3-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a67a4fda-1abe-4c02-8e33-b2714112c94e"
+      },
+      "level_keys": [
+        "networks-internet-lesson3-level3-2024"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "IP Addressing and Visualizing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson3-level4-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a67a4fda-1abe-4c02-8e33-b2714112c94e"
+      },
+      "level_keys": [
+        "networks-internet-lesson3-level4-2024"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson3-level5-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "17ecc762-6907-4f99-a281-40af9a483e06"
+      },
+      "level_keys": [
+        "networks-lesson3-level5-2024"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "networks-internet-lesson4-level1-2024"
+        ],
         "progression": "Internet Simulator and Networks Diagram Analysis"
       },
       "bonus": false,
@@ -1503,11 +2955,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson4-level2-2024"
+        ],
         "progression": "Internet Simulator and Networks Diagram Analysis"
       },
       "bonus": false,
@@ -1525,11 +2980,36 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 13,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson4-level3-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e"
+      },
+      "level_keys": [
+        "networks-lesson4-level3-2024"
+      ]
+    },
+    {
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level1-2024"
+        ],
         "progression": "Internet Simulator: Packets"
       },
       "bonus": false,
@@ -1547,11 +3027,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level2-2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1566,6 +3049,490 @@
       },
       "level_keys": [
         "networks-internet-lesson5-level2-2024"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson5-level3-2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a52ca956-f95f-44a4-b893-d7d908e25e11"
+      },
+      "level_keys": [
+        "networks-lesson5-level3-2024"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Internet Simulator: DNS Queries"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level1-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a18ddc93-c0d3-4841-a1dd-35e2e4d285c7"
+      },
+      "level_keys": [
+        "networks-internet-lesson6-level1-2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "DNS Hierarchy Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level2-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "91c472bd-58da-4cb0-b201-65bbeea65b5a"
+      },
+      "level_keys": [
+        "networks-internet-lesson6-level2-2024"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "HTTP Requests Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level3-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "0e347c49-e5d3-462f-afb0-d303cc4aab8c"
+      },
+      "level_keys": [
+        "networks-internet-lesson6-level3-2024"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "HTTP Requests Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level4-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "0e347c49-e5d3-462f-afb0-d303cc4aab8c"
+      },
+      "level_keys": [
+        "networks-internet-lesson6-level4-2024"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "HTTP Requests Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level5-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "0e347c49-e5d3-462f-afb0-d303cc4aab8c"
+      },
+      "level_keys": [
+        "networks-internet-lesson6-level5-2024"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson6-level6-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "46df5465-284b-438a-a58c-9b99194c830b"
+      },
+      "level_keys": [
+        "networks-lesson6-level6-2024"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Pew Research Center: Internet Access"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level1-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc"
+      },
+      "level_keys": [
+        "networks-internet-lesson7-level1-2024"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Pew Research Center: Internet Access"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level2-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc"
+      },
+      "level_keys": [
+        "networks-internet-lesson7-level2-2024"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Pew Research Center: Internet Access"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level3-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc"
+      },
+      "level_keys": [
+        "networks-internet-lesson7-level3-2024"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Pew Research Center: Internet Access"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level4-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc"
+      },
+      "level_keys": [
+        "networks-internet-lesson7-level4-2024"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Pew Research Center: Internet Access"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level5-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc"
+      },
+      "level_keys": [
+        "networks-internet-lesson7-level5-2024"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Choose a Persona"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level6-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "713e946d-b188-4ac6-9089-4f90f2678a8e"
+      },
+      "level_keys": [
+        "networks-internet-lesson7-level6-2024"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson7-level7-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "06a0a0c3-2775-45f8-8240-20f30ab78f89"
+      },
+      "level_keys": [
+        "networks-lesson7-level7-2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson8-level1-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "928bacbf-1b9b-41a9-a7e3-5a349ee545ee"
+      },
+      "level_keys": [
+        "networks-lesson8-level1-2024"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Identify, Defend, Reflect!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson9-level1-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "79ac9e9d-a535-4a9e-8a4f-b0ea5b9a4b13"
+      },
+      "level_keys": [
+        "networks-internet-lesson9-level1-2024"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson9-level2-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "25e5edd3-016a-44b5-ac58-74c401ae8d71"
+      },
+      "level_keys": [
+        "networks-internet-lesson9-level2-2024"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson9-level3-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a"
+      },
+      "level_keys": [
+        "networks-lesson9-level3-2024"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Threat Detection Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson10-level1-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "975bfcf2-fe53-4c8d-9380-a221fd806d73"
+      },
+      "level_keys": [
+        "networks-internet-lesson10-level1-2024"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-internet-lesson10-level2-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "ed46a64a-1524-4d9e-8a7a-54a492db96c0"
+      },
+      "level_keys": [
+        "networks-internet-lesson10-level2-2024"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson10-level3-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96"
+      },
+      "level_keys": [
+        "networks-lesson10-level3-2024"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "networks-lesson11-level1-2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8"
+      },
+      "level_keys": [
+        "networks-lesson11-level1-2024"
       ]
     }
   ],
@@ -1608,6 +3575,90 @@
     },
     {
       "seeding_key": {
+        "level.key": "networks-lesson1-level4-2024",
+        "script_level.level_keys": [
+          "networks-lesson1-level4-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "02ed652c-8e10-46f9-a693-0685c72d3b17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson2-level1-2024",
+        "script_level.level_keys": [
+          "networks-lesson2-level1-2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "66f95018-9554-4d79-8a7b-f3c976350519"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson3-level1-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson3-level1-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a67a4fda-1abe-4c02-8e33-b2714112c94e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson3-level2-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson3-level2-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a67a4fda-1abe-4c02-8e33-b2714112c94e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson3-level3-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson3-level3-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a67a4fda-1abe-4c02-8e33-b2714112c94e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson3-level4-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson3-level4-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a67a4fda-1abe-4c02-8e33-b2714112c94e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson3-level5-2024",
+        "script_level.level_keys": [
+          "networks-lesson3-level5-2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "17ecc762-6907-4f99-a281-40af9a483e06"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson4-level1-2024",
         "script_level.level_keys": [
           "networks-internet-lesson4-level1-2024"
@@ -1628,6 +3679,18 @@
         "lesson_group.key": "",
         "script.name": "nati-pilot-content-2024",
         "activity_section.key": "15655903-1889-42e2-a48a-e03a9cec0aa8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson4-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson4-level3-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "96ba1d34-8626-4016-9fd3-b2c37ac39b7e"
       }
     },
     {
@@ -1653,6 +3716,270 @@
         "script.name": "nati-pilot-content-2024",
         "activity_section.key": "dabdb7ac-a19c-462f-af78-ef090cd46ccb"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson5-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson5-level3-2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a52ca956-f95f-44a4-b893-d7d908e25e11"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson6-level1-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level1-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "a18ddc93-c0d3-4841-a1dd-35e2e4d285c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson6-level2-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level2-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "91c472bd-58da-4cb0-b201-65bbeea65b5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson6-level3-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level3-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "0e347c49-e5d3-462f-afb0-d303cc4aab8c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson6-level4-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level4-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "0e347c49-e5d3-462f-afb0-d303cc4aab8c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson6-level5-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson6-level5-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "0e347c49-e5d3-462f-afb0-d303cc4aab8c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson6-level6-2024",
+        "script_level.level_keys": [
+          "networks-lesson6-level6-2024"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "46df5465-284b-438a-a58c-9b99194c830b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson7-level1-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level1-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson7-level2-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level2-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson7-level3-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level3-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson7-level4-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level4-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson7-level5-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level5-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "371cab51-0d7d-4e44-be5b-6817c47012fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson7-level6-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson7-level6-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "713e946d-b188-4ac6-9089-4f90f2678a8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson7-level7-2024",
+        "script_level.level_keys": [
+          "networks-lesson7-level7-2024"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "06a0a0c3-2775-45f8-8240-20f30ab78f89"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson8-level1-2024",
+        "script_level.level_keys": [
+          "networks-lesson8-level1-2024"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "928bacbf-1b9b-41a9-a7e3-5a349ee545ee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson9-level1-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson9-level1-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "79ac9e9d-a535-4a9e-8a4f-b0ea5b9a4b13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson9-level2-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson9-level2-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "25e5edd3-016a-44b5-ac58-74c401ae8d71"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson9-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson9-level3-2024"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "45d6dcdb-7d64-45b1-9a99-4455e20a851a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson10-level1-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson10-level1-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "975bfcf2-fe53-4c8d-9380-a221fd806d73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson10-level2-2024",
+        "script_level.level_keys": [
+          "networks-internet-lesson10-level2-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "ed46a64a-1524-4d9e-8a7a-54a492db96c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson10-level3-2024",
+        "script_level.level_keys": [
+          "networks-lesson10-level3-2024"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "d7c6cdbf-6775-4a26-9a4d-daa1feb19b96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-lesson11-level1-2024",
+        "script_level.level_keys": [
+          "networks-lesson11-level1-2024"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "nati-pilot-content-2024",
+        "activity_section.key": "690420d4-1ff0-4dd5-b9d5-9e140fc9f5c8"
+      }
     }
   ],
   "resources": [
@@ -1669,6 +3996,18 @@
       }
     },
     {
+      "name": "[KEY] IP Addressing and Visualizing",
+      "url": "https://docs.google.com/document/d/19oWyQXsqUiftKDOd5DQLlcouJkzbmb3j8xtnHDoTed8/edit?usp=sharing",
+      "key": "_key_ip_addressing_and_visualizing",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ip_addressing_and_visualizing"
+      }
+    },
+    {
       "name": "[KEY] Packets and Protocols",
       "url": "https://docs.google.com/document/d/1sQMOZ6gLHiHRer8ODhdNEpd1nJff_jMnP7GjDUFTVpc/edit?usp=sharing",
       "key": "_key_packets_and_protocols",
@@ -1678,6 +4017,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_packets_and_protocols"
+      }
+    },
+    {
+      "name": "AI-Based Real-Time Threat Detection",
+      "url": "https://www.youtube.com/watch?v=UDChsxHx1wc",
+      "key": "ai-based_real-time_threat_detection",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai-based_real-time_threat_detection"
       }
     },
     {
@@ -1718,6 +4069,68 @@
       }
     },
     {
+      "name": "DNS Hierarchy",
+      "url": "https://docs.google.com/document/d/1LST7DpPTAQ--Z6L6k82INXOdoCzP55HfPrUIooayzgI/edit?tab=t.0",
+      "key": "dns_hierarchy",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "dns_hierarchy"
+      }
+    },
+    {
+      "name": "Emerging Technologies",
+      "url": "https://docs.google.com/presentation/d/1nZxByfhwdrBpd5H6s5BwrXtO7JbDQraYbBMHfX8WxUI/view",
+      "key": "emerging_technologies",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "emerging_technologies"
+      }
+    },
+    {
+      "name": "How Cyber Attacks Happen in Real Life",
+      "url": "https://www.youtube.com/watch?v=Q3DsntHY0Ns",
+      "key": "how_cyber_attacks_happen_in_real_life",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_cyber_attacks_happen_in_real_life"
+      }
+    },
+    {
+      "name": "HTTP and DNS",
+      "url": "https://docs.google.com/presentation/d/14yh9K9HBUzFKx4tVjaFYpfaYwQ_ajJSIYGc-H3EVnR4/view#slide=id.gca418c6afa_0_1070",
+      "key": "http_and_dns",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "http_and_dns"
+      }
+    },
+    {
+      "name": "Internet Access IRL",
+      "url": "https://docs.google.com/document/d/1OqSxvU3q5NAJ2YuEneVg_QA_iCmZdYOaiMKj5awv-aU/edit?tab=t.0",
+      "key": "internet_access_irl",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "internet_access_irl"
+      }
+    },
+    {
       "name": "Introduction to the Internet",
       "url": "https://docs.google.com/presentation/d/1QFSZUiEc4s5ad9AqK-h2py41grOD3C7QfQFMm3a2-xc/view",
       "key": "introduction_to_the_internet",
@@ -1727,6 +4140,55 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_the_internet"
+      }
+    },
+    {
+      "name": "IP Address Collection",
+      "url": "https://docs.google.com/document/d/1z8PiOj38Ks-WkWO11KtcCOA8_pnAJYNDfne-ZLewGsE/edit?tab=t.0#heading=h.99p5pkxp2sz8",
+      "key": "ip_address_collection",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ip_address_collection"
+      }
+    },
+    {
+      "name": "IP Addresses",
+      "url": "https://docs.google.com/presentation/d/1PNJfxfYIRlAUbYpAW8a2aH9ntCl-l4zTuGXWmApasUo/view",
+      "key": "ip_addresses",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ip_addresses"
+      }
+    },
+    {
+      "name": "IP Addresses",
+      "url": "https://docs.google.com/document/d/1cFj-QFCZJUx2iel3HpDqOE6bo-mZ3-B3AEBdB9XE6tw/edit?usp=sharing",
+      "key": "ip_addresses_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ip_addresses_1"
+      }
+    },
+    {
+      "name": "IP Addressing and Visualizing",
+      "url": "https://docs.google.com/document/d/1GbNHGZK8vISlbu3q0o5efwDRPu4SYUT2lDYlaa6-qjs/edit?usp=drive_link",
+      "key": "ip_addressing_and_visualizing",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ip_addressing_and_visualizing"
       }
     },
     {
@@ -1740,6 +4202,31 @@
       },
       "seeding_key": {
         "resource.key": "network_diagram_analysis"
+      }
+    },
+    {
+      "name": "Network Security",
+      "url": "https://docs.google.com/presentation/d/1t6wUVbPMjbV5bCARrFALcsaEK7SjeXhqIfRDBx0_c8k/view",
+      "key": "network_security",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "network_security"
+      }
+    },
+    {
+      "name": "Networks and the Internet Unit Guide",
+      "url": "https://docs.google.com/document/d/1zTfZ1CxCdX1Kk-n195UEn2Fu_SVZ9RJO0sPJ5nGDCTE/edit?usp=sharing",
+      "key": "networks_and_the_internet_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "networks_and_the_internet_unit_guide"
       }
     },
     {
@@ -1804,6 +4291,18 @@
       }
     },
     {
+      "name": "The Internet: IP Addresses and DNS",
+      "url": "https://www.youtube.com/watch?v=5o8CwafCxnU",
+      "key": "the_internet_ip_addresses_and_dns",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_ip_addresses_and_dns"
+      }
+    },
+    {
       "name": "The Internet: Packets, Routing, and Reliability",
       "url": "https://youtu.be/AYdF7b3nMto",
       "key": "the_internet_packets_routing_and_reliability",
@@ -1816,6 +4315,18 @@
       }
     },
     {
+      "name": "The Internet's Hidden Barriers",
+      "url": "https://docs.google.com/presentation/d/1LFVl5CTM7_FZz5pVOjboyV07ssQ1vmaK8slIq7xhQuk/view",
+      "key": "the_internet_s_hidden_barriers",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_s_hidden_barriers"
+      }
+    },
+    {
       "name": "The Internet: Wires, Cables, and WiFi",
       "url": "https://www.youtube.com/watch?v=ZhEf7e4kopM&themeRefresh=1",
       "key": "the_internet_wires_cables_and_wifi",
@@ -1825,6 +4336,31 @@
       },
       "seeding_key": {
         "resource.key": "the_internet_wires_cables_and_wifi"
+      }
+    },
+    {
+      "name": "Threat Detected! Cards",
+      "url": "https://docs.google.com/document/d/1xkXDiVCEattulslAG9ZI4TV3ejU09VNH1J1Xq7oKWSw/edit?usp=sharing",
+      "key": "threat_detected_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "threat_detected_cards"
+      }
+    },
+    {
+      "name": "Threat Detection Guided Notes",
+      "url": "https://docs.google.com/document/d/1vsJRsFkGW7Y5ZGHk4rG2sEcB12xKr3BH__X0haXxNlE/edit?usp=sharing",
+      "key": "threat_detection_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "threat_detection_guided_notes"
       }
     }
   ],
@@ -1845,6 +4381,36 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "introduction_to_the_internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "networks_and_the_internet_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "ai-based_real-time_threat_detection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "emerging_technologies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "threat_detected_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "threat_detection_guided_notes"
       }
     },
     {
@@ -1875,6 +4441,30 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "the_internet_wires_cables_and_wifi"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_key_ip_addressing_and_visualizing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "ip_addresses"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "ip_addressing_and_visualizing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "the_internet_ip_addresses_and_dns"
       }
     },
     {
@@ -1912,6 +4502,54 @@
         "lesson.key": "lesson-5",
         "resource.key": "the_internet_packets_routing_and_reliability"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "dns_hierarchy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "http_and_dns"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "ip_address_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "ip_addresses_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "internet_access_irl"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "the_internet_s_hidden_barriers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "how_cyber_attacks_happen_in_real_life"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "network_security"
+      }
     }
   ],
   "scripts_resources": [
@@ -1922,6 +4560,36 @@
   ],
   "vocabularies": [
     {
+      "key": "digital_divide",
+      "word": "digital divide",
+      "definition": "the gap between people who have easy access to the Internet and technology and those who do not, often due to differences in income, location, or resources",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "digital_divide"
+      }
+    },
+    {
+      "key": "domain_name_system_dns_",
+      "word": "Domain Name System (DNS)",
+      "definition": "a system that translates human-friendly website names (like www.example.com) into numerical IP addresses that computers use to find and communicate with each other on the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "domain_name_system_dns_"
+      }
+    },
+    {
+      "key": "hypertext_transfer_protocol_http_",
+      "word": "HyperText Transfer Protocol (HTTP)",
+      "definition": "a protocol that allows computers to request and share web content, like webpages, images, and videos",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "hypertext_transfer_protocol_http_"
+      }
+    },
+    {
       "key": "internet_tower",
       "word": "Internet tower",
       "definition": "a piece of infrastructure that sends and receives wireless signals",
@@ -1929,6 +4597,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "internet_tower"
+      }
+    },
+    {
+      "key": "ip_address",
+      "word": "IP address",
+      "definition": "a unique number assigned to each device on a network",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ip_address"
+      }
+    },
+    {
+      "key": "net_neutrality",
+      "word": "Net Neutrality",
+      "definition": "the idea that all websites and online services should be treated equally by Internet providers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "net_neutrality"
       }
     },
     {
@@ -2015,8 +4703,38 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "ip_address"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "user_datagram_protocol_udp_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "domain_name_system_dns_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "hypertext_transfer_protocol_http_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "digital_divide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "net_neutrality"
       }
     }
   ],
@@ -2024,6 +4742,16 @@
 
   ],
   "objectives": [
+    {
+      "key": "0b633c0d-ddd9-4ba0-824e-70af9c5602a2",
+      "properties": {
+        "description": "Analyze the role of AI in real-time threat detection"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "0b633c0d-ddd9-4ba0-824e-70af9c5602a2"
+      }
+    },
     {
       "key": "1496c98c-ff10-425a-85aa-809c2efdca77",
       "properties": {
@@ -2035,6 +4763,46 @@
       }
     },
     {
+      "key": "63f5bc8f-a471-4e67-95eb-e51b5a4a792c",
+      "properties": {
+        "description": "Explain why unique addresses are necessary for devices to communicate effectively"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "63f5bc8f-a471-4e67-95eb-e51b5a4a792c"
+      }
+    },
+    {
+      "key": "6744965c-842b-4823-8208-645fe9ff50b4",
+      "properties": {
+        "description": "Propose AI-based solutions to network security challenges"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "6744965c-842b-4823-8208-645fe9ff50b4"
+      }
+    },
+    {
+      "key": "6d70fc4e-cc6c-4a91-bdf8-ce71f666fdb6",
+      "properties": {
+        "description": "Explain how DNS resolves domain names into IP addresses"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "6d70fc4e-cc6c-4a91-bdf8-ce71f666fdb6"
+      }
+    },
+    {
+      "key": "74ca9909-c486-4f25-80c0-508c41ef6a54",
+      "properties": {
+        "description": "Demonstrate how IP addresses facilitate data transmission and routing"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "74ca9909-c486-4f25-80c0-508c41ef6a54"
+      }
+    },
+    {
       "key": "85200660-9ccb-40c6-a8cf-f67c8397674f",
       "properties": {
         "description": "Describe how binary data is transmitted across a network"
@@ -2042,6 +4810,46 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "85200660-9ccb-40c6-a8cf-f67c8397674f"
+      }
+    },
+    {
+      "key": "87732fee-0403-40b9-a710-270d0fcdd944",
+      "properties": {
+        "description": "Identify strategies to address challenges to equitable Internet access"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "87732fee-0403-40b9-a710-270d0fcdd944"
+      }
+    },
+    {
+      "key": "8be92dda-00c3-447b-9d2f-f872a24cc8e5",
+      "properties": {
+        "description": "Explain the impacts of net neutrality"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "8be92dda-00c3-447b-9d2f-f872a24cc8e5"
+      }
+    },
+    {
+      "key": "958f4c37-21f6-4f5f-81ae-33892643b027",
+      "properties": {
+        "description": "Identify common network security vulnerabilities"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "958f4c37-21f6-4f5f-81ae-33892643b027"
+      }
+    },
+    {
+      "key": "994486c7-3355-4785-a8c0-217ed5fe9d6b",
+      "properties": {
+        "description": "Propose solutions to mitigate security risks"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "994486c7-3355-4785-a8c0-217ed5fe9d6b"
       }
     },
     {
@@ -2062,6 +4870,16 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "aae04b79-ce98-40fc-8737-531db7fed3de"
+      }
+    },
+    {
+      "key": "ac0bda5d-5b4e-4a7a-b241-07e59a282443",
+      "properties": {
+        "description": "Describe the function of HTTP in requesting web pages"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "ac0bda5d-5b4e-4a7a-b241-07e59a282443"
       }
     },
     {
@@ -2092,6 +4910,16 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "cc7886cc-d7d9-4435-a6b3-eae5bf7e7026"
+      }
+    },
+    {
+      "key": "e7c66b49-06db-4784-a38c-d8110b78cfca",
+      "properties": {
+        "description": "Evaluate the impact of the digital divide on different populations"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "e7c66b49-06db-4784-a38c-d8110b78cfca"
       }
     },
     {

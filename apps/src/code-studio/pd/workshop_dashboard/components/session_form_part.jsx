@@ -199,7 +199,7 @@ export default class SessionFormPart extends React.Component {
               componentClass="select"
               id="format"
               name="format"
-              value={this.props.session.format}
+              value={this.props.session.format ?? ''}
               onChange={this.handleFormatChange}
               disabled={this.props.readOnly}
               style={this.props.readOnly ? styles.readOnlyInput : undefined}
