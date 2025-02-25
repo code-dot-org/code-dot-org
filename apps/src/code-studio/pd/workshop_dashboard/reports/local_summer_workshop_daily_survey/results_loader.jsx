@@ -30,7 +30,6 @@ export default class ResultsLoader extends React.Component {
       dataType: 'json',
     })
       .done(data => {
-        console.log('🚀 ~ ResultsLoader ~ load ~ data:', data);
         this.setState({
           loading: false,
           questions: data['questions'],
