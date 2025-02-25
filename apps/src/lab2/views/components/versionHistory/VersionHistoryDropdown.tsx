@@ -425,7 +425,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
           <div className={moduleStyles.versionDropdownFooter}>
             {versionLoading && (
               <div className={classNames(moduleStyles.loadingVersionSpinner)}>
-                <i className="fa fa-spinner fa-spin" />
+                <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
               </div>
             )}
             {!viewAsUserId && (
