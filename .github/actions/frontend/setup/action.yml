@@ -18,3 +18,7 @@ runs:
       shell: bash
       run: yarn install
       working-directory: ./frontend
+
+    - name: Run Linux CLI script
+      shell: bash
+      run: echo $SAUCE_USERNAME
