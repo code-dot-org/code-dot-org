@@ -23,10 +23,6 @@ import {PermissionPropType, WorkshopAdmin} from './permission';
 import SignUpPanel from './SignUpPanel';
 
 export class Workshop extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
-
   static contextType = RouterContext;
 
   static propTypes = {

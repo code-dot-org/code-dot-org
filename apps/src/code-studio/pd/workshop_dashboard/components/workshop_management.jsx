@@ -17,10 +17,6 @@ import {PermissionPropType} from '../permission';
 import {shouldUseFoormSurvey} from '../workshop_summary_utils';
 
 export class WorkshopManagement extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
-
   static contextType = RouterContext;
 
   static propTypes = {

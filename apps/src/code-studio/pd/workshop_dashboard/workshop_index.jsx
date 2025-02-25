@@ -3,7 +3,6 @@
  * Route: /workshops
  */
 import $ from 'jquery';
-import PropTypes from 'prop-types';
 import React from 'react';
 import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
@@ -49,10 +48,6 @@ const filterParams = {
 export class WorkshopIndex extends React.Component {
   static propTypes = {
     permission: PermissionPropType.isRequired,
-  };
-
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
   };
 
   static contextType = RouterContext;

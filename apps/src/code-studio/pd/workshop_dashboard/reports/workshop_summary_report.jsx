@@ -26,10 +26,6 @@ export class WorkshopSummaryReport extends React.Component {
     course: PropTypes.oneOf(COURSE_VALUES),
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
-
   static contextType = RouterContext;
 
   state = {
