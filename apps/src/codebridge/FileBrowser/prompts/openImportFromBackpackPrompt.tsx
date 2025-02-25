@@ -64,9 +64,9 @@ export const openImportFromBackpackPrompt = async ({
       [selectedFileName],
       handleError(
         codebridgeI18n.deleteFromBackpack(),
-        `${codebridgeI18n.deleteFromBackpackError(
-          {selectedFileName},
-        )} ${codebridgeI18n.closeWindowTryAgain()}`
+        codebridgeI18n.deleteFromBackpackError({selectedFileName}) +
+          ' ' +
+          codebridgeI18n.closeWindowTryAgain()
       ),
       () => {}
     );
@@ -81,7 +81,9 @@ export const openImportFromBackpackPrompt = async ({
       selectedFileName,
       handleError(
         codebridgeI18n.importFromBackpack(),
-        `${codebridgeI18n.getBackpackFileError({selectedFileName})} ${codebridgeI18n.closeWindowTryAgain()}`
+        codebridgeI18n.getBackpackFileError({selectedFileName}) +
+          ' ' +
+          codebridgeI18n.closeWindowTryAgain()
       ),
       (fileContent: string) => {
         if (newFileName) {

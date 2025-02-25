@@ -97,7 +97,9 @@ export const openSaveToBackpackPrompt = async ({
         fileContents,
         handleError(
           codebridgeI18n.saveToBackpack(),
-          `${codebridgeI18n.saveToBackpackError({selectedFileName})} ${codebridgeI18n.closeWindowTryAgain()}`
+          codebridgeI18n.saveToBackpackError({selectedFileName}) +
+            ' ' +
+            codebridgeI18n.closeWindowTryAgain()
         ),
         () => {}
       );
