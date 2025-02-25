@@ -315,45 +315,6 @@ const registerAllBlocksUnmovable = function (weight: number) {
   );
 };
 
-const registerKeyboardNavigation = function (weight: number) {
-  const keyboardNavigationOption = {
-    displayText: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      return scope.workspace?.keyboardAccessibilityMode
-        ? commonI18n.blocklyKBNavOff()
-        : commonI18n.blocklyKBNavOn();
-    },
-    preconditionFn: function () {
-      return Blockly.navigationController
-        ? MenuOptionStates.ENABLED
-        : MenuOptionStates.HIDDEN;
-    },
-    callback: function (scope: GoogleBlockly.ContextMenuRegistry.Scope) {
-      const controller = Blockly.navigationController;
-      const analyticsData = Blockly.analyticsData;
-      if (scope.workspace?.keyboardAccessibilityMode) {
-        controller.disable(scope.workspace);
-        analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
-          setting: EVENTS.BLOCKLY_SETTING_KEYBOARD_NAVIGATION,
-          value: EVENTS.BLOCKLY_SETTING_OFF,
-          ...analyticsData,
-        });
-      } else {
-        controller.enable(scope.workspace);
-        analyticsReporter.sendEvent(EVENTS.BLOCKLY_LAB_SETTING_CHANGED, {
-          setting: EVENTS.BLOCKLY_SETTING_KEYBOARD_NAVIGATION,
-          value: EVENTS.BLOCKLY_SETTING_ON,
-          ...analyticsData,
-        });
-        Blockly.navigationController.navigation.focusWorkspace(scope.workspace);
-      }
-    },
-    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
-    id: 'keyboardNavigation',
-    weight,
-  };
-  GoogleBlockly.ContextMenuRegistry.registry.register(keyboardNavigationOption);
-};
-
 const themes = [
   {
     name: Themes.MODERN,
