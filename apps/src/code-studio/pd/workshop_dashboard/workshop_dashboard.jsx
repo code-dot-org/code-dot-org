@@ -100,19 +100,9 @@ const routeConfigs = [
     component: WorkshopAttendance,
   },
   {
-    path: 'daily_survey_results',
-    breadcrumbs: 'Survey Results',
-    component: DailySurveyResultsLoader,
-  },
-  {
     path: 'daily_survey_results/:workshopId',
     breadcrumbs: 'Survey Results',
     component: DailySurveyResultsLoader,
-  },
-  {
-    path: 'workshop_daily_survey_results',
-    breadcrumbs: 'Survey Results',
-    component: FoormDailySurveyResultsLoader,
   },
   {
     path: 'workshop_daily_survey_results/:workshopId',
