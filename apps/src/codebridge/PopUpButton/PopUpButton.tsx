@@ -13,6 +13,7 @@ type PopUpButtonProps = {
   alignment?: 'left' | 'right';
   id?: string;
   disabled?: boolean;
+  ariaLabel?: string;
 };
 
 const TOP_PADDING = 5;
@@ -24,6 +25,7 @@ export const PopUpButton = ({
   alignment = 'left',
   id,
   disabled,
+  ariaLabel,
 }: PopUpButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [buttonRef, setButtonRef] = useState<HTMLElement | null>(null);
@@ -113,6 +115,7 @@ export const PopUpButton = ({
         type={'tertiary'}
         id={id}
         disabled={disabled}
+        ariaLabel={ariaLabel}
       />
       {isOpen &&
         // We use a portal so the dropdown can appear above all other elements.

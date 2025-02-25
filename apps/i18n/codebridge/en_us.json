@@ -29,6 +29,7 @@
   "duplicateFolderError": "Foldername {folderName} is already in use in this folder. Please choose a different name.",
   "duplicateSupportFileError": "Filename {fileName} is already in use in this folder in the level's support code. Please choose a different name.",
   "filesHeader": "Files",
+  "fileOptions": "File Options",
   "filesInBackpackMessage": "Files saved to your backpack will appear here.",
   "filesInBackpackTitle": "Files saved in backpack",
   "forTeachersOnlyHeader": "For Teachers Only",
