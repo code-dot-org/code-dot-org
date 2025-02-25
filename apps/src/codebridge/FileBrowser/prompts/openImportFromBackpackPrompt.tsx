@@ -63,7 +63,7 @@ export const openImportFromBackpackPrompt = async ({
     backpackApi.deleteFiles(
       [selectedFileName],
       handleError(
-        codebridgeI18n.deleteFromBackpack(),
+        codebridgeI18n.deleteFromBackpackTitle(),
         codebridgeI18n.deleteFromBackpackError({selectedFileName}) +
           ' ' +
           codebridgeI18n.closeWindowTryAgain()
@@ -80,7 +80,7 @@ export const openImportFromBackpackPrompt = async ({
     backpackApi.fetchFile(
       selectedFileName,
       handleError(
-        codebridgeI18n.importFromBackpack(),
+        codebridgeI18n.importFromBackpackTitle(),
         codebridgeI18n.getBackpackFileError({selectedFileName}) +
           ' ' +
           codebridgeI18n.closeWindowTryAgain()
@@ -157,7 +157,7 @@ export const openImportFromBackpackPrompt = async ({
             // Give the user a choice to import with a new name or cancel the import.
             dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
-              title: codebridgeI18n.importFromBackpack(),
+              title: codebridgeI18n.importFromBackpackTitle(),
               message: codebridgeI18n.importFromBackpackDuplicateSupportMessage(
                 {
                   newFileName,
@@ -178,7 +178,7 @@ export const openImportFromBackpackPrompt = async ({
           if (newFileName !== selectedBackpackFileName) {
             dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
-              title: codebridgeI18n.importFromBackpack(),
+              title: codebridgeI18n.importFromBackpackTitle(),
               message: codebridgeI18n.importFromBackpackDuplicateMessage({
                 newFileName,
               }),
@@ -203,7 +203,7 @@ export const openImportFromBackpackPrompt = async ({
           // User selects to delete file from backpack. Open confirm delete dialog.
           dialogControl?.showDialog({
             type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.deleteFromBackpack(),
+            title: codebridgeI18n.deleteFromBackpackTitle(),
             message: codebridgeI18n.deleteFromBackpackConfirm({
               selectedBackpackFileName,
             }),

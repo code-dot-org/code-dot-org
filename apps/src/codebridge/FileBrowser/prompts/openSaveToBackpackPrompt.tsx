@@ -45,7 +45,7 @@ export const openSaveToBackpackPrompt = async ({
   };
   backpackApi.getFileList(
     handleError(
-      codebridgeI18n.importFromBackpack(),
+      codebridgeI18n.importFromBackpackTitle(),
       `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`
     ),
     async (filenames: string[]) => {
@@ -60,7 +60,7 @@ export const openSaveToBackpackPrompt = async ({
       const dialog = isDuplicateFileName
         ? {
             type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.saveToBackpack(),
+            title: codebridgeI18n.saveToBackpackTitle(),
             message: codebridgeI18n.saveToBackpackDuplicateMessage({
               newFileName: fileNameCopy,
             }),
@@ -69,11 +69,11 @@ export const openSaveToBackpackPrompt = async ({
           }
         : {
             type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.saveToBackpack(),
+            title: codebridgeI18n.saveToBackpackTitle(),
             message: codebridgeI18n.saveToBackpackMessage({
               fileName: file.name,
             }),
-            confirmText: codebridgeI18n.saveToBackpack(),
+            confirmText: codebridgeI18n.saveToBackpackTitle(),
           };
       const results = await dialogControl?.showDialog(
         dialog as TypedDialogProps
@@ -96,7 +96,7 @@ export const openSaveToBackpackPrompt = async ({
         selectedFileName,
         fileContents,
         handleError(
-          codebridgeI18n.saveToBackpack(),
+          codebridgeI18n.saveToBackpackTitle(),
           codebridgeI18n.saveToBackpackError({selectedFileName}) +
             ' ' +
             codebridgeI18n.closeWindowTryAgain()
