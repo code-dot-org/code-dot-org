@@ -1,3 +1,6 @@
+import {NewFileFunction} from '@codebridge/codebridgeContext/types';
+import {ProjectFile} from '@codebridge/types';
+
 import {CodebridgeContextType, FileId, FolderId} from '@cdo/apps/codebridge';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
@@ -138,4 +141,16 @@ export const getBackpackAPIMock = (): BackpackClientApi => {
     deleteSingleFileFromBackpack: jest.fn(),
     onRequestComplete: jest.fn(),
   } as unknown as BackpackClientApi;
+};
+
+export const getNewFileMock = (): [ProjectFile, NewFileFunction] => {
+  const newFileData = {} as ProjectFile;
+  const mock: NewFileFunction = ({fileName, folderId}) => {
+    newFileData.name = fileName;
+    if (folderId) {
+      newFileData.folderId = folderId;
+    }
+  };
+
+  return [newFileData, mock];
 };
