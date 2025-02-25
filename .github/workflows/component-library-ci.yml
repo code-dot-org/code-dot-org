@@ -26,6 +26,9 @@ jobs:
             - name: Setup Frontend
               uses: ./.github/actions/frontend/setup
 
+            - name: Run Hello World Script
+              run: echo "hello $SAUCE_USERNAME world"
+
             - name: Install Playwright for Design System Storybook
               run: npx playwright install --with-deps
               working-directory: ./frontend/apps/design-system-storybook
