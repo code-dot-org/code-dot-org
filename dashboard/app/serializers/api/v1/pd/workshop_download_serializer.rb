@@ -10,7 +10,7 @@
 class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
   attributes :id, :status, :created_date, :start_date, :sessions, :organizer_name, :organizer_email, :regional_partner_name,
     :location_address, :location_name, :on_map, :funded, :course, :subject, :enrollment_url,
-    :enrolled_teacher_count, :capacity, :facilitators, :virtual?, :third_party_provider, :notes
+    :enrolled_teacher_count, :capacity, :facilitators, :virtual, :third_party_provider, :notes
 
   def status
     object.state
@@ -50,5 +50,9 @@ class Api::V1::Pd::WorkshopDownloadSerializer < ActiveModel::Serializer
 
   def facilitators
     object.facilitators.map {|f| "#{f.name} <#{f.email}>"}.join("\n")
+  end
+
+  def virtual
+    object.virtual?
   end
 end
