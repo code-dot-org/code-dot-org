@@ -13,8 +13,9 @@ export default function useOutsideClick<T extends HTMLElement>(
         callback();
       }
     };
-
-    document.addEventListener('click', handleClick);
+    // React 17 changed the location where clickhandlers are added, so we want to defer adding the close
+    // handler until the next tick of the event loop, otherwise it'll fire immediately and re-close the pop up.'
+    setTimeout(() => document.addEventListener('click', handleClick), 0);
 
     return () => {
       document.removeEventListener('click', handleClick);

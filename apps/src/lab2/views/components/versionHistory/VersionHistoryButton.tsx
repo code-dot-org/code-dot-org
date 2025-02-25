@@ -81,12 +81,12 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
     [isVersionHistoryOpen]
   );
 
-  const closeVersionHistory = () => {
+  const closeVersionHistory = useCallback(() => {
     console.log('in closeVersionHistory');
     setIsVersionHistoryOpen(false);
     setLoadError(false);
     setLoading(false);
-  };
+  }, []);
 
   const tooltipProps: TooltipProps = {
     text: commonI18n.versionHistory_header(),

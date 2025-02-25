@@ -74,6 +74,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
     state => state.lab2Project.viewingOldVersion
   );
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const isOpen = listLoaded || listLoading || listLoadError;
 
   // If this is a teacher viewing a student's project, we hide the restore button,
   // but still allow viewing old versions.
@@ -83,7 +84,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const dropdownStyles = usePositionPortalDropdown(
     menuRef?.current,
     buttonRef,
-    listLoaded || listLoading || listLoadError,
+    isOpen,
     'right',
     'main dropdown'
   );
@@ -132,6 +133,27 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
     previousListLoaded.current = listLoaded;
   }, [listLoaded, selectedVersion, latestVersion, viewingOldVersion]);
+
+  const handleOutsideClick = useCallback(
+    (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        closeDropdown();
+        document.removeEventListener('click', handleOutsideClick);
+      }
+    },
+    [closeDropdown]
+  );
+
+  useEffect(() => {
+    if (isOpen) {
+      setTimeout(
+        () => document.addEventListener('click', handleOutsideClick),
+        0
+      );
+    } else {
+      document.removeEventListener('click', handleOutsideClick);
+    }
+  }, [handleOutsideClick, isOpen]);
 
   const successfulRestoreCleanUp = useCallback(
     (sources: ProjectSources) => {
@@ -262,7 +284,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
     closeDropdown();
   }, [closeDropdown, dispatch, isLatestVersion, selectedVersion]);
 
-  return listLoaded || listLoading || listLoadError
+  return isOpen
     ? createPortal(
         <div
           className={moduleStyles.versionHistoryDropdown}
