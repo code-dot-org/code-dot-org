@@ -43,7 +43,7 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
 
   const exemplarSource = useAppSelector(
     state => state.lab.levelProperties?.exemplarSources
-  );
+  ) as MultiFileSource | undefined;
   const validationFile = useAppSelector(
     state => state.lab.levelProperties?.validationFile
   );

@@ -90,6 +90,7 @@ export interface BlocklySource {
     blocks: BlocklyBlock[];
   };
   variables: BlocklyVariable[];
+  packId?: string;
 }
 
 export interface BlocklyBlock {
@@ -118,7 +119,6 @@ export type FolderId = string;
 // Note that if it changes files_api.has_valid_encoding? may need to be updated to correctly validate
 // the new structure.
 export interface MultiFileSource {
-  packId?: string;
   folders: Record<FolderId, ProjectFolder>;
   files: Record<FileId, ProjectFile>;
   openFiles?: FileId[];
@@ -195,7 +195,7 @@ export interface LevelProperties {
   helpVideos?: VideoData[];
   // Exemplars
   exampleSolutions?: string[];
-  exemplarSources?: MultiFileSource;
+  exemplarSources?: Source;
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
