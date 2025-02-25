@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-20 22:23:36 UTC",
+    "serialized_at": "2025-02-25 19:01:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -40,19 +40,86 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Programming Fundamentals End-of-Unit Assessment",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pf-pilot-postassessment-2024"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "6f6ccddb-1d27-4ac5-a263-fb97c2e07fe5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f6ccddb-1d27-4ac5-a263-fb97c2e07fe5",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pf-pilot-postassessment-2024"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "a670b267-f2d5-45e2-a9d7-d49e7712f5ba",
+      "position": 1,
+      "properties": {
+        "progression_name": "End-of-Unit Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "a670b267-f2d5-45e2-a9d7-d49e7712f5ba",
+        "lesson_activity.key": "6f6ccddb-1d27-4ac5-a263-fb97c2e07fe5"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End-of-Unit Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-postassessment-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pf-pilot-postassessment-2024",
+        "activity_section.key": "a670b267-f2d5-45e2-a9d7-d49e7712f5ba"
+      },
+      "level_keys": [
+        "programming-fundamentals-postassessment-2024"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-postassessment-2024",
+        "script_level.level_keys": [
+          "programming-fundamentals-postassessment-2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pf-pilot-postassessment-2024",
+        "activity_section.key": "a670b267-f2d5-45e2-a9d7-d49e7712f5ba"
+      }
+    }
   ],
   "resources": [
 

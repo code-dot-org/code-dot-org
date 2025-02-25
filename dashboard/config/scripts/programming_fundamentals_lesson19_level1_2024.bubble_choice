@@ -1,0 +1,12 @@
+name 'programming-fundamentals-lesson19-level1-2024'
+display_name 'Examples of Games'
+description 'Pick one of the choices below to see a completed game.'
+
+sublevels
+level 'programming-fundamentals-lesson19-level1a-2024'
+level 'programming-fundamentals-lesson19-level1b-2024'
+level 'programming-fundamentals-lesson19-level1c-2024'
+
+
+
+

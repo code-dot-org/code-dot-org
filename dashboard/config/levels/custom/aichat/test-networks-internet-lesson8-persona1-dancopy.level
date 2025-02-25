@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-10T19:26:37.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -15,7 +14,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": 0.6,
+        "temperature": 0.3,
         "systemPrompt": "Information about Diego:\n\n- 16-year-old student in a low-income urban area.\n- He relies on a smartphone with limited data.\n- His school requires online assignments\n- The nearest public Wi-Fi is at a library 3 miles away",
         "retrievalContexts": [
 
@@ -50,6 +49,7 @@
     },
     "name_suffix": "_2024"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-10T19:26:37.299+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson8-persona1\\\"\"],\"cloned_from\":\"test-networks-internet-lesson8-persona1\"},{\"changed_at\":\"2025-02-10 19:26:52 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-10 20:28:09 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":800,\"changed_by_email\":\"ben@code.org\"},{\"changed_at\":\"2025-02-10 20:28:48 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":800,\"changed_by_email\":\"ben@code.org\"},{\"changed_at\":\"2025-02-10 20:30:12 +0000\",\"changed\":[],\"changed_by_id\":800,\"changed_by_email\":\"ben@code.org\"},{\"changed_at\":\"2025-02-10 20:31:15 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":800,\"changed_by_email\":\"ben@code.org\"},{\"changed_at\":\"2025-02-10 20:32:21 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":800,\"changed_by_email\":\"ben@code.org\"},{\"changed_at\":\"2025-02-10 20:33:18 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":800,\"changed_by_email\":\"ben@code.org\"},{\"changed_at\":\"2025-02-10 20:33:41 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":800,\"changed_by_email\":\"ben@code.org\"},{\"changed_at\":\"2025-02-10 20:35:13 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":800,\"changed_by_email\":\"ben@code.org\"},{\"changed_at\":\"2025-02-10 20:35:38 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":800,\"changed_by_email\":\"ben@code.org\"},{\"changed_at\":\"2025-02-10 20:48:00 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-02-10 21:42:11 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

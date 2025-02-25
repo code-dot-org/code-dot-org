@@ -1,8 +1,7 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
-  "created_at": "2025-02-10T19:22:32.000Z",
+  "created_at": "2025-02-21T20:39:44.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
@@ -15,7 +14,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
-        "temperature": "0.5",
+        "temperature": 0.3,
         "systemPrompt": "Information about Mr. Johnson:\n- 72-year-old retired veteran living alone.\n- Has never used a computer before, only a basic flip phone.\n- Struggles to schedule doctor’s appointments now that many offices require online booking.\n- Wants to apply for veteran benefits but can’t navigate government websites.",
         "retrievalContexts": [
 
@@ -52,6 +51,7 @@
     "bubble_choice_description": "Mr. Johnson is a 72-year-old retired veteran who lives alone in a small town.\r\n",
     "thumbnail_url": "https://images.code.org/d2363e244bf28b8b8c59062856dda7c4-Mr. Johnson.webp"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-02-10T19:22:32.703+00:00\",\"changed\":[\"cloned from \\\"test-networks-internet-lesson8-persona2\\\"\"],\"cloned_from\":\"test-networks-internet-lesson8-persona2\"},{\"changed_at\":\"2025-02-10 19:26:29 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:29:37 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 19:41:59 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-10 22:36:52 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-02-21 00:59:35 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-02-21 01:01:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

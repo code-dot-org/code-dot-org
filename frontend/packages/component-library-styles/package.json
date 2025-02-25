@@ -13,19 +13,14 @@
     "*.scss"
   ],
   "scripts": {
-    "prettier": "prettier --check .",
-    "prettier:fix": "prettier --write .",
-    "stylelint": "stylelint *.{css,scss,sass}",
-    "stylelint:fix": "yarn run stylelint --fix"
+    "release": "release-it --preRelease=alpha"
   },
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "devDependencies": {
-    "@code-dot-org/lint-config": "workspace:*",
-    "prettier": "3.3.3",
-    "stylelint": "^16.14.1"
+    "release-it": "^18.1.2"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"

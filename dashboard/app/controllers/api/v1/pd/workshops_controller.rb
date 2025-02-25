@@ -338,9 +338,15 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       :organizer_id,
       :suppress_email,
       :third_party_provider,
-      {sessions_attributes: [:id, :start, :end, :session_format, :_destroy]},
+      {sessions_attributes: [:id, :start, :end, :session_format, :meeting_link, :location_name, :location_address, :_destroy]},
       :module,
-      :participant_group_type
+      :participant_group_type,
+      :description,
+      :registration_link,
+      :prereq,
+      :hidden,
+      :grades,
+      :time_zone
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner

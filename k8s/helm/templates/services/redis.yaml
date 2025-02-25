@@ -1,0 +1,30 @@
+# NOTE: this redis config is intended for dev/testing only.
+# It does NOT persist data or permit replicas.
+{{- if .Values.services.redis.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "cdo.fullname" (merge (dict "component" "redis") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "redis") .) | nindent 4 }}
+spec:
+  selector:
+    {{ include "cdo.selectorLabels" (merge (dict "component" "redis") .) | nindent 4 }}
+  ports:
+    - name: redis
+      protocol: TCP
+      port: 6379
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ include "cdo.fullname" (merge (dict "component" "redis") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "redis") .) | nindent 4 }}
+spec:
+  containers:
+  - name: redis
+    image: redis:7.4
+    ports:
+    - containerPort: 6379
+{{- end }}

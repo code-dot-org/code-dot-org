@@ -8,7 +8,7 @@
   "cannotTest": "We don't know how to run your tests. Please contact support.",
   "changeLayout": "Change layout",
   "clearConsole": "Clear console",
-  "closeFile": "close file",
+  "closeFile": "close file {filename}",
   "consoleHeader": "Console",
   "defaultLayout": "Default layout",
   "defaultNewFileContents": "Add your changes to {fileName}",
