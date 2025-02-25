@@ -91,8 +91,8 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.aiTutorChatMessages,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiTutorChatMessages),
     // this is not part of the navigation sidebar so it doesn't need a label or icon
-    label: null,
-    icon: null,
+    label: i18n.aiTutor(),
+    icon: 'messages',
   },
   lessonMaterials: {
     url: TEACHER_NAVIGATION_PATHS.lessonMaterials,

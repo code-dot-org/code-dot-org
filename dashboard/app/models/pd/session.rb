@@ -36,6 +36,7 @@ class Pd::Session < ApplicationRecord
   validates_presence_of :start, :end
   validate :starts_and_ends_on_the_same_day
   validate :starts_before_ends
+  validate :valid_meeting_link_format, if: :meeting_link?
 
   def starts_and_ends_on_the_same_day
     return unless start && self.end
@@ -48,6 +49,12 @@ class Pd::Session < ApplicationRecord
     return unless start && self.end
     unless start < self.end
       errors.add(:end, 'must occur after the start.')
+    end
+  end
+
+  def valid_meeting_link_format
+    unless valid_url?(meeting_link)
+      errors.add(:meeting_link, "is not a valid URL")
     end
   end
 
@@ -120,6 +127,13 @@ class Pd::Session < ApplicationRecord
 
   def too_soon_for_link?
     workshop.started_at.nil? || start - 48.hours > Time.zone.now
+  end
+
+  def valid_url?(url)
+    uri = URI.parse(url)
+    uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
+  rescue URI::InvalidURIError
+    false
   end
 
   private def unused_random_code

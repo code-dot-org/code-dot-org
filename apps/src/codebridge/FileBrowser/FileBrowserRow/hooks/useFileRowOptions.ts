@@ -106,7 +106,7 @@ export const useFileRowOptions = (
       options.push({
         condition: true,
         iconName: 'backpack',
-        labelText: 'Save to backpack',
+        labelText: codebridgeI18n.saveToBackpack(),
         clickHandler: () => openSaveToBackpackPrompt({file, backpackApi}),
       });
     }

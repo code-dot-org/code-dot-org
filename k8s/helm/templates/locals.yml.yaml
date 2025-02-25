@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "cdo.fullname" (merge (dict "component" "locals.yml") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "locals.yml") .) | nindent 4 }}
+data:
+  locals.yml: |
+
+    {{- if .Values.services.mysql.enabled }}
+    db_writer: 'mysql://root@{{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}/'
+    {{- end }}
+    
+    {{- if .Values.services.redis.enabled }}
+    geocoder_redis_url: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0/geocoder
+    session_store_server: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0/session
+    netsim_redis_groups:
+    - master: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379
+    {{- end }}
+
+    {{- if .Values.services.minio.enabled }}
+    aws_s3_endpoint: http://{{ include "cdo.fullname" (merge (dict "component" "minio") .) }}:9000
+    aws_s3_access_key_id: {{ .Values.services.minio.username }}
+    aws_s3_secret_access_key: {{ .Values.services.minio.password }}
+    aws_s3_emulated: true
+    {{- end }}
+
+    dashboard_enable_pegasus: false
+    build_apps: true
+    use_my_apps: true
+
+    # FIXME: once mountDotAWS is reliable, we should uncomment this conditional
+    # {{- if not .Values.localDev.mounts.mountDotAWS }}
+    cloudfront_key_pair_id: localoverride
+    cloudfront_private_key: localoverride
+    slack_bot_token: localoverride
+    properties_encryption_key: ''
+    # {{- end }}
