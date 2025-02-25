@@ -81,11 +81,7 @@ const UnitCalendar: React.FC = () => {
           versionYear: null,
         })
       );
-      setHasInitialLoad(true);
-      return;
-    }
-
-    if (
+    } else if (
       !isLoading &&
       unitToLoad &&
       userType &&
@@ -95,7 +91,6 @@ const UnitCalendar: React.FC = () => {
         (unitToLoad !== calendarUnitName && unitName !== null))
     ) {
       setIsLoading(true);
-      setHasInitialLoad(true);
       HttpClient.fetchJson<UnitSummaryResponse>(
         `/dashboardapi/unit_summary/${unitToLoad}`
       )
@@ -118,6 +113,8 @@ const UnitCalendar: React.FC = () => {
           return null;
         });
     }
+
+    setHasInitialLoad(true);
   }, [
     unitName,
     userId,

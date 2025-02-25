@@ -4,7 +4,7 @@
     "/blockly-mooc/ailab.json": "e543f74015b84e3af1d99822986141b5",
     "/blockly-mooc/applab.json": "8a4d44b7e7a01ff21fc37c82baabf981",
     "/blockly-mooc/bounce.json": "d4ed18dc067dc8c32c56945a85ceafc6",
-    "/blockly-mooc/common.json": "d4ed18dc067dc8c32c56945a85ceafc6",
+    "/blockly-mooc/common.json": "945dbd3098d594046669aeca295810d1",
     "/blockly-mooc/craft.json": "d4ed18dc067dc8c32c56945a85ceafc6",
     "/blockly-mooc/dance.json": "d4ed18dc067dc8c32c56945a85ceafc6",
     "/blockly-mooc/fish.json": "e543f74015b84e3af1d99822986141b5",
@@ -23,7 +23,7 @@
     "/blockly-mooc/tutorialExplorer.json": "d4ed18dc067dc8c32c56945a85ceafc6",
     "/blockly-mooc/weblab.json": "8a4d44b7e7a01ff21fc37c82baabf981",
     "/blockly-mooc/signup.json": "4c016dde6e5f7602d092725f8f45279f",
-    "/blockly-mooc/codebridge.json": "4c016dde6e5f7602d092725f8f45279f",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "az-AZ": {
@@ -31,7 +31,7 @@
     "/blockly-mooc/ailab.json": "cef848f3c18ea922d69597c0246f0b44",
     "/blockly-mooc/applab.json": "077c7e1b2c0172d0b7ae547087ccec91",
     "/blockly-mooc/bounce.json": "713e9d31a29a38956746755942850279",
-    "/blockly-mooc/common.json": "713e9d31a29a38956746755942850279",
+    "/blockly-mooc/common.json": "945dbd3098d594046669aeca295810d1",
     "/blockly-mooc/craft.json": "713e9d31a29a38956746755942850279",
     "/blockly-mooc/dance.json": "713e9d31a29a38956746755942850279",
     "/blockly-mooc/fish.json": "cef848f3c18ea922d69597c0246f0b44",
@@ -50,7 +50,7 @@
     "/blockly-mooc/tutorialExplorer.json": "713e9d31a29a38956746755942850279",
     "/blockly-mooc/weblab.json": "077c7e1b2c0172d0b7ae547087ccec91",
     "/blockly-mooc/signup.json": "c4059837a82a231e6281ff2c231adba6",
-    "/blockly-mooc/codebridge.json": "c4059837a82a231e6281ff2c231adba6",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "bg-BG": {
@@ -58,7 +58,7 @@
     "/blockly-mooc/ailab.json": "9c2aa5604cf6219f247b4d162b1279b0",
     "/blockly-mooc/applab.json": "fc2bf91e0e48e3f3045df1238d0ac0e0",
     "/blockly-mooc/bounce.json": "f80cd7899f5d13a5d38d16c8f4f14c3e",
-    "/blockly-mooc/common.json": "f80cd7899f5d13a5d38d16c8f4f14c3e",
+    "/blockly-mooc/common.json": "6ba24cbc22f3ba94bf30a567888a33d5",
     "/blockly-mooc/craft.json": "f80cd7899f5d13a5d38d16c8f4f14c3e",
     "/blockly-mooc/dance.json": "f80cd7899f5d13a5d38d16c8f4f14c3e",
     "/blockly-mooc/fish.json": "9c2aa5604cf6219f247b4d162b1279b0",
@@ -77,7 +77,7 @@
     "/blockly-mooc/tutorialExplorer.json": "f80cd7899f5d13a5d38d16c8f4f14c3e",
     "/blockly-mooc/weblab.json": "fc2bf91e0e48e3f3045df1238d0ac0e0",
     "/blockly-mooc/signup.json": "5569a928d28274bf1781af867b9f2795",
-    "/blockly-mooc/codebridge.json": "5569a928d28274bf1781af867b9f2795",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "bn-BD": {
@@ -109,7 +109,7 @@
     "/blockly-mooc/ailab.json": "28aa9ebcf71b6159cfd23b4ff1698c9c",
     "/blockly-mooc/applab.json": "97ee605df237286b03516538a5173856",
     "/blockly-mooc/bounce.json": "d421c3b6f07f5507d677e20db20bca87",
-    "/blockly-mooc/common.json": "ae4889ef793229196e0591c69588dccf",
+    "/blockly-mooc/common.json": "6ba24cbc22f3ba94bf30a567888a33d5",
     "/blockly-mooc/craft.json": "d421c3b6f07f5507d677e20db20bca87",
     "/blockly-mooc/dance.json": "d421c3b6f07f5507d677e20db20bca87",
     "/blockly-mooc/fish.json": "28aa9ebcf71b6159cfd23b4ff1698c9c",
@@ -128,7 +128,7 @@
     "/blockly-mooc/tutorialExplorer.json": "d421c3b6f07f5507d677e20db20bca87",
     "/blockly-mooc/weblab.json": "97ee605df237286b03516538a5173856",
     "/blockly-mooc/signup.json": "247edf76897a719e488e1ffabaf88985",
-    "/blockly-mooc/codebridge.json": "247edf76897a719e488e1ffabaf88985",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "ca-ES": {
@@ -136,7 +136,7 @@
     "/blockly-mooc/ailab.json": "630bedf8c3e70d0f1c9e7dd35267ecd1",
     "/blockly-mooc/applab.json": "db7852cf20055df68c2b6f646dc9ac33",
     "/blockly-mooc/bounce.json": "156b96ba6c25060ac436ef095dc66cdb",
-    "/blockly-mooc/common.json": "156b96ba6c25060ac436ef095dc66cdb",
+    "/blockly-mooc/common.json": "6ba24cbc22f3ba94bf30a567888a33d5",
     "/blockly-mooc/craft.json": "156b96ba6c25060ac436ef095dc66cdb",
     "/blockly-mooc/dance.json": "9834179dd488508037291bb327c04a04",
     "/blockly-mooc/fish.json": "9834179dd488508037291bb327c04a04",
@@ -155,7 +155,7 @@
     "/blockly-mooc/tutorialExplorer.json": "156b96ba6c25060ac436ef095dc66cdb",
     "/blockly-mooc/weblab.json": "db7852cf20055df68c2b6f646dc9ac33",
     "/blockly-mooc/signup.json": "b6eb04f1bb7e6ccc00797a462b34a40c",
-    "/blockly-mooc/codebridge.json": "b6eb04f1bb7e6ccc00797a462b34a40c",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "co-CO": {
@@ -187,7 +187,7 @@
     "/blockly-mooc/ailab.json": "4b150103f7bd09597cb803daf5d55a98",
     "/blockly-mooc/applab.json": "1850f716d1db31569203ae7c2ce3e644",
     "/blockly-mooc/bounce.json": "8ca21729c1d4d71f82e77eaf2066022b",
-    "/blockly-mooc/common.json": "8ca21729c1d4d71f82e77eaf2066022b",
+    "/blockly-mooc/common.json": "6ba24cbc22f3ba94bf30a567888a33d5",
     "/blockly-mooc/craft.json": "8ca21729c1d4d71f82e77eaf2066022b",
     "/blockly-mooc/dance.json": "8ca21729c1d4d71f82e77eaf2066022b",
     "/blockly-mooc/fish.json": "4b150103f7bd09597cb803daf5d55a98",
@@ -206,7 +206,7 @@
     "/blockly-mooc/tutorialExplorer.json": "8ca21729c1d4d71f82e77eaf2066022b",
     "/blockly-mooc/weblab.json": "1850f716d1db31569203ae7c2ce3e644",
     "/blockly-mooc/signup.json": "a9a5804a0f781f874f386287689d15ac",
-    "/blockly-mooc/codebridge.json": "a9a5804a0f781f874f386287689d15ac",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "da-DK": {
@@ -214,7 +214,7 @@
     "/blockly-mooc/ailab.json": "41e64e22c676a1cac826872f1d5ab8ca",
     "/blockly-mooc/applab.json": "a3b9a9a28643d61bccce282cd04b5999",
     "/blockly-mooc/bounce.json": "86a637994cb0e4a9f01d7b96e562e963",
-    "/blockly-mooc/common.json": "86a637994cb0e4a9f01d7b96e562e963",
+    "/blockly-mooc/common.json": "9ff425b34823d262b7d890c368676230",
     "/blockly-mooc/craft.json": "c32d2135ddfd5337ad94afe58888b2c5",
     "/blockly-mooc/dance.json": "c32d2135ddfd5337ad94afe58888b2c5",
     "/blockly-mooc/fish.json": "41e64e22c676a1cac826872f1d5ab8ca",
@@ -233,7 +233,7 @@
     "/blockly-mooc/tutorialExplorer.json": "c32d2135ddfd5337ad94afe58888b2c5",
     "/blockly-mooc/weblab.json": "a3b9a9a28643d61bccce282cd04b5999",
     "/blockly-mooc/signup.json": "1a490b41f392e0edf80a020bc3b023d2",
-    "/blockly-mooc/codebridge.json": "1a490b41f392e0edf80a020bc3b023d2",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "de-DE": {
@@ -241,7 +241,7 @@
     "/blockly-mooc/ailab.json": "3e0e13a501cbdb2b989988ce4db2c41b",
     "/blockly-mooc/applab.json": "bf30967e6445324f6a124fdf1b518749",
     "/blockly-mooc/bounce.json": "cd6bfba3b69c03a3d0ad121cec362375",
-    "/blockly-mooc/common.json": "cd6bfba3b69c03a3d0ad121cec362375",
+    "/blockly-mooc/common.json": "840c1d79ff62643f48b10c8ecf30598a",
     "/blockly-mooc/craft.json": "cd6bfba3b69c03a3d0ad121cec362375",
     "/blockly-mooc/dance.json": "cd6bfba3b69c03a3d0ad121cec362375",
     "/blockly-mooc/fish.json": "3e0e13a501cbdb2b989988ce4db2c41b",
@@ -260,7 +260,7 @@
     "/blockly-mooc/tutorialExplorer.json": "cd6bfba3b69c03a3d0ad121cec362375",
     "/blockly-mooc/weblab.json": "bf30967e6445324f6a124fdf1b518749",
     "/blockly-mooc/signup.json": "3edecab3b9a8bd5a02429733a8dd8653",
-    "/blockly-mooc/codebridge.json": "3edecab3b9a8bd5a02429733a8dd8653",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "dv-MV": {
@@ -268,7 +268,7 @@
     "/blockly-mooc/ailab.json": "788edb082862a3528cc2ceeea0802a75",
     "/blockly-mooc/applab.json": "e1a8de21ea1f4a2cc787e058205dfee7",
     "/blockly-mooc/bounce.json": "e7d5d1be9bb883cbd4595d3425087ee3",
-    "/blockly-mooc/common.json": "31cf02fbfae89aaabe8099293fd9f916",
+    "/blockly-mooc/common.json": "9ff425b34823d262b7d890c368676230",
     "/blockly-mooc/craft.json": "e7d5d1be9bb883cbd4595d3425087ee3",
     "/blockly-mooc/dance.json": "e7d5d1be9bb883cbd4595d3425087ee3",
     "/blockly-mooc/fish.json": "788edb082862a3528cc2ceeea0802a75",
@@ -287,7 +287,7 @@
     "/blockly-mooc/tutorialExplorer.json": "e7d5d1be9bb883cbd4595d3425087ee3",
     "/blockly-mooc/weblab.json": "e1a8de21ea1f4a2cc787e058205dfee7",
     "/blockly-mooc/signup.json": "b2695fc0a582b607d4b1f53d2e679e77",
-    "/blockly-mooc/codebridge.json": "b2695fc0a582b607d4b1f53d2e679e77",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "el-GR": {
@@ -295,7 +295,7 @@
     "/blockly-mooc/ailab.json": "1a0c80ba49060ff722743610ef07c580",
     "/blockly-mooc/applab.json": "d51defc82604f785f13caba689316a8a",
     "/blockly-mooc/bounce.json": "72fc5376ff46fb85a78bfb23de22d874",
-    "/blockly-mooc/common.json": "72fc5376ff46fb85a78bfb23de22d874",
+    "/blockly-mooc/common.json": "840c1d79ff62643f48b10c8ecf30598a",
     "/blockly-mooc/craft.json": "72fc5376ff46fb85a78bfb23de22d874",
     "/blockly-mooc/dance.json": "72fc5376ff46fb85a78bfb23de22d874",
     "/blockly-mooc/fish.json": "1a0c80ba49060ff722743610ef07c580",
@@ -314,7 +314,7 @@
     "/blockly-mooc/tutorialExplorer.json": "72fc5376ff46fb85a78bfb23de22d874",
     "/blockly-mooc/weblab.json": "d51defc82604f785f13caba689316a8a",
     "/blockly-mooc/signup.json": "52961024eea7d833ed275091b6015b0a",
-    "/blockly-mooc/codebridge.json": "52961024eea7d833ed275091b6015b0a",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "en-GB": {
@@ -322,7 +322,7 @@
     "/blockly-mooc/ailab.json": "42c0ff5031a2c0c2dcddc20bf89ced03",
     "/blockly-mooc/applab.json": "ebdb49295a52fbef5508352e394623be",
     "/blockly-mooc/bounce.json": "4cc6cfcdc8149465b6c2014b9c926f96",
-    "/blockly-mooc/common.json": "8c62eca938c4e1fd9e1ffeb6604aec8d",
+    "/blockly-mooc/common.json": "9ff425b34823d262b7d890c368676230",
     "/blockly-mooc/craft.json": "1e7b7b4989126982f7443f125a444884",
     "/blockly-mooc/dance.json": "8baf8ed3b6a215ecb6b181a0495fdca4",
     "/blockly-mooc/fish.json": "42c0ff5031a2c0c2dcddc20bf89ced03",
@@ -341,15 +341,15 @@
     "/blockly-mooc/tutorialExplorer.json": "8baf8ed3b6a215ecb6b181a0495fdca4",
     "/blockly-mooc/weblab.json": "ebdb49295a52fbef5508352e394623be",
     "/blockly-mooc/signup.json": "9138a00d0c53de0a54063558506c69ad",
-    "/blockly-mooc/codebridge.json": "9138a00d0c53de0a54063558506c69ad",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "es-ES": {
     "/blockly-mooc/aichat.json": "68c8529e968fefdddbf763f8f9c1488b",
     "/blockly-mooc/ailab.json": "d61f55fa2464e89827e2f8710e75070b",
-    "/blockly-mooc/applab.json": "ecb4cc4203325a592871331122e0efeb",
+    "/blockly-mooc/applab.json": "50d69658e77fa8cfa007141198ae1290",
     "/blockly-mooc/bounce.json": "615bd5c423bb162d3c259fb49169392d",
-    "/blockly-mooc/common.json": "1c0ad8d57666ff6ccf32d692a4dacead",
+    "/blockly-mooc/common.json": "88bbf2e07ca2676dbeb1aefe9e1408c8",
     "/blockly-mooc/craft.json": "615bd5c423bb162d3c259fb49169392d",
     "/blockly-mooc/dance.json": "615bd5c423bb162d3c259fb49169392d",
     "/blockly-mooc/fish.json": "d61f55fa2464e89827e2f8710e75070b",
@@ -368,7 +368,7 @@
     "/blockly-mooc/tutorialExplorer.json": "615bd5c423bb162d3c259fb49169392d",
     "/blockly-mooc/weblab.json": "ecb4cc4203325a592871331122e0efeb",
     "/blockly-mooc/signup.json": "647c0d8aeb179b98c560611df8df0604",
-    "/blockly-mooc/codebridge.json": "647c0d8aeb179b98c560611df8df0604",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "es-MX": {
@@ -376,7 +376,7 @@
     "/blockly-mooc/ailab.json": "81375322a3b5334c2dd7ae8d5d425eb6",
     "/blockly-mooc/applab.json": "0e0b86b3e93ae329f675c992081ee08b",
     "/blockly-mooc/bounce.json": "8e52a21f6fc4776ee1883d51c764cfab",
-    "/blockly-mooc/common.json": "07c79c7b4b78fb71e4dc0cb28db7b740",
+    "/blockly-mooc/common.json": "e384fd5cdf0dca41d3a9fb22e070310d",
     "/blockly-mooc/craft.json": "8e52a21f6fc4776ee1883d51c764cfab",
     "/blockly-mooc/dance.json": "8e52a21f6fc4776ee1883d51c764cfab",
     "/blockly-mooc/fish.json": "81375322a3b5334c2dd7ae8d5d425eb6",
@@ -395,7 +395,7 @@
     "/blockly-mooc/tutorialExplorer.json": "8e52a21f6fc4776ee1883d51c764cfab",
     "/blockly-mooc/weblab.json": "0e0b86b3e93ae329f675c992081ee08b",
     "/blockly-mooc/signup.json": "5a48f63a96ff60b13ac1f6d2ce509cf8",
-    "/blockly-mooc/codebridge.json": "5a48f63a96ff60b13ac1f6d2ce509cf8",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "et-EE": {
@@ -403,7 +403,7 @@
     "/blockly-mooc/ailab.json": "32e48bb1319249efed7ef48dbd3f68ef",
     "/blockly-mooc/applab.json": "47da0958a1b967ae692a2df06259162c",
     "/blockly-mooc/bounce.json": "962e2b7493c447ebdce50bf8ab9489eb",
-    "/blockly-mooc/common.json": "962e2b7493c447ebdce50bf8ab9489eb",
+    "/blockly-mooc/common.json": "9ff425b34823d262b7d890c368676230",
     "/blockly-mooc/craft.json": "962e2b7493c447ebdce50bf8ab9489eb",
     "/blockly-mooc/dance.json": "962e2b7493c447ebdce50bf8ab9489eb",
     "/blockly-mooc/fish.json": "32e48bb1319249efed7ef48dbd3f68ef",
@@ -422,7 +422,7 @@
     "/blockly-mooc/tutorialExplorer.json": "962e2b7493c447ebdce50bf8ab9489eb",
     "/blockly-mooc/weblab.json": "47da0958a1b967ae692a2df06259162c",
     "/blockly-mooc/signup.json": "7fb16d413921379ef5652ecae01d701f",
-    "/blockly-mooc/codebridge.json": "7fb16d413921379ef5652ecae01d701f",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "eu-ES": {
@@ -430,7 +430,7 @@
     "/blockly-mooc/ailab.json": "f79a9dd15aeab94ec245de518e850bff",
     "/blockly-mooc/applab.json": "0203da24dbd6b771cf7186da992b85cd",
     "/blockly-mooc/bounce.json": "c07e6bd2e17903c69e10707b952f816b",
-    "/blockly-mooc/common.json": "c07e6bd2e17903c69e10707b952f816b",
+    "/blockly-mooc/common.json": "6ba24cbc22f3ba94bf30a567888a33d5",
     "/blockly-mooc/craft.json": "c07e6bd2e17903c69e10707b952f816b",
     "/blockly-mooc/dance.json": "c07e6bd2e17903c69e10707b952f816b",
     "/blockly-mooc/fish.json": "df35ea2f6a01255c75f621209b3281c1",
@@ -449,7 +449,7 @@
     "/blockly-mooc/tutorialExplorer.json": "c07e6bd2e17903c69e10707b952f816b",
     "/blockly-mooc/weblab.json": "0203da24dbd6b771cf7186da992b85cd",
     "/blockly-mooc/signup.json": "1d01b3e5fe229b371c6273f3fd2156fd",
-    "/blockly-mooc/codebridge.json": "1d01b3e5fe229b371c6273f3fd2156fd",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "fa-AF": {
@@ -481,7 +481,7 @@
     "/blockly-mooc/ailab.json": "c427a7611eee0f59dc77c3abefcb76e3",
     "/blockly-mooc/applab.json": "e30dc2fbe89370481f4709e800e4829d",
     "/blockly-mooc/bounce.json": "604247d6c758e85c65cd7f77c2a8f51d",
-    "/blockly-mooc/common.json": "604247d6c758e85c65cd7f77c2a8f51d",
+    "/blockly-mooc/common.json": "14ab1bd5d435858bc72f6d3e4d526475",
     "/blockly-mooc/craft.json": "604247d6c758e85c65cd7f77c2a8f51d",
     "/blockly-mooc/dance.json": "604247d6c758e85c65cd7f77c2a8f51d",
     "/blockly-mooc/fish.json": "c427a7611eee0f59dc77c3abefcb76e3",
@@ -500,7 +500,7 @@
     "/blockly-mooc/tutorialExplorer.json": "604247d6c758e85c65cd7f77c2a8f51d",
     "/blockly-mooc/weblab.json": "e30dc2fbe89370481f4709e800e4829d",
     "/blockly-mooc/signup.json": "6d7a608a924a53f9577bf436d5335b96",
-    "/blockly-mooc/codebridge.json": "6d7a608a924a53f9577bf436d5335b96",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "fi-FI": {
@@ -508,7 +508,7 @@
     "/blockly-mooc/ailab.json": "59c28373a78147fc0d549cb6b4845ea9",
     "/blockly-mooc/applab.json": "1d5c7650d1a42ddee84c8452fd592399",
     "/blockly-mooc/bounce.json": "8b190d0be971c92fd6d92b31af71aa15",
-    "/blockly-mooc/common.json": "8b190d0be971c92fd6d92b31af71aa15",
+    "/blockly-mooc/common.json": "9ff425b34823d262b7d890c368676230",
     "/blockly-mooc/craft.json": "8b190d0be971c92fd6d92b31af71aa15",
     "/blockly-mooc/dance.json": "8b190d0be971c92fd6d92b31af71aa15",
     "/blockly-mooc/fish.json": "59c28373a78147fc0d549cb6b4845ea9",
@@ -527,7 +527,7 @@
     "/blockly-mooc/tutorialExplorer.json": "8b190d0be971c92fd6d92b31af71aa15",
     "/blockly-mooc/weblab.json": "1d5c7650d1a42ddee84c8452fd592399",
     "/blockly-mooc/signup.json": "cb19856a2835f7ecb586ac8fd06f8a31",
-    "/blockly-mooc/codebridge.json": "cb19856a2835f7ecb586ac8fd06f8a31",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "fil-PH": {
@@ -535,7 +535,7 @@
     "/blockly-mooc/ailab.json": "c77addac41deae6a95303d46cc7fde42",
     "/blockly-mooc/applab.json": "be730167a21dc22645c1f92631cf07bd",
     "/blockly-mooc/bounce.json": "97f712da9222ab2c7facef0a8aec0f5b",
-    "/blockly-mooc/common.json": "97f712da9222ab2c7facef0a8aec0f5b",
+    "/blockly-mooc/common.json": "9ff425b34823d262b7d890c368676230",
     "/blockly-mooc/craft.json": "97f712da9222ab2c7facef0a8aec0f5b",
     "/blockly-mooc/dance.json": "97f712da9222ab2c7facef0a8aec0f5b",
     "/blockly-mooc/fish.json": "c77addac41deae6a95303d46cc7fde42",
@@ -554,7 +554,7 @@
     "/blockly-mooc/tutorialExplorer.json": "97f712da9222ab2c7facef0a8aec0f5b",
     "/blockly-mooc/weblab.json": "be730167a21dc22645c1f92631cf07bd",
     "/blockly-mooc/signup.json": "919380972096eb4e4025399421644b23",
-    "/blockly-mooc/codebridge.json": "919380972096eb4e4025399421644b23",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "fr-FR": {
@@ -562,7 +562,7 @@
     "/blockly-mooc/ailab.json": "9a8edeb411142b46c4f02f0b6b61858d",
     "/blockly-mooc/applab.json": "17a3ffaf07e50319577f410e1a6c131f",
     "/blockly-mooc/bounce.json": "2b70845b8146b9ad677dc0be34d91689",
-    "/blockly-mooc/common.json": "2b70845b8146b9ad677dc0be34d91689",
+    "/blockly-mooc/common.json": "9ff425b34823d262b7d890c368676230",
     "/blockly-mooc/craft.json": "2b70845b8146b9ad677dc0be34d91689",
     "/blockly-mooc/dance.json": "2b70845b8146b9ad677dc0be34d91689",
     "/blockly-mooc/fish.json": "f03a3cbe5e7bfc4db3420f2b97510315",
@@ -581,7 +581,7 @@
     "/blockly-mooc/tutorialExplorer.json": "2b70845b8146b9ad677dc0be34d91689",
     "/blockly-mooc/weblab.json": "17a3ffaf07e50319577f410e1a6c131f",
     "/blockly-mooc/signup.json": "4976de7d90ad0c4e0ff2bba2f477ad8b",
-    "/blockly-mooc/codebridge.json": "4976de7d90ad0c4e0ff2bba2f477ad8b",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "ga-IE": {
@@ -589,7 +589,7 @@
     "/blockly-mooc/ailab.json": "5d0bcb326230673a49a06b3ef739d5cd",
     "/blockly-mooc/applab.json": "19184585c8e63791a72aa7cf084512b3",
     "/blockly-mooc/bounce.json": "9bae012c35158b7f38199423653264b8",
-    "/blockly-mooc/common.json": "5e419e716564ae027bffed701ca89ef5",
+    "/blockly-mooc/common.json": "46d61cdd9f2e59aef7f60e360b758108",
     "/blockly-mooc/craft.json": "9bae012c35158b7f38199423653264b8",
     "/blockly-mooc/dance.json": "9bae012c35158b7f38199423653264b8",
     "/blockly-mooc/fish.json": "5d0bcb326230673a49a06b3ef739d5cd",
@@ -608,7 +608,7 @@
     "/blockly-mooc/tutorialExplorer.json": "9bae012c35158b7f38199423653264b8",
     "/blockly-mooc/weblab.json": "19184585c8e63791a72aa7cf084512b3",
     "/blockly-mooc/signup.json": "f2adc93f331ab859f81c9d0641649667",
-    "/blockly-mooc/codebridge.json": "f2adc93f331ab859f81c9d0641649667",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "gl-ES": {
@@ -616,7 +616,7 @@
     "/blockly-mooc/ailab.json": "69c4cdb97bfd92479ae8b5be32a14569",
     "/blockly-mooc/applab.json": "62014120e3d95aae7f7a11c5fa052bad",
     "/blockly-mooc/bounce.json": "950daa2a96a2ca57701c381a25894cfc",
-    "/blockly-mooc/common.json": "950daa2a96a2ca57701c381a25894cfc",
+    "/blockly-mooc/common.json": "840c1d79ff62643f48b10c8ecf30598a",
     "/blockly-mooc/craft.json": "950daa2a96a2ca57701c381a25894cfc",
     "/blockly-mooc/dance.json": "950daa2a96a2ca57701c381a25894cfc",
     "/blockly-mooc/fish.json": "69c4cdb97bfd92479ae8b5be32a14569",
@@ -635,7 +635,7 @@
     "/blockly-mooc/tutorialExplorer.json": "950daa2a96a2ca57701c381a25894cfc",
     "/blockly-mooc/weblab.json": "62014120e3d95aae7f7a11c5fa052bad",
     "/blockly-mooc/signup.json": "86a637994cb0e4a9f01d7b96e562e963",
-    "/blockly-mooc/codebridge.json": "86a637994cb0e4a9f01d7b96e562e963",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "haw-HI": {
@@ -643,7 +643,7 @@
     "/blockly-mooc/ailab.json": "929e589af2e62bd4e4e6a143bafc1f0b",
     "/blockly-mooc/applab.json": "d1dd3450c450be0ecbcf5b5f9192fd7f",
     "/blockly-mooc/bounce.json": "4cc6cfcdc8149465b6c2014b9c926f96",
-    "/blockly-mooc/common.json": "383034b2d1754f39fba49737d51c08e1",
+    "/blockly-mooc/common.json": "840c1d79ff62643f48b10c8ecf30598a",
     "/blockly-mooc/craft.json": "1e7b7b4989126982f7443f125a444884",
     "/blockly-mooc/dance.json": "af5be23b08d525df441d7c6972595a6b",
     "/blockly-mooc/fish.json": "929e589af2e62bd4e4e6a143bafc1f0b",
@@ -662,7 +662,7 @@
     "/blockly-mooc/tutorialExplorer.json": "af5be23b08d525df441d7c6972595a6b",
     "/blockly-mooc/weblab.json": "d1dd3450c450be0ecbcf5b5f9192fd7f",
     "/blockly-mooc/signup.json": "d37e1d443324fb308d1dd2a58b3bed23",
-    "/blockly-mooc/codebridge.json": "d37e1d443324fb308d1dd2a58b3bed23",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "he-IL": {
@@ -670,7 +670,7 @@
     "/blockly-mooc/ailab.json": "0963b0d93709837ca84572fb5a3efcab",
     "/blockly-mooc/applab.json": "6bb9fd7b21ad1fe435d38b28722f6a6a",
     "/blockly-mooc/bounce.json": "799c1a8a19d034839221fc37329e153d",
-    "/blockly-mooc/common.json": "799c1a8a19d034839221fc37329e153d",
+    "/blockly-mooc/common.json": "840c1d79ff62643f48b10c8ecf30598a",
     "/blockly-mooc/craft.json": "799c1a8a19d034839221fc37329e153d",
     "/blockly-mooc/dance.json": "799c1a8a19d034839221fc37329e153d",
     "/blockly-mooc/fish.json": "0963b0d93709837ca84572fb5a3efcab",
@@ -689,7 +689,7 @@
     "/blockly-mooc/tutorialExplorer.json": "799c1a8a19d034839221fc37329e153d",
     "/blockly-mooc/weblab.json": "6bb9fd7b21ad1fe435d38b28722f6a6a",
     "/blockly-mooc/signup.json": "f457a0cfa9a80f647f1ebf664e147ad1",
-    "/blockly-mooc/codebridge.json": "f457a0cfa9a80f647f1ebf664e147ad1",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "hi-IN": {
@@ -697,7 +697,7 @@
     "/blockly-mooc/ailab.json": "3a1a32951d155b33d8e4f6fb7b71fac5",
     "/blockly-mooc/applab.json": "9cd1431f14fe1fd8462b1b3e9e64b335",
     "/blockly-mooc/bounce.json": "82cdc7e0d6eb2781702074359c99d1fb",
-    "/blockly-mooc/common.json": "82cdc7e0d6eb2781702074359c99d1fb",
+    "/blockly-mooc/common.json": "840c1d79ff62643f48b10c8ecf30598a",
     "/blockly-mooc/craft.json": "82cdc7e0d6eb2781702074359c99d1fb",
     "/blockly-mooc/dance.json": "4910cc6eec05c93fe1e0618b0e4bc5de",
     "/blockly-mooc/fish.json": "4910cc6eec05c93fe1e0618b0e4bc5de",
@@ -716,7 +716,7 @@
     "/blockly-mooc/tutorialExplorer.json": "82cdc7e0d6eb2781702074359c99d1fb",
     "/blockly-mooc/weblab.json": "9cd1431f14fe1fd8462b1b3e9e64b335",
     "/blockly-mooc/signup.json": "5816bd0764cabda6971d5f5167e1c5dd",
-    "/blockly-mooc/codebridge.json": "5816bd0764cabda6971d5f5167e1c5dd",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "hr-HR": {
@@ -724,7 +724,7 @@
     "/blockly-mooc/ailab.json": "81c5ec3bd8477b4002dfbeab0958a063",
     "/blockly-mooc/applab.json": "2d43dadb847b53263ac5b25bc087928c",
     "/blockly-mooc/bounce.json": "0fb47a5f105f18465acd30e9245e91e1",
-    "/blockly-mooc/common.json": "0fb47a5f105f18465acd30e9245e91e1",
+    "/blockly-mooc/common.json": "6ba24cbc22f3ba94bf30a567888a33d5",
     "/blockly-mooc/craft.json": "0fb47a5f105f18465acd30e9245e91e1",
     "/blockly-mooc/dance.json": "0fb47a5f105f18465acd30e9245e91e1",
     "/blockly-mooc/fish.json": "e51e0b9918ea040ce6f41ef002570bc1",
@@ -743,7 +743,7 @@
     "/blockly-mooc/tutorialExplorer.json": "0fb47a5f105f18465acd30e9245e91e1",
     "/blockly-mooc/weblab.json": "2d43dadb847b53263ac5b25bc087928c",
     "/blockly-mooc/signup.json": "f2a64e053e44ea85e8f0fe6eebae2499",
-    "/blockly-mooc/codebridge.json": "f2a64e053e44ea85e8f0fe6eebae2499",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "hu-HU": {
@@ -751,7 +751,7 @@
     "/blockly-mooc/ailab.json": "e7fd1e597a95b29785a531957cb088fd",
     "/blockly-mooc/applab.json": "704c293c2167d95ea6ebe70eeafbb387",
     "/blockly-mooc/bounce.json": "895f9457b8e58b55fc2517456016b5ba",
-    "/blockly-mooc/common.json": "0de070ebfd334bcb2a6676450b927b61",
+    "/blockly-mooc/common.json": "840c1d79ff62643f48b10c8ecf30598a",
     "/blockly-mooc/craft.json": "895f9457b8e58b55fc2517456016b5ba",
     "/blockly-mooc/dance.json": "895f9457b8e58b55fc2517456016b5ba",
     "/blockly-mooc/fish.json": "e7fd1e597a95b29785a531957cb088fd",
@@ -770,7 +770,7 @@
     "/blockly-mooc/tutorialExplorer.json": "895f9457b8e58b55fc2517456016b5ba",
     "/blockly-mooc/weblab.json": "704c293c2167d95ea6ebe70eeafbb387",
     "/blockly-mooc/signup.json": "44ab4697f6f8059e92c17c1c1a115121",
-    "/blockly-mooc/codebridge.json": "44ab4697f6f8059e92c17c1c1a115121",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "hy-AM": {
@@ -778,7 +778,7 @@
     "/blockly-mooc/ailab.json": "7f52c84dff83daa24cbf4ed9b9dab0a3",
     "/blockly-mooc/applab.json": "f3343113309598147ae601a3ea315312",
     "/blockly-mooc/bounce.json": "d2bee7cb58ff19e631a579ea79f1601b",
-    "/blockly-mooc/common.json": "d2bee7cb58ff19e631a579ea79f1601b",
+    "/blockly-mooc/common.json": "945dbd3098d594046669aeca295810d1",
     "/blockly-mooc/craft.json": "75564b5b68e3e4801adb5c62e76777ef",
     "/blockly-mooc/dance.json": "75564b5b68e3e4801adb5c62e76777ef",
     "/blockly-mooc/fish.json": "7f52c84dff83daa24cbf4ed9b9dab0a3",
@@ -797,7 +797,7 @@
     "/blockly-mooc/tutorialExplorer.json": "75564b5b68e3e4801adb5c62e76777ef",
     "/blockly-mooc/weblab.json": "f3343113309598147ae601a3ea315312",
     "/blockly-mooc/signup.json": "19dd0461b7d482003bb672a1aaa4c92f",
-    "/blockly-mooc/codebridge.json": "19dd0461b7d482003bb672a1aaa4c92f",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "id-ID": {
@@ -805,7 +805,7 @@
     "/blockly-mooc/ailab.json": "84017c2c5713168b77f8303eb5eb3c84",
     "/blockly-mooc/applab.json": "c9a7a396926bc4a320ffabe10ea97f04",
     "/blockly-mooc/bounce.json": "73d074c1f0f7c973124caa0bf39b76dd",
-    "/blockly-mooc/common.json": "73d074c1f0f7c973124caa0bf39b76dd",
+    "/blockly-mooc/common.json": "46d61cdd9f2e59aef7f60e360b758108",
     "/blockly-mooc/craft.json": "73d074c1f0f7c973124caa0bf39b76dd",
     "/blockly-mooc/dance.json": "73d074c1f0f7c973124caa0bf39b76dd",
     "/blockly-mooc/fish.json": "84017c2c5713168b77f8303eb5eb3c84",
@@ -824,7 +824,7 @@
     "/blockly-mooc/tutorialExplorer.json": "73d074c1f0f7c973124caa0bf39b76dd",
     "/blockly-mooc/weblab.json": "c9a7a396926bc4a320ffabe10ea97f04",
     "/blockly-mooc/signup.json": "6f05d14ae2b686100f6ffe4df405384a",
-    "/blockly-mooc/codebridge.json": "6f05d14ae2b686100f6ffe4df405384a",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "is-IS": {
@@ -832,7 +832,7 @@
     "/blockly-mooc/ailab.json": "5b0849e163cc73845adbe3f5c7e7129e",
     "/blockly-mooc/applab.json": "52072d9468ac32f69a4702bde0cc0d60",
     "/blockly-mooc/bounce.json": "824771c5354ddf1a9ec77efbd05b33bb",
-    "/blockly-mooc/common.json": "824771c5354ddf1a9ec77efbd05b33bb",
+    "/blockly-mooc/common.json": "46d61cdd9f2e59aef7f60e360b758108",
     "/blockly-mooc/craft.json": "824771c5354ddf1a9ec77efbd05b33bb",
     "/blockly-mooc/dance.json": "824771c5354ddf1a9ec77efbd05b33bb",
     "/blockly-mooc/fish.json": "5b0849e163cc73845adbe3f5c7e7129e",
@@ -851,7 +851,7 @@
     "/blockly-mooc/tutorialExplorer.json": "824771c5354ddf1a9ec77efbd05b33bb",
     "/blockly-mooc/weblab.json": "52072d9468ac32f69a4702bde0cc0d60",
     "/blockly-mooc/signup.json": "c4da9f3b311e5a1db549e626263e42e0",
-    "/blockly-mooc/codebridge.json": "c4da9f3b311e5a1db549e626263e42e0",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "it-IT": {
@@ -859,7 +859,7 @@
     "/blockly-mooc/ailab.json": "ef4e76fa7be9708e530f24d07a8dc84d",
     "/blockly-mooc/applab.json": "6d4d5851fbb7210029ee7a7e4f745895",
     "/blockly-mooc/bounce.json": "bd0d255f69fa978643f60324de80a50f",
-    "/blockly-mooc/common.json": "869767ae347063146eb88535b9d63673",
+    "/blockly-mooc/common.json": "46d61cdd9f2e59aef7f60e360b758108",
     "/blockly-mooc/craft.json": "bd0d255f69fa978643f60324de80a50f",
     "/blockly-mooc/dance.json": "bd0d255f69fa978643f60324de80a50f",
     "/blockly-mooc/fish.json": "ef4e76fa7be9708e530f24d07a8dc84d",
@@ -878,7 +878,7 @@
     "/blockly-mooc/tutorialExplorer.json": "bd0d255f69fa978643f60324de80a50f",
     "/blockly-mooc/weblab.json": "6d4d5851fbb7210029ee7a7e4f745895",
     "/blockly-mooc/signup.json": "d4e2381f394a9804c88192496327395f",
-    "/blockly-mooc/codebridge.json": "d4e2381f394a9804c88192496327395f",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "ja-JP": {
@@ -886,7 +886,7 @@
     "/blockly-mooc/ailab.json": "d3aade147e79bd09d7220b6fcf95eefc",
     "/blockly-mooc/applab.json": "507b1012bb00044d9289e288d1bf710c",
     "/blockly-mooc/bounce.json": "7c8b670b9564d3f8bde143c6b59d3e3e",
-    "/blockly-mooc/common.json": "7c8b670b9564d3f8bde143c6b59d3e3e",
+    "/blockly-mooc/common.json": "46d61cdd9f2e59aef7f60e360b758108",
     "/blockly-mooc/craft.json": "7c75570f5772559e70f7207b2e6ae08b",
     "/blockly-mooc/dance.json": "7c75570f5772559e70f7207b2e6ae08b",
     "/blockly-mooc/fish.json": "d3aade147e79bd09d7220b6fcf95eefc",
@@ -905,7 +905,7 @@
     "/blockly-mooc/tutorialExplorer.json": "7c75570f5772559e70f7207b2e6ae08b",
     "/blockly-mooc/weblab.json": "507b1012bb00044d9289e288d1bf710c",
     "/blockly-mooc/signup.json": "327830d65b1171683dc00d2ccd41cf22",
-    "/blockly-mooc/codebridge.json": "327830d65b1171683dc00d2ccd41cf22",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "ka-GE": {
@@ -913,7 +913,7 @@
     "/blockly-mooc/ailab.json": "ff26d9fcc533ad2533b38527fa876a8b",
     "/blockly-mooc/applab.json": "91aaed8df1f8bc5892cb3352ae08b119",
     "/blockly-mooc/bounce.json": "ca1724000789428eb66cde1f9e739058",
-    "/blockly-mooc/common.json": "ca1724000789428eb66cde1f9e739058",
+    "/blockly-mooc/common.json": "840c1d79ff62643f48b10c8ecf30598a",
     "/blockly-mooc/craft.json": "ca1724000789428eb66cde1f9e739058",
     "/blockly-mooc/dance.json": "ca1724000789428eb66cde1f9e739058",
     "/blockly-mooc/fish.json": "ff26d9fcc533ad2533b38527fa876a8b",
@@ -932,7 +932,7 @@
     "/blockly-mooc/tutorialExplorer.json": "ca1724000789428eb66cde1f9e739058",
     "/blockly-mooc/weblab.json": "91aaed8df1f8bc5892cb3352ae08b119",
     "/blockly-mooc/signup.json": "9b4a0e7471afe93718e8ad4a92dcc8e9",
-    "/blockly-mooc/codebridge.json": "9b4a0e7471afe93718e8ad4a92dcc8e9",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "kk-KZ": {
@@ -940,7 +940,7 @@
     "/blockly-mooc/ailab.json": "6b209a0ac1670cb0eb82b7402c36ae99",
     "/blockly-mooc/applab.json": "b2dfd32fe2d6e8cb2866a07714ed6cd0",
     "/blockly-mooc/bounce.json": "44ab4697f6f8059e92c17c1c1a115121",
-    "/blockly-mooc/common.json": "44ab4697f6f8059e92c17c1c1a115121",
+    "/blockly-mooc/common.json": "46d61cdd9f2e59aef7f60e360b758108",
     "/blockly-mooc/craft.json": "0fc4ed97b259e86770a879752314bef4",
     "/blockly-mooc/dance.json": "0fc4ed97b259e86770a879752314bef4",
     "/blockly-mooc/fish.json": "6b209a0ac1670cb0eb82b7402c36ae99",
@@ -959,7 +959,7 @@
     "/blockly-mooc/tutorialExplorer.json": "0fc4ed97b259e86770a879752314bef4",
     "/blockly-mooc/weblab.json": "b2dfd32fe2d6e8cb2866a07714ed6cd0",
     "/blockly-mooc/signup.json": "02c5bd63942d8a947a3e54d897eddc5a",
-    "/blockly-mooc/codebridge.json": "02c5bd63942d8a947a3e54d897eddc5a",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "kn-IN": {
@@ -967,7 +967,7 @@
     "/blockly-mooc/ailab.json": "ade6e679d6594bb6b8216b5b97cc36c2",
     "/blockly-mooc/applab.json": "9334e309aedcb50b6a55cf5c828136b1",
     "/blockly-mooc/bounce.json": "40613006040a9d78f596dd3304484140",
-    "/blockly-mooc/common.json": "40613006040a9d78f596dd3304484140",
+    "/blockly-mooc/common.json": "46d61cdd9f2e59aef7f60e360b758108",
     "/blockly-mooc/craft.json": "3d59c98824707dcb2bbf4b45041244e7",
     "/blockly-mooc/dance.json": "3d59c98824707dcb2bbf4b45041244e7",
     "/blockly-mooc/fish.json": "3d59c98824707dcb2bbf4b45041244e7",
@@ -986,7 +986,7 @@
     "/blockly-mooc/tutorialExplorer.json": "3d59c98824707dcb2bbf4b45041244e7",
     "/blockly-mooc/weblab.json": "9334e309aedcb50b6a55cf5c828136b1",
     "/blockly-mooc/signup.json": "7c8b670b9564d3f8bde143c6b59d3e3e",
-    "/blockly-mooc/codebridge.json": "7c8b670b9564d3f8bde143c6b59d3e3e",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "km-KH": {
@@ -994,7 +994,7 @@
     "/blockly-mooc/ailab.json": "8386fb13f6ddcc1e00efe63ba896f7af",
     "/blockly-mooc/applab.json": "114faf1ed8463f8802a157d6b7d76bdc",
     "/blockly-mooc/bounce.json": "e4d06ff72e96e6a405e6809c9b7ea5b9",
-    "/blockly-mooc/common.json": "12b2741ae249141de994c17b3316100b",
+    "/blockly-mooc/common.json": "46d61cdd9f2e59aef7f60e360b758108",
     "/blockly-mooc/craft.json": "e4d06ff72e96e6a405e6809c9b7ea5b9",
     "/blockly-mooc/dance.json": "e4d06ff72e96e6a405e6809c9b7ea5b9",
     "/blockly-mooc/fish.json": "8386fb13f6ddcc1e00efe63ba896f7af",
@@ -1013,7 +1013,7 @@
     "/blockly-mooc/tutorialExplorer.json": "e4d06ff72e96e6a405e6809c9b7ea5b9",
     "/blockly-mooc/weblab.json": "114faf1ed8463f8802a157d6b7d76bdc",
     "/blockly-mooc/signup.json": "847361c293f6f6fb8f2b402056aa2f43",
-    "/blockly-mooc/codebridge.json": "847361c293f6f6fb8f2b402056aa2f43",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "ko-KR": {
@@ -1021,7 +1021,7 @@
     "/blockly-mooc/ailab.json": "56851524a92fbd15a5e30144234fd188",
     "/blockly-mooc/applab.json": "c8b60f1a3dca4a355d31b2acdd40a9d3",
     "/blockly-mooc/bounce.json": "2f36f15c56aae778acf335d3afb33b76",
-    "/blockly-mooc/common.json": "2f36f15c56aae778acf335d3afb33b76",
+    "/blockly-mooc/common.json": "986e791a9013aa3d0d0a08364835006f",
     "/blockly-mooc/craft.json": "e818fe4da9eb7edde36425b8815d56d3",
     "/blockly-mooc/dance.json": "e818fe4da9eb7edde36425b8815d56d3",
     "/blockly-mooc/fish.json": "56851524a92fbd15a5e30144234fd188",
@@ -1040,7 +1040,7 @@
     "/blockly-mooc/tutorialExplorer.json": "e818fe4da9eb7edde36425b8815d56d3",
     "/blockly-mooc/weblab.json": "c8b60f1a3dca4a355d31b2acdd40a9d3",
     "/blockly-mooc/signup.json": "fffe26103c6c974043107eb4f29e978a",
-    "/blockly-mooc/codebridge.json": "fffe26103c6c974043107eb4f29e978a",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "ku-IQ": {
@@ -1048,7 +1048,7 @@
     "/blockly-mooc/ailab.json": "c350861b0c495e7e9f78d4622703d4ef",
     "/blockly-mooc/applab.json": "54285584e89480bdd58b06b69d942915",
     "/blockly-mooc/bounce.json": "1f6a50f79e64f60cf5a3d33fb4aeac69",
-    "/blockly-mooc/common.json": "1f6a50f79e64f60cf5a3d33fb4aeac69",
+    "/blockly-mooc/common.json": "986e791a9013aa3d0d0a08364835006f",
     "/blockly-mooc/craft.json": "9e447ed6b08a04070f5811006d6b582f",
     "/blockly-mooc/dance.json": "9e447ed6b08a04070f5811006d6b582f",
     "/blockly-mooc/fish.json": "9e447ed6b08a04070f5811006d6b582f",
@@ -1067,7 +1067,7 @@
     "/blockly-mooc/tutorialExplorer.json": "9e447ed6b08a04070f5811006d6b582f",
     "/blockly-mooc/weblab.json": "54285584e89480bdd58b06b69d942915",
     "/blockly-mooc/signup.json": "2f8ea36d4d5327f111be784b1c6a06eb",
-    "/blockly-mooc/codebridge.json": "2f8ea36d4d5327f111be784b1c6a06eb",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "ky-KG": {
@@ -1099,7 +1099,7 @@
     "/blockly-mooc/ailab.json": "a989ad8f6608f0cc00d6b64f6988269e",
     "/blockly-mooc/applab.json": "fde505e502778aee0418e12385ad2f4c",
     "/blockly-mooc/bounce.json": "27a83318d1fa895fac80d9e86be0a88e",
-    "/blockly-mooc/common.json": "27a83318d1fa895fac80d9e86be0a88e",
+    "/blockly-mooc/common.json": "986e791a9013aa3d0d0a08364835006f",
     "/blockly-mooc/craft.json": "27a83318d1fa895fac80d9e86be0a88e",
     "/blockly-mooc/dance.json": "27a83318d1fa895fac80d9e86be0a88e",
     "/blockly-mooc/fish.json": "a989ad8f6608f0cc00d6b64f6988269e",
@@ -1118,7 +1118,7 @@
     "/blockly-mooc/tutorialExplorer.json": "27a83318d1fa895fac80d9e86be0a88e",
     "/blockly-mooc/weblab.json": "fde505e502778aee0418e12385ad2f4c",
     "/blockly-mooc/signup.json": "f044afc6801c328e707b75026e12889f",
-    "/blockly-mooc/codebridge.json": "f044afc6801c328e707b75026e12889f",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "lv-LV": {
@@ -1126,7 +1126,7 @@
     "/blockly-mooc/ailab.json": "cb4a7e27de23aacc13498595865107e5",
     "/blockly-mooc/applab.json": "4344ad4f7537b239deff6cc1eb92fa7a",
     "/blockly-mooc/bounce.json": "7fb16d413921379ef5652ecae01d701f",
-    "/blockly-mooc/common.json": "7fb16d413921379ef5652ecae01d701f",
+    "/blockly-mooc/common.json": "986e791a9013aa3d0d0a08364835006f",
     "/blockly-mooc/craft.json": "334d20b2af2ad29e13db63525e5e0da0",
     "/blockly-mooc/dance.json": "334d20b2af2ad29e13db63525e5e0da0",
     "/blockly-mooc/fish.json": "cb4a7e27de23aacc13498595865107e5",
@@ -1145,7 +1145,7 @@
     "/blockly-mooc/tutorialExplorer.json": "334d20b2af2ad29e13db63525e5e0da0",
     "/blockly-mooc/weblab.json": "4344ad4f7537b239deff6cc1eb92fa7a",
     "/blockly-mooc/signup.json": "2a921b0dcf7ef2a4667a9994392f094c",
-    "/blockly-mooc/codebridge.json": "2a921b0dcf7ef2a4667a9994392f094c",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "mi-NZ": {
@@ -1153,7 +1153,7 @@
     "/blockly-mooc/ailab.json": "d763df26bdb2f39e356b2bc858b2febe",
     "/blockly-mooc/applab.json": "5360d926d920e64ac1018f9638c85b2b",
     "/blockly-mooc/bounce.json": "5e4dafc6ea4ba2dcf3a86f72ad1a3628",
-    "/blockly-mooc/common.json": "5e4dafc6ea4ba2dcf3a86f72ad1a3628",
+    "/blockly-mooc/common.json": "986e791a9013aa3d0d0a08364835006f",
     "/blockly-mooc/craft.json": "5e4dafc6ea4ba2dcf3a86f72ad1a3628",
     "/blockly-mooc/dance.json": "5e4dafc6ea4ba2dcf3a86f72ad1a3628",
     "/blockly-mooc/fish.json": "d763df26bdb2f39e356b2bc858b2febe",
@@ -1172,7 +1172,7 @@
     "/blockly-mooc/tutorialExplorer.json": "5e4dafc6ea4ba2dcf3a86f72ad1a3628",
     "/blockly-mooc/weblab.json": "5360d926d920e64ac1018f9638c85b2b",
     "/blockly-mooc/signup.json": "608135979918022bfbb5913176c73815",
-    "/blockly-mooc/codebridge.json": "608135979918022bfbb5913176c73815",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "mk-MK": {
@@ -1180,7 +1180,7 @@
     "/blockly-mooc/ailab.json": "414f828b887d5241b226b83369646dc7",
     "/blockly-mooc/applab.json": "c984f7abdf39d32dcad5d388ce6b04cd",
     "/blockly-mooc/bounce.json": "4cc6cfcdc8149465b6c2014b9c926f96",
-    "/blockly-mooc/common.json": "91fba726f2ccfb803a77a296ce68a6d7",
+    "/blockly-mooc/common.json": "986e791a9013aa3d0d0a08364835006f",
     "/blockly-mooc/craft.json": "28bbdb5dbb8bc6a0357942a684f7145f",
     "/blockly-mooc/dance.json": "8ac06655961e0387ea969b6a81720db0",
     "/blockly-mooc/fish.json": "414f828b887d5241b226b83369646dc7",
@@ -1199,7 +1199,7 @@
     "/blockly-mooc/tutorialExplorer.json": "8ac06655961e0387ea969b6a81720db0",
     "/blockly-mooc/weblab.json": "c984f7abdf39d32dcad5d388ce6b04cd",
     "/blockly-mooc/signup.json": "27948c7c585155f59dd7175072790376",
-    "/blockly-mooc/codebridge.json": "27948c7c585155f59dd7175072790376",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "mn-MN": {
@@ -1207,7 +1207,7 @@
     "/blockly-mooc/ailab.json": "04e3e9fd67dde0e831a3ffec8490d2d5",
     "/blockly-mooc/applab.json": "a9d2eee23cbfe2bb7339da0efb5fb30e",
     "/blockly-mooc/bounce.json": "3117ce8050d9eb726cdb7636aec1f436",
-    "/blockly-mooc/common.json": "3edecab3b9a8bd5a02429733a8dd8653",
+    "/blockly-mooc/common.json": "986e791a9013aa3d0d0a08364835006f",
     "/blockly-mooc/craft.json": "3117ce8050d9eb726cdb7636aec1f436",
     "/blockly-mooc/dance.json": "3117ce8050d9eb726cdb7636aec1f436",
     "/blockly-mooc/fish.json": "04e3e9fd67dde0e831a3ffec8490d2d5",
@@ -1226,7 +1226,7 @@
     "/blockly-mooc/tutorialExplorer.json": "3117ce8050d9eb726cdb7636aec1f436",
     "/blockly-mooc/weblab.json": "a9d2eee23cbfe2bb7339da0efb5fb30e",
     "/blockly-mooc/signup.json": "f6b3e9ac8f8f8f224aa3dae8b35ed0fa",
-    "/blockly-mooc/codebridge.json": "f6b3e9ac8f8f8f224aa3dae8b35ed0fa",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "mr-IN": {
@@ -1234,7 +1234,7 @@
     "/blockly-mooc/ailab.json": "33f201f3fbb64a5d39ba5c68025a0505",
     "/blockly-mooc/applab.json": "dd7135eed968a204073becf7c47260e0",
     "/blockly-mooc/bounce.json": "ab0618538addb62952425bb5aa4be6c8",
-    "/blockly-mooc/common.json": "ab0618538addb62952425bb5aa4be6c8",
+    "/blockly-mooc/common.json": "986e791a9013aa3d0d0a08364835006f",
     "/blockly-mooc/craft.json": "ab0618538addb62952425bb5aa4be6c8",
     "/blockly-mooc/dance.json": "ab0618538addb62952425bb5aa4be6c8",
     "/blockly-mooc/fish.json": "379b4bf1a65aff3a2099628c2f3e5e59",
@@ -1253,7 +1253,7 @@
     "/blockly-mooc/tutorialExplorer.json": "ab0618538addb62952425bb5aa4be6c8",
     "/blockly-mooc/weblab.json": "dd7135eed968a204073becf7c47260e0",
     "/blockly-mooc/signup.json": "40613006040a9d78f596dd3304484140",
-    "/blockly-mooc/codebridge.json": "40613006040a9d78f596dd3304484140",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "ms-MY": {
@@ -1261,7 +1261,7 @@
     "/blockly-mooc/ailab.json": "28e367ab3f57c7c428f7983d5ec937e3",
     "/blockly-mooc/applab.json": "21607112c7bf9ae50f0e008d5e6369a6",
     "/blockly-mooc/bounce.json": "a5cc9178460df48172981159502b920c",
-    "/blockly-mooc/common.json": "a5cc9178460df48172981159502b920c",
+    "/blockly-mooc/common.json": "986e791a9013aa3d0d0a08364835006f",
     "/blockly-mooc/craft.json": "a5cc9178460df48172981159502b920c",
     "/blockly-mooc/dance.json": "a5cc9178460df48172981159502b920c",
     "/blockly-mooc/fish.json": "28e367ab3f57c7c428f7983d5ec937e3",
@@ -1280,7 +1280,7 @@
     "/blockly-mooc/tutorialExplorer.json": "a5cc9178460df48172981159502b920c",
     "/blockly-mooc/weblab.json": "21607112c7bf9ae50f0e008d5e6369a6",
     "/blockly-mooc/signup.json": "ce96f67bcd8e4321b23b5e72bcb9e455",
-    "/blockly-mooc/codebridge.json": "ce96f67bcd8e4321b23b5e72bcb9e455",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "mt-MT": {
@@ -1288,7 +1288,7 @@
     "/blockly-mooc/ailab.json": "564864b3e69f799ff3de23cd94009551",
     "/blockly-mooc/applab.json": "b37b8c0c250ec44cbcbf915aa5ce24be",
     "/blockly-mooc/bounce.json": "4cc6cfcdc8149465b6c2014b9c926f96",
-    "/blockly-mooc/common.json": "91fba726f2ccfb803a77a296ce68a6d7",
+    "/blockly-mooc/common.json": "986e791a9013aa3d0d0a08364835006f",
     "/blockly-mooc/craft.json": "28bbdb5dbb8bc6a0357942a684f7145f",
     "/blockly-mooc/dance.json": "59ab9b30ef15afd0a7be3d882dd9b412",
     "/blockly-mooc/fish.json": "59ab9b30ef15afd0a7be3d882dd9b412",
@@ -1307,7 +1307,7 @@
     "/blockly-mooc/tutorialExplorer.json": "53a06bcb36919ff1683883b47c86d04c",
     "/blockly-mooc/weblab.json": "b37b8c0c250ec44cbcbf915aa5ce24be",
     "/blockly-mooc/signup.json": "c9328b8d5d17b53ae8a22109d76652ce",
-    "/blockly-mooc/codebridge.json": "c9328b8d5d17b53ae8a22109d76652ce",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "my-MM": {
@@ -1315,7 +1315,7 @@
     "/blockly-mooc/ailab.json": "a41305c1e3ade01832bdf7485875b5ae",
     "/blockly-mooc/applab.json": "1a8b1205f9bd749bddd0b5bd21faee24",
     "/blockly-mooc/bounce.json": "d3daf442d6b2ea0eca2a82eaca707f54",
-    "/blockly-mooc/common.json": "d3daf442d6b2ea0eca2a82eaca707f54",
+    "/blockly-mooc/common.json": "6ba24cbc22f3ba94bf30a567888a33d5",
     "/blockly-mooc/craft.json": "d3daf442d6b2ea0eca2a82eaca707f54",
     "/blockly-mooc/dance.json": "d3daf442d6b2ea0eca2a82eaca707f54",
     "/blockly-mooc/fish.json": "a41305c1e3ade01832bdf7485875b5ae",
@@ -1334,7 +1334,7 @@
     "/blockly-mooc/tutorialExplorer.json": "d3daf442d6b2ea0eca2a82eaca707f54",
     "/blockly-mooc/weblab.json": "1a8b1205f9bd749bddd0b5bd21faee24",
     "/blockly-mooc/signup.json": "a529282d3480a0fe772c2226e9f1beba",
-    "/blockly-mooc/codebridge.json": "a529282d3480a0fe772c2226e9f1beba",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "ne-NP": {
@@ -1342,7 +1342,7 @@
     "/blockly-mooc/ailab.json": "d5d23ccfcbbdc3da8dac7236fdbd9885",
     "/blockly-mooc/applab.json": "764645c8221e542d14d7c5c386c25515",
     "/blockly-mooc/bounce.json": "efac7e015e1ce866378558646be2d4f6",
-    "/blockly-mooc/common.json": "efac7e015e1ce866378558646be2d4f6",
+    "/blockly-mooc/common.json": "14ab1bd5d435858bc72f6d3e4d526475",
     "/blockly-mooc/craft.json": "efac7e015e1ce866378558646be2d4f6",
     "/blockly-mooc/dance.json": "efac7e015e1ce866378558646be2d4f6",
     "/blockly-mooc/fish.json": "d5d23ccfcbbdc3da8dac7236fdbd9885",
@@ -1361,7 +1361,7 @@
     "/blockly-mooc/tutorialExplorer.json": "efac7e015e1ce866378558646be2d4f6",
     "/blockly-mooc/weblab.json": "764645c8221e542d14d7c5c386c25515",
     "/blockly-mooc/signup.json": "5367c17e35eb244ae9f04566dc4be2b4",
-    "/blockly-mooc/codebridge.json": "5367c17e35eb244ae9f04566dc4be2b4",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "nl-NL": {
@@ -1369,7 +1369,7 @@
     "/blockly-mooc/ailab.json": "6206c9f0e03a051eb98e232eb79c3d8e",
     "/blockly-mooc/applab.json": "9c7bff7c33d0f27041a97f83382b4478",
     "/blockly-mooc/bounce.json": "c92df54d3bee351093e940465624ddb5",
-    "/blockly-mooc/common.json": "c92df54d3bee351093e940465624ddb5",
+    "/blockly-mooc/common.json": "9ff425b34823d262b7d890c368676230",
     "/blockly-mooc/craft.json": "c92df54d3bee351093e940465624ddb5",
     "/blockly-mooc/dance.json": "6593a12ffdd181e017641566892ad0cd",
     "/blockly-mooc/fish.json": "6593a12ffdd181e017641566892ad0cd",
@@ -1388,7 +1388,7 @@
     "/blockly-mooc/tutorialExplorer.json": "c92df54d3bee351093e940465624ddb5",
     "/blockly-mooc/weblab.json": "9c7bff7c33d0f27041a97f83382b4478",
     "/blockly-mooc/signup.json": "98ec6b42bac940a58ea5e9fe5ef53d1a",
-    "/blockly-mooc/codebridge.json": "98ec6b42bac940a58ea5e9fe5ef53d1a",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "nn-NO": {
@@ -1396,7 +1396,7 @@
     "/blockly-mooc/ailab.json": "bf70191d6b44dcd2bb74a8ab77775ffd",
     "/blockly-mooc/applab.json": "9eb992714898338a96b3b8bcc2aeeee9",
     "/blockly-mooc/bounce.json": "3a99f4a7b9b472f9d54fa2d111eef3bf",
-    "/blockly-mooc/common.json": "52961024eea7d833ed275091b6015b0a",
+    "/blockly-mooc/common.json": "14ab1bd5d435858bc72f6d3e4d526475",
     "/blockly-mooc/craft.json": "3a99f4a7b9b472f9d54fa2d111eef3bf",
     "/blockly-mooc/dance.json": "3a99f4a7b9b472f9d54fa2d111eef3bf",
     "/blockly-mooc/fish.json": "bf70191d6b44dcd2bb74a8ab77775ffd",
@@ -1415,7 +1415,7 @@
     "/blockly-mooc/tutorialExplorer.json": "3a99f4a7b9b472f9d54fa2d111eef3bf",
     "/blockly-mooc/weblab.json": "9eb992714898338a96b3b8bcc2aeeee9",
     "/blockly-mooc/signup.json": "9eb992714898338a96b3b8bcc2aeeee9",
-    "/blockly-mooc/codebridge.json": "9eb992714898338a96b3b8bcc2aeeee9",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "no-NO": {
@@ -1423,7 +1423,7 @@
     "/blockly-mooc/ailab.json": "5e151bc58dd1df906dea7b7ba4f47d35",
     "/blockly-mooc/applab.json": "8a99c09aa02e170f91a8da9e38afbaa6",
     "/blockly-mooc/bounce.json": "b0304ad37ed449832c2422164018071c",
-    "/blockly-mooc/common.json": "b0304ad37ed449832c2422164018071c",
+    "/blockly-mooc/common.json": "14ab1bd5d435858bc72f6d3e4d526475",
     "/blockly-mooc/craft.json": "9f25d2d2b58ee3173a0f597051aa831e",
     "/blockly-mooc/dance.json": "9f25d2d2b58ee3173a0f597051aa831e",
     "/blockly-mooc/fish.json": "5e151bc58dd1df906dea7b7ba4f47d35",
@@ -1442,7 +1442,7 @@
     "/blockly-mooc/tutorialExplorer.json": "9f25d2d2b58ee3173a0f597051aa831e",
     "/blockly-mooc/weblab.json": "8a99c09aa02e170f91a8da9e38afbaa6",
     "/blockly-mooc/signup.json": "8a99c09aa02e170f91a8da9e38afbaa6",
-    "/blockly-mooc/codebridge.json": "8a99c09aa02e170f91a8da9e38afbaa6",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "pl-PL": {
@@ -1450,7 +1450,7 @@
     "/blockly-mooc/ailab.json": "47605459651b4a1c4962987a0b0fc153",
     "/blockly-mooc/applab.json": "c7b9bf4f7d1dafeea80a8a509bdd6dbb",
     "/blockly-mooc/bounce.json": "749da45c595e201d34d0b293e549425f",
-    "/blockly-mooc/common.json": "a8057b133ddab5fcefaad5fd52b37703",
+    "/blockly-mooc/common.json": "14ab1bd5d435858bc72f6d3e4d526475",
     "/blockly-mooc/craft.json": "749da45c595e201d34d0b293e549425f",
     "/blockly-mooc/dance.json": "749da45c595e201d34d0b293e549425f",
     "/blockly-mooc/fish.json": "47605459651b4a1c4962987a0b0fc153",
@@ -1469,7 +1469,7 @@
     "/blockly-mooc/tutorialExplorer.json": "749da45c595e201d34d0b293e549425f",
     "/blockly-mooc/weblab.json": "c7b9bf4f7d1dafeea80a8a509bdd6dbb",
     "/blockly-mooc/signup.json": "9a39f28fcf511bedf7f759d510b77e57",
-    "/blockly-mooc/codebridge.json": "9a39f28fcf511bedf7f759d510b77e57",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "ps-AF": {
@@ -1501,7 +1501,7 @@
     "/blockly-mooc/ailab.json": "6cc4300096931ec46a9a488f35cd7c37",
     "/blockly-mooc/applab.json": "3db2f63a8a6debee40dfe40bf6c93dd2",
     "/blockly-mooc/bounce.json": "531ad8664c775754141f2d110cc92cee",
-    "/blockly-mooc/common.json": "531ad8664c775754141f2d110cc92cee",
+    "/blockly-mooc/common.json": "14ab1bd5d435858bc72f6d3e4d526475",
     "/blockly-mooc/craft.json": "531ad8664c775754141f2d110cc92cee",
     "/blockly-mooc/dance.json": "531ad8664c775754141f2d110cc92cee",
     "/blockly-mooc/fish.json": "6cc4300096931ec46a9a488f35cd7c37",
@@ -1520,7 +1520,7 @@
     "/blockly-mooc/tutorialExplorer.json": "531ad8664c775754141f2d110cc92cee",
     "/blockly-mooc/weblab.json": "3db2f63a8a6debee40dfe40bf6c93dd2",
     "/blockly-mooc/signup.json": "265cda8fdf09b9233f8ac61abf26d6a6",
-    "/blockly-mooc/codebridge.json": "265cda8fdf09b9233f8ac61abf26d6a6",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "pt-PT": {
@@ -1528,7 +1528,7 @@
     "/blockly-mooc/ailab.json": "a940b253d926eb20f355481a8afa507e",
     "/blockly-mooc/applab.json": "4da2e54dbfa62a83e2972bb69489f018",
     "/blockly-mooc/bounce.json": "3a5db26d9d40423e941eb533ec5b53d9",
-    "/blockly-mooc/common.json": "3a5db26d9d40423e941eb533ec5b53d9",
+    "/blockly-mooc/common.json": "14ab1bd5d435858bc72f6d3e4d526475",
     "/blockly-mooc/craft.json": "3a5db26d9d40423e941eb533ec5b53d9",
     "/blockly-mooc/dance.json": "6134e13fd0ea7d5b64c3cfa97b799f18",
     "/blockly-mooc/fish.json": "a940b253d926eb20f355481a8afa507e",
@@ -1547,7 +1547,7 @@
     "/blockly-mooc/tutorialExplorer.json": "3a5db26d9d40423e941eb533ec5b53d9",
     "/blockly-mooc/weblab.json": "4da2e54dbfa62a83e2972bb69489f018",
     "/blockly-mooc/signup.json": "a8057b133ddab5fcefaad5fd52b37703",
-    "/blockly-mooc/codebridge.json": "a8057b133ddab5fcefaad5fd52b37703",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "ro-RO": {
@@ -1555,7 +1555,7 @@
     "/blockly-mooc/ailab.json": "c4bb19ed924e0d7e52bad713fd080b51",
     "/blockly-mooc/applab.json": "1f693ec7998ccb40a9dbe606f4bafd87",
     "/blockly-mooc/bounce.json": "c50405410f28c2203b39c124bdd7a915",
-    "/blockly-mooc/common.json": "c50405410f28c2203b39c124bdd7a915",
+    "/blockly-mooc/common.json": "88bbf2e07ca2676dbeb1aefe9e1408c8",
     "/blockly-mooc/craft.json": "c50405410f28c2203b39c124bdd7a915",
     "/blockly-mooc/dance.json": "c50405410f28c2203b39c124bdd7a915",
     "/blockly-mooc/fish.json": "c4bb19ed924e0d7e52bad713fd080b51",
@@ -1574,7 +1574,7 @@
     "/blockly-mooc/tutorialExplorer.json": "c50405410f28c2203b39c124bdd7a915",
     "/blockly-mooc/weblab.json": "1f693ec7998ccb40a9dbe606f4bafd87",
     "/blockly-mooc/signup.json": "08197e90ec12919c3d5d5dc0e02f70bb",
-    "/blockly-mooc/codebridge.json": "08197e90ec12919c3d5d5dc0e02f70bb",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "ru-RU": {
@@ -1582,7 +1582,7 @@
     "/blockly-mooc/ailab.json": "4830229d8c8a93e9701534bcbabc3bf2",
     "/blockly-mooc/applab.json": "5974090e8e5bb7df66c421205f5c139e",
     "/blockly-mooc/bounce.json": "82acb2c25502a6513fea73a0d3df18bf",
-    "/blockly-mooc/common.json": "82acb2c25502a6513fea73a0d3df18bf",
+    "/blockly-mooc/common.json": "88bbf2e07ca2676dbeb1aefe9e1408c8",
     "/blockly-mooc/craft.json": "26d8bd9a98dc1b2b6c3ffa9af9d6d6e7",
     "/blockly-mooc/dance.json": "26d8bd9a98dc1b2b6c3ffa9af9d6d6e7",
     "/blockly-mooc/fish.json": "4830229d8c8a93e9701534bcbabc3bf2",
@@ -1601,7 +1601,7 @@
     "/blockly-mooc/tutorialExplorer.json": "26d8bd9a98dc1b2b6c3ffa9af9d6d6e7",
     "/blockly-mooc/weblab.json": "5974090e8e5bb7df66c421205f5c139e",
     "/blockly-mooc/signup.json": "3c9607c2fbbef44bb9ef430239da307a",
-    "/blockly-mooc/codebridge.json": "3c9607c2fbbef44bb9ef430239da307a",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "se-FI": {
@@ -1609,7 +1609,7 @@
     "/blockly-mooc/ailab.json": "40bc8af2b134442dde3f037d5bfeea9c",
     "/blockly-mooc/applab.json": "8ec4bf6e2806ba6417b57883b739c390",
     "/blockly-mooc/bounce.json": "4cec41d3d54bf53414324e818266a187",
-    "/blockly-mooc/common.json": "4cec41d3d54bf53414324e818266a187",
+    "/blockly-mooc/common.json": "14ab1bd5d435858bc72f6d3e4d526475",
     "/blockly-mooc/craft.json": "4cec41d3d54bf53414324e818266a187",
     "/blockly-mooc/dance.json": "4cec41d3d54bf53414324e818266a187",
     "/blockly-mooc/fish.json": "40bc8af2b134442dde3f037d5bfeea9c",
@@ -1628,7 +1628,7 @@
     "/blockly-mooc/tutorialExplorer.json": "4cec41d3d54bf53414324e818266a187",
     "/blockly-mooc/weblab.json": "8ec4bf6e2806ba6417b57883b739c390",
     "/blockly-mooc/signup.json": "a2dd3f35724ff89efc7f6ba3dfeb7bae",
-    "/blockly-mooc/codebridge.json": "a2dd3f35724ff89efc7f6ba3dfeb7bae",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "sm-WS": {
@@ -1636,7 +1636,7 @@
     "/blockly-mooc/ailab.json": "e57d80d897d76e05f38b7257fd39ffa4",
     "/blockly-mooc/applab.json": "9628d33fad944ed48aa9ad30c41e202b",
     "/blockly-mooc/bounce.json": "12afca5f3931f9d316d8cdafab0fe4a4",
-    "/blockly-mooc/common.json": "12afca5f3931f9d316d8cdafab0fe4a4",
+    "/blockly-mooc/common.json": "39590cb6c826a289a3f5e8a4a628881f",
     "/blockly-mooc/craft.json": "12afca5f3931f9d316d8cdafab0fe4a4",
     "/blockly-mooc/dance.json": "12afca5f3931f9d316d8cdafab0fe4a4",
     "/blockly-mooc/fish.json": "e57d80d897d76e05f38b7257fd39ffa4",
@@ -1655,7 +1655,7 @@
     "/blockly-mooc/tutorialExplorer.json": "12afca5f3931f9d316d8cdafab0fe4a4",
     "/blockly-mooc/weblab.json": "9628d33fad944ed48aa9ad30c41e202b",
     "/blockly-mooc/signup.json": "ae4889ef793229196e0591c69588dccf",
-    "/blockly-mooc/codebridge.json": "ae4889ef793229196e0591c69588dccf",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "si-LK": {
@@ -1663,7 +1663,7 @@
     "/blockly-mooc/ailab.json": "dc41ea7d128134c03c6b82b75b73a951",
     "/blockly-mooc/applab.json": "b88b3eeafbd4dc83dda7978b54f87fbe",
     "/blockly-mooc/bounce.json": "eccdc24bc6d06631defbcaac3c07431f",
-    "/blockly-mooc/common.json": "eccdc24bc6d06631defbcaac3c07431f",
+    "/blockly-mooc/common.json": "88bbf2e07ca2676dbeb1aefe9e1408c8",
     "/blockly-mooc/craft.json": "eccdc24bc6d06631defbcaac3c07431f",
     "/blockly-mooc/dance.json": "eccdc24bc6d06631defbcaac3c07431f",
     "/blockly-mooc/fish.json": "dc41ea7d128134c03c6b82b75b73a951",
@@ -1682,7 +1682,7 @@
     "/blockly-mooc/tutorialExplorer.json": "eccdc24bc6d06631defbcaac3c07431f",
     "/blockly-mooc/weblab.json": "b88b3eeafbd4dc83dda7978b54f87fbe",
     "/blockly-mooc/signup.json": "07c79c7b4b78fb71e4dc0cb28db7b740",
-    "/blockly-mooc/codebridge.json": "07c79c7b4b78fb71e4dc0cb28db7b740",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "sk-SK": {
@@ -1690,7 +1690,7 @@
     "/blockly-mooc/ailab.json": "5e4d756f27074d30466bfa319f1e4c59",
     "/blockly-mooc/applab.json": "75d979a04314d13125eeca1ed7395630",
     "/blockly-mooc/bounce.json": "7ba343521b76c1f0c4389b465809d714",
-    "/blockly-mooc/common.json": "7ba343521b76c1f0c4389b465809d714",
+    "/blockly-mooc/common.json": "88bbf2e07ca2676dbeb1aefe9e1408c8",
     "/blockly-mooc/craft.json": "7ba343521b76c1f0c4389b465809d714",
     "/blockly-mooc/dance.json": "21f917656840475a8fe5bde329206e01",
     "/blockly-mooc/fish.json": "5e4d756f27074d30466bfa319f1e4c59",
@@ -1709,7 +1709,7 @@
     "/blockly-mooc/tutorialExplorer.json": "7ba343521b76c1f0c4389b465809d714",
     "/blockly-mooc/weblab.json": "75d979a04314d13125eeca1ed7395630",
     "/blockly-mooc/signup.json": "bb645c8acb874e53ed1cbef610864951",
-    "/blockly-mooc/codebridge.json": "bb645c8acb874e53ed1cbef610864951",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "sl-SI": {
@@ -1717,7 +1717,7 @@
     "/blockly-mooc/ailab.json": "55425768f0388903da192c1205681166",
     "/blockly-mooc/applab.json": "fe4f39d61ca06aa91e94eeb4e207194f",
     "/blockly-mooc/bounce.json": "a5bf149a4574e0117a893f51084fb839",
-    "/blockly-mooc/common.json": "a5bf149a4574e0117a893f51084fb839",
+    "/blockly-mooc/common.json": "88bbf2e07ca2676dbeb1aefe9e1408c8",
     "/blockly-mooc/craft.json": "ee4e3d4d82e09ec3161a98ecef00fc3a",
     "/blockly-mooc/dance.json": "ee4e3d4d82e09ec3161a98ecef00fc3a",
     "/blockly-mooc/fish.json": "ee4e3d4d82e09ec3161a98ecef00fc3a",
@@ -1736,7 +1736,7 @@
     "/blockly-mooc/tutorialExplorer.json": "ee4e3d4d82e09ec3161a98ecef00fc3a",
     "/blockly-mooc/weblab.json": "fe4f39d61ca06aa91e94eeb4e207194f",
     "/blockly-mooc/signup.json": "8f49bfbb55eeef6ba4ea98a56f741219",
-    "/blockly-mooc/codebridge.json": "8f49bfbb55eeef6ba4ea98a56f741219",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "sq-AL": {
@@ -1744,7 +1744,7 @@
     "/blockly-mooc/ailab.json": "2b70845b8146b9ad677dc0be34d91689",
     "/blockly-mooc/applab.json": "f5536bde4643d4184e000a5d95737237",
     "/blockly-mooc/bounce.json": "9f0e88ba2ace3fb6e4bcfb599ab37745",
-    "/blockly-mooc/common.json": "9f0e88ba2ace3fb6e4bcfb599ab37745",
+    "/blockly-mooc/common.json": "db919a1c579a7afa782bf40b6b44a8e2",
     "/blockly-mooc/craft.json": "9f0e88ba2ace3fb6e4bcfb599ab37745",
     "/blockly-mooc/dance.json": "9f0e88ba2ace3fb6e4bcfb599ab37745",
     "/blockly-mooc/fish.json": "2b70845b8146b9ad677dc0be34d91689",
@@ -1763,7 +1763,7 @@
     "/blockly-mooc/tutorialExplorer.json": "9f0e88ba2ace3fb6e4bcfb599ab37745",
     "/blockly-mooc/weblab.json": "f5536bde4643d4184e000a5d95737237",
     "/blockly-mooc/signup.json": "c4d52d145c86eef1a69f47a026a950d8",
-    "/blockly-mooc/codebridge.json": "c4d52d145c86eef1a69f47a026a950d8",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "sr-SP": {
@@ -1771,7 +1771,7 @@
     "/blockly-mooc/ailab.json": "f3a9087a7958c9ccffaece92d1c75219",
     "/blockly-mooc/applab.json": "8713667961d5293083c4be9dcd5b65ca",
     "/blockly-mooc/bounce.json": "ac5e303ca7142a2c2e7c880528e03d6f",
-    "/blockly-mooc/common.json": "ac5e303ca7142a2c2e7c880528e03d6f",
+    "/blockly-mooc/common.json": "88bbf2e07ca2676dbeb1aefe9e1408c8",
     "/blockly-mooc/craft.json": "ac5e303ca7142a2c2e7c880528e03d6f",
     "/blockly-mooc/dance.json": "ac5e303ca7142a2c2e7c880528e03d6f",
     "/blockly-mooc/fish.json": "f3a9087a7958c9ccffaece92d1c75219",
@@ -1790,7 +1790,7 @@
     "/blockly-mooc/tutorialExplorer.json": "ac5e303ca7142a2c2e7c880528e03d6f",
     "/blockly-mooc/weblab.json": "8713667961d5293083c4be9dcd5b65ca",
     "/blockly-mooc/signup.json": "4810515d9517032ed63d747aa62972c0",
-    "/blockly-mooc/codebridge.json": "4810515d9517032ed63d747aa62972c0",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "sv-SE": {
@@ -1798,7 +1798,7 @@
     "/blockly-mooc/ailab.json": "260a8984ff26272ef8e42936cb5c2278",
     "/blockly-mooc/applab.json": "632244870ac2efd34046818fc607d5ce",
     "/blockly-mooc/bounce.json": "53aaf62d485b96d65a1ac57d5d6e7505",
-    "/blockly-mooc/common.json": "53aaf62d485b96d65a1ac57d5d6e7505",
+    "/blockly-mooc/common.json": "e384fd5cdf0dca41d3a9fb22e070310d",
     "/blockly-mooc/craft.json": "53aaf62d485b96d65a1ac57d5d6e7505",
     "/blockly-mooc/dance.json": "53aaf62d485b96d65a1ac57d5d6e7505",
     "/blockly-mooc/fish.json": "260a8984ff26272ef8e42936cb5c2278",
@@ -1817,7 +1817,7 @@
     "/blockly-mooc/tutorialExplorer.json": "53aaf62d485b96d65a1ac57d5d6e7505",
     "/blockly-mooc/weblab.json": "632244870ac2efd34046818fc607d5ce",
     "/blockly-mooc/signup.json": "dc9209a217de288d38ce3510c796f79f",
-    "/blockly-mooc/codebridge.json": "dc9209a217de288d38ce3510c796f79f",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "ta-IN": {
@@ -1825,7 +1825,7 @@
     "/blockly-mooc/ailab.json": "4df3ea22cf57905581a1398bc3075517",
     "/blockly-mooc/applab.json": "27684db0326115e4348b143c73c69c49",
     "/blockly-mooc/bounce.json": "375c7c928690f6664076a5c9a41ad22a",
-    "/blockly-mooc/common.json": "375c7c928690f6664076a5c9a41ad22a",
+    "/blockly-mooc/common.json": "e384fd5cdf0dca41d3a9fb22e070310d",
     "/blockly-mooc/craft.json": "375c7c928690f6664076a5c9a41ad22a",
     "/blockly-mooc/dance.json": "375c7c928690f6664076a5c9a41ad22a",
     "/blockly-mooc/fish.json": "e5cd2e8ff71d0339cb59cfc90dc1f46a",
@@ -1844,7 +1844,7 @@
     "/blockly-mooc/tutorialExplorer.json": "375c7c928690f6664076a5c9a41ad22a",
     "/blockly-mooc/weblab.json": "27684db0326115e4348b143c73c69c49",
     "/blockly-mooc/signup.json": "d2bee7cb58ff19e631a579ea79f1601b",
-    "/blockly-mooc/codebridge.json": "d2bee7cb58ff19e631a579ea79f1601b",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "te-IN": {
@@ -1852,7 +1852,7 @@
     "/blockly-mooc/ailab.json": "92933bc5eadbe430fd253fe3f4e4836c",
     "/blockly-mooc/applab.json": "834b62a043da2f167fad517800bfcded",
     "/blockly-mooc/bounce.json": "b9b0b4f11c1536df5da60fc756ac1360",
-    "/blockly-mooc/common.json": "a84ed2c98c559cf49ad526dfc911bbc0",
+    "/blockly-mooc/common.json": "e384fd5cdf0dca41d3a9fb22e070310d",
     "/blockly-mooc/craft.json": "b9b0b4f11c1536df5da60fc756ac1360",
     "/blockly-mooc/dance.json": "b9b0b4f11c1536df5da60fc756ac1360",
     "/blockly-mooc/fish.json": "92933bc5eadbe430fd253fe3f4e4836c",
@@ -1871,7 +1871,7 @@
     "/blockly-mooc/tutorialExplorer.json": "b9b0b4f11c1536df5da60fc756ac1360",
     "/blockly-mooc/weblab.json": "834b62a043da2f167fad517800bfcded",
     "/blockly-mooc/signup.json": "869767ae347063146eb88535b9d63673",
-    "/blockly-mooc/codebridge.json": "869767ae347063146eb88535b9d63673",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "tg-TJ": {
@@ -1903,7 +1903,7 @@
     "/blockly-mooc/ailab.json": "fb8e703e70c519c622f00f23a1e10ecd",
     "/blockly-mooc/applab.json": "4e44567251d7cb506a2d93a5183d048a",
     "/blockly-mooc/bounce.json": "f6b3e9ac8f8f8f224aa3dae8b35ed0fa",
-    "/blockly-mooc/common.json": "f6b3e9ac8f8f8f224aa3dae8b35ed0fa",
+    "/blockly-mooc/common.json": "e384fd5cdf0dca41d3a9fb22e070310d",
     "/blockly-mooc/craft.json": "adb9c79234e921e5de56d9f42d0b556f",
     "/blockly-mooc/dance.json": "adb9c79234e921e5de56d9f42d0b556f",
     "/blockly-mooc/fish.json": "fb8e703e70c519c622f00f23a1e10ecd",
@@ -1922,7 +1922,7 @@
     "/blockly-mooc/tutorialExplorer.json": "adb9c79234e921e5de56d9f42d0b556f",
     "/blockly-mooc/weblab.json": "4e44567251d7cb506a2d93a5183d048a",
     "/blockly-mooc/signup.json": "a9b363ab1f6241fdc2f25e0496b81a1e",
-    "/blockly-mooc/codebridge.json": "a9b363ab1f6241fdc2f25e0496b81a1e",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "tr-TR": {
@@ -1930,7 +1930,7 @@
     "/blockly-mooc/ailab.json": "0f33c0386efb7f22549a7ccc5d230bcf",
     "/blockly-mooc/applab.json": "b28ddb6f56269122846f6c1ae4fe396b",
     "/blockly-mooc/bounce.json": "bf606c65403f74b2d51e0543f0275a2f",
-    "/blockly-mooc/common.json": "bf606c65403f74b2d51e0543f0275a2f",
+    "/blockly-mooc/common.json": "e384fd5cdf0dca41d3a9fb22e070310d",
     "/blockly-mooc/craft.json": "bf606c65403f74b2d51e0543f0275a2f",
     "/blockly-mooc/dance.json": "bf606c65403f74b2d51e0543f0275a2f",
     "/blockly-mooc/fish.json": "6f461d705fc88418fb4e4f4afafe8916",
@@ -1949,7 +1949,7 @@
     "/blockly-mooc/tutorialExplorer.json": "bf606c65403f74b2d51e0543f0275a2f",
     "/blockly-mooc/weblab.json": "b28ddb6f56269122846f6c1ae4fe396b",
     "/blockly-mooc/signup.json": "fb393d1905f12a7dd4a40dc5d14d9934",
-    "/blockly-mooc/codebridge.json": "fb393d1905f12a7dd4a40dc5d14d9934",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "uk-UA": {
@@ -1957,7 +1957,7 @@
     "/blockly-mooc/ailab.json": "369c387b6838489ae5eb6dff55b73c3f",
     "/blockly-mooc/applab.json": "f8febe7d153ed6ee289be95d661767f8",
     "/blockly-mooc/bounce.json": "5f6deae696761f67091d06009b5b5db9",
-    "/blockly-mooc/common.json": "5f6deae696761f67091d06009b5b5db9",
+    "/blockly-mooc/common.json": "e384fd5cdf0dca41d3a9fb22e070310d",
     "/blockly-mooc/craft.json": "fe6f4ab7b5c04ce2f0e6e72c5316ca02",
     "/blockly-mooc/dance.json": "fe6f4ab7b5c04ce2f0e6e72c5316ca02",
     "/blockly-mooc/fish.json": "369c387b6838489ae5eb6dff55b73c3f",
@@ -1976,7 +1976,7 @@
     "/blockly-mooc/tutorialExplorer.json": "fe6f4ab7b5c04ce2f0e6e72c5316ca02",
     "/blockly-mooc/weblab.json": "f8febe7d153ed6ee289be95d661767f8",
     "/blockly-mooc/signup.json": "3281f0d39f6157a70616d7a48cb3e1e2",
-    "/blockly-mooc/codebridge.json": "3281f0d39f6157a70616d7a48cb3e1e2",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "ur-PK": {
@@ -1984,7 +1984,7 @@
     "/blockly-mooc/ailab.json": "be9c2b4bdd510c936f33682ed37f6d65",
     "/blockly-mooc/applab.json": "781782b75e26d39add79c2662498de99",
     "/blockly-mooc/bounce.json": "247edf76897a719e488e1ffabaf88985",
-    "/blockly-mooc/common.json": "247edf76897a719e488e1ffabaf88985",
+    "/blockly-mooc/common.json": "e384fd5cdf0dca41d3a9fb22e070310d",
     "/blockly-mooc/craft.json": "cc6d5bb52334379ec19c6e8608cc6c1a",
     "/blockly-mooc/dance.json": "cc6d5bb52334379ec19c6e8608cc6c1a",
     "/blockly-mooc/fish.json": "be9c2b4bdd510c936f33682ed37f6d65",
@@ -2003,7 +2003,7 @@
     "/blockly-mooc/tutorialExplorer.json": "cc6d5bb52334379ec19c6e8608cc6c1a",
     "/blockly-mooc/weblab.json": "781782b75e26d39add79c2662498de99",
     "/blockly-mooc/signup.json": "1f6a50f79e64f60cf5a3d33fb4aeac69",
-    "/blockly-mooc/codebridge.json": "1f6a50f79e64f60cf5a3d33fb4aeac69",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "uz-UZ": {
@@ -2011,7 +2011,7 @@
     "/blockly-mooc/ailab.json": "036cf5c4d25b094222fa1ea7b5d1d5d1",
     "/blockly-mooc/applab.json": "63e188d45714e7a4126522ceae5931fa",
     "/blockly-mooc/bounce.json": "87e0478c510311e4621b11cee61ff112",
-    "/blockly-mooc/common.json": "87e0478c510311e4621b11cee61ff112",
+    "/blockly-mooc/common.json": "e384fd5cdf0dca41d3a9fb22e070310d",
     "/blockly-mooc/craft.json": "4eca7f2fdca977fa45cdadfe5ecab78f",
     "/blockly-mooc/dance.json": "4eca7f2fdca977fa45cdadfe5ecab78f",
     "/blockly-mooc/fish.json": "036cf5c4d25b094222fa1ea7b5d1d5d1",
@@ -2030,7 +2030,7 @@
     "/blockly-mooc/tutorialExplorer.json": "4eca7f2fdca977fa45cdadfe5ecab78f",
     "/blockly-mooc/weblab.json": "63e188d45714e7a4126522ceae5931fa",
     "/blockly-mooc/signup.json": "97db05c1a7c7f881e9b8eb24049f3a7b",
-    "/blockly-mooc/codebridge.json": "97db05c1a7c7f881e9b8eb24049f3a7b",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "vi-VN": {
@@ -2038,7 +2038,7 @@
     "/blockly-mooc/ailab.json": "bde878a62ed4ebea0aab62a4606c5316",
     "/blockly-mooc/applab.json": "690295d8ffa8cf50039d21ae6c023a6b",
     "/blockly-mooc/bounce.json": "5ebc1ddff8e75dd4de85878425620783",
-    "/blockly-mooc/common.json": "5ebc1ddff8e75dd4de85878425620783",
+    "/blockly-mooc/common.json": "39590cb6c826a289a3f5e8a4a628881f",
     "/blockly-mooc/craft.json": "5ebc1ddff8e75dd4de85878425620783",
     "/blockly-mooc/dance.json": "5ebc1ddff8e75dd4de85878425620783",
     "/blockly-mooc/fish.json": "bde878a62ed4ebea0aab62a4606c5316",
@@ -2057,7 +2057,7 @@
     "/blockly-mooc/tutorialExplorer.json": "5ebc1ddff8e75dd4de85878425620783",
     "/blockly-mooc/weblab.json": "690295d8ffa8cf50039d21ae6c023a6b",
     "/blockly-mooc/signup.json": "3446da4457dd1a5d334afcdef79ebf80",
-    "/blockly-mooc/codebridge.json": "3446da4457dd1a5d334afcdef79ebf80",
+    "/blockly-mooc/codebridge.json": "018645d25a8d66c9c647b7a37099f500",
     "/blockly-mooc/pythonlab.json": "d34327df14334977b4f6a5ef09bda946"
   },
   "zh-CN": {
@@ -2065,7 +2065,7 @@
     "/blockly-mooc/ailab.json": "782eaa4677b5f10a1e50d9fe72e99ebe",
     "/blockly-mooc/applab.json": "7740de28c43ba50b6f5a9946a6abb6f0",
     "/blockly-mooc/bounce.json": "4f55de0cf602eb7dc9d501a7055ce08f",
-    "/blockly-mooc/common.json": "4f55de0cf602eb7dc9d501a7055ce08f",
+    "/blockly-mooc/common.json": "6ba24cbc22f3ba94bf30a567888a33d5",
     "/blockly-mooc/craft.json": "4f55de0cf602eb7dc9d501a7055ce08f",
     "/blockly-mooc/dance.json": "4f55de0cf602eb7dc9d501a7055ce08f",
     "/blockly-mooc/fish.json": "782eaa4677b5f10a1e50d9fe72e99ebe",
@@ -2084,7 +2084,7 @@
     "/blockly-mooc/tutorialExplorer.json": "4f55de0cf602eb7dc9d501a7055ce08f",
     "/blockly-mooc/weblab.json": "7740de28c43ba50b6f5a9946a6abb6f0",
     "/blockly-mooc/signup.json": "93a4eef66afe8b049ec4210a7e342d7c",
-    "/blockly-mooc/codebridge.json": "93a4eef66afe8b049ec4210a7e342d7c",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "zh-TW": {
@@ -2092,7 +2092,7 @@
     "/blockly-mooc/ailab.json": "5843256635260f491cf20f99db7b965e",
     "/blockly-mooc/applab.json": "37f85b86c53deba0b18ef07642003fe3",
     "/blockly-mooc/bounce.json": "f868ce09a8a46f4c77ce96644dabc4c1",
-    "/blockly-mooc/common.json": "47ac24cae4af1c3d5fccaf407a7e8e69",
+    "/blockly-mooc/common.json": "6ba24cbc22f3ba94bf30a567888a33d5",
     "/blockly-mooc/craft.json": "f868ce09a8a46f4c77ce96644dabc4c1",
     "/blockly-mooc/dance.json": "f868ce09a8a46f4c77ce96644dabc4c1",
     "/blockly-mooc/fish.json": "5843256635260f491cf20f99db7b965e",
@@ -2111,7 +2111,7 @@
     "/blockly-mooc/tutorialExplorer.json": "f868ce09a8a46f4c77ce96644dabc4c1",
     "/blockly-mooc/weblab.json": "37f85b86c53deba0b18ef07642003fe3",
     "/blockly-mooc/signup.json": "e11646cc68b151c7c38eee6fab4d3728",
-    "/blockly-mooc/codebridge.json": "e11646cc68b151c7c38eee6fab4d3728",
+    "/blockly-mooc/codebridge.json": "0a2e16ec3c89d1b6b30aa9da1289c67b",
     "/blockly-mooc/pythonlab.json": "2841b5be2df4412ed7acc4cd8128be90"
   },
   "zu-ZA": {

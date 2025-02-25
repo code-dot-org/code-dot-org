@@ -1,0 +1,16 @@
+name 'programming-fundamentals-lesson13-level1-2024'
+display_name 'Pixels of Me Project'
+description 'Choose one of the levels below based on the size of the grid you plan to use.'
+
+sublevels
+level 'programming-fundamentals-lesson13-level1a-2024'
+level 'programming-fundamentals-lesson13-level1b-2024'
+level 'programming-fundamentals-lesson13-level1c-2024'
+level 'programming-fundamentals-lesson13-level1d-2024'
+
+
+
+
+
+
+

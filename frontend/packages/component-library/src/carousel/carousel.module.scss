@@ -17,12 +17,6 @@
   margin: 0 auto;
 }
 
-.carousel {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
 // Navigation button styles
 .navArrowWrapper {
   // Hide arrows when screen size is <1024px
@@ -40,6 +34,7 @@
     background: var(--background-neutral-tertiary);
     min-width: 3rem;
     height: 3rem;
+
     @include transition-all;
 
     // Flips the buttons for RTL languages
@@ -51,6 +46,7 @@
     & > i {
       font-size: 1.5rem;
       color: var(--text-neutral-tertiary);
+
       @include transition-all;
     }
 
@@ -116,6 +112,10 @@
 // Applies certain styles if carousel
 // contains videos with a caption
 .carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+
   figcaption {
     margin-bottom: 0;
   }

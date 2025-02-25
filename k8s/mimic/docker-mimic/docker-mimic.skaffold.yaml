@@ -1,0 +1,19 @@
+apiVersion: skaffold/v4beta11
+kind: Config
+build:
+  artifacts:
+  - image: mimic
+    custom:
+      buildCommand: k8s/bin/docker-buildx.sh -f k8s/mimic/docker/mimic.dockerfile --build-arg MIMIC_BASE="$MIMIC_BASE"
+      dependencies:
+        dockerfile:
+          path: k8s/mimic/docker/mimic.dockerfile
+    requires:
+    - image: mimic-base
+      alias: MIMIC_BASE
+  - image: mimic-base
+    custom:
+      buildCommand: echo $PWD && k8s/bin/docker-buildx.sh -f k8s/mimic/docker/mimic-base.dockerfile
+      dependencies:
+        dockerfile:
+          path: k8s/mimic/docker/mimic-base.dockerfile

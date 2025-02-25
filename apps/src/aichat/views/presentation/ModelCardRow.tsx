@@ -1,7 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  BodyThreeText,
+  Heading6,
+} from '@code-dot-org/component-library/typography';
 import React, {useMemo} from 'react';
 
-import {BodyThreeText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import InfoTooltipIcon from '../InfoTooltipIcon';

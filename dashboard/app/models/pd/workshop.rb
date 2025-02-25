@@ -61,10 +61,6 @@ class Pd::Workshop < ApplicationRecord
     'grades',
     'prereq',
 
-    # Indicates that this workshop will be conducted virtually, which triggers
-    # a different, virtual-specific post-workshop survey.
-    'virtual',
-
     # Allows a workshop to be associated with a third party
     # organization.
     # Only current allowed values are "friday_institute" and nil.
@@ -88,7 +84,6 @@ class Pd::Workshop < ApplicationRecord
   validates_inclusion_of :on_map, in: [true, false]
   validates_inclusion_of :funded, in: [true, false]
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
-  validate :friday_institute_workshops_must_be_virtual
   validate :virtual_only_subjects_must_be_virtual
   validate :not_funded_subjects_must_not_be_funded
 
@@ -126,16 +121,14 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  def friday_institute_workshops_must_be_virtual
-    if friday_institute? && !virtual?
-      errors.add :properties, 'Friday Institute workshops must be virtual'
-    end
-  end
-
   def virtual_only_subjects_must_be_virtual
     if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
       errors.add :properties, "Workshops with the subject #{subject} must be virtual"
     end
+  end
+
+  def virtual?
+    sessions.any? {|session| session.session_format == "virtual"}
   end
 
   # Whether enrollment in this workshop requires an application

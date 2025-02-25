@@ -10,6 +10,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 
+import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
@@ -76,7 +77,15 @@ describe('TeacherNavigationBar', () => {
       id: 15,
       name: 'hidden',
       hidden: true,
+      courseVersionName: 'csd-2022',
       unitName: null,
+    },
+    {
+      id: 16,
+      name: 'Period 5',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
     },
   ];
   const serverSections = sections.map(serverSectionFromSection);
@@ -85,7 +94,11 @@ describe('TeacherNavigationBar', () => {
 
   let loadSelectedSectionSpy;
 
-  const renderDefault = (selectedSectionId = 11, selectedRoute = null) => {
+  const renderDefault = (
+    selectedSectionId = 11,
+    selectedRoute = null,
+    showAITutorTab = false
+  ) => {
     store = getStore();
     registerReducers({
       teacherSections,
@@ -119,7 +132,7 @@ describe('TeacherNavigationBar', () => {
                 path={TEACHER_NAVIGATION_SECTIONS_URL}
                 element={
                   <div>
-                    <TeacherNavigationBar />
+                    <TeacherNavigationBar showAITutorTab={showAITutorTab} />
                     <Outlet />
                   </div>
                 }
@@ -277,6 +290,22 @@ describe('TeacherNavigationBar', () => {
     const dropdownAfterClick = screen.getByRole('combobox');
     expect(dropdownAfterClick).toHaveValue('14');
     expect(loadSelectedSectionSpy).toHaveBeenCalledWith('14');
+  });
+
+  test('AI Tutor tab diplayed when teacher has access, is in correct section, and DCDO flag is set', async () => {
+    DCDO.set('ai-tutor-teacher-nav-v2', true);
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    screen.getByText('AI Tutor');
+  });
+
+  test('AI Tutor tab not diplayed when DCDO flag is false', async () => {
+    DCDO.set('ai-tutor-teacher-nav-v2', false);
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(screen.queryByText('AI Tutor')).toBeNull();
   });
 
   test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {

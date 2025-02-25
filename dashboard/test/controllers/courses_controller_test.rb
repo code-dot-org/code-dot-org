@@ -106,6 +106,14 @@ class CoursesControllerTest < ActionController::TestCase
     assert_template 'courses/show'
   end
 
+  test "show includes correct SEO data" do
+    get :show, params: {course_name: @unit_group_regular.name}
+
+    assert_response :ok
+    assert_includes(@response.body, "<title>non-plc-course - Code.org [test]</title>")
+    assert_includes(@response.body, "<meta property=\"description\" content=\"\" />")
+  end
+
   test "show: non existant course throws" do
     assert_raises ActiveRecord::RecordNotFound do
       get :show, params: {course_name: 'nosuchcourse'}
