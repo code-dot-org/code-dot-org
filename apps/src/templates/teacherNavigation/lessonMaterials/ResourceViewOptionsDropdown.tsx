@@ -13,6 +13,8 @@ import {windowOpen} from '@cdo/apps/utils';
 
 import {Resource, computeMaterialType} from './LessonMaterialTypes';
 
+import styles from './lesson-materials.module.scss';
+
 type ResourceViewOptionsDropdownProps = {
   resource: Resource;
 };
@@ -197,6 +199,7 @@ const ResourceViewOptionsDropdown: React.FC<
         options={dropdownOptions}
         size="s"
         menuPlacement="right"
+        className={styles.viewOptionsDropdown}
         triggerButtonProps={{
           color: 'black',
           type: 'tertiary',

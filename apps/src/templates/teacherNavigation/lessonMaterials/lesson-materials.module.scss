@@ -102,3 +102,11 @@
   justify-content: center;
   align-items: center;
 }
+
+.viewOptionsDropdown {
+  margin-left: 16px;
+
+  & li {
+    min-width: 200px;
+  }
+}

@@ -177,6 +177,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         <SimpleDropdown
           labelText={i18n.chooseLesson()}
           isLabelVisible={false}
+          color={'gray'}
           onChange={event => onDropdownChange(event.target.value)}
           items={lessonOptions}
           selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
