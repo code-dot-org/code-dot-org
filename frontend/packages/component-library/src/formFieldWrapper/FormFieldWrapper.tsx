@@ -17,13 +17,13 @@ export interface FormFieldWrapperProps
   /** FormFieldWrapper size */
   size?: Exclude<ComponentSizeXSToL, 'xs'>;
   /** FormFieldWrapper label */
-  label?: ReactNode;
+  label?: string;
   /** FormFieldWrapper helper message */
-  helperMessage?: ReactNode;
+  helperMessage?: string;
   /** FormFieldWrapper helper icon */
   helperIcon?: FontAwesomeV6IconProps;
   /** FormFieldWrapper error message */
-  errorMessage?: ReactNode;
+  errorMessage?: string;
 }
 
 /**
