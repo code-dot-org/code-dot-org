@@ -25,10 +25,6 @@ import {
 import SessionAttendance from './session_attendance';
 
 export class WorkshopAttendance extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
-
   static contextType = RouterContext;
 
   static propTypes = {

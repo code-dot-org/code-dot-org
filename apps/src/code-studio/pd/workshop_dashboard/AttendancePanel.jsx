@@ -17,10 +17,6 @@ export default class AttendancePanel extends React.Component {
     sessions: PropTypes.array,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
-
   static contextType = RouterContext;
 
   getSessionAttendanceLink(session) {

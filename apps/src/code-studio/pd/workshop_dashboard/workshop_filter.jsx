@@ -74,10 +74,6 @@ export class WorkshopFilter extends React.Component {
     showRegionalPartnerDropdown: PropTypes.bool,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
-
   static contextType = RouterContext;
 
   state = {

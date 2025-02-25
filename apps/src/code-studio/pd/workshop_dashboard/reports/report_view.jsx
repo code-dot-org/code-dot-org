@@ -34,10 +34,6 @@ const REPORT_VALUES = ['Teacher Attendance', 'Workshop Summary'];
 const API_DATE_FORMAT = 'YYYY-MM-DD';
 
 export default class ReportView extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
-
   static contextType = RouterContext;
 
   static propTypes = {

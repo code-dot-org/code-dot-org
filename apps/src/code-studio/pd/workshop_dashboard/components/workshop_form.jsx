@@ -84,10 +84,6 @@ const INPUT_HEIGHT = 34;
 // These two things are stored as separate attributes in the workshop model.
 
 export class WorkshopForm extends React.Component {
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
-
   static contextType = RouterContext;
 
   static propTypes = {

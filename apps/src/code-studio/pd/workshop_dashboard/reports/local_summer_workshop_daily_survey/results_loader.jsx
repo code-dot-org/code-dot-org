@@ -8,7 +8,7 @@ import Spinner from '../../../../../sharedComponents/Spinner';
 
 import Results from './results';
 
-export class ResultsLoader extends React.Component {
+export default class ResultsLoader extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired,
@@ -30,6 +30,7 @@ export class ResultsLoader extends React.Component {
       dataType: 'json',
     })
       .done(data => {
+        console.log('🚀 ~ ResultsLoader ~ load ~ data:', data);
         this.setState({
           loading: false,
           questions: data['questions'],

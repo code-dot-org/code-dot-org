@@ -38,10 +38,6 @@ export default class WorkshopTable extends React.Component {
     onSort: PropTypes.func,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
-
   static contextType = RouterContext;
 
   static defaultProps = {

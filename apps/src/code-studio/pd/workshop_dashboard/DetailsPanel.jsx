@@ -23,10 +23,6 @@ export default class DetailsPanel extends React.Component {
     onWorkshopSaved: PropTypes.func.isRequired,
   };
 
-  static contextTypes = {
-    router: PropTypes.object.isRequired,
-  };
-
   static contextType = RouterContext;
 
   state = {
