@@ -116,43 +116,43 @@ const routeConfigs = [
   },
 ];
 
-const HeaderWrapper = () => {
-  const {router} = useContext(RouterContext);
-  const {pathname} = useLocation();
+const WithRouterProps = ({component: Component, ...props}) => {
   const params = useParams();
-  const breadcrumbs = routeConfigs.find(config =>
-    matchPath(config.path, pathname)
-  )?.breadcrumbs;
+  const location = useLocation();
+  const [search] = useSearchParams();
+  location.query = Object.fromEntries(search.entries());
 
+  // TODO: remove once ApplicationDashboard is refactored to react-router-dom
+  // https://codedotorg.atlassian.net/browse/ACQ-3128
+  const breadcrumbs = routeConfigs.find(config =>
+    matchPath(config.path, location.pathname)
+  )?.breadcrumbs;
   // Create routes structure that Header expects
   const routes = [
     {}, // First route is not used
     {breadcrumbs},
   ];
+  return (
+    <Component {...props} params={params} location={location} routes={routes} />
+  );
+};
 
+WithRouterProps.propTypes = {
+  component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
+};
+
+const HeaderWrapper = () => {
+  const {router} = useContext(RouterContext);
   return (
     <>
-      <Header
-        routes={routes}
-        params={params}
+      <WithRouterProps
+        component={Header}
         baseName="Workshop Dashboard"
         router={router}
       />
       <Outlet />
     </>
   );
-};
-
-const WithParamsAndLocation = ({component: Component, ...props}) => {
-  const params = useParams();
-  const location = useLocation();
-  const [search] = useSearchParams();
-  location.query = Object.fromEntries(search.entries());
-  return <Component {...props} params={params} location={location} />;
-};
-
-WithParamsAndLocation.propTypes = {
-  component: PropTypes.oneOfType([PropTypes.object, PropTypes.func]).isRequired,
 };
 
 const WorkshopDashboard = ({
@@ -197,9 +197,7 @@ const WorkshopDashboard = ({
                 <Route
                   key={path}
                   path={path}
-                  element={
-                    <WithParamsAndLocation component={component} {...props} />
-                  }
+                  element={<WithRouterProps component={component} {...props} />}
                 />
               ))}
             </Route>
