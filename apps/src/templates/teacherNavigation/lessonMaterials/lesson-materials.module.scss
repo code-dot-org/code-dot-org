@@ -102,3 +102,9 @@
   justify-content: center;
   align-items: center;
 }
+
+.lessonMaterialsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

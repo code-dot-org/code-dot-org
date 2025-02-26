@@ -1,15 +1,22 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import _ from 'lodash';
 import React, {useState, useMemo, useCallback} from 'react';
+import {useSelector} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
+import {
+  asyncLoadCoursesWithProgress,
+  getSelectedUnitId,
+} from '@cdo/apps/redux/unitSelectionRedux';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
+
+import UnitSelectorV2 from '../../UnitSelectorV2';
 
 import {LessonMaterialsEmptyState} from './LessonMaterialsEmptyState';
 import {Lesson} from './LessonMaterialTypes';
@@ -84,34 +91,54 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     state => state.teacherSections.needsReload
   );
 
+  const selectedUnitId = useSelector(getSelectedUnitId);
+
+  const dispatch = useAppDispatch();
+
   React.useEffect(() => {
-    const fetchLessonMaterials = async () => {
-      const state = getStore().getState().teacherSections;
-      const selectedSectionId = state.selectedSectionId;
-      const sectionData = state.sections[selectedSectionId];
+    dispatch(asyncLoadCoursesWithProgress());
+  }, [dispatch]);
 
-      if (!selectedSectionId || !sectionData.unitId) {
-        setLessonMaterials(null);
-        setIsLoading(false);
-        return;
+  const isLoadingCoursesWithProgress = useSelector(
+    (state: {unitSelection: {isLoadingCoursesWithProgress: boolean}}) =>
+      state.unitSelection.isLoadingCoursesWithProgress
+  );
+
+  const unitToLoad = React.useMemo(
+    () =>
+      selectedSection.unitId !== null
+        ? selectedUnitId || selectedSection.unitId
+        : null,
+    [selectedSection.unitId, selectedUnitId]
+  );
+
+  React.useEffect(() => {
+    const state = getStore().getState().teacherSections;
+    const selectedSectionId = state.selectedSectionId;
+
+    if (!selectedSectionId || !unitToLoad) {
+      setLessonMaterials(null);
+      setIsLoading(false);
+      return;
+    }
+
+    setIsLoading(true);
+
+    if (isLoadingCoursesWithProgress) {
+      return;
+    }
+
+    lessonMaterialsCachedLoader(unitToLoad).then(data => {
+      setLessonMaterials(data);
+      setIsLoading(false);
+
+      if (data?.unitName) {
+        analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
+          unitName: data.unitName,
+        });
       }
-
-      setIsLoading(true);
-
-      await lessonMaterialsCachedLoader(sectionData.unitId).then(data => {
-        setLessonMaterials(data);
-        setIsLoading(false);
-
-        if (data?.unitName) {
-          analyticsReporter.sendEvent(EVENTS.VIEW_LESSON_MATERIALS, {
-            unitName: data.unitName,
-          });
-        }
-      });
-    };
-
-    fetchLessonMaterials();
-  }, [selectedSection]);
+    });
+  }, [isLoadingCoursesWithProgress, unitToLoad]);
 
   const {hasNumberedUnits, lessons, unitNumber, versionYear} = useMemo(() => {
     return {
@@ -230,11 +257,12 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     );
   };
 
-  if (isLoading || needsReload) {
-    return <Spinner size={'large'} />;
-  }
-
-  if (hasEmptyState) {
+  if (
+    hasEmptyState &&
+    !isLoading &&
+    !isLoadingCoursesWithProgress &&
+    !needsReload
+  ) {
     return (
       <LessonMaterialsEmptyState
         isLegacyScript={isLegacyScript}
@@ -244,10 +272,19 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   }
 
   return (
-    <div>
-      {renderHeader()}
-      {renderTeacherResources()}
-      {renderStudentResources()}
+    <div className={styles.lessonMaterialsContainer}>
+      <UnitSelectorV2 filterToSelectedCourse={true} />
+      {isLoading || needsReload ? (
+        <div>
+          <Spinner size={'large'} />
+        </div>
+      ) : (
+        <div>
+          {renderHeader()}
+          {renderTeacherResources()}
+          {renderStudentResources()}
+        </div>
+      )}
     </div>
   );
 };
