@@ -20,7 +20,9 @@ const GraduateToNextLevel = ({scriptName, courseTitle, courseDesc}) => {
   return (
     <>
       <div id="next-level-block">
-        <h1 id="next-level-title">{i18n.congratsNextLevelHeading()}</h1>
+        <h1 id="next-level-title" className="heading-xxl">
+          {i18n.congratsNextLevelHeading()}
+        </h1>
         <VerticalImageResourceCard
           id={`course-card-${courseInfo.scriptName}`}
           title={courseTitle || i18n.introToAppLabTitle()}
