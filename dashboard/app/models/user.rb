@@ -1675,14 +1675,6 @@ class User < ApplicationRecord
     !!sort_by_family_name
   end
 
-  def ai_differentiation_enabled?
-    if ai_differentiation_enabled.nil?
-      return true
-    else
-      return !!ai_differentiation_enabled
-    end
-  end
-
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
     return if name.blank? || email&.utf8mb4?
