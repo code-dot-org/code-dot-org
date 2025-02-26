@@ -31,30 +31,33 @@ class AiDiffController < ApplicationController
       return render status: :bad_request, json: {error: exception.message}
     end
 
-    # Add user message to thread
-    begin
-      AichatMessage.create!(
-        aichat_thread_id: @thread.id,
-        external_id: @thread.external_id,
-        role: :user,
-        content: params[:inputText],
-        is_preset: params[:isPreset],
-      )
-    rescue StandardError => exception
-      return render status: :bad_request, json: {error: exception.message}
-    end
+    # Log messages if the response was successful and not flagged for PII.
+    if response_body[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]
+      # Add user message to thread
+      begin
+        AichatMessage.create!(
+          aichat_thread_id: @thread.id,
+          external_id: @thread.external_id,
+          role: :user,
+          content: params[:inputText],
+          is_preset: params[:isPreset],
+        )
+      rescue StandardError => exception
+        return render status: :bad_request, json: {error: exception.message}
+      end
 
-    # Add response message to thread
-    begin
-      AichatMessage.create!(
-        aichat_thread_id: @thread.id,
-        external_id: @thread.external_id,
-        role: :assistant,
-        content: response_body[:chat_message_text],
-        is_preset: params[:isPreset],
-      )
-    rescue StandardError => exception
-      return render status: :bad_request, json: {error: exception.message}
+      # Add response message to thread
+      begin
+        AichatMessage.create!(
+          aichat_thread_id: @thread.id,
+          external_id: @thread.external_id,
+          role: :assistant,
+          content: response_body[:chat_message_text],
+          is_preset: params[:isPreset],
+        )
+      rescue StandardError => exception
+        return render status: :bad_request, json: {error: exception.message}
+      end
     end
 
     render(status: :ok, json: response_body)
