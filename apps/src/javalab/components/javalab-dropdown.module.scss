@@ -1,4 +1,5 @@
-@import 'color', 'font';
+@import 'color';
+@import '@code-dot-org/component-library-styles/font';
 
 // The placeholder classes (%) allow these to be extended in other modules
 .dropdown,

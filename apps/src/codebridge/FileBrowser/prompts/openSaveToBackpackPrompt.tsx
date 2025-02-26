@@ -1,6 +1,8 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {getFileNameWithNumberSuffix} from '@codebridge/utils';
+import React from 'react';
 
+import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {
@@ -21,12 +23,20 @@ export const openSaveToBackpackPrompt = async ({
   backpackApi,
   file,
 }: OpenSaveToBackpackPromptArgsType) => {
-  const handleError = (message: string) => () => {
+  const handleError = (title: string, message: string) => () => {
     // TODO: send analytics / add logging.
-    console.error(message);
+    const bodyComponent = <BackpackErrorAlertBody message={message} />;
+    dialogControl?.showDialog({
+      type: DialogType.GenericAlert,
+      title,
+      bodyComponent,
+    });
   };
   backpackApi.getFileList(
-    handleError('Error in getting backpack file list.'),
+    handleError(
+      codebridgeI18n.importFromBackpackTitle(),
+      `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`
+    ),
     async (filenames: string[]) => {
       // Check if filename is a duplicate of a saved file in backpack.
       const isDuplicateFileName = filenames.includes(file.name);
@@ -39,7 +49,7 @@ export const openSaveToBackpackPrompt = async ({
       const dialog = isDuplicateFileName
         ? {
             type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.saveToBackpack(),
+            title: codebridgeI18n.saveToBackpackTitle(),
             message: codebridgeI18n.saveToBackpackDuplicateMessage({
               newFileName: fileNameCopy,
             }),
@@ -48,11 +58,11 @@ export const openSaveToBackpackPrompt = async ({
           }
         : {
             type: DialogType.GenericConfirmation,
-            title: codebridgeI18n.saveToBackpack(),
+            title: codebridgeI18n.saveToBackpackTitle(),
             message: codebridgeI18n.saveToBackpackMessage({
               fileName: file.name,
             }),
-            confirmText: codebridgeI18n.saveToBackpack(),
+            confirmText: codebridgeI18n.saveToBackpackTitle(),
           };
       const results = await dialogControl?.showDialog(
         dialog as TypedDialogProps
@@ -74,7 +84,12 @@ export const openSaveToBackpackPrompt = async ({
       backpackApi.savePythonlabFile(
         selectedFileName,
         fileContents,
-        handleError(`Error in saving pythonlab file ${selectedFileName}`),
+        handleError(
+          codebridgeI18n.saveToBackpackTitle(),
+          codebridgeI18n.saveToBackpackError({selectedFileName}) +
+            ' ' +
+            codebridgeI18n.closeWindowTryAgain()
+        ),
         () => {}
       );
     }
