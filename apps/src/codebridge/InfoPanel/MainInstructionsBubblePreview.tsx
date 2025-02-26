@@ -25,7 +25,10 @@ const MainInstructionsBubblePreview: React.FunctionComponent<
     <div
       key={instructionsText}
       id="instructions-text"
-      className={classNames(moduleStyles['bubble-' + theme])}
+      className={classNames(
+        moduleStyles['bubble-' + theme],
+        moduleStyles.bubbleNoSlide
+      )}
     >
       <div className={moduleStyles.mainInstructions}>
         <ValidationStatusIcon
