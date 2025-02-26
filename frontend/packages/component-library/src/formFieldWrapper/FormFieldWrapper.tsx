@@ -17,7 +17,7 @@ export interface FormFieldWrapperProps
   /** FormFieldWrapper size */
   size?: Exclude<ComponentSizeXSToL, 'xs'>;
   /** FormFieldWrapper label */
-  label?: string;
+  label?: ReactNode;
   /** FormFieldWrapper helper message */
   helperMessage?: string;
   /** FormFieldWrapper helper icon */
