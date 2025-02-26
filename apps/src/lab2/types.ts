@@ -211,6 +211,11 @@ export interface LevelProperties {
   serializedMaze?: MazeCell[][];
   startDirection?: number;
   exemplarSettings?: ExemplarSettings;
+  // Properties added for parity with non-lab2 AI Tutor levels
+  aiTutorAvailable?: boolean;
+  isAssessment?: boolean;
+  progressionType?: string;
+  type?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
