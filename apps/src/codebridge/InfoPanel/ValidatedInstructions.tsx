@@ -109,7 +109,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const shouldValidateBeDisabled = !hasLoadedEnvironment || isRunning;
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
-  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   // The icon in the validated instructions panel should match the icon in the
   // header.
@@ -203,9 +202,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     } else if (hasConditions) {
       return satisfied;
     } else {
-      return hasRun && hasEdited;
+      return hasRun;
     }
-  }, [predictSettings, hasConditions, satisfied, hasRun, hasEdited]);
+  }, [predictSettings, hasConditions, satisfied, hasRun]);
 
   /**
    * Returns the props for the navigation (continue/finish/submit/unsubmit)
