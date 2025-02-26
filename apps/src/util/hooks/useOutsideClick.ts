@@ -1,5 +1,7 @@
 import {useCallback, useEffect, useRef} from 'react';
 
+// Hook to call the given callback when a click occurs outside the given element.
+// Useful for closing elements when clicking outside of them.
 export default function useOutsideClick<T extends HTMLElement>(
   callback: () => void
 ) {
@@ -14,9 +16,9 @@ export default function useOutsideClick<T extends HTMLElement>(
     [callback]
   );
 
-  // When the dropdown is opened, add an event listener to close it when clicking outside
-  // the dropdown.
-  // Remove the event listener when the dropdown is closed.
+  // When the element is opened, add an event listener to close it when clicking outside
+  // the element.
+  // Remove the event listener when the element is closed.
   useEffect(() => {
     // We want to defer adding the close handler until the next tick of the event loop,
     // otherwise it'll fire immediately and re-close the pop up.
