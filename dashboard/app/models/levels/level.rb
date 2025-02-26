@@ -855,7 +855,6 @@ class Level < ApplicationRecord
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
     properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user) if script_level
     properties_camelized[:baseAssetUrl] = Blockly.base_url
-    properties_camelized[:hasValidation] = validated?
     properties_camelized[:isAssessment] = script_level&.assessment
     properties_camelized[:progressionType] = script_level&.primm_progression_type
 

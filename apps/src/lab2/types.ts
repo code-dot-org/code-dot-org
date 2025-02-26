@@ -211,7 +211,6 @@ export interface LevelProperties {
   startDirection?: number;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
-  hasValidation?: boolean;
   isAssessment?: boolean;
   progressionType?: string;
   type?: string;

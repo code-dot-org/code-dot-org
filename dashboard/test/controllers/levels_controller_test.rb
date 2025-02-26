@@ -78,7 +78,7 @@ class LevelsControllerTest < ActionController::TestCase
     )
   end
 
-  test "should return level_properties " do
+  test "should return level_properties" do
     level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
 
     get :level_properties, params: {id: level}
@@ -86,7 +86,7 @@ class LevelsControllerTest < ActionController::TestCase
 
     body = JSON.parse(response.body)
     expected_body = {
-      "id" => 4335,
+      "id" => level.id,
       "levelData" => {"hello" => "there"},
       "other" => "other",
       "preloadAssetList" => nil,
@@ -98,7 +98,6 @@ class LevelsControllerTest < ActionController::TestCase
       "exemplarSources" => nil,
       "helpVideos" => [],
       "baseAssetUrl" => "/blockly/",
-      "hasValidation" => true,
       "isAssessment" => nil,
       "progressionType" => nil
     }

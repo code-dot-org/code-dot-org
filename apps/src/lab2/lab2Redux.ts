@@ -63,7 +63,8 @@ const mapLevelPropertiesToAITutorLevel = (
   id: levelProperties.id,
   type: levelProperties.type || '',
   aiTutorAvailable: !!levelProperties.aiTutorAvailable,
-  hasValidation: !!levelProperties.hasValidation,
+  hasValidation:
+    !!levelProperties.validations && levelProperties.validations.length > 0,
   isAssessment: !!levelProperties.isAssessment,
   progressionType: levelProperties.progressionType || '',
 });
