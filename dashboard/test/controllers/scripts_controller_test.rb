@@ -69,13 +69,29 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_response :ok
     assert_includes(@response.body, "<title>Unit: Accelerated Intro to CS Course - Code.org [test]</title>")
     assert_includes(@response.body, "<meta property=\"description\" content=\"This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!\" />")
-    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/s/20-hour\" />")
   end
 
-  test 'canonical url is not added if is_course is not true' do
-    unit_in_course = create :script, is_course: false
+  test 'canonical url is added if it is a single unit course' do
+    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    unit = create :script, published_state: nil, family_name: 'my-script'
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
+
     get :show, params: {
-      id: unit_in_course.name,
+      id: unit.name,
+    }
+    assert_response :ok
+    assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/s/bogus-script")
+  end
+
+  test 'canonical url is not added if is not single unit course' do
+    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    unit = create :script, published_state: nil
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
+    unit2 = create :script, published_state: nil
+    create :unit_group_unit, unit_group: course, script: unit2, position: 2
+
+    get :show, params: {
+      id: unit.name,
     }
     assert_response :ok
     refute_includes(@response.body, "<link rel=\"canonical\"")
