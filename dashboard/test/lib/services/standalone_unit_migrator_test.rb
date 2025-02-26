@@ -10,16 +10,16 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
     subject(:migrate_unit) {described_instance.call}
 
     before do
-      Rails.configuration.converting_standalone_courses = true
+      ENV['MIGRATE_STANDALONE_UNITS'] = 'true'
       @course_offering = create :course_offering, key: family_name, display_name: family_name
-      @unit = create :standalone_unit, name: "#{family_name}-2025", family_name: family_name, version_year: "2025"
-      @course_version = create :course_version, course_offering: @course_offering, content_root: @unit, key: "2025", display_name: "2025"
+      @unit = create :standalone_unit, name: "#{family_name}-2025", family_name: family_name, version_year: "2025", published_state: "stable"
+      @course_version = create :course_version, course_offering: @course_offering, content_root: @unit, key: "2025", display_name: "2025", published_state: "stable"
 
       @temp_log_file = Tempfile.new("unit_migration.log")
     end
 
     after do
-      Rails.configuration.converting_standalone_courses = false
+      ENV.delete('MIGRATE_STANDALONE_UNITS')
       @temp_log_file.close!
       @temp_log_file.unlink
     end
@@ -29,8 +29,6 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
 
       # Verify that the unit was successfully migrated
       new_unit_group = UnitGroup.find_by(name: @unit.name)
-      puts new_unit_group.inspect
-      puts @unit.inspect
       refute_nil new_unit_group, "New UnitGroup should be created"
       assert_equal family_name, new_unit_group.family_name
       assert_equal "2025", new_unit_group.version_year
@@ -39,6 +37,7 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
       # Verify the course_version now points to the new UnitGroup
       @course_version.reload
       assert_equal new_unit_group, @course_version.content_root
+      assert_equal @course_version, new_unit_group.course_version
 
       # Verify the unit's course-related settings are cleared
       @unit.reload

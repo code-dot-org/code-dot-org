@@ -28,7 +28,7 @@ class CourseVersion < ApplicationRecord
   has_many :vocabularies
   has_many :reference_guides
 
-  unless Rails.configuration.converting_standalone_courses
+  unless ENV['MIGRATE_STANDALONE_UNITS']
     attr_readonly :content_root_type
     attr_readonly :content_root_id
   end

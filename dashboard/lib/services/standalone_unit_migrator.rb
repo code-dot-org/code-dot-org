@@ -5,53 +5,49 @@ module Services
     def initialize(unit, verbose: false, log_file: nil)
       @unit = unit
       @verbose = verbose
-      @logger = Logger.new(log_file) if log_file
+      @logger = log_file ? Logger.new(File.open(log_file, 'w')) : Logger.new($stdout)
     end
 
     def call
-      result = false
-
-      ActiveRecord::Base.transaction do
-        @unit_copy = @unit.dup
-        log_initial_info if @verbose
-        i18n_params = set_i18n_params
-
-        create_new_unit_group
-        if @new_unit_group.errors.present?
-          log "Migration failed for #{@unit.name}: #{@new_unit_group.errors.full_messages.join(', ')}"
-          raise ActiveRecord::Rollback
-        end
-
-        # Get existing Unit's course version
-        @course_version = @unit.course_version
-        if @course_version.nil?
-          log "Existing Unit's course version not found: #{@unit.name}"
-          raise ActiveRecord::Rollback
-        end
-        @original_course_version_id = @course_version.id
-
-        # Point existing CourseVersion to the new UnitGroup
-        @course_version.update!(content_root: @new_unit_group)
-
-        # Clear "course" settings from the unit
-        @unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
-
-        update_unit_group(i18n_params, @unit_copy.published_state)
-        result = true
+      unless ENV['MIGRATE_STANDALONE_UNITS']
+        log "MIGRATE_STANDALONE_UNITS is not set", type: "error"
+        return false
       end
 
-      if result
-        run_checks(@unit_copy, @original_course_version_id)
+      @unit_copy = @unit.dup
+      log_initial_info if @verbose
+      i18n_params = set_i18n_params
+
+      create_new_unit_group
+      if @new_unit_group.errors.present?
+        log "Migration failed for #{@unit.name}: #{@new_unit_group.errors.full_messages.join(', ')}", type: "error"
+        return false
       end
-    rescue => exception
-      log "Error during migration: #{exception.message}\n#{exception.backtrace.join("\n")}"
-      false
+
+      # Get existing Unit's course version
+      @course_version = @unit.course_version
+      if @course_version.nil?
+        log "Existing Unit's course version not found: #{@unit.name}", type: "error"
+        return false
+      end
+      @original_course_version_id = @course_version.id
+
+      # Point existing CourseVersion to the new UnitGroup
+      @course_version.update!(content_root: @new_unit_group)
+
+      # Clear "course" settings from the unit
+      @unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
+
+      update_unit_group(i18n_params, @unit_copy.published_state)
+
+      run_checks(@unit_copy, @original_course_version_id)
     end
 
     private def log_initial_info
       log "Initial info"
       log "Existing unit: #{@unit.inspect}"
       log "Existing course_version: #{@unit.course_version.inspect}"
+      log "Existing course_offering: #{@unit.course_version&.course_offering.inspect}"
     end
 
     private def set_i18n_params
@@ -85,12 +81,10 @@ module Services
 
       # Publish the new unit group
       @new_unit_group.update!(published_state: published_state)
-      @new_unit_group.reload
     end
 
-    private def log(message)
-      puts message
-      @logger&.info(message)
+    private def log(message, type: 'info')
+      @logger.send(type, message)
     end
 
     private def run_checks(dupe_unit, original_course_version_id)
