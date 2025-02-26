@@ -3,61 +3,63 @@ require 'test_helper'
 class AiDiffControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  class AiDiffControllerNoPIIViolationTest < ActionController::TestCase
+  setup do
+    @course_offering = create(:course_offering, display_name: 'Course Name')
+    @course_version = create(:course_version, :with_unit_group, course_offering: @course_offering)
+    @unit_group = @course_version.content_root
+    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2')
+    create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
+    @lesson_group = create(:lesson_group, script: @unit_in_course)
+    @lesson = create(:lesson, script: @unit_in_course, lesson_group: @lesson_group)
+    create(:script_level, script: @unit_in_course, lesson: @lesson)
+
+    @teacher_sans_experiment = create(:teacher)
+    @teacher = create(:teacher)
+    @unit_display_name = "Beowulf Course"
+
+    create :single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation'
+
+    @session_id = "1234"
+    @bedrock_client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
+    @bedrock_client.stub_responses(
+      :retrieve_and_generate, {
+        citations: [
+          {
+            generated_response_part: {
+              text_response_part: {
+                span: {
+                  end: 55,
+                  start: 0
+                },
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              }
+            },
+            retrieved_references: [
+              {
+                content: {
+                  text: "Hwaet! We gar-dena in geardagum, theod-cyninga thrym gefrunon"
+                },
+                location: {
+                  s3_location: {
+                    uri: "s3://dummy_file"
+                  },
+                  type: "S3"
+                }
+              }
+            ]
+          }
+        ],
+        output: {
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        },
+        session_id: @session_id
+      }
+    )
+    AiDiffBedrockHelper.stubs(:create_bedrock_client).returns(@bedrock_client)
+  end
+
+  class AiDiffControllerNoPIIViolationTest < AiDiffControllerTest
     setup do
-      @course_offering = create(:course_offering, display_name: 'Course Name')
-      @course_version = create(:course_version, :with_unit_group, course_offering: @course_offering)
-      @unit_group = @course_version.content_root
-      @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2')
-      create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
-      @lesson_group = create(:lesson_group, script: @unit_in_course)
-      @lesson = create(:lesson, script: @unit_in_course, lesson_group: @lesson_group)
-      create(:script_level, script: @unit_in_course, lesson: @lesson)
-
-      @teacher_sans_experiment = create(:teacher)
-      @teacher = create(:teacher)
-      @unit_display_name = "Beowulf Course"
-
-      create :single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation'
-
-      @session_id = "1234"
-      @bedrock_client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
-      @bedrock_client.stub_responses(
-        :retrieve_and_generate, {
-          citations: [
-            {
-              generated_response_part: {
-                text_response_part: {
-                  span: {
-                    end: 55,
-                    start: 0
-                  },
-                  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-                }
-              },
-              retrieved_references: [
-                {
-                  content: {
-                    text: "Hwaet! We gar-dena in geardagum, theod-cyninga thrym gefrunon"
-                  },
-                  location: {
-                    s3_location: {
-                      uri: "s3://dummy_file"
-                    },
-                    type: "S3"
-                  }
-                }
-              ]
-            }
-          ],
-          output: {
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          },
-          session_id: @session_id
-        }
-      )
-      AiDiffBedrockHelper.stubs(:create_bedrock_client).returns(@bedrock_client)
-
       AiDiffController.any_instance.stubs(:contains_pii?).returns(false)
     end
 
@@ -247,61 +249,8 @@ class AiDiffControllerTest < ActionController::TestCase
     end
   end
 
-  class AiDiffControllerWithPIIViolationTest < ActionController::TestCase
+  class AiDiffControllerWithPIIViolationTest < AiDiffControllerTest
     setup do
-      @course_offering = create(:course_offering, display_name: 'Course Name 2')
-      @course_version = create(:course_version, :with_unit_group, course_offering: @course_offering)
-      @unit_group = @course_version.content_root
-      @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course3')
-      create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
-      @lesson_group = create(:lesson_group, script: @unit_in_course)
-      @lesson = create(:lesson, script: @unit_in_course, lesson_group: @lesson_group)
-      create(:script_level, script: @unit_in_course, lesson: @lesson)
-
-      @teacher_sans_experiment = create(:teacher)
-      @teacher = create(:teacher)
-      @unit_display_name = "Beowulf Course"
-
-      create :single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation'
-
-      @session_id = "1234"
-      @bedrock_client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
-      @bedrock_client.stub_responses(
-        :retrieve_and_generate, {
-          citations: [
-            {
-              generated_response_part: {
-                text_response_part: {
-                  span: {
-                    end: 55,
-                    start: 0
-                  },
-                  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-                }
-              },
-              retrieved_references: [
-                {
-                  content: {
-                    text: "Hwaet! We gar-dena in geardagum, theod-cyninga thrym gefrunon"
-                  },
-                  location: {
-                    s3_location: {
-                      uri: "s3://dummy_file"
-                    },
-                    type: "S3"
-                  }
-                }
-              ]
-            }
-          ],
-          output: {
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          },
-          session_id: @session_id
-        }
-      )
-      AiDiffBedrockHelper.stubs(:create_bedrock_client).returns(@bedrock_client)
-
       AiDiffController.any_instance.stubs(:contains_pii?).returns(true)
     end
 
