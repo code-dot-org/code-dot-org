@@ -1,4 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import classNames from 'classnames';
 import _ from 'lodash';
 import React, {useState, useMemo, useCallback} from 'react';
 import {useSelector} from 'react-redux';
@@ -24,6 +25,7 @@ import LessonResources from './LessonResources';
 import UnitResourcesDropdown from './UnitResourcesDropdown';
 
 import styles from './lesson-materials.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 interface LessonMaterialsData {
   unitId: number;
@@ -41,6 +43,15 @@ const lessonMaterialsCachedLoader = _.memoize(async (unitId: number) =>
   HttpClient.fetchJson<LessonMaterialsData>(
     `/dashboardapi/lesson_materials/${unitId}`
   ).then(response => response?.value)
+);
+
+const skeletonDropdown = () => (
+  <div
+    className={classNames(
+      styles.skeletonDropdown,
+      skeletonizeContent.skeletonizeContent
+    )}
+  />
 );
 
 export const lessonMaterialsLoader =
@@ -201,22 +212,33 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const renderHeader = () => {
     return (
       <div className={styles.lessonMaterialsPageHeader}>
-        <SimpleDropdown
-          labelText={i18n.chooseLesson()}
-          isLabelVisible={false}
-          onChange={event => onDropdownChange(event.target.value)}
-          items={lessonOptions}
-          selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
-          name={'lessons-in-assigned-unit-dropdown'}
-          size="s"
-          id="ui-test-lessons-in-assigned-unit-dropdown"
-        />
+        <div className={styles.lessonMaterialsDropdowns}>
+          <UnitSelectorV2
+            filterToSelectedCourse={true}
+            className={styles.unitSelector}
+          />
+          {isLoading || isLoadingCoursesWithProgress || needsReload ? (
+            skeletonDropdown()
+          ) : (
+            <SimpleDropdown
+              labelText={i18n.chooseLesson()}
+              isLabelVisible={false}
+              onChange={event => onDropdownChange(event.target.value)}
+              items={lessonOptions}
+              selectedValue={selectedLesson ? selectedLesson.id.toString() : ''}
+              name={'lessons-in-assigned-unit-dropdown'}
+              size="s"
+              id="ui-test-lessons-in-assigned-unit-dropdown"
+            />
+          )}
+        </div>
         {lessonMaterials && (
           <UnitResourcesDropdown
             hasNumberedUnits={hasNumberedUnits}
             unitNumber={lessonMaterials.unitNumber}
             scriptOverviewPdfUrl={lessonMaterials.scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={lessonMaterials.scriptResourcesPdfUrl}
+            disabled={isLoading || needsReload}
           />
         )}
       </div>
@@ -273,14 +295,13 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   return (
     <div className={styles.lessonMaterialsContainer}>
-      <UnitSelectorV2 filterToSelectedCourse={true} />
+      {renderHeader()}
       {isLoading || needsReload ? (
         <div>
           <Spinner size={'large'} />
         </div>
       ) : (
         <div>
-          {renderHeader()}
           {renderTeacherResources()}
           {renderStudentResources()}
         </div>
