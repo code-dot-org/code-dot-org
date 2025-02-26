@@ -7,7 +7,6 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {Source} from '../../lab2/types';
 import {installFunctionBlocks} from '../blockly/blockUtils';
 import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {BlockMode, DEFAULT_PACK} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
@@ -44,7 +43,6 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   //Immediately load the library and source, then compile the song.
   const onMount = useCallback(async () => {
-    setUpBlocklyForMusicLab();
     workspaceRef.current.initHeadless();
     await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
