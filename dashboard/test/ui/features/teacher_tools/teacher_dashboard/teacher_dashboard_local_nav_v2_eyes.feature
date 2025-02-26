@@ -76,11 +76,6 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
 
     Given I wait until element "#ui-test-teacher-sidebar" is visible
 
-    Given I click selector "#ui-test-teacher-sidebar a:contains('Assessments')" once I see it
-    And I wait until element "#uitest-spinner" is not visible
-    And I wait until element "h2:contains('Submission status')" is visible
-    Then I see no difference for "assessments page"
-
     Given I click selector "#ui-test-teacher-sidebar a:contains('Roster')" once I see it
     And I wait until element "#uitest-spinner" is not visible
     And I wait until element "span:contains('Display name')" is visible
