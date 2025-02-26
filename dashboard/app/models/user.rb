@@ -1096,29 +1096,32 @@ class User < ApplicationRecord
 
     new_attributes[:email] = email
 
-    # teacher = becomes(Teacher)
+    transaction do
+      teacher = becomes(Teacher)
+      # Force the DB update for user_type only, no validations
+      teacher.update_column(:user_type, TYPE_TEACHER)
 
+      if migrated?
+        teacher.update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
+      end
+
+      teacher.update!(new_attributes)
+      teacher.save!
+
+      teacher
+    end
+    # binding.pry
     # transaction do
+    #   # Force the DB update for user_type only, no validations
+    #   update_column(:user_type, TYPE_TEACHER)
+
     #   if migrated?
-    #     teacher.update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
+    #     update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
     #   end
 
-    #   teacher.update!(new_attributes)
-    #   teacher.save!
-
-    #   teacher
+    #   update!(new_attributes)
+    #   becomes(Teacher)
     # end
-    transaction do
-      if migrated?
-        update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
-      end
-      # Force the DB update for user_type only, no validations
-      update_column(:user_type, TYPE_TEACHER)
-
-      update!(new_attributes)
-      reload
-      self
-    end
   rescue
     # becomes(Student)
     false # Relevant errors are set on the user model, so we rescue and return false here.
