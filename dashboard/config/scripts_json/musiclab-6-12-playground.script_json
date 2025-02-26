@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-24 17:54:30 UTC",
+    "serialized_at": "2025-02-26 16:23:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -352,6 +352,17 @@
       },
       "seeding_key": {
         "activity_section.key": "8ce43204-387c-415d-85b1-34f095d0047c",
+        "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
+      }
+    },
+    {
+      "key": "ff9f2856-d529-46ef-ac44-87b6bec697f1",
+      "position": 12,
+      "properties": {
+        "progression_name": "Functions Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff9f2856-d529-46ef-ac44-87b6bec697f1",
         "lesson_activity.key": "7cce43a7-4e44-45f4-b735-6ad7613287cc"
       }
     },
@@ -835,6 +846,28 @@
       "level_keys": [
         "music-lab-simple-exemplar2"
       ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Functions Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-simple-functions-test"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "ff9f2856-d529-46ef-ac44-87b6bec697f1"
+      },
+      "level_keys": [
+        "music-lab-simple-functions-test"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1004,6 +1037,18 @@
         "lesson_group.key": "",
         "script.name": "musiclab-6-12-playground",
         "activity_section.key": "8ce43204-387c-415d-85b1-34f095d0047c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-simple-functions-test",
+        "script_level.level_keys": [
+          "music-lab-simple-functions-test"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "ff9f2856-d529-46ef-ac44-87b6bec697f1"
       }
     }
   ],

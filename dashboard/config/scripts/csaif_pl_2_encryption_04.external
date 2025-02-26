@@ -1,0 +1,13 @@
+name 'csaif_pl_2_encryption_04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Encryption
+
+#### What if instead of shifting the whole alphabet, we matched every letter of the alphabet to a random different letter of the alphabet? This is called a random substitution cipher.
+
+#### Explore the tool for decrypting a random substitution cipher in the next level.
+
+
+MARKDOWN

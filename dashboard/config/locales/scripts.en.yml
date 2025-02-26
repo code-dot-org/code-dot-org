@@ -20078,7 +20078,9 @@ en:
           description: ''
           student_description: ''
         csad-pilot-preassessment-2024:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Computer Systems and Devices Pre-Assessment
           lesson_groups: {}
           name: csad-pilot-preassessment-2024
           title: 'Computer Systems and Systems: Pre-Assessment'
@@ -20126,10 +20128,12 @@ en:
           description: ''
           student_description: ''
         csad-pilot-postassessment-2024:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Computer Systems and Devices End-of-Unit Assessment
           lesson_groups: {}
           name: csad-pilot-postassessment-2024
-          title: 'Computer Systems and Devices: Post-Assessment'
+          title: 'Computer Systems and Devices: End-of-Unit Assessment'
           description_audience: ''
           description_short: ''
           description: ''
@@ -20239,13 +20243,15 @@ en:
           lessons: {}
           lesson_groups: {}
           name: pf-aitutor-pilot-postassessment-2024
-          title: 'Programming Fundamentals: Post-Assessment'
+          title: 'Programming Fundamentals: End-of-Unit Assessment'
           description_audience: ''
           description_short: ''
           description: ''
           student_description: ''
         nati-pilot-preassessment-2024:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Networks and the Internet Pre-Assessment
           lesson_groups: {}
           name: nati-pilot-preassessment-2024
           title: 'Networks and the Internet: Pre-Assessment'
@@ -20285,7 +20291,9 @@ en:
           description: ''
           student_description: ''
         nati-pilot-postassessment-2024:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Networks and the Internet End-of-Unit Assessment
           lesson_groups: {}
           name: nati-pilot-postassessment-2024
           title: 'Networks and the Internet: Post-Assessment'
@@ -20349,6 +20357,53 @@ en:
           lesson_groups: {}
           name: sandbox-csaif-pl-networks
           title: Networks and the Internet PL
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csaif-pl-python:
+          lessons:
+            lesson-1:
+              name: Teaching Introduction to Programming
+            lesson-2:
+              name: Computational Thinking
+            lesson-3:
+              name: Python Basics
+            lesson-4:
+              name: Algorithms with Python
+            lesson-5:
+              name: Preparing for the Final Project
+          lesson_groups: {}
+          name: sandbox-csaif-pl-python
+          title: Introduction to Programming
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        gen-ai-spanish-test-a-unit:
+          lessons:
+            lesson-1:
+              name: Test Stuff Here
+          lesson_groups: {}
+          name: gen-ai-spanish-test-a-unit
+          title: Gen AI Spanish Test A
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-csaif-pl-computer-systems:
+          lessons:
+            lesson-1:
+              name: Teaching Computer Systems and Devices
+            lesson-2:
+              name: Hardware and Software
+            lesson-3:
+              name: Data in Computer Systems
+            lesson-4:
+              name: Ethical Use and the Final Project
+          lesson_groups: {}
+          name: sandbox-csaif-pl-computer-systems
+          title: Computer Systems and Devices
           description_audience: ''
           description_short: ''
           description: ''

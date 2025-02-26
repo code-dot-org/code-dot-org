@@ -1,0 +1,155 @@
+{
+  "script": {
+    "name": "gen-ai-spanish-test-a-unit",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-02-25 19:36:43 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "gen-ai-spanish-test-a-unit"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Test Stuff Here",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "9c46e06c-c590-4746-9a49-905b37b27017",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9c46e06c-c590-4746-9a49-905b37b27017",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "53cda0e7-9599-47bf-83ac-c546bd6e2969",
+      "position": 1,
+      "properties": {
+        "progression_name": "Spanish Testing!"
+      },
+      "seeding_key": {
+        "activity_section.key": "53cda0e7-9599-47bf-83ac-c546bd6e2969",
+        "lesson_activity.key": "9c46e06c-c590-4746-9a49-905b37b27017"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Spanish Testing!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-4omini-spanish-a"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit",
+        "activity_section.key": "53cda0e7-9599-47bf-83ac-c546bd6e2969"
+      },
+      "level_keys": [
+        "gen-ai-4omini-spanish-a"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-4omini-spanish-a",
+        "script_level.level_keys": [
+          "gen-ai-4omini-spanish-a"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-spanish-test-a-unit",
+        "activity_section.key": "53cda0e7-9599-47bf-83ac-c546bd6e2969"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

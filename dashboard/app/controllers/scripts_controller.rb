@@ -101,6 +101,9 @@ class ScriptsController < ApplicationController
 
     @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
 
+    @page_title = "Unit: #{@script.localized_title}"
+    @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
+
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
     end

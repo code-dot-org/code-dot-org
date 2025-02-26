@@ -1,7 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  BodyTwoText,
+  Heading3,
+} from '@code-dot-org/component-library/typography';
 import React, {useContext} from 'react';
 
-import {BodyTwoText, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 
 export type dialogCallback = (args?: unknown) => void;
