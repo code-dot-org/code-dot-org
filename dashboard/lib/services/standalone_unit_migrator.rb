@@ -40,6 +40,8 @@ module Services
 
       update_unit_group(i18n_params, @unit_copy.published_state)
 
+      update_section_assignments
+
       run_checks(@unit_copy, @original_course_version_id)
     end
 
@@ -81,6 +83,15 @@ module Services
 
       # Publish the new unit group
       @new_unit_group.update!(published_state: published_state)
+    end
+
+    private def update_section_assignments
+      sections_updated = 0
+      Section.where(script_id: @unit.id).each do |section|
+        section.update!(course_id: @new_unit_group.id)
+        sections_updated += 1
+      end
+      log "Updated #{sections_updated} sections for unit #{@unit.name}" if @verbose
     end
 
     private def log(message, type: 'info')
