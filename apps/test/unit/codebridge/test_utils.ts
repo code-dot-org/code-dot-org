@@ -21,17 +21,29 @@ export const getDialogControlMock = (
 
 export const getDialogAlertMock = (
   type: 'cancel' | 'confirm'
-): Pick<DialogControlInterface, 'showDialog'> => {
-  return {
-    showDialog: jest.fn(() => {
-      if (type === 'confirm') {
-        return Promise.resolve({type: 'confirm'});
-      } else {
-        return Promise.resolve({type: 'cancel'});
-      }
-    }),
-  };
-};
+): Pick<DialogControlInterface, 'showDialog'> => ({
+  showDialog: () => {
+    if (type === 'confirm') {
+      return Promise.resolve({type: 'confirm'});
+    } else {
+      return Promise.resolve({type: 'cancel'});
+    }
+  },
+});
+
+export const getDialogConfirmationMock = (
+  type: 'confirm' | 'neutral' | 'cancel'
+): Pick<DialogControlInterface, 'showDialog'> => ({
+  showDialog: () => {
+    if (type === 'confirm') {
+      return Promise.resolve({type: 'confirm'});
+    } else if (type === 'neutral') {
+      return Promise.resolve({type: 'neutral'});
+    } else {
+      return Promise.resolve({type: 'cancel'});
+    }
+  },
+});
 
 type AnalyticsDataType = {event: string};
 type AnalyticsMockType = (event: string) => void;
