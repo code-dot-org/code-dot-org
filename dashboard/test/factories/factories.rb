@@ -692,6 +692,11 @@ FactoryBot.define do
     credential_type {AuthenticationOption::EMAIL}
     authentication_id {SecureRandom.uuid}
 
+    after(:create) do |auth_option|
+      # Ensure that the original user model reloads the auth options list
+      auth_option.user&.reload
+    end
+
     factory :google_authentication_option do
       credential_type {AuthenticationOption::GOOGLE}
     end
