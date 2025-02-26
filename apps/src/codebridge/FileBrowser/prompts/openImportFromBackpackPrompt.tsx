@@ -191,16 +191,18 @@ export const openImportFromBackpackPrompt = async ({
           }
         } else if (results.type === 'neutral') {
           // User selects to delete file from backpack. Open confirm delete dialog.
-          dialogControl?.showDialog({
+          const results = await dialogControl?.showDialog({
             type: DialogType.GenericConfirmation,
             title: codebridgeI18n.deleteFromBackpackTitle(),
             message: codebridgeI18n.deleteFromBackpackConfirm({
               selectedBackpackFileName,
             }),
             confirmText: codebridgeI18n.delete(),
-            handleConfirm: () => handleDelete(selectedBackpackFileName),
             destructive: true,
           });
+          if (results.type === 'confirm') {
+            handleDelete(selectedBackpackFileName); // Update existing project file.
+          }
         }
       }
     }
