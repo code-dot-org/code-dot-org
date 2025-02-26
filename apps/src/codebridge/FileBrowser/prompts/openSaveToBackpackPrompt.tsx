@@ -7,6 +7,7 @@ import React from 'react';
 
 import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectFile} from '@cdo/apps/lab2/types';
 import {
   DialogType,
@@ -27,19 +28,24 @@ export const openSaveToBackpackPrompt = async ({
   backpackApi,
   file,
 }: OpenSaveToBackpackPromptArgsType) => {
-  const handleError = (title: string, message: string) => () => {
-    // TODO: send analytics / add logging.
-    const bodyComponent = <BackpackErrorAlertBody message={message} />;
-    dialogControl?.showDialog({
-      type: DialogType.GenericAlert,
-      title,
-      bodyComponent,
-    });
-  };
+  const handleError =
+    (title: string, message: string, errorMessage: string) =>
+    (error?: Error) => {
+      const bodyComponent = <BackpackErrorAlertBody message={message} />;
+      dialogControl?.showDialog({
+        type: DialogType.GenericAlert,
+        title,
+        bodyComponent,
+      });
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(errorMessage, error);
+    };
   backpackApi.getFileList(
     handleError(
       codebridgeI18n.importFromBackpackTitle(),
-      `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`
+      `${codebridgeI18n.getBackpackFileListError()} ${codebridgeI18n.closeWindowTryAgain()}`,
+      'Backpack file list fetch error'
     ),
     async (filenames: string[]) => {
       // Check if filename is a duplicate of a saved file in backpack.
@@ -103,7 +109,8 @@ export const openSaveToBackpackPrompt = async ({
           codebridgeI18n.saveToBackpackTitle(),
           codebridgeI18n.saveToBackpackError({selectedFileName}) +
             ' ' +
-            codebridgeI18n.closeWindowTryAgain()
+            codebridgeI18n.closeWindowTryAgain(),
+          'Save to backpack error'
         ),
         successCallback
       );
