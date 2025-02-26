@@ -132,6 +132,9 @@ const aiTutorSlice = createSlice({
       state.aiResponse = action.payload;
     },
     setLevel: (state, action: PayloadAction<Level | undefined>) => {
+      if (state.level?.id !== action.payload?.id) {
+        state.chatMessages = initialChatMessages; // Reset chat if the level changes (e.g. when switching levels without a page reload)
+      }
       state.level = action.payload;
     },
     setScriptId: (state, action: PayloadAction<number | undefined>) => {
