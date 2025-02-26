@@ -10,6 +10,7 @@
   "clearConsole": "Clear console",
   "closeFile": "close file {filename}",
   "consoleHeader": "Console",
+  "consoleOptions": "Console Options",
   "defaultLayout": "Default layout",
   "defaultNewFileContents": "Add your changes to {fileName}",
   "delete": "Delete",
