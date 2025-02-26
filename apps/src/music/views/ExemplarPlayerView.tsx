@@ -2,8 +2,7 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {Source} from '../../lab2/types';
 import {installFunctionBlocks} from '../blockly/blockUtils';
@@ -41,19 +40,14 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     new MusicBlocklyWorkspace()
   );
   const simple2SequencerRef = useRef<Simple2Sequencer>(new Simple2Sequencer());
-  const analyticsReporter = useRef<AnalyticsReporter>(new AnalyticsReporter());
   const [isLoading, setIsLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
-  const {userId, userType, signInState} = useAppSelector(
-    state => state.currentUser
-  );
   //Immediately load the library and source, then compile the song.
   const onMount = useCallback(async () => {
     setUpBlocklyForMusicLab();
     workspaceRef.current.initHeadless();
     await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
-    await analyticsReporter.current.startSession();
 
     // Immediately load the source code and compile the song.
     installFunctionBlocks(BlockMode.SIMPLE2);
@@ -80,15 +74,11 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     workspaceRef.current.executeCompiledSong();
     const playbackEvents = simple2SequencerRef.current.getPlaybackEvents();
     dispatch(setExemplarPlaybackEvents(playbackEvents));
-  }, [analyticsReporter, dispatch, libraryName, source, packId]);
+  }, [dispatch, libraryName, source, packId]);
 
   useEffect(() => {
     onMount();
   }, [onMount]);
-
-  useEffect(() => {
-    analyticsReporter.current.setUserProperties(userId, userType, signInState);
-  }, [userId, userType, signInState]);
 
   // Uses the already compiled song to preload sounds and play it.
   const onPlaySong = useCallback(async () => {
