@@ -171,7 +171,7 @@ export const openImportFromBackpackPrompt = async ({
               handleConfirm: () =>
                 fetchFileContentAndProcess(
                   selectedBackpackFileName,
-                  EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE,
+                  EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
                   newFileName
                 ), // Fetch backpack file content and import new file with numeric suffix.
             });
