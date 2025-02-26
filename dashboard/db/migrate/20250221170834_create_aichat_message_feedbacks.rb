@@ -4,6 +4,7 @@ class CreateAichatMessageFeedbacks < ActiveRecord::Migration[6.1]
       t.belongs_to :aichat_message, null: false, index: {unique: true}, foreign_key: true
       t.bigint :teacher_id, null: false
       t.boolean :approval
+      t.boolean :flagged
 
       t.timestamps
     end

@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 2025_02_21_170834) do
     t.bigint "aichat_message_id", null: false
     t.bigint "teacher_id", null: false
     t.boolean "approval"
+    t.boolean "flagged"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["aichat_message_id"], name: "index_aichat_message_feedbacks_on_aichat_message_id", unique: true
