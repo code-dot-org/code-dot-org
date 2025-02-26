@@ -26,7 +26,6 @@ import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
@@ -35,8 +34,8 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
+import MainInstructionsContent from './MainInstructionsContent';
 import ValidationResults from './ValidationResults';
-import ValidationStatusIcon from './ValidationStatusIcon';
 
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
@@ -339,17 +338,12 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               id="instructions-text"
               className={classNames(moduleStyles['bubble-' + theme])}
             >
-              <div className={moduleStyles.mainInstructions}>
-                <ValidationStatusIcon
-                  status={hasPassed ? 'passed' : 'pending'}
-                  className={moduleStyles.validationIcon}
-                />
-                <EnhancedSafeMarkdown
-                  markdown={instructionsText}
-                  className={moduleStyles.markdownText}
-                  handleInstructionsTextClick={handleInstructionsTextClick}
-                />
-              </div>
+              <MainInstructionsContent
+                instructionsText={instructionsText}
+                handleInstructionsTextClick={handleInstructionsTextClick}
+                theme={theme}
+                hasPassed={hasPassed}
+              />
               <PredictQuestion
                 predictSettings={predictSettings}
                 predictResponse={predictResponse}

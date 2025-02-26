@@ -2,9 +2,8 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {Theme} from '@cdo/apps/lab2/types';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 
-import ValidationStatusIcon from './ValidationStatusIcon';
+import MainInstructionsContent from './MainInstructionsContent';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
@@ -30,17 +29,12 @@ const MainInstructionsBubblePreview: React.FunctionComponent<
         moduleStyles.bubbleNoSlide
       )}
     >
-      <div className={moduleStyles.mainInstructions}>
-        <ValidationStatusIcon
-          status={hasPassed ? 'passed' : 'pending'}
-          className={moduleStyles.validationIcon}
-        />
-        <EnhancedSafeMarkdown
-          markdown={instructionsText}
-          className={moduleStyles.markdownText}
-          handleInstructionsTextClick={handleInstructionsTextClick}
-        />
-      </div>
+      <MainInstructionsContent
+        instructionsText={instructionsText}
+        handleInstructionsTextClick={handleInstructionsTextClick}
+        theme={theme}
+        hasPassed={hasPassed}
+      />
     </div>
   );
 };
