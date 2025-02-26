@@ -1,9 +1,3 @@
-import {
-  NewFileFunction,
-  SaveFileFunction,
-} from '@codebridge/codebridgeContext/types';
-import {ProjectFile} from '@codebridge/types';
-
 import {CodebridgeContextType, FileId, FolderId} from '@cdo/apps/codebridge';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {DialogControlInterface} from '@cdo/apps/lab2/views/dialogs';
@@ -38,20 +32,6 @@ export const getDialogAlertMock = (
     }),
   };
 };
-
-export const getDialogConfirmationMock = (
-  type: 'confirm' | 'neutral' | 'cancel'
-): Pick<DialogControlInterface, 'showDialog'> => ({
-  showDialog: jest.fn(() => {
-    if (type === 'confirm') {
-      return Promise.resolve({type: 'confirm'});
-    } else if (type === 'neutral') {
-      return Promise.resolve({type: 'neutral'});
-    } else {
-      return Promise.resolve({type: 'cancel'});
-    }
-  }),
-});
 
 type AnalyticsDataType = {event: string};
 type AnalyticsMockType = (event: string) => void;
@@ -149,25 +129,4 @@ export const getBackpackAPIMock = (
     deleteSingleFileFromBackpack: jest.fn(),
     onRequestComplete: jest.fn(),
   } as unknown as BackpackClientApi;
-};
-
-export const getNewFileMock = (): [ProjectFile, NewFileFunction] => {
-  const newFileData = {} as ProjectFile;
-  const mock: NewFileFunction = ({fileName, folderId}) => {
-    newFileData.name = fileName;
-    if (folderId) {
-      newFileData.folderId = folderId;
-    }
-  };
-
-  return [newFileData, mock];
-};
-export const getSaveFileMock = (): [ProjectFile, SaveFileFunction] => {
-  const savedFile = {} as ProjectFile;
-  const mock: SaveFileFunction = (fileId, contents) => {
-    savedFile.id = fileId;
-    savedFile.contents = contents;
-  };
-
-  return [savedFile, mock];
 };

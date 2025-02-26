@@ -168,7 +168,7 @@ export const openImportFromBackpackPrompt = async ({
           // dialog that prompts user to replace/overwrite or import the backpack
           // file with a different name (newFileName).
           if (newFileName !== selectedBackpackFileName) {
-            dialogControl?.showDialog({
+            const results = await dialogControl?.showDialog({
               type: DialogType.GenericConfirmation,
               title: codebridgeI18n.importFromBackpackTitle(),
               message: codebridgeI18n.importFromBackpackDuplicateMessage({
@@ -176,14 +176,12 @@ export const openImportFromBackpackPrompt = async ({
               }),
               confirmText: codebridgeI18n.replaceFile(),
               neutralText: codebridgeI18n.importAsNewName({newFileName}),
-              handleConfirm: () =>
-                fetchFileContentAndProcess(selectedBackpackFileName), // Update existing project file.
-              handleNeutral: () =>
-                fetchFileContentAndProcess(
-                  selectedBackpackFileName,
-                  newFileName
-                ), // Fetch backpack file content and import new file with numeric suffix.
             });
+            if (results.type === 'confirm') {
+              fetchFileContentAndProcess(selectedBackpackFileName); // Update existing project file.
+            } else if (results.type === 'neutral') {
+              fetchFileContentAndProcess(selectedBackpackFileName, newFileName); // Fetch backpack file content and import new file with numeric suffix.
+            }
           } else {
             // Fetch backpack file content and import new file to project - not a duplicate file name.
             fetchFileContentAndProcess(
