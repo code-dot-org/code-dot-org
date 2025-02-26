@@ -627,6 +627,7 @@ FactoryBot.define do
             oauth_token_expiration: '999999'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -644,6 +645,7 @@ FactoryBot.define do
             oauth_token_expiration: '999999'
           }.to_json
         )
+        user.reload
       end
     end
 
@@ -659,6 +661,7 @@ FactoryBot.define do
             oauth_token: 'some-clever-token'
           }.to_json
         )
+        user.reload
       end
     end
 
