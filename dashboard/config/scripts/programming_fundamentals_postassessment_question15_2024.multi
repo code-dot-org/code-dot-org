@@ -1,0 +1,17 @@
+name 'programming-fundamentals-postassessment-question15-2024'
+title 'Programming Fundamentals Post-Assessment: Question 1'
+
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+
+allow_multiple_attempts false
+
+markdown <<MARKDOWN
+question
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson x
+MARKDOWN

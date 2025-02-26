@@ -109,7 +109,7 @@ markdown <<MARKDOWN
 <br>
 
 ___
-##### <sup>1</sup>“Defining Computer Science.” K12cs.Org, k12cs.org/defining-computer-science/. 
+##### <sup>1</sup>“Defining Computer Science.” K12cs.Org, <a href="k12cs.org/defining-computer-science/" target="blank" rel="noopener noreferrer">k12cs.org/defining-computer-science/</a>. 
 ##### <sup>2</sup>“Educational Diversity.” Educational Diversity - An Overview | ScienceDirect Topics, <a href="www.sciencedirect.com/topics/social-sciences/educational-diversity" target="blank" rel="noopener noreferrer">www.sciencedirect.com/topics/social-sciences/educational-diversity</a> 
 ##### <sup>3</sup>Microsoft. Guide to Inclusive Computer Science Education, 2023, <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a" target="blank" rel="noopener noreferrer">https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4GC0a.</a>
 MARKDOWN

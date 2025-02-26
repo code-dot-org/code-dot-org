@@ -60,6 +60,9 @@ class CoursesController < ApplicationController
 
     @locale_code = request.locale
 
+    @page_title = @unit_group.localized_title
+    @page_description = I18n.t("data.course.name.#{@unit_group.name}.description_short", default: '').truncate(200, separator: '.', omission: '.')
+
     render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
   end
 

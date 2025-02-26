@@ -1,7 +1,8 @@
-@import 'color', 'style-constants';
+@import '../../../../frontend/packages/component-library-styles/colors.scss';
+@import 'style-constants';
 
 body {
-  background-color: $light_gray_50;
+  background-color: var(--background-neutral-secondary);
 }
 
 .cardContainer {

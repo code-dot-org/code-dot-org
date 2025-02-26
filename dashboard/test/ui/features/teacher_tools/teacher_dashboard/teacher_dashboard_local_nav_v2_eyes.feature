@@ -159,7 +159,8 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
 
     Given I click selector "#ui-test-teacher-sidebar a:contains('Settings')" once I see it
     And I wait until element "#uitest-spinner" is not visible
-    And I wait until element "h1:contains('Edit Section Details')" is visible
+    And I wait until element "h1:contains('Settings')" is visible
+    And I wait until element "h2:contains('Class Section')" is visible
     Then I see no difference for "settings page"
 
     And I close my eyes
