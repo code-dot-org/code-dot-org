@@ -33,6 +33,7 @@ import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
+import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './version-history.module.scss';
@@ -75,7 +76,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const [versionLoadError, setVersionLoadError] = useState(false);
   const [versionLoading, setVersionLoading] = useState(false);
   const locale = currentLocale();
-  const menuRef = useRef<HTMLDivElement>(null);
+  const menuRef = useOutsideClick<HTMLDivElement>(closeDropdown);
   const previousListLoaded = useRef<boolean>(listLoaded);
   const latestVersion = useMemo(
     () => versionList?.find(v => v.isLatest)?.versionId || '',
@@ -117,7 +118,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
     return () => {
       window.removeEventListener('resize', updateDropdownPositionIfShown);
     };
-  }, [buttonRef]);
+  }, [buttonRef, menuRef]);
 
   const dateFormatter = useMemo(() => {
     return new Intl.DateTimeFormat(locale, {
@@ -177,28 +178,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
       closeButton?.focus();
     }
   }, [listLoadError, listLoading]);
-
-  const handleOutsideClick = useCallback(
-    (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        closeDropdown();
-        document.removeEventListener('click', handleOutsideClick);
-      }
-    },
-    [closeDropdown]
-  );
-
-  // When the dropdown is opened, add an event listened to close it when clicking outside
-  // the dropdown.
-  // Remove the event listener when the dropdown is closed.
-  useEffect(() => {
-    // We want to defer adding the close handler until the next tick of the event loop,
-    // otherwise it'll fire immediately and re-close the pop up.
-    setTimeout(() => document.addEventListener('click', handleOutsideClick), 0);
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, [handleOutsideClick]);
 
   const successfulRestoreCleanUp = useCallback(
     (sources: ProjectSources) => {
