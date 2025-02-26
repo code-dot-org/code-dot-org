@@ -513,6 +513,8 @@ FactoryBot.define do
       after(:create) do |user|
         user.lms_landing_opted_out = true
         user.authentication_options.destroy_all
+        user.save!
+        user.reload
         lti_user_id = create(:lti_user_identity, user: user)
         user.lti_user_identities << lti_user_id
         auth_id = lti_user_id.lti_integration.issuer + "|" + lti_user_id.lti_integration.client_id + "|" + lti_user_id.subject
@@ -520,6 +522,7 @@ FactoryBot.define do
         user.authentication_options << lti_auth
         user.lti_roster_sync_enabled = true
         user.save!
+        user.reload
       end
     end
 
