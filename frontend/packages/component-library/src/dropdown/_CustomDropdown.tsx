@@ -198,7 +198,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           {...triggerComponentProps}
           {...triggerButtonProps}
           size={size}
-          forceActive={isOpen}
+          forceHover={isOpen}
           aria-label={
             triggerButtonProps?.isIconOnly
               ? labelText
@@ -210,9 +210,10 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         <button
           {...triggerComponentProps}
           type="button"
-          className={classNames(moduleStyles.dropdownButton, {
-            [moduleStyles.activeDropdownButton]: isOpen,
-          })}
+          className={classNames(
+            moduleStyles.dropdownButton,
+            isOpen && moduleStyles.activeDropdownButton,
+          )}
         >
           {isSomeValueSelected && (
             <FontAwesomeV6Icon iconName="check-circle" iconStyle="solid" />

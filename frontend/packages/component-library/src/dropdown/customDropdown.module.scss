@@ -268,6 +268,11 @@
     color: var(--neutral-base-black);
     border-color: var(--neutral-base-black);
     background-color: var(--neutral-base-white);
+
+    &.activeDropdownButton {
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-gray-10);
+    }
   }
 
   &:has(.dropdownButton:hover) {
@@ -276,7 +281,6 @@
       background-color: var(--neutral-gray-10);
     }
   }
-
   &:has(.dropdownButton:active) {
     .dropdownButton:not(:disabled) {
       color: var(--neutral-base-black);
@@ -338,6 +342,11 @@
     color: var(--neutral-base-black);
     border-color: var(--neutral-gray-40);
     background-color: var(--neutral-base-white);
+
+    &.activeDropdownButton {
+      color: var(--neutral-base-black);
+      background-color: var(--neutral-gray-10);
+    }
   }
 
   &:has(.dropdownButton:hover) {
@@ -418,6 +427,11 @@
     span {
       color: var(--neutral-base-white);
     }
+
+     &.activeDropdownButton {
+      color: var(--neutral-base-white);
+      background-color: var(--neutral-gray-90);
+     }
   }
 
   &:has(.dropdownButton:hover) {

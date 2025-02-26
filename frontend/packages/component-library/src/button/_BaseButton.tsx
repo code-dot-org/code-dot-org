@@ -91,9 +91,9 @@ export interface ButtonSpecificProps {
    *  Button name */
   name?: string;
   /** (\<button> specific prop)
-   * Forces the button to show the active state. This is used by the dropdown component to show the
-   * button as active when the dropdown is visible. */
-  forceActive?: boolean;
+   * Forces the button to show the hover state. This is used by the dropdown component to show the
+   * button as hovered when the dropdown is visible. */
+  forceHover?: boolean;
 }
 
 export interface _BaseButtonProps
@@ -214,7 +214,7 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
   onClick,
   value,
   name,
-  forceActive = false,
+  forceHover = false,
   ...rest
 }) => {
   const ButtonTag = useAsLink ? 'a' : 'button';
@@ -274,7 +274,7 @@ const BaseButton: React.FunctionComponent<_BaseButtonProps> = ({
         moduleStyles[`button-${type}`],
         moduleStyles[`button-${color}`],
         moduleStyles[`button-${size}`],
-        forceActive && moduleStyles['button-withForcedActive'],
+        forceHover && moduleStyles['button-withForcedHover'],
         isIconOnly && moduleStyles['button-iconOnly'],
         addPendingButtonWithHiddenTextClass &&
           moduleStyles.buttonPendingWithHiddenText,
