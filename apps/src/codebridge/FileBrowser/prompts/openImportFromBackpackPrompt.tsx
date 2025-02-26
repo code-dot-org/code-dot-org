@@ -7,6 +7,7 @@ import {
   getFileNameWithNumberSuffix,
   isDuplicateFileName,
   DuplicateFileError,
+  sendCodebridgeAnalyticsEvent,
 } from '@codebridge/utils';
 import React from 'react';
 
@@ -19,6 +20,7 @@ import {
   extractUserInput,
 } from '@cdo/apps/lab2/views/dialogs';
 import {GenericDropdownProps} from '@cdo/apps/lab2/views/dialogs/GenericDropdown';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 
 type OpenImportFromBackpackPromptArgsType = {
@@ -57,13 +59,14 @@ export const openImportFromBackpackPrompt = async ({
           ' ' +
           codebridgeI18n.closeWindowTryAgain()
       ),
-      () => {}
+      () => sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FROM_BACKPACK)
     );
   };
 
   // Fetch file content from backpack and then update or create a project file.
   const fetchFileContentAndProcess = (
     selectedFileName: string,
+    successMetric: string,
     newFileName?: string
   ) => {
     backpackApi.fetchFile(
@@ -85,6 +88,7 @@ export const openImportFromBackpackPrompt = async ({
           );
           if (fileId) saveFile(fileId, fileContent);
         }
+        sendCodebridgeAnalyticsEvent(successMetric);
       }
     );
   };
@@ -159,6 +163,7 @@ export const openImportFromBackpackPrompt = async ({
               handleConfirm: () =>
                 fetchFileContentAndProcess(
                   selectedBackpackFileName,
+                  EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE,
                   newFileName
                 ), // Fetch backpack file content and import new file with numeric suffix.
             });
@@ -177,10 +182,14 @@ export const openImportFromBackpackPrompt = async ({
               confirmText: codebridgeI18n.replaceFile(),
               neutralText: codebridgeI18n.importAsNewName({newFileName}),
               handleConfirm: () =>
-                fetchFileContentAndProcess(selectedBackpackFileName), // Update existing project file.
+                fetchFileContentAndProcess(
+                  selectedBackpackFileName,
+                  EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_REPLACE
+                ), // Update existing project file.
               handleNeutral: () =>
                 fetchFileContentAndProcess(
                   selectedBackpackFileName,
+                  EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_RENAME,
                   newFileName
                 ), // Fetch backpack file content and import new file with numeric suffix.
             });
@@ -188,6 +197,7 @@ export const openImportFromBackpackPrompt = async ({
             // Fetch backpack file content and import new file to project - not a duplicate file name.
             fetchFileContentAndProcess(
               selectedBackpackFileName,
+              EVENTS.CODEBRIDGE_IMPORT_FROM_BACKPACK_NEW,
               selectedBackpackFileName
             );
           }

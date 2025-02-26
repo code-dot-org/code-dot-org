@@ -111,7 +111,7 @@ export default class BackpackClientApi {
           fileObject,
           [filename],
           onError,
-          () => {},
+          onSuccess,
           'pythonlab'
         )
     );

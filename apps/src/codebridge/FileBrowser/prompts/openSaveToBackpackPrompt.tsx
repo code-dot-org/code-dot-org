@@ -1,5 +1,8 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {getFileNameWithNumberSuffix} from '@codebridge/utils';
+import {
+  getFileNameWithNumberSuffix,
+  sendCodebridgeAnalyticsEvent,
+} from '@codebridge/utils';
 import React from 'react';
 
 import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
@@ -10,6 +13,7 @@ import {
   DialogControlInterface,
   TypedDialogProps,
 } from '@cdo/apps/lab2/views/dialogs';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 
 type OpenSaveToBackpackPromptArgsType = {
@@ -71,8 +75,19 @@ export const openSaveToBackpackPrompt = async ({
       if (results.type === 'cancel') {
         return;
       }
+
       const selectedFileName =
         results.type === 'confirm' ? file.name : fileNameCopy;
+
+      let successMetric = EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_NEW;
+      if (isDuplicateFileName) {
+        successMetric =
+          selectedFileName === file.name
+            ? EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE
+            : EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_RENAME;
+      }
+      const successCallback = () => sendCodebridgeAnalyticsEvent(successMetric);
+
       const fileContents = {
         name: selectedFileName,
         contents: file.contents,
@@ -90,7 +105,7 @@ export const openSaveToBackpackPrompt = async ({
             ' ' +
             codebridgeI18n.closeWindowTryAgain()
         ),
-        () => {}
+        successCallback
       );
     }
   );
