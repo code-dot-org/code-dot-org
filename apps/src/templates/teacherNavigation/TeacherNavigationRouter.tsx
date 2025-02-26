@@ -97,8 +97,8 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   const sectionHasAITutor = React.useMemo(
     () =>
       selectedSection
-        ? selectedSection.courseVersionName.includes('csa') ||
-          selectedSection.courseVersionName.includes('aitutor')
+        ? selectedSection.courseVersionName?.includes('csa') ||
+          selectedSection.courseVersionName?.includes('aitutor')
         : false,
     [selectedSection]
   );
