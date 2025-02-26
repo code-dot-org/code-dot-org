@@ -198,7 +198,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           {...triggerComponentProps}
           {...triggerButtonProps}
           size={size}
-          forceHover={isOpen}
+          forceActive={isOpen}
           aria-label={
             triggerButtonProps?.isIconOnly
               ? labelText
