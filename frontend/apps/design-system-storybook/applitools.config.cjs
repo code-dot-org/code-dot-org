@@ -24,6 +24,7 @@ module.exports = {
     {width: 1200, height: 800, name: 'chrome'},
     {width: 1200, height: 800, name: 'firefox'},
   ],
+  showStorybookOutput: true,
   storybookStaticDir: 'dist/component-library-storybook',
   runInDocker: isDocker,
   puppeteerOptions: {

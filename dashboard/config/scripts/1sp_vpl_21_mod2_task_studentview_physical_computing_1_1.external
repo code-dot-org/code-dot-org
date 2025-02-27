@@ -14,6 +14,65 @@ markdown <<MARKDOWN
 
 
 ##How do I know if I'm in Student View or Teacher View? 
+
+<body style="font-size: 18px; font-family: Arial, sans-serif;">
+
+<h1 style="text-align: center;">Teacher View or Student View?</h1>
+
+<div style="display: flex; justify-content: center; gap: 30px; text-align: center; font-weight: bold;">
+   <div style="flex: 1;">Teacher View</div>
+   <div style="flex: 1;">Student View</div>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 20px;">
+ <div style="flex: 1;">
+ <img src="teacher-dashboard-image-url" alt="Teacher Dashboard View" width="300">
+</div>
+   <div style="flex: 1;">
+   <img src="student-dashboard-image-url" alt="Student Dashboard View" width="300">
+   </div>
+ </div>
+ <p style="text-align: center; font-weight: bold; margin-top: 10px;">My Dashboard</p>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 20px;">
+   <div style="flex: 1;">
+   <img src="teacher-course-page-image-url" alt="Teacher Course Page" width="300"><br>
+   <p style="font-weight: bold;">Teacher View has resources like lesson plans, and a blue pop-out window on the right side.</p>
+</div>
+   <div style="flex: 1;">
+   <img src="student-course-page-image-url" alt="Student Course Page" width="300"><br>
+   <p style="font-weight: bold;">Student view only shows course levels.</p>
+</div>
+</div>
+<p style="text-align: center; font-weight: bold; margin-top: 10px;">Course Page</p>
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 20px;">
+   <div style="flex: 1;">
+   <img src="teacher-course-level-image-url" alt="Teacher Course Level" width="300"><br>
+   <p style="font-weight: bold;">Teacher View has a blue panel on the right.</p>
+ </div>
+<div style="flex: 1;">
+   <img src="student-course-level-image-url" alt="Student Course Level" width="300"><br>
+   <p style="font-weight: bold;">Student View shows course levels without extra teacher tools.</p>
+ </div>
+ </div>
+ <p style="text-align: center; font-weight: bold; margin-top: 10px;">Course Level</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### **My Dashboard** 
 
 <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="20">
@@ -90,12 +149,10 @@ Update the image of differences between views:
 <p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 0px; font-size: 18px"> <a href="https://form.jotform.com/240863841362155" target="blank" rel="noopener noreferrer" >Click here</a> to complete the form to become a verified teacher. 
 </p>
 
-
-
-####  
-
-
 </div>
-</details>
+
+
+
+
 
 MARKDOWN

@@ -47,6 +47,7 @@ interface AiDiffWelcomeProps {
   scriptId: number;
   scriptName: string;
   unitDisplayName: string;
+  firstState?: WelcomeState;
 }
 
 const SUGGESTED_PROMPTS_FOR_SELECTION: {
@@ -79,7 +80,6 @@ const optionButton = (
       )}
       onClick={onClick}
       type="button"
-      id="uitest-ai-diff-option"
       aria-label={title}
     >
       <FontAwesomeV6Icon
@@ -115,11 +115,7 @@ const getStartedPage = (onClick: () => void) => {
           <Heading1>AI Teaching Assistant</Heading1>
           <BodyOneText>Empowering teachers. Enhancing learning.</BodyOneText>
         </div>
-        <Button
-          onClick={onClick}
-          id="uitest-ai-diff-get-started"
-          text="Get Started"
-        />
+        <Button onClick={onClick} text="Get Started" />
       </div>
     </div>
   );
@@ -155,9 +151,11 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   scriptId,
   scriptName,
   unitDisplayName,
+  // This should only be used for testing purposes
+  firstState = 'get_started',
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
-    React.useState<WelcomeState>('get_started');
+    React.useState<WelcomeState>(firstState);
 
   const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
     React.useState(true);
@@ -182,7 +180,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             onClick={() => setCurrentWelcomeState(nextState)}
             text="Continue"
             disabled={continueDisabled}
-            id="uitest-ai-diff-continue"
           />
           <Link
             className={style.skipLink}
@@ -190,7 +187,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             text="Skip the tutorial"
             size="xs"
             type="secondary"
-            id="uitest-ai-diff-skip"
           />
         </div>
       );
@@ -289,17 +285,15 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             />
           </a>
         </div>
-        <Button
-          onClick={() => updateShowWelcomeExperience()}
-          text="Finish"
-          id="uitest-ai-diff-finish"
-        />
+        <Button onClick={() => updateShowWelcomeExperience()} text="Finish" />
       </div>
     );
   }, [updateShowWelcomeExperience, confettiActive]);
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
+      // Default to something so we don't just show a blank page
+      setSelectedOption('plan');
       return null;
     }
     const {initialMessage, suggestedPrompts} =
