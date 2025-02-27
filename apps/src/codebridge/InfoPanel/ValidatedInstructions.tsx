@@ -107,9 +107,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const shouldValidateBeDisabled = !hasLoadedEnvironment || isRunning;
-  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
 
   // The icon in the validated instructions panel should match the icon in the
   // header.
