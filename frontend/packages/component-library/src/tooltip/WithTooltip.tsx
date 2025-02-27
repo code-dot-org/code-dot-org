@@ -150,6 +150,16 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
         children.props.onMouseLeave?.(event);
       }
     },
+    onKeyDown: (event: React.KeyboardEvent<HTMLElement>) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        handleShowTooltip(true, event);
+        event.preventDefault();
+      } else if (event.key === 'Escape') {
+        handleHideTooltip();
+        event.preventDefault();
+      }
+    },
+    tabIndex: 0,
   };
 
   return (
