@@ -31,13 +31,15 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     state => state.lab2Project?.projectSources?.source
   );
 
-  // TODO: hasError is not actually implemented properly yet
   const hasPythonLabError = useAppSelector(state => state.lab2System.hasError);
   const hasRunOrTestedPythonLabCode = useAppSelector(
     state => state.lab2System.hasRun || state.lab2System.hasValidated
   );
   const isPythonLabRunning = useAppSelector(
     state => state.lab2System.isRunning
+  );
+  const isPythonLabValidating = useAppSelector(
+    state => state.lab2System.isValidating
   );
   const {hasConditions, satisfied} = useAppSelector(
     state => state.lab.validationState
@@ -70,12 +72,14 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
         typeof pythonLabSource !== 'string' && pythonLabSource
           ? getActiveFileForSource(pythonLabSource)?.contents || ''
           : '';
-      const showGenericErrorOption =
+      const showOption =
         !isPythonLabRunning &&
+        !isPythonLabValidating &&
         hasRunOrTestedPythonLabCode &&
-        (!pythonLabValidationPassed || hasPythonLabError) &&
         !isWaitingForChatResponse;
-      return {studentCode, showGenericErrorOption};
+      const showGenericErrorOption = showOption && hasPythonLabError;
+      const showValidationOption = showOption && !pythonLabValidationPassed;
+      return {studentCode, showGenericErrorOption, showValidationOption};
     } else if (labType === 'Javalab') {
       const studentCode = javaLabSources[fileMetadata[activeTabKey]].text;
       const showCompilationOption =

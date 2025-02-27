@@ -69,8 +69,6 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      // TODO: Remove this
-      dispatch(setHasError(false));
       sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK, appName);
       logUserLevelInteraction({
         levelId: levelId,
@@ -81,7 +79,6 @@ const ControlButtons: React.FunctionComponent = () => {
         dispatch(setIsRunning(false))
       );
       dispatch(setHasRun(true));
-      dispatch(setHasError(true));
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
