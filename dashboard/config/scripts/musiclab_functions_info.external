@@ -12,14 +12,14 @@ markdown <<MARKDOWN
     <td style="font-size: 18px; padding: 20px 0;">Imagine you’re writing down a cookie recipe in a cookbook. The recipe outlines the exact steps to bake cookies, but just writing it down doesn’t actually make the cookies. 
 <br>
 <br>
-A function is like a <b>reusable block of instructions</b>. You define the instructions once, and you can "call" them whenever you need them..</td>
+A function is like a <b>reusable block of instructions</b>. You define the instructions once, and you can "call" them whenever you need them.</td>
   </tr>
   <tr style="border-bottom: 1px solid black;">
     <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/03707b4dbece73d7970dfefd10fc43cd-image-1736454374683.png" alt="Three people bunched together under a heart" style="width: 80px; height: 80px;"></td>
     <td style="font-size: 18px; font-weight: bold; padding: 20px 0;">Defining a Function</td>
     <td style="font-size: 18px; padding: 20px 0;">The recipe is simply a set of instructions that can be reused whenever you want to bake cookies. You’re creating a set of instructions for a specific task (like baking cookies), but nothing happens until you actually decide to use the recipe. <br> 
     <br> 
-    Defining a function means you're <b>writing the set of instructions</b>(steps) that the function will perform. Think of it like creating a recipe that tells you what to do.</td>
+    Defining a function means you're <b>writing the set of instructions</b> (steps) that the function will perform. Think of it like creating a recipe that tells you what to do.</td>
   </tr>
   <tr style="border-bottom: 1px solid black;">
     <td style="width: 80px; padding: 10px;"><img src="https://images.code.org/985e8511f3ff59863698c4eca63e7e29-image-1736454372720.png" alt="Four puzzle pieces fitting together" style="width: 80px; height: 80px;"></td>
