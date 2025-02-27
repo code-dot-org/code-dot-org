@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {ReactNode, HTMLAttributes} from 'react';
+import {ReactNode, LabelHTMLAttributes} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -7,7 +7,7 @@ import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import moduleStyles from './formFieldWrapper.module.scss';
 
 export interface FormFieldWrapperProps
-  extends HTMLAttributes<HTMLLabelElement> {
+  extends LabelHTMLAttributes<HTMLLabelElement> {
   /** FormFieldWrapper children */
   children?: ReactNode;
   /** FormFieldWrapper Custom class name */
