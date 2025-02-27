@@ -512,7 +512,8 @@ class UnconnectedMusicView extends React.Component {
   getStartSources = () => {
     const templateSources = this.props.levelProperties?.templateSources;
     const levelSources = this.props.levelProperties?.levelData?.startSources;
-    if (templateSources) {
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    if (templateSources && !isStartMode) {
       return templateSources;
     } else if (levelSources) {
       return levelSources;
