@@ -4,7 +4,7 @@
 @import '@code-dot-org/component-library-styles/typography.module.scss';
 
 // TextField common styles
-.textField {
+.textFieldWrapper .textField {
   margin-bottom: 0;
   border-radius: 0.25rem;
   border-width: 1px;
@@ -24,7 +24,7 @@
 }
 
 // TextField colors
-.textField.textField-color {
+.textFieldWrapper .textField.textField-color {
   &-black,
   &-gray {
     border-color: var(--borders-neutral-solid);
@@ -95,7 +95,7 @@
 }
 
 // TextField sizes
-.textField-size {
+.textFieldWrapper .textField-size {
   &-l {
     @include body-one;
     padding: 0.625rem 0.875rem;

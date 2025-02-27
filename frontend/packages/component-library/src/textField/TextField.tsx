@@ -91,7 +91,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
       helperMessage={helperMessage}
       helperIcon={helperIcon}
       errorMessage={errorMessage}
-      className={className}
+      className={classNames(moduleStyles.textFieldWrapper, className)}
       aria-describedby={HTMLAttributes['aria-describedby']}
     >
       <input
