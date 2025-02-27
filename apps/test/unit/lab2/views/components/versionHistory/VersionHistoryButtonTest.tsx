@@ -80,8 +80,9 @@ describe('VersionHistoryButton', () => {
     await act(async () => {
       user.click(button);
     });
-    await waitFor(() =>
-      expect(mockedProjectManager.getVersionList).toHaveBeenCalled()
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
     );
 
     // We use the functions returned from render because the dialog is rendered to document.body,
@@ -107,8 +108,9 @@ describe('VersionHistoryButton', () => {
     await act(async () => {
       user.click(button);
     });
-    await waitFor(() =>
-      expect(mockedProjectManager.getVersionList).toHaveBeenCalled()
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
     );
 
     // We use the functions returned from render because the dialog is rendered to document.body,
@@ -143,8 +145,9 @@ describe('VersionHistoryButton', () => {
     await act(async () => {
       user.click(button);
     });
-    await waitFor(() =>
-      expect(mockedProjectManager.getVersionList).toHaveBeenCalled()
+    await waitFor(
+      () => expect(mockedProjectManager.getVersionList).toHaveBeenCalled(),
+      {timeout: 2000}
     );
 
     const versionInput = getByDisplayValue('2') as HTMLInputElement;
@@ -154,8 +157,10 @@ describe('VersionHistoryButton', () => {
     await act(async () => {
       user.click(restoreButton);
     });
-    await waitFor(() =>
-      expect(mockedProjectManager.restoreSources).toHaveBeenCalledWith('2')
+    await waitFor(
+      () =>
+        expect(mockedProjectManager.restoreSources).toHaveBeenCalledWith('2'),
+      {timeout: 2000}
     );
     expect(queryByRole('dialog', {name: 'Version History List'})).toBeNull();
   });

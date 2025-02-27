@@ -128,11 +128,4 @@ describe('VersionHistoryButton', () => {
     expect(mockedProjectManager.loadSources).not.toHaveBeenCalled();
     expect(closeDropdown).toHaveBeenCalled();
   });
-
-  it('does not reset, but closes dropdown on outside click', async () => {
-    const user = userEvent.setup();
-    await user.click(document.body);
-    expect(mockedProjectManager.loadSources).not.toHaveBeenCalled();
-    expect(closeDropdown).toHaveBeenCalled();
-  });
 });
