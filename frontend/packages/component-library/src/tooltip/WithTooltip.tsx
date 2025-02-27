@@ -1,8 +1,8 @@
 import React, {
   isValidElement,
-  useState,
-  useRef,
   useEffect,
+  useRef,
+  useState,
   useCallback,
   ReactNode,
 } from 'react';
