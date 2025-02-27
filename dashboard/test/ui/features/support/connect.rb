@@ -10,8 +10,8 @@ UI_TEST_DIR = File.expand_path('../..', __dir__)
 $browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json'))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
 
 MAX_CONNECT_RETRIES = 3
-SAUCELABS_SELENIUM_URL = 'https://ondemand.us-west-1.saucelabs.com/wd/hub'.freeze
-CI_SELENIUM_URL = 'http://selenium-chrome:4444'.freeze
+SAUCELABS_SELENIUM_URL = ENV.fetch('SAUCELABS_SELENIUM_URL', 'https://ondemand.us-west-1.saucelabs.com/wd/hub').freeze
+CI_SELENIUM_URL = ENV.fetch('CI_SELENIUM_URL', 'http://selenium-chrome:4444').freeze
 
 # Run all feature scenarios in a single session.
 def single_session?
@@ -48,15 +48,26 @@ def saucelabs_browser(test_run_name, http_client: nil)
 end
 
 # Set HTTP read timeout to the specified value during the block.
+# Invocable from Cucumber steps.
 def with_read_timeout(timeout, &block)
-  $http_client ?
-    $http_client.with_read_timeout(timeout, &block) :
+  $selenium_http_client ?
+    $selenium_http_client.with_read_timeout(timeout, &block) :
     yield
+end
+
+# Set the virtual browser to either portrait or landscape orientation.
+# Invocable from Cucumber steps.
+def change_orientation(orientation)
+  $selenium_http_client.call(
+    :post,
+    "/wd/hub/session/#{$browser.session_id}/orientation",
+    {orientation: orientation.upcase}
+  )
 end
 
 def get_browser(test_run_name)
   browser = nil
-  $http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
+  $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
   if ENV['CI'] == 'true' # TODO: only on first try
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       SeleniumBrowser.remote(CI_SELENIUM_URL, http_client: $http_client) # TODO: headless?
@@ -81,7 +92,7 @@ def get_browser(test_run_name)
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
-      saucelabs_browser(test_run_name, http_client: $http_client)
+      saucelabs_browser(test_run_name, http_client: $selenium_http_client)
     end
     $session_id = browser.session_id
     visual_log_url = "https://saucelabs.com/tests/#{$session_id}"
