@@ -91,6 +91,21 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
     assert_equal prompt, expected_prompt
   end
 
+  test 'Testing prompt formatting for general' do
+    context = SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+    course_name = nil
+    unit_name = nil
+    lesson_name = nil
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_name, unit_name, lesson_name)
+    expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+
+      Here are the search results in numbered order:
+      $search_results$
+
+      $output_format_instructions$"
+    assert_equal prompt, expected_prompt
+  end
+
   test 'Testing input formatting for retrieve and generate request' do
     input = "Hello there!"
     prompt = "prompt text"
@@ -258,6 +273,48 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
             vector_search_configuration: {
               filter: {
                 equals: {key: "course", value: "test_course"}
+              },
+              number_of_results: 10,
+            }
+          }
+        }
+      }
+    }
+    filtered_input = AiDiffBedrockHelper.filter_for_context(formatted_input, lesson_number, unit_num, course_name)
+    assert_equal filtered_input, expected_input
+  end
+
+  test 'Testing context filtering for general context' do
+    input = "Hello there!"
+    prompt = "prompt text"
+    course_name = nil
+    unit_num = nil
+    lesson_number = nil
+    formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
+    expected_input = {
+      input: {
+        text: "Hello there!"
+      },
+      retrieve_and_generate_configuration: {
+        type: 'KNOWLEDGE_BASE',
+        knowledge_base_configuration: {
+          knowledge_base_id: AiDiffBedrockHelper::KB_ID,
+          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          generation_configuration: {
+            prompt_template: {
+              text_prompt_template: "prompt text"
+            },
+            inference_config: {
+              text_inference_config: {
+                max_tokens: 1500,
+                temperature: 0.5,
+              }
+            },
+          },
+          retrieval_configuration: {
+            vector_search_configuration: {
+              filter: {
+                equals: {key: "scope", value: "general"}
               },
               number_of_results: 10,
             }
