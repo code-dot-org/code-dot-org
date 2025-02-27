@@ -33,15 +33,29 @@ module Services
       @original_course_version_id = @course_version.id
 
       # Point existing CourseVersion to the new UnitGroup
-      @course_version.update!(content_root: @new_unit_group)
+      @course_version.update!(content_root_id: @new_unit_group.id, content_root_type: 'UnitGroup')
+      @unit.reload
+      @new_unit_group.reload
+
+      puts "line 40 #{@unit.course_version.inspect}"
+      puts "line 41 #{@new_unit_group.course_version.inspect}"
+
+      # @new_unit_group.update!(course_version: @course_version)
+      puts "Updated CourseVersion: #{@course_version.inspect}"
+      puts "Unit Group CourseVersion: #{@new_unit_group.course_version.inspect}"
+
+      puts "After reload: #{@new_unit_group.course_version.inspect}"
+      raise "WHY?" if @new_unit_group.course_version.nil?
 
       # Clear "course" settings from the unit
       @unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
+      @new_unit_group.reload
+      puts "After reload: #{@new_unit_group.course_version.inspect}"
+      raise "WHY?" if @new_unit_group.course_version.nil?
 
       update_unit_group(i18n_params, @unit_copy.published_state)
 
       update_section_assignments
-
       run_checks(@unit_copy, @original_course_version_id)
     end
 
@@ -76,13 +90,20 @@ module Services
     end
 
     private def update_unit_group(i18n_params, published_state)
+      puts "course version: #{@new_unit_group.course_version.inspect}"
+      @new_unit_group.reload
+      puts "After reload: #{@new_unit_group.course_version.inspect}"
+      raise "WHY?" if @new_unit_group.course_version.nil?
       # Add existing unit to new unit group and update strings
-      Dir.chdir(Rails.root) do
-        @new_unit_group.persist_strings_and_units_changes([@unit.name], i18n_params)
-      end
-
+      # Dir.chdir(Rails.root) do
+      #   @new_unit_group.persist_strings_and_units_changes([@unit.name], i18n_params)
+      # end
+      @new_unit_group.update_scripts([@unit.name])
+      raise "WHY?" if @new_unit_group.course_version.nil?
+      puts "course version: #{@new_unit_group.course_version.inspect}"
       # Publish the new unit group
       @new_unit_group.update!(published_state: published_state)
+      puts "course version: #{@new_unit_group.course_version.inspect}"
     end
 
     private def update_section_assignments
@@ -95,6 +116,7 @@ module Services
     end
 
     private def log(message, type: 'info')
+      puts message # CLEAN THIS UP
       @logger.send(type, message)
     end
 
