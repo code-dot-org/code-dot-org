@@ -26,7 +26,7 @@
       localStorage.setItem('markdown_' + '#{@level.id || html_escape(params[:type])}', editor.getValue());
     },
     attachments: true,
-    game: '#{@level.game.name}',
+    game: '#{@level.game&.name}',
   });
 
   var locallyStoredMarkdown = localStorage.getItem('markdown_' + '#{@level.id || html_escape(params[:type])}');
