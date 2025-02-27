@@ -20,7 +20,7 @@ import {JSHINT} from 'jshint';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MainInstructionsBubblePreview from '../codebridge/InfoPanel/MainInstructionsBubblePreview';
+import MainInstructionsPreview from '../codebridge/InfoPanel/MainInstructionsPreview';
 import SafeMarkdown from '../templates/SafeMarkdown';
 
 window.JSHINT = JSHINT;
@@ -80,7 +80,7 @@ function initializeCodeMirror(target, mode, options = {}) {
       updatePreview = editor => {
         if (game === 'Pythonlab' || game === 'Weblab2') {
           ReactDOM.render(
-            React.createElement(MainInstructionsBubblePreview, {
+            React.createElement(MainInstructionsPreview, {
               instructionsText: editor.getValue(),
               theme: 'dark',
               hasPassed: false,

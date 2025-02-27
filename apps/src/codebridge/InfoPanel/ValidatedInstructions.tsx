@@ -341,7 +341,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               <MainInstructionsContent
                 instructionsText={instructionsText}
                 handleInstructionsTextClick={handleInstructionsTextClick}
-                theme={theme}
                 hasPassed={hasPassed}
               />
               <PredictQuestion

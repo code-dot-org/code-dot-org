@@ -7,7 +7,7 @@ import MainInstructionsContent from './MainInstructionsContent';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
-interface MainInstructionsBubblePreviewProps {
+interface MainInstructionsPreviewProps {
   instructionsText: string;
   handleInstructionsTextClick?: (id: string) => void;
   theme: Theme;
@@ -17,8 +17,8 @@ interface MainInstructionsBubblePreviewProps {
 /**
  * Component for levelbuilder to preview the main instructions bubble (without predict answers or validation).
  */
-const MainInstructionsBubblePreview: React.FunctionComponent<
-  MainInstructionsBubblePreviewProps
+const MainInstructionsPreview: React.FunctionComponent<
+  MainInstructionsPreviewProps
 > = ({instructionsText, handleInstructionsTextClick, theme, hasPassed}) => {
   return (
     <div
@@ -32,11 +32,10 @@ const MainInstructionsBubblePreview: React.FunctionComponent<
       <MainInstructionsContent
         instructionsText={instructionsText}
         handleInstructionsTextClick={handleInstructionsTextClick}
-        theme={theme}
         hasPassed={hasPassed}
       />
     </div>
   );
 };
 
-export default MainInstructionsBubblePreview;
+export default MainInstructionsPreview;

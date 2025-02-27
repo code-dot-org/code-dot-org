@@ -1,6 +1,5 @@
 import React from 'react';
 
-import {Theme} from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 
 import ValidationStatusIcon from './ValidationStatusIcon';
@@ -10,7 +9,6 @@ import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.mo
 interface MainInstructionsContentProps {
   instructionsText: string;
   handleInstructionsTextClick?: (id: string) => void;
-  theme: Theme;
   hasPassed: boolean;
 }
 
@@ -21,7 +19,7 @@ interface MainInstructionsContentProps {
  */
 const MainInstructionsContent: React.FunctionComponent<
   MainInstructionsContentProps
-> = ({instructionsText, handleInstructionsTextClick, theme, hasPassed}) => {
+> = ({instructionsText, handleInstructionsTextClick, hasPassed}) => {
   return (
     <div className={moduleStyles.mainInstructions}>
       <ValidationStatusIcon
