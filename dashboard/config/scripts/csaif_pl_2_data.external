@@ -1,0 +1,41 @@
+name 'csaif_pl_2_data'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Personal Data
+
+#### In today's digital world, data plays a crucial role in everything from social media and online shopping to healthcare and government systems. Data can be anything from a simple username to sensitive information like bank details or medical records. Companies, governments, and hackers all seek access to data—sometimes for beneficial reasons, like improving services, but other times for malicious purposes, such as identity theft or fraud.
+
+#### Cybersecurity is the practice of protecting data from unauthorized access, theft, or damage. Understanding what information is personal and how to protect it is essential to staying safe online.
+
+#### Apps, websites, and other computing innovations they use every day require a lot of data to run, much of which you might consider to be either private or personal.
+
+#### Reflect on which of the following pieces of information would you consider to be "personal", as in you wouldn't want it shared with just anyone.
+
+- #### Your full name
+- #### Your social security number
+- #### Your favorite musician / band
+- #### A picture of your face
+- #### Your fingerprint
+- #### Your birthdate
+- #### Your address
+- #### Where you go after school
+- #### Your phone number
+- #### Your medical information
+- #### Who your best friends are
+- #### Your racial / ethnic identity
+- #### A list of everything you've bought this month
+- #### A list of recordings of your voice
+- #### Your IP address
+- #### A video of you singing
+- #### Your academic history / report card
+- #### The town or city you live in
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 2. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+
+MARKDOWN

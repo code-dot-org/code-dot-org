@@ -1,0 +1,24 @@
+{
+  "name": "programming-fundamentals-2024",
+  "script_names": [
+    "pf-pilot-preassessment-2024",
+    "pf-pilot-content-2024",
+    "pf-pilot-postassessment-2024"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "programming-fundamentals",
+    "has_verified_resources": true,
+    "pilot_experiment": "programming-fundamentals-2025-pilot",
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

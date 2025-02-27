@@ -1,3 +1,8 @@
+import {
+  BodyThreeText,
+  EmText,
+  OverlineThreeText,
+} from '@code-dot-org/component-library/typography';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -7,11 +12,6 @@ import Select from 'react-select';
 import {levelWithProgress} from '@cdo/apps/code-studio/components/progress/teacherPanel/types';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {
-  BodyThreeText,
-  EmText,
-  OverlineThreeText,
-} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';

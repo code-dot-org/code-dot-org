@@ -209,6 +209,11 @@ export interface LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
+  // Properties added for parity with non-lab2 AI Tutor levels
+  aiTutorAvailable?: boolean;
+  isAssessment?: boolean;
+  progressionType?: string;
+  type?: string;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -363,7 +368,10 @@ export interface ParentLevelPathLink {
   position: string;
 }
 
-export interface LabProps {
-  initialSources?: ProjectSources;
-  levelProperties: LevelProperties;
+export interface LabProps<
+  T extends LevelProperties = LevelProperties,
+  U extends ProjectSources = ProjectSources
+> {
+  levelProperties: T;
+  initialSources?: U;
 }

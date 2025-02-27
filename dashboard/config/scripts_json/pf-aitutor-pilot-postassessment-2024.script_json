@@ -1,0 +1,162 @@
+{
+  "script": {
+    "name": "pf-aitutor-pilot-postassessment-2024",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "Foundations of CS and AI",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2024",
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-02-25 19:45:34 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "pf-aitutor-pilot-postassessment-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pf-aitutor-pilot-postassessment-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Programming Fundamentals End-of-Unit Assessment",
+      "name": "Programming Fundamentals End-of-Unit Assessment",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Programming Fundamentals End-of-Unit Assessment",
+        "lesson_group.key": "",
+        "script.name": "pf-aitutor-pilot-postassessment-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "ebcdb685-0d5e-4d4a-8ae0-cbadcc1357dc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ebcdb685-0d5e-4d4a-8ae0-cbadcc1357dc",
+        "lesson.key": "Programming Fundamentals End-of-Unit Assessment",
+        "lesson_group.key": "",
+        "script.name": "pf-aitutor-pilot-postassessment-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "7357b528-98c6-4cb7-8c70-7fdac3a2c9a2",
+      "position": 1,
+      "properties": {
+        "progression_name": "End-of-Unit Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "7357b528-98c6-4cb7-8c70-7fdac3a2c9a2",
+        "lesson_activity.key": "ebcdb685-0d5e-4d4a-8ae0-cbadcc1357dc"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End-of-Unit Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-postassessment_aitutor-2023"
+        ],
+        "lesson.key": "Programming Fundamentals End-of-Unit Assessment",
+        "lesson_group.key": "",
+        "script.name": "pf-aitutor-pilot-postassessment-2024",
+        "activity_section.key": "7357b528-98c6-4cb7-8c70-7fdac3a2c9a2"
+      },
+      "level_keys": [
+        "programming-fundamentals-postassessment_aitutor-2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-postassessment_aitutor-2023",
+        "script_level.level_keys": [
+          "programming-fundamentals-postassessment_aitutor-2023"
+        ],
+        "lesson.key": "Programming Fundamentals End-of-Unit Assessment",
+        "lesson_group.key": "",
+        "script.name": "pf-aitutor-pilot-postassessment-2024",
+        "activity_section.key": "7357b528-98c6-4cb7-8c70-7fdac3a2c9a2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

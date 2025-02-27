@@ -5,6 +5,9 @@ import {
   SemanticTag,
 } from '@code-dot-org/component-library/typography';
 import React, {ReactNode} from 'react';
+import classNames from 'classnames';
+
+import moduleStyles from './heading.module.scss';
 
 type HeadingVisualAppearance = Extract<
   VisualAppearance,
@@ -45,16 +48,14 @@ const Heading: React.FunctionComponent<HeadingProps> = ({
   visualAppearance,
   children,
   className,
-}) => {
-  return (
-    <Typography
-      semanticTag={headingVisualAppearanceToSemanticTagMap[visualAppearance]}
-      className={className}
-      visualAppearance={visualAppearance}
-    >
-      {children}
-    </Typography>
-  );
-};
+}) => (
+  <Typography
+    semanticTag={headingVisualAppearanceToSemanticTagMap[visualAppearance]}
+    className={classNames(moduleStyles.heading, className)}
+    visualAppearance={visualAppearance}
+  >
+    {children}
+  </Typography>
+);
 
 export default Heading;

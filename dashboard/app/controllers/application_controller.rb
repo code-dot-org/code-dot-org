@@ -231,8 +231,6 @@ class ApplicationController < ActionController::Base
       response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
     end
 
-    response[:activity_id] = options[:activity] && options[:activity].id
-
     response
   end
 

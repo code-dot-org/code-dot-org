@@ -41,7 +41,7 @@
         "1"
       ]
     },
-    "display_name": "Hearth Health",
+    "display_name": "Heart Health",
     "project_template_level_name": "datascience-U2L4-L6cTempl_2024-pilot_pilot-2024",
     "teacher_markdown": "If students encounter issues with their plots not displaying, remind them to check for plt.show() at the end of their plotting commands.\r\n",
     "bubble_choice_description": "Practice creating a line chart to represent how often the person had each pulse rate.",
@@ -59,6 +59,6 @@
     "name_suffix": "_pilot-2024"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-01-24T22:34:33.970+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L9c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L9c_2024-pilot\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-01-24T22:34:33.970+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L4-L9c_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L4-L9c_2024-pilot\"},{\"changed_at\":\"2025-02-21 00:05:23 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

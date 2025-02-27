@@ -13,6 +13,7 @@ import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useStartModeFileRowOptions} from './useStartModeFileRowOptions';
@@ -48,8 +49,14 @@ export const useFileRowOptions = (
     config: {editableFileTypes},
   } = useCodebridgeContext();
 
-  const {openConfirmDeleteFile, openMoveFilePrompt, openRenameFilePrompt} =
-    usePrompts();
+  const backpackApi = useBackpackAPIContext();
+
+  const {
+    openConfirmDeleteFile,
+    openMoveFilePrompt,
+    openRenameFilePrompt,
+    openSaveToBackpackPrompt,
+  } = usePrompts();
 
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -92,9 +99,16 @@ export const useFileRowOptions = (
         labelText: codebridgeI18n.deleteFile(),
         clickHandler: () => openConfirmDeleteFile({file}),
       },
+      {
+        condition: true,
+        iconName: 'backpack',
+        labelText: codebridgeI18n.saveToBackpackTitle(),
+        clickHandler: () => openSaveToBackpackPrompt({file, backpackApi}),
+      },
     ],
     [
       appName,
+      backpackApi,
       editableFileTypes,
       file,
       isLocked,
@@ -102,6 +116,7 @@ export const useFileRowOptions = (
       openConfirmDeleteFile,
       openMoveFilePrompt,
       openRenameFilePrompt,
+      openSaveToBackpackPrompt,
       projectFiles,
       projectFolders,
     ]

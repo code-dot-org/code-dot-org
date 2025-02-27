@@ -86,7 +86,7 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
-    section_instructors: [
+    sectionInstructors: [
       {
         id: 1,
         status: 'accepted',
@@ -94,6 +94,11 @@ const sections = [
         instructor_email: 'teacher@code.org',
       },
     ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
   },
   {
     id: 12,
@@ -127,7 +132,7 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
-    section_instructors: [
+    sectionInstructors: [
       {
         id: 2,
         status: 'accepted',
@@ -141,6 +146,11 @@ const sections = [
         instructor_email: 'coteacher@code.org',
       },
     ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
   },
   {
     id: 13,
@@ -175,7 +185,7 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
-    section_instructors: [
+    sectionInstructors: [
       {
         id: 2,
         status: 'accepted',
@@ -183,6 +193,11 @@ const sections = [
         instructor_email: 'teacher@code.org',
       },
     ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
   },
   {
     id: 307,
@@ -209,7 +224,7 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
-    section_instructors: [
+    sectionInstructors: [
       {
         id: 4,
         status: 'accepted',
@@ -217,6 +232,11 @@ const sections = [
         instructor_email: 'teacher@code.org',
       },
     ],
+    primaryInstructor: {
+      name: 'teacher',
+      email: 'teacher@code.org',
+      ltiRosterSyncEnabled: false,
+    },
     at_risk_age_gated_date: undefined,
     at_risk_age_gated_us_state: undefined,
   },
@@ -554,16 +574,21 @@ describe('teacherSectionsRedux', () => {
           {
             id: 2,
             status: 'accepted',
-            instructor_name: 'teacher',
-            instructor_email: 'teacher@code.org',
+            instructorName: 'teacher',
+            instructorEmail: 'teacher@code.org',
           },
           {
             id: 3,
             status: 'invited',
-            instructor_name: 'coteacher',
-            instructor_email: 'coteacher@code.org',
+            instructorName: 'coteacher',
+            instructorEmail: 'coteacher@code.org',
           },
         ],
+        primaryInstructor: {
+          name: 'teacher',
+          email: 'teacher@code.org',
+          ltiRosterSyncEnabled: false,
+        },
         syncEnabled: undefined,
         aiTutorEnabled: undefined,
         anyStudentHasProgress: undefined,
@@ -855,7 +880,19 @@ describe('teacherSectionsRedux', () => {
           login_type: 'picture',
           grades: ['3'],
           participantType: 'student',
-          section_instructors: [],
+          sectionInstructors: [
+            {
+              id: 1,
+              status: 'accepted',
+              instructor_name: 'teacher',
+              instructor_email: 'teacher@code.org',
+            },
+          ],
+          primaryInstructor: {
+            name: 'teacher',
+            email: 'teacher@code.org',
+            ltiRosterSyncEnabled: false,
+          },
         })
       );
 
@@ -895,7 +932,19 @@ describe('teacherSectionsRedux', () => {
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
-          sectionInstructors: [],
+          sectionInstructors: [
+            {
+              id: 1,
+              status: 'accepted',
+              instructorName: 'teacher',
+              instructorEmail: 'teacher@code.org',
+            },
+          ],
+          primaryInstructor: {
+            name: 'teacher',
+            email: 'teacher@code.org',
+            ltiRosterSyncEnabled: false,
+          },
           syncEnabled: undefined,
           aiTutorEnabled: false,
           anyStudentHasProgress: undefined,
