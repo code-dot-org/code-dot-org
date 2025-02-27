@@ -48,7 +48,6 @@ function UnitSelectorV2({
   // Reload courses with progress when selected section changes.
   React.useEffect(() => {
     if (sectionId) {
-      console.log('lfm loading', {sectionId});
       asyncLoadCoursesWithProgress();
     }
   }, [sectionId, asyncLoadCoursesWithProgress]);

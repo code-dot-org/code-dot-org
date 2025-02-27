@@ -87,7 +87,6 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
   HttpClient.fetchJson(`/dashboardapi/section_courses/${selectedSection.id}`)
     .then(response => response?.value)
     .then(coursesWithProgress => {
-      console.log('lfm loaded', {coursesWithProgress});
       // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
       const reorderedCourses = [
         ...coursesWithProgress.filter(
