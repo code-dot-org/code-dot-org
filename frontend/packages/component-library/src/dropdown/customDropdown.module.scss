@@ -270,7 +270,7 @@
     background-color: var(--neutral-base-white);
   }
 
-  &:has(.dropdownButton:hover), &:has(&.activeDropdownButton) {
+  &:has(.dropdownButton:hover), &:has(.activeDropdownButton) {
     .dropdownButton:not(:disabled) {
       color: var(--neutral-base-black);
       background-color: var(--neutral-gray-10);
@@ -339,7 +339,7 @@
     background-color: var(--neutral-base-white);
   }
 
-  &:has(.dropdownButton:hover), &:has(&.activeDropdownButton) {
+  &:has(.dropdownButton:hover), &:has(.activeDropdownButton) {
     .dropdownButton:not(:disabled) {
       color: var(--neutral-base-black);
       background-color: var(--neutral-gray-10);
@@ -419,7 +419,7 @@
     }
   }
 
-  &:has(.dropdownButton:hover), &:has(&.activeDropdownButton) {
+  &:has(.dropdownButton:hover), &:has(.activeDropdownButton) {
     .dropdownButton:not(:disabled) {
       color: var(--neutral-base-white);
       background-color: var(--neutral-gray-90);
