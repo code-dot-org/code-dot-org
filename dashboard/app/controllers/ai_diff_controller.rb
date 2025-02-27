@@ -100,7 +100,7 @@ class AiDiffController < ApplicationController
 
   private def has_required_params?
     begin
-      params.require([:context, :inputText, :contextId, :unitDisplayName, :isPreset])
+      params.require([:context, :inputText, :isPreset])
     rescue ActionController::ParameterMissing
       return false
     end
