@@ -557,7 +557,7 @@ component/entity. All of that Changelogs will be combined into one in this file 
 
 ## `componentLibrary/formFieldWrapper`
 
-## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/64075)
+## [0.1.0](https://github.com/code-dot-org/code-dot-org/pull/64214)
 
 - implemented component
 - added tests
@@ -805,7 +805,7 @@ component/entity. All of that Changelogs will be combined into one in this file 
 
 ## `componentLibrary/textField`
 
-## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/64075)
+## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/64214)
 
 - wrapped in `FormFieldWrapper` component
 
