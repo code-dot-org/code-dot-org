@@ -34,6 +34,8 @@ export const finishedLoadingCoursesWithProgress = () => ({
 });
 
 // Selectors
+export const getSelectedUnitId = state => state.unitSelection.scriptId;
+
 const getSelectedUnit = state => {
   const scriptId = state.unitSelection.scriptId;
   if (!scriptId) {
