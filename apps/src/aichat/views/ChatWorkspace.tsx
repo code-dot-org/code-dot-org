@@ -2,6 +2,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@code-dot-org/component-library/tabs';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
+import {useDropzone} from 'react-dropzone';
 import {useSelector} from 'react-redux';
 
 import TeacherOnboardingModal from '@cdo/apps/aichat/views/TeacherOnboardingModal';
@@ -37,6 +38,10 @@ const eraserIcon: FontAwesomeV6IconProps = {
   iconName: 'eraser',
 };
 
+const plusIcon: FontAwesomeV6IconProps = {
+  iconName: 'plus',
+};
+
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
@@ -59,6 +64,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       );
     }
   });
+
+  const currentChannelId = useAppSelector(state => state.lab.channel?.id);
 
   const dispatch = useAppDispatch();
 
@@ -170,6 +177,23 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     dispatch(setShowModalType(undefined));
   }, [dispatch, isUserTeacher, showModalType]);
 
+  const onDrop = useCallback(
+    (acceptedFiles: File[]) => {
+      if (currentChannelId) {
+        const formData = new FormData();
+        for (const file of acceptedFiles) {
+          formData.append('files[]', file, file.name);
+        }
+        fetch(`/v3/assets/${currentChannelId}/`, {
+          method: 'POST',
+          body: formData,
+        });
+      }
+    },
+    [currentChannelId]
+  );
+  const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop});
+
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {ChatModal && <ChatModal onClose={onCloseModal} />}
@@ -181,9 +205,22 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
       <div className={moduleStyles.footer}>
         {canChatWithModel && (
-          <UserChatMessageEditor
-            editorContainerClassName={moduleStyles.messageEditorContainer}
-          />
+          <div className={moduleStyles.messageEditorRow}>
+            <div {...getRootProps()}>
+              <input {...getInputProps()} />
+              <Button
+                isIconOnly={true}
+                icon={plusIcon}
+                size="m"
+                type="secondary"
+                color={isDragActive ? 'black' : 'gray'}
+                onClick={() => {}}
+              />
+            </div>
+            <UserChatMessageEditor
+              editorContainerClassName={moduleStyles.messageEditorContainer}
+            />
+          </div>
         )}
         <div className={moduleStyles.buttonRow}>
           <Button
