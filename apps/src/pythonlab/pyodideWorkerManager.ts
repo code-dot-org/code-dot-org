@@ -193,8 +193,9 @@ const asyncRun = (() => {
 
     // Make sure async setup is done
     await initializeServiceWorker();
-
+    // Reset error state
     getStore().dispatch(setHasError(false));
+
     return new Promise<PyodideMessage>(onSuccess => {
       callbacks[id] = onSuccess;
       const messageData = {

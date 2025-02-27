@@ -26,7 +26,7 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
 
   const level = useAppSelector(state => state.aiTutor.level);
 
-  // PythonLab
+  // For PythonLab
   const pythonLabSource = useAppSelector(
     state => state.lab2Project?.projectSources?.source
   );
@@ -72,6 +72,8 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
         typeof pythonLabSource !== 'string' && pythonLabSource
           ? getActiveFileForSource(pythonLabSource)?.contents || ''
           : '';
+      // Only show a suggested prompt if we aren't currently running or validating code,
+      // code has been run or validated, and we aren't waiting for a chat response.
       const showOption =
         !isPythonLabRunning &&
         !isPythonLabValidating &&
