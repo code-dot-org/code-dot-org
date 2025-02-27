@@ -62,9 +62,6 @@
       v2:
         title: "One Hour: Ignite. Inspire. Code."
         desc: "The Hour of Code is a worldwide movement that aims to introduce millions of students to computer science through one-hour coding activities"
-    learn_social:
-      title: "Free One Hour Coding Tutorials"
-      desc: "Bringing Hour of Code and computer science to your classroom or school is easy! Pick one of over 100 free coding tutorials to begin learning. No experience needed."
     video_caption:
       visible: "One Hour Can Make The Invisible Visible"
       in_a_world: "Make The Invisible Visible | Official Trailer"
@@ -11094,7 +11091,9 @@
 
   hoc_activities:
     heading: "Explore activities"
+    title: "Free One Hour Coding Tutorials"
     desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
+    seo_desc: "Bring an Hour of Code and computer science to your classroom or school. With over 100 free coding tutorials available to begin learning it is easy."
     more:
       heading: "Can't find your favorite activity?"
       button: "Explore more here"

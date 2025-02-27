@@ -157,16 +157,16 @@ def get_social_metadata_for_page(request)
     },
     "learn" => {
       "default" => {
-        title: hoc_s("hoc_2024.learn_social.title"),
-        description: hoc_s("hoc_2024.learn_social.desc"),
+        title: hoc_s("hoc_activities.title"),
+        description: hoc_s("hoc_activities.seo_desc"),
         image: images[:hoc_2024_social]
       }
     },
   }
 
-  if request.site == "hourofcode.com"
+  if request.path == "/" && request.site == "hourofcode.com"
     page = request.site
-  elsif request.path == "/learn" && request.site == "hourofcode.com"
+  elsif request.path.include?("/learn") && request.site == "hourofcode.com"
     page = "learn"
   elsif request.path == "/" && request.site == "code.org"
     page = request.site
