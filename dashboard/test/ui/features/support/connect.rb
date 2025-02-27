@@ -49,15 +49,15 @@ end
 # Set HTTP read timeout to the specified value during the block.
 # Invocable from Cucumber steps.
 def with_read_timeout(timeout, &block)
-  $http_client ?
-    $http_client.with_read_timeout(timeout, &block) :
+  $selenium_http_client ?
+    $selenium_http_client.with_read_timeout(timeout, &block) :
     yield
 end
 
 # Set the virtual browser to either portrait or landscape orientation.
 # Invocable from Cucumber steps.
 def change_orientation(orientation)
-  $http_client.call(
+  $selenium_http_client.call(
     :post,
     "/wd/hub/session/#{$browser.session_id}/orientation",
     {orientation: orientation.upcase}
@@ -66,13 +66,13 @@ end
 
 def get_browser(test_run_name)
   browser = nil
-  $http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
+  $selenium_http_client ||= SeleniumBrowser::Client.new(read_timeout: 2.minutes)
   if ENV['TEST_LOCAL'] == 'true'
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
     browser = SeleniumBrowser.local(browser: ENV.fetch('BROWSER_CONFIG', nil), headless: headless)
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
-      saucelabs_browser(test_run_name, http_client: $http_client)
+      saucelabs_browser(test_run_name, http_client: $selenium_http_client)
     end
     $session_id = browser.session_id
     visual_log_url = "https://saucelabs.com/tests/#{$session_id}"
