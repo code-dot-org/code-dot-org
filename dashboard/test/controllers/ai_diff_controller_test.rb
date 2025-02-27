@@ -62,9 +62,7 @@ class AiDiffControllerTest < ActionController::TestCase
     sign_in @teacher
 
     post :chat_completion, params: {
-      context: "lesson",
       inputText: "Hello!",
-      contextId: @lesson.id,
       sessionId: @session_id,
       isPreset: false
     }
