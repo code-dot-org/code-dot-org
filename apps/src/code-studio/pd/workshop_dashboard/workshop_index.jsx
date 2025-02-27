@@ -7,12 +7,11 @@ import React from 'react';
 import {Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
   DATE_ORDER_ASC,
   DATE_ORDER_DESC,
 } from '@cdo/apps/code-studio/pd/constants';
-
-import {RouterContext} from '../RouterContext';
 
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {

@@ -26,6 +26,7 @@ import {
 import {connect} from 'react-redux';
 import Select from 'react-select';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
   Subjects,
   SubjectNames,
@@ -43,7 +44,6 @@ import color from '@cdo/apps/util/color';
 
 import Spinner from '../../../../sharedComponents/Spinner';
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
-import {RouterContext} from '../../RouterContext';
 import {
   PermissionPropType,
   WorkshopAdmin,

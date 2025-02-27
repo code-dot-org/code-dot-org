@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Row, Col, ButtonToolbar, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+
 import ConfirmationDialog from '../components/confirmation_dialog';
-import {RouterContext} from '../RouterContext';
 
 import WorkshopForm from './components/workshop_form';
 import WorkshopPanel from './WorkshopPanel';

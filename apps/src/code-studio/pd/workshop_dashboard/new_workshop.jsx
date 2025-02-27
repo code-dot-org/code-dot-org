@@ -4,7 +4,7 @@
  */
 import React from 'react';
 
-import {RouterContext} from '../RouterContext';
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 
 import WorkshopForm from './components/workshop_form';
 

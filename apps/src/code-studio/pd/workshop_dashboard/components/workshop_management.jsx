@@ -6,13 +6,13 @@ import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {
   WorkshopTypes,
   SubjectNames,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import ConfirmationDialog from '../../components/confirmation_dialog';
-import {RouterContext} from '../../RouterContext';
 import {PermissionPropType} from '../permission';
 import {shouldUseFoormSurvey} from '../workshop_summary_utils';
 

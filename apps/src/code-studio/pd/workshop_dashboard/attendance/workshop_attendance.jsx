@@ -9,10 +9,10 @@ import React from 'react';
 import {Row, Col, ButtonToolbar, Button, Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import color from '@cdo/apps/util/color';
 
 import Spinner from '../../../../sharedComponents/Spinner';
-import {RouterContext} from '../../RouterContext';
 import SessionTime from '../components/session_time';
 import {
   PermissionPropType,
