@@ -150,16 +150,6 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
         children.props.onMouseLeave?.(event);
       }
     },
-    onKeyDown: (event: React.KeyboardEvent<HTMLElement>) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        handleShowTooltip(true, event);
-        event.preventDefault();
-      } else if (event.key === 'Escape') {
-        handleHideTooltip();
-        event.preventDefault();
-      }
-    },
-    tabIndex: 0,
   };
 
   return (
@@ -167,13 +157,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
       <div {...containerProps}>{children}</div>
       {showTooltip &&
         createPortal(
-          /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
-          <div
-            role="tooltip"
-            onMouseEnter={event => handleShowTooltip(true, event, true)}
-            onMouseLeave={handleHideTooltip}
-            style={{padding: '10px'}}
-          >
+          <div role="tooltip" style={{padding: '10px'}}>
             <Tooltip
               {...tooltipProps}
               ref={tooltipRef}
