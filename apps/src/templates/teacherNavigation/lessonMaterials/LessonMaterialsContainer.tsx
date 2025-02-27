@@ -26,7 +26,7 @@ import UnitResourcesDropdown from './UnitResourcesDropdown';
 import styles from './lesson-materials.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
-export interface LessonMaterialsData {
+interface LessonMaterialsData {
   unitId: number;
   unitName?: string;
   title: string;
