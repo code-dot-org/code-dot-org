@@ -9,7 +9,7 @@
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
     -# make sure robots do not index non production environments or disallowed routes
-    -if !rack_env?(:production) || SharedConstants::DISALLOWED_ROUTES.any? {|s| request.fullpath.include?(s)}
+    -if !rack_env?(:production) || SharedConstants::DISALLOWED_ROUTES.any? {|r| request.fullpath.include?(r)}
       = tag 'meta', name: 'robots', content: 'noindex'
     - if @page_description
       = tag 'meta', property: 'description', content: @page_description
