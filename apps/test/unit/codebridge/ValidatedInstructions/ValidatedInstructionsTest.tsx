@@ -163,7 +163,7 @@ describe('ValidatedInstructions', () => {
       screen.queryByRole('button', {name: commonI18n.unsubmit()})
     ).toBeNull();
 
-    // Mark code as run; submit should not yet should show up.
+    // Mark code as run; submit should not yet show up.
     store.dispatch(setHasRun(true));
     expect(
       screen.queryByRole('button', {name: commonI18n.submit()})

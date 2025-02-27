@@ -192,7 +192,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   };
 
-  // There are 3 ways to "meet validation" for a level:
+  // There are 4 ways to "meet validation" for a level:
   // If the level is a predict level, the user must run the code.
   // If the level has conditions, they must be satisfied.
   // If the level is a submittable level and has no conditions,
