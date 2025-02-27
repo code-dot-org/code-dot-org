@@ -10,7 +10,7 @@ UI_TEST_DIR = File.expand_path('../..', __dir__)
 $browser_config = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json'))).detect {|b| b['name'] == ENV['BROWSER_CONFIG']} || {}
 
 MAX_CONNECT_RETRIES = 3
-SAUCELABS_SELENIUM_URL = 'https://ondemand.us-west-1.saucelabs.com/wd/hub'.freeze
+SAUCELABS_SELENIUM_URL = ENV.fetch('SAUCELABS_SELENIUM_URL', 'https://ondemand.us-west-1.saucelabs.com/wd/hub').freeze
 
 # Run all feature scenarios in a single session.
 def single_session?
