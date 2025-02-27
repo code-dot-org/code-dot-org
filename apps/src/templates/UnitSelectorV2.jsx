@@ -36,7 +36,7 @@ const recordEvent = (eventName, sectionId, dataJson = {}) => {
 function UnitSelectorV2({
   filterToSelectedCourse = false,
   sectionId,
-  scriptId,
+  unitId,
   coursesWithProgress,
   className,
   setScriptId,
@@ -52,7 +52,6 @@ function UnitSelectorV2({
     }
   }, [sectionId, asyncLoadCoursesWithProgress]);
 
-  const unitId = React.useMemo(() => scriptId, [scriptId]);
   const onSelectUnit = React.useCallback(
     e => {
       const newUnitId = parseInt(e.target.value);
@@ -97,12 +96,13 @@ function UnitSelectorV2({
     />
   );
 
-  return isLoadingSectionData ||
-    isLoadingCourses ||
-    !coursesWithProgress ||
-    coursesWithProgress.length === 0 ? (
-    loadingDropdown()
-  ) : (
+  if (isLoadingCourses || isLoadingSectionData) {
+    return loadingDropdown();
+  } else if (!coursesWithProgress || coursesWithProgress.length === 0) {
+    return null;
+  }
+
+  return (
     <SimpleDropdown
       itemGroups={itemGroups}
       selectedValue={unitId}
@@ -121,7 +121,7 @@ function UnitSelectorV2({
 
 UnitSelectorV2.propTypes = {
   filterToSelectedCourse: PropTypes.bool,
-  scriptId: PropTypes.number,
+  unitId: PropTypes.number,
   sectionId: PropTypes.number,
   coursesWithProgress: PropTypes.array.isRequired,
   setScriptId: PropTypes.func.isRequired,
@@ -136,7 +136,7 @@ export const UnconnectedUnitSelectorV2 = UnitSelectorV2;
 
 export default connect(
   state => ({
-    scriptId: state.unitSelection.scriptId,
+    unitId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
     coursesWithProgress: state.unitSelection.coursesWithProgress,
     isLoadingCourses: state.unitSelection.isLoadingCoursesWithProgress,
