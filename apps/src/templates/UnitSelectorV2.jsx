@@ -11,6 +11,7 @@ import {
   setScriptId,
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
+import i18n from '@cdo/locale';
 
 import firehoseClient from '../metrics/firehose';
 
@@ -47,6 +48,7 @@ function UnitSelectorV2({
   // Reload courses with progress when selected section changes.
   React.useEffect(() => {
     if (sectionId) {
+      console.log('lfm loading', {sectionId});
       asyncLoadCoursesWithProgress();
     }
   }, [sectionId, asyncLoadCoursesWithProgress]);
@@ -74,7 +76,10 @@ function UnitSelectorV2({
 
   const itemGroups = coursesWithProgress
     .filter(
-      version => !filterToSelectedCourse || version.id === selectedSectionCourse
+      version =>
+        !filterToSelectedCourse ||
+        version.id === selectedSectionCourse ||
+        !version.id
     )
     .map(version => ({
       label: version.display_name,
@@ -93,6 +98,13 @@ function UnitSelectorV2({
     />
   );
 
+  console.log('lfm', {
+    itemGroups,
+    unitId,
+    coursesWithProgress,
+    selectedSectionCourse,
+  });
+
   return isLoadingSectionData ||
     isLoadingCourses ||
     !coursesWithProgress ||
@@ -110,6 +122,7 @@ function UnitSelectorV2({
       dropdownTextThickness="thin"
       id="unit-selector-v2"
       color="gray"
+      labelText={i18n.selectUnit()}
     />
   );
 }

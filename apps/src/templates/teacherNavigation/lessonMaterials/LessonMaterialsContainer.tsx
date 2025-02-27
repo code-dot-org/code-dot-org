@@ -6,7 +6,6 @@ import {useSelector} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getStore} from '@cdo/apps/redux';
 import {
   asyncLoadCoursesWithProgress,
   getSelectedUnitId,
@@ -27,7 +26,7 @@ import UnitResourcesDropdown from './UnitResourcesDropdown';
 import styles from './lesson-materials.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
-interface LessonMaterialsData {
+export interface LessonMaterialsData {
   unitId: number;
   unitName?: string;
   title: string;
@@ -39,11 +38,10 @@ interface LessonMaterialsData {
   versionYear?: number;
 }
 
-const lessonMaterialsCachedLoader = _.memoize(async (unitId: number) =>
+const lessonMaterialsApiCall = (unitId: number) =>
   HttpClient.fetchJson<LessonMaterialsData>(
     `/dashboardapi/lesson_materials/${unitId}`
-  ).then(response => response?.value)
-);
+  ).then(response => response?.value);
 
 const skeletonDropdown = () => (
   <div
@@ -53,19 +51,6 @@ const skeletonDropdown = () => (
     )}
   />
 );
-
-export const lessonMaterialsLoader =
-  async (): Promise<LessonMaterialsData | null> => {
-    const state = getStore().getState().teacherSections;
-    const selectedSectionId = state.selectedSectionId;
-    const sectionData = state.sections[selectedSectionId];
-
-    if (!selectedSectionId || !sectionData.unitId) {
-      return null;
-    }
-
-    return lessonMaterialsCachedLoader(sectionData.unitId);
-  };
 
 // Some lessons are lockable and don't have lesson plans (typically assessments or surveys).
 // In this case, we want to display the lesson name without a number.  See CSP1-2022 for an example.
@@ -106,6 +91,11 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const dispatch = useAppDispatch();
 
+  const lessonMaterialsCachedLoader = React.useMemo(
+    () => _.memoize(lessonMaterialsApiCall),
+    []
+  );
+
   React.useEffect(() => {
     dispatch(asyncLoadCoursesWithProgress());
   }, [dispatch]);
@@ -117,16 +107,14 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
 
   const unitToLoad = React.useMemo(
     () =>
-      selectedSection.unitId !== null
+      !!selectedSection.unitId
         ? selectedUnitId || selectedSection.unitId
         : null,
     [selectedSection.unitId, selectedUnitId]
   );
 
   React.useEffect(() => {
-    const state = getStore().getState().teacherSections;
-    const selectedSectionId = state.selectedSectionId;
-
+    const selectedSectionId = selectedSection.id;
     if (!selectedSectionId || !unitToLoad) {
       setLessonMaterials(null);
       setIsLoading(false);
@@ -149,7 +137,12 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
         });
       }
     });
-  }, [isLoadingCoursesWithProgress, unitToLoad]);
+  }, [
+    isLoadingCoursesWithProgress,
+    unitToLoad,
+    selectedSection.id,
+    lessonMaterialsCachedLoader,
+  ]);
 
   const {hasNumberedUnits, lessons, unitNumber, versionYear} = useMemo(() => {
     return {
