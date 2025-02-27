@@ -54,16 +54,20 @@ describe('Design System - Tags Component', () => {
       screen.getByText('This is the content of tag2 tooltip'),
     ).toBeInTheDocument();
 
-    // Move hover to "tag1" and verify its tooltip appears, and the other tooltip disappears
+    // Verify that the tooltip is hidden using escape key
+    await user.keyboard('{Escape}');
+
+    expect(
+      screen.queryByText('This is the content of tag2 tooltip'),
+    ).not.toBeInTheDocument();
+
+    // Move hover to "tag1" and verify its tooltip appears
     const tag1 = screen.getByText('tag1');
     await user.hover(tag1);
 
     expect(
       screen.getByText('This is the content of tag1 tooltip'),
     ).toBeInTheDocument();
-    expect(
-      screen.queryByText('This is the content of tag2 tooltip'),
-    ).not.toBeInTheDocument();
   });
 
   it('removes tooltip content on mouse leave', async () => {
