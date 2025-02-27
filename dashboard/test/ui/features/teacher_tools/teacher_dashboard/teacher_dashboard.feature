@@ -16,7 +16,7 @@ Feature: Using the teacher dashboard
     When I click selector "a:contains(Untitled Section)" once I see it to load a new page
     And I wait until element "#ui-test-toggle-progress-view" is visible
     And I click selector "#ui-test-toggle-progress-view"
-    And I wait until element "#uitest-teacher-dashboard-nav" is visible
+    And I wait until element "#ui-test-teacher-sidebar" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
@@ -47,7 +47,7 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
+    And I click selector "#ui-test-teacher-sidebar a:contains(Projects)" once I see it
     And I wait until element "#uitest-projects-table" is visible
     And I click selector "a:contains('thumb wars')" once I see it to load a new tab
     And I wait until element ".project_name.header_text" is visible
@@ -65,6 +65,7 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
+    And I click selector "a:contains('Switch to old progress view')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
     And I press the first ".uitest-summary-cell" element
@@ -150,7 +151,7 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    And I click selector "#uitest-teacher-dashboard-nav a:contains(Projects)" once I see it
+    And I click selector "#ui-test-teacher-sidebar a:contains(Projects)" once I see it
     And I wait until element "#uitest-projects-table" is visible
     And I wait until the image within element "tr:eq(1)" has loaded
     And I wait until the image within element "tr:eq(2)" has loaded
