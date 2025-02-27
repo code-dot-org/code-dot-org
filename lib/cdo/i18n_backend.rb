@@ -2,6 +2,7 @@ require 'i18n'
 require 'active_support/core_ext/numeric/bytes'
 require 'cdo/honeybadger'
 require 'cdo/i18n'
+require 'cdo/i18n/plugins/interpolation_l10n'
 require 'cdo/i18n_string_url_tracker'
 
 module Cdo
@@ -170,6 +171,7 @@ module Cdo
       include MarkdownTranslate
       include SafeInterpolation
       include I18nStringUrlTrackerPlugin
+      include InterpolationL10n
     end
 
     class SimpleBackend < ::I18n::Backend::Simple
